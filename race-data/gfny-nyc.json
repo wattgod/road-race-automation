@@ -1,0 +1,205 @@
+{
+  "race": {
+    "name": "GFNY NYC",
+    "slug": "gfny-nyc",
+    "display_name": "GFNY NYC (Gran Fondo New York)",
+    "tagline": "The most international peloton in the world, starting on the George Washington Bridge.",
+
+    "vitals": {
+      "distance_km": 137,
+      "distance_mi": 85,
+      "elevation_m": 1942,
+      "elevation_ft": 6371,
+      "location": "George Washington Bridge (NJ side) / Fort Lee, NJ",
+      "location_badge": "Fort Lee, NJ, USA",
+      "country": "USA",
+      "date": "Third Sunday in May",
+      "date_specific": "May 17, 2026",
+      "field_size": "~4,000-6,000 riders from 90+ countries",
+      "start_format": "mass_start",
+      "registration": "Open registration — $350-400, includes mandatory GFNY jersey (made in Italy), chip timing, finisher medal",
+      "entry_fee": "$350-400",
+      "feed_zones": "Multiple aid stations along Route 9W and Palisades Interstate Park",
+      "cutoff_time": "3:00 PM (~7h50m window from 7:10 AM start)",
+      "lat": 40.8517,
+      "lng": -73.9527,
+      "route_options": []
+    },
+
+    "climate": {
+      "primary": "Temperate spring",
+      "description": "May in NYC/NJ — average high 22°C/72°F, low 13°C/52°F. 37% rain chance. 7:10 AM start in cool conditions (~50-55°F), mid-race 70°F+.",
+      "challenges": [
+        "Spring rain possible but generally pleasant",
+        "Cool morning start — arm warmers recommended",
+        "Afternoon can warm significantly mid-ride"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Fully paved — well-maintained NJ/NY state roads (Route 9W, Palisades Interstate Park)",
+      "technical_rating": 2,
+      "features": [
+        "George Washington Bridge lower level — closed for the event",
+        "Route 9W — scenic Hudson River road",
+        "Palisades Interstate Park roads",
+        "Alpine Climb — 1.6km at 6.4% avg",
+        "Gate Hill (Colle Andrea Pinarello) — 3.5km at 5.2% avg",
+        "Cheesecote Mountain — 18% initial ramp"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 54,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 1,
+      "prestige": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 5,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1,
+      "discipline": "gran_fondo",
+      "prestige_override": "Prestige 4 promotes T3 → T2 (1-tier promotion, not into T1)",
+      "scoring_notes": "Calibration anchor — Tier 2 via prestige override. Base score 54 = T3, but prestige 4 (GFNY World Championship, GP NYC UCI 1.2, global brand) earns one-tier promotion. Course itself is unremarkable since Bear Mountain removal (2023). Road surface scored 1 (smooth tarmac = low difficulty). Value is middling — $350-400 for a jersey and timing. Logistics scored 1 because NYC airports are right there. Field depth 5 — UCI 1.2 pro race, 90+ countries, ex-pros."
+    },
+
+    "climb_profile": {
+      "total_climbs": 4,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 1,
+      "key_climbs": [
+        {
+          "name": "Alpine Climb",
+          "km_from_start": 35,
+          "distance_km": 1.6,
+          "elevation_gain_m": 106,
+          "average_gradient_pct": 6.4,
+          "max_gradient_pct": 10.2,
+          "category": "Cat 4",
+          "summit_altitude_m": 200,
+          "tactical_notes": "First real test. Short but punchy — sets tempo for the group."
+        },
+        {
+          "name": "Gate Hill (Colle Andrea Pinarello)",
+          "km_from_start": 50,
+          "distance_km": 3.5,
+          "elevation_gain_m": 186,
+          "average_gradient_pct": 5.2,
+          "max_gradient_pct": 8.9,
+          "category": "Cat 3",
+          "summit_altitude_m": 280,
+          "tactical_notes": "Longest climb on course. Italian-named in GFNY tradition. Where groups fracture."
+        },
+        {
+          "name": "Cheesecote Mountain",
+          "km_from_start": 60,
+          "distance_km": 1.5,
+          "elevation_gain_m": 79,
+          "average_gradient_pct": 5.2,
+          "max_gradient_pct": 9.6,
+          "category": "Cat 4",
+          "summit_altitude_m": 250,
+          "tactical_notes": "Notorious 18% initial ramp that catches tired legs. Short but vicious."
+        },
+        {
+          "name": "Mott Farm Road",
+          "km_from_start": 70,
+          "distance_km": 2.0,
+          "elevation_gain_m": 60,
+          "average_gradient_pct": 3.0,
+          "max_gradient_pct": 6.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 200,
+          "tactical_notes": "Undulating rollers. No single steep pitch but legs are fatigued."
+        }
+      ],
+      "profile_type": "rolling",
+      "king_of_mountain": "Gate Hill (Colle Andrea Pinarello)"
+    },
+
+    "course_description": {
+      "character": "A grand departure from the George Washington Bridge into the leafy hills of NJ and NY, with modest climbing that doesn't match the event's outsized reputation. Since Bear Mountain was removed in 2023, the course lost its crown jewel — a 7.4km Cat 2 that gave the route genuine mountain character. What remains is a pleasant rolling ride through the Palisades with a few punchy climbs and an 18% wall on Cheesecote.",
+      "signature_challenge": "Cheesecote Mountain — the 18% initial ramp is a rude wake-up call after 60km. Short but it breaks rhythm badly.",
+      "suffering_zones": [
+        "Cheesecote Mountain 18% ramp — 60km in, legs cramping, that wall appears",
+        "Gate Hill km 2-3.5 — 5.2% avg sounds easy until you've been riding 50km",
+        "Return headwinds on Route 9W — psychological grind, especially solo"
+      ]
+    },
+
+    "logistics": {
+      "airport": "LGA, JFK, EWR — all within 30-60min of Fort Lee. EWR closest.",
+      "lodging_strategy": "Official hotel partners $195-365/night in Fort Lee, Edgewater, Englewood. Manhattan hotels plentiful but add bridge traffic on race morning.",
+      "transport": "Start area opens 5:00 AM. GWB lower level closed all day. Extensive police presence (~150 officers) but NOT full road closure — partial closures on 9W northbound.",
+      "food": "Post-race: BBQ, Michelob Ultra Beer Garden, NYC Bike Expo.",
+      "official_site": "https://nyc.gfny.com"
+    },
+
+    "history": {
+      "founded": 2011,
+      "origin_story": "Founded by Uli Fluhme (German lawyer in NYC) and Lidia Fluhme (15x Ironman finisher) who quit their jobs and invested $200K of personal savings to bring Italian gran fondo culture to New York City. NYC had no European-style mass-start road race. Key challenge: securing GWB closure from Port Authority (initially wanted $50-100K) and permits from 15 municipalities, 3 parks, and bridge authorities.",
+      "notable_moments": [
+        "2011: First edition — 1,900 riders",
+        "2012: First amateur competition worldwide to test athletes out-of-competition for doping",
+        "2012: Year 2 jumped to 5,000 riders, proving NYC market demand",
+        "2012, 2015, 2017, 2019: EPO positives found in anti-doping tests",
+        "2023: Bear Mountain climb removed — controversial, reduced course character significantly",
+        "2024: Added GP NYC (UCI 1.2 pro race) — one of only 3 UCI events in the US",
+        "Global expansion: from 1 event to 30+ across 15+ countries"
+      ],
+      "reputation": "The GFNY World Championship — flagship of the global GFNY brand. Known more for its international field (90+ countries) and anti-doping program than for its course. The brand has become bigger than any single event. Adding the GP NYC UCI 1.2 pro race in 2024 elevated its competitive credibility significantly."
+    },
+
+    "biased_opinion": {
+      "verdict": "A world-class brand built on an increasingly average course.",
+      "summary": "GFNY NYC is a strange contradiction. The brand is genuinely impressive — 30+ events worldwide, 90+ nationalities in the field, legitimate anti-doping program, and now a UCI pro race. But the course itself, especially after Bear Mountain's removal in 2023, is rolling suburban New Jersey that wouldn't merit a second look without the GFNY name. You're paying $350+ for the jersey, the atmosphere, and the right to race on the GWB — not for the route.",
+      "strengths": [
+        "Most international amateur peloton in the world — 90+ countries",
+        "Only amateur cycling event with genuine out-of-competition doping tests",
+        "GP NYC UCI 1.2 pro race elevates the competitive experience",
+        "NYC logistics — three major airports, abundant hotels, world-class city",
+        "George Washington Bridge start is genuinely iconic",
+        "GFNY global brand — results count toward world championship rankings"
+      ],
+      "weaknesses": [
+        "Bear Mountain removal (2023) gutted the course's defining climb",
+        "NOT full road closure — partial closures and ~150 police, but cars are present",
+        "$350-400 entry is steep for what's now a moderate rolling ride",
+        "Course doesn't match the event's reputation since 2023",
+        "Post-race amenities are fine but not memorable"
+      ],
+      "bottom_line": "GFNY NYC earns T2 through prestige, not course. The international field and UCI pro race are world-class. The course is not. If you want the GFNY experience, go. If you want epic American road riding, look at Mt. Washington, Haute Route Rockies, or the Triple Bypass."
+    },
+
+    "final_verdict": {
+      "score": "54/100",
+      "one_liner": "The most international peloton in the world, starting on the George Washington Bridge — GFNY NYC is a brand that outgrew its course.",
+      "should_you_race": "Yes, if you value the competitive atmosphere, international field, and NYC setting over course quality. The GFNY brand is real — results count globally, doping tests are real, and the UCI pro race adds legitimate elite racing. Just don't expect the route to match the marketing since Bear Mountain was removed.",
+      "alternatives": "Mt. Washington Hillclimb (iconic American road climb), Gran Fondo New Jersey (better NJ course, lower profile), Philadelphia International Cycling Classic (pro heritage)."
+    },
+
+    "citations": [
+      {"url": "https://nyc.gfny.com/course/", "category": "official", "label": "Official course data — current route without Bear Mountain"},
+      {"url": "https://nyc.gfny.com/nyc26/", "category": "official", "label": "2026 event page — date, registration, pricing"},
+      {"url": "https://gfny.com/story/", "category": "official", "label": "GFNY founding story — Uli and Lidia Fluhme"},
+      {"url": "https://gfny.com/how-uli-fluhme-gfny-ceo-brought-italian-racing-culture-to-nyc/", "category": "editorial", "label": "Uli Fluhme interview — origin and vision"},
+      {"url": "https://gfny.com/anti-doping/", "category": "official", "label": "GFNY anti-doping program details"},
+      {"url": "https://gfny.com/13th-michelob-ultra-gfny-world-championship-nyc-and-2nd-gran-premio-new-york-city-this-sunday/", "category": "editorial", "label": "2025 race preview and GP NYC details"},
+      {"url": "https://www.reddit.com/r/NYCbike/comments/12sdhx9/gfny_quietly_removes_the_bear/", "category": "community", "label": "Reddit — Bear Mountain removal controversy"},
+      {"url": "https://nyvelocity.com/articles/interviews/uli-fluhme-la-fondo-parte-seconda/", "category": "editorial", "label": "2012 NY Velocity interview — early GFNY history"}
+    ]
+  }
+}

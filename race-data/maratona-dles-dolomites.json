@@ -1,0 +1,240 @@
+{
+  "race": {
+    "name": "Maratona dles Dolomites",
+    "slug": "maratona-dles-dolomites",
+    "display_name": "Maratona dles Dolomites",
+    "tagline": "Seven Dolomite passes, 4,230m of climbing, and a lottery you'll pray to win.",
+
+    "vitals": {
+      "distance_km": 138,
+      "distance_mi": 85.7,
+      "elevation_m": 4230,
+      "elevation_ft": 13878,
+      "location": "La Villa → Corvara, Alta Badia, South Tyrol",
+      "location_badge": "Alta Badia, Italy",
+      "country": "Italy",
+      "date": "First Sunday in July",
+      "date_specific": "July 5, 2026",
+      "field_size": "~8,000-9,000 riders (from ~30,000 applicants)",
+      "start_format": "wave_start",
+      "registration": "Lottery — opens annually, ~4:1 odds",
+      "entry_fee": "EUR 180",
+      "feed_zones": "Multiple stations on/near each pass — Enervit gels, Dole fruit, Marlene apples, Segafredo coffee, speck, strudel, tortellini, prosecco at finish",
+      "cutoff_time": "Not strict — broom wagon sweeps slowest riders on each pass",
+      "lat": 46.5857,
+      "lng": 11.8967,
+      "route_options": [
+        "Sellaronda: 55km / 1,780m — 3 passes (Campolongo, Pordoi, Sella)",
+        "Medio: 106km / 3,130m — 5 passes (adds Gardena, Giau)",
+        "Maratona: 138km / 4,230m — 7 passes (adds Falzarego, Valparola)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "Valley 20-28°C, summits 8-15°C lower. Dawn start potentially single digits. 63% rain chance. Thunderstorm risk HIGH — afternoon storms common. Mandatory rain jacket enforced (no vests).",
+      "challenges": [
+        "Alpine weather changes rapidly — sunshine to hail in minutes",
+        "Summits above 2,200m can feel near-freezing in rain",
+        "1989 edition shortened by ice on passes",
+        "Mandatory rain jacket — no vests allowed"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Alpine mountain passes",
+      "surface": "Fully paved — high-quality Italian/South Tyrolean mountain roads",
+      "technical_rating": 4,
+      "features": [
+        "7 named Dolomite passes including HC-rated Passo Giau",
+        "29 hairpins on Giau alone",
+        "Summit altitudes from 1,875m to 2,244m",
+        "Mur dl Giat — 370m at 12.4% avg, 19% max before finish",
+        "UNESCO World Heritage Dolomite scenery throughout"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 90,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 5,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 5,
+      "expenses": 4,
+      "cultural_impact": 5,
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Calibration anchor — Tier 1 ceiling. 7 Dolomite passes, UNESCO scenery, lottery from 30K applicants, 39-year heritage. Road surface scored 1 (fresh tarmac = low difficulty). Prestige 5 confirmed (prestige_5_events list). Cultural impact 5 — defines the gran fondo genre."
+    },
+
+    "climb_profile": {
+      "total_climbs": 7,
+      "hc_climbs": 1,
+      "cat_1_climbs": 2,
+      "cat_2_climbs": 1,
+      "cat_3_climbs": 1,
+      "key_climbs": [
+        {
+          "name": "Passo Campolongo",
+          "km_from_start": 0,
+          "distance_km": 5.8,
+          "elevation_gain_m": 353,
+          "average_gradient_pct": 6.1,
+          "max_gradient_pct": 11.0,
+          "category": "Cat 2",
+          "summit_altitude_m": 1875,
+          "tactical_notes": "Warmup climb. Repeated at km 55 after Sella descent."
+        },
+        {
+          "name": "Passo Pordoi",
+          "km_from_start": 15,
+          "distance_km": 9.2,
+          "elevation_gain_m": 638,
+          "average_gradient_pct": 6.9,
+          "max_gradient_pct": 10.0,
+          "category": "Cat 1",
+          "summit_altitude_m": 2239,
+          "tactical_notes": "Highest paved Dolomite pass. Fausto Coppi monument at summit. Pace conservatively — Giau is still ahead."
+        },
+        {
+          "name": "Passo Sella",
+          "km_from_start": 30,
+          "distance_km": 5.5,
+          "elevation_gain_m": 436,
+          "average_gradient_pct": 7.9,
+          "max_gradient_pct": 12.0,
+          "category": "Cat 1",
+          "summit_altitude_m": 2244,
+          "tactical_notes": "Highest point on course. Steepest Sellaronda pass. Stunning Sassolungo views."
+        },
+        {
+          "name": "Passo Gardena",
+          "km_from_start": 42,
+          "distance_km": 5.8,
+          "elevation_gain_m": 250,
+          "average_gradient_pct": 4.3,
+          "max_gradient_pct": 10.0,
+          "category": "Cat 3",
+          "summit_altitude_m": 2121,
+          "tactical_notes": "Easiest pass — active recovery before the queen stage."
+        },
+        {
+          "name": "Passo Giau",
+          "km_from_start": 80,
+          "distance_km": 9.9,
+          "elevation_gain_m": 922,
+          "average_gradient_pct": 9.3,
+          "max_gradient_pct": 15.0,
+          "category": "HC",
+          "summit_altitude_m": 2236,
+          "tactical_notes": "THE queen stage. 29 hairpins. 9.3% average over 10km is relentless. Decisive — this is where the race is won or survived."
+        },
+        {
+          "name": "Passo Falzarego",
+          "km_from_start": 110,
+          "distance_km": 6.0,
+          "elevation_gain_m": 350,
+          "average_gradient_pct": 5.8,
+          "max_gradient_pct": 10.0,
+          "category": "Cat 2",
+          "summit_altitude_m": 2105,
+          "tactical_notes": "WWI battlefield. Combined climb from Pocol — legs are spent by now."
+        },
+        {
+          "name": "Passo Valparola",
+          "km_from_start": 116,
+          "distance_km": 1.5,
+          "elevation_gain_m": 83,
+          "average_gradient_pct": 5.5,
+          "max_gradient_pct": 8.0,
+          "category": "Cat 4",
+          "summit_altitude_m": 2200,
+          "tactical_notes": "Final summit. Short but legs are destroyed. WWII museum. Then Mur dl Giat sting before Corvara."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Passo Giau"
+    },
+
+    "course_description": {
+      "character": "An operatic cycling pilgrimage through the heart of the Dolomites. Seven named passes, each with its own personality — from the warmup of Campolongo to the soul-crushing 29 hairpins of Giau. The course loops through UNESCO World Heritage landscapes that make even suffering beautiful. Three route options let you choose your level of punishment.",
+      "signature_challenge": "Passo Giau — 9.9km at 9.3% average with 29 hairpins. After 80km and four passes already in the legs, this is where dreams and delusions separate.",
+      "suffering_zones": [
+        "Passo Giau km 5-10: 9.3% avg after 80km, legs screaming, 29 hairpins of psychological warfare",
+        "Mur dl Giat: 370m at 12.4% avg, 19% max — vicious final sting before Corvara finish",
+        "Passo Sella: 7.9% avg comes early but the 12% max gradient kicks when you're not ready"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Venice Marco Polo (VCE, 3hr drive, best for international), Innsbruck (INN, 2hr), Bolzano (BZO, 1.5hr, limited flights)",
+      "lodging_strategy": "Book 1 year ahead — Alta Badia hotels prefer full-week bookings during Rider's Week. Tour operator packages EUR 1,399-4,399+. Alternatively, stay in Bolzano/Bressanone and shuttle in.",
+      "transport": "Free shuttle buses across Alta Badia villages during Rider's Week. Roads fully closed to all motorized vehicles on race day.",
+      "food": "Feed zones serve Enervit nutrition, local specialties (speck, strudel, tortellini), prosecco at finish. Post-race pasta party in Corvara.",
+      "official_site": "https://www.maratona.it"
+    },
+
+    "history": {
+      "founded": 1987,
+      "origin_story": "Founded in 1987 to celebrate the 10th anniversary of Cycling Club Alta Badia. Just 166 riders showed up for the first edition. Named in Ladin — the minority Alpine language of the Dolomite valleys — reflecting deep local cultural roots.",
+      "notable_moments": [
+        "1987: First edition — 166 riders from Alta Badia cycling club",
+        "1989: Edition shortened by ice on passes",
+        "2005: Lottery system introduced due to overwhelming demand",
+        "2017: Bradley Wiggins rides the Maratona",
+        "2025: 32,700 applicants for 8,000 spots — demand still growing after 38 editions",
+        "Each edition has a theme — 2026 theme is PAX"
+      ],
+      "reputation": "National Geographic called it 'one of the biggest, most passionate, and most chaotic bike races on Earth.' Pirelli: 'almost certainly the most scenic bike race in the world.' Rouleur: 'Italy's grandest gran fondo.' The Maratona IS the gran fondo — it defined the format."
+    },
+
+    "biased_opinion": {
+      "verdict": "The one gran fondo you absolutely must ride before you die.",
+      "summary": "If cycling had a spiritual pilgrimage, the Maratona would be Mecca. Seven Dolomite passes of escalating beauty and suffering, culminating in the 29 hairpins of Giau that break you physically and reconstruct you emotionally. The lottery system means you can't just buy your way in — you have to earn the right to suffer. EUR 180 entry for a day that includes speck, strudel, tortellini, and prosecco on the summit? Italy understands value.",
+      "strengths": [
+        "Seven named Dolomite passes — each with distinct character",
+        "UNESCO World Heritage scenery that makes suffering transcendent",
+        "EUR 180 entry is absurd value for what you get (including food, wine, support)",
+        "39 years of history — this event predates the modern gran fondo movement",
+        "Lottery creates genuine exclusivity — demand outstrips supply 4:1",
+        "1,500+ volunteers, mechanical support, full road closures"
+      ],
+      "weaknesses": [
+        "Lottery means no guaranteed entry — average 4:1 odds",
+        "Alta Badia accommodation books 12 months ahead, tour packages expensive",
+        "Alpine weather can turn savage — rain jacket is mandatory for a reason",
+        "3-hour drive from nearest major airport (Venice)"
+      ],
+      "bottom_line": "The Maratona is the undisputed T1 anchor of road cycling events. It's not the hardest (Haute Route), not the longest (Ötztaler), not the most exclusive (Cape Town by sheer numbers) — but it's the most complete package of scenery, suffering, culture, history, and value in the gran fondo world."
+    },
+
+    "final_verdict": {
+      "score": "90/100",
+      "one_liner": "Seven Dolomite passes, 4,230m of climbing, and a lottery you'll pray to win — the Maratona defines what a gran fondo should be.",
+      "should_you_race": "Yes, if you can win the lottery. This is the bucket-list gran fondo. You need solid climbing legs (4,000m+ is no joke) and a willingness to suffer beautifully. The three route options mean you can ride the Sellaronda (55km) as a stunning intro or go full Maratona for the complete experience.",
+      "alternatives": "Gran Fondo Stelvio (higher single pass, same Dolomite region), Ötztaler Radmarathon (similar altitude, more savage), Nove Colli (flatter Italian classic if Dolomites intimidate you)."
+    },
+
+    "citations": [
+      {"url": "https://www.maratona.it/en/138km", "category": "official", "label": "Official course data — full 138km route"},
+      {"url": "https://www.maratona.it/en/how-to-register-2026", "category": "official", "label": "2026 registration and lottery info"},
+      {"url": "https://en.wikipedia.org/wiki/Maratona_dles_Dolomites", "category": "reference", "label": "Wikipedia — history and statistics"},
+      {"url": "https://www.rouleur.cc/en-ca/blogs/rouleur-explore/maratona-dles-dolomites", "category": "editorial", "label": "Rouleur — 'Italy's grandest gran fondo'"},
+      {"url": "https://www.maratona.it/en/refreshments", "category": "official", "label": "Official feed zone details"},
+      {"url": "https://www.maratona.it/en/conditionsofentry-2026", "category": "official", "label": "2026 conditions of entry, cutoffs, rules"},
+      {"url": "https://epicroadrides.com/cycling-italy/dolomites/passo-giau/", "category": "data", "label": "Passo Giau climb profile and gradient data"},
+      {"url": "https://www.pirelli.com/global/en-ww/road/bicycles/maratona-dles-dolomites-an-italian-classic-99685/", "category": "editorial", "label": "Pirelli — 'most scenic bike race in the world'"}
+    ]
+  }
+}
