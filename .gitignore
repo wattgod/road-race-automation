@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+*.env.local
+
+# Google service account keys (NEVER commit)
+data/gsc-service-account.json
+*-service-account*.json
+
+# Results and logs
+push_results.json
+dry_run_results.json
+*.log
+
+# Database backups
+*.json.bak
+*.csv.bak
+*.bak.md
+
+# Generated output (regenerate with generators)
+wordpress/output/
+output/
+video-scripts/
+guide/media-raw/
+guide/media/
+
+# Google API credentials
+credentials.json
+token.json
+
+# Daily reports
+reports/daily/*.html
+reports/daily/*.json
+!reports/daily/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

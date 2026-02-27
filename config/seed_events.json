@@ -1,0 +1,117 @@
+{
+  "description": "Seed list of road cycling events to research and score. Phase 0: first 10 events for calibration. Phase 1: expand to 50.",
+  "phase_0_calibration": [
+    {
+      "name": "Maratona dles Dolomites",
+      "slug": "maratona-dles-dolomites",
+      "country": "Italy",
+      "expected_tier": 1,
+      "notes": "T1 calibration anchor. 138km, 4,230m climbing, 7 Dolomite passes. Lottery entry from 30k applicants.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "L'Etape du Tour",
+      "slug": "letape-du-tour",
+      "country": "France",
+      "expected_tier": 1,
+      "notes": "T1 candidate. Ride a Tour de France mountain stage. 15,000+ riders.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "L'Eroica",
+      "slug": "leroica",
+      "country": "Italy",
+      "expected_tier": 1,
+      "notes": "T1 candidate. Vintage bikes on Strade Bianche white roads. Cultural phenomenon. Founded 1997.",
+      "discipline": "sportive"
+    },
+    {
+      "name": "Gran Fondo Stelvio",
+      "slug": "gran-fondo-stelvio",
+      "country": "Italy",
+      "expected_tier": 1,
+      "notes": "T1 candidate. Climb the Stelvio Pass (2,758m). The ultimate hillclimb fondo.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "Cape Town Cycle Tour",
+      "slug": "cape-town-cycle-tour",
+      "country": "South Africa",
+      "expected_tier": 1,
+      "notes": "T1 candidate. 35,000+ riders, largest timed bike race on Earth. 109km around Cape Peninsula.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "GFNY NYC",
+      "slug": "gfny-nyc",
+      "country": "USA",
+      "expected_tier": 2,
+      "notes": "T2 calibration anchor. 160km through NYC suburbs and Bear Mountain. Strong field.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "RBC GranFondo Whistler",
+      "slug": "rbc-granfondo-whistler",
+      "country": "Canada",
+      "expected_tier": 1,
+      "notes": "T1 candidate. Sea to Sky Highway. 7,000 riders. 122km, 1,800m climbing.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "Nove Colli",
+      "slug": "nove-colli",
+      "country": "Italy",
+      "expected_tier": 2,
+      "notes": "T2 candidate. Nine hills of Romagna. 200km, 3,846m climbing. 12,000 riders. Founded 1971.",
+      "discipline": "gran_fondo"
+    },
+    {
+      "name": "Haute Route Alps",
+      "slug": "haute-route-alps",
+      "country": "France/Switzerland",
+      "expected_tier": 1,
+      "notes": "T1 candidate. 7-day stage race through the Alps. ~800km, ~21,000m climbing total.",
+      "discipline": "multi_stage"
+    },
+    {
+      "name": "Mount Washington Hillclimb",
+      "slug": "mount-washington-hillclimb",
+      "country": "USA",
+      "expected_tier": 2,
+      "notes": "T3-T4 calibration. 12km, 1,439m gain. One climb, no other course features. Prestige 3-4.",
+      "discipline": "hillclimb"
+    }
+  ],
+  "phase_1_expansion": [
+    {"name": "Strade Bianche Gran Fondo", "slug": "strade-bianche-gran-fondo", "country": "Italy", "discipline": "sportive"},
+    {"name": "Granfondo Campagnolo Roma", "slug": "granfondo-campagnolo-roma", "country": "Italy", "discipline": "gran_fondo"},
+    {"name": "La Marmotte", "slug": "la-marmotte", "country": "France", "discipline": "sportive"},
+    {"name": "Mallorca 312", "slug": "mallorca-312", "country": "Spain", "discipline": "gran_fondo"},
+    {"name": "Raid Pyreneen", "slug": "raid-pyreneen", "country": "France", "discipline": "gran_fondo"},
+    {"name": "Velo Birmingham", "slug": "velo-birmingham", "country": "UK", "discipline": "sportive"},
+    {"name": "Tour of Flanders Sportive", "slug": "tour-of-flanders-sportive", "country": "Belgium", "discipline": "sportive"},
+    {"name": "Gran Fondo New York - Miami", "slug": "gfny-miami", "country": "USA", "discipline": "gran_fondo"},
+    {"name": "Levi's GranFondo", "slug": "levis-granfondo", "country": "USA", "discipline": "gran_fondo"},
+    {"name": "Tour de Tucson", "slug": "tour-de-tucson", "country": "USA", "discipline": "century"},
+    {"name": "Hotter'N Hell Hundred", "slug": "hotternhell-hundred", "country": "USA", "discipline": "century"},
+    {"name": "RAGBRAI", "slug": "ragbrai", "country": "USA", "discipline": "multi_stage"},
+    {"name": "Ride London", "slug": "ride-london", "country": "UK", "discipline": "sportive"},
+    {"name": "CCC Sportive (Tour of Poland)", "slug": "ccc-sportive", "country": "Poland", "discipline": "sportive"},
+    {"name": "La Pina Cycling Marathon", "slug": "la-pina-cycling-marathon", "country": "Italy", "discipline": "gran_fondo"},
+    {"name": "Quebrantahuesos", "slug": "quebrantahuesos", "country": "Spain", "discipline": "gran_fondo"},
+    {"name": "Etape Caledonia", "slug": "etape-caledonia", "country": "UK", "discipline": "sportive"},
+    {"name": "Granfondo Giordana", "slug": "granfondo-giordana", "country": "Italy", "discipline": "gran_fondo"},
+    {"name": "Amy's Gran Fondo", "slug": "amys-gran-fondo", "country": "USA", "discipline": "gran_fondo"},
+    {"name": "Alpe d'HuZes", "slug": "alpe-dhuzes", "country": "France", "discipline": "hillclimb"},
+    {"name": "Marmotte Granfondo Pyrenees", "slug": "marmotte-granfondo-pyrenees", "country": "France", "discipline": "gran_fondo"},
+    {"name": "Tour de Mont Blanc", "slug": "tour-de-mont-blanc-cycling", "country": "France/Italy/Switzerland", "discipline": "multi_stage"},
+    {"name": "Gran Fondo Campagnolo", "slug": "gran-fondo-campagnolo", "country": "Italy", "discipline": "gran_fondo"},
+    {"name": "Tour of the Battenkill", "slug": "tour-of-the-battenkill", "country": "USA", "discipline": "gran_fondo"},
+    {"name": "Cinturón de Mallorca", "slug": "cinturon-de-mallorca", "country": "Spain", "discipline": "gran_fondo"},
+    {"name": "Campagnolo GranFondo San Sebastian", "slug": "granfondo-san-sebastian", "country": "Spain", "discipline": "gran_fondo"},
+    {"name": "Dolomites Marathon Dles Dolomites", "slug": "bike-marathon-dolomites", "country": "Italy", "discipline": "gran_fondo"},
+    {"name": "Cadel Evans Great Ocean Road Ride", "slug": "cadel-evans-great-ocean-road", "country": "Australia", "discipline": "gran_fondo"},
+    {"name": "Ocean to Alps", "slug": "ocean-to-alps", "country": "Australia", "discipline": "gran_fondo"},
+    {"name": "Death Ride (Tour of the California Alps)", "slug": "death-ride-california", "country": "USA", "discipline": "century"}
+  ]
+}

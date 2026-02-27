@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""
+Recalculate tiers for all road race / gran fondo event profiles.
+
+Reads scoring dimensions from config/dimensions.json.
+
+Prestige override logic:
+  - prestige=5 AND score >= 75 → Tier 1
+  - prestige=5 AND score < 75  → Tier 2 (capped, not T1)
+  - prestige=4 → promote 1 tier but NOT into Tier 1
+
+Usage:
+    python recalculate_tiers.py --dry-run     # Preview changes
+    python recalculate_tiers.py               # Apply changes
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+from typing import Optional, Tuple
+
+PROJECT_ROOT = Path(__file__).parent.parent
+RACE_DATA = PROJECT_ROOT / "race-data"
+CONFIG = PROJECT_ROOT / "config" / "dimensions.json"
+
+# Load config
+_config = json.loads(CONFIG.read_text())
+
+# Tier thresholds from config
+T1_THRESHOLD = _config["tier_thresholds"]["T1"]
+T2_THRESHOLD = _config["tier_thresholds"]["T2"]
+T3_THRESHOLD = _config["tier_thresholds"]["T3"]
+
+# Prestige-5 floor for T1 promotion
+P5_T1_FLOOR = _config["prestige_overrides"]["p5_t1_floor"]
+
+# The scoring dimensions (read from config)
+SCORE_FIELDS = [d["key"] for d in _config["dimensions"]]
+
+# Rating key in the event JSON
+RATING_KEY = "fondo_rating"
+
+# Valid disciplines
+VALID_DISCIPLINES = set(_config["disciplines"])
+
+
+def calculate_tier(overall_score: int) -> int:
+    """Calculate base tier from overall score."""
+    if overall_score >= T1_THRESHOLD:
+        return 1
+    elif overall_score >= T2_THRESHOLD:
+        return 2
+    elif overall_score >= T3_THRESHOLD:
+        return 3
+    else:
+        return 4
+
+
+def apply_prestige_override(tier: int, prestige: int, overall_score: int) -> Tuple[int, Optional[str]]:
+    """Apply prestige override rules. Returns (new_tier, override_reason)."""
+    if prestige == 5:
+        if overall_score >= P5_T1_FLOOR and tier > 1:
+            return 1, f"Prestige 5 + score >= {P5_T1_FLOOR} — promoted to Tier 1"
+        elif overall_score < P5_T1_FLOOR and tier > 2:
+            return 2, f"Prestige 5 — promoted to Tier 2 (score < {P5_T1_FLOOR})"
+        elif overall_score < P5_T1_FLOOR and tier <= 2:
+            return tier, None
+    elif prestige == 4:
+        if tier > 2:
+            return tier - 1, "Prestige 4 — promoted 1 tier (not into T1)"
+    return tier, None
+
+
+def recalculate_score(rating: dict) -> int:
+    """Recalculate overall_score from base dimensions + cultural_impact bonus."""
+    base_sum = sum(rating.get(f, 0) for f in SCORE_FIELDS)
+    ci = rating.get("cultural_impact", 0)
+    return round((base_sum + ci) / 70 * 100)
+
+
+def recalculate_race(data: dict, slug: str) -> dict:
+    """Recalculate score and tier for a single race. Returns change info."""
+    race = data.get("race", {})
+    rating = race.get(RATING_KEY, {})
+
+    old_score = rating.get("overall_score", 0)
+    overall = recalculate_score(rating)
+    rating["overall_score"] = overall
+
+    prestige = rating.get("prestige", 0)
+    old_tier = rating.get("tier", 3)
+
+    base_tier = calculate_tier(overall)
+    new_tier, override_reason = apply_prestige_override(base_tier, prestige, overall)
+
+    # Discipline — read from profile, default to gran_fondo
+    discipline = rating.get("discipline", "gran_fondo")
+
+    changed = (new_tier != old_tier) or (overall != old_score)
+    change = {
+        "slug": slug,
+        "overall_score": overall,
+        "old_score": old_score,
+        "score_changed": overall != old_score,
+        "prestige": prestige,
+        "cultural_impact": rating.get("cultural_impact", 0),
+        "old_tier": old_tier,
+        "new_tier": new_tier,
+        "base_tier": base_tier,
+        "discipline": discipline,
+        "tier_changed": new_tier != old_tier,
+        "override_reason": override_reason,
+    }
+
+    # Update the data
+    rating["tier"] = new_tier
+    rating["tier_label"] = f"TIER {new_tier}"
+    rating["discipline"] = discipline
+    rating["display_tier"] = new_tier
+    rating["display_tier_label"] = f"TIER {new_tier}"
+
+    if override_reason:
+        rating["tier_override_reason"] = override_reason
+    elif "tier_override_reason" in rating:
+        del rating["tier_override_reason"]
+
+    return change
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Recalculate tiers for road race profiles")
+    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    args = parser.parse_args()
+
+    profiles = sorted(RACE_DATA.glob("*.json"))
+    print(f"\nProcessing {len(profiles)} event profiles...\n")
+
+    changes = []
+    demotions = []
+    promotions = []
+    discipline_counts = {d: 0 for d in VALID_DISCIPLINES}
+
+    for path in profiles:
+        slug = path.stem
+        try:
+            data = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            print(f"  SKIP invalid JSON: {path.name}")
+            continue
+
+        change = recalculate_race(data, slug)
+        changes.append(change)
+        disc = change["discipline"]
+        if disc in discipline_counts:
+            discipline_counts[disc] += 1
+
+        if change["score_changed"]:
+            ci_tag = f"  ci={change['cultural_impact']}" if change["cultural_impact"] else ""
+            print(f"  ~ {slug:<45} score={change['old_score']}→{change['overall_score']}{ci_tag}")
+
+        if change["tier_changed"]:
+            direction = "DEMOTE" if change["new_tier"] > change["old_tier"] else "PROMOTE"
+            icon = "↓" if direction == "DEMOTE" else "↑"
+            print(f"  {icon} {slug:<45} T{change['old_tier']}→T{change['new_tier']}  score={change['overall_score']}  p={change['prestige']}")
+            if direction == "DEMOTE":
+                demotions.append(change)
+            else:
+                promotions.append(change)
+
+        if not args.dry_run:
+            path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+
+    # Summary
+    print(f"\n{'DRY RUN — ' if args.dry_run else ''}SUMMARY")
+    print(f"  Total profiles: {len(changes)}")
+    print(f"  Demotions: {len(demotions)}")
+    for d in demotions:
+        print(f"    {d['slug']}: T{d['old_tier']}→T{d['new_tier']} (score={d['overall_score']}, p={d['prestige']})")
+    print(f"  Promotions: {len(promotions)}")
+    for p in promotions:
+        print(f"    {p['slug']}: T{p['old_tier']}→T{p['new_tier']} (score={p['overall_score']}, p={p['prestige']})")
+    score_changes = [c for c in changes if c["score_changed"]]
+    print(f"  Score changes: {len(score_changes)}")
+    disc_str = ", ".join(f"{k}={v}" for k, v in discipline_counts.items() if v > 0)
+    print(f"  Discipline: {disc_str}")
+
+    tier_dist = {1: 0, 2: 0, 3: 0, 4: 0}
+    for c in changes:
+        tier_dist[c["new_tier"]] += 1
+    print(f"  Tier distribution: T1={tier_dist[1]}, T2={tier_dist[2]}, T3={tier_dist[3]}, T4={tier_dist[4]}")
+
+
+if __name__ == "__main__":
+    main()

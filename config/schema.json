@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Road Race / Gran Fondo Event Profile",
+  "description": "Schema for scored road cycling event profiles",
+  "type": "object",
+  "required": ["race"],
+  "properties": {
+    "race": {
+      "type": "object",
+      "required": ["name", "slug", "vitals", "fondo_rating", "final_verdict", "citations"],
+      "properties": {
+        "name": {"type": "string"},
+        "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "display_name": {"type": "string"},
+        "tagline": {"type": "string", "maxLength": 200},
+
+        "vitals": {
+          "type": "object",
+          "required": ["distance_km", "location", "date"],
+          "properties": {
+            "distance_km": {"type": "number", "minimum": 0},
+            "distance_mi": {"type": "number", "minimum": 0},
+            "elevation_m": {"type": "number", "minimum": 0},
+            "elevation_ft": {"type": "number", "minimum": 0},
+            "location": {"type": "string"},
+            "location_badge": {"type": "string"},
+            "country": {"type": "string"},
+            "date": {"type": "string"},
+            "date_specific": {"type": "string"},
+            "field_size": {"type": "string"},
+            "start_format": {"type": "string", "enum": ["mass_start", "wave_start", "pursuit", "time_trial", "individual"]},
+            "registration": {"type": "string"},
+            "entry_fee": {"type": "string"},
+            "prize_purse": {"type": "string"},
+            "feed_zones": {"type": "string"},
+            "cutoff_time": {"type": "string"},
+            "lat": {"type": "number"},
+            "lng": {"type": "number"},
+            "route_options": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Short/medium/long course options with distance and climbing"
+            }
+          }
+        },
+
+        "climate": {
+          "type": "object",
+          "properties": {
+            "primary": {"type": "string"},
+            "description": {"type": "string"},
+            "challenges": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+
+        "terrain": {
+          "type": "object",
+          "properties": {
+            "primary": {"type": "string"},
+            "surface": {"type": "string"},
+            "technical_rating": {"type": "integer", "minimum": 1, "maximum": 5},
+            "features": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+
+        "fondo_rating": {
+          "type": "object",
+          "required": ["overall_score", "tier", "distance", "climbing", "descent_technicality",
+                       "road_surface", "climate_risk", "altitude", "logistics", "prestige",
+                       "organization", "scenic_experience", "community_culture", "field_depth",
+                       "value", "expenses", "discipline"],
+          "properties": {
+            "overall_score": {"type": "integer", "minimum": 0, "maximum": 100},
+            "tier": {"type": "integer", "minimum": 1, "maximum": 4},
+            "tier_label": {"type": "string"},
+            "distance": {"type": "integer", "minimum": 1, "maximum": 5},
+            "climbing": {"type": "integer", "minimum": 1, "maximum": 5},
+            "descent_technicality": {"type": "integer", "minimum": 1, "maximum": 5},
+            "road_surface": {"type": "integer", "minimum": 1, "maximum": 5},
+            "climate_risk": {"type": "integer", "minimum": 1, "maximum": 5},
+            "altitude": {"type": "integer", "minimum": 1, "maximum": 5},
+            "logistics": {"type": "integer", "minimum": 1, "maximum": 5},
+            "prestige": {"type": "integer", "minimum": 1, "maximum": 5},
+            "organization": {"type": "integer", "minimum": 1, "maximum": 5},
+            "scenic_experience": {"type": "integer", "minimum": 1, "maximum": 5},
+            "community_culture": {"type": "integer", "minimum": 1, "maximum": 5},
+            "field_depth": {"type": "integer", "minimum": 1, "maximum": 5},
+            "value": {"type": "integer", "minimum": 1, "maximum": 5},
+            "expenses": {"type": "integer", "minimum": 1, "maximum": 5},
+            "cultural_impact": {"type": "integer", "minimum": 0, "maximum": 5},
+            "discipline": {"type": "string", "enum": ["gran_fondo", "sportive", "century", "multi_stage", "hillclimb"]}
+          }
+        },
+
+        "climb_profile": {
+          "type": "object",
+          "properties": {
+            "total_climbs": {"type": "integer"},
+            "hc_climbs": {"type": "integer"},
+            "cat_1_climbs": {"type": "integer"},
+            "cat_2_climbs": {"type": "integer"},
+            "cat_3_climbs": {"type": "integer"},
+            "key_climbs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"},
+                  "km_from_start": {"type": "number"},
+                  "distance_km": {"type": "number"},
+                  "elevation_gain_m": {"type": "number"},
+                  "average_gradient_pct": {"type": "number"},
+                  "max_gradient_pct": {"type": "number"},
+                  "category": {"type": "string"},
+                  "summit_altitude_m": {"type": "number"},
+                  "tactical_notes": {"type": "string"}
+                }
+              }
+            },
+            "profile_type": {"type": "string", "enum": ["flat", "rolling", "hilly", "mountain"]},
+            "king_of_mountain": {"type": "string"}
+          }
+        },
+
+        "biased_opinion_ratings": {"type": "object"},
+        "biased_opinion": {
+          "type": "object",
+          "properties": {
+            "verdict": {"type": "string"},
+            "summary": {"type": "string"},
+            "strengths": {"type": "array", "items": {"type": "string"}},
+            "weaknesses": {"type": "array", "items": {"type": "string"}},
+            "bottom_line": {"type": "string"}
+          }
+        },
+
+        "final_verdict": {
+          "type": "object",
+          "required": ["one_liner"],
+          "properties": {
+            "score": {"type": "string"},
+            "one_liner": {"type": "string"},
+            "should_you_race": {"type": "string"},
+            "alternatives": {"type": "string"},
+            "alternative_slugs": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+
+        "logistics": {
+          "type": "object",
+          "properties": {
+            "airport": {"type": "string"},
+            "lodging_strategy": {"type": "string"},
+            "transport": {"type": "string"},
+            "food": {"type": "string"},
+            "official_site": {"type": "string"}
+          }
+        },
+
+        "history": {
+          "type": "object",
+          "properties": {
+            "founded": {"type": "integer"},
+            "origin_story": {"type": "string"},
+            "notable_moments": {"type": "array", "items": {"type": "string"}},
+            "reputation": {"type": "string"}
+          }
+        },
+
+        "course_description": {
+          "type": "object",
+          "properties": {
+            "character": {"type": "string"},
+            "signature_challenge": {"type": "string"},
+            "suffering_zones": {"type": "array"}
+          }
+        },
+
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url"],
+            "properties": {
+              "url": {"type": "string", "format": "uri"},
+              "category": {"type": "string"},
+              "label": {"type": "string"}
+            }
+          }
+        },
+
+        "youtube_data": {"type": "object"},
+        "photos": {"type": "array"},
+        "research_metadata": {"type": "object"}
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "sport": "road_cycling",
+  "brand": "Road Race Rankings",
+  "dimensions": [
+    {
+      "key": "distance",
+      "label": "Distance",
+      "category": "course",
+      "rubric": {
+        "1": "Short: <80km / 50mi",
+        "2": "Moderate: 80-120km / 50-75mi",
+        "3": "Standard: 120-160km / 75-100mi",
+        "4": "Long: 160-200km / 100-125mi",
+        "5": "Ultra: 200km+ / 125mi+"
+      }
+    },
+    {
+      "key": "climbing",
+      "label": "Climbing",
+      "category": "course",
+      "rubric": {
+        "1": "Flat: <500m / 1,600ft total climbing",
+        "2": "Gentle: 500-1,500m / 1,600-5,000ft",
+        "3": "Rolling: 1,500-2,500m / 5,000-8,000ft",
+        "4": "Hilly: 2,500-4,000m / 8,000-13,000ft with categorized climbs",
+        "5": "Mountain: 4,000m+ / 13,000ft+ with HC-categorized climbs"
+      }
+    },
+    {
+      "key": "descent_technicality",
+      "label": "Descent Technicality",
+      "category": "course",
+      "rubric": {
+        "1": "Straight, wide roads with gentle gradients",
+        "2": "Some curves, good visibility, two-lane roads",
+        "3": "Moderate switchbacks, some narrow sections",
+        "4": "Alpine hairpins, high-speed technical descents",
+        "5": "Expert-level: single-lane hairpins, cobbled descents, poor surface"
+      }
+    },
+    {
+      "key": "road_surface",
+      "label": "Road Surface",
+      "category": "course",
+      "rubric": {
+        "1": "Fresh tarmac throughout, well-maintained",
+        "2": "Good asphalt with minor rough patches",
+        "3": "Mix of good and fair surfaces, some patching",
+        "4": "Rough surfaces, cobblestones sections, patched roads",
+        "5": "Significant cobbles, strade bianche, deteriorated surfaces"
+      }
+    },
+    {
+      "key": "climate_risk",
+      "label": "Climate Risk",
+      "category": "course",
+      "rubric": {
+        "1": "Temperate, sheltered, predictable conditions",
+        "2": "Mild heat or cold possible, minimal wind",
+        "3": "Moderate heat/cold likely, some wind exposure",
+        "4": "High heat, strong winds, or unpredictable mountain weather",
+        "5": "Extreme: alpine weather changes, snow risk on passes, severe heat"
+      }
+    },
+    {
+      "key": "altitude",
+      "label": "Altitude",
+      "category": "course",
+      "rubric": {
+        "1": "Sea level to 500m throughout",
+        "2": "Peaks at 500-1,000m",
+        "3": "Summit passes at 1,000-2,000m",
+        "4": "High passes at 2,000-2,500m",
+        "5": "Extreme altitude: 2,500m+ summit finishes (Stelvio, Galibier, Ventoux)"
+      }
+    },
+    {
+      "key": "logistics",
+      "label": "Logistics",
+      "category": "course",
+      "rubric": {
+        "1": "City center start, airport <30min, ample lodging and transport",
+        "2": "Major town, airport 30-60min, good lodging options",
+        "3": "Regional town, airport 1-2hr, adequate but limited lodging",
+        "4": "Small town, airport 2-3hr, lodging books up early",
+        "5": "Remote mountain village, airport 3hr+, very limited lodging"
+      }
+    },
+    {
+      "key": "prestige",
+      "label": "Prestige",
+      "category": "editorial",
+      "rubric": {
+        "1": "Local charity ride or small club event, no media coverage",
+        "2": "Regional event with local cycling media coverage",
+        "3": "National-level event, some international participation",
+        "4": "Major international event, strong media coverage, well-known name",
+        "5": "Iconic: UCI-recognized, massive field, pro route heritage, bucket-list status"
+      }
+    },
+    {
+      "key": "organization",
+      "label": "Organization Quality",
+      "category": "editorial",
+      "rubric": {
+        "1": "Basic: volunteer-only, partial road closures, no timing",
+        "2": "Decent: some road closures, chip timing, basic aid",
+        "3": "Good: full road closures, reliable timing, good feed zones",
+        "4": "Very good: moto escort, medical support, pro-level timing",
+        "5": "Elite: military-grade logistics, full closures, real-time tracking, neutral support"
+      }
+    },
+    {
+      "key": "scenic_experience",
+      "label": "Scenic / Experience",
+      "category": "editorial",
+      "rubric": {
+        "1": "Urban/suburban, forgettable scenery",
+        "2": "Pleasant countryside, some nice stretches",
+        "3": "Beautiful route with several memorable sections",
+        "4": "Stunning scenery throughout, multiple jaw-drop moments",
+        "5": "Breathtaking: Dolomites, coastal cliffs, volcanic roads — once-in-a-lifetime"
+      }
+    },
+    {
+      "key": "community_culture",
+      "label": "Community / Culture",
+      "category": "editorial",
+      "rubric": {
+        "1": "Sparse, transactional finish area",
+        "2": "Friendly atmosphere, basic post-ride refreshments",
+        "3": "Good community, nice post-ride party or village atmosphere",
+        "4": "Strong culture: enthusiastic crowds, great pasta party, local pride",
+        "5": "Legendary: tifosi energy, deep cycling heritage, pilgrimage-level devotion"
+      }
+    },
+    {
+      "key": "field_depth",
+      "label": "Field Depth",
+      "category": "editorial",
+      "rubric": {
+        "1": "Casual only, no competition",
+        "2": "Some competitive riders, informal age-group rankings",
+        "3": "Structured competitive waves, official age-group prizes",
+        "4": "Strong amateur field, some ex-pros, national-level athletes",
+        "5": "Elite: ex-pros, national champions, UCI GF points on offer"
+      }
+    },
+    {
+      "key": "value",
+      "label": "Value",
+      "category": "editorial",
+      "rubric": {
+        "1": "Overpriced: high entry fee, minimal inclusions",
+        "2": "Below average: fee doesn't match the experience",
+        "3": "Fair: entry fee reasonable for what you get",
+        "4": "Good value: includes jersey/meals/photos or other extras",
+        "5": "Exceptional: entry includes jersey, meals, massage, photos, transport"
+      }
+    },
+    {
+      "key": "expenses",
+      "label": "Total Cost",
+      "category": "editorial",
+      "rubric": {
+        "1": "Budget-friendly: <$300 all-in (drive-up, reasonable entry)",
+        "2": "Moderate: $300-500 total",
+        "3": "Standard: $500-1,000 (includes entry, lodging, some travel)",
+        "4": "Expensive: $1,000-2,000 (flights + hotels + entry)",
+        "5": "Premium destination: $2,000+ total cost"
+      }
+    }
+  ],
+  "bonus_dimension": {
+    "key": "cultural_impact",
+    "label": "Cultural Impact",
+    "max": 5,
+    "note": "Additive bonus, not included in denominator. Events like L'Eroica, Maratona get 4-5. Most events get 0."
+  },
+  "scoring_formula": "round((sum_of_14_dimensions + cultural_impact) / 70 * 100)",
+  "tier_thresholds": {
+    "T1": 80,
+    "T2": 60,
+    "T3": 45,
+    "T4": 0
+  },
+  "prestige_overrides": {
+    "p5_t1_floor": 75,
+    "p5_below_floor": "cap at T2",
+    "p4": "promote 1 tier, never into T1"
+  },
+  "disciplines": ["gran_fondo", "sportive", "century", "multi_stage", "hillclimb"],
+  "prestige_5_events": [
+    "letape-du-tour",
+    "maratona-dles-dolomites",
+    "leroica",
+    "gran-fondo-stelvio",
+    "cape-town-cycle-tour",
+    "rbc-granfondo-whistler"
+  ]
+}
