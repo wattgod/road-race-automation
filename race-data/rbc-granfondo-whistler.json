@@ -1,0 +1,186 @@
+{
+  "race": {
+    "name": "RBC GranFondo Whistler",
+    "slug": "rbc-granfondo-whistler",
+    "display_name": "RBC GranFondo Whistler",
+    "tagline": "Sea-to-Sky Highway from Vancouver to Whistler — North America's largest and most celebrated gran fondo.",
+
+    "vitals": {
+      "distance_km": 122,
+      "distance_mi": 76,
+      "elevation_m": 2300,
+      "elevation_ft": 7500,
+      "location": "Stanley Park, Vancouver → Whistler Village",
+      "location_badge": "British Columbia, Canada",
+      "country": "Canada",
+      "date": "First Saturday after Labour Day in September",
+      "date_specific": "September 12, 2026 (17th edition)",
+      "field_size": "~5,000-5,245 registered riders (14,000+ combined riders and spectators in 2024)",
+      "start_format": "wave_start",
+      "registration": "Open registration, tiered pricing. Forte limited to 550 riders and frequently sells out.",
+      "entry_fee": "CAD $280-330 (~$200-240 USD) tiered pricing. Youth U23: CAD $50.",
+      "feed_zones": "5 full-support rest stops (Gran Fondo/Forte) with nutrition, medical, and mechanical support.",
+      "cutoff_time": "Cutoff times exist but specific times not published. Broom wagon sweeps riders who fall behind pace.",
+      "lat": 49.2827,
+      "lng": -123.1207,
+      "route_options": [
+        "Forte: 152km / 3,100m — adds Cypress Mountain climb (limited to 550 riders)",
+        "Gran Fondo: 122km / 2,300m — Sea-to-Sky Vancouver to Whistler",
+        "Medio: 55km / 835m — Whistler loop via Callaghan Valley (e-bikes permitted)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Pacific coastal-mountain",
+      "description": "September is one of Vancouver's driest months. Pre-dawn start 10-14°C, daytime highs 15-21°C. Whistler finish 5-8°C cooler than Vancouver. Variable conditions along the Sea-to-Sky corridor.",
+      "challenges": [
+        "Pre-dawn departure in darkness (6:00-7:00am start) at 10-14°C",
+        "Coastal-to-mountain microclimate transitions along Howe Sound",
+        "42% chance of rain on any given September day in Vancouver",
+        "Wind factor along exposed Howe Sound coastal section"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Coastal highway with sustained gradual climbing",
+      "surface": "Excellent quality tarmac — Highway 99 significantly upgraded for 2010 Winter Olympics.",
+      "technical_rating": 2,
+      "features": [
+        "Point-to-point from sea level to 650m — gradual sustained climbing, not steep alpine passes",
+        "Lions Gate Bridge car-free crossing at dawn",
+        "Sea-to-Sky Highway along Howe Sound — one of the world's most scenic coastal mountain highways",
+        "Cypress Mountain (Forte only) — Cat 1 climb to 2010 Olympic venue",
+        "Dedicated protected lane on highway — not full road closure"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 2,
+      "altitude": 2,
+      "logistics": 2,
+      "prestige": 5,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 2,
+      "discipline": "gran_fondo",
+      "prestige_override": "Prestige 5 caps at T2 (score 61 < 75)",
+      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). The course is scenic but not mountainous: 122km with 2,300m climbing, mostly gradual Sea-to-Sky gradient averaging 1.5-3%. Logistics 2 — Vancouver is a major international city, YVR airport with direct SkyTrain downtown. Climate risk 2 — September is one of BC's driest months. Road surface 1 — Olympic-upgraded Highway 99. Value 3 — CAD $280-330 is mid-range, with dedicated lane (not full road closure). Cultural impact 2 — 2010 Olympic legacy event, awarded 2020 UCI Worlds (cancelled COVID), but lacks deep cycling heritage."
+    },
+
+    "climb_profile": {
+      "total_climbs": 2,
+      "hc_climbs": 0,
+      "cat_1_climbs": 1,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Cypress Bowl Road (Forte only)",
+          "km_from_start": 5,
+          "distance_km": 10.5,
+          "elevation_gain_m": 668,
+          "average_gradient_pct": 6.4,
+          "max_gradient_pct": 8.0,
+          "category": "Cat 1",
+          "summit_altitude_m": 930,
+          "tactical_notes": "Forte riders only. Pre-dawn climb to 2010 Olympic freestyle skiing/snowboard venue. Sunrise descent is a highlight. Adds 876m of climbing to the Gran Fondo route."
+        },
+        {
+          "name": "Squamish to Whistler (Sea-to-Sky gradient)",
+          "km_from_start": 67,
+          "distance_km": 55.0,
+          "elevation_gain_m": 650,
+          "average_gradient_pct": 1.5,
+          "max_gradient_pct": 3.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 650,
+          "tactical_notes": "Not a traditional climb — sustained gradual ascent averaging 1.5-3% over 55km. The real climbing begins after Squamish. Tantalus Range and Garibaldi Provincial Park provide dramatic mountain scenery."
+        }
+      ],
+      "profile_type": "rolling",
+      "king_of_mountain": "Cypress Bowl Road"
+    },
+
+    "course_description": {
+      "character": "A 122km point-to-point ride from downtown Vancouver to Whistler along the iconic Sea-to-Sky Highway. The course begins at sea level in Stanley Park, crosses the Lions Gate Bridge car-free, follows the stunning Howe Sound coastline, then climbs gradually through the Coast Mountains to Whistler Village. The challenge is sustained distance rather than steep grades — most of the 2,300m of climbing occurs as a long, gradual drag in the second half after Squamish.",
+      "signature_challenge": "The sustained gradient from Squamish to Whistler — 55km of gradually rising road that grinds riders down through sheer distance rather than steep pitches. The Forte adds the pre-dawn Cypress Mountain Cat 1 climb for those seeking a true mountainous challenge.",
+      "suffering_zones": [
+        "Squamish to Whistler (km 67-122): 55km of sustained 1.5-3% gradient that accumulates enormous fatigue",
+        "Howe Sound coastal section in headwind: exposed to crosswinds that can significantly slow progress",
+        "Cypress Bowl Road (Forte only): 10.5km at 6.4% average in pre-dawn darkness"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Vancouver International (YVR) — 30-minute direct SkyTrain to downtown. Voted best airport in North America. Excellent international connections.",
+      "lodging_strategy": "Vancouver (start): wide range of hotels, downtown near Stanley Park ideal. Whistler (finish): world-class resort accommodation. Event partners offer discounted rates. Point-to-point format means planning for two locations or using event shuttle.",
+      "transport": "Event shuttle buses (purchasable) return riders + bikes from Whistler to Vancouver. Free Concord Pacific Park & Ride in Vancouver. Bag drop to finish line available.",
+      "food": "5 full-support rest stops with nutrition. Post-race meal and drink included at Celebration Plaza, Whistler Olympic Plaza.",
+      "official_site": "https://www.rbcgranfondo.com/event/whistler"
+    },
+
+    "history": {
+      "founded": 2010,
+      "origin_story": "Founded by Neil McKinnon and Kevin Thomson, who conceived the idea in 2007 of creating a world-class cycling event as part of the Vancouver 2010 Winter Olympics legacy. The inaugural edition on September 11, 2010 drew ~4,000 cyclists along the dramatically improved Sea-to-Sky Highway built for the Olympics at a cost of over CAD $600 million.",
+      "notable_moments": [
+        "2010: Inaugural edition — ~4,000 riders, billed as Canada's largest mass cycling event",
+        "2017: UCI Management Committee awards 2020 Gran Fondo World Championships to Vancouver/Whistler — first time in North America",
+        "2018-2019: Voted best Gran Fondo in North America by Gran Fondo Guide",
+        "2020: UCI Gran Fondo World Championships cancelled due to COVID-19",
+        "2023-2024: Again voted best Gran Fondo in North America",
+        "2024: Record-breaking 15th anniversary — 5,245 registered cyclists, 14,000+ combined",
+        "Official Vancouver 2010 Olympic legacy event"
+      ],
+      "reputation": "North America's largest and most celebrated gran fondo. Voted best Gran Fondo in North America four times (2018, 2019, 2023, 2024). Awarded the 2020 UCI Gran Fondo World Championships (cancelled due to COVID). PELOTON Magazine called founder Neil McKinnon 'North America's Fondo Founding Father.'"
+    },
+
+    "biased_opinion": {
+      "verdict": "The gold standard for North American gran fondos — scenic, well-organized, and genuinely accessible.",
+      "summary": "RBC GranFondo Whistler is North America's answer to the European gran fondo tradition. The Sea-to-Sky Highway is genuinely spectacular, the organization is polished, and the Whistler finish creates a perfect post-ride celebration atmosphere. But the course itself is more scenic cruise than mountain challenge — the climbing is gradual and sustained rather than steep and decisive. The Forte adds real teeth with Cypress Mountain, but the standard Gran Fondo is fundamentally a long, beautiful highway ride.",
+      "strengths": [
+        "Sea-to-Sky Highway is one of the world's most scenic coastal mountain roads",
+        "5,000+ riders — largest gran fondo in North America",
+        "Vancouver/Whistler infrastructure is world-class",
+        "Lions Gate Bridge car-free crossing at dawn",
+        "Forte option (152km) adds genuine climbing challenge",
+        "2010 Olympic legacy — purpose-built road infrastructure"
+      ],
+      "weaknesses": [
+        "Roads not fully closed — dedicated lane, not full closure",
+        "Course is gradual, not mountainous — won't satisfy climbers",
+        "CAD $280-330 is expensive for a highway ride without full closure",
+        "Point-to-point logistics require shuttle or overnight in Whistler"
+      ],
+      "bottom_line": "RBC GranFondo Whistler earns T2 through brand prestige, scale, and setting rather than course difficulty. If you want the best North American gran fondo experience on one of the world's most scenic highways, this is it. Just don't expect European mountain passes."
+    },
+
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Sea-to-Sky Highway from Vancouver to Whistler — North America's largest and most celebrated gran fondo, where the scenery outshines the climbing.",
+      "should_you_race": "Yes, if you value the full gran fondo experience over pure climbing challenge. The Sea-to-Sky is genuinely beautiful, the organization is top-tier, and the Whistler finish is a celebration. The Forte (152km) is the choice for those wanting real climbing. Best for riders who appreciate scenic production over alpine suffering.",
+      "alternatives": "GFNY NYC (East Coast gran fondo, similar production scale), L'Etape du Tour (if you want closed-road mountain challenge), Gran Fondo Stelvio (if you want real alpine climbing)."
+    },
+
+    "citations": [
+      {"url": "https://www.rbcgranfondo.com/event/whistler", "category": "official", "label": "Official event page"},
+      {"url": "https://www.rbcgranfondo.com/event-resources/whistler/distances", "category": "official", "label": "Route distances and details"},
+      {"url": "https://www.rbcgranfondo.com/whistler/the-ride/forte", "category": "official", "label": "Forte 152km route details"},
+      {"url": "https://www.endurancesportswire.com/rbc-granfondo-whistler-celebrates-a-record-breaking-15th-anniversary-event/", "category": "editorial", "label": "2024 record: 5,245 riders, 14,000+ total"},
+      {"url": "https://velo.outsideonline.com/road/road-culture/north-americas-fondo-founding-father/", "category": "editorial", "label": "PELOTON — Neil McKinnon 'Fondo Founding Father'"},
+      {"url": "https://www.granfondoguide.com/Contents/Index/6938/rbc-granfondo-whistler", "category": "editorial", "label": "Gran Fondo Guide listing — best in North America"},
+      {"url": "https://www.strava.com/segments/32947611", "category": "data", "label": "Strava segment: 121.4km, 1,973m gain"},
+      {"url": "https://mycols.app/en/climb/cypress-mountain", "category": "data", "label": "Cypress Mountain climb data"}
+    ]
+  }
+}

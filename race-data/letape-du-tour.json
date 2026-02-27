@@ -1,0 +1,216 @@
+{
+  "race": {
+    "name": "L'Etape du Tour",
+    "slug": "letape-du-tour",
+    "display_name": "L'Etape du Tour de France",
+    "tagline": "Ride a Tour de France mountain stage on fully closed roads — the closest an amateur gets to the real thing.",
+
+    "vitals": {
+      "distance_km": 170,
+      "distance_mi": 105.6,
+      "elevation_m": 5400,
+      "elevation_ft": 17717,
+      "location": "Bourg d'Oisans → Alpe d'Huez (via Col de Sarenne)",
+      "location_badge": "French Alps, France",
+      "country": "France",
+      "date": "Mid-July (Tour de France rest day)",
+      "date_specific": "July 19, 2026",
+      "field_size": "16,000 entries from 60+ countries",
+      "start_format": "wave_start",
+      "registration": "Open registration, first-come-first-served. Sells out quickly.",
+      "entry_fee": "EUR 159 base (EUR 231 with jersey and medal)",
+      "feed_zones": "Multiple stations before/after major climbs — energy gels, bars, fruit, water, Coca-Cola, Maurten. Pasta party at finish.",
+      "cutoff_time": "~12-13 hours from first start. Intermediate cutoffs at key climbs. Broom wagon sweeps.",
+      "lat": 45.0564,
+      "lng": 6.0325,
+      "route_options": []
+    },
+
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "Valley floor 20-30°C, mid-altitude 15-22°C, Galibier summit 5-12°C even in July. 20°C+ temperature swing on race day. 35% rain chance. Afternoon thunderstorms are a significant risk.",
+      "challenges": [
+        "25-30°C heat in valleys, near-freezing at Galibier 2,642m — massive temperature range",
+        "Long, fast descents cause severe wind chill — mandatory jacket enforcement",
+        "Afternoon thunderstorm risk builds over alpine ridges",
+        "2011 edition: devastating rain, only 2,094 finishers"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Alpine mountain passes",
+      "surface": "Excellent French national and departmental roads. Exception: Col de Sarenne section narrower with rougher patches.",
+      "technical_rating": 4,
+      "features": [
+        "4 major cols plus Alpe d'Huez finish via Col de Sarenne",
+        "Col du Galibier at 2,642m — one of cycling's most famous climbs",
+        "Col de la Croix de Fer HC — 27.6km approach",
+        "Fully closed to all motorized traffic",
+        "Course changes every year — replicates a different TdF mountain stage"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 90,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 5,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 5,
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). ASO organization is military-grade: fully closed roads, broom wagon, Tour de France production values. Road surface scored 1 (excellent tarmac = low difficulty). Cultural impact 5 — THE Tour de France amateur experience, 30+ editions, global L'Etape series in 25 countries. 2026 is one of the toughest editions ever with Galibier + Alpe d'Huez."
+    },
+
+    "climb_profile": {
+      "total_climbs": 5,
+      "hc_climbs": 2,
+      "cat_1_climbs": 1,
+      "cat_2_climbs": 1,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Col de la Croix de Fer",
+          "km_from_start": 0,
+          "distance_km": 27.6,
+          "elevation_gain_m": 1522,
+          "average_gradient_pct": 5.5,
+          "max_gradient_pct": 11.0,
+          "category": "HC",
+          "summit_altitude_m": 2067,
+          "tactical_notes": "First major block. Three distinct sections. Iron cross monument at summit. Featured in TdF 19+ times since 1947."
+        },
+        {
+          "name": "Col du Télégraphe",
+          "km_from_start": 65,
+          "distance_km": 11.9,
+          "elevation_gain_m": 856,
+          "average_gradient_pct": 7.1,
+          "max_gradient_pct": 9.8,
+          "category": "Cat 1",
+          "summit_altitude_m": 1566,
+          "tactical_notes": "Steady, consistent gradient through wooded switchbacks. Gateway to the Galibier. Short descent to Valloire before Galibier begins."
+        },
+        {
+          "name": "Col du Galibier",
+          "km_from_start": 85,
+          "distance_km": 17.5,
+          "elevation_gain_m": 1214,
+          "average_gradient_pct": 7.0,
+          "max_gradient_pct": 9.7,
+          "category": "HC",
+          "summit_altitude_m": 2642,
+          "tactical_notes": "Highest point on course. One of cycling's most famous climbs. Henri Desgrange memorial. TdF since 1911. Altitude effects significant above 2,200m. Cold even in July."
+        },
+        {
+          "name": "Col de Sarenne",
+          "km_from_start": 145,
+          "distance_km": 2.9,
+          "elevation_gain_m": 255,
+          "average_gradient_pct": 8.7,
+          "max_gradient_pct": 16.0,
+          "category": "Cat 2",
+          "summit_altitude_m": 1999,
+          "tactical_notes": "Narrow road, no guardrails in places. Controversial when used in 2013 TdF. Rarely used — makes this edition truly special."
+        },
+        {
+          "name": "Alpe d'Huez (finish)",
+          "km_from_start": 165,
+          "distance_km": 3.0,
+          "elevation_gain_m": 200,
+          "average_gradient_pct": 6.7,
+          "max_gradient_pct": 10.0,
+          "category": "Cat 3",
+          "summit_altitude_m": 1860,
+          "tactical_notes": "Riders arrive via the 'back door' through Sarenne, not the traditional 21 bends. Short final ramp to finish. Riders descend the famous 21 bends as a cooldown."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Col du Galibier"
+    },
+
+    "course_description": {
+      "character": "A Tour de France mountain stage on fully closed roads — the closest an amateur cyclist can get to the real thing. The 2026 edition is one of the most demanding in L'Etape history: four major cols culminating in the Galibier at 2,642m, then the rarely-used Col de Sarenne before arriving at Alpe d'Huez. The course changes every year, keeping the experience fresh.",
+      "signature_challenge": "Col du Galibier — 17.5km at 7% average to 2,642m. After already climbing the Croix de Fer and Télégraphe, this is where altitude meets accumulated fatigue. Near-freezing conditions possible at the summit even in July.",
+      "suffering_zones": [
+        "Col du Galibier km 12-17.5: altitude effects above 2,200m compound the 7% gradient",
+        "Col de Sarenne: 8.7% average with 16% max on a narrow road after 145km",
+        "Col de la Croix de Fer km 20-27: the final push to 2,067m comes after the hardest section at Maupas (11%)"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Grenoble-Isère (GNB, 1hr 10min, limited flights), Lyon Saint-Exupéry (LYS, 2hr 20min, major hub), Geneva (GVA, 2hr 40min, major hub)",
+      "lodging_strategy": "Bourg d'Oisans (start): EUR 80-150/night hotels, limited supply. Alpe d'Huez (finish): EUR 120-250/night ski resort accommodation. Book 6-12 months ahead. Tour operator packages EUR 299-4,399+.",
+      "transport": "Event shuttles between start and finish. Baggage transport. Parking at Bourg d'Oisans. After finishing, riders descend Alpe d'Huez 21 bends to return.",
+      "food": "Pasta party at finish included in entry. Feed zones with Maurten nutrition, fruit, water, Coca-Cola.",
+      "official_site": "https://www.letapedutourdefrance.com"
+    },
+
+    "history": {
+      "founded": 1993,
+      "origin_story": "Conceived by ASO (Amaury Sport Organisation), the same company behind the Tour de France. Vision: allow amateur cyclists to ride a complete TdF mountain stage on fully closed roads. Inaugural edition July 11, 1993: Tarbes to Pau, 208km over the Col du Tourmalet, 1,700 participants.",
+      "notable_moments": [
+        "1993: Inaugural edition — 1,700 riders over Col du Tourmalet",
+        "2000: Mont Ventoux edition in extreme heat — iconic",
+        "2003: 10th anniversary at Alpe d'Huez, record 8,500 participants",
+        "2006: Dual-event format introduced to meet demand",
+        "2011: Devastating rain, only 2,094 finishers",
+        "2022: Post-COVID return, 16,000 entries, 9,000 finishers",
+        "2025: L'Etape also held alongside Tour de France Femmes",
+        "Greg LeMond rode 2007 edition; Damon Hill (F1 champion) competed 2023-2024"
+      ],
+      "reputation": "Often called 'the world's greatest sportive' and 'the most famous mass participation bike ride in the world.' The closest an amateur can get to the Tour de France experience. 30+ L'Etape Series events worldwide in 25 countries feed riders toward the flagship French event."
+    },
+
+    "biased_opinion": {
+      "verdict": "The Tour de France for the rest of us — and the 2026 edition might be the best yet.",
+      "summary": "L'Etape du Tour is the gold standard for sportive prestige. You're riding the same roads as the Tour, fully closed to traffic, with ASO's military-grade production behind you. The course changes every year, which means each edition is unique. The 2026 route — Galibier + Sarenne + Alpe d'Huez — is genuinely savage. EUR 159 for a day on the Tour is remarkable value.",
+      "strengths": [
+        "Fully closed roads — the only gran fondo backed by Tour de France production",
+        "Course changes annually — each edition is a different TdF mountain stage",
+        "ASO organization is best-in-class: broom wagon, timing, feed zones, Road Captains",
+        "Galibier at 2,642m with Alpe d'Huez finish — bucket-list climbs in one day",
+        "EUR 159 base entry is extraordinary value for what you get",
+        "Global L'Etape Series in 25 countries feeds the community"
+      ],
+      "weaknesses": [
+        "Sells out quickly — registration timing is critical",
+        "Accommodation in Oisans valley sells out months in advance",
+        "Broom wagon is real — get pulled if you miss intermediate cutoffs",
+        "5,400m of climbing in the 2026 edition is genuinely brutal for recreational riders"
+      ],
+      "bottom_line": "L'Etape is the most accessible Tier 1 experience in the gran fondo world. The TdF brand, ASO production, and fully closed roads create something no other sportive can replicate. If you can climb and you can get a spot, do it."
+    },
+
+    "final_verdict": {
+      "score": "90/100",
+      "one_liner": "Ride a Tour de France mountain stage on fully closed roads — L'Etape is the closest an amateur gets to the real thing.",
+      "should_you_race": "Yes, if you can handle 5,400m of climbing. The 2026 edition is one of the toughest ever — Galibier + Sarenne + Alpe d'Huez requires serious fitness. Intermediate cutoffs mean you can't just survive; you need to maintain pace. But even mid-pack riders finish within the time limit in most years.",
+      "alternatives": "La Marmotte (same region, similar climbing, longer tradition), Maratona dles Dolomites (lottery entry, 7 Dolomite passes), Haute Route Alps (7-day version for the truly committed)."
+    },
+
+    "citations": [
+      {"url": "https://www.letapedutourdefrance.com/en", "category": "official", "label": "Official L'Etape du Tour website"},
+      {"url": "https://www.letapedutourdefrance.com/en/news/discover-the-route-of-letape-du-tour-de-france-2026/158", "category": "official", "label": "2026 route announcement"},
+      {"url": "https://en.wikipedia.org/wiki/L%27%C3%89tape_du_Tour", "category": "reference", "label": "Wikipedia — history, winners, editions"},
+      {"url": "https://morethan21bends.com/l-etape-du-tour-2026-guide", "category": "data", "label": "Detailed 2026 route and climb analysis"},
+      {"url": "https://epicroadrides.com/cycling-blog/letape-du-tour/", "category": "editorial", "label": "Epic Road Rides — tips, logistics, history"},
+      {"url": "https://www.cnn.com/2025/07/19/sport/letape-du-tour-amateurs-cyclists-spt", "category": "editorial", "label": "CNN — 'Cycling like a pro for a day'"},
+      {"url": "https://pjammcycling.com/climb/112.Col-du-Galibier-Valloire-Cycling", "category": "data", "label": "Galibier climb gradient data"},
+      {"url": "https://mycols.app/en/climb/col-de-sarenne-alpe-dhuez", "category": "data", "label": "Col de Sarenne climb profile"}
+    ]
+  }
+}

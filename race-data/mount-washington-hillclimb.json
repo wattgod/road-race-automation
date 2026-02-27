@@ -1,0 +1,175 @@
+{
+  "race": {
+    "name": "Mt. Washington Auto Road Bicycle Hillclimb",
+    "slug": "mount-washington-hillclimb",
+    "display_name": "Mt. Washington Hillclimb",
+    "tagline": "7.6 miles at 12% average to the summit of the Northeast's highest peak — America's most extreme hillclimb.",
+
+    "vitals": {
+      "distance_km": 12.2,
+      "distance_mi": 7.6,
+      "elevation_m": 1426,
+      "elevation_ft": 4678,
+      "location": "Mt. Washington Auto Road, Pinkham Notch, NH → Summit of Mt. Washington (6,288ft)",
+      "location_badge": "New Hampshire, USA",
+      "country": "United States",
+      "date": "Third Saturday in August",
+      "date_specific": "August 15, 2026 (53rd edition; rain date August 16)",
+      "field_size": "480 riders (2026). Historically up to 635. Sells out.",
+      "start_format": "mass_start",
+      "registration": "Opens January 1 for 10+ race veterans, January 15 for everyone. Sells out. Waitlist available.",
+      "entry_fee": "$150 registration + mandatory minimum $300 fundraising = $450 total. Under 19: $100 + $300 fundraising.",
+      "feed_zones": "None. Riders must be entirely self-sufficient for the 7.6-mile climb.",
+      "cutoff_time": "No formal cutoff. Race can be stopped mid-event if conditions become unsafe.",
+      "lat": 44.2876,
+      "lng": -71.3035,
+      "route_options": []
+    },
+
+    "climate": {
+      "primary": "Extreme mountain weather",
+      "description": "Base: 16-27°C in August. Summit average: 9°C (48.7°F) in August. No temperature above 22°C has EVER been recorded at the summit. Wind gusts regularly exceed 65 km/h even in August. Fog present 70-80% of summer hours.",
+      "challenges": [
+        "Mt. Washington holds the Northern Hemisphere surface wind speed record: 231 mph (1934)",
+        "30-40°F (15-20°C) temperature differential between base and summit",
+        "Riders blown off bikes by crosswinds (documented 2005)",
+        "Above treeline (~mile 4): zero shelter from wind, rain, fog, or lightning",
+        "Summit winds exceed hurricane force (75+ mph) more than 100 days per year"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Extreme hillclimb — single sustained climb",
+      "surface": "100% paved as of 2022. Prior to 2022, the '5-mile stretch' was unpaved gravel. Records reset after full paving.",
+      "technical_rating": 1,
+      "features": [
+        "12% average gradient for 7.6 miles — 61% of route at 10-15% grade",
+        "Maximum gradient 22% (final 50 yards to summit)",
+        "Extended sections of 18% gradient in final miles",
+        "Above treeline from mile 4 — fully exposed alpine terrain",
+        "One-way climb only — no descent permitted on bicycle",
+        "PJAMM Cycling: 3rd hardest climb in the US (behind Mauna Kea and Haleakala)"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 54,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "distance": 1,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 5,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 4,
+      "value": 2,
+      "expenses": 2,
+      "cultural_impact": 2,
+      "discipline": "hillclimb",
+      "prestige_override": null,
+      "scoring_notes": "Distance 1 — 12.2km is minimal distance. Climbing 2 — 1,426m is significant but short duration. Climate risk 5 — Mt. Washington weather is the most extreme of any event in the database: 231 mph wind record, riders blown off bikes, above-treeline exposure. Altitude 3 — summit at 1,917m (6,288ft), not alpine but significant for the Northeast. Logistics 4 — rural New Hampshire, 3hr from Boston, limited local accommodation. Organization 2 — no feed zones, riders must arrange own summit transport down, unsanctioned event. Field depth 4 — ex-WorldTour pros (Boswell, Stetina, Gaimon) compete alongside amateurs. Value 2 — $450 (registration + mandatory fundraising) for a sub-1-hour event. Cultural impact 2 — 53-year hillclimb tradition, anchors BUMPS series, but niche appeal."
+    },
+
+    "climb_profile": {
+      "total_climbs": 1,
+      "hc_climbs": 1,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Mt. Washington Auto Road",
+          "km_from_start": 0,
+          "distance_km": 12.2,
+          "elevation_gain_m": 1426,
+          "average_gradient_pct": 12.0,
+          "max_gradient_pct": 22.0,
+          "category": "HC",
+          "summit_altitude_m": 1917,
+          "tactical_notes": "12% average for 7.6 miles. 61% of route at 10-15%. Extended 18% sections in final miles. Final 50 yards at 22%. Above treeline from mile 4 — fully exposed to Mt. Washington weather. Recommended gearing: 34/36 or lower. PJAMM difficulty index 45.6 — 3rd hardest in the US."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Mt. Washington Auto Road"
+    },
+
+    "course_description": {
+      "character": "A pure hillclimb up the highest peak in the northeastern United States. 7.6 miles at 12% average with no respite — no flat sections, no descents, no feed zones. The first half climbs through dense forest; at mile 4, riders emerge above treeline into whatever weather Mt. Washington is producing. The final miles steepen to 18% sustained, with the last 50 yards touching 22%. The mountain holds the Northern Hemisphere wind speed record (231 mph). There is no descent — riders are driven down by support vehicles.",
+      "signature_challenge": "The above-treeline exposure. From mile 4 to the summit, riders are fully exposed to Mt. Washington's extreme weather with zero shelter. Wind gusts can exceed 60-80+ mph. Fog can reduce visibility to near zero. The gradient never relents — 12% average with 18% ramps when legs are failing.",
+      "suffering_zones": [
+        "Mile 5-6: Above treeline, 12-15% grades with crosswind exposure — where the mountain fights back",
+        "Mile 6-7: 15-18% sustained gradient at altitude in full weather exposure",
+        "Final 50 yards: 22% gradient to the summit sign — the cruelest finish in American cycling"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Portland (PWM, 93mi/2hr). Manchester (MHT, 128mi/2hr 10min). Boston Logan (BOS, 180mi/3hr — best for international arrivals).",
+      "lodging_strategy": "Gorham, NH is the primary hub (8-9 miles from Auto Road base). The Glen House is 0.2mi from base (closest). AMC Joe Dodge Lodge at Pinkham Notch 2.6mi. Jackson and North Conway also viable (20-30min). Book early — race weekend fills local accommodation.",
+      "transport": "Riders MUST pre-arrange their own ride down from the summit. Each rider receives one Auto Pass for their support driver. Support drivers must carry minimum 2 racers. Cycling down is prohibited. Rideshare Facebook group available.",
+      "food": "No feed zones during the race. Complimentary meal at summit (ham sandwich). Warm, dry clothes essential at summit — support driver brings them.",
+      "official_site": "https://www.mwarbh.org/"
+    },
+
+    "history": {
+      "founded": 1973,
+      "origin_story": "The Mt. Washington Auto Road opened in 1861 — the oldest man-made and continuously operating tourist attraction in North America, built by hand with shovels and black powder. The first bicycle hillclimb was held in 1973, won by John Allis in 1:15:05. Tin Mountain Conservation Center has organized the event since the early 1990s. The hillclimb and a July practice ride are the only two days per year cyclists are permitted on the Auto Road.",
+      "notable_moments": [
+        "1973: First edition — John Allis wins in 1:15:05",
+        "1980: Dale Stetina (father of Peter) wins in 0:57:41",
+        "2000: Jeannie Longo sets women's record at 0:58:14 (pre-paving)",
+        "2002: Tom Danielson sets legendary men's record at 0:49:24 (pre-paving)",
+        "2005: Tyler Hamilton wins; Aimee Vasse blown off bike by crosswinds",
+        "2011: Hamilton and Jeanson records voided for admitted PED use",
+        "2022: Auto Road fully paved for first time in 161 years — all records reset. Phil Gaimon sets new men's record at 0:50:38",
+        "2025: Ian Boswell sets new men's record 0:50:15. Illi Gardner sets women's record 0:58:01 (finishing 6th overall)"
+      ],
+      "reputation": "Officially billed as 'the toughest hillclimb in the US, if not the world.' The crown jewel of northeastern US hillclimb racing and anchor of the BUMPS series. PJAMM ranks it the 3rd hardest climb in America. Notable for attracting ex-WorldTour pros (Boswell, Stetina, Gaimon) alongside amateur riders."
+    },
+
+    "biased_opinion": {
+      "verdict": "Pure suffering distilled into 50 minutes — the most extreme hillclimb in America.",
+      "summary": "Mt. Washington is not a gran fondo, not a sportive, not a mass-participation celebration. It is 7.6 miles of relentless uphill on the most weather-extreme peak in the northeastern US. 12% average gradient. No feed zones. No descent. Riders blown off their bikes by crosswind. The summit holds the Northern Hemisphere wind speed record. And yet ex-WorldTour pros line up alongside recreational riders for the privilege of suffering up it. The $450 total (including mandatory fundraising) is steep for a sub-1-hour event, but the experience is unforgettable.",
+      "strengths": [
+        "12% average for 7.6 miles — relentless, world-class gradient",
+        "Ex-WorldTour pros (Boswell, Stetina, Gaimon) compete in the same field",
+        "53 years of hillclimb tradition (1973)",
+        "Above-treeline alpine exposure on the Northeast's highest peak",
+        "Course records still falling — Boswell 50:15, Gardner 58:01 (2025)",
+        "One of only two days per year cyclists are allowed on the Auto Road"
+      ],
+      "weaknesses": [
+        "$450 total for a sub-1-hour event (including mandatory fundraising)",
+        "No feed zones, no descent — must arrange own summit transport",
+        "Rural New Hampshire — 3 hours from Boston, limited local accommodation",
+        "Race can be cancelled for weather with no refund",
+        "Not sanctioned by UCI or USA Cycling — niche hillclimb format"
+      ],
+      "bottom_line": "Mt. Washington is the purest test of climbing ability in American cycling. If you want to measure yourself against a mountain that has recorded 231 mph winds and see how you stack up against ex-WorldTour riders, this is your race. Just bring warm clothes for the summit."
+    },
+
+    "final_verdict": {
+      "score": "54/100",
+      "one_liner": "7.6 miles at 12% average to the summit of the Northeast's highest peak — where the mountain's extreme weather is the real opponent.",
+      "should_you_race": "Yes, if you're a strong climber seeking the purest hillclimb experience in America. Requires no endurance base (sub-1 hour for elites, ~2 hours for mid-pack) but demands raw climbing power. Recommended gearing: 34/36 or lower. Be prepared for any weather conditions. The mandatory fundraising model ($300 minimum) makes this a charitable mission as much as a race.",
+      "alternatives": "Mt. Evans Hillclimb (Colorado, higher altitude), Whiteface Mountain Hillclimb (similar Northeast format), L'Etape du Tour (if you want a real mountain road course)."
+    },
+
+    "citations": [
+      {"url": "https://www.mwarbh.org/", "category": "official", "label": "Official race website"},
+      {"url": "https://www.mwarbh.org/race-information", "category": "official", "label": "Course overview, gradient data, weather info"},
+      {"url": "https://www.mwarbh.org/records", "category": "official", "label": "Post-2022 records and age group records"},
+      {"url": "https://www.mwarbh.org/history", "category": "official", "label": "Founding, TMCC partnership, Rockpilers"},
+      {"url": "https://pjammcycling.com/climb/8.Mt-Washington-Auto-Rd", "category": "data", "label": "PJAMM: PDI 45.6, 3rd hardest in US"},
+      {"url": "https://granfondodailynews.com/2025/08/17/mount-washington-hill-climb-results-boswell-gardner-smash-course-records-en-route-to-victory/", "category": "editorial", "label": "2025 results: Boswell 50:15, Gardner 58:01"},
+      {"url": "https://www.cyclingweekly.com/news/its-harder-than-almost-every-climb-ive-done-illi-gardner-sets-the-all-time-record-on-mt-washington", "category": "editorial", "label": "Gardner record — 'harder than almost every climb'"},
+      {"url": "https://www.livescience.com/planet-earth/weather/mount-washington-home-to-the-worlds-worst-weather-with-record-wind-speeds-of-231-mph", "category": "editorial", "label": "231 mph wind record, weather convergence"}
+    ]
+  }
+}

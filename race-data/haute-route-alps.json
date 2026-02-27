@@ -1,0 +1,224 @@
+{
+  "race": {
+    "name": "Haute Route Alps",
+    "slug": "haute-route-alps",
+    "display_name": "Haute Route Alps",
+    "tagline": "7 days, 800km, 19,000m+ climbing — the closest an amateur gets to riding a Grand Tour through the French Alps.",
+
+    "vitals": {
+      "distance_km": 808,
+      "distance_mi": 502,
+      "elevation_m": 19255,
+      "elevation_ft": 63173,
+      "location": "Nice → Thonon-les-Bains (2026 route)",
+      "location_badge": "French Alps, France",
+      "country": "France",
+      "date": "Late August",
+      "date_specific": "August 23-29, 2026 (15th anniversary edition)",
+      "field_size": "~500-600 riders from 40+ nationalities",
+      "start_format": "mass_start",
+      "registration": "Open registration in 4 price phases. 3-day option also available. Medical certificate required.",
+      "entry_fee": "EUR 2,099 (entry only). Accommodation packages EUR 2,199-3,299 additional. Total with lodging: EUR 4,298-5,398.",
+      "feed_zones": "3-5 feed stations per stage. Water, drinks, snacks, fruit. Post-stage hot meal included. 15-minute recovery massage daily.",
+      "cutoff_time": "Varies by stage based on distance and climbing. Missing a cutoff = DNF for that stage but riders may continue subsequent stages (removed from GC).",
+      "lat": 43.7102,
+      "lng": 7.2620,
+      "route_options": [
+        "7-day full event: 808km / 19,255m (Nice to Thonon-les-Bains)",
+        "3-day option: stages 5-7 (more accessible entry point)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Alpine extreme",
+      "description": "Late August in the French Alps: valley temperatures 20-30°C, summit temperatures 5-15°C at 2,000-2,700m. Temperature drops ~6.5°C per 1,000m. Over 7 days, encountering 1-2 rainy stages is likely.",
+      "challenges": [
+        "25-30°C temperature range daily — valley heat to summit cold",
+        "Col d'Agnel at 2,744m — near-freezing possible, extreme wind chill",
+        "Afternoon thunderstorm risk on exposed alpine passes — lightning hazard",
+        "7 consecutive days of exposure compounds weather risk enormously",
+        "Nice coastal start can be 28-35°C"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Alpine mountain passes — HC climbs over 7 days",
+      "surface": "Well-maintained French departmental and national roads. Tour de France quality tarmac.",
+      "technical_rating": 4,
+      "features": [
+        "Col d'Agnel (2,744m) — highest paved pass in the event, Franco-Italian frontier",
+        "Col du Galibier (2,642m) when featured — HC, Tour de France icon since 1911",
+        "Alpe d'Huez individual time trial — 21 hairpins, pure TT effort",
+        "6 road stages + 1 uphill ITT over 7 consecutive days",
+        "Descents neutralized (not timed) for safety",
+        "Roads NOT fully closed — marshals, motorcycle escorts, security vehicles"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 87,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 1,
+      "climate_risk": 5,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 4,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 4,
+      "value": 3,
+      "expenses": 5,
+      "cultural_impact": 3,
+      "discipline": "multi_stage",
+      "prestige_override": null,
+      "scoring_notes": "Distance 5 — 808km over 7 stages. Climbing 5 — 19,255m total, multiple HC cols per stage. Climate risk 5 — 7 consecutive days of alpine exposure at 2,000-2,700m, thunderstorm risk compounds daily. Altitude 5 — Col d'Agnel 2,744m, multiple passes above 2,000m every day. Logistics 3 — Nice/Geneva are major airports, but 7-day logistics are complex. Organization 5 — Mavic neutral service, motorcycle escorts, massage, daily hot meals, daily briefings. Expenses 5 — EUR 4,298-5,398 total (entry + accommodation), tour operator packages USD 5,799-6,600+. Value 3 — expensive but includes 7 days of pro-level support. Cultural impact 3 — premium brand since 2011, but relatively young event."
+    },
+
+    "climb_profile": {
+      "total_climbs": 12,
+      "hc_climbs": 4,
+      "cat_1_climbs": 3,
+      "cat_2_climbs": 3,
+      "cat_3_climbs": 2,
+      "key_climbs": [
+        {
+          "name": "Col d'Agnel",
+          "km_from_start": 0,
+          "distance_km": 31.0,
+          "elevation_gain_m": 1700,
+          "average_gradient_pct": 5.5,
+          "max_gradient_pct": 10.0,
+          "category": "HC",
+          "summit_altitude_m": 2744,
+          "tactical_notes": "Highest paved pass in the event at 2,744m. Italian side from Sampeyre: rougher, longer, wilder. Last 9-10km average 10%. Franco-Italian border crossing."
+        },
+        {
+          "name": "Col d'Izoard",
+          "km_from_start": 0,
+          "distance_km": 15.9,
+          "elevation_gain_m": 1100,
+          "average_gradient_pct": 6.9,
+          "max_gradient_pct": 9.0,
+          "category": "HC",
+          "summit_altitude_m": 2360,
+          "tactical_notes": "Tour de France legend. Casse Deserte section: dramatic orange scree moonscape in the final kilometers. Coppi and Bobet territory."
+        },
+        {
+          "name": "Col de la Lombarde",
+          "km_from_start": 0,
+          "distance_km": 20.0,
+          "elevation_gain_m": 1500,
+          "average_gradient_pct": 7.5,
+          "max_gradient_pct": 10.0,
+          "category": "HC",
+          "summit_altitude_m": 2340,
+          "tactical_notes": "Stage 1 — Franco-Italian frontier pass. Day one features 4,020m of climbing. No warm-up, no compromise."
+        },
+        {
+          "name": "Alpe d'Huez (ITT)",
+          "km_from_start": 0,
+          "distance_km": 13.8,
+          "elevation_gain_m": 1125,
+          "average_gradient_pct": 7.9,
+          "max_gradient_pct": 13.0,
+          "category": "HC",
+          "summit_altitude_m": 1860,
+          "tactical_notes": "Individual uphill time trial. 21 legendary hairpins. Pure TT — no peloton, no drafting. Each hairpin named after a Tour de France stage winner."
+        },
+        {
+          "name": "Col du Glandon",
+          "km_from_start": 0,
+          "distance_km": 21.3,
+          "elevation_gain_m": 1500,
+          "average_gradient_pct": 7.0,
+          "max_gradient_pct": 10.0,
+          "category": "Cat 1",
+          "summit_altitude_m": 1924,
+          "tactical_notes": "Majestic lake setting at summit. Stage 5 — the marathon stage, longest day of the week."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Col d'Agnel"
+    },
+
+    "course_description": {
+      "character": "Seven consecutive days of racing through the French Alps, covering 808km and 19,255m of climbing. The route changes annually, but always features the legendary cols of the Tour de France. The 2026 edition opens with a brutal 4,020m Stage 1, crosses the Col d'Agnel at 2,744m, includes an Alpe d'Huez individual time trial, and finishes on the shores of Lake Geneva. Descents are neutralized for safety. Timed climbs create a GC classification. This is the closest an amateur gets to riding a Grand Tour.",
+      "signature_challenge": "The cumulative effect of 7 consecutive days of HC climbing. Stage 1 alone features 4,020m of climbing — before most riders' legs have adapted. The Col d'Agnel at 2,744m on Stage 2 is the highest point, where altitude compounds fatigue from the previous day.",
+      "suffering_zones": [
+        "Stage 1 Col de la Lombarde: 4,020m of climbing on day one — no warm-up, no compromise",
+        "Stage 2 Col d'Agnel final 10km: 10% average at 2,400-2,744m after massive Stage 1",
+        "Stage 4 Alpe d'Huez ITT: 21 hairpins, no drafting, pure suffering on day 4 of 7",
+        "Stage 5: 169km marathon — longest day after 4 stages of accumulated fatigue"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Nice Cote d'Azur (NCE) for start — major international hub. Geneva (GVA) for finish/departure. Airport transfers available as add-on.",
+      "lodging_strategy": "Accommodation NOT included in entry fee. Three tiers through Haute Route: Standard Double EUR 2,199, Comfort EUR 2,699, Premium EUR 3,299 (includes breakfast + hotel-to-hotel bag transport). Tour operator packages USD 5,799-6,600+. Independent booking possible.",
+      "transport": "Point-to-point stage race — riders ride their bikes stage-to-stage. Bike boxes collected at registration, transported by truck, returned after Stage 7. Luggage transported stage-to-stage by HR logistics team.",
+      "food": "3-5 feed stations per stage. Post-stage hot meal included daily. 15-minute recovery massage after each stage. Drinks party/social events. Closing ceremony and awards.",
+      "official_site": "https://hauteroute.fr/"
+    },
+
+    "history": {
+      "founded": 2011,
+      "origin_story": "Created by Remi Duchemin through his company ThirdPole (founded 2009), which merged with OC Group to form OC ThirdPole. The vision: create the most premium multi-day stage event for amateur cyclists, deliberately modeled on the pro Grand Tour experience. Inaugural edition ran Geneva to Nice.",
+      "notable_moments": [
+        "2011: Inaugural edition — Geneva to Nice",
+        "2012: Sold out in 8 hours, participants from 57 countries",
+        "2013: Haute Route Pyrenees added (7-day)",
+        "2015: Mavic becomes main partner — same yellow cars as Tour de France",
+        "2017: Expanded to US with Haute Route Rockies",
+        "2021: IRONMAN Group acquires entire Haute Route Series",
+        "2023: France Velo Evenements (FVE) acquires brand from IRONMAN",
+        "2024: First edition under FVE ownership — 550 riders, 56% returning alumni",
+        "2026: 15th anniversary edition. First-ever finish in Thonon-les-Bains"
+      ],
+      "reputation": "Officially billed as 'the most premium multi-day stage event for amateur cyclists in the world.' Deliberately modeled on the pro Grand Tour with Mavic neutral service, motorcycle escorts, timed stages, GC classification, and daily jerseys. 56% of 2024 participants were returning alumni."
+    },
+
+    "biased_opinion": {
+      "verdict": "The amateur Grand Tour — 7 days of HC cols with pro-level support and a hefty price tag.",
+      "summary": "Haute Route Alps is the multi-day experience against which all others are measured. 808km and 19,255m of climbing over 7 consecutive days through the legendary cols of the Tour de France. The production is extraordinary: Mavic neutral service, motorcycle escorts, daily massage, hot meals, and a GC classification that makes this feel like a real stage race. The Alpe d'Huez ITT alone is worth the trip. But at EUR 4,298-5,398 (entry + accommodation), this is firmly a premium product.",
+      "strengths": [
+        "808km / 19,255m over 7 days — genuine Grand Tour scale",
+        "Col d'Agnel (2,744m), Alpe d'Huez ITT, Col d'Izoard in one week",
+        "Pro-level support: Mavic neutral service, motorcycle escorts, daily massage",
+        "GC classification with timed climbs — real stage race competition",
+        "Route changes annually — fresh experience for returning riders",
+        "56% returning alumni — testament to the event's quality"
+      ],
+      "weaknesses": [
+        "EUR 4,298-5,398 total — one of the most expensive amateur cycling events",
+        "~500-600 riders — small field, intimate but exclusive",
+        "Roads not fully closed — marshals and escorts, not Tour de France closure",
+        "15-20% DNF rate over 7 stages — genuine attrition",
+        "Event is only 15 years old — lacks deep heritage"
+      ],
+      "bottom_line": "Haute Route Alps is the apex predator of amateur cycling events. If you have the legs for 19,000m of climbing over 7 days and the budget for EUR 4,300+, there is nothing else like it. The Alpe d'Huez ITT and Col d'Agnel alone are transcendent. Just bring everything you own for the weather."
+    },
+
+    "final_verdict": {
+      "score": "87/100",
+      "one_liner": "7 days, 800km, 19,000m+ climbing through the French Alps — the closest an amateur gets to riding a Grand Tour.",
+      "should_you_race": "Yes, if you have the fitness for 7 consecutive days of HC climbing AND the budget for EUR 4,300+. Requires serious preparation — most participants train 10-15 hours/week for months. FTP of 3.0+ W/kg recommended as minimum. The 3-day option (stages 5-7) offers a more accessible entry point.",
+      "alternatives": "L'Etape du Tour (single TdF stage, far cheaper), Haute Route Pyrenees (7-day, different mountain range), Maratona dles Dolomites (single-day Dolomite epic), Ötztaler Radmarathon (single-day Austrian Alpine extreme)."
+    },
+
+    "citations": [
+      {"url": "https://hauteroute.fr/", "category": "official", "label": "Official website — event overview, 2026 route"},
+      {"url": "https://hauteroute.fr/gb-haute-route-alpes-2026-race-route-2/", "category": "official", "label": "2026 race route — all 7 stages"},
+      {"url": "https://hauteroute.fr/gb-services/", "category": "official", "label": "Services included in entry fee"},
+      {"url": "https://hauteroute.fr/accommodation/", "category": "official", "label": "Accommodation packages and pricing"},
+      {"url": "https://sportivebreaks.com/blog/2026-haute-route-alps-route-has-been-announced/", "category": "editorial", "label": "2026 route stage-by-stage details"},
+      {"url": "https://www.altovelo.org/blog/race-report-2022-haute-route-alps", "category": "editorial", "label": "2022 race report: 368 starters, 302 finishers"},
+      {"url": "https://endurance.biz/2024/industry-news/haute-route-alpes-rolls-out-under-post-ironman-ownership/", "category": "editorial", "label": "2024 under FVE: 550 riders, 56% returning alumni"},
+      {"url": "https://www.cycloworld.cc/en/article/what-are-the-prospects-for-haute-route-alps-2025-and-beyond/5378", "category": "editorial", "label": "40 nationalities, demographic breakdown, 12% women"}
+    ]
+  }
+}

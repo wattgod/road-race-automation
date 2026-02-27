@@ -1,0 +1,221 @@
+{
+  "race": {
+    "name": "Granfondo Nove Colli",
+    "slug": "nove-colli",
+    "display_name": "Granfondo Nove Colli",
+    "tagline": "The queen of granfondos — 9 Romagna hills, 200km, Pantani's hometown, and piadina at every feed zone since 1971.",
+
+    "vitals": {
+      "distance_km": 200,
+      "distance_mi": 124,
+      "elevation_m": 3814,
+      "elevation_ft": 12513,
+      "location": "Cesenatico, Emilia-Romagna, Italy",
+      "location_badge": "Cesenatico, Italy",
+      "country": "Italy",
+      "date": "Fourth Sunday in May",
+      "date_specific": "May 24, 2026 (55th edition)",
+      "field_size": "~12,000 registered riders from 48+ countries (~10,000 starters)",
+      "start_format": "wave_start",
+      "registration": "Grid start in 4 color-coded waves (Red/White/Blue/Yellow) at 4-minute intervals. Grid placement by qualifying time from prior editions.",
+      "entry_fee": "EUR 120 + EUR 20 service fee (includes timing chip, bib, Gobik jersey, feed stations, pasta party)",
+      "feed_zones": "9 food stations along the route (one near each climb) — fresh pasta, pies, pizza, bananas, coffee, Coca-Cola, Romagna specialties. Gluten-free options at all stations.",
+      "cutoff_time": "~10-11 hours based on grid qualification tiers. Fastest merit tier: sub-7:20 (men).",
+      "lat": 44.2005,
+      "lng": 12.3939,
+      "route_options": [
+        "Long: 200km / 3,814m — full 9 hills including Barbotto and Gorolo",
+        "Medium: 137km / 1,872m — first 4 hills (including Barbotto)",
+        "Gravel: 107km / 1,780m — dirt roads and trails (added 2024)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Mediterranean coastal",
+      "description": "Late May in Romagna: 22-23°C highs, 13°C lows. One of the most favorable weather windows on the European gran fondo calendar. 6:00am start can be cool along the coast. Heat a factor on inland climbs.",
+      "challenges": [
+        "Pre-dawn gathering (5:00am) in cool coastal conditions at 13-15°C",
+        "Heat builds on inland valley climbs — temperatures higher away from coast",
+        "~7 rain days in May — rain possible but less frequent than alpine events",
+        "Headwinds or crosswinds on flat 28km Adriatic opening section"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Romagna Apennine foothills",
+      "surface": "Predominantly well-paved Italian provincial roads. Some sections rough post-2023 flood repairs. Road quality improving.",
+      "technical_rating": 3,
+      "features": [
+        "9 named hills — relentless succession rather than single epic climbs",
+        "Barbotto: 18% max gradient, the signature climb with announcer calling every rider's name",
+        "Gorolo: 17% opening and 17-20% finale — restored for 2026 original route",
+        "Fast, technical descents between climbs (tight bends, 14% descent gradients)",
+        "Flat 28km Adriatic coast opening at 40+ km/h with echelons and paceline riding",
+        "Maximum altitude only 791m — Apennine foothills, not alpine"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 2,
+      "altitude": 2,
+      "logistics": 2,
+      "prestige": 4,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 4,
+      "discipline": "gran_fondo",
+      "prestige_override": "Prestige 4 — one-tier promotion from base tier, cannot promote into T1. Base T2 stays T2.",
+      "scoring_notes": "Prestige 4. The oldest gran fondo in the world (1971). 12,000 entries selling out in minutes. Community/culture 5 — Pantani's hometown, Romagna food culture, Giro and Tour de France both used the course. Scenic experience 3 — pleasant Romagna hills but not dramatic alpine scenery. Altitude 2 — max 791m, Apennine foothills. Road surface 2 — some rough sections post-2023 floods but mostly good tarmac. Cultural impact 4 — invented the gran fondo format, Pantani connection, Giro 2020 tribute, TdF 2024 Grand Depart."
+    },
+
+    "climb_profile": {
+      "total_climbs": 9,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 2,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Barbotto",
+          "km_from_start": 91,
+          "distance_km": 5.5,
+          "elevation_gain_m": 372,
+          "average_gradient_pct": 6.9,
+          "max_gradient_pct": 18.0,
+          "category": "Cat 2",
+          "summit_altitude_m": 660,
+          "tactical_notes": "THE signature climb of Nove Colli. Opening 300m at 9-10%, brief respite, then a devastating final kilometer with ramps of 14-18%. Huge crowd atmosphere with an announcer calling every rider's name at the summit."
+        },
+        {
+          "name": "Monte Pugliano",
+          "km_from_start": 130,
+          "distance_km": 9.0,
+          "elevation_gain_m": 511,
+          "average_gradient_pct": 5.6,
+          "max_gradient_pct": 12.0,
+          "category": "Cat 2",
+          "summit_altitude_m": 791,
+          "tactical_notes": "Greatest elevation gain of all nine hills. Highest point on the course at 791m. Relentless, consistent gradient. The queen climb in terms of pure vertical."
+        },
+        {
+          "name": "Gorolo",
+          "km_from_start": 162,
+          "distance_km": 4.0,
+          "elevation_gain_m": 240,
+          "average_gradient_pct": 6.0,
+          "max_gradient_pct": 17.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 450,
+          "tactical_notes": "The final sting — restored for 2026 original route. Opens immediately at 16% for the first kilometer. Brief respite mid-climb before a brutal 17-20% finale in the final 200 meters. Seven hairpin turns."
+        },
+        {
+          "name": "Ciola",
+          "km_from_start": 77,
+          "distance_km": 6.0,
+          "elevation_gain_m": 313,
+          "average_gradient_pct": 5.5,
+          "max_gradient_pct": 11.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 530,
+          "tactical_notes": "Harsh but regular gradient through Apennine foothills. Legs start to feel the accumulated climbing before the Barbotto."
+        },
+        {
+          "name": "Perticara",
+          "km_from_start": 111,
+          "distance_km": 9.0,
+          "elevation_gain_m": 370,
+          "average_gradient_pct": 4.1,
+          "max_gradient_pct": 12.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 600,
+          "tactical_notes": "Long grinding climb with irregular gradient. Historic sulphur mining village at the summit."
+        }
+      ],
+      "profile_type": "hilly",
+      "king_of_mountain": "Barbotto"
+    },
+
+    "course_description": {
+      "character": "200km of relentless Romagna hills from the Adriatic coast into the Apennine foothills and back. The course starts with a flat 28km coastal section at 40+ km/h with echelons, then hits 9 named climbs in succession. No single climb is alpine, but the cumulative effect of 3,814m over 200km with pitches of 18% is enormous. Barbotto (18% max) is the signature, Gorolo (17-20% finale) is the final sting. The food stations serve actual Romagna cuisine — this is a culinary tour as much as a cycling event.",
+      "signature_challenge": "Barbotto — 5.5km at 6.9% average with a devastating final kilometer of 14-18% gradients. The crowd atmosphere at the summit, with an announcer calling every rider's name, is one of the great moments in amateur cycling.",
+      "suffering_zones": [
+        "Barbotto final kilometer: 14-18% ramps at km 91 — the decisive selection point",
+        "Monte Pugliano: 9km of relentless consistent gradient to the highest point at km 130",
+        "Gorolo opening: 16% immediately from the start at km 162 on exhausted legs"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Rimini Federico Fellini (RMI, 22km, 35min). Bologna (BLQ, 130km, 1hr 15min, major hub). Forli (FRL, 30km, limited). Venice (VCE, 250km, 2.5hr, alternative hub).",
+      "lodging_strategy": "Cesenatico is an Adriatic beach resort with extensive hotel capacity. 'Bike Hotels' offer event registration + accommodation packages. From EUR 80/night (B&B) to EUR 285/night (full board). Book early — the event transforms the entire Romagna coast.",
+      "transport": "Start/finish at Colonia AGIP waterfront. Town is compact and walkable. Train station connects to Bologna/Rimini. Fully closed roads for the event.",
+      "food": "9 food stations with traditional Romagna products: fresh pasta, pies, pizza, bananas, coffee, Coca-Cola. Post-race pasta party by Mare. Enervit official nutrition sponsor.",
+      "official_site": "https://www.novecolli.it"
+    },
+
+    "history": {
+      "founded": 1971,
+      "origin_story": "The Fausto Coppi Cycling Club was founded October 2, 1966 by eight friends in Cesenatico. The first Granfondo Nove Colli was held on May 20, 1971, starting from Bar del Corso on the Porto Canale Leonardesco (Leonardo da Vinci's canal port) with just 17 riders. The name means 'Nine Hills' for the route's climbs through the Romagna Apennines.",
+      "notable_moments": [
+        "1971: First edition — 17 riders from Bar del Corso",
+        "1996: First time exceeding 10,000 participants",
+        "2010: 40th anniversary — Giro d'Italia includes Nove Colli route in its stage",
+        "2015: 12,000 online registration slots sold out in 4 minutes",
+        "2020: Giro d'Italia Stage 12 uses Cesenatico/Nove Colli route as Pantani tribute",
+        "2024: Tour de France Stage 2 starts from Cesenatico (Grand Depart from Italy)",
+        "2025: Alejandro Valverde rides as a guest",
+        "2026: 55th edition — returns to original route with Gorolo. 60th anniversary of Fausto Coppi cycling club"
+      ],
+      "reputation": "The oldest gran fondo in the world and widely regarded as 'the queen of granfondos.' Born in Cesenatico — Marco Pantani's hometown — with deep connections to the Giro d'Italia, Tour de France, and the entire Romagna cycling culture. Strava includes it in its 'Bucket List Events.'"
+    },
+
+    "biased_opinion": {
+      "verdict": "The original gran fondo — 55 years of Romagna hills, Pantani's ghost, and piadina at every feed zone.",
+      "summary": "Nove Colli is where the gran fondo was invented. 17 riders in 1971, 12,000 today. The course is not alpine — max altitude 791m — but the relentless succession of 9 hills with pitches to 18% over 200km creates genuine suffering. Barbotto with the announcer calling your name is one of the great moments in amateur cycling. The Pantani connection is everywhere — you're riding his training roads in his hometown. EUR 120 including a Gobik jersey and 9 food stations serving actual Romagna cuisine is exceptional value.",
+      "strengths": [
+        "Oldest gran fondo in the world — 55 years of heritage (1971)",
+        "12,000 riders from 48+ countries, selling out in minutes",
+        "Pantani's hometown — Spazio Pantani museum, his training roads",
+        "9 food stations with traditional Romagna cuisine (not just gels)",
+        "Giro d'Italia (2020) and Tour de France (2024) both used the course",
+        "EUR 120 including Gobik jersey, timing, 9 feed zones, pasta party"
+      ],
+      "weaknesses": [
+        "Not alpine — max altitude 791m, Apennine foothills",
+        "Scenic but not dramatic — pleasant Romagna hills, not Dolomites",
+        "Some rough road sections post-2023 flood damage",
+        "Rimini airport has limited international connections"
+      ],
+      "bottom_line": "Nove Colli earns T2 through history, culture, and community rather than course extremity. If the Maratona is the Dolomite cathedral, Nove Colli is the Romagna trattoria — unpretentious, deeply traditional, and nourishing. Go for the cycling heritage, stay for the piadina."
+    },
+
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "The queen of granfondos — 9 Romagna hills, 200km, Pantani's hometown, and the event that invented the gran fondo format in 1971.",
+      "should_you_race": "Yes, if you appreciate cycling heritage and Italian food culture as much as course difficulty. The 200km long route with 3,814m of climbing is genuinely tough, but the altitude is modest. The medium route (137km) includes the iconic Barbotto. Come for the history, the Pantani connection, and the 9 food stations.",
+      "alternatives": "L'Eroica (cultural cycling pilgrimage, Tuscany), Maratona dles Dolomites (alpine gran fondo, lottery entry), Gran Fondo Stelvio (extreme alpine climbing)."
+    },
+
+    "citations": [
+      {"url": "https://www.novecolli.it/en-GB/parcours", "category": "official", "label": "Official route data — all 9 climbs"},
+      {"url": "https://www.novecolli.it/en-GB/history", "category": "official", "label": "Official history — founding, milestones"},
+      {"url": "https://www.novecolli.it/en-GB/event/nove-colli-reaches-its-55th-edition-and-returns-to-its-roots", "category": "official", "label": "2026 route — return to Gorolo"},
+      {"url": "https://mycols.app/en/climb/monte-barbotto", "category": "data", "label": "Barbotto climb data: 4.6km, 373m, 8.2% avg"},
+      {"url": "https://mycols.app/en/climb/monte-pugliano", "category": "data", "label": "Monte Pugliano climb data: 8.9km, 499m, 6.3% avg"},
+      {"url": "https://climbfinder.com/en/climbs/san-giovanni-in-galilea-gorolo", "category": "data", "label": "Gorolo climb data: 5.4km, 353m, 6.5% avg"},
+      {"url": "https://www.granfondoguide.com/Contents/Index/7347/over-9200-riders-from-48-countries-gearing-up-for-52nd-edition-of-nove-colli", "category": "editorial", "label": "52nd edition: 9,200 riders from 48 countries"},
+      {"url": "https://www.rouleur.cc/blogs/the-rouleur-journal/growing-up-with-pantani", "category": "editorial", "label": "Rouleur — Pantani-Cesenatico connection"}
+    ]
+  }
+}

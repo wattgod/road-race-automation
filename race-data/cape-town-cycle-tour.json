@@ -1,0 +1,197 @@
+{
+  "race": {
+    "name": "Cape Town Cycle Tour",
+    "slug": "cape-town-cycle-tour",
+    "display_name": "Cape Town Cycle Tour",
+    "tagline": "35,000 riders around the Cape Peninsula — the world's largest individually timed bike race.",
+
+    "vitals": {
+      "distance_km": 109,
+      "distance_mi": 67.7,
+      "elevation_m": 1200,
+      "elevation_ft": 3937,
+      "location": "Grand Parade, Cape Town → Green Point",
+      "location_badge": "Cape Town, South Africa",
+      "country": "South Africa",
+      "date": "Second Sunday in March",
+      "date_specific": "March 8, 2026 (48th edition)",
+      "field_size": "~28,000-35,000 riders (peak 37,199 in 2016)",
+      "start_format": "wave_start",
+      "registration": "Seeded wave start based on qualifying times. R940 (~$53) general entry.",
+      "entry_fee": "R940 (~$53 USD) general, R1,700 (~$96 USD) international",
+      "feed_zones": "12 refreshment/water stations along the 109km route (approximately every 8-9km)",
+      "cutoff_time": "~7 hours. Course closes 17:00. Intermediate cutoffs at checkpoints throughout.",
+      "lat": -33.9249,
+      "lng": 18.4241,
+      "route_options": [
+        "109km classic full route",
+        "42km (introduced 2023)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Mediterranean coastal",
+      "description": "March in Cape Town: 24-26°C highs, 16°C lows. Dawn start 15-18°C. Only 6 rainy days average in March. THE factor is the Cape Doctor south-easterly wind.",
+      "challenges": [
+        "Cape Doctor wind: can gust 60-100+ km/h on exposed sections",
+        "2017: first-ever cancellation due to 100km/h winds",
+        "2009: 60km/h winds caused infrastructure collapse at start area",
+        "Chapman's Peak Drive fully exposed to south-easterly"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Coastal rolling",
+      "surface": "Entirely paved, well-maintained public roads. Excellent quality tarmac.",
+      "technical_rating": 2,
+      "features": [
+        "Chapman's Peak Drive — carved into cliff face 600m above the Atlantic, 114 curves",
+        "Suikerbossie — final sting at km 81, 6.7% average",
+        "Full road closure for entire 109km route",
+        "Mix of highway, coastal roads, and mountain pass roads"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 1,
+      "prestige": 5,
+      "organization": 5,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 5,
+      "expenses": 1,
+      "cultural_impact": 3,
+      "discipline": "gran_fondo",
+      "prestige_override": "Prestige 5 caps at T2 (score 64 < 75)",
+      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). The course is genuinely modest: 109km with 1,200m climbing at sea level. Scores 1-2 on all course-difficulty dimensions. But the event is world-class: 35,000 riders, full road closure, UCI GFWS 2026, R940 ($53) entry. Climate risk 4 due to Cape Doctor wind that has cancelled the event. Value 5 — $53 for full road closure, timing, 12 stations. Expenses 1 — drive-up for most participants."
+    },
+
+    "climb_profile": {
+      "total_climbs": 3,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Chapman's Peak Drive",
+          "km_from_start": 62,
+          "distance_km": 5.1,
+          "elevation_gain_m": 154,
+          "average_gradient_pct": 3.0,
+          "max_gradient_pct": 5.8,
+          "category": "Cat 4",
+          "summit_altitude_m": 160,
+          "tactical_notes": "THE signature section. One of the most spectacular coastal roads in the world — carved into cliff face 600m above the Atlantic. 114 curves. Where the race breaks apart."
+        },
+        {
+          "name": "Suikerbossie",
+          "km_from_start": 81,
+          "distance_km": 2.0,
+          "elevation_gain_m": 130,
+          "average_gradient_pct": 6.7,
+          "max_gradient_pct": 7.9,
+          "category": "Cat 4",
+          "summit_altitude_m": 130,
+          "tactical_notes": "The infamous final sting — where tired legs are truly tested. Connects Hout Bay to Llandudno. Short but decisive."
+        },
+        {
+          "name": "Smitswinkel",
+          "km_from_start": 48,
+          "distance_km": 5.0,
+          "elevation_gain_m": 175,
+          "average_gradient_pct": 3.5,
+          "max_gradient_pct": 5.0,
+          "category": "Uncategorized",
+          "summit_altitude_m": 175,
+          "tactical_notes": "Long, gradual drag approaching the southern tip of the Peninsula. 'The first real test of whether you've brought your climbing legs.'"
+        }
+      ],
+      "profile_type": "rolling",
+      "king_of_mountain": "Suikerbossie"
+    },
+
+    "course_description": {
+      "character": "A 109km loop around one of the most beautiful peninsulas on Earth, with 35,000 individually-timed riders on fully closed roads. The course is more spectacle than suffering — the climbing is modest and the challenge comes from wind, distance, and the sheer scale of the peloton. Chapman's Peak Drive carved into a cliff 600m above the Atlantic is the jewel. The Cape Doctor wind is the wildcard that can turn a pleasant ride into a survival exercise.",
+      "signature_challenge": "The Cape Doctor wind. In calm years (like 2025), record times fall. In windy years, the second half of the course becomes a headwind survival exercise. In 2017, 100km/h winds forced the first-ever cancellation.",
+      "suffering_zones": [
+        "Chapman's Peak in headwind — fully exposed coastal road at km 62, wind tunnels through",
+        "Suikerbossie at km 81 — 6.7% average on tired legs, the final decisive climb",
+        "Return leg Atlantic coast — open headwind from Hout Bay to Sea Point can be brutal"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Cape Town International (CPT) — 20km from city centre, 25 minutes by car. Direct flights from major European, Middle East, and African hubs.",
+      "lodging_strategy": "Sea Point/Green Point/City Bowl ideal for start/finish proximity. Budget from ~$17/night (hostels). Mid-range R1,500-3,000/night ($85-170). Book 2-3 months ahead for race weekend.",
+      "transport": "Start at Grand Parade in CBD — walkable from many hotels. Finish near Green Point/Sea Point promenade.",
+      "food": "12 refreshment stations. Post-race finish area with food vendors and celebrations.",
+      "official_site": "https://www.capetowncycletour.com"
+    },
+
+    "history": {
+      "founded": 1978,
+      "origin_story": "Born from a 1977 protest ride ('The Big Ride In') organized by engineers Bill Mylrea and John Stegmann to demand cycling paths in Cape Town. The first official race in 1978 ('Peninsula Marathon') attracted 525 entries under Argus newspaper sponsorship. The event was non-segregated during apartheid — one of the first sporting events in South Africa to welcome riders of all races.",
+      "notable_moments": [
+        "1977: 'The Big Ride In' protest ride — hundreds of cyclists turn out",
+        "1978: First official race — 525 entries, won by Lawrence Whittaker",
+        "2009: 60km/h winds cause infrastructure collapse, 54-minute start delay",
+        "2014: Race shortened to 47km due to devastating fires",
+        "2016: Peak entries — 37,199 riders",
+        "2017: First-ever cancellation — 100km/h winds (international media coverage)",
+        "2020-2021: Cancelled due to COVID-19",
+        "2025: Record-breaking times in 'near perfect conditions'",
+        "2026: Historic first year as UCI Gran Fondo World Series qualifier"
+      ],
+      "reputation": "The world's largest individually timed cycling event. Born from apartheid-era activism, grown into a global phenomenon. 'More than just a ride' — a mass-participation celebration that defines Cape Town's cycling identity."
+    },
+
+    "biased_opinion": {
+      "verdict": "The scale is staggering. The course is pleasant. The wind is terrifying.",
+      "summary": "Cape Town Cycle Tour is unlike anything else in cycling. 35,000 riders on fully closed roads around one of the most beautiful peninsulas on Earth. The climbing is gentle, the scenery is stunning, and the entry fee ($53) is absurdly cheap. But this is not a mountainous challenge — it's a community celebration at scale. The Cape Doctor wind is the real antagonist: it has cancelled the event, collapsed infrastructure, and turned Chapman's Peak into a wind tunnel. When conditions cooperate, it's a perfect day on a bike.",
+      "strengths": [
+        "35,000 individually timed riders — nothing else comes close in scale",
+        "Full road closure for 109km around the Cape Peninsula",
+        "R940 ($53) entry — exceptional value for full production",
+        "Chapman's Peak Drive is one of the most spectacular coastal roads on Earth",
+        "Apartheid-era inclusivity heritage — deeply meaningful",
+        "UCI Gran Fondo World Series qualifier in 2026"
+      ],
+      "weaknesses": [
+        "Course is genuinely easy — 109km, 1,200m, sea level",
+        "Cape Doctor wind can cancel the event (2017) or make it brutal",
+        "Not a mountain challenge — won't satisfy climbers or difficulty seekers",
+        "International flights to South Africa are long and expensive"
+      ],
+      "bottom_line": "Cape Town Cycle Tour earns T2 through scale, organization, and cultural significance rather than course difficulty. If you want 35,000 riders on closed roads around a stunning peninsula for $53, there is literally nothing else like it. Just check the wind forecast."
+    },
+
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "35,000 riders around the Cape Peninsula — the world's largest individually timed bike race, where the Cape Doctor wind is the real opponent.",
+      "should_you_race": "Yes, if you appreciate the scale and setting over course difficulty. This is a celebration, not a sufferfest. Chapman's Peak alone is worth the trip. The UCI GFWS status in 2026 adds competitive credibility. Just know that the climbing is modest and the wind is the variable.",
+      "alternatives": "Cadel Evans Great Ocean Road Ride (similar coastal format, Australia), Ride London (large-field UK sportive), Tour de Tucson (large-field American century)."
+    },
+
+    "citations": [
+      {"url": "https://www.capetowncycletour.com/events/the-cape-town-cycle-tour", "category": "official", "label": "Official 109km event page"},
+      {"url": "https://www.capetowncycletour.com/about-us", "category": "official", "label": "Official history — founding, growth, inclusivity"},
+      {"url": "https://en.wikipedia.org/wiki/Cape_Town_Cycle_Tour", "category": "reference", "label": "Wikipedia — history, date pattern, winners"},
+      {"url": "https://ucigranfondoworldseries.com/en/cape-town-cycle-tour/", "category": "official", "label": "UCI Gran Fondo World Series listing"},
+      {"url": "https://mycols.app/en/climb/chapmans-peak-hout-bay", "category": "data", "label": "Chapman's Peak climb data"},
+      {"url": "https://mycols.app/en/climb/suikerbossie-hout-bay", "category": "data", "label": "Suikerbossie climb data"},
+      {"url": "https://www.washingtonpost.com/news/early-lead/wp/2017/03/12/worlds-largest-individually-timed-bike-race-canceled-amid-60-plus-mph-winds/", "category": "editorial", "label": "Washington Post — 2017 cancellation"},
+      {"url": "https://www.dailymaverick.co.za/article/2025-03-10-tyler-lange-shatters-cape-town-cycle-tour-record-as-he-follows-in-fathers-slipstream/", "category": "editorial", "label": "2025 course record — Tyler Lange 2:25:48"}
+    ]
+  }
+}

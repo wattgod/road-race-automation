@@ -1,0 +1,197 @@
+{
+  "race": {
+    "name": "Gran Fondo Stelvio",
+    "slug": "gran-fondo-stelvio",
+    "display_name": "La Stelvio Santini",
+    "tagline": "Mortirolo and Stelvio in a single day — summit finish at 2,757m where Coppi became legend.",
+
+    "vitals": {
+      "distance_km": 130,
+      "distance_mi": 80.8,
+      "elevation_m": 4270,
+      "elevation_ft": 14009,
+      "location": "Bormio → Summit of Passo dello Stelvio",
+      "location_badge": "Bormio, Lombardy, Italy",
+      "country": "Italy",
+      "date": "First Sunday in June",
+      "date_specific": "June 7, 2026",
+      "field_size": "~1,800-2,000 riders from ~50 nations",
+      "start_format": "mass_start",
+      "registration": "Open registration, EUR 90-130 tiered pricing. Includes custom Santini jersey, bib, timing.",
+      "entry_fee": "EUR 90 (early bird) to EUR 130 (final tier)",
+      "feed_zones": "Multiple stations with Enervit nutrition, water on climbs. Local specialties at aid stations.",
+      "cutoff_time": "Not publicly specified. Rankings based on timed climb segments only.",
+      "lat": 46.4683,
+      "lng": 10.3715,
+      "route_options": [
+        "Short: 64km / 1,950-2,280m — Bormio via Sondalo to Stelvio summit",
+        "Medium: 108km / 3,050m — adds Rogorbello/Sondalo loop",
+        "Long: 130km / 4,270m — adds Passo Mortirolo (HC)"
+      ]
+    },
+
+    "climate": {
+      "primary": "Alpine extreme",
+      "description": "Bormio valley 15-20°C, Stelvio summit can drop to near-freezing. 15-20°C temperature differential. HIGH weather risk at 2,757m — thunderstorms, rain, sleet, snow possible in early June.",
+      "challenges": [
+        "2023 edition: Stelvio Pass CLOSED during race due to snow/ice — riders rerouted",
+        "Summit at 2,757m — severe wind chill on exposed upper switchbacks",
+        "Road typically opens only days before the event in early June",
+        "Temperature can drop 15-20°C between Bormio and summit"
+      ]
+    },
+
+    "terrain": {
+      "primary": "Alpine mountain passes — HC climbs",
+      "surface": "Good quality tarmac throughout. Well-maintained Italian state road SS38.",
+      "technical_rating": 4,
+      "features": [
+        "Passo Mortirolo: 12.2km at 10.5% avg — one of the hardest climbs in pro cycling",
+        "Passo dello Stelvio: 21.5km, 40 hairpins, summit finish at 2,757m",
+        "Rankings based solely on timed climbs — discourages dangerous descending",
+        "Stelvio is second-highest paved pass in the Alps",
+        "Summit finish — all routes finish at 2,757m"
+      ]
+    },
+
+    "fondo_rating": {
+      "overall_score": 87,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 1,
+      "climate_risk": 5,
+      "altitude": 5,
+      "logistics": 5,
+      "prestige": 5,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 4,
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). Climate risk 5 — 2023 pass was literally closed during the race due to snow. Altitude 5 — summit finish at 2,757m. Logistics 5 — Bormio is a remote mountain village, Milan airports 3hr drive. Road surface scored 1 (good tarmac = low difficulty). Cultural impact 4 — Stelvio is Giro legend (Coppi 1953) but the event itself only since 2011."
+    },
+
+    "climb_profile": {
+      "total_climbs": 3,
+      "hc_climbs": 2,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Passo Mortirolo (from Tovo)",
+          "km_from_start": 50,
+          "distance_km": 12.2,
+          "elevation_gain_m": 1277,
+          "average_gradient_pct": 10.5,
+          "max_gradient_pct": 22.0,
+          "category": "HC",
+          "summit_altitude_m": 1852,
+          "tactical_notes": "One of the hardest climbs in professional cycling. Lance Armstrong: 'the hardest climb I have ever done.' Two sustained brutal sections: km 3-6 at 12.5%, final 4km at 13.7%. Long route only."
+        },
+        {
+          "name": "Passo dello Stelvio (from Bormio)",
+          "km_from_start": 108,
+          "distance_km": 21.5,
+          "elevation_gain_m": 1533,
+          "average_gradient_pct": 7.1,
+          "max_gradient_pct": 14.0,
+          "category": "HC",
+          "summit_altitude_m": 2757,
+          "tactical_notes": "Remarkably steady: 86% at 5-10%. 40 numbered hairpins. 7 tunnels between km 7-10 (cold, wet, poorly lit). Final 4-5km are hardest at 8%+. Summit finish at 2,757m — one of the highest in amateur cycling."
+        },
+        {
+          "name": "Rogorbello / Sondalo",
+          "km_from_start": 15,
+          "distance_km": 8.0,
+          "elevation_gain_m": 400,
+          "average_gradient_pct": 5.0,
+          "max_gradient_pct": 8.0,
+          "category": "Cat 3",
+          "summit_altitude_m": 1100,
+          "tactical_notes": "Warmup climb through Sondalo. Replaced the Teglio climb (closed since 2024 due to Milan-Cortina 2026 Olympics roadworks)."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Passo dello Stelvio"
+    },
+
+    "course_description": {
+      "character": "Two of cycling's most legendary climbs in a single day, ending with a summit finish at 2,757m. The Mortirolo is pure savagery — 10.5% average with ramps to 22%. The Stelvio is the operatic finale — 40 hairpins rising through 7 tunnels to the highest paved pass in the Eastern Alps. Rankings based on timed climbs only, which reduces dangerous descending.",
+      "signature_challenge": "Passo Mortirolo — 12.2km at 10.5% average with sections of 22%. After 50km in the legs, this is where the long route earns its HC rating. The Mortirolo is simply one of the hardest paved roads on Earth.",
+      "suffering_zones": [
+        "Mortirolo km 3-6: 12.5% average — sustained brutaliy through dark forests",
+        "Mortirolo final 4km: 13.7% average — legs screaming, summit not visible",
+        "Stelvio km 17-21.5: 8%+ gradient at 2,400-2,757m altitude — oxygen debt meets steep road"
+      ]
+    },
+
+    "logistics": {
+      "airport": "Milan Bergamo (BGY, 3hr), Milan Malpensa (MXP, 3hr), Bolzano (BZO, 2hr, limited), Innsbruck (INN, 3hr)",
+      "lodging_strategy": "Bormio is an alpine resort town (also a ski/thermal spa destination). Hotels, B&Bs, apartments. Book well in advance — early June tourism season. Tour packages EUR 699-999+.",
+      "transport": "Closed roads for event. Start in Bormio town center. Buses from summit back to Bormio included. Nearest rail: Tirano (40min drive), connected via Bernina Express.",
+      "food": "Enervit nutrition at feed zones. Post-race celebration at 2,757m summit. Bormio thermal baths for recovery.",
+      "official_site": "https://www.lastelviosantini.com"
+    },
+
+    "history": {
+      "founded": 2011,
+      "origin_story": "Created by cycling club US Bormiese in partnership with Santini Maglificio Sportivo. Conceived to celebrate the legendary climbs accessible from Bormio. Rebranded from 'Granfondo Stelvio Santini' to 'La Stelvio Santini' in 2024.",
+      "notable_moments": [
+        "2011: Inaugural edition",
+        "2022: 10th anniversary with new Mortirolo attack variant from Sernio",
+        "2023: Stelvio Pass CLOSED during race due to snow — riders rerouted",
+        "2024: Rebranded to 'La Stelvio Santini' with new minimalist logo",
+        "2025: Bicentennial of Stelvio Pass road (built 1820-1825 by Carlo Donegani)",
+        "2026: New weekend format — gravel Saturday with 3T, road Sunday",
+        "Giro d'Italia connection: Coppi attacked Koblet on the Stelvio in 1953, winning his 5th Giro"
+      ],
+      "reputation": "Daniel Friebe (Mountain High): 'Arguably the purest, most exhilarating, most spellbinding mountain playground accessible to cyclists.' Top Gear: Stelvio is 'the greatest driving road in the world.' The summit finish at 2,757m is one of the highest in any amateur cycling event worldwide."
+    },
+
+    "biased_opinion": {
+      "verdict": "The most extreme single-day gran fondo you can ride — summit finish where Coppi became immortal.",
+      "summary": "If the Maratona is cycling's opera, La Stelvio is its heavy metal. The Mortirolo at 10.5% average is simply one of the hardest paved roads on Earth. Then you climb the Stelvio — 40 hairpins to 2,757m. The summit finish is unlike anything else: you cross the line at the highest point in the Eastern Alps. EUR 90 entry includes a Santini jersey and bus back from the summit. The event is 'only' 15 years old but the climbs have 200 years of history.",
+      "strengths": [
+        "Mortirolo + Stelvio in one day — two HC climbs of legendary status",
+        "Summit finish at 2,757m — highest in amateur cycling",
+        "EUR 90-130 includes Santini jersey, timing, summit transport",
+        "Timed-climbs-only ranking — smart, safe innovation",
+        "Stelvio has 200 years of history (built 1820-1825)",
+        "2026 adds gravel event with 3T — weekend format"
+      ],
+      "weaknesses": [
+        "Bormio is genuinely remote — 3hr from nearest major airport",
+        "Weather at 2,757m can be extreme — 2023 pass was closed during the race",
+        "Only 1,800-2,000 riders — small compared to Italian mega-fondos",
+        "Event is only 15 years old — lacks the deep heritage of Maratona or Nove Colli"
+      ],
+      "bottom_line": "If you want the hardest single-day climbing experience in a gran fondo format, this is it. The Mortirolo is vicious. The Stelvio is magnificent. The summit finish at 2,757m is transcendent. Just check the weather forecast — and pack everything."
+    },
+
+    "final_verdict": {
+      "score": "87/100",
+      "one_liner": "Mortirolo and Stelvio in a single day — summit finish at 2,757m where Coppi became legend.",
+      "should_you_race": "Yes, if you can climb. The long route requires serious fitness — the Mortirolo alone would be a worthy ride. The short route (64km) offers the Stelvio summit without the Mortirolo for those building up. Weather is the wildcard — early June at 2,757m is inherently unpredictable.",
+      "alternatives": "Maratona dles Dolomites (7 Dolomite passes, more scenic), Ötztaler Radmarathon (similar altitude, more savage), Nove Colli (Italian classic without extreme altitude)."
+    },
+
+    "citations": [
+      {"url": "https://www.lastelviosantini.com/?lang=en", "category": "official", "label": "Official website — 2026 date, routes, registration"},
+      {"url": "https://www.granfondoguide.com/Contents/IndexFull/8571/cavallo-and-lanzone-take-qom-and-kom-jerseys-at-2025-lastelviosantini", "category": "editorial", "label": "2025 results — 1,800 riders, 50 nations"},
+      {"url": "https://pjammcycling.com/climb/813.Passo%20Mortirolo%20-%20Tovo", "category": "data", "label": "Mortirolo from Tovo climb data: 7.6mi, 4,207ft, 10.5% avg"},
+      {"url": "https://en.wikipedia.org/wiki/Stelvio_Pass", "category": "reference", "label": "Stelvio Pass history — built 1820-25, 2,757m, WWI front"},
+      {"url": "https://epicroadrides.com/cycling-blog/granfondo-stelvio-santini-route-review-guide/", "category": "editorial", "label": "Comprehensive event guide"},
+      {"url": "https://www.granfondoguide.com/Contents/Index/7395/arnaudo-and-senni-fastest-at-granfondo-stelvio-santini-as-pass-closed-due-to-treacherous-weather", "category": "editorial", "label": "2023 — pass closed due to weather"},
+      {"url": "https://www.bike-mag.com/la-stelvio-santini-launches-new-gravel-event-for-2026-edition", "category": "editorial", "label": "2026 gravel addition with 3T"},
+      {"url": "https://climbfinder.com/en/climbs/passo-dello-stelvio-bormio", "category": "data", "label": "Stelvio from Bormio climb profile"}
+    ]
+  }
+}
