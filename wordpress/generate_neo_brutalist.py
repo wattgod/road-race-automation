@@ -3987,6 +3987,9 @@ def build_logistics_section(rd: dict) -> str:
     ]
 
     # Filter out empty items and placeholder text ("Check X website/calendars")
+    # Coerce non-string values (lists, dicts) to string
+    items_data = [(label, str(val) if not isinstance(val, str) else val)
+                  for label, val in items_data]
     items_data = [(label, val) for label, val in items_data
                   if val and not re.match(r'^Check\s', val, re.IGNORECASE)]
 
