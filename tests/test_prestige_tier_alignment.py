@@ -44,7 +44,7 @@ class TestPrestigeTierAlignment:
         violations = []
 
         for fname, race in get_all_races():
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             prestige = r.get('prestige', 0)
             tier = r.get('tier', 3)
             score = r.get('overall_score', 0)
@@ -78,7 +78,7 @@ class TestPrestigeTierAlignment:
         violations = []
 
         for fname, race in get_all_races():
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             prestige = r.get('prestige', 0)
             tier = r.get('tier', 3)
 
@@ -109,7 +109,7 @@ class TestPrestigeTierAlignment:
         violations = []
 
         for fname, race in get_all_races():
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             prestige = r.get('prestige', 0)
             tier = r.get('tier', 3)
             has_override = bool(r.get('tier_override_reason'))
@@ -135,17 +135,16 @@ class TestKnownMajorRaces:
 
     # Races that MUST be Tier 1 or 2 (known prestigious events)
     KNOWN_TIER1_RACES = {
-        'unbound-200', 'mid-south', 'leadville-100',
-        'gravel-worlds', 'crusher-in-the-tushar', 'badlands', 'the-traka',
-        'strade-bianche-gran-fondo', 'uci-gravel-worlds',
+        'letape-du-tour', 'maratona-dles-dolomites', 'la-marmotte',
+        'oetztaler-radmarathon', 'paris-brest-paris', 'granfondo-nove-colli',
+        'strade-bianche-gran-fondo', 'tour-of-flanders-sportive',
+        'leroica', 'mallorca-312',
     }
 
     KNOWN_TIER2_MINIMUM = {
-        'the-rift', 'dirty-reiver', 'grinduro-california', 'grinduro-france',
-        'grinduro-germany', 'vermont-overland', 'rasputitsa',
-        'paris-to-ancaster', 'bwr-california', 'bwr-asheville', 'bwr-utah',
-        'bwr-montana', 'bwr-cedar-city', 'sbt-grvl', 'big-sugar',
-        'migration-gravel-race', 'nova-eroica', 'fnld-grvl',
+        'gfny-nyc', 'gran-fondo-new-york', 'amstel-gold-race-toerversie',
+        'rbc-granfondo-whistler', 'ride-london', 'cyclassics-hamburg',
+        'cape-town-cycle-tour', 'alpe-dhuzes',
     }
 
     def test_known_tier1_races(self):
@@ -157,7 +156,7 @@ class TestKnownMajorRaces:
             if slug not in self.KNOWN_TIER1_RACES:
                 continue
 
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             tier = r.get('tier', 3)
 
             if tier != 1:
@@ -183,7 +182,7 @@ class TestKnownMajorRaces:
         """
         violations = []
         for fname, race in get_all_races():
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             tier = r.get('tier', 3)
             score = r.get('overall_score', 0)
             prestige = r.get('prestige', 0)
@@ -218,7 +217,7 @@ class TestKnownMajorRaces:
             if slug not in self.KNOWN_TIER2_MINIMUM:
                 continue
 
-            r = race.get('gravel_god_rating', {})
+            r = race.get('fondo_rating', {})
             tier = r.get('tier', 3)
 
             if tier > 2:  # Tier 3 or worse

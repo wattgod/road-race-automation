@@ -53,7 +53,7 @@ class TestMegaFooterHTML:
     # ── Brand ────────────────────────────────────────────────
 
     def test_brand_title(self):
-        assert "GRAVEL GOD CYCLING" in self.html
+        assert "ROAD LABS" in self.html
 
     def test_brand_tagline(self):
         assert "Practical coaching and training" in self.html
@@ -70,7 +70,7 @@ class TestMegaFooterHTML:
     # ── Legal ────────────────────────────────────────────────
 
     def test_copyright(self):
-        assert "Gravel God Cycling. All rights reserved." in self.html
+        assert "Road Labs. All rights reserved." in self.html
 
     def test_copyright_year(self):
         from datetime import date
@@ -81,24 +81,24 @@ class TestMegaFooterHTML:
         assert "not affiliated with" in self.html
 
     def test_has_legal_links_section(self):
-        assert "gg-mega-footer-legal-links" in self.html
+        assert "rl-mega-footer-legal-links" in self.html
 
     def test_has_privacy_link(self):
-        assert 'href="https://gravelgodcycling.com/privacy/"' in self.html
+        assert 'href="https://roadlabs.cc/privacy/"' in self.html
 
     def test_has_terms_link(self):
-        assert 'href="https://gravelgodcycling.com/terms/"' in self.html
+        assert 'href="https://roadlabs.cc/terms/"' in self.html
 
     def test_has_cookies_link(self):
-        assert 'href="https://gravelgodcycling.com/cookies/"' in self.html
+        assert 'href="https://roadlabs.cc/cookies/"' in self.html
 
     def test_legal_links_in_nav(self):
         """Legal links must be inside a <nav> element for accessibility."""
-        assert '<nav class="gg-mega-footer-legal-links">' in self.html
+        assert '<nav class="rl-mega-footer-legal-links">' in self.html
 
     def test_three_legal_links(self):
         """Exactly 3 legal links: Privacy, Terms, Cookies."""
-        section = self.html.split("gg-mega-footer-legal-links")[1].split("</nav>")[0]
+        section = self.html.split("rl-mega-footer-legal-links")[1].split("</nav>")[0]
         link_count = section.count("<a ")
         assert link_count == 3, f"Expected 3 legal links, got {link_count}"
 
@@ -120,11 +120,11 @@ class TestMegaFooterHTML:
     # ── Structure ────────────────────────────────────────────
 
     def test_footer_tag(self):
-        assert '<footer class="gg-mega-footer">' in self.html
+        assert '<footer class="rl-mega-footer">' in self.html
         assert "</footer>" in self.html
 
     def test_six_columns(self):
-        cols = self.html.count("gg-mega-footer-col")
+        cols = self.html.count("rl-mega-footer-col")
         assert cols == 6, f"Expected 6 columns, got {cols}"
 
 
@@ -135,7 +135,7 @@ class TestMegaFooterCSS:
         self.css = get_mega_footer_css()
 
     def test_no_raw_hex_colors(self):
-        """All colors must use var(--gg-*) tokens, not raw hex."""
+        """All colors must use var(--rl-*) tokens, not raw hex."""
         lines = self.css.split("\n")
         for line in lines:
             if line.strip().startswith("/*") or line.strip().startswith("*"):
@@ -152,8 +152,8 @@ class TestMegaFooterCSS:
         assert "box-shadow" not in self.css
 
     def test_uses_brand_fonts(self):
-        assert "var(--gg-font-data)" in self.css
-        assert "var(--gg-font-editorial)" in self.css
+        assert "var(--rl-font-data)" in self.css
+        assert "var(--rl-font-editorial)" in self.css
 
     def test_responsive_tablet(self):
         assert "max-width: 900px" in self.css
@@ -175,10 +175,10 @@ class TestMegaFooterCSS:
         assert mobile_match, "Mobile should collapse to 1 column"
 
     def test_css_prefix(self):
-        """All classes must use gg-mega-footer- prefix."""
-        classes = re.findall(r'\.(gg-[a-z][a-z0-9-]*)', self.css)
+        """All classes must use rl-mega-footer- prefix."""
+        classes = re.findall(r'\.(rl-[a-z][a-z0-9-]*)', self.css)
         for cls in classes:
-            assert cls.startswith("gg-mega-footer"), f"Wrong prefix: .{cls}"
+            assert cls.startswith("rl-mega-footer"), f"Wrong prefix: .{cls}"
 
     def test_max_width_960(self):
         assert "max-width: 960px" in self.css

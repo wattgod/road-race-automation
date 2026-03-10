@@ -7,13 +7,19 @@ import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 FEED_FILE = PROJECT_ROOT / "web" / "feed" / "races.xml"
+
+_feed_skip = pytest.mark.skipif(
+    not FEED_FILE.exists(),
+    reason="RSS feed not yet generated — run generate_rss_feed.py first",
+)
 GENERATOR = PROJECT_ROOT / "scripts" / "generate_rss_feed.py"
 PUSH_SCRIPT = PROJECT_ROOT / "scripts" / "push_wordpress.py"
 HOMEPAGE_GEN = PROJECT_ROOT / "wordpress" / "generate_homepage.py"
-HEADER_PLUGIN = PROJECT_ROOT / "wordpress" / "mu-plugins" / "gg-header.php"
+HEADER_PLUGIN = PROJECT_ROOT / "wordpress" / "mu-plugins" / "rl-header.php"
 ROBOTS_TXT = PROJECT_ROOT / "web" / "robots.txt"
 
 
+@_feed_skip
 class TestFeedFile:
     """Tests for the generated RSS feed."""
 

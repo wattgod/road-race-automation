@@ -61,7 +61,7 @@ def minimal_race():
                 "date_specific": "2026: July 10",
                 "field_size": "200",
             },
-            "gravel_god_rating": {
+            "fondo_rating": {
                 "overall_score": 55,
                 "tier": 3,
                 "tier_label": "TIER 3",
@@ -277,12 +277,12 @@ class TestBuildFromTheField:
     def test_teal_accent_class(self, race_with_youtube):
         rd = normalize_race_data(race_with_youtube)
         html = build_from_the_field(rd)
-        assert 'gg-section--teal-accent' in html
+        assert 'rl-section--teal-accent' in html
 
     def test_teal_header_class(self, race_with_youtube):
         rd = normalize_race_data(race_with_youtube)
         html = build_from_the_field(rd)
-        assert 'gg-section-header--teal' in html
+        assert 'rl-section-header--teal' in html
 
     def test_video_ordering_by_display_order(self, race_with_youtube):
         """Videos should be ordered by display_order."""
@@ -310,8 +310,8 @@ class TestBuildFromTheField:
         rd = normalize_race_data(minimal_race)
         html = build_from_the_field(rd)
         assert html != ''
-        assert 'gg-field-quote' in html
-        assert 'gg-lite-youtube' not in html
+        assert 'rl-field-quote' in html
+        assert 'rl-lite-youtube' not in html
 
     def test_videos_only_no_quotes(self, minimal_race):
         """Section should render with videos only (no quotes)."""
@@ -331,8 +331,8 @@ class TestBuildFromTheField:
         rd = normalize_race_data(minimal_race)
         html = build_from_the_field(rd)
         assert html != ''
-        assert 'gg-lite-youtube' in html
-        assert 'gg-field-quote' not in html
+        assert 'rl-lite-youtube' in html
+        assert 'rl-field-quote' not in html
 
 
 # ── View Count Formatting ─────────────────────────────────────
@@ -476,36 +476,36 @@ class TestBuildSearchQuery:
                 "name": name,
                 "display_name": name,
                 "vitals": {"location": location},
-                "gravel_god_rating": {"discipline": discipline},
+                "fondo_rating": {"discipline": discipline},
             }
         }
         return race
 
-    def test_gravel_uses_gravel_race(self):
-        race = self._make_race("Unbound 200", "gravel", "Emporia, Kansas")
-        query = build_search_query(race)
-        assert "gravel race" in query
-        assert "Unbound 200" in query
-        assert "Emporia" in query
-
-    def test_road_uses_gran_fondo_cycling(self):
-        race = self._make_race("Göteborgsgirot", "road", "Gothenburg, Sweden")
+    def test_gran_fondo_uses_gran_fondo_cycling(self):
+        race = self._make_race("GFNY NYC", "gran_fondo", "New York, USA")
         query = build_search_query(race)
         assert "gran fondo cycling" in query
-        assert "Göteborgsgirot" in query
-        assert "Gothenburg" in query
+        assert "GFNY NYC" in query
+        assert "New York" in query
+
+    def test_sportive_uses_sportive_cycling(self):
+        race = self._make_race("Tour of Flanders Sportive", "sportive", "Oudenaarde, Belgium")
+        query = build_search_query(race)
+        assert "sportive cycling" in query
+        assert "Tour of Flanders Sportive" in query
+        assert "Oudenaarde" in query
         assert "gravel" not in query
 
-    def test_bikepacking_uses_bikepacking_race(self):
-        race = self._make_race("Tour Divide", "bikepacking", "Banff, Canada")
+    def test_hillclimb_uses_hill_climb_cycling(self):
+        race = self._make_race("Mt Washington Hillclimb", "hillclimb", "Gorham, NH")
         query = build_search_query(race)
-        assert "bikepacking race" in query
-        assert "Tour Divide" in query
+        assert "hill climb cycling" in query
+        assert "Mt Washington Hillclimb" in query
 
-    def test_mtb_uses_mountain_bike_race(self):
-        race = self._make_race("Leadville 100 MTB", "mtb", "Leadville, Colorado")
+    def test_multi_stage_uses_multi_stage(self):
+        race = self._make_race("Haute Route Alps", "multi_stage", "Nice, France")
         query = build_search_query(race)
-        assert "mountain bike race" in query
+        assert "multi stage cycling race" in query
 
     def test_unknown_discipline_uses_cycling_race(self):
         race = self._make_race("Mystery Race", "cyclocross")
@@ -514,12 +514,12 @@ class TestBuildSearchQuery:
 
     def test_no_discipline_defaults_to_gravel(self):
         """Missing discipline key should default to gravel."""
-        race = {"race": {"name": "Some Race", "vitals": {}, "gravel_god_rating": {}}}
+        race = {"race": {"name": "Some Race", "vitals": {}, "fondo_rating": {}}}
         query = build_search_query(race)
         assert "gravel race" in query
 
     def test_no_location_omits_location(self):
-        race = self._make_race("Test Race", "road", "")
+        race = self._make_race("Test Race", "gran_fondo", "")
         query = build_search_query(race)
         assert query == "Test Race gran fondo cycling"
 
@@ -535,7 +535,7 @@ class TestEnrichmentPrompt:
                 "name": "Test Race",
                 "display_name": "Test Race",
                 "vitals": {"location": "Emporia, Kansas"},
-                "gravel_god_rating": {
+                "fondo_rating": {
                     "tier": tier,
                     "tier_label": tier_label,
                 },
@@ -682,7 +682,7 @@ class TestVisionEnrichment:
                 "name": "Test Race",
                 "display_name": "Test Race",
                 "vitals": {"location": "Emporia, Kansas"},
-                "gravel_god_rating": {"tier": 1, "tier_label": "TIER 1"},
+                "fondo_rating": {"tier": 1, "tier_label": "TIER 1"},
             }
         }
 

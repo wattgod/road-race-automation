@@ -5,6 +5,11 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.skipif(
+    not (Path(__file__).resolve().parent.parent / "web" / "embed" / "embed-data.json").exists(),
+    reason="Embed widget not yet generated — run generate_embed_widget.py first",
+)
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 EMBED_DIR = PROJECT_ROOT / "web" / "embed"
 EMBED_DATA = EMBED_DIR / "embed-data.json"

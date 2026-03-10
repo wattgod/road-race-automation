@@ -21,19 +21,19 @@ class TestHeaderHTML:
 
     def test_four_dropdown_containers(self):
         html = get_site_header_html()
-        assert html.count('class="gg-site-header-item"') == 4
+        assert html.count('class="rl-site-header-item"') == 4
 
     def test_four_dropdowns(self):
         html = get_site_header_html()
-        assert html.count('class="gg-site-header-dropdown"') == 4
+        assert html.count('class="rl-site-header-dropdown"') == 4
 
     def test_about_has_no_dropdown(self):
         html = get_site_header_html()
         # ABOUT is a plain <a>, not inside a dropdown item
         about_idx = html.index(">ABOUT</a>")
-        # Get the 200 chars before ABOUT — should NOT have gg-site-header-item
+        # Get the 200 chars before ABOUT — should NOT have rl-site-header-item
         context = html[max(0, about_idx - 200) : about_idx]
-        last_item = context.rfind("gg-site-header-item")
+        last_item = context.rfind("rl-site-header-item")
         last_close = context.rfind("</div>")
         # The dropdown item should be closed before ABOUT
         assert last_close > last_item or last_item == -1
@@ -57,7 +57,7 @@ class TestHeaderHTML:
         html = get_site_header_html()
         # Count links inside dropdown divs
         dropdowns = re.findall(
-            r'class="gg-site-header-dropdown">(.*?)</div>',
+            r'class="rl-site-header-dropdown">(.*?)</div>',
             html,
             re.DOTALL,
         )
@@ -67,7 +67,7 @@ class TestHeaderHTML:
     def test_logo_present(self):
         html = get_site_header_html()
         assert "cropped-Gravel-God-logo.png" in html
-        assert 'class="gg-site-header-logo"' in html
+        assert 'class="rl-site-header-logo"' in html
 
     def test_aria_current_when_active(self):
         for key in ["races", "products", "services", "articles", "about"]:
@@ -135,16 +135,16 @@ class TestHeaderCSS:
 
     def test_uses_var_tokens(self):
         css = get_site_header_css()
-        assert "var(--gg-color-" in css
-        assert "var(--gg-font-data)" in css
+        assert "var(--rl-color-" in css
+        assert "var(--rl-font-data)" in css
 
     def test_hover_shows_dropdown(self):
         css = get_site_header_css()
-        assert ":hover .gg-site-header-dropdown" in css
+        assert ":hover .rl-site-header-dropdown" in css
 
     def test_focus_within_shows_dropdown(self):
         css = get_site_header_css()
-        assert ":focus-within .gg-site-header-dropdown" in css
+        assert ":focus-within .rl-site-header-dropdown" in css
 
     def test_mobile_hides_dropdowns(self):
         css = get_site_header_css()
@@ -165,4 +165,4 @@ class TestHeaderCSS:
 
     def test_warm_paper_background(self):
         css = get_site_header_css()
-        assert "var(--gg-color-warm-paper)" in css
+        assert "var(--rl-color-warm-paper)" in css

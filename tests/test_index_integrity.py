@@ -201,9 +201,9 @@ class TestIndexDataConsistency:
             )
 
     def test_discipline_values_valid(self):
-        """Discipline must be one of: gravel, mtb, bikepacking, road."""
+        """Discipline must be one of the Road Labs disciplines."""
         data = load_index()
-        valid = {"gravel", "mtb", "bikepacking", "road"}
+        valid = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
         invalid = [(e["slug"], e.get("discipline")) for e in data
                    if e.get("discipline") not in valid]
         if invalid:
@@ -213,7 +213,7 @@ class TestIndexDataConsistency:
             )
 
     def test_discipline_matches_profile(self):
-        """Index discipline should match profile's gravel_god_rating.discipline."""
+        """Index discipline should match profile's fondo_rating.discipline."""
         data = load_index()
         index_by_slug = {e["slug"]: e for e in data if "slug" in e}
 
@@ -225,9 +225,9 @@ class TestIndexDataConsistency:
 
             profile = json.loads(f.read_text())
             race = profile.get("race", profile)
-            rating = race.get("gravel_god_rating", {})
-            profile_disc = rating.get("discipline", "gravel")
-            index_disc = index_by_slug[slug].get("discipline", "gravel")
+            rating = race.get("fondo_rating", {})
+            profile_disc = rating.get("discipline", "gran_fondo")
+            index_disc = index_by_slug[slug].get("discipline", "gran_fondo")
 
             if profile_disc != index_disc:
                 mismatches.append(

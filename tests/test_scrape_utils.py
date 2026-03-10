@@ -182,12 +182,12 @@ class TestLoadOfficialSites:
         sites = load_official_sites()
         assert len(sites) > 200  # we know ~289 have URLs
 
-    def test_unbound_present(self):
-        """Unbound 200 is in the results."""
-        sites = load_official_sites(slug_filter="unbound-200")
-        assert "unbound-200" in sites
-        assert sites["unbound-200"]["url"] == "https://unboundgravel.com"
-        assert sites["unbound-200"]["tier"] == 1
+    def test_known_race_present(self):
+        """A known T1 race is in the results."""
+        sites = load_official_sites(slug_filter="gfny-lourdes-tourmalet")
+        assert "gfny-lourdes-tourmalet" in sites
+        assert "gfny.com" in sites["gfny-lourdes-tourmalet"]["url"]
+        assert sites["gfny-lourdes-tourmalet"]["tier"] == 1
 
     def test_tier_filter(self):
         """Tier filter narrows results."""

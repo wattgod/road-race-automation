@@ -39,6 +39,8 @@ VALID_DATE_PATTERNS = [
     r"^TBD\s*[—–-]",  # "TBD — no future date set..."
     r"^\d{4}\s+(January|February|March|April|May|June|July|August|September|October|November|December|Arizona|Northern|Chicagoland|New)",  # Multi-date: "2026 Arizona: Feb 14..."
     r"^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}",  # "August 29, 2026 (...)"
+    r"^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}-\d{1,2},?\s+\d{4}",  # "August 23-29, 2026 (note)"
+    r"^Cancelled\s+for\s+\d{4}",  # "Cancelled for 2026"
 ]
 
 

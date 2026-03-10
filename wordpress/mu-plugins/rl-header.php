@@ -5,7 +5,7 @@
  * Injects the 5-item dropdown nav (RACES, PRODUCTS, SERVICES, ARTICLES, ABOUT)
  * on WordPress-managed pages that don't use our static generators.
  *
- * Targets: /gravel-races/, /products/training-plans/, and any other WP page
+ * Targets: /road-races/, /products/training-plans/, and any other WP page
  * that has the Astra theme header.
  *
  * Strategy:
@@ -19,15 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-add_action( 'wp_head', 'gg_shared_header_css', 5 );
-add_action( 'wp_head', 'gg_rss_feed_link', 6 );
-add_action( 'wp_body_open', 'gg_shared_header_html', 1 );
-add_filter( 'body_class', 'gg_add_neo_brutalist_class' );
+add_action( 'wp_head', 'rl_shared_header_css', 5 );
+add_action( 'wp_head', 'rl_rss_feed_link', 6 );
+add_action( 'wp_body_open', 'rl_shared_header_html', 1 );
+add_filter( 'body_class', 'rl_add_neo_brutalist_class' );
 
 /**
  * Add RSS feed discovery link to <head> on all pages.
  */
-function gg_rss_feed_link() {
+function rl_rss_feed_link() {
     echo '<link rel="alternate" type="application/rss+xml" title="Road Labs Race Database" href="https://roadlabs.cc/feed/races.xml">' . "\n";
 }
 
@@ -35,7 +35,7 @@ function gg_rss_feed_link() {
  * Add rl-neo-brutalist-page class to body so existing Code Snippet overrides
  * (which use body:not(.rl-neo-brutalist-page)) don't apply teal link colors.
  */
-function gg_add_neo_brutalist_class( $classes ) {
+function rl_add_neo_brutalist_class( $classes ) {
     if ( ! is_admin() && ! is_front_page() ) {
         $classes[] = 'rl-neo-brutalist-page';
     }
@@ -46,7 +46,7 @@ function gg_add_neo_brutalist_class( $classes ) {
  * Check if current page should get our custom header.
  * Skip admin, static generated pages (they have their own header), and the homepage.
  */
-function gg_should_inject_header() {
+function rl_should_inject_header() {
     if ( is_admin() ) {
         return false;
     }
@@ -58,8 +58,8 @@ function gg_should_inject_header() {
     return true;
 }
 
-function gg_shared_header_css() {
-    if ( ! gg_should_inject_header() ) {
+function rl_shared_header_css() {
+    if ( ! rl_should_inject_header() ) {
         return;
     }
     ?>
@@ -119,15 +119,15 @@ header.site-header,
     <?php
 }
 
-function gg_shared_header_html() {
-    if ( ! gg_should_inject_header() ) {
+function rl_shared_header_html() {
+    if ( ! rl_should_inject_header() ) {
         return;
     }
 
     // Determine active nav item from current URL
     $uri = $_SERVER['REQUEST_URI'] ?? '';
     $active = '';
-    if ( strpos( $uri, '/gravel-races' ) !== false || strpos( $uri, '/race/' ) !== false ) {
+    if ( strpos( $uri, '/road-races' ) !== false || strpos( $uri, '/race/' ) !== false ) {
         $active = 'races';
     } elseif ( strpos( $uri, '/products/' ) !== false ) {
         $active = 'products';
@@ -140,7 +140,7 @@ function gg_shared_header_html() {
     }
 
     $base = 'https://roadlabs.cc';
-    $substack = 'https://gravelgodcycling.substack.com';
+    $substack = 'https://roadlabs.substack.com';
 
     $aria = function( $key ) use ( $active ) {
         return $active === $key ? ' aria-current="page"' : '';
@@ -149,13 +149,13 @@ function gg_shared_header_html() {
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="<?php echo $base; ?>/" class="rl-site-header-logo">
-      <img src="<?php echo $base; ?>/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Road Labs" width="50" height="50">
+      <img src="<?php echo $base; ?>/wp-content/uploads/road-labs-logo.png" alt="Road Labs" width="50" height="50">
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">
-        <a href="<?php echo $base; ?>/gravel-races/"<?php echo $aria('races'); ?>>RACES</a>
+        <a href="<?php echo $base; ?>/road-races/"<?php echo $aria('races'); ?>>RACES</a>
         <div class="rl-site-header-dropdown">
-          <a href="<?php echo $base; ?>/gravel-races/">All Gravel Races</a>
+          <a href="<?php echo $base; ?>/road-races/">All Road Races</a>
           <a href="<?php echo $base; ?>/race/methodology/">How We Rate</a>
         </div>
       </div>
@@ -163,7 +163,7 @@ function gg_shared_header_html() {
         <a href="<?php echo $base; ?>/products/training-plans/"<?php echo $aria('products'); ?>>PRODUCTS</a>
         <div class="rl-site-header-dropdown">
           <a href="<?php echo $base; ?>/products/training-plans/">Custom Training Plans</a>
-          <a href="<?php echo $base; ?>/guide/">Gravel Handbook</a>
+          <a href="<?php echo $base; ?>/guide/">Road Cycling Handbook</a>
         </div>
       </div>
       <div class="rl-site-header-item">
@@ -178,7 +178,7 @@ function gg_shared_header_html() {
         <div class="rl-site-header-dropdown">
           <a href="<?php echo $substack; ?>" target="_blank" rel="noopener">Slow Mid 38s</a>
           <a href="<?php echo $base; ?>/articles/">Hot Takes</a>
-          <a href="<?php echo $base; ?>/insights/">The State of Gravel</a>
+          <a href="<?php echo $base; ?>/insights/">Insights</a>
           <a href="<?php echo $base; ?>/fueling-methodology/">White Papers</a>
         </div>
       </div>

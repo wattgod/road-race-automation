@@ -27,15 +27,28 @@ class TestTokensCSS:
 
     def test_contains_all_color_vars(self):
         css = get_tokens_css()
+        # Compatibility aliases (mapped from Gravel God names) don't have native CSS vars
+        _COMPAT_ALIASES = {
+            "primary_brown", "secondary_brown", "warm_brown", "tan", "sand",
+            "warm_paper", "gold", "light_gold", "teal", "light_teal", "dark_brown",
+        }
         for key, hex_val in COLORS.items():
-            var_name = f"--gg-color-{key.replace('_', '-')}"
+            if key in _COMPAT_ALIASES:
+                continue
+            var_name = f"--rl-color-{key.replace('_', '-')}"
             assert var_name in css, f"Missing CSS var {var_name} for COLORS['{key}']"
 
     def test_color_values_match(self):
-        """COLORS dict hex values must match the CSS custom properties."""
+        """Native COLORS dict hex values must match the CSS custom properties."""
         css = get_tokens_css()
+        _COMPAT_ALIASES = {
+            "primary_brown", "secondary_brown", "warm_brown", "tan", "sand",
+            "warm_paper", "gold", "light_gold", "teal", "light_teal", "dark_brown",
+        }
         for key, hex_val in COLORS.items():
-            var_name = f"--gg-color-{key.replace('_', '-')}"
+            if key in _COMPAT_ALIASES:
+                continue
+            var_name = f"--rl-color-{key.replace('_', '-')}"
             # Find the value in CSS
             pattern = rf"{re.escape(var_name)}:\s*(#[0-9a-fA-F]{{3,8}})"
             match = re.search(pattern, css)
@@ -46,26 +59,26 @@ class TestTokensCSS:
 
     def test_contains_font_tokens(self):
         css = get_tokens_css()
-        assert "--gg-font-data:" in css
-        assert "--gg-font-editorial:" in css
+        assert "--rl-font-data:" in css
+        assert "--rl-font-editorial:" in css
         assert "Sometype Mono" in css
         assert "Source Serif 4" in css
 
     def test_contains_spacing_tokens(self):
         css = get_tokens_css()
-        assert "--gg-spacing-xs:" in css
-        assert "--gg-spacing-xl:" in css
+        assert "--rl-spacing-xs:" in css
+        assert "--rl-spacing-xl:" in css
 
     def test_border_radius_is_zero(self):
         """Neo-brutalist: no rounded corners."""
         css = get_tokens_css()
-        assert "--gg-border-radius: 0;" in css
+        assert "--rl-border-radius: 0;" in css
 
     def test_composite_tokens(self):
         css = get_tokens_css()
-        assert "--gg-border-standard:" in css
-        assert "--gg-border-gold:" in css
-        assert "--gg-transition-hover:" in css
+        assert "--rl-border-standard:" in css
+        assert "--rl-border-accent:" in css
+        assert "--rl-transition-hover:" in css
 
 
 class TestFontFaceCSS:
@@ -183,13 +196,13 @@ class TestGa4HeadSnippet:
 
     def test_analytics_conditional_on_cookie(self):
         snippet = get_ga4_head_snippet()
-        assert "gg_consent=accepted" in snippet
+        assert "rl_consent=accepted" in snippet
         assert "?'granted':'denied'" in snippet
 
     def test_uses_regex_not_indexof(self):
         snippet = get_ga4_head_snippet()
         assert "indexOf" not in snippet, "Must use regex, not indexOf"
-        assert "/(^|; )gg_consent=accepted/.test" in snippet
+        assert "/(^|; )rl_consent=accepted/.test" in snippet
 
     def test_has_wait_for_update(self):
         snippet = get_ga4_head_snippet()

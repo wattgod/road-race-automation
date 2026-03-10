@@ -46,7 +46,7 @@ def _make_vitals(**overrides) -> dict:
 
 
 def _make_rating(**overrides) -> dict:
-    """Build a minimal gravel_god_rating dict with overrides."""
+    """Build a minimal fondo_rating dict with overrides."""
     base = {
         "tier": 3,
         "prestige": 3,
@@ -67,7 +67,7 @@ def _make_race(
     """Build a full race_data dict with 'race' key."""
     race = {}
     race["vitals"] = vitals or _make_vitals()
-    race["gravel_god_rating"] = rating or _make_rating()
+    race["fondo_rating"] = rating or _make_rating()
     if climate is not None:
         race["climate"] = climate
     if youtube_data is not None:
@@ -556,7 +556,7 @@ class TestAnalyzeRaceDemandsEdgeCases:
 
     def test_missing_vitals_fields(self):
         """Graceful with missing vitals fields."""
-        race_data = {"race": {"vitals": {}, "gravel_god_rating": {}}}
+        race_data = {"race": {"vitals": {}, "fondo_rating": {}}}
         demands = analyze_race_demands(race_data)
         # distance=0 -> durability 1
         assert demands["durability"] == 1

@@ -4,7 +4,6 @@
     "slug": "gfny-nyc",
     "display_name": "GFNY NYC (Gran Fondo New York)",
     "tagline": "The most international peloton in the world, starting on the George Washington Bridge.",
-
     "vitals": {
       "distance_km": 137,
       "distance_mi": 85,
@@ -25,7 +24,6 @@
       "lng": -73.9527,
       "route_options": []
     },
-
     "climate": {
       "primary": "Temperate spring",
       "description": "May in NYC/NJ — average high 22°C/72°F, low 13°C/52°F. 37% rain chance. 7:10 AM start in cool conditions (~50-55°F), mid-race 70°F+.",
@@ -35,7 +33,6 @@
         "Afternoon can warm significantly mid-ride"
       ]
     },
-
     "terrain": {
       "primary": "Rolling hills",
       "surface": "Fully paved — well-maintained NJ/NY state roads (Route 9W, Palisades Interstate Park)",
@@ -49,7 +46,6 @@
         "Cheesecote Mountain — 18% initial ramp"
       ]
     },
-
     "fondo_rating": {
       "overall_score": 54,
       "tier": 2,
@@ -71,9 +67,9 @@
       "cultural_impact": 1,
       "discipline": "gran_fondo",
       "prestige_override": "Prestige 4 promotes T3 → T2 (1-tier promotion, not into T1)",
-      "scoring_notes": "Calibration anchor — Tier 2 via prestige override. Base score 54 = T3, but prestige 4 (GFNY World Championship, GP NYC UCI 1.2, global brand) earns one-tier promotion. Course itself is unremarkable since Bear Mountain removal (2023). Road surface scored 1 (smooth tarmac = low difficulty). Value is middling — $350-400 for a jersey and timing. Logistics scored 1 because NYC airports are right there. Field depth 5 — UCI 1.2 pro race, 90+ countries, ex-pros."
+      "scoring_notes": "Calibration anchor — Tier 2 via prestige override. Base score 54 = T3, but prestige 4 (GFNY World Championship, GP NYC UCI 1.2, global brand) earns one-tier promotion. Course itself is unremarkable since Bear Mountain removal (2023). Road surface scored 1 (smooth tarmac = low difficulty). Value is middling — $350-400 for a jersey and timing. Logistics scored 1 because NYC airports are right there. Field depth 5 — UCI 1.2 pro race, 90+ countries, ex-pros.",
+      "tier_override_reason": "Prestige 4 override: flagship GFNY event in NYC with major international field"
     },
-
     "climb_profile": {
       "total_climbs": 4,
       "hc_climbs": 0,
@@ -129,7 +125,6 @@
       "profile_type": "rolling",
       "king_of_mountain": "Gate Hill (Colle Andrea Pinarello)"
     },
-
     "course_description": {
       "character": "A grand departure from the George Washington Bridge into the leafy hills of NJ and NY, with modest climbing that doesn't match the event's outsized reputation. Since Bear Mountain was removed in 2023, the course lost its crown jewel — a 7.4km Cat 2 that gave the route genuine mountain character. What remains is a pleasant rolling ride through the Palisades with a few punchy climbs and an 18% wall on Cheesecote.",
       "signature_challenge": "Cheesecote Mountain — the 18% initial ramp is a rude wake-up call after 60km. Short but it breaks rhythm badly.",
@@ -139,7 +134,6 @@
         "Return headwinds on Route 9W — psychological grind, especially solo"
       ]
     },
-
     "logistics": {
       "airport": "LGA, JFK, EWR — all within 30-60min of Fort Lee. EWR closest.",
       "lodging_strategy": "Official hotel partners $195-365/night in Fort Lee, Edgewater, Englewood. Manhattan hotels plentiful but add bridge traffic on race morning.",
@@ -147,7 +141,6 @@
       "food": "Post-race: BBQ, Michelob Ultra Beer Garden, NYC Bike Expo.",
       "official_site": "https://nyc.gfny.com"
     },
-
     "history": {
       "founded": 2011,
       "origin_story": "Founded by Uli Fluhme (German lawyer in NYC) and Lidia Fluhme (15x Ironman finisher) who quit their jobs and invested $200K of personal savings to bring Italian gran fondo culture to New York City. NYC had no European-style mass-start road race. Key challenge: securing GWB closure from Port Authority (initially wanted $50-100K) and permits from 15 municipalities, 3 parks, and bridge authorities.",
@@ -162,7 +155,6 @@
       ],
       "reputation": "The GFNY World Championship — flagship of the global GFNY brand. Known more for its international field (90+ countries) and anti-doping program than for its course. The brand has become bigger than any single event. Adding the GP NYC UCI 1.2 pro race in 2024 elevated its competitive credibility significantly."
     },
-
     "biased_opinion": {
       "verdict": "A world-class brand built on an increasingly average course.",
       "summary": "GFNY NYC is a strange contradiction. The brand is genuinely impressive — 30+ events worldwide, 90+ nationalities in the field, legitimate anti-doping program, and now a UCI pro race. But the course itself, especially after Bear Mountain's removal in 2023, is rolling suburban New Jersey that wouldn't merit a second look without the GFNY name. You're paying $350+ for the jersey, the atmosphere, and the right to race on the GWB — not for the route.",
@@ -183,23 +175,53 @@
       ],
       "bottom_line": "GFNY NYC earns T2 through prestige, not course. The international field and UCI pro race are world-class. The course is not. If you want the GFNY experience, go. If you want epic American road riding, look at Mt. Washington, Haute Route Rockies, or the Triple Bypass."
     },
-
     "final_verdict": {
       "score": "54/100",
       "one_liner": "The most international peloton in the world, starting on the George Washington Bridge — GFNY NYC is a brand that outgrew its course.",
       "should_you_race": "Yes, if you value the competitive atmosphere, international field, and NYC setting over course quality. The GFNY brand is real — results count globally, doping tests are real, and the UCI pro race adds legitimate elite racing. Just don't expect the route to match the marketing since Bear Mountain was removed.",
       "alternatives": "Mt. Washington Hillclimb (iconic American road climb), Gran Fondo New Jersey (better NJ course, lower profile), Philadelphia International Cycling Classic (pro heritage)."
     },
-
     "citations": [
-      {"url": "https://nyc.gfny.com/course/", "category": "official", "label": "Official course data — current route without Bear Mountain"},
-      {"url": "https://nyc.gfny.com/nyc26/", "category": "official", "label": "2026 event page — date, registration, pricing"},
-      {"url": "https://gfny.com/story/", "category": "official", "label": "GFNY founding story — Uli and Lidia Fluhme"},
-      {"url": "https://gfny.com/how-uli-fluhme-gfny-ceo-brought-italian-racing-culture-to-nyc/", "category": "editorial", "label": "Uli Fluhme interview — origin and vision"},
-      {"url": "https://gfny.com/anti-doping/", "category": "official", "label": "GFNY anti-doping program details"},
-      {"url": "https://gfny.com/13th-michelob-ultra-gfny-world-championship-nyc-and-2nd-gran-premio-new-york-city-this-sunday/", "category": "editorial", "label": "2025 race preview and GP NYC details"},
-      {"url": "https://www.reddit.com/r/NYCbike/comments/12sdhx9/gfny_quietly_removes_the_bear/", "category": "community", "label": "Reddit — Bear Mountain removal controversy"},
-      {"url": "https://nyvelocity.com/articles/interviews/uli-fluhme-la-fondo-parte-seconda/", "category": "editorial", "label": "2012 NY Velocity interview — early GFNY history"}
+      {
+        "url": "https://nyc.gfny.com/course/",
+        "category": "official",
+        "label": "Official course data — current route without Bear Mountain"
+      },
+      {
+        "url": "https://nyc.gfny.com/nyc26/",
+        "category": "official",
+        "label": "2026 event page — date, registration, pricing"
+      },
+      {
+        "url": "https://gfny.com/story/",
+        "category": "official",
+        "label": "GFNY founding story — Uli and Lidia Fluhme"
+      },
+      {
+        "url": "https://gfny.com/how-uli-fluhme-gfny-ceo-brought-italian-racing-culture-to-nyc/",
+        "category": "editorial",
+        "label": "Uli Fluhme interview — origin and vision"
+      },
+      {
+        "url": "https://gfny.com/anti-doping/",
+        "category": "official",
+        "label": "GFNY anti-doping program details"
+      },
+      {
+        "url": "https://gfny.com/13th-michelob-ultra-gfny-world-championship-nyc-and-2nd-gran-premio-new-york-city-this-sunday/",
+        "category": "editorial",
+        "label": "2025 race preview and GP NYC details"
+      },
+      {
+        "url": "https://www.reddit.com/r/NYCbike/comments/12sdhx9/gfny_quietly_removes_the_bear/",
+        "category": "community",
+        "label": "Reddit — Bear Mountain removal controversy"
+      },
+      {
+        "url": "https://nyvelocity.com/articles/interviews/uli-fluhme-la-fondo-parte-seconda/",
+        "category": "editorial",
+        "label": "2012 NY Velocity interview — early GFNY history"
+      }
     ]
   }
 }

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Load and cache meta description data from JSON file.
  * Returns array indexed by wp_id, or empty array on failure.
  */
-function gg_meta_get_data() {
+function rl_meta_get_data() {
     static $data = null;
     if ( $data !== null ) {
         return $data;
@@ -55,7 +55,7 @@ function gg_meta_get_data() {
  * Uses get_queried_object_id() (works outside the loop) with get_the_ID() fallback.
  * Returns 0 if no valid post ID can be determined.
  */
-function gg_meta_get_post_id() {
+function rl_meta_get_post_id() {
     // Only override on singular posts/pages — never on archives, search, 404, feeds.
     // On archive pages, get_the_ID() can return the first loop post ID, which would
     // incorrectly replace the archive description with a single post's description.
@@ -73,13 +73,13 @@ function gg_meta_get_post_id() {
 /**
  * Override AIOSEO meta description for posts/pages in our data file.
  */
-function gg_meta_filter_description( $description ) {
-    $post_id = gg_meta_get_post_id();
+function rl_meta_filter_description( $description ) {
+    $post_id = rl_meta_get_post_id();
     if ( ! $post_id ) {
         return $description;
     }
 
-    $data = gg_meta_get_data();
+    $data = rl_meta_get_data();
     if ( isset( $data[ $post_id ] ) && ! empty( $data[ $post_id ]['description'] ) ) {
         return $data[ $post_id ]['description'];
     }
@@ -89,13 +89,13 @@ function gg_meta_filter_description( $description ) {
 /**
  * Override AIOSEO Open Graph description.
  */
-function gg_meta_filter_og_description( $description ) {
-    $post_id = gg_meta_get_post_id();
+function rl_meta_filter_og_description( $description ) {
+    $post_id = rl_meta_get_post_id();
     if ( ! $post_id ) {
         return $description;
     }
 
-    $data = gg_meta_get_data();
+    $data = rl_meta_get_data();
     if ( isset( $data[ $post_id ] ) ) {
         // Use og_description if set, otherwise fall back to description
         $og = ! empty( $data[ $post_id ]['og_description'] )
@@ -111,19 +111,19 @@ function gg_meta_filter_og_description( $description ) {
 /**
  * Override AIOSEO page title.
  */
-function gg_meta_filter_title( $title ) {
-    $post_id = gg_meta_get_post_id();
+function rl_meta_filter_title( $title ) {
+    $post_id = rl_meta_get_post_id();
     if ( ! $post_id ) {
         return $title;
     }
 
-    $data = gg_meta_get_data();
+    $data = rl_meta_get_data();
     if ( isset( $data[ $post_id ] ) && ! empty( $data[ $post_id ]['title'] ) ) {
         return $data[ $post_id ]['title'];
     }
     return $title;
 }
 
-add_filter( 'aioseo_title', 'gg_meta_filter_title', 10 );
-add_filter( 'aioseo_description', 'gg_meta_filter_description', 10 );
-add_filter( 'aioseo_og_description', 'gg_meta_filter_og_description', 10 );
+add_filter( 'aioseo_title', 'rl_meta_filter_title', 10 );
+add_filter( 'aioseo_description', 'rl_meta_filter_description', 10 );
+add_filter( 'aioseo_og_description', 'rl_meta_filter_og_description', 10 );

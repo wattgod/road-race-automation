@@ -18,8 +18,8 @@ from pathlib import Path
 
 load_dotenv()
 
-SSH_KEY = Path.home() / ".ssh" / "siteground_key"
-WP_UPLOADS = "~/www/roadlabs.cc/public_html/wp-content/uploads"
+SSH_KEY = Path.home() / ".ssh" / "roadlabs_key"
+WP_UPLOADS = "/home/TODO_SITEGROUND_USER/public_html/wp-content/uploads"
 
 
 def get_wp_credentials():
@@ -85,7 +85,7 @@ def push_to_wordpress(json_path: str):
         "content": "",  # Elementor uses its own data
         "status": "draft",  # Start as draft for review
         "meta": {
-            "_yoast_wpseo_title": f"{display_name} – Gravel Race Info & Training Guide | Road Labs",
+            "_yoast_wpseo_title": f"{display_name} – Race Info & Training Guide | Road Labs",
             "_yoast_wpseo_metadesc": f"Complete guide to {display_name}: race vitals, route, history, and how to train for success.",
         }
     }
@@ -152,7 +152,7 @@ def sync_index(index_file: str):
 
 
 def sync_widget(widget_file: str):
-    """Upload gravel-race-search.html, .js, and external CSS to WP uploads via SCP."""
+    """Upload road-labs-search.html, .js, and external CSS to WP uploads via SCP."""
     ssh = get_ssh_credentials()
     if not ssh:
         return None
@@ -188,7 +188,7 @@ def sync_widget(widget_file: str):
         return None
 
     # Upload companion JS file (same directory as HTML)
-    js_path = widget_path.parent / "gravel-race-search.js"
+    js_path = widget_path.parent / "road-labs-search.js"
     if js_path.exists():
         remote_js = f"{WP_UPLOADS}/{js_path.name}"
         try:
@@ -321,7 +321,7 @@ def sync_guide(guide_dir: str):
         return None
 
     # Remote base: public_html/guide/
-    remote_base = "~/www/roadlabs.cc/public_html/guide"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/guide"
 
     # Create remote directory structure
     try:
@@ -470,7 +470,7 @@ def sync_guide_cluster(cluster_dir: str):
         print(f"✗ No guide chapter pages found in {cluster_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/guide"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/guide"
 
     # Create remote directory structure
     chapter_mkdir = " ".join(f"{remote_base}/{d.name}" for d in chapter_dirs)
@@ -558,7 +558,7 @@ def sync_homepage(homepage_file: str):
         print("  Run: python3 wordpress/generate_homepage.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/homepage"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/homepage"
 
     # Create remote directory
     try:
@@ -614,7 +614,7 @@ def sync_about(about_file: str):
         print("  Run: python3 wordpress/generate_about.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/about"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/about"
 
     # Create remote directory
     try:
@@ -673,7 +673,7 @@ def sync_about(about_file: str):
 
     # Upload shared CSS/JS assets (about page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -709,7 +709,7 @@ def sync_coaching(coaching_file: str):
         print("  Run: python3 wordpress/generate_coaching.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/coaching"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/coaching"
 
     # Create remote directory
     try:
@@ -750,7 +750,7 @@ def sync_coaching(coaching_file: str):
 
     # Upload shared CSS/JS assets (coaching page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -793,7 +793,7 @@ def sync_success(output_dir: str):
     ]
 
     out_dir = Path(output_dir)
-    remote_root = "~/www/roadlabs.cc/public_html"
+    remote_root = "/home/TODO_SITEGROUND_USER/public_html"
     uploaded = []
 
     for filename, remote_path in pages:
@@ -888,7 +888,7 @@ def sync_consulting(consulting_file: str):
         print("  Run: python3 wordpress/generate_consulting.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/consulting"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/consulting"
 
     # Create remote directory
     try:
@@ -929,7 +929,7 @@ def sync_consulting(consulting_file: str):
 
     # Upload shared CSS/JS assets (consulting page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -970,7 +970,7 @@ def sync_legal(output_dir: str):
             print("  Run: python3 wordpress/generate_legal_pages.py first")
             continue
 
-        remote_dir = f"~/www/roadlabs.cc/public_html/{slug}"
+        remote_dir = f"/home/TODO_SITEGROUND_USER/public_html/{slug}"
         try:
             subprocess.run(
                 ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}", f"mkdir -p {remote_dir}"],
@@ -991,7 +991,7 @@ def sync_legal(output_dir: str):
 
     # Upload shared CSS/JS assets
     assets_dir = out / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -1017,7 +1017,7 @@ def sync_consent():
         print(f"✗ Cookie consent mu-plugin not found: {mu_plugin}")
         return None
 
-    remote = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins/rl-cookie-consent.php"
+    remote = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins/rl-cookie-consent.php"
     try:
         subprocess.run(
             ["scp", "-i", str(SSH_KEY), "-P", port, str(mu_plugin), f"{user}@{host}:{remote}"],
@@ -1043,7 +1043,7 @@ def sync_training_plans(training_plans_file: str):
         print("  Run: python3 wordpress/generate_training_plans.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/products/training-plans"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/products/training-plans"
 
     # Create remote directory
     try:
@@ -1086,7 +1086,7 @@ def sync_training_plans(training_plans_file: str):
     assets_dir = html_path.parent.parent / "assets"
     if not assets_dir.exists():
         assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -1122,7 +1122,7 @@ def sync_coaching_apply(apply_file: str):
         print("  Run: python3 wordpress/generate_coaching_apply.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/coaching/apply"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/coaching/apply"
 
     # Create remote directory
     try:
@@ -1187,7 +1187,7 @@ def sync_og(og_dir: str):
         print(f"✗ No .jpg files found in {og_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/og"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/og"
 
     # Create remote directory
     try:
@@ -1271,7 +1271,7 @@ def sync_pages(pages_dir: str):
         print(f"✗ No .html files or page subdirectories found in {pages_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
 
     # Create remote directory with correct permissions
     try:
@@ -1382,7 +1382,7 @@ RewriteRule ^page/\\d+/?$ / [R=301,L]
 RewriteRule ^guide\\.html$ /guide/ [R=301,L]
 
 # /race/ directory index → search page (prevents 403)
-RewriteRule ^race/?$ /gravel-races/ [R=301,L]
+RewriteRule ^race/?$ /road-races/ [R=301,L]
 
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
@@ -1420,6 +1420,7 @@ RewriteRule ^gravel-worlds/?$ /race/gravel-worlds/ [R=301,L]
 RewriteRule ^big-sugar/?$ /race/big-sugar/ [R=301,L]
 
 # /midsouth → TrainingPeaks plan (was PrettyLinks, now static redirect)
+# TODO: Update TrainingPeaks URL for Road Labs
 RewriteRule ^midsouth/?$ https://www.trainingpeaks.com/training-plans/cycling/gran-fondo-century/tp-260379/gravel-god-the-midsouth-base-to-race [R=307,L]
 
 # /about-me/ → /about/ (old WP page trashed, consolidate 1,169 impressions)
@@ -1433,6 +1434,7 @@ RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=3
 RewriteRule ^training-plans/?$ /products/training-plans/ [R=301,L]
 
 # Broken URL from GSC → parent page (404 fix)
+# TODO: Update email reference for Road Labs
 RewriteRule ^training-plans-faq/gravelgodcoaching@gmail\\.com$ /training-plans-faq/ [R=301,L]
 </IfModule>
 # END Road Labs Redirects
@@ -1453,7 +1455,7 @@ def sync_redirects():
         return False
     host, user, port = ssh
 
-    remote_htaccess = "~/www/roadlabs.cc/public_html/.htaccess"
+    remote_htaccess = "/home/TODO_SITEGROUND_USER/public_html/.htaccess"
 
     # Read current .htaccess
     try:
@@ -1529,7 +1531,7 @@ def sync_sitemap():
         print("  Run: python scripts/generate_sitemap.py")
         return False
 
-    remote_root = "~/www/roadlabs.cc/public_html"
+    remote_root = "/home/TODO_SITEGROUND_USER/public_html"
     today = date.today().isoformat()
 
     # 1. Upload race sitemap as race-sitemap.xml
@@ -1655,7 +1657,7 @@ def sync_noindex():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins"
+    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
 
     # Ensure mu-plugins directory exists
     try:
@@ -1727,8 +1729,8 @@ def sync_meta_descriptions():
         print(f"✗ Invalid JSON: {e}")
         return False
 
-    mu_plugins_path = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins"
-    uploads_path = "~/www/roadlabs.cc/public_html/wp-content/uploads"
+    mu_plugins_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
+    uploads_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/uploads"
 
     # Ensure directories exist
     try:
@@ -1810,7 +1812,7 @@ def sync_ctas():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins"
+    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1846,7 +1848,7 @@ def sync_ga4():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins"
+    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1869,7 +1871,7 @@ def sync_header():
     """Deploy the shared header mu-plugin to WordPress.
 
     Uploads rl-header.php to wp-content/mu-plugins/ via SCP.
-    Injects dropdown nav on WordPress-managed pages (e.g. /gravel-races/).
+    Injects dropdown nav on WordPress-managed pages (e.g. /road-races/).
     """
     ssh = get_ssh_credentials()
     if not ssh:
@@ -1882,7 +1884,7 @@ def sync_header():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "~/www/roadlabs.cc/public_html/wp-content/mu-plugins"
+    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1933,7 +1935,7 @@ def sync_ab():
     js_hash = hashlib.md5(js_content.encode()).hexdigest()[:8]
     hashed_js_name = f"rl-ab-tests.{js_hash}.js"
 
-    remote_base = "~/www/roadlabs.cc/public_html"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html"
     remote_ab = f"{remote_base}/ab"
     remote_mu = f"{remote_base}/wp-content/mu-plugins"
 
@@ -1988,7 +1990,7 @@ def purge_cache():
         return False
     host, user, port = ssh
 
-    wp_path = "$HOME/www/roadlabs.cc/public_html"
+    wp_path = "/home/TODO_SITEGROUND_USER/public_html"
     try:
         result = subprocess.run(
             [
@@ -2040,7 +2042,7 @@ def sync_photos(photos_dir: str):
         print(f"✗ No photo directories found in {photos_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race-photos"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race-photos"
 
     # Create remote directory
     try:
@@ -2116,7 +2118,7 @@ def sync_prep_kits(prep_kit_dir: str):
         print(f"✗ No .html files found in {pk_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2183,7 +2185,7 @@ def sync_tire_guides(tire_guide_dir: str):
         print(f"✗ No .html files found in {tg_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2254,7 +2256,7 @@ def sync_series(series_dir: str):
         print(f"✗ No series hub pages found in {series_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race/series"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race/series"
 
     # Create remote directory with correct permissions
     try:
@@ -2343,7 +2345,7 @@ def sync_blog_index(index_page: str, index_json: str):
         print("  Run: python scripts/generate_blog_index.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/blog"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/blog"
 
     # Create remote directory
     try:
@@ -2440,7 +2442,7 @@ def sync_blog(blog_dir: str):
         print(f"✗ No .html files found in {blog_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/blog"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/blog"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2512,7 +2514,7 @@ def sync_courses(course_dir: str):
         print(f"✗ No index.html files found in {course_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/course"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/course"
 
     # Create remote directory with correct permissions
     try:
@@ -2575,7 +2577,7 @@ def sync_mission_control(mc_file: str):
         print("  Run: python3 wordpress/generate_mission_control.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/mission-control"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/mission-control"
 
     # Create remote directory
     try:
@@ -2632,7 +2634,7 @@ def sync_insights(insights_file: str):
         print("  Run: python3 wordpress/generate_insights.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/insights"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/insights"
 
     # Create remote directory
     try:
@@ -2673,7 +2675,7 @@ def sync_insights(insights_file: str):
 
     # Upload shared CSS/JS assets (insights page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -2725,7 +2727,7 @@ def sync_whitepaper(whitepaper_file: str):
         print("  Run: python3 wordpress/generate_whitepaper_fueling.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/fueling-methodology"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/fueling-methodology"
 
     # Create remote directory
     try:
@@ -2766,7 +2768,7 @@ def sync_whitepaper(whitepaper_file: str):
 
     # Upload shared CSS/JS assets (white paper page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "~/www/roadlabs.cc/public_html/race/assets"
+    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -2818,7 +2820,7 @@ def sync_embed():
         print("  Run: python3 scripts/generate_embed_widget.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/embed"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/embed"
 
     # Create remote directory
     try:
@@ -2893,7 +2895,7 @@ def sync_rss():
         print("  Run: python3 scripts/generate_rss_feed.py first")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/feed"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/feed"
 
     # Create remote directory
     try:
@@ -2960,7 +2962,7 @@ def sync_llms_txt():
         return None
     host, user, port = ssh
 
-    remote_base = "~/www/roadlabs.cc/public_html"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html"
     uploaded = 0
 
     for filename in ("llms.txt", "llms-full.txt"):
@@ -3031,7 +3033,7 @@ def sync_markdown(markdown_dir: str):
         print(f"✗ No .md files found in {md_path}")
         return None
 
-    remote_base = "~/www/roadlabs.cc/public_html/race"
+    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -3095,8 +3097,8 @@ if __name__ == "__main__":
         help="Upload search widget HTML to WP uploads via SCP"
     )
     parser.add_argument(
-        "--widget-file", default="web/gravel-race-search.html",
-        help="Path to widget file (default: web/gravel-race-search.html)"
+        "--widget-file", default="web/road-labs-search.html",
+        help="Path to widget file (default: web/road-labs-search.html)"
     )
     parser.add_argument(
         "--sync-training", action="store_true",

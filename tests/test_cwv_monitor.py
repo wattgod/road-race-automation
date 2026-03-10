@@ -71,7 +71,7 @@ def _make_snapshot(results=None):
     if results is None:
         results = [
             {
-                "url": "https://gravelgodcycling.com/",
+                "url": "https://roadlabs.cc/",
                 "label": "Homepage",
                 "strategy": "mobile",
                 "metrics": {
@@ -113,13 +113,13 @@ class TestMonitoredURLs:
     """Verify the monitored URL list is correct and complete."""
 
     EXPECTED_URLS = [
-        "https://gravelgodcycling.com/",
-        "https://gravelgodcycling.com/gravel-races/",
-        "https://gravelgodcycling.com/race/unbound-200/",
-        "https://gravelgodcycling.com/race/barry-roubaix/",
-        "https://gravelgodcycling.com/race/big-sugar/",
-        "https://gravelgodcycling.com/race/3-state-3-mountain-challenge/",
-        "https://gravelgodcycling.com/coaching/",
+        "https://roadlabs.cc/",
+        "https://roadlabs.cc/gravel-races/",
+        "https://roadlabs.cc/race/unbound-200/",
+        "https://roadlabs.cc/race/barry-roubaix/",
+        "https://roadlabs.cc/race/big-sugar/",
+        "https://roadlabs.cc/race/3-state-3-mountain-challenge/",
+        "https://roadlabs.cc/coaching/",
     ]
 
     def test_url_count(self):
@@ -141,7 +141,7 @@ class TestMonitoredURLs:
         assert len(labels) == len(set(labels)), "Duplicate labels found"
 
     def test_homepage_is_first(self):
-        assert MONITORED_URLS[0]["url"] == "https://gravelgodcycling.com/"
+        assert MONITORED_URLS[0]["url"] == "https://roadlabs.cc/"
 
     def test_all_urls_are_https(self):
         for entry in MONITORED_URLS:

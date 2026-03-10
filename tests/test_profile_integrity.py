@@ -19,7 +19,10 @@ RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 # Known exceptions — document why each is allowed
 KNOWN_SLUG_MISMATCHES = {}
 
-KNOWN_DUPLICATE_NAMES = set()  # Previously: FNLD GRVL, Grasshopper — resolved by removing stubs
+KNOWN_DUPLICATE_NAMES = {
+    "Mt. Washington Auto Road Bicycle Hillclimb",  # mount-washington-hillclimb + mt-washington-hillclimb
+    "RBC GranFondo Whistler",                       # rbc-granfondo-whistler + whistler-granfondo
+}
 
 
 def get_all_profiles():
@@ -234,7 +237,7 @@ class TestSecurityRegressions:
 
     def test_no_inline_onclick_with_slug_in_search_js(self):
         """search.js must not contain inline onclick handlers interpolating slugs."""
-        src = Path(__file__).parent.parent / "web" / "gravel-race-search.js"
+        src = Path(__file__).parent.parent / "web" / "road-labs-search.js"
         content = src.read_text()
         dangerous_patterns = [
             "onclick=\"toggleFavorite('\"",

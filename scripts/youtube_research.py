@@ -151,6 +151,12 @@ def build_search_query(race: dict) -> str:
     discipline = r.get("fondo_rating", {}).get("discipline", "gravel")
 
     DISCIPLINE_TERMS = {
+        "gran_fondo": "gran fondo cycling",
+        "sportive": "sportive cycling",
+        "century": "century ride cycling",
+        "multi_stage": "multi stage cycling race",
+        "hillclimb": "hill climb cycling",
+        # Legacy discipline values (pre-migration)
         "gravel": "gravel race",
         "road": "gran fondo cycling",
         "bikepacking": "bikepacking race",

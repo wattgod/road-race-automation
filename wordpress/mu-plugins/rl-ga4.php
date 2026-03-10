@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-add_action( 'wp_head', 'gg_ga4_tracking', 1 );
+add_action( 'wp_head', 'rl_ga4_tracking', 1 );
 
-function gg_ga4_tracking() {
+function rl_ga4_tracking() {
     if ( is_admin() ) {
         return;
     }

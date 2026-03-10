@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Set Google Consent Mode defaults BEFORE gtag loads.
- * Must fire at priority 0 (before gg_ga4_tracking at priority 1).
+ * Must fire at priority 0 (before rl_ga4_tracking at priority 1).
  */
 add_action( 'wp_head', 'rl_consent_mode_defaults', 0 );
 
@@ -48,9 +48,9 @@ gtag('consent','default',{
 /**
  * Inject the cookie consent banner in the footer.
  */
-add_action( 'wp_footer', 'gg_cookie_consent_banner', 99 );
+add_action( 'wp_footer', 'rl_cookie_consent_banner', 99 );
 
-function gg_cookie_consent_banner() {
+function rl_cookie_consent_banner() {
     if ( is_admin() ) return;
     if ( current_user_can( 'edit_posts' ) ) return;
     ?>

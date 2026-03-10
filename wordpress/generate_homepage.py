@@ -53,48 +53,51 @@ CURRENT_YEAR = date.today().year
 # ── Featured race slugs (curated for homepage diversity) ─────
 
 FEATURED_SLUGS = [
-    "unbound-200",
-    "steamboat-gravel",
-    "bwr-california",
+    "letape-du-tour",
+    "maratona-dles-dolomites",
+    "gran-fondo-stelvio",
 ]
 
 # ── Stat bar dimensions for bento feature cards ─────
 STAT_BAR_DIMENSIONS = [
-    "prestige", "technicality", "adventure",
-    "field_depth", "community", "race_quality",
+    "prestige", "descent_technicality", "road_surface",
+    "field_depth", "community_culture", "organization",
 ]
 
 STAT_BAR_DIMENSIONS_COMPACT = [
-    "prestige", "adventure", "technicality",
+    "prestige", "road_surface", "descent_technicality",
 ]
 
 # ── Hero radar visualization constants ──
 HERO_VIZ_DIMS = [
-    "logistics", "length", "technicality", "elevation", "climate",
-    "altitude", "adventure", "prestige", "race_quality", "experience",
-    "community", "field_depth", "value", "expenses",
+    "distance", "climbing", "descent_technicality", "road_surface",
+    "climate_risk", "altitude", "logistics", "prestige",
+    "organization", "scenic_experience", "community_culture",
+    "field_depth", "value", "expenses",
 ]
 
 HERO_VIZ_LABELS = {
-    "logistics": "LOGISTICS", "length": "LENGTH", "technicality": "TECHNICALITY",
-    "elevation": "ELEVATION", "climate": "CLIMATE", "altitude": "ALTITUDE",
-    "adventure": "ADVENTURE", "prestige": "PRESTIGE", "race_quality": "QUALITY",
-    "experience": "EXPERIENCE", "community": "COMMUNITY", "field_depth": "FIELD DEPTH",
+    "distance": "DISTANCE", "climbing": "CLIMBING",
+    "descent_technicality": "TECHNICALITY", "road_surface": "SURFACE",
+    "climate_risk": "CLIMATE", "altitude": "ALTITUDE",
+    "logistics": "LOGISTICS", "prestige": "PRESTIGE",
+    "organization": "ORGANIZATION", "scenic_experience": "SCENERY",
+    "community_culture": "COMMUNITY", "field_depth": "FIELD DEPTH",
     "value": "VALUE", "expenses": "EXPENSES",
 }
 
 HERO_VIZ_TOOLTIPS = {
-    "logistics": "How easy is it to get there and set up?",
-    "length": "Distance and time commitment",
-    "technicality": "Technical terrain difficulty",
-    "elevation": "Total climbing and steepness",
-    "climate": "Weather severity and variability",
+    "distance": "Distance and time commitment",
+    "climbing": "Total climbing and steepness",
+    "descent_technicality": "Technical terrain difficulty",
+    "road_surface": "Road surface quality and variety",
+    "climate_risk": "Weather severity and variability",
     "altitude": "Elevation above sea level",
-    "adventure": "Remoteness and exploration factor",
+    "logistics": "How easy is it to get there and set up?",
     "prestige": "Reputation and significance in the sport",
-    "race_quality": "Course design, marking, and organization",
-    "experience": "Overall atmosphere and race-day feel",
-    "community": "Camaraderie and post-race culture",
+    "organization": "Course design, marking, and organization",
+    "scenic_experience": "Overall atmosphere and scenic quality",
+    "community_culture": "Camaraderie and post-race culture",
     "field_depth": "Caliber and size of the competitive field",
     "value": "What you get for what you pay",
     "expenses": "Total cost to participate",
@@ -288,9 +291,6 @@ def load_editorial_one_liners(race_data_dir: Path = None) -> list:
             tier = rating.get("tier", 4)
             if tier > 2:
                 continue
-            discipline = (rating.get("discipline") or "gravel")
-            if discipline != "gravel":
-                continue
             name = race.get("display_name") or race.get("name", "")
             slug = race.get("slug", f.stem)
             score = rating.get("overall_score", 0)
@@ -316,9 +316,6 @@ def load_upcoming_races(race_data_dir: Path = None, today: date = None) -> list:
             data = json.loads(f.read_text(encoding="utf-8"))
             race = data.get("race", data)
             rating = race.get("fondo_rating", {})
-            discipline = (rating.get("discipline") or "gravel")
-            if discipline != "gravel":
-                continue
             ds = race.get("vitals", {}).get("date_specific", "")
             m = re.match(r"(\d{4}):\s*(\w+)\s+(\d+)", ds)
             if not m:
@@ -660,12 +657,13 @@ _SERIES_UMBRELLA_SLUGS = {"grasshopper-series", "grinduro", "gravel-earth"}
 
 
 def _compute_archetype_examples(race_index: list) -> dict:
-    """Find 5 closest real gravel races to each archetype profile by Euclidean distance."""
+    """Find 5 closest real races to each archetype profile by Euclidean distance."""
     results = {}
-    # Pre-compute race score vectors (only gravel races with enough data)
+    # Pre-compute race score vectors (all road discipline races with enough data)
+    ROAD_DISCIPLINES = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
     scored_races = []
     for race in race_index:
-        if (race.get("discipline") or "gravel") != "gravel":
+        if race.get("discipline", "gran_fondo") not in ROAD_DISCIPLINES:
             continue
         if race.get("slug", "") in _SERIES_UMBRELLA_SLUGS:
             continue
@@ -923,7 +921,8 @@ def build_tabbed_rankings(race_index: list) -> str:
         </a>'''
         return items
 
-    gravel_only = [r for r in race_index if (r.get("discipline") or "gravel") == "gravel"]
+    ROAD_DISCIPLINES = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
+    gravel_only = [r for r in race_index if r.get("discipline", "gran_fondo") in ROAD_DISCIPLINES]
     all_sorted = sorted(gravel_only, key=lambda r: r.get("overall_score", 0), reverse=True)
     t1_sorted = sorted(
         [r for r in gravel_only if r.get("tier") == 1],

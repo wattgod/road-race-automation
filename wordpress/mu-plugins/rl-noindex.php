@@ -11,7 +11,7 @@
  * so this coexists safely with AIOSEO's existing robots meta tag.
  */
 
-function gg_noindex_junk_pages() {
+function rl_noindex_junk_pages() {
     $dominated = false;
 
     // WordPress template conditionals
@@ -43,8 +43,8 @@ function gg_noindex_junk_pages() {
     ];
 
     // Noindex search page with query params (e.g. ?region=Midwest) to avoid
-    // duplicate content — the canonical /gravel-races/ is the only one to index
-    if (strpos($uri, '/gravel-races/') !== false && !empty($_SERVER['QUERY_STRING'])) {
+    // duplicate content — the canonical /road-races/ is the only one to index
+    if (strpos($uri, '/road-races/') !== false && !empty($_SERVER['QUERY_STRING'])) {
         $dominated = true;
     }
 
@@ -68,32 +68,32 @@ function gg_noindex_junk_pages() {
         echo '<meta name="robots" content="noindex, follow" />' . "\n";
     }
 }
-add_action('wp_head', 'gg_noindex_junk_pages', 1);
+add_action('wp_head', 'rl_noindex_junk_pages', 1);
 
 /**
- * Inject JSON-LD schema on /gravel-races/ page.
+ * Inject JSON-LD schema on /road-races/ page.
  * BreadcrumbList + CollectionPage for rich snippets in Google SERPs.
  */
-function gg_search_page_schema() {
+function rl_search_page_schema() {
     $uri = $_SERVER['REQUEST_URI'] ?? '';
-    if (strpos($uri, '/gravel-races') === false) return;
+    if (strpos($uri, '/road-races') === false) return;
 
     $breadcrumb = [
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://roadlabs.cc/'],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Gravel Races', 'item' => 'https://roadlabs.cc/gravel-races/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Road Races', 'item' => 'https://roadlabs.cc/road-races/'],
         ],
     ];
 
     $collection = [
         '@context' => 'https://schema.org',
         '@type' => 'CollectionPage',
-        'name' => 'Find Your Gravel Race',
-        'description' => 'Search and filter 328 gravel races worldwide by tier, distance, region, terrain, and date. Find your next gravel adventure with the Road Labs race database.',
-        'url' => 'https://roadlabs.cc/gravel-races/',
-        'numberOfItems' => 328,
+        'name' => 'Find Your Road Race',
+        'description' => 'Search and filter 427 road races worldwide by tier, distance, region, terrain, and date. Find your next road cycling event with the Road Labs race database.',
+        'url' => 'https://roadlabs.cc/road-races/',
+        'numberOfItems' => 427,
         'publisher' => [
             '@type' => 'Organization',
             'name' => 'Road Labs',
@@ -104,4 +104,4 @@ function gg_search_page_schema() {
     echo '<script type="application/ld+json">' . json_encode($breadcrumb, JSON_UNESCAPED_SLASHES) . '</script>' . "\n";
     echo '<script type="application/ld+json">' . json_encode($collection, JSON_UNESCAPED_SLASHES) . '</script>' . "\n";
 }
-add_action('wp_head', 'gg_search_page_schema', 5);
+add_action('wp_head', 'rl_search_page_schema', 5);
