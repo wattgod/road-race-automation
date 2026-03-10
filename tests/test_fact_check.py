@@ -203,7 +203,7 @@ class TestAutoFix:
         """Create a minimal race JSON for testing."""
         race_dir = tmp_path / "race-data"
         race_dir.mkdir(exist_ok=True)
-        data = {"race": {"vitals": vitals, "gravel_god_rating": {"tier": 1}}}
+        data = {"race": {"vitals": vitals, "fondo_rating": {"tier": 1}}}
         path = race_dir / f"{slug}.json"
         path.write_text(json.dumps(data, indent=2))
         return path

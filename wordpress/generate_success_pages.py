@@ -288,7 +288,7 @@ def build_training_plan_success() -> str:
     support = f"""
   <div class="rl-success-support">
     <p>Questions? Reply to your delivery email or reach out at
-    <a href="mailto:gravelgodcoaching@gmail.com">gravelgodcoaching@gmail.com</a></p>
+    <a href="mailto:TODO_ROADLABS_EMAIL">TODO_ROADLABS_EMAIL</a></p>
   </div>"""
 
     return hero + steps + crosssell + support
@@ -349,7 +349,7 @@ def build_coaching_success() -> str:
     support = f"""
   <div class="rl-success-support">
     <p>Questions about your coaching subscription? Email
-    <a href="mailto:gravelgodcoaching@gmail.com">gravelgodcoaching@gmail.com</a></p>
+    <a href="mailto:TODO_ROADLABS_EMAIL">TODO_ROADLABS_EMAIL</a></p>
   </div>"""
 
     return hero + steps + crosssell + support
@@ -409,7 +409,7 @@ def build_consulting_success() -> str:
     support = f"""
   <div class="rl-success-support">
     <p>Questions? Email
-    <a href="mailto:gravelgodcoaching@gmail.com">gravelgodcoaching@gmail.com</a></p>
+    <a href="mailto:TODO_ROADLABS_EMAIL">TODO_ROADLABS_EMAIL</a></p>
   </div>"""
 
     return hero + steps + crosssell + support

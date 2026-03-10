@@ -17,7 +17,7 @@ export default {
     if (request.method !== 'POST') return new Response('Method not allowed', { status: 405 });
 
     const origin = request.headers.get('Origin');
-    const allowedOrigins = (env.ALLOWED_ORIGINS || 'https://gravelgodcycling.com').split(',').map(o => o.trim());
+    const allowedOrigins = (env.ALLOWED_ORIGINS || 'https://roadlabs.cc').split(',').map(o => o.trim());
     if (!allowedOrigins.some(allowed => origin?.startsWith(allowed))) {
       return new Response('Forbidden', { status: 403 });
     }
@@ -134,9 +134,9 @@ async function sendNotificationEmail(env, review) {
     body: JSON.stringify({
       personalizations: [{
         to: [{ email: env.NOTIFICATION_EMAIL }],
-        subject: `[GG Review] ${(review.race_name).substring(0, 60)} - ${stars} (${review.stars}/5)`
+        subject: `[RL Review] ${(review.race_name).substring(0, 60)} - ${stars} (${review.stars}/5)`
       }],
-      from: { email: 'reviews@gravelgodcycling.com', name: 'Gravel God Reviews' },
+      from: { email: 'TODO_ROADLABS_EMAIL', name: 'Road Labs Reviews' },
       reply_to: { email: review.email },
       content: [{
         type: 'text/html',
@@ -165,7 +165,7 @@ async function sendNotificationEmail(env, review) {
 
 function handleCORS(request, env) {
   const origin = request.headers.get('Origin');
-  const allowedOrigins = (env.ALLOWED_ORIGINS || 'https://gravelgodcycling.com').split(',').map(o => o.trim());
+  const allowedOrigins = (env.ALLOWED_ORIGINS || 'https://roadlabs.cc').split(',').map(o => o.trim());
   const allowOrigin = allowedOrigins.find(a => origin?.startsWith(a)) || '';
   return new Response(null, {
     status: 204,

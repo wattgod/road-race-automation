@@ -85,7 +85,7 @@ def _fetch_url(url: str) -> bytes | None:
     """Fetch URL bytes. Returns None on error."""
     try:
         req = urllib.request.Request(url, headers={
-            "User-Agent": "Mozilla/5.0 (GravelGod Thumbnail Scorer)"
+            "User-Agent": "Mozilla/5.0 (RoadLabs Thumbnail Scorer)"
         })
         with urllib.request.urlopen(req, timeout=10) as resp:
             if resp.status == 200:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate XML sitemaps for gravel race landing pages and blog content.
+Generate XML sitemaps for road race landing pages and blog content.
 
 Usage:
     python scripts/generate_sitemap.py
@@ -61,7 +61,7 @@ def load_state_slugs(project_root: Path) -> list:
     if not output_dir.exists():
         return slugs
     for path in sorted(output_dir.iterdir()):
-        if path.is_dir() and path.name.startswith("best-gravel-races-"):
+        if path.is_dir() and path.name.startswith("best-road-races-"):
             slugs.append(path.name)
     return slugs
 
@@ -172,9 +172,9 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
     SubElement(url, 'changefreq').text = 'weekly'
     SubElement(url, 'priority').text = '1.0'
 
-    # Gravel Races search page
+    # Road Races search page
     url = SubElement(urlset, 'url')
-    SubElement(url, 'loc').text = f"{SITE_BASE_URL}/gravel-races/"
+    SubElement(url, 'loc').text = f"{SITE_BASE_URL}/road-races/"
     SubElement(url, 'lastmod').text = today
     SubElement(url, 'changefreq').text = 'weekly'
     SubElement(url, 'priority').text = '0.9'

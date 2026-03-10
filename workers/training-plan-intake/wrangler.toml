@@ -3,12 +3,12 @@ main = "worker.js"
 compatibility_date = "2024-01-01"
 
 [vars]
-ALLOWED_ORIGINS = "https://wattgod.github.io,https://gravelgodcycling.com"
+ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadlabs.cc"
 
 [env.production]
-vars = { ALLOWED_ORIGINS = "https://wattgod.github.io,https://gravelgodcycling.com" }
+vars = { ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadlabs.cc" }
 
 # Secrets (set via: wrangler secret put SECRET_NAME)
-# NOTIFICATION_EMAIL = "gravelgodcoaching@gmail.com"
+# NOTIFICATION_EMAIL = "TODO_ROADLABS_EMAIL"
 # SENDGRID_API_KEY = "your-sendgrid-api-key"
 # GITHUB_TOKEN = "your-github-token" (optional)

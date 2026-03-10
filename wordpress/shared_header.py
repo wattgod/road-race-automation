@@ -9,7 +9,7 @@ and coaching apply pages.
 from __future__ import annotations
 
 SITE_BASE_URL = "https://roadlabs.cc"
-SUBSTACK_URL = "https://gravelgodcycling.substack.com"
+SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Road Labs newsletter
 
 
 def get_site_header_html(active: str | None = None) -> str:
@@ -27,13 +27,13 @@ def get_site_header_html(active: str | None = None) -> str:
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="{SITE_BASE_URL}/" class="rl-site-header-logo">
-      <img src="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Road Labs" width="50" height="50">
+      <img src="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Road Labs" width="50" height="50"><!-- TODO: replace with Road Labs logo asset -->
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">
-        <a href="{SITE_BASE_URL}/gravel-races/"{_aria("races")}>RACES</a>
+        <a href="{SITE_BASE_URL}/road-races/"{_aria("races")}>RACES</a>
         <div class="rl-site-header-dropdown">
-          <a href="{SITE_BASE_URL}/gravel-races/">All Gravel Races</a>
+          <a href="{SITE_BASE_URL}/road-races/">All Road Races</a>
           <a href="{SITE_BASE_URL}/race/methodology/">How We Rate</a>
         </div>
       </div>
@@ -41,7 +41,7 @@ def get_site_header_html(active: str | None = None) -> str:
         <a href="{SITE_BASE_URL}/products/training-plans/"{_aria("products")}>PRODUCTS</a>
         <div class="rl-site-header-dropdown">
           <a href="{SITE_BASE_URL}/products/training-plans/">Custom Training Plans</a>
-          <a href="{SITE_BASE_URL}/guide/">Gravel Handbook</a>
+          <a href="{SITE_BASE_URL}/guide/">Road Racing Handbook</a>
         </div>
       </div>
       <div class="rl-site-header-item">
@@ -56,7 +56,7 @@ def get_site_header_html(active: str | None = None) -> str:
         <div class="rl-site-header-dropdown">
           <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">Slow Mid 38s</a>
           <a href="{SITE_BASE_URL}/articles/">Hot Takes</a>
-          <a href="{SITE_BASE_URL}/insights/">The State of Gravel</a>
+          <a href="{SITE_BASE_URL}/insights/">The State of Road Racing</a>
           <a href="{SITE_BASE_URL}/fueling-methodology/">White Papers</a>
         </div>
       </div>

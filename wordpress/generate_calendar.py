@@ -417,7 +417,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   <section class="rl-cal-cta">
     <h2>Get Race Reminders</h2>
     <p>Subscribe to the Road Labs newsletter for registration alerts, training tips, and race previews delivered to your inbox.</p>
-    <a href="https://gravelgodcycling.substack.com" class="rl-cal-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
+    <a href="https://TODO_ROADLABS_NEWSLETTER" class="rl-cal-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
   </section>
 
   <footer class="rl-cal-footer">

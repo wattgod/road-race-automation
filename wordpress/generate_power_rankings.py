@@ -409,7 +409,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   <section class="rl-pr-cta">
     <h2>Get Notified When Rankings Update</h2>
     <p>Subscribe to the Road Labs newsletter for ranking changes, new entries, and exclusive race analysis.</p>
-    <a href="https://gravelgodcycling.substack.com" class="rl-pr-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
+    <a href="https://TODO_ROADLABS_NEWSLETTER" class="rl-pr-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
   </section>
 
   <footer class="rl-pr-footer">

@@ -131,7 +131,7 @@ class TestHexParity:
         "#ffffff": "rl-color-white",
     }
 
-    @pytest.mark.skip(reason="Cookie consent still uses Gravel God palette — needs migration to Road Labs colors")
+    @pytest.mark.skip(reason="Cookie consent still uses legacy palette — needs migration to Road Labs colors")
     def test_all_hex_in_tokens(self, banner, tokens):
         """Every hex in the banner must exist in tokens.css."""
         token_hex = {v.lower() for v in tokens.values()}

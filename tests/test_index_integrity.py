@@ -135,7 +135,7 @@ class TestIndexDataConsistency:
     """Index data should match profile data."""
 
     def test_tier_matches_profile(self):
-        """Index tier should match profile's gravel_god_rating.tier."""
+        """Index tier should match profile's fondo_rating.tier."""
         data = load_index()
         index_by_slug = {e["slug"]: e for e in data if "slug" in e}
 
@@ -147,7 +147,7 @@ class TestIndexDataConsistency:
 
             profile = json.loads(f.read_text())
             race = profile.get("race", profile)
-            rating = race.get("gravel_god_rating", {})
+            rating = race.get("fondo_rating", {})
             profile_tier = rating.get("display_tier", rating.get("tier", 0))
             index_tier = index_by_slug[slug].get("tier", 0)
 
@@ -162,7 +162,7 @@ class TestIndexDataConsistency:
             )
 
     def test_score_matches_profile(self):
-        """Index overall_score should match profile's gravel_god_rating.overall_score."""
+        """Index overall_score should match profile's fondo_rating.overall_score."""
         data = load_index()
         index_by_slug = {e["slug"]: e for e in data if "slug" in e}
 
@@ -174,7 +174,7 @@ class TestIndexDataConsistency:
 
             profile = json.loads(f.read_text())
             race = profile.get("race", profile)
-            rating = race.get("gravel_god_rating", {})
+            rating = race.get("fondo_rating", {})
             profile_score = rating.get("overall_score", 0)
             index_score = index_by_slug[slug].get("overall_score", 0)
 

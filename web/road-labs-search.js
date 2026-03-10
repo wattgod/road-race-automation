@@ -31,10 +31,10 @@
   var activeSavedIndex = -1;
 
   var COMPARE_COLORS = [
-    { stroke: '#59473c', fill: 'rgba(89,71,60,0.15)' },
-    { stroke: '#178079', fill: 'rgba(23,128,121,0.15)' },
-    { stroke: '#9a7e0a', fill: 'rgba(154,126,10,0.15)' },
-    { stroke: '#766a5e', fill: 'rgba(118,106,94,0.15)' }
+    { stroke: '#1a1a2e', fill: 'rgba(26,26,46,0.15)' },
+    { stroke: '#e63946', fill: 'rgba(230,57,70,0.15)' },
+    { stroke: '#3d5a80', fill: 'rgba(61,90,128,0.15)' },
+    { stroke: '#6c757d', fill: 'rgba(108,117,125,0.15)' }
   ];
 
   // Map state
@@ -45,19 +45,19 @@
 
   const TIER_NAMES = { 1: 'The Icons', 2: 'Elite', 3: 'Solid', 4: 'Grassroots' };
   const TIER_DESCS = {
-    1: 'The definitive gravel events. World-class fields, iconic courses, bucket-list status.',
-    2: 'Established races with strong reputations and competitive fields. The next tier of must-do events.',
-    3: 'Regional favorites and emerging races. Strong local scenes, genuine gravel character.',
-    4: 'Up-and-coming races and local grinders. Small fields, raw vibes, grassroots gravel.'
+    1: 'The definitive road events. World-class fields, iconic courses, bucket-list status.',
+    2: 'Established races with strong reputations and competitive fields. The next tier of must-ride events.',
+    3: 'Regional favorites and emerging events. Strong local scenes, genuine road racing character.',
+    4: 'Up-and-coming events and local rides. Small fields, raw vibes, grassroots road cycling.'
   };
   const US_REGIONS = new Set(['West', 'Midwest', 'South', 'Northeast']);
-  const TIER_COLORS_MAP = { 1: '#59473c', 2: '#7d695d', 3: '#766a5e', 4: '#5e6868' };
+  const TIER_COLORS_MAP = { 1: '#1a1a2e', 2: '#3d5a80', 3: '#6c757d', 4: '#adb5bd' };
 
   const SLIDERS = [
-    { key: 'distance',      label: 'Distance',      low: 'Quick Spin',       high: 'Ultra Endurance', mapping: [{ field: 'length', weight: 1.0 }] },
-    { key: 'technicality',  label: 'Technicality',   low: 'Smooth Gravel',    high: 'Single Track',    mapping: [{ field: 'technicality', weight: 1.0 }] },
-    { key: 'climbing',      label: 'Climbing',       low: 'Flat is Fast',     high: 'Mountain Goat',   mapping: [{ field: 'elevation', weight: 1.0 }] },
-    { key: 'adventure',     label: 'Adventure',      low: 'Close to Town',    high: 'Deep Backcountry',mapping: [{ field: 'adventure', weight: 0.6 }, { field: 'logistics', weight: 0.4 }] },
+    { key: 'distance',      label: 'Distance',      low: 'Quick Spin',       high: 'Ultra Endurance', mapping: [{ field: 'distance', weight: 1.0 }] },
+    { key: 'surface',       label: 'Road Surface',   low: 'Smooth Tarmac',    high: 'Mixed Surface',   mapping: [{ field: 'road_surface', weight: 1.0 }] },
+    { key: 'climbing',      label: 'Climbing',       low: 'Flat is Fast',     high: 'Mountain Goat',   mapping: [{ field: 'climbing', weight: 1.0 }] },
+    { key: 'logistics',     label: 'Logistics',      low: 'Easy Access',      high: 'Remote Start',    mapping: [{ field: 'logistics', weight: 1.0 }] },
     { key: 'competition',   label: 'Competition',    low: 'Just Finish',      high: 'Pro Field',       mapping: [{ field: 'field_depth', weight: 0.6 }, { field: 'race_quality', weight: 0.4 }] },
     { key: 'prestige',      label: 'Prestige',       low: 'Hidden Gem',       high: 'Bucket List',     mapping: [{ field: 'prestige', weight: 1.0 }] },
     { key: 'budget',        label: 'Budget',         low: 'All-In',           high: 'Budget Friendly', mapping: [{ field: 'value', weight: 0.6 }, { field: 'expenses', weight: 0.4, invert: true }] }
@@ -315,7 +315,7 @@
     var filtered = sortRaces(filterRaces());
     filtered.forEach(function(race) {
       if (race.lat == null || race.lng == null) return;
-      var tierColor = TIER_COLORS_MAP[race.tier] || '#5e6868';
+      var tierColor = TIER_COLORS_MAP[race.tier] || '#adb5bd';
       var marker = L.circleMarker([race.lat, race.lng], {
         radius: race.tier === 1 ? 8 : race.tier === 2 ? 7 : 6,
         fillColor: tierColor,
@@ -502,7 +502,7 @@
     if (f.region) params.set('region', f.region);
     if (f.distance) params.set('distance', f.distance);
     if (f.month) params.set('month', f.month);
-    if (f.discipline !== 'gravel') params.set('discipline', f.discipline);
+    if (f.discipline !== 'gran_fondo') params.set('discipline', f.discipline);
     if (currentSort !== 'score') params.set('sort', currentSort);
 
     if (displayMode === 'match') {
@@ -545,7 +545,7 @@
         var d = r.distance_mi || 0;
         return d >= parts[0] && d <= parts[1];
       }
-      if (filterKey === 'discipline') return (r.discipline || 'gravel') === filterValue;
+      if (filterKey === 'discipline') return (r.discipline || 'gran_fondo') === filterValue;
       return true;
     }).length;
   }
@@ -607,7 +607,7 @@
     var discSel = document.getElementById('rl-discipline');
     var currentDisc = discSel.value;
     discSel.innerHTML = '<option value="">All Types</option>';
-    [['gravel', 'Gravel'], ['mtb', 'MTB'], ['bikepacking', 'Bikepacking']].forEach(function(pair) {
+    [['gran_fondo', 'Gran Fondo'], ['sportive', 'Sportive'], ['century', 'Century'], ['multi_stage', 'Multi-Stage'], ['hillclimb', 'Hillclimb']].forEach(function(pair) {
       var count = countByFilter('discipline', pair[0]);
       if (count > 0) {
         var opt = document.createElement('option');
@@ -615,7 +615,7 @@
         discSel.appendChild(opt);
       }
     });
-    discSel.value = currentDisc || 'gravel';
+    discSel.value = currentDisc || 'gran_fondo';
   }
 
   function getFilters() {
@@ -669,7 +669,7 @@
       if (f.region === 'International' && (!r.region || US_REGIONS.has(r.region))) return false;
       if (f.region && f.region !== 'International' && r.region !== f.region) return false;
       if (f.month && r.month !== f.month) return false;
-      if (f.discipline && (r.discipline || 'gravel') !== f.discipline) return false;
+      if (f.discipline && (r.discipline || 'gran_fondo') !== f.discipline) return false;
       if (f.distance) {
         var parts = f.distance.split('-').map(Number);
         var d = r.distance_mi || 0;
@@ -707,17 +707,17 @@
 
   // ── Score / rendering helpers ──
   function scoreColor(score) {
-    if (score >= 85) return '#3a2e25';
-    if (score >= 75) return '#59473c';
-    if (score >= 65) return '#7d695d';
-    return '#5e6868';
+    if (score >= 85) return '#0d1117';
+    if (score >= 75) return '#1a1a2e';
+    if (score >= 65) return '#3d5a80';
+    return '#6c757d';
   }
 
   var SCORE_LABELS = {
-    logistics: 'Logistics', length: 'Length', technicality: 'Technicality',
-    elevation: 'Elevation', climate: 'Climate', altitude: 'Altitude',
-    adventure: 'Adventure', prestige: 'Prestige', race_quality: 'Race Quality',
-    experience: 'Experience', community: 'Community', field_depth: 'Field Depth',
+    distance: 'Distance', climbing: 'Climbing', descent_technicality: 'Descent Tech',
+    road_surface: 'Road Surface', climate_risk: 'Climate Risk', altitude: 'Altitude',
+    logistics: 'Logistics', prestige: 'Prestige', organization: 'Organization',
+    scenic_experience: 'Scenic Experience', community_culture: 'Community', field_depth: 'Field Depth',
     value: 'Value', expenses: 'Expenses', cultural_impact: 'Cultural Impact'
   };
 
@@ -750,7 +750,7 @@
 
   function renderMiniRadar(scores) {
     if (!scores || Object.keys(scores).length < 7) return '';
-    var vars = ['length','technicality','elevation','climate','altitude','logistics','adventure'];
+    var vars = ['distance','climbing','descent_technicality','road_surface','climate_risk','altitude','logistics'];
     var cx = 40, cy = 40, r = 30;
     var n = vars.length;
     var points = radarPoints(scores, vars, cx, cy, r);
@@ -760,18 +760,18 @@
         var angle = (Math.PI * 2 * i / n) - Math.PI / 2;
         return [cx + r * s * Math.cos(angle), cy + r * s * Math.sin(angle)];
       });
-      return '<polygon points="' + gp.map(function(p){return p.join(',');}).join(' ') + '" fill="none" stroke="#d4c5b9" stroke-width="0.5"/>';
+      return '<polygon points="' + gp.map(function(p){return p.join(',');}).join(' ') + '" fill="none" stroke="#d1dce6" stroke-width="0.5"/>';
     }).join('');
     return '<svg class="rl-radar" width="80" height="80" viewBox="0 0 80 80">' +
       grid +
-      '<polygon points="' + poly + '" fill="rgba(26,138,130,0.12)" stroke="#3a2e25" stroke-width="1.5"/>' +
+      '<polygon points="' + poly + '" fill="rgba(230,57,70,0.12)" stroke="#1a1a2e" stroke-width="1.5"/>' +
     '</svg>';
   }
 
   // Elite seal SVG — "Certified Fresh" equivalent for Tier 1 races
   var ELITE_SEAL = '<svg class="rl-elite-seal" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">' +
-    '<polygon points="14,1 17.5,9.5 27,10 20,16.5 22,26 14,21 6,26 8,16.5 1,10 10.5,9.5" fill="#9a7e0a" stroke="#3a2e25" stroke-width="1"/>' +
-    '<text x="14" y="17" text-anchor="middle" font-family="Sometype Mono,monospace" font-size="7" font-weight="700" fill="#fff">GG</text>' +
+    '<polygon points="14,1 17.5,9.5 27,10 20,16.5 22,26 14,21 6,26 8,16.5 1,10 10.5,9.5" fill="#e63946" stroke="#1a1a2e" stroke-width="1"/>' +
+    '<text x="14" y="17" text-anchor="middle" font-family="Sometype Mono,monospace" font-size="7" font-weight="700" fill="#fff">RL</text>' +
   '</svg>';
 
   // Terrain tag based on dominant race characteristic
@@ -779,14 +779,14 @@
     if (!race.scores) return '';
     var s = race.scores;
     var tags = [];
-    if (s.technicality >= 4) tags.push('TECHNICAL');
-    else if (s.technicality >= 3) tags.push('MIXED');
-    if (s.elevation >= 4) tags.push('CLIMBING');
-    if (s.adventure >= 4) tags.push('REMOTE');
-    if (s.length >= 4) tags.push('ULTRA');
+    if (s.descent_technicality >= 4) tags.push('TECHNICAL');
+    else if (s.descent_technicality >= 3) tags.push('MIXED');
+    if (s.climbing >= 4) tags.push('CLIMBING');
+    if (s.logistics >= 4) tags.push('REMOTE');
+    if (s.distance >= 4) tags.push('ULTRA');
     if (tags.length === 0) {
-      if (s.technicality <= 2) tags.push('SMOOTH');
-      else tags.push('GRAVEL');
+      if (s.descent_technicality <= 2) tags.push('SMOOTH');
+      else tags.push('ROAD');
     }
     return tags.slice(0, 2).map(function(t) {
       return '<span class="rl-terrain-tag">' + t + '</span>';
@@ -855,9 +855,10 @@
     '</button>';
 
     var discBadge = '';
-    var disc = race.discipline || 'gravel';
-    if (disc !== 'gravel') {
-      var discLabel = disc === 'mtb' ? 'MTB' : disc.charAt(0).toUpperCase() + disc.slice(1);
+    var disc = race.discipline || 'gran_fondo';
+    if (disc !== 'gran_fondo') {
+      var discLabelMap = { sportive: 'Sportive', century: 'Century', multi_stage: 'Multi-Stage', hillclimb: 'Hillclimb' };
+      var discLabel = discLabelMap[disc] || disc.charAt(0).toUpperCase() + disc.slice(1);
       discBadge = '<span class="rl-discipline-badge">' + discLabel + '</span>';
     }
 
@@ -1039,14 +1040,14 @@
     var pills = [];
 
     var distLabels = { '0-50': 'Under 50 mi', '50-100': '50-100 mi', '100-200': '100-200 mi', '200-999': '200+ mi' };
-    var discLabels = { gravel: 'Gravel', mtb: 'MTB', bikepacking: 'Bikepacking' };
+    var discLabels = { gran_fondo: 'Gran Fondo', sportive: 'Sportive', century: 'Century', multi_stage: 'Multi-Stage', hillclimb: 'Hillclimb' };
     var filterLabels = {
       search: f.search ? '"' + f.search + '"' : null,
       tier: f.tier ? 'Tier ' + f.tier : null,
       region: f.region || null,
       distance: f.distance ? distLabels[f.distance] : null,
       month: f.month || null,
-      discipline: f.discipline !== 'gravel' ? (f.discipline ? discLabels[f.discipline] : 'All Disciplines') : null
+      discipline: f.discipline !== 'gran_fondo' ? (f.discipline ? discLabels[f.discipline] : 'All Disciplines') : null
     };
 
     // Add favorites pill
@@ -1063,7 +1064,7 @@
       var key = pair[0], label = pair[1];
       if (label) {
         var inputId = key === 'search' ? 'rl-search' : 'rl-' + key;
-        var resetVal = key === 'discipline' ? 'gravel' : '';
+        var resetVal = key === 'discipline' ? 'gran_fondo' : '';
         pills.push('<span class="rl-filter-pill">' + label + '<button onclick="document.getElementById(\'' + inputId + '\').value=\'' + resetVal + '\';document.getElementById(\'' + inputId + '\').dispatchEvent(new Event(\'change\'))">×</button></span>');
       }
     });
@@ -1152,7 +1153,7 @@
     if (races.length < 2) { compareMode = false; return; }
 
     var container = document.getElementById('rl-tier-container');
-    var radarVars = ['length','technicality','elevation','climate','altitude','logistics','adventure'];
+    var radarVars = ['distance','climbing','descent_technicality','road_surface','climate_risk','altitude','logistics'];
 
     // Banner
     var html = '<div class="rl-compare-banner">' +
@@ -1240,20 +1241,20 @@
         var angle = (Math.PI * 2 * i / n) - Math.PI / 2;
         return [rCx + rR * s * Math.cos(angle), rCy + rR * s * Math.sin(angle)];
       });
-      svgContent += '<polygon points="' + gp.map(function(p){return p.join(',');}).join(' ') + '" fill="none" stroke="#d4c5b9" stroke-width="0.5"/>';
+      svgContent += '<polygon points="' + gp.map(function(p){return p.join(',');}).join(' ') + '" fill="none" stroke="#d1dce6" stroke-width="0.5"/>';
     });
     // Axis lines
     Array.from({length: n}, function(_, i) {
       var angle = (Math.PI * 2 * i / n) - Math.PI / 2;
-      svgContent += '<line x1="' + rCx + '" y1="' + rCy + '" x2="' + (rCx + rR * Math.cos(angle)) + '" y2="' + (rCy + rR * Math.sin(angle)) + '" stroke="#d4c5b9" stroke-width="0.5"/>';
+      svgContent += '<line x1="' + rCx + '" y1="' + rCy + '" x2="' + (rCx + rR * Math.cos(angle)) + '" y2="' + (rCy + rR * Math.sin(angle)) + '" stroke="#d1dce6" stroke-width="0.5"/>';
     });
     // Axis labels
-    var radarLabels = ['LEN','TECH','ELEV','CLIM','ALT','LOG','ADV'];
+    var radarLabels = ['DIST','CLIMB','DESC','SURF','CLIM','ALT','LOG'];
     Array.from({length: n}, function(_, i) {
       var angle = (Math.PI * 2 * i / n) - Math.PI / 2;
       var lx = rCx + (rR + 14) * Math.cos(angle);
       var ly = rCy + (rR + 14) * Math.sin(angle);
-      svgContent += '<text x="' + lx + '" y="' + ly + '" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="Sometype Mono,monospace" fill="#7d695d">' + radarLabels[i] + '</text>';
+      svgContent += '<text x="' + lx + '" y="' + ly + '" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="Sometype Mono,monospace" fill="#3d5a80">' + radarLabels[i] + '</text>';
     });
     // One polygon per race
     races.forEach(function(r, idx) {
@@ -1314,7 +1315,7 @@
     document.getElementById('rl-region').value = '';
     document.getElementById('rl-distance').value = '';
     document.getElementById('rl-month').value = '';
-    document.getElementById('rl-discipline').value = 'gravel';
+    document.getElementById('rl-discipline').value = 'gran_fondo';
     // Also clear near me
     if (userLat !== null) activateNearMe();
     showFavoritesOnly = false;
@@ -1394,7 +1395,7 @@
     document.getElementById('rl-region').value = f.region || '';
     document.getElementById('rl-distance').value = f.distance || '';
     document.getElementById('rl-month').value = f.month || '';
-    document.getElementById('rl-discipline').value = f.discipline || 'gravel';
+    document.getElementById('rl-discipline').value = f.discipline || 'gran_fondo';
     // Restore sort
     if (config.sort) {
       currentSort = config.sort;

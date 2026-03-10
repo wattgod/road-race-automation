@@ -59,7 +59,7 @@ class TestEmbedData:
     def test_url_format(self):
         data = json.loads(EMBED_DATA.read_text())
         for entry in data:
-            assert entry["u"].startswith("https://gravelgodcycling.com/race/")
+            assert entry["u"].startswith("https://roadlabs.cc/race/")
             assert entry["u"].endswith("/")
 
     def test_unique_slugs(self):
@@ -98,7 +98,7 @@ class TestEmbedJS:
 
     def test_contains_site_url(self):
         content = EMBED_JS.read_text()
-        assert "gravelgodcycling.com" in content
+        assert "roadlabs.cc" in content
 
     def test_contains_css(self):
         content = EMBED_JS.read_text()

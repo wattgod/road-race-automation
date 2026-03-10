@@ -265,7 +265,7 @@ async function sendNotificationEmail(env, req) {
           to: [{ email: env.NOTIFICATION_EMAIL }],
           subject: `🏁 ${req.race.name}: ${req.athlete.name} (${req.race.goal}) - ${req.race.weeks_until}wks`
         }],
-        from: { email: 'gravelgodcoaching@gmail.com', name: 'Gravel God Coaching' },
+        from: { email: 'TODO_ROADLABS_EMAIL', name: 'Road Labs Coaching' },
         reply_to: { email: req.athlete.email, name: req.athlete.name },
         content: [{ type: 'text/html', value: emailBody }]
       })
@@ -394,7 +394,7 @@ async function triggerGitHubAction(token, request) {
         'Accept': 'application/vnd.github.v3+json',
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
-        'User-Agent': 'Gravel-God-Training-Plans'
+        'User-Agent': 'Road-Labs-Training-Plans'
       },
       body: JSON.stringify({ event_type: 'training-plan-request', client_payload: request })
     });

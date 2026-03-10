@@ -24,7 +24,7 @@ from pathlib import Path
 
 RACE_DATA = Path(__file__).resolve().parent.parent / "race-data"
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
-USER_AGENT = "GravelGodRaceDB/1.0 (gravel race geocoding)"
+USER_AGENT = "RoadLabsRaceDB/1.0 (road race geocoding)"
 
 # Manual overrides for locations that Nominatim can't resolve or gets wrong
 MANUAL_COORDS = {

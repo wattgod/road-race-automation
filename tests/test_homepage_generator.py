@@ -229,12 +229,12 @@ class TestGuideChapters:
 class TestSectionBuilders:
     def test_nav_has_logo(self):
         nav = build_nav()
-        assert "cropped-Gravel-God-logo" in nav
+        assert 'alt="Road Labs"' in nav  # TODO: update logo filename when asset exists
         assert "<img" in nav
 
     def test_nav_has_links(self):
         nav = build_nav()
-        assert "/gravel-races/" in nav
+        assert "/road-races/" in nav
         assert "/coaching/" in nav
         assert "/articles/" in nav
         assert "/about/" in nav
@@ -359,7 +359,7 @@ class TestSectionBuilders:
     def test_email_capture_has_content(self):
         html = build_email_capture()
         assert "Slow, Mid, 38s" in html
-        assert "substack.com/embed" in html
+        assert "TODO_ROADLABS_NEWSLETTER/embed" in html
         assert "rl-hp-email" in html
 
     def test_email_capture_with_articles(self):
@@ -378,10 +378,10 @@ class TestSectionBuilders:
 
     def test_footer_has_links(self):
         html = build_footer()
-        assert "/gravel-races/" in html
+        assert "/road-races/" in html
         assert "/coaching/" in html
         assert "/articles/" in html
-        assert "substack" in html.lower()
+        assert "TODO_ROADLABS_NEWSLETTER" in html
 
     def test_footer_has_copyright(self):
         html = build_footer()

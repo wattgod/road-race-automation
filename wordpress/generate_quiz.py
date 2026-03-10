@@ -33,7 +33,7 @@ from cookie_consent import get_consent_banner_html
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = Path(__file__).parent / "output" / "quiz"
 
-FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
+FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Road Labs workers
 
 
 def esc(text) -> str:

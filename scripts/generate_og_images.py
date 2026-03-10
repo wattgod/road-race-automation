@@ -36,7 +36,7 @@ except ImportError:
 
 W, H = 1200, 630
 
-# Brand colors — from gravel-god-brand/tokens/tokens.json
+# Brand colors — from road-labs-brand/tokens/tokens.json
 DARK_BROWN = (58, 46, 37)     # #3a2e25
 PRIMARY_BROWN = (89, 71, 60)  # #59473c
 SEC_BROWN = (125, 105, 93)    # #7d695d

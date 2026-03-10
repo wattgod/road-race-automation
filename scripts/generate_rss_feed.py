@@ -127,7 +127,7 @@ def generate_rss():
     <lastBuildDate>{now}</lastBuildDate>
     <atom:link href="{SITE_URL}/feed/races.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>{SITE_URL}/wp-content/uploads/2023/01/gravel-god-logo.png</url>
+      <url>{SITE_URL}/wp-content/uploads/2023/01/road-labs-logo.png</url><!-- TODO: upload Road Labs logo asset -->
       <title>Road Labs</title>
       <link>{SITE_URL}</link>
     </image>

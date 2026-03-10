@@ -694,9 +694,9 @@ def check_infographic_animation_a11y():
 
 
 def check_root_matches_brand_tokens():
-    """Verify :root CSS custom properties match gravel-god-brand/tokens/tokens.css."""
+    """Verify :root CSS custom properties match road-labs-brand/tokens/tokens.css."""
     print("\n── :root vs Brand Tokens Parity ──")
-    tokens_path = PROJECT_ROOT.parent / "gravel-god-brand" / "tokens" / "tokens.css"
+    tokens_path = PROJECT_ROOT.parent / "road-labs-brand" / "tokens" / "tokens.css"
     if not tokens_path.exists():
         warn(":root token parity", f"Brand tokens file not found at {tokens_path}")
         return
@@ -926,7 +926,7 @@ def check_all_generators_token_refs():
     --rl-font-weight-normal (correct: --rl-font-weight-regular).
     """
     print("\n── Cross-Cutting CSS Token Validation ──")
-    tokens_path = PROJECT_ROOT.parent / "gravel-god-brand" / "tokens" / "tokens.css"
+    tokens_path = PROJECT_ROOT.parent / "road-labs-brand" / "tokens" / "tokens.css"
     if not tokens_path.exists():
         warn("CSS token validation", f"Brand tokens not found at {tokens_path}")
         return

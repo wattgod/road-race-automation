@@ -86,7 +86,7 @@ def fetch_psi(url: str, strategy: str = "mobile", api_key: str | None = None) ->
 
     request_url = f"{PSI_API_URL}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(request_url)
-    req.add_header("User-Agent", "GravelGod-CWV-Monitor/1.0")
+    req.add_header("User-Agent", "RoadLabs-CWV-Monitor/1.0")
 
     resp = urllib.request.urlopen(req, timeout=60)
     return json.loads(resp.read().decode("utf-8"))

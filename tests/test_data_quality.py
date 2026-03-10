@@ -259,11 +259,11 @@ class TestDisciplineConsistency:
     """Discipline values must be consistent across sections."""
 
     def test_discipline_matches_between_rating_and_vitals(self):
-        """If both gravel_god_rating.discipline and vitals.discipline exist, they must match."""
+        """If both fondo_rating.discipline and vitals.discipline exist, they must match."""
         violations = []
         for fname, _, data in get_all_profiles():
             race = data.get("race", data)
-            rating_disc = race.get("gravel_god_rating", {}).get("discipline")
+            rating_disc = race.get("fondo_rating", {}).get("discipline")
             vitals_disc = race.get("vitals", {}).get("discipline")
             if rating_disc and vitals_disc and rating_disc != vitals_disc:
                 violations.append(

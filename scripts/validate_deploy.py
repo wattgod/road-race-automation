@@ -173,7 +173,7 @@ def check_redirects(v):
         ("/race/", "/gravel-races/"),
         ("/barry-roubaix-race-guide/", "/race/barry-roubaix/"),
         ("/belgian-waffle-ride/", "/race/bwr-california/"),
-        ("/training-plans-faq/gravelgodcoaching@gmail.com", "/training-plans-faq/"),
+        ("/training-plans-faq/TODO_ROADLABS_EMAIL", "/training-plans-faq/"),
     ]
     for source, expected in test_pairs:
         try:

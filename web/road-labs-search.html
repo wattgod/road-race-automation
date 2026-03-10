@@ -1,5 +1,5 @@
 <!--
-  Road Labs Race Search — Embeddable in WordPress via shortcode [gravel_search].
+  Road Labs Race Search — Embeddable in WordPress via shortcode [road_search].
 
   Loads race-index.json, renders filterable race cards with:
   - Tier-grouped collapsible sections (T1/T2 open, T3/T4 collapsed)
@@ -70,9 +70,11 @@
       <label for="rl-discipline">Discipline</label>
       <select id="rl-discipline">
         <option value="">All Types</option>
-        <option value="gravel" selected>Gravel</option>
-        <option value="mtb">MTB</option>
-        <option value="bikepacking">Bikepacking</option>
+        <option value="gran_fondo" selected>Gran Fondo</option>
+        <option value="sportive">Sportive</option>
+        <option value="century">Century</option>
+        <option value="multi_stage">Multi-Stage</option>
+        <option value="hillclimb">Hillclimb</option>
       </select>
     </div>
   </div>
@@ -148,7 +150,7 @@
   <!-- Static Race Directory — crawlable by search engines, independent of JS -->
   <div class="rl-race-directory">
     <h2 class="rl-directory-heading">Race Directory</h2>
-    <p class="rl-directory-desc">Browse all 317 gravel races rated by Road Labs. Click any race for the full review with course maps, ratings, and logistics.</p>
+    <p class="rl-directory-desc">Browse all road races rated by Road Labs. Click any race for the full review with course maps, ratings, and logistics.</p>
     <div class="rl-directory-tier">
       <h3 class="rl-directory-tier-heading tier-1">Tier 1 — The Icons (24)</h3>
       <div class="rl-directory-links">
@@ -504,7 +506,7 @@
     <a href="/race/methodology/">How We Rate Races</a>
   </div>
 
-  <script src="/wp-content/uploads/gravel-race-search.js"></script>
+  <script src="/wp-content/uploads/road-labs-search.js"></script>
   <!-- JS extracted to external file to prevent WordPress from stripping inline scripts.
        Original inline <script> block was being removed by SiteGround Optimizer / AIOS / WP sanitization.
        Deploy: python3 scripts/push_wordpress.py --sync-widget -->

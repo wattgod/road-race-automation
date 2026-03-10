@@ -29,7 +29,7 @@ from cookie_consent import get_consent_banner_html
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 SITE_NAME = "Road Labs"
-CONTACT_EMAIL = "gravelgodcoaching@gmail.com"
+CONTACT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Road Labs contact email
 SITE_URL = SITE_BASE_URL
 CURRENT_YEAR = date.today().year
 

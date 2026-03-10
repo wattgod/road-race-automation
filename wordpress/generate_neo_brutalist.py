@@ -215,8 +215,8 @@ def detect_country(location: str) -> str:
 SITE_BASE_URL = "https://roadlabs.cc"
 COACHING_URL = f"{SITE_BASE_URL}/coaching/apply/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/questionnaire/"
-SUBSTACK_URL = "https://gravelgodcycling.substack.com"
-SUBSTACK_EMBED = "https://gravelgodcycling.substack.com/embed"
+SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Road Labs newsletter
+SUBSTACK_EMBED = "https://TODO_ROADLABS_NEWSLETTER/embed"  # TODO: Road Labs newsletter
 CURRENT_YEAR = str(datetime.now().year)
 
 
@@ -1089,7 +1089,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 
 // Email capture form — prep kit CTA
 (function() {
-  var WORKER_URL='https://fueling-lead-intake.gravelgodcoaching.workers.dev';
+  var WORKER_URL='https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev';
   var LS_KEY='rl-pk-fueling';
   var EXPIRY_DAYS=90;
   var form=document.getElementById('rl-email-capture-form');
@@ -1140,7 +1140,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 
 // Inline review form
 (function() {
-  var WORKER_URL='https://review-intake.gravelgodcoaching.workers.dev';
+  var WORKER_URL='https://review-intake.TODO_ROADLABS_WORKERS.workers.dev';
   var form=document.getElementById('rl-review-form');
   if(!form) return;
 
@@ -1930,7 +1930,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"&location={quote(location_str)}"
         )
         ics_data = (
-            f"BEGIN:VCALENDAR\\nVERSION:2.0\\nPRODID:-//GravelGod//EN\\n"
+            f"BEGIN:VCALENDAR\\nVERSION:2.0\\nPRODID:-//RoadLabs//EN\\n"
             f"BEGIN:VEVENT\\n"
             f"DTSTART;VALUE=DATE:{iso_date}\\n"
             f"DTEND;VALUE=DATE:{iso_date}\\n"

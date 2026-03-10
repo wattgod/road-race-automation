@@ -35,7 +35,7 @@ class TestMegaFooterHTML:
     # ── Links ────────────────────────────────────────────────
 
     def test_races_links(self):
-        assert "/gravel-races/" in self.html
+        assert "/road-races/" in self.html
         assert "/race/methodology/" in self.html
 
     def test_products_links(self):
@@ -47,7 +47,7 @@ class TestMegaFooterHTML:
         assert "/consulting/" in self.html
 
     def test_articles_links(self):
-        assert "substack.com" in self.html
+        assert "TODO_ROADLABS_NEWSLETTER" in self.html
         assert "/articles/" in self.html
 
     # ── Brand ────────────────────────────────────────────────

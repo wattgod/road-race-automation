@@ -46,7 +46,7 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "gravel-guide-content.json"
-SUBSTACK_RSS_URL = "https://gravelgodcycling.substack.com/feed"
+SUBSTACK_RSS_URL = "https://TODO_ROADLABS_NEWSLETTER/feed"  # TODO: Road Labs newsletter
 
 CURRENT_YEAR = date.today().year
 
@@ -343,7 +343,7 @@ def load_upcoming_races(race_data_dir: Path = None, today: date = None) -> list:
 def fetch_substack_posts(limit: int = 6) -> list:
     """Fetch latest posts from Substack RSS with titles, URLs, and snippets."""
     try:
-        req = urllib.request.Request(SUBSTACK_RSS_URL, headers={"User-Agent": "GravelGod/1.0"})
+        req = urllib.request.Request(SUBSTACK_RSS_URL, headers={"User-Agent": "RoadLabs/1.0"})
         resp = urllib.request.urlopen(req, timeout=10)
         root = ET.fromstring(resp.read())
         posts = []

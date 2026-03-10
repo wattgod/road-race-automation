@@ -41,10 +41,10 @@ class TestHeaderHTML:
     def test_all_dropdown_links_present(self):
         html = get_site_header_html()
         expected = [
-            "All Gravel Races",
+            "All Road Races",
             "How We Rate",
             "Custom Training Plans",
-            "Gravel Handbook",
+            "Road Racing Handbook",
             "Coaching",
             "Consulting",
             "Slow Mid 38s",
@@ -66,7 +66,7 @@ class TestHeaderHTML:
 
     def test_logo_present(self):
         html = get_site_header_html()
-        assert "cropped-Gravel-God-logo.png" in html
+        assert 'alt="Road Labs"' in html  # TODO: update to road-labs-logo when asset exists
         assert 'class="rl-site-header-logo"' in html
 
     def test_aria_current_when_active(self):
@@ -93,11 +93,11 @@ class TestHeaderHTML:
 
     def test_substack_url(self):
         html = get_site_header_html()
-        assert "gravelgodcycling.substack.com" in html
+        assert "TODO_ROADLABS_NEWSLETTER" in html  # TODO: update when newsletter URL exists
 
     def test_correct_urls(self):
         html = get_site_header_html()
-        assert "/gravel-races/" in html
+        assert "/road-races/" in html
         assert "/race/methodology/" in html
         assert "/products/training-plans/" in html
         assert "/guide/" in html

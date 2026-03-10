@@ -731,7 +731,7 @@ def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
 
 
 # Worker URL for fueling lead intake
-FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
+FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Road Labs workers
 
 
 def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:

@@ -40,7 +40,7 @@ from cookie_consent import get_consent_banner_html
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 # Formsubmit.co endpoint — sends email to this address on submission
-FORMSUBMIT_EMAIL = "gravelgodcoaching@gmail.com"
+FORMSUBMIT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Road Labs contact email
 FORMSUBMIT_URL = f"https://formsubmit.co/{FORMSUBMIT_EMAIL}"
 
 
@@ -806,7 +806,7 @@ def build_submit_buttons() -> str:
 
 def build_footer() -> str:
     return f'''<div class="rl-apply-confidential-wrap">
-    <p class="rl-apply-confidential">Your information is kept confidential and used only for coaching purposes. Questions? Email gravelgodcoaching@gmail.com</p>
+    <p class="rl-apply-confidential">Your information is kept confidential and used only for coaching purposes. Questions? Email TODO_ROADLABS_EMAIL</p>
   </div>
   ''' + get_mega_footer_html()
 
@@ -1698,7 +1698,7 @@ def build_apply_js() -> str:
 
     var output = formatSubmission(data);
 
-    /* Submit via Formsubmit.co — sends email to gravelgodcoaching@gmail.com */
+    /* Submit via Formsubmit.co — sends email to TODO_ROADLABS_EMAIL */
     var FORMSUBMIT_URL = "''' + FORMSUBMIT_URL + '''";
     var payload = new FormData();
     payload.append("_subject", "Coaching Application: " + data.name);
@@ -1731,7 +1731,7 @@ def build_apply_js() -> str:
       /* Fallback: open email client with formatted body */
       var subject = encodeURIComponent("Coaching Application: " + data.name);
       var body = encodeURIComponent(output);
-      window.location.href = "mailto:gravelgodcoaching@gmail.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:TODO_ROADLABS_EMAIL?subject=" + subject + "&body=" + body;
       ga4("apply_form_fallback", { method: "mailto" });
     });
   });
@@ -1797,7 +1797,7 @@ def generate_apply_page(external_assets=None):
   <meta property="og:site_name" content="Road Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
-  <link rel="icon" href="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo-32x32.png" sizes="32x32"><!-- TODO: replace with Road Labs favicon -->
   {get_preload_hints()}
   {page_css}
   {get_ab_head_snippet()}

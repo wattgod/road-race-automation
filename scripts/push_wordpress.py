@@ -1420,7 +1420,7 @@ RewriteRule ^gravel-worlds/?$ /race/gravel-worlds/ [R=301,L]
 RewriteRule ^big-sugar/?$ /race/big-sugar/ [R=301,L]
 
 # /midsouth → TrainingPeaks plan (was PrettyLinks, now static redirect)
-# TODO: Update TrainingPeaks URL for Road Labs
+# TODO: Update TrainingPeaks URL for Road Labs (current URL still references gravel-god product)
 RewriteRule ^midsouth/?$ https://www.trainingpeaks.com/training-plans/cycling/gran-fondo-century/tp-260379/gravel-god-the-midsouth-base-to-race [R=307,L]
 
 # /about-me/ → /about/ (old WP page trashed, consolidate 1,169 impressions)
@@ -1435,7 +1435,7 @@ RewriteRule ^training-plans/?$ /products/training-plans/ [R=301,L]
 
 # Broken URL from GSC → parent page (404 fix)
 # TODO: Update email reference for Road Labs
-RewriteRule ^training-plans-faq/gravelgodcoaching@gmail\\.com$ /training-plans-faq/ [R=301,L]
+RewriteRule ^training-plans-faq/TODO_ROADLABS_EMAIL$ /training-plans-faq/ [R=301,L]
 </IfModule>
 # END Road Labs Redirects
 """

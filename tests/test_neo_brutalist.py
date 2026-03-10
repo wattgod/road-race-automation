@@ -871,7 +871,7 @@ class TestFooter:
 
     def test_footer_has_all_races_link(self):
         html = build_footer()
-        assert "/gravel-races/" in html
+        assert "/road-races/" in html
 
     def test_footer_has_methodology_link(self):
         html = build_footer()
@@ -879,7 +879,7 @@ class TestFooter:
 
     def test_footer_has_newsletter_link(self):
         html = build_footer()
-        assert "substack.com" in html
+        assert "TODO_ROADLABS_NEWSLETTER" in html
 
     def test_footer_has_disclaimer(self):
         html = build_footer()
@@ -897,7 +897,7 @@ class TestNav:
     def test_logo_links_to_homepage(self, normalized_data):
         html = build_nav_header(normalized_data, [])
         assert 'class="rl-site-header-logo"' in html
-        assert "cropped-Gravel-God-logo.png" in html
+        assert 'alt="Road Labs"' in html
         # Logo must link to site root
         assert 'href="https://roadlabs.cc/"' in html
 
@@ -908,7 +908,7 @@ class TestNav:
         assert '>SERVICES</a>' in html
         assert '>ARTICLES</a>' in html
         assert '>ABOUT</a>' in html
-        assert '/gravel-races/' in html
+        assert '/road-races/' in html
         assert '/products/training-plans/' in html
         assert '/coaching/' in html
         assert '/articles/' in html
@@ -918,7 +918,7 @@ class TestNav:
         html = build_nav_header(normalized_data, [])
         assert 'rl-site-header-dropdown' in html
         assert 'rl-site-header-item' in html
-        assert 'All Gravel Races' in html
+        assert 'All Road Races' in html
         assert 'How We Rate' in html
 
     def test_no_old_nav_classes(self, normalized_data):
@@ -964,7 +964,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert "cropped-Gravel-God-logo.png" in html
+        assert 'alt="Road Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
@@ -976,7 +976,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert "cropped-Gravel-God-logo.png" in html
+        assert 'alt="Road Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
