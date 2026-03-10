@@ -1,0 +1,264 @@
+{
+  "race": {
+    "name": "L'Etape Portugal by Tour de France",
+    "slug": "letape-portugal",
+    "display_name": "L'Etape Portugal",
+    "tagline": "The Tour de France comes to the Atlantic. ASO's franchise sportive in Portugal's green north. Rolling Alto Minho roads. Three jersey classifications. Your gateway to L'Etape du Tour.",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 2500,
+      "elevation_ft": 8202.0,
+      "location": "Viana do Castelo, Alto Minho, Northern Portugal",
+      "location_badge": "VIANA DO CASTELO, PORTUGAL",
+      "country": "Northern Portugal",
+      "date": "Late September annually (typically last Sunday of September)",
+      "date_specific": "2025: September 28",
+      "field_size": "~800 riders (growing annually since 2022 inaugural edition)",
+      "start_format": null,
+      "registration": "Online via official L'Etape Portugal website (portugal.letapebytourdefrance.com). Registration typically opens in spring. Managed by Podium Events in partnership with ASO.",
+      "entry_fee": "EUR 40-68 depending on distance selected (tiered by route length). Includes race number, chip timing, feed zones, medical assistance, broom wagon, finisher medal, and pasta party. Official L'Etape Portugal jersey available for separate purchase (EUR 45-55).",
+      "feed_zones": "3 feed zones along the route plus start/finish area support. Medical assistance and broom wagon throughout.",
+      "cutoff_time": "Approximately 8 hours for the long route",
+      "lat": 41.693,
+      "lng": -8.833,
+      "route_options": [
+        "Long route: ~140 km / 87 mi with ~2,500m / 8,202 ft of climbing — full Alto Minho route with all classified climbs",
+        "Medium route: ~100 km / 62 mi with ~1,600m / 5,249 ft of climbing — abbreviated route bypassing longest climbs",
+        "Short route: ~50 km / 31 mi with ~700m / 2,297 ft of climbing — introductory distance for less experienced riders"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate oceanic — late summer warmth with Atlantic moderation",
+      "description": "Late September in northern Portugal's Atlantic coast offers near-ideal cycling conditions. Viana do Castelo sits at the transition from dry summer into the rainy autumn season, with September being one of the last reliably dry months. Temperatures typically range from 15-24C (59-75F), with the morning start at the cooler end and the afternoon finish potentially warm. The oceanic influence from the Atlantic keeps temperatures moderate — never oppressively hot, rarely cold. Humidity can be moderate. Occasional sea breezes develop in the afternoon, particularly on exposed coastal sections. Rain probability in late September is low but not zero — when the autumn pattern arrives early, the green hills of Alto Minho can see steady Atlantic rain.",
+      "challenges": [
+        "Occasional Atlantic rain systems — if autumn arrives early, steady rain is possible",
+        "Afternoon sea breeze on exposed coastal and hilltop sections",
+        "Moderate humidity in valleys between climbs",
+        "Temperature differential between shaded valleys and exposed hilltops",
+        "Sun exposure on south-facing climbs can elevate perceived effort in clear conditions"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved — Portuguese municipal and national roads",
+      "surface": "Well-maintained paved roads throughout. The Alto Minho region features a mix of rolling terrain with short, steep ramps and longer sustained climbs through granite mountain landscapes. Road surfaces are generally good, with some rougher patches on the steeper mountain sections. The early flat kilometers follow coastal and river valley roads before the terrain kicks up into the characteristic Alto Minho hills. Descents are fast but not excessively technical. Portuguese road infrastructure in the Minho region is well-maintained for cycling. Expect some narrow mountain roads with limited shoulders on the climbing sections.",
+      "technical_rating": 1,
+      "features": [
+        "Opening flat section along the coast/river valley — approximately 40 km of pack riding",
+        "First climb: gentle 5.5 km ascent — the opening salvo after the flat start",
+        "Ardennes-style middle section: continuous short, steep climbs and descents with limited recovery",
+        "Main climb of the day: irregular gradient with steep ramps alternating with flatter sections and a brief descent mid-climb",
+        "Long descent from the main climb followed by a fast run to the finish",
+        "Finish near the Santuario de Santa Luzia above Viana do Castelo — the final ramps up to the iconic sanctuary"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 2,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A race of two halves joined by an Ardennes-style middle. The course starts from Viana do Castelo on the Atlantic coast and immediately enters approximately 40 km of flat-to-rolling terrain along river valleys and coastal roads, where the full field rides as a compact group and the peloton dynamics are pure road racing — positioning, drafting, and nervous energy. Then the road tilts upward. The first climb is a gentle 5.5 km introduction to the Alto Minho hills — not steep, not long, but enough to begin the selection. What follows is the defining character of the course: an extended Ardennes-style middle section of continuous short, steep climbs and descents through the green granite hills of the Minho. There is no single monster climb — instead, it is the relentless accumulation of 300-500m ramps at 6-10% that grinds you down. At approximately kilometer 70, a welcome long descent arrives, leading to the main climb of the day — an irregular ascent with steep sections alternating with flatter recovery stretches and even a brief descent mid-climb. The main climb is followed by a long, fast descent and a rolling final section back toward Viana do Castelo, where the route finishes near the iconic Santuario de Santa Luzia perched above the city. The final kilometers include the ramps up toward the sanctuary — a scenic sting in the tail that separates those with reserves from those running on fumes.",
+      "signature_challenge": "The Ardennes-style middle section. There is no single iconic climb — no Muro di Sormano, no Ghisallo, no Alpe d'Huez. Instead, L'Etape Portugal's character is defined by the relentless accumulation of short, steep climbs through the Alto Minho hills that refuse to let you recover. Each individual ramp is manageable. Collectively, across 30+ km of constant ascending and descending, they break you down methodically. It is the boxing match, not the knockout punch.",
+      "suffering_zones": [
+        "The Flat Pack",
+        "First Climb",
+        "Ardennes Section",
+        "Main Climb",
+        "Santa Luzia Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Porto International Airport (OPO) — 75 km south, approximately 45 minutes by car via the A28 motorway, or 1.5 hours by regional train along the scenic Atlantic coast. Porto is well-served by major European carriers and budget airlines (Ryanair, easyJet, TAP Portugal, Vueling).",
+      "lodging_strategy": "Stay in Viana do Castelo for maximum convenience — hotels and guesthouses range from EUR 50-120 per night. The FeelViana resort offers cycling-specific packages including accommodation and event services. Alternatively, stay in Porto (45 min drive) for wider accommodation options and combine the event with a city break. Book early for race weekend — Viana do Castelo has limited hotel capacity. Airbnb and local guesthouses (pensoes) offer budget alternatives.",
+      "transport": "",
+      "food": "Northern Portuguese cuisine is outstanding and affordable. Viana do Castelo specializes in Atlantic seafood — bacalhau (salt cod) prepared dozens of ways, grilled sardines, arroz de marisco (seafood rice). The Minho region produces Vinho Verde — a young, slightly sparkling white wine that pairs perfectly with seafood and costs EUR 3-5 per bottle. Pre-race carb loading: Portuguese bread, rice dishes, and pasteis de nata (custard tarts). Post-race: the event pasta party, followed by a Viana do Castelo seafood dinner with Vinho Verde. Budget EUR 10-15 for a full meal with wine at a local restaurant.",
+      "official_site": "https://portugal.letapebytourdefrance.com/"
+    },
+    "history": {
+      "founded": 2022,
+      "origin_story": "L'Etape Portugal was born in 2022 as part of ASO's global expansion of the Tour de France brand into amateur cycling events worldwide. The L'Etape Series — which now spans 30+ events in 21 countries — allows local organizers to license the Tour de France name, branding, and jersey classification system for regional sportives. Podium Events, a Portuguese event management company, secured the Portuguese franchise and chose Viana do Castelo and the Alto Minho region as the host — a strategic selection that combined scenic cycling roads, a cycling-friendly city (awarded European City of Sport 2023), and proximity to Porto's international airport. The inaugural 2022 edition was a proof of concept. The 2023 second edition built on that foundation, drawing riders from across Iberia and beyond. By 2024, the event had established itself as a fixture on the Portuguese cycling calendar, with routes that change annually to showcase different aspects of the Alto Minho landscape.",
+      "notable_moments": [
+        "2022: Inaugural edition in Viana do Castelo — the Tour de France brand arrives in Portugal",
+        "2023: Second edition — Viana do Castelo named European City of Sport 2023, aligning perfectly with the event's growth",
+        "2023: Cyclist magazine review brings international attention — 'L'Etape Portugal review: 140km with 2,500m climbing ft. Didi the Devil'",
+        "2024: Third edition (September 29) — route adjusted to 126/97/55 km distances, continued growth in participation",
+        "2025: Fourth edition scheduled for September 28 — route returns to approximately 140/100/50 km format"
+      ],
+      "reputation": "A young, well-organized Tour de France satellite event that has quickly established itself as one of Portugal's most notable road sportives. Known for tight organization, genuine competitive structure through the jersey classifications, and outstanding value in one of Europe's most affordable cycling destinations. Still building its reputation internationally, but respected within the Iberian cycling community."
+    },
+    "biased_opinion": {
+      "verdict": "The Tour de France's Affordable Atlantic Outpost",
+      "summary": "L'Etape Portugal is what happens when cycling's biggest brand meets one of Europe's most underrated cycling destinations. ASO and Podium Events have planted the Tour de France flag in Viana do Castelo — a beautiful Atlantic coast city in northern Portugal's green Minho region — and built a tidy, well-organized sportive with jersey classifications that genuinely mirror the Tour. You race for yellow, green, and polka dots on rolling Alto Minho roads with 2,500 meters of climbing, through a landscape of granite villages, Vinho Verde vineyards, and green hills that tumble toward the ocean. The field is small — roughly 800 riders — which means the atmosphere is intimate rather than electric, and the prestige cannot match the 16,000-rider spectacle of L'Etape du Tour in France. But the value proposition is hard to beat: EUR 40-68 entry, budget flights to Porto, cheap Portuguese accommodation and food, genuine Tour de France branding, and a pathway prize that sends jersey winners to the main event in France. This is cycling tourism done intelligently — a young event, still finding its legs, in a destination that deserves far more attention than it receives.",
+      "strengths": [
+        "Tour de France branding and ASO partnership — legitimate connection to cycling's biggest race",
+        "Jersey classifications (yellow, green, polka dot) with timed sprint and climbing sections — genuine competitive structure",
+        "Outstanding value — EUR 40-68 entry in one of Western Europe's most affordable destinations",
+        "Pathway to L'Etape du Tour — top 3 win a trip to France, all participants get priority registration",
+        "Alto Minho scenery — lush green hills, granite villages, Atlantic coast, Vinho Verde vineyards"
+      ],
+      "weaknesses": [
+        "Small field (~800 riders) — intimate but lacks the electric atmosphere of major sportives",
+        "Very young event (since 2022) — still building history, reputation, and depth",
+        "Satellite status — one of 30+ L'Etape Series events worldwide, not the iconic French edition",
+        "No globally recognized signature climb — the course is beautiful but lacks a mythic moment",
+        "Limited international awareness — most cyclists outside Iberia have never heard of it"
+      ],
+      "bottom_line": "The smart choice for riders who want the Tour de France experience without the Tour de France price tag. Beautiful roads, excellent organization, genuine jersey competition, and the chance to earn your way to France. The event has not yet earned a place among Europe's great sportives, but it might get there — and arriving early means you were there before it was cool."
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "ASO's Tour de France franchise in Portugal's green north. Rolling Alto Minho roads. Three jersey classifications. Affordable, well-organized, and still growing.",
+      "should_you_race": "Yes if you want a Tour de France branded sportive at a fraction of the cost of the French edition. Yes if the pathway prize — jersey winners go to L'Etape du Tour — appeals to your competitive ambitions. Yes if you want to discover Portugal's beautiful, underrated Minho region on well-organized roads. Yes if affordable European cycling tourism matters more to you than prestige. Skip if you want a large, electric, world-famous sportive — at 800 riders, this is intimate, not epic. Skip if you need iconic climbs with global recognition — Alto Minho is scenic but anonymous. Skip if you expect the depth and intensity of UCI-sanctioned gran fondos.",
+      "alternatives": "If you want the real L'Etape du Tour experience: ride L'Etape du Tour de France in France with 16,000 riders on actual Tour stages. If you want a prestigious Iberian sportive: try GranFondo Alberto Contador in Spain. If you want Portuguese cycling with more climbing: try GranFondo Serra da Estrela. If you want a major European branded sportive with better value: try L'Etape Series events in Turkey or Czech Republic."
+    },
+    "citations": [
+      {
+        "url": "https://portugal.letapebytourdefrance.com/",
+        "category": "official",
+        "label": "L'Etape Portugal by Tour de France — Official Site"
+      },
+      {
+        "url": "https://www.letapeseries.com/",
+        "category": "official",
+        "label": "L'Etape Series by Tour de France — Official Series Site"
+      },
+      {
+        "url": "https://podi1.com/event/letape-portugal/",
+        "category": "official",
+        "label": "L'Etape Portugal — Podium Events (Local Organizer)"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/etape-portugal-review",
+        "category": "review",
+        "label": "L'Etape Portugal review: 140km with 2,500m climbing ft. Didi the Devil — Cyclist Magazine"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/article/letape-portugal-a-tightly-organized-battle-for-the-jerseys/4222",
+        "category": "review",
+        "label": "L'Etape Portugal: a tightly organized battle for the jerseys — Cycloworld"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/11127/letape-portugal",
+        "category": "reference",
+        "label": "L'Etape Portugal — Gran Fondo Guide"
+      },
+      {
+        "url": "https://battistrada.com/en/cycling-calendar/edition/letape-portugal-2025/42855/",
+        "category": "reference",
+        "label": "L'Etape Portugal 2025 Edition — Battistrada"
+      },
+      {
+        "url": "https://breatheviana.pt/en/event/letape-portugal-by-tour-de-france-2/",
+        "category": "reference",
+        "label": "L'Etape Portugal by Tour de France — Viana do Castelo Tourism"
+      },
+      {
+        "url": "https://stopandgo.net/events/l-etape-portugal-by-tour-de-france-2024",
+        "category": "reference",
+        "label": "L'Etape Portugal by Tour de France 2024 — StopAndGo"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/santuario-de-santa-luzia-viana-do-castelo",
+        "category": "reference",
+        "label": "Santuario de Santa Luzia from Viana do Castelo — ClimbFinder"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "L'Etape Portugal by Tour de France gran fondo cycling Viana do Castelo",
+      "videos": [
+        {
+          "video_id": "aFtdHwJxl4I",
+          "title": "L'Etape Portugal by Tour de France 2022",
+          "channel": "Podium Events",
+          "view_count": 339,
+          "upload_date": "20230911",
+          "duration_string": "3:08",
+          "description": "L'Etape Portugal by Tour de France 2022 em Viana do castelo",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=aFtdHwJxl4I",
+          "curated": false
+        },
+        {
+          "video_id": "c8X48Od1ois",
+          "title": "l'étape portugal by tour de france Viana do Castelo 2022",
+          "channel": "Paulo Ferreira",
+          "view_count": 237,
+          "upload_date": "20221005",
+          "duration_string": "1:50",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=c8X48Od1ois",
+          "curated": false
+        },
+        {
+          "video_id": "Cmp7PMfX9GU",
+          "title": "Ciclismo L'Étape Portugal by Tour de France",
+          "channel": "CANAL VIANA WebTV",
+          "view_count": 88,
+          "upload_date": "20220622",
+          "duration_string": "9:37",
+          "description": "🔴🟢🔵 Viana do Castelo acolhe dias 1 e 2 de outubro, a primeira edição da LÉtape Portugal by Tour de France um evento de ciclismo para todos.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=Cmp7PMfX9GU",
+          "curated": false
+        },
+        {
+          "video_id": "3TLIYQS36cQ",
+          "title": "Viana do Castelo acolhe L’Étape Portugal by Tour de France",
+          "channel": "Viana TV",
+          "view_count": 137,
+          "upload_date": "20220623",
+          "duration_string": "3:15",
+          "description": "No âmbito da Cidade Europeia do Desporto 2023, Viana do Castelo vai acolher, nos dias 1 e 2 de outubro, a primeira edição da L’Étape Portugal, evento de ciclismo para todos com a chancela oficial do Tour de France. \n\nA prova inclui três distâncias, arrancando do Centro Cultural terminando junto ao Santuário do Sagrado Coração de Jesus, no topo do Monte de Santa Luzia. \n\nNesta edição em Viana do Castelo, vão ser homenageados os 33 ciclistas portugueses que já participaram na Tour de France, conquistando 14 etapas em todas as edições.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=3TLIYQS36cQ",
+          "curated": false
+        },
+        {
+          "video_id": "-vivg4hx6V0",
+          "title": "Granfondo Viana Do Castelo 2023",
+          "channel": "Marquitos marco",
+          "view_count": 1571,
+          "upload_date": "20230321",
+          "duration_string": "10:16",
+          "description": "https://www.instagram.com/marcocouto1?igsh=MWgxYjhmNnJqa3hiOA%3D%3D&utm_source=qr",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=-vivg4hx6V0",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

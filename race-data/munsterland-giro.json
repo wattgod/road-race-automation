@@ -1,0 +1,329 @@
+{
+  "race": {
+    "name": "Sparkassen Munsterland Giro",
+    "slug": "munsterland-giro",
+    "display_name": "Munsterland Giro",
+    "tagline": "Germany's biggest Jedermann cycling event. Up to 7,500 riders roll through the Munsterland on October 3rd, finishing at the Schlossplatz in Munster — Germany's bicycle capital — while UCI pros battle on the same roads in the afternoon.",
+    "vitals": {
+      "distance_km": 125.0,
+      "distance_mi": 78.0,
+      "elevation_m": 900.0,
+      "elevation_ft": 2953.0,
+      "location": "Munster, North Rhine-Westphalia, Germany",
+      "location_badge": "MUNSTER, GERMANY",
+      "country": "Germany",
+      "date": "October 3 annually (German Unity Day)",
+      "date_specific": "2026: October 3",
+      "field_size": "4,500-7,500 amateur riders (LeezenCup), plus professional UCI 1.Pro peloton",
+      "start_format": null,
+      "registration": "Online via muensterland-giro.de. Opens November of prior year. Early-bird pricing available until end of April, prices increase by EUR 10 from May onward. Late registration surcharge of EUR 15 from late September. Sells out — the 2025 LeezenCup was fully booked.",
+      "entry_fee": "EUR 45-80 (tiered pricing, early-bird discounts, late registration surcharge)",
+      "feed_zones": "Feed stations along each route with water, food, and mechanical support. Medical assistance throughout.",
+      "cutoff_time": "All amateur routes must finish before the professional race closure of roads in the afternoon.",
+      "lat": 51.9607,
+      "lng": 7.6261,
+      "route_options": [
+        "LeezenCup 60 km — 60 km / 100m elevation — flat park landscape, ideal for beginners",
+        "LeezenCup 95 km — 95 km / 500m elevation — rolling Munsterland terrain for ambitious amateurs",
+        "LeezenCup 125 km — 125 km / 900m elevation — Teutoburg Forest foothills for strong riders"
+      ]
+    },
+    "climate": {
+      "primary": "Northern European autumn — cool, variable, rain possible",
+      "description": "Early October in Munster averages 10-13C (50-55F) with variable conditions. The Munsterland is exposed lowland terrain where Atlantic weather systems bring frequent cloud cover and a meaningful chance of rain. Wind across the flat agricultural landscape is a constant factor. October 3 has historically delivered conditions ranging from dry and mild (18C in 2023) to overcast and cool (13C in 2024). The open landscape offers no shelter from wind or rain.",
+      "challenges": [
+        "October rain risk — wet roads on flat terrain with large peloton groups",
+        "Wind exposure across flat, open Munsterland agricultural landscape",
+        "Cool autumn temperatures (8-13C) — arm warmers and gilet essential",
+        "Large field sizes create crowding on narrow rural roads in early kilometers",
+        "Conditions can deteriorate rapidly with Atlantic weather fronts"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat to gently rolling paved roads through the Munsterland region",
+      "surface": "Entirely paved roads throughout. Well-maintained German rural roads and cycling infrastructure through North Rhine-Westphalia. Munsterland is famously flat — the 60 km route gains only 100 meters of elevation across its entire distance. The 95 km route introduces gentle rolling terrain with 500m of climbing. The 125 km route ventures into the Teutoburg Forest foothills and the Baumberge hills, adding variety with moderate climbs up to 900m total elevation. Road surface quality is excellent — Germany's cycling infrastructure in the Munsterland is among the best in Europe. All routes finish with a run through central Munster to the Schlossplatz at the Prince-Bishop's Palace.",
+      "technical_rating": 1,
+      "features": [
+        "60 km route: entirely flat through Munsterland park landscape — 100m total elevation, perfect for recreational riders",
+        "95 km route: gentle rolling terrain through western Munsterland — 500m elevation, typical Munsterland cycling",
+        "125 km route: Teutoburg Forest foothills and Baumberge hills — 900m elevation with moderate climbs and descents",
+        "All routes share the iconic finish along the Promenade into Schlossplatz at the Prince-Bishop's Palace",
+        "Rotating start cities through Munsterland districts — the route changes annually",
+        "2026 route announced through the Baumberge region"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A flat to gently rolling sportive through the Munsterland region of North Rhine-Westphalia, with three distance options designed for mass participation. The routes radiate out from a rotating start city through pastoral park landscape, Baumberge hills, and the edge of the Teutoburg Forest before converging on the iconic Schlossplatz finish in central Munster. The course changes annually as start cities rotate through Munsterland districts, but the character remains constant — wide German roads through gentle countryside with a festival finish.",
+      "signature_challenge": "Wind across the open Munsterland. The course may be flat, but the exposure to North German wind transforms gentle terrain into a genuine endurance test. The Munsterland offers no shelter — no hills, no forests, no buildings — just flat agricultural landscape where a 25 km/h headwind adds 30 minutes to your finishing time and strips the romance from pastoral cycling.",
+      "suffering_zones": [
+        "Mass Start",
+        "Munsterland Park Landscape",
+        "Baumberge Hills (95 km and 125 km routes)",
+        "Teutoburg Forest Fringe (125 km route only)",
+        "Return to Munster",
+        "Schlossplatz Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Munster Osnabruck (FMO) 30 km north — regional airport with limited routes. Dusseldorf (DUS) 160 km south — best international airport, excellent rail connection (~1.5 hr by train). Frankfurt (FRA) 300 km south (~3 hr by train). Amsterdam Schiphol (AMS) 280 km west (~3 hr by train). Direct ICE trains from major German cities.",
+      "lodging_strategy": "Munster is a university city with extensive accommodation at reasonable prices. Hotels near the Hauptbahnhof or city center put you within cycling distance of Schlossplatz. Budget options from EUR 60-80/night, mid-range EUR 100-150/night. Book early — the event sells out and German Unity Day weekend fills hotels. Nearby towns (Greven, Telgte, Warendorf) offer additional options if Munster fills up. The compact city center means most accommodation is walkable or bikeable.",
+      "transport": "",
+      "food": "Munster has excellent dining from traditional Westphalian cuisine to international options, befitting a vibrant university city. Post-ride, the Schlossplatz festival area has food vendors. The Kiepenkerl quarter and Prinzipalmarkt offer traditional dining. Pumpernickel bread, Westphalian ham, and Altbier (Pinkus Muller brewery) are local specialties.",
+      "official_site": "https://muensterland-giro.de/"
+    },
+    "history": {
+      "founded": 2006,
+      "origin_story": "The Sparkassen Munsterland Giro traces its roots to the 2002 Giro d'Italia, which featured a stage from Groningen (Netherlands) to Munster. That connection spawned the Groningen-Munster race, but economic difficulties in Groningen forced its discontinuation. In 2006, the City of Munster's Sports Department launched the Sparkassen Munsterland Giro as a purely German successor, starting as a UCI 1.2 race. The event grew rapidly — elevated to UCI 1.1 in 2007, then to 1.HC (highest continental classification) in 2015, and 1.Pro by the 2020s. The amateur Jedermann (everyone's race) component, branded as the LeezenCup after the Munster dialect word for bicycle, became Germany's largest amateur cycling event with up to 7,500 participants. The name 'Giro' — Italian for tour — survives as a direct link to that 2002 Giro d'Italia stage.",
+      "notable_moments": [
+        "2002: Giro d'Italia stage from Groningen to Munster plants the seed for a future one-day race",
+        "2006: Inaugural Sparkassen Munsterland Giro as UCI 1.2 race — Paul Martens wins",
+        "2007: Upgraded to UCI 1.1 classification — Jos van Emden wins",
+        "2008: Andre Greipel takes his first of two Munsterland Giro victories",
+        "2011-2012: Marcel Kittel wins back-to-back — the German sprint star dominates",
+        "2015: Tom Boonen wins as the race earns UCI 1.HC classification — highest continental tier",
+        "2017: Sam Bennett wins, confirming the race's attraction for Europe's top sprinters",
+        "2020: Event cancelled due to COVID-19 — only missed edition in history",
+        "2021: Mark Cavendish wins — one of cycling's all-time greats on the Munsterland roads",
+        "2022: Olav Kooij wins as the event returns to full strength with 7,500 amateur starters",
+        "2023: Per Strand Hagenes wins the pro race; LeezenCup continues to sell out",
+        "2024: Jasper Philipsen wins for the first time — one of the world's best sprinters",
+        "2025: Jasper Philipsen defends his title — 19th edition, LeezenCup fully booked again",
+        "2026: 20th edition announced with route through the Baumberge region"
+      ],
+      "reputation": "The Sparkassen Munsterland Giro is the undisputed centerpiece of German amateur road cycling. Held in Munster — a city where bicycles outnumber people and cycling is woven into daily life — the event combines Germany's largest amateur sportive with a UCI 1.Pro professional race that attracts world-class sprinters. The roll call of professional winners reads like a sprinting hall of fame: Greipel, Kittel, Boonen, Cavendish, Philipsen. For amateur riders, the LeezenCup offers the rare experience of riding the same roads as WorldTour professionals on the same day, finishing at the same Schlossplatz, with 4,500-7,500 fellow cyclists. Twenty editions organized by the City of Munster's Sports Department have built an event with institutional credibility and community depth that commercial promoters rarely achieve."
+    },
+    "biased_opinion": {
+      "verdict": "Germany's Biggest Amateur Cycling Festival",
+      "summary": "The Sparkassen Munsterland Giro is the kind of event that makes you appreciate what German organizational efficiency can do with a flat landscape and a public holiday. Up to 7,500 riders on three distances through the Munsterland, finishing at a Baroque palace, followed by watching WorldTour sprinters contest the same finish line — all on German Unity Day. The terrain will not challenge your climbing legs. The wind might challenge your soul. But the combination of massive amateur participation, UCI professional racing, a 5,000-square-meter cycling trade fair, and Munster's deep-rooted cycling culture creates an experience that transcends the simplicity of the course. This is not a ride you do for the suffering. This is a ride you do for the spectacle, the community, and the singular pleasure of finishing at the Schlossplatz just hours before Jasper Philipsen does the same.",
+      "strengths": [
+        "Germany's largest amateur cycling event — 4,500-7,500 riders across three distances",
+        "UCI 1.Pro professional race on the same day and course — world-class sprinters finish where you finished",
+        "Excellent organization by City of Munster Sports Department with 20 editions of refinement",
+        "Three distance options (60/95/125 km) make it accessible to everyone from beginners to strong amateurs",
+        "Massive 5,000-square-meter cycling trade fair and festival at the Schlossplatz finish",
+        "German Unity Day (October 3) means national holiday atmosphere with full road closures",
+        "Munster is Germany's bicycle capital — cycling culture is authentic, not manufactured",
+        "Affordable destination with excellent transport connections"
+      ],
+      "weaknesses": [
+        "Flat terrain offers minimal physical challenge — the Munsterland is not climbing country",
+        "October weather in northern Germany is unpredictable — wind and rain are real risks",
+        "Large field sizes (7,500) mean crowded roads in the early kilometers",
+        "The professional and amateur races are separate — you ride in the morning, pros race in the afternoon",
+        "Routes change annually — no single iconic course to benchmark against",
+        "Limited international recognition outside European cycling circles",
+        "Sells out — late decision-makers may miss registration entirely"
+      ],
+      "bottom_line": "If you want a physically punishing ride through dramatic mountains, look elsewhere. If you want the best amateur cycling festival in Germany — massive participation, professional racing, a genuine cycling city, and the kind of event-day atmosphere that justifies the travel — the Munsterland Giro delivers. It is the German cycling community's annual family reunion, held in the one city that takes cycling more seriously than anywhere else in the country."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Germany's largest amateur cycling sportive — up to 7,500 riders through the Munsterland, finishing at Munster's Schlossplatz alongside a UCI 1.Pro professional race on German Unity Day.",
+      "should_you_race": "If you want to experience Germany's cycling culture at its most concentrated — absolutely. The Munsterland Giro is the country's biggest amateur cycling event in its most cycling-obsessed city, on a national holiday, with WorldTour professionals racing the same roads. If you need mountains, vertical, or technical terrain — this is not your event. If you are visiting from outside Europe, combine it with the Velothon Berlin, a Rhine cycling trip, or Cologne cycling events to build a worthwhile German cycling tour.",
+      "alternatives": "For European sportive with climbing: Amstel Gold Race Toerversie (Netherlands, 30 climbs). For Alpine gran fondo: Arlberg Giro (Austria, 2,500m climbing). For German cycling culture: Velothon Berlin. For flat fast sportive: L'Eroica (Italy, different character but iconic). For pro-am format: Prudential RideLondon."
+    },
+    "citations": [
+      {
+        "url": "https://muensterland-giro.de/",
+        "category": "official",
+        "label": "Sparkassen Munsterland Giro Official Website"
+      },
+      {
+        "url": "https://muensterland-giro.de/leezencups/",
+        "category": "official",
+        "label": "LeezenCup Amateur Race Information"
+      },
+      {
+        "url": "https://www.muensterland.com/en/tourism/topics/cycling/sparkassen-munsterland-giro/",
+        "category": "official",
+        "label": "Munsterland Tourism: Sparkassen Munsterland Giro"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/8829/sparkassen-m%C3%BCnsterland-giro",
+        "category": "media",
+        "label": "Gran Fondo Guide: Sparkassen Munsterland Giro"
+      },
+      {
+        "url": "https://www.ahotu.com/event/sparkassen-munsterland-giro",
+        "category": "media",
+        "label": "Ahotu: Sparkassen Munsterland Giro"
+      },
+      {
+        "url": "https://www.procyclingstats.com/race/munsterland-giro",
+        "category": "media",
+        "label": "ProCyclingStats: Munsterland Giro Statistics and Records"
+      },
+      {
+        "url": "https://ms-aktuell.de/sport/sparkassen-muensterland-giro-2025-ergebnisse-sieger-und-geschichten-aus-muenster/",
+        "category": "media",
+        "label": "MS Aktuell: Munsterland Giro 2025 Results"
+      },
+      {
+        "url": "https://www.westfalen-regional.de/de/giro/",
+        "category": "community",
+        "label": "Westfalen Regional: Sparkassen Munsterland Giro"
+      },
+      {
+        "url": "https://mtb-ms.de/strecken-gpx-muensterland-giro/",
+        "category": "route",
+        "label": "MTB Munster: Munsterland Giro Routes and GPX Tracks"
+      },
+      {
+        "url": "https://www.kreis-coesfeld.de/aktuelles/pressemeldungen/details/news-nach-dem-giro-ist-vor-dem-giro",
+        "category": "official",
+        "label": "Kreis Coesfeld: 2026 Munsterland Giro Route Through Baumberge"
+      },
+      {
+        "url": "https://muensterland-giro.de/wp-content/uploads/2025/02/AGB-2025_SMG_Stand_23.09.2024_en.pdf",
+        "category": "official",
+        "label": "Sparkassen Munsterland Giro 2025 Terms and Conditions (English)"
+      },
+      {
+        "url": "https://battistrada.com/en/cycling-calendar/edition/sparkassen-munsterland-giro-jedermann-rennen-2022/4376/",
+        "category": "media",
+        "label": "Battistrada: Munsterland Giro Jedermann-Rennen 2022"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Sparkassen Munsterland Giro gran fondo cycling Munster",
+      "videos": [
+        {
+          "video_id": "W40ApdClsDE",
+          "title": "Sparkassen Giro Münsterland 2016 110km",
+          "channel": "Leezen Malocher Monasteria",
+          "view_count": 212,
+          "upload_date": "20161029",
+          "duration_string": "19:54",
+          "description": "Rennrad",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=W40ApdClsDE",
+          "curated": false
+        },
+        {
+          "video_id": "HzpSs0Q1RGM",
+          "title": "Uphills, sprints and quality time @ Sparkassen Münsterland Giro",
+          "channel": "Alpecin Cycling",
+          "view_count": 961,
+          "upload_date": "20161007",
+          "duration_string": "1:28",
+          "description": "End of the season in october and it's time for the Münsterland Giro. Alpecin Cycling All Stars, invited guests and our professional Riders had a great time in Münster and the surrounding area. Thanks Dege for winning and good luck at the UCI World Championchips!     \n++++++++++\n\nFollow us: http://facebook.com/alpecincycling\n\nAlpecin Cycling TV - the official video platform of the Alpecin Cycling movement. Background information, tutorials and news concerning professional race biking and Gran Fondo Cycling.",
+          "tags": [
+            "alpecincycling",
+            "alpecin",
+            "degenkolb",
+            "endofseason",
+            "giant-alpecin",
+            "TGA",
+            "sparkassen münsterland giro"
+          ],
+          "url": "https://www.youtube.com/watch?v=HzpSs0Q1RGM",
+          "curated": false
+        },
+        {
+          "video_id": "rdm-kMR58_I",
+          "title": "Rad Race auf dem Prinzipalmarkt in Münster (Münsterland Giro)",
+          "channel": "Westfälische Nachrichten",
+          "view_count": 619,
+          "upload_date": "20141003",
+          "duration_string": "10",
+          "description": "Das Rad Race auf dem Prinzipalmarkt bietet das Kontrastprogramm zum klassischen Radsport: Zu Hip-Hop-Musik müssen die Starter eine 160 m lange Strecke möglichst schnell zurück legen.",
+          "tags": [
+            "Münster (German City)",
+            "Rad Race",
+            "Sprint",
+            "Sport",
+            "Fahrrad",
+            "Rennen",
+            "Rennrad",
+            "Ride",
+            "Racing",
+            "Bike",
+            "Bicycle",
+            "Cycling",
+            "Riding",
+            "Münsterland Giro (Recurring Event)"
+          ],
+          "url": "https://www.youtube.com/watch?v=rdm-kMR58_I",
+          "curated": false
+        },
+        {
+          "video_id": "QOlLB0ebve4",
+          "title": "Münster: Rennrad - Sparkassen Münsterland Giro 2014 - 70km - Das Rennen (Garmin Virb Elite)",
+          "channel": "Münster Rennradstrecken",
+          "view_count": 10151,
+          "upload_date": "20141004",
+          "duration_string": "2:04:26",
+          "description": "Münster: Rennrad - Sparkassen Münsterland Giro 2014 - 70km Strecke - Das Rennen in voller Länge (Garmin Virb Elite)\n\nStart aus Block C\n\nDieses Video zeigt das 70km-Rennen des Sparkassen Münsterland Giro 2014 in voller Länge, aufgenommen vom Rennrad aus. Die Höhenangabe stimmt nicht: Ich habe in der Hektik vor dem Start vergessen, die Höhe korrekt einzustellen. Sorry.\n\nLeider habe ich nach Laer heftigste Krämpfe in beiden Oberschenkeln bekommen (Vastus medialis), so dass die letzten 25km nur mit Einschränkung gefahren werden konnten. Verstehe ich echt nicht, habe ich noch nie gehabt. Pech eben. Dummerweise habe ich die Gruppe, in der ich war, verloren und fuhr zwischen Laer und Altenberge alleine im Wind; danach auch zum Teil. Macht nichts, nächstes Jahr kommt bald! Das Ganze war super cool, hab's sehr genossen!\n\nAm Besten mit HD (1280x720) ansehen!\n\nAufgenommen: 3. Oktober 2014. Kamera: Garmin Virb Elite.\n\nFahrer: 56 Jahre alt, mäßig trainiert.\nRad: Cube Peloton Race, Standardausstattung (50/34 - 12,13,14,15,17,19,21,24,27,30)\n\nDie GPS-Overlays wurden von einem Garmin Edge importiert und können um einige Sekunden von der Videodarstellung abweichen. Die Steigungsprozent sind - wie immer bei Garmin - etwas konfus.",
+          "tags": [
+            "Münster (German City)",
+            "Cycle Sport (Sport)",
+            "Bicycle Race (Composition)",
+            "Münsterland Giro 2014",
+            "Garmin Virb Elite"
+          ],
+          "url": "https://www.youtube.com/watch?v=QOlLB0ebve4",
+          "curated": true,
+          "curation_reason": "Full-length first-person race footage providing complete course experience with good view count.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/QOlLB0ebve4/maxresdefault.jpg",
+          "thumbnail_score": 71.88
+        },
+        {
+          "video_id": "FmntavJLflM",
+          "title": "Gran Fondo Vienna Junior Giro",
+          "channel": "Gran Fondo Vienna",
+          "view_count": 524,
+          "upload_date": "20160519",
+          "duration_string": "1:58",
+          "description": "Am Anfang war – das Fahrrad! Nahezu jeder von uns erinnert sich an die wackeligen Anfänge auf dem ersten Fahrrad. Schnell haben wir aber gelernt, mit dem neuen Sportgerät um den Häuserblock zu flitzen und unseren Aktionsradius um ein vielfaches erweitert. Schnell war auch die erste Wettfahrt mit der Freundin oder dem Freund von nebenan gestartet – Auch eine unvergessliche Erinnerung. Wir alle haben also schon früh unsere Radsportkarriere begonnen.\n Das Team des Gran Fondo Giro d’Italia Vienna hat es sich zum Ziel gesetzt, genau diese Radsportkarrieren zu fördern und auch schon den kleinsten den Spaß am Radsport zu vermitteln.\nwww.granfondovienna.com",
+          "tags": [
+            "Gran Fondo Giro d'Italia Vienna",
+            "Gran Fondo Vienna",
+            "Junior Giro",
+            "Radmarathon",
+            "Kinderrennen",
+            "Kinderradrennen"
+          ],
+          "url": "https://www.youtube.com/watch?v=FmntavJLflM",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

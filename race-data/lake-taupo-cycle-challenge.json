@@ -1,0 +1,285 @@
+{
+  "race": {
+    "name": "Lake Taupo Cycle Challenge",
+    "slug": "lake-taupo-cycle-challenge",
+    "display_name": "Lake Taupō Cycle Challenge",
+    "tagline": "7,000 riders. One volcanic lake. 160 km around the largest caldera in the Southern Hemisphere. New Zealand's biggest cycling event since 1977.",
+    "vitals": {
+      "distance_km": 160.0,
+      "distance_mi": 99.4,
+      "elevation_m": 1953,
+      "elevation_ft": 6407.0,
+      "location": "Taupō, Waikato, New Zealand",
+      "location_badge": "TAUPŌ, NEW ZEALAND",
+      "country": "New Zealand",
+      "date": "Late November annually",
+      "date_specific": "2026: November 28",
+      "field_size": "7,000+ riders (peak of 10,000+ in the late 2000s)",
+      "start_format": null,
+      "registration": "Online via cyclechallenge.com. Entry fees range from $59-$229 NZD (~$35-135 USD) depending on event category. Late entries available on-site for additional $20 NZD. Children 15 and under half price with paid adult.",
+      "entry_fee": "$59-$229 NZD (~$35-135 USD)",
+      "feed_zones": "Multiple water stops and R-Line Electrolyte stations around the lake. Only shops on course are in Tihoi and Turangi. All other nutrition is rider-supplied.",
+      "cutoff_time": "7:00 PM hard cutoff — riders removed from course if they cannot finish by then",
+      "lat": -38.6833,
+      "lng": 176.0833,
+      "route_options": [
+        "Round the Lake: ~160 km (99.4 mi) — the flagship single-lap circuit",
+        "Enduro: ~322 km (200 mi) — two full laps, starts at 1:30 AM",
+        "Great Lake 100: ~100 km (62 mi) — new for 2025",
+        "80 km Adventure Ride: tar seal, gravel, and MTB tracks",
+        "100 km Mountain Bike: off-road tracks",
+        "Huka Steamer: 60 km mountain bike",
+        "Huka Teaser: 30 km",
+        "Lakesider: 16 km leisure ride"
+      ]
+    },
+    "climate": {
+      "primary": "Late Southern Hemisphere spring — mild, changeable, and potentially windy",
+      "description": "Late November in Taupō sits on the cusp of summer. Average highs of 18C (64F) with lows around 8C (47F). The volcanic plateau elevation at 357 metres keeps temperatures cooler than coastal NZ. November is one of Taupō's wetter months, averaging 110 mm of rain over ~12 days. Humidity runs around 82%. The saving grace is long daylight — 14+ hours with sunrise before 6 AM — and when the sun is out, the riding conditions are superb. But weather can change quickly in the central North Island.",
+      "challenges": [
+        "Wind: averaging 17 km/h but gusts on exposed lakeside and hilltop sections can be significant — particularly on SH32 and the Hatepe Hill section",
+        "Rain: 37% chance of rain on any given November day — riders must be prepared for wet roads on state highways",
+        "Temperature swings: 8C at the 6 AM start to 18C+ by midday — early starters in the Enduro (1:30 AM) face genuine cold",
+        "UV exposure: intense Southern Hemisphere UV even on overcast days — 6+ hours of exposure on the full lap"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved state highways circumnavigating Lake Taupō",
+      "surface": "State Highways 32, 41, and 1 plus Poihipi Road. All sealed tarmac throughout the Round the Lake event. Road surfaces are generally well-maintained New Zealand state highways with some rough patches on SH32.",
+      "technical_rating": 1,
+      "features": [
+        "Waihaha Hill (SH32) — rolling undulations with a notorious false summit that psychologically breaks riders who think the climbing is done",
+        "Waihi Hill (SH41) — the infamous grind with spectacular lake views from the summit before a fast descent into Turangi",
+        "Hatepe Hill (SH1) — the gruelling late-course climb between Turangi and Taupō with the most scenic backdrop of the entire event",
+        "Geothermal steam fields along Poihipi Road — otherworldly volcanic landscape in the opening kilometres",
+        "Eastern shore lakeside corridor — crystal-clear waters of Lake Taupō with volcanic peaks visible on the horizon"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A circumnavigation, not a criterium. The 160 km circuit follows state highways around Lake Taupō — New Zealand's largest lake and the caldera of the Taupō supervolcano. The terrain is rolling rather than mountainous, with three named hills providing structure: Waihaha (the false summit), Waihi (the big grind), and Hatepe (the late-course sting). The route passes through geothermal steam fields, rolling Waikato farmland, quiet southern-shore settlements, and the crystal-clear eastern lakeside. On a clear day, the volcanic peaks of Tongariro, Ngauruhoe, and Ruapehu dominate the southern horizon. The course rewards steady pacing over 5-8 hours, not explosive power.",
+      "signature_challenge": "The three hills — Waihaha, Waihi, and Hatepe — are the spine of the course. None of them are Alpine monsters, but each has its character: Waihaha lies with its false summit, Waihi demands sustained effort for the best views of the day, and Hatepe arrives when your legs have already given 120 km of effort. The real challenge is the totality: 160 km, 1,953 metres of climbing, potentially exposed to wind and rain, on a course that never lets you fully rest.",
+      "suffering_zones": [
+        "Taupō to Geothermal Steam Fields",
+        "Waihaha Hill and SH32 Undulations",
+        "Waihi Hill — The Big Grind",
+        "Hatepe Hill and the Eastern Shore"
+      ]
+    },
+    "logistics": {
+      "airport": "Auckland International (AKL) — 3.5-hour drive south via State Highway 1. Alternatively, fly domestically to Taupō Airport (TUO) on Air New Zealand from Auckland or Wellington. Wellington International (WLG) is a 5-hour drive. Most international riders fly into Auckland and rent a car.",
+      "lodging_strategy": "Stay in Taupō town — everything is within walking or riding distance of the start/finish. Book 3-6 months ahead, as accommodation sells out for event weekend. Options range from holiday parks and motels ($40-150 NZD/night) to lakefront lodges ($200-400 NZD/night). Many riders also stay in Kinloch (20 min drive) or Tūrangi (50 min south, near the course). The Friday night pasta dinner is a tradition worth attending.",
+      "transport": "",
+      "food": "Taupō has solid cafe and restaurant options for a town of 25,000 — better than you would expect. The event Expo offers pre-race food. Carb loading at local restaurants or the community pasta dinner. On-course nutrition is limited to water and electrolyte drink — bring all your own food, gels, and bars. The only shops on course are in Tihoi and Turangi.",
+      "official_site": "https://www.cyclechallenge.com/"
+    },
+    "history": {
+      "founded": 1977,
+      "origin_story": "In 1977, Taupō schoolteacher and outdoorsman Walter de Bont pulled together 26 people to circumnavigate Lake Taupō on their bicycles. It was meant as a one-off charity ride. All 26 starters finished — the only time that has happened. The ride grew. By the 1990s it was drawing thousands. At its peak in the late 2000s, over 10,000 riders were circling the lake annually. When Walter died 39 years after that first ride, his event was drawing about 4,000 riders and 6,000 spectators, generating $3.5 million for the Taupō economy and distributing $80,000 to local community groups annually. More than 200,000 people have now ridden around the lake. Walter's ride became New Zealand's largest cycling event — and one of the Southern Hemisphere's greatest.",
+      "notable_moments": [
+        "1977: Walter de Bont organises the first ride — 26 starters, all finishers, the only time 100% completion has occurred",
+        "1990s: Event grows to thousands of participants, establishing itself as NZ's premier cycling event",
+        "Late 2000s: Peak participation exceeds 10,000 riders — the event's high-water mark",
+        "2010: 14-year-old Corby Price from Taupō completes the 322 km Enduro in 11:00 — a remarkable feat",
+        "2016: Walter de Bont passes away after 39 years of stewarding his creation",
+        "2017: Sam Gaze sets the men's Round the Lake record at 3:37:51",
+        "2023: 45th anniversary celebrations — a milestone for the Southern Hemisphere's most enduring cycling event",
+        "2025: 47th edition introduces the Great Lake 100 (100 km) as a new event category"
+      ],
+      "reputation": "New Zealand's biggest cycling event and a genuine national institution. What the Round the Bays is to running in Auckland, the Lake Taupō Cycle Challenge is to cycling in New Zealand — except the setting is a volcanic caldera, the distance is 160 km, and the founder was a schoolteacher who just wanted to ride around the lake."
+    },
+    "biased_opinion": {
+      "verdict": "Walter's Lake",
+      "summary": "The Lake Taupō Cycle Challenge is not a race. It is a pilgrimage. Every last Saturday of November since 1977, thousands of New Zealanders have driven to a small volcanic-plateau town to circle a supervolcano's caldera on their bicycles, because a schoolteacher named Walter de Bont once thought it would be a good idea to ride around the lake with 26 of his mates. That ride became New Zealand's largest cycling event — peaking at 10,000 riders in its heyday and still drawing 7,000 annually after 47 editions. The 160 km circuit takes in geothermal steam fields, rolling Waikato farmland, three named hills that each provide their own variety of suffering, and the crystal-clear eastern shore of the largest lake in New Zealand. On a clear day, you ride toward the snow-capped volcanic peaks of Tongariro and Ruapehu. On a bad day, you ride into wind and rain on exposed state highways. Either way, you finish in a town that has been celebrating your ride all day long.",
+      "strengths": [
+        "47 years of unbroken tradition — the longest-running mass-participation cycling event in the Southern Hemisphere",
+        "Extraordinary volcanic setting: a supervolcano caldera with geothermal steam fields and views of three volcanic peaks",
+        "Genuine community event: $3.5M annual economic impact, $80K in community grants, 200,000+ lifetime participants",
+        "Accessible at every level: nine events from 16 km to 322 km, priced from NZ$59, half price for kids"
+      ],
+      "weaknesses": [
+        "Geographic isolation: Taupō is a 3.5-hour drive from Auckland with no direct international flights — this is the middle of the North Island",
+        "Not a competitive race: the field is overwhelmingly recreational and will underwhelm riders seeking a hard-racing peloton",
+        "Weather roulette: November in the central North Island can deliver anything from blazing sun to sideways rain in the same afternoon",
+        "State highway riding: the entire Round the Lake route is on public highways — no backcountry, no gravel, no adventure-cycling mystique"
+      ],
+      "bottom_line": "You do the Lake Taupō Cycle Challenge because Walter de Bont had an idea in 1977 and it became a national institution. You do it for the volcanic lake, the steam fields, the view from Waihi Hill, and the finish in a town that exists — for one week a year — entirely for this ride. It is not hard. It is not prestigious. It is deeply, authentically New Zealand."
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "New Zealand's biggest cycling event. 7,000 riders circling a supervolcano's caldera. 47 years of one schoolteacher's idea.",
+      "should_you_race": "Yes if you want an authentic New Zealand cycling experience with volcanic scenery and genuine community atmosphere. Yes if you want a well-supported century ride (or 200-mile ultra) in the Southern Hemisphere. Skip if you need serious competition — this is a community ride, not a race. Skip if geographic isolation is a dealbreaker — getting to Taupō requires commitment.",
+      "alternatives": "If you want a bigger Southern Hemisphere mass-participation event: try Cape Town Cycle Tour (35,000 riders, Chapman's Peak). If you want competitive NZ road cycling: try Tour of Southland. If you want NZ adventure cycling off-road: try Pioneer Mountain Bike Stage Race."
+    },
+    "citations": [
+      {
+        "url": "https://www.cyclechallenge.com/",
+        "category": "official",
+        "label": "Lake Taupō Cycle Challenge — Official Site"
+      },
+      {
+        "url": "https://www.cyclechallenge.com/round-the-lake",
+        "category": "official",
+        "label": "Shimano Round the Lake — Official Event Page"
+      },
+      {
+        "url": "https://www.cyclechallenge.com/entry-fees",
+        "category": "official",
+        "label": "Entry Fees — Lake Taupō Cycle Challenge"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Lake_Taupo_Cycle_Challenge",
+        "category": "reference",
+        "label": "Lake Taupo Cycle Challenge — Wikipedia"
+      },
+      {
+        "url": "https://www.lovetaupo.com/en/discover/our-stories/unveiling-lake-cycle-challenge/",
+        "category": "reference",
+        "label": "Unveiling Lake Taupō Cycle Challenge — Love Taupō"
+      },
+      {
+        "url": "https://sportzhub.com/article/the-lake-taupo-cycle-challenge-a-rich-legacy-of-endurance-and-community.html",
+        "category": "media",
+        "label": "The Lake Taupō Cycle Challenge: A Rich Legacy of Endurance and Community — Sportzhub"
+      },
+      {
+        "url": "https://www.cyclechallenge.com/records",
+        "category": "official",
+        "label": "Records — Lake Taupō Cycle Challenge"
+      },
+      {
+        "url": "https://www.plotaroute.com/route/124086",
+        "category": "reference",
+        "label": "Lake Taupo Cycle Challenge Route — PlotARoute"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-02-23",
+      "search_query": "Lake Taupo Cycle Challenge gravel race Lake Taupo",
+      "videos": [
+        {
+          "video_id": "c1z2rApUO4c",
+          "title": "2019 BDO Lake Taupo Cycle Challenge - Initial Highlights",
+          "channel": "taupocyclechallenge",
+          "view_count": 1283,
+          "upload_date": "20191201",
+          "duration_string": "2:44",
+          "description": "Here's some initial highlights from the 2019 BDO Lake Taupo Cycle Challenge",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=c1z2rApUO4c",
+          "curated": false
+        },
+        {
+          "video_id": "_onYT4TVbSk",
+          "title": "Lake Taupo Cycle Challenge - Enter now!",
+          "channel": "taupocyclechallenge",
+          "view_count": 57101,
+          "upload_date": "20240612",
+          "duration_string": "19",
+          "description": "30 November 2024 - Love the Ride - Conquer NZ's premier cycling event: road, mountain biking, or gravel. Whether you're a seasoned pro or a weekend warrior, or just love getting out on your bike there is a category for you. Don't miss out - enter now to save on entry fees and be part of the excitement around beautiful Lake Taupō this November.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=_onYT4TVbSk",
+          "transcript": "going fast blast on the\ntrain to feel the\nagain and it's never coming down we're\ninvincible",
+          "curated": false
+        },
+        {
+          "video_id": "iXJfFsYfxyQ",
+          "title": "Taupo Cycle Challenge 2018",
+          "channel": "Bachcare Holiday Homes",
+          "view_count": 132,
+          "upload_date": "20190114",
+          "duration_string": "1:08",
+          "description": "We had an absolute blast over the weekend at the Lake Taupo Cycle Challenge!\n\nWith 237 holiday homes in the Taupo area, it was great to be connecting with locals & Kiwis from all over NZ",
+          "tags": [
+            "Taupo Cycle Challenge",
+            "Sponsors",
+            "Bachcare",
+            "Taupo",
+            "NZ",
+            "New Zealand",
+            "North Island",
+            "Cycling",
+            "Travel NZ",
+            "Travel Inspiration",
+            "Bachcare Holiday Homes"
+          ],
+          "url": "https://www.youtube.com/watch?v=iXJfFsYfxyQ",
+          "transcript": "[Music]\n[Applause]",
+          "curated": false
+        },
+        {
+          "video_id": "mavzWhikOHI",
+          "title": "Lake Taupo Cycle Challenge: Half 75km",
+          "channel": "Philip Taramai",
+          "view_count": 349,
+          "upload_date": "20191203",
+          "duration_string": "3:01",
+          "description": "Small video showing snippets of my ride at this event.",
+          "tags": [
+            "cycling",
+            "usobikeride",
+            "newzealand"
+          ],
+          "url": "https://www.youtube.com/watch?v=mavzWhikOHI",
+          "curated": false
+        },
+        {
+          "video_id": "rd63SDA-WbI",
+          "title": "Lake Taupo Cycle Challenge - 30 November 2024",
+          "channel": "Kim Manunui",
+          "view_count": 262,
+          "upload_date": "20240326",
+          "duration_string": "1:02",
+          "description": "New Zealand's largest cycling occasion, and arguably one of the country's largest sports participation events is again looking forward to welcoming thousands of riders and supporters to the Taupō region on Saturday 30 November 2024. \n\nWith a philosophy of inclusion, the Lake Taupō Cycle Challenge offers a wide variety of options to get on your bike and be part of the annual pilgrimage to one of New Zealand's longest and most established events, celebrating its 46th running in 2024.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=rd63SDA-WbI",
+          "transcript": "[Music]\nhe\nhey\nyeah",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-02-23",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The available transcript content for the Lake Taupo Cycle Challenge consists primarily of music or promotional content rather than substantive rider commentary about the race experience. No specific information about course features, terrain conditions, key challenges, or race atmosphere could be extracted from the provided transcript. Riders seeking intelligence about this 100-mile New Zealand event with 4000 feet of elevation gain would need to reference additional sources for actionable race preparation insights."
+      }
+    }
+  }
+}

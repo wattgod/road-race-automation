@@ -1,0 +1,169 @@
+{
+  "race": {
+    "name": "Tour o' the Borders",
+    "slug": "tour-o-the-borders",
+    "display_name": "Tour o' the Borders",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 1200,
+      "elevation_ft": 3937.0,
+      "location": "Peebles, Scottish Borders, Scotland",
+      "location_badge": "Peebles, Scotland",
+      "country": "Scotland",
+      "date": "2026: September TBD",
+      "date_specific": "2026: September TBD",
+      "field_size": "Not specified",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Multiple feed stations with locally-made treats, water, and toilet stops",
+      "cutoff_time": "Minimum average speed of 16km/hr required",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Peebles and the Tweed Valley region offer accommodation options. Event HQ at Tweed Green, Peebles, EH45 8AP is open Saturday 5 September 10am-7pm for pre-event activities.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "A masterpiece of route planning offering some of the UK's best road cycling scenery on fully closed roads with exceptional organisation and community spirit.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Tour o' the Borders gran fondo cycling Peebles",
+      "videos": [
+        {
+          "video_id": "4WyJ1FsN7KI",
+          "title": "Tour of the Borders 2017, part 1",
+          "channel": "MrDodgyskier",
+          "view_count": 209,
+          "upload_date": "20170910",
+          "duration_string": "14:20",
+          "description": "Tour of the Borders 2017, part 1\nwave 14, Peebles to Talla Reservoir",
+          "tags": [
+            "Tesco Bank",
+            "Tour of The Borders 2017",
+            "cycle sportive",
+            "Peebles",
+            "The Scottish Borders",
+            "cycling"
+          ],
+          "url": "https://www.youtube.com/watch?v=4WyJ1FsN7KI",
+          "curated": false
+        },
+        {
+          "video_id": "hcEiJ_lqKhU",
+          "title": "There and back - A sunny evening ride in Scotland",
+          "channel": "WeLoveMountains",
+          "view_count": 677,
+          "upload_date": "20150821",
+          "duration_string": "3:10",
+          "description": "After a Scottish summer of rain I filmed a rare sunny evening ride on my Kinesis Tripster ATR. It was an exploratory ride on the wild side of Glentress in the Scottish borders.",
+          "tags": [
+            "Scotland (Country)",
+            "all road",
+            "gravel road",
+            "Glentress Forest (Location)",
+            "natural",
+            "off piste",
+            "cyclo cross",
+            "cx",
+            "tripster atr",
+            "kinesis"
+          ],
+          "url": "https://www.youtube.com/watch?v=hcEiJ_lqKhU",
+          "curated": false
+        },
+        {
+          "video_id": "hw1lxiStwDk",
+          "title": "Aberfeldy to Crieff. (Honda CB500X)",
+          "channel": "IRISHROVER",
+          "view_count": 361,
+          "upload_date": "20151229",
+          "duration_string": "15:22",
+          "description": "Route Link: https://goo.gl/maps/hnKdo1ASy8n\nFrom Fortingall I cross the river Tay and pass through Aberfeldy to Crieff. The end of a great day out. Thanks for watching this series.",
+          "tags": [
+            "CB500X",
+            "Honda"
+          ],
+          "url": "https://www.youtube.com/watch?v=hw1lxiStwDk",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

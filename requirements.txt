@@ -1,7 +1,26 @@
+# Core
 anthropic>=0.40.0
-requests>=2.31.0
-python-dotenv>=1.0.1
-httpx>=0.25.0
 ddgs>=9.0.0
-pyyaml>=6.0
+httpx>=0.25.0
 pytest>=7.4
+python-dotenv>=1.0.1
+pyyaml>=6.0
+requests>=2.31.0
+
+# Page generation
+Pillow>=10.0.0
+playwright>=1.40
+
+# Mission Control
+fastapi>=0.115
+uvicorn>=0.34
+jinja2>=3.1
+python-multipart>=0.0.9
+apscheduler>=3.10
+
+# Integrations
+stripe>=8.0
+supabase>=2.0
+resend>=0.7
+google-analytics-data>=0.18
+google-genai>=1.0.0

@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Gran Fondo Argentina",
+    "slug": "gran-fondo-argentina",
+    "display_name": "Gran Fondo Argentina",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 123.9,
+      "distance_mi": 77.0,
+      "elevation_m": 91,
+      "elevation_ft": 300.0,
+      "location": "Buenos Aires, Argentina",
+      "location_badge": "Buenos Aires, Argentina",
+      "country": "Argentina",
+      "date": "2025: October 12",
+      "date_specific": "2025: October 12",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 1,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

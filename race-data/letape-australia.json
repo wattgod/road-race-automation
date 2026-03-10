@@ -1,0 +1,343 @@
+{
+  "race": {
+    "name": "L'Etape Australia by Tour de France",
+    "slug": "letape-australia",
+    "display_name": "L'Etape Australia by Tour de France",
+    "tagline": "ASO's official Tour de France amateur experience on fully closed Australian roads -- 143 km, 2,701 m climbing, yellow jersey classification.",
+    "vitals": {
+      "distance_km": 157.0,
+      "distance_mi": 98.0,
+      "elevation_m": 2770.0,
+      "elevation_ft": 9088.0,
+      "location": "Wollongong to Kiama, New South Wales, Australia",
+      "location_badge": "WOLLONGONG / KIAMA, NSW",
+      "country": "Australia",
+      "date": "Early December annually",
+      "date_specific": "Check letapeaustralia.com for date",
+      "field_size": "3,000-4,500 riders",
+      "start_format": null,
+      "registration": "Online via letapeaustralia.com. Cost: ~$300 AUD (~$195 USD). Includes official TdF cycling jersey.",
+      "entry_fee": null,
+      "feed_zones": "Multiple feed zones every 30-40 km with water, energy drinks, fruit, bars",
+      "cutoff_time": "Approximately 8 hours",
+      "lat": -34.4249,
+      "lng": 150.8931,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Late Australian spring (November)",
+      "description": "November in the NSW South Coast averages 19-25C (66-77F). Pleasant conditions with moderate humidity, coastal breezes, and roughly 40% chance of rain. Historically, severe weather has forced cancellations.",
+      "challenges": [
+        "Rain risk (40%) -- event has been cancelled multiple times due to severe weather",
+        "Coastal wind exposure on open sections",
+        "Moderate heat possible (25C+) on sheltered climbs",
+        "Spring storm systems can develop rapidly in the Illawarra region"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountainous coastal roads -- fully closed course",
+      "surface": "100% sealed roads through NSW South Coast, Shoalhaven, and Southern Highlands. Current route: Wollongong to Kiama via Macquarie Pass (twice for The Race, once for The Ride). Previous route (2016-2019): Snowy Mountains via Col de Beloka and Col de Kosciuszko (summit at 1,735 m). 143 km Race with 2,701 m elevation. 90 km Ride with 1,619 m elevation. Technical rating: 2/5 (road climbing, no technical terrain).",
+      "technical_rating": 2,
+      "features": [
+        "Fully closed roads -- no traffic",
+        "Tour de France race conditions and classification jerseys",
+        "Shimano neutral mechanical support on course",
+        "Multiple feed zones with full catering",
+        "Two distance options: The Race (143 km) and The Ride (90 km)",
+        "E-bikes permitted on The Ride course",
+        "Wave starts for controlled field management"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Mountainous coastal road course replicating a Tour de France stage -- 143 km with 2,701 m of climbing on fully closed sealed roads through the NSW South Coast, Shoalhaven, and Illawarra escarpment.",
+      "signature_challenge": "Two ascents of Macquarie Pass (Race) separated by 40+ km of rolling terrain -- the second climb at 70+ km on tired legs is where the event is won and lost.",
+      "suffering_zones": [
+        "The signature climb of the current Wollongong-Kiama route. Steep, winding ascent through rainforest up the Illawarra escarpment. Sustained gradients of 8-12% with pinches steeper. This is where the field fractures for the first time.",
+        "The Race course loops back for a second ascent of Macquarie Pass. Legs are heavy from 70+ km of riding. The same climb feels 50% harder the second time. This is where the yellow jersey contenders separate from the survivors.",
+        "After the final descent, the coastal run south to Kiama looks flat on paper but the accumulated fatigue and potential headwinds make this a war of attrition. Cramping is common."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://letapeaustralia.com"
+    },
+    "history": {
+      "founded": "2016",
+      "origin_story": "L'Etape Australia launched in December 2016 as part of ASO's global expansion of the L'Etape brand -- bringing the Tour de France amateur experience to the Southern Hemisphere. The inaugural edition in the NSW Snowy Mountains attracted 3,500 riders and featured three-time Tour de France winner Chris Froome riding alongside amateurs. The course included the formidable Col de Beloka (20%+ pinches) and a 23 km final climb to Perisher ski resort at 1,735 m elevation. Four editions were held in the Snowy Mountains (2016-2019) before local council opposition and COVID disruptions forced a venue change. The event relocated to a Wollongong-to-Kiama route in 2022 but has been repeatedly cancelled -- severe weather (March 2020), Shoalhaven Council withdrawal (2021), Jamberoo Mountain Road landslip (2022). The NSW Government secured the event exclusively for NSW through 2024. The event's checkered operational history contrasts sharply with its excellent course design and genuine TdF atmosphere.",
+      "notable_moments": [
+        "2016: Inaugural edition in Snowy Mountains. 3,500 riders. Chris Froome rides. 96% approval rating.",
+        "2017: Storms force course shortening -- final Perisher climb and 24 km backcountry section removed. 3,500+ riders complete wet, windy 104 km course.",
+        "2018: Event centre relocates to Jindabyne. Improved logistics with better start wave management.",
+        "2019: Final Snowy Mountains edition. 170 km Race with 3,000 m elevation.",
+        "2020: Cancelled due to severe weather forecast (90-200 mm rain predicted).",
+        "2021: Cancelled after Shoalhaven Council withdraws support. Local opposition from residents saying 'not on our roads.'",
+        "2022: New Wollongong-to-Kiama route announced but cancelled after Jamberoo Mountain Road landslip.",
+        "2023: Fifth edition finally runs on Wollongong-Kiama route. 143 km Race / 90 km Ride."
+      ],
+      "reputation": "The highest-profile mass-participation road cycling event in Australia, carrying the prestige of the Tour de France brand. The riding experience and course design are excellent, but the event's reputation has been damaged by repeated cancellations and venue instability. Within Australian cycling, it is simultaneously aspirational and unreliable."
+    },
+    "biased_opinion": {
+      "verdict": "Tour de France Atmosphere, Australian Execution Problems",
+      "summary": "L'Etape Australia brings Tour de France branding and ASO production values to the NSW South Coast -- 143 km of fully closed roads, 2,701 m of climbing, classification jerseys, Shimano support, and 3,000+ riders chasing the yellow jersey dream. Chris Froome rode the inaugural edition in the Snowy Mountains in 2016. The experience is genuinely special: cowbells, closed roads, professional timing, and that unmistakable TdF atmosphere. But this event has been plagued by cancellations -- severe weather, council opposition, road landslips -- to the point where showing up and actually racing feels like an achievement in itself. The move from the spectacular Snowy Mountains to the Wollongong-Kiama coastal route was forced by local politics, not course design ambition. At ~$300 AUD it is expensive for a sportive, though the included jersey and full support soften that. If you can actually get to a start line that exists, the riding is excellent.",
+      "strengths": [
+        "Fully closed roads -- genuine Tour de France race conditions",
+        "Official ASO/TdF branding and classification jerseys (yellow, polka-dot, green, white)",
+        "Serious climbing: 2,701 m over 143 km mirrors a real TdF mountain stage",
+        "Shimano neutral mechanical support on course",
+        "3,000-3,500 riders create genuine peloton atmosphere",
+        "Stunning NSW South Coast scenery (coastal + hinterland + escarpment)",
+        "Two distance options accommodate different fitness levels",
+        "Professional timing and race infrastructure by Lateral Events"
+      ],
+      "weaknesses": [
+        "Cancelled at least 3 times (weather 2020, council opposition 2021, landslip 2022)",
+        "Local community opposition forced venue change from Snowy Mountains to Wollongong/Kiama",
+        "Expensive: ~$300 AUD entry fee for a one-day sportive",
+        "No elite-level competitive field -- primarily recreational and club riders",
+        "Venue instability undermines long-term planning and training commitment",
+        "Limited international draw compared to European L'Etape events",
+        "November timing conflicts with Northern Hemisphere off-season travel"
+      ],
+      "bottom_line": "L'Etape Australia is the real deal in terms of atmosphere and course challenge -- 143 km of closed-road climbing through stunning NSW scenery with full TdF production values. The problem is reliability: this event has been cancelled more times than it has actually run in recent years. If you are based in Australia or already planning a Southern Hemisphere trip, it is one of the best mass-participation road cycling experiences in Oceania. If you are flying internationally, hedge your bets -- the cancellation risk is real. For the pure L'Etape experience without the logistical roulette, the original French edition or the Czech Republic franchise are safer investments."
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "The Tour de France comes to Australia -- when it actually happens.",
+      "should_you_race": "If you are based in Australia and want the closest thing to riding a Tour de France stage without leaving the Southern Hemisphere, this is your event. The 143 km course with 2,701 m of climbing on fully closed roads is a genuine challenge, the TdF atmosphere is infectious, and the included jersey is a legitimate keepsake. But you need to accept the cancellation risk: this event has been cancelled three times in four years. Do not book non-refundable international flights. Do not build your entire season around it. Train for it, enter it, hope for the best, and have a backup Australian sportive on your calendar. If you are traveling from overseas specifically for this event, consider the original L'Etape du Tour in France instead -- same brand, better reliability, more iconic climbs.",
+      "alternatives": "For the Australian road cycling experience without cancellation risk: Amy's Gran Fondo (NSW) or Cadel Evans Great Ocean Road Race People's Ride (Victoria). For the authentic L'Etape experience: L'Etape du Tour de France (France, July) is the original and best. For TdF-branded events with better operational track records: L'Etape Czech Republic or L'Etape Slovenia."
+    },
+    "citations": [
+      {
+        "url": "https://letapeaustralia.com",
+        "category": "official",
+        "label": "L'Etape Australia official website"
+      },
+      {
+        "url": "https://lateralevents.com/major-events/letape-australia-by-tour-de-france/",
+        "category": "official",
+        "label": "Lateral Events: L'Etape Australia"
+      },
+      {
+        "url": "https://www.sbs.com.au/sport/article/letape-australia-a-riders-view/f5inqjwho",
+        "category": "media",
+        "label": "SBS Cycling Central: L'Etape Australia rider review (2016)"
+      },
+      {
+        "url": "https://www.sbs.com.au/sport/article/letape-australia-defies-the-storms/l79psnlwr",
+        "category": "media",
+        "label": "SBS Cycling Central: L'Etape Australia defies the storms (2017)"
+      },
+      {
+        "url": "https://sbs.com.au/cyclingcentral/article/2018/12/03/letape-australia-two-very-big-rides",
+        "category": "media",
+        "label": "SBS Cycling Central: L'Etape Australia two very big rides (2018)"
+      },
+      {
+        "url": "https://www.sbs.com.au/sport/article/letape-australia-cancelled-after-shoalhaven-council-withdraw-support/limtl9z8s",
+        "category": "media",
+        "label": "SBS: L'Etape Australia cancelled after Shoalhaven Council withdrawal"
+      },
+      {
+        "url": "https://granfondodailynews.com/2021/10/28/letape-australia-cancelled-for-3rd-time-as-locals-say-not-on-our-roads/",
+        "category": "media",
+        "label": "Gran Fondo Daily News: L'Etape Australia cancelled for 3rd time"
+      },
+      {
+        "url": "https://www.illawarramercury.com.au/story/7623026/wollongong-start-for-new-letape-course/",
+        "category": "media",
+        "label": "Illawarra Mercury: Wollongong start for new L'Etape course"
+      },
+      {
+        "url": "https://www.illawarramercury.com.au/story/7294658/letape-australia-returns-to-kiama-berry-kangaroo-valley-and-robertson/",
+        "category": "media",
+        "label": "Illawarra Mercury: L'Etape Australia returns route details"
+      },
+      {
+        "url": "https://media.destinationnsw.com.au/media-releases/letape-australia-tour-de-france",
+        "category": "official",
+        "label": "Destination NSW: L'Etape Australia by Tour de France"
+      },
+      {
+        "url": "https://www.thredbo.com.au/blog/2017/letape-australia-le-tour-de-france-1735m-climb-yellow-jersey/",
+        "category": "other",
+        "label": "Thredbo: L'Etape Australia 1,735 m climb for yellow jersey"
+      },
+      {
+        "url": "https://www.velonomad.com/articles/etape-australia-review/",
+        "category": "other",
+        "label": "VeloNomad: Etape Australia review"
+      },
+      {
+        "url": "https://cycledownunder.com/rides/letape-australia/",
+        "category": "other",
+        "label": "Cycle Down Under: L'Etape Australia event listing"
+      },
+      {
+        "url": "https://www.bikenorth.org.au/2019/02/12/leaders-lowdown-letape-australia-2018-greg-boyd/",
+        "category": "community",
+        "label": "Bike North: L'Etape Australia 2018 leader's lowdown"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4907/letape-australia",
+        "category": "other",
+        "label": "Gran Fondo Guide: L'Etape Australia"
+      },
+      {
+        "url": "https://www.letapeseries.com/",
+        "category": "official",
+        "label": "L'Etape Series by Tour de France (global)"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "L'Etape Australia by Tour de France gran fondo cycling Wollongong to Kiama",
+      "videos": [
+        {
+          "video_id": "sG8pZ9CanYQ",
+          "title": "L'Etape 2022 Weekend Away  - Save on Entry",
+          "channel": "L'Étape Australia by Tour de France",
+          "view_count": 14,
+          "upload_date": "20220630",
+          "duration_string": "30",
+          "description": "",
+          "tags": [
+            "Cycling",
+            "Gran Fondo",
+            "Letape",
+            "Le Tape",
+            "L'Étape",
+            "L'Etape",
+            "Tour de France",
+            "Tour",
+            "ciclismo",
+            "cyclisme",
+            "Kiama",
+            "Shoalhaven",
+            "Southern Highlands"
+          ],
+          "url": "https://www.youtube.com/watch?v=sG8pZ9CanYQ",
+          "transcript": "this November spend the perfect weekend\naway at la tapa Australia only two hours\nfrom Sydney discover the most beautiful\nride in Australia from bustling\nWollongong to the Southern Highlands and\nthe stunning coastal town of Kiama\nbring your family along and enjoy\neverything the South Coast has to offer\nenjoy the Tour de France atmosphere with\nlive concerts French food and lots more\ndon't miss out save on your entry fee\nregister today at latap australia.com",
+          "curated": false
+        },
+        {
+          "video_id": "gP_F4L5NWug",
+          "title": "L'Etape 2022 Weekend Away  - Register Today",
+          "channel": "L'Étape Australia by Tour de France",
+          "view_count": 718,
+          "upload_date": "20220630",
+          "duration_string": "30",
+          "description": "",
+          "tags": [
+            "Cycling",
+            "Gran Fondo",
+            "Letape",
+            "Le Tape",
+            "L'Étape",
+            "L'Etape",
+            "Tour de France",
+            "Tour",
+            "ciclismo",
+            "cyclisme",
+            "Kiama",
+            "Shoalhaven",
+            "Southern Highlands"
+          ],
+          "url": "https://www.youtube.com/watch?v=gP_F4L5NWug",
+          "transcript": "this november spend the perfect weekend\naway at la tapa australia only two hours\nfrom sydney discover the most beautiful\nride in australia from bustling\nwollongong to the southern highlands and\nthe stunning coastal town of kiyama\nbring your family along and enjoy\neverything the south coast has to offer\nenjoy the tour de france atmosphere with\nlive concerts french food and lots more\nplan the perfect family trip ride with\nus register today at\ndot latapastralia.com",
+          "curated": false
+        },
+        {
+          "video_id": "9G7dQLV6Fvw",
+          "title": "L'Etape 2022 Weekend Away",
+          "channel": "L'Étape Australia by Tour de France",
+          "view_count": 6,
+          "upload_date": "20220630",
+          "duration_string": "30",
+          "description": "",
+          "tags": [
+            "Cycling",
+            "Gran Fondo",
+            "Letape",
+            "Le Tape",
+            "L'Étape",
+            "L'Etape",
+            "Tour de France",
+            "Tour",
+            "ciclismo",
+            "cyclisme",
+            "Kiama",
+            "Shoalhaven",
+            "Southern Highlands"
+          ],
+          "url": "https://www.youtube.com/watch?v=9G7dQLV6Fvw",
+          "transcript": "this November spend the perfect weekend\naway at la tapa Australia only two hours\nfrom Sydney discover the most beautiful\nride in Australia from bustling\nWollongong to the Southern Highlands and\nthe stunning coastal town of Kiama bring\nyour family along and enjoy everything\nthe South Coast has to offer enjoy the\nTour de France atmosphere with live\nconcerts French food and lots more plan\nthe perfect family trip ride with us\nmore info at latap australia.com",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [
+          {
+            "text": "This November spend the perfect weekend away at la tapa Australia only two hours from Sydney",
+            "source_video_id": "gP_F4L5NWug",
+            "source_channel": "L'Étape Australia by Tour de France",
+            "source_view_count": 718,
+            "category": "logistics",
+            "curated": true
+          },
+          {
+            "text": "Bring your family along and enjoy everything the South Coast has to offer enjoy the Tour de France atmosphere with live concerts French food and lots more",
+            "source_video_id": "sG8pZ9CanYQ",
+            "source_channel": "L'Étape Australia by Tour de France",
+            "source_view_count": 14,
+            "category": "community",
+            "curated": true
+          }
+        ],
+        "search_text": "L'Etape Australia takes riders from bustling Wollongong through the Southern Highlands to the stunning coastal town of Kiama. The race is promoted as the most beautiful ride in Australia, located only two hours from Sydney making it accessible for family weekend trips. The event features Tour de France atmosphere with live concerts and French food, positioning itself as a family-friendly cycling experience on Australia's South Coast. The race takes place in November, offering riders a scenic route that combines urban start, highland terrain, and coastal finish. The promotional materials emphasize the destination appeal and cultural elements rather than technical course details."
+      }
+    }
+  }
+}

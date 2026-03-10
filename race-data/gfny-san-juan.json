@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "GFNY San Juan",
+    "slug": "gfny-san-juan",
+    "display_name": "GFNY San Juan",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 154.5,
+      "distance_mi": 96.0,
+      "elevation_m": 1300,
+      "elevation_ft": 4265.0,
+      "location": "San Juan, Argentina",
+      "location_badge": "San Juan, Argentina",
+      "country": "Argentina",
+      "date": "2026: March 01",
+      "date_specific": "2026: March 01",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Autumn in Andean foothills: mild days, cool nights. Dry with potential winds.",
+      "challenges": [
+        "Precipitation: Low (5-10%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Two laps through Ullum Valley's plains and hills, climbing to Punta Negra dam via spectacular Interlagos route, finishing in San Juan city center. Transitions from flatlands to Andean foothills on smooth pavement.",
+      "signature_challenge": "Double lap structure in Ullum Valley culminating at Punta Negra dam - power endurance meets Andean backdrop.",
+      "suffering_zones": [
+        "Ullum Valley Laps: Repeated 48-mile loops build fatigue; cumulative climbing wears down legs before the dam ascent.",
+        "Punta Negra Dam Climb: Signature ascent after valley circuits; exposed to wind with mountain views rewarding the effort.",
+        "Interlagos Route: Technical paved section through rocky terrain; fast descents demand focus amid scenic drama."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Numerous hotels in San Juan city center near start line. Stay local to avoid transfers.",
+      "transport": "City-center start/finish in San Juan. 7AM corral opening, 8AM mass start. Chip-timed with results at gfny.cc/results. Long course only eligible for rankings.",
+      "food": "",
+      "official_site": "https://argentina.gfny.com/?lang=en"
+    },
+    "history": {
+      "founded": 2022,
+      "origin_story": "GFNY Argentina edition held in San Juan, part of global gran fondo series. Long course qualifies top 10% for World Championship corral.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "GFNY's Andean gateway: accessible distance, scenic climbs, pro experience.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://argentina.gfny.com/?lang=en",
+        "category": "reference",
+        "label": "GFNY Argentina: Home"
+      },
+      {
+        "url": "https://gfny.com",
+        "category": "reference",
+        "label": "GFNY World: Home"
+      },
+      {
+        "url": "https://argentina.gfny.com/schedule-of-events/?lang=en",
+        "category": "reference",
+        "label": "Schedule of Events - GFNY Argentina"
+      },
+      {
+        "url": "https://argentina.gfny.com/news/?lang=en",
+        "category": "reference",
+        "label": "News - GFNY Argentina"
+      }
+    ]
+  }
+}

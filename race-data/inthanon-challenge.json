@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Inthanon Challenge",
+    "slug": "inthanon-challenge",
+    "display_name": "Inthanon Challenge",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 48.3,
+      "distance_mi": 30.0,
+      "elevation_m": 2565,
+      "elevation_ft": 8415.0,
+      "location": "Chom Thong, Chiang Mai, Thailand",
+      "location_badge": "Chom Thong, Thailand",
+      "country": "Thailand",
+      "date": "2026: February 8",
+      "date_specific": "2026: February 8",
+      "field_size": "thousands",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "unknown",
+      "cutoff_time": "unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and guesthouses in Chom Thong and Chiang Mai. Book early for event weekend.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Brutal Thai hill climb masterpiece to the roof of Thailand.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

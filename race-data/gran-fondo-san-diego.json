@@ -1,0 +1,137 @@
+{
+  "race": {
+    "name": "Gran Fondo San Diego",
+    "slug": "gran-fondo-san-diego",
+    "display_name": "Gran Fondo San Diego",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 162.5,
+      "distance_mi": 101.0,
+      "elevation_m": 2012,
+      "elevation_ft": 6600.0,
+      "location": "San Diego, California, USA",
+      "location_badge": "San Diego, USA",
+      "country": "USA",
+      "date": "2026: April 19",
+      "date_specific": "2026: April 19",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "San Diego in April offers ideal cycling conditions with mild temperatures, low precipitation, and generally favorable wind patterns. The coastal location moderates temperature extremes while providing scenic ocean views.",
+      "challenges": [
+        "Precipitation: 10"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The Gran Fondo San Diego features the classic 'Great Western Loop' through East County's scenic backcountry, combining rolling terrain with strategic climbing challenges. The route showcases San Diego's diverse athletic landscape and natural beauty, transitioning from urban downtown San Diego through suburban areas into the rugged backcountry before returning to the waterfront finish.",
+      "signature_challenge": "The timed Japatul Road climb at mile 36, which determines KOM/QOM winners across eight age categories and represents the event's primary competitive climbing test.",
+      "suffering_zones": [
+        "Japatul Road Timed Climb: Located at mile 36 on the long route, this timed King/Queen of the Mountain challenge serves as the primary climbing test, offering bragging rights across multiple age categories.",
+        "East County Backcountry Section: The middle portion of the Great Western Loop traverses rolling terrain through San Diego's backcountry, accumulating elevation gain across multiple smaller climbs rather than one sustained effort.",
+        "Final Push to Ruocco Park: The closing miles return riders to downtown San Diego with potential fatigue setting in after 80+ miles, requiring mental fortitude to maintain pace through the urban finish."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Downtown San Diego offers numerous hotel and lodging options suitable for event participants. The waterfront location provides convenient access to accommodations ranging from budget to luxury properties.",
+      "transport": "The Gran Fondo San Diego is a two-day festival held in downtown San Diego, starting and finishing at Ruocco Park. The event operates under open start line rules with no mass start; participants begin at assigned times based on event staging. All participants must provide photo ID and signed county and event waivers at packet pickup. The course closes at 5:30 PM with a 10.5-hour time limit to complete the ride.",
+      "food": "",
+      "official_site": "https://www.sdgranfondo.com"
+    },
+    "history": {
+      "founded": 2008,
+      "origin_story": "The Gran Fondo San Diego is an established cycling event that has grown into a premier Southern California cycling celebration. The event combines Italian Gran Fondo tradition with San Diego's cycling culture, featuring the classic Great Western Loop through East County backcountry.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "A well-organized, community-focused century ride through San Diego's scenic backcountry with excellent support infrastructure and celebratory atmosphere.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.sdgranfondo.com",
+        "category": "reference",
+        "label": "GranFondo San Diego - Voted Top 10 Century Ride in the USA"
+      },
+      {
+        "url": "https://www.sdgranfondo.com/overview",
+        "category": "reference",
+        "label": "San Diego Cycling Events: Gran Fond Routes Overview"
+      },
+      {
+        "url": "https://www.sdgranfondo.com/details",
+        "category": "reference",
+        "label": "Important info about the Campagnolo Granfondo San Diego"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/404/gran-fondo-san-diego",
+        "category": "reference",
+        "label": "Gran Fondo San Diego"
+      },
+      {
+        "url": "https://findarace.com/us/events/2026-granfondo-san-diego",
+        "category": "reference",
+        "label": "2026 Granfondo San Diego 2026 | Sun 19 Apr"
+      }
+    ]
+  }
+}

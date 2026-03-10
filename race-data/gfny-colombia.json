@@ -1,0 +1,329 @@
+{
+  "race": {
+    "name": "GFNY Bogota",
+    "slug": "gfny-colombia",
+    "display_name": "GFNY Bogota",
+    "tagline": "The world's highest gran fondo starts inside a salt cathedral 200 meters underground, then climbs into the Colombian Andes above 3,000 meters. Race where Egan Bernal learned to pedal, where oxygen is rationed, and where cycling is a national religion.",
+    "vitals": {
+      "distance_km": 121.0,
+      "distance_mi": 75.0,
+      "elevation_m": 2563,
+      "elevation_ft": 8408.0,
+      "location": "Zipaquira, Cundinamarca, Colombia",
+      "location_badge": "ZIPAQUIRA, COLOMBIA",
+      "country": "Colombia",
+      "date": "Late April / Early May annually (varies)",
+      "date_specific": "2026: TBD (check bogota.gfny.com for date announcement)",
+      "field_size": "~1,000-1,800 riders, primarily Colombian with international participants",
+      "start_format": null,
+      "registration": "Online via bogota.gfny.com. Cost: ~$80-120 USD (varies by registration tier). Includes race jersey, finisher medal, chip timing, aid stations, post-race celebrations.",
+      "entry_fee": "~$80-120 USD",
+      "feed_zones": "Multiple aid stations along the route supplying water, sports drink, and fruit. Mechanical support on course.",
+      "cutoff_time": "8 hours from start",
+      "lat": 5.0224,
+      "lng": -73.9871,
+      "route_options": [
+        "Long Course: ~101 km (~63 miles), ~2,321m elevation gain — full route with Aguila summit finish",
+        "Medium Course: ~60 km (~37 miles), ~1,200m elevation gain — shortened route turning back before full Aguila descent"
+      ]
+    },
+    "climate": {
+      "primary": "Tropical highland — cool, variable, altitude-dependent",
+      "description": "Zipaquira and the surrounding Andean highlands sit at 2,650 meters above sea level. Daytime temperatures range from 10-18C (50-64F) — cool by tropical-latitude standards but deceptive because the equatorial sun at altitude delivers intense UV radiation even when the air feels mild. Morning starts can be cold (8-10C), particularly inside the salt mines before dawn. As the route climbs above 3,000 meters, temperatures drop further and wind chill becomes a factor on exposed ridgelines. Afternoon rain showers are common in Colombia's highland weather pattern — the race starts at 6:30 AM specifically to avoid afternoon storms. Humidity is moderate (60-70%). The real atmospheric challenge is not temperature but oxygen: at 2,650m the air contains roughly 73% of sea-level oxygen, and above 3,000m it drops further. Your cardiovascular system is the first thing the course attacks.",
+      "challenges": [
+        "Altitude: 2,650m at the start, racing above 3,000m — oxygen availability is 73-75% of sea level",
+        "Temperature swings: cold starts (8-10C) in the salt mines, mild at valley floor, cold again at summit",
+        "Intense equatorial UV radiation at altitude — sunburn risk is extreme even on cloudy days",
+        "Afternoon rain showers are common in the Colombian highlands — early start is strategic",
+        "Wind exposure on mountain passes above 3,000m compounds the cold at altitude"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Colombian mountain roads with sustained climbing at extreme altitude",
+      "surface": "Paved roads throughout. Surface quality ranges from smooth main highways to rougher secondary mountain roads. The course is entirely closed to traffic on race day. No gravel, no cobbles, no technical terrain — the challenge is purely physiological: sustained climbing at altitudes where oxygen debt compounds every effort.",
+      "technical_rating": 1,
+      "features": [
+        "Km 0-4: Controlled start inside and exiting the Salt Cathedral of Zipaquira at 2,650m — a tunnel start unlike any other race",
+        "Km 4-20: Flat to rolling roads through the Bogota savanna toward Cajica — leg-warming at altitude",
+        "Km 20-33: Urban circuit returning through Zipaquira with rolling terrain",
+        "Km 33: Short but vicious 500m climb at 9.9% gradient — the first real punch of the day",
+        "Km 34-49: Aguila via Zipa climb — 15 km at 3.3% average gradient, 523m elevation gain, racing above 3,000m with views over the Subachoque river valley",
+        "Summit finish / descent to Pacho (medium turns back, long continues to descent and return)"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 4,
+      "road_surface": 4,
+      "cultural_impact": 4,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A high-altitude road race that uses moderate gradients and paved Colombian mountain roads to deliver a physiological challenge that the course profile alone cannot explain. The route starts inside the Salt Cathedral of Zipaquira at 2,650m — an underground cavern carved from a salt mountain — before climbing through the Cundinamarca highlands to summits above 3,000m. The terrain is not technically demanding and the gradients are not extreme by European standards, but every effort is amplified by the 27% reduction in available oxygen. A 3.3% average gradient at 3,000m delivers the suffering of a 6% climb at sea level. The course rewards acclimatized climbers, punishes sea-level sprinters, and humbles everyone who arrives thinking fitness alone will suffice.",
+      "signature_challenge": "Altitude. Not the climbing gradient, not the distance, not the technical terrain — the air. GFNY Bogota starts at 2,650m and races above 3,000m. At these elevations, atmospheric oxygen is 25-30% lower than sea level, your VO2max drops 15-25%, and physiological systems that function flawlessly at sea level begin to fail. Heart rate creeps higher at the same power output. Lactate accumulates faster. Recovery between efforts takes longer. A 3.3% gradient that you'd spin up at sea level becomes a gasping, vision-narrowing ordeal. The course doesn't need steep grades or long distances to destroy you — it has physics. No amount of sea-level fitness compensates for unacclimatized lungs at 3,000 meters.",
+      "suffering_zones": [
+        "Salt Cathedral Tunnel Start",
+        "Bogota Savanna — Zipaquira to Cajica",
+        "Zipaquira Urban Circuit",
+        "The 9.9% Wall",
+        "Aguila via Zipa — The Main Event",
+        "Descent and Return"
+      ]
+    },
+    "logistics": {
+      "airport": "Bogota El Dorado International Airport (BOG) — Colombia's primary hub with direct flights from Miami, Houston, Dallas/Fort Worth, New York (JFK/EWR), Atlanta, Los Angeles, Madrid, and dozens of Latin American cities. Major carriers include Avianca, LATAM, Copa, American, Delta, United, Spirit, and Wingo. From BOG, Zipaquira is approximately 50 km (1 hour) north via taxi, private transfer, or race-organized transport. TransMilenio bus service also connects Bogota to Zipaquira but is impractical with bike luggage.",
+      "lodging_strategy": "Most riders stay in Bogota and transfer to Zipaquira on race morning or the night before. Bogota offers hotels at every price point from $30/night hostels to $150+ premium properties in Usaquen or the Zona T. Zipaquira has limited hotel options — a handful of boutique hotels and guesthouses near the colonial center. For race logistics, staying in Zipaquira the night before eliminates the early-morning transfer gamble. Race organizers offer bike transport packages (120,000-600,000 COP) from Bogota and the airport to the race venue. Book transfers in advance — race-morning demand is high.",
+      "transport": "",
+      "food": "Colombian cuisine: ajiaco (chicken and potato soup, a Bogota specialty), bandeja paisa, empanadas, arepas, and abundant fresh tropical fruit. Zipaquira has restaurants around the Plaza de la Independencia. Bogota's dining scene is world-class and affordable — from street food at $2-3 to fine dining at $30-40. Pre-race carb-loading is easy with rice, potatoes, and bread staples. At altitude, digestion can be sluggish — eat lighter than you would at sea level. Hydration is critical: altitude increases respiratory water loss significantly.",
+      "official_site": "https://bogota.gfny.com/"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "GFNY Colombia launched in April 2015 as one of the first international expansion events for the Gran Fondo New York series, branded as CRM GFNY Colombia. The event was the brainchild of GFNY CEO Uli Fluhme and Colombian organizer Juan Carlos Martinez, who saw an opportunity to bring the world's first competitive gran fondo format to one of cycling's most passionate countries. Colombia — home to Lucho Herrera, Nairo Quintana, and the rising Egan Bernal — had a deep cycling culture but lacked a mass-participation international cycling event. The inaugural edition started in Bogota at 2,640m and climbed to over 3,350m, immediately establishing it as the world's highest gran fondo. Early editions were based around La Cuchilla mountain near Guatavita, with the long route summiting at 3,365m. By the 3rd edition in 2017, the event sold out at 1,800 places and attracted 1,700 starters — making it the largest cycling race in Colombian history at the time. The course evolved in 2023 when the start moved to the Salt Cathedral of Zipaquira, Egan Bernal's hometown, adding a dramatic underground start and shifting the primary climb to El Aguila. The event has run 8+ editions through varying COVID disruptions and continues as a cornerstone of the GFNY World series calendar.",
+      "notable_moments": [
+        "2015: Inaugural CRM GFNY Colombia — the world's highest gran fondo launches in Bogota, finishing above 3,350m",
+        "2017: 3rd edition sells out at 1,800 places; 1,700 starters and 1,378 finishers make it Colombia's largest cycling race",
+        "2017: Camila Cortes adds to her GFNY dynasty with another dominant women's victory, eventually collecting 8 GFNY titles",
+        "2022: 6th edition returns to a new Guatavita-based course — 121 km, 2,565m climbing, tackling La Cuchilla twice",
+        "2023: 7th edition moves start to Salt Cathedral of Zipaquira (Egan Bernal's hometown) — 101.1 km, 2,321m climbing, hilltop finish at El Aguila",
+        "2023: 1,000+ participants race above 3,000m from inside Colombia's most iconic landmark",
+        "2025: UCI Gran Fondo Bogota qualifier launches separately (December 7, 2025), with 1,500 cyclists racing a 128 km route"
+      ],
+      "reputation": "The altitude gran fondo. GFNY Bogota's identity is inseparable from its elevation — starting at 2,650m and racing above 3,000m puts it in a physiological category that no other mass-participation road event can match. The Colombian cycling culture elevates it beyond a standard GFNY franchise event. Riders come for the altitude challenge and stay for the cultural immersion."
+    },
+    "biased_opinion": {
+      "verdict": "The World's Highest Gran Fondo in Cycling's Most Passionate Country",
+      "summary": "GFNY Bogota is what happens when you take a franchise gran fondo template and drop it into one of cycling's spiritual homelands at an altitude that reduces your VO2max by 20% before you even clip in. The course itself is straightforward — paved roads, moderate gradients, 100 km — but the 2,650m starting elevation transforms every watt into an existential negotiation with the atmosphere. You warm up inside a salt cathedral carved from a mountain, emerge into the Andean dawn in Egan Bernal's hometown, and climb into mountains where the air gets noticeably thin. The Colombian cycling culture does the rest: crowds that actually care, a nation that treats cyclists as heroes, and a post-race atmosphere that feels earned in a way that manufactured expo-village celebrations never do. The franchise format is the ceiling — this is still a GFNY satellite, not a standalone institution — but the Colombian setting is the floor, and that floor is higher than most events' ceilings.",
+      "strengths": [
+        "Extreme altitude: 2,650m start, racing above 3,000m — the single most impactful physiological challenge in mass-participation road cycling",
+        "Salt Cathedral start: beginning a race 200m underground inside a UNESCO-heritage salt mine is a once-in-a-lifetime moment",
+        "Colombian cycling culture: racing in Egan Bernal and Efrain Forero's hometown, surrounded by cycling-obsessed crowds",
+        "Exceptional affordability: Colombia's cost of living makes this one of the cheapest destination gran fondos on earth",
+        "Andean scenery: Subachoque valley views, highland eucalyptus forests, and the green rolling hills of Cundinamarca"
+      ],
+      "weaknesses": [
+        "Franchise format: GFNY Bogota is a satellite event, not a standalone institution — the deepest competition is at GFNY NYC",
+        "Course distance is modest: 101 km is a mid-length gran fondo, even accounting for altitude amplification",
+        "Zero technical demands: paved roads throughout — the course challenges your lungs, not your handling",
+        "Two-step logistics: Bogota airport is easy, but transferring to Zipaquira with a bike adds friction",
+        "Altitude is a barrier to entry: sea-level riders without acclimatization will have a miserable experience regardless of fitness"
+      ],
+      "bottom_line": "GFNY Bogota is the gran fondo that will humble you. Not with distance, not with technicality, not with gradient — with atmosphere, and not the kind you feel at the finish line. The atmosphere that's 27% thinner than what your lungs expect. If you've never raced above 2,500m, this event will recalibrate your understanding of effort. If you have, you know this is the real thing. Add the Salt Cathedral start, Egan Bernal's hometown, and a cycling culture that makes the Belgians look casual, and you have an event that transcends its franchise format."
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "Start inside a salt cathedral. Climb into the thin Andean air above 3,000 meters. Race where Egan Bernal learned that oxygen is optional.",
+      "should_you_race": "Yes if you want to experience the world's highest gran fondo and test yourself at extreme altitude. Yes if Colombian cycling culture — the passionate crowds, the heritage of Bernal and Quintana and Forero — means something to you. Yes if you want a destination gran fondo that costs half of what European events charge. Skip if you haven't acclimatized to altitude and don't plan to arrive early — sea-level fitness is worthless above 3,000m. Skip if you want technical terrain, gravel, or a course that challenges handling. Skip if you need a massive international field.",
+      "alternatives": "If you want a GFNY with sea-level oxygen and the deepest field: GFNY New York (World Championship). If you want Colombian cycling without the franchise format: Vuelta a Colombia or Gran Fondo Bogota (UCI qualifier, December). If you want high-altitude road cycling in Latin America: L'Etape du Tour Colombia or Gran Fondo Antioquia. If you want a GFNY in Latin America without altitude: GFNY Cozumel."
+    },
+    "citations": [
+      {
+        "url": "https://bogota.gfny.com/",
+        "category": "official",
+        "label": "GFNY Bogota — Official Site"
+      },
+      {
+        "url": "https://bogota.gfny.com/course/?lang=en",
+        "category": "official",
+        "label": "GFNY Bogota — Course Details"
+      },
+      {
+        "url": "https://bogota.gfny.com/schedule-of-events/?lang=en",
+        "category": "official",
+        "label": "GFNY Bogota — Schedule of Events"
+      },
+      {
+        "url": "https://bogota.gfny.com/getting-here/?lang=en",
+        "category": "official",
+        "label": "GFNY Bogota — Getting Here"
+      },
+      {
+        "url": "https://gfny.com/7th-gfny-colombia-bogota-this-sunday/",
+        "category": "official",
+        "label": "7th GFNY Colombia Bogota — GFNY World"
+      },
+      {
+        "url": "https://gfny.com/gfny-returns-to-colombia-for-6th-gfny-bogota/",
+        "category": "official",
+        "label": "GFNY Returns to Colombia for 6th GFNY Bogota — GFNY World"
+      },
+      {
+        "url": "https://gfny.com/gfny-announces-gfny-bogota/",
+        "category": "official",
+        "label": "Race up La Cuchilla at GFNY Bogota — GFNY World"
+      },
+      {
+        "url": "https://gfny.com/gfny-colombia-is-back/",
+        "category": "official",
+        "label": "GFNY Colombia is Back — GFNY World"
+      },
+      {
+        "url": "https://www.copaci.org/en/gfny-bogota-2023-everything-ready-to-welcome-more-than-1000-participants/",
+        "category": "review",
+        "label": "GFNY Bogota 2023: Everything Ready for 1,000+ Participants — COPACI"
+      },
+      {
+        "url": "https://www.granfondo.com/cycling-reports/522423/crm-gfny-colombia-hitting-the-heights-in-a-cycling-hotbed",
+        "category": "review",
+        "label": "CRM GFNY Colombia: Hitting the Heights in a Cycling Hotbed — GranFondo.com"
+      },
+      {
+        "url": "https://www.granfondo.com/cycling-news/534065/gfny-colombia-sets-record-with-1700-riders",
+        "category": "review",
+        "label": "GFNY Colombia Sets Record With 1,700 Riders — GranFondo.com"
+      },
+      {
+        "url": "https://www.endurancesportswire.com/racing-high-at-6th-gfny-colombia-bogota-this-sunday/",
+        "category": "review",
+        "label": "Racing High at 6th GFNY Colombia Bogota — Endurance Sportswire"
+      },
+      {
+        "url": "https://pezcyclingnews.com/amp/newswire/crm-gfny-colombia-the-worlds-highest-gran-fondo/",
+        "category": "review",
+        "label": "CRM GFNY Colombia — The World's Highest Gran Fondo — PezCycling News"
+      },
+      {
+        "url": "https://granfondodailynews.com/2025/12/07/uci-gran-fondo-colombia-results-bogota-hosts-world-championship-qualifier/",
+        "category": "review",
+        "label": "UCI Gran Fondo Colombia Results: Bogota Hosts 2026 World Championship Qualifying Race — Gran Fondo Daily"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GFNY Bogota gran fondo cycling Zipaquira",
+      "videos": [
+        {
+          "video_id": "gmyxyW0TiD4",
+          "title": "GFNY NYC 2023. Race video.",
+          "channel": "GFNY World",
+          "view_count": 13119,
+          "upload_date": "20230524",
+          "duration_string": "3:45",
+          "description": "More info: nyc.gfny.com\n\n#granfondo #cycling",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=gmyxyW0TiD4",
+          "transcript": "welcome to the 2023 edition of the gfny\nworld championship in New York City\nthe gfny world championship is truly an\nInternational race with thousands of\nriders coming from all over the planet\nwith new cash prizes for intermediate\nSprints and an updated course\n[Music]\n[Applause]\nit's also the finale of the gfny global\nEndurance Sports series which Now\nfeatures an incredible 40 races\nworldwide this year the race was faster\nand more competitive than ever Pro and\namateur cyclists left off the starting\nline on the spectacular George\nWashington Bridge and zipped through\nFort Lee and into Palisades Interstate\nPark the Sparks flew again on the\nclimate Alpine as Italian matiagafuri\nlast year's second place finisher\ncasually tested his legs he jumped to\nthe front of the race taking the Sprint\ncream at the top but once there gaffordi\nsat up there was plenty of Road left and\nhe was happy to let his SWAT club\nteammates do some of the hard work\ncontrolling the race the first serious\nattack came with 100K still to go\nColombian Jaime Vergara was quickly\njoined by Miguel Arroyo from Mexico but\nSWAT club wasn't going to let them get\ntoo far a pack of nearly 30 riders with\nall the race favorites was close behind\ngot four divided time while teammates\nlike David minote and Francesco Zant\nTedeschi helped keep the Gap to the\nleaders to less than a minute\nand then it was him alone against the\nPeloton American time trial champ Ben\nWolf launched the charge that finally\nkicked the footy into action seeing an\nopportunity South African Alexander\nwurzdale briefly jumped onto furry's\nwheel and then hung on for dear life but\nby the summit of cheese coat all the\nchallengers had faded from memory it was\nnow Jessica furry on a long solo drive\nto the finish the disorganized Chase\ngroup somewhere down the road\ndusted the field in a time of 327-32\nnearly seven minutes faster than the\nsecond and third place finishers\nin the women's race it was a similarly\ndominant performance Italian Kiara dhoni\nalso from SWAT club LED from start to\nfinish obviously SWAT club came to win\nbut coming in second and third was still\na cause for celebration for the Italians\nAnnalisa Prato and last year's champ\nSamantha Arnaldo they finished the way\nthey started together with big smiles on\ntheir faces at the Finish Riders\ncollected their medals before reuniting\nwith friends and family at the gfny\nFinnish Village in Fort Lee\ngfny is always an amazing event music\nfood drinks and of course prizes the\noverall men's and women's Champions were\nawarded a spectacular all-expense paid\ntrip to the next gfny NYC World\nChampionships the first six finishers\nwill also race the new UCI Pro Race\nGrand Premio gfny next year as part of\nteam gfmy\nthe next day some of the top Riders\ngathered on one of the towers of the\nGeorge Washington Bridge for a very\nspecial gfny honor a view Fit For A\nChampion for the gfny world championship\nthanks again for watching and don't wait\nsign up today for a gfny race India Pro\nfor a day\nforeign",
+          "curated": false
+        },
+        {
+          "video_id": "rEyiY0NUay0",
+          "title": "GFNY Bogotá. 2023 course video",
+          "channel": "GFNY World",
+          "view_count": 380,
+          "upload_date": "20230217",
+          "duration_string": "1:22",
+          "description": "more info: Bogota.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=rEyiY0NUay0",
+          "transcript": "foreign\n[Music]\nthank you",
+          "curated": false
+        },
+        {
+          "video_id": "ms6kF0TWZe8",
+          "title": "GFNY New York 2019 Narrado! 4to general y 1ro cat. 🏆",
+          "channel": "Daniel Hernández",
+          "view_count": 34387,
+          "upload_date": "20190613",
+          "duration_string": "30:19",
+          "description": "Cómo se vive un GFNY de New York desde el pelotón del frente? Qué se necesita para hacer un podio? En el video les explico y les muestro todo! Un poco largo pero prometo que vale la pena!\n\n► Sígueme por estos links!:\n+ Instagram: http://instagram.com/danielhernandezbc\n+ Strava: https://www.strava.com/athletes/danielhernandezbc\n+ Zwift: con la App Zwift Companion busca Daniel Hernandez BC [R56]\n\n► Productos que USO y recomiendo:\n- ANT+: https://amzn.to/2S34WpS\n- Favero Assioma Uno: https://amzn.to/2xNmbog\n- Favero Assioma Duo: https://amzn.to/2VXedko\n- Ventiladores: https://amzn.to/3aQmzj6\n- Cámara: https://amzn.to/2VUFkxB\n- Llantas: https://amzn.to/2WhHJkP\n- Wahoo Elemnt: https://amzn.to/3fat8jM\n- Audífonos: https://amzn.to/3eQH5n5\n- Sales: https://amzn.to/2S904j0\n- Sales2: https://amzn.to/2YoGBib\n- Sales3: https://amzn.to/2KQm2Dd\n- Libro: https://amzn.to/2KQlX2n\n- Colágeno: https://amzn.to/2xWosNN y https://amzn.to/2VUw0Zr\n- Micrófono: https://amzn.to/3aSX6Wo\n- Bandana: https://amzn.to/35yXcBz\n- Cleats pedales: https://amzn.to/3cKqj73\n\n► Recuerden suscribirse y dejar un comentario si les gustó!\n\n► PREGUNTAS FRECUENTES:\n- Eres profesional? No, soy recreativo y empecé a montar en el 2015, y tengo un trabajo de oficina normal. \n- Qué rodillo usas? Tengo un Wahoo Kickr 2018\n- Qué edad tienes? 32 años\n- Cuánto pesas? Usualmente entre 70 y 74kg \n- Cual es tu FTP? Alrededor de 350w.\n- Cuando sacas mas videos? Sigueme en instagram @DanielHernandezBC para conocer más.\n\n► Soy un ciclista amateur, amante de la competencia limpia y de buscar estar en la mejor forma posible con las limitaciones de tiempo, cuerpo y mente que tenga. He corrido en muchas carreras en lo que llevo montando, desde campeonatos nacionales Máster, hasta el GFNY New York, donde quedé de 4to en la general y 1ro en mi categoría. Pertenezco al equipo Ruta 56 y Marathon Team MTB.\n\n► Este canal de YouTube lo uso para subir carreras de bici con narraciones, explicando las estrategias usadas, para que aprendan lo más posible con mis experiencias. También pueden encontrar tutoriales y varios tips sobre ciclismo de temas que valen la pena compartir.\n\n----\n► Suscríbete a mi canal aquí!: http://www.youtube.com/c/DanielHernandezBC?sub_confirmation=1\n----\n\n►Gracias especiales a mis patrocinadores: \n- GoRigoGo!\n- Specialized Colombia",
+          "tags": [
+            "GFNY",
+            "GFNY 2019",
+            "Bici",
+            "DanielHernandezBC",
+            "DanielHernandez",
+            "Carrera",
+            "Ciclismo",
+            "Bike",
+            "Bike race",
+            "Narrado",
+            "Narrada",
+            "commentaries",
+            "Gran Fondo",
+            "New York",
+            "USA",
+            "Championship",
+            "Resumen",
+            "Estrategia",
+            "Pelotón"
+          ],
+          "url": "https://www.youtube.com/watch?v=ms6kF0TWZe8",
+          "curated": false
+        },
+        {
+          "video_id": "lbV8zRSPhi4",
+          "title": "GFNY COLOMBIA (FONDO COMPLETO)",
+          "channel": "Juan Carlos Canosa NANOMAN",
+          "view_count": 1441,
+          "upload_date": "20150427",
+          "duration_string": "9:03",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=lbV8zRSPhi4",
+          "curated": false
+        },
+        {
+          "video_id": "W4eAQem7xlM",
+          "title": "Cierres viales por el Gran Fondo de Ciclismo de Bogotá",
+          "channel": "Noticias Caracol",
+          "view_count": 8793,
+          "upload_date": "20241117",
+          "duration_string": "1:43",
+          "description": "Cierres este 17 de noviembre por el Gran Fondo de Ciclismo de Bogotá, que contará con la participación de Egan Bernal y Rigoberto Urán: ojo a las vías que serán usadas durante el evento. \r\n\r\nMás en noticiascaracol.com  \r\n\r\n  #NoticiasCaracol #NoticiasColombia #NoticiasInternacionales\r\n\r\nSuscríbase [GRATIS] a nuestro canal en YouTube: http://bit.ly/2Jhc3oO.\r\n\r\nDescargue nuestra aplicación: http://hyperurl.co/appnoticias\r\nSíganos en Google: http://bit.ly/2MrIZP3\r\nWhatsApp El Periodista Soy Yo: http://bit.ly/2QD18rw\r\nWhatsApp Noticias Caracol Ahora: http://bit.ly/34ed1uQ\r\n\r\nSíganos en redes sociales:\r\n\r\nFacebook: https://www.facebook.com/NoticiasCaracol\r\nTwitter: https://twitter.com/NoticiasCaracol (@NoticiasCaracol)\r\nInstagram: https://www.instagram.com/noticiascaracol/\r\n\r\nNuestros canales en YouTube:\r\n\r\nCaracol Televisión: http://bit.ly/2CHpld2 Suscribirse\r\nGol Caracol: http://bit.ly/2yAIGcU Suscribirse\r\nVolk: https://bit.ly/3nNojU9 Suscribirse\r\nShock: http://bit.ly/2CHNKzi Suscribirse\r\nBlu Radio: http://bit.ly/2CFF7Fo Suscribirse\r\nLa Kalle: http://bit.ly/2JkgfEz Suscribirse\r\nCaracol Play: http://bit.ly/2SkyjlM Suscribirse\r\nEl Espectador: http://bit.ly/2D4rkt7 Suscribirse",
+          "tags": [
+            "Noticias",
+            "Noticias Caracol",
+            "Noticias Internacionales",
+            "Noticias de Colombia",
+            "Noticias de hoy",
+            "Noticias en vivo",
+            "breaking news",
+            "news",
+            "noticias",
+            "noticias de última hora",
+            "ultimas noticias"
+          ],
+          "url": "https://www.youtube.com/watch?v=W4eAQem7xlM",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The transcript provided is from the GFNY World Championship in New York City, not GFNY Bogota in Colombia. The video covers the NYC race with riders starting on the George Washington Bridge, traveling through Fort Lee and Palisades Interstate Park, with climbs including Alpine and cheese coat. The race featured international competition with Italian SWAT club dominating both men's and women's categories. However, since this transcript does not contain any information about the GFNY Bogota race in Zipaquira, Colombia, no specific intelligence about that race's course features, terrain conditions, challenges, or race day logistics can be extracted from this source."
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "race": {
+    "name": "Tour de Fukushima",
+    "slug": "tour-de-fukushima",
+    "display_name": "Tour de Fukushima",
+    "tagline": "UCI Gran Fondo qualifier through Fukushima's recovery zones",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 2000,
+      "elevation_ft": 6562.0,
+      "location": "Hamadori coastal region, Fukushima Prefecture",
+      "location_badge": "Naraha Town, Tomioka Town, Fukushima, Japan",
+      "country": "Fukushima Prefecture",
+      "date": "June 13-14",
+      "date_specific": "2026: June 13",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": "Opened February 1, 2026",
+      "entry_fee": "Unknown",
+      "feed_zones": "Unknown",
+      "cutoff_time": "Unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": [
+        "15 km",
+        "80 km",
+        "140 km"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Mild June coastal weather (15-25°C)",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Moderate with rolling short steep hills and sustained climbs along Pacific coastline and rugged inland highlands",
+      "technical_rating": 1,
+      "features": [
+        "Moderate with rolling short steep hills and sustained climbs along Pacific coastline and rugged inland highlands"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 5,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Two-day format with **time trial**, **granfondo (140km)**, and **mediofondo (80km)** options through Hamadori coastal region. Routes traverse Pacific coastline, rugged inland highlands, and recently de-lifted evacuation zones (Namie/Odaka areas). **Suffering zones**: sustained climbs in coastal headwinds through disaster-affected terrain.",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Fukushima Airport (FKS) ~1hr from Hamadori region. Registration opened Feb 1, 2026 via fukushima-cycle-series.jp. Two-day event format TBD.",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2023,
+      "origin_story": "Launched 2023 as Tool de Fukushima (fourth edition 2026). Part of Fukushima Revival Cycle Series promoting recovery 12+ years after 2011 Great East Japan Earthquake and nuclear disaster. Became UCI Gran Fondo World Series qualifier for 2026 Niseko Worlds.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Unique blend of competitive UCI gran fondo racing with profound cultural recovery narrative through recently decontaminated evacuation zones. Must-do for Japan-based riders seeking Niseko Worlds qualification.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "UCI Gran Fondo qualifier through Fukushima's recovery zones",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "race": {
+    "name": "LoToJa Classic",
+    "slug": "lotoja-classic",
+    "display_name": "LoToJa Classic — Logan to Jackson",
+    "tagline": "203 miles. Three mountain passes. Three states. Dawn in Logan, dusk beneath the Tetons. America's longest single-day USAC-sanctioned road race since 1983.",
+    "vitals": {
+      "distance_km": 326.7,
+      "distance_mi": 203.0,
+      "elevation_m": 2987,
+      "elevation_ft": 9800.0,
+      "location": "Logan, Utah to Teton Village, Wyoming",
+      "location_badge": "LOGAN, UT → JACKSON HOLE, WY",
+      "country": "Wyoming",
+      "date": "First Saturday after Labor Day annually",
+      "date_specific": "2026: September 12",
+      "field_size": "~1,300-1,800 riders (solo, tandem, relay)",
+      "start_format": null,
+      "registration": "Online at lotoja.com. Opens early spring. Licensed Race and Cyclosportive Ride classes. Solo $285, Tandem $295, Relay $185/person. Sells out. Waitlist operates first-come, first-served by category.",
+      "entry_fee": "$285 solo / $295 tandem / $185 per relay rider",
+      "feed_zones": "3 crew-access feed zones + 3 neutral-only feed zones with water, bananas, gels. 50+ neutral support vehicles with wheel/mechanical service. 600+ volunteers.",
+      "cutoff_time": "Must finish before dark (~8:00 PM). Most riders finish in 10-13 hours. Course record 8:18:29 (Spencer Johnson, 2018).",
+      "lat": 41.7352,
+      "lng": -111.8344,
+      "route_options": [
+        "LoToJa Classic: 203 miles, ~9,800 ft gain — Logan, UT to Teton Village, WY (full course)",
+        "Relay: 2- or 3-person teams splitting the course at designated exchange zones"
+      ]
+    },
+    "climate": {
+      "primary": "Mountain West early autumn — cold starts, warm valleys, exposed passes",
+      "description": "Early September in the northern Rockies delivers wildly variable conditions across 203 miles and three states. Pre-dawn starts in Logan see temperatures in the low 40s-50s F. Valley floors through Idaho warm to the 70s-80s F by midday. Mountain passes at 7,000+ feet can drop 20 degrees from the valley floor, with wind chill making it feel colder. The Snake River Canyon section is typically pleasant. The final stretch to Teton Village at 6,300 feet cools as afternoon fades. Rain, crosswinds, and headwinds are possible anywhere on the course — the 2021 edition saw heavy rain and strong crosswinds all day.",
+      "challenges": [
+        "Temperature swings of 30-40F between pre-dawn start and midday valleys",
+        "Exposed mountain pass descents at 7,000+ feet — hypothermia risk on cold, wet years",
+        "Crosswinds and headwinds through Star Valley and Snake River Canyon",
+        "Sun exposure across long, open Idaho valley sections",
+        "Weather can change rapidly at altitude — rain and wind without warning"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved roads from valley floor through three mountain passes to Jackson Hole",
+      "surface": "Entirely paved. State highways, US routes, and county roads through Utah, Idaho, and Wyoming. Road surfaces range from smooth highway to rougher rural pavement. No gravel or off-road sections. The challenge is entirely physiological — 203 miles, 9,800 feet of climbing, and three mountain passes.",
+      "technical_rating": 1,
+      "features": [
+        "Leg 1: Logan to Preston (30+ miles) — moderate rolling terrain through Cache Valley, warm-up miles at 4,500 ft",
+        "Leg 2: Preston to Montpelier (47 miles) — 60% climbing, including 22-mile ascent to Strawberry/Emigration Canyon summit at 7,424 ft, then descent to Bear Lake Valley",
+        "Leg 3: Montpelier to Afton (47 miles) — two major climbs: Geneva Summit (6,923 ft, 7% final grades) and Salt River Pass (7,630 ft, 6-9% final 4 miles, KOM/QOM)",
+        "Leg 4: Afton to Alpine (30 miles) — Star Valley descent and rolling terrain, recovery section before final push",
+        "Leg 5: Alpine to Teton Village (47 miles) — Snake River Canyon, Hoback Junction, final approach beneath the Teton Range to finish at 6,307 ft"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "An odyssey across three states and three mountain passes. The front half punishes you with climbing; the back half tests whether anything remains. At 203 miles, LoToJa is not about any single climb or feature — it is about the accumulation of everything across an entire day.",
+      "signature_challenge": "Three mountain passes in the first 110 miles — then 90+ miles on depleted legs. The front-loaded climbing ensures that the 'flat' back half of the course is anything but easy. At mile 150, every false flat feels like a climb. At mile 180, you still have a marathon of cycling remaining. The signature challenge is not any single climb — it is the relentless accumulation of 203 miles.",
+      "suffering_zones": [
+        "Strawberry Summit",
+        "Salt River Pass — The Apex",
+        "Snake River Canyon Grind",
+        "The Teton Reveal"
+      ]
+    },
+    "logistics": {
+      "airport": "Salt Lake City International (SLC) — 80 miles south of Logan, 1.5 hour drive. Logan-Cache Airport (LGU) for private aviation only.",
+      "lodging_strategy": "Book Logan hotels for pre-race night (Best Western Plus Weston Inn, University Inn, SpringHill Suites — $80-150/night). Jackson Hole is expensive ($200-400+/night) if staying post-race. Many riders arrange return transport to Logan same evening. Book early — race weekend fills Logan hotels.",
+      "transport": "",
+      "food": "Pre-race dinner in Logan: multiple restaurant options along Main Street. Race morning: eat at your hotel — don't depend on finding food at 4:30 AM. Pack crew vehicle with 12+ hours of nutrition for the rider and crew food.",
+      "official_site": "https://lotoja.com"
+    },
+    "history": {
+      "founded": 1983,
+      "origin_story": "Started in 1983 when David Bern, a Utah State University student, and Jeff Keller, owner of Sunrise Cyclery in Logan, wanted a race that resembled the difficulty of European one-day classics like Paris-Roubaix. Seven riders lined up at dawn and raced 186 miles north to Jackson. Bob VanSlyke of Logan won in just over nine hours. From those seven pioneers, LoToJa has grown to 1,500+ riders annually over 40+ years.",
+      "notable_moments": [
+        "1983: Seven riders start the first LoToJa. Bob VanSlyke wins in ~9 hours.",
+        "2012: 30th anniversary celebration, 1,800+ riders on course.",
+        "2018: Spencer Johnson sets current course record of 8:18:29.",
+        "2022: 40th anniversary — four decades of continuous running.",
+        "2024: Danny Van Wagoner wins the 42nd edition in a sprint finish (8:50:24), beating Adrian Rips by 6 seconds.",
+        "Women's record: Melinda MacFarlane, 9:35:00, set in 2013."
+      ],
+      "reputation": "The longest single-day USAC-sanctioned bicycle race in America. A Mountain West institution and the defining test of one-day endurance cycling in the United States."
+    },
+    "biased_opinion": {
+      "verdict": "Legend",
+      "summary": "LoToJa is the American one-day classic that European cycling traditions inspired but the Mountain West made its own. Two hundred three miles from a Utah college town to the foot of the Tetons, across three states and three mountain passes, in a single day. It is not the hardest race in America. It is not the most famous. But it might be the most audacious — a race conceived in 1983 when two Logan cyclists decided that Americans deserved their own Paris-Roubaix and built it through sheer mileage.",
+      "strengths": [
+        "The distance: 203 miles in a day is a statement. Finishing LoToJa earns you the right to tell the story for the rest of your life.",
+        "The journey: Three states, three mountain passes, Snake River Canyon, and a finish beneath the Grand Teton. No American one-day race covers this much geographic drama.",
+        "The crew bond: Your support vehicle drives alongside your suffering for 10-13 hours. That shared experience creates something deeper than a finisher medal."
+      ],
+      "weaknesses": [
+        "Crew requirement: You cannot meaningfully do LoToJa without a dedicated support crew and vehicle. That is a significant logistical and social ask.",
+        "Point-to-point logistics: Your car is 200 miles behind you at the finish. Getting home is its own adventure.",
+        "Geographic isolation: This is a Mountain West event. If you do not live in Utah, Idaho, or Wyoming, the travel logistics compound the already-complex race logistics."
+      ],
+      "bottom_line": "If you want to test the outer boundary of what you can accomplish on a bicycle in a single day, LoToJa is the answer. 203 miles. Three states. Three mountain passes. A finish beneath the Tetons. There is nothing else like it in America."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "America's longest one-day road race. Three states. Three passes. One unforgettable day.",
+      "should_you_race": "LoToJa is for riders who want more than a century ride — who want a genuine odyssey. If you can sustain moderate effort for 10-13 hours, have a reliable crew, and want a finishing story that few other events can match, this is your race. But be honest with yourself: 203 miles is a very long day, and the three mountain passes in the first half ensure you will face the final 90 miles on tired legs.",
+      "alternatives": "If you want ultra-distance without the crew logistics: try RAGBRAI (supported, 7-day format across Iowa). If you want a similar mountain experience in a shorter package: try the Assault on Mt. Mitchell (102 miles, 11,000 ft climbing). If you want the European one-day classic vibe that inspired LoToJa: try Paris-Roubaix Challenge (pave, prestige, pain)."
+    },
+    "citations": [
+      {
+        "url": "https://lotoja.com/",
+        "category": "organizer",
+        "label": "LoToJa Classic Official Website"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/LOTOJA",
+        "category": "other",
+        "label": "Wikipedia — LOTOJA"
+      },
+      {
+        "url": "https://www.cyclingwest.com/racing/road-racing/lotoja-classic/43rd-annual-lotoja-classic-to-roll-on-sept-6-2025/",
+        "category": "media",
+        "label": "Cycling West — 43rd Annual LoToJa Classic"
+      },
+      {
+        "url": "https://www.deseret.com/sports/2024/09/08/2024-lotoja-bike-race-results-logan-utah-jackson-wyoming/",
+        "category": "media",
+        "label": "Deseret News — 2024 LoToJa Results"
+      },
+      {
+        "url": "https://www.altovelo.org/race-reports/race-report-2024-lotoja",
+        "category": "community",
+        "label": "Alto Velo Racing Club — 2024 LoToJa Race Report"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4698/lotoja-classic",
+        "category": "media",
+        "label": "Gran Fondo Guide — LoToJa Classic"
+      },
+      {
+        "url": "https://www.cachevalleydaily.com/news/local/lotoja-classic-to-celebrate-40-years-on-saturday/article_3f911f47-76cf-58c8-bfb9-d920aca547b4.html",
+        "category": "media",
+        "label": "Cache Valley Daily — LoToJa 40th Anniversary"
+      },
+      {
+        "url": "https://saltlakemagazine.com/utah-cycling-lotoja-ride/",
+        "category": "media",
+        "label": "Salt Lake Magazine — Tackling the 203-mile LoToJa"
+      },
+      {
+        "url": "https://strambecco.com/event/lotoja/",
+        "category": "other",
+        "label": "Strambecco — LoToJa Classic 2026"
+      },
+      {
+        "url": "https://lotoja.com/eventinfo/CourseInfo",
+        "category": "organizer",
+        "label": "LoToJa Official Course Info"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "LoToJa Classic gran fondo cycling Logan",
+      "videos": [
+        {
+          "video_id": "x7qmym-z5IM",
+          "title": "Preparing for LOTOJA - First Ride of the Year with TEAM ONWATCH",
+          "channel": "Our Life Elevated",
+          "view_count": 416,
+          "upload_date": "20210322",
+          "duration_string": "6:36",
+          "description": "\"It's not just a hill, it's an opportunity.\" Sardine Canyon summit of 5,899 feet offered just that to the members of Team OnWatch March 19, 2021. With temperatures in the low 60's, they headed out for a ride around the Wellsville mountain range. What a great day to start out the season. \n\nTeam OnWatch on Facebook:  https://www.facebook.com/loganraceclub\nTeam OnWatch Website: https://www.facebook.com/loganraceclub/\nTyler on Strava: https://www.strava.com/athletes/tylervanderbeek\nBlog: https://www.ourlifeelevated.com/",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=x7qmym-z5IM",
+          "transcript": "happy day\nhey it's a first time i'm gonna record\ndoing a bike ride this year\nso it's march 19th today\nand it's like 65 degrees here in\nnorthern utah\nunbelievable so i can't leave this to\nwaste we're going to go take advantage\nof it\nand hit the first recorded bike ride for\nthe year so got a little wind headed\non to the north which is where i'm going\nwhich i never like to start out with a\ntailwind but\nhere goes anyway so we're gonna have\nsome fun and hit some canyons and some\nclimbs and\nsee if we hit anybody on the road i mean\nsee anybody on the road\nhopefully i don't get hit by\n[Applause]\n[Music]\nwell changed plans cruising out found a\ngroup\nyay we're gonna hit him up\nyeah yeah yeah here we go here we go\nanyway it's much more fun to ride with\nthe group so\nhere we go hopefully you can hear me\nso we're almost to wellsville sardine\ncanyon\nthese guys are flying even in a draft\nwith the headwind they're pushing i knew\nit these guys are animals\nin fact i love them they push me\ntheir fun grew\nhopefully once we hit the mouth of the\ncanyon we don't have headwind but\nit's not looking too promising so we'll\ncrank it i'll turn around to the top of\nsardine\nand head back home just have less time\nthan they do today\nadios for the sake\nhey we're at the bottom of wellsville\nhooked up with a couple more who's with\nyou joe\na couple more i had to change the\nbattery in the gopro\ni'm already out of breath here we go\nheadwind like i didn't walk oh well\nhaving fun\nso\noh that sucked\ni got stomach pains and then of course\nnever caught the group\na little suffering the whole way\nbut that's what it's all about sometimes\nso we're the top of sardine it's my\nturnaround point\nthere might be one or two side turn\naround too\nanyway it's all downhill from here\nalmost\noh man hey i'm just not feeling\nwell today i'm gonna drag my little\nbottom home\ni'm just cruising downhill that little\nkicker\nkicked my butt\ntomorrow will be a better day hey maybe\nwe'll get a second or third win\nlet's see\noh bummer my ride just came to an end\nabout 45 miles in\nand almost home really just a few more\nmiles\nand i have a flat tire and the\nunfortunate thing is i forgot\nto put the saddle bag on so i have no\nspare to\nair nothing it's time to call laura\nsave my tiny once more\noh dear well help is on the way\njust gonna sit here and wait relax\ni guess you know enjoy my rest now since\ni'm done\nfortunately i caught someone at home\nhaley was there answered and\nshe's on her way so we're gonna make\nsure we put the saddlebag on as soon as\nwe get home so we are fully prepared for\nspring riding here we go\nyou",
+          "curated": false
+        },
+        {
+          "video_id": "6e8V_jWoi4E",
+          "title": "LOTOJA - History and Really Cool Team!",
+          "channel": "joel rackham",
+          "view_count": 2053,
+          "upload_date": "20100130",
+          "duration_string": "3:38",
+          "description": "This is a video from the 2009 LOTOJA. The video was shot by the Standard Examiner. It has some pictures and music added...",
+          "tags": [
+            "LOTOJA"
+          ],
+          "url": "https://www.youtube.com/watch?v=6e8V_jWoi4E",
+          "curated": false
+        },
+        {
+          "video_id": "f4NN1QHX3u8",
+          "title": "LOTOJA   2011",
+          "channel": "Scott Wood",
+          "view_count": 908,
+          "upload_date": "20110917",
+          "duration_string": "9:24",
+          "description": "",
+          "tags": [
+            "LOTOJA",
+            "2011"
+          ],
+          "url": "https://www.youtube.com/watch?v=f4NN1QHX3u8",
+          "transcript": "here we are this is preloaded ja Friday\nnight we're at the park and everybody's\njust kind of carbo getting lots of car\nbolts here's mr. glausser again when\nhe's doing really well you guys\neverything is a Buick we are ready for\ntomorrow knock them dead this guy yeah\nthey're ready ready ready we got we got\nthe better oh you'll kick in watch back\nyour mama you're right who's your mama\nwho's your daddy over here JB Taylor\nyeah baby what do you think about the\nrace tomorrow I'm pumped I'm excited I\nwant to see everybody who's your support\nteam my lovely bride what do you think\nabout this\nno you gotta save it and here's another\nsupporter yes and there Robbie yes sir\nwhat do you think about the mall\ntomorrow is going to be spectacular\nwell be live behind my experience talk\nabout forever yeah and we got a couple\nmore supporters over here these are our\nhead supporters Mary glauser I was\njustified\nreally think\n[Music]\nI need to vent I never you know you I\nwas so excited to be able to drive the\ncar\nall right\nreally why are you so frightened because\nit is really fun did you get to serve\nRoger computed pain and not be the\nperson in pain okay yes and\nbig expectations for your team oh yeah\nwhat about yours oh yeah right there you\nknow coming in women no Mary's gonna\nhave four women in her car and I'll\nintroduce you to the other three here\nshortly how many are you having your car\nyeah I have 11 will see a second we can\nsupport them together they might pull\nthat ok\nanything it's a great interview crazier\nby the way first interview ok and over\nhere is another table this is the this\nis to be minus team here oh\nyeah we got max we got Joey\nyes sir over here the supporters\ns your knees okay coming down here were\ncrabs great food as you can see Judy\nAndrew way to think about the shack\nterrible you're on video about this one\neventim am I ought to all about the bike\na guy\nokay oh we have some visitors who are\nthese books Kim in there there can't I\nmight hope that ok watch all right Derek\na third time at all\nwell we'll be talking to your separate\nrows or any other say report results are\nnothing to say except I'm really really\nexcited and I hope we're healthy and\nsafe and fast\nmom\nright here yeah\nand here's here's some of the best fans\never notice these fans family Joey who\nthink I say let me in no what do you\nthink angry I'm just rockin it love it\nit's so good ok and over here is to win\nme the maverick I know what that's all\nabout my looks pretty cool\nguy\nwe're sorry night this is the starting\nline I just so small I have no idea\neverybody gets to start there and you\ngot a bunch of stuff over here\nOh\nEast Indian riders it's saturday morning\nat lower jaw and Logan and I just rented\na couple here that right is a family on\na tandem what's your name sir Tony fever\nTony here from Salt Lake City miss Lindy\nLindy is the one of five kids 67 yeah\nnieces nephews how many you're going to\nhave on the back of town of the day look\nthis sick excuse me Wow and this is how\nmany years for you here to know when\nthere's another daughter and over here\nright here oh man there's more okay it\nlooks pretty good right now I'm going to\ndo this the whole way yeah I've got an\ninterview how long dad okay well we hope\nyou all have a good day to day as you\ncan see there's tons of people here I'm\nJohnny we are you're screwing it going\nthree minute wait so come on out right\nagain you're right over here again party\nwhat are now ceramic swapping out\nsleeping on the bikes today okay Kim is\nthat just for the polar bear he's got\nparka is that is beyond he's ready to go\nhealth benefit hey\nplease meet anymore all right let's not\nyou again we get the person that's a big\nday for now\nwe are the last stop in alpine and we\njust had a major operation as you can\nsee\nshot my browser with a dark but being\nthe man it is that's been hurt at all\nand then pull it out with blood spurting\nall over Vicky almost fainted Gabby with\npictures\nand over here we got a jazzman let's\nhave a quick alyna muse what do you\nthink so far just man hundred ten\npercent Thursday afford to go ahead 51\ngood John I news your better half\nno real okay okay claps in a grand old\njob well driver just lost good stuff you\ngot about 6 or alpha del\nall right you got there ok the hardest\nleg does make sure you check it out\nparties Kenya riders blogspot com\nwhatever it is over now now here's one\nof the most important parts of the\nentire ride right here making sure you\ntake care and you got porta-potties all\nover the place make it darted\nMike shot in that Canyon right there is\nwhat we're going to go up right along\nSnake River I think they turned up and I\nthink we're going to take a few videos\nso\nthank you ok I know not what is done\nwe're coming in to host\nBishop bring us home as you can see\nlet's keep them in\nOttawa we have\nPDF waters to go and i am glad\nyeah just wanting to see what we're\nriding into just Lizzie gorgeous\nmy good buddy\nhey\nokay well\nthen find adventure\nbut we did it over now\n911 post\nlower jaw and\nwe're up in the Wilson estate\nso I know that every 3-6 7-5 is going\ndown in history as one of the fastest\nriders of the right and I'm very proud\nof my trophy that I won or my metal\ninicio city i'm a proud we're a long job\nin it like introduce you this time one\nof my good friends and fellow rider\nSteve hail Steve could you come over\nhere for just a minute yeah brother\nwould carry and receive even our age\nmanagement we rode 200 freaking six\nmiles and\nfeet that just no other men have ever\ndone see what do you have to say for\nyourself I'm never doing it again\nit was idiotic but one of the funnest\nthings we did I day yesterday we met\nlucky if we did something fun yesterday\nuh-huh we make a deal on chicago and the\nsea foods from st. George you just\nthat's a great day and you said an\nindividual as you can see Steve's a much\nbetter looking person right now last\nnight he was calle wide enough AZ\nsolved all over his uniform some more\ninsult me we thank you okay glad it's\ndone they get back Richard goodbye\nshowmars stay here we stay there's the\nmobile the support support my bath the\ndock and then we got the doc a little\naccident no you're right here you can\nstop by yeah what happened was a little\ncloser closer there's a little alley\nhere is nothing surgeon how he right\nthere she went down he got some road\nrash but he's doing okay okay not to bad\nfor the wear oh it's really sunny okay\nand there's people in the Sun yep ok say\nadios",
+          "curated": false
+        },
+        {
+          "video_id": "RZx-qunZL-I",
+          "title": "What its like to ride with LOTOJA winners",
+          "channel": "Our Life Elevated",
+          "view_count": 1369,
+          "upload_date": "20201009",
+          "duration_string": "7:36",
+          "description": "I was invited to join a group ride not knowing who was coming for sure and how fast we would ride.  Turned out to be a fast training ride with several winners of LOTOJA in the group.  \nSuper awesome day & group!\nI love riding with faster people to help me get stronger.\n\nIf you're wondering what LOTOJA is, click https://lotoja.com/\n\nStrava: https://www.strava.com/athletes/tylerbeek\n\nMusic: Bensound.com Birth of a Hero",
+          "tags": [
+            "LOTOJA",
+            "cycling",
+            "road cycling",
+            "racing",
+            "training",
+            "fitness"
+          ],
+          "url": "https://www.youtube.com/watch?v=RZx-qunZL-I",
+          "transcript": "here we are another\nbeautiful saturday morning just getting\nready\nwell heading out right now to meet up\nwith the group\nwe are going to do blacksmith fork\ncanyon from higher muta\ndon't know how many people are here when\ni say the group\nit's always it's not a set number or set\ngroup of people so you never know who's\ngonna show up and\nbut it's always a fun group haven't had\none that i haven't enjoyed or\nbeen angry it's what i love about this\nthing so\nanyway you can see it's beautiful\nmorning a little bit of clouds actually\nso nice respite from the heat\nbut i'll keep you posted should be an\nawesome one\ni got a little short ride today though\nbecause i gotta keep moving my house\nso fast and furious i didn't see anybody\ngo canyon\nhere's where we're headed and of course\nthere's a headwind\nit's always a headwind in the morning of\nthis canyon so hopefully\ni didn't miss the group and have to do\nit by myself so we'll see\n[Music]\nso\n[Laughter]\nmade it to the top of blacksmith fourth\ncanyon nice and easy ride they said\nuntil this guy maybe all these guys\ndecided\nhey let's just hammer it up the hills\nturned into a bit of a race tuesday\nnight races\nanyway fun good efforts but the\neffort for the weather is just\nphenomenal nice and cool\ni haven't had a nice ride like this for\na long time anyway\nheading now head down be fast and\nfurious down\na little slow down here on the way down\nnate was going so fast\nthat he blew out his tire that's what he\ngets for\npushing us so hard just kidding\nwhat were you saying earlier other nate\nyou want to see him try to change the\ntire i just heard that\nnate had to have a man show me how to\nchange the tires\nchase the tire that's from mace no\npressure\nbut look i mean we're sitting here look\nat these views\nit's still nice and cool the river\nyou can't beat this day\nyou",
+          "curated": true,
+          "curation_reason": "First-person training ride with LOTOJA winners showing course conditions and race preparation insights.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/RZx-qunZL-I/maxresdefault.jpg",
+          "thumbnail_score": 80.0
+        },
+        {
+          "video_id": "5D0SBJQhiXo",
+          "title": "Lotoja 2016",
+          "channel": "iamtoddy1979",
+          "view_count": 588,
+          "upload_date": "20160923",
+          "duration_string": "4:27",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=5D0SBJQhiXo",
+          "curated": false
+        }
+      ],
+      "quotes": [
+        {
+          "text": "There's always a headwind in the morning of this canyon so hopefully I didn't miss the group and have to do it by myself. Made it to the top of blacksmith fourth canyon nice and easy ride they said until this guy maybe all these guys decided hey let's just hammer it up the hills turned into a bit of a race.",
+          "source_video_id": "RZx-qunZL-I",
+          "source_channel": "Our Life Elevated",
+          "source_view_count": 1369,
+          "category": "course_difficulty",
+          "curated": true
+        }
+      ],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [
+          {
+            "text": "here we are this is preloaded ja Friday night we're at the park and everybody's just kind of carbo getting lots of car bolts",
+            "source_video_id": "f4NN1QHX3u8",
+            "source_channel": "Scott Wood",
+            "source_view_count": 908,
+            "category": "logistics",
+            "curated": true
+          },
+          {
+            "text": "we are the last stop in alpine and we just had a major operation",
+            "source_video_id": "f4NN1QHX3u8",
+            "source_channel": "Scott Wood",
+            "source_view_count": 908,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "The available transcripts contain limited race-specific information about LoToJa Classic. One video captures pre-race atmosphere with riders carb-loading on Friday night and gathering at the park before the event. There are mentions of support teams and crew cars, with references to Alpine as a stop location during the race. The transcripts show family participation including a tandem rider team, and community support with crew vehicles carrying multiple team members. However, the transcripts lack detailed course information, specific terrain descriptions, gear recommendations, or pacing strategies that would be typical race intelligence. Most content focuses on local training rides in northern Utah canyons rather than the actual LoToJa race route from Logan to Jackson."
+      }
+    }
+  }
+}

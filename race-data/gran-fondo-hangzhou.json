@@ -1,0 +1,135 @@
+{
+  "race": {
+    "name": "UCI Gran Fondo Hangzhou Qiandao Lake",
+    "slug": "gran-fondo-hangzhou",
+    "display_name": "UCI Gran Fondo Hangzhou Qiandao Lake",
+    "tagline": "China's first UCI Gran Fondo World Series on the scenic 2022 Asian Games course at Thousand Island Lake",
+    "vitals": {
+      "distance_km": 107.0,
+      "distance_mi": 66.5,
+      "elevation_m": 1800,
+      "elevation_ft": 5906.0,
+      "location": "Qiandao Lake, Chun’an County, Hangzhou, Zhejiang Province, China",
+      "location_badge": "Qiandao Lake (Thousand Island Lake)",
+      "country": "China",
+      "date": "May",
+      "date_specific": "2026: May 23",
+      "field_size": "1500+",
+      "start_format": null,
+      "registration": "Open",
+      "entry_fee": "Not available",
+      "feed_zones": 1,
+      "cutoff_time": "TBD",
+      "lat": 29.5333,
+      "lng": 118.8833,
+      "route_options": [
+        "21 km Time Trial",
+        "107 km Gran Fondo"
+      ]
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Mild subtropical (15-25°C / 59-77°F in May), possible rain",
+      "challenges": [
+        "Mild subtropical (15-25°C / 59-77°F in May), possible rain"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat",
+      "surface": "Mostly flat with elevation 100-326m; three categorized climbs: Cat4 (2.59km/3.7% @11km), Cat3 (3km/5.2% @30km), Cat4 (1.73km/6% @48km); well-paved lakeside roads through villages and countryside",
+      "technical_rating": 3,
+      "features": [
+        "Mostly flat with elevation 100-326m",
+        "three categorized climbs: Cat4 (2",
+        "7% @11km), Cat3 (3km/5",
+        "2% @30km), Cat4 (1",
+        "73km/6% @48km)"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 71."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "107km Gran Fondo starts north Qiandao Lake, big counterclockwise loop through lakeside roads, quiet villages, lush countryside. **Suffering zones**: Cat4 2.59km/3.7% (km11), Cat3 3km/5.2% (km30), Cat4 1.73km/6% (km48). Feed zone km60. Flat/fast 21km TT loop in Liangzhu (11m elevation).",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Hangzhou Xiaoshan Intl (HGH) ~2-3hr drive. Time trial in Liangzhu (30min NW Hangzhou). North side Qiandao Lake start/finish. International field support expected.",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "Founded 2025 as China's first UCI Gran Fondo World Series event and first international A-class cycling in Hangzhou post-2023 Asian Games. 2025 debut (Sep 6-7) drew 1,500+ riders from 30 countries as final qualifier for UCI World Championships. 2026 edition May 23-24 on 2022 Asian Games course.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Historic first Chinese UCI Gran Fondo at stunning Qiandao Lake (1,078 islands). 2026's punchier 107km/1,800m course improves on 2025's flatter 136km. Qualifier prestige + tourist paradise = bucket-list event despite travel costs.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "T2",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "UCI Gran Fondo Hangzhou Qiandao Lake gran fondo cycling Qiandao Lake",
+      "videos": [
+        {
+          "video_id": "7wIwC7r4sHw",
+          "title": "2025 UCI Gran Fondo – Qiandao Lake",
+          "channel": "QianDao Lake CHINA",
+          "view_count": 55,
+          "upload_date": "20250915",
+          "duration_string": "31",
+          "description": "🚴‍♂️💨 2025 UCI Gran Fondo – Qiandao Lake 🌊✨\n\nNot just a race. Not just a lake.\nIt’s the ride of a lifetime.\n\n🏞 Stunning views\n🚴 Riders from around the world\n🔥 Sprint to the finish\n\n👉 Qiandao Lake — A Ride You Can’t Miss\n\n📍 Hangzhou · China · Qiandao Lake\n\n#UCIGranFondo #QiandaoLake #CyclingLife #RideOfALifetime #ChinaCycling",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=7wIwC7r4sHw",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

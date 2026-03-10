@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Tour of Wessex",
+    "slug": "tour-of-wessex",
+    "display_name": "Tour of Wessex",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 375.0,
+      "distance_mi": 233.0,
+      "elevation_m": 4570,
+      "elevation_ft": 14993.0,
+      "location": "Yeovil, Somerset, England",
+      "location_badge": "Yeovil, England",
+      "country": "England",
+      "date": "2026: May TBD",
+      "date_specific": "2026: May TBD",
+      "field_size": "Limited, regional sportive",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Multiple feed stations per stage",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and B&Bs in Yeovil, Somerset; book early for multi-day event.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "Rare UK multi-stage road sportive through stunning Somerset landscapes.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

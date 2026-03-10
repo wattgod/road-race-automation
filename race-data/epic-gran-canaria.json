@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Epic Gran Canaria",
+    "slug": "epic-gran-canaria",
+    "display_name": "Epic Gran Canaria",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 2286,
+      "elevation_ft": 7500.0,
+      "location": "Las Palmas, Gran Canaria, Spain",
+      "location_badge": "Las Palmas, Spain",
+      "country": "Spain",
+      "date": "February 7, 2026",
+      "date_specific": "February 7, 2026",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://epicgrancanaria.com",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 5,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Ayagaurers Viewpoint Grind: 45-minute cutoff forces relentless pacing up the initial Stage 1 climb from Aqualand. Exposed volcanic slopes amplify early fatigue under Canarian sun.",
+        "Salto del Perro Inferno: 1:50-hour limit on the longest time trial demands sustained power after 50+ miles. Steep pitches near Pasito Blanco break legs before Maspalomas return.",
+        "Stage 2 Accumulator: Post-recovery climb time trial compounds weekend fatigue on 75 km loop. Shorter distance hides the cumulative toll of volcanic repeats."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://epicgrancanaria.com"
+    },
+    "history": {
+      "founded": 2013,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Pre-season volcanic punchbowl opener that kicks off GFWT with island flair.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

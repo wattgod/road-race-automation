@@ -1,0 +1,127 @@
+{
+  "race": {
+    "name": "Flandrien Ride",
+    "slug": "flandrien-ride",
+    "display_name": "Flandrien Ride",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 159.3,
+      "distance_mi": 99.0,
+      "elevation_m": 1676,
+      "elevation_ft": 5500.0,
+      "location": "Oudenaarde, Belgium",
+      "location_badge": "Oudenaarde, Belgium",
+      "country": "Belgium",
+      "date": "2026: April 4",
+      "date_specific": "2026: April 4",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Typical Flemish April: cool, damp, windy – perfect for testing Flandrien mettle.",
+      "challenges": [
+        "Precipitation: 50-60%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 5,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Punchy hellingen and vicious cobbled sectors through Flemish Ardennes, evoking Tour of Flanders suffering in self-paced glory.",
+      "signature_challenge": "Conquer all 59 marked berg & cobble Strava segments within 72 hours for your engraved stone on the Wall of Fame.",
+      "suffering_zones": [
+        "Oude Kwaremont - Paterberg - Koppenberg finale: Legendary triple-threat combo; relentless cobbled ascents that break souls in the Tour of Flanders.",
+        "Day 2 Main Course: 190km with 12 climbs and 7 cobbled sectors; endless unheralded ups where true Flandriens earn their spurs.",
+        "West Flanders Starter: Ypres to Oudenaarde via Ghent-Wevelgem cobbles; 75km appetizer with 914m vert to whet the appetite."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Leopold Hotel Oudenaarde recommended; cycling-friendly with bike storage.",
+      "transport": "Self-supported Strava challenge based in Oudenaarde; optional guided tours with Sportive Breaks include transfers, meals, mechanics.",
+      "food": "",
+      "official_site": "https://www.cyclinginflanders.cc/flandrien-challenge"
+    },
+    "history": {
+      "founded": 2020,
+      "origin_story": "Modern Strava-era challenge visualizing digital segments on Flanders' sacred roads; rewards completers with physical monument.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Ultimate Flandrien proving ground – suffer on hallowed cobbles, claim immortality in stone.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.cyclinginflanders.cc/flandrien-challenge",
+        "category": "reference",
+        "label": "Flandrien Challenge"
+      },
+      {
+        "url": "https://sportivebreaks.com/belgium-road-cycling-holidays/flandrien-challenge/",
+        "category": "reference",
+        "label": "Flandrien Challenge with Sportive Breaks"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=iVsFVcneuUE",
+        "category": "media",
+        "label": "Flandrien Challenge. The unbelievable ride - YouTube"
+      }
+    ]
+  }
+}

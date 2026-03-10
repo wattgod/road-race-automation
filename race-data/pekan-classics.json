@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Gran Fondo Pekan / Pekan Classic",
+    "slug": "pekan-classics",
+    "display_name": "Gran Fondo Pekan / Pekan Classic",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 162.5,
+      "distance_mi": 101.0,
+      "elevation_m": 762,
+      "elevation_ft": 2500.0,
+      "location": "Royal Town of Pekan, Pahang, Malaysia",
+      "location_badge": "Royal Town of Pekan, Malaysia",
+      "country": "Malaysia",
+      "date": "2026: June 28",
+      "date_specific": "2026: June 28",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Tropical monsoon climate with warm, humid conditions ideal for road cycling.",
+      "challenges": [
+        "Precipitation: 30% (inter-monsoon showers possible)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Flat river-hugging out-and-back with a central loop deviation, featuring moderate rolling hills and short steep pitches amid tropical scenery.",
+      "signature_challenge": "Pahang River double-sided routing: 108km flat borders punctuated by a hilly loop for 2500ft gain.",
+      "suffering_zones": [
+        "River Border Push (First 40km): Sustained flat effort along Pahang River banks tests pacing in humid conditions before the loop.",
+        "Loop Deviation: Short interior loop introduces the event's 2500ft elevation via rolling short steep hills.",
+        "Return River Grind (Last 68km): Fatigue sets in on the flat return, where heat and wind amplify the distance."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and homestays in Pekan town; book early for June event weekend.",
+      "transport": "UCI Gran Fondo weekend event with 80km/120km distances; international field; held in Royal Town of Pekan.",
+      "food": "",
+      "official_site": "https://www.uci.org/competition-details/2025/CPT/75415"
+    },
+    "history": {
+      "founded": 2023,
+      "origin_story": "UCI Gran Fondo World Series qualifier attracting international pelotons to Malaysia's Pahang region.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "Scenic, affordable UCI gran fondo blending flat speed with moderate Pahang hills.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.uci.org/competition-details/2025/CPT/75415",
+        "category": "reference",
+        "label": "Gran Fondo Pekan / Pekan Classic - UCI"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/malaysia/gran-fondo-pekan---pekan-classic/39631",
+        "category": "reference",
+        "label": "Gran Fondo Pekan / Pekan Classic"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/pekan-classics-with-very-international-field-at-the-start/",
+        "category": "reference",
+        "label": "Pekan Classics with very international field at the start"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/12386/uci-pekan-classics",
+        "category": "reference",
+        "label": "UCI Pekan Classics - Gran Fondo Guide"
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "race": {
+    "name": "Le Race",
+    "slug": "le-race",
+    "display_name": "Le Race",
+    "tagline": "100 km. Cathedral Square to Akaroa. Across an extinct volcano, over the Port Hills, and down into a French harbour town. New Zealand's toughest one-day road classic since 1999.",
+    "vitals": {
+      "distance_km": 99.9,
+      "distance_mi": 62.1,
+      "elevation_m": 1850,
+      "elevation_ft": 6070.0,
+      "location": "Christchurch to Akaroa, Canterbury, New Zealand",
+      "location_badge": "CANTERBURY, NEW ZEALAND",
+      "country": "New Zealand",
+      "date": "Third Saturday of March annually",
+      "date_specific": "2026: March 21",
+      "field_size": "~600 riders (capped at 1,000 entries across all categories)",
+      "start_format": null,
+      "registration": "Online via lerace.co.nz. Solo entry NZ$130-180 (~$80-110 USD) depending on timing. Relay NZ$170-245, Tandem NZ$185-250, Team NZ$130-180. Entries close 5 March with late fee after. Refund minus $25 admin fee before 1 March.",
+      "entry_fee": "NZ$130-180 (~$80-110 USD)",
+      "feed_zones": "Water and nutrition stops along the course. Relay changeover at Little River (~54 km).",
+      "cutoff_time": "No published hard cutoff — all riders expected to finish within reasonable time",
+      "lat": -43.5321,
+      "lng": 172.6362,
+      "route_options": [
+        "Solo: 100 km (62 mi) — full Christchurch to Akaroa",
+        "Relay: 100 km split — Rider 1: Cathedral Square to Little River (53.65 km), Rider 2: Little River to Akaroa (46.35 km)",
+        "Team of 4: all four riders complete the full 100 km together",
+        "Tandem: full 100 km on a tandem bicycle",
+        "Mountain Bike Challenge: 100 km on MTB (same road course)"
+      ]
+    },
+    "climate": {
+      "primary": "Late Southern Hemisphere summer — warm, generally settled, with Banks Peninsula microclimates",
+      "description": "Late March in Canterbury marks the tail end of summer. Average highs of 19-22C (66-72F) in Christchurch, cooling to 15-18C (59-64F) on the exposed summit roads at 500-700m elevation. Average lows around 10C (50F). March is one of Canterbury's drier months, but Banks Peninsula creates its own microclimate — fog, sea breezes, and sudden weather changes on the exposed ridgelines are common. The nor'wester wind can be a factor, bringing warm, gusty conditions. UV remains intense in the Southern Hemisphere even in late summer.",
+      "challenges": [
+        "Wind: exposed Summit Road and Hilltop ridgeline catch crosswinds and gusts — the nor'wester can be relentless on the volcanic crater rim",
+        "Temperature variation: 10C+ swings between sheltered Christchurch and exposed summit roads — layering is essential for the Dyers Pass climb",
+        "Banks Peninsula microclimates: sea fog, sudden cloud, and localised rain on the peninsula even when Christchurch is clear",
+        "UV exposure: 3-4+ hours of intense Southern Hemisphere UV on exposed ridgelines and descents"
+      ]
+    },
+    "terrain": {
+      "primary": "Sealed roads crossing the Port Hills and Banks Peninsula volcanic complex",
+      "surface": "Entirely sealed tarmac. Urban roads through Christchurch, Dyers Pass Road (steep, narrow, winding), Summit Road (exposed, undulating ridgeline), Gebbies Pass Road (descent), State Highway 75 through Little River, Hilltop climb, Summit Road again, Long Bay Road descent, and final run into Akaroa. Road quality is generally good New Zealand tarmac with some rough patches on the older summit roads.",
+      "technical_rating": 2,
+      "features": [
+        "Dyers Pass — the first major climb from sea level in Christchurch up to the Port Hills ridgeline (~400m gain over 8 km, avg 5%)",
+        "Summit Road — exposed volcanic ridgeline road with panoramic views of Lyttelton Harbour and the Canterbury Plains",
+        "Gebbies Pass descent — fast technical descent from the ridgeline down to the plains",
+        "Hilltop — the signature climb, 30-50 minutes of sustained effort from Little River up to the Banks Peninsula crater rim at ~500m",
+        "Final Summit Road section — undulating ridgeline riding with views into Akaroa Harbour before the steep descent to the finish",
+        "Long Bay Road descent — steep, technical descent into Akaroa with tight switchbacks and coastal views"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A volcanic crossing, not a circuit. Le Race is a 100 km point-to-point race that traverses Banks Peninsula — the eroded remnant of two extinct shield volcanoes — from Christchurch to Akaroa. The course climbs from sea level to the Port Hills ridgeline, traverses exposed summit roads with 360-degree panoramas, descends to the Little River valley, climbs back up to the Hilltop crater rim, and plunges down to the French harbour village of Akaroa at sea level. The terrain is relentless: you are climbing, descending, or fighting wind on an exposed ridge for virtually the entire 100 km. There is almost no flat road. The course rewards climbers, punishes poor descenders, and exposes anyone who has not prepared for crosswinds on volcanic ridgelines.",
+      "signature_challenge": "The Hilltop climb is the centrepiece, but Le Race's true challenge is the accumulation: Dyers Pass, Summit Road crosswinds, Gebbies Pass descent, the Hilltop grind, more Summit Road, and the steep Long Bay descent — all compressed into 100 km with nearly 1,900 metres of climbing. There is no recovery. There is no flat road. The course is designed by volcanic geology, not by committee, and it does not care about your legs. Michael Vink's course record of 2:37 means averaging nearly 40 km/h with 1,900m of climbing — a mark that shows how brutally honest this course is.",
+      "suffering_zones": [
+        "Cathedral Square to Dyers Pass",
+        "Summit Road to Gebbies Pass",
+        "State Highway 75 to Little River",
+        "Hilltop — The Decisive Climb",
+        "Summit Road and Descent to Akaroa"
+      ]
+    },
+    "logistics": {
+      "airport": "Christchurch International Airport (CHC) — New Zealand's South Island gateway. Direct flights from Auckland (1h15m), Wellington (55m), Queenstown (1h). International connections via Auckland or direct from Sydney, Melbourne, Brisbane, Singapore, and other Asian hubs. The airport is 20 minutes from Cathedral Square by shuttle, taxi, or bus.",
+      "lodging_strategy": "Stay in central Christchurch the night before — close to Cathedral Square for the 7 AM start. The city has plentiful accommodation from hostels ($30-60 NZD/night) to hotels ($100-250 NZD/night). If staying in Akaroa post-race, book well ahead — the tiny village has limited rooms and fills quickly on race weekend. Most riders return to Christchurch the same day via provided transport.",
+      "transport": "",
+      "food": "Christchurch has a thriving food scene rebuilt after the 2010-2011 earthquakes. Pre-race carb loading is easy. Akaroa at the finish has excellent French-influenced cafes and restaurants — the town's French colonial heritage delivers genuinely good bakeries and bistros. On-course nutrition support is provided but riders should carry their own gels and bars for the climbs.",
+      "official_site": "https://lerace.co.nz/"
+    },
+    "history": {
+      "founded": 1999,
+      "origin_story": "Le Race was first held in 1999, born from the simple ambition to create a one-day road race worthy of the extraordinary terrain between Christchurch and Akaroa. The 100 km route across Banks Peninsula — an extinct volcanic complex — was a natural course that rewarded strong climbers and punished poor descenders. From its first edition, the race attracted New Zealand's best road cyclists, and the Hall of Fame quickly accumulated names that would go on to Olympic and World Championship honours. The event has not been without tragedy: in 2001, competitor Vanessa Caldwell died in a collision with a car on Summit Road, leading to a criminal nuisance conviction for original organiser Astrid Anderson. The race endured, passing to Simon Hollander in 2008 and then to Sheree Stevens, whose first event as race director was 2015. The 2020 race was cancelled due to COVID-19, but Le Race returned and celebrated its 25th edition in 2024 with 600 riders.",
+      "notable_moments": [
+        "1999: Inaugural Le Race from Christchurch to Akaroa — the 100 km volcanic crossing enters the NZ cycling calendar",
+        "2001: Vanessa Caldwell tragically killed in collision with a car on Summit Road — a dark chapter that led to significant safety changes",
+        "2008: Ownership passes from founder Astrid Anderson to Simon Hollander",
+        "2010: Records broken — Michael Vink sets men's course record of 2:37, Jo Buick sets women's record of 2:58",
+        "2015: Sheree Stevens takes over as race director — new era of event management",
+        "2016: Olympic silver medalist Hayden Roulston wins Le Race, dominating in crosswinds and on the Hilltop climb",
+        "2019: Kate McIlroy wins and vows it is her last race",
+        "2020: Race cancelled due to COVID-19 pandemic",
+        "2021: Kate McIlroy returns and wins in record time despite saying she was done",
+        "2024: 25th edition — Nate Pringle wins in 2:32:43, just minutes off the course record, attacking on the final climb while cramping",
+        "2025: Nate Pringle defends his title, beating a fast chasing bunch to the line"
+      ],
+      "reputation": "New Zealand's most prestigious one-day road cycling race and the definitive test of the Canterbury cycling community. The Hall of Fame — Brian Fowler, Hayden Roulston, Kate McIlroy, Michael Vink, Nate Pringle — reads like a condensed history of NZ professional cycling. Within New Zealand, a Le Race win is a genuine credential. Internationally, it is the secret that NZ cyclists keep for themselves."
+    },
+    "biased_opinion": {
+      "verdict": "The Volcano Crossing",
+      "summary": "Le Race is New Zealand's one-day road cycling classic — 100 kilometres from Cathedral Square in earthquake-rebuilt Christchurch to the French harbour village of Akaroa, across the crater rim of an extinct volcanic complex that juts into the Pacific Ocean. The route climbs Dyers Pass out of the city, traverses the exposed Summit Road with panoramic views of Lyttelton Harbour and the Southern Alps, descends to Little River, then grinds back up to the Hilltop — 30-50 minutes of sustained climbing to the Banks Peninsula crater rim — before plunging down to the French-flavoured finish. The Hall of Fame includes Olympic medalists, world champions, and Commonwealth Games winners. Nate Pringle's 2024 victory — cramping on the final climb, squeezing out one last attack to hold off the chasing bunch — is the kind of desperate, decisive racing this course produces. Six hundred riders line up each March for New Zealand's most prestigious day on a road bike.",
+      "strengths": [
+        "Extraordinary setting: crossing the crater rim of an extinct volcanic complex with views into two flooded harbours and across to the Southern Alps",
+        "Genuine competitive pedigree: Hall of Fame includes Olympic medalists Hayden Roulston and Kate McIlroy, NZ national champions, and emerging talent like Nate Pringle",
+        "Point-to-point drama: 100 km from city to village with three major climbs, exposed ridgeline riding, and a finish in the French colonial charm of Akaroa",
+        "25+ years of institutional knowledge: well-organised, well-marshalled, deeply embedded in Canterbury cycling culture"
+      ],
+      "weaknesses": [
+        "Geographic isolation: Christchurch is a 24+ hour journey from Europe or North America — this is the bottom of the South Island of New Zealand",
+        "Small field: approximately 600 riders makes this intimate but limits the energy and atmosphere of larger events",
+        "Limited international profile: virtually unknown outside NZ and Australian cycling circles despite its quality",
+        "Point-to-point logistics: you finish 100 km from where you started and need transport back to Christchurch"
+      ],
+      "bottom_line": "Le Race is what happens when a road race is designed by geology rather than organisers. The course across Banks Peninsula — climbing out of Christchurch, traversing volcanic ridgelines, descending into a French harbour town — would be celebrated anywhere in the world. That it is hidden at the bottom of the South Island of New Zealand, contested by 600 riders each March, with a Hall of Fame that includes Olympic medalists — this is the definition of a well-kept secret. You come for the race. You stay for the volcanic landscape, the Akaroa bakeries, and the knowledge that you just crossed an extinct volcano on a bicycle."
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "New Zealand's one-day road classic. 100 km across an extinct volcano. Olympic medalists in the Hall of Fame. Six hundred riders. One French harbour town.",
+      "should_you_race": "Yes if you want New Zealand's most prestigious one-day road cycling experience with genuine competitive racing on a world-class course. Yes if you are drawn to volcanic landscapes, dramatic coastal ridgelines, and a finish in the most charming village in New Zealand. Skip if you need a large-field mass-participation atmosphere — this is 600 riders, not 6,000. Skip if the 24+ hour journey to Christchurch from the Northern Hemisphere is a dealbreaker.",
+      "alternatives": "If you want a larger NZ cycling event: try Lake Taupo Cycle Challenge (7,000 riders, volcanic lake circuit). If you want a competitive NZ stage race: try Tour of Southland. If you want a Southern Hemisphere road classic with bigger fields: try Cape Town Cycle Tour or Cadel Evans Great Ocean Road Race."
+    },
+    "citations": [
+      {
+        "url": "https://lerace.co.nz/",
+        "category": "official",
+        "label": "Le Race — Official Site"
+      },
+      {
+        "url": "https://lerace.co.nz/pricing-2/",
+        "category": "official",
+        "label": "Pricing — Le Race Official"
+      },
+      {
+        "url": "https://lerace.co.nz/les-rules/",
+        "category": "official",
+        "label": "Les Rules — Le Race Official"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Le_Race",
+        "category": "reference",
+        "label": "Le Race — Wikipedia"
+      },
+      {
+        "url": "https://www.ccc.govt.nz/transport/getting-around/cycling/find-a-ride/the-le-race-route",
+        "category": "reference",
+        "label": "Le Race Route — Christchurch City Council"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/7174384",
+        "category": "reference",
+        "label": "Le Race Route — Ride with GPS"
+      },
+      {
+        "url": "https://www.odt.co.nz/star-news/star-christchurch/riders-eye-milestone-victory-25th-le-race",
+        "category": "media",
+        "label": "Riders Eye Milestone Victory in 25th Le Race — Otago Daily Times"
+      },
+      {
+        "url": "https://granfondodailynews.com/2024/03/25/rising-star-nate-pringle-wins-grueling-le-race-in-new-zealand/",
+        "category": "media",
+        "label": "Rising Star Nate Pringle Wins Grueling Le Race — Gran Fondo Daily"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/8410/le-race",
+        "category": "reference",
+        "label": "Le Race — Gran Fondo Guide"
+      },
+      {
+        "url": "https://cycleevents.com/lerace/",
+        "category": "reference",
+        "label": "Golden Homes Le Race — CycleEvents.com"
+      }
+    ]
+  }
+}

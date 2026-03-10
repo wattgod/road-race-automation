@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Granfondo Leiria Region – Sico Lands",
+    "slug": "granfondo-leiria",
+    "display_name": "Granfondo Leiria Region – Sico Lands",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 148.1,
+      "distance_mi": 92.0,
+      "elevation_m": 1981,
+      "elevation_ft": 6500.0,
+      "location": "Pombal, Portugal",
+      "location_badge": "Pombal, Portugal",
+      "country": "Portugal",
+      "date": "2026: March 29",
+      "date_specific": "2026: March 29",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Mild spring conditions in central Portugal's coastal-influenced Leiria region.",
+      "challenges": [
+        "Precipitation: Low (20-30% in late March)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling road gran fondo through Leiria region's pine forests, medieval castle towns, and coastal plains, blending sustained climbs with technical descents in Serra de Sicó landscapes.",
+      "signature_challenge": "The Serra de Sicó undulations combining 6500ft of climbing with fast, technical descents through central Portugal's karst terrain.",
+      "suffering_zones": [
+        "Serra de Sicó Climbs: Key ascents in the limestone hills north of Pombal deliver the bulk of elevation gain amid scenic pine forests.",
+        "Coastal Time Trial: 20.5km out-and-back from Leiria to Praia do Pedrogão tests solo power on undulating seaside roads.",
+        "Pombal Fortress Finish: Final ramps into historic Pombal castle town after 93km of attrition for a dramatic mass sprint."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Pombal offers heritage hotels near castle; Leiria has vibrant options; nearby beaches like Praia do Pedrogão for coastal stays. Book early for March weekend.",
+      "transport": "Two-day UCI qualifier: Time trial Sat March 28 in Leiria/Praia do Pedrogão; Granfondo Sun March 29 in Pombal. Packet pickup Fri-Sun at both sites. Aid stations, pasta party, electronic timing.",
+      "food": "",
+      "official_site": "https://ucigranfondoworldseries.com/en/granfondo-leiria-region/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Portugal's premier UCI Gran Fondo World Series qualifier, evolved from successful Granfondo Coimbra Region, relocated to Leiria/Pombal for 2026 with enhanced regional focus.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "UCI qualifier gem in Portugal's scenic heartland blending heritage, climbs, and coast.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-leiria-region/",
+        "category": "reference",
+        "label": "Granfondo Leiria Region - UCI Gran Fondo World Series"
+      },
+      {
+        "url": "https://racefinder.pt/event/granfondo-leiria-region/",
+        "category": "reference",
+        "label": "GRANFONDO LEIRIA REGION - RaceFinder"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/portuguese-uci-gran-fondo-world-series-event-moves-to-leiria-region/",
+        "category": "reference",
+        "label": "Portuguese UCI Gran Fondo World Series Event Moves to Leiria Region"
+      },
+      {
+        "url": "https://granfondodailynews.com/2026/01/16/gran-fondo-worlds-qualifier-in-portugal-gets-new-date-and-venue/",
+        "category": "reference",
+        "label": "GRAN FONDO WORLDS QUALIFIER IN PORTUGAL GETS NEW DATE AND VENUE"
+      }
+    ]
+  }
+}

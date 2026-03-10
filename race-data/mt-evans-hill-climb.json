@@ -1,0 +1,283 @@
+{
+  "race": {
+    "name": "Bob Cook Memorial Mt. Evans Hill Climb",
+    "slug": "mt-evans-hill-climb",
+    "display_name": "Bob Cook Memorial Mt. Evans Hill Climb (Blue Sky Hill Climb)",
+    "tagline": "27 miles straight up to 14,130 feet. The highest paved road in North America. Colorado's ultimate test of lungs and legs since 1962.",
+    "vitals": {
+      "distance_km": 44.1,
+      "distance_mi": 27.4,
+      "elevation_m": 2009,
+      "elevation_ft": 6590.0,
+      "location": "Idaho Springs, Colorado",
+      "location_badge": "IDAHO SPRINGS, COLORADO",
+      "country": "Colorado",
+      "date": "Late July annually (road opening dependent)",
+      "date_specific": "2026: July 25",
+      "field_size": "~500 riders",
+      "start_format": null,
+      "registration": "Online via BikeReg or Race Roster. USA Cycling license required (or one-day $15). Cost: ~$125-185",
+      "entry_fee": "~$125-185",
+      "feed_zones": "Support stations along the climb. Water, medical support at altitude.",
+      "cutoff_time": "Time limit enforced. One-way uphill — riders are shuttled or descend after finishing.",
+      "lat": 39.7417,
+      "lng": -105.5139,
+      "route_options": [
+        "Full Hill Climb: 27.4 miles, 6,590 ft gain — Idaho Springs to Mt. Blue Sky summit (14,130 ft)",
+        "Gran Fondo option available in some years"
+      ]
+    },
+    "climate": {
+      "primary": "Colorado Front Range summer — extreme altitude-driven temperature collapse",
+      "description": "Late July in Idaho Springs starts warm (65-75F at 7,540 ft) but temperatures plummet as you ascend. Above treeline at 11,500 ft, wind chill can drive effective temperatures below freezing even in July. The summit at 14,130 ft regularly sees temperatures in the 30s-40s F with sustained wind. Snow and sleet are possible at any time of year. The sun is brutally intense above 10,000 ft.",
+      "challenges": [
+        "Temperature drop of 30-40F from start to summit — hypothermia is a real risk",
+        "Extreme UV exposure above treeline — sunburn in under 20 minutes",
+        "Sudden weather changes: clear skies can become hail or lightning in minutes",
+        "40%+ reduction in oxygen at the summit — breathing is labored even standing still",
+        "Wind exposure above treeline with no shelter for the final 8+ miles"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain highway to extreme altitude",
+      "surface": "Paved state highway (CO-103 and CO-5). Well-maintained mountain road. Closed to general traffic on race day. Passes through three distinct life zones: montane forest, subalpine forest, and alpine tundra.",
+      "technical_rating": 1,
+      "features": [
+        "Continuous 27-mile uphill from 7,540 ft to 14,130 ft",
+        "Average gradient 4.5% (5.8% excluding brief descents)",
+        "Maximum gradient ~10% in steeper sections",
+        "Echo Lake flat section at mile ~13 — brief psychological respite",
+        "Treeline crossing at ~11,500 ft — landscape transforms to barren alpine tundra",
+        "Summit Lake area — exposed switchbacks at 12,800+ ft",
+        "Final push above 13,000 ft where oxygen is 40% less than sea level",
+        "Mountain goats commonly on or near the road near the summit"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "hillclimb",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "One direction: up. The Mt. Evans Hill Climb is 27.4 miles of continuous ascending from the town of Idaho Springs at 7,540 feet to the summit parking area at 14,130 feet. The gradient is never savage — averaging 4.5% with a maximum around 10% — but the relentlessness is the point. There are no descents, no flat recovery sections (save a brief respite at Echo Lake), and no escape from the altitude that builds with every pedal stroke. The course passes through three distinct life zones: montane forest, subalpine forest with ancient bristlecone pines, and finally barren alpine tundra where nothing grows and mountain goats outnumber cyclists. Above treeline at 11,500 feet, the landscape transforms into an exposed, wind-blasted moonscape. The final miles above 13,000 feet are ridden in a hypoxic fog where your body is operating on roughly 60% of sea-level oxygen.",
+      "signature_challenge": "The final 5 miles above Summit Lake. From 12,830 feet to 14,130 feet, exposed switchbacks climb through alpine nothing. The oxygen is gone. The trees are gone. The gradient is honest (5.7% average) but your body has been robbed of its ability to process it. This is where the Mt. Evans Hill Climb separates itself from every other cycling event on the continent.",
+      "suffering_zones": [
+        "Idaho Springs — The Gun",
+        "The Forest Wall",
+        "Echo Lake — False Hope",
+        "Above Treeline — The Moonscape",
+        "Summit Lake — Oxygen Debt",
+        "The Summit — 14,130 Feet"
+      ]
+    },
+    "logistics": {
+      "airport": "Denver International Airport (DEN) — 65 miles, ~75 minutes via I-70. One of the largest US hubs with cheap domestic and international flights.",
+      "lodging_strategy": "Idaho Springs has limited lodging — motels and inns from $86-150/night. Book early. Many riders stay in Denver or the I-70 corridor (Georgetown, Empire, Evergreen) and drive up race morning. The 33-mile drive is straightforward on I-70 westbound.",
+      "transport": "",
+      "food": "Idaho Springs has several restaurants and the historic mining-town downtown. Post-race options available. Bring cold-weather nutrition — gels and bars that work at altitude and in cold.",
+      "official_site": "https://www.bicyclerace.com"
+    },
+    "history": {
+      "founded": 1962,
+      "origin_story": "The Mt. Evans Hill Climb began in 1962 as a test of nerve and lungs on the highest paved road in North America. In 1981, the race was renamed in honor of Bob Cook, a five-time winner who held the course record from 1975 to 1980. Cook was a US Olympian — a prodigious talent who first set the record as a junior. He died of brain cancer at age 23. The memorial carries his name forward through every rider who makes the climb. In September 2023, the mountain was officially renamed Mount Blue Sky by the US Board on Geographic Names, honoring the Arapaho people (the 'Blue Sky People') and addressing the legacy of territorial governor John Evans and the Sand Creek Massacre. The race is now also known as the Blue Sky Hill Climb. Sixty-plus years of continuous running (with a handful of cancellations for snow, the 1996 Olympics, and 2025 road construction) makes this one of the most enduring cycling events in the United States.",
+      "notable_moments": [
+        "1962: Inaugural race on the highest paved road in North America",
+        "1975-1980: Bob Cook sets and holds course record — first set as a junior",
+        "1981: Race renamed in honor of five-time winner Bob Cook after his death from brain cancer at age 23",
+        "2004: Tom Danielson shatters the course record with 1:41:20, taking 4+ minutes off the previous mark",
+        "Jeannie Longo (France) sets women's course record at 1:59:19",
+        "2023: Mountain officially renamed Mount Blue Sky; race becomes Blue Sky Hill Climb",
+        "2025: Canceled due to road construction — first non-weather cancellation in decades",
+        "Riders ages 9 to 85 have completed the climb"
+      ],
+      "reputation": "The altitude race. The highest finish line on pavement in North American cycling. A memorial to a champion who ran out of time."
+    },
+    "biased_opinion": {
+      "verdict": "The Ceiling",
+      "summary": "There is no higher paved road you can race a bicycle on in North America. That sentence is the entire sales pitch, and it is enough. Since 1962, cyclists have lined up in Idaho Springs to ride 27 miles straight up into oxygen debt, hypothermia risk, and the company of mountain goats. The race honors Bob Cook, a five-time winner who died at 23 — a reminder that the mountain does not care about your credentials. At the summit, you will stand at 14,130 feet with 40% less oxygen and 100% more perspective. The Mt. Evans Hill Climb is not the hardest race. It is not the longest. It is not the most prestigious. But it is the highest, and nothing else comes close.",
+      "strengths": [
+        "Summit at 14,130 ft: the highest paved cycling race finish in North America, period",
+        "60+ years of continuous history — one of the oldest cycling events in the United States",
+        "The altitude experience is genuinely unique: three life zones, treeline crossing, alpine tundra, mountain goats",
+        "Named for Bob Cook, five-time winner and US Olympian who died at 23 — real memorial weight",
+        "33 miles from Denver — one of the most accessible extreme-altitude experiences anywhere"
+      ],
+      "weaknesses": [
+        "Altitude is a hard limiter: sea-level riders lose 25-35% of their power at the summit",
+        "Small field (~500 riders) means limited race-day energy compared to mass-participation events",
+        "One-way uphill only — if you want varied terrain or descending, look elsewhere",
+        "Weather at the summit is unpredictable and potentially dangerous even in July"
+      ],
+      "bottom_line": "If you want to ride your bicycle to the roof of a continent, the Mt. Evans Hill Climb is the only address. It has been waiting since 1962."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "27 miles. 6,590 feet. Summit at 14,130 ft. The highest paved cycling race in North America since 1962.",
+      "should_you_race": "Yes if you want the most extreme altitude experience available in competitive cycling on paved roads. Yes if you have trained for altitude or can arrive early enough to acclimatize. Skip if you have altitude sickness history, need technical terrain variety, or want a mass-participation atmosphere.",
+      "alternatives": "If you want more climbing volume with multiple passes: try Death Ride. If you want high-altitude European climbing with international prestige: try La Marmotte. If you want a Colorado climbing challenge at lower altitude: try the Triple Bypass."
+    },
+    "citations": [
+      {
+        "url": "https://www.bicyclerace.com",
+        "category": "official",
+        "label": "Mt. Blue Sky Hill Climb — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mount_Evans_Hill_Climb",
+        "category": "reference",
+        "label": "Mount Evans Hill Climb — Wikipedia"
+      },
+      {
+        "url": "https://pjammcycling.com/climb/50.Mt-Evans",
+        "category": "reference",
+        "label": "Cycling Mt Evans (Mt Blue Sky) — PJAMM Cycling"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/4036/american-icons-bob-cook-memorial-mt-evans-hill-climb",
+        "category": "media",
+        "label": "American Icons: Bob Cook Memorial Mt. Evans Hill Climb — Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.bikereg.com/59485",
+        "category": "official",
+        "label": "Bob Cook Memorial Mt. Evans Hill Climb — BikeReg Registration"
+      },
+      {
+        "url": "https://www.doi.gov/pressreleases/board-geographic-names-completes-renaming-mount-evans",
+        "category": "reference",
+        "label": "Board on Geographic Names Completes Renaming of Mount Evans — US Dept of Interior"
+      },
+      {
+        "url": "https://www.denverpost.com/2024/02/14/mount-evans-blue-sky-hill-climb-cycling-name-change/",
+        "category": "media",
+        "label": "Mount Evans Hill Climb gets a new name — Denver Post"
+      },
+      {
+        "url": "https://strambecco.com/event/mt-evans-hill-climb/",
+        "category": "reference",
+        "label": "Blue Sky Hill Climb 2026 — Strambecco"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Bob Cook Memorial Mt. Evans Hill Climb gran fondo cycling Idaho Springs",
+      "videos": [
+        {
+          "video_id": "Lc2S8dGTIgY",
+          "title": "Mt  Evans Descent",
+          "channel": "Boris Simmonds",
+          "view_count": 190,
+          "upload_date": "20180726",
+          "duration_string": "58:33",
+          "description": "A few Alabamians enjoying the reward that comes after the Bob Cook Memorial Mt. Evans Hill Climb, July 21, 2018.  Speed data is *calculated* 2D speed, due to some Garmin synchronization errors. Reliving the ride? Watch this from your rollers and pedal to your heart's content! #churchofpain #threesaparty",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=Lc2S8dGTIgY",
+          "curated": false
+        },
+        {
+          "video_id": "diiZR9rQrOo",
+          "title": "Mt. Evans Co. Climb 2018",
+          "channel": "GET OUT AND RIDE",
+          "view_count": 10,
+          "upload_date": "20181105",
+          "duration_string": "2:27",
+          "description": "Cycling up Mt. Evans from Idaho Springs Co.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=diiZR9rQrOo",
+          "curated": false
+        },
+        {
+          "video_id": "RWB6EHYF998",
+          "title": "2019 Mt Evans Hill Climb Race - Gran Fondo",
+          "channel": "Simon Williams",
+          "view_count": 534,
+          "upload_date": "20190728",
+          "duration_string": "9:42",
+          "description": "My first Evans hill climb race so entered in Gran Fondo 40-49mens.\nOfficial results I finished 17th out of 44 with a time of 3hr:25min",
+          "tags": [
+            "iMovie"
+          ],
+          "url": "https://www.youtube.com/watch?v=RWB6EHYF998",
+          "curated": true,
+          "curation_reason": "First-person race experience from the actual Bob Cook Memorial race with specific finishing details.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/RWB6EHYF998/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "g_w-jezOqVg",
+          "title": "Susie Jones | Cycling Highlight | Mt Evans Hill Climb | Road Race",
+          "channel": "corwat",
+          "view_count": 1303,
+          "upload_date": "20150729",
+          "duration_string": "1:14",
+          "description": "Mt Evans Hill Climb starts in Idaho Springs, Colorado and finishes at the summit of the Mt Evans road (14,130 ft).  Mt Evans is a Colorado 14er.",
+          "tags": [
+            "Mount Evans (Mountain)",
+            "Mt. Evans Hill Climb (Recurring Event)",
+            "Cycling (Interest)",
+            "Hillclimbing",
+            "Bike",
+            "Colorado (US State)"
+          ],
+          "url": "https://www.youtube.com/watch?v=g_w-jezOqVg",
+          "transcript": "[Music]\n[Applause]\npotentially that's Susie\nJones potentially a state championship r\ni don't thinka ABB is\nEl so your state champion Hill Climb\nsenior women pro one2 Rider is Susie\nJones Ste rider1",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [
+          {
+            "text": "The road is the highest paved road in the United States reaching about 14,500 feet elevation.",
+            "source_video_ids": []
+          }
+        ],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "Expect about five hours to reach the top and one hour for the descent.",
+            "source_video_ids": []
+          },
+          {
+            "text": "It's cold at the top so prepare for temperature changes during the climb.",
+            "source_video_ids": []
+          }
+        ],
+        "additional_quotes": [],
+        "search_text": "The Bob Cook Memorial Mt. Evans Hill Climb takes riders up the highest paved road in the United States, reaching approximately 14,500 feet elevation. Starting from Idaho Springs at about 7,000 feet, the race involves 7,000 feet of climbing over 27.4 miles. Riders report the climb takes about five hours to complete, with a much faster one-hour descent. Temperature is a significant factor, with conditions being notably cold at the summit, requiring riders to prepare for dramatic temperature changes throughout the climb. The race features both competitive categories including state championship divisions and attracts team participation for the challenging high-altitude effort."
+      }
+    }
+  }
+}

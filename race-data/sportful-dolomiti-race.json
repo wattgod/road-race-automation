@@ -1,0 +1,224 @@
+{
+  "race": {
+    "name": "Sportful Dolomiti Race",
+    "slug": "sportful-dolomiti-race",
+    "display_name": "Sportful Dolomiti Race",
+    "tagline": "Five Dolomite passes. 5,000 meters of climbing. Passo Manghen at 2,047m. The Dolomites at their most relentless, through UNESCO World Heritage stone cathedrals.",
+    "vitals": {
+      "distance_km": 209.2,
+      "distance_mi": 130.0,
+      "elevation_m": 4999,
+      "elevation_ft": 16400.0,
+      "location": "Feltre, Belluno, Veneto, Italy",
+      "location_badge": "FELTRE, ITALY",
+      "country": "Italy",
+      "date": "Mid-June annually",
+      "date_specific": "2026: June 14",
+      "field_size": "~4,000-5,000 riders",
+      "start_format": null,
+      "registration": "Online via sportfuldolomitirace.it. Cost: EUR55-75. Registration typically opens late autumn prior.",
+      "entry_fee": "EUR55-75",
+      "feed_zones": "Feed stations at major col summits and valley checkpoints. Water refill points on longer climbs.",
+      "cutoff_time": "Intermediate cutoffs enforced at key checkpoints. Broom wagon support for riders outside time limits.",
+      "lat": 46.019,
+      "lng": 11.906,
+      "route_options": [
+        "Granfondo: ~210 km (130 mi), ~5,000 m gain — the full event with all 5 passes",
+        "Mediofondo: ~130 km — a shorter loop with fewer passes"
+      ]
+    },
+    "climate": {
+      "primary": "Dolomite Alpine — unpredictable mountain weather",
+      "description": "Mid-June in the Dolomites is a shoulder season: warm enough in the valleys (22-28C / 72-82F) but genuinely cold at 2,000m+ summits. The Dolomites are notorious for rapid weather changes — clear mornings can become violent thunderstorms by midday. Snow on high passes in June is not unprecedented. The Manghen at 2,047m can be 10-15C cooler than the start in Feltre, with exposed summits amplifying wind chill.",
+      "challenges": [
+        "Manghen summit (2,047m): 8-12C with wind — the Dolomites' exposed upper reaches",
+        "Mid-June timing: shoulder season means snow on high passes is possible",
+        "Dolomite thunderstorms build rapidly — lightning at altitude is a genuine hazard",
+        "Temperature swing of 15-20C between Feltre valley and Manghen summit"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Dolomite mountain passes",
+      "surface": "Italian provincial roads through the Dolomites. All tarmac. Road surfaces range from excellent on major passes to occasionally rough on secondary approaches. The Manghen road is narrower than the tourist passes.",
+      "technical_rating": 2,
+      "features": [
+        "Passo Manghen (2,047m) — the queen stage: 18 km from the east at 7.5% average with sections exceeding 12%. One of the toughest climbs in the Eastern Alps.",
+        "Passo Rolle (1,984m) — classic Giro d'Italia pass with views of the Pale di San Martino",
+        "Passo Valles (2,032m) — quiet Dolomite pass connecting the Val di Fiemme to Falcade",
+        "Passo Cereda (1,369m) — short, punchy climb through Dolomite meadows",
+        "Croce d'Aune (1,015m) — the final climb, historically significant as the climb Tullio Campagnolo descended in 1927 when he invented the quick-release skewer"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 76,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 76."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Relentless Dolomite climbing through the most dramatic mountain scenery in European cycling. Five major passes in 210 km — the route is essentially a linked series of climbs and descents with minimal flat. The Manghen is the queen stage: 18 km of sustained 7.5% with ramps above 12% through increasingly wild terrain to a 2,047m summit. The other four passes — Rolle, Valles, Cereda, Croce d'Aune — each deliver 600-1,100m of climbing through UNESCO World Heritage landscape. The character is distinctly Italian: suffering, beauty, and history intertwined.",
+      "signature_challenge": "The Passo Manghen defines this event: 18 km at 7.5% average with ramps above 12%, through progressively wilder terrain to a 2,047m summit with panoramic Dolomite views. Combined with four more passes — including two others above 1,900m — the total 5,000m of climbing across the Dolomite landscape makes this one of cycling's great mountain days.",
+      "suffering_zones": [
+        "Passo Manghen",
+        "Passo Rolle",
+        "Passo Valles",
+        "Croce d'Aune"
+      ]
+    },
+    "logistics": {
+      "airport": "Venice Marco Polo (VCE) — 1.5 hours. Venice Treviso (TSF) — 1.5 hours (budget airlines). Verona (VRN) — 2 hours. Innsbruck (INN) — 3 hours via Brenner Pass.",
+      "lodging_strategy": "Stay in Feltre (start/finish) or nearby Belluno (20 min). Feltre is a charming historic town but small — book 3+ months in advance. Belluno offers more capacity. Avoid Dolomite resort towns (Cortina, etc.) — they're too far from the start and overpriced for this event.",
+      "transport": "",
+      "food": "Veneto and Dolomite cuisine — polenta, game, mushrooms, local cheeses, excellent wines. Feltre has solid trattorias for pre-ride carb loading. Feed stations provide classic Italian granfondo fare: panini, fruit, cakes, cola, water.",
+      "official_site": "https://www.sportfuldolomitirace.it/"
+    },
+    "history": {
+      "founded": 1994,
+      "origin_story": "Born in the Dolomites in the early 1990s, the Sportful Dolomiti Race was created to showcase the most dramatic mountain landscape in Italian cycling. The route was designed around the Passo Manghen — one of the Eastern Alps' toughest climbs, rarely used by the Giro d'Italia but known to local riders as a monster. The inclusion of Passo Rolle (a Giro classic), Passo Valles, Passo Cereda, and the historically significant Croce d'Aune creates a comprehensive Dolomite traverse. The event grew into one of Italy's most respected granfondos, known for its climbing severity and stunning scenery.",
+      "notable_moments": [
+        "Passo Manghen established as one of the hardest climbs in Italian amateur cycling",
+        "Croce d'Aune: the descent where Tullio Campagnolo invented the quick-release skewer in 1927, frustrated by frozen wing nuts in a winter race",
+        "The Dolomites received UNESCO World Heritage status in 2009, confirming what cyclists already knew — this is Earth's most dramatic mountain scenery",
+        "Growth to 4,000-5,000 riders as one of Italy's hardest and most prestigious granfondos"
+      ],
+      "reputation": "Italy's toughest granfondo. What the Maratona dles Dolomites is in spectacle, the Sportful Dolomiti Race is in pure climbing difficulty. The Manghen alone makes this event legendary in Italian cycling."
+    },
+    "biased_opinion": {
+      "verdict": "The Stone Giants",
+      "summary": "The Sportful Dolomiti Race is the Dolomites at their most honest: five passes, 5,000 meters of climbing, and no hiding behind a famous name. The Maratona dles Dolomites gets the headlines and the 30,000-person lottery. The Sportful gets the riders who want the harder route and don't need a lottery to feel validated. The Passo Manghen — 18 km at 7.5% with ramps above 12% — is the kind of climb that separates cyclists who ride mountains from cyclists who ride hills. And the scenery? The Dolomites are not mountains in the normal sense. They are vertical limestone cathedrals — UNESCO gave them World Heritage status for a reason. Riding through the Pale di San Martino from Passo Rolle is one of cycling's great visual moments. The Croce d'Aune, where Campagnolo was so frustrated by frozen wing nuts in 1927 that he invented the quick-release skewer, is a reminder that cycling history was written in these mountains.",
+      "strengths": [
+        "Passo Manghen: 18 km at 7.5% with 12%+ ramps — one of the Eastern Alps' most savage climbs",
+        "Five major Dolomite passes in a single day: Manghen, Rolle, Valles, Cereda, Croce d'Aune",
+        "UNESCO World Heritage Dolomite scenery — the Pale di San Martino from Passo Rolle is otherworldly",
+        "The Campagnolo connection: Croce d'Aune is where the quick-release skewer was born"
+      ],
+      "weaknesses": [
+        "Mid-June Dolomite weather is volatile — snow on high passes is not unprecedented",
+        "Less international recognition than the Maratona dles Dolomites despite being the harder route",
+        "Feltre's limited infrastructure strains under 4,000-5,000 riders"
+      ],
+      "bottom_line": "If the Maratona is the Dolomites' party, the Sportful is the Dolomites' exam — harder climbing, fewer riders, and the same UNESCO scenery without the lottery."
+    },
+    "final_verdict": {
+      "score": "76/100",
+      "one_liner": "Five Dolomite passes. 5,000m of climbing. The Manghen at 2,047m. UNESCO stone cathedrals. Italy's toughest granfondo.",
+      "should_you_race": "Yes if you want the hardest Dolomite granfondo with fewer riders and no lottery. Yes if the Passo Manghen's 12%+ ramps and UNESCO scenery speak to your cycling soul. Skip if you want the spectacle and lottery drama of the Maratona. Skip if mid-June Dolomite weather volatility concerns you.",
+      "alternatives": "If you want the Dolomites with bigger spectacle: try Maratona dles Dolomites. If you want steeper Italian gradients: try GF Gavia e Mortirolo. If you want French Alpine prestige: try La Marmotte."
+    },
+    "citations": [
+      {
+        "url": "https://www.sportfuldolomitirace.it/",
+        "category": "official",
+        "label": "Sportful Dolomiti Race — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Manghen_Pass",
+        "category": "reference",
+        "label": "Manghen Pass — Wikipedia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Passo_Rolle",
+        "category": "reference",
+        "label": "Passo Rolle — Wikipedia"
+      },
+      {
+        "url": "https://www.climbbybike.com/climb/Passo-Manghen/63",
+        "category": "reference",
+        "label": "Passo Manghen — ClimbByBike"
+      },
+      {
+        "url": "https://sportivebreaks.com/sportives/sportful-dolomiti-race/",
+        "category": "review",
+        "label": "Sportful Dolomiti Race — Sportive Breaks"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Sportful Dolomiti Race gran fondo cycling Feltre",
+      "videos": [
+        {
+          "video_id": "4S8uFQJ2-4Y",
+          "title": "LA NOSTRA GIORNATA PIÙ DURA IN BICI DA STRADA ALLA SPORTFUL DOLOMITI RACE",
+          "channel": "Gravellata",
+          "view_count": 34643,
+          "upload_date": "20250616",
+          "duration_string": "19:55",
+          "description": "La nostra giornata più dura in bici da strada alla Sportful Dolomiti Race\n\nIn questo video pedaliamo e vi raccontiamo la Sportful Dolomiti Race 2025, percorso Granfondo.\n\nPartenza e arrivo: Feltre (BL)\nLunghezza: 204km x 5100mt\nTempo percorrenza: 8h 20min (tempo in gara)\n\nPartenza da Feltre alle 7:00. Si percorre: Forcella Franche, Passo Staulanza, Passo Duran, Forcella Aurine, Passo Cereda e Croce d’Aune. Il percorso è stupendo, si pedala tra le Dolomiti, passando per Agordo, Alleghe, Caprile, Selva di Cadore e Fiera di Primiero. Tanti ristori, posizionati ad ogni GPM. Organizzazione impeccabile.\n\nLa traccia la trovi sul nostro profilo komoot ‘Gravellata’\n\nAbbiamo fatto anche la Maratona Dles Dolomites: https://youtu.be/iZZDMs9R2b8\n\nCi vediamo al prossimo video!\n\nkeep pedaling\n\n#ciclismo #roadbike #sportfuldolomitirace",
+          "tags": [
+            "Sportful Dolomiti Race",
+            "granfondo",
+            "granfondo su strada",
+            "sportful",
+            "dolomiti",
+            "bici",
+            "bici da strada",
+            "ciclismo",
+            "gara su strada",
+            "maratona",
+            "percorso granfondo",
+            "maratona dles dolomites",
+            "gravellata",
+            "gravellatacc",
+            "OMERO",
+            "Marco Aurelio Fontana",
+            "GCN Italia",
+            "Andrea Ziliani",
+            "FADIGHECC",
+            "Roby Bragotto"
+          ],
+          "url": "https://www.youtube.com/watch?v=4S8uFQJ2-4Y",
+          "curated": true,
+          "curation_reason": "Recent high-quality race recap from 2025 with detailed course coverage and strong viewership.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/4S8uFQJ2-4Y/maxresdefault.jpg",
+          "thumbnail_score": 100.0
+        },
+        {
+          "video_id": "stZItq30H-8",
+          "title": "Sportful Dolomiti Race 2023 .  # Fino alla Fine !! Cima di Campo - Manghen - Rolle - Croce D’Aune",
+          "channel": "Davide Zanusso",
+          "view_count": 1756,
+          "upload_date": "20230630",
+          "duration_string": "15:29",
+          "description": "Breve filmato inerente apertura pacco gara e Finalmente ci siamo ! La Sportful Dolomiti Race. una gara una garanzia.\nun evento da provare.   #NONOSTANTE TUTTO..,  FINO ALLA FINE !\"\n- CIMA DI CAMPO  \"la prima\"\n- PASSO MANGHEN \"nella tana del lupo \"\n- PASSO ROLLE \"al cospetto delle Dolomiti\"\n- PASSO CROCE D'AUNE \" il paradiso di casa\"\n- ARRIVO A FELTRE \"la gioia infinita\"\n\n\nSTRAVA          : https://www.strava.com/athletes/dzanusso\nSTRAVA Club : https://www.strava.com/clubs/zd2017",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=stZItq30H-8",
+          "curated": true,
+          "curation_reason": "Personal race experience covering specific climbs with detailed course segments including Manghen and Rolle passes.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/stZItq30H-8/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

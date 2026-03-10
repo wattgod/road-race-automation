@@ -1,0 +1,174 @@
+{
+  "race": {
+    "name": "GFNY Uppsala",
+    "slug": "gfny-uppsala",
+    "display_name": "GFNY Uppsala",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 1800,
+      "elevation_ft": 5906.0,
+      "location": "Uppsala, Sweden",
+      "location_badge": "Uppsala, Sweden",
+      "country": "Sweden",
+      "date": "2026: August 23",
+      "date_specific": "2026: August 23",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "N/A",
+      "cutoff_time": "6.5 hours (course closes 3:30 PM)",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "N/A; Uppsala offers options as Sweden's 4th largest city near Stockholm.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "GFNY Uppsala blends Swedish history, rolling gravel-road loops, and GFNY prestige near Stockholm.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GFNY Uppsala gran fondo cycling Uppsala",
+      "videos": [
+        {
+          "video_id": "xmCCVyCUaXQ",
+          "title": "GFNY Uppsala, much more than a race!",
+          "channel": "GFNY World",
+          "view_count": 151,
+          "upload_date": "20220922",
+          "duration_string": "1:22",
+          "description": "#travel #cycling #granfondo \n\nGet ready for GFNY Uppsala 2023. You'll be captivated by this city!",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=xmCCVyCUaXQ",
+          "transcript": "[Music]\nyou",
+          "curated": false
+        },
+        {
+          "video_id": "zn_mNj2IgcU",
+          "title": "GFNY Uppsala. The Course",
+          "channel": "GFNY World",
+          "view_count": 244,
+          "upload_date": "20240530",
+          "duration_string": "1:30",
+          "description": "more info: uppsala.gfny.com/course",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=zn_mNj2IgcU",
+          "transcript": "[Music]\nh\nlike\nmy",
+          "curated": false
+        },
+        {
+          "video_id": "8qYMDjoqrLI",
+          "title": "GFNY Uppsala! New race!",
+          "channel": "GFNY World",
+          "view_count": 259,
+          "upload_date": "20211216",
+          "duration_string": "22",
+          "description": "More info: uppsala.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=8qYMDjoqrLI",
+          "curated": false
+        },
+        {
+          "video_id": "WLchVd2d6fg",
+          "title": "GFNY Uppsala 2024 Official Race Video",
+          "channel": "GFNY World",
+          "view_count": 269,
+          "upload_date": "20240903",
+          "duration_string": "1:30",
+          "description": "more info: https://uppsala.gfny.com/",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=WLchVd2d6fg",
+          "curated": false
+        },
+        {
+          "video_id": "8nrFxztrz6o",
+          "title": "GFNY Uppsala 2024: An incredible race in beautiful Sweden!",
+          "channel": "GFNY World",
+          "view_count": 158930,
+          "upload_date": "20240322",
+          "duration_string": "18",
+          "description": "more info: uppsala.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=8nrFxztrz6o",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

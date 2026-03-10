@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Gran Fondo Guadeloupe",
+    "slug": "gran-fondo-guadeloupe",
+    "display_name": "Gran Fondo Guadeloupe",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 126.0,
+      "distance_mi": 78.3,
+      "elevation_m": 2884,
+      "elevation_ft": 9462.0,
+      "location": "Capesterre-Belle-Eau, Guadeloupe",
+      "location_badge": "Capesterre-Belle-Eau, Guadeloupe",
+      "country": "Guadeloupe",
+      "date": "December 7, 2025",
+      "date_specific": "December 7, 2025",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "The Final 4 km Climb: After 5.5 km of steady climbing at 4.3% gradient and a brief descent, riders face the hardest section with over 8.5% average gradient in the final 4 km to the 620m summit. This is where the race is decided, with Benjamin Le Ny dropping his breakaway companions here in the 2025 inaugural event.",
+        "Tropical Heat and Humidity: December Caribbean conditions bring warm temperatures around 26-27°C with significant humidity, challenging riders accustomed to cooler climates. The combination of heat, humidity, and sustained climbing creates a cumulative fatigue factor that intensifies in the race's final hours.",
+        "Coastal Undulation in Final 40 km: The western island traverse features constant rolling terrain with a secondary 5 km climb positioned only 10 km before the finish. After already climbing 2,500+ meters, these final elevation changes test mental toughness and remaining energy reserves."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/"
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "A demanding tropical mountain road race that combines serious climbing with Caribbean island adventure and world championship qualification opportunity.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

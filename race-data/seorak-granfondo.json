@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Seorak GranFondo",
+    "slug": "seorak-granfondo",
+    "display_name": "Seorak GranFondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 207.6,
+      "distance_mi": 129.0,
+      "elevation_m": 3505,
+      "elevation_ft": 11500.0,
+      "location": "Gangwon-do, South Korea",
+      "location_badge": "Gangwon-do, South Korea",
+      "country": "South Korea",
+      "date": "2026: September TBD",
+      "date_specific": "2026: September TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://granfondo.co.kr",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Guryongryeong Death March: 20km HC reverse climb shreds legs late at km 180 with 10%+ pitches amid granite solitude. Heat or wind turns it infernal for unpaced riders.",
+        "Cat 2 Cluster Gauntlet: Four relentless UCI Cat 2 hills mid-course accumulate fatigue before the HC finale. No flats for recovery in Seoraksan’s vertical world."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://granfondo.co.kr"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Brutal 11,500ft paved beast through Seoraksan—Korea’s climb fest for the masochistic.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

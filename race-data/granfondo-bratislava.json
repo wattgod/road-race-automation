@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Granfondo Bratislava",
+    "slug": "granfondo-bratislava",
+    "display_name": "Granfondo Bratislava",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 99.8,
+      "distance_mi": 62.0,
+      "elevation_m": 1097,
+      "elevation_ft": 3600.0,
+      "location": "Bratislava, Slovakia",
+      "location_badge": "Bratislava, Slovakia",
+      "country": "Slovakia",
+      "date": "2026: August TBD",
+      "date_specific": "2026: August TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://granfondobratislava.sk/registracia/",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Pezinska Baba Death Zone: Mid-climb section where gradients hit 10% amid Little Carpathians exposure. Heat and fatigue compound on exposed switchbacks. Legs scream while vineyard views taunt.",
+        "Carpathians False Flats: Post-Pezinska rollers disguise 3-5% drags as recovery. Accumulating lactate burns quads over 18 miles. Mental grind between aid stations tests resolve."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://granfondobratislava.sk"
+    },
+    "history": {
+      "founded": 2016,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Slovakia's top gran fondo blends Pezinska Baba punch with Bratislava accessibility.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

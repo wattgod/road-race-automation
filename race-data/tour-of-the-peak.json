@@ -1,0 +1,133 @@
+{
+  "race": {
+    "name": "Tour of the Peak",
+    "slug": "tour-of-the-peak",
+    "display_name": "Tour of the Peak",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 181.9,
+      "distance_mi": 113.0,
+      "elevation_m": 2896,
+      "elevation_ft": 9500.0,
+      "location": "Bakewell, Derbyshire, England",
+      "location_badge": "Bakewell, England",
+      "country": "England",
+      "date": "2026: May 17",
+      "date_specific": "2026: May 17",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Typical Peak District spring: mild but changeable with rain and wind common.",
+      "challenges": [
+        "Precipitation: Moderate (30-50% in May)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Brutal road sportive through Peak District National Park, relentless hills with savage short pitches and long grinds, rewarded by stunning vistas and fast descents.",
+      "signature_challenge": "The 'ride of heroes' long route tackling Winnats Pass, Holme Moss, and Cat and Fiddle in one day—over 10,000ft of Peak District punishment.",
+      "suffering_zones": [
+        "Winnats Pass: Killer steep ramp early on, splitting medium from long routes; unrelenting gradient tests resolve.",
+        "Holme Moss: Long, enduring climb on long route; high-altitude grind after Winnats.",
+        "Cat and Fiddle: Final major test before Bakewell; iconic high road with wind exposure.",
+        "Whetstone Ridge: Long route high point; cumulative fatigue from 9500ft total ascent hits here."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Local Bakewell options; try traditional Bakewell Pudding post-ride.",
+      "transport": "Bakewell Showground HQ with timed departures 06:30-07:30, pre-event questionnaire required, no day entries, feeds (1-3), chip timing, medical/mechanical support, finisher medal.",
+      "food": "",
+      "official_site": "https://velo29events.com/sportives/tour-of-the-peak-sportive/"
+    },
+    "history": {
+      "founded": 1943,
+      "origin_story": "Sportive revives the classic Tour of the Peak road race (1943-2005), wheel tracks of British legends like Malcolm Elliott.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "Peak District's savage climbs on historic roads—a true test of grit.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://velo29events.com/sportives/tour-of-the-peak-sportive/",
+        "category": "reference",
+        "label": "Tour of the Peak Sportive"
+      },
+      {
+        "url": "https://racepass.com/gb/races/the-peaks-tour",
+        "category": "reference",
+        "label": "The Peaks Tour | 2026 | Cycling Races in Derbyshire"
+      },
+      {
+        "url": "https://findarace.com/events/ukce-peaks-tour",
+        "category": "reference",
+        "label": "The UKCE Peaks Tour 2026 | Sat 5 Sept | Book @ Findarace"
+      },
+      {
+        "url": "https://www.timeoutdoors.com/events/the-peaks-tour-1/long",
+        "category": "reference",
+        "label": "The Peaks Tour | Long | Sat 27 Sep 2025 - TimeOutdoors"
+      }
+    ]
+  }
+}

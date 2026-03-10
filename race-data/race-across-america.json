@@ -1,0 +1,391 @@
+{
+  "race": {
+    "name": "Race Across America",
+    "slug": "race-across-america",
+    "display_name": "Race Across America (RAAM)",
+    "tagline": "3,000 miles. Coast to coast. 12 days. The most extreme endurance cycling race on Earth. Oceanside to Atlantic City, nonstop since 1982.",
+    "vitals": {
+      "distance_km": 4828.0,
+      "distance_mi": 3000.0,
+      "elevation_m": 53340,
+      "elevation_ft": 175000.0,
+      "location": "Oceanside, CA to Atlantic City, NJ",
+      "location_badge": "COAST TO COAST, USA",
+      "country": "USA",
+      "date": "Mid-June annually",
+      "date_specific": "2026: June 16-28",
+      "field_size": "~30-40 solo riders, 100+ total entries (solo + teams)",
+      "start_format": null,
+      "registration": "Qualification required. Solo riders must complete approved ultra-distance qualifying events within time limits. All information due by March 1. Cost: ~$2,750 solo entry fee (does not include crew, vehicles, or logistics).",
+      "entry_fee": "~$2,750 solo (2025 pricing)",
+      "feed_zones": "None provided. Riders rely entirely on personal crew and support vehicles. 10 primary time stations for check-in only.",
+      "cutoff_time": "12 days (men under 60). 12 days 21 hours (women under 60, men 60-69). 13 days 5 hours (women 60-69, men 70+).",
+      "lat": 33.1959,
+      "lng": -117.3795,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Full American climate spectrum — desert heat to mountain cold to Midwest storms to Eastern humidity",
+      "description": "RAAM traverses every climate zone in the continental United States. Riders start in California coastal morning and within hours enter the Mojave and Sonoran Deserts where temperatures exceed 110F (43C). The Rockies bring freezing mountain passes above 10,000 feet. Kansas and the Great Plains deliver 95F+ heat, brutal headwinds, and violent thunderstorms. The Appalachians and Eastern Seaboard bring humidity, rain, and fog. All of this happens in a single continuous effort over 8-12 days with no shelter except what the crew provides.",
+      "challenges": [
+        "Desert heat exceeding 110F (43C) through California, Arizona, and Utah",
+        "Mountain cold and potential snow above 10,000 ft in the Rockies",
+        "Midwest thunderstorms with lightning, hail, and torrential rain across Kansas and Missouri",
+        "Eastern humidity and summer heat through the Appalachians",
+        "Extreme thermal swings — 110F desert to below-freezing mountain passes within 24 hours",
+        "Night riding in total darkness for 8-12 consecutive nights"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved roads across the full diversity of American landscape",
+      "surface": "100% paved roads. US highways, state routes, and county roads of varying quality. Desert straightaways, mountain switchbacks, prairie two-lanes, and Appalachian ridgelines. No off-road or gravel sections.",
+      "technical_rating": 1,
+      "features": [
+        "Mojave and Sonoran Desert — flat, exposed, relentless heat",
+        "Monument Valley — iconic American Southwest scenery",
+        "Rocky Mountain passes exceeding 10,000 ft — sustained climbing",
+        "Great Plains of Kansas — hundreds of miles of flat, exposed, wind-battered highway",
+        "Appalachian ridges — rolling climbs through West Virginia and Pennsylvania",
+        "175,000 feet of cumulative climbing across 3,000 miles",
+        "Finish on the Atlantic City boardwalk"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 5,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 2,
+      "prestige": 5,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 1,
+      "road_surface": 1,
+      "cultural_impact": 5,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A 3,000-mile transcontinental odyssey across the full diversity of the American landscape. Desert, mountains, plains, ridgelines, and coastline — all in a single continuous effort.",
+      "signature_challenge": "3,000 miles across the entire continental United States — desert heat, Rocky Mountain passes, Great Plains wind, Appalachian climbs, and 175,000 feet of elevation gain — all in a single continuous, nonstop effort under 12 days.",
+      "suffering_zones": [
+        "Mojave and Sonoran Deserts",
+        "Monument Valley to the Rockies",
+        "Rocky Mountain Passes",
+        "Kansas and the Great Plains",
+        "Mississippi River to the Ozarks",
+        "Appalachian Mountains",
+        "Atlantic City Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "San Diego International (SAN) — 35 miles from Oceanside start. For finish: Atlantic City International (ACY) or Philadelphia (PHL).",
+      "lodging_strategy": "Pre-race lodging in Oceanside, CA. During the race, crew and rider operate from support vehicles — RVs, vans, and motels along the route. Post-race accommodation in Atlantic City, NJ. Crew lodging is the largest variable cost.",
+      "transport": "",
+      "food": "All nutrition is self-supplied via crew. Riders consume 8,000-10,000 calories per day. Crew prepares food in support vehicles and hands off at designated exchange points. No aid stations or race-provided nutrition.",
+      "official_site": "https://www.raceacrossamerica.org"
+    },
+    "history": {
+      "founded": 1982,
+      "origin_story": "In 1982, John Marino organized The Great American Bike Race with four competitors: himself, John Howard, Michael Shermer, and Lon Haldeman. They raced from Santa Monica, California to the Empire State Building in New York City. Haldeman won that first edition. The following year, the event was renamed Race Across America and participation shifted from invitation to qualification-based entry. Over four decades, RAAM has grown from a four-person novelty into the most prestigious ultra-endurance cycling event on the planet, spawning solo, two-person, four-person, and eight-person team categories.",
+      "notable_moments": [
+        "1982: First edition as The Great American Bike Race — Lon Haldeman wins the inaugural coast-to-coast race",
+        "1986: Pete Penseyres sets solo record of 8 days, 9 hours, 47 minutes that stood for years",
+        "2004: Team Action Sports sets 4-person record averaging 23.06 mph across 2,959 miles",
+        "2005-2010: Jure Robic's legendary era — the Slovenian won five times and became RAAM's most iconic figure before his death in 2011",
+        "2014: Christoph Strasser sets the current solo record of 7 days, 15 hours, 56 minutes",
+        "2019: Strasser claims his sixth victory, passing Robic as the all-time solo wins leader",
+        "2021: Leah Goldstein becomes the first woman to win the overall solo division",
+        "2022: Team Bemer sets 8-person record of 5 days, 1 hour, 52 minutes at 24.85 mph average"
+      ],
+      "reputation": "The most extreme ultra-endurance cycling event in the world. The Everest of cycling. Featured in the documentaries 'Bicycle Dreams' and 'Race Across America.' Fewer than 300 solo finishers in 40+ years of history."
+    },
+    "biased_opinion": {
+      "verdict": "The Ultimate Test of Human Endurance on a Bicycle",
+      "summary": "Race Across America is not a bike race in any conventional sense. It is a 3,000-mile, coast-to-coast war of attrition against sleep deprivation, extreme climate, and the fundamental limits of the human body. Running since 1982, with fewer than 300 solo finishers in history and a 50% DNF rate, RAAM occupies a category of one. The logistics are staggering — you need a crew, vehicles, and a budget that rivals a small expedition. The experience is transformative. The prestige is unmatched in ultra-cycling. This is not an event most people should attempt. It is an event everyone should know about.",
+      "strengths": [
+        "3,000 miles coast to coast — the longest point-to-point cycling race on Earth",
+        "175,000 feet of climbing across three mountain ranges",
+        "Unmatched prestige in ultra-endurance cycling since 1982",
+        "Full climate spectrum from 110F desert to freezing mountain passes",
+        "Life-changing, once-in-a-lifetime experience with fewer than 300 solo finishers in history",
+        "Iconic American landscapes — Monument Valley, Rockies, Great Plains, Appalachians"
+      ],
+      "weaknesses": [
+        "Total cost $15,000-$100,000+ makes it prohibitively expensive for most",
+        "Requires crew of 8-12 people and multiple support vehicles",
+        "50% solo DNF rate — half of all starters do not finish",
+        "Extreme qualification requirements limit accessibility",
+        "Very small field (~30-40 solo starters) — limited community and field depth",
+        "Sleep deprivation and physical demands carry genuine health risks"
+      ],
+      "bottom_line": "RAAM is the Everest of cycling. You do not do it for value or community or convenience. You do it because crossing America by bicycle, nonstop, coast to coast, is one of the purest and most extreme tests of human endurance ever conceived. If you can afford it, qualify for it, crew it, and survive it — you join a club smaller than the astronaut corps."
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "3,000 miles. Coast to coast. 12 days. The most extreme endurance cycling race on Earth.",
+      "should_you_race": "If you are an elite ultra-endurance cyclist with $15,000-$100,000 to spend, a crew of 8-12 people willing to sacrifice two weeks, qualifying results from approved ultra events, and the physical and mental capacity to ride 20+ hours a day for 8-12 consecutive days across the entire continental United States — yes. For everyone else, RAAM is best appreciated from the crew van, the documentary couch, or the dot-watching screen.",
+      "alternatives": "For ultra-endurance road: Paris-Brest-Paris (1,200 km, far more accessible, fraction of the cost). For transcontinental adventure: TransAmerica Bike Route (self-paced touring). For extreme gravel ultra: Unbound XL (350 miles, Kansas Flint Hills). For US ultra-cycling on a budget: Race Across the West (930 miles, RAAM's first third)."
+    },
+    "citations": [
+      {
+        "url": "https://www.raceacrossamerica.org",
+        "category": "official",
+        "label": "Race Across America Official Site"
+      },
+      {
+        "url": "https://raceacrossamerica.bike/en/race/route/",
+        "category": "route",
+        "label": "RAAM Route — 3,000 Miles Coast to Coast"
+      },
+      {
+        "url": "https://raceacrossamerica.bike/en/race/categories/",
+        "category": "official",
+        "label": "RAAM Categories and Rules — Race Divisions and Requirements"
+      },
+      {
+        "url": "https://raceacrossamerica.bike/en/race/about/",
+        "category": "official",
+        "label": "About RAAM — The World's Toughest Bicycle Race"
+      },
+      {
+        "url": "https://raceacrossamerica.org/results.html",
+        "category": "results",
+        "label": "RAAM Historical Results"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Race_Across_America",
+        "category": "reference",
+        "label": "Wikipedia: Race Across America"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Christoph_Strasser",
+        "category": "reference",
+        "label": "Wikipedia: Christoph Strasser — Six-time RAAM Champion"
+      },
+      {
+        "url": "https://stories.strava.com/articles/story-record-breaking-race-across-america-raam",
+        "category": "community",
+        "label": "Strava: The Story of a Record-Breaking Race Across America"
+      },
+      {
+        "url": "https://epicroadrides.com/cycling-blog/raam-race-across-america/",
+        "category": "community",
+        "label": "Epic Road Rides: RAAM Behind the Scenes"
+      },
+      {
+        "url": "https://nduranz.com/blogs/blogs/race-across-america-advice-marco-baloh",
+        "category": "community",
+        "label": "Marko Baloh: RAAM Advice and Insights"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/news/new-raam-record-colin-obrady-and-lucas-clarke-complete-the-3064-mile-race-in-6-days-6-hours-and-43-minutes",
+        "category": "community",
+        "label": "Cycling Weekly: New RAAM Record — Colin O'Brady and Lucas Clarke"
+      },
+      {
+        "url": "https://life.bemergroup.com/race-across-america-2022-recap-breaking-world-records-with-bemer/",
+        "category": "community",
+        "label": "BEMER: Race Across America 2022 Recap — Breaking World Records"
+      },
+      {
+        "url": "https://ultracycling.com/calendar/race-across-america-2025/",
+        "category": "reference",
+        "label": "World UltraCycling Association: RAAM 2025"
+      },
+      {
+        "url": "https://visitoceanside.org/events/race-across-america-raam-and-raw/",
+        "category": "official",
+        "label": "Visit Oceanside: RAAM June 16, 2026"
+      },
+      {
+        "url": "https://velo.outsideonline.com/road/road-racing/how-to-watch-race-across-america-raam-route-map-elevation-live-dot-watching/",
+        "category": "community",
+        "label": "VeloNews: How to Follow the Race Across America"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Race Across America gran fondo cycling Oceanside",
+      "videos": [
+        {
+          "video_id": "ipjxbXV6fuA",
+          "title": "Race Across America 2015, featuring Team Oceanside - Oceanside Post",
+          "channel": "Oceanside Post - News",
+          "view_count": 248,
+          "upload_date": "20150621",
+          "duration_string": "4:08",
+          "description": "Today begins the Race Across America of 2015. We feature Oceanside's own, Team Oceanside, as they begin the first leg of their journey from Oceanside, California to Annapolis, Maryland. \n\nCorrection: Misspelled. Leslee Gaul, CEO of Visit Oceanside\n\nOceanside Post - Local News\nwww.oceansidepost.com\n\n“Like” us on Facebook : www.facebook.com/oceansidepostnews\n\nFollow us on Twitter: twitter.com/OceansidePost\n\nBe a part of this new media experience.\nContact advertise@oceansidepost.com",
+          "tags": [
+            "race",
+            "across",
+            "america",
+            "Race Across America (Recurring Event)",
+            "oceanside",
+            "Interview",
+            "team",
+            "bicyclist",
+            "2015",
+            "california",
+            "san diego",
+            "beach",
+            "start",
+            "starting line",
+            "opening day",
+            "races",
+            "racing",
+            "racers",
+            "crew"
+          ],
+          "url": "https://www.youtube.com/watch?v=ipjxbXV6fuA",
+          "transcript": "well it's finally here we've all been\nbusting our ears riding the saddle for\nthe last 6 to8 months we're looking for\na nice safe and fast ride across the\ncountry it's going to be fun I'm ready\nto roll in fact I'm ready to hop on one\nof these bikes I want to be a rider it's\ngoing to be exciting for the adventure\nand watching these guys take this thing\nover the next 5 six days well I'm here\nto support my kids Trent who's riding a\nbike Maggie who's on the crew and this\nis so exciting I'm actually excited\nnervous at the same time cuz it's the\nfirst time they're doing this but I know\nthey love it they love you know helping\nother people and they've kind of been\nmarried to this whole event for the last\nseveral months so Ram is unique in it is\none of the longest bicycle races in the\nworld it it because it's a Non-Stop race\nit's also very unique it runs Coast to\nCoast no other race certainly United\nStates does that um the other thing\nthat's really interesting is that over\nthe past 10 to 15 years Racers have\nstarted using the race to raise money\nfor charity and every year the racers\nrepresent about 50 Charities and raise\nabout $2 million and they choose their\nCharities they choose how you know how\nto get that money to them what they want\nto\nrepresent so the race originally the\nfirst year in 1982 went from Santa\nMonica to New York City the Empire State\nBuilding and the start line and finish\nline have moved around several times\nthroughout the 34 years um um we've\nchosen to keep it in Oceanside for the\npast 10 years the the community is great\nto us they're super helpful um they also\nhave a a very unique factor that we can\nget from the beach Inland through the\ncity on a bike path which makes it much\nsafer for both the cars on the road in\ntown and our cyclist and with the police\nescorts we can get out of town pretty\neasily and so the combination of the\nease of access and the support of the\ncity make it you know Priceless we're\nlucky to be the host City for Race\nAcross America it brings people in from\nall over the world it represents 27 to\n30 countries and the great thing about\nRam even though it's not thousands of\npeople because of it's an endurance\nstyle race not everybody of course can\ndo that type of race but lots of times\nthey come in for weeks or months at a\ntime to train so it generates a lot of\nroom nights and they staying because\nthey're staying for a significant period\nof time it also impacts our restaurants\nour grocery stores our reta\nso it's just a great event and then\nbecause it is an International Event um\nwith so many different countries coming\ninto the area the international coverage\nis is excellent and we're also proud to\nbe um have our own team the our own\nOceanside Police Department is racing\nthis year and their um their goal is to\nwin it when they did it a couple of\nyears ago they came in third place and\nvisit Oceanside is proud to sponsor um\nTeam Oceanside this year and um wish the\nOceanside Police Department a lot of\nluck\nfeel pretty good looking forward to it\num it's just an incredible opportunity\nfor us part of the community um to be\nable to come out and you know represent\nOceanside and also try and raise some\nmoney for Children's Hospital La I mean\nultimately it's for the kids while we're\ndoing all this uh but it should be a\npretty epic adventure and um you know\nhave a good time along the way so I'm\nlooking forward to it I guess I'm just\nreally excited to just get this started\nwe've been working really hard um to get\neverything ready for this and we're\nreally excited to go out there and kick\nsome butt and doing the best that they\ncan out there so we can get across and\nlike record time it' be\n[Music]\n[Applause]\nawesome\nw",
+          "curated": false
+        },
+        {
+          "video_id": "NEDcEcS7pMM",
+          "title": "Team One Mile - Don Davy Uncut: Hancock, MD RAAM 2021",
+          "channel": "Race Across America (Official Channel)",
+          "view_count": 182,
+          "upload_date": "20210630",
+          "duration_string": "2:58",
+          "description": "It took days, but RAAM Media finally caught up with Team One Mile near Hancock, MD. The last time we saw them was in Tuba City, AZ. While on a tough climb, Don Davey flexed his muscles, offered us some water, and shared his motivation for competing in RAAM",
+          "tags": [
+            "RAAM",
+            "Race Across America",
+            "Ultra-Cycling",
+            "cycling",
+            "ultra",
+            "bike",
+            "bicycle",
+            "race",
+            "distance"
+          ],
+          "url": "https://www.youtube.com/watch?v=NEDcEcS7pMM",
+          "transcript": "they told me to give you this\nhey look i'm climbing like maggie it\nmight never\nisn't so hard\nyeah what do you got that big beer ball\nincluding this bike for\nyou guys look i'll get you in there yeah\nget some water\nsome water yeah\ni'm asking them if they needed it they\nlook tired that's no longer\nthat's my dad you see that\nhe passed away january 30. he's marine\nwe're racing for military\nsee more ma\nyeah question you guys dj bob behind us\nback there\nhe's not a morning radio show\nformer military or has a\nconnection to the military and\nuh it's really great getting to know\nthese people\nthe last week\na week ago yesterday another silver\nmedium\nwe all came together with this comment\ncommon mission\nthat's regret so almost\nalmost there and uh\nwell mission accomplished\nawesome dude you're doing great\nthanks man appreciate you all doing\ngreat appreciate it\nhere's the poster first team one mile oh\nthanks daddy yeah and here's a coin for\nyou too oh you guys are awesome man\ngood job bro this is fun i'm gonna run\nall the way to eastwood\ni'm good\ngood i want to take it\ndamn down i'm gonna write it down\nyou can take the next one okay",
+          "curated": true,
+          "curation_reason": "First-person mid-race content from official RAAM channel showing the personal stories and challenges riders face during the race.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/NEDcEcS7pMM/maxresdefault.jpg",
+          "thumbnail_score": 94.43
+        },
+        {
+          "video_id": "q-Un-w39sg4",
+          "title": "RAAM Sights and Sounds - The Women and 60+ Start - 06/12/2012",
+          "channel": "Race Across America (Official Channel)",
+          "view_count": 264,
+          "upload_date": "20120613",
+          "duration_string": "1:37",
+          "description": "",
+          "tags": [
+            "RAAM",
+            "The Race Across America",
+            "Ultra Cycling"
+          ],
+          "url": "https://www.youtube.com/watch?v=q-Un-w39sg4",
+          "transcript": "5 4 3 two one\ngo got raw last year prompted you to do\nRam yeah I just could it was so\nsuccessful last year that I had to toss\nmy hat in the ring I guess so here I am\nwell that's nice you didn't finish and\ngo wow I don't want to do any more\npedaling here tell us a little about\nyour training\nokay well I can't stop that so we're\ngoing to have about 10 seconds of dead\nair before\nyou all right 10 seconds to go for\nJanet in five four 3 2 one Janet\nChristensen let's\ngo\noh we got a three-word answer yeah all\nright we got 10 seconds to\nwas 3,700 km\n98 wow so good to have you back a few\nyears later 3 two one let's go\nd\ngood",
+          "curated": false
+        },
+        {
+          "video_id": "UOgNKkotgSs",
+          "title": "RAAM 2016 Start: Solo and RAW in HD",
+          "channel": "Streambox, Inc.",
+          "view_count": 903,
+          "upload_date": "20160614",
+          "duration_string": "1:53:27",
+          "description": "",
+          "tags": [
+            "Streambox",
+            "RAAM",
+            "360",
+            "video",
+            "raam radio"
+          ],
+          "url": "https://www.youtube.com/watch?v=UOgNKkotgSs",
+          "curated": false
+        },
+        {
+          "video_id": "8mn0Hf4F0sw",
+          "title": "Cycling the Coast - San Diego to Oceanside and Back",
+          "channel": "jonnyallknight",
+          "view_count": 745,
+          "upload_date": "20230724",
+          "duration_string": "2:07",
+          "description": "It's summertime in San Diego which means it's the perfect time to ride the coast on road bikes. This 4hr endurance ride from the Mission Bay area of San Diego to Oceanside and back has become a staple of our training week, allowing us to get some good Zone 2 training in while enjoying the epic views SoCal has to offer.\n\nThis particular ride was on July 16, 2023 and started with my good friends, Tony and Logan before linking up with our bud, Pete, in Encinitas. We pretty much stayed on Coast Highway the whole time, riding through La Jolla, Del Mar, Solana Beach, Encinitas, Leucadia, Carlsbad, and Oceanside where we did a loop around the harbor before heading back south. The route and details for the ride can be seen here: https://www.strava.com/activities/9465038130",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=8mn0Hf4F0sw",
+          "curated": false
+        }
+      ],
+      "quotes": [
+        {
+          "text": "That's my dad you see that, he passed away January 30. He's marine, we're racing for military... We all came together with this common mission.",
+          "source_video_id": "NEDcEcS7pMM",
+          "source_channel": "Race Across America (Official Channel)",
+          "source_view_count": 182,
+          "category": "race_atmosphere",
+          "curated": true
+        }
+      ],
+      "rider_intel": {
+        "extracted_at": "2026-03-05",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "The race has a bike path that allows riders to get from the beach inland through Oceanside safely, avoiding cars on the road and providing easier access out of town with police escorts.",
+            "source_video_ids": [
+              "ipjxbXV6fuA"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "Ram is unique in it is one of the longest bicycle races in the world it it because it's a Non-Stop race it's also very unique it runs Coast to Coast no other race certainly United States does that",
+            "source_video_id": "ipjxbXV6fuA",
+            "source_channel": "Oceanside Post - News",
+            "source_view_count": 248,
+            "category": "logistics",
+            "curated": true
+          },
+          {
+            "text": "Over the past 10 to 15 years Racers have started using the race to raise money for charity and every year the racers represent about 50 Charities and raise about $2 million",
+            "source_video_id": "ipjxbXV6fuA",
+            "source_channel": "Oceanside Post - News",
+            "source_view_count": 248,
+            "category": "community",
+            "curated": true
+          },
+          {
+            "text": "We've all been busting our ears riding the saddle for the last 6 to 8 months we're looking for a nice safe and fast ride across the country",
+            "source_video_id": "ipjxbXV6fuA",
+            "source_channel": "Oceanside Post - News",
+            "source_view_count": 248,
+            "category": "training",
+            "curated": true
+          }
+        ],
+        "search_text": "Race Across America is a non-stop bicycle race running coast to coast from Oceanside, California to the Atlantic Coast, covering approximately 3000 miles. The race is unique as one of the longest bicycle races in the world and the only coast-to-coast race in the United States. The start in Oceanside features a bike path that allows riders to travel safely from the beach inland through the city, avoiding car traffic with police escort support. The race attracts international participation from 27-30 countries. Riders typically train for 6-8 months leading up to the event. The race has become a significant charity fundraising platform, with racers representing about 50 charities and raising approximately $2 million annually. The event is expected to take 5-6 days for completion, with riders seeking a safe and fast crossing of the country."
+      }
+    }
+  }
+}

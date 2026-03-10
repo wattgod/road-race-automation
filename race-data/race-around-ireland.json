@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Race Around Ireland",
+    "slug": "race-around-ireland",
+    "display_name": "Race Around Ireland",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 2150.1,
+      "distance_mi": 1336.0,
+      "elevation_m": 21946,
+      "elevation_ft": 72000.0,
+      "location": "Trim, County Meath, Ireland",
+      "location_badge": "Trim, Ireland",
+      "country": "Ireland",
+      "date": "2026: August TBD",
+      "date_specific": "2026: August TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://en.wikipedia.org/wiki/Race_Around_Ireland",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Hour 80-100 Wall: Deep into northwest Ireland, cumulative sleep debt and 15,000 m climbed trigger hallucinations on empty coastal roads. Headwinds from Slieve League cliffs amplify the void.",
+        "Final 200 km Push: Exhausted return to Trim after full circumnavigation brings cramp city on familiar Meath lanes. 132-hour clock ticks mercilessly with every pedal stroke."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://en.wikipedia.org/wiki/Race_Around_Ireland"
+    },
+    "history": {
+      "founded": 2011,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "Brutal non-stop Irish coastal ultra for true endurance masochists.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

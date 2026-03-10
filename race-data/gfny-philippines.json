@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "GFNY Philippines",
+    "slug": "gfny-philippines",
+    "display_name": "GFNY Philippines",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 135.2,
+      "distance_mi": 84.0,
+      "elevation_m": 1219,
+      "elevation_ft": 4000.0,
+      "location": "Subic Bay, Philippines",
+      "location_badge": "Subic Bay, Philippines",
+      "country": "Philippines",
+      "date": "2026: March 15",
+      "date_specific": "2026: March 15",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Tropical dry season in March: hot, humid, sunny with low rain risk.",
+      "challenges": [
+        "Precipitation: Low (10-20%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling paved roads departing Subic Bay Freeport Zone into the scenic Bataan province, featuring coastal views, moderate climbs, and a fast return to the finish. Long course emphasizes endurance with qualifier potential for top age-groupers.",
+      "signature_challenge": "The 84-mile loop through Bataan province, mirroring pro routes with scenic yet demanding paved roads.",
+      "suffering_zones": [
+        "Bataan Outbound Climb: Early punchy ascent out of Subic Bay into Bataan roads, testing legs in humid conditions.",
+        "Mid-Route Rollers: Constant undulations through picturesque countryside accumulating the 4000 ft gain.",
+        "Return Push: Final efforts back to Subic Bay with fatigue setting in under tropical sun."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Subic Bay hotels and resorts abundant; book early for freeport zone proximity.",
+      "transport": "Hosted in cyclist-friendly Subic Bay Freeport Zone with exhibition center start/finish. Expect smooth GFNY operations including packet pickup and aid stations.",
+      "food": "",
+      "official_site": "https://philippines.gfny.com"
+    },
+    "history": {
+      "founded": 2018,
+      "origin_story": "Part of GFNY World series, with roots in events like PRUride Philippines Gran Fondo. Established as GFNY chapter with competitive long course rankings.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "GFNY Philippines delivers pro-level road racing in tropical paradise.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://philippines.gfny.com",
+        "category": "reference",
+        "label": "GFNY Philippines: Home"
+      },
+      {
+        "url": "https://philippines.gfny.com/course/",
+        "category": "reference",
+        "label": "Course - GFNY Philippines"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/3419/pruride-phillipines-to-attract-over-5000-cyclists-across-southeast-asia",
+        "category": "reference",
+        "label": "PRUride Phillipines to attract over 5,000 cyclists across Southeast Asia"
+      },
+      {
+        "url": "https://gfny.com",
+        "category": "reference",
+        "label": "GFNY World: Home"
+      }
+    ]
+  }
+}

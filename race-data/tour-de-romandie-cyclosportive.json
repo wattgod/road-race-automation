@@ -1,0 +1,137 @@
+{
+  "race": {
+    "name": "Tour de Romandie Cyclosportive",
+    "slug": "tour-de-romandie-cyclosportive",
+    "display_name": "Tour de Romandie Cyclosportive",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 2591,
+      "elevation_ft": 8500.0,
+      "location": "Lausanne, Switzerland",
+      "location_badge": "Lausanne, Switzerland",
+      "country": "Switzerland",
+      "date": "2026: April 28",
+      "date_specific": "2026: April 28",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Temperate spring conditions in western Switzerland, ideal for road cycling but watch for showers.",
+      "challenges": [
+        "Precipitation: 30-40%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Hilly road sportive emulating the Tour de Romandie's punchy Jura and Alpine foothills, featuring rolling terrain, steep kicks, and lake views culminating near Lausanne.",
+      "signature_challenge": "The 'Romandie Rollercoaster': 8500ft over 100 miles of Swiss climbs, blending endurance with explosive efforts akin to pro Queen stages.",
+      "suffering_zones": [
+        "Jura Foothills: Early undulating climbs building fatigue over 2000-3000ft gain with false flats.",
+        "Alpine Approaches: Mid-route ascents toward Thyon-like summits, delivering 4000ft of relentless gradient.",
+        "Lausanne Finale: Hilly time trial-inspired finish with uphill sting to Olympic stadium overlooking Lake Geneva."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Abundant hotels in Lausanne and along Lake Geneva; book early for spring demand.",
+      "transport": "Single-day event in late April, centered in Lausanne with easy urban access and pro-level organization.",
+      "food": "",
+      "official_site": "https://www.tourderomandie.ch/en/"
+    },
+    "history": {
+      "founded": 1947,
+      "origin_story": "Amateur sportive inspired by the prestigious Tour de Romandie stage race, bringing pro parcours to gran fondo enthusiasts in Romandie.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "Pro-caliber road suffering in postcard Switzerland—pure gran fondo gold.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Tour_de_Romandie",
+        "category": "reference",
+        "label": "Tour de Romandie - Wikipedia"
+      },
+      {
+        "url": "https://www.tourderomandie.ch/en/",
+        "category": "reference",
+        "label": "site officiel - Tour de Romandie (TDR)"
+      },
+      {
+        "url": "https://www.cyclingnews.com/tour-de-romandie/",
+        "category": "reference",
+        "label": "Tour de Romandie 2026 - Cyclingnews"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2025_Tour_de_Romandie",
+        "category": "reference",
+        "label": "2025 Tour de Romandie - Wikipedia"
+      },
+      {
+        "url": "https://www.tourderomandie.ch/en/about-tdr/",
+        "category": "reference",
+        "label": "About the Tour de Romandie"
+      }
+    ]
+  }
+}

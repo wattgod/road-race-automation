@@ -1,0 +1,121 @@
+{
+  "race": {
+    "name": "Best Buddies Challenge: Hyannis Port",
+    "slug": "best-buddies-challenge-hyannis-port",
+    "display_name": "Best Buddies Challenge: Hyannis Port",
+    "tagline": "100-mile charity rocket from Boston to Cape Cod with pros, celebs, and lobster-fueled glory.",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 1512,
+      "elevation_ft": 4961.0,
+      "location": "Boston to Hyannis Port, Massachusetts, USA",
+      "location_badge": "BOSTON, MA",
+      "country": "USA",
+      "date": "Late May annually",
+      "date_specific": "2026: May 30",
+      "field_size": "2,000+ riders, runners, walkers of all levels including pros and celebs",
+      "start_format": null,
+      "registration": "Charity ride with full support, clambake, concert, massages; cost not public but fundraising-focused",
+      "entry_fee": "$TBD (fundraising required)",
+      "feed_zones": "5 fully stocked stops every ~25 miles with premium food, drinks, mechanics, medical, bathrooms",
+      "cutoff_time": "Event day support until 6pm with domestiques ensuring everyone finishes",
+      "lat": 42.3554,
+      "lng": -71.0602,
+      "route_options": [
+        "100 miles: Boston JFK Library to Hyannis Port, 4,961ft gain — flagship century through New England charm",
+        "55 miles: Carver MA start, ~89km paved — mid-distance stunner",
+        "20 miles: Sandwich MA start — family-friendly cruise",
+        "5K run/walk: Craigville Beach — inclusive finale"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate spring coastal",
+      "description": "Late May in coastal Massachusetts brings mild temps in the 60-75°F range with possible morning chill and afternoon warmth. Expect variable winds off the Atlantic and occasional showers typical of New England spring. Humidity stays moderate, ideal for long efforts without oppressive heat.",
+      "challenges": [
+        "gusty coastal winds",
+        "spring showers",
+        "morning fog",
+        "rapid temp shifts"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling to flat paved roads",
+      "surface": "Exclusively paved country roads slicing through quaint towns and state forests. Smooth, well-maintained blacktop handles high volumes without pothole drama. Iconic Cape Cod vibes with zero gravel grit to slow the party.",
+      "technical_rating": 1,
+      "features": [
+        "quiet New England backroads",
+        "Duxbury Bay views",
+        "Myles Standish Forest",
+        "Cape Cod descent",
+        "Kennedy compound finale"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 5,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 79,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 80. adventure dimension dropped, road_surface added. Score recalculated: 79."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "79/100",
+      "one_liner": "100-mile charity rocket from Boston to Cape Cod with pros, celebs, and lobster-fueled glory.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

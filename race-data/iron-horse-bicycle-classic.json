@@ -1,0 +1,402 @@
+{
+  "race": {
+    "name": "Iron Horse Bicycle Classic",
+    "slug": "iron-horse-bicycle-classic",
+    "display_name": "Iron Horse Bicycle Classic",
+    "tagline": "Race the train. 47 miles. Two 10,000-foot passes. Durango to Silverton since 1972.",
+    "vitals": {
+      "distance_km": 80.5,
+      "distance_mi": 50.0,
+      "elevation_m": 1829,
+      "elevation_ft": 6000.0,
+      "location": "Durango, Colorado",
+      "location_badge": "DURANGO, CO",
+      "country": "Colorado",
+      "date": "Memorial Day weekend annually",
+      "date_specific": "2026: May 24",
+      "field_size": "2,000+ riders (all events)",
+      "start_format": null,
+      "registration": "Online. Road Race: $145. Citizen Tour: ~$100. Quarter Horse: ~$80. USA Cycling license required for road race.",
+      "entry_fee": null,
+      "feed_zones": "Multiple aid stations along Highway 550 course",
+      "cutoff_time": "Coal Bank Pass by 12:40 PM, Molas Pass by 1:20 PM",
+      "lat": 37.2753,
+      "lng": -107.8801,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "High-altitude mountain spring",
+      "description": "Late May in the San Juan Mountains means variable conditions from pleasant valley warmth to potential snow on the passes. Temperatures can range from 70s in Durango to 40s-50s at 10,900 ft summit.",
+      "challenges": [
+        "Temperature drops of 20-30F between Durango and pass summits",
+        "Potential snow on passes (2008 cancellation: 18 inches on Coal Bank)",
+        "High UV exposure above 10,000 ft",
+        "Afternoon thunderstorm risk",
+        "Wind exposure on open highway through mountain corridors"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain highway with two major passes",
+      "surface": "US Highway 550 — fully paved, well-maintained mountain highway. Point-to-point from Durango (6,512 ft) to Silverton (9,318 ft) over Coal Bank Pass (10,640 ft) and Molas Pass (10,910 ft).",
+      "technical_rating": 2,
+      "features": [
+        "Coal Bank Pass — 10,640 ft summit",
+        "Molas Pass — 10,910 ft summit",
+        "Closed US highway for racing",
+        "High-speed descents between passes",
+        "Point-to-point finish in Silverton at 9,318 ft",
+        "Net elevation gain of 2,806 ft start to finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A point-to-point mountain road race on closed US Highway 550 through the heart of the San Juan Mountains. Two passes above 10,000 feet, a net elevation gain of 2,806 feet, and the narrow gauge train running alongside for the first 10 miles. Simple concept, demanding execution.",
+      "signature_challenge": "The double pass crossing — Coal Bank (10,640 ft) and Molas (10,910 ft) — with no recovery between them. At altitude, your power drops 10-15% from sea level values, and the thin air makes the descents feel faster than they are.",
+      "suffering_zones": [
+        "Highway 550 Climbing Begins",
+        "Coal Bank Pass (10,640 ft)",
+        "Coal Bank to Molas Transition",
+        "Molas Pass (10,910 ft)",
+        "Descent into Silverton (9,318 ft)"
+      ]
+    },
+    "logistics": {
+      "airport": "Durango-La Plata County Airport (DRO) — 15 miles from downtown. Direct flights from Denver, Dallas, Phoenix. Albuquerque (ABQ) is 3.5 hours by car.",
+      "lodging_strategy": "Book Durango hotels early — Memorial Day weekend sells out months in advance. Strater Hotel, General Palmer Hotel, and DoubleTree are downtown options. Camping at Junction Creek or Haviland Lake is cheaper. Consider Purgatory Resort area for mid-course lodging if arriving from the north.",
+      "transport": "",
+      "food": "Durango has excellent dining: Steamworks Brewing, Ore House, Ken and Sue's. Silverton finish has beer garden and food trucks. Stock race nutrition in advance — no aid stations in the first 15 miles.",
+      "official_site": "https://www.ironhorsebicycleclassic.com"
+    },
+    "history": {
+      "founded": 1972,
+      "origin_story": "In 1971, Tom Mayer challenged his brother Jim — a brakeman on the Denver & Rio Grande Western Railroad — to a race to Silverton. Steam engine versus bicycle. They wagered a candy bar. Tom pedaled over two mountain passes and was waiting at Silverton station when the train arrived. The next year, 36 riders showed up to take on the same challenge, and the Iron Horse Bicycle Classic was born. Over 53 years, it has grown into Colorado's oldest, largest, and most renowned cycling event, expanding from the original road race to include gravel, mountain bike, BMX, and citizen tour events.",
+      "notable_moments": [
+        "1972: First official Iron Horse with 36 riders racing the train to Silverton",
+        "2008: Race cancelled due to 18 inches of snow on Coal Bank Pass",
+        "2020: Cancelled due to COVID-19 pandemic — only the second cancellation in history",
+        "2022: 50th anniversary celebration with return to pre-pandemic participation numbers",
+        "2024: Sabotage incident with thumbtacks causing 50+ flat tires near County Road 203",
+        "2025: 53rd running with Sepp Kuss-era Durango cycling renaissance",
+        "2026: Will host Colorado Gravel State Championships alongside traditional road events"
+      ],
+      "reputation": "Colorado's oldest and most iconic cycling event. The original man versus machine challenge that has become a Memorial Day weekend institution."
+    },
+    "biased_opinion": {
+      "verdict": "The Original Man vs. Machine",
+      "summary": "The Iron Horse Bicycle Classic is not just a road race — it's an American cycling institution. Since 1972, the concept of racing a steam train through the San Juan Mountains has created something genuinely irreplaceable. Two 10,000-foot passes on a closed US highway, a point-to-point finish in Silverton, and more than half a century of tradition make this Colorado's definitive cycling event. The road race itself is demanding without being destructive, and the surrounding festival has grown into a weekend celebration of everything on two wheels.",
+      "strengths": [
+        "The concept: Racing a narrow gauge steam train is unique in all of cycling. No other event has this DNA.",
+        "The course: Two passes above 10,000 ft on a closed US highway through the San Juan Mountains. Genuinely stunning.",
+        "The history: Running since 1972 with continuous community investment. 53 years of refinement shows.",
+        "The experience: Downtown Durango start, Silverton finish, beer garden, train ride back. Complete package.",
+        "The inclusivity: Road race, citizen tour, gravel, MTB, hill climb — something for every cyclist."
+      ],
+      "weaknesses": [
+        "Altitude: If you live at sea level, the passes above 10,000 ft will humble you. Arrive early to acclimatize.",
+        "Weather risk: Memorial Day in the San Juans is unpredictable. Snow has cancelled the event before.",
+        "Logistics: Silverton finish means you need return transport. Not a ride-back situation.",
+        "Accommodation: Durango on Memorial Day weekend is expensive and books early.",
+        "Field depth: Strong regional competition but not a destination race for international pros."
+      ],
+      "bottom_line": "If you want a road race with soul, history, and an experience that transcends the finish line, the Iron Horse delivers. It's one of the few events where the story matters as much as the result."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Fifty-three years of man versus machine through the San Juan Mountains — Colorado's definitive cycling tradition.",
+      "should_you_race": "If you love mountain road racing and want an event steeped in history with a genuinely unique concept, absolutely. If you need flat-course speed or a pure criterium experience, this is not your race. The altitude and climbing demand respect — prepare accordingly.",
+      "alternatives": "For similar mountain road racing: Mount Washington Hillclimb (pure climbing). For Colorado cycling heritage: Ride the Rockies (touring). For similar altitude challenges: Leadville Trail 100 (different format, same thin air). For closed-road mountain experiences: Bob Cook Memorial Mount Evans Hill Climb."
+    },
+    "citations": [
+      {
+        "url": "https://ridewithgps.com/routes/39499356",
+        "category": "route",
+        "label": "RideWithGPS: 2019 Coca-Cola Iron Horse Bicycle Classic Road Race"
+      },
+      {
+        "url": "https://www.ironhorsebicycleclassic.com",
+        "category": "official",
+        "label": "Iron Horse Bicycle Classic Official Site"
+      },
+      {
+        "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=about",
+        "category": "official",
+        "label": "Iron Horse Bicycle Classic History"
+      },
+      {
+        "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=coke",
+        "category": "official",
+        "label": "Coca-Cola Road Race Details"
+      },
+      {
+        "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=mcdonalds",
+        "category": "official",
+        "label": "McDonald's Citizen Tour Details"
+      },
+      {
+        "url": "https://velo.outsideonline.com/news/history-iron-horse-bicycle-classic-returns-for-52nd-year",
+        "category": "media",
+        "label": "Velo: Iron Horse Returns for 52nd Year"
+      },
+      {
+        "url": "https://www.durangoherald.com/articles/iron-horse-bicycle-classic-makes-its-return-to-downtown-durango-this-weekend/",
+        "category": "media",
+        "label": "Durango Herald: IHBC 2025"
+      },
+      {
+        "url": "https://www.durangoherald.com/articles/ian-burnett-reflects-on-iron-horse-bicycle-classic-looks-ahead/",
+        "category": "media",
+        "label": "Durango Herald: Ian Burnett Reflects on IHBC"
+      },
+      {
+        "url": "https://outdoorindustry.org/press-release/results-51st-iron-horse-bicycle-classic/",
+        "category": "other",
+        "label": "Outdoor Industry Association: 51st IHBC Results"
+      },
+      {
+        "url": "https://www.bicycleretailer.com/announcements/2022/05/11/iron-horse-bicycle-classic-celebrating-50-years",
+        "category": "media",
+        "label": "Bicycle Retailer: IHBC 50th Anniversary"
+      },
+      {
+        "url": "https://www.durango.com/iron-horse-bicycle-classic/",
+        "category": "other",
+        "label": "Durango.com: Get Ready to Ride"
+      },
+      {
+        "url": "https://www.cpr.org/2022/05/26/bike-vs-train-the-story-behind-durangos-iron-horse-bicycle-classic/",
+        "category": "media",
+        "label": "CPR: Bike vs Train Story"
+      },
+      {
+        "url": "https://www.uncovercolorado.com/events/iron-horse-bicycle-classic/",
+        "category": "other",
+        "label": "Uncover Colorado: IHBC"
+      },
+      {
+        "url": "https://www.mybicycleroutes.com/xcoalmolaspassinfopage.html",
+        "category": "route",
+        "label": "Coal Bank & Molas Pass Cycling Info"
+      },
+      {
+        "url": "https://www.reddit.com/r/amputee/comments/1463ppi/i_beat_the_train_2023_iron_horse_bicycle_classic/",
+        "category": "community",
+        "label": "Reddit: I Beat the Train 2023"
+      },
+      {
+        "url": "https://www.reddit.com/r/bicycling/comments/u76ye/ride_profile_of_the_iron_horse_bicycle_classic/",
+        "category": "community",
+        "label": "Reddit: IHBC Ride Profile"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-02-23",
+      "search_query": "Iron Horse Bicycle Classic road race Durango Silverton",
+      "videos": [
+        {
+          "video_id": "K3gfNi-_7RE",
+          "title": "BIKE RACING IS BACK! (Durango Iron Horse Classic ROAD AND MTB RACE)",
+          "channel": "SYD and MACKY",
+          "view_count": 32739,
+          "upload_date": "20210612",
+          "duration_string": "21:38",
+          "description": "In today's vlog we head to Durango for our first REAL mass start MTB race since pre-covid. Macky will be going for the King of the Mountain title by racing both the road race on Saturday and the cross-country MTB race on Sunday.",
+          "tags": [
+            "syd and macky",
+            "durango iron horse bicycle classic",
+            "iron horse road race",
+            "iron horse classic",
+            "durango road race",
+            "durango silverton road race"
+          ],
+          "url": "https://www.youtube.com/watch?v=K3gfNi-_7RE",
+          "curated": true,
+          "curation_reason": "First-person racing experience with detailed race preparation, strategy discussion, and intimate perspective from professional cyclists.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/K3gfNi-_7RE/maxresdefault.jpg",
+          "thumbnail_score": 84.0
+        },
+        {
+          "video_id": "G7SGwR23POM",
+          "title": "Watch This Epic Battle At 11,000 feet. Iron Horse Bicycle Classic 2021",
+          "channel": "Cormac McGeough",
+          "view_count": 4581,
+          "upload_date": "20210530",
+          "duration_string": "7:38",
+          "description": "Durango's premiere road racing event, with stars partaking like Howard Grotts, Ned Overend, Todd Wells, and Riley Amos.",
+          "tags": [
+            "durango",
+            "todd wells",
+            "ned overend"
+          ],
+          "url": "https://www.youtube.com/watch?v=G7SGwR23POM",
+          "curated": true,
+          "curation_reason": "Race footage highlighting the high-altitude challenge and featuring notable cyclists in the actual competition.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/G7SGwR23POM/maxresdefault.jpg",
+          "thumbnail_score": 62.8
+        },
+        {
+          "video_id": "q8BQteTvGBU",
+          "title": "Iron Horse Bicycle Classic race",
+          "channel": "Durango Herald",
+          "view_count": 3013,
+          "upload_date": "20160529",
+          "duration_string": "2:04",
+          "description": "Cycling fans couldn't have asked for a better lead group at the 45th Iron Horse Bicycle Classic.",
+          "tags": [
+            "iron horse",
+            "sports"
+          ],
+          "url": "https://www.youtube.com/watch?v=q8BQteTvGBU",
+          "curated": true,
+          "curation_reason": "Post-race interview with winner describing tactical racing on Coal Bank and Molas Pass climbs.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/q8BQteTvGBU/maxresdefault.jpg",
+          "thumbnail_score": 66.49
+        },
+        {
+          "video_id": "uO9zUwxKl1g",
+          "title": "2021 Iron Horse Bicycle Classic Durango, CO",
+          "channel": "Phil Max",
+          "view_count": 24122,
+          "upload_date": "20210628",
+          "duration_string": "7:05",
+          "description": "Shot and edited by Phil Mancillas.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=uO9zUwxKl1g",
+          "curated": false
+        }
+      ],
+      "quotes": [
+        {
+          "text": "Today is the Durango Iron Horse road race, it's like 47 miles with five or six thousand feet of climbing from Durango into Silverton.",
+          "source_video_id": "K3gfNi-_7RE",
+          "source_channel": "SYD and MACKY",
+          "source_view_count": 32739,
+          "category": "course_difficulty",
+          "curated": true
+        },
+        {
+          "text": "This is my first mass start race in a year and three months, and judging by how poorly I slept last night I'm quite nervous. If I'm not sleeping well that means I'm nervous about the race, so I found that for me that's usually a pretty good sign.",
+          "source_video_id": "K3gfNi-_7RE",
+          "source_channel": "SYD and MACKY",
+          "source_view_count": 32739,
+          "category": "race_atmosphere",
+          "curated": true
+        }
+      ],
+      "rider_intel": {
+        "extracted_at": "2026-02-23",
+        "key_challenges": [
+          {
+            "name": "Coal Bank Pass",
+            "description": "First major selection point at 10,640 ft. Attacks happen continuously on the climb. The 2023 lead group of 20 riders splintered here. Must summit by 12:40 PM cutoff.",
+            "source_video_ids": [
+              "q8BQteTvGBU",
+              "K3gfNi-_7RE"
+            ]
+          },
+          {
+            "name": "Molas Pass",
+            "description": "Course high point at 10,910 ft. Decisive climb where the race is won and lost. Continued attacks all the way up. Must summit by 1:20 PM cutoff.",
+            "source_video_ids": [
+              "q8BQteTvGBU"
+            ]
+          },
+          {
+            "name": "Pacing discipline",
+            "description": "Riders struggle to maintain target power output on the first climb due to race dynamics and rubber-banding in the group. Going too hard early guarantees suffering on Molas.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          }
+        ],
+        "terrain_notes": [
+          {
+            "text": "Features big wide roads where groups can move faster than solo riders. Closed highway for final 20 miles over both passes.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          },
+          {
+            "text": "High-speed descents with recommended 20-25 mph turns that riders take faster on the closed road. Yellow line rule still in effect.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          }
+        ],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "Look for wheels at the start but don't bury yourself — treat it like a multi-day enduro and focus on being consistent.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          },
+          {
+            "text": "If you're with a group, stay there — the group will move faster on the big wide road than a solo rider.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          },
+          {
+            "text": "Aim for 650-850 calories during the race — 150 calories every 30 minutes.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          },
+          {
+            "text": "You're not done when you hit Silverton — there's a mile of false flat slightly uphill through town to the finish.",
+            "source_video_ids": [
+              "K3gfNi-_7RE"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "It's just a testament to what an incredible town Durango is — an 18-year-old could win or 60-year-old could win.",
+            "source_video_id": "q8BQteTvGBU",
+            "source_channel": "Durango Herald",
+            "source_view_count": 3013,
+            "category": "community",
+            "curated": true
+          }
+        ],
+        "search_text": "The Iron Horse Bicycle Classic road race covers 47 miles with 5,700 feet of climbing from Durango to Silverton over two 10,000-foot passes. Coal Bank Pass (10,640 ft) and Molas Pass (10,910 ft) are the decisive climbs where attacks happen continuously and selections are made. The course runs on closed US Highway 550 with big wide roads where groups move faster than solo riders. Riders report the first climb makes it nearly impossible to maintain conservative power targets due to race dynamics. The event has run since 1972 as Colorado's oldest cycling event, attracting a diverse field from 43 states and five countries. Nutrition strategy involves consuming 650-850 calories during the race at 150 calories every 30 minutes. There is a mile of false flat through Silverton to the actual finish line. Race tactics emphasize finding wheels early and staying consistent rather than chasing attacks."
+      }
+    }
+  }
+}

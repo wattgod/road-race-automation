@@ -1,0 +1,230 @@
+{
+  "race": {
+    "name": "GFNY Punta del Este",
+    "slug": "gfny-punta-del-este",
+    "display_name": "GFNY Punta del Este",
+    "tagline": "146km of beach glamour meets brutal hills in Uruguay's sexiest sufferfest.",
+    "vitals": {
+      "distance_km": 146.0,
+      "distance_mi": 90.7,
+      "elevation_m": 1653,
+      "elevation_ft": 5423.0,
+      "location": "Punta del Este, Maldonado Department, Uruguay",
+      "location_badge": "PUNTA DEL ESTE, URY",
+      "country": "Uruguay",
+      "date": "March",
+      "date_specific": "2026: March 15",
+      "field_size": "Intimate GFNY field of hundreds, drawing South American elites and sun-seeking internationals",
+      "start_format": null,
+      "registration": "Entry locks in elite chip timing, mandatory NYC-designed Italian jersey, and finisher's medal toward multi-event glory",
+      "entry_fee": "$130-180",
+      "feed_zones": "Fully stocked GFNY feeds with post-race beach club feast and awards",
+      "cutoff_time": "Sag wagon sweeps ensure all finishers medal, no DNF shame",
+      "lat": -34.9636,
+      "lng": -54.9491,
+      "route_options": [
+        "Long Competitive: 90.7mi, 5423ft — Hilly beast for elites chasing qualifiers",
+        "Medium Recreational: 52mi, 2215ft — Beginner-friendly coastal cruise"
+      ]
+    },
+    "climate": {
+      "primary": "Hot late-summer scorchers",
+      "description": "March delivers Punta del Este's steamy Southern Hemisphere sendoff with temps pushing 85°F and relentless coastal winds. Late summer heat bakes the beaches while ocean breezes offer fleeting mercy. Hydration is non-negotiable amid the glamour.",
+      "challenges": [
+        "scorching heat",
+        "gale-force headwinds",
+        "high humidity",
+        "sudden squalls"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat-to-hilly coastal crusher with wind-whipped drama",
+      "surface": "Silky paved paradise from beachfront boulevards to smooth inland climbs. Police escort tames traffic for pro-peloton flow. Luxury villa views mask the sneaky suffering.",
+      "technical_rating": 2,
+      "features": [
+        "wild beach rollers",
+        "Punta Ballena icon",
+        "pine forest punch",
+        "El Chorro selector",
+        "Interbalnearia panorama"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Playa Mansa erupts into 22km coastal flats before El Chorro's 800m hammer splits the bunch. Pine forests and wild beaches yield to Punta Ballena's iconic sting, looping back via Piriápolis oceanway. Interbalnearia finale panoramas reward survivors amid luxury ranches and lakes—windy, wavy, wildly scenic road poetry.",
+      "signature_challenge": "Punta Ballena's mid-race bite atop early El Chorro damage—where groups shatter and solo quests ignite. Winds amplify the isolation, turning paradise into personal hell.",
+      "suffering_zones": [
+        "El Chorro Selection",
+        "Punta Ballena Icon",
+        "Piriápolis Coastway"
+      ]
+    },
+    "logistics": {
+      "airport": "Fly into Punta del Este's PDP for 20-min beach transfers or Montevideo's MVD for budget hauls. Directs from Miami/Buenos Aires keep it painless.",
+      "lodging_strategy": "Crash beachfront at Parador Pedro Figari or AWA Boutique—walkable to start/expo. Book early for March peak; Airbnbs slash costs inland.",
+      "transport": "",
+      "food": "Uruguayan parrilladas fuel the fire—stock up on asado and malbec. Race feeds handle the ride; post-beach feasts await victors.",
+      "official_site": "https://puntadeleste.gfny.com"
+    },
+    "history": {
+      "founded": 2018,
+      "origin_story": "Launched in 2018 to conquer South America's glitziest coast, GFNY Punta del Este imported NYC's pro-for-a-day ethos to Uruguay's Pearl of the Atlantic. Beach starts met inland hills, drawing LatAm riders hungry for qualifiers. Evolving courses cemented it as a Southern summer classic, blending luxury with lung-burning reality.",
+      "notable_moments": [
+        "2022's epic 172km longest-in-GFNY beast",
+        "Annual redesigns starring Punta Ballena",
+        "6th edition sprint finishes in 90°F hell",
+        "2026 expo-to-Sunday showdown"
+      ],
+      "reputation": "GFNY's beach-circuit crown jewel for wind-battered warriors. Riders rave about the vibe; elites target for regional hardware."
+    },
+    "biased_opinion": {
+      "verdict": "Beach brutalizer supreme",
+      "summary": "GFNY Punta del Este fuses St. Tropez glamour with sneaky South American hills, turning beach bums into qualifiers. Winds howl off Playa Mansa while Punta Ballena snaps the elastic—pure pro drama in paradise. Redesigned yearly, it's the GFNY you didn't know you craved. Families lounge while you suffer; post-race feasts seal the legend. Skip if flats bore you—this undulating beast demands respect.",
+      "strengths": [
+        "ocean-view savagery",
+        "luxury resort recovery",
+        "elite qualifiers on cheap",
+        "wind-whipped selection",
+        "winery paradise vibes"
+      ],
+      "weaknesses": [
+        "heat hammer potential",
+        "regional field limits",
+        "vert shy of Alps",
+        "resort price creep",
+        "no gravel grit"
+      ],
+      "bottom_line": "Exotic GFNY gem for early-season glory. Pin it if you crave coastal crushers; dodge if mountains are your mistress."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Uruguay's hilly beach party punches way above its vert.",
+      "should_you_race": "Yes if you're chasing qualifiers in sun-soaked style or opening North American legs jet-lag free. Skip if deep fields or mega climbs define your fix—stick to Euros for that.",
+      "alternatives": "GFNY Punta Cana for Caribbean flats, GFNY Cozumel for island rollers, GFNY Los Cabos for Mexico heat."
+    },
+    "citations": [
+      {
+        "url": "https://gfny.com/sixth-edition-of-gfny-uruguay-punta-del-este-this-sunday/",
+        "category": "official",
+        "label": "Sixth edition of GFNY Uruguay - Punta del Este this Sunday"
+      },
+      {
+        "url": "https://gfny.com/gfny-uruguay-punta-del-este-5th-edition-this-sunday/",
+        "category": "official",
+        "label": "GFNY Uruguay - Punta del Este 5th edition this Sunday"
+      },
+      {
+        "url": "https://puntadeleste.gfny.com",
+        "category": "official",
+        "label": "GFNY Punta del Este: Home"
+      },
+      {
+        "url": "https://www.endurancesportswire.com/sprint-finish-at-6th-gfny-uruguay-punta-del-este-last-sunday/",
+        "category": "news",
+        "label": "Sprint finish at 6th GFNY Uruguay - Punta del Este last Sunday"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GFNY Punta del Este gran fondo cycling Punta del Este",
+      "videos": [
+        {
+          "video_id": "kJgKYV2xFWg",
+          "title": "GFNY Punta Del Este",
+          "channel": "GFNY World",
+          "view_count": 727,
+          "upload_date": "20201013",
+          "duration_string": "3:03",
+          "description": "puntadeleste.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=kJgKYV2xFWg",
+          "curated": false
+        },
+        {
+          "video_id": "gJYb4ghQk0o",
+          "title": "GFNY Punta del Este. The course 2023",
+          "channel": "GFNY World",
+          "view_count": 482,
+          "upload_date": "20230220",
+          "duration_string": "1:07",
+          "description": "more info: puntadeleste.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=gJYb4ghQk0o",
+          "transcript": "[Music]\nthank you",
+          "curated": false
+        },
+        {
+          "video_id": "ofL2d0M8nV4",
+          "title": "GFNY Punta del Este 2024",
+          "channel": "GFNY URUGUAY",
+          "view_count": 249,
+          "upload_date": "20240320",
+          "duration_string": "45",
+          "description": "Mirá la carrera de Gran Fondo más emocionante del Cono Sur!",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=ofL2d0M8nV4",
+          "curated": false
+        },
+        {
+          "video_id": "omhTChTh3JE",
+          "title": "GFNY Punta del Este - Course",
+          "channel": "GFNY World",
+          "view_count": 246,
+          "upload_date": "20210119",
+          "duration_string": "1:29",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=omhTChTh3JE",
+          "curated": false
+        },
+        {
+          "video_id": "VZ_cdP7vY-Q",
+          "title": "GFNY Punta del Este 2022 Race video",
+          "channel": "GFNY URUGUAY",
+          "view_count": 581,
+          "upload_date": "20220324",
+          "duration_string": "29",
+          "description": "Mira un resumen del primer GFNY South Amercian Championship",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=VZ_cdP7vY-Q",
+          "transcript": "[Music]\nyou",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

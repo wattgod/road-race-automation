@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Formosa 900",
+    "slug": "formosa-900",
+    "display_name": "Formosa 900",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 899.6,
+      "distance_mi": 559.0,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Circumnavigation of Taiwan",
+      "location_badge": "Circumnavigation of Taiwan",
+      "country": null,
+      "date": "2026: October TBD",
+      "date_specific": "2026: October TBD",
+      "field_size": "1268 (2025)",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Multiple daily stops with breaks, meals",
+      "cutoff_time": "9 days",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 76. adventure dimension dropped, road_surface added. Score recalculated: 71."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "8 nights included in tour (hotels/B&Bs), bike-friendly options.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "Iconic 9-day circumnavigation blending epic Taiwanese scenery, culture, and social cycling vibes.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

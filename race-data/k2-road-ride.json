@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "K2 Road Cycle Classic",
+    "slug": "k2-road-ride",
+    "display_name": "K2 Road Cycle Classic",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 191.5,
+      "distance_mi": 119.0,
+      "elevation_m": 2300,
+      "elevation_ft": 7546.0,
+      "location": "Coromandel Peninsula, New Zealand",
+      "location_badge": "Coromandel Peninsula, New Zealand",
+      "country": "New Zealand",
+      "date": "2026: November TBD",
+      "date_specific": "2026: November TBD",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "N/A",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Available in Coromandel town, Thames, and coastal communities like Kuaotunu; book early for event weekends.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Toughest one-day road challenge on New Zealand's stunning Coromandel Peninsula.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

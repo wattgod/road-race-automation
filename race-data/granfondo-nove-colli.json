@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Gran Fondo Nove Colli",
+    "slug": "granfondo-nove-colli",
+    "display_name": "Gran Fondo Nove Colli",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 204.4,
+      "distance_mi": 127.0,
+      "elevation_m": 3840,
+      "elevation_ft": 12600.0,
+      "location": "Cesenatico, Emilia-Romagna, Italy",
+      "location_badge": "Cesenatico, Italy",
+      "country": "Italy",
+      "date": "2026: May TBD",
+      "date_specific": "2026: May 24",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.novecolli.it/en-GB",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 5,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 5,
+      "field_depth": 5,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 84,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 89. adventure dimension dropped, road_surface added. Score recalculated: 84."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Barbotto Inferno: 5.5 km of 18% max ramps shred quads mid-race after Ciola, with no draft relief in thinning gruppetos. Heat and fatigue amplify the pain near Sogliano al Rubicone.",
+        "Pugliano Death March: Final major 9 km haul gaining 511 m at 5.6% crushes post-130 km legs near Secchiano. Exposed Apennine winds turn this into a solitary sufferfest.",
+        "Late-Game Triple Threat: Perticara, Pugliano, and Passo delle Siepi chain late at km 111-144, stacking 1300+ m with minimal flats. Glycogen depletion hits hard amid village cheers."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.novecolli.it/en-GB"
+    },
+    "history": {
+      "founded": 1971,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "84/100",
+      "one_liner": "Ultimate Italian gran fondo icon: 9 savage climbs, 12,000 souls, eternal glory.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

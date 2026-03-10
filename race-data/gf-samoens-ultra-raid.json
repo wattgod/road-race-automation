@@ -1,0 +1,124 @@
+{
+  "race": {
+    "name": "Gran Fondo & Ultra Raid Samoëns",
+    "slug": "gf-samoens-ultra-raid",
+    "display_name": "Gran Fondo & Ultra Raid Samoëns",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 173.8,
+      "distance_mi": 108.0,
+      "elevation_m": 5000,
+      "elevation_ft": 16404.0,
+      "location": "Samoëns, Haute-Savoie, France",
+      "location_badge": "Samoëns, France",
+      "country": "France",
+      "date": "2026: June 5-7",
+      "date_specific": "2026: June 5-7",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Unknown",
+      "cutoff_time": "Unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Accommodation packages available through event organizers. Lodging options can be booked through the official Gran Fondo & Ultra Raid website.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "A well-organized alpine Gran Fondo combining legendary Tour de France passes with festival atmosphere, ideal for riders seeking challenging mountain cycling in an accessible, community-focused format.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Gran Fondo & Ultra Raid Samoëns gran fondo cycling Samoëns",
+      "videos": [
+        {
+          "video_id": "V1PmR3N2bo4",
+          "title": "Vidéo 1 Reco XMB Les Monts d'Aspremont",
+          "channel": "JLI06 SLV",
+          "view_count": 500,
+          "upload_date": "20150214",
+          "duration_string": "7:45",
+          "description": "Reco course VTT XMB Les Monts d'Aspremont.\nVenez nombreux découvrir les traces d'un parcours ouvert par certains membres du club de l'AS Var Mer.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=V1PmR3N2bo4",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

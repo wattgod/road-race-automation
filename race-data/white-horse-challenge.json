@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "White Horse Challenge",
+    "slug": "white-horse-challenge",
+    "display_name": "White Horse Challenge",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 144.8,
+      "distance_mi": 90.0,
+      "elevation_m": 1400,
+      "elevation_ft": 4593.0,
+      "location": "Shrivenham, Oxfordshire, England",
+      "location_badge": "Shrivenham, England",
+      "country": "England",
+      "date": "2026: April 19",
+      "date_specific": "2026: April 19",
+      "field_size": "500",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "2",
+      "cutoff_time": "8 hours",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Local villages or Swindon area; book early for event weekend.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Classic southern England sportive blending history, hills and hospitality.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "race": {
+    "name": "GFNY Bahamas",
+    "slug": "gfny-bahamas",
+    "display_name": "GFNY Bahamas",
+    "tagline": "Ride through paradise on a flat and fast Caribbean course.",
+    "vitals": {
+      "distance_km": 98.0,
+      "distance_mi": 60.9,
+      "elevation_m": 424,
+      "elevation_ft": 1391.0,
+      "location": "West Bay Street near Goodman's Bay Park, Nassau, New Providence Island, The Bahamas",
+      "location_badge": "West Bay Street near Goodman's Bay Park, The Bahamas",
+      "country": "The Bahamas",
+      "date": "November",
+      "date_specific": "2025: November 9",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": [
+        {
+          "name": "Long",
+          "distance_mi": 60.8,
+          "distance_km": 98,
+          "elevation_ft": 1390,
+          "elevation_m": 424
+        },
+        {
+          "name": "Medium",
+          "distance_mi": 33,
+          "distance_km": 53,
+          "elevation_ft": 820,
+          "elevation_m": 250
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Tropical Caribbean climate with warm temperatures and potential wind; specific averages unavailable.",
+      "challenges": [
+        "Tropical Caribbean climate with warm temperatures and potential wind"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": [
+        "Flat and fast course with moderate climbing on paved roads through western New Providence Island"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Flat and fast loops through western New Providence with Caribbean beach views; two loops for long route.",
+      "signature_challenge": "Wind on flat coastal roads testing endurance.",
+      "suffering_zones": [
+        "Windy exposed sections",
+        "Moderate climbs totaling 1,390 ft"
+      ]
+    },
+    "logistics": {
+      "airport": "Nassau's international airport (specific code unavailable)",
+      "lodging_strategy": "Nassau offers hotels, resorts near start; details sparse.",
+      "transport": "Start/finish at Goodman's Bay Park; group rides during race week.",
+      "food": "",
+      "official_site": "https://bahamas.gfny.com"
+    },
+    "history": {
+      "founded": 2024,
+      "origin_story": "Founded 2024 as GFNY expansion; inaugural on 2024: November 3.",
+      "notable_moments": [
+        "Italians (2024 GFNY Worlds champs) dominate windy inaugural.",
+        "Announced June 2024, confirmed September 2024.",
+        "Second edition 2025: November 9."
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "GFNY Bahamas delivers a dreamy Caribbean escape with flat speed and stunning views, perfect for a fun GFNY entry without gravel grind—pure vacation vibes on two wheels.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Flat-fast paradise ride in Nassau's turquoise playground.",
+      "should_you_race": "Inaugural success with world champs signals promise; ideal for scenic endurance without suffering.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://gfny.com/gfny-comes-to-the-bahamas-this-november-3rd-2/",
+        "category": "reference",
+        "label": "GFNY comes to The Bahamas this November 3rd"
+      },
+      {
+        "url": "https://gfny.com/italians-win-first-ever-mass-participation-cycling-race-in-the-bahamas/",
+        "category": "reference",
+        "label": "Italians win first ever mass participation cycling race in The Bahamas"
+      },
+      {
+        "url": "https://nyc.gfny.com/gfny-announces-gfny-bahamas/",
+        "category": "reference",
+        "label": "GFNY announces GFNY Bahamas"
+      },
+      {
+        "url": "https://bahamas.gfny.com",
+        "category": "reference",
+        "label": "GFNY Bahamas: Home"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2902 @@
+#!/usr/bin/env python3
+"""
+Generate Race Prep Kit pages — personalized 12-week timeline + race-day checklists.
+
+Reads structured content from guide/gravel-guide-content.json and race profiles
+from race-data/*.json to produce standalone, print-friendly HTML pages.
+
+Two personalization tiers:
+  - Full (235 races): training_config + non_negotiables → milestones injected
+  - Generic (93 races): guide content + race context callout
+
+Usage:
+    python wordpress/generate_prep_kit.py unbound-200
+    python wordpress/generate_prep_kit.py --all
+    python wordpress/generate_prep_kit.py --all --output-dir /tmp/pk
+"""
+
+import argparse
+import hashlib
+import html
+import json
+import math
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Optional
+
+# Import shared constants from the race page generator
+sys.path.insert(0, str(Path(__file__).parent))
+from generate_neo_brutalist import (
+    SITE_BASE_URL,
+    SUBSTACK_URL,
+    SUBSTACK_EMBED,
+    COACHING_URL,
+    TRAINING_PLANS_URL,
+    normalize_race_data,
+    find_data_file,
+    load_race_data,
+)
+from generate_neo_brutalist import esc  # HTML escape helper
+
+from brand_tokens import (
+    get_font_face_css,
+    get_preload_hints,
+    get_tokens_css,
+    get_ga4_head_snippet,
+)
+from shared_footer import get_mega_footer_css, get_mega_footer_html
+from cookie_consent import get_consent_banner_html
+
+# Disable glossary tooltips in guide renderers (we don't need them here)
+import generate_guide
+generate_guide._GLOSSARY = None
+from generate_guide import (
+    render_timeline,
+    render_accordion,
+    render_process_list,
+    render_callout,
+    _md_inline,
+)
+
+# ── Constants ──────────────────────────────────────────────────
+
+GUIDE_DIR = Path(__file__).parent.parent / "guide"
+CONTENT_JSON = GUIDE_DIR / "gravel-guide-content.json"
+OUTPUT_DIR = Path(__file__).parent / "output" / "prep-kit"
+WEATHER_DIR = Path(__file__).parent.parent / "data" / "weather"
+QUOTES_DIR = Path(__file__).parent.parent / "data" / "quotes"
+CURRENT_YEAR = str(datetime.now().year)
+
+# Guide section IDs we extract content from
+GUIDE_SECTION_IDS = [
+    "ch3-phases",       # 12-week training timeline
+    "ch5-race-day",     # Race-day nutrition
+    "ch5-gut-training", # Gut training timeline
+    "ch6-decision-tree",# In-race decision tree
+    "ch7-taper",        # Race week countdown
+    "ch7-equipment",    # Equipment checklist
+    "ch7-morning",      # Race morning protocol
+    "ch8-immediate",    # Post-race recovery
+]
+
+# Phase boundaries for milestone bucketing
+PHASE_RANGES = {
+    "base":  (1, 4),
+    "build": (5, 10),
+    "taper": (11, 12),
+}
+
+
+# ── Data Loading ──────────────────────────────────────────────
+
+
+def load_guide_sections() -> dict:
+    """Extract the 8 target sections from guide JSON by ID.
+
+    Returns dict mapping section ID → section dict (with 'blocks' list).
+    """
+    content = json.loads(CONTENT_JSON.read_text(encoding="utf-8"))
+    sections = {}
+    for chapter in content.get("chapters", []):
+        for section in chapter.get("sections", []):
+            if section.get("id") in GUIDE_SECTION_IDS:
+                sections[section["id"]] = section
+    return sections
+
+
+def load_raw_training_data(filepath: Path) -> dict:
+    """Load raw race JSON and extract training-specific fields.
+
+    Returns dict with keys: training_config, non_negotiables, guide_variables,
+    race_specific, climate, course_description, vitals, logistics, terrain,
+    fondo_rating, results, weather, quotes.
+    """
+    data = json.loads(filepath.read_text(encoding="utf-8"))
+    race = data.get("race", data)
+    slug = filepath.stem
+
+    # Load weather data from data/weather/{slug}.json
+    weather = {}
+    weather_file = WEATHER_DIR / f"{slug}.json"
+    if weather_file.exists():
+        try:
+            weather = json.loads(weather_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Load quotes from data/quotes/{slug}.json
+    quotes = []
+    quotes_file = QUOTES_DIR / f"{slug}.json"
+    if quotes_file.exists():
+        try:
+            quotes = json.loads(quotes_file.read_text(encoding="utf-8"))
+            if not isinstance(quotes, list):
+                quotes = []
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    return {
+        "training_config": race.get("training_config"),
+        "non_negotiables": race.get("non_negotiables"),
+        "guide_variables": race.get("guide_variables"),
+        "race_specific": race.get("race_specific"),
+        "climate": race.get("climate", {}),
+        "course_description": race.get("course_description", {}),
+        "vitals": race.get("vitals", {}),
+        "logistics": race.get("logistics", {}),
+        "terrain": race.get("terrain", {}),
+        "fondo_rating": race.get("fondo_rating", {}),
+        "results": race.get("results", {}),
+        "biased_opinion_ratings": race.get("biased_opinion_ratings", {}),
+        "biased_opinion": race.get("biased_opinion", {}),
+        "final_verdict": race.get("final_verdict", {}),
+        "history": race.get("history", {}),
+        "weather": weather,
+        "quotes": quotes,
+    }
+
+
+def has_full_training_data(raw: dict) -> bool:
+    """True if race has training_config AND non_negotiables for full personalization."""
+    tc = raw.get("training_config")
+    nn = raw.get("non_negotiables")
+    return bool(tc) and bool(nn) and len(nn) > 0
+
+
+# ── Personalization ───────────────────────────────────────────
+
+
+def parse_by_when(text: str) -> Optional[int]:
+    """Extract first week number from by_when text like 'Week 6' or 'Week 8-10'.
+
+    Returns integer week number or None if unparseable.
+    """
+    if not text:
+        return None
+    m = re.search(r'[Ww]eek\s*(\d+)', text)
+    return int(m.group(1)) if m else None
+
+
+def week_to_phase(week: int) -> str:
+    """Map a week number to its training phase name."""
+    for phase, (lo, hi) in PHASE_RANGES.items():
+        if lo <= week <= hi:
+            return phase
+    return "build"  # Default to build if out of range
+
+
+def build_phase_extras(workout_mods: dict) -> dict:
+    """Build workout mod chip HTML snippets bucketed by phase.
+
+    Milestones are NOT included here — they appear in the dedicated
+    Non-Negotiables section (Section 02) to avoid repetition.
+
+    Returns dict mapping phase name → HTML string to inject after timeline content.
+    """
+    phase_mods = {"base": [], "build": [], "taper": []}
+    for mod_name, mod_cfg in (workout_mods or {}).items():
+        if not isinstance(mod_cfg, dict) or not mod_cfg.get("enabled"):
+            continue
+        week_str = mod_cfg.get("week", "")
+        week = parse_by_when(f"Week {week_str}") if isinstance(week_str, (int, float)) else parse_by_when(str(week_str))
+        if week:
+            phase = week_to_phase(week)
+        else:
+            phase = "build"
+        label = mod_name.replace("_", " ").title()
+        phase_mods[phase].append(label)
+
+    result = {}
+    for phase in ("base", "build", "taper"):
+        parts = []
+        for mod_label in phase_mods.get(phase, []):
+            parts.append(
+                f'<span class="rl-pk-workout-mod">{esc(mod_label)}</span>'
+            )
+        result[phase] = "\n".join(parts)
+    return result
+
+
+def render_personalized_timeline(block: dict, phase_extras: dict) -> str:
+    """Render timeline with injected milestone/mod HTML after each phase step.
+
+    Like render_timeline() but appends extra HTML per phase (base/build/taper)
+    after the content div, avoiding the esc() that render_timeline applies.
+    """
+    title = esc(block.get("title", ""))
+    steps = block["steps"]
+    phase_names = ["base", "build", "taper"]
+    steps_html = []
+
+    for i, step in enumerate(steps):
+        label = esc(step["label"])
+        content = _md_inline(esc(step["content"]))
+        paras = [f'<p>{p.strip()}</p>' for p in content.split('\n') if p.strip()]
+
+        phase = phase_names[i] if i < len(phase_names) else "taper"
+        extra = phase_extras.get(phase, "")
+
+        steps_html.append(f'''<div class="rl-guide-timeline-step">
+        <div class="rl-guide-timeline-marker">{i + 1}</div>
+        <div class="rl-guide-timeline-content">
+          <h4 class="rl-guide-timeline-label">{label}</h4>
+          {''.join(paras)}
+          {extra}
+        </div>
+      </div>''')
+
+    title_html = f'<h3 class="rl-guide-timeline-title">{title}</h3>' if title else ''
+    return f'''<div class="rl-guide-timeline">
+      {title_html}
+      {''.join(steps_html)}
+    </div>'''
+
+
+def build_race_context_callout(raw: dict, rd: dict) -> str:
+    """Build context callout box for generic-tier races (no training_config).
+
+    Pulls distance, terrain, climate, signature challenge from available data.
+    """
+    parts = []
+
+    distance = rd["vitals"].get("distance", "")
+    if distance and distance != "--":
+        parts.append(f"<strong>Distance:</strong> {esc(distance)}")
+
+    elevation = rd["vitals"].get("elevation", "")
+    if elevation and elevation != "--":
+        parts.append(f"<strong>Elevation:</strong> {esc(elevation)}")
+
+    location = rd["vitals"].get("location", "")
+    if location and location != "--":
+        parts.append(f"<strong>Location:</strong> {esc(location)}")
+
+    climate = raw.get("climate", {})
+    if isinstance(climate, dict):
+        conditions = climate.get("race_day_conditions", "")
+        if conditions:
+            parts.append(f"<strong>Conditions:</strong> {esc(conditions)}")
+
+    course = raw.get("course_description", {})
+    if isinstance(course, dict):
+        sig = course.get("signature_challenge", "")
+        if sig:
+            parts.append(f"<strong>Signature Challenge:</strong> {esc(sig)}")
+
+    if not parts:
+        return ""
+
+    items = "".join(f"<p>{p}</p>" for p in parts)
+    return f'''<div class="rl-pk-context-box">
+      <div class="rl-pk-context-label">RACE CONTEXT: {esc(rd["name"].upper())}</div>
+      {items}
+    </div>'''
+
+
+# ── Improvement Helpers ───────────────────────────────────────
+
+
+def compute_wake_time(start_time_str: str) -> Optional[str]:
+    """Parse start time and subtract 3 hours for wake-up alarm.
+
+    Handles formats like 'Saturday 6:00 AM', 'Friday 1:00 PM',
+    and multi-line strings (takes first time found).
+    Returns formatted time string or None.
+    """
+    if not start_time_str:
+        return None
+    m = re.search(r'(\d{1,2}):(\d{2})\s*(AM|PM)', start_time_str, re.IGNORECASE)
+    if not m:
+        return None
+    hour = int(m.group(1))
+    minute = int(m.group(2))
+    ampm = m.group(3).upper()
+    # Convert to 24h
+    if ampm == "PM" and hour != 12:
+        hour += 12
+    elif ampm == "AM" and hour == 12:
+        hour = 0
+    # Subtract 3 hours
+    hour = (hour - 3) % 24
+    # Convert back to 12h
+    if hour == 0:
+        return f"12:{minute:02d} AM"
+    elif hour < 12:
+        return f"{hour}:{minute:02d} AM"
+    elif hour == 12:
+        return f"12:{minute:02d} PM"
+    else:
+        return f"{hour - 12}:{minute:02d} PM"
+
+
+def compute_fueling_estimate(distance_mi) -> Optional[dict]:
+    """Estimate fueling needs based on race distance with duration-scaled carb rates.
+
+    Carb absorption and utilization scale with intensity and duration per
+    Jeukendrup (2014), van Loon et al. (2001), and Precision Fuel & Hydration
+    field data. At lower intensities (longer races), fat oxidation dominates
+    and GI distress limits practical carb intake. Returns dict or None.
+    """
+    if not distance_mi:
+        return None
+    try:
+        distance_mi = int(distance_mi)
+    except (ValueError, TypeError):
+        return None
+    if distance_mi < 20:
+        return None
+    # Conservative average gravel speeds (including mechanicals + stops)
+    if distance_mi <= 50:
+        avg_mph = 14
+    elif distance_mi <= 100:
+        avg_mph = 12
+    elif distance_mi <= 150:
+        avg_mph = 11
+    else:
+        avg_mph = 10
+    hours = distance_mi / avg_mph
+
+    # Duration-scaled carb rates (g/hr) — based on exercise physiology:
+    # Shorter/harder races: high carb oxidation, standard Jeukendrup range
+    # Longer races: lower intensity shifts fuel mix toward fat oxidation,
+    # GI distress prevalence climbs from ~4% (4hr) to >80% (16hr+),
+    # and splanchnic blood flow drops up to 80% during prolonged exercise.
+    if hours <= 4:
+        # High intensity race pace — standard dual-transport recommendation
+        carb_lo, carb_hi = 80, 100
+        note = "High-intensity race pace"
+    elif hours <= 8:
+        # Endurance pace — classic Jeukendrup range holds
+        carb_lo, carb_hi = 60, 80
+        note = "Endurance pace"
+    elif hours <= 12:
+        # Sub-threshold — fat oxidation increasing, GI risk climbing
+        carb_lo, carb_hi = 50, 70
+        note = "Lower intensity — fat oxidation increasing"
+    elif hours <= 16:
+        # Ultra pace — reverse crossover point, fat is primary fuel
+        carb_lo, carb_hi = 40, 60
+        note = "Ultra pace — fat is your primary fuel source"
+    else:
+        # Survival pace — GI distress prevalence >80%, appetite suppression
+        carb_lo, carb_hi = 30, 50
+        note = "Survival pace — palatability and GI tolerance are the limiters"
+
+    carbs_low = int(hours * carb_lo)
+    carbs_high = int(hours * carb_hi)
+    gels_low = carbs_low // 25
+    gels_high = carbs_high // 25
+    return {
+        "hours": round(hours, 1),
+        "avg_mph": avg_mph,
+        "carb_rate_lo": carb_lo,
+        "carb_rate_hi": carb_hi,
+        "carbs_low": carbs_low,
+        "carbs_high": carbs_high,
+        "gels_low": gels_low,
+        "gels_high": gels_high,
+        "note": note,
+    }
+
+
+# W/kg reference range for gravel cyclists (module-level for testability)
+WKG_FLOOR = 1.5   # recreational floor — maps to bracket low
+WKG_CEIL = 4.5    # elite ceiling — maps to bracket high
+WKG_EXPONENT = 1.4  # >1 pushes low-W/kg toward floor, steepens high-W/kg gains
+
+
+def compute_personalized_fueling(weight_kg: float, ftp: Optional[float],
+                                  hours: float) -> Optional[dict]:
+    """Compute personalized carb targets using W/kg intensity-aware formula.
+
+    Uses W/kg (FTP / weight) as an intensity proxy to position the rider
+    within the validated duration bracket from the white paper.  Higher W/kg
+    riders burn more carbs per hour → placed toward the bracket ceiling.
+    Lower W/kg riders rely more on fat oxidation → placed toward the floor.
+
+    The mapping uses a power curve (exponent 1.4) rather than linear to match
+    the non-linear relationship between intensity and CHO oxidation observed
+    in van Loon et al. — oxidation rises steeply above ~60% VO2max.
+
+    Reference range: 1.5 W/kg (recreational floor) to 4.5 W/kg (elite ceiling).
+    Falls back to duration-scaled bracket midpoint when FTP is not provided.
+
+    Returns dict with personalized_rate, total_carbs, gels, bracket, note.
+    """
+    if not weight_kg or weight_kg <= 0 or not hours or hours <= 0:
+        return None
+
+    # Duration bracket bounds (same brackets as compute_fueling_estimate)
+    if hours <= 4:
+        bracket_lo, bracket_hi = 80, 100
+        bracket = "High-intensity race pace"
+    elif hours <= 8:
+        bracket_lo, bracket_hi = 60, 80
+        bracket = "Endurance pace"
+    elif hours <= 12:
+        bracket_lo, bracket_hi = 50, 70
+        bracket = "Lower intensity — fat oxidation increasing"
+    elif hours <= 16:
+        bracket_lo, bracket_hi = 40, 60
+        bracket = "Ultra pace — fat is your primary fuel source"
+    else:
+        bracket_lo, bracket_hi = 30, 50
+        bracket = "Survival pace — palatability and GI tolerance are the limiters"
+
+    if ftp and ftp > 0:
+        # W/kg intensity factor: maps rider into bracket position
+        # Power curve (exponent > 1) compresses low-W/kg recommendations
+        # toward the bracket floor, matching CHO oxidation physiology.
+        wkg = ftp / weight_kg
+        linear = max(0.0, min(1.0,
+                              (wkg - WKG_FLOOR) / (WKG_CEIL - WKG_FLOOR)))
+        intensity_factor = linear ** WKG_EXPONENT
+        rate = round(bracket_lo + intensity_factor * (bracket_hi - bracket_lo))
+        note = "Personalized from your weight and FTP"
+    else:
+        # No FTP — use midpoint of bracket range
+        rate = round((bracket_lo + bracket_hi) / 2)
+        note = "Enter your FTP for a more precise estimate"
+
+    total_carbs = round(rate * hours)
+    gels = total_carbs // 25
+
+    return {
+        "personalized_rate": rate,
+        "total_carbs": total_carbs,
+        "gels": gels,
+        "bracket": bracket,
+        "bracket_lo": bracket_lo,
+        "bracket_hi": bracket_hi,
+        "note": note,
+    }
+
+
+# ── Hydration / Sodium / Hour-by-Hour Plan ───────────────────
+
+HEAT_MULTIPLIERS = {"cool": 0.7, "mild": 1.0, "warm": 1.3, "hot": 1.6, "extreme": 1.9}
+SWEAT_MULTIPLIERS = {"light": 0.7, "moderate": 1.0, "heavy": 1.3}
+FORMAT_SPLITS = {
+    "liquid": {"drink": 0.80, "gel": 0.15, "food": 0.05},
+    "gels":   {"drink": 0.20, "gel": 0.70, "food": 0.10},
+    "mixed":  {"drink": 0.30, "gel": 0.40, "food": 0.30},
+    "solid":  {"drink": 0.20, "gel": 0.20, "food": 0.60},
+}
+SODIUM_BASE_MG_PER_L = 1000
+SODIUM_HEAT_BOOST = {"hot": 200, "extreme": 300}
+SODIUM_CRAMP_BOOST = {"sometimes": 150, "frequent": 300}
+
+# Item carb constants for hourly plan
+GEL_CARBS = 25      # 1 gel = 25g carbs
+DRINK_CARBS_500ML = 40  # 500ml mix = 40g carbs
+BAR_CARBS = 35      # 1 bar/rice cake = 35g carbs
+
+
+def classify_climate_heat(climate: Optional[dict], climate_score: Optional[int]) -> str:
+    """Classify race climate into cool|mild|warm|hot|extreme at build time.
+
+    Uses keyword analysis of climate.primary + climate.description + climate.challenges,
+    with fondo_rating.climate score as tiebreaker.
+    """
+    if not climate or not isinstance(climate, dict):
+        # Fall back to score-only classification
+        if climate_score and climate_score >= 5:
+            return "hot"
+        if climate_score and climate_score >= 4:
+            return "warm"
+        return "mild"
+
+    primary = (climate.get("primary") or "").lower()
+    desc = (climate.get("description") or "").lower()
+    challenges = climate.get("challenges", [])
+    challenge_text = " ".join(c.lower() for c in challenges if isinstance(c, str))
+    combined = f"{primary} {desc} {challenge_text}"
+
+    score = climate_score or 0
+
+    # Extreme: score=5 AND desert/extreme-specific keywords
+    if score >= 5 and any(kw in combined for kw in ["desert", "extreme heat", "100+", "100°", "110°"]):
+        return "extreme"
+
+    # Hot: strong heat keywords AND score >= 4, OR very strong keywords alone
+    strong_heat_kw = ["heat", "hot", "humid", "85-95", "90°", "95°"]
+    if score >= 4 and any(kw in combined for kw in strong_heat_kw):
+        return "hot"
+    if any(kw in combined for kw in ["scorching", "brutal heat", "heat stroke"]):
+        return "hot"
+
+    # Cool: cold/freeze keywords
+    if any(kw in combined for kw in ["cold", "freez", "winter", "snow", "30°", "40°", "5-12"]):
+        return "cool"
+
+    # Warm: heat-adjacent keywords with moderate score, or explicit warmth
+    if any(kw in combined for kw in strong_heat_kw) and score >= 3:
+        return "warm"
+    if any(kw in combined for kw in ["warm", "summer", "sun", "75-85", "75°", "80°"]):
+        return "warm"
+    if score >= 4:
+        return "warm"
+    if score == 3:
+        return "warm"
+
+    return "mild"
+
+
+def compute_sweat_rate(weight_kg: float, climate_heat: str,
+                       sweat_tendency: str, hours: float) -> Optional[dict]:
+    """Estimate sweat rate and fluid targets.
+
+    Simplified model for lead-gen calculator (not a lab test).
+    Returns dict with sweat_rate_l_hr, fluid targets in ml and oz, and note.
+    """
+    if not weight_kg or weight_kg <= 0 or not hours or hours <= 0:
+        return None
+
+    base_sweat = weight_kg * 0.013  # ~1 L/hr for 75kg
+    heat_mult = HEAT_MULTIPLIERS.get(climate_heat, 1.0)
+    sweat_mult = SWEAT_MULTIPLIERS.get(sweat_tendency, 1.0)
+
+    # Intensity factor scales with duration
+    if hours <= 4:
+        intensity = 1.15
+    elif hours <= 8:
+        intensity = 1.0
+    elif hours <= 12:
+        intensity = 0.9
+    elif hours <= 16:
+        intensity = 0.8
+    else:
+        intensity = 0.7
+
+    sweat_rate = base_sweat * heat_mult * sweat_mult * intensity
+    # Fluid replacement target: 60-80% of sweat rate
+    fluid_lo = sweat_rate * 0.6 * 1000  # ml
+    fluid_hi = sweat_rate * 0.8 * 1000  # ml
+
+    note = ""
+    if climate_heat in ("hot", "extreme"):
+        note = "High heat — pre-hydrate with 500ml 2 hours before start."
+    elif climate_heat == "cool":
+        note = "Cool conditions — you still sweat. Don't skip hydration."
+
+    return {
+        "sweat_rate_l_hr": round(sweat_rate, 2),
+        "fluid_lo_ml_hr": round(fluid_lo),
+        "fluid_hi_ml_hr": round(fluid_hi),
+        "fluid_lo_oz_hr": round(fluid_lo / 29.5735),
+        "fluid_hi_oz_hr": round(fluid_hi / 29.5735),
+        "note": note,
+    }
+
+
+def compute_sodium(sweat_rate_l_hr: float, climate_heat: str,
+                   cramp_history: str) -> Optional[dict]:
+    """Compute sodium targets from sweat rate and conditions.
+
+    Returns dict with sodium_mg_hr, total context, salt cap count, and note.
+    """
+    if not sweat_rate_l_hr or sweat_rate_l_hr <= 0:
+        return None
+
+    concentration = SODIUM_BASE_MG_PER_L
+    concentration += SODIUM_HEAT_BOOST.get(climate_heat, 0)
+    concentration += SODIUM_CRAMP_BOOST.get(cramp_history, 0)
+
+    sodium_mg_hr = round(sweat_rate_l_hr * concentration)
+
+    note = ""
+    if cramp_history == "frequent":
+        note = "History of cramping — consider pre-loading sodium the night before."
+    elif climate_heat in ("hot", "extreme"):
+        note = "Hot conditions increase sodium losses significantly."
+
+    return {
+        "sodium_mg_hr": sodium_mg_hr,
+        "concentration_mg_l": concentration,
+        "note": note,
+    }
+
+
+def compute_aid_station_hours(aid_text: str, distance_mi: float,
+                              est_hours: float) -> list:
+    """Best-effort parser for aid station timing from free-text vitals.
+
+    Extracts mile markers or counts, converts to approximate hour marks.
+    Returns list of floats (hour marks) or empty list.
+    """
+    if not aid_text or not isinstance(aid_text, str):
+        return []
+
+    text = aid_text.lower()
+
+    # Self-supported or none
+    if any(kw in text for kw in ["self-supported", "self supported", "none", "unsupported"]):
+        return []
+    if text.strip() in ("--", "—", ""):
+        return []
+
+    if not distance_mi or distance_mi <= 0 or not est_hours or est_hours <= 0:
+        return []
+
+    pace = est_hours / distance_mi  # hours per mile
+
+    # Try mile markers: "mile ~30", "mile 50", etc.
+    mile_markers = re.findall(r'mile\s*~?(\d+)', text)
+    if mile_markers:
+        hours = [round(int(m) * pace, 1) for m in mile_markers]
+        return sorted(set(h for h in hours if 0 < h < est_hours))
+
+    # Count-based: "2 full checkpoints + 2 water oases" → count all numbers before aid/check/feed/water/oases
+    count_matches = re.findall(r'(\d+)\s*(?:full\s+)?(?:aid|checkpoint|feed|water|oases?|rest|refuel|zone)', text)
+    if count_matches:
+        total = sum(int(c) for c in count_matches)
+        if total > 0:
+            interval = est_hours / (total + 1)
+            return [round(interval * (i + 1), 1) for i in range(total)]
+
+    # Simple count: "9 fully-stocked feed zones"
+    simple = re.search(r'(\d+)\s+(?:fully[- ]stocked\s+)?(?:feed|aid|rest|refuel)', text)
+    if simple:
+        total = int(simple.group(1))
+        if total > 0:
+            interval = est_hours / (total + 1)
+            return [round(interval * (i + 1), 1) for i in range(total)]
+
+    return []
+
+
+def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
+                        sodium_mg_hr: int, fuel_format: str,
+                        aid_hours: list) -> list:
+    """Build hour-by-hour race plan.
+
+    Returns list of dicts, one per hour, with carbs, fluid, sodium, items, is_aid.
+    """
+    if not hours or hours <= 0 or not carb_rate or carb_rate <= 0:
+        return []
+
+    total_hours = math.ceil(hours)
+    splits = FORMAT_SPLITS.get(fuel_format, FORMAT_SPLITS["mixed"])
+    plan = []
+
+    # Round aid hours to nearest int for matching
+    aid_set = set(round(h) for h in (aid_hours or []))
+
+    for h in range(1, total_hours + 1):
+        # Hour 1 ramp-up: 80% rate. Last hour taper: 80% rate.
+        # Fractional last hour: proportional rate.
+        if h == 1:
+            rate_mult = 0.8
+        elif h == total_hours and hours % 1 > 0:
+            rate_mult = hours % 1  # Fractional hour
+        elif h == total_hours:
+            rate_mult = 0.8
+        else:
+            rate_mult = 1.0
+
+        hour_carbs = round(carb_rate * rate_mult)
+        hour_fluid = round(fluid_ml_hr * rate_mult)
+        hour_sodium = round(sodium_mg_hr * rate_mult)
+
+        # Split carbs across formats
+        drink_carbs = round(hour_carbs * splits["drink"])
+        gel_carbs = round(hour_carbs * splits["gel"])
+        food_carbs = hour_carbs - drink_carbs - gel_carbs  # remainder to food
+
+        items = []
+        if gel_carbs > 0:
+            gel_count = max(1, round(gel_carbs / GEL_CARBS))
+            items.append({"type": "gel", "label": f"{gel_count} gel{'s' if gel_count > 1 else ''} ({gel_count * GEL_CARBS}g)"})
+        if drink_carbs > 0:
+            drink_ml = round(drink_carbs / DRINK_CARBS_500ML * 500)
+            items.append({"type": "drink", "label": f"{drink_ml}ml mix ({drink_carbs}g)"})
+        if food_carbs > 0:
+            bar_count = max(1, round(food_carbs / BAR_CARBS))
+            items.append({"type": "food", "label": f"{bar_count} bar{'s' if bar_count > 1 else ''} ({bar_count * BAR_CARBS}g)"})
+
+        is_aid = h in aid_set
+
+        plan.append({
+            "hour": h,
+            "carbs_g": hour_carbs,
+            "fluid_ml": hour_fluid,
+            "sodium_mg": hour_sodium,
+            "items": items,
+            "is_aid": is_aid,
+        })
+
+    return plan
+
+
+# Worker URL for fueling lead intake
+FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
+
+
+def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
+    """Build the interactive fueling calculator form HTML for Section 6.
+
+    Generates email-gated form with hydration/sodium fields, hidden results
+    panel (3 panels: numbers, hourly plan, shopping list), and Substack iframe.
+    All computation is client-side JS — the form posts to a Cloudflare Worker
+    in the background for lead capture only.
+    """
+    slug = esc(rd["slug"])
+    name = esc(rd["name"])
+    raw = raw or {}
+
+    # Pre-fill estimated hours from distance
+    distance_mi = rd["vitals"].get("distance_mi", 0)
+    est = compute_fueling_estimate(distance_mi)
+    prefill_hours = est["hours"] if est else ""
+
+    # Pre-classify climate at build time
+    climate_data = raw.get("climate", {})
+    rating = rd.get("rating", {})
+    climate_score = rating.get("climate")
+    climate_heat = classify_climate_heat(climate_data, climate_score)
+
+    # Climate display text
+    if isinstance(climate_data, dict) and climate_data.get("primary"):
+        climate_display = climate_data["primary"]
+    elif climate_heat == "mild":
+        climate_display = "Mild (no climate data)"
+    else:
+        climate_display = climate_heat.capitalize()
+
+    # Pre-compute aid station hours
+    aid_text = rd["vitals"].get("aid_stations", "")
+    aid_hours = compute_aid_station_hours(aid_text, distance_mi, prefill_hours if prefill_hours else 0)
+    aid_json = esc(json.dumps(aid_hours))
+
+    return f'''<div class="rl-pk-calc-wrapper">
+    <h3 class="rl-pk-subsection-title">Personalized Fueling Calculator</h3>
+    <p class="rl-pk-calc-intro">Enter your details for a complete race fueling plan — carbs, hydration, sodium, and an hour-by-hour strategy.</p>
+    <form class="rl-pk-calc-form" id="rl-pk-calc-form" autocomplete="off">
+      <input type="hidden" name="race_slug" value="{slug}">
+      <input type="hidden" name="race_name" value="{name}">
+      <input type="hidden" name="est_hours" value="{prefill_hours}">
+      <input type="hidden" name="climate_heat" value="{esc(climate_heat)}">
+      <input type="hidden" name="aid_station_hours" value="{aid_json}">
+      <input type="hidden" name="website" value="">
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-email">Email <span class="rl-pk-calc-req">*</span></label>
+        <input type="email" id="rl-pk-email" name="email" required placeholder="you@example.com" class="rl-pk-calc-input">
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-weight">Weight (lbs) <span class="rl-pk-calc-req">*</span></label>
+        <input type="number" id="rl-pk-weight" name="weight_lbs" required min="80" max="400" placeholder="165" class="rl-pk-calc-input">
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-height-ft">Height</label>
+        <div class="rl-pk-calc-height-row">
+          <select id="rl-pk-height-ft" name="height_ft" class="rl-pk-calc-select">
+            <option value="">ft</option>
+            <option value="4">4&#x2032;</option>
+            <option value="5">5&#x2032;</option>
+            <option value="6">6&#x2032;</option>
+            <option value="7">7&#x2032;</option>
+          </select>
+          <select id="rl-pk-height-in" name="height_in" class="rl-pk-calc-select">
+            <option value="">in</option>
+            {"".join(f'<option value="{i}">{i}&#x2033;</option>' for i in range(12))}
+          </select>
+        </div>
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-age">Age</label>
+        <input type="number" id="rl-pk-age" name="age" min="13" max="99" placeholder="35" class="rl-pk-calc-input">
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-ftp">FTP (watts) <span class="rl-pk-calc-tooltip" title="Functional Threshold Power. Leave blank if unknown.">&#9432;</span></label>
+        <input type="number" id="rl-pk-ftp" name="ftp" min="50" max="500" placeholder="220" class="rl-pk-calc-input">
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-hours">Target finish time (hours)</label>
+        <input type="number" id="rl-pk-hours" name="target_hours" min="1" max="48" step="0.5" placeholder="{prefill_hours}" value="{prefill_hours}" class="rl-pk-calc-input">
+      </div>
+      <div class="rl-pk-calc-field rl-pk-calc-field--climate">
+        <label>Race Climate</label>
+        <div class="rl-pk-calc-climate-badge rl-pk-calc-climate--{esc(climate_heat)}">{esc(climate_display)}</div>
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-sweat">Sweat tendency <span class="rl-pk-calc-tooltip" title="How much do you sweat compared to other riders?">&#9432;</span></label>
+        <select id="rl-pk-sweat" name="sweat_tendency" class="rl-pk-calc-select">
+          <option value="moderate">Moderate (average)</option>
+          <option value="light">Light sweater</option>
+          <option value="heavy">Heavy sweater</option>
+        </select>
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-format">Fuel preference</label>
+        <select id="rl-pk-format" name="fuel_format" class="rl-pk-calc-select">
+          <option value="mixed">Mixed (gels + food + drink)</option>
+          <option value="liquid">Mostly liquid (drink mix)</option>
+          <option value="gels">Mostly gels</option>
+          <option value="solid">Mostly solid food</option>
+        </select>
+      </div>
+      <div class="rl-pk-calc-field">
+        <label for="rl-pk-cramp">Cramping history <span class="rl-pk-calc-tooltip" title="Do you experience muscle cramps during or after long rides?">&#9432;</span></label>
+        <select id="rl-pk-cramp" name="cramp_history" class="rl-pk-calc-select">
+          <option value="rarely">Rarely / never</option>
+          <option value="sometimes">Sometimes</option>
+          <option value="frequent">Frequently</option>
+        </select>
+      </div>
+      <button type="submit" class="rl-pk-calc-btn">GET MY FUELING PLAN</button>
+    </form>
+    <div class="rl-pk-calc-result" id="rl-pk-calc-result" style="display:none" aria-live="polite"></div>
+    <div class="rl-pk-calc-substack" id="rl-pk-calc-substack" style="display:none">
+      <p class="rl-pk-calc-substack-label">Get race-day tips in your inbox</p>
+      <iframe src="{esc(SUBSTACK_EMBED)}" title="Newsletter signup" width="100%" height="150" style="border:none;background:transparent" frameborder="0" scrolling="no" loading="lazy"></iframe>
+    </div>
+  </div>'''
+
+
+def build_weather_callout(raw: dict) -> str:
+    """Build weather callout with actual temperature/rain/wind data.
+
+    Uses data/weather/{slug}.json numbers when available, falls back to
+    climate description text.
+    """
+    weather = raw.get("weather", {})
+    climate = raw.get("climate", {})
+
+    if not weather and not climate:
+        return ""
+
+    parts = []
+
+    if weather:
+        high = weather.get("avg_high_f")
+        low = weather.get("avg_low_f")
+        precip = weather.get("precip_chance_pct")
+        wind = weather.get("max_wind_mph")
+
+        if high and low:
+            parts.append(f"<strong>Temperature:</strong> {low}\u00b0F \u2013 {high}\u00b0F")
+        if precip is not None:
+            parts.append(f"<strong>Rain Chance:</strong> {precip}%")
+        if wind:
+            parts.append(f"<strong>Max Wind:</strong> {wind} mph")
+
+    # Add climate narrative if available
+    if isinstance(climate, dict):
+        primary = climate.get("primary", "")
+        if primary:
+            parts.append(f"<strong>Climate:</strong> {esc(primary)}")
+        challenges = climate.get("challenges", [])
+        if challenges:
+            challenge_items = ", ".join(esc(c) for c in challenges[:3] if isinstance(c, str))
+            if challenge_items:
+                parts.append(f"<strong>Key Challenges:</strong> {challenge_items}")
+
+    if not parts:
+        return ""
+
+    items_html = "".join(f"<p style='margin:4px 0'>{p}</p>" for p in parts)
+    return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Expected Race-Day Conditions:</strong></p>
+        {items_html}
+      </div>'''
+
+
+def build_climate_gear_callout(climate_data: dict, weather: Optional[dict] = None) -> str:
+    """Build climate-adapted gear recommendations using actual weather data.
+
+    Uses real temperature/wind/rain numbers when available, falls back to
+    keyword matching on climate description text.
+    """
+    recs = []
+
+    # Data-driven recommendations from weather numbers
+    if weather and isinstance(weather, dict):
+        high = weather.get("avg_high_f", 0) or 0
+        low = weather.get("avg_low_f", 0) or 0
+        precip = weather.get("precip_chance_pct", 0) or 0
+        wind = weather.get("max_wind_mph", 0) or 0
+
+        if high >= 85:
+            recs.extend([
+                "Sun sleeves or arm coolers",
+                "Extra water bottles or hydration vest",
+                "Electrolyte supplements (extra sodium)",
+                "Light-colored kit",
+            ])
+        if low <= 50:
+            recs.extend([
+                "Knee warmers or leg warmers",
+                "Wind vest or thermal layer",
+                "Full-finger gloves",
+            ])
+        if low <= 40:
+            recs.append("Toe covers")
+        if precip >= 40:
+            recs.extend([
+                "Lightweight rain jacket (packable)",
+                "Mudguards or frame protection",
+                "Extra chain lube",
+                "Clear or yellow lens glasses",
+            ])
+        if wind >= 20:
+            recs.extend(["Wind vest", "Aero positioning practice"])
+
+    # Fall back to keyword matching if no weather data
+    if not recs and climate_data and isinstance(climate_data, dict):
+        desc = (climate_data.get("description", "") or "").lower()
+        challenges = climate_data.get("challenges", [])
+        challenge_text = " ".join(c.lower() for c in challenges if isinstance(c, str))
+        combined = desc + " " + challenge_text
+
+        if any(kw in combined for kw in ["heat", "hot", "90", "95", "100", "sun"]):
+            recs.extend([
+                "Sun sleeves or arm coolers",
+                "Extra water bottles or hydration vest",
+                "Electrolyte supplements (extra sodium)",
+                "Light-colored kit",
+            ])
+        if any(kw in combined for kw in ["cold", "freez", "40°", "30°", "snow", "ice"]):
+            recs.extend([
+                "Knee warmers or leg warmers",
+                "Wind vest or thermal layer",
+                "Full-finger gloves",
+                "Toe covers",
+            ])
+        if any(kw in combined for kw in ["rain", "wet", "mud"]):
+            recs.extend([
+                "Lightweight rain jacket (packable)",
+                "Mudguards or frame protection",
+                "Extra chain lube",
+                "Clear or yellow lens glasses",
+            ])
+        if any(kw in combined for kw in ["wind", "exposed"]):
+            recs.extend(["Wind vest", "Aero positioning practice"])
+
+    if not recs:
+        return ""
+
+    # Deduplicate — also skip if a more detailed version already exists
+    seen = []
+    unique_recs = []
+    for r in recs:
+        if r not in seen and not any(r in existing for existing in seen):
+            seen.append(r)
+            unique_recs.append(r)
+
+    items = "".join(f"<li>{esc(r)}</li>" for r in unique_recs)
+    primary = ""
+    if climate_data and isinstance(climate_data, dict):
+        primary = climate_data.get("primary", "")
+    label = f"Climate Gear ({esc(primary)})" if primary else "Climate Gear"
+    return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>{label}:</strong></p>
+        <ul>{items}</ul>
+      </div>'''
+
+
+def build_terrain_emphasis_callout(rd: dict, raw: Optional[dict] = None) -> str:
+    """Build community-sourced training emphasis callout.
+
+    Combines dimension scores with narrative from biased_opinion_ratings
+    to explain *why* each focus matters, using real rider experiences.
+    """
+    rating = rd.get("rating", {})
+    raw = raw or {}
+    gg_rating = raw.get("fondo_rating", {})
+    bor = raw.get("biased_opinion_ratings", {})
+    if isinstance(gg_rating, dict) and not rating:
+        rating = gg_rating
+    if not isinstance(bor, dict):
+        bor = {}
+
+    tech = rating.get("technicality", 0) or 0
+    terrain_types = rd["vitals"].get("terrain_types", [])
+    elevation = rd["vitals"].get("elevation", "")
+    distance_mi = rd["vitals"].get("distance_mi", 0) or 0
+    climate_score = rating.get("climate", 0) or 0
+    altitude_score = rating.get("altitude", 0) or 0
+
+    tips = []
+
+    # Technicality — use community insight if available
+    if tech >= 3:
+        tech_insight = _extract_dimension_insight(bor, "technicality", 200)
+        if tech_insight and tech >= 4:
+            tips.append(
+                f"<strong>Technical skills are critical.</strong> {esc(tech_insight)}"
+                f" Add 1 MTB skills session per week during Build phase."
+            )
+        elif tech_insight:
+            tips.append(
+                f"<strong>Off-road handling matters.</strong> {esc(tech_insight)}"
+                f" Include skills work every 2 weeks."
+            )
+        elif tech >= 4:
+            tips.append(
+                "Add 1 MTB skills session per week during Build phase (weeks 5-10)"
+                " \u2014 focus on line choice, loose surface cornering, and"
+                " dismount/remount"
+            )
+        else:
+            tips.append(
+                "Include off-road skills work every 2 weeks \u2014 practice loose"
+                " gravel descending and rough surface handling"
+            )
+
+    # Elevation — use community insight
+    elev_ft = 0
+    if elevation:
+        m = re.search(r'([\d,]+)\s*ft', elevation)
+        if m:
+            elev_ft = int(m.group(1).replace(',', ''))
+    if distance_mi > 0 and elev_ft > 0:
+        ft_per_mile = elev_ft / distance_mi
+        if ft_per_mile > 80:
+            elev_insight = _extract_dimension_insight(bor, "elevation", 200)
+            if elev_insight:
+                tips.append(
+                    f"<strong>Climbing is a factor ({ft_per_mile:.0f} ft/mile).</strong>"
+                    f" {esc(elev_insight)} Include 2 climbing intervals per week."
+                )
+            else:
+                tips.append(
+                    f"Include 2 extended climbing intervals per week (20-30 min at"
+                    f" threshold) \u2014 this course averages {ft_per_mile:.0f}"
+                    f" ft/mile of climbing"
+                )
+
+    # Climate — use community insight + real weather data
+    if climate_score >= 3:
+        climate_insight = _extract_dimension_insight(bor, "climate", 200)
+        weather = raw.get("weather", {})
+        high = weather.get("avg_high_f", 0) if isinstance(weather, dict) else 0
+
+        if climate_insight:
+            heat_note = f" Expected highs of {high}\u00b0F." if high and high >= 80 else ""
+            tips.append(
+                f"<strong>Climate prep is essential.</strong> {esc(climate_insight)}"
+                f"{heat_note} Start heat adaptation 2 weeks before race."
+            )
+        elif climate_score >= 4 and high and high >= 85:
+            tips.append(
+                f"Start heat adaptation 2 weeks before race \u2014 expected highs"
+                f" of {high}\u00b0F. Train in warmest part of day."
+            )
+        else:
+            tips.append(
+                "Include 1 hot-weather ride per week in Build phase to build"
+                " heat tolerance and dial in hydration"
+            )
+
+    # Altitude
+    if altitude_score >= 3:
+        alt_insight = _extract_dimension_insight(bor, "altitude", 150)
+        if altitude_score >= 4:
+            base = "Arrive 48-72 hours early for altitude acclimatization."
+        else:
+            base = "Arrive at least 24 hours early \u2014 moderate altitude affects power output."
+        if alt_insight:
+            tips.append(f"<strong>Altitude matters.</strong> {esc(alt_insight)} {base}")
+        else:
+            tips.append(base)
+
+    # Surface-specific
+    terrain_str = ", ".join(terrain_types[:3]) if terrain_types else ""
+    if terrain_str and any(
+        kw in terrain_str.lower() for kw in ["sand", "mud", "clay"]
+    ):
+        tips.append(
+            f"Train on similar surfaces ({terrain_str}) at least once per week"
+            f" to build specific handling confidence"
+        )
+
+    if not tips:
+        return ""
+
+    items = "".join(f"<li>{t}</li>" for t in tips)  # Already escaped inline
+    return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Race-Specific Training Focus:</strong></p>
+        <ul>{items}</ul>
+      </div>'''
+
+
+# ── Task 2: Rider Quotes ──────────────────────────────────────
+
+
+def build_rider_quotes_callout(quotes: list, criteria_filter: Optional[list] = None,
+                                max_quotes: int = 2) -> str:
+    """Build a callout block with curated rider quotes.
+
+    Prioritizes quotes matching criteria_filter (e.g., ["climate", "elevation"]),
+    then falls back to quotes from ELITE/COMPETITIVE riders.
+    """
+    if not quotes or not isinstance(quotes, list):
+        return ""
+
+    # Score and sort quotes
+    scored = []
+    for q in quotes:
+        if not isinstance(q, dict) or not q.get("quote"):
+            continue
+        text = q["quote"].strip()
+        if len(text) < 30 or len(text) > 400:
+            continue  # Skip too-short or too-long quotes
+        score = 0
+        q_criteria = q.get("criteria", [])
+        if criteria_filter and q_criteria:
+            overlap = len(set(q_criteria) & set(criteria_filter))
+            score += overlap * 10
+        level = q.get("level", "").upper()
+        if level == "ELITE":
+            score += 5
+        elif level == "COMPETITIVE":
+            score += 3
+        elif level == "RECREATIONAL":
+            score += 1
+        scored.append((score, q))
+
+    scored.sort(key=lambda x: -x[0])
+    selected = [q for _, q in scored[:max_quotes]]
+
+    if not selected:
+        return ""
+
+    quotes_html = []
+    for q in selected:
+        text = esc(q["quote"].strip())
+        rider = esc(q.get("rider", "Anonymous"))
+        level = q.get("level", "")
+        level_tag = f' <span style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-teal)">{esc(level)}</span>' if level else ""
+        quotes_html.append(
+            f'<div class="rl-guide-callout rl-guide-callout--quote">'
+            f'<p>\u201c{text}\u201d</p>'
+            f'<p style="text-align:right;font-style:normal;font-size:12px;color:var(--rl-color-secondary-brown)">'
+            f'\u2014 {rider}{level_tag}</p></div>'
+        )
+
+    return "\n".join(quotes_html)
+
+
+# ── Task 3 (rewritten): Race Intelligence Briefing ───────────
+
+
+def _extract_dimension_insight(bor: dict, dimension: str, max_len: int = 300) -> str:
+    """Extract a narrative insight from biased_opinion_ratings for a dimension."""
+    item = bor.get(dimension, {})
+    if not isinstance(item, dict):
+        return ""
+    explanation = item.get("explanation", "")
+    if not explanation:
+        return ""
+    # Trim to max_len at sentence boundary
+    if len(explanation) <= max_len:
+        return explanation
+    truncated = explanation[:max_len]
+    last_period = truncated.rfind(".")
+    if last_period > 100:
+        return truncated[:last_period + 1]
+    return truncated + "\u2026"
+
+
+def build_race_intelligence(rd: dict, raw: dict) -> str:
+    """Build a Race Intelligence Briefing from community data.
+
+    Weaves biased_opinion summary, dimension-specific insights from
+    biased_opinion_ratings (with rider quotes), and race history into
+    a section that reads like insider knowledge rather than a template.
+    """
+    bo = raw.get("biased_opinion", {})
+    bor = raw.get("biased_opinion_ratings", {})
+    fv = raw.get("final_verdict", {})
+    history = raw.get("history", {})
+
+    if not isinstance(bo, dict):
+        bo = {}
+    if not isinstance(bor, dict):
+        bor = {}
+
+    parts = []
+
+    # Lead with the verdict + one-liner
+    verdict = bo.get("verdict", "")
+    summary = bo.get("summary", "")
+    one_liner = fv.get("one_liner", "") if isinstance(fv, dict) else ""
+
+    if verdict or one_liner:
+        verdict_html = f'<span class="rl-pk-intel-verdict">{esc(verdict)}</span>' if verdict else ""
+        liner = one_liner or ""
+        parts.append(f'''<div class="rl-pk-intel-lead">
+          {verdict_html}
+          <p class="rl-pk-intel-oneliner">{esc(liner)}</p>
+        </div>''')
+
+    # Summary paragraph
+    if summary:
+        parts.append(f'<p class="rl-pk-intel-summary">{esc(summary)}</p>')
+
+    # Pick the 3 most relevant dimensions for race prep
+    # Prioritize: climate, elevation, technicality, then community/experience
+    prep_dims = []
+    for dim in ["climate", "elevation", "technicality", "adventure", "community", "experience"]:
+        insight = _extract_dimension_insight(bor, dim)
+        if insight:
+            score = bor.get(dim, {}).get("score", 0) if isinstance(bor.get(dim), dict) else 0
+            prep_dims.append((dim, insight, score))
+    # Sort by score (highest = most challenging/noteworthy), take top 3
+    prep_dims.sort(key=lambda x: -x[2])
+    prep_dims = prep_dims[:3]
+
+    if prep_dims:
+        dim_labels = {
+            "climate": "Weather & Climate",
+            "elevation": "Elevation & Climbing",
+            "technicality": "Technical Demands",
+            "adventure": "Course Character",
+            "community": "The Community",
+            "experience": "The Experience",
+        }
+        for dim, insight, score in prep_dims:
+            label = dim_labels.get(dim, dim.title())
+            parts.append(f'''<div class="rl-pk-intel-dim">
+          <div class="rl-pk-intel-dim-label">{esc(label)}</div>
+          <p class="rl-pk-intel-dim-text">{esc(insight)}</p>
+        </div>''')
+
+    # Strengths + weaknesses as quick-scan lists
+    strengths = bo.get("strengths", [])
+    weaknesses = bo.get("weaknesses", [])
+    if strengths or weaknesses:
+        sw_parts = []
+        if strengths:
+            items = "".join(f"<li>{esc(s)}</li>" for s in strengths[:3] if isinstance(s, str))
+            sw_parts.append(f'<div class="rl-pk-intel-col"><div class="rl-pk-intel-col-label">WHY RIDERS LOVE IT</div><ul>{items}</ul></div>')
+        if weaknesses:
+            items = "".join(f"<li>{esc(w)}</li>" for w in weaknesses[:3] if isinstance(w, str))
+            sw_parts.append(f'<div class="rl-pk-intel-col"><div class="rl-pk-intel-col-label">WHAT TO WATCH FOR</div><ul>{items}</ul></div>')
+        parts.append(f'<div class="rl-pk-intel-cols">{"".join(sw_parts)}</div>')
+
+    # History/reputation one-liner
+    if isinstance(history, dict):
+        rep = history.get("reputation", "")
+        founded = history.get("founded", "")
+        if rep:
+            founded_tag = f" (est. {esc(str(founded))})" if founded else ""
+            parts.append(f'<p class="rl-pk-intel-rep">{esc(rep)}{founded_tag}</p>')
+
+    # Bottom line
+    bottom_line = bo.get("bottom_line", "")
+    if bottom_line:
+        parts.append(f'''<div class="rl-guide-callout rl-guide-callout--quote">
+        <p>{esc(bottom_line)}</p>
+      </div>''')
+
+    if not parts:
+        return ""
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">00</span>
+      <h2>Race Briefing</h2>
+    </div>
+    {"".join(parts)}
+  </section>'''
+
+
+# ── Task 4: Travel & Logistics ───────────────────────────────
+
+
+def build_pk_logistics(raw: dict, rd: dict) -> str:
+    """Build Travel & Logistics section from race logistics data."""
+    logistics = raw.get("logistics", {})
+    if not isinstance(logistics, dict):
+        return ""
+
+    items = []
+    field_map = [
+        ("airport", "Nearest Airport", "\u2708"),
+        ("lodging_strategy", "Lodging", "\U0001f3e8"),
+        ("packet_pickup", "Packet Pickup", "\U0001f4e6"),
+        ("parking", "Parking", "\U0001f697"),
+        ("food", "Food & Dining", "\U0001f37d"),
+    ]
+
+    for key, label, _icon in field_map:
+        val = logistics.get(key, "")
+        if val and val != "--":
+            items.append(f'''<div class="rl-pk-logistics-item">
+          <div class="rl-pk-logistics-label">{esc(label)}</div>
+          <p class="rl-pk-logistics-text">{esc(val)}</p>
+        </div>''')
+
+    official = logistics.get("official_site", "")
+    if official:
+        items.append(f'''<div class="rl-pk-logistics-item">
+          <div class="rl-pk-logistics-label">Official Site</div>
+          <p class="rl-pk-logistics-text"><a href="{esc(official)}" target="_blank" rel="noopener">{esc(official)}</a></p>
+        </div>''')
+
+    if not items:
+        return ""
+
+    # Budget planning callout (Task 8)
+    budget_html = build_budget_callout(raw, rd)
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">00</span>
+      <h2>Travel &amp; Logistics</h2>
+    </div>
+    {budget_html}
+    <div class="rl-pk-logistics-grid">
+      {"".join(items)}
+    </div>
+  </section>'''
+
+
+# ── Task 5: Terrain-Specific Tire Recommendations ────────────
+
+# Tire recommendations by terrain category with links to reviews
+# Source: bicyclerollingresistance.com
+BRR_BASE = "https://www.bicyclerollingresistance.com/cx-gravel-reviews"
+TIRE_RECS_BY_TERRAIN = {
+    "fast": {
+        "label": "Fast Gravel (smooth roads, low technicality)",
+        "tires": [
+            ("Continental Terra Speed 40", f"{BRR_BASE}/continental-terra-speed-40"),
+            ("Schwalbe G-One RS 40", f"{BRR_BASE}/schwalbe-g-one-rs"),
+            ("Panaracer GravelKing TLC 40", f"{BRR_BASE}/panaracer-gravel-king"),
+            ("Challenge Getaway Pro 40", f"{BRR_BASE}/challenge-getaway-pro-htlr"),
+        ],
+    },
+    "mixed": {
+        "label": "Mixed Terrain (variable surfaces, moderate technicality)",
+        "tires": [
+            ("Continental Terra Trail 40", f"{BRR_BASE}/continental-terra-trail"),
+            ("Pirelli Cinturato Gravel M 45", f"{BRR_BASE}/pirelli-gravel-m-45"),
+            ("Specialized Pathfinder Pro 42", f"{BRR_BASE}/specialized-pathfinder-pro"),
+            ("Panaracer GravelKing SK 40", f"{BRR_BASE}/panaracer-gravel-king-sk"),
+        ],
+    },
+    "technical": {
+        "label": "Technical Terrain (rocky, loose, singletrack)",
+        "tires": [
+            ("Schwalbe G-One Bite 40", f"{BRR_BASE}/schwalbe-g-one-bite"),
+            ("Maxxis Reaver 45", f"{BRR_BASE}/maxxis-reaver-hypr-x"),
+            ("Pirelli Cinturato Gravel S 40", f"{BRR_BASE}/pirelli-gravel-s"),
+            ("WTB Resolute 42", f"{BRR_BASE}/wtb-resolute"),
+        ],
+    },
+    "chunky": {
+        "label": "Chunky/Sharp Rock (flat protection critical)",
+        "tires": [
+            ("Continental Terra Speed 45", f"{BRR_BASE}/continental-terra-speed-45"),
+            ("Specialized Pathfinder Pro 47", f"{BRR_BASE}/specialized-pathfinder-pro-47"),
+            ("Schwalbe G-One RS 45", f"{BRR_BASE}/schwalbe-g-one-rs-45"),
+            ("Challenge Getaway Pro 45", f"{BRR_BASE}/challenge-getaway-pro-htlr-45"),
+        ],
+    },
+    "mud": {
+        "label": "Mud / Wet Conditions",
+        "tires": [
+            ("Schwalbe G-One Ultrabite 40", f"{BRR_BASE}/schwalbe-g-one-ultrabite"),
+            ("Tufo Gravel Swampero 44", f"{BRR_BASE}/tufo-gravel-swampero-44"),
+            ("Schwalbe G-One Overland 50", f"{BRR_BASE}/schwalbe-g-one-overland"),
+            ("Pirelli Cinturato Gravel M 45", f"{BRR_BASE}/pirelli-gravel-m-45"),
+        ],
+    },
+}
+
+
+def build_tire_recommendation(raw: dict, rd: dict) -> str:
+    """Build tire/setup recommendation based on terrain data.
+
+    Uses race_specific.mechanicals when available, otherwise generates
+    recommendations from terrain.surface, technical_rating, and features.
+    """
+    # Check for race-specific tire data first
+    rs = raw.get("race_specific")
+    if isinstance(rs, dict):
+        mechs = rs.get("mechanicals", {})
+        if isinstance(mechs, dict):
+            tires = mechs.get("recommended_tires", [])
+            pressure = mechs.get("pressure_by_weight", {})
+            if tires:
+                tire_items = "".join(f"<li>{esc(t)}</li>" for t in tires)
+                pressure_html = ""
+                if pressure and isinstance(pressure, dict):
+                    rows = []
+                    for weight_range, conditions in sorted(pressure.items()):
+                        if isinstance(conditions, dict):
+                            dry = conditions.get("dry", "--")
+                            mixed = conditions.get("mixed", "--")
+                            mud = conditions.get("mud", "--")
+                            rows.append(
+                                f"<tr><td>{esc(weight_range)}</td>"
+                                f"<td>{esc(str(dry))}</td>"
+                                f"<td>{esc(str(mixed))}</td>"
+                                f"<td>{esc(str(mud))}</td></tr>"
+                            )
+                    if rows:
+                        pressure_html = f'''<div class="rl-pk-pressure-table-wrap">
+                        <table class="rl-pk-pressure-table">
+                          <thead><tr><th>Rider Weight</th><th>Dry</th><th>Mixed</th><th>Mud</th></tr></thead>
+                          <tbody>{"".join(rows)}</tbody>
+                        </table>
+                      </div>'''
+                return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Recommended Tires:</strong></p>
+        <ul>{tire_items}</ul>
+        {pressure_html}
+      </div>'''
+
+    # Generic tire recommendations from terrain data
+    terrain = raw.get("terrain", {})
+    if not isinstance(terrain, dict):
+        return ""
+
+    surface_raw = terrain.get("surface", "")
+    if isinstance(surface_raw, dict):
+        surface = " ".join(str(k).lower() for k in surface_raw.keys())
+    else:
+        surface = (str(surface_raw) if surface_raw else "").lower()
+    tech_rating = terrain.get("technical_rating", 0) or 0
+    features = terrain.get("features", terrain.get("notable_features", []))
+    if not isinstance(features, list):
+        features = []
+    feature_text = " ".join(f.lower() for f in features if isinstance(f, str))
+    combined = surface + " " + feature_text
+
+    tips = []
+
+    # Width recommendations based on technicality
+    if tech_rating >= 4:
+        tips.append("Run 45mm+ tires for technical terrain confidence and flat protection")
+    elif tech_rating >= 3:
+        tips.append("Run 40-45mm tires to balance speed with off-road capability")
+    elif tech_rating >= 2:
+        tips.append("Run 38-42mm tires \u2014 the course is mostly fast with some rough sections")
+    else:
+        tips.append("Run 35-40mm tires \u2014 smooth gravel roads favor speed")
+
+    # Surface-specific advice
+    if any(kw in combined for kw in ["limestone", "flint", "sharp", "rocky"]):
+        tips.append("Tubeless setup strongly recommended \u2014 sharp rock puncture risk is high")
+    if any(kw in combined for kw in ["mud", "clay", "wet"]):
+        tips.append("Run aggressive tread pattern with mud-clearing capability")
+    if any(kw in combined for kw in ["sand", "loose"]):
+        tips.append("Lower pressure 2-3 psi for traction on loose surfaces")
+    if any(kw in combined for kw in ["singletrack", "technical"]):
+        tips.append("Consider MTB-style tread for singletrack sections")
+
+    # Classify terrain category for BRR tire picks
+    if any(kw in combined for kw in ["mud", "clay", "wet"]):
+        tire_cat = "mud"
+    elif any(kw in combined for kw in ["limestone", "flint", "sharp", "chunk"]):
+        tire_cat = "chunky"
+    elif tech_rating >= 4 or any(kw in combined for kw in ["singletrack", "technical", "rocky"]):
+        tire_cat = "technical"
+    elif tech_rating >= 2:
+        tire_cat = "mixed"
+    else:
+        tire_cat = "fast"
+
+    # Build tire recommendation links from BRR database
+    brr_recs = TIRE_RECS_BY_TERRAIN.get(tire_cat, {})
+    brr_tires = brr_recs.get("tires", [])
+    if brr_tires:
+        tire_links = "".join(
+            f'<li><a href="{esc(url)}" target="_blank" rel="noopener">{esc(name)}</a></li>'
+            for name, url in brr_tires[:4]
+        )
+        tips_html = "".join(f"<li>{esc(t)}</li>" for t in tips)
+        terrain_primary = esc(terrain.get("primary", ""))
+        label = f"Tire Setup ({terrain_primary})" if terrain_primary else "Tire Setup"
+        return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>{label}:</strong></p>
+        <ul>{tips_html}</ul>
+        <p style="margin:12px 0 4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-teal)">Top Picks for This Course:</p>
+        <ul>{tire_links}</ul>
+        <p style="font-size:11px;color:var(--rl-color-secondary-brown);margin:8px 0 0">Rolling resistance data via <a href="https://www.bicyclerollingresistance.com/cx-gravel-reviews" target="_blank" rel="noopener" style="color:var(--rl-color-teal)">bicyclerollingresistance.com</a></p>
+      </div>'''
+
+    if not tips:
+        return ""
+
+    items = "".join(f"<li>{esc(t)}</li>" for t in tips)
+    terrain_primary = esc(terrain.get("primary", ""))
+    label = f"Tire Setup ({terrain_primary})" if terrain_primary else "Tire Setup"
+    return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>{label}:</strong></p>
+        <ul>{items}</ul>
+      </div>'''
+
+
+# ── Task 7: Aid Station Strategy ─────────────────────────────
+
+
+def build_aid_station_strategy(rd: dict, raw: dict) -> str:
+    """Build a visual aid station strategy for the fueling section.
+
+    Parses aid station info and shows approximate timing with recommendations
+    for what to do at each stop.
+    """
+    aid_text = rd["vitals"].get("aid_stations", "")
+    if not aid_text or aid_text == "--":
+        return ""
+
+    distance_mi = rd["vitals"].get("distance_mi", 0)
+    est = compute_fueling_estimate(distance_mi)
+    if not est:
+        return ""
+
+    aid_hours = compute_aid_station_hours(aid_text, distance_mi, est["hours"])
+
+    # Check for self-supported
+    if not aid_hours and any(kw in aid_text.lower() for kw in ["self-supported", "self supported", "unsupported"]):
+        return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Self-Supported Race:</strong> {esc(aid_text)}</p>
+        <p style="font-size:12px;color:var(--rl-color-secondary-brown)">You must carry all nutrition and hydration. Plan bottle capacity for the full distance.</p>
+      </div>'''
+
+    if not aid_hours:
+        return ""
+
+    pace = est["hours"] / distance_mi if distance_mi > 0 else 0
+
+    station_parts = []
+    for i, hour in enumerate(aid_hours, 1):
+        approx_mile = round(hour / pace) if pace > 0 else "?"
+        # Recommend actions based on position in race
+        pct_through = hour / est["hours"]
+        if pct_through < 0.4:
+            action = "Quick stop: refill bottles, grab gels. Don\u2019t linger."
+        elif pct_through < 0.7:
+            action = "Full resupply: bottles, food, sunscreen. Assess how you feel."
+        else:
+            action = "Final push: top off bottles, eat something easy. You\u2019re almost there."
+
+        station_parts.append(f'''<div class="rl-pk-aid-card">
+          <div class="rl-pk-aid-num">STOP {i}</div>
+          <div class="rl-pk-aid-detail">
+            <strong>~Mile {approx_mile} / Hour {hour}</strong>
+            <p>{action}</p>
+          </div>
+        </div>''')
+
+    return f'''<div class="rl-pk-aid-strategy">
+      <h4 class="rl-pk-subsection-title">Aid Station Strategy</h4>
+      <p style="font-size:12px;color:var(--rl-color-secondary-brown);margin:0 0 12px">{esc(aid_text)}</p>
+      {"".join(station_parts)}
+    </div>'''
+
+
+# ── Task 8: Budget & Expense Estimates ───────────────────────
+
+
+def build_budget_callout(raw: dict, rd: dict) -> str:
+    """Build budget/expense planning callout.
+
+    Uses registration cost, expense rating, and logistics info.
+    """
+    vitals = raw.get("vitals", {})
+    rating = raw.get("fondo_rating", {})
+    logistics = raw.get("logistics", {})
+
+    parts = []
+
+    # Registration cost from vitals
+    registration = vitals.get("registration", "")
+    if registration:
+        cost_match = re.search(r'\$(\d[\d,]*(?:\.\d{2})?)', registration)
+        if cost_match:
+            parts.append(f"<strong>Entry Fee:</strong> ~${cost_match.group(1)}")
+
+    # Expense rating
+    expenses_score = rating.get("expenses") if isinstance(rating, dict) else None
+    if expenses_score:
+        labels = {1: "Very affordable", 2: "Budget-friendly", 3: "Moderate",
+                  4: "Above average", 5: "Premium destination"}
+        label = labels.get(expenses_score, "")
+        if label:
+            parts.append(f"<strong>Cost of Trip:</strong> {esc(label)} ({expenses_score}/5)")
+
+    # Airport info for travel cost context
+    if isinstance(logistics, dict):
+        airport = logistics.get("airport", "")
+        if airport and airport != "--":
+            parts.append(f"<strong>Nearest Airport:</strong> {esc(airport)}")
+
+    if not parts:
+        return ""
+
+    items_html = "".join(f"<p style='margin:4px 0;font-size:13px'>{p}</p>" for p in parts)
+    return f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Budget Planning:</strong></p>
+        {items_html}
+      </div>'''
+
+
+# ── Section Builders ──────────────────────────────────────────
+
+
+def build_pk_header(rd: dict, raw: dict) -> str:
+    """Build header with race name and vitals ribbon."""
+    name = esc(rd["name"])
+    vitals = rd["vitals"]
+
+    stats = []
+    if vitals.get("distance") and vitals["distance"] != "--":
+        stats.append(f'<span class="rl-pk-stat"><strong>{esc(vitals["distance"])}</strong></span>')
+    if vitals.get("elevation") and vitals["elevation"] != "--":
+        stats.append(f'<span class="rl-pk-stat"><strong>{esc(vitals["elevation"])}</strong></span>')
+    if vitals.get("date") and vitals["date"] != "--":
+        stats.append(f'<span class="rl-pk-stat">{esc(vitals["date"])}</span>')
+    if vitals.get("location") and vitals["location"] != "--":
+        stats.append(f'<span class="rl-pk-stat">{esc(vitals["location"])}</span>')
+
+    ribbon = f'<div class="rl-pk-vitals-ribbon">{" ".join(stats)}</div>' if stats else ""
+
+    is_full = has_full_training_data(raw)
+    tier_label = "PERSONALIZED" if is_full else "GUIDE"
+
+    return f'''<header class="rl-pk-header">
+    <div class="rl-pk-header-badge">{tier_label} PREP KIT</div>
+    <h1 class="rl-pk-header-title">{name}</h1>
+    <p class="rl-pk-header-subtitle">12-Week Training Timeline &bull; Race-Day Checklists &bull; Packing List</p>
+    {ribbon}
+  </header>'''
+
+
+def build_pk_training_timeline(guide_sections: dict, raw: dict, rd: dict) -> str:
+    """Build Section 1: 12-Week Training Timeline."""
+    section = guide_sections.get("ch3-phases")
+    if not section:
+        return ""
+
+    # Find the timeline block
+    timeline_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "timeline":
+            timeline_block = block
+            break
+
+    if not timeline_block:
+        return ""
+
+    if has_full_training_data(raw):
+        # Full personalization: inject workout mod chips after each phase
+        # (milestones are shown in the dedicated Non-Negotiables section)
+        mods = (raw.get("training_config") or {}).get("workout_modifications", {})
+        extras = build_phase_extras(mods)
+        timeline_html = render_personalized_timeline(timeline_block, extras)
+    else:
+        # Generic: render standard timeline + race context callout
+        timeline_html = render_timeline(timeline_block)
+        context = build_race_context_callout(raw, rd)
+        if context:
+            timeline_html = context + timeline_html
+
+    # Terrain-adapted training emphasis (both tiers) — Task 6: enhanced with dimension scores
+    terrain_callout = build_terrain_emphasis_callout(rd, raw)
+
+    # Rider quotes relevant to training/preparation (Task 2)
+    quotes = raw.get("quotes", [])
+    quotes_html = build_rider_quotes_callout(
+        quotes, criteria_filter=["elevation", "technicality", "climate"], max_quotes=2
+    )
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">01</span>
+      <h2>12-Week Training Timeline</h2>
+    </div>
+    {quotes_html}
+    {terrain_callout}
+    {timeline_html}
+  </section>'''
+
+
+def build_pk_non_negotiables(raw: dict) -> str:
+    """Build Section 2: Race-Specific Non-Negotiables. Empty for generic races."""
+    if not has_full_training_data(raw):
+        return ""
+
+    nn_list = raw.get("non_negotiables", [])
+    if not nn_list:
+        return ""
+
+    cards = []
+    for nn in nn_list:
+        req = esc(nn.get("requirement", ""))
+        by_when = esc(nn.get("by_when", ""))
+        why = esc(nn.get("why", ""))
+        cards.append(f'''<div class="rl-pk-nn-card">
+        <div class="rl-pk-nn-req">{req}</div>
+        <span class="rl-pk-nn-badge">{by_when}</span>
+        <p class="rl-pk-nn-why">{why}</p>
+      </div>''')
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">02</span>
+      <h2>Race-Specific Non-Negotiables</h2>
+    </div>
+    <div class="rl-pk-nn-grid">
+      {"".join(cards)}
+    </div>
+  </section>'''
+
+
+def build_pk_race_week(guide_sections: dict, raw: dict) -> str:
+    """Build Section 3: Race Week Countdown (7-day taper)."""
+    section = guide_sections.get("ch7-taper")
+    if not section:
+        return ""
+
+    timeline_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "timeline":
+            timeline_block = block
+            break
+
+    if not timeline_block:
+        return ""
+
+    # Weather callout — prefer real data from weather JSON, fall back to guide text
+    weather_html = build_weather_callout(raw)
+    if not weather_html:
+        gv = raw.get("guide_variables", {})
+        if isinstance(gv, dict):
+            weather = gv.get("race_weather", "")
+            if weather:
+                weather_html = f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Expected Conditions:</strong> {esc(weather)}</p>
+      </div>'''
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">03</span>
+      <h2>Race Week Countdown</h2>
+    </div>
+    {weather_html}
+    {render_timeline(timeline_block)}
+  </section>'''
+
+
+def _tire_crosslink_text(rd: dict) -> str:
+    """Build tire cross-link text using enriched data if available."""
+    tr = rd.get("tire_recommendations", {})
+    primary = tr.get("primary", [])
+    if primary:
+        top = primary[0]
+        name = top.get("name", "")
+        width = top.get("recommended_width_mm", "")
+        msrp = top.get("msrp_usd")
+        price_str = f" (${msrp:.2f})" if msrp else ""
+        width_str = f" {width}mm" if width else ""
+        return f"Top tire pick: {name}{width_str}{price_str} —"
+    return "Full tire analysis:"
+
+
+def build_pk_equipment(guide_sections: dict, raw: dict, rd: dict) -> str:
+    """Build Section 4: Equipment & Packing Checklist."""
+    section = guide_sections.get("ch7-equipment")
+    if not section:
+        return ""
+
+    accordion_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "accordion":
+            accordion_block = block
+            break
+
+    if not accordion_block:
+        return ""
+
+    # Terrain-specific tire + setup recommendations (Task 5)
+    tire_html = build_tire_recommendation(raw, rd)
+
+    # Climate-adapted gear recommendations using real weather data (Task 1)
+    climate_html = build_climate_gear_callout(
+        raw.get("climate", {}), raw.get("weather")
+    )
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">04</span>
+      <h2>Equipment &amp; Packing Checklist</h2>
+    </div>
+    {tire_html}
+    <div class="rl-guide-callout" style="margin:16px 0;padding:12px 16px;border-left:3px solid var(--rl-color-teal)">
+      <p style="margin:0;font-size:14px"><strong>{_tire_crosslink_text(rd)}</strong> <a href="/race/{esc(rd['slug'])}/tires/" style="color:var(--rl-color-teal)">See full analysis &rarr;</a></p>
+    </div>
+    {climate_html}
+    {render_accordion(accordion_block)}
+  </section>'''
+
+
+def build_pk_race_morning(guide_sections: dict, rd: dict) -> str:
+    """Build Section 5: Race Morning Protocol."""
+    section = guide_sections.get("ch7-morning")
+    if not section:
+        return ""
+
+    timeline_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "timeline":
+            timeline_block = block
+            break
+
+    if not timeline_block:
+        return ""
+
+    # Add start time + computed wake-up time callout
+    start_html = ""
+    start_time = rd["vitals"].get("start_time", "")
+    if start_time:
+        wake = compute_wake_time(start_time)
+        wake_line = f' Set your alarm for <strong>{esc(wake)}</strong>.' if wake else ""
+        start_html = f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>{esc(rd["name"])} Start Time:</strong> {esc(start_time)}.{wake_line}</p>
+      </div>'''
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">05</span>
+      <h2>Race Morning Protocol</h2>
+    </div>
+    {start_html}
+    {render_timeline(timeline_block)}
+  </section>'''
+
+
+def build_pk_fueling(guide_sections: dict, raw: dict, rd: dict) -> str:
+    """Build Section 6: Race-Day Fueling (race-day nutrition + gut training)."""
+    parts = []
+
+    # Distance-adjusted fueling estimate (duration-scaled carb rates)
+    distance_mi = rd["vitals"].get("distance_mi", 0)
+    estimate = compute_fueling_estimate(distance_mi)
+    if estimate:
+        parts.append(
+            f'<div class="rl-guide-callout rl-guide-callout--highlight">'
+            f'<p><strong>Your Fueling Math ({distance_mi} miles):</strong> '
+            f'At ~{estimate["avg_mph"]}mph, expect ~{estimate["hours"]} hours'
+            f' on course. {estimate["note"]} \u2014 target '
+            f'<strong>{estimate["carb_rate_lo"]}-{estimate["carb_rate_hi"]}g'
+            f' carbs/hour</strong> ({estimate["carbs_low"]}-'
+            f'{estimate["carbs_high"]}g total, or '
+            f'{estimate["gels_low"]}-{estimate["gels_high"]} gels).</p>'
+            f'<p style="font-size:12px;color:var(--rl-color-secondary-brown)">'
+            f'Carb targets scale with duration: shorter races burn more carbs'
+            f' per hour at race intensity, while ultra-distance events shift'
+            f' toward fat oxidation and GI tolerance becomes the limiter'
+            f' (Jeukendrup 2014, van Loon et al.).</p>'
+            f'</div>'
+        )
+
+    # Personalized fueling calculator (email-gated)
+    parts.append(build_fueling_calculator_html(rd, raw))
+
+    # Community-sourced fueling context — climate insight affects nutrition strategy
+    bor = raw.get("biased_opinion_ratings", {})
+    if isinstance(bor, dict):
+        climate_insight = _extract_dimension_insight(bor, "climate", 250)
+        if climate_insight:
+            parts.append(
+                f'<div class="rl-guide-callout rl-guide-callout--highlight">'
+                f'<p><strong>What Riders Say About Conditions:</strong> '
+                f'{esc(climate_insight)}</p>'
+                f'<p style="font-size:12px;color:var(--rl-color-secondary-brown)">'
+                f'Plan your fueling around these conditions \u2014 heat and humidity '
+                f'increase fluid and sodium demands significantly.</p>'
+                f'</div>'
+            )
+
+    # Aid station info
+    aid_info = rd["vitals"].get("aid_stations", "")
+    if aid_info and aid_info != "--":
+        parts.append(
+            f'<div class="rl-guide-callout rl-guide-callout--highlight">'
+            f'<p><strong>Aid Stations:</strong> {esc(aid_info)}</p>'
+            f'</div>'
+        )
+
+    # Race-day nutrition timeline
+    rd_section = guide_sections.get("ch5-race-day")
+    if rd_section:
+        for block in rd_section.get("blocks", []):
+            if block.get("type") == "timeline":
+                parts.append(render_timeline(block))
+                break
+
+    # Aggressive fueling callout if enabled
+    tc = raw.get("training_config")
+    if isinstance(tc, dict):
+        mods = tc.get("workout_modifications", {})
+        af = mods.get("aggressive_fueling", {})
+        if isinstance(af, dict) and af.get("enabled"):
+            settings = af.get("settings", {})
+            target = settings.get("target_carbs_per_hour", "")
+            if target:
+                parts.append(
+                    f'<div class="rl-guide-callout rl-guide-callout--highlight">'
+                    f'<p><strong>Target:</strong> {esc(target)}g carbs/hour during race</p>'
+                    f'</div>'
+                )
+
+    # Gut training timeline
+    gt_section = guide_sections.get("ch5-gut-training")
+    if gt_section:
+        for block in gt_section.get("blocks", []):
+            if block.get("type") == "timeline":
+                parts.append(f'<h3 class="rl-pk-subsection-title">Gut Training Protocol</h3>')
+                parts.append(render_timeline(block))
+                break
+
+    if not parts:
+        return ""
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">06</span>
+      <h2>Race-Day Fueling</h2>
+    </div>
+    {"".join(parts)}
+  </section>'''
+
+
+def build_pk_decision_tree(guide_sections: dict, rd: dict) -> str:
+    """Build Section 7: In-Race Decision Tree."""
+    section = guide_sections.get("ch6-decision-tree")
+    if not section:
+        return ""
+
+    accordion_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "accordion":
+            accordion_block = block
+            break
+
+    if not accordion_block:
+        return ""
+
+    # Add suffering zones callout if available
+    zones_html = ""
+    suffering = rd["course"].get("suffering_zones", [])
+    if suffering:
+        zone_parts = []
+        for z in suffering[:5]:
+            if isinstance(z, dict):
+                label = z.get("label", "")
+                desc = z.get("desc", "")
+                mile = z.get("mile")
+                prefix = f"Mile {mile}: " if mile else ""
+                suffix = f" — {esc(desc)}" if desc else ""
+                zone_parts.append(f"<li><strong>{esc(prefix)}{esc(label)}</strong>{suffix}</li>")
+            else:
+                zone_parts.append(f"<li>{esc(z)}</li>")
+        zone_items = "".join(zone_parts)
+        zones_html = f'''<div class="rl-guide-callout rl-guide-callout--highlight">
+        <p><strong>Known Suffering Zones:</strong></p>
+        <ul>{zone_items}</ul>
+      </div>'''
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">07</span>
+      <h2>In-Race Decision Tree</h2>
+    </div>
+    {zones_html}
+    {render_accordion(accordion_block)}
+  </section>'''
+
+
+def build_pk_recovery(guide_sections: dict) -> str:
+    """Build Section 8: Post-Race Recovery."""
+    section = guide_sections.get("ch8-immediate")
+    if not section:
+        return ""
+
+    process_block = None
+    for block in section.get("blocks", []):
+        if block.get("type") == "process_list":
+            process_block = block
+            break
+
+    if not process_block:
+        return ""
+
+    return f'''<section class="rl-pk-section">
+    <div class="rl-pk-section-header">
+      <span class="rl-pk-section-num">08</span>
+      <h2>Post-Race Recovery</h2>
+    </div>
+    {render_process_list(process_block)}
+  </section>'''
+
+
+def build_pk_footer_cta(rd: dict) -> str:
+    """Build footer CTA linking to training plans and newsletter."""
+    name = esc(rd["name"])
+    slug = esc(rd["slug"])
+    return f'''<footer class="rl-pk-footer">
+    <div class="rl-pk-footer-inner">
+      <h3>Ready to Race {name}?</h3>
+      <p>This free prep kit covers the essentials. For a fully personalized plan built
+         specifically for {name} — structured workouts, nutrition protocols, and race-day
+         strategy — get a custom training plan.</p>
+      <div class="rl-pk-footer-buttons">
+        <a href="{esc(TRAINING_PLANS_URL)}" class="rl-pk-btn rl-pk-btn--primary">BUILD MY PLAN &mdash; $15/WK</a>
+        <a href="{esc(COACHING_URL)}" class="rl-pk-btn rl-pk-btn--secondary">1:1 COACHING</a>
+      </div>
+      <p class="rl-pk-footer-back">
+        <a href="/race/{slug}/">Back to {name} Race Profile</a>
+      </p>
+    </div>
+  </footer>'''
+
+
+# ── CSS ───────────────────────────────────────────────────────
+
+
+def build_prep_kit_css() -> str:
+    """Build complete CSS for prep kit pages."""
+    return """/* ── Prep Kit Layout ── */
+.rl-pk-page{max-width:800px;margin:0 auto;padding:24px 20px;background:var(--rl-color-warm-paper);color:var(--rl-color-near-black);font-family:var(--rl-font-editorial)}
+
+/* ── Header ── */
+.rl-pk-header{text-align:center;padding:32px 0 24px;border-bottom:3px solid var(--rl-color-near-black);margin-bottom:32px}
+.rl-pk-header-badge{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);padding:4px 12px;margin-bottom:12px}
+.rl-pk-header-title{font-family:var(--rl-font-data);font-size:32px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin:0 0 8px;color:var(--rl-color-near-black)}
+.rl-pk-header-subtitle{font-family:var(--rl-font-data);font-size:13px;color:var(--rl-color-secondary-brown);margin:0 0 16px;letter-spacing:1px}
+.rl-pk-vitals-ribbon{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding-top:16px;border-top:2px solid var(--rl-color-tan)}
+.rl-pk-stat{font-family:var(--rl-font-data);font-size:13px;color:var(--rl-color-primary-brown)}
+
+/* ── Sections ── */
+.rl-pk-section{margin-bottom:40px;page-break-inside:avoid}
+.rl-pk-section-header{display:flex;align-items:baseline;gap:12px;border-bottom:3px solid var(--rl-color-near-black);padding-bottom:8px;margin-bottom:20px}
+.rl-pk-section-num{font-family:var(--rl-font-data);font-size:14px;font-weight:700;color:var(--rl-color-teal);letter-spacing:1px}
+.rl-pk-section-header h2{font-family:var(--rl-font-data);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0;color:var(--rl-color-near-black)}
+.rl-pk-subsection-title{font-family:var(--rl-font-data);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin:24px 0 12px;color:var(--rl-color-primary-brown)}
+
+/* ── Non-Negotiable Cards ── */
+.rl-pk-nn-grid{display:grid;gap:16px}
+.rl-pk-nn-card{border:2px solid var(--rl-color-near-black);padding:16px;background:var(--rl-color-white)}
+.rl-pk-nn-req{font-family:var(--rl-font-data);font-size:14px;font-weight:700;color:var(--rl-color-near-black);margin-bottom:8px}
+.rl-pk-nn-badge{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--rl-color-teal);color:var(--rl-color-white);padding:2px 8px;margin-bottom:8px}
+.rl-pk-nn-why{font-size:13px;line-height:1.6;color:var(--rl-color-primary-brown);margin:0}
+
+/* ── Milestone + Workout Mod Chips ── */
+.rl-pk-milestone{border-left:4px solid var(--rl-color-teal);padding:8px 12px;margin-top:12px;background:rgba(23,128,121,0.06);font-family:var(--rl-font-data);font-size:12px;color:var(--rl-color-near-black)}
+.rl-pk-milestone-badge{display:inline-block;background:var(--rl-color-teal);color:var(--rl-color-white);font-size:10px;font-weight:700;padding:2px 6px;margin-right:8px;letter-spacing:1px;text-transform:uppercase}
+.rl-pk-workout-mod{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--rl-color-gold);color:var(--rl-color-white);padding:3px 8px;margin:8px 6px 0 0}
+
+/* ── Context Box (generic races) ── */
+.rl-pk-context-box{border:2px solid var(--rl-color-near-black);padding:16px 20px;margin-bottom:20px;background:var(--rl-color-white)}
+.rl-pk-context-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rl-color-teal);margin-bottom:8px}
+.rl-pk-context-box p{font-size:13px;line-height:1.6;margin:4px 0;color:var(--rl-color-primary-brown)}
+
+/* ── Footer CTA ── */
+.rl-pk-footer{border-top:3px solid var(--rl-color-near-black);padding:32px 0 16px;text-align:center;margin-top:40px}
+.rl-pk-footer-inner h3{font-family:var(--rl-font-data);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px}
+.rl-pk-footer-inner p{font-size:14px;line-height:1.6;color:var(--rl-color-primary-brown);max-width:560px;margin:0 auto 20px}
+.rl-pk-footer-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:24px}
+.rl-pk-btn{display:inline-block;font-family:var(--rl-font-data);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:12px 24px;text-decoration:none;text-align:center;transition:background 0.2s,color 0.2s}
+.rl-pk-btn--primary{background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);border:3px solid var(--rl-color-near-black)}
+.rl-pk-btn--primary:hover{background:var(--rl-color-primary-brown);border-color:var(--rl-color-primary-brown)}
+.rl-pk-btn--secondary{background:transparent;color:var(--rl-color-near-black);border:3px solid var(--rl-color-near-black)}
+.rl-pk-btn--secondary:hover{background:var(--rl-color-near-black);color:var(--rl-color-warm-paper)}
+.rl-pk-footer-back{font-family:var(--rl-font-data);font-size:12px;margin-top:16px}
+.rl-pk-footer-back a{color:var(--rl-color-teal);text-decoration:underline}
+
+/* ── Guide block overrides (copied from guide for standalone page) ── */
+
+/* Timeline */
+.rl-guide-timeline{margin:0 0 24px;padding-left:20px}
+.rl-guide-timeline-title{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin:0 0 16px;color:var(--rl-color-primary-brown)}
+.rl-guide-timeline-step{display:flex;gap:16px;margin-bottom:20px;position:relative}
+.rl-guide-timeline-step:not(:last-child)::before{content:'';position:absolute;left:15px;top:32px;bottom:-20px;width:2px;background:var(--rl-color-tan)}
+.rl-guide-timeline-marker{width:32px;height:32px;min-width:32px;background:var(--rl-color-teal);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.rl-guide-timeline-content{flex:1}
+.rl-guide-timeline-label{font-size:14px;font-weight:700;margin:0 0 6px;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-near-black)}
+.rl-guide-timeline-content p{font-family:var(--rl-font-editorial);font-size:13px;line-height:1.6;margin:0;color:var(--rl-color-primary-brown)}
+
+/* Accordion */
+.rl-guide-accordion-item{border:2px solid var(--rl-color-near-black);margin-bottom:8px}
+.rl-guide-accordion-trigger{display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 16px;background:var(--rl-color-warm-paper);border:none;cursor:pointer;font-family:var(--rl-font-data);font-size:13px;font-weight:700;text-align:left;color:var(--rl-color-near-black)}
+.rl-guide-accordion-trigger:hover{background:var(--rl-color-sand)}
+.rl-guide-accordion-icon{font-size:18px;font-weight:700}
+.rl-guide-accordion-trigger[aria-expanded="true"] .rl-guide-accordion-icon{transform:rotate(45deg)}
+.rl-guide-accordion-body{display:none;padding:16px;border-top:2px solid var(--rl-color-near-black)}
+.rl-guide-accordion-trigger[aria-expanded="true"]+.rl-guide-accordion-body{display:block}
+
+/* Process List */
+.rl-guide-process-list{margin:0 0 20px}
+.rl-guide-process-item{display:flex;gap:14px;margin-bottom:16px;padding:12px;border:2px solid var(--rl-color-near-black);background:var(--rl-color-warm-paper)}
+.rl-guide-process-num{width:32px;height:32px;min-width:32px;background:var(--rl-color-near-black);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.rl-guide-process-body{flex:1}
+.rl-guide-process-label{font-weight:700;font-size:14px;color:var(--rl-color-near-black)}
+.rl-guide-process-pct{display:inline-block;background:var(--rl-color-gold);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;margin-left:8px;letter-spacing:1px}
+.rl-guide-process-detail{font-size:13px;color:var(--rl-color-primary-brown);margin:4px 0 0;line-height:1.5}
+
+/* Callout */
+.rl-guide-callout{padding:20px 24px;margin:0 0 20px;border-left:6px solid var(--rl-color-teal);background:var(--rl-color-warm-paper)}
+.rl-guide-callout--quote{border-left-color:var(--rl-color-gold);font-style:italic}
+.rl-guide-callout--highlight{border-left-color:var(--rl-color-gold)}
+.rl-guide-callout p{font-family:var(--rl-font-editorial);font-size:13px;line-height:1.7;margin:0 0 8px;color:var(--rl-color-near-black)}
+.rl-guide-callout p:last-child{margin-bottom:0}
+.rl-guide-callout ul{margin:8px 0;padding-left:20px}
+.rl-guide-callout li{font-family:var(--rl-font-editorial);font-size:13px;line-height:1.6;color:var(--rl-color-near-black)}
+
+/* ── Fueling Calculator ── */
+.rl-pk-calc-wrapper{margin:24px 0 0}
+.rl-pk-calc-intro{font-size:13px;line-height:1.6;color:var(--rl-color-primary-brown);margin:0 0 16px}
+.rl-pk-calc-form{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-bottom:20px}
+.rl-pk-calc-field{display:flex;flex-direction:column;gap:4px}
+.rl-pk-calc-field label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-near-black)}
+.rl-pk-calc-req{color:var(--rl-color-teal)}
+.rl-pk-calc-input{font-family:var(--rl-font-data);font-size:13px;padding:8px 10px;border:2px solid var(--rl-color-near-black);background:var(--rl-color-white);color:var(--rl-color-near-black);width:100%;box-sizing:border-box}
+.rl-pk-calc-input:focus{outline:none;border-color:var(--rl-color-teal)}
+.rl-pk-calc-select{font-family:var(--rl-font-data);font-size:13px;padding:8px 10px;border:2px solid var(--rl-color-near-black);background:var(--rl-color-white);color:var(--rl-color-near-black)}
+.rl-pk-calc-height-row{display:flex;gap:8px}
+.rl-pk-calc-height-row select{flex:1}
+.rl-pk-calc-tooltip{cursor:help;color:var(--rl-color-secondary-brown);font-size:14px}
+.rl-pk-calc-btn{grid-column:1/-1;font-family:var(--rl-font-data);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:12px 24px;background:var(--rl-color-primary-brown);color:var(--rl-color-warm-paper);border:3px solid var(--rl-color-near-black);cursor:pointer;transition:background 0.2s}
+.rl-pk-calc-btn:hover{background:var(--rl-color-near-black)}
+.rl-pk-calc-result{border-left:6px solid var(--rl-color-teal);background:var(--rl-color-warm-paper);padding:20px 24px;margin:0 0 20px}
+.rl-pk-calc-result-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--rl-color-tan);font-family:var(--rl-font-data);font-size:13px}
+.rl-pk-calc-result-row:last-child{border-bottom:none}
+.rl-pk-calc-result-label{color:var(--rl-color-primary-brown);text-transform:uppercase;letter-spacing:1px;font-size:11px}
+.rl-pk-calc-result-value{font-weight:700;color:var(--rl-color-near-black)}
+.rl-pk-calc-result-highlight{font-size:28px;font-weight:700;color:var(--rl-color-teal);font-family:var(--rl-font-data)}
+.rl-pk-calc-result-note{font-family:var(--rl-font-editorial);font-size:12px;color:var(--rl-color-secondary-brown);margin:12px 0 0;line-height:1.5}
+.rl-pk-calc-substack{margin:20px 0 0;padding:16px;border:2px solid var(--rl-color-tan);background:var(--rl-color-white)}
+.rl-pk-calc-substack-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--rl-color-primary-brown);margin:0 0 8px}
+
+/* ── Climate Badge ── */
+.rl-pk-calc-field--climate{grid-column:1/-1}
+.rl-pk-calc-climate-badge{font-family:var(--rl-font-data);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:10px 16px;text-align:center;border:2px solid var(--rl-color-near-black)}
+.rl-pk-calc-climate--cool{background:#e8f5e9;color:#2e7d32}
+.rl-pk-calc-climate--mild{background:var(--rl-color-warm-paper);color:var(--rl-color-primary-brown)}
+.rl-pk-calc-climate--warm{background:#fff8e1;color:#f57f17}
+.rl-pk-calc-climate--hot{background:#ffebee;color:#c62828}
+.rl-pk-calc-climate--extreme{background:#2c2c2c;color:#fff}
+
+/* ── Panel Titles ── */
+.rl-pk-calc-panel-title{font-family:var(--rl-font-data);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--rl-color-teal);border-bottom:2px solid var(--rl-color-teal);padding-bottom:6px;margin:24px 0 12px}
+
+/* ── Hourly Table ── */
+.rl-pk-calc-hourly-scroll{overflow-x:auto;margin:0 0 20px;-webkit-overflow-scrolling:touch}
+.rl-pk-calc-hourly-table{width:100%;border-collapse:collapse;font-family:var(--rl-font-data);font-size:12px;min-width:500px}
+.rl-pk-calc-hourly-table th{background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);padding:8px 10px;text-align:left;text-transform:uppercase;letter-spacing:1px;font-size:10px;font-weight:700}
+.rl-pk-calc-hourly-table td{padding:8px 10px;border-bottom:1px solid var(--rl-color-tan);vertical-align:top}
+.rl-pk-calc-hourly-table tr:last-child td{border-bottom:2px solid var(--rl-color-near-black);font-weight:700}
+.rl-pk-calc-hour-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--rl-color-near-black);color:#fff;font-size:11px;font-weight:700}
+.rl-pk-calc-aid-row{background:rgba(23,128,121,0.08)}
+.rl-pk-calc-aid-badge{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:var(--rl-color-teal);color:#fff;padding:2px 6px;margin-left:6px;vertical-align:middle}
+
+/* ── Fuel Chips ── */
+.rl-pk-calc-item{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:600;padding:3px 8px;margin:2px 4px 2px 0;border:1px solid}
+.rl-pk-calc-item--gel{background:rgba(23,128,121,0.1);color:var(--rl-color-teal);border-color:var(--rl-color-teal)}
+.rl-pk-calc-item--drink{background:rgba(154,126,10,0.1);color:var(--rl-color-gold);border-color:var(--rl-color-gold)}
+.rl-pk-calc-item--food{background:rgba(89,71,60,0.1);color:var(--rl-color-primary-brown);border-color:var(--rl-color-primary-brown)}
+
+/* ── Shopping List ── */
+.rl-pk-calc-shopping-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 16px}
+.rl-pk-calc-shopping-item{border:2px solid var(--rl-color-near-black);padding:12px 16px;background:var(--rl-color-white)}
+.rl-pk-calc-shopping-qty{font-family:var(--rl-font-data);font-size:24px;font-weight:700;color:var(--rl-color-teal);display:block;margin-bottom:4px}
+.rl-pk-calc-shopping-label{font-family:var(--rl-font-data);font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-primary-brown)}
+.rl-pk-calc-shopping-note{font-family:var(--rl-font-editorial);font-size:12px;color:var(--rl-color-secondary-brown);margin:8px 0 0;line-height:1.5}
+
+/* ── Email Gate ── */
+.rl-pk-gate{text-align:center;padding:48px 20px;border:3px solid var(--rl-color-near-black);background:var(--rl-color-white);margin-bottom:32px}
+.rl-pk-gate-inner{max-width:440px;margin:0 auto}
+.rl-pk-gate-badge{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:var(--rl-color-teal);color:var(--rl-color-white);padding:4px 12px;margin-bottom:16px}
+.rl-pk-gate-title{font-family:var(--rl-font-data);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;color:var(--rl-color-near-black)}
+.rl-pk-gate-text{font-family:var(--rl-font-editorial);font-size:14px;line-height:1.6;color:var(--rl-color-primary-brown);margin:0 0 20px}
+.rl-pk-gate-form{display:flex;gap:0;max-width:400px;margin:0 auto 12px}
+.rl-pk-gate-input{flex:1;font-family:var(--rl-font-data);font-size:13px;padding:12px 14px;border:3px solid var(--rl-color-near-black);border-right:none;background:var(--rl-color-warm-paper);color:var(--rl-color-near-black);min-width:0}
+.rl-pk-gate-input:focus{outline:none;border-color:var(--rl-color-teal)}
+.rl-pk-gate-btn{font-family:var(--rl-font-data);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:12px 20px;background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);border:3px solid var(--rl-color-near-black);cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.rl-pk-gate-btn:hover{background:var(--rl-color-teal);border-color:var(--rl-color-teal)}
+.rl-pk-gate-fine{font-family:var(--rl-font-data);font-size:11px;color:var(--rl-color-secondary-brown);letter-spacing:1px;margin:0}
+.rl-pk-gate-preview{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 24px;text-align:left}
+.rl-pk-gate-preview-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--rl-color-sand);border-left:3px solid var(--rl-color-teal)}
+.rl-pk-gate-preview-num{font-family:var(--rl-font-data);font-size:11px;font-weight:700;color:var(--rl-color-teal);letter-spacing:1px;min-width:20px}
+.rl-pk-gate-preview-label{font-family:var(--rl-font-data);font-size:11px;letter-spacing:0.5px;color:var(--rl-color-near-black)}
+@media (max-width:600px){.rl-pk-gate-form{flex-direction:column;gap:8px}.rl-pk-gate-input{border-right:3px solid var(--rl-color-near-black)}.rl-pk-gate{padding:32px 16px}.rl-pk-gate-preview{grid-template-columns:1fr}}
+
+/* ── Race Intelligence Briefing ── */
+.rl-pk-intel-lead{text-align:center;margin:0 0 20px}
+.rl-pk-intel-verdict{display:inline-block;font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);padding:4px 14px;margin-bottom:8px}
+.rl-pk-intel-oneliner{font-family:var(--rl-font-editorial);font-size:16px;font-style:italic;color:var(--rl-color-primary-brown);margin:8px 0 0;line-height:1.5}
+.rl-pk-intel-summary{font-size:13px;line-height:1.7;color:var(--rl-color-primary-brown);margin:0 0 20px}
+.rl-pk-intel-dim{border-left:4px solid var(--rl-color-teal);padding:12px 16px;margin:0 0 12px;background:var(--rl-color-white)}
+.rl-pk-intel-dim-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rl-color-teal);margin-bottom:6px}
+.rl-pk-intel-dim-text{font-size:13px;line-height:1.6;color:var(--rl-color-primary-brown);margin:0}
+.rl-pk-intel-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.rl-pk-intel-col{border:2px solid var(--rl-color-near-black);padding:16px}
+.rl-pk-intel-col-label{font-family:var(--rl-font-data);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.rl-pk-intel-col ul{margin:0;padding-left:18px}
+.rl-pk-intel-col li{font-size:12px;line-height:1.6;color:var(--rl-color-primary-brown);margin-bottom:4px}
+.rl-pk-intel-rep{font-family:var(--rl-font-data);font-size:12px;font-style:italic;color:var(--rl-color-secondary-brown);text-align:center;margin:16px 0}
+@media (max-width:600px){.rl-pk-intel-cols{grid-template-columns:1fr}}
+
+/* ── Logistics Grid ── */
+.rl-pk-logistics-grid{display:grid;gap:12px}
+.rl-pk-logistics-item{border:2px solid var(--rl-color-near-black);padding:16px;background:var(--rl-color-white)}
+.rl-pk-logistics-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rl-color-teal);margin-bottom:6px}
+.rl-pk-logistics-text{font-size:13px;line-height:1.6;color:var(--rl-color-primary-brown);margin:0}
+.rl-pk-logistics-text a{color:var(--rl-color-teal);text-decoration:underline}
+
+/* ── Aid Station Strategy ── */
+.rl-pk-aid-strategy{margin:20px 0}
+.rl-pk-aid-card{display:flex;gap:14px;margin-bottom:10px;padding:12px;border:2px solid var(--rl-color-near-black);background:var(--rl-color-warm-paper)}
+.rl-pk-aid-num{width:56px;min-width:56px;text-align:center;font-family:var(--rl-font-data);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--rl-color-teal);color:#fff;padding:8px 4px;display:flex;align-items:center;justify-content:center}
+.rl-pk-aid-detail{flex:1}
+.rl-pk-aid-detail strong{font-family:var(--rl-font-data);font-size:13px;color:var(--rl-color-near-black)}
+.rl-pk-aid-detail p{font-size:12px;line-height:1.5;color:var(--rl-color-primary-brown);margin:4px 0 0}
+
+/* ── Tire Pressure Table ── */
+.rl-pk-pressure-table-wrap{overflow-x:auto;margin:12px 0 0}
+.rl-pk-pressure-table{width:100%;border-collapse:collapse;font-family:var(--rl-font-data);font-size:12px}
+.rl-pk-pressure-table th{background:var(--rl-color-near-black);color:var(--rl-color-warm-paper);padding:8px 10px;text-align:left;text-transform:uppercase;letter-spacing:1px;font-size:10px;font-weight:700}
+.rl-pk-pressure-table td{padding:8px 10px;border-bottom:1px solid var(--rl-color-tan)}
+
+/* ── Print Styles ── */
+@media print{
+  body{background:#fff !important}
+  .rl-pk-page{max-width:100%;padding:0;margin:0}
+  .rl-pk-header{padding:16px 0;border-bottom:2px solid #000}
+  .rl-pk-header-badge{background:#000;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rl-pk-section{page-break-inside:avoid}
+  .rl-pk-footer{display:none}
+  .rl-mega-footer{display:none}
+  .rl-guide-accordion-body{display:block !important}
+  .rl-guide-accordion-trigger{pointer-events:none}
+  .rl-guide-accordion-icon{display:none}
+  .rl-guide-timeline-marker,.rl-guide-process-num,.rl-pk-nn-badge,.rl-pk-milestone-badge,.rl-pk-workout-mod{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a[href]:after{content:none !important}
+  .rl-pk-calc-form{display:none}
+  .rl-pk-calc-substack{display:none}
+  .rl-pk-calc-intro{display:none}
+  .rl-pk-calc-result[style*="block"]{display:block !important}
+  .rl-pk-calc-hourly-scroll{overflow:visible}
+  .rl-pk-calc-hourly-table{min-width:0}
+  .rl-pk-calc-shopping-grid{grid-template-columns:repeat(4,1fr)}
+  .rl-pk-calc-hour-num,.rl-pk-calc-aid-badge,.rl-pk-calc-item{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ── Responsive ── */
+@media (max-width:600px){
+  .rl-pk-header-title{font-size:24px}
+  .rl-pk-vitals-ribbon{flex-direction:column;align-items:center;gap:6px}
+  .rl-pk-footer-buttons{flex-direction:column;align-items:center}
+  .rl-pk-btn{width:100%;max-width:300px}
+  .rl-pk-calc-form{grid-template-columns:1fr}
+  .rl-pk-calc-shopping-grid{grid-template-columns:1fr}
+  .rl-pk-calc-hourly-table{min-width:500px}
+}
+""" + get_mega_footer_css()
+
+
+# ── Page Assembly ─────────────────────────────────────────────
+
+
+def build_prep_kit_js() -> str:
+    """JS for email gate, accordion toggle, and fueling calculator on prep kit pages."""
+    return """/* ── Email Gate ── */
+(function(){
+  var WORKER_URL='""" + FUELING_WORKER_URL + """';
+  var LS_KEY='rl-pk-fueling';
+  var EXPIRY_DAYS=90;
+  var gate=document.getElementById('rl-pk-gate');
+  var content=document.getElementById('rl-pk-gated-content');
+  var gateForm=document.getElementById('rl-pk-gate-form');
+  if(!gate||!content) return;
+
+  function unlockContent(email){
+    gate.style.display='none';
+    content.style.display='block';
+    /* Pre-fill fueling calculator email if present */
+    var calcEmail=document.getElementById('rl-pk-email');
+    if(calcEmail&&email) calcEmail.value=email;
+  }
+
+  /* Check localStorage for cached email */
+  try{
+    var cached=JSON.parse(localStorage.getItem(LS_KEY)||'null');
+    if(cached&&cached.email&&cached.exp>Date.now()){
+      unlockContent(cached.email);
+      return;
+    }
+  }catch(e){}
+
+  /* Handle gate form submit */
+  if(gateForm){
+    gateForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email=gateForm.email.value.trim();
+      if(!email||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){
+        alert('Please enter a valid email address.');return;
+      }
+      /* Honeypot check */
+      if(gateForm.website&&gateForm.website.value){return;}
+      /* Cache email */
+      try{
+        localStorage.setItem(LS_KEY,JSON.stringify({email:email,exp:Date.now()+EXPIRY_DAYS*86400000}));
+      }catch(ex){}
+      /* Fire-and-forget POST to Worker */
+      var payload={
+        email:email,
+        race_slug:gateForm.race_slug.value,
+        race_name:gateForm.race_name.value,
+        source:'prep_kit_gate',
+        website:gateForm.website.value
+      };
+      fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
+      /* GA4 event */
+      if(typeof gtag==='function'){
+        gtag('event','pk_gate_unlock',{race_slug:gateForm.race_slug.value});
+      }
+      unlockContent(email);
+    });
+  }
+})();
+
+document.querySelectorAll('.rl-guide-accordion-trigger').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var expanded=this.getAttribute('aria-expanded')==='true';
+    this.setAttribute('aria-expanded',String(!expanded));
+  });
+});
+/* ── Fueling Calculator ── */
+(function(){
+  var WORKER_URL='""" + FUELING_WORKER_URL + """';
+  var LS_KEY='rl-pk-fueling';
+  var EXPIRY_DAYS=90;
+  var form=document.getElementById('rl-pk-calc-form');
+  if(!form) return;
+
+  /* Restore cached email */
+  try{
+    var cached=JSON.parse(localStorage.getItem(LS_KEY)||'null');
+    if(cached&&cached.email&&cached.exp>Date.now()){
+      var ef=document.getElementById('rl-pk-email');
+      if(ef) ef.value=cached.email;
+    }
+  }catch(e){}
+
+  /* Multiplier constants — must match Python parity */
+  var HEAT_MULT={cool:0.7,mild:1.0,warm:1.3,hot:1.6,extreme:1.9};
+  var SWEAT_MULT={light:0.7,moderate:1.0,heavy:1.3};
+  var FORMAT_SPLITS={
+    liquid:{drink:0.80,gel:0.15,food:0.05},
+    gels:{drink:0.20,gel:0.70,food:0.10},
+    mixed:{drink:0.30,gel:0.40,food:0.30},
+    solid:{drink:0.20,gel:0.20,food:0.60}
+  };
+  var SODIUM_BASE=1000;
+  var SODIUM_HEAT_BOOST={hot:200,extreme:300};
+  var SODIUM_CRAMP_BOOST={sometimes:150,frequent:300};
+
+  function computePersonalized(weightLbs,ftp,hours){
+    if(!weightLbs||weightLbs<=0||!hours||hours<=0) return null;
+    var weightKg=weightLbs*0.453592;
+    var WKG_FLOOR=1.5,WKG_CEIL=4.5,WKG_EXP=1.4;
+    var bLo,bHi,bracket;
+    if(hours<=4){bLo=80;bHi=100;bracket='High-intensity race pace';}
+    else if(hours<=8){bLo=60;bHi=80;bracket='Endurance pace';}
+    else if(hours<=12){bLo=50;bHi=70;bracket='Lower intensity';}
+    else if(hours<=16){bLo=40;bHi=60;bracket='Ultra pace';}
+    else{bLo=30;bHi=50;bracket='Survival pace';}
+    var rate,note;
+    if(ftp&&ftp>0){
+      var wkg=ftp/weightKg;
+      var lin=Math.max(0,Math.min(1,(wkg-WKG_FLOOR)/(WKG_CEIL-WKG_FLOOR)));
+      var factor=Math.pow(lin,WKG_EXP);
+      rate=Math.round(bLo+factor*(bHi-bLo));
+      note='Personalized from your weight and FTP';
+    }else{
+      rate=Math.round((bLo+bHi)/2);
+      note='Enter your FTP for a more precise estimate';
+    }
+    var totalCarbs=Math.round(rate*hours);
+    var gels=Math.floor(totalCarbs/25);
+    return{rate:rate,totalCarbs:totalCarbs,gels:gels,bracket:bracket,bracketLo:bLo,bracketHi:bHi,note:note};
+  }
+
+  function computeSweatRate(weightLbs,climateHeat,sweatTendency,hours){
+    if(!weightLbs||weightLbs<=0||!hours||hours<=0) return null;
+    var weightKg=weightLbs*0.453592;
+    var base=weightKg*0.013;
+    var hm=HEAT_MULT[climateHeat]||1.0;
+    var sm=SWEAT_MULT[sweatTendency]||1.0;
+    var intensity;
+    if(hours<=4) intensity=1.15;
+    else if(hours<=8) intensity=1.0;
+    else if(hours<=12) intensity=0.9;
+    else if(hours<=16) intensity=0.8;
+    else intensity=0.7;
+    var sr=base*hm*sm*intensity;
+    var fLo=Math.round(sr*0.6*1000);
+    var fHi=Math.round(sr*0.8*1000);
+    return{sweatRate:Math.round(sr*100)/100,fluidLoMl:fLo,fluidHiMl:fHi,fluidLoOz:Math.round(fLo/29.5735),fluidHiOz:Math.round(fHi/29.5735)};
+  }
+
+  function computeSodium(sweatRate,climateHeat,crampHistory){
+    if(!sweatRate||sweatRate<=0) return null;
+    var conc=SODIUM_BASE+(SODIUM_HEAT_BOOST[climateHeat]||0)+(SODIUM_CRAMP_BOOST[crampHistory]||0);
+    return{sodiumMgHr:Math.round(sweatRate*conc),concentration:conc};
+  }
+
+  function computeHourlyPlan(hours,carbRate,fluidMlHr,sodiumMgHr,fuelFormat,aidHours){
+    if(!hours||hours<=0||!carbRate||carbRate<=0) return[];
+    var total=Math.ceil(hours);
+    var splits=FORMAT_SPLITS[fuelFormat]||FORMAT_SPLITS.mixed;
+    var aidSet={};
+    (aidHours||[]).forEach(function(h){aidSet[Math.round(h)]=true;});
+    var plan=[];
+    for(var h=1;h<=total;h++){
+      var mult;
+      if(h===1) mult=0.8;
+      else if(h===total&&hours%1>0) mult=hours%1;
+      else if(h===total) mult=0.8;
+      else mult=1.0;
+      var hCarbs=Math.round(carbRate*mult);
+      var hFluid=Math.round(fluidMlHr*mult);
+      var hSodium=Math.round(sodiumMgHr*mult);
+      var dCarbs=Math.round(hCarbs*splits.drink);
+      var gCarbs=Math.round(hCarbs*splits.gel);
+      var fCarbs=hCarbs-dCarbs-gCarbs;
+      var items=[];
+      if(gCarbs>0){var gc=Math.max(1,Math.round(gCarbs/25));items.push({type:'gel',label:gc+' gel'+(gc>1?'s':'')+' ('+(gc*25)+'g)'});}
+      if(dCarbs>0){var dm=Math.round(dCarbs/40*500);items.push({type:'drink',label:dm+'ml mix ('+dCarbs+'g)'});}
+      if(fCarbs>0){var bc=Math.max(1,Math.round(fCarbs/35));items.push({type:'food',label:bc+' bar'+(bc>1?'s':'')+' ('+(bc*35)+'g)'});}
+      plan.push({hour:h,carbs:hCarbs,fluid:hFluid,sodium:hSodium,items:items,isAid:!!aidSet[h]});
+    }
+    return plan;
+  }
+
+  function renderResults(r,hydration,sodium,plan,hours){
+    var panel=document.getElementById('rl-pk-calc-result');
+    if(!panel) return;
+    var html='';
+
+    /* Panel 1: YOUR RACE NUMBERS */
+    html+='<div class="rl-pk-calc-panel-title">Your Race Numbers</div>';
+    html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Carb Target</span>'+
+      '<span class="rl-pk-calc-result-highlight">'+r.rate+'g/hr</span></div>';
+    html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Total Carbs</span>'+
+      '<span class="rl-pk-calc-result-value">'+r.totalCarbs.toLocaleString()+'g</span></div>';
+    if(hydration){
+      html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Fluid Target</span>'+
+        '<span class="rl-pk-calc-result-highlight">'+hydration.fluidLoOz+'-'+hydration.fluidHiOz+' oz/hr</span></div>';
+      var totalFluidL=Math.round(hydration.fluidHiMl*hours/1000*10)/10;
+      html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Total Fluid</span>'+
+        '<span class="rl-pk-calc-result-value">~'+totalFluidL+'L</span></div>';
+    }
+    if(sodium){
+      html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Sodium Target</span>'+
+        '<span class="rl-pk-calc-result-value">'+sodium.sodiumMgHr+' mg/hr</span></div>';
+      var totalSodium=Math.round(sodium.sodiumMgHr*hours);
+      var saltCaps=Math.ceil(totalSodium/250);
+      html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Salt Capsules</span>'+
+        '<span class="rl-pk-calc-result-value">~'+saltCaps+' (250mg each)</span></div>';
+    }
+    html+='<div class="rl-pk-calc-result-row"><span class="rl-pk-calc-result-label">Duration Bracket</span>'+
+      '<span class="rl-pk-calc-result-value">'+r.bracket+' ('+r.bracketLo+'-'+r.bracketHi+'g/hr)</span></div>';
+    html+='<p class="rl-pk-calc-result-note">'+r.note+'. Carb targets derived from W/kg intensity positioning within exercise physiology brackets (Jeukendrup 2014). Start low in training and build toward race-day targets. <a href="/fueling-methodology" style="color:var(--rl-color-teal);text-decoration:underline">How we calculate this</a></p>';
+
+    /* Panel 2: HOUR-BY-HOUR RACE PLAN */
+    if(plan&&plan.length>0){
+      html+='<div class="rl-pk-calc-panel-title">Hour-by-Hour Race Plan</div>';
+      html+='<div class="rl-pk-calc-hourly-scroll"><table class="rl-pk-calc-hourly-table">';
+      html+='<thead><tr><th>Hour</th><th>Carbs</th><th>Fluid</th><th>Sodium</th><th>What to Consume</th></tr></thead><tbody>';
+      var tC=0,tF=0,tS=0;
+      plan.forEach(function(p){
+        tC+=p.carbs;tF+=p.fluid;tS+=p.sodium;
+        var cls=p.isAid?' class="rl-pk-calc-aid-row"':'';
+        var itemsHtml=p.items.map(function(it){return'<span class="rl-pk-calc-item rl-pk-calc-item--'+it.type+'">'+it.label+'</span>';}).join(' ');
+        var aidBadge=p.isAid?'<span class="rl-pk-calc-aid-badge">Aid Station</span>':'';
+        html+='<tr'+cls+'><td><span class="rl-pk-calc-hour-num">'+p.hour+'</span></td>';
+        html+='<td>'+p.carbs+'g</td><td>'+p.fluid+'ml</td><td>'+p.sodium+'mg</td>';
+        html+='<td>'+itemsHtml+aidBadge+'</td></tr>';
+      });
+      html+='<tr><td><strong>Total</strong></td><td><strong>'+tC+'g</strong></td>';
+      html+='<td><strong>'+Math.round(tF/1000*10)/10+'L</strong></td>';
+      html+='<td><strong>'+Math.round(tS/1000*10)/10+'g</strong></td><td></td></tr>';
+      html+='</tbody></table></div>';
+    }
+
+    /* Panel 3: WHAT TO PACK */
+    if(plan&&plan.length>0){
+      html+='<div class="rl-pk-calc-panel-title">What to Pack</div>';
+      var totGels=0,totDrinkMl=0,totBars=0,totSaltCaps=0;
+      plan.forEach(function(p){
+        p.items.forEach(function(it){
+          var m=it.label.match(/^(\\d+)/);
+          var n=m?parseInt(m[1]):1;
+          if(it.type==='gel') totGels+=n;
+          else if(it.type==='drink'){var mm=it.label.match(/(\\d+)ml/);if(mm) totDrinkMl+=parseInt(mm[1]);}
+          else if(it.type==='food') totBars+=n;
+        });
+      });
+      if(sodium){totSaltCaps=Math.ceil(sodium.sodiumMgHr*hours/250);}
+      html+='<div class="rl-pk-calc-shopping-grid">';
+      if(totGels>0) html+='<div class="rl-pk-calc-shopping-item"><span class="rl-pk-calc-shopping-qty">'+totGels+'</span><span class="rl-pk-calc-shopping-label">Gels (25g each)</span></div>';
+      if(totDrinkMl>0) html+='<div class="rl-pk-calc-shopping-item"><span class="rl-pk-calc-shopping-qty">'+Math.round(totDrinkMl/1000*10)/10+'L</span><span class="rl-pk-calc-shopping-label">Drink mix</span></div>';
+      if(totSaltCaps>0) html+='<div class="rl-pk-calc-shopping-item"><span class="rl-pk-calc-shopping-qty">'+totSaltCaps+'</span><span class="rl-pk-calc-shopping-label">Salt caps (250mg)</span></div>';
+      if(totBars>0) html+='<div class="rl-pk-calc-shopping-item"><span class="rl-pk-calc-shopping-qty">'+totBars+'</span><span class="rl-pk-calc-shopping-label">Bars / rice cakes</span></div>';
+      html+='</div>';
+      html+='<p class="rl-pk-calc-shopping-note">Pack 10-15% extra for spills and bonking insurance.</p>';
+    }
+
+    panel.innerHTML=html;
+    panel.style.display='block';
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=form.email.value.trim();
+    var weightLbs=parseFloat(form.weight_lbs.value);
+    var ftp=form.ftp.value?parseFloat(form.ftp.value):null;
+    var hours=parseFloat(form.target_hours.value)||parseFloat(form.est_hours.value)||0;
+    var climateHeat=form.climate_heat.value||'mild';
+    var sweatTendency=form.sweat_tendency.value||'moderate';
+    var fuelFormat=form.fuel_format.value||'mixed';
+    var crampHistory=form.cramp_history.value||'rarely';
+    var aidHours=[];
+    try{aidHours=JSON.parse(form.aid_station_hours.value||'[]');}catch(ex){}
+    if(!email||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){
+      alert('Please enter a valid email address.');return;
+    }
+    if(!weightLbs||weightLbs<80){
+      alert('Please enter your weight in lbs.');return;
+    }
+    if(!hours||hours<=0) hours=6;
+    var result=computePersonalized(weightLbs,ftp,hours);
+    if(!result){alert('Could not compute — check your inputs.');return;}
+    var hydration=computeSweatRate(weightLbs,climateHeat,sweatTendency,hours);
+    var sodium=hydration?computeSodium(hydration.sweatRate,climateHeat,crampHistory):null;
+    var fluidMlHr=hydration?Math.round((hydration.fluidLoMl+hydration.fluidHiMl)/2):750;
+    var sodiumMgHr=sodium?sodium.sodiumMgHr:1000;
+    var plan=computeHourlyPlan(hours,result.rate,fluidMlHr,sodiumMgHr,fuelFormat,aidHours);
+    renderResults(result,hydration,sodium,plan,hours);
+    /* Show Substack iframe */
+    var ss=document.getElementById('rl-pk-calc-substack');
+    if(ss) ss.style.display='block';
+    /* Cache email in localStorage */
+    try{
+      localStorage.setItem(LS_KEY,JSON.stringify({email:email,exp:Date.now()+EXPIRY_DAYS*86400000}));
+    }catch(e){}
+    /* Fire-and-forget POST to Worker */
+    var payload={
+      email:email,weight_lbs:weightLbs,race_slug:form.race_slug.value,
+      race_name:form.race_name.value,
+      height_ft:form.height_ft?form.height_ft.value:'',
+      height_in:form.height_in?form.height_in.value:'',
+      age:form.age?form.age.value:'',ftp:ftp,target_hours:hours,
+      personalized_rate:result.rate,total_carbs:result.totalCarbs,
+      fluid_target_ml_hr:fluidMlHr,sodium_mg_hr:sodiumMgHr,
+      sweat_tendency:sweatTendency,fuel_format:fuelFormat,
+      cramp_history:crampHistory,climate_heat:climateHeat,
+      website:form.website.value
+    };
+    fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
+    /* GA4 event */
+    if(typeof gtag==='function'){
+      gtag('event','pk_fueling_submit',{race_slug:form.race_slug.value,has_ftp:ftp?'yes':'no',climate:climateHeat});
+    }
+  });
+})();"""
+
+
+def build_pk_email_gate(rd: dict) -> str:
+    """Build email gate overlay that blocks content until email is provided.
+
+    Shows section title previews with blur to give users a reason to unlock.
+    """
+    name = esc(rd["name"])
+    slug = esc(rd["slug"])
+    # Section titles users can see through the gate (teaser)
+    preview_sections = [
+        ("01", "12-Week Training Timeline"),
+        ("02", "Race Briefing"),
+        ("03", "Race Week Protocol"),
+        ("04", "Equipment & Tire Setup"),
+        ("05", "Race Morning Routine"),
+        ("06", "Fueling Calculator & Aid Stations"),
+        ("07", "In-Race Decision Tree"),
+        ("08", "Travel & Logistics"),
+    ]
+    preview_html = "".join(
+        f'<div class="rl-pk-gate-preview-item">'
+        f'<span class="rl-pk-gate-preview-num">{num}</span>'
+        f'<span class="rl-pk-gate-preview-label">{label}</span>'
+        f'</div>'
+        for num, label in preview_sections
+    )
+    return f'''<div class="rl-pk-gate" id="rl-pk-gate">
+    <div class="rl-pk-gate-inner">
+      <div class="rl-pk-gate-badge">FREE DOWNLOAD</div>
+      <h2 class="rl-pk-gate-title">Unlock Your {name} Prep Kit</h2>
+      <p class="rl-pk-gate-text">12-week training timeline, race-day checklists, packing list, and a personalized fueling calculator — free, instant access.</p>
+      <div class="rl-pk-gate-preview">{preview_html}</div>
+      <form class="rl-pk-gate-form" id="rl-pk-gate-form" autocomplete="off">
+        <input type="hidden" name="race_slug" value="{slug}">
+        <input type="hidden" name="race_name" value="{name}">
+        <input type="hidden" name="website" value="">
+        <input type="email" id="rl-pk-gate-email" name="email" required placeholder="your@email.com" class="rl-pk-gate-input" aria-label="Email address">
+        <button type="submit" class="rl-pk-gate-btn">UNLOCK PREP KIT</button>
+      </form>
+      <p class="rl-pk-gate-fine">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>'''
+
+
+def build_howto_schema(name: str, slug: str, canonical: str, has_full: bool) -> str:
+    """Build HowTo + BreadcrumbList JSON-LD schema for prep kit pages."""
+    steps = [
+        {"name": "12-Week Training Timeline", "text": "Follow a periodized Base/Build/Peak/Taper training plan calibrated to your race distance and terrain."},
+        {"name": "Race Briefing", "text": "Community-sourced race intelligence: what riders say about the course, conditions, and what to expect on race day."},
+        {"name": "Race Week Countdown", "text": "Execute a 7-day taper protocol: reduce volume, lock in nutrition, and finalize logistics."},
+        {"name": "Equipment & Packing Checklist", "text": "Assemble race-day gear including tire setup, climate-specific clothing, and repair kit."},
+        {"name": "Race Morning Protocol", "text": "Follow a timed pre-race morning routine from alarm to start line: eat, hydrate, warm up, check gear."},
+        {"name": "Race-Day Fueling & Aid Stations", "text": "Execute your carb-per-hour fueling plan with gut-trained nutrition strategy and aid station strategy."},
+        {"name": "In-Race Decision Tree", "text": "Handle race-day problems — bonking, cramping, mechanicals, weather — with pre-planned decision frameworks."},
+        {"name": "Travel & Logistics", "text": "Plan your trip: airport, lodging, parking, packet pickup, and budget."},
+        {"name": "Post-Race Recovery", "text": "Follow immediate and multi-day recovery protocols to minimize damage and return to training safely."},
+    ]
+    if has_full:
+        steps.insert(1, {"name": "Race-Specific Non-Negotiables", "text": "Complete must-do training milestones specific to this race before race day."})
+
+    howto_steps = []
+    for i, step in enumerate(steps, 1):
+        howto_steps.append({
+            "@type": "HowToStep",
+            "position": i,
+            "name": step["name"],
+            "text": step["text"],
+        })
+
+    schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+                    {"@type": "ListItem", "position": 3, "name": name, "item": f"{SITE_BASE_URL}/race/{slug}/"},
+                    {"@type": "ListItem", "position": 4, "name": "Prep Kit", "item": canonical},
+                ],
+            },
+            {
+                "@type": "HowTo",
+                "name": f"How to Prepare for {name}",
+                "description": f"Free 12-week race prep kit for {name}: training timeline, checklists, fueling calculator, and race-day strategy.",
+                "totalTime": "P84D",
+                "step": howto_steps,
+            },
+        ],
+    }
+    return json.dumps(schema, ensure_ascii=False, indent=2)
+
+
+def generate_prep_kit_page(rd: dict, raw: dict, guide_sections: dict) -> str:
+    """Assemble the complete prep kit HTML page."""
+    slug = rd["slug"]
+    name = rd["name"]
+    canonical = f"{SITE_BASE_URL}/race/{slug}/prep-kit/"
+
+    header = build_pk_header(rd, raw)
+    gate = build_pk_email_gate(rd)
+
+    gated_sections = [
+        build_pk_training_timeline(guide_sections, raw, rd),
+        build_pk_non_negotiables(raw),
+        build_race_intelligence(rd, raw),            # Task 3: Race Briefing
+        build_pk_race_week(guide_sections, raw),
+        build_pk_equipment(guide_sections, raw, rd),
+        build_pk_race_morning(guide_sections, rd),
+        build_pk_fueling(guide_sections, raw, rd),
+        build_pk_decision_tree(guide_sections, rd),
+        build_pk_logistics(raw, rd),               # Task 4: Travel & Logistics
+        build_pk_recovery(guide_sections),
+        build_pk_footer_cta(rd),
+    ]
+
+    gated_body = "\n".join(s for s in gated_sections if s)
+
+    # Renumber sections sequentially (handles generic races skipping Section 02)
+    counter = [0]
+    def _renumber(m):
+        counter[0] += 1
+        return f'<span class="rl-pk-section-num">{counter[0]:02d}</span>'
+    gated_body = re.sub(
+        r'<span class="rl-pk-section-num">\d{2}</span>', _renumber, gated_body
+    )
+
+    mega_footer = get_mega_footer_html()
+    body = f'''{header}
+{gate}
+<div class="rl-pk-gated-content" id="rl-pk-gated-content" style="display:none">
+{gated_body}
+</div>
+{mega_footer}'''
+
+    tokens_css = get_tokens_css()
+    font_css = get_font_face_css("/race/assets/fonts")
+    preload = get_preload_hints("/race/assets/fonts")
+    pk_css = build_prep_kit_css()
+    js = build_prep_kit_js()
+
+    meta_desc = f"Free race prep kit for {name}: 12-week training timeline, race-day checklists, packing list, and fueling strategy."
+    title = f"Free {name} Prep Kit: 12-Week Plan, Checklists & Fueling | Road Labs"
+    has_full = has_full_training_data(raw)
+    schema_jsonld = build_howto_schema(name, slug, canonical, has_full)
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:title" content="{esc(title)}">
+  <meta property="og:description" content="{esc(meta_desc)}">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{SITE_BASE_URL}/og/{slug}.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Road Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{SITE_BASE_URL}/og/{slug}.jpg">
+  <script type="application/ld+json">
+  {schema_jsonld}
+  </script>
+  {preload}
+  <style>
+{font_css}
+{tokens_css}
+{pk_css}
+  </style>
+  <!-- GA4 -->
+  {get_ga4_head_snippet()}
+</head>
+<body>
+<div class="rl-pk-page">
+{body}
+</div>
+<script>
+{js}
+</script>
+{get_consent_banner_html()}
+</body>
+</html>'''
+
+
+# ── CLI ───────────────────────────────────────────────────────
+
+
+def generate_single(slug: str, data_dirs: list, output_dir: Path,
+                    guide_sections: dict) -> bool:
+    """Generate prep kit for a single race. Returns True on success."""
+    filepath = find_data_file(slug, data_dirs)
+    if not filepath:
+        print(f"  SKIP  {slug} — data file not found")
+        return False
+
+    rd = load_race_data(filepath)
+    raw = load_raw_training_data(filepath)
+    page_html = generate_prep_kit_page(rd, raw, guide_sections)
+
+    out_file = output_dir / f"{slug}.html"
+    out_file.write_text(page_html, encoding="utf-8")
+    tier = "full" if has_full_training_data(raw) else "generic"
+    print(f"  OK    {slug} ({tier})")
+    return True
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Generate Race Prep Kit pages for gravel race profiles."
+    )
+    parser.add_argument("slug", nargs="?", help="Race slug (e.g., unbound-200)")
+    parser.add_argument("--all", action="store_true", help="Generate for all races")
+    parser.add_argument("--data-dir", help="Primary data directory")
+    parser.add_argument("--output-dir", default=None, help="Output directory")
+    args = parser.parse_args()
+
+    if not args.slug and not args.all:
+        parser.error("Provide a race slug or use --all")
+
+    project_root = Path(__file__).parent.parent
+    data_dirs = []
+    if args.data_dir:
+        data_dirs.append(Path(args.data_dir))
+    data_dirs.append(project_root / "race-data")
+
+    output_dir = Path(args.output_dir) if args.output_dir else OUTPUT_DIR
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Load guide content once
+    guide_sections = load_guide_sections()
+    print(f"Loaded {len(guide_sections)} guide sections")
+
+    if args.all:
+        primary = None
+        for d in data_dirs:
+            d = Path(d)
+            if d.exists() and list(d.glob("*.json")):
+                primary = d
+                break
+        if not primary:
+            print("ERROR: No race data directory found")
+            return 1
+
+        json_files = sorted(primary.glob("*.json"))
+        ok_count = 0
+        fail_count = 0
+        full_count = 0
+        generic_count = 0
+
+        for jf in json_files:
+            slug = jf.stem
+            filepath = find_data_file(slug, data_dirs)
+            if not filepath:
+                fail_count += 1
+                continue
+            try:
+                rd = load_race_data(filepath)
+                raw = load_raw_training_data(filepath)
+                page_html = generate_prep_kit_page(rd, raw, guide_sections)
+                out_file = output_dir / f"{slug}.html"
+                out_file.write_text(page_html, encoding="utf-8")
+                ok_count += 1
+                if has_full_training_data(raw):
+                    full_count += 1
+                else:
+                    generic_count += 1
+            except Exception as e:
+                print(f"  FAIL  {slug}: {e}")
+                fail_count += 1
+
+        print(f"\nGenerated {ok_count} prep kits ({full_count} full, {generic_count} generic)")
+        if fail_count:
+            print(f"Failed: {fail_count}")
+        return 1 if fail_count else 0
+
+    else:
+        success = generate_single(args.slug, data_dirs, output_dir, guide_sections)
+        return 0 if success else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

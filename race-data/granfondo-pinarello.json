@@ -1,0 +1,283 @@
+{
+  "race": {
+    "name": "Granfondo Pinarello — La Pina",
+    "slug": "granfondo-pinarello",
+    "display_name": "Granfondo Pinarello",
+    "tagline": "155 km through Pinarello's backyard. The Muro di Ca' del Poggio. The Prosecco Hills. The brand that built Indurain's and Froome's bikes invites you to ride their roads.",
+    "vitals": {
+      "distance_km": 158.0,
+      "distance_mi": 98.0,
+      "elevation_m": 2499,
+      "elevation_ft": 8200.0,
+      "location": "Treviso, Veneto, Italy",
+      "location_badge": "TREVISO, VENETO, ITALY",
+      "country": "Italy",
+      "date": "Mid-July annually",
+      "date_specific": "2026: July 12",
+      "field_size": "5,000-6,000 riders",
+      "start_format": null,
+      "registration": "Online via granfondopinarello.com. Typically €50-75 depending on registration period.",
+      "entry_fee": "€50-75",
+      "feed_zones": "Multiple feed zones with Italian-style refreshments — water, fruit, energy bars, and the occasional Prosecco at the top of a climb.",
+      "cutoff_time": "Generous cutoff. SAG vehicles available on course.",
+      "lat": 45.6669,
+      "lng": 12.243,
+      "route_options": [
+        "155 km Gran Fondo (~96 mi, ~2,500m climbing)",
+        "90 km Medio Fondo (~56 mi)"
+      ]
+    },
+    "climate": {
+      "primary": "Mid-July Veneto heat — hot and humid",
+      "description": "Mid-July in the Treviso province is Italian summer at full intensity. Temperatures reach 85-95F (30-35C) with Po Valley humidity adding to the discomfort. The foothills provide occasional shade, but the valley floors and exposed road sections bake. Afternoon thunderstorms are possible but not common.",
+      "challenges": [
+        "Temperatures 85-95F (30-35C) with high humidity",
+        "Po Valley humidity amplifies the heat index",
+        "Exposed valley roads between climbs offer no shade",
+        "Steep wall climbs in heat compound the suffering"
+      ]
+    },
+    "terrain": {
+      "primary": "Veneto pre-Alpine roads with sharp wall climbs",
+      "surface": "Paved Italian roads — mostly good quality. Rolling terrain through Prosecco vineyards and pre-Alpine foothills with several sharp climbs. The Muro di Ca' del Poggio is the signature feature: a Giro d'Italia staple wall that ramps to 18% in places.",
+      "technical_rating": 2,
+      "features": [
+        "Muro di Ca' del Poggio — short, savage Giro d'Italia wall (18% ramps)",
+        "Prosecco Hills — UNESCO World Heritage vineyard rollers",
+        "Montello climb — forested ascent through the pre-Alps",
+        "Italian road surfaces — generally good but occasional rough patches on narrow climbs"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling Veneto pre-Alpine terrain punctuated by short, savage wall climbs. The route leaves Treviso and winds through the Prosecco Hills — UNESCO-protected vineyard country — before hitting the Muro di Ca' del Poggio, a Giro d'Italia wall that ramps to 18% and leaves you wondering why you didn't fit a 34-tooth cassette. The Montello climb adds a longer, forested ascent. Between the signature climbs, the terrain is rolling and fast on good Italian tarmac.",
+      "signature_challenge": "The Muro di Ca' del Poggio — a 1.2 km Giro d'Italia wall with ramps to 18%. Short, savage, and impossible to pace if you don't know it's coming.",
+      "suffering_zones": [
+        "Treviso Start",
+        "Prosecco Hills",
+        "Muro di Ca' del Poggio",
+        "Montello and Home"
+      ]
+    },
+    "logistics": {
+      "airport": "Venice Marco Polo (VCE) — 30 minutes to Treviso. Treviso Airport (TSF) — budget airline hub, even closer. Milan Malpensa (MXP) — 3 hours drive.",
+      "lodging_strategy": "Treviso has modest hotel options. Book early for race weekend. Venice hotels are 30 minutes away but more expensive. Agriturismos in the Prosecco Hills are the atmospheric choice. Budget €80-150/night.",
+      "transport": "",
+      "food": "This is the Veneto. Prosecco, risotto, tiramisu (invented in Treviso). Pre-ride carbo-loading has never been more civilized. Post-ride: find a trattoria and don't rush.",
+      "official_site": "https://www.granfondopinarello.com/"
+    },
+    "history": {
+      "founded": 2004,
+      "origin_story": "Created by Pinarello, the Treviso-based bike manufacturer that has built frames for cycling's greatest champions — from Miguel Indurain's five consecutive Tour de France victories to the Sky/Ineos dynasty of Wiggins, Froome, Thomas, and Bernal. The gran fondo starts from Pinarello's hometown and explores the roads the company has used as a testing ground for decades. The inclusion of the Muro di Ca' del Poggio — a Giro d'Italia classic wall — gives the route legitimate racing heritage.",
+      "notable_moments": [
+        "~2004: First edition launched by Cicli Pinarello from their Treviso headquarters",
+        "Route incorporates the Muro di Ca' del Poggio, a Giro d'Italia stage staple",
+        "Prosecco Hills gained UNESCO World Heritage status in 2019, elevating the route's scenic credentials",
+        "Consistently draws 5,000-6,000 riders as one of the Veneto's signature cycling events"
+      ],
+      "reputation": "The bike brand's backyard ride. Well-organized, scenic, and carrying the weight of Pinarello's legacy."
+    },
+    "biased_opinion": {
+      "verdict": "Pinarello's Backyard",
+      "summary": "Granfondo Pinarello is a brand ride, and it doesn't pretend otherwise. You're riding through the Veneto countryside that shaped one of cycling's most storied manufacturers — the same roads where Pinarello has tested frames for five decades. The Muro di Ca' del Poggio is a genuine Giro landmark: a short, vicious wall that separates riders who brought the right gearing from those who didn't. The Prosecco Hills are UNESCO-lovely. The organization reflects Pinarello's brand standards. What it isn't: a monument, a classic, or an event that transcends its corporate origins. It's a very good Italian gran fondo hosted by a very famous bike company.",
+      "strengths": [
+        "Pinarello heritage: riding the home roads of one of cycling's most iconic brands",
+        "Muro di Ca' del Poggio: a genuine Giro d'Italia wall climb — short, steep, and memorable",
+        "Prosecco Hills: UNESCO World Heritage scenery through working vineyards",
+        "Organization: Pinarello runs this like their brand depends on it (because it does)"
+      ],
+      "weaknesses": [
+        "Brand event: this is ultimately a manufacturer's marketing exercise, however well-executed",
+        "Not epic: 2,500m of climbing is solid but not alpine — won't transform your cycling identity",
+        "July heat: Veneto in mid-July is hot and humid, though not extreme by Italian standards"
+      ],
+      "bottom_line": "The best way to ride Pinarello's home roads and a legitimate Giro wall — just don't confuse a brand event with a monument."
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "Pinarello's own gran fondo through the Prosecco Hills and over the Muro di Ca' del Poggio. The brand ride done right.",
+      "should_you_race": "Yes if you appreciate cycling heritage and want to ride roads shaped by one of the sport's great manufacturers. Yes if you want a well-organized Italian gran fondo with a Giro landmark climb. Skip if you want alpine epicness or an event with its own competitive identity beyond the brand.",
+      "alternatives": "If you want Italian gran fondo with more climbing: try Maratona dles Dolomites. If you want brand heritage with cobblestones: try Strade Bianche Gran Fondo. If you want Veneto cycling without the brand wrapper: try Granfondo Felice Gimondi."
+    },
+    "citations": [
+      {
+        "url": "https://www.granfondopinarello.com/",
+        "category": "official",
+        "label": "Granfondo Pinarello — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pinarello",
+        "category": "reference",
+        "label": "Pinarello — Wikipedia"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo Pinarello — La Pina gran fondo cycling Treviso",
+      "videos": [
+        {
+          "video_id": "cHGimGzHU1U",
+          "title": "La Pina 2012 pinarello gran fondo",
+          "channel": "rideventuresvideo",
+          "view_count": 450,
+          "upload_date": "20121223",
+          "duration_string": "5:17",
+          "description": "start from treviso and first hill climb in the dolomites july 2012",
+          "tags": [
+            "gran fondo cycling trip"
+          ],
+          "url": "https://www.youtube.com/watch?v=cHGimGzHU1U",
+          "transcript": "foreign\n[Applause]\n[Music]\nthank you",
+          "curated": false
+        },
+        {
+          "video_id": "SA9XYjY_KJ0",
+          "title": "Granfondo Pinarello 2018",
+          "channel": "Pinarello Official",
+          "view_count": 9432,
+          "upload_date": "20180809",
+          "duration_string": "2:48",
+          "description": "Rivivi le emozioni della Granfondo Pinarello disputatasi il 15 luglio 2018. Istanti e sensazioni provate affrontando le salite della nostra provincia, tra le quali non potrai dimenticare l'ormai leggendario “MURO DI CA’ DEL POGGIO” teatro di grandi sfide ciclistiche.",
+          "tags": [
+            "GFP18",
+            "granfondopinarello",
+            "treviso",
+            "circuitomaglianera2018",
+            "grandprixmaglianera",
+            "granfondo",
+            "forestadelcansiglio",
+            "murodicàdelpoggio",
+            "alèchallange",
+            "ciclismo",
+            "MarcaTrevigiana",
+            "pinarello",
+            "mostbike",
+            "passione",
+            "italia",
+            "rispettoreciproco",
+            "6xAndrea"
+          ],
+          "url": "https://www.youtube.com/watch?v=SA9XYjY_KJ0",
+          "curated": true,
+          "curation_reason": "Recent official race recap highlighting the legendary Muro di Ca' del Poggio climb.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/SA9XYjY_KJ0/hqdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "gJmaRFSJI-M",
+          "title": "Elite RealVideo DVDs Granfondo Pinarello preview",
+          "channel": "Elite RealVideo",
+          "view_count": 6735,
+          "upload_date": "20131210",
+          "duration_string": "2:09",
+          "description": "Granfondo Pinarello introduces us to some fascinating landscapes around Treviso, dedicated to those who love to ride where nature's richer. Race starts in Treviso's city centre, then right away you're facing the mesmerising Collalto Castle climb, then on to Combai in the Prosecco hills and finally the classic Montello Presa XIII, an unmissable challenge for a cyclist: a 4-km uphill climb that gets to 12% slope in some areas, an effort well repaid by the beautiful scenery. Thousands of cyclists from all over the world compete each year in the Pina Cycling Marathon.",
+          "tags": [
+            "Elite bike training",
+            "elite training",
+            "elite indoor training",
+            "Real video",
+            "video corse",
+            "road",
+            "bike",
+            "home trainer",
+            "indoor trainer",
+            "ciclista",
+            "videoraces",
+            "turbo trainer",
+            "fitness",
+            "allenamento",
+            "realpower",
+            "real power",
+            "real tour",
+            "realtour",
+            "real axiom",
+            "realaxiom",
+            "real software",
+            "treviso",
+            "pinarello",
+            "granfondo"
+          ],
+          "url": "https://www.youtube.com/watch?v=gJmaRFSJI-M",
+          "curated": true,
+          "curation_reason": "Detailed course preview showing key climbs including Montello Presa XIII with specific terrain details.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/gJmaRFSJI-M/maxresdefault.jpg",
+          "thumbnail_score": 90.86
+        },
+        {
+          "video_id": "vEvdvLx38iY",
+          "title": "PINARELLO GRANFONDO 2022",
+          "channel": "Rich B",
+          "view_count": 276,
+          "upload_date": "20220710",
+          "duration_string": "4:04",
+          "description": "My experience in joining the 25th #PINARELLOGRANFONDO2022",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=vEvdvLx38iY",
+          "transcript": "[Music]\nthank you\n[Applause]\nforeign\nthis is\nand guys",
+          "curated": false
+        },
+        {
+          "video_id": "pl6ybXQ7jbQ",
+          "title": "La Ventesima Granfondo Pinarello 10.07.2016",
+          "channel": "Pinarello Official",
+          "view_count": 29210,
+          "upload_date": "20160714",
+          "duration_string": "3:56",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=pl6ybXQ7jbQ",
+          "curated": true,
+          "curation_reason": "Official race video with highest view count showing the 20th anniversary edition.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/pl6ybXQ7jbQ/hqdefault.jpg",
+          "thumbnail_score": 92.0
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The available transcript for the Granfondo Pinarello race in Treviso, Veneto, Italy contains minimal rider commentary, consisting primarily of music, applause, and brief fragments. No specific information about the 98-mile course, 8,200 feet of elevation gain, terrain conditions, or race challenges is provided in the transcript. Riders seeking detailed intelligence about this Tier 2 gravel event would need additional video sources with more comprehensive commentary to understand course features, surface conditions, key climbs, gear recommendations, or race strategy advice."
+      }
+    }
+  }
+}

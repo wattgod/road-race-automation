@@ -1,0 +1,236 @@
+{
+  "race": {
+    "name": "GranFondo Klasika San Sebastián",
+    "slug": "granfondo-san-sebastian",
+    "display_name": "GranFondo San Sebastián",
+    "tagline": "170 km on the roads of the Clásica San Sebastián. Jaizkibel above the Bay of Biscay. The amateur edition of a WorldTour monument.",
+    "vitals": {
+      "distance_km": 170.6,
+      "distance_mi": 106.0,
+      "elevation_m": 3000,
+      "elevation_ft": 9843.0,
+      "location": "San Sebastián (Donostia), Basque Country, Spain",
+      "location_badge": "SAN SEBASTIÁN, BASQUE COUNTRY, SPAIN",
+      "country": "Spain",
+      "date": "Mid-July annually (same weekend as pro Clásica San Sebastián)",
+      "date_specific": "2026: July 11",
+      "field_size": "3,000-4,000 riders",
+      "start_format": null,
+      "registration": "Online via klasika.eus. Typically €50-80 depending on registration period.",
+      "entry_fee": "€50-80",
+      "feed_zones": "Multiple feed zones along the route with water, electrolytes, fruit, and energy bars. Medical support at key points.",
+      "cutoff_time": "Generous cutoff with SAG support on course.",
+      "lat": 43.3183,
+      "lng": -1.9812,
+      "route_options": [
+        "170 km Gran Fondo (~106 mi, ~3,000m climbing)",
+        "100 km Medio Fondo (~62 mi)"
+      ]
+    },
+    "climate": {
+      "primary": "Basque Atlantic — mild but unpredictable",
+      "description": "Mid-July in the Basque Country is milder than Mediterranean Spain — daytime temperatures of 65-80F (18-27C). But the Atlantic coast is unpredictable: rain can arrive without warning, fog rolls in from the Bay of Biscay, and wind on exposed coastal roads like Jaizkibel is a constant. You can start in sunshine and hit rain by the time you reach the coast. Pack accordingly.",
+      "challenges": [
+        "Unpredictable Atlantic weather — rain possible any time",
+        "Wind on exposed coastal roads, particularly Jaizkibel",
+        "Fog and mist on coastal headlands",
+        "Temperature variation between inland valleys and coastal exposures"
+      ]
+    },
+    "terrain": {
+      "primary": "Basque Country coastal and inland climbing",
+      "surface": "Paved Basque roads — narrow, winding, and well-maintained. Mix of coastal roads with Atlantic exposure and inland climbs through green valleys. Jaizkibel is the signature climb: a coastal headland ascent exposed to Atlantic winds with views over the Bay of Biscay. Technical descents on narrow, winding Basque roads require attention.",
+      "technical_rating": 2,
+      "features": [
+        "Jaizkibel — exposed coastal headland climb (456m), Atlantic winds, Bay of Biscay views",
+        "Narrow, winding Basque roads with technical descents",
+        "Mix of coastal and inland climbing — constant up and down",
+        "3,000m total climbing across 170 km — relentless"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Relentless Basque terrain — constant climbing through green coastal headlands and inland valleys. The route leaves San Sebastián and winds through the Basque interior before hitting the coast and the signature ascent of Jaizkibel, an exposed headland climb overlooking the Bay of Biscay. The roads are narrow and winding. The terrain never flattens for long — classic Basque geography of short, sharp climbs connected by brief valleys. 3,000m of climbing across 170 km means you're always going up or down.",
+      "signature_challenge": "Jaizkibel — the exposed Atlantic headland climb that defines the Clásica San Sebastián. Wind, views, and history on a 456m coastal ascent.",
+      "suffering_zones": [
+        "San Sebastián Departure",
+        "Inland Basque Climbs",
+        "Jaizkibel",
+        "Coastal Return"
+      ]
+    },
+    "logistics": {
+      "airport": "Bilbao (BIO) — 1.5 hours by car/bus, best international connections. San Sebastián (EAS) — limited domestic flights. Biarritz (BIQ) — 45 minutes, budget airlines from France/UK.",
+      "lodging_strategy": "San Sebastián is a popular tourist destination — book well in advance for race weekend (coincides with peak summer season). Old town (Parte Vieja) is atmospheric but expensive. Gros neighborhood offers better value near the beach. Budget €100-200/night. Consider staying in Hondarribia or Zarautz for cheaper options with easy access.",
+      "transport": "",
+      "food": "San Sebastián has more Michelin stars per capita than anywhere in Europe. But you don't need a reservation — the pintxos bars in the old town are legendary. Stand at the bar, point at what looks good, stack the toothpicks. Pre-ride carbs: tortilla española. Post-ride: pintxos crawl through Parte Vieja.",
+      "official_site": "https://www.klasika.eus/"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "Born as the amateur companion event to the professional Clásica San Sebastián, one of cycling's most prestigious one-day races (WorldTour since 1981, run since 1924). The gran fondo allows amateur riders to tackle the same Basque Country roads — including the iconic Jaizkibel headland climb — that the WorldTour peloton races the following day. The event leverages the professional race's infrastructure and Basque cycling culture.",
+      "notable_moments": [
+        "~2015: First edition launched as the amateur companion to the Clásica San Sebastián",
+        "Route shares key climbs with the WorldTour race, including the iconic Jaizkibel",
+        "Held the day before the professional race, creating a full cycling weekend in San Sebastián",
+        "Grown to 3,000-4,000 riders as the Basque cycling community embraced the format"
+      ],
+      "reputation": "The amateur Clásica. Where you ride Jaizkibel before the pros do."
+    },
+    "biased_opinion": {
+      "verdict": "The Basque Classic",
+      "summary": "GranFondo San Sebastián is the rare amateur event that inherits genuine pro racing DNA. You ride the same Basque roads — including Jaizkibel's exposed Atlantic headland — that the WorldTour peloton will race the next day. That's not marketing; that's the actual route. San Sebastián as a host city is extraordinary: pintxos bars, La Concha beach, old-town atmosphere. The 170 km route with 3,000m of climbing is a proper day's work — relentless Basque rollers that never let you rest. What keeps this from the top tier is independence: strip away the pro race connection, and you have a good Basque gran fondo. But you don't need to strip it away — the connection is the point.",
+      "strengths": [
+        "WorldTour DNA: riding the same roads as the Clásica San Sebastián pro race the day before it happens",
+        "Jaizkibel: iconic coastal headland climb with Atlantic exposure and Bay of Biscay views",
+        "San Sebastián: one of Europe's great cycling cities — pintxos, La Concha beach, Basque culture",
+        "Proper difficulty: 170 km / 3,000m is a demanding day that rewards real preparation"
+      ],
+      "weaknesses": [
+        "Access: San Sebastián's airport is limited — Bilbao (1.5 hours) is the realistic gateway",
+        "Weather roulette: Atlantic climate means you might ride Jaizkibel in fog and rain",
+        "Dependent prestige: the event's identity is inseparable from the pro race — it hasn't fully found its own"
+      ],
+      "bottom_line": "The amateur ticket to a WorldTour classic — ride Jaizkibel on Saturday, watch the pros attack it on Sunday."
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "The amateur edition of a WorldTour classic. Same roads, same Jaizkibel, same Bay of Biscay. One day earlier.",
+      "should_you_race": "Yes if you want to ride a WorldTour route and experience Basque cycling culture in one of Europe's best cities. Yes if you want a genuinely demanding gran fondo (170 km / 3,000m). Skip if you need sunshine guarantees or want an event with its own independent identity.",
+      "alternatives": "If you want a WorldTour-linked gran fondo with guaranteed weather: try Gran Fondo Il Lombardia. If you want Basque Country cycling without the gran fondo format: ride the Jaizkibel yourself. If you want a Spanish gran fondo with more climbing: try La Quebrantahuesos."
+    },
+    "citations": [
+      {
+        "url": "https://www.klasika.eus/",
+        "category": "official",
+        "label": "GranFondo Klasika San Sebastián — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Cl%C3%A1sica_de_San_Sebasti%C3%A1n",
+        "category": "reference",
+        "label": "Clásica de San Sebastián — Wikipedia"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GranFondo Klasika San Sebastián gran fondo cycling San Sebastián (Donostia)",
+      "videos": [
+        {
+          "video_id": "qd7lIpi4CPM",
+          "title": "trek gran fondo san sebastián",
+          "channel": "zarabici",
+          "view_count": 99,
+          "upload_date": "20171010",
+          "duration_string": "2:49",
+          "description": "Marcha cicloturista Gran fondo San Sebastian 2017",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=qd7lIpi4CPM",
+          "curated": false
+        },
+        {
+          "video_id": "yk7k3q-nv0g",
+          "title": "ŠKODA GRAN FONDO SAN SEBASTIAN TREK 2017",
+          "channel": "Win",
+          "view_count": 373,
+          "upload_date": "20171012",
+          "duration_string": "1:03",
+          "description": "Marcha cicloturista de carácter no competitivo que se celebró en la localidad de San Sebastián y en las carreteras de la provincia de Guipúzcoa y la comunidad de Navarra, con salida y llegada en las instalaciones del Velódromo Antonio Elorza.\n\nLa marcha se presenta en dos distancias para adaptarse a las condiciones de ciclistas amateurs y de todos los niveles. Así las modalidades son:\nGRAN FONDO: con un recorrido de 180km y 2.860 m de desnivel positivo\nMEDIO FONDO: con un recorrido de 126km y 2.460 m de desnivel positivo",
+          "tags": [
+            "Haimar",
+            "Trek segafredo",
+            "skoda",
+            "trek",
+            "polar",
+            "gran fondo",
+            "santini",
+            "selle smp",
+            "giro",
+            "camelbak",
+            "mussara",
+            "compressport",
+            "Priorat",
+            "medio Fondo",
+            "Cislismo",
+            "Donosti",
+            "San sebastián",
+            "Velodromo Anoeta",
+            "Velodromo Antonio Elorza",
+            "Euskadi"
+          ],
+          "url": "https://www.youtube.com/watch?v=yk7k3q-nv0g",
+          "curated": false
+        },
+        {
+          "video_id": "Pxx3OhbnJv0",
+          "title": "Gran Fondo Donostia 2017 - Bera Bera",
+          "channel": "Bera Bera Zikloturismoa",
+          "view_count": 615,
+          "upload_date": "20171009",
+          "duration_string": "2:44",
+          "description": "08-10-17",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=Pxx3OhbnJv0",
+          "curated": false
+        },
+        {
+          "video_id": "DiukcEd0VN4",
+          "title": "Classique de Saint Sébastien 1998 - Francesco Casagrande impérial",
+          "channel": "Retro Cycling",
+          "view_count": 173,
+          "upload_date": "20200821",
+          "duration_string": "5:04",
+          "description": "► FaceBook : https://www.facebook.com/groups/LesRoisDuPeloton/\r\n\r\n► Twitter : @emilprod\r\n\r\n⚠️Disclaimer: ➡️ Monetization is disabled. ➡️ Companies that claim rights to my videos are entitled to the monetisations and will earn a profit from my videos if they decide to monetize them. This is not my decision. \r\n\r\n➡️ If you want the video removed, I'd appreciate if you request the video to be globally blocked or muted, since it's hassle to deal with copyright strikes. \r\n\r\n📕Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for \"fair use\" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=DiukcEd0VN4",
+          "curated": false
+        },
+        {
+          "video_id": "VLf8Qc_CZPQ",
+          "title": "DONOSTIA BAIONA DONOSTIA MARTXA ZIKLOTURISTA 2021/09/25",
+          "channel": "Bera bera",
+          "view_count": 1668,
+          "upload_date": "20210913",
+          "duration_string": "2:10",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=VLf8Qc_CZPQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

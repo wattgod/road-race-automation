@@ -1,0 +1,168 @@
+{
+  "race": {
+    "name": "Sovev Jerusalem",
+    "slug": "sovev-jerusalem",
+    "display_name": "Sovev Jerusalem",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 49.9,
+      "distance_mi": 31.0,
+      "elevation_m": 1500,
+      "elevation_ft": 4921.0,
+      "location": "Jerusalem, Israel",
+      "location_badge": "Jerusalem, Israel",
+      "country": "Israel",
+      "date": "2026: May 8",
+      "date_specific": "2026: May 8",
+      "field_size": "7000+",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "3-4",
+      "cutoff_time": "4 hours",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Abundant hotels and hostels in central Jerusalem near start area; book early for event weekend.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Jerusalem's iconic mass cycling celebration blending athletic challenge with historic wonders.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Sovev Jerusalem gran fondo cycling Jerusalem",
+      "videos": [
+        {
+          "video_id": "9HVT4Vgxz9o",
+          "title": "GFNY Jerusalem 130/72Km Route Video - 2020",
+          "channel": "Marina Grossmann",
+          "view_count": 16,
+          "upload_date": "20191022",
+          "duration_string": "2:03",
+          "description": "Watch Grand Fondo Jerusalem 2020 Race route video to get an exact idea of the course you are going to ride, the different climbs, location of aid stations, and top landmarks. \n\n---------------\nOUR EXCLUSIVE PACKAGES \nhttps://www.gfnyjerusalem.kenes-tours.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=9HVT4Vgxz9o",
+          "curated": false
+        },
+        {
+          "video_id": "sq8sA_cQEnQ",
+          "title": "Gran Fondo   Cycling Jerusalem at Dawn",
+          "channel": "Zeev Barkan",
+          "view_count": 120,
+          "upload_date": "20131011",
+          "duration_string": "1:26",
+          "description": "Gran Fondo cycling Jerusalem at Dawn uphill slowly and downhill too fast",
+          "tags": [
+            "Gran Fondo",
+            "cycling",
+            "Jerusalem",
+            "Bicycle (Sports Equipment)",
+            "Eventing (Sport)",
+            "sport",
+            "Israel (Country)"
+          ],
+          "url": "https://www.youtube.com/watch?v=sq8sA_cQEnQ",
+          "curated": false
+        },
+        {
+          "video_id": "G93pyoJdgXw",
+          "title": "GFNY Jerusalem 2018",
+          "channel": "David Guedalia",
+          "view_count": 54,
+          "upload_date": "20180429",
+          "duration_string": "1:03",
+          "description": "GFNY Jerusalem 2018",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=G93pyoJdgXw",
+          "curated": false
+        },
+        {
+          "video_id": "7H-a8-jaNK8",
+          "title": "Cycling for Palestine - Give to Jerusalem",
+          "channel": "Ahmad Abunameh",
+          "view_count": 54,
+          "upload_date": "20140208",
+          "duration_string": "4:25",
+          "description": "The next cycling event on Friday March 28, 2014 at the Dead sea.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=7H-a8-jaNK8",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "race": {
+    "name": "GFNY Bali",
+    "slug": "gfny-bali",
+    "display_name": "GFNY Bali",
+    "tagline": "A GFNY World series gran fondo that climbs from Bali's black-sand coast to the crater rim of Kintamani volcano. Tropical heat, 2,230 meters of climbing through rice terraces and temple villages, and the Island of the Gods as your backdrop.",
+    "vitals": {
+      "distance_km": 136.8,
+      "distance_mi": 85.0,
+      "elevation_m": 2230,
+      "elevation_ft": 7316.0,
+      "location": "Lebih, Klungkung, Bali, Indonesia",
+      "location_badge": "BALI, INDONESIA",
+      "country": "Indonesia",
+      "date": "February annually (historically variable — August in 2022-2023, February in 2025-2026)",
+      "date_specific": "2026: February 15 (tentative)",
+      "field_size": "~1,200-1,500 riders from 45+ countries",
+      "start_format": null,
+      "registration": "Online via gfny.cc. Cost: ~$210 USD. Includes race jersey, finisher medal, chip timing, aid stations, after-race buffet.",
+      "entry_fee": "~$210",
+      "feed_zones": "Multiple aid stations along course supplying water, isotonic drinks, and fruit",
+      "cutoff_time": "Course support closes approximately 8 hours after start",
+      "lat": -8.5765,
+      "lng": 115.4072,
+      "route_options": [
+        "Long Course: 134 km (~85 miles), ~2,230m (~7,316 ft) elevation gain — full Kintamani volcano ascent",
+        "Medium Course: 94 km (~58 miles), ~1,112m (~3,648 ft) elevation gain — shorter mountain route"
+      ]
+    },
+    "climate": {
+      "primary": "Tropical equatorial — hot, humid, with potential monsoon rain",
+      "description": "Bali sits 8 degrees south of the equator, delivering year-round tropical heat. Race-day temperatures range from 75-90F (24-32C) depending on elevation, with humidity averaging 75-85%. The coastal start zone is the hottest — sticky, airless tropical heat at sea level. As the course climbs toward Kintamani at 1,500 meters, temperatures drop noticeably but humidity persists. February falls within Bali's wet season, meaning afternoon thunderstorms are common, though the early morning start usually beats the worst rain. The combination of equatorial sun, high humidity, and sustained climbing creates a thermoregulation crisis that northern-hemisphere riders consistently underestimate. Sweat doesn't evaporate. Core temperature rises. The volcano doesn't care about your FTP.",
+      "challenges": [
+        "Equatorial heat (up to 90F/32C at sea level) with 75-85% humidity — sweat evaporation is severely compromised",
+        "Sustained climbing in tropical heat: 2,230m of elevation gain while overheating is a dangerous combination",
+        "February wet season: potential monsoon rain on descent, making steep volcanic roads slippery",
+        "Temperature swing from ~32C at the coast to ~20C at the Kintamani crater rim — body must adapt mid-ride",
+        "Direct equatorial sun exposure on open road sections with limited shade"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved volcanic mountain roads with sustained climbing",
+      "surface": "Paved roads throughout. Surface quality varies from smooth main highways to rougher village roads with occasional cracks and debris. The climb to Kintamani is on well-maintained provincial road but steep gradients (8-12% in sections) demand low gearing. Descents are fast and technical with sharp switchbacks through village areas. No gravel or unpaved sections.",
+      "technical_rating": 2,
+      "features": [
+        "Km 0-20: Coastal start from Lebih, rolling terrain through lowland villages and rice paddies",
+        "Km 20-50: Progressive climbing begins — the road tilts upward through terraced rice fields and jungle",
+        "Km 50-75: The main Kintamani ascent — sustained climbing to the volcanic crater rim at ~1,500m elevation",
+        "Kintamani crater rim: Spectacular views of Lake Danau Batur and Mount Batur volcano",
+        "Km 75-100: Technical descent through mountain villages, temple towns, and monkey forest areas",
+        "Km 100-134: Return to coastal plain, rolling terrain back to Lebih finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A point-to-summit-and-back volcanic mountain gran fondo that starts at Bali's coast, climbs relentlessly through the island's cultural and agricultural heartland to the rim of the Kintamani volcanic caldera, then descends back to the sea. The course is defined by one sustained ascent and one sustained descent, bookended by rolling coastal terrain. The climbing is not Alpine-steep but it is Alpine-long, and the tropical heat transforms moderate gradients into savage efforts. The Kintamani crater rim provides the emotional and physical summit — a view of Lake Danau Batur and Mount Batur that rewards every watt spent getting there.",
+      "signature_challenge": "The Kintamani volcano ascent. A 25-30 km sustained climb from the lowland rice terraces to the volcanic crater rim at 1,500 meters, performed in equatorial tropical heat. The gradient is steady (4-6% average, 8-12% pitches) but the length and conditions make it brutal. This is where the race breaks apart every year — the lead group of 15-20 fragments to 5-7 by the summit. The crater rim view of Lake Danau Batur is the payoff: one of the most dramatic summit finishes (mid-course) in world gran fondo cycling.",
+      "suffering_zones": [
+        "Coastal Start — Lebih to Lowland Villages",
+        "The Rice Terrace Climb — Ascending Through the Paddies",
+        "Kintamani — The Volcano Wall",
+        "The Descent — Crater Rim to Ubud",
+        "The Coastal Return — Rolling Heat to Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Ngurah Rai International Airport (DPS) in Denpasar — Bali's sole airport and a major Southeast Asian hub. Direct flights from Singapore (~2.5 hrs), Kuala Lumpur (~3 hrs), Sydney (~6 hrs), Tokyo (~7 hrs), and several Middle Eastern hubs connecting Europe. From the US, connections via Tokyo, Singapore, or Doha are typical, with total travel times of 20-30 hours.",
+      "lodging_strategy": "The start/finish area near Lebih in Klungkung regency is the practical base. Budget guesthouses from $30-50/night are plentiful. Mid-range hotels $50-120/night. The GFNY VIP package includes accommodation at a partner hotel (historically The Mansion in Ubud). Ubud — Bali's cultural capital — is 30-40 minutes from the start and offers world-class hotels, restaurants, and cultural attractions. Beachside resorts in Sanur or Seminyak are 60-90 minutes away and may appeal for post-race vacation days. Book 2-4 weeks in advance for race weekend.",
+      "transport": "",
+      "food": "Bali's food scene is exceptional and affordable. Warungs (local restaurants) serve nasi goreng, satay, gado-gado, and fresh seafood for $2-5 per meal. Ubud offers international cuisine, vegan restaurants, and high-end dining. Pre-race carb-loading is easy with abundant rice and noodle dishes. Hydration strategy is critical — start loading fluids 48 hours before the race and supplement with electrolytes in the tropical heat. Coconut water is everywhere and makes an excellent natural hydration option.",
+      "official_site": "https://bali.gfny.com/"
+    },
+    "history": {
+      "founded": 2019,
+      "origin_story": "GFNY Bali launched in 2019 as the franchise's Southeast Asian expansion play, leveraging Bali's global reputation as a tropical paradise and Indonesia's growing road cycling culture. The Island of the Gods offered what no other GFNY location could: a volcanic mountain climb through rice terraces and Hindu temples, combined with world-class tourism infrastructure. The inaugural edition proved the concept — competitive racing on fully closed roads in one of the most photogenic settings in world cycling. COVID cancelled or disrupted 2020-2021, but the event returned strong in 2022 with the GFNY Asia Championship designation and a record 1,500 riders. The course has evolved across editions, with the start/finish shifting between Sayan Village (Ubud) and Lebih (Klungkung coast), but the Kintamani volcano ascent has remained the consistent centerpiece. In 2025, the 6th edition served as the opening event of the GFNY global season, cementing Bali's role as a flagship Asian location. For 2026, the GFNY Asia Championship title moves to a new GFNY Belitung event, but GFNY Bali appears set to continue as its own edition.",
+      "notable_moments": [
+        "2019: Inaugural GFNY Bali — debut on the 'Island of the Gods' with the Kintamani volcano course",
+        "2020-2021: COVID pandemic disrupts the Indonesian event calendar",
+        "2022: Return with GFNY Asia Championship designation — 1,500 riders set a participation record; Chambers (Hong Kong) and Brittain (South Africa) battle to the finish",
+        "2023: 5th edition hosted by Sayan-Ubud with 1,200 riders; Chambers and Brittain fastest again on the 132 km course with 1,824m climbing",
+        "2025: 6th edition opens the 2025 GFNY season in February — Mitchell and Brittain win Asian Championship titles; 1,000+ riders from 45+ countries",
+        "2026: GFNY Asia Championship moves to new GFNY Belitung event; GFNY Bali continues as standalone edition"
+      ],
+      "reputation": "The most beautiful course in the GFNY calendar. A genuine climbing gran fondo in an exotic tropical setting that delivers adventure, culture, and physiological challenge in equal measure. Regionally prestigious as the GFNY Asia Championship (through 2025), but limited international field depth keeps it below the series' European and NYC events in competitive terms."
+    },
+    "biased_opinion": {
+      "verdict": "The Volcano Gran Fondo",
+      "summary": "GFNY Bali is the rare franchise event that transcends its brand. Strip away the GFNY timing chips and age-group classifications, and you still have one of the most visually spectacular road cycling courses on earth: a 134 km loop from a black-sand volcanic coast through UNESCO-worthy rice terraces and Hindu temple villages to the crater rim of an active volcano, then back down through monkey forests and the cultural heart of Ubud. The Kintamani ascent — 25-30 km of sustained climbing in equatorial heat to 1,500 meters — is a genuine test that combines European mountain-pass difficulty with Southeast Asian thermal punishment. The field is regionally competitive but internationally thin, and the franchise structure means the prestige caps below what this setting deserves. But no other GFNY event — and frankly, very few road cycling events anywhere — can match the combination of volcanic terrain, tropical ecology, and living spiritual culture that Bali delivers from the saddle.",
+      "strengths": [
+        "The Kintamani crater rim ascent: 25-30 km of sustained climbing from sea level to a volcanic caldera overlooking Lake Danau Batur — one of the most dramatic cycling destinations on earth",
+        "Adventure setting without parallel in the GFNY series: rice terraces, Hindu temples, monkey forests, and volcanic geology",
+        "Tropical heat and humidity create a genuine physiological challenge that amplifies every kilometer of climbing",
+        "Bali's affordability once on the ground: world-class hospitality at Southeast Asian prices",
+        "Fully closed roads with extensive police support — the GFNY 'Be a Pro for a Day' experience works exceptionally well in Indonesian culture, where authorities commit seriously to road closures"
+      ],
+      "weaknesses": [
+        "Limited international field depth: the competitive front is decided among 15-20 riders, mostly from the Asia-Pacific region",
+        "Long-haul travel required from the Americas: 20-30 hours of transit time each way, with at least one connection",
+        "Franchise event ceiling: GFNY Bali is not the World Championship, and the Asian Championship title has moved to Belitung for 2026",
+        "February wet season timing: monsoon rain on the volcanic descent is a real risk that could turn a spectacular ride dangerous",
+        "Course variations between editions: reported climbing ranges from 1,824m to 2,230m across years, suggesting the route is not fully standardized"
+      ],
+      "bottom_line": "GFNY Bali is the most beautiful course in the GFNY calendar and arguably the most visually stunning gran fondo in Asia. The volcanic climbing is real, the tropical conditions are punishing, and the cultural immersion is profound. It loses points for franchise structure, limited field depth, and the logistical reality of getting to an Indonesian island. But if you want to climb a volcano through rice terraces and finish on a tropical beach, this is the event. No amount of franchise branding can diminish what Bali delivers as a cycling destination."
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Climb from Bali's black-sand coast to a volcanic crater rim through rice terraces and Hindu temples — the most spectacular setting in the GFNY franchise.",
+      "should_you_race": "Yes if you want a world-class adventure cycling experience wrapped in a GFNY competitive framework. Yes if volcanic terrain, tropical conditions, and Balinese culture sound like the ride of a lifetime. Yes if you're based in the Asia-Pacific region and want a serious climbing gran fondo with professional organization. Skip if field depth matters to you — the competitive front is thin. Skip if you can't handle sustained climbing in equatorial heat. Skip if 20-30 hours of travel from the Americas is a dealbreaker.",
+      "alternatives": "If you want a GFNY with real climbing closer to home: GFNY New York (8,500 ft, World Championship). If you want a tropical GFNY without the climbing: GFNY Cozumel. If you want the GFNY Asia Championship: GFNY Belitung (as of 2026). If you want a volcanic road cycling challenge: Tour de Okinawa or Haute Route Pyrenees."
+    },
+    "citations": [
+      {
+        "url": "https://bali.gfny.com/",
+        "category": "official",
+        "label": "GFNY Bali — Official Site"
+      },
+      {
+        "url": "https://gfny.com/gfny-opens-2025-in-bali-this-sunday/",
+        "category": "official",
+        "label": "GFNY Opens 2025 in Bali This Sunday — GFNY World"
+      },
+      {
+        "url": "https://gfny.com/bali-opened-the-2025-gfny-season/",
+        "category": "official",
+        "label": "Bali Opened the 2025 GFNY Season — Mitchell and Brittain Win Asian Championship — GFNY World"
+      },
+      {
+        "url": "https://gfny.com/1500-racers-at-gfny-championship-asia-in-bali/",
+        "category": "official",
+        "label": "1500 Racers at GFNY Championship Asia in Bali — GFNY World"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/IndexFull/7574/chambers-and-brittain-fastest-at-5th-annual-gfny-bali",
+        "category": "review",
+        "label": "Chambers and Brittain Fastest at 5th Annual GFNY Bali — Gran Fondo Guide"
+      },
+      {
+        "url": "https://veloracycling.com/events/gfny-bali-2026",
+        "category": "review",
+        "label": "GFNY Bali 2026 — Velora Cycling"
+      },
+      {
+        "url": "https://blog.sportograf.com/2020/05/05/gfny-bali-debut-on-the-island-of-gods/",
+        "category": "review",
+        "label": "GFNY Bali — Debut on the Island of Gods — Sportograf"
+      },
+      {
+        "url": "https://balicycling.com/2022/07/05/road-bike-gfny-route/",
+        "category": "review",
+        "label": "Road Bike — GFNY Route — Bali Cycling"
+      },
+      {
+        "url": "https://www.indonesia.travel/nl/en/events/event-detail/gfny-bali-grand-fondo-new-york/",
+        "category": "review",
+        "label": "GFNY Bali (Grand Fondo New York) — Indonesia Travel"
+      },
+      {
+        "url": "https://bali.live/p/a-major-marathon-is-coming-to-bali-while-gfny-bali-2025-has-just-concluded",
+        "category": "news",
+        "label": "GFNY Bali 2025 Has Just Concluded — Bali.live"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GFNY Bali gran fondo cycling Lebih",
+      "videos": [
+        {
+          "video_id": "A2p0MS8r_jc",
+          "title": "GFNY BALI Route Tour with Bali Cycling",
+          "channel": "Bali Cycling",
+          "view_count": 198,
+          "upload_date": "20220628",
+          "duration_string": "1:06",
+          "description": "Subscribe & make sure to enable all push notifications !\nwww.balicycling.com\nInstagram : https://www.instagram.com/balicycling/\nFacebook : https://m.facebook.com/balicycling/",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=A2p0MS8r_jc",
+          "curated": false
+        },
+        {
+          "video_id": "CBGxRqG7bos",
+          "title": "GFNY Bali 2022 full route....ride sepanjang 135 km",
+          "channel": "dewa wirawan",
+          "view_count": 4460,
+          "upload_date": "20220808",
+          "duration_string": "1:05:00",
+          "description": "Created by InShot:https://inshotapp.page.link/YTShare",
+          "tags": [
+            "#InShot"
+          ],
+          "url": "https://www.youtube.com/watch?v=CBGxRqG7bos",
+          "curated": true,
+          "curation_reason": "Full 135km route ride-along video showing the complete GFNY Bali experience with decent view count.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/CBGxRqG7bos/hqdefault.jpg",
+          "thumbnail_score": 87.7
+        },
+        {
+          "video_id": "XxhgkqL_6jQ",
+          "title": "HOW TO CLIMB GATE HILL AT GFNY NYC",
+          "channel": "GFNY World",
+          "view_count": 2790,
+          "upload_date": "20230424",
+          "duration_string": "3:10",
+          "description": "Gate Hill is the second climb of the race, it's a 3.5 k hill with 186m of elevation gain. Gate Hill should be the most feared. More than being physically demanding, it's mentally challenging because it plays tricks on you at a key point during the race. \nLuis Lemus and Flavio de Luna give us some tips and tactics on how to climb Alpine. \n\n#cycling #granfondo",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=XxhgkqL_6jQ",
+          "transcript": "okay Gage Hill the second climb in dfny\nit's definitely one of the key moments\nin dfmy gets pretty hard pretty tough\nattacks start going everywhere coming\nfrom every rider that's left on the\ngroup normally it's a small group coming\ninto this into this climb so you have to\nbe aware of what's happening on your\nsurroundings remember always and I'm\ngonna repeat drink eat before this climb\nand Luis is going to give you this give\nus some technical aspects from this\nclient yeah this climb is 3.5 kilometers\nlong so it's actually not very short\nit's not a huge mountain but it's\ndefinitely it's definitely it has its\ndistance it has an average of 5.2\npercent with maximum gradient of almost\nnine percent just shy of that it's 8.9\nand it has three ramps that it's uh at\nthe beginning in the middle and at the\nvery end that is just shy of nine\npercentage so the climates it's pretty\ntough at the beginning you have that\nramp and you think okay the worst is\ndone but no at the middle section it\nagainst ramp tops again and at the very\nlast it also gets again nine percent and\nthat's not all when you begin this climb\nyou're coming from a right hand turn and\nit's a very very sharp turn so you come\non almost with no speed so it's not an\neasy climb you need to have your gears\nready so it's it's a power climb and\nit's still 3.5 kilometers so you need to\nbe aware of that yes definitely not an\neasy part a lot of energy is going to be\nused in this part of the race so uh\nenjoy do your best in this climb and if\nyou make it over the top you're gonna be\nin a good position to make it all the\nway to the Finish maybe in a in a group\nthat will actually contest the race you\nknow yeah last year uh here is where the\nwhere the winners attack and I said\nwinners because the the last Breakaway\nof the two winners first and second\nplace here's where they attacked and and\nalso to remember that right after the\nthe end of The Climb you take a left\nhand turn you start a small and fast\ndescent and then you get immediately to\ncheese cup so it's actually two climbs\nin one and but it's it's a it's a hard\npart of the race yeah definitely save\nsome energy because uh you have to be in\ngood position you have to make it but\nthere's another gun coming and a lot of\nrollers after this section and also you\nhave to make it out of the park which is\npretty tough yeah so you have to feel\ngood in order to contest it's a race in\nthis position so do your best best of\nluck and hopefully you'll win the race\nyeah enjoy enjoy and suffer this gate\nHill Climb this is gonna be a a pretty\ntough moment but I I can guarantee you\nthat after you cross the finish line at\nthe New York City World Championships\nyou will be happy that that you done it\nyeah definitely\n[Music]",
+          "curated": false
+        },
+        {
+          "video_id": "xC4A_TYBjQ8",
+          "title": "GFNY Bali 2019 Race day",
+          "channel": "Joyride",
+          "view_count": 1327,
+          "upload_date": "20190226",
+          "duration_string": "13:58",
+          "description": "GFNY Bali 2019 Grand Fondo New York Bali 2019 Race day with 2000 cyclist, beautiful view\n\nFor better quality please visit https://youtu.be/VjieVl1bnmw this is new channel for cyclist Hobby",
+          "tags": [
+            "GFNY BALI 2019",
+            "Grand Fondo New York Bali 2019",
+            "Grand Fondo New York Indonesia",
+            "GFNY Indonesia",
+            "GFNY Indonesia 2019"
+          ],
+          "url": "https://www.youtube.com/watch?v=xC4A_TYBjQ8",
+          "curated": true,
+          "curation_reason": "Race day coverage of GFNY Bali with 2000 cyclists, showing race atmosphere and beautiful Bali scenery.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/xC4A_TYBjQ8/maxresdefault.jpg",
+          "thumbnail_score": 69.85
+        },
+        {
+          "video_id": "F6tGzvdm584",
+          "title": "Rumah Luwih as Official Host Hotel at Gran Fondo New York (GFNY) 2020",
+          "channel": "Rumah Luwih Official",
+          "view_count": 41,
+          "upload_date": "20200213",
+          "duration_string": "59",
+          "description": "Gran Fondo New York (GFNY) Bali is the biggest cycling marathon event in Indonesia. With nearly 2000 cyclers from more than 40 countries come together pedaling their bicycle in a challenging routes. Start from 6.30 am at Jalan Prof. Dr. Ida Bagus Mantra, Rumah Luwih will be the host for this annual event where fellow GFNY riders will share race tips and enjoy special race meals.\n\nAn ultimate holiday destination, staying at Rumah Luwih makes it a perfect place to relax and rejuvenate before and after your race.\n\nRumah Luwih will also be hosting sumptuous dinner for cyclers, highlighting wholesome cuisines on carb-loading in preparation of the the big event on 22 February 2020.\n\nWe would like to wish everyone a safe and fantastic race. We look forward to seeing everyone at GFNY 2020.⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=F6tGzvdm584",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [
+          {
+            "name": "Gage Hill",
+            "description": "The second climb is 3.5 kilometers long with 5.2% average gradient and maximum of 8.9%. Has three ramps at beginning, middle, and end that all reach nearly 9%. You come into it from a sharp right-hand turn with almost no speed, so you need gears ready. This is where attacks start going everywhere and where last year's winners made their move.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          },
+          {
+            "name": "Cheese Cup",
+            "description": "Immediately follows Gage Hill after a left-hand turn and small fast descent. It's essentially two climbs in one hard section of the race.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          }
+        ],
+        "terrain_notes": [
+          {
+            "text": "Gage Hill is described as a power climb with three challenging ramps that repeatedly hit you when you think the worst is over.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          }
+        ],
+        "gear_mentions": [
+          {
+            "text": "You need to have your gears ready for Gage Hill since you come into the climb from a very sharp right-hand turn with almost no speed.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          }
+        ],
+        "race_day_tips": [
+          {
+            "text": "Drink and eat before Gage Hill climb. Be aware of what's happening around you as attacks start going everywhere from every rider left in the group.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          },
+          {
+            "text": "Save energy for after Gage Hill because there's another climb (Cheese Cup) coming immediately, plus lots of rollers after this section.",
+            "source_video_ids": [
+              "XxhgkqL_6jQ"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "You have to make it out of the park which is pretty tough, so you have to feel good in order to contest the race in this position.",
+            "source_video_id": "XxhgkqL_6jQ",
+            "source_channel": "GFNY World",
+            "source_view_count": 2790,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "GFNY Bali features two key climbs that define the race outcome. Gage Hill, the second major climb, is a 3.5-kilometer power climb with 5.2% average gradient and maximum pitches of 8.9%. The climb has three distinct ramps at the beginning, middle, and end that all reach nearly nine percent grade. Riders approach from a sharp right-hand turn with minimal speed, making gear selection critical. This is where attacks typically happen and where previous winners made race-winning moves. Immediately after Gage Hill, riders face Cheese Cup climb following a fast descent and left turn, creating a challenging double-climb section. The course continues with rolling terrain and requires riders to navigate out of a park section described as particularly tough."
+      }
+    }
+  }
+}

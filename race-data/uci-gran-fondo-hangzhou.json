@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "UCI Gran Fondo Hangzhou",
+    "slug": "uci-gran-fondo-hangzhou",
+    "display_name": "UCI Gran Fondo Hangzhou",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 1585,
+      "elevation_ft": 5200.0,
+      "location": "Hangzhou, Zhejiang, China",
+      "location_badge": "Hangzhou, China",
+      "country": "China",
+      "date": "2026: October TBD",
+      "date_specific": "2026: October TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://ucigranfondoworldseries.com/en/hangzhou/",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Qiandao Cat 3 Grinder: 3km at 5.2% around km30 tests early legs amid steepest gradient, with lake views taunting tired quads.",
+        "Northern Loop Slog: Post-60km feed, rolling 20mi through villages fatigues accumulatively after climbs, heat building in October sun."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://ucigranfondoworldseries.com/en/hangzhou/"
+    },
+    "history": {
+      "founded": 2024,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Scenic Qiandao Lake UCI qualifier blending Chinese beauty with competitive road punch.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

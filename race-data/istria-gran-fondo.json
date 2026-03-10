@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Istria Gran Fondo",
+    "slug": "istria-gran-fondo",
+    "display_name": "Istria Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 104.6,
+      "distance_mi": 65.0,
+      "elevation_m": 1402,
+      "elevation_ft": 4600.0,
+      "location": "Umag, Istria, Croatia",
+      "location_badge": "Umag, Croatia",
+      "country": "Croatia",
+      "date": "April 11, 2026",
+      "date_specific": "April 11, 2026",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://coloursofistria.com/en/events/istria-granfondo",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Oprtalj Double Punch: Second lap Oprtalj climb after 60km fatigues legs with 5-8% grades amid central Istria heat. Cumulative 1745m forces pacing discipline as groups splinter.",
+        "Late Coastal Drag: Final 20km flats post-loop demand surge to Umag finish against headwinds. Tired bodies contest positions on exposed peninsula roads."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://coloursofistria.com/en/events/istria-granfondo"
+    },
+    "history": {
+      "founded": 2012,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "UCI qualifier through stunning Istrian hills delivers punchy climbs and coastal speed from Umag.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

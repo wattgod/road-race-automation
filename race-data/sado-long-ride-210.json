@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Sado Long Ride 210",
+    "slug": "sado-long-ride-210",
+    "display_name": "Sado Long Ride 210",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 209.2,
+      "distance_mi": 130.0,
+      "elevation_m": 3000,
+      "elevation_ft": 9843.0,
+      "location": "Sado Island, Niigata Prefecture, Japan",
+      "location_badge": "Sado Island, Japan",
+      "country": "Japan",
+      "date": "2026: May 17",
+      "date_specific": "2026: May 17",
+      "field_size": "3000+",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "6+ (Aikawa 19km, Nyuzaki 42km, Washizaki 75km, Ryotsu 103km, Tada 138km, Ogi 163km, Sobama 184km)",
+      "cutoff_time": "12.5 hours (5:30am-6:00pm)",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Available on Sado Island; bib pickup day before (May 16, 12-18:00) at venue.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Japan's premier island road epic: breathtaking coasts meet savage climbs.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

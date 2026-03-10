@@ -1,0 +1,116 @@
+{
+  "race": {
+    "name": "Midnight Sun Randonnée",
+    "slug": "midnight-sun-randonnee",
+    "display_name": "Midnight Sun Randonnée",
+    "tagline": "Epic 1,215 km randonnée across Scandinavia under 24-hour midnight sun, crossing the Arctic Circle with 14,296 m elevation gain.",
+    "vitals": {
+      "distance_km": 1213.4,
+      "distance_mi": 754.0,
+      "elevation_m": 14295,
+      "elevation_ft": 46900.0,
+      "location": "Brännland Inn near Umeå, Sweden to Scandic Plaza hotel in Umeå (loop into Norway to Mo i Rana and Norwegian Sea fjords)",
+      "location_badge": "Subarctic Scandinavia",
+      "country": "Sweden to Scandic Plaza hotel in Umeå (loop into Norway to Mo i Rana and Norwegian Sea fjords)",
+      "date": "mid-June",
+      "date_specific": "2026: June 14",
+      "field_size": "~100",
+      "start_format": null,
+      "registration": "30 EUR non-refundable initial fee; limited spots via reservation",
+      "entry_fee": "30 EUR initial + full fee",
+      "feed_zones": 13,
+      "cutoff_time": "Not specified (randonnée self-paced, typically 3-4 days)",
+      "lat": 63.8284,
+      "lng": 20.2598,
+      "route_options": [
+        "1215 km (1200k only)"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Subarctic mid-June: 24-hour midnight sun daylight; headwinds, rain, drizzle, cold climbs, sunny meadows to snowy peaks; dehydration risks.",
+      "challenges": [
+        "headwinds, rain, drizzle, cold climbs, sunny meadows to snowy peaks",
+        "dehydration risks"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Round-trip loop on asphalt: river valleys/lake shores/fjords; major climbs/descents over snow-capped mountains; Arctic Circle crossing; remote 158 km stretches; some busy traffic.",
+      "technical_rating": 1,
+      "features": [
+        "Round-trip loop on asphalt: river valleys/lake shores/fjords",
+        "major climbs/descents over snow-capped mountains",
+        "Arctic Circle crossing",
+        "remote 158 km stretches",
+        "some busy traffic"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "climate_risk": 5,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 77,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 83. adventure dimension dropped, road_surface added. Score recalculated: 77."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "1,215 km loop from Umeå across Scandinavian peninsula to Norwegian Sea fjords/Mo i Rana and back. 13 controls: Lycksele (122 km), Storuman, Mo i Rana (546 km), Arctic Circle Centre (643 km), Tjaktjaure (722 km), Åmsele (1084 km). Asphalt via river valleys/lakes/fjords; snow-capped climbs to 647 m; 158 km remote stage.\n\n**Suffering Zones:**\n- Early border climb (headwinds/cold);\n- 158 km monotonous remote;\n- Norwegian mountains (snow/rain/narrow frost-damaged roads);\n- Arctic Circle push (722 km isolation).",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Fly Umeå Airport (UME); start Brännland Inn, finish Scandic Plaza; parking/taxi from Mo i Rana; book via site; self-supported (carry gear, no e-bikes/bag drop); helmet/lights required.",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2021,
+      "origin_story": "Founded ~2021 by Randonneurs Laponia; 5th edition 2026; 2022: ~100 starters June 19 23:07, top in 66+ hrs despite headwinds/rain/snow; PBP 2027 qualifier.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Midnight Sun Randonnée delivers raw subarctic adventure: crush 1,215 km of fjords/mountains under eternal sun, self-supported through rain/snow/headwinds. PBP ticket for bargain entry. Elite endurance test minus crowds/tech.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "77/100",
+      "one_liner": "T2 franchise ultra-randonnée: midnight sun elevation beast with Arctic soul.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

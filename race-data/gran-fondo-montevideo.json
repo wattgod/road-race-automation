@@ -1,0 +1,156 @@
+{
+  "race": {
+    "name": "Gran Fondo Montevideo",
+    "slug": "gran-fondo-montevideo",
+    "display_name": "Gran Fondo Montevideo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 130.4,
+      "distance_mi": 81.0,
+      "elevation_m": 512,
+      "elevation_ft": 1679.0,
+      "location": "Montevideo, Uruguay",
+      "location_badge": "Montevideo, Uruguay",
+      "country": "Uruguay",
+      "date": "2026: September TBD",
+      "date_specific": "2026: September TBD",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "2",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Montevideo offers hotels in Ciudad Vieja, near Rambla, and modern areas; day trips to Colonia del Sacramento or Punta del Este possible.[1]",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Flat, fast UCI qualifier along Montevideo's stunning Rambla coastline – Uruguay's premier road gran fondo.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Gran Fondo Montevideo gran fondo cycling Montevideo",
+      "videos": [
+        {
+          "video_id": "OqElwPuebEc",
+          "title": "Gran Fondo Movistar Montevideo",
+          "channel": "ESPORT",
+          "view_count": 328,
+          "upload_date": "20200115",
+          "duration_string": "55",
+          "description": "Luego de una exitosa primera edición en Punta del Este, Gran Fondo Movistar desembarca en Montevideo el próximo 26 de abril para ofrecerles a todos los amantes del ciclismo una nueva experiencia. \n\nEste nuevo evento se desarrollará al más alto nivel y ofrecerá a los corredores la posibilidad de  optar entre dos distancias, en las cuales podrán disfrutar de desafiantes recorridos por parte de los departamentos de Montevideo y Canelones. \n\nSabemos que te mueve la pasión y el deseo de superación. Vení a vivir una nueva experiencia dentro del pelotón de Gran Fondo Movistar Montevideo.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=OqElwPuebEc",
+          "curated": false
+        },
+        {
+          "video_id": "PPKESzU4kHA",
+          "title": "Gran fondo Movistar 2024 Montevideo Uruguay",
+          "channel": "Gastón Umpierrez",
+          "view_count": 3282,
+          "upload_date": "20240422",
+          "duration_string": "40:03",
+          "description": "Primeros 40 minutos del fondo movistar \ndesde la salida hasta donde se divide el circuito",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=PPKESzU4kHA",
+          "curated": true,
+          "curation_reason": "First-person race footage covering the start and course division with good view count.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/PPKESzU4kHA/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "DA1MB5hqy3Y",
+          "title": "ARN TEAM Gran Fondo Montevideo 2025 Carrera Completa con Telemetria",
+          "channel": "ARN TEAM",
+          "view_count": 4072,
+          "upload_date": "20250501",
+          "duration_string": "2:28:09",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=DA1MB5hqy3Y",
+          "curated": true,
+          "curation_reason": "Recent complete race footage with telemetry data providing comprehensive race experience.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/DA1MB5hqy3Y/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

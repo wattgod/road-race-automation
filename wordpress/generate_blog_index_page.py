@@ -1,0 +1,506 @@
+#!/usr/bin/env python3
+"""
+Generate the blog index page at /blog/index.html.
+
+Static HTML with client-side JS that fetches /blog/blog-index.json
+for filtering and sorting. Follows the search widget architectural pattern.
+
+Usage:
+    python wordpress/generate_blog_index_page.py
+    python wordpress/generate_blog_index_page.py --output-dir DIR
+"""
+
+import argparse
+import html as html_mod
+import json
+import sys
+from datetime import date
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
+INDEX_JSON = PROJECT_ROOT / "web" / "blog-index.json"
+SITE_URL = "https://roadlabs.cc"
+
+TIER_COLORS = {1: "#59473c", 2: "#7d695d", 3: "#766a5e", 4: "#5e6868"}
+CAT_LABELS = {"preview": "Race Preview", "roundup": "Season Roundup", "recap": "Race Recap"}
+
+
+def _esc(text):
+    """HTML-escape text."""
+    return html_mod.escape(str(text)) if text else ""
+
+
+def _render_card_ssr(entry):
+    """Server-side render a single blog index card."""
+    cat = entry.get("category", "preview")
+    cat_class = f"rl-bi-cat-{cat}" if cat in ("roundup", "recap") else ""
+    cat_label = CAT_LABELS.get(cat, cat)
+    tier = entry.get("tier", 0)
+    tier_html = ""
+    if tier and 1 <= tier <= 4:
+        color = TIER_COLORS.get(tier, "#5e6868")
+        tier_html = f'<span class="rl-bi-tier" style="background:{color}">T{tier}</span>'
+    date_str = entry.get("date", "")
+    excerpt = entry.get("excerpt", "")
+    if len(excerpt) > 160:
+        excerpt = excerpt[:157] + "..."
+    url = entry.get("url", "")
+    title = _esc(entry.get("title", ""))
+
+    return (
+        f'<div class="rl-bi-card">'
+        f'<div class="rl-bi-card-top">'
+        f'<span class="rl-bi-cat {cat_class}">{_esc(cat_label)}</span>'
+        f'{tier_html}'
+        f'</div>'
+        f'<h3><a href="{_esc(url)}">{title}</a></h3>'
+        f'<div class="rl-bi-date">{_esc(date_str)}</div>'
+        f'<div class="rl-bi-excerpt">{_esc(excerpt)}</div>'
+        f'</div>'
+    )
+
+
+def generate_blog_index_page(output_dir=None):
+    """Generate the blog index HTML page."""
+    out_dir = output_dir or OUTPUT_DIR
+    today = date.today()
+    today_str = today.strftime("%B %d, %Y")
+
+    # Load blog-index.json for SSR (server-side rendered cards)
+    ssr_cards_html = ""
+    ssr_count = 0
+    if INDEX_JSON.exists():
+        try:
+            entries = json.loads(INDEX_JSON.read_text())
+            ssr_count = len(entries)
+            ssr_cards_html = "\n".join(_render_card_ssr(e) for e in entries)
+        except (json.JSONDecodeError, KeyError):
+            pass
+
+    jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Road Labs Blog",
+        "description": "Race previews, season roundups, and race recaps from the Road Labs gravel race database.",
+        "url": f"{SITE_URL}/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Road Labs",
+            "url": SITE_URL,
+        },
+    }, separators=(",", ":"))
+
+    page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Labs Blog — Race Previews, Roundups &amp; Recaps</title>
+  <meta name="description" content="Race previews, season roundups, and race recaps from the Road Labs gravel race database. 328 races rated and ranked.">
+  <meta property="og:title" content="Road Labs Blog — Race Previews, Roundups &amp; Recaps">
+  <meta property="og:description" content="Race previews, season roundups, and race recaps. 328 gravel races rated and ranked.">
+  <meta property="og:url" content="{SITE_URL}/blog/">
+  <link rel="canonical" href="{SITE_URL}/blog/">
+  <script type="application/ld+json">{jsonld}</script>
+  <style>
+    :root {{
+      --rl-dark-brown: #3a2e25;
+      --rl-primary-brown: #59473c;
+      --rl-secondary-brown: #7d695d;
+      --rl-teal: #178079;
+      --rl-light-teal: #4ECDC4;
+      --rl-warm-paper: #f5efe6;
+      --rl-sand: #ede4d8;
+      --rl-white: #ffffff;
+      --rl-gold: #9a7e0a;
+    }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; border-radius: 0; }}
+    body {{
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--rl-warm-paper);
+      color: var(--rl-dark-brown);
+      line-height: 1.7;
+    }}
+    .rl-blog-index {{ max-width: 1100px; margin: 0 auto; padding: 32px 24px; }}
+
+    /* Hero */
+    .rl-bi-hero {{
+      background: var(--rl-primary-brown);
+      color: var(--rl-warm-paper);
+      padding: 48px 32px;
+      border: 3px solid var(--rl-dark-brown);
+      margin-bottom: 24px;
+      text-align: center;
+    }}
+    .rl-bi-hero h1 {{
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }}
+    .rl-bi-hero-sub {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 13px;
+      opacity: 0.7;
+    }}
+
+    /* Filters */
+    .rl-bi-filters {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 16px;
+      border: 2px solid var(--rl-dark-brown);
+      background: var(--rl-white);
+    }}
+    .rl-bi-filter-group {{
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }}
+    .rl-bi-filter-label {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--rl-secondary-brown);
+      margin-right: 4px;
+    }}
+    .rl-bi-chip {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border: 2px solid var(--rl-dark-brown);
+      background: var(--rl-warm-paper);
+      color: var(--rl-dark-brown);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }}
+    .rl-bi-chip:hover {{ background: var(--rl-sand); }}
+    .rl-bi-chip.active {{
+      background: var(--rl-primary-brown);
+      color: var(--rl-warm-paper);
+    }}
+    .rl-bi-sort {{
+      margin-left: auto;
+      font-family: 'Sometype Mono', monospace;
+      font-size: 11px;
+      border: 2px solid var(--rl-dark-brown);
+      padding: 4px 8px;
+      background: var(--rl-warm-paper);
+    }}
+
+    /* Results count */
+    .rl-bi-count {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 11px;
+      color: var(--rl-secondary-brown);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }}
+
+    /* Card Grid */
+    .rl-bi-grid {{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }}
+    .rl-bi-card {{
+      border: 2px solid var(--rl-dark-brown);
+      background: var(--rl-white);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }}
+    .rl-bi-card-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }}
+    .rl-bi-cat {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 2px 8px;
+      border: 1px solid var(--rl-secondary-brown);
+      color: var(--rl-secondary-brown);
+    }}
+    .rl-bi-cat-roundup {{ border-color: var(--rl-teal); color: var(--rl-teal); }}
+    .rl-bi-cat-recap {{ border-color: var(--rl-gold); color: var(--rl-gold); }}
+    .rl-bi-tier {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      color: var(--rl-warm-paper);
+    }}
+    .rl-bi-card h3 {{
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }}
+    .rl-bi-card h3 a {{
+      color: var(--rl-dark-brown);
+      text-decoration: none;
+    }}
+    .rl-bi-card h3 a:hover {{ text-decoration: underline; }}
+    .rl-bi-date {{
+      font-family: 'Sometype Mono', monospace;
+      font-size: 10px;
+      color: var(--rl-secondary-brown);
+      margin-bottom: 8px;
+    }}
+    .rl-bi-excerpt {{
+      font-size: 14px;
+      color: var(--rl-secondary-brown);
+      line-height: 1.5;
+      flex: 1;
+    }}
+
+    /* Empty state */
+    .rl-bi-empty {{
+      text-align: center;
+      padding: 48px;
+      border: 2px solid var(--rl-dark-brown);
+      background: var(--rl-white);
+      font-family: 'Sometype Mono', monospace;
+      font-size: 13px;
+      color: var(--rl-secondary-brown);
+    }}
+
+    /* Footer */
+    .rl-bi-footer {{
+      text-align: center;
+      font-family: 'Sometype Mono', monospace;
+      font-size: 11px;
+      color: var(--rl-secondary-brown);
+      padding: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }}
+    .rl-bi-footer a {{ color: var(--rl-teal); text-decoration: none; }}
+
+    @media (max-width: 900px) {{
+      .rl-bi-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    }}
+    @media (max-width: 600px) {{
+      .rl-bi-hero {{ padding: 32px 20px; }}
+      .rl-bi-hero h1 {{ font-size: 24px; }}
+      .rl-bi-grid {{ grid-template-columns: 1fr; }}
+      .rl-bi-filters {{ flex-direction: column; align-items: flex-start; }}
+      .rl-bi-sort {{ margin-left: 0; }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="rl-blog-index">
+    <div class="rl-bi-hero">
+      <h1>Road Labs Blog</h1>
+      <div class="rl-bi-hero-sub">Race Previews &middot; Season Roundups &middot; Race Recaps</div>
+    </div>
+
+    <div class="rl-bi-filters">
+      <div class="rl-bi-filter-group">
+        <span class="rl-bi-filter-label">Category</span>
+        <button class="rl-bi-chip active" data-filter="category" data-value="all">All</button>
+        <button class="rl-bi-chip" data-filter="category" data-value="preview">Race Previews</button>
+        <button class="rl-bi-chip" data-filter="category" data-value="roundup">Season Roundups</button>
+        <button class="rl-bi-chip" data-filter="category" data-value="recap">Race Recaps</button>
+      </div>
+      <div class="rl-bi-filter-group">
+        <span class="rl-bi-filter-label">Tier</span>
+        <button class="rl-bi-chip active" data-filter="tier" data-value="0">Any</button>
+        <button class="rl-bi-chip" data-filter="tier" data-value="1">T1</button>
+        <button class="rl-bi-chip" data-filter="tier" data-value="2">T2</button>
+        <button class="rl-bi-chip" data-filter="tier" data-value="3">T3</button>
+        <button class="rl-bi-chip" data-filter="tier" data-value="4">T4</button>
+      </div>
+      <select class="rl-bi-sort" id="rl-bi-sort">
+        <option value="date">Newest First</option>
+        <option value="tier">Tier (High&rarr;Low)</option>
+        <option value="alpha">A-Z</option>
+      </select>
+    </div>
+
+    <div class="rl-bi-count" id="rl-bi-count">{ssr_count} article{'s' if ssr_count != 1 else ''}</div>
+    <div class="rl-bi-grid" id="rl-bi-grid">
+      {ssr_cards_html}
+    </div>
+    <div class="rl-bi-empty" id="rl-bi-empty" style="display:none">No articles match your filters.</div>
+
+    <div class="rl-bi-footer">
+      <a href="{SITE_URL}">Road Labs</a> &middot;
+      <a href="{SITE_URL}/gravel-races/">Race Database</a> &middot;
+      {today_str}
+    </div>
+  </div>
+
+  <script>
+  (function() {{
+    var TIER_COLORS = {{1:'#59473c',2:'#7d695d',3:'#766a5e',4:'#5e6868'}};
+    var CAT_LABELS = {{preview:'Race Preview',roundup:'Season Roundup',recap:'Race Recap'}};
+    var blogData = [];
+    var currentCategory = 'all';
+    var currentTier = 0;
+    var currentSort = 'date';
+
+    function loadIndex() {{
+      fetch('/blog/blog-index.json')
+        .then(function(r) {{ return r.json(); }})
+        .then(function(data) {{
+          blogData = data;
+          readUrlParams();
+          render();
+        }})
+        .catch(function() {{
+          document.getElementById('rl-bi-count').textContent = 'Failed to load blog index.';
+        }});
+    }}
+
+    function readUrlParams() {{
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('category')) currentCategory = p.get('category');
+      if (p.get('tier')) currentTier = parseInt(p.get('tier')) || 0;
+      if (p.get('sort')) currentSort = p.get('sort');
+      // Update chip states
+      document.querySelectorAll('[data-filter="category"]').forEach(function(el) {{
+        el.classList.toggle('active', el.dataset.value === currentCategory);
+      }});
+      document.querySelectorAll('[data-filter="tier"]').forEach(function(el) {{
+        el.classList.toggle('active', el.dataset.value === String(currentTier));
+      }});
+      document.getElementById('rl-bi-sort').value = currentSort;
+    }}
+
+    function updateUrl() {{
+      var p = new URLSearchParams();
+      if (currentCategory !== 'all') p.set('category', currentCategory);
+      if (currentTier > 0) p.set('tier', currentTier);
+      if (currentSort !== 'date') p.set('sort', currentSort);
+      var qs = p.toString();
+      var newUrl = window.location.pathname + (qs ? '?' + qs : '');
+      history.replaceState(null, '', newUrl);
+    }}
+
+    function filterAndSort() {{
+      var filtered = blogData.filter(function(e) {{
+        if (currentCategory !== 'all' && e.category !== currentCategory) return false;
+        if (currentTier > 0 && e.tier !== currentTier) return false;
+        return true;
+      }});
+      filtered.sort(function(a, b) {{
+        if (currentSort === 'date') return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+        if (currentSort === 'tier') return (a.tier || 99) - (b.tier || 99) || (b.date > a.date ? 1 : -1);
+        if (currentSort === 'alpha') return a.title.localeCompare(b.title);
+        return 0;
+      }});
+      return filtered;
+    }}
+
+    function renderCard(entry) {{
+      var catClass = 'rl-bi-cat-' + entry.category;
+      var catLabel = CAT_LABELS[entry.category] || entry.category;
+      var tierHtml = '';
+      if (entry.tier > 0) {{
+        var color = TIER_COLORS[entry.tier] || '#5e6868';
+        tierHtml = '<span class="rl-bi-tier" style="background:' + color + '">T' + entry.tier + '</span>';
+      }}
+      var dateStr = entry.date || '';
+      var excerpt = entry.excerpt || '';
+      if (excerpt.length > 160) excerpt = excerpt.substring(0, 157) + '...';
+
+      return '<div class="rl-bi-card">' +
+        '<div class="rl-bi-card-top">' +
+          '<span class="rl-bi-cat ' + catClass + '">' + catLabel + '</span>' +
+          tierHtml +
+        '</div>' +
+        '<h3><a href="' + entry.url + '">' + escHtml(entry.title) + '</a></h3>' +
+        '<div class="rl-bi-date">' + dateStr + '</div>' +
+        '<div class="rl-bi-excerpt">' + escHtml(excerpt) + '</div>' +
+      '</div>';
+    }}
+
+    function escHtml(s) {{
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }}
+
+    function render() {{
+      var items = filterAndSort();
+      var grid = document.getElementById('rl-bi-grid');
+      var empty = document.getElementById('rl-bi-empty');
+      var count = document.getElementById('rl-bi-count');
+
+      count.textContent = items.length + ' article' + (items.length !== 1 ? 's' : '');
+      if (items.length === 0) {{
+        grid.innerHTML = '';
+        empty.style.display = '';
+      }} else {{
+        empty.style.display = 'none';
+        grid.innerHTML = items.map(renderCard).join('');
+      }}
+      updateUrl();
+    }}
+
+    // Event listeners
+    document.querySelectorAll('.rl-bi-chip').forEach(function(chip) {{
+      chip.addEventListener('click', function() {{
+        var filter = this.dataset.filter;
+        var value = this.dataset.value;
+        if (filter === 'category') {{
+          currentCategory = value;
+          document.querySelectorAll('[data-filter="category"]').forEach(function(el) {{
+            el.classList.toggle('active', el.dataset.value === value);
+          }});
+        }} else if (filter === 'tier') {{
+          currentTier = parseInt(value) || 0;
+          document.querySelectorAll('[data-filter="tier"]').forEach(function(el) {{
+            el.classList.toggle('active', el.dataset.value === value);
+          }});
+        }}
+        render();
+      }});
+    }});
+
+    document.getElementById('rl-bi-sort').addEventListener('change', function() {{
+      currentSort = this.value;
+      render();
+    }});
+
+    loadIndex();
+  }})();
+  </script>
+</body>
+</html>"""
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "blog-index.html"
+    out_file.write_text(page_html)
+    print(f"Generated blog index page: {out_file}")
+    return out_file
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate blog index page")
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR,
+                        help="Output directory")
+    args = parser.parse_args()
+
+    generate_blog_index_page(args.output_dir)
+
+
+if __name__ == "__main__":
+    main()

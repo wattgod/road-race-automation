@@ -1,0 +1,282 @@
+{
+  "race": {
+    "name": "Engadin Radmarathon",
+    "slug": "engadin-radmarathon",
+    "display_name": "Engadin Radmarathon",
+    "tagline": "Three days. Five passes. 221 km. 4,000 meters of climbing. Swiss Alpine precision through the Engadin — where glaciers meet UNESCO heritage and every pass tops 2,000 meters.",
+    "vitals": {
+      "distance_km": 220.5,
+      "distance_mi": 137.0,
+      "elevation_m": 4000,
+      "elevation_ft": 13123.0,
+      "location": "Zernez, Engadin Valley, Graubunden, Switzerland",
+      "location_badge": "ZERNEZ, SWITZERLAND",
+      "country": "Switzerland",
+      "date": "First weekend of July annually",
+      "date_specific": "2026: July 3-5",
+      "field_size": "1,500 riders (capped)",
+      "start_format": null,
+      "registration": "Registration via rad-marathon.ch. Opens November 1 for the following year's edition. Combined entry (La Cuorta + La Svizra): CHF 180. Individual stages available.",
+      "entry_fee": "Il Prolog: CHF 50. La Cuorta: CHF 90. La Svizra: CHF 100. Combined (La Cuorta + La Svizra): CHF 180.",
+      "feed_zones": "Well-stocked feed stations at each pass summit and in valley sections. Fruit, energy bars, sports drinks. Bike service available at aid stations. Participants responsible for their own nutrition beyond what is provided.",
+      "cutoff_time": "Time limits enforced at each pass. Routes may be shortened in severe weather at the organizer's discretion.",
+      "lat": 46.697,
+      "lng": 10.094,
+      "route_options": [
+        "Il Prolog (Friday): 6.7 km, 400m climbing — time trial from Zernez to the Ofenpass",
+        "La Cuorta (Saturday): 97 km, 1,367m climbing — 3 passes including Ofenpass, Forcola di Livigno, and Bernina",
+        "La Svizra (Sunday): 117 km, 2,815m climbing — Fluela Pass and Albula Pass via the Landwasser Valley",
+        "Combined total: 221 km, 4,000m+ climbing over 3 days, 5 passes above 2,000m"
+      ]
+    },
+    "climate": {
+      "primary": "Early July high-altitude Alpine",
+      "description": "Early July in the Upper Engadin delivers some of the most reliably sunny weather in the Swiss Alps — the Engadin boasts one of the highest numbers of sunny days in Switzerland. Zernez at 1,473m starts cool in the morning (8-14C / 46-57F). Valley temperatures rise through the day (18-25C / 64-77F), but the passes above 2,000m remain significantly cooler (8-15C / 46-59F). The high starting altitude means even the lowest point of the course rarely gets hot. Average July temperatures in the Engadin hover around 11-12C — bring more layers than you think.",
+      "challenges": [
+        "High-altitude start at 1,473m — even the valleys are cool at 7:00 AM in early July",
+        "Passes above 2,300m (Fluela, Bernina, Albula) bring wind chill and potential for rapid temperature drops",
+        "Afternoon thunderstorms possible above 2,000m, particularly on exposed pass approaches",
+        "Descents from 2,300m+ at speed produce significant wind chill — arm warmers and a gilet are essential",
+        "UV exposure is intense at altitude — sunscreen is critical above 2,000m"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Swiss and Italian Alpine roads",
+      "surface": "Well-maintained Swiss cantonal roads and Italian pass roads. All tarmac throughout. Swiss road quality is characteristically excellent — smooth surfaces, clear markings, wide shoulders where possible. The Munt la Schera tunnel into Livigno is closed to traffic for the event. Pass roads are shared with limited traffic on race day.",
+      "technical_rating": 1,
+      "features": [
+        "Ofenpass (2,149m) — prologue climb from Zernez through the Swiss National Park, 7 km at 5-6% average",
+        "Forcola di Livigno (2,315m) — climbed from the Italian side after crossing into Livigno",
+        "Bernina Pass (2,328m) — rapid succession after Forcola with only a short descent between; glaciers of Piz Bernina and Piz Palu visible",
+        "Fluela Pass (2,383m) — the highest point, 13 km climb from Susch at 6-7% average; the defining climb of La Svizra",
+        "Albula Pass (2,312m) — 26 km approach alongside the UNESCO World Heritage Rhaetian Railway; the emotional finale"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A three-act Alpine drama staged across the Engadin Valley. The Friday prologue is a sharp appetizer: 6.7 km straight up toward the Ofenpass through the Swiss National Park, legs burning from the first pedal stroke. Saturday's La Cuorta is the international chapter: through a closed tunnel into the duty-free Italian enclave of Livigno, over the Forcola di Livigno and the Bernina Pass in rapid succession — with the glaciers of Piz Bernina and Piz Palu gleaming above the descent to Pontresina. Sunday's La Svizra is the masterpiece: the Fluela Pass at 2,383m rising from Susch in 13 km of sustained climbing, a fast descent into Davos, the long Landwasser Valley approach to the Albula Pass alongside the UNESCO World Heritage Rhaetian Railway, and the final descent back into the Engadin to Zernez. The cumulative effect of three days, five passes, and 221 km at altitude is a slow-building immersion in some of the finest cycling terrain in the Alps.",
+      "signature_challenge": "The Albula Pass on Sunday. After two days of Alpine climbing — five passes already in the legs — the 26 km approach from the Landwasser Valley alongside the UNESCO World Heritage Rhaetian Railway is the event's emotional and physical crescendo. The climb is not the steepest, not the highest, not the most dramatic. It is the most relentless — and it comes when you have the least to give.",
+      "suffering_zones": [
+        "Il Prolog — Ofenpass Time Trial",
+        "La Cuorta — Ofenpass to Livigno",
+        "La Cuorta — Forcola and Bernina Double",
+        "La Svizra — Fluela Pass",
+        "La Svizra — Landwasser Valley to Albula Pass"
+      ]
+    },
+    "logistics": {
+      "airport": "Zurich (ZRH) — 3-3.5 hours by train via Chur and the Rhaetian Railway. Innsbruck (INN) — 2.5 hours by car via the Arlberg or Reschen Pass. Milan Malpensa (MXP) — 4 hours via the Bernina or Julier Pass. Engadin Airport Samedan (SMV) — 45 minutes (limited private aviation).",
+      "lodging_strategy": "Stay in Zernez — the start/finish village. Hotels and holiday apartments book out well in advance for the event weekend. The civil defense facility in central Zernez offers bunk beds at CHF 40/night including breakfast (bring your own sleeping bag) — practical and central. Partner hotel packages with 2+ night stays offer special services via the Fan Package. Nearby villages (Susch, Lavin, Guarda) are 10-20 minutes away and offer alternatives if Zernez is full. The Upper Engadin (St. Moritz, Pontresina) is 30-45 minutes away with more options.",
+      "transport": "",
+      "food": "Engadin cuisine is hearty Alpine fare: Capuns (chard rolls with spaetzle), Pizzoccheri (buckwheat pasta), Bundner Barley Soup, and Engadiner Nusstorte (the region's famous walnut tart). Zernez has a handful of restaurants serving traditional Graubunden and Italian-influenced dishes. Swiss prices apply — budget CHF 25-50 for a main course. Feed stations provide standard cycling nutrition.",
+      "official_site": "https://www.rad-marathon.ch/en"
+    },
+    "history": {
+      "founded": 2007,
+      "origin_story": "The Engadin Radmarathon was first organized in 2007 by the municipality of Zernez, leveraging the Lower Engadin's extraordinary position at the crossroads of some of the finest Alpine pass roads in Switzerland. The event was designed to showcase the Engadin Valley — a high-altitude corridor in the canton of Graubunden where Romansh is still spoken and the Swiss National Park provides a wilderness backdrop unique in the Alps. From its inception, the event was built around Swiss Cycling Top Tour standards: top organizational quality, panoramic routes, and a focus on the rider experience rather than pure competition. The three-day format — prologue, two stages — gave the event a mini-stage-race character that distinguished it from single-day sportives. By its 20th edition in 2026, the Engadin Radmarathon had established itself as one of Switzerland's premier cycling events.",
+      "notable_moments": [
+        "2007: Inaugural edition from Zernez — establishing the three-day, five-pass format through the Engadin",
+        "Accepted into the Swiss Cycling Top Tour — Switzerland's quality label for top-tier sportives",
+        "Growth to 1,500-rider capacity — deliberately kept intimate to preserve the Alpine village experience",
+        "La Svizra route established as the queen stage: Fluela Pass and Albula Pass in a single day with 2,815m of climbing",
+        "2026: 20th anniversary edition — July 3-5, three days of Alpine cycling through the Engadin"
+      ],
+      "reputation": "Switzerland's best-kept cycling secret. One of the most beautiful multi-day sportives in the Alps, organized with quiet Swiss precision in a valley where the scenery does the talking."
+    },
+    "biased_opinion": {
+      "verdict": "The Precision Alpine",
+      "summary": "The Engadin Radmarathon is what happens when Swiss organizational culture meets some of the most spectacular cycling terrain in the Alps. Three days, five passes above 2,000 meters, 221 km of pristine tarmac through the Engadin Valley — crossing into Italy, riding through the Swiss National Park, climbing alongside a UNESCO World Heritage railway, and staring at the Bernina glacier massif from the saddle. It is not the hardest Alpine sportive (the Otztaler and La Marmotte are harder). It is not the most famous (the Maratona and L'Etape are better known). What it is, consistently, is one of the most beautiful — and one of the best organized. The three-day stage format creates something rare in the sportive world: a journey, not just a ride. You sleep in a small Swiss village, wake up, and climb another pass. By Sunday evening, the Engadin feels like home.",
+      "strengths": [
+        "Five Alpine passes above 2,000m in three days — Fluela, Bernina, Forcola, Albula, and Ofenpass",
+        "Cross-border adventure: closed tunnel into Livigno, Italian passes, Swiss National Park, UNESCO heritage railway",
+        "Swiss organizational precision: impeccable signage, well-stocked feed stations, professional timing",
+        "Three-day stage format builds a genuine journey narrative, not just a single-day sufferfest"
+      ],
+      "weaknesses": [
+        "Switzerland is expensive — accommodation, food, and travel costs compound across the multi-day format",
+        "Limited global recognition compared to the Maratona, L'Etape, or the Otztaler",
+        "Remote Engadin location: Zernez is 3+ hours from Zurich by train, with no nearby major airport",
+        "Small 1,500-rider field limits community scale and competitive depth"
+      ],
+      "bottom_line": "The Engadin Radmarathon is one of the best-kept secrets in European cycling. Five high passes, three days, and some of the finest Alpine scenery you will ever ride through — organized with the kind of quiet competence that only the Swiss can deliver. Come for the passes. Stay for the glaciers."
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Three days of Swiss Alpine precision. Five passes above 2,000m. Glaciers, national parks, and UNESCO heritage — through the Engadin, where the roads are perfect and the scenery is better.",
+      "should_you_race": "Yes if you want a multi-day Alpine stage experience with world-class scenery and Swiss-level organization. Yes if five passes above 2,000m through the Engadin, with cross-border adventure into Italy, is your definition of a good weekend. Skip if Swiss prices are a dealbreaker — accommodation and dining add up fast across a multi-day format. Skip if you want a competitive race environment or a field bigger than 1,500 riders.",
+      "alternatives": "If you want a harder single-day Alpine sportive: the Otztaler Radmarathon (227 km, 5,500m). If you want Dolomite grandeur with a bigger field: the Maratona dles Dolomites. If you want a Swiss climbing event with global prestige: the Alpenbrevet. If you want a multi-day cycling adventure without the sportive format: the Tour du Mont-Blanc Cyclo."
+    },
+    "citations": [
+      {
+        "url": "https://www.rad-marathon.ch/en",
+        "category": "official",
+        "label": "Engadin Radmarathon — Official Site"
+      },
+      {
+        "url": "https://www.rad-marathon.ch/en/race/courses/la-svizra",
+        "category": "official",
+        "label": "Engadin Radmarathon — La Svizra Route Details"
+      },
+      {
+        "url": "https://www.rad-marathon.ch/en/race/courses/la-cuorta",
+        "category": "official",
+        "label": "Engadin Radmarathon — La Cuorta Route Details"
+      },
+      {
+        "url": "https://www.rad-marathon.ch/en/race/information",
+        "category": "official",
+        "label": "Engadin Radmarathon — Race Information"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/article/engadin-radmarathon-three-days-of-pure-alpine-magic/6298",
+        "category": "review",
+        "label": "Engadin Radmarathon: Three Days of Pure Alpine Magic — Cycloworld"
+      },
+      {
+        "url": "https://www.engadin.com/en/tours/engadin-radmarathon-route",
+        "category": "reference",
+        "label": "Engadin Radmarathon Route — Engadin Scuol Zernez Tourism"
+      },
+      {
+        "url": "https://www.graubuenden.ch/en/tours/engadin-radmarathon-route",
+        "category": "reference",
+        "label": "Engadin Radmarathon Route — Graubunden Tourism"
+      },
+      {
+        "url": "https://www.elite-wheels.com/events/engadin-radmarathon",
+        "category": "review",
+        "label": "Engadin Radmarathon — Elitewheels Event Guide"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Engadin Radmarathon gran fondo cycling Zernez",
+      "videos": [
+        {
+          "video_id": "mz-AlwDLUYo",
+          "title": "Engadiner Radmarathon 2021",
+          "channel": "Dominique Guignard",
+          "view_count": 2109,
+          "upload_date": "20210727",
+          "duration_string": "23:38",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=mz-AlwDLUYo",
+          "transcript": "wow\n[Music]\n[Applause]\nso\nhmm\num\nshhh\nuh\nyou",
+          "curated": true,
+          "curation_reason": "Most recent and longest first-person race documentation with highest view count for this specific event.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/mz-AlwDLUYo/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "9TvzZeKLYeg",
+          "title": "Engadin Radmarathon 2019",
+          "channel": "Zernez Tourismus",
+          "view_count": 177,
+          "upload_date": "20190403",
+          "duration_string": "1:17",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=9TvzZeKLYeg",
+          "curated": false
+        },
+        {
+          "video_id": "nxkzbvb50Og",
+          "title": "Engadiner_Radmarathon",
+          "channel": "RODSCHER 80",
+          "view_count": 50,
+          "upload_date": "20160725",
+          "duration_string": "35:01",
+          "description": "Impressionen vom Engadiener Radmarathon bei traumhaftem Wetter. Wirklich zu empfehlen. Ein top organisierter Event. Vielen Dank an die Organisatoren.",
+          "tags": [
+            "iMovie"
+          ],
+          "url": "https://www.youtube.com/watch?v=nxkzbvb50Og",
+          "curated": false
+        },
+        {
+          "video_id": "Q6J9qsnvuZE",
+          "title": "Ötztaler Radmarathon 2015 Jaufen Pass mit Abfahrt",
+          "channel": "Bernd Kempe",
+          "view_count": 3306,
+          "upload_date": "20150902",
+          "duration_string": "11:48",
+          "description": "Jaufenpass",
+          "tags": [
+            "PlayMemories",
+            "HDR-AZ1"
+          ],
+          "url": "https://www.youtube.com/watch?v=Q6J9qsnvuZE",
+          "curated": false
+        },
+        {
+          "video_id": "xZD8FdKZ8JE",
+          "title": "Swiss National Park Bike Marathon 2019. Chaschauna downhill.",
+          "channel": "Oleksiy",
+          "view_count": 3003,
+          "upload_date": "20190901",
+          "duration_string": "17:42",
+          "description": "Race video. This was a brutal climb. But to get down safe takes skills [which I got none] and guts.",
+          "tags": [
+            "mtb",
+            "race",
+            "mountains",
+            "bike",
+            "sport",
+            "downhill",
+            "shred",
+            "livigno",
+            "engadin",
+            "italy",
+            "switzerland",
+            "border",
+            "brautiful",
+            "trails",
+            "speed"
+          ],
+          "url": "https://www.youtube.com/watch?v=xZD8FdKZ8JE",
+          "curated": true,
+          "curation_reason": "Race video highlighting specific technical descent challenges in the Engadin region with good view count.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/xZD8FdKZ8JE/maxresdefault.jpg",
+          "thumbnail_score": 52.06
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "race": {
+    "name": "Arlberg Giro",
+    "slug": "arlberg-giro",
+    "display_name": "Arlberg Giro",
+    "tagline": "150 kilometers and 2,500 meters of Alpine climbing through Tyrol and Vorarlberg. Two major passes, one legendary Austrian village, and the kind of scenery that makes you forget the suffering — until the next switchback.",
+    "vitals": {
+      "distance_km": 150.0,
+      "distance_mi": 93.0,
+      "elevation_m": 2500.0,
+      "elevation_ft": 8200.0,
+      "location": "St. Anton am Arlberg, Tyrol, Austria",
+      "location_badge": "ST. ANTON AM ARLBERG, AUSTRIA",
+      "country": "Austria",
+      "date": "Early August annually (first Sunday)",
+      "date_specific": "2026: August 2",
+      "field_size": "1,500-2,000 riders (limited, sells out)",
+      "start_format": null,
+      "registration": "Online via arlberg-giro.com. Opens October of prior year. Cost: ~EUR 85-92 depending on registration period. Includes finisher jersey and pasta party voucher.",
+      "entry_fee": "EUR 85-92 (tiered pricing, cheaper with early registration)",
+      "feed_zones": "3 well-placed feed stations on route with water, food, and mechanical support. Medical assistance throughout.",
+      "cutoff_time": "Arlbergpass: ~08:15, Zeinisjoch: 13:00, Finish: 16:00",
+      "lat": 47.1279,
+      "lng": 10.2683,
+      "route_options": [
+        "Arlberg Giro: 150 km / 2,500m elevation — the single gran fondo distance"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine summer — warm valleys, cool summits, afternoon storm risk",
+      "description": "Early August in St. Anton am Arlberg (1,304m) offers average highs of 18C (64F) in town with significantly cooler conditions at pass summits. The Arlbergpass at 1,793m and the Silvretta/Zeinisjoch above 1,800m can see temperatures drop to 7-10C (45-50F) even in summer. August is the wettest month with ~200mm of rainfall and roughly 20 days with precipitation. Alpine weather changes rapidly — clear morning skies can give way to afternoon thunderstorms, particularly above 1,500m. The 5:00 AM start means riding in pre-dawn chill before the valleys warm.",
+      "challenges": [
+        "Rapid temperature changes between valley floors and pass summits — 10-15C swings within hours",
+        "August is peak rainfall season with ~200mm and frequent afternoon thunderstorms",
+        "Pre-dawn start at 5:00 AM in cool conditions (5-10C) before sun warms the valleys",
+        "Wet alpine descents at speed require confidence and appropriate equipment",
+        "Wind exposure on open mountain passes, particularly the Arlbergpass"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved alpine mountain roads through the Austrian Alps",
+      "surface": "Fully paved roads throughout. Well-maintained Austrian alpine highways and provincial roads through Tyrol and Vorarlberg. Road surface quality is generally excellent — Austrian mountain roads are meticulously maintained. The route traverses two Austrian states (Tyrol and Vorarlberg) on a circular course over major Alpine passes with fast descents and valley transitions.",
+      "technical_rating": 2,
+      "features": [
+        "Arlbergpass from St. Anton: 10.5 km at 6.0% average gradient, summit at 1,793m — the opening test",
+        "Descent through Klostertal to Bludenz: fast, sweeping switchbacks into Vorarlberg",
+        "Valley road through Montafon to Partenen: rolling transition before the main climb",
+        "Silvretta Hochalpenstrasse (standard route): 22.5 km at 5.8% to Bielerhöhe at 2,032m — the centerpiece climb",
+        "2026 alternative: Ganifertal/Zeinisjoch route via Kops Stausee (Silvretta road closed for safety)",
+        "Descent through Paznauntal and Stanzertal back to St. Anton: fast valley roads to finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A circular alpine gran fondo starting and finishing in St. Anton am Arlberg, crossing two major mountain passes through the Austrian states of Tyrol and Vorarlberg. The route demands sustained climbing ability and confident descending on well-maintained alpine roads with world-class mountain scenery throughout.",
+      "signature_challenge": "The Silvretta Hochalpenstrasse climb: 22.5 km at 5.8% average to the Bielerhöhe at 2,032m — the defining ascent of the Arlberg Giro, arriving after 90+ km of riding and the Arlbergpass already in the legs.",
+      "suffering_zones": [
+        "Pre-Dawn Start",
+        "Arlbergpass Summit",
+        "Klostertal Descent to Bludenz",
+        "Montafon Valley",
+        "The Main Climb",
+        "Paznauntal Return"
+      ]
+    },
+    "logistics": {
+      "airport": "Innsbruck (INN) 100 km east (~1.5 hr drive), Zurich (ZRH) 200 km west (~2.5 hr drive or train). Munich (MUC) 250 km northeast (~3 hr). St. Anton is on the main Zurich-Innsbruck rail line — direct trains available.",
+      "lodging_strategy": "St. Anton is a major ski resort with extensive accommodation ranging from budget pensions (EUR 60-80/night) to luxury hotels (EUR 200+/night). Summer rates are significantly lower than winter. Book early — the event sells out and accommodation fills. The compact village means everything is walkable from most lodging. Nearby villages (St. Christoph, Pettneu, Flirsch) offer additional options within 10 km.",
+      "transport": "",
+      "food": "St. Anton has excellent dining from traditional Austrian mountain huts (Hutten) to international restaurants. The pasta party is included with registration. Post-race, the pedestrian zone has numerous cafes and restaurants. Alpine Austrian cuisine — Tyrolean dumplings, schnitzel, strudel — is the reward after 2,500m of climbing.",
+      "official_site": "https://arlberg-giro.com/en/home"
+    },
+    "history": {
+      "founded": 2013,
+      "origin_story": "The Arlberg Giro was created by the St. Anton tourism association as part of a strategy to establish the ski resort as a summer cycling destination. The route leverages the same dramatic Alpine passes that make the Arlberg region legendary for skiing — the Arlbergpass and Silvretta Hochalpenstrasse — and transforms them into a cycling challenge. Since its inaugural edition in 2013, the event has grown steadily from a regional event to an international gran fondo that sells out annually at 1,500-2,000 riders.",
+      "notable_moments": [
+        "2013: Inaugural edition establishes the event in the Austrian gran fondo calendar",
+        "Addition of the International Professional Criterium creates a full weekend cycling festival",
+        "2023: 1,200 riders start; Swiss rider Fadri Barandun wins, German Julia Schallau defends her women's title",
+        "2024: Event skipped due to Arlberg tunnel renovation — one of only two missed editions",
+        "2025: 13th edition returns with 1,500 participants — described as a triumphant comeback",
+        "2026: 14th edition announces route change due to Silvretta Hochalpenstrasse closure — Zeinisjoch/Ganifertal alternative introduced"
+      ],
+      "reputation": "Widely regarded as one of Austria's best-organized alpine gran fondos. CycloWorld rates it as an 'Austrian tier 1 gran fondo' and describes it as having 'organization of the highest level.' The event has earned a loyal following of repeat participants drawn by the combination of challenging climbing, stunning scenery, and the unique village atmosphere of St. Anton am Arlberg."
+    },
+    "biased_opinion": {
+      "verdict": "Austria's Premier Alpine Gran Fondo",
+      "summary": "The Arlberg Giro is the kind of event that makes you understand why European gran fondos exist as a distinct category. 150 kilometers through the Austrian Alps with 2,500 meters of climbing, two major passes, and scenery that belongs on a postcard. The organization — run by the St. Anton tourism association with 13 editions of experience — is polished without being corporate. The weekend package of night sprint, professional criterium, and Sunday gran fondo creates a genuine cycling festival in one of the Alps' most charming villages. It is not the hardest gran fondo in Austria (the Otztaler has that locked), and it is not the most prestigious (no UCI sanction, no lottery mania). But it may be the most enjoyable — the balance of challenge, scenery, organization, and village atmosphere is hard to beat.",
+      "strengths": [
+        "World-class Alpine scenery through two Austrian states and two major passes",
+        "Excellent organization with 13 editions of refinement — feed stations, timing, and safety praised consistently",
+        "Full weekend festival: night sprint Friday, pro criterium Saturday, gran fondo Sunday",
+        "Outstanding value — EUR 85-92 includes finisher jersey, pasta party, and strong course support",
+        "St. Anton's tourism infrastructure provides easy access to accommodation, dining, and transport",
+        "Sells out annually — genuine demand and repeat participation"
+      ],
+      "weaknesses": [
+        "Not UCI-sanctioned — lacks the international recognition of the Maratona or Otztaler",
+        "August Alpine weather brings real rain risk (~200mm) and cold mountain passes",
+        "2,500m of climbing is serious but not in the top tier of Alpine gran fondos (Otztaler: 5,500m)",
+        "Single distance option — no shorter route for less-experienced riders",
+        "5:00 AM start means pre-dawn riding in cold conditions",
+        "2026 route altered due to Silvretta road closure — not the signature course"
+      ],
+      "bottom_line": "The Arlberg Giro deserves a spot on any European gran fondo bucket list. The combination of stunning Alpine scenery, excellent organization, and the unique weekend festival format in charming St. Anton am Arlberg creates an event that punches above its weight. It is not the hardest or the most famous, but the overall experience — from the 5 AM mass start to the pasta party finish — is among the best in the Alps."
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "150 km of Austrian Alpine gran fondo perfection — two passes, world-class scenery, and ski-resort-level organization in one of the Alps' most charming villages.",
+      "should_you_race": "If you want a well-organized Alpine gran fondo with stunning scenery and a genuine festival atmosphere — absolutely. This is European cycling at its most enjoyable. If you are chasing UCI points, maximum vertical, or global prestige — the Maratona dles Dolomites or Otztaler Radmarathon may be better targets. If you are coming from outside Europe, combine it with a broader Alps cycling trip to justify the travel.",
+      "alternatives": "For harder Austrian climbing: Otztaler Radmarathon (238 km, 5,500m). For UCI prestige: UCI Gran Fondo World Championships. For Italian Dolomite drama: Maratona dles Dolomites. For similar-scale Alpine events: Engadin Cycling Marathon (Switzerland)."
+    },
+    "citations": [
+      {
+        "url": "https://arlberg-giro.com/en/home",
+        "category": "official",
+        "label": "Arlberg Giro Official Website"
+      },
+      {
+        "url": "https://arlberg-giro.com/en/route",
+        "category": "route",
+        "label": "Arlberg Giro Official Route Page"
+      },
+      {
+        "url": "https://arlberg-giro.com/en/registration/entry-fees",
+        "category": "official",
+        "label": "Arlberg Giro Entry Fees"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/austria/arlberg-giro/40246",
+        "category": "media",
+        "label": "CycloWorld: Arlberg Giro"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/article/why-the-arlberg-giro-belongs-on-your-bucket-list/5507",
+        "category": "media",
+        "label": "CycloWorld: Why the Arlberg Giro Belongs on Your Bucket List"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/7167/arlberg-giro",
+        "category": "media",
+        "label": "Gran Fondo Guide: Arlberg Giro"
+      },
+      {
+        "url": "https://www.stantonamarlberg.com/en/events/summer/arlberg-giro",
+        "category": "official",
+        "label": "St. Anton am Arlberg Tourism: Arlberg Giro"
+      },
+      {
+        "url": "https://cyclelivemagazine.com/en/arlberg-giro-2026-14th-edition-cycling-in-the-heart-of-the-alps/",
+        "category": "media",
+        "label": "Cyclelive Magazine: Arlberg Giro 2026 14th Edition"
+      },
+      {
+        "url": "https://www.tyrol.com/things-to-do/sports/cycling/biketours/a-arlberg-giro",
+        "category": "official",
+        "label": "Tyrol Tourism: Silvretta Loop / Arlberg Giro"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/arlbergpass-sankt-anton-am-arlberg",
+        "category": "route",
+        "label": "ClimbFinder: Arlbergpass from St. Anton"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/silvretta-hochalpenstrasse-partenen",
+        "category": "route",
+        "label": "ClimbFinder: Silvretta Hochalpenstrasse from Partenen"
+      },
+      {
+        "url": "https://www.explorer-hotels.com/en/blog/arlberg-giro-2025.html",
+        "category": "community",
+        "label": "Explorer Hotels: Arlberg Giro 2025 Report"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Arlberg Giro gran fondo cycling St. Anton am Arlberg",
+      "videos": [
+        {
+          "video_id": "TSK0yRCRIlM",
+          "title": "Streckenvideo zum Arlberg Giro",
+          "channel": "St. Anton am Arlberg",
+          "view_count": 8936,
+          "upload_date": "20180716",
+          "duration_string": "6:33",
+          "description": "150 Kilometer Länge und 2.500 schweißtreibende Höhenmeter im Anstieg – schon die Eckdaten des Arlberg Giro  machen unmissverständlich klar: Wer hier an den Start geht, muss kämpfen wie ein Profi.\n\nWeitere Informationen zur Strecke und mehr findet ihr hier: https://arlberg-giro.com/\n\n#ARLBERGgiro #stantonamarlberg #radevent",
+          "tags": [
+            "ARLBERGgiro",
+            "St. Anton am Arlberg",
+            "biking",
+            "Arlberg",
+            "challenge",
+            "Bludenz",
+            "Montafon",
+            "Silvretta",
+            "Paznauntal",
+            "Arlbergpass"
+          ],
+          "url": "https://www.youtube.com/watch?v=TSK0yRCRIlM",
+          "curated": true,
+          "curation_reason": "Official course preview video with highest view count providing comprehensive route overview.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/TSK0yRCRIlM/maxresdefault.jpg",
+          "thumbnail_score": 66.88
+        },
+        {
+          "video_id": "9VrRaWddiUU",
+          "title": "Giro Arlberg 2018 part I",
+          "channel": "JH Cycling",
+          "view_count": 2540,
+          "upload_date": "20180730",
+          "duration_string": "35:09",
+          "description": "From St. Anton to St. Christoph. Start and first climb.\n\nLähtö Giro Arlberg. Ensimmäinen nousu St. Christophiin.",
+          "tags": [
+            "Cycling",
+            "Alps",
+            "Giro",
+            "Arlberg",
+            "Google",
+            "Youtube"
+          ],
+          "url": "https://www.youtube.com/watch?v=9VrRaWddiUU",
+          "curated": true,
+          "curation_reason": "First-person ride-along video showing the start and first climb with substantial duration for course preview.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/9VrRaWddiUU/hqdefault.jpg",
+          "thumbnail_score": 80.0
+        },
+        {
+          "video_id": "ZTlOoK4zd4o",
+          "title": "ARLBERG Giro 2012 - Trailer -",
+          "channel": "St. Anton am Arlberg",
+          "view_count": 667,
+          "upload_date": "20120723",
+          "duration_string": "1:13",
+          "description": "Start und Ziel: Fußgängerzone St. Anton am Arlberg.\nStreckenführung: St. Anton -- Arlbergpass -- Bludenz -- Montafon -- Silvretta -- Paznauntal -- St. Anton",
+          "tags": [
+            "arlberg giro",
+            "trailer",
+            "st. anton am arlberg",
+            "cycling",
+            "rennrad",
+            "bludenz",
+            "montafon",
+            "silvretta",
+            "paznauntal",
+            "outdoor sport",
+            "road bike",
+            "ciclismo",
+            "bici da corsa",
+            "gara ciclistica"
+          ],
+          "url": "https://www.youtube.com/watch?v=ZTlOoK4zd4o",
+          "transcript": "[Music]\nDJ\nhe",
+          "curated": false
+        },
+        {
+          "video_id": "0LRcfp8sGXQ",
+          "title": "Siegerinterviews Arlberg Giro 2022  |  Stefan Kirchmair & Julia Schallau",
+          "channel": "St. Anton am Arlberg",
+          "view_count": 3156,
+          "upload_date": "20220731",
+          "duration_string": "2:51",
+          "description": "Die Stimmen zum Arlberg Giro 2022!\n\nKirchmair Stefan gewinnt den Arlberg Giro 2022 mit einer Zeit von 3:53:37,3. \nMit ihm auf dem Podium stehen der Zweitplatzierte Schiffer Anton {3:53:37,7} und der Drittplatzierte Betz Simon {3:53:38,9}.\n\nDie drei schnellsten Damen des Arlberg Giro 2022 lauten:\n1. Schallau Julia {4:28:17,7}\n2. Rumpl Laura {4:28:19,3}\n3. Sautner Christina {4:28:22,0}\n\nWir gratulieren herzlichst allen TeilnehmerInnen des diesjährigen Arlberg Giro und bedanken uns bei allen Beteiligten, HelferInnen und Zusehern.\n\nZu den Ergebnissen:\n👉 https://arlberg-giro.com/at/ergebnisse\n\n#arlberggiro #arlberggiro #radrennen #stantonamarlberg",
+          "tags": [
+            "arlberg giro",
+            "arlberggiro",
+            "giro",
+            "st. anton am arlberg",
+            "arlberg",
+            "radrennen",
+            "rennrad",
+            "jedermann rennen",
+            "amateur",
+            "sankt ankton",
+            "saint anton",
+            "interviews",
+            "interview"
+          ],
+          "url": "https://www.youtube.com/watch?v=0LRcfp8sGXQ",
+          "curated": false
+        },
+        {
+          "video_id": "BIXBhTOcaHQ",
+          "title": "Schlusssprint entscheidet den Arlberg Giro 2022",
+          "channel": "St. Anton am Arlberg",
+          "view_count": 2496,
+          "upload_date": "20220731",
+          "duration_string": "1:27",
+          "description": "Top-Bedingungen bei der 11. Auflage des Rennradklassikers\n1.500 ambitionierte RennradfahrerInnen gingen am Sonntag, dem 31. Juli 2022, bei idealen Bedingungen an den Start des ARLBERG Giro in St. Anton am Arlberg. Den Fight um den Sieg konnten die Deutsche Julia Schallau und der Österreicher Stefan Kirchmair beim 150-Kilometer-Rennen für sich entscheiden: https://www.stantonamarlberg.com/de/blog/news/kirchmair-siegt-beim-arlberg-giro-2022\n\nℹ️ https://arlberg-giro.com/",
+          "tags": [
+            "arlberg giro",
+            "st. anton am arlberg",
+            "arlberg",
+            "arlberg giro 2022",
+            "sankt anton",
+            "giro",
+            "rennrad",
+            "Stefan Kirchmair",
+            "Julia Schallau",
+            "race",
+            "cycling",
+            "rad",
+            "ciclismo",
+            "Bieler Höhe"
+          ],
+          "url": "https://www.youtube.com/watch?v=BIXBhTOcaHQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

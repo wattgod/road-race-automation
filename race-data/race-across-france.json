@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Race Across France",
+    "slug": "race-across-france",
+    "display_name": "Race Across France",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 2499.3,
+      "distance_mi": 1553.0,
+      "elevation_m": 24384,
+      "elevation_ft": 80000.0,
+      "location": "Dinan to Mandelieu-la-Napoule, France",
+      "location_badge": "Dinan to Mandelieu-la-Napoule, France",
+      "country": "France",
+      "date": "2026: June 18",
+      "date_specific": "2026: June 18",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "June offers mild to warm conditions evolving from temperate Brittany to hot Mediterranean Riviera, with mountain variability.",
+      "challenges": [
+        "Precipitation: Low (10-20%) except possible showers in Brittany/Massif Central."
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A monumental road ultra traversing France from Brittany's rugged coast to the French Riviera, blending coastal paths, rural farmlands, volcanic Massif Central climbs, and culminating in the high Alps with relentless elevation and visual splendor.",
+      "signature_challenge": "Cime de la Bonette ascent: Europe's highest paved road at 2802m, the ultimate test of power, pacing, and altitude tolerance after 1,400+ miles.",
+      "suffering_zones": [
+        "Monts d'Arrée (Brittany): Early steep climbs after coastal start, testing legs with misty moors and relentless undulation.",
+        "Massif Central (Cantal & Cézallier): Volcanic plateaus with prolonged ascents and exposed winds, grinding endurance in central France.",
+        "Cime de la Bonette (Alps): Highest point at 2802m, a 20+km high-altitude grind with thin air and brutal gradients."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Life bases provide rest stops; hotels in Dinan start town and Mandelieu finish; plan self-supported sleep strategies.",
+      "transport": "Semi-autonomous ultra with life bases at Creon, Orleans, Albertville, Bollène for the 2500km; multiple distances start from different points converging on Mandelieu finish.",
+      "food": "",
+      "official_site": "https://en.raceacrossseries.com/race-across-france-2025"
+    },
+    "history": {
+      "founded": 2018,
+      "origin_story": "Founded in 2018 by Arnaud Manzanini as France's premier ultra-cycling event, evolving into a multi-distance series with record fields and iconic routes honoring the nation's cycling legacy.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Ultimate French ultra-road odyssey: suffer the miles, conquer the cols, celebrate on the Riviera.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://jonas.verest.ch/stories/2025-race-across-france-en",
+        "category": "reference",
+        "label": "Ultra-Cycling Story: Race Across France 2025 - Jonas Verest"
+      },
+      {
+        "url": "https://en.raceacrossseries.com/race-across-france-2025",
+        "category": "reference",
+        "label": "Race Across France - Ultra cycling across France"
+      },
+      {
+        "url": "https://www.ahotu.com/event/race-across-france",
+        "category": "reference",
+        "label": "Race Across France, 20-29 Jun, 2024 (Thu - Sat) | Ahotu"
+      },
+      {
+        "url": "https://raceacrossfrance.cc/en/",
+        "category": "reference",
+        "label": "Race Across France"
+      }
+    ]
+  }
+}

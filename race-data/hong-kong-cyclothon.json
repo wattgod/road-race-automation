@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Hong Kong Cyclothon",
+    "slug": "hong-kong-cyclothon",
+    "display_name": "Hong Kong Cyclothon",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 49.9,
+      "distance_mi": 31.0,
+      "elevation_m": 366,
+      "elevation_ft": 1200.0,
+      "location": "Hong Kong, China",
+      "location_badge": "Hong Kong, China",
+      "country": "China",
+      "date": "2026: November TBD",
+      "date_specific": "2026: November TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.discoverhongkong.com/eng/what-s-new/events/cyclothon.html",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 4,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Tsing Ma Bridge Wind Tunnel: Headwinds on the 2km span amplify 1200ft total gain efforts amid harbor gusts. Exposed position tests sustained power in the pack.",
+        "Tunnel Succession Grind: Back-to-back Cheung Ching, Nam Wan, and Eagle's Nest passages build cumulative fatigue with dim lighting and echoing packs. Heat buildup spikes without breeze.",
+        "Late-Stage Urban Push: Final 10km through Kowloon traffic closures demands leg preservation after bridges. Humidity saps energy on rolling finishes."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.discoverhongkong.com/eng/what-s-new/events/cyclothon.html"
+    },
+    "history": {
+      "founded": 2014,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "Urban bridge-blasting sportive blending Hong Kong's skyline with mass-ride energy.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

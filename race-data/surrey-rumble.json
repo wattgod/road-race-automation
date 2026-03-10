@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Surrey Rumble",
+    "slug": "surrey-rumble",
+    "display_name": "Surrey Rumble",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 128.7,
+      "distance_mi": 80.0,
+      "elevation_m": 2405,
+      "elevation_ft": 7890.0,
+      "location": "Cobham, Surrey, England",
+      "location_badge": "Cobham, England",
+      "country": "England",
+      "date": "2026: May 17",
+      "date_specific": "2026: May 17",
+      "field_size": "200",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "2",
+      "cutoff_time": "15:00 (course closes)",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "N/A",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "Friendly early-season road sportive with hilly Surrey classics at bargain price.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

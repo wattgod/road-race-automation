@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Race Across Italy 300",
+    "slug": "race-across-italy-300",
+    "display_name": "Race Across Italy 300",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 299.3,
+      "distance_mi": 186.0,
+      "elevation_m": 4600,
+      "elevation_ft": 15092.0,
+      "location": "Silvi Paese, Teramo, Italy",
+      "location_badge": "Silvi Paese, Italy",
+      "country": "Italy",
+      "date": "2026: May 2",
+      "date_specific": "May 2, 2026 at 09:00",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "1 checkpoint (TimeStation with snacks and drinks)",
+      "cutoff_time": "18 hours supported, 21 hours self-supported",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Pre-race check-in April 30-May 1; post-race celebration May 3; no specific accommodations listed.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Perfect entry to ultracycling: stunning Abruzzo day ride from sea to mountains.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

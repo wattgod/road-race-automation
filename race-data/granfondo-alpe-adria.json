@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Granfondo Alpe Adria",
+    "slug": "granfondo-alpe-adria",
+    "display_name": "Granfondo Alpe Adria",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 2073,
+      "elevation_ft": 6800.0,
+      "location": "Villach, Carinthia, Austria",
+      "location_badge": "Villach, Austria",
+      "country": "Austria",
+      "date": "2026: July TBD",
+      "date_specific": "2026: July TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.bike-alpeadria.eu/en/",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Karawanken Grind: Relentless 2000-foot haul through tunnels tests legs mid-race after Villach warm-up. Heat buildup and gradient force pacing discipline.",
+        "Border Pass Bonk: Final climbs into Slovenia after 70 miles drain energy reserves. Exposed alpine winds amplify fatigue on 6800-foot total."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.bike-alpeadria.eu/en/"
+    },
+    "history": {
+      "founded": 2010,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Alpine tri-nation road epic from Villach delivering big climbs and border thrills.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

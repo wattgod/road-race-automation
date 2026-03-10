@@ -1,0 +1,137 @@
+{
+  "race": {
+    "name": "Tour of Thekkady — Kerala Gran Fondo",
+    "slug": "tour-of-thekkady",
+    "display_name": "Tour of Thekkady — Kerala Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 144.8,
+      "distance_mi": 90.0,
+      "elevation_m": 2987,
+      "elevation_ft": 9800.0,
+      "location": "Kottayam to Thekkady, Kerala, India",
+      "location_badge": "Kottayam to Thekkady, India",
+      "country": "India",
+      "date": "2026: March 14",
+      "date_specific": "2026: March 14",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Tropical warmth in March dry season, ideal for long rides with lush scenery.",
+      "challenges": [
+        "Precipitation: Low (10-20%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A scenic rollercoaster of relentless climbs through Kerala's lush plantations, serene lakes, iconic dams, and wildlife-rich forests, blending Tour de France-style elevation with tropical tranquility on smooth, low-traffic roads.",
+      "signature_challenge": "The 3000m+ elevation gain over 145km, replicating TdF stage difficulty amid Kerala's ever-changing landscapes from backwaters to highland forests.",
+      "suffering_zones": [
+        "Kulamavu and Idukki Dams Climb: Steep ascents crossing massive dams after passing through Pala and Muttom, with 1000m+ cumulative gain in exposed, panoramic sections.",
+        "Cardamom Estates to Kattappana: Long, grinding pulls through aromatic spice hills and rubber plantations, heat-building mid-route where fatigue sets in amid stunning vistas.",
+        "Final Push to Thekkady: Rainforest finale with punchy rollers into wildlife sanctuary, testing legs after 3000m total gain."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Kottayam town near Kumarakom backwaters offers hotels/homestays; Thekkady finish has rainforest resorts; book early for event weekend.",
+      "transport": "Self-supported Gran Fondo with hydration, medical aid, bag drop from Kottayam to Thekkady, optional bike return; registration open until Feb 16, 2026; categories close at 8-9-14 hours.",
+      "food": "",
+      "official_site": "https://www.tourofthekkady.com"
+    },
+    "history": {
+      "founded": 2022,
+      "origin_story": "India's premier Gran Fondo launched by KEG Bikers as not-for-profit cyclosportive, aspiring to be largest international cycling event; supported by Kerala Tourism.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "India's must-do Gran Fondo: TdF climbs meet Kerala paradise.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.keralatourism.org/event/tour-of-thekkady-a-top-tier-cycling-adventure-through-kerala/129/",
+        "category": "reference",
+        "label": "Tour of Thekkady 2026 | Cycling in Kerala | Gran Fondo India"
+      },
+      {
+        "url": "https://www.tourofthekkady.com/about",
+        "category": "reference",
+        "label": "About | Tour of Thekkady"
+      },
+      {
+        "url": "https://www.tourofthekkady.com",
+        "category": "reference",
+        "label": "Tour of Thekkady I Best Granfondo in India"
+      },
+      {
+        "url": "https://zenmountain.in/event/tour-of-thekkady-2026/",
+        "category": "reference",
+        "label": "Tour of Thekkady 2026 - Zen Mountain"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/13675/tour-of-thekkady",
+        "category": "reference",
+        "label": "Tour of Thekkady - Gran Fondo Guide"
+      }
+    ]
+  }
+}

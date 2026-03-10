@@ -1,0 +1,321 @@
+{
+  "race": {
+    "name": "Otztaler Radmarathon",
+    "slug": "otztaler-radmarathon",
+    "display_name": "Otztaler Radmarathon",
+    "tagline": "227 km. 5,500m of climbing. Four Alpine passes. The Timmelsjoch at 2,474m. Europe's hardest single-day sportive.",
+    "vitals": {
+      "distance_km": 226.9,
+      "distance_mi": 141.0,
+      "elevation_m": 5500,
+      "elevation_ft": 18045.0,
+      "location": "Solden, Otztal Valley, Tyrol, Austria",
+      "location_badge": "SOLDEN, AUSTRIA",
+      "country": "Austria",
+      "date": "Last Sunday of August",
+      "date_specific": "2026: August 30",
+      "field_size": "4,000 riders (lottery entry, massively oversubscribed)",
+      "start_format": null,
+      "registration": "Lottery entry via oetztaler-radmarathon.com. Applications typically open January-March. Entry: EUR199 (+EUR5 lottery fee). Oversubscribed by 3-4x.",
+      "entry_fee": "EUR199 (+EUR5 lottery fee)",
+      "feed_zones": "Feed stations at each pass summit and in valley sections. Well-stocked with Austrian and Italian food, gels, water, cola.",
+      "cutoff_time": "Strict cutoffs at each pass. Must reach Timmelsjoch summit before closure. Total time limit approximately 13.5 hours.",
+      "lat": 46.966,
+      "lng": 10.873,
+      "route_options": [
+        "Otztaler Radmarathon: 227 km (141 mi), 5,500 m gain — the full route (no shorter option)"
+      ]
+    },
+    "climate": {
+      "primary": "Late August Alpine extremes",
+      "description": "Late August in the high Austrian/Italian Alps delivers a full spectrum of conditions in a single day. The 6:30 AM start in Solden is cold (5-10C). Valley sections warm rapidly through the day (20-30C). The Timmelsjoch at 2,474m can approach freezing with severe wind chill, even in August. The route crosses the main Alpine ridge twice, exposing riders to weather changes from north to south slope.",
+      "challenges": [
+        "Pre-dawn start at 6:30 AM in a mountain valley — temperatures as low as 5C",
+        "Timmelsjoch summit at 2,474m: wind chill can bring effective temperature below freezing",
+        "30+ km of climbing to the Timmelsjoch means prolonged cold exposure at altitude",
+        "Rapid weather changes when crossing the Alpine ridge — north and south slopes have different weather systems",
+        "Afternoon thunderstorms can hit the Timmelsjoch with no shelter available"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Alpine mountain passes",
+      "surface": "Well-maintained Austrian and Italian mountain roads. All tarmac throughout. The Timmelsjoch toll road is closed to motor traffic for the event — pristine conditions on an otherwise busy summer pass road.",
+      "technical_rating": 1,
+      "features": [
+        "Kuhtai (2,020m) — 18 km opening climb, steady 6-7% gradient through pine forest",
+        "Brenner Pass (1,370m) — historic Austria-Italy border crossing, lower altitude, fast approach",
+        "Jaufenpass (2,090m) — 15 km climb from the Italian side, tight switchbacks through South Tyrolean villages",
+        "Timmelsjoch (2,474m) — the crowning finale: 30+ km of climbing from Passeiertal, the last 10 km above treeline on exposed road. The highest point of the day and the defining challenge of the event."
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 2,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 76,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 76."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "An ultra-distance Alpine odyssey. The 227 km route is a loop from Solden that crosses the main Alpine ridge twice via four major passes. The first half — Kuhtai and the descent to Innsbruck, then south over the Brenner — builds gradually. The Jaufenpass introduces the Italian side with its tight switchbacks and South Tyrolean villages. Then comes the Timmelsjoch: 30+ km of climbing from the Passeiertal valley to 2,474m, the final 10 km above treeline in barren, exposed Alpine terrain. The Timmelsjoch is the race.",
+      "signature_challenge": "The Timmelsjoch. 30+ km of climbing to 2,474m after 180+ km already in the legs. The final 10 km above treeline — exposed, cold, barren, with no shelter and no respite — is where 227 km of accumulated fatigue meets altitude and weather. This is the moment the entire ride has been building toward.",
+      "suffering_zones": [
+        "Kuhtai",
+        "Brenner Pass",
+        "Jaufenpass",
+        "Timmelsjoch — The Finale"
+      ]
+    },
+    "logistics": {
+      "airport": "Innsbruck (INN) — 45 minutes (closest, limited international flights). Munich (MUC) — 2.5 hours (best connections). Zurich (ZRH) — 3.5 hours.",
+      "lodging_strategy": "Stay in Solden — the start/finish town. Hotels are ski-resort oriented and book out for the Otztaler weekend. Book immediately upon winning the lottery. Obergurgl (20 min further up the valley) and Langenfeld (15 min down-valley) offer alternatives. Some riders stay in Innsbruck and drive to Solden race morning (45 min — requires very early departure for the 6:30 AM start).",
+      "transport": "",
+      "food": "Austrian Tyrolean cuisine — Tiroler Grostl, Kasnocken, Wiener Schnitzel, strudel. Hearty, carb-friendly food. Feed stations offer a mix of Austrian and Italian provisions (the route crosses into Italy). Solden has a reasonable restaurant selection for a ski resort town.",
+      "official_site": "https://www.oetztaler-radmarathon.com/"
+    },
+    "history": {
+      "founded": 1982,
+      "origin_story": "The first Otztaler Radmarathon in 1982 attracted 115 riders who set out from Innsbruck to tackle the Austrian-Italian Alps in a single day. The route was inspired by the historic trade roads that connected the Inntal with the Italian Passeiertal via the Timmelsjoch — one of the highest paved passes in the Eastern Alps. The Timmelsjoch toll road, normally busy with summer tourist traffic, agreed to close for the event. That closure — 30+ km of traffic-free Alpine road to 2,474m — became the event's defining feature and has remained the emotional and physical climax for over 40 years.",
+      "notable_moments": [
+        "1982: Inaugural edition — 115 riders from Innsbruck across four Alpine passes",
+        "Start relocated to Solden in the Otztal Valley",
+        "Growth forced lottery entry — now oversubscribed by 3-4x for 4,000 spots",
+        "The Timmelsjoch closure for the event became a cycling tradition — 30+ km of car-free Alpine road",
+        "Consistently ranked among Europe's hardest single-day cycling events"
+      ],
+      "reputation": "The definitive European ultra-distance sportive. In German-speaking cycling culture, the Otztaler is the benchmark — the event you train all year for and tell stories about for the rest of your life."
+    },
+    "biased_opinion": {
+      "verdict": "The Marathon",
+      "summary": "The Otztaler Radmarathon is not a ride for people who want a nice day out on their bike. It is 227 km and 5,500 meters of climbing across four Alpine passes, finishing with a 30+ km ascent to the Timmelsjoch at 2,474m. It crosses the Austrian-Italian border twice. It starts in pre-dawn cold and ends — if you're lucky — before the afternoon thunderstorms hit the summit. Since 1982, the Otztaler has been the benchmark for ultra-distance road cycling in Europe. It is not the most beautiful event (the Maratona wins that), not the most prestigious (L'Etape owns that), and not the most famous (La Marmotte predates it). It is simply, relentlessly, the hardest.",
+      "strengths": [
+        "The Timmelsjoch: 30+ km of climbing to 2,474m as the day's finale — cycling's most dramatic crescendo",
+        "227 km ultra distance — a genuine single-day cycling marathon, not a sportive",
+        "Cross-border Alpine epic: Austria to Italy and back across the main Alpine ridge",
+        "40+ years of organizational experience since 1982"
+      ],
+      "weaknesses": [
+        "Lottery entry with no guaranteed spot — massively oversubscribed",
+        "Remote Otztal Valley location — limited airport access and accommodation",
+        "The Timmelsjoch in bad weather is genuinely dangerous — snow, freezing temperatures, and 60 km/h winds at 2,474m",
+        "Limited international community — primarily German-speaking cycling culture"
+      ],
+      "bottom_line": "The Otztaler is the hardest single-day road cycling event most people will ever attempt. The Timmelsjoch at 2,474m, after 180 km of climbing, is where you discover what you're actually made of. Not for the faint of heart, not for the undertrained, and not for anyone who thinks 'sportive' means 'casual.'"
+    },
+    "final_verdict": {
+      "score": "76/100",
+      "one_liner": "Europe's hardest single-day sportive. 227 km. 5,500m climbing. The Timmelsjoch at 2,474m. Since 1982.",
+      "should_you_race": "Yes if you want the ultimate single-day cycling challenge and can sustain 9-13 hours of Alpine riding. Yes if the Timmelsjoch at 2,474m after 180 km is your idea of a good time. Skip if 227 km exceeds your distance capability — there is no shorter route option. Skip if remote Austrian valley logistics are a dealbreaker.",
+      "alternatives": "If you want similar Alpine challenge with shorter distance: La Marmotte (177 km, 5,180m). If you want Dolomite scenery: Maratona dles Dolomites (138 km, 4,230m). If you want an even longer ultra: Tour du Mont-Blanc Cyclo (330 km)."
+    },
+    "citations": [
+      {
+        "url": "https://www.oetztaler-radmarathon.com/",
+        "category": "official",
+        "label": "Otztaler Radmarathon — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/%C3%96tztaler_Radmarathon",
+        "category": "reference",
+        "label": "Otztaler Radmarathon — Wikipedia"
+      },
+      {
+        "url": "https://sportivebreaks.com/sportives/otztaler-radmarathon/",
+        "category": "review",
+        "label": "Otztaler Radmarathon — Sportive Breaks"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Otztaler Radmarathon gran fondo cycling Solden",
+      "videos": [
+        {
+          "video_id": "2_ZQMxC-Aug",
+          "title": "Ötztaler Radmarathon 2025: Rennbericht",
+          "channel": "Sölden / Soelden / Solden",
+          "view_count": 32088,
+          "upload_date": "20251001",
+          "duration_string": "24:54",
+          "description": "Hier ist er - der Rennbericht des Ötztaler Radmarathon 2025. Macht es euch auf der Couch (oder auf der Rolle) bequem und taucht nochmal ein in die spannenden Details des ÖRM 2025.\n\nUnd nicht vergessen: Hört niemals auf zu träumen, wir sehen uns am 30.08.2026!\n\n \n//\n\nÖtztaler Radmarathon Webseite: https://www.oetztaler-radmarathon.com\nÖtztaler Radmarathon Instagram: https://www.instagram.com/oetztalerradmarathon\nÖtztaler Radmarathon Facebook: https://www.facebook.com/oetztaler.radmarathon\n\nSölden Website: https://www.soelden.com\nSölden Instagram: https://www.instagram.com/soelden.official/\nSölden Tik Tok: https://www.tiktok.com/@soelden.official\nSölden Facebook: https://www.facebook.com/soelden.oetztal\n\n\n© Ötztal Tourismus / quattromedia",
+          "tags": [
+            "Sölden (City/Town/Village)",
+            "soelden",
+            "solden",
+            "sölden",
+            "ötztal",
+            "oetztal",
+            "otztal",
+            "heartbeatofthealps"
+          ],
+          "url": "https://www.youtube.com/watch?v=2_ZQMxC-Aug",
+          "curated": true,
+          "curation_reason": "Official 2025 race report from the host destination with solid view count and recent content.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/2_ZQMxC-Aug/maxresdefault.jpg",
+          "thumbnail_score": 56.71
+        },
+        {
+          "video_id": "DuWzrQqQ1R4",
+          "title": "SURVIVING AUSTRIA'S MOST BRUTAL ROAD RACE! | ÖTZTALER RADMARATHON 2025",
+          "channel": "Brad Watson",
+          "view_count": 52593,
+          "upload_date": "20251227",
+          "duration_string": "29:32",
+          "description": "A dream that had been in the pipeline for over a year finally came to fruition!\nRelive my toughest challenge yet..\n\nTHIS IS THE ÖTZTALER RADMARATHON 2025! \n\nCHAPTERS ⏱️\n0:00 Intro\n1:13 Race Numbers\n2:03 Getting Ready\n2:42 Start\n3:59 Kühtai Ascent\n7:01 Kühtai Descent \n9:53 Innsbruck\n10:34 Brenner Pass\n13:46 Jaufen Pass Ascent\n16:17 Jaufen Pass Descent\n18:10 Huge Off!\n18:37 Jaufen Pass Descent\n20:28 Timmelsjoch Ascent\n25:06 Timmelsjoch Summit\n26:55 Timmelsjoch Descent\n27:34 Finish\n\n#ÖtztalerRadMarathon #Cycling #Vlog\n\n🚴🏼💨 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n\nFOLLOW ALONG 🌍\n✞ YOUTUBE - https://www.youtube.com/@radxwatson\n✞ INSTAGRAM - https://www.instagram.com/radxwatson/\n✞ STRAVA - https://www.strava.com/athletes/58701412\n✞ ZWIFT - https://zwift.com/uk/athlete/2b41afb4-9ff2-4907-b099-6ae936f7d18f\n\n\nSUPPORT 🤝🏼\n✞ MUC-OFF - 20% OFF Discount Code 'RADX20' 🩷🖤🩷 | https://eu.muc-off.com \n​✞ 4GOLD Nutrition - #DontSettleForSilver 🦁 | https://4gold.eu/\n✞ ZWIFT - *Affiliate Link https://zwiftinc.sjv.io/bOEBPm 🟠 \n*I will earn a small percentage of every sale when the above link is used, thank you for supporting the channel!\n\nMUSIC TRACKS 🎧\nBreak - Release Me\nCanned Heat - Going Up The Country\nPlastician - Dreading\nMark Ruff Ryder - Joy (Feat. Special MC)\nJanset - Time After Time (Instrumental)\nEnigma Dubz - Focus\nS.P.Y - Perth Sunset\nBreakage Feat. David Rodigan - Hard\nTroop Brand - Riddle Me That\nZigitros - Who Ever\n\nCREDITS 🎬\nFilmed, shot & edited by Brad Watson in Davinci Resolve.\nShot on the Insta350 X5, GoPro Hero 13 Black, Sony Handy-Cam & iPhone 14 Pro.\n\nSupport the channel :)\nhttps://buymeacoffee.com/radxwatson",
+          "tags": [
+            "ötztaler",
+            "sölden",
+            "cycling",
+            "radmarathon",
+            "insta360",
+            "canyon",
+            "aeroad",
+            "4gold",
+            "alps",
+            "austria",
+            "tirol",
+            "kühtai",
+            "brenner",
+            "jaufen",
+            "timmelsjoch",
+            "Tirol",
+            "Austrian Alps",
+            "Sportive"
+          ],
+          "url": "https://www.youtube.com/watch?v=DuWzrQqQ1R4",
+          "curated": true,
+          "curation_reason": "Recent first-person race recap from 2025 with detailed chapter breakdown covering each major climb and descent, high production quality with good view count.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/DuWzrQqQ1R4/maxresdefault.jpg",
+          "thumbnail_score": 84.0
+        },
+        {
+          "video_id": "vg93HmXyOjM",
+          "title": "Ötztaler Radmarathon 2014 DVD Italiano Maratona ciclistica Ötztaler",
+          "channel": "Sölden / Soelden / Solden",
+          "view_count": 1017,
+          "upload_date": "20190121",
+          "duration_string": "26:07",
+          "description": "Ötztaler Radmarathon 2014 DVD Italiano Maratona ciclistica Ötztaler\nhttps://www.oetztaler-radmarathon.com",
+          "tags": [
+            "Sölden (City/Town/Village)",
+            "soelden",
+            "solden",
+            "sölden",
+            "ötztal",
+            "oetztal",
+            "otztal",
+            "tirol",
+            "tyrol",
+            "österreich",
+            "austria",
+            "Hotspot",
+            "der",
+            "Alpen",
+            "winter",
+            "ski",
+            "pisten",
+            "wintersport",
+            "skifahren",
+            "slope",
+            "hotspot der alpen",
+            "Maratona ciclistica Ötztaler",
+            "Maratona",
+            "ciclistica",
+            "Ötztaler"
+          ],
+          "url": "https://www.youtube.com/watch?v=vg93HmXyOjM",
+          "curated": false
+        },
+        {
+          "video_id": "Lx-fpxRIYrc",
+          "title": "Ötztaler Radmarathon 2024 - 15 Stunden Liveübertragung",
+          "channel": "Sölden / Soelden / Solden",
+          "view_count": 146007,
+          "upload_date": "20240901",
+          "duration_string": "11:55:00",
+          "description": "Es ist soweit: Der Ötztaler Radmarathon LIVE!\nFolge über 4000 Teilnehmer bei ihrem Traum, heute als Finisher über die Ziellinie zu rollen. Spannende Stories und Impressionen, Live-Schaltungen zu unseren Reportern auf der Strecke und viele interessante Gäste im ÖRM TV Studio in Sölden geben einen Blick hinter die Kulissen des 43. Ötztaler Radmarathons.\n \n///\n \nMore about Sölden:\nhttps://www.soelden.com\n \nMore about the Ötztaler Radmarathon:\nhttps://www.oetztaler-radmarathon.com\n \nSölden Webseite: https://www.soelden.com\nSölden Instagram: https://soelden.com/instagram\nSölden Tik Tok Account: https://www.tiktok.com/@soelden.official\nSölden Facebook Account: https://soelden.com/facebook \n\n© Ötztal Tourismus",
+          "tags": [
+            "Sölden (City/Town/Village)",
+            "soelden",
+            "solden",
+            "sölden",
+            "ötztal",
+            "oetztal",
+            "otztal",
+            "heartbeatofthealps"
+          ],
+          "url": "https://www.youtube.com/watch?v=Lx-fpxRIYrc",
+          "curated": false
+        },
+        {
+          "video_id": "zNI6yjxb1fQ",
+          "title": "Ötztaler Radmarathon 2016 DVD Italiano Maratona ciclistica Ötztaler",
+          "channel": "Sölden / Soelden / Solden",
+          "view_count": 2824,
+          "upload_date": "20190121",
+          "duration_string": "25:26",
+          "description": "Ötztaler Radmarathon 2016 DVD Italiano Maratona ciclistica Ötztaler\nhttps://www.oetztaler-radmarathon.com",
+          "tags": [
+            "Sölden (City/Town/Village)",
+            "soelden",
+            "solden",
+            "sölden",
+            "ötztal",
+            "oetztal",
+            "otztal",
+            "tirol",
+            "tyrol",
+            "österreich",
+            "austria",
+            "Hotspot",
+            "der",
+            "Alpen",
+            "winter",
+            "ski",
+            "pisten",
+            "wintersport",
+            "skifahren",
+            "slope",
+            "hotspot der alpen",
+            "Maratona",
+            "ciclistica",
+            "Ötztaler",
+            "Radmarathon",
+            "2016",
+            "Maratona ciclistica Ötztaler"
+          ],
+          "url": "https://www.youtube.com/watch?v=zNI6yjxb1fQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

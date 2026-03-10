@@ -1,0 +1,205 @@
+{
+  "race": {
+    "name": "L'Etape Thailand by Tour de France",
+    "slug": "letape-thailand",
+    "display_name": "L'Etape Thailand by Tour de France",
+    "tagline": "ASO's Tour de France franchise brings closed-road racing to Southeast Asia -- rotating between Thai provinces with tropical heat, hilly terrain, and the only TdF-branded event in ASEAN.",
+    "vitals": {
+      "distance_km": 146.4,
+      "distance_mi": 91.0,
+      "elevation_m": 1552,
+      "elevation_ft": 5092.0,
+      "location": "Rotating: Phang Nga (2018-2022), Phitsanulok (2022, 2025), Udon Thani (2024), Thailand",
+      "location_badge": "ROTATING VENUES, THAILAND",
+      "country": "Thailand",
+      "date": "Varies annually (typically October-December or May)",
+      "date_specific": "2025: May 15 (Phitsanulok). 2026: TBD",
+      "field_size": "1,000-2,000 riders per edition",
+      "start_format": null,
+      "registration": "Online via letapethailand.com or thaimtb.com. Super Early Bird, Early Bird, and Regular pricing tiers. Race pack with official TdF jersey included.",
+      "entry_fee": "~3,000-5,000 THB (~$85-140 USD) depending on registration tier",
+      "feed_zones": "Multiple feed zones with water, electrolytes, fruit, energy bars. Mechanical support on course.",
+      "cutoff_time": "Broom wagon enforced. Riders behind time cutoffs are pulled from course.",
+      "lat": 16.8211,
+      "lng": 100.2659,
+      "route_options": [
+        "The Race (Long): 140-166 km depending on venue, 1,000-1,552 m elevation gain",
+        "The Ride (Short): 65-75 km depending on venue, lighter climbing"
+      ]
+    },
+    "climate": {
+      "primary": "Tropical -- hot, humid conditions typical of Southeast Asia",
+      "description": "Thailand's tropical climate is a defining challenge regardless of which province hosts the event. When staged in October-December (Phang Nga, Udon Thani), the northeast monsoon season is transitioning -- expect temperatures of 28-34C (82-93F) with humidity of 70-85% and a risk of afternoon storms. The Phitsanulok May edition falls in Thailand's hot season transition to monsoon, with temperatures reaching 32-38C (90-100F) and building humidity. Early morning starts at 5:30-6:00 AM are essential to complete the long course before peak afternoon heat. Heat management is a genuine performance factor -- riders from temperate climates will lose 5-15% performance without acclimatization.",
+      "challenges": [
+        "Tropical heat: 28-38C (82-100F) depending on venue and month",
+        "High humidity: 70-85% throughout the race, limiting evaporative cooling",
+        "Monsoon risk: afternoon thunderstorms possible, especially October-November",
+        "Early morning starts essential to avoid peak midday heat",
+        "Heat acclimatization required for riders from temperate climates -- minimum 7-10 days recommended"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Thai provincial roads through countryside and hilly terrain",
+      "surface": "100% sealed roads through Thai countryside and mountains. Road quality varies by venue -- Phang Nga features winding mountain roads through hilly terrain (80%+ of the province is hills), while Udon Thani is flatter with rolling rice paddies. Phitsanulok offers a mix of countryside and mountain roads near the Phetchabun range. All courses are fully closed to traffic on race day. Surface quality is generally good on main highways, with some rougher patches on secondary provincial roads.",
+      "technical_rating": 1,
+      "features": [
+        "Fully closed roads -- no traffic, Tour de France race conditions",
+        "Rotating venues showcase different Thai landscapes each year",
+        "Phang Nga: coastal mountains, Andaman Sea scenery, Tsunami Memorial start",
+        "Phitsanulok: Phetchabun mountain foothills, historical temples, rural Thailand",
+        "Udon Thani: rolling Isan plateau, rice fields, traditional villages",
+        "Tour de France classification jerseys (Yellow, Polka-Dot, Green)",
+        "Two distance options: long course (140-166 km) and short course (65-75 km)",
+        "Wave starts for managed field deployment"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 1,
+      "overall_score": 53,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The character changes with each venue, but the common thread is Thai provincial roads under tropical conditions. The Phitsanulok 166 km course is the most demanding, with 1,552m of climbing through the foothills of the Phetchabun Mountains on winding rural roads. Phang Nga's 140-145 km course traverses the coastal hills of southern Thailand -- 80% of the province is hilly terrain. Udon Thani offers the flattest profile at 147 km through the Isan plateau's rolling rice fields. All courses start early to avoid peak heat and feature fully closed roads with Tour de France classification points.",
+      "signature_challenge": "The heat. Thailand's tropical conditions transform what would be a moderate 150 km road ride in temperate Europe into a genuine survival challenge. Racing at 28-38C with 70-85% humidity means your body is fighting two battles simultaneously: the physical effort of cycling and the thermoregulatory demand of preventing hyperthermia. Riders who focus solely on terrain preparation and ignore heat acclimatization will fail. The heat is the col that cannot be trained on a turbo trainer.",
+      "suffering_zones": [
+        "Pre-Dawn Launch",
+        "Heat Builds",
+        "Tropical Grind",
+        "Final Push"
+      ]
+    },
+    "logistics": {
+      "airport": "Bangkok Suvarnabhumi (BKK) -- international hub. Domestic connections required to all L'Etape Thailand venues: Phuket (HKT) for Phang Nga (1.5 hr drive), Phitsanulok (PHS) direct, Udon Thani (UTH) direct.",
+      "lodging_strategy": "Accommodation depends on venue. Phang Nga: Khao Lak beach resorts, 1,500-5,000 THB/night, directly adjacent to race start. Phitsanulok: city hotels, 800-2,500 THB/night, walkable to event areas. Udon Thani: city hotels, 700-2,000 THB/night. Book 1-2 months ahead for race weekend. Thai provincial accommodation is comfortable and affordable but not luxury cycling-destination caliber.",
+      "transport": "",
+      "food": "Thailand's street food and restaurant scene is extraordinary and affordable. Race weekend dining at 50-200 THB ($1.50-6 USD) per meal. Excellent carb-loading options: pad thai, rice dishes, noodle soups. Feed zones on course stocked with water, electrolytes, fruit, and energy bars. Post-race Thai food is a highlight of the total experience.",
+      "official_site": "https://www.letapethailand.com/"
+    },
+    "history": {
+      "founded": 2018,
+      "origin_story": "L'Etape Thailand launched in October 2018 in Phang Nga province as the first L'Etape by Tour de France event in ASEAN. ASO, Move Asia, TCEB, and the Tourism and Sport Ministry signed a three-year deal to stage the event. The inaugural edition featured a 140 km race and 70 km ride starting from the Tsunami Memorial at Khao Lak, finishing in Takua Pa District. Two-time Tour de France champion Alberto Contador served as event ambassador, lending star power to the launch. The event was positioned as a sports tourism showcase for Thailand's southern provinces. The 2019 second edition returned to Phang Nga successfully, but COVID-19 forced cancellation of 2020 and 2021 editions. The event returned in 2022 with a Phang Nga edition (May) and added a Phitsanulok edition (December). In 2024, it moved to Udon Thani in Isan, then returned to Phitsanulok for 2025. The rotating venue model is deliberate -- promoting cycling tourism across Thailand's diverse provinces.",
+      "notable_moments": [
+        "2018: Inaugural edition in Phang Nga. Alberto Contador as event ambassador. First L'Etape in ASEAN. 140 km/70 km courses from Khao Lak Tsunami Memorial.",
+        "2019: Second edition returns to Phang Nga. Over 300 overseas cyclists participate. Event hailed as sports tourism success.",
+        "2020-2021: COVID-19 cancellations disrupt momentum after strong first two years.",
+        "2022 (May): Return with 'The Final Great Memory' Phang Nga edition. Riders from 30+ countries, ~2,000 participants. 145 km/75 km courses.",
+        "2022 (December): First Phitsanulok edition. 166 km/66 km courses with 1,552m elevation. ~1,000 cyclists on closed mountain roads.",
+        "2024 (November): Udon Thani edition. 147 km/65 km courses through Isan rice paddies. Start/finish at Wat Pa Ban Tad.",
+        "2025 (May): Return to Phitsanulok. 166 km/66 km courses. Event continues to establish rotating Thai venue model."
+      ],
+      "reputation": "The most prestigious mass-participation road cycling event in Thailand and the only Tour de France-branded event in ASEAN. The event has strong institutional support from the Thai government and tourism authorities, positioning it as a sports tourism flagship. Within the broader L'Etape franchise (26+ events in 21 countries), the Thailand edition is a mid-tier franchise -- competently organized but younger and smaller than established editions in France, Brazil, and Australia. The rotating venue model is unique among L'Etape franchise events and keeps the Thai cycling community engaged, but prevents the course-specific prestige building of fixed-location editions."
+    },
+    "biased_opinion": {
+      "verdict": "Tour de France in the Tropics -- Where Heat Is the Real Col",
+      "summary": "L'Etape Thailand brings ASO's Tour de France franchise to Southeast Asia with the ambition of establishing Thailand as a cycling tourism destination. Since 2018, the event has rotated between Thai provinces -- Phang Nga's Andaman coast, Phitsanulok's mountain foothills, and Udon Thani's Isan plateau -- delivering closed-road racing with classification jerseys, TdF branding, and the novelty of chasing yellow through rice paddies, temples, and tropical landscapes. Alberto Contador was ambassador at the 2018 inaugural. The field of 1,000-2,000 riders is predominantly domestic Thai cyclists and ASEAN expats. The defining challenge is not the terrain or the distance -- it is the heat. Racing at 28-38C with 70-85% humidity transforms a moderate 150 km road ride into a survival exercise in thermoregulation. The event delivers a genuinely unique experience -- Tour de France atmosphere at Thai prices in Southeast Asian landscapes -- but the rotating venue model prevents the consistency and identity-building that the best L'Etape franchise editions have achieved.",
+      "strengths": [
+        "Only L'Etape franchise event in ASEAN -- first-mover in Southeast Asian cycling events",
+        "Fully closed roads with ASO-standard Tour de France production values",
+        "Thailand's tourism infrastructure and affordability make this the cheapest L'Etape globally",
+        "Rotating venues showcase diverse Thai landscapes: coastal mountains, temple cities, Isan plateau",
+        "Post-race tourism dimension -- beach recovery, temple visits, Thai cuisine -- elevates the total trip",
+        "Heat is a genuine and unique challenge that adds a performance dimension absent from European sportives",
+        "Growing ASEAN cycling community with international participation from 30+ countries",
+        "Alberto Contador as inaugural ambassador set a strong aspirational tone"
+      ],
+      "weaknesses": [
+        "Young event (2018) -- still building consistency and reputation",
+        "Rotating venue model prevents single-location prestige accumulation and course identity",
+        "COVID cancelled 2020-2021 editions, disrupting momentum",
+        "Shallow competitive field -- overwhelmingly recreational participation",
+        "Moderate climbing compared to European L'Etape editions -- the terrain alone does not justify the TdF brand",
+        "Provincial Thai venues require domestic connections from Bangkok -- logistically layered for internationals",
+        "Limited international visibility compared to established L'Etape editions in France, Brazil, or Australia",
+        "Field sizes (1,000-2,000) are smaller than flagship franchise events"
+      ],
+      "bottom_line": "L'Etape Thailand is a legitimately well-organized cycling event that leverages the Tour de France brand to create something unique in Southeast Asia. If you want Tour de France atmosphere at a fraction of European pricing, with the added adventure of racing through Thai provinces and recovering at beachside restaurants, this delivers. The heat is the real mountain here -- racing at 33C with 80% humidity is a challenge that Hors Categorie climbers from temperate climates underestimate. The rotating venue model keeps the event fresh but prevents it from building the deep identity of fixed-location sportives. For Thailand-based and ASEAN cyclists, this is the prestige event on the calendar. For global cycling tourists, it is a distinctive destination event worth combining with a Thai holiday, but it is not yet in the same league as the flagship L'Etape editions in France, Brazil, or Australia."
+    },
+    "final_verdict": {
+      "score": "53/100",
+      "one_liner": "ASO's Tour de France franchise in Southeast Asia: closed-road racing through Thai provinces with tropical heat, TdF jerseys, and 1,000-2,000 riders chasing yellow at the most affordable L'Etape edition globally.",
+      "should_you_race": "Yes if you want Tour de France atmosphere combined with a Thai holiday at a fraction of European pricing. Yes if you are based in ASEAN and want the most prestigious mass-participation cycling event in the region. Yes if you want to test yourself in genuine tropical heat -- 33C and 80% humidity is a performance challenge that European sportives cannot simulate. Skip if you need deep international competition or prestigious palmares credential. Skip if you want consistent course knowledge -- the rotating venue model means the course changes every year. Skip if significant climbing is your priority -- these courses are moderate by European standards.",
+      "alternatives": "For the definitive L'Etape experience: L'Etape du Tour de France (France, July). For L'Etape in Asia-Pacific: L'Etape Australia (NSW, November). For the most established L'Etape franchise outside France: L'Etape Brasil (Sao Paulo, September). For a challenging Asian road cycling event: Taiwan KOM Challenge (Hualien, October)."
+    },
+    "citations": [
+      {
+        "url": "https://www.letapethailand.com/",
+        "category": "official",
+        "label": "L'Etape Thailand by Tour de France -- Official Site"
+      },
+      {
+        "url": "https://phitsanulok.letapebytourdefrance.com/stages",
+        "category": "official",
+        "label": "Stages -- L'Etape Phitsanulok by Tour de France"
+      },
+      {
+        "url": "https://udonthani.letapebytourdefrance.com/",
+        "category": "official",
+        "label": "L'Etape Udon Thani by Tour de France -- Official Site"
+      },
+      {
+        "url": "https://www.tatnews.org/2022/04/letape-thailand-by-tour-de-france-phang-nga-2022-cycling-event-set-for-mid-may/",
+        "category": "official",
+        "label": "L'Etape Thailand by Tour de France Phang-nga 2022 -- TAT Newsroom"
+      },
+      {
+        "url": "https://www.tatnews.org/2019/10/cycling-championship-letape-thailand-by-tour-de-france-2019-successfully-held-for-second-year/",
+        "category": "official",
+        "label": "L'Etape Thailand 2019 Successfully Held for Second Year -- TAT Newsroom"
+      },
+      {
+        "url": "https://www.businesseventsthailand.com/en/event-detail/93-l-etape-thailand-by-tour-de-france",
+        "category": "official",
+        "label": "L'Etape Thailand by Tour de France -- Thailand MICE (TCEB)"
+      },
+      {
+        "url": "https://www.luxurysocietyasia.com/letape-thailand-by-le-tour-de-france-a-success-for-sports-tourism-in-thailand/",
+        "category": "media",
+        "label": "L'Etape Thailand by Le Tour de France: A Success for Sports Tourism -- Luxury Society Asia"
+      },
+      {
+        "url": "https://sportsincycling.com/blog/letape-thailand-by-le-tour-de-france/",
+        "category": "media",
+        "label": "L'Etape Thailand by Le Tour de France -- SportsInCycling"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/10667/l%C3%A9tape-thailand-phitsanulok",
+        "category": "reference",
+        "label": "L'Etape Thailand Phitsanulok -- Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.ahotu.com/event/l-etape-udon-thani-by-tour-de-france",
+        "category": "reference",
+        "label": "L'Etape Udon Thani by Tour de France 2024 -- Ahotu"
+      }
+    ]
+  }
+}

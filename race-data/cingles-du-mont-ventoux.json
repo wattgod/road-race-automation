@@ -1,0 +1,325 @@
+{
+  "race": {
+    "name": "Les Cinglés du Mont Ventoux",
+    "slug": "cingles-du-mont-ventoux",
+    "display_name": "Les Cinglés du Mont Ventoux",
+    "tagline": "Three ascents. Three faces. 4,400 meters of climbing. One day. The mountain they call the Beast of Provence — climbed from every side, because once is never enough.",
+    "vitals": {
+      "distance_km": 136.8,
+      "distance_mi": 85.0,
+      "elevation_m": 4400,
+      "elevation_ft": 14436.0,
+      "location": "Bédoin, Vaucluse, Provence, France",
+      "location_badge": "MONT VENTOUX, PROVENCE, FRANCE",
+      "country": "France",
+      "date": "June through September (summit road must be open)",
+      "date_specific": "Self-scheduled — any day the D974 summit road is open, typically mid-April through mid-November. Register at least 15 days in advance (21 days during holiday periods).",
+      "field_size": "Individual challenge — no mass start. Over 20,700 verified completions since 1988.",
+      "start_format": null,
+      "registration": "Register via clubcinglesventoux.org at least 15 days in advance. EUR 20 for the brevet card. No other entry requirements.",
+      "entry_fee": "EUR 20 (~$22 USD) for the brevet card",
+      "feed_zones": "None provided — this is a self-supported personal challenge. Water fountains at Chalet Reynard (Bédoin side) and in the three base villages. Summit gift shop and café for water and food when open. Carry your own supplies.",
+      "cutoff_time": "24 hours — midnight to midnight. Most strong riders complete in 7-10 hours of riding time, 9-12 hours total with stops.",
+      "lat": 44.174,
+      "lng": 5.279,
+      "route_options": [
+        "The Cinglé: 3 ascents via Bédoin, Malaucène, and Sault — 137 km, ~4,400m climbing",
+        "The Bicinglé: all 3 routes climbed twice (6 ascents) in 24 hours — for the truly deranged"
+      ]
+    },
+    "climate": {
+      "primary": "Provençal summer — extreme heat at the base, Alpine conditions at the summit",
+      "description": "The Cinglés challenge spans three climate zones in a single ride. Base villages (Bédoin, Malaucène, Sault) sit in the Provençal lowlands where summer temperatures regularly exceed 35°C (95°F). The forested middle sections of the Bédoin and Malaucène climbs offer shade but trap humid heat. Above the treeline at approximately 1,600m, the landscape transforms into a barren, white limestone moonscape where the temperature drops 15-20°C from the base — and the Mistral wind can turn a hot day into a survival exercise. The summit at 1,912m sees wind speeds exceeding 100 km/h on 130 days per year. You will experience Mediterranean summer and near-Alpine exposure in the same hour, three times.",
+      "challenges": [
+        "Extreme heat in the Provençal lowlands — 35-40°C at base villages in July-August",
+        "Mistral wind at the summit — the most relentless wind in European cycling, up to 100+ km/h",
+        "Temperature differential of 15-20°C between base and summit, experienced three times",
+        "Total sun exposure above the treeline — no shade for the final 6 km of each ascent",
+        "Cumulative dehydration across three ascents in summer heat — 7-12 liters of fluid required"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved — three distinct ascents of Mont Ventoux",
+      "surface": "French departmental roads throughout. The D974 serves the Bédoin (south) and Malaucène (north) ascents; the D164 serves the Sault (east) approach. Road surfaces are well-maintained — Mont Ventoux is heavily cycled and the roads are kept in good condition. The linking roads between the three base villages (Bédoin-Malaucène: ~20 km, Malaucène-Sault: ~30 km, Sault-Bédoin: ~25 km) are rolling Provençal country roads through lavender fields and vineyards.",
+      "technical_rating": 1,
+      "features": [
+        "Bédoin (south): 21.5 km, 1,617m elevation, 7.4% average — the classic Tour de France ascent through dense forest then exposed moonscape",
+        "Malaucène (north): 21.2 km, 1,535m elevation, 7.2% average — equally brutal, less famous, more varied gradients",
+        "Sault (east): 25.6 km, 1,210m elevation, 4.7% average — the longest and most gradual, a false sense of mercy",
+        "Exposed limestone moonscape above 1,600m — the final 6 km on all three routes converge into the same barren, treeless summit cone",
+        "Tom Simpson memorial 1 km below the summit — cycling's most haunting landmark"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 2,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "hillclimb",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Three ascents of the same mountain from three different directions, linked by rolling Provençal country roads through lavender fields and vineyards. Each climb has a distinct personality: Bédoin is the classic — dense forest giving way to exposed moonscape, the route the Tour de France made famous. Malaucène is the underestimated equal — steep early ramps, varied terrain, fewer cyclists. Sault is the long, deceptive approach — gentle gradients through lavender plateau that lull you before the final shared summit cone brutalizes you. All three routes converge in the last 6 km, where the trees vanish and the white limestone begins — a barren, lunar landscape that looks like no other place in cycling. The observatory tower at 1,912m is visible from kilometers away, growing imperceptibly closer with each pedal stroke. You pass the Tom Simpson memorial three times. You stand at the summit three times. And three times, you descend.",
+      "signature_challenge": "The third summit. The first ascent is excitement — the mountain is fresh, the legs are willing, the scenery is extraordinary. The second ascent is determination — the mountain is familiar, the legs are heavy, the summit seems farther away. The third ascent is reckoning. Your body has already climbed 3,150 meters. The Sault approach's gentle gradients offer false hope. The final 6 km of exposed limestone — the same white moonscape you have already climbed twice — must be climbed one more time. The observatory tower is visible. The Tom Simpson memorial is ahead. The wind is blowing. The third summit is where the Cinglés challenge becomes exactly what its name promises: crazy.",
+      "suffering_zones": [
+        "Bédoin — The Classic (21.5 km, 1,617m, 7.4%)",
+        "Malaucène — The Northern Face (21.2 km, 1,535m, 7.2%)",
+        "Sault — The False Mercy (25.6 km, 1,210m, 4.7%)"
+      ]
+    },
+    "logistics": {
+      "airport": "Marseille Provence (MRS) — 2 hours by car to Bédoin. Avignon TGV station — 50 minutes to Bédoin, with high-speed rail connections to Paris (2h40), Lyon (1h), and Marseille (30min). Nîmes (FNI) — budget airline hub, 1.5 hours to Bédoin.",
+      "lodging_strategy": "Bédoin is the traditional base — a small Provençal village at the foot of the south face with cycling-specific accommodation (gîtes, B&Bs, the Bedoin Velo Lodge). Malaucène and Sault offer similar small-town accommodation. Book well in advance for June-August — this is peak Provence season and cycling tourism fills beds fast. Carpentras (20 minutes from Bédoin) offers more options. For the challenge itself, Bédoin is ideal — most riders start from the south face. Budget EUR 60-150/night.",
+      "transport": "",
+      "food": "Provençal cuisine at its finest — markets in Bédoin (Monday mornings) and Malaucène are legendary. Pre-ride carb loading at local restaurants: pasta, ratatouille, tian. On the mountain: carry everything. The summit gift shop/café may have water and basic food, but do not count on it. Chalet Reynard (Bédoin side, at 1,420m) has a restaurant and water tap. Post-ride: find a shaded terrace in Bédoin, order a carafe of rosé from the Ventoux AOC vineyards that surround the mountain, and contemplate what you just did to yourself.",
+      "official_site": "https://www.clubcinglesventoux.org/"
+    },
+    "history": {
+      "founded": 1988,
+      "origin_story": "In 1988, Christian Pic — a local cyclist and Ventoux devotee — formalized what determined riders had been doing informally for years: climbing Mont Ventoux from all three paved sides in a single day. He created the Club des Cinglés du Mont Ventoux to recognize and celebrate this feat of endurance and devotion. The name 'Cinglé' — meaning 'crazy' or 'screwball' in French — was chosen with full self-awareness. The concept is brilliantly simple: register, receive a brevet card, climb the mountain three times, get your card stamped at the summit and in each base village, mail it back. Since 1988, over 20,700 riders have officially completed the challenge, and 348 have achieved the Bicinglé — all three routes climbed twice (six ascents) in a single day. The club predates the modern sportive industry by decades. There are no corporate sponsors, no timing chips, no premium entry tiers. There is a mountain, a card, and the question of whether you are crazy enough.",
+      "notable_moments": [
+        "1988: Christian Pic founds the Club des Cinglés du Mont Ventoux, formalizing the triple-ascent challenge",
+        "1967: Tom Simpson dies 1 km below the summit during the Tour de France — the memorial becomes cycling's most sacred site",
+        "Mont Ventoux has appeared in the Tour de France over 20 times — its summit finishes are among the most dramatic in cycling history",
+        "1336: Petrarch climbs Mont Ventoux and writes about the experience — often cited as the birth of modern mountaineering and tourism",
+        "Over 20,700 verified Cinglé completions and 348 Bicinglés as of 2025",
+        "15,500+ members of the Club des Cinglés worldwide"
+      ],
+      "reputation": "The honest challenge. No frills, no timing, no organization — just a mountain, a card, and 4,400 meters of climbing. Cycling's most elegant test of will."
+    },
+    "biased_opinion": {
+      "verdict": "The Cathedral",
+      "summary": "Les Cinglés du Mont Ventoux is not a race. It is not a sportive. It is not an organized event. It is a personal reckoning with the most revered mountain in cycling, repeated until either you or the mountain blinks. Three ascents — Bédoin's relentless forest grind, Malaucène's savage opening ramps, Sault's deceptively gentle approach — each delivering you to the same barren, windswept summit at 1,912m where an observatory tower stands like a lighthouse above the clouds and Tom Simpson's memorial reminds you that this mountain does not care about your suffering. The genius of the Cinglés is in its simplicity: EUR 20, a brevet card, three stamps, three summits, midnight to midnight. No marshals. No aid stations. No chip timing. Just you, the mountain, and 4,400 meters of vertical truth. The Club des Cinglés has existed since 1988 because Christian Pic understood something fundamental: some challenges do not need organization. They need audacity. The word 'cinglé' means 'crazy' in French, and by the third ascent — when your legs remember the first two and the summit looks impossibly far and the Mistral is shredding your jersey — you understand that it is not a name. It is a diagnosis.",
+      "strengths": [
+        "Mont Ventoux: the Beast of Provence, cycling's most legendary mountain — climbed from all three sides in a single day",
+        "4,400m of climbing for EUR 20 — the greatest value proposition in cycling",
+        "Three completely different ascents of the same mountain: forest, exposed ramps, lavender plateau",
+        "The lunar summit above 1,600m — white limestone, no trees, no shelter, no mercy — experienced three times",
+        "Total freedom: no mass start, no waves, no schedule — you and the mountain on your own terms"
+      ],
+      "weaknesses": [
+        "No organization on the day: no aid stations, no marshals, no medical support — you must be fully self-sufficient",
+        "Provençal summer heat at the base (35-40°C) makes hydration and pacing critical — poor planning ends your day",
+        "The Mistral wind at the summit can turn a climb into a survival exercise without warning",
+        "No competitive element: if you need a race number and a result list, this is not your event"
+      ],
+      "bottom_line": "Twenty euros. Three stamps. 4,400 meters of climbing. The mountain that has broken professional riders for a century. If you need someone to organize your suffering, stay home. If you are ready to organize your own, welcome to the club."
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Three faces. One mountain. 4,400 meters of climbing. The most honest challenge in cycling — EUR 20 and a brevet card against the Beast of Provence.",
+      "should_you_race": "Yes if you want to experience the most complete day possible on a single mountain — three ascents, three landscapes, one barren summit that never gets less shocking. Yes if you value self-reliance and the purity of a challenge that has no finish-line arch, no announcer, no medal ceremony — just a stamped card and the knowledge of what you did. Yes if Mont Ventoux means something to you. Skip if you need organized event support, medical coverage, and feed stations. Skip if Provençal summer heat is a deal-breaker. Skip if you want to race against other people rather than against yourself.",
+      "alternatives": "If you want an organized sportive on Mont Ventoux: try the Colnago GF Mont Ventoux (June). If you want a similar triple-ascent challenge on a different mountain: try the Alpe d'HuZes charity event. If you want massive organized climbing in France: try the Étape du Tour or La Marmotte."
+    },
+    "citations": [
+      {
+        "url": "https://www.clubcinglesventoux.org/",
+        "category": "official",
+        "label": "Club des Cinglés du Mont Ventoux — Official Site"
+      },
+      {
+        "url": "https://www.clubcinglesventoux.org/en/rules.html",
+        "category": "official",
+        "label": "Club des Cinglés — Rules and Registration"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mont_Ventoux",
+        "category": "reference",
+        "label": "Mont Ventoux — Wikipedia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Death_of_Tom_Simpson",
+        "category": "reference",
+        "label": "Death of Tom Simpson — Wikipedia"
+      },
+      {
+        "url": "https://epicroadrides.com/cycling-blog/club-des-cingles-du-ventoux/",
+        "category": "media",
+        "label": "Club des Cinglés du Ventoux — Epic Road Rides"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/mont-ventoux-bedoin",
+        "category": "reference",
+        "label": "Mont Ventoux from Bédoin — Climb Profile — ClimbFinder"
+      },
+      {
+        "url": "https://alpinecols.com/mont-ventoux-how-to-become-a-cingle/",
+        "category": "media",
+        "label": "Mont Ventoux: How to Become a Cinglé — Alpine-Cols"
+      },
+      {
+        "url": "https://lovevelo.co.uk/blogs/des-cingles-ventoux/",
+        "category": "media",
+        "label": "Club des Cinglés Ventoux — Love Velo"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Les Cinglés du Mont Ventoux gran fondo cycling Bédoin",
+      "videos": [
+        {
+          "video_id": "o1AAIBujKXM",
+          "title": "Becoming Cinglés du Mont Ventoux",
+          "channel": "Alpine Cols",
+          "view_count": 889,
+          "upload_date": "20220531",
+          "duration_string": "4:57",
+          "description": "In the Ventoux area for a week-long training camp, our group tackles the famous challenge: three times up and down Mont Ventoux in the same day, once by each of the three routes.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=o1AAIBujKXM",
+          "curated": true,
+          "curation_reason": "Focused coverage of the classic Cinglés challenge with group experience tackling all three routes in one day.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/o1AAIBujKXM/hqdefault.jpg",
+          "thumbnail_score": 64.0
+        },
+        {
+          "video_id": "1sYUB5PZun0",
+          "title": "Ma \"Cinglés du Mont Ventoux\" (Montée du Ventoux par les 3 faces en 9h17)",
+          "channel": "Bab et les vélos",
+          "view_count": 60,
+          "upload_date": "20210926",
+          "duration_string": "4:27",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=1sYUB5PZun0",
+          "curated": false
+        },
+        {
+          "video_id": "0ueL9nyXWyk",
+          "title": "Quelle est la meilleure façon de s'entraîner pour les longs cols ?",
+          "channel": "GCN en Français",
+          "view_count": 73168,
+          "upload_date": "20240616",
+          "duration_string": "16:24",
+          "description": "Les grands cols tels que l’Iseran, Le Galibier ou des sommets mythiques tels que l’Alpe d’huez, le Mont Ventoux nous font tous rêver. Mais la pratique du vélo est complexe et nécessite des qualités particulières, des braquets adaptés ainsi qu’un entraînement adapté.\nMais comment s’entraîner pour passer une belle journée sur ces routes qui montent à pourcentages élevés pendant plusieurs kilomètres quand on habite dans une région à dominante plate ?\n____________________\n\nVisitez la boutique en ligne : https://shop.globalcyclingnetwork.com/\nRejoindre le GCN Club : https://www.gcnclub.com/\n\nRejoignez notre club Strava : https://gcn.eu/stravaclub\n\nRejoignez-nous en utilisant ces liens :\nYouTube : https://gcn.eu/GCNenFrancais\nFacebook : https://gcn.eu/gcnenfrancais-facebook \nTwitter : https://gcn.eu/gcnenfrancais-twitter \nInstagram : https://gcn.eu/gcnenfrancais-instagram\n\nMusic: Epidemic Sound\nThe Orange Tree - Wendy Marcini.wav\nWow Factor - Daniel Fridell (1).wav\n\nES_Way of the Walk - Dusty Decks.wav\nCliquez ici pour vous inscrire à GCN en Français: https://gcn.eu/GCNenFrancais ou ici pour vous inscrire si vous utilisez l'application YouTube: https://youtube.com/gcnenfrançais\n\n#cyclisme #GCNenFrançais #Français #veloderoute #montagne #climbing #climbing #montventoux \n\nPhotos:\n© Getty Images \n© Sirotti \n\nGCN en Français c’est LA chaîne incontournable sur le cyclisme destinée aux francophones. GCN en Français fédère l'ensemble des cyclistes francophones passionnés et célèbre l'ensemble du monde du cyclisme.\n\nGrâce à nos vidéos et leur contenu captivant, les fans de cyclisme ont à leur disposition des tutoriels d'experts, des vidéos techniques, d'entraînement, de courses professionnelles, des informations sur les technologies dernier cri, des reportages exclusifs dans les coulisses des courses, de l'humour, du divertissement et bien plus encore.\n\nPrésentée par des anciens coureurs du peloton pro, GCN en Français c'est une introspection experte dans le monde du cyclisme; mais le plus important, c'est la passion et l'enthousiasme que nos fans nous apportent grâce à leur engagement en continu – c'est à dire, toutes celles et ceux qui représentent l'ensemble de la communauté GCN en Français.\nNous vous présentons en avant première les toutes dernières avancées technologiques en matière de cyclisme, nous vous emmenons également sur les plus belles routes et les plus beaux cols, de plus, vous obtenez un accès exclusif aux événements et courses.\n\nBienvenue sur GCN en Français.\n\nNous remercions nos sponsors : \n\nStrava: https://www.strava.com\nCanyon Bikes : https://gcn.eu/Canyon-fr\nPark Tool : http://gcn.eu/-parktool\nWahoo Fitness : https://gcn.eu/Wahoo-Fitness-fr\nSilca : https://gcn.eu/SilcaEUGCN\nSelle Italia : https://www.selleitalia.com/fr\nWahoo Compteur et ceinture cardio-fréquencemètre  : https://fr-eu.wahoofitness.com\nWahoo Home Trainer : https://fr-eu.wahoofitness.com\nZwift : https://www.zwift.com/eu-fr\nCamelback : https://gcn.eu/camelback\n\nRegardez nos autres chaines : \n\nGCN  - https://gcn.eu/inscrivez-gcn\nGCN Tech - https://gcn.eu/inscrivez-gcntech\nGCN en Español  - https://gcn.eu/inscrivez-gcn-en-espanol\nGCN Italia - https://gcn.eu/inscrivez-gcnitalia\nGCN auf Deutsch - https://gcn.eu/inscrivez-gcn-auf-deutsch\nGCN Racing - https://gcn.eu/inscrivez-gcnracing\nThe GCN Club - http://gcn.eu/club\nGMBN Tech - http://gmbn.tech/subscribe\nGCN Tech - http://gcntech.co/subscribe\nEMBN - http://embn.me/subscribe",
+          "tags": [
+            "velo",
+            "cyclisme",
+            "cyclisme sur route",
+            "velo de route",
+            "peloton",
+            "tour de france",
+            "sport",
+            "français",
+            "gcn en français",
+            "GCN",
+            "cyclisme professionnel",
+            "gcn france",
+            "maxime prieur",
+            "global cycling network",
+            "cyclistes",
+            "louis pijourlet",
+            "cols",
+            "montagne",
+            "galibier",
+            "mont ventoux",
+            "alpes d'huez",
+            "la madeleine",
+            "entrainement",
+            "training",
+            "climbing",
+            "climb",
+            "longs cols",
+            "ቋ",
+            "ማ",
+            "ꗶ",
+            "Ղ",
+            "ᠫ",
+            "ፕ15",
+            "𑣆‎",
+            "𖬵",
+            "𖬫",
+            "𑫷‎",
+            "ꕇ",
+            "ꚢ",
+            "ፋ",
+            "፻",
+            "𖮌",
+            "ㅕ",
+            "5459"
+          ],
+          "url": "https://www.youtube.com/watch?v=0ueL9nyXWyk",
+          "curated": false
+        },
+        {
+          "video_id": "LL7b1BX7c2w",
+          "title": "Gran Fondo au Mont Ventoux",
+          "channel": "Clarence Jameson",
+          "view_count": 1156,
+          "upload_date": "20241113",
+          "duration_string": "1:00:45",
+          "description": "Après une montée en solo et l’aventure de la Cinglé, j’ai choisi cette fois de relever le défi du Gran Fondo au Mont Ventoux. Départ de Bédoin, avec un premier passage dans les magnifiques Gorges de la Nesque, suivi d’un arrêt ravitaillement à Sault pour reprendre des forces avant la montée vers le Chalet Reynard.\n\nL’ascension finale vers le sommet a été rude. Chaleur ? Fringale ? Difficile à dire, mais j’ai pris un gros coup de mou. Heureusement, un peu de sucre, un peu de sel, et c’est reparti ! Dernier arrêt sucré-salé à Malaucène avant de franchir le Col de la Madeleine. Retour à Bédoin, fatigué mais satisfait… ouf !\n\nChapitre 1 : on démarre\n\n00:00 - Départ de notre Gran Fondo\n01:01 - Discussion sur la parcours avec Archi\n02:39 - On quitte Bédoin\n03:36 - On arrive à Villes-sur-Auzon\n\nChapitre 2 : les Gorges de la Nesque\n\n04:40 - Les Gorges de la Nesque, c'est parti pour 18 kilomètres\n10:12 - Vue sur le Ventoux\n13:58 - Vue sur les Gorges\n15:23 - Un motard au casque \"trop stylé\"\n16:37 - Archi, sans les mains !\n19:35 - On s'accroche à un peloton d'avignonnais \n23:02 - Petit coup d'accélérateur pour les avignonnais et Archi dans les derniers hectomètres de l'ascension\n29:26 - Le premier tunnel \n32:45 - Encore un tunnel\n33:59 - Le dernier tunnel \n35:25 - Enfin le sommet, on peut descredre vers Sault\n35:40 - Monieux\n36:19 - Passage au-dessus de la Nesque à La Loge\n39:51 - On arrive enfin à Sault !\n41:53 - On s'offre une petite pause\n\nChapitre 3 : le Ventoux (depuis Sault)\n\n42:06 - On est reparti, direction le sommet du Mont Ventoux\n42:23 - Archi s'evole vers le sommet\n44:12 - Le Chalet Reynard \n44:30 - Petit point \n45:21 - La Fontaine de la Grave\n45:58 - Panne sèche  \n46:35 - Les derniers mètres\n48:19 - Le sommet du Mont Ventoux !\n48:30 - Il est déjà temps de redescendre\n49:28 - Malaucène\n50:14 - Le sommet du Col de la Madeleine\n58:09 - Le mot de la fin ...\n59:40 - Bédoin\n \nLe parcours : https://www.strava.com/activities/12043549545\n\nMon profil Strava : https://www.strava.com/athletes/jameson_clarence\nMon compte Instagram : https://www.instagram.com/JamesonClarence/\nLe groupe Facebook : https://www.facebook.com/groups/325228318818174",
+          "tags": [
+            "Mont Ventoux",
+            "Sault",
+            "Malaucène",
+            "Bédoin",
+            "Bédouin",
+            "Vélo",
+            "Cyclisme",
+            "Gran Fondo",
+            "Nesque",
+            "Archibald",
+            "Clarence"
+          ],
+          "url": "https://www.youtube.com/watch?v=LL7b1BX7c2w",
+          "curated": true,
+          "curation_reason": "Recent first-person ride experience with detailed course description including Gorges de la Nesque section and personal challenges faced during the ascent.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/LL7b1BX7c2w/maxresdefault.jpg",
+          "thumbnail_score": 60.5
+        },
+        {
+          "video_id": "yVcrZYtHv2c",
+          "title": "Bédoin - Mont Ventoux (again) 05.06.2023 (2,7k Large 60fps).",
+          "channel": "Petar Magazin (Art, Sport & Nature)",
+          "view_count": 470,
+          "upload_date": "20230912",
+          "duration_string": "1:17:13",
+          "description": "Équipe 17 et 71 ans \"a mûri\" et devient 21 et 75 ans. En 2019 nous étions tellement émerveillés par les environs du Mont Ventoux que nous avons voulu répéter l'expérience en l'abordant cette fois des trois côtés.  \nEntre-temps nous avons acquis d'expérience en escaladant Alpe-d'Huez, Galibier, Croix-de-Fer, Tourmalet, Hautacam, Aubisque... ce qui va nous aider certainement, ainsi que les entraînement et les vélos mieux adaptés à ce genre d'efforts.\nOn commence par le versant sud, celui qu'on a déjà fait en 2019, le mythique et le plus difficile. Départ tôt, la pluie annoncée au sommet dès 11h. \nMalheureusement le beau temps de 2019 n'était pas au rendez-vous.  Filmé par le plus jeune de l'équipe (21 an.\nPar contre nous avons monté plus vite :\nFils (21 ans)\n5 juin 2023 2:07:27 10,2 km/h\n2 juin 2019 2:56:12 7,4 km/h\nOld man (75 ans)\n5 juin 2023  2:47:47 7,8 km/h\n2 juin 2019  3:22:01 6,4 km/h\n@ArtSportNature",
+          "tags": [
+            "Ventoux",
+            "Bédoin",
+            "Mont Ventoux",
+            "Bédoin Mont Ventoux",
+            "climbing Ventoux",
+            "col mythique",
+            "17 et 71",
+            "Malaucène",
+            "21 et 75"
+          ],
+          "url": "https://www.youtube.com/watch?v=yVcrZYtHv2c",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

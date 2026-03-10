@@ -1,0 +1,163 @@
+{
+  "race": {
+    "name": "Granfondo La Guadeloupe",
+    "slug": "granfondo-la-guadeloupe",
+    "display_name": "Granfondo La Guadeloupe",
+    "tagline": "Tropical UCI Gran Fondo qualifier with Caribbean climbs and sea views.",
+    "vitals": {
+      "distance_km": 124.0,
+      "distance_mi": 77.1,
+      "elevation_m": 2883.0,
+      "elevation_ft": 9459.0,
+      "location": "Capesterre-Belle-Eau, Guadeloupe",
+      "location_badge": "Capesterre-Belle-Eau, Guadeloupe",
+      "country": "Guadeloupe",
+      "date": "2025: December 7",
+      "date_specific": "2025: December 7",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Tropical Caribbean climate in December, warm and lush during northern winter with reduced heat and humidity.",
+      "challenges": [
+        "Precipitation: Low"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": [
+        "Undulating coastal roads with major mountain climbs on Basse-Terre side"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Coastal undulations to major climb, then rolling west with smaller ascent; tropical mountain roads with sea and volcano views.",
+      "signature_challenge": "Col des Mamelles climb",
+      "suffering_zones": [
+        "Col des Mamelles: 13.5km at 4.3% avg (4km >8.5%, max 620m)",
+        "Undulating 40km coast to Pointe-à-Pitre",
+        "Final 5km at 3% summit 10km from finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Aéroport International Guadeloupe Pôle Caraïbes (Pointe-à-Pitre)",
+      "lodging_strategy": "86 hotels, 36,000 Airbnb/gîtes options.",
+      "transport": "Accessible via major international airport; registrations via sportsnconnect.com until Nov 30, 2025; 86 hotels plus alternatives.",
+      "food": "",
+      "official_site": "https://granfondo-iles-de-guadeloupe.com"
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "New 2025 event, first edition Dec 6-7; UCI Gran Fondo World Series qualifier organized by Team Cama CCD and OD'ASS as Caribbean license holders.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Brand new UCI Gran Fondo in a stunning tropical setting—perfect for winter training with Worlds qualifier spots and post-race beach recovery. The Col des Mamelles climb delivers the pain amid paradise vistas; pair it with the discovery ride for full island immersion. Logistics favor Europeans, but worth the trip for adventure seekers.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Exotic UCI qualifier blending steep climbs and Caribbean allure.",
+      "should_you_race": "Granfondo La Guadeloupe stands out as a fresh 2025 addition to the calendar, offering 124km/2883m of tropical road suffering with top-25% age-group qualification to 2026 Worlds in Japan. Signature 13.5km Col des Mamelles (4km at >8.5%) anchors a scenic Basse-Terre loop from Capesterre-Belle-Eau. Ideal for amateurs seeking prestige points in paradise, with expo, non-competitive 80km option, and abundant tourism. Travel via Pointe-à-Pitre airport; French infrastructure ensures quality support.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/fr/granfondo-la-guadeloupe/",
+        "category": "reference",
+        "label": "Guadeloupe - UCI Gran Fondo World Series (FR)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/",
+        "category": "reference",
+        "label": "Guadeloupe - UCI Gran Fondo World Series (EN)"
+      },
+      {
+        "url": "https://granfondo-iles-de-guadeloupe.com",
+        "category": "reference",
+        "label": "UCI Gran Fondo Îles de Guadeloupe 2025"
+      },
+      {
+        "url": "https://lecycle.fr/actualites/un-granfondo-uci-en-guadeloupe/63423/",
+        "category": "reference",
+        "label": "Un Granfondo UCI en Guadeloupe - Le Cycle.fr"
+      },
+      {
+        "url": "https://www.sportsnconnect.com/img/uploads/250605052917x9ee1ty820nw3ev4za5y6s7.pdf",
+        "category": "reference",
+        "label": "ChampionnatS du Monde UCI Gran Fondo 2026 - Sportsnconnect (PDF)"
+      },
+      {
+        "url": "https://www.sportsnconnect.com/calendrier-evenements/view/29239/gran-fondo-des-iles-de-guadeloupe",
+        "category": "reference",
+        "label": "Gran Fondo des Îles de Guadeloupe - Sportsnconnect"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo La Guadeloupe gran fondo cycling Capesterre-Belle-Eau",
+      "videos": [
+        {
+          "video_id": "sgvXgT5820o",
+          "title": "grand fondo",
+          "channel": "Canal 10 Television / Radio",
+          "view_count": 2667,
+          "upload_date": "20251208",
+          "duration_string": "2:27:07",
+          "description": "grand fondo du 06 Décembre 2026",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=sgvXgT5820o",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

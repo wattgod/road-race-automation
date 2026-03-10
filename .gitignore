@@ -21,6 +21,9 @@ ENV/
 data/gsc-service-account.json
 *-service-account*.json
 
+# WordPress credentials (keep config.py.example, ignore actual config)
+wordpress/config.py
+
 # Results and logs
 push_results.json
 dry_run_results.json
@@ -31,21 +34,14 @@ dry_run_results.json
 *.csv.bak
 *.bak.md
 
-# Generated output (regenerate with generators)
-wordpress/output/
+# Mission Control database
+db/mission_control.db
+db/mission_control.db-wal
+db/mission_control.db-shm
+
+# Generated athlete output (root level only, not template subdirs)
+/athletes/
 output/
-video-scripts/
-guide/media-raw/
-guide/media/
-
-# Google API credentials
-credentials.json
-token.json
-
-# Daily reports
-reports/daily/*.html
-reports/daily/*.json
-!reports/daily/.gitkeep
 
 # IDE
 .vscode/
@@ -53,6 +49,50 @@ reports/daily/*.json
 *.swp
 *.swo
 *~
+
+# Generated landing pages (regenerate with: python3 wordpress/generate_neo_brutalist.py --all)
+wordpress/output/
+
+# Video scripts (generated via: python3 scripts/generate_video_scripts.py)
+video-scripts/
+
+# Guide media (generated via: python3 scripts/generate_guide_media.py)
+guide/media-raw/
+guide/media/
+
+# Google API credentials
+credentials.json
+token.json
+
+# Daily reports (generated via: python3 scripts/daily_report.py)
+reports/daily/*.html
+reports/daily/*.json
+!reports/daily/.gitkeep
+
+# Cloudflare Wrangler build artifacts
+.wrangler/
+workers/*/.wrangler/
+
+# Claude design session artifacts
+.claude-design/
+
+# Race photos (900MB+, generated via: python3 scripts/generate_race_photos_v2.py)
+race-photos/
+
+# Generated markdown profiles (regenerate with: python3 scripts/generate_markdown_profiles.py)
+web/markdown/
+
+# Photo QC reports (generated via: python3 scripts/photo_qc.py)
+reports/photo-qc-*.html
+
+# Scraper cache (large HTML blobs, regenerate with: python scripts/scrape_official_sites.py)
+data/scrape-cache/
+
+# Thumbnail cache (fetched YouTube thumbnails, regenerate with: python scripts/youtube_thumbnail.py)
+data/thumbnail-cache/
+
+# YouTube research results (regenerate with: python scripts/youtube_research.py)
+youtube-research-results/
 
 # OS
 .DS_Store

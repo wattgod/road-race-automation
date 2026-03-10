@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Eroica Cuba",
+    "slug": "eroica-cuba",
+    "display_name": "Eroica Cuba",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 740,
+      "elevation_ft": 2428.0,
+      "location": "Caimito, Artemisa Province, Cuba",
+      "location_badge": "Caimito, Cuba",
+      "country": "Cuba",
+      "date": "2026: February 14",
+      "date_specific": "2026: February 14",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "N/A",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Local options in Viñales Valley and Cayo Jutías; Cuban hospitality emphasized[1].",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Vintage cycling immersion in Cuba's stunning landscapes and culture.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

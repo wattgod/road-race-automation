@@ -1,0 +1,115 @@
+{
+  "race": {
+    "name": "Gran Fondo Asheville",
+    "slug": "gran-fondo-asheville",
+    "display_name": "Gran Fondo Asheville",
+    "tagline": "Serpentine roads, climbs, and thrilling Blue Ridge Parkway descents through the mountains near Asheville, NC",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 2438,
+      "elevation_ft": 8000.0,
+      "location": "Asheville Yards Amphitheater, 75 Coxe Ave, Asheville, NC 28801",
+      "location_badge": "Downtown Asheville, Blue Ridge Mountains",
+      "country": "NC 28801",
+      "date": "July",
+      "date_specific": "July 19, 2026 (packet pickup); main event July 20, 2026 (subject to confirmation)",
+      "field_size": null,
+      "start_format": null,
+      "registration": "Open; details via official app and website",
+      "entry_fee": null,
+      "feed_zones": "3 (Gran), 2 (Medio), 1 (Piccolo); stocked with water, sports drinks, gels, bars, fruit, snacks",
+      "cutoff_time": null,
+      "lat": 35.595,
+      "lng": -82.557,
+      "route_options": [
+        "100 miles (Gran)",
+        "60 miles (Medio)",
+        "30 miles (Piccolo)"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "Mid-to-late July in Asheville: warm/summery (highs ~80-85°F/27-29°C), possible afternoon thunderstorms in mountains",
+      "challenges": [
+        "Mid-to-late July in Asheville: warm/summery (highs ~80-85°F/27-29°C), possible afternoon thunderstorms in mountains"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Winding roads through pastoral countryside to mountain ridge vistas; Blue Ridge Parkway descents; well-marked with timed segments",
+      "technical_rating": 3,
+      "features": [
+        "Winding roads through pastoral countryside to mountain ridge vistas",
+        "Blue Ridge Parkway descents",
+        "well-marked with timed segments"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 71."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Downtown Asheville start → serpentine roads through countryside → mountain ridge climbs → Blue Ridge Parkway descent back to town. Timed segments (#2 Gran-only, #3/#4 multi-route). **Suffering zones:** mountain climbs, timed KOM segments[1][2][4][5]",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Start/finish at Asheville Yards Amphitheater. Packet pickup Sat 12-5pm, Sun 5:45am+. Staging by 7:45am, 8:00am start. Ride with GPS app required. Bib, bike plate, ankle timing chip mandatory. Right-side road for timed segments[1][2]",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2022,
+      "origin_story": "Part of Gran Fondo National Series (America's original series). Hosted 2022 USA Cycling Gran Fondo National Championships. 2025 presented by Applewood Manor Foundation amid Asheville rebuild. 2026: July 19/20[2][4][5]",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Classic National Series gran fondo with mountainous adventure, timed competition, and community focus. Strong format but lacks precise elevation/field data.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "Serpentine roads, climbs, and thrilling Blue Ridge Parkway descents through the mountains near Asheville, NC",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

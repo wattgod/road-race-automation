@@ -1,0 +1,258 @@
+{
+  "race": {
+    "name": "TotalEnergies Gran Fondo Alberto Contador",
+    "slug": "granfondo-alberto-contador",
+    "display_name": "Gran Fondo Alberto Contador",
+    "tagline": "Ride with a legend. 146 km through the Costa Blanca mountains, alongside the man who won the Tour, the Giro, and the Vuelta — and still shows up to pedal with the field.",
+    "vitals": {
+      "distance_km": 146.4,
+      "distance_mi": 91.0,
+      "elevation_m": 2538,
+      "elevation_ft": 8327.0,
+      "location": "Oliva, Valencia, Spain",
+      "location_badge": "OLIVA, VALENCIA, SPAIN",
+      "country": "Spain",
+      "date": "Third or fourth Saturday of September",
+      "date_specific": "2026: September 19 (XV edition)",
+      "field_size": "~2,000-2,500 riders",
+      "start_format": null,
+      "registration": "Online via granfondoalbertocontador.com. Tiered pricing: EUR63 (early bird) to EUR78 (late registration). Non-RFEC members pay additional EUR12 mandatory insurance.",
+      "entry_fee": "EUR63-78 (tiered by registration date) + EUR12 insurance for non-RFEC members",
+      "feed_zones": "Feed zones at strategic points between climbs — Spanish gran fondo standard. Water, fruit, energy bars, Coca-Cola. The route through the Vall de Gallinera and mountain villages delivers reliable Valencian hospitality.",
+      "cutoff_time": "Time limits at intermediate checkpoints. Broom wagon enforced. Participants may switch from Gran Fondo to Medio Fondo mid-route.",
+      "lat": 38.919,
+      "lng": -0.123,
+      "route_options": [
+        "Gran Fondo: 146 km (91 mi), ~2,538 m gain — full route with Coll de Rates, Sa Creueta, Fageca, Muro de Tollos, Mirador del Xap/El Miserat, Vall d'Ebo, and Pego",
+        "Medio Fondo: 111 km (69 mi), ~1,800 m gain — includes Coll de Rates, Sa Creueta, Vall d'Ebo, and Pego (bypasses the interior mountain loop)"
+      ]
+    },
+    "climate": {
+      "primary": "Late September Mediterranean — warm with thunderstorm risk",
+      "description": "Late September on the Costa Blanca delivers warm Mediterranean conditions: temperatures range from 20-30C (68-86F), with hot afternoons in the coastal lowlands and slightly cooler conditions on the mountain passes approaching 780m. However, September is statistically the wettest month in the Valencia region (averaging 80mm across 5-6 rainy days), and Mediterranean gota fria (cold drop) storms can produce sudden, intense rainfall. The 8:00 AM start is pleasant at sea level but can be deceptively warm as the route climbs inland. Humidity from the Mediterranean coast adds to the perceived effort. The mountains of the Marina Alta and Vall de Gallinera create their own microclimate — cloud can settle on the passes while the coast remains clear.",
+      "challenges": [
+        "September is the wettest month in the Valencia region — thunderstorms can be sudden and intense",
+        "Afternoon heat on exposed mountain roads — 28-32C with no shade on the upper passes",
+        "Descents from Coll de Rates (626m) and Sa Creueta (780m) in rain on narrow mountain roads",
+        "Mediterranean humidity compounds the heat stress on sustained climbs",
+        "Gota fria (cold drop) weather phenomenon can produce extreme rainfall events in late September"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Mediterranean mountain roads through the Costa Blanca interior",
+      "surface": "Spanish provincial roads (CV-series) — generally well-maintained tarmac through the mountain valleys of the Marina Alta and Vall de Gallinera. Road quality varies from excellent on the main approaches to rougher surfaces on narrow mountain passes, particularly the upper reaches of Sa Creueta and the approach to Vall d'Ebo. All routes are fully paved. The terrain transitions from the flat Valencian coastal plain around Oliva to genuine mountain passes through limestone gorges and terraced hillsides. The route has been modified in recent years to avoid fire-damaged zones, with El Miserat replacing Mirador del Xap in 2022.",
+      "technical_rating": 2,
+      "features": [
+        "Coll de Rates (626m) — the signature timed climb. 6.6 km from Parcent, 354m gain, 5.3% average gradient. The most popular cycling climb on the Costa Blanca. Wide, well-surfaced road with consistent gradient — a tempo effort that rewards steady pacing.",
+        "Puerto de Sa Creueta (780m) — the high point of the route. 6 km, 273m gain, 5.7% average with sections hitting 11-13%. The final kilometer kicks up sharply. Exposed limestone terrain with panoramic views of the Alicante mountains.",
+        "Puerto de Vall d'Ebo (540m) — 8 km from Pego, 452m gain, 5.7% average. Cat 2 difficulty. Starts steep through pine forest with hairpin bends, eases in the middle, then kicks again near the summit through bare limestone landscape.",
+        "Llosa Camatxo — early-route warm-up climb through the coastal foothills south of Oliva. Gradual ascent that introduces the inland mountain terrain.",
+        "Fageca and Muro de Tollos (Gran Fondo only) — the interior mountain loop through the Vall de Gallinera. Narrow roads through agricultural terraces and stone villages. The cumulative climbing through this section separates the Gran Fondo from the Medio Fondo.",
+        "El Miserat — 8 km at 8.5% average with ramps to 24%. Added in 2022 to replace fire-damaged Mirador del Xap. A brutally steep addition that significantly increases the route's difficulty when included."
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A circular route from the Mediterranean coast into the limestone mountain passes of the Costa Blanca interior and back. The first kilometers are flat — the Valencian coastal plain around Oliva is rice-paddy territory, sea-level warm-up before the mountains begin. Then the road tilts upward and does not truly relent for 80 km. The climbing is concentrated through the Marina Alta and Vall de Gallinera: a series of 5-8 km passes at 5-6% average gradient, connected by rolling valley roads through ancient stone villages. Coll de Rates is the signature — the most famous cycling climb on the Costa Blanca, a timed section that separates those who paced wisely from those who did not. Sa Creueta is the high point, with its sharp final kilometer and panoramic ridge views. The Vall d'Ebo descent through bare limestone landscape feels like riding through a geology textbook. The return to Oliva via Pego is mercifully flat, a Mediterranean homecoming with the salt air announcing the finish before you see it.",
+      "signature_challenge": "Coll de Rates — the timed section that defines the competitive day. 6.6 km of consistent climbing at 5.3% average, arriving early enough in the route (km 30) to tempt riders into going too hard. The climb itself is not the hardest on the route — Sa Creueta is steeper, Vall d'Ebo is longer — but the timed section creates a race-within-a-race dynamic. Ride it as a time trial and pay later. Ride it as a tempo effort and carry strength through the remaining 116 km. Every year, Coll de Rates sorts the field into those who raced the climb and those who raced the event.",
+      "suffering_zones": [
+        "Coll de Rates — The Signature Climb",
+        "Puerto de Sa Creueta — The High Point",
+        "Fageca and Muro de Tollos — The Interior Loop",
+        "Puerto de Vall d'Ebo — The Cat 2 Grinder",
+        "The Pego Descent and Coastal Return — The Homestretch"
+      ]
+    },
+    "logistics": {
+      "airport": "Valencia (VLC) — 1 hour north (international flights, European connections). Alicante-Elche (ALC) — 1.5 hours south (Ryanair hub, budget European connections). Both airports have car rental desks and transfer services to the Costa Blanca.",
+      "lodging_strategy": "Stay in Oliva or Oliva Nova — the start/finish area. Oliva Nova is a self-contained resort complex with hotel, apartments, golf, and beach access — the event's unofficial headquarters and where many organized cycling experiences are based. Oliva town offers more authentic Spanish accommodation at lower prices. Denia (20 min north) and Gandia (15 min north) provide additional hotel options if Oliva fills up. Hotels run EUR60-130/night, with the Oliva Nova resort at EUR100-180/night. Book 2-3 months in advance for event weekend — the Costa Blanca is popular in late September.",
+      "transport": "",
+      "food": "The Costa Blanca and Marina Alta region is a culinary stronghold of Valencian cuisine. Paella (the real thing, born here) is mandatory — rice dishes with seafood, rabbit, or mixed. Fideuà (paella's noodle cousin) is the local alternative. Mountain villages along the route serve hearty inland fare: embutidos (cured meats), garbanzos, and cocas (Valencian flatbreads). Post-ride, Oliva's beach restaurants serve fresh fish and Mediterranean salads. Carb loading in this region means you eat like a Valencian grandparent — generously, slowly, and with alarming quantities of rice.",
+      "official_site": "https://granfondoalbertocontador.com/en/"
+    },
+    "history": {
+      "founded": 2013,
+      "origin_story": "In 2013, the Fundacion Alberto Contador launched a gran fondo bearing the name of Spain's most decorated Grand Tour rider. Alberto Contador — born in Pinto, near Madrid, in 1982 — had already won two Tours de France, two Giri d'Italia, and three Vueltas a Espana by the time the first edition rolled. The event found its permanent home in Oliva, on the Valencian coast, where the flat Mediterranean plain meets the Costa Blanca's interior mountains within minutes of the start line. Contador's involvement was not ceremonial — from the beginning, he rode with the field, turning what could have been a standard cyclosportive into something genuinely special. The Fundacion uses the event to fund its mission: promoting cycling among young people through its academy, raising awareness of stroke (Contador himself survived a cerebral cavernous malformation early in his career), and the Bicis para la Vida program that provides refurbished bicycles to disadvantaged communities. When Contador retired from professional racing in 2017, the gran fondo became his most visible public cycling commitment. The event has grown steadily, reaching UCI Gran Fondo World Series status and attracting TotalEnergies as title sponsor. The 2022 edition adapted its route after devastating summer fires, replacing fire-damaged sections with the brutally steep El Miserat climb — demonstrating the kind of organizational resilience that keeps events alive. By 2024, the XIII edition drew over 2,000 participants who rode alongside Contador, Pedro Delgado, and cyclocross world champion Fem van Empel.",
+      "notable_moments": [
+        "2013: First edition — Alberto Contador personally rides with the field, establishing the event's defining tradition",
+        "2016: Event establishes Oliva as its permanent home base, leveraging the Costa Blanca's mountain passes",
+        "2017: Contador retires from professional racing — the gran fondo becomes his primary cycling platform",
+        "2022: Route adapted after devastating summer fires — El Miserat (8 km, 8.5% avg, 24% max) replaces fire-damaged Mirador del Xap. 2,500 participants. Weather cooperated perfectly.",
+        "2023: XII edition features unique 146 km route avoiding fire-affected zones. UCI Gran Fondo World Series calendar",
+        "2024: XIII edition — 2,000+ riders alongside Contador, Pedro Delgado, and Fem van Empel. TotalEnergies title sponsorship begins.",
+        "UCI Gran Fondo World Series qualifier — age-group finishers qualify for UCI World Championships",
+        "Fundacion Alberto Contador: cycling academy, stroke awareness, Bicis para la Vida (Bikes for Life) program"
+      ],
+      "reputation": "The Spanish gran fondo where the legend still rides. Not the oldest, not the largest, but the only event where a seven-time Grand Tour winner greets every participant personally from inside the peloton."
+    },
+    "biased_opinion": {
+      "verdict": "The Legend in the Peloton",
+      "summary": "The Gran Fondo Alberto Contador is the rare event where the name on the marquee actually shows up and rides with you. Alberto Contador — two-time Tour de France winner, two-time Giro champion, three-time Vuelta conqueror, one of the seven members of the Grand Tour triple crown club and arguably the most devastating pure attacker of his generation — does not just lend his name to this event. He starts at the front, drops back to wait for the last rider, and works his way through the entire peloton, greeting cyclists, posing for photos, and probably putting in a few accelerations that remind everyone within visual range exactly why he won seven Grand Tours. The route through the Costa Blanca's interior mountains — Coll de Rates, Sa Creueta, the Vall de Gallinera — is a concentrated dose of Mediterranean climbing at its finest. The Fundacion Alberto Contador channels the event's proceeds into cycling development, stroke awareness, and providing bikes to disadvantaged communities. This is not a vanity project. It is a UCI-sanctioned qualifier with real competitive structure, ridden through genuinely beautiful mountains, organized by professionals, and anchored by a champion who clearly still loves the bike.",
+      "strengths": [
+        "Alberto Contador rides with the field — a living Grand Tour legend accessible to every participant",
+        "UCI Gran Fondo World Series qualifier with timed climbing sections for competitive riders",
+        "Costa Blanca mountain passes deliver concentrated climbing through stunning limestone scenery",
+        "Fundacion Alberto Contador charitable purpose — entry fees fund cycling development and social programs",
+        "Celebrity guests beyond Contador — Pedro Delgado and Fem van Empel in 2024, elevating the experience"
+      ],
+      "weaknesses": [
+        "September gota fria thunderstorm risk — the wettest month in the Valencia region can produce violent storms",
+        "Heat and humidity in late September — Mediterranean coastal moisture makes climbing harder than numbers suggest",
+        "Modest international recognition compared to L'Etape, Maratona, or the Italian gran fondo giants",
+        "Oliva as a start location is functional rather than charismatic — a coastal town, not a cycling-mythic city",
+        "Route varies year to year (fire damage, road conditions) — less consistent identity than fixed-route classics"
+      ],
+      "bottom_line": "The Gran Fondo Alberto Contador delivers something no other event in cycling can: the chance to ride alongside one of the greatest Grand Tour champions in history, through mountain passes that would be worth riding even without the celebrity draw. The Costa Blanca climbing is honest and varied, the organization is UCI-grade professional, and the price is fair for what you get. If you want to tell the story of the day you climbed the Coll de Rates in the same group as Alberto Contador, this is it. The man who attacked Schleck on the Tourmalet, who danced on the pedals up the Zoncolan, who won the Vuelta three times — he is right there in the peloton with you. That is not something you get at a bike expo."
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Ride with a legend. 146 km through the Costa Blanca mountains, alongside the man who won the Tour, the Giro, and the Vuelta — and still shows up to pedal with the field.",
+      "should_you_race": "Yes if you want the once-in-a-lifetime experience of riding alongside Alberto Contador through Mediterranean mountain passes. Yes if a UCI qualifier with timed climbing sections suits your competitive instincts. Yes if the Costa Blanca's combination of mountain cycling and beach recovery sounds like the perfect September weekend. Skip if you want pure mountain extremity — the passes top out under 800m. Skip if you need a massive international field and English-language everything — this event is proudly Spanish first. Skip if September Mediterranean weather risk gives you anxiety.",
+      "alternatives": "If you want Spanish climbing at higher altitude: La Vuelta Cicloturista (multiple Spanish GFs). If you want a champion-named Italian GF: Granfondo Felice Gimondi in Bergamo. If you want Mediterranean mountains with more global prestige: Gran Fondo Campagnolo Roma. If you want a UCI qualifier with Alpine passes: Granfondo San Sebastian or Gran Fondo Il Lombardia."
+    },
+    "citations": [
+      {
+        "url": "https://granfondoalbertocontador.com/en/",
+        "category": "official",
+        "label": "TotalEnergies Gran Fondo Alberto Contador — Official Site"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/79242",
+        "category": "official",
+        "label": "TotalEnergies Gran Fondo Alberto Contador 2026 — UCI"
+      },
+      {
+        "url": "https://fundacionalbertocontador.org/en/",
+        "category": "official",
+        "label": "Fundacion Alberto Contador — Official Foundation Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Alberto_Contador",
+        "category": "reference",
+        "label": "Alberto Contador — Wikipedia"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/coll-de-rates-parcent",
+        "category": "reference",
+        "label": "Coll de Rates Climb Profile — ClimbFinder"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/vall-d-ebo",
+        "category": "reference",
+        "label": "Port de la Vall d'Ebo Climb Profile — ClimbFinder"
+      },
+      {
+        "url": "https://www.cyclefiesta.com/multimedia/climbs/valencia/sa-creueta.htm",
+        "category": "reference",
+        "label": "Sa Creueta (Tarbena) — Costa Blanca Cycling Climbs"
+      },
+      {
+        "url": "https://blancabikes.com/news/gran-fondo-alberto-contador-2025/",
+        "category": "review",
+        "label": "Gran Fondo Alberto Contador 2025 — Blanca Bikes"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "TotalEnergies Gran Fondo Alberto Contador gran fondo cycling Oliva",
+      "videos": [
+        {
+          "video_id": "LJFqyMx1YGI",
+          "title": "La Gran Fondo Alberto Contador, parte del TotalEnergies Challenge",
+          "channel": "TotalEnergies Spain",
+          "view_count": 245,
+          "upload_date": "20220214",
+          "duration_string": "1:40",
+          "description": "La Gran Fondo Alberto Contador pasa a formar parte del TotalEnergies Challenge, un circuito cicloturista recientemente fundado por TotalEnergies. Una fuerte apuesta por el deporte y las actividades saludables, con 3.000 ciclistas que han disfrutadi de la TotalEnergies Gran Fondo Alberto Contador.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=LJFqyMx1YGI",
+          "curated": false
+        },
+        {
+          "video_id": "XttbU3vW8Os",
+          "title": "GRAN FONDO ALBERTO CONTADOR 2023. ¡PEDALEANDO CON PURITO RODRÍGUEZ Y ALBERTO CONTADOR! 💪🏼💪🏼🔥",
+          "channel": "FRAN MORCILLO - ¡Cycling for enjoyment!",
+          "view_count": 4108,
+          "upload_date": "20230924",
+          "duration_string": "13:26",
+          "description": "🚲 ¡Bienvenidos, DISFRUTONES DEL CICLISMO!\n\nEn este video superamos uno de los retos más importantes del panorama cicloturista actual, la GRAN FONDO ALBERTO CONTADOR del año 2023.\n\nCon salida en Oliva (Valencia), iniciamos la marcha con 144km por delante en la que superamos más de 2400 metros de desnivel y tres puertos míticos, entre ellos el Coll de Rates. Durante unos kilómetros tenemos la suerte de conocer y pedalear junto a dos leyendas del ciclismo, Alberto Contador y Purito Rodríguez. Este tipo de marchas nos ayuda a sentir por un día Vinegaard, Pogacar, Evenepoel... pero jamás olvides el riesgo que corremos... 🚴‍♂️💪😃\n\n🍔 El restaurante donde cenamos es El Merendero de Quimera, en Oliva. Absolutamente recomendable por su calidad y trato. \n\n👦 Sobre mi: soy padre de tres hijas y deportista desde niño. Practico ciclismo desde hace 6 años y me apasiona. Trato de ayudar a todo el que empieza, porque los inicios siempre son difíciles, pero con ayuda, todo es más llevadero.\n\n📲 Sígueme en mis redes sociales \nInstagram: https://www.instagram.com/fnz1986/\nTwitter: https://twitter.com/FranMorcillo\nTikTok: https://www.tiktok.com/@fran.morcillo\nStrava: https://www.strava.com/athletes/10193481",
+          "tags": [
+            "contador",
+            "purito",
+            "purito rodriguez",
+            "gran fondo",
+            "100km",
+            "ciclismo",
+            "bicicleta",
+            "oliva",
+            "deporte",
+            "gran fondo alberto contador",
+            "fran morcillo"
+          ],
+          "url": "https://www.youtube.com/watch?v=XttbU3vW8Os",
+          "curated": true,
+          "curation_reason": "First-person race recap with good views showing the full 144km course including Coll de Rates climb and featuring appearances by Alberto Contador and Purito Rodriguez.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/XttbU3vW8Os/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "zGg_y2gAHkM",
+          "title": "Gran Fondo Alberto Contador 2023 | AURUM Bikes",
+          "channel": "AURUM ",
+          "view_count": 1422,
+          "upload_date": "20231016",
+          "duration_string": "2:25",
+          "description": "Last September 23th, a new edition of the Gran Fondo Alberto Contador took place in Oliva (Valencia, Spain)\n\nCheck out the highlights of one of the most important events this year.\n\n\nFOLLOW US:\n\n· Web: https://www.aurumbikes.com \n\n · Instagram: https://www.instagram.com/aurumbikes/\n\n · Facebook: https://www.facebook.com/aurumbikes\n\n · Twitter: https://twitter.com/AurumBikes\n\n · TikTok: @aurumbikes\n\n\n#BornFromExperience #AURUMBikes #GFAlbertoContador",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=zGg_y2gAHkM",
+          "transcript": "[Applause]\n[Music]\nI get what I\nwant ain't nothing going to stop\nit I'm going to the\ndie and everybody's\nwatching\nyeah I'm too cool for school and too hot\nfor summer too good is true yeah baby\nI'm the one yeah too cool for school and\ntoo hot for summer too good it's true\nit's true I get what I\nwant I get what I\nwant got the world in my\nhands yeah and I can move a\nmountain H you know I'm the\nman yeah come swim up in my\nFountain\nyeah I'm too cool for schooling too hot\nwant I get what I want want want I get\nwhat I\nwant I get I get I get what I want I get\nI get I get what I want I get I get I\nget what I want I get I get I get I get\nwant I what I\nwant",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The provided transcript from the Gran Fondo Alberto Contador race video does not contain rider commentary or race-specific information. The transcript consists entirely of music lyrics and crowd audio from what appears to be a highlight reel or promotional video. No actionable intelligence about the 91-mile course through Oliva, Valencia, or its 8,327 feet of elevation gain can be extracted from this source. Riders looking for course details, terrain conditions, gear recommendations, or race strategy advice will need to reference other sources, as this video appears to focus on atmosphere and music rather than technical race content."
+      }
+    }
+  }
+}

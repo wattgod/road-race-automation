@@ -1,0 +1,260 @@
+{
+  "race": {
+    "name": "La Leggendaria Charly Gaul",
+    "slug": "la-leggendaria-charly-gaul",
+    "display_name": "La Leggendaria Charly Gaul",
+    "tagline": "141 kilometers and 4,000 meters of climbing from Trento's Cathedral Square to the summit of Monte Bondone — the same finish where Charly Gaul collapsed, frozen and victorious, in the 1956 Giro d'Italia. UCI Gran Fondo World Series qualifier since 2012.",
+    "vitals": {
+      "distance_km": 141.0,
+      "distance_mi": 88.0,
+      "elevation_m": 4000.0,
+      "elevation_ft": 13123.0,
+      "location": "Trento, Trentino-Alto Adige, Italy",
+      "location_badge": "TRENTO, ITALY",
+      "country": "Italy",
+      "date": "Early July annually",
+      "date_specific": "2026: July (exact date TBD — historically first or second weekend)",
+      "field_size": "2,000-5,000 riders",
+      "start_format": null,
+      "registration": "Online via endu.net. UCI Gran Fondo World Series qualifier — results count toward UWCT (UCI World Cycling Tour) qualification. Granfondo open to all ages. Mediofondo is qualifier for riders 50+. Entry includes timing, feed stations, and finisher medal.",
+      "entry_fee": "EUR 55-75 (granfondo), EUR 45-60 (mediofondo), EUR 30-40 (time trial)",
+      "feed_zones": "Multiple feed/aid stations along both routes with water, energy food, and mechanical support. Medical assistance on Monte Bondone climb.",
+      "cutoff_time": "Time limits enforced on granfondo route — typically 8-9 hours",
+      "lat": 46.0679,
+      "lng": 11.1211,
+      "route_options": [
+        "Granfondo: 141 km / 4,000m elevation — full route with 22 km Monte Bondone climb done twice (UCI qualifier for under-50)",
+        "Mediofondo: 57 km / 2,000m elevation — direct route to Monte Bondone summit (UCI qualifier for 50+)",
+        "Time Trial (Friday): 24 km / 440m through Valle dei Laghi — separate competition"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine summer — warm valleys, cooler mountain summit, afternoon storm risk",
+      "description": "July in Trento delivers average highs of 28-32C (82-90F) in the city at 194m elevation. Monte Bondone's summit at 1,650m is 10-15C cooler, with temperatures of 15-20C at the finish line. The valley heat is the primary challenge — the first 80+ km of the granfondo route through the Valle dei Laghi can be very warm, with limited shade on exposed lakeside roads. Afternoon thunderstorms in the Trentino mountains are common in July, particularly above 1,000m. The early morning start takes advantage of cooler conditions before the July heat builds. The 1956 Giro stage that inspired the event was famously cold and foggy — modern July editions are typically the opposite.",
+      "challenges": [
+        "Valley heat: 28-32C in Trento and Valle dei Laghi — sun exposure on lakeside roads",
+        "Afternoon thunderstorms above 1,000m — risk increases for riders still on Monte Bondone after 2 PM",
+        "Temperature swing of 10-15C between Trento (194m) and Monte Bondone summit (1,650m)",
+        "Dehydration risk on the 141 km granfondo route in July heat",
+        "Granfondo climbs Monte Bondone twice — second ascent in peak afternoon heat"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain roads through Trentino with a summit finish on Monte Bondone",
+      "surface": "Entirely paved on well-maintained Italian provincial and mountain roads. The Monte Bondone ascent from the western side (the 'Charly Gaul' climb) is 22 km with an average gradient of 7.6% and sections reaching 15%. The Valle dei Laghi roads are smooth and rolling, passing alongside several alpine lakes. The northern loop through Cembra Valley adds vineyard-lined roads with moderate climbing. Road surface quality is generally excellent throughout Trentino. The granfondo route includes the Monte Bondone ascent twice — riders climb the mountain, descend, complete the northern loop, and then climb again to the summit finish at Vason (1,650m).",
+      "technical_rating": 2,
+      "features": [
+        "Monte Bondone from the west: 22 km at 7.6% average, sections to 12%, summit finish at Vason (1,650m)",
+        "Valle dei Laghi: rolling lakeside roads through Cavedine, Toblino, and Santa Massenza — scenic, exposed",
+        "Granfondo northern loop through Cembra Valley vineyards — moderate climbing with Dolomite views",
+        "Summit finish at the exact point where Charly Gaul crossed in the 1956 Giro d'Italia",
+        "Piazza Duomo start: grand departure from Trento's medieval cathedral square",
+        "Time trial course (Friday): 24 km ring through Valle dei Laghi with lakeside riding and uphill finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A gran fondo that builds toward a single, defining moment: the summit finish on Monte Bondone at 1,650m. The granfondo route from Trento loops through the Valle dei Laghi and Cembra Valley before climbing Monte Bondone twice — once as an intermediate test, once as the grand finale. The course design is classical Italian: a long day through varied terrain, building toward a decisive summit finish that rewards the strongest climbers. The emotional weight of finishing at the exact spot where Charly Gaul collapsed in 1956 elevates the physical challenge into something more meaningful.",
+      "signature_challenge": "The second ascent of Monte Bondone: 22 km at 7.6% average after 120 km of riding and 3,000m of prior climbing. The same climb you did 60 km ago, but on legs that have nothing left. Summit finish at 1,650m at the exact spot where Charly Gaul became a legend.",
+      "suffering_zones": [
+        "Piazza Duomo Start",
+        "Valle dei Laghi",
+        "First Monte Bondone Ascent",
+        "Cembra Valley Loop",
+        "Second Monte Bondone — The Finale"
+      ]
+    },
+    "logistics": {
+      "airport": "Verona Villafranca (VRN) 100 km south (~1 hr drive, direct trains). Innsbruck (INN) 140 km north (~2 hr). Milan Bergamo (BGY) 200 km west (~2.5 hr). Venice (VCE) 190 km east (~2 hr). Trento is on the Brenner Pass main rail line — direct trains from Verona (1 hr), Munich (3.5 hr), Bologna (2 hr), Innsbruck (2.5 hr).",
+      "lodging_strategy": "Trento city center has ample accommodation ranging from budget hotels (EUR 60-80/night) to boutique options (EUR 120-180/night). The compact city center means most hotels are within walking distance of the Piazza Duomo start. Rovereto (25 km south) offers overflow accommodation. Book 2-3 months ahead for event weekend.",
+      "transport": "",
+      "food": "Trentino cuisine is hearty mountain food with Italian refinement: canederli (bread dumplings), strangolapreti (spinach gnocchi), polenta taragna, speck, and local cheeses. The Valle dei Laghi wine region along the route produces excellent Nosiola and Vino Santo. Trento has a lively restaurant scene in the medieval center — EUR 20-40 for a proper dinner. Post-race, the Piazza Duomo becomes a celebration zone.",
+      "official_site": "https://www.endu.net/en/events/la-leggendaria-charly-gaul-uci-granfondo-world-series/"
+    },
+    "history": {
+      "founded": 2006,
+      "origin_story": "La Leggendaria Charly Gaul was created to honor one of the most legendary mountain stages in Giro d'Italia history. On June 8, 1956, Luxembourgish cyclist Charly Gaul — nicknamed 'The Angel of the Mountains' — rode alone through fog, ice, and snow to the summit of Monte Bondone during a 242 km Giro stage. He arrived at the finish nearly frozen, was wrapped in blankets, but had secured his overall Giro victory. The first edition of the gran fondo was presented in Luxembourg on February 13, 2006, organized by the Trento tourism office in collaboration with ACC Contern (Luxembourg cycling club) and the Friends of Charly Gaul Foundation. The inaugural ride in 2006 attracted around 100 participants. By the third edition in 2008, the field exceeded 1,000. The event became a UCI Gran Fondo World Series qualifier in 2012 and hosted the UCI Gran Fondo World Championships in 2013 and 2022.",
+      "notable_moments": [
+        "1956: Charly Gaul's legendary Monte Bondone ride in the Giro d'Italia — the event's founding inspiration",
+        "2006: First edition of La Leggendaria Charly Gaul — approximately 100 participants",
+        "2008: Field exceeds 1,000 riders by the third edition",
+        "2012: Joins the UCI Gran Fondo World Series as an Italian qualifier",
+        "2013: Hosts the UCI Gran Fondo World Championships — the event's international breakthrough",
+        "2022: Hosts the UCI Gran Fondo World Championships for the second time — confirming status as a premier venue",
+        "2025: 20th edition continues the tradition — approximately 40 Luxembourg riders travel annually with ACC Contern"
+      ],
+      "reputation": "Established as one of Italy's premier UCI gran fondos with a unique historical narrative. The Charly Gaul connection gives it a storytelling depth that few competitive gran fondos can match. Within the UCI World Series circuit, it is known for its challenging Monte Bondone summit finish and the emotional resonance of its origin story. The Luxembourg-Italian cross-border organization adds a distinctive community element."
+    },
+    "biased_opinion": {
+      "verdict": "The Angel's Mountain",
+      "summary": "La Leggendaria Charly Gaul exists because of one day in cycling history: June 8, 1956, when Luxembourg's Charly Gaul — the 'Angel of the Mountains' — rode alone through fog and ice to the summit of Monte Bondone, collapsing at the finish and securing the Giro d'Italia. Seventy years later, 2,000-5,000 riders retrace his path from Trento's Cathedral Square to the same summit at 1,650m, now in the July heat rather than June snow.\n\nThe granfondo is not gentle about it. 141 km and 4,000 meters of climbing, including Monte Bondone done twice — once as a warm-up that ends with a descent back to the valley, and once as the final 22 km summit finish that decides the race. The climb averages 7.6% for 22 km with sections punching to 15%. On the second ascent, after 120+ km of riding in July heat through the Valle dei Laghi and Cembra Valley, those 15% sections feel like walls. The mediofondo at 57 km with 2,000m of climbing offers a more direct path to the emotional summit finish.\n\nUCI Gran Fondo World Series status gives the event competitive teeth. Age-group riders are genuinely racing for World Championship qualification slots, and the field reflects this — La Leggendaria hosted the actual UCI Worlds in 2013 and 2022. The Luxembourg connection (the ACC Contern club co-organizes) adds a unique cross-border dimension. Trento as a host city provides excellent infrastructure, cultural depth, and accessibility. This is not the most dramatic landscape in the Italian Alps — the Dolomites are 50 km north — but the Monte Bondone summit finish, at the exact spot where Gaul collapsed into legend, delivers an emotional punch that no amount of scenery can replicate.",
+      "strengths": [
+        "UCI Gran Fondo World Series qualifier — genuine competitive depth with World Championship qualification pathway",
+        "Monte Bondone summit finish at the exact point of Charly Gaul's legendary 1956 Giro d'Italia ride",
+        "4,000m of climbing including a double Monte Bondone ascent on the granfondo — genuinely hard",
+        "Excellent host city: Trento offers medieval charm, strong infrastructure, and direct rail connections",
+        "Outstanding value at EUR 55-75 for a UCI-standard event",
+        "Weekend format with Friday time trial, Sunday granfondo, and mediofondo option for riders 50+"
+      ],
+      "weaknesses": [
+        "July heat in the Adige Valley — 30-32C on exposed lakeside roads before the Monte Bondone climb",
+        "Trentino scenery is pleasant but not dramatic compared to the nearby Dolomites",
+        "Event profile is primarily Italian — less international recognition than Maratona or Haute Route",
+        "Double Monte Bondone ascent on the granfondo is physically punishing but repetitive — same climb twice",
+        "Small-to-medium field (2,000-5,000) lacks the mass-participation energy of larger events",
+        "Granfondo under-50 age restriction on qualification — mediofondo qualification for 50+ only"
+      ],
+      "bottom_line": "La Leggendaria Charly Gaul is the gran fondo for cyclists who understand that the history of a mountain can make the climbing matter more. The Monte Bondone summit finish is an emotional experience that connects you to one of cycling's most legendary performances. If you are targeting UCI World Championship qualification in Italy, this is your event. If you want a well-organized, historically resonant gran fondo at a fair price, this delivers. If you need Dolomite drama and 20,000-rider energy, look north."
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "141 km and 4,000m of climbing to the summit where Charly Gaul collapsed into legend in the 1956 Giro — UCI-caliber racing at a regional gran fondo price.",
+      "should_you_race": "Ride this if you want a UCI Gran Fondo World Series qualifier with genuine competitive depth, historical significance, and a summit finish that connects you to one of cycling's greatest mountain performances. Skip it if you need spectacular Dolomite scenery (go north to the Maratona), cannot handle 30C+ valley heat in July, or are looking for a non-competitive experience.",
+      "alternatives": "For Dolomite drama: Maratona dles Dolomites (138 km, 4,190m, lottery). For a UCI qualifier in the Dolomites: UCI Gran Fondo Feltre or similar. For Trentino cycling: Giro del Trentino. For the Charly Gaul connection in Luxembourg: La Charly Gaul (separate event in Echternach)."
+    },
+    "citations": [
+      {
+        "url": "https://www.endu.net/en/events/la-leggendaria-charly-gaul-uci-granfondo-world-series/",
+        "category": "official",
+        "label": "ENDU: La Leggendaria Charly Gaul Event Page"
+      },
+      {
+        "url": "https://northsouth.live/event/la-leggendaria-charly-gaul",
+        "category": "reference",
+        "label": "RaceAtlas: La Leggendaria Charly Gaul"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/la-leggendaria-charly-gaul-in-the-beautiful-trentino-region/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series: La Leggendaria Charly Gaul"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4390/la-leggendaria-charly-gaul",
+        "category": "reference",
+        "label": "Gran Fondo Guide: La Leggendaria Charly Gaul"
+      },
+      {
+        "url": "https://lacharlygaul.lu/indexen.htm",
+        "category": "reference",
+        "label": "ACC Contern: La Charly Gaul (Luxembourg organizing club)"
+      },
+      {
+        "url": "https://lacharlygaul.lu/English/bondone.htm",
+        "category": "reference",
+        "label": "ACC Contern: Monte Bondone History and Event Background"
+      },
+      {
+        "url": "https://www.bikeandmore.it/en/la-leggendaria-charly-gaul-stage-uci-gran-fondo-world-series-2019",
+        "category": "reference",
+        "label": "BikeAndMore: La Leggendaria Charly Gaul 2019 UCI World Series"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "La Leggendaria Charly Gaul gran fondo cycling Trento",
+      "videos": [
+        {
+          "video_id": "wL2n-6Q4Qbo",
+          "title": "2013 juli NGlaze Granfondo Cycling Team in Trento Charly Gaul",
+          "channel": "dalla collina",
+          "view_count": 771,
+          "upload_date": "20130916",
+          "duration_string": "13:17",
+          "description": "Impressie van de La Leggendaria Charly Gaul, een granfondo wielerwedstrijd in Trento Italië. Het NGlaze Dallacollina Granfondo Cycling Team heeft hier deelgenomen en met Margriet de Beus (3e overall en 1e in leeftijd) en Martin Kelderman (3e in leeftijdscategorie) het podium gehaald! Op een deel van dit parcours wordt op 22 september de UWCT Final: Wereldkampioenschappen voor amateur wielrenners gehouden. Wij zijn er dan ook bij met tien rijd(st)ers.",
+          "tags": [
+            "Cyclosportive",
+            "Leggendaria Charly Gaul Trento",
+            "NGlaze Dallacollina cycling team",
+            "Granfondo",
+            "UWCT"
+          ],
+          "url": "https://www.youtube.com/watch?v=wL2n-6Q4Qbo",
+          "curated": false
+        },
+        {
+          "video_id": "LwhKPFaxPnI",
+          "title": "la leggendaria charly gaul 2013 - highlights",
+          "channel": "PASSIONE PER IL CICLISMO",
+          "view_count": 1421,
+          "upload_date": "20130722",
+          "duration_string": "13:35",
+          "description": "8 edizione della gf , memorial della mitica scalata del monte bondone",
+          "tags": [
+            "granfondo",
+            "granfondo charly gaul 2013",
+            "amatori",
+            "ciclismo",
+            "monte bondone",
+            "scalata",
+            "salita",
+            "bicicletta"
+          ],
+          "url": "https://www.youtube.com/watch?v=LwhKPFaxPnI",
+          "curated": true,
+          "curation_reason": "Best available highlights video with highest view count and cycling-focused channel covering the race.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/LwhKPFaxPnI/hqdefault.jpg",
+          "thumbnail_score": 65.71
+        },
+        {
+          "video_id": "BMPRrf67trA",
+          "title": "La Leggendaria Charly Gaul 2016 - LA SINTESI",
+          "channel": "Trento - Azienda per il Turismo",
+          "view_count": 302,
+          "upload_date": "20160801",
+          "duration_string": "39:53",
+          "description": "Tapis Roulant del 24/07/2016",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=BMPRrf67trA",
+          "curated": false
+        },
+        {
+          "video_id": "5hQGXqpYkD0",
+          "title": "La Leggendaria Charly Gaul - UCI Granfondo World Series",
+          "channel": "Trento - Azienda per il Turismo",
+          "view_count": 635,
+          "upload_date": "20151119",
+          "duration_string": "2:20",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=5hQGXqpYkD0",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

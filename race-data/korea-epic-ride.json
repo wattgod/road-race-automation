@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Korea Epic Ride",
+    "slug": "korea-epic-ride",
+    "display_name": "Korea Epic Ride",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 99.8,
+      "distance_mi": 62.0,
+      "elevation_m": 762,
+      "elevation_ft": 2500.0,
+      "location": "Incheon, South Korea",
+      "location_badge": "Incheon, South Korea",
+      "country": "South Korea",
+      "date": "2026: June TBD",
+      "date_specific": "2026: June TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.koreaepicride.kr",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Mid-Course Gangwon Grind: 2500ft cumulative climbs peak here on paved pitches after Incheon flats.",
+        "June Humidity Hammer: Coastal moisture turns 62 miles into endurance test post-checkpoint."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.koreaepicride.kr"
+    },
+    "history": {
+      "founded": 2018,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "Scenic paved road fondo in Korea's cycling festival scene.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

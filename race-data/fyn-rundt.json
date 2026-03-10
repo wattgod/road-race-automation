@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Fyn Rundt (Tour of Funen)",
+    "slug": "fyn-rundt",
+    "display_name": "Fyn Rundt (Tour of Funen)",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 199.6,
+      "distance_mi": 124.0,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Funen Island, Denmark",
+      "location_badge": "Funen Island, Denmark",
+      "country": "Denmark",
+      "date": "2026: May 3",
+      "date_specific": "2026: May 3",
+      "field_size": "100-250 riders",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Standard for UCI race",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels in Odense and coastal towns on Funen.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Historic Danish road classic with 130+ years of tradition and solid UCI competition.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

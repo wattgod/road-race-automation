@@ -1,0 +1,215 @@
+{
+  "race": {
+    "name": "Copper Triangle",
+    "slug": "copper-triangle",
+    "display_name": "Copper Triangle — Colorado's Three-Pass Alpine Loop",
+    "tagline": "3 mountain passes. 79 miles. 6,500 feet of climbing — entirely above 9,000 feet. Colorado's definitive high-altitude loop since 2006.",
+    "vitals": {
+      "distance_km": 127.1,
+      "distance_mi": 79.0,
+      "elevation_m": 1981,
+      "elevation_ft": 6500.0,
+      "location": "Copper Mountain Resort, Colorado",
+      "location_badge": "COPPER MOUNTAIN, COLORADO",
+      "country": "Colorado",
+      "date": "First Saturday of August annually",
+      "date_specific": "2026: August 1",
+      "field_size": "~2,500 riders (capped)",
+      "start_format": null,
+      "registration": "Online via BikeReg. Cost: ~$130-150 (tiered pricing with early-bird discount). Discounted fee deadline in late February.",
+      "entry_fee": "~$130-150",
+      "feed_zones": "5 fully stocked aid stations with hydration drink mix, water, fresh fruit, and sweet/salty snacks. SAG wagons available for mechanical issues and fatigued riders.",
+      "cutoff_time": "Course closes at 4:00 PM. If unable to make Vail Pass, sag vehicles available at parking lot beyond East Vail exit.",
+      "lat": 39.502,
+      "lng": -106.149,
+      "route_options": [
+        "Copper Triangle: 79 miles, ~6,500 ft — Full 3-pass loop (Fremont, Tennessee, Vail)"
+      ]
+    },
+    "climate": {
+      "primary": "Colorado Rocky Mountain summer — high-altitude, variable, thunderstorm-prone afternoons",
+      "description": "Early August in the Colorado high country means cool morning starts at 9,700 ft (45-55F at dawn), warm valley descents (65-75F), and the near-daily threat of afternoon thunderstorms above treeline. The entire route sits above 9,000 ft, so UV exposure is intense and the air is thin. Temperature drops approximately 3.5F per 1,000 feet of elevation gain. The early start is strategic — riders should aim to clear all three passes before the 1:00 PM lightning window opens.",
+      "challenges": [
+        "Afternoon thunderstorms — lightning above 10,000 ft is a genuine safety threat",
+        "Entire route above 9,000 ft — relentless altitude with no low-elevation recovery",
+        "Temperature swings from cool dawn to warm valleys to cold pass summits",
+        "Intense high-altitude UV exposure — 40% stronger than sea level",
+        "Low humidity (10-20%) accelerates dehydration at altitude"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain highways and dedicated bike paths",
+      "surface": "Paved mountain highways (CO-91 and US-24) and the paved, car-free Vail Pass Recreation Path. Road surfaces are generally good. The Vail Pass bike path section is entirely separated from vehicle traffic.",
+      "technical_rating": 1,
+      "features": [
+        "Fremont Pass (11,318 ft) — the high point, climbing south from Copper Mountain on CO-91 with steady 2.5-3% grades past the Climax Mine",
+        "Tennessee Pass (10,424 ft) — climbing northwest on US-24 past historic Camp Hale (10th Mountain Division WWII training site)",
+        "Battle Mountain — the unofficial fourth pass between Tennessee Pass and Minturn, a rolling climb through forest",
+        "Vail Pass (10,662 ft) — the final climb on the dedicated Vail Pass Recreation Path, car-free with switchbacks near the top",
+        "Descent into Leadville valley (9,927 ft) — fast, open descent with views of Colorado's highest peaks",
+        "Minturn to Vail — frontage road and bike path along the Eagle River through the Vail Valley"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 5,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A three-act alpine loop that never lets you forget where you are. The Copper Triangle traces a triangle through the heart of the Colorado Rockies, connecting three mountain passes through three distinct valleys. You climb past industrial mining heritage on Fremont, descend into America's highest city at Leadville, ascend through WWII military history at Camp Hale, and close the loop on the car-free Vail Pass bike path. The entire route sits above 9,000 feet — there is no low-altitude recovery. The grades are moderate, the road surfaces are good, and the scenery is relentless. What makes this ride hard is not the climbing profile on paper. It's the thin air that makes every gradient feel steeper than it reads.",
+      "signature_challenge": "The cumulative altitude. No single pass is a leg-breaker. The grades are moderate, the distances between passes are manageable. But the Copper Triangle never lets you below 9,000 feet. By the time you're climbing Vail Pass — your third summit above 10,000 feet — the oxygen deficit has been compounding for 65 miles. The thin air is the opponent, not the gradient.",
+      "suffering_zones": [
+        "Copper Mountain — The Dawn Start",
+        "Fremont Pass — 11,318 ft",
+        "Leadville — America's Highest City",
+        "Tennessee Pass — 10,424 ft",
+        "Battle Mountain — The Unofficial Fourth Pass",
+        "Minturn — The Quiet Valley Town",
+        "Vail Pass — 10,662 ft",
+        "The Return — Descent to Copper Mountain"
+      ]
+    },
+    "logistics": {
+      "airport": "Denver International (DEN) — 90 minutes to Copper Mountain via I-70 West. Straightforward mountain highway access. Eagle County Airport (EGE) is 60 minutes west but has limited service.",
+      "lodging_strategy": "Copper Mountain Resort is the most convenient option — walk from your condo to the start line at Burning Stones Plaza. Book early: August is peak season. Frisco (10 minutes north on I-70) has more hotel variety and lower prices. Silverthorne and Dillon also offer Summit County lodging. Leadville (on the route, 30 minutes south) has historic hotels and motels at mountain-town prices.",
+      "transport": "",
+      "food": "Five aid stations along the course provide hydration, fruit, and snacks. Alpine Celebration at the finish includes lunch and beer garden. Copper Mountain has resort restaurants. Frisco has a walkable main street with restaurants and a brewery. Leadville's Harrison Avenue has restaurants if you're staying the night before.",
+      "official_site": "https://www.theridecollective.com/coppertriangle"
+    },
+    "history": {
+      "founded": 2006,
+      "origin_story": "The Copper Triangle was conceived to make the most of Copper Mountain's unique position at the intersection of three Colorado mountain passes. The route — a 79-mile loop over Fremont Pass, Tennessee Pass, and Vail Pass — had long been a favorite of local cyclists, and Olmsted formalized it into an organized event in 2006 with the Davis Phinney Foundation as the beneficiary. Davis Phinney, the Boulder-born professional cyclist diagnosed with Parkinson's disease at age 40, lent both his name and his presence to the event. The ride grew from its first edition to 2,500 participants under the Roll Massif banner, then moved to Outside Events in 2022, and was acquired by The Ride Collective in 2023. Twenty years and over $1.5 million in charitable donations later, the Copper Triangle is Colorado's signature high-altitude loop ride.",
+      "notable_moments": [
+        "2006: Inaugural Copper Triangle ride from Copper Mountain, benefiting the Davis Phinney Foundation for Parkinson's",
+        "2015: 10th anniversary edition — cumulative fundraising crosses the $1 million mark for the Davis Phinney Foundation",
+        "Since 2006, over $1.5 million raised for Parkinson's research, averaging roughly $140,000 per year",
+        "2022: 16th annual edition draws over 2,000 riders; event joins the Outside Events Cycling Series",
+        "2023: The Ride Collective acquires Outside Cycling Events, bringing the Copper Triangle into a portfolio of eight professional rides across Colorado and New Mexico"
+      ],
+      "reputation": "Colorado's premier high-altitude loop ride. The three-pass circuit that Front Range cyclists treat as a summer rite of passage — and visiting riders treat as an altitude reality check."
+    },
+    "biased_opinion": {
+      "verdict": "The Altitude Triangle",
+      "summary": "The Copper Triangle is a masterclass in what altitude does to honest cycling. 79 miles and 6,500 feet of climbing sounds manageable until you register the fine print: the entire route sits above 9,000 feet, the high point reaches 11,318, and you never get a breath of thick air. Three mountain passes — Fremont, Tennessee, Vail — through three Colorado valleys, past Leadville and Camp Hale and Minturn, finishing where you started at Copper Mountain. Twenty years of raising money for the Davis Phinney Foundation. Not the longest ride. Not the most climbing. But an altitude event that quietly exposes the gap between your sea-level fitness and what the Rocky Mountains actually demand.",
+      "strengths": [
+        "Entire route above 9,000 ft — one of America's highest cycling events from start to finish",
+        "Loop format eliminates shuttle logistics: start and finish at Copper Mountain Resort",
+        "Three distinct mountain passes through Leadville, Camp Hale, and Minturn — genuine Colorado history on two wheels",
+        "Davis Phinney Foundation beneficiary — $1.5M+ raised, riding for something beyond personal achievement",
+        "Vail Pass bike path section is car-free with switchbacks and Gore Range panoramas"
+      ],
+      "weaknesses": [
+        "Not competitive: no timing, no awards. A challenge ride, not a race.",
+        "Altitude: sea-level riders will suffer disproportionately. Arrive early and acclimatize.",
+        "Highway 91 over Fremont Pass carries mining truck traffic — rideable but not idyllic",
+        "Peak tourist season pricing in Summit County makes lodging expensive"
+      ],
+      "bottom_line": "If you want to test what altitude does to your cycling, the Copper Triangle is the answer. Three passes, 79 miles, and not a single pedal stroke below 9,000 feet. The climbing is honest, the scenery is Rocky Mountain spectacular, and the Davis Phinney Foundation mission gives every dollar of your registration meaning. Come for the passes. Stay for the thin air."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "3 passes. 79 miles. Never below 9,000 feet. Colorado's premier high-altitude loop.",
+      "should_you_race": "Yes if you want to experience what genuine high-altitude cycling feels like across three mountain passes in a single day. Yes if you value a well-organized charity ride through Colorado's most historic mountain terrain. Skip if you need race competition or if riding above 10,000 feet is a medical concern.",
+      "alternatives": "If you want more climbing and higher passes: try Triple Bypass. If you want competitive road cycling in the mountains: try Steamboat Gravel. If you want the ultimate Colorado multi-day experience: try Ride the Rockies. If you want a European mountain loop challenge: try La Marmotte."
+    },
+    "citations": [
+      {
+        "url": "https://www.theridecollective.com/coppertriangle",
+        "category": "official",
+        "label": "Copper Triangle — The Ride Collective (Official)"
+      },
+      {
+        "url": "https://www.theridecollective.com/coppertriangle/course",
+        "category": "official",
+        "label": "Copper Triangle Course Details — The Ride Collective"
+      },
+      {
+        "url": "https://www.bikereg.com/coppertriangle",
+        "category": "official",
+        "label": "Copper Triangle — BikeReg Registration"
+      },
+      {
+        "url": "https://www.coppercolorado.com/events-activities/events-calendar/copper-triangle/",
+        "category": "official",
+        "label": "Copper Triangle — Copper Mountain Resort"
+      },
+      {
+        "url": "https://davisphinneyfoundation.org/events/copper-triangle/",
+        "category": "official",
+        "label": "Copper Triangle — Davis Phinney Foundation"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Colorado's_Copper_Triangle",
+        "category": "community",
+        "label": "Colorado's Copper Triangle — Wikipedia"
+      },
+      {
+        "url": "https://www.summitdaily.com/sports/copper-triangle-road-cycling-event-celebrates-10-years-on-aug-1/",
+        "category": "media",
+        "label": "Copper Triangle Celebrates 10 Years — Summit Daily News"
+      },
+      {
+        "url": "https://www.summitdaily.com/news/cyclists-conquer-colorado-high-country-in-iconic-copper-triangle-bike-ride/",
+        "category": "media",
+        "label": "Cyclists Conquer Colorado High Country — Summit Daily News"
+      },
+      {
+        "url": "https://ridewithgps.com/ambassador_routes/181-copper-triangle-traditional-vail-pass-la",
+        "category": "community",
+        "label": "Copper Triangle Traditional Route — Ride with GPS"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Copper Triangle gran fondo cycling Copper Mountain Resort",
+      "videos": [
+        {
+          "video_id": "0Nzj4LaRBvU",
+          "title": "SLB 2012 Stonewall",
+          "channel": "Stephen Beckley",
+          "view_count": 1484,
+          "upload_date": "20130101",
+          "duration_string": "2:25",
+          "description": "The 2012 Stonewall Century",
+          "tags": [
+            "SLB",
+            "2012",
+            "Stonewall"
+          ],
+          "url": "https://www.youtube.com/watch?v=0Nzj4LaRBvU",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "race": {
+    "name": "Wicklow 200",
+    "slug": "wicklow-200",
+    "display_name": "Wicklow 200",
+    "tagline": "Ireland's premier cycling sportive through the breathtaking Wicklow Mountains",
+    "vitals": {
+      "distance_km": 200.0,
+      "distance_mi": 124.3,
+      "elevation_m": 3054.0,
+      "elevation_ft": 10020.0,
+      "location": "County Wicklow, Ireland",
+      "location_badge": "County Wicklow, Ireland",
+      "country": "Ireland",
+      "date": "2026: June 7",
+      "date_specific": "2026: June 7",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": [
+        {
+          "name": "Wicklow 200",
+          "distance_km": 200,
+          "elevation_m": 3054,
+          "description": "Full challenge route featuring all major climbs"
+        },
+        {
+          "name": "Wicklow 100",
+          "distance_km": 100,
+          "elevation_m": 1200,
+          "description": "Shorter option covering first loop, includes Sally Gap and Wicklow Gap but omits Slieve Mann and Shay Elliott"
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "June in County Wicklow typically features mild temperatures with variable conditions. Mountain sections are exposed to wind and potential rain.",
+      "challenges": [
+        "Precipitation: 45"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Challenging road cycling through the Wicklow Mountains featuring iconic climbs on open public roads. The route combines scenic valley sections with sustained mountain ascents.",
+      "technical_rating": 1,
+      "features": [
+        "Challenging road cycling through the Wicklow Mountains featuring iconic climbs on open public roads",
+        "The route combines scenic valley sections with sustained mountain ascents"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A challenging loop through the Wicklow Mountains featuring iconic climbs, scenic reservoir sections, and mountain passes. The route combines gentle rolling sections along Poulaphouca Reservoir with sustained mountain ascents. The 2025 redesign introduced a figure-of-eight layout crossing at Laragh with reversed direction on Sally Gap, presenting fresh challenge to returning riders.",
+      "signature_challenge": "The combination of Sally Gap, Slieve Mann, Shay Elliott, and Wicklow Gap climbs across 3,054m of elevation gain, with the Sally Gap direction reversal and new roads providing fresh difficulty even for experienced riders.",
+      "suffering_zones": [
+        "Sally Gap (early climb, reversed direction from previous years)",
+        "Slieve Mann and Shay Elliott double-header climbs (traditional signature challenges)",
+        "Wicklow Gap (finishing climb)",
+        "Second half exposed mountain sections (weather exposure)"
+      ]
+    },
+    "logistics": {
+      "airport": "DUB (Dublin Airport), 60km",
+      "lodging_strategy": "County Wicklow offers extensive accommodation options ranging from hotels to guesthouses. Blessington and surrounding villages provide convenient bases. Camping and camper parking available at event venue.",
+      "transport": "The Wicklow 200 operates from Russborough House in Blessington, West Wicklow, with comprehensive support including parking, changing facilities, showers, and food stops. The event attracts international participants and operates on open public roads with volunteer marshalling and mechanical support.",
+      "food": "",
+      "official_site": "https://wicklow200.ie"
+    },
+    "history": {
+      "founded": 1982,
+      "origin_story": "The Wicklow 200 was established in 1982 as Ireland's premier cycling sportive, organised by the Irish Veteran Cyclists Association (IVCA) and now managed by Elite Event Management with IVCA support. The event has grown to become one of the world's most respected annual cycling challenges, attracting participants from across Ireland and internationally.",
+      "notable_moments": [
+        "1982: Event established as Ireland's premier cycling sportive",
+        "2025: Major venue relocation from Bray Emmets GAA to Russborough House with complete route redesign",
+        "2026: 42nd edition scheduled for June 7, featuring new course layout with figure-of-eight design crossing at Laragh"
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "The Wicklow 200 represents one of Europe's most prestigious and well-organised cycling sportives. The 2025 venue relocation to Russborough House and complete route overhaul inject fresh challenge into a 42-year tradition. While the 3,054m elevation gain demands serious fitness, the impeccable organisation, iconic climbs, and stunning scenery justify its status as Ireland's premier cycling challenge. The parallel 100km option democratises access without compromising difficulty.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "A world-class cycling sportive combining legendary Irish climbs, exceptional organisation, and unmatched prestige in a challenging 200km package.",
+      "should_you_race": "The Wicklow 200 stands as Ireland's most revered cycling event and a genuine bucket-list ride for serious cyclists. Established in 1982 and now in its 42nd edition, it has earned recognition as one of the world's most challenging and respected annual cycling events. The 2025 relocation to Russborough House and complete route redesign modernise the experience while maintaining the signature difficulty. With 3,054m of elevation gain across 200km, including iconic climbs like Sally Gap, Slieve Mann, and Wicklow Gap, the route demands serious preparation. However, the exceptional volunteer organisation, comprehensive support infrastructure, food stops, mechanical assistance, and professional finish experience elevate this beyond a mere endurance test into a complete cycling celebration. The €85 entry fee represents excellent value for the calibre of organisation. The parallel 100km option provides an accessible alternative without sacrificing challenge. Cyclists seeking a prestigious, well-organised, scenically stunning, and genuinely difficult sportive will find the Wicklow 200 delivers on all fronts.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://sportive.com/2026/02/02/entries-open-for-irelands-biggest-sportive/",
+        "category": "reference",
+        "label": "Entries open for Ireland's biggest sportive"
+      },
+      {
+        "url": "https://eventmaster.ie/event/32Kyhx4tZW",
+        "category": "reference",
+        "label": "Wicklow 200 - 2026 - Eventmaster"
+      },
+      {
+        "url": "https://wicklow200.ie/what-is-the-wicklow-200/",
+        "category": "reference",
+        "label": "What is the Wicklow 200"
+      },
+      {
+        "url": "https://wicklow200.ie",
+        "category": "reference",
+        "label": "Wicklow 200 – Ireland's Premier Cycling Challenge"
+      },
+      {
+        "url": "https://www.stickybottle.com/latest-news/wicklow-200-set-to-open-summer-of-cycling-with-iconic-irish-climbs-91905",
+        "category": "reference",
+        "label": "Wicklow 200 set to open summer of cycling with iconic Irish climbs"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/9634/wicklow-200",
+        "category": "reference",
+        "label": "Wicklow 200 - Gran Fondo Guide"
+      },
+      {
+        "url": "https://wicklow200.ie/wicklow200-route/",
+        "category": "reference",
+        "label": "Wicklow200 Route – Wicklow 200"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Wicklow 200 gran fondo cycling County Wicklow",
+      "videos": [
+        {
+          "video_id": "3sTM-zPhyRA",
+          "title": "Wicklow 200/100 2016 - Full Video",
+          "channel": "Zap Sports Diary",
+          "view_count": 473,
+          "upload_date": "20160617",
+          "duration_string": "2:31:13",
+          "description": "Did the Wicklow 100 last June 12, 2016. Video taken using Garmin Virb XE(Front) and Cycliq Fly6(Rear). Video is 2.5 hours long.",
+          "tags": [
+            "cycling",
+            "cyclist",
+            "bicycle",
+            "dublin",
+            "ireland",
+            "wicklow",
+            "wicklow200",
+            "sportive",
+            "cycliq",
+            "fly6",
+            "cycliq fly6",
+            "garmin",
+            "garmin virb",
+            "garmin virb xe",
+            "virb xe",
+            "cycling camera",
+            "race"
+          ],
+          "url": "https://www.youtube.com/watch?v=3sTM-zPhyRA",
+          "curated": false
+        },
+        {
+          "video_id": "5_b_EpScnE0",
+          "title": "Wicklow 200 6-12-22 | #jmondytv #psi #pinoymtb #W200 #mahinangnilalang #sakalam",
+          "channel": "JMondy TV",
+          "view_count": 532,
+          "upload_date": "20220615",
+          "duration_string": "17:00",
+          "description": "Wicklow 200 is Ireland's longest running mass participation bike ride or ‘sportive’. The event, also termed a ‘Gran Fondo’, has been promoted annually since 1982 by the Irish Veteran Cyclists Association and attracts up to 3000 riders annually. #jmondytv #psi",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=5_b_EpScnE0",
+          "curated": false
+        },
+        {
+          "video_id": "tuB81yTpDMo",
+          "title": "Wicklow Peaks Cycling Challenge",
+          "channel": "Lancecon63",
+          "view_count": 148,
+          "upload_date": "20110608",
+          "duration_string": "3:22",
+          "description": "",
+          "tags": [
+            "Saplings1"
+          ],
+          "url": "https://www.youtube.com/watch?v=tuB81yTpDMo",
+          "transcript": "so you how you going this is um you D\nfrom the second h b Captain V group\nCaptain um so tell us about the wiler\npeak s Challenger okay Alan thanks the\nwiler peak cycling challenge is a\nserious challenge for leisure cyclists\nit's on the third\nJuly and the main route is\n120k starting in nce we head for S Gap\nlug lugala roundwood down into Lara have\na cup of tea in Lara and then after that\nwe go the Shay Elliot sleeve man down\ninto dard and cross home through the\nokay there are two other events being\nran on the day there's a 50k cycle that\nis a good introduction for New Comers to\nthe sport it's a 50k lap around the\nlakes to blessington Valley\nnakam Valley Mount and back into n 50k\nstarting at 9:30 which is the start time\nfor the\n120k um it's a short route but a very\ntesting route as uh many of our own ssts\nhave found out and the other event is a\n15K that starts at\n12:00 12:00 it's a family route aimed at\nuh encouraging family groups to go\ncycling it's a very safe route very\nScenic very picturesque and as a at\nfamily uh we finished by coming along\nthe canal\nin so tell us about a bit about n second\nfor you what what's it all about that's\ngood question n cying Club is probably\nabout 30 years old um we have a\nmembership of 7 5 cyclists uh all ages\nall shapes all sizes and all\nabilities um we accommodate and we\nencourage cing at alls if any bu cyclist\nout there wants to join the cying club\nhow to go about uh it's very very easy\nto join n cing Club um we have three\ngroups the a group is for serious\ncyclist B group is for leisure cyclists\num which will be middle range cyclists\nand C group is basically for beginners\nand newcomers to the sport uh the A and\nthe B group meet at 9:00 every Sunday\nmorning at the courthouse in nce um\nroots for the day will be put up by the\nvarious group captains and the SE group\nmeets a 10: you can uh log on to the nce\nsite we're very proud of our site we've\ndone a lot of work with it and we're um\nbless at our n\nclub.com\nlooking forward to seeing as many\ncyclist U from all over Ireland uh\nparticularly in ner and I would like to\ninvite our own club members to join\nus",
+          "curated": false
+        },
+        {
+          "video_id": "NTY67CAjhpk",
+          "title": "Track test - GRAN FONDO PRO 2020",
+          "channel": "Kraken /Studio/",
+          "view_count": 246,
+          "upload_date": "20191006",
+          "duration_string": "4:04",
+          "description": "Gran Fondo Pro 2020 track test\n\nAfter weeks of planning and thinking, Starskycycling team decided to host a first and one of its kind, Gran Fondo Pro 2020 in Co. Wicklow. The track will be very tough, tougher than its hilly 200k counterpart, but full of stunning views and adrenaline jumps. Today our team went on a trial spin on the majority of the track to test it and tweak some details. Over the next few weeks a final route will be set and all the event planning will be set in motion. Get yourself ready for 30th June 2020. It'll hurt. But it will be a day you and your family will never forget ☝️",
+          "tags": [
+            "roadbike",
+            "szosa",
+            "kolarka",
+            "granfondo",
+            "wicklow",
+            "bike",
+            "ireland",
+            "tracktest"
+          ],
+          "url": "https://www.youtube.com/watch?v=NTY67CAjhpk",
+          "curated": false
+        },
+        {
+          "video_id": "BZWCref_Ch4",
+          "title": "Wicklow mountain cycling 7.09.2014",
+          "channel": "Janis Rubenis",
+          "view_count": 57,
+          "upload_date": "20140909",
+          "duration_string": "8:00",
+          "description": "Awesome morning cycling up to the mountain with breakfast more than 400m altitude and go down with 60km/h",
+          "tags": [
+            "Cycling (Interest)",
+            "mountain cycling"
+          ],
+          "url": "https://www.youtube.com/watch?v=BZWCref_Ch4",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [
+          {
+            "name": "Sally Gap",
+            "description": "Part of the main 120k route heading from Naas through the challenging mountain terrain.",
+            "source_video_ids": [
+              "tuB81yTpDMo"
+            ]
+          },
+          {
+            "name": "Lugala to Roundwood section",
+            "description": "Key section on the main route before descending into Laragh for the feed stop.",
+            "source_video_ids": [
+              "tuB81yTpDMo"
+            ]
+          },
+          {
+            "name": "Shay Elliott climb",
+            "description": "Significant climb after Laragh feed stop, leading toward Sleave Man and the descent into Djouce.",
+            "source_video_ids": [
+              "tuB81yTpDMo"
+            ]
+          }
+        ],
+        "terrain_notes": [
+          {
+            "text": "The 50k route around the lakes through Blessington Valley and Naas Valley Mount is described as a short route but very testing, with many experienced cyclists finding it challenging.",
+            "source_video_ids": [
+              "tuB81yTpDMo"
+            ]
+          }
+        ],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "There is a feed stop with tea available in Laragh, which comes after the Sally Gap and Lugala sections but before the major climbs.",
+            "source_video_ids": [
+              "tuB81yTpDMo"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "The main route is 120k starting in Naas, we head for Sally Gap, Lugala, Roundwood, down into Laragh have a cup of tea in Laragh and then after that we go the Shay Elliot, Sleave Man down into Djouce and cross home.",
+            "source_video_id": "tuB81yTpDMo",
+            "source_channel": "Lancecon63",
+            "source_view_count": 148,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "The Wicklow 200 features a demanding 120k main route starting in Naas and tackling iconic Wicklow Mountains terrain. Riders face Sally Gap, Lugala, and Roundwood before descending to a feed stop in Laragh. The route then climbs the challenging Shay Elliott and Sleave Man before descending into Djouce and returning home. A shorter 50k option loops around lakes through Blessington Valley and Naas Valley Mount, described as testing terrain that challenges even experienced cyclists. The family-friendly 15k route follows scenic canal paths. The event accommodates riders of all abilities with multiple distance options, though even the shorter routes are noted for their challenging nature in the Wicklow Mountains landscape."
+      }
+    }
+  }
+}

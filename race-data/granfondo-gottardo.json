@@ -1,0 +1,191 @@
+{
+  "race": {
+    "name": "Granfondo San Gottardo",
+    "slug": "granfondo-gottardo",
+    "display_name": "Granfondo Gottardo",
+    "tagline": "115 km. 3,248 meters of climbing. Three HC Alpine passes — Gotthard, Furka, Nufenen — on cobblestones dating to 1832. Switzerland's most iconic loop.",
+    "vitals": {
+      "distance_km": 114.3,
+      "distance_mi": 71.0,
+      "elevation_m": 3248,
+      "elevation_ft": 10656.0,
+      "location": "Ambri, Ticino, Switzerland",
+      "location_badge": "AMBRI, SWITZERLAND",
+      "country": "Switzerland",
+      "date": "Late August annually",
+      "date_specific": "2026: August 23",
+      "field_size": "500-2,000 riders",
+      "start_format": null,
+      "registration": "Online via granfondosangottardo.com. Early-bird pricing opens October. Regular registration through August.",
+      "entry_fee": "CHF 70-150 (tiered pricing: Early-Bird CHF 70, Regular CHF 100, Late-Bird CHF 140, On-Site CHF 150)",
+      "feed_zones": "Three feeding zones along the 115 km route. Water, energy food, and mechanical support at each.",
+      "cutoff_time": "Not formally published — riders expected to maintain reasonable pace",
+      "lat": 46.511,
+      "lng": 8.696,
+      "route_options": [
+        "Long route: 115 km / 3,248m elevation — Gotthard + Furka + Nufenen",
+        "Short route: 52 km / 1,489m elevation — Gotthard Pass only"
+      ]
+    },
+    "climate": {
+      "primary": "Late-summer high Alpine conditions",
+      "description": "Late August in the Swiss Alps delivers warm valley starts in Ambri (18-25C / 64-77F) and dramatically cooler summit conditions on the Nufenen Pass at 2,478m (5-12C / 41-54F). Three major passes mean three significant temperature swings in a single ride. The Tremola cobbles on the Gotthard's south side can be slippery if wet. Afternoon thunderstorms are a real possibility in the Alps at this time of year — lightning above 2,000m is not theoretical. Generally stable late-summer weather, but mountain weather changes fast.",
+      "challenges": [
+        "Three temperature swings from valley to summit — 15-20C differentials on each pass",
+        "Afternoon Alpine thunderstorms possible, especially on the Nufenen (2,478m)",
+        "Wet cobblestones on the Tremola can be treacherous on 23mm tires",
+        "Strong headwinds common on exposed passes above 2,000m"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Alpine roads with historic cobblestone section",
+      "surface": "Swiss national road standard — excellent tarmac on the main passes. The signature Tremola road on the south side of the Gotthard Pass is 4 km of granite cobblestones with 24 hairpin bends, dating to 1832. This is cycling's equivalent of Paris-Roubaix at altitude. The Furka and Nufenen passes are smooth, well-maintained Swiss mountain roads.",
+      "technical_rating": 3,
+      "features": [
+        "Tremola cobblestones — 4 km, 24 hairpins, granite surface from 1832",
+        "Gotthard Pass summit at 2,106m with historic hospice",
+        "Furka Pass at 2,429m — James Bond's Goldfinger chase road",
+        "Nufenen Pass at 2,478m — second-highest paved road in Switzerland",
+        "Fast descents between passes requiring confident bike handling"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 4,
+      "cultural_impact": 2,
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 71."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The course is a clockwise loop from Ambri through three distinct Alpine worlds. It opens with the Tremola — the cobblestone ascent of the Gotthard Pass through 24 hairpins of 1832 granite, a road monument unlike anything in cycling. After summiting at 2,106m, a fast descent drops into the Urseren valley and the base of the Furka Pass. The 12.2 km Furka climb at 7.3% average takes you past the famous Goldfinger filming location and the Rhône Glacier viewpoint to the summit at 2,429m. The descent into the Valais is fast and exposed. Then comes the Nufenen — 13.7 km at 8.3% average, the hardest climb of the day, saved for when your legs have nothing left. The summit at 2,478m is the second-highest paved road in Switzerland. The reward is a 26 km descent all the way back to the finish in Ambri.",
+      "signature_challenge": "The Nufenen Pass. At 13.7 km and 8.3% average, it is the steepest and highest of the three passes — and it comes last, after 80+ km and two HC climbs have already emptied your legs. The Tremola is the spectacle. The Nufenen is the reckoning.",
+      "suffering_zones": [
+        "Tremola Cobblestones",
+        "Furka Pass Ascent",
+        "Nufenen Pass — The Executioner",
+        "The 26 km Victory Descent"
+      ]
+    },
+    "logistics": {
+      "airport": "Zurich (ZRH) — 2 hours drive via Gotthard motorway tunnel. Milan Malpensa (MXP) — 2.5 hours. Lugano (LUG) — 1.5 hours. Swiss Rail serves Airolo station, one stop from Ambri.",
+      "lodging_strategy": "Stay in Ambri, Airolo, or Faido in the Leventina valley. Limited hotel options — book early. Airolo has the most accommodation density. Alternatively, stay in Bellinzona (30 min south) or Andermatt (30 min north via Gotthard tunnel) for more options. Camping available in the valley.",
+      "transport": "",
+      "food": "Ticino cuisine — Italian-influenced Swiss cooking. Risotto, polenta, cured meats, local cheeses. Post-race finisher meal included with entry. Airolo has a handful of restaurants and pizzerias. The Leventina valley is not a gastronomic destination, but the food is honest and hearty.",
+      "official_site": "https://en.granfondosangottardo.com/"
+    },
+    "history": {
+      "founded": 2013,
+      "origin_story": "Born from the desire to showcase Switzerland's most iconic Alpine passes in a single cycling event, the Granfondo San Gottardo launched around 2013 with a route that combines three legendary climbs — Gotthard, Furka, and Nufenen — into a 115 km loop starting from Ambri in Canton Ticino. The historic Tremola cobblestone road, a protected Swiss monument dating to 1832, became the event's signature feature. Cycling Plus magazine later voted it the best 100 km loop in Europe, cementing its reputation among Alpine cycling enthusiasts.",
+      "notable_moments": [
+        "2013: Inaugural edition from Ambri, establishing the three-pass format",
+        "Cycling Plus magazine votes the route the best 100 km loop in Europe",
+        "2025: 13th edition continues to grow, attracting riders from across Europe",
+        "2026: 14th edition scheduled for August 23, returning to Ambri with same legendary route"
+      ],
+      "reputation": "Switzerland's most beautiful suffering. Three HC passes and cobblestones in 115 km — revered by Alpine purists, unknown to casual riders."
+    },
+    "biased_opinion": {
+      "verdict": "Alpine Trinity",
+      "summary": "The Granfondo San Gottardo packs three of Switzerland's most legendary Alpine passes into 115 km of pure, concentrated suffering and beauty. The Tremola cobblestones — 4 km of 1832 granite through 24 hairpins — are cycling's most photogenic climb. The Furka Pass descent past the Rhône Glacier is James Bond's literal road. The Nufenen, at 2,478m and averaging 8.3% over 13.7 km, is the silent assassin that breaks you when you thought the hard work was done.\n\nCycling Plus voted this the best 100 km loop in Europe. It is hard to argue. The variety is extraordinary — cobblestones to smooth tarmac, Italian-speaking Ticino to German-speaking Uri, valley warmth to Alpine cold, history to cinema. And all of it compressed into a day's ride that starts and finishes in a small Ticino village.\n\nThe event itself is Swiss-organized and appropriately precise. Three feeding zones, mechanical support, professional timing, finisher meal. No unnecessary frills, no corporate bloat. Just an honest sportive on extraordinary roads.",
+      "strengths": [
+        "Tremola cobblestones — 4 km of 1832 granite hairpins, cycling's most beautiful climb surface",
+        "Three HC Alpine passes above 2,100m in a single 115 km loop — relentless vertical",
+        "Extraordinary variety: cobblestones, glaciers, three cantons, three languages, James Bond",
+        "Swiss value: CHF 70-100 entry for three legendary passes with full sportive support"
+      ],
+      "weaknesses": [
+        "Remote Alpine start — limited accommodation in Ambri, Swiss pricing for everything",
+        "Relatively small and unknown event outside the Swiss/European cycling community",
+        "No competitive structure — pure amateur sportive, no categories or prizes",
+        "The Nufenen's 13.7 km at 8.3% average after two prior passes is genuinely cruel"
+      ],
+      "bottom_line": "Three passes. Three cantons. Three languages. One brutal, beautiful loop that earns every meter of its reputation as Europe's best 100 km."
+    },
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "115 km, 3,248m climbing, three HC passes, 1832 cobblestones. Switzerland's most beautiful suffering.",
+      "should_you_race": "Yes if you want concentrated Alpine climbing on three legendary passes in a single day. Yes if the Tremola cobblestones and Goldfinger's Furka road are on your cycling bucket list. Skip if you need a large, competitive field or global prestige. Skip if Switzerland's prices and the Nufenen's 8.3% average after two prior passes sound like punishment rather than purpose.",
+      "alternatives": "If you want a more famous European sportive: Maratona dles Dolomites or Etape du Tour. If you want Swiss passes with more riders: Tour de Suisse Challenge. If you want Alpine cobblestones without the 3,248m of climbing: the Tremola can be ridden independently from Airolo."
+    },
+    "citations": [
+      {
+        "url": "https://en.granfondosangottardo.com/",
+        "category": "official",
+        "label": "Granfondo San Gottardo — Official Site"
+      },
+      {
+        "url": "https://www.granfondosangottardo.com/",
+        "category": "official",
+        "label": "Granfondo San Gottardo — German Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Tremola_San_Gottardo",
+        "category": "reference",
+        "label": "Tremola San Gottardo — Wikipedia"
+      },
+      {
+        "url": "https://www.cyclingnews.com/features/europes-most-stunning-sportive-riding-the-granfondo-san-gottardo/",
+        "category": "review",
+        "label": "Europe's most stunning sportive? Riding the Granfondo San Gottardo — Cycling News"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/switzerland/gran-fondo-san-gottardo/40079",
+        "category": "reference",
+        "label": "Gran Fondo San Gottardo — CycloWorld"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo San Gottardo gran fondo cycling Ambri",
+      "videos": [
+        {
+          "video_id": "B2VBwwmrhl8",
+          "title": "Gotthardpass Abfahrt 26.05.2012 (Airolo-Biasca)",
+          "channel": "TheUlrayx",
+          "view_count": 2316,
+          "upload_date": "20120603",
+          "duration_string": "34:40",
+          "description": "***\nNinja250rboard.com\n***\n\nGotthardpass Abfahrt am 26.05.2012\nMotorrad ist eine Kawasaki Z750 mit Akrapovic Slip-On",
+          "tags": [
+            "kawasaki",
+            "gotthardpass",
+            "ninja",
+            "250r",
+            "motorrad",
+            "pass"
+          ],
+          "url": "https://www.youtube.com/watch?v=B2VBwwmrhl8",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

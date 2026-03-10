@@ -1,0 +1,148 @@
+{
+  "race": {
+    "name": "Bike Abu Dhabi Gran Fondo",
+    "slug": "bike-abu-dhabi-gran-fondo",
+    "display_name": "Bike Abu Dhabi Gran Fondo",
+    "tagline": "Desert gran fondo linking Abu Dhabi's cities with massive prizes and community spirit",
+    "vitals": {
+      "distance_km": 150.0,
+      "distance_mi": 93.2,
+      "elevation_m": 1825.0,
+      "elevation_ft": 5988.0,
+      "location": "Hazza bin Zayed Stadium, Al Ain to Sheikh Zayed Festival, Al Wathba, Abu Dhabi, UAE",
+      "location_badge": "Hazza bin Zayed Stadium, UAE",
+      "country": "UAE",
+      "date": "December",
+      "date_specific": "2025: December 21",
+      "field_size": 1000,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Arid desert",
+      "description": "Desert climate in late December: mild daytime temps, dry with low precipitation risk.",
+      "challenges": [
+        "Precipitation: Low (<5%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": [
+        "Mostly flat to gently rolling roads with light inclines through desert landscapes and urban stretches"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Fast desert roads with long straights, gentle rises, and light inclines; fully supported with 5 water stations.",
+      "signature_challenge": "150km UAE inter-city haul with speed-group competition.",
+      "suffering_zones": [
+        "Desert stretches testing endurance in heat.",
+        "Final push to Al Wathba finish."
+      ]
+    },
+    "logistics": {
+      "airport": "Abu Dhabi International (AUH); Dubai International (DXB)",
+      "lodging_strategy": "Hotels in Abu Dhabi/Al Ain; race village at Abu Dhabi Cycling Club.",
+      "transport": "Start at Hazza bin Zayed Stadium (Al Ain), finish Sheikh Zayed Festival (Al Wathba); 6:30AM start, speed-grouped waves, 28km/h min avg, bus transfers available.",
+      "food": "",
+      "official_site": "https://bike.abudhabi"
+    },
+    "history": {
+      "founded": 5,
+      "origin_story": "Launched 2022 by Abu Dhabi Sports Council as part of Bike Abu Dhabi initiative to promote cycling globally.",
+      "notable_moments": [
+        "2023: 1,200 riders from 75 nations, AED 2M prizes.",
+        "2024: Abu Dhabi to Al Ain, 150km, international growth.",
+        "2025: Reversed route Al Ain to Abu Dhabi, 1,000+ finishers, Serhii Sydor wins men's overall in 2:57:30.",
+        "Ties to 2028 UCI Gran Fondo Worlds hosting."
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "A standout road gran fondo in the desert, blending massive prizes, pro-amateur racing, and UAE hospitality into an accessible yet challenging event. Perfect for speed-focused endurance riders seeking value and adventure without gravel or climbs.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "Prize-laden desert road epic for community cyclists.",
+      "should_you_race": "The Bike Abu Dhabi Gran Fondo delivers a fast 150km road challenge across UAE deserts, backed by top support and AED 2M prizes. Ideal for speed groups from elites to recreational riders, it's a cornerstone of Abu Dhabi's cycling rise.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://adsc.gov.ae/media-center/press-releases/the-abu-dhabi-sports-council-reveals-the-route-for-the-bike-abu-dhabi-gran-fondo/",
+        "category": "reference",
+        "label": "The Abu Dhabi Sports Council reveals the route for the \"Bike Abu Dhabi Gran Fondo\""
+      },
+      {
+        "url": "https://adsc.ae/media-center/press-releases/saturday-marks-the-start-of-the-bike-abu-dhabi-gran-fondo-2024/",
+        "category": "reference",
+        "label": "Saturday marks the start of the Bike Abu Dhabi Gran Fondo 2024"
+      },
+      {
+        "url": "https://bike.abudhabi/en/events/bike-abu-dhabi-gran-fondo-2025/",
+        "category": "reference",
+        "label": "Bike Abu Dhabi Gran Fondo 2025"
+      },
+      {
+        "url": "https://www.mediaoffice.abudhabi/en/sport/4th-bike-abu-dhabi-gran-fondo-supports-community-health-and-cycling-engagement/",
+        "category": "reference",
+        "label": "4th Bike Abu Dhabi Gran Fondo supports community health and cycling engagement"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/IndexFull/8860/serhii-sydor-and-nora-jencusova-clinch-overall-victory-at-2025-bike-abu-dhabi-gran-fondo",
+        "category": "reference",
+        "label": "Sydor and Jencušová Clinch Overall Victory at 2025 Bike Abu Dhabi Gran Fondo"
+      },
+      {
+        "url": "https://www.plotaroute.com/route/2794623",
+        "category": "official",
+        "label": "Bike Abu Dhabi Gran Fondo 2024 - Official Route - Plotaroute"
+      }
+    ]
+  }
+}

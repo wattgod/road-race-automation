@@ -1,0 +1,194 @@
+{
+  "race": {
+    "name": "Bra-Bra Fenix Internazionale",
+    "slug": "bra-bra-fenix-internazionale",
+    "display_name": "Bra-Bra Fenix Internazionale",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 149.7,
+      "distance_mi": 93.0,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Bra, Piedmont, Italy",
+      "location_badge": "Bra, Italy",
+      "country": "Italy",
+      "date": "2026: May 16-17",
+      "date_specific": "2026: May 17",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Unknown",
+      "cutoff_time": "Unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Available in the picturesque town of Pollenzo and surrounding Piedmont region known for wine tourism.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "A well-organized, scenic granfondo through UNESCO wine regions offering excellent early-season preparation with reasonable costs and flexible route options.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Bra-Bra Fenix Internazionale gran fondo cycling Bra",
+      "videos": [
+        {
+          "video_id": "1sAY5SGRDz8",
+          "title": "Granfondo Bra Bra Specialized 2017 | onboard camera",
+          "channel": "Oradelciclismo",
+          "view_count": 3390,
+          "upload_date": "20170504",
+          "duration_string": "2:44:02",
+          "description": "Il percorso medio della Granfondo Bra Bra Specialized visto dalla onboard camera montata sula bici di Roberto Cenci",
+          "tags": [
+            "ciclismo",
+            "bici",
+            "bike",
+            "cycling",
+            "Granfondo",
+            "Gran Fondo",
+            "Onboard",
+            "GoPro"
+          ],
+          "url": "https://www.youtube.com/watch?v=1sAY5SGRDz8",
+          "curated": true,
+          "curation_reason": "Full onboard camera race experience showing the complete medium course from rider's perspective.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/1sAY5SGRDz8/maxresdefault.jpg",
+          "thumbnail_score": 80.0
+        },
+        {
+          "video_id": "E-8QqiWDGJI",
+          "title": "Bra Bra 2025 - Promo",
+          "channel": "Bra Bra Granfondo Internazionale Specialized",
+          "view_count": 1518,
+          "upload_date": "20250509",
+          "duration_string": "4:12",
+          "description": "",
+          "tags": [
+            "Granfondo Bra-Bra"
+          ],
+          "url": "https://www.youtube.com/watch?v=E-8QqiWDGJI",
+          "curated": false
+        },
+        {
+          "video_id": "FCVe6R0vTws",
+          "title": "Bra-Bra Specialized - ed. 018 (short)",
+          "channel": "Bra Bra Granfondo Internazionale Specialized",
+          "view_count": 618,
+          "upload_date": "20180503",
+          "duration_string": "55",
+          "description": "",
+          "tags": [
+            "granfondo",
+            "ciclismo",
+            "cycling",
+            "brabra",
+            "gfbrabra",
+            "brabraspecialized"
+          ],
+          "url": "https://www.youtube.com/watch?v=FCVe6R0vTws",
+          "curated": false
+        },
+        {
+          "video_id": "KxVFl7h2KSo",
+          "title": "Granfondo Bra Bra Specialized 2017 | servizio completo",
+          "channel": "Oradelciclismo",
+          "view_count": 2962,
+          "upload_date": "20170505",
+          "duration_string": "35:00",
+          "description": "Pollenzo | 30 aprile 2017",
+          "tags": [
+            "ciclismo",
+            "bici",
+            "bike",
+            "cycling",
+            "Granfondo",
+            "Gran Fondo",
+            "Piemonte",
+            "Bra",
+            "Pollenzo",
+            "GF Bra",
+            "Specialized"
+          ],
+          "url": "https://www.youtube.com/watch?v=KxVFl7h2KSo",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

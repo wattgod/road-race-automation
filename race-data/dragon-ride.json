@@ -1,0 +1,398 @@
+{
+  "race": {
+    "name": "Dragon Ride L'Etape Wales",
+    "slug": "dragon-ride",
+    "display_name": "Dragon Ride L'Etape Wales",
+    "tagline": "Britain's hardest sportive. 230 km. 3,500 m of climbing. Brecon Beacons mountain roads. Devil's Elbow at 10.3%. Twenty-two years of slaying dragons in South Wales.",
+    "vitals": {
+      "distance_km": 230.1,
+      "distance_mi": 143.0,
+      "elevation_m": 3500,
+      "elevation_ft": 11483.0,
+      "location": "Margam Park, Port Talbot, South Wales, UK",
+      "location_badge": "SOUTH WALES, UK",
+      "country": "USA",
+      "date": "Mid-June annually",
+      "date_specific": "2026: June 14",
+      "field_size": "4,700+ riders across four distances (5,000 cap)",
+      "start_format": null,
+      "registration": "Online via dragonride.co.uk / TimeOutdoors. Opens autumn prior year. GBP70-109 depending on distance. Charity entries via Macmillan Cancer Support with reduced fee and guaranteed place.",
+      "entry_fee": "GBP70-109 depending on distance",
+      "feed_zones": "6 fully stocked feed stations on the Gran Fondo (at approximately 59km, 96km, 122km, 154km, 219km, 256km) plus a water station at approximately 185km. Hot drinks, gels, snacks, and water at each stop. Mechanical and medical support on course.",
+      "cutoff_time": "Finish gantry closes at 10:00 PM. Intermediate checkpoints redirect riders who fall behind pace.",
+      "lat": 51.5577,
+      "lng": -3.722,
+      "route_options": [
+        "Dragon Devil: 305 km (190 mi), ~4,600 m climbing — the ultimate endurance test, two timed climbs",
+        "Gran Fondo: 230 km (143 mi), ~3,500 m climbing — the flagship distance, one timed climb (Devil's Elbow)",
+        "Medio Fondo: 153 km (95 mi), ~2,200 m climbing — still brutal by most sportive standards",
+        "Cymru Classic: 98 km (61 mi), ~1,354 m climbing — the entry point, formerly Macmillan 100"
+      ]
+    },
+    "climate": {
+      "primary": "Maritime Welsh mountain weather — unpredictable, wet, windy",
+      "description": "Mid-June in South Wales delivers the best of British summer — which in the Brecon Beacons means anything from scorching sunshine to horizontal rain and near-freezing headwinds on exposed mountain summits. The valleys around Margam Park and Port Talbot sit at sea level with mild coastal conditions, but the route climbs into the Beacons where exposed ridgelines and mountain passes create their own weather systems. June averages highs of 17-19C in the valleys, but summit temperatures can drop to 8-10C with wind chill making it feel colder. The Atlantic maritime influence means weather changes rapidly — clear skies at the start can give way to driving rain by the time you reach Black Mountain. Experienced Dragon riders pack for four seasons.",
+      "challenges": [
+        "Brecon Beacons create their own weather — summit conditions can be dramatically different from valleys",
+        "Atlantic maritime influence brings sudden rain, fog, and wind on exposed mountain roads",
+        "Temperature swings of 10C+ between sea-level start and mountain summits",
+        "Headwinds on exposed moorland stretches (Rhigos, Black Mountain) sap energy over hours",
+        "Wet Welsh roads on steep descents demand caution — limestone surfaces get slick"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Welsh mountain roads through the Brecon Beacons National Park",
+      "surface": "All tarmac on Welsh B-roads and single-track mountain passes. Road surfaces vary from well-maintained valley roads to rougher, patched mountain lanes. The narrow B-roads through the Beacons are two vehicles wide at best, often with no central line and hedge-lined blind corners. The climbs — Bwlch, Rhigos, Black Mountain, Devil's Elbow — are on roads that would be single-track in any other country but pass for Welsh mountain roads. Surfaces are generally good but expect potholes, drain covers, and gravel wash-off on mountain sections. Roads are open to traffic but marshalled at key junctions.",
+      "technical_rating": 2,
+      "features": [
+        "Devil's Elbow — 1.8 km at 10.3% average gradient through two savage hairpin bends in the Senni valley",
+        "Rhigos — nearly 11 km of sustained climbing on a constant gradient, fully exposed to weather",
+        "The Bwlch — long, steady climb through the Afan valley with exposed upper sections and ramps to 11%",
+        "Black Mountain — remote mountain pass through the western Beacons, nearly 12 km with deceptive 3.6% average masking 8-9% sections",
+        "Devil's Staircase — Dragon Devil only, the second timed climb at approximately 190km when legs are destroyed"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Port Talbot, Bridgend, and Neath offer the closest accommodation — budget hotels from GBP60-80 per night. The Twelve Knights hotel is on the doorstep of Margam Park. Swansea (20 minutes west) and Cardiff (30 minutes east) provide more options and better dining. Afan Lodge (7 miles from Margam) offers secure bike storage. Camping is available at Margam Park and nearby caravan sites. Airbnb options in the Port Talbot and Afan valley area. For pre-ride training on course climbs, stay in the Brecon Beacons themselves — Brecon, Merthyr Tydfil, and Sennybridge have accommodation with direct access to the mountain roads. Book 2-4 months ahead.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "The Original British Sufferfest",
+      "summary": "The Dragon Ride is the event that invented the UK sportive scene. Before it existed, British cyclists went to France to suffer on mountain roads. Lou Lusardi looked at the Brecon Beacons in 2004, saw Italian gran fondo terrain hiding in plain sight, and built an event that has drawn 4,700+ riders annually for over two decades. The Gran Fondo at 230 km with 3,500 m of climbing is a legitimate monster — longer and harder than most L'Etape du Tour editions. The Brecon Beacons deliver climbing that riders describe as the closest the UK gets to the Alps: Rhigos grinds on for 11 km, Black Mountain feels like the end of the world, and Devil's Elbow hits you with 10.3% through hairpins that would not look out of place on the Stelvio. Welsh weather adds a dimension that Italian gran fondos never deliver — you might get baked in June sunshine or hammered by horizontal rain, and the organisers tell you to pack for both.\n\nThe 2016 ASO partnership brought L'Etape by Tour de France branding and international credibility, but the Dragon Ride had already earned its reputation the hard way: 22 years of riders crawling up Welsh mountains and declaring it the hardest thing they have ever done on a bike. Starting from the gothic grandeur of Margam Park's Tudor mansion, climbing through increasingly wild terrain until you are alone on a windswept mountain with sheep for company, then descending through valleys that feel like they belong in Middle-earth — this is an experience that no amount of branding can manufacture. It is authentically, brutally, beautifully Welsh. The 2027 Tour de France Grand Depart will include a stage cresting Rhigos mountain, bringing international attention to climbs Welsh cyclists have known for decades.",
+      "strengths": [
+        "The UK's longest-running and most iconic sportive — 22 years of unbroken heritage since 2004",
+        "Gran Fondo distance (230 km, 3,500 m) rivals European gran fondo classics for sheer scale",
+        "Brecon Beacons scenery — Black Mountain, Senni valley, Rhigos — is genuinely world-class",
+        "L'Etape by Tour de France branding since 2016 adds official Tour de France credibility",
+        "Four distance options (98 km to 305 km) make it accessible while preserving the flagship challenge"
+      ],
+      "weaknesses": [
+        "Welsh weather is genuinely unpredictable — horizontal rain on exposed summits is a real possibility",
+        "Not a race: mass-participation sportive with no competitive depth beyond timed climbs",
+        "Roads are not fully closed — traffic on some sections, particularly valley roads",
+        "International access is awkward — Cardiff Airport is small, Bristol is 60 minutes away",
+        "Port Talbot start area is industrial, not picturesque — Margam Park compensates but the surrounding area does not"
+      ],
+      "bottom_line": "Britain's hardest sportive, and it is not close. The Dragon Ride earns its reputation every June on the mountain roads of the Brecon Beacons. If you ride in the UK, this is the one your cycling club talks about."
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "The UK's oldest and hardest sportive. 230 km through the Brecon Beacons. Devil's Elbow at 10.3%. L'Etape by Tour de France branding earned through 22 years of Welsh mountain suffering.",
+      "should_you_race": "Yes if you want to ride Britain's most iconic sportive on roads that rival Alpine passes for scenery and suffering. Yes if a 230 km day with 3,500 m of climbing through Welsh mountain weather sounds like your definition of a good time. Skip if you need competitive racing — this is participatory, not a race. Skip if you cannot handle unpredictable weather — Welsh mountains do not care about your forecast. Skip if you demand continental European sportive prestige — this is the biggest fish in the UK pond.",
+      "alternatives": [
+        "L'Etape du Tour (the original — actual Tour de France stage, higher Alps, bigger prestige)",
+        "Etape Caledonia (Scotland's answer — shorter but similarly scenic and well-organised)",
+        "Maratona dles Dolomites (the Italian gold standard — harder climbing, warmer weather, Dolomite drama)",
+        "Tour of Flanders Sportive (cobblestone suffering instead of mountain climbing — different beast, same spirit)"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://www.dragonride.co.uk/",
+        "category": "official",
+        "label": "Official Website — Dragon Ride L'Etape Wales"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/event-info/our-routes/",
+        "category": "official",
+        "label": "Dragon Ride — Routes and Distances"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/event-info/history-dragon-ride/",
+        "category": "official",
+        "label": "Dragon Ride — History of the Dragon Ride"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/entry-types-2026/",
+        "category": "official",
+        "label": "Dragon Ride — 2026 Entry Types and Pricing"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/preparation/travel-accommodation/",
+        "category": "official",
+        "label": "Dragon Ride — Travel and Accommodation Guide"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Dragon_Ride_Wales",
+        "category": "reference",
+        "label": "Wikipedia — Dragon Ride Wales"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/8738/dragon-ride",
+        "category": "reference",
+        "label": "Gran Fondo Guide — Dragon Ride Event Profile"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/2838/dragon-ride-l%E2%80%99%C3%A9tape-wales-returns-for-fourteenth-year",
+        "category": "reference",
+        "label": "Gran Fondo Guide — Dragon Ride L'Etape Wales Returns for Fourteenth Year"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/news/latest-news/aso-partners-human-race-to-bring-dragon-ride-letape-wales-by-le-tour-de-france-211869",
+        "category": "reference",
+        "label": "Cycling Weekly — ASO Partners Human Race for L'Etape Wales (2016)"
+      },
+      {
+        "url": "https://www.cyclingplus.com/cycling-routes/dancing-with-the-devil",
+        "category": "review",
+        "label": "Cycling Plus — Dancing with the Devil: 300km Dragon Devil Route"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/taming-the-dragon-and-the-devil-at-letape-wales",
+        "category": "review",
+        "label": "Cyclist Magazine — Taming the Dragon and the Devil at L'Etape Wales"
+      },
+      {
+        "url": "https://road.cc/content/news/have-you-got-what-it-takes-slay-dragon-ride-2024-303729",
+        "category": "review",
+        "label": "road.cc — Have You Got What It Takes to Slay the Dragon Ride 2024"
+      },
+      {
+        "url": "https://hiplok.com/dragon-ride/",
+        "category": "review",
+        "label": "Hiplok — Dragon Ride 2023: Taming the Dragon"
+      },
+      {
+        "url": "https://racecheck.com/races/dragon-ride/",
+        "category": "community",
+        "label": "Racecheck — Dragon Ride Reviews"
+      },
+      {
+        "url": "https://www.trainerroad.com/forum/t/anyone-else-here-doing-the-dragon-ride-this-year-now-training-and-prep-thread/92992",
+        "category": "community",
+        "label": "TrainerRoad Forum — Dragon Ride Training and Prep Thread"
+      },
+      {
+        "url": "https://www.timeoutdoors.com/events/dragon-ride",
+        "category": "official",
+        "label": "TimeOutdoors — Dragon Ride 2026 Event Listing"
+      },
+      {
+        "url": "https://www.macmillan.org.uk/fundraise/charity-cycle-rides/dragon-ride",
+        "category": "official",
+        "label": "Macmillan Cancer Support — Dragon Ride Charity Partnership"
+      },
+      {
+        "url": "https://aso-uk.com/event/dragonride/",
+        "category": "official",
+        "label": "ASO UK — Dragon Ride L'Etape Wales"
+      },
+      {
+        "url": "https://strambecco.com/event/dragon-ride/",
+        "category": "review",
+        "label": "Strambecco — Dragon Ride 2025 Rating"
+      },
+      {
+        "url": "https://hrcycling.zendesk.com/hc/en-us/articles/360004334371-Dragon-Ride-Gran-Fondo-Cut-offs",
+        "category": "reference",
+        "label": "Human Race Cycling — Gran Fondo Cut-offs, Feed Stations and Climbs"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/gran-fondo/",
+        "category": "official",
+        "label": "Dragon Ride — Gran Fondo Route Details"
+      },
+      {
+        "url": "https://www.dragonride.co.uk/dragon-devil/",
+        "category": "official",
+        "label": "Dragon Ride — Dragon Devil Route Details"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Dragon Ride L'Etape Wales gran fondo cycling Margam Park",
+      "videos": [
+        {
+          "video_id": "drm_4FAQrKM",
+          "title": "Start of L'Etape Wales Dragon Ride Medio Fondo 2016 from Margam Park. Video from my bike.",
+          "channel": "Christopher Harris",
+          "view_count": 343,
+          "upload_date": "20160607",
+          "duration_string": "5:43",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=drm_4FAQrKM",
+          "transcript": "please P special attention thank you\nvery\nmuch good morning everyone very quick\nshow of hands anyone here doing the\ngrand Fondo distance we have one of you\ntwo of you so this will be a split\nbriefing majority doing the media very\ngood luck that is a mighty 153 km the\ntwo of you doing the crown Fondo 228 km\nall of you that is going to be on open\nroads all the way through so that means\nplease pay attention to the highway code\nU crucially so I don't expect you know\nevery word of it crucially that's red\nlights don't go through them it gives\neveryone a bad reputation please obey\nthem we have a little pledge here\neveryone stick one hand in the air and\nrepeat after me proudly say I state your\nname you better please please please I\nstate your name I to he I swear to not\njump red lights not thank you very much\nplease also don't cycle more than two of\nbre for obvious reasons it's not safe\nfor got oncoming cars it's dangerous\nother Road users is inconvenience as\nwell look after each other if you see\npot holes if you see danger shout out if\nyou see a hole for example you shout\nwhole other people will hear you quick\nrehearsal everyone shout ho very good\nalso there will be sheep potential\nLivestock on the road it gets pretty\nwild out there look out for those\ncommunicate look after yourselves as\nwell people please for the grand Fondo\nthere are four feed stations the medor\nFondo you have two feed stations use\nthem replenish your bottles stock up on\nfuel please look after yourselves we've\nalso got some arrows for you to sign so\nfor the medor Fondo first you start off\non the yellow arrows the yellow arrows\nlike this for the medor Fondo you then\npick up on the green arrows after that\nthere is a decision Point yellow then\ngreen and then back onto the yellow the\ngrand Fondo you are yellow only yellow\nonly for the grand Fondo get that wrong\nat your peril that's it from me Good\nLuck look after each other keep safe I'm\ngoing to pass you to Arnold from ASO the\ncompany that own and deliver the tour to\nFrance no less their partners with this\nevent it's a privilege to have them here\nhere is\nArnold thanks s just a quick word uh\nwell first of all we're delighted to be\nhere uh it's really stunning Landscapes\nand as well told the CL design stage\nthat we have uh put together for you\nwith our friends at Human Race so enjoy\nthe right day we'll have a few words\nfrom our Champions then you'll be able\nto go and to spend a brilliant day here\nin South Wales enjoy the day and be\nto look Chris Chris where he from I've\nnever SE like my\n[Music]\nlife\nhours\nthere I think is the winner of this\ntour\nhi this is luk broe Sky Tour of France\nis the greatest F in World cycl today's\nyour chance your way in yellow good luck\nand enjoy okay ready and sank\nc those\nare good luck everyone have a great day\nto C yourselves don't forget one two bre\nplease\ntime H you all in the you\n[Laughter]\ncom\nw",
+          "curated": true,
+          "curation_reason": "Auto-promoted: referenced by curated quote",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/drm_4FAQrKM/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "8gtyNxTY4iY",
+          "title": "Dragon Ride - Gran Fondo 2018",
+          "channel": "David's Bikes & Hikes",
+          "view_count": 259,
+          "upload_date": "20180615",
+          "duration_string": "3:30",
+          "description": "Highlights of my ride during the Dragon Ride L’Etape Wales that took place on June 10 2018. The Gran Fondo (223km) features famous climbs in the region such as Bwlch, Rhigos, the Devil’s Elbow and the Black Mountain.",
+          "tags": [
+            "Cycling",
+            "Cycling Sportives",
+            "Road Cycling",
+            "Dragon Ride"
+          ],
+          "url": "https://www.youtube.com/watch?v=8gtyNxTY4iY",
+          "curated": true,
+          "curation_reason": "Personal race highlights from the full Gran Fondo distance featuring the major climbs like Bwlch, Rhigos, and Devil's Elbow.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/8gtyNxTY4iY/hqdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "mxZjXYhuJdc",
+          "title": "2018 Dragon Ride L'Etape Wales by Le Tour de France",
+          "channel": "A.S.O. UK",
+          "view_count": 5067,
+          "upload_date": "20170920",
+          "duration_string": "1:20",
+          "description": "Take part in this unmissable epic challenge through stunning South Wales next June... will you beat the Dragon?",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=mxZjXYhuJdc",
+          "curated": false
+        },
+        {
+          "video_id": "uFs2tIFyHEg",
+          "title": "eRecce Dragon Ride Medio Fondo 2018 - complete route, every metre",
+          "channel": "Will Robbins",
+          "view_count": 474,
+          "upload_date": "20171101",
+          "duration_string": "31:51",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=uFs2tIFyHEg",
+          "curated": true,
+          "curation_reason": "Comprehensive 31-minute course preview covering the complete Medio Fondo route with detailed terrain analysis.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/uFs2tIFyHEg/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "G52QTBVd6lY",
+          "title": "L'Étape Wales - Dragon Devil June 2018",
+          "channel": "Fredrik Meltzer",
+          "view_count": 536,
+          "upload_date": "20180615",
+          "duration_string": "3:34",
+          "description": "This video is about L'Étape Wales - Dragon Devil June 2018",
+          "tags": [
+            "iMovie"
+          ],
+          "url": "https://www.youtube.com/watch?v=G52QTBVd6lY",
+          "curated": false
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The grand Fondo 228 km all of you that is going to be on open roads all the way through... it gets pretty wild out there look out for those sheep potential livestock on the road.",
+          "source_video_id": "drm_4FAQrKM",
+          "source_channel": "Christopher Harris",
+          "source_view_count": 343,
+          "category": "course_difficulty",
+          "curated": true
+        }
+      ],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [
+          {
+            "text": "There will be sheep and potential livestock on the road as it gets pretty wild out there",
+            "source_video_ids": [
+              "drm_4FAQrKM"
+            ]
+          }
+        ],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "Use the feed stations to replenish your bottles and stock up on fuel - the medio Fondo has two feed stations, the grand Fondo has four",
+            "source_video_ids": [
+              "drm_4FAQrKM"
+            ]
+          },
+          {
+            "text": "For the medio Fondo: start on yellow arrows, then pick up green arrows, then back onto yellow arrows. For the grand Fondo: follow yellow arrows only",
+            "source_video_ids": [
+              "drm_4FAQrKM"
+            ]
+          },
+          {
+            "text": "Look after each other - if you see pot holes or danger, shout out to warn other riders",
+            "source_video_ids": [
+              "drm_4FAQrKM"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "All of you that is going to be on open roads all the way through so that means please pay attention to the highway code - crucially that's red lights don't go through them it gives everyone a bad reputation",
+            "source_video_id": "drm_4FAQrKM",
+            "source_channel": "Christopher Harris",
+            "source_view_count": 343,
+            "category": "logistics",
+            "curated": true
+          },
+          {
+            "text": "There will be sheep potential livestock on the road it gets pretty wild out there look out for those",
+            "source_video_id": "drm_4FAQrKM",
+            "source_channel": "Christopher Harris",
+            "source_view_count": 343,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "The Dragon Ride L'Etape Wales takes place entirely on open roads through stunning Welsh landscapes designed by ASO, the company behind the Tour de France. Riders must obey traffic laws including stopping at red lights and cycling no more than two abreast. The course features wild terrain with potential livestock and sheep on the roads that riders need to watch for. The medio Fondo distance covers 153km with two feed stations, while the grand Fondo covers 228km with four feed stations. Navigation follows a color-coded arrow system - medio Fondo riders start on yellow arrows, switch to green, then back to yellow, while grand Fondo riders follow yellow arrows only throughout. Riders are encouraged to communicate dangers like pot holes to each other and use feed stations to replenish bottles and fuel."
+      }
+    }
+  }
+}

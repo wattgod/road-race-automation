@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Hærvejsløbet — The Viking Gran Fondo",
+    "slug": "haervejslobet",
+    "display_name": "Hærvejsløbet — The Viking Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 299.3,
+      "distance_mi": 186.0,
+      "elevation_m": 1006,
+      "elevation_ft": 3300.0,
+      "location": "Flensburg, Germany to Viborg, Denmark",
+      "location_badge": "Flensburg, Denmark",
+      "country": "Denmark",
+      "date": "2026: June 27",
+      "date_specific": "2026: June 27",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Mild Nordic summer with long daylight hours; variable weather typical of Jutland peninsula.",
+      "challenges": [
+        "Precipitation: 30-40% chance of showers"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "95% paved, 3% gravel/unpaved",
+      "technical_rating": 2,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 2,
+      "cultural_impact": 3,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Historic point-to-point road epic tracing the ancient Hærvejen ridge through Jutland's ice-age formed hills, blending cultural landmarks with relentless rolling terrain.",
+      "signature_challenge": "Crossing the German-Danish border early, then battling cumulative elevation and wind-swept ridges to the triumphant red carpet finish in Viborg.",
+      "suffering_zones": [
+        "Mur de Refsgårde: Mid-race 550m wall at 8.2% average gradient that shatters rhythm after hours of pedaling.",
+        "Jennumbakken: Longest climb at 1175m and 5.6% gradient, a grinding test of endurance amid scenic Viking landscapes.",
+        "Jutland Rollercoaster: Constant succession of short, steep hills formed by ancient glaciers, wearing down legs over 186 miles."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Viborg offers hotels, hostels, and barracks-area camping; book early for June event. Flensburg pre-race stays near start.",
+      "transport": "Mass-participation gran fondo with 15 routes converging on Viborg's Paradepladsen; road, MTB, and gravel options. Queen stage starts Flensburg with chip timing before finish-line parade.",
+      "food": "",
+      "official_site": "https://sites.dgi.dk/haervejsloebet-en/"
+    },
+    "history": {
+      "founded": 1985,
+      "origin_story": "Denmark's largest cycling event, inspired by ancient Hærvejen migration route used by Vikings, pilgrims, and armies. Now part of prestigious L'Etape Denmark by Tour de France series.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Viking-fueled endurance test blending history, hills, and high-quality organization.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://pedalpeople.cc/l-etape-denmark",
+        "category": "reference",
+        "label": "L'Etape Denmark"
+      },
+      {
+        "url": "https://www.alpecincycling.com/en/events/events-rides-cyclosportives-with-300-kilometers-2024/",
+        "category": "reference",
+        "label": "Events 2024: Cyclosportives with 300 and more Kilometers"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/10641/h%C3%A6rvejsl%C3%B8bet-the-viking-gran-fondo",
+        "category": "reference",
+        "label": "Hærvejsløbet The Viking Gran Fondo"
+      },
+      {
+        "url": "https://sites.dgi.dk/haervejsloebet-en/",
+        "category": "reference",
+        "label": "Hærvejsløbet - DGI"
+      }
+    ]
+  }
+}

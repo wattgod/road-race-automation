@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Peaks and Plains",
+    "slug": "peaks-and-plains",
+    "display_name": "Peaks and Plains",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 555.2,
+      "distance_mi": 345.0,
+      "elevation_m": 7300,
+      "elevation_ft": 23950.0,
+      "location": "Magdeburg/Harz Mountains, Germany",
+      "location_badge": "Magdeburg/Harz Mountains, Germany",
+      "country": "Germany",
+      "date": "2026: May 29",
+      "date_specific": "2026: May 29",
+      "field_size": "unknown (small, new event)",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "none (unsupported)",
+      "cutoff_time": "48 hours",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 2,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Self-arranged; unsupported event, plan overnight stays as needed within 48 hours.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "Unsupported road ultra through Harz peaks offers epic climbing and scenery at entry-level ultra price.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

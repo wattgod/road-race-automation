@@ -1,0 +1,150 @@
+{
+  "race": {
+    "name": "Tour de Pologne Amatorów",
+    "slug": "tour-de-pologne-amatorow",
+    "display_name": "Tour de Pologne Amatorów",
+    "tagline": "Ride the roads of Poland's WorldTour stage race. Southern Poland's Tatra foothills, historic cities, and the most affordable serious sportive in Europe.",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 2195,
+      "elevation_ft": 7200.0,
+      "location": "Southern Poland (route varies — typically Krakow area / Tatra Mountain foothills)",
+      "location_badge": "SOUTHERN POLAND",
+      "country": null,
+      "date": "Late July / August annually (coincides with professional Tour de Pologne)",
+      "date_specific": "2026: August 1 (provisional — follows pro race calendar)",
+      "field_size": "~3,000-5,000 riders",
+      "start_format": null,
+      "registration": "Online via Lang Team. Cost: ~PLN 200-350 (~€45-80 / ~$50-85 USD)",
+      "entry_fee": "~PLN 200-350 (~€45-80 / ~$50-85 USD)",
+      "feed_zones": "Multiple feed zones with water, energy food, and mechanical support",
+      "cutoff_time": "Approximately 8-9 hours",
+      "lat": 50.0647,
+      "lng": 19.945,
+      "route_options": [
+        "Long route: ~140-150 km (87-93 mi), ~2,000-2,500m climbing",
+        "Short route: ~70-80 km (43-50 mi)"
+      ]
+    },
+    "climate": {
+      "primary": "Central European summer — warm with afternoon thunderstorm risk",
+      "description": "Late July and August in southern Poland brings warm, pleasant weather — 75-85F during the day with lower humidity than Mediterranean alternatives. Afternoon thunderstorms are the primary weather risk, particularly in the Tatra foothills where convective storms build fast. Morning starts are comfortable. It's classic central European summer: warm, green, and generally cooperative.",
+      "challenges": [
+        "Afternoon thunderstorms in the Tatra foothills — convective storms build quickly",
+        "Warm temperatures (75-85F) with moderate humidity",
+        "Sun exposure on exposed road sections in the foothills",
+        "Occasional heatwave conditions can push temperatures above 90F"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Polish roads through Tatra Mountain foothills",
+      "surface": "Paved Polish national and regional roads. Road quality is generally good — Poland has invested heavily in road infrastructure. Rolling terrain with genuine climbing in the Tatra foothills but not Alpine-scale gradients.",
+      "technical_rating": 1,
+      "features": [
+        "Tatra Mountain foothills — genuine climbing at 4-8% gradients",
+        "Roads used by the professional Tour de Pologne WorldTour race",
+        "Mix of rural and small-town riding through southern Poland",
+        "Rolling terrain with sustained climbs in the 10-20 minute range",
+        "Well-surfaced roads with minimal technical demands"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 50,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 50."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling to hilly through southern Poland's Tatra foothills. The route uses roads from the professional Tour de Pologne, threading through small towns and rural landscapes with the Tatra Mountains as a distant backdrop. Climbs are genuine — 4-8% gradients with sustained efforts of 10-20 minutes — but never reach Alpine severity. The roads are well-paved and the terrain rewards steady riding over explosive power. It's a classic continental European sportive: long, rolling, and scenic without being savage.",
+      "signature_challenge": "The main foothills climb — a sustained 15-20 minute effort at 6-8% gradient through the Tatra foothills. It's where the pro race is won and where amateur riders discover how much they have left.",
+      "suffering_zones": [
+        "The Start Town",
+        "Foothills Begin",
+        "The Main Climb",
+        "The Final Run"
+      ]
+    },
+    "logistics": {
+      "airport": "Krakow (KRK) — direct flights from most European capitals plus select transatlantic routes. Warsaw (WAW) for wider international connections, then domestic flight or 3-hour drive.",
+      "lodging_strategy": "Southern Poland has plentiful, affordable accommodation. Hotels, guesthouses, and agriturismos (agroturystyka) near the start. Krakow for pre/post-event sightseeing. Book within 2-3 months — demand is growing but supply is adequate.",
+      "transport": "",
+      "food": "Polish food is hearty, excellent, and cheap. Pierogi, zurek, bigos — proper cycling fuel. Krakow's restaurant scene rivals any European city at a fraction of the price.",
+      "official_site": "https://www.tourdepologne.pl/"
+    },
+    "history": {
+      "founded": 2010,
+      "origin_story": "The Tour de Pologne Amatorow launched around 2012-2014 as the amateur companion to the professional Tour de Pologne, Poland's WorldTour stage race. Organized by Lang Team — led by Czeslaw Lang, the former professional cyclist who has built the Tour de Pologne into a respected WorldTour event — the amateur edition gives recreational riders access to pro-race roads and infrastructure. As Poland's cycling culture has boomed, the event has grown to attract thousands of riders, primarily from Poland and central Europe, with a growing international contingent.",
+      "notable_moments": [
+        "~2013: Amateur edition launches alongside the professional Tour de Pologne WorldTour race",
+        "Riders tackle stages or sectors used by the professional peloton",
+        "Poland's cycling culture grows rapidly — amateur participation expands year over year",
+        "Lang Team leverages pro-race logistics for amateur event quality"
+      ],
+      "reputation": "Poland's flagship amateur road event. The WorldTour connection and Polish value proposition are the draw."
+    },
+    "biased_opinion": {
+      "verdict": "The Polish Peloton",
+      "summary": "The Tour de Pologne Amatorow is the amateur wing of Poland's WorldTour stage race — you ride the same roads where the pro peloton races, through the Tatra Mountain foothills of southern Poland. The climbing is honest without being brutal. The scenery is pleasant without being dramatic. The organization, backed by pro-race logistics, is competent. But the real story is value: this may be the most affordable serious sportive in Europe. Polish prices mean your entry fee, hotel, and food for a weekend cost less than the registration alone at many Western European events. If you want a legitimate European sportive experience without the Alpine price tag, this is it.",
+      "strengths": [
+        "Pro-race association: ride the roads of a WorldTour stage race with professional-grade organization",
+        "Exceptional value: Polish prices make this one of Europe's cheapest serious sportives",
+        "Tatra foothills provide genuine climbing in an underrated mountain landscape",
+        "Growing Polish cycling community brings enthusiastic, welcoming energy"
+      ],
+      "weaknesses": [
+        "Route varies year to year — harder to plan for a specific course experience",
+        "Limited international recognition: this is not yet a destination event for global cyclists",
+        "Climbing is moderate: the foothills, not the Tatras themselves, define the terrain",
+        "Krakow is accessible but southern Poland requires more logistics than Western European alternatives"
+      ],
+      "bottom_line": "The best value serious sportive in Europe. Ride WorldTour roads for the price of a mid-range dinner in Switzerland."
+    },
+    "final_verdict": {
+      "score": "50/100",
+      "one_liner": "WorldTour roads through the Tatra foothills at Polish prices. Europe's best-value serious sportive.",
+      "should_you_race": "Yes if you want a well-organized European sportive at a fraction of Alpine event costs. Yes if riding pro-race roads adds meaning to your cycling. Skip if you need marquee climbs or international prestige.",
+      "alternatives": "If you want a pro-race route with bigger mountains: try L'Etape du Tour. If you want eastern European climbing with more vertical: try the Tour of Croatia Gran Fondo. If you want affordable European sportive with more prestige: try the Maratona dles Dolomites (lottery entry)."
+    },
+    "citations": [
+      {
+        "url": "https://www.tourdepologne.pl/",
+        "category": "official",
+        "label": "Tour de Pologne — Official Site (Lang Team)"
+      },
+      {
+        "url": "https://www.langteam.pl/",
+        "category": "official",
+        "label": "Lang Team — Event Organizer"
+      }
+    ]
+  }
+}

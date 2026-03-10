@@ -1,0 +1,140 @@
+{
+  "race": {
+    "name": "Étape du Dales",
+    "slug": "etape-du-dales",
+    "display_name": "Étape du Dales",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 170.6,
+      "distance_mi": 106.0,
+      "elevation_m": 3200,
+      "elevation_ft": 10500.0,
+      "location": "Settle, North Yorkshire, England",
+      "location_badge": "Settle, England",
+      "country": "England",
+      "date": "2025: June 8",
+      "date_specific": "2025: June 8",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Classic Yorkshire summer - expect all four seasons. Windy moorland summits amplify conditions.",
+      "challenges": [
+        "Precipitation: 60%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "95% paved, 5% gravel/unpaved",
+      "technical_rating": 2,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 2,
+      "cultural_impact": 2,
+      "overall_score": 76,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 76."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Brutal Yorkshire Dales epic featuring seven monster climbs through wild moorland, remote valleys, and iconic high passes. Cinematic scenery meets relentless gradient.",
+      "signature_challenge": "Coal Road to Dent Station - relentless 7.8% gradient delivering you to England's highest mainline railway station through remote gritstone wilderness.",
+      "suffering_zones": [
+        "Langcliffe Scar: 2.3km @ 7.8% avg (18% max) - brutal race opener after 3km warm-up",
+        "Fleet Moss: Highest road in Yorkshire - bleak moorland exposure",
+        "Tan Hill Inn: Highest pub in England - remote grit test",
+        "Buttertubs Pass: Iconic Tour de Yorkshire climb with butter churn landmarks",
+        "Coal Road: 2.8km @ 7.8% avg to highest mainline station in England",
+        "Grinton Moor: 3.8km grind across wild Swaledale moorland"
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Settle offers B&Bs, pubs, and camping. Grassington (15min drive) and Skipton (20min) provide more options.",
+      "transport": "New HQ at Settle with parking, changing rooms, post-ride food and beer. Multiple feed stations including Moorcock Inn.",
+      "food": "",
+      "official_site": "https://www.etapedudales.org"
+    },
+    "history": {
+      "founded": 2007,
+      "origin_story": "Established as Fred Whitton Challenge alternative. Supports Dave Rayner Fund for young cyclists. Iconic UK sportive status.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "76/100",
+      "one_liner": "Ultimate Yorkshire Dales sufferfest - 10,500ft of cinematic climbing punishment.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://etapedudales.eventrac.co.uk/e/etape-du-dales-11892",
+        "category": "reference",
+        "label": "Etape Du Dales"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Etape_du_Dales",
+        "category": "reference",
+        "label": "Etape du Dales - Wikipedia"
+      },
+      {
+        "url": "https://www.britishcycling.org.uk/events/details/310455/Etape-du-Dales-by-the-Rayner-Foundation",
+        "category": "reference",
+        "label": "Etape du Dales by the Rayner Foundation"
+      },
+      {
+        "url": "https://www.etapedudales.org/long-route-2026",
+        "category": "reference",
+        "label": "Long Route 2026 - ETAPE du DALES 2026"
+      },
+      {
+        "url": "https://www.etapedudales.org",
+        "category": "reference",
+        "label": "Home | Etape du Dales Cycling Challenge 2026"
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Eroica South Africa",
+    "slug": "eroica-south-africa",
+    "display_name": "Eroica South Africa",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 130.4,
+      "distance_mi": 81.0,
+      "elevation_m": 2499,
+      "elevation_ft": 8200.0,
+      "location": "Montagu, Western Cape, South Africa",
+      "location_badge": "Montagu, South Africa",
+      "country": "South Africa",
+      "date": "2026: April 10",
+      "date_specific": "2026: April 10",
+      "field_size": "small, intimate",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "multiple with local refreshments",
+      "cutoff_time": "unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Local guesthouses, wineries, and hotels in Montagu; book early for event weekend.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Vintage cycling celebration in South Africa's stunning wine lands.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

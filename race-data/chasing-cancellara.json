@@ -1,0 +1,239 @@
+{
+  "race": {
+    "name": "CHASING CANCELLARA",
+    "slug": "chasing-cancellara",
+    "display_name": "Chasing Cancellara",
+    "tagline": "Chase a legend through the Swiss Alps. 200-275km. 4,200-5,500m climbing. Beat Cancellara's time or die trying.",
+    "vitals": {
+      "distance_km": 275.2,
+      "distance_mi": 171.0,
+      "elevation_m": 5500,
+      "elevation_ft": 18045.0,
+      "location": "Switzerland (multiple routes)",
+      "location_badge": "SWITZERLAND",
+      "country": null,
+      "date": "June-September annually",
+      "date_specific": "2026: June 27 (Zurich-Andermatt), September 12 (Bern-Zermatt)",
+      "field_size": "~400 riders per event",
+      "start_format": null,
+      "registration": "Opens annually. Multiple events per season.",
+      "entry_fee": null,
+      "feed_zones": "6 feeding zones (Bern-Zermatt)",
+      "cutoff_time": "18 hours (Bern-Zermatt: 2:00 AM start, 8:00 PM cutoff)",
+      "lat": 46.4908,
+      "lng": 7.7506,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Alpine summer — variable mountain conditions",
+      "description": "Swiss Alpine summer means wide temperature swings depending on altitude and time of day. The Bern-Zermatt starts at 2:00 AM in darkness with temps around 15-18C in the valleys, but passes can drop to single digits. Afternoon valley floors can hit 25-30C. Rain is always possible in the Alps — afternoon thunderstorms are a real threat on exposed passes. The Cyclingnews reviewer noted 17-18C calm conditions for the night riding, with rain arriving on the final climb to Zermatt.",
+      "challenges": [
+        "Night riding in darkness for first 4-6 hours (Bern-Zermatt)",
+        "Alpine pass temperatures can drop to 5-8C even in summer",
+        "Afternoon thunderstorms possible on exposed passes",
+        "Wide temperature range from valley floors to pass summits"
+      ]
+    },
+    "terrain": {
+      "primary": "Fully paved alpine roads through Swiss mountain passes",
+      "surface": "100% paved roads. Well-maintained Swiss infrastructure through alpine passes, valley roads, and lakeside routes. Road bike territory — no gravel, no dirt.",
+      "technical_rating": 2,
+      "features": [
+        "Klausen Pass (1,948m) — Zurich-Andermatt route",
+        "Col du Pillon (1,546m) — Bern-Zermatt route",
+        "Mittelberg Pass — Bern-Zermatt route",
+        "Gantrisch Natural Park roads",
+        "Lake Zurich shoreline roads",
+        "Final climb into Zermatt from Visp"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "An ultra-distance point-to-point road race through the Swiss Alps. The Bern-Zermatt flagship begins at 2:00 AM in Ittigen near Bern, threading through the Gantrisch Natural Park in darkness before crossing the Mittelberg and Col du Pillon passes. The route winds through the lower Valais valley before the brutal final climb from Visp to Zermatt (1,620m) — a relentless drag after 250km in the saddle. The Zurich-Andermatt variant follows Lake Zurich through Glarnerland before tackling the Klausen Pass (1,948m) and descending to Andermatt. Both routes are fully paved on excellent Swiss roads.",
+      "signature_challenge": "The final climb from Visp to Zermatt — 35km of sustained climbing to 1,620m after 250km already in the legs, with the Matterhorn watching your suffering.",
+      "suffering_zones": [
+        "The Dark Start",
+        "Col du Pillon",
+        "The Valais Valley",
+        "Visp to Zermatt"
+      ]
+    },
+    "logistics": {
+      "airport": "ZRH (Zurich) for Zurich-Andermatt; BRN (Bern) or GVA (Geneva) for Bern-Zermatt",
+      "lodging_strategy": "Book accommodation at the finish city (Andermatt or Zermatt) — that's where you'll collapse. Use Swiss rail to get to the start. Zermatt is car-free; arrive by train from Visp/Tasch. Book early — Alpine resort towns fill up in summer.",
+      "transport": "",
+      "food": "Swiss Alpine cuisine. Pasta party included with registration. Six feed zones on course. Post-race meals in Zermatt/Andermatt.",
+      "official_site": "https://www.chasingcancellara.com"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "Created in 2017 by retired cycling legend Fabian Cancellara through his company Sette Sports AG (Schenkon, Switzerland). The original concept was simple: 333 amateur cyclists on a 10-15km course with steep hills, trying to cross the finish line before Cancellara. The format evolved into ultra-distance point-to-point routes through the Swiss Alps, with the Bern-Zermatt (275km, 5,500m) and Zurich-Andermatt (195km, 4,200m) becoming the flagship events. Cancellara — nicknamed 'Spartacus' during his pro career — expanded the series to include the Granfondo Vaduz (92km, Liechtenstein), virtual Zwift events (from 2019), and international editions in Mallorca, Abu Dhabi, Denmark, and Italy. The event also launched 'Fast and Female' (women's participation initiative) and the 'Gummelerin' format. Around 400 cycling enthusiasts participate per event.",
+      "notable_moments": [
+        "2017: First edition with original short-course format",
+        "2018: Expanded to nine destinations globally",
+        "2019: Zwift virtual events launched",
+        "2024: Bern-Zermatt route updated — 275km, 5,500m climbing",
+        "2025: Three events in different formats across the season"
+      ],
+      "reputation": "Switzerland's toughest one-day cycling event — where amateurs try to beat an Olympic champion through the Alps."
+    },
+    "biased_opinion": {
+      "verdict": "The Legend's Challenge",
+      "summary": "Chasing Cancellara is what happens when a cycling legend with two Olympic golds and four Paris-Roubaix wins decides to create the event he'd want to ride. Ultra-distance point-to-point routes through the Swiss Alps, a 2:00 AM start in darkness, and the genuine possibility of beating Cancellara's time. The Bern-Zermatt flagship — 275km, 5,500m of climbing, finishing beneath the Matterhorn — is one of the most demanding one-day cycling events in Europe. It's not cheap (this is Switzerland) and the field is small (~400), but the experience is irreplaceable.",
+      "strengths": [
+        "Ride with/against a genuine cycling legend — Cancellara is the real deal",
+        "Ultra-distance Alpine routes through world-class Swiss scenery",
+        "Point-to-point format creates a true journey — Bern to Zermatt, Zurich to Andermatt",
+        "Multiple category options (Singles, Relays, Couples) for different abilities"
+      ],
+      "weaknesses": [
+        "Switzerland costs — accommodation, meals, travel add up fast",
+        "Small field (~400) means limited community atmosphere",
+        "Pure road cycling — no gravel or mixed-terrain adventure",
+        "Point-to-point logistics require transport between start/finish cities"
+      ],
+      "bottom_line": "If you want to test yourself on an ultra-distance Alpine road ride and the idea of chasing an Olympic champion through the Swiss Alps sounds like your idea of a good time, there's nothing else like it."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Chase an Olympic champion through the Swiss Alps on ultra-distance routes finishing in Zermatt or Andermatt.",
+      "should_you_race": "Yes if you want an ultra-endurance Alpine road challenge with genuine star power. Yes if 275km and 5,500m of climbing in one day excites rather than terrifies you. Skip if you want gravel or mixed-surface riding. Skip if Swiss pricing is a dealbreaker.",
+      "alternatives": "Haute Route Alps (multi-stage Alpine challenge); Otztaler Radmarathon (similar single-day Alpine ultra); Mallorca 312 (long-distance sportive); La Marmotte (iconic Alpine gran fondo)"
+    },
+    "citations": [
+      {
+        "url": "https://www.chasingcancellara.com",
+        "category": "official",
+        "label": "Chasing Cancellara — Official Site"
+      },
+      {
+        "url": "https://www.chasingcancellara.com/bern-zermatt",
+        "category": "official",
+        "label": "Chasing Cancellara Bern-Zermatt Event Page"
+      },
+      {
+        "url": "https://www.chasingcancellara.com/zurich-andermatt",
+        "category": "official",
+        "label": "Chasing Cancellara Zurich-Andermatt Event Page"
+      },
+      {
+        "url": "https://www.chasingcancellara.com/concept",
+        "category": "official",
+        "label": "Chasing Cancellara Concept"
+      },
+      {
+        "url": "https://www.cyclingnews.com/features/chasing-cancellara-how-a-310km-ride-from-bern-to-zermatt-really-tested-me/",
+        "category": "media",
+        "label": "Cyclingnews: Chasing Cancellara Bern-Zermatt Ride Report"
+      },
+      {
+        "url": "https://www.cyclingnews.com/features/my-experience-of-chasing-cancellara-275km-from-zurich-to-zermatt/",
+        "category": "media",
+        "label": "Cyclingnews: My Experience of Chasing Cancellara Zurich-Zermatt"
+      },
+      {
+        "url": "https://pezcyclingnews.com/features/riding-with-spartacus-chasing-cancellara/",
+        "category": "media",
+        "label": "PezCycling News: Riding with Spartacus"
+      },
+      {
+        "url": "https://strambecco.com/event/chasing-cancellara-bern-zermatt/",
+        "category": "reference",
+        "label": "Strambecco: Chasing Cancellara Bern-Zermatt Rating"
+      },
+      {
+        "url": "https://sportpress.international/cycling-chasing-cancellara-2025-sui/",
+        "category": "media",
+        "label": "Sportpress International: Chasing Cancellara 2025"
+      },
+      {
+        "url": "https://www.myswitzerland.com/en-us/experiences/events/chasing-cancellara-zuerich-andermatt/",
+        "category": "reference",
+        "label": "Switzerland Tourism: Chasing Cancellara Zurich-Andermatt"
+      },
+      {
+        "url": "https://www.valais.ch/en/events/chasing-cancellara-bern-zermatt",
+        "category": "reference",
+        "label": "Valais Switzerland: Chasing Cancellara Bern-Zermatt"
+      },
+      {
+        "url": "https://www.zermatt.ch/en/Media/News/Events/Chasing-Cancellara-the-toughest-one-day-race-in-Switzerland-to-continue",
+        "category": "reference",
+        "label": "Zermatt Tourism: Chasing Cancellara"
+      },
+      {
+        "url": "https://endurance.biz/2018/industry-news/chasing-cancellara-2018-nine-destinations/",
+        "category": "media",
+        "label": "Endurance.biz: Chasing Cancellara 2018 Nine Destinations"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/10221/chasing-cancellara-zurich-zermatt",
+        "category": "reference",
+        "label": "Gran Fondo Guide: Chasing Cancellara Bern-Zermatt"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Fabian_Cancellara",
+        "category": "reference",
+        "label": "Wikipedia: Fabian Cancellara"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "CHASING CANCELLARA gran fondo cycling Switzerland (multiple routes)",
+      "videos": [
+        {
+          "video_id": "J7tRHVDn4hw",
+          "title": "Passo dello Stelvio from Bormio (Lombardy, Italy)",
+          "channel": "Geir Joar Meli Hval (Gary MacWhale)",
+          "view_count": 962,
+          "upload_date": "20140702",
+          "duration_string": "8:38",
+          "description": "Climbing the mighty Passo dello Stelvio from Bormio (Lombardy, Italy)\n- cycling the last 11.5 km (after the tunnels)\n\nBike: Colnago AC-R 2014 (hired at http://www.bormioskibike.com/).\nCamera: Samsung Galaxy S2\nSoftware: Microsoft Windows Movie Maker 2012\nMany thanks to the photographer - my father Finn Hval :)\n2014(c)www.MacWhale.eu\n\nAccording to Garmin Edge 800 the following data was recorded http://connect.garmin.com/activity/525995577\nSun, 2014 Jun 22 12:22 Central European Time By macwhale\nActivity Type: Road Cycling | Event Type: Fitness | Course: -- \nDistance:  11,27 km\nTime:   1:03:09\nAvg Speed:  10,7 km/h\nElevation Gain: 794 m\nCalories:  831 kC\nAvg Temperature: 24,6 °C\nTime:   1:03:09\nMoving Time:  1:03:08\nElapsed Time:  1:03:09\nAvg Speed:  10,7 km/h\nAvg Moving Speed: 10,7 km/h\nMax Speed:  23,8 km/h\nAvg Pace:  5:36 min/km\nAvg Moving Pace: 5:36 min/km\nBest Pace:  2:31 min/km\nElevation Gain: 794 m\nElevation Loss: 0 m\nMin Elevation:  1.943 m\nMax Elevation:  2.737 m\nAvg Temperature: 24,6 °C\nMin Temperature: 22,0 °C\nMax Temperature: 28,0 °C",
+          "tags": [
+            "Stelvio Pass (Mountain Pass)",
+            "Lombardy (Italian Region)",
+            "Bormio (City/Town/Village)",
+            "Italy (Country)",
+            "Mountain Pass (Geographical Feature Category)"
+          ],
+          "url": "https://www.youtube.com/watch?v=J7tRHVDn4hw",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

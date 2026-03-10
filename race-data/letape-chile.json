@@ -1,0 +1,169 @@
+{
+  "race": {
+    "name": "L'Etape Chile by Tour de France",
+    "slug": "letape-chile",
+    "display_name": "L'Etape Chile by Tour de France",
+    "tagline": "110km of Chilean coastal fury with 1,200m punch—Tour de France soul hits the Southern Hemisphere!",
+    "vitals": {
+      "distance_km": 110.0,
+      "distance_mi": 68.35,
+      "elevation_m": 1200,
+      "elevation_ft": 3937.0,
+      "location": "Valdivia, Los Rios, Chile",
+      "location_badge": "VALDIVIA, LOS RIOS",
+      "country": "Chile",
+      "date": "November",
+      "date_specific": "2026: November TBD",
+      "field_size": "1,500-3,000 ambitious amateurs chasing TdF glory",
+      "start_format": null,
+      "registration": "Opens early 2026 via official site; expect €150-250 including finisher's jersey, support, and Tour prestige",
+      "entry_fee": "$200-300",
+      "feed_zones": "6-8 fully stocked with gels, bars, hydration, and Chilean empanadas every 15-20km",
+      "cutoff_time": "8-10 hours for masses; broom wagon mercy",
+      "lat": -39.8142,
+      "lng": -73.2459,
+      "route_options": [
+        "Main: 110km, 1,200m — full coastal immersion",
+        "Short: 60km, 600m — beginner TdF taste"
+      ]
+    },
+    "climate": {
+      "primary": "Cool temperate oceanic — brief",
+      "description": "November brings mild 15-22°C days with high humidity from Valdivia's rivers and coast. Expect occasional drizzle turning roads slick but refreshing the soul. Sunny breaks highlight Andean foothills in emerald glory.",
+      "challenges": [
+        "humid stickiness",
+        "sudden showers",
+        "coastal winds",
+        "temperature swings"
+      ]
+    },
+    "terrain": {
+      "primary": "Coastal rollers through lush Valdivian rainforest",
+      "surface": "Smooth asphalt with occasional chipseal; riverside paths wind through ancient alerce forests. Fresh pavement expected for debut, but watch for wet leaves and gravel shoulders. Pure Southern Cone poetry on two wheels.",
+      "technical_rating": 2,
+      "features": [
+        "river valleys",
+        "coastal bluffs",
+        "rainforest tunnels",
+        "gentle punchy climbs",
+        "TdF-style signage"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Coastal launch from Niebla rockets into Valdivia's emerald valleys. Rollers twist through ancient forests, rivers flashing beside. Gentle climbs build to panoramic payoffs—no endless grinds, all scenic reward. TdF signage elevates every pedal.",
+      "signature_challenge": "The Niebla-to-Valdivia coastal traverse: 110km essence in rainforest-wrapped rollers. 1,200m spread thin but relentless, with humidity amplifying burn. TdF finish line in Valdivia seals the conquest.",
+      "suffering_zones": [
+        "Valdivia River Punch",
+        "Coastal Headwind Hell"
+      ]
+    },
+    "logistics": {
+      "airport": "Fly into Valdivia (ZOS) or connect via Santiago (SCL, 1hr flight). Shuttles from Niebla start; taxis cheap.",
+      "lodging_strategy": "Book Valdivia hotels/B&Bs early—riverside gems abound. Event camps likely. Avoid peak summer surge.",
+      "transport": "",
+      "food": "Empanadas, fresh seafood, craft beer explosion. Vegan options growing. Post-race asados legendary.",
+      "official_site": "https://chile.letapeseries.com"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Born from TdF's global conquest, L'Etape Chile plants the yellow jersey in Patagonia. First Southern Cone edition targets nature-loving amateurs. Valdivia chosen for epic coast-river fusion. Debut promises closed roads and pro vibes.",
+      "notable_moments": [
+        "Inaugural 2026 edition",
+        "Niebla coastal start innovation",
+        "Rainforest TdF immersion",
+        "Southernmost L'Etape yet"
+      ],
+      "reputation": "Tour pedigree ensures quality. Chile's debut builds hype. Early buzz solid from series fans."
+    },
+    "biased_opinion": {
+      "verdict": "Exotic TdF appetizer",
+      "summary": "L'Etape Chile blasts Tour spirit into Chile's lush south, blending coastal beauty with manageable suffering. Debut 110km from Niebla immerses you in rainforest rollers under Tour branding—no French Alps brutality, but fresh adventure. Skeptics yawn at low vert; purists drool over novelty. Valdivia's charm post-ride rivals any podium.",
+      "strengths": [
+        "Tour de France prestige",
+        "stunning coastal scenery",
+        "manageable challenge",
+        "exotic destination",
+        "pro-level organization"
+      ],
+      "weaknesses": [
+        "light elevation",
+        "remote logistics",
+        "debut uncertainties",
+        "humid weather",
+        "shallow field"
+      ],
+      "bottom_line": "Signature entry for Southern Hemisphere TdF dreams. Nail training, dodge rain—claim your jersey. World needs more events like this."
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "TdF magic meets Chilean wilderness—worth the trek!",
+      "should_you_race": "Yes if craving exotic road prestige without Alpine agony. Skip if chasing mega-vert or elite competition.",
+      "alternatives": "Unreal Gran Fondo (unreal-granfondo), L'Etape Costa Rica (letape-costa-rica), TransAndes Challenge (transandes)"
+    },
+    "citations": [
+      {
+        "url": "https://veloracycling.com/events/l-etape-chile-by-tour-de-france-2026",
+        "category": "event",
+        "label": "L'Étape Chile by Tour de France 2026 - Velora Cycling"
+      },
+      {
+        "url": "https://chile.letapeseries.com",
+        "category": "official",
+        "label": "Official L'Etape Chile"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "L'Etape Chile by Tour de France gran fondo cycling Valdivia",
+      "videos": [
+        {
+          "video_id": "FzAnQc97CzQ",
+          "title": "II VUELTA CICLISMO PICHIDEGUA 2017",
+          "channel": "EDUCACIÓN PICHIDEGUA",
+          "view_count": 1737,
+          "upload_date": "20170405",
+          "duration_string": "12:37",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=FzAnQc97CzQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

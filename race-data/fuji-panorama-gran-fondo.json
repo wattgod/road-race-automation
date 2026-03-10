@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Fuji Panorama Gran Fondo",
+    "slug": "fuji-panorama-gran-fondo",
+    "display_name": "Fuji Panorama Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 1800,
+      "elevation_ft": 5906.0,
+      "location": "Lake Saiko, Yamanashi Prefecture, Japan",
+      "location_badge": "Lake Saiko, Japan",
+      "country": "Japan",
+      "date": "2026: 10 TBD",
+      "date_specific": "2026: 10 TBD",
+      "field_size": "1500",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "6",
+      "cutoff_time": "8 hours",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and ryokans around Lake Kawaguchi; camping at Saiko lakeside sites; book early for Fuji-view rooms.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "Stunning Fuji-framed road loops for scenery chasers seeking accessible gran fondo suffering.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

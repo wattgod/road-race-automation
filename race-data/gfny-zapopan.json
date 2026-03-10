@@ -1,0 +1,175 @@
+{
+  "race": {
+    "name": "GFNY Zapopan",
+    "slug": "gfny-zapopan",
+    "display_name": "GFNY Zapopan",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 146.4,
+      "distance_mi": 91.0,
+      "elevation_m": 1234,
+      "elevation_ft": 4049.0,
+      "location": "Zapopan (Guadalajara), Jalisco, Mexico",
+      "location_badge": "Zapopan (Guadalajara), Mexico",
+      "country": "Mexico",
+      "date": "2026: May 3",
+      "date_specific": "2026: May 3",
+      "field_size": "Not specified",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Not specified",
+      "cutoff_time": "Not specified",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Multiple hotel options available in the Guadalajara/Zapopan area, including Hard Rock Hotel Guadalajara (Avenida Vallarta, approximately 20 minutes from downtown), Fiesta Inn Guadalajara Poniente (Anillo Periférico Manuel González Morín), and other business-class hotels. Downtown Guadalajara and nearby Tlaquepaque offer additional lodging and cultural experiences.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "A well-organized, fast-paced gran fondo in Mexico's cultural heartland that prioritizes peloton racing and festive atmosphere over technical challenge.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GFNY Zapopan gran fondo cycling Zapopan (Guadalajara)",
+      "videos": [
+        {
+          "video_id": "QL8NDEi_v3w",
+          "title": "GFNY Zapopan. Course 2023",
+          "channel": "GFNY World",
+          "view_count": 986,
+          "upload_date": "20230802",
+          "duration_string": "1:16",
+          "description": "more info: Zapopan.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=QL8NDEi_v3w",
+          "transcript": "[Music]\nthank you\nforeign",
+          "curated": false
+        },
+        {
+          "video_id": "cndmcPFFWR0",
+          "title": "GFNY Zapopan. The Course",
+          "channel": "GFNY World",
+          "view_count": 1345,
+          "upload_date": "20220819",
+          "duration_string": "1:19",
+          "description": "GFNY Zapopan. 2022 Course\n\nMore Info: Zapopan.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=cndmcPFFWR0",
+          "transcript": "[Music]\n[Applause]\nyou",
+          "curated": false
+        },
+        {
+          "video_id": "XhZlF8BGVEE",
+          "title": "GFNY Zapopan 2022",
+          "channel": "GFNY World",
+          "view_count": 1413,
+          "upload_date": "20220128",
+          "duration_string": "30",
+          "description": "More Info: Zapopan.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=XhZlF8BGVEE",
+          "transcript": "[Music]\nlaughs\n[Applause]",
+          "curated": false
+        },
+        {
+          "video_id": "UY8OTZ3h3YA",
+          "title": "GFNY Zapopan Route 2022",
+          "channel": "GFNY World",
+          "view_count": 1418,
+          "upload_date": "20220225",
+          "duration_string": "1:13",
+          "description": "More info: Zapopan.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=UY8OTZ3h3YA",
+          "curated": false
+        },
+        {
+          "video_id": "TzM8ygvL83c",
+          "title": "GFNY Zapopan 2022! La carrera más rápida!",
+          "channel": "GFNY World",
+          "view_count": 1634,
+          "upload_date": "20221006",
+          "duration_string": "1:42",
+          "description": "more info: Zapopan.gfny.com",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=TzM8ygvL83c",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

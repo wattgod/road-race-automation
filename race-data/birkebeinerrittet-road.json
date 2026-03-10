@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Birkebeinerrittet Sykkel",
+    "slug": "birkebeinerrittet-road",
+    "display_name": "Birkebeinerrittet Sykkel",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 84.0,
+      "distance_mi": 52.2,
+      "elevation_m": 1215,
+      "elevation_ft": 3986.0,
+      "location": "Rena to Lillehammer, Norway",
+      "location_badge": "Rena to Lillehammer, Norway",
+      "country": "Norway",
+      "date": "2026: August 29",
+      "date_specific": "2026: August 29",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Late August in eastern Norway offers mild summer weather with long daylight.",
+      "challenges": [
+        "Precipitation: Low (20-30%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "20% paved, 70% gravel/unpaved",
+      "technical_rating": 4,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 4,
+      "cultural_impact": 2,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A historic point-to-point journey through forests, mountains, and valleys, blending fire roads, gravel, and paved sections while carrying a 3.5kg backpack to commemorate medieval warriors.",
+      "signature_challenge": "Mandatory 3.5kg backpack throughout, symbolizing the weight of infant heir Håkon Håkonsson carried to safety in 1206.",
+      "suffering_zones": [
+        "Raudfjellet Climb: Iconic early mountain ascent testing legs after forest start.",
+        "Midtfjellet: Mid-race high point with steep gradients and exposure.",
+        "Final Descent to Lillehammer: Technical drop into Olympic stadium demanding control after fatigue."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and mattress accommodations in Rena, Lillehammer, or Hamar; book via My Page post-registration.",
+      "transport": "Start bib pickup in Rena on race morning; buses from Oslo/Lillehammer to Rena; finish at Håkons Hall with shuttles back.",
+      "food": "",
+      "official_site": "https://birken.no/en/cycling/birkebeinerrittet-84-km"
+    },
+    "history": {
+      "founded": 1993,
+      "origin_story": "Annual MTB classic since 1993 commemorating Birkebeiner warriors' 1206 ski rescue of heir Håkon Håkonsson; world's largest by entrants.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Norway's backpacked MTB legend: history, mountains, and massive community.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://birken.no/en/cycling/birkebeinerrittet-84-km",
+        "category": "reference",
+        "label": "Birkebeinerrittet 84 km - Birken"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Birkebeinerrittet",
+        "category": "reference",
+        "label": "Birkebeinerrittet"
+      },
+      {
+        "url": "https://birken.srv2.modulez.no/en/cycling",
+        "category": "reference",
+        "label": "Bike Race - Birken"
+      },
+      {
+        "url": "https://birken.no/en/cycling",
+        "category": "reference",
+        "label": "Birken Bike Race"
+      }
+    ]
+  }
+}

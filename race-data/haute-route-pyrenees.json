@@ -1,0 +1,184 @@
+{
+  "race": {
+    "name": "Haute Route Pyrenees",
+    "slug": "haute-route-pyrenees",
+    "display_name": "Haute Route Pyrenees",
+    "tagline": "Five stages. 580 km. 14,000 meters of climbing. The Haute Route brand crosses the Pyrenees from Mediterranean to Atlantic across the most legendary cols in Tour de France history.",
+    "vitals": {
+      "distance_km": 587.4,
+      "distance_mi": 365.0,
+      "elevation_m": 14499,
+      "elevation_ft": 47570.0,
+      "location": "French and Spanish Pyrenees (route varies annually)",
+      "location_badge": "PYRENEES, FRANCE / SPAIN",
+      "country": null,
+      "date": "Early July annually (5 consecutive days)",
+      "date_specific": "Cancelled for 2026",
+      "field_size": "250-500 riders",
+      "start_format": null,
+      "registration": "Online via hauteroute.fr. Tiered pricing with early-bird phases. 5-day entry: EUR1,399 (2024 pricing). Sells out.",
+      "entry_fee": "EUR1,399 (5-day entry fee only; accommodation and travel additional)",
+      "feed_zones": "Multiple professional feed stations per stage with sports nutrition, water, mechanical and medical support. 5 mechanics, 30 masseurs, 30 safety motorcycles, 8 race support cars.",
+      "cutoff_time": "Strict daily cutoff times enforced at key checkpoints. Riders swept by broom wagon if behind pace. Must reach stage finish within time limit.",
+      "lat": 43.232,
+      "lng": -0.078,
+      "route_options": [
+        "Haute Route Pyrenees 5-day: ~588 km (365 mi), ~14,500 m gain — the full event across 5 road stages"
+      ]
+    },
+    "climate": {
+      "primary": "Summer Pyrenees — variable mountain weather with significant daily temperature swings",
+      "description": "Early July in the Pyrenees delivers warm valley starts (22-32C / 72-90F) but considerably cooler conditions above 2,000m, where temperatures can drop to 5-10C with wind chill. Over 5 consecutive days, riders traverse from Mediterranean-influenced climate on the eastern end to Atlantic-influenced weather on the western Pyrenees. Afternoon thunderstorms are the primary hazard, building predictably from noon onward with lightning at altitude a real danger on exposed cols. The Pyrenees are generally warmer and more humid than the Alps, but summit conditions on the Tourmalet (2,115m) and Envalira (2,408m) can be genuinely cold and windy even in July.",
+      "challenges": [
+        "Summit temperatures 5-10C at 2,100m+ with wind chill, especially on Tourmalet and Aubisque",
+        "Valley heat: 28-35C in early July on lower stages",
+        "Afternoon thunderstorms with lightning at altitude — builds daily from noon",
+        "5 consecutive days of weather exposure across varying microclimates",
+        "Must carry rain and cold-weather kit daily despite warm valley starts"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Pyrenean mountain passes",
+      "surface": "Well-maintained French and Spanish mountain roads. All tarmac throughout. No gravel or unpaved sections. Road quality generally excellent on major Tour de France cols, occasionally narrower and rougher on lesser-used Andorran or Spanish approaches.",
+      "technical_rating": 1,
+      "features": [
+        "Col du Tourmalet (2,115m) — the most famous climb in Tour de France history, tackled from the harder eastern side",
+        "Col d'Aubisque (1,709m) — exposed, dramatic Pyrenean pass with legendary Tour heritage",
+        "Col du Portet (2,215m) — newer summit finish used in modern Tour de France stages",
+        "Col de Peyresourde (1,569m) — fast approach col linking Luchon to the Louron valley",
+        "Port d'Envalira (2,408m) — highest paved pass in the Pyrenees, crossed during Andorran stages"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 5,
+      "field_depth": 3,
+      "value": 2,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 79,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "discipline": "multi_stage",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 81. adventure dimension dropped, road_surface added. Score recalculated: 79."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Most riders book through official Haute Route accommodation packages or tour operators (Sportive Breaks, La Fuga, Two Wheel Tours) who handle hotel-to-hotel logistics and luggage transport. Independent booking is possible but requires reserving 5+ different hotels across Pyrenean stage towns. Pyrenean accommodation is generally more affordable than Alpine equivalents — smaller towns, fewer luxury resorts, more genuine mountain gites and family-run hotels. Book early: small Pyrenean towns have limited hotel capacity.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "The Tour's Crucible",
+      "summary": "The Haute Route Pyrenees is the Haute Route formula applied to the most storied mountain range in professional cycling. Five stages across the Pyrenees, 580+ km, 14,500 meters of climbing, and every col that ever broke a Tour de France contender — Tourmalet, Aubisque, Portet, Peyresourde. It is expensive. It is punishingly hard. And it delivers a cycling experience that only the Alps edition of the same brand can rival. The Pyrenees have a different character than the Alps — wilder, more remote, steeper and more relentless in gradient, with a raw beauty that the more developed Alpine resorts have lost. The Tourmalet from the east at 7.4% average for 17 km is arguably a harder climb than anything on the Alps route below 2,300m.\n\nThe 5-day format is both a strength and a limitation. It is more accessible than the 7-day Alps — fewer vacation days, lower entry fee, marginally less cumulative damage. But it lacks the soul-crushing seventh-day delirium that makes the Alps edition legendary. You finish the Pyrenees edition battered and proud; you finish the Alps edition fundamentally changed. That said, for many riders, the Pyrenees is the better event: the cols carry more Tour de France mythology per kilometer than anywhere else on earth, the route crosses three countries, and the closing ceremony in Pau's gilded Palais Beaumont is a fitting conclusion to an epic mountain crossing.",
+      "strengths": [
+        "Tour de France mythology: Tourmalet, Aubisque, Portet, Peyresourde — the most storied climbs in professional cycling",
+        "Professional race infrastructure: timing, GC classification, daily support, 30 safety motorcycles, medical and mechanical teams",
+        "5-day format more accessible than 7-day Alps — fewer vacation days, lower entry fee, same quality",
+        "Wilder, more remote terrain than the Alps with cross-border traversal through France, Spain, and Andorra"
+      ],
+      "weaknesses": [
+        "Very expensive: EUR1,399 entry before accommodation and travel — premium pricing for a 5-day event",
+        "2025-2026 editions not currently scheduled — event availability uncertain under new ownership",
+        "Smaller field and shorter format give it 'second event' status behind the Alps flagship",
+        "Pyrenean summit altitudes (max 2,408m) less extreme than Alps edition (2,744m) — less physiological novelty"
+      ],
+      "bottom_line": "If the Haute Route Alps is the Grand Tour, the Pyrenees edition is the Classics — shorter, more intense per kilometer, and steeped in deeper mythology. The Tourmalet alone justifies the entry fee. Bring your climbing legs and your reverence for cycling history."
+    },
+    "final_verdict": {
+      "score": "79/100",
+      "one_liner": "Five stages. 580 km. 14,500 meters. Tourmalet, Aubisque, Portet. The Haute Route brand meets the most legendary mountain range in cycling.",
+      "should_you_race": "Yes if you want the premium amateur stage-race experience across the Pyrenees — professional infrastructure on Tour de France roads. Yes if the 5-day format suits your schedule better than the 7-day Alps. Skip if the EUR1,399 entry fee (before travel and accommodation) is prohibitive. Skip if you want the absolute pinnacle — the Haute Route Alps is still the flagship. And check availability: the 2025-2026 editions are not currently scheduled.",
+      "alternatives": [
+        "If you want the ultimate Haute Route experience, go for Haute Route Alps — 7 days, 19,000m, the definitive edition.",
+        "If you want a Pyrenean crossing at a fraction of the cost: Raid Pyreneen — 18 cols, Atlantic to Mediterranean, EUR9-19 entry, fully self-supported.",
+        "If you want a single-day Pyrenean epic: L'Etape du Tour when it features Pyrenean stages."
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://hauteroute.fr/",
+        "category": "official",
+        "label": "Haute Route — Official Site (France Velo Evenements)"
+      },
+      {
+        "url": "https://www.hauteroute.org/events/overview/pyrenees-2023-en",
+        "category": "official",
+        "label": "Haute Route Pyrenees 2023 — Event Overview"
+      },
+      {
+        "url": "https://www.hauteroute.org/news/view/2021-haute-route-pyrenees-stage-descriptions",
+        "category": "official",
+        "label": "2021 Haute Route Pyrenees — Stage Descriptions"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Haute_Route_(cycling)",
+        "category": "reference",
+        "label": "Haute Route (cycling) — Wikipedia"
+      },
+      {
+        "url": "https://alpinecols.com/pain-and-pleasure-at-the-haute-route-pyrenees/",
+        "category": "review",
+        "label": "Pain & Pleasure at the Haute Route Pyrenees — Alpine-Cols"
+      },
+      {
+        "url": "https://www.samiinkinen.com/post/690079276141314048/5-day-cycling-stage-race-numbers-from-haute-route",
+        "category": "review",
+        "label": "5-Day Cycling Stage Race Numbers from Haute Route Pyrenees — Sami Inkinen"
+      },
+      {
+        "url": "https://velocio.cc/blogs/community/6-insights-from-the-haute-route",
+        "category": "review",
+        "label": "6 Insights from the Haute Route Pyrenees — Velocio"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4572/haute-route-pyrenees",
+        "category": "reference",
+        "label": "Haute Route Pyrenees — Gran Fondo Guide"
+      },
+      {
+        "url": "https://endurance.biz/2024/industry-news/france-velo-evenements-takes-over-haute-route-from-ironman-with-two-french-events-in-2024/",
+        "category": "reference",
+        "label": "France Velo Evenements Takes Over Haute Route — Endurance.biz"
+      },
+      {
+        "url": "https://www.outsystems.com/blog/posts/a-sports-story-the-haute-route-pyrenees/",
+        "category": "review",
+        "label": "A Sports Story: I Finished the Haute Route Pyrenees — OutSystems"
+      }
+    ]
+  }
+}

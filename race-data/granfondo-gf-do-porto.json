@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Granfondo do Porto",
+    "slug": "granfondo-gf-do-porto",
+    "display_name": "Granfondo do Porto",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 130.4,
+      "distance_mi": 81.0,
+      "elevation_m": 1585,
+      "elevation_ft": 5200.0,
+      "location": "Porto, Portugal",
+      "location_badge": "Porto, Portugal",
+      "country": "Portugal",
+      "date": "2026: April 26",
+      "date_specific": "2026: April 26",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Mediterranean",
+      "description": "Mediterranean spring: mild, sunny days perfect for cycling through vineyards.",
+      "challenges": [
+        "Precipitation: Low (15-20%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Hilly road loop through Douro Valley's terraced vineyards, blending relentless climbs with sweeping descents and river views.",
+      "signature_challenge": "The return via Muro do Cadão, a 3.1km beast at 10.2% that breaks the field in spectacular wine country.",
+      "suffering_zones": [
+        "Muro do Cadão: 3.1 km at 10.2% gradient; brutal late-race wall testing legs after earlier efforts.",
+        "Favaios Climb: Steep ascent through historic village, iconic queen stage highlight amid wine terraces.",
+        "Tabuaço Ascent: Grueling haul with panoramic Douro vistas, penultimate challenge before descent."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Quinta do Vallado wine hotel 2km from start in Peso da Régua; abundant options in Porto and Douro Valley.",
+      "transport": "Well-supported event with bib pickup day prior, ample aid stations, mechanical support, and finisher amenities. Easy access from Porto.",
+      "food": "",
+      "official_site": "https://bikeservice.pt/en/event/douro-granfondo/"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "Portugal's largest gran fondo, evolved from Douro origins to showcase the iconic wine valley with massive international fields.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Scenic Douro masterpiece blending savage climbs with wine country bliss.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://bikeservice.pt/en/event/douro-granfondo/",
+        "category": "reference",
+        "label": "Love Tiles Douro Granfondo - BIKESERVICE"
+      },
+      {
+        "url": "https://worldsmarathons.com/marathon/douro-granfondo",
+        "category": "reference",
+        "label": "Love Tiles Douro Granfondo, 26 Apr 2026 | World's Marathons"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/8605/porto-gaia-granfondo",
+        "category": "reference",
+        "label": "Porto Gaia GranFondo - Gran Fondo Guide"
+      },
+      {
+        "url": "https://portugalbiketours.com/join-us-at-the-douro-granfondo-and-get-a-free-registration/",
+        "category": "reference",
+        "label": "JOIN US AT THE DOURO GRANFONDO AND GET A FREE ..."
+      }
+    ]
+  }
+}

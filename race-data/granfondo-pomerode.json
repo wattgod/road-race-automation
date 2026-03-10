@@ -1,0 +1,314 @@
+{
+  "race": {
+    "name": "UCI Gran Fondo Brasil – Pomerode",
+    "slug": "granfondo-pomerode",
+    "display_name": "UCI Gran Fondo Brasil – Pomerode",
+    "tagline": "South America's Premier UCI Gran Fondo Qualifier in Germany-Heritage Santa Catarina",
+    "vitals": {
+      "distance_km": 109.4,
+      "distance_mi": 68.0,
+      "elevation_m": 1300,
+      "elevation_ft": 4265.0,
+      "location": "Pomerode, Santa Catarina, Brazil",
+      "location_badge": "Pomerode, Brazil",
+      "country": "Brazil",
+      "date": "November",
+      "date_specific": "2026: November 8",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Hot",
+      "description": "Early November in Santa Catarina typically features mild spring weather with moderate temperatures and variable precipitation. Specific meteorological data for race day conditions not available in sources.",
+      "challenges": [
+        "Precipitation: Moderate (specific data unavailable)"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Looped road course featuring rolling hills, winding roads, and scenic views of Santa Catarina. The route combines two significant climbs with a southern loop return, offering varied terrain suitable for endurance cyclists.",
+      "technical_rating": 1,
+      "features": [
+        "Looped road course featuring rolling hills, winding roads, and scenic views of Santa Catarina",
+        "The route combines two significant climbs with a southern loop return, offering varied terrain suitable for endurance cyclists"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Looped road course combining rolling hills, winding roads, and two distinct climbing sections. Starts and finishes in Pomerode's historic center with full UCI road signage and fan-friendly setup. Shared route between Gran Fondo and Mediofondo, with Mediofondo taking a shortcut halfway.",
+      "signature_challenge": "The 7 km mid-course climb at 4% average gradient reaching 400 m elevation, positioned as the race's decisive section where performance gaps typically emerge.",
+      "suffering_zones": [
+        "Initial 4 km climb from sea level to ~300 m (repeated after 24 km on return leg)",
+        "Mid-course 7 km climb at 4% average gradient to day's highest point (~400 m), most demanding section",
+        "Southern loop return to finish with accumulated fatigue"
+      ]
+    },
+    "logistics": {
+      "airport": "NAV (Navegantes Airport), 83km; FLN (Florianópolis Airport), 190km; CWB (Curitiba Airport), 200km; GRU (Guarulhos International Airport (São Paulo)), 640km",
+      "lodging_strategy": "Pomerode and surrounding Vale Europeu Catarinense region offer lodging options; specific properties not detailed in sources.",
+      "transport": "Event held in Pomerode's historic center with full expo and kit pickup November 7–8. Multiple regional airports serve the Vale Europeu Catarinense. UCI license, valid ID, and personal insurance required for entry.",
+      "food": "",
+      "official_site": "https://ucigranfondobrasil.com.br"
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "UCI Gran Fondo Brasil – Pomerode is the third edition of South America's first and only UCI Gran Fondo World Series event, established to bring UCI-sanctioned gran fondo racing to the continent. Held in the Vale Europeu Catarinense region, a German-heritage area named after Pomerania, the event leverages local cycling culture and European architectural charm.",
+      "notable_moments": [
+        "2023: Inaugural edition launched as South America's first UCI Gran Fondo World Series qualifier",
+        "2024: Second edition reinforced event's status as flagship South American gran fondo",
+        "2025: Third edition held November 9 with 3,000+ participants across three editions from 20+ countries",
+        "Top 25% finishers in age categories qualify for 2026 UCI Gran Fondo World Championships"
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Granfondo Pomerode represents a landmark event for South American cycling, offering the continent's only UCI Gran Fondo World Series qualifier with genuine championship stakes. The German-heritage setting and well-organized course deliver a premium experience, though the event's relative youth (founded 2023) and limited international profile compared to European counterparts position it as an emerging rather than established prestige event. Best suited for cyclists seeking UCI qualification, South American cycling tourism, or cultural immersion in Brazil's cycling heartland.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "South America's sole UCI Gran Fondo World Series qualifier, combining championship-level racing with German-Brazilian cultural heritage in a professionally organized, moderately challenging 120 km loop.",
+      "should_you_race": "UCI Gran Fondo Brasil – Pomerode delivers authentic UCI-sanctioned gran fondo racing to South America with a clear qualification pathway to the 2026 World Championships. The 120 km course offers balanced climbing (1,239 m elevation) across two distinct sections, supported by scenic Vale Europeu Catarinense terrain and German-influenced architecture. Event organization meets UCI standards with expo, kit pickup, full signage, and athlete support. The Mediofondo option (80 km, 809 m) accommodates older age categories. Participation requires UCI license and personal insurance. As the region's only World Series event, it attracts international competitors but remains less established than European gran fondos. Ideal for cyclists prioritizing championship qualification, South American cycling culture, or European-style cycling in a developing market.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.elite-wheels.com/events/uci-gran-fondo-brasil-pomerode-2025/",
+        "category": "reference",
+        "label": "UCI Gran Fondo Brasil – Pomerode 2025 - Elite Wheels"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/brazil/uci-gran-fondo-brasil/36974",
+        "category": "reference",
+        "label": "UCI Gran Fondo Brasil | cycloworld.cc"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-pomerode-2025/",
+        "category": "reference",
+        "label": "UCI Gran Fondo Pomerode 2025"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-colombia/",
+        "category": "reference",
+        "label": "Granfondo Bogota - UCI Gran Fondo World Series"
+      },
+      {
+        "url": "https://www.elite-wheels.com/events/uci-gran-fondo-brasil/",
+        "category": "reference",
+        "label": "UCI Gran Fondo Brasil - Elitewheels"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "UCI Gran Fondo Brasil – Pomerode gran fondo cycling Pomerode",
+      "videos": [
+        {
+          "video_id": "syD7RvDHABQ",
+          "title": "UCI Gran Fondo World Series Brasil - Pomerode.SC - 10 de Novembro 2024",
+          "channel": "Riders Sports",
+          "view_count": 1534,
+          "upload_date": "20241120",
+          "duration_string": "11:26",
+          "description": "Confira nosso mini documentário sobre o 2024 UCI Gran Fondo World Series Brasil, Pomerode.SC🇧🇷\n\nUm final de semana memorável onde o ciclismo fez corações dispararem e proporcionou aos participantes e público estrutura e suporte de padrão mundial UCI.\n\nNos encontraremos novamente em 09 de novembro de 2025.\n\n.\n\nCheck out our mini documentary about the 2024UCI Gran Fondo World Series Brazil, Pomerode.SC🇧🇷\n\nA memorable weekend where cycling made hearts race and provided participants and the public with UCI world-class structure and support.\n\nWe will meet again on November 9, 2025.\n\n#ucigranfondoworldseries #ucigranfondobrasil #uci\n#santacatarina #brazil #cycling #roadcycling #granfondo\n@uci_cycling\n@ciclismocbc\n@prefeiturapomerode\n@fizikofficial\n@oakleybr\n@leattbr",
+          "tags": [
+            "gran fondo",
+            "uci",
+            "ciclismo",
+            "road cycling",
+            "uci gran fondo world series brasil"
+          ],
+          "url": "https://www.youtube.com/watch?v=syD7RvDHABQ",
+          "curated": false
+        },
+        {
+          "video_id": "zpkt8DA7yNw",
+          "title": "UCI Gran Fondo Brasil Pomerode.SC - Vídeo Oficial",
+          "channel": "Riders Sports",
+          "view_count": 1405,
+          "upload_date": "20231112",
+          "duration_string": "2:48",
+          "description": "05 de Novembro de 2023 - Pomerode.SC\n\nO UCI Gran Fondo Brasil chega na cidade mais alemã do Brasil para um evento clássico do ciclismo mundial.\n\nConfira como foi o evento e prepare-se para 03 de Novembro de 2024.\n\n#cycling #granfondo #cycling #cyclinglife #bike #mtb #bikelife #cyclingphotos #roadbike #cyclist #ciclismo #bicycle #mountainbike #roadcycling #instacycling #mtblife #cyclingshots #fitness #cyclingpics #strava #triathlon #sport #outsideisfree #bikes #bicicleta #bikeporn #ride #nature\n@prefeiturapomerode @ucigranfondoworldseries @cemikfilms @correbrasil @aacesc_org @ridersbikeshop @shimanobrasil @kylyoficial @ciclismocbc @ciclismofcc",
+          "tags": [
+            "Gran Fondo",
+            "UCI",
+            "Ciclismo",
+            "Road Cycling",
+            "Meio FOndo",
+            "Tour de France",
+            "Le Tape Brasil",
+            "Volta da espanha",
+            "LeTape Brasil"
+          ],
+          "url": "https://www.youtube.com/watch?v=zpkt8DA7yNw",
+          "curated": false
+        },
+        {
+          "video_id": "c3YyxsS7WQA",
+          "title": "Gran Fondo Pomerode - Não acredito que isso aconteceu!",
+          "channel": "What's Up Cyclists?",
+          "view_count": 2551,
+          "upload_date": "20231130",
+          "duration_string": "27:46",
+          "description": "E ai Ciclistas! Tudo bem com vocês?\nÉ isso ai galera, prova concluída e com muitas emoções, foi sensacional!\nA prova em si foi bem organizada, o local, Pomerode - SC, tem um diferencial muito grande por ser uma cidade turística e com paisagens incríveis ao redor, e isso tornou a corrida ainda mais especial. Foi dura por ter uma altimetria mais intensa mas foi justamente as áreas de paralelepípedo que quebraram mais, ao mesmo tempo, ofereceu um diferencial para ciclistas com outro nível de técnica, quase um Roubaix.\nMas o mais incrível foi a surpresa final, bom, assiste e me diz o que achou e se você participou ou participaria.\n\nCurte! Se inscreve! Compartilha! E me conta a sua experiência!\n\n#granfondo #ciclismo #estrada #roadbike #competicao\n=============================\n\nApoie o meu trabalho:\nSe você gosta e quer contribuir com o meu trabalho para podermos adquirir mais equipamentos e produzir mais vídeos com mais qualidade Brasil afora,\nAcesse e ajude neste link - https://apoia.se/eaiciclistas\n\n=============================\n\nAssuntos do Vídeo:\n\n0:00 - Intro/Aquecimento\n1:52 - Corrida\n18:47 - Últimos Kms\n21:06 - Seguidores\n24:55 - Eu não acreditei!!\n26:51 - Final\n\n=============================\n\nMe Siga:\n▸ Instagram - http://www.instagram.com/eaiciclistas\n▸ TikTok - http://www.tiktok.com/eaiciclistas\n▸ Strava - https://www.strava.com/athletes/182714\n▸ Vero - https://vero.co/eaiciclistas\n▸ E-Mail - eaiciclistas@gmail.com\n\n=============================\n\nEquipamentos Que Uso:\n\nBike:\n\n▸ OGGI CATTURA PRO T-20 GX - https://bit.ly/3HUTrdR\n \n  Componentes: Grupo Sram GX Lunar Coroa 34T\n               Freio Sram Level TL\n               Guidão Race Face Aeffect\n               Avanço Race Face\n               Suspensão Fox Performance 34 120mm\n               Shock Fox Float DPS 120mm\n               Selim Velo\n               Peus Kenda Booster Pro TL 29x2.20\n               Aros Alex Rim\n               Cubos Sram 900\n              \n\nCameras:\n▸ iPhone 11Pro  \n▸ GoPro Hero10 - https://www.goprobr.com/GOP-CHDRB-101-TH-HERO10-Black-Bundle/p\n\nAudio:\n▸ Saramonic Blink500 B2 - https://bityli.com/cLXMwSJJ\n\nOther:\n▸ GoPro Chesty - https://gopro.com/pt/pt/shop/mounts-accessories/chesty/AGCHM-001.html\n▸ Ulanzi Mobile Rig - https://bityli.com/vAcGFecid\n▸ Camelbak K.U.D.U. 12 - https://bityli.com/ZLXHgody\n▸ Capacete Bell Super Air R - https://bityli.com/TARlTPQK\n▸ Sapatilha Giro Ranger - https://bityli.com/WUorkvHp\n▸ Luva Giro - https://bityli.com/QsswuDMf\n\n=============================\n\nApoio:\n\n▸ Oggi Bikes - https://www.oggibikes.com.br\n▸ Oxxy Bikes - https://www.instagram.com/oxxy_bikes\n▸ Maxxis Brasil - https://www.instagram.com/maxxisbikebr\n▸ Gravtah - https://www.gravtah.com.br\n     CUPOM DE DESCONTO - EAICICLISTAS\n▸ Bike Stickers - https://www.bikestickers.com.br\n     CUPO DE DESCONTO - EAICICLISTAS\n▸ SANTUU - https://www.clubesantuu.com.br\n     CUPO DE DESCONTO - EAI10\n▸ Nutricionista Julia Henn - https://www.instagram.com/nutrijuliahenn/\n\n=============================\n\nConsultas Profissionais e Patrocínios:\nPara qualquer contato profissional, parceirias e patrocínio entre em contato neste e-mail: eaiciclistas@gmail.com",
+          "tags": [
+            "pedal",
+            "bike",
+            "ciclismo",
+            "ciclista",
+            "foz",
+            "fozdoiguacu",
+            "turismo",
+            "xcm",
+            "xco",
+            "xce",
+            "xcc",
+            "marathon",
+            "compras",
+            "specialized",
+            "scott",
+            "bmc",
+            "trek",
+            "orbea",
+            "sense",
+            "oggi",
+            "mtb",
+            "gravel",
+            "road",
+            "estada",
+            "speed",
+            "aprender",
+            "como",
+            "faz",
+            "shimano",
+            "sram",
+            "fest",
+            "competicao",
+            "granfondo",
+            "bikedeestrada",
+            "roadbike"
+          ],
+          "url": "https://www.youtube.com/watch?v=c3YyxsS7WQA",
+          "curated": true,
+          "curation_reason": "Personal race recap with specific details about cobblestone sections and challenging terrain.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/c3YyxsS7WQA/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "N_AXnl7FgdI",
+          "title": "UCI GRAN FONDO BRASIL SERIES: Minha primeira prova de ciclismo (112km)",
+          "channel": "Um mais um é Tri",
+          "view_count": 5218,
+          "upload_date": "20251110",
+          "duration_string": "23:34",
+          "description": "Participando da primeira prova de ciclismo da vida! Meu deus; quanto sofrimento! Mas com certeza voltaria! Vem ver como foi! \n\n🧢 Roupas de triathlon, ciclismo e corrida! https://kupaa.com.br ; CUPOM: GABI10\n💊 Produtinhos SAFE! https://www.saferunners.com.br/ ; CUPOM: GABI15\n👟 Produtos FILA! https://www.fila.com.br/ ; CUPOM: GABIANGHEBEN15\n\n00:00 Introdução\n03:55 Reconhecimento de percurso\n07:01 Feirinha da prova e retirada de kit\n08:51 O kit da prova\n12:05 Estratégia de nutrição para o Granfondo\n13:56 O dia da prova\n20:04 Reflexões sobre a prova\n\n#ciclismo #granfondo #uci #vlog #bike",
+          "tags": [
+            "Ciclismo",
+            "Vlog",
+            "Granfondo",
+            "Bike",
+            "Bicicleta"
+          ],
+          "url": "https://www.youtube.com/watch?v=N_AXnl7FgdI",
+          "curated": true,
+          "curation_reason": "First-person race experience from a beginner's perspective with good view count and recent upload date.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/N_AXnl7FgdI/maxresdefault.jpg",
+          "thumbnail_score": 64.0
+        },
+        {
+          "video_id": "0J0fH7y5Kc8",
+          "title": "UCI GRAN FONDO POMERODE 2024 - Classificatória para o Mundial na Austrália.",
+          "channel": "Alex Arseno Dataro Sports",
+          "view_count": 3680,
+          "upload_date": "20241112",
+          "duration_string": "1:17:20",
+          "description": "Faça Sua inscrição Agora e ganhe um super desconto. https://www.riderize.com/challenges/riders/2025-uci-granfondo-pomerode-brasil-ACixTT5t86\n\nSomente para as primeiras inscrições. \n\nLink no Strava https://www.strava.com/activities/12867885238 \n\nNão gravou os km iniciais, mas aparece as subidas da prova neste ano. Curta o vídeo e venha fazer parte do pelotão em 2025. \n\nOlá, sou Alex Arseno e convido você a embarcar em uma jornada de evolução no ciclismo.\n\n🚴 Conheça-me melhor:\n\nSite: Alex Arseno\nInstagram: @alexarseno\nPara informações sobre meu trabalho como treinador: 📞 041 99546-0081\nApresentando a Dataro Sports:\n\nFundada com a rica herança do Clube Dataro de Ciclismo, um dos mais renomados clubes do Brasil desde 2001, a Dataro Sports celebra conquistas como campeonatos brasileiros, pan-americanos e muitas outras vitórias ciclísticas. Esta loja foi criada pensando em você, amante das duas rodas, seja você iniciante ou veterano.\n\nEscolhemos cada produto com cuidado, pensando apenas no que realmente acreditamos. Visite-nos em Curitiba, na Rua Equador 198, Bairro Bacacheri, ou explore nossa loja online: Dataro Sports. www.datarosports.com.br \n\nNossa Missão: Aproximá-lo de sua paixão, facilitando sua jornada com a bicicleta e entregando os melhores produtos no menor tempo possível.\nNossa Visão: Ser reconhecida entre as melhores lojas e webstores do Brasil, destacando-se pela excelência em produtos e serviços esportivos.\nNossos Valores: Priorizamos a comunicação transparente, a responsabilidade, a confiança e, acima de tudo, a satisfação de nossos clientes.\n\n🔔 Fique por dentro das novidades seguindo nosso canal.\n📞 Para dúvidas e sugestões: 041 9 997880079 ou Chame a DataroSports\n\nConecte-se com a Dataro Sports nas redes:\n\nFacebook: Dataro Sports\nInstagram: @datarosports\nClube no Strava: Clique aqui\n\nOfertas Especiais:\n\nFrete grátis para compras acima de R$250,00 na Região Sul e São Paulo.\nFrete grátis para compras acima de R$600,00 em todo o Brasil.\n#mtb #bike #ciclismoUCI Gran Fondo Pomerode. Pedal de reconhecimento KM iniciais e Finais. Dica Importante.",
+          "tags": [
+            "ciclismo",
+            "ciclismo de estrada",
+            "bicicleta",
+            "alex arseno",
+            "dataro sports",
+            "datarosports",
+            "corrida de ciclismo",
+            "ciclista",
+            "bike de carbono leve",
+            "bottecchia",
+            "bike com shimano",
+            "alex arseno dataro",
+            "treinamento",
+            "gran fondo uci",
+            "uci grand fondo",
+            "pomerode",
+            "pedal pomerode",
+            "oficina mecanica bike",
+            "gran fonde",
+            "granfondo pomerode",
+            "granfondo",
+            "uci granfondo",
+            "mundial 2024",
+            "mundial de ciclismo",
+            "prova em pomerode",
+            "ciclismo em pomerode",
+            "soul 3r5",
+            "prova de estrada",
+            "grand fondo",
+            "gran fondo 2024",
+            "uci 2024"
+          ],
+          "url": "https://www.youtube.com/watch?v=0J0fH7y5Kc8",
+          "curated": true,
+          "curation_reason": "Extended race coverage with Strava data and course details from 2024 edition.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/0J0fH7y5Kc8/hqdefault.jpg",
+          "thumbnail_score": 75.33
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

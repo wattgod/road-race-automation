@@ -1,0 +1,136 @@
+{
+  "race": {
+    "name": "L'Étape Bulgaria by Tour de France",
+    "slug": "letape-bulgaria",
+    "display_name": "L'Étape Bulgaria by Tour de France - Peshtera",
+    "tagline": "Experience the Tour de France atmosphere on fully closed roads in the Rhodope Mountains",
+    "vitals": {
+      "distance_km": 102.0,
+      "distance_mi": 63.4,
+      "elevation_m": 2500,
+      "elevation_ft": 8202.0,
+      "location": "Peshtera, Bulgaria",
+      "location_badge": "Rhodope Mountains",
+      "country": "Bulgaria",
+      "date": "July",
+      "date_specific": "July 5, 2026",
+      "field_size": "Not disclosed",
+      "start_format": null,
+      "registration": "Early registration opens October 23 (general pattern)",
+      "entry_fee": "Not disclosed",
+      "feed_zones": "Not specified",
+      "cutoff_time": "Not specified",
+      "lat": 42.0333,
+      "lng": 24.2833,
+      "route_options": [
+        {
+          "name": "Long Race",
+          "distance_km": 102,
+          "distance_mi": 63.4,
+          "elevation_m": 2500,
+          "elevation_ft": 8202
+        },
+        {
+          "name": "Short Race",
+          "distance_km": 57,
+          "distance_mi": 35.4,
+          "elevation_m": 1500,
+          "elevation_ft": 4921
+        },
+        {
+          "name": "Kids Race",
+          "distance_km": "Short",
+          "distance_mi": "TBD",
+          "elevation_m": "Minimal",
+          "elevation_ft": "Minimal"
+        },
+        {
+          "name": "Family Ride",
+          "distance_km": "Short",
+          "distance_mi": "TBD",
+          "elevation_m": "Minimal",
+          "elevation_ft": "Minimal"
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Alpine mountain",
+      "description": "Warm summer conditions typical of Bulgarian Rhodope Mountains in early July; expect temperatures 20-30°C with potential afternoon showers. Specific forecasts unavailable.",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Fully closed paved roads through Rhodope Mountains featuring sustained climbs, technical descents, and scenic reservoir views.",
+      "technical_rating": 3,
+      "features": [
+        "Fully closed paved roads through Rhodope Mountains featuring sustained climbs, technical descents, and scenic reservoir views"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 4,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 76,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 76."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Start Peshtera city center → climb through town → **SUFFERING ZONE 1: Sustained ascent to Sveti Konstantin resort (1,350m highest point)** → scenic descent past Batak Dam → through Batak town → **FINAL SUFFERING ZONE: City center finish circuits**. Fully closed roads showcase Rhodope beauty[1].",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Start/finish in Peshtera city center. Fully closed roads. Race Village provides Tour de France atmosphere. International travelers should fly into Sofia (2.5hr drive). Early registration recommended[1].",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2023,
+      "origin_story": "Launched January 10, 2023 as inaugural edition. 2026 marks 4th edition (2023-2026). Part of global L'Étape Series across 20+ countries[1][4].",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "76/100",
+      "one_liner": "T2 - Premium Tour de France franchise sportive delivering authentic Gran Fondo experience in spectacular Rhodope Mountains. Excellent for climbers seeking closed-road adventure.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

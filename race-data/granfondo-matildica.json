@@ -1,0 +1,217 @@
+{
+  "race": {
+    "name": "Granfondo Matildica",
+    "slug": "granfondo-matildica",
+    "display_name": "Granfondo Matildica",
+    "tagline": "Italy's oldest gran fondo, UCI Gran Fondo World Series qualifier through the Emilia-Romagna Apennines",
+    "vitals": {
+      "distance_km": 153.0,
+      "distance_mi": 95.1,
+      "elevation_m": 2150,
+      "elevation_ft": 7054.0,
+      "location": "Reggio Emilia, Emilia-Romagna, Italy",
+      "location_badge": "Reggio Emilia, Italy",
+      "country": "Italy",
+      "date": "Mid-September annually",
+      "date_specific": "2026: September 13",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": "€55 until August 29, 2025",
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": [
+        {
+          "name": "Gran fondo",
+          "distance_km": 153,
+          "elevation_m": 2150
+        },
+        {
+          "name": "Medio fondo",
+          "distance_km": 126,
+          "elevation_m": 1450
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Mediterranean",
+      "description": "Late August in Reggio Emilia features mild Mediterranean weather with daytime highs around 28-30°C (82-86°F) and possible afternoon showers.",
+      "challenges": [
+        "Precipitation: Moderate"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": [
+        "Hilly roads through Emilia-Romagna Apennines with rolling ups and downs"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Hilly Apennine roads with rolling terrain, shared bulk between distances; gran fondo adds loops including 4km climb at 5.5% (km53) and 11km at 3.5% (km60+).",
+      "signature_challenge": "Long false-flat climb after initial steeper ascent, building cumulative fatigue.",
+      "suffering_zones": [
+        "4km climb @5.5% after 53km",
+        "11km climb @3.5% after 60km",
+        "Repeated up-downs through Apennines"
+      ]
+    },
+    "logistics": {
+      "airport": "Parma (PMF, ~50km); Bologna (BLQ, ~90km); Milan Linate (LIN, ~150km)",
+      "lodging_strategy": "Plentiful in historic Reggio Emilia with piazzas, cultural sites, and food/wine.",
+      "transport": "Start/finish at Corso Garibaldi, Reggio Emilia. Organized by A.S.D. Cooperatori (granfondo@cooperatori.it, +39 333 6918411). Full services including bike parking, mechanical/medical aid, refreshments, massages, abandonment recovery.",
+      "food": "",
+      "official_site": "https://www.granfondomatildica.it"
+    },
+    "history": {
+      "founded": 1973,
+      "origin_story": "Founded 1973 (53rd edition 2025), Italy's oldest gran fondo. Consistent UCI Gran Fondo World Series qualifier; hosted UEC European Championships Granfondo in 2022.",
+      "notable_moments": [
+        "53rd edition as UCI qualifier",
+        "UEC European Championships host 2022"
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "A storied classic with unbeatable value as a UCI qualifier, perfect for age-group racers seeking qualifiers without breaking the bank. Steady Apennine climbs deliver suffering in a well-supported package amid Italy's cycling heartland.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Essential UCI qualifier for road enthusiasts: historic, hilly, and a steal at €55.",
+      "should_you_race": "Granfondo Matildica stands out as Italy's oldest gran fondo, offering legitimate UCI World Series qualification split smartly by age (gran fondo 19-49, medio 50+). The 153km/2150m route through Apennine terrain tests endurance with key climbs like a 4km at 5.5% and 11km at 3.5%, fully supported by aid, mechanics, medical, and recovery. Reggio Emilia's hospitality, bike parking, gifts, and post-race perks elevate the experience. Ideal for qualifiers prioritizing value and tradition over spectacle.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/gran-fondo-mathildica-2025/",
+        "category": "reference",
+        "label": "Gran Fondo Mathildica 2025"
+      },
+      {
+        "url": "https://www.granfondomatildica.it/en/",
+        "category": "official",
+        "label": "Granfondo Matildica Official Site"
+      },
+      {
+        "url": "https://www.travelemiliaromagna.it/en/cycling-events-emilia-romagna/",
+        "category": "reference",
+        "label": "Cycling events 2025 in Emilia-Romagna"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo Matildica gran fondo cycling Reggio Emilia",
+      "videos": [
+        {
+          "video_id": "wqYBwyM7HCc",
+          "title": "UCI World Series Reggio Emilia - Granfondo Matildica 2026 - promovideo",
+          "channel": "ASD Cooperatori",
+          "view_count": 22,
+          "upload_date": "20260223",
+          "duration_string": "1:16",
+          "description": "Granfondo Matildica - Reggio Emilia - prova valida per la qualificazione alla finale UCI Granfondo World Series 2027",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=wqYBwyM7HCc",
+          "curated": false
+        },
+        {
+          "video_id": "AW2337Z8ds4",
+          "title": "UCI GranFondo World Series 2023 Promovideo",
+          "channel": "ASD Cooperatori",
+          "view_count": 2181,
+          "upload_date": "20230202",
+          "duration_string": "2:20",
+          "description": "La 51^ Edizione della Granfondo Matildica (4 Giugno 2023) sarà tappa WORLD SERIES del Campionato UCI Granfondo e Mediofondo. Questo è il promo del circuito mondiale che nel 2023 vivrà solo due tappe in Italia in occasione della GF Matildica e della GF Tre Valli Varesine.\nTale promo è stato realizzato da UCI. ASD Cooperatori pubblica tale video nel proprio canale YT in qualità di organizzatore di Tappa World Series 2023 - Granfondo Matildica.",
+          "tags": [
+            "matildica",
+            "granfondo",
+            "reggio emilia"
+          ],
+          "url": "https://www.youtube.com/watch?v=AW2337Z8ds4",
+          "curated": false
+        },
+        {
+          "video_id": "vYId0vKDV7Q",
+          "title": "Granfondo MATILDICA 2025 promo",
+          "channel": "ASD Cooperatori",
+          "view_count": 1333,
+          "upload_date": "20250301",
+          "duration_string": "59",
+          "description": "La Granfondo Matildica 2025 si svolgerà Domenica 31 Agosto 2025. Partenza ed arrivo da Reggio Emilia con percorsi sviluppati nel territorio dell'Appennino Reggiano, sulle strade del Giro d'Italia 2025. La Granfondo Matildica sarà Tappa di qualificazione alla finale 2026 del circuito UCI Granfondo World Series 2026.",
+          "tags": [
+            "giro d'italia",
+            "ciclismo"
+          ],
+          "url": "https://www.youtube.com/watch?v=vYId0vKDV7Q",
+          "curated": false
+        },
+        {
+          "video_id": "r5nvKJY5hzY",
+          "title": "Granfondo Matildica UCI World Series e Campionato Italiano 2026 - promo",
+          "channel": "ASD Cooperatori",
+          "view_count": 26,
+          "upload_date": "20260223",
+          "duration_string": "1:11",
+          "description": "Il 13 settembre 2026 ritorna la Granfondo Matildica UCI World Series. Partenza ore 7.30 da Corso Garibaldi a Reggio Emilia. Sarà anche Campionato Italiano Granfondo 2026",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=r5nvKJY5hzY",
+          "curated": false
+        },
+        {
+          "video_id": "3IGluyqNoBQ",
+          "title": "Gran Fondo MATILDICA 2025 Reggio Emilia",
+          "channel": "Massimo Leardini",
+          "view_count": 103,
+          "upload_date": "20250901",
+          "duration_string": "5:38",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=3IGluyqNoBQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

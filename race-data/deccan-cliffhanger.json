@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Deccan Cliffhanger",
+    "slug": "deccan-cliffhanger",
+    "display_name": "Deccan Cliffhanger",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Pune to Mahabaleshwar, Maharashtra, India",
+      "location_badge": "Pune to Mahabaleshwar, India",
+      "country": "India",
+      "date": "2026: November TBD",
+      "date_specific": "2026: November TBD",
+      "field_size": "TBD",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "TBD",
+      "cutoff_time": "TBD",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and guesthouses abundant in Pune and Mahabaleshwar; book early for event weekend.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "Iconic Indian sportive with brutal Ghats climbs and stunning plateau-to-hill views.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

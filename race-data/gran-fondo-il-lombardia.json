@@ -1,0 +1,292 @@
+{
+  "race": {
+    "name": "Gran Fondo Il Lombardia Felice Gimondi",
+    "slug": "gran-fondo-il-lombardia",
+    "display_name": "Gran Fondo Il Lombardia",
+    "tagline": "The Classic of the Falling Leaves. One Monument. Two legendary climbs. Lake Como in autumn. Ride the roads that close cycling's greatest season.",
+    "vitals": {
+      "distance_km": 109.4,
+      "distance_mi": 68.0,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
+      "location": "Cantu, Como, Lombardy, Italy",
+      "location_badge": "CANTU, ITALY",
+      "country": "Italy",
+      "date": "Second Sunday of October annually (day before the professional Il Lombardia)",
+      "date_specific": "2026: October 11",
+      "field_size": "~2,000-2,500 riders",
+      "start_format": null,
+      "registration": "Online via ENDU.net. Registration typically opens in spring, closes one week before race day. Credit card, bank transfer, or Satispay accepted.",
+      "entry_fee": "EUR 75-120 (tiered pricing, early registration discounts). Includes race number, Castelli jersey, race bag, chip timing, feed zones, medical assistance, breakdown service, broom wagon, and finisher medal.",
+      "feed_zones": "3 feed zones along the route plus start/finish area support. Medical assistance, breakdown service, and broom wagon throughout.",
+      "cutoff_time": "7 hours (finish by 14:30)",
+      "lat": 45.736,
+      "lng": 9.137,
+      "route_options": [
+        "Gran Fondo: 109.5 km / 68 mi with 1,700m climbing — full route including Muro di Sormano and Madonna del Ghisallo",
+        "Alternative Sormano bypass: 2 km detour avoids the Muro di Sormano via a milder gradient to the same summit"
+      ]
+    },
+    "climate": {
+      "primary": "Autumn Mediterranean-continental transition",
+      "description": "Mid-October in the Lake Como foothills means cool, crisp autumn conditions. Temperatures typically range from 8-16C (47-61F), with morning starts in the low single digits possible. The famous autumn foliage that gives the professional race its nickname — La Classica delle Foglie Morte, the Classic of the Falling Leaves — is at its peak. Rainfall probability is moderate (roughly 12 rain days in October for the Como area), and when it comes, the steep descents off the Ghisallo and Sormano become treacherous. Fog in the valleys is possible in the early morning but usually burns off.",
+      "challenges": [
+        "Cool morning start temperatures (potentially 5-8C at 7:30 AM in October)",
+        "Moderate rain probability — wet descents off Sormano and Ghisallo are serious hazards",
+        "Temperature differentials between valleys and climb summits",
+        "Fallen leaves on descent roads — reduced grip on corners",
+        "Potential valley fog at the early morning start"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved — Italian provincial and municipal roads",
+      "surface": "Well-maintained Italian asphalt throughout. The legendary climbs are on narrow but paved Italian mountain roads. Descents are technical with tight hairpins, particularly off the Ghisallo. The Brianza hills in the opening 25 km are rolling and scenic. Road surfaces vary from excellent on main roads to rough-but-rideable on the steeper mountain sections. Expect Italian road furniture — narrow lanes, stone walls close to the road, occasional rough patches.",
+      "technical_rating": 2,
+      "features": [
+        "Muro di Sormano: 1.9 km at 15.8% average, maximum 27% — one of the steepest paved roads in European cycling",
+        "Colma di Sormano: 5.1 km at 6.6% average leading into the Muro",
+        "Madonna del Ghisallo: 8.5 km at 6.2% average, maximum 14% — home of the cycling patron saint",
+        "Rolling Brianza hills for the opening and closing 25 km",
+        "Technical descents on narrow Italian mountain roads with hairpin bends",
+        "Nearly 20 km descent from Ghisallo summit to Merone"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 5,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A race of two legendary climbs bookended by the rolling Brianza hills. The route starts and finishes in Cantu, diving immediately into the undulating roads of the Brianza — the gentle, green foothills south of Lake Como that lull you into thinking this will be manageable. It is not. Within 30 km, the road tilts upward toward the Colma di Sormano, and then the gradient goes vertical: the Muro di Sormano, 1.9 km at 15.8% average with ramps touching 27%. After the Muro's savage descent, the route winds along Lake Como toward the second act: the Madonna del Ghisallo, 8.5 km of steady climbing to the church of cycling's patron saint. A sweeping 20 km descent to Merone gives temporary respite before the final 20 km of short, sharp climbs back to Cantu destroy whatever is left in your legs. The autumn colors, the lake views, the chapel at the Ghisallo summit — this course is as beautiful as it is brutal.",
+      "signature_challenge": "The Muro di Sormano. 1.9 kilometers at 27% maximum gradient. The road that was removed from the professional Monument for being too cruel. The road that was reinstated because cycling realized it needed places where the strongest riders separate from the merely strong. On the Gran Fondo, the Muro is where your training, your gearing, your body weight, and your willingness to suffer converge into a single, vertical question: can you ride this wall?",
+      "suffering_zones": [
+        "Brianza Hills",
+        "Colma di Sormano",
+        "Muro di Sormano",
+        "Madonna del Ghisallo",
+        "Ghisallo Descent to Merone",
+        "Brianza Attrition — The Final 20 km"
+      ]
+    },
+    "logistics": {
+      "airport": "Milan Malpensa (MXP) — 50 km, ~40 minutes to Cantu. Milan Linate (LIN) — 55 km, ~50 minutes. Bergamo Orio al Serio (BGY) — 65 km, ~55 minutes (budget airline hub). Group airport transfers available via tour operators.",
+      "lodging_strategy": "Stay in Como (20 minutes from Cantu start) for the widest selection of hotels, restaurants, and atmosphere. Lake Como in October is shoulder season — hotel pricing is reasonable compared to summer. Alternatively, stay in Cantu itself for proximity to the start, though options are limited. Tour operator packages (Sportive Breaks, Cycle Classic Tours, Italy Bike Tours) bundle accommodation, transfers, and race entry. Book early — Monument weekend fills up.",
+      "transport": "",
+      "food": "Como and the surrounding Lake Como towns offer outstanding Italian cuisine — risotto alla Milanese, polenta with lake fish (missoltini), pizzoccheri. Pre-race: carb-load at any of Como's excellent trattorias. Post-race: pasta party in Piazza Marconi, Cantu. The Lake Como food scene alone justifies the trip.",
+      "official_site": "https://gfilombardia.it/en/"
+    },
+    "history": {
+      "founded": 2019,
+      "origin_story": "Il Lombardia — the professional Monument — has been racing since 1905, when journalist Tullo Morgagni and La Gazzetta dello Sport organized a new race called Milano-Milano. For over a century, the Lake Como climbs belonged exclusively to the professionals. That changed in 2019 when RCS Sport finally created a proper Gran Fondo on the Monument's roads, replacing the previous Gran Fondo Guanella that had occupied the same weekend. The inaugural Gran Fondo Il Lombardia Enel drew 2,500 international riders to tackle the Ghisallo and Sormano. In 2020, the event was named for Felice Gimondi — the Bergamo-born champion who won Il Lombardia in 1966 and 1973, won all three Grand Tours, and the 1973 World Championship before his death in August 2019. The Gimondi family's blessing transformed the event from a sportive into a tribute.",
+      "notable_moments": [
+        "2019: Inaugural edition as Gran Fondo Il Lombardia Enel — 2,500 riders. Davide Busuito wins in 3h 00m 21s",
+        "2019: Named in honor of Felice Gimondi following the champion's death in August 2019",
+        "2024: Over 2,000 riders. Giuseppe Orlando wins men's race in 2h 57m 08s. Laura Simenc wins women's race in 3h 16m 47s",
+        "The Muro di Sormano — removed from the professional Il Lombardia in 1962 for being too steep, reinstated in 2012 — becomes the Gran Fondo's defining moment"
+      ],
+      "reputation": "The newest of the Monument sportives, but carrying 120 years of Il Lombardia heritage. The race that proves you don't need decades of gran fondo tradition when you have the Muro di Sormano at 27% and the patron saint of cycling at the Ghisallo summit."
+    },
+    "biased_opinion": {
+      "verdict": "The Monument You Can Ride",
+      "summary": "There are five Monuments in professional cycling. Five races that define the sport's soul. Il Lombardia is the last of them — the autumn closer, the Classic of the Falling Leaves, the race that has crowned the season's strongest one-day rider since 1905. And now you can ride it. The Gran Fondo Il Lombardia puts you on the Muro di Sormano — 27% gradient, the road so brutal it was removed from the professional race for three decades. It sends you up the Madonna del Ghisallo, past the church of cycling's patron saint, with Lake Como spread out below like a postcard that became reality. It wraps you in the autumn colors that gave the race its name. RCS Sport — the people who run the Giro d'Italia — handle the organization. Felice Gimondi's name is on the event. And the day after you finish, you can stand on the same roads and watch Pogacar, van der Poel, and Evenepoel race the Monument itself. This is as close as amateur cycling gets to the sacred.",
+      "strengths": [
+        "Monument pedigree: the amateur version of one of cycling's five most prestigious one-day races, organized by RCS Sport",
+        "Muro di Sormano: 1.9 km at 27% maximum gradient — one of the steepest paved roads in European cycling, unforgettable suffering",
+        "Madonna del Ghisallo: the patron saint of cycling, the chapel at the summit, Lake Como views — cycling's most spiritual climb",
+        "Autumn Lake Como: golden light, falling leaves, mountain views — peak 'Classic of the Falling Leaves' atmosphere",
+        "UCI-sanctioned with World Championship qualifying — this is real racing, not just a ride"
+      ],
+      "weaknesses": [
+        "Young event (since 2019) — still building the depth and traditions of established Italian gran fondos",
+        "Cantu is functional, not glamorous — accommodation logistics require staying in Como and transferring",
+        "October weather risk: rain transforms the steep descents from challenging to genuinely dangerous",
+        "Moderate field size (~2,000) means less festival atmosphere than larger sportives"
+      ],
+      "bottom_line": "If you have ever watched Il Lombardia on television and wondered what the Muro di Sormano actually feels like at 27%, this is how you find out. Monument roads. Autumn leaves. Lake Como. The patron saint of cycling. Ride like a hero."
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "The last Monument of the season — now yours to ride. Muro di Sormano at 27%. Madonna del Ghisallo. Lake Como in the falling leaves.",
+      "should_you_race": "Yes if you want to experience a cycling Monument from the inside — the same climbs, the same roads, the same autumn atmosphere that has defined professional cycling's season finale since 1905. Yes if the Muro di Sormano's 27% gradient is the kind of challenge that excites rather than terrifies you. Yes if UCI age-group competition and World Championship qualifying matter to your cycling ambitions. Skip if you want a pure gravel or off-road challenge. Skip if the October rain risk in northern Italy concerns you. Skip if you prefer large, festival-atmosphere events over the focused intensity of a competitive Italian gran fondo.",
+      "alternatives": "If you want another Italian Monument sportive: try Gran Fondo Strade Bianche for Tuscan white roads and Siena's Piazza del Campo. If you want a massive Italian gran fondo with Dolomite climbing: try the Maratona dles Dolomites. If you want the ultimate Alpine road challenge: try La Marmotte with 5,000m+ of climbing and a summit finish on Alpe d'Huez. If you want the Tour de France experience: try L'Etape du Tour."
+    },
+    "citations": [
+      {
+        "url": "https://gfilombardia.it/en/",
+        "category": "official",
+        "label": "Gran Fondo Il Lombardia Felice Gimondi — Official Site"
+      },
+      {
+        "url": "https://gfilombardia.it/en/route/",
+        "category": "official",
+        "label": "Gran Fondo Il Lombardia — The Route"
+      },
+      {
+        "url": "https://gfilombardia.it/en/entry-fee-partecipation/",
+        "category": "official",
+        "label": "Gran Fondo Il Lombardia — Entry Fee and Participation"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/78758",
+        "category": "official",
+        "label": "Gran Fondo Il Lombardia 2026 — UCI Competition Details"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/hitting-the-wall-il-lombardia-gran-fondo-sportive-review",
+        "category": "review",
+        "label": "Hitting the Wall: Il Lombardia Gran Fondo Sportive Review — Cyclist Magazine"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/6991/gran-fondo-il-lombardia-felice-gimondi",
+        "category": "reference",
+        "label": "Gran Fondo Il Lombardia Felice Gimondi — Gran Fondo Guide"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Giro_di_Lombardia",
+        "category": "reference",
+        "label": "Giro di Lombardia (Il Lombardia) — Wikipedia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Felice_Gimondi",
+        "category": "reference",
+        "label": "Felice Gimondi — Wikipedia"
+      },
+      {
+        "url": "https://sportivebreaks.com/sportives/classics/gran-fondo-lombardia/",
+        "category": "reference",
+        "label": "Gran Fondo Il Lombardia — Sportive Breaks"
+      },
+      {
+        "url": "https://cycleclassictours.com/tours/uci-cycling-classic-guided/gran-fondo-lombardia/",
+        "category": "reference",
+        "label": "Gran Fondo Il Lombardia 2026 — Cycle Classic Tours"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Gran Fondo Il Lombardia Felice Gimondi gran fondo cycling Cantu",
+      "videos": [
+        {
+          "video_id": "UVw1_rzF-LU",
+          "title": "Giro di Lombardia, la Gran Fondo intitolata a Gimondi",
+          "channel": "Regione Lombardia",
+          "view_count": 434,
+          "upload_date": "20240704",
+          "duration_string": "3:15",
+          "description": "Presentata a Palazzo Lombardia la Gran Fondo intitolata a Felice Gimondi, campionissimo del ciclismo, che si correrà il 13 ottobre con partenza e arrivo a Cantù, in provincia di Como.\nIl giorno prima sarà disputato il Giro di Lombardia, ultima classica Monumento dell’anno.\nL’assessore alla cultura di Regione Lombardia Francesca Caruso: “Il Lombardia, con la sua storia e la sua tradizione, regala visibilità ai magnifici luoghi del nostro territorio”.\nAi microfoni di Lombardia Notizie anche il leggendario Damiano Cunego, 3 volte vincitore del Giro di Lombardia\n\nwww.lombardianotizie.online",
+          "tags": [
+            "regione",
+            "lombardia",
+            "regionelombardia",
+            "fontana presidente"
+          ],
+          "url": "https://www.youtube.com/watch?v=UVw1_rzF-LU",
+          "curated": false
+        },
+        {
+          "video_id": "gn1xGUzgrmo",
+          "title": "Gran Fondo Il Lombardia Felice Gimondi 2024 | Best Of",
+          "channel": "RCS Sport",
+          "view_count": 3497,
+          "upload_date": "20241017",
+          "duration_string": "1:08",
+          "description": "Oltre 2000 amatori provenienti da tutto il mondo hanno pedalato il 13 ottobre 2024 sulle orme dei grandi campioni che ieri hanno dato spettacolo, scalando salite mitiche come Ghisallo e Sormano. Si è chiuso così un grande weekend targato RCS Sports & Events.",
+          "tags": [
+            "gran fondo il lombardia",
+            "gran fondo il lombardia felice gimondi",
+            "cantù",
+            "gran fondo",
+            "granfondo"
+          ],
+          "url": "https://www.youtube.com/watch?v=gn1xGUzgrmo",
+          "curated": true,
+          "curation_reason": "Recent official race highlights showing the scale and international participation of the 2024 event.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/gn1xGUzgrmo/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "Rhh-WYPbrtc",
+          "title": "GRAN FONDO IL LOMBARDIA FELICE GIMONDI A FECCHIO",
+          "channel": "Fabio il ciclista",
+          "view_count": 2581,
+          "upload_date": "20241013",
+          "duration_string": "13:02",
+          "description": "Il percorso in breve\nPartenza da Cantù con i primi 25 km che sono un “mangia e bevi” costante per le strade della Brianza, sino a Maglio, dove incominciano i 7 km più terribili ed emozionanti della gara che porteranno gli atleti sino alla collina di Sormano. Gli ultimi due km di questa erta rappresentano l’apice della corsa e sono diventati in breve tempo un monumento del ciclismo mondiale: il MURO DI SORMANO. Qui, la strada sale vertiginosamente ad una pendenza media del 15,8% ed una massima del 27%. Le scritte sull’asfalto ed i cartelli a bordo strada si susseguiranno per far vivere ad ogni granfondista l’esperienza di un vero professionista. Per i meno allenati è confermata una deviazione di 2km che permette di raggiungere la vetta percorrendo una salita meno impegnativa. A seguire discesa in picchiata fino a Nesso, e poi di nuovo e collina sino a Regatola, dove incomincerà la seconda salita di giornata: il GHISALLO. Le pendenze sono importanti, ma non aggressive come Sormano. La salita è pedalabile ed il paesaggio godibile. Chi vorrà “fare la gara”, potrà spingere rapporti importanti. La pendenza media nei 9km è del 6.2%, e solo verso la fine tocca la punta massima del 14%. In cima, la Madonna del Ghisallo con le sue famose campane ed il museo più celebre della storia del ciclismo vi daranno il benvenuto. Arrivati sul Ghisallo la Gran Fondo è al km 70. Quasi 2/3 di gara sono stati percorsi, e le difficoltà maggiori sono ormai alle spalle.\n\nUltimi Km\nUna lunga (quasi 20 km) e larga discesa fino a Merone permette di recuperare un po’ le forze prima degli ultimi 20 km che ripropongono strappi e salitelle prima di arrivare nel centro di Cantù.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=Rhh-WYPbrtc",
+          "curated": true,
+          "curation_reason": "Detailed first-person race content with specific course breakdown including the notorious Muro di Sormano climb details.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/Rhh-WYPbrtc/maxresdefault.jpg",
+          "thumbnail_score": 59.66
+        },
+        {
+          "video_id": "3Y_Epn8XTEA",
+          "title": "Gran Fondo Il Lombardia 2023 | Best Of",
+          "channel": "RCS Sport",
+          "view_count": 3977,
+          "upload_date": "20231009",
+          "duration_string": "1:14",
+          "description": "Oltre 2.200 amatori alla conquista della Gran Fondo Il Lombardia: \nSalite iconiche come Sormano e Ghisallo hanno fatto da sfondo allo spettacolo dei cicloamatori accorsi da tutto il mondo. L’appuntamento, con partenza e arrivo a Cantù, ha chiuso la stagione degli eventi di ciclismo dedicati agli amatori organizzati da RCS Sports & Events.\n\nOver 2200 amateur cyclists on the iconic roads of the Gran Fondo Il Lombardia: iconic climbs such as Sormano and Ghisallo were the best scenario for the spectacle of cyclists from all over the world. The Gran Fondo Il Lombardia, both starting and finishing in Cantù, ends the series of cycling events dedicated to amateur cyclists, organized by RCS Sports & Events.",
+          "tags": [
+            "Gran Fondo Il Lombardia",
+            "Il Lombardia",
+            "Giro di Lombardia",
+            "gran fondo",
+            "granfondo",
+            "cantù",
+            "lombardia"
+          ],
+          "url": "https://www.youtube.com/watch?v=3Y_Epn8XTEA",
+          "curated": false
+        },
+        {
+          "video_id": "cCYPm-upfyY",
+          "title": "GRAN FONDO FELICE GIMONDI, partenza di 2.000 cicloamatori da Cantù all'alba.",
+          "channel": "CiaoComo",
+          "view_count": 233,
+          "upload_date": "20241014",
+          "duration_string": "6:23",
+          "description": "Presa diretta di Mario Camagni",
+          "tags": [
+            "radio",
+            "ciao como"
+          ],
+          "url": "https://www.youtube.com/watch?v=cCYPm-upfyY",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

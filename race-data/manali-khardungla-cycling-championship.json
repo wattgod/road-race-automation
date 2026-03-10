@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Manali-Khardung La Cycling Championship",
+    "slug": "manali-khardungla-cycling-championship",
+    "display_name": "Manali-Khardung La Cycling Championship",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 558.4,
+      "distance_mi": 347.0,
+      "elevation_m": 10668,
+      "elevation_ft": 35000.0,
+      "location": "Manali to Leh, Himachal Pradesh / Ladakh, India",
+      "location_badge": "Manali to Leh, India",
+      "country": "India",
+      "date": "2026: August TBD",
+      "date_specific": "2026: August TBD",
+      "field_size": "Approximately 100 riders (2022 edition)",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Multiple support stations along route",
+      "cutoff_time": "7 days racing",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Mix of hotel stays in Manali and Leh, with camping/dome tents and Swiss tents at high-altitude base camps during the 7-day race. Post-race accommodation in Leh hotels.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "The world's highest long-distance cycling race—a transcendent Himalayan ultra-endurance test combining extreme altitude, technical terrain, and notable scenery for elite mountain cyclists seeking ultimate adventure.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

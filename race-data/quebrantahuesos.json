@@ -1,0 +1,300 @@
+{
+  "race": {
+    "name": "Quebrantahuesos",
+    "slug": "quebrantahuesos",
+    "display_name": "Marcha Cicloturista Quebrantahuesos",
+    "tagline": "Spain's legendary bone breaker. 198 km through the Pyrenees. Four mountain passes. Two countries. Named after the bearded vulture that rules these skies.",
+    "vitals": {
+      "distance_km": 197.9,
+      "distance_mi": 123.0,
+      "elevation_m": 3500,
+      "elevation_ft": 11483.0,
+      "location": "Sabinanigo, Huesca, Spain",
+      "location_badge": "SABINANIGO, SPAIN",
+      "country": "Spain",
+      "date": "Third Saturday of June annually",
+      "date_specific": "2026: June 20",
+      "field_size": "~9,000 (QH Gran Fondo) + ~2,500 (Treparriscos) = ~11,000 total",
+      "start_format": null,
+      "registration": "Online via quebrantahuesos.com. Lottery system (EUR4 non-refundable entry fee for draw). Direct group places available Nov-Dec. Registration EUR90-108. Cyclists with 15+ finishes get automatic entry. UCI federation license required.",
+      "entry_fee": "EUR90-108 (after winning lottery or securing direct place; EUR4 lottery entry fee)",
+      "feed_zones": "6 aid stations strategically distributed along the 198 km route, stocked with energy bars, cakes, bananas, dried fruit, nuts, sandwiches, sports drinks, Coca-Cola, and water.",
+      "cutoff_time": "7:30 PM (12 hours 15 minutes from start). Strict enforcement at control points.",
+      "lat": 42.519,
+      "lng": -0.366,
+      "route_options": [
+        "Quebrantahuesos Gran Fondo: 198 km (123 mi), 3,500 m gain — the full event with 4 cols",
+        "Treparriscos Medio Fondo: 85 km (53 mi), 1,350 m gain — shorter alternative from Sabinanigo"
+      ]
+    },
+    "climate": {
+      "primary": "Pyrenean mountain — variable with altitude-driven temperature swings",
+      "description": "Mid-June in the Pyrenees brings comfortable valley temperatures (18-26C / 64-79F) but significant cooling at altitude. The Portalet summit (1,794m) and Somport (1,640m) can be 10-15C cooler than the valley floor. The 2025 edition was notably hot. Mountain weather can shift rapidly — clear skies at the start can become thunderstorms by afternoon above 1,500m. The French side (Marie Blanque, Ossau Valley) often has different weather than the Spanish approach.",
+      "challenges": [
+        "Altitude cooling: summits 10-15C colder than valleys, wind chill significant on exposed passes",
+        "Afternoon heat in valleys and on exposed climbs, particularly the final ascent to Hoz de Jaca",
+        "Mountain thunderstorms can develop from midday — lightning is a real risk at altitude",
+        "Wind on the Portalet's 28 km exposed approach can be decisive"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Pyrenean mountain passes",
+      "surface": "Well-maintained Spanish and French paved roads. Mix of national roads (N-roads) and departmental/comarcal roads. All tarmac throughout — no gravel or unpaved sections. Roads are fully closed to traffic on race day.",
+      "technical_rating": 1,
+      "features": [
+        "Col du Somport (1,640m) — 27 km progressive climb from Canfranc, ideal for warming up",
+        "Col de Marie Blanque (1,035m) — 9 km with gradients up to 13%, the short savage of the route",
+        "Col du Portalet (1,794m) — 28 km from the Ossau Valley, the longest climb with constant gradients",
+        "Alto de Hoz de Jaca (1,276m) — short but devastating final effort with ramps at 10%"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 5,
+      "overall_score": 84,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 86. adventure dimension dropped, road_surface added. Score recalculated: 84."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Sabinanigo hotels book out months ahead for event week. Jaca (20 km south) offers more options and is a lively base. Biescas, Tramacastilla de Tena, and Panticosa are also viable. Look for 'Bikefriendly' certified hotels with bike storage, early breakfast, and cyclist-adapted meals. Rural casas rurales (guesthouses) throughout the Alto Gallego comarca offer character and value.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "Legendary",
+      "summary": "Quebrantahuesos is Spain's cycling soul distilled into a single day. Born in 1991 when a handful of riders from Pena Ciclista Edelweiss decided to build their own Marmotte in the Pyrenees, it has grown into an 11,000-rider institution that shuts down roads across two countries and draws cycling royalty — Indurain, Valverde, Zubeldia — to ride alongside club cyclists and weekend warriors. The name says it all: the bearded vulture, the bone breaker, the bird that drops bones from great heights to crack them open. This event does the same to your legs.",
+      "strengths": [
+        "The route: four Pyrenean mountain passes including three HC-caliber climbs, crossing the Franco-Spanish border",
+        "The scale: 9,000 riders on the Gran Fondo, 11,000 total, from 47+ nationalities on fully closed roads",
+        "The prestige: Spain's most iconic sportive, with professional cyclists riding alongside amateurs",
+        "The scenery: dramatic Pyrenean limestone peaks, glacial valleys, bearded vulture territory, the Ossau Valley beneath Pic du Midi d'Ossau",
+        "The value: world-class organization at Spanish prices — significantly cheaper than equivalent Alpine events"
+      ],
+      "weaknesses": [
+        "Access: Sabinanigo is remote — 1.5-4 hours from the nearest airports with limited international connections",
+        "Lottery: demand outstrips supply 2:1 — you may not get a spot, and the EUR4 fee is non-refundable",
+        "Heat exposure: the 28 km Portalet climb can bake in afternoon sun, and the Pyrenees offer less shade than Alpine forests"
+      ],
+      "bottom_line": "If La Marmotte is the Alpine cathedral of European sportives, Quebrantahuesos is the Pyrenean fortress. Wilder, rawer, more dramatic. The route crosses an international border. The bearded vulture circles above you. Indurain might be in the group ahead. There is no better day on a bike in Spain."
+    },
+    "final_verdict": {
+      "score": "84/100",
+      "one_liner": "Spain's legendary bone breaker. 198 km. Four Pyrenean cols. Two countries. 11,000 riders. Named after the bird that shatters bones from the sky.",
+      "should_you_race": "Yes if you want the definitive Pyrenean cycling experience and can sustain 7-12 hours of mountain climbing. Yes if you want to ride the same cols as Indurain and Valverde alongside 9,000 other cyclists on fully closed roads. Yes if you've done La Marmotte and want its Pyrenean counterpart. Skip if lottery frustration will ruin your planning (backup options exist through tour operators). Skip if you need technical off-road terrain — this is pure road climbing.",
+      "alternatives": [
+        "La Marmotte Granfondo Alpes — the original French Alpine cyclosportive, 177 km with 5,180m climbing finishing atop Alpe d'Huez",
+        "Marmotte Granfondo Pyrenees — same organizer as La Marmotte, Pyrenean version with Tourmalet and Aubisque",
+        "L'Etape du Tour — ride a real Tour de France stage, different route each year",
+        "Granfondo Alberto Contador — another prestigious Spanish gran fondo in Olot, Catalonia"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://www.quebrantahuesos.com/en/quebrantahuesos-en/",
+        "category": "official",
+        "label": "Quebrantahuesos Gran Fondo — Official Site"
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Marcha_cicloturista_Quebrantahuesos",
+        "category": "reference",
+        "label": "Marcha cicloturista Quebrantahuesos — Wikipedia (Spanish)"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/sportives/sportive-reviews/looking-next-cycling-challenge-quebrantahuesos-absolute-monster-289699",
+        "category": "review",
+        "label": "Quebrantahuesos Review — Cycling Weekly"
+      },
+      {
+        "url": "https://www.cafeciclista.com/quebrantahuesos/",
+        "category": "review",
+        "label": "Quebrantahuesos — Cafe Ciclista"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4389/quebrantahuesos-gran-fondo",
+        "category": "reference",
+        "label": "Quebrantahuesos Gran Fondo — Gran Fondo Guide"
+      },
+      {
+        "url": "https://rfec.com/es/smartweb/seccion/noticia/rfec/home/46000-La-marcha-cicloturista-Quebrantahuesos-cumple-este-sabado-30-anos-de-historia",
+        "category": "reference",
+        "label": "La marcha cicloturista Quebrantahuesos cumple 30 anos — RFEC"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Quebrantahuesos gran fondo cycling Sabinanigo",
+      "videos": [
+        {
+          "video_id": "Y-AcOaE7K0Y",
+          "title": "🔥☀️ QUEBRANTAHUESOS 2025 INFERNAL | 200 km al límite bajo +35ºC 🦴🚴‍♂️💀",
+          "channel": "Javier Abrego - Cycling, Marching and Routes",
+          "view_count": 9736,
+          "upload_date": "20250622",
+          "duration_string": "21:47",
+          "description": "¡Madre mía que #Quebrantahuesos 2025 pasamos! Temperaturas extremas y 200 kms de auténtica locura. Unas 11.000 personas salimos desde Sabiñánigo y no sé cuántas abandonaron pero hubo muchos.\n\nLa Quebrantahuesos cicloturista no perdona… y este año fue una auténtica trituradora de ciclistas.\nMás de 200 km, temperaturas extremas y miles de ciclistas llevados al límite en la marcha cicloturista más emblemática de España. Una Quebrantahuesos 100% salvaje, de esas que no se olvidan jamás.\n\nMás de 11.000 ciclistas tomamos la salida desde Sabiñánigo, pero no todos llegaron a meta. El calor sofocante, con sensaciones térmicas por encima de los 35 °C, convirtió esta edición de la Quebrantahuesos cicloturista en una auténtica prueba de supervivencia sobre la bicicleta.\n\n⏱ Tiempos del vídeo\n00:00 - 01:50 Intro\n01:51 - 04:19 Desde la salida\n04:20 - 05:06 Autovía a Jaca\n05:07 - 09:51 Somport\n09:52 - 10:45 Bajada de Somport\n10:46 - 11:11 Llano hasta Escot\n11:12 - 13:19 Marie Blanque\n13:20 - 14:01 Bajada Marie Blanque\n14:02 - 18:07 Portalet\n18:08 - 20:08 Hoz de Jaca\n20:09 - 20:30 Llano a meta\n20:31 - 21:48 Meta\n\n📍 Mi actividad en Strava – Quebrantahuesos\nhttps://www.strava.com/activities/14870702056\n\n🚴‍♂️ Otras marchas cicloturistas\nhttps://www.youtube.com/playlist?list=PLB0S7HqXe0OkV8mlW1b1q-tGTOB2VrNQ6\n\nFue una jornada épica en la Quebrantahuesos cicloturista, marcada por unas condiciones extremas que hicieron abandonar a cientos de participantes. Durante todo el recorrido, el calor no dio tregua y cada puerto se convirtió en una batalla física y mental.\n\nCompleté los 196,61 km en 7 horas, 57 minutos y 38 segundos, mi mejor tiempo personal en todas las ediciones que he disputado. Un recorrido con 3.483 metros de desnivel positivo, afrontando puertos míticos como Somport, Marie Blanque, Portalet y Hoz de Jaca, todos ellos bajo un sol implacable.\n\n📊 Resumen de esfuerzo personal\n\nEnergía total: 4.543 kJ\n\nPotencia media: 157 W (máx. 637 W)\n\nFrecuencia cardíaca media: 149 ppm (máx. 178 ppm)\n\nLa velocidad media fue de 24,7 km/h, alcanzando 76,2 km/h en las bajadas. La cadencia media se situó en 74 rpm y el gasto energético superó las 5.231 calorías. Todo ello con cielo completamente despejado, viento suave del ENE y una sensación térmica extrema, muy por encima de los datos oficiales.\n\nSubir Somport, Marie Blanque, Portalet y Hoz de Jaca con estas temperaturas fue un desafío brutal. Hubo momentos de crisis, ciclistas parados, abandonos constantes… pero también una lucha interior constante por seguir avanzando. Cruzar la meta en Sabiñánigo fue una mezcla de orgullo, emoción y pura satisfacción.\n\n🙏 Gracias a @QHyTR por organizar una marcha que, año tras año, demuestra por qué la Quebrantahuesos cicloturista es una de las pruebas más duras y míticas de Europa.\n\nEste vídeo recoge cada instante real de la Quebrantahuesos: los nervios en la salida, los puertos legendarios, la gestión del calor, los avituallamientos, las crisis y el empuje final. Si alguna vez te has planteado hacer la Quebrantahuesos, o quieres ver cómo se vive desde dentro una edición extrema, este vídeo es para ti.\n\n📊 Datos finales – Quebrantahuesos Cicloturista\n\nDistancia: 196,61 km\n\nTiempo: 7:57:38\n\nDesnivel positivo: 3.483 m\n\nPotencia media: 157 W (máx. 637 W)\n\nFC media: 149 ppm (máx. 178 ppm)\n\nCadencia media: 74 rpm\n\nVelocidad media: 24,7 km/h\n\nCalorías: 5.231 kcal\n\nTemperatura real: +35 ºC\n\nAbandonos: muchos\n\n💥 Una aventura contra el calor, el crono y los propios límites.\nDale al play, suscríbete y acompáñame en una Quebrantahuesos cicloturista que quedará grabada para siempre.",
+          "tags": [
+            "Quebrantahuesos 2025",
+            "QH 2025",
+            "marcha cicloturista Quebrantahuesos",
+            "ciclismo amateur España",
+            "Marie-Blanque Quebrantahuesos",
+            "datos Quebrantahuesos",
+            "calor Quebrantahuesos 2025",
+            "experiencia Quebrantahuesos",
+            "entrenar Quebrantahuesos",
+            "vídeo Quebrantahuesos",
+            "mejores tiempos Quebrantahuesos",
+            "crónica Quebrantahuesos 2025",
+            "cómo es la Quebrantahuesos",
+            "QH ciclismo",
+            "Quebrantahuesos España",
+            "somport",
+            "portalet",
+            "marie blanque",
+            "hoz de jaca",
+            "sabiñánigo",
+            "club ciclista edelweys"
+          ],
+          "url": "https://www.youtube.com/watch?v=Y-AcOaE7K0Y",
+          "curated": true,
+          "curation_reason": "Recent first-person race experience with detailed description of extreme conditions and race-specific challenges.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/Y-AcOaE7K0Y/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "c78A2vE85zM",
+          "title": "Quebrantahuesos Gran Fondo 2017",
+          "channel": "BikeZonaTV",
+          "view_count": 9347,
+          "upload_date": "20170619",
+          "duration_string": "4:37",
+          "description": "El pasado 17 de junio tuvo lugar en Sabiñánigo (Huesca) la 27 edición de la Quebrantahuesos Gran Fondo, con 200 km de recorrido y cuatro puertos de montaña- Esta edición ha contado con una gran organización, como cada año, y también con la presencia de grandes figuras del ciclismo como Miguel Indurain, Abraham Olano, Melcior Mauri y José Antonio Hermida, entre otros. Acompaña en este resumen a sus participantes por los preciosos paisajes del Pirineo aragonés y francés.\n\nImágenes en bruto cedidas por el departamento de Comunicación de Quebrantahuesos.\nSi te ha gustado este vídeo no olvides darle a me gusta y suscribirte, gracias.\n\nTu portal de ciclismo: http://www.bikezona.com/\nMás vídeos: http://www.veoplanet.com/\nSíguenos en Facebook: https://www.facebook.com/bikezona?fre...\nSíguenos en Twitter: https://twitter.com/Veoplanet",
+          "tags": [
+            "bikezona",
+            "bike",
+            "zona",
+            "cycling",
+            "riding",
+            "freestyle",
+            "freeride",
+            "carretera",
+            "pista",
+            "trial",
+            "bicicleta",
+            "ciclismo",
+            "quebrantahuesos",
+            "2017",
+            "huesca",
+            "pirineo"
+          ],
+          "url": "https://www.youtube.com/watch?v=c78A2vE85zM",
+          "curated": false
+        },
+        {
+          "video_id": "86XrHZHiR24",
+          "title": "Salida Comienzo Quebrantahuesos 22 Junio 2024 Sabiñanigo Ciclista Carrera Cicloturista Aragón España",
+          "channel": "PuntoHuesca Huesca",
+          "view_count": 4652,
+          "upload_date": "20240622",
+          "duration_string": "20:00",
+          "description": "PuntoHuesca en la salida de la Quebrantahuesos 2024.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=86XrHZHiR24",
+          "curated": false
+        },
+        {
+          "video_id": "77CQR-_4BiE",
+          "title": "Programa Quebrantahuesos 2015",
+          "channel": "QH Channel",
+          "view_count": 55204,
+          "upload_date": "20150630",
+          "duration_string": "24:43",
+          "description": "Programa dedicado a la Marcha Cicloturista Quebrantahuesos celebrada en su XXV edición el 20 de junio de 2015 en Sabiñánigo (Huesca, España)",
+          "tags": [
+            "cicloturismo",
+            "cicloturista",
+            "quebrantahuesos",
+            "treparrisos",
+            "bike",
+            "Cycling (Interest)",
+            "bicicleta",
+            "sabiñánigo",
+            "marcha cicloturista quebrantahuesos",
+            "indurain",
+            "cycling",
+            "biking"
+          ],
+          "url": "https://www.youtube.com/watch?v=77CQR-_4BiE",
+          "curated": false
+        },
+        {
+          "video_id": "5aUhkrFYKIo",
+          "title": "Htv: Quebrantahuesos y Treparriscos 2019",
+          "channel": "Radio Huesca - Cadena SER ",
+          "view_count": 13805,
+          "upload_date": "20190625",
+          "duration_string": "16:15",
+          "description": "",
+          "tags": [
+            "QUEBRANTAHUESOS",
+            "TREPARRISCOS",
+            "radio sabi",
+            "sabiñánigo",
+            "RADIO HUESCA",
+            "HTV",
+            "HUESCA TV",
+            "HUESCA TELEVISIÓN"
+          ],
+          "url": "https://www.youtube.com/watch?v=5aUhkrFYKIo",
+          "curated": true,
+          "curation_reason": "Higher view count content from established local media covering the race comprehensively.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/5aUhkrFYKIo/hqdefault.jpg",
+          "thumbnail_score": 84.0
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

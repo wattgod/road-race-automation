@@ -1,0 +1,228 @@
+{
+  "race": {
+    "name": "Granfondo Sestriere Colle delle Finestre",
+    "slug": "granfondo-sestriere",
+    "display_name": "Granfondo Sestriere Colle delle Finestre",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 103.0,
+      "distance_mi": 64.0,
+      "elevation_m": 3170,
+      "elevation_ft": 10400.0,
+      "location": "Cesana Torinese, Piedmont, Italy",
+      "location_badge": "Cesana Torinese, Italy",
+      "country": "Italy",
+      "date": "2026: July TBD",
+      "date_specific": "2026: July TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.endu.net/it/events/granfondo-sestriere-colle-delle-finestre-/info",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "altitude": 5,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Finestre Gravel Death: Steep unpaved ramps above Meana di Susa shred legs at 2100m+; Froome's shadow looms.",
+        "Cesana Kicker: Post-Sauze di Cesana wall to Sestriere finish; crowds roar after 100km fatigue.",
+        "Susa Valley Build: False flat grind via Exilles-Chiomonte primes for Finestre; deceptive early burn."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.granfondosestriere.it"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Giro legend gravel assault in Olympic Piedmont: suffer Finestre, conquer Sestriere.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo Sestriere Colle delle Finestre gran fondo cycling Cesana Torinese",
+      "videos": [
+        {
+          "video_id": "Fuyo1d1sOyY",
+          "title": "Granfondo Sestriere - Colle delle Finestre | Highlights",
+          "channel": "Oradelciclismo",
+          "view_count": 2955,
+          "upload_date": "20190721",
+          "duration_string": "3:32",
+          "description": "Sestriere | 21 luglio 2019",
+          "tags": [
+            "ciclismo",
+            "bici",
+            "bike",
+            "cycling",
+            "Sestriere",
+            "Colle delle Finestre",
+            "GF Sestriere",
+            "Granfondo Sestriere",
+            "Piemonte",
+            "Granfondo",
+            "Gran Fondo"
+          ],
+          "url": "https://www.youtube.com/watch?v=Fuyo1d1sOyY",
+          "curated": true,
+          "curation_reason": "Most recent highlights video with highest view count from an established cycling channel.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/Fuyo1d1sOyY/maxresdefault.jpg",
+          "thumbnail_score": 100.0
+        },
+        {
+          "video_id": "Xbdrqq0mOi0",
+          "title": "Road with a view ( on Bike) : Sestriere - Cesana Torinese 🇮🇹",
+          "channel": "Marc Gielen",
+          "view_count": 115,
+          "upload_date": "20160725",
+          "duration_string": "13:53",
+          "description": "",
+          "tags": [
+            "Sestriere",
+            "cesana",
+            "cesana Torinese",
+            "Italy",
+            "Italie",
+            "fietsen",
+            "ride",
+            "riding",
+            "bike",
+            "biking",
+            "afdaling",
+            "downhill",
+            "Road with a view"
+          ],
+          "url": "https://www.youtube.com/watch?v=Xbdrqq0mOi0",
+          "curated": false
+        },
+        {
+          "video_id": "5nJmdHMwPV8",
+          "title": "Racing on Top of the Colle Delle Finestre in the Marmotte Gran Fondo Sestriere",
+          "channel": "Gran Fondo Guide",
+          "view_count": 152,
+          "upload_date": "20160725",
+          "duration_string": "14",
+          "description": "Racing on Top of the Colle Delle Finestre in the Marmotte Gran Fondo Sestriere",
+          "tags": [
+            "gran fondo",
+            "marmotte",
+            "Colle Delle Finestre"
+          ],
+          "url": "https://www.youtube.com/watch?v=5nJmdHMwPV8",
+          "curated": false
+        },
+        {
+          "video_id": "dRv71eBf31k",
+          "title": "Ultimo tornante Colle delle Finestre - GF Sestriere 2019",
+          "channel": "carlo giordano",
+          "view_count": 79,
+          "upload_date": "20190722",
+          "duration_string": "1:33",
+          "description": "",
+          "tags": [
+            "effebike",
+            "casale monferrato",
+            "colle delle finestre",
+            "susa",
+            "sestriere",
+            "granfondo sestriere"
+          ],
+          "url": "https://www.youtube.com/watch?v=dRv71eBf31k",
+          "curated": false
+        },
+        {
+          "video_id": "SjmOB_AmQgA",
+          "title": "Granfondo Sestriere 2018 | Highlights",
+          "channel": "Oradelciclismo",
+          "view_count": 1981,
+          "upload_date": "20180722",
+          "duration_string": "2:14",
+          "description": "Sestriere | 22 luglio 2018",
+          "tags": [
+            "ciclismo",
+            "bici",
+            "bike",
+            "cycling",
+            "Sestriere",
+            "Granfondo"
+          ],
+          "url": "https://www.youtube.com/watch?v=SjmOB_AmQgA",
+          "curated": true,
+          "curation_reason": "Second highest view count highlights video from same quality channel showing race consistency across years.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/SjmOB_AmQgA/maxresdefault.jpg",
+          "thumbnail_score": 77.58
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

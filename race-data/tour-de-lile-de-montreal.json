@@ -1,0 +1,270 @@
+{
+  "race": {
+    "name": "Tour de l'Île de Montréal",
+    "slug": "tour-de-lile-de-montreal",
+    "display_name": "Tour de l'Île de Montréal",
+    "tagline": "25,000 riders. Car-free Montreal. The island circumnavigation that once held the Guinness World Record as the largest gathering of cyclists on the planet.",
+    "vitals": {
+      "distance_km": 49.9,
+      "distance_mi": 31.0,
+      "elevation_m": 152,
+      "elevation_ft": 500.0,
+      "location": "Montreal, Quebec, Canada",
+      "location_badge": "MONTREAL, QUEBEC, CANADA",
+      "country": "Canada",
+      "date": "Late May / early June annually (last day of Go Bike Montreal Festival)",
+      "date_specific": "2026: May 31",
+      "field_size": "~25,000 riders (Tour de l'Île alone; ~40,000 across the full Go Bike Montreal Festival)",
+      "start_format": null,
+      "registration": "Online via velo.qc.ca. Adult regular rate ~$42-50 CAD. Youth (13-17) ~$10. Children 12 and under free (registration required). Vélo Québec members receive a discount. Prices before taxes.",
+      "entry_fee": "~$42-50 CAD (~$30-36 USD)",
+      "feed_zones": "3 rest stops along the route (Parc La Fontaine, Parc Champdoré, Parc Maisonneuve) with snacks, water, entertainment, first aid, washrooms, INFO booths, and bike repair services.",
+      "cutoff_time": "None. Ride at your own pace. Streets remain closed for the duration of the event.",
+      "lat": 45.5017,
+      "lng": -73.5673,
+      "route_options": [
+        "Classic: ~50 km (31 mi) — the flagship route through Montreal's neighborhoods on car-free streets",
+        "Discovery: 70-100 km — longer routes for experienced road cyclists",
+        "Express: ~55 km — a streamlined option",
+        "Shorter options: ~25 km — family-friendly and accessible routes"
+      ]
+    },
+    "climate": {
+      "primary": "Late spring in Montreal — warm, long daylight, mild humidity",
+      "description": "Late May and early June in Montreal average 13-24C (56-75F). Mornings are cool and pleasant, warming through the day. Humidity is moderate — comfortable compared to the sticky July-August peak. Daylight exceeds 15 hours. Rain is possible (roughly 40-50% chance on any given day), and the event runs rain or shine. Overall, one of the best times of year to ride in Montreal.",
+      "challenges": [
+        "Rain is possible — the event runs regardless of weather",
+        "Cool morning temperatures (10-14C) warming to 22-25C by midday",
+        "Moderate humidity that can feel sticky on warmer days",
+        "Wind exposure along the St. Lawrence River and open waterfront sections"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat paved city streets and bike paths",
+      "surface": "Paved urban roads, dedicated bike paths, park roads, and riverside boulevards. All tarmac. No unpaved sections.",
+      "technical_rating": 1,
+      "features": [
+        "St. Lawrence River waterfront — long stretches along the river with views of the South Shore and bridges",
+        "Neighborhoods of Montreal — the route passes through diverse boroughs from the Plateau to Verdun, Lachine to Pointe-aux-Trembles",
+        "Lachine Canal bike path — a scenic corridor through Montreal's industrial heritage",
+        "Parc Jean-Drapeau and Île Sainte-Hélène — island park sections with views of downtown Montreal",
+        "Boulevard Gouin — the northern shore of the island along the Rivière des Prairies"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 1,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 1,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 5,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Downtown Montreal hotels ($120-200 CAD/night) are convenient and walkable to the start area. The Plateau-Mont-Royal and Mile End neighborhoods offer character-filled Airbnb options at slightly lower prices with easy Metro access. Book early if visiting during the Go Bike Montreal Festival week. Budget travelers: HI Montreal downtown hostel is clean, cheap, and central. Airport hotels (Sheraton, Marriott In-Terminal) are available from $150 CAD/night if arriving late.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "The Tour de l'Île de Montréal is not about the cycling. It is about 25,000 people on bicycles claiming an entire island for a day. Montreal — a city that lives and breathes cycling culture — shuts down its streets and hands them to riders of every age, every ability, every bicycle type imaginable. The ride is flat, short, and easy. The experience is singular.\n\nYou will see Montreal the way it was meant to be seen: from a bicycle, in late spring, with the St. Lawrence glittering beside you and 25,000 strangers sharing the same improbable joy. The route circumnavigates the island at river level, threading through neighborhoods that range from gentrified to gritty, from leafy suburban streets to industrial canal banks. Children ride alongside retirees. Cargo bikes alongside carbon road machines. The atmosphere is festive and communal — more block party than bike ride.\n\nThis event once held the Guinness World Record as the largest gathering of cyclists on Earth, with 45,000 riders sustained for six consecutive years in the 1990s. It helped transform Montreal into North America's most bike-friendly city. At $30-36 USD entry, it is one of the best-value cycling events anywhere. Do this ride for the experience of Montreal, not the experience of cycling. Come for the ride, stay for the poutine.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "25,000 riders circle the island of Montreal on car-free streets. A former Guinness World Record holder, now in its 41st year.",
+      "should_you_race": "You do not race the Tour de l'Île — you ride it. Yes if you want to experience Montreal from a bicycle on car-free streets with 25,000 other cyclists. Yes if you want a family-friendly, affordable, superbly organized mass-participation event. Yes if you want to visit one of the world's great cycling cities during its most beautiful season. Skip if you need athletic challenge, competitive racing, elevation, or technical terrain.",
+      "alternatives": [
+        "TD Five Boro Bike Tour (32,000 riders in NYC — similar urban mass-participation ride)",
+        "Cape Town Cycle Tour (35,000 riders around the Cape Peninsula — the world's largest timed cycling event)",
+        "Lévis GranFondo (competitive cycling near Montreal with real climbing)"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://www.velo.qc.ca/en/event/go-bike-montreal-festival/tour-de-lile-de-montreal/classique/",
+        "category": "official",
+        "label": "Tour de l'Île de Montréal — Classic — Vélo Québec (Official)"
+      },
+      {
+        "url": "https://www.velo.qc.ca/en/event/go-bike-montreal-festival/tour-de-lile-de-montreal/decouverte/",
+        "category": "official",
+        "label": "Tour de l'Île de Montréal — Discovery — Vélo Québec (Official)"
+      },
+      {
+        "url": "https://www.velo.qc.ca/en/the-history-of-cycling/tour-de-lile-de-montreal-genesis-of-a-classic/",
+        "category": "official",
+        "label": "Tour de l'Île de Montréal: Genesis of a Classic — Vélo Québec"
+      },
+      {
+        "url": "https://www.velo.qc.ca/en/go-bike-mtl-festival/tour-ile-montreal-participantinfos/",
+        "category": "official",
+        "label": "Useful Info for Participants — Tour de l'Île — Vélo Québec"
+      },
+      {
+        "url": "https://fr.wikipedia.org/wiki/Tour_de_l'%C3%AEle_de_Montr%C3%A9al",
+        "category": "reference",
+        "label": "Tour de l'île de Montréal — Wikipédia"
+      },
+      {
+        "url": "https://ici.radio-canada.ca/nouvelle/2167258/velo-tour-ile-nuit-montreal-entrave-circulation-rues-barree",
+        "category": "media",
+        "label": "Environ 40 000 cyclistes attendus à Montréal pour les 40 ans du Tour de l'île — Radio-Canada"
+      },
+      {
+        "url": "https://www.cbc.ca/news/canada/montreal/tour-de-l-ile-tour-la-nuit-cycling-event-1.7217216",
+        "category": "media",
+        "label": "Beloved by cyclists but reviled by some drivers, Tour de l'Île strives for peaceful co-existence — CBC News"
+      },
+      {
+        "url": "https://montreal-daily.com/tour-de-ile-montreal/",
+        "category": "media",
+        "label": "Montreal Welcomes Thousands of Riders for 40th Tour de l'Île — Montreal Daily"
+      },
+      {
+        "url": "https://www.cbc.ca/news/canada/montreal/tour-de-lile-montreal-1.7547528",
+        "category": "media",
+        "label": "Tour de l'Île to roll through Montreal's east end this weekend — CBC News"
+      },
+      {
+        "url": "https://www.veloquebecvoyages.com/en/destination/festival-go-velo-montreal/",
+        "category": "official",
+        "label": "Go Bike Montreal Festival 2026 — Vélo Québec Voyages"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Tour de l'Île de Montréal gran fondo cycling Montreal",
+      "videos": [
+        {
+          "video_id": "KkG1PCrOk10",
+          "title": "Tour de l'île de Montréal 2017 50 km",
+          "channel": "Charles-André Martin",
+          "view_count": 517,
+          "upload_date": "20170608",
+          "duration_string": "17:06",
+          "description": "Big Car Theft par Audionautix est protégée par une licence Creative Commons Attribution (https://creativecommons.org/licenses/by/4.0/)\nArtiste : http://audionautix.com/",
+          "tags": [
+            "vélo",
+            "Montreal",
+            "tour",
+            "île",
+            "byciclette",
+            "bike",
+            "Montréal",
+            "island",
+            "gopro",
+            "timelapse"
+          ],
+          "url": "https://www.youtube.com/watch?v=KkG1PCrOk10",
+          "curated": false
+        },
+        {
+          "video_id": "gE5KxHBdh6Y",
+          "title": "Le Défi métropolitain 2020",
+          "channel": "Vélo Québec",
+          "view_count": 744,
+          "upload_date": "20200211",
+          "duration_string": "1:03",
+          "description": "Le Défi métropolitain donne le coup d’envoi au Festival Go vélo Montréal et à la saison cyclosportive. L’événement vous propose un parcours non chronométré de 50 à 150 km : belle occasion de vous retrouver entre rouleurs et, selon votre forme, votre humeur, d’y aller à votre rythme ou de repousser vos limites. Découvrez cette année une nouvelle portion de la grande région métropolitaine, en partance de Châteauguay. Que la saison débute!\n\nInscrivez-vous: http://www.velo.qc.ca/fr/govelo/defi-metropolitain",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=gE5KxHBdh6Y",
+          "curated": false
+        },
+        {
+          "video_id": "tyTz1zkbx9M",
+          "title": "Défi métropolitain 2018",
+          "channel": "Vélo Québec",
+          "view_count": 2899,
+          "upload_date": "20180412",
+          "duration_string": "46",
+          "description": "Coup d’envoi du Festival Go vélo Montréal et de la saison cyclosportive, le Défi visite cette année l’extrémité sud-ouest de la région métropolitaine, bordée par l’Ontario, la rivière des Outaouais et le fleuve Saint-Laurent. \n\nSoyez-y le dimanche 27 mai. \n\nInscription : velo.qc.ca/govelomtl",
+          "tags": [
+            "Defi metropolitain",
+            "defi metro",
+            "velo quebec",
+            "go velo montreal",
+            "govelomtl"
+          ],
+          "url": "https://www.youtube.com/watch?v=tyTz1zkbx9M",
+          "curated": false
+        },
+        {
+          "video_id": "Cz3bh9pVQMU",
+          "title": "60 PROOF CYCLISTS, MONTREAL",
+          "channel": "Hiking and drone",
+          "view_count": 204,
+          "upload_date": "20200907",
+          "duration_string": "3:33",
+          "description": "Cycling from suburb to Old Montreal city",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=Cz3bh9pVQMU",
+          "transcript": "[Music]\nyou\noh\nwhen did you get back from beijing\ni gotta know oh molly\nare you stuck in nostalgia\nlike\nin oh like me\nmiss your\nlike me\ntwo\ni gotta know\nbye",
+          "curated": false
+        },
+        {
+          "video_id": "YCiMCQvbuzI",
+          "title": "GRAN FONDO MONT TREMBLANT (défi cycliste Québec)",
+          "channel": "Random Sport",
+          "view_count": 305,
+          "upload_date": "20170530",
+          "duration_string": "4:06",
+          "description": "Première vidéo sur ma chaîne! Dites-moi ce que vous en pensez. Je prends tous vos commentaires! (positifs et négatifs) Des idées pour les vidéos futures?",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=YCiMCQvbuzI",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The provided transcript does not contain any substantive information about the Tour de l'Île de Montréal gravel race. The transcript appears to be primarily music and fragmented conversation unrelated to cycling or race conditions. No rider intelligence regarding course features, terrain conditions, gear recommendations, or race strategy could be extracted from this source."
+      }
+    }
+  }
+}

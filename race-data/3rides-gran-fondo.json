@@ -1,0 +1,130 @@
+{
+  "race": {
+    "name": "3RIDES Gran Fondo Südliche Weinstrasse",
+    "slug": "3rides-gran-fondo",
+    "display_name": "3RIDES Gran Fondo Südliche Weinstrasse",
+    "tagline": "UCI Gran Fondo qualifier through German vineyards and into France",
+    "vitals": {
+      "distance_km": 100.0,
+      "distance_mi": 62.0,
+      "elevation_m": 600.0,
+      "elevation_ft": 1969.0,
+      "location": "Porte des Vins Allemands (German Wine Gate), Schweigen-Rechtenbach, Rhineland-Palatinate, Germany",
+      "location_badge": "Porte des Vins Allemands (German Wine Gate), Germany",
+      "country": "Germany",
+      "date": "2026: April 25",
+      "date_specific": "2026: April 25",
+      "field_size": "Uncertain",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": [
+        "100 km Gran Fondo only"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "April in Rhineland-Palatinate features mild spring weather suitable for outdoor cycling, though past events faced thunderstorm risks.",
+      "challenges": [
+        "Precipitation: Moderate, with historical cancellations due to unstable weather"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling hills",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": [
+        "Rolling hills through Pfalz vineyards, forests, and a 15 km cross-border section into France",
+        "completely car-free and technically demanding"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling 100 km loop: vineyards, forests, gentle hills; 15 km into France; technically challenging, car-free.",
+      "signature_challenge": "15 km French border section through wine trails",
+      "suffering_zones": [
+        "Pfalz vineyard climbs",
+        "Forest edges",
+        "Cross-border hills"
+      ]
+    },
+    "logistics": {
+      "airport": "Frankfurt (FRA); Karlsruhe/Baden-Baden (FKB)",
+      "lodging_strategy": "Local wineries, hotels like Land-gut-Hotel Schweigener Hof, and guesthouses abundant.",
+      "transport": "Start/finish at landmark German Wine Gate near French border; previously in Aachen.",
+      "food": "",
+      "official_site": "https://3rides.de/en/"
+    },
+    "history": {
+      "founded": 2024,
+      "origin_story": "Gran Fondo debut 2024 in Aachen; 2026 edition at Schweigen-Rechtenbach as 3RIDES Südliche Weinstrasse, evolved from 2023 gravel event.",
+      "notable_moments": [
+        "Marianne Vos won 2024 women's race in Aachen.",
+        "Prior Gran Fondo canceled due to thunderstorms."
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "This UCI qualifier delivers a picturesque yet punchy ride through wine country, with the France border jaunt as a standout. Corrects user myths on distance/elevation; solid T2 road event for Euro spring training.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Technically demanding UCI road qualifier in scenic Pfalz wine lands.",
+      "should_you_race": "Relocated 100 km loop offers car-free challenge, cross-border adventure, and qualification path in a storied wine region; ideal for amateurs seeking prestige without gravel extremes.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://3rides.de/en/",
+        "category": "official",
+        "label": "3RIDES Official Site"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/fr/3rides-gran-fondo/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series Page"
+      }
+    ]
+  }
+}

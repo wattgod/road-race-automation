@@ -1,0 +1,242 @@
+{
+  "race": {
+    "name": "GF Gavia e Mortirolo",
+    "slug": "gf-gavia-e-mortirolo",
+    "display_name": "Granfondo Gavia e Mortirolo",
+    "tagline": "The Mortirolo at 18%. The Gavia at 2,618m. Pantani's mountains. The most brutal gradients in Italian cycling, compressed into 135 km.",
+    "vitals": {
+      "distance_km": 135.2,
+      "distance_mi": 84.0,
+      "elevation_m": 4000,
+      "elevation_ft": 13123.0,
+      "location": "Ponte di Legno, Brescia, Lombardy, Italy",
+      "location_badge": "PONTE DI LEGNO, ITALY",
+      "country": "Italy",
+      "date": "Late June / early July annually",
+      "date_specific": "2026: June 28",
+      "field_size": "~3,000-4,000 riders",
+      "start_format": null,
+      "registration": "Online via granfondogaviaemortirolo.it. Cost: EUR45-65",
+      "entry_fee": "EUR45-65",
+      "feed_zones": "Feed stations at valley checkpoints and col summits. Water refill points on major climbs.",
+      "cutoff_time": "Cutoff times enforced at key checkpoints along the route.",
+      "lat": 46.257,
+      "lng": 10.509,
+      "route_options": [
+        "Granfondo: ~135 km (84 mi), ~4,000 m gain — the full event with Mortirolo, Gavia, and Tonale",
+        "Mediofondo: ~80 km shorter route — Gavia and Tonale without the Mortirolo"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine Italian — extreme altitude range",
+      "description": "Late June in the Italian Alps delivers warm valley conditions (22-30C / 72-86F) but the Gavia summit at 2,618m can approach freezing even in summer. Ponte di Legno sits at 1,258m, so the start is already at moderate altitude. The temperature swing from valley to Gavia summit can exceed 25C. Afternoon thunderstorms are common at altitude and can arrive with little warning.",
+      "challenges": [
+        "Gavia summit at 2,618m: temperatures can drop to 2-5C with wind chill below zero",
+        "Mortirolo: sheltered valley climb can be oppressively hot (30C+) in still air",
+        "25C+ temperature swing between valley and Gavia summit in a single ride",
+        "Rapid Alpine weather changes — the Gavia has seen snow in late June"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Italian Alpine mountain passes",
+      "surface": "Italian provincial and state roads. All tarmac. The Mortirolo road surface varies — sections are rough and narrow. The Gavia is better maintained but narrow in the upper reaches.",
+      "technical_rating": 2,
+      "features": [
+        "Passo del Mortirolo (1,852m) — 12.4 km at 10.5% average, sections exceeding 18%. One of the steepest sustained climbs in professional cycling.",
+        "Passo Gavia (2,618m) — highest paved pass in Italian cycling. Narrow road, exposed upper reaches, breathtaking views.",
+        "Passo del Tonale (1,884m) — broad, steady climb that serves as the third col.",
+        "Technical descents from all three passes — the Mortirolo descent is narrow and demands respect."
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 76,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 76."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Compact and devastating. At 135 km, this is not a test of endurance — it's a test of climbing power and altitude tolerance. The route wastes no time: the Mortirolo hits early with its 18% ramps, the Gavia climbs to 2,618m through thinning air, and the Tonale provides one final sustained effort before the return to Ponte di Legno. There is almost no flat. The climbing density (4,000m in 135 km) is among the highest of any sportive on Earth.",
+      "signature_challenge": "The Mortirolo at 18% followed by the Gavia at 2,618m. These two climbs — one defined by gradient, the other by altitude — create a combined challenge unlike anything else in amateur cycling. The Mortirolo destroys your legs; the Gavia destroys your lungs.",
+      "suffering_zones": [
+        "Passo del Mortirolo",
+        "Passo Gavia",
+        "Passo del Tonale"
+      ]
+    },
+    "logistics": {
+      "airport": "Milan Bergamo (BGY) — 3 hours. Verona (VRN) — 2.5 hours. Milan Malpensa (MXP) — 3.5 hours. Innsbruck (INN) — 2.5 hours via Brenner Pass.",
+      "lodging_strategy": "Stay in Ponte di Legno (start/finish). Small town with hotels and apartments — book 3-6 months in advance. Nearby Edolo or Bormio offer alternatives with more capacity. Bormio is 30 minutes away and has more hotel options.",
+      "transport": "",
+      "food": "Lombardy Alpine cuisine — polenta, bresaola, pizzoccheri (buckwheat pasta), local cheeses. Carb loading is easy in Italian mountain towns. Feed stations provide classic Italian gran fondo fare: panini, fruit, cola, water.",
+      "official_site": "https://www.granfondogaviaemortirolo.it/"
+    },
+    "history": {
+      "founded": 2005,
+      "origin_story": "Born from the legendary Giro d'Italia stages that made the Mortirolo and Gavia household names in cycling. The Mortirolo was Marco Pantani's mountain — il Pirata attacked here with ferocity that redefined what was possible on a bicycle. The Gavia hosted the legendary 1988 stage where Andy Hampsten rode through a June snowstorm to take the maglia rosa, one of the most iconic images in cycling history. The gran fondo was created to let amateur riders experience these same legendary climbs.",
+      "notable_moments": [
+        "Gavia 1988: Andy Hampsten rides through a June snowstorm to win the Giro stage — the defining image of suffering in cycling",
+        "Mortirolo 1994: Pantani attacks on the steepest ramps, gaining minutes on the descent — 'il Pirata' is born",
+        "The Gavia at 2,618m remains the highest paved pass regularly used in Italian professional cycling",
+        "The Mortirolo's 18% ramps are the steepest sustained gradients in any grand tour"
+      ],
+      "reputation": "The crucible of Italian cycling. Where the Marmotte is France's benchmark and the Maratona is Italy's biggest, the GF Gavia e Mortirolo is Italian cycling at its most extreme — the steepest and highest combined in a single day."
+    },
+    "biased_opinion": {
+      "verdict": "Pantani's Mountains",
+      "summary": "The GF Gavia e Mortirolo is not the longest gran fondo, not the highest, and not the biggest. It is, kilometer for kilometer, the most brutal. The Mortirolo's 18% gradients reduce strong riders to survival mode — there is no 'riding tempo' on this climb, only suffering and stubbornness. The Gavia at 2,618m takes whatever the Mortirolo left and dissolves it in thin air. These are the mountains where Marco Pantani became il Pirata, where Andy Hampsten rode through a snowstorm in 1988. You don't ride this event for a medal or a time. You ride it to discover what's left of you after the Mortirolo takes everything you thought you had.",
+      "strengths": [
+        "Mortirolo: 12.4 km at 10.5% average, 18% maximum — one of the steepest sustained climbs rideable by amateurs",
+        "Gavia at 2,618m: the highest paved pass in Italian cycling, steeped in Giro legend",
+        "Exceptional value at EUR45-65 for an event of this caliber",
+        "Intimate field (3,000-4,000) means uncrowded climbs and personal Italian hospitality"
+      ],
+      "weaknesses": [
+        "Remote location: 2.5-3 hours from the nearest major airport, deep in the Lombardy Alps",
+        "The Mortirolo's gradients require specific gearing — standard compact (34x28) is not enough. Plan for 34x32 minimum.",
+        "Smaller event with less international visibility means limited tour operator support"
+      ],
+      "bottom_line": "If you want to know what 18% feels like for 12 kilometers and then climb to 2,618m on what's left of your legs, the GF Gavia e Mortirolo is the only event that delivers both in a single day."
+    },
+    "final_verdict": {
+      "score": "76/100",
+      "one_liner": "The Mortirolo at 18%. The Gavia at 2,618m. Pantani's mountains compressed into 135 km of pure Italian Alpine brutality.",
+      "should_you_race": "Yes if you want the steepest sustained gradients in any amateur cycling event. Yes if the Giro d'Italia legends of Mortirolo and Gavia mean something to you. Skip if 18% gradients terrify you or your gearing doesn't go below 34x30. Skip if you need a large international field and polished logistics.",
+      "alternatives": "If you want Dolomite drama with more distance: try Sportful Dolomiti Race. If you want French Alpine prestige and bigger fields: try La Marmotte. If you want Italian scenery with gentler gradients: try Maratona dles Dolomites."
+    },
+    "citations": [
+      {
+        "url": "https://www.granfondogaviaemortirolo.it/",
+        "category": "official",
+        "label": "Granfondo Gavia e Mortirolo — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mortirolo_Pass",
+        "category": "reference",
+        "label": "Mortirolo Pass — Wikipedia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Gavia_Pass",
+        "category": "reference",
+        "label": "Gavia Pass — Wikipedia"
+      },
+      {
+        "url": "https://www.climbbybike.com/climb/Passo-del-Mortirolo/52",
+        "category": "reference",
+        "label": "Passo del Mortirolo — ClimbByBike"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "GF Gavia e Mortirolo gran fondo cycling Ponte di Legno",
+      "videos": [
+        {
+          "video_id": "OZLZDUJJq-8",
+          "title": "SALITE DA INCUBO - Passo Gavia - ICARUS",
+          "channel": "Icarus Ultra",
+          "view_count": 68038,
+          "upload_date": "20200724",
+          "duration_string": "9:24",
+          "description": "Siamo a Ponte di Legno per scalare un’altra Salita da Incubo: Patrick Martini in compagnia di Alessandro Ballan affronta per noi il leggendario Passo Gavia",
+          "tags": [
+            "icarus",
+            "sky",
+            "sport",
+            "televisione",
+            "tv"
+          ],
+          "url": "https://www.youtube.com/watch?v=OZLZDUJJq-8",
+          "curated": true,
+          "curation_reason": "High-quality production focused on the legendary Passo Gavia climb with professional cyclists, offering course-specific content.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/OZLZDUJJq-8/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "NHHJOlWl9YQ",
+          "title": "granfondo gavia mortirolo 2023   Realizzato con Clipchamp",
+          "channel": "Emanuele Zotti",
+          "view_count": 6498,
+          "upload_date": "20230731",
+          "duration_string": "21:35",
+          "description": "La Granfondo Gavia Mortirolo rappresenta un'esperienza epica per gli amanti del ciclismo. Affrontare le leggendarie salite del Passo del Gavia e del Passo del Mortirolo richiede non solo una grande preparazione fisica, ma anche una determinazione mentale senza pari. Il Gavia, con i suoi 2.656 metri di altitudine, offre paesaggi mozzafiato e una sfida impegnativa, con le sue pendenze impegnative e il clima spesso imprevedibile. È una salita che mette alla prova la resistenza e il coraggio dei ciclisti, ma offre anche la gratificazione di conquistare uno dei passi alpini più iconici. Il Mortirolo, con le sue ripide pendenze e i numerosi tornanti, è considerato una delle salite più difficili d'Europa. Affrontare questa ascesa richiede una concentrazione totale e una forza interiore straordinaria. Ogni pedalata è una lotta contro la gravità e la fatica, ma raggiungere la cima è una vittoria che rimarrà impressa nella memoria per sempre. Partecipare alla Granfondo Gavia Mortirolo significa mettersi alla prova su strade che sono state teatro di epiche battaglie ciclistiche durante il Giro d'Italia. È un'opportunità unica per immergersi nella storia del ciclismo e vivere le stesse emozioni dei grandi campioni che hanno affrontato queste salite leggendarie. Ma al di là della competizione e della sfida personale, la Granfondo Gavia Mortirolo è anche un momento di condivisione e di passione per la bicicletta. Ogni partecipante, indipendentemente dalle proprie capacità, si unisce in una grande comunità di ciclisti che si sostengono a vicenda lungo il percorso e condividono la gioia di superare i propri limiti. In definitiva, la Granfondo Gavia Mortirolo è molto più di una semplice gara di ciclismo. È un'esperienza indimenticabile che mette alla prova corpo e mente, che permette di vivere paesaggi spettacolari e di immergersi nella storia del ciclismo. È un momento per sfidarsi, per superare i propri limiti e per creare ricordi duraturi.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=NHHJOlWl9YQ",
+          "curated": true,
+          "curation_reason": "Recent 2023 race recap with good length and view count, specifically covering this granfondo event.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/NHHJOlWl9YQ/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "bej1aARx-5I",
+          "title": "Granfondo Gavia e Mortirolo 2018",
+          "channel": "Oradelciclismo",
+          "view_count": 3657,
+          "upload_date": "20180625",
+          "duration_string": "1:52",
+          "description": "Aprica | 24 giugno 2018",
+          "tags": [
+            "ciclismo",
+            "bici",
+            "bike",
+            "cycling",
+            "Granfondo Gavia e Mortirolo",
+            "Aprica",
+            "Gavia",
+            "Mortirolo",
+            "Passo Gavia",
+            "Granfondo",
+            "Gran Fondo",
+            "Alpi",
+            "Dolomiti",
+            "GF Gavia",
+            "GF Gavia Mortirolo"
+          ],
+          "url": "https://www.youtube.com/watch?v=bej1aARx-5I",
+          "curated": false
+        },
+        {
+          "video_id": "L-swpmgZrYQ",
+          "title": "IN BICI SUL MORTIROLO",
+          "channel": "stefano pini",
+          "view_count": 529,
+          "upload_date": "20140523",
+          "duration_string": "15:00",
+          "description": "Beschreibung",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=L-swpmgZrYQ",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

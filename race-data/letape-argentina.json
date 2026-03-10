@@ -1,0 +1,329 @@
+{
+  "race": {
+    "name": "L'Etape Argentina by Tour de France",
+    "slug": "letape-argentina",
+    "display_name": "L'Etape Argentina by Tour de France",
+    "tagline": "ASO's Tour de France franchise returns to Argentina after an 11-year absence -- 134 km through the Sierras de Cordoba with the Argentine National Road Championship running alongside.",
+    "vitals": {
+      "distance_km": 133.6,
+      "distance_mi": 83.0,
+      "elevation_m": 2000,
+      "elevation_ft": 6562.0,
+      "location": "Cordoba, Cordoba Province, Argentina (Estadio Mario Alberto Kempes start/finish)",
+      "location_badge": "CORDOBA, ARGENTINA",
+      "country": "Argentina",
+      "date": "Late March annually",
+      "date_specific": "2026: March 22",
+      "field_size": "3,000+ riders expected",
+      "start_format": null,
+      "registration": "Online via argentina.letapeseries.com. Each cyclist receives timing chip, race number, access wristband, insurance, hydration, food, medical, mechanical, and sweep services.",
+      "entry_fee": "Estimated ~$80-150 USD per entry (typical L'Etape franchise pricing for South American market)",
+      "feed_zones": "Multiple feed zones with water, energy drinks, and food. Medical assistance and mechanical support on course. Sweep vehicle service.",
+      "cutoff_time": "Broom wagon enforced. Riders behind time cutoffs are pulled from course.",
+      "lat": -31.369,
+      "lng": -64.2462,
+      "route_options": [
+        "The Race (Long Course): 134 km, 2,067 m elevation gain",
+        "The Ride (Short Course): 64 km, moderate elevation gain"
+      ]
+    },
+    "climate": {
+      "primary": "Late Argentine summer / early autumn (March) at moderate elevation in the Sierras de Cordoba",
+      "description": "March marks the transition from summer to autumn in Cordoba. The city sits at approximately 400m elevation with a subtropical climate. Daytime temperatures average 20-27C (68-81F), dropping to 13-16C (55-61F) at night. March receives moderate rainfall (~100mm across the month) with occasional afternoon thunderstorms typical of the late summer pattern. Humidity is moderate. The Sierras de Cordoba provide slightly cooler conditions at altitude, with the Camino del Cuadrado section (~1,200m) offering refreshing mountain air. Conditions are generally favorable for road cycling -- warm but not oppressively hot, with manageable humidity and a low probability of sustained rain on any given day.",
+      "challenges": [
+        "Afternoon thunderstorms possible -- typical late-summer weather pattern for Cordoba region",
+        "Warm temperatures (25-27C) at lower elevations can cause dehydration if fueling is neglected",
+        "Sun exposure over 5-7 hours of riding requires thorough sunscreen application",
+        "Temperature differential between valley floor (27C) and mountain sections (18-20C) requires awareness"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain and valley roads through the Sierras de Cordoba and Punilla Valley",
+      "surface": "100% sealed roads through Cordoba province. The route uses a combination of the Cordoba-Carlos Paz highway, the new Autovia Punilla, the scenic Camino del Cuadrado mountain pass, and Route E53. Road surface quality ranges from excellent on the newer Autovia sections to good on the mountain pass roads. The Camino del Cuadrado was recently repaved and features sweeping curves with mountain views. Fully closed to traffic on race day.",
+      "technical_rating": 1,
+      "features": [
+        "Fully closed roads -- Tour de France race conditions",
+        "Start and finish at iconic Estadio Mario Alberto Kempes",
+        "Camino del Cuadrado -- signature mountain pass climbing from Punilla Valley",
+        "Punilla Valley roads through sierras, valleys, and rivers",
+        "Two distance options: 134 km (The Race) and 64 km (The Ride)",
+        "Tour de France classification jerseys and branding",
+        "Medical, mechanical, and sweep support on course",
+        "Argentine National Road Championship running concurrently (separate elite event)"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 4,
+      "road_surface": 3,
+      "cultural_impact": 2,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A road course through the Sierras de Cordoba that climbs from the city's valley floor into the Punilla Valley mountain region. The 134 km long course starts and finishes at Estadio Mario Alberto Kempes (~400m elevation), heads north through the Sierras Chicas to Rio Ceballos, climbs the Camino del Cuadrado to approximately 1,280m, then descends through the Punilla Valley past Valle Hermoso before returning via the Autovia Punilla and Cordoba-Carlos Paz highway. The route character alternates between fast highway sections and winding mountain roads, with the Camino del Cuadrado serving as the decisive climbing challenge. The scenery transitions from suburban Cordoba through forested foothills to open mountain vistas across the Punilla Valley.",
+      "signature_challenge": "The Camino del Cuadrado -- the mountain pass connecting the Sierras Chicas to the Punilla Valley. Rising approximately 800m with sustained steep gradients on recently repaved mountain road, this climb determines the race. The combination of the concentrated ascent followed by the grinding return leg across the valley and back to Cordoba creates a course that punishes riders who go too deep on the big climb and have nothing left for the final hour.",
+      "suffering_zones": [
+        "Kempes Stadium Departure",
+        "Camino del Cuadrado Ascent",
+        "Punilla Valley Descent and Rollers",
+        "Return to Cordoba"
+      ]
+    },
+    "logistics": {
+      "airport": "Ingeniero Aeronautico Ambrosio L.V. Taravella International Airport (COR) -- Cordoba's own international airport, 11 km from city center and Kempes Stadium. Direct flights from Buenos Aires (1.5 hrs), Lima, Santiago, Panama City, and seasonal international connections.",
+      "lodging_strategy": "Cordoba is Argentina's second-largest city with abundant accommodation at all price points. The Nueva Cordoba and Centro neighborhoods offer the most options within easy reach of Kempes Stadium. Budget hotels and hostels from $20-40 USD/night; comfortable mid-range hotels $50-100 USD/night. Airbnb options are plentiful and affordable. Book 1-2 months in advance for race weekend. The Punilla Valley towns (La Falda, Villa Carlos Paz, Cosquin) offer scenic alternatives 30-60 minutes from the start.",
+      "transport": "",
+      "food": "Cordoba is a major Argentine city with excellent dining. Asado (Argentine barbecue), empanadas cordobesas (Cordoba's signature deep-fried empanadas), locro, and world-class Malbec wine. Carb-loading is effortless in Argentina -- pasta, bread, and medialunas (Argentine croissants) are abundant and cheap. Post-race asado celebration is practically mandatory. Feed zones on course stocked with water, energy drinks, and food.",
+      "official_site": "https://argentina.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "L'Etape Argentina was originally part of ASO's early expansion of the L'Etape franchise to South America, with editions held in Argentina around 2014-2015. The event went dormant, and the franchise's South American presence shifted to Brazil, where L'Etape Brasil became the continent's flagship amateur cycling event from 2015 onward. After an 11-year absence, ASO announced the return of L'Etape Argentina for 2026, this time in the cycling-friendly province of Cordoba rather than Buenos Aires. The choice of Cordoba reflects the province's investment in sports tourism and cycling infrastructure, as well as its Sierras providing genuine mountain terrain. The Government of Cordoba Province has been actively involved in the organization, positioning the event as a centerpiece of regional sports tourism. The concurrent return of the Argentine National Road Championship to Cordoba after 25 years -- organized by UCRA (Union Ciclista de la Republica Argentina) alongside FACPyR and local entities -- transforms the March 2026 weekend into the most significant cycling event in Argentine history in a generation.",
+      "notable_moments": [
+        "~2014-2015: Original L'Etape Argentina editions held (details limited from dormant period)",
+        "2015-2025: L'Etape franchise in South America concentrated in Brazil (L'Etape Brasil runs continuously)",
+        "2025: ASO announces return of L'Etape Argentina for 2026, selecting Cordoba as host city",
+        "2026: Government of Cordoba Province opens registrations; 3,000+ riders expected",
+        "2026: Argentine National Road Championship returns to Cordoba after 25-year absence, running alongside L'Etape",
+        "March 20-21, 2026: Event village and kit collection at Estadio Mario Alberto Kempes",
+        "March 22, 2026: Race day -- 134 km and 64 km routes through the Sierras de Cordoba and Punilla Valley"
+      ],
+      "reputation": "As a relaunch event, L'Etape Argentina does not yet have an established modern reputation. The Tour de France brand provides immediate credibility, and the Government of Cordoba's institutional backing adds legitimacy. The co-location with the returning Argentine National Road Championship creates a historically significant cycling weekend. Within the L'Etape franchise ecosystem (30+ events in 21 countries), Argentina represents a new frontier in a cycling-mad but underserved market. The 2026 edition will define the event's reputation going forward."
+    },
+    "biased_opinion": {
+      "verdict": "The Tour de France Returns to the Pampas (Via the Sierras)",
+      "summary": "L'Etape Argentina brings the Tour de France franchise back to South America's second-largest country after an 11-year hiatus, and the choice of Cordoba over Buenos Aires signals ambition. The 134 km route through the Sierras de Cordoba and the scenic Punilla Valley delivers 2,067m of climbing anchored by the Camino del Cuadrado -- a proper mountain pass that earns its place in the route profile. Starting and finishing at Estadio Mario Alberto Kempes adds genuine gravitas. The co-location with the Argentine National Road Championship returning after a 25-year absence transforms this from a standard franchise event into a historically significant cycling weekend. Argentina's affordability makes this one of the best-value L'Etape events globally. The limitation is the obvious one: this is a relaunch, not an established event. ASO franchise standards set the expectation high, but the local organizing team has zero modern track record. The competitive field will be thin by international standards. And while the Sierras de Cordoba are scenic, this is not the Andes -- the climbing, altitude, and scale do not match what Argentina's western mountains could theoretically offer.",
+      "strengths": [
+        "Tour de France franchise branding with ASO organizational standards",
+        "Iconic start/finish at Estadio Mario Alberto Kempes (1978 World Cup venue)",
+        "Camino del Cuadrado provides a legitimate mountain pass climbing challenge",
+        "Argentine National Road Championship co-location adds historic significance",
+        "Exceptional value -- Argentina's exchange rate makes this one of the cheapest L'Etape events globally",
+        "Cordoba has its own international airport, avoiding Buenos Aires transit",
+        "3,000+ expected riders for a relaunch demonstrates strong domestic demand",
+        "Punilla Valley scenery through sierras, valleys, rivers, and traditional towns"
+      ],
+      "weaknesses": [
+        "Relaunch after 11-year absence -- zero modern track record to evaluate",
+        "134 km with 2,067m of climbing is respectable but not elite-tier mountain course",
+        "Thin international competitive field -- overwhelmingly domestic participation expected",
+        "First edition logistics risk -- route coordination, road closures, and support are unproven",
+        "Low altitude (~1,280m peak) means no meaningful altitude challenge dimension",
+        "Limited global visibility compared to established L'Etape franchise events in France, Brazil, or Australia",
+        "Afternoon thunderstorm risk in late March Cordoba"
+      ],
+      "bottom_line": "L'Etape Argentina 2026 is a bet on potential. The ingredients are there: the Tour de France brand, a scenic mountain route, an iconic venue, and the added weight of the Argentine National Championship returning to Cordoba after 25 years. Argentina's affordability makes this the best-value L'Etape franchise event you can find. But this is a first modern edition with an unproven organizing team on a route that has never been raced in this configuration. If ASO's franchise quality control delivers and the local team executes, this could become a standout South American cycling event within 2-3 editions. For 2026, it is worth the trip if you are in South America, a L'Etape completionist, or want a destination cycling experience at a fraction of European pricing. It is not yet worth a transatlantic trip on its own merits."
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "ASO's Tour de France franchise relaunches in Argentina after 11 years: 134 km through the Sierras de Cordoba with 2,067m of climbing, starting from the iconic Kempes Stadium alongside the returning Argentine National Road Championship.",
+      "should_you_race": "Yes if you are based in South America and want a professionally organized Tour de France-branded sportive at exceptional value. Yes if the historic co-location with the Argentine National Championship appeals. Yes if you want to be part of a relaunch edition that could become significant. Skip if you want a proven event with multi-year track record -- this is edition one in its modern form. Skip if you need deep international competition or extreme mountain climbing. Skip if you are traveling from Europe or North America solely for this event -- the Brazilian franchise is more established.",
+      "alternatives": "For the definitive L'Etape experience: L'Etape du Tour de France (France, July). For an established L'Etape in South America: L'Etape Brazil (Campos do Jordao, September). For road cycling in Argentina with professional-level competition: Vuelta a San Juan spectator experience. For affordable South American cycling: GFNY Colombia."
+    },
+    "citations": [
+      {
+        "url": "https://argentina.letapeseries.com/",
+        "category": "official",
+        "label": "L'Etape Argentina by Tour de France -- Official Site"
+      },
+      {
+        "url": "https://www.letapeseries.com/memories/events/l-etape-argentina-by-tour-de-france-cordoba-on-march-22-2026",
+        "category": "official",
+        "label": "L'Etape Argentina by Tour de France: Cordoba on March 22, 2026 -- L'Etape Series"
+      },
+      {
+        "url": "https://argentina.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Etape Argentina -- Cordoba Stage Details"
+      },
+      {
+        "url": "https://derechadiario.com.ar/us/argentina/cycling-finalize-details-for-letape-argentina-by-tour-france-cordoba",
+        "category": "media",
+        "label": "Cycling: Final Details for L'Etape Argentina by Tour de France in Cordoba -- Derecha Diario"
+      },
+      {
+        "url": "https://derechadiario.com.ar/us/argentina/cordoba-will-be-the-epicenter-of-world-cycling-with-ltape-argentina-by-tour-de-france-26",
+        "category": "media",
+        "label": "Cordoba Will Be the Epicenter of World Cycling with L'Etape Argentina -- Derecha Diario"
+      },
+      {
+        "url": "https://deportes.cba.gov.ar/cordoba-abre-las-inscripciones-para-letape-argentina-by-tour-de-france-2026/",
+        "category": "official",
+        "label": "Cordoba Opens Registrations for L'Etape Argentina by Tour de France 2026 -- Agencia Cordoba Deportes"
+      },
+      {
+        "url": "https://derechadiario.com.ar/us/argentina/cordoba-will-host-national-cycling-with-a-new-date-for-the-road-championship",
+        "category": "media",
+        "label": "Cordoba Will Host National Cycling with a New Date for the Argentine Road Championship -- Derecha Diario"
+      },
+      {
+        "url": "https://weatherspark.com/y/28147/Average-Weather-in-C%C3%B3rdoba-Argentina-Year-Round",
+        "category": "reference",
+        "label": "Average Weather in Cordoba, Argentina Year Round -- WeatherSpark"
+      },
+      {
+        "url": "https://www.alltrails.com/trail/argentina/cordoba--2/viejo-camino-del-cuadrado",
+        "category": "reference",
+        "label": "Viejo Camino del Cuadrado Trail Guide -- AllTrails"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Series/LEtapeduTourbyTourdeFrance",
+        "category": "reference",
+        "label": "2026 L'Etape by Tour de France Series -- Gran Fondo Guide"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "L'Etape Argentina by Tour de France gran fondo cycling Cordoba",
+      "videos": [
+        {
+          "video_id": "yvNKzhinyus",
+          "title": "CORDOBA SERA SEDE DEL L´ÉTAPE ARGENTINA BY TOUR DE FRANCE",
+          "channel": "tveo super",
+          "view_count": 261,
+          "upload_date": "20250829",
+          "duration_string": "4:21",
+          "description": "El 22 de marzo de 2026 Córdoba será sede de L´Étape Argentina by Tour de France, el prestigioso evento internacional de ciclismo de ruta",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=yvNKzhinyus",
+          "curated": false
+        },
+        {
+          "video_id": "1TuEor9KMkA",
+          "title": "UNA ETAPA DEL TOUR DE FRANCE EN CÓRDOBA",
+          "channel": "Next Televisión Carlos Paz",
+          "view_count": 56,
+          "upload_date": "20250826",
+          "duration_string": "4:26",
+          "description": "MANUEL CALVO: es un día histórico para la provincia, el Gobernador quiere que Córdoba sea sede de grandes eventos y hoy tener una parte del Tour de France es muy bueno para la provincia.",
+          "tags": [
+            "noticias en carlos paz",
+            "villa carlos paz",
+            "carlos paz",
+            "carlos paz argentina",
+            "noticias carlos paz",
+            "next television",
+            "carlos paz television",
+            "next tv",
+            "next tv carlos paz",
+            "next television carlos paz",
+            "villa carlos paz turismo",
+            "carlos paz cordoba",
+            "villa carlos paz cordoba",
+            "carlos paz turismo",
+            "cordoba villa carlos paz",
+            "turismo carlos paz",
+            "cordoba carlos paz",
+            "carlos paz entretenimiento"
+          ],
+          "url": "https://www.youtube.com/watch?v=1TuEor9KMkA",
+          "curated": false
+        },
+        {
+          "video_id": "3E3M_pplUA0",
+          "title": "La Etapa Argentina   by Le Tour de France 2015 | English Teaser",
+          "channel": "Mas Eventos",
+          "view_count": 67,
+          "upload_date": "20150805",
+          "duration_string": "53",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=3E3M_pplUA0",
+          "transcript": "new cenario and new challenge the most\nimportant cycle competition worldwide\nget to the north of\nArgentina Sala and H with light artina\nby L\nfr the most important figures of the\ncontinent 150 km of race un event for\namors and professionals free competition\nmodalities family stage race again the\nGlock cycle sportive stage what are you\nwaiting for to be part of this fut\nchallenge get registered from July 20 in\nwww.a.com",
+          "curated": false
+        },
+        {
+          "video_id": "xYYilFCJQIY",
+          "title": "3ª ETAPA ARGENTINA BY LE TOUR DE FRANCE, MAR DEL PLATA, 3ª PARTE - CICLISMO XXI",
+          "channel": "Ciclismo XXI",
+          "view_count": 2999,
+          "upload_date": "20131030",
+          "duration_string": "10:54",
+          "description": "Todas las Categorías. PGM 404 WEB Bloque 4. \n\nMás videos, más noticias, más Ciclismo en http://www.ciclismoxxi.com.ar.\n\nCiclismo XXI TV\nPor El Garage TV: Sábado 10.30, repite Lunes 7.00.\nPor América Sports (En VIVO por la Web): Sábado 12.00, repite Martes 2.00 y Jueves 16.00.\nCanal YOU TUBE Ciclismo XXI VOD",
+          "tags": [
+            "ETAPA ARGENTINA BY LE TOUR DE FRANCE",
+            "MAR DEL PLATA",
+            "nelson vilugron",
+            "Román Mastrángelo",
+            "Cristian Clavero",
+            "Martín Ercila",
+            "Elías Pereyra",
+            "Agustín Fraysse",
+            "Fernando Barroso",
+            "juan ignacio curuchet",
+            "carolina perez"
+          ],
+          "url": "https://www.youtube.com/watch?v=xYYilFCJQIY",
+          "curated": false
+        },
+        {
+          "video_id": "KKGp2354Rb8",
+          "title": "L' Etape Argentina by Le Tour de France",
+          "channel": "infiltradasenaccion",
+          "view_count": 61,
+          "upload_date": "20130711",
+          "duration_string": "3:31",
+          "description": "Mar del Plata 27, 28 y 29 de septiembre.\nSan Martín de los Andes 1, 2 y 3 de noviembre.\n\nVideo de presentación. 10 de julio de 2013.",
+          "tags": [
+            "Tour de France",
+            "ciclismo",
+            "Argentina",
+            "L'Etape Argentina",
+            "Silvia Calzone",
+            "Verónica Martínez",
+            "Sofía Grecco",
+            "Infiltradas en Acción"
+          ],
+          "url": "https://www.youtube.com/watch?v=KKGp2354Rb8",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [
+          {
+            "text": "Get registered from July 20 in www.a.com",
+            "source_video_id": "3E3M_pplUA0",
+            "source_channel": "Mas Eventos",
+            "source_view_count": 67,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "L'Etape Argentina by Tour de France is described as the most important cycle competition worldwide coming to northern Argentina. The event features 150 km of racing with multiple competition modalities including family stage, race, and cycle sportive categories. It's positioned as an event for both amateurs and professionals, offering different participation options for various skill levels. Registration information indicates the event opens for sign-ups starting July 20th through their official website."
+      }
+    }
+  }
+}

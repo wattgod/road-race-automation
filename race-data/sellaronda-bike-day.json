@@ -1,0 +1,299 @@
+{
+  "race": {
+    "name": "Sellaronda Bike Day",
+    "slug": "sellaronda-bike-day",
+    "display_name": "Sellaronda Bike Day",
+    "tagline": "53 kilometers, 1,650 meters of climbing, 4 legendary Dolomite passes, zero cars. The Sella Ronda circuit closed to traffic and given entirely to cyclists — 20,000+ riders in a rolling festival through UNESCO World Heritage mountains.",
+    "vitals": {
+      "distance_km": 53.0,
+      "distance_mi": 33.0,
+      "elevation_m": 1650.0,
+      "elevation_ft": 5413.0,
+      "location": "Sella Group, Dolomites, Italy",
+      "location_badge": "DOLOMITES, ITALY",
+      "country": "Italy",
+      "date": "Two dates annually: early June and mid-September",
+      "date_specific": "2026: June 6 and September 12",
+      "field_size": "20,000+ riders (no cap — open participation)",
+      "start_format": null,
+      "registration": "No registration required. Free entry. No bib, no timing, no formalities. Simply show up at any point on the circuit and ride counterclockwise. The event is a car-free day, not a race.",
+      "entry_fee": "FREE — no registration, no fee",
+      "feed_zones": "No official aid stations — riders are self-supported. Towns along the route (Selva, Corvara, Arabba, Canazei) have restaurants, bars, and shops open for the event.",
+      "cutoff_time": "Roads reopen to traffic at 4:00 PM (3:30 PM on some sections)",
+      "lat": 46.5089,
+      "lng": 11.7575,
+      "route_options": [
+        "Full Sellaronda circuit: 55 km / 1,780m elevation (counterclockwise)",
+        "Partial circuit: ride any single pass or combination — no requirement to complete the full loop"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine Dolomite summer — warm valleys, cool pass summits, afternoon storm risk",
+      "description": "June in the Dolomites brings average valley temperatures of 18-25C (64-77F) with pass summits 10-15C cooler. The September date is slightly cooler with shorter days. The Dolomites create their own microclimate: clear morning skies frequently give way to afternoon thunderstorms, particularly above 2,000m. The 8:30 AM start allows riders to complete the circuit before afternoon weather deteriorates. June offers longer daylight hours and the possibility of lingering snow at the highest elevations. September provides more stable weather with autumn colors beginning on lower slopes.",
+      "challenges": [
+        "Afternoon thunderstorms in the Dolomites — common above 2,000m, especially in June",
+        "Temperature differential of 10-15C between valley floors (1,200m) and pass summits (2,200m)",
+        "Exposed switchbacks on pass descents in cool or wet conditions",
+        "Wind exposure on high passes — Pordoi (2,239m) and Sella (2,240m) can be breezy",
+        "No official aid stations — riders must carry nutrition and manage hydration independently"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Dolomite mountain pass roads",
+      "surface": "Entirely paved on well-maintained Italian state and provincial roads. The four passes — Sella (2,240m), Pordoi (2,239m), Gardena (2,136m), and Campolongo (1,875m) — are classic Dolomite cycling roads featured regularly in the Giro d'Italia. Road surfaces are excellent — Italian mountain roads through the Dolomites are among the best-maintained in Europe, thanks to heavy ski-season tourism traffic. The absence of cars transforms these roads from shared cycling-with-traffic experiences into pure cycling joy.",
+      "technical_rating": 2,
+      "features": [
+        "Passo Sella: 5.5 km at 7.9% average from Canazei/Plan de Gralba, summit at 2,240m — views of Sassolungo",
+        "Passo Pordoi: 9.4 km at 6.8% from Arabba, summit at 2,239m — the Queen Stage climb of the Giro",
+        "Passo Gardena: 5.3 km at 6.0% from Corvara/Colfosco, summit at 2,136m — gentlest of the four",
+        "Passo Campolongo: 5.8 km at 6.0% from Arabba, summit at 1,875m — the shortest and lowest pass",
+        "Car-free descents through dramatic Dolomite landscapes with hairpin switchbacks",
+        "Valley floor transitions through four distinct South Tyrolean valleys"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 1,
+      "value": 5,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 71,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 71."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A counterclockwise circuit around the Sella Group — the massive limestone massif at the junction of four South Tyrolean valleys. The route links four Dolomite passes in a continuous loop of climbing and descending through some of the most dramatic mountain scenery on Earth. On Sellaronda Bike Day, the absence of motor traffic transforms this circuit from a challenging road ride into a transcendent cycling experience. The terrain is constantly undulating — you are either climbing a pass or descending one, with minimal flat valley transitions.",
+      "signature_challenge": "Not a single climb but the totality: four passes in 55 km with 1,780m of climbing, experienced in silence on car-free roads through the most dramatic mountain landscape in Europe. The physical challenge is modest; the experiential impact is extraordinary.",
+      "suffering_zones": [
+        "Passo Sella from Selva",
+        "Passo Pordoi from Canazei/Arabba",
+        "Passo Campolongo",
+        "Passo Gardena"
+      ]
+    },
+    "logistics": {
+      "airport": "Innsbruck (INN) 130 km north (~2 hr drive). Venice (VCE) 180 km south (~2.5 hr drive). Bolzano (BZO) 50 km west (~1 hr). Verona (VRN) 200 km south (~2.5 hr). The Dolomites are well-connected by car but require mountain driving on the final approach.",
+      "lodging_strategy": "Four valleys surround the Sella Group, each with extensive accommodation. Val Gardena (Selva, Ortisei) is the most popular base with direct access to Passo Sella and Gardena. Alta Badia (Corvara, La Villa) offers easy access to Campolongo and Gardena. Val di Fassa (Canazei) is closest to Passo Sella and Pordoi. Arabba provides access to Pordoi and Campolongo. Book 2-3 months ahead for the June edition. September is easier. Expect EUR 80-200/night depending on hotel level and valley.",
+      "transport": "",
+      "food": "South Tyrolean cuisine: speck (smoked ham), canederli (bread dumplings), strudel, polenta, and local wines. Every village along the circuit has restaurants open for the event. Pass summits have rifugios (mountain huts) serving food and drinks. The culinary tradition in the Dolomites blends Italian and Austrian influences — one of Europe's most distinctive mountain food cultures.",
+      "official_site": "https://www.sellarondabikeday.com/"
+    },
+    "history": {
+      "founded": 2006,
+      "origin_story": "Sellaronda Bike Day was created as a joint initiative by the tourism boards of the four valleys surrounding the Sella Group — Val di Fassa, Val Gardena, Alta Badia, and Livinallongo (Arabba). The concept was inspired by the growing demand for car-free cycling in the Dolomites and the success of similar initiatives on the Stelvio Pass. The first edition closed the four Sella passes to motor traffic for a single day in summer, creating an instant sensation. The event required no central organization beyond road closures and traffic management — cyclists simply showed up and rode. The format was so successful that a second annual date in September was added. By 2026, the event celebrates its 20th edition with 20,000+ annual participants.",
+      "notable_moments": [
+        "2006: Inaugural Sellaronda Bike Day — roads closed to traffic for the first time, immediate success",
+        "Late 2000s: Second annual date added in September due to overwhelming demand",
+        "2010s: Event grows to 20,000+ annual participants, becoming the largest car-free cycling day in the Dolomites",
+        "Giro d'Italia stages regularly use the same passes — Pordoi frequently features as Cima Coppi (highest point)",
+        "2026: 20th edition celebration — the concept has proven so successful it has not needed to change since inception"
+      ],
+      "reputation": "The gold standard for car-free cycling events in the Alps. Universally praised for its simplicity, accessibility, and the quality of the Dolomite scenery. Cycling media consistently feature it as a must-do Dolomite experience. The absence of commercial structure — no fees, no sponsors, no timing — is regarded as a strength, keeping the focus on pure cycling joy."
+    },
+    "biased_opinion": {
+      "verdict": "Car-Free Dolomite Perfection",
+      "summary": "Sellaronda Bike Day is the simplest concept in cycling events: close the roads around the Sella Group to cars for one day and let cyclists ride. No registration, no timing, no fees, no bibs. Just 55 km of four legendary Dolomite passes — Sella (2,240m), Pordoi (2,239m), Gardena (2,136m), and Campolongo (1,875m) — in complete silence. The result is one of the most magical cycling experiences on Earth.\n\nThe numbers are modest — 55 km and 1,780m of climbing is a half-day ride for any fit cyclist. But the numbers miss the point entirely. This is about the silence. On any other day, these roads carry cars, buses, and motorcycles through some of the most dramatic mountain scenery in Europe. On Sellaronda Bike Day, 20,000+ cyclists of every age and ability share these roads without a single engine noise. The only sounds are tires on tarmac, wind through the Dolomite spires, and the spontaneous cheering at pass summits.\n\nThe event runs twice annually — June and September — offering two different Dolomite experiences. June delivers wildflower meadows, long daylight, and occasionally lingering snow at the highest elevations. September brings autumn colors, stable weather, and a gentler light. Both are extraordinary. The 20th edition in 2026 is a celebration of a concept so pure it has not needed to change since its inception: close the roads, open the mountains, and let bicycles be bicycles.",
+      "strengths": [
+        "Free entry, no registration — the most accessible cycling event in the Dolomites",
+        "Four legendary Giro d'Italia passes entirely car-free for a full day",
+        "UNESCO World Heritage Dolomite scenery — Sassolungo, Marmolada, Puez-Odle — in complete silence",
+        "20,000+ riders of every age and ability create a genuine cycling festival atmosphere",
+        "Flexible format — ride the full circuit, do a single pass, or anywhere in between",
+        "Two annual editions (June and September) provide schedule flexibility"
+      ],
+      "weaknesses": [
+        "No competitive element — zero timing, results, or racing for those who want it",
+        "55 km is very short for experienced cyclists seeking a full-day challenge",
+        "No official aid stations — self-supported nutrition and hydration required",
+        "Crowded on popular sections — 20,000+ riders on narrow mountain roads create congestion at pass summits",
+        "Roads reopen at 4:00 PM — slow riders or late starters may run out of time",
+        "Dolomite accommodation is expensive even in shoulder season"
+      ],
+      "bottom_line": "Sellaronda Bike Day is not a race, not a sportive, and not a gran fondo. It is something better: a day of pure cycling freedom in the most beautiful mountains in Europe. If you care about cycling as an experience rather than a competition, if you have ever dreamed of riding Dolomite passes without dodging tourist traffic, this is your event. It costs nothing, requires no registration, and delivers memories that expensive stage races cannot match. The only regret is that it only happens twice a year."
+    },
+    "final_verdict": {
+      "score": "71/100",
+      "one_liner": "Four car-free Dolomite passes, 20,000 cyclists, zero entry fee — the purest cycling experience in the mountains, twice a year.",
+      "should_you_race": "Ride this if you love cycling as pure experience — car-free Dolomite passes in UNESCO World Heritage scenery with zero bureaucracy. Skip it if you need competitive structure, timing, results, or a challenging distance (55 km is short). If you want a competitive Dolomite event, enter the Maratona dles Dolomites lottery instead.",
+      "alternatives": "For competitive Dolomite racing: Maratona dles Dolomites (138 km, 4,190m, lottery entry). For a longer Dolomite challenge: Dolomites Bike Day (longer Dolomite circuits). For a similar car-free Alpine concept: Stelvio Bike Day (Stelvio Pass car-free). For Sella Ronda with timing: Sellaronda Hero MTB (mountain bike race on the same circuit)."
+    },
+    "citations": [
+      {
+        "url": "https://www.sellarondabikeday.com/",
+        "category": "official",
+        "label": "Sellaronda Bike Day Official Website"
+      },
+      {
+        "url": "https://www.sellarondabikeday.com/course_en.html",
+        "category": "official",
+        "label": "Sellaronda Bike Day Course Details"
+      },
+      {
+        "url": "https://www.visittrentino.info/en/guide/what-to-do/events/sellaronda-bike-day_e_49388281",
+        "category": "official",
+        "label": "Visit Trentino: Sellaronda Bike Day"
+      },
+      {
+        "url": "https://www.val-gardena.com/en/summer/top-events/sella-ronda-bike-day/",
+        "category": "official",
+        "label": "Val Gardena Tourism: Sellaronda Bike Day"
+      },
+      {
+        "url": "https://www.altabadia.org/en/alta-badia-events/detail/event/sellaronda-bike-day",
+        "category": "official",
+        "label": "Alta Badia Tourism: Sellaronda Bike Day"
+      },
+      {
+        "url": "https://www.bikehotels.it/en/south-tyrol-us/events/6-sellaronda-bike-day-2026.html",
+        "category": "reference",
+        "label": "BikeHotels: Sellaronda Bike Day 2026"
+      },
+      {
+        "url": "https://www.valgardena.it/en/summer-holidays-dolomites/events-highlights/sellaronda-bike-day/",
+        "category": "official",
+        "label": "Val Gardena Official: Sellaronda Bike Day"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Sellaronda Bike Day gran fondo cycling Sella Group",
+      "videos": [
+        {
+          "video_id": "wDPva2HNs2s",
+          "title": "BigRingVR virtual cycling - Passo Sella from Selva di Val Gardena, Italy",
+          "channel": "BigRing Virtual Riding",
+          "view_count": 1500,
+          "upload_date": "20170219",
+          "duration_string": "1:15",
+          "description": "Online indoor virtual cycling application for cyclists and triathletes.\nhttp://bigringvr.com\nhttp://bigringvr.com/Ride.aspx?rideID=2122",
+          "tags": [
+            "BigRingVR",
+            "virtual cycling",
+            "online indoor cycling",
+            "cycling training",
+            "real live video",
+            "rlv",
+            "virtual ride",
+            "virtual bike ride",
+            "virtual cycle ride",
+            "bike trainer",
+            "bike",
+            "training",
+            "spinning",
+            "Bicycle"
+          ],
+          "url": "https://www.youtube.com/watch?v=wDPva2HNs2s",
+          "transcript": "[Music]\nHeat. Heat.\nHeat.\nHeat\nup here.",
+          "curated": false
+        },
+        {
+          "video_id": "VOrjSWl6KGU",
+          "title": "Sella Ronda bike day",
+          "channel": "Alan Bencio",
+          "view_count": 1303,
+          "upload_date": "20170628",
+          "duration_string": "6:41",
+          "description": "",
+          "tags": [
+            "sellaronda",
+            "dolomiti",
+            "pordoi",
+            "gardena",
+            "sella",
+            "campolongo",
+            "arabba",
+            "ronda",
+            "bike",
+            "day",
+            "ebike",
+            "ciclismo",
+            "tnt"
+          ],
+          "url": "https://www.youtube.com/watch?v=VOrjSWl6KGU",
+          "curated": false
+        },
+        {
+          "video_id": "te1Ec2WbFJs",
+          "title": "SELLARONDA BIKE DAY 2019 - 22/06/2019",
+          "channel": "Dolomites Val Gardena - Gröden - Official Fanpage",
+          "view_count": 27789,
+          "upload_date": "20190805",
+          "duration_string": "6:22",
+          "description": "SKY ICARUS\n\nSabato, 22/06/2019 dalle ore 8:30 alle 15:30 tutti i passi dolomitici attorno al Sella (Sella, Gardena, Pordoi e Campolongo) erano riservati ai ciclisti.\n\nwww.sellarondabikeday.com",
+          "tags": [
+            "Sellaronda Bike Day",
+            "Sellaronda",
+            "Bike Day",
+            "Bike",
+            "Dolomites"
+          ],
+          "url": "https://www.youtube.com/watch?v=te1Ec2WbFJs",
+          "curated": true,
+          "curation_reason": "Official event documentation with highest view count showing the actual race day experience.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/te1Ec2WbFJs/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        },
+        {
+          "video_id": "FB-RwDhIJZw",
+          "title": "Sellaronda Bike Day in the Dolomites - Alta Badia - Cycling - Rennrad - Bici da corsa",
+          "channel": "Oskar Irsara",
+          "view_count": 5485,
+          "upload_date": "20090809",
+          "duration_string": "4:01",
+          "description": "Sellarondabikeday: Cycling around the Sella Group in the Dolomites. Una settimana dopo la maratona dles Dolomites. I 4 passi: campolongo, pordoi, sella, gardena.\nMore informations at http://www.gardenazza.com/sport.html",
+          "tags": [
+            "Sellarondabikeday",
+            "Passo Campolongo",
+            "Pordoi",
+            "Sella",
+            "granfondo",
+            "Gardena",
+            "Cycling",
+            "Rennrad",
+            "Bici da corsa",
+            "Downhill",
+            "Uphill",
+            "maratona dles Dolomites",
+            "italy",
+            "bicycle",
+            "mtb",
+            "tips",
+            "biking"
+          ],
+          "url": "https://www.youtube.com/watch?v=FB-RwDhIJZw",
+          "curated": true,
+          "curation_reason": "Rider's perspective showing the complete route around Sella Group including all four passes.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/FB-RwDhIJZw/maxresdefault.jpg",
+          "thumbnail_score": 58.29
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

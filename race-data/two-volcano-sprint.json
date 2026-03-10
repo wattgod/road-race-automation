@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Two Volcano Sprint",
+    "slug": "two-volcano-sprint",
+    "display_name": "Two Volcano Sprint",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 1200.6,
+      "distance_mi": 746.0,
+      "elevation_m": 24000,
+      "elevation_ft": 78740.0,
+      "location": "Ercolano (Vesuvius) to Catania (Etna), Italy",
+      "location_badge": "Ercolano (Vesuvius) to Catania (Etna), Italy",
+      "country": "Italy",
+      "date": "2026: April 26",
+      "date_specific": "2026: April 26",
+      "field_size": "Small (experienced ultra riders)",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "None (self-supported)",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 2,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Riders self-manage; no provided support.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Epic self-supported odyssey linking Italy's iconic volcanoes for hardened ultra cyclists.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Velothon Berlin",
+    "slug": "velothon-berlin",
+    "display_name": "Velothon Berlin",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 159.3,
+      "distance_mi": 99.0,
+      "elevation_m": 610,
+      "elevation_ft": 2000.0,
+      "location": "Berlin, Germany",
+      "location_badge": "Berlin, Germany",
+      "country": "Germany",
+      "date": "2024: July 28",
+      "date_specific": "2024: July 28",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Early summer conditions ideal for record-breaking speeds with comfortable temperatures and minimal weather interference.",
+      "challenges": [
+        "Precipitation: Low (15-20%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 5,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Lightning-fast urban circuit showcasing Berlin's landmarks on completely closed roads, prioritizing pure speed and spectator energy over climbing challenges.",
+      "signature_challenge": "Sustaining 45+ kph average speeds for 99 miles on flat roads past Reichstag, East Side Gallery, and Victory Column with 13,000 competitors.",
+      "suffering_zones": [
+        "Final Sprint - Straße des 17. Juni: Monumental 2km finishing straight past Tiergarten demands explosive power after hours of high-speed pacing.",
+        "Brandenburg Gate Circuits: Repeated passages through Berlin's heart build fatigue while dodging crowds and maintaining 45+ kph pace.",
+        "Extended Loops (Longer Distances): Outskirts detours to Brandenburg countryside add endurance test before returning to urban sprint frenzy."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Abundant hotels near Tiergarten and Brandenburg Gate. Book early for race weekend in tourist-heavy Berlin.",
+      "transport": "Central Berlin start/finish at Tiergarten/Brandenburg Gate with full road closures. Multiple distances (60km, 100km, 120km, 180km) accommodate all levels. Team registration available.",
+      "food": "",
+      "official_site": "https://velocity.berlin/en/"
+    },
+    "history": {
+      "founded": 2011,
+      "origin_story": "Evolved from ProRace Berlin (2011) to UCI Europe Tour 1.1 event, won by sprint stars like Marcel Kittel and André Greipel. Rebranded as VeloCity Berlin successor event continues mass-participation tradition.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Berlin's fastest, flashiest road race - pure speed through history's epicenter.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://northsouth.live/event/velothon-berlin",
+        "category": "reference",
+        "label": "Velothon Berlin | Raceatlas - NORTHSOUTH Live"
+      },
+      {
+        "url": "https://www.berlin.de/en/events/62031-2842498-velocity-berlin.en.html",
+        "category": "reference",
+        "label": "VeloCity Berlin - Berlin.de"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Velothon_Berlin",
+        "category": "reference",
+        "label": "Velothon Berlin - Wikipedia"
+      },
+      {
+        "url": "https://velocity.berlin/en/register",
+        "category": "official",
+        "label": "Registration - VeloCity Berlin"
+      }
+    ]
+  }
+}

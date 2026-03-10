@@ -1,0 +1,235 @@
+{
+  "race": {
+    "name": "66 Degrés Sud",
+    "slug": "66-degres-sud",
+    "display_name": "66 Degrés Sud – La Cyclo",
+    "tagline": "A UCI Gran Fondo World Series event through the Pyrenees-Orientales wine country and mountain terrain",
+    "vitals": {
+      "distance_km": 188.0,
+      "distance_mi": 116.8,
+      "elevation_m": 2300,
+      "elevation_ft": 7546.0,
+      "location": "Canet-en-Roussillon, France",
+      "location_badge": "Canet-en-Roussillon, France",
+      "country": "France",
+      "date": "April",
+      "date_specific": "2026: April 18",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Mediterranean",
+      "description": "Mediterranean climate with spring conditions in late April. The region experiences mild temperatures with potential for variable weather in the foothills.",
+      "challenges": [
+        "Precipitation: 35"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain passes",
+      "surface": "Mixed terrain combining coastal plains with Pyrenean foothills. The course transitions from sea-level flatness through rolling vineyards to sustained mountain climbs.",
+      "technical_rating": 1,
+      "features": [
+        "Mixed terrain combining coastal plains with Pyrenean foothills",
+        "The course transitions from sea-level flatness through rolling vineyards to sustained mountain climbs"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 2,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Mediterranean-to-mountain progression. The Gran Fondo begins at sea level in Canet-en-Roussillon with 23 km of flat coastal terrain, transitions through rolling vineyard country, builds sustained climbing in the Pyrenean foothills, then returns to flat coastal plains for the final 25 km. The route showcases the region's terroir: wine patrimony, natural spaces, and mountain vistas.",
+      "signature_challenge": "The Col de Taillet (8.6 km at 4.5%) represents the race's defining climb – long enough to separate fitness levels, steep enough to demand respect, positioned early enough (km 53) to influence race dynamics. Followed immediately by Col de Fourtou and additional climbing, it marks the transition from rolling terrain to sustained mountain effort.",
+      "suffering_zones": [
+        "Col de Taillet (8.6 km at 4.5%) at km 53 – primary sustained climb with consistent gradient",
+        "Pas d'Échelle (8.4 km total, final 2.5 km at 4.2%) in second half – cumulative fatigue amplifies difficulty",
+        "Col de Lauro (4.3 km at 4%) at km 40 – early introduction to climbing before major ascents",
+        "Col Bélesta (7.5 km at 3.5%) – moderate sustained climb in second half",
+        "Multiple 3-4 km climbs at 4-5% gradient scattered throughout – relentless undulation"
+      ]
+    },
+    "logistics": {
+      "airport": "Perpignan-Rivesaltes Airport (PGF) – 30 km from Canet-en-Roussillon; Barcelona-El Prat Airport (BCN) – 160 km south",
+      "lodging_strategy": "Canet-en-Roussillon offers coastal hotels and vacation rentals. Perpignan (25 km inland) provides additional options. Regional tourism infrastructure well-developed for cycling events.",
+      "transport": "Event based in Canet-en-Roussillon with separate time trial start at Cornella-la-Rivière. Multiple distance options depart and return to Canet-en-Roussillon on Saturday; time trial on Thursday. Bib pickup at Saint-Estève (based on 2025 information; 2026 details pending confirmation).",
+      "food": "",
+      "official_site": "https://66-degres-sud.fr"
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "66 Degrés Sud is a UCI Gran Fondo World Series event held annually in the Pyrenees-Orientales region near Perpignan. The event has evolved significantly with route changes and expanded distance options.",
+      "notable_moments": [
+        "2021: Event first organized in Perpignan region",
+        "2024: Course redesigned with increased elevation (2,686 m reported for that year's iteration)",
+        "2026: Route relocated to Canet-en-Roussillon with time trial moved to Cornella-la-Rivière, improving coastal integration"
+      ],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "66 Degrés Sud delivers a compelling blend of Mediterranean charm and Pyrenean challenge. The 2026 route revision to Canet-en-Roussillon enhances the event's coastal identity while maintaining serious climbing. The Gran Fondo's 188 km distance with 2,304 m elevation gain targets experienced riders seeking a full-day commitment. The vineyard-threaded terrain and varied topography create engaging cycling that transcends simple point-to-point racing. However, as a UCI Gran Fondo rather than a legendary sportive, it lacks the historical gravitas of European classics. Best suited for riders seeking a well-organized, scenically diverse challenge in an underrated cycling region.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "A professionally organized UCI Gran Fondo offering substantial distance and elevation through scenic Pyrenees-Orientales terrain, ideal for experienced riders seeking Mediterranean mountain cycling.",
+      "should_you_race": "66 Degrés Sud represents a solid mid-tier Gran Fondo with genuine appeal. The event's UCI World Series sanctioning, multiple distance options, and thoughtful course design through wine country and foothills create a complete cycling experience. The 2026 route change to Canet-en-Roussillon improves the event's identity by anchoring it to the Mediterranean coast. The Gran Fondo distance (188 km, 2,304 m elevation) demands serious preparation but rewards with varied terrain and sustained climbing. The separate Thursday time trial adds tactical interest. Primary limitations include modest prestige relative to European classics, limited historical pedigree (organized since 2021), and incomplete logistical information. Best value for riders seeking a well-executed Gran Fondo in an underexplored cycling region rather than a bucket-list event.",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/fr/66-degres-sud-2/",
+        "category": "reference",
+        "label": "66 Degrés Sud - UCI Gran Fondo World Series"
+      },
+      {
+        "url": "https://www.finishers.com/course/66-sud-la-cyclo",
+        "category": "reference",
+        "label": "66°Sud la Cyclo 2026 - Parcours, inscriptions & résultats - Finishers"
+      },
+      {
+        "url": "https://followmysport.com/courses/66-degres-sud/",
+        "category": "reference",
+        "label": "66 Degrés Sud 2026 Inscription Résultats"
+      },
+      {
+        "url": "https://fr.milesrepublic.com/event/66-degres-sud-la-cyclo-12529",
+        "category": "reference",
+        "label": "66 degrés Sud - La Cyclo 2026 - Saint-Estève - Miles Republic"
+      },
+      {
+        "url": "https://66-degres-sud.fr",
+        "category": "reference",
+        "label": "66-degres-sud"
+      },
+      {
+        "url": "https://66-degres-sud.fr/accueil/",
+        "category": "reference",
+        "label": "Aventures sportives outdoor Pyrénées-Orientales - 66-degres-sud"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "66 Degrés Sud gran fondo cycling Canet-en-Roussillon",
+      "videos": [
+        {
+          "video_id": "0Y2pfp4RvHE",
+          "title": "66 Degrés Sud la Cyclo 2021 !  le 26 juin 2021 au départ du Castillet",
+          "channel": "Cap Sud 66 - Agence d'Attractivité",
+          "view_count": 1207,
+          "upload_date": "20210610",
+          "duration_string": "50",
+          "description": "Perpignan Méditerranée Métropole lance l’évènement 66 degrés Sud, La Cyclo ! \n\nTrois niveaux, trois boucles cyclotouristiques au choix de 50, 80 ou 100km à travers les communes de la Communauté Urbaine seront à parcourir en vélo pout premier évènement Outdoor de Perpignan Méditerranée Métropole !\n\nDépart officiel du Castillet vers 8h00, Place de la Victoire, arrivée au Parc des Expositions, un évènement à ne pas rater le 26 juin qui va marquer le début de l’été.. \n\nINFOS ET INSCRIPTIONS sur  https://www.66-degres-sud.fr/  \nConformément au protocole sanitaire du Ministère de l’Education Nationale de la Jeunesse et des Sports « L’inscription est obligatoire en ligne avant la tenue de l’évènement, aucune inscription ne pouvant être prise sur place ».\n\nLe contexte COVID a mis en exergue une forte volonté de se tourner vers les activités et loisirs de plein air ainsi qu’un besoin véritable de retour à la nature. L’Agence de Développement Economique, dont l’ADN est d’impulser et valoriser des nouvelles filières génératrices de fortes retombées économiques sur le territoire consacre désormais un de ses axes vers l’outdoor. \n\n66 degrès Sud est la nouvelle marque du territoire qui exprime la volonté de Perpignan Méditerranée de devenir encore plus attractive avec de grands évènements tournés vers l’Outdoor. \nUne stratégie d’attractivité touristique et économique qui débute avec cet évènement, la cyclotouriste qui annonce un évènement de plus grande ampleur en 2022 sur 3 jours d’animation : la cyclosportive.  Le Vélo, sera en effet une thématique forte de cet été avec le Tour de France qui fera étape le 11 juillet à Céret. \n\nNotre territoire est un terrain de jeu à ciel ouvert… 66 degrés Sud « la Cyclo » ouvre le bal, s’en suivront d’autres évènement autours de l’Outdoor dans des domaines emblématiques. \n\n\nhttps://www.66-degres-sud.fr/",
+          "tags": [
+            "cyclo",
+            "outdoor",
+            "66",
+            "66degressud",
+            "Perpignan",
+            "cyclotouristique",
+            "randonnées",
+            "vélo",
+            "méditerranée",
+            "66 degrés sud",
+            "66 degrés sud la cyclo"
+          ],
+          "url": "https://www.youtube.com/watch?v=0Y2pfp4RvHE",
+          "curated": false
+        },
+        {
+          "video_id": "fLxmYA2yP1A",
+          "title": "JT24 66 degrés Sud, l'épreuve cycliste au départ de Perpignan - #JTDESPO #TVCAT",
+          "channel": "TVCAT / La télé des P-O",
+          "view_count": 694,
+          "upload_date": "20210618",
+          "duration_string": "13:57",
+          "description": "JT24 66 degrés Sud, l'épreuve cycliste au départ de Perpignan - #JTDESPO #TVCAT\nFin de la saison 3 ! Dans cette édition nous parlerons de la Cyclo par 66 degrés Sud, l'événement sportif du moi de juin, de la 22ème édition du Prix Alfred Sauvy, de la rénovation et l'agrandissement du Parc Saint Vicens à Perpignan, des Cordées de la réussite organisées par l'Université de Perpignan, du Purple Campus, qui invite les jeunes à découvrir peut-être leur futur métier.\nOn se retrouve en septembre pour fêter le numéro 200 du magazine papier Le Journal Catalan. Merci pour votre fidélité, bel été à toutes et tous.\nPour vous inscrire et recevoir le magazine Le Journal Catalan gratuitement : https://vu.fr/4wNt\nTéléchargez l'application mobile TVCAT : https://tvcat.fr\nPour s'inscrire à 66 degrés Sud, la Cyclo : https://www.66-degres-sud.fr/\n\n#JT #JournalCatalan #LeJournalCatalan #PaysCatalan #Cyclisme #PrixAlfreSauvy\n@Perpignan Méditerranée Métropole",
+          "tags": [
+            "66 degrés Sud",
+            "Perpignan",
+            "JTDESPO",
+            "Journal télévisé",
+            "Pyrénées-Orientales",
+            "Occitanie",
+            "Pays Catalan",
+            "France 3",
+            "Prix Alfred Sauvy",
+            "Guy Albalat",
+            "Université de Perpignan",
+            "Purple Campus",
+            "Parc Saint Vicens",
+            "Cordées de la réussite",
+            "Cyclisme"
+          ],
+          "url": "https://www.youtube.com/watch?v=fLxmYA2yP1A",
+          "curated": false
+        },
+        {
+          "video_id": "RsPfwiRN4F8",
+          "title": "PERPIGNAN : L'événement cyclotouristique des Pyrénées-Orientales- #TVCAT",
+          "channel": "TVCAT / La télé des P-O",
+          "view_count": 3701,
+          "upload_date": "20210626",
+          "duration_string": "4:09",
+          "description": "L’Agence de Développement Economique, dont l’ADN est d’impulser et valoriser des nouvelles filières génératrices de fortes retombées économiques sur le territoire, s’oriente désormais vers l’outdoor.\n\n66 Degrés Sud est la nouvelle marque du territoire qui exprime la volonté de Perpignan Méditerranée Métropole de devenir encore plus attractive avec de grands évènements tournés vers l’Outdoor.\n\nUne stratégie d’attractivité touristique et économique qui débute avec cet évènement, la cyclotouriste qui annonce un évènement de plus grande ampleur en 2022, la cyclosportive. Le Vélo, sera en effet une thématique forte de cet été avec le Tour de France qui fera étape le 11 juillet à Céret.\n\nNotre territoire est un terrain de jeu varié à ciel ouvert… 66 Degrès Sud « la Cyclo » ouvre le bal, s’en suivront d’autres évènement autour de l’Outdoor dans des domaines emblématiques\nC'est aussi l'occasion pour l'UVPO de renouveller la convention de partenariat avec la Banque Populaire du Sud...\n\n#TVCAT #velo #cyclisme #tourisme #PO #Perpignan #PyrénéesOrientales",
+          "tags": [
+            "cyclisme",
+            "la cyclo",
+            "ade pmm",
+            "Perpignan",
+            "vélo",
+            "cyclotourisme",
+            "Perpignan Méditerranée Métropole",
+            "TVCAT",
+            "Jean-Michel Martinez",
+            "Alain Ferrand",
+            "Guy Albalat",
+            "Sébastien Ménard"
+          ],
+          "url": "https://www.youtube.com/watch?v=RsPfwiRN4F8",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "race": {
+    "name": "Cappadocia Gran Fondo",
+    "slug": "cappadocia-gran-fondo",
+    "display_name": "Cappadocia Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 109.4,
+      "distance_mi": 68.0,
+      "elevation_m": 1500,
+      "elevation_ft": 4921.0,
+      "location": "Nevşehir/Göreme, Cappadocia, Turkey",
+      "location_badge": "Nevşehir/Göreme, Turkey",
+      "country": "Turkey",
+      "date": "2026: October TBD",
+      "date_specific": "2026: October TBD",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Unknown",
+      "cutoff_time": "Unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels in Göreme; many events include packages with stays.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "Epic road cycling through Earth's most otherworldly landscapes.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Cappadocia Gran Fondo gran fondo cycling Nevşehir/Göreme",
+      "videos": [
+        {
+          "video_id": "9PmgoZYpPtI",
+          "title": "Bisikletle Kapadokya",
+          "channel": "Zamanın Seyyahı",
+          "view_count": 298,
+          "upload_date": "20150307",
+          "duration_string": "7:01",
+          "description": "Bisikletle Kapadokya\nAli Babi zamaninseyyahi.blogspot.com.tr/",
+          "tags": [
+            "Cappadocia (Location)"
+          ],
+          "url": "https://www.youtube.com/watch?v=9PmgoZYpPtI",
+          "curated": false
+        },
+        {
+          "video_id": "3BMfsggSbtY",
+          "title": "Kapadokya Bisiklet Gezisi/Cycling trip in Cappadocia",
+          "channel": "Bisiklete Dair Her Şey",
+          "view_count": 959,
+          "upload_date": "20190708",
+          "duration_string": "14:34",
+          "description": "Merhaba, Türkiye'nin en güzel yerlerinden biri olan Kapadokya'yı Bisikletle gezdik. Sizler için güzel görüntüler yakaladık. İyi Seyirler...\nLütfen videoyu beğenmeyi ve abone olmayı unutmayın...\n#kapadokya#cappadocia#bisiklet#Gezi",
+          "tags": [
+            "kapadokya",
+            "cappadocia",
+            "kapadokya seyahat",
+            "kapadokya gezi",
+            "kapadokya travel"
+          ],
+          "url": "https://www.youtube.com/watch?v=3BMfsggSbtY",
+          "transcript": "[Music]\nstarted before and well how could I know\nyou're falling to reading low and\ncutting my skinny but it's hard because\nyou\nyou hear\nbut you do\n[Applause]\nI dunno\nshe told me short show\nbut you",
+          "curated": false
+        },
+        {
+          "video_id": "zssnA4UvDUQ",
+          "title": "Cappadocia Cycling Festival",
+          "channel": "Hasan Yıldız (FOTOHASAN)",
+          "view_count": 1122,
+          "upload_date": "20150914",
+          "duration_string": "3:17",
+          "description": "Kapadokya Bisiklet Festivali",
+          "tags": [
+            "Kapadokya",
+            "Cappadocia",
+            "Cappadocia Cycling Festival",
+            "FOTOHASAN"
+          ],
+          "url": "https://www.youtube.com/watch?v=zssnA4UvDUQ",
+          "curated": false
+        },
+        {
+          "video_id": "JQO1H4yj-F4",
+          "title": "Kapadokya Gran Fondo Kısa Parkur Start",
+          "channel": "Bahadır Gürel",
+          "view_count": 304,
+          "upload_date": "20150912",
+          "duration_string": "2:10",
+          "description": "",
+          "tags": [
+            "Cappadocia (Location)"
+          ],
+          "url": "https://www.youtube.com/watch?v=JQO1H4yj-F4",
+          "curated": false
+        },
+        {
+          "video_id": "0uYcfnme6YA",
+          "title": "Uluslararası Kapadokya Bisiklet Turu",
+          "channel": "Ulusal Kanal",
+          "view_count": 250,
+          "upload_date": "20180915",
+          "duration_string": "57",
+          "description": "Üç etaplı Uluslararası Kapadokya Bisiklet Turu'nun ikinci ayağı  başladı. Nevşehir-Erciyes etabında sporcular, 131 kilometrelik parkurda liderlik için mücadele edecek.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=0uYcfnme6YA",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The available transcript for the Cappadocia Gran Fondo contains primarily music and fragmented audio without clear rider commentary about the race experience. No specific course details, terrain conditions, challenges, or actionable race intelligence could be extracted from the provided content."
+      }
+    }
+  }
+}

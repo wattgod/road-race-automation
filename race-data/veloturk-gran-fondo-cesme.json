@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "VeloTurk Gran Fondo Cesme",
+    "slug": "veloturk-gran-fondo-cesme",
+    "display_name": "VeloTurk Gran Fondo Cesme",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 91.7,
+      "distance_mi": 57.0,
+      "elevation_m": 1036,
+      "elevation_ft": 3400.0,
+      "location": "Cesme, Izmir, Turkey",
+      "location_badge": "Cesme, Turkey",
+      "country": "Turkey",
+      "date": "2026: April TBD",
+      "date_specific": "2026: April TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://granfondocesme.com/en",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Peninsula Punchies: Mid-route series of 1-2 km climbs on exposed coastal roads sap legs with headwinds and heat. Cumulative 2000 ft here turns quads to jelly amid epic views.",
+        "Final Coastal Grind: Last 15 miles feature rolling undulations back to Cesme, where fatigue meets sea breezes for mental test. Paceline discipline key to surviving the grind."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://granfondocesme.com/en"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "Scenic Aegean gran fondo blending coastal beauty, moderate challenge, and Turkish charity vibes.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

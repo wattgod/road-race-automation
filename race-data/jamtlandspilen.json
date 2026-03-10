@@ -1,0 +1,122 @@
+{
+  "race": {
+    "name": "Jämtlandspilen",
+    "slug": "jamtlandspilen",
+    "display_name": "Jämtlandspilen",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 244.6,
+      "distance_mi": 152.0,
+      "elevation_m": 1524,
+      "elevation_ft": 5000.0,
+      "location": "Östersund, Sweden",
+      "location_badge": "Östersund, Sweden",
+      "country": "Sweden",
+      "date": "2026: August 15",
+      "date_specific": "2026: August 15",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Typical Swedish summer: mild, pleasant for riding with low humidity.",
+      "challenges": [
+        "Precipitation: 30%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A demanding road ultra looping through Jämtland's forested hills and lake-dotted plains around Östersund, blending steady climbs with fast rollers on smooth tarmac.",
+      "signature_challenge": "The 'Jämtland Wall' - a 2-mile grind at 7% average near the 100-mile mark, often deciding the race in crosswinds.",
+      "suffering_zones": [
+        "Central Hills Climb: Mid-race 20-mile section with repeated 5-8% gradients totaling 2000 ft gain, testing pacing in exposed terrain.",
+        "Lake Side Rollers: Final 30 miles of punchy undulations beside Storsjön, where fatigue amplifies short but steep kicks.",
+        "Östersund Finish Drag: Urban approach with headwinds and false flats, mentally grinding to the city-center line."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Plenty of hotels and Airbnbs in Östersund; campgrounds nearby for budget options.",
+      "transport": "Straightforward event in Östersund with central start/finish, ample support, and easy navigation for international riders.",
+      "food": "",
+      "official_site": "https://jamtlandspilen.se"
+    },
+    "history": {
+      "founded": 2010,
+      "origin_story": "Beloved local road ultra fostering Jämtland's endurance cycling tradition, growing steadily among Swedish riders.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Ultimate Swedish road ultra for endurance junkies craving value-packed suffering.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://templarknightsmc.se/jamtland/jamtland-memorias/",
+        "category": "reference",
+        "label": "Jamtland – Memorias - Templar Knights Motorcycle Club"
+      },
+      {
+        "url": "https://templarknightsmc.se/event/jamtland-bike-week-final-jamtland-lodge/",
+        "category": "reference",
+        "label": "Jamtland Bike Week Final - Templar Knights Motorcycle Club"
+      }
+    ]
+  }
+}

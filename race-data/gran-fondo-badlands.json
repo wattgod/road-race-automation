@@ -1,0 +1,147 @@
+{
+  "race": {
+    "name": "Gran Fondo Badlands",
+    "slug": "gran-fondo-badlands",
+    "display_name": "Gran Fondo Badlands",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 162.5,
+      "distance_mi": 101.0,
+      "elevation_m": 875,
+      "elevation_ft": 2870.0,
+      "location": "Drumheller, Alberta, Canada",
+      "location_badge": "Drumheller, Canada",
+      "country": "Canada",
+      "date": "2026: July 4",
+      "date_specific": "2026: July 4",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Early July in Drumheller, Alberta offers typical prairie summer conditions with generally favorable cycling weather, though Alberta's continental climate can produce variable conditions including afternoon thunderstorms",
+      "challenges": [
+        "Precipitation: 35"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A scenic road cycling journey through Alberta's iconic badlands landscape, featuring rolling prairie terrain, dramatic hoodoo formations, a memorable ferry crossing of the Red Deer River, and short but challenging hill climbs. The route celebrates the Dinosaur Valley's unique geological and cultural heritage while offering well-supported riding through picturesque river valleys and historic villages.",
+      "signature_challenge": "The Ferry Hill Climb: a 1km timed ascent immediately following the scenic Red Deer River ferry crossing, which all riders complete and which determines the King and Queen of the Mountain awards for each distance category",
+      "suffering_zones": [
+        "Ferry Hill Climb: A 1km timed segment immediately after the Red Deer River ferry crossing that serves as the event's signature climbing challenge and King/Queen of the Mountain competition point",
+        "Mid-Route Elevation Gains: Multiple short but serious hill climbs distributed throughout the course, particularly in the hoodoos region, creating cumulative fatigue over the 101-mile distance",
+        "Final Approach: The closing kilometers back to Badlands Community Facility after the turnaround points test rider endurance on a day with significant cumulative elevation"
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Drumheller area hotels and accommodations; event does not provide lodging but is located near multiple commercial options in the dinosaur capital region",
+      "transport": "Gran Fondo Badlands operates as a professionally organized, multi-day event with package pickup in Calgary and Drumheller, pre-event activities on Friday, and the main event on Saturday. The event accommodates four distance options with staggered wave starts, thorough aid stations, and full support infrastructure including bike mechanics, food service, and post-race festivities.",
+      "food": "",
+      "official_site": "https://www.granfondobadlands.ca"
+    },
+    "history": {
+      "founded": 2011,
+      "origin_story": "Gran Fondo Badlands is one of Canada's top 10 Gran Fondo cycling events, established in 2011 and relocated to the Drumheller Valley where it gained significant popularity due to the exceptional riding experience, unique dinosaur-themed setting, and stunning badlands scenery.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "A well-organized, scenic road cycling celebration of Alberta's badlands landscape that delivers excellent value and community atmosphere for riders of all abilities seeking a memorable weekend adventure.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.granfondobadlands.ca/schedule-of-events",
+        "category": "reference",
+        "label": "Gran Fondo Badlands - Schedule of Events"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca/brontosaurus-163km",
+        "category": "reference",
+        "label": "Brontosaurus 163km Course Details"
+      },
+      {
+        "url": "https://strambecco.com/event/gran-fondo-badlands/",
+        "category": "reference",
+        "label": "Gran Fondo Badlands 2026 - Cycling Event"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca",
+        "category": "official",
+        "label": "TransRockies Gran Fondo Badlands Official Site"
+      },
+      {
+        "url": "https://www.travelalberta.com/events/gran-fondo-badlands-23593",
+        "category": "reference",
+        "label": "Gran Fondo Badlands - Travel Alberta"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/4376/gran-fondo-badlands",
+        "category": "reference",
+        "label": "Gran Fondo Badlands - Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.movemint.cc/events/gran_fondo_badlands_2026",
+        "category": "reference",
+        "label": "Gran Fondo Badlands 2026 - MoveMint"
+      }
+    ]
+  }
+}

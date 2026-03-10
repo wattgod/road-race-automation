@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "Round Denmark Bike Race",
+    "slug": "round-denmark-bike-race",
+    "display_name": "Round Denmark Bike Race",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 1965.0,
+      "distance_mi": 1221.0,
+      "elevation_m": 8659,
+      "elevation_ft": 28409.0,
+      "location": "Denmark (circumnavigation)",
+      "location_badge": "Denmark (circumnavigation)",
+      "country": null,
+      "date": "2026: July 5",
+      "date_specific": "2026: July 5",
+      "field_size": "30",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "none (unsupported)",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Self-supported; riders manage own overnight stops (non-profit event with no services provided).[3]",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Ultimate unsupported circumnavigation of Denmark testing endurance, navigation, and self-reliance.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

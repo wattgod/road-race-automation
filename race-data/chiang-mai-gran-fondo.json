@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "GFNY Chiang Mai",
+    "slug": "chiang-mai-gran-fondo",
+    "display_name": "GFNY Chiang Mai",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 1676,
+      "elevation_ft": 5500.0,
+      "location": "Chiang Mai, Thailand",
+      "location_badge": "Chiang Mai, Thailand",
+      "country": "Thailand",
+      "date": "2026: March 22",
+      "date_specific": "2026: March 22",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "March in Chiang Mai features dry, mild weather ideal for cycling, transitioning from cool mornings to warm afternoons.",
+      "challenges": [
+        "Precipitation: Low (5-10%)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Rolling road gran fondo through Chiang Mai's lush mountains, rice terraces, and rural villages, featuring sustained climbs and fast descents in northern Thailand's scenic highlands.",
+      "signature_challenge": "The 'Chiang Mai Wall' - a 3km climb at 9% average with sections hitting 14%, offering panoramic views of the Ping River Valley.",
+      "suffering_zones": [
+        " Doi Inthanon Approach: Steep ramps leading to Thailand's highest peak, testing legs with 10-12% gradients amid misty forests.",
+        "Huai Kaeo Valley Climb: Long false flat haul turning into punchy rollers, where heat and humidity amplify fatigue.",
+        "Finish Circuit KOM: Final 10-mile loop with double-digit pitches rewarding the strong for top finishes."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Abundant options from luxury resorts like Anantara Chiang Mai to budget guesthouses; book early for race weekend packages.",
+      "transport": "GFNY Chiang Mai is accessible via Chiang Mai International Airport (CNX), with race HQ in central Chiang Mai. Expect police-escorted starts, fully supported aid stations, and finisher medals. Multiple distances available.",
+      "food": "",
+      "official_site": "https://chiangmai.gfny.com"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "GFNY Chiang Mai marks the series' expansion into northern Thailand, building on successes in Krabi and Khao Yai. Part of GFNY's aggressive Asia growth targeting 10 regional events.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "GFNY's tropical road epic: big climbs, Thai vibes, unbeatable value.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://gfny.com/gfny-announces-second-race-in-thailand/",
+        "category": "reference",
+        "label": "GFNY announces second race in Thailand - GFNY World"
+      },
+      {
+        "url": "https://gfny.com",
+        "category": "reference",
+        "label": "GFNY World: Home"
+      },
+      {
+        "url": "https://gfny.com/new-to-gfny-cycling/",
+        "category": "reference",
+        "label": "New to GFNY"
+      },
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "reference",
+        "label": "Race Finder - GFNY World"
+      }
+    ]
+  }
+}

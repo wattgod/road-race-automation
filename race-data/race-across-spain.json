@@ -1,0 +1,132 @@
+{
+  "race": {
+    "name": "Race Across Spain",
+    "slug": "race-across-spain",
+    "display_name": "Race Across Spain",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 999.4,
+      "distance_mi": 621.0,
+      "elevation_m": 10668,
+      "elevation_ft": 35000.0,
+      "location": "Santander to Valencia, Spain",
+      "location_badge": "Santander to Valencia, Spain",
+      "country": "Spain",
+      "date": "2026: September 16",
+      "date_specific": "2026: September 16",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Mediterranean",
+      "description": "Mild late-summer conditions ideal for ultra, starting cool/green in Cantabria, warming to dry Mediterranean south.",
+      "challenges": [
+        "Precipitation: Low (10-20% north, near 0% south)"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "95% paved, 5% gravel/unpaved",
+      "technical_rating": 2,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 2,
+      "cultural_impact": 2,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A grand traverse of Spain from the wild Cantabrian north to Valencia's Mediterranean warmth, blending relentless climbs, picturesque villages, and diverse terrains through mountains, plateaus, and coasts.",
+      "signature_challenge": "Overcoming the cumulative 35,000ft elevation across 621 miles, punctuated by Spain's most scenic passes and cultural gems.",
+      "suffering_zones": [
+        "Portillo de la Lunada: Iconic 30km Cantabrian pass with steep gradients and exposed high-altitude scenery, a Vuelta a España regular.",
+        "Iberian Plateau: Arid, rolling expanses demanding sustained power and heat management midway.",
+        "Puerto de Almedijar & Oronet: Final Valencian Sierra climbs testing fatigued legs with technical descents to the coast."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Sleeping areas at living bases; Santander offers hotels near start/finish venue.",
+      "transport": "Semi-autonomous ultra with dedicated support: PGO tracking, living bases for rest/refuel, bib collection, briefings, and awards at Palacio de los Deportes in Santander.",
+      "food": "",
+      "official_site": "https://en.raceacrossseries.com/race-across-spain-2025"
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "New flagship event in Race Across Series, launching Spain's ultra-cycling scene with inaugural 2025/2026 editions drawing international talent.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "Spain's ultimate road ultra odyssey: 621 miles of mountains, culture, and unbreakable spirit.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://en.raceacrossseries.com/race-across-spain-2025",
+        "category": "reference",
+        "label": "Race Across Spain | Take the challenge now"
+      },
+      {
+        "url": "https://fr.milesrepublic.com/en/event/race-across-spain-12384",
+        "category": "reference",
+        "label": "Race Across Spain 2026 - Santander - Miles Republic"
+      },
+      {
+        "url": "https://en.raceacrossseries.com/blog/une-course-de-vlo-pique-travers-lespagne",
+        "category": "editorial",
+        "label": "Race Across Spain 2025: routes, distances and new features"
+      },
+      {
+        "url": "https://ultracycling.com/calendar/race-across-spain-2025/",
+        "category": "reference",
+        "label": "Race Across Spain 2025 - World UltraCycling Association"
+      }
+    ]
+  }
+}

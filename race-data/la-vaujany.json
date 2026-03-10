@@ -1,0 +1,138 @@
+{
+  "race": {
+    "name": "La Vaujany Cyclosportive",
+    "slug": "la-vaujany",
+    "display_name": "La Vaujany Cyclosportive",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 170.6,
+      "distance_mi": 106.0,
+      "elevation_m": 3962,
+      "elevation_ft": 13000.0,
+      "location": "Vaujany, Isère, France",
+      "location_badge": "Vaujany, France",
+      "country": "France",
+      "date": "2025: June 15",
+      "date_specific": "2025: June 15",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Typical mid-June Alps: mild days, cool summits; prepare for rain and wind.",
+      "challenges": [
+        "Precipitation: 30%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 5,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Brutal Alpine road sportive featuring iconic paved cols with relentless switchbacks, deep valleys, and high-altitude finishes in the French Oisans massif.",
+      "signature_challenge": "The Alpe d'Huez ascent followed by the Vaujany wall, testing pacing and recovery on Tour de France-proven roads.",
+      "suffering_zones": [
+        "Col de la Morte: 15.1km at 6.7% average with 10% max; long, grinding ascent after initial descent.",
+        "Col d’Ornon: Tame start at 3% ramps to 7%; positioned before the marquee Alpe d'Huez battle.",
+        "L’Alpe d’Huez: Legendary 12km with 8%+ average and 21 switchbacks; the heart of suffering.",
+        "Vaujany Final Climb: Deceptive 5km kicker to the finish with 14% pitches; punishes early aggression."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Abundant chalets and hotels in Vaujany and nearby Alpe d'Huez; GFNY offers camping and VIP options.",
+      "transport": "GFNY-organized event with long competitive course (151km/4172m) and medium non-competitive (60km); starts/finishes in Vaujany with aid stations and perks.",
+      "food": "",
+      "official_site": "https://lavaujany.gfny.com/?lang=en"
+    },
+    "history": {
+      "founded": 2021,
+      "origin_story": "GFNY chapter in Vaujany leveraging Alpine icons like Alpe d'Huez; local benchmark evolving into international draw.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "Alpine road suffering at its finest: Alpe d'Huez glory awaits the paced climber.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.peak-adventures.net/cycling/competetive-racing",
+        "category": "reference",
+        "label": "Cycling Competitions and Events | Vaujany and Alpe D'Huez"
+      },
+      {
+        "url": "https://lavaujany.gfny.com/course/?lang=en",
+        "category": "reference",
+        "label": "Course - GFNY La Vaujany"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/france/gfny-la-vaujany/39459",
+        "category": "reference",
+        "label": "GFNY La Vaujany - CycloWorld"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5772/la-vaujany-gran-fondo",
+        "category": "reference",
+        "label": "La Vaujany Gran Fondo"
+      },
+      {
+        "url": "https://www.vaujany.com/en/news/cycling-race-gfny-alpes-vaujany/",
+        "category": "reference",
+        "label": "CYCLING RACE : GFNY Alpes-Vaujany"
+      }
+    ]
+  }
+}

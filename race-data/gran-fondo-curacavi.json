@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Gran Fondo Curacavi",
+    "slug": "gran-fondo-curacavi",
+    "display_name": "Gran Fondo Curacavi",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 1372,
+      "elevation_ft": 4500.0,
+      "location": "Curacavi, Valparaiso Region, Chile",
+      "location_badge": "Curacavi, Chile",
+      "country": "Chile",
+      "date": "April 19, 2026",
+      "date_specific": "April 19, 2026",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.granfondocuracavi.cl",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Casablanca Climbing Section: The middle 35 kilometers through Casablanca wine country concentrate the route's most sustained elevation gain. Riders encounter multiple back-to-back climbs without significant recovery sections, testing endurance and mental fortitude.",
+        "María Pinto Final Push: The final 35 kilometers through María Pinto present cumulative fatigue challenges as riders tackle sustained climbing on tired legs. The route's most demanding grades appear in this section before the final descent toward Curacavi.",
+        "Distance Endurance: The 120-kilometer total distance demands sustained aerobic effort over 4-6 hours of riding. Riders unaccustomed to extended gran fondo distances may struggle with pacing and nutrition management across the full route."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.granfondocuracavi.cl"
+    },
+    "history": {
+      "founded": 2021,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "A solid regional gran fondo offering pleasant wine country scenery and moderate climbing for recreational Chilean cyclists seeking community-focused riding.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

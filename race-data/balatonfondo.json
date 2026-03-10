@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "BalatonFondo",
+    "slug": "balatonfondo",
+    "display_name": "BalatonFondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 120.7,
+      "distance_mi": 75.0,
+      "elevation_m": 610,
+      "elevation_ft": 2000.0,
+      "location": "Lake Balaton, Hungary",
+      "location_badge": "Lake Balaton, Hungary",
+      "country": "Hungary",
+      "date": "May 1, TBD",
+      "date_specific": "May 1, 2026",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://balatonfondo.com/en/entry",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Windy Lake Exposures: Open southern shores of Lake Balaton whip up crosswinds, shredding packs and spiking efforts on flats. Sustained exposure tests mental grit over 20 miles.",
+        "Late-Race Fatigue Fade: Final 15 miles back to Balatonfüred bring cumulative rolling drain after 60 miles, where legs burn without crowd relief. Pace discipline early prevents bonk."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://balatonfondo.com/en"
+    },
+    "history": {
+      "founded": 2023,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Hungary's premier gran fondo delivers scenic Lake Balaton bliss on pro-closed roads.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

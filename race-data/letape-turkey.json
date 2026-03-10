@@ -1,0 +1,156 @@
+{
+  "race": {
+    "name": "L'Etape Turkey by Tour de France",
+    "slug": "letape-turkey",
+    "display_name": "L'Etape Turkey by Tour de France",
+    "tagline": "106km of Istanbul's savage climbs deliver Tour de France glory to amateurs—3,000 riders, zero traffic.",
+    "vitals": {
+      "distance_km": 106.9,
+      "distance_mi": 66.4,
+      "elevation_m": 1585,
+      "elevation_ft": 5200.0,
+      "location": "Beykoz, Istanbul, Turkey",
+      "location_badge": "BEYKOZ, TR",
+      "country": "Turkey",
+      "date": "September-October",
+      "date_specific": "2026: September 19-20",
+      "field_size": "3,000+ amateurs from 30 countries",
+      "start_format": null,
+      "registration": "Pro-level organization with traffic-free roads and mechanical support; costs TBD",
+      "entry_fee": "$TBD",
+      "feed_zones": "World-class support on closed roads",
+      "cutoff_time": "TBD",
+      "lat": 41.1067,
+      "lng": 29.0761,
+      "route_options": [
+        "Long: 66.4mi, 5200ft — brutal Beykoz loop with king-of-mountain climbs",
+        "Short: 34.7mi, ~2700ft — stamina-testing terrain",
+        "Family/Children: 4.2mi — fun intro ride"
+      ]
+    },
+    "climate": {
+      "primary": "Mild Mediterranean — mild",
+      "description": "Istanbul's fall delivers 59-77°F perfection with minimal rain, ideal for hammering climbs without overheating. Low wind risk keeps the loop predictable. Pack light layers for coastal chills.",
+      "challenges": [
+        "Sudden humidity spikes",
+        "Coastal gusts",
+        "Rare showers",
+        "Morning fog"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved climbs through touristic paradise",
+      "surface": "Silky asphalt winds past historic pavilions and forests; zero gravel, all road purity. Beykoz's paved perfection shines traffic-free. Smooth enough for speed, grippy for descents.",
+      "technical_rating": 2,
+      "features": [
+        "King-of-mountain segments",
+        "Polonezkoy village sprints",
+        "Riva coastal rollers",
+        "Küçüksu Pavilion loop",
+        "Asia-Europe bridge vibes"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Beykoz loop unleashes Istanbul's wild side—paved climbs snake through forests, villages, and pavilions. Traffic-free bliss lets you smash king-of-mountain segments amid Polonezkoy charm. 106km blends endurance grind with touristic euphoria, Tour-style without the jet lag.",
+      "signature_challenge": "Beykoz's cumulative climbs rack 1600m+ over 66 miles, blending relentless gradients with Istanbul panoramas. No single monster but endless testing forges Tour grit. Traffic-free freedom amplifies the hurt.",
+      "suffering_zones": [
+        "King of the Mountain",
+        "Riva Rollers"
+      ]
+    },
+    "logistics": {
+      "airport": "Istanbul (IST) 45km north, Sabiha Gökçen (SAW) 40km east—taxis/Ubers swarm, shuttles likely. Fly international, crash Beykoz night before.",
+      "lodging_strategy": "Beykoz hotels or Istanbul core—Airbnbs near Küçüksu Pavilion prime. Book early for 3K influx.",
+      "transport": "",
+      "food": "Turkish meze feasts pre-race; post-ride kebabs and çay. Vegan options abound in coastal villages.",
+      "official_site": "https://www.letapeseries.com"
+    },
+    "history": {
+      "founded": 2024,
+      "origin_story": "Born 2024 as L'Etape series hits Turkey via 3-year deal, announced June 4 at Istanbul's Sepetçiler Pavilion. Tour bosses eyed Bosphorus beauty for amateurs craving pro vibes. First edition Oct 19-20 drew 3K from 30 nations, cementing Turkey as 23rd host amid federation cheers for cycling boom.",
+      "notable_moments": [
+        "Inaugural 2024: 3K riders conquer Beykoz",
+        "June 2024 promo with federation hype",
+        "Copper trophies from Mardin",
+        "2026 locked for Sep 19-20"
+      ],
+      "reputation": "Instant Tour cred builds buzz; pro safety wows amateurs. Tourism hook positions as global gem. Early rep: polished newcomer."
+    },
+    "biased_opinion": {
+      "verdict": "Exotic Tour Triumph",
+      "summary": "L'Etape Turkey blasts onto the scene fusing Bosphorus beauty with Tour de France pedigree—106km of paved punishment through Beykoz's hidden gems. Traffic-free pro treatment elevates amateurs to heroes amid 3K global riders. Prestige punches way above untested climbs; Istanbul's allure seals the deal for adventure-starved roadies. Minor unknowns like vert pale against the hype.",
+      "strengths": [
+        "Tour de France instant prestige",
+        "Stunning Istanbul tourism",
+        "Pro-level traffic-free org",
+        "Exotic Asia-Europe vibes",
+        "Amateur-accessible suffering"
+      ],
+      "weaknesses": [
+        "Elevation data fuzzy",
+        "Modest distance",
+        "Newbie unproven",
+        "Travel costs high",
+        "Limited field depth"
+      ],
+      "bottom_line": "Debut dazzler with global glow—pin it for 2026. Tour branding guarantees polish; Istanbul etches memories. Skip if vert-hungry."
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Tour prestige meets Turkish splendor in a 106km stunner.",
+      "should_you_race": "Yes if craving exotic road prestige sans Alps agony. Skip if chasing 4K+ vert or gravel grit.",
+      "alternatives": "L'Etape Cyprus for island vert, main Etape du Tour for mythic cols, local Turkish fondos for value."
+    },
+    "citations": [
+      {
+        "url": "https://www.turkiyetoday.com/sports/letape-turkiye-by-tour-de-france-66823",
+        "category": "news",
+        "label": "L'Etape Türkiye by Tour de France: Spectacular cycling journey"
+      },
+      {
+        "url": "https://www.ahotu.com/event/l-etape-turkiye-by-tour-de-france",
+        "category": "listing",
+        "label": "L'etape Turkiye by Tour de France"
+      },
+      {
+        "url": "https://www.letapeseries.com",
+        "category": "official",
+        "label": "L'Etape Series"
+      }
+    ]
+  }
+}

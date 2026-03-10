@@ -1,0 +1,262 @@
+{
+  "race": {
+    "name": "Marmotte Granfondo Pyrenees",
+    "slug": "marmotte-pyrenees",
+    "display_name": "Marmotte Granfondo Pyrénées",
+    "tagline": "Five Pyrenean passes. A double Tourmalet. 5,700 meters of climbing. Summit finish. The Alps' little sister bites harder than you think.",
+    "vitals": {
+      "distance_km": 177.0,
+      "distance_mi": 110.0,
+      "elevation_m": 5700,
+      "elevation_ft": 18701.0,
+      "location": "Argelès-Gazost / Luz-Saint-Sauveur, Hautes-Pyrénées, France",
+      "location_badge": "HAUTES-PYRÉNÉES, FRANCE",
+      "country": "France",
+      "date": "Late August annually",
+      "date_specific": "2025: August 24",
+      "field_size": "~1,000-1,500 riders",
+      "start_format": null,
+      "registration": "Online via marmottegranfondopyrenees.com. Tiered pricing. LOOK Cycle as title sponsor. Medical certificate or FFC license required.",
+      "entry_fee": "EUR90-100 (tiered by registration batch)",
+      "feed_zones": "4 feed stations on the Granfondo: Tourmalet (km 36), Cadéac (km 84), Tourmalet (km 128), Beaucens (km 161). Water, isotonic drinks, Coca-Cola, fruit, energy bars, gels, sweet and savory snacks. Pasta party at summit finish.",
+      "cutoff_time": "Intermediate cutoffs enforced at key cols. Riders must maintain required pace to continue. Last finishers typically cross around 13 hours.",
+      "lat": 42.975,
+      "lng": -0.098,
+      "route_options": [
+        "Granfondo: 177 km (110 mi), 5,700 m gain — full event with 5 cols and summit finish",
+        "Défi du Tourmalet: 122 km (76 mi), 4,200 m gain — double Tourmalet with summit finish"
+      ]
+    },
+    "climate": {
+      "primary": "High Pyrenean mountain conditions with late-summer heat in valleys",
+      "description": "Late August in the Pyrenees delivers warm valley starts (18-25°C) that give way to exposed mountain conditions at the Tourmalet summit (2,115m), where temperatures can drop to 5-10°C with wind chill. Afternoon sun in the valleys between climbs can push 30°C+. The Pyrenees are marginally more temperate than the Alps in August, but thunderstorms build rapidly over the high peaks and can hit without warning.",
+      "challenges": [
+        "Tourmalet summit (2,115m): 5-10°C with wind, especially on early morning first ascent",
+        "Valley sections between cols: potentially 28-32°C in afternoon sun",
+        "Afternoon thunderstorms: rapid buildup over Pyrenean peaks, lightning at altitude",
+        "Two Tourmalet crossings means double exposure to summit weather — conditions can change between ascents"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Pyrenean mountain passes",
+      "surface": "Well-maintained French departmental roads (D-roads). All tarmac throughout. No gravel or unpaved sections. Road surfaces are generally good but some high-altitude sections above 1,800m can be rougher than their Alpine equivalents.",
+      "technical_rating": 1,
+      "features": [
+        "Col du Tourmalet (2,115m) — first ascent from west: 19 km at 7.4%, the most-crossed col in Tour de France history",
+        "Hourquette d'Ancizan (1,564m) — 10.4 km at 7.6%, a Category 1 Tour de France climb",
+        "Col d'Aspin (1,489m) — 11.6 km at 6.7%, a Tour classic since 1910",
+        "Col du Tourmalet (2,115m) — second ascent from east: 17 km at 7.4%, the psychological crux",
+        "Hautacam (1,629m) — 15 km at 7.9%, up to 14.4%, the summit finish with savage irregular gradients"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Stay in Argelès-Gazost (Hautacam finish years) or Luz-Saint-Sauveur (Luz Ardiden finish years) — both are charming Pyrenean spa towns with hotels and guesthouses at EUR80-150/night. Book 2-3 months ahead for event week. Lourdes (20 min drive) has abundant affordable accommodation if mountain towns are full. These are small villages, not mega-resorts — limited options but genuine Pyrenean character.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "The Marmotte Pyrénées is the event that cycling insiders know but the broader world has not fully discovered yet. On paper, it is the younger sister of the legendary Alpine Marmotte. In practice, it might be the harder ride. The numbers do not lie: 5,700m of climbing in 177 km gives it a higher elevation-per-kilometer ratio than the Alps. The double Tourmalet — climbing the most storied mountain in the Pyrenees from both sides in a single day — is an act of organized cruelty that, after 120 km, will have you questioning the sanity of the route designers. And then, when the Tourmalet has taken everything, they send you up Hautacam with its irregular gradients that refuse to let you find a rhythm.\n\nThe Pyrenees are darker, wilder, and less forgiving than the Alps, and this event embraces that character completely. Where the Alpine Marmotte finishes on the iconic 21 hairpins of Alpe d'Huez with crowds four deep, the Pyrénées edition sends you up a ski station road where the only witnesses are sheep and your own suffering. The Tourmalet at dawn, with mist rolling off the Pic du Midi and the road rising endlessly above the treeline, is one of cycling's great sensory experiences. Doing it a second time, 100 km later on legs that have already climbed three other mountain passes, is one of cycling's great tests of character.\n\nIf the Alpine Marmotte is the bucket-list mountain sportive, the Pyrénées edition is the insider's version — harder per kilometer, less crowded, and set against the wild, dark drama of the Tour de France's spiritual home. Give it ten more years and this event will be spoken about in the same breath as its Alpine sibling. For now, it remains the connoisseur's choice.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "Five Pyrenean cols. Double Tourmalet. 5,700m of climbing. Summit finish. The Marmotte's Pyrenean sister hits harder per kilometer than the Alpine original.",
+      "should_you_race": "Yes if you want the intensity of the Alpine Marmotte with more climbing per kilometer and fewer crowds. Yes if the Tourmalet means something to you — doing it twice in one day is a career cycling memory. Skip if you want the prestige and global atmosphere of the Alpine original. Skip if you need technical terrain — this is pure road climbing on tarmac.",
+      "alternatives": [
+        "La Marmotte Granfondo Alpes — the original Alpine experience with Galibier and Alpe d'Huez finish",
+        "L'Etape du Tour — when the Tour route visits the Pyrenees, same legendary cols",
+        "Tour du Mont-Blanc Cyclo — maximum climbing in a single day across three countries"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://marmottegranfondopyrenees.com/en/",
+        "category": "official",
+        "label": "Marmotte Granfondo Pyrénées — Official Site"
+      },
+      {
+        "url": "https://marmottegranfondopyrenees.com/en/granfondo/",
+        "category": "official",
+        "label": "Marmotte Granfondo Pyrénées Granfondo Route — Official"
+      },
+      {
+        "url": "https://marmottegranfondopyrenees.com/en/defi-du-tourmalet/",
+        "category": "official",
+        "label": "Marmotte Granfondo Pyrénées Défi du Tourmalet — Official"
+      },
+      {
+        "url": "https://www.alpinecols.com/the-marmotte-granfondo-pyrenees/",
+        "category": "review",
+        "label": "The Marmotte GranFondo Pyrenees — Alpine Cols"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/marmotte-granfondo-pyrenees-sportive-second-helping",
+        "category": "review",
+        "label": "Marmotte Granfondo Pyrenees: Second Helping — Cyclist Magazine"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5525/look-marmotte-gran-fondo-pyrenees",
+        "category": "reference",
+        "label": "Look Marmotte Gran Fondo Pyrénées — Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.granfondo.com/cycling/521559/marmotte-adds-monster-in-pyrenees-to-gran-fondo-series",
+        "category": "reference",
+        "label": "Marmotte Adds Monster in Pyrenees to Gran Fondo Series — GranFondo.com"
+      },
+      {
+        "url": "https://en.3bikes.fr/2023/08/24/cyclosport-la-marmotte-pyrenees-le-parcours-en-detail/",
+        "category": "review",
+        "label": "La Marmotte Pyrénées, the route in detail — 3bikes.fr"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/france/marmotte-granfondo-pyrenees/40535",
+        "category": "reference",
+        "label": "Marmotte Granfondo Pyrénées — Cycloworld"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Col_du_Tourmalet",
+        "category": "reference",
+        "label": "Col du Tourmalet — Wikipedia"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Marmotte Granfondo Pyrenees gran fondo cycling Argelès-Gazost / Luz-Saint-Sauveur",
+      "videos": [
+        {
+          "video_id": "URn-LGBea-E",
+          "title": "Marmotte Pyrenees 2017 - Tourmalet to Luz St Saveur",
+          "channel": "Dave Chalk",
+          "view_count": 615,
+          "upload_date": "20170830",
+          "duration_string": "11:54",
+          "description": "The descent from Col du Tourmalet (2115m) to Luz St Saveur (740m) during the Marmotte Pyrenees on Sunday 27th August 2017.",
+          "tags": [
+            "Marmotte",
+            "Pyrenees",
+            "Cycling",
+            "Sportive",
+            "Tourmalet",
+            "Luz St Saveur",
+            "Sussex Nomads",
+            "Cycling Centurions",
+            "Marmotte Pyrenees",
+            "Montain Descent",
+            "Col du Tourmalet"
+          ],
+          "url": "https://www.youtube.com/watch?v=URn-LGBea-E",
+          "curated": true,
+          "curation_reason": "First-person race footage showing the key descent from Col du Tourmalet to the finish in Luz Saint Sauveur.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/URn-LGBea-E/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        },
+        {
+          "video_id": "uMwyFiIUAbc",
+          "title": "Course Look Marmotte Granfondo Pyrénées 2018",
+          "channel": "Luz Tourisme",
+          "view_count": 900,
+          "upload_date": "20180912",
+          "duration_string": "1:37",
+          "description": "Vidéo tournée pendant la troisième édition de la course cyclosportive Look Marmotte Granfondo Pyrénées 2018 qui s'est déroulée le dimanche 26 août au départ d'Argelès Gazost et à l'arrivée de Luz Ardiden.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=uMwyFiIUAbc",
+          "transcript": "it's beautiful I like their dates it's a\nnice experience\n[Music]\nmechanical sounds the points to your\ncastle",
+          "curated": false
+        },
+        {
+          "video_id": "JBvnC4AreHg",
+          "title": "Col du Tourmalet descent to Campan",
+          "channel": "Ted Jones",
+          "view_count": 160,
+          "upload_date": "20170829",
+          "duration_string": "20:01",
+          "description": "La Marmotte Granfondo Pyrénées \nAugust 27, 2017",
+          "tags": [
+            "cycling",
+            "marmotte",
+            "pyrenees"
+          ],
+          "url": "https://www.youtube.com/watch?v=JBvnC4AreHg",
+          "curated": false
+        },
+        {
+          "video_id": "teM6_ipn14c",
+          "title": "Luz Saint Sauveur  . hautes pyrénées",
+          "channel": "hp65dan",
+          "view_count": 766,
+          "upload_date": "20210318",
+          "duration_string": "5:53",
+          "description": "Longtemps dénommée simplement Luz, la ville a pris son nom actuel de Luz-Saint-Sauveur le 9 avril 1962.",
+          "tags": [
+            "luz hautes pyrénées luz saint sauveur luz#hp65dan ville pyrénées",
+            "pyrénées"
+          ],
+          "url": "https://www.youtube.com/watch?v=teM6_ipn14c",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The available transcript content for the Marmotte Granfondo Pyrénées is extremely limited, containing only brief fragments mentioning that it's a beautiful experience with mechanical sounds. The transcript appears to be incomplete or heavily fragmented, providing insufficient information about the 110-mile course through the Hautes-Pyrénées region of France with its 18,701 feet of elevation gain. No specific details about course features, terrain conditions, key challenges, or race atmosphere are discernible from the available content."
+      }
+    }
+  }
+}

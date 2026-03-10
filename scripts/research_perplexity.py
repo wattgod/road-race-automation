@@ -1,0 +1,231 @@
+#!/usr/bin/env python3
+"""
+Research a gravel race using Perplexity API (sonar-deep-research).
+
+Better web research than Claude, then Claude synthesizes.
+"""
+
+import argparse
+import requests
+import os
+from pathlib import Path
+from datetime import datetime
+
+
+def research_race_perplexity(race_name: str, folder: str):
+    api_key = os.environ.get("PERPLEXITY_API_KEY")
+    if not api_key:
+        raise ValueError("PERPLEXITY_API_KEY not set. Add it to GitHub Secrets.")
+    
+    # Validate API key format (should start with pplx-)
+    api_key = api_key.strip()
+    if not api_key.startswith("pplx-"):
+        raise ValueError(
+            f"Invalid Perplexity API key format. "
+            f"Keys should start with 'pplx-'. Got: {api_key[:15]}...\n"
+            f"Get your API key from: https://www.perplexity.ai/settings/api"
+        )
+    
+    prompt = f"""
+Research the {race_name} gravel race comprehensively. I need SPECIFIC, CITED information for a training plan product.
+
+SEARCH AND REPORT ON:
+
+1. OFFICIAL DATA
+- Distance, elevation, date, field size, entry cost, cutoffs, aid stations
+- Include the official website URL
+
+2. COURSE & TERRAIN  
+- Surface types with percentages if available
+- Technical sections with mile markers
+- Notable climbs (names, gradients, lengths)
+- Known problem areas (sand, mud, rock gardens - where specifically)
+
+3. WEATHER HISTORY
+- Actual conditions from specific past years (2024, 2023, 2022)
+- Temperature ranges, incidents, what went wrong
+- Not general climate - specific race day history
+
+4. REDDIT DEEP DIVE
+- Search r/gravelcycling, r/cycling, r/Velo for "{race_name}"
+- Extract exact quotes with usernames: "quote" - u/username
+- Include thread URLs
+
+5. TRAINERROAD FORUM
+- Search for {race_name} threads
+- Training discussions, race reports, equipment threads
+- Include URLs
+
+6. YOUTUBE RACE REPORTS
+- Find race report videos
+- Note key insights from videos AND comments
+- Include video URLs
+
+7. SUFFERING ZONES
+- Specific mile markers where people break
+- What happens at each location
+- Source for each claim
+
+8. DNF DATA
+- DNF rates by year if available
+- Common reasons people quit
+- Where people miss cutoffs
+
+9. EQUIPMENT CONSENSUS
+- Tire widths and treads people recommend
+- Pressure recommendations
+- Gearing debates
+- What people wish they'd brought
+
+10. LOGISTICS
+- Nearest airport
+- Lodging situation (book how far ahead?)
+- Parking
+- Packet pickup notes
+- Local tips
+
+11. "WHAT I WISH I KNEW" QUOTES
+- Direct quotes from people who've done it
+- The brutal honest insights
+
+OUTPUT REQUIREMENTS:
+- Minimum 2000 words
+- Include source URLs after each major claim
+- Include at least 5 Reddit thread URLs
+- Include at least 3 YouTube video URLs
+- Exact quotes with attribution, not paraphrases
+- Specific mile markers, percentages, numbers - not vague descriptions
+"""
+
+    print(f"Researching {race_name} with Perplexity...")
+    
+    response = requests.post(
+        "https://api.perplexity.ai/chat/completions",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "sonar-deep-research",  # Their best research model
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a thorough researcher. Always include source URLs. Be specific, not generic."
+                },
+                {
+                    "role": "user", 
+                    "content": prompt
+                }
+            ],
+            "max_tokens": 8000,
+            "temperature": 0.1,  # Low temp for factual research
+        },
+        timeout=300  # Deep research can take a few minutes
+    )
+    
+    if response.status_code != 200:
+        error_msg = response.text[:500]  # Limit error message length
+        if response.status_code == 401:
+            raise Exception(
+                f"Perplexity API authentication failed (401).\n"
+                f"Check that:\n"
+                f"  1. API key is valid and not expired\n"
+                f"  2. API key format is correct (should start with 'pplx-')\n"
+                f"  3. API key is correctly set in GitHub Secrets as PERPLEXITY_API_KEY\n"
+                f"  4. You have active credits/balance in your Perplexity account\n"
+                f"\nResponse: {error_msg}"
+            )
+        else:
+            raise Exception(f"Perplexity API error: {response.status_code} - {error_msg}")
+    
+    data = response.json()
+    research_content = data["choices"][0]["message"]["content"]
+    
+    # Check if Perplexity returned citations separately
+    # Perplexity may include citations in response.citations or similar
+    citations = []
+    if "citations" in data:
+        citations = data["citations"]
+    elif "choices" in data and len(data["choices"]) > 0:
+        choice = data["choices"][0]
+        if "citations" in choice:
+            citations = choice["citations"]
+        elif "message" in choice and "citations" in choice["message"]:
+            citations = choice["message"]["citations"]
+    
+    # If citations found, append them to content
+    if citations:
+        research_content += "\n\n## CITATIONS\n\n"
+        for i, citation in enumerate(citations, 1):
+            if isinstance(citation, dict):
+                url = citation.get("url", citation.get("link", str(citation)))
+                title = citation.get("title", "")
+                if title:
+                    research_content += f"{i}. [{title}]({url})\n"
+                else:
+                    research_content += f"{i}. {url}\n"
+            else:
+                research_content += f"{i}. {citation}\n"
+    
+    # Debug: Print response structure to understand format
+    print(f"Response keys: {list(data.keys())}")
+    if "choices" in data and len(data["choices"]) > 0:
+        choice_keys = list(data["choices"][0].keys())
+        print(f"Choice keys: {choice_keys}")
+        if "message" in data["choices"][0]:
+            msg_keys = list(data["choices"][0]["message"].keys())
+            print(f"Message keys: {msg_keys}")
+    
+    # Add metadata
+    output = f"""---
+race: {race_name}
+folder: {folder}
+researched_at: {datetime.now().isoformat()}
+model: perplexity/sonar-deep-research
+---
+
+# {race_name.upper()} - RAW RESEARCH DUMP
+
+{research_content}
+"""
+    
+    # Save
+    output_path = Path(f"research-dumps/{folder}-raw.md")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(output)
+    
+    word_count = len(research_content.split())
+    # Count URLs more accurately (http:// or https://)
+    import re
+    url_pattern = r'https?://[^\s\)\]\"\'<>]+'
+    urls = re.findall(url_pattern, research_content)
+    url_count = len(urls)
+    
+    print(f"✓ Research saved to {output_path}")
+    print(f"  Words: {word_count}")
+    print(f"  URLs: {url_count} (found: {', '.join(urls[:5])}{'...' if len(urls) > 5 else ''})")
+    
+    # Run quality checks
+    try:
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent))
+        from quality_gates import run_all_quality_checks
+        results = run_all_quality_checks(research_content, "research")
+        if not results["overall_passed"]:
+            print(f"⚠️  Quality issues detected:")
+            for name in results["critical_failures"]:
+                print(f"   - {name}: {results['checks'][name]}")
+    except Exception as e:
+        print(f"⚠️  Quality check failed: {e}")
+    
+    return output_path
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--race", required=True, help="Race name")
+    parser.add_argument("--folder", required=True, help="Output folder name")
+    args = parser.parse_args()
+    
+    research_race_perplexity(args.race, args.folder)
+

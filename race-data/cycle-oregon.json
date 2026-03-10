@@ -1,0 +1,158 @@
+{
+  "race": {
+    "name": "Cycle Oregon",
+    "slug": "cycle-oregon",
+    "display_name": "Cycle Oregon — Rally",
+    "tagline": "Oregon's premier multi-day bicycle touring event. Since 1988. Five days through Oregon's most spectacular landscapes. Fully supported. Route changes every year.",
+    "vitals": {
+      "distance_km": 482.8,
+      "distance_mi": 300.0,
+      "elevation_m": 5182,
+      "elevation_ft": 17000.0,
+      "location": "Southern Oregon — Grants Pass and Jacksonville basecamps (2026). Route and region change annually.",
+      "location_badge": "OREGON, USA",
+      "country": null,
+      "date": "Late August to early September annually",
+      "date_specific": "2026: August 28 – September 2 (Grants Pass / Jacksonville, Southern Oregon)",
+      "field_size": "~600 riders (Rally format, capped registration)",
+      "start_format": null,
+      "registration": "Online at cycleoregon.com. Early bird registration opens November with discounts. Standard registration opens January. Limited to ~600 riders.",
+      "entry_fee": "~$1,400-1,600",
+      "feed_zones": "Multiple on-route rest stops each day with snacks, refreshments, and mechanical support. SAG vehicles on course. On-road medics.",
+      "cutoff_time": "None formal. Ride at your own pace. SAG support available.",
+      "lat": 42.439,
+      "lng": -123.328,
+      "route_options": [
+        "Short option: ~190 miles / 9,000 ft elevation over 5 days",
+        "Main route: ~250 miles / 13,000 ft over 5 days",
+        "Long option: ~300 miles / 17,000 ft over 5 days",
+        "Daily gravel options available alongside paved routes"
+      ]
+    },
+    "climate": {
+      "primary": "Late-summer Oregon — warm, dry, golden light",
+      "description": "Late August and early September in Southern Oregon brings warm, dry conditions. Daily highs around 77-86F (25-30C) with cool mornings in the low 50s F (10C). Oregon's dry season means rain is unlikely. Smoke from late-summer wildfires is an occasional concern. UV exposure is significant on open roads.",
+      "challenges": [
+        "Warm afternoon temperatures reaching 85F+ in Southern Oregon valleys",
+        "Cool mornings — 50F at dawn, requiring layers for early starts",
+        "Potential wildfire smoke — Oregon late summer carries this risk annually",
+        "Strong afternoon sun exposure on open valley roads",
+        "Dry air — dehydration risk is higher than humidity-accustomed riders expect"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Oregon back roads with optional gravel",
+      "surface": "Predominantly paved county roads and state highways through varied Oregon landscapes. Each year features a different region. Optional gravel segments available for riders seeking mixed-surface adventure. Roads range from valley floor to forested mountain passes.",
+      "technical_rating": 1,
+      "features": [
+        "Route changes every year — each edition explores a different Oregon region",
+        "Vineyard-dotted valleys and Applegate Trail roads (2026)",
+        "Forested ridgeline climbs through national forests",
+        "Optional gravel segments for mixed-surface riding",
+        "Multiple daily distance options: short, main, and long routes"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 5,
+      "prestige": 3,
+      "field_depth": 1,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Camping with showers is included in the registration fee. Basecamps are at established community facilities (fairgrounds, parks). For those who prefer indoor accommodation, nearby hotels in Grants Pass and Jacksonville exist but are not part of the event infrastructure — book well in advance. The camping experience is integral to the Cycle Oregon community; most veterans camp.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Cycle Oregon is Oregon distilled into a cycling event. Since 1988, this nonprofit organization has been taking riders into the corners of Oregon that most Oregonians have never seen — the Wallowa Mountains, the Applegate Valley, the high desert, the coast — and doing it with a level of care and support that turns five days on a bike into something approaching a life experience. The 2023 sunset of the legendary 7-day Classic was a genuine loss for American cycling, but the 5-day Rally format preserves the essence: a rolling community of 600 riders exploring Oregon's most spectacular landscapes, fully supported, with meals and camping and live music and the camaraderie that only comes from sharing the road for multiple days.\n\nThe price tag is real — $1,400-1,600 is not casual money — but what you get is five days of worry-free riding through terrain that will rearrange your understanding of Oregon. The route changes every year, meaning you could do Cycle Oregon for a decade and never repeat a mile. The Cycle Oregon Fund has donated millions to the rural communities that host the event, so your registration dollars are doing genuine good. The community is warm, the organization is impeccable, and the landscapes are world-class. If you want to race, go somewhere else. If you want to ride through one of the most beautiful states in America with 600 people who feel the same way, Cycle Oregon is it.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "Oregon's iconic multi-day touring event. 600 riders. Five days. A different Oregon every year.",
+      "should_you_race": "You do not race Cycle Oregon — you experience it. Yes if you want a premium, fully supported multi-day cycling tour through some of the most beautiful scenery in the American West. Yes if you value community, adventure, and discovery over competition. Skip if you need a competitive event, if the $1,400+ price tag is prohibitive, or if you want a massive social scene (600 riders is intimate, not a festival).",
+      "alternatives": [
+        "RAGBRAI — America's largest multi-day ride: 10,000 riders, 7 days across Iowa, $200. The festival version.",
+        "Ride the Rockies — Colorado's multi-day mountain tour (now defunct, spiritual successor Colorado's Ride). Higher elevation, similar format.",
+        "Seattle to Portland — Pacific Northwest single-day mass-participation ride. Same region, different format.",
+        "Haute Route Alps — If you want multi-day with competitive edge and European mountains."
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://cycleoregon.com/",
+        "category": "official",
+        "label": "Cycle Oregon — Official Site"
+      },
+      {
+        "url": "https://cycleoregon.com/ride/rally/",
+        "category": "official",
+        "label": "Cycle Oregon Rally 2026"
+      },
+      {
+        "url": "https://www.oregonencyclopedia.org/articles/cycle_oregon/",
+        "category": "reference",
+        "label": "Cycle Oregon — Oregon Encyclopedia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Cycle_Oregon",
+        "category": "reference",
+        "label": "Cycle Oregon — Wikipedia"
+      },
+      {
+        "url": "https://traveloregon.com/things-to-do/outdoor-recreation/bicycling/epic-history-cycle-oregon/",
+        "category": "reference",
+        "label": "The Epic History of Cycle Oregon — Travel Oregon"
+      },
+      {
+        "url": "https://cycleoregon.com/ride-archive/",
+        "category": "reference",
+        "label": "Cycle Oregon Ride Archive"
+      }
+    ]
+  }
+}

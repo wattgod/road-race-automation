@@ -1,0 +1,138 @@
+{
+  "race": {
+    "name": "Dartmoor Legend Ultra Sportive",
+    "slug": "dartmoor-legend-ultra",
+    "display_name": "Dartmoor Legend Ultra Sportive",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 321.9,
+      "distance_mi": 200.0,
+      "elevation_m": 6005,
+      "elevation_ft": 19700.0,
+      "location": "Exeter Racecourse, Kennford, Exeter, Devon, EX6 7XS, England",
+      "location_badge": "Exeter Racecourse, England",
+      "country": "England",
+      "date": "2026: July 11",
+      "date_specific": "2026: July 11",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Southwest England summer with Dartmoor microclimate. Mild temps but sudden rain, fog, and headwinds common.",
+      "challenges": [
+        "Precipitation: 40%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Brutal figure-eight through Dartmoor National Park featuring iconic granite climbs, coastal roads, and remote moorland traverses. Riders pass Postbridge feedstation three times, Princetown twice, creating rhythm of suffering and recovery across Devon's wild interior.",
+      "signature_challenge": "19-hour time limit from 5AM to midnight averaging 10.5mph including all stops - Dartmoor takes no prisoners.",
+      "suffering_zones": [
+        "Haytor Climb: Iconic Dartmoor granite tor ascent - relentless gradients through exposed moorland.",
+        "Princetown Triple Passage: Passing through remote prison town three times with pace clock pressure each visit.",
+        "Postbridge Bag Drop Loop: Main feedstation visited three times - psychological checkpoint amid accumulating fatigue.",
+        "Coastal Rollercoaster: Exmouth to Dawlish undulating seaside roads - deceptive after moorland brutality."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Camping available at event village. Exeter hotels 5 miles away. Local B&Bs in Kennford.",
+      "transport": "Exeter Racecourse HQ just off M5/A38 junction. 5AM mass start, 19-hour cutoff to midnight. Bag drop at Postbridge feedstation. GPS tracking enables dot-watching. Free parking, camping available.",
+      "food": "",
+      "official_site": "https://sportivaevents.co.uk/events/dartmoor-legend/"
+    },
+    "history": {
+      "founded": 2012,
+      "origin_story": "Part of Moor to Sea Sportive revival. Dartmoor Legend established as UK's toughest one-day sportive, claiming superiority over Yorkshire Beast and Dragon Ride.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "UK's definitive ultra sportive - 200 miles of Dartmoor savagery.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://sportivaevents.co.uk/events/dartmoor-legend/",
+        "category": "reference",
+        "label": "Dartmoor Legend Ultra - Sportiva Events"
+      },
+      {
+        "url": "https://sportivaevents.clubtrac.co.uk/e/moor-to-sea-and-dartmoor-legend-7613",
+        "category": "reference",
+        "label": "Moor to Sea & Dartmoor Legend - Sportiva Events"
+      },
+      {
+        "url": "https://www.timeoutdoors.com/events/dartmoor-legend-ultra",
+        "category": "reference",
+        "label": "Dartmoor Legend Ultra | Sat 11 Jul 2026 - TimeOutdoors"
+      },
+      {
+        "url": "https://findarace.com/events/moor-to-sea-dartmoor-legend",
+        "category": "reference",
+        "label": "Moor to Sea & Dartmoor Legend 2026 | Sat 11 Jul | Book @ Findarace"
+      },
+      {
+        "url": "https://surreycyclingclub.co.uk/blog/dartmoor-legend-ultra-how-bad-can-318k-be/",
+        "category": "editorial",
+        "label": "Dartmoor Legend Ultra 2025 - Surrey Cycling Club"
+      }
+    ]
+  }
+}

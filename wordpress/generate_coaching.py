@@ -1,0 +1,1335 @@
+#!/usr/bin/env python3
+"""
+Generate the Road Labs Coaching landing page in neo-brutalist style.
+
+Consolidates both service tiers (Custom Training Plans + 1:1 Coaching) into
+a single conversion-optimized page at /coaching/. Replaces the old WordPress/
+Elementor page and the non-brand-compliant /training-plans/ page.
+
+Uses brand tokens exclusively — zero hardcoded hex, no border-radius, no
+box-shadow, no bounce easing, no entrance animations.
+
+Usage:
+    python generate_coaching.py
+    python generate_coaching.py --output-dir ./output
+"""
+
+import argparse
+import html
+import json
+from pathlib import Path
+
+from generate_neo_brutalist import (
+    SITE_BASE_URL,
+    get_page_css,
+    build_inline_js,
+    write_shared_assets,
+)
+from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
+from shared_footer import get_mega_footer_html
+from shared_header import get_site_header_html
+from cookie_consent import get_consent_banner_html
+from generate_about import _testimonial_data
+
+OUTPUT_DIR = Path(__file__).parent / "output"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# ── Constants ─────────────────────────────────────────────────
+
+QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/coaching/apply/"
+
+
+def esc(text) -> str:
+    """HTML-escape a string."""
+    return html.escape(str(text)) if text else ""
+
+
+# ── Page sections ─────────────────────────────────────────────
+
+
+def build_nav() -> str:
+    return get_site_header_html(active="services") + f'''
+  <div class="rl-breadcrumb">
+    <a href="{SITE_BASE_URL}/">Home</a>
+    <span class="rl-breadcrumb-sep">&rsaquo;</span>
+    <span class="rl-breadcrumb-current">Coaching</span>
+  </div>'''
+
+
+def build_hero() -> str:
+    return f'''<div class="rl-hero rl-coach-hero" id="hero">
+    <div class="rl-hero-tier" style="background:var(--rl-color-gold)">COACHING</div>
+    <h1>You&#39;re a Person, Not a Spreadsheet.</h1>
+    <p class="rl-hero-tagline">Coaching is a relationship. Someone who knows your history, reads your data, and adjusts when life gets in the way. That&#39;s what this is.</p>
+    <div class="rl-coach-hero-cta">
+      <a href="{QUESTIONNAIRE_URL}" class="rl-coach-btn rl-coach-btn--gold" data-cta="hero_apply">APPLY NOW</a>
+      <a href="#how-it-works" class="rl-coach-btn rl-coach-btn--secondary" data-cta="hero_how_it_works">SEE HOW IT WORKS</a>
+    </div>
+    <p class="rl-coach-stat-line">Juniors. Pros. Masters. If you can pedal, I can help.</p>
+  </div>'''
+
+
+def build_problem() -> str:
+    return '''<div class="rl-section" id="problem">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">01</span>
+      <h2 class="rl-section-title">The Limits of Going It Alone</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-quotes">
+        <blockquote class="rl-coach-quote">
+          <p>You&#39;ve been training by feel for years. Sometimes it works. Mostly you blow up at mile 80 and can&#39;t figure out why. Meanwhile, the rider who passed you at mile 60 had a plan for that exact section.</p>
+        </blockquote>
+        <blockquote class="rl-coach-quote">
+          <p>You downloaded a plan from an app. It didn&#39;t know about your hip flexor, your newborn, or that your work calls run past 6 on Tuesdays. You paid for structure and got a spreadsheet.</p>
+        </blockquote>
+        <blockquote class="rl-coach-quote">
+          <p>You know more about cycling than most people. But knowing and executing are different skills. Every hour you train without direction is an hour you can&#39;t get back. A coach closes that gap.</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_service_tiers() -> str:
+    return f'''<div class="rl-section" id="tiers">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">02</span>
+      <h2 class="rl-section-title">Same Coach. Same Standards. Different Involvement.</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-tiers">
+        <div class="rl-coach-tier-card">
+          <div class="rl-coach-tier-header">$199<span class="rl-coach-tier-interval">/4 WK</span></div>
+          <h3>Min</h3>
+          <p class="rl-coach-tier-cadence">Weekly review &middot; Light analysis &middot; Quarterly calls</p>
+          <p class="rl-coach-tier-desc">For experienced athletes who execute without hand-holding.</p>
+          <ul class="rl-coach-tier-list">
+            <li>Weekly training review</li>
+            <li>Light file analysis</li>
+            <li>Quarterly strategy calls</li>
+            <li>Structured .zwo workouts</li>
+            <li>Race-optimized nutrition plan</li>
+            <li>Custom training guide</li>
+          </ul>
+          <a href="{QUESTIONNAIRE_URL}?tier=min" class="rl-coach-btn rl-coach-btn--gold" data-cta="tier_min">GET STARTED</a>
+        </div>
+        <div class="rl-coach-tier-card rl-coach-tier-card--featured">
+          <div class="rl-coach-tier-header rl-coach-tier-header--gold">$299<span class="rl-coach-tier-interval">/4 WK</span></div>
+          <h3>Mid</h3>
+          <p class="rl-coach-tier-cadence">Weekly review &middot; Thorough analysis &middot; Every-4-week calls</p>
+          <p class="rl-coach-tier-desc">For serious athletes who want clear feedback + weekly adjustments.</p>
+          <ul class="rl-coach-tier-list">
+            <li>Everything in Min</li>
+            <li>Thorough file analysis (WKO)</li>
+            <li>Every-4-week strategy calls</li>
+            <li>Weekly plan adjustments</li>
+            <li>Direct message access</li>
+            <li>Blindspot detection</li>
+          </ul>
+          <a href="{QUESTIONNAIRE_URL}?tier=mid" class="rl-coach-btn rl-coach-btn--gold" data-cta="tier_mid">GET STARTED</a>
+        </div>
+        <div class="rl-coach-tier-card">
+          <div class="rl-coach-tier-header">$1,200<span class="rl-coach-tier-interval">/4 WK</span></div>
+          <h3>Max</h3>
+          <p class="rl-coach-tier-cadence">Daily review &middot; Extensive support &middot; On-demand calls</p>
+          <p class="rl-coach-tier-desc">For athletes who want immediate feedback + high-touch support.</p>
+          <ul class="rl-coach-tier-list">
+            <li>Everything in Mid</li>
+            <li>Daily file review</li>
+            <li>On-demand calls</li>
+            <li>Race-week strategy</li>
+            <li>Multi-race season planning</li>
+            <li>Priority response</li>
+          </ul>
+          <a href="{QUESTIONNAIRE_URL}?tier=max" class="rl-coach-btn rl-coach-btn--gold" data-cta="tier_max">GET STARTED</a>
+        </div>
+      </div>
+      <p class="rl-coach-tier-disclaimer">If you skip workouts, underfuel, or ignore feedback, no tier fixes that. I&#39;ll tell you within 24 hours if it&#39;s not a fit.</p>
+      <p class="rl-coach-tier-setup-fee">All tiers include a one-time $99 setup fee covering intake analysis, training history review, and initial plan setup.</p>
+      <p class="rl-coach-tier-context">Mid tier at 5 rides a week: $299 &divide; 20 rides = $14.95/ride. That&#39;s less than a pair of brake pads and worth more than every Strava KOM you&#39;ve lost by 12 seconds.</p>
+    </div>
+  </div>'''
+
+
+def build_deliverables() -> str:
+    return '''<div class="rl-section" id="deliverables">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">03</span>
+      <h2 class="rl-section-title">What Coaching Looks Like</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-deliverables">
+        <div class="rl-coach-deliverable">
+          <div class="rl-coach-deliverable-num">01</div>
+          <div class="rl-coach-deliverable-content">
+            <h3>I Read Your File. Not a Summary of It.</h3>
+            <p>A person looks at your ride data, not a dashboard. I see the interval you bailed on and ask why. Software flags a number. I flag a pattern. That pattern is usually what&#39;s standing between you and your next finish line.</p>
+          </div>
+        </div>
+        <div class="rl-coach-deliverable">
+          <div class="rl-coach-deliverable-num">02</div>
+          <div class="rl-coach-deliverable-content">
+            <h3>Your Plan Changes When Your Life Does</h3>
+            <p>Kid got sick. Work trip. Tweaked your knee. I adjust the plan that week &mdash; not after you fail to hit targets for three weeks and an algorithm notices. You don&#39;t lose a training block. You adapt in real time.</p>
+          </div>
+        </div>
+        <div class="rl-coach-deliverable">
+          <div class="rl-coach-deliverable-num">03</div>
+          <div class="rl-coach-deliverable-content">
+            <h3>Honest Feedback You Can&#39;t Get From a Prompt</h3>
+            <p>You don&#39;t need a motivational paragraph generated in 2 seconds. You need someone who knows you well enough to say &#34;you&#39;re sandbagging&#34; or &#34;you need a rest week and you won&#39;t take one.&#34;</p>
+          </div>
+        </div>
+        <div class="rl-coach-deliverable">
+          <div class="rl-coach-deliverable-num">04</div>
+          <div class="rl-coach-deliverable-content">
+            <h3>I Know What It Feels Like</h3>
+            <p>I&#39;ve blown up at mile 80. I&#39;ve overtrained into a hole. I&#39;ve raced sick because I was too stubborn to DNS. That context doesn&#39;t come from a training model &mdash; it comes from years on the bike.</p>
+          </div>
+        </div>
+        <div class="rl-coach-deliverable">
+          <div class="rl-coach-deliverable-num">05</div>
+          <div class="rl-coach-deliverable-content">
+            <h3>Race Strategy From Someone Who&#39;s Studied the Course</h3>
+            <p>328 races in the database. Suffering zones, terrain breakdowns, altitude warnings, segment-by-segment pacing. Your race-day plan isn&#39;t a guess &mdash; it&#39;s built from data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_how_it_works() -> str:
+    return f'''<div class="rl-section" id="how-it-works">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">04</span>
+      <h2 class="rl-section-title">How It Works</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-steps">
+        <div class="rl-coach-step">
+          <div class="rl-coach-step-num">01</div>
+          <div class="rl-coach-step-body">
+            <h3>Fill Out the Intake</h3>
+            <p>12-section questionnaire. Your race. Your hours. Your history. Your constraints. Be honest &mdash; the more I know, the better this works.</p>
+          </div>
+        </div>
+        <div class="rl-coach-step">
+          <div class="rl-coach-step-num">02</div>
+          <div class="rl-coach-step-body">
+            <h3>We Align on a Plan</h3>
+            <p>I review your intake, identify blindspots, and build your first training block. You&#39;ll hear from me within 48 hours.</p>
+          </div>
+        </div>
+        <div class="rl-coach-step">
+          <div class="rl-coach-step-num">03</div>
+          <div class="rl-coach-step-body">
+            <h3>We Train Together</h3>
+            <p>Weekly check-ins. Plan adjustments. Direct access when something comes up. This isn&#39;t set-and-forget.</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:var(--rl-spacing-lg)">
+        <a href="{QUESTIONNAIRE_URL}" class="rl-coach-btn rl-coach-btn--gold" data-cta="how_it_works_cta">START THE CONVERSATION</a>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_testimonials() -> str:
+    testimonials = _testimonial_data()
+    cards = []
+    for name, quote, meta in testimonials:
+        cards.append(
+            f'<blockquote class="rl-coach-testimonial">'
+            f'<p>{esc(quote)}</p>'
+            f'<footer><strong>{esc(name)}</strong>'
+            f'<span class="rl-coach-testimonial-meta">{meta}</span>'
+            f'</footer></blockquote>'
+        )
+    inner = "\n        ".join(cards)
+    return f'''<div class="rl-section" id="results">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">05</span>
+      <h2 class="rl-section-title">What Athletes Say</h2>
+
+    </div>
+    <div class="rl-section-body" style="position:relative">
+      <div class="rl-coach-carousel" id="rl-coach-carousel">
+        <div class="rl-coach-carousel-track">
+        {inner}
+        </div>
+      </div>
+      <div class="rl-coach-carousel-nav">
+        <button class="rl-coach-carousel-btn" id="rl-coach-prev" aria-label="Previous testimonials">&larr;</button>
+        <span class="rl-coach-carousel-count" id="rl-coach-count" aria-live="polite"></span>
+        <button class="rl-coach-carousel-btn" id="rl-coach-next" aria-label="Next testimonials">&rarr;</button>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_honest_check() -> str:
+    return '''<div class="rl-section" id="honest-check">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">06</span>
+      <h2 class="rl-section-title">Honest Check</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-audience">
+        <div class="rl-coach-audience-col">
+          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--yes">Coaching Is For You If:</h3>
+          <ul class="rl-coach-audience-list rl-coach-list--yes">
+            <li>You want someone invested in your outcome</li>
+            <li>You&#39;re tired of guessing</li>
+            <li>You&#39;ll do the work if someone shows you what to do</li>
+            <li>You have a race and a reason</li>
+            <li>You&#39;re ready to be honest about your habits</li>
+            <li>You&#39;ve invested in the bike &mdash; now you&#39;re ready to invest in the engine</li>
+          </ul>
+        </div>
+        <div class="rl-coach-audience-col">
+          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--no">Coaching Isn&#39;t For You If:</h3>
+          <ul class="rl-coach-audience-list rl-coach-list--no">
+            <li>You just want a file and don&#39;t want to talk to anyone</li>
+            <li>You&#39;re not willing to change anything</li>
+            <li>Your race is next week</li>
+            <li>You want validation, not honesty</li>
+            <li>You think a faster bike is the answer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_faq() -> str:
+    faqs = [
+        (
+            "What&#39;s the difference between a plan and coaching?",
+            "A plan is a document. Coaching is a relationship. The plan changes when your life changes.",
+        ),
+        (
+            "How often will I hear from you?",
+            "Weekly minimum. More during race week. You can message me anytime.",
+        ),
+        (
+            "Do I need a power meter?",
+            "Not required. Every workout includes RPE targets so you can train by feel. But a power meter is strongly recommended &mdash; watt targets remove guesswork entirely. Heart rate works as a middle ground.",
+        ),
+        (
+            "What if I miss workouts?",
+            "Life happens. I adjust. The plan serves you, not the other way around.",
+        ),
+        (
+            "How do I know if coaching is working?",
+            "We set baselines at intake. We track progress against them. You&#39;ll know.",
+        ),
+        (
+            "What&#39;s the time commitment?",
+            "The training you&#39;re already doing, but smarter. I&#39;m not adding hours &mdash; I&#39;m making the ones you have count.",
+        ),
+        (
+            "What&#39;s the $99 setup fee?",
+            "It covers intake analysis, training history review, and building your initial plan. It&#39;s a one-time charge on top of your first billing cycle. After that, it&#39;s just the recurring rate.",
+        ),
+        (
+            "Can I cancel anytime?",
+            "Yes. No contracts, no cancellation fees. You can cancel at any time from your billing portal. Your coaching access continues through the end of your current 4-week cycle.",
+        ),
+    ]
+
+    items = []
+    for idx, (q, a) in enumerate(faqs):
+        ans_id = f'rl-coach-faq-ans-{idx}'
+        items.append(
+            f'<div class="rl-coach-faq-item">'
+            f'<div class="rl-coach-faq-q" role="button" tabindex="0" aria-expanded="false" aria-controls="{ans_id}">'
+            f'{q}'
+            f'<span class="rl-coach-faq-toggle" aria-hidden="true">+</span>'
+            f'</div>'
+            f'<div class="rl-coach-faq-a" id="{ans_id}" role="region"><p>{a}</p></div>'
+            f'</div>'
+        )
+    inner = "\n      ".join(items)
+    return f'''<div class="rl-section" id="faq">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">07</span>
+      <h2 class="rl-section-title">FAQ</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-coach-faq-list">
+      {inner}
+      </div>
+    </div>
+  </div>'''
+
+
+def build_final_cta() -> str:
+    return f'''<div class="rl-section" id="final-cta">
+    <div class="rl-section-body">
+      <div class="rl-coach-final-cta">
+        <p class="rl-coach-final-hook">You already know how to suffer. Let me show you how to suffer smarter.</p>
+        <p class="rl-coach-final-sub">The intake takes 10 minutes. I&#39;ll review it within 48 hours. No commitment until we both agree it&#39;s a fit.</p>
+        <p class="rl-coach-final-cost">A blown race costs you months. A wasted training block costs you a season. The intake costs you 10 minutes.</p>
+        <div class="rl-coach-final-buttons">
+          <a href="{QUESTIONNAIRE_URL}" class="rl-coach-btn rl-coach-btn--gold" data-cta="final_fill_intake">FILL OUT THE INTAKE</a>
+        </div>
+      </div>
+    </div>
+  </div>'''
+
+
+def build_footer() -> str:
+    return get_mega_footer_html()
+
+
+def build_mobile_sticky_cta() -> str:
+    return f'''<div class="rl-coach-sticky-cta">
+    <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_cta">APPLY FOR COACHING</a>
+  </div>'''
+
+
+# ── CSS ───────────────────────────────────────────────────────
+
+
+def build_coaching_css() -> str:
+    """Coaching-page-specific CSS. All rl-coach-* prefix. Brand tokens only."""
+    return '''<style>
+/* ── Skip link ──────────────────────────────────── */
+.rl-coach-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1001;
+  padding: var(--rl-spacing-xs) var(--rl-spacing-md);
+  background: var(--rl-color-near-black);
+  color: var(--rl-color-warm-paper);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  text-decoration: none;
+}
+.rl-coach-skip-link:focus {
+  left: 0;
+}
+
+/* ── Coach hero — light sandwash override ────────── */
+.rl-neo-brutalist-page .rl-coach-hero {
+  background: var(--rl-color-warm-paper);
+  border-bottom: 3px double var(--rl-color-dark-brown);
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rl-neo-brutalist-page .rl-coach-hero h1 {
+  color: var(--rl-color-dark-brown);
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-4xl);
+  line-height: var(--rl-line-height-tight);
+}
+.rl-neo-brutalist-page .rl-coach-hero .rl-hero-tagline {
+  color: var(--rl-color-secondary-brown);
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-base);
+  line-height: var(--rl-line-height-relaxed);
+  max-width: 640px;
+}
+.rl-neo-brutalist-page .rl-coach-hero-cta {
+  display: flex;
+  gap: var(--rl-spacing-md);
+  margin-top: var(--rl-spacing-lg);
+  flex-wrap: wrap;
+}
+
+/* ── Stat line ───────────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-stat-line {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wider);
+  color: var(--rl-color-secondary-brown);
+  margin-top: var(--rl-spacing-lg);
+}
+
+/* ── Buttons (shared) ────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-btn {
+  display: inline-block;
+  background: var(--rl-color-primary-brown);
+  color: var(--rl-color-warm-paper);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wider);
+  padding: var(--rl-spacing-sm) var(--rl-spacing-lg);
+  border: 3px solid var(--rl-color-primary-brown);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--rl-transition-hover),
+              border-color var(--rl-transition-hover),
+              color var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-btn:hover {
+  background-color: var(--rl-color-dark-brown);
+  border-color: var(--rl-color-dark-brown);
+}
+.rl-neo-brutalist-page .rl-coach-btn--gold {
+  background: var(--rl-color-gold);
+  color: var(--rl-color-warm-paper);
+  border-color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-btn--gold:hover {
+  background-color: var(--rl-color-dark-brown);
+  border-color: var(--rl-color-dark-brown);
+  color: var(--rl-color-warm-paper);
+}
+.rl-neo-brutalist-page .rl-coach-btn--secondary {
+  background: transparent;
+  color: var(--rl-color-dark-brown);
+  border-color: var(--rl-color-dark-brown);
+}
+.rl-neo-brutalist-page .rl-coach-btn--secondary:hover {
+  background-color: var(--rl-color-sand);
+}
+
+/* ── Problem quotes ──────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rl-spacing-md);
+}
+.rl-neo-brutalist-page .rl-coach-quote {
+  border-left: 4px solid var(--rl-color-gold);
+  padding: var(--rl-spacing-md) var(--rl-spacing-lg);
+  background: var(--rl-color-sand);
+  margin: 0;
+}
+.rl-neo-brutalist-page .rl-coach-quote p {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-base);
+  font-weight: var(--rl-font-weight-semibold);
+  line-height: var(--rl-line-height-relaxed);
+  color: var(--rl-color-dark-brown);
+  margin: 0;
+}
+
+/* ── Service tiers ───────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--rl-spacing-md);
+}
+.rl-neo-brutalist-page .rl-coach-tier-card {
+  border: var(--rl-border-standard);
+  padding: var(--rl-spacing-lg);
+  background: var(--rl-color-warm-paper);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-tier-card:hover {
+  border-color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-tier-card--featured {
+  border-top: 4px solid var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-tier-header {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-extreme);
+  color: var(--rl-color-secondary-brown);
+  margin-bottom: var(--rl-spacing-sm);
+}
+.rl-neo-brutalist-page .rl-coach-tier-header--gold {
+  color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-tier-interval {
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-regular);
+  letter-spacing: var(--rl-letter-spacing-normal);
+}
+.rl-neo-brutalist-page .rl-coach-tier-card h3 {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-lg);
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-dark-brown);
+  margin: 0 0 var(--rl-spacing-xs) 0;
+  line-height: var(--rl-line-height-tight);
+}
+.rl-neo-brutalist-page .rl-coach-tier-desc {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-relaxed);
+  color: var(--rl-color-dark-brown);
+  margin-bottom: var(--rl-spacing-md);
+}
+.rl-neo-brutalist-page .rl-coach-tier-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--rl-spacing-lg) 0;
+  flex: 1;
+}
+.rl-neo-brutalist-page .rl-coach-tier-list li {
+  padding: var(--rl-spacing-xs) 0;
+  padding-left: var(--rl-spacing-lg);
+  position: relative;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  color: var(--rl-color-dark-brown);
+  border-bottom: 1px solid var(--rl-color-tan);
+  line-height: var(--rl-line-height-normal);
+}
+.rl-neo-brutalist-page .rl-coach-tier-list li:last-child {
+  border-bottom: none;
+}
+.rl-neo-brutalist-page .rl-coach-tier-list li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-tier-cadence {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-semibold);
+  color: var(--rl-color-secondary-brown);
+  letter-spacing: var(--rl-letter-spacing-wide);
+  margin-bottom: var(--rl-spacing-sm);
+}
+.rl-neo-brutalist-page .rl-coach-tier-disclaimer {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  font-style: italic;
+  color: var(--rl-color-secondary-brown);
+  line-height: var(--rl-line-height-relaxed);
+  margin-top: var(--rl-spacing-lg);
+  max-width: 640px;
+}
+.rl-neo-brutalist-page .rl-coach-tier-setup-fee {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  color: var(--rl-color-secondary-brown);
+  line-height: var(--rl-line-height-relaxed);
+  margin-top: var(--rl-spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wide);
+}
+
+.rl-neo-brutalist-page .rl-coach-tier-context {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  font-style: italic;
+  color: var(--rl-color-primary-brown);
+  line-height: var(--rl-line-height-relaxed);
+  margin-top: var(--rl-spacing-sm);
+  max-width: 640px;
+}
+
+/* ── Deliverables ────────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-deliverables {
+  border: var(--rl-border-standard);
+}
+.rl-neo-brutalist-page .rl-coach-deliverable {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  border-bottom: var(--rl-border-standard);
+}
+.rl-neo-brutalist-page .rl-coach-deliverable:last-child {
+  border-bottom: none;
+}
+.rl-neo-brutalist-page .rl-coach-deliverable-num {
+  background: var(--rl-color-near-black);
+  color: var(--rl-color-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-md);
+  font-weight: var(--rl-font-weight-bold);
+  border-right: var(--rl-border-standard);
+}
+.rl-neo-brutalist-page .rl-coach-deliverable-content {
+  padding: var(--rl-spacing-md) var(--rl-spacing-lg);
+  background: var(--rl-color-warm-paper);
+}
+.rl-neo-brutalist-page .rl-coach-deliverable:nth-child(even) .rl-coach-deliverable-content {
+  background: var(--rl-color-sand);
+}
+.rl-neo-brutalist-page .rl-coach-deliverable-content h3 {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wide);
+  color: var(--rl-color-dark-brown);
+  margin: 0 0 var(--rl-spacing-xs) 0;
+}
+.rl-neo-brutalist-page .rl-coach-deliverable-content p {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-prose);
+  color: var(--rl-color-dark-brown);
+  margin: 0;
+}
+
+/* ── How it works steps ──────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.rl-neo-brutalist-page .rl-coach-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: var(--rl-spacing-md);
+  padding: var(--rl-spacing-md) 0;
+  border-bottom: 1px solid var(--rl-color-tan);
+}
+.rl-neo-brutalist-page .rl-coach-step:last-child {
+  border-bottom: none;
+}
+.rl-neo-brutalist-page .rl-coach-step-num {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-xl);
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-secondary-brown);
+  text-align: right;
+  padding-top: 2px;
+}
+.rl-neo-brutalist-page .rl-coach-step-body h3 {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wide);
+  color: var(--rl-color-dark-brown);
+  margin: 0 0 var(--rl-spacing-xs) 0;
+}
+.rl-neo-brutalist-page .rl-coach-step-body p {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-prose);
+  color: var(--rl-color-dark-brown);
+  margin: 0;
+}
+
+/* ── Testimonial carousel ────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.rl-neo-brutalist-page .rl-coach-carousel::-webkit-scrollbar {
+  display: none;
+}
+.rl-neo-brutalist-page .rl-coach-carousel-track {
+  display: flex;
+  gap: var(--rl-spacing-md);
+}
+.rl-neo-brutalist-page .rl-coach-testimonial {
+  flex: 0 0 calc(50% - 8px);
+  scroll-snap-align: start;
+  background: var(--rl-color-warm-paper);
+  border: var(--rl-border-standard);
+  padding: var(--rl-spacing-lg) var(--rl-spacing-lg) var(--rl-spacing-md);
+  margin: 0;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.rl-neo-brutalist-page .rl-coach-testimonial p {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  font-style: italic;
+  line-height: var(--rl-line-height-prose);
+  color: var(--rl-color-dark-brown);
+  margin: 0 0 var(--rl-spacing-md) 0;
+  flex: 1;
+}
+.rl-neo-brutalist-page .rl-coach-testimonial footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rl-spacing-2xs);
+  border-top: 1px solid var(--rl-color-tan);
+  padding-top: var(--rl-spacing-sm);
+}
+.rl-neo-brutalist-page .rl-coach-testimonial footer strong {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-dark-brown);
+  letter-spacing: var(--rl-letter-spacing-wide);
+}
+.rl-neo-brutalist-page .rl-coach-testimonial-meta {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  color: var(--rl-color-secondary-brown);
+  letter-spacing: var(--rl-letter-spacing-wide);
+}
+.rl-neo-brutalist-page .rl-coach-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rl-spacing-md);
+  margin-top: var(--rl-spacing-md);
+}
+.rl-neo-brutalist-page .rl-coach-carousel-btn {
+  background: var(--rl-color-sand);
+  border: var(--rl-border-standard);
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--rl-color-dark-brown);
+  cursor: pointer;
+  transition: background-color var(--rl-transition-hover),
+              border-color var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-carousel-btn:hover {
+  background-color: var(--rl-color-warm-paper);
+  border-color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-carousel-count {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-secondary-brown);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  text-transform: uppercase;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* ── Honest check (audience) ─────────────────────── */
+.rl-neo-brutalist-page .rl-coach-audience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--rl-spacing-xl);
+}
+.rl-neo-brutalist-page .rl-coach-audience-heading {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wider);
+  margin: 0 0 var(--rl-spacing-md) 0;
+}
+.rl-neo-brutalist-page .rl-coach-audience-heading--yes {
+  color: var(--rl-color-dark-brown);
+}
+.rl-neo-brutalist-page .rl-coach-audience-heading--no {
+  color: var(--rl-color-secondary-brown);
+}
+.rl-neo-brutalist-page .rl-coach-audience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rl-neo-brutalist-page .rl-coach-audience-list li {
+  padding: var(--rl-spacing-sm) 0;
+  padding-left: var(--rl-spacing-lg);
+  position: relative;
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  color: var(--rl-color-dark-brown);
+  border-bottom: 1px solid var(--rl-color-tan);
+  line-height: var(--rl-line-height-normal);
+}
+.rl-neo-brutalist-page .rl-coach-audience-list li:last-child {
+  border-bottom: none;
+}
+.rl-neo-brutalist-page .rl-coach-audience-list li::before {
+  position: absolute;
+  left: 0;
+  font-weight: var(--rl-font-weight-bold);
+  font-family: var(--rl-font-data);
+}
+.rl-neo-brutalist-page .rl-coach-list--yes li::before {
+  content: ">";
+  color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-list--no li::before {
+  content: "x";
+  color: var(--rl-color-secondary-brown);
+}
+
+/* ── FAQ accordion ───────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-faq-list {
+  max-width: 640px;
+}
+.rl-neo-brutalist-page .rl-coach-faq-item {
+  border-bottom: 1px solid var(--rl-color-tan);
+}
+.rl-neo-brutalist-page .rl-coach-faq-item:first-child {
+  border-top: 1px solid var(--rl-color-tan);
+}
+.rl-neo-brutalist-page .rl-coach-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--rl-spacing-sm) 0;
+  cursor: pointer;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  font-weight: var(--rl-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--rl-letter-spacing-wide);
+  color: var(--rl-color-dark-brown);
+  user-select: none;
+  transition: color var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-faq-q:hover {
+  color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-faq-toggle {
+  font-size: var(--rl-font-size-md);
+  font-weight: var(--rl-font-weight-bold);
+  line-height: 1;
+  color: var(--rl-color-dark-brown);
+  transition: color var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-faq-item.rl-coach-faq-open .rl-coach-faq-toggle {
+  color: var(--rl-color-gold);
+}
+.rl-neo-brutalist-page .rl-coach-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--rl-transition-hover);
+}
+.rl-neo-brutalist-page .rl-coach-faq-item.rl-coach-faq-open .rl-coach-faq-a {
+  max-height: 500px;
+  padding-bottom: var(--rl-spacing-sm);
+}
+.rl-neo-brutalist-page .rl-coach-faq-a p {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  color: var(--rl-color-dark-brown);
+  line-height: var(--rl-line-height-relaxed);
+  margin: 0;
+}
+
+/* ── Final CTA ───────────────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-final-cta {
+  text-align: center;
+  padding: var(--rl-spacing-xl) 0;
+  border-top: 3px double var(--rl-color-dark-brown);
+  border-bottom: 3px double var(--rl-color-dark-brown);
+  background: var(--rl-color-sand);
+  margin: 0 calc(-1 * var(--rl-spacing-lg));
+  padding-left: var(--rl-spacing-lg);
+  padding-right: var(--rl-spacing-lg);
+}
+.rl-neo-brutalist-page .rl-coach-final-hook {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-2xl);
+  font-weight: var(--rl-font-weight-bold);
+  color: var(--rl-color-dark-brown);
+  margin: 0 0 var(--rl-spacing-sm) 0;
+  line-height: var(--rl-line-height-tight);
+}
+.rl-neo-brutalist-page .rl-coach-final-sub {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-base);
+  color: var(--rl-color-secondary-brown);
+  line-height: var(--rl-line-height-relaxed);
+  margin: 0 0 var(--rl-spacing-lg) 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rl-neo-brutalist-page .rl-coach-final-cost {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  color: var(--rl-color-secondary-brown);
+  letter-spacing: var(--rl-letter-spacing-wide);
+  text-transform: uppercase;
+  margin: var(--rl-spacing-sm) auto 0;
+  max-width: 560px;
+}
+.rl-neo-brutalist-page .rl-coach-final-buttons {
+  display: flex;
+  gap: var(--rl-spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Mobile sticky CTA ───────────────────────────── */
+.rl-neo-brutalist-page .rl-coach-sticky-cta {
+  display: none;
+}
+@media (max-width: 768px) {
+  .rl-neo-brutalist-page .rl-coach-sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--rl-color-near-black);
+    padding: var(--rl-spacing-sm) var(--rl-spacing-md);
+    text-align: center;
+    border-top: 3px solid var(--rl-color-gold);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .rl-neo-brutalist-page .rl-coach-sticky-cta.rl-coach-sticky-visible {
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .rl-neo-brutalist-page .rl-coach-sticky-cta a {
+    display: block;
+    color: var(--rl-color-sand);
+    font-family: var(--rl-font-data);
+    font-size: var(--rl-font-size-xs);
+    font-weight: var(--rl-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--rl-letter-spacing-wider);
+    text-decoration: none;
+    padding: var(--rl-spacing-2xs) 0;
+  }
+}
+
+/* ── Reduced motion ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .rl-neo-brutalist-page .rl-coach-faq-a {
+    transition: none;
+  }
+  .rl-neo-brutalist-page .rl-coach-carousel {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .rl-neo-brutalist-page .rl-coach-hero h1 {
+    font-size: var(--rl-font-size-2xl);
+  }
+  .rl-neo-brutalist-page .rl-coach-tiers {
+    grid-template-columns: 1fr;
+  }
+  .rl-neo-brutalist-page .rl-coach-audience {
+    grid-template-columns: 1fr;
+  }
+  .rl-neo-brutalist-page .rl-coach-testimonial {
+    flex: 0 0 calc(100% - 16px);
+  }
+  .rl-neo-brutalist-page .rl-coach-final-hook {
+    font-size: var(--rl-font-size-xl);
+  }
+  .rl-neo-brutalist-page {
+    padding-bottom: 60px;
+  }
+}
+</style>'''
+
+
+# ── JS ────────────────────────────────────────────────────────
+
+
+def build_coaching_js() -> str:
+    """Interactive JS for coaching page — FAQ, carousel, sample week, GA4 events."""
+    return '''<script>
+/* FAQ accordion — single-open behavior */
+(function() {
+  var items = document.querySelectorAll('.rl-coach-faq-item');
+  items.forEach(function(item) {
+    var q = item.querySelector('.rl-coach-faq-q');
+    if (!q) return;
+    function toggle() {
+      var wasOpen = item.classList.contains('rl-coach-faq-open');
+      items.forEach(function(i) { i.classList.remove('rl-coach-faq-open'); var iq = i.querySelector('.rl-coach-faq-q'); if (iq) iq.setAttribute('aria-expanded', 'false'); });
+      if (!wasOpen) {
+        item.classList.add('rl-coach-faq-open');
+        q.setAttribute('aria-expanded', 'true');
+        if (typeof gtag === 'function') gtag('event', 'coaching_faq_open', { question: q.textContent.trim().slice(0, 60) });
+      } else {
+        q.setAttribute('aria-expanded', 'false');
+      }
+    }
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+})();
+
+/* Testimonial carousel */
+(function() {
+  var carousel = document.getElementById('rl-coach-carousel');
+  var prev = document.getElementById('rl-coach-prev');
+  var next = document.getElementById('rl-coach-next');
+  var counter = document.getElementById('rl-coach-count');
+  if (!carousel || !prev || !next) return;
+  var cards = carousel.querySelectorAll('.rl-coach-testimonial');
+  var total = cards.length;
+  var perPage = window.innerWidth <= 768 ? 1 : 2;
+
+  function getPage() {
+    var scrollLeft = carousel.scrollLeft;
+    var cardWidth = cards[0].offsetWidth + 16;
+    return Math.round(scrollLeft / (cardWidth * perPage));
+  }
+  function totalPages() { return Math.ceil(total / perPage); }
+  function updateCounter() {
+    if (counter) counter.textContent = (getPage() + 1) + ' / ' + totalPages();
+  }
+  function scrollToPage(page) {
+    var cardWidth = cards[0].offsetWidth + 16;
+    carousel.scrollTo({ left: page * perPage * cardWidth, behavior: 'smooth' });
+  }
+  prev.addEventListener('click', function() {
+    var page = getPage();
+    scrollToPage(page > 0 ? page - 1 : totalPages() - 1);
+    if (typeof gtag === 'function') gtag('event', 'coaching_carousel', { direction: 'prev', page: getPage() + 1 });
+  });
+  next.addEventListener('click', function() {
+    var page = getPage();
+    scrollToPage(page < totalPages() - 1 ? page + 1 : 0);
+    if (typeof gtag === 'function') gtag('event', 'coaching_carousel', { direction: 'next', page: getPage() + 1 });
+  });
+  carousel.addEventListener('scroll', updateCounter);
+  window.addEventListener('resize', function() {
+    perPage = window.innerWidth <= 768 ? 1 : 2;
+    updateCounter();
+  });
+  updateCounter();
+
+  var autoTimer = null;
+  var paused = false;
+  function autoAdvance() {
+    if (paused) return;
+    var page = getPage();
+    scrollToPage(page < totalPages() - 1 ? page + 1 : 0);
+    if (typeof gtag === 'function') gtag('event', 'coaching_carousel', { direction: 'auto', page: getPage() + 1 });
+  }
+  function startAuto() { autoTimer = setInterval(autoAdvance, 6000); }
+  function stopAuto() { clearInterval(autoTimer); }
+  carousel.addEventListener('mouseenter', function() { paused = true; });
+  carousel.addEventListener('mouseleave', function() { paused = false; });
+  carousel.addEventListener('focusin', function() { paused = true; });
+  carousel.addEventListener('focusout', function() { paused = false; });
+  prev.addEventListener('focusin', function() { paused = true; });
+  next.addEventListener('focusin', function() { paused = true; });
+  prev.addEventListener('focusout', function() { paused = false; });
+  next.addEventListener('focusout', function() { paused = false; });
+  prev.addEventListener('click', function() { stopAuto(); startAuto(); });
+  next.addEventListener('click', function() { stopAuto(); startAuto(); });
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startAuto();
+})();
+
+/* Scroll depth tracking */
+(function() {
+  if (typeof gtag !== 'function' || !('IntersectionObserver' in window)) return;
+  var sections = [
+    { id: 'hero', label: '0_hero' },
+    { id: 'problem', label: '12_problem' },
+    { id: 'tiers', label: '25_tiers' },
+    { id: 'deliverables', label: '37_deliverables' },
+    { id: 'how-it-works', label: '50_how_it_works' },
+    { id: 'results', label: '62_results' },
+    { id: 'honest-check', label: '75_honest_check' },
+    { id: 'faq', label: '87_faq' },
+    { id: 'final-cta', label: '100_final_cta' }
+  ];
+  sections.forEach(function(s) {
+    var el = document.getElementById(s.id);
+    if (!el) return;
+    new IntersectionObserver(function(entries, obs) {
+      if (entries[0].isIntersecting) {
+        gtag('event', 'coaching_scroll_depth', { section: s.label });
+        obs.unobserve(el);
+      }
+    }, { threshold: 0.3 }).observe(el);
+  });
+})();
+
+/* CTA click attribution */
+document.querySelectorAll('[data-cta]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    if (typeof gtag === 'function') gtag('event', 'coaching_cta_click', { cta_name: el.getAttribute('data-cta') });
+  });
+});
+
+/* Page view event */
+if (typeof gtag === 'function') gtag('event', 'coaching_page_view');
+
+/* Smooth scroll for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.getElementById(a.getAttribute('href').slice(1));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+/* Mobile sticky CTA — show after scrolling past hero */
+(function() {
+  var sticky = document.querySelector('.rl-coach-sticky-cta');
+  var hero = document.getElementById('hero');
+  if (!sticky || !hero || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
+      sticky.classList.remove('rl-coach-sticky-visible');
+    } else {
+      sticky.classList.add('rl-coach-sticky-visible');
+    }
+  }, { threshold: 0 }).observe(hero);
+})();
+</script>'''
+
+
+# ── JSON-LD ───────────────────────────────────────────────────
+
+
+def build_jsonld() -> str:
+    webpage = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Coaching | Road Labs",
+        "description": "Gravel race coaching built around your schedule, your data, and your life. Three tiers: Min, Mid, and Max.",
+        "url": f"{SITE_BASE_URL}/coaching/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Road Labs",
+            "url": SITE_BASE_URL,
+        },
+    }
+    service = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Gravel Race Coaching",
+        "provider": {
+            "@type": "Organization",
+            "name": "Road Labs",
+            "url": SITE_BASE_URL,
+        },
+        "description": "Gravel race coaching: three tiers of involvement from weekly review to daily high-touch support. Built around your schedule, fitness, and target event.",
+    }
+    wp_tag = f'<script type="application/ld+json">{json.dumps(webpage, separators=(",", ":"))}</script>'
+    svc_tag = f'<script type="application/ld+json">{json.dumps(service, separators=(",", ":"))}</script>'
+    return f'{wp_tag}\n  {svc_tag}'
+
+
+# ── Assemble page ─────────────────────────────────────────────
+
+
+def generate_coaching_page(external_assets: dict = None) -> str:
+    canonical_url = f"{SITE_BASE_URL}/coaching/"
+
+    nav = build_nav()
+    hero = build_hero()
+    problem = build_problem()
+    tiers = build_service_tiers()
+    deliverables = build_deliverables()
+    how = build_how_it_works()
+    testimonials = build_testimonials()
+    honest = build_honest_check()
+    faq = build_faq()
+    final_cta = build_final_cta()
+    footer = build_footer()
+    sticky = build_mobile_sticky_cta()
+    coaching_css = build_coaching_css()
+    coaching_js = build_coaching_js()
+    jsonld = build_jsonld()
+
+    if external_assets:
+        page_css = external_assets['css_tag']
+        inline_js = external_assets['js_tag']
+    else:
+        page_css = get_page_css()
+        inline_js = build_inline_js()
+
+    meta_desc = "Gravel cycling coaching: structured training, race strategy, and honest feedback from a real coach. Plans from $199 every 4 weeks."
+
+    og_tags = f'''<meta property="og:title" content="Coaching | Road Labs">
+  <meta property="og:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(canonical_url)}">
+  <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Road Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coaching | Road Labs">
+  <meta name="twitter:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
+  <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
+
+    preload = get_preload_hints()
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravel Cycling Coaching | Road Labs</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{esc(canonical_url)}">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  {preload}
+  {og_tags}
+  {jsonld}
+  {page_css}
+  {coaching_css}
+  {get_ga4_head_snippet()}
+  {get_ab_head_snippet()}
+</head>
+<body>
+
+<a href="#hero" class="rl-coach-skip-link">Skip to content</a>
+<div class="rl-neo-brutalist-page">
+  {nav}
+
+  {hero}
+
+  {problem}
+
+  {tiers}
+
+  {deliverables}
+
+  {how}
+
+  {testimonials}
+
+  {honest}
+
+  {faq}
+
+  {final_cta}
+
+  {footer}
+
+  {sticky}
+</div>
+
+{inline_js}
+{coaching_js}
+
+{get_consent_banner_html()}
+</body>
+</html>'''
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate Road Labs coaching page")
+    parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
+    args = parser.parse_args()
+
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    assets = write_shared_assets(output_dir)
+
+    html_content = generate_coaching_page(external_assets=assets)
+    output_file = output_dir / "coaching.html"
+    output_file.write_text(html_content, encoding="utf-8")
+    print(f"Generated {output_file} ({len(html_content):,} bytes)")
+
+
+if __name__ == "__main__":
+    main()

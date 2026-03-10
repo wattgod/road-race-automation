@@ -1,0 +1,374 @@
+{
+  "race": {
+    "name": "Rad am Ring",
+    "slug": "rad-am-ring",
+    "display_name": "Rad am Ring",
+    "tagline": "Race the Green Hell. 12,000 cyclists on the world's most famous motorsport circuit — the Nurburgring Nordschleife.",
+    "vitals": {
+      "distance_km": 149.7,
+      "distance_mi": 93.0,
+      "elevation_m": 3360,
+      "elevation_ft": 11024.0,
+      "location": "Nurburgring, Nurburg, Rhineland-Palatinate, Germany",
+      "location_badge": "NURBURGRING, GERMANY",
+      "country": "Germany",
+      "date": "Late July annually",
+      "date_specific": "2026: July 24-26",
+      "field_size": "~12,000 participants across all disciplines (2025 record: 11,948)",
+      "start_format": null,
+      "registration": "Online via radamring.de. 24h slots sell out within 1 hour. Public races and touring still available.",
+      "entry_fee": "Varies by discipline. Public races estimated EUR50-120.",
+      "feed_zones": "Feed zones on course. Full mechanical and medical support from motorsport-grade infrastructure.",
+      "cutoff_time": "Varies by discipline. 24h race runs midnight to midnight.",
+      "lat": 50.3356,
+      "lng": 6.9475,
+      "route_options": [
+        "Public Race 25 km (1 lap): 560m elevation — entry level",
+        "Public Race 75 km (3 laps): 1,680m elevation — intermediate",
+        "Public Race 150 km (6 laps): 3,360m elevation — ambitious",
+        "24h Road Race: as many 25.9 km laps as possible in 24 hours (solo or teams of 2/4/8)",
+        "22 km Time Trial: Friday evening on GP circuit",
+        "Gravel Race 25/50/100 km: on and off the Nordschleife (added 2025)",
+        "Touring Rides: non-competitive, multiple distances"
+      ]
+    },
+    "climate": {
+      "primary": "Temperate oceanic, Eifel highlands",
+      "description": "Late July in the Eifel region at 600m elevation delivers mild summer temperatures averaging 22C highs and 12C lows. The Nurburgring's microclimate is notoriously variable — the Eifel's proximity to Atlantic weather systems means rain can appear without warning. July averages 17 rainy days. Morning fog and humidity (76% average) are common, particularly dangerous on the Nordschleife's fast descents where grip disappears.",
+      "challenges": [
+        "Eifel weather volatility: rain can arrive mid-lap with zero warning",
+        "Morning fog on the Nordschleife — reduced visibility through forest sections",
+        "Wet tarmac on racing circuit at high-speed descent points (Fuchsrohre)",
+        "Cool overnight temperatures for 24h participants: can drop to 8-10C"
+      ]
+    },
+    "terrain": {
+      "primary": "Closed motorsport circuit — racetrack tarmac",
+      "surface": "Purpose-built racing circuit tarmac in immaculate condition. The Nordschleife surface provides excellent grip in dry conditions but becomes treacherous when wet. No public roads, no traffic, no gravel. Pure racetrack.",
+      "technical_rating": 2,
+      "features": [
+        "Nordschleife: 20.8 km, 73 bends, 500+ meters of elevation change — the legendary Green Hell",
+        "Grand Prix circuit: 5.1 km modern F1-grade track completing the full lap",
+        "Hohe Acht climb: the roof of the course at 17% gradient, where even road cyclists understand the Green Hell nickname",
+        "Fuchsrohre descent: speeds up to 100 km/h have been measured on bicycles",
+        "84 turns per full lap combining both circuits — relentless direction changes",
+        "Elevation range: 330m to 625m within each lap — constant undulation, no flat sections"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A relentless, undulating closed circuit combining the legendary Nordschleife (20.8 km) with the modern Grand Prix circuit (5.1 km). No flat sections exist — you are always either climbing or descending through 84 turns per lap. The forest-enclosed Nordschleife feels otherworldly, while the GP circuit provides the F1 arena start/finish spectacle. Perfect tarmac throughout, but the elevation profile punishes anyone who starts too fast.",
+      "signature_challenge": "The Hohe Acht climb at 17% gradient — the roof of the Nordschleife where every lap extracts its toll. Combined with the relentless undulation of the full circuit (560m elevation per lap), there is no recovery. The Green Hell simply grinds you down.",
+      "suffering_zones": [
+        "Hatzenbach to Flugplatz",
+        "Fuchsrohre Descent",
+        "Hohe Acht Climb",
+        "Caracciola-Karussell to Pflanzgarten"
+      ]
+    },
+    "logistics": {
+      "airport": "Cologne-Bonn (CGN) 70 km / 1 hour. Frankfurt (FRA) 160 km / 1.5 hours. Dusseldorf (DUS) 130 km / 1.5 hours. Rental car required — Nurburg has no rail connection.",
+      "lodging_strategy": "Book early. Nurburg village is tiny with limited capacity. Adenau (5 km) has more options. Mayen, Bad Munstereifel, and Kelberg offer budget alternatives 20-30 km away. 24h participants can use paddock camping plots (book with race entry). Consider Cologne as a base with 1-hour commute if local lodging is sold out.",
+      "transport": "",
+      "food": "Limited dining in Nurburg village. Adenau has restaurants and supermarkets. The Nurburgring complex has catering during the event weekend. Stock race nutrition in advance — this is rural Eifel, not a city. 24h teams should plan self-sufficient catering from paddock area.",
+      "official_site": "https://radamring.de/en/"
+    },
+    "history": {
+      "founded": 2003,
+      "origin_story": "Rad am Ring began in 2003 as a small 24-hour road bike race with approximately 70 participants on the Nurburgring. The concept was simple but audacious: use the world's most famous motorsport circuit for bicycle racing. The Nurburgring's Nordschleife, built in 1927 and nicknamed the 'Green Hell' by Jackie Stewart, had never hosted organized cycling competition at scale. The event grew steadily, adding public races, mountain bike disciplines, and touring options. In 2016, a professional road race — the Rudi Altig Race — was added to honor German cyclist Rudi Altig, who won the Road World Championship at the Nurburgring in 1966. Altig died weeks before the inaugural pro race, adding poignant significance. Paul Voss won the first edition in a 70 km solo breakaway. The pro race ran as a UCI Europe Tour 1.1 event before moving to the German Bundesliga. By 2025, the event had grown to nearly 12,000 participants, with 24h race slots selling out in under one hour. In 2025, a gravel race was added, and the 2026 edition will host the German Gravel Championship.",
+      "notable_moments": [
+        "2003: First edition with approximately 70 riders in the 24h race",
+        "2016: Inaugural Rudi Altig Race (pro road race, UCI 1.1). Paul Voss wins with 70 km solo breakaway. Emanuel Buchmann and Davide Rebellin in the field",
+        "1966: Rudi Altig wins Road World Championship at the Nurburgring — the event's spiritual origin",
+        "2025: Record 11,948 participants across all disciplines",
+        "2025: Gravel race added for the first time, 550 participants in inaugural edition",
+        "2026: German Gravel Championship awarded to Rad am Ring"
+      ],
+      "reputation": "Germany's premier motorsport-circuit cycling festival. The 24h race is the crown jewel — a unique endurance challenge on sacred motorsport ground. Growing rapidly with a passionate community and institutional support from Nurburgring 1927 GmbH."
+    },
+    "biased_opinion": {
+      "verdict": "The Green Hell on Two Wheels",
+      "summary": "Rad am Ring does something no other cycling event can: it puts you on the Nurburgring Nordschleife. The same 20.8 km of relentless, forest-enclosed circuit where motorsport legends were forged since 1927. Where Rudi Altig won the Road World Championship in 1966. Where Jackie Stewart coined the name 'Green Hell.' Nearly 12,000 cyclists now invade this sacred motorsport ground every July, racing through 84 turns per lap, surviving the 17% Hohe Acht climb, and hitting 100 km/h on the Fuchsrohre descent. The 24h race adds a surreal dimension — riding the Nordschleife at 3 AM through fog with only a headlamp. This is not gravel, this is not a gran fondo — this is road cycling on the most storied racing circuit on Earth, and the experience is absolutely singular.",
+      "strengths": [
+        "The Nurburgring Nordschleife: literally no other cycling event on Earth offers this venue",
+        "World-class motorsport infrastructure applied to cycling: F1 pit lane, closed circuit, medical teams",
+        "12,000 participants and growing — one of Germany's biggest cycling festivals",
+        "Multi-discipline format: 24h, public races, time trial, gravel, touring — something for everyone",
+        "Perfect racetrack surface with 560m climbing per lap and gradients up to 17%",
+        "Rich history: Rudi Altig's 1966 World Championship, pro race legacy, event running since 2003"
+      ],
+      "weaknesses": [
+        "Lap-based racing on a circuit can feel repetitive compared to point-to-point events",
+        "No meaningful altitude challenge — the Eifel sits at only 600m",
+        "Primarily German/regional field — lacks the international depth of top European sportives",
+        "Tiny village of Nurburg has limited accommodation — books out fast for the weekend",
+        "Eifel weather is unpredictable — rain on the Nordschleife's fast descents is genuinely dangerous",
+        "Not a gravel event — this is pure road cycling on tarmac (gravel discipline added 2025 but secondary)"
+      ],
+      "bottom_line": "If you have ever watched a Formula 1 race, a Nurburgring 24 Hours, or read about the Green Hell and thought 'I want to experience that' — Rad am Ring is how you do it on a bicycle. The venue elevates what would otherwise be a solid German sportive into something genuinely unique. The 24h race is the bucket-list version. The experience score earns a perfect 5 because nothing else compares. For German and European cyclists, this should be on the short list. For international travelers, pair it with a European cycling trip — the Nurburgring alone justifies the detour."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Race the Green Hell. 12,000 cyclists on the world's most famous motorsport circuit — the Nurburgring Nordschleife.",
+      "should_you_race": "If you have any connection to motorsport culture, this is a mandatory pilgrimage on two wheels. The 24h race is the crown jewel — 24 hours of closed-circuit racing through the Nordschleife, including surreal night laps through forest fog. The public races (25/75/150 km) offer the venue experience in a single day. For German and European cyclists, this is one of the continent's most unique events. For international visitors, combine with a broader European cycling trip.",
+      "alternatives": "For other iconic European circuit events: Tour de Okinawa (road racing on closed circuit, Japan). For German cycling festivals: 3Rides Aachen (gravel, nearby), Cyclassics Hamburg (road). For 24h endurance cycling: 24h Montabaur, 24h Duisburg. For the ultimate European sportive experience: L'Etape du Tour, Maratona dles Dolomites."
+    },
+    "citations": [
+      {
+        "url": "https://radamring.de/en/",
+        "category": "official",
+        "label": "Rad am Ring Official Website"
+      },
+      {
+        "url": "https://radamring.de/en/disciplines/public-race/",
+        "category": "official",
+        "label": "Rad am Ring: Public Race Discipline Details"
+      },
+      {
+        "url": "https://radamring.de/en/disciplines/24h-bike-race/",
+        "category": "official",
+        "label": "Rad am Ring: 24h Bike Race Discipline Details"
+      },
+      {
+        "url": "https://radamring.de/en/service-en/lap-records/",
+        "category": "official",
+        "label": "Rad am Ring: Lap Records and Nordschleife History"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Rad_am_Ring",
+        "category": "reference",
+        "label": "Wikipedia: Rad am Ring"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/1966_UCI_Road_World_Championships_%E2%80%93_Men%27s_road_race",
+        "category": "reference",
+        "label": "Wikipedia: 1966 UCI Road World Championships — Men's Road Race (Rudi Altig at Nurburgring)"
+      },
+      {
+        "url": "https://nuerburgring.de/events/categories/entertainment/rad-am-ring?locale=en",
+        "category": "official",
+        "label": "Nurburgring Official: Rad am Ring Event Page"
+      },
+      {
+        "url": "https://radsport-events.de/news-en/360-degrees-of-cycling-at-nuerburgring",
+        "category": "media",
+        "label": "Radsport Events: 360 Degrees of Cycling at Nurburgring (2016 first pro race recap)"
+      },
+      {
+        "url": "https://radamring.de/en/gravel-race_eng/",
+        "category": "official",
+        "label": "Rad am Ring: Gravel Race Discipline (added 2025)"
+      },
+      {
+        "url": "https://radamring.de/en/thank-you-for-2025-together-into-an-action-packed-2026/",
+        "category": "official",
+        "label": "Rad am Ring: 2025 Recap and 2026 Preview"
+      },
+      {
+        "url": "https://www.outdooractive.com/mobile/en/route/road-cycling/nuerburg/rad-am-ring-amateur-races/32031395/",
+        "category": "route",
+        "label": "Outdooractive: Rad am Ring Amateur Race Route (24.3 km, 550m elevation)"
+      },
+      {
+        "url": "https://www.weather-atlas.com/en/germany/nurburg-weather-july",
+        "category": "reference",
+        "label": "Weather Atlas: July Weather in Nurburg, Germany"
+      },
+      {
+        "url": "https://nurburginfo.com/en/weather-at-the-nurburgring/",
+        "category": "reference",
+        "label": "NurburgInfo: Weather at the Nurburgring (year-round climate data)"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Rad am Ring gran fondo cycling Nurburgring",
+      "videos": [
+        {
+          "video_id": "okB0VDjkJBk",
+          "title": "Rad am Ring 24h Solo: Meine offene Rechnung mit der Grünen Hölle",
+          "channel": "HOBSCOTCH",
+          "view_count": 9851,
+          "upload_date": "20250727",
+          "duration_string": "27:56",
+          "description": "Letztes Jahr bin ich an der Grünen Hölle gescheitert. Dieses Jahr bin ich zurückgekehrt, um eine offene Rechnung zu begleichen. In diesem Video nehme ich euch mit auf meine emotionale Achterbahnfahrt als Solo-Starter beim 24h-Rennen von Rad am Ring 2025.\n\nErlebt mit mir den euphorischen Start, den brutalen Kampf gegen die Müdigkeit in der Nacht und die schwere Entscheidung, die am Ende alles verändert hat. Das ist der ungeschönte Bericht meines Versuchs, die 8848 Höhenmeter des Mount Everest auf der Nordschleife zu bezwingen. Ist das die Revanche, die ich mir erhofft habe? Findet es heraus.\n\n💬 Was war eure bisher größte und härteste Herausforderung auf dem Rad und wie seid ihr damit umgegangen?\nSchreib's mir in die Kommentare. Ich bin gespannt auf eure Geschichten!\n\n🏁 Alle Fakten zum Rennen: \n・Event: Rad am Ring 24h-Rennen 2025\n・Strecke: Nürburgring (Nordschleife + GP-Strecke)\n・Modus: Einzelfahrer / Solo\n・Mehr Infos zum Event: https://www.radamring.de\n\n🏔️ Mein Ergebnis:\n・Runden: 12\n・Distanz: 312,5 km\n・Höhenmeter: 6528 hm\n・Reine Sattelzeit: ca. 14 Stunden\n\n🔔 Kanal abonnieren & kein Video mehr verpassen: https://www.youtube.com/user/h0bsc0tch?sub_confirmation=1\n\n──────────────────────────────\n\n🚲 AUSRÜSTUNG IN DIESEM VIDEO\n・Rennrad: Specialized Tarmac SL7 (2024) ⇢ https://www.specialized.com/de/de/tarmac-sl7-sport--shimano-105/p/216958?color=350003-216958\n・Laufradsatz: Leeze CC 38 Basic ⇢ https://tidd.ly/3Hf6cCD *\n・Action-Kamera: GoPro Hero 9 ⇢ https://amzlink.to/az0kD1Y3cIVmZ *\n・Radcomputer: Bryton Rider S810 ⇢ https://amzlink.to/az0U6jORd5GTI *\n・Zelt: Naturehike Cloud Up 2 (Update) ⇢ https://amzlink.to/az0RpfKWeDlvd *\n \n📝 Meine vollständige & aktuelle Ausrüstung findest du immer hier: https://hobscotch.de/equipment\n\n──────────────────────────────\n\n💸 RABATTCODES\n・SUNRIMOON: 10% \"HOBSCOTCH\" ⇢ https://sunrimoon.com/?ref=hobscotch ᵂᴱᴿᴮᵁᴺᴳ\n・CYCPLUS: 5% \"HOBSCOTCH\" ⇢ https://www.cycplus.com/?ref=hobscotch ᵂᴱᴿᴮᵁᴺᴳ\n・Onemile Bike: 100 € \"HOBSCOTCH\" ⇢ https://www.onemilebike.com/?ref=gxgyritc ᵂᴱᴿᴮᵁᴺᴳ\n\n──────────────────────────────\n\n📼 MEHR VIDEOS FÜR DICH\n・Rad am Ring 2024 Solo: https://www.youtube.com/watch?v=vX90mmjLHKc\n・Rad am Ring 2023 mit dem Gravelbike: https://www.youtube.com/watch?v=6n2VEAlxt48\n・Noch mehr Rennrad-Videos: https://www.youtube.com/watch?v=IYwTZTKTtQg&list=PLgZrmp8Ui7MTIQaSpQy_0yaOzBfSQxQHO&pp=gAQB\n\n──────────────────────────────\n\n👋🏻 FOLGE MIR AUCH AUF\n📸 Instagram ⇢ http://instagram.com/hobscotch\n🧭 Komoot ⇢ https://www.komoot.de/user/1455901412410\n🚴🏼‍♂️ Strava ⇢ https://www.strava.com/athletes/67307432\n🗣️ Discord ⇢ https://discord.com/invite/PcnerhS\n🌐 Webseite ⇢ http://www.hobscotch.de\n🔗 Linkliste ⇢ https://paths.to/hobscotch\n\n📩 Geschäftliche Anfragen: sven@hobscotch.de\n\n──────────────────────────────\n\n🎶  MUSIK\nDie Musik stammt von Epidemic Sound: https://www.epidemicsound.com/referral/jovz0l *\nTracklist:\n・01 Bankston - Blurry (Instrumental Version)\n・02 DJ Mayson - Been Away\n・03 Ruiqi Zhao - Liquid Aurora\n・04 Loving Caliber - High\n・Outro: Matt Large - Everyday Hustle\n\n──────────────────────────────\n#RadamRing #24hRennen #Nürburgring #Nordschleife #GrüneHölle #Radsport #Everesting #Cycling #HOBSCOTCH\n──────────────────────────────\n\n⚠️ TRANSPARENZ & EHRLICHKEIT\n・**Affiliate-Links (*):** Wenn du über einen dieser Links etwas kaufst, bekomme ich eine kleine Provision. Für dich entstehen dadurch keinerlei Mehrkosten – du unterstützt damit aber direkt meine Arbeit und diesen Kanal. Ein riesiges Dankeschön dafür! \n・**Werbung (ᵂᴱᴿᴮᵁᴺᴳ):** So markierte Links oder Codes sind Teil einer bezahlten Partnerschaft. Egal ob Affiliate oder Partner: Ich empfehle dir ausschließlich Produkte und Marken, die ich selbst nutze und von denen ich zu 100 % überzeugt bin.",
+          "tags": [
+            "hobscotch",
+            "Rad am Ring 2025",
+            "Rad am Ring 24h",
+            "24h Rennen Nürburgring",
+            "Einzelfahrer",
+            "Solo",
+            "HOBSCOTCH",
+            "Nürburgring",
+            "Nordschleife",
+            "Grüne Hölle",
+            "Everesting Challenge",
+            "Everesting",
+            "8848hm",
+            "Radsport",
+            "Rennrad",
+            "Ultra Cycling",
+            "Radmarathon",
+            "Rennbericht",
+            "Radsport Doku",
+            "Rad am Ring Einzelfahrer",
+            "24 Stunden Radrennen",
+            "Nordschleife Rennrad",
+            "Langstrecke Radsport",
+            "Persönliche Herausforderung",
+            "Motivation",
+            "Mentale Stärke",
+            "Durchhalten",
+            "Cycling",
+            "Fahrrad",
+            "Eifel"
+          ],
+          "url": "https://www.youtube.com/watch?v=okB0VDjkJBk",
+          "curated": true,
+          "curation_reason": "Recent 2025 first-person solo 24h race experience with emotional journey and specific course challenges.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/okB0VDjkJBk/maxresdefault.jpg",
+          "thumbnail_score": 67.78
+        },
+        {
+          "video_id": "QMPMfMZ5NW4",
+          "title": "SWR Fernsehen: Rad am Ring - Grüne Hölle auf zwei Rädern mit der 20 Zoll Bagasch",
+          "channel": "lazyjones27",
+          "view_count": 12398,
+          "upload_date": "20241116",
+          "duration_string": "44:49",
+          "description": "Mit dem Fahrrad über den Nürburgring: Das beweisen in diesem Jahr 10.000 Teilnehmer:innen bei \"Rad am Ring\". Höhepunkt ist das 24-Stunden-Radrennen über die weltberühmte Nordschleife und den Grand Prix Kurs in der Eifel. Dabei erreichen die Räder bergab mehr als 100 Stundenkilometer Geschwindigkeit. Die Kamera begleitet eine Fahrergruppe, die sich der Herausforderung der grünen Hölle auf dem Klapprad stellt, ein Frauenteam, dass für den guten Zweck fährt und den ältesten Teilnehmer des Wochenendes. Er will mit über 80 seine Topplatzierung aus dem vergangenen Jahr verbessern. Neben der Rennstrecke ist vom Einmannzelt bis zum perfekt ausgestattetem Camping-Paradies alles zu finden. Radsportler:innen aus Deutschland und ganz Europa kommen zum jährlichen Event in die Eifel. Manche, um mit E-Bike und Fahrradkorb über den wohl berühmtesten Asphalt Deutschlands zu radeln, andere für den Geschwindigkeitsrausch in der Fuchsröhre und die völlige Verausgabung beim 24-Stunden-Solo-Renneinsatz.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=QMPMfMZ5NW4",
+          "curated": true,
+          "curation_reason": "Recent 2024 comprehensive documentary covering unique race aspects including extreme challenges like folding bike participation.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/QMPMfMZ5NW4/maxresdefault.jpg",
+          "thumbnail_score": 79.17
+        },
+        {
+          "video_id": "jmmC7B2YYbU",
+          "title": "Rad am Ring 2025 – Onboard-Video vom Jedermannrennen 75km",
+          "channel": "Alexander Hupp",
+          "view_count": 8897,
+          "upload_date": "20250721",
+          "duration_string": "2:01:51",
+          "description": "Willkommen zu meinem Onboard-Video vom Rad am Ring 2025! \n\nIch war beim 75 km Jedermannrennen (3 Runden auf der Nordschleife + Grand-Prix-Strecke) dabei und habe die Kamera mitlaufen lassen.\n\n🎥 Im Video siehst du knapp über zwei Runden – los geht’s mit der Abfahrt in die Grüne Hölle. Danach folgt Rennatmosphäre pur: enge Kurven, steile Rampen und rasante Abfahrten.\nDer Akku war leider kurz nach Beginn von Runde 3 leer – im Nachhinein halb so schlimm, denn da zwangen mich beidseitige Krämpfe zu einer kurzen Pause. \nIch hatte deutlich zu wenig getrunken und das hat sich ziemlich schnell gerächt.\n\n📊 Rundenzeiten bei knapp über 100 kg Körpergewicht:\n• Runde 1:  0: 56: 49\n• Runde 2:  1: 07: 11\n• Runde 3:  1: 24: 59 (15 min Pause wg. krämpfen)\n\n🚴‍♂️ Gesamtstrecke: ca. 75 km, 1.500 hm\n🔋 Gefilmt: ca. 50 km (2 Runden)\n📍 Highlights: Fuchsröhre, Hohe Acht, Kesselchen, Karussell – und natürlich die Zielgerade\n\n💡 Bonus-Fact: Mit meinem Gewicht war die Schwerkraft mein größter Verbündeter – bergab lief’s richtig gut. Nur bergauf… reden wir nicht drüber 😅\n\nStrava: https://www.strava.com/activities/15166011682\n\nWenn dir das Video gefällt, freue ich mich über ein Like oder Kommentar!\nWarst du auch am Start? Dann schreib’s gerne unten rein 👇\n\n#RadAmRing #RadAmRing2025 #nürburgring #nuerburgring #nordschleife  #Jedermannrennen #cyclingpov #factorbikes #ostrovam #osmoaction5  #bikerace #onboardvideo  #onboard  #radsport #fahrrad #rennstrecke #circuit #grünehölle #greenhell #cycling #RoadBikeLife #strava",
+          "tags": [
+            "Rad am Ring 2025",
+            "Jedermannrennen 75km",
+            "Nürburgring Radrennen",
+            "Nordschleife Fahrrad",
+            "Rad am Ring POV",
+            "Factor Ostro VAM",
+            "Factor Bike",
+            "Osmo Action 5",
+            "DJI Osmo Action 5",
+            "Onboard Cycling",
+            "Cycling Nürburgring",
+            "Cycling POV",
+            "Bike Race Germany",
+            "Jedermannrennen 2025",
+            "Nordschleife Bike",
+            "Cycling Climb",
+            "Radrennen Nordschleife",
+            "Cycling Highlights",
+            "Radsport 2025",
+            "Radsport Video",
+            "Race Recap",
+            "Cycling Cramp",
+            "Radsport Deutschland",
+            "Rad am Ring Vorbereitung"
+          ],
+          "url": "https://www.youtube.com/watch?v=jmmC7B2YYbU",
+          "curated": true,
+          "curation_reason": "Recent 2025 onboard race footage showing 75km course with detailed terrain coverage including the famous Nordschleife.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/jmmC7B2YYbU/maxresdefault.jpg",
+          "thumbnail_score": 84.0
+        },
+        {
+          "video_id": "Wc2fys8x5rk",
+          "title": "Rad am Ring 2015 | 24h-Radrennen auf dem legendären Nürburgring | 24h-race in the Eifel",
+          "channel": "Alpecin Cycling",
+          "view_count": 6195,
+          "upload_date": "20150728",
+          "duration_string": "2:10",
+          "description": "***WITH ENGLISH SUBTITLES*** Rad am Ring 2015 in der Eifel. Über 4000 Hobbyradsportler beim 24 Stunden Radrennen am Nürburgring. Rund 26 Kilometer misst eine Runde. Knapp 80 Kurven und über 500 Höhenmeter sind zu bewältigen: Das Team Alpecin stellt 2 aktuelle Jedermänner-Teams und zwei All Star Teams. Ausserdem noch eine weitere Damen-Equipe im Liv Plantur Outfit und einen Allein-Fahrer. \n\n\n++++++++++\n\nJetzt auf Facebook folgen: www.facebook.com/teamalpecin\n\nAlpecin Cycling TV ist der offizielle deutsche Youtube Kanal vom Team Alpecin. Auf Alpecin Cycling TV gibt es regelmäßig die neuesten Informationen und interessante Hintergründe rund um den Rennradsport. Hier erfahrt ihr mehr über die Profis von Giant Alpecin, die Jedermänner vom Team Alpecin sowie Tipps und Tricks zu Technik und Equipment.",
+          "tags": [
+            "Nürburgring (Amusement Park)",
+            "Rad am Ring",
+            "Jedermänner",
+            "Amateurrennen",
+            "Rennradfahren",
+            "Cycling (Interest)",
+            "Cycling Club (Organization)",
+            "Alpecin",
+            "Jedermann-Rennen",
+            "24h-race",
+            "24 Hours Nürburgring",
+            "Eifel (Mountain Range)"
+          ],
+          "url": "https://www.youtube.com/watch?v=Wc2fys8x5rk",
+          "curated": false
+        },
+        {
+          "video_id": "pEX0fvQmCCE",
+          "title": "Rad am Ring 2015 / Nürburgring / 24h Rennrad / Rollentraining",
+          "channel": "Jay vom Tale",
+          "view_count": 1470,
+          "upload_date": "20150728",
+          "duration_string": "1:05:35",
+          "description": "24h-Rennrad am Nürburgring mit Streckenkunde für das Rollentraining mit Musik",
+          "tags": [
+            "iMovie",
+            "Nürburgring (Amusement Park)",
+            "24 Hours Nürburgring",
+            "24h Nürburgring",
+            "Rennrad",
+            "Rad am Ring",
+            "2015",
+            "Rollentraining"
+          ],
+          "url": "https://www.youtube.com/watch?v=pEX0fvQmCCE",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

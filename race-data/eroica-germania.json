@@ -1,0 +1,141 @@
+{
+  "race": {
+    "name": "Eroica Germania",
+    "slug": "eroica-germania",
+    "display_name": "Eroica Germania",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 130.4,
+      "distance_mi": 81.0,
+      "elevation_m": 2148,
+      "elevation_ft": 7047.0,
+      "location": "Eltville am Rhein, Hesse, Germany",
+      "location_badge": "Eltville am Rhein, Germany",
+      "country": "Germany",
+      "date": "2026: August 22",
+      "date_specific": "2026: August 22",
+      "field_size": "1000",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "multiple (festival-style)",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Plentiful in Rheingau wine region; book early for festival weekend[4].",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Vintage cycling festival through Rhine vineyards with heroic climbs and retro charm.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Eroica Germania gran fondo cycling Eltville am Rhein",
+      "videos": [
+        {
+          "video_id": "dlTEPVQrdGQ",
+          "title": "Eroica Dolomiti 2023 - Official Video",
+          "channel": "eroica",
+          "view_count": 6079,
+          "upload_date": "20230913",
+          "duration_string": "3:14",
+          "description": "Sotto il sole radiante delle Dolomiti attorno a San Candido, abbiamo vissuto una giornata magica insieme. Non avremmo potuto chiedere di meglio per questa sesta edizione di Eroica Dolomiti!\n\nLe montagne ci hanno abbracciato con la loro bellezza mozzafiato, e più di 300 Eroici hanno portato energia e passione in ogni pedalata. È stato un viaggio incredibile grazie a ciascuno di voi.\n\nUn grazie speciale a tutti i partecipanti, volontari e sponsor che hanno reso questo evento un successo straordinario. Senza di voi, non sarebbe stato possibile.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=dlTEPVQrdGQ",
+          "curated": false
+        },
+        {
+          "video_id": "kVEYwXOsoJs",
+          "title": "„Radklassiker“ L’Eroica: Technik von heute ist verpönt",
+          "channel": "euronews (deutsch)",
+          "view_count": 5783,
+          "upload_date": "20221003",
+          "duration_string": "1:12",
+          "description": "Seit 1997 gibt es die Rundfahrt durch die Toskana, bei der es nicht um die Sekundenjagd, sondern die Freude am Radeln geht.\n\nLESEN SIE MEHR : https://de.euronews.com/2022/10/03/radklassiker-leroica-technik-von-heute-ist-verpont\n\nAbonnieren Sie! https://www.youtube.com/c/euronewsde?sub_confirmation=1\n\nSehen Sie Euronews live TV : https://www.youtube.com/c/euronewsde/live\n\nEuronews gibt es in 12 Sprachen: https://www.youtube.com/user/euronewsnetwork/channels\n\n#World",
+          "tags": [
+            "welt",
+            "Radsport",
+            "Italien",
+            "Tourismus"
+          ],
+          "url": "https://www.youtube.com/watch?v=kVEYwXOsoJs",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

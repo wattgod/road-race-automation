@@ -1,0 +1,105 @@
+{
+  "race": {
+    "name": "TransAtlanticWay",
+    "slug": "transatlanticway",
+    "display_name": "TransAtlanticWay",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 2499.3,
+      "distance_mi": 1553.0,
+      "elevation_m": 29300,
+      "elevation_ft": 96128.0,
+      "location": "Cork to Derry, Ireland",
+      "location_badge": "Cork to Derry, Ireland",
+      "country": "Ireland",
+      "date": "2026: June TBD",
+      "date_specific": "2026: June 18",
+      "field_size": "Not specified",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Two manned checkpoints",
+      "cutoff_time": "Not specified",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "climate_risk": 2,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 63."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Not included in entry fee. Optional group accommodations available at start and finish locations (details to be confirmed). Riders are responsible for securing lodging along the route.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "63/100",
+      "one_liner": "An epic self-supported road cycling odyssey along Ireland's most dramatic coastline, combining extreme distance and elevation with notable scenery and personal challenge.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "race": {
+    "name": "Granfondo Tre Valli Varesine",
+    "slug": "granfondo-tre-valli-varesine",
+    "display_name": "Granfondo Tre Valli Varesine",
+    "tagline": "A 127 km UCI World Series qualifier through three lakes and pro-race climbs in the Italian pre-Alps",
+    "vitals": {
+      "distance_km": 126.9,
+      "distance_mi": 78.84,
+      "elevation_m": 2500,
+      "elevation_ft": 8202.0,
+      "location": "Varese, Lombardy, Italy",
+      "location_badge": "VARESE, IT",
+      "country": "Italy",
+      "date": "Early October annually",
+      "date_specific": "2026: October 3-4",
+      "field_size": "Limited to 2,000 participants across all distance options",
+      "start_format": null,
+      "registration": "Includes super race pack, optional gluten-free refreshment bag, pasta party, traffic-closed roads, timing chip, and shower facilities",
+      "entry_fee": "Not specified in available sources",
+      "feed_zones": "Multiple aid stations on course (specific locations not detailed)",
+      "cutoff_time": "Not specified in available sources",
+      "lat": 45.8168,
+      "lng": 8.8554,
+      "route_options": [
+        "20 km: Short family-friendly loop",
+        "101 km (Mediofondo): 2,100m elevation, UCI World Championships qualifier for men 60+ and women 50+",
+        "127 km (Granfondo): 2,500m elevation, UCI World Series qualifier for all ages, longest course option"
+      ]
+    },
+    "climate": {
+      "primary": "Cool fall weather with variable conditions",
+      "description": "Early October in Lombardy brings mild autumn conditions with cool mornings and potential afternoon warmth. The proximity to three lakes (Lugano, Maggiore, Varese) moderates temperatures but increases rain risk. Riders should prepare for variable conditions ranging from crisp mornings to mild afternoons with possible precipitation.",
+      "challenges": [
+        "variable precipitation",
+        "cool morning temperatures",
+        "lake-effect weather systems",
+        "autumn wind patterns"
+      ]
+    },
+    "terrain": {
+      "primary": "Hilly pre-alpine terrain with significant climbing on fully paved roads",
+      "surface": "Fully paved roads throughout, featuring technical descents and sustained climbs through pre-alpine villages. The course alternates between steep ascents and technical descents with minimal gravel or unpaved sections. Road quality is excellent on closed, well-maintained surfaces typical of northern Italian cycling routes.",
+      "technical_rating": 4,
+      "features": [
+        "Alpe Tedesco climb (hardest and highest point)",
+        "Madonna di Ardena climb",
+        "Roggiano-Valtravaglia climb",
+        "technical descents",
+        "pre-alpine village passages",
+        "lake-border sections",
+        "12 km opening ascent",
+        "uphill finish in Varese city center"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 4,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 76. adventure dimension dropped, road_surface added. Score recalculated: 74."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The 127 km grandfondo follows the legendary pro Tre Valli Varesine route through pre-alpine terrain bordering three lakes (Lugano, Maggiore, Varese). The course alternates between sustained climbs and technical descents on fully paved, closed roads through charming pre-alpine villages. Starting and finishing in Varese city center, the route features an immediate 12 km ascent to Alpe Tedesco (the hardest and highest point), followed by technical descents, repeated climbs of Morosolo and Casciago, and a final uphill finish. The 2,500m elevation gain is distributed throughout, preventing flat recovery sections and maintaining pressure for 5+ hours. This is a serious climbing course disguised as a scenic lake tour.",
+      "signature_challenge": "The 2,500 meters of elevation gain distributed across 127 km creates relentless climbing without flat recovery sections. Unlike single-summit gran fondos, Tre Valli Varesine demands sustained climbing fitness and mental resilience across multiple ascents. The opening 12 km to Alpe Tedesco immediately establishes the course's serious nature, and repeated climbs of Morosolo and Casciago create a pattern of suffering that separates serious cyclists from casual riders. This is climbing volume and technical descent skill, not a scenic recreational ride.",
+      "suffering_zones": [
+        "Alpe Tedesco Ascent",
+        "Morosolo Climb (First Ascent)",
+        "Casciago Climb",
+        "Madonna di Ardena Climb"
+      ]
+    },
+    "logistics": {
+      "airport": "Milan's Malpensa Airport (50 km) and Linate Airport (80 km) are primary gateways. Malpensa offers better rail connections to Varese via regional trains (90 minutes). Consider rental car for flexibility exploring the lake region, though public transit connects major towns. Swiss airports (Zurich, 80 km) are viable alternatives for European travelers.",
+      "lodging_strategy": "Varese city center offers convenience for race logistics but premium pricing. Consider lake towns (Lugano, Como, Maggiore shores) for scenic stays with reasonable accommodation—30-45 minute drives to start. Book early for October, as fall tourism peaks. Airbnb rentals near the lakes often provide better value than hotels.",
+      "transport": "",
+      "food": "Northern Italian cuisine dominates—expect excellent pasta, risotto, and lake fish. Varese and surrounding towns have strong cycling culture with rider-friendly restaurants. The pasta party post-race is included; plan pre-race meals at hotel or local cafes. Grocery stores in Varese stock energy foods; plan nutrition strategy around aid stations (details sparse in sources).",
+      "official_site": "https://www.granfondotrevallivaresine.it"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "Granfondo Tre Valli Varesine was created in 2017 as a companion event to the legendary pro Tre Valli Varesine, allowing cyclotourists to experience the same course and region. SC Alfredo Binda, a historic cycling institution, added the granfondo to the Sunday before the Tuesday pro race, creating a weekend cycling festival. The event gained prestige when Varese hosted the 2018 UCI Gran Fondo World Championships, establishing the course as a legitimate UCI-sanctioned route. By 2025, the grandfondo joined the UCI Gran Fondo World Series as an official World Championships qualifier, cementing its status as a serious international event. The 9th edition in 2025 marked the event's return after a cancellation due to heavy rain, demonstrating organizational resilience and participant loyalty.",
+      "notable_moments": [
+        "Founded 2017 as companion to historic pro Tre Valli Varesine (held since 1919)",
+        "Hosted 2018 UCI Gran Fondo World Championships in Varese",
+        "Joined UCI Gran Fondo World Series as official World Championships qualifier",
+        "Included in Specialized Granfondo Series and CicloTurismo Prestigio 2025",
+        "Successfully returned in 2025 after weather-forced cancellation, demonstrating community commitment"
+      ],
+      "reputation": "Granfondo Tre Valli Varesine carries significant prestige through UCI World Series status and World Championships pedigree. The event is respected within European cycling circles for legitimate athletic challenge and authentic Italian cycling culture. SC Alfredo Binda's historic organizing role adds credibility, connecting amateurs to professional cycling heritage dating to 1919."
+    },
+    "biased_opinion": {
+      "verdict": "Prestige-driven UCI qualifier with legitimate teeth",
+      "summary": "Granfondo Tre Valli Varesine trades on genuine cycling heritage and UCI World Series credentials to justify premium positioning. The 127 km course with 2,500m climbing delivers real athletic challenge on closed Italian roads through pre-alpine terrain. Organization by SC Alfredo Binda and the 2018 World Championships pedigree elevate this beyond typical gran fondos. However, unspecified costs, modest field depth, and variable fall weather prevent this from being an obvious must-do. This is a race for cyclists seeking UCI legitimacy and Italian cycling culture, not casual recreational riders.",
+      "strengths": [
+        "UCI World Series qualifier with World Championships pedigree",
+        "Legitimate 127 km course with 2,500m climbing on technical terrain",
+        "Historic SC Alfredo Binda organization (founded 1929)",
+        "Closed roads through scenic pre-alpine and lake regions",
+        "Multiple distance options (20/101/127 km) for varied fitness levels"
+      ],
+      "weaknesses": [
+        "Registration costs not specified—likely premium pricing",
+        "Modest field size (2,000 total across all distances)",
+        "Variable October weather adds unpredictability",
+        "Limited information on logistics and amenities",
+        "Pre-alpine location increases travel and lodging costs"
+      ],
+      "bottom_line": "This is a legitimate UCI-sanctioned event with genuine prestige and athletic challenge, ideal for cyclists targeting World Championships qualifiers or seeking authentic Italian gran fondo experience. The cost-to-value proposition remains unclear due to missing pricing data, and the modest field size won't appeal to riders seeking massive international gatherings. Skip if you're budget-conscious or prefer guaranteed warm weather; race if UCI credentials and cycling heritage matter to you."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "A prestigious UCI World Series qualifier with legitimate climbing and Italian cycling heritage, but premium costs and modest field depth limit universal appeal.",
+      "should_you_race": "Race this if you're targeting UCI World Championships qualifiers, value cycling heritage and European authenticity, or want to ride the 2018 Worlds route. Skip if you're budget-conscious (Northern Italy is expensive), prefer larger international fields, or want guaranteed warm-weather conditions—October in Lombardy is unpredictable.",
+      "alternatives": "For similar UCI prestige without Italian costs, consider Nove Colli (Italy, larger field, better value). For comparable climbing challenge with different scenery, try Granfondo Giro di Lombardia (Italy, same region, more prestigious). For World Championships qualifiers with lower costs, explore Eastern European gran fondos or Spanish alternatives."
+    },
+    "citations": [
+      {
+        "url": "https://www.biklo.com/calendar/9-granfondo-tre-valli-varesine-uci-gran-fondo-world-series-2025-23",
+        "category": "official",
+        "label": "UCI GRAN FONDO WORLD SERIES 2025 - Biklo Calendar"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2025_Tre_Valli_Varesine",
+        "category": "reference",
+        "label": "2025 Tre Valli Varesine - Wikipedia"
+      },
+      {
+        "url": "https://www.domestiquecycling.com/en/cycling-races/tre-valli-varesine/2025/",
+        "category": "official",
+        "label": "Tre Valli Varesine 2025 | Route, results & full coverage - Domestique Cycling"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/italy/gran-fondo-tre-valli-varesine/41291",
+        "category": "reference",
+        "label": "Gran Fondo Tre Valli Varesine - CycloWorld"
+      },
+      {
+        "url": "https://www.endu.net/events/granfondo_tre_valli_varesine/tracks/5af20199-eb0b-4b9a-84df-a9dca7b48423",
+        "category": "reference",
+        "label": "Track detail - Granfondo Tre Valli Varesine - ENDU"
+      },
+      {
+        "url": "https://www.lakesnorthernitalybiketours.com/blog/road-cycling-races-swiss-northern-italian-lakes-blog-LNIBT.php",
+        "category": "reference",
+        "label": "2025 Road cycling races Italian Swiss Lake District"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Granfondo Tre Valli Varesine gran fondo cycling Varese",
+      "videos": [
+        {
+          "video_id": "Ro9stdHfh0k",
+          "title": "Granfondo Tre Valli Varesine 2024",
+          "channel": "Manuel Maldera ",
+          "view_count": 1255,
+          "upload_date": "20241010",
+          "duration_string": "6:16",
+          "description": "UCI Gran Fondo World Series • Circuito Specialized Granfondo Series\n\nVi lascio qui sotto i miei social:\n\nINSTAGRAM https://www.instagram.com/numa_adventure?igsh=MXVwMXoxYWFpYTZnNg==\nTIKTOK https://www.tiktok.com/@numa_adventure?_t=8qqAKEoiron&_r=1\nKOMOOT https://www.komoot.it/user/1005599675180?ref=amk\nSTRAVA https://strava.app.link/jiHATxr4YNb",
+          "tags": [
+            "#UCI #GRANFONDO#TRE VALLI VARESINE2024#BICIDACORSA#CYCLINGRACE#SPECIALIZED",
+            "#SPECIALIZEDGRANFONDOSERIES"
+          ],
+          "url": "https://www.youtube.com/watch?v=Ro9stdHfh0k",
+          "curated": false
+        },
+        {
+          "video_id": "T81aeyqLLeM",
+          "title": "6° Granfondo Tre Valli Varesine - Varese, 1 e 2 ottobre 2022",
+          "channel": "Società Ciclistica Alfredo Binda Varese",
+          "view_count": 1110,
+          "upload_date": "20220610",
+          "duration_string": "1:25",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=T81aeyqLLeM",
+          "curated": false
+        },
+        {
+          "video_id": "lu5radR2-80",
+          "title": "GRAN FONDO TRE VALLI VARESINE 2024",
+          "channel": "reporterpercaso",
+          "view_count": 2297,
+          "upload_date": "20241006",
+          "duration_string": "5:43",
+          "description": "",
+          "tags": [
+            "reporterpercaso",
+            "tre valli varesine",
+            "gran fondo",
+            "ciclismi",
+            "varese",
+            "strawoman",
+            "pino belca",
+            "reporterpercaso emozioni in video",
+            "bike",
+            "francesco moser"
+          ],
+          "url": "https://www.youtube.com/watch?v=lu5radR2-80",
+          "curated": true,
+          "curation_reason": "Recent 2024 race coverage with solid view count providing additional perspective on the event.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/lu5radR2-80/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        },
+        {
+          "video_id": "3fflmenLUxo",
+          "title": "Gran Fondo Tre Valli Varesine 2023 Start - Alpe Tedesco - Ardena",
+          "channel": "Paolo Brienza",
+          "view_count": 3063,
+          "upload_date": "20231002",
+          "duration_string": "49:30",
+          "description": "Partenza categoria 34-39 (M2)\nAlpe tedesco da Val ganna Salita+discesa\nArdena da Brusimpiano Salita+discesa",
+          "tags": [
+            "gran fondo",
+            "tre valli varesine",
+            "ciclismo",
+            "gara",
+            "GF",
+            "UCI",
+            "mondiali",
+            "World Series",
+            "Varese",
+            "Alpe tedesco",
+            "Alpe",
+            "Ardena",
+            "Lago",
+            "amatoriale",
+            "amatori",
+            "race",
+            "climb",
+            "salita",
+            "discesa",
+            "downhill",
+            "uphill",
+            "down hill",
+            "up hill",
+            "Start",
+            "gruppo",
+            "gruppetto",
+            "peloton"
+          ],
+          "url": "https://www.youtube.com/watch?v=3fflmenLUxo",
+          "curated": true,
+          "curation_reason": "Comprehensive race footage covering key climbs including Alpe Tedesco and Ardena with good production quality.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/3fflmenLUxo/maxresdefault.jpg",
+          "thumbnail_score": 67.72
+        },
+        {
+          "video_id": "3SnNmT47Gu4",
+          "title": "3 Valli Varesine - amatori - partenza M3",
+          "channel": "Paolo Brienza",
+          "view_count": 3998,
+          "upload_date": "20241006",
+          "duration_string": "34:52",
+          "description": "",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=3SnNmT47Gu4",
+          "curated": true,
+          "curation_reason": "Recent 2024 first-person race footage with highest view count showing the amateur experience.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/3SnNmT47Gu4/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

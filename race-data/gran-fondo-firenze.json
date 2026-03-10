@@ -1,0 +1,319 @@
+{
+  "race": {
+    "name": "De Rosa Granfondo Firenze",
+    "slug": "gran-fondo-firenze",
+    "display_name": "Gran Fondo Firenze",
+    "tagline": "Over the Ponte Vecchio. Through the Renaissance. Up the World Championship wall. Florence gives you the keys to the city — and then sends you into the Tuscan hills to earn them.",
+    "vitals": {
+      "distance_km": 133.6,
+      "distance_mi": 83.0,
+      "elevation_m": 2000,
+      "elevation_ft": 6562.0,
+      "location": "Florence, Tuscany, Italy",
+      "location_badge": "FLORENCE, ITALY",
+      "country": "Italy",
+      "date": "Mid-April annually (typically second or third Sunday)",
+      "date_specific": "2024: April 14",
+      "field_size": "~1,500-2,500 riders",
+      "start_format": null,
+      "registration": "Online via ENDU.net. Registration typically opens in autumn and closes 2-3 weeks before race day. Payment via credit card or bank transfer.",
+      "entry_fee": "EUR 40-65 (tiered pricing based on registration date). Includes race number, chip timing, feed zones, medical assistance, broom wagon, and finisher pack. Early registration (Oct-Dec) from EUR 40; late registration from EUR 50-65. Optional commemorative technical jersey available for additional cost.",
+      "feed_zones": "3-4 feed zones along the route featuring Italian cycling hospitality: water, energy products, plus wine, cheese, and local cured meats. Medical support and broom wagon throughout.",
+      "cutoff_time": "7 hours",
+      "lat": 43.763,
+      "lng": 11.265,
+      "route_options": [
+        "Gran Fondo: 134 km / 83 mi with 2,000m (6,562 ft) of climbing — full route through Fiesole, Mugello, and finishing on the Via Salviati wall",
+        "Medio Fondo: 95 km / 59 mi with 1,100m (3,609 ft) of climbing — similar route with Mugello bypass, same Via Salviati finish"
+      ]
+    },
+    "climate": {
+      "primary": "Mediterranean spring",
+      "description": "Mid-April in Florence offers some of the finest cycling weather in Europe. Temperatures typically range from 10-20C (50-68F), with mornings starting cool and afternoons warming pleasantly. Florence sits in the Arno valley, slightly inland from the coast, giving it a transitional Mediterranean climate — warmer than the mountains but less humid than coastal Tuscany. April averages around 70mm of rainfall spread over 9-10 days, so light showers are possible but prolonged rain is uncommon. The Tuscan spring landscape is at its peak: wildflowers in the meadows, wisteria on stone walls, green vineyards on every hillside. By race day, the worst of winter is gone and summer heat has not yet arrived.",
+      "challenges": [
+        "Cool morning start temperatures (10-12C at 8:30 AM) warming to 18-20C by midday",
+        "Moderate spring rain probability — wet descents from the Mugello hills require caution",
+        "Temperature differences between Florence valley floor and Mugello mountain roads",
+        "Occasional spring wind gusts in exposed hilltop sections",
+        "Sun exposure on south-facing Tuscan hillsides in the afternoon return leg"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved — Italian provincial and urban roads",
+      "surface": "Well-maintained Italian asphalt throughout, with occasional rough patches on narrow mountain roads in the Mugello. The race starts on Florence's urban streets, crosses the historic Ponte Vecchio, and transitions to rolling provincial roads through the Tuscan hills. The climb to Fiesole is on smooth tarmac with good surface quality. Mugello roads are narrower and more agricultural in character. The Via Salviati finish features steep urban asphalt. Expect Italian road furniture: narrow lanes, stone walls close to the road, and occasional rough patches on secondary roads. No gravel or unpaved sections.",
+      "technical_rating": 2,
+      "features": [
+        "Via Salviati: 600m at 12% average, maximum 20% — the World Championship finishing wall",
+        "Fiesole climb: 4.4 km at 5.2% average, steepening to 7%+ in the final 1.5 km",
+        "Mugello hills: sustained rolling terrain with multiple climbs of 3-6% through the Apennine foothills",
+        "Ponte Vecchio crossing: escorted passage over Florence's iconic medieval bridge",
+        "Piazzale Michelangelo: panoramic start/finish area overlooking the Florence skyline",
+        "Tuscan vineyard descents: flowing roads through Chianti-adjacent countryside"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 61."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Florence offers every accommodation tier: budget hostels (EUR 30-50/night), mid-range hotels in Oltrarno or Santa Croce neighborhoods (EUR 100-180/night), luxury hotels near the Duomo (EUR 250+). For race logistics, staying in the Oltrarno (south bank of the Arno) puts you closest to Piazzale Michelangelo. Airbnb apartments are abundant. Tour operator packages (Cycle Classic Tours, Italy Bike Tours) bundle accommodation, race entry, and guided rides. Book 2-3 months in advance — Florence in April fills up.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "The Renaissance Ride",
+      "summary": "There are gran fondos with bigger climbs. There are gran fondos with bigger fields. There are gran fondos with more prestige and deeper history. But there is no gran fondo that starts where this one starts. You line up at Piazzale Michelangelo with the entire Florence skyline below you — Brunelleschi's Dome, the Palazzo Vecchio, the Arno catching the morning light — and then you ride down into it. You cross the Ponte Vecchio on a bicycle. Let that sink in. The most photographed bridge in Italy, a medieval jewelers' row that has spanned the Arno since 1345, and you are riding across it in lycra with a race number pinned to your jersey. After the city releases you, the Tuscan hills take over: the climb to Fiesole through cypress groves, the Mugello's rolling countryside dotted with olive groves and stone farmhouses, the feed stations where the volunteers pour you wine alongside the energy drink.\n\nThe De Rosa Granfondo Firenze is not Italy's hardest ride or its most famous. It does not have the Muro di Sormano's 27% gradient or the Maratona's 4,000m of Dolomite climbing. What it has is Florence — a city that has defined Western civilization's relationship with beauty for six centuries — as both its starting line and its backdrop. The Via Salviati finish, where Rui Costa won the 2013 World Championship road race on a 20% gradient wall, provides the competitive punch. The Mugello countryside provides the Tuscan pastoral. And the city itself provides something no other gran fondo can offer: the feeling that you are not just racing through scenery, but through history. Pack your climbing legs and your appetite. You will need both.",
+      "strengths": [
+        "Florence start: Piazzale Michelangelo panorama and escorted Ponte Vecchio crossing — no other cycling event offers this city experience",
+        "Via Salviati World Championship wall: 20% maximum gradient on the road where the 2013 Worlds were decided — genuine racing heritage",
+        "Tuscan countryside: Fiesole cypress groves, Mugello olive groves, vineyard-covered hills — peak Italian cycling scenery",
+        "Italian feed stations: wine, prosciutto, pecorino, and local specialties alongside standard race nutrition",
+        "Accessible logistics: Florence is a major international destination with excellent airport, rail, and hotel infrastructure"
+      ],
+      "weaknesses": [
+        "Young event still building reputation — not yet in the tier of Italy's established gran fondos (Nove Colli, Maratona, L'Eroica)",
+        "Moderate field size (~1,500-2,500) limits the competitive depth and festival atmosphere",
+        "Florence hotel pricing in April can be steep — the city's tourist popularity works against budget travelers",
+        "No single signature mountain climb — the elevation is cumulative rather than concentrated in one iconic ascent"
+      ],
+      "bottom_line": "If you want to race across the Ponte Vecchio, climb to Fiesole, ride through the Mugello, and finish on a World Championship wall — all in the same day, all in the spring Tuscan sun — this is how you do it. Not Italy's hardest or most famous gran fondo, but possibly its most beautiful starting line."
+    },
+    "final_verdict": {
+      "score": "61/100",
+      "one_liner": "Over the Ponte Vecchio and into the Tuscan hills — Florence turns its Renaissance streets into a starting grid and the Mugello into your proving ground.",
+      "should_you_race": "Yes if the idea of racing across the Ponte Vecchio and starting from Piazzale Michelangelo makes your heart beat faster. Yes if you want a challenging but accessible Italian gran fondo wrapped in world-class cultural scenery. Yes if you value the total experience — city, countryside, food, history — over pure climbing brutality or maximum competitive depth. Skip if you want an extreme mountain challenge — look to the Maratona dles Dolomites or La Marmotte instead. Skip if you need a massive, festival-atmosphere field — the Nove Colli or Granfondo Campagnolo deliver that. Skip if you prefer gravel or off-road — the GF Strade Bianche is the Tuscan alternative for dirt road lovers.",
+      "alternatives": [
+        "Gran Fondo Strade Bianche — Tuscan white roads and Siena's Piazza del Campo finish, for those who want Tuscan dirt instead of Tuscan tarmac",
+        "Nove Colli — 200 km through Emilia-Romagna with 12,000+ riders, for those who want Italy's biggest gran fondo atmosphere",
+        "Gran Fondo La Fausto Coppi — Piedmont mountain climbing with Campionissimo heritage, for those who want harder Italian climbs",
+        "Granfondo Campagnolo Roma — Rome's streets and the surrounding hills, for another Italian city gran fondo experience"
+      ]
+    },
+    "citations": [
+      {
+        "url": "http://www.granfondofirenze.it/?lang=en",
+        "category": "official",
+        "label": "Granfondo Firenze De Rosa — Official Website"
+      },
+      {
+        "url": "http://www.granfondofirenze.it/la-gara/regulations/?lang=en",
+        "category": "official",
+        "label": "Granfondo Firenze — Race Regulations"
+      },
+      {
+        "url": "https://www.endu.net/en/events/granfondo-firenze-de-rosa",
+        "category": "official",
+        "label": "Granfondo Firenze De Rosa — ENDU Registration"
+      },
+      {
+        "url": "https://cycleclassictours.com/tours/gran-fondo/gran-fondo-florence/",
+        "category": "reference",
+        "label": "Gran Fondo Florence — Cycle Classic Tours"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5623/granfondo-firenze-de-rosa",
+        "category": "reference",
+        "label": "DeRosa GranFondo Firenze — Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/PopUp/4695/italy-back-at-the-gran-fondo-world-tour--series-with-the-de-rosa-gran-fondo-firenze",
+        "category": "reference",
+        "label": "Italy Back at the Gran Fondo World Tour Series with the De Rosa Granfondo Firenze — Gran Fondo Guide"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/12927656?lang=en",
+        "category": "reference",
+        "label": "Granfondo Firenze De Rosa — Route on RideWithGPS"
+      },
+      {
+        "url": "https://climbfinder.com/en/climbs/via-salviati",
+        "category": "reference",
+        "label": "Via Salviati — Climb Profile — ClimbFinder"
+      },
+      {
+        "url": "https://mycols.app/en/climb/via-salviati-fiesole",
+        "category": "reference",
+        "label": "Via Salviati, Fiesole — myCols Climb Database"
+      },
+      {
+        "url": "https://www.destinationflorence.com/en/details/1158-%22granfondo%22-long-distance-bike-race",
+        "category": "reference",
+        "label": "Granfondo Long Distance Bike Race — Destination Florence"
+      },
+      {
+        "url": "https://www.uc-mugello.fi.it/eventi-notizie/granfondo-firenze-da-piazzale-michelangelo-in-mugello-sui-pedali",
+        "category": "reference",
+        "label": "Granfondo Firenze — Unione Montana dei Comuni del Mugello"
+      },
+      {
+        "url": "https://www.granfondo.it/granfondo/gran-fondo-firenze-de-rosa/",
+        "category": "reference",
+        "label": "Gran Fondo di Firenze De Rosa — granfondo.it"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "De Rosa Granfondo Firenze gran fondo cycling Florence",
+      "videos": [
+        {
+          "video_id": "HJh8zeAG2Ec",
+          "title": "Gran Fondo Firenze De Rosa - 19 April 2015",
+          "channel": "Donna Weston",
+          "view_count": 18,
+          "upload_date": "20150510",
+          "duration_string": "1:34",
+          "description": "",
+          "tags": [
+            "Gran Fondo"
+          ],
+          "url": "https://www.youtube.com/watch?v=HJh8zeAG2Ec",
+          "curated": false
+        },
+        {
+          "video_id": "V2qzjFILFWk",
+          "title": "Gran Fondo Firenze De Rosa",
+          "channel": "Tiziano De Cristoforo",
+          "view_count": 1278,
+          "upload_date": "20170428",
+          "duration_string": "9:56",
+          "description": "Gran Fondo Firenze De Rosa\n23 Aprile 2017\nOrg. Veloce Club Firenze \nSpeaker : Paolo Mutton e Tiziano De Cristoforo",
+          "tags": [
+            "Gran Fondo Firenze",
+            "De Rosa",
+            "Gran Fondo Firenze De Rosa",
+            "Tiziano De Cristoforo",
+            "tizianospeaker",
+            "#tizianospeaker",
+            "sportspeaker",
+            "speaker",
+            "esperienzaspeaker",
+            "BDC",
+            "GranFondo",
+            "Paolo Mutton",
+            "Alessandro Cipr"
+          ],
+          "url": "https://www.youtube.com/watch?v=V2qzjFILFWk",
+          "transcript": "[Music]\nyeah yeah yeah yeah\npleas\nit\nhe\nspeee\nnot\nI\nmuch\nGod for\n[Applause]\nn\nthe\nthat's\nhappy\nVI\nthee fore\nout",
+          "curated": false
+        },
+        {
+          "video_id": "X4Vq1bb_0GM",
+          "title": "Granfondo Firenze De Rosa '16",
+          "channel": "Daniele Puliti",
+          "view_count": 1357,
+          "upload_date": "20160419",
+          "duration_string": "8:22",
+          "description": "Percorso Medio della Granfondo Firenze De Rosa 2016, gruppo sportivo Eli Lilly Italia s.p.a. di Sesto Fiorentino (FI).",
+          "tags": [
+            "iMovie",
+            "granfondo",
+            "de rosa",
+            "firenze",
+            "ciclismo",
+            "gruppo",
+            "sportivo",
+            "lilly",
+            "gara",
+            "bdc",
+            "bici",
+            "corsa",
+            "cicloturismo",
+            "2016"
+          ],
+          "url": "https://www.youtube.com/watch?v=X4Vq1bb_0GM",
+          "curated": true,
+          "curation_reason": "Race recap video of the medium course route with good view count and substantial duration.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/X4Vq1bb_0GM/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        },
+        {
+          "video_id": "IdtyDKRmuQY",
+          "title": "Granfondo Firenze De Rosa - Ecco il percorso 2014",
+          "channel": "Sicrea Firenze",
+          "view_count": 2320,
+          "upload_date": "20140131",
+          "duration_string": "7:07",
+          "description": "Dalle Cascine fino in Mugello, passando dal centro storico di Firenze. Vi portiamo sulle strade della Granfondo Firenze 2014, che si correrà il 30 marzo. Partenza dal city park fiorentino, dove per tre giorni (28-30 marzo) tutto parlerà di bicicletta grazie a Bicifi - Florence Bike Festival http://www.granfondofirenze.it/ e http://www.bicifi.it/",
+          "tags": [
+            "Granfondo Firenze",
+            "Bicifi",
+            "Florence Bike Festival",
+            "Biciletta"
+          ],
+          "url": "https://www.youtube.com/watch?v=IdtyDKRmuQY",
+          "curated": true,
+          "curation_reason": "Course preview video showing the route from Florence historic center through Mugello with the highest view count.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/IdtyDKRmuQY/maxresdefault.jpg",
+          "thumbnail_score": 57.72
+        },
+        {
+          "video_id": "6yYwDhwvKz8",
+          "title": "Granfondo Firenze De Rosa. Florence 2014, march 30",
+          "channel": "Sicrea Firenze",
+          "view_count": 752,
+          "upload_date": "20140214",
+          "duration_string": "2:49",
+          "description": "From the Florence historic town center to the astonishing landscape of Mugello",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=6yYwDhwvKz8",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The available transcript from the Gran Fondo Firenze race video contains primarily music and fragmented audio without coherent rider commentary about the race experience. No specific course information, terrain descriptions, gear recommendations, or race strategy details are discernible from this transcript. The 83-mile race through Florence, Tuscany covers 6,562 feet of elevation gain, but rider insights about the specific challenges, surface conditions, or race day logistics are not available in the provided content."
+      }
+    }
+  }
+}

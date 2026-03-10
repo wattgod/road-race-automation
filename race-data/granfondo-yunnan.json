@@ -1,0 +1,109 @@
+{
+  "race": {
+    "name": "Granfondo Yunnan",
+    "slug": "granfondo-yunnan",
+    "display_name": "Granfondo Yunnan",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 2286,
+      "elevation_ft": 7500.0,
+      "location": "Kunming, Yunnan, China",
+      "location_badge": "Kunming, China",
+      "country": "China",
+      "date": "2026: November TBD",
+      "date_specific": "2026: November TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://www.granfondoyunnan.com",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Tea Plantation Punches: Endless 15-20% switchbacks through Pu’er and Fengqing plantations sap legs after flats. Heat and views tempt easing off, but GC demands push.",
+        "Highland Descent Gauntlet: Technical drops from Tengchong passes past ethnic villages test brakes and nerves amid 1600-rider traffic. Cumulative fatigue peaks here.",
+        "Multi-Day Accumulation: Day 3-5 in Lincang-Xishuangbanna compounds 12,000m total gain, hitting recovery walls despite aid."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://www.granfondoyunnan.com"
+    },
+    "history": {
+      "founded": 2014,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "China’s premier amateur stage race blends epic Yunnan climbs with cultural immersion.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

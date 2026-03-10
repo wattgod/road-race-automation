@@ -1,0 +1,316 @@
+{
+  "race": {
+    "name": "Ring of Kerry Charity Cycle",
+    "slug": "ring-of-kerry-charity-cycle",
+    "display_name": "Ring of Kerry Charity Cycle",
+    "tagline": "170 km around Ireland's Iveragh Peninsula. 4,000+ riders. 1,200 volunteers. EUR 22 million raised since 1982. The Atlantic coast is the scenery. Charity is the point.",
+    "vitals": {
+      "distance_km": 180.0,
+      "distance_mi": 112.0,
+      "elevation_m": 1760,
+      "elevation_ft": 5774.0,
+      "location": "Killarney, County Kerry, Ireland",
+      "location_badge": "KILLARNEY, IRELAND",
+      "country": "Ireland",
+      "date": "First Saturday of July annually",
+      "date_specific": "2026: July 4",
+      "field_size": "4,000-6,000 riders (peak: ~10,000 pre-COVID)",
+      "start_format": null,
+      "registration": "Online via ringofkerrycycle.ie. Cost: EUR 100 + 4% admin fee (~$108 USD). Opens early in the year, spaces limited to ~6,000.",
+      "entry_fee": "EUR 100 + 4% admin (~$108 USD)",
+      "feed_zones": "3 official food stations: Cahersiveen (72 km), Kenmare (136 km), Killarney (finish). Multiple water stations. 11 fixed bike repair stations plus mobile mechanical units. Medical stations and mobile ambulances throughout.",
+      "cutoff_time": "All support systems stand down at 8:00 PM",
+      "lat": 52.0599,
+      "lng": -9.5044,
+      "route_options": [
+        "Full Ring of Kerry: ~170 km (106 mi), ~1,760m climbing"
+      ]
+    },
+    "climate": {
+      "primary": "Atlantic maritime Ireland — mild, wet, windy, changeable",
+      "description": "July in County Kerry delivers Ireland's best weather, which still means preparing for everything. Temperatures sit at 13-19C (55-66F) with an average of 99mm of rainfall across the month and roughly 7 hours of daily sunshine. The Atlantic coast sections are exposed to whatever blows in off the ocean — headwinds, crosswinds, sudden rain squalls, or blazing sunshine that makes the Skellig Islands glow. The interior sections through Kerry's hills are more sheltered but can trap humidity. A rain jacket is not optional. It is mandatory kit. The organisers know this. You should too.",
+      "challenges": [
+        "Atlantic weather systems: rain can arrive without warning on exposed coastal stretches",
+        "Wind exposure on the southern coastal road between Waterville and Caherdaniel",
+        "Temperature range of 10-20C (50-68F) — hypothermia risk if wet and windblown for hours",
+        "Four seasons in one ride is standard Irish operating procedure — pack layers"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Irish roads circumnavigating the Iveragh Peninsula",
+      "surface": "Public roads through County Kerry. Mix of N-roads and R-roads. Surface quality varies from smooth national routes to rougher regional roads with patching. Roads are closed to motor traffic on event day (counterclockwise direction only). Some narrow stretches through villages.",
+      "technical_rating": 1,
+      "features": [
+        "Coomakista Pass — the coastal climb south of Waterville with sweeping Atlantic views to the Skellig Islands",
+        "Moll's Gap — the highest point on the route at 260m, the most sustained climb of the day",
+        "Atlantic coast road — exposed seaboard riding between Cahersiveen and Kenmare with ocean on one side and Kerry's mountains on the other",
+        "Killarney National Park — the final approach through ancient oakwoods and lough-side roads",
+        "Roads closed to motor traffic in the direction of travel — counterclockwise around the Ring"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 60."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A counterclockwise loop around the Iveragh Peninsula on Ireland's Atlantic seaboard. The route leaves Killarney heading west through Killorglin, follows the coast south through Cahersiveen, Waterville, and Caherdaniel, climbs Coomakista for Skellig views, continues east through Sneem to Kenmare, then returns to Killarney via Moll's Gap — the highest and toughest climb of the day. The terrain is rolling throughout with two significant climbs. The character alternates between exposed Atlantic coast road and sheltered inland valleys. It is not an extreme route by European granfondo standards, but 170 km with 1,760m of climbing and the possibility of Atlantic headwinds makes it a demanding day for recreational riders.",
+      "signature_challenge": "Moll's Gap at 140 km — the highest point on the route with poor road surface and steady gradient. It is the moment when under-prepared riders discover that 170 km of Atlantic coast riding has consequences. The climb itself is moderate, but the context is not.",
+      "suffering_zones": [
+        "Killarney to Killorglin",
+        "Killorglin to Cahersiveen",
+        "Waterville to Coomakista",
+        "Sneem to Kenmare",
+        "Moll's Gap",
+        "Killarney National Park to Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Kerry Airport (KIR) — limited routes, 20 minutes from Killarney. Cork Airport (ORK) — 90 minutes south, more international options. Shannon Airport (SNN) — 2 hours north. Dublin Airport (DUB) — 4 hours by car/bus via motorway. Car hire recommended from any airport except Kerry.",
+      "lodging_strategy": "Killarney is the base. Hotels, B&Bs, guesthouses, and hostels are plentiful but fill fast for Ring of Kerry weekend — book 3-6 months ahead. Kenmare and Killorglin are nearby alternatives. Some riders stay in Tralee (30 minutes) for cheaper options. Camping available at local sites. Expect EUR 150-300/night for hotels, EUR 80-150 for B&Bs during event weekend.",
+      "transport": "",
+      "food": "Killarney has excellent pubs and restaurants — Irish seafood, lamb, and traditional fare. Kerry Lamb and Dingle Bay crab are local specialities. Pre-ride carb loading is well-served by the town's Italian restaurants and gastropubs. On course: 3 official food stations provide food and water. Organisers recommend bringing your own supplies as stocks deplete throughout the day.",
+      "official_site": "https://www.ringofkerrycycle.ie/"
+    },
+    "history": {
+      "founded": 1982,
+      "origin_story": "In 1982, a group from Killarney had a straightforward idea: cycle the 170 km Ring of Kerry to raise money for charity. No timing chips. No performance data. No sponsorship deals. Just cyclists, a spectacular route, and a purpose larger than personal achievement. From that first ride, the event grew into Ireland's largest one-day cycling event and one of Europe's most significant charity cycling institutions. Over four decades, it has raised more than EUR 22 million for over 200 charities and voluntary organisations — funding hospital extensions, special needs facilities, suicide prevention services, mountain rescue, cancer support, and end-of-life care across Ireland.",
+      "notable_moments": [
+        "1982: First Ring of Kerry Charity Cycle — a group of Killarney cyclists ride 170 km to raise money for charity",
+        "Event grows from a local ride to Ireland's largest one-day cycling event over four decades",
+        "Peak participation of approximately 10,000 riders in the mid-2010s",
+        "2020-2021: COVID-19 pandemic disrupts the event — virtual editions and reduced numbers",
+        "2024: EUR 1,165,625 raised for 35 charities and community groups in a single edition",
+        "2025: Over EUR 1.19 million raised for 40+ charities with approximately 4,000 riders",
+        "Cumulative fundraising exceeds EUR 22 million for 200+ charities since inception",
+        "2026: 44th edition scheduled for July 4"
+      ],
+      "reputation": "Ireland's cycling institution. What the London Marathon is to charity running in the UK, the Ring of Kerry Charity Cycle is to charity cycling in Ireland — a national event that transcends sport. The Taoiseach has ridden it. The entire county mobilises for it. The money it raises changes lives across Ireland."
+    },
+    "biased_opinion": {
+      "verdict": "The Charity Machine",
+      "summary": "The Ring of Kerry Charity Cycle is not a race. It has no timing chips, no results board, no podium. What it has is 44 years of history, EUR 22 million raised for 200+ charities, 1,200 volunteers who make the roads of Kerry safe for thousands of cyclists, and 170 km of Atlantic coast scenery that ranks among the most beautiful cycling routes in Europe. The Iveragh Peninsula delivers the Skellig Islands, Coomakista's ocean views, Moll's Gap, and the approach through Killarney National Park. The climbing is honest but not savage. The weather is a gamble with the Atlantic. The community spirit is not manufactured — it is the DNA of the event. Founded in 1982, this is Ireland's largest one-day cycling event and one of Europe's most significant charity rides. You do not ride the Ring of Kerry to prove anything. You ride it to contribute to something larger than yourself, and the Atlantic scenery is the reward for showing up.",
+      "strengths": [
+        "Community and charity purpose: EUR 22M+ raised over 44 years — this is one of the most impactful charity cycling events in Europe",
+        "Atlantic coast scenery: the Iveragh Peninsula, Skellig Islands, and Killarney National Park provide genuine visual drama",
+        "Comprehensive support: 1,200 volunteers, 3 food stations, 11 bike repair stations, full medical coverage",
+        "Mass-participation atmosphere: thousands of riders sharing the road for a common charitable cause"
+      ],
+      "weaknesses": [
+        "No competitive element: no timing, no results — if you want racing, look elsewhere",
+        "Atlantic weather: rain and wind on the coastal sections can turn the day from scenic to grim",
+        "Accommodation pressure: Killarney in peak July is expensive and books out early",
+        "Remote location: Kerry requires effort to reach — no major international airport nearby"
+      ],
+      "bottom_line": "Ireland's greatest day on a bike. Not because of the climbing, the speed, or the competition — but because 170 km of Atlantic coast scenery shared with thousands of riders for charity creates something that pure racing never will."
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "170 km around the Iveragh Peninsula. Ireland's biggest one-day cycling event. EUR 22 million raised. The Atlantic coast is the scenery. Charity is the point.",
+      "should_you_race": "Yes if you want one of Europe's great scenic charity rides — the Iveragh Peninsula coastline is spectacular. Yes if community and charitable purpose matter as much as personal achievement. Skip if you need competition, timing, or race results. Skip if Atlantic weather uncertainty is a dealbreaker for a trip to western Ireland.",
+      "alternatives": "If you want a UK/Ireland sportive with more competitive edge: try the Etape Caledonia. If you want a massive charity cycling event with climbing: try Alpe d'HuZes. If you want a world-scale mass-participation ride with Atlantic scenery: try the Cape Town Cycle Tour."
+    },
+    "citations": [
+      {
+        "url": "https://www.ringofkerrycycle.ie/",
+        "category": "official",
+        "label": "Ring of Kerry Charity Cycle — Official Site"
+      },
+      {
+        "url": "https://www.ringofkerrycycle.ie/faqs-2026/",
+        "category": "official",
+        "label": "Ring of Kerry Charity Cycle — 2026 FAQs"
+      },
+      {
+        "url": "https://www.ringofkerrycycle.ie/our-story/",
+        "category": "official",
+        "label": "Ring of Kerry Charity Cycle — Our Story"
+      },
+      {
+        "url": "https://www.rte.ie/news/regional/2025/0705/1522034-ring-of-kerry-cycle/",
+        "category": "media",
+        "label": "Thousands take part in Ring of Kerry Charity Cycle — RTE News"
+      },
+      {
+        "url": "https://www.radiokerry.ie/news/over-e1-19-million-raised-for-over-40-charities-from-ring-of-kerry-charity-cycle-457194",
+        "category": "media",
+        "label": "Over EUR 1.19 million raised for over 40 charities — Radio Kerry"
+      },
+      {
+        "url": "https://www.killarneytoday.com/e1165625-thats-what-the-2024-ring-of-kerry-cycle-raised/",
+        "category": "media",
+        "label": "EUR 1,165,625 raised by 2024 Ring of Kerry Cycle — Killarney Today"
+      },
+      {
+        "url": "https://www.kerrycycling.com/routes/cycling-routes-from-killarney/the-ring-of-kerry/",
+        "category": "reference",
+        "label": "The Ring of Kerry — Kerry Cycling"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Ring of Kerry Charity Cycle gran fondo cycling Killarney",
+      "videos": [
+        {
+          "video_id": "12O6dAim2qE",
+          "title": "Ring Of Kerry Charity Cycle 2016 Molls Gap",
+          "channel": "Alan Kelly",
+          "view_count": 1291,
+          "upload_date": "20160704",
+          "duration_string": "3:02",
+          "description": "Molls Gap during the Ring Of Kerry Charity Cycle July 2nd 2016",
+          "tags": [
+            "AVS4You",
+            "ROK",
+            "Ring Of Kerry",
+            "Charity Cycle"
+          ],
+          "url": "https://www.youtube.com/watch?v=12O6dAim2qE",
+          "curated": true,
+          "curation_reason": "Shows key terrain feature (Molls Gap) from actual race with decent views and participant perspective.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/12O6dAim2qE/maxresdefault.jpg",
+          "thumbnail_score": 72.0
+        },
+        {
+          "video_id": "Mhh10YTTfQg",
+          "title": "Ring of Kerry 2015 mad decent",
+          "channel": "yanireland",
+          "view_count": 57,
+          "upload_date": "20150710",
+          "duration_string": "3:34",
+          "description": "Moll's Gap to KIllarney decent",
+          "tags": [
+            "iMovie",
+            "ring of kerry",
+            "cycle",
+            "moll's gap",
+            "ireland",
+            "kerry",
+            "killarney",
+            "cycling",
+            "gopro",
+            "cube gtc",
+            "speed"
+          ],
+          "url": "https://www.youtube.com/watch?v=Mhh10YTTfQg",
+          "curated": false
+        },
+        {
+          "video_id": "Y8NMBvef6Xw",
+          "title": "Ring of Kerry Cycle 2014 - slideshow",
+          "channel": "yanireland",
+          "view_count": 1108,
+          "upload_date": "20140706",
+          "duration_string": "3:06",
+          "description": "This video is about Ring of Kerry Cycle 5th July 2014. The best Cycle Sportive in Ireland !!! You must try ;)",
+          "tags": [
+            "cycling",
+            "ring of kerry",
+            "charity",
+            "kerry",
+            "ireland",
+            "fun",
+            "speed",
+            "sun",
+            "event",
+            "ring of kerry cycle",
+            "waterville",
+            "o'dwyer's",
+            "munster",
+            "cycle",
+            "bike",
+            "road bike"
+          ],
+          "url": "https://www.youtube.com/watch?v=Y8NMBvef6Xw",
+          "transcript": "[Music]\n[Applause]\nextrem Wares of back again extreme\nplaces I didn't know I broke everything\nnew again everything that I don't I\nthrew it out the windows came along\nstreames I know will part the colors of\nmy sea Perfect Color\nMe Extreme Ways that help me they help\nme out late at night extreme places I\nhad gone to never see any life dirty\nbasement dirty noise dirty places coming\nthrough extreme worlds alone did you\never like it P I would stand in line for\nthis there's always room in life for\nthis oh\nbaby oh baby then it fell\napart fell\napart oh\nbaby oh baby\nthen it fell\napart it fell\nbaby oh baby like it always\ndoes always\ndoes stream sounds are told me they hel\nme down every night I didn't have much\nto say I didn't give up the life I\nclosed my eyes and closed myself and\nclosed my world and never open up to\nanything it could get me at\nall I had to close down everything I had\nto close down my mind too many things C\nme too much can make me blind I've seen\nso much in so many places so many\nheartaches so many faces so many dirty\nthings\nyou couldn't even\nbelieve I would stand in line for\nthis it's always good in life for\naart it fell\napart oh baby oh baby oh baby",
+          "curated": false
+        },
+        {
+          "video_id": "hLg3VXIaK8g",
+          "title": "Ring of Kerry 2016",
+          "channel": "yanireland",
+          "view_count": 199,
+          "upload_date": "20160725",
+          "duration_string": "4:36",
+          "description": "Ring of Kerry Cycle 2016 - Annual Charity Cycle in Ireland",
+          "tags": [
+            "iMovie",
+            "ring of kerry cycle 2016",
+            "killarney",
+            "kerry",
+            "ireland",
+            "charity",
+            "pieta house",
+            "speed",
+            "gopro",
+            "cube"
+          ],
+          "url": "https://www.youtube.com/watch?v=hLg3VXIaK8g",
+          "curated": false
+        },
+        {
+          "video_id": "H67falaSZOM",
+          "title": "9th Annual Will Bike 4 Food charity cycling event returns in Hatfield",
+          "channel": "WWLP-22News",
+          "view_count": 68,
+          "upload_date": "20190929",
+          "duration_string": "34",
+          "description": "The 9th annual Will Bike 4 Food charity cycling event will take place Sunday in Hatfield.",
+          "tags": [
+            "wwlp",
+            "22news",
+            "western mass",
+            "video",
+            "hampden",
+            "hampshire",
+            "franklin",
+            "berkshire"
+          ],
+          "url": "https://www.youtube.com/watch?v=H67falaSZOM",
+          "transcript": "the food bank of Western Massachusetts\nis holding its ninth annual will bike\nfor food charity cycling event in\nHatfield today more than 440 cyclists of\nall ages are registered to ride one of\nfour different routes through the\nPioneer Valley to raise awareness of\nhunger making this year's expected\nturnout the largest in the rides history\nsince will bike for food began in 2011\nthe event has raised nearly 700 700 ten\nthousand dollars providing more than 2\nmillion meals to those in need\nthroughout Western Massachusetts in the\nevent will be emceed by our very own\n22news storm team meteorologist Brian\nlapis",
+          "curated": false
+        }
+      ],
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-03-06",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "The provided transcripts do not contain rider intelligence or race information about the Ring of Kerry Charity Cycle. The transcripts appear to be unrelated content including music lyrics and coverage of a different charity cycling event (Will Bike for Food in Western Massachusetts). No actionable intelligence about course conditions, terrain, challenges, or race strategy for the Ring of Kerry event could be extracted from these sources."
+      }
+    }
+  }
+}

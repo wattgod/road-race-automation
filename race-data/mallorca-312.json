@@ -1,0 +1,424 @@
+{
+  "race": {
+    "name": "Mallorca 312",
+    "slug": "mallorca-312",
+    "display_name": "Mallorca 312 OK Mobility",
+    "tagline": "312 kilometers around cycling's Mediterranean paradise. Serra de Tramuntana climbs, closed roads, 8,500 riders, and a finish that makes you forget every watt of suffering.",
+    "vitals": {
+      "distance_km": 312.2,
+      "distance_mi": 194.0,
+      "elevation_m": 5050,
+      "elevation_ft": 16568.0,
+      "location": "Playa de Muro, Mallorca, Spain",
+      "location_badge": "PLAYA DE MURO, MALLORCA",
+      "country": "Spain",
+      "date": "Late April annually",
+      "date_specific": "2026: April 25",
+      "field_size": "8,500 riders across all distances (312km, 225km, 167km)",
+      "start_format": null,
+      "registration": "Opens early October, sells out within minutes. 2026 entry fee EUR 159.99 (includes jersey, timing chip, finisher medal). Waiting list available after sellout.",
+      "entry_fee": "EUR 159.99 (~$175 USD)",
+      "feed_zones": "6 feed stations at approximately km 50, 95, 136, 189, 238, and 284. Each provides food, drinks, toilets, and mechanical assistance.",
+      "cutoff_time": "14 hours 20 minutes (finish by 8:40 PM). Intermediate checkpoints at km 97 (by 11:15 AM) and km 220 (by 4:30 PM).",
+      "lat": 39.7967,
+      "lng": 3.1203,
+      "route_options": [
+        "312 km / 194 mi (5,050m climbing)",
+        "225 km / 140 mi (3,973m climbing)",
+        "167 km / 104 mi (2,475m climbing)"
+      ]
+    },
+    "climate": {
+      "primary": "Mediterranean spring",
+      "description": "Late April brings 19-22C (66-72F) daytime temperatures with 8+ hours of sunshine. Early morning start at 6:30 AM means cool conditions (11-13C) for the first hours. Serra de Tramuntana mountains run several degrees cooler than the coast. Rain occurs on average 5 days in April but is typically brief.",
+      "challenges": [
+        "Pre-dawn start temperatures around 11-13C require layering",
+        "Mountain sections in Serra de Tramuntana can be significantly cooler and exposed to wind",
+        "Occasional spring rain showers can make descents treacherous",
+        "Late afternoon heat possible on the flat eastern sections after 250km of fatigue"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved mountain and coastal roads",
+      "surface": "Well-maintained Spanish tarmac throughout. Fully closed roads with no traffic.",
+      "technical_rating": 2,
+      "features": [
+        "Serra de Tramuntana mountain passes with extended switchback descents",
+        "Exposed coastal road sections with crosswind potential",
+        "Fast descents off Puig Major and Coll de Soller requiring confident handling",
+        "Rolling terrain through the eastern flatlands in the second half",
+        "Urban sections through villages and towns"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 5,
+      "altitude": 2,
+      "logistics": 5,
+      "prestige": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 3,
+      "cultural_impact": 5,
+      "overall_score": 86,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 87. adventure dimension dropped, road_surface added. Score recalculated: 86."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Playa de Muro is the start/finish — stay within 5km for race morning convenience. Official race hotels include Vanity Hotel Golf, Sunrise Aparthotel, and Eden Lago. Port d'Alcudia offers more options 10 minutes away. Book 6+ months in advance as race week accommodation sells out nearly as fast as entries. Tour operator packages (Sportive Breaks, Love Velo, Sports Tours International) bundle entry, hotel, and transfers.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Mallorca 312 is the event that proved a gran fondo could be as culturally significant as any professional race. It is not the hardest 312 kilometers you will ever ride — the roads are perfect, the support is immaculate, and the Mediterranean provides a backdrop that makes suffering feel almost romantic. But make no mistake: 312 kilometers with 5,050 meters of climbing will find every weakness in your preparation. The front-loaded elevation through Serra de Tramuntana is designed to break you before the halfway mark, and the flat eastern sections that follow are not a gift — they are a test of what you have left after Puig Major has taken everything.\n\nWhat separates Mallorca 312 from every other gran fondo is the combination of scale and intimacy. Eight thousand five hundred riders sounds like chaos, but the closed-road organization and wave starts create an experience that feels personal. You climb alongside riders from 60 countries, share feed stations with people whose names you will never know but whose suffering you understand completely, and cross the finish line on a beach at sunset knowing you just rode around an entire island. Alberto Contador has done this ride. Miguel Indurain has done this ride. And when you finish, you understand exactly why they keep coming back.\n\nThe only honest criticism is access. The event sells out in minutes, turning registration day into its own competitive event. If you get an entry, do not waste it. Train for the distance, respect the climbs, pack layers for the mountains, and arrive in Mallorca early enough to shake out your legs on the same roads you will race. This is one of the great single-day cycling experiences on the planet, and it earns that reputation every April.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "86/100",
+      "one_liner": "The defining European gran fondo — 312km around cycling's most beloved island on fully closed roads.",
+      "should_you_race": "If you have ever dreamed of riding around an entire Mediterranean island in a single day, this is the one. You need a genuine endurance base — 312km with 5,000m of climbing is not a stretch goal you wing on enthusiasm. Train for 6+ hour rides, respect the Serra de Tramuntana climbs, and register the moment entries open because you will not get a second chance. This event is worth traveling for, worth training for, and worth the suffering.",
+      "alternatives": [
+        "L'Etape du Tour (France) — similar prestige, iconic climbs, but shorter distance",
+        "Maratona dles Dolomites (Italy) — harder climbing, smaller field, lottery entry",
+        "Marmotte Granfondo Alpes (France) — more extreme elevation, col-hunting format",
+        "Gran Fondo Stelvio Santini (Italy) — alpine climbing focus, stunning scenery"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://mallorca312.com/en/",
+        "category": "official",
+        "label": "Mallorca 312 Official Website"
+      },
+      {
+        "url": "https://epicroadrides.com/cycling-blog/mallorca-312-route-review-guide/",
+        "category": "media",
+        "label": "Epic Road Rides: Mallorca 312 Route Review Guide"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/7933/8500-cyclists-tackle-sold-out-14th-edition-of-mallorca-312-ok-mobility",
+        "category": "media",
+        "label": "Gran Fondo Guide: 2024 Mallorca 312 Results"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/IndexFull/8735/registration-for-the-2026-mallorca-312-opens-tuesday-october-7th",
+        "category": "media",
+        "label": "Gran Fondo Guide: 2026 Registration"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/IndexFull/8746/2026-mallorca-312-ok-mobility-sells-out-all-8500-event-entries-instantly",
+        "category": "media",
+        "label": "Gran Fondo Guide: 2026 Sellout"
+      },
+      {
+        "url": "https://www.rouleur.cc/blogs/rouleur-explore/why-mallorca-312-needs-to-be-on-your-cycling-sportive-bucket-list",
+        "category": "media",
+        "label": "Rouleur: Why Mallorca 312 Needs to Be on Your Bucket List"
+      },
+      {
+        "url": "https://sportivebreaks.com/sportives/mallorca-312/",
+        "category": "media",
+        "label": "Sportive Breaks: Mallorca 312"
+      },
+      {
+        "url": "https://www.cyclinglocations.com/mallorca-312-route/",
+        "category": "route",
+        "label": "Cycling Locations: Mallorca 312 Route, Climb Profiles & GPX"
+      },
+      {
+        "url": "https://rideharder.co.uk/mallorca-312-cut-off-times/",
+        "category": "other",
+        "label": "Ride Harder: Mallorca 312 Cut Off Times"
+      },
+      {
+        "url": "https://granfondodailynews.com/2024/04/30/riders-ready-set-go-2024-mallorca-312-gran-fondo-results/",
+        "category": "media",
+        "label": "Gran Fondo Daily: 2024 Results"
+      },
+      {
+        "url": "https://www.helencummins.com/mallorca-312-cycling-event/",
+        "category": "media",
+        "label": "The Story of Mallorca 312 Cycling Event"
+      },
+      {
+        "url": "https://www.sportactive.net/en/Cycling-Blog/great-riders-who-have-taken-mallorca-312-sportive.html",
+        "category": "media",
+        "label": "SportActive: Great Riders Who Have Taken on the Mallorca 312"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/euro-sportive-planner-2019-mallorca-312",
+        "category": "media",
+        "label": "Cyclist Magazine: Mallorca 312 As Tough As It Gets"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/6638/miguel-indurain-and-alberto-contador-join-leadout-at-this-years-mallorca-312",
+        "category": "media",
+        "label": "Gran Fondo Guide: Indurain and Contador at Mallorca 312"
+      },
+      {
+        "url": "https://sunvelo.com/mallorca-312-10-essential-faqs-cut-offs-routes-entries-tips/",
+        "category": "other",
+        "label": "SunVelo: Mallorca 312 FAQs"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Mallorca 312 gran fondo cycling Playa de Muro",
+      "videos": [
+        {
+          "video_id": "w4LsZR_3euQ",
+          "title": "Mallorca - M 312 (167) - 30.04.2022",
+          "channel": "MEGA CICLISMO",
+          "view_count": 15210,
+          "upload_date": "20220505",
+          "duration_string": "4:47:47",
+          "description": "Impressionen vom Gran Fondo Mallorca 312 - Bilder und Eindrücke von der 167 km Strecke am 30. April 2022 mit Start und Ziel in Playa de Muro, Spanien.",
+          "tags": [
+            "Radsport",
+            "Ciclismo",
+            "Cyclisme",
+            "Cycling",
+            "Gran Fondo",
+            "Granfondo",
+            "Mallorca 312",
+            "M312",
+            "M 312",
+            "Mallorca",
+            "Spanien",
+            "Espana",
+            "Balearen",
+            "Balearische Inseln",
+            "Insel",
+            "Jedermann-Rennen",
+            "Jedermannrennen",
+            "Hobbyrennen",
+            "Serra de Tramuntana",
+            "M167",
+            "M 167",
+            "Platja de Muro",
+            "Playa de Muro",
+            "Alcudia",
+            "Ivan Basso",
+            "Alberto Contador",
+            "Miguel Indurain",
+            "Sean Kelly",
+            "Gran Fondo Mallorca 312",
+            "M-10",
+            "Radrundfahrt",
+            "Tramuntana Gebirge",
+            "Puig Mayor",
+            "Coll de Femenia",
+            "Deia",
+            "Valdemossa",
+            "Esporles",
+            "Llosetta",
+            "Sa Pobla"
+          ],
+          "url": "https://www.youtube.com/watch?v=w4LsZR_3euQ",
+          "curated": false
+        },
+        {
+          "video_id": "vjEkUbQZ32Q",
+          "title": "2024 edition of Mallorca 312",
+          "channel": "endurancebiz",
+          "view_count": 4306,
+          "upload_date": "20240429",
+          "duration_string": "6:25",
+          "description": "The fourteenth edition of the Mallorca 312 | OK Mobility gran fondo got underway at Playa de Muro, Mallorca, Spain, on April 27, 2024.\n\nUnlike in 2023, when extremely hot conditions were experienced, the peloton woke up to more pleasant temperatures and cloudy skies. Although, later on in the day, strong winds became the enemy of many of the participants of the 167km, 225km and 312km races.",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=vjEkUbQZ32Q",
+          "transcript": "r\n[Music]\n[Applause]\nspeech speee\nI'm\no\nabout the homs in Lo\nis the\nchampion I'm exhausted 9h hour race is\nalways very it's very long it starts off\neasy with a neutralized face but then\nthe first four hours in the mountains is\nalways very hard it's uh you know the\nbeginning of the first climb you're like\n50 people and then it goes down to 40 30\nand we came out to the flats like seven\ndown to seven people and then rode for\nthe last 150 K just three three people\nin the wind that was very hard so I'm\ntired yeah\nno no no I didn't\nexpect\nbecause was here\nso she didn't write yet no no no no but\nI think she's doing it thank\nyou no I didn't expect to win but I'm\nvery happy\ncourse she yeah I admire her she because\nshe's really stubborn and she's really\ngood and she is really honest cyclist\nand\nso I it's it's an honor that she's also\nriding here\n[Laughter]\nso thank you very much\nsee\num fore",
+          "curated": true,
+          "curation_reason": "Official 2024 race coverage with participant interviews and specific race conditions details.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/vjEkUbQZ32Q/hqdefault.jpg",
+          "thumbnail_score": 41.12
+        },
+        {
+          "video_id": "UBxRIzIIFjk",
+          "title": "Mallorca - M 312 (167) - 24.10.2021",
+          "channel": "MEGA CICLISMO",
+          "view_count": 16474,
+          "upload_date": "20211031",
+          "duration_string": "3:16:29",
+          "description": "Impressionen vom Gran Fondo Mallorca 312 - Bilder & Eindrücke von der 167 km Strecke am 24. Oktober 2021 mit Start & Ziel in Playa de Muro, Spanien.",
+          "tags": [
+            "Radsport",
+            "Ciclismo",
+            "Cyclisme",
+            "Cycling",
+            "Gran Fondo",
+            "Granfondo",
+            "Mallorca 312",
+            "M312",
+            "Spanien",
+            "Balearen",
+            "Balearische Insel",
+            "Jedermann-Rennen",
+            "Jedermannrennen",
+            "Hobbyrennen",
+            "Serra de Tramuntana",
+            "M167",
+            "167 km",
+            "Tramuntanagebirge",
+            "Radrennen",
+            "24.10.2021",
+            "M 312",
+            "Platja de Muro",
+            "Playa de Muro",
+            "Alcudia",
+            "Alberto Contador",
+            "Jan Ullrich",
+            "Oscar Freire",
+            "Gran Fondo Mallorca 312",
+            "Radrundfahrt",
+            "M-10"
+          ],
+          "url": "https://www.youtube.com/watch?v=UBxRIzIIFjk",
+          "curated": false
+        },
+        {
+          "video_id": "NzlVJDeLNwU",
+          "title": "Mallorca 312 M312 Granfondo 2025  - Die 167km Strecke im Rennvideo",
+          "channel": "HikeBikeCamper",
+          "view_count": 3150,
+          "upload_date": "20250502",
+          "duration_string": "28:41",
+          "description": "Hier gibt meinen Rennbericht zum Mallorca 312 Granfondo. Es geht über die 167km, 2500hm \"Sprintstrecke\" von Playa de Muro durch das Traumuntana Gebirge und zurück. \n\n\n#Mallorca #M312 #Granfondo #Racevideo # Rennbericht #Rennrad #Marathon #PlayaDeMuro",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=NzlVJDeLNwU",
+          "curated": false
+        },
+        {
+          "video_id": "6w35Ng4yKEA",
+          "title": "Mallorca 312 Granfondo 2024 - 167km Runde",
+          "channel": "HikeBikeCamper",
+          "view_count": 12827,
+          "upload_date": "20240501",
+          "duration_string": "21:12",
+          "description": "Ein Zusammenschnitt der 167km Runde des Radrennen Mallorca 312 am 27.04.2024 mit Start und Ziel in Playa de Muro. Neben der großen 312km Runde gibt es noch die kürzere 225km und die \"ganz kleine\" Runde mit 167km welche etwa 2800 Höhenmeter hat und bis nach Esporles auf der 312km Runde verläuft dann jedoch über Llosetta und Sa Pobla zurück nach Playa de Muro führt.\n\n#mallorca #312 #mallorca312 #radrennen #rennrad #alcudia #granfondo #Fahrrad",
+          "tags": [
+            "Rennrad",
+            "Marathon",
+            "Radrennen",
+            "Fahrrad",
+            "Mallorca",
+            "Mallorca312"
+          ],
+          "url": "https://www.youtube.com/watch?v=6w35Ng4yKEA",
+          "curated": true,
+          "curation_reason": "Recent 2024 race recap with good production quality showing the 167km course through the Tramuntana mountains.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/6w35Ng4yKEA/maxresdefault.jpg",
+          "thumbnail_score": 91.69
+        }
+      ],
+      "quotes": [
+        {
+          "text": "The first four hours in the mountains is always very hard - you start with 50 people on the first climb and then it goes down to 40, 30, and we came out to the flats like seven people and then rode for the last 150K just three people in the wind that was very hard.",
+          "source_video_id": "vjEkUbQZ32Q",
+          "source_channel": "endurancebiz",
+          "source_view_count": 4306,
+          "category": "course_difficulty",
+          "curated": true
+        }
+      ],
+      "rider_intel": {
+        "extracted_at": "2026-03-05",
+        "key_challenges": [
+          {
+            "name": "The First Climb",
+            "description": "The beginning of the first climb causes major attrition - field drops from 50 riders to 40 then 30 people very quickly.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          },
+          {
+            "name": "Mountain Section",
+            "description": "First four hours in the mountains described as always very hard, causing the field to whittle down to just seven riders.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          },
+          {
+            "name": "Final 150K Flats",
+            "description": "Last 150K ridden with just three people battling constant wind, described as very hard.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          }
+        ],
+        "terrain_notes": [
+          {
+            "text": "Race features significant wind exposure on the flats, requiring constant effort even in small groups.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          }
+        ],
+        "gear_mentions": [],
+        "race_day_tips": [
+          {
+            "text": "Expect major field reduction in the mountains - be prepared for the race to split dramatically in the first four hours.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          },
+          {
+            "text": "Race starts with a neutralized pace but becomes very hard once hitting the mountains.",
+            "source_video_ids": [
+              "vjEkUbQZ32Q"
+            ]
+          }
+        ],
+        "additional_quotes": [
+          {
+            "text": "It's a 9 hour race, always very long. It starts off easy with a neutralized pace but then the first four hours in the mountains is always very hard.",
+            "source_video_id": "vjEkUbQZ32Q",
+            "source_channel": "endurancebiz",
+            "source_view_count": 4306,
+            "category": "logistics",
+            "curated": true
+          }
+        ],
+        "search_text": "The Mallorca 312 is described as a grueling 9-hour endurance test that begins with a neutralized start before becoming extremely challenging. The race features a brutal mountain section in the first four hours that causes dramatic field reduction, with groups dropping from 50 riders to just 7 survivors. The first climb is particularly selective, quickly eliminating riders. After the mountains, riders face 150 kilometers of wind-exposed flats that require constant effort even in small groups. The combination of sustained climbing followed by wind-battered flats creates a true test of endurance, with only the strongest riders surviving to contest the finish."
+      }
+    }
+  }
+}

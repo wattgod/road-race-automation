@@ -1,0 +1,136 @@
+{
+  "race": {
+    "name": "Bluewater International Gran Fondo",
+    "slug": "bluewater-gran-fondo",
+    "display_name": "Bluewater International Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 149.7,
+      "distance_mi": 93.0,
+      "elevation_m": 853,
+      "elevation_ft": 2800.0,
+      "location": "Sarnia, Ontario, Canada",
+      "location_badge": "Sarnia, Canada",
+      "country": "Canada",
+      "date": "2026: August 2",
+      "date_specific": "2026: August 2",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Tropical",
+      "description": "Typical southern Ontario summer: warm, humid days with lake moderation.",
+      "challenges": [
+        "Precipitation: Low to moderate in August."
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 5,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Scenic paved routes along Lake Huron shores, quiet country roads, rolling hills in Arkona, and picturesque orchards, with timed segments for competitive fun.",
+      "signature_challenge": "Timed segments on rolling terrain allowing pacing between efforts, finishing with stunning Lake Huron views.",
+      "suffering_zones": [
+        "Arkona Rolling Hills: Challenging climbs through rural hills that test legs mid-ride.",
+        "Lake Huron Finish: Exposed coastal push to the line with potential headwinds."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Hotels and lodging available in Sarnia; contact local tourism for options near Mike Weir Park.",
+      "transport": "Fully supported event with fuel stations, bike support, hot meals, live music, and beer at Mike Weir Park start/finish.",
+      "food": "",
+      "official_site": "https://www.ontariobybike.ca/event-item/10th-annual-bluewater-international-granfondo/"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "Celebrated gran fondo ranked Ontario's #1, supporting local palliative care with strong community backing.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Ontario's top gran fondo: scenic, supported, and community-driven perfection.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.ontariobybike.ca/event-item/10th-annual-bluewater-international-granfondo/",
+        "category": "reference",
+        "label": "10th Annual Bluewater International Granfondo - Ontario By Bike"
+      },
+      {
+        "url": "https://raceroster.com/events/2026/108967/bluewater-international-gran-fondo-2026",
+        "category": "reference",
+        "label": "Bluewater International Gran Fondo 2026"
+      },
+      {
+        "url": "https://findarace.com/ca/events/bluewater-international-gran-fondo-2026",
+        "category": "reference",
+        "label": "Bluewater International Gran Fondo 2026 2026 | Sun 2 Aug"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/7627/bluewater-international-granfondo-returns-to-support-local-palliative-care",
+        "category": "reference",
+        "label": "Bluewater International Granfondo returns to support Local Palliative ..."
+      },
+      {
+        "url": "https://www.ourbco.ca",
+        "category": "reference",
+        "label": "Bluewater International Granfondo"
+      }
+    ]
+  }
+}

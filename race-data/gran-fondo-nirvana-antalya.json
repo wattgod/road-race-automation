@@ -1,0 +1,234 @@
+{
+  "race": {
+    "name": "Gran Fondo Nirvana Antalya",
+    "slug": "gran-fondo-nirvana-antalya",
+    "display_name": "UCI Gran Fondo World Series Antalya",
+    "tagline": "Fast Turkish Riviera qualifier with luxury resort vibes",
+    "vitals": {
+      "distance_km": 98.0,
+      "distance_mi": 60.9,
+      "elevation_m": 517,
+      "elevation_ft": 1696.0,
+      "location": "Antalya, Turkey",
+      "location_badge": "Turkish Riviera",
+      "country": "Turkey",
+      "date": "November",
+      "date_specific": "2025: November 7",
+      "field_size": 1500,
+      "start_format": null,
+      "registration": "Open",
+      "entry_fee": "Not specified",
+      "feed_zones": "Multiple with technical support",
+      "cutoff_time": "Minimum average speed enforced",
+      "lat": 36.8969,
+      "lng": 30.7133,
+      "route_options": [
+        "98 km Gran Fondo",
+        "66 km Medio Fondo",
+        "23 km Time Trial"
+      ]
+    },
+    "climate": {
+      "primary": "Mediterranean",
+      "description": "Mild Mediterranean November weather (13-22°C), windy conditions possible, spring-like with coastal influence.",
+      "challenges": [
+        "Mild Mediterranean November weather (13-22°C), windy conditions possible, spring-like with coastal influence"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat",
+      "surface": "Mainly flat and fast coastal roads with short steep hills, some narrow/winding sections with gravel patches.",
+      "technical_rating": 2,
+      "features": [
+        "Mainly flat and fast coastal roads with short steep hills, some narrow/winding sections with gravel patches"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 3,
+      "climate_risk": 5,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 2,
+      "cultural_impact": 2,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "98km mainly flat/fast loop from resort: beach roads → backcountry near airport → short steep hills (253m northern section). 66km skips climbs. 23km flat TT river loop[1][2][7]. **Suffering zones**: Headwind sections (6 Beaufort), gravel corners, final kickers.",
+      "signature_challenge": null,
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "Antalya Airport (AYT) 20min from TT start. Start/finish at Nirvana Cosmopolitan Hotel or 2025 city park. Expo, pasta party included[1][2][7].",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2021,
+      "origin_story": "Founded 2021 as UCI qualifier. Grew to 1500+ international participants by 2024. Sponsored by Nirvana Hotels[1][2].",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "Excellent amateur qualifier combining fast racing with Turkish Riviera luxury. Perfect for age-group qualification without suffering.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Gran Fondo Nirvana Antalya gran fondo cycling Antalya",
+      "videos": [
+        {
+          "video_id": "fM30BFU2qR0",
+          "title": "2024 UCİ GRANFONDO WORLD SERIES NİRVANA ANTALYA SHORT COURSE (UCI NİRVANA GRANFONDO KISA PARKUR)",
+          "channel": "Pinar_kurtoglu",
+          "view_count": 1736,
+          "upload_date": "20241118",
+          "duration_string": "1:39:12",
+          "description": "Yağmurlu, çamurlu, hızlı ve gergin bir yarış..",
+          "tags": [
+            "granfondo",
+            "antalya",
+            "bisiklet yarışı",
+            "bisikletçi",
+            "uci",
+            "nirvana",
+            "yarış",
+            "bisiklet",
+            "yarış bisikleti"
+          ],
+          "url": "https://www.youtube.com/watch?v=fM30BFU2qR0",
+          "curated": true,
+          "curation_reason": "Complete race footage from 2024 showing challenging weather conditions with rain and mud.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/fM30BFU2qR0/maxresdefault.jpg",
+          "thumbnail_score": 92.0
+        },
+        {
+          "video_id": "7uBi_4uaqMg",
+          "title": "UCI Nirvana Gran Fondo World Series Antalya 17.11.2024. Long Course 98 km",
+          "channel": "Alexander Savitsky",
+          "view_count": 384,
+          "upload_date": "20241204",
+          "duration_string": "2:21:55",
+          "description": "",
+          "tags": [
+            "road race",
+            "bicycle",
+            "Turkey",
+            "Antalya",
+            "cycling",
+            "race",
+            "road bike"
+          ],
+          "url": "https://www.youtube.com/watch?v=7uBi_4uaqMg",
+          "curated": true,
+          "curation_reason": "Full long course race documentation from 2024, providing complete ride-along experience.",
+          "display_order": 3,
+          "thumbnail_url": "https://i.ytimg.com/vi/7uBi_4uaqMg/maxresdefault.jpg",
+          "thumbnail_score": 84.0
+        },
+        {
+          "video_id": "P3BGJu33T0g",
+          "title": "UCI Granfondo World Series Antalya 9 Kasım 2025 Çekim: Hüseyin Uğur uşak bike#ucigrandondoantalya",
+          "channel": "Uşak Bisiklet Kulübü ",
+          "view_count": 499,
+          "upload_date": "20251111",
+          "duration_string": "1:00:18",
+          "description": "#bike#cycling #uci2025 #antalya#granfondo #antalyagranfondo\n#bisiklet #uşakbike",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=P3BGJu33T0g",
+          "curated": false
+        },
+        {
+          "video_id": "b4Wg583r3ZY",
+          "title": "UCİ NİRVANA GRAN FONDO ANTALYA YARIŞI  5 GÜN ÖNCESİ 😀😀😀",
+          "channel": "Buket Demirci",
+          "view_count": 264,
+          "upload_date": "20221116",
+          "duration_string": "18:29",
+          "description": "Kara-Belek arası sürüş etkinliğim :))\n\nSevgilerimle 😊🙏⭐️🚴‍♀️ \n\n𝐘𝐎𝐋𝐂𝐔𝐋𝐔𝐆̆𝐔𝐌𝐔 𝐆𝐎̈𝐑𝐌𝐄𝐊 𝐈̇𝐂̧𝐈̇𝐍 𝐒𝐎𝐒𝐘𝐀𝐋 𝐌𝐄𝐃𝐘𝐀𝐃𝐀𝐍 𝐓𝐀𝐊𝐈̇𝐏 𝐄𝐓 😊\n👉https://instagram.com/buket.demrci?r=nametag\n👉https://www.facebook.com/buket.demirci.750\n\n𝐆𝐈̇𝐓𝐓𝐈̇𝐆̆𝐈̇𝐌 𝐑𝐎𝐓𝐀𝐋𝐀𝐑𝐈 𝐎̈𝐆̆𝐑𝐄𝐍𝐌𝐄𝐊 𝐈̇𝐂̧𝐈̇𝐍 𝐒𝐓𝐑𝐀𝐕𝐀 𝐔𝐘𝐆𝐔𝐋𝐀𝐌𝐀𝐒𝐈𝐍𝐃𝐀𝐍 𝐁𝐄𝐍𝐈̇ 𝐓𝐀𝐊𝐈̇𝐏 𝐄𝐓\n👉 https://www.strava.com/athletes/buket_demirci",
+          "tags": [
+            "Antalyada bisiklet",
+            "Ucinirvanagranfondoantalya",
+            "Ucigranfondo",
+            "Antalya",
+            "Antalyada bisiklet sürülecek yerler",
+            "Lara antalya",
+            "Belek antalya",
+            "Bisikletli kadın",
+            "Bisikletçi kadın",
+            "Bisiklet özgürlüğü",
+            "Bisikletle tatile gidilecek yerler"
+          ],
+          "url": "https://www.youtube.com/watch?v=b4Wg583r3ZY",
+          "curated": false
+        },
+        {
+          "video_id": "XgfeaAdO7u4",
+          "title": "UCI Nirvana Antalya Gran Fondo KISA PARKUR TESTİ / 2023",
+          "channel": "Asla Durma",
+          "view_count": 4283,
+          "upload_date": "20231027",
+          "duration_string": "35:08",
+          "description": "Antalyanın en güzel zamanında bisiklete binmeye hazırmısınız. Herkesin çok rahat bir şekilde sürebileceği, UCI Nirvana Antalya Gran Fondo'nun Kısa parkuru olan AG Tohum parkurunun son halini sizler için deneyimledim. DÜmdüz başlayan yarışta 3 yerde sıkı yokuşlar var. Bu yokuşlar yarışın kaderini belirleyecek yokuşlar. Onun dışında parkur çok rahat. \nİyi eğlenceler\n\n\nAsla Durma, Gez videoları:  https://bit.ly/asladurmaGEZ\nAsla Durma Klagenfurt Videoları: https://bit.ly/asladurmaKlagenfurt\n\nAsla Durma'ya destek ol : https://www.youtube.com/channel/UC_aTJV1Wrjd78tntlVIrhKQ/join\n\n\nYarış Takvimi: http://bit.ly/2VjL1Cl\nAsla Durma Nerede: http://bit.ly/2Vls7vb\n\n**Beni takip et**\nInstagram: https://www.instagram.com/asladurma\nStrava: https://www.strava.com/athletes/6998123\nWebsite: http://www.asladurma.com\nTwitter: @asla_Durma\nZwift : Asla Durma Fatih\n\nAsla Durma Projesini destekleyen Markalar/Sponsorlarım\nToyota: http://bit.ly/2NmfY6s\nTrek Türkiye: http://bit.ly/2Wopg5S\nSalomon Türkiye http://bit.ly/34hsx9Z\nShimano Türkiye http://bit.ly/31Wn8nc\nArgeus http://bit.ly/2PxeV63\nSuunto Türkiye http://bit.ly/2BSRGvh\nOn the Go  Türkiye http://www.onthego.com.tr\nPtAkademi http://bit.ly/2BWCCwE\n\n✩ Sponsorluk ve Proje İşbirlikleri için: fatih@asladurma.com\n\n---------------------------------------------------------------------------------------\n✩ ABONE OLMAYI UNUTMA: https://www.youtube.com/channel/UC_aTJV1Wrjd78tntlVIrhKQ?sub_confirmation=1\n\nLİNKLER\n\n✩ STRAVA : https://www.strava.com/athletes/6998123",
+          "tags": [
+            "asla durma",
+            "asladurma",
+            "vlog",
+            "uci antalya",
+            "uci nirvana",
+            "antalya gran fondo",
+            "uci gran fondo",
+            "bisiklet yarışı",
+            "bisiklet vlog",
+            "antalya bisiklet",
+            "asla durma bisiklet"
+          ],
+          "url": "https://www.youtube.com/watch?v=XgfeaAdO7u4",
+          "curated": true,
+          "curation_reason": "Detailed course preview with specific terrain analysis and highest view count, providing valuable pre-race insights.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/XgfeaAdO7u4/maxresdefault.jpg",
+          "thumbnail_score": 80.0
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

@@ -52,8 +52,8 @@ def build_index_entry(data: dict) -> dict:
     rating = race.get(RATING_KEY, {})
     verdict = race.get("final_verdict", {})
 
-    country = vitals.get("country", "")
-    location = vitals.get("location", "")
+    country = vitals.get("country") or ""
+    location = vitals.get("location") or ""
 
     # Extract month from date string
     month = ""

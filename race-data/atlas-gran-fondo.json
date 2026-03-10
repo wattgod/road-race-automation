@@ -1,0 +1,130 @@
+{
+  "race": {
+    "name": "Atlas Gran Fondo",
+    "slug": "atlas-gran-fondo",
+    "display_name": "Atlas Gran Fondo",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 159.3,
+      "distance_mi": 99.0,
+      "elevation_m": 1800,
+      "elevation_ft": 5906.0,
+      "location": "Taroudant, Morocco",
+      "location_badge": "Taroudant, Morocco",
+      "country": "Morocco",
+      "date": "2026: November 21",
+      "date_specific": "2026: November 21",
+      "field_size": "N/A",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "meals and mechanical support provided",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 1,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "4-star accommodation included.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Morocco's premier road sportive blending epic Atlas climbs with cultural adventure.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Atlas Gran Fondo gran fondo cycling Taroudant",
+      "videos": [
+        {
+          "video_id": "q4fyWq-T5bw",
+          "title": "BMW GS 1200 ADV MOROCCO DESERT 2015",
+          "channel": "Nawfalus",
+          "view_count": 779,
+          "upload_date": "20150519",
+          "duration_string": "2:27",
+          "description": "BMW GS1200  BIG TRAIL ON SANDY DESERT IN MOROCCO BTW MHAMID AND FOUM ZGUID\nPart 2",
+          "tags": [
+            "BMW GS",
+            "BMW R 1200 GS K50",
+            "Morocco (Country)",
+            "Desert (Geographical Feature Category)",
+            "Maroc"
+          ],
+          "url": "https://www.youtube.com/watch?v=q4fyWq-T5bw",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

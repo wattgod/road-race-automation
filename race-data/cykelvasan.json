@@ -1,0 +1,169 @@
+{
+  "race": {
+    "name": "Cykelvasan",
+    "slug": "cykelvasan",
+    "display_name": "Cykelvasan",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 95.0,
+      "distance_mi": 59.0,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Sälen to Mora, Sweden",
+      "location_badge": "Sälen to Mora, Sweden",
+      "country": "Sweden",
+      "date": "2026: August 7-8",
+      "date_specific": "2026: August 7 (Friday) and August 8 (Saturday)",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "Classic Vasaloppet checkpoints (Oxberg, Hökberg, Eldris)",
+      "cutoff_time": "Unknown",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "SkiStar Lodge Lindvallen offers on-site lodging near the Vasaloppet Arena. The event runs during Vasaloppet's Summer Week (August 3-9, 2026) with family-oriented activities and dining options.",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "A historic, scenic Nordic mountain bike experience that honors Sweden's legendary Vasaloppet legacy with accessible distance options for all skill levels.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Cykelvasan gran fondo cycling Sälen to Mora",
+      "videos": [
+        {
+          "video_id": "kD_F9Txi-hA",
+          "title": "Vasaloppet på cykel",
+          "channel": "Maikimaik 333",
+          "view_count": 102,
+          "upload_date": "20190303",
+          "duration_string": "8:54",
+          "description": "Phooo what a day ❄️❄️❄️\nFirst sunday in March, we, here in Sweden have this super big ski race Vasaloppet. 90km race from Sälen to Mora.\nWe dont do ski we do bike so we had fun here on our own turf, 90km Vasaloppet on bike.\nThe problem wasnt the 90km the problem was the crazy wet cold but we finaly came home in one pice...\n...no amputation... so far ✌🏻😎",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=kD_F9Txi-hA",
+          "curated": false
+        },
+        {
+          "video_id": "bzI7cZbFgNo",
+          "title": "Cykelvasan 2014",
+          "channel": "Cykel Bastarden",
+          "view_count": 821,
+          "upload_date": "20140822",
+          "duration_string": "5:11",
+          "description": "Cykelvasan 45km & 90km",
+          "tags": [
+            "Cykelvasan Dalarna Sälen Oxberg Mora Scott White"
+          ],
+          "url": "https://www.youtube.com/watch?v=bzI7cZbFgNo",
+          "curated": false
+        },
+        {
+          "video_id": "hvyLNi5NSc4",
+          "title": "Vasaloppets sommarvecka",
+          "channel": "vasaloppet",
+          "view_count": 894,
+          "upload_date": "20161011",
+          "duration_string": "1:44",
+          "description": "",
+          "tags": [
+            "Vasaloppet",
+            "Vasaloppets sommarvecka",
+            "sommarvecka",
+            "Ultravasan",
+            "Vasastafetten",
+            "94 km",
+            "Sälen",
+            "Mora",
+            "distans",
+            "utmaning",
+            "I fäders spår",
+            "MTB",
+            "mountainbike",
+            "Cykelvasan",
+            "Cykelvasan 90",
+            "Cykelvasan 45",
+            "Cykelvasan 30",
+            "Cykla eller spring Vasaloppet"
+          ],
+          "url": "https://www.youtube.com/watch?v=hvyLNi5NSc4",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

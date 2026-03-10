@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "Tour de Tucson",
+    "slug": "tour-de-tucson",
+    "display_name": "Tour de Tucson",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 164.2,
+      "distance_mi": 102.0,
+      "elevation_m": 1067,
+      "elevation_ft": 3500.0,
+      "location": "Tucson, Arizona, USA",
+      "location_badge": "Tucson, USA",
+      "country": "USA",
+      "date": "November 21, 2026",
+      "date_specific": "November 21, 2026",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://eltourdetucson.org",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 5,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "Desert Roller Fatigue: Mid-ride eastern perimeter accumulatively drains legs with 2000 feet gain over 40 miles. Steady 3-5% grades in sun test fueling on exposed roads.",
+        "Late Finish Sprint: Final 20 miles back to Convention Center feature punchy rollers after 90 miles. Crowded field demands positioning amid 11,000 riders."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://eltourdetucson.org"
+    },
+    "history": {
+      "founded": 1983,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Massive Tucson perimeter sportive blending charity, desert miles, and community buzz.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

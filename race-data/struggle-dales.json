@@ -1,0 +1,138 @@
+{
+  "race": {
+    "name": "Struggle Dales",
+    "slug": "struggle-dales",
+    "display_name": "Struggle Dales",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 175.4,
+      "distance_mi": 109.0,
+      "elevation_m": 2874,
+      "elevation_ft": 9430.0,
+      "location": "Harrogate, North Yorkshire, England",
+      "location_badge": "Harrogate, England",
+      "country": "England",
+      "date": "2026: May 24",
+      "date_specific": "2026: May 24",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "May in Yorkshire typically features mild spring conditions with variable weather patterns common to northern England.",
+      "challenges": [
+        "Precipitation: 45"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 5,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Struggle Dales is one of the UK's hardest sportives, set in the beautiful but brutal Yorkshire Dales landscape. The event takes riders over stunning yet unforgiving terrain through the Yorkshire Dales National Park, featuring seven iconic climbing challenges that have earned the route cult status among ambitious road cyclists nationwide.",
+      "signature_challenge": "Park Rash stands as the most renowned climb on the route, recognized as a defining feature of the Struggle Dales experience and a bucket-list challenge for serious road cyclists.",
+      "suffering_zones": [
+        "Park Rash: A jaw-clenching climb that features prominently in the route and is noted by cycling experts as a signature challenge of the event.",
+        "Greenhow Hill: One of seven major climbs integrated throughout the 109-mile route, contributing to the sustained elevation gain.",
+        "Malham Cove: A stunningly beautiful but challenging climb that tests riders' endurance and mental fortitude.",
+        "Trapping Hill: A significant climbing challenge among the seven iconic ascents that define the route's difficulty."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "The start/finish is located just a few miles from Harrogate Town Centre, which hosts a wide range of hotels, bed and breakfasts, and guesthouses to suit all budgets. Camping and campervans are not permitted to stay overnight at the Army Foundation College venue.",
+      "transport": "Struggle Dales begins and ends in Harrogate, North Yorkshire, a historic spa town offering excellent accommodation options and support infrastructure for participants and their crews.",
+      "food": "",
+      "official_site": "https://ridethestruggle.com"
+    },
+    "history": {
+      "founded": 2010,
+      "origin_story": "Struggle Dales has become an iconic must-ride cycling challenge for avid road cyclists, earning cult status nationwide with riders traveling hundreds of miles year after year to tackle the grueling challenge. Cycling Weekly has reviewed it as 'One of the best sportive events in the UK.'",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "Struggle Dales is one of the UK's most challenging and prestigious sportives, offering ambitious road cyclists an unforgettable test of endurance across the stunning Yorkshire Dales.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.britishcycling.org.uk/events/details/275508/Struggle-Dales",
+        "category": "reference",
+        "label": "Struggle Dales Events - British Cycling"
+      },
+      {
+        "url": "https://ridethestruggle.com/products/struggle-dales-hardest-sportive-in-yorkshire",
+        "category": "reference",
+        "label": "Struggle Dales - Hardest UK Sportive in Yorkshire - 24 May 2026"
+      },
+      {
+        "url": "https://racebest.com/races/awv78",
+        "category": "reference",
+        "label": "Struggle Dales - RaceBest"
+      },
+      {
+        "url": "https://ridethestruggle.com",
+        "category": "reference",
+        "label": "Struggle Events: Struggle Cycling Events Yorkshire UK"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/6292/struggle-dales",
+        "category": "reference",
+        "label": "Struggle Dales - Gran Fondo Guide"
+      }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "race": {
+    "name": "RAIN - Ride Across Indiana",
+    "slug": "ride-across-indiana",
+    "display_name": "RAIN - Ride Across Indiana",
+    "tagline": "160 miles in one day across the entire state of Indiana. One road, one direction, dawn to dusk. America's most honest century-plus ride.",
+    "vitals": {
+      "distance_km": 257.5,
+      "distance_mi": 160.0,
+      "elevation_m": 914,
+      "elevation_ft": 3000.0,
+      "location": "Terre Haute to Richmond, Indiana, USA",
+      "location_badge": "INDIANA, USA",
+      "country": "USA",
+      "date": "Late June/July annually",
+      "date_specific": "2026: June 27",
+      "field_size": "2,000-3,000 riders",
+      "start_format": null,
+      "registration": "Online via GetMeRegistered.com or centralincycling.org. Registration opens January/March. Non-refundable and non-transferable.",
+      "entry_fee": "USD $60-$80",
+      "feed_zones": "5 rest stops during the ride, one including lunch. Food at the finish. All staffed by volunteers from the Bloomington Bicycle Club and Central Indiana Cycling.",
+      "cutoff_time": "14 hours (must finish by 9 PM for finisher award)",
+      "lat": 39.4667,
+      "lng": -87.4139,
+      "route_options": [
+        "160 miles (standard course)",
+        "200+ miles (new 2026 extension for ultra-distance riders)"
+      ]
+    },
+    "climate": {
+      "primary": "Indiana midsummer -- hot, humid, exposed",
+      "description": "Late June/July in central Indiana is brutally honest weather. Temperatures routinely reach 85-95F with high humidity. The course on US 40 and county roads offers minimal shade -- open farmland stretches for miles without a tree. Morning starts at 7 AM are in the 65-75F range but the temperature climbs steadily. By noon, you are baking on exposed asphalt. Thunderstorms can roll in without much warning, delivering torrential rain, lightning, and sudden temperature drops. Wind across the Indiana flatlands can create sustained headwinds or crosswinds with nothing to block them.",
+      "challenges": [
+        "85-95F temperatures with high Midwest humidity by midday",
+        "160 miles of exposed farmland with minimal shade",
+        "Afternoon thunderstorm risk: lightning, heavy rain, gusty winds",
+        "Sustained crosswinds across open Indiana flatlands",
+        "Heat exhaustion risk over 10-14 hours of riding in summer conditions"
+      ]
+    },
+    "terrain": {
+      "primary": "Flat to gently rolling paved roads across Indiana farmland",
+      "surface": "Paved roads throughout. Primarily the Historic National Road (US 40), a divided four-lane highway with light traffic and gentle rolling hills. The 2026 route adds more county roads to get off US 40 and onto roads with better paving. Surface quality varies from smooth county roads to rough patches on US 40. No gravel, no off-road. The terrain is flat by any meaningful standard: Indiana is not known for hills.",
+      "technical_rating": 1,
+      "features": [
+        "Historic National Road (US 40): America's first federally funded highway",
+        "Gentle rolling Indiana farmland: minimal elevation change",
+        "St. Mary-of-the-Woods College start (historical) / Fairbanks Park start (2026)",
+        "Earlham College finish in Richmond",
+        "160 miles of Midwest heartland scenery: cornfields, small towns, covered bridges"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "climate_risk": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 1,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 3,
+      "cultural_impact": 0,
+      "overall_score": 56,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A straight line across Indiana. The course follows the Historic National Road (US 40), America's first federally funded highway, from Terre Haute in the west to Richmond in the east. The terrain is flat by any standard. The challenge is pure distance and the Indiana summer conditions.",
+      "signature_challenge": "The distance itself. 160 miles on flat roads with no descents to rest on, no dramatic terrain to distract you, and Indiana summer heat accumulating over 10-14 hours. The challenge is pure endurance.",
+      "suffering_zones": [
+        "Terre Haute Start",
+        "The Open Farmland",
+        "The Halfway Wall",
+        "The Grind East",
+        "The Final 10",
+        "Earlham College Finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Indianapolis International (IND), 75 miles from the start in Terre Haute. Dayton International (DAY), 45 miles from the finish in Richmond.",
+      "lodging_strategy": "Terre Haute hotels for the night before (Holiday Inn, Drury Inn, etc. at $60-$120/night). Richmond hotels for the night after if not driving home. Many riders arrange personal SAG vehicles that drive to Richmond and meet them at the finish. Group carpools from Indianapolis are common.",
+      "transport": "",
+      "food": "Midwest diner fare in Terre Haute and Richmond. Nothing fancy, nothing expensive. Rest stop food during the ride is the highlight: volunteer-prepared, well-stocked, and genuine. Lunch is provided at one of the five rest stops.",
+      "official_site": "https://www.rainride.org/ and https://centralincycling.org/flagship-ride/ride-across-indiana-rain/"
+    },
+    "history": {
+      "founded": 1989,
+      "origin_story": "RAIN was born in 1989 as a one-day challenge organized by the Bloomington Bicycle Club: ride across the entire state of Indiana in a single day, from West Terre Haute to Richmond, following the Historic National Road (US 40). The concept was simple and has barely changed in 37 years. The ride grew through word-of-mouth in the Midwest cycling community, attracting riders who wanted to test their endurance on a grand scale. In 2026, Central Indiana Cycling took over operations and added a 210-mile ultra option. The event remains entirely volunteer-operated, with proceeds supporting communities along the route.",
+      "notable_moments": [
+        "1989: Inaugural RAIN ride from West Terre Haute to Richmond on the Historic National Road",
+        "2000s: Event grows to 2,000+ riders, establishing itself as a Midwest cycling institution",
+        "2024: Named Midwest Best-in-Class event by Strambecco",
+        "2025: 37th running with 2,500+ riders",
+        "2026: Central Indiana Cycling takes over operations. Route updated with more county roads. 210-mile ultra option added. Start moves to Fairbanks Park."
+      ],
+      "reputation": "The Midwest's ultimate endurance ride. 37 years of crossing Indiana from dawn to dusk."
+    },
+    "biased_opinion": {
+      "verdict": "Dawn to Dusk Across Indiana",
+      "summary": "RAIN strips cycling down to its purest elements: you, a bike, 160 miles, and the entire state of Indiana between point A and point B. There are no mountains to conquer, no technical sections to navigate, no exotic destinations to photograph. There is a flat road, a summer sun, and the question of whether you can keep pedaling for 10 to 14 hours.\n\nThe Historic National Road (US 40) is not beautiful in the way that the Sea-to-Sky Highway or the Dolomites are beautiful. It is beautiful in the way that honesty is beautiful. Cornfields. Small towns. A road that stretches to the horizon. The sun tracking across the sky as you track across the state. You start in Terre Haute at 7 AM and you finish in Richmond sometime before 9 PM, and in between you discover what 160 miles of flat road in Indiana summer heat actually feels like.\n\nIt feels harder than you expected. The heat accumulates. The miles accumulate. The lack of climbing means you never get a descent to rest on. You pedal every inch. At $60-$80 with 5 rest stops and a volunteer army, it is the best value in American cycling. RAIN does not pretend to be anything it is not. It is 160 miles. It is flat. It is hot. It is honest. And it has been doing this for 37 years.",
+      "strengths": [
+        "160 miles in a single day: one of America's longest one-day rides",
+        "Best value in American cycling: $60-$80 for 5 rest stops and full support",
+        "37 years of volunteer-driven tradition from the Bloomington Bicycle Club",
+        "Pure endurance test: no climbing gimmicks, no technical distractions, just miles"
+      ],
+      "weaknesses": [
+        "Indiana summer heat (85-95F) with 160 miles of exposed, shadeless farmland",
+        "Flat terrain makes this a grinding endurance test, not a dramatic cycling experience",
+        "Point-to-point logistics: you need transportation between Terre Haute and Richmond",
+        "Not a race: no competition, no chip timing, no prizes"
+      ],
+      "bottom_line": "RAIN is 160 miles of truth. No gimmicks, no glamour, no mountains. Just a flat road across Indiana in the summer heat and the question of whether you can make it from dawn to dusk. At $60-$80, it costs less than most 50-mile charity rides and delivers three times the distance."
+    },
+    "final_verdict": {
+      "score": "56/100",
+      "one_liner": "160 miles across Indiana in a single day. Flat, hot, honest, and the best $60 you will spend on a bike.",
+      "should_you_race": "Yes if you want a pure ultra-distance endurance challenge on flat roads, appreciate volunteer-driven cycling culture, and can handle Indiana summer heat. Skip if you need mountains, technical terrain, competition, or Instagram-worthy scenery.",
+      "alternatives": "For a similar ultra-distance flat ride: BikeMI (Michigan). For Midwest climbing: Hilly Hundred (Indiana, fall). For a shorter state-crossing ride: Ride the Rockies (Colorado, multi-day)."
+    },
+    "citations": [
+      {
+        "url": "https://www.rainride.org/",
+        "category": "official",
+        "label": "RAIN - Ride Across Indiana Official Site"
+      },
+      {
+        "url": "https://centralincycling.org/flagship-ride/ride-across-indiana-rain/",
+        "category": "official",
+        "label": "Ride Across Indiana - Central Indiana Cycling"
+      },
+      {
+        "url": "https://www.rainride.org/need-to-know/",
+        "category": "official",
+        "label": "The Event - RAIN - Ride Across Indiana"
+      },
+      {
+        "url": "https://strambecco.com/event/ride-across-indiana-rain/",
+        "category": "review",
+        "label": "Ride Across Indiana - RAIN 2026 - Strambecco Rating"
+      },
+      {
+        "url": "https://secure.getmeregistered.com/get_information.php?event_id=139355",
+        "category": "official",
+        "label": "RAIN Registration Information - GetMeRegistered"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/7261/rain-%E2%80%93-ride-across-indiana",
+        "category": "reference",
+        "label": "RAIN - Ride Across Indiana - Gran Fondo Guide"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "race": {
+    "name": "Granfondo Bulgaria",
+    "slug": "granfondo-bulgaria",
+    "display_name": "Granfondo Bulgaria",
+    "tagline": "First-ever UCI Gran Fondo qualifier in Bulgaria's stunning Rhodope Mountains",
+    "vitals": {
+      "distance_km": 140.0,
+      "distance_mi": 87.0,
+      "elevation_m": 1905,
+      "elevation_ft": 6250.0,
+      "location": "Velingrad, Bulgaria",
+      "location_badge": "Rhodope Mountains",
+      "country": "Bulgaria",
+      "date": "June 21",
+      "date_specific": "2026: June 21",
+      "field_size": "Unknown",
+      "start_format": null,
+      "registration": "Opened January 1, 2026",
+      "entry_fee": "Unknown",
+      "feed_zones": "Unknown",
+      "cutoff_time": "Unknown",
+      "lat": 42.017,
+      "lng": 23.917,
+      "route_options": [
+        {
+          "name": "Granfondo",
+          "distance_km": 140,
+          "distance_mi": 87,
+          "elevation_m": 1905,
+          "elevation_ft": 6250,
+          "qualifies": "Men under 60, Women under 50"
+        },
+        {
+          "name": "Mediofondo",
+          "distance_km": 70,
+          "distance_mi": 43.5,
+          "elevation_m": 620,
+          "elevation_ft": 2034,
+          "qualifies": "Men over 60, Women over 50"
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Late June in Velingrad's Rhodope Mountains typically features mild-to-warm mountain weather with temperatures 15-25°C (59-77°F). Expect variable conditions at elevation with possible afternoon showers.",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 4,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Velingrad - Spa Capital of Balkans with extensive wellness hotels",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Inaugural edition as first-ever UCI Gran Fondo World Series qualifier in Bulgaria, part of UCI's record 36-race 2026 calendar expanding to new countries.",
+      "notable_moments": "Debut event - no historical results available.",
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "Granfondo Bulgaria debuts as Bulgaria's first UCI Gran Fondo World Series qualifier, delivering 140km/1905m of Rhodope Mountain suffering around stunning Batak Reservoir. The 21.6km @ 5.4% monster climb (km 78-100) crowns the highest point at 1337m, flanked by long rewarding descents. Velingrad's spa culture and Balkan beauty elevate this beyond typical qualifiers. Strong T2 contender for Eastern European climbers seeking World Champs qualification.",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "First-ever UCI Gran Fondo qualifier in Bulgaria's stunning Rhodope Mountains",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

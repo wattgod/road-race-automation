@@ -1,0 +1,37 @@
+name: Run Tests
+
+on:
+  push:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install pytest anthropic requests pyyaml python-frontmatter
+      
+      - name: Run tests
+        run: |
+          pytest tests/ -v --tb=short
+
+      - name: Validate citations
+        run: |
+          python scripts/validate_citations.py
+
+      - name: Check citation quality
+        run: |
+          python scripts/audit_citation_quality.py 2>&1 | tail -20
+

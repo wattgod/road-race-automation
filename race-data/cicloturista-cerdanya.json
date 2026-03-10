@@ -1,0 +1,153 @@
+{
+  "race": {
+    "name": "La Cicloturista Internacional de la Cerdanya",
+    "slug": "cicloturista-cerdanya",
+    "display_name": "La Cicloturista Internacional de la Cerdanya",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 144.8,
+      "distance_mi": 90.0,
+      "elevation_m": 2673,
+      "elevation_ft": 8770.0,
+      "location": "Puigcerdà, Catalonia, Spain",
+      "location_badge": "Puigcerdà, Spain",
+      "country": "Spain",
+      "date": "2026: July 4",
+      "date_specific": "2026: July 4",
+      "field_size": "1000",
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": "N/A",
+      "cutoff_time": "N/A",
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 5,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 73."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": []
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Available in Puigcerdà and surrounding Cerdanya towns during summer cycling season.[1]",
+      "transport": "",
+      "food": "",
+      "official_site": ""
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "73/100",
+      "one_liner": "Spectacular Pyrenean cyclotourist ride with stunning valley views and iconic climbs across Spain-France border.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "La Cicloturista Internacional de la Cerdanya gran fondo cycling Puigcerdà",
+      "videos": [
+        {
+          "video_id": "XYtM2M-Kn-w",
+          "title": "LA CERDANYA CYCLE TOUR 2017",
+          "channel": "Cerdanya Cycle Tour",
+          "view_count": 883,
+          "upload_date": "20170930",
+          "duration_string": "3:30",
+          "description": "Segunda edición de la marcha cicloturista internacional La Cerdanya Cycle Tour. Ruta en bici por la Cerdanya, el gran valle de los Pirineos, entre Catalunya y Francia. Tres rutas ideales para ciclistas, Sport de 120km, Medial de 158km y Endurance de 200km. Este año, además, incluida en la challenge Grand Fondo World Tour. Alp, La Molina. Próxima edición, Septiembre 2018. Más info: http://www.lacerdanyacycletour.com",
+          "tags": [
+            "bike ride",
+            "cycloesportive",
+            "marcha cicloturista",
+            "marxa cicloturista",
+            "cicloturisme",
+            "cicloturismo",
+            "ciclismo",
+            "la cerdanya",
+            "cerdanya",
+            "pirineos"
+          ],
+          "url": "https://www.youtube.com/watch?v=XYtM2M-Kn-w",
+          "curated": false
+        },
+        {
+          "video_id": "MndQla92Vvo",
+          "title": "Cerdanya Cycle tour 2020",
+          "channel": "EN ESTADO PURO por Movistar+ Deportes",
+          "view_count": 390,
+          "upload_date": "20200804",
+          "duration_string": "2:54",
+          "description": "Bajo un estricto protocolo de seguridad en medidas sanitarias, el pasado 19 de julio, se celebraba la primera marcha cicloturista en Cataluña tras el confinamiento con la 5ª edición de la Alp Cerdanya Cycle Tour. Una prueba que agotó el total de las 800 inscripciones para este evento.\nReportaje emitido en el programa VadeBikes de Teledeporte. #ciclismodemontaña  #cicloturismo #teledeporte #television #tve #cycling #cycle #marathon #ciclismo #ciclismodecarretera #bikes #bike #bikepark #descenso #downhill #crosscountry #trial #worldcup #ebikes #wes #enduro #enduromtb #gravel #gravelbike #ciclista #ciclistas #mtb #ciclismofemenino #ciclismodecarretera #peloton #grandesvuelstas #competicion #contrareloj #vadebikes #carrotamedia #carrota #btt",
+          "tags": [
+            "Teledeporte",
+            "TVE",
+            "Cerdanya Cycle Tour",
+            "Ciclismo",
+            "Cicloturismo"
+          ],
+          "url": "https://www.youtube.com/watch?v=MndQla92Vvo",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

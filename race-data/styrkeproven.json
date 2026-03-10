@@ -1,0 +1,289 @@
+{
+  "race": {
+    "name": "Styrkeproven",
+    "slug": "styrkeproven",
+    "display_name": "Styrkeprøven",
+    "tagline": "540 km from Trondheim to Oslo. Over Dovrefjell in the midsummer night. Norway's ultimate test of strength since 1967.",
+    "vitals": {
+      "distance_km": 539.1,
+      "distance_mi": 335.0,
+      "elevation_m": 3597,
+      "elevation_ft": 11800.0,
+      "location": "Trondheim to Oslo, Norway",
+      "location_badge": "TRONDHEIM → OSLO, NORWAY",
+      "country": "Norway",
+      "date": "Late June annually (Saturday start, near summer solstice)",
+      "date_specific": "2026: June 20-21",
+      "field_size": "~600 riders (Trondheim-Oslo full distance); ~1,250+ total across all distances",
+      "start_format": null,
+      "registration": "Online via styrkeproven.no. NOK 1,900-2,950 (~$180-280 USD) depending on registration period. Opens October prior year. Luggage transport included.",
+      "entry_fee": "NOK 1,900-2,950 (~$180-280 USD)",
+      "feed_zones": "8 staffed food stations from Trondheim to Oslo. Baguettes, wraps, hot soup, sports drinks, juice, water, bananas, fruit. Clothing bags delivered to Oppdal, Ringebu, and Skreia.",
+      "cutoff_time": "Self-paced. Riders choose their own time budget at registration. Fastest finishers ~13 hours, average 18-24 hours.",
+      "lat": 63.4305,
+      "lng": 10.3951,
+      "route_options": [
+        "Trondheim–Oslo: 540 km (335 mi) — the full Styrkeprøven",
+        "Fellesstart Trondheim–Oslo: 522 km — mass start variant",
+        "Kvam–Oslo: 275 km",
+        "Lillehammer–Oslo: 182 km (also Women Vélo edition)",
+        "Gjøvik–Oslo: 135 km",
+        "Eidsvoll–Oslo: 62 km"
+      ]
+    },
+    "climate": {
+      "primary": "Norwegian midsummer — extreme daylight, cold mountain passes, variable weather",
+      "description": "Late June near the summer solstice means near-continuous daylight: sunrise around 3:00 AM, sunset past 10:40 PM. The route crosses Dovrefjell, a mountain plateau at 1,000+ meters where snow has been recorded in June and temperatures can hover near freezing even in midsummer. The first 120 km climb from sea level to the plateau brings dramatic temperature drops. The midsummer night never truly darkens, creating an ethereal riding atmosphere through the small hours. Wind on the exposed plateau regularly reaches 15 m/s. Rain and fog are common. Riders must be prepared for conditions spanning 5-20C (41-68F) in a single ride.",
+      "challenges": [
+        "Dovrefjell plateau at 1,000+ meters — near-freezing temperatures possible even in June, snow not unheard of",
+        "Wind exposure on the mountain plateau — headwinds of 15 m/s recorded on Dovrefjell",
+        "Temperature swings of 15C+ between valley departures and mountain summits",
+        "Overnight riding in 5-8C temperatures while managing fatigue across 540 km",
+        "Five hours of heavy rain reported in some editions, combined with mountain wind"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Norwegian roads from Trondheim across Dovrefjell mountain plateau to Oslo",
+      "surface": "100% paved roads throughout. Norwegian national and regional roads of generally good quality. The route follows river valleys, crosses mountain plateaus, and descends through the Gudbrandsdalen valley. Avoids the busy E6 highway by routing through Folldal and over Venabygdsfjellet. Some sections have gradients up to 12%.",
+      "technical_rating": 1,
+      "features": [
+        "Dovrefjell mountain plateau crossing — 80 km of gradual climbing to 1,026m at Hjerkinn",
+        "Venabygdsfjellet pass — highest point at 1,060m with steep gradients up to 12%",
+        "Descent from the mountains to Ringebu and the Gudbrandsdalen valley",
+        "Flat sections along Lake Mjøsa via Biri, Gjøvik, and Feiring",
+        "Final approach into Oslo through Eidsvoll"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "climate_risk": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 4,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 4,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A 540 km point-to-point journey from Norway's third city across the Dovrefjell mountain plateau to the capital. Front-loaded climbing over the first 160 km, followed by a long descent and valley run to Oslo. The Dovrefjell crossing is the crux — exposed mountain plateau at 1,000+ meters with unpredictable weather. The second half from Lillehammer to Oslo is predominantly flat along Lake Mjøsa.",
+      "signature_challenge": "The Dovrefjell crossing. Eighty kilometers of exposed mountain plateau at 1,000+ meters where the weather can shift from calm to hostile in minutes. Snow in June. Headwinds of 15 m/s. Near-freezing temperatures when you left Trondheim in 18C. This is where Styrkeprøven separates those who brought enough layers from those who did not.",
+      "suffering_zones": [
+        "Trondheim to Oppdal (km 0-120)",
+        "Oppdal to Hjerkinn (km 120-160)",
+        "Hjerkinn to Ringebu via Folldal (km 160-280)",
+        "Ringebu to Lillehammer (km 280-350)",
+        "Lillehammer to Oslo via Lake Mjøsa (km 350-540)"
+      ]
+    },
+    "logistics": {
+      "airport": "Trondheim Værnes (TRD) — domestic flights from Oslo plus European connections via SAS, Norwegian, Widerwe. Return from Oslo Gardermoen (OSL) — major international hub.",
+      "lodging_strategy": "Book Trondheim accommodation early — race weekend demand is high. Post-race accommodation in Oslo is straightforward with many options. Some riders take the train to Trondheim the day before.",
+      "transport": "",
+      "food": "8 staffed food stations between Trondheim and Oslo serve hot soup, baguettes, wraps, sports drinks, juice, water, bananas, and fruit. Clothing bags transported to Oppdal (station 2), Ringebu (station 5), and Skreia (station 7). Carry supplemental nutrition for the mountain sections between stations.",
+      "official_site": "https://styrkeproven.no/?lang=en"
+    },
+    "history": {
+      "founded": 1967,
+      "origin_story": "Erik Gjems-Onstad organized the first Styrkeprøven in 1967 with 121 participants riding from Trondheim to Oslo. The name — 'The Strength Test' — was deliberate: this was meant to be the ultimate test of cycling endurance in Norway. The event grew steadily, crossing 1,000 participants in 1979. A new participant record of 4,644 was set in 1988, and by 1990 total registrations exceeded 5,000 for the first time. By 2015, more than 105,000 cyclists had completed the Trondheim-Oslo ride. The event has run continuously since 1967, pausing only for COVID in 2020 and 2021. The 2026 edition will be the 58th.",
+      "notable_moments": [
+        "1967: First edition with 121 riders, organized by Erik Gjems-Onstad of SK Rye",
+        "1979: Participant count crosses 1,000 for the first time",
+        "1984: New time record set at just over 14 hours, aided by favorable tailwind",
+        "1988: Participant record of 4,644 registered; Morten Sæther sets course record of 14:05:49",
+        "1990: Total registrations exceed 5,000 for the first time",
+        "1997: Bram Moens (Netherlands) rides faired recumbent in 13:46:08 — nearly 2 hours ahead of second rider",
+        "2012: Course record improved to 12:51:02",
+        "2015: Cumulative participation surpasses 105,000 riders since 1967",
+        "2019: Women's team record set at 17 hours 56 minutes",
+        "2020-2021: Event cancelled due to COVID-19 — only interruption in history",
+        "2024: Route changed to go via Folldal and Venabygdsfjellet, avoiding the busy E6 highway"
+      ],
+      "reputation": "Norway's most iconic endurance cycling event. Completing the full 540 km Trondheim-Oslo is a genuine rite of passage in Scandinavian cycling culture. The combination of extreme distance, mountain weather, and midsummer timing gives it a character unlike any other sportive in Europe."
+    },
+    "biased_opinion": {
+      "verdict": "Norway's Ultimate Cycling Pilgrimage",
+      "summary": "Styrkeprøven is 540 km from Trondheim to Oslo across the Dovrefjell mountain plateau in the midsummer night. It is not technically demanding, it is not a race, and it will never be cheap. What it is: one of the most transformative point-to-point cycling experiences on earth. The name means 'The Strength Test' and 57 years of history confirm it earns that name every June.",
+      "strengths": [
+        "540 km ultra-distance — one of the world's longest single-stage events",
+        "Dovrefjell mountain crossing in midsummer twilight is otherworldly",
+        "57 years of continuous history and deep Norwegian cultural significance",
+        "Excellent organization: 8 food stations, luggage transport, self-seeded starts",
+        "Genuine point-to-point journey from city to capital across a country"
+      ],
+      "weaknesses": [
+        "Norway is extremely expensive for international visitors",
+        "Relatively small full-distance field (~600 riders) limits community scale",
+        "Non-competitive format with no rankings or race results",
+        "Remote start in Trondheim requires significant travel logistics",
+        "Mountain weather exposure on Dovrefjell is serious and unpredictable"
+      ],
+      "bottom_line": "If you want to test yourself over 540 km through Norway's mountains in the midnight sun, Styrkeprøven is the only answer. Budget for the Norway premium, prepare for Dovrefjell's weather, and ride from Trondheim to Oslo. You will not forget it."
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "540 km from Trondheim to Oslo over Dovrefjell. The Strength Test since 1967.",
+      "should_you_race": "If ultra-distance road cycling through wild Norwegian terrain in the midsummer night sounds like your idea of a life experience — absolutely yes. Budget for Norway's costs and respect Dovrefjell's weather. If you want a competitive race with a large international field, look elsewhere.",
+      "alternatives": "For similar ultra-distance road: Paris-Brest-Paris (1,200 km, quadrennial), Vätternrundan (315 km, Sweden, midsummer night). For Norwegian cycling: Birkebeinerrittet (84 km MTB). For long-distance European sportives: Ötztaler Radmarathon (238 km, Austrian Alps)."
+    },
+    "citations": [
+      {
+        "url": "https://styrkeproven.no/?lang=en",
+        "category": "official",
+        "label": "Styrkeprøven — Official Website"
+      },
+      {
+        "url": "https://styrkeproven.no/main-page/trondheim-oslo/?lang=en",
+        "category": "official",
+        "label": "Trondheim–Oslo Route Details — Styrkeprøven Official"
+      },
+      {
+        "url": "https://styrkeproven.no/ride-manual-2024/?lang=en",
+        "category": "official",
+        "label": "Ride Manual 2025 — Styrkeprøven Official"
+      },
+      {
+        "url": "https://styrkeproven.no/the-story/?lang=en",
+        "category": "official",
+        "label": "The Story — Styrkeprøven Official"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Styrkepr%C3%B8ven",
+        "category": "reference",
+        "label": "Styrkeprøven — Wikipedia"
+      },
+      {
+        "url": "https://www.rouleur.cc/blogs/rouleur-explore/styrkeproven-a-560km-strenght-test",
+        "category": "review",
+        "label": "Tackling Styrkeprøven: Norway's 560km ultra-race — Rouleur"
+      },
+      {
+        "url": "https://catenacycling.com/en/cyclopedia/events/cyclosportives-and-tour-races/cycling-cyclosportives/styrkeproven",
+        "category": "review",
+        "label": "Styrkeprøven — Catena Cycling"
+      },
+      {
+        "url": "https://alifeofadventure.net/den-store-styrkeproven",
+        "category": "review",
+        "label": "Den Store Styrkeproven — A Life of Adventure"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5600/styrkeproven",
+        "category": "review",
+        "label": "Styrkeprøven — Gran Fondo Guide"
+      },
+      {
+        "url": "https://yellow-gear.com/blogs/news/den-store-styrkeproven-the-longest-day-of-the-year",
+        "category": "review",
+        "label": "Den Store Styrkeprøven: The Longest Day of the Year — Yellow Gear"
+      }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-03-05",
+      "search_query": "Styrkeproven gran fondo cycling Trondheim to Oslo",
+      "videos": [
+        {
+          "video_id": "uCm9jYtWGi8",
+          "title": "Den Store Styrkeprøven - SEIER -",
+          "channel": "Brynjar Nervik",
+          "view_count": 10351,
+          "upload_date": "20220623",
+          "duration_string": "21:01",
+          "description": "Følg meg og laget, Trønderekspressen ( TXP ) - ned til Oslo. Det ble en spennende kamp mot Heinemann, eller søringan som vi benevner de.\nTakk til alle som sendte meg videoer fra langs veien.",
+          "tags": [
+            "brynjar",
+            "nervik",
+            "den",
+            "store",
+            "styrkeprøven",
+            "txp",
+            "trønderekspressen",
+            "heinemann"
+          ],
+          "url": "https://www.youtube.com/watch?v=uCm9jYtWGi8",
+          "curated": true,
+          "curation_reason": "High-quality first-person victory recap with highest view count showing the full Trondheim to Oslo experience.",
+          "display_order": 2,
+          "thumbnail_url": "https://i.ytimg.com/vi/uCm9jYtWGi8/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "M6GKZKsrVwU",
+          "title": "JABRA STYRKEPROVEN 1.m4v",
+          "channel": "jabraevents",
+          "view_count": 129,
+          "upload_date": "20140211",
+          "duration_string": "2:38",
+          "description": "JABRA Styrkeproven 2005",
+          "tags": [
+            "Jabra",
+            "Events",
+            "Styrkeproven"
+          ],
+          "url": "https://www.youtube.com/watch?v=M6GKZKsrVwU",
+          "curated": false
+        },
+        {
+          "video_id": "SvrTA9358Ds",
+          "title": "Den Store Styrkeprøven 2023 - battle søringan",
+          "channel": "Brynjar Nervik",
+          "view_count": 8262,
+          "upload_date": "20230621",
+          "duration_string": "38:08",
+          "description": "Søringan var særdeles sugen på å slo oss trøndere! Vi ville forhindre dette, men visste det ville bli kamp. Følg med, se hvordan det forløp seg.",
+          "tags": [
+            "brynjar",
+            "nervik",
+            "den",
+            "store",
+            "styrkeprøven",
+            "trondheim",
+            "oslo"
+          ],
+          "url": "https://www.youtube.com/watch?v=SvrTA9358Ds",
+          "curated": true,
+          "curation_reason": "Recent first-person race recap from 2023 with good views showing team competition dynamics.",
+          "display_order": 1,
+          "thumbnail_url": "https://i.ytimg.com/vi/SvrTA9358Ds/maxresdefault.jpg",
+          "thumbnail_score": 60.0
+        },
+        {
+          "video_id": "WFR7jISiqbg",
+          "title": "Dombås   Trondheim på Sykkel 2022",
+          "channel": "Rune H Johansen",
+          "view_count": 322,
+          "upload_date": "20220606",
+          "duration_string": "32:13",
+          "description": "Stiftstaden Sykkelklubb og Victoria Cykel Klubb Styrkeprøven 2022.\nTrenings helg.\nHelgen besto av Test av kjøreplan fra Trondheim til Dombås på Lørdag. \nSå rolig tur hjem til Trondheim på Søndag",
+          "tags": [],
+          "url": "https://www.youtube.com/watch?v=WFR7jISiqbg",
+          "curated": false
+        }
+      ],
+      "quotes": []
+    }
+  }
+}

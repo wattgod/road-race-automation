@@ -1,0 +1,203 @@
+{
+  "race": {
+    "name": "Tour de Okinawa",
+    "slug": "tour-de-okinawa",
+    "display_name": "Tour de Okinawa",
+    "tagline": "Japan's premier citizen road race. Subtropical island. Yanbaru forest climbs. 35 years of shut-down roads, sea-level starts, and the strongest amateur field in Asia.",
+    "vitals": {
+      "distance_km": 199.6,
+      "distance_mi": 124.0,
+      "elevation_m": 1999,
+      "elevation_ft": 6560.0,
+      "location": "Nago City, Okinawa, Japan",
+      "location_badge": "OKINAWA, JAPAN",
+      "country": "Japan",
+      "date": "Second weekend of November annually (two-day event)",
+      "date_specific": "2025: November 8-9",
+      "field_size": "~400 per citizen race category; ~4,000+ total across all divisions including cycling tours",
+      "start_format": null,
+      "registration": "Online via Sports Entry (sportsentry.ne.jp), August 1 - September 20. Fills quickly. Cost: 27,000-37,000 yen ($180-250 USD) for citizen road races.",
+      "entry_fee": "37,000 yen (200km), 32,000 yen (140km), 27,000 yen (100km) + 400 yen system fee",
+      "feed_zones": "Multiple fully stocked aid stations with water, sports drinks, onigiri, Okinawan snacks, and fruit. Mechanical support available.",
+      "cutoff_time": "Category-specific time limits enforced at intermediate checkpoints",
+      "lat": 26.5919,
+      "lng": 127.9774,
+      "route_options": [
+        "Citizen Road Race 200km (124 mi) — flagship citizen category, ages 19+",
+        "Citizen Road Race 140km (87 mi) — Open and Masters (40+) categories",
+        "Citizen Road Race 100km (62 mi) — Open category",
+        "Citizen Road Race 50km (31 mi) — multiple age categories including women and juniors",
+        "Cycling Tour 325km (202 mi) — 2-day island circumnavigation",
+        "Yanbaru Century Ride 163km (101 mi) — scenic cycling tour",
+        "UCI International Champion Road Race 210km (professional)"
+      ]
+    },
+    "climate": {
+      "primary": "Subtropical island — warm, humid, occasionally wet",
+      "description": "November in Okinawa sits well past typhoon season in the island's mildest window: daytime highs of 22-25C (72-77F), overnight lows around 19C (66F), and humidity averaging 70%. Rain is possible — roughly 12 wet days across the month with 144mm total — but conditions are generally stable and comfortable for racing. The subtropical sun remains strong enough to demand sunscreen, and the warmth catches riders arriving from mainland Japan's autumn chill off guard.",
+      "challenges": [
+        "Humidity at 70% can cause premature fatigue and cramping for riders not accustomed to it",
+        "Rain showers possible — wet roads on coastal descents require extra caution",
+        "Subtropical sun remains surprisingly strong even in November — sunscreen mandatory",
+        "Crosswinds on exposed coastal sections, particularly the east coast"
+      ]
+    },
+    "terrain": {
+      "primary": "Undulating coastal roads with two major inland climbs through subtropical forest",
+      "surface": "Entirely paved. Well-maintained Japanese national and prefectural roads that follow the coastline of northern Okinawa, punctuated by two cross-island climbs through the dense Yanbaru forest. The highest point reaches approximately 390 meters. The roads are narrow in places — typical Japanese two-lane island roads — but surface quality is excellent throughout. The constant rolling profile between the two major climbs accumulates fatigue deceptively, and the sea-level starts mean every meter of elevation is earned from zero.",
+      "technical_rating": 2,
+      "features": [
+        "Two major cross-island climbs — the defining features of the 140km and 200km courses, cutting through dense Yanbaru forest with maximum altitude of 390m",
+        "Coastal road undulations — constant rolling terrain between the major climbs that accumulates 2,000m+ of total climbing",
+        "Exposed east coast sections — crosswinds can fragment groups on the return leg",
+        "Narrow mountain roads through Yanbaru — tight turns on descents through subtropical canopy",
+        "Sea-level start and finish in Nago — every meter of climbing is absolute gain"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 66."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Deceptively demanding. The two cross-island climbs through Yanbaru forest are the race's signature — honest 5-8% gradients through subtropical canopy that shatter groups and determine results. Between those climbs, the constant coastal undulations from sea level create cumulative fatigue that the raw elevation numbers disguise. The course follows the coastline of northern Okinawa, cutting twice across the island's spine where the mountains live. It is not a mountain course, but it is not flat either — 2,000 meters of climbing from sea level is 2,000 meters of absolute gain.",
+      "signature_challenge": "The accumulation. Neither climb alone is extraordinary, but the combination of subtropical humidity, constant undulation, and two honest forest climbs creates progressive fatigue that catches riders who went out too hard on the flat coastal opening. The race rewards patience and punishes aggression.",
+      "suffering_zones": [
+        "First Cross-Island Climb",
+        "Second Cross-Island Climb",
+        "East Coast Crosswinds"
+      ]
+    },
+    "logistics": {
+      "airport": "Naha Airport (OKA) — 90 minutes to 2.5 hours by express bus or rental car to Nago City",
+      "lodging_strategy": "Book through Nago Tour Center (tourdeokinawa@nagotc.com, 0980-53-7500) for race-affiliated accommodation packages. Nago has limited hotel inventory — ANA InterContinental, Ritz-Carlton, and several business hotels. Book 2-3 months early. Alternatively, stay in Naha and bus up on race morning, but the 2+ hour transit makes this stressful. Budget 15,000-40,000 yen/night ($100-270 USD).",
+      "transport": "",
+      "food": "Okinawa is a food destination. Nago has excellent local restaurants — try Okinawan soba, goya champuru, and taco rice. Pre-race carb loading on Okinawan sweet potatoes is culturally appropriate and nutritionally sound. Aid stations serve onigiri, bananas, and local snacks. Post-race, the seafood is exceptional.",
+      "official_site": "https://www.tour-de-okinawa.jp/en/"
+    },
+    "history": {
+      "founded": 1989,
+      "origin_story": "Founded in 1989 as an amateur cycling event celebrating Okinawa's subtropical roads and northern landscapes. The race turned professional in 1999 and joined the UCI Asia Tour in 2005. Until 2007 it was a single-day format, became a two-day stage race in 2008, then returned to its current one-day format in 2012. Through 37 editions, it has grown from a regional cycling gathering into the largest citizen road race in Japan, combining a UCI-classified professional race with mass-participation citizen categories that draw thousands of riders annually.",
+      "notable_moments": [
+        "1989: First edition — amateur race on Okinawa's northern roads",
+        "1999: Professional classification begins, elevating the event's stature",
+        "2005: Joins UCI Asia Tour, gaining international calendar recognition",
+        "2008: Expanded to two-day stage format (UCI 2.2)",
+        "2012: Returns to one-day classic format",
+        "2018: Alan Marangoni wins in his final professional race — solo breakaway victory as a career farewell",
+        "2024: Race cancelled due to course flooding from heavy rain — first cancellation in modern history",
+        "2025: 37th edition, won by Atsushi Oka (Astemo Utsunomiya Blitzen)"
+      ],
+      "reputation": "Japan's undisputed season-ending citizen road race. Within domestic cycling, finishing the 200km is a badge of honor. The professional race serves as the final UCI event on the Asian calendar."
+    },
+    "biased_opinion": {
+      "verdict": "Japan's Season-Ender",
+      "summary": "Tour de Okinawa is the race that Japanese amateur cyclists build their entire season around. It is not the hardest course, not the deepest field by global standards, and not the most internationally recognized. What it is: the most professionally organized citizen road race in Asia, held on a subtropical island with fully closed roads, wrapped in Okinawan hospitality, and steeped in 35 years of racing history. The two Yanbaru climbs separate the strong from the ambitious, and the November timing makes it the perfect season capstone.",
+      "strengths": [
+        "Fully closed roads — every meter of the course is traffic-free, managed with Japanese precision.",
+        "Subtropical setting unlike anything in mainland cycling — turquoise coast, Yanbaru forest, coral island.",
+        "Multiple categories from 50km to 325km mean every level of cyclist can participate meaningfully.",
+        "Cultural immersion — Okinawan food at aid stations, community-wide embrace of the event, post-race celebrations."
+      ],
+      "weaknesses": [
+        "Language barrier — registration, logistics communication, and on-course announcements are primarily in Japanese.",
+        "Expensive for international visitors — flights to Okinawa plus limited accommodation in northern towns.",
+        "Weather uncertainty — the 2024 edition was cancelled entirely due to flooding from heavy rain.",
+        "Limited international field — this is overwhelmingly a domestic Japanese event with little global visibility."
+      ],
+      "bottom_line": "If you race in Japan, Tour de Okinawa is non-negotiable. If you are an international cyclist looking for a bucket-list Asian racing experience, this is the one — but plan for the logistics and budget accordingly."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "Japan's biggest citizen road race — subtropical island, shut-down roads, Asian amateur racing at its finest.",
+      "should_you_race": "For Japanese cyclists, this needs no justification — it is the season finale that defines your year. For international riders, Tour de Okinawa rewards those willing to navigate the logistics: you get a UCI-grade racing experience on a subtropical island with some of the best on-course support in amateur cycling. The two Yanbaru climbs are honest and the coastal roads are stunning. Come for the race, stay for the sashimi.",
+      "alternatives": "If you want a Japanese cycling experience with less logistical complexity: Niseko Gravel in Hokkaido (gravel, smaller, September). If you want Asian road racing with more international flavor: Taiwan KOM Challenge (extreme climbing, October). If you want a well-organized international sportive with similar vibes: Cadel Evans Great Ocean Road Ride (Australia, January)."
+    },
+    "citations": [
+      {
+        "url": "https://www.tour-de-okinawa.jp/en/",
+        "category": "official",
+        "label": "Tour de Okinawa Official Website"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Tour_de_Okinawa",
+        "category": "other",
+        "label": "Wikipedia: Tour de Okinawa"
+      },
+      {
+        "url": "https://www.procyclingstats.com/race/tour-de-okinawa",
+        "category": "other",
+        "label": "ProCyclingStats: Tour de Okinawa statistics and records"
+      },
+      {
+        "url": "https://firstcycling.com/race.php?r=457",
+        "category": "other",
+        "label": "FirstCycling: Tour de Okinawa"
+      },
+      {
+        "url": "https://firstcycling.com/race.php?r=9663",
+        "category": "other",
+        "label": "FirstCycling: Tour de Okinawa Citizen 200"
+      },
+      {
+        "url": "https://tokyocycle.com/threads/tour-de-okinawa.3686/",
+        "category": "community",
+        "label": "Tokyo Cycling Club: Tour de Okinawa discussion"
+      },
+      {
+        "url": "https://jasumotickets.com/event/tour-de-okinawa/",
+        "category": "other",
+        "label": "Jasumo Tickets: 37th Tour de Okinawa 2025"
+      },
+      {
+        "url": "https://www.oki-islandguide.com/things_to_do/tour-de-okinawa",
+        "category": "other",
+        "label": "Okinawa Island Guide: Tour de Okinawa"
+      },
+      {
+        "url": "https://rubbernroad.com/blogs/cycling-blog/the-road-to-okinawa-cycling-race",
+        "category": "media",
+        "label": "Rubber N Road: The Road to Okinawa"
+      },
+      {
+        "url": "https://christophertstewart.blogspot.com/2009/11/tour-de-okinawa.html",
+        "category": "community",
+        "label": "Stewart Blog: Tour de Okinawa race report"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2025/ROA/74248",
+        "category": "official",
+        "label": "UCI: Tour de Okinawa 2025"
+      }
+    ]
+  }
+}

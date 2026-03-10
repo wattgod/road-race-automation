@@ -1,0 +1,163 @@
+{
+  "race": {
+    "name": "Paris-Roubaix Challenge",
+    "slug": "paris-roubaix-challenge",
+    "display_name": "Paris-Roubaix Challenge",
+    "tagline": "The Hell of the North. 30 cobbled sectors. The Arenberg trench. Finish on the Roubaix Velodrome. The day before the pros.",
+    "vitals": {
+      "distance_km": 170.6,
+      "distance_mi": 106.0,
+      "elevation_m": 1097,
+      "elevation_ft": 3600.0,
+      "location": "Busigny to Roubaix Velodrome, Nord, France",
+      "location_badge": "ROUBAIX, FRANCE",
+      "country": "France",
+      "date": "Saturday before Paris-Roubaix (April)",
+      "date_specific": "2026: April 11",
+      "field_size": "~6,500 riders",
+      "start_format": null,
+      "registration": "Online via paris-roubaix-challenge.com. Tiered pricing by distance and registration date. Entry: EUR84-94.",
+      "entry_fee": "EUR84-94 (tiered by distance and registration date)",
+      "feed_zones": "Feed zones between cobbled sectors. Water, energy food, basic mechanical assistance. The cobbles destroy wheels and tires — mechanical support is critical.",
+      "cutoff_time": "Broom wagon enforced. Must maintain minimum average speed to reach Roubaix Velodrome.",
+      "lat": 50.694,
+      "lng": 3.174,
+      "route_options": [
+        "Long: 170 km (106 mi), ~30 cobbled sectors (~50 km of pave)",
+        "Medium: 145 km (90 mi), reduced cobbled sectors",
+        "Short: 70 km (43 mi), selected cobbled sectors"
+      ]
+    },
+    "climate": {
+      "primary": "Cold, wet northern France spring",
+      "description": "Mid-April in northern France is raw. Temperatures range from 5-15C (41-59F), with rain a strong probability. Wet cobblestones transform from difficult to treacherous — grip drops dramatically, mud fills the gaps between stones, and spray from other riders reduces visibility. The wind across the flat agricultural plains of northern France is relentless and often strong. This is not a sun-drenched Mediterranean sportive.",
+      "challenges": [
+        "Rain probability is high — wet cobblestones are dramatically more dangerous",
+        "Cold temperatures (5-15C) mean riding in gloves and layers, reducing bike handling sensitivity",
+        "Wind across flat northern France plains — no shelter, constant headwind or crosswind",
+        "Mud and farm runoff on cobbled sectors, especially after rain",
+        "Spray from 6,500 riders on wet roads reduces visibility significantly"
+      ]
+    },
+    "terrain": {
+      "primary": "Cobblestoned sectors (pave) and paved roads",
+      "surface": "The cobblestones of Paris-Roubaix are not decorative city cobbles. They are rough, uneven, farm-road pave — stones laid centuries ago for horse-drawn carts, maintained minimally, with gaps, mud, and violent irregularity. Between sectors, normal paved roads. The contrast between smooth tarmac and jarring cobbles is part of the psychological warfare.",
+      "technical_rating": 5,
+      "features": [
+        "Trouee d'Arenberg (5-star sector) — 2.3 km of the most famous cobblestones in cycling. A sunken forest road with stones so rough they've broken professional riders' bikes. The crown jewel of pave.",
+        "Mons-en-Pevele (5-star sector) — exposed, punishing pave across flat farmland with no shelter from wind",
+        "Carrefour de l'Arbre (5-star sector) — 2.1 km of brutally rough cobbles in the final 15 km, where Paris-Roubaix is traditionally decided",
+        "~30 cobbled sectors totaling ~50 km of pave on the long route",
+        "Roubaix Velodrome finish — ride onto the legendary indoor track for the final lap"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 1,
+      "descent_technicality": 5,
+      "climate_risk": 4,
+      "organization": 5,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 5,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 4,
+      "cultural_impact": 5,
+      "overall_score": 81,
+      "tier": 1,
+      "tier_label": "TIER 1",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 81. adventure dimension dropped, road_surface added. Score recalculated: 81."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "Flat, exposed northern France farmland punctuated by sectors of centuries-old cobblestones. The contrast is the signature: smooth tarmac at 35 km/h, then suddenly rough pave at 20 km/h with your teeth rattling and your hands losing feeling. Each cobbled sector is rated 1-5 stars for difficulty. The three 5-star sectors — Arenberg, Mons-en-Pevele, Carrefour de l'Arbre — are cycling's most famous stretches of road. The finale: riding through a tunnel into the Roubaix Velodrome and completing a lap on the banked track.",
+      "signature_challenge": "The cobblestones. Not one sector — all of them. 50 km of pave spread across 30 sectors, each one resetting your fatigue and testing your bike handling. The Arenberg is the icon, but the cumulative effect of 170 km with constant surface changes is the real challenge. And then the velodrome: the reward for surviving the Hell.",
+      "suffering_zones": [
+        "Trouee d'Arenberg",
+        "Mons-en-Pevele",
+        "Carrefour de l'Arbre",
+        "Roubaix Velodrome"
+      ]
+    },
+    "logistics": {
+      "airport": "Lille (LIL) — 30 minutes to Roubaix. Paris CDG (CDG) — 1 hour by TGV to Lille, then 15 min to Roubaix. Brussels (BRU) — 1.5 hours by car or train.",
+      "lodging_strategy": "Stay in Lille or Roubaix for finish-line proximity. Lille offers the best hotel selection and restaurant scene — a 15-minute metro ride from Roubaix Velodrome. The start in Busigny requires early transport (organized shuttles or car). Book well in advance for event weekend — the professional Paris-Roubaix the next day doubles demand.",
+      "transport": "",
+      "food": "Northern French cuisine — hearty, warming food ideal for cold-weather riding. Carbonnade flamande (Flemish beef stew), welsh rarebit (local specialty), frites everywhere. Carb loading is easy. Feed zones provide standard energy food, water, cola.",
+      "official_site": "https://www.parisroubaixchallenge.com/en/"
+    },
+    "history": {
+      "founded": 2011,
+      "origin_story": "The professional Paris-Roubaix dates to 1896 — one of cycling's oldest races. For over a century, the cobblestoned sectors of northern France were the exclusive preserve of professional riders. In 2011, ASO created the Paris-Roubaix Challenge to give amateurs access to the same legendary pave, the day before the professional race. The concept was immediate: ride the Arenberg, survive Mons-en-Pevele, battle through Carrefour de l'Arbre, and finish on the Roubaix Velodrome — the same velodrome where the next day's winner would raise their arms. The nickname 'The Hell of the North' originated from the post-WWI devastation of the region, but it applies equally to what the cobblestones do to amateur riders.",
+      "notable_moments": [
+        "1896: Professional Paris-Roubaix first run — one of cycling's oldest races",
+        "2011: Paris-Roubaix Challenge created — amateurs finally access the pave",
+        "The Trouee d'Arenberg: a 5-star sector that has broken professional riders' bikes and spirits since 1968",
+        "The Roubaix Velodrome: opened in 1936, the spiritual home of Paris-Roubaix, now open to amateurs",
+        "'The Hell of the North' — the most famous nickname in cycling, earned by the brutal landscape and cobbles"
+      ],
+      "reputation": "One of cycling's five Monuments. The most famous one-day race in the world. The amateur Challenge inherits 125+ years of cobblestone mythology."
+    },
+    "biased_opinion": {
+      "verdict": "The Hell",
+      "summary": "Paris-Roubaix Challenge is not a pleasant ride. It is 170 km of cold, wet, windswept northern France punctuated by 50 km of cobblestones so rough they break bikes, hands, and spirits. The Arenberg trench is a sunken forest road that looks like a supply route from the Western Front. The cobbles of Mons-en-Pevele and Carrefour de l'Arbre are farm tracks that haven't been properly surfaced since Napoleon. And when you finally emerge from the last sector, battered and filthy, you ride into the Roubaix Velodrome — onto the same banked track where Cancellara, Boonen, and Van der Poel have carved their names into cycling history. That moment — entering the velodrome — justifies every jarring, teeth-rattling, hand-numbing kilometer.",
+      "strengths": [
+        "Paris-Roubaix: one of cycling's five Monuments, since 1896. THE most famous one-day race name in the sport.",
+        "The Arenberg trench: 2.3 km of the most iconic cobblestones in cycling",
+        "Roubaix Velodrome finish: riding onto the legendary track is a lifetime cycling moment",
+        "ASO organization at EUR84-94 — outstanding value for a Monument-brand experience"
+      ],
+      "weaknesses": [
+        "The cobbles destroy equipment — punctures, broken wheels, and cracked handlebars are common",
+        "Cold, wet April conditions compound the cobblestone difficulty exponentially",
+        "Zero scenery in the Alpine sense — flat agricultural northern France",
+        "Your hands, back, and neck will hurt for days afterward. This is not comfortable cycling."
+      ],
+      "bottom_line": "There is no ride in amateur cycling quite like Paris-Roubaix Challenge. It is not beautiful. It is not pleasant. It is not kind to your body or your equipment. But it is one of cycling's five Monuments, and riding those cobblestones — the same stones the pros will ride the next day — and entering the Roubaix Velodrome at the end, is a moment that no Alpine sportive, no matter how spectacular, can replicate."
+    },
+    "final_verdict": {
+      "score": "81/100",
+      "one_liner": "The Hell of the North. 30 cobbled sectors. The Arenberg trench. Finish on the Roubaix Velodrome. One of cycling's five Monuments.",
+      "should_you_race": "Yes if you want to experience one of cycling's five Monuments from the saddle. Yes if cobblestones, mud, and cold are your idea of cycling at its most authentic. Skip if you want beautiful scenery — this is flat, grey northern France. Skip if your bike handling skills are weak — wet cobbles punish hesitation.",
+      "alternatives": "If you want Flemish cobbles instead: Tour of Flanders Challenge (Ronde van Vlaanderen). If you want the cobbles of Strade Bianche on white roads: Strade Bianche Gran Fondo. If you want flat but without cobblestones: Hamburg Cyclassics."
+    },
+    "citations": [
+      {
+        "url": "https://www.paris-roubaix-challenge.com/",
+        "category": "official",
+        "label": "Paris-Roubaix Challenge — Official Site"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Paris%E2%80%93Roubaix",
+        "category": "reference",
+        "label": "Paris-Roubaix — Wikipedia"
+      },
+      {
+        "url": "https://sportivebreaks.com/sportives/paris-roubaix-challenge/",
+        "category": "review",
+        "label": "Paris-Roubaix Challenge — Sportive Breaks"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/news/paris-roubaix-challenge-guide",
+        "category": "review",
+        "label": "Paris-Roubaix Challenge Guide — Cycling Weekly"
+      }
+    ]
+  }
+}

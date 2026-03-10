@@ -1,0 +1,108 @@
+{
+  "race": {
+    "name": "London Edinburgh London",
+    "slug": "london-edinburgh-london",
+    "display_name": "London Edinburgh London",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 1528.9,
+      "distance_mi": 950.0,
+      "elevation_m": 10973,
+      "elevation_ft": 36000.0,
+      "location": "Chelmsford, Essex, UK",
+      "location_badge": "Chelmsford, UK",
+      "country": "USA",
+      "date": "2026: July TBD",
+      "date_specific": "2026: July TBD",
+      "field_size": null,
+      "start_format": null,
+      "registration": "https://londonedinburghlondon.com/",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "",
+      "challenges": []
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Paved roads",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 1,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 1,
+      "cultural_impact": 3,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "",
+      "signature_challenge": "",
+      "suffering_zones": [
+        "The Scottish Borders Grind: Post-Edinburgh return through Hawick and hill ranges piles on 5000m+ climbing after 700 miles. Headwinds and fatigue turn remote lanes into a mental battle over 300km.",
+        "Fenland Headwind Plains: Flat 200 miles to Boston exposes riders to relentless crosswinds on exposed fens. Early pace discipline prevents blow-ups before northern hills hit."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "",
+      "transport": "",
+      "food": "",
+      "official_site": "https://londonedinburghlondon.com/"
+    },
+    "history": {
+      "founded": 1989,
+      "origin_story": "",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Ultimate UK ultra-randonnée: 950 miles self-supported to Edinburgh and back.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": []
+  }
+}

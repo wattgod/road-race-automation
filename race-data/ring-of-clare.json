@@ -1,0 +1,137 @@
+{
+  "race": {
+    "name": "Škoda Ring of Clare Sportive",
+    "slug": "ring-of-clare",
+    "display_name": "Škoda Ring of Clare Sportive",
+    "tagline": "",
+    "vitals": {
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
+      "elevation_m": 1524,
+      "elevation_ft": 5000.0,
+      "location": "Ennis, County Clare, Ireland",
+      "location_badge": "Ennis, Ireland",
+      "country": "Ireland",
+      "date": "2026: July 18",
+      "date_specific": "2026: July 18",
+      "field_size": null,
+      "start_format": null,
+      "registration": null,
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
+      "lat": null,
+      "lng": null,
+      "route_options": []
+    },
+    "climate": {
+      "primary": "Temperate",
+      "description": "Temperate Irish summer with variable weather; expect clouds, possible showers, mild temps, and coastal breezes.",
+      "challenges": [
+        "Precipitation: 40-50%"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed terrain",
+      "surface": "Fully paved",
+      "technical_rating": 1,
+      "features": []
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 4,
+      "road_surface": 1,
+      "cultural_impact": 2,
+      "overall_score": 69,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "sportive",
+      "prestige_override": null,
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": null,
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A scenic loop showcasing County Clare's rugged cliffs, rolling hills, quiet country lanes, and Shannon Estuary views; festive atmosphere with challenging yet rewarding climbs.",
+      "signature_challenge": "The Hand climb combined with coastal winds and estuary rollers, blending steep efforts with endurance-testing scenery.",
+      "suffering_zones": [
+        "The Hand: Steep wall-like climb outside Kilmaley; short but punchy, rewarding with panoramic hill views and fast descent.",
+        "Kilkee Cliffs Loop: Breathtaking coastal roads with rugged beauty; undulating terrain tests pacing amid stunning ocean vistas.",
+        "Shannon Estuary Rollers: Deceptively tough final stretch with headwinds, rolling hills, and estuary views demanding grit to the finish."
+      ]
+    },
+    "logistics": {
+      "airport": "",
+      "lodging_strategy": "Ennis offers hotels, B&Bs, and guesthouses; book early for July event; camping options nearby.",
+      "transport": "Hosted in Ennis town center; two routes (160km and 100km); starts with DJ hype, multiple food stops, medal finish, and post-ride BBQ.",
+      "food": "",
+      "official_site": "https://ringofclare.ie"
+    },
+    "history": {
+      "founded": 2010,
+      "origin_story": "Annual sportive celebrating County Clare's scenery; known for community spirit, quality support, and as a summer highlight.",
+      "notable_moments": [],
+      "reputation": ""
+    },
+    "biased_opinion": {
+      "verdict": "",
+      "summary": "",
+      "strengths": [],
+      "weaknesses": [],
+      "bottom_line": ""
+    },
+    "final_verdict": {
+      "score": "69/100",
+      "one_liner": "Ireland's most scenic and festive road sportive: cliffs, cakes, and community magic.",
+      "should_you_race": "",
+      "alternatives": ""
+    },
+    "citations": [
+      {
+        "url": "https://www.welovecycling.com/ie/2025/08/28/imogen-cotter-reflects-on-cycling-the-skoda-ring-of-clare/",
+        "category": "reference",
+        "label": "Imogen Cotter reflects on cycling the Škoda Ring of Clare"
+      },
+      {
+        "url": "https://www.welovecycling.com/ie/cycling-event/ring-of-clare/",
+        "category": "reference",
+        "label": "Škoda Ring of Clare - WeLoveCycling.com"
+      },
+      {
+        "url": "https://www.granfondo.com/events/skoda-ring-of-clare-cycle-2023/2023-07-22/6369/cycling",
+        "category": "reference",
+        "label": "Skoda Ring of Clare Cycle 2023 - GranFondo.com"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5514/skoda-ring-of-clare-cycle",
+        "category": "reference",
+        "label": "SKODA Ring of Clare Cycle - Gran Fondo Guide"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/gran-fondo/ireland/ring-of-clare/40045",
+        "category": "reference",
+        "label": "Ring of Clare - cycloworld.cc"
+      }
+    ]
+  }
+}
