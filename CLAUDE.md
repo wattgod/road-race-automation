@@ -1,9 +1,9 @@
-# CLAUDE.md — Road Labs: Scored Road Cycling Event Database
+# CLAUDE.md — Roadie Labs: Scored Road Cycling Event Database
 
 ## Project Overview
-Road Labs is a scored event database for road cycling (gran fondos, sportives, centuries, hillclimbs, multi-stage amateur races). Migrated from the Gravel God system in Sprint 41. Clinical, technical, data-driven brand identity.
+Roadie Labs is a scored event database for road cycling (gran fondos, sportives, centuries, hillclimbs, multi-stage amateur races). Migrated from the Gravel God system in Sprint 41. Clinical, technical, data-driven brand identity.
 
-- **Brand**: Road Labs
+- **Brand**: Roadie Labs
 - **Domain**: roadlabs.cc (not yet live)
 - **CSS variable prefix**: `--rl-` (not `--gg-`)
 - **Palette**: Navy / steel blue / signal red on cool white. Neo-brutalist rules: no border-radius, no box-shadow, solid borders.
@@ -38,7 +38,7 @@ road-race-automation/
 
 ### Rating Key
 ```python
-# CORRECT — Road Labs uses fondo_rating
+# CORRECT — Roadie Labs uses fondo_rating
 d['race']['fondo_rating']
 
 # WRONG — this is the Gravel God key, do NOT use

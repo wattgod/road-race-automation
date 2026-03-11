@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs About page in neo-brutalist style.
+Generate the Roadie Labs About page in neo-brutalist style.
 
 Tells the platform story: what we built, who's behind it, how we coach.
 Loads race count dynamically from race-index.json. Reuses CSS/style patterns
@@ -143,7 +143,7 @@ def build_who() -> str:
           <p class="rl-about-prose">I&#39;m Matti. I&#39;ve spent 12 years at TrainingPeaks teaching coaches and athletes how to get the most out of their training. Before that I raced at the National level for Team Rio Grande &mdash; until the team folded and my third kid arrived in the same year. Turns out those two events have a way of reshuffling your priorities.</p>
           <p class="rl-about-prose">I&#39;ve coached 100+ athletes and sold over 1,000 training plans &mdash; mostly to people who have real jobs, real families, and a limited tolerance for training plans that assume you have nothing else going on.</p>
           <div class="rl-about-highlight">
-            <p>I built Road Labs because I kept answering the same questions from my athletes: <em>Which race should I do? How hard is this one, actually? What do I need to know before I register?</em> The answers were always buried in six different places. Now they&#39;re in one.</p>
+            <p>I built Roadie Labs because I kept answering the same questions from my athletes: <em>Which race should I do? How hard is this one, actually? What do I need to know before I register?</em> The answers were always buried in six different places. Now they&#39;re in one.</p>
           </div>
         </div>
         <div class="rl-about-bio-sidebar">
@@ -865,12 +865,12 @@ def build_jsonld(race_count: int) -> str:
     webpage = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "About Road Labs — Race Intelligence & Coaching for Gravel Cyclists",
+        "name": "About Roadie Labs — Race Intelligence & Coaching for Gravel Cyclists",
         "description": f"The story behind the internet's most comprehensive gravel race database. {race_count} races scored across 15 dimensions, plus coaching that works for people with real lives.",
         "url": f"{SITE_BASE_URL}/about/",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
     }
@@ -881,7 +881,7 @@ def build_jsonld(race_count: int) -> str:
         "jobTitle": "Head Coach",
         "worksFor": {
             "@type": "Organization",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
     }
@@ -919,16 +919,16 @@ def generate_about_page(external_assets: dict = None) -> str:
 
     meta_desc = f"The story behind the internet&#39;s most comprehensive gravel race database. {race_count} races scored across 15 dimensions, plus coaching that works for people with real lives."
 
-    og_tags = f'''<meta property="og:title" content="About Road Labs — Race Intelligence &amp; Coaching for Gravel Cyclists">
+    og_tags = f'''<meta property="og:title" content="About Roadie Labs — Race Intelligence &amp; Coaching for Gravel Cyclists">
   <meta property="og:description" content="The story behind the internet&#39;s most comprehensive gravel race database. {race_count} races scored across 15 dimensions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Road Labs — Race Intelligence &amp; Coaching for Gravel Cyclists">
+  <meta name="twitter:title" content="About Roadie Labs — Race Intelligence &amp; Coaching for Gravel Cyclists">
   <meta name="twitter:description" content="{race_count} gravel races scored across 15 dimensions. Zero sponsors. Plus coaching that works for people with real lives.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
@@ -939,7 +939,7 @@ def generate_about_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Road Labs — Race Intelligence &amp; Coaching for Gravel Cyclists</title>
+  <title>About Roadie Labs — Race Intelligence &amp; Coaching for Gravel Cyclists</title>
   <meta name="description" content="{meta_desc}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
@@ -983,7 +983,7 @@ def generate_about_page(external_assets: dict = None) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Road Labs about page")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs about page")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     args = parser.parse_args()
 

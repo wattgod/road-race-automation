@@ -154,7 +154,7 @@ def build_calendar_page(races: list) -> str:
         )
 
     canonical = f"{SITE_BASE_URL}/race/calendar/{CURRENT_YEAR}/"
-    title = f"Gravel Race Calendar {CURRENT_YEAR} — All {len(races)} Events | Road Labs"
+    title = f"Gravel Race Calendar {CURRENT_YEAR} — All {len(races)} Events | Roadie Labs"
     description = (
         f"Complete {CURRENT_YEAR} gravel race calendar with {len(races)} events worldwide. "
         f"Filter by tier and region. Find your next race."
@@ -416,12 +416,12 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
   <section class="rl-cal-cta">
     <h2>Get Race Reminders</h2>
-    <p>Subscribe to the Road Labs newsletter for registration alerts, training tips, and race previews delivered to your inbox.</p>
+    <p>Subscribe to the Roadie Labs newsletter for registration alerts, training tips, and race previews delivered to your inbox.</p>
     <a href="https://TODO_ROADLABS_NEWSLETTER" class="rl-cal-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
   </section>
 
   <footer class="rl-cal-footer">
-    <a href="/">Road Labs</a> &middot; {len(races)} races &middot;
+    <a href="/">Roadie Labs</a> &middot; {len(races)} races &middot;
     <a href="/gravel-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>

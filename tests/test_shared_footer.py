@@ -53,7 +53,7 @@ class TestMegaFooterHTML:
     # ── Brand ────────────────────────────────────────────────
 
     def test_brand_title(self):
-        assert "ROAD LABS" in self.html
+        assert "ROADIE LABS" in self.html
 
     def test_brand_tagline(self):
         assert "Practical coaching and training" in self.html
@@ -70,7 +70,7 @@ class TestMegaFooterHTML:
     # ── Legal ────────────────────────────────────────────────
 
     def test_copyright(self):
-        assert "Road Labs. All rights reserved." in self.html
+        assert "Roadie Labs. All rights reserved." in self.html
 
     def test_copyright_year(self):
         from datetime import date

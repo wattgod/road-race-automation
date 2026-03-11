@@ -33,7 +33,7 @@ from cookie_consent import get_consent_banner_html
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = Path(__file__).parent / "output" / "quiz"
 
-FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Road Labs workers
+FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Roadie Labs workers
 
 
 def esc(text) -> str:
@@ -102,7 +102,7 @@ def build_quiz_page(races: list) -> str:
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "How does the Road Labs race finder quiz work?",
+                "name": "How does the Roadie Labs race finder quiz work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": f"The quiz asks 5 questions about your fitness level, preferred distance, terrain type, location, and timing. It then scores all {race_count} gravel races in our database and recommends your top 5 matches."
@@ -113,7 +113,7 @@ def build_quiz_page(races: list) -> str:
                 "name": "How many gravel races are in the database?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"The Road Labs database includes {race_count} gravel races across the United States, each rated on 15 dimensions including difficulty, technicality, elevation, logistics, and more."
+                    "text": f"The Roadie Labs database includes {race_count} gravel races across the United States, each rated on 15 dimensions including difficulty, technicality, elevation, logistics, and more."
                 }
             },
             {
@@ -140,14 +140,14 @@ def build_quiz_page(races: list) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Race Finder Quiz — Which Gravel Race Should You Do? | Road Labs</title>
-  <meta name="description" content="Answer 5 questions to find your perfect gravel race. Personalized recommendations from {race_count} races ranked by the Road Labs rating system.">
+  <title>Race Finder Quiz — Which Gravel Race Should You Do? | Roadie Labs</title>
+  <meta name="description" content="Answer 5 questions to find your perfect gravel race. Personalized recommendations from {race_count} races ranked by the Roadie Labs rating system.">
   <link rel="canonical" href="{SITE_BASE_URL}/race/quiz/">
   <meta property="og:title" content="Race Finder Quiz — Which Gravel Race Should You Do?">
   <meta property="og:description" content="Answer 5 questions to find your perfect gravel race from {race_count} options.">
   <meta property="og:url" content="{SITE_BASE_URL}/race/quiz/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <script type="application/ld+json">{breadcrumb_jsonld}</script>
   <script type="application/ld+json">{faq_jsonld}</script>
   <style>
@@ -322,7 +322,7 @@ def build_quiz_page(races: list) -> str:
   </div>
 
   <footer class="rl-quiz-footer">
-    <p>Powered by the <a href="/gravel-races/">Road Labs</a> rating system &mdash; 328 races, 15 dimensions, zero BS.</p>
+    <p>Powered by the <a href="/gravel-races/">Roadie Labs</a> rating system &mdash; 328 races, 15 dimensions, zero BS.</p>
   </footer>
 </div>
 

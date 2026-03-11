@@ -136,7 +136,7 @@ async function sendNotificationEmail(env, review) {
         to: [{ email: env.NOTIFICATION_EMAIL }],
         subject: `[RL Review] ${(review.race_name).substring(0, 60)} - ${stars} (${review.stars}/5)`
       }],
-      from: { email: 'TODO_ROADLABS_EMAIL', name: 'Road Labs Reviews' },
+      from: { email: 'TODO_ROADLABS_EMAIL', name: 'Roadie Labs Reviews' },
       reply_to: { email: review.email },
       content: [{
         type: 'text/html',

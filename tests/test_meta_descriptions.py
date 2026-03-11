@@ -148,8 +148,8 @@ class TestTitleQuality:
         for e in entries:
             title = e.get("title", "")
             if title:
-                assert title.endswith("| Road Labs"), \
-                    f"wp_id={e['wp_id']}: title must end with '| Road Labs'"
+                assert title.endswith("| Roadie Labs"), \
+                    f"wp_id={e['wp_id']}: title must end with '| Roadie Labs'"
 
     def test_no_duplicate_titles(self, entries):
         seen = {}

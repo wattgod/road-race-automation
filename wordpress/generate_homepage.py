@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs homepage in Desert Editorial style.
+Generate the Roadie Labs homepage in Desert Editorial style.
 
 Leads with the race database as the primary value prop, includes stats bar,
 featured T1 races, race calendar, training guide preview, how-it-works funnel,
@@ -46,7 +46,7 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "gravel-guide-content.json"
-SUBSTACK_RSS_URL = "https://TODO_ROADLABS_NEWSLETTER/feed"  # TODO: Road Labs newsletter
+SUBSTACK_RSS_URL = "https://TODO_ROADLABS_NEWSLETTER/feed"  # TODO: Roadie Labs newsletter
 
 CURRENT_YEAR = date.today().year
 
@@ -1920,14 +1920,14 @@ def build_jsonld(stats: dict) -> str:
     org = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Road Labs",
+        "name": "Roadie Labs",
         "url": SITE_BASE_URL,
         "description": "The definitive road race database. Honest ratings across 15 criteria.",
     }
     website = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Road Labs",
+        "name": "Roadie Labs",
         "url": SITE_BASE_URL,
         "potentialAction": {
             "@type": "SearchAction",
@@ -1951,7 +1951,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     canonical_url = f"{SITE_BASE_URL}/"
     # Round down to nearest 50 for title stability (757 → "750+", 800 → "800+")
     stable_count = (stats['race_count'] // 50) * 50
-    title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Road Labs"
+    title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Roadie Labs"
     meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews."
 
     one_liners = load_editorial_one_liners(race_data_dir)
@@ -1985,7 +1985,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
   <meta property="og:image" content="{esc(og_image)}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(meta_desc)}">
@@ -2001,7 +2001,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
-  <link rel="alternate" type="application/rss+xml" title="Road Labs Race Database" href="https://roadlabs.cc/feed/races.xml">
+  <link rel="alternate" type="application/rss+xml" title="Roadie Labs Race Database" href="https://roadlabs.cc/feed/races.xml">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   {get_preload_hints()}
   {og_tags}
@@ -2052,7 +2052,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Road Labs homepage")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs homepage")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     parser.add_argument("--index-file", default=str(RACE_INDEX_PATH),
                         help="Path to race-index.json")

@@ -28,7 +28,7 @@ TIER_META = {
     1: {
         "name": "Elite",
         "slug": "tier-1",
-        "title": "The 25 Best Gravel Races in the World | Road Labs",
+        "title": "The 25 Best Gravel Races in the World | Roadie Labs",
         "h1": "Tier 1 — The Icons",
         "description": "The definitive gravel events. World-class fields, iconic courses, "
                        "and bucket-list status. These 25 races define the sport.",
@@ -42,7 +42,7 @@ TIER_META = {
     2: {
         "name": "Contender",
         "slug": "tier-2",
-        "title": "73 Must-Do Gravel Races | Contender Tier | Road Labs",
+        "title": "73 Must-Do Gravel Races | Contender Tier | Roadie Labs",
         "h1": "Tier 2 — The Contenders",
         "description": "Established gravel races with strong reputations and competitive fields. "
                        "The next tier of must-do events for serious gravel riders.",
@@ -56,7 +56,7 @@ TIER_META = {
     3: {
         "name": "Solid",
         "slug": "tier-3",
-        "title": "Regional Gravel Favorites | Solid Tier | Road Labs",
+        "title": "Regional Gravel Favorites | Solid Tier | Roadie Labs",
         "h1": "Tier 3 — Regional Favorites",
         "description": "Strong local scenes, genuine gravel character. Regional favorites "
                        "and emerging races worth the entry fee.",
@@ -70,7 +70,7 @@ TIER_META = {
     4: {
         "name": "Roster",
         "slug": "tier-4",
-        "title": "Grassroots Gravel Events | Roster Tier | Road Labs",
+        "title": "Grassroots Gravel Events | Roster Tier | Roadie Labs",
         "h1": "Tier 4 — Grassroots Gravel",
         "description": "Up-and-coming races and local grinders. Small fields, raw vibes, "
                        "and the future of the sport.",
@@ -184,7 +184,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
     "numberOfItems": {len(races)},
     "isPartOf": {{
       "@type": "WebSite",
-      "name": "Road Labs",
+      "name": "Roadie Labs",
       "url": "https://roadlabs.cc"
     }}
   }}
@@ -451,7 +451,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   <section class="rl-hub-hero">
     <div class="rl-hub-hero-tier">Tier {tier}</div>
     <h1>{esc(meta["h1"])}</h1>
-    <div class="rl-hub-hero-count">{len(races)} races &middot; Scored &amp; ranked by Road Labs</div>
+    <div class="rl-hub-hero-count">{len(races)} races &middot; Scored &amp; ranked by Roadie Labs</div>
   </section>
 
   <p class="rl-hub-intro">{esc(meta["intro"])}</p>
@@ -461,7 +461,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   </div>
 
   <footer class="rl-hub-footer">
-    <a href="/">Road Labs</a> &middot; {len(all_races)} races rated &middot;
+    <a href="/">Roadie Labs</a> &middot; {len(all_races)} races rated &middot;
     <a href="/gravel-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>

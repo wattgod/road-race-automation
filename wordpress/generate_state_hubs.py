@@ -321,7 +321,7 @@ def build_faq(state: str, races: list, disc_label: str = "Gravel") -> tuple:
         f"How many {dl} races are in {state}?",
         f"We track {total} {dl} races in {state}, including "
         f"{len(t1)} Elite (Tier 1) and {len(t2)} Contender (Tier 2) events. "
-        f"See the full list above, ranked by our 15-dimension Road Labs Rating."
+        f"See the full list above, ranked by our 15-dimension Roadie Labs Rating."
     ))
 
     # Q2: What is the best race in {state}?
@@ -329,7 +329,7 @@ def build_faq(state: str, races: list, disc_label: str = "Gravel") -> tuple:
         pairs.append((
             f"What is the best {dl} race in {state}?",
             f"{top['name']} is the highest-rated race in {state} with a "
-            f"Road Labs score of {top.get('overall_score',0)}/100. "
+            f"Roadie Labs score of {top.get('overall_score',0)}/100. "
             f"Located in {top.get('location','')}, it takes place in {top.get('month','')}."
         ))
 
@@ -398,7 +398,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
     t2_count = sum(1 for r in races if r.get("tier") == 2)
 
     disc_label = _discipline_label(races)
-    title = f"Best {disc_label} Races in {state} ({CURRENT_YEAR}) | Road Labs"
+    title = f"Best {disc_label} Races in {state} ({CURRENT_YEAR}) | Roadie Labs"
     # Keep meta description under 160 chars
     tier_note = ""
     if t1_count:
@@ -407,7 +407,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
         tier_note = f" Including {t2_count} Contender-tier events."
     description = (
         f"All {len(races)} {disc_label.lower()} races in {state}, "
-        f"ranked by Road Labs Rating.{tier_note} "
+        f"ranked by Roadie Labs Rating.{tier_note} "
         f"Find your next race in {state}."
     )
     # Safety truncation — should never trigger if template is well-designed
@@ -470,7 +470,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
         intro = (
             f"{state} has {len(races)} {disc_lower} races in our database, from grassroots events "
             f"to regional favorites. Explore the full list below, ranked by our "
-            f"15-dimension Road Labs Rating."
+            f"15-dimension Roadie Labs Rating."
         )
 
     map_section = f'''<div class="rl-state-map">{map_svg}</div>''' if map_svg else ""
@@ -492,7 +492,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <script type="application/ld+json">
@@ -801,7 +801,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 
   <section class="rl-state-hero">
     <h1>Best {disc_label} Races in {esc(state)}</h1>
-    <div class="rl-state-hero-count">{len(races)} RACES &middot; RANKED BY ROAD LABS RATING</div>
+    <div class="rl-state-hero-count">{len(races)} RACES &middot; RANKED BY ROADIE LABS RATING</div>
   </section>
 
   <p class="rl-state-intro">{esc(intro)}</p>
@@ -826,7 +826,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   </section>
 
   <footer class="rl-state-footer">
-    <a href="/">Road Labs</a> &middot; {total_races} races rated &middot;
+    <a href="/">Roadie Labs</a> &middot; {total_races} races rated &middot;
     <a href="/gravel-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>

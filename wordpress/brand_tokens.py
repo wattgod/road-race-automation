@@ -1,8 +1,8 @@
 """
-Brand token helpers for Road Labs CSS generation.
+Brand token helpers for Roadie Labs CSS generation.
 
 Provides CSS custom properties (:root block), @font-face declarations,
-and color mapping from the Road Labs design system.
+and color mapping from the Roadie Labs design system.
 """
 
 from pathlib import Path
@@ -27,7 +27,7 @@ FONT_FILES = [
 
 
 # ── Analytics ─────────────────────────────────────────────────
-GA_MEASUREMENT_ID = "G-PLACEHOLDER"  # TODO: Create Road Labs GA4 property
+GA_MEASUREMENT_ID = "G-PLACEHOLDER"  # TODO: Create Roadie Labs GA4 property
 
 
 def get_ga4_head_snippet() -> str:
@@ -46,36 +46,36 @@ def get_ga4_head_snippet() -> str:
 
 # ── Site ──────────────────────────────────────────────────────
 SITE_BASE_URL = "https://roadlabs.cc"
-BRAND_NAME = "Road Labs"
+BRAND_NAME = "Roadie Labs"
 
 
 def get_tokens_css() -> str:
     """Return the :root CSS custom properties block.
 
-    Road Labs palette: clinical, precise, technical.
+    Roadie Labs palette: clinical, precise, technical.
     Deep navy + steel blue + signal red. Cool white background.
     Same neo-brutalist rules: no border-radius, no box-shadow, solid borders.
     """
     return """:root {
-  /* color — Road Labs palette */
-  --rl-color-dark-navy: #0d1117;
-  --rl-color-primary-navy: #1a1a2e;
-  --rl-color-secondary-blue: #3d5a80;
-  --rl-color-steel: #5c7a99;
-  --rl-color-light-steel: #a3bfdb;
-  --rl-color-silver: #d1dce6;
-  --rl-color-cool-white: #f8f9fa;
-  --rl-color-signal-red: #e63946;
-  --rl-color-coral: #ff6b6b;
-  --rl-color-orange: #f77f00;
-  --rl-color-light-orange: #fcbf49;
-  --rl-color-near-black: #0d1117;
+  /* color — Roadie Labs "Newsprint / Charcoal" palette */
+  --rl-color-dark-navy: #1a1a1a;
+  --rl-color-primary-navy: #1a1a1a;
+  --rl-color-secondary-blue: #777777;
+  --rl-color-steel: #999999;
+  --rl-color-light-steel: #b8b8b0;
+  --rl-color-silver: #d0d0c8;
+  --rl-color-cool-white: #f5f5f0;
+  --rl-color-signal-red: #333333;
+  --rl-color-coral: #555555;
+  --rl-color-orange: #555555;
+  --rl-color-light-orange: #999999;
+  --rl-color-near-black: #1a1a1a;
   --rl-color-white: #ffffff;
-  --rl-color-error: #c0392b;
-  --rl-color-tier-1: #1a1a2e;
-  --rl-color-tier-2: #3d5a80;
-  --rl-color-tier-3: #6c757d;
-  --rl-color-tier-4: #adb5bd;
+  --rl-color-error: #8b1a1a;
+  --rl-color-tier-1: #1a1a1a;
+  --rl-color-tier-2: #4a4a4a;
+  --rl-color-tier-3: #777777;
+  --rl-color-tier-4: #aaaaaa;
 
   /* font */
   --rl-font-display: 'Unbounded', sans-serif;
@@ -127,10 +127,10 @@ def get_tokens_css() -> str:
   --rl-border-width-subtle: 2px;
   --rl-border-width-standard: 3px;
   --rl-border-width-heavy: 4px;
-  --rl-border-color-default: #0d1117;
-  --rl-border-color-brand: #1a1a2e;
-  --rl-border-color-secondary: #3d5a80;
-  --rl-border-color-accent: #e63946;
+  --rl-border-color-default: #1a1a1a;
+  --rl-border-color-brand: #1a1a1a;
+  --rl-border-color-secondary: #777777;
+  --rl-border-color-accent: #333333;
   --rl-border-radius: 0;
 
   /* animation */
@@ -260,27 +260,27 @@ def get_preload_hints(font_path_prefix: str = "/race/assets/fonts") -> str:
 # ── Color mapping for SVG attributes (can't use CSS vars) ────
 
 COLORS = {
-    "dark_navy": "#0d1117",
-    "primary_navy": "#1a1a2e",
-    "secondary_blue": "#3d5a80",
-    "steel": "#5c7a99",
-    "light_steel": "#a3bfdb",
-    "silver": "#d1dce6",
-    "cool_white": "#f8f9fa",
-    "signal_red": "#e63946",
-    "coral": "#ff6b6b",
-    "orange": "#f77f00",
-    "light_orange": "#fcbf49",
-    "near_black": "#0d1117",
+    "dark_navy": "#1a1a1a",
+    "primary_navy": "#1a1a1a",
+    "secondary_blue": "#777777",
+    "steel": "#999999",
+    "light_steel": "#b8b8b0",
+    "silver": "#d0d0c8",
+    "cool_white": "#f5f5f0",
+    "signal_red": "#333333",
+    "coral": "#555555",
+    "orange": "#555555",
+    "light_orange": "#999999",
+    "near_black": "#1a1a1a",
     "white": "#ffffff",
-    "tier_1": "#1a1a2e",
-    "tier_2": "#3d5a80",
-    "tier_3": "#6c757d",
-    "tier_4": "#adb5bd",
-    # Legacy aliases — kept for any scripts that reference old names
-    "dark_brown": "#0d1117",
-    "primary_brown": "#1a1a2e",
-    "warm_paper": "#f8f9fa",
+    "tier_1": "#1a1a1a",
+    "tier_2": "#4a4a4a",
+    "tier_3": "#777777",
+    "tier_4": "#aaaaaa",
+    # Legacy aliases
+    "dark_brown": "#1a1a1a",
+    "primary_brown": "#1a1a1a",
+    "warm_paper": "#f5f5f0",
 }
 
 

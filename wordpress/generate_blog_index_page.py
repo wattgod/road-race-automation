@@ -81,12 +81,12 @@ def generate_blog_index_page(output_dir=None):
     jsonld = json.dumps({
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "Road Labs Blog",
-        "description": "Race previews, season roundups, and race recaps from the Road Labs gravel race database.",
+        "name": "Roadie Labs Blog",
+        "description": "Race previews, season roundups, and race recaps from the Roadie Labs gravel race database.",
         "url": f"{SITE_URL}/blog/",
         "publisher": {
             "@type": "Organization",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_URL,
         },
     }, separators=(",", ":"))
@@ -96,9 +96,9 @@ def generate_blog_index_page(output_dir=None):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Road Labs Blog — Race Previews, Roundups &amp; Recaps</title>
-  <meta name="description" content="Race previews, season roundups, and race recaps from the Road Labs gravel race database. 328 races rated and ranked.">
-  <meta property="og:title" content="Road Labs Blog — Race Previews, Roundups &amp; Recaps">
+  <title>Roadie Labs Blog — Race Previews, Roundups &amp; Recaps</title>
+  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs gravel race database. 328 races rated and ranked.">
+  <meta property="og:title" content="Roadie Labs Blog — Race Previews, Roundups &amp; Recaps">
   <meta property="og:description" content="Race previews, season roundups, and race recaps. 328 gravel races rated and ranked.">
   <meta property="og:url" content="{SITE_URL}/blog/">
   <link rel="canonical" href="{SITE_URL}/blog/">
@@ -307,7 +307,7 @@ def generate_blog_index_page(output_dir=None):
 <body>
   <div class="rl-blog-index">
     <div class="rl-bi-hero">
-      <h1>Road Labs Blog</h1>
+      <h1>Roadie Labs Blog</h1>
       <div class="rl-bi-hero-sub">Race Previews &middot; Season Roundups &middot; Race Recaps</div>
     </div>
 
@@ -341,7 +341,7 @@ def generate_blog_index_page(output_dir=None):
     <div class="rl-bi-empty" id="rl-bi-empty" style="display:none">No articles match your filters.</div>
 
     <div class="rl-bi-footer">
-      <a href="{SITE_URL}">Road Labs</a> &middot;
+      <a href="{SITE_URL}">Roadie Labs</a> &middot;
       <a href="{SITE_URL}/gravel-races/">Race Database</a> &middot;
       {today_str}
     </div>

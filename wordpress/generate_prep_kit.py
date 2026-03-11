@@ -731,7 +731,7 @@ def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
 
 
 # Worker URL for fueling lead intake
-FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Road Labs workers
+FUELING_WORKER_URL = "https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev"  # TODO: deploy Roadie Labs workers
 
 
 def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
@@ -2756,7 +2756,7 @@ def generate_prep_kit_page(rd: dict, raw: dict, guide_sections: dict) -> str:
     js = build_prep_kit_js()
 
     meta_desc = f"Free race prep kit for {name}: 12-week training timeline, race-day checklists, packing list, and fueling strategy."
-    title = f"Free {name} Prep Kit: 12-Week Plan, Checklists & Fueling | Road Labs"
+    title = f"Free {name} Prep Kit: 12-Week Plan, Checklists & Fueling | Roadie Labs"
     has_full = has_full_training_data(raw)
     schema_jsonld = build_howto_schema(name, slug, canonical, has_full)
 
@@ -2775,7 +2775,7 @@ def generate_prep_kit_page(rd: dict, raw: dict, guide_sections: dict) -> str:
   <meta property="og:image" content="{SITE_BASE_URL}/og/{slug}.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/{slug}.jpg">
   <script type="application/ld+json">

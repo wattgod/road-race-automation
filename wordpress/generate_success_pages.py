@@ -420,7 +420,7 @@ def build_consulting_success() -> str:
 
 PAGES = {
     'training-plans-success': {
-        'title': 'Plan Confirmed | Road Labs',
+        'title': 'Plan Confirmed | Roadie Labs',
         'description': 'Your custom training plan is being generated.',
         'canonical': '/training-plans/success/',
         'active_nav': 'products',
@@ -429,7 +429,7 @@ PAGES = {
         'output_path': 'training-plans-success.html',
     },
     'coaching-welcome': {
-        'title': 'Welcome to Coaching | Road Labs',
+        'title': 'Welcome to Coaching | Roadie Labs',
         'description': 'Your coaching subscription is active.',
         'canonical': '/coaching/welcome/',
         'active_nav': 'services',
@@ -438,7 +438,7 @@ PAGES = {
         'output_path': 'coaching-welcome.html',
     },
     'consulting-confirmed': {
-        'title': 'Session Confirmed | Road Labs',
+        'title': 'Session Confirmed | Roadie Labs',
         'description': 'Your consulting session is confirmed.',
         'canonical': '/consulting/confirmed/',
         'active_nav': 'services',
@@ -492,7 +492,7 @@ def generate_success_page(page_key: str,
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>

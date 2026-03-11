@@ -47,10 +47,10 @@ def build_power_rankings_page(races: list) -> str:
     tokens = get_tokens_css()
 
     canonical = f"{SITE_BASE_URL}/race/power-rankings-{CURRENT_YEAR}/"
-    title = f"Gravel Race Power Rankings {CURRENT_YEAR} — All {len(races)} Races Ranked | Road Labs"
+    title = f"Gravel Race Power Rankings {CURRENT_YEAR} — All {len(races)} Races Ranked | Roadie Labs"
     description = (
         f"The definitive {CURRENT_YEAR} gravel race power rankings. "
-        f"All {len(races)} races ranked by our 15-dimension Road Labs Rating. "
+        f"All {len(races)} races ranked by our 15-dimension Roadie Labs Rating. "
         f"From the iconic Elite tier to grassroots gems."
     )
 
@@ -408,12 +408,12 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
   <section class="rl-pr-cta">
     <h2>Get Notified When Rankings Update</h2>
-    <p>Subscribe to the Road Labs newsletter for ranking changes, new entries, and exclusive race analysis.</p>
+    <p>Subscribe to the Roadie Labs newsletter for ranking changes, new entries, and exclusive race analysis.</p>
     <a href="https://TODO_ROADLABS_NEWSLETTER" class="rl-pr-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
   </section>
 
   <footer class="rl-pr-footer">
-    <a href="/">Road Labs</a> &middot;
+    <a href="/">Roadie Labs</a> &middot;
     <a href="/gravel-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a> &middot;
     <a href="/race/calendar/{CURRENT_YEAR}/">Calendar</a>

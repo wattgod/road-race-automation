@@ -143,7 +143,7 @@ def build_final_verdict_prompt(race, research_text, voice_guide):
     if isinstance(biased_opinion, dict):
         biased_opinion = biased_opinion.get("text", "")
 
-    return f"""You are writing the final_verdict section for a Road Labs cycling race profile.
+    return f"""You are writing the final_verdict section for a Roadie Labs cycling race profile.
 
 RACE: {name}
 LOCATION: {location}
@@ -191,7 +191,7 @@ def build_course_description_prompt(race, research_text, voice_guide):
     elevation = vitals.get("elevation_ft", "?")
     terrain = vitals.get("terrain", "")
 
-    return f"""You are writing the course_description section for a Road Labs cycling race profile.
+    return f"""You are writing the course_description section for a Roadie Labs cycling race profile.
 
 RACE: {name}
 LOCATION: {location}

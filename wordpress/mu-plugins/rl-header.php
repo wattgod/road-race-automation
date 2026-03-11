@@ -1,6 +1,6 @@
 <?php
 /**
- * Road Labs — Shared Dropdown Header for WordPress Pages
+ * Roadie Labs — Shared Dropdown Header for WordPress Pages
  *
  * Injects the 5-item dropdown nav (RACES, PRODUCTS, SERVICES, ARTICLES, ABOUT)
  * on WordPress-managed pages that don't use our static generators.
@@ -28,7 +28,7 @@ add_filter( 'body_class', 'rl_add_neo_brutalist_class' );
  * Add RSS feed discovery link to <head> on all pages.
  */
 function rl_rss_feed_link() {
-    echo '<link rel="alternate" type="application/rss+xml" title="Road Labs Race Database" href="https://roadlabs.cc/feed/races.xml">' . "\n";
+    echo '<link rel="alternate" type="application/rss+xml" title="Roadie Labs Race Database" href="https://roadlabs.cc/feed/races.xml">' . "\n";
 }
 
 /**
@@ -149,7 +149,7 @@ function rl_shared_header_html() {
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="<?php echo $base; ?>/" class="rl-site-header-logo">
-      <img src="<?php echo $base; ?>/wp-content/uploads/road-labs-logo.png" alt="Road Labs" width="50" height="50">
+      <img src="<?php echo $base; ?>/wp-content/uploads/road-labs-logo.png" alt="Roadie Labs" width="50" height="50">
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">

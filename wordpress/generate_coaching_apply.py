@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs Coaching Intake Form at /coaching/apply/.
+Generate the Roadie Labs Coaching Intake Form at /coaching/apply/.
 
 Ports the 12-section athlete questionnaire from the archived
 athlete-coaching-system repo. Features:
@@ -40,7 +40,7 @@ from cookie_consent import get_consent_banner_html
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 # Formsubmit.co endpoint — sends email to this address on submission
-FORMSUBMIT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Road Labs contact email
+FORMSUBMIT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Roadie Labs contact email
 FORMSUBMIT_URL = f"https://formsubmit.co/{FORMSUBMIT_EMAIL}"
 
 
@@ -816,12 +816,12 @@ def build_jsonld() -> str:
     data = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Coaching Application | Road Labs",
+        "name": "Coaching Application | Roadie Labs",
         "description": "Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference.",
         "url": f"{SITE_BASE_URL}/coaching/apply/",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": f"{SITE_BASE_URL}/",
         },
         "breadcrumb": {
@@ -1783,21 +1783,21 @@ def generate_apply_page(external_assets=None):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coaching Application | Road Labs</title>
+  <title>Coaching Application | Roadie Labs</title>
   <meta name="description" content="Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="{SITE_BASE_URL}/coaching/apply/">
-  <meta property="og:title" content="Coaching Application | Road Labs">
+  <meta property="og:title" content="Coaching Application | Roadie Labs">
   <meta property="og:description" content="Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{SITE_BASE_URL}/coaching/apply/">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
-  <link rel="icon" href="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo-32x32.png" sizes="32x32"><!-- TODO: replace with Road Labs favicon -->
+  <link rel="icon" href="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo-32x32.png" sizes="32x32"><!-- TODO: replace with Roadie Labs favicon -->
   {get_preload_hints()}
   {page_css}
   {get_ab_head_snippet()}

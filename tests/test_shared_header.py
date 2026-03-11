@@ -66,7 +66,7 @@ class TestHeaderHTML:
 
     def test_logo_present(self):
         html = get_site_header_html()
-        assert 'alt="Road Labs"' in html  # TODO: update to road-labs-logo when asset exists
+        assert 'alt="Roadie Labs"' in html  # TODO: update to road-labs-logo when asset exists
         assert 'class="rl-site-header-logo"' in html
 
     def test_aria_current_when_active(self):

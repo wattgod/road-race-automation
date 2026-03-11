@@ -103,7 +103,7 @@ def build_intel_prompt(race_data: dict, transcripts: list[dict]) -> str:
 {t['transcript']}
 """
 
-    return f"""You are a gravel cycling analyst for Road Labs. Extract actionable rider intelligence from YouTube race video transcripts.
+    return f"""You are a gravel cycling analyst for Roadie Labs. Extract actionable rider intelligence from YouTube race video transcripts.
 
 RACE: {name}
 LOCATION: {location}

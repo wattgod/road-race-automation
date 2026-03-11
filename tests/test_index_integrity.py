@@ -201,7 +201,7 @@ class TestIndexDataConsistency:
             )
 
     def test_discipline_values_valid(self):
-        """Discipline must be one of the Road Labs disciplines."""
+        """Discipline must be one of the Roadie Labs disciplines."""
         data = load_index()
         valid = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
         invalid = [(e["slug"], e.get("discipline")) for e in data

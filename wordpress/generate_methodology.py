@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs Methodology page in neo-brutalist style.
+Generate the Roadie Labs Methodology page in neo-brutalist style.
 
 Explains the scoring system, tier definitions, 15 dimensions, prestige
 overrides, and FAQ. Reuses CSS/style patterns from generate_neo_brutalist.py.
@@ -334,12 +334,12 @@ def build_jsonld() -> str:
     webpage = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "How We Rate Gravel Races — Road Labs Methodology",
-        "description": "The complete scoring methodology behind Road Labs race ratings. 15 dimensions, 4 tiers, transparent formula.",
+        "name": "How We Rate Gravel Races — Roadie Labs Methodology",
+        "description": "The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.",
         "url": f"{SITE_BASE_URL}/race/methodology/",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
         "speakable": {
@@ -422,17 +422,17 @@ def generate_methodology_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    og_tags = f'''<meta property="og:title" content="How We Rate Gravel Races — Road Labs Methodology">
-  <meta property="og:description" content="The complete scoring methodology behind Road Labs race ratings.">
+    og_tags = f'''<meta property="og:title" content="How We Rate Gravel Races — Roadie Labs Methodology">
+  <meta property="og:description" content="The complete scoring methodology behind Roadie Labs race ratings.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How We Rate Gravel Races — Road Labs Methodology">
-  <meta name="twitter:description" content="15 dimensions, 4 tiers, transparent formula. Here&#39;s how Road Labs scores every race.">
+  <meta name="twitter:title" content="How We Rate Gravel Races — Roadie Labs Methodology">
+  <meta name="twitter:description" content="15 dimensions, 4 tiers, transparent formula. Here&#39;s how Roadie Labs scores every race.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()
@@ -442,8 +442,8 @@ def generate_methodology_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How We Rate Gravel Races — Road Labs Methodology</title>
-  <meta name="description" content="The complete scoring methodology behind Road Labs race ratings. 15 dimensions, 4 tiers, transparent formula.">
+  <title>How We Rate Gravel Races — Roadie Labs Methodology</title>
+  <meta name="description" content="The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -482,7 +482,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Road Labs methodology page")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs methodology page")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     args = parser.parse_args()
 

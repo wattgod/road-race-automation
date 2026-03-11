@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Road Labs Cookie Consent
+ * Plugin Name: Roadie Labs Cookie Consent
  * Description: Lightweight cookie consent banner with Google Consent Mode v2.
  * Version: 1.1
  *

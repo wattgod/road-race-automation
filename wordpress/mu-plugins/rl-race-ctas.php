@@ -1,6 +1,6 @@
 <?php
 /**
- * Road Labs — Race Page CTAs on Blog Posts
+ * Roadie Labs — Race Page CTAs on Blog Posts
  *
  * Appends race profile + prep kit CTAs to blog posts that reference
  * specific races in our database.

@@ -369,9 +369,9 @@ def generate_preview_html(slug):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
-  <title>{esc(name)} Race Preview — Road Labs</title>
+  <title>{esc(name)} Race Preview — Roadie Labs</title>
   <meta name="description" content="Everything you need to know about {esc(name)}: course preview, key stats, training tips, and registration info. Tier {tier} {tier_name} rated {score}/100.">
-  <meta property="og:title" content="{esc(name)} Race Preview — Road Labs">
+  <meta property="og:title" content="{esc(name)} Race Preview — Roadie Labs">
   <meta property="og:description" content="Tier {tier} {tier_name} gravel race. {esc(location)}. Rated {score}/100.">
   <meta property="og:image" content="{og_image_url}">
   <meta property="og:url" content="{SITE_URL}/blog/{slug}/">
@@ -542,7 +542,7 @@ def generate_preview_html(slug):
     </div>
 
     <div class="rl-blog-footer">
-      <a href="{SITE_URL}">Road Labs</a> &middot; {article_date_str}
+      <a href="{SITE_URL}">Roadie Labs</a> &middot; {article_date_str}
     </div>
   </div>
 </body>

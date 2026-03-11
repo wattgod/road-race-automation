@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs Coaching landing page in neo-brutalist style.
+Generate the Roadie Labs Coaching landing page in neo-brutalist style.
 
 Consolidates both service tiers (Custom Training Plans + 1:1 Coaching) into
 a single conversion-optimized page at /coaching/. Replaces the old WordPress/
@@ -1189,12 +1189,12 @@ def build_jsonld() -> str:
     webpage = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Coaching | Road Labs",
+        "name": "Coaching | Roadie Labs",
         "description": "Gravel race coaching built around your schedule, your data, and your life. Three tiers: Min, Mid, and Max.",
         "url": f"{SITE_BASE_URL}/coaching/",
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
     }
@@ -1204,7 +1204,7 @@ def build_jsonld() -> str:
         "name": "Gravel Race Coaching",
         "provider": {
             "@type": "Organization",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
         "description": "Gravel race coaching: three tiers of involvement from weekly review to daily high-touch support. Built around your schedule, fitness, and target event.",
@@ -1245,16 +1245,16 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
     meta_desc = "Gravel cycling coaching: structured training, race strategy, and honest feedback from a real coach. Plans from $199 every 4 weeks."
 
-    og_tags = f'''<meta property="og:title" content="Coaching | Road Labs">
+    og_tags = f'''<meta property="og:title" content="Coaching | Roadie Labs">
   <meta property="og:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Coaching | Road Labs">
+  <meta name="twitter:title" content="Coaching | Roadie Labs">
   <meta name="twitter:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
@@ -1265,7 +1265,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravel Cycling Coaching | Road Labs</title>
+  <title>Gravel Cycling Coaching | Roadie Labs</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
@@ -1316,7 +1316,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Road Labs coaching page")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs coaching page")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     args = parser.parse_args()
 

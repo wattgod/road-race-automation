@@ -338,7 +338,7 @@ class TestCulturalImpact:
     def test_cultural_impact_only_on_notable_races(self):
         """Races with CI > 2 should have prestige >= 3 or tier <= 2.
 
-        CI=1 is a minor cultural footnote (common in Road Labs migration);
+        CI=1 is a minor cultural footnote (common in Roadie Labs migration);
         only significant cultural impact (CI>2) requires prestige/tier backing.
         """
         race_data_dir = get_race_data_dir()

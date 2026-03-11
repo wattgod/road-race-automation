@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the Road Labs Training Plans landing page in neo-brutalist style.
+Generate the Roadie Labs Training Plans landing page in neo-brutalist style.
 
 Port of web/training-plans.html (WordPress paste-in) into the generator system.
 Full shared header/footer, brand tokens, JSON-LD, and GA4 tracking.
@@ -1364,7 +1364,7 @@ def build_jsonld() -> str:
   "description": "Race-specific training plan built from your schedule, fitness, and target event. Includes structured workouts, training guide, nutrition plan, strength program, and heat/altitude protocols.",
   "brand": {{
     "@type": "Organization",
-    "name": "Road Labs",
+    "name": "Roadie Labs",
     "url": "{SITE_BASE_URL}"
   }},
   "offers": {{
@@ -1413,16 +1413,16 @@ def generate_training_page(external_assets: dict = None) -> str:
         "programs with race-specific prep. Data-driven. From $15/week."
     )
 
-    og_tags = f'''<meta property="og:title" content="Custom Training Plans | Road Labs">
+    og_tags = f'''<meta property="og:title" content="Custom Training Plans | Roadie Labs">
   <meta property="og:description" content="Race-specific training plans. $15/week, capped at $249. Structured workouts, nutrition, strength, and race protocols.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Custom Training Plans | Road Labs">
+  <meta name="twitter:title" content="Custom Training Plans | Roadie Labs">
   <meta name="twitter:description" content="Race-specific training plans. $15/week, capped at $249.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
@@ -1433,7 +1433,7 @@ def generate_training_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravel Training Plans | Road Labs</title>
+  <title>Gravel Training Plans | Roadie Labs</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
@@ -1480,7 +1480,7 @@ def generate_training_page(external_assets: dict = None) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Road Labs training plans page")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs training plans page")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     args = parser.parse_args()
 

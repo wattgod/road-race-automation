@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Road Labs Meta Descriptions
+ * Plugin Name: Roadie Labs Meta Descriptions
  * Description: Inject meta descriptions via AIOSEO filter hooks from a JSON data file.
  * Version: 1.0
  *

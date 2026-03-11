@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Daily Report Email — Road Labs
+Daily Report Email — Roadie Labs
 
 Generates a branded HTML report email with site health, business metrics,
 and rule-based trend commentary. Sends via Resend, archives to reports/daily/.
@@ -35,7 +35,7 @@ from dotenv import load_dotenv  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 
 CURRENT_DATE = date.today()
-DEFAULT_RECIPIENT = "TODO_ROADLABS_EMAIL"  # TODO: Road Labs contact email
+DEFAULT_RECIPIENT = "TODO_ROADLABS_EMAIL"  # TODO: Roadie Labs contact email
 REPORTS_DIR = PROJECT_ROOT / "reports" / "daily"
 
 
@@ -481,7 +481,7 @@ def render_html(data: dict) -> str:
     <tr><td style="background:#3a2e25;padding:24px 32px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#B7950B;">ROAD LABS</td>
+          <td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#B7950B;">ROADIE LABS</td>
           <td style="text-align:right;font-family:'Courier New',monospace;font-size:11px;color:#8c7568;">{report_date}</td>
         </tr>
         <tr><td colspan="2" style="font-family:Georgia,serif;font-size:20px;color:#ffffff;padding-top:8px;">Daily Report</td></tr>
@@ -687,7 +687,7 @@ def render_html(data: dict) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Road Labs Daily Report — {report_date}</title>
+<title>Roadie Labs Daily Report — {report_date}</title>
 </head>
 <body style="font-family:Georgia,serif;background:#f8f3ec;margin:0;padding:20px;">
   <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
@@ -722,7 +722,7 @@ def send_email(html: str, recipient: str) -> dict:
         resend.api_key = api_key
 
         from_email = os.environ.get(
-            "REPORT_FROM", "Road Labs <matt@roadlabs.cc>"
+            "REPORT_FROM", "Roadie Labs <matt@roadlabs.cc>"
         )
 
         subject = f"Daily Report — {CURRENT_DATE.strftime('%b %d, %Y')}"
@@ -781,7 +781,7 @@ def collect_all() -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Road Labs Daily Report Email")
+    parser = argparse.ArgumentParser(description="Roadie Labs Daily Report Email")
     parser.add_argument("--dry-run", action="store_true", help="Generate + archive, no send")
     parser.add_argument("--stdout", action="store_true", help="Print HTML to stdout")
     parser.add_argument("--to", default=os.environ.get("REPORT_TO", DEFAULT_RECIPIENT),

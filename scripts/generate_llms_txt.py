@@ -80,14 +80,14 @@ def generate_llms_txt(index: list[dict]) -> str:
     regions = sorted(set(r.get("region", "Unknown") for r in index if r.get("region")))
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    return f"""# Road Labs Race Database
+    return f"""# Roadie Labs Race Database
 
 > The definitive gravel race database. {len(index)} races rated on 14 criteria, scored 0-100, and tiered 1-4.
 > Last generated: {now}
 
 ## Overview
 
-Road Labs is an independent gravel cycling database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (logistics, length, technicality, elevation, climate, altitude, adventure, prestige, race quality, experience, community, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
+Roadie Labs is an independent gravel cycling database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (logistics, length, technicality, elevation, climate, altitude, adventure, prestige, race quality, experience, community, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
 
 - **Tier 1 (Elite)**: {tier_counts.get(1, 0)} races — score >= 80 or prestige override
 - **Tier 2 (Strong)**: {tier_counts.get(2, 0)} races — score >= 60
@@ -179,10 +179,10 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     lines = []
-    lines.append("# Road Labs Race Database — Full Context")
+    lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
     lines.append(f"> {len(index)} gravel, MTB, and bikepacking races rated on 14 criteria.")
-    lines.append(f"> Produced by Road Labs (roadlabs.cc). Generated: {now}")
+    lines.append(f"> Produced by Roadie Labs (roadlabs.cc). Generated: {now}")
     lines.append("")
 
     # Scoring methodology

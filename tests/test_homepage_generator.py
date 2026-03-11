@@ -1,4 +1,4 @@
-"""Tests for the Road Labs homepage generator."""
+"""Tests for the Roadie Labs homepage generator."""
 import json
 import re
 import sys
@@ -229,7 +229,7 @@ class TestGuideChapters:
 class TestSectionBuilders:
     def test_nav_has_logo(self):
         nav = build_nav()
-        assert 'alt="Road Labs"' in nav  # TODO: update logo filename when asset exists
+        assert 'alt="Roadie Labs"' in nav  # TODO: update logo filename when asset exists
         assert "<img" in nav
 
     def test_nav_has_links(self):
@@ -385,7 +385,7 @@ class TestSectionBuilders:
 
     def test_footer_has_copyright(self):
         html = build_footer()
-        assert "ROAD LABS" in html
+        assert "ROADIE LABS" in html
         assert "2026" in html
 
     def test_footer_has_structure(self):
@@ -513,7 +513,7 @@ class TestFullPage:
 
     def test_has_title(self, homepage_html):
         assert "<title>" in homepage_html
-        assert "Road Labs" in homepage_html
+        assert "Roadie Labs" in homepage_html
 
     def test_has_meta_description(self, homepage_html):
         assert 'name="description"' in homepage_html
@@ -1048,19 +1048,19 @@ class TestBrandToneGuard:
         # Pre-existing hex values that predate the token system.
         # TODO: migrate these to token values in a dedicated color-sync sprint.
         known_hex.update([
-            "0d1117",  # Road Labs dark navy
-            "1a1a2e",  # Road Labs primary navy
-            "3d5a80",  # Road Labs secondary blue
-            "5c7a99",  # Road Labs steel
-            "a3bfdb",  # Road Labs light steel
-            "d1dce6",  # Road Labs silver
-            "f8f9fa",  # Road Labs cool white
-            "e63946",  # Road Labs signal red
-            "ff6b6b",  # Road Labs coral
-            "f77f00",  # Road Labs orange
-            "fcbf49",  # Road Labs light orange
-            "6c757d",  # Road Labs tier-3
-            "adb5bd",  # Road Labs tier-4
+            "0d1117",  # Roadie Labs dark navy
+            "1a1a2e",  # Roadie Labs primary navy
+            "3d5a80",  # Roadie Labs secondary blue
+            "5c7a99",  # Roadie Labs steel
+            "a3bfdb",  # Roadie Labs light steel
+            "d1dce6",  # Roadie Labs silver
+            "f8f9fa",  # Roadie Labs cool white
+            "e63946",  # Roadie Labs signal red
+            "ff6b6b",  # Roadie Labs coral
+            "f77f00",  # Roadie Labs orange
+            "fcbf49",  # Roadie Labs light orange
+            "6c757d",  # Roadie Labs tier-3
+            "adb5bd",  # Roadie Labs tier-4
             # Legacy Gravel God colors (still used by some generators)
             "178079",  # legacy teal (tokens: 1a8a82)
             "59473c",  # primary brown
@@ -1324,7 +1324,7 @@ class TestDisciplineFiltering:
             "All tab panels should show empty fallback when no gravel races exist"
 
     def test_editorial_one_liners_include_all_disciplines(self):
-        """Ticker one-liners should include all Road Labs disciplines."""
+        """Ticker one-liners should include all Roadie Labs disciplines."""
         import tempfile, os
         fondo_race = {
             "race": {
@@ -1356,7 +1356,7 @@ class TestDisciplineFiltering:
             assert "Fake Sportive Race" in names, "Sportive race should appear in one-liners"
 
     def test_upcoming_races_include_all_road_disciplines(self):
-        """Upcoming races should include all Road Labs disciplines."""
+        """Upcoming races should include all Roadie Labs disciplines."""
         import tempfile, os
         from datetime import timedelta
         today = date.today()
@@ -1459,7 +1459,7 @@ class TestFeaturedSlugsIntegrity:
                 f"Check for typos (e.g., 'sbt-grvl' vs 'steamboat-gravel')."
 
     def test_featured_slugs_are_road_discipline(self, race_index):
-        """Every race in FEATURED_SLUGS must have a Road Labs discipline."""
+        """Every race in FEATURED_SLUGS must have a Roadie Labs discipline."""
         ROAD_DISCIPLINES = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
         slug_to_race = {r["slug"]: r for r in race_index}
         for slug in FEATURED_SLUGS:

@@ -133,8 +133,8 @@ def generate_embed_js():
     if(race.l)html+='<span>'+esc(race.l)+'</span>';
     if(race.d)html+='<span>'+esc(race.d)+'</span>';
     html+='</div>';
-    html+='<a href="'+race.u+'" target="_blank" rel="noopener" class="rl-embed-link">View on Road Labs &rarr;</a>';
-    html+='<div class="rl-embed-powered"><a href="'+SITE+'" target="_blank" rel="noopener">Powered by Road Labs</a></div>';
+    html+='<a href="'+race.u+'" target="_blank" rel="noopener" class="rl-embed-link">View on Roadie Labs &rarr;</a>';
+    html+='<div class="rl-embed-powered"><a href="'+SITE+'" target="_blank" rel="noopener">Powered by Roadie Labs</a></div>';
     html+='</div>';
     el.innerHTML=html;
 
@@ -185,7 +185,7 @@ def generate_demo_html():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Road Labs Embed Widget</title>
+<title>Roadie Labs Embed Widget</title>
 <style>
   body {{ font-family: 'Sometype Mono', ui-monospace, monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #3a2e25; background: #f5efe6; line-height: 1.6; }}
   h1 {{ font-size: 24px; border-bottom: 3px solid #3a2e25; padding-bottom: 8px; }}
@@ -196,8 +196,8 @@ def generate_demo_html():
 </style>
 </head>
 <body>
-<h1>Road Labs Embed Widget</h1>
-<p>Add a Road Labs race rating badge to your site. Compact, lightweight, and self-contained.</p>
+<h1>Roadie Labs Embed Widget</h1>
+<p>Add a Roadie Labs race rating badge to your site. Compact, lightweight, and self-contained.</p>
 
 <h2>Quick Start</h2>
 <p>Paste this where you want the badge to appear:</p>
@@ -227,7 +227,7 @@ def generate_demo_html():
 <ul>
   <li>The script loads a compact JSON file (~15KB) with all 328 race ratings</li>
   <li>Each badge is rendered client-side with race name, tier, score, location, and date</li>
-  <li>Clicking the badge links to the full race profile on Road Labs</li>
+  <li>Clicking the badge links to the full race profile on Roadie Labs</li>
   <li>No dependencies, no cookies, no tracking (GA4 event only on roadlabs.cc)</li>
   <li>Styles are scoped to <code>.rl-embed-card</code> and won't affect your site</li>
 </ul>

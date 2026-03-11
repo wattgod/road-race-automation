@@ -46,7 +46,7 @@ class TestFeedFile:
         channel = tree.getroot().find("channel")
         title = channel.find("title")
         assert title is not None
-        assert "Road Labs" in title.text
+        assert "Roadie Labs" in title.text
 
     def test_channel_link(self):
         tree = ET.parse(str(FEED_FILE))

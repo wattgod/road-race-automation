@@ -215,15 +215,15 @@ def detect_country(location: str) -> str:
 SITE_BASE_URL = "https://roadlabs.cc"
 COACHING_URL = f"{SITE_BASE_URL}/coaching/apply/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/questionnaire/"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Road Labs newsletter
-SUBSTACK_EMBED = "https://TODO_ROADLABS_NEWSLETTER/embed"  # TODO: Road Labs newsletter
+SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
+SUBSTACK_EMBED = "https://TODO_ROADLABS_NEWSLETTER/embed"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = str(datetime.now().year)
 
 
 def build_seo_title(rd: dict) -> str:
     """Build an SEO-optimized <title> tag.
 
-    Target format: "{Race Name} Review {Year} | {Location} | Road Labs"
+    Target format: "{Race Name} Review {Year} | {Location} | Roadie Labs"
     Falls back to shorter forms if title exceeds ~60 chars.
     """
     name = rd['name']
@@ -232,17 +232,17 @@ def build_seo_title(rd: dict) -> str:
     loc_short = location.split(',')[-1].strip() if ',' in location else location
 
     # Try full format first
-    full = f"{name} Review {CURRENT_YEAR} | {loc_short} | Road Labs"
+    full = f"{name} Review {CURRENT_YEAR} | {loc_short} | Roadie Labs"
     if len(full) <= 62:
         return full
 
     # Drop location if too long
-    medium = f"{name} Review {CURRENT_YEAR} | Road Labs"
+    medium = f"{name} Review {CURRENT_YEAR} | Roadie Labs"
     if len(medium) <= 62:
         return medium
 
     # Minimal
-    return f"{name} | Road Labs"
+    return f"{name} | Roadie Labs"
 
 
 def build_seo_description(rd: dict) -> str:
@@ -282,7 +282,7 @@ def build_seo_description(rd: dict) -> str:
         return f"{truncated}.{suffix}"
 
     # Fallback: just tagline + score
-    return f"{tagline}. Rated {score}/100 ({tier_label}) by Road Labs."
+    return f"{tagline}. Rated {score}/100 ({tier_label}) by Roadie Labs."
 
 
 # ── Phase 1: Data Adapter ─────────────────────────────────────
@@ -4458,7 +4458,7 @@ def build_webpage_jsonld(rd: dict) -> dict:
         "dateModified": rd.get('_file_mtime', date.today().isoformat()),
         "isPartOf": {
             "@type": "WebSite",
-            "name": "Road Labs",
+            "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
         "speakable": {
@@ -5305,7 +5305,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   <meta property="og:image" content="{esc(og_image_url)}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(seo_title)}">
   <meta name="twitter:description" content="{esc(seo_description)}">

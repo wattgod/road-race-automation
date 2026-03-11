@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Road Labs Noindex
+ * Plugin Name: Roadie Labs Noindex
  * Description: Add noindex to junk pages that waste Google crawl budget.
  * Version: 1.0
  *
@@ -91,12 +91,12 @@ function rl_search_page_schema() {
         '@context' => 'https://schema.org',
         '@type' => 'CollectionPage',
         'name' => 'Find Your Road Race',
-        'description' => 'Search and filter 427 road races worldwide by tier, distance, region, terrain, and date. Find your next road cycling event with the Road Labs race database.',
+        'description' => 'Search and filter 427 road races worldwide by tier, distance, region, terrain, and date. Find your next road cycling event with the Roadie Labs race database.',
         'url' => 'https://roadlabs.cc/road-races/',
         'numberOfItems' => 427,
         'publisher' => [
             '@type' => 'Organization',
-            'name' => 'Road Labs',
+            'name' => 'Roadie Labs',
             'url' => 'https://roadlabs.cc/',
         ],
     ];

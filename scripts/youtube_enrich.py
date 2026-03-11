@@ -113,7 +113,7 @@ Description excerpt: {(v.get('description', '') or '')[:500]}
 {"Transcript excerpt: " + transcript_excerpt if transcript_excerpt else "No transcript available."}
 """
 
-    return f"""You are a gravel cycling content curator for Road Labs.
+    return f"""You are a gravel cycling content curator for Roadie Labs.
 
 RACE: {name}
 LOCATION: {location}

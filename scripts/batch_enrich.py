@@ -202,7 +202,7 @@ def build_enrichment_prompt(race, research_text, voice_guide):
 
     scores_block = "\n".join(f"  - {k}: {v}/5" for k, v in scores.items())
 
-    return f"""You are writing biased_opinion_ratings for the Road Labs cycling race database.
+    return f"""You are writing biased_opinion_ratings for the Roadie Labs cycling race database.
 
 RACE: {name}
 LOCATION: {location}
@@ -346,7 +346,7 @@ def build_re_enrichment_prompt(race, research_text, voice_guide, slug=None):
         for k in SCORE_COMPONENTS
     )
 
-    return f"""You are RE-WRITING biased_opinion_ratings for the Road Labs cycling race database.
+    return f"""You are RE-WRITING biased_opinion_ratings for the Roadie Labs cycling race database.
 
 RACE: {name}
 LOCATION: {location}
@@ -444,7 +444,7 @@ def build_completion_prompt(race, research_text, voice_guide, missing_criteria):
         for k in missing_criteria
     )
 
-    return f"""You are writing biased_opinion_ratings for the Road Labs cycling race database.
+    return f"""You are writing biased_opinion_ratings for the Roadie Labs cycling race database.
 
 RACE: {name}
 LOCATION: {location}

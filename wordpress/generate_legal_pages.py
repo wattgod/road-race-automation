@@ -28,8 +28,8 @@ from cookie_consent import get_consent_banner_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
-SITE_NAME = "Road Labs"
-CONTACT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Road Labs contact email
+SITE_NAME = "Roadie Labs"
+CONTACT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Roadie Labs contact email
 SITE_URL = SITE_BASE_URL
 CURRENT_YEAR = date.today().year
 
@@ -327,18 +327,18 @@ def generate_page(page_key: str, output_dir: Path) -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{esc(title)} | Road Labs</title>
+  <title>{esc(title)} | Roadie Labs</title>
   <meta name="description" content="{esc(description)}">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="{SITE_URL}/{slug}/">
-  <meta property="og:title" content="{esc(title)} | Road Labs">
+  <meta property="og:title" content="{esc(title)} | Roadie Labs">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{SITE_URL}/{slug}/">
   <meta property="og:image" content="{SITE_URL}/og/homepage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Road Labs">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_URL}/og/homepage.jpg">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%233a2e25'/><text x='16' y='24' text-anchor='middle' font-family='serif' font-size='24' font-weight='700' fill='%239a7e0a'>G</text></svg>">

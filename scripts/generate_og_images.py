@@ -8,7 +8,7 @@ Produces 1200x630 neo-brutalist styled JPEG images optimized for social sharing:
   - Tagline hook text (the curiosity-gap copy)
   - Score badge with arc progress (the numerical hook)
   - Location + stats as supporting info (truncated for clarity)
-  - Strong brand bar with ROAD LABS identity
+  - Strong brand bar with ROADIE LABS identity
   - Subtle topo-line texture for visual depth
   - Optimized for thumbnail legibility (~200-400px wide in feeds)
 
@@ -281,10 +281,10 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
     draw.rectangle([0, bottom_bar_y, W, H], fill=DARK_BROWN)
 
     # Brand name
-    draw.text((left_margin, bottom_bar_y + 16), "ROAD LABS", fill=WHITE, font=font_brand)
+    draw.text((left_margin, bottom_bar_y + 16), "ROADIE LABS", fill=WHITE, font=font_brand)
 
     # Gold underline
-    brand_w = tw(draw, "ROAD LABS", font_brand)
+    brand_w = tw(draw, "ROADIE LABS", font_brand)
     draw.rectangle(
         [left_margin, bottom_bar_y + 50, left_margin + brand_w, bottom_bar_y + 53],
         fill=GOLD

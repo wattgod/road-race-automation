@@ -9,7 +9,7 @@ and coaching apply pages.
 from __future__ import annotations
 
 SITE_BASE_URL = "https://roadlabs.cc"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Road Labs newsletter
+SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
 
 
 def get_site_header_html(active: str | None = None) -> str:
@@ -27,7 +27,7 @@ def get_site_header_html(active: str | None = None) -> str:
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="{SITE_BASE_URL}/" class="rl-site-header-logo">
-      <img src="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Road Labs" width="50" height="50"><!-- TODO: replace with Road Labs logo asset -->
+      <img src="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Roadie Labs" width="50" height="50"><!-- TODO: replace with Roadie Labs logo asset -->
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">

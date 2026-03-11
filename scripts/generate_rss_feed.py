@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate RSS 2.0 feed for the Road Labs race database.
+"""Generate RSS 2.0 feed for the Roadie Labs race database.
 
 Produces web/feed/races.xml with all races as items, sorted by tier (T1 first)
 then by score descending. Cycling blogs and aggregators can subscribe to get
@@ -120,15 +120,15 @@ def generate_rss():
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Road Labs — Race Database</title>
+    <title>Roadie Labs — Race Database</title>
     <link>{SITE_URL}/gravel-races/</link>
     <description>{len(index)} road races rated and ranked on 14 criteria. Tier ratings, scores, locations, dates, and course details.</description>
     <language>en-us</language>
     <lastBuildDate>{now}</lastBuildDate>
     <atom:link href="{SITE_URL}/feed/races.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>{SITE_URL}/wp-content/uploads/2023/01/road-labs-logo.png</url><!-- TODO: upload Road Labs logo asset -->
-      <title>Road Labs</title>
+      <url>{SITE_URL}/wp-content/uploads/2023/01/road-labs-logo.png</url><!-- TODO: upload Roadie Labs logo asset -->
+      <title>Roadie Labs</title>
       <link>{SITE_URL}</link>
     </image>
 {items_xml}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Road Labs — GA4 Analytics
+ * Roadie Labs — GA4 Analytics
  *
  * Lightweight replacement for MonsterInsights Pro + 5 addons.
  * Injects the GA4 gtag.js snippet into wp_head on all front-end pages.
@@ -23,7 +23,7 @@ function rl_ga4_tracking() {
         return;
     }
     $id = 'G-EJJZ9T6M52';
-    echo '<!-- Road Labs GA4 -->' . "\n";
+    echo '<!-- Roadie Labs GA4 -->' . "\n";
     echo '<script async src="https://www.googletagmanager.com/gtag/js?id=' . esc_attr( $id ) . '"></script>' . "\n";
     echo '<script>' . "\n";
     echo 'window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}' . "\n";

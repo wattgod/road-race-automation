@@ -9,7 +9,7 @@ from __future__ import annotations
 from datetime import date
 
 SITE_BASE_URL = "https://roadlabs.cc"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Road Labs newsletter
+SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = date.today().year
 
 
@@ -18,7 +18,7 @@ def get_mega_footer_html() -> str:
     return f'''<footer class="rl-mega-footer">
   <div class="rl-mega-footer-grid">
     <div class="rl-mega-footer-col rl-mega-footer-brand">
-      <h3 class="rl-mega-footer-brand-title">ROAD LABS</h3>
+      <h3 class="rl-mega-footer-brand-title">ROADIE LABS</h3>
       <p class="rl-mega-footer-brand-tagline">Practical coaching and training for people with real lives who still want to go fast.</p>
     </div>
     <div class="rl-mega-footer-col">
@@ -58,7 +58,7 @@ def get_mega_footer_html() -> str:
     </div>
   </div>
   <div class="rl-mega-footer-legal">
-    <span>&copy; {CURRENT_YEAR} Road Labs. All rights reserved.</span>
+    <span>&copy; {CURRENT_YEAR} Roadie Labs. All rights reserved.</span>
     <nav class="rl-mega-footer-legal-links">
       <a href="{SITE_BASE_URL}/privacy/">Privacy</a>
       <a href="{SITE_BASE_URL}/terms/">Terms</a>
@@ -66,7 +66,7 @@ def get_mega_footer_html() -> str:
     </nav>
   </div>
   <div class="rl-mega-footer-disclaimer">
-    <p>This content is produced independently by Road Labs and is not affiliated with, endorsed by, or officially connected to any race organizer, event, or governing body mentioned on this page. All ratings, opinions, and assessments represent the editorial views of Road Labs based on publicly available information and community research. Race details are subject to change &mdash; always verify with official race sources.</p>
+    <p>This content is produced independently by Roadie Labs and is not affiliated with, endorsed by, or officially connected to any race organizer, event, or governing body mentioned on this page. All ratings, opinions, and assessments represent the editorial views of Roadie Labs based on publicly available information and community research. Race details are subject to change &mdash; always verify with official race sources.</p>
   </div>
 </footer>'''
 

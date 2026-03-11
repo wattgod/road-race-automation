@@ -897,7 +897,7 @@ class TestNav:
     def test_logo_links_to_homepage(self, normalized_data):
         html = build_nav_header(normalized_data, [])
         assert 'class="rl-site-header-logo"' in html
-        assert 'alt="Road Labs"' in html
+        assert 'alt="Roadie Labs"' in html
         # Logo must link to site root
         assert 'href="https://roadlabs.cc/"' in html
 
@@ -964,7 +964,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert 'alt="Road Labs"' in html
+        assert 'alt="Roadie Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
@@ -976,7 +976,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert 'alt="Road Labs"' in html
+        assert 'alt="Roadie Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
@@ -1022,7 +1022,7 @@ class TestFullPage:
 
     def test_title_format(self, normalized_data):
         html = generate_page(normalized_data)
-        assert "Road Labs" in html
+        assert "Roadie Labs" in html
         assert "<title>" in html
         assert "Race Profile" not in html
 

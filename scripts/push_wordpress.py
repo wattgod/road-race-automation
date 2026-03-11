@@ -85,7 +85,7 @@ def push_to_wordpress(json_path: str):
         "content": "",  # Elementor uses its own data
         "status": "draft",  # Start as draft for review
         "meta": {
-            "_yoast_wpseo_title": f"{display_name} – Race Info & Training Guide | Road Labs",
+            "_yoast_wpseo_title": f"{display_name} – Race Info & Training Guide | Roadie Labs",
             "_yoast_wpseo_metadesc": f"Complete guide to {display_name}: race vitals, route, history, and how to train for success.",
         }
     }
@@ -1371,7 +1371,7 @@ def sync_pages(pages_dir: str):
 
 
 REDIRECT_BLOCK = """\
-# BEGIN Road Labs Redirects
+# BEGIN Roadie Labs Redirects
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
@@ -1420,7 +1420,7 @@ RewriteRule ^gravel-worlds/?$ /race/gravel-worlds/ [R=301,L]
 RewriteRule ^big-sugar/?$ /race/big-sugar/ [R=301,L]
 
 # /midsouth → TrainingPeaks plan (was PrettyLinks, now static redirect)
-# TODO: Update TrainingPeaks URL for Road Labs (current URL still references gravel-god product)
+# TODO: Update TrainingPeaks URL for Roadie Labs (current URL still references gravel-god product)
 RewriteRule ^midsouth/?$ https://www.trainingpeaks.com/training-plans/cycling/gran-fondo-century/tp-260379/gravel-god-the-midsouth-base-to-race [R=307,L]
 
 # /about-me/ → /about/ (old WP page trashed, consolidate 1,169 impressions)
@@ -1434,13 +1434,13 @@ RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=3
 RewriteRule ^training-plans/?$ /products/training-plans/ [R=301,L]
 
 # Broken URL from GSC → parent page (404 fix)
-# TODO: Update email reference for Road Labs
+# TODO: Update email reference for Roadie Labs
 RewriteRule ^training-plans-faq/TODO_ROADLABS_EMAIL$ /training-plans-faq/ [R=301,L]
 </IfModule>
-# END Road Labs Redirects
+# END Roadie Labs Redirects
 """
 
-REDIRECT_MARKER = "# BEGIN Road Labs Redirects"
+REDIRECT_MARKER = "# BEGIN Roadie Labs Redirects"
 
 
 def sync_redirects():
@@ -1478,7 +1478,7 @@ def sync_redirects():
     if REDIRECT_MARKER in current:
         # Replace existing block
         import re
-        pattern = r"# BEGIN Road Labs Redirects.*?# END Road Labs Redirects\n?"
+        pattern = r"# BEGIN Roadie Labs Redirects.*?# END Roadie Labs Redirects\n?"
         updated = re.sub(pattern, "", current, flags=re.DOTALL)
         updated = REDIRECT_BLOCK + "\n" + updated
         print("  Updating existing redirect block...")

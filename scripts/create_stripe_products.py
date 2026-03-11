@@ -1,5 +1,5 @@
 """
-Create Stripe products and prices for Road Labs.
+Create Stripe products and prices for Roadie Labs.
 
 Products:
   1. Custom Training Plan — 14 one-time prices ($60–$249, $15/week increments)
@@ -299,7 +299,7 @@ def create_products():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Create Stripe products for Road Labs")
+    parser = argparse.ArgumentParser(description="Create Stripe products for Roadie Labs")
     parser.add_argument("--dry-run", action="store_true", help="Preview without creating")
     args = parser.parse_args()
 
