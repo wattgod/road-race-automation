@@ -292,7 +292,7 @@ class TestSectionBuilders:
     def test_hero_has_h1(self, stats, race_index):
         hero = build_hero(stats, race_index)
         assert "<h1" in hero
-        assert "Every gravel race, honestly rated" in hero
+        assert "Every road race, honestly rated" in hero
 
     def test_hero_has_announcement_pill(self, stats, race_index):
         hero = build_hero(stats, race_index)
@@ -1391,18 +1391,17 @@ class TestDisciplineFiltering:
             assert "Upcoming Fondo" in names
             assert "Upcoming Sportive" in names
 
-    def test_featured_races_fallback_excludes_non_gravel(self):
-        """Featured race fallback should only pick gravel T1 races."""
+    def test_featured_races_fallback_picks_top_t1(self):
+        """Featured race fallback should pick top T1 races by score."""
         index = [
-            {"slug": "bp-top", "name": "BP Top", "tier": 1, "overall_score": 99,
-             "discipline": "bikepacking"},
-            {"slug": "gravel-lower", "name": "Gravel Lower", "tier": 1, "overall_score": 80,
-             "discipline": "gravel"},
+            {"slug": "fondo-top", "name": "Fondo Top", "tier": 1, "overall_score": 99,
+             "discipline": "gran_fondo"},
+            {"slug": "sportive-lower", "name": "Sportive Lower", "tier": 1, "overall_score": 80,
+             "discipline": "sportive"},
         ]
         featured = get_featured_races(index)
         names = [r["name"] for r in featured]
-        assert "BP Top" not in names, "Bikepacking race should not be in featured fallback"
-        assert "Gravel Lower" in names
+        assert "Fondo Top" in names
 
 
 class TestBentoNoImage:

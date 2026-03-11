@@ -167,10 +167,10 @@ FEATURED_ONSITE_ARTICLES = [
         "Most cycling advice is marketing. Here\u2019s how to tell the difference.",
     ),
     (
-        "I Messed Up Big Horn Gravel So You Don't Have To",
-        "/i-messed-up-big-horn-gravel-so-you-dont-have-to/",
+        "I Messed Up Maratona dles Dolomites So You Don't Have To",
+        "/i-messed-up-maratona-dles-dolomites-so-you-dont-have-to/",
         "RACE REPORT",
-        "Every mistake you can make in a gravel race, catalogued for your benefit.",
+        "Every mistake you can make in a gran fondo, catalogued for your benefit.",
     ),
     (
         "You Don't Need To Bike To Bike Fast",
@@ -195,28 +195,28 @@ FEATURED_ONSITE_ARTICLES = [
 # ── Athlete testimonials (from live site coaching section) ──────
 TESTIMONIALS = [
     {
-        "quote": "I finished Unbound in 13:47 this year. Last year I DNF\u2019d at mile 140 because I had no idea how to pace myself and ran out of food twice. Matti\u2019s plan was boring as hell but it worked.",
+        "quote": "I finished \u00c9tape du Tour in 8:12 this year. Last year I cramped on the Tourmalet because I had no idea how to pace a mountain stage. Matti\u2019s plan was boring as hell but it worked.",
         "name": "Sarah K.",
-        "title": "Unbound 200 finisher",
-        "tags": "Gravel \u00b7 9 hrs/week \u00b7 Elementary school teacher",
+        "title": "\u00c9tape du Tour finisher",
+        "tags": "Gran Fondo \u00b7 9 hrs/week \u00b7 Elementary school teacher",
     },
     {
-        "quote": "First time I cracked top 20 at a regional race. Not because I got fitter\u2014I\u2019ve been \u2018fit enough\u2019 for years. I just finally learned to not go hard when it felt easy and actually recover on easy days.",
+        "quote": "First time I cracked top 20 at a regional sportive. Not because I got fitter\u2014I\u2019ve been \u2018fit enough\u2019 for years. I just finally learned to not go hard when it felt easy and actually recover on easy days.",
         "name": "Marcus T.",
         "title": "consistent podium threat",
-        "tags": "Gravel \u00b7 12 hrs/week \u00b7 Night shift RN",
+        "tags": "Road \u00b7 12 hrs/week \u00b7 Night shift RN",
     },
     {
         "quote": "Matti told me to stop doing VO2 intervals in February and I thought he was an idiot. Then I PR\u2019d every race distance from June through September. Turns out base actually matters.",
         "name": "Jordan P.",
         "title": "multiple Cat 1/2 wins",
-        "tags": "Road & gravel \u00b7 14 hrs/week \u00b7 Software engineer",
+        "tags": "Road \u00b7 14 hrs/week \u00b7 Software engineer",
     },
     {
-        "quote": "I went from blowing up on every climb longer than 10 minutes to finishing SBT GRVL Black in the top third. The difference was pacing and fueling strategy, not some magic workout.",
+        "quote": "I went from blowing up on every climb longer than 10 minutes to finishing the Maratona in the top third. The difference was pacing and fueling strategy, not some magic workout.",
         "name": "Chris M.",
-        "title": "SBT GRVL Black finisher",
-        "tags": "Gravel \u00b7 10 hrs/week \u00b7 Two kids under 5",
+        "title": "Maratona dles Dolomites finisher",
+        "tags": "Gran Fondo \u00b7 10 hrs/week \u00b7 Two kids under 5",
     },
 ]
 
@@ -264,11 +264,10 @@ def get_featured_races(race_index: list) -> list:
     for slug in FEATURED_SLUGS:
         if slug in by_slug:
             featured.append(by_slug[slug])
-    # Fallback: fill remaining slots with top T1 gravel races by score
+    # Fallback: fill remaining slots with top T1 road races by score
     if len(featured) < 3:
         t1_races = sorted(
-            [r for r in race_index if r.get("tier") == 1 and r not in featured
-             and (r.get("discipline") or "gravel") == "gravel"],
+            [r for r in race_index if r.get("tier") == 1 and r not in featured],
             key=lambda r: r.get("overall_score", 0),
             reverse=True,
         )
@@ -460,7 +459,7 @@ def build_coming_up(upcoming: list) -> str:
       <h2>COMING UP</h2>
     </div>
     <div class="rl-hp-cal-offseason">
-      Off-season. The next wave of races is loading. <a href="{SITE_BASE_URL}/gravel-races/">Browse all races &rarr;</a>
+      Off-season. The next wave of races is loading. <a href="{SITE_BASE_URL}/road-races/">Browse all races &rarr;</a>
     </div>
   </section>'''
 
@@ -513,7 +512,7 @@ def build_coming_up(upcoming: list) -> str:
     <div class="rl-hp-cal-list">{items}
     </div>
     <div class="rl-hp-cal-cta">
-      <a href="{SITE_BASE_URL}/gravel-races/" class="rl-hp-btn rl-hp-btn--primary" data-ga="view_all_races" data-ga-label="calendar">FULL RACE CALENDAR &rarr;</a>
+      <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-btn rl-hp-btn--primary" data-ga="view_all_races" data-ga-label="calendar">FULL RACE CALENDAR &rarr;</a>
     </div>
   </section>'''
 
@@ -540,10 +539,10 @@ def build_guide_preview(chapters: list) -> str:
 
     return f'''<section class="rl-hp-guide" id="guide">
     <div class="rl-hp-section-header rl-hp-section-header--teal">
-      <h2>THE GRAVEL TRAINING GUIDE</h2>
+      <h2>THE ROAD RACING GUIDE</h2>
     </div>
     <div class="rl-hp-guide-intro">
-      <p>Everything you need to know about gravel racing &mdash; from what to buy to how to train to race-day execution. 8 chapters, written by coaches who actually race gravel.</p>
+      <p>Everything you need to know about road racing &mdash; from bike setup to training to race-day execution. 8 chapters, written by coaches who actually race.</p>
       <p class="rl-hp-guide-deal"><strong>The deal:</strong> Chapters 1&ndash;3 are free. Drop your email to unlock the full guide &mdash; nutrition, race tactics, race week protocol, and more.</p>
     </div>
     <div class="rl-hp-guide-grid">{items}
@@ -562,11 +561,11 @@ def build_hero(stats: dict, race_index: list = None) -> str:
       <div class="rl-hp-hero-content">
         <div class="rl-hp-announce-pill" aria-hidden="true"><span class="rl-hp-announce-dot"></span> {race_count} Races Scored for {CURRENT_YEAR}</div>
         <p class="rl-hp-hero-kicker">THE {CURRENT_YEAR} RACE DATABASE</p>
-        <h1 id="hero-title">Every gravel race, honestly rated</h1>
+        <h1 id="hero-title">Every road race, honestly rated</h1>
         <div class="rl-hp-accent-line" aria-hidden="true"></div>
-        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the dirt.</p>
+        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the road.</p>
         <div class="rl-hp-hero-actions">
-          <a href="{SITE_BASE_URL}/gravel-races/" class="rl-hp-btn-primary" data-ga="hero_cta_click">Browse All Races</a>
+          <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-btn-primary" data-ga="hero_cta_click">Browse All Races</a>
           <a href="{SITE_BASE_URL}/race/methodology/" class="rl-hp-btn-secondary" data-ga="hero_secondary_click">How We Rate</a>
         </div>
       </div>
@@ -987,9 +986,8 @@ def build_sidebar(stats: dict, race_index: list, upcoming: list) -> str:
       </div>
     </div>'''
 
-    # 2. Top 5 rankings (top 5 by score, gravel only)
-    gravel_index = [r for r in race_index if (r.get("discipline") or "gravel") == "gravel"]
-    top5 = sorted(gravel_index, key=lambda r: r.get("overall_score", 0), reverse=True)[:5]
+    # 2. Top 5 rankings (top 5 by score)
+    top5 = sorted(race_index, key=lambda r: r.get("overall_score", 0), reverse=True)[:5]
     rank_items = ""
     for i, race in enumerate(top5, 1):
         name = esc(race.get("name", ""))
@@ -1028,7 +1026,7 @@ def build_sidebar(stats: dict, race_index: list, upcoming: list) -> str:
         coming_html = f'''<h2 class="rl-hp-col-header">COMING UP</h2>
     <p class="rl-hp-section-intro">What&rsquo;s on the calendar.</p>
     <div class="rl-hp-sidebar-card rl-hp-coming-up-compact">
-      <p class="rl-hp-coming-compact-empty">Off-season. <a href="{SITE_BASE_URL}/gravel-races/">Browse all races &rarr;</a></p>
+      <p class="rl-hp-coming-compact-empty">Off-season. <a href="{SITE_BASE_URL}/road-races/">Browse all races &rarr;</a></p>
     </div>'''
 
     # 5. Sidebar CTA
@@ -1106,7 +1104,7 @@ def build_featured_in() -> str:
     <div class="rl-hp-feat-inner">
       <div class="rl-hp-feat-text">
         <span class="rl-hp-feat-label">AS FEATURED IN</span>
-        <p class="rl-hp-feat-copy">Trusted by coaches, podcasters, and the gravel community.</p>
+        <p class="rl-hp-feat-copy">Trusted by coaches, podcasters, and the road cycling community.</p>
       </div>
       <div class="rl-hp-feat-logos">{logos}
       </div>
@@ -1119,7 +1117,7 @@ def build_training_cta() -> str:
     <div class="rl-hp-cta-card">
       <div class="rl-hp-cta-left">
         <h2>Train for the course, not just the distance</h2>
-        <p>Every generic plan treats gravel like a road race with dirt. This isn&rsquo;t that. Training plans matched to your target race&rsquo;s exact terrain, elevation profile, and typical conditions. Built around your schedule, your fitness, and your goal.</p>
+        <p>Every generic plan treats your target event like a flat century. This isn&rsquo;t that. Training plans matched to your race&rsquo;s exact terrain, elevation profile, and typical conditions. Built around your schedule, your fitness, and your goal.</p>
         <p class="rl-hp-cta-price" data-ab="training_price">Race-specific. Built for your target event. Less than your race hotel &mdash; $2/day.</p>
         <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-cta-btn" data-ga="training_plan_click" data-ab="training_cta_btn">Get Your Plan &rarr;</a>
       </div>
@@ -1924,7 +1922,7 @@ def build_jsonld(stats: dict) -> str:
         "@type": "Organization",
         "name": "Road Labs",
         "url": SITE_BASE_URL,
-        "description": "The definitive gravel race database. Honest ratings across 15 criteria.",
+        "description": "The definitive road race database. Honest ratings across 15 criteria.",
     }
     website = {
         "@context": "https://schema.org",
@@ -1933,7 +1931,7 @@ def build_jsonld(stats: dict) -> str:
         "url": SITE_BASE_URL,
         "potentialAction": {
             "@type": "SearchAction",
-            "target": f"{SITE_BASE_URL}/gravel-races/?q={{search_term_string}}",
+            "target": f"{SITE_BASE_URL}/road-races/?q={{search_term_string}}",
             "query-input": "required name=search_term_string",
         },
     }
@@ -1953,8 +1951,8 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     canonical_url = f"{SITE_BASE_URL}/"
     # Round down to nearest 50 for title stability (757 → "750+", 800 → "800+")
     stable_count = (stats['race_count'] // 50) * 50
-    title = f"{stable_count}+ Gravel & Road Races Rated for {CURRENT_YEAR} | Road Labs"
-    meta_desc = f"Find your next gravel race. {stats['race_count']} races worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews. No sponsors, no pulled punches."
+    title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Road Labs"
+    meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews. No sponsors, no pulled punches."
 
     one_liners = load_editorial_one_liners(race_data_dir)
     upcoming = load_upcoming_races(race_data_dir)
