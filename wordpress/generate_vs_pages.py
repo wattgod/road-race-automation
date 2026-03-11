@@ -49,7 +49,7 @@ ALL_DIM_LABELS = RADAR_FULL_LABELS + EDITORIAL_LABELS
 
 COMPARE_COLORS = [
     {"stroke": COLORS["primary_brown"], "fill": "rgba(89,71,60,0.18)"},
-    {"stroke": COLORS["teal"], "fill": "rgba(23,128,121,0.18)"},
+    {"stroke": COLORS["signal_red"], "fill": "rgba(230,57,70,0.18)"},
 ]
 
 # Max pairs to generate — focus on highest-value comparisons
@@ -152,7 +152,7 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
         for i in range(n):
             angle = (2 * math.pi * i / n) - math.pi / 2
             pts.append(f"{cx + r * scale * math.cos(angle):.1f},{cy + r * scale * math.sin(angle):.1f}")
-        parts.append(f'  <polygon points="{" ".join(pts)}" fill="none" stroke="{COLORS["tan"]}" stroke-width="0.8"/>')
+        parts.append(f'  <polygon points="{" ".join(pts)}" fill="none" stroke="{COLORS["silver"]}" stroke-width="0.8"/>')
 
     # Axis lines + labels
     for i in range(n):
@@ -160,7 +160,7 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
         lx = cx + (r + 18) * math.cos(angle)
         ly = cy + (r + 18) * math.sin(angle)
         parts.append(f'  <line x1="{cx}" y1="{cy}" x2="{cx + r * math.cos(angle):.1f}" '
-                     f'y2="{cy + r * math.sin(angle):.1f}" stroke="{COLORS["tan"]}" stroke-width="0.5"/>')
+                     f'y2="{cy + r * math.sin(angle):.1f}" stroke="{COLORS["silver"]}" stroke-width="0.5"/>')
         anchor = "middle"
         if lx < cx - 10:
             anchor = "end"
@@ -168,7 +168,7 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
             anchor = "start"
         parts.append(f'  <text x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" '
                      f'font-family="Sometype Mono,monospace" font-size="9" '
-                     f'fill="{COLORS["secondary_brown"]}" dominant-baseline="middle">{RADAR_LABELS[i]}</text>')
+                     f'fill="{COLORS["secondary_blue"]}" dominant-baseline="middle">{RADAR_LABELS[i]}</text>')
 
     # Race polygons
     for idx, race in enumerate([race_a, race_b]):
@@ -197,11 +197,11 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
     return "\n".join(parts)
 
 
-def build_dot_meter(score: int, color: str = COLORS["teal"]) -> str:
+def build_dot_meter(score: int, color: str = COLORS["signal_red"]) -> str:
     """Inline SVG dot meter (1-5 scale)."""
     dots = []
     for i in range(5):
-        fill = color if i < score else COLORS["sand"]
+        fill = color if i < score else COLORS["silver"]
         dots.append(f'<circle cx="{7 + i * 14}" cy="6" r="5" fill="{fill}"/>')
     return f'<svg viewBox="0 0 75 12" class="rl-vs-dots">{"".join(dots)}</svg>'
 
@@ -265,7 +265,7 @@ def build_dimension_table(race_a: dict, race_b: dict) -> str:
             f'<tr>'
             f'<td class="rl-vs-dim-name">{label}</td>'
             f'<td class="rl-vs-dim-score{hi_a}">{build_dot_meter(sa, COLORS["primary_brown"])}</td>'
-            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["teal"])}</td>'
+            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["signal_red"])}</td>'
             f'</tr>'
         )
 
@@ -280,7 +280,7 @@ def build_dimension_table(race_a: dict, race_b: dict) -> str:
             f'<tr>'
             f'<td class="rl-vs-dim-name">{label}</td>'
             f'<td class="rl-vs-dim-score{hi_a}">{build_dot_meter(sa, COLORS["primary_brown"])}</td>'
-            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["teal"])}</td>'
+            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["signal_red"])}</td>'
             f'</tr>'
         )
 
@@ -768,7 +768,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   color: var(--rl-color-secondary-brown);
 }}
 .rl-vs-dim-th-a {{ color: {COLORS["primary_brown"]}; }}
-.rl-vs-dim-th-b {{ color: {COLORS["teal"]}; }}
+.rl-vs-dim-th-b {{ color: {COLORS["signal_red"]}; }}
 .rl-vs-dim-header td {{
   font-size: 10px;
   font-weight: 700;
@@ -805,7 +805,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   border: 2px solid var(--rl-color-dark-brown);
 }}
 .rl-vs-verdict-a {{ border-left: 6px solid {COLORS["primary_brown"]}; }}
-.rl-vs-verdict-b {{ border-left: 6px solid {COLORS["teal"]}; }}
+.rl-vs-verdict-b {{ border-left: 6px solid {COLORS["signal_red"]}; }}
 .rl-vs-verdict-card h3 {{
   font-family: var(--rl-font-editorial);
   font-size: 16px;
@@ -884,8 +884,8 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   transition: all 0.2s;
 }}
 .rl-vs-cta-btn:hover {{ background: var(--rl-color-warm-paper); color: var(--rl-color-dark-brown); }}
-.rl-vs-cta-btn-a {{ border-color: {COLORS["warm_brown"]}; }}
-.rl-vs-cta-btn-b {{ border-color: {COLORS["teal"]}; }}
+.rl-vs-cta-btn-a {{ border-color: {COLORS["steel"]}; }}
+.rl-vs-cta-btn-b {{ border-color: {COLORS["signal_red"]}; }}
 .rl-vs-cta-sub {{ font-size: 11px; color: var(--rl-color-tan); margin-top: 8px; }}
 
 /* Links to profiles */
@@ -956,7 +956,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
     <h1>{esc(name_a)} vs {esc(name_b)}</h1>
     <div class="rl-vs-hero-matchup">
       <div class="rl-vs-hero-card">
-        <div class="rl-vs-hero-score" style="color:{COLORS['warm_brown']}">{score_a}</div>
+        <div class="rl-vs-hero-score" style="color:{COLORS['steel']}">{score_a}</div>
         <div class="rl-vs-hero-name">{esc(name_a)}</div>
         <div class="rl-vs-hero-meta">{esc(race_a.get("location",""))} &middot; {esc(race_a.get("month",""))}</div>
         <div class="rl-vs-hero-tier">Tier {tier_a} — {esc(TIER_NAMES.get(tier_a, ""))}</div>
@@ -964,7 +964,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
       </div>
       <div class="rl-vs-hero-vs">VS</div>
       <div class="rl-vs-hero-card">
-        <div class="rl-vs-hero-score" style="color:{COLORS['light_teal']}">{score_b}</div>
+        <div class="rl-vs-hero-score" style="color:{COLORS['coral']}">{score_b}</div>
         <div class="rl-vs-hero-name">{esc(name_b)}</div>
         <div class="rl-vs-hero-meta">{esc(race_b.get("location",""))} &middot; {esc(race_b.get("month",""))}</div>
         <div class="rl-vs-hero-tier">Tier {tier_b} — {esc(TIER_NAMES.get(tier_b, ""))}</div>

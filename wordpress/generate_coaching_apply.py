@@ -856,7 +856,7 @@ def build_apply_css() -> str:
 }
 .rl-apply-badge {
   display: inline-block;
-  background: var(--rl-color-light-gold);
+  background: var(--rl-color-light-orange);
   color: var(--rl-color-near-black);
   padding: var(--rl-spacing-xs) var(--rl-spacing-lg);
   font-family: var(--rl-font-data);
@@ -876,7 +876,7 @@ def build_apply_css() -> str:
 }
 .rl-apply-header p {
   font-family: var(--rl-font-editorial);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   font-size: var(--rl-font-size-sm);
   max-width: 520px;
   margin: 0 auto;
@@ -891,20 +891,20 @@ def build_apply_css() -> str:
 }
 .rl-apply-progress-bar {
   height: 8px;
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
   border: 1px solid var(--rl-color-near-black);
   margin-bottom: var(--rl-spacing-xs);
 }
 .rl-apply-progress-fill {
   height: 100%;
-  background: var(--rl-color-teal);
+  background: var(--rl-color-signal-red);
   width: 0%;
   transition: width 0.3s;
 }
 .rl-apply-progress-text {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   text-align: center;
 }
 
@@ -935,7 +935,7 @@ def build_apply_css() -> str:
 .rl-apply-section-help {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   margin-top: calc(-1 * var(--rl-spacing-md));
   margin-bottom: var(--rl-spacing-lg);
   line-height: 1.5;
@@ -958,13 +958,13 @@ def build_apply_css() -> str:
 }
 .rl-apply-optional {
   font-weight: var(--rl-font-weight-regular);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   font-size: var(--rl-font-size-2xs);
 }
 .rl-apply-help {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   margin-top: var(--rl-spacing-2xs);
 }
 
@@ -989,7 +989,7 @@ def build_apply_css() -> str:
 .rl-apply-form-card select:focus,
 .rl-apply-form-card textarea:focus {
   outline: none;
-  border-color: var(--rl-color-teal);
+  border-color: var(--rl-color-signal-red);
 }
 .rl-apply-form-card input.error,
 .rl-apply-form-card select.error {
@@ -1041,13 +1041,13 @@ def build_apply_css() -> str:
 .rl-apply-unit {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   white-space: nowrap;
 }
 
 /* ── W/kg calculator display ───────────────────────── */
 .rl-apply-calc {
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
   border: 2px solid var(--rl-color-near-black);
   padding: var(--rl-spacing-sm) var(--rl-spacing-md);
   margin-top: var(--rl-spacing-sm);
@@ -1060,14 +1060,14 @@ def build_apply_css() -> str:
   margin: var(--rl-spacing-2xs) 0;
 }
 .rl-apply-calc-label {
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
 }
 .rl-apply-calc-value {
   font-weight: var(--rl-font-weight-bold);
   color: var(--rl-color-near-black);
 }
 .rl-apply-calc-highlight {
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
 }
 
 /* ── Radio groups ──────────────────────────────────── */
@@ -1095,15 +1095,15 @@ def build_apply_css() -> str:
   min-width: 100px;
 }
 .rl-apply-radio-option:hover {
-  background-color: var(--rl-color-sand);
+  background-color: var(--rl-color-silver);
 }
 .rl-apply-radio-option.selected {
-  background-color: var(--rl-color-sand);
-  border-color: var(--rl-color-teal);
+  background-color: var(--rl-color-silver);
+  border-color: var(--rl-color-signal-red);
 }
 .rl-apply-radio-option input {
   margin-top: 2px;
-  accent-color: var(--rl-color-teal);
+  accent-color: var(--rl-color-signal-red);
 }
 .rl-apply-radio-label {
   flex: 1;
@@ -1116,7 +1116,7 @@ def build_apply_css() -> str:
 .rl-apply-radio-desc {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   margin-top: 2px;
 }
 
@@ -1148,24 +1148,24 @@ def build_apply_css() -> str:
   justify-content: flex-start;
 }
 .rl-apply-checkbox-option:hover {
-  background-color: var(--rl-color-sand);
+  background-color: var(--rl-color-silver);
 }
 .rl-apply-checkbox-option.selected {
-  background-color: var(--rl-color-sand);
-  border-color: var(--rl-color-teal);
+  background-color: var(--rl-color-silver);
+  border-color: var(--rl-color-signal-red);
 }
 .rl-apply-checkbox-option input {
-  accent-color: var(--rl-color-teal);
+  accent-color: var(--rl-color-signal-red);
 }
 .rl-apply-checkbox-label {
   flex: 1;
 }
 .rl-apply-checkbox-desc {
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
 }
 .rl-apply-flexible-option {
-  background-color: var(--rl-color-sand);
+  background-color: var(--rl-color-silver);
   border-style: dashed;
 }
 
@@ -1186,7 +1186,7 @@ def build_apply_css() -> str:
 .rl-apply-submit-btn {
   flex: 1;
   display: block;
-  background: var(--rl-color-teal);
+  background: var(--rl-color-signal-red);
   color: var(--rl-color-near-black);
   padding: var(--rl-spacing-md) var(--rl-spacing-xl);
   font-family: var(--rl-font-data);
@@ -1200,15 +1200,15 @@ def build_apply_css() -> str:
 }
 .rl-apply-submit-btn:hover {
   background-color: var(--rl-color-near-black);
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
 }
 .rl-apply-submit-btn:disabled {
   cursor: not-allowed;
-  background-color: var(--rl-color-tan);
-  color: var(--rl-color-secondary-brown);
+  background-color: var(--rl-color-silver);
+  color: var(--rl-color-secondary-blue);
 }
 .rl-apply-save-btn {
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
   color: var(--rl-color-near-black);
   padding: var(--rl-spacing-sm) var(--rl-spacing-lg);
   font-family: var(--rl-font-data);
@@ -1232,19 +1232,19 @@ def build_apply_css() -> str:
   font-size: var(--rl-font-size-sm);
 }
 .rl-apply-message.success {
-  background-color: var(--rl-color-sand);
-  border-color: var(--rl-color-teal);
-  color: var(--rl-color-dark-brown);
+  background-color: var(--rl-color-silver);
+  border-color: var(--rl-color-signal-red);
+  color: var(--rl-color-dark-navy);
 }
 .rl-apply-message.error {
-  background-color: var(--rl-color-warm-paper);
+  background-color: var(--rl-color-cool-white);
   border-color: var(--rl-color-error);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }
 .rl-apply-message.info {
-  background-color: var(--rl-color-sand);
-  border-color: var(--rl-color-teal);
-  color: var(--rl-color-dark-brown);
+  background-color: var(--rl-color-silver);
+  border-color: var(--rl-color-signal-red);
+  color: var(--rl-color-dark-navy);
 }
 
 /* ── Utility ───────────────────────────────────────── */
@@ -1255,7 +1255,7 @@ def build_apply_css() -> str:
 .rl-apply-confidential {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   text-align: center;
   max-width: 520px;
   margin: 0 auto var(--rl-spacing-md);
@@ -1805,7 +1805,7 @@ def generate_apply_page(external_assets=None):
   {get_ga4_head_snippet()}
   {build_apply_css()}
 </head>
-<body class="rl-neo-brutalist-page" style="background:var(--rl-color-warm-paper);color:var(--rl-color-near-black);font-family:var(--rl-font-data);font-size:var(--rl-font-size-sm);line-height:1.7;min-height:100vh">
+<body class="rl-neo-brutalist-page" style="background:var(--rl-color-cool-white);color:var(--rl-color-near-black);font-family:var(--rl-font-data);font-size:var(--rl-font-size-sm);line-height:1.7;min-height:100vh">
   {build_nav()}
   <div class="rl-apply-container">
     {build_header()}

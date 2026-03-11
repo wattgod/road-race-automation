@@ -1095,9 +1095,9 @@ class TestUtilities:
 
     def test_score_bar_color(self):
         from generate_neo_brutalist import COLORS
-        assert score_bar_color(5) == COLORS["teal"]
-        assert score_bar_color(4) == COLORS["gold"]
-        assert score_bar_color(1) == COLORS["tan"]
+        assert score_bar_color(5) == COLORS["signal_red"]
+        assert score_bar_color(4) == COLORS["orange"]
+        assert score_bar_color(1) == COLORS["silver"]
 
 
 # ── Racer Rating ─────────────────────────────────────────────

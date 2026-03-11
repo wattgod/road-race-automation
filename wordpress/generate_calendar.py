@@ -36,8 +36,8 @@ CURRENT_YEAR = date.today().year
 TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
 TIER_COLORS = {
     1: COLORS["primary_brown"],
-    2: COLORS["secondary_brown"],
-    3: COLORS["warm_brown"],
+    2: COLORS["secondary_blue"],
+    3: COLORS["steel"],
     4: "#5e6868",
 }
 
@@ -93,7 +93,7 @@ def build_calendar_page(races: list) -> str:
         for r in month_races:
             score = r.get("overall_score", 0)
             tier = r.get("tier", 3)
-            tier_color = TIER_COLORS.get(tier, COLORS["warm_brown"])
+            tier_color = TIER_COLORS.get(tier, COLORS["steel"])
             region = r.get("region", "")
 
             stat_parts = []
@@ -138,7 +138,7 @@ def build_calendar_page(races: list) -> str:
         for r in tbd_races:
             score = r.get("overall_score", 0)
             tier = r.get("tier", 3)
-            tier_color = TIER_COLORS.get(tier, COLORS["warm_brown"])
+            tier_color = TIER_COLORS.get(tier, COLORS["steel"])
             tbd_cards.append(
                 f'<a href="/race/{esc(r["slug"])}/" class="rl-cal-card" data-tier="{tier}">'
                 f'<div class="rl-cal-card-score" style="color:{tier_color}">{score}</div>'
@@ -206,7 +206,7 @@ def build_calendar_page(races: list) -> str:
 {font_face}
 {tokens}
 
-body {{ margin: 0; background: var(--rl-color-warm-paper); }}
+body {{ margin: 0; background: var(--rl-color-cool-white); }}
 *, *::before, *::after {{ border-radius: 0 !important; box-shadow: none !important; }}
 
 .rl-cal-page {{
@@ -214,28 +214,28 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   margin: 0 auto;
   padding: 0 24px;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }}
 
 {get_site_header_css()}
 
-.rl-cal-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-brown); padding: 12px 0; letter-spacing: 0.5px; }}
-.rl-cal-breadcrumb a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
+.rl-cal-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-blue); padding: 12px 0; letter-spacing: 0.5px; }}
+.rl-cal-breadcrumb a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
 
 .rl-cal-hero {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
   padding: 48px 32px;
   margin: 0 -24px;
   text-align: center;
 }}
 .rl-cal-hero h1 {{ font-family: var(--rl-font-editorial); font-size: 36px; font-weight: 700; margin: 0 0 8px; }}
-.rl-cal-hero-sub {{ font-size: 13px; color: var(--rl-color-tan); letter-spacing: 1px; }}
+.rl-cal-hero-sub {{ font-size: 13px; color: var(--rl-color-silver); letter-spacing: 1px; }}
 
 /* Summary bar */
 .rl-cal-summary {{
   display: flex;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-dark-navy);
   overflow-x: auto;
 }}
 .rl-cal-summary-item {{
@@ -243,12 +243,12 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   text-align: center;
   padding: 10px 4px;
   text-decoration: none;
-  color: var(--rl-color-dark-brown);
-  border-right: 1px solid var(--rl-color-sand);
+  color: var(--rl-color-dark-navy);
+  border-right: 1px solid var(--rl-color-silver);
   min-width: 50px;
 }}
 .rl-cal-summary-item:last-child {{ border-right: none; }}
-.rl-cal-summary-item:hover {{ background: var(--rl-color-sand); }}
+.rl-cal-summary-item:hover {{ background: var(--rl-color-silver); }}
 .rl-cal-summary-month {{ display: block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }}
 .rl-cal-summary-count {{ display: block; font-family: var(--rl-font-editorial); font-size: 20px; font-weight: 700; margin-top: 2px; }}
 
@@ -258,29 +258,29 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   align-items: center;
   gap: 12px;
   padding: 16px 0;
-  border-bottom: 2px solid var(--rl-color-sand);
+  border-bottom: 2px solid var(--rl-color-silver);
   flex-wrap: wrap;
 }}
-.rl-cal-filter-label {{ font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-brown); }}
+.rl-cal-filter-label {{ font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-blue); }}
 .rl-cal-filter-btn {{
   padding: 4px 10px;
   font-size: 11px;
   font-weight: 700;
-  border: 2px solid var(--rl-color-dark-brown);
+  border: 2px solid var(--rl-color-dark-navy);
   background: transparent;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   cursor: pointer;
   font-family: var(--rl-font-data);
 }}
-.rl-cal-filter-btn.active {{ background: var(--rl-color-dark-brown); color: var(--rl-color-warm-paper); }}
-.rl-cal-filter-btn:hover:not(.active) {{ background: var(--rl-color-sand); }}
+.rl-cal-filter-btn.active {{ background: var(--rl-color-dark-navy); color: var(--rl-color-cool-white); }}
+.rl-cal-filter-btn:hover:not(.active) {{ background: var(--rl-color-silver); }}
 .rl-cal-filter-select {{
   padding: 4px 8px;
   font-size: 11px;
-  border: 2px solid var(--rl-color-dark-brown);
+  border: 2px solid var(--rl-color-dark-navy);
   background: transparent;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }}
 
 /* Month sections */
@@ -291,23 +291,23 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   margin: 0 0 16px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-dark-navy);
 }}
-.rl-cal-month-count {{ font-size: 13px; color: var(--rl-color-secondary-brown); font-weight: 400; }}
-.rl-cal-empty {{ font-size: 13px; color: var(--rl-color-secondary-brown); font-style: italic; }}
+.rl-cal-month-count {{ font-size: 13px; color: var(--rl-color-secondary-blue); font-weight: 400; }}
+.rl-cal-empty {{ font-size: 13px; color: var(--rl-color-secondary-blue); font-style: italic; }}
 
 /* Cards */
 .rl-cal-grid {{ display: flex; flex-direction: column; gap: 0; }}
 .rl-cal-card {{
   display: flex;
   align-items: stretch;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   text-decoration: none;
   color: inherit;
   transition: background 0.15s;
   padding: 0;
 }}
-.rl-cal-card:hover {{ background: var(--rl-color-sand); }}
+.rl-cal-card:hover {{ background: var(--rl-color-silver); }}
 .rl-cal-card-score {{
   display: flex;
   align-items: center;
@@ -329,19 +329,19 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   margin-right: 6px;
 }}
 .rl-cal-card-name {{ font-family: var(--rl-font-editorial); font-size: 14px; font-weight: 700; display: inline; }}
-.rl-cal-card-location {{ font-size: 10px; color: var(--rl-color-secondary-brown); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }}
-.rl-cal-card-stats {{ font-size: 10px; color: var(--rl-color-secondary-brown); }}
+.rl-cal-card-location {{ font-size: 10px; color: var(--rl-color-secondary-blue); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }}
+.rl-cal-card-stats {{ font-size: 10px; color: var(--rl-color-secondary-blue); }}
 .rl-cal-card[data-hidden="true"] {{ display: none; }}
 
 /* CTA */
 .rl-cal-cta {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
   padding: 32px;
   margin: 32px -24px;
   text-align: center;
 }}
-.rl-cal-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-warm-paper); margin: 0 0 12px; border: none; }}
+.rl-cal-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-cool-white); margin: 0 0 12px; border: none; }}
 .rl-cal-cta p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
 .rl-cal-cta-btn {{
   display: inline-block;
@@ -351,23 +351,23 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid var(--rl-color-warm-paper);
-  color: var(--rl-color-warm-paper);
+  border: 2px solid var(--rl-color-cool-white);
+  color: var(--rl-color-cool-white);
   transition: all 0.2s;
 }}
-.rl-cal-cta-btn:hover {{ background: var(--rl-color-warm-paper); color: var(--rl-color-dark-brown); }}
+.rl-cal-cta-btn:hover {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
 
 .rl-cal-footer {{
   padding: 24px 0;
   margin-top: 32px;
-  border-top: 4px double var(--rl-color-dark-brown);
+  border-top: 4px double var(--rl-color-dark-navy);
   text-align: center;
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
-.rl-cal-footer a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
+.rl-cal-footer a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
 
 @media (max-width: 768px) {{
   .rl-cal-hero {{ padding: 32px 20px; }}

@@ -52,20 +52,20 @@ def build_success_css() -> str:
 .rl-success-hero {
   padding: 80px 24px 60px;
   text-align: center;
-  background: var(--rl-color-warm-paper);
-  border-bottom: 3px solid var(--rl-color-primary-brown);
+  background: var(--rl-color-cool-white);
+  border-bottom: 3px solid var(--rl-color-primary-navy);
 }
 .rl-success-hero h1 {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-2xl);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   margin: 0 0 16px;
 }
 .rl-success-hero p {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-md);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -74,8 +74,8 @@ def build_success_css() -> str:
   display: inline-block;
   width: 64px;
   height: 64px;
-  border: 3px solid var(--rl-color-teal);
-  color: var(--rl-color-teal);
+  border: 3px solid var(--rl-color-signal-red);
+  color: var(--rl-color-signal-red);
   font-size: var(--rl-font-size-2xl);
   line-height: 58px;
   text-align: center;
@@ -92,7 +92,7 @@ def build_success_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
   margin: 0 0 32px;
 }
 .rl-success-step {
@@ -105,11 +105,11 @@ def build_success_css() -> str:
   flex-shrink: 0;
   width: 36px;
   height: 36px;
-  border: 2px solid var(--rl-color-primary-brown);
+  border: 2px solid var(--rl-color-primary-navy);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   text-align: center;
   line-height: 32px;
 }
@@ -117,33 +117,33 @@ def build_success_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-lg);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   margin: 0 0 6px;
 }
 .rl-success-step-text p {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   margin: 0;
   line-height: 1.6;
 }
 .rl-success-crosssell {
   padding: 60px 24px;
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   text-align: center;
-  border-top: 3px solid var(--rl-color-primary-brown);
+  border-top: 3px solid var(--rl-color-primary-navy);
 }
 .rl-success-crosssell h2 {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-xl);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   margin: 0 0 16px;
 }
 .rl-success-crosssell p {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   max-width: 500px;
   margin: 0 auto 24px;
   line-height: 1.6;
@@ -151,20 +151,20 @@ def build_success_css() -> str:
 .rl-success-cta {
   display: inline-block;
   padding: 14px 32px;
-  background: var(--rl-color-primary-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-primary-navy);
+  color: var(--rl-color-cool-white);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: none;
-  border: 3px solid var(--rl-color-primary-brown);
+  border: 3px solid var(--rl-color-primary-navy);
   transition: background-color 0.2s, color 0.2s;
 }
 .rl-success-cta:hover {
-  background: var(--rl-color-warm-paper);
-  color: var(--rl-color-primary-brown);
+  background: var(--rl-color-cool-white);
+  color: var(--rl-color-primary-navy);
 }
 .rl-success-support {
   padding: 40px 24px;
@@ -173,15 +173,15 @@ def build_success_css() -> str:
 .rl-success-support p {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-tan);
+  color: var(--rl-color-silver);
   margin: 0;
 }
 .rl-success-support a {
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
   text-decoration: none;
 }
 .rl-success-support a:hover {
-  border-bottom: 2px solid var(--rl-color-teal);
+  border-bottom: 2px solid var(--rl-color-signal-red);
 }
 @media (max-width: 600px) {
   .rl-success-hero { padding: 60px 16px 40px; }

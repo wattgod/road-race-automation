@@ -1952,7 +1952,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     # Round down to nearest 50 for title stability (757 → "750+", 800 → "800+")
     stable_count = (stats['race_count'] // 50) * 50
     title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Road Labs"
-    meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews. No sponsors, no pulled punches."
+    meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews."
 
     one_liners = load_editorial_one_liners(race_data_dir)
     upcoming = load_upcoming_races(race_data_dir)

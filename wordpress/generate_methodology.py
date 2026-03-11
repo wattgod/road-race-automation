@@ -51,7 +51,7 @@ def build_nav() -> str:
 
 def build_hero() -> str:
     return '''<div class="rl-hero">
-    <div class="rl-hero-tier" style="background:var(--rl-color-teal)">METHODOLOGY</div>
+    <div class="rl-hero-tier" style="background:var(--rl-color-signal-red)">METHODOLOGY</div>
     <h1 data-text="How We Rate Gravel Races">How We Rate Gravel Races</h1>
     <p class="rl-hero-tagline">Every race in our database is scored across 15 dimensions by human editors. No algorithms. No sponsors. No pay-to-play. Here&#39;s exactly how it works.</p>
   </div>'''
@@ -76,28 +76,28 @@ def build_tier_system() -> str:
             <td style="font-weight:700">The Icons</td>
             <td>&ge; 80</td>
             <td>The definitive gravel events. World-class fields, iconic courses, bucket-list status.</td>
-            <td><a href="{SITE_BASE_URL}/race/unbound-200/" style="color:var(--rl-color-teal);font-weight:700">Unbound 200</a></td>
+            <td><a href="{SITE_BASE_URL}/race/unbound-200/" style="color:var(--rl-color-signal-red);font-weight:700">Unbound 200</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#000;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 2</span></td>
             <td style="font-weight:700">Elite</td>
             <td>&ge; 60</td>
             <td>Established races with strong reputations and competitive fields. The next tier of must-do events.</td>
-            <td><a href="{SITE_BASE_URL}/race/barry-roubaix/" style="color:var(--rl-color-teal);font-weight:700">Barry-Roubaix</a></td>
+            <td><a href="{SITE_BASE_URL}/race/barry-roubaix/" style="color:var(--rl-color-signal-red);font-weight:700">Barry-Roubaix</a></td>
           </tr>
           <tr>
-            <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-secondary-brown);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #666">TIER 3</span></td>
+            <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-secondary-blue);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #666">TIER 3</span></td>
             <td style="font-weight:700">Solid</td>
             <td>&ge; 45</td>
             <td>Regional favorites and emerging races. Strong local scenes, genuine gravel character.</td>
-            <td><a href="{SITE_BASE_URL}/race/rooted-vermont/" style="color:var(--rl-color-teal);font-weight:700">Rooted Vermont</a></td>
+            <td><a href="{SITE_BASE_URL}/race/rooted-vermont/" style="color:var(--rl-color-signal-red);font-weight:700">Rooted Vermont</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#5e6868;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #5e6868">TIER 4</span></td>
             <td style="font-weight:700">Grassroots</td>
             <td>&lt; 45</td>
             <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots gravel.</td>
-            <td><a href="{SITE_BASE_URL}/race/114-gravel-race/" style="color:var(--rl-color-teal);font-weight:700">114 Gravel Race</a></td>
+            <td><a href="{SITE_BASE_URL}/race/114-gravel-race/" style="color:var(--rl-color-signal-red);font-weight:700">114 Gravel Race</a></td>
           </tr>
         </tbody>
       </table>
@@ -132,8 +132,8 @@ def build_dimensions() -> str:
     <div class="rl-section-body">
       <p style="margin-bottom:16px">Each race is evaluated across 14 base dimensions split into two categories, plus a Cultural Impact bonus. Every dimension is scored 1&ndash;5 by our editors with a written explanation.</p>
 
-      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:24px 0 12px;color:var(--rl-color-primary-brown)">Course Profile (7 dimensions)</h3>
-      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-brown)">Physical and logistical demands of the race.</p>
+      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:24px 0 12px;color:var(--rl-color-primary-navy)">Course Profile (7 dimensions)</h3>
+      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-blue)">Physical and logistical demands of the race.</p>
       <div style="overflow-x:auto">
       <table class="rl-method-table rl-method-table--compact">
         <thead>
@@ -144,8 +144,8 @@ def build_dimensions() -> str:
       </table>
       </div>
 
-      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-brown)">Editorial (7 dimensions)</h3>
-      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-brown)">Race quality and value proposition.</p>
+      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-navy)">Editorial (7 dimensions)</h3>
+      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-blue)">Race quality and value proposition.</p>
       <div style="overflow-x:auto">
       <table class="rl-method-table rl-method-table--compact">
         <thead>
@@ -156,8 +156,8 @@ def build_dimensions() -> str:
       </table>
       </div>
 
-      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-brown)">Cultural Impact (bonus dimension)</h3>
-      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-brown)">A bonus that captures attendance, media coverage, and cultural significance. Defaults to 0 for most races.</p>
+      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-navy)">Cultural Impact (bonus dimension)</h3>
+      <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-blue)">A bonus that captures attendance, media coverage, and cultural significance. Defaults to 0 for most races.</p>
       <div style="overflow-x:auto">
       <table class="rl-method-table rl-method-table--compact">
         <thead>
@@ -187,7 +187,7 @@ def build_formula() -> str:
       <p style="margin-bottom:16px">The overall score is a simple, transparent calculation:</p>
 
       <div style="background:var(--rl-color-near-black);color:var(--rl-color-white);padding:24px 32px;border:var(--rl-border-standard);margin-bottom:20px;text-align:center">
-        <code style="font-size:16px;letter-spacing:1px;font-family:var(--rl-font-data);color:var(--rl-color-light-teal)">overall_score = round( (sum of 14 base scores + cultural_impact) &divide; 70 &times; 100 )</code>
+        <code style="font-size:16px;letter-spacing:1px;font-family:var(--rl-font-data);color:var(--rl-color-coral)">overall_score = round( (sum of 14 base scores + cultural_impact) &divide; 70 &times; 100 )</code>
       </div>
 
       <p style="margin-bottom:12px;font-size:13px">The maximum possible base score is 70 (14 dimensions &times; 5 max each). The Cultural Impact bonus (0&ndash;5) adds to the numerator without increasing the denominator, allowing globally significant races to stretch above the base ceiling.</p>
@@ -239,7 +239,7 @@ def build_prestige_override() -> str:
         </tbody>
       </table>
 
-      <p style="margin-top:16px;font-size:12px;color:var(--rl-color-secondary-brown)">The &ge;75 floor for prestige-5 Tier 1 promotion prevents scores as low as 60 from reaching Elite status purely on name recognition. Every T1 race must earn its spot.</p>
+      <p style="margin-top:16px;font-size:12px;color:var(--rl-color-secondary-blue)">The &ge;75 floor for prestige-5 Tier 1 promotion prevents scores as low as 60 from reaching Elite status purely on name recognition. Every T1 race must earn its spot.</p>
     </div>
   </div>'''
 
@@ -299,7 +299,7 @@ def build_methodology_css() -> str:
   border: var(--rl-border-subtle);
 }
 .rl-neo-brutalist-page .rl-method-table th {
-  background: var(--rl-color-primary-brown);
+  background: var(--rl-color-primary-navy);
   color: var(--rl-color-white);
   padding: 8px 12px;
   text-align: left;
@@ -307,17 +307,17 @@ def build_methodology_css() -> str:
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border: 1px solid var(--rl-color-dark-brown);
+  border: 1px solid var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-method-table td {
   padding: 8px 12px;
-  border: 1px solid var(--rl-color-sand);
+  border: 1px solid var(--rl-color-silver);
   vertical-align: top;
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
 }
 .rl-neo-brutalist-page .rl-method-table tbody tr:nth-child(even) {
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
 }
 .rl-neo-brutalist-page .rl-method-table--compact td {
   padding: 6px 8px;

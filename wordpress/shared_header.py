@@ -70,24 +70,24 @@ def get_site_header_css() -> str:
     """Return the site header CSS using var(--rl-*) design tokens."""
     return """
 /* ── Site Header ──────────────────────────────────────── */
-.rl-site-header { padding: 16px 24px; border-bottom: 2px solid var(--rl-color-gold); }
+.rl-site-header { padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); }
 .rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; }
 .rl-site-header-logo img { display: block; height: 50px; width: auto; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
 .rl-site-header-nav > a,
-.rl-site-header-item > a { color: var(--rl-color-dark-brown); text-decoration: none; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
+.rl-site-header-item > a { color: var(--rl-color-dark-navy); text-decoration: none; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
 .rl-site-header-nav > a:hover,
-.rl-site-header-item > a:hover { color: var(--rl-color-gold); }
+.rl-site-header-item > a:hover { color: var(--rl-color-orange); }
 .rl-site-header-nav > a[aria-current="page"],
-.rl-site-header-item > a[aria-current="page"] { color: var(--rl-color-gold); }
+.rl-site-header-item > a[aria-current="page"] { color: var(--rl-color-orange); }
 
 /* Dropdown container */
 .rl-site-header-item { position: relative; }
-.rl-site-header-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; padding: 8px 0; background: var(--rl-color-warm-paper); border: 2px solid var(--rl-color-dark-brown); z-index: 1000; }
+.rl-site-header-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 200px; padding: 8px 0; background: var(--rl-color-cool-white); border: 2px solid var(--rl-color-dark-navy); z-index: 1000; }
 .rl-site-header-item:hover .rl-site-header-dropdown,
 .rl-site-header-item:focus-within .rl-site-header-dropdown { display: block; }
-.rl-site-header-dropdown a { display: block; padding: 8px 16px; font-family: var(--rl-font-data); font-size: 11px; font-weight: 400; letter-spacing: 1px; color: var(--rl-color-dark-brown); text-decoration: none; transition: color 0.2s; }
-.rl-site-header-dropdown a:hover { color: var(--rl-color-gold); }
+.rl-site-header-dropdown a { display: block; padding: 8px 16px; font-family: var(--rl-font-data); font-size: 11px; font-weight: 400; letter-spacing: 1px; color: var(--rl-color-dark-navy); text-decoration: none; transition: color 0.2s; }
+.rl-site-header-dropdown a:hover { color: var(--rl-color-orange); }
 
 /* Mobile: flat nav, no dropdowns */
 @media (max-width: 600px) {

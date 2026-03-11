@@ -40,8 +40,8 @@ MIN_RACES = 3
 TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
 TIER_COLORS = {
     1: COLORS["primary_brown"],
-    2: COLORS["secondary_brown"],
-    3: COLORS["warm_brown"],
+    2: COLORS["secondary_blue"],
+    3: COLORS["steel"],
     4: "#5e6868",
 }
 
@@ -179,7 +179,7 @@ def build_dot_map_svg(races: list) -> str:
              f'aria-label="Map showing race locations">']
 
     # Background
-    parts.append(f'  <rect width="{vw}" height="{vh}" fill="{COLORS["sand"]}" rx="0"/>')
+    parts.append(f'  <rect width="{vw}" height="{vh}" fill="{COLORS["silver"]}" rx="0"/>')
 
     # Plot dots with labels
     placed_labels = []
@@ -190,7 +190,7 @@ def build_dot_map_svg(races: list) -> str:
             continue
         x, y = project(lat, lng)
         tier = r.get("tier", 3)
-        color = TIER_COLORS.get(tier, COLORS["warm_brown"])
+        color = TIER_COLORS.get(tier, COLORS["steel"])
         radius = 7 if tier <= 2 else 5
 
         parts.append(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="{radius}" fill="{color}" opacity="0.85">'
@@ -250,7 +250,7 @@ def build_race_cards(races: list) -> str:
     for r in races:
         score = r.get("overall_score", 0)
         tier = r.get("tier", 3)
-        tier_color = TIER_COLORS.get(tier, COLORS["warm_brown"])
+        tier_color = TIER_COLORS.get(tier, COLORS["steel"])
         slug = r.get("slug", "")
         name = r.get("name", "")
         location = r.get("location", "")
@@ -276,7 +276,7 @@ def build_race_cards(races: list) -> str:
         rr_total = r.get("racer_total", 0)
         if rr_pct is not None and rr_total >= RACER_RATING_THRESHOLD:
             racer_html = f'''<div class="rl-state-card-racer">
-  <div class="rl-state-card-racer-num" style="color:{COLORS["teal"]}">{rr_pct}%</div>
+  <div class="rl-state-card-racer-num" style="color:{COLORS["signal_red"]}">{rr_pct}%</div>
   <div class="rl-state-card-racer-label">{rr_total} RATINGS</div>
 </div>'''
         else:

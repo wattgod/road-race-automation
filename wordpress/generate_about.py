@@ -61,7 +61,7 @@ def build_nav() -> str:
 
 def build_hero(race_count: int) -> str:
     return f'''<div class="rl-hero rl-about-hero">
-    <div class="rl-hero-tier" style="background:var(--rl-color-gold)">ABOUT</div>
+    <div class="rl-hero-tier" style="background:var(--rl-color-orange)">ABOUT</div>
     <h1 data-text="{race_count} Gravel Races. Scored. Zero Sponsors.">{race_count} Gravel Races. Scored. Zero Sponsors.</h1>
     <p class="rl-hero-tagline">I scored every gravel race in America by hand, then paired it with coaching for people who have real jobs and limited PTO.</p>
   </div>'''
@@ -313,14 +313,14 @@ def build_about_css() -> str:
     return '''<style>
 /* ── About hero — light sandwash override ────────── */
 .rl-neo-brutalist-page .rl-about-hero {
-  background: var(--rl-color-warm-paper);
-  border-bottom: 3px double var(--rl-color-dark-brown);
+  background: var(--rl-color-cool-white);
+  border-bottom: 3px double var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-about-hero h1 {
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-about-hero .rl-hero-tagline {
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
 }
 
 /* ── About page — prose ─────────────────────────── */
@@ -328,27 +328,27 @@ def build_about_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-base);
   line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin-bottom: var(--rl-spacing-md);
   max-width: 640px;
 }
 
 /* ── Highlighted paragraph (brand guide pattern) ─── */
 .rl-neo-brutalist-page .rl-about-highlight {
-  border-left: 4px solid var(--rl-color-teal);
+  border-left: 4px solid var(--rl-color-signal-red);
   padding: var(--rl-spacing-md) var(--rl-spacing-lg);
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
   margin: var(--rl-spacing-lg) 0;
 }
 .rl-neo-brutalist-page .rl-about-highlight--gold {
-  border-left-color: var(--rl-color-gold);
+  border-left-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-highlight p {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-md);
   font-weight: var(--rl-font-weight-semibold);
   line-height: var(--rl-line-height-relaxed);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0;
 }
 
@@ -357,10 +357,10 @@ def build_about_css() -> str:
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   border: var(--rl-border-standard);
-  border-top: 3px double var(--rl-color-dark-brown);
-  border-bottom: 3px double var(--rl-color-dark-brown);
+  border-top: 3px double var(--rl-color-dark-navy);
+  border-bottom: 3px double var(--rl-color-dark-navy);
   margin-bottom: var(--rl-spacing-xl);
 }
 .rl-neo-brutalist-page .rl-about-stat {
@@ -368,7 +368,7 @@ def build_about_css() -> str:
   flex-direction: column;
   align-items: center;
   padding: var(--rl-spacing-lg) var(--rl-spacing-sm);
-  border-right: 1px solid var(--rl-color-tan);
+  border-right: 1px solid var(--rl-color-silver);
 }
 .rl-neo-brutalist-page .rl-about-stat:last-child {
   border-right: none;
@@ -377,7 +377,7 @@ def build_about_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-3xl);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   line-height: var(--rl-line-height-tight);
   letter-spacing: var(--rl-letter-spacing-tight);
 }
@@ -385,7 +385,7 @@ def build_about_css() -> str:
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wider);
   margin-top: var(--rl-spacing-xs);
@@ -394,12 +394,12 @@ def build_about_css() -> str:
 /* ── Tabbed features — light with gold underline ─── */
 .rl-neo-brutalist-page .rl-about-tabs {
   border: var(--rl-border-standard);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
 }
 .rl-neo-brutalist-page .rl-about-tabs-nav {
   display: flex;
-  background: var(--rl-color-sand);
-  border-bottom: 3px double var(--rl-color-dark-brown);
+  background: var(--rl-color-silver);
+  border-bottom: 3px double var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-about-tab {
   padding: var(--rl-spacing-sm) var(--rl-spacing-lg);
@@ -408,7 +408,7 @@ def build_about_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   letter-spacing: var(--rl-letter-spacing-wider);
   text-transform: uppercase;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   background: transparent;
   border: none;
   border-bottom: 3px solid transparent;
@@ -417,11 +417,11 @@ def build_about_css() -> str:
               color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-tab:hover {
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-about-tab--active {
-  color: var(--rl-color-dark-brown);
-  border-bottom-color: var(--rl-color-gold);
+  color: var(--rl-color-dark-navy);
+  border-bottom-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-tab-panel {
   display: none;
@@ -434,7 +434,7 @@ def build_about_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0;
   max-width: 640px;
 }
@@ -452,22 +452,22 @@ def build_about_css() -> str:
   max-width: 280px;
   height: auto;
   border: var(--rl-border-standard);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   margin-bottom: var(--rl-spacing-md);
 }
 .rl-neo-brutalist-page .rl-about-bio-card {
   border: var(--rl-border-standard);
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
 }
 .rl-neo-brutalist-page .rl-about-bio-card-label {
   padding: var(--rl-spacing-xs) var(--rl-spacing-md);
-  background: var(--rl-color-primary-brown);
+  background: var(--rl-color-primary-navy);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   font-weight: var(--rl-font-weight-bold);
   letter-spacing: var(--rl-letter-spacing-extreme);
   text-transform: uppercase;
-  color: var(--rl-color-warm-paper);
+  color: var(--rl-color-cool-white);
   border-bottom: var(--rl-border-standard);
 }
 .rl-neo-brutalist-page .rl-about-bio-dl {
@@ -479,7 +479,7 @@ def build_about_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   letter-spacing: var(--rl-letter-spacing-wider);
   text-transform: uppercase;
-  color: var(--rl-color-gold);
+  color: var(--rl-color-orange);
   margin-top: var(--rl-spacing-sm);
 }
 .rl-neo-brutalist-page .rl-about-bio-dl dt:first-child {
@@ -488,7 +488,7 @@ def build_about_css() -> str:
 .rl-neo-brutalist-page .rl-about-bio-dl dd {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin-top: var(--rl-spacing-2xs);
 }
 
@@ -501,11 +501,11 @@ def build_about_css() -> str:
 .rl-neo-brutalist-page .rl-about-pillar {
   border: var(--rl-border-standard);
   padding: var(--rl-spacing-lg);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   transition: border-color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-pillar:hover {
-  border-color: var(--rl-color-gold);
+  border-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-pillar-kicker {
   font-family: var(--rl-font-data);
@@ -513,14 +513,14 @@ def build_about_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   letter-spacing: var(--rl-letter-spacing-extreme);
   text-transform: uppercase;
-  color: var(--rl-color-gold);
+  color: var(--rl-color-orange);
   margin-bottom: var(--rl-spacing-sm);
 }
 .rl-neo-brutalist-page .rl-about-pillar h3 {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-lg);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0 0 var(--rl-spacing-sm) 0;
   line-height: var(--rl-line-height-tight);
 }
@@ -528,7 +528,7 @@ def build_about_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   line-height: var(--rl-line-height-relaxed);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0;
 }
 
@@ -549,7 +549,7 @@ def build_about_css() -> str:
 .rl-neo-brutalist-page .rl-about-testimonial {
   flex: 0 0 calc(50% - 8px);
   scroll-snap-align: start;
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   border: var(--rl-border-standard);
   padding: var(--rl-spacing-lg) var(--rl-spacing-lg) var(--rl-spacing-md);
   margin: 0;
@@ -563,7 +563,7 @@ def build_about_css() -> str:
   font-size: var(--rl-font-size-sm);
   font-style: italic;
   line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0 0 var(--rl-spacing-md) 0;
   flex: 1;
 }
@@ -571,20 +571,20 @@ def build_about_css() -> str:
   display: flex;
   flex-direction: column;
   gap: var(--rl-spacing-2xs);
-  border-top: 1px solid var(--rl-color-tan);
+  border-top: 1px solid var(--rl-color-silver);
   padding-top: var(--rl-spacing-sm);
 }
 .rl-neo-brutalist-page .rl-about-testimonial footer strong {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   letter-spacing: var(--rl-letter-spacing-wide);
 }
 .rl-neo-brutalist-page .rl-about-testimonial-meta {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   letter-spacing: var(--rl-letter-spacing-wide);
 }
 /* Carousel nav */
@@ -596,26 +596,26 @@ def build_about_css() -> str:
   margin-top: var(--rl-spacing-md);
 }
 .rl-neo-brutalist-page .rl-about-carousel-btn {
-  background: var(--rl-color-sand);
+  background: var(--rl-color-silver);
   border: var(--rl-border-standard);
   width: 40px;
   height: 40px;
   font-size: 18px;
   line-height: 1;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   cursor: pointer;
   transition: background-color var(--rl-transition-hover),
               border-color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-carousel-btn:hover {
-  background-color: var(--rl-color-warm-paper);
-  border-color: var(--rl-color-gold);
+  background-color: var(--rl-color-cool-white);
+  border-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-carousel-count {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   letter-spacing: var(--rl-letter-spacing-wider);
   text-transform: uppercase;
   min-width: 80px;
@@ -631,13 +631,13 @@ def build_about_css() -> str:
 .rl-neo-brutalist-page .rl-about-cta {
   border: var(--rl-border-standard);
   padding: var(--rl-spacing-lg);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   display: flex;
   flex-direction: column;
   transition: border-color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-cta:hover {
-  border-color: var(--rl-color-gold);
+  border-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-cta h3 {
   font-family: var(--rl-font-data);
@@ -645,28 +645,28 @@ def build_about_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wider);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   margin: 0 0 var(--rl-spacing-xs) 0;
 }
 .rl-neo-brutalist-page .rl-about-cta p {
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   line-height: var(--rl-line-height-relaxed);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0 0 var(--rl-spacing-md) 0;
   flex: 1;
 }
 .rl-neo-brutalist-page .rl-about-cta-btn {
   display: inline-block;
-  background: var(--rl-color-primary-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-primary-navy);
+  color: var(--rl-color-cool-white);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wider);
   padding: var(--rl-spacing-sm) var(--rl-spacing-lg);
-  border: 3px solid var(--rl-color-primary-brown);
+  border: 3px solid var(--rl-color-primary-navy);
   text-decoration: none;
   text-align: center;
   transition: background-color var(--rl-transition-hover),
@@ -674,46 +674,46 @@ def build_about_css() -> str:
               color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-cta-btn:hover {
-  background-color: var(--rl-color-dark-brown);
-  border-color: var(--rl-color-dark-brown);
+  background-color: var(--rl-color-dark-navy);
+  border-color: var(--rl-color-dark-navy);
 }
 .rl-neo-brutalist-page .rl-about-cta-btn--gold {
-  background: var(--rl-color-gold);
-  color: var(--rl-color-warm-paper);
-  border-color: var(--rl-color-gold);
+  background: var(--rl-color-orange);
+  color: var(--rl-color-cool-white);
+  border-color: var(--rl-color-orange);
 }
 .rl-neo-brutalist-page .rl-about-cta-btn--gold:hover {
-  background-color: var(--rl-color-dark-brown);
-  border-color: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background-color: var(--rl-color-dark-navy);
+  border-color: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
 }
 .rl-neo-brutalist-page .rl-about-cta-btn--teal {
-  background: var(--rl-color-teal);
-  color: var(--rl-color-warm-paper);
-  border-color: var(--rl-color-teal);
+  background: var(--rl-color-signal-red);
+  color: var(--rl-color-cool-white);
+  border-color: var(--rl-color-signal-red);
 }
 .rl-neo-brutalist-page .rl-about-cta-btn--teal:hover {
-  background-color: var(--rl-color-dark-brown);
-  border-color: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background-color: var(--rl-color-dark-navy);
+  border-color: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
 }
 
 /* ── Methodology link ────────────────────────────── */
 .rl-neo-brutalist-page .rl-about-link {
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-bold);
   text-decoration: none;
   letter-spacing: var(--rl-letter-spacing-wide);
-  border-bottom: 2px solid var(--rl-color-teal);
+  border-bottom: 2px solid var(--rl-color-signal-red);
   padding-bottom: 2px;
   transition: border-color var(--rl-transition-hover),
               color var(--rl-transition-hover);
 }
 .rl-neo-brutalist-page .rl-about-link:hover {
-  color: var(--rl-color-gold);
-  border-color: var(--rl-color-gold);
+  color: var(--rl-color-orange);
+  border-color: var(--rl-color-orange);
 }
 
 /* ── Responsive ──────────────────────────────────── */
@@ -723,10 +723,10 @@ def build_about_css() -> str:
   }
   .rl-neo-brutalist-page .rl-about-stat {
     border-right: none;
-    border-bottom: 1px solid var(--rl-color-tan);
+    border-bottom: 1px solid var(--rl-color-silver);
   }
   .rl-neo-brutalist-page .rl-about-stat:nth-child(odd) {
-    border-right: 1px solid var(--rl-color-tan);
+    border-right: 1px solid var(--rl-color-silver);
   }
   .rl-neo-brutalist-page .rl-about-stat:nth-last-child(-n+2) {
     border-bottom: none;

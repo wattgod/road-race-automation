@@ -277,18 +277,10 @@ COLORS = {
     "tier_2": "#3d5a80",
     "tier_3": "#6c757d",
     "tier_4": "#adb5bd",
-    # Compatibility aliases (mapped from Gravel God names used in generators)
-    "primary_brown": "#1a1a2e",
-    "secondary_brown": "#3d5a80",
-    "warm_brown": "#5c7a99",
-    "tan": "#d1dce6",
-    "sand": "#e9ecef",
-    "warm_paper": "#f8f9fa",
-    "gold": "#f77f00",
-    "light_gold": "#fcbf49",
-    "teal": "#e63946",
-    "light_teal": "#ff6b6b",
+    # Legacy aliases — kept for any scripts that reference old names
     "dark_brown": "#0d1117",
+    "primary_brown": "#1a1a2e",
+    "warm_paper": "#f8f9fa",
 }
 
 

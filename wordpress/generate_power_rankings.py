@@ -28,8 +28,8 @@ CURRENT_YEAR = date.today().year
 TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
 TIER_COLORS = {
     1: COLORS["primary_brown"],
-    2: COLORS["secondary_brown"],
-    3: COLORS["warm_brown"],
+    2: COLORS["secondary_blue"],
+    3: COLORS["steel"],
     4: "#5e6868",
 }
 
@@ -72,7 +72,7 @@ def build_power_rankings_page(races: list) -> str:
     for i, r in enumerate(ranked, 1):
         score = r.get("overall_score", 0)
         tier = r.get("tier", 3)
-        tier_color = TIER_COLORS.get(tier, COLORS["warm_brown"])
+        tier_color = TIER_COLORS.get(tier, COLORS["steel"])
         discipline = r.get("discipline", "gravel")
 
         # Tier separator — tagged with tier number for JS to show/hide
@@ -176,7 +176,7 @@ def build_power_rankings_page(races: list) -> str:
 {font_face}
 {tokens}
 
-body {{ margin: 0; background: var(--rl-color-warm-paper); }}
+body {{ margin: 0; background: var(--rl-color-cool-white); }}
 *, *::before, *::after {{ border-radius: 0 !important; box-shadow: none !important; }}
 
 .rl-pr-page {{
@@ -184,38 +184,38 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   margin: 0 auto;
   padding: 0 24px;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }}
 
 {get_site_header_css()}
 
-.rl-pr-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-brown); padding: 12px 0; letter-spacing: 0.5px; }}
-.rl-pr-breadcrumb a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
+.rl-pr-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-blue); padding: 12px 0; letter-spacing: 0.5px; }}
+.rl-pr-breadcrumb a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
 
 .rl-pr-hero {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
   padding: 48px 32px;
   margin: 0 -24px;
   text-align: center;
 }}
 .rl-pr-hero h1 {{ font-family: var(--rl-font-editorial); font-size: 36px; font-weight: 700; margin: 0 0 12px; }}
-.rl-pr-hero-sub {{ font-size: 13px; color: var(--rl-color-tan); letter-spacing: 1px; }}
+.rl-pr-hero-sub {{ font-size: 13px; color: var(--rl-color-silver); letter-spacing: 1px; }}
 
 /* Stats strip */
 .rl-pr-stats-strip {{
   display: flex;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-dark-navy);
   text-align: center;
 }}
 .rl-pr-stat {{
   flex: 1;
   padding: 16px 8px;
-  border-right: 1px solid var(--rl-color-sand);
+  border-right: 1px solid var(--rl-color-silver);
 }}
 .rl-pr-stat:last-child {{ border-right: none; }}
 .rl-pr-stat-val {{ font-family: var(--rl-font-editorial); font-size: 28px; font-weight: 700; }}
-.rl-pr-stat-label {{ font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin-top: 2px; }}
+.rl-pr-stat-label {{ font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-blue); margin-top: 2px; }}
 
 /* Discipline filter */
 .rl-pr-filters {{
@@ -223,22 +223,22 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   align-items: center;
   gap: 8px;
   padding: 14px 0;
-  border-bottom: 2px solid var(--rl-color-sand);
+  border-bottom: 2px solid var(--rl-color-silver);
 }}
-.rl-pr-filter-label {{ font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-brown); }}
+.rl-pr-filter-label {{ font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-secondary-blue); }}
 .rl-pr-filter-btn {{
   padding: 5px 12px;
   font-size: 11px;
   font-weight: 700;
-  border: 2px solid var(--rl-color-dark-brown);
+  border: 2px solid var(--rl-color-dark-navy);
   background: transparent;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   cursor: pointer;
   font-family: var(--rl-font-data);
   letter-spacing: 0.5px;
 }}
-.rl-pr-filter-btn.active {{ background: var(--rl-color-dark-brown); color: var(--rl-color-warm-paper); }}
-.rl-pr-filter-btn:hover:not(.active) {{ background: var(--rl-color-sand); }}
+.rl-pr-filter-btn.active {{ background: var(--rl-color-dark-navy); color: var(--rl-color-cool-white); }}
+.rl-pr-filter-btn:hover:not(.active) {{ background: var(--rl-color-silver); }}
 
 /* Discipline badge */
 .rl-pr-disc-badge {{
@@ -247,8 +247,8 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   letter-spacing: 1.5px;
   padding: 1px 5px;
-  border: 1px solid var(--rl-color-teal);
-  color: var(--rl-color-teal);
+  border: 1px solid var(--rl-color-signal-red);
+  color: var(--rl-color-signal-red);
   margin-right: 6px;
   vertical-align: middle;
 }}
@@ -260,14 +260,14 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   border-left: 4px solid;
   margin-top: 24px;
 }}
 .rl-pr-tier-sep[data-hidden="true"] {{ display: none; }}
 .rl-pr-tier-badge {{
   display: inline-block;
-  color: var(--rl-color-warm-paper);
+  color: var(--rl-color-cool-white);
   padding: 2px 8px;
   font-size: 10px;
   letter-spacing: 1.5px;
@@ -279,20 +279,20 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 .rl-pr-card {{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   text-decoration: none;
   color: inherit;
   transition: background 0.15s;
   padding: 6px 0;
 }}
-.rl-pr-card:hover {{ background: var(--rl-color-sand); }}
+.rl-pr-card:hover {{ background: var(--rl-color-silver); }}
 .rl-pr-card[data-hidden="true"] {{ display: none; }}
 .rl-pr-rank {{
   min-width: 44px;
   font-family: var(--rl-font-editorial);
   font-size: 13px;
   font-weight: 700;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   text-align: center;
   padding: 0 4px;
 }}
@@ -305,18 +305,18 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 }}
 .rl-pr-body {{ flex: 1; padding: 4px 12px; }}
 .rl-pr-name {{ font-family: var(--rl-font-editorial); font-size: 14px; font-weight: 700; }}
-.rl-pr-location {{ font-size: 10px; color: var(--rl-color-secondary-brown); text-transform: uppercase; letter-spacing: 0.5px; }}
-.rl-pr-stats {{ font-size: 10px; color: var(--rl-color-secondary-brown); }}
+.rl-pr-location {{ font-size: 10px; color: var(--rl-color-secondary-blue); text-transform: uppercase; letter-spacing: 0.5px; }}
+.rl-pr-stats {{ font-size: 10px; color: var(--rl-color-secondary-blue); }}
 
 /* CTA */
 .rl-pr-cta {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
   padding: 32px;
   margin: 32px -24px;
   text-align: center;
 }}
-.rl-pr-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-warm-paper); margin: 0 0 12px; }}
+.rl-pr-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-cool-white); margin: 0 0 12px; }}
 .rl-pr-cta p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
 .rl-pr-cta-btn {{
   display: inline-block;
@@ -326,23 +326,23 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid var(--rl-color-warm-paper);
-  color: var(--rl-color-warm-paper);
+  border: 2px solid var(--rl-color-cool-white);
+  color: var(--rl-color-cool-white);
   transition: all 0.2s;
 }}
-.rl-pr-cta-btn:hover {{ background: var(--rl-color-warm-paper); color: var(--rl-color-dark-brown); }}
+.rl-pr-cta-btn:hover {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
 
 .rl-pr-footer {{
   padding: 24px 0;
   margin-top: 32px;
-  border-top: 4px double var(--rl-color-dark-brown);
+  border-top: 4px double var(--rl-color-dark-navy);
   text-align: center;
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
-.rl-pr-footer a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
+.rl-pr-footer a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
 
 @media (max-width: 768px) {{
   .rl-pr-hero {{ padding: 32px 20px; }}

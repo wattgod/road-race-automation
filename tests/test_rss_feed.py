@@ -60,7 +60,7 @@ class TestFeedFile:
         channel = tree.getroot().find("channel")
         desc = channel.find("description")
         assert desc is not None
-        assert "328" in desc.text
+        assert "road races" in desc.text
         assert "14 criteria" in desc.text
 
     def test_has_atom_self_link(self):
@@ -73,7 +73,7 @@ class TestFeedFile:
         tree = ET.parse(str(FEED_FILE))
         channel = tree.getroot().find("channel")
         items = channel.findall("item")
-        assert len(items) == 328, f"Expected 328 items, got {len(items)}"
+        assert len(items) == 427, f"Expected 427 items, got {len(items)}"
 
     def test_items_have_required_fields(self):
         tree = ET.parse(str(FEED_FILE))
@@ -134,7 +134,7 @@ class TestFeedFile:
 
     def test_file_size_reasonable(self):
         size = FEED_FILE.stat().st_size
-        # 328 items should be ~100-300KB
+        # 427 items should be ~100-500KB
         assert 50_000 < size < 500_000, f"Unexpected feed size: {size:,} bytes"
 
 

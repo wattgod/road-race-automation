@@ -203,8 +203,8 @@ def build_page_css() -> str:
 
 .rl-legal-hero {{
   padding: var(--rl-spacing-2xl) var(--rl-spacing-xl) var(--rl-spacing-xl);
-  background: var(--rl-color-warm-paper);
-  border-bottom: 3px solid var(--rl-color-dark-brown);
+  background: var(--rl-color-cool-white);
+  border-bottom: 3px solid var(--rl-color-dark-navy);
 }}
 .rl-legal-hero-inner {{
   max-width: 640px;
@@ -215,14 +215,14 @@ def build_page_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: clamp(28px, 5vw, 42px);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: 0 0 var(--rl-spacing-sm) 0;
   line-height: 1.15;
 }}
 .rl-legal-hero-date {{
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-secondary-blue);
   letter-spacing: var(--rl-letter-spacing-wide);
 }}
 .rl-legal-body {{
@@ -234,7 +234,7 @@ def build_page_css() -> str:
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-md);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
   margin: var(--rl-spacing-xl) 0 var(--rl-spacing-sm) 0;
   letter-spacing: var(--rl-letter-spacing-standard);
   text-transform: uppercase;
@@ -243,14 +243,14 @@ def build_page_css() -> str:
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
   margin: var(--rl-spacing-lg) 0 var(--rl-spacing-xs) 0;
 }}
 .rl-legal-body p, .rl-legal-body li {{
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
 }}
 .rl-legal-body ul {{
   padding-left: var(--rl-spacing-lg);
@@ -260,18 +260,18 @@ def build_page_css() -> str:
   margin-bottom: var(--rl-spacing-xs);
 }}
 .rl-legal-body a {{
-  color: var(--rl-color-teal);
+  color: var(--rl-color-signal-red);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color var(--rl-transition-hover);
 }}
 .rl-legal-body a:hover {{
-  border-color: var(--rl-color-teal);
+  border-color: var(--rl-color-signal-red);
 }}
 .rl-legal-body code {{
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-cool-white);
   padding: 2px 6px;
   border: 1px solid var(--rl-color-cream);
 }}
@@ -286,13 +286,13 @@ def build_page_css() -> str:
   text-align: left;
   padding: var(--rl-spacing-xs) var(--rl-spacing-sm);
   border-bottom: 1px solid var(--rl-color-cream);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-primary-navy);
 }}
 .rl-legal-table th {{
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wide);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-dark-navy);
 }}
 
 {get_mega_footer_css()}
@@ -313,9 +313,9 @@ def generate_page(page_key: str, output_dir: Path) -> None:
 
     nav = get_site_header_html(active="about")
     breadcrumb = f'''<div class="rl-breadcrumb" style="max-width:640px;margin:0 auto;padding:var(--rl-spacing-sm) var(--rl-spacing-xl) 0;">
-  <a href="{SITE_URL}/" style="color:var(--rl-color-teal);text-decoration:none;font-family:var(--rl-font-data);font-size:12px;">Home</a>
-  <span style="color:var(--rl-color-secondary-brown);margin:0 4px;">&rsaquo;</span>
-  <span style="color:var(--rl-color-secondary-brown);font-family:var(--rl-font-data);font-size:12px;">{esc(title)}</span>
+  <a href="{SITE_URL}/" style="color:var(--rl-color-signal-red);text-decoration:none;font-family:var(--rl-font-data);font-size:12px;">Home</a>
+  <span style="color:var(--rl-color-secondary-blue);margin:0 4px;">&rsaquo;</span>
+  <span style="color:var(--rl-color-secondary-blue);font-family:var(--rl-font-data);font-size:12px;">{esc(title)}</span>
 </div>'''
     preload = get_preload_hints()
     css = build_page_css()

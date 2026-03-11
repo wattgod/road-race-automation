@@ -163,6 +163,6 @@ class TestHeaderCSS:
         css = get_site_header_css()
         assert "2px solid" in css
 
-    def test_warm_paper_background(self):
+    def test_cool_white_background(self):
         css = get_site_header_css()
-        assert "var(--rl-color-warm-paper)" in css
+        assert "var(--rl-color-cool-white)" in css

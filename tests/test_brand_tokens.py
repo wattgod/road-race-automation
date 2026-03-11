@@ -29,8 +29,7 @@ class TestTokensCSS:
         css = get_tokens_css()
         # Compatibility aliases (mapped from Gravel God names) don't have native CSS vars
         _COMPAT_ALIASES = {
-            "primary_brown", "secondary_brown", "warm_brown", "tan", "sand",
-            "warm_paper", "gold", "light_gold", "teal", "light_teal", "dark_brown",
+            "primary_brown", "warm_paper", "dark_brown",
         }
         for key, hex_val in COLORS.items():
             if key in _COMPAT_ALIASES:
@@ -42,8 +41,7 @@ class TestTokensCSS:
         """Native COLORS dict hex values must match the CSS custom properties."""
         css = get_tokens_css()
         _COMPAT_ALIASES = {
-            "primary_brown", "secondary_brown", "warm_brown", "tan", "sand",
-            "warm_paper", "gold", "light_gold", "teal", "light_teal", "dark_brown",
+            "primary_brown", "warm_paper", "dark_brown",
         }
         for key, hex_val in COLORS.items():
             if key in _COMPAT_ALIASES:
@@ -134,8 +132,8 @@ class TestPreloadHints:
 class TestColorDict:
     def test_required_colors_present(self):
         required = [
-            "dark_brown", "primary_brown", "secondary_brown", "tan",
-            "warm_paper", "gold", "teal", "near_black", "white",
+            "dark_navy", "primary_navy", "secondary_blue", "silver",
+            "cool_white", "signal_red", "orange", "near_black", "white",
             "tier_1", "tier_2", "tier_3", "tier_4",
         ]
         for key in required:
