@@ -3,11 +3,11 @@
 Generate a standalone race finder quiz page.
 
 Creates /race/quiz/index.html with a multi-step questionnaire that
-recommends matching gravel races based on user preferences. Results
+recommends matching road races based on user preferences. Results
 are email-gated for lead capture.
 
-Targets queries like "which gravel race should I do", "best gravel
-race for beginners", "gravel race finder", "find a gravel race".
+Targets queries like "which road race should I do", "best road
+race for beginners", "road race finder", "find a road race".
 
 Features:
   - 5-step quiz: difficulty, distance, terrain, location, timing
@@ -33,7 +33,7 @@ from cookie_consent import get_consent_banner_html
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = Path(__file__).parent / "output" / "quiz"
 
-FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
+FUELING_WORKER_URL = "https://fueling-lead-intake.roadgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
 
 
 def esc(text) -> str:
@@ -68,7 +68,7 @@ def build_quiz_page(races: list) -> str:
         difficulty = r.get("difficulty_composite", 0) or 0
         technicality = r.get("technicality", 0) or 0
         terrain = r.get("terrain_primary", "")
-        discipline = r.get("discipline", "gravel")
+        discipline = r.get("discipline", "road")
 
         race_js_items.append(
             f'{{"s":"{esc(slug)}","n":"{esc(name)}","t":{tier},'
@@ -90,7 +90,7 @@ def build_quiz_page(races: list) -> str:
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE_BASE_URL},
-            {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+            {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
             {"@type": "ListItem", "position": 3, "name": "Race Finder Quiz", "item": f"{SITE_BASE_URL}/race/quiz/"},
         ]
     })
@@ -105,20 +105,20 @@ def build_quiz_page(races: list) -> str:
                 "name": "How does the Roadie Labs race finder quiz work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"The quiz asks 5 questions about your fitness level, preferred distance, terrain type, location, and timing. It then scores all {race_count} gravel races in our database and recommends your top 5 matches."
+                    "text": f"The quiz asks 5 questions about your fitness level, preferred distance, terrain type, location, and timing. It then scores all {race_count} road races in our database and recommends your top 5 matches."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How many gravel races are in the database?",
+                "name": "How many road races are in the database?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"The Roadie Labs database includes {race_count} gravel races across the United States, each rated on 15 dimensions including difficulty, technicality, elevation, logistics, and more."
+                    "text": f"The Roadie Labs database includes {race_count} road races across the United States, each rated on 15 dimensions including difficulty, technicality, elevation, logistics, and more."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What gravel race should a beginner do?",
+                "name": "What road race should a beginner do?",
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Select 'Easy Going' for difficulty and 'Short' for distance in our quiz. The algorithm will match you with beginner-friendly events under 60 miles with manageable terrain and elevation."
@@ -126,10 +126,10 @@ def build_quiz_page(races: list) -> str:
             },
             {
                 "@type": "Question",
-                "name": "What is the hardest gravel race?",
+                "name": "What is the hardest road race?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Select 'Brutal' difficulty in the quiz to find the hardest gravel races. Top results typically include Unbound Gravel 200, SBT GRVL, and Mid South 100 — all Tier 1 events with extreme difficulty ratings."
+                    "text": "Select 'Brutal' difficulty in the quiz to find the hardest road races. Top results typically include Mallorca 312, La Marmotte, and Maratona dles Dolomites — all Tier 1 events with extreme difficulty ratings."
                 }
             }
         ]
@@ -140,11 +140,11 @@ def build_quiz_page(races: list) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Race Finder Quiz — Which Gravel Race Should You Do? | Roadie Labs</title>
-  <meta name="description" content="Answer 5 questions to find your perfect gravel race. Personalized recommendations from {race_count} races ranked by the Roadie Labs rating system.">
+  <title>Race Finder Quiz — Which Road Race Should You Do? | Roadie Labs</title>
+  <meta name="description" content="Answer 5 questions to find your perfect road race. Personalized recommendations from {race_count} races ranked by the Roadie Labs rating system.">
   <link rel="canonical" href="{SITE_BASE_URL}/race/quiz/">
-  <meta property="og:title" content="Race Finder Quiz — Which Gravel Race Should You Do?">
-  <meta property="og:description" content="Answer 5 questions to find your perfect gravel race from {race_count} options.">
+  <meta property="og:title" content="Race Finder Quiz — Which Road Race Should You Do?">
+  <meta property="og:description" content="Answer 5 questions to find your perfect road race from {race_count} options.">
   <meta property="og:url" content="{SITE_BASE_URL}/race/quiz/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Roadie Labs">
@@ -160,9 +160,9 @@ def build_quiz_page(races: list) -> str:
 <body>
 <div class="rl-quiz-page">
   <header class="rl-quiz-header">
-    <a href="/gravel-races/" class="rl-quiz-back">&larr; All Races</a>
+    <a href="/road-races/" class="rl-quiz-back">&larr; All Races</a>
     <div class="rl-quiz-badge">RACE FINDER</div>
-    <h1 class="rl-quiz-title">Which Gravel Race<br>Should You Do?</h1>
+    <h1 class="rl-quiz-title">Which Road Race<br>Should You Do?</h1>
     <p class="rl-quiz-subtitle">5 questions. 328 races. Your perfect match.</p>
   </header>
 
@@ -207,7 +207,7 @@ def build_quiz_page(races: list) -> str:
       </button>
       <button class="rl-quiz-option" data-field="distance" data-value="medium">
         <span class="rl-quiz-option-label">MEDIUM</span>
-        <span class="rl-quiz-option-desc">60-100 miles — the classic gravel distance.</span>
+        <span class="rl-quiz-option-desc">60-100 miles — the classic road distance.</span>
       </button>
       <button class="rl-quiz-option" data-field="distance" data-value="long">
         <span class="rl-quiz-option-label">LONG</span>
@@ -227,16 +227,16 @@ def build_quiz_page(races: list) -> str:
     <p class="rl-quiz-hint">Your surface preference.</p>
     <div class="rl-quiz-options">
       <button class="rl-quiz-option" data-field="terrain" data-value="smooth">
-        <span class="rl-quiz-option-label">SMOOTH GRAVEL</span>
-        <span class="rl-quiz-option-desc">Hardpack dirt roads. Road bike with wide tires works.</span>
+        <span class="rl-quiz-option-label">SMOOTH ROAD</span>
+        <span class="rl-quiz-option-desc">Hardpack mountain roads. Road bike with wide tires works.</span>
       </button>
       <button class="rl-quiz-option" data-field="terrain" data-value="mixed">
         <span class="rl-quiz-option-label">MIXED SURFACE</span>
-        <span class="rl-quiz-option-desc">Gravel, pavement, maybe some singletrack. Versatile bike.</span>
+        <span class="rl-quiz-option-desc">Tarmac with some cobbles or rough patches. Standard road bike.</span>
       </button>
       <button class="rl-quiz-option" data-field="terrain" data-value="technical">
         <span class="rl-quiz-option-label">TECHNICAL</span>
-        <span class="rl-quiz-option-desc">Rough gravel, sand, rocks. Proper gravel or MTB bike.</span>
+        <span class="rl-quiz-option-desc">Rough road, sand, rocks. Proper road or MTB bike.</span>
       </button>
       <button class="rl-quiz-option" data-field="terrain" data-value="any">
         <span class="rl-quiz-option-label">ANYTHING</span>
@@ -316,13 +316,13 @@ def build_quiz_page(races: list) -> str:
     <div class="rl-quiz-results-badge">YOUR TOP 5 MATCHES</div>
     <div class="rl-quiz-results-list" id="rl-quiz-results-list"></div>
     <div class="rl-quiz-results-cta">
-      <a href="/gravel-races/" class="rl-quiz-btn rl-quiz-btn--secondary">BROWSE ALL 328 RACES</a>
+      <a href="/road-races/" class="rl-quiz-btn rl-quiz-btn--secondary">BROWSE ALL 328 RACES</a>
       <button class="rl-quiz-btn" id="rl-quiz-restart">TAKE QUIZ AGAIN</button>
     </div>
   </div>
 
   <footer class="rl-quiz-footer">
-    <p>Powered by the <a href="/gravel-races/">Roadie Labs</a> rating system &mdash; 328 races, 15 dimensions, zero BS.</p>
+    <p>Powered by the <a href="/road-races/">Roadie Labs</a> rating system &mdash; 328 races, 15 dimensions, zero BS.</p>
   </footer>
 </div>
 
@@ -429,8 +429,8 @@ def build_quiz_js() -> str:
   /* Score a race against user answers */
   function scoreRace(r,ans){
     var s=0;
-    /* Only score gravel races */
-    if(r.di!=='gravel') return -999;
+    /* Only score road races */
+    if(r.di!=='road') return -999;
 
     /* Difficulty match */
     if(ans.difficulty){

@@ -4,7 +4,7 @@ Generate annual power rankings page for SEO.
 
 Creates /race/power-rankings-{year}/index.html showing all races ranked by
 overall score with tier badges, score breakdowns, and Substack CTA.
-Targets "best gravel races 2026", "gravel race rankings", "top gravel events".
+Targets "best road races 2026", "road race rankings", "top road events".
 
 Usage:
     python wordpress/generate_power_rankings.py
@@ -47,9 +47,9 @@ def build_power_rankings_page(races: list) -> str:
     tokens = get_tokens_css()
 
     canonical = f"{SITE_BASE_URL}/race/power-rankings-{CURRENT_YEAR}/"
-    title = f"Gravel Race Power Rankings {CURRENT_YEAR} — All {len(races)} Races Ranked | Roadie Labs"
+    title = f"Road Race Power Rankings {CURRENT_YEAR} — All {len(races)} Races Ranked | Roadie Labs"
     description = (
-        f"The definitive {CURRENT_YEAR} gravel race power rankings. "
+        f"The definitive {CURRENT_YEAR} road race power rankings. "
         f"All {len(races)} races ranked by our 15-dimension Roadie Labs Rating. "
         f"From the iconic Elite tier to grassroots gems."
     )
@@ -62,8 +62,8 @@ def build_power_rankings_page(races: list) -> str:
     regions = len(set(r.get("region", "") for r in races))
 
     # Discipline counts for filter buttons
-    gravel_count = sum(1 for r in races if r.get("discipline", "gravel") == "gravel")
-    bp_count = sum(1 for r in races if r.get("discipline") == "bikepacking")
+    road_count = sum(1 for r in races if r.get("discipline", "road") == "road")
+    bp_count = sum(1 for r in races if r.get("discipline") == "multi-stage")
     mtb_count = sum(1 for r in races if r.get("discipline") == "mtb")
 
     # Build ranked list with position numbers and discipline data attributes
@@ -73,7 +73,7 @@ def build_power_rankings_page(races: list) -> str:
         score = r.get("overall_score", 0)
         tier = r.get("tier", 3)
         tier_color = TIER_COLORS.get(tier, COLORS["steel"])
-        discipline = r.get("discipline", "gravel")
+        discipline = r.get("discipline", "road")
 
         # Tier separator — tagged with tier number for JS to show/hide
         if tier != prev_tier:
@@ -101,9 +101,9 @@ def build_power_rankings_page(races: list) -> str:
             stat_parts.append(month)
         stats = " · ".join(stat_parts)
 
-        # Discipline badge for non-gravel races
+        # Discipline badge for non-road races
         disc_badge = ""
-        if discipline != "gravel":
+        if discipline != "road":
             disc_badge = (f'<span class="rl-pr-disc-badge">'
                          f'{esc(discipline.upper())}</span>')
 
@@ -139,13 +139,13 @@ def build_power_rankings_page(races: list) -> str:
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
-                    {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+                    {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
                     {"@type": "ListItem", "position": 3, "name": f"Power Rankings {CURRENT_YEAR}", "item": canonical},
                 ],
             },
             {
                 "@type": "ItemList",
-                "name": f"Gravel Race Power Rankings {CURRENT_YEAR}",
+                "name": f"Road Race Power Rankings {CURRENT_YEAR}",
                 "description": description,
                 "url": canonical,
                 "numberOfItems": len(races),
@@ -367,12 +367,12 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-pr-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/gravel-races/">Gravel Races</a> &rsaquo; Power Rankings {CURRENT_YEAR}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Power Rankings {CURRENT_YEAR}
   </div>
 
   <section class="rl-pr-hero">
     <h1>{CURRENT_YEAR} Power Rankings</h1>
-    <div class="rl-pr-hero-sub">Every gravel race, ranked. Updated annually.</div>
+    <div class="rl-pr-hero-sub">Every road race, ranked. Updated annually.</div>
   </section>
 
   <div class="rl-pr-stats-strip">
@@ -396,9 +396,9 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
   <div class="rl-pr-filters">
     <span class="rl-pr-filter-label">Show:</span>
-    <button class="rl-pr-filter-btn active" data-disc="gravel">Gravel ({gravel_count})</button>
+    <button class="rl-pr-filter-btn active" data-disc="road">Road ({road_count})</button>
     <button class="rl-pr-filter-btn" data-disc="all">All Disciplines ({len(races)})</button>
-    <button class="rl-pr-filter-btn" data-disc="bikepacking">Bikepacking ({bp_count})</button>
+    <button class="rl-pr-filter-btn" data-disc="multi-stage">Bikepacking ({bp_count})</button>
     <button class="rl-pr-filter-btn" data-disc="mtb">MTB ({mtb_count})</button>
   </div>
 
@@ -414,7 +414,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
   <footer class="rl-pr-footer">
     <a href="/">Roadie Labs</a> &middot;
-    <a href="/gravel-races/">Search All</a> &middot;
+    <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a> &middot;
     <a href="/race/calendar/{CURRENT_YEAR}/">Calendar</a>
   </footer>
@@ -426,7 +426,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   var btns = document.querySelectorAll('.rl-pr-filter-btn');
   var cards = document.querySelectorAll('.rl-pr-card');
   var tierSeps = document.querySelectorAll('.rl-pr-tier-sep');
-  var activeDisc = 'gravel';
+  var activeDisc = 'road';
 
   function applyFilter() {{
     var rank = 0;
@@ -463,7 +463,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
     }});
   }});
 
-  // Apply default filter (gravel only) on load
+  // Apply default filter (road only) on load
   applyFilter();
 }})();
 </script>

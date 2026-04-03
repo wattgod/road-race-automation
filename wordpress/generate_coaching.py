@@ -1190,7 +1190,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Coaching | Roadie Labs",
-        "description": "Gravel race coaching built around your schedule, your data, and your life. Three tiers: Min, Mid, and Max.",
+        "description": "Road cycling coaching built around your schedule, your data, and your life. Three tiers: Min, Mid, and Max.",
         "url": f"{SITE_BASE_URL}/coaching/",
         "isPartOf": {
             "@type": "WebSite",
@@ -1201,13 +1201,13 @@ def build_jsonld() -> str:
     service = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Gravel Race Coaching",
+        "name": "Road Cycling Coaching",
         "provider": {
             "@type": "Organization",
             "name": "Roadie Labs",
             "url": SITE_BASE_URL,
         },
-        "description": "Gravel race coaching: three tiers of involvement from weekly review to daily high-touch support. Built around your schedule, fitness, and target event.",
+        "description": "Road cycling coaching: three tiers of involvement from weekly review to daily high-touch support. Built around your schedule, fitness, and target event.",
     }
     wp_tag = f'<script type="application/ld+json">{json.dumps(webpage, separators=(",", ":"))}</script>'
     svc_tag = f'<script type="application/ld+json">{json.dumps(service, separators=(",", ":"))}</script>'
@@ -1243,10 +1243,10 @@ def generate_coaching_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = "Gravel cycling coaching: structured training, race strategy, and honest feedback from a real coach. Plans from $199 every 4 weeks."
+    meta_desc = "Road cycling coaching: structured training, race strategy, and honest feedback from a real coach. Plans from $199 every 4 weeks."
 
     og_tags = f'''<meta property="og:title" content="Coaching | Roadie Labs">
-  <meta property="og:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
+  <meta property="og:description" content="Road cycling coaching built around your schedule, your data, and your life. Three tiers of involvement.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -1255,7 +1255,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Coaching | Roadie Labs">
-  <meta name="twitter:description" content="Gravel race coaching built around your schedule, your data, and your life. Three tiers of involvement.">
+  <meta name="twitter:description" content="Road cycling coaching built around your schedule, your data, and your life. Three tiers of involvement.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()
@@ -1265,7 +1265,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravel Cycling Coaching | Roadie Labs</title>
+  <title>Road Cycling Coaching | Roadie Labs</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">

@@ -3,8 +3,8 @@
 Generate a standalone race calendar page for SEO.
 
 Creates /race/calendar/{year}/index.html showing all races organized by month.
-Targets queries like "gravel race calendar 2026", "gravel racing schedule",
-"gravel events this month".
+Targets queries like "road race calendar 2026", "road racing schedule",
+"road events this month".
 
 Features:
   - Month-by-month sections with race cards
@@ -154,9 +154,9 @@ def build_calendar_page(races: list) -> str:
         )
 
     canonical = f"{SITE_BASE_URL}/race/calendar/{CURRENT_YEAR}/"
-    title = f"Gravel Race Calendar {CURRENT_YEAR} — All {len(races)} Events | Roadie Labs"
+    title = f"Road Race Calendar {CURRENT_YEAR} — All {len(races)} Events | Roadie Labs"
     description = (
-        f"Complete {CURRENT_YEAR} gravel race calendar with {len(races)} events worldwide. "
+        f"Complete {CURRENT_YEAR} road race calendar with {len(races)} events worldwide. "
         f"Filter by tier and region. Find your next race."
     )
 
@@ -180,7 +180,7 @@ def build_calendar_page(races: list) -> str:
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
-            {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+            {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
             {"@type": "ListItem", "position": 3, "name": f"Calendar {CURRENT_YEAR}", "item": canonical},
         ],
     }, ensure_ascii=False, indent=2)
@@ -389,11 +389,11 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-cal-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/gravel-races/">Gravel Races</a> &rsaquo; Calendar {CURRENT_YEAR}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Calendar {CURRENT_YEAR}
   </div>
 
   <section class="rl-cal-hero">
-    <h1>{CURRENT_YEAR} Gravel Race Calendar</h1>
+    <h1>{CURRENT_YEAR} Road Race Calendar</h1>
     <div class="rl-cal-hero-sub">{len(races)} events worldwide &middot; Updated live</div>
   </section>
 
@@ -422,7 +422,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
   <footer class="rl-cal-footer">
     <a href="/">Roadie Labs</a> &middot; {len(races)} races &middot;
-    <a href="/gravel-races/">Search All</a> &middot;
+    <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>
 

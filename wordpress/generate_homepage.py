@@ -45,7 +45,7 @@ from shared_header import get_site_header_css, get_site_header_html
 OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
-GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "gravel-guide-content.json"
+GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "road-guide-content.json"
 SUBSTACK_RSS_URL = "https://TODO_ROADLABS_NEWSLETTER/feed"  # TODO: Roadie Labs newsletter
 
 CURRENT_YEAR = date.today().year
@@ -921,22 +921,22 @@ def build_tabbed_rankings(race_index: list) -> str:
         return items
 
     ROAD_DISCIPLINES = {"gran_fondo", "sportive", "century", "multi_stage", "hillclimb"}
-    gravel_only = [r for r in race_index if r.get("discipline", "gran_fondo") in ROAD_DISCIPLINES]
-    all_sorted = sorted(gravel_only, key=lambda r: r.get("overall_score", 0), reverse=True)
+    road_only = [r for r in race_index if r.get("discipline", "gran_fondo") in ROAD_DISCIPLINES]
+    all_sorted = sorted(road_only, key=lambda r: r.get("overall_score", 0), reverse=True)
     t1_sorted = sorted(
-        [r for r in gravel_only if r.get("tier") == 1],
+        [r for r in road_only if r.get("tier") == 1],
         key=lambda r: r.get("overall_score", 0), reverse=True,
     )
     t2_sorted = sorted(
-        [r for r in gravel_only if r.get("tier") == 2],
+        [r for r in road_only if r.get("tier") == 2],
         key=lambda r: r.get("overall_score", 0), reverse=True,
     )
     t3_sorted = sorted(
-        [r for r in gravel_only if r.get("tier") == 3],
+        [r for r in road_only if r.get("tier") == 3],
         key=lambda r: r.get("overall_score", 0), reverse=True,
     )
     t4_sorted = sorted(
-        [r for r in gravel_only if r.get("tier") == 4],
+        [r for r in road_only if r.get("tier") == 4],
         key=lambda r: r.get("overall_score", 0), reverse=True,
     )
 

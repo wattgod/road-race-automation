@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate neo-brutalist landing page HTML for gravel race profiles.
+Generate neo-brutalist landing page HTML for road race profiles.
 
 Reads race data from race-data/*.json (new format) or data/*-data.json (old format),
 produces self-contained HTML pages with:
@@ -1348,7 +1348,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     'SFR_Muscle_Force': 'build', 'Blended': 'build', 'G_Spot': 'build',
     'Norwegian_Double': 'build',
     'VO2max': 'peak', 'Durability': 'peak', 'Race_Simulation': 'peak',
-    'Gravel_Specific': 'peak', 'Anaerobic_Capacity': 'peak',
+    'Race_Specific': 'peak', 'Anaerobic_Capacity': 'peak',
     'Critical_Power': 'peak', 'Sprint_Neuromuscular': 'peak'
   };
 
@@ -1577,7 +1577,7 @@ def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
         "@type": "SportsEvent",
         "name": rd['name'],
         "description": rd['tagline'],
-        "sport": "Gravel Cycling",
+        "sport": "Road Cycling",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "startDate": start_date,
@@ -1926,7 +1926,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"https://calendar.google.com/calendar/render?action=TEMPLATE"
             f"&text={quote(race_title)}"
             f"&dates={iso_date}/{iso_date}"
-            f"&details={quote(f'Gravel race — {race_title}. More info at roadielabs.com')}"
+            f"&details={quote(f'Gran fondo — {race_title}. More info at roadielabs.com')}"
             f"&location={quote(location_str)}"
         )
         ics_data = (
@@ -1936,7 +1936,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"DTEND;VALUE=DATE:{iso_date}\\n"
             f"SUMMARY:{race_title}\\n"
             f"LOCATION:{location_str}\\n"
-            f"DESCRIPTION:Gravel race. More info at roadielabs.com\\n"
+            f"DESCRIPTION:Gran fondo. More info at roadielabs.com\\n"
             f"END:VEVENT\\nEND:VCALENDAR"
         )
         cal_html = f'''<div class="rl-calendar-export">
@@ -2113,9 +2113,9 @@ def build_course_route(rd: dict) -> str:
     surface = c.get('surface_breakdown', {})
     if surface:
         surface_colors = {
-            'gravel': 'var(--rl-color-signal-red)',
+            'gran_fondo': 'var(--rl-color-signal-red)',
             'pavement': 'var(--rl-color-orange)',
-            'dirt': 'var(--rl-color-steel)',
+            'sportive': 'var(--rl-color-steel)',
             'singletrack': 'var(--rl-color-primary-navy)',
             'doubletrack': 'var(--rl-color-secondary-blue)',
             'trail': 'var(--rl-color-secondary-blue)',
@@ -2691,7 +2691,7 @@ WORKOUT_SHOWCASE = {
     },
     'Breakaway Simulation': {
         'duration': '1.5hr',
-        'summary': 'Attack, then hold \u2014 the tactical pattern that wins gravel races.',
+        'summary': 'Attack, then hold \u2014 the tactical pattern that wins gran fondos.',
         'viz': [
             {"z":"z2","w":12,"h":45,"l":"WU 15m"},
             {"z":"z5","w":10,"h":82,"l":"5m ATK"},
@@ -2727,7 +2727,7 @@ WORKOUT_SHOWCASE = {
     },
     'G-Spot Standard': {
         'duration': '1.5hr',
-        'summary': '2\u00d720min at 88\u201392% FTP \u2014 the workhorse of gravel training.',
+        'summary': '2\u00d720min at 88\u201392% FTP \u2014 the workhorse of road race training.',
         'viz': [
             {"z":"z2","w":12,"h":45,"l":"WU 10m"},
             {"z":"z3","w":6,"h":55,"l":"5m"},
@@ -2738,7 +2738,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":10,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 5min tempo ramp \u2192 20min @ 88\u201392% FTP \u2192 5min recovery \u2192 20min @ 88\u201392% FTP \u2192 5min tempo \u2192 cool-down',
-        'execution': 'The G-Spot is the sweet spot that actually works for gravel. Slightly below threshold \u2014 enough stimulus for FTP gains, low enough for recovery within 24 hours. This is your bread-and-butter session. Nail the power. Nail the position. Nail the cadence.',
+        'execution': 'The G-Spot is the sweet spot that actually works for road racing. Slightly below threshold \u2014 enough stimulus for FTP gains, low enough for recovery within 24 hours. This is your bread-and-butter session. Nail the power. Nail the position. Nail the cadence.',
         'cadence': '85\u201395rpm throughout \u2014 seated, smooth pedal stroke',
         'position': 'Hoods, seated. Practice race posture \u2014 relaxed shoulders, bent elbows.',
         'rpe': '6\u20137 \u2014 hard but repeatable. You could do a third set but shouldn\'t.',
@@ -2760,7 +2760,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 3\u00d7(3min seated @ 95% FTP + 2min standing @ 105% FTP) / 5min recovery \u2192 cool-down',
-        'execution': 'Alternate between seated grinding and standing power. The transition is key \u2014 shift up 1\u20132 gears when standing, maintain cadence. This builds the ability to change climbing style mid-effort, exactly what variable-grade gravel climbs demand.',
+        'execution': 'Alternate between seated grinding and standing power. The transition is key \u2014 shift up 1\u20132 gears when standing, maintain cadence. This builds the ability to change climbing style mid-effort, exactly what variable-grade road climbs demand.',
         'cadence': 'Seated: 70\u201380rpm (force) | Standing: 60\u201370rpm (torque)',
         'position': 'Seated: hands on hoods, core engaged | Standing: hands on hoods, bike rocking gently',
         'rpe': 'Seated: 7 | Standing: 8\u20139',
@@ -2784,7 +2784,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 3 sets of (3min @ 90% + 1min @ 106% FTP)\u00d73 reps / 3min recovery between sets \u2192 cool-down',
-        'execution': 'The "under" should feel controlled \u2014 right at threshold. The "over" is a punch above. Your body learns to clear lactate while still working. The transitions should be INSTANT \u2014 no ramping, no soft-pedaling. That\'s what a gravel surge feels like.',
+        'execution': 'The "under" should feel controlled \u2014 right at threshold. The "over" is a punch above. Your body learns to clear lactate while still working. The transitions should be INSTANT \u2014 no ramping, no soft-pedaling. That\'s what a race surge feels like.',
         'cadence': '90rpm on unders | 95\u2013100rpm on overs',
         'position': 'Seated throughout. Hands on drops during overs.',
         'rpe': 'Unders: 7 | Overs: 8\u20139',
@@ -2792,7 +2792,7 @@ WORKOUT_SHOWCASE = {
     },
     'Surge and Settle': {
         'duration': '1hr',
-        'summary': 'Explosive surges into tempo settling \u2014 the signature gravel-specific workout.',
+        'summary': 'Explosive surges into tempo settling \u2014 the signature road race workout.',
         'viz': [
             {"z":"z2","w":14,"h":45,"l":"WU 15m"},
             {"z":"z6","w":4,"h":92,"l":"SURGE"},
@@ -2811,7 +2811,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '15min warm-up \u2192 2 sets of 3\u00d7(20sec surge @ 130% FTP + 90sec settle @ 85% FTP) / 5min between sets \u2192 cool-down',
-        'execution': 'Out of the saddle for every surge \u2014 explosive, violent power. Then immediately drop to tempo and SETTLE. Smooth your breathing. Recover while still working. This is what gravel racing IS: attack the rock garden, settle on the straight, attack the climb, settle on the descent. Over and over.',
+        'execution': 'Out of the saddle for every surge \u2014 explosive, violent power. Then immediately drop to tempo and SETTLE. Smooth your breathing. Recover while still working. This is what road racing IS: attack the climb, settle on the descent, bridge the gap, recover in the pack. Over and over.',
         'cadence': '100\u2013120rpm surge (explosive) | 85\u201390rpm settle (smooth)',
         'position': 'Standing for surges | Seated in drops for settle',
         'rpe': 'Surges: 9\u201310 | Settle: 5\u20136',
@@ -2890,7 +2890,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":10,"h":40,"l":"CD"},
         ],
         'structure': '12min warm-up \u2192 6\u00d715sec all-out sprint / 2min recovery \u2192 cool-down',
-        'execution': 'Maximum intensity. Every sprint is an all-out race attack \u2014 imagine you\'re jumping away from a group on a gravel climb. Recruit every muscle fiber. Full commitment for 15 seconds, then completely recover. Quality over quantity.',
+        'execution': 'Maximum intensity. Every sprint is an all-out race attack \u2014 imagine you\'re jumping away from a group on a road climb. Recruit every muscle fiber. Full commitment for 15 seconds, then completely recover. Quality over quantity.',
         'cadence': '120\u2013140rpm \u2014 pure leg speed and explosive power',
         'position': 'Standing, hands in drops, bike rocking side to side',
         'rpe': '10 \u2014 absolute maximum on every sprint',
@@ -2981,7 +2981,7 @@ WORKOUT_SHOWCASE = {
     },
     'Tempo Blocks': {
         'duration': '1.25hr',
-        'summary': 'Extended tempo efforts \u2014 muscular endurance for sustained gravel power.',
+        'summary': 'Extended tempo efforts \u2014 muscular endurance for sustained road racing power.',
         'viz': [
             {"z":"z2","w":12,"h":45,"l":"WU 10m"},
             {"z":"z3","w":28,"h":60,"l":"20m TEMPO"},
@@ -3058,7 +3058,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '15min warm-up \u2192 30min Z2 \u2192 20min Tempo \u2192 15min G-Spot \u2192 10min Threshold \u2192 5min VO2 \u2192 cool-down',
-        'execution': 'Each block is harder than the last. By the time you hit threshold, you\u2019ve been riding for 80+ minutes. The final VO2 effort is the test \u2014 can you go HARD when everything says stop? This is how you win the last 20 miles of a gravel race.',
+        'execution': 'Each block is harder than the last. By the time you hit threshold, you\u2019ve been riding for 80+ minutes. The final VO2 effort is the test \u2014 can you go HARD when everything says stop? This is how you win the last 20km of a gran fondo.',
         'cadence': 'Z2: 85rpm | Tempo: 88rpm | G-Spot: 90rpm | Threshold: 92rpm | VO2: 95\u2013100rpm',
         'position': 'Progressive: hoods \u2192 drops as intensity rises',
         'rpe': 'Z2: 3 | Tempo: 5 | G-Spot: 6\u20137 | Threshold: 8 | VO2: 9',
@@ -3141,7 +3141,7 @@ WORKOUT_SHOWCASE = {
     },
     'Variable Pace Chaos': {
         'duration': '1.25hr',
-        'summary': 'Unpredictable power changes \u2014 no pattern, no rhythm, pure gravel race simulation.',
+        'summary': 'Unpredictable power changes \u2014 no pattern, no rhythm, pure road race simulation.',
         'viz': [
             {"z":"z2","w":12,"h":45,"l":"WU 10m"},
             {"z":"z3","w":5,"h":55,"l":"2m"},
@@ -3159,7 +3159,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 20min chaos block: random 30sec\u20133min efforts @ 85\u2013130% FTP \u2192 5min recovery \u2192 repeat \u2192 cool-down',
-        'execution': 'There is no pattern. That\u2019s the point. Power jumps randomly between zones \u2014 like a gravel race where terrain, wind, and competitors dictate your effort. Don\u2019t anticipate. React. Recover when you can. Suffer when you must. This workout teaches metabolic flexibility.',
+        'execution': 'There is no pattern. That\u2019s the point. Power jumps randomly between zones \u2014 like a road race where climbs, wind, and competitors dictate your effort. Don\u2019t anticipate. React. Recover when you can. Suffer when you must. This workout teaches metabolic flexibility.',
         'cadence': 'Variable \u2014 match the effort. 80rpm on tempo, 100rpm on VO2, 120rpm on sprints.',
         'position': 'Change constantly. That\u2019s the chaos.',
         'rpe': 'Varies wildly: 4\u201310 within a single block',
@@ -3248,7 +3248,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 5min tempo ramp \u2192 3\u00d715min @ 88\u201392% FTP / 5min recovery \u2192 5min tempo \u2192 cool-down',
-        'execution': '45 total minutes in the G-Spot zone. This is the workhorse session for gravel racers who need to hold high power for hours. The third set is where the real adaptation happens \u2014 maintaining form and power when everything wants to quit.',
+        'execution': '45 total minutes in the G-Spot zone. This is the workhorse session for road racers who need to hold high power for hours. The third set is where the real adaptation happens \u2014 maintaining form and power when everything wants to quit.',
         'cadence': '85\u201395rpm throughout \u2014 no grinding, no spinning',
         'position': 'Race position. Practice staying in drops for the full 15 minutes.',
         'rpe': 'Set 1: 6 | Set 2: 7 | Set 3: 7\u20138',
@@ -3274,7 +3274,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 2 sets of 6\u00d72min alternating G-Spot (90%)/Tempo (80%) / 5min recovery \u2192 cool-down',
-        'execution': 'No rest. Just oscillation. 2 minutes hard, 2 minutes moderate, repeat. The tempo blocks aren\u2019t recovery \u2014 they\u2019re active maintenance. Your body never fully recovers, just like mid-race gravel where terrain constantly shifts the effort.',
+        'execution': 'No rest. Just oscillation. 2 minutes hard, 2 minutes moderate, repeat. The tempo blocks aren\u2019t recovery \u2014 they\u2019re active maintenance. Your body never fully recovers, just like mid-race road racing where terrain constantly shifts the effort.',
         'cadence': 'G-Spot: 90rpm | Tempo: 85rpm \u2014 rhythm changes every 2 minutes',
         'position': 'G-Spot: drops | Tempo: hoods. Practice transitions.',
         'rpe': 'G-Spot: 6\u20137 | Tempo: 5\u20136 | The cumulative effect hits by set 2',
@@ -3332,7 +3332,7 @@ WORKOUT_SHOWCASE = {
     },
     'Terrain Microbursts': {
         'duration': '50min',
-        'summary': '15-second microbursts every 45 seconds \u2014 the relentless terrain-driven surges of gravel.',
+        'summary': '15-second microbursts every 45 seconds \u2014 the relentless terrain-driven surges of road racing.',
         'viz': [
             {"z":"z2","w":16,"h":45,"l":"WU 10m"},
             {"z":"z6","w":3,"h":90,"l":"15s"},{"z":"z2","w":4,"h":42,"l":"45s"},
@@ -3346,7 +3346,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":10,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 2 sets of 8\u00d7(15sec @ 150% FTP / 45sec @ 65% FTP) / 5min between sets \u2192 cool-down',
-        'execution': 'Every 60 seconds, EXPLODE. 15 seconds of maximum power \u2014 like hitting a rock garden, a short kicker, or responding to an attack. Then recover just enough to do it again. And again. This is what technical gravel terrain actually feels like: relentless microbursts with incomplete recovery.',
+        'execution': 'Every 60 seconds, EXPLODE. 15 seconds of maximum power \u2014 like hitting a sharp kicker, a false flat, or responding to an attack. Then recover just enough to do it again. And again. This is what technical road race terrain actually feels like: relentless microbursts with incomplete recovery.',
         'cadence': 'Bursts: 100\u2013130rpm (explosive) | Recovery: 85\u201390rpm',
         'position': 'Standing for every burst. Seated for recovery.',
         'rpe': 'Bursts: 9\u201310 | Recovery: 3\u20134 | Cumulative: devastating',
@@ -3392,7 +3392,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":8,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 5\u00d73min @ 108\u2013115% FTP with DECREASING recovery (3-3-3-2-0min) \u2192 cool-down',
-        'execution': 'Each effort chips away at your W\u2019 (anaerobic work capacity). Recovery gets shorter \u2014 by rep 5, there\u2019s no rest at all. The final effort with a depleted W\u2019 is the moment of truth. Can you still produce power when the tank is empty? That\u2019s what decides gravel races.',
+        'execution': 'Each effort chips away at your W\u2019 (anaerobic work capacity). Recovery gets shorter \u2014 by rep 5, there\u2019s no rest at all. The final effort with a depleted W\u2019 is the moment of truth. Can you still produce power when the tank is empty? That\u2019s what decides road races.',
         'cadence': '95\u2013100rpm throughout \u2014 spin, don\u2019t mash when depleted',
         'position': 'Seated for reps 1\u20133. Standing option for reps 4\u20135 when desperate.',
         'rpe': 'Rep 1: 7\u20138 | Rep 3: 8\u20139 | Rep 5: 10 (empty tank effort)',
@@ -3547,7 +3547,7 @@ WORKOUT_SHOWCASE = {
             {"z":"z2","w":10,"h":40,"l":"CD"},
         ],
         'structure': '10min warm-up \u2192 5min ramp to tempo \u2192 45min @ 78\u201385% FTP \u2192 5min ramp down \u2192 cool-down',
-        'execution': '45 unbroken minutes at tempo. No intervals, no recovery, no escape. This builds the muscular endurance for hours of sustained gravel racing. The first 15 minutes feel easy. Minutes 30\u201345 reveal your actual tempo fitness. Hold power. Hold position. Hold focus.',
+        'execution': '45 unbroken minutes at tempo. No intervals, no recovery, no escape. This builds the muscular endurance for hours of sustained road racing. The first 15 minutes feel easy. Minutes 30\u201345 reveal your actual tempo fitness. Hold power. Hold position. Hold focus.',
         'cadence': '85\u201395rpm throughout \u2014 metronomic consistency',
         'position': 'Race position for the full 45 minutes. Practice aero comfort.',
         'rpe': 'Minutes 1\u201315: 5 | Minutes 15\u201330: 5\u20136 | Minutes 30\u201345: 6\u20137',
@@ -3634,7 +3634,7 @@ SHOWCASE_ELIGIBILITY = {
     'Classic Over-Unders': {},
     'Ladder Over-Unders':  {},
 
-    # Gravel_Specific — surging not relevant for ultra
+    # Race_Specific — surging not relevant for ultra
     'Surge and Settle':    {'max_dist': 300},
     'Terrain Microbursts': {'max_dist': 300},
 
@@ -4187,7 +4187,7 @@ def linkify_alternatives(alt_text: str, race_index: list) -> str:
     # Add well-known aliases that differ from display names
     aliases = {
         'Unbound': 'unbound-200',
-        'Unbound Gravel': 'unbound-200',
+        
         'BWR': 'bwr-california',
         'Belgian Waffle Ride': 'bwr-california',
         'Big Sugar': 'big-sugar',
@@ -4437,8 +4437,8 @@ def build_breadcrumb_jsonld(rd: dict, race_index: list) -> dict:
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home",
              "item": SITE_BASE_URL},
-            {"@type": "ListItem", "position": 2, "name": "Gravel Races",
-             "item": f"{SITE_BASE_URL}/gravel-races/"},
+            {"@type": "ListItem", "position": 2, "name": "Road Races",
+             "item": f"{SITE_BASE_URL}/road-races/"},
             {"@type": "ListItem", "position": 3, "name": rd['tier_label'],
              "item": f"{SITE_BASE_URL}/race/tier-{rd['tier']}/"},
             {"@type": "ListItem", "position": 4, "name": rd['name'],
@@ -4494,7 +4494,7 @@ def build_nav_header(rd: dict, race_index: list) -> str:
   <div class="rl-breadcrumb">
     <a href="{SITE_BASE_URL}/">Home</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
-    <a href="{SITE_BASE_URL}/gravel-races/">Gravel Races</a>
+    <a href="{SITE_BASE_URL}/road-races/">Road Races</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
     {_build_breadcrumb_series_segment(rd)}
     <span class="rl-breadcrumb-current">{esc(rd['name'])}</span>
@@ -5386,7 +5386,7 @@ def load_race_data(filepath: Path) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate neo-brutalist landing page HTML for gravel race profiles."
+        description="Generate neo-brutalist landing page HTML for road race profiles."
     )
     parser.add_argument('slug', nargs='?', help='Race slug (e.g., unbound-200)')
     parser.add_argument('--all', action='store_true', help='Generate pages for all races')

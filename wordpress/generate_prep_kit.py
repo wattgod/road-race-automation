@@ -2,7 +2,7 @@
 """
 Generate Race Prep Kit pages — personalized 12-week timeline + race-day checklists.
 
-Reads structured content from guide/gravel-guide-content.json and race profiles
+Reads structured content from guide/road-guide-content.json and race profiles
 from race-data/*.json to produce standalone, print-friendly HTML pages.
 
 Two personalization tiers:
@@ -63,7 +63,7 @@ from generate_guide import (
 # ── Constants ──────────────────────────────────────────────────
 
 GUIDE_DIR = Path(__file__).parent.parent / "guide"
-CONTENT_JSON = GUIDE_DIR / "gravel-guide-content.json"
+CONTENT_JSON = GUIDE_DIR / "road-guide-content.json"
 OUTPUT_DIR = Path(__file__).parent / "output" / "prep-kit"
 WEATHER_DIR = Path(__file__).parent.parent / "data" / "weather"
 QUOTES_DIR = Path(__file__).parent.parent / "data" / "quotes"
@@ -347,7 +347,7 @@ def compute_fueling_estimate(distance_mi) -> Optional[dict]:
         return None
     if distance_mi < 20:
         return None
-    # Conservative average gravel speeds (including mechanicals + stops)
+    # Conservative average road speeds (including mechanicals + stops)
     if distance_mi <= 50:
         avg_mph = 14
     elif distance_mi <= 100:
@@ -401,7 +401,7 @@ def compute_fueling_estimate(distance_mi) -> Optional[dict]:
     }
 
 
-# W/kg reference range for gravel cyclists (module-level for testability)
+# W/kg reference range for road cyclists (module-level for testability)
 WKG_FLOOR = 1.5   # recreational floor — maps to bracket low
 WKG_CEIL = 4.5    # elite ceiling — maps to bracket high
 WKG_EXPONENT = 1.4  # >1 pushes low-W/kg toward floor, steepens high-W/kg gains
@@ -731,7 +731,7 @@ def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
 
 
 # Worker URL for fueling lead intake
-FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
+FUELING_WORKER_URL = "https://fueling-lead-intake.roadgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
 
 
 def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
@@ -1041,8 +1041,8 @@ def build_terrain_emphasis_callout(rd: dict, raw: Optional[dict] = None) -> str:
             )
         else:
             tips.append(
-                "Include off-road skills work every 2 weeks \u2014 practice loose"
-                " gravel descending and rough surface handling"
+                "Include on-road skills work every 2 weeks \u2014 practice loose"
+                " road descending and rough surface handling"
             )
 
     # Elevation — use community insight
@@ -1359,14 +1359,14 @@ def build_pk_logistics(raw: dict, rd: dict) -> str:
 
 # Tire recommendations by terrain category with links to reviews
 # Source: bicyclerollingresistance.com
-BRR_BASE = "https://www.bicyclerollingresistance.com/cx-gravel-reviews"
+BRR_BASE = "https://www.bicyclerollingresistance.com/cx-road-reviews"
 TIRE_RECS_BY_TERRAIN = {
     "fast": {
-        "label": "Fast Gravel (smooth roads, low technicality)",
+        "label": "Fast Road (smooth tarmac, low technicality)",
         "tires": [
             ("Continental Terra Speed 40", f"{BRR_BASE}/continental-terra-speed-40"),
             ("Schwalbe G-One RS 40", f"{BRR_BASE}/schwalbe-g-one-rs"),
-            ("Panaracer GravelKing TLC 40", f"{BRR_BASE}/panaracer-gravel-king"),
+            ("Panaracer RoadKing TLC 40", f"{BRR_BASE}/panaracer-road-king"),
             ("Challenge Getaway Pro 40", f"{BRR_BASE}/challenge-getaway-pro-htlr"),
         ],
     },
@@ -1374,9 +1374,9 @@ TIRE_RECS_BY_TERRAIN = {
         "label": "Mixed Terrain (variable surfaces, moderate technicality)",
         "tires": [
             ("Continental Terra Trail 40", f"{BRR_BASE}/continental-terra-trail"),
-            ("Pirelli Cinturato Gravel M 45", f"{BRR_BASE}/pirelli-gravel-m-45"),
+            ("Pirelli Cinturato Road M 45", f"{BRR_BASE}/pirelli-road-m-45"),
             ("Specialized Pathfinder Pro 42", f"{BRR_BASE}/specialized-pathfinder-pro"),
-            ("Panaracer GravelKing SK 40", f"{BRR_BASE}/panaracer-gravel-king-sk"),
+            ("Panaracer RoadKing SK 40", f"{BRR_BASE}/panaracer-road-king-sk"),
         ],
     },
     "technical": {
@@ -1384,7 +1384,7 @@ TIRE_RECS_BY_TERRAIN = {
         "tires": [
             ("Schwalbe G-One Bite 40", f"{BRR_BASE}/schwalbe-g-one-bite"),
             ("Maxxis Reaver 45", f"{BRR_BASE}/maxxis-reaver-hypr-x"),
-            ("Pirelli Cinturato Gravel S 40", f"{BRR_BASE}/pirelli-gravel-s"),
+            ("Pirelli Cinturato Road S 40", f"{BRR_BASE}/pirelli-road-s"),
             ("WTB Resolute 42", f"{BRR_BASE}/wtb-resolute"),
         ],
     },
@@ -1401,9 +1401,9 @@ TIRE_RECS_BY_TERRAIN = {
         "label": "Mud / Wet Conditions",
         "tires": [
             ("Schwalbe G-One Ultrabite 40", f"{BRR_BASE}/schwalbe-g-one-ultrabite"),
-            ("Tufo Gravel Swampero 44", f"{BRR_BASE}/tufo-gravel-swampero-44"),
+            ("Tufo Road Swampero 44", f"{BRR_BASE}/tufo-road-swampero-44"),
             ("Schwalbe G-One Overland 50", f"{BRR_BASE}/schwalbe-g-one-overland"),
-            ("Pirelli Cinturato Gravel M 45", f"{BRR_BASE}/pirelli-gravel-m-45"),
+            ("Pirelli Cinturato Road M 45", f"{BRR_BASE}/pirelli-road-m-45"),
         ],
     },
 }
@@ -1474,11 +1474,11 @@ def build_tire_recommendation(raw: dict, rd: dict) -> str:
     if tech_rating >= 4:
         tips.append("Run 45mm+ tires for technical terrain confidence and flat protection")
     elif tech_rating >= 3:
-        tips.append("Run 40-45mm tires to balance speed with off-road capability")
+        tips.append("Run 40-45mm tires to balance speed with on-road capability")
     elif tech_rating >= 2:
         tips.append("Run 38-42mm tires \u2014 the course is mostly fast with some rough sections")
     else:
-        tips.append("Run 35-40mm tires \u2014 smooth gravel roads favor speed")
+        tips.append("Run 35-40mm tires \u2014 smooth road roads favor speed")
 
     # Surface-specific advice
     if any(kw in combined for kw in ["limestone", "flint", "sharp", "rocky"]):
@@ -1518,7 +1518,7 @@ def build_tire_recommendation(raw: dict, rd: dict) -> str:
         <ul>{tips_html}</ul>
         <p style="margin:12px 0 4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rl-color-signal-red)">Top Picks for This Course:</p>
         <ul>{tire_links}</ul>
-        <p style="font-size:11px;color:var(--rl-color-secondary-blue);margin:8px 0 0">Rolling resistance data via <a href="https://www.bicyclerollingresistance.com/cx-gravel-reviews" target="_blank" rel="noopener" style="color:var(--rl-color-signal-red)">bicyclerollingresistance.com</a></p>
+        <p style="font-size:11px;color:var(--rl-color-secondary-blue);margin:8px 0 0">Rolling resistance data via <a href="https://www.bicyclerollingresistance.com/cx-road-reviews" target="_blank" rel="noopener" style="color:var(--rl-color-signal-red)">bicyclerollingresistance.com</a></p>
       </div>'''
 
     if not tips:
@@ -2690,7 +2690,7 @@ def build_howto_schema(name: str, slug: str, canonical: str, has_full: bool) -> 
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
-                    {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+                    {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
                     {"@type": "ListItem", "position": 3, "name": name, "item": f"{SITE_BASE_URL}/race/{slug}/"},
                     {"@type": "ListItem", "position": 4, "name": "Prep Kit", "item": canonical},
                 ],
@@ -2826,7 +2826,7 @@ def generate_single(slug: str, data_dirs: list, output_dir: Path,
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate Race Prep Kit pages for gravel race profiles."
+        description="Generate Race Prep Kit pages for road race profiles."
     )
     parser.add_argument("slug", nargs="?", help="Race slug (e.g., unbound-200)")
     parser.add_argument("--all", action="store_true", help="Generate for all races")

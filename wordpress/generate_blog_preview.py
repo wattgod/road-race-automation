@@ -158,14 +158,14 @@ def find_candidates(min_days=30, max_days=120):
 
         days_until = (race_date - today).days
         if min_days <= days_until <= max_days:
-            gravel_god = race.get("fondo_rating", {})
+            fondo_rating_data = race.get("fondo_rating", {})
             candidates.append({
                 "slug": race["_slug"],
                 "name": race.get("name", race["_slug"]),
                 "date": race_date,
                 "days_until": days_until,
-                "tier": gravel_god.get("tier", 4),
-                "score": gravel_god.get("overall_score", 0),
+                "tier": fondo_rating_data.get("tier", 4),
+                "score": fondo_rating_data.get("overall_score", 0),
             })
 
     # Sort: T1 first, then by date proximity
@@ -182,7 +182,7 @@ def generate_preview_html(slug):
 
     name = rd.get("name", slug)
     vitals = rd.get("vitals", {})
-    gravel_god = rd.get("fondo_rating", {})
+    fondo_rating_data = rd.get("fondo_rating", {})
     biased = rd.get("biased_opinion", {})
     final_verdict = rd.get("final_verdict", {})
     course_desc = rd.get("course_description", {})
@@ -190,8 +190,8 @@ def generate_preview_html(slug):
     logistics = rd.get("logistics", {})
     non_negotiables = rd.get("non_negotiables", [])
 
-    tier = gravel_god.get("tier", 4)
-    score = gravel_god.get("overall_score", 0)
+    tier = fondo_rating_data.get("tier", 4)
+    score = fondo_rating_data.get("overall_score", 0)
     tier_name = TIER_NAMES.get(tier, "Grassroots")
     location = vitals.get("location", "") or vitals.get("location_badge", "")
     date_str = vitals.get("date_specific", "") or vitals.get("date", "")
@@ -372,7 +372,7 @@ def generate_preview_html(slug):
   <title>{esc(name)} Race Preview — Roadie Labs</title>
   <meta name="description" content="Everything you need to know about {esc(name)}: course preview, key stats, training tips, and registration info. Tier {tier} {tier_name} rated {score}/100.">
   <meta property="og:title" content="{esc(name)} Race Preview — Roadie Labs">
-  <meta property="og:description" content="Tier {tier} {tier_name} gravel race. {esc(location)}. Rated {score}/100.">
+  <meta property="og:description" content="Tier {tier} {tier_name} road race. {esc(location)}. Rated {score}/100.">
   <meta property="og:image" content="{og_image_url}">
   <meta property="og:url" content="{SITE_URL}/blog/{slug}/">
   <link rel="canonical" href="{SITE_URL}/blog/{slug}/">

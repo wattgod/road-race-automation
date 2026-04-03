@@ -80,7 +80,7 @@ DELIVERABLES = [
         "Structured Workouts on Your Device",
         "Every workout drops directly into TrainingPeaks, Zwift, Wahoo, "
         "or any platform that reads .zwo files. Power targets, cadence "
-        "prescriptions (high RPM for efficiency, low RPM for gravel grinding), "
+        "prescriptions (high RPM for efficiency, low RPM for climbing), "
         "riding position cues (drops, hoods, standing), and durability efforts "
         "that simulate late-race fatigue. These dimensions change the stimulus "
         "even at identical power zones &mdash; because racing isn&rsquo;t just about "
@@ -156,7 +156,7 @@ SAMPLE_WEEK_BLOCKS = [
     {
         "cls": "long-ride",
         "label": "Long<br>Ride<br>3hr",
-        "detail": "Endurance ride with late-ride race-pace efforts &mdash; durability work. 2.5hrs zone 2, then 2x10min at threshold in the drops at 55rpm. Practices holding power on tired legs in an aero position at low cadence &mdash; exactly what gravel racing demands. Fueling targets included.",
+        "detail": "Endurance ride with late-ride race-pace efforts &mdash; durability work. 2.5hrs zone 2, then 2x10min at threshold in the drops at 55rpm. Practices holding power on tired legs in an aero position at low cadence &mdash; exactly what road racing demands. Fueling targets included.",
         "structure": '[{"z":"z2","w":40,"h":48,"l":"Z2 2.5hrs"},{"z":"z3","w":5,"h":58,"l":""},{"z":"z4","w":10,"h":72,"l":"10m @FTP"},{"z":"z2","w":5,"h":40,"l":"5m"},{"z":"z4","w":10,"h":74,"l":"10m @FTP"},{"z":"z2","w":8,"h":40,"l":"CD"}]',
         "meta": "88-100% FTP (late ride) | 55rpm | Drops",
     },
@@ -171,7 +171,7 @@ REALITY_CHECKS = [
     "You downloaded a 12-week plan from the internet. It assumed you had 15 hours a week and zero injuries. How'd that go?",
     "Your buddy's training plan worked great. For your buddy. You're not your buddy.",
     "A 50-year-old with 5 hours needs fundamentally different training than a 28-year-old with 15. Different hours demand different science.",
-    "You know what a generic plan does at mile 80 of Unbound? Nothing. Because it doesn't know you're at Unbound.",
+    "You know what a generic plan does at km 150 of L'Etape? Nothing. Because it doesn't know you're climbing the Tourmalet.",
     "Every training plan is a bet. Most plans are betting you're a 25-year-old with unlimited time and perfect recovery. Are you?",
     "The plan said 'tempo ride, 2 hours.' You had 45 minutes before school pickup. So you skipped it. Then you skipped Tuesday too.",
     "Your FTP is 230. Your plan was written for someone with an FTP of 300. You've been training in the wrong zones for 8 weeks.",
@@ -179,10 +179,10 @@ REALITY_CHECKS = [
     "Nutrition plan: 'eat 60g carbs per hour.' At what elevation? In what heat? For what distance? Details matter. Vague advice kills races.",
     "Your strength training is whatever YouTube recommended this week. Your left hip flexor has an opinion about that.",
     "Rest days aren't lazy. They're where adaptation happens. Your plan should know which ones are strategic and which ones are panic.",
-    "You're training for a 100-mile gravel race with a plan designed for 40km road crits. The specificity isn't there.",
-    "Three hours a week can build you for a gravel century. But not with a plan that wastes two of them on junk miles.",
+    "You're training for a 200km gran fondo with a plan designed for 40km time trials. The specificity isn't there.",
+    "Three hours a week can build you for a gran fondo. But not with a plan that wastes two of them on junk miles.",
     "You told your last plan about your bad knee. It gave you plyometrics in week 3.",
-    "Heat kills more gravel races than fitness. If your plan doesn't have an acclimatization protocol, it's not a plan. It's a wish.",
+    "Heat kills more gran fondos than fitness. If your plan doesn't have an acclimatization protocol, it's not a plan. It's a wish.",
     "You tapered for 3 weeks because 'that's what the article said.' You lost fitness. Race day felt flat. Taper length is individual.",
     "Your race starts at 7,000 feet. Your plan was written at sea level. That's a different sport and nobody told you.",
     "Training without power zones is like cooking without measurements. You can do it. It's just worse.",
@@ -336,16 +336,16 @@ def build_honest_check() -> str:
 def build_testimonials() -> str:
     testimonials = [
         (
-            "I finished Mid-South 45 minutes faster than last year. The plan accounted for my 6-hour work weeks and bad left knee. Nothing else I tried did that.",
-            "Jason R.", "Mid-South 2025",
+            "I finished L'Etape du Tour 45 minutes faster than last year. The plan accounted for my 6-hour work weeks and bad left knee. Nothing else I tried did that.",
+            "Jason R.", "L'Etape du Tour 2025",
         ),
         (
-            "First gravel century. The fueling plan alone saved me. I watched people bonk at mile 60 while I was eating exactly what my plan said to eat.",
-            "Sarah M.", "Unbound 100 2025",
+            "First gran fondo. The fueling plan alone saved me. I watched people bonk at mile 60 while I was eating exactly what my plan said to eat.",
+            "Sarah M.", "Mallorca 312 2025",
         ),
         (
-            "I have 5 hours a week and two kids. Every session in this plan mattered. No junk miles. Finished Big Sugar strong for the first time ever.",
-            "Mark D.", "Big Sugar 2025",
+            "I have 5 hours a week and two kids. Every session in this plan mattered. No junk miles. Finished Maratona dles Dolomites strong for the first time ever.",
+            "Mark D.", "Maratona 2025",
         ),
     ]
     cards = ""
@@ -1360,7 +1360,7 @@ def build_jsonld() -> str:
 {{
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Custom Gravel Training Plan",
+  "name": "Custom Road Racing Training Plan",
   "description": "Race-specific training plan built from your schedule, fitness, and target event. Includes structured workouts, training guide, nutrition plan, strength program, and heat/altitude protocols.",
   "brand": {{
     "@type": "Organization",
@@ -1409,7 +1409,7 @@ def generate_training_page(external_assets: dict = None) -> str:
         inline_js = build_inline_js()
 
     meta_desc = (
-        "Gravel training plans built for your goal race. 16-week periodized "
+        "Road racing training plans built for your goal race. 16-week periodized "
         "programs with race-specific prep. Data-driven. From $15/week."
     )
 
@@ -1433,7 +1433,7 @@ def generate_training_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravel Training Plans | Roadie Labs</title>
+  <title>Road Racing Training Plans | Roadie Labs</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">

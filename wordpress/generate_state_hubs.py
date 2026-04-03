@@ -2,9 +2,9 @@
 """
 Generate state/region hub pages for SEO.
 
-Creates /race/best-gravel-races-{state-slug}/index.html for every state or
-country with 3+ races. Targets queries like "best gravel races in Colorado",
-"gravel races Michigan", "gravel cycling California".
+Creates /race/best-road-races-{state-slug}/index.html for every state or
+country with 3+ races. Targets queries like "best road races in Colorado",
+"road races Michigan", "road cycling California".
 
 Each page includes:
   - Race cards sorted by score
@@ -100,21 +100,21 @@ def _slugify(name: str) -> str:
 
 
 def _discipline_label(races: list) -> str:
-    """Return 'Gravel', 'Road', or 'Cycling' based on discipline mix.
+    """Return 'Road', 'Gran Fondo', or 'Cycling' based on discipline mix.
 
-    - >= 70% gravel → 'Gravel'
-    - >= 70% road → 'Road & Gravel'
+    - >= 70% gran_fondo → 'Gran Fondo'
+    - >= 70% road → 'Road'
     - mixed → 'Cycling'
     """
     total = len(races)
     if total == 0:
         return "Cycling"
-    gravel = sum(1 for r in races if r.get("discipline") == "gravel")
     road = sum(1 for r in races if r.get("discipline") == "road")
-    if gravel / total >= 0.7:
-        return "Gravel"
+    road = sum(1 for r in races if r.get("discipline") == "road")
     if road / total >= 0.7:
-        return "Road & Gravel"
+        return "Gran Fondo"
+    if road / total >= 0.7:
+        return "Road"
     return "Cycling"
 
 
@@ -306,7 +306,7 @@ def build_race_cards(races: list) -> str:
 
 # ── FAQ ──────────────────────────────────────────────────────────
 
-def build_faq(state: str, races: list, disc_label: str = "Gravel") -> tuple:
+def build_faq(state: str, races: list, disc_label: str = "Road") -> tuple:
     """Build FAQ HTML + JSON-LD. Returns (html, jsonld)."""
     total = len(races)
     t1 = [r for r in races if r.get("tier") == 1]
@@ -388,7 +388,7 @@ def build_faq(state: str, races: list, disc_label: str = "Gravel") -> tuple:
 def build_state_page(state: str, races: list, total_races: int) -> str:
     """Generate a complete state hub page."""
     slug = _slugify(state)
-    page_slug = f"best-gravel-races-{slug}"
+    page_slug = f"best-road-races-{slug}"
     canonical = f"{SITE_BASE_URL}/race/{page_slug}/"
 
     is_us_state = state in US_STATES
@@ -429,7 +429,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
-            {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+            {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
             {"@type": "ListItem", "position": 3, "name": f"Best in {state}", "item": canonical},
         ],
     }, ensure_ascii=False, indent=2)
@@ -796,7 +796,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-state-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/gravel-races/">Gravel Races</a> &rsaquo; {esc(state)}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; {esc(state)}
   </div>
 
   <section class="rl-state-hero">
@@ -820,14 +820,14 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 
   <section class="rl-state-cta">
     <h2>Racing in {esc(state)}?</h2>
-    <p>Get a personalized training plan for any {esc(state)} gravel race — tailored to your fitness, schedule, and goals.</p>
+    <p>Get a personalized training plan for any {esc(state)} road race — tailored to your fitness, schedule, and goals.</p>
     <a href="/questionnaire/" class="rl-state-cta-btn">Build My Plan</a>
     <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">$15/week, capped at $249. One-time payment.</p>
   </section>
 
   <footer class="rl-state-footer">
     <a href="/">Roadie Labs</a> &middot; {total_races} races rated &middot;
-    <a href="/gravel-races/">Search All</a> &middot;
+    <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>
 
@@ -862,7 +862,7 @@ def main():
     generated = 0
     for state, races in sorted(state_groups.items(), key=lambda x: -len(x[1])):
         slug = _slugify(state)
-        page_slug = f"best-gravel-races-{slug}"
+        page_slug = f"best-road-races-{slug}"
         page_dir = output_dir / page_slug
         page_dir.mkdir(parents=True, exist_ok=True)
 

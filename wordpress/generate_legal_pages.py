@@ -96,7 +96,7 @@ def get_privacy_content() -> str:
 def get_terms_content() -> str:
     return f"""
 <h2>Services</h2>
-<p>{SITE_NAME} provides gravel cycling race information, custom training plans, coaching services, and consulting. All services are provided by Matti Rowe as a sole proprietor.</p>
+<p>{SITE_NAME} provides road cycling race information, custom training plans, coaching services, and consulting. All services are provided by Matti Rowe as a sole proprietor.</p>
 
 <h2>Race Information</h2>
 <p>Race profiles, ratings, and course descriptions on this site are editorial content based on publicly available information and community research. They are not affiliated with, endorsed by, or officially connected to any race organizer or governing body. Race details change &mdash; always verify with official race sources before making travel or registration decisions.</p>

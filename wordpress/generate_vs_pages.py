@@ -459,7 +459,7 @@ def build_faq(race_a: dict, race_b: dict) -> tuple:
     beginner = name_a if access_a >= access_b else name_b
     pairs.append((
         f"Which is better for beginners, {name_a} or {name_b}?",
-        f"{beginner} is generally more accessible for first-time gravel racers, "
+        f"{beginner} is generally more accessible for first-time road racers, "
         f"factoring in distance, technicality, and logistical ease. "
         f"Check each race's full profile for distance options and beginner-specific advice."
     ))
@@ -583,7 +583,7 @@ def build_vs_page(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
-            {"@type": "ListItem", "position": 2, "name": "Gravel Races", "item": f"{SITE_BASE_URL}/gravel-races/"},
+            {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
             {"@type": "ListItem", "position": 3, "name": f"{name_a} vs {name_b}", "item": canonical},
         ],
     }, ensure_ascii=False, indent=2)
@@ -949,7 +949,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-vs-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/gravel-races/">Gravel Races</a> &rsaquo; {esc(name_a)} vs {esc(name_b)}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; {esc(name_a)} vs {esc(name_b)}
   </div>
 
   <section class="rl-vs-hero">
@@ -999,7 +999,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 
   <footer class="rl-vs-footer">
     <a href="/">Roadie Labs</a> &middot;
-    <a href="/gravel-races/">Search All Races</a> &middot;
+    <a href="/road-races/">Search All Races</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>
 

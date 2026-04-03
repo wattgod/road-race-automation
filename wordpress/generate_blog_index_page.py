@@ -82,7 +82,7 @@ def generate_blog_index_page(output_dir=None):
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Roadie Labs Blog",
-        "description": "Race previews, season roundups, and race recaps from the Roadie Labs gravel race database.",
+        "description": "Race previews, season roundups, and race recaps from the Roadie Labs road race database.",
         "url": f"{SITE_URL}/blog/",
         "publisher": {
             "@type": "Organization",
@@ -97,9 +97,9 @@ def generate_blog_index_page(output_dir=None):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roadie Labs Blog — Race Previews, Roundups &amp; Recaps</title>
-  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs gravel race database. 328 races rated and ranked.">
+  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs road race database. 328 races rated and ranked.">
   <meta property="og:title" content="Roadie Labs Blog — Race Previews, Roundups &amp; Recaps">
-  <meta property="og:description" content="Race previews, season roundups, and race recaps. 328 gravel races rated and ranked.">
+  <meta property="og:description" content="Race previews, season roundups, and race recaps. 328 road races rated and ranked.">
   <meta property="og:url" content="{SITE_URL}/blog/">
   <link rel="canonical" href="{SITE_URL}/blog/">
   <script type="application/ld+json">{jsonld}</script>
@@ -342,7 +342,7 @@ def generate_blog_index_page(output_dir=None):
 
     <div class="rl-bi-footer">
       <a href="{SITE_URL}">Roadie Labs</a> &middot;
-      <a href="{SITE_URL}/gravel-races/">Race Database</a> &middot;
+      <a href="{SITE_URL}/road-races/">Race Database</a> &middot;
       {today_str}
     </div>
   </div>

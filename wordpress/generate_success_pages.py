@@ -341,9 +341,9 @@ def build_coaching_success() -> str:
     crosssell = f"""
   <div class="rl-success-crosssell">
     <h2>While You Wait</h2>
-    <p>Browse 328 gravel race profiles with course intel, tier ratings,
+    <p>Browse 328 road race profiles with course intel, tier ratings,
     and free prep kits for every race in the database.</p>
-    <a href="{SITE_BASE_URL}/gravel-races/" class="rl-success-cta">EXPLORE RACES</a>
+    <a href="{SITE_BASE_URL}/road-races/" class="rl-success-cta">EXPLORE RACES</a>
   </div>"""
 
     support = f"""

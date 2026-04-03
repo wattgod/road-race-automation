@@ -167,7 +167,7 @@ def build_section_2_goals() -> str:
       <div id="race-details" class="rl-apply-conditional">
         <div class="rl-apply-group">
           <label class="rl-apply-label" for="race_list">List your race(s) <span class="rl-apply-required">*</span></label>
-          <textarea id="race_list" name="race_list" placeholder="e.g., Unbound 200 (June 7, 2026) - A priority&#10;Mid South (March 14, 2026) - B priority&#10;Local gravel race (April 5) - C priority" rows="3"></textarea>
+          <textarea id="race_list" name="race_list" placeholder="e.g., L'Etape du Tour (July 2026) - A priority&#10;Mallorca 312 (April 2026) - B priority&#10;Local gran fondo (May 2026) - C priority" rows="3"></textarea>
           <div class="rl-apply-help">Include name, date, and priority (A = main goal, B = important, C = fun/training)</div>
         </div>
         <div class="rl-apply-group">
@@ -817,7 +817,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Coaching Application | Roadie Labs",
-        "description": "Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference.",
+        "description": "Apply for personalized road cycling coaching. 12-section athlete intake with blindspot inference.",
         "url": f"{SITE_BASE_URL}/coaching/apply/",
         "isPartOf": {
             "@type": "WebSite",
@@ -1784,11 +1784,11 @@ def generate_apply_page(external_assets=None):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coaching Application | Roadie Labs</title>
-  <meta name="description" content="Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
+  <meta name="description" content="Apply for personalized road cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="{SITE_BASE_URL}/coaching/apply/">
   <meta property="og:title" content="Coaching Application | Roadie Labs">
-  <meta property="og:description" content="Apply for personalized gravel cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
+  <meta property="og:description" content="Apply for personalized road cycling coaching. 12-section athlete intake with blindspot inference, W/kg calculator, and save/resume.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{SITE_BASE_URL}/coaching/apply/">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">

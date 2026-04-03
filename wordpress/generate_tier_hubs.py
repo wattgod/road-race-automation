@@ -3,8 +3,8 @@
 Generate tier hub landing pages for SEO.
 
 Creates 4 static pages at /race/tier-{1..4}/index.html with all races
-in that tier. Targets "best gravel races", "bucket list gravel events",
-"regional gravel races" type queries.
+in that tier. Targets "best road races", "bucket list road events",
+"regional road races" type queries.
 
 Usage:
     python wordpress/generate_tier_hubs.py
@@ -28,26 +28,26 @@ TIER_META = {
     1: {
         "name": "Elite",
         "slug": "tier-1",
-        "title": "The 25 Best Gravel Races in the World | Roadie Labs",
+        "title": "The 25 Best Road Races in the World | Roadie Labs",
         "h1": "Tier 1 — The Icons",
-        "description": "The definitive gravel events. World-class fields, iconic courses, "
+        "description": "The definitive road events. World-class fields, iconic courses, "
                        "and bucket-list status. These 25 races define the sport.",
         "intro": (
-            "These are the races that define gravel cycling. Every Tier 1 event has earned "
+            "These are the races that define road cycling. Every Tier 1 event has earned "
             "its place through a combination of world-class competition, iconic terrain, "
             "deep community, and a reputation that transcends the sport. If you only race "
-            "gravel a few times in your life, start here."
+            "road a few times in your life, start here."
         ),
     },
     2: {
         "name": "Contender",
         "slug": "tier-2",
-        "title": "73 Must-Do Gravel Races | Contender Tier | Roadie Labs",
+        "title": "73 Must-Do Road Races | Contender Tier | Roadie Labs",
         "h1": "Tier 2 — The Contenders",
-        "description": "Established gravel races with strong reputations and competitive fields. "
-                       "The next tier of must-do events for serious gravel riders.",
+        "description": "Established road races with strong reputations and competitive fields. "
+                       "The next tier of must-do events for serious road riders.",
         "intro": (
-            "Contender-tier races are the backbone of competitive gravel. Each one brings "
+            "Contender-tier races are the backbone of competitive road. Each one brings "
             "something distinctive — whether it's a legendary climb, a grassroots-to-big-time "
             "origin story, or a course that punches well above its profile. These are the races "
             "that regulars swear by and newcomers discover with delight."
@@ -56,13 +56,13 @@ TIER_META = {
     3: {
         "name": "Solid",
         "slug": "tier-3",
-        "title": "Regional Gravel Favorites | Solid Tier | Roadie Labs",
+        "title": "Regional Road Favorites | Solid Tier | Roadie Labs",
         "h1": "Tier 3 — Regional Favorites",
-        "description": "Strong local scenes, genuine gravel character. Regional favorites "
+        "description": "Strong local scenes, genuine road character. Regional favorites "
                        "and emerging races worth the entry fee.",
         "intro": (
-            "The Solid tier is where gravel gets personal. These are the races your local "
-            "riding crew talks about all winter — the events that define a region's gravel "
+            "The Solid tier is where road gets personal. These are the races your local "
+            "riding crew talks about all winter — the events that define a region's road "
             "identity. Smaller fields, raw courses, and the kind of post-race camaraderie "
             "that only happens when everyone shares the same mud-caked suffering."
         ),
@@ -70,15 +70,15 @@ TIER_META = {
     4: {
         "name": "Roster",
         "slug": "tier-4",
-        "title": "Grassroots Gravel Events | Roster Tier | Roadie Labs",
-        "h1": "Tier 4 — Grassroots Gravel",
+        "title": "Grassroots Road Events | Roster Tier | Roadie Labs",
+        "h1": "Tier 4 — Grassroots Road Racing",
         "description": "Up-and-coming races and local grinders. Small fields, raw vibes, "
                        "and the future of the sport.",
         "intro": (
             "Every iconic race started somewhere. Tier 4 is the proving ground — the events "
             "where a handful of riders show up because someone with a Garmin and a dream "
             "mapped out a route. Low entry fees, zero pretense, and the purest expression "
-            "of what gravel riding was always about."
+            "of what road riding was always about."
         ),
     },
 }
@@ -203,8 +203,8 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
       {{
         "@type": "ListItem",
         "position": 2,
-        "name": "Gravel Races",
-        "item": "https://roadielabs.com/gravel-races/"
+        "name": "Road Races",
+        "item": "https://roadielabs.com/road-races/"
       }},
       {{
         "@type": "ListItem",
@@ -441,7 +441,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   {get_site_header_html(active="races")}
 
   <div class="rl-hub-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/gravel-races/">Gravel Races</a> &rsaquo; {esc(meta["name"])}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; {esc(meta["name"])}
   </div>
 
   <div class="rl-hub-tier-nav">
@@ -462,7 +462,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 
   <footer class="rl-hub-footer">
     <a href="/">Roadie Labs</a> &middot; {len(all_races)} races rated &middot;
-    <a href="/gravel-races/">Search All</a> &middot;
+    <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a>
   </footer>
 

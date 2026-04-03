@@ -43,7 +43,7 @@ def build_nav() -> str:
   <div class="rl-breadcrumb">
     <a href="{SITE_BASE_URL}/">Home</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
-    <a href="{SITE_BASE_URL}/gravel-races/">Gravel Races</a>
+    <a href="{SITE_BASE_URL}/road-races/">Road Races</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
     <span class="rl-breadcrumb-current">Methodology</span>
   </div>'''
@@ -52,7 +52,7 @@ def build_nav() -> str:
 def build_hero() -> str:
     return '''<div class="rl-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-signal-red)">METHODOLOGY</div>
-    <h1 data-text="How We Rate Gravel Races">How We Rate Gravel Races</h1>
+    <h1 data-text="How We Rate Road Races">How We Rate Road Races</h1>
     <p class="rl-hero-tagline">Every race in our database is scored across 15 dimensions by human editors. No algorithms. No sponsors. No pay-to-play. Here&#39;s exactly how it works.</p>
   </div>'''
 
@@ -75,7 +75,7 @@ def build_tier_system() -> str:
             <td><span style="display:inline-block;padding:2px 10px;background:#000;color:#fff;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 1</span></td>
             <td style="font-weight:700">The Icons</td>
             <td>&ge; 80</td>
-            <td>The definitive gravel events. World-class fields, iconic courses, bucket-list status.</td>
+            <td>The definitive road events. World-class fields, iconic courses, bucket-list status.</td>
             <td><a href="{SITE_BASE_URL}/race/unbound-200/" style="color:var(--rl-color-signal-red);font-weight:700">Unbound 200</a></td>
           </tr>
           <tr>
@@ -89,15 +89,15 @@ def build_tier_system() -> str:
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-secondary-blue);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #666">TIER 3</span></td>
             <td style="font-weight:700">Solid</td>
             <td>&ge; 45</td>
-            <td>Regional favorites and emerging races. Strong local scenes, genuine gravel character.</td>
+            <td>Regional favorites and emerging races. Strong local scenes, genuine road racing character.</td>
             <td><a href="{SITE_BASE_URL}/race/rooted-vermont/" style="color:var(--rl-color-signal-red);font-weight:700">Rooted Vermont</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#5e6868;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #5e6868">TIER 4</span></td>
             <td style="font-weight:700">Grassroots</td>
             <td>&lt; 45</td>
-            <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots gravel.</td>
-            <td><a href="{SITE_BASE_URL}/race/114-gravel-race/" style="color:var(--rl-color-signal-red);font-weight:700">114 Gravel Race</a></td>
+            <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots road racing.</td>
+            <td><a href="{SITE_BASE_URL}/race/114-road-race/" style="color:var(--rl-color-signal-red);font-weight:700">114 Road Race</a></td>
           </tr>
         </tbody>
       </table>
@@ -108,7 +108,7 @@ def build_tier_system() -> str:
 def build_dimensions() -> str:
     course_rows = '''
           <tr><td style="font-weight:700">Length</td><td>&lt;40 mi</td><td>40-60 mi</td><td>60-100 mi</td><td>100-150 mi</td><td>150+ mi</td></tr>
-          <tr><td style="font-weight:700">Technicality</td><td>Smooth gravel</td><td>Some rough</td><td>Mixed terrain</td><td>Technical descents</td><td>Singletrack / extreme</td></tr>
+          <tr><td style="font-weight:700">Technicality</td><td>Flat roads</td><td>Some rough</td><td>Mixed terrain</td><td>Technical descents</td><td>Mountain passes / extreme</td></tr>
           <tr><td style="font-weight:700">Elevation</td><td>&lt;2,000 ft</td><td>2-4K ft</td><td>4-6K ft</td><td>6-10K ft</td><td>10,000+ ft</td></tr>
           <tr><td style="font-weight:700">Climate</td><td>Mild / ideal</td><td>Slightly hard</td><td>Moderate</td><td>Significant</td><td>Extreme</td></tr>
           <tr><td style="font-weight:700">Altitude</td><td>Sea level</td><td>&lt;3,000 ft</td><td>3-6K ft</td><td>6-9K ft</td><td>9,000+ ft</td></tr>
@@ -164,7 +164,7 @@ def build_dimensions() -> str:
           <tr><th>Score</th><th>Level</th><th>Criteria</th></tr>
         </thead>
         <tbody>
-          <tr><td style="font-weight:700">5</td><td>Global Icon</td><td>Defines gravel cycling. 2,000+ riders, massive media, cultural landmark.</td></tr>
+          <tr><td style="font-weight:700">5</td><td>Global Icon</td><td>Defines road cycling. 2,000+ riders, massive media, cultural landmark.</td></tr>
           <tr><td style="font-weight:700">4</td><td>Major International</td><td>1,000+ riders, significant international draw, strong media presence.</td></tr>
           <tr><td style="font-weight:700">3</td><td>Notable National</td><td>Nationally recognized, growing media, strong regional significance.</td></tr>
           <tr><td style="font-weight:700">2</td><td>Established Regional</td><td>Quality event with dedicated following, limited broader footprint.</td></tr>
@@ -254,8 +254,8 @@ def build_faq() -> str:
          "We review scores annually before each race season and make ad-hoc updates when significant changes occur (new ownership, course redesign, series affiliation changes). All changes are logged in the race profile."),
         ("Why isn&#39;t my favorite race rated higher?",
          "Our rubric prioritizes consistency. A race might be incredible for a specific niche but score lower on logistics, field depth, or global prestige. The scoring breakdown shows exactly where a race excels and where it loses points &mdash; check the full profile for details."),
-        ("What about mountain bike and bikepacking races?",
-         "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance bikepacking races (like Tour Divide and Transcontinental) that are culturally significant to the gravel community. These are tagged with &ldquo;MTB&rdquo; or &ldquo;Bikepacking&rdquo; discipline labels so they&#39;re clearly identified. The same scoring rubric applies."),
+        ("What about mountain bike and multi-stage races?",
+         "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with &ldquo;MTB&rdquo; or &ldquo;Bikepacking&rdquo; discipline labels so they&#39;re clearly identified. The same scoring rubric applies."),
     ]
 
     items = ""
@@ -334,7 +334,7 @@ def build_jsonld() -> str:
     webpage = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "How We Rate Gravel Races — Roadie Labs Methodology",
+        "name": "How We Rate Road Races — Roadie Labs Methodology",
         "description": "The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.",
         "url": f"{SITE_BASE_URL}/race/methodology/",
         "isPartOf": {
@@ -385,10 +385,10 @@ def build_jsonld() -> str:
             },
             {
                 "@type": "Question",
-                "name": "What about mountain bike and bikepacking races?",
+                "name": "What about mountain bike and multi-stage races?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance bikepacking races (like Tour Divide and Transcontinental) that are culturally significant to the gravel community. These are tagged with MTB or Bikepacking discipline labels. The same 15-dimension rubric applies.",
+                    "text": "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with MTB or Bikepacking discipline labels. The same 15-dimension rubric applies.",
                 },
             },
         ],
@@ -422,7 +422,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    og_tags = f'''<meta property="og:title" content="How We Rate Gravel Races — Roadie Labs Methodology">
+    og_tags = f'''<meta property="og:title" content="How We Rate Road Races — Roadie Labs Methodology">
   <meta property="og:description" content="The complete scoring methodology behind Roadie Labs race ratings.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{esc(canonical_url)}">
@@ -431,7 +431,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How We Rate Gravel Races — Roadie Labs Methodology">
+  <meta name="twitter:title" content="How We Rate Road Races — Roadie Labs Methodology">
   <meta name="twitter:description" content="15 dimensions, 4 tiers, transparent formula. Here&#39;s how Roadie Labs scores every race.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
@@ -442,7 +442,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How We Rate Gravel Races — Roadie Labs Methodology</title>
+  <title>How We Rate Road Races — Roadie Labs Methodology</title>
   <meta name="description" content="The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
