@@ -21,7 +21,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 EMBED_DIR = PROJECT_ROOT / "web" / "embed"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 
 
 def generate_embed_data():
@@ -57,24 +57,24 @@ def generate_embed_js():
     """Generate the self-contained embed widget JavaScript."""
     return r"""(function(){
   "use strict";
-  var SITE="https://roadlabs.cc";
+  var SITE="https://roadielabs.com";
   var DATA_URL=SITE+"/embed/embed-data.json";
   var CSS=`
-.rl-embed-card{font-family:'Sometype Mono',ui-monospace,monospace;border:3px solid #3a2e25;background:#f5efe6;padding:14px 16px;max-width:340px;color:#3a2e25;line-height:1.4;box-sizing:border-box}
+.rl-embed-card{font-family:'Sometype Mono',ui-monospace,monospace;border:3px solid #1a1a1a;background:#f5f5f0;padding:14px 16px;max-width:340px;color:#1a1a1a;line-height:1.4;box-sizing:border-box}
 .rl-embed-card *{box-sizing:border-box;margin:0;padding:0;border-radius:0}
 .rl-embed-card a{color:inherit;text-decoration:none}
 .rl-embed-card a:hover{text-decoration:underline}
 .rl-embed-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px}
 .rl-embed-name{font-size:14px;font-weight:700;flex:1}
 .rl-embed-tier{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;color:#fff;letter-spacing:1px;white-space:nowrap}
-.rl-embed-tier-1{background:#59473c}
+.rl-embed-tier-1{background:#555555}
 .rl-embed-tier-2{background:#7d695d}
 .rl-embed-tier-3{background:#766a5e}
 .rl-embed-tier-4{background:#5e6868}
 .rl-embed-score-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
 .rl-embed-score-num{font-size:20px;font-weight:700;min-width:36px}
-.rl-embed-score-bar{flex:1;height:8px;background:#d4c5b9;position:relative}
-.rl-embed-score-fill{position:absolute;top:0;left:0;height:100%;background:#59473c}
+.rl-embed-score-bar{flex:1;height:8px;background:#d0d0c8;position:relative}
+.rl-embed-score-fill{position:absolute;top:0;left:0;height:100%;background:#555555}
 .rl-embed-meta{font-size:11px;color:#7d695d;display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:8px}
 .rl-embed-link{display:block;font-size:11px;font-weight:700;color:#178079;letter-spacing:0.5px}
 .rl-embed-link:hover{text-decoration:underline}
@@ -187,11 +187,11 @@ def generate_demo_html():
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roadie Labs Embed Widget</title>
 <style>
-  body {{ font-family: 'Sometype Mono', ui-monospace, monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #3a2e25; background: #f5efe6; line-height: 1.6; }}
-  h1 {{ font-size: 24px; border-bottom: 3px solid #3a2e25; padding-bottom: 8px; }}
+  body {{ font-family: 'Sometype Mono', ui-monospace, monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; background: #f5f5f0; line-height: 1.6; }}
+  h1 {{ font-size: 24px; border-bottom: 3px solid #1a1a1a; padding-bottom: 8px; }}
   h2 {{ font-size: 18px; margin-top: 32px; }}
-  code {{ background: #ede4d8; padding: 2px 6px; font-size: 13px; }}
-  pre {{ background: #ede4d8; padding: 16px; border: 2px solid #3a2e25; overflow-x: auto; font-size: 13px; line-height: 1.5; }}
+  code {{ background: #f5f5f0; padding: 2px 6px; font-size: 13px; }}
+  pre {{ background: #f5f5f0; padding: 16px; border: 2px solid #1a1a1a; overflow-x: auto; font-size: 13px; line-height: 1.5; }}
   .demo-row {{ display: flex; flex-wrap: wrap; gap: 20px; margin: 20px 0; }}
 </style>
 </head>
@@ -228,7 +228,7 @@ def generate_demo_html():
   <li>The script loads a compact JSON file (~15KB) with all 328 race ratings</li>
   <li>Each badge is rendered client-side with race name, tier, score, location, and date</li>
   <li>Clicking the badge links to the full race profile on Roadie Labs</li>
-  <li>No dependencies, no cookies, no tracking (GA4 event only on roadlabs.cc)</li>
+  <li>No dependencies, no cookies, no tracking (GA4 event only on roadielabs.com)</li>
   <li>Styles are scoped to <code>.rl-embed-card</code> and won't affect your site</li>
 </ul>
 

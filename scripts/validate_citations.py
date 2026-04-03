@@ -29,7 +29,7 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "race-data"
 MAX_CITATIONS = 20
 
 EXCLUDE_DOMAINS = {
-    'roadlabs.cc',
+    'roadielabs.com',
     'google.com', 'google.co.uk', 'goo.gl',
     'bit.ly', 't.co',
     'web.archive.org',

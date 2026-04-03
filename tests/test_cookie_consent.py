@@ -122,12 +122,12 @@ class TestHexParity:
     """Every hex color in the banner must match a tokens.css value."""
 
     EXPECTED_MAPPING = {
-        "#59473c": "rl-color-primary-brown",
+        "#555555": "rl-color-primary-brown",
         "#8c7568": "rl-color-secondary-brown",
-        "#d4c5b9": "rl-color-tan",
+        "#d0d0c8": "rl-color-tan",
         "#1a8a82": "rl-color-teal",
         "#4ecdc4": "rl-color-light-teal",
-        "#b7950b": "rl-color-gold",
+        "#333333": "rl-color-gold",
         "#ffffff": "rl-color-white",
     }
 
@@ -140,19 +140,19 @@ class TestHexParity:
         assert not unknown, f"Hex not in tokens.css: {unknown}"
 
     def test_primary_brown_present(self, css):
-        assert "#59473c" in css
+        assert "#555555" in css
 
     def test_teal_present(self, css):
         assert "#1A8A82".lower() in css.lower()
 
     def test_gold_present(self, css):
-        assert "#B7950B".lower() in css.lower()
+        assert "#333333".lower() in css.lower()
 
     def test_secondary_brown_present(self, css):
         assert "#8c7568" in css
 
     def test_tan_present(self, css):
-        assert "#d4c5b9" in css
+        assert "#d0d0c8" in css
 
     def test_light_teal_present(self, css):
         assert "#4ECDC4".lower() in css.lower()

@@ -35,7 +35,7 @@ from dotenv import load_dotenv  # noqa: E402
 load_dotenv(PROJECT_ROOT / ".env")
 
 CURRENT_DATE = date.today()
-DEFAULT_RECIPIENT = "TODO_ROADLABS_EMAIL"  # TODO: Roadie Labs contact email
+DEFAULT_RECIPIENT = "coach@roadielabs.com"  # TODO: Roadie Labs contact email
 REPORTS_DIR = PROJECT_ROOT / "reports" / "daily"
 
 
@@ -437,7 +437,7 @@ def _not_configured_section(title: str) -> str:
     <tr><td style="padding:20px 32px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">{title}</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#8c7568;padding:12px;border:1px dashed #d4c5b9;">
+        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#8c7568;padding:12px;border:1px dashed #d0d0c8;">
           Not configured. See <code>scripts/daily_report.py</code> for setup instructions.
         </td></tr>
       </table>
@@ -448,7 +448,7 @@ def _metric_cell(label: str, value: str, width: str = "25%") -> str:
     """Render a single metric in the key metrics bar."""
     return f"""<td width="{width}" style="text-align:center;padding:12px 8px;">
           <div style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;">{label}</div>
-          <div style="font-family:Georgia,serif;font-size:22px;color:#3a2e25;padding-top:4px;">{value}</div>
+          <div style="font-family:Georgia,serif;font-size:22px;color:#1a1a1a;padding-top:4px;">{value}</div>
         </td>"""
 
 
@@ -478,10 +478,10 @@ def render_html(data: dict) -> str:
 
     # 1. Header
     sections.append(f"""
-    <tr><td style="background:#3a2e25;padding:24px 32px;">
+    <tr><td style="background:#1a1a1a;padding:24px 32px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#B7950B;">ROADIE LABS</td>
+          <td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#333333;">ROADIE LABS</td>
           <td style="text-align:right;font-family:'Courier New',monospace;font-size:11px;color:#8c7568;">{report_date}</td>
         </tr>
         <tr><td colspan="2" style="font-family:Georgia,serif;font-size:20px;color:#ffffff;padding-top:8px;">Daily Report</td></tr>
@@ -490,7 +490,7 @@ def render_html(data: dict) -> str:
 
     # 2. Key Metrics Bar
     sections.append(f"""
-    <tr><td style="padding:0;border-bottom:2px solid #d4c5b9;">
+    <tr><td style="padding:0;border-bottom:2px solid #d0d0c8;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
           {_metric_cell("Sessions (7d)", sessions_str)}
@@ -505,7 +505,7 @@ def render_html(data: dict) -> str:
     if commentary:
         commentary_html = ""
         for bullet in commentary:
-            commentary_html += f'<tr><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;padding:4px 0 4px 16px;line-height:1.6;">&#8226; {bullet}</td></tr>\n'
+            commentary_html += f'<tr><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;padding:4px 0 4px 16px;line-height:1.6;">&#8226; {bullet}</td></tr>\n'
         sections.append(f"""
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
@@ -519,19 +519,19 @@ def render_html(data: dict) -> str:
         tier_rows = ""
         for tier_key in ["T1", "T2", "T3", "T4"]:
             count = race.get("tier_counts", {}).get(tier_key, 0)
-            tier_rows += f'<tr><td style="font-family:\'Courier New\',monospace;font-size:13px;color:#3a2e25;padding:3px 12px;border-bottom:1px solid #f0ebe3;">{tier_key}</td><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;padding:3px 12px;border-bottom:1px solid #f0ebe3;text-align:right;">{count}</td></tr>\n'
+            tier_rows += f'<tr><td style="font-family:\'Courier New\',monospace;font-size:13px;color:#1a1a1a;padding:3px 12px;border-bottom:1px solid #f0ebe3;">{tier_key}</td><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;padding:3px 12px;border-bottom:1px solid #f0ebe3;text-align:right;">{count}</td></tr>\n'
 
         upcoming_html = ""
         for r in race.get("upcoming_races", []):
-            upcoming_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding:2px 0;">{r.get("name", r.get("slug", ""))}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">T{r.get("tier", "?")}</td></tr>\n'
+            upcoming_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding:2px 0;">{r.get("name", r.get("slug", ""))}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">T{r.get("tier", "?")}</td></tr>\n'
 
         sections.append(f"""
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">Race Database — {race.get("total", 0)} Races</td></tr>
         <tr><td>
-          <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d4c5b9;">
-            <tr><td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;color:#8c7568;padding:6px 12px;border-bottom:2px solid #d4c5b9;">Tier</td><td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;color:#8c7568;padding:6px 12px;border-bottom:2px solid #d4c5b9;text-align:right;">Count</td></tr>
+          <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d0d0c8;">
+            <tr><td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;color:#8c7568;padding:6px 12px;border-bottom:2px solid #d0d0c8;">Tier</td><td style="font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;color:#8c7568;padding:6px 12px;border-bottom:2px solid #d0d0c8;text-align:right;">Count</td></tr>
             {tier_rows}
           </table>
         </td></tr>
@@ -544,7 +544,7 @@ def render_html(data: dict) -> str:
     if not blog.get("error"):
         cat_rows = ""
         for cat, count in blog.get("categories", {}).items():
-            cat_rows += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding:2px 0;">{cat}</td><td style="font-family:\'Courier New\',monospace;font-size:13px;color:#3a2e25;text-align:right;padding:2px 0;">{count}</td></tr>\n'
+            cat_rows += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding:2px 0;">{cat}</td><td style="font-family:\'Courier New\',monospace;font-size:13px;color:#1a1a1a;text-align:right;padding:2px 0;">{count}</td></tr>\n'
 
         sections.append(f"""
     <tr><td style="padding:20px 32px 12px;">
@@ -566,17 +566,17 @@ def render_html(data: dict) -> str:
 
         top_pages_html = ""
         for p in ga4.get("top_pages", []):
-            top_pages_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding:2px 0;max-width:300px;overflow:hidden;text-overflow:ellipsis;">{p["path"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">{p["pageviews"]:,}</td></tr>\n'
+            top_pages_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding:2px 0;max-width:300px;overflow:hidden;text-overflow:ellipsis;">{p["path"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">{p["pageviews"]:,}</td></tr>\n'
 
         sources_html = ""
         for s in ga4.get("sources", []):
-            sources_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding:2px 0;">{s["channel"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">{s["sessions"]:,}</td></tr>\n'
+            sources_html += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding:2px 0;">{s["channel"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:#8c7568;text-align:right;padding:2px 0;">{s["sessions"]:,}</td></tr>\n'
 
         sections.append(f"""
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">GA4 Analytics</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;padding-bottom:12px;">Sessions (7d): <strong>{ga4.get("sessions_7d", 0):,}</strong>{sessions_arrow}{pct_str}</td></tr>
+        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;padding-bottom:12px;">Sessions (7d): <strong>{ga4.get("sessions_7d", 0):,}</strong>{sessions_arrow}{pct_str}</td></tr>
         {("<tr><td style='font-family:Georgia,serif;font-size:13px;color:#8c7568;padding-bottom:4px;'>Top Pages:</td></tr><tr><td><table width='100%' cellpadding='0' cellspacing='0'>" + top_pages_html + "</table></td></tr>") if top_pages_html else ""}
         {("<tr><td style='font-family:Georgia,serif;font-size:13px;color:#8c7568;padding:8px 0 4px;'>Traffic Sources:</td></tr><tr><td><table width='100%' cellpadding='0' cellspacing='0'>" + sources_html + "</table></td></tr>") if sources_html else ""}
       </table>
@@ -592,13 +592,13 @@ def render_html(data: dict) -> str:
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">Revenue — {rev.get("month", "")}</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;">MTD: <strong>${rev.get("mtd_revenue", 0):,.0f}</strong> / ${rev.get("target", 0):,.0f} ({pct}%)</td></tr>
+        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;">MTD: <strong>${rev.get("mtd_revenue", 0):,.0f}</strong> / ${rev.get("target", 0):,.0f} ({pct}%)</td></tr>
         <tr><td style="padding:8px 0;">
           <table width="100%" cellpadding="0" cellspacing="0"><tr>
             <td style="background:#f0ebe3;height:8px;"><div style="background:#1A8A82;height:8px;width:{bar_width}%;"></div></td>
           </tr></table>
         </td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;">Plans sold this month: {rev.get("plans_sold", 0)} &middot; Pipeline: ${rev.get("pipeline_value", 0):,.0f}</td></tr>
+        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;">Plans sold this month: {rev.get("plans_sold", 0)} &middot; Pipeline: ${rev.get("pipeline_value", 0):,.0f}</td></tr>
       </table>
     </td></tr>""")
     else:
@@ -611,12 +611,12 @@ def render_html(data: dict) -> str:
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">Athletes</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;">
+        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;">
           Total: <strong>{ath.get("total", 0)}</strong> &middot;
           Active: {ath.get("active_plans", 0)} &middot;
           Delivered: {ath.get("delivered", 0)}
         </td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding-top:4px;">
+        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding-top:4px;">
           NPS: {nps_str} (n={ath.get("nps_count", 0)}) &middot;
           Touchpoints due: {ath.get("due_touchpoints", 0)}
         </td></tr>
@@ -630,8 +630,8 @@ def render_html(data: dict) -> str:
         exp_rows = ""
         for exp in ab.get("experiments", []):
             days = exp.get("days_running", 0)
-            days_color = "#c0392b" if days >= 14 else "#1A8A82" if days >= 7 else "#3a2e25"
-            exp_rows += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;padding:3px 0;">{exp["id"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:{days_color};text-align:right;padding:3px 0;">{days}d</td></tr>\n'
+            days_color = "#c0392b" if days >= 14 else "#1A8A82" if days >= 7 else "#1a1a1a"
+            exp_rows += f'<tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;padding:3px 0;">{exp["id"]}</td><td style="font-family:\'Courier New\',monospace;font-size:12px;color:{days_color};text-align:right;padding:3px 0;">{days}d</td></tr>\n'
 
         sections.append(f"""
     <tr><td style="padding:20px 32px 12px;">
@@ -651,7 +651,7 @@ def render_html(data: dict) -> str:
     <tr><td style="padding:20px 32px 12px;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">Data Quality — {quality.get("quality_score", 0)}%</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#3a2e25;line-height:1.8;">
+        <tr><td style="font-family:Georgia,serif;font-size:14px;color:#1a1a1a;line-height:1.8;">
           Profiles: {quality.get("total_profiles", 0)}<br>
           Stale dates: {quality.get("stale_dates", 0)}<br>
           Missing dates: {quality.get("missing_dates", 0)}<br>
@@ -663,13 +663,13 @@ def render_html(data: dict) -> str:
 
     # 11. Quick Links
     sections.append("""
-    <tr><td style="padding:20px 32px 12px;border-top:2px solid #d4c5b9;">
+    <tr><td style="padding:20px 32px 12px;border-top:2px solid #d0d0c8;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr><td style="font-family:'Courier New',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8c7568;padding-bottom:8px;">Quick Links</td></tr>
-        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#3a2e25;line-height:2;">
+        <tr><td style="font-family:Georgia,serif;font-size:13px;color:#1a1a1a;line-height:2;">
           <a href="https://analytics.google.com" style="color:#1A8A82;">GA4 Dashboard</a> &middot;
-          <a href="https://roadlabs.cc/wp-admin/" style="color:#1A8A82;">WP Admin</a> &middot;
-          <a href="https://roadlabs.cc/gravel-races/" style="color:#1A8A82;">Race Search</a> &middot;
+          <a href="https://roadielabs.com/wp-admin/" style="color:#1A8A82;">WP Admin</a> &middot;
+          <a href="https://roadielabs.com/gravel-races/" style="color:#1A8A82;">Race Search</a> &middot;
           <a href="https://dashboard.resend.com" style="color:#1A8A82;">Resend</a>
         </td></tr>
       </table>
@@ -677,7 +677,7 @@ def render_html(data: dict) -> str:
 
     # 12. Footer
     sections.append(f"""
-    <tr><td style="padding:16px 32px;border-top:2px solid #d4c5b9;font-family:'Courier New',monospace;font-size:11px;color:#8c7568;">
+    <tr><td style="padding:16px 32px;border-top:2px solid #d0d0c8;font-family:'Courier New',monospace;font-size:11px;color:#8c7568;">
       Generated by scripts/daily_report.py &middot; {generated_at}
     </td></tr>""")
 
@@ -691,7 +691,7 @@ def render_html(data: dict) -> str:
 </head>
 <body style="font-family:Georgia,serif;background:#f8f3ec;margin:0;padding:20px;">
   <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
-  <table width="580" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:2px solid #d4c5b9;">
+  <table width="580" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:2px solid #d0d0c8;">
     {"".join(sections)}
   </table>
   </td></tr></table>
@@ -722,7 +722,7 @@ def send_email(html: str, recipient: str) -> dict:
         resend.api_key = api_key
 
         from_email = os.environ.get(
-            "REPORT_FROM", "Roadie Labs <matt@roadlabs.cc>"
+            "REPORT_FROM", "Roadie Labs <matt@roadielabs.com>"
         )
 
         subject = f"Daily Report — {CURRENT_DATE.strftime('%b %d, %Y')}"

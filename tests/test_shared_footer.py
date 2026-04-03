@@ -84,13 +84,13 @@ class TestMegaFooterHTML:
         assert "rl-mega-footer-legal-links" in self.html
 
     def test_has_privacy_link(self):
-        assert 'href="https://roadlabs.cc/privacy/"' in self.html
+        assert 'href="https://roadielabs.com/privacy/"' in self.html
 
     def test_has_terms_link(self):
-        assert 'href="https://roadlabs.cc/terms/"' in self.html
+        assert 'href="https://roadielabs.com/terms/"' in self.html
 
     def test_has_cookies_link(self):
-        assert 'href="https://roadlabs.cc/cookies/"' in self.html
+        assert 'href="https://roadielabs.com/cookies/"' in self.html
 
     def test_legal_links_in_nav(self):
         """Legal links must be inside a <nav> element for accessibility."""

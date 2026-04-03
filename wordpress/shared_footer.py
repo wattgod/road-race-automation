@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from datetime import date
 
-SITE_BASE_URL = "https://roadlabs.cc"
+SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = date.today().year
 

@@ -45,7 +45,7 @@ def get_ga4_head_snippet() -> str:
 
 
 # ── Site ──────────────────────────────────────────────────────
-SITE_BASE_URL = "https://roadlabs.cc"
+SITE_BASE_URL = "https://roadielabs.com"
 BRAND_NAME = "Roadie Labs"
 
 

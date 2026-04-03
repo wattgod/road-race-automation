@@ -97,8 +97,8 @@ function rl_build_race_cta() {
     if ( isset( $race_map[ $post_id ] ) ) {
         $slug = $race_map[ $post_id ];
         $name = isset( $names[ $slug ] ) ? $names[ $slug ] : ucwords( str_replace( '-', ' ', $slug ) );
-        $race_url = "https://roadlabs.cc/race/{$slug}/";
-        $kit_url  = "https://roadlabs.cc/race/{$slug}/prep-kit/";
+        $race_url = "https://roadielabs.com/race/{$slug}/";
+        $kit_url  = "https://roadielabs.com/race/{$slug}/prep-kit/";
         return rl_race_cta_html( $name, $race_url, $kit_url );
     }
 
@@ -116,31 +116,31 @@ function rl_build_race_cta() {
 }
 
 function rl_race_cta_html( $name, $race_url, $kit_url ) {
-    return '<div data-rl-race-cta="1" style="background:#f5efe6;border:3px solid #59473c;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
-        . '<h3 style="margin:0 0 12px;color:#59473c;font-size:1.3em;">Racing ' . esc_html( $name ) . '?</h3>'
-        . '<p style="margin:0 0 16px;color:#59473c;line-height:1.6;">We rated and analyzed 427 road races across 14 dimensions. See how ' . esc_html( $name ) . ' stacks up &mdash; plus grab a free race-day prep kit with pacing, fueling, and equipment checklists.</p>'
+    return '<div data-rl-race-cta="1" style="background:#f5f5f0;border:3px solid #555555;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
+        . '<h3 style="margin:0 0 12px;color:#555555;font-size:1.3em;">Racing ' . esc_html( $name ) . '?</h3>'
+        . '<p style="margin:0 0 16px;color:#555555;line-height:1.6;">We rated and analyzed 427 road races across 14 dimensions. See how ' . esc_html( $name ) . ' stacks up &mdash; plus grab a free race-day prep kit with pacing, fueling, and equipment checklists.</p>'
         . '<p style="margin:0;">'
         . '<a href="' . esc_url( $race_url ) . '" style="color:#178079;font-weight:700;text-decoration:underline;margin-right:20px;">' . esc_html( $name ) . ' Race Profile &rarr;</a>'
-        . '<a href="' . esc_url( $kit_url ) . '" style="color:#9a7e0a;font-weight:700;text-decoration:underline;">Free Race Prep Kit &rarr;</a>'
+        . '<a href="' . esc_url( $kit_url ) . '" style="color:#333333;font-weight:700;text-decoration:underline;">Free Race Prep Kit &rarr;</a>'
         . '</p></div>';
 }
 
 function rl_general_race_cta_html() {
-    return '<div data-rl-race-cta="1" style="background:#f5efe6;border:3px solid #59473c;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
-        . '<h3 style="margin:0 0 12px;color:#59473c;font-size:1.3em;">Find Your Next Road Race</h3>'
-        . '<p style="margin:0 0 16px;color:#59473c;line-height:1.6;">We rated and analyzed 427 road races worldwide across 14 dimensions &mdash; gran fondos, sportives, centuries, and more. Search by distance, climbing, region, and more.</p>'
+    return '<div data-rl-race-cta="1" style="background:#f5f5f0;border:3px solid #555555;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
+        . '<h3 style="margin:0 0 12px;color:#555555;font-size:1.3em;">Find Your Next Road Race</h3>'
+        . '<p style="margin:0 0 16px;color:#555555;line-height:1.6;">We rated and analyzed 427 road races worldwide across 14 dimensions &mdash; gran fondos, sportives, centuries, and more. Search by distance, climbing, region, and more.</p>'
         . '<p style="margin:0;">'
-        . '<a href="https://roadlabs.cc/road-races/" style="color:#178079;font-weight:700;text-decoration:underline;margin-right:20px;">Browse All 427 Races &rarr;</a>'
-        . '<a href="https://roadlabs.cc/race/etape-du-tour/" style="color:#9a7e0a;font-weight:700;text-decoration:underline;">See: Etape du Tour Profile &rarr;</a>'
+        . '<a href="https://roadielabs.com/road-races/" style="color:#178079;font-weight:700;text-decoration:underline;margin-right:20px;">Browse All 427 Races &rarr;</a>'
+        . '<a href="https://roadielabs.com/race/etape-du-tour/" style="color:#333333;font-weight:700;text-decoration:underline;">See: Etape du Tour Profile &rarr;</a>'
         . '</p></div>';
 }
 
 function rl_hydration_cta_html() {
-    return '<div data-rl-race-cta="1" style="background:#f5efe6;border:3px solid #59473c;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
-        . '<h3 style="margin:0 0 12px;color:#59473c;font-size:1.3em;">Race-Specific Hydration Plans</h3>'
-        . '<p style="margin:0 0 16px;color:#59473c;line-height:1.6;">Our prep kits include personalized hydration and sodium calculators tailored to each race&#039;s climate, distance, and elevation. Get hour-by-hour fueling plans for 427 road races.</p>'
+    return '<div data-rl-race-cta="1" style="background:#f5f5f0;border:3px solid #555555;padding:24px 28px;margin:40px 0 0;font-family:\'Source Serif 4\',Georgia,serif;">'
+        . '<h3 style="margin:0 0 12px;color:#555555;font-size:1.3em;">Race-Specific Hydration Plans</h3>'
+        . '<p style="margin:0 0 16px;color:#555555;line-height:1.6;">Our prep kits include personalized hydration and sodium calculators tailored to each race&#039;s climate, distance, and elevation. Get hour-by-hour fueling plans for 427 road races.</p>'
         . '<p style="margin:0;">'
-        . '<a href="https://roadlabs.cc/road-races/" style="color:#178079;font-weight:700;text-decoration:underline;margin-right:20px;">Browse All 427 Races &rarr;</a>'
-        . '<a href="https://roadlabs.cc/race/etape-du-tour/prep-kit/" style="color:#9a7e0a;font-weight:700;text-decoration:underline;">Example: Etape du Tour Prep Kit &rarr;</a>'
+        . '<a href="https://roadielabs.com/road-races/" style="color:#178079;font-weight:700;text-decoration:underline;margin-right:20px;">Browse All 427 Races &rarr;</a>'
+        . '<a href="https://roadielabs.com/race/etape-du-tour/prep-kit/" style="color:#333333;font-weight:700;text-decoration:underline;">Example: Etape du Tour Prep Kit &rarr;</a>'
         . '</p></div>';
 }

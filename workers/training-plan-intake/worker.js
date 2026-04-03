@@ -265,7 +265,7 @@ async function sendNotificationEmail(env, req) {
           to: [{ email: env.NOTIFICATION_EMAIL }],
           subject: `🏁 ${req.race.name}: ${req.athlete.name} (${req.race.goal}) - ${req.race.weeks_until}wks`
         }],
-        from: { email: 'TODO_ROADLABS_EMAIL', name: 'Roadie Labs Coaching' },
+        from: { email: 'coach@roadielabs.com', name: 'Roadie Labs Coaching' },
         reply_to: { email: req.athlete.email, name: req.athlete.name },
         content: [{ type: 'text/html', value: emailBody }]
       })

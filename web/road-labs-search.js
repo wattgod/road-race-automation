@@ -319,7 +319,7 @@
       var marker = L.circleMarker([race.lat, race.lng], {
         radius: race.tier === 1 ? 8 : race.tier === 2 ? 7 : 6,
         fillColor: tierColor,
-        color: '#1a1613',
+        color: '#1a1a1a',
         weight: 2,
         opacity: 1,
         fillOpacity: 0.85

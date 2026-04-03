@@ -23,30 +23,40 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # ── Canonical brand colors (source of truth) ──────────────────
 # These MUST match the values in wordpress/brand_tokens.py
+# Roadie Labs "Newsprint / Charcoal" monochrome palette
 CANONICAL_COLORS = {
-    "secondary_brown": "#7d695d",
-    "gold": "#9a7e0a",
-    "teal": "#178079",
-    "tier_1": "#59473c",
-    "tier_2": "#7d695d",
-    "tier_3": "#766a5e",
-    "tier_4": "#5e6868",
-    "warm_paper": "#f5efe6",
-    "primary_brown": "#59473c",
-    "dark_brown": "#3a2e25",
-    "sand": "#ede4d8",
+    "rich_black": "#1a1a1a",
+    "charcoal": "#333333",
+    "medium_gray": "#555555",
+    "muted_gray": "#777777",
+    "light_gray": "#999999",
+    "warm_silver": "#d0d0c8",
+    "newsprint": "#f5f5f0",
+    "error": "#8b1a1a",
+    "tier_1": "#1a1a1a",
+    "tier_2": "#4a4a4a",
+    "tier_3": "#777777",
+    "tier_4": "#aaaaaa",
 }
 
-# Old values that should NEVER appear in the codebase
+# Old values that should NEVER appear in the codebase (Gravel God palette)
 BANNED_COLORS = {
-    "#8c7568": "secondary_brown (use #7d695d)",
-    "#B7950B": "gold (use #9a7e0a)",
-    "#b7950b": "gold (use #9a7e0a)",
-    "#1A8A82": "teal (use #178079)",
-    "#1a8a82": "teal (use #178079)",
-    "#999999": "tier_3 (use #766a5e)",
-    "#cccccc": "tier_4 (use #5e6868)",
-    "#918981": "tier_4 old (use #5e6868)",
+    "#3a2e25": "GG dark brown (use #1a1a1a)",
+    "#9a7e0a": "GG gold (use #333333)",
+    "#B7950B": "GG gold alt (use #333333)",
+    "#b7950b": "GG gold alt (use #333333)",
+    "#59473c": "GG primary brown (use #1a1a1a)",
+    "#f5efe6": "GG warm paper (use #f5f5f0)",
+    "#ede4d8": "GG sand (use #f5f5f0)",
+    "#d4c5b9": "GG muted tan (use #d0d0c8)",
+    "#1a1613": "GG near-black (use #1a1a1a)",
+    "#8c7568": "GG secondary brown (use #555555)",
+    "#7d695d": "GG T2 brown (use #4a4a4a)",
+    "#766a5e": "GG T3 (use #777777)",
+    "#5e6868": "GG T4 (use #aaaaaa)",
+    "#178079": "GG teal (use #333333)",
+    "#1A8A82": "GG teal alt (use #333333)",
+    "#1a8a82": "GG teal alt (use #333333)",
 }
 
 # Files to scan (glob patterns relative to project root)
@@ -70,13 +80,13 @@ SKIP_PATTERNS = {"wordpress/output", "node_modules", ".git", "__pycache__"}
 
 # Required contrast pairs: (foreground, background, min_ratio, label)
 CONTRAST_PAIRS = [
-    ("#59473c", "#f5efe6", 4.5, "T1 primary brown on warm paper"),
-    ("#7d695d", "#f5efe6", 4.5, "T2 secondary brown on warm paper"),
-    ("#766a5e", "#f5efe6", 4.5, "T3 on warm paper"),
-    ("#5e6868", "#f5efe6", 4.5, "T4 on warm paper"),
-    ("#9a7e0a", "#ffffff", 3.0, "Gold on white (UI components)"),
-    ("#ffffff", "#178079", 4.5, "White on teal background"),
-    ("#7d695d", "#ede4d8", 3.0, "Secondary brown on sand (large text/UI only)"),
+    ("#1a1a1a", "#f5f5f0", 4.5, "T1 rich black on newsprint"),
+    ("#4a4a4a", "#f5f5f0", 4.5, "T2 dark gray on newsprint"),
+    ("#777777", "#f5f5f0", 4.5, "T3 muted gray on newsprint"),
+    ("#aaaaaa", "#f5f5f0", 3.0, "T4 light gray on newsprint (large text)"),
+    ("#333333", "#ffffff", 4.5, "Charcoal on white"),
+    ("#1a1a1a", "#d0d0c8", 4.5, "Rich black on warm silver"),
+    ("#555555", "#f5f5f0", 4.5, "Medium gray on newsprint"),
 ]
 
 

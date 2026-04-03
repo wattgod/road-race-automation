@@ -37,18 +37,18 @@ except ImportError:
 W, H = 1200, 630
 
 # Brand colors — from road-labs-brand/tokens/tokens.json
-DARK_BROWN = (58, 46, 37)     # #3a2e25
-PRIMARY_BROWN = (89, 71, 60)  # #59473c
+DARK_BROWN = (58, 46, 37)     # #1a1a1a
+PRIMARY_BROWN = (89, 71, 60)  # #555555
 SEC_BROWN = (125, 105, 93)    # #7d695d
 WARM_BROWN = (166, 142, 128)  # #A68E80
-TAN = (212, 197, 185)         # #d4c5b9
-SAND = (237, 228, 216)        # #ede4d8
-WARM_PAPER = (245, 239, 230)  # #f5efe6
-GOLD = (154, 126, 10)         # #9a7e0a
+TAN = (212, 197, 185)         # #d0d0c8
+SAND = (237, 228, 216)        # #f5f5f0
+WARM_PAPER = (245, 239, 230)  # #f5f5f0
+GOLD = (154, 126, 10)         # #333333
 LIGHT_GOLD = (201, 169, 44)   # #c9a92c
 TEAL = (23, 128, 121)         # #178079
 LIGHT_TEAL = (78, 205, 196)   # #4ECDC4
-NEAR_BLACK = (26, 22, 19)     # #1a1613
+NEAR_BLACK = (26, 22, 19)     # #1a1a1a
 WHITE = (255, 255, 255)
 
 # Dark background palette — near-black from tokens
@@ -291,7 +291,7 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
     )
 
     # URL right-aligned
-    url_text = "roadlabs.cc"
+    url_text = "roadielabs.com"
     uw = tw(draw, url_text, font_brand_sub)
     draw.text((W - left_margin - uw, bottom_bar_y + 26), url_text, fill=WARM_BROWN, font=font_brand_sub)
 

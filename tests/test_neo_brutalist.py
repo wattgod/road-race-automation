@@ -899,7 +899,7 @@ class TestNav:
         assert 'class="rl-site-header-logo"' in html
         assert 'alt="Roadie Labs"' in html
         # Logo must link to site root
-        assert 'href="https://roadlabs.cc/"' in html
+        assert 'href="https://roadielabs.com/"' in html
 
     def test_five_nav_links_with_correct_urls(self, normalized_data):
         html = build_nav_header(normalized_data, [])
@@ -940,7 +940,7 @@ class TestNav:
         tier = normalized_data["tier"]
         tier_label = normalized_data["tier_label"]
         assert tier_label in html
-        assert f'href="https://roadlabs.cc/race/tier-{tier}/"' in html
+        assert f'href="https://roadielabs.com/race/tier-{tier}/"' in html
 
 
 class TestNavCrossGenerator:

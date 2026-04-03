@@ -88,7 +88,7 @@ NON_OFFICIAL_DOMAINS = {
     "cyclingweekly.com", "outsideonline.com", "velo.outsideonline.com",
     "wikipedia.org", "en.wikipedia.org",
     "trackleaders.com", "dotwatcher.cc",
-    "ridinggravel.com", "roadlabs.cc",
+    "ridinggravel.com", "roadielabs.com",
     "bit.ly", "t.co", "tinyurl.com", "goo.gl",
     "amazon.com", "amzn.to", "wordpress.com", "wordpress.org",
     "maps.google.com", "maps.app.goo.gl",

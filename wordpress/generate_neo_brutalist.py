@@ -212,7 +212,7 @@ def detect_country(location: str) -> str:
     return 'US'
 
 
-SITE_BASE_URL = "https://roadlabs.cc"
+SITE_BASE_URL = "https://roadielabs.com"
 COACHING_URL = f"{SITE_BASE_URL}/coaching/apply/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/questionnaire/"
 SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
@@ -1089,7 +1089,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 
 // Email capture form — prep kit CTA
 (function() {
-  var WORKER_URL='https://fueling-lead-intake.TODO_ROADLABS_WORKERS.workers.dev';
+  var WORKER_URL='https://fueling-lead-intake.gravelgodcoaching.workers.dev';
   var LS_KEY='rl-pk-fueling';
   var EXPIRY_DAYS=90;
   var form=document.getElementById('rl-email-capture-form');
@@ -1140,7 +1140,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 
 // Inline review form
 (function() {
-  var WORKER_URL='https://review-intake.TODO_ROADLABS_WORKERS.workers.dev';
+  var WORKER_URL='https://review-intake.gravelgodcoaching.workers.dev';
   var form=document.getElementById('rl-review-form');
   if(!form) return;
 
@@ -1926,7 +1926,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"https://calendar.google.com/calendar/render?action=TEMPLATE"
             f"&text={quote(race_title)}"
             f"&dates={iso_date}/{iso_date}"
-            f"&details={quote(f'Gravel race — {race_title}. More info at roadlabs.cc')}"
+            f"&details={quote(f'Gravel race — {race_title}. More info at roadielabs.com')}"
             f"&location={quote(location_str)}"
         )
         ics_data = (
@@ -1936,7 +1936,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"DTEND;VALUE=DATE:{iso_date}\\n"
             f"SUMMARY:{race_title}\\n"
             f"LOCATION:{location_str}\\n"
-            f"DESCRIPTION:Gravel race. More info at roadlabs.cc\\n"
+            f"DESCRIPTION:Gravel race. More info at roadielabs.com\\n"
             f"END:VEVENT\\nEND:VCALENDAR"
         )
         cal_html = f'''<div class="rl-calendar-export">

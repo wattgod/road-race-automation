@@ -25,7 +25,7 @@ from brand_tokens import TIER_NAMES
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output" / "blog"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 MONTH_NUMBERS = {
     "january": 1, "february": 2, "march": 3, "april": 4,
     "may": 5, "june": 6, "july": 7, "august": 8,
@@ -378,12 +378,12 @@ def generate_preview_html(slug):
   <link rel="canonical" href="{SITE_URL}/blog/{slug}/">
   <style>
     :root {{
-      --rl-dark-brown: #3a2e25;
-      --rl-primary-brown: #59473c;
+      --rl-dark-brown: #1a1a1a;
+      --rl-primary-brown: #555555;
       --rl-secondary-brown: #7d695d;
       --rl-teal: #178079;
-      --rl-warm-paper: #f5efe6;
-      --rl-sand: #ede4d8;
+      --rl-warm-paper: #f5f5f0;
+      --rl-sand: #f5f5f0;
       --rl-white: #ffffff;
     }}
     * {{ margin: 0; padding: 0; box-sizing: border-box; border-radius: 0; }}

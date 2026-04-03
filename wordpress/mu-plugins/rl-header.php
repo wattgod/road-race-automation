@@ -28,7 +28,7 @@ add_filter( 'body_class', 'rl_add_neo_brutalist_class' );
  * Add RSS feed discovery link to <head> on all pages.
  */
 function rl_rss_feed_link() {
-    echo '<link rel="alternate" type="application/rss+xml" title="Roadie Labs Race Database" href="https://roadlabs.cc/feed/races.xml">' . "\n";
+    echo '<link rel="alternate" type="application/rss+xml" title="Roadie Labs Race Database" href="https://roadielabs.com/feed/races.xml">' . "\n";
 }
 
 /**
@@ -77,7 +77,7 @@ header.site-header,
 /* ── Shared Site Header (uses !important to override Astra theme) ── */
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;700&family=Source+Serif+4:wght@400;700&display=swap');
 
-.rl-site-header { padding: 16px 24px !important; border-bottom: 2px solid #B7950B !important; background: #f5efe6 !important; }
+.rl-site-header { padding: 16px 24px !important; border-bottom: 2px solid #333333 !important; background: #f5f5f0 !important; }
 .rl-site-header-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 960px !important; margin: 0 auto !important; }
 .rl-site-header-logo img { display: block !important; height: 50px !important; width: auto !important; }
 .rl-site-header-nav { display: flex !important; gap: 24px !important; align-items: center !important; }
@@ -86,19 +86,19 @@ header.site-header,
 .rl-site-header-nav > a:visited,
 .rl-site-header-item > a,
 .rl-site-header-item > a:link,
-.rl-site-header-item > a:visited { color: #3a2e25 !important; text-decoration: none !important; font-family: 'Sometype Mono', monospace !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 2px !important; text-transform: uppercase !important; transition: color 0.2s !important; }
+.rl-site-header-item > a:visited { color: #1a1a1a !important; text-decoration: none !important; font-family: 'Sometype Mono', monospace !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 2px !important; text-transform: uppercase !important; transition: color 0.2s !important; }
 .rl-site-header-nav > a:hover,
-.rl-site-header-item > a:hover { color: #B7950B !important; }
+.rl-site-header-item > a:hover { color: #333333 !important; }
 .rl-site-header-nav > a[aria-current="page"],
-.rl-site-header-item > a[aria-current="page"] { color: #B7950B !important; }
+.rl-site-header-item > a[aria-current="page"] { color: #333333 !important; }
 .rl-site-header-item { position: relative !important; }
-.rl-site-header-dropdown { display: none; position: absolute !important; top: 100% !important; left: 0 !important; min-width: 200px !important; padding: 8px 0 !important; background: #f5efe6 !important; border: 2px solid #3a2e25 !important; z-index: 1000 !important; }
+.rl-site-header-dropdown { display: none; position: absolute !important; top: 100% !important; left: 0 !important; min-width: 200px !important; padding: 8px 0 !important; background: #f5f5f0 !important; border: 2px solid #1a1a1a !important; z-index: 1000 !important; }
 .rl-site-header-item:hover .rl-site-header-dropdown,
 .rl-site-header-item:focus-within .rl-site-header-dropdown { display: block !important; }
 .rl-site-header-dropdown a,
 .rl-site-header-dropdown a:link,
-.rl-site-header-dropdown a:visited { display: block !important; padding: 8px 16px !important; font-family: 'Sometype Mono', monospace !important; font-size: 11px !important; font-weight: 400 !important; letter-spacing: 1px !important; color: #3a2e25 !important; text-decoration: none !important; transition: color 0.2s !important; }
-.rl-site-header-dropdown a:hover { color: #B7950B !important; }
+.rl-site-header-dropdown a:visited { display: block !important; padding: 8px 16px !important; font-family: 'Sometype Mono', monospace !important; font-size: 11px !important; font-weight: 400 !important; letter-spacing: 1px !important; color: #1a1a1a !important; text-decoration: none !important; transition: color 0.2s !important; }
+.rl-site-header-dropdown a:hover { color: #333333 !important; }
 
 /* ── Training Plans page fix: entrance animation doesn't fire in WP ── */
 .tp-hero h1,
@@ -139,7 +139,7 @@ function rl_shared_header_html() {
         $active = 'about';
     }
 
-    $base = 'https://roadlabs.cc';
+    $base = 'https://roadielabs.com';
     $substack = 'https://roadlabs.substack.com';
 
     $aria = function( $key ) use ( $active ) {

@@ -421,9 +421,9 @@ class TestCSS:
 
     def test_css_uses_brand_colors(self):
         css = build_homepage_css()
-        assert "#59473c" in css  # primary brown
+        assert "#555555" in css  # primary brown
         assert "#178079" in css  # teal
-        assert "#9a7e0a" in css  # gold
+        assert "#333333" in css  # gold
 
     def test_css_sometype_mono(self):
         css = build_homepage_css()
@@ -440,8 +440,8 @@ class TestCSS:
         assert "linear-gradient" not in css
         assert "radial-gradient" not in css
         assert "Source Serif 4" in css
-        assert "#ede4d8" in css  # sand background
-        assert "#3a2e25" in css  # dark brown text color
+        assert "#f5f5f0" in css  # sand background
+        assert "#1a1a1a" in css  # dark brown text color
 
 
 # ── JavaScript ───────────────────────────────────────────────
@@ -520,7 +520,7 @@ class TestFullPage:
 
     def test_has_canonical(self, homepage_html):
         assert 'rel="canonical"' in homepage_html
-        assert 'roadlabs.cc/"' in homepage_html
+        assert 'roadielabs.com/"' in homepage_html
 
     def test_has_og_tags(self, homepage_html):
         assert 'property="og:title"' in homepage_html
@@ -1711,7 +1711,7 @@ class TestBentoQuote:
         assert quote_rule is not None, "rl-hp-bento-quote CSS rule not found"
         rule = quote_rule.group(0)
         assert "border-left" in rule, "Quote must have left border"
-        assert "#9a7e0a" in rule, "Quote border must be gold"
+        assert "#333333" in rule, "Quote border must be gold"
 
     def test_no_bento_excerpt_html(self, race_index):
         """rl-hp-bento-excerpt must be removed from bento cards."""
@@ -1830,14 +1830,14 @@ class TestVisualDividers:
         css = build_homepage_css()
         takes_rule = re.search(r'\.rl-hp-latest-takes\s*\{[^}]+\}', css)
         assert takes_rule is not None
-        assert "border-top: 2px solid #9a7e0a" in takes_rule.group(0)
+        assert "border-top: 2px solid #333333" in takes_rule.group(0)
 
     def test_testimonials_gold_border(self):
         """Testimonials must have gold top border matching existing section border color."""
         css = build_homepage_css()
         test_rule = re.search(r'\.rl-hp-testimonials\s*\{[^}]+\}', css)
         assert test_rule is not None
-        assert "border-top: 2px solid #9a7e0a" in test_rule.group(0)
+        assert "border-top: 2px solid #333333" in test_rule.group(0)
 
     def test_divider_gold_matches_how_it_works(self):
         """All gold section dividers must use the same hex as how-it-works."""
@@ -2132,10 +2132,10 @@ class TestHeroRadarViz:
         css = build_homepage_css()
         # Extract just the hero radar viz CSS section
         known_colors = {
-            "#59473c", "#7d695d", "#178079", "#4ecdc4", "#9a7e0a",
-            "#c9a92c", "#c4b5ab", "#d4c5b9", "#f5efe6", "#3a2e25",
-            "#1a1613", "#b7950b", "#766a5e", "#5e6868", "#8c7568",
-            "#ede4d8", "#fff",
+            "#555555", "#7d695d", "#178079", "#4ecdc4", "#333333",
+            "#c9a92c", "#c4b5ab", "#d0d0c8", "#f5f5f0", "#1a1a1a",
+            "#1a1a1a", "#333333", "#766a5e", "#5e6868", "#8c7568",
+            "#f5f5f0", "#fff",
         }
         # Find hex colors specifically in the hv- rules
         hv_rules = re.findall(r'\.rl-hp-hv-[^{]*\{[^}]+\}', css)

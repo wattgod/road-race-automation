@@ -3,12 +3,12 @@ main = "worker.js"
 compatibility_date = "2024-01-01"
 
 [vars]
-ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadlabs.cc"
+ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadielabs.com"
 
 [env.production]
-vars = { ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadlabs.cc" }
+vars = { ALLOWED_ORIGINS = "https://wattgod.github.io,https://roadielabs.com" }
 
 # Secrets (set via: wrangler secret put SECRET_NAME)
-# NOTIFICATION_EMAIL = "TODO_ROADLABS_EMAIL"
+# NOTIFICATION_EMAIL = "coach@roadielabs.com"
 # SENDGRID_API_KEY = "your-sendgrid-api-key"
 # GITHUB_TOKEN = "your-github-token" (optional)

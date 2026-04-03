@@ -82,8 +82,8 @@ function rl_search_page_schema() {
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://roadlabs.cc/'],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Road Races', 'item' => 'https://roadlabs.cc/road-races/'],
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://roadielabs.com/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Road Races', 'item' => 'https://roadielabs.com/road-races/'],
         ],
     ];
 
@@ -92,12 +92,12 @@ function rl_search_page_schema() {
         '@type' => 'CollectionPage',
         'name' => 'Find Your Road Race',
         'description' => 'Search and filter 427 road races worldwide by tier, distance, region, terrain, and date. Find your next road cycling event with the Roadie Labs race database.',
-        'url' => 'https://roadlabs.cc/road-races/',
+        'url' => 'https://roadielabs.com/road-races/',
         'numberOfItems' => 427,
         'publisher' => [
             '@type' => 'Organization',
             'name' => 'Roadie Labs',
-            'url' => 'https://roadlabs.cc/',
+            'url' => 'https://roadielabs.com/',
         ],
     ];
 

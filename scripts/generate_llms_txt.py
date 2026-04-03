@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 OUTPUT_DIR = PROJECT_ROOT / "web"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 
 TIER_LABELS = {1: "Tier 1 (Elite)", 2: "Tier 2 (Strong)", 3: "Tier 3 (Solid)", 4: "Tier 4 (Developing)"}
 
@@ -110,7 +110,7 @@ Regions: {', '.join(regions)}.
 ## Contact
 
 - Website: {SITE_URL}
-- Email: matt@roadlabs.cc
+- Email: matt@roadielabs.com
 """
 
 
@@ -182,7 +182,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
     lines.append(f"> {len(index)} gravel, MTB, and bikepacking races rated on 14 criteria.")
-    lines.append(f"> Produced by Roadie Labs (roadlabs.cc). Generated: {now}")
+    lines.append(f"> Produced by Roadie Labs (roadielabs.com). Generated: {now}")
     lines.append("")
 
     # Scoring methodology

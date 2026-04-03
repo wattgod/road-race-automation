@@ -211,7 +211,7 @@ class RaceLookup:
             date=vitals.get("date_specific", "") or vitals.get("date", ""),
             location=vitals.get("location", "") or vitals.get("location_badge", ""),
             prestige=gravel_god.get("dimension_scores", gravel_god).get("prestige", 0),
-            profile_url=f"https://roadlabs.cc/race/{slug}/",
+            profile_url=f"https://roadielabs.com/race/{slug}/",
             region=vitals.get("region", ""),
             month=vitals.get("month", ""),
             non_negotiables=rd.get("non_negotiables", []),

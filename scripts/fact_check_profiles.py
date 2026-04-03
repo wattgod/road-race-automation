@@ -330,7 +330,7 @@ def generate_html_report(results: list) -> str:
 body {{ font-family: 'Sometype Mono', monospace; margin: 2em; }}
 table {{ border-collapse: collapse; width: 100%; }}
 th, td {{ border: 2px solid black; padding: 8px; text-align: left; vertical-align: top; }}
-th {{ background: #59473c; color: white; }}
+th {{ background: #555555; color: white; }}
 ul {{ list-style: none; }}
 </style></head>
 <body>

@@ -23,7 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 OUTPUT_DIR = PROJECT_ROOT / "web" / "markdown"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 
 DIMENSIONS = [
     "logistics", "length", "technicality", "elevation", "climate",

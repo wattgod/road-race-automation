@@ -18,7 +18,7 @@ from pathlib import Path
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom.minidom import parseString
 
-SITE_BASE_URL = "https://roadlabs.cc"
+SITE_BASE_URL = "https://roadielabs.com"
 
 # Only these blog categories are indexable — unknown categories excluded by default (safe)
 INDEXABLE_BLOG_CATEGORIES = frozenset({"roundup", "recap"})

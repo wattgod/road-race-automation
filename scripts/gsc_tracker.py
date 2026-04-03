@@ -21,7 +21,7 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-SITE_URL = "sc-domain:roadlabs.cc"
+SITE_URL = "sc-domain:roadielabs.com"
 SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "gsc-snapshots"
 
 # Alert thresholds
@@ -110,7 +110,7 @@ def fetch_snapshot(service, target_date: date) -> dict:
     ).execute()
     all_pages = [
         {
-            "page": r["keys"][0].replace("https://roadlabs.cc", ""),
+            "page": r["keys"][0].replace("https://roadielabs.com", ""),
             "clicks": r.get("clicks", 0),
             "impressions": r.get("impressions", 0),
             "ctr": round(r.get("ctr", 0) * 100, 1),

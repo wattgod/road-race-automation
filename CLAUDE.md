@@ -4,7 +4,7 @@
 Roadie Labs is a scored event database for road cycling (gran fondos, sportives, centuries, hillclimbs, multi-stage amateur races). Migrated from the Gravel God system in Sprint 41. Clinical, technical, data-driven brand identity.
 
 - **Brand**: Roadie Labs
-- **Domain**: roadlabs.cc (not yet live)
+- **Domain**: roadielabs.com (not yet live)
 - **CSS variable prefix**: `--rl-` (not `--gg-`)
 - **Palette**: Navy / steel blue / signal red on cool white. Neo-brutalist rules: no border-radius, no box-shadow, solid borders.
 - **Fonts**: Unbounded (display), Sometype Mono (data), Source Serif 4 (editorial)

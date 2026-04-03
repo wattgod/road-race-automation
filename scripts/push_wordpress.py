@@ -19,7 +19,8 @@ from pathlib import Path
 load_dotenv()
 
 SSH_KEY = Path.home() / ".ssh" / "roadlabs_key"
-WP_UPLOADS = "/home/TODO_SITEGROUND_USER/public_html/wp-content/uploads"
+REMOTE_BASE = os.environ.get("REMOTE_BASE", "/home/customer/www/roadielabs.com/public_html")
+WP_UPLOADS = f"{REMOTE_BASE}/wp-content/uploads"
 
 
 def get_wp_credentials():
@@ -139,7 +140,7 @@ def sync_index(index_file: str):
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         public_url = f"{wp_url}/wp-content/uploads/{index_path.name}"
         print(f"✓ Uploaded: {public_url}")
         return public_url
@@ -177,7 +178,7 @@ def sync_widget(widget_file: str):
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         public_url = f"{wp_url}/wp-content/uploads/{widget_path.name}"
         print(f"✓ Uploaded widget: {public_url}")
     except subprocess.CalledProcessError as e:
@@ -266,7 +267,7 @@ def sync_training(js_file: str):
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         public_url = f"{wp_url}/wp-content/uploads/{js_path.name}"
         print(f"✓ Uploaded training plans JS: {public_url}")
     except subprocess.CalledProcessError as e:
@@ -321,7 +322,7 @@ def sync_guide(guide_dir: str):
         return None
 
     # Remote base: public_html/guide/
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/guide"
+    remote_base = f"{REMOTE_BASE}/guide"
 
     # Create remote directory structure
     try:
@@ -434,7 +435,7 @@ def sync_guide(guide_dir: str):
     else:
         print(f"⚠ No guide/media/ directory found (run generate_guide_media.py first)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     return f"{wp_url}/guide/"
 
 
@@ -470,7 +471,7 @@ def sync_guide_cluster(cluster_dir: str):
         print(f"✗ No guide chapter pages found in {cluster_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/guide"
+    remote_base = f"{REMOTE_BASE}/guide"
 
     # Create remote directory structure
     chapter_mkdir = " ".join(f"{remote_base}/{d.name}" for d in chapter_dirs)
@@ -537,12 +538,12 @@ def sync_guide_cluster(cluster_dir: str):
     except subprocess.CalledProcessError:
         print("⚠️  Warning: could not fix /guide/ permissions — verify manually")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} guide cluster pages to {wp_url}/guide/")
     return f"{wp_url}/guide/"
 
 
-SITE_BASE_URL = os.environ.get("WP_URL", "https://roadlabs.cc")
+SITE_BASE_URL = os.environ.get("WP_URL", "https://roadielabs.com")
 
 
 def sync_homepage(homepage_file: str):
@@ -558,7 +559,7 @@ def sync_homepage(homepage_file: str):
         print("  Run: python3 wordpress/generate_homepage.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/homepage"
+    remote_base = f"{REMOTE_BASE}/homepage"
 
     # Create remote directory
     try:
@@ -590,7 +591,7 @@ def sync_homepage(homepage_file: str):
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         print(f"✓ Uploaded homepage: {wp_url}/homepage/")
         return f"{wp_url}/homepage/"
     except subprocess.CalledProcessError as e:
@@ -614,7 +615,7 @@ def sync_about(about_file: str):
         print("  Run: python3 wordpress/generate_about.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/about"
+    remote_base = f"{REMOTE_BASE}/about"
 
     # Create remote directory
     try:
@@ -673,7 +674,7 @@ def sync_about(about_file: str):
 
     # Upload shared CSS/JS assets (about page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -691,7 +692,7 @@ def sync_about(about_file: str):
             except subprocess.CalledProcessError:
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded about page: {wp_url}/about/")
     return f"{wp_url}/about/"
 
@@ -709,7 +710,7 @@ def sync_coaching(coaching_file: str):
         print("  Run: python3 wordpress/generate_coaching.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/coaching"
+    remote_base = f"{REMOTE_BASE}/coaching"
 
     # Create remote directory
     try:
@@ -750,7 +751,7 @@ def sync_coaching(coaching_file: str):
 
     # Upload shared CSS/JS assets (coaching page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -768,7 +769,7 @@ def sync_coaching(coaching_file: str):
             except subprocess.CalledProcessError:
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded coaching page: {wp_url}/coaching/")
     return f"{wp_url}/coaching/"
 
@@ -793,7 +794,7 @@ def sync_success(output_dir: str):
     ]
 
     out_dir = Path(output_dir)
-    remote_root = "/home/TODO_SITEGROUND_USER/public_html"
+    remote_root = f"{REMOTE_BASE}"
     uploaded = []
 
     for filename, remote_path in pages:
@@ -860,7 +861,7 @@ def sync_success(output_dir: str):
             except subprocess.CalledProcessError:
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     for path in uploaded:
         print(f"✓ Uploaded success page: {wp_url}/{path}/")
 
@@ -888,7 +889,7 @@ def sync_consulting(consulting_file: str):
         print("  Run: python3 wordpress/generate_consulting.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/consulting"
+    remote_base = f"{REMOTE_BASE}/consulting"
 
     # Create remote directory
     try:
@@ -929,7 +930,7 @@ def sync_consulting(consulting_file: str):
 
     # Upload shared CSS/JS assets (consulting page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -947,7 +948,7 @@ def sync_consulting(consulting_file: str):
             except subprocess.CalledProcessError:
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded consulting page: {wp_url}/consulting/")
     return f"{wp_url}/consulting/"
 
@@ -970,7 +971,7 @@ def sync_legal(output_dir: str):
             print("  Run: python3 wordpress/generate_legal_pages.py first")
             continue
 
-        remote_dir = f"/home/TODO_SITEGROUND_USER/public_html/{slug}"
+        remote_dir = f"{REMOTE_BASE}/{slug}"
         try:
             subprocess.run(
                 ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}", f"mkdir -p {remote_dir}"],
@@ -985,13 +986,13 @@ def sync_legal(output_dir: str):
             print(f"✗ Failed to upload {slug}: {e.stderr.strip()}")
 
     if uploaded:
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         for slug in uploaded:
             print(f"✓ Uploaded legal page: {wp_url}/{slug}/")
 
     # Upload shared CSS/JS assets
     assets_dir = out / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -1017,7 +1018,7 @@ def sync_consent():
         print(f"✗ Cookie consent mu-plugin not found: {mu_plugin}")
         return None
 
-    remote = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins/rl-cookie-consent.php"
+    remote = f"{REMOTE_BASE}/wp-content/mu-plugins/rl-cookie-consent.php"
     try:
         subprocess.run(
             ["scp", "-i", str(SSH_KEY), "-P", port, str(mu_plugin), f"{user}@{host}:{remote}"],
@@ -1043,7 +1044,7 @@ def sync_training_plans(training_plans_file: str):
         print("  Run: python3 wordpress/generate_training_plans.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/products/training-plans"
+    remote_base = f"{REMOTE_BASE}/products/training-plans"
 
     # Create remote directory
     try:
@@ -1086,7 +1087,7 @@ def sync_training_plans(training_plans_file: str):
     assets_dir = html_path.parent.parent / "assets"
     if not assets_dir.exists():
         assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -1104,7 +1105,7 @@ def sync_training_plans(training_plans_file: str):
             except subprocess.CalledProcessError:
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded training plans page: {wp_url}/products/training-plans/")
     return f"{wp_url}/products/training-plans/"
 
@@ -1122,7 +1123,7 @@ def sync_coaching_apply(apply_file: str):
         print("  Run: python3 wordpress/generate_coaching_apply.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/coaching/apply"
+    remote_base = f"{REMOTE_BASE}/coaching/apply"
 
     # Create remote directory
     try:
@@ -1161,7 +1162,7 @@ def sync_coaching_apply(apply_file: str):
         print(f"✗ Error uploading coaching apply page: {e}")
         return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded coaching apply page: {wp_url}/coaching/apply/")
     return f"{wp_url}/coaching/apply/"
 
@@ -1187,7 +1188,7 @@ def sync_og(og_dir: str):
         print(f"✗ No .jpg files found in {og_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/og"
+    remote_base = f"{REMOTE_BASE}/og"
 
     # Create remote directory
     try:
@@ -1229,7 +1230,7 @@ def sync_og(og_dir: str):
             print(f"✗ tar+ssh failed: {stderr.decode().strip()}")
             return None
 
-        wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
         print(f"✓ Uploaded {len(filenames)} OG images to {wp_url}/og/")
         return f"{wp_url}/og/"
     except subprocess.TimeoutExpired:
@@ -1271,7 +1272,7 @@ def sync_pages(pages_dir: str):
         print(f"✗ No .html files or page subdirectories found in {pages_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
+    remote_base = f"{REMOTE_BASE}/race"
 
     # Create remote directory with correct permissions
     try:
@@ -1365,7 +1366,7 @@ def sync_pages(pages_dir: str):
     except subprocess.CalledProcessError:
         print("⚠️  Warning: could not fix /race/ permissions — verify manually")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} race pages to {wp_url}/race/")
     return f"{wp_url}/race/"
 
@@ -1435,7 +1436,7 @@ RewriteRule ^training-plans/?$ /products/training-plans/ [R=301,L]
 
 # Broken URL from GSC → parent page (404 fix)
 # TODO: Update email reference for Roadie Labs
-RewriteRule ^training-plans-faq/TODO_ROADLABS_EMAIL$ /training-plans-faq/ [R=301,L]
+RewriteRule ^training-plans-faq/coach@roadielabs.com$ /training-plans-faq/ [R=301,L]
 </IfModule>
 # END Roadie Labs Redirects
 """
@@ -1455,7 +1456,7 @@ def sync_redirects():
         return False
     host, user, port = ssh
 
-    remote_htaccess = "/home/TODO_SITEGROUND_USER/public_html/.htaccess"
+    remote_htaccess = f"{REMOTE_BASE}/.htaccess"
 
     # Read current .htaccess
     try:
@@ -1531,7 +1532,7 @@ def sync_sitemap():
         print("  Run: python scripts/generate_sitemap.py")
         return False
 
-    remote_root = "/home/TODO_SITEGROUND_USER/public_html"
+    remote_root = f"{REMOTE_BASE}"
     today = date.today().isoformat()
 
     # 1. Upload race sitemap as race-sitemap.xml
@@ -1577,26 +1578,26 @@ def sync_sitemap():
     blog_sitemap_entry = ""
     if has_blog_sitemap:
         blog_sitemap_entry = f"""  <sitemap>
-    <loc>https://roadlabs.cc/blog-sitemap.xml</loc>
+    <loc>https://roadielabs.com/blog-sitemap.xml</loc>
     <lastmod>{today}</lastmod>
   </sitemap>
 """
     sitemap_index = f"""<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://roadlabs.cc/race-sitemap.xml</loc>
+    <loc>https://roadielabs.com/race-sitemap.xml</loc>
     <lastmod>{today}</lastmod>
   </sitemap>
 {blog_sitemap_entry}  <sitemap>
-    <loc>https://roadlabs.cc/post-sitemap.xml</loc>
+    <loc>https://roadielabs.com/post-sitemap.xml</loc>
     <lastmod>{today}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://roadlabs.cc/page-sitemap.xml</loc>
+    <loc>https://roadielabs.com/page-sitemap.xml</loc>
     <lastmod>{today}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://roadlabs.cc/category-sitemap.xml</loc>
+    <loc>https://roadielabs.com/category-sitemap.xml</loc>
     <lastmod>{today}</lastmod>
   </sitemap>
 </sitemapindex>
@@ -1657,7 +1658,7 @@ def sync_noindex():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
+    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
 
     # Ensure mu-plugins directory exists
     try:
@@ -1729,8 +1730,8 @@ def sync_meta_descriptions():
         print(f"✗ Invalid JSON: {e}")
         return False
 
-    mu_plugins_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
-    uploads_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/uploads"
+    mu_plugins_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
+    uploads_path = f"{REMOTE_BASE}/wp-content/uploads"
 
     # Ensure directories exist
     try:
@@ -1812,7 +1813,7 @@ def sync_ctas():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
+    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1848,7 +1849,7 @@ def sync_ga4():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
+    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1884,7 +1885,7 @@ def sync_header():
         print(f"✗ mu-plugin not found: {plugin_file}")
         return False
 
-    remote_path = "/home/TODO_SITEGROUND_USER/public_html/wp-content/mu-plugins"
+    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
 
     try:
         subprocess.run(
@@ -1935,7 +1936,7 @@ def sync_ab():
     js_hash = hashlib.md5(js_content.encode()).hexdigest()[:8]
     hashed_js_name = f"rl-ab-tests.{js_hash}.js"
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html"
+    remote_base = f"{REMOTE_BASE}"
     remote_ab = f"{remote_base}/ab"
     remote_mu = f"{remote_base}/wp-content/mu-plugins"
 
@@ -1990,7 +1991,7 @@ def purge_cache():
         return False
     host, user, port = ssh
 
-    wp_path = "/home/TODO_SITEGROUND_USER/public_html"
+    wp_path = f"{REMOTE_BASE}"
     try:
         result = subprocess.run(
             [
@@ -2042,7 +2043,7 @@ def sync_photos(photos_dir: str):
         print(f"✗ No photo directories found in {photos_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race-photos"
+    remote_base = f"{REMOTE_BASE}/race-photos"
 
     # Create remote directory
     try:
@@ -2092,7 +2093,7 @@ def sync_photos(photos_dir: str):
         print(f"✗ Error uploading photos: {e}")
         return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {total_photos} photos ({len(slug_dirs)} races) to {wp_url}/race-photos/")
     return f"{wp_url}/race-photos/"
 
@@ -2118,7 +2119,7 @@ def sync_prep_kits(prep_kit_dir: str):
         print(f"✗ No .html files found in {pk_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
+    remote_base = f"{REMOTE_BASE}/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2159,7 +2160,7 @@ def sync_prep_kits(prep_kit_dir: str):
             print(f"✗ Error uploading prep kit pages: {e}")
             return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} prep kit pages to {wp_url}/race/*/prep-kit/")
     return f"{wp_url}/race/"
 
@@ -2185,7 +2186,7 @@ def sync_tire_guides(tire_guide_dir: str):
         print(f"✗ No .html files found in {tg_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
+    remote_base = f"{REMOTE_BASE}/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2226,7 +2227,7 @@ def sync_tire_guides(tire_guide_dir: str):
             print(f"✗ Error uploading tire guide pages: {e}")
             return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} tire guide pages to {wp_url}/race/*/tires/")
     return f"{wp_url}/race/"
 
@@ -2256,7 +2257,7 @@ def sync_series(series_dir: str):
         print(f"✗ No series hub pages found in {series_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race/series"
+    remote_base = f"{REMOTE_BASE}/race/series"
 
     # Create remote directory with correct permissions
     try:
@@ -2321,7 +2322,7 @@ def sync_series(series_dir: str):
     except subprocess.CalledProcessError:
         print("⚠️  Warning: could not fix /race/series/ permissions — verify manually")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} series hub pages to {wp_url}/race/series/")
     return f"{wp_url}/race/series/"
 
@@ -2345,7 +2346,7 @@ def sync_blog_index(index_page: str, index_json: str):
         print("  Run: python scripts/generate_blog_index.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/blog"
+    remote_base = f"{REMOTE_BASE}/blog"
 
     # Create remote directory
     try:
@@ -2416,7 +2417,7 @@ def sync_blog_index(index_page: str, index_json: str):
     except Exception:
         pass  # Non-critical
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Blog index live at {wp_url}/blog/")
     return f"{wp_url}/blog/"
 
@@ -2442,7 +2443,7 @@ def sync_blog(blog_dir: str):
         print(f"✗ No .html files found in {blog_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/blog"
+    remote_base = f"{REMOTE_BASE}/blog"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2483,7 +2484,7 @@ def sync_blog(blog_dir: str):
             print(f"✗ Error uploading blog pages: {e}")
             return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} blog pages to {wp_url}/blog/")
     return f"{wp_url}/blog/"
 
@@ -2514,7 +2515,7 @@ def sync_courses(course_dir: str):
         print(f"✗ No index.html files found in {course_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/course"
+    remote_base = f"{REMOTE_BASE}/course"
 
     # Create remote directory with correct permissions
     try:
@@ -2559,7 +2560,7 @@ def sync_courses(course_dir: str):
         print(f"✗ Error uploading course pages: {e}")
         return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {len(html_files)} course pages to {wp_url}/course/")
     return f"{wp_url}/course/"
 
@@ -2577,7 +2578,7 @@ def sync_mission_control(mc_file: str):
         print("  Run: python3 wordpress/generate_mission_control.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/mission-control"
+    remote_base = f"{REMOTE_BASE}/mission-control"
 
     # Create remote directory
     try:
@@ -2616,7 +2617,7 @@ def sync_mission_control(mc_file: str):
         print(f"✗ Error uploading mission control: {e}")
         return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded mission control: {wp_url}/mission-control/")
     return f"{wp_url}/mission-control/"
 
@@ -2634,7 +2635,7 @@ def sync_insights(insights_file: str):
         print("  Run: python3 wordpress/generate_insights.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/insights"
+    remote_base = f"{REMOTE_BASE}/insights"
 
     # Create remote directory
     try:
@@ -2675,7 +2676,7 @@ def sync_insights(insights_file: str):
 
     # Upload shared CSS/JS assets (insights page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -2709,7 +2710,7 @@ def sync_insights(insights_file: str):
     except subprocess.CalledProcessError:
         pass
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded insights page: {wp_url}/insights/")
     return f"{wp_url}/insights/"
 
@@ -2727,7 +2728,7 @@ def sync_whitepaper(whitepaper_file: str):
         print("  Run: python3 wordpress/generate_whitepaper_fueling.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/fueling-methodology"
+    remote_base = f"{REMOTE_BASE}/fueling-methodology"
 
     # Create remote directory
     try:
@@ -2768,7 +2769,7 @@ def sync_whitepaper(whitepaper_file: str):
 
     # Upload shared CSS/JS assets (white paper page references them via /race/assets/)
     assets_dir = html_path.parent / "assets"
-    remote_assets = "/home/TODO_SITEGROUND_USER/public_html/race/assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
     for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
         for asset in assets_dir.glob(pattern):
             try:
@@ -2802,7 +2803,7 @@ def sync_whitepaper(whitepaper_file: str):
     except subprocess.CalledProcessError as e:
         print(f"⚠ Permission fix failed: {e}")
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded white paper page: {wp_url}/fueling-methodology/")
     return f"{wp_url}/fueling-methodology/"
 
@@ -2820,7 +2821,7 @@ def sync_embed():
         print("  Run: python3 scripts/generate_embed_widget.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/embed"
+    remote_base = f"{REMOTE_BASE}/embed"
 
     # Create remote directory
     try:
@@ -2877,7 +2878,7 @@ def sync_embed():
     except subprocess.CalledProcessError:
         pass
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Embed widget deployed: {wp_url}/embed/demo.html")
     return f"{wp_url}/embed/"
 
@@ -2895,7 +2896,7 @@ def sync_rss():
         print("  Run: python3 scripts/generate_rss_feed.py first")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/feed"
+    remote_base = f"{REMOTE_BASE}/feed"
 
     # Create remote directory
     try:
@@ -2950,7 +2951,7 @@ def sync_rss():
     except subprocess.CalledProcessError:
         pass
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ RSS feed deployed: {wp_url}/feed/races.xml")
     return f"{wp_url}/feed/races.xml"
 
@@ -2962,7 +2963,7 @@ def sync_llms_txt():
         return None
     host, user, port = ssh
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html"
+    remote_base = f"{REMOTE_BASE}"
     uploaded = 0
 
     for filename in ("llms.txt", "llms-full.txt"):
@@ -3006,7 +3007,7 @@ def sync_llms_txt():
     except subprocess.CalledProcessError:
         pass
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {uploaded} llms.txt files to {wp_url}/")
     return f"{wp_url}/llms.txt"
 
@@ -3033,7 +3034,7 @@ def sync_markdown(markdown_dir: str):
         print(f"✗ No .md files found in {md_path}")
         return None
 
-    remote_base = "/home/TODO_SITEGROUND_USER/public_html/race"
+    remote_base = f"{REMOTE_BASE}/race"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -3074,7 +3075,7 @@ def sync_markdown(markdown_dir: str):
             print(f"✗ Error uploading markdown profiles: {e}")
             return None
 
-    wp_url = os.environ.get("WP_URL", "https://roadlabs.cc")
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} markdown profiles to {wp_url}/race/*/index.md")
     return f"{wp_url}/race/"
 

@@ -40,7 +40,7 @@ from cookie_consent import get_consent_banner_html
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 # Formsubmit.co endpoint — sends email to this address on submission
-FORMSUBMIT_EMAIL = "TODO_ROADLABS_EMAIL"  # TODO: Roadie Labs contact email
+FORMSUBMIT_EMAIL = "coach@roadielabs.com"  # TODO: Roadie Labs contact email
 FORMSUBMIT_URL = f"https://formsubmit.co/{FORMSUBMIT_EMAIL}"
 
 
@@ -806,7 +806,7 @@ def build_submit_buttons() -> str:
 
 def build_footer() -> str:
     return f'''<div class="rl-apply-confidential-wrap">
-    <p class="rl-apply-confidential">Your information is kept confidential and used only for coaching purposes. Questions? Email TODO_ROADLABS_EMAIL</p>
+    <p class="rl-apply-confidential">Your information is kept confidential and used only for coaching purposes. Questions? Email coach@roadielabs.com</p>
   </div>
   ''' + get_mega_footer_html()
 
@@ -1698,7 +1698,7 @@ def build_apply_js() -> str:
 
     var output = formatSubmission(data);
 
-    /* Submit via Formsubmit.co — sends email to TODO_ROADLABS_EMAIL */
+    /* Submit via Formsubmit.co — sends email to coach@roadielabs.com */
     var FORMSUBMIT_URL = "''' + FORMSUBMIT_URL + '''";
     var payload = new FormData();
     payload.append("_subject", "Coaching Application: " + data.name);
@@ -1731,7 +1731,7 @@ def build_apply_js() -> str:
       /* Fallback: open email client with formatted body */
       var subject = encodeURIComponent("Coaching Application: " + data.name);
       var body = encodeURIComponent(output);
-      window.location.href = "mailto:TODO_ROADLABS_EMAIL?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:coach@roadielabs.com?subject=" + subject + "&body=" + body;
       ga4("apply_form_fallback", { method: "mailto" });
     });
   });
@@ -1797,7 +1797,7 @@ def generate_apply_page(external_assets=None):
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
-  <link rel="icon" href="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo-32x32.png" sizes="32x32"><!-- TODO: replace with Roadie Labs favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20fill%3D%27%231a1a1a%27%2F%3E%3Ctext%20x%3D%2716%27%20y%3D%2724%27%20text-anchor%3D%27middle%27%20font-family%3D%27serif%27%20font-size%3D%2724%27%20font-weight%3D%27700%27%20fill%3D%27%23f5f5f0%27%3ER%3C%2Ftext%3E%3C%2Fsvg%3E">
   {get_preload_hints()}
   {page_css}
   {get_ab_head_snippet()}

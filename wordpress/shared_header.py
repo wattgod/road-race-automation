@@ -8,7 +8,7 @@ and coaching apply pages.
 """
 from __future__ import annotations
 
-SITE_BASE_URL = "https://roadlabs.cc"
+SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
 
 
@@ -27,7 +27,7 @@ def get_site_header_html(active: str | None = None) -> str:
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="{SITE_BASE_URL}/" class="rl-site-header-logo">
-      <img src="https://roadlabs.cc/wp-content/uploads/2021/09/cropped-Gravel-God-logo.png" alt="Roadie Labs" width="50" height="50"><!-- TODO: replace with Roadie Labs logo asset -->
+      <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2050%2050%27%3E%3Crect%20width%3D%2750%27%20height%3D%2750%27%20fill%3D%27%231a1a1a%27%2F%3E%3Ctext%20x%3D%2725%27%20y%3D%2737%27%20text-anchor%3D%27middle%27%20font-family%3D%27serif%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%20fill%3D%27%23f5f5f0%27%3ER%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Roadie Labs" width="50" height="50">
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">

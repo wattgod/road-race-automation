@@ -53,7 +53,7 @@ class TestFeedFile:
         channel = tree.getroot().find("channel")
         link = channel.find("link")
         assert link is not None
-        assert "roadlabs.cc" in link.text
+        assert "roadielabs.com" in link.text
 
     def test_channel_description(self):
         tree = ET.parse(str(FEED_FILE))
@@ -92,7 +92,7 @@ class TestFeedFile:
         items = channel.findall("item")
         for item in items[:10]:
             link = item.find("link").text
-            assert link.startswith("https://roadlabs.cc/race/")
+            assert link.startswith("https://roadielabs.com/race/")
             assert link.endswith("/")
 
     def test_items_have_categories(self):

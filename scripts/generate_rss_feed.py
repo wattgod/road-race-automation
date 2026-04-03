@@ -24,7 +24,7 @@ RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 OUTPUT_DIR = PROJECT_ROOT / "web" / "feed"
 OUTPUT_FILE = OUTPUT_DIR / "races.xml"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 
 
 def _tier_label(tier):

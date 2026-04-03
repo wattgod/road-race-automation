@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Post-deploy validation for roadlabs.cc.
+Post-deploy validation for roadielabs.com.
 
 Run after any deploy to verify the site is working correctly.
 Checks redirects, sitemaps, key pages, and SEO basics.
@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
-BASE_URL = "https://roadlabs.cc"
+BASE_URL = "https://roadielabs.com"
 VERBOSE = "--verbose" in sys.argv or "-v" in sys.argv
 QUICK = "--quick" in sys.argv
 
@@ -173,7 +173,7 @@ def check_redirects(v):
         ("/race/", "/gravel-races/"),
         ("/barry-roubaix-race-guide/", "/race/barry-roubaix/"),
         ("/belgian-waffle-ride/", "/race/bwr-california/"),
-        ("/training-plans-faq/TODO_ROADLABS_EMAIL", "/training-plans-faq/"),
+        ("/training-plans-faq/coach@roadielabs.com", "/training-plans-faq/"),
     ]
     for source, expected in test_pairs:
         try:

@@ -69,7 +69,7 @@ SOURCE_RULES = [
 
 # Domains to exclude (not useful as citations)
 EXCLUDE_DOMAINS = {
-    'roadlabs.cc',
+    'roadielabs.com',
     'google.com', 'google.co.uk', 'goo.gl', 'google.ca',
     'bit.ly', 't.co', 'tinyurl.com',
     'web.archive.org',

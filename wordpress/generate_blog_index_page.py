@@ -20,9 +20,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
 INDEX_JSON = PROJECT_ROOT / "web" / "blog-index.json"
-SITE_URL = "https://roadlabs.cc"
+SITE_URL = "https://roadielabs.com"
 
-TIER_COLORS = {1: "#59473c", 2: "#7d695d", 3: "#766a5e", 4: "#5e6868"}
+TIER_COLORS = {1: "#555555", 2: "#7d695d", 3: "#766a5e", 4: "#5e6868"}
 CAT_LABELS = {"preview": "Race Preview", "roundup": "Season Roundup", "recap": "Race Recap"}
 
 
@@ -105,15 +105,15 @@ def generate_blog_index_page(output_dir=None):
   <script type="application/ld+json">{jsonld}</script>
   <style>
     :root {{
-      --rl-dark-brown: #3a2e25;
-      --rl-primary-brown: #59473c;
+      --rl-dark-brown: #1a1a1a;
+      --rl-primary-brown: #555555;
       --rl-secondary-brown: #7d695d;
       --rl-teal: #178079;
       --rl-light-teal: #4ECDC4;
-      --rl-warm-paper: #f5efe6;
-      --rl-sand: #ede4d8;
+      --rl-warm-paper: #f5f5f0;
+      --rl-sand: #f5f5f0;
       --rl-white: #ffffff;
-      --rl-gold: #9a7e0a;
+      --rl-gold: #333333;
     }}
     * {{ margin: 0; padding: 0; box-sizing: border-box; border-radius: 0; }}
     body {{
@@ -349,7 +349,7 @@ def generate_blog_index_page(output_dir=None):
 
   <script>
   (function() {{
-    var TIER_COLORS = {{1:'#59473c',2:'#7d695d',3:'#766a5e',4:'#5e6868'}};
+    var TIER_COLORS = {{1:'#555555',2:'#7d695d',3:'#766a5e',4:'#5e6868'}};
     var CAT_LABELS = {{preview:'Race Preview',roundup:'Season Roundup',recap:'Race Recap'}};
     var blogData = [];
     var currentCategory = 'all';

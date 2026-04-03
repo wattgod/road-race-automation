@@ -140,7 +140,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
             "@type": "ListItem",
             "position": i,
             "name": r.get("name", ""),
-            "url": "https://roadlabs.cc/race/" + slug + "/"
+            "url": "https://roadielabs.com/race/" + slug + "/"
         }, ensure_ascii=False))
     item_list_json = ",\n      ".join(item_list_entries)
 
@@ -155,7 +155,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
         )
     tier_nav = "\n      ".join(tier_nav_items)
 
-    canonical = f"https://roadlabs.cc/race/{meta['slug']}/"
+    canonical = f"https://roadielabs.com/race/{meta['slug']}/"
 
     font_face = get_font_face_css()
     tokens = get_tokens_css()
@@ -185,7 +185,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
     "isPartOf": {{
       "@type": "WebSite",
       "name": "Roadie Labs",
-      "url": "https://roadlabs.cc"
+      "url": "https://roadielabs.com"
     }}
   }}
   </script>
@@ -198,13 +198,13 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://roadlabs.cc/"
+        "item": "https://roadielabs.com/"
       }},
       {{
         "@type": "ListItem",
         "position": 2,
         "name": "Gravel Races",
-        "item": "https://roadlabs.cc/gravel-races/"
+        "item": "https://roadielabs.com/gravel-races/"
       }},
       {{
         "@type": "ListItem",
