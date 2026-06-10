@@ -1775,15 +1775,39 @@ def build_hero(rd: dict) -> str:
             parts.append(f"{elev} ft")
     vitals_line = " &middot; ".join(parts)
 
+    # Rider Score — RT audience-score mechanic (northstar P1.4). Only real,
+    # threshold-gated submitted ratings display a number; below threshold
+    # the cell is an honest ask linking to the review form.
+    # (Also fixes the fork branding leak: label was "GG SCORE".)
+    rr = rd.get('racer_rating', {})
+    if (rr.get('total_ratings', 0) >= RACER_RATING_THRESHOLD
+            and rr.get('star_average')):
+        rider_value = round(float(rr['star_average']) * 20)
+        n = rr['total_ratings']
+        rider_cell = (
+            f'<div class="rl-hero-score-number rl-hero-rider-number">{rider_value}</div>\n'
+            f'    <div class="rl-hero-score-label">RIDER SCORE &middot; {n} RATING{"S" if n != 1 else ""}</div>'
+        )
+    else:
+        rider_cell = (
+            '<div class="rl-hero-score-number rl-hero-rider-number rl-hero-rider-empty">&mdash;</div>\n'
+            '    <a class="rl-hero-score-label rl-hero-rider-ask" href="#racer-reviews" data-cta="hero_rate_race">RIDER SCORE &middot; RATE IT &rarr;</a>'
+        )
+
     return f'''<section class="rl-hero">
   <div class="rl-hero-content">
     <span class="rl-hero-tier">{esc(rd['tier_label'])}</span>{series_badge}
     <h1>{esc(rd['name'])}</h1>
     <div class="rl-hero-vitals">{vitals_line}</div>
   </div>
+  <div class="rl-hero-scores">
   <div class="rl-hero-score">
     <div class="rl-hero-score-number" data-target="{score}">{score}</div>
-    <div class="rl-hero-score-label">GG SCORE</div>
+    <div class="rl-hero-score-label">RL SCORE</div>
+  </div>
+  <div class="rl-hero-score rl-hero-score--rider">
+    {rider_cell}
+  </div>
   </div>
 </section>'''
 
@@ -2524,7 +2548,7 @@ def build_racer_reviews(rd: dict) -> str:
 
     # No ratings at all — empty state
     if total_ratings == 0:
-        return f'''<section class="rl-racer-reviews rl-fade-section">
+        return f'''<section class="rl-racer-reviews rl-fade-section" id="racer-reviews">
     <div class="rl-racer-empty">
       <div class="rl-racer-empty-text">No racer ratings yet. Be the first to rate {esc(name)}.</div>
       {review_form}
@@ -2534,7 +2558,7 @@ def build_racer_reviews(rd: dict) -> str:
     # Below threshold — pending state
     if total_ratings < RACER_RATING_THRESHOLD:
         needed = RACER_RATING_THRESHOLD - total_ratings
-        return f'''<section class="rl-racer-reviews rl-fade-section">
+        return f'''<section class="rl-racer-reviews rl-fade-section" id="racer-reviews">
     <div class="rl-racer-pending">
       <div class="rl-racer-pending-text">{total_ratings} rating{"s" if total_ratings != 1 else ""} so far &mdash; {needed} more needed to display the Racer Rating.</div>
       {review_form}
@@ -2583,7 +2607,7 @@ def build_racer_reviews(rd: dict) -> str:
     parts.append(review_form)
 
     inner = '\n    '.join(parts)
-    return f'''<section class="rl-racer-reviews rl-fade-section">
+    return f'''<section class="rl-racer-reviews rl-fade-section" id="racer-reviews">
     <div class="rl-section-header rl-section-header--teal">
       <span class="rl-section-kicker">RACER</span>
       <h2 class="rl-section-title">Racer Reviews</h2>
@@ -4651,7 +4675,13 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-series-badge:hover {{ color: var(--rl-color-signal-red); }}
 .rl-neo-brutalist-page .rl-hero h1 {{ font-family: var(--rl-font-editorial); font-size: 42px; font-weight: var(--rl-font-weight-bold); line-height: 1.05; letter-spacing: var(--rl-letter-spacing-tight); margin: 0; color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-hero-vitals {{ font-family: var(--rl-font-data); font-size: 11px; color: var(--rl-color-secondary-blue); letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; }}
+.rl-neo-brutalist-page .rl-hero-scores {{ display: flex; gap: 28px; flex-shrink: 0; align-items: flex-start; }}
 .rl-neo-brutalist-page .rl-hero-score {{ text-align: center; flex-shrink: 0; }}
+.rl-neo-brutalist-page .rl-hero-score--rider {{ padding-left: 28px; border-left: 2px solid var(--rl-color-silver); max-width: 130px; }}
+.rl-neo-brutalist-page .rl-hero-rider-number {{ color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-hero-rider-empty {{ color: var(--rl-color-light-steel); }}
+.rl-neo-brutalist-page a.rl-hero-rider-ask {{ display: block; text-decoration: underline; text-underline-offset: 3px; color: var(--rl-color-near-black); }}
+@media (max-width: 700px) {{ .rl-neo-brutalist-page .rl-hero-scores {{ gap: 18px; }} .rl-neo-brutalist-page .rl-hero-score--rider {{ padding-left: 18px; }} }}
 .rl-neo-brutalist-page .rl-hero-score-number {{ font-family: var(--rl-font-editorial); font-size: 72px; font-weight: var(--rl-font-weight-bold); line-height: 1; color: var(--rl-color-orange); }}
 .rl-neo-brutalist-page .rl-hero-score-label {{ font-family: var(--rl-font-data); font-size: 10px; font-weight: var(--rl-font-weight-bold); letter-spacing: 3px; text-transform: uppercase; color: var(--rl-color-secondary-blue); margin-top: 4px; }}
 
