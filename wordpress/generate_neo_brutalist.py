@@ -4076,6 +4076,7 @@ def build_train_for_race(rd: dict) -> str:
       <div class="rl-pack-cta" id="rl-pack-cta-default">
         <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
         <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
       </div>
       <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
         <a href="{plan_url}" class="rl-btn rl-cfg-cta-btn" id="rl-cfg-cta-link" tabindex="-1">BUILD MY PLAN</a>

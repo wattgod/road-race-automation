@@ -66,6 +66,14 @@ def load_state_slugs(project_root: Path) -> list:
     return slugs
 
 
+def load_plan_page_slugs(project_root: Path) -> list:
+    """Load training-plan page slugs from wordpress/output/training-plan/."""
+    d = project_root / "wordpress" / "output" / "training-plan"
+    if not d.exists():
+        return []
+    return [path.stem for path in sorted(d.glob("*.html"))]
+
+
 def load_tire_slugs(project_root: Path) -> list:
     """Load tire guide page slugs from wordpress/output/tires/ directory."""
     tires_dir = project_root / "wordpress" / "output" / "tires"
@@ -227,6 +235,15 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/"
         SubElement(url, 'lastmod').text = today
         SubElement(url, 'changefreq').text = 'weekly'
+        SubElement(url, 'priority').text = '0.8'
+
+    # Training-plan pages (northstar P2 — commercial-intent SEO)
+    plan_slugs = load_plan_page_slugs(output_path.parent.parent)
+    for slug in plan_slugs:
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/training-plan/"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = 'monthly'
         SubElement(url, 'priority').text = '0.8'
 
     # Tire guide pages

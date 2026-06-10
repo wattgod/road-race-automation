@@ -2251,6 +2251,72 @@ def sync_prep_kits(prep_kit_dir: str):
     print(f"✓ Uploaded {page_count} prep kit pages to {wp_url}/race/*/prep-kit/")
     return f"{wp_url}/race/"
 
+def sync_plan_pages(plan_dir: str):
+    """Upload training-plan pages to /race/{slug}/training-plan/ on SiteGround via tar+ssh.
+
+    Converts flat {slug}.html files to {slug}/training-plan/index.html directory
+    structure under /race/. Same tar+ssh pattern as sync_pages().
+    """
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    plan_path = Path(plan_dir)
+    if not plan_path.exists():
+        print(f"✗ Prep kit directory not found: {plan_path}")
+        return None
+
+    html_files = sorted(plan_path.glob("*.html"))
+    if not html_files:
+        print(f"✗ No .html files found in {plan_path}")
+        return None
+
+    remote_base = f"{REMOTE_BASE}/race"
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = Path(tmpdir)
+        page_count = 0
+        for html_file in html_files:
+            slug = html_file.stem
+            plan_dir_tmp = tmpdir / slug / "training-plan"
+            plan_dir_tmp.mkdir(parents=True)
+            shutil.copy2(html_file, plan_dir_tmp / "index.html")
+            page_count += 1
+
+        print(f"  Uploading {page_count} training-plan pages via tar+ssh...")
+
+        try:
+            items = [p.name for p in sorted(tmpdir.iterdir())]
+            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            ssh_cmd = [
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                f"tar -xf - -C {remote_base}",
+            ]
+
+            tar_proc = subprocess.Popen(tar_cmd, stdout=subprocess.PIPE)
+            ssh_proc = subprocess.Popen(ssh_cmd, stdin=tar_proc.stdout,
+                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            tar_proc.stdout.close()
+            stdout, stderr = ssh_proc.communicate(timeout=300)
+
+            if ssh_proc.returncode != 0:
+                print(f"✗ tar+ssh failed: {stderr.decode().strip()}")
+                return None
+        except subprocess.TimeoutExpired:
+            print("✗ Upload timed out (300s)")
+            tar_proc.kill()
+            ssh_proc.kill()
+            return None
+        except Exception as e:
+            print(f"✗ Error uploading training-plan pages: {e}")
+            return None
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    print(f"✓ Uploaded {page_count} training-plan pages to {wp_url}/race/*/training-plan/")
+    return f"{wp_url}/race/"
+
 
 def sync_tire_guides(tire_guide_dir: str):
     """Upload tire guide pages to /race/{slug}/tires/ on SiteGround via tar+ssh.
@@ -3353,8 +3419,16 @@ if __name__ == "__main__":
         help="Upload prep kit pages to /race/{slug}/prep-kit/ via tar+ssh"
     )
     parser.add_argument(
+        "--sync-plan-pages", action="store_true",
+        help="Upload training-plan pages to /race/{slug}/training-plan/ via tar+ssh"
+    )
+    parser.add_argument(
         "--prep-kit-dir", default="wordpress/output/prep-kit",
         help="Path to prep kit directory (default: wordpress/output/prep-kit)"
+    )
+    parser.add_argument(
+        "--plan-dir", default="wordpress/output/training-plan",
+        help="Path to training-plan pages dir (default: wordpress/output/training-plan)"
     )
     parser.add_argument(
         "--sync-tire-guides", action="store_true",
@@ -3503,7 +3577,7 @@ if __name__ == "__main__":
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_training_plans, args.sync_success, args.sync_pages,
                       args.sync_sitemap, args.sync_redirects,
-                      args.sync_noindex, args.sync_ctas, args.sync_ga4, args.sync_header, args.sync_prep_kits, args.sync_tire_guides,
+                      args.sync_noindex, args.sync_ctas, args.sync_ga4, args.sync_header, args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
                       args.sync_series, args.sync_blog,
                       args.sync_blog_index, args.sync_photos, args.sync_ab, args.sync_courses,
                       args.sync_meta_descriptions, args.sync_mission_control,
@@ -3565,6 +3639,8 @@ if __name__ == "__main__":
         sync_photos(args.photos_dir)
     if args.sync_prep_kits:
         sync_prep_kits(args.prep_kit_dir)
+    if args.sync_plan_pages:
+        sync_plan_pages(args.plan_dir)
     if args.sync_tire_guides:
         sync_tire_guides(args.tire_guide_dir)
     if args.sync_series:
