@@ -3806,12 +3806,9 @@ def build_prep_strip(rd: dict) -> str:
     <div class="rl-prep-actions">
       <a href="#train-for-race" class="rl-btn rl-btn--outline" data-cta="prep_profile_full">FULL PREP PROFILE &darr;</a>
       <a href="{plan_url}" class="rl-btn" data-cta="prep_strip_build" id="rl-prep-cta">BUILD MY PLAN &mdash; $15/WK</a>
+      <a href="#prep-kit-capture" class="rl-prep-kit-link" data-cta="prep_strip_kit">Free {esc(race_name)} prep kit &rarr;</a>
     </div>
   </section>'''
-    # NOTE: gravel's strip has a third "free prep kit" email-gate link here.
-    # Road intentionally does NOT until road prep kits exist — the capture's
-    # post-submit unlock (/race/{slug}/prep-kit/) 404s without
-    # guide/road-guide-content.json. See task: author road guide content.
 
 
 def build_train_for_race(rd: dict) -> str:

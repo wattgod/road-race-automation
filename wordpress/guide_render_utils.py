@@ -8,7 +8,16 @@ lists, callouts) to brand-neutral HTML; styling comes from the consuming
 page's CSS.
 """
 
+import hashlib
+import html
 import re
+
+
+def esc(text) -> str:
+    """HTML-escape a string. Handles 0/False correctly (only skips None/'')."""
+    if text is None or text == "":
+        return ""
+    return html.escape(str(text))
 
 # Glossary tooltips disabled — prep kits don't use them
 _GLOSSARY = None
@@ -110,3 +119,53 @@ def render_callout(block: dict) -> str:
     content = _md_inline(esc(block["content"]))
     paras = [f'<p>{p.strip()}</p>' for p in content.split('\n') if p.strip()]
     return f'<div class="gg-guide-callout gg-guide-callout--{esc(style)}">{"".join(paras)}</div>'
+
+
+def _md_block(content: str) -> str:
+    """Convert escaped content into HTML paragraphs and lists."""
+    content = _md_inline(content)
+    lines = content.split('\n')
+    result = []
+    in_list = False
+    list_type = None  # 'ul' or 'ol'
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith('- '):
+            if in_list and list_type != 'ul':
+                result.append(f'</{list_type}>')
+                in_list = False
+            if not in_list:
+                result.append('<ul class="gg-guide-list">')
+                in_list = True
+                list_type = 'ul'
+            result.append(f'<li>{stripped[2:]}</li>')
+        elif re.match(r'^\d+\.\s', stripped):
+            if in_list and list_type != 'ol':
+                result.append(f'</{list_type}>')
+                in_list = False
+            if not in_list:
+                result.append('<ol class="gg-guide-list">')
+                in_list = True
+                list_type = 'ol'
+            # Strip the number prefix (e.g. "1. ", "12. ")
+            li_text = re.sub(r'^\d+\.\s', '', stripped)
+            result.append(f'<li>{li_text}</li>')
+        elif stripped.startswith('### '):
+            if in_list:
+                result.append(f'</{list_type}>')
+                in_list = False
+                list_type = None
+            result.append(f'<h4 class="gg-guide-prose-h">{stripped[4:]}</h4>')
+        else:
+            if in_list:
+                result.append(f'</{list_type}>')
+                in_list = False
+                list_type = None
+            if stripped:
+                result.append(f'<p>{stripped}</p>')
+    if in_list:
+        result.append(f'</{list_type}>')
+    return '\n'.join(result)
+
+
+# ── Block Renderers ──────────────────────────────────────────
