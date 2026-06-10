@@ -1,18 +1,18 @@
 # Roadie Labs Race Database
 
-> The definitive gravel race database. 427 races rated on 14 criteria, scored 0-100, and tiered 1-4.
+> The definitive road race database. 427 races rated on 14 criteria, scored 0-100, and tiered 1-4.
 > Last generated: 2026-06-10
 
 ## Overview
 
-Roadie Labs is an independent gravel cycling database covering 427 races across North America and beyond. Every race is scored on 14 dimensions (logistics, length, technicality, elevation, climate, altitude, adventure, prestige, race quality, experience, community, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
+Roadie Labs is an independent road cycling event database covering 427 races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
 
 - **Tier 1 (Elite)**: 22 races — score >= 80 or prestige override
 - **Tier 2 (Strong)**: 331 races — score >= 60
 - **Tier 3 (Solid)**: 73 races — score >= 45
 - **Tier 4 (Developing)**: 1 races — score < 45
 
-Disciplines: gravel, MTB, bikepacking.
+Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, Other, South America, Southern Europe, UK & Ireland, Western Europe.
 
 ## Machine-Readable Resources
@@ -21,7 +21,7 @@ Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, 
 - [Race index JSON (427 entries)](https://roadielabs.com/race-index.json)
 - [REST API (OpenAPI)](https://roadielabs.com/api/v1/docs)
 - [RSS feed](https://roadielabs.com/feed/races.xml)
-- [MCP Server (GitHub)](https://github.com/wattgod/gravel-race-automation)
+- [MCP Server (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles](https://roadielabs.com/race/{slug}/)
 - [Markdown profiles](https://roadielabs.com/race/{slug}/index.md)
 - [Race training-plan guides](https://roadielabs.com/race/{slug}/training-plan/)

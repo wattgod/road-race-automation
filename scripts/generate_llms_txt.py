@@ -82,19 +82,19 @@ def generate_llms_txt(index: list[dict]) -> str:
 
     return f"""# Roadie Labs Race Database
 
-> The definitive gravel race database. {len(index)} races rated on 14 criteria, scored 0-100, and tiered 1-4.
+> The definitive road race database. {len(index)} races rated on 14 criteria, scored 0-100, and tiered 1-4.
 > Last generated: {now}
 
 ## Overview
 
-Roadie Labs is an independent gravel cycling database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (logistics, length, technicality, elevation, climate, altitude, adventure, prestige, race quality, experience, community, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
+Roadie Labs is an independent road cycling event database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
 
 - **Tier 1 (Elite)**: {tier_counts.get(1, 0)} races — score >= 80 or prestige override
 - **Tier 2 (Strong)**: {tier_counts.get(2, 0)} races — score >= 60
 - **Tier 3 (Solid)**: {tier_counts.get(3, 0)} races — score >= 45
 - **Tier 4 (Developing)**: {tier_counts.get(4, 0)} races — score < 45
 
-Disciplines: gravel, MTB, bikepacking.
+Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: {', '.join(regions)}.
 
 ## Machine-Readable Resources
@@ -103,7 +103,7 @@ Regions: {', '.join(regions)}.
 - [Race index JSON ({len(index)} entries)]({SITE_URL}/race-index.json)
 - [REST API (OpenAPI)]({SITE_URL}/api/v1/docs)
 - [RSS feed]({SITE_URL}/feed/races.xml)
-- [MCP Server (GitHub)](https://github.com/wattgod/gravel-race-automation)
+- [MCP Server (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles]({SITE_URL}/race/{{slug}}/)
 - [Markdown profiles]({SITE_URL}/race/{{slug}}/index.md)
 - [Race training-plan guides]({SITE_URL}/race/{{slug}}/training-plan/)
@@ -183,7 +183,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines = []
     lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
-    lines.append(f"> {len(index)} gravel, MTB, and bikepacking races rated on 14 criteria.")
+    lines.append(f"> {len(index)} road cycling events rated on 14 criteria.")
     lines.append(f"> Produced by Roadie Labs (roadielabs.com). Generated: {now}")
     lines.append("")
 
@@ -222,7 +222,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
         elev = _fmt_elev(r.get("elevation_ft"))
         loc = _md_escape(r.get("location", "—"))
         month = _md_escape(r.get("month") or "—")
-        disc = _md_escape(r.get("discipline") or "gravel")
+        disc = _md_escape(r.get("discipline") or "gran_fondo")
 
         lines.append(f"### {name}")
         lines.append(f"Tier {tier} | Score: {score}/100 | {dist} | {elev} | {loc} | {month} | {disc}")
@@ -249,7 +249,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
         elev = _fmt_elev(r.get("elevation_ft"))
         loc = _md_escape(r.get("location", "—"))
         month = _md_escape(r.get("month") or "—")
-        disc = _md_escape(r.get("discipline") or "gravel")
+        disc = _md_escape(r.get("discipline") or "gran_fondo")
         lines.append(f"| {name} | {tier} | {score} | {dist} | {elev} | {loc} | {month} | {disc} |")
 
     lines.append("")
