@@ -334,18 +334,22 @@ def build_honest_check() -> str:
 
 
 def build_testimonials() -> str:
+    # REAL quotes only. These are Gravel God athletes — the previous version
+    # of this section reused their quotes with road race names swapped in,
+    # which is a fabricated review. Never do that on a critic brand. Label
+    # the provenance; swap in road finishers as they report back.
     testimonials = [
         (
-            "I finished L'Etape du Tour 45 minutes faster than last year. The plan accounted for my 6-hour work weeks and bad left knee. Nothing else I tried did that.",
-            "Jason R.", "L'Etape du Tour 2025",
+            "I finished Mid-South 45 minutes faster than last year. The plan accounted for my 6-hour work weeks and bad left knee. Nothing else I tried did that.",
+            "Jason R.", "Mid-South 2025 (gravel)",
         ),
         (
-            "First gran fondo. The fueling plan alone saved me. I watched people bonk at mile 60 while I was eating exactly what my plan said to eat.",
-            "Sarah M.", "Mallorca 312 2025",
+            "First gravel century. The fueling plan alone saved me. I watched people bonk at mile 60 while I was eating exactly what my plan said to eat.",
+            "Sarah M.", "Unbound 100 2025 (gravel)",
         ),
         (
-            "I have 5 hours a week and two kids. Every session in this plan mattered. No junk miles. Finished Maratona dles Dolomites strong for the first time ever.",
-            "Mark D.", "Maratona 2025",
+            "I have 5 hours a week and two kids. Every session in this plan mattered. No junk miles. Finished Big Sugar strong for the first time ever.",
+            "Mark D.", "Big Sugar 2025 (gravel)",
         ),
     ]
     cards = ""
@@ -358,6 +362,7 @@ def build_testimonials() -> str:
     return f'''<section class="rl-tp-section" id="testimonials">
   <div class="rl-tp-section-label">Athletes</div>
   <h2>Don&rsquo;t Take My Word For It.</h2>
+  <p class="rl-tp-testimonial-provenance">These are Gravel God athletes &mdash; same coach, same plan engine, different surface. Roadie Labs is new. Road finishers take this section over as the reports come in.</p>
   <div class="rl-tp-testimonials">
     {cards}
   </div>
@@ -957,6 +962,7 @@ def build_training_css() -> str:
   gap: var(--rl-spacing-md);
   margin-top: var(--rl-spacing-lg);
 }}
+.rl-tp-testimonial-provenance {{ font-family: var(--rl-font-data); font-size: 12px; color: var(--rl-color-coral); max-width: 560px; margin: -8px 0 20px; line-height: 1.6; }}
 .rl-tp-testimonial {{
   border: var(--rl-border-standard);
   padding: var(--rl-spacing-lg);

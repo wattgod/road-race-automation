@@ -193,58 +193,64 @@ def build_coaching() -> str:
 
 
 def _testimonial_data() -> list:
-    """50 athlete testimonials — name, quote, meta line."""
+    """50 REAL athlete testimonials — Gravel God athletes, original races.
+
+    The fork had swapped road race names into these quotes, turning real
+    reviews into fabricated ones. Never do that on a critic brand. These
+    are the originals; the page labels their provenance. Replace with
+    road finishers as they report back.
+    """
     return [
-        ("Sarah K.", "I finished L'Etape du Tour in 8:47 this year. Last year I blew up on the Col du Tourmalet because I had no idea how to pace a mountain stage. Matti's plan was boring as hell but it worked.", "L'Etape du Tour finisher · 9 hrs/week · Elementary school teacher"),
-        ("Chris M.", "I went from blowing up on every climb longer than 10 minutes to finishing Gran Fondo Stelvio in the top third. The difference was pacing and fueling strategy, not some magic workout.", "Gran Fondo Stelvio finisher · 10 hrs/week · Two kids under 5"),
-        ("Dan R.", "Finished Mallorca 312 in 11:12. My previous best was 13:45. The only thing that changed was how I ate and when I pushed.", "Mallorca 312 finisher · 11 hrs/week · Software engineer"),
-        ("Megan T.", "My first gran fondo was the RBC GranFondo Whistler and I finished middle of the pack on 7 hours a week of training. Matti convinced me that was enough and he was right.", "GranFondo Whistler finisher · 7 hrs/week · Nurse practitioner"),
-        ("Jason L.", "Cut 45 minutes off my Maratona dles Dolomites time by actually following a taper for once. I always used to hammer the last week before a race.", "Maratona dles Dolomites · 8 hrs/week · Restaurant owner"),
-        ("Rachel P.", "I came back from a broken collarbone and finished the Marmotte 5 months later. The plan adapted every single week based on how I was recovering.", "La Marmotte finisher · 6 hrs/week · Physical therapist"),
-        ("Tom W.", "I'm 54 and just had my best season ever. Three gran fondos, three finishes, zero bonks. Turns out the secret is eating enough.", "Haute Route Alps · 9 hrs/week · Age 54 · Attorney"),
-        ("Katie B.", "Did the Nove Colli on 8 hours a week. Everyone told me I needed more volume. I needed better pacing.", "Nove Colli · 8 hrs/week · Marketing director"),
-        ("Mike D.", "Went from DNF to top 25% at Gran Fondo New York. Same fitness, completely different race execution.", "GFNY · 10 hrs/week · Firefighter"),
-        ("Jen H.", "The fueling plan alone was worth it. I used to cramp at km 130 every single race. Haven't cramped once since.", "Mallorca 312 finisher · 8 hrs/week · Accountant"),
-        ("Brian S.", "I've bought training plans from four different coaches. This is the first one I actually finished.", "L'Eroica · 7 hrs/week · Three kids"),
-        ("Amanda C.", "Finished the Wicklow 200 in the rain and wind and never once thought about quitting. That's a first.", "Wicklow 200 finisher · 9 hrs/week · Veterinarian"),
-        ("Greg F.", "My wife noticed I was less stressed during race build. That's the real testimonial.", "Granfondo Campagnolo Roma · 10 hrs/week · Finance · Married with 2 kids"),
-        ("Nicole R.", "I PR'd the White Rose Classic by 38 minutes. The course hadn't changed. My preparation had.", "White Rose Classic · 7 hrs/week · High school teacher"),
-        ("Steve A.", "I'm a Cat 1 road racer and I thought I knew how to train for long fondos. It's a different discipline. Matti showed me the gaps.", "Haute Route Pyrenees finisher · 14 hrs/week · Cat 1 road"),
-        ("Laura M.", "I train at 5 AM before my kids wake up. The plan was built around that constraint from day one.", "GranFondo Whistler finisher · 6 hrs/week · Mom of 3 · Pharmacist"),
-        ("Derek J.", "Finished the Maratona dles Dolomites under 8 hours on 10 hours a week of training. My coach friends who train 15+ hours were behind me.", "Maratona dles Dolomites · 10 hrs/week · Age 41"),
-        ("Carrie W.", "I was terrified of Mallorca 312. Matti's prep kit and pacing plan made it feel manageable. Still hard as hell, but manageable.", "Mallorca 312 finisher · 8 hrs/week · First-time 300km rider"),
-        ("Paul N.", "The race-day pacing strategy was the game changer. I used to go out way too hard on the first climb and pay for it in the last 80km.", "Marmotte finisher · 9 hrs/week · Civil engineer"),
-        ("Heather L.", "I signed up for coaching because of the race database. Stayed because the training actually fit my life.", "Gran Fondo Stelvio · 7 hrs/week · Working mom"),
-        ("Ryan G.", "Four gran fondos this season, four finishes, zero DNFs. Last year I DNF'd two out of three.", "Multi-race season · 11 hrs/week · Sales manager"),
-        ("Trish K.", "My half marathon PR dropped by 4 minutes as a side effect of the fondo training. The base building works.", "Gent-Wevelgem Cyclo · 8 hrs/week · Runner crossover"),
-        ("Mark E.", "I'm 62 and just finished my first 200km sportive. Matti never once made me feel too old for this.", "Fred Whitton Challenge · 7 hrs/week · Age 62 · Retired teacher"),
-        ("Anna S.", "I thought I needed a power meter and a wind tunnel. I needed to eat more and sleep more. That's it.", "Nove Colli finisher · 6 hrs/week · Grad student"),
-        ("Jake T.", "Finished the Etape Caledonia in top 10%. The course profile breakdown and pacing zones were dialed.", "Etape Caledonia · 12 hrs/week · Bike shop employee"),
-        ("Diane F.", "Three years of gran fondos and this was the first time I finished a race feeling like I had more in the tank.", "GFNY finisher · 8 hrs/week · Age 48"),
-        ("Luis R.", "I work 60-hour weeks in construction. The plan was 6 hours. It worked. I finished the Gran Fondo Asheville.", "Gran Fondo Asheville finisher · 6 hrs/week · Construction foreman"),
-        ("Emily P.", "The sodium loading protocol before Mallorca 312 was something I'd never seen before. Zero cramping for the first time ever.", "Mallorca 312 · 9 hrs/week · Registered dietitian"),
-        ("Nathan B.", "I gained 4 watts per kilo over 16 weeks eating more food and sleeping 30 minutes more per night. No secret intervals.", "L'Etape du Tour finisher · 10 hrs/week · Programmer"),
-        ("Kara D.", "Finished the Tour of Nilgiris seven months postpartum. Matti built the plan around breastfeeding and sleep deprivation.", "Tour of Nilgiris · 5 hrs/week · New mom"),
-        ("Doug H.", "My third Maratona and my fastest by over an hour. I finally learned to ride my own race.", "Maratona dles Dolomites · 9 hrs/week · Dentist"),
-        ("Sierra J.", "I'm not fast. I'm not trying to be. Matti helped me finish what I start and enjoy it. That's enough.", "Ride London · 6 hrs/week · Back-of-pack rider"),
-        ("Phil C.", "The prep kit for the Marmotte told me exactly what to expect on every climb. No surprises on race day.", "La Marmotte · 11 hrs/week · Age 45"),
-        ("Tanya M.", "I bought the L'Etape plan, then the Stelvio plan, then just signed up for coaching because I was tired of doing this alone.", "Multi-race season · 8 hrs/week · Remote worker"),
-        ("Rob L.", "I travel 3 weeks a month for work. Every hotel has a gym or a road. Matti made it work.", "Gran Fondo New York · 7 hrs/week · Traveling consultant"),
-        ("Lisa G.", "Dropped from 10:30 to 9:15 at the Engadin Radmarathon with the same legs. Fueling and pacing, that's it.", "Engadin Radmarathon · 8 hrs/week · Teacher"),
-        ("Kevin O.", "My wife and I both used Matti's plans for L'Etape. We both finished. That was the deal and we held up our end.", "L'Etape du Tour · 9 hrs/week · Couple's plan"),
-        ("Brooke A.", "I did the Cent Cols Challenge on a standard road bike because Matti said my bike didn't matter as much as my prep. He was right.", "Cent Cols Challenge · 7 hrs/week · Standard road bike"),
-        ("Tony V.", "I used to overtrain every spring and show up to my A-race cooked. This year I showed up fresh and went 40 minutes faster.", "Granfondo Campagnolo Roma · 12 hrs/week · Cat 2 racer"),
-        ("Maria K.", "English is my second language and the plan was still crystal clear. No jargon. No confusion. Just do this today.", "L'Eroica · 6 hrs/week · Originally from Colombia"),
-        ("Will S.", "Finished the Oregon Gran Fondo on 7 hours a week. My buddy who trains double that finished 20 minutes ahead. Worth it.", "Oregon Gran Fondo · 7 hrs/week · Architect"),
+        ("Sarah K.", "I finished Unbound in 13:47 this year. Last year I DNF'd at mile 140 because I had no idea how to pace myself and ran out of food twice. Matti's plan was boring as hell but it worked.", "Unbound 200 finisher · 9 hrs/week · Elementary school teacher"),
+        ("Chris M.", "I went from blowing up on every climb longer than 10 minutes to finishing SBT GRVL Black in the top third. The difference was pacing and fueling strategy, not some magic workout.", "SBT GRVL Black finisher · 10 hrs/week · Two kids under 5"),
+        ("Dan R.", "Finished Belgian Waffle Ride in 9:12. My previous best was 10:45. The only thing that changed was how I ate and when I pushed.", "BWR finisher · 11 hrs/week · Software engineer"),
+        ("Megan T.", "My first gravel race was Mid South and I finished middle of the pack on 7 hours a week of training. Matti convinced me that was enough and he was right.", "Mid South finisher · 7 hrs/week · Nurse practitioner"),
+        ("Jason L.", "Cut 45 minutes off my Steamboat Gravel time by actually following a taper for once. I always used to hammer the last week before a race.", "Steamboat Gravel · 8 hrs/week · Restaurant owner"),
+        ("Rachel P.", "I came back from a broken collarbone and finished Gravel Worlds 5 months later. The plan adapted every single week based on how I was recovering.", "Gravel Worlds finisher · 6 hrs/week · Physical therapist"),
+        ("Tom W.", "I'm 54 and just had my best season ever. Three gravel races, three finishes, zero bonks. Turns out the secret is eating enough.", "Big Sugar finisher · 9 hrs/week · Age 54 · Attorney"),
+        ("Katie B.", "Did Crusher in the Tushar on 8 hours a week. Everyone told me I needed more volume. I needed better pacing.", "Crusher in the Tushar · 8 hrs/week · Marketing director"),
+        ("Mike D.", "Went from DNF to top 25% at Gravel Locos. Same fitness, completely different race execution.", "Gravel Locos · 10 hrs/week · Firefighter"),
+        ("Jen H.", "The fueling plan alone was worth it. I used to cramp at mile 80 every single race. Haven't cramped once since.", "Unbound 200 finisher · 8 hrs/week · Accountant"),
+        ("Brian S.", "I've bought training plans from four different coaches. This is the first one I actually finished.", "SBT GRVL Blue · 7 hrs/week · Three kids"),
+        ("Amanda C.", "Finished DK200 in the rain and mud and never once thought about quitting. That's a first.", "DK 200 finisher · 9 hrs/week · Veterinarian"),
+        ("Greg F.", "My wife noticed I was less stressed during race build. That's the real testimonial.", "BWR Waffle · 10 hrs/week · Finance · Married with 2 kids"),
+        ("Nicole R.", "I PR'd Rule of Three by 38 minutes. The course hadn't changed. My preparation had.", "Rule of Three · 7 hrs/week · High school teacher"),
+        ("Steve A.", "I'm a Cat 1 road racer and I thought I knew how to train. Gravel is a different sport. Matti showed me the gaps.", "Unbound XL finisher · 14 hrs/week · Cat 1 road"),
+        ("Laura M.", "I train at 5 AM before my kids wake up. The plan was built around that constraint from day one.", "Mid South finisher · 6 hrs/week · Mom of 3 · Pharmacist"),
+        ("Derek J.", "Leadville 100 MTB. Finished under 9 hours on 10 hours a week of training. My coach friends who train 15+ hours were behind me.", "Leadville 100 · 10 hrs/week · Age 41"),
+        ("Carrie W.", "I was terrified of Unbound. Matti's prep kit and pacing plan made it feel manageable. Still hard as hell, but manageable.", "Unbound 200 finisher · 8 hrs/week · First-time 200-miler"),
+        ("Paul N.", "The race-day pacing strategy was the game changer. I used to go out way too hard and pay for it at mile 120.", "Gravel Worlds finisher · 9 hrs/week · Civil engineer"),
+        ("Heather L.", "I signed up for coaching because of the race database. Stayed because the training actually fit my life.", "SBT GRVL Black · 7 hrs/week · Working mom"),
+        ("Ryan G.", "Four gravel races this season, four finishes, zero DNFs. Last year I DNF'd two out of three.", "Multi-race season · 11 hrs/week · Sales manager"),
+        ("Trish K.", "My 10K trail run PR dropped by 3 minutes as a side effect of the gravel training. The base building works.", "Pisgah Monster Cross · 8 hrs/week · Trail runner crossover"),
+        ("Mark E.", "I'm 62 and just finished my first Dirty Kanza distance event. Matti never once made me feel too old for this.", "DK 100 finisher · 7 hrs/week · Age 62 · Retired teacher"),
+        ("Anna S.", "I thought I needed a power meter and a wind tunnel. I needed to eat more and sleep more. That's it.", "Lost and Found finisher · 6 hrs/week · Grad student"),
+        ("Jake T.", "Finished Rooted Vermont in top 10%. The course profile breakdown and pacing zones were dialed.", "Rooted Vermont · 12 hrs/week · Bike shop employee"),
+        ("Diane F.", "Three years of gravel racing and this was the first time I finished a race feeling like I had more in the tank.", "Gravel Locos finisher · 8 hrs/week · Age 48"),
+        ("Luis R.", "I work 60-hour weeks in construction. The plan was 6 hours. It worked. I finished Mid South.", "Mid South finisher · 6 hrs/week · Construction foreman"),
+        ("Emily P.", "The sodium loading protocol before Unbound was something I'd never seen before. Zero cramping for the first time ever.", "Unbound 200 · 9 hrs/week · Registered dietitian"),
+        ("Nathan B.", "I gained 4 watts per kilo over 16 weeks eating more food and sleeping 30 minutes more per night. No secret intervals.", "BWR finisher · 10 hrs/week · Programmer"),
+        ("Kara D.", "Finished Big Sugar 100 seven months postpartum. Matti built the plan around breastfeeding and sleep deprivation.", "Big Sugar 100 · 5 hrs/week · New mom"),
+        ("Doug H.", "My third Steamboat and my fastest by over an hour. I finally learned to ride my own race.", "Steamboat Gravel · 9 hrs/week · Dentist"),
+        ("Sierra J.", "I'm not fast. I'm not trying to be. Matti helped me finish what I start and enjoy it. That's enough.", "SBT GRVL Green · 6 hrs/week · Back-of-pack rider"),
+        ("Phil C.", "The prep kit for Crusher told me exactly what to expect on every climb. No surprises on race day.", "Crusher in the Tushar · 11 hrs/week · Age 45"),
+        ("Tanya M.", "I bought the Unbound plan, then the BWR plan, then just signed up for coaching because I was tired of doing this alone.", "Multi-race season · 8 hrs/week · Remote worker"),
+        ("Rob L.", "I travel 3 weeks a month for work. Every hotel has a gym or a road. Matti made it work.", "Gravel Worlds · 7 hrs/week · Traveling consultant"),
+        ("Lisa G.", "Dropped from 10:30 to 9:15 at Rebecca's Private Idaho with the same legs. Fueling and pacing, that's it.", "Rebecca's Private Idaho · 8 hrs/week · Teacher"),
+        ("Kevin O.", "My wife and I both used Matti's plans for Unbound. We both finished. That was the deal and we held up our end.", "Unbound 200 · 9 hrs/week · Couple's plan"),
+        ("Brooke A.", "I did Gravel Worlds 150 on a hardtail because Matti said my bike didn't matter as much as my prep. He was right.", "Gravel Worlds 150 · 7 hrs/week · Hardtail rider"),
+        ("Tony V.", "I used to overtrain every spring and show up to my A-race cooked. This year I showed up fresh and went 40 minutes faster.", "BWR Waffle · 12 hrs/week · Cat 2 road crossover"),
+        ("Maria K.", "English is my second language and the plan was still crystal clear. No jargon. No confusion. Just do this today.", "SBT GRVL Blue · 6 hrs/week · Originally from Colombia"),
+        ("Will S.", "Finished The Last Best Ride in Montana on 7 hours a week. My buddy who trains double that finished 20 minutes ahead. Worth it.", "The Last Best Ride · 7 hrs/week · Architect"),
         ("Jess R.", "I was recovering from COVID and the plan adjusted week by week. No ego, no pressure, just smart rebuilding.", "Return to racing post-COVID · 5 hrs/week · Nurse"),
-        ("Andrew T.", "The race database is how I picked Nove Colli over L'Etape for my first Italian fondo. Best decision I made all year.", "Nove Colli · 8 hrs/week · First gran fondo abroad"),
-        ("Danielle B.", "I've done 4 Ironmans and a Dolomites fondo scared me more. Matti's prep kit made it approachable. Finished the Maratona with a smile.", "Maratona dles Dolomites · 10 hrs/week · Triathlete crossover"),
-        ("Scott P.", "I stopped chasing FTP and started chasing consistency. Went from 3 rides a week to 5 shorter ones. Everything got better.", "Granfondo Stelvio · 8 hrs/week · Age 50"),
-        ("Olivia N.", "The course description for L'Etape was more accurate than anything the race organizer published. I knew every climb before I got there.", "L'Etape du Tour finisher · 9 hrs/week · Data analyst"),
-        ("Marcus W.", "I'm a big rider, 210 lbs. Matti never once tried to make me a climber. He made me a finisher.", "Mallorca 312 · 8 hrs/week · 210 lbs · Clydesdale"),
-        ("Erin M.", "My training plan had me doing less in the last 3 weeks than I wanted. I was furious. Then I had the best race of my life.", "Gran Fondo Stelvio finisher · 7 hrs/week · Type-A personality"),
-        ("Carl J.", "Finished the Sellaronda Bike Day with the best time I've ever posted. The interval work was minimal but targeted.", "Sellaronda Bike Day · 9 hrs/week · Road crossover"),
-        ("Stephanie H.", "I signed up after reading the L'Etape race profile. The detail convinced me this person knows road racing. The coaching confirmed it.", "L'Etape du Tour · 8 hrs/week · Found via race database"),
+        ("Andrew T.", "The race database is how I picked Gravel Locos over Unbound for my first 150-miler. Best decision I made all year.", "Gravel Locos · 8 hrs/week · First-time 150"),
+        ("Danielle B.", "I've done 4 Ironmans and gravel scared me more. Matti's prep kit made it approachable. Finished Land Run 100 with a smile.", "Land Run 100 · 10 hrs/week · Triathlete crossover"),
+        ("Scott P.", "I stopped chasing FTP and started chasing consistency. Went from 3 rides a week to 5 shorter ones. Everything got better.", "Steamboat Gravel · 8 hrs/week · Age 50"),
+        ("Olivia N.", "The course description for BWR was more accurate than anything the race organizer published. I knew every climb before I got there.", "BWR finisher · 9 hrs/week · Data analyst"),
+        ("Marcus W.", "I'm a big rider, 210 lbs. Matti never once tried to make me a climber. He made me a finisher.", "Unbound 200 · 8 hrs/week · 210 lbs · Clydesdale"),
+        ("Erin M.", "My training plan had me doing less in the last 3 weeks than I wanted. I was furious. Then I had the best race of my life.", "Mid South finisher · 7 hrs/week · Type-A personality"),
+        ("Carl J.", "Finished Grinduro with the best combined time I've ever posted. The interval work was minimal but targeted.", "Grinduro · 9 hrs/week · MTB background"),
+        ("Stephanie H.", "I signed up after reading the Unbound race profile. The detail convinced me this person knows gravel. The coaching confirmed it.", "Unbound 200 · 8 hrs/week · Found via race database"),
     ]
 
 
@@ -266,6 +272,7 @@ def build_testimonials() -> str:
       <h2 class="rl-section-title">Athlete Results</h2>
     </div>
     <div class="rl-section-body" style="position:relative">
+      <p class="rl-about-testimonial-provenance">Gravel God athletes &mdash; same coach, same plan engine, different surface. Roadie Labs is new. Road finishers take this section over as the reports come in.</p>
       <div class="rl-about-carousel" id="rl-testimonial-carousel">
         <div class="rl-about-carousel-track">
         {inner}
@@ -581,7 +588,8 @@ def build_about_css() -> str:
   color: var(--rl-color-dark-navy);
   letter-spacing: var(--rl-letter-spacing-wide);
 }
-.rl-neo-brutalist-page .rl-about-testimonial-meta {
+.rl-neo-brutalist-page .rl-about-testimonial-provenance { font-family: var(--rl-font-data); font-size: 12px; color: var(--rl-color-coral); max-width: 560px; margin: 0 0 16px; line-height: 1.6; }
+.rl-about-testimonial-meta {
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   color: var(--rl-color-secondary-blue);

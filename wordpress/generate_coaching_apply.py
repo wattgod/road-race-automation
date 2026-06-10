@@ -172,7 +172,7 @@ def build_section_2_goals() -> str:
         </div>
         <div class="rl-apply-group">
           <label class="rl-apply-label" for="success_definition">What does success look like? <span class="rl-apply-required">*</span></label>
-          <textarea id="success_definition" name="success_definition" placeholder="e.g., Finish Unbound under 14 hours, top 25% in age group, feel strong in final 50 miles" rows="2"></textarea>
+          <textarea id="success_definition" name="success_definition" placeholder="e.g., Finish the Maratona under 7 hours, top 25% in age group, hold the lead group over the first climb" rows="2"></textarea>
         </div>
       </div>
 

@@ -1144,12 +1144,17 @@ class TestRacerRating:
         }
         return sample_race_data
 
-    def test_hero_has_gg_score(self, race_with_ratings):
-        """Hero shows GG Score as masthead element (no dual panel)."""
+    def test_hero_has_rl_score(self, race_with_ratings):
+        """Hero masthead is the dual-score block: RL SCORE + Rider Score.
+
+        'GG SCORE' was a fork branding leak (fixed northstar P1.4); the
+        Rider Score cell is covered in tests/test_rider_score.py.
+        """
         rd = normalize_race_data(race_with_ratings)
         html = build_hero(rd)
-        assert "rl-hero-score" in html
-        assert "GG SCORE" in html
+        assert "rl-hero-scores" in html
+        assert "RL SCORE" in html
+        assert "GG SCORE" not in html
         assert "rl-hero-score-number" in html
 
     def test_hero_has_vitals_line(self, sample_race_data):
