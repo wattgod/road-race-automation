@@ -697,6 +697,93 @@ def sync_about(about_file: str):
     return f"{wp_url}/about/"
 
 
+def sync_questionnaire(questionnaire_dir: str):
+    """Upload questionnaire page + form JS to /questionnaire/ via SSH+SCP.
+
+    The directory must contain index.html and training-plans-form.js
+    (both produced by wordpress/generate_questionnaire.py). The form JS is
+    served from the same directory so the page has no dependency on
+    wp-content/uploads or mu-plugins.
+    """
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    q_dir = Path(questionnaire_dir)
+    html_path = q_dir / "index.html"
+    js_path = q_dir / "training-plans-form.js"
+    if not html_path.exists():
+        print(f"✗ Questionnaire HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_questionnaire.py first")
+        return None
+    if not js_path.exists():
+        print(f"✗ Form JS not found: {js_path} — the page cannot submit without it")
+        return None
+
+    remote_base = f"{REMOTE_BASE}/questionnaire"
+
+    try:
+        subprocess.run(
+            [
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                f"mkdir -p {remote_base} && chmod 755 {remote_base}",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Failed to create remote directory: {e.stderr.strip()}")
+        return None
+
+    for local in (html_path, js_path):
+        try:
+            subprocess.run(
+                [
+                    "scp", "-i", str(SSH_KEY), "-P", port,
+                    str(local),
+                    f"{user}@{host}:{remote_base}/{local.name}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+        except subprocess.CalledProcessError as e:
+            print(f"✗ SCP failed for {local.name}: {e.stderr.strip()}")
+            return None
+        except Exception as e:
+            print(f"✗ Error uploading {local.name}: {e}")
+            return None
+
+    # Upload shared CSS/JS assets the page references via /race/assets/
+    assets_dir = q_dir.parent / "assets"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
+    for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
+        for asset in assets_dir.glob(pattern):
+            try:
+                subprocess.run(
+                    [
+                        "scp", "-i", str(SSH_KEY), "-P", port,
+                        str(asset),
+                        f"{user}@{host}:{remote_assets}/{asset.name}",
+                    ],
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    timeout=30,
+                )
+            except subprocess.CalledProcessError:
+                print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    print(f"✓ Uploaded questionnaire page: {wp_url}/questionnaire/")
+    return f"{wp_url}/questionnaire/"
+
+
 def sync_coaching(coaching_file: str):
     """Upload coaching.html to /coaching/index.html on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
@@ -3150,6 +3237,14 @@ if __name__ == "__main__":
         help="Path to about page HTML (default: wordpress/output/about.html)"
     )
     parser.add_argument(
+        "--sync-questionnaire", action="store_true",
+        help="Upload questionnaire page + form JS to /questionnaire/ via SCP"
+    )
+    parser.add_argument(
+        "--questionnaire-dir", default="wordpress/output/questionnaire",
+        help="Path to questionnaire output dir (default: wordpress/output/questionnaire)"
+    )
+    parser.add_argument(
         "--sync-coaching", action="store_true",
         help="Upload coaching page to /coaching/ via SCP"
     )
@@ -3404,6 +3499,7 @@ if __name__ == "__main__":
 
     has_action = any([args.json, args.sync_index, args.sync_widget, args.sync_training,
                       args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_about,
+                      args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_training_plans, args.sync_success, args.sync_pages,
                       args.sync_sitemap, args.sync_redirects,
@@ -3435,6 +3531,8 @@ if __name__ == "__main__":
         sync_homepage(args.homepage_file)
     if args.sync_about:
         sync_about(args.about_file)
+    if args.sync_questionnaire:
+        sync_questionnaire(args.questionnaire_dir)
     if args.sync_coaching:
         sync_coaching(args.coaching_file)
     if args.sync_coaching_apply:
