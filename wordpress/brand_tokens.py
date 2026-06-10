@@ -27,7 +27,7 @@ FONT_FILES = [
 
 
 # ── Analytics ─────────────────────────────────────────────────
-GA_MEASUREMENT_ID = "G-PLACEHOLDER"  # TODO: Create Roadie Labs GA4 property
+GA_MEASUREMENT_ID = "G-WQ7W8XN11N"  # Roadie Labs - GA4 (properties/540984732, created Jun 2026)
 
 
 def get_ga4_head_snippet() -> str:
