@@ -49,10 +49,9 @@ from brand_tokens import (
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from cookie_consent import get_consent_banner_html
 
-# Disable glossary tooltips in guide renderers (we don't need them here)
-import generate_guide
-generate_guide._GLOSSARY = None
-from generate_guide import (
+# Guide render helpers — extracted to guide_render_utils.py (the gravel
+# generate_guide.py was never forked; glossary tooltips are disabled there)
+from guide_render_utils import (
     render_timeline,
     render_accordion,
     render_process_list,

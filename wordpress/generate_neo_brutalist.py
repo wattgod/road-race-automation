@@ -1089,14 +1089,15 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 // CTA click tracking — GA4
 (function() {
   if (typeof gtag !== 'function') return;
-  document.querySelectorAll('a.rl-btn, a.rl-btn--outline').forEach(function(link) {
+  document.querySelectorAll('a.rl-btn, a.rl-btn--outline, a.rl-prep-kit-link').forEach(function(link) {
     link.addEventListener('click', function() {
       var text = this.textContent.trim().replace(/\s+/g, ' ');
       var href = this.getAttribute('href') || '';
       var cta_type = 'other';
-      if (text.indexOf('BUILD MY PLAN') !== -1) cta_type = 'build_plan';
-      else if (text.indexOf('PREP KIT') !== -1) cta_type = 'prep_kit';
-      else if (text.indexOf('COACHING') !== -1) cta_type = 'coaching';
+      var T = text.toUpperCase();
+      if (T.indexOf('BUILD MY') !== -1) cta_type = 'build_plan';
+      else if (T.indexOf('PREP KIT') !== -1) cta_type = 'prep_kit';
+      else if (T.indexOf('COACHING') !== -1) cta_type = 'coaching';
       var section = this.closest('.rl-section, .rl-sticky-cta');
       var section_id = section ? (section.id || section.className.split(' ')[0]) : 'unknown';
       gtag('event', 'cta_click', {
@@ -3783,6 +3784,10 @@ def build_prep_strip(rd: dict) -> str:
       <a href="{plan_url}" class="rl-btn" data-cta="prep_strip_build" id="rl-prep-cta">BUILD MY PLAN &mdash; $15/WK</a>
     </div>
   </section>'''
+    # NOTE: gravel's strip has a third "free prep kit" email-gate link here.
+    # Road intentionally does NOT until road prep kits exist — the capture's
+    # post-submit unlock (/race/{slug}/prep-kit/) 404s without
+    # guide/road-guide-content.json. See task: author road guide content.
 
 
 def build_train_for_race(rd: dict) -> str:
@@ -4300,7 +4305,7 @@ def build_email_capture(rd: dict) -> str:
     """Build email capture section — prep kit CTA + Substack subscribe."""
     slug = esc(rd["slug"])
     name = esc(rd["name"])
-    return f'''<div class="rl-email-capture rl-fade-section">
+    return f'''<div class="rl-email-capture rl-fade-section" id="prep-kit-capture">
     <div class="rl-email-capture-inner">
       <div class="rl-email-capture-badge">FREE DOWNLOAD</div>
       <h3 class="rl-email-capture-title">GET THE {name.upper()} PREP KIT</h3>
@@ -4905,7 +4910,9 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-prep-chips {{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }}
 .rl-neo-brutalist-page .rl-prep-chip {{ font-family: var(--rl-font-data); font-size: 11px; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); color: var(--rl-color-near-black); background: var(--rl-color-white); border: var(--rl-border-subtle); padding: 5px 10px; }}
 .rl-neo-brutalist-page .rl-prep-chip strong {{ color: var(--rl-color-signal-red); }}
-.rl-neo-brutalist-page .rl-prep-actions {{ display: flex; flex-wrap: wrap; gap: 10px; }}
+.rl-neo-brutalist-page .rl-prep-actions {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }}
+.rl-neo-brutalist-page .rl-prep-kit-link {{ font-family: var(--rl-font-data); font-size: 12px; color: var(--rl-color-near-black); text-decoration: underline; text-underline-offset: 3px; }}
+.rl-neo-brutalist-page .rl-prep-kit-link:hover {{ color: var(--rl-color-secondary-blue); }}
 @media (max-width: 600px) {{ .rl-neo-brutalist-page .rl-prep-actions {{ flex-direction: column; }} .rl-neo-brutalist-page .rl-prep-actions .rl-btn {{ text-align: center; }} }}
 
 /* ── Train for This Race ── */
