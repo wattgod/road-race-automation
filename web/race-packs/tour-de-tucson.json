@@ -1,0 +1,137 @@
+{
+  "slug": "tour-de-tucson",
+  "race_name": "Tour de Tucson",
+  "distance_mi": 102.0,
+  "demands": {
+    "durability": 6,
+    "climbing": 1,
+    "vo2_power": 8,
+    "threshold": 7,
+    "technical": 0,
+    "heat_resilience": 0,
+    "altitude": 4,
+    "race_specificity": 9
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "Durability",
+      "score": 93,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 102, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 79,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Tour de Tucson's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before November."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 66,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Tour de Tucson's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "G_Spot",
+      "score": 54,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour de Tucson. Train it until it feels boring."
+    },
+    {
+      "category": "Endurance",
+      "score": 53,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 102 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Blended",
+      "score": 53,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,500ft of climbing on mixed terrain does to your power file on race day."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 53,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour de Tucson's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 102 miles."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 47,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 44,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "102 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 41,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 102 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Tempo",
+      "score": 38,
+      "workouts": [
+        "Tempo Blocks",
+        "Extended Tempo"
+      ],
+      "workout_context": "Tempo is Tour de Tucson's race pace. The wattage you'll hold for 102 miles on mixed terrain. Train it until it's automatic."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for Tour de Tucson\u2019s 102 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Moderate altitude at Tour de Tucson. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and Race Simulation to prepare you for 102 miles of mixed terrain in Tucson, Arizona, USA.",
+  "generated_at": "2026-06-09"
+}

@@ -1,0 +1,136 @@
+{
+  "slug": "sellaronda-bike-day",
+  "race_name": "Sellaronda Bike Day",
+  "distance_mi": 33.0,
+  "demands": {
+    "durability": 1,
+    "climbing": 1,
+    "vo2_power": 4,
+    "threshold": 3,
+    "technical": 0,
+    "heat_resilience": 1,
+    "altitude": 6,
+    "race_specificity": 9
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "5,413ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 100,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Sellaronda Bike Day's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "Durability",
+      "score": 69,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "33 miles on paved Dolomite mountain pass roads burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 67,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Sellaronda Bike Day's paved Dolomite mountain pass roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 33 miles."
+    },
+    {
+      "category": "Endurance",
+      "score": 46,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Sellaronda Bike Day. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "Blended",
+      "score": 39,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,413ft of climbing on paved Dolomite mountain pass roads does to your power file on race day."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 39,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "164ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "G_Spot",
+      "score": 31,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Sellaronda Bike Day. Train it until it feels boring."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 30,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved Dolomite mountain pass roads. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Over_Under",
+      "score": 26,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Sellaronda Bike Day, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 22,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Sellaronda Bike Day, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 22,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
+    "altitude": "Moderate altitude at Sellaronda Bike Day. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 33 miles of paved dolomite mountain pass roads in Sella Group, Dolomites, Italy.",
+  "generated_at": "2026-06-09"
+}

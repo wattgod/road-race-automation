@@ -1,0 +1,137 @@
+{
+  "slug": "granfondo-moser",
+  "race_name": "Granfondo Moser",
+  "distance_mi": 87.0,
+  "demands": {
+    "durability": 4,
+    "climbing": 0,
+    "vo2_power": 5,
+    "threshold": 7,
+    "technical": 0,
+    "heat_resilience": 2,
+    "altitude": 6,
+    "race_specificity": 7
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "Durability",
+      "score": 88,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 70,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Granfondo Moser's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 70,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Granfondo Moser's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "Endurance",
+      "score": 67,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "G_Spot",
+      "score": 58,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Moser. Train it until it feels boring."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 47,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 47,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Granfondo Moser's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 87 miles."
+    },
+    {
+      "category": "Blended",
+      "score": 43,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Granfondo Moser's mixed terrain actually does to you."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 40,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 87 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "Tempo",
+      "score": 37,
+      "workouts": [
+        "Tempo Blocks",
+        "Extended Tempo"
+      ],
+      "workout_context": "Tempo is Granfondo Moser's race pace. The wattage you'll hold for 87 miles on mixed terrain. Train it until it's automatic."
+    },
+    {
+      "category": "Over_Under",
+      "score": 35,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Granfondo Moser, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for Granfondo Moser\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Moderate altitude at Granfondo Moser. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and TT Threshold to prepare you for 87 miles of mixed terrain in Trento, Italy.",
+  "generated_at": "2026-06-09"
+}

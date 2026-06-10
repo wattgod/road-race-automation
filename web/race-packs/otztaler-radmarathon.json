@@ -1,0 +1,137 @@
+{
+  "slug": "otztaler-radmarathon",
+  "race_name": "Otztaler Radmarathon",
+  "distance_mi": 141.0,
+  "demands": {
+    "durability": 6,
+    "climbing": 4,
+    "vo2_power": 7,
+    "threshold": 7,
+    "technical": 0,
+    "heat_resilience": 0,
+    "altitude": 10,
+    "race_specificity": 10
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "18,045ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Durability",
+      "score": 72,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 141, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 65,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Otztaler Radmarathon's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
+    },
+    {
+      "category": "Endurance",
+      "score": 59,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 141 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 59,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "128ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "G_Spot",
+      "score": 47,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Otztaler Radmarathon. Train it until it feels boring."
+    },
+    {
+      "category": "Over_Under",
+      "score": 45,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Otztaler Radmarathon, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 43,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Otztaler Radmarathon's paved Alpine mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 141 miles."
+    },
+    {
+      "category": "Blended",
+      "score": 41,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 18,045ft of climbing on paved Alpine mountain passes does to your power file on race day."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 33,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "141 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 30,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved Alpine mountain passes. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 30,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 141 miles, sustainable FTP gains matter more than peak power."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for Otztaler Radmarathon\u2019s 141 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Otztaler Radmarathon with 18,045ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Timmelsjoch summit at 2,474m: wind chill can bring effective temperature below freezing; 30+ km of climbing to the Timmelsjoch means prolonged cold exposure at altitude."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and Race Simulation to prepare you for 141 miles of paved alpine mountain passes in Solden, Otztal Valley, Tyrol, Austria.",
+  "generated_at": "2026-06-09"
+}

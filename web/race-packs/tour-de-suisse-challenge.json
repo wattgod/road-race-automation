@@ -1,0 +1,137 @@
+{
+  "slug": "tour-de-suisse-challenge",
+  "race_name": "Tour de Suisse Challenge",
+  "distance_mi": 630.0,
+  "demands": {
+    "durability": 10,
+    "climbing": 0,
+    "vo2_power": 5,
+    "threshold": 4,
+    "technical": 0,
+    "heat_resilience": 0,
+    "altitude": 10,
+    "race_specificity": 9
+  },
+  "top_categories": [
+    {
+      "category": "Durability",
+      "score": 100,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "630 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+    },
+    {
+      "category": "VO2max",
+      "score": 92,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "Endurance",
+      "score": 80,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 630 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 62,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Tour de Suisse Challenge's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 57,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "630 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Blended",
+      "score": 55,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Tour de Suisse Challenge's mixed terrain actually does to you."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 41,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour de Suisse Challenge's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 630 miles."
+    },
+    {
+      "category": "Tempo",
+      "score": 32,
+      "workouts": [
+        "Tempo Blocks",
+        "Extended Tempo"
+      ],
+      "workout_context": "Tempo is Tour de Suisse Challenge's race pace. The wattage you'll hold for 630 miles on mixed terrain. Train it until it's automatic."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 28,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Tour de Suisse Challenge's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "G_Spot",
+      "score": 23,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour de Suisse Challenge. Train it until it feels boring."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 23,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+    },
+    {
+      "category": "LT1_MAF",
+      "score": 23,
+      "workouts": [
+        "MAF Capped Ride",
+        "LT1 Assessment"
+      ],
+      "workout_context": "Below LT1, you burn fat. Above it, you burn glycogen. For 630 miles, a higher LT1 means slower bonk."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Ultra-distance fueling for 630 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 630 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "altitude": "Tour de Suisse Challenge demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+  },
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 630 miles of mixed terrain in Various, Switzerland.",
+  "generated_at": "2026-06-09"
+}

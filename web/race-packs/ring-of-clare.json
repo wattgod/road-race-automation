@@ -1,0 +1,137 @@
+{
+  "slug": "ring-of-clare",
+  "race_name": "\u0160koda Ring of Clare Sportive",
+  "distance_mi": 100.0,
+  "demands": {
+    "durability": 6,
+    "climbing": 1,
+    "vo2_power": 5,
+    "threshold": 7,
+    "technical": 0,
+    "heat_resilience": 0,
+    "altitude": 4,
+    "race_specificity": 8
+  },
+  "top_categories": [
+    {
+      "category": "Durability",
+      "score": 100,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "VO2max",
+      "score": 83,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "5,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 80,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic \u0160koda Ring of Clare Sportive's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 75,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "50ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "G_Spot",
+      "score": 62,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of \u0160koda Ring of Clare Sportive. Train it until it feels boring."
+    },
+    {
+      "category": "Endurance",
+      "score": 60,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Blended",
+      "score": 57,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,000ft of climbing on mixed terrain does to your power file on race day."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 53,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "\u0160koda Ring of Clare Sportive's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 50,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 47,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Tempo",
+      "score": 43,
+      "workouts": [
+        "Tempo Blocks",
+        "Extended Tempo"
+      ],
+      "workout_context": "Tempo is \u0160koda Ring of Clare Sportive's race pace. The wattage you'll hold for 100 miles on mixed terrain. Train it until it's automatic."
+    },
+    {
+      "category": "Over_Under",
+      "score": 43,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At \u0160koda Ring of Clare Sportive, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for \u0160koda Ring of Clare Sportive\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Moderate altitude at \u0160koda Ring of Clare Sportive. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+  },
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 100 miles of mixed terrain in Ennis, County Clare, Ireland.",
+  "generated_at": "2026-06-09"
+}

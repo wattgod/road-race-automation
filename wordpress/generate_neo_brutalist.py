@@ -1064,6 +1064,28 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   });
 });
 
+// Preparation strip — weeks-to-race countdown + live plan price.
+// Server renders generic copy; only a valid FUTURE date upgrades it, so
+// stale-date profiles degrade gracefully instead of showing a wrong price.
+// Pricing mirrors the server: $15/wk, min 4wk, cap $249.
+(function() {
+  var strip = document.getElementById('prep-strip');
+  if (!strip) return;
+  var dateStr = strip.getAttribute('data-race-date');
+  if (!dateStr) return;
+  var race = new Date(dateStr + 'T00:00:00');
+  if (isNaN(race.getTime())) return;
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var days = Math.ceil((race - today) / 86400000);
+  if (days <= 7) return;
+  var weeks = Math.max(4, Math.ceil(days / 7));
+  var price = Math.min(weeks * 15, 249);
+  var cd = document.getElementById('rl-prep-countdown');
+  if (cd) cd.textContent = weeks + ' WEEKS OUT';
+  var cta = document.getElementById('rl-prep-cta');
+  if (cta) cta.textContent = 'BUILD MY ' + weeks + '-WEEK PLAN — $' + price;
+})();
+
 // CTA click tracking — GA4
 (function() {
   if (typeof gtag !== 'function') return;
@@ -3698,6 +3720,71 @@ def _workout_eligible(name: str, distance_mi: float, demands: dict) -> bool:
     return True
 
 
+def build_prep_strip(rd: dict) -> str:
+    """Build the above-the-fold Preparation Profile strip.
+
+    Northstar Phase 1 (ported from gravel-race-automation): surfaces top
+    demands, weeks-to-race, and plan price directly under the hero, linking
+    down to the full [08] profile. Renders only when the race has a
+    race-pack preview; weeks/price fill in client-side from data-race-date
+    so stale or past dates degrade to generic copy instead of a wrong price.
+    """
+    slug = rd['slug']
+    race_name = rd['name']
+
+    preview_path = Path(__file__).resolve().parent.parent / 'web' / 'race-packs' / f'{slug}.json'
+    if not preview_path.exists():
+        return ''
+    try:
+        with open(preview_path) as f:
+            preview = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return ''
+
+    demands = preview.get('demands', {})
+    if not demands:
+        return ''
+
+    dim_labels = {
+        'durability': 'Durability',
+        'climbing': 'Climbing',
+        'vo2_power': 'VO2 Power',
+        'threshold': 'Threshold',
+        'technical': 'Technical',
+        'heat_resilience': 'Heat',
+        'altitude': 'Altitude',
+        'race_specificity': 'Race Specificity',
+    }
+    top3 = sorted(((k, v) for k, v in demands.items() if k in dim_labels),
+                  key=lambda kv: kv[1], reverse=True)[:3]
+    if not top3:
+        return ''
+    chips = '\n      '.join(
+        f'<span class="rl-prep-chip">{esc(dim_labels[k])}'
+        f' <strong>{esc(v)}/10</strong></span>'
+        for k, v in top3)
+
+    cd_start, _ = parse_event_dates(rd['vitals'].get('date_specific', ''))
+    date_attr = f' data-race-date="{esc(cd_start)}"' if cd_start else ''
+
+    plan_url = f"{TRAINING_PLANS_URL}?race={esc(slug)}"
+
+    return f'''<section id="prep-strip" class="rl-prep-strip"{date_attr} aria-label="Preparation profile summary">
+    <div class="rl-prep-head">
+      <span class="rl-prep-kicker">Preparation Profile</span>
+      <span class="rl-prep-countdown" id="rl-prep-countdown"></span>
+    </div>
+    <p class="rl-prep-lede">The rating tells you what {esc(race_name)} is. This is what it takes.</p>
+    <div class="rl-prep-chips">
+      {chips}
+    </div>
+    <div class="rl-prep-actions">
+      <a href="#train-for-race" class="rl-btn rl-btn--outline" data-cta="prep_profile_full">FULL PREP PROFILE &darr;</a>
+      <a href="{plan_url}" class="rl-btn" data-cta="prep_strip_build" id="rl-prep-cta">BUILD MY PLAN &mdash; $15/WK</a>
+    </div>
+  </section>'''
+
+
 def build_train_for_race(rd: dict) -> str:
     """Build [08] Train for This Race section with showcase workouts."""
     slug = rd['slug']
@@ -4809,6 +4896,18 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-btn--outline {{ background: transparent; color: var(--rl-color-signal-red); border-color: var(--rl-color-signal-red); }}
 .rl-neo-brutalist-page .rl-btn--outline:hover {{ background: var(--rl-color-signal-red); color: var(--rl-color-white); }}
 
+/* ── Preparation Profile strip (above the fold) ── */
+.rl-neo-brutalist-page .rl-prep-strip {{ margin: 20px 0 28px; padding: 18px 20px; border: var(--rl-border-standard); background: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-prep-head {{ display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; }}
+.rl-neo-brutalist-page .rl-prep-kicker {{ font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); text-transform: uppercase; color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-prep-countdown {{ font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); text-transform: uppercase; color: var(--rl-color-near-black); }}
+.rl-neo-brutalist-page .rl-prep-lede {{ font-family: var(--rl-font-editorial); font-size: 14px; line-height: 1.5; color: var(--rl-color-near-black); margin: 0 0 12px; }}
+.rl-neo-brutalist-page .rl-prep-chips {{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }}
+.rl-neo-brutalist-page .rl-prep-chip {{ font-family: var(--rl-font-data); font-size: 11px; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); color: var(--rl-color-near-black); background: var(--rl-color-white); border: var(--rl-border-subtle); padding: 5px 10px; }}
+.rl-neo-brutalist-page .rl-prep-chip strong {{ color: var(--rl-color-signal-red); }}
+.rl-neo-brutalist-page .rl-prep-actions {{ display: flex; flex-wrap: wrap; gap: 10px; }}
+@media (max-width: 600px) {{ .rl-neo-brutalist-page .rl-prep-actions {{ flex-direction: column; }} .rl-neo-brutalist-page .rl-prep-actions .rl-btn {{ text-align: center; }} }}
+
 /* ── Train for This Race ── */
 .rl-neo-brutalist-page .rl-pack-subtitle {{ font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); text-transform: uppercase; color: var(--rl-color-secondary-blue); margin-bottom: 12px; }}
 .rl-neo-brutalist-page .rl-pack-demands {{ margin-bottom: 24px; }}
@@ -5239,6 +5338,8 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     news = build_news_section(rd)
     training = build_training(rd)
     train_for_race = build_train_for_race(rd)
+    # Strip only renders when [08] exists — its anchor target must be present
+    prep_strip = build_prep_strip(rd) if train_for_race else ''
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
     similar = build_similar_races(rd, race_index)
@@ -5340,6 +5441,8 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   {nav_header}
 
   {hero}
+
+  {prep_strip}
 
   {toc}
 

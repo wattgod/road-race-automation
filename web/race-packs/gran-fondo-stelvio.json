@@ -1,0 +1,136 @@
+{
+  "slug": "gran-fondo-stelvio",
+  "race_name": "La Stelvio Santini",
+  "distance_mi": 80.8,
+  "demands": {
+    "durability": 4,
+    "climbing": 3,
+    "vo2_power": 8,
+    "threshold": 7,
+    "technical": 0,
+    "heat_resilience": 0,
+    "altitude": 10,
+    "race_specificity": 10
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "14,009ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 61,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic La Stelvio Santini's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "Durability",
+      "score": 55,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 80, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 52,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "173ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Endurance",
+      "score": 47,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 80 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "G_Spot",
+      "score": 42,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of La Stelvio Santini. Train it until it feels boring."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 41,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "La Stelvio Santini's alpine mountain passes \u2014 HC climbs forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 80 miles."
+    },
+    {
+      "category": "Over_Under",
+      "score": 37,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At La Stelvio Santini, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Blended",
+      "score": 33,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 14,009ft of climbing on alpine mountain passes \u2014 HC climbs does to your power file on race day."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 33,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on alpine mountain passes \u2014 HC climbs. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 29,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 80 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 24,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At La Stelvio Santini, that number decides whether you bridge or get dropped."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for La Stelvio Santini\u2019s 80 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "La Stelvio Santini with 14,009ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Summit at 2,757m \u2014 severe wind chill on exposed upper switchbacks; Temperature can drop 15-20\u00b0C between Bormio and summit."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 80 miles of alpine mountain passes \u2014 hc climbs in Bormio \u2192 Summit of Passo dello Stelvio.",
+  "generated_at": "2026-06-09"
+}
