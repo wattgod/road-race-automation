@@ -61,6 +61,7 @@ from guide_render_utils import (
 
 # ── Constants ──────────────────────────────────────────────────
 
+QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/questionnaire/"
 GUIDE_DIR = Path(__file__).parent.parent / "guide"
 CONTENT_JSON = GUIDE_DIR / "road-guide-content.json"
 OUTPUT_DIR = Path(__file__).parent / "output" / "prep-kit"
@@ -730,7 +731,7 @@ def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
 
 
 # Worker URL for fueling lead intake
-FUELING_WORKER_URL = "https://fueling-lead-intake.roadgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
+FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
 
 
 def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
@@ -847,6 +848,11 @@ def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
       <button type="submit" class="rl-pk-calc-btn">GET MY FUELING PLAN</button>
     </form>
     <div class="rl-pk-calc-result" id="rl-pk-calc-result" style="display:none" aria-live="polite"></div>
+    <div class="rl-pk-calc-upsell" id="rl-pk-calc-upsell" style="display:none">
+      <p class="rl-pk-calc-upsell-title">Your numbers are the easy part.</p>
+      <p class="rl-pk-calc-upsell-text">Hitting them at race intensity is a trained skill &mdash; gut training over 4-6 weeks, bottle logistics, heat adjustments when the plan meets the weather. The custom training plan builds your fueling protocol into the actual training weeks, so race day is a rehearsal, not an experiment.</p>
+      <a href="{QUESTIONNAIRE_URL}?race={slug}" class="rl-pk-calc-upsell-btn" data-cta="fueling_upsell_plan">BUILD MY PLAN &mdash; FUELING INCLUDED</a>
+    </div>
     <div class="rl-pk-calc-substack" id="rl-pk-calc-substack" style="display:none">
       <p class="rl-pk-calc-substack-label">Get race-day tips in your inbox</p>
       <iframe src="{esc(SUBSTACK_EMBED)}" title="Newsletter signup" width="100%" height="150" style="border:none;background:transparent" frameborder="0" scrolling="no" loading="lazy"></iframe>
@@ -2172,6 +2178,11 @@ def build_prep_kit_css() -> str:
 .rl-pk-calc-result-value{font-weight:700;color:var(--rl-color-near-black)}
 .rl-pk-calc-result-highlight{font-size:28px;font-weight:700;color:var(--rl-color-signal-red);font-family:var(--rl-font-data)}
 .rl-pk-calc-result-note{font-family:var(--rl-font-editorial);font-size:12px;color:var(--rl-color-secondary-blue);margin:12px 0 0;line-height:1.5}
+.rl-pk-calc-upsell{margin:20px 0 0;padding:18px;border:3px solid var(--rl-color-near-black);background:var(--rl-color-cool-white)}
+.rl-pk-calc-upsell-title{font-family:var(--rl-font-data);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0 0 8px;color:var(--rl-color-near-black)}
+.rl-pk-calc-upsell-text{font-size:13px;line-height:1.6;margin:0 0 12px;color:var(--rl-color-near-black)}
+.rl-pk-calc-upsell-btn{display:inline-block;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:11px 20px;background:var(--rl-color-near-black);color:var(--rl-color-cool-white);border:2px solid #000}
+.rl-pk-calc-upsell-btn:hover{background:var(--rl-color-white);color:var(--rl-color-near-black)}
 .rl-pk-calc-substack{margin:20px 0 0;padding:16px;border:2px solid var(--rl-color-silver);background:var(--rl-color-white)}
 .rl-pk-calc-substack-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--rl-color-primary-navy);margin:0 0 8px}
 
@@ -2588,6 +2599,8 @@ document.querySelectorAll('.rl-guide-accordion-trigger').forEach(function(btn){
     /* Show Substack iframe */
     var ss=document.getElementById('rl-pk-calc-substack');
     if(ss) ss.style.display='block';
+    var up=document.getElementById('rl-pk-calc-upsell');
+    if(up) up.style.display='block';
     /* Cache email in localStorage */
     try{
       localStorage.setItem(LS_KEY,JSON.stringify({email:email,exp:Date.now()+EXPIRY_DAYS*86400000}));
