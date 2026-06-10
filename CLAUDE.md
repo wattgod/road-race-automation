@@ -1,5 +1,14 @@
 # CLAUDE.md — Roadie Labs: Scored Road Cycling Event Database
 
+## Northstar
+This repo serves the ecosystem master plan: **rated race databases (gravel/road/ski)
+earn trust as honest race critics → convert to a plan/course/coaching ladder →
+ultimately delivered on Endure Labs, replacing TrainingPeaks.** Roadie Labs is the
+second vertical (largest TAM, strongest gravel cross-sell). When prioritizing,
+advance the current phase's KPI gate — read `gravel-god-cycling/NORTHSTAR.md`
+(canonical plan, phases, anti-shill rules, baseline metrics) before large or
+ambiguous work.
+
 ## Project Overview
 Roadie Labs is a scored event database for road cycling (gran fondos, sportives, centuries, hillclimbs, multi-stage amateur races). Migrated from the Gravel God system in Sprint 41. Clinical, technical, data-driven brand identity.
 
