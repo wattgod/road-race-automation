@@ -22,9 +22,14 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install anthropic requests python-frontmatter pyyaml
-      
+          pip install pytest anthropic requests python-frontmatter pyyaml
+          pip install -r requirements.txt || echo "no/partial requirements.txt"
+
       - name: Run Regression Tests
         run: |
-          python scripts/regression_test.py
+          # The real suite is pytest under tests/ — the old reference to
+          # scripts/regression_test.py was a phantom file (never existed), so
+          # CI exited 2 on every commit and caught nothing. PIL-dependent tests
+          # self-skip when Pillow is absent.
+          python -m pytest tests/ -q
 

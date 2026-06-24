@@ -1,442 +1,239 @@
 {
- "title": "The Road Racing Training Guide",
- "subtitle": "How to prepare for gran fondos and road races — training, fueling, and race execution",
- "meta_description": "Road racing training guide: periodization, fueling, race-week protocol, and in-race decision making for gran fondos and road races.",
- "chapters": [
-  {
-   "number": 3,
-   "title": "Training Phases",
-   "sections": [
+  "title": "The Road Racing Guide",
+  "subtitle": "Everything you need to train for and race gran fondos, sportives, and centuries.",
+  "meta_description": "A complete road racing training guide — from building your aerobic engine to pack tactics, fueling, and race-week execution. Written by coaches who race.",
+  "chapters": [
     {
-     "id": "ch3-phases",
-     "title": "Training Phases: Base, Build, Taper",
-     "blocks": [
-      {
-       "type": "timeline",
-       "title": "12-Week Periodization",
-       "steps": [
+      "number": 1,
+      "id": "what-is-road-racing",
+      "title": "What Is Road Racing?",
+      "subtitle": "Fondos, sportives, and the events you're actually training for",
+      "gated": false,
+      "cta_after": null,
+      "hero_image": "ch1-hero",
+      "sections": [
         {
-         "label": "Base (Weeks 1-4)",
-         "content": "Establish aerobic foundation. 70-85% volume in Z1-{{Z2}}. {{CTL}} rising steadily (+3-5/wk). {{TSB}} slightly negative (-5 to -15). Week 4 = recovery week (60% volume). Feels boring but doable—you should finish most rides feeling like you could do more."
-        },
-        {
-         "label": "Build (Weeks 5-10)",
-         "content": "Layer intensity, develop race-specific fitness. 60-70% Z1-Z2, 30-40% Z3-Z6. Two to three quality sessions per week. The magic happens here: deliberately dig a fatigue hole ({{TSB}} goes to -25), recover just enough, then dig another hole. This is where fitness sharpens."
-        },
-        {
-         "label": "Peak/Taper (Weeks 11-12)",
-         "content": "Shed fatigue, maintain sharpness. Volume drops 30-50%. Intensity stays high but duration decreases. Week 11: {{TSB}} rises to +5 to +10. Week 12: TSB targets +15 to +25 for race day. Fitness doesn't improve—the goal is to remove the fatigue layer so you can express the fitness you've built."
+          "id": "what-is-road-racing-main",
+          "title": "What Is Road Racing?",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Road racing, for most of us, means the mass-participation events that have exploded over the last two decades: gran fondos, sportives, centuries, the big timed climbs. You're not racing a 90-rider pro peloton. You're chasing a number on a finish-line clock, a personal best, or the wheel of the rider who dropped you last year."
+            },
+            {
+              "type": "prose",
+              "content": "What makes the road different from gravel or the trail is the pack. Drafting is the whole game — sit in the right wheel and you save 25-30% of your energy; get caught in the wind alone and the day falls apart. The surface is predictable; the tactics are not. Positioning, timing, and knowing when to spend your matches matter more than raw watts."
+            },
+            {
+              "type": "prose",
+              "content": "This guide is built around that reality: an aerobic engine big enough to finish strong, the threshold to hold a hard group, and the handling to stay safe and efficient in a bunch. Everything here is written by coaches who actually pin numbers on."
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "prose",
-       "content": "Notice the shape: volume peaks early, intensity peaks late, both taper together. Base fitness takes weeks of accumulated volume to build but decays slowly. Race sharpness takes hard efforts to develop but fatigues you quickly. The taper strips away the fatigue layer while preserving both. Every serious training plan follows this arc."
-      },
-      {
-       "type": "prose",
-       "content": "Zoom out further and the same periodization principles apply to an entire season—multiple race targets, off-season base, and strategic recovery blocks."
-      },
-      {
-       "type": "prose",
-       "content": "Plan backwards from your A-race. Everything else—B races, training camps, recovery weeks—serves that primary goal."
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "A simple 8-week build is enough. Four weeks of gradually increasing volume, one recovery week, then three more weeks building toward your event. Don't overcomplicate it."
-        },
-        "finisher": {
-         "content": "Plan a 12-week block: 4 weeks base building, 4 weeks adding intensity, 3 weeks race-specific work, 1 week taper. Each phase builds on the last."
-        },
-        "competitor": {
-         "content": "Use a 16-week periodized plan with distinct base, build, and peak phases. Include a mid-plan recovery week and a proper 10-day taper. Test your fitness at a B-race mid-plan."
-        },
-        "podium": {
-         "content": "Structure your season around A-races with 20-week macro cycles. Include base, build, peak, and taper mesocycles. Schedule B-races as training stimulus. Plan recovery blocks between peaks."
-        }
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "number": 5,
-   "title": "Fueling",
-   "sections": [
-    {
-     "id": "ch5-race-day",
-     "title": "Race-Day Nutrition Strategy",
-     "blocks": [
-      {
-       "type": "timeline",
-       "title": "Race-Day Fueling Timeline",
-       "steps": [
-        {
-         "label": "Pre-Race (3-4 hrs before)",
-         "content": "2-3g carbs/kg bodyweight. Low fat, low fiber. Familiar foods only. 500ml water with meal."
-        },
-        {
-         "label": "Starting Line (30-60 min before)",
-         "content": "One gel (24g carbs) with 200ml water. Tops off blood glucose."
-        },
-        {
-         "label": "0-30 Minutes",
-         "content": "Focus on pacing, positioning, settling in. Sip on drink. Heart rate is spiking, gut blood flow is reduced."
-        },
-        {
-         "label": "30-60 Minutes",
-         "content": "First gel or equivalent (24g carbs). Start your fueling clock. Hydrate consistently."
-        },
-        {
-         "label": "Every 45-60 Minutes After",
-         "content": "Consume carbs consistently by the clock. Target rate depends on race duration: 80-100g/hr for races under 4 hours, 60-80g/hr for 4-8 hour events, 50-70g/hr for 8-12 hours, and 40-60g/hr for ultra events (12+ hours). At lower intensities fat becomes your primary fuel and GI tolerance is the limiter. Set a timer. Your brain will be stupid. It will forget to eat."
-        }
-       ]
-      },
-      {
-       "type": "prose",
-       "content": "Every milestone on this timeline is non-negotiable. Miss the pre-race breakfast window and you start in a glycogen hole. Skip the first-hour fueling because you feel fine and you are building a debt you will pay at mile 60. Follow it mechanically."
-      },
-      {
-       "type": "callout",
-       "style": "quote",
-       "content": "Set a timer. Seriously. Your brain will be stupid. It will forget to eat. It will lie to you and say \"I'm fine, I'll eat at the next aid station.\" The timer removes decision-making."
-      }
-     ]
+      ]
     },
     {
-     "id": "ch5-gut-training",
-     "title": "Training Your Gut",
-     "blocks": [
-      {
-       "type": "prose",
-       "content": "Your gut is trainable just like your muscles. If you never eat during training rides, your gut won't tolerate eating during races."
-      },
-      {
-       "type": "timeline",
-       "title": "Gut Training Protocol",
-       "steps": [
+      "number": 2,
+      "id": "choosing-your-race",
+      "title": "Choosing Your Race",
+      "subtitle": "Pick the event that fits your engine and your calendar",
+      "gated": false,
+      "cta_after": null,
+      "hero_image": "ch2-hero",
+      "sections": [
         {
-         "label": "Weeks 1-4 (Base Phase)",
-         "content": "Practice eating real food on easy rides. Start with 40-50g carbs per hour, mostly solid. Build tolerance gradually. SGLT1 transporters can double in 2 weeks of consistent gut training (GSSI)."
-        },
-        {
-         "label": "Weeks 5-8 (Build Phase)",
-         "content": "Increase toward your race-day target rate. Mix of liquids and solids. Practice eating at tempo pace. Your gut adapts to what you train it for."
-        },
-        {
-         "label": "Weeks 9-10 (Peak Training)",
-         "content": "Hit your race-day target rate (see duration-scaled targets in your prep kit). Race nutrition only (gels, drink, bars you'll use on race day). Practice at race pace. For ultra events (12+ hours), include savory and mixed-macro foods alongside gels."
-        },
-        {
-         "label": "Race Week",
-         "content": "Stick with what worked in training. No new products. Trust your gut (literally)."
+          "id": "choosing-your-race-main",
+          "title": "Choosing Your Race",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The race you pick determines the plan you need. A flat 100-mile fondo rewards sustained tempo and pack craft; a mountainous sportive with 10,000 ft of climbing rewards a high power-to-weight and the discipline to ride your own pace up the cols. Pick the demands first, then build toward them."
+            },
+            {
+              "type": "prose",
+              "content": "Give yourself runway. A first century or fondo wants 14-18 weeks from a real base; if you're starting from the couch, more. Slot one A-event per season and build everything around it — B-events become hard training days, not goals that fragment your focus."
+            },
+            {
+              "type": "prose",
+              "content": "Be honest about the climbing. The single biggest predictor of how your day goes on a hilly course is your weight-adjusted threshold. If the route climbs, the plan climbs."
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "Start by eating a small snack 30 minutes before rides. If that sits well for two weeks, try eating during rides. Your gut adapts just like your legs — gradually."
-        },
-        "finisher": {
-         "content": "Spend 4 weeks increasing on-bike fueling by 10g/hour per week. Start at 30g/hour and work up to 60g. If you get stomach issues, back off for a week then try again."
-        },
-        "competitor": {
-         "content": "Dedicate your long rides to gut training: increase carb intake by 10-15g per hour each week until you reach 80-90g. Practice with race-day products. Log what works and what doesn't."
-        },
-        "podium": {
-         "content": "Systematic gut training protocol: Week 1-2 at 60g/hr, Week 3-4 at 75g/hr, Week 5-6 at 90g/hr, Week 7-8 push to 100-120g/hr. Track GI symptoms on a 1-5 scale. Identify your personal ceiling."
-        }
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "number": 6,
-   "title": "Race Execution",
-   "sections": [
-    {
-     "id": "ch6-decision-tree",
-     "title": "In-Race Decision Tree",
-     "blocks": [
-      {
-       "type": "prose",
-       "content": "When things go sideways (and at some point they will), follow protocol instead of panic. Pre-planned responses beat real-time decision-making when your brain is running on fumes."
-      },
-      {
-       "type": "accordion",
-       "items": [
-        {
-         "title": "Flat Tire",
-         "content": "1. Stay calm—signal, drift to the side, stop somewhere safe\n2. Big fondos run neutral service on the main road — know from the race guide whether yours does, and how long the wait usually is\n3. Fixing it yourself is almost always faster: tube swap, CO2, go\n4. Check the tire casing for the cause before installing the tube — glass or wire still in the casing flats you again in 10 minutes\n5. Inflate, spin the wheel, verify no rub\n6. Resume at Z2 for 2-3 minutes before chasing\n7. Your group is gone. Don't burn 20 minutes of matches getting it back—work with the next group that comes through"
-        },
-        {
-         "title": "Dropped from Group",
-         "content": "1. Don't panic—emotional response costs more energy than you have\n2. Assess honestly: were you overextended or did they surge?\n3. Find YOUR sustainable pace (probably Z2-low Z3)\n4. Look for riders at similar pace within 30-60 seconds\n5. Form new working group if possible—communicate intentions\n6. If solo, accept it—focus on YOUR race, not theirs\n7. Use solo time gaps to fuel and recover without group pressure"
-        },
-        {
-         "title": "Bonking",
-         "content": "1. STOP pushing hard immediately—don't try to push through\n2. Sit down if possible (don't stand around)\n3. Consume 2-3 gels or 200-300 calories FAST\n4. Wait 15-20 minutes MINIMUM\n5. Let sugar hit bloodstream—this takes time, be patient\n6. Drink 16oz water with gels\n7. Resume at Z1-Z2 pace ONLY\n8. Fuel aggressively for next hour to rebuild glycogen stores"
-        },
-        {
-         "title": "Cramping",
-         "content": "1. Consume sodium (salt tabs or pretzels/chips) + 16oz water immediately\n2. Stretch gently—don't force it or you'll tear muscle fibers\n3. Drop to Z1-Z2 for 10-15 minutes minimum\n4. Back off intensity by 10-15% even after cramps resolve\n5. Continue aggressive sodium intake rest of race\n6. Don't resume hard efforts until cramping completely resolved"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "number": 7,
-   "title": "Race Week",
-   "sections": [
-    {
-     "id": "ch7-taper",
-     "title": "Days 7-1: The Final Taper",
-     "blocks": [
-      {
-       "type": "timeline",
-       "title": "Race Week Day-by-Day",
-       "steps": [
-        {
-         "label": "Monday (7 days out)",
-         "content": "60-90 minutes Z2 endurance. Keep legs moving, nothing hard. Optional: 3 × 1 min Z4 to keep neuromuscular system awake."
-        },
-        {
-         "label": "Tuesday (6 days out)",
-         "content": "45-60 minutes Z2. Maybe 2 × 3 min G Spot if you're feeling restless. Don't go hard."
-        },
-        {
-         "label": "Wednesday (5 days out)",
-         "content": "Rest day or 30-45 minutes very easy spin. The last hard workout was 4-5 days ago. Everything now is just maintenance."
-        },
-        {
-         "label": "Thursday (4 days out)",
-         "content": "45-60 minutes Z2. Include 3-5 × 30 seconds Z5-Z6 (openers to keep legs sharp). Last real ride before race."
-        },
-        {
-         "label": "Friday (3 days out)",
-         "content": "Travel day (if traveling) or rest day. Optional 30-minute easy spin if legs feel heavy."
-        },
-        {
-         "label": "Saturday (2 days out)",
-         "content": "30-45 minutes Z2 with 3 × 1 min Z4 openers. Course preview if racing Sunday. No heroics."
-        },
-        {
-         "label": "Sunday (1 day out)",
-         "content": "20-30 minutes very easy spin or complete rest. Do what's worked for you previously."
-        }
-       ]
-      },
-      {
-       "type": "prose",
-       "content": "Resist the urge to squeeze in one more hard session. Your fitness is locked in — it was determined weeks ago. This week is about arriving at the start line rested, organized, and mentally calm. Every decision should reduce stress, not add it. Trust the work you have already done."
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "Take 3-4 days completely easy before your race. One short ride two days out to keep your legs loose. Otherwise, rest. You can't gain fitness this week, but you can definitely lose it by overdoing it."
-        },
-        "finisher": {
-         "content": "7-day taper: reduce volume by 40% but keep one short, sharp effort (10 minutes at race pace) 3 days out. This keeps your legs responsive without adding fatigue. Rest day before race day."
-        },
-        "competitor": {
-         "content": "10-day taper: drop volume 50%, maintain intensity in two short opener sessions (5 days and 2 days out). Each opener: 3x5 minutes at threshold with full recovery. Keep your routine otherwise normal."
-        },
-        "podium": {
-         "content": "12-14 day structured taper: gradual volume reduction (40% week 1, 60% week 2) with strategic openers. Include one race-simulation effort 5 days out (20 min at race pace on similar terrain). Two full rest days before race day."
-        }
-       }
-      }
-     ]
+      ]
     },
     {
-     "id": "ch7-equipment",
-     "title": "Equipment Prep",
-     "blocks": [
-      {
-       "type": "accordion",
-       "items": [
+      "number": 3,
+      "id": "building-the-engine",
+      "title": "Building the Engine",
+      "subtitle": "Base, then build — the aerobic foundation under everything",
+      "gated": false,
+      "cta_after": null,
+      "hero_image": "ch3-hero",
+      "sections": [
         {
-         "title": "Final Bike Check (Thursday or Friday)",
-         "content": "**Drivetrain:** Chain clean and lubed. Shifting smooth across all gears — you'll use every one of them on the climbs. No chain slip under power.\n\n**Tires:** Check for cuts and embedded glass. Fresh sealant if tubeless. Pressure set for the descent, not the flat — overinflated tires on a wet alpine descent is how races end early.\n\n**Brakes:** Pads with life left in them. A 20-minute descent eats pads. Levers firm.\n\n**Cockpit:** Computer charged and mounted. Bottles/cages secure — bottle ejection on rough pavement is real.\n\n**Don't:** Install a new chain race week. Swap to race wheels you haven't ridden. Add new untested equipment."
-        },
-        {
-         "title": "Race Day Bag (Pack Friday or Saturday)",
-         "content": "**Essentials:** Two spare tubes, CO2 cartridges (2-3) or mini pump, tire levers, multi-tool with chain breaker, quick link.\n\n**Nutrition:** Gels, bars, chews—whatever you practiced with. Bottles pre-mixed. Know the feed-zone locations and what they stock; plan to carry what the gaps demand.\n\n**Other:** Sunscreen, chamois cream, arm warmers and a vest for the early start, rain jacket if the forecast says so. Mountain fondos start cold and finish hot — pockets earn their keep.\n\n**Race essentials:** Bib number and pins, timing chip, ID and emergency contact info."
+          "id": "building-the-engine-main",
+          "title": "Building the Engine",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Endurance is the foundation, and there's no shortcut around it. The long ride is the single most important session in your week: it builds the fat-burning, capillary-dense aerobic engine that lets you hold power deep into a long event. Most of your hours should be genuinely easy — conversational, controlled, boring on purpose."
+            },
+            {
+              "type": "prose",
+              "content": "Boredom is the skill nobody advertises. The riders who improve are the ones who can sit in zone 2 for three hours without turning it into a smash-fest. Volume you can repeat beats heroic days you need a week to recover from."
+            },
+            {
+              "type": "prose",
+              "content": "Build progressively. Add no more than ~10% volume per week, take a recovery week every third or fourth, and let the long ride grow toward (but not absurdly past) your event duration. The engine is built in months, not weekends."
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "prose",
-       "content": "Weather changes your gear strategy completely. A 55°F start with 15 mph wind feels very different from a 75°F calm morning—and your clothing choices should reflect that."
-      },
-      {
-       "type": "prose",
-       "content": "Scout the forecast Thursday morning. Lock in your plan by Friday. Do not second-guess Saturday morning—the stress of indecision costs more energy than being slightly overdressed."
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "Ride whatever bike you have — don't buy new gear race week. Make sure your tires hold air, your brakes stop you on a long descent, and you have a spare tube. That's your equipment checklist."
-        },
-        "finisher": {
-         "content": "Test your race-day setup on a training ride at least 2 weeks out. Gearing for the steepest climb, saddle bag contents, nutrition placement. Don't change anything in the final week — race with what you've trained with."
-        },
-        "competitor": {
-         "content": "Gear for the course: check the gradient profile and make sure your easiest gear lets you stay seated on the steepest sustained section. Decide on race wheels two weeks out and train on them. Lay out all race gear the night before — kit, nutrition, tools, electronics."
-        },
-        "podium": {
-         "content": "Study every climb and descent on video or ride them beforehand. Wheel and gearing choices per course profile. Know the feed zones and plan which to skip. Have a mechanical plan: which groups to wait for if service is slow, and when to abandon the lead group to save the race."
-        }
-       }
-      }
-     ]
+      ]
     },
     {
-     "id": "ch7-morning",
-     "title": "Race Morning Protocol",
-     "blocks": [
-      {
-       "type": "prose",
-       "content": "Wake up **3 hours before race start** if possible. This gives time for coffee to do its job and morning bathroom routine to complete. Everything from here is logistics, not training."
-      },
-      {
-       "type": "timeline",
-       "title": "Race Morning Timeline",
-       "steps": [
+      "number": 4,
+      "id": "workout-execution",
+      "title": "Workout Execution",
+      "subtitle": "Zones, intervals, and hitting the targets that matter",
+      "gated": true,
+      "cta_after": null,
+      "hero_image": "ch4-hero",
+      "sections": [
         {
-         "label": "3 Hours Before Start",
-         "content": "Wake up. Coffee if you normally drink it (not the time to change habits). Breakfast: 100-150g carbs, minimal fat, minimal fiber. Oatmeal with banana and honey, bagel with jam, or white rice with a pinch of salt."
-        },
-        {
-         "label": "90 Minutes Before",
-         "content": "Start sipping sports drink. Begin hydrating and topping off fuel. Apply chamois cream and sunscreen."
-        },
-        {
-         "label": "60 Minutes Before",
-         "content": "Arrive at start area. Check in, use porta-potty. Get your head right."
-        },
-        {
-         "label": "45 Minutes Before",
-         "content": "Light warmup ride: 10-15 minutes easy spinning. Wake up the legs."
-        },
-        {
-         "label": "30 Minutes Before",
-         "content": "Final gear check: bottles filled and secured, nutrition in pockets, tire pressure verified, drivetrain sounds good. Run through your [performance statements](#mental-training-race-tactics) mentally."
-        },
-        {
-         "label": "20 Minutes Before",
-         "content": "Openers near the start: 2-3 x 30 seconds at race effort with easy spinning between. Gets HR up, legs awake, reminds body what fast feels like."
-        },
-        {
-         "label": "10 Minutes Before",
-         "content": "Roll to start line. Find your position. Deep breath."
-        },
-        {
-         "label": "5 Minutes Before",
-         "content": "6-2-7 breathing if anxious. You're ready. Trust your training."
+          "id": "workout-execution-main",
+          "title": "Workout Execution",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Once the base is in, intensity sharpens it. Train by zones, not feelings: zone 2 builds the engine, threshold (around your one-hour power) raises the ceiling you can sustain, and VO2max work — short, brutal 3-5 minute efforts — lifts the top end. The trap is the gray zone: zone 3 is too hard to recover from and too easy to drive real adaptation. Ride it only when prescribed."
+            },
+            {
+              "type": "prose",
+              "content": "Power is the primary target; heart rate is the cross-check. If you're HR-based, your zones are a percentage of threshold HR — not max HR. On a hot or fatigued day, trust HR over the number on the screen."
+            },
+            {
+              "type": "prose",
+              "content": "Two to three quality days a week is plenty for most road athletes. Keep hard days hard and easy days genuinely easy. The plan controls how much time you spend in each zone; your only job is to hit the prescribed zone when the workout calls for it."
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "scenario",
-       "prompt": "It's race morning. You slept terribly — maybe 4-5 hours of broken sleep. Pre-race nerves kept you awake. You feel groggy and anxious. What do you do?",
-       "options": [
-        {
-         "label": "Panic — consider DNS because you're not well-rested enough",
-         "result": "Overreaction. One night of poor sleep doesn't significantly impair performance if you've been sleeping well all week. Research consistently shows this. The sleep you banked Monday-Friday matters more than Saturday night.",
-         "best": false
-        },
-        {
-         "label": "Execute your morning protocol exactly as planned, trust the sleep you banked earlier in the week",
-         "result": "Correct approach. Pre-race insomnia is universal. Your body has plenty of stored recovery from the week. Stick to your routine: eat, hydrate, warm up, execute. Adrenaline will handle the rest once the gun goes off.",
-         "best": true
-        },
-        {
-         "label": "Double your caffeine intake to compensate for the poor sleep",
-         "result": "Bad idea. More caffeine than your normal amount risks GI distress, jitteriness, and an elevated heart rate before you even start. Stick with your normal amount. Race day is not the time to change habits.",
-         "best": false
-        }
-       ]
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "Wake up early enough to eat breakfast and use the bathroom without rushing. Have coffee if that's your routine. Arrive at the venue with 45 minutes to spare. That's it."
-        },
-        "finisher": {
-         "content": "3 hours before start: eat your tested pre-race meal (500-800 calories, carb-heavy). 90 minutes before: arrive, set up, warm up with a 15-minute easy spin. 30 minutes before: final bathroom break, sip electrolytes."
-        },
-        "competitor": {
-         "content": "Follow your rehearsed race-morning protocol. Timed nutrition at 3 hours and 1 hour pre-start. 20-minute structured warm-up including 3 efforts at race pace. Check-in, staging, and mental preparation in the final 15 minutes."
-        },
-        "podium": {
-         "content": "Execute your race-morning checklist exactly as rehearsed. Timed wake-up for optimal carb loading. Progressive warm-up protocol: 10 min easy, 5 min tempo, 3x30s at race pace with full recovery. Final equipment check. Pre-staging tactical positioning."
-        }
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "number": 8,
-   "title": "Recovery",
-   "sections": [
+      ]
+    },
     {
-     "id": "ch8-immediate",
-     "title": "Immediately Post-Race (First 30 Minutes)",
-     "blocks": [
-      {
-       "type": "process_list",
-       "items": [
+      "number": 5,
+      "id": "fueling-for-the-distance",
+      "title": "Fueling for the Distance",
+      "subtitle": "Carbs per hour, hydration, and a gut that can take it",
+      "gated": true,
+      "cta_after": null,
+      "hero_image": "ch5-hero",
+      "sections": [
         {
-         "label": "Keep Moving (5-10 Minutes)",
-         "detail": "Spin in Z1 after crossing the finish line. Let heart rate drop gradually. Stopping abruptly causes blood to pool in your legs."
-        },
-        {
-         "label": "Refuel Immediately (Within 30 Minutes)",
-         "detail": "20-30g protein, 60-100g carbs, 500-750ml fluid with electrolytes. Chocolate milk, protein shake with banana, or whatever the finish line has."
-        },
-        {
-         "label": "Rehydrate Aggressively",
-         "detail": "You lost 1-4 liters of fluid. Drink 500-1000ml within the first hour. Add electrolytes. If pee is dark yellow by evening, keep drinking."
+          "id": "fueling-for-the-distance-main",
+          "title": "Fueling for the Distance",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Road events are won and lost at the food table as much as on the climbs. For anything over ~90 minutes you need carbohydrate — 60-90+ grams per hour for a hard, long day, far more than most riders eat. Bonking isn't a willpower failure; it's an empty tank you could have kept full."
+            },
+            {
+              "type": "prose",
+              "content": "Your gut is trainable. Practice race-day fueling on your long rides — the exact gels, drink mix, and real food you'll use — so race day is a rehearsal, not an experiment. A stomach that's never seen 80g/hr will reject it when you need it most."
+            },
+            {
+              "type": "prose",
+              "content": "Hydrate to thirst plus a plan: know your sweat rate, carry enough, and don't forget sodium on hot days. Start fueling early, before you feel empty — by the time you're hungry, you're already behind."
+            }
+          ]
         }
-       ]
-      },
-      {
-       "type": "personalized_content",
-       "variants": {
-        "ayahuasca": {
-         "content": "Eat whatever sounds good. Drink water. Sit down. Celebrate that you finished. That's your entire post-race protocol. The recovery science can wait — enjoy this moment."
-        },
-        "finisher": {
-         "content": "Within 30 minutes: 50g carbs + 20g protein (chocolate milk works). Gentle walk for 10 minutes to flush your legs. Celebrate, then start hydrating with electrolytes for the next 4-6 hours."
-        },
-        "competitor": {
-         "content": "Immediate recovery protocol: 1g/kg carbs + 0.3g/kg protein within 30 minutes. Active cool-down spin for 15 minutes. Compression boots if available. Begin structured recovery nutrition for the next 24 hours."
-        },
-        "podium": {
-         "content": "Execute your rehearsed recovery protocol: recovery drink immediately, active cool-down, compression therapy. Log race data and subjective RPE before you forget. Begin carb reloading (8-10g/kg over 24 hours). Schedule a recovery massage within 48 hours."
+      ]
+    },
+    {
+      "number": 6,
+      "id": "pack-skills-and-tactics",
+      "title": "Pack Skills & Race Tactics",
+      "subtitle": "Drafting, echelons, positioning, and when to spend",
+      "gated": true,
+      "cta_after": null,
+      "hero_image": "ch6-hero",
+      "sections": [
+        {
+          "id": "pack-skills-and-tactics-main",
+          "title": "Pack Skills & Race Tactics",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The pack is the road racer's superpower and biggest risk. Sit 30-60cm off the wheel ahead — close enough to draft, far enough to react — look through the riders in front, not at the wheel, and match speed with feathered brakes, never grabs. Surging and braking is how gaps and crashes start."
+            },
+            {
+              "type": "prose",
+              "content": "In a crosswind the shelter sits diagonally behind and to the leeward side — that's an echelon, and when the road tilts into the wind, the front splits into groups. Know which way the wind comes from, fight for the front before the exposed section, and never get caught in the gutter."
+            },
+            {
+              "type": "prose",
+              "content": "Spend your matches deliberately. Move up before climbs and corners, not during them; cover the moves that matter and let the rest go. The strongest rider doesn't always win — the one who wastes the least energy getting to the finish does."
+            }
+          ]
         }
-       }
-      }
-     ]
+      ]
+    },
+    {
+      "number": 7,
+      "id": "race-week",
+      "title": "Race Week",
+      "subtitle": "Taper, prep, and arriving sharp instead of stale",
+      "gated": true,
+      "cta_after": null,
+      "hero_image": "ch7-hero",
+      "sections": [
+        {
+          "id": "race-week-main",
+          "title": "Race Week",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The work is done; race week is about arriving fresh, not fit. Cut volume by 40-60% while keeping a few short, sharp openers so the legs stay snappy. You can't add fitness in the final week — you can only blunt it by training through fatigue, or sharpen it by resting smart."
+            },
+            {
+              "type": "prose",
+              "content": "Dial the logistics: know the route profile, the feed zones, the weather, and your pacing plan before you pin a number. Lay out kit and nutrition the night before. The calmer the morning, the better the day."
+            },
+            {
+              "type": "prose",
+              "content": "Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "after-the-finish",
+      "title": "After the Finish",
+      "subtitle": "Recovery, reflection, and building the next season",
+      "gated": true,
+      "cta_after": null,
+      "hero_image": "ch8-hero",
+      "sections": [
+        {
+          "id": "after-the-finish-main",
+          "title": "After the Finish",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The finish line is a checkpoint, not the end. The first 48 hours are about real recovery: eat, sleep, easy spinning only. The fitness you built doesn't vanish — protect it with rest now and you carry it into the next block instead of digging a hole."
+            },
+            {
+              "type": "prose",
+              "content": "Review honestly. Where did the day come apart — fueling, pacing, positioning, the legs? The race is the most unfakeable feedback you'll get all year; mine it for the one or two things to fix, not a list of twenty."
+            },
+            {
+              "type": "prose",
+              "content": "Then build forward. A short, deliberate off-season, a fresh base, and a new A-event give the next plan a target. Compounding small, repeatable work is how riders get genuinely fast — season over season, not week over week."
+            }
+          ]
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
