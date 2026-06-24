@@ -24,7 +24,9 @@ import time
 from pathlib import Path
 from urllib.parse import urlparse
 
-from duckduckgo_search import DDGS
+# duckduckgo_search is an OPTIONAL scraper dependency — import it lazily at the
+# call site so merely importing this module (e.g. in tests / CI without the
+# extra installed) doesn't fail. The actual scrape needs it; nothing else does.
 
 try:
     from scrape_utils import load_extract, fetch_url, get_cached, set_cached
@@ -242,6 +244,7 @@ def build_search_queries(race, slug):
 
 def ddgs_search(query, max_results=8, retries=2):
     """Search DuckDuckGo with retry for transient TLS errors."""
+    from duckduckgo_search import DDGS  # lazy — optional scraper dependency
     for attempt in range(retries + 1):
         try:
             return list(DDGS().text(query, max_results=max_results))
