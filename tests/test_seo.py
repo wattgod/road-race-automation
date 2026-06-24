@@ -57,6 +57,10 @@ def homepage_html():
 def state_hub_pages():
     """Return dict of slug → HTML content for all state hub pages."""
     output_dir = PROJECT_ROOT / "wordpress" / "output"
+    # Generated output isn't committed — absent in a bare CI checkout. Skip the
+    # output-dependent integration tests rather than erroring on iterdir().
+    if not output_dir.exists():
+        pytest.skip("wordpress/output not generated — run the generators first")
     pages = {}
     for d in output_dir.iterdir():
         if d.is_dir() and d.name.startswith("best-gravel-races-"):
