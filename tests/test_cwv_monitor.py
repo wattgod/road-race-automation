@@ -114,11 +114,11 @@ class TestMonitoredURLs:
 
     EXPECTED_URLS = [
         "https://roadielabs.com/",
-        "https://roadielabs.com/gravel-races/",
-        "https://roadielabs.com/race/unbound-200/",
-        "https://roadielabs.com/race/barry-roubaix/",
-        "https://roadielabs.com/race/big-sugar/",
-        "https://roadielabs.com/race/3-state-3-mountain-challenge/",
+        "https://roadielabs.com/road-races/",
+        "https://roadielabs.com/race/letape-du-tour/",
+        "https://roadielabs.com/race/cheaha-challenge-gran-fondo/",
+        "https://roadielabs.com/race/americas-most-beautiful-bike-ride/",
+        "https://roadielabs.com/race/letape-indonesia/",
         "https://roadielabs.com/coaching/",
     ]
 

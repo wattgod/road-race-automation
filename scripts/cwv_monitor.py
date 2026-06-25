@@ -31,11 +31,11 @@ SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "cwv-snapshots"
 # Pages to monitor — one per page type
 MONITORED_URLS = [
     {"url": "https://roadielabs.com/", "label": "Homepage"},
-    {"url": "https://roadielabs.com/gravel-races/", "label": "Race Search"},
-    {"url": "https://roadielabs.com/race/unbound-200/", "label": "T1 Race"},
-    {"url": "https://roadielabs.com/race/barry-roubaix/", "label": "T2 Race"},
-    {"url": "https://roadielabs.com/race/big-sugar/", "label": "T3 Race"},
-    {"url": "https://roadielabs.com/race/3-state-3-mountain-challenge/", "label": "T4 Race"},
+    {"url": "https://roadielabs.com/road-races/", "label": "Race Search"},
+    {"url": "https://roadielabs.com/race/letape-du-tour/", "label": "T1 Race"},
+    {"url": "https://roadielabs.com/race/cheaha-challenge-gran-fondo/", "label": "T2 Race"},
+    {"url": "https://roadielabs.com/race/americas-most-beautiful-bike-ride/", "label": "T3 Race"},
+    {"url": "https://roadielabs.com/race/letape-indonesia/", "label": "T4 Race"},
     {"url": "https://roadielabs.com/coaching/", "label": "Coaching"},
 ]
 
