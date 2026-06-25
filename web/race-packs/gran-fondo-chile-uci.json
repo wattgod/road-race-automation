@@ -4,38 +4,18 @@
   "distance_mi": 62.0,
   "demands": {
     "durability": 2,
-    "climbing": 1,
+    "climbing": 5,
     "vo2_power": 5,
-    "threshold": 5,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 6,
+    "technical": 2,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 8
   },
   "top_categories": [
     {
-      "category": "VO2max",
-      "score": 100,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 96,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Gran Fondo Chile's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
-    },
-    {
       "category": "Durability",
-      "score": 72,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -44,8 +24,18 @@
       "workout_context": "62 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
+      "category": "Race_Simulation",
+      "score": 90,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Gran Fondo Chile's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 66,
+      "score": 85,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +44,18 @@
       "workout_context": "52ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "VO2max",
+      "score": 83,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
       "category": "Gravel_Specific",
-      "score": 64,
+      "score": 73,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -63,8 +63,17 @@
       "workout_context": "Gran Fondo Chile's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 62 miles."
     },
     {
+      "category": "Over_Under",
+      "score": 72,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Gran Fondo Chile, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 54,
+      "score": 67,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,17 +82,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Chile. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 44,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,200ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
       "category": "Endurance",
-      "score": 40,
+      "score": 63,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -91,13 +91,13 @@
       "workout_context": "Base fitness for Gran Fondo Chile. Without this, the hard workouts break you down instead of building you up."
     },
     {
-      "category": "Over_Under",
-      "score": 40,
+      "category": "Mixed_Climbing",
+      "score": 50,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "At Gran Fondo Chile, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -119,7 +119,7 @@
     },
     {
       "category": "Critical_Power",
-      "score": 30,
+      "score": 38,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
@@ -128,9 +128,10 @@
     }
   ],
   "race_overlay": {
+    "heat": "October in Valdivia, Los Rios, Chile can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Chile. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 40\u201360g carbs/hour for Gran Fondo Chile\u2019s 62 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Moderate altitude at Gran Fondo Chile. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 62 miles of mixed terrain in Valdivia, Los Rios, Chile.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 62 miles of mixed terrain in Valdivia, Los Rios, Chile.",
+  "generated_at": "2026-06-25"
 }

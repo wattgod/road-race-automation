@@ -4,11 +4,11 @@
   "distance_mi": 100.3,
   "demands": {
     "durability": 6,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 6,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 9
   },
@@ -24,28 +24,8 @@
       "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "VO2max",
-      "score": 89,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "7,567ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 86,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Tour de M\u00e1tra Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 76,
+      "score": 83,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +34,36 @@
       "workout_context": "75ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 83,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour de M\u00e1tra Gran Fondo's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 83,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Tour de M\u00e1tra Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
+    },
+    {
+      "category": "Over_Under",
+      "score": 74,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Tour de M\u00e1tra Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 62,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,8 +72,18 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour de M\u00e1tra Gran Fondo. Train it until it feels boring."
     },
     {
+      "category": "VO2max",
+      "score": 64,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "7,567ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
       "category": "Endurance",
-      "score": 57,
+      "score": 62,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -73,31 +91,13 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Blended",
-      "score": 57,
+      "category": "Mixed_Climbing",
+      "score": 55,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,567ft of climbing on mountain passes does to your power file on race day."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 57,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Tour de M\u00e1tra Gran Fondo's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
-    },
-    {
-      "category": "Over_Under",
-      "score": 49,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Tour de M\u00e1tra Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "7,567ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "HVLI_Extended",
@@ -110,28 +110,30 @@
       "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 44,
+      "category": "Critical_Power",
+      "score": 48,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Tour de M\u00e1tra Gran Fondo, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Tempo",
+      "category": "Blended",
       "score": 41,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "Tempo is Tour de M\u00e1tra Gran Fondo's race pace. The wattage you'll hold for 100 miles on mountain passes. Train it until it's automatic."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,567ft of climbing on mountain passes does to your power file on race day."
     }
   ],
   "race_overlay": {
+    "heat": "May in Gy\u00f6ngy\u00f6s, Hungary can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Tour de M\u00e1tra Gran Fondo. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Tour de M\u00e1tra Gran Fondo\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Tour de M\u00e1tra Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Tour de M\u00e1tra Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Tour de M\u00e1tra Gran Fondo requires surface adaptability. Include weekly rides on mountain passes to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 100 miles of mountain passes in Gy\u00f6ngy\u00f6s, Hungary.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Gravel Specific to prepare you for 100 miles of mountain passes in Gy\u00f6ngy\u00f6s, Hungary.",
+  "generated_at": "2026-06-25"
 }

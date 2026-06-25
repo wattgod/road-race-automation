@@ -4,10 +4,10 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 0,
+    "climbing": 2,
     "vo2_power": 5,
     "threshold": 7,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 10
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 86,
+      "score": 94,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,8 +34,17 @@
       "workout_context": "Race-pace efforts that mimic Pelotonia's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 74,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Pelotonia's paved rural and suburban roads across Central Ohio forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 60,
+      "score": 69,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,13 +63,14 @@
       "workout_context": "When someone attacks on paved rural and suburban roads across Central Ohio, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 57,
+      "category": "G_Spot",
+      "score": 56,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
       ],
-      "workout_context": "Pelotonia's paved rural and suburban roads across Central Ohio forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Pelotonia. Train it until it feels boring."
     },
     {
       "category": "Blended",
@@ -70,16 +80,6 @@
         "Endurance with Spikes"
       ],
       "workout_context": "Long rides with hard efforts mixed in. Simulates what Pelotonia's paved rural and suburban roads across Central Ohio actually does to you."
-    },
-    {
-      "category": "G_Spot",
-      "score": 50,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Pelotonia. Train it until it feels boring."
     },
     {
       "category": "Endurance",
@@ -101,6 +101,15 @@
       "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
+      "category": "Over_Under",
+      "score": 44,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Pelotonia, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "Norwegian_Double",
       "score": 40,
       "workouts": [
@@ -117,20 +126,11 @@
         "Extended Tempo"
       ],
       "workout_context": "Tempo is Pelotonia's race pace. The wattage you'll hold for 100 miles on paved rural and suburban roads across Central Ohio. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 30,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Pelotonia, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Pelotonia\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 100 miles of paved rural and suburban roads across central ohio in Columbus, Ohio, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 100 miles of paved rural and suburban roads across central ohio in Columbus, Ohio, USA.",
+  "generated_at": "2026-06-25"
 }

@@ -4,11 +4,11 @@
   "distance_mi": 91.0,
   "demands": {
     "durability": 4,
-    "climbing": 2,
+    "climbing": 9,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 10,
     "race_specificity": 9
   },
@@ -24,18 +24,8 @@
       "workout_context": "7,500ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Race_Simulation",
-      "score": 63,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic GFNY Grand Ballon's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
-    },
-    {
       "category": "Durability",
-      "score": 59,
+      "score": 87,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -45,7 +35,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 56,
+      "score": 87,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +44,27 @@
       "workout_context": "82ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 80,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At GFNY Grand Ballon, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 77,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic GFNY Grand Ballon's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
+    },
+    {
       "category": "Endurance",
-      "score": 53,
+      "score": 74,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -63,8 +72,17 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 91 miles, base fitness is the difference between racing and surviving."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 70,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "GFNY Grand Ballon's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 91 miles."
+    },
+    {
       "category": "G_Spot",
-      "score": 45,
+      "score": 67,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,64 +91,49 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY Grand Ballon. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Mixed_Climbing",
+      "score": 63,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "7,500ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "SFR_Muscle_Force",
       "score": 42,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "GFNY Grand Ballon's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 91 miles."
+      "workout_context": "Low-cadence force work for 7,500ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
-      "category": "Over_Under",
-      "score": 36,
+      "category": "Critical_Power",
+      "score": 40,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "At GFNY Grand Ballon, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Grand Ballon, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Blended",
-      "score": 35,
+      "category": "HVLI_Extended",
+      "score": 37,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,500ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 33,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 91 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Anaerobic_Capacity",
-      "score": 28,
-      "workouts": [
-        "2min Killers",
-        "90sec Repeats"
-      ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Tempo",
-      "score": 26,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is GFNY Grand Ballon's race pace. The wattage you'll hold for 91 miles on mixed terrain. Train it until it's automatic."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 91 miles without cracking. No shortcuts."
     }
   ],
   "race_overlay": {
+    "heat": "July in Thann, Alsace, France can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GFNY Grand Ballon. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for GFNY Grand Ballon\u2019s 91 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "GFNY Grand Ballon with 7,500ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "GFNY Grand Ballon with 7,500ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "terrain": "Mixed terrain at GFNY Grand Ballon requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 91 miles of mixed terrain in Thann, Alsace, France.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and TT Threshold to prepare you for 91 miles of mixed terrain in Thann, Alsace, France.",
+  "generated_at": "2026-06-25"
 }

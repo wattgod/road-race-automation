@@ -4,10 +4,10 @@
   "distance_mi": 31.0,
   "demands": {
     "durability": 1,
-    "climbing": 1,
+    "climbing": 4,
     "vo2_power": 5,
     "threshold": 3,
-    "technical": 0,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
@@ -24,8 +24,17 @@
       "workout_context": "Race-pace efforts that mimic L'Etape Italy Piemonte by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 91,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "L'Etape Italy Piemonte by Tour de France's alpine cycle-touring with moderate climbing and forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 31 miles."
+    },
+    {
       "category": "VO2max",
-      "score": 93,
+      "score": 76,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -34,17 +43,8 @@
       "workout_context": "When someone attacks on alpine cycle-touring with moderate climbing and, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "L'Etape Italy Piemonte by Tour de France's alpine cycle-touring with moderate climbing and forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 31 miles."
-    },
-    {
       "category": "Durability",
-      "score": 61,
+      "score": 50,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -53,17 +53,17 @@
       "workout_context": "31 miles on alpine cycle-touring with moderate climbing and burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "Blended",
-      "score": 39,
+      "category": "Critical_Power",
+      "score": 47,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what L'Etape Italy Piemonte by Tour de France's alpine cycle-touring with moderate climbing and actually does to you."
+      "workout_context": "How long can you hold 105% FTP before you blow? At L'Etape Italy Piemonte by Tour de France, that number decides whether you bridge or get dropped."
     },
     {
       "category": "TT_Threshold",
-      "score": 39,
+      "score": 45,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -72,8 +72,17 @@
       "workout_context": "84ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 44,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At L'Etape Italy Piemonte by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "Anaerobic_Capacity",
-      "score": 37,
+      "score": 42,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -81,8 +90,17 @@
       "workout_context": "2-minute all-out efforts on alpine cycle-touring with moderate climbing and. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
+      "category": "Mixed_Climbing",
+      "score": 36,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on alpine cycle-touring with moderate climbing and demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
       "category": "G_Spot",
-      "score": 31,
+      "score": 35,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,46 +109,29 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of L'Etape Italy Piemonte by Tour de France. Train it until it feels boring."
     },
     {
+      "category": "Blended",
+      "score": 32,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what L'Etape Italy Piemonte by Tour de France's alpine cycle-touring with moderate climbing and actually does to you."
+    },
+    {
       "category": "Endurance",
-      "score": 30,
+      "score": 24,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
       "workout_context": "Base fitness for L'Etape Italy Piemonte by Tour de France. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Critical_Power",
-      "score": 28,
-      "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
-      ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At L'Etape Italy Piemonte by Tour de France, that number decides whether you bridge or get dropped."
-    },
-    {
-      "category": "Over_Under",
-      "score": 26,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At L'Etape Italy Piemonte by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 22,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     }
   ],
   "race_overlay": {
     "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
-    "altitude": "Moderate altitude at L'Etape Italy Piemonte by Tour de France. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at L'Etape Italy Piemonte by Tour de France. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at L'Etape Italy Piemonte by Tour de France requires surface adaptability. Include weekly rides on alpine cycle-touring with moderate climbing and scenic variety to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Gravel Specific to prepare you for 31 miles of alpine cycle-touring with moderate climbing and scenic variety in Entracque, Cuneo, Piemonte, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Gravel Specific, and VO2max to prepare you for 31 miles of alpine cycle-touring with moderate climbing and scenic variety in Entracque, Cuneo, Piemonte, Italy.",
+  "generated_at": "2026-06-25"
 }

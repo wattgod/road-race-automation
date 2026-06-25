@@ -4,11 +4,11 @@
   "distance_mi": 85.7,
   "demands": {
     "durability": 4,
-    "climbing": 3,
+    "climbing": 10,
     "vo2_power": 9,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 8,
+    "heat_resilience": 6,
     "altitude": 8,
     "race_specificity": 10
   },
@@ -24,8 +24,17 @@
       "workout_context": "13,878ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 94,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Maratona dles Dolomites' alpine mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 85 miles."
+    },
+    {
       "category": "Race_Simulation",
-      "score": 64,
+      "score": 89,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -35,7 +44,7 @@
     },
     {
       "category": "Durability",
-      "score": 57,
+      "score": 83,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -45,7 +54,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 54,
+      "score": 83,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +63,26 @@
       "workout_context": "162ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 79,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Maratona dles Dolomites, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 64,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "13,878ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
       "category": "G_Spot",
-      "score": 44,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,8 +91,17 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Maratona dles Dolomites. Train it until it feels boring."
     },
     {
+      "category": "Critical_Power",
+      "score": 63,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Maratona dles Dolomites, that number decides whether you bridge or get dropped."
+    },
+    {
       "category": "Endurance",
-      "score": 43,
+      "score": 62,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -73,26 +109,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 85 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 43,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Maratona dles Dolomites' alpine mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 85 miles."
-    },
-    {
-      "category": "Over_Under",
-      "score": 38,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Maratona dles Dolomites, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
       "category": "Anaerobic_Capacity",
-      "score": 38,
+      "score": 55,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -100,37 +118,21 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on alpine mountain passes. If you haven't trained them, you'll crack."
     },
     {
-      "category": "Blended",
-      "score": 34,
+      "category": "SFR_Muscle_Force",
+      "score": 43,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 13,878ft of climbing on alpine mountain passes does to your power file on race day."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 30,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 85 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Critical_Power",
-      "score": 29,
-      "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
-      ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Maratona dles Dolomites, that number decides whether you bridge or get dropped."
+      "workout_context": "Low-cadence force work for 13,878ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
+    "heat": "July in La Villa \u2192 Corvara, Alta Badia, South Tyrol can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Maratona dles Dolomites. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Maratona dles Dolomites\u2019s 85 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Maratona dles Dolomites with 13,878ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Summits above 2,200m can feel near-freezing in rain."
+    "altitude": "Maratona dles Dolomites with 13,878ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Summits above 2,200m can feel near-freezing in rain.",
+    "terrain": "Highly technical terrain at Maratona dles Dolomites demands practice on similar surfaces. Ride alpine mountain passes at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 85 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 85 miles of alpine mountain passes in La Villa \u2192 Corvara, Alta Badia, South Tyrol.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Gravel Specific, and Race Simulation to prepare you for 85 miles of alpine mountain passes in La Villa \u2192 Corvara, Alta Badia, South Tyrol.",
+  "generated_at": "2026-06-25"
 }

@@ -4,38 +4,18 @@
   "distance_mi": 78.9,
   "demands": {
     "durability": 4,
-    "climbing": 0,
+    "climbing": 3,
     "vo2_power": 6,
     "threshold": 7,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 7
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "78 miles on flat and fast with minor rolling sections burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
-      "category": "VO2max",
-      "score": 94,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on flat and fast with minor rolling sections, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 86,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,8 +24,18 @@
       "workout_context": "Neusiedlersee Radmarathon's flat and fast with minor rolling sections rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
+      "category": "Durability",
+      "score": 96,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "78 miles on flat and fast with minor rolling sections burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
       "category": "Race_Simulation",
-      "score": 86,
+      "score": 94,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,8 +44,18 @@
       "workout_context": "Race-pace efforts that mimic Neusiedlersee Radmarathon's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before April."
     },
     {
+      "category": "VO2max",
+      "score": 90,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on flat and fast with minor rolling sections, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
       "category": "G_Spot",
-      "score": 71,
+      "score": 80,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,17 +64,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Neusiedlersee Radmarathon. Train it until it feels boring."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 57,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
       "category": "Gravel_Specific",
-      "score": 57,
+      "score": 78,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -82,26 +73,17 @@
       "workout_context": "Neusiedlersee Radmarathon's flat and fast with minor rolling sections forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
     },
     {
-      "category": "Blended",
-      "score": 53,
+      "category": "Over_Under",
+      "score": 71,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Neusiedlersee Radmarathon's flat and fast with minor rolling sections actually does to you."
-    },
-    {
-      "category": "Endurance",
-      "score": 51,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Neusiedlersee Radmarathon. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "At Neusiedlersee Radmarathon, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 49,
+      "score": 55,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -109,28 +91,45 @@
       "workout_context": "2-minute all-out efforts on flat and fast with minor rolling sections. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 45,
+      "category": "Norwegian_Double",
+      "score": 55,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
       ],
-      "workout_context": "The aerobic base that lets you ride flat and fast with minor rolling sections at tempo for 78 miles without cracking. No shortcuts."
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     },
     {
-      "category": "Tempo",
-      "score": 45,
+      "category": "Blended",
+      "score": 51,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "76\u201385% FTP for extended efforts. At Neusiedlersee Radmarathon, tempo is the floor you'll live on. Make it feel easy."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Neusiedlersee Radmarathon's flat and fast with minor rolling sections actually does to you."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 51,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Neusiedlersee Radmarathon, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Endurance",
+      "score": 49,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Neusiedlersee Radmarathon. Without this, the hard workouts break you down instead of building you up."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 40\u201360g carbs/hour for Neusiedlersee Radmarathon\u2019s 78 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and TT Threshold to prepare you for 78 miles of flat and fast with minor rolling sections in M\u00f6rbisch am See, Burgenland, Austria.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Durability, and Race Simulation to prepare you for 78 miles of flat and fast with minor rolling sections in M\u00f6rbisch am See, Burgenland, Austria.",
+  "generated_at": "2026-06-25"
 }

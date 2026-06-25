@@ -4,18 +4,27 @@
   "distance_mi": 40.4,
   "demands": {
     "durability": 1,
-    "climbing": 0,
+    "climbing": 5,
     "vo2_power": 7,
-    "threshold": 3,
-    "technical": 0,
+    "threshold": 4,
+    "technical": 8,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 10
   },
   "top_categories": [
     {
-      "category": "Race_Simulation",
+      "category": "Gravel_Specific",
       "score": 100,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "In Flanders Fields Cyclo - Wevelgem's coastal roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 40 miles."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 95,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -24,8 +33,17 @@
       "workout_context": "Race-pace efforts that mimic In Flanders Fields Cyclo - Wevelgem's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before March."
     },
     {
+      "category": "Critical_Power",
+      "score": 60,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At In Flanders Fields Cyclo - Wevelgem, that number decides whether you bridge or get dropped."
+    },
+    {
       "category": "VO2max",
-      "score": 87,
+      "score": 59,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -34,27 +52,8 @@
       "workout_context": "When someone attacks on coastal roads, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "In Flanders Fields Cyclo - Wevelgem's coastal roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 40 miles."
-    },
-    {
-      "category": "Durability",
-      "score": 60,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "40 miles on coastal roads burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "Anaerobic_Capacity",
-      "score": 47,
+      "score": 50,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -62,26 +61,8 @@
       "workout_context": "2-minute all-out efforts on coastal roads. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
-      "category": "Blended",
-      "score": 38,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what In Flanders Fields Cyclo - Wevelgem's coastal roads actually does to you."
-    },
-    {
-      "category": "Critical_Power",
-      "score": 35,
-      "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
-      ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At In Flanders Fields Cyclo - Wevelgem, that number decides whether you bridge or get dropped."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 30,
+      "score": 44,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -90,8 +71,45 @@
       "workout_context": "In Flanders Fields Cyclo - Wevelgem's coastal roads rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
+      "category": "Over_Under",
+      "score": 42,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At In Flanders Fields Cyclo - Wevelgem, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Durability",
+      "score": 41,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "40 miles on coastal roads burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "Cadence_Work",
+      "score": 36,
+      "workouts": [
+        "High Cadence Drills",
+        "Cadence Pyramids"
+      ],
+      "workout_context": "Smooth pedaling at 40 miles saves muscle. Bad technique at mile 10 is invisible. At mile 80 it's a cramp."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 34,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on coastal roads demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
       "category": "G_Spot",
-      "score": 25,
+      "score": 34,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -100,36 +118,19 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of In Flanders Fields Cyclo - Wevelgem. Train it until it feels boring."
     },
     {
-      "category": "Sprint_Neuromuscular",
-      "score": 23,
+      "category": "Blended",
+      "score": 26,
       "workouts": [
-        "Attack Repeats",
-        "Sprint Buildups"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "5-second power closes gaps and wins field sprints. At In Flanders Fields Cyclo - Wevelgem, neuromuscular snap is a tactical tool, not just a finish-line move."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 20,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "Endurance",
-      "score": 17,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for In Flanders Fields Cyclo - Wevelgem. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what In Flanders Fields Cyclo - Wevelgem's coastal roads actually does to you."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for In Flanders Fields Cyclo - Wevelgem\u2019s 40 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "nutrition": "Target 40\u201360g carbs/hour for In Flanders Fields Cyclo - Wevelgem\u2019s 40 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "terrain": "Highly technical terrain at In Flanders Fields Cyclo - Wevelgem demands practice on similar surfaces. Ride coastal roads at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 40 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Gravel Specific to prepare you for 40 miles of coastal roads in Wevelgem, West Flanders, Belgium.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and Critical Power to prepare you for 40 miles of coastal roads in Wevelgem, West Flanders, Belgium.",
+  "generated_at": "2026-06-25"
 }

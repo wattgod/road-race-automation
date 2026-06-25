@@ -4,38 +4,18 @@
   "distance_mi": 82.0,
   "demands": {
     "durability": 4,
-    "climbing": 1,
+    "climbing": 6,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 82, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 98,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic L'Etape Czech Republic by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 82,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,18 +24,37 @@
       "workout_context": "68ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "VO2max",
-      "score": 73,
+      "category": "Race_Simulation",
+      "score": 91,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
       ],
-      "workout_context": "5,577ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "Race-pace efforts that mimic L'Etape Czech Republic by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "Durability",
+      "score": 83,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 82, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Over_Under",
+      "score": 82,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At L'Etape Czech Republic by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "G_Spot",
-      "score": 67,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -65,7 +64,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 65,
+      "score": 73,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -73,17 +72,27 @@
       "workout_context": "L'Etape Czech Republic by Tour de France's paved roads through the Central Bohemian hills forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 82 miles."
     },
     {
-      "category": "Blended",
+      "category": "VO2max",
+      "score": 61,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "5,577ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Mixed_Climbing",
       "score": 55,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,577ft of climbing on paved roads through the Central Bohemian hills does to your power file on race day."
+      "workout_context": "5,577ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Norwegian_Double",
-      "score": 51,
+      "score": 48,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -91,17 +100,17 @@
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 82 miles, sustainable FTP gains matter more than peak power."
     },
     {
-      "category": "Over_Under",
-      "score": 47,
+      "category": "Blended",
+      "score": 45,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "At L'Etape Czech Republic by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,577ft of climbing on paved roads through the Central Bohemian hills does to your power file on race day."
     },
     {
       "category": "Endurance",
-      "score": 45,
+      "score": 38,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -109,18 +118,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 82 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 40,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride paved roads through the Central Bohemian hills at tempo for 82 miles without cracking. No shortcuts."
-    },
-    {
       "category": "Tempo",
-      "score": 40,
+      "score": 36,
       "workouts": [
         "Tempo Blocks",
         "Extended Tempo"
@@ -131,6 +130,6 @@
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for L'Etape Czech Republic by Tour de France\u2019s 82 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 82 miles of paved roads through the central bohemian hills in Prague and Central Bohemia Region, Czech Republic.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Durability to prepare you for 82 miles of paved roads through the central bohemian hills in Prague and Central Bohemia Region, Czech Republic.",
+  "generated_at": "2026-06-25"
 }

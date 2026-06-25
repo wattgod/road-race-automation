@@ -4,11 +4,11 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 1,
+    "climbing": 5,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 2,
+    "heat_resilience": 6,
     "altitude": 2,
     "race_specificity": 9
   },
@@ -24,28 +24,8 @@
       "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "Race_Simulation",
-      "score": 86,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Best Buddies Challenge: Hyannis Port's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
-    },
-    {
-      "category": "VO2max",
-      "score": 73,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on rolling to flat paved roads, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 71,
+      "score": 72,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +34,18 @@
       "workout_context": "50ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Race_Simulation",
+      "score": 69,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Best Buddies Challenge: Hyannis Port's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
+    },
+    {
       "category": "G_Spot",
-      "score": 59,
+      "score": 57,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,22 +54,41 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Best Buddies Challenge: Hyannis Port. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 57,
+      "category": "Over_Under",
+      "score": 56,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,961ft of climbing on rolling to flat paved roads does to your power file on race day."
+      "workout_context": "At Best Buddies Challenge: Hyannis Port, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Endurance",
+      "score": 55,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Gravel_Specific",
-      "score": 57,
+      "score": 55,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
       "workout_context": "Best Buddies Challenge: Hyannis Port's rolling to flat paved roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
+      "category": "VO2max",
+      "score": 53,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on rolling to flat paved roads, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "HVLI_Extended",
@@ -92,17 +101,17 @@
       "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Endurance",
-      "score": 48,
+      "category": "Blended",
+      "score": 41,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,961ft of climbing on rolling to flat paved roads does to your power file on race day."
     },
     {
       "category": "Norwegian_Double",
-      "score": 44,
+      "score": 37,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -110,27 +119,19 @@
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
     },
     {
-      "category": "Tempo",
-      "score": 41,
+      "category": "Mixed_Climbing",
+      "score": 34,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Tempo is Best Buddies Challenge: Hyannis Port's race pace. The wattage you'll hold for 100 miles on rolling to flat paved roads. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 41,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Best Buddies Challenge: Hyannis Port, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Varied gradients on rolling to flat paved roads demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     }
   ],
   "race_overlay": {
+    "heat": "May in Boston to Hyannis Port, Massachusetts, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Best Buddies Challenge: Hyannis Port. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Best Buddies Challenge: Hyannis Port\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 100 miles of rolling to flat paved roads in Boston to Hyannis Port, Massachusetts, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 100 miles of rolling to flat paved roads in Boston to Hyannis Port, Massachusetts, USA.",
+  "generated_at": "2026-06-25"
 }

@@ -4,11 +4,11 @@
   "distance_mi": 180.0,
   "demands": {
     "durability": 8,
-    "climbing": 2,
+    "climbing": 6,
     "vo2_power": 5,
-    "threshold": 4,
-    "technical": 0,
-    "heat_resilience": 1,
+    "threshold": 5,
+    "technical": 4,
+    "heat_resilience": 7,
     "altitude": 2,
     "race_specificity": 9
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 68,
+      "score": 64,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,8 +34,26 @@
       "workout_context": "Race-pace efforts that mimic Trek Across Maine's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 58,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Trek Across Maine's rolling paved hills of central Maine forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 180 miles."
+    },
+    {
+      "category": "Endurance",
+      "score": 57,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 180 miles, base fitness is the difference between racing and surviving."
+    },
+    {
       "category": "HVLI_Extended",
-      "score": 53,
+      "score": 52,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -44,45 +62,8 @@
       "workout_context": "180 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Blended",
-      "score": 53,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,000ft of climbing on rolling paved hills of central Maine does to your power file on race day."
-    },
-    {
-      "category": "Endurance",
-      "score": 52,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 180 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "VO2max",
-      "score": 51,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "8,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 46,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Trek Across Maine's rolling paved hills of central Maine forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 180 miles."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 38,
+      "score": 47,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -91,17 +72,36 @@
       "workout_context": "Trek Across Maine's rolling paved hills of central Maine rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Tempo",
-      "score": 30,
+      "category": "Over_Under",
+      "score": 44,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Tempo is Trek Across Maine's race pace. The wattage you'll hold for 180 miles on rolling paved hills of central Maine. Train it until it's automatic."
+      "workout_context": "At Trek Across Maine, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Blended",
+      "score": 41,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,000ft of climbing on rolling paved hills of central Maine does to your power file on race day."
+    },
+    {
+      "category": "VO2max",
+      "score": 39,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "8,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "G_Spot",
-      "score": 30,
+      "score": 36,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -110,27 +110,29 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Trek Across Maine. Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 28,
+      "category": "Mixed_Climbing",
+      "score": 35,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "At Trek Across Maine, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "8,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 25,
+      "category": "Critical_Power",
+      "score": 30,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on rolling paved hills of central Maine. If you haven't trained them, you'll crack."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Trek Across Maine, that number decides whether you bridge or get dropped."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 180 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 180 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
+    "heat": "June in New Gloucester, Maine, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Trek Across Maine. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Ultra-distance fueling for 180 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 180 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "terrain": "Mixed terrain at Trek Across Maine requires surface adaptability. Include weekly rides on rolling paved hills of central maine to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and HVLI Extended to prepare you for 180 miles of rolling paved hills of central maine in New Gloucester, Maine, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 180 miles of rolling paved hills of central maine in New Gloucester, Maine, USA.",
+  "generated_at": "2026-06-25"
 }

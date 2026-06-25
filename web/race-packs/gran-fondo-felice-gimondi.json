@@ -4,11 +4,11 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 7,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 6,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 10
   },
@@ -24,18 +24,8 @@
       "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "VO2max",
-      "score": 94,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 91,
+      "score": 87,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -44,8 +34,17 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Felice Gimondi's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 84,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Gran Fondo Felice Gimondi's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 73,
+      "score": 80,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,17 +53,27 @@
       "workout_context": "82ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 61,
+      "category": "Over_Under",
+      "score": 71,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Gran Fondo Felice Gimondi's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "At Gran Fondo Felice Gimondi, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "VO2max",
+      "score": 69,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "G_Spot",
-      "score": 59,
+      "score": 62,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,17 +82,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Felice Gimondi. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 58,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,202ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
       "category": "Endurance",
-      "score": 55,
+      "score": 60,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -91,17 +91,26 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Over_Under",
-      "score": 47,
+      "category": "Mixed_Climbing",
+      "score": 53,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "At Gran Fondo Felice Gimondi, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "8,202ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 50,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Gran Fondo Felice Gimondi, that number decides whether you bridge or get dropped."
     },
     {
       "category": "HVLI_Extended",
-      "score": 45,
+      "score": 47,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -111,27 +120,20 @@
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 42,
+      "score": 44,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 42,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
     }
   ],
   "race_overlay": {
+    "heat": "May in Bergamo, Lombardy, Italy can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Felice Gimondi. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Felice Gimondi\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Gran Fondo Felice Gimondi. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Gran Fondo Felice Gimondi. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Gran Fondo Felice Gimondi requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 100 miles of mixed terrain in Bergamo, Lombardy, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 100 miles of mixed terrain in Bergamo, Lombardy, Italy.",
+  "generated_at": "2026-06-25"
 }

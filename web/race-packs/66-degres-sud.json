@@ -4,38 +4,18 @@
   "distance_mi": 116.8,
   "demands": {
     "durability": 6,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 6,
     "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 7
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 116, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "VO2max",
-      "score": 88,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "7,546ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 84,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,8 +24,26 @@
       "workout_context": "65ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 89,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At 66 Degr\u00e9s Sud \u2013 La Cyclo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 89,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "66 Degr\u00e9s Sud \u2013 La Cyclo's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 116 miles."
+    },
+    {
       "category": "Race_Simulation",
-      "score": 74,
+      "score": 83,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,8 +52,18 @@
       "workout_context": "Race-pace efforts that mimic 66 Degr\u00e9s Sud \u2013 La Cyclo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before April."
     },
     {
+      "category": "Durability",
+      "score": 79,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 116, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "G_Spot",
-      "score": 68,
+      "score": 78,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,8 +72,36 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of 66 Degr\u00e9s Sud \u2013 La Cyclo. Train it until it feels boring."
     },
     {
+      "category": "VO2max",
+      "score": 69,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "7,546ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 67,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "7,546ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 54,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At 66 Degr\u00e9s Sud \u2013 La Cyclo, that number decides whether you bridge or get dropped."
+    },
+    {
       "category": "Endurance",
-      "score": 63,
+      "score": 50,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -74,7 +110,7 @@
     },
     {
       "category": "Blended",
-      "score": 56,
+      "score": 44,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -82,56 +118,20 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,546ft of climbing on mountain passes does to your power file on race day."
     },
     {
-      "category": "Over_Under",
-      "score": 54,
+      "category": "SFR_Muscle_Force",
+      "score": 44,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "At 66 Degr\u00e9s Sud \u2013 La Cyclo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 53,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "116 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 49,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 116 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 49,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "66 Degr\u00e9s Sud \u2013 La Cyclo's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 116 miles."
-    },
-    {
-      "category": "Tempo",
-      "score": 46,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is 66 Degr\u00e9s Sud \u2013 La Cyclo's race pace. The wattage you'll hold for 116 miles on mountain passes. Train it until it's automatic."
+      "workout_context": "Low-cadence force work for 7,546ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for 66 Degr\u00e9s Sud \u2013 La Cyclo\u2019s 116 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at 66 Degr\u00e9s Sud \u2013 La Cyclo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at 66 Degr\u00e9s Sud \u2013 La Cyclo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at 66 Degr\u00e9s Sud \u2013 La Cyclo requires surface adaptability. Include weekly rides on mountain passes to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and TT Threshold to prepare you for 116 miles of mountain passes in Canet-en-Roussillon, France.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and Gravel Specific to prepare you for 116 miles of mountain passes in Canet-en-Roussillon, France.",
+  "generated_at": "2026-06-25"
 }

@@ -4,11 +4,11 @@
   "distance_mi": 7.6,
   "demands": {
     "durability": 1,
-    "climbing": 1,
+    "climbing": 4,
     "vo2_power": 7,
     "threshold": 3,
-    "technical": 0,
-    "heat_resilience": 0,
+    "technical": 2,
+    "heat_resilience": 10,
     "altitude": 6,
     "race_specificity": 7
   },
@@ -24,36 +24,8 @@
       "workout_context": "When someone attacks on extreme hillclimb \u2014 single sustained climb, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Race_Simulation",
-      "score": 58,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Mt. Washington Hillclimb's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
-    },
-    {
-      "category": "Anaerobic_Capacity",
-      "score": 39,
-      "workouts": [
-        "2min Killers",
-        "90sec Repeats"
-      ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on extreme hillclimb \u2014 single sustained climb. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 39,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Mt. Washington Hillclimb's extreme hillclimb \u2014 single sustained climb forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 7 miles."
-    },
-    {
       "category": "Durability",
-      "score": 38,
+      "score": 93,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -63,7 +35,7 @@
     },
     {
       "category": "Endurance",
-      "score": 31,
+      "score": 72,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -71,8 +43,36 @@
       "workout_context": "Base fitness for Mt. Washington Hillclimb. Without this, the hard workouts break you down instead of building you up."
     },
     {
+      "category": "Race_Simulation",
+      "score": 67,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Mt. Washington Hillclimb's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 56,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Mt. Washington Hillclimb's extreme hillclimb \u2014 single sustained climb forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 7 miles."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 44,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on extreme hillclimb \u2014 single sustained climb. If you haven't trained them, you'll crack."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 29,
+      "score": 42,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -81,36 +81,8 @@
       "workout_context": "616ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Critical_Power",
-      "score": 29,
-      "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
-      ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Mt. Washington Hillclimb, that number decides whether you bridge or get dropped."
-    },
-    {
-      "category": "Blended",
-      "score": 24,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,678ft of climbing on extreme hillclimb \u2014 single sustained climb does to your power file on race day."
-    },
-    {
-      "category": "G_Spot",
-      "score": 24,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Mt. Washington Hillclimb. Train it until it feels boring."
-    },
-    {
       "category": "Over_Under",
-      "score": 19,
+      "score": 40,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -118,19 +90,49 @@
       "workout_context": "At Mt. Washington Hillclimb, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Sprint_Neuromuscular",
-      "score": 19,
+      "category": "Critical_Power",
+      "score": 40,
       "workouts": [
-        "Attack Repeats",
-        "Sprint Buildups"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "5-second power closes gaps and wins field sprints. At Mt. Washington Hillclimb, neuromuscular snap is a tactical tool, not just a finish-line move."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Mt. Washington Hillclimb, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 35,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride extreme hillclimb \u2014 single sustained climb at tempo for 7 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 33,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on extreme hillclimb \u2014 single sustained climb demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
+      "category": "G_Spot",
+      "score": 32,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Mt. Washington Hillclimb. Train it until it feels boring."
     }
   ],
   "race_overlay": {
+    "heat": "August in Mt. Washington Auto Road, Pinkham Notch, NH \u2192 Summit of Mt. Washington (6,288ft) \u2014 Base: 16-27\u00b0C in August. Summit average: 9\u00b0C (48.7\u00b0F) in August. No temperature above 22\u00b0C has EVER been recorded at the summit. Wind gusts regularly exceed 65 km/h even in August. Fog present 70-80% of summer hours. Begin heat acclimatization 10\u201314 days before Mt. Washington Hillclimb \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
     "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
     "altitude": "Moderate altitude at Mt. Washington Hillclimb. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Anaerobic Capacity to prepare you for 7 miles of extreme hillclimb \u2014 single sustained climb in Mt. Washington Auto Road, Pinkham Notch, NH \u2192 Summit of Mt. Washington (6,288ft).",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and Endurance to prepare you for 7 miles of extreme hillclimb \u2014 single sustained climb in Mt. Washington Auto Road, Pinkham Notch, NH \u2192 Summit of Mt. Washington (6,288ft).",
+  "generated_at": "2026-06-25"
 }

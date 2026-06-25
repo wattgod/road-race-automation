@@ -4,38 +4,27 @@
   "distance_mi": 93.0,
   "demands": {
     "durability": 4,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 8,
     "heat_resilience": 2,
     "altitude": 6,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "VO2max",
+      "category": "Gravel_Specific",
       "score": 100,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "8,200ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "Durability",
-      "score": 98,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "Dekom System Sudety Tour's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 90,
+      "score": 93,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +34,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 80,
+      "score": 86,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,17 +43,37 @@
       "workout_context": "88ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Endurance",
-      "score": 67,
+      "category": "Over_Under",
+      "score": 76,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At Dekom System Sudety Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "VO2max",
+      "score": 71,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "8,200ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Durability",
+      "score": 70,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "G_Spot",
-      "score": 65,
+      "score": 67,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,65 +82,56 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Dekom System Sudety Tour. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 60,
+      "category": "Mixed_Climbing",
+      "score": 57,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Dekom System Sudety Tour's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
+      "workout_context": "8,200ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Over_Under",
-      "score": 52,
+      "category": "Critical_Power",
+      "score": 56,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "At Dekom System Sudety Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Dekom System Sudety Tour, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Blended",
-      "score": 50,
+      "category": "Endurance",
+      "score": 48,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,200ft of climbing on mountain passes does to your power file on race day."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 47,
+      "category": "Anaerobic_Capacity",
+      "score": 43,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mountain passes. If you haven't trained them, you'll crack."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 40,
+      "category": "SFR_Muscle_Force",
+      "score": 38,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "The aerobic base that lets you ride mountain passes at tempo for 93 miles without cracking. No shortcuts."
-    },
-    {
-      "category": "Tempo",
-      "score": 37,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Dekom System Sudety Tour's race pace. The wattage you'll hold for 93 miles on mountain passes. Train it until it's automatic."
+      "workout_context": "Low-cadence force work for 8,200ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Dekom System Sudety Tour\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Dekom System Sudety Tour. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Dekom System Sudety Tour. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Highly technical terrain at Dekom System Sudety Tour demands practice on similar surfaces. Ride mountain passes at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 93 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and Race Simulation to prepare you for 93 miles of mountain passes in Broumov, Czechia.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 93 miles of mountain passes in Broumov, Czechia.",
+  "generated_at": "2026-06-25"
 }

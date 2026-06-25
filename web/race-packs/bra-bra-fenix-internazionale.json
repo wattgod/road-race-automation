@@ -4,38 +4,18 @@
   "distance_mi": 93.0,
   "demands": {
     "durability": 4,
-    "climbing": 0,
+    "climbing": 4,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "VO2max",
-      "score": 100,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 96,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Bra-Bra Fenix Internazionale's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
-    },
-    {
       "category": "Durability",
-      "score": 91,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -44,8 +24,18 @@
       "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
+      "category": "Race_Simulation",
+      "score": 88,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Bra-Bra Fenix Internazionale's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 75,
+      "score": 80,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -55,7 +45,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 64,
+      "score": 80,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -63,8 +53,18 @@
       "workout_context": "Bra-Bra Fenix Internazionale's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
     },
     {
+      "category": "VO2max",
+      "score": 75,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
       "category": "G_Spot",
-      "score": 62,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,17 +73,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Bra-Bra Fenix Internazionale. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 54,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Bra-Bra Fenix Internazionale's mixed terrain actually does to you."
-    },
-    {
       "category": "Endurance",
-      "score": 50,
+      "score": 61,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -91,13 +82,32 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 50,
+      "category": "Over_Under",
+      "score": 59,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "At Bra-Bra Fenix Internazionale, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 45,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Bra-Bra Fenix Internazionale, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 43,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 93 miles without cracking. No shortcuts."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -109,28 +119,21 @@
       "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
-      "category": "Tempo",
-      "score": 39,
+      "category": "Norwegian_Double",
+      "score": 43,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
       ],
-      "workout_context": "Tempo is Bra-Bra Fenix Internazionale's race pace. The wattage you'll hold for 93 miles on mixed terrain. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 38,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Bra-Bra Fenix Internazionale, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
     }
   ],
   "race_overlay": {
+    "heat": "May in Bra, Piedmont, Italy can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Bra-Bra Fenix Internazionale. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Bra-Bra Fenix Internazionale\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Bra-Bra Fenix Internazionale. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Bra-Bra Fenix Internazionale. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Bra-Bra Fenix Internazionale requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 93 miles of mixed terrain in Bra, Piedmont, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 93 miles of mixed terrain in Bra, Piedmont, Italy.",
+  "generated_at": "2026-06-25"
 }

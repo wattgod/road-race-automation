@@ -4,11 +4,11 @@
   "distance_mi": 66.5,
   "demands": {
     "durability": 2,
-    "climbing": 1,
+    "climbing": 4,
     "vo2_power": 6,
     "threshold": 5,
-    "technical": 0,
-    "heat_resilience": 0,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 10,
     "race_specificity": 9
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 63,
+      "score": 77,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Durability",
-      "score": 45,
+      "score": 73,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -44,17 +44,8 @@
       "workout_context": "66 miles on flat burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "Endurance",
-      "score": 44,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for UCI Gran Fondo Hangzhou Qiandao Lake. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
       "category": "Gravel_Specific",
-      "score": 42,
+      "score": 70,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -62,8 +53,17 @@
       "workout_context": "UCI Gran Fondo Hangzhou Qiandao Lake's flat forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 66 miles."
     },
     {
+      "category": "Endurance",
+      "score": 65,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for UCI Gran Fondo Hangzhou Qiandao Lake. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 38,
+      "score": 49,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -72,14 +72,41 @@
       "workout_context": "89ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 41,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At UCI Gran Fondo Hangzhou Qiandao Lake, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 40,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At UCI Gran Fondo Hangzhou Qiandao Lake, that number decides whether you bridge or get dropped."
+    },
+    {
       "category": "G_Spot",
-      "score": 31,
+      "score": 38,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
         "Criss-Cross"
       ],
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of UCI Gran Fondo Hangzhou Qiandao Lake. Train it until it feels boring."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 37,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on flat. If you haven't trained them, you'll crack."
     },
     {
       "category": "Blended",
@@ -91,46 +118,21 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,906ft of climbing on flat does to your power file on race day."
     },
     {
-      "category": "Anaerobic_Capacity",
+      "category": "Mixed_Climbing",
       "score": 28,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on flat. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Over_Under",
-      "score": 23,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At UCI Gran Fondo Hangzhou Qiandao Lake, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 23,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "LT1_MAF",
-      "score": 23,
-      "workouts": [
-        "MAF Capped Ride",
-        "LT1 Assessment"
-      ],
-      "workout_context": "Below LT1, you burn fat. Above it, you burn glycogen. For 66 miles, a higher LT1 means slower bonk."
+      "workout_context": "5,906ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     }
   ],
   "race_overlay": {
+    "heat": "May in Qiandao Lake, Chun\u2019an County, Hangzhou, Zhejiang Province, China can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before UCI Gran Fondo Hangzhou Qiandao Lake. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 40\u201360g carbs/hour for UCI Gran Fondo Hangzhou Qiandao Lake\u2019s 66 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "UCI Gran Fondo Hangzhou Qiandao Lake with 5,906ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "UCI Gran Fondo Hangzhou Qiandao Lake with 5,906ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "terrain": "Mixed terrain at UCI Gran Fondo Hangzhou Qiandao Lake requires surface adaptability. Include weekly rides on flat to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 66 miles of flat in Qiandao Lake, Chun\u2019an County, Hangzhou, Zhejiang Province, China.",
-  "generated_at": "2026-06-09"
+  "generated_at": "2026-06-25"
 }

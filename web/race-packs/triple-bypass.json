@@ -4,10 +4,10 @@
   "distance_mi": 118.0,
   "demands": {
     "durability": 6,
-    "climbing": 2,
+    "climbing": 10,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 10,
     "race_specificity": 10
@@ -24,6 +24,25 @@
       "workout_context": "10,800ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
+      "category": "TT_Threshold",
+      "score": 91,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "92ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Over_Under",
+      "score": 86,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Triple Bypass \u2014 Colorado's Three-Pass Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "Durability",
       "score": 81,
       "workouts": [
@@ -35,13 +54,32 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 70,
+      "score": 77,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
       "workout_context": "Race-pace efforts that mimic Triple Bypass \u2014 Colorado's Three-Pass Challenge's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 70,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "10,800ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "G_Spot",
+      "score": 70,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Triple Bypass \u2014 Colorado's Three-Pass Challenge. Train it until it feels boring."
     },
     {
       "category": "Endurance",
@@ -53,18 +91,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 118 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "TT_Threshold",
-      "score": 56,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "92ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
-    },
-    {
       "category": "Gravel_Specific",
-      "score": 47,
+      "score": 60,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -72,14 +100,13 @@
       "workout_context": "Triple Bypass \u2014 Colorado's Three-Pass Challenge's paved mountain highways and dedicated bike paths forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 118 miles."
     },
     {
-      "category": "G_Spot",
-      "score": 45,
+      "category": "SFR_Muscle_Force",
+      "score": 47,
       "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Triple Bypass \u2014 Colorado's Three-Pass Challenge. Train it until it feels boring."
+      "workout_context": "Low-cadence force work for 10,800ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Blended",
@@ -99,39 +126,12 @@
         "Back-to-Back Long"
       ],
       "workout_context": "118 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
-      "category": "Over_Under",
-      "score": 36,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Triple Bypass \u2014 Colorado's Three-Pass Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 33,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 118 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Tempo",
-      "score": 30,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Triple Bypass \u2014 Colorado's Three-Pass Challenge's race pace. The wattage you'll hold for 118 miles on paved mountain highways and dedicated bike paths. Train it until it's automatic."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Triple Bypass \u2014 Colorado's Three-Pass Challenge\u2019s 118 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Triple Bypass \u2014 Colorado's Three-Pass Challenge with 10,800ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Temperature range from cool dawn to warm valleys to cold pass summits; High-altitude sun exposure \u2014 intense UV above 9,000 ft."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and Race Simulation to prepare you for 118 miles of paved mountain highways and dedicated bike paths in Evergreen to Avon, Colorado.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, TT Threshold, and Over Under to prepare you for 118 miles of paved mountain highways and dedicated bike paths in Evergreen to Avon, Colorado.",
+  "generated_at": "2026-06-25"
 }

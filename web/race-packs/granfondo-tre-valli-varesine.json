@@ -4,28 +4,27 @@
   "distance_mi": 78.84,
   "demands": {
     "durability": 4,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 8,
     "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "VO2max",
+      "category": "Gravel_Specific",
       "score": 100,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "Granfondo Tre Valli Varesine's hilly pre-alpine terrain with significant forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 82,
+      "score": 93,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,18 +33,8 @@
       "workout_context": "Race-pace efforts that mimic Granfondo Tre Valli Varesine's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
     },
     {
-      "category": "Durability",
-      "score": 77,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "78 miles on hilly pre-alpine terrain with significant burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 73,
+      "score": 86,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +43,27 @@
       "workout_context": "104ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "VO2max",
+      "score": 79,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Over_Under",
+      "score": 76,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Granfondo Tre Valli Varesine, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 59,
+      "score": 67,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,53 +72,36 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Tre Valli Varesine. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 55,
+      "category": "Durability",
+      "score": 61,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Granfondo Tre Valli Varesine's hilly pre-alpine terrain with significant forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
+      "workout_context": "78 miles on hilly pre-alpine terrain with significant burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "Endurance",
-      "score": 52,
+      "category": "Critical_Power",
+      "score": 60,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Base fitness for Granfondo Tre Valli Varesine. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo Tre Valli Varesine, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Over_Under",
-      "score": 47,
+      "category": "Mixed_Climbing",
+      "score": 57,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "At Granfondo Tre Valli Varesine, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Blended",
-      "score": 45,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,202ft of climbing on hilly pre-alpine terrain with significant does to your power file on race day."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 42,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+      "workout_context": "8,202ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 36,
+      "score": 48,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -118,19 +109,29 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on hilly pre-alpine terrain with significant. If you haven't trained them, you'll crack."
     },
     {
-      "category": "Tempo",
-      "score": 33,
+      "category": "Endurance",
+      "score": 40,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "76\u201385% FTP for extended efforts. At Granfondo Tre Valli Varesine, tempo is the floor you'll live on. Make it feel easy."
+      "workout_context": "Base fitness for Granfondo Tre Valli Varesine. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "SFR_Muscle_Force",
+      "score": 38,
+      "workouts": [
+        "SFR Low Cadence",
+        "Force Repeats"
+      ],
+      "workout_context": "Low-cadence force work for 8,202ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 40\u201360g carbs/hour for Granfondo Tre Valli Varesine\u2019s 78 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at Granfondo Tre Valli Varesine. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Granfondo Tre Valli Varesine. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Highly technical terrain at Granfondo Tre Valli Varesine demands practice on similar surfaces. Ride hilly pre-alpine terrain with significant climbing on fully paved roads at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 78 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 78 miles of hilly pre-alpine terrain with significant climbing on fully paved roads in Varese, Lombardy, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 78 miles of hilly pre-alpine terrain with significant climbing on fully paved roads in Varese, Lombardy, Italy.",
+  "generated_at": "2026-06-25"
 }

@@ -4,10 +4,10 @@
   "distance_mi": 160.0,
   "demands": {
     "durability": 8,
-    "climbing": 1,
+    "climbing": 2,
     "vo2_power": 4,
     "threshold": 4,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 7
@@ -24,6 +24,16 @@
       "workout_context": "160 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
+      "category": "Race_Simulation",
+      "score": 66,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic RAIN - Ride Across Indiana's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
       "category": "HVLI_Extended",
       "score": 58,
       "workouts": [
@@ -34,16 +44,6 @@
       "workout_context": "160 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Race_Simulation",
-      "score": 58,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic RAIN - Ride Across Indiana's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
-    },
-    {
       "category": "Endurance",
       "score": 56,
       "workouts": [
@@ -51,6 +51,15 @@
         "Terrain Simulation Z2"
       ],
       "workout_context": "Every hard session works better with a bigger aerobic base. At 160 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 55,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "RAIN - Ride Across Indiana's flat to gently rolling paved roads across Indiana forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 160 miles."
     },
     {
       "category": "Blended",
@@ -72,17 +81,8 @@
       "workout_context": "When someone attacks on flat to gently rolling paved roads across Indiana, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 38,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "RAIN - Ride Across Indiana's flat to gently rolling paved roads across Indiana forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 160 miles."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 37,
+      "score": 41,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -101,7 +101,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 30,
+      "score": 33,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -111,7 +111,7 @@
     },
     {
       "category": "Over_Under",
-      "score": 23,
+      "score": 30,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -120,7 +120,7 @@
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 22,
+      "score": 27,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -131,6 +131,6 @@
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 160 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 160 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, HVLI Extended, and Race Simulation to prepare you for 160 miles of flat to gently rolling paved roads across indiana farmland in Terre Haute to Richmond, Indiana, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and HVLI Extended to prepare you for 160 miles of flat to gently rolling paved roads across indiana farmland in Terre Haute to Richmond, Indiana, USA.",
+  "generated_at": "2026-06-25"
 }

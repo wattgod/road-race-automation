@@ -4,11 +4,11 @@
   "distance_mi": 77.0,
   "demands": {
     "durability": 4,
-    "climbing": 0,
+    "climbing": 2,
     "vo2_power": 5,
     "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 2,
     "race_specificity": 8
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 100,
+      "score": 83,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,8 +34,17 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Argentina's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 78,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Gran Fondo Argentina's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 77 miles."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 88,
+      "score": 67,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,8 +53,17 @@
       "workout_context": "Gran Fondo Argentina's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
+      "category": "Endurance",
+      "score": 56,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Gran Fondo Argentina. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
       "category": "VO2max",
-      "score": 83,
+      "score": 56,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -55,7 +73,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 73,
+      "score": 54,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,53 +82,18 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Argentina. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
+      "category": "HVLI_Extended",
+      "score": 44,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "Gran Fondo Argentina's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 77 miles."
-    },
-    {
-      "category": "Blended",
-      "score": 58,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Gran Fondo Argentina's mixed terrain actually does to you."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 58,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "Endurance",
-      "score": 46,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Gran Fondo Argentina. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Tempo",
-      "score": 46,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "76\u201385% FTP for extended efforts. At Gran Fondo Argentina, tempo is the floor you'll live on. Make it feel easy."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 77 miles without cracking. No shortcuts."
     },
     {
       "category": "Over_Under",
-      "score": 44,
+      "score": 43,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -118,19 +101,38 @@
       "workout_context": "At Gran Fondo Argentina, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 42,
+      "category": "Critical_Power",
+      "score": 43,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 77 miles without cracking. No shortcuts."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Gran Fondo Argentina, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Blended",
+      "score": 39,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Gran Fondo Argentina's mixed terrain actually does to you."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 39,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for Gran Fondo Argentina\u2019s 77 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "heat": "October in Buenos Aires, Argentina can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Argentina. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 40\u201360g carbs/hour for Gran Fondo Argentina\u2019s 77 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "terrain": "Mixed terrain at Gran Fondo Argentina requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 77 miles of mixed terrain in Buenos Aires, Argentina.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 77 miles of mixed terrain in Buenos Aires, Argentina.",
+  "generated_at": "2026-06-25"
 }

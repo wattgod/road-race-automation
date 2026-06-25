@@ -4,10 +4,10 @@
   "distance_mi": 391.0,
   "demands": {
     "durability": 10,
-    "climbing": 3,
+    "climbing": 6,
     "vo2_power": 4,
     "threshold": 4,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 9
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 59,
+      "score": 66,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -63,12 +63,40 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 40,
+      "score": 53,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
       "workout_context": "RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa)'s paved Iowa roads \u2014 rolling hills, farm country, forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 391 miles."
+    },
+    {
+      "category": "Over_Under",
+      "score": 46,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 46,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa)'s paved Iowa roads \u2014 rolling hills, farm country, rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 40,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "16,027ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "VO2max",
@@ -81,14 +109,14 @@
       "workout_context": "16,027ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "TT_Threshold",
-      "score": 36,
+      "category": "G_Spot",
+      "score": 35,
       "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
       ],
-      "workout_context": "RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa)'s paved Iowa roads \u2014 rolling hills, farm country, rewards steady threshold power. Surging and recovering costs more watts than just holding."
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa). Train it until it feels boring."
     },
     {
       "category": "Tempo",
@@ -98,39 +126,11 @@
         "Extended Tempo"
       ],
       "workout_context": "Tempo is RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa)'s race pace. The wattage you'll hold for 391 miles on paved Iowa roads \u2014 rolling hills, farm country,. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 30,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "G_Spot",
-      "score": 29,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of RAGBRAI (Register's Annual Great Bicycle Ride Across Iowa). Train it until it feels boring."
-    },
-    {
-      "category": "Mixed_Climbing",
-      "score": 20,
-      "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
-      ],
-      "workout_context": "16,027ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     }
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 391 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 391 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and HVLI Extended to prepare you for 391 miles of paved iowa roads \u2014 rolling hills, farm country, and river bluffs in Across Iowa, USA (Missouri River to Mississippi River, west to east).",
-  "generated_at": "2026-06-09"
+  "generated_at": "2026-06-25"
 }

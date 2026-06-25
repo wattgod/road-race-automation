@@ -4,10 +4,10 @@
   "distance_mi": 559.0,
   "demands": {
     "durability": 10,
-    "climbing": 0,
+    "climbing": 4,
     "vo2_power": 6,
-    "threshold": 4,
-    "technical": 0,
+    "threshold": 5,
+    "technical": 2,
     "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 9
@@ -34,6 +34,16 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
+      "category": "Race_Simulation",
+      "score": 69,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Formosa 900's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
+    },
+    {
       "category": "Endurance",
       "score": 67,
       "workouts": [
@@ -41,16 +51,6 @@
         "Terrain Simulation Z2"
       ],
       "workout_context": "Every hard session works better with a bigger aerobic base. At 559 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 62,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Formosa 900's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
     },
     {
       "category": "HVLI_Extended",
@@ -73,7 +73,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 41,
+      "score": 55,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -81,17 +81,8 @@
       "workout_context": "Formosa 900's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 559 miles."
     },
     {
-      "category": "Tempo",
-      "score": 32,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Formosa 900's race pace. The wattage you'll hold for 559 miles on mixed terrain. Train it until it's automatic."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 28,
+      "score": 48,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -100,17 +91,17 @@
       "workout_context": "Formosa 900's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 28,
+      "category": "Over_Under",
+      "score": 40,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+      "workout_context": "At Formosa 900, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "G_Spot",
-      "score": 23,
+      "score": 38,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -119,19 +110,28 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Formosa 900. Train it until it feels boring."
     },
     {
-      "category": "Critical_Power",
-      "score": 21,
+      "category": "Tempo",
+      "score": 34,
       "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
+        "Tempo Blocks",
+        "Extended Tempo"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Formosa 900, that number decides whether you bridge or get dropped."
+      "workout_context": "Tempo is Formosa 900's race pace. The wattage you'll hold for 559 miles on mixed terrain. Train it until it's automatic."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 32,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     }
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 559 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 559 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
     "altitude": "Moderate altitude at Formosa 900. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 559 miles of mixed terrain in Circumnavigation of Taiwan.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 559 miles of mixed terrain in Circumnavigation of Taiwan.",
+  "generated_at": "2026-06-25"
 }

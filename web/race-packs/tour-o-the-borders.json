@@ -4,15 +4,24 @@
   "distance_mi": 75.0,
   "demands": {
     "durability": 4,
-    "climbing": 1,
+    "climbing": 7,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 6,
     "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
+    {
+      "category": "Gravel_Specific",
+      "score": 100,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour o' the Borders' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 75 miles."
+    },
     {
       "category": "Race_Simulation",
       "score": 100,
@@ -24,8 +33,37 @@
       "workout_context": "Race-pace efforts that mimic Tour o' the Borders' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
+      "category": "TT_Threshold",
+      "score": 96,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "52ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Over_Under",
+      "score": 82,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Tour o' the Borders, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "G_Spot",
+      "score": 75,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour o' the Borders. Train it until it feels boring."
+    },
+    {
       "category": "Durability",
-      "score": 94,
+      "score": 71,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -35,7 +73,7 @@
     },
     {
       "category": "VO2max",
-      "score": 93,
+      "score": 69,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -44,55 +82,35 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "TT_Threshold",
-      "score": 83,
+      "category": "Mixed_Climbing",
+      "score": 58,
       "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "52ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
-      "category": "G_Spot",
-      "score": 69,
+      "category": "Critical_Power",
+      "score": 54,
       "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour o' the Borders. Train it until it feels boring."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Tour o' the Borders, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
+      "category": "Anaerobic_Capacity",
+      "score": 44,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Tour o' the Borders' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 75 miles."
-    },
-    {
-      "category": "Blended",
-      "score": 56,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,937ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
-      "category": "Endurance",
-      "score": 52,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Tour o' the Borders. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     },
     {
       "category": "Norwegian_Double",
-      "score": 52,
+      "score": 44,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -100,38 +118,20 @@
       "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     },
     {
-      "category": "Over_Under",
-      "score": 48,
+      "category": "Blended",
+      "score": 42,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "At Tour o' the Borders, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Tempo",
-      "score": 41,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "76\u201385% FTP for extended efforts. At Tour o' the Borders, tempo is the floor you'll live on. Make it feel easy."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 37,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 75 miles without cracking. No shortcuts."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,937ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 40\u201360g carbs/hour for Tour o' the Borders\u2019s 75 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at Tour o' the Borders. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Tour o' the Borders. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Tour o' the Borders requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and VO2max to prepare you for 75 miles of mixed terrain in Peebles, Scottish Borders, Scotland.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 75 miles of mixed terrain in Peebles, Scottish Borders, Scotland.",
+  "generated_at": "2026-06-25"
 }

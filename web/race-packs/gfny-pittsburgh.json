@@ -4,10 +4,10 @@
   "distance_mi": 70.0,
   "demands": {
     "durability": 2,
-    "climbing": 2,
+    "climbing": 9,
     "vo2_power": 6,
-    "threshold": 5,
-    "technical": 0,
+    "threshold": 6,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 9
@@ -24,28 +24,17 @@
       "workout_context": "Race-pace efforts that mimic GFNY Pittsburgh's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
-      "category": "VO2max",
-      "score": 85,
+      "category": "Over_Under",
+      "score": 95,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "7,756ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "Durability",
-      "score": 72,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "70 miles on relentless rolling hills with sustained climbing burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "At GFNY Pittsburgh, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "TT_Threshold",
-      "score": 67,
+      "score": 95,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -55,7 +44,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 67,
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -63,8 +52,17 @@
       "workout_context": "GFNY Pittsburgh's relentless rolling hills with sustained climbing forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 70 miles."
     },
     {
+      "category": "Mixed_Climbing",
+      "score": 82,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "7,756ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
       "category": "G_Spot",
-      "score": 54,
+      "score": 73,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,44 +71,37 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY Pittsburgh. Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 46,
+      "category": "VO2max",
+      "score": 70,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "At GFNY Pittsburgh, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "7,756ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Blended",
-      "score": 44,
+      "category": "Durability",
+      "score": 59,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,756ft of climbing on relentless rolling hills with sustained climbing does to your power file on race day."
+      "workout_context": "70 miles on relentless rolling hills with sustained climbing burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 44,
+      "category": "SFR_Muscle_Force",
+      "score": 55,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on relentless rolling hills with sustained climbing. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 37,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+      "workout_context": "Low-cadence force work for 7,756ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Critical_Power",
-      "score": 33,
+      "score": 52,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
@@ -118,18 +109,28 @@
       "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Pittsburgh, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Endurance",
-      "score": 26,
+      "category": "Anaerobic_Capacity",
+      "score": 48,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Base fitness for GFNY Pittsburgh. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on relentless rolling hills with sustained climbing. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Blended",
+      "score": 36,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,756ft of climbing on relentless rolling hills with sustained climbing does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for GFNY Pittsburgh\u2019s 70 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "nutrition": "Target 40\u201360g carbs/hour for GFNY Pittsburgh\u2019s 70 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "terrain": "Mixed terrain at GFNY Pittsburgh requires surface adaptability. Include weekly rides on relentless rolling hills with sustained climbing to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Durability to prepare you for 70 miles of relentless rolling hills with sustained climbing in Monroeville, Pennsylvania, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Over Under, and TT Threshold to prepare you for 70 miles of relentless rolling hills with sustained climbing in Monroeville, Pennsylvania, USA.",
+  "generated_at": "2026-06-25"
 }

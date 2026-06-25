@@ -4,11 +4,11 @@
   "distance_mi": 75.0,
   "demands": {
     "durability": 4,
-    "climbing": 0,
+    "climbing": 3,
     "vo2_power": 4,
     "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 2,
+    "technical": 2,
+    "heat_resilience": 8,
     "altitude": 2,
     "race_specificity": 6
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 84,
+      "score": 69,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -34,8 +34,17 @@
       "workout_context": "Valley GranFondo's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
+      "category": "Endurance",
+      "score": 62,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Valley GranFondo. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
       "category": "Race_Simulation",
-      "score": 72,
+      "score": 57,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +54,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 70,
+      "score": 55,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -54,36 +63,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Valley GranFondo. Train it until it feels boring."
     },
     {
-      "category": "VO2max",
-      "score": 68,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "Endurance",
-      "score": 56,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Valley GranFondo. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 56,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
       "category": "HVLI_Extended",
-      "score": 48,
+      "score": 49,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -92,17 +73,17 @@
       "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 75 miles without cracking. No shortcuts."
     },
     {
-      "category": "Blended",
-      "score": 48,
+      "category": "Over_Under",
+      "score": 49,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Valley GranFondo's mixed terrain actually does to you."
+      "workout_context": "At Valley GranFondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "Gravel_Specific",
-      "score": 48,
+      "score": 49,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -110,27 +91,47 @@
       "workout_context": "Valley GranFondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 75 miles."
     },
     {
+      "category": "VO2max",
+      "score": 46,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 38,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+    },
+    {
+      "category": "Blended",
+      "score": 32,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Valley GranFondo's mixed terrain actually does to you."
+    },
+    {
       "category": "Tempo",
-      "score": 44,
+      "score": 30,
       "workouts": [
         "Tempo Blocks",
         "Extended Tempo"
       ],
       "workout_context": "76\u201385% FTP for extended efforts. At Valley GranFondo, tempo is the floor you'll live on. Make it feel easy."
-    },
-    {
-      "category": "Over_Under",
-      "score": 42,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Valley GranFondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     }
   ],
   "race_overlay": {
+    "heat": "June in Langley, Fraser Valley, BC, Canada. Begin heat acclimatization 10\u201314 days before Valley GranFondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
     "nutrition": "Target 40\u201360g carbs/hour for Valley GranFondo\u2019s 75 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 75 miles of mixed terrain in Langley, Fraser Valley, BC, Canada.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Endurance to prepare you for 75 miles of mixed terrain in Langley, Fraser Valley, BC, Canada.",
+  "generated_at": "2026-06-25"
 }

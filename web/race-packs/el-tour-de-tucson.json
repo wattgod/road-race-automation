@@ -4,10 +4,10 @@
   "distance_mi": 102.0,
   "demands": {
     "durability": 6,
-    "climbing": 1,
+    "climbing": 2,
     "vo2_power": 5,
     "threshold": 7,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 3,
     "altitude": 2,
     "race_specificity": 7
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 65,
+      "score": 70,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 61,
+      "score": 70,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,6 +54,15 @@
       "workout_context": "When someone attacks on flat to gently rolling Sonoran Desert, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 58,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "El Tour de Tucson's flat to gently rolling Sonoran Desert forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 102 miles."
+    },
+    {
       "category": "Endurance",
       "score": 57,
       "workouts": [
@@ -64,7 +73,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 54,
+      "score": 57,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -92,6 +101,15 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,007ft of climbing on flat to gently rolling Sonoran Desert does to your power file on race day."
     },
     {
+      "category": "Over_Under",
+      "score": 45,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At El Tour de Tucson, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "Norwegian_Double",
       "score": 41,
       "workouts": [
@@ -101,15 +119,6 @@
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 102 miles, sustainable FTP gains matter more than peak power."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 41,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "El Tour de Tucson's flat to gently rolling Sonoran Desert forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 102 miles."
-    },
-    {
       "category": "Tempo",
       "score": 38,
       "workouts": [
@@ -117,20 +126,11 @@
         "Extended Tempo"
       ],
       "workout_context": "Tempo is El Tour de Tucson's race pace. The wattage you'll hold for 102 miles on flat to gently rolling Sonoran Desert. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 38,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At El Tour de Tucson, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for El Tour de Tucson\u2019s 102 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 102 miles of flat to gently rolling sonoran desert in Tucson, Arizona, USA.",
-  "generated_at": "2026-06-09"
+  "generated_at": "2026-06-25"
 }

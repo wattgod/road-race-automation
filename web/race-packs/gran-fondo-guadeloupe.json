@@ -4,28 +4,18 @@
   "distance_mi": 78.3,
   "demands": {
     "durability": 4,
-    "climbing": 2,
+    "climbing": 9,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Race_Simulation",
-      "score": 100,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Gran Fondo Guadeloupe's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before December."
-    },
-    {
       "category": "Durability",
-      "score": 94,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -34,18 +24,8 @@
       "workout_context": "78 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "VO2max",
-      "score": 93,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "9,462ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 89,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,8 +34,36 @@
       "workout_context": "121ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Over_Under",
+      "score": 92,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Gran Fondo Guadeloupe, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 88,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Gran Fondo Guadeloupe's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before December."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 80,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Gran Fondo Guadeloupe's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
+    },
+    {
       "category": "G_Spot",
-      "score": 72,
+      "score": 77,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,35 +72,27 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Guadeloupe. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Mixed_Climbing",
+      "score": 72,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "9,462ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "VO2max",
       "score": 67,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Gran Fondo Guadeloupe's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
-    },
-    {
-      "category": "Over_Under",
-      "score": 57,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Gran Fondo Guadeloupe, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Blended",
-      "score": 56,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 9,462ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "9,462ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Endurance",
-      "score": 52,
+      "score": 61,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -100,38 +100,40 @@
       "workout_context": "Base fitness for Gran Fondo Guadeloupe. Without this, the hard workouts break you down instead of building you up."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 52,
+      "category": "SFR_Muscle_Force",
+      "score": 48,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "Tempo",
-      "score": 41,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "76\u201385% FTP for extended efforts. At Gran Fondo Guadeloupe, tempo is the floor you'll live on. Make it feel easy."
+      "workout_context": "Low-cadence force work for 9,462ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "HVLI_Extended",
-      "score": 37,
+      "score": 43,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
       "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 78 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 43,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     }
   ],
   "race_overlay": {
+    "heat": "December in Capesterre-Belle-Eau, Guadeloupe can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Guadeloupe. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 40\u201360g carbs/hour for Gran Fondo Guadeloupe\u2019s 78 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at Gran Fondo Guadeloupe. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Gran Fondo Guadeloupe. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Gran Fondo Guadeloupe requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and VO2max to prepare you for 78 miles of mixed terrain in Capesterre-Belle-Eau, Guadeloupe.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Over Under to prepare you for 78 miles of mixed terrain in Capesterre-Belle-Eau, Guadeloupe.",
+  "generated_at": "2026-06-25"
 }

@@ -4,11 +4,11 @@
   "distance_mi": 174.0,
   "demands": {
     "durability": 8,
-    "climbing": 1,
+    "climbing": 6,
     "vo2_power": 4,
-    "threshold": 4,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 5,
+    "technical": 4,
+    "heat_resilience": 6,
     "altitude": 4,
     "race_specificity": 6
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "Endurance",
-      "score": 67,
+      "score": 69,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -33,18 +33,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 174 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "VO2max",
-      "score": 67,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "6,561ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "HVLI_Extended",
-      "score": 61,
+      "score": 58,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -53,27 +43,8 @@
       "workout_context": "174 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Blended",
-      "score": 55,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 6,561ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 55,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Vuelta Cicloturista a Ibiza's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 41,
+      "score": 53,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -82,17 +53,8 @@
       "workout_context": "Vuelta Cicloturista a Ibiza's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Tempo",
-      "score": 36,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Vuelta Cicloturista a Ibiza's race pace. The wattage you'll hold for 174 miles on mixed terrain. Train it until it's automatic."
-    },
-    {
       "category": "Gravel_Specific",
-      "score": 36,
+      "score": 53,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -100,8 +62,37 @@
       "workout_context": "Vuelta Cicloturista a Ibiza's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 174 miles."
     },
     {
+      "category": "Race_Simulation",
+      "score": 53,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Vuelta Cicloturista a Ibiza's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
+    },
+    {
+      "category": "Over_Under",
+      "score": 50,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Vuelta Cicloturista a Ibiza, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "VO2max",
+      "score": 49,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "6,561ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
       "category": "G_Spot",
-      "score": 33,
+      "score": 41,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -110,28 +101,39 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Vuelta Cicloturista a Ibiza. Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 26,
+      "category": "Blended",
+      "score": 40,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "At Vuelta Cicloturista a Ibiza, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 6,561ft of climbing on mixed terrain does to your power file on race day."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 24,
+      "category": "Mixed_Climbing",
+      "score": 40,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "6,561ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 31,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Vuelta Cicloturista a Ibiza, that number decides whether you bridge or get dropped."
     }
   ],
   "race_overlay": {
+    "heat": "October in Ibiza, Balearic Islands, Spain can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Vuelta Cicloturista a Ibiza. Increase sodium intake 48 hours before race day.",
     "nutrition": "Ultra-distance fueling for 174 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 174 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Moderate altitude at Vuelta Cicloturista a Ibiza. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Vuelta Cicloturista a Ibiza. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Vuelta Cicloturista a Ibiza requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 174 miles of mixed terrain in Ibiza, Balearic Islands, Spain.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and HVLI Extended to prepare you for 174 miles of mixed terrain in Ibiza, Balearic Islands, Spain.",
+  "generated_at": "2026-06-25"
 }

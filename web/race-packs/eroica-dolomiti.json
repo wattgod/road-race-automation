@@ -4,11 +4,11 @@
   "distance_mi": 68.0,
   "demands": {
     "durability": 2,
-    "climbing": 2,
+    "climbing": 8,
     "vo2_power": 5,
-    "threshold": 5,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 6,
+    "technical": 2,
+    "heat_resilience": 6,
     "altitude": 8,
     "race_specificity": 9
   },
@@ -24,18 +24,8 @@
       "workout_context": "8,990ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Race_Simulation",
-      "score": 77,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Eroica Dolomiti's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
-    },
-    {
       "category": "Durability",
-      "score": 56,
+      "score": 90,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -45,7 +35,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 51,
+      "score": 86,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,17 +44,27 @@
       "workout_context": "132ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 51,
+      "category": "Race_Simulation",
+      "score": 86,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
       ],
-      "workout_context": "Eroica Dolomiti's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 68 miles."
+      "workout_context": "Race-pace efforts that mimic Eroica Dolomiti's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
+    },
+    {
+      "category": "Over_Under",
+      "score": 83,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Eroica Dolomiti, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "Endurance",
-      "score": 46,
+      "score": 71,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -72,8 +72,26 @@
       "workout_context": "Base fitness for Eroica Dolomiti. Without this, the hard workouts break you down instead of building you up."
     },
     {
+      "category": "Mixed_Climbing",
+      "score": 69,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "8,990ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 69,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Eroica Dolomiti's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 68 miles."
+    },
+    {
       "category": "G_Spot",
-      "score": 41,
+      "score": 66,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,13 +100,13 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Eroica Dolomiti. Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 36,
+      "category": "SFR_Muscle_Force",
+      "score": 46,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "At Eroica Dolomiti, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Low-cadence force work for 8,990ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Blended",
@@ -101,36 +119,19 @@
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 29,
+      "score": 34,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 29,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "LT1_MAF",
-      "score": 23,
-      "workouts": [
-        "MAF Capped Ride",
-        "LT1 Assessment"
-      ],
-      "workout_context": "Below LT1, you burn fat. Above it, you burn glycogen. For 68 miles, a higher LT1 means slower bonk."
     }
   ],
   "race_overlay": {
+    "heat": "September in San Candido, South Tyrol, Italy can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Eroica Dolomiti. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 40\u201360g carbs/hour for Eroica Dolomiti\u2019s 68 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Eroica Dolomiti with 8,990ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 68 miles of mixed terrain in San Candido, South Tyrol, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and TT Threshold to prepare you for 68 miles of mixed terrain in San Candido, South Tyrol, Italy.",
+  "generated_at": "2026-06-25"
 }

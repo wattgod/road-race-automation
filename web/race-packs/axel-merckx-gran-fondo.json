@@ -4,11 +4,11 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 1,
+    "climbing": 5,
     "vo2_power": 6,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 2,
+    "heat_resilience": 10,
     "altitude": 4,
     "race_specificity": 9
   },
@@ -24,28 +24,17 @@
       "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "VO2max",
-      "score": 89,
+      "category": "Endurance",
+      "score": 64,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 86,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Axel Merckx Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "TT_Threshold",
-      "score": 71,
+      "score": 61,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,45 +43,28 @@
       "workout_context": "Axel Merckx Gran Fondo's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "G_Spot",
-      "score": 59,
+      "category": "Race_Simulation",
+      "score": 58,
       "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Axel Merckx Gran Fondo. Train it until it feels boring."
+      "workout_context": "Race-pace efforts that mimic Axel Merckx Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
     },
     {
-      "category": "Endurance",
-      "score": 57,
+      "category": "VO2max",
+      "score": 54,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "Blended",
-      "score": 57,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,937ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 57,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Axel Merckx Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "HVLI_Extended",
-      "score": 48,
+      "score": 49,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -101,8 +73,45 @@
       "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
+      "category": "G_Spot",
+      "score": 49,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Axel Merckx Gran Fondo. Train it until it feels boring."
+    },
+    {
+      "category": "Over_Under",
+      "score": 48,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Axel Merckx Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 47,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Axel Merckx Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
+      "category": "Blended",
+      "score": 35,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,937ft of climbing on mixed terrain does to your power file on race day."
+    },
+    {
       "category": "Norwegian_Double",
-      "score": 44,
+      "score": 31,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -110,28 +119,20 @@
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
     },
     {
-      "category": "Tempo",
-      "score": 41,
+      "category": "Mixed_Climbing",
+      "score": 29,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Tempo is Axel Merckx Gran Fondo's race pace. The wattage you'll hold for 100 miles on mixed terrain. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 41,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Axel Merckx Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     }
   ],
   "race_overlay": {
+    "heat": "July in Penticton, British Columbia, Canada. Begin heat acclimatization 10\u201314 days before Axel Merckx Gran Fondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Axel Merckx Gran Fondo\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Axel Merckx Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 100 miles of mixed terrain in Penticton, British Columbia, Canada.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and TT Threshold to prepare you for 100 miles of mixed terrain in Penticton, British Columbia, Canada.",
+  "generated_at": "2026-06-25"
 }

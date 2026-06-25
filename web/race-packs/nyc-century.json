@@ -4,10 +4,10 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 1,
+    "climbing": 2,
     "vo2_power": 4,
     "threshold": 7,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 7
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 74,
+      "score": 79,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 69,
+      "score": 79,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -44,8 +44,17 @@
       "workout_context": "Race-pace efforts that mimic NYC Century Bike Tour's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 66,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "NYC Century Bike Tour's all-paved urban roads, protected bike lanes, and forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
       "category": "G_Spot",
-      "score": 61,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -92,6 +101,15 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,000ft of climbing on all-paved urban roads, protected bike lanes, and does to your power file on race day."
     },
     {
+      "category": "Over_Under",
+      "score": 51,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At NYC Century Bike Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "Norwegian_Double",
       "score": 46,
       "workouts": [
@@ -101,15 +119,6 @@
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 46,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "NYC Century Bike Tour's all-paved urban roads, protected bike lanes, and forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
-    },
-    {
       "category": "Tempo",
       "score": 43,
       "workouts": [
@@ -117,20 +126,11 @@
         "Extended Tempo"
       ],
       "workout_context": "Tempo is NYC Century Bike Tour's race pace. The wattage you'll hold for 100 miles on all-paved urban roads, protected bike lanes, and. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 43,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At NYC Century Bike Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for NYC Century Bike Tour\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 100 miles of all-paved urban roads, protected bike lanes, and greenway paths through four new york city boroughs in New York City, New York, USA \u2014 Meatpacking District start/finish, four-borough route through Manhattan, Brooklyn, Queens, and the Bronx.",
-  "generated_at": "2026-06-09"
+  "generated_at": "2026-06-25"
 }

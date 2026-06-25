@@ -4,28 +4,18 @@
   "distance_mi": 57.0,
   "demands": {
     "durability": 2,
-    "climbing": 0,
+    "climbing": 2,
     "vo2_power": 6,
     "threshold": 5,
-    "technical": 0,
-    "heat_resilience": 2,
+    "technical": 2,
+    "heat_resilience": 8,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Race_Simulation",
-      "score": 100,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Spinneys Dubai 92 Cycle Challenge's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
-    },
-    {
       "category": "Durability",
-      "score": 87,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -34,8 +24,27 @@
       "workout_context": "57 miles on flat burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "VO2max",
+      "category": "Race_Simulation",
       "score": 85,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Spinneys Dubai 92 Cycle Challenge's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 68,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Spinneys Dubai 92 Cycle Challenge's flat forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 57 miles."
+    },
+    {
+      "category": "VO2max",
+      "score": 65,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -44,17 +53,17 @@
       "workout_context": "When someone attacks on flat, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
+      "category": "Endurance",
+      "score": 54,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Spinneys Dubai 92 Cycle Challenge's flat forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 57 miles."
+      "workout_context": "Base fitness for Spinneys Dubai 92 Cycle Challenge. Without this, the hard workouts break you down instead of building you up."
     },
     {
       "category": "TT_Threshold",
-      "score": 56,
+      "score": 51,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -64,7 +73,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 46,
+      "score": 41,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,17 +82,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Spinneys Dubai 92 Cycle Challenge. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 44,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Spinneys Dubai 92 Cycle Challenge's flat actually does to you."
-    },
-    {
       "category": "Anaerobic_Capacity",
-      "score": 44,
+      "score": 39,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -91,26 +91,18 @@
       "workout_context": "2-minute all-out efforts on flat. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
-      "category": "Endurance",
+      "category": "HVLI_Extended",
       "score": 37,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "Base fitness for Spinneys Dubai 92 Cycle Challenge. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 37,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+      "workout_context": "The aerobic base that lets you ride flat at tempo for 57 miles without cracking. No shortcuts."
     },
     {
       "category": "Critical_Power",
-      "score": 33,
+      "score": 37,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
@@ -119,17 +111,27 @@
     },
     {
       "category": "Over_Under",
-      "score": 28,
+      "score": 35,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
       "workout_context": "At Spinneys Dubai 92 Cycle Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Blended",
+      "score": 34,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Spinneys Dubai 92 Cycle Challenge's flat actually does to you."
     }
   ],
   "race_overlay": {
+    "heat": "February in Expo City Dubai, Al Forsan Park \u2014 Dubai in mid-February features mild winter weather with cooler mornings ideal for early starts, low precipitation, and potential humidity. Begin heat acclimatization 10\u201314 days before Spinneys Dubai 92 Cycle Challenge \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
     "nutrition": "Target 40\u201360g carbs/hour for Spinneys Dubai 92 Cycle Challenge\u2019s 57 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and VO2max to prepare you for 57 miles of flat in Expo City Dubai, Al Forsan Park.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 57 miles of flat in Expo City Dubai, Al Forsan Park.",
+  "generated_at": "2026-06-25"
 }

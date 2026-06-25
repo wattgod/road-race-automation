@@ -51,10 +51,10 @@ def _make_rating(**overrides) -> dict:
         "tier": 3,
         "prestige": 3,
         "field_depth": 3,
-        "elevation": 3,
+        "climbing": 3,
         "altitude": 2,
-        "climate": 3,
-        "technicality": 3,
+        "climate_risk": 3,
+        "descent_technicality": 3,
         "discipline": "gravel",
     }
     base.update(overrides)
@@ -146,36 +146,36 @@ class TestScoreClimbing:
     def test_high_elevation(self):
         """10000ft, score 5 -> min(10, round(7.5+2.0)) = min(10, 10) = 10."""
         vitals = _make_vitals(elevation_ft=10000)
-        rating = _make_rating(elevation=5)
+        rating = _make_rating(climbing=5)
         assert _score_climbing(vitals, rating) == 10
 
     def test_moderate_elevation(self):
         """5000ft, score 3 -> min(10, round(4.5+1.0)) = min(10, round(5.5)) = min(10, 6) = 6."""
         vitals = _make_vitals(elevation_ft=5000)
-        rating = _make_rating(elevation=3)
+        rating = _make_rating(climbing=3)
         assert _score_climbing(vitals, rating) == 6
 
     def test_flat(self):
         """1000ft, score 1 -> min(10, round(1.5+0.2)) = min(10, round(1.7)) = min(10, 2) = 2."""
         vitals = _make_vitals(elevation_ft=1000)
-        rating = _make_rating(elevation=1)
+        rating = _make_rating(climbing=1)
         assert _score_climbing(vitals, rating) == 2
 
     def test_extreme_elevation_80k(self):
         """80000ft, score 5 -> min(10, round(7.5+16)) = min(10, 24) = 10."""
         vitals = _make_vitals(elevation_ft=80000)
-        rating = _make_rating(elevation=5)
+        rating = _make_rating(climbing=5)
         assert _score_climbing(vitals, rating) == 10
 
     def test_zero_elevation(self):
         vitals = _make_vitals(elevation_ft=0)
-        rating = _make_rating(elevation=0)
+        rating = _make_rating(climbing=0)
         assert _score_climbing(vitals, rating) == 0
 
     def test_mid_range(self):
         """3000ft, score 2 -> min(10, round(3.0+0.6)) = min(10, round(3.6)) = 4."""
         vitals = _make_vitals(elevation_ft=3000)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_climbing(vitals, rating) == 4
 
 
@@ -215,61 +215,61 @@ class TestScoreThreshold:
     def test_100mi(self):
         """100mi is in 75-150 range -> 7."""
         vitals = _make_vitals(distance_mi=100)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_threshold(vitals, rating) == 7
 
     def test_60mi(self):
         """60mi is in 50-75 range -> 5."""
         vitals = _make_vitals(distance_mi=60)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_threshold(vitals, rating) == 5
 
     def test_200mi(self):
         """200mi > 150 -> 4."""
         vitals = _make_vitals(distance_mi=200)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_threshold(vitals, rating) == 4
 
     def test_30mi(self):
         """30mi else -> 3."""
         vitals = _make_vitals(distance_mi=30)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_threshold(vitals, rating) == 3
 
     def test_climbing_boost(self):
         """100mi + elev_score 4 -> 7 + 1 = 8."""
         vitals = _make_vitals(distance_mi=100)
-        rating = _make_rating(elevation=4)
+        rating = _make_rating(climbing=4)
         assert _score_threshold(vitals, rating) == 8
 
     def test_climbing_boost_at_boundary(self):
         """elev_score 3 exactly -> +1."""
         vitals = _make_vitals(distance_mi=100)
-        rating = _make_rating(elevation=3)
+        rating = _make_rating(climbing=3)
         assert _score_threshold(vitals, rating) == 8
 
     def test_no_climbing_boost(self):
         """elev_score 2 -> no boost."""
         vitals = _make_vitals(distance_mi=100)
-        rating = _make_rating(elevation=2)
+        rating = _make_rating(climbing=2)
         assert _score_threshold(vitals, rating) == 7
 
     def test_75mi_boundary(self):
         """75mi is in the 75-150 range -> 7."""
         vitals = _make_vitals(distance_mi=75)
-        rating = _make_rating(elevation=1)
+        rating = _make_rating(climbing=1)
         assert _score_threshold(vitals, rating) == 7
 
     def test_150mi_boundary(self):
         """150mi is in the 75-150 range -> 7."""
         vitals = _make_vitals(distance_mi=150)
-        rating = _make_rating(elevation=1)
+        rating = _make_rating(climbing=1)
         assert _score_threshold(vitals, rating) == 7
 
     def test_151mi(self):
         """151mi > 150 -> 4."""
         vitals = _make_vitals(distance_mi=151)
-        rating = _make_rating(elevation=1)
+        rating = _make_rating(climbing=1)
         assert _score_threshold(vitals, rating) == 4
 
 
@@ -279,26 +279,26 @@ class TestScoreThreshold:
 class TestScoreTechnical:
     def test_very_technical(self):
         """technicality 5 -> 10."""
-        rating = _make_rating(technicality=5)
+        rating = _make_rating(descent_technicality=5)
         assert _score_technical(rating) == 10
 
     def test_moderate(self):
         """technicality 3 -> 6."""
-        rating = _make_rating(technicality=3)
+        rating = _make_rating(descent_technicality=3)
         assert _score_technical(rating) == 6
 
     def test_smooth(self):
         """technicality 1 -> 2."""
-        rating = _make_rating(technicality=1)
+        rating = _make_rating(descent_technicality=1)
         assert _score_technical(rating) == 2
 
     def test_zero(self):
-        rating = _make_rating(technicality=0)
+        rating = _make_rating(descent_technicality=0)
         assert _score_technical(rating) == 0
 
     def test_max_cap(self):
         """technicality 5 -> 10, not 10+."""
-        rating = _make_rating(technicality=5)
+        rating = _make_rating(descent_technicality=5)
         assert _score_technical(rating) == 10
 
 
@@ -308,13 +308,13 @@ class TestScoreTechnical:
 class TestScoreHeatResilience:
     def test_hot_race(self):
         """climate=5 -> base 10, already at cap."""
-        race_data = _make_race(rating=_make_rating(climate=5))
+        race_data = _make_race(rating=_make_rating(climate_risk=5))
         race = race_data["race"]
         assert _score_heat_resilience(race) == 10
 
     def test_mild_race(self):
         """climate=2 -> base 0, no intel, no challenges -> 0."""
-        race_data = _make_race(rating=_make_rating(climate=2))
+        race_data = _make_race(rating=_make_rating(climate_risk=2))
         race = race_data["race"]
         assert _score_heat_resilience(race) == 0
 
@@ -326,7 +326,7 @@ class TestScoreHeatResilience:
             }
         }
         race_data = _make_race(
-            rating=_make_rating(climate=4),
+            rating=_make_rating(climate_risk=4),
             youtube_data=youtube_data,
         )
         race = race_data["race"]
@@ -334,14 +334,14 @@ class TestScoreHeatResilience:
 
     def test_no_rider_intel(self):
         """climate=4 -> base 6, no rider intel -> 6."""
-        race_data = _make_race(rating=_make_rating(climate=4))
+        race_data = _make_race(rating=_make_rating(climate_risk=4))
         race = race_data["race"]
         assert _score_heat_resilience(race) == 6
 
     def test_climate_challenges_boost(self):
         """climate=4 -> base 6, challenges mention heat -> +1 = 7."""
         race_data = _make_race(
-            rating=_make_rating(climate=4),
+            rating=_make_rating(climate_risk=4),
             climate={"challenges": ["Heat adaptation critical", "Wind exposure"]},
         )
         race = race_data["race"]
@@ -353,7 +353,7 @@ class TestScoreHeatResilience:
             "rider_intel": {"search_text": "Record heat and humidity levels."}
         }
         race_data = _make_race(
-            rating=_make_rating(climate=4),
+            rating=_make_rating(climate_risk=4),
             youtube_data=youtube_data,
             climate={"challenges": ["Heat adaptation critical"]},
         )
@@ -363,7 +363,7 @@ class TestScoreHeatResilience:
     def test_low_climate_with_heat_challenges(self):
         """climate=2 -> base 0, but challenges mention 'Extreme heat' -> +1 = 1."""
         race_data = _make_race(
-            rating=_make_rating(climate=2),
+            rating=_make_rating(climate_risk=2),
             climate={"challenges": ["Extreme heat", "Cold nights"]},
         )
         race = race_data["race"]
@@ -375,7 +375,7 @@ class TestScoreHeatResilience:
             "rider_intel": {"search_text": "It was really hot out there."}
         }
         race_data = _make_race(
-            rating=_make_rating(climate=2),
+            rating=_make_rating(climate_risk=2),
             youtube_data=youtube_data,
         )
         race = race_data["race"]
@@ -384,7 +384,7 @@ class TestScoreHeatResilience:
     def test_empty_challenges(self):
         """Empty challenges list -> no boost."""
         race_data = _make_race(
-            rating=_make_rating(climate=4),
+            rating=_make_rating(climate_risk=4),
             climate={"challenges": []},
         )
         race = race_data["race"]
@@ -541,7 +541,7 @@ class TestAnalyzeRaceDemandsEdgeCases:
     def test_missing_rider_intel(self):
         """No youtube_data -> heat from climate only."""
         race_data = _make_race(
-            rating=_make_rating(climate=4),
+            rating=_make_rating(climate_risk=4),
             climate={"challenges": []},
         )
         demands = analyze_race_demands(race_data)
@@ -549,7 +549,7 @@ class TestAnalyzeRaceDemandsEdgeCases:
 
     def test_missing_climate(self):
         """No climate block -> heat defaults work (no challenges boost)."""
-        race_data = _make_race(rating=_make_rating(climate=4))
+        race_data = _make_race(rating=_make_rating(climate_risk=4))
         demands = analyze_race_demands(race_data)
         # base=6, no climate block = no challenges boost -> 6
         assert demands["heat_resilience"] == 6
@@ -572,10 +572,10 @@ class TestAnalyzeRaceDemandsEdgeCases:
                 "tier": 4,
                 "prestige": 0,
                 "field_depth": 0,
-                "elevation": 0,
+                "climbing": 0,
                 "altitude": 0,
-                "climate": 0,
-                "technicality": 0,
+                "climate_risk": 0,
+                "descent_technicality": 0,
                 "discipline": "gravel",
             },
         )
@@ -600,10 +600,10 @@ class TestAnalyzeRaceDemandsEdgeCases:
                 "tier": 1,
                 "prestige": 5,
                 "field_depth": 5,
-                "elevation": 5,
+                "climbing": 5,
                 "altitude": 5,
-                "climate": 5,
-                "technicality": 5,
+                "climate_risk": 5,
+                "descent_technicality": 5,
                 "discipline": "bikepacking",
             },
             youtube_data=youtube_data,
@@ -646,10 +646,10 @@ class TestAnalyzeRaceDemandsEdgeCases:
                 "tier": None,
                 "prestige": None,
                 "field_depth": None,
-                "elevation": None,
+                "climbing": None,
                 "altitude": None,
-                "climate": None,
-                "technicality": None,
+                "climate_risk": None,
+                "descent_technicality": None,
                 "discipline": None,
             }
         )

@@ -4,38 +4,27 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 2,
+    "climbing": 10,
     "vo2_power": 8,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 8,
     "heat_resilience": 1,
     "altitude": 4,
     "race_specificity": 10
   },
   "top_categories": [
     {
-      "category": "Durability",
+      "category": "Gravel_Specific",
       "score": 100,
       "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "VO2max",
-      "score": 97,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "10,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "Gran Fondo Maryland's brutally hilly forested mountain roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 86,
+      "score": 95,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +34,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 69,
+      "score": 89,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,26 +43,46 @@
       "workout_context": "100ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 57,
+      "category": "Over_Under",
+      "score": 84,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Gran Fondo Maryland's brutally hilly forested mountain roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "At Gran Fondo Maryland, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Endurance",
-      "score": 56,
+      "category": "Durability",
+      "score": 80,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "VO2max",
+      "score": 77,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "10,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 68,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "10,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "G_Spot",
-      "score": 56,
+      "score": 68,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,27 +91,17 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Maryland. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 54,
+      "category": "Critical_Power",
+      "score": 64,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 10,000ft of climbing on brutally hilly forested mountain roads does to your power file on race day."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 46,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Gran Fondo Maryland, that number decides whether you bridge or get dropped."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 46,
+      "score": 55,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -110,28 +109,29 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on brutally hilly forested mountain roads. If you haven't trained them, you'll crack."
     },
     {
-      "category": "Over_Under",
-      "score": 44,
+      "category": "SFR_Muscle_Force",
+      "score": 45,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "At Gran Fondo Maryland, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Low-cadence force work for 10,000ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 40,
+      "category": "Endurance",
+      "score": 44,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Maryland\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Gran Fondo Maryland. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Moderate altitude at Gran Fondo Maryland. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Highly technical terrain at Gran Fondo Maryland demands practice on similar surfaces. Ride brutally hilly forested mountain roads at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 100 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 100 miles of brutally hilly forested mountain roads in Frederick, Maryland, USA.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 100 miles of brutally hilly forested mountain roads in Frederick, Maryland, USA.",
+  "generated_at": "2026-06-25"
 }

@@ -4,10 +4,10 @@
   "distance_mi": 373.0,
   "demands": {
     "durability": 10,
-    "climbing": 0,
+    "climbing": 3,
     "vo2_power": 4,
     "threshold": 4,
-    "technical": 0,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 6
@@ -34,6 +34,25 @@
       "workout_context": "373 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 62,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Vuelta Puerto Rico's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 373 miles."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 62,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Vuelta Puerto Rico's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
+    },
+    {
       "category": "Endurance",
       "score": 59,
       "workouts": [
@@ -52,16 +71,6 @@
       "workout_context": "Long rides with hard efforts mixed in. Simulates what Vuelta Puerto Rico's mixed terrain actually does to you."
     },
     {
-      "category": "Race_Simulation",
-      "score": 46,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Vuelta Puerto Rico's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
-    },
-    {
       "category": "VO2max",
       "score": 44,
       "workouts": [
@@ -70,6 +79,16 @@
         "Norwegian 4x8"
       ],
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 42,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Vuelta Puerto Rico's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
       "category": "Tempo",
@@ -81,56 +100,38 @@
       "workout_context": "Tempo is Vuelta Puerto Rico's race pace. The wattage you'll hold for 373 miles on mixed terrain. Train it until it's automatic."
     },
     {
-      "category": "TT_Threshold",
-      "score": 31,
+      "category": "Critical_Power",
+      "score": 36,
       "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Vuelta Puerto Rico's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Vuelta Puerto Rico, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 31,
+      "category": "Over_Under",
+      "score": 35,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Vuelta Puerto Rico's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 373 miles."
+      "workout_context": "At Vuelta Puerto Rico, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "G_Spot",
-      "score": 26,
+      "score": 33,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
         "Criss-Cross"
       ],
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Vuelta Puerto Rico. Train it until it feels boring."
-    },
-    {
-      "category": "Anaerobic_Capacity",
-      "score": 21,
-      "workouts": [
-        "2min Killers",
-        "90sec Repeats"
-      ],
-      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 21,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 373 miles, sustainable FTP gains matter more than peak power."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 373 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 373 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
+    "nutrition": "Ultra-distance fueling for 373 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 373 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "terrain": "Mixed terrain at Vuelta Puerto Rico requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, HVLI Extended, and Endurance to prepare you for 373 miles of mixed terrain in Circumnavigation of Puerto Rico.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, HVLI Extended, and Gravel Specific to prepare you for 373 miles of mixed terrain in Circumnavigation of Puerto Rico.",
+  "generated_at": "2026-06-25"
 }

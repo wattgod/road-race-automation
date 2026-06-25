@@ -4,28 +4,18 @@
   "distance_mi": 93.0,
   "demands": {
     "durability": 4,
-    "climbing": 1,
+    "climbing": 4,
     "vo2_power": 5,
     "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "technical": 2,
+    "heat_resilience": 6,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Race_Simulation",
-      "score": 100,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Helsinki Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
-    },
-    {
       "category": "Durability",
-      "score": 94,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -34,8 +24,18 @@
       "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
+      "category": "Race_Simulation",
+      "score": 80,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Helsinki Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 83,
+      "score": 72,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,18 +44,17 @@
       "workout_context": "Helsinki Gran Fondo's urban rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "VO2max",
-      "score": 74,
+      "category": "Gravel_Specific",
+      "score": 64,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "When someone attacks on urban, you have 10 seconds to respond or you're off the back. This builds that response."
+      "workout_context": "Helsinki Gran Fondo's urban forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
     },
     {
       "category": "G_Spot",
-      "score": 69,
+      "score": 57,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,35 +63,8 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Helsinki Gran Fondo. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 67,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Helsinki Gran Fondo's urban forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
-    },
-    {
-      "category": "Blended",
-      "score": 56,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Helsinki Gran Fondo's urban actually does to you."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 52,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
       "category": "Over_Under",
-      "score": 48,
+      "score": 55,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -101,7 +73,7 @@
     },
     {
       "category": "Endurance",
-      "score": 41,
+      "score": 53,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -109,28 +81,57 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Tempo",
-      "score": 41,
+      "category": "VO2max",
+      "score": 53,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Tempo is Helsinki Gran Fondo's race pace. The wattage you'll hold for 93 miles on urban. Train it until it's automatic."
+      "workout_context": "When someone attacks on urban, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "HVLI_Extended",
-      "score": 37,
+      "score": 43,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
       "workout_context": "The aerobic base that lets you ride urban at tempo for 93 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "Blended",
+      "score": 40,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Helsinki Gran Fondo's urban actually does to you."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 37,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 32,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on urban demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     }
   ],
   "race_overlay": {
+    "heat": "August in Helsinki Velodrome, Helsinki, Finland can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Helsinki Gran Fondo. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Helsinki Gran Fondo\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and TT Threshold to prepare you for 93 miles of urban in Helsinki Velodrome, Helsinki, Finland.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 93 miles of urban in Helsinki Velodrome, Helsinki, Finland.",
+  "generated_at": "2026-06-25"
 }

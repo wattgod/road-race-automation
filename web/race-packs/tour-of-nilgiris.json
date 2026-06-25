@@ -6,8 +6,8 @@
     "durability": 10,
     "climbing": 10,
     "vo2_power": 6,
-    "threshold": 4,
-    "technical": 0,
+    "threshold": 5,
+    "technical": 6,
     "heat_resilience": 2,
     "altitude": 8,
     "race_specificity": 9
@@ -34,6 +34,25 @@
       "workout_context": "49,212ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
+      "category": "Gravel_Specific",
+      "score": 76,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour of Nilgiris (TFN)'s mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 435 miles."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 76,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Tour of Nilgiris (TFN)'s demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before December."
+    },
+    {
       "category": "Endurance",
       "score": 74,
       "workouts": [
@@ -44,7 +63,7 @@
     },
     {
       "category": "Over_Under",
-      "score": 65,
+      "score": 68,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -61,18 +80,8 @@
       "workout_context": "49,212ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 57,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "435 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 57,
+      "score": 63,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -81,14 +90,14 @@
       "workout_context": "113ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Race_Simulation",
+      "category": "HVLI_Extended",
       "score": 57,
       "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "Race-pace efforts that mimic Tour of Nilgiris (TFN)'s demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before December."
+      "workout_context": "435 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Blended",
@@ -100,17 +109,8 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 49,212ft of climbing on mountain passes does to your power file on race day."
     },
     {
-      "category": "SFR_Muscle_Force",
-      "score": 42,
-      "workouts": [
-        "SFR Low Cadence",
-        "Force Repeats"
-      ],
-      "workout_context": "Low-cadence force work for 49,212ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
-    },
-    {
       "category": "G_Spot",
-      "score": 42,
+      "score": 47,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -119,19 +119,20 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Tour of Nilgiris (TFN). Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 38,
+      "category": "Critical_Power",
+      "score": 44,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "Tour of Nilgiris (TFN)'s mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 435 miles."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Tour of Nilgiris (TFN), that number decides whether you bridge or get dropped."
     }
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 435 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 435 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Tour of Nilgiris (TFN) with 49,212ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "Tour of Nilgiris (TFN) with 49,212ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "terrain": "Mixed terrain at Tour of Nilgiris (TFN) requires surface adaptability. Include weekly rides on mountain passes to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 435 miles of mountain passes in Nilgiris District, Tamil Nadu, India.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Gravel Specific to prepare you for 435 miles of mountain passes in Nilgiris District, Tamil Nadu, India.",
+  "generated_at": "2026-06-25"
 }

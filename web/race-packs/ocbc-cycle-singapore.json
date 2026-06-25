@@ -4,10 +4,10 @@
   "distance_mi": 25.0,
   "demands": {
     "durability": 1,
-    "climbing": 0,
+    "climbing": 2,
     "vo2_power": 5,
     "threshold": 3,
-    "technical": 0,
+    "technical": 2,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 7
@@ -25,7 +25,7 @@
     },
     {
       "category": "VO2max",
-      "score": 95,
+      "score": 83,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 67,
+      "score": 83,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -44,7 +44,7 @@
     },
     {
       "category": "Durability",
-      "score": 64,
+      "score": 56,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -53,17 +53,8 @@
       "workout_context": "25 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 48,
-      "workouts": [
-        "2min Killers",
-        "90sec Repeats"
-      ],
-      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 43,
+      "score": 50,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -72,17 +63,35 @@
       "workout_context": "OCBC Cycle Singapore's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Blended",
+      "category": "Anaerobic_Capacity",
+      "score": 50,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 48,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At OCBC Cycle Singapore, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Over_Under",
       "score": 40,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what OCBC Cycle Singapore's mixed terrain actually does to you."
+      "workout_context": "At OCBC Cycle Singapore, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "G_Spot",
-      "score": 36,
+      "score": 40,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,45 +100,36 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of OCBC Cycle Singapore. Train it until it feels boring."
     },
     {
-      "category": "Critical_Power",
-      "score": 36,
+      "category": "Blended",
+      "score": 35,
       "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At OCBC Cycle Singapore, that number decides whether you bridge or get dropped."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what OCBC Cycle Singapore's mixed terrain actually does to you."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 25,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "Norwegian_Double",
-      "score": 29,
+      "score": 25,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
       "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "Endurance",
-      "score": 24,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for OCBC Cycle Singapore. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Sprint_Neuromuscular",
-      "score": 24,
-      "workouts": [
-        "Attack Repeats",
-        "Sprint Buildups"
-      ],
-      "workout_context": "5-second power closes gaps and wins field sprints. At OCBC Cycle Singapore, neuromuscular snap is a tactical tool, not just a finish-line move."
     }
   ],
   "race_overlay": {
     "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity."
   },
   "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Gravel Specific to prepare you for 25 miles of mixed terrain in Singapore Sports Hub, Singapore.",
-  "generated_at": "2026-06-09"
+  "generated_at": "2026-06-25"
 }

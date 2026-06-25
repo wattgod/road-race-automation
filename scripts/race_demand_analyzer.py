@@ -112,7 +112,7 @@ def _score_climbing(vitals: dict, rating: dict) -> int:
     Formula: min(10, round(elevation_score * 1.5 + elevation_ft / 5000))
     """
     elevation_ft = _safe_numeric(vitals, "elevation_ft", 0)
-    elevation_score = _safe_get(rating, "elevation", 0)
+    elevation_score = _safe_get(rating, "climbing", 0)
     raw = elevation_score * 1.5 + elevation_ft / 5000
     return _clamp(round(raw))
 
@@ -135,7 +135,7 @@ def _score_threshold(vitals: dict, rating: dict) -> int:
     Boost +1 if elevation_score >= 3 (sustained grinding).
     """
     distance = _safe_numeric(vitals, "distance_mi", 0)
-    elevation_score = _safe_get(rating, "elevation", 0)
+    elevation_score = _safe_get(rating, "climbing", 0)
 
     if 75 <= distance <= 150:
         score = 7
@@ -155,9 +155,9 @@ def _score_threshold(vitals: dict, rating: dict) -> int:
 def _score_technical(rating: dict) -> int:
     """Score bike handling + surges.
 
-    Formula: min(10, technicality * 2)
+    Formula: min(10, descent_technicality * 2)
     """
-    technicality = _safe_get(rating, "technicality", 0)
+    technicality = _safe_get(rating, "descent_technicality", 0)
     return _clamp(technicality * 2)
 
 
@@ -169,7 +169,7 @@ def _score_heat_resilience(race: dict) -> int:
     Scan climate.challenges for heat keywords: +1 if found (cap 10).
     """
     rating = race.get("fondo_rating") or {}
-    climate_score = _safe_get(rating, "climate", 0)
+    climate_score = _safe_get(rating, "climate_risk", 0)
 
     if climate_score >= 5:
         score = 10

@@ -4,28 +4,27 @@
   "distance_mi": 87.0,
   "demands": {
     "durability": 4,
-    "climbing": 1,
+    "climbing": 9,
     "vo2_power": 5,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 8,
     "heat_resilience": 0,
     "altitude": 8,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "VO2max",
+      "category": "Gravel_Specific",
       "score": 100,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "6,562ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "Niseko Classic's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 87 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 77,
+      "score": 93,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,18 +33,8 @@
       "workout_context": "Race-pace efforts that mimic Niseko Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Durability",
-      "score": 73,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 64,
+      "score": 89,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,17 +43,27 @@
       "workout_context": "75ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Endurance",
-      "score": 57,
+      "category": "VO2max",
+      "score": 83,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "6,562ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Over_Under",
+      "score": 82,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Niseko Classic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "G_Spot",
-      "score": 53,
+      "score": 69,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,65 +72,66 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Niseko Classic. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 51,
+      "category": "Mixed_Climbing",
+      "score": 64,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Niseko Classic's mountain passes forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 87 miles."
+      "workout_context": "6,562ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Blended",
+      "category": "Durability",
+      "score": 61,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 56,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Niseko Classic, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Endurance",
+      "score": 48,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "SFR_Muscle_Force",
       "score": 43,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 6,562ft of climbing on mountain passes does to your power file on race day."
+      "workout_context": "Low-cadence force work for 6,562ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 40,
+      "category": "Anaerobic_Capacity",
+      "score": 43,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Over_Under",
-      "score": 37,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Niseko Classic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Tempo",
-      "score": 31,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Niseko Classic's race pace. The wattage you'll hold for 87 miles on mountain passes. Train it until it's automatic."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 29,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mountain passes at tempo for 87 miles without cracking. No shortcuts."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mountain passes. If you haven't trained them, you'll crack."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Niseko Classic\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Niseko Classic with 6,562ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "Niseko Classic with 6,562ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "terrain": "Highly technical terrain at Niseko Classic demands practice on similar surfaces. Ride mountain passes at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 87 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 87 miles of mountain passes in Niseko, Hokkaido, Japan.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 87 miles of mountain passes in Niseko, Hokkaido, Japan.",
+  "generated_at": "2026-06-25"
 }

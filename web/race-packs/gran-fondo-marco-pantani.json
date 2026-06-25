@@ -4,10 +4,10 @@
   "distance_mi": 90.0,
   "demands": {
     "durability": 4,
-    "climbing": 1,
+    "climbing": 6,
     "vo2_power": 7,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 10
@@ -24,28 +24,8 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Marco Pantani's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
-      "category": "Durability",
-      "score": 90,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 90, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "VO2max",
-      "score": 87,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "7,054ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 75,
+      "score": 92,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -55,7 +35,7 @@
     },
     {
       "category": "Gravel_Specific",
-      "score": 67,
+      "score": 89,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
@@ -63,8 +43,27 @@
       "workout_context": "Gran Fondo Marco Pantani's paved Italian provincial roads through hilly forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 90 miles."
     },
     {
+      "category": "Durability",
+      "score": 75,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 90, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Over_Under",
+      "score": 75,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Gran Fondo Marco Pantani, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 62,
+      "score": 72,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,17 +72,36 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Marco Pantani. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 53,
+      "category": "VO2max",
+      "score": 72,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,054ft of climbing on paved Italian provincial roads through hilly does to your power file on race day."
+      "workout_context": "7,054ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 51,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Gran Fondo Marco Pantani, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 50,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "7,054ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 47,
+      "score": 50,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -91,45 +109,28 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved Italian provincial roads through hilly. If you haven't trained them, you'll crack."
     },
     {
+      "category": "Blended",
+      "score": 44,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,054ft of climbing on paved Italian provincial roads through hilly does to your power file on race day."
+    },
+    {
       "category": "Norwegian_Double",
-      "score": 47,
+      "score": 44,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 90 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Over_Under",
-      "score": 43,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Gran Fondo Marco Pantani, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 37,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 90 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "Tempo",
-      "score": 37,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Gran Fondo Marco Pantani's race pace. The wattage you'll hold for 90 miles on paved Italian provincial roads through hilly. Train it until it's automatic."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Marco Pantani\u2019s 90 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Marco Pantani\u2019s 90 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "terrain": "Mixed terrain at Gran Fondo Marco Pantani requires surface adaptability. Include weekly rides on paved italian provincial roads through hilly romagnol and marche countryside to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and VO2max to prepare you for 90 miles of paved italian provincial roads through hilly romagnol and marche countryside in Cesenatico, Emilia-Romagna, Italy.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, TT Threshold, and Gravel Specific to prepare you for 90 miles of paved italian provincial roads through hilly romagnol and marche countryside in Cesenatico, Emilia-Romagna, Italy.",
+  "generated_at": "2026-06-25"
 }

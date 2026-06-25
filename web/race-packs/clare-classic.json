@@ -4,28 +4,18 @@
   "distance_mi": 100.0,
   "demands": {
     "durability": 6,
-    "climbing": 1,
+    "climbing": 6,
     "vo2_power": 4,
-    "threshold": 7,
-    "technical": 0,
+    "threshold": 8,
+    "technical": 2,
     "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 6
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 83,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -34,8 +24,27 @@
       "workout_context": "59ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
+      "category": "Durability",
+      "score": 82,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Over_Under",
+      "score": 82,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Clare Classic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 69,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -45,7 +54,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 67,
+      "score": 64,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,8 +63,26 @@
       "workout_context": "Race-pace efforts that mimic Clare Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
     },
     {
+      "category": "Mixed_Climbing",
+      "score": 55,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "5,906ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 55,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Clare Classic's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+    },
+    {
       "category": "VO2max",
-      "score": 63,
+      "score": 52,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -64,8 +91,17 @@
       "workout_context": "5,906ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
+      "category": "Norwegian_Double",
+      "score": 48,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
       "category": "HVLI_Extended",
-      "score": 56,
+      "score": 45,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -75,7 +111,7 @@
     },
     {
       "category": "Endurance",
-      "score": 56,
+      "score": 45,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -84,53 +120,17 @@
     },
     {
       "category": "Blended",
-      "score": 56,
+      "score": 45,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,906ft of climbing on mixed terrain does to your power file on race day."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 52,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Tempo",
-      "score": 48,
-      "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
-      ],
-      "workout_context": "Tempo is Clare Classic's race pace. The wattage you'll hold for 100 miles on mixed terrain. Train it until it's automatic."
-    },
-    {
-      "category": "Over_Under",
-      "score": 48,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Clare Classic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 44,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Clare Classic's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Clare Classic\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and G Spot to prepare you for 100 miles of mixed terrain in Clare Valley, South Australia.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Durability, and Over Under to prepare you for 100 miles of mixed terrain in Clare Valley, South Australia.",
+  "generated_at": "2026-06-25"
 }

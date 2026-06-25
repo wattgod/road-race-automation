@@ -4,10 +4,10 @@
   "distance_mi": 68.0,
   "demands": {
     "durability": 2,
-    "climbing": 1,
+    "climbing": 5,
     "vo2_power": 6,
-    "threshold": 5,
-    "technical": 0,
+    "threshold": 6,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 10,
     "race_specificity": 9
@@ -25,13 +25,51 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 63,
+      "score": 77,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
       "workout_context": "Race-pace efforts that mimic UCI Granfondo Bogot\u00e1's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before December."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 70,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "UCI Granfondo Bogot\u00e1's flat forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 68 miles."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 59,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "72ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Over_Under",
+      "score": 50,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At UCI Granfondo Bogot\u00e1, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "G_Spot",
+      "score": 47,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of UCI Granfondo Bogot\u00e1. Train it until it feels boring."
     },
     {
       "category": "Durability",
@@ -53,33 +91,31 @@
       "workout_context": "Base fitness for UCI Granfondo Bogot\u00e1. Without this, the hard workouts break you down instead of building you up."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 42,
+      "category": "Critical_Power",
+      "score": 40,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Above CP Repeats",
+        "W-Prime Depletion"
       ],
-      "workout_context": "UCI Granfondo Bogot\u00e1's flat forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 68 miles."
+      "workout_context": "How long can you hold 105% FTP before you blow? At UCI Granfondo Bogot\u00e1, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "TT_Threshold",
-      "score": 38,
+      "category": "Anaerobic_Capacity",
+      "score": 37,
       "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "72ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on flat. If you haven't trained them, you'll crack."
     },
     {
-      "category": "G_Spot",
-      "score": 31,
+      "category": "Mixed_Climbing",
+      "score": 35,
       "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of UCI Granfondo Bogot\u00e1. Train it until it feels boring."
+      "workout_context": "Varied gradients on flat demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "Blended",
@@ -89,48 +125,13 @@
         "Endurance with Spikes"
       ],
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,921ft of climbing on flat does to your power file on race day."
-    },
-    {
-      "category": "Anaerobic_Capacity",
-      "score": 28,
-      "workouts": [
-        "2min Killers",
-        "90sec Repeats"
-      ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on flat. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Over_Under",
-      "score": 23,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At UCI Granfondo Bogot\u00e1, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 23,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
-    },
-    {
-      "category": "LT1_MAF",
-      "score": 23,
-      "workouts": [
-        "MAF Capped Ride",
-        "LT1 Assessment"
-      ],
-      "workout_context": "Below LT1, you burn fat. Above it, you burn glycogen. For 68 miles, a higher LT1 means slower bonk."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 40\u201360g carbs/hour for UCI Granfondo Bogot\u00e1\u2019s 68 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "UCI Granfondo Bogot\u00e1 with 4,921ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "UCI Granfondo Bogot\u00e1 with 4,921ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "terrain": "Mixed terrain at UCI Granfondo Bogot\u00e1 requires surface adaptability. Include weekly rides on flat to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Durability to prepare you for 68 miles of flat in Bogot\u00e1, Colombia.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Gravel Specific to prepare you for 68 miles of flat in Bogot\u00e1, Colombia.",
+  "generated_at": "2026-06-25"
 }

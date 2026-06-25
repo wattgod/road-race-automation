@@ -4,11 +4,11 @@
   "distance_mi": 150.0,
   "demands": {
     "durability": 8,
-    "climbing": 1,
+    "climbing": 6,
     "vo2_power": 9,
-    "threshold": 7,
-    "technical": 0,
-    "heat_resilience": 0,
+    "threshold": 8,
+    "technical": 8,
+    "heat_resilience": 6,
     "altitude": 2,
     "race_specificity": 10
   },
@@ -24,18 +24,17 @@
       "workout_context": "150 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "VO2max",
-      "score": 82,
+      "category": "Gravel_Specific",
+      "score": 86,
       "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "7,415ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "We Ride Flanders / Ronde van Vlaanderen Cyclo's belgian cobblestones and short steep bergs forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 150 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 77,
+      "score": 82,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +44,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 58,
+      "score": 65,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -54,13 +53,41 @@
       "workout_context": "We Ride Flanders / Ronde van Vlaanderen Cyclo's belgian cobblestones and short steep bergs rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Blended",
-      "score": 56,
+      "category": "VO2max",
+      "score": 63,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,415ft of climbing on belgian cobblestones and short steep bergs does to your power file on race day."
+      "workout_context": "7,415ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 58,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At We Ride Flanders / Ronde van Vlaanderen Cyclo, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Endurance",
+      "score": 55,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 150 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Over_Under",
+      "score": 53,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At We Ride Flanders / Ronde van Vlaanderen Cyclo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "HVLI_Extended",
@@ -73,26 +100,8 @@
       "workout_context": "150 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 51,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "We Ride Flanders / Ronde van Vlaanderen Cyclo's belgian cobblestones and short steep bergs forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 150 miles."
-    },
-    {
-      "category": "Endurance",
-      "score": 49,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 150 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "G_Spot",
-      "score": 47,
+      "score": 51,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -102,7 +111,7 @@
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 46,
+      "score": 51,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -110,27 +119,20 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on belgian cobblestones and short steep bergs. If you haven't trained them, you'll crack."
     },
     {
-      "category": "Tempo",
-      "score": 38,
+      "category": "Blended",
+      "score": 43,
       "workouts": [
-        "Tempo Blocks",
-        "Extended Tempo"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "Tempo is We Ride Flanders / Ronde van Vlaanderen Cyclo's race pace. The wattage you'll hold for 150 miles on belgian cobblestones and short steep bergs. Train it until it's automatic."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 36,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 150 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,415ft of climbing on belgian cobblestones and short steep bergs does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 150 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 150 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
+    "heat": "April in Antwerp to Oudenaarde, Belgium can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before We Ride Flanders / Ronde van Vlaanderen Cyclo. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Ultra-distance fueling for 150 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 150 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "terrain": "Highly technical terrain at We Ride Flanders / Ronde van Vlaanderen Cyclo demands practice on similar surfaces. Ride belgian cobblestones and short steep bergs at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 150 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 150 miles of belgian cobblestones and short steep bergs in Antwerp to Oudenaarde, Belgium.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, Gravel Specific, and Race Simulation to prepare you for 150 miles of belgian cobblestones and short steep bergs in Antwerp to Oudenaarde, Belgium.",
+  "generated_at": "2026-06-25"
 }

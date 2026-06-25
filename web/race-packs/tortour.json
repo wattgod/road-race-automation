@@ -4,10 +4,10 @@
   "distance_mi": 621.0,
   "demands": {
     "durability": 10,
-    "climbing": 9,
+    "climbing": 10,
     "vo2_power": 6,
-    "threshold": 4,
-    "technical": 0,
+    "threshold": 5,
+    "technical": 4,
     "heat_resilience": 0,
     "altitude": 8,
     "race_specificity": 10
@@ -34,17 +34,8 @@
       "workout_context": "45,932ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Endurance",
-      "score": 71,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 621 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 67,
+      "score": 80,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,7 +45,7 @@
     },
     {
       "category": "Over_Under",
-      "score": 63,
+      "score": 72,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -62,8 +53,26 @@
       "workout_context": "At TORTOUR, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
+      "category": "Endurance",
+      "score": 71,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 621 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Gravel_Specific",
+      "score": 71,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "TORTOUR's paved Swiss roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 621 miles."
+    },
+    {
       "category": "Mixed_Climbing",
-      "score": 60,
+      "score": 67,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -72,7 +81,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 57,
+      "score": 67,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -100,17 +109,8 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 45,932ft of climbing on paved Swiss roads does to your power file on race day."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 44,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "TORTOUR's paved Swiss roads forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 621 miles."
-    },
-    {
       "category": "G_Spot",
-      "score": 42,
+      "score": 50,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -120,7 +120,7 @@
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 40,
+      "score": 44,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
@@ -130,8 +130,9 @@
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 621 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 621 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "TORTOUR with 45,932ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Alpine pass summits at night: near-freezing conditions at 2,000m+ while sleep-deprived; Extreme temperature swings: 30C valleys to 5C summits, repeated across the route."
+    "altitude": "TORTOUR with 45,932ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Alpine pass summits at night: near-freezing conditions at 2,000m+ while sleep-deprived; Extreme temperature swings: 30C valleys to 5C summits, repeated across the route.",
+    "terrain": "Mixed terrain at TORTOUR requires surface adaptability. Include weekly rides on paved swiss roads to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 621 miles of paved swiss roads in Schaffhausen, Switzerland.",
-  "generated_at": "2026-06-09"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 621 miles of paved swiss roads in Schaffhausen, Switzerland.",
+  "generated_at": "2026-06-25"
 }
