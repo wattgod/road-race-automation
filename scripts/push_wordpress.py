@@ -1948,7 +1948,7 @@ def sync_ga4():
             capture_output=True, text=True, timeout=15, check=True,
         )
         print("✓ Deployed rl-ga4.php mu-plugin")
-        print("  GA4 tracking: G-EJJZ9T6M52 (replaces MonsterInsights)")
+        print("  GA4 tracking: G-WQ7W8XN11N (replaces MonsterInsights)")
         return True
     except Exception as e:
         print(f"✗ Failed to deploy GA4 mu-plugin: {e}")

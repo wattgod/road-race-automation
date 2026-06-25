@@ -22,7 +22,7 @@ function rl_ga4_tracking() {
     if ( current_user_can( 'edit_posts' ) ) {
         return;
     }
-    $id = 'G-EJJZ9T6M52';
+    $id = 'G-WQ7W8XN11N';
     echo '<!-- Roadie Labs GA4 -->' . "\n";
     echo '<script async src="https://www.googletagmanager.com/gtag/js?id=' . esc_attr( $id ) . '"></script>' . "\n";
     echo '<script>' . "\n";
