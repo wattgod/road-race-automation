@@ -1,0 +1,1588 @@
+/* rl-search self-contained tokens */
+:root{
+  --rl-color-cool-white: #f5f5f0;
+  --rl-color-light-steel: #b8b8b0;
+  --rl-color-near-black: #1a1a1a;
+  --rl-color-primary-navy: #1a1a1a;
+  --rl-color-secondary-blue: #777777;
+  --rl-color-silver: #d0d0c8;
+  --rl-color-tier-1: #1a1a1a;
+  --rl-color-tier-2: #4a4a4a;
+  --rl-color-tier-3: #777777;
+  --rl-color-tier-4: #aaaaaa;
+  --rl-color-white: #ffffff;
+  --rl-font-data: 'Sometype Mono', monospace;
+  --rl-font-editorial: 'Source Serif 4', Georgia, serif;
+}
+
+    /* Self-hosted fonts — loaded from race page assets */
+    @font-face {
+      font-family: 'Sometype Mono';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('/race/assets/fonts/SometypeMono-normal-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Source Serif 4';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('/race/assets/fonts/SourceSerif4-normal-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* Brand tokens */
+    #rl-race-search {
+      --rl-color-near-black: #3a2e25;
+      --rl-color-primary-navy: #59473c;
+      --rl-color-secondary-blue: #7d695d;
+      --rl-color-silver: #d4c5b9;
+      --rl-color-light-steel: #ede4d8;
+      --rl-color-cool-white: #f5efe6;
+      --rl-color-secondary-blue: #9a7e0a;
+      --rl-color-primary-navy: #178079;
+      --rl-color-near-black: #1a1613;
+      --rl-color-white: #ffffff;
+      --rl-color-tier-1: #59473c;
+      --rl-color-tier-2: #7d695d;
+      --rl-color-tier-3: #766a5e;
+      --rl-color-tier-4: #5e6868;
+      --rl-font-data: 'Sometype Mono', monospace;
+      --rl-font-editorial: 'Source Serif 4', Georgia, serif;
+    }
+
+    /* All selectors prefixed with #rl-race-search to beat WP theme specificity */
+    #rl-race-search {
+      font-family: var(--rl-font-data) !important;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search *, #rl-race-search *::before, #rl-race-search *::after {
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+    /* Mobile touch resets */
+    #rl-race-search a,
+    #rl-race-search button,
+    #rl-race-search select,
+    #rl-race-search input {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* ── Questionnaire ── */
+    #rl-race-search .rl-questionnaire {
+      margin-bottom: 24px;
+      border: 3px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-questionnaire-header {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    #rl-race-search .rl-questionnaire-header h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--rl-color-white) !important;
+    }
+    #rl-race-search .rl-questionnaire-toggle {
+      font-size: 18px;
+      color: var(--rl-color-white) !important;
+      transition: transform 0.2s;
+    }
+    #rl-race-search .rl-questionnaire-toggle.collapsed { transform: rotate(-90deg); }
+    #rl-race-search .rl-questionnaire-body {
+      padding: 20px;
+      background: var(--rl-color-cool-white) !important;
+      border-top: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-questionnaire-body.collapsed { display: none; }
+    #rl-race-search .rl-slider-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 32px;
+    }
+    #rl-race-search .rl-slider-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    #rl-race-search .rl-slider-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--rl-color-near-black) !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search .rl-slider-endpoints {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--rl-color-secondary-blue) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-slider-row input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 12px;
+      background: var(--rl-color-light-steel);
+      outline: none;
+      cursor: pointer;
+      margin: 8px 0;
+    }
+    #rl-race-search .rl-slider-row input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      background: var(--rl-color-primary-navy);
+      border: 2px solid var(--rl-color-near-black);
+      cursor: pointer;
+    }
+    #rl-race-search .rl-slider-row input[type="range"]::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      background: var(--rl-color-primary-navy);
+      border: 2px solid var(--rl-color-near-black);
+      border-radius: 0;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-slider-row input[type="range"]::-webkit-slider-runnable-track {
+      height: 12px;
+      background: var(--rl-color-light-steel);
+    }
+    #rl-race-search .rl-slider-row input[type="range"]::-moz-range-track {
+      height: 12px;
+      background: var(--rl-color-light-steel);
+    }
+    #rl-race-search .rl-questionnaire-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      align-items: center;
+    }
+    #rl-race-search .rl-btn-match {
+      padding: 10px 24px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border: 3px solid var(--rl-color-primary-navy) !important;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-btn-match:hover { background: var(--rl-color-secondary-blue) !important; border-color: var(--rl-color-secondary-blue) !important; }
+    #rl-race-search .rl-btn-reset {
+      padding: 10px 24px;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-btn-reset:hover { background: var(--rl-color-primary-navy) !important; color: var(--rl-color-white) !important; }
+    #rl-race-search .rl-match-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--rl-color-near-black) !important;
+      color: var(--rl-color-white) !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Distance badge (Near Me) ── */
+    #rl-race-search .rl-distance-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 10px;
+      font-weight: 700;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Near Me bar ── */
+    #rl-race-search .rl-nearme-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    #rl-race-search .rl-nearme-btn {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      padding: 6px 16px !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #rl-race-search .rl-nearme-btn:hover {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+    }
+    #rl-race-search .rl-nearme-btn.active {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-nearme-radius {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      padding: 6px 8px !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+    }
+
+    /* ── Filters ── */
+    #rl-race-search .rl-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--rl-color-cool-white) !important;
+      border: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 140px;
+    }
+    #rl-race-search .rl-filter-group label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-filter-group select,
+    #rl-race-search .rl-filter-group input {
+      padding: 6px 8px;
+      border: 2px solid var(--rl-color-near-black) !important;
+      font-size: 13px;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-search-input {
+      flex: 1;
+      min-width: 200px;
+    }
+    #rl-race-search .rl-search-input input {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    /* ── Results header ── */
+    #rl-race-search .rl-results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: var(--rl-color-near-black) !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search button.rl-sort-btn {
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-near-black) !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      padding: 4px 10px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search button.rl-sort-btn.active {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search button.rl-sort-btn:hover {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+
+    /* ── Tier sections ── */
+    #rl-race-search .rl-tier-section {
+      margin-bottom: 24px;
+      border: 3px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-tier-section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      cursor: pointer;
+      user-select: none;
+      background: var(--rl-color-cool-white) !important;
+      border-left: 6px solid var(--rl-color-near-black);
+      border-top: none; border-right: none; border-bottom: none;
+      width: 100%;
+      font: inherit;
+      text-align: left;
+      outline-offset: -2px;
+    }
+    #rl-race-search .rl-tier-section-header.tier-1 { border-left-color: var(--rl-color-tier-1) !important; background: var(--rl-color-tier-1) !important; color: var(--rl-color-white) !important; }
+    #rl-race-search .rl-tier-section-header.tier-1 h3 { color: var(--rl-color-white) !important; }
+    #rl-race-search .rl-tier-section-header.tier-1 .rl-tier-section-count { color: var(--rl-color-silver) !important; }
+    #rl-race-search .rl-tier-section-header.tier-1 .rl-tier-section-chevron { color: var(--rl-color-white) !important; }
+    #rl-race-search .rl-tier-section-header.tier-2 { border-left-color: var(--rl-color-tier-2) !important; }
+    #rl-race-search .rl-tier-section-header.tier-3 { border-left-color: var(--rl-color-tier-3) !important; }
+    #rl-race-search .rl-tier-section-header.tier-4 { border-left-color: var(--rl-color-tier-4) !important; }
+    #rl-race-search .rl-tier-section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #rl-race-search .rl-tier-section-title h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-tier-name-link {
+      color: inherit !important;
+      text-decoration: none;
+    }
+    #rl-race-search .rl-tier-name-link:hover {
+      text-decoration: underline;
+    }
+    #rl-race-search .rl-tier-section-count {
+      font-size: 11px;
+      color: var(--rl-color-secondary-blue) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-tier-section-desc {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 11px; color: var(--rl-color-secondary-blue); margin: 4px 0 0 0;
+      line-height: 1.5; font-weight: 400;
+      width: 100%; flex-basis: 100%;
+    }
+    #rl-race-search .rl-tier-section-header.tier-1 .rl-tier-section-desc { color: var(--rl-color-silver); }
+    #rl-race-search .rl-tier-section-chevron {
+      font-size: 16px;
+      color: var(--rl-color-near-black) !important;
+      transition: transform 0.2s;
+    }
+    #rl-race-search .rl-tier-section-chevron.collapsed { transform: rotate(-90deg); }
+    #rl-race-search .rl-tier-section-body {
+      padding: 16px;
+      background: var(--rl-color-cool-white) !important;
+      border-top: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-tier-section-body.collapsed { display: none; }
+
+    /* ── Card grid ── */
+    #rl-race-search .rl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+    #rl-race-search .rl-card {
+      border: 2px solid var(--rl-color-near-black) !important;
+      padding: 16px;
+      background: var(--rl-color-cool-white) !important;
+      overflow: hidden;
+    }
+    /* Cards WITH thumbnails: remove card padding, add it to children instead */
+    #rl-race-search .rl-card.rl-card-has-thumb { padding: 0; }
+    #rl-race-search .rl-card-thumb {
+      width: 100%; height: 140px; overflow: hidden;
+      border-bottom: 1px solid var(--rl-color-silver);
+    }
+    #rl-race-search .rl-card-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    #rl-race-search .rl-card-has-thumb .rl-card-header,
+    #rl-race-search .rl-card-has-thumb .rl-card-score-row,
+    #rl-race-search .rl-card-has-thumb .rl-card-meta,
+    #rl-race-search .rl-card-has-thumb .rl-card-stats,
+    #rl-race-search .rl-card-has-thumb .rl-card-tagline,
+    #rl-race-search .rl-card-has-thumb .rl-card-transcript-snippet {
+      padding-left: 16px; padding-right: 16px;
+    }
+    #rl-race-search .rl-card-has-thumb .rl-card-header { padding-top: 12px; }
+    #rl-race-search .rl-card-has-thumb .rl-card-stats { padding-bottom: 12px; }
+    #rl-race-search .rl-card-has-thumb .rl-card-tagline { padding-bottom: 12px; }
+    #rl-race-search .rl-card-has-thumb .rl-card-transcript-snippet { padding-bottom: 12px; }
+    #rl-race-search .rl-card:hover {
+      background: var(--rl-color-light-steel) !important;
+    }
+    #rl-race-search .rl-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    #rl-race-search a.rl-card-name,
+    #rl-race-search span.rl-card-name {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--rl-color-near-black) !important;
+      text-decoration: none !important;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    #rl-race-search a.rl-card-name:hover { text-decoration: underline !important; color: var(--rl-color-near-black) !important; }
+    #rl-race-search span.rl-card-name.no-link { cursor: default; }
+    #rl-race-search span.rl-card-name.no-link:hover { text-decoration: none !important; }
+    #rl-race-search .rl-tier-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      border: 2px solid var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-tier-1 { background: var(--rl-color-tier-1) !important; color: var(--rl-color-white) !important; }
+    #rl-race-search .rl-tier-2 { background: var(--rl-color-cool-white) !important; color: var(--rl-color-near-black) !important; border-color: var(--rl-color-near-black) !important; }
+    #rl-race-search .rl-tier-3 { background: var(--rl-color-cool-white) !important; color: var(--rl-color-tier-3) !important; border-color: var(--rl-color-tier-3) !important; }
+    #rl-race-search .rl-tier-4 { background: var(--rl-color-cool-white) !important; color: var(--rl-color-tier-4) !important; border-color: var(--rl-color-tier-4) !important; }
+    #rl-race-search .rl-discipline-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-primary-navy) !important;
+      background: var(--rl-color-cool-white) !important;
+      white-space: nowrap;
+    }
+    #rl-race-search .rl-series-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-primary-navy) !important;
+      background: transparent !important;
+      white-space: nowrap;
+    }
+    #rl-race-search .rl-series-badge:hover {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-cool-white) !important;
+    }
+    #rl-race-search .rl-card-meta {
+      font-size: 12px;
+      color: var(--rl-color-secondary-blue) !important;
+      margin-bottom: 8px;
+    }
+    #rl-race-search .rl-card-stats {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    #rl-race-search .rl-stat { display: flex; flex-direction: column; }
+    #rl-race-search .rl-stat-val { font-weight: 700; font-size: 15px; color: var(--rl-color-near-black) !important; }
+    #rl-race-search .rl-stat-label { font-size: 10px; color: var(--rl-color-secondary-blue) !important; text-transform: uppercase; letter-spacing: 1px; }
+    #rl-race-search .rl-card-tagline {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 12px;
+      color: var(--rl-color-secondary-blue) !important;
+      font-style: italic;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* ── Transcript snippet ── */
+    #rl-race-search .rl-card-transcript-snippet {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 11px;
+      color: var(--rl-color-secondary-blue) !important;
+      margin-top: 8px;
+      line-height: 1.4;
+      border-left: 2px solid var(--rl-color-primary-navy);
+      padding-left: 8px;
+    }
+    #rl-race-search .rl-card-transcript-label {
+      font-family: var(--rl-font-data) !important;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--rl-color-primary-navy);
+      margin-right: 4px;
+    }
+    #rl-race-search .rl-card-transcript-snippet mark {
+      background: #d1f0ee;
+      background: color-mix(in srgb, var(--rl-color-primary-navy) 20%, transparent);
+      color: #3a2e25;
+      color: var(--rl-color-near-black);
+    }
+
+    /* ── Score bar + breakdown ── */
+    #rl-race-search .rl-score-bar {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+    #rl-race-search .rl-score-track {
+      flex: 1;
+      height: 6px;
+      background: var(--rl-color-light-steel) !important;
+      border: 1px solid var(--rl-color-near-black);
+      overflow: hidden;
+    }
+    #rl-race-search .rl-score-fill {
+      height: 100%;
+      transition: width 0.3s;
+    }
+    #rl-race-search .rl-score-num {
+      font-size: 13px;
+      font-weight: 700;
+      min-width: 28px;
+      text-align: right;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-score-breakdown {
+      display: none;
+      margin-top: 8px;
+      padding: 10px;
+      background: var(--rl-color-cool-white) !important;
+      border: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-score-breakdown.open { display: block; }
+    #rl-race-search .rl-score-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 16px;
+    }
+    #rl-race-search .rl-score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      padding: 2px 0;
+    }
+    #rl-race-search .rl-score-row-label { color: var(--rl-color-near-black) !important; text-transform: uppercase; letter-spacing: 0.5px; font-size: 10px; }
+    #rl-race-search .rl-score-row-dots { display: flex; gap: 3px; }
+    #rl-race-search .rl-score-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--rl-color-light-steel) !important;
+      border: 1px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-score-dot.filled { background: var(--rl-color-near-black) !important; }
+    #rl-race-search .rl-radar { margin-top: 8px; }
+
+    /* ── Results count ── */
+    #rl-race-search .rl-results-count {
+      font-family: var(--rl-font-data);
+      font-size: 13px;
+      color: var(--rl-color-secondary-blue) !important;
+      text-align: right;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Load more (per-tier) ── */
+    #rl-race-search button.rl-load-more {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      background: var(--rl-color-cool-white) !important;
+      color: var(--rl-color-near-black) !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    #rl-race-search button.rl-load-more:hover { background: var(--rl-color-primary-navy) !important; color: var(--rl-color-white) !important; border-color: var(--rl-color-primary-navy) !important; }
+
+    /* ── Saved filter configs bar ── */
+    #rl-race-search .rl-saved-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    #rl-race-search .rl-saved-btn {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      padding: 6px 16px !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #rl-race-search .rl-saved-btn:hover {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+    }
+    #rl-race-search .rl-saved-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    #rl-race-search .rl-saved-btn:disabled:hover {
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-saved-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      padding: 4px 10px !important;
+      border: 2px solid var(--rl-color-secondary-blue) !important;
+      border-left: 4px solid var(--rl-color-secondary-blue) !important;
+      background: var(--rl-color-cool-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #rl-race-search .rl-saved-pill:hover {
+      background: var(--rl-color-silver) !important;
+    }
+    #rl-race-search .rl-saved-pill.rl-saved-active {
+      border-color: var(--rl-color-primary-navy) !important;
+      border-left-color: var(--rl-color-primary-navy) !important;
+      background: rgba(23,128,121,0.08) !important;
+    }
+    #rl-race-search .rl-saved-pill button {
+      background: none !important;
+      border: none !important;
+      cursor: pointer;
+      color: var(--rl-color-secondary-blue);
+      font-size: 14px;
+      margin-left: 2px;
+      padding: 0;
+      line-height: 1;
+    }
+
+    /* ── Active filter pills ── */
+    #rl-race-search .rl-active-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    #rl-race-search .rl-filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-filter-pill button {
+      background: none !important;
+      border: none !important;
+      color: var(--rl-color-white) !important;
+      cursor: pointer;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    #rl-race-search .rl-filter-pill button:hover { opacity: 1; }
+    #rl-race-search button.rl-clear-all {
+      background: var(--rl-color-cool-white) !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      color: var(--rl-color-near-black) !important;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+    }
+    #rl-race-search button.rl-clear-all:hover { background: var(--rl-color-primary-navy) !important; color: var(--rl-color-white) !important; border-color: var(--rl-color-primary-navy) !important; }
+
+    /* ── Widget footer ── */
+    #rl-race-search .rl-widget-footer {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border: 2px solid var(--rl-color-near-black);
+      background: var(--rl-color-near-black) !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    #rl-race-search .rl-widget-footer-brand {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rl-color-silver) !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    #rl-race-search .rl-widget-footer a {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rl-color-silver) !important;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    #rl-race-search .rl-widget-footer a:hover {
+      color: var(--rl-color-secondary-blue) !important;
+      text-decoration: underline !important;
+    }
+
+    /* ── Methodology link in results header ── */
+    #rl-race-search a.rl-methodology-link {
+      font-size: 11px;
+      color: var(--rl-color-secondary-blue) !important;
+      text-decoration: none !important;
+      letter-spacing: 0.5px;
+    }
+    #rl-race-search a.rl-methodology-link:hover {
+      color: var(--rl-color-primary-navy) !important;
+      text-decoration: underline !important;
+    }
+
+    /* ── Map/List view toggle ── */
+    #rl-race-search .rl-view-toggle {
+      display: flex;
+      gap: 0;
+      margin-bottom: 12px;
+    }
+    #rl-race-search .rl-view-btn {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.5px !important;
+      padding: 8px 20px !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-near-black) !important;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    #rl-race-search .rl-view-btn + .rl-view-btn { border-left: none !important; }
+    #rl-race-search .rl-view-btn.active {
+      background: var(--rl-color-near-black) !important;
+      color: var(--rl-color-white) !important;
+    }
+
+    /* ── Map container ── */
+    #rl-race-search #rl-map-container {
+      display: none;
+      width: 100%;
+      height: 500px;
+      border: 3px solid var(--rl-color-near-black);
+      margin-bottom: 24px;
+      z-index: 1;
+    }
+    #rl-race-search #rl-map-container.visible { display: block; }
+    /* Leaflet popup overrides */
+    #rl-race-search .rl-map-popup { font-family: 'Sometype Mono', monospace; }
+    #rl-race-search .rl-map-popup .rl-popup-name {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 14px; font-weight: 700; margin: 0 0 4px;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-name a {
+      color: var(--rl-color-near-black); text-decoration: none;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-name a:hover { text-decoration: underline; }
+    #rl-race-search .rl-map-popup .rl-popup-meta {
+      font-size: 10px; color: var(--rl-color-secondary-blue); margin: 0 0 6px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-stats {
+      font-size: 11px; color: var(--rl-color-near-black); margin: 0;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-score {
+      display: inline-block; padding: 1px 6px; font-size: 11px;
+      font-weight: 700; background: var(--rl-color-near-black); color: var(--rl-color-white);
+      margin-right: 4px;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-route {
+      margin: 4px 0 0; font-size: 10px; letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-route a {
+      color: var(--rl-color-primary-navy); text-decoration: none; font-weight: 700; text-transform: uppercase;
+    }
+    #rl-race-search .rl-map-popup .rl-popup-route a:hover { text-decoration: underline; }
+    /* Leaflet overrides — neo-brutalist popups */
+    #rl-race-search .leaflet-popup-content-wrapper {
+      border: 2px solid var(--rl-color-near-black) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+    #rl-race-search .leaflet-popup-tip-container { display: none !important; }
+    #rl-race-search .leaflet-popup-close-button {
+      color: var(--rl-color-secondary-blue) !important;
+      font-size: 18px !important;
+    }
+    #rl-race-search .leaflet-popup-close-button:hover { color: var(--rl-color-near-black) !important; }
+    #rl-race-search .leaflet-popup-content {
+      margin: 10px 12px !important;
+      font-family: var(--rl-font-data) !important;
+    }
+    #rl-race-search .leaflet-container a { color: var(--rl-color-primary-navy) !important; }
+
+    /* ── Calendar view ── */
+    #rl-race-search .rl-cal-month {
+      margin-bottom: 20px;
+      border: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-cal-month-header {
+      padding: 10px 16px;
+      background: var(--rl-color-near-black) !important;
+      color: var(--rl-color-white) !important;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #rl-race-search .rl-cal-month-count {
+      font-size: 11px;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #rl-race-search .rl-cal-race {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--rl-color-light-steel);
+      background: var(--rl-color-cool-white) !important;
+    }
+    #rl-race-search .rl-cal-race:last-child { border-bottom: none; }
+    #rl-race-search .rl-cal-race:hover { background: var(--rl-color-light-steel) !important; }
+    #rl-race-search .rl-cal-date {
+      min-width: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rl-color-secondary-blue) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-cal-info { flex: 1; min-width: 0; }
+    #rl-race-search .rl-cal-name {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--rl-color-near-black) !important;
+      text-decoration: none !important;
+    }
+    #rl-race-search .rl-cal-name:hover { text-decoration: underline !important; }
+    #rl-race-search .rl-cal-loc {
+      font-size: 11px;
+      color: var(--rl-color-secondary-blue) !important;
+    }
+    #rl-race-search .rl-cal-score {
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 28px;
+      text-align: center;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-cal-now {
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-cal-now .rl-cal-month-header {
+      background: var(--rl-color-primary-navy) !important;
+    }
+
+    /* ── Skeleton loader ── */
+    @keyframes rl-shimmer {
+      0% { background-position: -200px 0; }
+      100% { background-position: 200px 0; }
+    }
+    #rl-race-search .rl-skeleton-loader { padding: 0; }
+    #rl-race-search .rl-skeleton-tier-bar {
+      height: 44px;
+      background: var(--rl-color-light-steel);
+      border: 2px solid var(--rl-color-near-black);
+      margin-bottom: 12px;
+    }
+    #rl-race-search .rl-skeleton-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    #rl-race-search .rl-skeleton-card {
+      border: 2px solid var(--rl-color-light-steel);
+      padding: 20px;
+      min-height: 80px;
+    }
+    #rl-race-search .rl-skeleton-line {
+      height: 12px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, var(--rl-color-light-steel) 25%, var(--rl-color-cool-white) 50%, var(--rl-color-light-steel) 75%);
+      background-size: 400px 100%;
+      animation: rl-shimmer 1.5s infinite linear;
+    }
+    #rl-race-search .rl-skeleton-line.w40 { width: 40%; }
+    #rl-race-search .rl-skeleton-line.w60 { width: 60%; }
+    #rl-race-search .rl-skeleton-line.w80 { width: 80%; }
+
+    /* ── No results ── */
+    #rl-race-search .rl-no-results {
+      text-align: center;
+      padding: 40px;
+      color: var(--rl-color-secondary-blue) !important;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search .rl-no-results-suggestions {
+      margin-top: 16px;
+      font-size: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.8;
+      color: var(--rl-color-secondary-blue) !important;
+    }
+    #rl-race-search .rl-no-results-reset {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 16px;
+      background: var(--rl-color-primary-navy);
+      color: var(--rl-color-white) !important;
+      border: 2px solid var(--rl-color-near-black);
+      font-family: var(--rl-font-data);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    #rl-race-search .rl-no-results-reset:hover {
+      background: var(--rl-color-near-black);
+    }
+
+    /* ── Mobile filter toggle ── */
+    #rl-race-search button.rl-filter-toggle {
+      display: none;
+      width: 100%;
+      padding: 10px;
+      background: var(--rl-color-cool-white) !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      text-align: left;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search button.rl-filter-toggle::after { content: ' ▾'; float: right; }
+    #rl-race-search button.rl-filter-toggle.open::after { content: ' ▴'; }
+
+    /* ── Favorites ── */
+    #rl-race-search .rl-fav-btn {
+      background: none !important;
+      border: none !important;
+      cursor: pointer;
+      padding: 0 4px;
+      font-size: 18px;
+      line-height: 1;
+      color: var(--rl-color-silver) !important;
+      flex-shrink: 0;
+    }
+    #rl-race-search .rl-fav-btn:hover { color: var(--rl-color-primary-navy) !important; }
+    #rl-race-search .rl-fav-btn.rl-fav-active { color: var(--rl-color-primary-navy) !important; }
+    #rl-race-search .rl-fav-toggle-btn {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      padding: 6px 16px !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #rl-race-search .rl-fav-toggle-btn:hover {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+    }
+    #rl-race-search .rl-fav-toggle-btn.active {
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+
+    /* ── Compare checkbox ── */
+    #rl-race-search .rl-compare-check {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-right: 6px;
+    }
+    #rl-race-search .rl-compare-check input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    #rl-race-search .rl-compare-check-box {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--rl-color-near-black) !important;
+      background: var(--rl-color-white) !important;
+      transition: background 0.15s;
+    }
+    #rl-race-search .rl-compare-check input:checked + .rl-compare-check-box {
+      background: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-compare-check input:checked + .rl-compare-check-box::after {
+      content: '\2713';
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      color: var(--rl-color-white);
+    }
+
+    /* ── Compare bar ── */
+    #rl-race-search .rl-compare-bar {
+      position: sticky;
+      bottom: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      background: var(--rl-color-near-black) !important;
+      border: 3px solid var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-compare-bar-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1;
+    }
+    #rl-race-search .rl-compare-bar-actions {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    #rl-race-search .rl-btn-compare {
+      padding: 8px 20px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border: 2px solid var(--rl-color-primary-navy) !important;
+      font-family: var(--rl-font-data) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-btn-compare:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    #rl-race-search .rl-btn-compare:not(:disabled):hover {
+      background: var(--rl-color-primary-navy) !important;
+      border-color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-btn-compare-clear {
+      padding: 8px 16px;
+      background: transparent !important;
+      color: var(--rl-color-silver) !important;
+      border: 2px solid var(--rl-color-silver) !important;
+      font-family: var(--rl-font-data) !important;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-btn-compare-clear:hover {
+      background: var(--rl-color-silver) !important;
+      color: var(--rl-color-near-black) !important;
+    }
+
+    /* ── Compare panel ── */
+    #rl-race-search .rl-compare-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border: 3px solid var(--rl-color-primary-navy) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search .rl-compare-banner button {
+      padding: 6px 14px;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      border: 2px solid var(--rl-color-white) !important;
+      font-family: var(--rl-font-data) !important;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-compare-banner button:hover {
+      background: var(--rl-color-secondary-blue) !important;
+      color: var(--rl-color-white) !important;
+      border-color: var(--rl-color-secondary-blue) !important;
+    }
+    #rl-race-search .rl-compare-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 24px;
+      border: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    #rl-race-search .rl-compare-table th,
+    #rl-race-search .rl-compare-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--rl-color-light-steel);
+      text-align: left;
+      vertical-align: middle;
+    }
+    #rl-race-search .rl-compare-table thead th {
+      background: var(--rl-color-cool-white) !important;
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--rl-color-near-black) !important;
+      border-bottom: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-compare-table thead th a {
+      color: var(--rl-color-near-black) !important;
+      text-decoration: none !important;
+    }
+    #rl-race-search .rl-compare-table thead th a:hover {
+      text-decoration: underline !important;
+    }
+    #rl-race-search .rl-compare-label-col {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--rl-color-secondary-blue) !important;
+      white-space: nowrap;
+      min-width: 90px;
+      background: var(--rl-color-cool-white) !important;
+    }
+    #rl-race-search .rl-compare-section-row td {
+      background: var(--rl-color-near-black) !important;
+      color: var(--rl-color-white) !important;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 6px 12px;
+    }
+    #rl-race-search .rl-compare-best {
+      font-weight: 700;
+      color: var(--rl-color-primary-navy) !important;
+    }
+    #rl-race-search .rl-compare-score-num {
+      font-size: 15px;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    #rl-race-search .rl-compare-radar-cell {
+      text-align: center;
+      padding: 16px !important;
+      background: var(--rl-color-cool-white) !important;
+    }
+    #rl-race-search .rl-compare-radar {
+      display: block;
+      margin: 0 auto;
+    }
+    #rl-race-search .rl-compare-legend {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    #rl-race-search .rl-compare-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-compare-legend-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 4px;
+    }
+    #rl-race-search .rl-compare-dots {
+      display: inline-flex;
+      gap: 3px;
+    }
+    #rl-race-search .rl-compare-dot-filled,
+    #rl-race-search .rl-compare-dot-best,
+    #rl-race-search .rl-compare-dot-empty {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-compare-dot-filled {
+      background: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-compare-dot-best {
+      background: var(--rl-color-primary-navy) !important;
+      border-color: var(--rl-color-primary-navy);
+    }
+    #rl-race-search .rl-compare-dot-empty {
+      background: var(--rl-color-light-steel) !important;
+    }
+    #rl-race-search .rl-compare-view-link {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rl-color-primary-navy) !important;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #rl-race-search .rl-compare-view-link:hover {
+      text-decoration: underline !important;
+    }
+
+    /* ── Match mode banner ── */
+    #rl-race-search .rl-match-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+      border: 3px solid var(--rl-color-primary-navy) !important;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #rl-race-search .rl-match-banner button {
+      padding: 6px 14px;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-primary-navy) !important;
+      border: 2px solid var(--rl-color-white) !important;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    #rl-race-search .rl-match-banner button:hover { background: var(--rl-color-secondary-blue) !important; color: var(--rl-color-white) !important; border-color: var(--rl-color-secondary-blue) !important; }
+
+    /* ── Score hero row (RT-style big score) ── */
+    #rl-race-search .rl-card-score-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    #rl-race-search .rl-card-score-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 48px;
+    }
+    #rl-race-search .rl-card-score-big {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    #rl-race-search .rl-card-score-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--rl-color-secondary-blue) !important;
+    }
+
+    /* ── Elite seal (Certified Fresh equivalent) ── */
+    #rl-race-search .rl-elite-seal {
+      flex-shrink: 0;
+    }
+
+    /* ── Terrain tags ── */
+    #rl-race-search .rl-terrain-tag {
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid var(--rl-color-secondary-blue);
+      color: var(--rl-color-secondary-blue) !important;
+      margin-right: 4px;
+    }
+    #rl-race-search .rl-stat-terrain {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    /* ── Card tier border accent ── */
+    #rl-race-search .rl-card.rl-card-tier-1 {
+      border-top: 4px solid var(--rl-color-secondary-blue) !important;
+    }
+    #rl-race-search .rl-card.rl-card-tier-2 {
+      border-top: 4px solid var(--rl-color-tier-2) !important;
+    }
+
+    /* ── Display mode toggle (ALL RACES / BY TIER) ── */
+    #rl-race-search .rl-display-toggle {
+      display: flex;
+      gap: 0;
+      margin-bottom: 12px;
+    }
+    #rl-race-search .rl-display-btn {
+      font-family: 'Sometype Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.5px !important;
+      padding: 8px 20px !important;
+      border: 2px solid var(--rl-color-near-black) !important;
+      background: var(--rl-color-white) !important;
+      color: var(--rl-color-near-black) !important;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    #rl-race-search .rl-display-btn + .rl-display-btn { border-left: none !important; }
+    #rl-race-search .rl-display-btn.active {
+      background: var(--rl-color-near-black) !important;
+      color: var(--rl-color-white) !important;
+    }
+
+    /* Compact racer badge on cards */
+    #rl-race-search .rl-card-scores {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    #rl-race-search .rl-card-scores .rl-score-bar {
+      flex: 1;
+    }
+    #rl-race-search .rl-racer-compact {
+      border: 2px solid var(--rl-color-primary-navy);
+      padding: 4px 8px;
+      text-align: center;
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+    #rl-race-search .rl-racer-compact--pending {
+      border-style: dashed;
+    }
+    #rl-race-search .rl-racer-compact-label {
+      display: block;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--rl-color-primary-navy) !important;
+      text-transform: uppercase;
+    }
+    #rl-race-search .rl-racer-compact-pct {
+      display: block;
+      font-family: var(--rl-font-editorial);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--rl-color-primary-navy) !important;
+      line-height: 1.1;
+    }
+    #rl-race-search .rl-racer-compact-count {
+      display: block;
+      font-size: 8px;
+      color: var(--rl-color-secondary-blue) !important;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      #rl-race-search .rl-grid { grid-template-columns: 1fr; }
+      #rl-race-search button.rl-filter-toggle { display: block; }
+      #rl-race-search .rl-filters { flex-direction: column; display: none; }
+      #rl-race-search .rl-filters.open { display: flex; }
+      #rl-race-search .rl-score-grid { grid-template-columns: 1fr; }
+      #rl-race-search .rl-slider-grid { grid-template-columns: 1fr; }
+      #rl-race-search .rl-questionnaire-header h1 { font-size: 13px; letter-spacing: 1px; }
+      #rl-race-search .rl-questionnaire-body { padding: 14px; }
+      #rl-race-search .rl-questionnaire-actions { flex-direction: column; align-items: stretch; }
+      #rl-race-search .rl-btn-match, #rl-race-search .rl-btn-reset { text-align: center; }
+      #rl-race-search .rl-results-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+      #rl-race-search .rl-tier-section-title h3 { font-size: 12px; letter-spacing: 1px; }
+      #rl-race-search .rl-tier-section-header { padding: 10px 12px; }
+      #rl-race-search .rl-tier-section-body { padding: 12px; }
+      #rl-race-search .rl-card { padding: 12px; }
+      #rl-race-search .rl-card-name { font-size: 13px; }
+      #rl-race-search .rl-card-header { flex-direction: column; gap: 6px; }
+      #rl-race-search .rl-match-banner { flex-direction: column; gap: 8px; text-align: center; }
+      #rl-race-search .rl-compare-banner { flex-direction: column; gap: 8px; text-align: center; }
+      #rl-race-search .rl-compare-bar { flex-direction: column; gap: 8px; }
+      #rl-race-search .rl-compare-bar-actions { justify-content: stretch; width: 100%; }
+      #rl-race-search .rl-btn-compare { flex: 1; }
+      #rl-race-search .rl-compare-table-wrap { -webkit-overflow-scrolling: touch; }
+      #rl-race-search .rl-compare-table th:not(.rl-compare-label-col),
+      #rl-race-search .rl-compare-table td:not(.rl-compare-label-col) { min-width: 140px; }
+      #rl-race-search .rl-compare-label-col { position: sticky; left: 0; z-index: 2; }
+      #rl-race-search .rl-compare-radar { width: 160px; height: 160px; }
+      #rl-race-search #rl-map-container { height: 350px; }
+      #rl-race-search .rl-cal-race { flex-wrap: wrap; gap: 6px; padding: 8px 12px; }
+      #rl-race-search .rl-cal-date { min-width: 100%; }
+      #rl-race-search .rl-view-toggle { width: 100%; }
+      #rl-race-search .rl-view-btn { flex: 1; text-align: center; }
+      #rl-race-search .rl-saved-bar { flex-wrap: wrap; }
+      #rl-race-search .rl-display-toggle { width: 100%; }
+      #rl-race-search .rl-display-btn { flex: 1; text-align: center; padding: 8px 12px !important; }
+      #rl-race-search .rl-card-score-big { font-size: 26px; }
+      /* Mobile touch targets — minimum 44px height */
+      #rl-race-search .rl-btn-match,
+      #rl-race-search .rl-btn-reset,
+      #rl-race-search .rl-btn-compare,
+      #rl-race-search .rl-filter-toggle,
+      #rl-race-search .rl-view-btn,
+      #rl-race-search .rl-display-btn,
+      #rl-race-search .rl-sort-btn,
+      #rl-race-search .rl-near-me-btn { min-height: 44px; }
+      /* Active states for tap feedback */
+      #rl-race-search .rl-card:active { border-color: var(--rl-color-secondary-blue); }
+      #rl-race-search .rl-btn-match:active,
+      #rl-race-search .rl-btn-compare:active { opacity: 0.85; }
+      #rl-race-search .rl-view-btn:active,
+      #rl-race-search .rl-display-btn:active { background: var(--rl-color-light-steel); }
+      #rl-race-search .rl-tier-section-header:active { background: var(--rl-color-light-steel); }
+    }
+
+    /* ── Static Race Directory (SEO) ── */
+    #rl-race-search .rl-race-directory {
+      margin-top: 40px;
+      border: 2px solid var(--rl-color-near-black);
+    }
+    #rl-race-search .rl-directory-heading {
+      margin: 0;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: var(--rl-color-primary-navy) !important;
+      color: var(--rl-color-white) !important;
+    }
+    #rl-race-search .rl-directory-desc {
+      font-family: var(--rl-font-editorial) !important;
+      font-size: 13px;
+      color: var(--rl-color-secondary-blue) !important;
+      padding: 12px 20px 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+    #rl-race-search .rl-directory-tier {
+      padding: 0 20px;
+    }
+    #rl-race-search .rl-directory-tier:last-child {
+      padding-bottom: 20px;
+    }
+    #rl-race-search .rl-directory-tier-heading {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 16px 0 8px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--rl-color-near-black);
+      color: var(--rl-color-near-black) !important;
+    }
+    #rl-race-search .rl-directory-tier-heading.tier-1 { border-bottom-color: var(--rl-color-tier-1); }
+    #rl-race-search .rl-directory-tier-heading.tier-2 { border-bottom-color: var(--rl-color-tier-2); }
+    #rl-race-search .rl-directory-tier-heading.tier-3 { border-bottom-color: var(--rl-color-tier-3); }
+    #rl-race-search .rl-directory-tier-heading.tier-4 { border-bottom-color: var(--rl-color-tier-4); }
+    #rl-race-search .rl-directory-tier-heading.tier-series { border-bottom-color: var(--rl-color-primary-navy); }
+    #rl-race-search .rl-directory-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      line-height: 1.8;
+    }
+    #rl-race-search a.rl-directory-link {
+      font-size: 12px;
+      color: var(--rl-color-near-black) !important;
+      text-decoration: none !important;
+    }
+    #rl-race-search a.rl-directory-link:hover {
+      text-decoration: underline !important;
+      color: var(--rl-color-primary-navy) !important;
+    }

@@ -1,5 +1,5 @@
 (function() {
-  const DATA_URL = '/wp-content/uploads/race-index.json?v=20260215';
+  const DATA_URL = '/search/race-index.json?v=20260625';
   const TIER_PAGE_SIZE = 20;
 
   let allRaces = [];

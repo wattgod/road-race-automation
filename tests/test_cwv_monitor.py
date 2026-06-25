@@ -114,7 +114,7 @@ class TestMonitoredURLs:
 
     EXPECTED_URLS = [
         "https://roadielabs.com/",
-        "https://roadielabs.com/road-races/",
+        "https://roadielabs.com/search/",
         "https://roadielabs.com/race/letape-du-tour/",
         "https://roadielabs.com/race/cheaha-challenge-gran-fondo/",
         "https://roadielabs.com/race/americas-most-beautiful-bike-ride/",
