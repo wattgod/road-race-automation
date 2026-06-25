@@ -555,7 +555,7 @@ def build_quiz_js() -> str:
       /* Cache */
       try{localStorage.setItem(LS_KEY,JSON.stringify({email:email,exp:Date.now()+90*86400000}));}catch(ex){}
       /* POST */
-      var payload={email:email,source:'race_quiz',race_slug:top5[0]?top5[0].s:'',race_name:top5[0]?top5[0].n:'',website:gateForm.website.value};
+      var payload={email:email,brand:'roadielabs',source:'race_quiz',race_slug:top5[0]?top5[0].s:'',race_name:top5[0]?top5[0].n:'',website:gateForm.website.value};
       fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
       if(typeof gtag==='function') gtag('event','email_capture',{source:'race_quiz'});
       showResults(top5);
@@ -629,7 +629,7 @@ def build_quiz_js() -> str:
           if(!email||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){alert('Please enter a valid email.');return;}
           if(gateForm.website&&gateForm.website.value) return;
           try{localStorage.setItem('rl-pk-fueling',JSON.stringify({email:email,exp:Date.now()+90*86400000}));}catch(ex){}
-          var payload={email:email,source:'quiz_shared',race_slug:matched[0]?matched[0].s:'',race_name:matched[0]?matched[0].n:'',website:gateForm.website.value};
+          var payload={email:email,brand:'roadielabs',source:'quiz_shared',race_slug:matched[0]?matched[0].s:'',race_name:matched[0]?matched[0].n:'',website:gateForm.website.value};
           fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
           if(typeof gtag==='function') gtag('event','email_capture',{source:'quiz_shared'});
           showResults(matched);

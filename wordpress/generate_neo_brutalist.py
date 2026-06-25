@@ -1144,6 +1144,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
     /* POST to Worker */
     var payload={
       email:email,
+      brand:'roadielabs',
       race_slug:form.race_slug.value,
       race_name:form.race_name.value,
       source:form.source.value,
@@ -1208,6 +1209,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 
     var payload={
       email:email,
+      brand:'roadielabs',
       source:'race_review',
       race_slug:form.race_slug.value,
       race_name:form.race_name.value,

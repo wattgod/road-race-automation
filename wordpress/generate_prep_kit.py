@@ -730,8 +730,10 @@ def compute_hourly_plan(hours: float, carb_rate: int, fluid_ml_hr: int,
     return plan
 
 
-# Worker URL for fueling lead intake
-FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"  # TODO: deploy Roadie Labs workers
+# Worker URL for fueling lead intake. Shared multi-brand worker — road pages
+# POST brand:'roadielabs' so leads are tagged distinctly in the shared SendGrid
+# list + notification inbox (worker: gravel-race-automation/workers/fueling-lead-intake).
+FUELING_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
 
 
 def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
@@ -2362,6 +2364,7 @@ def build_prep_kit_js() -> str:
       /* Fire-and-forget POST to Worker */
       var payload={
         email:email,
+        brand:'roadielabs',
         race_slug:gateForm.race_slug.value,
         race_name:gateForm.race_name.value,
         source:'prep_kit_gate',
@@ -2607,7 +2610,7 @@ document.querySelectorAll('.rl-guide-accordion-trigger').forEach(function(btn){
     }catch(e){}
     /* Fire-and-forget POST to Worker */
     var payload={
-      email:email,weight_lbs:weightLbs,race_slug:form.race_slug.value,
+      email:email,brand:'roadielabs',weight_lbs:weightLbs,race_slug:form.race_slug.value,
       race_name:form.race_name.value,
       height_ft:form.height_ft?form.height_ft.value:'',
       height_in:form.height_in?form.height_in.value:'',
