@@ -1,0 +1,57 @@
+name: Checkout Health Monitor
+
+# Cross-brand lessons #7/#9/#10/#14: Railway trials expire silently, services
+# show "Online" while crashing, and Stripe can reject every session while /health
+# still passes. Gravel God's checkout was broken for MONTHS undetected. A failing
+# run here emails the repo owner (GitHub Actions failure notification).
+#
+# Cadence: health check every 6h (cheap, no side effects); the full Stripe probe
+# runs once daily (~08:00 UTC) to keep incomplete-session noise low. The deep
+# probe creates an incomplete, never-charged Stripe session per brand under
+# checkout-monitor@<brand> (pipeline never runs — it fires only post-payment).
+
+on:
+  schedule:
+    - cron: '0 2,8,14,20 * * *'   # every 6h; 08:00 run also does the deep probe
+  workflow_dispatch:
+    inputs:
+      deep:
+        description: 'Run the full Stripe probe (creates incomplete sessions)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run checkout monitor
+        env:
+          # Override the webhook URL here if it ever changes.
+          CHECKOUT_WEBHOOK_URL: ${{ secrets.CHECKOUT_WEBHOOK_URL }}
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Manual run: honor the deep input.
+            if [ "${{ github.event.inputs.deep }}" = "true" ]; then
+              python scripts/checkout_monitor.py
+            else
+              python scripts/checkout_monitor.py --shallow
+            fi
+          elif [ "$HOUR" = "08" ]; then
+            # Once-daily full Stripe probe (health + both brands' Session.create).
+            python scripts/checkout_monitor.py
+          else
+            # Every other scheduled run: health only, no Stripe sessions.
+            python scripts/checkout_monitor.py --shallow
+          fi
