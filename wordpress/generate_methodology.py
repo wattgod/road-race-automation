@@ -105,34 +105,43 @@ def build_tier_system() -> str:
   </div>'''
 
 
-def build_dimensions() -> str:
-    course_rows = '''
-          <tr><td style="font-weight:700">Length</td><td>&lt;40 mi</td><td>40-60 mi</td><td>60-100 mi</td><td>100-150 mi</td><td>150+ mi</td></tr>
-          <tr><td style="font-weight:700">Technicality</td><td>Flat roads</td><td>Some rough</td><td>Mixed terrain</td><td>Technical descents</td><td>Mountain passes / extreme</td></tr>
-          <tr><td style="font-weight:700">Elevation</td><td>&lt;2,000 ft</td><td>2-4K ft</td><td>4-6K ft</td><td>6-10K ft</td><td>10,000+ ft</td></tr>
-          <tr><td style="font-weight:700">Climate</td><td>Mild / ideal</td><td>Slightly hard</td><td>Moderate</td><td>Significant</td><td>Extreme</td></tr>
-          <tr><td style="font-weight:700">Altitude</td><td>Sea level</td><td>&lt;3,000 ft</td><td>3-6K ft</td><td>6-9K ft</td><td>9,000+ ft</td></tr>
-          <tr><td style="font-weight:700">Logistics</td><td>Easy access</td><td>Minor travel</td><td>Moderate planning</td><td>Remote</td><td>Extreme remoteness</td></tr>
-          <tr><td style="font-weight:700">Adventure</td><td>Standard race</td><td>Some character</td><td>Memorable</td><td>Epic scenery</td><td>Unforgettable</td></tr>'''
+def _load_dimensions() -> list:
+    """Load the canonical dimension rubric (config is source of truth, CLAUDE.md
+    rule #6). Keeps this page from drifting from the actual scoring schema —
+    it used to list gravel dimension names (Length/Adventure)."""
+    cfg_path = Path(__file__).resolve().parent.parent / "config" / "dimensions.json"
+    return json.loads(cfg_path.read_text())["dimensions"]
 
-    editorial_rows = '''
-          <tr><td style="font-weight:700">Prestige</td><td>Unknown</td><td>Local recognition</td><td>Regional</td><td>National</td><td>International / marquee</td></tr>
-          <tr><td style="font-weight:700">Race Quality</td><td>Basic</td><td>Adequate</td><td>Good</td><td>Professional</td><td>Elite / flawless</td></tr>
-          <tr><td style="font-weight:700">Experience</td><td>Forgettable</td><td>Pleasant</td><td>Enjoyable</td><td>Memorable</td><td>Life-changing</td></tr>
-          <tr><td style="font-weight:700">Community</td><td>Sparse</td><td>Small group</td><td>Good vibe</td><td>Strong community</td><td>Legendary culture</td></tr>
-          <tr><td style="font-weight:700">Field Depth</td><td>Casual only</td><td>Some competition</td><td>Competitive</td><td>Strong pros</td><td>Elite field</td></tr>
-          <tr><td style="font-weight:700">Value</td><td>Overpriced</td><td>Below average</td><td>Fair</td><td>Good value</td><td>Exceptional</td></tr>
-          <tr><td style="font-weight:700">Expenses</td><td>Extreme ($2K+)</td><td>High ($1-2K)</td><td>Moderate ($500-1K)</td><td>Reasonable ($300-500)</td><td>Budget (&lt;$300)</td></tr>'''
+
+def _dimension_rows(dims: list) -> str:
+    """Render <tr> rows (label + 1-5 rubric) for a list of dimension dicts."""
+    rows = []
+    for d in dims:
+        rubric = d.get("rubric", {})
+        cells = "".join(f"<td>{esc(rubric.get(str(i), '—'))}</td>" for i in range(1, 6))
+        rows.append(
+            f'\n          <tr><td style="font-weight:700">{esc(d["label"])}</td>{cells}</tr>'
+        )
+    return "".join(rows)
+
+
+def build_dimensions() -> str:
+    dims = _load_dimensions()
+    course = [d for d in dims if d.get("category") == "course"]
+    editorial = [d for d in dims if d.get("category") == "editorial"]
+    course_rows = _dimension_rows(course)
+    editorial_rows = _dimension_rows(editorial)
+    n_total, n_course, n_editorial = len(dims), len(course), len(editorial)
 
     return f'''<div class="rl-section" id="dimensions">
     <div class="rl-section-header rl-section-header--dark">
       <span class="rl-section-kicker">02</span>
-      <h2 class="rl-section-title">14 Base Dimensions + Cultural Impact</h2>
+      <h2 class="rl-section-title">{n_total} Base Dimensions + Cultural Impact</h2>
     </div>
     <div class="rl-section-body">
-      <p style="margin-bottom:16px">Each race is evaluated across 14 base dimensions split into two categories, plus a Cultural Impact bonus. Every dimension is scored 1&ndash;5 by our editors with a written explanation.</p>
+      <p style="margin-bottom:16px">Each race is evaluated across {n_total} base dimensions split into two categories, plus a Cultural Impact bonus. Every dimension is scored 1&ndash;5 by our editors with a written explanation.</p>
 
-      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:24px 0 12px;color:var(--rl-color-primary-navy)">Course Profile (7 dimensions)</h3>
+      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:24px 0 12px;color:var(--rl-color-primary-navy)">Course Profile ({n_course} dimensions)</h3>
       <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-blue)">Physical and logistical demands of the race.</p>
       <div style="overflow-x:auto">
       <table class="rl-method-table rl-method-table--compact">
@@ -144,7 +153,7 @@ def build_dimensions() -> str:
       </table>
       </div>
 
-      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-navy)">Editorial (7 dimensions)</h3>
+      <h3 style="font-size:13px;text-transform:uppercase;letter-spacing:2px;margin:32px 0 12px;color:var(--rl-color-primary-navy)">Editorial ({n_editorial} dimensions)</h3>
       <p style="margin-bottom:12px;font-size:12px;color:var(--rl-color-secondary-blue)">Race quality and value proposition.</p>
       <div style="overflow-x:auto">
       <table class="rl-method-table rl-method-table--compact">
