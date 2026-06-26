@@ -73,31 +73,31 @@ def build_tier_system() -> str:
         <tbody>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#000;color:#fff;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 1</span></td>
-            <td style="font-weight:700">The Icons</td>
+            <td style="font-weight:700">Elite</td>
             <td>&ge; 80</td>
-            <td>The definitive road events. World-class fields, iconic courses, bucket-list status.</td>
-            <td><a href="{SITE_BASE_URL}/race/unbound-200/" style="color:var(--rl-color-signal-red);font-weight:700">Unbound 200</a></td>
+            <td>The definitive road events &mdash; the deepest fields and the courses that anchor the calendar.</td>
+            <td><a href="{SITE_BASE_URL}/race/letape-du-tour/" style="color:var(--rl-color-signal-red);font-weight:700">L'Etape du Tour</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#000;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 2</span></td>
-            <td style="font-weight:700">Elite</td>
+            <td style="font-weight:700">Contender</td>
             <td>&ge; 60</td>
             <td>Established races with strong reputations and competitive fields. The next tier of must-do events.</td>
-            <td><a href="{SITE_BASE_URL}/race/barry-roubaix/" style="color:var(--rl-color-signal-red);font-weight:700">Barry-Roubaix</a></td>
+            <td><a href="{SITE_BASE_URL}/race/cheaha-challenge-gran-fondo/" style="color:var(--rl-color-signal-red);font-weight:700">Cheaha Challenge Gran Fondo</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-secondary-blue);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #666">TIER 3</span></td>
-            <td style="font-weight:700">Solid</td>
+            <td style="font-weight:700">Rising</td>
             <td>&ge; 45</td>
             <td>Regional favorites and emerging races. Strong local scenes, genuine road racing character.</td>
-            <td><a href="{SITE_BASE_URL}/race/rooted-vermont/" style="color:var(--rl-color-signal-red);font-weight:700">Rooted Vermont</a></td>
+            <td><a href="{SITE_BASE_URL}/race/americas-most-beautiful-bike-ride/" style="color:var(--rl-color-signal-red);font-weight:700">America's Most Beautiful Bike Ride</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#5e6868;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #5e6868">TIER 4</span></td>
-            <td style="font-weight:700">Grassroots</td>
+            <td style="font-weight:700">Local</td>
             <td>&lt; 45</td>
             <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots road racing.</td>
-            <td><a href="{SITE_BASE_URL}/race/114-road-race/" style="color:var(--rl-color-signal-red);font-weight:700">114 Road Race</a></td>
+            <td><a href="{SITE_BASE_URL}/race/letape-indonesia/" style="color:var(--rl-color-signal-red);font-weight:700">L'Étape Indonesia</a></td>
           </tr>
         </tbody>
       </table>
@@ -113,10 +113,10 @@ def build_dimensions() -> str:
           <tr><td style="font-weight:700">Climate</td><td>Mild / ideal</td><td>Slightly hard</td><td>Moderate</td><td>Significant</td><td>Extreme</td></tr>
           <tr><td style="font-weight:700">Altitude</td><td>Sea level</td><td>&lt;3,000 ft</td><td>3-6K ft</td><td>6-9K ft</td><td>9,000+ ft</td></tr>
           <tr><td style="font-weight:700">Logistics</td><td>Easy access</td><td>Minor travel</td><td>Moderate planning</td><td>Remote</td><td>Extreme remoteness</td></tr>
-          <tr><td style="font-weight:700">Adventure</td><td>Standard race</td><td>Some character</td><td>Memorable</td><td>Epic scenery</td><td>Bucket list</td></tr>'''
+          <tr><td style="font-weight:700">Adventure</td><td>Standard race</td><td>Some character</td><td>Memorable</td><td>Epic scenery</td><td>Unforgettable</td></tr>'''
 
     editorial_rows = '''
-          <tr><td style="font-weight:700">Prestige</td><td>Unknown</td><td>Local recognition</td><td>Regional</td><td>National</td><td>World-class / iconic</td></tr>
+          <tr><td style="font-weight:700">Prestige</td><td>Unknown</td><td>Local recognition</td><td>Regional</td><td>National</td><td>International / marquee</td></tr>
           <tr><td style="font-weight:700">Race Quality</td><td>Basic</td><td>Adequate</td><td>Good</td><td>Professional</td><td>Elite / flawless</td></tr>
           <tr><td style="font-weight:700">Experience</td><td>Forgettable</td><td>Pleasant</td><td>Enjoyable</td><td>Memorable</td><td>Life-changing</td></tr>
           <tr><td style="font-weight:700">Community</td><td>Sparse</td><td>Small group</td><td>Good vibe</td><td>Strong community</td><td>Legendary culture</td></tr>
@@ -217,12 +217,12 @@ def build_prestige_override() -> str:
         </thead>
         <tbody>
           <tr>
-            <td style="font-weight:700">5 (World-class)</td>
+            <td style="font-weight:700">5 (Marquee)</td>
             <td>Score &ge; 75</td>
             <td>Promoted to Tier 1</td>
           </tr>
           <tr>
-            <td style="font-weight:700">5 (World-class)</td>
+            <td style="font-weight:700">5 (Marquee)</td>
             <td>Score &lt; 75</td>
             <td>Capped at Tier 2 (not promoted to T1)</td>
           </tr>
@@ -255,7 +255,7 @@ def build_faq() -> str:
         ("Why isn&#39;t my favorite race rated higher?",
          "Our rubric prioritizes consistency. A race might be incredible for a specific niche but score lower on logistics, field depth, or global prestige. The scoring breakdown shows exactly where a race excels and where it loses points &mdash; check the full profile for details."),
         ("What about mountain bike and multi-stage races?",
-         "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with &ldquo;MTB&rdquo; or &ldquo;Bikepacking&rdquo; discipline labels so they&#39;re clearly identified. The same scoring rubric applies."),
+         "We include a small number of notable MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with &ldquo;MTB&rdquo; or &ldquo;Bikepacking&rdquo; discipline labels so they&#39;re clearly identified. The same scoring rubric applies."),
     ]
 
     items = ""
@@ -388,7 +388,7 @@ def build_jsonld() -> str:
                 "name": "What about mountain bike and multi-stage races?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We include a small number of iconic MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with MTB or Bikepacking discipline labels. The same 15-dimension rubric applies.",
+                    "text": "We include a small number of notable MTB events (like Leadville and Chequamegon) and ultra-endurance multi-stage races (like Tour Divide and Transcontinental) that are culturally significant to the road racing community. These are tagged with MTB or Bikepacking discipline labels. The same 15-dimension rubric applies.",
                 },
             },
         ],

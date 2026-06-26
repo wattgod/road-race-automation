@@ -29,14 +29,14 @@ TIER_META = {
         "name": "Elite",
         "slug": "tier-1",
         "title": "The 25 Best Road Races in the World | Roadie Labs",
-        "h1": "Tier 1 — The Icons",
-        "description": "The definitive road events. World-class fields, iconic courses, "
-                       "and bucket-list status. These 25 races define the sport.",
+        "h1": "Tier 1 — Elite",
+        "description": "The definitive road events &mdash; the deepest fields and the "
+                       "courses that anchor the calendar. These 25 races define the sport.",
         "intro": (
             "These are the races that define road cycling. Every Tier 1 event has earned "
-            "its place through a combination of world-class competition, iconic terrain, "
-            "deep community, and a reputation that transcends the sport. If you only race "
-            "road a few times in your life, start here."
+            "its place through a combination of deep competition, demanding terrain, "
+            "strong community, and a reputation that carries across the sport. If you only "
+            "race road a few times in your life, start here."
         ),
     },
     2: {
@@ -75,7 +75,7 @@ TIER_META = {
         "description": "Up-and-coming races and local grinders. Small fields, raw vibes, "
                        "and the future of the sport.",
         "intro": (
-            "Every iconic race started somewhere. Tier 4 is the proving ground — the events "
+            "Every great race started somewhere. Tier 4 is the proving ground — the events "
             "where a handful of riders show up because someone with a Garmin and a dream "
             "mapped out a route. Low entry fees, zero pretense, and the purest expression "
             "of what road riding was always about."

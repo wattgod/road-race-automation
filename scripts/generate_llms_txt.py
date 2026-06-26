@@ -82,12 +82,12 @@ def generate_llms_txt(index: list[dict]) -> str:
 
     return f"""# Roadie Labs Race Database
 
-> The definitive road race database. {len(index)} races rated on 14 criteria, scored 0-100, and tiered 1-4.
+> The definitive road race database. {len(index)} races rated on 15 criteria, scored 0-100, and tiered 1-4.
 > Last generated: {now}
 
 ## Overview
 
-Roadie Labs is an independent road cycling event database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
+Roadie Labs is an independent road cycling event database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
 
 - **Tier 1 (Elite)**: {tier_counts.get(1, 0)} races — score >= 80 or prestige override
 - **Tier 2 (Strong)**: {tier_counts.get(2, 0)} races — score >= 60
@@ -100,10 +100,9 @@ Regions: {', '.join(regions)}.
 ## Machine-Readable Resources
 
 - [Full LLM context (this database as text)]({SITE_URL}/llms-full.txt)
-- [Race index JSON ({len(index)} entries)]({SITE_URL}/race-index.json)
-- [REST API (OpenAPI)]({SITE_URL}/api/v1/docs)
+- [Race index JSON ({len(index)} entries)]({SITE_URL}/search/race-index.json)
 - [RSS feed]({SITE_URL}/feed/races.xml)
-- [MCP Server (GitHub)](https://github.com/wattgod/road-race-automation)
+- [Source code & data (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles]({SITE_URL}/race/{{slug}}/)
 - [Markdown profiles]({SITE_URL}/race/{{slug}}/index.md)
 - [Race training-plan guides]({SITE_URL}/race/{{slug}}/training-plan/)
@@ -183,7 +182,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines = []
     lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
-    lines.append(f"> {len(index)} road cycling events rated on 14 criteria.")
+    lines.append(f"> {len(index)} road cycling events rated on 15 criteria.")
     lines.append(f"> Produced by Roadie Labs (roadielabs.com). Generated: {now}")
     lines.append("")
 
@@ -193,7 +192,8 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines.append("Each race is scored on 14 dimensions (1-5 scale):")
     lines.append(", ".join(DIMENSIONS) + ".")
     lines.append("")
-    lines.append("Overall score = round((sum of 14 scores / 70) * 100).")
+    lines.append("A 15th criterion, cultural-impact, is an additive bonus (not in the denominator).")
+    lines.append("Overall score = round((sum of the 14 dimension scores + cultural-impact) / 70 * 100).")
     lines.append("")
     lines.append("Tier assignment:")
     lines.append("- Tier 1 (Elite): score >= 80, OR prestige=5 + score>=75")
@@ -260,7 +260,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines.append("Each race profile (JSON) contains:")
     lines.append("- `race.name`, `race.slug`, `race.tagline`")
     lines.append("- `race.vitals`: distance_mi, elevation_ft, location, date, terrain_types, field_size")
-    lines.append("- `race.fondo_rating`: overall_score, tier, 14 dimension scores, discipline")
+    lines.append("- `race.fondo_rating`: overall_score, tier, 14 dimension scores + cultural_impact, discipline")
     lines.append("- `race.course_description`: character, suffering_zones, signature_challenge")
     lines.append("- `race.terrain`: primary, surface, technical_rating, features")
     lines.append("- `race.climate`: primary, description, challenges")
@@ -272,8 +272,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines.append("- `race.tire_recommendations`: primary tires, pressure tables")
     lines.append("")
     lines.append(f"Access individual profiles at: {SITE_URL}/race/{{slug}}/")
-    lines.append(f"Machine-readable JSON index: {SITE_URL}/race-index.json")
-    lines.append(f"REST API: {SITE_URL}/api/v1/docs")
+    lines.append(f"Machine-readable JSON index: {SITE_URL}/search/race-index.json")
     lines.append("")
 
     return "\n".join(lines)

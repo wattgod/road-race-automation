@@ -327,10 +327,12 @@ RACER_RATING_THRESHOLD = 3
 
 
 # ── Tier Names ──────────────────────────────────────────────
-TIER_NAMES = {1: "The Icons", 2: "Elite", 3: "Solid", 4: "Grassroots"}
+# Canonical road tier names — must match the homepage (generate_homepage.py
+# tier_labels). Were gravel leftovers ("The Icons"/"Grassroots").
+TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Rising", 4: "Local"}
 
 TIER_DESCS = {
-    1: "The definitive road events. World-class fields, iconic courses, bucket-list status.",
+    1: "The definitive road events — the deepest fields and the courses that anchor the calendar.",
     2: "Established races with strong reputations and competitive fields. The next tier of must-ride events.",
     3: "Regional favorites and emerging events. Strong local scenes, genuine road racing character.",
     4: "Up-and-coming events and local rides. Small fields, raw vibes, grassroots road cycling.",

@@ -1,14 +1,15 @@
 # Roadie Labs Race Database — Full Context
 
-> 427 road cycling events rated on 14 criteria.
-> Produced by Roadie Labs (roadielabs.com). Generated: 2026-06-10
+> 427 road cycling events rated on 15 criteria.
+> Produced by Roadie Labs (roadielabs.com). Generated: 2026-06-26
 
 ## Scoring Methodology
 
 Each race is scored on 14 dimensions (1-5 scale):
 logistics, length, technicality, elevation, climate, altitude, adventure, prestige, race_quality, experience, community, field_depth, value, expenses.
 
-Overall score = round((sum of 14 scores / 70) * 100).
+A 15th criterion, cultural-impact, is an additive bonus (not in the denominator).
+Overall score = round((sum of the 14 dimension scores + cultural-impact) / 70 * 100).
 
 Tier assignment:
 - Tier 1 (Elite): score >= 80, OR prestige=5 + score>=75
@@ -2314,7 +2315,7 @@ The most international peloton in the world, starting on the George Washington B
 Each race profile (JSON) contains:
 - `race.name`, `race.slug`, `race.tagline`
 - `race.vitals`: distance_mi, elevation_ft, location, date, terrain_types, field_size
-- `race.fondo_rating`: overall_score, tier, 14 dimension scores, discipline
+- `race.fondo_rating`: overall_score, tier, 14 dimension scores + cultural_impact, discipline
 - `race.course_description`: character, suffering_zones, signature_challenge
 - `race.terrain`: primary, surface, technical_rating, features
 - `race.climate`: primary, description, challenges
@@ -2326,5 +2327,4 @@ Each race profile (JSON) contains:
 - `race.tire_recommendations`: primary tires, pressure tables
 
 Access individual profiles at: https://roadielabs.com/race/{slug}/
-Machine-readable JSON index: https://roadielabs.com/race-index.json
-REST API: https://roadielabs.com/api/v1/docs
+Machine-readable JSON index: https://roadielabs.com/search/race-index.json
