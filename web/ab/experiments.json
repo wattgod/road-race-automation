@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "generated": "2026-06-25",
+  "experiments": [
+    {
+      "id": "homepage_hero_tagline",
+      "selector": "[data-ab='hero_tagline']",
+      "pages": [
+        "/",
+        "/index.html"
+      ],
+      "traffic": 1.0,
+      "variants": [
+        {
+          "id": "control",
+          "name": "Original tagline",
+          "content": "427 races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the road."
+        },
+        {
+          "id": "variant_a",
+          "name": "No defensive framing",
+          "content": "427 road races, scored on 15 criteria by people who actually ride them. Just the data and the road."
+        },
+        {
+          "id": "variant_b",
+          "name": "Discipline-specific",
+          "content": "Every gran fondo, sportive, and hill climb worth your money — scored on 15 criteria, by hand."
+        }
+      ],
+      "conversion": {
+        "type": "click",
+        "selector": "[data-ga='hero_cta_click'], [data-ga='hero_search'] button"
+      }
+    },
+    {
+      "id": "training_price_frame",
+      "selector": "[data-ab='training_price']",
+      "pages": [
+        "/",
+        "/index.html",
+        "/about/"
+      ],
+      "traffic": 1.0,
+      "variants": [
+        {
+          "id": "control",
+          "name": "Hotel anchor",
+          "content": "Race-specific. Built for your target event. Less than your race hotel — $2/day."
+        },
+        {
+          "id": "variant_a",
+          "name": "Gel anchor",
+          "content": "Race-specific. Built for your target event. $15/week. Less than one gel per ride."
+        },
+        {
+          "id": "variant_b",
+          "name": "Entry fee anchor",
+          "content": "Race-specific. Built for your target event. Your entry fee was $175. Your plan is $2/day."
+        }
+      ],
+      "conversion": {
+        "type": "click",
+        "selector": "[data-ab='training_cta_btn']"
+      }
+    },
+    {
+      "id": "cta_button_text",
+      "selector": "[data-ab='training_cta_btn']",
+      "pages": [
+        "/",
+        "/index.html",
+        "/about/"
+      ],
+      "traffic": 1.0,
+      "variants": [
+        {
+          "id": "control",
+          "name": "Get Your Plan",
+          "content": "Get Your Plan →"
+        },
+        {
+          "id": "variant_a",
+          "name": "BUILD MY PLAN",
+          "content": "BUILD MY PLAN"
+        },
+        {
+          "id": "variant_b",
+          "name": "START TRAINING",
+          "content": "START TRAINING"
+        }
+      ],
+      "conversion": {
+        "type": "click",
+        "selector": "[data-ab='training_cta_btn']"
+      }
+    },
+    {
+      "id": "coaching_scarcity",
+      "selector": "[data-ab='coaching_scarcity']",
+      "pages": [
+        "/",
+        "/index.html",
+        "/about/"
+      ],
+      "traffic": 1.0,
+      "variants": [
+        {
+          "id": "control",
+          "name": "Generic scarcity",
+          "content": "A human in your corner. Adapts week to week. Limited spots."
+        },
+        {
+          "id": "variant_a",
+          "name": "Concrete number",
+          "content": "A human in your corner. Adapts week to week. 20 athletes/month."
+        },
+        {
+          "id": "variant_b",
+          "name": "Opens quarterly",
+          "content": "A human in your corner. Adapts week to week. Opens quarterly."
+        }
+      ],
+      "conversion": {
+        "type": "click",
+        "selector": "[data-ga='coaching_click'], [data-cta='coaching_apply']"
+      }
+    }
+  ]
+}

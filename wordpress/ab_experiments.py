@@ -33,19 +33,23 @@ EXPERIMENTS = [
         "end": None,
         "variants": [
             {
+                # MUST match the live homepage hero (generate_homepage.py
+                # data-ab="hero_tagline") exactly, so control = no change.
                 "id": "control",
                 "name": "Original tagline",
-                "content": "328 races. 15 criteria. 4,920 scores \u2014 all assigned by hand. Zero sponsors. Zero pay-to-play.",
+                "content": "427 races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the road.",
             },
             {
+                # Drops the "no sponsors/affiliates" defensive framing to test
+                # whether it plants doubt vs. helps. Leads with who does the work.
                 "id": "variant_a",
-                "name": "Short & direct",
-                "content": "Every gravel race in America. Scored by hand. No sponsors.",
+                "name": "No defensive framing",
+                "content": "427 road races, scored on 15 criteria by people who actually ride them. Just the data and the road.",
             },
             {
                 "id": "variant_b",
-                "name": "Reddit proof",
-                "content": "I read every Reddit thread, registration page, and Strava segment so you don\u2019t have to.",
+                "name": "Discipline-specific",
+                "content": "Every gran fondo, sportive, and hill climb worth your money \u2014 scored on 15 criteria, by hand.",
             },
         ],
         "conversion": {
@@ -93,14 +97,18 @@ EXPERIMENTS = [
         "end": None,
         "variants": [
             {
+                # Matches the live homepage button (generate_homepage.py
+                # data-ab="training_cta_btn"). NOTE: /about/ currently renders
+                # "BUILD MY PLAN" for the same selector — the experiment
+                # standardizes both to the assigned variant while it runs.
                 "id": "control",
-                "name": "BUILD MY PLAN",
-                "content": "BUILD MY PLAN",
+                "name": "Get Your Plan",
+                "content": "Get Your Plan →",
             },
             {
                 "id": "variant_a",
-                "name": "GET MY PLAN",
-                "content": "GET MY PLAN",
+                "name": "BUILD MY PLAN",
+                "content": "BUILD MY PLAN",
             },
             {
                 "id": "variant_b",
@@ -134,8 +142,8 @@ EXPERIMENTS = [
             },
             {
                 "id": "variant_b",
-                "name": "Next window",
-                "content": "A human in your corner. Adapts week to week. Next window: April.",
+                "name": "Opens quarterly",
+                "content": "A human in your corner. Adapts week to week. Opens quarterly.",
             },
         ],
         "conversion": {
