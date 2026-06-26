@@ -28,7 +28,6 @@ from generate_homepage import (
     build_coming_up,
     build_how_it_works,
     build_guide_preview,
-    build_featured_in,
     build_training_cta,
     build_email_capture,
     build_footer,
@@ -340,12 +339,6 @@ class TestSectionBuilders:
         assert "READ THE REAL TAKE" in html
         assert "SHOW UP READY" in html
 
-    def test_featured_in_section(self):
-        html = build_featured_in()
-        assert "AS FEATURED IN" in html
-        assert "TrainingPeaks" in html
-        assert "rl-hp-feat-logo" in html
-
     def test_training_cta_has_content(self):
         html = build_training_cta()
         assert "Train for the course" in html
@@ -547,7 +540,6 @@ class TestFullPage:
         assert "rl-hp-sidebar" in homepage_html
         assert "rl-hp-how-it-works" in homepage_html
         assert "rl-hp-guide" in homepage_html
-        assert "rl-hp-featured-in" in homepage_html
         assert "rl-hp-training-cta-full" in homepage_html
         assert "rl-hp-email" in homepage_html
         assert "rl-mega-footer" in homepage_html
@@ -712,12 +704,6 @@ class TestRegressions:
         guide_pos = homepage_html.find('id="guide"')
         if training_pos >= 0 and guide_pos >= 0:
             assert training_pos < guide_pos, "Training should appear before Guide"
-
-    def test_featured_in_no_self_deprecation(self):
-        """Featured-in copy should not undermine authority."""
-        html = build_featured_in()
-        assert "probably know better" not in html
-        assert "let me talk" not in html
 
     def test_sidebar_coming_up_capped(self, stats, race_index, upcoming):
         """Sidebar coming-up should show max 4 future races."""

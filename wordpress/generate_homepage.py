@@ -4,7 +4,7 @@ Generate the Roadie Labs homepage in Desert Editorial style.
 
 Leads with the race database as the primary value prop, includes stats bar,
 featured T1 races, race calendar, training guide preview, how-it-works funnel,
-featured-in logos, training CTA, newsletter with article carousel, and footer.
+training CTA, newsletter with article carousel, and footer.
 
 Usage:
     python generate_homepage.py
@@ -1074,44 +1074,6 @@ def build_how_it_works(stats: dict = None) -> str:
   </section>'''
 
 
-FEATURED_IN = [
-    {
-        "name": "TrainingPeaks",
-        "url": "https://www.trainingpeaks.com",
-        "logo": "https://roadielabs.com/wp-content/uploads/2025/12/TP_Preferred_Vertical-Logo-Blue-Navy.HighRes-scaled.png",
-    },
-    {
-        "name": "The Better Podcast",
-        "url": "https://open.spotify.com/show/4NyQFbuHNyS8OHOla8NoZP",
-        "logo": "https://roadielabs.com/wp-content/uploads/2025/12/Untitled-design-1.png",
-    },
-    {
-        "name": "Training Babble Podcast",
-        "url": "https://open.spotify.com/episode/03NpuD7U0CNX1dSJGa8tlm",
-        "logo": "https://roadielabs.com/wp-content/uploads/2025/12/Untitled-design-2.png",
-    },
-]
-
-
-def build_featured_in() -> str:
-    logos = ""
-    for item in FEATURED_IN:
-        logos += f'''
-      <a class="rl-hp-feat-logo" href="{esc(item["url"])}" target="_blank" rel="noopener">
-        <img src="{esc(item["logo"])}" alt="{esc(item["name"])}" loading="lazy">
-      </a>'''
-    return f'''<section class="rl-hp-featured-in">
-    <div class="rl-hp-feat-inner">
-      <div class="rl-hp-feat-text">
-        <span class="rl-hp-feat-label">AS FEATURED IN</span>
-        <p class="rl-hp-feat-copy">Trusted by coaches, podcasters, and the road cycling community.</p>
-      </div>
-      <div class="rl-hp-feat-logos">{logos}
-      </div>
-    </div>
-  </section>'''
-
-
 def build_training_cta() -> str:
     return f'''<section class="rl-hp-training-cta-full" id="training" aria-label="Training call to action">
     <div class="rl-hp-cta-card">
@@ -1467,15 +1429,6 @@ a { text-decoration: none; color: #178079; }
 .rl-hp-guide-cta { padding: 20px; text-align: center; background: #f5f5f0; border-top: 2px solid #d0d0c8; }
 
 /* ── As Featured In ─────────────────────────────────────── */
-.rl-hp-featured-in { max-width: 1080px; margin: 32px auto 0; border: 1px solid #d0d0c8; background: #f5f5f0; }
-.rl-hp-feat-inner { display: flex; align-items: center; gap: 32px; padding: 32px 24px; }
-.rl-hp-feat-text { flex: 0 0 auto; max-width: 260px; }
-.rl-hp-feat-label { display: inline-block; font-family: 'Sometype Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #333333; margin-bottom: 8px; }
-.rl-hp-feat-copy { font-family: 'Source Serif 4', Georgia, serif; font-size: 13px; line-height: 1.7; color: #7d695d; font-style: italic; margin: 0; }
-.rl-hp-feat-logos { display: flex; align-items: center; gap: 32px; flex: 1; justify-content: center; flex-wrap: wrap; }
-.rl-hp-feat-logo { display: block; transition: border-color var(--rl-ease); border: 2px solid transparent; padding: 8px; }
-.rl-hp-feat-logo:hover { border-color: #333333; }
-.rl-hp-feat-logo img { display: block; height: 56px; width: auto; }
 
 /* ── Testimonials ────────────────────────────────────────── */
 .rl-hp-testimonials { max-width: 1080px; margin: 32px auto 0; border: 1px solid #d0d0c8; border-top: 2px solid #333333; }
@@ -1576,12 +1529,6 @@ a { text-decoration: none; color: #178079; }
   .rl-hp-guide-intro { padding: 16px; }
   .rl-hp-guide-deal { padding: 10px 12px; }
 
-  /* Featured in */
-  .rl-hp-feat-inner { flex-direction: column; text-align: center; padding: 24px 16px; gap: 20px; }
-  .rl-hp-feat-text { max-width: 100%; }
-  .rl-hp-feat-logos { gap: 20px; }
-  .rl-hp-feat-logo img { height: 44px; }
-
   /* Training CTA */
   .rl-hp-training-cta-full { padding: 0 16px; }
 
@@ -1592,7 +1539,7 @@ a { text-decoration: none; color: #178079; }
 
   /* Full-bleed sections on mobile */
   .rl-hp-latest-takes, .rl-hp-how-it-works, .rl-hp-coming-up,
-  .rl-hp-guide, .rl-hp-featured-in, .rl-hp-email, .rl-hp-testimonials { margin: 16px 0 0; border-left: none; border-right: none; }
+  .rl-hp-guide, .rl-hp-email, .rl-hp-testimonials { margin: 16px 0 0; border-left: none; border-right: none; }
 
   /* Buttons */
   .rl-hp-btn { padding: 12px 20px; font-size: 11px; letter-spacing: 1.5px; }
@@ -1969,7 +1916,6 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     how_it_works = build_how_it_works(stats)
     training_cta = build_training_cta()
     guide_preview = build_guide_preview(chapters)
-    featured_in = build_featured_in()
     testimonials = build_testimonials()
     email = build_email_capture(substack_posts)
     footer = build_footer()
@@ -2034,8 +1980,6 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
   {training_cta}
 
   {guide_preview}
-
-  {featured_in}
 
   {testimonials}
 
