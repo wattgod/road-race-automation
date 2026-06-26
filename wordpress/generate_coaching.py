@@ -1105,7 +1105,9 @@ def build_coaching_js() -> str:
     if (paused) return;
     var page = getPage();
     scrollToPage(page < totalPages() - 1 ? page + 1 : 0);
-    if (typeof gtag === 'function') gtag('event', 'coaching_carousel', { direction: 'auto', page: getPage() + 1 });
+    // NO gtag here — timer-driven events drown real signal. On Gravel God an
+    // identical auto-advance carousel fired 17,873 junk events from 9 users in
+    // 28 days. Track conversions on the manual prev/next handlers only.
   }
   function startAuto() { autoTimer = setInterval(autoAdvance, 6000); }
   function stopAuto() { clearInterval(autoTimer); }

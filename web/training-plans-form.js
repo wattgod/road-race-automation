@@ -281,8 +281,10 @@
     // Humanize slug as fallback name: "unbound-200" → "Unbound 200"
     var fallbackName = raceSlug.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
 
-    // Try to fetch race-index.json for accurate display name + date
-    fetch('/wp-content/uploads/race-index.json')
+    // Try to fetch race-index.json for accurate display name + date.
+    // Static site path (no /wp-content/ on roadielabs.com) — matches
+    // road-labs-search.js DATA_URL.
+    fetch('/search/race-index.json')
       .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function(races) {
         var match = races.find(function(r) { return r.slug === raceSlug; });

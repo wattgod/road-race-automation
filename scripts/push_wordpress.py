@@ -2072,7 +2072,17 @@ def sync_ab():
 
 
 def purge_cache():
-    """Purge all SiteGround caches via wp-cli (static, dynamic, memcached, opcache)."""
+    """Flush SiteGround cache after deploy.
+
+    roadielabs.com is a STATIC site — there is no WordPress, so `wp sg purge`
+    does NOT work (it errors with "No WordPress installation found"). SiteGround
+    offers no CLI flush for a static site's NGINX/dynamic cache. We still attempt
+    `wp sg purge` so this function is reusable on the WordPress siblings, but on
+    the static site we detect the "no WP" signal and print the manual step
+    instead of a misleading failure. Day-to-day freshness comes from versioned
+    asset URLs (?v=YYYYMMDD / content-hashed filenames); only changed HTML needs
+    the manual flush.
+    """
     ssh = get_ssh_credentials()
     if not ssh:
         return False
@@ -2092,11 +2102,18 @@ def purge_cache():
         )
         output = result.stdout.strip()
         if result.returncode == 0:
-            print(f"✓ SiteGround cache purged (static, dynamic, memcached, opcache)")
+            print("✓ SiteGround cache purged (static, dynamic, memcached, opcache)")
             return True
-        else:
-            print(f"✗ Cache purge failed: {output}")
-            return False
+
+        no_wp = ("No WordPress installation" in output
+                 or "not a registered wp command" in output)
+        if no_wp:
+            print("ℹ Static site — no WordPress, so `wp sg purge` does not apply.")
+            print("  Versioned/​hashed asset URLs self-bust; if you changed HTML,")
+            print("  flush manually: Site Tools → Speed → Caching → Dynamic Cache → Flush.")
+            return True  # not a real failure on a static host
+        print(f"✗ Cache purge failed: {output}")
+        return False
     except subprocess.TimeoutExpired:
         print("✗ Cache purge timed out (30s)")
         return False
