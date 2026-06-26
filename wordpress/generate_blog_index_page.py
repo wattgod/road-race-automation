@@ -17,6 +17,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from brand_tokens import get_ga4_head_snippet
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
 INDEX_JSON = PROJECT_ROOT / "web" / "blog-index.json"
@@ -96,10 +98,11 @@ def generate_blog_index_page(output_dir=None):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_ga4_head_snippet()}
   <title>Roadie Labs Blog — Race Previews, Roundups &amp; Recaps</title>
-  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs road race database. 328 races rated and ranked.">
+  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs road race database. 427 races rated and ranked.">
   <meta property="og:title" content="Roadie Labs Blog — Race Previews, Roundups &amp; Recaps">
-  <meta property="og:description" content="Race previews, season roundups, and race recaps. 328 road races rated and ranked.">
+  <meta property="og:description" content="Race previews, season roundups, and race recaps. 427 road races rated and ranked.">
   <meta property="og:url" content="{SITE_URL}/blog/">
   <link rel="canonical" href="{SITE_URL}/blog/">
   <script type="application/ld+json">{jsonld}</script>
