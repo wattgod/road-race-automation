@@ -439,7 +439,10 @@ class TestSelectorGeneratorParity:
 
     @pytest.fixture(scope="class")
     def homepage_content(self):
-        return (PROJECT_ROOT / "wordpress" / "output" / "homepage.html").read_text()
+        # Read the generator SOURCE (not generated output/homepage.html, which
+        # isn't committed and doesn't exist in CI) — same pattern as about_content.
+        # data-ab attributes live in the source template strings.
+        return (PROJECT_ROOT / "wordpress" / "generate_homepage.py").read_text()
 
     @pytest.fixture(scope="class")
     def about_content(self):
@@ -473,8 +476,10 @@ class TestSelectorGeneratorParity:
                 )
 
     def test_homepage_has_ab_head_snippet(self, homepage_content):
-        assert "rl-ab-tests" in homepage_content, (
-            "Homepage missing AB test script tag from get_ab_head_snippet()"
+        # Source check (matches test_about_has_ab_head_snippet): the generator
+        # must call get_ab_head_snippet(), which renders the rl-ab-tests tag.
+        assert "get_ab_head_snippet()" in homepage_content, (
+            "Homepage generator missing get_ab_head_snippet() call"
         )
 
     def test_about_has_ab_head_snippet(self, about_content):
