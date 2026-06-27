@@ -24,11 +24,25 @@ from ab_experiments import EXPERIMENTS, export_config, validate_experiments
 
 
 def run_js(code: str, timeout: int = 10) -> subprocess.CompletedProcess:
-    """Run JS code via Node.js and return result."""
-    return subprocess.run(
-        ["node", "-e", code],
-        capture_output=True, text=True, timeout=timeout,
-    )
+    """Run JS code via Node.js and return result.
+
+    Writes to a temp file and runs `node <file>` rather than `node -e <code>`:
+    long snippets blow ARG_MAX with -e (CI's larger env shrinks the effective
+    limit → "OSError: Argument list too long"), but a file path never does.
+    """
+    import os
+    import tempfile
+
+    fd, path = tempfile.mkstemp(suffix=".js")
+    try:
+        with os.fdopen(fd, "w") as f:
+            f.write(code)
+        return subprocess.run(
+            ["node", path],
+            capture_output=True, text=True, timeout=timeout,
+        )
+    finally:
+        os.unlink(path)
 
 
 def get_ab_js() -> str:
