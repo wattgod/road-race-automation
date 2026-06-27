@@ -14,9 +14,9 @@ from shared_header import get_site_header_css, get_site_header_html
 class TestHeaderHTML:
     """Tests for get_site_header_html()."""
 
-    def test_five_nav_items(self):
+    def test_six_nav_items(self):
         html = get_site_header_html()
-        for label in ["RACES", "PRODUCTS", "SERVICES", "ARTICLES", "ABOUT"]:
+        for label in ["RACES", "PRODUCTS", "COURSES", "SERVICES", "ARTICLES", "ABOUT"]:
             assert f">{label}</a>" in html
 
     def test_four_dropdown_containers(self):
@@ -69,8 +69,18 @@ class TestHeaderHTML:
         assert 'alt="Roadie Labs"' in html  # TODO: update to road-labs-logo when asset exists
         assert 'class="rl-site-header-logo"' in html
 
+    def test_courses_has_no_dropdown(self):
+        html = get_site_header_html()
+        # COURSES is a plain <a>, not inside a dropdown item
+        courses_idx = html.index(">COURSES</a>")
+        context = html[max(0, courses_idx - 200) : courses_idx]
+        last_item = context.rfind("rl-site-header-item")
+        last_close = context.rfind("</div>")
+        # The dropdown item should be closed before COURSES
+        assert last_close > last_item or last_item == -1
+
     def test_aria_current_when_active(self):
-        for key in ["races", "products", "services", "articles", "about"]:
+        for key in ["races", "products", "courses", "services", "articles", "about"]:
             html = get_site_header_html(active=key)
             assert 'aria-current="page"' in html
 
@@ -105,6 +115,7 @@ class TestHeaderHTML:
         assert "/consulting/" in html
         assert "/articles/" in html
         assert "/about/" in html
+        assert "/courses/" in html
 
 
 class TestHeaderCSS:

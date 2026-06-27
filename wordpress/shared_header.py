@@ -1,7 +1,7 @@
 """Shared site header used by all generated pages.
 
 Provides get_site_header_html() and get_site_header_css() for a consistent
-5-item dropdown nav (RACES, PRODUCTS, SERVICES, ARTICLES, ABOUT) across
+6-item dropdown nav (RACES, PRODUCTS, COURSES, SERVICES, ARTICLES, ABOUT) across
 homepage, race profiles, coaching, about, prep kits, series hubs, guide,
 methodology, state hubs, vs pages, power rankings, calendar, tier hubs,
 and coaching apply pages.
@@ -17,7 +17,7 @@ def get_site_header_html(active: str | None = None) -> str:
 
     Args:
         active: Which top-level nav item is current. One of:
-                "races", "products", "services", "articles", "about".
+                "races", "products", "courses", "services", "articles", "about".
                 Adds aria-current="page" to the matching top-level link.
     """
 
@@ -44,6 +44,7 @@ def get_site_header_html(active: str | None = None) -> str:
           <a href="{SITE_BASE_URL}/guide/">Road Racing Handbook</a>
         </div>
       </div>
+      <a href="{SITE_BASE_URL}/courses/"{_aria("courses")}>COURSES</a>
       <div class="rl-site-header-item">
         <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
         <div class="rl-site-header-dropdown">
