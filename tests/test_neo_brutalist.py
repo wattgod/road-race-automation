@@ -1235,19 +1235,19 @@ class TestNormalizeSilentFailures:
                 "fondo_rating": {
                     "overall_score": 65,
                     "tier": 2,
-                    "logistics": 3, "length": 4, "technicality": 3,
-                    "elevation": 3, "climate": 3, "altitude": 1, "adventure": 3,
-                    "prestige": 2, "race_quality": 3, "experience": 3,
-                    "community": 3, "field_depth": 2, "value": 3, "expenses": 3,
+                    "logistics": 3, "distance": 4, "descent_technicality": 3,
+                    "climbing": 3, "climate_risk": 3, "altitude": 1, "road_surface": 3,
+                    "prestige": 2, "organization": 3, "scenic_experience": 3,
+                    "community_culture": 3, "field_depth": 2, "value": 3, "expenses": 3,
                 },
                 "biased_opinion_ratings": {},
                 "vitals": {"location": "Nowhere"},
             }
         }
         rd = normalize_race_data(data)
-        # Explanations should exist for all dims with scores from gravel_god_rating
+        # Explanations should exist for all dims with scores from fondo_rating
         assert rd['explanations']['logistics']['score'] == 3
-        assert rd['explanations']['length']['score'] == 4
+        assert rd['explanations']['distance']['score'] == 4
         assert rd['explanations']['prestige']['score'] == 2
 
     def test_field_size_none_does_not_crash(self):

@@ -47,48 +47,51 @@ from shared_header import get_site_header_css, get_site_header_html
 
 # ── Constants ──────────────────────────────────────────────────
 
-COURSE_DIMS = ['logistics', 'length', 'technicality', 'elevation', 'climate', 'altitude', 'adventure']
-OPINION_DIMS = ['prestige', 'race_quality', 'experience', 'community', 'field_depth', 'value', 'expenses']
+# Road fondo_rating dimension keys (NOT the gravel keys length/technicality/
+# elevation/climate/adventure/race_quality/experience/community — those return 0
+# on road data, which left 8 of 14 radar dimensions blank on every race page).
+COURSE_DIMS = ['logistics', 'distance', 'descent_technicality', 'climbing', 'climate_risk', 'altitude', 'road_surface']
+OPINION_DIMS = ['prestige', 'organization', 'scenic_experience', 'community_culture', 'field_depth', 'value', 'expenses']
 ALL_DIMS = COURSE_DIMS + OPINION_DIMS
 
 DIM_LABELS = {
     'logistics': 'Logistics',
-    'length': 'Length',
-    'technicality': 'Technicality',
-    'elevation': 'Elevation',
-    'climate': 'Climate',
+    'distance': 'Distance',
+    'descent_technicality': 'Descent Technicality',
+    'climbing': 'Climbing',
+    'climate_risk': 'Climate Risk',
     'altitude': 'Altitude',
-    'adventure': 'Adventure',
+    'road_surface': 'Road Surface',
     'prestige': 'Prestige',
-    'race_quality': 'Race Quality',
-    'experience': 'Experience',
-    'community': 'Community',
+    'organization': 'Organization',
+    'scenic_experience': 'Scenic / Experience',
+    'community_culture': 'Community / Culture',
     'field_depth': 'Field Depth',
     'value': 'Value',
-    'expenses': 'Expenses',
+    'expenses': 'Total Cost',
 }
 
 # FAQ question templates per dimension
 FAQ_TEMPLATES = {
-    'climate': 'What is the climate like at {name}?',
+    'climate_risk': 'What is the climate like at {name}?',
     'logistics': 'How are the logistics for {name}?',
-    'technicality': 'How technical is {name}?',
-    'elevation': 'How much climbing is there at {name}?',
-    'adventure': 'How adventurous is {name}?',
+    'descent_technicality': 'How technical is {name}?',
+    'climbing': 'How much climbing is there at {name}?',
+    'road_surface': 'What are the road surfaces like at {name}?',
     'prestige': 'How prestigious is {name}?',
-    'race_quality': 'What is the race quality like at {name}?',
-    'experience': 'What is the race experience like at {name}?',
-    'community': 'What is the community like at {name}?',
+    'organization': 'How well organized is {name}?',
+    'scenic_experience': 'What is the race experience like at {name}?',
+    'community_culture': 'What is the community like at {name}?',
     'field_depth': 'How competitive is the field at {name}?',
     'value': 'Is {name} good value for money?',
     'expenses': 'How expensive is {name}?',
-    'length': 'How long is {name}?',
+    'distance': 'How long is {name}?',
     'altitude': 'What is the altitude at {name}?',
 }
 
 # Priority dimensions for FAQ schema (pick top 5 per race)
-FAQ_PRIORITY = ['climate', 'logistics', 'adventure', 'prestige', 'technicality',
-                'experience', 'race_quality', 'elevation', 'community', 'value']
+FAQ_PRIORITY = ['climate_risk', 'logistics', 'road_surface', 'prestige', 'descent_technicality',
+                'scenic_experience', 'organization', 'climbing', 'community_culture', 'value']
 
 # Month name → number mapping (shared by JSON-LD and training countdown)
 MONTH_NUMBERS = {
@@ -335,7 +338,9 @@ def normalize_race_data(data: dict) -> dict:
     if not rating:
         logger.warning("[%s] Missing 'fondo_rating' — score will be 0, tier will be T4", slug)
     if not bor:
-        logger.warning("[%s] Missing 'biased_opinion_ratings' — accordion scores will all be 0", slug)
+        # Scores still come from fondo_rating; only the per-dimension explanation
+        # PROSE is blank. Info-level — no road race ships biased_opinion_ratings.
+        logger.info("[%s] No 'biased_opinion_ratings' — dimension scores use fondo_rating; explanation text blank", slug)
     if not course:
         logger.warning("[%s] Missing 'course_description' — course section will be empty", slug)
 
@@ -506,16 +511,16 @@ def score_bar_color(score: int) -> str:
 
 RADAR_LABELS = {
     'logistics': 'Logistics',
-    'length': 'Length',
-    'technicality': 'Technical',
-    'elevation': 'Elevation',
-    'climate': 'Climate',
+    'distance': 'Distance',
+    'descent_technicality': 'Technical',
+    'climbing': 'Climbing',
+    'climate_risk': 'Climate',
     'altitude': 'Altitude',
-    'adventure': 'Adventure',
+    'road_surface': 'Surface',
     'prestige': 'Prestige',
-    'race_quality': 'Quality',
-    'experience': 'Experience',
-    'community': 'Community',
+    'organization': 'Quality',
+    'scenic_experience': 'Experience',
+    'community_culture': 'Community',
     'field_depth': 'Field',
     'value': 'Value',
     'expenses': 'Expenses',
@@ -1948,8 +1953,8 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
         for val, label, countable in stats
     )
 
-    # Difficulty gauge — based on course profile (technicality + elevation + climate + adventure)
-    hard_dims = ['technicality', 'elevation', 'climate', 'adventure']
+    # Difficulty gauge — based on course profile (descent + climbing + climate + road surface)
+    hard_dims = ['descent_technicality', 'climbing', 'climate_risk', 'road_surface']
     hard_score = sum(rd['explanations'].get(d, {}).get('score', 0) for d in hard_dims)
     hard_pct = int((hard_score / 20) * 100)
     if hard_pct >= 80:
