@@ -121,13 +121,13 @@ def generate_rss():
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roadie Labs — Race Database</title>
-    <link>{SITE_URL}/gravel-races/</link>
+    <link>{SITE_URL}/road-races/</link>
     <description>{len(index)} road races rated and ranked on 14 criteria. Tier ratings, scores, locations, dates, and course details.</description>
     <language>en-us</language>
     <lastBuildDate>{now}</lastBuildDate>
     <atom:link href="{SITE_URL}/feed/races.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>{SITE_URL}/wp-content/uploads/2023/01/road-labs-logo.png</url><!-- TODO: upload Roadie Labs logo asset -->
+      <url>{SITE_URL}/assets/road-labs-logo.png</url>
       <title>Roadie Labs</title>
       <link>{SITE_URL}</link>
     </image>
