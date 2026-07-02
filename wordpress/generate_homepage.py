@@ -563,7 +563,7 @@ def build_hero(stats: dict, race_index: list = None) -> str:
         <p class="rl-hp-hero-kicker">THE {CURRENT_YEAR} RACE DATABASE</p>
         <h1 id="hero-title">Every road race, honestly rated</h1>
         <div class="rl-hp-accent-line" aria-hidden="true"></div>
-        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the road.</p>
+        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 15 criteria by human editors who ride them. Just the data and the road.</p>
         <div class="rl-hp-hero-actions">
           <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-btn-primary" data-ga="hero_cta_click">Browse All Races</a>
           <a href="{SITE_BASE_URL}/race/methodology/" class="rl-hp-btn-secondary" data-ga="hero_secondary_click">How We Rate</a>

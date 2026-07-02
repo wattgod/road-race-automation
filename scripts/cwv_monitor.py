@@ -31,7 +31,7 @@ SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "cwv-snapshots"
 # Pages to monitor — one per page type
 MONITORED_URLS = [
     {"url": "https://roadielabs.com/", "label": "Homepage"},
-    {"url": "https://roadielabs.com/search/", "label": "Race Search"},
+    {"url": "https://roadielabs.com/road-races/", "label": "Race Search"},
     {"url": "https://roadielabs.com/race/letape-du-tour/", "label": "T1 Race"},
     {"url": "https://roadielabs.com/race/cheaha-challenge-gran-fondo/", "label": "T2 Race"},
     {"url": "https://roadielabs.com/race/americas-most-beautiful-bike-ride/", "label": "T3 Race"},

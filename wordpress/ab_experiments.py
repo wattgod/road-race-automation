@@ -37,13 +37,12 @@ EXPERIMENTS = [
                 # data-ab="hero_tagline") exactly, so control = no change.
                 "id": "control",
                 "name": "Original tagline",
-                "content": "427 races scored on 15 criteria. No sponsors, no affiliates, no pulled punches. Just the data and the road.",
+                "content": "427 races scored on 15 criteria by human editors who ride them. Just the data and the road.",
             },
             {
-                # Drops the "no sponsors/affiliates" defensive framing to test
-                # whether it plants doubt vs. helps. Leads with who does the work.
+                # Alternate phrasing of the (positive, non-defensive) control.
                 "id": "variant_a",
-                "name": "No defensive framing",
+                "name": "Riders-who-ride phrasing",
                 "content": "427 road races, scored on 15 criteria by people who actually ride them. Just the data and the road.",
             },
             {

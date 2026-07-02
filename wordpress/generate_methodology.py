@@ -53,7 +53,7 @@ def build_hero() -> str:
     return '''<div class="rl-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-signal-red)">METHODOLOGY</div>
     <h1 data-text="How We Rate Road Races">How We Rate Road Races</h1>
-    <p class="rl-hero-tagline">Every race in our database is scored across 15 dimensions by human editors. No algorithms. No sponsors. No pay-to-play. Here&#39;s exactly how it works.</p>
+    <p class="rl-hero-tagline">Every race in our database is scored across 15 dimensions by human editors who ride them. Here&#39;s exactly how it works.</p>
   </div>'''
 
 
