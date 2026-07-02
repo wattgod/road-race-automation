@@ -18,6 +18,20 @@ Gravel was spot-checked and is largely clean (WordPress + SG defaults).
 | 8 | **Search page invisible/naked** (earlier tonight) | `/road-races/` had no title/meta/canonical/GA4/nav | `scripts/build_search_page.py` full-page shell |
 | 9 | **Race-page ratings showed zeros** (earlier tonight) | 8/14 radar dims = 0 on all 427 pages | Gravel→road key remap in `generate_neo_brutalist.py` |
 
+## Round 2 — found by the new link checker (fixed same night)
+
+| # | Failure mode | Fix |
+|---|---|---|
+| 10 | Unbounded font preloaded + @font-face'd on every page but never deployed anywhere (removed from the brand long ago) — 404 per page-load | Removed from road `brand_tokens.py`; full regen (new CSS hash `14abcaa1`) |
+| 11 | `/questionnaire/` + `/products/training-plans/` were stale pre-fix pages still carrying all 5 dead nav links + unhashed AB script | Questionnaire regenerated; `/products/training-plans/` → 301 to canonical `/training-plans/` (.htaccess) |
+| 12 | `/about/matti-avatar.png` referenced but never deployed | Deployed from gravel repo assets |
+| 13 | **GRAVEL: A/B engine dead** — pages reference `gg-ab-tests.e0982843.js`, server had only the older `515fb8b0` hash. Experiments silently not running | Deployed current engine + experiments.json to gravel `/ab/` |
+
+Gravel findings still open (Monday cron will keep them loud): `/course/`
+404 (courses linked but never deployed — known launch blocker), `/feed/`
+403 (dir link without index), `/methodology/` 404 (wrong path linked
+somewhere; gravel's lives elsewhere).
+
 ## Known-and-accepted (documented, not bugs)
 
 - **Email capture is fire-and-forget**: forms show success without checking
@@ -38,9 +52,11 @@ Gravel was spot-checked and is largely clean (WordPress + SG defaults).
 2. **`coach@roadielabs.com` FormSubmit inbox unverified** — the race-review
    form may silently drop submissions (P2 memory item). Verify the inbox
    or repoint the form at the shared worker.
-3. **No automated link-checker** — tonight's dead links sat there since
-   April. Cheap fix: a weekly GitHub Action that crawls the live homepage +
-   3 sample pages, extracts internal hrefs, fails on non-200s.
+3. ~~No automated link-checker~~ **BUILT**: `scripts/check_links.py` +
+   `.github/workflows/link-check.yml` in BOTH repos (Mondays 12:00 UTC,
+   `workflow_dispatch` for on-demand). Red run = visitor-clickable 404.
+   Note: it fetches through the SiteGround cache — after a deploy+flush
+   cycle, re-run manually for a clean read.
 4. **`/products/training-plans/` vs `/training-plans/`** — both exist and
    serve content; pick a canonical (nav uses `/products/...`, emails use
    `/training-plans/`). Both 200 so not visitor-facing; SEO tidiness.
