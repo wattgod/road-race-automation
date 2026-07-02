@@ -9,7 +9,7 @@ and coaching apply pages.
 from __future__ import annotations
 
 SITE_BASE_URL = "https://roadielabs.com"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
+SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
 
 def get_site_header_html(active: str | None = None) -> str:
@@ -41,26 +41,12 @@ def get_site_header_html(active: str | None = None) -> str:
         <a href="{SITE_BASE_URL}/products/training-plans/"{_aria("products")}>PRODUCTS</a>
         <div class="rl-site-header-dropdown">
           <a href="{SITE_BASE_URL}/products/training-plans/">Custom Training Plans</a>
-          <a href="{SITE_BASE_URL}/guide/">Road Racing Handbook</a>
+          <a href="{SITE_BASE_URL}/courses/">Courses</a>
         </div>
       </div>
       <a href="{SITE_BASE_URL}/courses/"{_aria("courses")}>COURSES</a>
-      <div class="rl-site-header-item">
-        <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
-        <div class="rl-site-header-dropdown">
-          <a href="{SITE_BASE_URL}/coaching/">Coaching</a>
-          <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
-        </div>
-      </div>
-      <div class="rl-site-header-item">
-        <a href="{SITE_BASE_URL}/articles/"{_aria("articles")}>ARTICLES</a>
-        <div class="rl-site-header-dropdown">
-          <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">Slow Mid 38s</a>
-          <a href="{SITE_BASE_URL}/articles/">Hot Takes</a>
-          <a href="{SITE_BASE_URL}/insights/">The State of Road Racing</a>
-          <a href="{SITE_BASE_URL}/fueling-methodology/">White Papers</a>
-        </div>
-      </div>
+      <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
+      <a href="{SUBSTACK_URL}" target="_blank" rel="noopener"{_aria("articles")}>ARTICLES</a>
       <a href="{SITE_BASE_URL}/about/"{_aria("about")}>ABOUT</a>
     </nav>
   </div>

@@ -40,16 +40,23 @@ class TestMegaFooterHTML:
 
     def test_products_links(self):
         assert "/products/training-plans/" in self.html
-        assert "/guide/" in self.html
         assert "/courses/" in self.html
 
     def test_services_links(self):
         assert "/coaching/" in self.html
-        assert "/consulting/" in self.html
 
     def test_articles_links(self):
-        assert "TODO_ROADLABS_NEWSLETTER" in self.html
-        assert "/articles/" in self.html
+        assert "gravelgodcycling.substack.com" in self.html
+
+    def test_no_dead_link_targets(self):
+        # These URLs 404/403 on the live static site (Jul 2026 whoops audit).
+        # Restore a link ONLY after its page actually deploys.
+        for dead in ("/guide/", "/consulting/", "/articles/",
+                     "/insights/", "/fueling-methodology/"):
+            assert dead not in self.html, f"footer links dead URL {dead}"
+
+    def test_calendar_link_present(self):
+        assert "/race/calendar/2026/" in self.html
 
     # ── Brand ────────────────────────────────────────────────
 

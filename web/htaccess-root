@@ -1,0 +1,15 @@
+# roadielabs.com root .htaccess
+# Deployed to public_html/.htaccess (this repo copy is the source of truth —
+# the filename differs because .htaccess is awkward in git tooling).
+#
+# 1. Force HTTPS and apex host (www -> apex), single 301.
+# 2. Branded 404.
+
+RewriteEngine On
+
+# HTTPS off, or host begins with www -> canonical https://roadielabs.com/...
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://roadielabs.com/$1 [R=301,L]
+
+ErrorDocument 404 /404.html

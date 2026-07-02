@@ -879,7 +879,7 @@ class TestFooter:
 
     def test_footer_has_newsletter_link(self):
         html = build_footer()
-        assert "TODO_ROADLABS_NEWSLETTER" in html
+        assert "gravelgodcycling.substack.com" in html
 
     def test_footer_has_disclaimer(self):
         html = build_footer()
@@ -911,7 +911,8 @@ class TestNav:
         assert '/road-races/' in html
         assert '/products/training-plans/' in html
         assert '/coaching/' in html
-        assert '/articles/' in html
+        # ARTICLES points at the live Substack until road /articles/ exists
+        assert 'substack.com' in html
         assert '/about/' in html
 
     def test_dropdown_containers(self, normalized_data):

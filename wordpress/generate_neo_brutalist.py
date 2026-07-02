@@ -218,8 +218,8 @@ def detect_country(location: str) -> str:
 SITE_BASE_URL = "https://roadielabs.com"
 COACHING_URL = f"{SITE_BASE_URL}/coaching/apply/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/questionnaire/"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
-SUBSTACK_EMBED = "https://TODO_ROADLABS_NEWSLETTER/embed"  # TODO: Roadie Labs newsletter
+SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
+SUBSTACK_EMBED = "https://gravelgodcycling.substack.com/embed"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = str(datetime.now().year)
 
 

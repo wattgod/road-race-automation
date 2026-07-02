@@ -46,7 +46,7 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "road-guide-content.json"
-SUBSTACK_RSS_URL = "https://TODO_ROADLABS_NEWSLETTER/feed"  # TODO: Roadie Labs newsletter
+SUBSTACK_RSS_URL = "https://gravelgodcycling.substack.com/feed"  # TODO: Roadie Labs newsletter
 
 CURRENT_YEAR = date.today().year
 
@@ -118,107 +118,24 @@ HERO_VIZ_ARCHETYPES = {
 FEATURED_ONSITE_UPDATED = "2026-02-15"  # YYYY-MM-DD — last time articles were curated
 
 FEATURED_ONSITE_ARTICLES = [
-    (
-        "If You're Not Talented, You Should Probably Quit",
-        "/if-youre-not-talented-you-should-probably-quit/",
-        "HOT TAKE",
-        "The worst advice in cycling is \u201canyone can do it.\u201d Here\u2019s what nobody says out loud.",
-    ),
-    (
-        "I Opened a FasCat AI Coaching Email So You Don't Have To",
-        "/i-opened-a-fascat-ai-coaching-email-so-you-dont-have-to/",
-        "CONTROVERSIAL OPINION",
-        "What happens when AI tries to coach cyclists? I opened the email so you can skip the sales pitch.",
-    ),
-    (
-        "5 Ways to Become a Power Meter Clown",
-        "/5-ways-to-become-a-power-meter-clown/",
-        "TRAINING",
-        "The power meter doesn\u2019t make you fast. Staring at it while you ride makes you slow.",
-    ),
-    (
-        "Your Eating Habits Are Killing Your Performance",
-        "/your-eating-habits-are-killing-your-performance/",
-        "NUTRITION",
-        "You\u2019re not under-training. You\u2019re under-eating. And the solution isn\u2019t another gel.",
-    ),
-    (
-        "Maybe Stop Sandbagging Your Goals",
-        "/maybe-stop-sandbagging-your-goals/",
-        "MINDSET",
-        "Setting \u201crealistic\u201d goals is just fear wearing a sensible hat.",
-    ),
-    (
-        "How to Beat People 20 Years Younger Than You",
-        "/how-to-beat-people-20-years-younger-than-you/",
-        "RACING",
-        "Age is an excuse until it isn\u2019t. Here\u2019s what actually changes \u2014 and what doesn\u2019t.",
-    ),
-    (
-        "Does Beer Make You Slow?",
-        "/does-beer-make-you-slow/",
-        "SINCE YOU ASKED",
-        "The question every cyclist asks and nobody answers honestly.",
-    ),
-    (
-        "How to Develop Your Athletic Sh**t Detector",
-        "/how-to-develop-your-athletic-sht-detector/",
-        "TRAINING",
-        "Most cycling advice is marketing. Here\u2019s how to tell the difference.",
-    ),
-    (
-        "I Messed Up Maratona dles Dolomites So You Don't Have To",
-        "/i-messed-up-maratona-dles-dolomites-so-you-dont-have-to/",
-        "RACE REPORT",
-        "Every mistake you can make in a gran fondo, catalogued for your benefit.",
-    ),
-    (
-        "You Don't Need To Bike To Bike Fast",
-        "/you-dont-need-to-bike-to-bike-fast/",
-        "CONTROVERSIAL OPINION",
-        "The fastest gains most cyclists will ever make happen off the bike.",
-    ),
-    (
-        "Your FTP Does Matter",
-        "/since-no-one-asked-why-did-dumoulin-retire-he-just-wants-to-eat-some-cheese/",
-        "CONTROVERSIAL OPINION",
-        "Everyone\u2019s telling you FTP doesn\u2019t matter. They\u2019re wrong, and here\u2019s why.",
-    ),
-    (
-        "Maybe a Hater Poster is What You've Been Missing",
-        "/maybe-a-hate-poster-is-what-youve-been-missing/",
-        "MINDSET",
-        "Sometimes the best motivation isn\u2019t a quote from Marcus Aurelius. Sometimes it\u2019s spite.",
-    ),
+    # EMPTY on purpose (Jul 2026): the previous entries were GRAVEL GOD
+    # article slugs that 404 on roadielabs.com (no /articles/ exists yet).
+    # build_latest_takes() returns '' while this is empty, hiding the
+    # section. Restore with ROAD articles once the articles system ships.
+    # (The old list is in git history at this file, pre-Jul-2026.)
 ]
+
 
 # ── Athlete testimonials (from live site coaching section) ──────
 TESTIMONIALS = [
-    {
-        "quote": "I finished \u00c9tape du Tour in 8:12 this year. Last year I cramped on the Tourmalet because I had no idea how to pace a mountain stage. Matti\u2019s plan was boring as hell but it worked.",
-        "name": "Sarah K.",
-        "title": "\u00c9tape du Tour finisher",
-        "tags": "Gran Fondo \u00b7 9 hrs/week \u00b7 Elementary school teacher",
-    },
-    {
-        "quote": "First time I cracked top 20 at a regional sportive. Not because I got fitter\u2014I\u2019ve been \u2018fit enough\u2019 for years. I just finally learned to not go hard when it felt easy and actually recover on easy days.",
-        "name": "Marcus T.",
-        "title": "consistent podium threat",
-        "tags": "Road \u00b7 12 hrs/week \u00b7 Night shift RN",
-    },
-    {
-        "quote": "Matti told me to stop doing VO2 intervals in February and I thought he was an idiot. Then I PR\u2019d every race distance from June through September. Turns out base actually matters.",
-        "name": "Jordan P.",
-        "title": "multiple Cat 1/2 wins",
-        "tags": "Road \u00b7 14 hrs/week \u00b7 Software engineer",
-    },
-    {
-        "quote": "I went from blowing up on every climb longer than 10 minutes to finishing the Maratona in the top third. The difference was pacing and fueling strategy, not some magic workout.",
-        "name": "Chris M.",
-        "title": "Maratona dles Dolomites finisher",
-        "tags": "Gran Fondo \u00b7 10 hrs/week \u00b7 Two kids under 5",
-    },
+    # EMPTY on purpose (Jul 2026 whoops audit): the previous entries were
+    # FABRICATED athlete quotes (invented names + results) — the same
+    # violation that got 53 testimonials purged from Gravel God in the
+    # Phase 1 voice audit. Roadie Labs has no road coaching results yet.
+    # build_testimonials() returns '' while empty, hiding the section.
+    # Populate ONLY with real, permissioned athlete quotes.
 ]
+
 
 
 def esc(text) -> str:
@@ -519,6 +436,11 @@ def build_coming_up(upcoming: list) -> str:
 
 def build_guide_preview(chapters: list) -> str:
     """Build the guide preview section with chapter list and email gate pitch."""
+    # GATED OFF (Jul 2026): the section links /guide/ and /guide/#chN, which
+    # 404 on roadielabs.com — the road guide pages have never been generated
+    # or deployed. Chapters content exists (guide/road-guide-content.json);
+    # remove this early return once /guide/ actually ships.
+    return ""
     if not chapters:
         return ""
 

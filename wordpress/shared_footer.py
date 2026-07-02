@@ -9,7 +9,7 @@ from __future__ import annotations
 from datetime import date
 
 SITE_BASE_URL = "https://roadielabs.com"
-SUBSTACK_URL = "https://TODO_ROADLABS_NEWSLETTER"  # TODO: Roadie Labs newsletter
+SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = date.today().year
 
 
@@ -26,13 +26,13 @@ def get_mega_footer_html() -> str:
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/road-races/">All Road Races</a>
         <a href="{SITE_BASE_URL}/race/methodology/">How We Rate</a>
+        <a href="{SITE_BASE_URL}/race/calendar/2026/">2026 Calendar</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">
       <h4 class="rl-mega-footer-heading">PRODUCTS</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/products/training-plans/">Custom Training Plans</a>
-        <a href="{SITE_BASE_URL}/guide/">Road Racing Handbook</a>
         <a href="{SITE_BASE_URL}/courses/">Courses</a>
       </nav>
     </div>
@@ -40,16 +40,12 @@ def get_mega_footer_html() -> str:
       <h4 class="rl-mega-footer-heading">SERVICES</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/coaching/">Coaching</a>
-        <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">
       <h4 class="rl-mega-footer-heading">ARTICLES</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">Slow Mid 38s</a>
-        <a href="{SITE_BASE_URL}/articles/">Hot Takes</a>
-        <a href="{SITE_BASE_URL}/insights/">The State of Road Racing</a>
-        <a href="{SITE_BASE_URL}/fueling-methodology/">White Papers</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col rl-mega-footer-newsletter">

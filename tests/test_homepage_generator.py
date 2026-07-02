@@ -235,8 +235,8 @@ class TestSectionBuilders:
         nav = build_nav()
         assert "/road-races/" in nav
         assert "/coaching/" in nav
-        assert "/articles/" in nav
         assert "/about/" in nav
+        assert "substack" in nav.lower()  # ARTICLES points at the live Substack
         assert ">RACES</a>" in nav
         assert ">PRODUCTS</a>" in nav
         assert ">SERVICES</a>" in nav
@@ -352,7 +352,7 @@ class TestSectionBuilders:
     def test_email_capture_has_content(self):
         html = build_email_capture()
         assert "Slow, Mid, 38s" in html
-        assert "TODO_ROADLABS_NEWSLETTER/embed" in html
+        assert "gravelgodcycling.substack.com/embed" in html
         assert "rl-hp-email" in html
 
     def test_email_capture_with_articles(self):
@@ -373,8 +373,11 @@ class TestSectionBuilders:
         html = build_footer()
         assert "/road-races/" in html
         assert "/coaching/" in html
-        assert "/articles/" in html
-        assert "TODO_ROADLABS_NEWSLETTER" in html
+        assert "gravelgodcycling.substack.com" in html
+        # Dead URLs removed in the Jul 2026 whoops audit — restore only
+        # after the target pages actually deploy.
+        assert "/articles/" not in html
+        assert "/guide/" not in html
 
     def test_footer_has_copyright(self):
         html = build_footer()
@@ -391,7 +394,7 @@ class TestSectionBuilders:
     def test_footer_has_nav_headings(self):
         html = build_footer()
         assert "/products/training-plans/" in html
-        assert "/guide/" in html
+        assert "/race/calendar/2026/" in html
 
 
 # ── CSS ──────────────────────────────────────────────────────
@@ -669,14 +672,15 @@ class TestRegressions:
             assert "NEWSLETTER" in ticker_match.group(0), "Substack posts should appear in ticker"
 
     def test_latest_takes_section(self, homepage_html):
-        """Latest Takes section should appear with article cards."""
-        assert "LATEST TAKES" in homepage_html
-        assert "rl-hp-latest-takes" in homepage_html
-        assert "rl-hp-take-card" in homepage_html
-        assert "ALL ARTICLES" in homepage_html
+        """Latest Takes is HIDDEN while FEATURED_ONSITE_ARTICLES is empty
+        (the old entries were gravel slugs that 404 on this site)."""
+        assert 'class="rl-hp-take-card"' not in homepage_html  # CSS rule may remain; markup must not
+        assert "ALL ARTICLES" not in homepage_html
 
     def test_latest_takes_is_standalone_section(self, homepage_html):
         """Latest Takes must be between content grid and how-it-works, outside both."""
+        if '<section class="rl-hp-latest-takes"' not in homepage_html:
+            return  # section hidden while the road articles list is empty
         body_start = homepage_html.find("<body")
         body = homepage_html[body_start:]
         # Find the content grid's closing </div> by matching the opening tag's nesting
@@ -900,20 +904,11 @@ class TestSidebar:
 
 
 class TestLatestTakes:
-    def test_latest_takes_has_content(self):
-        html = build_latest_takes()
-        assert "LATEST TAKES" in html
-        assert "rl-hp-take-card" in html
+    def test_latest_takes_hidden_while_no_road_articles(self):
+        # Old entries were GRAVEL article slugs (404 on this site) — the
+        # builder must return nothing until real road articles exist.
+        assert build_latest_takes() == ""
 
-    def test_latest_takes_cards_are_links(self):
-        html = build_latest_takes()
-        import re
-        card_links = re.findall(r'<a href="[^"]*"[^>]*class="rl-hp-take-card"', html)
-        assert len(card_links) > 0
-
-    def test_latest_takes_has_carousel(self):
-        html = build_latest_takes()
-        assert 'id="rl-takes-carousel"' in html
 
 
 class TestTestimonials:
@@ -1755,16 +1750,13 @@ class TestSectionIntros:
         assert "Sorted by the numbers" in html
 
     def test_latest_takes_intro(self):
-        """Latest Takes must have a section intro."""
-        html = build_latest_takes()
-        assert "rl-hp-section-intro" in html
-        assert "stand behind" in html
+        """Hidden section produces no intro (see TestLatestTakes)."""
+        assert build_latest_takes() == ""
 
     def test_testimonials_intro(self):
-        """Testimonials must have a section intro."""
-        html = build_testimonials()
-        assert "rl-hp-section-intro" in html
-        assert "Real plans" in html
+        """Testimonials are hidden until REAL athlete quotes exist —
+        the previous entries were fabricated (whoops audit, Jul 2026)."""
+        assert build_testimonials() == ""
 
     def test_sidebar_stats_intro(self, stats, race_index, upcoming):
         """Sidebar BY THE NUMBERS must have a section intro."""
@@ -1784,12 +1776,8 @@ class TestSectionIntros:
     def test_section_intros_not_empty(self, race_index):
         """Section intros must contain actual text content."""
         rankings = build_tabbed_rankings(race_index)
-        takes = build_latest_takes()
-        testimonials = build_testimonials()
         for section_html, name in [
             (rankings, "rankings"),
-            (takes, "latest takes"),
-            (testimonials, "testimonials"),
         ]:
             match = re.search(
                 r'class="rl-hp-section-intro">(.*?)</p>',
@@ -1800,11 +1788,11 @@ class TestSectionIntros:
                 f"Section intro in {name} is too short"
 
     def test_all_six_intros_in_full_page(self, homepage_html):
-        """Full page must contain all 6 section intros."""
+        """Full page must contain the intros of all VISIBLE sections.
+        (Takes + testimonials intros return when those sections get real
+        road content — see whoops audit Jul 2026.)"""
         expected_fragments = [
             "Sorted by the numbers",
-            "stand behind",
-            "Real plans",
             "at a glance",
             "compares themselves",
             "on the calendar",

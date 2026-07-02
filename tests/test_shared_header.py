@@ -19,13 +19,15 @@ class TestHeaderHTML:
         for label in ["RACES", "PRODUCTS", "COURSES", "SERVICES", "ARTICLES", "ABOUT"]:
             assert f">{label}</a>" in html
 
-    def test_four_dropdown_containers(self):
+    def test_two_dropdown_containers(self):
+        # RACES + PRODUCTS keep dropdowns; SERVICES/ARTICLES became plain
+        # links in the Jul 2026 whoops audit (their dropdown targets 404'd).
         html = get_site_header_html()
-        assert html.count('class="rl-site-header-item"') == 4
+        assert html.count('class="rl-site-header-item"') == 2
 
-    def test_four_dropdowns(self):
+    def test_two_dropdowns(self):
         html = get_site_header_html()
-        assert html.count('class="rl-site-header-dropdown"') == 4
+        assert html.count('class="rl-site-header-dropdown"') == 2
 
     def test_about_has_no_dropdown(self):
         html = get_site_header_html()
@@ -44,25 +46,18 @@ class TestHeaderHTML:
             "All Road Races",
             "How We Rate",
             "Custom Training Plans",
-            "Road Racing Handbook",
-            "Coaching",
-            "Consulting",
-            "Slow Mid 38s",
-            "Hot Takes",
+            "Courses",
         ]
-        for link_text in expected:
-            assert link_text in html, f"Missing dropdown link: {link_text}"
+        for label in expected:
+            assert label in html, f"missing dropdown link {label}"
 
-    def test_nine_sub_links(self):
+
+    def test_four_sub_links(self):
         html = get_site_header_html()
-        # Count links inside dropdown divs
         dropdowns = re.findall(
-            r'class="rl-site-header-dropdown">(.*?)</div>',
-            html,
-            re.DOTALL,
-        )
-        sub_links = sum(d.count("<a ") for d in dropdowns)
-        assert sub_links == 10
+            r'class="rl-site-header-dropdown">(.*?)</div>', html, re.DOTALL)
+        assert sum(d.count("<a ") for d in dropdowns) == 4
+
 
     def test_logo_present(self):
         html = get_site_header_html()
@@ -103,17 +98,18 @@ class TestHeaderHTML:
 
     def test_substack_url(self):
         html = get_site_header_html()
-        assert "TODO_ROADLABS_NEWSLETTER" in html  # TODO: update when newsletter URL exists
+        assert "gravelgodcycling.substack.com" in html  # TODO: update when newsletter URL exists
 
     def test_correct_urls(self):
         html = get_site_header_html()
         assert "/road-races/" in html
         assert "/race/methodology/" in html
         assert "/products/training-plans/" in html
-        assert "/guide/" in html
         assert "/coaching/" in html
-        assert "/consulting/" in html
-        assert "/articles/" in html
+        # Dead URLs must NOT be in the nav (whoops audit, Jul 2026)
+        for dead in ("/guide/", "/consulting/", "/articles/",
+                     "/insights/", "/fueling-methodology/"):
+            assert dead not in html, f"nav links dead URL {dead}"
         assert "/about/" in html
         assert "/courses/" in html
 
