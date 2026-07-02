@@ -237,7 +237,7 @@ def build_bars_comparison(race_a: dict, race_b: dict) -> str:
       <span class="rl-vs-bar-val">{fmt_a} {unit}</span>
     </div>
     <div class="rl-vs-bar-cell">
-      <div class="rl-vs-bar{winner_b}" style="width:{pct_b:.0f}%;background:{COLORS['teal']}"></div>
+      <div class="rl-vs-bar{winner_b}" style="width:{pct_b:.0f}%;background:{COLORS['signal_red']}"></div>
       <span class="rl-vs-bar-val">{fmt_b} {unit}</span>
     </div>
   </div>
