@@ -32,7 +32,7 @@ def get_mega_footer_html() -> str:
     <div class="rl-mega-footer-col">
       <h4 class="rl-mega-footer-heading">PRODUCTS</h4>
       <nav class="rl-mega-footer-links">
-        <a href="{SITE_BASE_URL}/products/training-plans/">Custom Training Plans</a>
+        <a href="{SITE_BASE_URL}/training-plans/">Custom Training Plans</a>
         <a href="{SITE_BASE_URL}/courses/">Courses</a>
       </nav>
     </div>

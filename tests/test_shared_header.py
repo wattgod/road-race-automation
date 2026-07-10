@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
-from shared_header import get_site_header_css, get_site_header_html
+from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
 
 class TestHeaderHTML:
@@ -104,7 +104,7 @@ class TestHeaderHTML:
         html = get_site_header_html()
         assert "/road-races/" in html
         assert "/race/methodology/" in html
-        assert "/products/training-plans/" in html
+        assert "/training-plans/" in html
         assert "/coaching/" in html
         # Dead URLs must NOT be in the nav (whoops audit, Jul 2026)
         for dead in ("/guide/", "/consulting/", "/articles/",
@@ -153,10 +153,18 @@ class TestHeaderCSS:
         css = get_site_header_css()
         assert ":focus-within .rl-site-header-dropdown" in css
 
-    def test_mobile_hides_dropdowns(self):
+    def test_mobile_uses_hamburger_nav(self):
         css = get_site_header_css()
         assert "max-width: 600px" in css
-        assert "display: none !important" in css
+        assert ".rl-site-header-toggle" in css
+        assert "width: 44px" in css
+        assert "height: 44px" in css
+        assert ".rl-site-header-nav.is-open" in css
+
+    def test_header_js_uses_event_listener(self):
+        js = get_site_header_js()
+        assert "addEventListener('click'" in js
+        assert "onclick" not in js
 
     def test_responsive_breakpoint(self):
         css = get_site_header_css()

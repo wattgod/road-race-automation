@@ -4,7 +4,7 @@ Generate neo-brutalist landing page HTML for road race profiles.
 
 Reads race data from race-data/*.json (new format) or data/*-data.json (old format),
 produces self-contained HTML pages with:
-  - Interactive accordion ratings (15 dimensions)
+  - Interactive accordion ratings (14 base dimensions + cultural impact)
   - Sticky bottom CTA bar
   - Contextual mid-page CTA strips
   - Scroll fade-in animations
@@ -43,7 +43,7 @@ from brand_tokens import (
 )
 from cookie_consent import get_consent_banner_html
 from shared_footer import get_mega_footer_css, get_mega_footer_html
-from shared_header import get_site_header_css, get_site_header_html
+from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
 # ── Constants ──────────────────────────────────────────────────
 
@@ -695,7 +695,7 @@ def build_sticky_cta(race_name: str, slug: str = "") -> str:
 
 def build_inline_js() -> str:
     """Build the inline JavaScript for all interactive features."""
-    return r'''<script>
+    return '<script>\n' + get_site_header_js() + r'''
 // Accordion toggle (independent mode — multiple can be open)
 document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
   if (trigger.dataset.noContent) return;

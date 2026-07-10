@@ -51,7 +51,7 @@ def build_nav() -> str:
   <div class="rl-breadcrumb">
     <a href="{SITE_BASE_URL}/">Home</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
-    <a href="{SITE_BASE_URL}/products/training-plans/">Training Plans</a>
+    <a href="{SITE_BASE_URL}/training-plans/">Training Plans</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
     <span class="rl-breadcrumb-current">Questionnaire</span>
   </div>'''

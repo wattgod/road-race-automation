@@ -909,7 +909,7 @@ class TestNav:
         assert '>ARTICLES</a>' in html
         assert '>ABOUT</a>' in html
         assert '/road-races/' in html
-        assert '/products/training-plans/' in html
+        assert '/training-plans/' in html
         assert '/coaching/' in html
         # ARTICLES points at the live Substack until road /articles/ exists
         assert 'substack.com' in html

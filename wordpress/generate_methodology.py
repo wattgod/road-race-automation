@@ -2,7 +2,8 @@
 """
 Generate the Roadie Labs Methodology page in neo-brutalist style.
 
-Explains the scoring system, tier definitions, 15 dimensions, prestige
+Explains the scoring system, tier definitions, 14 base dimensions plus the
+cultural_impact bonus, prestige
 overrides, and FAQ. Reuses CSS/style patterns from generate_neo_brutalist.py.
 
 Usage:
@@ -53,7 +54,7 @@ def build_hero() -> str:
     return '''<div class="rl-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-signal-red)">METHODOLOGY</div>
     <h1 data-text="How We Rate Road Races">How We Rate Road Races</h1>
-    <p class="rl-hero-tagline">Every race in our database is scored across 15 dimensions by human editors who ride them. Here&#39;s exactly how it works.</p>
+    <p class="rl-hero-tagline">Every race in our database is scored across 14 base dimensions plus a cultural impact bonus by human editors who ride them. Here&#39;s exactly how it works.</p>
   </div>'''
 
 
@@ -344,7 +345,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "How We Rate Road Races — Roadie Labs Methodology",
-        "description": "The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.",
+        "description": "The complete scoring methodology behind Roadie Labs race ratings. 14 base dimensions, cultural impact bonus, 4 tiers, transparent formula.",
         "url": f"{SITE_BASE_URL}/race/methodology/",
         "isPartOf": {
             "@type": "WebSite",
@@ -441,7 +442,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How We Rate Road Races — Roadie Labs Methodology">
-  <meta name="twitter:description" content="15 dimensions, 4 tiers, transparent formula. Here&#39;s how Roadie Labs scores every race.">
+  <meta name="twitter:description" content="14 base dimensions, cultural impact bonus, 4 tiers, transparent formula. Here&#39;s how Roadie Labs scores every race.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()
@@ -452,7 +453,7 @@ def generate_methodology_page(external_assets: dict = None) -> str:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How We Rate Road Races — Roadie Labs Methodology</title>
-  <meta name="description" content="The complete scoring methodology behind Roadie Labs race ratings. 15 dimensions, 4 tiers, transparent formula.">
+  <meta name="description" content="The complete scoring methodology behind Roadie Labs race ratings. 14 base dimensions, cultural impact bonus, 4 tiers, transparent formula.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -505,6 +506,10 @@ def main():
     output_file = output_dir / "methodology.html"
     output_file.write_text(html_content, encoding="utf-8")
     print(f"Generated {output_file} ({len(html_content):,} bytes)")
+    root_output = output_dir / "methodology" / "index.html"
+    root_output.parent.mkdir(parents=True, exist_ok=True)
+    root_output.write_text(html_content, encoding="utf-8")
+    print(f"Generated {root_output} ({len(html_content):,} bytes)")
 
 
 if __name__ == "__main__":

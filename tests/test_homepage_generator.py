@@ -115,7 +115,7 @@ class TestDataLoading:
         assert stats["race_count"] == len(race_index)
 
     def test_stats_dimensions(self, stats):
-        assert stats["dimensions"] == 15
+        assert stats["dimensions"] == 14
 
     def test_stats_t1_count(self, stats, race_index):
         expected = sum(1 for r in race_index if r.get("tier") == 1)
@@ -291,7 +291,7 @@ class TestSectionBuilders:
     def test_hero_has_h1(self, stats, race_index):
         hero = build_hero(stats, race_index)
         assert "<h1" in hero
-        assert "Every road race, honestly rated" in hero
+        assert "Every road race, rated." in hero
 
     def test_hero_has_announcement_pill(self, stats, race_index):
         hero = build_hero(stats, race_index)
@@ -393,7 +393,7 @@ class TestSectionBuilders:
 
     def test_footer_has_nav_headings(self):
         html = build_footer()
-        assert "/products/training-plans/" in html
+        assert "/training-plans/" in html
         assert "/race/calendar/2026/" in html
 
 

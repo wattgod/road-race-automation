@@ -62,7 +62,7 @@ def build_nav() -> str:
 def build_hero(race_count: int) -> str:
     return f'''<div class="rl-hero rl-about-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-orange)">ABOUT</div>
-    <h1 data-text="{race_count} Road Races. Scored. Zero Sponsors.">{race_count} Road Races. Scored. Zero Sponsors.</h1>
+    <h1 data-text="{race_count} Road Races. Scored for Riders.">{race_count} Road Races. Scored for Riders.</h1>
     <p class="rl-hero-tagline">I scored every major gran fondo and sportive by hand, then paired it with coaching for people who have real jobs and limited PTO.</p>
   </div>'''
 
@@ -116,7 +116,7 @@ def build_what_we_built(race_count: int) -> str:
           <button class="rl-about-tab" data-about-tab="compare">Compare Tool</button>
         </div>
         <div class="rl-about-tab-panel rl-about-tab-panel--active" data-about-panel="profiles">
-          <p>Every race scored across 15 dimensions. Course difficulty, field depth, logistics, prestige, value &mdash; the stuff that actually matters when you&#39;re deciding where to spend your registration fee and PTO days.</p>
+          <p>Every race scored across 14 base dimensions plus cultural impact. Course difficulty, field depth, logistics, prestige, value &mdash; the stuff that actually matters when you&#39;re deciding where to spend your registration fee and PTO days.</p>
         </div>
         <div class="rl-about-tab-panel" data-about-panel="prep">
           <p>Race-specific training guidance, pacing strategy, fueling plans, and gear recommendations. The pre-race homework you&#39;d do if you had 40 hours to research one event.</p>
@@ -874,7 +874,7 @@ def build_jsonld(race_count: int) -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "About Roadie Labs — Race Intelligence & Coaching for Road Cyclists",
-        "description": f"The story behind the internet's most comprehensive road race database. {race_count} races scored across 15 dimensions, plus coaching that works for people with real lives.",
+        "description": f"The story behind the internet's most comprehensive road race database. {race_count} races scored across 14 base dimensions plus cultural impact, plus coaching that works for people with real lives.",
         "url": f"{SITE_BASE_URL}/about/",
         "isPartOf": {
             "@type": "WebSite",
@@ -925,10 +925,10 @@ def generate_about_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = f"The story behind the internet&#39;s most comprehensive road race database. {race_count} races scored across 15 dimensions, plus coaching that works for people with real lives."
+    meta_desc = f"The story behind the internet&#39;s most comprehensive road race database. {race_count} races scored across 14 base dimensions plus cultural impact, plus coaching that works for people with real lives."
 
     og_tags = f'''<meta property="og:title" content="About Roadie Labs — Race Intelligence &amp; Coaching for Road Cyclists">
-  <meta property="og:description" content="The story behind the internet&#39;s most comprehensive road race database. {race_count} races scored across 15 dimensions.">
+  <meta property="og:description" content="The story behind the internet&#39;s most comprehensive road race database. {race_count} races scored across 14 base dimensions plus cultural impact.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -937,7 +937,7 @@ def generate_about_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Roadie Labs — Race Intelligence &amp; Coaching for Road Cyclists">
-  <meta name="twitter:description" content="{race_count} road races scored across 15 dimensions. Zero sponsors. Plus coaching that works for people with real lives.">
+  <meta name="twitter:description" content="{race_count} road races scored across 14 base dimensions plus cultural impact. Plus coaching that works for people with real lives.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()

@@ -37,18 +37,18 @@ EXPERIMENTS = [
                 # data-ab="hero_tagline") exactly, so control = no change.
                 "id": "control",
                 "name": "Original tagline",
-                "content": "427 races scored on 15 criteria by human editors who ride them. Just the data and the road.",
+                "content": "427 races scored on 14 base dimensions plus cultural impact by human editors who ride them. Just the data and the road.",
             },
             {
                 # Alternate phrasing of the (positive, non-defensive) control.
                 "id": "variant_a",
                 "name": "Riders-who-ride phrasing",
-                "content": "427 road races, scored on 15 criteria by people who actually ride them. Just the data and the road.",
+                "content": "427 road races, scored on 14 base dimensions plus cultural impact by people who actually ride them. Just the data and the road.",
             },
             {
                 "id": "variant_b",
                 "name": "Discipline-specific",
-                "content": "Every gran fondo, sportive, and hill climb worth your money \u2014 scored on 15 criteria, by hand.",
+                "content": "Every gran fondo, sportive, and hill climb worth your money \u2014 scored on 14 base dimensions plus cultural impact, by hand.",
             },
         ],
         "conversion": {

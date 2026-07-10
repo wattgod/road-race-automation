@@ -582,7 +582,7 @@ def check_meta_descriptions(v):
     spot_checks = [
         (448, "/", "home"),
         (5018, "/gravel-races/", "gravel-races"),
-        (5016, "/products/training-plans/", "training-plans"),
+        (5016, "/training-plans/", "training-plans"),
         (5043, "/coaching/", "coaching"),
         (5045, "/articles/", "articles"),
     ]

@@ -35,7 +35,7 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 # ── Constants ─────────────────────────────────────────────────
 
 QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/questionnaire/"
-TRAINING_PLANS_URL = f"{SITE_BASE_URL}/products/training-plans/"
+TRAINING_PLANS_URL = f"{SITE_BASE_URL}/training-plans/"
 PRICE_PER_WEEK = "$15"
 PRICE_CAP = "$249"
 

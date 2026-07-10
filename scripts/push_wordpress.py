@@ -1119,7 +1119,7 @@ def sync_consent():
 
 
 def sync_training_plans(training_plans_file: str):
-    """Upload training-plans/index.html to /products/training-plans/ on SiteGround via SSH+SCP."""
+    """Upload training-plans/index.html to /training-plans/ on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
     if not ssh:
         return None
@@ -1131,7 +1131,7 @@ def sync_training_plans(training_plans_file: str):
         print("  Run: python3 wordpress/generate_training_plans.py first")
         return None
 
-    remote_base = f"{REMOTE_BASE}/products/training-plans"
+    remote_base = f"{REMOTE_BASE}/training-plans"
 
     # Create remote directory
     try:
@@ -1193,8 +1193,55 @@ def sync_training_plans(training_plans_file: str):
                 print(f"  ⚠ Could not upload {asset.name} (non-fatal)")
 
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-    print(f"✓ Uploaded training plans page: {wp_url}/products/training-plans/")
-    return f"{wp_url}/products/training-plans/"
+    print(f"✓ Uploaded training plans page: {wp_url}/training-plans/")
+    return f"{wp_url}/training-plans/"
+
+
+def sync_methodology(methodology_file: str):
+    """Upload methodology/index.html to /methodology/ on SiteGround via SSH+SCP."""
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    html_path = Path(methodology_file)
+    if not html_path.exists():
+        print(f"✗ Methodology HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_methodology.py first")
+        return None
+
+    remote_base = f"{REMOTE_BASE}/methodology"
+
+    try:
+        subprocess.run(
+            [
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                f"mkdir -p {remote_base}",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        subprocess.run(
+            [
+                "scp", "-i", str(SSH_KEY), "-P", port,
+                str(html_path),
+                f"{user}@{host}:{remote_base}/index.html",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Failed to upload methodology page: {e.stderr.strip()}")
+        return None
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    print(f"✓ Uploaded methodology page: {wp_url}/methodology/")
+    return f"{wp_url}/methodology/"
 
 
 def sync_coaching_apply(apply_file: str):
@@ -1518,8 +1565,8 @@ RewriteRule ^about-me/?$ /about/ [R=301,L]
 RewriteRule ^race/dirty-kanza/?$ /race/unbound-200/ [R=301,L]
 RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=301,L]
 
-# /training-plans/ directory → product page (prevents 403)
-RewriteRule ^training-plans/?$ /products/training-plans/ [R=301,L]
+# /products/training-plans/ was a duplicate of /training-plans/
+RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 
 # Broken URL from GSC → parent page (404 fix)
 # TODO: Update email reference for Roadie Labs
@@ -2203,10 +2250,10 @@ def sync_photos(photos_dir: str):
 
 
 def sync_prep_kits(prep_kit_dir: str):
-    """Upload prep kit pages to /race/{slug}/prep-kit/ on SiteGround via tar+ssh.
+    """Upload prep kit pages to /race/{slug}/prep-kit/ and /prep-kit/.
 
     Converts flat {slug}.html files to {slug}/prep-kit/index.html directory
-    structure under /race/. Same tar+ssh pattern as sync_pages().
+    structure under /race/. If index.html exists, uploads it to /prep-kit/.
     """
     ssh = get_ssh_credentials()
     if not ssh:
@@ -2218,12 +2265,43 @@ def sync_prep_kits(prep_kit_dir: str):
         print(f"✗ Prep kit directory not found: {pk_path}")
         return None
 
-    html_files = sorted(pk_path.glob("*.html"))
+    root_index = pk_path / "index.html"
+    html_files = sorted(p for p in pk_path.glob("*.html") if p.name != "index.html")
     if not html_files:
         print(f"✗ No .html files found in {pk_path}")
         return None
 
     remote_base = f"{REMOTE_BASE}/race"
+    root_uploaded = False
+
+    if root_index.exists():
+        try:
+            subprocess.run(
+                [
+                    "ssh", "-i", str(SSH_KEY), "-p", port,
+                    f"{user}@{host}",
+                    f"mkdir -p {REMOTE_BASE}/prep-kit",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=15,
+            )
+            subprocess.run(
+                [
+                    "scp", "-i", str(SSH_KEY), "-P", port,
+                    str(root_index),
+                    f"{user}@{host}:{REMOTE_BASE}/prep-kit/index.html",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            root_uploaded = True
+        except subprocess.CalledProcessError as e:
+            print(f"✗ Failed to upload /prep-kit/ index: {e.stderr.strip()}")
+            return None
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -2266,6 +2344,8 @@ def sync_prep_kits(prep_kit_dir: str):
 
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} prep kit pages to {wp_url}/race/*/prep-kit/")
+    if root_uploaded:
+        print(f"✓ Uploaded prep kit index: {wp_url}/prep-kit/")
     return f"{wp_url}/race/"
 
 def sync_plan_pages(plan_dir: str):
@@ -3377,11 +3457,19 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--sync-training-plans", action="store_true",
-        help="Upload training plans page to /products/training-plans/ via SCP"
+        help="Upload training plans page to /training-plans/ via SCP"
     )
     parser.add_argument(
         "--training-plans-file", default="wordpress/output/training-plans/index.html",
         help="Path to training plans page HTML (default: wordpress/output/training-plans/index.html)"
+    )
+    parser.add_argument(
+        "--sync-methodology", action="store_true",
+        help="Upload methodology page to /methodology/ via SCP"
+    )
+    parser.add_argument(
+        "--methodology-file", default="wordpress/output/methodology/index.html",
+        help="Path to methodology page HTML (default: wordpress/output/methodology/index.html)"
     )
     parser.add_argument(
         "--sync-success", action="store_true",
@@ -3561,6 +3649,7 @@ if __name__ == "__main__":
         args.sync_coaching_apply = True
         args.sync_consulting = True
         args.sync_training_plans = True
+        args.sync_methodology = True
         args.sync_success = True
         args.sync_sitemap = True
         args.sync_redirects = True
@@ -3592,7 +3681,7 @@ if __name__ == "__main__":
                       args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_about,
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
-                      args.sync_training_plans, args.sync_success, args.sync_pages,
+                      args.sync_training_plans, args.sync_methodology, args.sync_success, args.sync_pages,
                       args.sync_sitemap, args.sync_redirects,
                       args.sync_noindex, args.sync_ctas, args.sync_ga4, args.sync_header, args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
                       args.sync_series, args.sync_blog,
@@ -3636,6 +3725,8 @@ if __name__ == "__main__":
         sync_consent()
     if args.sync_training_plans:
         sync_training_plans(args.training_plans_file)
+    if args.sync_methodology:
+        sync_methodology(args.methodology_file)
     if args.sync_success:
         sync_success(args.success_dir)
     if args.sync_pages:

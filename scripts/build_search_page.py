@@ -32,7 +32,7 @@ CANONICAL = f"{SITE_BASE_URL}/road-races/"
 TITLE = "Road Race Search — 427 Rated Races | Roadie Labs"
 META_DESCRIPTION = (
     "Search 427 road races — gran fondos, sportives, hillclimbs — each scored "
-    "on 15 criteria. Filter by distance, climbing, region, month, and tier."
+    "on 14 base dimensions plus cultural impact. Filter by distance, climbing, region, month, and tier."
 )
 
 

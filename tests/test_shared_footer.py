@@ -39,7 +39,7 @@ class TestMegaFooterHTML:
         assert "/race/methodology/" in self.html
 
     def test_products_links(self):
-        assert "/products/training-plans/" in self.html
+        assert "/training-plans/" in self.html
         assert "/courses/" in self.html
 
     def test_services_links(self):

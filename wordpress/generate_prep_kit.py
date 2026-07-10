@@ -47,6 +47,7 @@ from brand_tokens import (
     get_ga4_head_snippet,
 )
 from shared_footer import get_mega_footer_css, get_mega_footer_html
+from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
 
 # Guide render helpers — extracted to guide_render_utils.py (the gravel
@@ -2839,6 +2840,83 @@ def generate_single(slug: str, data_dirs: list, output_dir: Path,
     return True
 
 
+def generate_prep_kit_index(json_files: list[Path], data_dirs: list[Path], output_dir: Path) -> None:
+    """Generate the root /prep-kit/ index page alongside per-race prep kits."""
+    cards = []
+    for jf in json_files[:60]:
+        filepath = find_data_file(jf.stem, data_dirs)
+        if not filepath:
+            continue
+        rd = normalize_race_data(load_race_data(filepath))
+        slug = rd.get("slug") or jf.stem
+        name = rd.get("name") or slug.replace("-", " ").title()
+        location = rd.get("location", "")
+        cards.append(
+            f'''<a class="rl-pk-index-card" href="/race/{esc(slug)}/prep-kit/">
+  <span class="rl-pk-index-card-name">{esc(name)}</span>
+  <span class="rl-pk-index-card-meta">{esc(location)}</span>
+</a>'''
+        )
+
+    card_html = "\n".join(cards)
+    html_doc = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Prep Kits — Roadie Labs</title>
+  <meta name="description" content="Free road race prep kits with race-week checklists, fueling notes, equipment reminders, and training-plan links.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{SITE_BASE_URL}/prep-kit/">
+  {get_preload_hints()}
+  <style>
+{get_font_face_css("/race/assets/fonts")}
+{get_tokens_css()}
+{get_site_header_css()}
+{get_mega_footer_css()}
+body {{ margin:0; background:var(--rl-color-cool-white); color:var(--rl-color-near-black); font-family:var(--rl-font-editorial); }}
+.rl-pk-index-main {{ max-width:960px; margin:0 auto; padding:48px 24px; }}
+.rl-pk-index-kicker {{ font-family:var(--rl-font-data); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--rl-color-signal-red); margin-bottom:12px; }}
+.rl-pk-index-main h1 {{ font-family:var(--rl-font-data); font-size:clamp(36px, 8vw, 72px); line-height:0.95; letter-spacing:0; text-transform:uppercase; margin:0 0 20px; }}
+.rl-pk-index-main p {{ max-width:680px; font-size:18px; line-height:1.65; margin:0 0 28px; color:var(--rl-color-dark-navy); }}
+.rl-pk-index-actions {{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:36px; }}
+.rl-pk-index-btn {{ min-height:44px; display:inline-flex; align-items:center; justify-content:center; padding:0 18px; border:2px solid var(--rl-color-near-black); background:var(--rl-color-near-black); color:var(--rl-color-cool-white); font-family:var(--rl-font-data); font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; }}
+.rl-pk-index-btn--secondary {{ background:transparent; color:var(--rl-color-near-black); }}
+.rl-pk-index-grid {{ display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }}
+.rl-pk-index-card {{ min-height:112px; display:flex; flex-direction:column; justify-content:space-between; padding:16px; border:2px solid var(--rl-color-near-black); background:var(--rl-color-white); color:var(--rl-color-near-black); text-decoration:none; }}
+.rl-pk-index-card:hover {{ background:var(--rl-color-silver); }}
+.rl-pk-index-card-name {{ font-family:var(--rl-font-data); font-size:13px; font-weight:700; line-height:1.35; text-transform:uppercase; }}
+.rl-pk-index-card-meta {{ font-family:var(--rl-font-editorial); font-size:12px; line-height:1.4; color:var(--rl-color-secondary-blue); }}
+@media (max-width:700px) {{ .rl-pk-index-grid {{ grid-template-columns:1fr; }} .rl-pk-index-main {{ padding:32px 16px; }} }}
+  </style>
+  {get_ga4_head_snippet()}
+</head>
+<body>
+{get_site_header_html(active="races")}
+<main class="rl-pk-index-main">
+  <div class="rl-pk-index-kicker">Race Prep Kits</div>
+  <h1>Prep The Race In Front Of You.</h1>
+  <p>Each kit turns a race profile into a practical checklist: race-week timing, equipment checks, fueling reminders, and the links you need before the start line.</p>
+  <div class="rl-pk-index-actions">
+    <a class="rl-pk-index-btn" href="/road-races/">Find Your Race</a>
+    <a class="rl-pk-index-btn rl-pk-index-btn--secondary" href="/training-plans/">Build A Plan</a>
+  </div>
+  <div class="rl-pk-index-grid">
+{card_html}
+  </div>
+</main>
+{get_mega_footer_html()}
+<script>
+{get_site_header_js()}
+</script>
+{get_consent_banner_html()}
+</body>
+</html>'''
+    out_file = output_dir / "index.html"
+    out_file.write_text(html_doc, encoding="utf-8")
+    print(f"Generated {out_file} ({len(html_doc):,} bytes)")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate Race Prep Kit pages for road race profiles."
@@ -2903,6 +2981,7 @@ def main():
                 print(f"  FAIL  {slug}: {e}")
                 fail_count += 1
 
+        generate_prep_kit_index(json_files, data_dirs, output_dir)
         print(f"\nGenerated {ok_count} prep kits ({full_count} full, {generic_count} generic)")
         if fail_count:
             print(f"Failed: {fail_count}")

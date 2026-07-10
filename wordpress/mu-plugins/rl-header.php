@@ -5,7 +5,7 @@
  * Injects the 5-item dropdown nav (RACES, PRODUCTS, SERVICES, ARTICLES, ABOUT)
  * on WordPress-managed pages that don't use our static generators.
  *
- * Targets: /road-races/, /products/training-plans/, and any other WP page
+ * Targets: /road-races/, /training-plans/, and any other WP page
  * that has the Astra theme header.
  *
  * Strategy:
@@ -160,9 +160,9 @@ function rl_shared_header_html() {
         </div>
       </div>
       <div class="rl-site-header-item">
-        <a href="<?php echo $base; ?>/products/training-plans/"<?php echo $aria('products'); ?>>PRODUCTS</a>
+        <a href="<?php echo $base; ?>/training-plans/"<?php echo $aria('products'); ?>>PRODUCTS</a>
         <div class="rl-site-header-dropdown">
-          <a href="<?php echo $base; ?>/products/training-plans/">Custom Training Plans</a>
+          <a href="<?php echo $base; ?>/training-plans/">Custom Training Plans</a>
           <a href="<?php echo $base; ?>/guide/">Road Cycling Handbook</a>
         </div>
       </div>

@@ -82,7 +82,7 @@ def generate_llms_txt(index: list[dict]) -> str:
 
     return f"""# Roadie Labs Race Database
 
-> The definitive road race database. {len(index)} races rated on 15 criteria, scored 0-100, and tiered 1-4.
+> The definitive road race database. {len(index)} races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
 > Last generated: {now}
 
 ## Overview
@@ -182,7 +182,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines = []
     lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
-    lines.append(f"> {len(index)} road cycling events rated on 15 criteria.")
+    lines.append(f"> {len(index)} road cycling events rated on 14 base dimensions plus cultural impact.")
     lines.append(f"> Produced by Roadie Labs (roadielabs.com). Generated: {now}")
     lines.append("")
 

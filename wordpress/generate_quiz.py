@@ -113,7 +113,7 @@ def build_quiz_page(races: list) -> str:
                 "name": "How many road races are in the database?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"The Roadie Labs database includes {race_count} road races across the United States, each rated on 15 dimensions including difficulty, technicality, elevation, logistics, and more."
+                    "text": f"The Roadie Labs database includes {race_count} road races across the United States, each rated on 14 base dimensions plus cultural impact, including difficulty, technicality, elevation, logistics, and more."
                 }
             },
             {
@@ -322,7 +322,7 @@ def build_quiz_page(races: list) -> str:
   </div>
 
   <footer class="rl-quiz-footer">
-    <p>Powered by the <a href="/road-races/">Roadie Labs</a> rating system &mdash; 328 races, 15 dimensions, zero BS.</p>
+    <p>Powered by the <a href="/road-races/">Roadie Labs</a> rating system &mdash; 328 races, 14 base dimensions plus cultural impact.</p>
   </footer>
 </div>
 

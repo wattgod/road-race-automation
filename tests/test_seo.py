@@ -130,14 +130,14 @@ class TestHomepageSEO:
         )
 
     def test_schema_criteria_count_matches(self, homepage_html):
-        """Schema.org description must say '15 criteria' (matches actual count)."""
+        """Schema.org description must describe the 14 + cultural impact model."""
         # Check all schema blocks
         schema_blocks = re.findall(
             r'<script type="application/ld\+json">([^<]+)</script>', homepage_html
         )
         for block in schema_blocks:
-            if "criteria" in block:
-                assert "15 criteria" in block, (
+            if "criteria" in block or "dimensions" in block:
+                assert "14 base dimensions plus cultural impact" in block, (
                     f"Schema says wrong criteria count: {block[:200]}"
                 )
 
@@ -384,13 +384,13 @@ class TestCriteriaConsistency:
             f"{len(over_15)} races have more than 15 criteria: {over_15[:5]}"
         )
 
-    def test_homepage_meta_says_15(self, homepage_html):
-        """Homepage meta description must reference 15 criteria."""
+    def test_homepage_meta_says_14_plus_bonus(self, homepage_html):
+        """Homepage meta description must reference 14 base dimensions plus cultural impact."""
         match = re.search(
             r'<meta\s+name="description"\s+content="([^"]+)"', homepage_html
         )
         assert match, "Homepage must have meta description"
-        assert "15 criteria" in match.group(1), (
+        assert "14 base dimensions plus cultural impact" in match.group(1), (
             f"Meta description says wrong criteria count: {match.group(1)}"
         )
 

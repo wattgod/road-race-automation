@@ -187,12 +187,18 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
     SubElement(url, 'changefreq').text = 'weekly'
     SubElement(url, 'priority').text = '0.9'
 
-    # Methodology page
-    url = SubElement(urlset, 'url')
-    SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/methodology/"
-    SubElement(url, 'lastmod').text = today
-    SubElement(url, 'changefreq').text = 'monthly'
-    SubElement(url, 'priority').text = '0.8'
+    # Static index pages
+    for path, changefreq, priority in [
+        ("/methodology/", "monthly", "0.8"),
+        ("/race/methodology/", "monthly", "0.8"),
+        ("/prep-kit/", "monthly", "0.7"),
+        ("/training-plans/", "monthly", "0.8"),
+    ]:
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}{path}"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = changefreq
+        SubElement(url, 'priority').text = priority
 
     # Tier hub pages
     for t in [1, 2, 3, 4]:

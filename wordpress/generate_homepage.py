@@ -40,7 +40,7 @@ from brand_tokens import (
 )
 from cookie_consent import get_consent_banner_html
 from shared_footer import get_mega_footer_css, get_mega_footer_html
-from shared_header import get_site_header_css, get_site_header_html
+from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
@@ -167,7 +167,7 @@ def compute_stats(race_index: list) -> dict:
                 regions.add(parts[-1])
     return {
         "race_count": race_count,
-        "dimensions": 15,
+        "dimensions": 14,
         "t1_count": t1_count,
         "t2_count": t2_count,
         "region_count": len(regions),
@@ -483,9 +483,9 @@ def build_hero(stats: dict, race_index: list = None) -> str:
       <div class="rl-hp-hero-content">
         <div class="rl-hp-announce-pill" aria-hidden="true"><span class="rl-hp-announce-dot"></span> {race_count} Races Scored for {CURRENT_YEAR}</div>
         <p class="rl-hp-hero-kicker">THE {CURRENT_YEAR} RACE DATABASE</p>
-        <h1 id="hero-title">Every road race, honestly rated</h1>
+        <h1 id="hero-title">Every road race, rated.</h1>
         <div class="rl-hp-accent-line" aria-hidden="true"></div>
-        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 15 criteria by human editors who ride them. Just the data and the road.</p>
+        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 14 base dimensions plus cultural impact by human editors who ride them. Just the data and the road.</p>
         <div class="rl-hp-hero-actions">
           <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-btn-primary" data-ga="hero_cta_click">Browse All Races</a>
           <a href="{SITE_BASE_URL}/race/methodology/" class="rl-hp-btn-secondary" data-ga="hero_secondary_click">How We Rate</a>
@@ -502,7 +502,7 @@ def build_stats_bar(stats: dict) -> str:
         (stats["t1_count"], "Tier 1", ""),
         (stats["t2_count"], "Tier 2", ""),
         (stats["region_count"], "Regions", "+"),
-        (stats["dimensions"], "Criteria", ""),
+        (stats["dimensions"], "Base Dims", ""),
     ]
     cells = ""
     for value, label, suffix in items:
@@ -891,7 +891,7 @@ def build_sidebar(stats: dict, race_index: list, upcoming: list) -> str:
         (stats["race_count"], "Races"),
         (stats["t1_count"], "Tier 1"),
         (stats["t2_count"], "Tier 2"),
-        (stats["dimensions"], "Criteria"),
+        (stats["dimensions"], "Base Dims"),
     ]
     stat_cells = ""
     for val, label in stat_items:
@@ -1507,7 +1507,7 @@ a { text-decoration: none; color: #178079; }
 
 
 def build_homepage_js() -> str:
-    return '''<script>
+    return '<script>\n' + get_site_header_js() + r'''
 (function() {
 'use strict';
 
@@ -1791,7 +1791,7 @@ def build_jsonld(stats: dict) -> str:
         "@type": "Organization",
         "name": "Roadie Labs",
         "url": SITE_BASE_URL,
-        "description": "The definitive road race database. Honest ratings across 15 criteria.",
+        "description": "The definitive road race database. Ratings across 14 base dimensions plus cultural impact.",
     }
     website = {
         "@context": "https://schema.org",
@@ -1821,7 +1821,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     # Round down to nearest 50 for title stability (757 → "750+", 800 → "800+")
     stable_count = (stats['race_count'] // 50) * 50
     title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Roadie Labs"
-    meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, rated on 15 criteria. Training plans, race intel, and honest reviews."
+    meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, scored on 14 base dimensions plus cultural impact. Training plans and race intel."
 
     one_liners = load_editorial_one_liners(race_data_dir)
     upcoming = load_upcoming_races(race_data_dir)
@@ -1939,7 +1939,7 @@ def main():
     one_liners = load_editorial_one_liners()
     chapters = load_guide_chapters()
     print(f"Generated {output_file} ({len(html_content):,} bytes)")
-    print(f"  {stats['race_count']} races, {stats['t1_count']} T1, {stats['t2_count']} T2, {stats['region_count']} regions, {stats['dimensions']} dimensions")
+    print(f"  {stats['race_count']} races, {stats['t1_count']} T1, {stats['t2_count']} T2, {stats['region_count']} regions, {stats['dimensions']} base dimensions + cultural impact")
     print(f"  Ticker: {len(one_liners)} one-liners")
     print(f"  Coming up: {len([r for r in upcoming if r['days'] >= 0])} upcoming, {len([r for r in upcoming if r['days'] < 0])} recent")
     print(f"  Guide: {len(chapters)} chapters")
