@@ -559,7 +559,9 @@ def sync_homepage(homepage_file: str):
         print("  Run: python3 wordpress/generate_homepage.py first")
         return None
 
-    remote_base = f"{REMOTE_BASE}/homepage"
+    # Root index.html IS the homepage on this static nginx site — writing to
+    # /homepage/ left the real root stale (Jul-2 → Jul-10). Deploy to root.
+    remote_base = REMOTE_BASE
 
     # Create remote directory
     try:
