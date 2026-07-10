@@ -21,7 +21,10 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install pytest anthropic requests pyyaml python-frontmatter
+          # Install the real dependency set — a hand-maintained package list
+          # here is how gravel-race-automation's CI silently ran red for
+          # three months (missing deps killed pytest at collection)
+          pip install -r requirements.txt
       
       - name: Run tests
         run: |
