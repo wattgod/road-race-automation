@@ -15,8 +15,8 @@ Roadie Labs is a scored event database for road cycling (gran fondos, sportives,
 - **Brand**: Roadie Labs
 - **Domain**: roadielabs.com (not yet live)
 - **CSS variable prefix**: `--rl-` (not `--gg-`)
-- **Palette**: Navy / steel blue / signal red on cool white. Neo-brutalist rules: no border-radius, no box-shadow, solid borders.
-- **Fonts**: Unbounded (display), Sometype Mono (data), Source Serif 4 (editorial)
+- **Palette**: Newsprint/Charcoal monochrome — rich black `#1a1a1a` on newsprint `#f5f5f0`, oxblood `#8b1a1a` as the only non-mono color (error only). The `signal-red` token holds charcoal `#333333`; trust values, not token names. Neo-brutalist rules: no border-radius, no box-shadow, solid borders. See `.claude/skills/brand-and-trust/SKILL.md`.
+- **Fonts**: Sometype Mono (data), Source Serif 4 (editorial). Unbounded was removed Jul 2026 (never deployed, preloads 404'd) — don't reintroduce.
 - **Brand tokens**: `wordpress/brand_tokens.py` reads from `road-labs-brand` repo
 
 ## Architecture
@@ -63,6 +63,14 @@ d['race']['gravel_god_rating']
 3. Dual units: `distance_km` + `distance_mi`, `elevation_m` + `elevation_ft`
 4. New `climb_profile` section with per-climb gradient data (many profiles have `_needs_enrichment: true` placeholder)
 5. `route_options` array for events with short/medium/long courses
+
+## Handover Skills (load by task)
+
+| Task | Read first |
+|------|-----------|
+| Deploying / SiteGround / WordPress ops | `.claude/skills/deploy-and-siteground/SKILL.md` |
+| Race profiles, scraping, page regen | `.claude/skills/schema-and-data/SKILL.md` |
+| Styling, copy, trust-bearing claims | `.claude/skills/brand-and-trust/SKILL.md` |
 
 ## Critical Rules
 1. **`_safe(0)` must check `is None`** — Python falsiness. `not 0` is True. Check `val is None or val == ""`, not `not val`.

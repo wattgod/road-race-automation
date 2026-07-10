@@ -76,7 +76,6 @@ def get_tokens_css() -> str:
   --rl-color-tier-4: #aaaaaa;
 
   /* font */
-  --rl-font-display: 'Unbounded', sans-serif;
   --rl-font-data: 'Sometype Mono', monospace;
   --rl-font-editorial: 'Source Serif 4', Georgia, serif;
   --rl-font-size-2xs: 10px;
