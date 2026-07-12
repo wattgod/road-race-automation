@@ -97,3 +97,7 @@ youtube-research-results/
 # OS
 .DS_Store
 Thumbs.db
+
+# Immune system scan telemetry (churns every run; immune/ledger.jsonl stays tracked)
+immune/report.json
+immune/scans.jsonl
