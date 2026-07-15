@@ -11,9 +11,9 @@ from __future__ import annotations
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
-LOGO_SVG = '''<svg class="rl-site-header-mark" viewBox="0 0 800 1200" aria-hidden="true" focusable="false">
-  <defs><mask id="rl-slick-grooves"><rect width="800" height="1200" fill="white"/><g fill="none" stroke="black" stroke-width="16" stroke-linecap="round"><path d="M206 220 274 264M184 328 258 372M174 450 250 492M174 750 250 708M184 872 258 828M206 980 274 936"/><path d="M594 220 526 264M616 328 542 372M626 450 550 492M626 750 550 708M616 872 542 828M594 980 526 936"/></g><g fill="none" stroke="black" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"><path d="M278 302 278 886"/><path d="M278 316H326C382 316 402 354 402 405 402 456 378 492 326 492H278"/><path d="M328 492 410 886"/><path d="M476 302 476 886 580 848"/></g><g fill="none" stroke="black" stroke-width="11" stroke-linecap="round"><path d="M306 608 354 582M318 682 367 656M330 756 380 730"/><path d="M505 438 548 416M505 534 552 510M505 630 556 604M505 726 560 698"/></g></mask></defs>
-  <path fill="currentColor" mask="url(#rl-slick-grooves)" d="M400 30C510 30 572 101 602 226 631 347 635 853 602 974 568 1099 510 1170 400 1170S232 1099 198 974C165 853 169 347 198 226 228 101 290 30 400 30Z"/>
+LOGO_SVG = '''<svg class="rl-site-header-mark" viewBox="0 0 800 1600" aria-hidden="true" focusable="false">
+  <defs><mask id="rl-slick-grooves"><rect width="800" height="1600" fill="white"/><path d="M400 188V1412" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/><g fill="none" stroke="black" stroke-width="20" stroke-linecap="round"><path d="M270 380 300 390M310 380 340 390M350 380 380 390M270 470 300 480M350 470 380 480M270 560 300 570M350 560 380 570M270 650 300 660M310 650 340 660M350 650 380 660M270 740 300 750M310 740 340 750M270 830 300 840M350 830 380 840M270 920 300 930M350 920 380 930M270 1010 300 1020M350 1010 380 1020M270 1100 300 1110M350 1100 380 1110M270 1190 300 1200M350 1190 380 1200"/><path d="M420 390 450 380M420 480 450 470M420 570 450 560M420 660 450 650M420 750 450 740M420 840 450 830M420 930 450 920M420 1020 450 1010M420 1110 450 1100M420 1200 450 1190M460 1200 490 1190M500 1200 530 1190"/></g></mask></defs>
+  <path fill="currentColor" mask="url(#rl-slick-grooves)" d="M400 24C490 24 535 140 552 320 570 520 570 1080 552 1280 535 1460 490 1576 400 1576S265 1460 248 1280C230 1080 230 520 248 320 265 140 310 24 400 24Z"/>
 </svg>'''
 
 

@@ -72,6 +72,10 @@ class TestHeaderHTML:
         assert 'id="rl-slick-grooves"' in html
         assert 'mask="url(#rl-slick-grooves)"' in html
         assert 'stroke="black"' in html
+        assert 'viewBox="0 0 800 1600"' in html
+        assert 'M400 188V1412' in html  # continuous slick-tire center seam
+        assert 'stroke-width="20"' in html
+        assert 'M278 302 278 886' not in html  # no drawn letter-outline stem
         assert 'rl-tread-sipes' not in html
 
     def test_courses_has_no_dropdown(self):
