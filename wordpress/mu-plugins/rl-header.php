@@ -151,14 +151,8 @@ function rl_shared_header_html() {
   <div class="rl-site-header-inner">
     <a href="<?php echo $base; ?>/" class="rl-site-header-logo" aria-label="Roadie Labs">
       <svg class="rl-site-header-mark" viewBox="0 0 800 1200" aria-hidden="true" focusable="false">
-        <defs><mask id="rl-wp-tread-sipes"><rect width="800" height="1200" fill="white"/><path d="M286 368H382V398H286ZM418 608H514V638H418Z" fill="black"/></mask></defs>
-        <g fill="currentColor">
-          <path d="M224 96 322 72 322 174 214 198ZM478 72 576 96 586 198 478 174ZM152 236 254 210 266 304 160 332ZM546 210 648 236 640 332 534 304ZM130 414 230 390 244 482 138 510ZM570 390 670 414 662 510 556 482ZM136 690 238 714 224 806 128 782ZM562 714 664 690 672 782 576 806ZM166 876 268 900 252 996 154 970ZM532 900 634 876 646 970 548 996ZM230 1040 330 1062 330 1130 244 1112ZM470 1062 570 1040 556 1112 470 1130Z"/>
-          <g mask="url(#rl-wp-tread-sipes)">
-            <path d="M126 178 220 154V1046L126 1018ZM178 154H350L382 184V268H178ZM302 228 382 248V492L302 516ZM178 454H350L382 486V562H178ZM238 522H328L410 998 316 1028Z"/>
-            <path d="M418 144H514V944H678V1032L418 1082Z"/>
-          </g>
-        </g>
+        <defs><mask id="rl-wp-slick-grooves"><rect width="800" height="1200" fill="white"/><g fill="none" stroke="black" stroke-width="16" stroke-linecap="round"><path d="M206 220 274 264M184 328 258 372M174 450 250 492M174 750 250 708M184 872 258 828M206 980 274 936"/><path d="M594 220 526 264M616 328 542 372M626 450 550 492M626 750 550 708M616 872 542 828M594 980 526 936"/></g><g fill="none" stroke="black" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"><path d="M278 302 278 886"/><path d="M278 316H326C382 316 402 354 402 405 402 456 378 492 326 492H278"/><path d="M328 492 410 886"/><path d="M476 302 476 886 580 848"/></g><g fill="none" stroke="black" stroke-width="11" stroke-linecap="round"><path d="M306 608 354 582M318 682 367 656M330 756 380 730"/><path d="M505 438 548 416M505 534 552 510M505 630 556 604M505 726 560 698"/></g></mask></defs>
+        <path fill="currentColor" mask="url(#rl-wp-slick-grooves)" d="M400 30C510 30 572 101 602 226 631 347 635 853 602 974 568 1099 510 1170 400 1170S232 1099 198 974C165 853 169 347 198 226 228 101 290 30 400 30Z"/>
       </svg>
     </a>
     <nav class="rl-site-header-nav">

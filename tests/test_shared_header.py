@@ -66,6 +66,14 @@ class TestHeaderHTML:
         assert 'class="rl-site-header-mark"' in html
         assert '<svg' in html
 
+    def test_logo_is_a_slick_with_recessed_grooves(self):
+        """Keep the road mark from regressing to raised gravel-style blocks."""
+        html = get_site_header_html()
+        assert 'id="rl-slick-grooves"' in html
+        assert 'mask="url(#rl-slick-grooves)"' in html
+        assert 'stroke="black"' in html
+        assert 'rl-tread-sipes' not in html
+
     def test_courses_has_no_dropdown(self):
         html = get_site_header_html()
         # COURSES is a plain <a>, not inside a dropdown item
