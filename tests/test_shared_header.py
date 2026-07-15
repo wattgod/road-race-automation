@@ -61,8 +61,10 @@ class TestHeaderHTML:
 
     def test_logo_present(self):
         html = get_site_header_html()
-        assert 'alt="Roadie Labs"' in html  # TODO: update to road-labs-logo when asset exists
+        assert 'aria-label="Roadie Labs"' in html
         assert 'class="rl-site-header-logo"' in html
+        assert 'class="rl-site-header-mark"' in html
+        assert '<svg' in html
 
     def test_courses_has_no_dropdown(self):
         html = get_site_header_html()

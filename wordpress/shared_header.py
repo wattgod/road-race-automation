@@ -11,6 +11,17 @@ from __future__ import annotations
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
+LOGO_SVG = '''<svg class="rl-site-header-mark" viewBox="0 0 800 1200" aria-hidden="true" focusable="false">
+  <defs><mask id="rl-tread-sipes"><rect width="800" height="1200" fill="white"/><path d="M286 368H382V398H286ZM418 608H514V638H418Z" fill="black"/></mask></defs>
+  <g fill="currentColor">
+    <path d="M224 96 322 72 322 174 214 198ZM478 72 576 96 586 198 478 174ZM152 236 254 210 266 304 160 332ZM546 210 648 236 640 332 534 304ZM130 414 230 390 244 482 138 510ZM570 390 670 414 662 510 556 482ZM136 690 238 714 224 806 128 782ZM562 714 664 690 672 782 576 806ZM166 876 268 900 252 996 154 970ZM532 900 634 876 646 970 548 996ZM230 1040 330 1062 330 1130 244 1112ZM470 1062 570 1040 556 1112 470 1130Z"/>
+    <g mask="url(#rl-tread-sipes)">
+      <path d="M126 178 220 154V1046L126 1018ZM178 154H350L382 184V268H178ZM302 228 382 248V492L302 516ZM178 454H350L382 486V562H178ZM238 522H328L410 998 316 1028Z"/>
+      <path d="M418 144H514V944H678V1032L418 1082Z"/>
+    </g>
+  </g>
+</svg>'''
+
 
 def get_site_header_html(active: str | None = None) -> str:
     """Return the shared site header HTML block.
@@ -26,8 +37,8 @@ def get_site_header_html(active: str | None = None) -> str:
 
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
-    <a href="{SITE_BASE_URL}/" class="rl-site-header-logo">
-      <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2050%2050%27%3E%3Crect%20width%3D%2750%27%20height%3D%2750%27%20fill%3D%27%231a1a1a%27%2F%3E%3Ctext%20x%3D%2725%27%20y%3D%2737%27%20text-anchor%3D%27middle%27%20font-family%3D%27serif%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%20fill%3D%27%23f5f5f0%27%3ER%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Roadie Labs" width="50" height="50">
+    <a href="{SITE_BASE_URL}/" class="rl-site-header-logo" aria-label="Roadie Labs">
+      {LOGO_SVG}
     </a>
     <button class="rl-site-header-toggle" type="button" aria-controls="rl-site-header-nav" aria-expanded="false" aria-label="Open navigation">
       <span></span><span></span><span></span>
@@ -62,7 +73,8 @@ def get_site_header_css() -> str:
 /* ── Site Header ──────────────────────────────────────── */
 .rl-site-header { position: sticky; top: 0; z-index: 900; padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); background: var(--rl-color-cool-white); }
 .rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; }
-.rl-site-header-logo img { display: block; height: 50px; width: auto; }
+.rl-site-header-logo { display: block; color: var(--rl-color-dark-navy); }
+.rl-site-header-logo svg { display: block; height: 58px; width: auto; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
 .rl-site-header-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); cursor: pointer; }
 .rl-site-header-toggle span { display: block; width: 100%; height: 2px; background: var(--rl-color-dark-navy); margin: 5px 0; transition: background-color 0.2s; }
@@ -85,7 +97,7 @@ def get_site_header_css() -> str:
 @media (max-width: 600px) {
   .rl-site-header { padding: 8px 16px; }
   .rl-site-header-inner { flex-wrap: wrap; justify-content: space-between; gap: 8px; }
-  .rl-site-header-logo img { height: 40px; }
+  .rl-site-header-logo svg { height: 46px; }
   .rl-site-header-toggle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; }
   .rl-site-header-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; border-top: 2px solid var(--rl-color-dark-navy); padding-top: 8px; }
   .rl-site-header-nav.is-open { display: flex; }

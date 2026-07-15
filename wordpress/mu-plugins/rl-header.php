@@ -79,7 +79,8 @@ header.site-header,
 
 .rl-site-header { padding: 16px 24px !important; border-bottom: 2px solid #333333 !important; background: #f5f5f0 !important; }
 .rl-site-header-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 960px !important; margin: 0 auto !important; }
-.rl-site-header-logo img { display: block !important; height: 50px !important; width: auto !important; }
+.rl-site-header-logo { display: block !important; color: #1a1a1a !important; }
+.rl-site-header-logo svg { display: block !important; height: 58px !important; width: auto !important; }
 .rl-site-header-nav { display: flex !important; gap: 24px !important; align-items: center !important; }
 .rl-site-header-nav > a,
 .rl-site-header-nav > a:link,
@@ -109,7 +110,7 @@ header.site-header,
 @media (max-width: 600px) {
   .rl-site-header { padding: 12px 16px !important; }
   .rl-site-header-inner { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; }
-  .rl-site-header-logo img { height: 40px !important; }
+  .rl-site-header-logo svg { height: 46px !important; }
   .rl-site-header-nav { gap: 12px !important; flex-wrap: wrap !important; justify-content: center !important; }
   .rl-site-header-nav > a,
   .rl-site-header-item > a { font-size: 10px !important; letter-spacing: 1.5px !important; }
@@ -148,8 +149,17 @@ function rl_shared_header_html() {
     ?>
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
-    <a href="<?php echo $base; ?>/" class="rl-site-header-logo">
-      <img src="<?php echo $base; ?>/wp-content/uploads/road-labs-logo.png" alt="Roadie Labs" width="50" height="50">
+    <a href="<?php echo $base; ?>/" class="rl-site-header-logo" aria-label="Roadie Labs">
+      <svg class="rl-site-header-mark" viewBox="0 0 800 1200" aria-hidden="true" focusable="false">
+        <defs><mask id="rl-wp-tread-sipes"><rect width="800" height="1200" fill="white"/><path d="M286 368H382V398H286ZM418 608H514V638H418Z" fill="black"/></mask></defs>
+        <g fill="currentColor">
+          <path d="M224 96 322 72 322 174 214 198ZM478 72 576 96 586 198 478 174ZM152 236 254 210 266 304 160 332ZM546 210 648 236 640 332 534 304ZM130 414 230 390 244 482 138 510ZM570 390 670 414 662 510 556 482ZM136 690 238 714 224 806 128 782ZM562 714 664 690 672 782 576 806ZM166 876 268 900 252 996 154 970ZM532 900 634 876 646 970 548 996ZM230 1040 330 1062 330 1130 244 1112ZM470 1062 570 1040 556 1112 470 1130Z"/>
+          <g mask="url(#rl-wp-tread-sipes)">
+            <path d="M126 178 220 154V1046L126 1018ZM178 154H350L382 184V268H178ZM302 228 382 248V492L302 516ZM178 454H350L382 486V562H178ZM238 522H328L410 998 316 1028Z"/>
+            <path d="M418 144H514V944H678V1032L418 1082Z"/>
+          </g>
+        </g>
+      </svg>
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">

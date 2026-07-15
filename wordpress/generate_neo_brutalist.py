@@ -5416,6 +5416,11 @@ def write_shared_assets(output_dir: Path) -> dict:
     css_content = _extract_css_content()
     js_content = _extract_js_content()
 
+    logo_src = Path(__file__).resolve().parent.parent / 'web' / 'rl-logo.svg'
+    if not logo_src.exists():
+        raise FileNotFoundError(f"Roadie Labs logo asset missing: {logo_src}")
+    shutil.copy2(logo_src, assets_dir / 'rl-logo.svg')
+
     css_hash = hashlib.md5(css_content.encode()).hexdigest()[:8]
     js_hash = hashlib.md5(js_content.encode()).hexdigest()[:8]
 
@@ -5576,7 +5581,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   <meta name="description" content="{esc(seo_description)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231a1a1a'/><text x='16' y='23' text-anchor='middle' font-family='monospace' font-size='20' font-weight='700' fill='%23f5f5f0'>RL</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://ridewithgps.com">
   <link rel="dns-prefetch" href="https://api.rss2json.com">

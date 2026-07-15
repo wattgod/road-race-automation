@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Roadie Labs tread mark</title>
+  <desc id="desc">A narrow road-tire tread whose left half forms an R and right half forms an L.</desc>
+  <style>.rl-tread { fill: #1a1a1a; }</style>
+  <defs>
+    <mask id="tread-sipes"><rect width="800" height="1200" fill="white"/><path d="M286 368H382V398H286ZM418 608H514V638H418Z" fill="black"/></mask>
+  </defs>
+  <g class="rl-tread" aria-hidden="true">
+    <path d="M224 96 322 72 322 174 214 198Z"/><path d="M478 72 576 96 586 198 478 174Z"/>
+    <path d="M152 236 254 210 266 304 160 332Z"/><path d="M546 210 648 236 640 332 534 304Z"/>
+    <path d="M130 414 230 390 244 482 138 510Z"/><path d="M570 390 670 414 662 510 556 482Z"/>
+    <path d="M136 690 238 714 224 806 128 782Z"/><path d="M562 714 664 690 672 782 576 806Z"/>
+    <path d="M166 876 268 900 252 996 154 970Z"/><path d="M532 900 634 876 646 970 548 996Z"/>
+    <path d="M230 1040 330 1062 330 1130 244 1112Z"/><path d="M470 1062 570 1040 556 1112 470 1130Z"/>
+  </g>
+  <g class="rl-tread" mask="url(#tread-sipes)" aria-hidden="true">
+    <path d="M126 178 220 154V1046L126 1018Z"/><path d="M178 154H350L382 184V268H178Z"/>
+    <path d="M302 228 382 248V492L302 516Z"/><path d="M178 454H350L382 486V562H178Z"/>
+    <path d="M238 522H328L410 998 316 1028Z"/><path d="M418 144H514V944H678V1032L418 1082Z"/>
+  </g>
+</svg>

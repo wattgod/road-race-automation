@@ -228,8 +228,9 @@ class TestGuideChapters:
 class TestSectionBuilders:
     def test_nav_has_logo(self):
         nav = build_nav()
-        assert 'alt="Roadie Labs"' in nav  # TODO: update logo filename when asset exists
-        assert "<img" in nav
+        assert 'aria-label="Roadie Labs"' in nav
+        assert 'class="rl-site-header-mark"' in nav
+        assert "<svg" in nav
 
     def test_nav_has_links(self):
         nav = build_nav()

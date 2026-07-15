@@ -906,7 +906,8 @@ class TestNav:
     def test_logo_links_to_homepage(self, normalized_data):
         html = build_nav_header(normalized_data, [])
         assert 'class="rl-site-header-logo"' in html
-        assert 'alt="Roadie Labs"' in html
+        assert 'aria-label="Roadie Labs"' in html
+        assert 'class="rl-site-header-mark"' in html
         # Logo must link to site root
         assert 'href="https://roadielabs.com/"' in html
 
@@ -974,7 +975,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert 'alt="Roadie Labs"' in html
+        assert 'aria-label="Roadie Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
@@ -986,7 +987,7 @@ class TestNavCrossGenerator:
         html = build_nav()
         assert 'class="rl-site-header"' in html
         assert "rl-site-nav" not in html
-        assert 'alt="Roadie Labs"' in html
+        assert 'aria-label="Roadie Labs"' in html
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
@@ -1025,8 +1026,7 @@ class TestFullPage:
 
     def test_has_favicon(self, normalized_data):
         html = generate_page(normalized_data)
-        assert "data:image/svg+xml" in html
-        assert "f5f5f0'>RL" in html
+        assert '<link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">' in html
 
     def test_has_skip_link(self, normalized_data):
         html = generate_page(normalized_data)
@@ -1084,6 +1084,7 @@ class TestFullPage:
         js_name = re.search(r'/race/assets/([^"\']+\.js)', html).group(1)
         assert (tmp_path / 'assets' / css_name).stat().st_size > 0
         assert (tmp_path / 'assets' / js_name).stat().st_size > 0
+        assert (tmp_path / 'assets' / 'rl-logo.svg').stat().st_size > 0
 
     def test_js_has_fetch_timeout(self, normalized_data):
         html = generate_page(normalized_data)
