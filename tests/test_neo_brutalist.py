@@ -54,6 +54,7 @@ from generate_neo_brutalist import (
     linkify_alternatives,
     normalize_race_data,
     score_bar_color,
+    write_shared_assets,
 )
 
 
@@ -330,8 +331,9 @@ class TestNormalize:
 class TestHero:
     def test_hero_shows_real_score(self, normalized_data):
         html = build_hero(normalized_data)
-        # Score innerHTML should be the actual number, not "0"
-        assert 'data-target="72">72</div>' in html
+        # The real score is rendered immediately; JS never substitutes a false zero.
+        assert '<div class="rl-hero-score-number">72</div>' in html
+        assert 'data-target=' not in html
 
     def test_hero_has_tier_label(self, normalized_data):
         html = build_hero(normalized_data)
@@ -671,6 +673,10 @@ class TestParseEventDates:
     def test_day_of_week_prefix(self):
         assert parse_event_dates("2026: Friday, June 12th at 8AM") == ("2026-06-12", "2026-06-12")
 
+    def test_month_first_date(self):
+        assert parse_event_dates("July 5, 2026") == ("2026-07-05", "2026-07-05")
+        assert parse_event_dates("Sep 12, 2026 (17th edition)") == ("2026-09-12", "2026-09-12")
+
     def test_year_only(self):
         """Year with no month/day is unparseable."""
         assert parse_event_dates("2026") == (None, None)
@@ -733,13 +739,16 @@ class TestSections:
         assert "rl-suffering-zone" in html
         assert "The Wall" in html
 
-    def test_ratings_has_accordions(self, normalized_data):
+    def test_ratings_has_click_to_explain_tiles(self, normalized_data):
         html = build_ratings(normalized_data)
-        assert "rl-accordion" in html
+        assert html.count("rl-rating-tile") >= 14
+        assert "No written explanation is available yet." not in html
 
     def test_ratings_has_radar_charts(self, normalized_data):
         html = build_ratings(normalized_data)
-        assert "rl-radar-pair" in html
+        assert "rl-rating-tablist" in html
+        assert html.count("rl-radar-chart") == 2
+        assert 'fill-opacity="0.16"' in html
 
     def test_verdict_has_race_skip(self, normalized_data):
         html = build_verdict(normalized_data)
@@ -1001,7 +1010,8 @@ class TestAccordion:
         html = build_radar_charts(normalized_data["explanations"],
                                   normalized_data["course_profile"],
                                   normalized_data["opinion_total"])
-        assert "rl-radar-pair" in html
+        assert "rl-rating-tablist" in html
+        assert 'role="tabpanel"' in html
         assert "<svg" in html
 
 
@@ -1016,6 +1026,7 @@ class TestFullPage:
     def test_has_favicon(self, normalized_data):
         html = generate_page(normalized_data)
         assert "data:image/svg+xml" in html
+        assert "f5f5f0'>RL" in html
 
     def test_has_skip_link(self, normalized_data):
         html = generate_page(normalized_data)
@@ -1045,7 +1056,7 @@ class TestFullPage:
 
     def test_score_not_zero_in_html(self, normalized_data):
         html = generate_page(normalized_data)
-        assert 'data-target="72">72</div>' in html
+        assert '<div class="rl-hero-score-number">72</div>' in html
 
     def test_has_all_sections(self, normalized_data):
         html = generate_page(normalized_data)
@@ -1057,13 +1068,30 @@ class TestFullPage:
         assert 'id="training"' in html
         assert 'id="logistics"' in html
 
+    def test_decision_spine_precedes_deep_dive(self, normalized_data):
+        html = generate_page(normalized_data)
+        markers = [
+            'id="verdict"', 'id="ratings"', 'id="breakdown"',
+            'data-measure-section="transition"', 'id="training"', 'id="course"',
+        ]
+        positions = [html.index(marker) for marker in markers]
+        assert positions == sorted(positions)
+
+    def test_external_asset_bundle_resolves(self, normalized_data, tmp_path):
+        assets = write_shared_assets(tmp_path)
+        html = generate_page(normalized_data, external_assets=assets)
+        css_name = re.search(r'/race/assets/([^"\']+\.css)', html).group(1)
+        js_name = re.search(r'/race/assets/([^"\']+\.js)', html).group(1)
+        assert (tmp_path / 'assets' / css_name).stat().st_size > 0
+        assert (tmp_path / 'assets' / js_name).stat().st_size > 0
+
     def test_js_has_fetch_timeout(self, normalized_data):
         html = generate_page(normalized_data)
         assert "fetchWithTimeout" in html
 
-    def test_js_score_animation_starts_from_zero(self, normalized_data):
+    def test_js_does_not_replace_real_score_with_zero(self, normalized_data):
         html = generate_page(normalized_data)
-        assert "el.textContent = '0'" in html
+        assert "el.textContent = '0'" not in html
 
     def test_no_inline_margin_styles(self, normalized_data):
         index = [
@@ -1145,8 +1173,8 @@ class TestRacerRating:
         }
         return sample_race_data
 
-    def test_hero_has_rl_score(self, race_with_ratings):
-        """Hero masthead is the dual-score block: RL SCORE + Rider Score.
+    def test_hero_has_lab_score(self, race_with_ratings):
+        """Hero masthead is the dual-score block: Lab Score + Rider Score.
 
         'GG SCORE' was a fork branding leak (fixed northstar P1.4); the
         Rider Score cell is covered in tests/test_rider_score.py.
@@ -1154,7 +1182,8 @@ class TestRacerRating:
         rd = normalize_race_data(race_with_ratings)
         html = build_hero(rd)
         assert "rl-hero-scores" in html
-        assert "RL SCORE" in html
+        assert "LAB SCORE" in html
+        assert "RL SCORE" not in html
         assert "GG SCORE" not in html
         assert "rl-hero-score-number" in html
 

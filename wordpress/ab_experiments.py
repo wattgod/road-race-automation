@@ -121,6 +121,36 @@ EXPERIMENTS = [
         },
     },
     {
+        "id": "race_offer_price_frame",
+        "description": "Test price framing on road race-page custom plans",
+        "selector": "[data-ab='race_offer_price']",
+        "pages": ["/race/*"],
+        "traffic": 1.0,
+        "start": "2026-07-15",
+        "end": None,
+        "variants": [
+            {
+                "id": "control",
+                "name": "Gel anchor",
+                "content": "$15/week. Less than one gel per ride. Capped at $249.",
+            },
+            {
+                "id": "variant_a",
+                "name": "Daily price",
+                "content": "About $2/day. Built for your target road race. Capped at $249.",
+            },
+            {
+                "id": "variant_b",
+                "name": "Direct weekly",
+                "content": "$15/week for a race-specific custom plan. Capped at $249.",
+            },
+        ],
+        "conversion": {
+            "type": "click",
+            "selector": "[data-cta='custom_plan']",
+        },
+    },
+    {
         "id": "coaching_scarcity",
         "description": "Test scarcity framing on coaching card",
         "selector": "[data-ab='coaching_scarcity']",
