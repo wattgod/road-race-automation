@@ -8,6 +8,7 @@
   var BRAND_CFG = window.__TP_FORM_CONFIG || {};
   var RACE_PLACEHOLDER = BRAND_CFG.racePlaceholder || 'e.g., Unbound 200';
   var FORM_SOURCE = BRAND_CFG.source || 'gravelgodcycling.com/training-plans/questionnaire';
+  var SHOW_ROAD_FIELDS = BRAND_CFG.showRoadFields === true;
 
   var API_BASE = 'https://athlete-custom-training-plan-pipeline-production.up.railway.app/api';
   var API_URL = API_BASE + '/create-checkout';
@@ -145,7 +146,9 @@
     restingHr: 'hr_resting',
     longRideDays: 'long_ride_days',
     intervalDays: 'interval_days',
-    daysOff: 'off_days'
+    daysOff: 'off_days',
+    roadCategory: 'road_category',
+    powerBand: 'power_band'
   };
 
   function mapToWorkerFormat(data) {
@@ -164,6 +167,7 @@
       mapped.race_date = aRace.date;
       mapped.race_distance = aRace.distance || '';
       mapped.race_goal = aRace.goal || '';
+      mapped.race_format = aRace.race_format || '';
       // Carry the slug ONLY if the A-race is still the one we prefilled from
       // ?race= (the customer didn't swap it). The backend resolves the target
       // race by this ID exactly; a stale slug would point at the wrong race.
@@ -183,6 +187,19 @@
     var entry = document.createElement('div');
     entry.className = 'gg-race-entry';
     entry.dataset.raceIndex = index;
+    var formatField = SHOW_ROAD_FIELDS ?
+        '<div class="gg-form-group">' +
+          '<label>Race Format</label>' +
+          '<select name="race_' + index + '_format">' +
+            '<option value="">Select</option>' +
+            '<option value="road_race">Road race</option>' +
+            '<option value="criterium">Criterium</option>' +
+            '<option value="hill_climb">Hill climb</option>' +
+            '<option value="time_trial">Time trial</option>' +
+            '<option value="stage_race">Stage race</option>' +
+            '<option value="fondo">Gran fondo / sportive</option>' +
+          '</select>' +
+        '</div>' : '';
     entry.innerHTML =
       '<div class="gg-race-entry-header">' +
         '<span class="gg-race-number">Race ' + (index + 1) + '</span>' +
@@ -209,6 +226,7 @@
             '<option value="200">200+ mi</option>' +
           '</select>' +
         '</div>' +
+        formatField +
         '<div class="gg-form-group">' +
           '<label>Goal</label>' +
           '<select name="race_' + index + '_goal">' +
@@ -355,16 +373,16 @@
       var category;
       if (sex === 'female') {
         if (w >= 4.5) category = 'Elite';
-        else if (w >= 3.8) category = 'Cat 1-2';
-        else if (w >= 3.2) category = 'Cat 3';
-        else if (w >= 2.6) category = 'Cat 4';
-        else category = 'Cat 5';
+        else if (w >= 3.8) category = 'Advanced';
+        else if (w >= 3.2) category = 'Competitive';
+        else if (w >= 2.6) category = 'Trained';
+        else category = 'Developing';
       } else {
         if (w >= 5.0) category = 'Elite';
-        else if (w >= 4.2) category = 'Cat 1-2';
-        else if (w >= 3.5) category = 'Cat 3';
-        else if (w >= 2.9) category = 'Cat 4';
-        else category = 'Cat 5';
+        else if (w >= 4.2) category = 'Advanced';
+        else if (w >= 3.5) category = 'Competitive';
+        else if (w >= 2.9) category = 'Trained';
+        else category = 'Developing';
       }
       catValue.textContent = category;
       pwCalc.style.display = 'block';
@@ -416,12 +434,14 @@
       var name = form.querySelector('input[name="race_' + i + '_name"]');
       var date = form.querySelector('input[name="race_' + i + '_date"]');
       var distance = form.querySelector('select[name="race_' + i + '_distance"]');
+      var format = form.querySelector('select[name="race_' + i + '_format"]');
       var goal = form.querySelector('select[name="race_' + i + '_goal"]');
       var priority = form.querySelector('select[name="race_' + i + '_priority"]');
       if (name && name.value && date && date.value) {
         races.push({
           name: name.value, date: date.value,
           distance: distance ? distance.value : '',
+          race_format: format ? format.value : '',
           goal: goal ? goal.value : '',
           priority: priority ? priority.value : ''
         });
@@ -557,7 +577,7 @@
     if (ftpInput && ftpInput.value && weightInput && weightInput.value) {
       var wKg = parseFloat(weightInput.value) * 0.453592;
       data.pwRatio = (parseFloat(ftpInput.value) / wKg).toFixed(2);
-      data.estimatedCategory = catValue ? catValue.textContent : '';
+      data.powerBand = catValue ? catValue.textContent : '';
     }
 
     // Compute blindspots BEFORE mapping (uses camelCase field names)
