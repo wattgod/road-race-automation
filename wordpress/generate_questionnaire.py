@@ -722,6 +722,20 @@ def build_form_html() -> str:
         </div>
         <p class="gg-section-desc">Helps me understand your starting point. Don't worry if you don't have power data.</p>
 
+        <div class="gg-form-group" style="margin-bottom: 1rem;">
+          <label>Current USA Cycling Road Category</label>
+          <select name="roadCategory">
+            <option value="">Select (optional)</option>
+            <option value="unlicensed">Unlicensed / not sure</option>
+            <option value="cat_5">Novice / Cat 5</option>
+            <option value="cat_4">Cat 4</option>
+            <option value="cat_3">Cat 3</option>
+            <option value="cat_2">Cat 2</option>
+            <option value="cat_1">Cat 1</option>
+          </select>
+          <small>License category is based on racing experience and results, not W/kg.</small>
+        </div>
+
         <div class="gg-form-group">
           <label>Longest ride in the past month? <span class="required">*</span></label>
           <div class="gg-radio-group">
@@ -783,7 +797,7 @@ def build_form_html() -> str:
           </div>
           <div id="pwCalc" class="gg-calculated" style="display: none;">
             <strong>Estimated W/kg:</strong> <span id="wkgValue">--</span> &nbsp;|&nbsp;
-            <strong>Category:</strong> <span id="catValue">--</span>
+            <strong>Power band:</strong> <span id="catValue">--</span>
           </div>
         </div>
 
@@ -990,7 +1004,8 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
     # Brand config consumed by training-plans-form.js (shared with gravel)
     form_config = f'''<script>window.__TP_FORM_CONFIG = {{
   racePlaceholder: "e.g., Maratona dles Dolomites",
-  source: "roadielabs.com/questionnaire"
+  source: "roadielabs.com/questionnaire",
+  showRoadFields: true
 }};</script>
 <script src="{FORM_JS_SRC}" defer></script>'''
 
