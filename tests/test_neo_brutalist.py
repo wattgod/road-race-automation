@@ -1067,21 +1067,52 @@ class TestFullPage:
         assert 'id="history"' in html
         assert 'id="route"' in html
         assert 'id="ratings"' in html
-        assert 'id="verdict"' in html
+        assert 'id="verdict"' not in html
         assert 'id="training"' in html
         assert 'id="logistics"' in html
+        assert 'data-page-format="spine-v2-approved"' in html
 
     def test_decision_spine_precedes_deep_dive(self, normalized_data):
         html = generate_page(normalized_data)
         markers = [
-            'id="verdict"', 'id="ratings"', 'id="breakdown"',
-            'data-measure-section="transition"', 'id="training"',
-            'id="deep-dive"', 'id="course"',
+            'id="ratings"', 'data-measure-section="custom-plan"',
+            'data-measure-section="coaching"', 'id="breakdown"',
+            'id="deep-dive"', 'id="course"', 'id="training"',
         ]
         positions = [html.index(marker) for marker in markers]
         assert positions == sorted(positions)
         assert ".rl-deep-dive > section[id]" in html
         assert "related_race_click" in html
+
+    def test_approved_offer_and_coaching_copy_are_single_top_ctas(self, normalized_data):
+        html = generate_page(normalized_data)
+        deep_start = html.index('id="deep-dive"')
+        top = html[:deep_start]
+        deep = html[deep_start:]
+        assert top.count('START MY CUSTOM PLAN &rarr;') == 1
+        assert top.count('GET ME IN YOUR CORNER &rarr;') == 1
+        assert 'Really want to see what you can do?' in top
+        assert 'Less than one gel per ride' not in html
+        assert 'START MY CUSTOM PLAN' not in deep
+        assert 'GET ME IN YOUR CORNER' not in deep
+
+    def test_deep_dive_has_training_intelligence_without_commerce(self, normalized_data):
+        html = generate_page(normalized_data)
+        deep_start = html.index('id="deep-dive"')
+        deep_end = html.index('<footer class="rl-mega-footer">', deep_start)
+        deep = html[deep_start:deep_end]
+        assert 'id="training"' in deep
+        forbidden = [
+            'BUILD MY PLAN', 'PREVIEW MY PLAN', 'rl-cfg-bar',
+            'rl-pack-cta', '/training-plan/', '/coaching/',
+            'rl-sticky-cta',
+        ]
+        assert not [marker for marker in forbidden if marker in deep]
+
+    def test_approved_markup_uses_only_roadie_brand_prefix(self, normalized_data):
+        html = generate_page(normalized_data)
+        assert 'class="gg-' not in html
+        assert '--gg-' not in html
 
     def test_external_asset_bundle_resolves(self, normalized_data, tmp_path):
         assets = write_shared_assets(tmp_path)

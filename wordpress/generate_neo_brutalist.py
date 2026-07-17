@@ -1430,7 +1430,7 @@ document.querySelectorAll('.rl-lite-youtube').forEach(function(el) {
       panel.removeAttribute('tabindex');
       if (typeof gtag === 'function') {
         gtag('event', 'workouts_panel_expand', {
-          race_slug: (window.__GG_RACE_DATA__ || {}).slug || '',
+          race_slug: (window.__RL_RACE_DATA__ || {}).slug || '',
           workout_count: workoutCount
         });
       }
@@ -1459,7 +1459,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
 
 /* ── Plan Preview Mini-Configurator ── */
 (function() {
-  var rd = window.__GG_RACE_DATA__;
+  var rd = window.__RL_RACE_DATA__;
   if (!rd) return;
   var btn = document.getElementById('rl-cfg-btn');
   var dateInput = document.getElementById('rl-cfg-date');
@@ -2841,6 +2841,71 @@ def build_training(rd: dict) -> str:
   </section>'''
 
 
+def build_custom_plan_offer(rd: dict) -> str:
+    """Build the approved custom-plan offer in Roadie Labs brand language."""
+    race_name = rd['name']
+    copy = (
+        f"A training plan for {race_name}—shaped to your fitness, the course's "
+        "road demands, and the hours you have."
+    )
+    href = f"{TRAINING_PLANS_URL}?race={rd['slug']}"
+    return f'''<section class="rl-approved-section rl-offer" data-measure-section="custom-plan">
+  <div class="rl-approved-inner">
+    <span class="rl-approved-kicker">Custom plan</span>
+    <h2>Train for {esc(race_name)}</h2>
+    <p>{esc(copy)}</p>
+  </div>
+  <div class="rl-approved-inner rl-offer-action">
+    <a class="rl-plan-cta" href="{esc(href)}" data-cta="approved_custom_plan">START MY CUSTOM PLAN &rarr;</a>
+    <span class="rl-offer-price">$15 / WEEK</span>
+  </div>
+</section>'''
+
+
+def build_coaching_footnote(rd: dict) -> str:
+    """Build the approved coaching footnote using Roadie Labs tokens."""
+    href = f"{COACHING_URL}?race={rd['slug']}"
+    return f'''<aside class="rl-coaching-note" data-measure-section="coaching">
+  <div>
+    <h2>Really want to see what you can do?</h2>
+    <p>Hire a coach. You&rsquo;ll never become what you could be alone. (And no, AI isn&rsquo;t a person.)</p>
+  </div>
+  <a class="rl-coaching-link" href="{esc(href)}" data-cta="approved_coaching">GET ME IN YOUR CORNER &rarr;</a>
+</aside>'''
+
+
+def build_training_intelligence(rd: dict) -> str:
+    """Restore [07] Training as road-specific intelligence without sales."""
+    race_name = rd['name']
+    countdown_html = ''
+    date_specific = rd['vitals'].get('date_specific', '')
+    cd_start, _cd_end = parse_event_dates(date_specific)
+    if cd_start:
+        parts = cd_start.split('-')
+        month_names = {v: k.capitalize() for k, v in MONTH_NUMBERS.items()}
+        display_month = month_names.get(parts[1], parts[1])
+        display_date = f"{display_month} {int(parts[2])}, {parts[0]}"
+        countdown_html = (
+            f'<div class="rl-countdown" data-date="{cd_start}">'
+            f'<span class="rl-countdown-num" id="rl-days-left">'
+            f'{esc(display_date)}</span> {esc(race_name.upper())}</div>'
+        )
+    rider_html = _build_riders_report([
+        (rd.get('rider_intel', {}).get('gear_mentions', []), 'text'),
+        (rd.get('rider_intel', {}).get('race_day_tips', []), 'text'),
+    ])
+    body = countdown_html + rider_html
+    if not body:
+        body = '<p class="rl-prose">Race-specific preparation details are included in the demand profile below.</p>'
+    return f'''<section id="training" class="rl-section rl-fade-section">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">[07]</span>
+      <h2 class="rl-section-title">Training</h2>
+    </div>
+    <div class="rl-section-body">{body}</div>
+  </section>'''
+
+
 # ── Workout showcase data for race-specific training section ──
 # Each entry: viz structure, duration, descriptions for the flagship workout
 # per archetype category. Viz format matches training-plans.html.
@@ -3972,8 +4037,13 @@ def build_prep_strip(rd: dict) -> str:
   </section>'''
 
 
-def build_train_for_race(rd: dict) -> str:
-    """Build [08] Train for This Race section with showcase workouts."""
+def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
+    """Build [08] Train for This Race with optional plan-selling controls.
+
+    The canonical race-page Deep Dive calls this with ``include_commerce=False``
+    so the demand profile and sample workouts remain editorial while every plan
+    purchase/configurator link stays in the approved offer above the Deep Dive.
+    """
     slug = rd['slug']
     race_name = rd['name']
 
@@ -4158,14 +4228,63 @@ def build_train_for_race(rd: dict) -> str:
 
     plan_url = f"{TRAINING_PLANS_URL}?race={esc(slug)}"
 
-    # Embed race data for client-side configurator
-    race_data_js = {
-        'slug': slug,
-        'race_name': race_name,
-        'date_specific': rd['vitals'].get('date_specific', ''),
-        'distance_mi': distance_mi,
-    }
-    race_data_json = _safe_json_for_script(race_data_js, ensure_ascii=False, separators=(',', ':'))
+    configurator_html = ''
+    plan_cta_html = ''
+    race_data_script = ''
+    if include_commerce:
+        race_data_js = {
+            'slug': slug,
+            'race_name': race_name,
+            'date_specific': rd['vitals'].get('date_specific', ''),
+            'distance_mi': distance_mi,
+        }
+        race_data_json = _safe_json_for_script(
+            race_data_js, ensure_ascii=False, separators=(',', ':')
+        )
+        configurator_html = '''<div class="rl-cfg-bar">
+        <h3 class="rl-cfg-title">PREVIEW YOUR TRAINING PLAN</h3>
+        <div class="rl-cfg-inputs">
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-level">YOUR FITNESS</label>
+            <select id="rl-cfg-level" class="rl-cfg-select">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate" selected>Intermediate</option>
+              <option value="advanced">Advanced</option>
+              <option value="elite">Elite</option>
+            </select>
+          </div>
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-hours">HOURS/WEEK</label>
+            <select id="rl-cfg-hours" class="rl-cfg-select">
+              <option value="6-8">6&ndash;8 hrs</option>
+              <option value="8-12" selected>8&ndash;12 hrs</option>
+              <option value="12-16">12&ndash;16 hrs</option>
+              <option value="16+">16+ hrs</option>
+            </select>
+          </div>
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-date">RACE DATE</label>
+            <input type="date" id="rl-cfg-date" class="rl-cfg-input">
+          </div>
+        </div>
+        <button type="button" id="rl-cfg-btn" class="rl-btn rl-cfg-preview-btn">PREVIEW MY PLAN</button>
+      </div>
+      <div id="rl-cfg-summary" class="rl-cfg-summary" style="display:none;" aria-live="polite" role="region" aria-label="Training plan preview">
+        <div class="rl-cfg-summary-title" id="rl-cfg-summary-title"></div>
+        <div class="rl-cfg-timeline" id="rl-cfg-timeline"></div>
+        <div class="rl-cfg-timeline-bar" id="rl-cfg-timeline-bar"></div>
+        <div class="rl-cfg-details" id="rl-cfg-details"></div>
+      </div>'''
+        plan_cta_html = f'''<div class="rl-pack-cta" id="rl-pack-cta-default">
+        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
+        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
+      </div>
+      <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
+        <a href="{plan_url}" class="rl-btn rl-cfg-cta-btn" id="rl-cfg-cta-link" tabindex="-1">BUILD MY PLAN</a>
+        <p class="rl-pack-cta-detail" id="rl-cfg-cta-detail"></p>
+      </div>'''
+        race_data_script = f'<script>window.__RL_RACE_DATA__={race_data_json};</script>'
 
     # Workout toggle + panel — only render if we have workouts
     workouts_section = ''
@@ -4200,52 +4319,11 @@ def build_train_for_race(rd: dict) -> str:
           {demands_html}
         </div>
       </div>
-      <div class="rl-cfg-bar">
-        <h3 class="rl-cfg-title">PREVIEW YOUR TRAINING PLAN</h3>
-        <div class="rl-cfg-inputs">
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-level">YOUR FITNESS</label>
-            <select id="rl-cfg-level" class="rl-cfg-select">
-              <option value="beginner">Beginner</option>
-              <option value="intermediate" selected>Intermediate</option>
-              <option value="advanced">Advanced</option>
-              <option value="elite">Elite</option>
-            </select>
-          </div>
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-hours">HOURS/WEEK</label>
-            <select id="rl-cfg-hours" class="rl-cfg-select">
-              <option value="6-8">6&ndash;8 hrs</option>
-              <option value="8-12" selected>8&ndash;12 hrs</option>
-              <option value="12-16">12&ndash;16 hrs</option>
-              <option value="16+">16+ hrs</option>
-            </select>
-          </div>
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-date">RACE DATE</label>
-            <input type="date" id="rl-cfg-date" class="rl-cfg-input">
-          </div>
-        </div>
-        <button type="button" id="rl-cfg-btn" class="rl-btn rl-cfg-preview-btn">PREVIEW MY PLAN</button>
-      </div>
-      <div id="rl-cfg-summary" class="rl-cfg-summary" style="display:none;" aria-live="polite" role="region" aria-label="Training plan preview">
-        <div class="rl-cfg-summary-title" id="rl-cfg-summary-title"></div>
-        <div class="rl-cfg-timeline" id="rl-cfg-timeline"></div>
-        <div class="rl-cfg-timeline-bar" id="rl-cfg-timeline-bar"></div>
-        <div class="rl-cfg-details" id="rl-cfg-details"></div>
-      </div>
-      <div class="rl-pack-cta" id="rl-pack-cta-default">
-        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
-        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
-        <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
-      </div>
-      <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
-        <a href="{plan_url}" class="rl-btn rl-cfg-cta-btn" id="rl-cfg-cta-link" tabindex="-1">BUILD MY PLAN</a>
-        <p class="rl-pack-cta-detail" id="rl-cfg-cta-detail"></p>
-      </div>
+      {configurator_html}
+      {plan_cta_html}
       {workouts_section}
     </div>
-    <script>window.__GG_RACE_DATA__={race_data_json};</script>
+    {race_data_script}
   </section>'''
 
 
@@ -5468,12 +5546,143 @@ def get_page_css() -> str:
 </style>'''
 
 
+# The approved spine is shared structurally with Gravel God, but every visual
+# value here resolves through Roadie Labs tokens. Keep this separate from the
+# legacy section CSS until the catalog migration is fully settled.
+APPROVED_TOP_CSS = '''<style>
+.rl-approved-section,
+.rl-coaching-note {
+  background: var(--rl-color-cool-white);
+  border: var(--rl-border-standard);
+  color: var(--rl-color-dark-navy);
+  margin: var(--rl-spacing-xl) 0;
+}
+.rl-approved-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  min-height: 360px;
+}
+.rl-approved-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--rl-spacing-3xl);
+}
+.rl-approved-inner + .rl-approved-inner {
+  border-left: 1px solid var(--rl-color-silver);
+}
+.rl-approved-kicker {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-extreme);
+  text-transform: uppercase;
+}
+.rl-offer h2,
+.rl-coaching-note h2 {
+  color: var(--rl-color-dark-navy);
+  font-family: var(--rl-font-editorial);
+  font-weight: var(--rl-font-weight-bold);
+  line-height: var(--rl-line-height-tight);
+  margin: var(--rl-spacing-md) 0;
+}
+.rl-offer h2 {
+  font-size: var(--rl-font-size-4xl);
+}
+.rl-offer p,
+.rl-coaching-note p {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-xl);
+  line-height: var(--rl-line-height-relaxed);
+  margin: 0;
+  max-width: 34ch;
+}
+.rl-offer-action {
+  align-items: stretch;
+  text-align: center;
+}
+.rl-plan-cta,
+.rl-coaching-link {
+  background: var(--rl-color-signal-red);
+  border: var(--rl-border-standard);
+  color: var(--rl-color-cool-white);
+  display: block;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  padding: var(--rl-spacing-lg);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.rl-plan-cta:hover,
+.rl-coaching-link:hover {
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-white);
+}
+.rl-offer-price {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-md);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  margin-top: var(--rl-spacing-md);
+}
+.rl-coaching-note {
+  align-items: center;
+  display: grid;
+  gap: var(--rl-spacing-2xl);
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: var(--rl-spacing-2xl) var(--rl-spacing-3xl);
+}
+.rl-coaching-note h2 {
+  font-size: var(--rl-font-size-2xl);
+}
+.rl-coaching-note p {
+  font-size: var(--rl-font-size-md);
+  max-width: 54ch;
+}
+.rl-coaching-link {
+  min-width: 260px;
+}
+@media (max-width: 820px) {
+  .rl-approved-section,
+  .rl-coaching-note {
+    grid-template-columns: 1fr;
+  }
+  .rl-approved-section {
+    min-height: 0;
+  }
+  .rl-approved-inner {
+    padding: var(--rl-spacing-xl);
+  }
+  .rl-approved-inner + .rl-approved-inner {
+    border-left: 0;
+    border-top: 1px solid var(--rl-color-silver);
+  }
+  .rl-offer h2 {
+    font-size: var(--rl-font-size-3xl);
+  }
+  .rl-coaching-note {
+    gap: var(--rl-spacing-lg);
+    padding: var(--rl-spacing-xl);
+  }
+  .rl-coaching-link {
+    min-width: 0;
+  }
+}
+</style>'''
+
+
 # ── Shared Assets ─────────────────────────────────────────────
 
 
 def _extract_css_content() -> str:
     """Extract raw CSS from get_page_css() (strip <style> tags)."""
-    raw = get_page_css()
+    raw = get_page_css() + APPROVED_TOP_CSS
     return raw.replace('<style>', '').replace('</style>', '').strip()
 
 
@@ -5582,21 +5791,19 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     course_route = build_course_route(rd)
     from_the_field = build_from_the_field(rd)
     ratings = build_ratings(rd)
-    verdict = build_verdict(rd, race_index)
     racer_reviews = build_racer_reviews(rd)
     email_capture = build_email_capture(rd)
     visible_faq = build_visible_faq(rd)
     news = build_news_section(rd)
-    training = build_training(rd)
-    train_for_race = build_train_for_race(rd)
-    # Strip only renders when [08] exists — its anchor target must be present
-    prep_strip = build_prep_strip(rd) if train_for_race else ''
+    custom_plan = build_custom_plan_offer(rd)
+    coaching = build_coaching_footnote(rd)
+    training = build_training_intelligence(rd)
+    train_for_race = build_train_for_race(rd, include_commerce=False)
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
     similar = build_similar_races(rd, race_index)
     citations_sec = build_citations_section(rd)
     footer = build_footer(rd)
-    sticky_cta = build_sticky_cta(rd['name'], rd['slug'])
 
     # Dynamic TOC — only link to sections that have content
     active = {'course', 'ratings', 'training'}  # always present
@@ -5606,8 +5813,6 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         active.add('route')
     if from_the_field:
         active.add('from-the-field')
-    if verdict:
-        active.add('verdict')
     if logistics_sec:
         active.add('logistics')
     if tire_picks:
@@ -5618,7 +5823,6 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         active.add('citations')
     toc = build_toc(active)
     breakdown = build_breakdown_tiles(active)
-    transition = build_training_transition(rd['name'])
 
     # Use external assets if provided, otherwise inline
     if external_assets:
@@ -5630,18 +5834,18 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         css = critical_css + '\n  ' + external_assets['css_tag']
         inline_js = external_assets['js_tag']
     else:
-        css = get_page_css()
+        css = get_page_css() + APPROVED_TOP_CSS
         inline_js = build_inline_js()
 
-    # Spine first: verdict → interactive rating → jumps → offer. Keep
-    # evidence-rich editorial material server-rendered in a distinct deep dive.
-    spine_sections = [verdict, ratings, breakdown, transition, training]
+    # Approved shared contract: ratings → custom plan → coaching footnote →
+    # Full Breakdown. Brand and race-specific editorial live in the Deep Dive.
+    spine_sections = [ratings, custom_plan, coaching, breakdown]
     spine = '\n\n  '.join(section for section in spine_sections if section)
 
     deep_sections = []
     for section in [course_overview, history, pullquote, course_route,
-                    from_the_field, racer_reviews, email_capture, news,
-                    prep_strip, train_for_race, logistics_sec, tire_picks,
+                    from_the_field, racer_reviews, training, train_for_race,
+                    email_capture, news, logistics_sec, tire_picks,
                     similar, visible_faq, citations_sec]:
         if section:
             deep_sections.append(section)
@@ -5692,8 +5896,8 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
 </head>
 <body>
 
-<a href="#course" class="rl-skip-link">Skip to content</a>
-<div class="rl-neo-brutalist-page" data-race-slug="{esc(rd['slug'])}" data-page-format="spine-v2">
+<a href="#ratings" class="rl-skip-link">Skip to content</a>
+<div class="rl-neo-brutalist-page" data-race-slug="{esc(rd['slug'])}" data-page-format="spine-v2-approved">
   {nav_header}
 
   {hero}
@@ -5709,7 +5913,6 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   {footer}
 </div>
 
-{sticky_cta}
 <button class="rl-back-to-top" id="rl-back-to-top" aria-label="Back to top">&uarr;</button>
 {inline_js}
 
