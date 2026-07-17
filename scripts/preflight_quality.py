@@ -245,27 +245,27 @@ def check_pricing_parity():
     PRICE_CAP_CENTS = 24900
     MIN_WEEKS = 4
 
+    anchor_today = date(2030, 1, 15)
+
     def py_price(race_date_str):
         try:
             from datetime import datetime
             race_date = datetime.strptime(race_date_str, '%Y-%m-%d').date()
         except (ValueError, TypeError):
             return MIN_WEEKS, MIN_WEEKS * PRICE_PER_WEEK_CENTS
-        today = date.today()
-        days_until = (race_date - today).days
+        days_until = (race_date - anchor_today).days
         weeks = max(MIN_WEEKS, math.ceil(days_until / 7))
         price_cents = min(weeks * PRICE_PER_WEEK_CENTS, PRICE_CAP_CENTS)
         return weeks, price_cents
 
     # Test dates: 5wk, 10wk, 16wk, 30wk, past, 3 days out
-    from datetime import datetime
     test_dates = [
-        (datetime.now() + timedelta(weeks=5)).strftime('%Y-%m-%d'),
-        (datetime.now() + timedelta(weeks=10)).strftime('%Y-%m-%d'),
-        (datetime.now() + timedelta(weeks=16)).strftime('%Y-%m-%d'),
-        (datetime.now() + timedelta(weeks=30)).strftime('%Y-%m-%d'),
-        (datetime.now() - timedelta(weeks=2)).strftime('%Y-%m-%d'),
-        (datetime.now() + timedelta(days=3)).strftime('%Y-%m-%d'),
+        (anchor_today + timedelta(weeks=5)).isoformat(),
+        (anchor_today + timedelta(weeks=10)).isoformat(),
+        (anchor_today + timedelta(weeks=16)).isoformat(),
+        (anchor_today + timedelta(weeks=30)).isoformat(),
+        (anchor_today - timedelta(weeks=2)).isoformat(),
+        (anchor_today + timedelta(days=3)).isoformat(),
     ]
 
     js_code = """
@@ -275,8 +275,7 @@ def check_pricing_parity():
 
     function computePrice(raceDateStr) {
       var raceDate = new Date(raceDateStr + 'T00:00:00');
-      var today = new Date();
-      today.setHours(0, 0, 0, 0);
+      var today = new Date(%TODAY% + 'T00:00:00');
       var days = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
       var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
       var price = Math.min(weeks * PRICE_PER_WEEK, PRICE_CAP);
@@ -286,7 +285,7 @@ def check_pricing_parity():
     var dates = %DATES%;
     var results = dates.map(function(d) { return computePrice(d); });
     console.log(JSON.stringify(results));
-    """.replace('%DATES%', json.dumps(test_dates))
+    """.replace('%TODAY%', json.dumps(anchor_today.isoformat())).replace('%DATES%', json.dumps(test_dates))
 
     result = subprocess.run(
         ["node", "-e", js_code],
@@ -497,6 +496,12 @@ def check_worker_hydration_fields():
     """Verify the Cloudflare Worker captures all hydration fields."""
     print("\n── Worker Hydration Fields ──")
     worker_path = PROJECT_ROOT / "workers" / "fueling-lead-intake" / "worker.js"
+    if not worker_path.exists():
+        warn(
+            "Worker hydration fields",
+            "fueling worker is not owned by the Roadie Labs repository — skipping",
+        )
+        return
     text = worker_path.read_text()
 
     required_fields = [
@@ -555,6 +560,14 @@ def check_css_js_class_sync():
 def check_guide_cluster_js_syntax():
     """Parse guide cluster JS through Node.js to catch syntax errors."""
     print("\n── Guide Cluster JS Syntax ──")
+    cluster_generator = WORDPRESS_DIR / "generate_guide_cluster.py"
+    guide_generator = WORDPRESS_DIR / "generate_guide.py"
+    if not cluster_generator.exists() or not guide_generator.exists():
+        warn(
+            "Guide cluster JS syntax",
+            "guide cluster generators are not owned by the Roadie Labs repository — skipping",
+        )
+        return
     sys.path.insert(0, str(WORDPRESS_DIR))
     try:
         import generate_guide_cluster as ggc
@@ -696,6 +709,13 @@ def check_infographic_animation_a11y():
 def check_root_matches_brand_tokens():
     """Verify :root CSS custom properties match road-labs-brand/tokens/tokens.css."""
     print("\n── :root vs Brand Tokens Parity ──")
+    guide_generator = WORDPRESS_DIR / "generate_guide.py"
+    if not guide_generator.exists():
+        warn(
+            ":root token parity",
+            "guide generator is not owned by the Roadie Labs repository — skipping guide-only check",
+        )
+        return
     tokens_path = PROJECT_ROOT.parent / "road-labs-brand" / "tokens" / "tokens.css"
     if not tokens_path.exists():
         warn(":root token parity", f"Brand tokens file not found at {tokens_path}")
@@ -1401,12 +1421,23 @@ def main():
         check_pricing_parity()
         check_stripe_pricing_parity()
         check_no_dead_css()
-        check_infographic_renderers()
-        check_infographic_css_no_hex()
-        check_infographic_editorial()
-        check_infographic_animation_a11y()
-        check_interactive_js_handlers()
-        check_no_dead_end_infographics()
+        guide_checks_available = all((
+            (WORDPRESS_DIR / "generate_guide.py").exists(),
+            (WORDPRESS_DIR / "guide_infographics.py").exists(),
+            (PROJECT_ROOT / "guide" / "gravel-guide-content.json").exists(),
+        ))
+        if guide_checks_available:
+            check_infographic_renderers()
+            check_infographic_css_no_hex()
+            check_infographic_editorial()
+            check_infographic_animation_a11y()
+            check_interactive_js_handlers()
+            check_no_dead_end_infographics()
+        else:
+            warn(
+                "Gravel guide infographic checks",
+                "guide generator and content are not owned by the Roadie Labs repository — skipping",
+            )
         check_root_matches_brand_tokens()
         check_brand_tokens_py_parity()
         check_all_generators_token_refs()

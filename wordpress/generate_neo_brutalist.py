@@ -443,7 +443,10 @@ def normalize_race_data(data: dict) -> dict:
         'final_verdict': {
             'score': final_verdict.get('score', ''),
             'one_liner': final_verdict.get('one_liner', ''),
-            'should_you_race': final_verdict.get('should_you_race', ''),
+            'should_you_race': (
+                final_verdict.get('should_you_race', '')
+                or final_verdict.get('full_verdict', '')
+            ),
             'alternatives': final_verdict.get('alternatives', ''),
         },
         'course': {
@@ -812,7 +815,7 @@ document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
       });
       tile.setAttribute('aria-expanded', expanded ? 'false' : 'true');
       if (typeof gtag === 'function' && !expanded) {
-        gtag('event', 'rating_dimension_click', {rating_dimension: tile.getAttribute('data-rating-dim') || ''});
+        gtag('event', 'rating_criterion_click', {rating_criterion: tile.getAttribute('data-rating-dim') || ''});
       }
     });
   });
@@ -1002,19 +1005,97 @@ if ('IntersectionObserver' in window) {
 
 // Measure the decision spine against the current race-page baseline.
 (function() {
+  var crumb = document.getElementById('rl-races-crumb');
+  if (!crumb || !document.referrer) return;
+  try {
+    var referrer = new URL(document.referrer);
+    var path = referrer.pathname;
+    var isDiscovery = referrer.origin === window.location.origin && (
+      path.indexOf('/search/') === 0 ||
+      path.indexOf('/road-races/') === 0 ||
+      path.indexOf('/race/calendar/') === 0 ||
+      path.indexOf('/race/tier-') === 0 ||
+      path.indexOf('/race/series/') === 0
+    );
+    if (isDiscovery) {
+      crumb.href = path + referrer.search;
+      crumb.textContent = 'Back to results';
+    }
+  } catch(e) {}
+})();
+
+(function() {
   if (!('IntersectionObserver' in window)) return;
+  var page = document.querySelector('.rl-neo-brutalist-page');
+  var raceSlug = page ? (page.getAttribute('data-race-slug') || '') : '';
+  var pageFormat = page ? (page.getAttribute('data-page-format') || '') : '';
   var seen = {};
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (!entry.isIntersecting) return;
-      var section = entry.target.getAttribute('data-measure-section');
+      var section = entry.target.getAttribute('data-measure-section') || ('deep_' + (entry.target.id || 'section'));
       if (!section || seen[section]) return;
       seen[section] = true;
-      if (typeof gtag === 'function') gtag('event', 'race_section_view', {section_name: section});
+      if (typeof gtag === 'function') gtag('event', 'race_section_view', {race_slug: raceSlug, page_format: pageFormat, section: section, section_name: section});
       observer.unobserve(entry.target);
     });
   }, {threshold: 0.35});
-  document.querySelectorAll('[data-measure-section]').forEach(function(section) { observer.observe(section); });
+  document.querySelectorAll('[data-measure-section], .rl-deep-dive > section[id]').forEach(function(section) { observer.observe(section); });
+})();
+
+document.querySelectorAll('a[data-related-race]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (typeof gtag !== 'function') return;
+    var page = document.querySelector('.rl-neo-brutalist-page');
+    gtag('event', 'related_race_click', {
+      race_slug: page ? (page.getAttribute('data-race-slug') || '') : '',
+      page_format: page ? (page.getAttribute('data-page-format') || '') : '',
+      related_race_slug: link.getAttribute('data-related-race') || ''
+    });
+  });
+});
+
+// The evidence layer stays server-rendered, but opens one section at a time so
+// the first visit remains a decision page rather than a wall of prose.
+(function() {
+  var hash = window.location.hash ? window.location.hash.substring(1) : '';
+  var sections = document.querySelectorAll('.rl-deep-dive > .rl-section, .rl-deep-dive > .rl-racer-reviews');
+  function setExpanded(section, expanded) {
+    var header = section.querySelector('.rl-section-header');
+    var body = section.querySelector('.rl-section-body');
+    if (!header || !body) return;
+    body.hidden = !expanded;
+    header.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    var chevron = header.querySelector('.rl-section-chevron');
+    if (chevron) chevron.textContent = expanded ? '\u25B4' : '\u25BE';
+  }
+  sections.forEach(function(section) {
+    var target = hash ? document.getElementById(hash) : null;
+    var startExpanded = Boolean(target && (target === section || section.contains(target)));
+    var header = section.querySelector('.rl-section-header');
+    var body = section.querySelector('.rl-section-body');
+    if (!header || !body) return;
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    var chevron = document.createElement('span');
+    chevron.className = 'rl-section-chevron';
+    chevron.setAttribute('aria-hidden', 'true');
+    header.appendChild(chevron);
+    function toggle() { setExpanded(section, body.hidden); }
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggle(); }
+    });
+    setExpanded(section, startExpanded);
+  });
+  document.querySelectorAll('.rl-breakdown-tile, .rl-toc a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var id = (link.getAttribute('href') || '').replace(/^#/, '');
+      var target = id ? document.getElementById(id) : null;
+      var section = target ? target.closest('.rl-deep-dive > .rl-section, .rl-deep-dive > .rl-racer-reviews') : null;
+      if (section) setExpanded(section, true);
+    });
+  });
 })();
 
 // News ticker — multi-source (Google News + Reddit)
@@ -1158,7 +1239,10 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 // CTA click tracking — GA4
 (function() {
   if (typeof gtag !== 'function') return;
-  document.querySelectorAll('a.rl-btn, a.rl-btn--outline, a.rl-prep-kit-link').forEach(function(link) {
+  var page = document.querySelector('.rl-neo-brutalist-page');
+  var raceSlug = page ? (page.getAttribute('data-race-slug') || '') : '';
+  var pageFormat = page ? (page.getAttribute('data-page-format') || '') : '';
+  document.querySelectorAll('a[data-cta], a.rl-btn, a.rl-btn--outline, a.rl-prep-kit-link').forEach(function(link) {
     link.addEventListener('click', function() {
       var text = this.textContent.trim().replace(/\s+/g, ' ');
       var href = this.getAttribute('href') || '';
@@ -1173,7 +1257,9 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
         cta_type: cta_type,
         cta_text: text.substring(0, 50),
         cta_section: section_id,
-        cta_href: href
+        cta_href: href,
+        race_slug: raceSlug,
+        page_format: pageFormat
       });
     });
   });
@@ -2458,16 +2544,23 @@ def build_verdict(rd: dict, race_index: list = None) -> str:
     strengths = bo.get('strengths', [])
     weaknesses = bo.get('weaknesses', [])
 
-    if not strengths and not weaknesses and not fv.get('should_you_race'):
-        # Fallback: show summary if available
-        if bo.get('summary'):
-            return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section">
+    if not strengths and not weaknesses:
+        # Many migrated road profiles carry a real one-line editor verdict but
+        # no Race/Skip lists. Keep that judgment in the decision spine without
+        # manufacturing generic bullets.
+        verdict_text = (
+            bo.get('summary')
+            or fv.get('should_you_race')
+            or fv.get('one_liner')
+        )
+        if verdict_text:
+            return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section" data-measure-section="verdict">
     <div class="rl-section-header rl-section-header--gold">
       <span class="rl-section-kicker">[06]</span>
       <h2 class="rl-section-title">Final Verdict</h2>
     </div>
     <div class="rl-section-body">
-      <div class="rl-prose"><p>{esc(bo["summary"])}</p></div>
+      <div class="rl-prose"><p>{esc(verdict_text)}</p></div>
     </div>
   </section>'''
         return ''
@@ -2504,7 +2597,7 @@ def build_verdict(rd: dict, race_index: list = None) -> str:
         linked = linkify_alternatives(fv['alternatives'], race_index or [])
         alt_html = f'''<div class="rl-prose rl-mt-md"><p><strong>Alternatives:</strong> {linked}</p></div>'''
 
-    return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section">
+    return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section" data-measure-section="verdict">
     <div class="rl-section-header rl-section-header--gold">
       <span class="rl-section-kicker">[06]</span>
       <h2 class="rl-section-title">Final Verdict</h2>
@@ -4528,13 +4621,13 @@ def build_similar_races(rd: dict, race_index: list) -> str:
         tier_num = r.get('tier', 4)
         dist = r.get('distance_mi', '')
         dist_str = f" &middot; {dist} mi" if dist else ''
-        cards.append(f'''<a href="/race/{esc(r['slug'])}/" class="rl-similar-card">
+        cards.append(f'''<a href="/race/{esc(r['slug'])}/" class="rl-similar-card" data-related-race="{esc(r['slug'])}">
         <span class="rl-similar-tier">T{tier_num}</span>
         <span class="rl-similar-name">{esc(r['name'])}</span>
         <span class="rl-similar-meta">{esc(r.get('location', ''))}{dist_str} &middot; {r.get('overall_score', 0)}/100</span>
       </a>''')
 
-    return f'''<section class="rl-section rl-fade-section">
+    return f'''<section class="rl-section rl-fade-section" id="similar-races">
     <div class="rl-section-header rl-section-header--dark">
       <span class="rl-section-kicker">[&mdash;]</span>
       <h2 class="rl-section-title">Similar Races</h2>
@@ -4673,14 +4766,14 @@ def _build_breadcrumb_series_segment(rd: dict) -> str:
 def build_nav_header(rd: dict, race_index: list) -> str:
     """Build visible navigation header with breadcrumb trail."""
     return get_site_header_html(active="races") + f'''
-  <div class="rl-breadcrumb">
+  <nav class="rl-breadcrumb" aria-label="Breadcrumb">
     <a href="{SITE_BASE_URL}/">Home</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
-    <a href="{SITE_BASE_URL}/road-races/">Road Races</a>
+    <a href="{SITE_BASE_URL}/road-races/" id="rl-races-crumb">Road Races</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
     {_build_breadcrumb_series_segment(rd)}
     <span class="rl-breadcrumb-current">{esc(rd['name'])}</span>
-  </div>'''
+  </nav>'''
 
 
 def build_footer(rd: dict = None) -> str:
@@ -4781,6 +4874,9 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-breakdown-tile:hover, .rl-neo-brutalist-page .rl-breakdown-tile:focus-visible {{ background: var(--rl-color-silver); outline: 2px solid var(--rl-color-dark-navy); outline-offset: -2px; }}
 .rl-neo-brutalist-page .rl-training-transition {{ margin: 44px 0 16px; padding: 26px 28px; border: 3px solid var(--rl-color-dark-navy); text-align: center; background: var(--rl-color-cool-white); }}
 .rl-neo-brutalist-page .rl-training-transition span {{ display: block; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); }}
+.rl-neo-brutalist-page .rl-deep-dive {{ margin-top: 32px; }}
+.rl-neo-brutalist-page .rl-deep-dive::before {{ content: 'DEEP DIVE'; display: block; margin-bottom: 12px; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-section-chevron {{ margin-left: auto; color: var(--rl-color-secondary-blue); font-family: var(--rl-font-data); }}
 .rl-neo-brutalist-page .rl-training-transition p {{ margin: 8px 0 0; font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-md); color: var(--rl-color-dark-navy); }}
 
 /* TOC — light version */
@@ -5537,19 +5633,20 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         css = get_page_css()
         inline_js = build_inline_js()
 
-    # Spine first: verdict → interactive rating → jumps → offer. The evidence-rich
-    # editorial material stays intact below as the deep dive.
-    content_sections = []
-    for section in [verdict, ratings, breakdown, transition, training,
-                    course_overview, history, pullquote,
-                    course_route, from_the_field, racer_reviews,
-                    email_capture, news, prep_strip, train_for_race,
-                    logistics_sec, tire_picks, similar, visible_faq,
-                    citations_sec]:
-        if section:
-            content_sections.append(section)
+    # Spine first: verdict → interactive rating → jumps → offer. Keep
+    # evidence-rich editorial material server-rendered in a distinct deep dive.
+    spine_sections = [verdict, ratings, breakdown, transition, training]
+    spine = '\n\n  '.join(section for section in spine_sections if section)
 
-    content = '\n\n  '.join(content_sections)
+    deep_sections = []
+    for section in [course_overview, history, pullquote, course_route,
+                    from_the_field, racer_reviews, email_capture, news,
+                    prep_strip, train_for_race, logistics_sec, tire_picks,
+                    similar, visible_faq, citations_sec]:
+        if section:
+            deep_sections.append(section)
+
+    deep_content = '\n\n  '.join(deep_sections)
 
     # SEO-optimized title and description
     seo_title = build_seo_title(rd)
@@ -5596,14 +5693,18 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
 <body>
 
 <a href="#course" class="rl-skip-link">Skip to content</a>
-<div class="rl-neo-brutalist-page">
+<div class="rl-neo-brutalist-page" data-race-slug="{esc(rd['slug'])}" data-page-format="spine-v2">
   {nav_header}
 
   {hero}
 
+  {spine}
+
   {toc}
 
-  {content}
+  <div class="rl-deep-dive" id="deep-dive" data-measure-section="deep-dive">
+  {deep_content}
+  </div>
 
   {footer}
 </div>

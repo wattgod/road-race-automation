@@ -796,6 +796,8 @@ class TestSections:
     def test_similar_races(self, normalized_data, sample_race_index):
         html = build_similar_races(normalized_data, sample_race_index)
         assert "rl-similar-card" in html
+        assert 'data-related-race=' in html
+        assert 'id="similar-races"' in html
 
     def test_news_section_has_ticker(self, normalized_data):
         html = build_news_section(normalized_data)
@@ -939,10 +941,11 @@ class TestNav:
 
     def test_breadcrumb_outside_header(self, normalized_data):
         html = build_nav_header(normalized_data, [])
-        # Breadcrumb should be a separate div, not inside <header>
+        # Breadcrumb should be a separate landmark, not inside <header>.
         header_end = html.index("</header>")
         breadcrumb_start = html.index('class="rl-breadcrumb"')
         assert breadcrumb_start > header_end
+        assert '<nav class="rl-breadcrumb" aria-label="Breadcrumb">' in html
 
     def test_breadcrumb_has_race_name_and_tier(self, normalized_data):
         html = build_nav_header(normalized_data, [])
@@ -1072,10 +1075,13 @@ class TestFullPage:
         html = generate_page(normalized_data)
         markers = [
             'id="verdict"', 'id="ratings"', 'id="breakdown"',
-            'data-measure-section="transition"', 'id="training"', 'id="course"',
+            'data-measure-section="transition"', 'id="training"',
+            'id="deep-dive"', 'id="course"',
         ]
         positions = [html.index(marker) for marker in markers]
         assert positions == sorted(positions)
+        assert ".rl-deep-dive > section[id]" in html
+        assert "related_race_click" in html
 
     def test_external_asset_bundle_resolves(self, normalized_data, tmp_path):
         assets = write_shared_assets(tmp_path)
