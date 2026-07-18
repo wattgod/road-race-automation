@@ -40,6 +40,7 @@ from brand_tokens import (
     get_preload_hints,
     get_tokens_css,
     get_ga4_head_snippet,
+    get_ab_head_snippet,
 )
 from cookie_consent import get_consent_banner_html
 from shared_footer import get_mega_footer_css, get_mega_footer_html
@@ -151,6 +152,20 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
             start = f"{year}-{month}-{int(start_day):02d}"
             end = f"{year}-{month}-{int(end_day):02d}" if end_day else start
             return start, end
+
+    # Common road-profile form: "July 5, 2026" (optionally with notes/time).
+    month_first = re.search(r'\b([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\b', clean)
+    if month_first:
+        month_name, day, year = month_first.groups()
+        month = MONTH_NUMBERS.get(month_name.lower())
+        if month is None:
+            try:
+                month = datetime.strptime(month_name[:3], '%b').strftime('%m')
+            except ValueError:
+                month = None
+        if month:
+            parsed = f"{year}-{month}-{int(day):02d}"
+            return parsed, parsed
 
     # If the string contains a year but we still couldn't parse it, warn
     if re.search(r'\d{4}', date_str):
@@ -428,7 +443,10 @@ def normalize_race_data(data: dict) -> dict:
         'final_verdict': {
             'score': final_verdict.get('score', ''),
             'one_liner': final_verdict.get('one_liner', ''),
-            'should_you_race': final_verdict.get('should_you_race', ''),
+            'should_you_race': (
+                final_verdict.get('should_you_race', '')
+                or final_verdict.get('full_verdict', '')
+            ),
             'alternatives': final_verdict.get('alternatives', ''),
         },
         'course': {
@@ -578,9 +596,9 @@ def _radar_svg(dims: list, explanations: dict, color_fill: str, color_stroke: st
         dots.append(
             f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="12" fill="transparent" '
             f'class="rl-radar-hit" data-accordion-idx="{idx_offset + i}" '
-            f'data-label="{esc(dim_label)}" data-score="{s}" style="cursor:pointer"/>'
+            f'data-dim="{esc(dims[i])}" data-label="{esc(dim_label)}" data-score="{s}" style="cursor:pointer"/>'
             f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="5" fill="{color_stroke}" '
-            f'stroke="{COLORS["dark_brown"]}" stroke-width="1.5" class="rl-radar-dot" pointer-events="none" opacity="0"/>'
+            f'stroke="{COLORS["dark_brown"]}" stroke-width="1.5" class="rl-radar-dot" pointer-events="none" opacity="1"/>'
             f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="10" fill="none" '
             f'stroke="{color_stroke}" stroke-width="1.5" opacity="0" '
             f'class="rl-radar-ring" pointer-events="none"/>'
@@ -623,7 +641,7 @@ def _radar_svg(dims: list, explanations: dict, color_fill: str, color_stroke: st
     <svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" class="rl-radar-svg">
       {''.join(grid_lines)}
       {''.join(axis_lines)}
-      <polygon points="{data_pts}" fill="{color_fill}" class="rl-radar-polygon" fill-opacity="0" stroke="{color_stroke}" stroke-width="2.5" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+      <polygon points="{data_pts}" fill="{color_fill}" class="rl-radar-polygon" fill-opacity="0.16" stroke="{color_stroke}" stroke-width="2.5"/>
       {''.join(dots)}
       {''.join(labels)}
       {center_label}
@@ -634,15 +652,47 @@ def _radar_svg(dims: list, explanations: dict, color_fill: str, color_stroke: st
   </div>'''
 
 
+def _build_rating_tiles(dims: list, explanations: dict, group_id: str) -> str:
+    """Build the click-to-explain score tiles paired with one radar."""
+    items = []
+    for i, dim in enumerate(dims):
+        entry = explanations.get(dim, {})
+        score = entry.get('score', 0)
+        explanation = (entry.get('explanation') or '').strip()
+        label = DIM_LABELS.get(dim, dim.replace('_', ' ').title())
+        if not explanation:
+            explanation = 'No written explanation is available yet.'
+        items.append(f'''<button type="button" class="rl-rating-tile" data-rating-dim="{esc(dim)}" aria-expanded="false">
+          <span class="rl-rating-tile-label">{esc(label)}</span><strong>{esc(score)}/5</strong>
+          <span class="rl-rating-tile-copy">{esc(explanation)}</span>
+        </button>''')
+    return f'''<div class="rl-rating-breakdown" aria-label="{esc(group_id.title())} score breakdown">
+      {''.join(items)}
+    </div>'''
+
+
 def build_radar_charts(explanations: dict, course_total: int, opinion_total: int) -> str:
-    """Build side-by-side radar charts for Course Profile and Editorial dimensions."""
+    """Build tabbed Course/Editorial radar charts with click-to-explain tiles."""
     course_chart = _radar_svg(COURSE_DIMS, explanations,
                               COLORS['signal_red'], COLORS['signal_red'],
                               'Course Profile', course_total, 35, idx_offset=0)
     editorial_chart = _radar_svg(OPINION_DIMS, explanations,
                                  COLORS['orange'], COLORS['orange'],
                                  'Editorial', opinion_total, 35, idx_offset=7)
-    return f'<div class="rl-radar-pair">\n{course_chart}\n{editorial_chart}\n</div>'
+    return f'''<div class="rl-rating-tabs">
+      <div class="rl-rating-tablist" role="tablist" aria-label="Rating categories">
+        <button type="button" id="rl-rating-tab-course" role="tab" aria-selected="true" aria-controls="rl-rating-panel-course" tabindex="0">Course <span>{esc(course_total)}/35</span></button>
+        <button type="button" id="rl-rating-tab-editorial" role="tab" aria-selected="false" aria-controls="rl-rating-panel-editorial" tabindex="-1">Editorial <span>{esc(opinion_total)}/35</span></button>
+      </div>
+      <div id="rl-rating-panel-course" class="rl-rating-panel" role="tabpanel" aria-labelledby="rl-rating-tab-course" data-rating-group="course">
+        {course_chart}
+        {_build_rating_tiles(COURSE_DIMS, explanations, 'course')}
+      </div>
+      <div id="rl-rating-panel-editorial" class="rl-rating-panel" role="tabpanel" aria-labelledby="rl-rating-tab-editorial" data-rating-group="editorial" hidden>
+        {editorial_chart}
+        {_build_rating_tiles(OPINION_DIMS, explanations, 'editorial')}
+      </div>
+    </div>'''
 
 
 def build_accordion_html(dims: list, explanations: dict, idx_offset: int = 0) -> str:
@@ -687,7 +737,7 @@ def build_sticky_cta(race_name: str, slug: str = "") -> str:
     <span class="rl-sticky-cta-name">{esc(race_name)}</span>
     <div style="display:flex;align-items:center;gap:12px">
       <a href="{plan_href}" class="rl-btn" id="rl-sticky-cta-link"><span id="rl-sticky-cta-text">BUILD MY PLAN &mdash; $15/WK</span></a>
-      <button class="rl-sticky-dismiss" onclick="document.getElementById(\'rl-sticky-cta\').style.display=\'none\';try{{sessionStorage.setItem(\'rl-cta-dismissed\',\'1\')}}catch(e){{}}" aria-label="Dismiss">&times;</button>
+      <button type="button" class="rl-sticky-dismiss" aria-label="Dismiss">&times;</button>
     </div>
   </div>
 </div>'''
@@ -731,47 +781,48 @@ document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
   }
 })();
 
-// Hero score counter animation (starts from 0, real score is in HTML for crawlers)
+// Rating tabs and click-to-explain tiles. The SVG is fully visible without JS.
 (function() {
-  var el = document.querySelector('.rl-hero-score-number');
-  if (!el) return;
-  var target = parseInt(el.getAttribute('data-target'), 10);
-  if (!target) return;
-  el.textContent = '0';
-  var duration = 1500;
-  var start = null;
-  function step(ts) {
-    if (!start) start = ts;
-    var progress = Math.min((ts - start) / duration, 1);
-    var ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(ease * target);
-    if (progress < 1) requestAnimationFrame(step);
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.rl-rating-tablist [role="tab"]'));
+  function activate(tab) {
+    tabs.forEach(function(candidate) {
+      var selected = candidate === tab;
+      candidate.setAttribute('aria-selected', selected ? 'true' : 'false');
+      candidate.setAttribute('tabindex', selected ? '0' : '-1');
+      var panel = document.getElementById(candidate.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !selected;
+    });
+    var activePanel = document.getElementById(tab.getAttribute('aria-controls'));
+    if (typeof gtag === 'function') {
+      gtag('event', 'rating_tab_click', {rating_group: activePanel ? activePanel.getAttribute('data-rating-group') : ''});
+    }
   }
-  requestAnimationFrame(step);
+  tabs.forEach(function(tab, index) {
+    tab.addEventListener('click', function() { activate(tab); });
+    tab.addEventListener('keydown', function(event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      var next = event.key === 'ArrowRight' ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
+      activate(tabs[next]);
+      tabs[next].focus();
+    });
+  });
+  document.querySelectorAll('.rl-rating-tile').forEach(function(tile) {
+    tile.addEventListener('click', function() {
+      var expanded = tile.getAttribute('aria-expanded') === 'true';
+      tile.closest('.rl-rating-breakdown').querySelectorAll('.rl-rating-tile').forEach(function(other) {
+        other.setAttribute('aria-expanded', 'false');
+      });
+      tile.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      if (typeof gtag === 'function' && !expanded) {
+        gtag('event', 'rating_criterion_click', {rating_criterion: tile.getAttribute('data-rating-dim') || ''});
+      }
+    });
+  });
 })();
 
 // Radar chart interactions
 (function() {
-  // Draw-in animation on scroll
-  if ('IntersectionObserver' in window) {
-    var radarObs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-drawn');
-          // Stagger dot reveal
-          var dots = entry.target.querySelectorAll('.rl-radar-dot');
-          dots.forEach(function(dot, i) {
-            dot.style.transitionDelay = (0.8 + i * 0.08) + 's';
-          });
-          radarObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.rl-radar-chart').forEach(function(chart) {
-      radarObs.observe(chart);
-    });
-  }
-
   // Click + hover on data points
   document.querySelectorAll('.rl-radar-hit').forEach(function(hit) {
     var svg = hit.closest('svg');
@@ -806,19 +857,13 @@ document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
       tooltipBg.style.opacity = '0';
     });
 
-    // Click → open accordion and scroll
+    // Click → open the matching explanation tile.
     hit.addEventListener('click', function() {
-      var idx = hit.getAttribute('data-accordion-idx');
-      var target = document.querySelector('.rl-accordion-item[data-accordion-idx="' + idx + '"]');
+      var panel = hit.closest('.rl-rating-panel');
+      var dim = hit.getAttribute('data-dim');
+      var target = panel ? panel.querySelector('.rl-rating-tile[data-rating-dim="' + dim + '"]') : null;
       if (!target) return;
-      if (!target.classList.contains('is-open')) {
-        target.classList.add('is-open');
-        var trigger = target.querySelector('.rl-accordion-trigger');
-        if (trigger) trigger.setAttribute('aria-expanded', 'true');
-      }
-      // Brief highlight
-      target.classList.add('is-highlighted');
-      setTimeout(function() { target.classList.remove('is-highlighted'); }, 1500);
+      target.click();
       target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
@@ -894,6 +939,11 @@ document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
 // Sticky CTA + scroll fade-in
 if ('IntersectionObserver' in window) {
   var stickyCta = document.getElementById('rl-sticky-cta');
+  var stickyDismiss = stickyCta ? stickyCta.querySelector('.rl-sticky-dismiss') : null;
+  if (stickyDismiss) stickyDismiss.addEventListener('click', function() {
+    stickyCta.style.display = 'none';
+    try { sessionStorage.setItem('rl-cta-dismissed', '1'); } catch(e) {}
+  });
   try { if (sessionStorage.getItem('rl-cta-dismissed')) { if (stickyCta) stickyCta.style.display = 'none'; stickyCta = null; } } catch(e) {}
   var hero = document.querySelector('.rl-hero');
   var training = document.getElementById('training');
@@ -952,6 +1002,101 @@ if ('IntersectionObserver' in window) {
     });
   }
 }
+
+// Measure the decision spine against the current race-page baseline.
+(function() {
+  var crumb = document.getElementById('rl-races-crumb');
+  if (!crumb || !document.referrer) return;
+  try {
+    var referrer = new URL(document.referrer);
+    var path = referrer.pathname;
+    var isDiscovery = referrer.origin === window.location.origin && (
+      path.indexOf('/search/') === 0 ||
+      path.indexOf('/road-races/') === 0 ||
+      path.indexOf('/race/calendar/') === 0 ||
+      path.indexOf('/race/tier-') === 0 ||
+      path.indexOf('/race/series/') === 0
+    );
+    if (isDiscovery) {
+      crumb.href = path + referrer.search;
+      crumb.textContent = 'Back to results';
+    }
+  } catch(e) {}
+})();
+
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var page = document.querySelector('.rl-neo-brutalist-page');
+  var raceSlug = page ? (page.getAttribute('data-race-slug') || '') : '';
+  var pageFormat = page ? (page.getAttribute('data-page-format') || '') : '';
+  var seen = {};
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var section = entry.target.getAttribute('data-measure-section') || ('deep_' + (entry.target.id || 'section'));
+      if (!section || seen[section]) return;
+      seen[section] = true;
+      if (typeof gtag === 'function') gtag('event', 'race_section_view', {race_slug: raceSlug, page_format: pageFormat, section: section, section_name: section});
+      observer.unobserve(entry.target);
+    });
+  }, {threshold: 0.35});
+  document.querySelectorAll('[data-measure-section], .rl-deep-dive > section[id]').forEach(function(section) { observer.observe(section); });
+})();
+
+document.querySelectorAll('a[data-related-race]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (typeof gtag !== 'function') return;
+    var page = document.querySelector('.rl-neo-brutalist-page');
+    gtag('event', 'related_race_click', {
+      race_slug: page ? (page.getAttribute('data-race-slug') || '') : '',
+      page_format: page ? (page.getAttribute('data-page-format') || '') : '',
+      related_race_slug: link.getAttribute('data-related-race') || ''
+    });
+  });
+});
+
+// The evidence layer stays server-rendered, but opens one section at a time so
+// the first visit remains a decision page rather than a wall of prose.
+(function() {
+  var hash = window.location.hash ? window.location.hash.substring(1) : '';
+  var sections = document.querySelectorAll('.rl-deep-dive > .rl-section, .rl-deep-dive > .rl-racer-reviews');
+  function setExpanded(section, expanded) {
+    var header = section.querySelector('.rl-section-header');
+    var body = section.querySelector('.rl-section-body');
+    if (!header || !body) return;
+    body.hidden = !expanded;
+    header.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    var chevron = header.querySelector('.rl-section-chevron');
+    if (chevron) chevron.textContent = expanded ? '\u25B4' : '\u25BE';
+  }
+  sections.forEach(function(section) {
+    var target = hash ? document.getElementById(hash) : null;
+    var startExpanded = Boolean(target && (target === section || section.contains(target)));
+    var header = section.querySelector('.rl-section-header');
+    var body = section.querySelector('.rl-section-body');
+    if (!header || !body) return;
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    var chevron = document.createElement('span');
+    chevron.className = 'rl-section-chevron';
+    chevron.setAttribute('aria-hidden', 'true');
+    header.appendChild(chevron);
+    function toggle() { setExpanded(section, body.hidden); }
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggle(); }
+    });
+    setExpanded(section, startExpanded);
+  });
+  document.querySelectorAll('.rl-breakdown-tile, .rl-toc a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var id = (link.getAttribute('href') || '').replace(/^#/, '');
+      var target = id ? document.getElementById(id) : null;
+      var section = target ? target.closest('.rl-deep-dive > .rl-section, .rl-deep-dive > .rl-racer-reviews') : null;
+      if (section) setExpanded(section, true);
+    });
+  });
+})();
 
 // News ticker — multi-source (Google News + Reddit)
 (function() {
@@ -1094,7 +1239,10 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 // CTA click tracking — GA4
 (function() {
   if (typeof gtag !== 'function') return;
-  document.querySelectorAll('a.rl-btn, a.rl-btn--outline, a.rl-prep-kit-link').forEach(function(link) {
+  var page = document.querySelector('.rl-neo-brutalist-page');
+  var raceSlug = page ? (page.getAttribute('data-race-slug') || '') : '';
+  var pageFormat = page ? (page.getAttribute('data-page-format') || '') : '';
+  document.querySelectorAll('a[data-cta], a.rl-btn, a.rl-btn--outline, a.rl-prep-kit-link').forEach(function(link) {
     link.addEventListener('click', function() {
       var text = this.textContent.trim().replace(/\s+/g, ' ');
       var href = this.getAttribute('href') || '';
@@ -1109,7 +1257,9 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
         cta_type: cta_type,
         cta_text: text.substring(0, 50),
         cta_section: section_id,
-        cta_href: href
+        cta_href: href,
+        race_slug: raceSlug,
+        page_format: pageFormat
       });
     });
   });
@@ -1280,7 +1430,7 @@ document.querySelectorAll('.rl-lite-youtube').forEach(function(el) {
       panel.removeAttribute('tabindex');
       if (typeof gtag === 'function') {
         gtag('event', 'workouts_panel_expand', {
-          race_slug: (window.__GG_RACE_DATA__ || {}).slug || '',
+          race_slug: (window.__RL_RACE_DATA__ || {}).slug || '',
           workout_count: workoutCount
         });
       }
@@ -1309,7 +1459,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
 
 /* ── Plan Preview Mini-Configurator ── */
 (function() {
-  var rd = window.__GG_RACE_DATA__;
+  var rd = window.__RL_RACE_DATA__;
   if (!rd) return;
   var btn = document.getElementById('rl-cfg-btn');
   var dateInput = document.getElementById('rl-cfg-date');
@@ -1809,8 +1959,8 @@ def build_hero(rd: dict) -> str:
   </div>
   <div class="rl-hero-scores">
   <div class="rl-hero-score">
-    <div class="rl-hero-score-number" data-target="{score}">{score}</div>
-    <div class="rl-hero-score-label">RL SCORE</div>
+    <div class="rl-hero-score-number">{score}</div>
+    <div class="rl-hero-score-label">LAB SCORE</div>
   </div>
   <div class="rl-hero-score rl-hero-score--rider">
     {rider_cell}
@@ -2372,35 +2522,16 @@ def build_from_the_field(rd: dict) -> str:
 
 
 def build_ratings(rd: dict) -> str:
-    """Build [05] The Ratings section — merged course + editorial with accordions."""
-    # Summary row
-    summary = f'''<div class="rl-ratings-summary">
-        <div class="rl-ratings-summary-card">
-          <div class="rl-ratings-summary-score">{rd['course_profile']}<span class="rl-ratings-summary-max">/35</span></div>
-          <div class="rl-ratings-summary-label">Course Profile</div>
-        </div>
-        <div class="rl-ratings-summary-card">
-          <div class="rl-ratings-summary-score">{rd['opinion_total']}<span class="rl-ratings-summary-max">/35</span></div>
-          <div class="rl-ratings-summary-label">Editorial</div>
-        </div>
-      </div>'''
-
+    """Build the interactive, tabbed two-radar decision tool."""
     radar = build_radar_charts(rd['explanations'], rd['course_profile'], rd['opinion_total'])
-    course_accordion = build_accordion_html(COURSE_DIMS, rd['explanations'], idx_offset=0)
-    opinion_accordion = build_accordion_html(OPINION_DIMS, rd['explanations'], idx_offset=7)
 
-    return f'''<section id="ratings" class="rl-section rl-section--teal-accent rl-fade-section">
+    return f'''<section id="ratings" class="rl-section rl-section--teal-accent rl-fade-section" data-measure-section="rating">
     <div class="rl-section-header rl-section-header--dark">
       <span class="rl-section-kicker">[05]</span>
       <h2 class="rl-section-title">The Ratings</h2>
     </div>
     <div class="rl-section-body">
-      {summary}
       {radar}
-      <h3 class="rl-accordion-group-title">Course Profile</h3>
-      {course_accordion}
-      <h3 class="rl-accordion-group-title rl-mt-md">Editorial Assessment</h3>
-      {opinion_accordion}
     </div>
   </section>'''
 
@@ -2413,16 +2544,23 @@ def build_verdict(rd: dict, race_index: list = None) -> str:
     strengths = bo.get('strengths', [])
     weaknesses = bo.get('weaknesses', [])
 
-    if not strengths and not weaknesses and not fv.get('should_you_race'):
-        # Fallback: show summary if available
-        if bo.get('summary'):
-            return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section">
+    if not strengths and not weaknesses:
+        # Many migrated road profiles carry a real one-line editor verdict but
+        # no Race/Skip lists. Keep that judgment in the decision spine without
+        # manufacturing generic bullets.
+        verdict_text = (
+            bo.get('summary')
+            or fv.get('should_you_race')
+            or fv.get('one_liner')
+        )
+        if verdict_text:
+            return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section" data-measure-section="verdict">
     <div class="rl-section-header rl-section-header--gold">
       <span class="rl-section-kicker">[06]</span>
       <h2 class="rl-section-title">Final Verdict</h2>
     </div>
     <div class="rl-section-body">
-      <div class="rl-prose"><p>{esc(bo["summary"])}</p></div>
+      <div class="rl-prose"><p>{esc(verdict_text)}</p></div>
     </div>
   </section>'''
         return ''
@@ -2459,7 +2597,7 @@ def build_verdict(rd: dict, race_index: list = None) -> str:
         linked = linkify_alternatives(fv['alternatives'], race_index or [])
         alt_html = f'''<div class="rl-prose rl-mt-md"><p><strong>Alternatives:</strong> {linked}</p></div>'''
 
-    return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section">
+    return f'''<section id="verdict" class="rl-section rl-section--dark rl-fade-section" data-measure-section="verdict">
     <div class="rl-section-header rl-section-header--gold">
       <span class="rl-section-kicker">[06]</span>
       <h2 class="rl-section-title">Final Verdict</h2>
@@ -2470,6 +2608,37 @@ def build_verdict(rd: dict, race_index: list = None) -> str:
       {alt_html}
     </div>
   </section>'''
+
+
+def build_breakdown_tiles(active_sections: set[str]) -> str:
+    """Build compact jumps into the evidence-rich deep dive."""
+    options = [
+        ('course', 'Course', 'Distance, climbing, surface, and route character.'),
+        ('from-the-field', 'Field Notes', 'Rider reports, video, and firsthand context.'),
+        ('train-for-race', 'Preparation', 'Race demands, key sessions, and execution.'),
+        ('logistics', 'Logistics', 'Travel, timing, and race-week details.'),
+        ('racer-reviews', 'Rider Reviews', 'What people who raced it reported.'),
+        ('citations', 'Sources', 'The evidence behind the assessment.'),
+    ]
+    tiles = []
+    for target, label, copy in options:
+        if target == 'racer-reviews' or target in active_sections:
+            tiles.append(
+                f'<a class="rl-breakdown-tile" href="#{target}">'
+                f'<span>{esc(label)}</span><small>{esc(copy)}</small></a>'
+            )
+    return f'''<nav id="breakdown" class="rl-breakdown" aria-label="Full race breakdown" data-measure-section="breakdown">
+      <div class="rl-breakdown-head"><span>FULL BREAKDOWN</span><p>Jump to the detail you need.</p></div>
+      <div class="rl-breakdown-grid">{''.join(tiles)}</div>
+    </nav>'''
+
+
+def build_training_transition(race_name: str) -> str:
+    """Keep the editorial verdict separate from the training offer."""
+    return f'''<div class="rl-training-transition" data-measure-section="transition">
+      <span>THE RACE IS THE TEST</span>
+      <p>If {esc(race_name)} is your target, the plan should be built from its demands—and from the time you actually have.</p>
+    </div>'''
 
 
 def _build_inline_review_form(slug: str, name: str) -> str:
@@ -2626,7 +2795,7 @@ def build_racer_reviews(rd: dict) -> str:
 
 
 def build_training(rd: dict) -> str:
-    """Build [06] Training section — two distinct paths, countdown, clear differentiation."""
+    """Build the custom-plan-first offer, with coaching as the clear up-tier."""
     race_name = rd['name']
 
     # Race date countdown — parsed from date_specific
@@ -2641,49 +2810,99 @@ def build_training(rd: dict) -> str:
         display_date = f"{display_month} {int(parts[2])}, {parts[0]}"
         countdown_html = f'<div class="rl-countdown" data-date="{cd_start}"><span class="rl-countdown-num" id="rl-days-left">{esc(display_date)}</span> {esc(race_name.upper())}</div>'
 
-    # Riders Report: gear mentions before training plan CTA
-    gear_html = _build_riders_report([
-        (rd.get('rider_intel', {}).get('gear_mentions', []), "text"),
-    ])
-
-    return f'''<section id="training" class="rl-section rl-fade-section">
+    return f'''<section id="training" class="rl-section rl-training-offer rl-fade-section" data-measure-section="offer">
     <div class="rl-section-header">
       <span class="rl-section-kicker">[07]</span>
       <h2 class="rl-section-title">Training</h2>
     </div>
     <div class="rl-section-body">
       {countdown_html}
-      {gear_html}
-      <div class="rl-training-free">
-        <a href="/race/{esc(rd['slug'])}/prep-kit/" class="rl-btn rl-btn--outline">GET FREE RACE PREP KIT</a>
-        <p class="rl-training-free-desc">12-week timeline + race-day checklist + packing list. Free.</p>
-      </div>
       <div class="rl-training-primary">
-        <h3>Custom Training Plan</h3>
-        <p class="rl-training-subtitle">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <h3>Built for {esc(race_name)}</h3>
+        <p class="rl-training-subtitle" data-ab="race_offer_price">$15/week. Less than one gel per ride. Capped at $249.</p>
+        <p class="rl-training-built-for">Your race date, available hours, and the road demands above determine the build. Start with a short questionnaire; the plan follows from your answers.</p>
         <ul class="rl-training-bullets">
           <li>Structured workouts pushed to your device</li>
-          <li>30+ page custom training guide</li>
-          <li>Heat &amp; altitude protocols</li>
-          <li>Nutrition plan</li>
-          <li>Strength training</li>
+          <li>Built around the weeks and training time you actually have</li>
+          <li>Climbing, descending, heat, and altitude work matched to the course</li>
+          <li>Race fueling and pacing guidance</li>
         </ul>
-        <a href="{esc(TRAINING_PLANS_URL)}?race={esc(rd['slug'])}" class="rl-btn">BUILD MY PLAN &mdash; $15/WK</a>
-      </div>
-      <div class="rl-training-divider">
-        <span class="rl-training-divider-line"></span>
-        <span class="rl-training-divider-text">OR</span>
-        <span class="rl-training-divider-line"></span>
+        <a href="{esc(TRAINING_PLANS_URL)}?race={esc(rd['slug'])}" class="rl-btn" data-cta="custom_plan" data-ab="training_cta_btn">BUILD MY PLAN &mdash; $15/WK</a>
       </div>
       <div class="rl-training-secondary">
         <div class="rl-training-secondary-text">
           <h4>1:1 Coaching</h4>
-          <p class="rl-training-subtitle">A human in your corner. Adapts week to week.</p>
+          <p class="rl-training-subtitle">Get a coach. From $199 / 4 weeks.</p>
           <p>Your coach reviews every session, adjusts when life happens, and builds race-day strategy with you. Not a plan &mdash; a partnership.</p>
         </div>
-        <a href="{esc(COACHING_URL)}" class="rl-btn">APPLY FOR 1:1 COACHING</a>
+        <a href="{esc(COACHING_URL)}" class="rl-btn" data-cta="coaching_apply">APPLY FOR 1:1 COACHING</a>
       </div>
     </div>
+  </section>'''
+
+
+def build_custom_plan_offer(rd: dict) -> str:
+    """Build the approved custom-plan offer in Roadie Labs brand language."""
+    race_name = rd['name']
+    copy = (
+        f"A training plan for {race_name}—shaped to your fitness, the course's "
+        "road demands, and the hours you have."
+    )
+    href = f"{TRAINING_PLANS_URL}?race={rd['slug']}"
+    return f'''<section class="rl-approved-section rl-offer" data-measure-section="custom-plan">
+  <div class="rl-approved-inner">
+    <span class="rl-approved-kicker">Custom plan</span>
+    <h2>Train for {esc(race_name)}</h2>
+    <p>{esc(copy)}</p>
+  </div>
+  <div class="rl-approved-inner rl-offer-action">
+    <a class="rl-plan-cta" href="{esc(href)}" data-cta="approved_custom_plan">START MY CUSTOM PLAN &rarr;</a>
+    <span class="rl-offer-price">$15 / WEEK</span>
+  </div>
+</section>'''
+
+
+def build_coaching_footnote(rd: dict) -> str:
+    """Build the approved coaching footnote using Roadie Labs tokens."""
+    href = f"{COACHING_URL}?race={rd['slug']}"
+    return f'''<aside class="rl-coaching-note" data-measure-section="coaching">
+  <div>
+    <h2>Really want to see what you can do?</h2>
+    <p>Hire a coach. You&rsquo;ll never become what you could be alone. (And no, AI isn&rsquo;t a person.)</p>
+  </div>
+  <a class="rl-coaching-link" href="{esc(href)}" data-cta="approved_coaching">GET ME IN YOUR CORNER &rarr;</a>
+</aside>'''
+
+
+def build_training_intelligence(rd: dict) -> str:
+    """Restore [07] Training as road-specific intelligence without sales."""
+    race_name = rd['name']
+    countdown_html = ''
+    date_specific = rd['vitals'].get('date_specific', '')
+    cd_start, _cd_end = parse_event_dates(date_specific)
+    if cd_start:
+        parts = cd_start.split('-')
+        month_names = {v: k.capitalize() for k, v in MONTH_NUMBERS.items()}
+        display_month = month_names.get(parts[1], parts[1])
+        display_date = f"{display_month} {int(parts[2])}, {parts[0]}"
+        countdown_html = (
+            f'<div class="rl-countdown" data-date="{cd_start}">'
+            f'<span class="rl-countdown-num" id="rl-days-left">'
+            f'{esc(display_date)}</span> {esc(race_name.upper())}</div>'
+        )
+    rider_html = _build_riders_report([
+        (rd.get('rider_intel', {}).get('gear_mentions', []), 'text'),
+        (rd.get('rider_intel', {}).get('race_day_tips', []), 'text'),
+    ])
+    body = countdown_html + rider_html
+    if not body:
+        body = '<p class="rl-prose">Race-specific preparation details are included in the demand profile below.</p>'
+    return f'''<section id="training" class="rl-section rl-fade-section">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">[07]</span>
+      <h2 class="rl-section-title">Training</h2>
+    </div>
+    <div class="rl-section-body">{body}</div>
   </section>'''
 
 
@@ -3818,8 +4037,13 @@ def build_prep_strip(rd: dict) -> str:
   </section>'''
 
 
-def build_train_for_race(rd: dict) -> str:
-    """Build [08] Train for This Race section with showcase workouts."""
+def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
+    """Build [08] Train for This Race with optional plan-selling controls.
+
+    The canonical race-page Deep Dive calls this with ``include_commerce=False``
+    so the demand profile and sample workouts remain editorial while every plan
+    purchase/configurator link stays in the approved offer above the Deep Dive.
+    """
     slug = rd['slug']
     race_name = rd['name']
 
@@ -4004,14 +4228,63 @@ def build_train_for_race(rd: dict) -> str:
 
     plan_url = f"{TRAINING_PLANS_URL}?race={esc(slug)}"
 
-    # Embed race data for client-side configurator
-    race_data_js = {
-        'slug': slug,
-        'race_name': race_name,
-        'date_specific': rd['vitals'].get('date_specific', ''),
-        'distance_mi': distance_mi,
-    }
-    race_data_json = _safe_json_for_script(race_data_js, ensure_ascii=False, separators=(',', ':'))
+    configurator_html = ''
+    plan_cta_html = ''
+    race_data_script = ''
+    if include_commerce:
+        race_data_js = {
+            'slug': slug,
+            'race_name': race_name,
+            'date_specific': rd['vitals'].get('date_specific', ''),
+            'distance_mi': distance_mi,
+        }
+        race_data_json = _safe_json_for_script(
+            race_data_js, ensure_ascii=False, separators=(',', ':')
+        )
+        configurator_html = '''<div class="rl-cfg-bar">
+        <h3 class="rl-cfg-title">PREVIEW YOUR TRAINING PLAN</h3>
+        <div class="rl-cfg-inputs">
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-level">YOUR FITNESS</label>
+            <select id="rl-cfg-level" class="rl-cfg-select">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate" selected>Intermediate</option>
+              <option value="advanced">Advanced</option>
+              <option value="elite">Elite</option>
+            </select>
+          </div>
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-hours">HOURS/WEEK</label>
+            <select id="rl-cfg-hours" class="rl-cfg-select">
+              <option value="6-8">6&ndash;8 hrs</option>
+              <option value="8-12" selected>8&ndash;12 hrs</option>
+              <option value="12-16">12&ndash;16 hrs</option>
+              <option value="16+">16+ hrs</option>
+            </select>
+          </div>
+          <div class="rl-cfg-field">
+            <label class="rl-cfg-label" for="rl-cfg-date">RACE DATE</label>
+            <input type="date" id="rl-cfg-date" class="rl-cfg-input">
+          </div>
+        </div>
+        <button type="button" id="rl-cfg-btn" class="rl-btn rl-cfg-preview-btn">PREVIEW MY PLAN</button>
+      </div>
+      <div id="rl-cfg-summary" class="rl-cfg-summary" style="display:none;" aria-live="polite" role="region" aria-label="Training plan preview">
+        <div class="rl-cfg-summary-title" id="rl-cfg-summary-title"></div>
+        <div class="rl-cfg-timeline" id="rl-cfg-timeline"></div>
+        <div class="rl-cfg-timeline-bar" id="rl-cfg-timeline-bar"></div>
+        <div class="rl-cfg-details" id="rl-cfg-details"></div>
+      </div>'''
+        plan_cta_html = f'''<div class="rl-pack-cta" id="rl-pack-cta-default">
+        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
+        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
+      </div>
+      <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
+        <a href="{plan_url}" class="rl-btn rl-cfg-cta-btn" id="rl-cfg-cta-link" tabindex="-1">BUILD MY PLAN</a>
+        <p class="rl-pack-cta-detail" id="rl-cfg-cta-detail"></p>
+      </div>'''
+        race_data_script = f'<script>window.__RL_RACE_DATA__={race_data_json};</script>'
 
     # Workout toggle + panel — only render if we have workouts
     workouts_section = ''
@@ -4046,52 +4319,11 @@ def build_train_for_race(rd: dict) -> str:
           {demands_html}
         </div>
       </div>
-      <div class="rl-cfg-bar">
-        <h3 class="rl-cfg-title">PREVIEW YOUR TRAINING PLAN</h3>
-        <div class="rl-cfg-inputs">
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-level">YOUR FITNESS</label>
-            <select id="rl-cfg-level" class="rl-cfg-select">
-              <option value="beginner">Beginner</option>
-              <option value="intermediate" selected>Intermediate</option>
-              <option value="advanced">Advanced</option>
-              <option value="elite">Elite</option>
-            </select>
-          </div>
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-hours">HOURS/WEEK</label>
-            <select id="rl-cfg-hours" class="rl-cfg-select">
-              <option value="6-8">6&ndash;8 hrs</option>
-              <option value="8-12" selected>8&ndash;12 hrs</option>
-              <option value="12-16">12&ndash;16 hrs</option>
-              <option value="16+">16+ hrs</option>
-            </select>
-          </div>
-          <div class="rl-cfg-field">
-            <label class="rl-cfg-label" for="rl-cfg-date">RACE DATE</label>
-            <input type="date" id="rl-cfg-date" class="rl-cfg-input">
-          </div>
-        </div>
-        <button type="button" id="rl-cfg-btn" class="rl-btn rl-cfg-preview-btn">PREVIEW MY PLAN</button>
-      </div>
-      <div id="rl-cfg-summary" class="rl-cfg-summary" style="display:none;" aria-live="polite" role="region" aria-label="Training plan preview">
-        <div class="rl-cfg-summary-title" id="rl-cfg-summary-title"></div>
-        <div class="rl-cfg-timeline" id="rl-cfg-timeline"></div>
-        <div class="rl-cfg-timeline-bar" id="rl-cfg-timeline-bar"></div>
-        <div class="rl-cfg-details" id="rl-cfg-details"></div>
-      </div>
-      <div class="rl-pack-cta" id="rl-pack-cta-default">
-        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
-        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
-        <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
-      </div>
-      <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
-        <a href="{plan_url}" class="rl-btn rl-cfg-cta-btn" id="rl-cfg-cta-link" tabindex="-1">BUILD MY PLAN</a>
-        <p class="rl-pack-cta-detail" id="rl-cfg-cta-detail"></p>
-      </div>
+      {configurator_html}
+      {plan_cta_html}
       {workouts_section}
     </div>
-    <script>window.__GG_RACE_DATA__={race_data_json};</script>
+    {race_data_script}
   </section>'''
 
 
@@ -4467,13 +4699,13 @@ def build_similar_races(rd: dict, race_index: list) -> str:
         tier_num = r.get('tier', 4)
         dist = r.get('distance_mi', '')
         dist_str = f" &middot; {dist} mi" if dist else ''
-        cards.append(f'''<a href="/race/{esc(r['slug'])}/" class="rl-similar-card">
+        cards.append(f'''<a href="/race/{esc(r['slug'])}/" class="rl-similar-card" data-related-race="{esc(r['slug'])}">
         <span class="rl-similar-tier">T{tier_num}</span>
         <span class="rl-similar-name">{esc(r['name'])}</span>
         <span class="rl-similar-meta">{esc(r.get('location', ''))}{dist_str} &middot; {r.get('overall_score', 0)}/100</span>
       </a>''')
 
-    return f'''<section class="rl-section rl-fade-section">
+    return f'''<section class="rl-section rl-fade-section" id="similar-races">
     <div class="rl-section-header rl-section-header--dark">
       <span class="rl-section-kicker">[&mdash;]</span>
       <h2 class="rl-section-title">Similar Races</h2>
@@ -4612,14 +4844,14 @@ def _build_breadcrumb_series_segment(rd: dict) -> str:
 def build_nav_header(rd: dict, race_index: list) -> str:
     """Build visible navigation header with breadcrumb trail."""
     return get_site_header_html(active="races") + f'''
-  <div class="rl-breadcrumb">
+  <nav class="rl-breadcrumb" aria-label="Breadcrumb">
     <a href="{SITE_BASE_URL}/">Home</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
-    <a href="{SITE_BASE_URL}/road-races/">Road Races</a>
+    <a href="{SITE_BASE_URL}/road-races/" id="rl-races-crumb">Road Races</a>
     <span class="rl-breadcrumb-sep">&rsaquo;</span>
     {_build_breadcrumb_series_segment(rd)}
     <span class="rl-breadcrumb-current">{esc(rd['name'])}</span>
-  </div>'''
+  </nav>'''
 
 
 def build_footer(rd: dict = None) -> str:
@@ -4689,6 +4921,41 @@ def get_page_css() -> str:
 @media (max-width: 700px) {{ .rl-neo-brutalist-page .rl-hero-scores {{ gap: 18px; }} .rl-neo-brutalist-page .rl-hero-score--rider {{ padding-left: 18px; }} }}
 .rl-neo-brutalist-page .rl-hero-score-number {{ font-family: var(--rl-font-editorial); font-size: 72px; font-weight: var(--rl-font-weight-bold); line-height: 1; color: var(--rl-color-orange); }}
 .rl-neo-brutalist-page .rl-hero-score-label {{ font-family: var(--rl-font-data); font-size: 10px; font-weight: var(--rl-font-weight-bold); letter-spacing: 3px; text-transform: uppercase; color: var(--rl-color-secondary-blue); margin-top: 4px; }}
+
+/* Decision spine: ratings, evidence jumps, and the editorial-to-training hinge */
+.rl-neo-brutalist-page .rl-rating-tablist {{ display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-rating-tablist button {{ min-height: 48px; padding: 12px 16px; border: 0; border-right: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); color: var(--rl-color-secondary-blue); cursor: pointer; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); text-transform: uppercase; }}
+.rl-neo-brutalist-page .rl-rating-tablist button:last-child {{ border-right: 0; }}
+.rl-neo-brutalist-page .rl-rating-tablist button[aria-selected="true"] {{ background: var(--rl-color-dark-navy); color: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-rating-tablist button span {{ color: var(--rl-color-light-steel); }}
+.rl-neo-brutalist-page .rl-rating-panel {{ display: grid; grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 1.1fr); border: 2px solid var(--rl-color-dark-navy); border-top: 0; }}
+.rl-neo-brutalist-page .rl-rating-panel[hidden] {{ display: none; }}
+.rl-neo-brutalist-page .rl-rating-panel .rl-radar-chart {{ border: 0; border-right: 2px solid var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-rating-breakdown {{ display: grid; grid-template-columns: 1fr 1fr; align-content: start; }}
+.rl-neo-brutalist-page .rl-rating-tile {{ min-height: 82px; padding: 12px; border: 0; border-right: 1px solid var(--rl-color-silver); border-bottom: 1px solid var(--rl-color-silver); background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); cursor: pointer; text-align: left; font-family: var(--rl-font-data); }}
+.rl-neo-brutalist-page .rl-rating-tile:nth-child(2n) {{ border-right: 0; }}
+.rl-neo-brutalist-page .rl-rating-tile-label {{ display: inline-block; max-width: calc(100% - 42px); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }}
+.rl-neo-brutalist-page .rl-rating-tile strong {{ float: right; font-family: var(--rl-font-editorial); font-size: 15px; }}
+.rl-neo-brutalist-page .rl-rating-tile-copy {{ display: none; clear: both; padding-top: 9px; font-family: var(--rl-font-editorial); font-size: 12px; line-height: 1.45; color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-rating-tile[aria-expanded="true"] {{ grid-column: 1 / -1; background: var(--rl-color-silver); }}
+.rl-neo-brutalist-page .rl-rating-tile[aria-expanded="true"] .rl-rating-tile-copy {{ display: block; }}
+.rl-neo-brutalist-page .rl-rating-tile:focus-visible, .rl-neo-brutalist-page .rl-rating-tablist button:focus-visible {{ outline: 3px solid var(--rl-color-secondary-blue); outline-offset: -3px; }}
+.rl-neo-brutalist-page .rl-breakdown {{ margin: 0 0 32px; border: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-breakdown-head {{ display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 14px 18px; border-bottom: 2px solid var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-breakdown-head span {{ font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); }}
+.rl-neo-brutalist-page .rl-breakdown-head p {{ margin: 0; font-family: var(--rl-font-editorial); font-size: 12px; color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-breakdown-grid {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }}
+.rl-neo-brutalist-page .rl-breakdown-tile {{ min-height: 96px; padding: 16px; border-right: 1px solid var(--rl-color-silver); border-bottom: 1px solid var(--rl-color-silver); color: var(--rl-color-dark-navy); text-decoration: none; }}
+.rl-neo-brutalist-page .rl-breakdown-tile:nth-child(3n) {{ border-right: 0; }}
+.rl-neo-brutalist-page .rl-breakdown-tile span {{ display: block; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); text-transform: uppercase; }}
+.rl-neo-brutalist-page .rl-breakdown-tile small {{ display: block; margin-top: 8px; font-family: var(--rl-font-editorial); font-size: 11px; line-height: 1.45; color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-breakdown-tile:hover, .rl-neo-brutalist-page .rl-breakdown-tile:focus-visible {{ background: var(--rl-color-silver); outline: 2px solid var(--rl-color-dark-navy); outline-offset: -2px; }}
+.rl-neo-brutalist-page .rl-training-transition {{ margin: 44px 0 16px; padding: 26px 28px; border: 3px solid var(--rl-color-dark-navy); text-align: center; background: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-training-transition span {{ display: block; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); }}
+.rl-neo-brutalist-page .rl-deep-dive {{ margin-top: 32px; }}
+.rl-neo-brutalist-page .rl-deep-dive::before {{ content: 'DEEP DIVE'; display: block; margin-bottom: 12px; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-section-chevron {{ margin-left: auto; color: var(--rl-color-secondary-blue); font-family: var(--rl-font-data); }}
+.rl-neo-brutalist-page .rl-training-transition p {{ margin: 8px 0 0; font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-md); color: var(--rl-color-dark-navy); }}
 
 /* TOC — light version */
 .rl-neo-brutalist-page .rl-toc {{ background: var(--rl-color-cool-white); padding: 16px 20px; border-bottom: 1px solid var(--rl-color-orange); display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 32px; }}
@@ -4915,6 +5182,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-training-primary {{ border: 1px solid var(--rl-color-silver); border-left: 4px solid var(--rl-color-orange); background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); padding: 32px; margin-bottom: 16px; }}
 .rl-neo-brutalist-page .rl-training-primary h3 {{ font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-lg); font-weight: 700; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); margin-bottom: 6px; color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-training-primary .rl-training-subtitle {{ font-family: var(--rl-font-editorial); font-size: 12px; color: var(--rl-color-secondary-blue); margin-bottom: 20px; }}
+.rl-neo-brutalist-page .rl-training-built-for {{ max-width: 760px; font-family: var(--rl-font-editorial); font-size: 15px; line-height: 1.6; color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-training-bullets {{ list-style: none; padding: 0; margin-bottom: 24px; }}
 .rl-neo-brutalist-page .rl-training-bullets li {{ font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-xs); line-height: var(--rl-line-height-relaxed); color: var(--rl-color-primary-navy); padding: 6px 0; padding-left: 20px; position: relative; }}
 .rl-neo-brutalist-page .rl-training-bullets li::before {{ content: '\\2014'; position: absolute; left: 0; color: var(--rl-color-orange); }}
@@ -5244,6 +5512,11 @@ def get_page_css() -> str:
   .rl-neo-brutalist-page .rl-field-video-grid {{ grid-template-columns: 1fr; }}
   .rl-neo-brutalist-page .rl-review-form-row {{ grid-template-columns: 1fr; }}
   .rl-neo-brutalist-page .rl-countdown-num {{ font-size: 24px; }}
+  .rl-neo-brutalist-page .rl-rating-panel {{ grid-template-columns: 1fr; }}
+  .rl-neo-brutalist-page .rl-rating-panel .rl-radar-chart {{ border-right: 0; border-bottom: 2px solid var(--rl-color-dark-navy); }}
+  .rl-neo-brutalist-page .rl-breakdown-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+  .rl-neo-brutalist-page .rl-breakdown-tile:nth-child(3n) {{ border-right: 1px solid var(--rl-color-silver); }}
+  .rl-neo-brutalist-page .rl-breakdown-tile:nth-child(2n) {{ border-right: 0; }}
 }}
 
 /* Responsive — small phones */
@@ -5264,8 +5537,143 @@ def get_page_css() -> str:
   .rl-neo-brutalist-page .rl-breadcrumb {{ font-size: 10px; }}
   .rl-sticky-cta {{ padding: 10px 12px; }}
   .rl-back-to-top {{ bottom: 60px; right: 12px; width: 36px; height: 36px; }}
+  .rl-neo-brutalist-page .rl-rating-breakdown, .rl-neo-brutalist-page .rl-breakdown-grid {{ grid-template-columns: 1fr; }}
+  .rl-neo-brutalist-page .rl-rating-tile, .rl-neo-brutalist-page .rl-breakdown-tile, .rl-neo-brutalist-page .rl-breakdown-tile:nth-child(2n), .rl-neo-brutalist-page .rl-breakdown-tile:nth-child(3n) {{ border-right: 0; }}
+  .rl-neo-brutalist-page .rl-breakdown-head {{ align-items: flex-start; flex-direction: column; gap: 4px; }}
+  .rl-neo-brutalist-page .rl-training-primary, .rl-neo-brutalist-page .rl-training-secondary {{ padding: 20px; }}
 }}
 ''' + get_mega_footer_css() + '''
+</style>'''
+
+
+# The approved spine is shared structurally with Gravel God, but every visual
+# value here resolves through Roadie Labs tokens. Keep this separate from the
+# legacy section CSS until the catalog migration is fully settled.
+APPROVED_TOP_CSS = '''<style>
+.rl-approved-section,
+.rl-coaching-note {
+  background: var(--rl-color-cool-white);
+  border: var(--rl-border-standard);
+  color: var(--rl-color-dark-navy);
+  margin: var(--rl-spacing-xl) 0;
+}
+.rl-approved-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  min-height: 360px;
+}
+.rl-approved-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--rl-spacing-3xl);
+}
+.rl-approved-inner + .rl-approved-inner {
+  border-left: 1px solid var(--rl-color-silver);
+}
+.rl-approved-kicker {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-extreme);
+  text-transform: uppercase;
+}
+.rl-offer h2,
+.rl-coaching-note h2 {
+  color: var(--rl-color-dark-navy);
+  font-family: var(--rl-font-editorial);
+  font-weight: var(--rl-font-weight-bold);
+  line-height: var(--rl-line-height-tight);
+  margin: var(--rl-spacing-md) 0;
+}
+.rl-offer h2 {
+  font-size: var(--rl-font-size-4xl);
+}
+.rl-offer p,
+.rl-coaching-note p {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-xl);
+  line-height: var(--rl-line-height-relaxed);
+  margin: 0;
+  max-width: 34ch;
+}
+.rl-offer-action {
+  align-items: stretch;
+  text-align: center;
+}
+.rl-plan-cta,
+.rl-coaching-link {
+  background: var(--rl-color-signal-red);
+  border: var(--rl-border-standard);
+  color: var(--rl-color-cool-white);
+  display: block;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  padding: var(--rl-spacing-lg);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.rl-plan-cta:hover,
+.rl-coaching-link:hover {
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-white);
+}
+.rl-offer-price {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-md);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  margin-top: var(--rl-spacing-md);
+}
+.rl-coaching-note {
+  align-items: center;
+  display: grid;
+  gap: var(--rl-spacing-2xl);
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: var(--rl-spacing-2xl) var(--rl-spacing-3xl);
+}
+.rl-coaching-note h2 {
+  font-size: var(--rl-font-size-2xl);
+}
+.rl-coaching-note p {
+  font-size: var(--rl-font-size-md);
+  max-width: 54ch;
+}
+.rl-coaching-link {
+  min-width: 260px;
+}
+@media (max-width: 820px) {
+  .rl-approved-section,
+  .rl-coaching-note {
+    grid-template-columns: 1fr;
+  }
+  .rl-approved-section {
+    min-height: 0;
+  }
+  .rl-approved-inner {
+    padding: var(--rl-spacing-xl);
+  }
+  .rl-approved-inner + .rl-approved-inner {
+    border-left: 0;
+    border-top: 1px solid var(--rl-color-silver);
+  }
+  .rl-offer h2 {
+    font-size: var(--rl-font-size-3xl);
+  }
+  .rl-coaching-note {
+    gap: var(--rl-spacing-lg);
+    padding: var(--rl-spacing-xl);
+  }
+  .rl-coaching-link {
+    min-width: 0;
+  }
+}
 </style>'''
 
 
@@ -5274,7 +5682,7 @@ def get_page_css() -> str:
 
 def _extract_css_content() -> str:
     """Extract raw CSS from get_page_css() (strip <style> tags)."""
-    raw = get_page_css()
+    raw = get_page_css() + APPROVED_TOP_CSS
     return raw.replace('<style>', '').replace('</style>', '').strip()
 
 
@@ -5296,17 +5704,27 @@ def write_shared_assets(output_dir: Path) -> dict:
     for old in fonts_dir.glob("*.woff2"):
         if old.name not in wanted:
             old.unlink()
+    local_fonts_dir = Path(__file__).resolve().parent.parent / 'web' / 'fonts'
+    copied_fonts = 0
     for font_file in FONT_FILES:
-        src = BRAND_FONTS_DIR / font_file
+        brand_src = BRAND_FONTS_DIR / font_file
+        local_src = local_fonts_dir / font_file
+        src = brand_src if brand_src.exists() else local_src
         dst = fonts_dir / font_file
         if src.exists():
             shutil.copy2(src, dst)
+            copied_fonts += 1
         else:
-            print(f"  WARNING: Font file not found: {src}")
-    print(f"  Copied {len(FONT_FILES)} font files to {fonts_dir}/")
+            print(f"  WARNING: Font file not found in brand or local bundle: {font_file}")
+    print(f"  Copied {copied_fonts}/{len(FONT_FILES)} font files to {fonts_dir}/")
 
     css_content = _extract_css_content()
     js_content = _extract_js_content()
+
+    logo_src = Path(__file__).resolve().parent.parent / 'web' / 'rl-logo.svg'
+    if not logo_src.exists():
+        raise FileNotFoundError(f"Roadie Labs logo asset missing: {logo_src}")
+    shutil.copy2(logo_src, assets_dir / 'rl-logo.svg')
 
     css_hash = hashlib.md5(css_content.encode()).hexdigest()[:8]
     js_hash = hashlib.md5(js_content.encode()).hexdigest()[:8]
@@ -5373,21 +5791,19 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     course_route = build_course_route(rd)
     from_the_field = build_from_the_field(rd)
     ratings = build_ratings(rd)
-    verdict = build_verdict(rd, race_index)
     racer_reviews = build_racer_reviews(rd)
     email_capture = build_email_capture(rd)
     visible_faq = build_visible_faq(rd)
     news = build_news_section(rd)
-    training = build_training(rd)
-    train_for_race = build_train_for_race(rd)
-    # Strip only renders when [08] exists — its anchor target must be present
-    prep_strip = build_prep_strip(rd) if train_for_race else ''
+    custom_plan = build_custom_plan_offer(rd)
+    coaching = build_coaching_footnote(rd)
+    training = build_training_intelligence(rd)
+    train_for_race = build_train_for_race(rd, include_commerce=False)
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
     similar = build_similar_races(rd, race_index)
     citations_sec = build_citations_section(rd)
     footer = build_footer(rd)
-    sticky_cta = build_sticky_cta(rd['name'], rd['slug'])
 
     # Dynamic TOC — only link to sections that have content
     active = {'course', 'ratings', 'training'}  # always present
@@ -5397,8 +5813,6 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         active.add('route')
     if from_the_field:
         active.add('from-the-field')
-    if verdict:
-        active.add('verdict')
     if logistics_sec:
         active.add('logistics')
     if tire_picks:
@@ -5408,6 +5822,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     if citations_sec:
         active.add('citations')
     toc = build_toc(active)
+    breakdown = build_breakdown_tiles(active)
 
     # Use external assets if provided, otherwise inline
     if external_assets:
@@ -5419,21 +5834,23 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         css = critical_css + '\n  ' + external_assets['css_tag']
         inline_js = external_assets['js_tag']
     else:
-        css = get_page_css()
+        css = get_page_css() + APPROVED_TOP_CSS
         inline_js = build_inline_js()
 
-    # Section order
-    content_sections = []
-    for section in [course_overview, history, pullquote,
-                    course_route, from_the_field, ratings, verdict,
-                    racer_reviews, email_capture, news, training,
-                    train_for_race,
-                    logistics_sec, tire_picks, similar, visible_faq,
-                    citations_sec]:
-        if section:
-            content_sections.append(section)
+    # Approved shared contract: ratings → custom plan → coaching footnote →
+    # Full Breakdown. Brand and race-specific editorial live in the Deep Dive.
+    spine_sections = [ratings, custom_plan, coaching, breakdown]
+    spine = '\n\n  '.join(section for section in spine_sections if section)
 
-    content = '\n\n  '.join(content_sections)
+    deep_sections = []
+    for section in [course_overview, history, pullquote, course_route,
+                    from_the_field, racer_reviews, training, train_for_race,
+                    email_capture, news, logistics_sec, tire_picks,
+                    similar, visible_faq, citations_sec]:
+        if section:
+            deep_sections.append(section)
+
+    deep_content = '\n\n  '.join(deep_sections)
 
     # SEO-optimized title and description
     seo_title = build_seo_title(rd)
@@ -5465,7 +5882,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   <meta name="description" content="{esc(seo_description)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%233a2e25'/><text x='16' y='24' text-anchor='middle' font-family='serif' font-size='24' font-weight='700' fill='%239a7e0a'>G</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://ridewithgps.com">
   <link rel="dns-prefetch" href="https://api.rss2json.com">
@@ -5475,25 +5892,27 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   {jsonld_html}
   {css}
   {get_ga4_head_snippet()}
+  {get_ab_head_snippet()}
 </head>
 <body>
 
-<a href="#course" class="rl-skip-link">Skip to content</a>
-<div class="rl-neo-brutalist-page">
+<a href="#ratings" class="rl-skip-link">Skip to content</a>
+<div class="rl-neo-brutalist-page" data-race-slug="{esc(rd['slug'])}" data-page-format="spine-v2-approved">
   {nav_header}
 
   {hero}
 
-  {prep_strip}
+  {spine}
 
   {toc}
 
-  {content}
+  <div class="rl-deep-dive" id="deep-dive" data-measure-section="deep-dive">
+  {deep_content}
+  </div>
 
   {footer}
 </div>
 
-{sticky_cta}
 <button class="rl-back-to-top" id="rl-back-to-top" aria-label="Back to top">&uarr;</button>
 {inline_js}
 

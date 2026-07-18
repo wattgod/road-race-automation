@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-10",
+  "generated": "2026-07-15",
   "experiments": [
     {
       "id": "homepage_hero_tagline",
@@ -92,6 +92,35 @@
       "conversion": {
         "type": "click",
         "selector": "[data-ab='training_cta_btn']"
+      }
+    },
+    {
+      "id": "race_offer_price_frame",
+      "selector": "[data-ab='race_offer_price']",
+      "pages": [
+        "/race/*"
+      ],
+      "traffic": 1.0,
+      "variants": [
+        {
+          "id": "control",
+          "name": "Gel anchor",
+          "content": "$15/week. Less than one gel per ride. Capped at $249."
+        },
+        {
+          "id": "variant_a",
+          "name": "Daily price",
+          "content": "About $2/day. Built for your target road race. Capped at $249."
+        },
+        {
+          "id": "variant_b",
+          "name": "Direct weekly",
+          "content": "$15/week for a race-specific custom plan. Capped at $249."
+        }
+      ],
+      "conversion": {
+        "type": "click",
+        "selector": "[data-cta='custom_plan']"
       }
     },
     {

@@ -11,6 +11,11 @@ from __future__ import annotations
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
+LOGO_SVG = '''<svg class="rl-site-header-mark" viewBox="0 0 800 1600" aria-hidden="true" focusable="false">
+  <defs><mask id="rl-slick-grooves"><rect width="800" height="1600" fill="white"/><path d="M400 188V1412" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/><g fill="none" stroke="black" stroke-width="20" stroke-linecap="round"><path d="M270 380 300 390M310 380 340 390M350 380 380 390M270 470 300 480M350 470 380 480M270 560 300 570M350 560 380 570M270 650 300 660M310 650 340 660M350 650 380 660M270 740 300 750M310 740 340 750M270 830 300 840M350 830 380 840M270 920 300 930M350 920 380 930M270 1010 300 1020M350 1010 380 1020M270 1100 300 1110M350 1100 380 1110M270 1190 300 1200M350 1190 380 1200"/><path d="M420 390 450 380M420 480 450 470M420 570 450 560M420 660 450 650M420 750 450 740M420 840 450 830M420 930 450 920M420 1020 450 1010M420 1110 450 1100M420 1200 450 1190M460 1200 490 1190M500 1200 530 1190"/></g></mask></defs>
+  <path fill="currentColor" mask="url(#rl-slick-grooves)" d="M400 24C490 24 535 140 552 320 570 520 570 1080 552 1280 535 1460 490 1576 400 1576S265 1460 248 1280C230 1080 230 520 248 320 265 140 310 24 400 24Z"/>
+</svg>'''
+
 
 def get_site_header_html(active: str | None = None) -> str:
     """Return the shared site header HTML block.
@@ -26,8 +31,8 @@ def get_site_header_html(active: str | None = None) -> str:
 
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
-    <a href="{SITE_BASE_URL}/" class="rl-site-header-logo">
-      <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2050%2050%27%3E%3Crect%20width%3D%2750%27%20height%3D%2750%27%20fill%3D%27%231a1a1a%27%2F%3E%3Ctext%20x%3D%2725%27%20y%3D%2737%27%20text-anchor%3D%27middle%27%20font-family%3D%27serif%27%20font-size%3D%2734%27%20font-weight%3D%27700%27%20fill%3D%27%23f5f5f0%27%3ER%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Roadie Labs" width="50" height="50">
+    <a href="{SITE_BASE_URL}/" class="rl-site-header-logo" aria-label="Roadie Labs">
+      {LOGO_SVG}
     </a>
     <button class="rl-site-header-toggle" type="button" aria-controls="rl-site-header-nav" aria-expanded="false" aria-label="Open navigation">
       <span></span><span></span><span></span>
@@ -62,7 +67,8 @@ def get_site_header_css() -> str:
 /* ── Site Header ──────────────────────────────────────── */
 .rl-site-header { position: sticky; top: 0; z-index: 900; padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); background: var(--rl-color-cool-white); }
 .rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; }
-.rl-site-header-logo img { display: block; height: 50px; width: auto; }
+.rl-site-header-logo { display: block; color: var(--rl-color-dark-navy); }
+.rl-site-header-logo svg { display: block; height: 58px; width: auto; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
 .rl-site-header-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); cursor: pointer; }
 .rl-site-header-toggle span { display: block; width: 100%; height: 2px; background: var(--rl-color-dark-navy); margin: 5px 0; transition: background-color 0.2s; }
@@ -85,7 +91,7 @@ def get_site_header_css() -> str:
 @media (max-width: 600px) {
   .rl-site-header { padding: 8px 16px; }
   .rl-site-header-inner { flex-wrap: wrap; justify-content: space-between; gap: 8px; }
-  .rl-site-header-logo img { height: 40px; }
+  .rl-site-header-logo svg { height: 46px; }
   .rl-site-header-toggle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; }
   .rl-site-header-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; border-top: 2px solid var(--rl-color-dark-navy); padding-top: 8px; }
   .rl-site-header-nav.is-open { display: flex; }
