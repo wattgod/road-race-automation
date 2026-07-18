@@ -44,13 +44,32 @@ DATA_DIR = REPO_ROOT / "race-data"
 OUTPUT_DIR = REPO_ROOT / "wordpress" / "output" / "tp"
 DEFAULT_PLANS_DB = REPO_ROOT.parent / "gravel-god-training-plans" / "db" / "plans.json"
 
-# TODO: temporary cross-repo dependency until road-labs-brand vendors the
-# shared Source Serif 4 and Sometype Mono TTF files used by image generators.
-FONT_DIR = REPO_ROOT.parent / "gravel-race-automation" / "guide" / "fonts"
-FONT_EDITORIAL = str(FONT_DIR / "SourceSerif4-Variable.ttf")
-FONT_EDITORIAL_ITALIC = str(FONT_DIR / "SourceSerif4-Italic-Variable.ttf")
-FONT_DATA = str(FONT_DIR / "SometypeMono-Regular.ttf")
-FONT_DATA_BOLD = str(FONT_DIR / "SometypeMono-Bold.ttf")
+# road-labs-brand vendors these directly (assets/fonts/*.woff2 — Pillow's
+# FreeType binding loads woff2 natively via ImageFont.truetype(), verified
+# 2026-07-18: PIL.features.check("freetype2") True, both families load with
+# their variation axes intact). Each family ships split "latin" (U+0000-00FF,
+# ASCII + Latin-1 Western-European diacritics: umlauts, cedillas, tildes —
+# covers the vast majority of race-name characters) vs "latin-ext"
+# (U+0100-02BA, rarer extended Latin incl. macrons like Taupo's o-macron)
+# subsets with NO overlap (see assets/fonts/fonts.css unicode-range comments)
+# — Pillow has no CSS-style unicode-range fallback chaining across files, so
+# only one subset can be loaded per ImageFont object. "latin" is picked as
+# primary (ASCII + the common Western-European accents used across nearly
+# every race name in the catalog); a small number of rarer extended-Latin
+# characters (e.g. the macron in "Lake Taupo Cycle Challenge") will render
+# with FreeType's .notdef fallback glyph until/unless a proper multi-file
+# glyph-fallback wrapper is built (out of scope here — narrow, flagged gap,
+# not a blocker).
+FONT_DIR = REPO_ROOT.parent / "road-labs-brand" / "assets" / "fonts"
+FONT_EDITORIAL = str(FONT_DIR / "SourceSerif4-normal-latin.woff2")
+FONT_EDITORIAL_ITALIC = str(FONT_DIR / "SourceSerif4-italic-latin.woff2")
+FONT_DATA = str(FONT_DIR / "SometypeMono-normal-latin.woff2")
+# Sometype Mono ships as ONE variable file (weight axis 400-700, named
+# instances Regular/Medium/SemiBold/Bold) rather than separate static Bold
+# file -- same path as FONT_DATA, "bold" is a weight=700 variation applied
+# at each call site below (mirrors how FONT_EDITORIAL already gets weight=600
+# passed to load_font() for its semibold headline use).
+FONT_DATA_BOLD = FONT_DATA
 
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
@@ -779,16 +798,16 @@ def build_header_image(race: dict):
     radar_h = 580 if state == "rated" else 0
     footer_pad = 40
 
-    font_kicker = load_font(FONT_DATA_BOLD, 20)
+    font_kicker = load_font(FONT_DATA_BOLD, 20, weight=700)
     font_name = load_font(FONT_EDITORIAL, 56, weight=600)
-    font_tier = load_font(FONT_DATA_BOLD, 32)
+    font_tier = load_font(FONT_DATA_BOLD, 32, weight=700)
     font_meta = load_font(FONT_DATA, 32)
-    font_score_big = load_font(FONT_DATA_BOLD, 76)
+    font_score_big = load_font(FONT_DATA_BOLD, 76, weight=700)
     font_score_slash = load_font(FONT_DATA, 32)
-    font_score_label = load_font(FONT_DATA_BOLD, 32)
-    font_axis = load_font(FONT_DATA_BOLD, 32)
-    font_center = load_font(FONT_DATA_BOLD, 44)
-    font_center_label = load_font(FONT_DATA_BOLD, 32)
+    font_score_label = load_font(FONT_DATA_BOLD, 32, weight=700)
+    font_axis = load_font(FONT_DATA_BOLD, 32, weight=700)
+    font_center = load_font(FONT_DATA_BOLD, 44, weight=700)
+    font_center_label = load_font(FONT_DATA_BOLD, 32, weight=700)
     font_pending = load_font(FONT_EDITORIAL, 40, weight=600)
 
     # Logo.
@@ -955,7 +974,7 @@ def build_includes_image(race: dict, plan_class: str, plan: dict, altitude_flag:
     img = Image.new("RGB", (INCLUDES_W, height), PAPER)
     draw = ImageDraw.Draw(img)
 
-    font_kicker = load_font(FONT_DATA_BOLD, 32)
+    font_kicker = load_font(FONT_DATA_BOLD, 32, weight=700)
     font_tile = load_font(FONT_EDITORIAL, 32)
 
     kicker = f"INSIDE THE {tier.upper()} PLAN"
