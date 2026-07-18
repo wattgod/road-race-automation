@@ -9,6 +9,16 @@ advance the current phase's KPI gate — read `gravel-god-cycling/NORTHSTAR.md`
 (canonical plan, phases, anti-shill rules, baseline metrics) before large or
 ambiguous work.
 
+## ⚠ RACE-PAGE DEPLOY SOURCE (do not skip)
+The PRODUCTION race pages (427, spine-v2) deploy from branch
+`race-page-canonical-rollout` (HEAD 4d93df0), NOT from main — main's
+generate_neo_brutalist.py is 1,100+ diff lines behind the deployed spine and
+regenerating+deploying race pages from main OVERWRITES the approved layout
+(this fired Jul 18 2026; restored same day from the branch via worktree).
+Until the branch is merged, any race-page regen/deploy must run from a
+worktree of that branch. Verify after any race-page deploy:
+`curl -s https://roadielabs.com/race/paris-brest-paris/ | grep spine-v2-approved`.
+
 ## Project Overview
 Roadie Labs is a scored event database for road cycling (gran fondos, sportives, centuries, hillclimbs, multi-stage amateur races). Migrated from the Gravel God system in Sprint 41. Clinical, technical, data-driven brand identity.
 
