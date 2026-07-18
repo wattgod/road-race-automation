@@ -953,7 +953,7 @@ def build_sidebar(stats: dict, race_index: list, upcoming: list) -> str:
 
     # 5. Sidebar CTA
     cta_html = f'''<div class="rl-hp-sidebar-cta">
-      <h3>Don&rsquo;t wing race day</h3>
+      <h3>A plan for the race on your calendar</h3>
       <p>Your target race has specific terrain, elevation, and weather. Your plan should too.</p>
       <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-sidebar-cta-btn" data-ga="sidebar_cta_click">Get Your Plan &rarr;</a>
     </div>'''
@@ -980,7 +980,7 @@ def build_content_grid(race_index: list, stats: dict, upcoming: list) -> str:
 def build_how_it_works(stats: dict = None) -> str:
     race_count = stats["race_count"] if stats else 328
     steps = [
-        ("01", "PICK YOUR RACE", f"{race_count} races. Scored honestly. Filter by what actually matters to you &mdash; not what a sponsor paid us to promote."),
+        ("01", "PICK YOUR RACE", f"{race_count} races, scored. Filter by what actually matters to you."),
         ("02", "READ THE REAL TAKE", "Every rating comes with an editorial opinion. We tell you if it&rsquo;s worth the flight, the entry fee, and the suffering."),
         ("03", "SHOW UP READY", "You&rsquo;ve already paid for the entry fee. Don&rsquo;t waste it. Race-specific plans so you don&rsquo;t blow up at mile 60 like we did."),
     ]
@@ -1002,7 +1002,7 @@ def build_training_cta() -> str:
       <div class="rl-hp-cta-left">
         <h2>Train for the course, not just the distance</h2>
         <p>Every generic plan treats your target event like a flat century. This isn&rsquo;t that. Training plans matched to your race&rsquo;s exact terrain, elevation profile, and typical conditions. Built around your schedule, your fitness, and your goal.</p>
-        <p class="rl-hp-cta-price" data-ab="training_price">Race-specific. Built for your target event. Less than your race hotel &mdash; $2/day.</p>
+        <p class="rl-hp-cta-price" data-ab="training_price">Custom-built for your target event &mdash; $15 a week.</p>
         <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-cta-btn" data-ga="training_plan_click" data-ab="training_cta_btn">Get Your Plan &rarr;</a>
       </div>
       <div class="rl-hp-cta-right" role="img" aria-label="Training plan preview"></div>
@@ -1011,35 +1011,16 @@ def build_training_cta() -> str:
 
 
 def build_testimonials() -> str:
-    """Build the athlete testimonials section with quotes from coached athletes."""
-    if not TESTIMONIALS:
-        return ""
-
-    cards = ""
-    for t in TESTIMONIALS:
-        cards += f'''
-      <div class="rl-hp-test-card">
-        <blockquote class="rl-hp-test-quote">&ldquo;{esc(t["quote"])}&rdquo;</blockquote>
-        <div class="rl-hp-test-attr">
-          <span class="rl-hp-test-name">{esc(t["name"])}</span>
-          <span class="rl-hp-test-title">{esc(t["title"])}</span>
-        </div>
-        <div class="rl-hp-test-tags">{esc(t["tags"])}</div>
-      </div>'''
-
+    """Homepage coaching band. The testimonial card list is empty by design
+    (never fabricate; see the module comment above) and as of 2026-07-18 the
+    owner ruling is no homepage testimonials at all — this section is now the
+    quiet coaching band so the homepage has a coaching presence."""
     return f'''<section class="rl-hp-testimonials" id="testimonials">
-    <div class="rl-hp-section-header">
-      <h2>ATHLETE RESULTS</h2>
-      <p class="rl-hp-section-intro">Real plans. Real races. Real finishes.</p>
-    </div>
-    <div class="rl-hp-test-grid">{cards}
-    </div>
     <div class="rl-hp-test-cta">
-      <p data-ab="coaching_scarcity">A human in your corner. Adapts week to week. Limited spots.</p>
-      <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-btn rl-hp-btn--primary" data-ga="coaching_cta_testimonials">SEE COACHING OPTIONS &rarr;</a>
+      <p data-ab="coaching_scarcity">You could be better than you think. A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+      <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-btn rl-hp-btn--primary" data-ga="coaching_cta_testimonials">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''
-
 
 def build_email_capture(posts: list = None) -> str:
     articles = posts or []

@@ -913,10 +913,12 @@ class TestLatestTakes:
 
 class TestTestimonials:
     def test_testimonials_section(self):
+        """Now the quiet coaching band (owner ruling 2026-07-18: no
+        homepage testimonials). No quote cards may ever return."""
         html = build_testimonials()
-        if html:  # May be empty if TESTIMONIALS is empty
-            assert "ATHLETE RESULTS" in html
-            assert "rl-hp-test-card" in html
+        assert "GET ME IN YOUR CORNER" in html
+        assert "rl-hp-test-card" not in html
+        assert "blockquote" not in html
 
 
 # ── Brand & Tone Guard Tests ────────────────────────────────
@@ -1754,9 +1756,11 @@ class TestSectionIntros:
         assert build_latest_takes() == ""
 
     def test_testimonials_intro(self):
-        """Testimonials are hidden until REAL athlete quotes exist —
-        the previous entries were fabricated (whoops audit, Jul 2026)."""
-        assert build_testimonials() == ""
+        """The section is the coaching band now; the fabrication guard
+        survives as: no quote cards, ever (whoops audit, Jul 2026)."""
+        html = build_testimonials()
+        assert "rl-hp-test-quote" not in html
+        assert "blockquote" not in html
 
     def test_sidebar_stats_intro(self, stats, race_index, upcoming):
         """Sidebar BY THE NUMBERS must have a section intro."""
