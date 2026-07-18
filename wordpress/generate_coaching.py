@@ -14,8 +14,7 @@ final-cta) into the Dossier structure (hero → terms → tiers → fit → faq 
 C — The Dossier" mock this rebuild matches.
 
 Uses brand tokens exclusively — zero hardcoded hex, no border-radius, no
-box-shadow, no bounce easing, no entrance animations beyond the shared
-fade-stagger pattern already used elsewhere on the site.
+box-shadow, no bounce easing, no entrance animations — the Dossier is a still document.
 
 Usage:
     python generate_coaching.py
@@ -37,7 +36,6 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
-from scroll_animations import get_scroll_animation_css, get_scroll_animation_js
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -146,7 +144,7 @@ def build_terms() -> str:
 def build_tiers() -> str:
     return f'''<section class="rl-coach-band rl-coach-tiers-section" id="tiers">
     <div class="rl-coach-inner">
-      <div class="rl-coach-tiers" data-animate="fade-stagger">
+      <div class="rl-coach-tiers">
         <div class="rl-coach-tier-col">
           <div class="rl-coach-tier-name">Min</div>
           <div class="rl-coach-tier-price">$199<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
@@ -423,6 +421,7 @@ def build_coaching_css() -> str:
 }
 .rl-coach-hero-cta {
   display: inline-block;
+  text-decoration: none;
   margin-top: var(--rl-spacing-xl);
   border: 1px solid var(--rl-color-dark-navy);
   padding: 15px 30px;
@@ -809,7 +808,7 @@ def build_coaching_css() -> str:
     padding-bottom: 60px;
   }
 }
-''' + get_scroll_animation_css(["fade-stagger"]) + '\n</style>'
+''' + '\n</style>'
 
 
 # ── JS ────────────────────────────────────────────────────────
@@ -894,7 +893,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     }
   }, { threshold: 0 }).observe(hero);
 })();
-''' + get_scroll_animation_js() + '\n</script>'
+''' + '\n</script>'
 
 
 # ── JSON-LD ───────────────────────────────────────────────────

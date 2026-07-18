@@ -315,8 +315,10 @@ class TestServiceTiers:
         for term in ("WKO", "TSB", "TSS", "CTL"):
             assert term not in tiers, f"Raw jargon in tiers: {term}"
 
-    def test_fade_stagger_on_tiers(self):
-        assert 'data-animate="fade-stagger"' in build_tiers()
+    def test_no_animation_on_tiers(self):
+        """Owner revision 2026-07-18: the Dossier is a still document —
+        pricing must never depend on an observer firing."""
+        assert 'data-animate' not in build_tiers()
 
 
 # ── A fit, or not ─────────────────────────────────────────────
@@ -602,39 +604,16 @@ class TestAccessibility:
 # ── Scroll Animations ────────────────────────────────────────
 
 
-class TestScrollAnimations:
-    def test_fade_stagger_on_tiers(self):
-        html = build_tiers()
-        assert 'data-animate="fade-stagger"' in html
+class TestNoScrollAnimations:
+    """Owner revision 2026-07-18: the Dossier is a still document — no
+    entrance animations, no observer-gated content anywhere on the page."""
 
-    def test_no_animation_on_hero(self):
-        html = build_hero()
-        assert 'data-animate' not in html
+    def test_no_data_animate(self, coaching_html):
+        assert "data-animate" not in coaching_html
 
-    def test_no_animation_on_terms(self):
-        html = build_terms()
-        assert 'data-animate' not in html
+    def test_no_hidden_by_default_content(self, coaching_css):
+        assert "opacity: 0" not in coaching_css
 
-
-    def test_css_has_reduced_motion_guard(self, coaching_css):
-        assert "prefers-reduced-motion: no-preference" in coaching_css
-
-    def test_css_has_rl_has_js_guard(self, coaching_css):
-        assert ".rl-has-js" in coaching_css
-
-    def test_js_has_intersection_observer(self, coaching_js):
-        assert "IntersectionObserver" in coaching_js
-
-    def test_js_adds_rl_has_js(self, coaching_js):
-        assert "rl-has-js" in coaching_js
-
-    def test_content_visible_without_js(self):
-        """Progressive enhancement: no opacity:0 on the section wrapper
-        itself outside the has-js gate — only child elements are hidden,
-        and only after JS marks the page ready."""
-        css = build_coaching_css()
-        assert "rl-has-js [data-animate" in css
-        assert "rl-in-view[data-animate" in css
 
 
 # ── Restraint Guard ──────────────────────────────────────────
