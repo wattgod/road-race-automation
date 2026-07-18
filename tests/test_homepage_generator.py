@@ -22,6 +22,7 @@ from generate_homepage import (
     build_nav,
     build_ticker,
     build_hero,
+    build_ladder_strip,
     build_stats_bar,
     build_featured_races,
     build_bento_features,
@@ -303,6 +304,23 @@ class TestSectionBuilders:
         assert "Browse All Races" in hero
         assert "How We Rate" in hero
 
+    def test_hero_deck_has_new_copy(self, stats, race_index):
+        """Hero deck carries the ladder-strip sub copy; hero_tagline A/B experiment retired."""
+        hero = build_hero(stats, race_index)
+        assert f'{stats["race_count"]} races scored on 14 dimensions' in hero
+        assert "and the training to show up ready for the one you pick." in hero
+        assert 'data-ab="hero_tagline"' not in hero
+
+    def test_hero_has_get_race_ready_anchor(self, stats, race_index):
+        """A new secondary anchor is ADDED alongside existing hero CTAs, not a replacement."""
+        hero = build_hero(stats, race_index)
+        assert 'href="#ladder"' in hero
+        assert "GET RACE-READY" in hero
+        assert 'data-ga="hero_get_race_ready"' in hero
+        # existing controls stay untouched
+        assert "Browse All Races" in hero
+        assert "How We Rate" in hero
+
     def test_hero_has_radar_viz(self, stats, race_index):
         hero = build_hero(stats, race_index)
         assert 'data-viz="hero-radar"' in hero
@@ -397,6 +415,86 @@ class TestSectionBuilders:
         assert "/race/calendar/2026/" in html
 
 
+# ── Ladder strip ─────────────────────────────────────────────
+
+
+class TestLadderStrip:
+    """New section, id=ladder, immediately after the hero, before rankings."""
+
+    def test_ladder_present_exactly_once(self, stats):
+        html = build_ladder_strip(stats)
+        assert html.count('id="ladder"') == 1
+        assert html.count("rl-hp-ladder-cell") == 3
+
+    def test_ladder_has_three_cells_with_numbers(self, stats):
+        html = build_ladder_strip(stats)
+        assert "01" in html
+        assert "02" in html
+        assert "03" in html
+
+    def test_ladder_cell_headlines(self, stats):
+        html = build_ladder_strip(stats)
+        assert "Pick a race" in html
+        assert "Get a plan" in html
+        assert "Find out what you could be." in html
+
+    def test_ladder_cell_bodies(self, stats):
+        html = build_ladder_strip(stats)
+        assert f'{stats["race_count"]} races, rated. Start with yours.' in html
+        assert "Built for the race on your calendar, around the hours you actually have." in html
+        assert "A human in your corner &mdash; not an AI, not a spreadsheet." in html
+
+    def test_ladder_cta_labels(self, stats):
+        html = build_ladder_strip(stats)
+        assert "BROWSE &rarr;" in html
+        assert "GET A TRAINING PLAN &rarr;" in html
+        assert "GET ME IN YOUR CORNER &rarr;" in html
+
+    def test_ladder_hrefs(self, stats):
+        html = build_ladder_strip(stats)
+        assert 'href="https://roadielabs.com/road-races/"' in html
+        assert 'href="https://roadielabs.com/questionnaire/"' in html
+        assert 'href="https://roadielabs.com/coaching/"' in html
+
+    def test_ladder_data_ga_hooks(self, stats):
+        html = build_ladder_strip(stats)
+        assert 'data-ga="ladder_pick_race"' in html
+        assert 'data-ga="ladder_get_plan"' in html
+        assert 'data-ga="ladder_coaching"' in html
+
+    def test_ladder_no_animation_no_cards_no_shadow(self, stats):
+        html = build_ladder_strip(stats)
+        assert "data-animate" not in html
+        assert "animate" not in html.lower()
+        assert "card" not in html.lower()
+        assert "shadow" not in html.lower()
+
+    def test_ladder_immediately_after_hero(self, homepage_html):
+        """Ladder strip must sit directly after the hero, before the stats stripe."""
+        hero_idx = homepage_html.index('class="rl-hp-hero"')
+        ladder_idx = homepage_html.index('id="ladder"')
+        stats_idx = homepage_html.index('class="rl-hp-stats-stripe"')
+        assert hero_idx < ladder_idx < stats_idx
+
+    def test_ladder_does_not_reorder_other_sections(self, homepage_html):
+        """Rankings and all other sections keep their current relative order below the strip.
+
+        rl-hp-guide is excluded: build_guide_preview() unconditionally
+        returns "" (gated off Jul 2026 — /guide/ pages 404 on
+        roadielabs.com), pre-existing and unrelated to this change.
+        """
+        order = [
+            'id="ladder"',
+            'class="rl-hp-stats-stripe"',
+            'class="rl-hp-content-grid"',
+            'class="rl-hp-how-it-works"',
+            'class="rl-hp-training-cta-full"',
+            'class="rl-hp-testimonials"',
+        ]
+        indices = [homepage_html.index(marker) for marker in order]
+        assert indices == sorted(indices), "Section order changed unexpectedly"
+
+
 # ── CSS ──────────────────────────────────────────────────────
 
 
@@ -438,6 +536,41 @@ class TestCSS:
         assert "Source Serif 4" in css
         assert "#f5f5f0" in css  # sand background
         assert "#1a1a1a" in css  # dark brown text color
+
+    def test_css_has_ladder_styles(self):
+        css = build_homepage_css()
+        assert ".rl-hp-ladder {" in css
+        assert ".rl-hp-ladder-cell {" in css
+        assert ".rl-hp-hero-ladder-cta {" in css
+
+    def test_css_ladder_mobile_stack_breakpoint(self):
+        """Mobile (<720px): cells stack vertically with horizontal hairlines."""
+        css = build_homepage_css()
+        assert "@media (max-width: 720px)" in css
+
+    @staticmethod
+    def _ladder_css_block(css: str) -> str:
+        """Isolate just the new ladder CSS (hero-ladder-cta/ladder rules,
+        plus the dedicated <720px mobile-stack block at the end) —
+        legacy homepage CSS predating the token system intentionally
+        still contains hardcoded hex, so the no-hardcoded-hex check is
+        scoped to only the NEW block, per the ladder-strip spec addendum.
+        Kept out of the main hero CSS run (rather than inline after
+        rl-hp-ladder-go:hover) so it doesn't shadow the first
+        `@media (max-width: 600px)` match that TestStatBars relies on."""
+        start = css.index(".rl-hp-hero-ladder-cta {")
+        main_end = css.index("/* ── Hero radar visualization")
+        mobile_start = css.index("/* ── Ladder strip: mobile stack")
+        mobile_end = css.index("</style>")
+        return css[start:main_end] + css[mobile_start:mobile_end]
+
+    def test_ladder_css_block_no_hardcoded_hex(self):
+        """New ladder CSS block must use CSS var() tokens only — zero hardcoded hex."""
+        css = build_homepage_css()
+        ladder_css = self._ladder_css_block(css)
+        assert not re.search(r'#[0-9a-fA-F]{3,8}\b', ladder_css), \
+            f"Hardcoded hex found in new ladder CSS: {ladder_css}"
+        assert "var(--rl-color-" in ladder_css
 
 
 # ── JavaScript ───────────────────────────────────────────────
@@ -537,6 +670,8 @@ class TestFullPage:
         assert "rl-site-header" in homepage_html
         assert "rl-hp-ticker" in homepage_html
         assert "rl-hp-hero" in homepage_html
+        assert "rl-hp-ladder" in homepage_html
+        assert 'id="ladder"' in homepage_html
         assert "rl-hp-stats-stripe" in homepage_html
         assert "rl-hp-content-grid" in homepage_html
         assert "rl-hp-bento" in homepage_html
@@ -563,7 +698,9 @@ class TestFullPage:
 
     def test_ctas_have_ga_tracking(self, homepage_html):
         for event in ['hero_cta_click', 'featured_race_click',
-                       'training_plan_click', 'sidebar_cta_click']:
+                       'training_plan_click', 'sidebar_cta_click',
+                       'hero_get_race_ready', 'ladder_pick_race',
+                       'ladder_get_plan', 'ladder_coaching']:
             assert f'data-ga="{event}"' in homepage_html, f"Missing GA event: {event}"
 
     def test_no_broken_template_vars(self, homepage_html):
@@ -994,6 +1131,7 @@ class TestBrandToneGuard:
         # Test key builders for inline styles
         builders_output = [
             ("hero", build_hero(stats, race_index)),
+            ("ladder", build_ladder_strip(stats)),
             ("stats_bar", build_stats_bar(stats)),
             ("bento", build_bento_features(race_index)),
             ("tabbed_rankings", build_tabbed_rankings(race_index)),

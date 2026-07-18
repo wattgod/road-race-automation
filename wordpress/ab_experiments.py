@@ -23,39 +23,12 @@ OUTPUT_DIR = PROJECT_ROOT / "web" / "ab"
 # ── Experiment definitions ───────────────────────────────────
 
 EXPERIMENTS = [
-    {
-        "id": "homepage_hero_tagline",
-        "description": "Test hero tagline copy on homepage",
-        "selector": "[data-ab='hero_tagline']",
-        "pages": ["/", "/index.html"],
-        "traffic": 1.0,
-        "start": "2026-02-16",
-        "end": None,
-        "variants": [
-            {
-                # MUST match the live homepage hero (generate_homepage.py
-                # data-ab="hero_tagline") exactly, so control = no change.
-                "id": "control",
-                "name": "Original tagline",
-                "content": "427 races scored on 14 base dimensions plus cultural impact by human editors who ride them. Just the data and the road.",
-            },
-            {
-                # Alternate phrasing of the (positive, non-defensive) control.
-                "id": "variant_a",
-                "name": "Riders-who-ride phrasing",
-                "content": "427 road races, scored on 14 base dimensions plus cultural impact by people who actually ride them. Just the data and the road.",
-            },
-            {
-                "id": "variant_b",
-                "name": "Discipline-specific",
-                "content": "Every gran fondo, sportive, and hill climb worth your money \u2014 scored on 14 base dimensions plus cultural impact, by hand.",
-            },
-        ],
-        "conversion": {
-            "type": "click",
-            "selector": "[data-ga='hero_cta_click'], [data-ga='hero_search'] button",
-        },
-    },
+    # NOTE: "homepage_hero_tagline" retired 2026-07-18 (ladder-strip spec,
+    # sol-review addendum item 1). It ran at 100% traffic with no end date
+    # and swapped in stale hardcoded-count variants ("427 races..."), which
+    # would have clobbered the new dynamic hero deck copy at runtime and was
+    # already showing wrong counts to users. The data-ab="hero_tagline"
+    # attribute was dropped from the homepage hero deck in generate_homepage.py.
     {
         "id": "training_price_frame",
         "description": "Test price framing on training plans card",

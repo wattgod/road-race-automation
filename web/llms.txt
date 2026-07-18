@@ -1,7 +1,7 @@
 # Roadie Labs Race Database
 
 > The definitive road race database. 427 races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
-> Last generated: 2026-07-10
+> Last generated: 2026-07-18
 
 ## Overview
 
@@ -22,9 +22,18 @@ Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, 
 - [RSS feed](https://roadielabs.com/feed/races.xml)
 - [Source code & data (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles](https://roadielabs.com/race/{slug}/)
-- [Markdown profiles](https://roadielabs.com/race/{slug}/index.md)
+- [Markdown profiles](https://roadielabs.com/race/{slug}.md)
 - [Race training-plan guides](https://roadielabs.com/race/{slug}/training-plan/)
 - [Race prep kits](https://roadielabs.com/race/{slug}/prep-kit/)
+
+## Markdown Mirrors
+
+Every race profile is also published as clean Markdown with YAML
+frontmatter, one file per race, at:
+
+`https://roadielabs.com/race/{slug}.md`
+
+e.g. https://roadielabs.com/race/unbound-200.md
 
 ## Contact
 

@@ -485,13 +485,49 @@ def build_hero(stats: dict, race_index: list = None) -> str:
         <p class="rl-hp-hero-kicker">THE {CURRENT_YEAR} RACE DATABASE</p>
         <h1 id="hero-title">Every road race, rated.</h1>
         <div class="rl-hp-accent-line" aria-hidden="true"></div>
-        <p class="rl-hp-hero-deck" data-ab="hero_tagline">{race_count} races scored on 14 base dimensions plus cultural impact by human editors who ride them. Just the data and the road.</p>
+        <p class="rl-hp-hero-deck">{race_count} races scored on 14 dimensions &mdash; and the training to show up ready for the one you pick.</p>
         <div class="rl-hp-hero-actions">
           <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-btn-primary" data-ga="hero_cta_click">Browse All Races</a>
           <a href="{SITE_BASE_URL}/race/methodology/" class="rl-hp-btn-secondary" data-ga="hero_secondary_click">How We Rate</a>
+          <a href="#ladder" class="rl-hp-hero-ladder-cta" data-ga="hero_get_race_ready">GET RACE-READY &darr;</a>
         </div>
       </div>
       {_build_hero_radar_viz(race_index)}
+    </div>
+  </section>'''
+
+
+# SANCTIONED EXCEPTION to the anti-defensive-messaging rule (see
+# .claude/skills/brand-and-trust/SKILL.md, "Never defensive messaging" —
+# phrases naming what something ISN'T are normally banned because they
+# plant doubt nobody had). Cell 03's body line ("A human in your corner
+# — not an AI, not a spreadsheet.") reuses the same owner-sanctioned
+# 2026-07-18 exception as the /coaching/ hero (generate_coaching.py,
+# build_hero()) — an aspirational "corner" frame, not a rebuttal to an
+# objection nobody raised.
+def build_ladder_strip(stats: dict) -> str:
+    race_count = stats["race_count"]
+
+    return f'''<section class="rl-hp-ladder" id="ladder" aria-label="Get race-ready">
+    <div class="rl-hp-ladder-inner">
+      <div class="rl-hp-ladder-cell">
+        <p class="rl-hp-ladder-num">01</p>
+        <h3>Pick a race</h3>
+        <p>{race_count} races, rated. Start with yours.</p>
+        <a href="{SITE_BASE_URL}/road-races/" class="rl-hp-ladder-go" data-ga="ladder_pick_race">BROWSE &rarr;</a>
+      </div>
+      <div class="rl-hp-ladder-cell">
+        <p class="rl-hp-ladder-num">02</p>
+        <h3>Get a plan</h3>
+        <p>Built for the race on your calendar, around the hours you actually have.</p>
+        <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-ladder-go" data-ga="ladder_get_plan">GET A TRAINING PLAN &rarr;</a>
+      </div>
+      <div class="rl-hp-ladder-cell">
+        <p class="rl-hp-ladder-num">03</p>
+        <h3>Find out what you could be.</h3>
+        <p>A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+        <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-ladder-go" data-ga="ladder_coaching">GET ME IN YOUR CORNER &rarr;</a>
+      </div>
     </div>
   </section>'''
 
@@ -1123,6 +1159,19 @@ a { text-decoration: none; color: #178079; }
 .rl-hp-btn-primary:hover { background: #333333; color: #1a1a1a; border-color: #333333; }
 .rl-hp-btn-secondary { display: inline-block; padding: 12px 28px; background: transparent; color: #1a1a1a; font-family: 'Sometype Mono', monospace; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #1a1a1a; text-decoration: none; transition: border-color .3s, color .3s; }
 .rl-hp-btn-secondary:hover { border-color: #178079; color: #178079; }
+.rl-hp-hero-ladder-cta { display: inline-block; padding: 12px 28px; background: transparent; color: var(--rl-color-near-black); font-family: 'Sometype Mono', monospace; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--rl-color-near-black); text-decoration: none; transition: border-color .3s, color .3s; }
+.rl-hp-hero-ladder-cta:hover { border-color: var(--rl-color-steel); color: var(--rl-color-steel); }
+
+/* ── Ladder strip (new hp section, id=ladder, immediately after hero) ── */
+.rl-hp-ladder { border-top: 1px solid var(--rl-color-near-black); border-bottom: 1px solid var(--rl-color-near-black); background: var(--rl-color-cool-white); }
+.rl-hp-ladder-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.rl-hp-ladder-cell { padding: 30px 32px 34px; border-right: 1px solid var(--rl-color-silver); }
+.rl-hp-ladder-cell:last-child { border-right: 0; }
+.rl-hp-ladder-num { font-family: 'Sometype Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-steel); margin-bottom: 14px; }
+.rl-hp-ladder-cell h3 { font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; font-weight: 600; color: var(--rl-color-near-black); margin-bottom: 10px; }
+.rl-hp-ladder-cell p { font-size: 15.5px; line-height: 1.55; color: var(--rl-color-near-black); margin-bottom: 16px; }
+.rl-hp-ladder-go { display: inline-block; font-family: 'Sometype Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; color: var(--rl-color-near-black); text-decoration: none; }
+.rl-hp-ladder-go:hover { color: var(--rl-color-steel); }
 
 /* ── Hero radar visualization ── */
 .rl-hp-hv-wrap { text-align: center; position: relative; }
@@ -1480,6 +1529,13 @@ a { text-decoration: none; color: #178079; }
 
 /* ── Reduced motion ────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) { .rl-hp-scroll-progress { display: none; } .rl-hp-announce-dot { animation: none; } }
+
+/* ── Ladder strip: mobile stack (<720px, cells stack with horizontal hairlines) ── */
+@media (max-width: 720px) {
+  .rl-hp-ladder-inner { grid-template-columns: 1fr; }
+  .rl-hp-ladder-cell { border-right: 0; border-bottom: 1px solid var(--rl-color-silver); }
+  .rl-hp-ladder-cell:last-child { border-bottom: 0; }
+}
 ''' + mega_footer_css + '''
 </style>'''
 
@@ -1812,6 +1868,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     top_bar = build_top_bar()
     nav = build_nav()
     hero = build_hero(stats, race_index)
+    ladder = build_ladder_strip(stats)
     stats_stripe = build_stats_bar(stats)
     ticker = build_ticker(one_liners, substack_posts, upcoming)
     content_grid = build_content_grid(race_index, stats, upcoming)
@@ -1869,6 +1926,8 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
   {nav}
 
   {hero}
+
+  {ladder}
 
   {stats_stripe}
 
