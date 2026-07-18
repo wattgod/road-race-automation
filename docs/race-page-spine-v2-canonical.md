@@ -1,7 +1,7 @@
 # Roadie Labs Race Pages — Canonical Spine v2
 
 **Decision date:** 2026-07-17  
-**Status:** Implemented and catalog-audited on `race-page-canonical-rollout`; staged, not deployed  
+**Status:** Deployed to production from `race-page-canonical-rollout` on 2026-07-17  
 **Owner approval:** Matti approved the shared structure and Roadie-specific brand adaptation
 
 This is the durable source of truth for Roadie Labs race-page structure. Roadie Labs
@@ -135,11 +135,22 @@ uv run --python 3.11 --no-project python -m py_compile \
 python3 scripts/audit_spine_v2_catalog.py
 ```
 
-## Deploy gate
+## Production deployment record
 
-The staged catalog is not permission to publish. Do not push `main`, SCP pages, or
-change SiteGround state without Matti’s separate deploy approval. For an approved
-deploy, generate into a dedicated directory, deploy all content-hashed assets required
-by the generated pages, sync the 427 page files, verify server-side, and have Matti
-flush SiteGround Dynamic Cache. Follow
-`.claude/skills/deploy-and-siteground/SKILL.md` exactly.
+Matti approved production deployment on 2026-07-17. The dedicated staged catalog and
+its content-hashed assets were uploaded directly to the static SiteGround site with
+`push_wordpress.py --sync-pages --pages-dir`.
+
+- 427/427 expected slugs exist on the server.
+- 427/427 contain `data-page-format="spine-v2-approved"`.
+- The deployed CSS and JS SHA-256 hashes match the generated artifacts.
+- Both ordinary and cache-busted HTTP requests return the approved page; the ordinary
+  request reported an expired cache entry and fetched the new HTML, so no manual flush
+  was required for normal visitors.
+- Rendered desktop and 390px mobile checks found no horizontal overflow, Gravel brand
+  leakage, or console errors; the Course Overview accordion changed `aria-expanded`
+  from `false` to `true` when activated.
+
+Future deployments still require separate owner approval, fresh generation and
+catalog audits, matching content-hashed assets, and
+`.claude/skills/deploy-and-siteground/SKILL.md`.
