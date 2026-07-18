@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate Open Graph social preview images for gravel race landing pages.
+Generate Open Graph social preview images for Roadie Labs race landing pages.
 
 Produces 1200x630 neo-brutalist styled JPEG images optimized for social sharing:
   - Dark background for feed contrast (stops the scroll)
@@ -36,53 +36,74 @@ except ImportError:
 
 W, H = 1200, 630
 
-# Brand colors — from road-labs-brand/tokens/tokens.json
-DARK_BROWN = (58, 46, 37)     # #1a1a1a
-PRIMARY_BROWN = (89, 71, 60)  # #555555
-SEC_BROWN = (125, 105, 93)    # #7d695d
-WARM_BROWN = (166, 142, 128)  # #A68E80
-TAN = (212, 197, 185)         # #d0d0c8
-SAND = (237, 228, 216)        # #f5f5f0
-WARM_PAPER = (245, 239, 230)  # #f5f5f0
-GOLD = (154, 126, 10)         # #333333
-LIGHT_GOLD = (201, 169, 44)   # #c9a92c
-TEAL = (23, 128, 121)         # #178079
-LIGHT_TEAL = (78, 205, 196)   # #4ECDC4
-NEAR_BLACK = (26, 22, 19)     # #1a1a1a
-WHITE = (255, 255, 255)
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from wordpress.brand_tokens import COLORS
+
+
+def _rgb(color_key: str) -> tuple:
+    """Convert a canonical brand_tokens.COLORS entry to an RGB tuple."""
+    return tuple(bytes.fromhex(COLORS[color_key].lstrip('#')))
+
+
+# Brand colors — from wordpress/brand_tokens.py --rl-* tokens.
+DARK_BROWN = _rgb("dark_navy")      # --rl-color-dark-navy (#1a1a1a)
+PRIMARY_BROWN = _rgb("primary_navy")  # --rl-color-primary-navy (#1a1a1a)
+SEC_BROWN = _rgb("secondary_blue")  # --rl-color-secondary-blue (#777777)
+WARM_BROWN = _rgb("steel")          # --rl-color-steel (#999999)
+TAN = _rgb("silver")                # --rl-color-silver (#d0d0c8)
+SAND = _rgb("cool_white")           # --rl-color-cool-white (#f5f5f0)
+WARM_PAPER = _rgb("cool_white")     # --rl-color-cool-white (#f5f5f0)
+GOLD = _rgb("signal_red")           # --rl-color-signal-red (#333333; legacy token name)
+LIGHT_GOLD = _rgb("coral")          # --rl-color-coral (#555555)
+TEAL = _rgb("tier_2")               # --rl-color-tier-2 (#4a4a4a)
+LIGHT_TEAL = _rgb("steel")          # --rl-color-steel (#999999)
+NEAR_BLACK = _rgb("near_black")     # --rl-color-near-black (#1a1a1a)
+WHITE = _rgb("white")               # --rl-color-white (#ffffff)
 
 # Dark background palette — near-black from tokens
-BG_DARK = NEAR_BLACK
-BG_TEXTURE = (36, 30, 26)     # Slightly lighter for texture lines
+BG_DARK = NEAR_BLACK                 # --rl-color-near-black (#1a1a1a)
+BG_TEXTURE = _rgb("signal_red")     # --rl-color-signal-red (#333333; legacy token name)
 
 TIER_COLORS = {
-    1: PRIMARY_BROWN,
-    2: SEC_BROWN,
-    3: (118, 106, 94),          # #766a5e
-    4: (94, 104, 104),          # #5e6868
+    1: _rgb("tier_1"),  # --rl-color-tier-1 (#1a1a1a)
+    2: _rgb("tier_2"),  # --rl-color-tier-2 (#4a4a4a)
+    3: _rgb("tier_3"),  # --rl-color-tier-3 (#777777)
+    4: _rgb("tier_4"),  # --rl-color-tier-4 (#aaaaaa)
 }
 
 TIER_BADGE_TEXT = {
     1: WHITE,
     2: WHITE,
     3: NEAR_BLACK,
-    4: TAN,
+    4: NEAR_BLACK,
 }
 
-# Score accent colors
+# Score accent colors — the canonical monochrome tier ramp.
 TIER_ACCENT = {
-    1: GOLD,         # Gold for T1 (hero score is gold in brand guide)
-    2: TEAL,
-    3: LIGHT_GOLD,
-    4: SEC_BROWN,
+    1: _rgb("tier_1"),  # --rl-color-tier-1 (#1a1a1a)
+    2: _rgb("tier_2"),  # --rl-color-tier-2 (#4a4a4a)
+    3: _rgb("tier_3"),  # --rl-color-tier-3 (#777777)
+    4: _rgb("tier_4"),  # --rl-color-tier-4 (#aaaaaa)
 }
 
-ALL_DIMS = ['logistics', 'length', 'technicality', 'elevation', 'climate',
-            'altitude', 'adventure', 'prestige', 'race_quality', 'experience',
-            'community', 'field_depth', 'value', 'expenses']
+DIMENSIONS_CONFIG = REPO_ROOT / "config" / "dimensions.json"
+
+
+def load_dimension_keys(path: Path = DIMENSIONS_CONFIG) -> list:
+    """Load the canonical ordered scoring keys from config/dimensions.json."""
+    return [d["key"] for d in json.loads(path.read_text())["dimensions"]]
+
+
+ALL_DIMS = load_dimension_keys()
 
 # Brand font paths — Sometype Mono (data) + Source Serif 4 (editorial)
-FONT_DIR = Path(__file__).resolve().parent.parent / "guide" / "fonts"
+# TODO: temporary cross-repo dependency until road-labs-brand vendors its own
+# copies of the shared image-generator TTF files.
+FONT_DIR = REPO_ROOT.parent / "gravel-race-automation" / "guide" / "fonts"
 
 FONT_EDITORIAL = str(FONT_DIR / "SourceSerif4-Variable.ttf")
 FONT_EDITORIAL_ITALIC = str(FONT_DIR / "SourceSerif4-Italic-Variable.ttf")
@@ -149,8 +170,7 @@ def truncate(text, max_chars=40):
 
 
 def draw_topo_texture(draw, seed=42):
-    """Draw subtle topographic-style lines for visual depth.
-    Thematically perfect for gravel cycling brand."""
+    """Draw subtle topographic-style lines for route-oriented visual depth."""
     rng = random.Random(seed)
     for _ in range(8):
         # Random horizontal wavy lines
@@ -283,7 +303,7 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
     # Brand name
     draw.text((left_margin, bottom_bar_y + 16), "ROADIE LABS", fill=WHITE, font=font_brand)
 
-    # Gold underline
+    # Charcoal underline
     brand_w = tw(draw, "ROADIE LABS", font_brand)
     draw.rectangle(
         [left_margin, bottom_bar_y + 50, left_margin + brand_w, bottom_bar_y + 53],
@@ -377,8 +397,8 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate OG images for gravel race profiles')
-    parser.add_argument('slug', nargs='?', help='Race slug (e.g., unbound-200)')
+    parser = argparse.ArgumentParser(description='Generate OG images for Roadie Labs race profiles')
+    parser.add_argument('slug', nargs='?', help='Race slug (e.g., maratona-dles-dolomites)')
     parser.add_argument('--all', action='store_true', help='Generate for all races')
     parser.add_argument('--data-dir', type=Path, help='Race data directory')
     parser.add_argument('--output-dir', type=Path, help='Output directory for images')
