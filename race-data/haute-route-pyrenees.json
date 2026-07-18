@@ -180,6 +180,12 @@
         "category": "review",
         "label": "A Sports Story: I Finished the Haute Route Pyrenees — OutSystems"
       }
-    ]
+    ],
+    "eligibility": {
+      "status": "unknown",
+      "verified": "2026-07-17",
+      "source": "https://hauteroute.fr/",
+      "note": "hauteroute.fr's official 2026 calendar lists only Haute Route Alps (Aug 23-29) — no Pyrenees edition. That is evidence of absence, not a direct cancellation statement; downgraded from an initial 'cancelled' status to 'unknown' per R0 adversarial review (2026-07-17) since no single official source explicitly states cancellation. Pre-existing vitals.date_specific text (predating this pass) already read 'Cancelled for 2026' from an earlier, unaudited research pass — left as-is, but treat both as unconfirmed until a direct primary source is found."
+    }
   }
 }

@@ -70,12 +70,12 @@
       "expenses": 2,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 57,
+      "overall_score": 56,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 57."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 56 (corrected score-math error found by qc/plan_readiness.py R0 validator sweep, 2026-07-17: dimension sum 37 + cultural_impact 2 = 39/70*100 = 55.7 -> 56, was previously miscalculated as 57)."
     },
     "climb_profile": {
       "total_climbs": null,
