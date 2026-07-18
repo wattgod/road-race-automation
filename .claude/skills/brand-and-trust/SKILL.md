@@ -85,6 +85,17 @@ the homepage/methodology hero dropped that copy for positive framing ("scored
 by human editors who ride them"). Do not reintroduce defensive copy on hero
 sections, CTAs, taglines, or any marketing-facing text.
 
+**Sanctioned exception (2026-07-18).** Corner-frame coaching copy naming what
+coaching isn't (AI, dashboard, spreadsheet-coach) is allowed ONLY on
+`/coaching/`, never elsewhere. Precedent: the `/coaching/` hero sub-line "Not
+an AI, not a dashboard, not a coach who reads you like a spreadsheet"
+(`wordpress/generate_coaching.py`, `build_hero()`), owner-approved 2026-07-18
+as aspirational "corner" framing (what you're getting), not a defensive
+rebuttal to an objection nobody raised. Same frame already ships on race pages
+("A human in your corner. Adapts week to week." —
+`generate_neo_brutalist.py:2681`) and in the owner's canonical corner copy
+(gravel race-page coaching footnote: "And no, AI isn't a person.").
+
 **Honest-critic scores are the product.** Roadie Labs' `fondo_rating` (14
 dimensions + `cultural_impact` bonus / 70 denominator, see this repo's
 `CLAUDE.md`) is the same anti-shill mechanic as Gravel God — harsh T4s on
