@@ -169,6 +169,12 @@ def _section_course(rd: dict) -> str:
     if course.get("suffering_zones"):
         parts.append("\n### Suffering Zones\n")
         for sz in course["suffering_zones"]:
+            # Many profiles store suffering zones as plain strings rather
+            # than {label, mile, desc} dicts — render both shapes.
+            if isinstance(sz, str):
+                if sz.strip():
+                    parts.append(f"- {sz.strip()}")
+                continue
             label = _safe(sz.get("label"), sz.get("named_section", ""))
             mile = sz.get("mile", "")
             desc = _safe(sz.get("desc"), "")

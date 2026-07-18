@@ -9,6 +9,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 from datetime import date
 
@@ -3209,20 +3210,45 @@ def sync_rss():
 
 
 def sync_llms_txt():
-    """Upload llms.txt and llms-full.txt to site root on SiteGround via SCP."""
+    """Regenerate then upload llms.txt, llms-full.txt, and the IndexNow key
+    file to site root on SiteGround via SCP.
+
+    Regenerating here (rather than trusting whatever's on disk) keeps the
+    "Last generated" date in llms.txt at deploy time instead of going stale
+    between manual `generate_llms_txt.py` runs.
+    """
     ssh = get_ssh_credentials()
     if not ssh:
         return None
     host, user, port = ssh
 
+    try:
+        subprocess.run(
+            [sys.executable, "scripts/generate_llms_txt.py"],
+            check=True, capture_output=True, text=True, timeout=60,
+        )
+        print("  Regenerated llms.txt + llms-full.txt")
+    except subprocess.CalledProcessError as e:
+        print(f"⚠ llms.txt regeneration failed, uploading existing files: {e.stderr.strip()}")
+    except Exception as e:
+        print(f"⚠ llms.txt regeneration failed, uploading existing files: {e}")
+
     remote_base = f"{REMOTE_BASE}"
     uploaded = 0
 
-    for filename in ("llms.txt", "llms-full.txt"):
+    filenames = ["llms.txt", "llms-full.txt"]
+    try:
+        import indexnow_ping
+        filenames.append(f"{indexnow_ping.INDEXNOW_KEY}.txt")
+    except Exception as e:
+        print(f"⚠ Could not resolve IndexNow key filename, skipping: {e}")
+
+    for filename in filenames:
         local_path = Path("web") / filename
         if not local_path.exists():
             print(f"✗ {filename} not found: {local_path}")
-            print(f"  Run: python3 scripts/generate_llms_txt.py first")
+            if filename in ("llms.txt", "llms-full.txt"):
+                print(f"  Run: python3 scripts/generate_llms_txt.py first")
             continue
 
         try:
@@ -3243,13 +3269,14 @@ def sync_llms_txt():
         except Exception as e:
             print(f"✗ Error uploading {filename}: {e}")
 
-    # Fix permissions
+    # Fix permissions (only the files this function targets, not the whole root)
+    remote_targets = " ".join(f"{remote_base}/{f}" for f in filenames)
     try:
         subprocess.run(
             [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
-                f"chmod 644 {remote_base}/llms.txt {remote_base}/llms-full.txt 2>/dev/null",
+                f"chmod 644 {remote_targets} 2>/dev/null",
             ],
             check=True,
             capture_output=True,
@@ -3260,15 +3287,20 @@ def sync_llms_txt():
         pass
 
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-    print(f"✓ Uploaded {uploaded} llms.txt files to {wp_url}/")
+    print(f"✓ Uploaded {uploaded} text files to {wp_url}/")
     return f"{wp_url}/llms.txt"
 
 
 def sync_markdown(markdown_dir: str):
-    """Upload markdown race profiles to /race/{slug}/index.md on SiteGround via tar+ssh.
+    """Upload markdown race profiles to /race/{slug}.md on SiteGround via tar+ssh.
 
-    Converts flat {slug}.md files to {slug}/index.md directory structure
-    under a temporary staging dir, then uploads to /race/ on the server.
+    Files are already named {slug}.md in markdown_dir, so they upload as flat
+    files straight into the existing /race/ directory tree (alongside the
+    {slug}/ page directories) — this is what makes them resolvable at
+    https://roadielabs.com/race/{slug}.md.
+
+    Returns the list of uploaded .md URLs on success (for IndexNow pinging),
+    or None on failure.
     """
     ssh = get_ssh_credentials()
     if not ssh:
@@ -3288,48 +3320,38 @@ def sync_markdown(markdown_dir: str):
 
     remote_base = f"{REMOTE_BASE}/race"
 
-    with tempfile.TemporaryDirectory() as tmpdir:
-        tmpdir = Path(tmpdir)
-        page_count = 0
-        for md_file in md_files:
-            slug = md_file.stem
-            slug_dir = tmpdir / slug
-            slug_dir.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(md_file, slug_dir / "index.md")
-            page_count += 1
+    print(f"  Uploading {len(md_files)} markdown profiles via tar+ssh...")
 
-        print(f"  Uploading {page_count} markdown profiles via tar+ssh...")
+    try:
+        items = [f.name for f in md_files]
+        tar_cmd = ["tar", "-cf", "-", "-C", str(md_path)] + items
+        ssh_cmd = [
+            "ssh", "-i", str(SSH_KEY), "-p", port,
+            f"{user}@{host}",
+            f"tar -xf - -C {remote_base}",
+        ]
 
-        try:
-            items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
-            ssh_cmd = [
-                "ssh", "-i", str(SSH_KEY), "-p", port,
-                f"{user}@{host}",
-                f"tar -xf - -C {remote_base}",
-            ]
+        tar_proc = subprocess.Popen(tar_cmd, stdout=subprocess.PIPE)
+        ssh_proc = subprocess.Popen(ssh_cmd, stdin=tar_proc.stdout,
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        tar_proc.stdout.close()
+        stdout, stderr = ssh_proc.communicate(timeout=300)
 
-            tar_proc = subprocess.Popen(tar_cmd, stdout=subprocess.PIPE)
-            ssh_proc = subprocess.Popen(ssh_cmd, stdin=tar_proc.stdout,
-                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            tar_proc.stdout.close()
-            stdout, stderr = ssh_proc.communicate(timeout=300)
-
-            if ssh_proc.returncode != 0:
-                print(f"✗ tar+ssh failed: {stderr.decode().strip()}")
-                return None
-        except subprocess.TimeoutExpired:
-            print("✗ Upload timed out (300s)")
-            tar_proc.kill()
-            ssh_proc.kill()
+        if ssh_proc.returncode != 0:
+            print(f"✗ tar+ssh failed: {stderr.decode().strip()}")
             return None
-        except Exception as e:
-            print(f"✗ Error uploading markdown profiles: {e}")
-            return None
+    except subprocess.TimeoutExpired:
+        print("✗ Upload timed out (300s)")
+        tar_proc.kill()
+        ssh_proc.kill()
+        return None
+    except Exception as e:
+        print(f"✗ Error uploading markdown profiles: {e}")
+        return None
 
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-    print(f"✓ Uploaded {page_count} markdown profiles to {wp_url}/race/*/index.md")
-    return f"{wp_url}/race/"
+    print(f"✓ Uploaded {len(md_files)} markdown profiles to {wp_url}/race/*.md")
+    return [f"{wp_url}/race/{f.stem}.md" for f in md_files]
 
 
 if __name__ == "__main__":
@@ -3595,11 +3617,16 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--sync-markdown", action="store_true",
-        help="Upload markdown race profiles to /race/{slug}/index.md via tar+ssh"
+        help="Upload markdown race profiles to /race/{slug}.md via tar+ssh"
     )
     parser.add_argument(
         "--markdown-dir", default="web/markdown",
         help="Path to markdown profiles directory (default: web/markdown)"
+    )
+    parser.add_argument(
+        "--ping-indexnow", action="store_true",
+        help="After a successful --sync-markdown, POST the synced .md URLs to IndexNow "
+             "(never fails the deploy — a ping failure only prints a warning)"
     )
     parser.add_argument(
         "--sync-meta-descriptions", action="store_true",
@@ -3777,7 +3804,17 @@ if __name__ == "__main__":
         sync_rss()
     if args.sync_llms_txt:
         sync_llms_txt()
+    synced_markdown_urls = None
     if args.sync_markdown:
-        sync_markdown(args.markdown_dir)
+        synced_markdown_urls = sync_markdown(args.markdown_dir)
+    if args.ping_indexnow:
+        if synced_markdown_urls:
+            try:
+                import indexnow_ping
+                indexnow_ping.ping(synced_markdown_urls)
+            except Exception as e:
+                print(f"⚠ IndexNow ping failed (non-fatal): {e}")
+        else:
+            print("⚠ --ping-indexnow had no synced URLs to ping (did --sync-markdown succeed?)")
     if args.purge_cache:
         purge_cache()

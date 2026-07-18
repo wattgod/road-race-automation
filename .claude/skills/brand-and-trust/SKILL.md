@@ -93,8 +93,7 @@ an AI, not a dashboard, not a coach who reads you like a spreadsheet"
 as aspirational "corner" framing (what you're getting), not a defensive
 rebuttal to an objection nobody raised. Same frame already ships on race pages
 ("A human in your corner. Adapts week to week." —
-`generate_neo_brutalist.py:2681`) and in the owner's canonical corner copy
-(gravel race-page coaching footnote: "And no, AI isn't a person.").
+`generate_neo_brutalist.py:2681`).
 
 **Honest-critic scores are the product.** Roadie Labs' `fondo_rating` (14
 dimensions + `cultural_impact` bonus / 70 denominator, see this repo's
