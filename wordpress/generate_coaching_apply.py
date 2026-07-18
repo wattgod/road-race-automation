@@ -34,14 +34,15 @@ from generate_neo_brutalist import (
 )
 from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
 from shared_footer import get_mega_footer_html
-from shared_header import get_site_header_html
+from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
-# Formsubmit.co endpoint — sends email to this address on submission
-FORMSUBMIT_EMAIL = "coach@roadielabs.com"  # TODO: Roadie Labs contact email
-FORMSUBMIT_URL = f"https://formsubmit.co/{FORMSUBMIT_EMAIL}"
+# Formsubmit.co /ajax/ endpoint — the alias for coach@roadielabs.com, activated
+# and browser-E2E-delivery-verified Jul 18 2026. /ajax/ is FormSubmit's
+# documented fetch endpoint (returns JSON instead of redirecting).
+FORMSUBMIT_URL = "https://formsubmit.co/ajax/df9d64ff7bd404311c74f4a4240a1ebd"
 
 
 def esc(text) -> str:
@@ -1701,10 +1702,11 @@ def build_apply_js() -> str:
     /* Submit via Formsubmit.co — sends email to coach@roadielabs.com */
     var FORMSUBMIT_URL = "''' + FORMSUBMIT_URL + '''";
     var payload = new FormData();
-    payload.append("_subject", "Coaching Application: " + data.name);
+    payload.append("_subject", "Roadie Labs Coaching Application: " + data.name);
     payload.append("_replyto", data.email);
     payload.append("_captcha", "false");
     payload.append("_template", "box");
+    payload.append("_url", "''' + f"{SITE_BASE_URL}/coaching/apply/" + '''");
     payload.append("name", data.name);
     payload.append("email", data.email);
     payload.append("message", output);
@@ -1715,23 +1717,35 @@ def build_apply_js() -> str:
       body: payload,
       headers: { "Accept": "application/json" }
     }).then(function(response) {
-      if (response.ok) {
-        localStorage.removeItem("athlete_questionnaire_progress");
-        ga4("apply_form_submitted", {
-          blindspot_count: (data.blindspots || "").split(",").filter(function(b) { return b; }).length,
-          has_ftp: data.ftp ? "yes" : "no",
-          primary_goal: data.primary_goal
-        });
-        showMessage("success", "Application submitted! I&#39;ll review your questionnaire and get back to you within 24 hours.");
-        submitBtn.textContent = "Submitted";
-      } else {
-        throw new Error("Server returned " + response.status);
-      }
+      return response.json().catch(function() { return null; }).then(function(json) {
+        if (response.ok && json && json.success === "true") {
+          localStorage.removeItem("athlete_questionnaire_progress");
+          ga4("apply_form_submitted", {
+            blindspot_count: (data.blindspots || "").split(",").filter(function(b) { return b; }).length,
+            has_ftp: data.ftp ? "yes" : "no",
+            primary_goal: data.primary_goal
+          });
+          showMessage("success", "Application submitted! I&#39;ll review your questionnaire and get back to you within 24 hours.");
+          submitBtn.textContent = "Submitted";
+        } else {
+          throw new Error("FormSubmit did not confirm delivery");
+        }
+      });
     }).catch(function(err) {
-      /* Fallback: open email client with formatted body */
-      var subject = encodeURIComponent("Coaching Application: " + data.name);
-      var body = encodeURIComponent(output);
-      window.location.href = "mailto:coach@roadielabs.com?subject=" + subject + "&body=" + body;
+      /* Submission failed. Do NOT auto-redirect to a mailto: URL — a
+         12-section questionnaire body is unreliable in a URL and would leak
+         health details into it. Answers are already saved in this browser
+         (see restoreProgress above); show an error and a plain mailto link
+         (no body) built via the DOM, not innerHTML, since the subject line
+         carries the athlete's own name. */
+      showMessage("error", "Submission failed. Your answers are saved in this browser \\u2014 reload this page to pick up where you left off, or email me directly:");
+      var messageDiv = document.getElementById("message");
+      var mailtoLink = document.createElement("a");
+      mailtoLink.href = "mailto:coach@roadielabs.com?subject=" + encodeURIComponent("Roadie Labs Coaching Application: " + data.name);
+      mailtoLink.textContent = "coach@roadielabs.com";
+      messageDiv.appendChild(mailtoLink);
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Questionnaire";
       ga4("apply_form_fallback", { method: "mailto" });
     });
   });
@@ -1836,6 +1850,9 @@ def generate_apply_page(external_assets=None):
   {build_footer()}
   {build_jsonld()}
   {build_apply_js()}
+<script>
+{get_site_header_js()}
+</script>
 {get_consent_banner_html()}
 </body>
 </html>'''

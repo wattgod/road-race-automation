@@ -979,7 +979,7 @@ def check_all_generators_token_refs():
     sys.path.insert(0, str(WORDPRESS_DIR))
     generators = [
         ("coaching", "generate_coaching", "build_coaching_css"),
-        ("coaching-apply", "generate_coaching_apply", "build_coaching_apply_css"),
+        ("coaching-apply", "generate_coaching_apply", "build_apply_css"),
         ("consulting", "generate_consulting", "build_consulting_css"),
         ("success-pages", "generate_success_pages", "build_success_css"),
     ]
@@ -1072,7 +1072,7 @@ def check_no_raw_transitions():
     sys.path.insert(0, str(WORDPRESS_DIR))
     generators = [
         ("coaching", "generate_coaching", "build_coaching_css"),
-        ("coaching-apply", "generate_coaching_apply", "build_coaching_apply_css"),
+        ("coaching-apply", "generate_coaching_apply", "build_apply_css"),
         ("consulting", "generate_consulting", "build_consulting_css"),
         ("success-pages", "generate_success_pages", "build_success_css"),
     ]
