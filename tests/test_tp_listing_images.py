@@ -96,8 +96,11 @@ def test_normal_render_palette_never_uses_oxblood():
 
 
 def test_mental_program_tile_is_not_in_standard_tiles():
-    assert len(tp.STANDARD_TILES) == 5
+    # Heat moved out of STANDARD_TILES to a climate-conditional tile (heat
+    # gating fix #2), so the fixed set is 4; heat renders via heat_risk.
+    assert len(tp.STANDARD_TILES) == 4
     assert all(icon_key != "mental" for icon_key, _ in tp.STANDARD_TILES)
+    assert all(icon_key != "heat" for icon_key, _ in tp.STANDARD_TILES)
     assert "mental" not in tp.ICON_DRAWERS
 
 
