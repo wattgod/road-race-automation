@@ -10,8 +10,7 @@ width.
 
 Rebuilt 2026-07-18 from the original "band sequence" layout (hero → problem
 → deliverables → how-it-works → tiers → testimonials → honest-check → faq →
-final-cta) into the Dossier structure (hero → terms → tiers → fit → results
-→ faq → final-cta). Owner-approved copy and structure — see the "Direction
+final-cta) into the Dossier structure (hero → terms → tiers → fit → faq → final-cta). Owner-approved copy and structure — see the "Direction
 C — The Dossier" mock this rebuild matches.
 
 Uses brand tokens exclusively — zero hardcoded hex, no border-radius, no
@@ -38,7 +37,6 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
-from generate_about import _testimonial_data
 from scroll_animations import get_scroll_animation_css, get_scroll_animation_js
 
 OUTPUT_DIR = Path(__file__).parent / "output"
@@ -52,8 +50,6 @@ QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/coaching/apply/"
 # concrete rider. The full set stays on /about/. These are Gravel God
 # athletes (Roadie Labs has no finishers yet) — the provenance line below
 # the cards says so.
-FEATURED_TESTIMONIAL_NAMES = ("Tony V.", "Laura M.", "Rob L.")
-
 
 def esc(text) -> str:
     """HTML-escape a string."""
@@ -96,12 +92,9 @@ def build_nav() -> str:
 def build_hero() -> str:
     return f'''<section class="rl-coach-band rl-coach-hero" id="hero">
     <div class="rl-coach-inner">
-      <div class="rl-coach-file-strip">
-        <span>COACHING &mdash; TERMS OF WORK</span>
-        <span>ONE COACH &middot; 427 COURSES ON FILE</span>
-      </div>
       <h1>You could be better than you think. That is not encouragement &mdash; it&#39;s an observation about people who train alone.</h1>
       <p class="rl-coach-tagline">The fix is a human in your corner. Not an AI, not a dashboard, not a coach who reads you like a spreadsheet. The terms are below.</p>
+      <a href="{QUESTIONNAIRE_URL}" class="rl-coach-hero-cta" data-cta="hero_apply">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''
 
@@ -203,30 +196,6 @@ def build_tiers() -> str:
   </section>'''
 
 
-def build_testimonials() -> str:
-    by_name = {name: (name, quote, meta) for name, quote, meta in _testimonial_data()}
-    featured = [by_name[n] for n in FEATURED_TESTIMONIAL_NAMES if n in by_name]
-    if len(featured) < 3:
-        featured = _testimonial_data()[:3]
-    cards = "\n        ".join(
-        f'<blockquote class="rl-coach-testimonial">'
-        f'<p>{esc(quote)}</p>'
-        f'<footer><strong>{esc(name)}</strong>'
-        f'<span class="rl-coach-testimonial-meta">{meta}</span>'
-        f'</footer></blockquote>'
-        for name, quote, meta in featured
-    )
-    return f'''<section class="rl-coach-band" id="results">
-    <div class="rl-coach-inner">
-      {_sec_head("07", "From athletes")}
-      <div class="rl-coach-testimonials">
-        {cards}
-      </div>
-      <p class="rl-coach-testimonials-provenance">Gravel God athletes &mdash; same coach, same plan engine, different surface. Roadie Labs is new. Road finishers take this section over as the reports come in.</p>
-      <p class="rl-coach-testimonials-more"><a href="{SITE_BASE_URL}/about/">More, from fifty athletes &rarr;</a></p>
-    </div>
-  </section>'''
-
 
 def build_honest_check() -> str:
     return f'''<section class="rl-coach-band" id="fit">
@@ -307,7 +276,7 @@ def build_faq() -> str:
     inner = "\n      ".join(items)
     return f'''<section class="rl-coach-band" id="faq">
     <div class="rl-coach-inner">
-      {_sec_head("08", "FAQ")}
+      {_sec_head("07", "FAQ")}
       <div class="rl-coach-faq-list">
       {inner}
       </div>
@@ -435,16 +404,6 @@ def build_coaching_css() -> str:
   padding-bottom: var(--rl-spacing-2xl);
   border-bottom: 1px solid var(--rl-color-dark-navy);
 }
-.rl-coach-file-strip {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--rl-spacing-md);
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  letter-spacing: var(--rl-letter-spacing-wide);
-  color: var(--rl-color-steel);
-  margin: 0 0 var(--rl-spacing-2xl) 0;
-}
 .rl-coach-hero h1 {
   font-family: var(--rl-font-editorial);
   font-size: clamp(30px, 4.6vw, 44px);
@@ -461,6 +420,16 @@ def build_coaching_css() -> str:
   color: var(--rl-color-steel);
   max-width: 52ch;
   margin: var(--rl-spacing-lg) 0 0 0;
+}
+.rl-coach-hero-cta {
+  display: inline-block;
+  margin-top: var(--rl-spacing-xl);
+  border: 1px solid var(--rl-color-dark-navy);
+  padding: 15px 30px;
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  letter-spacing: var(--rl-letter-spacing-wide);
+  color: var(--rl-color-dark-navy);
 }
 
 /* ── Terms — numbered clauses ─────────────────────── */
@@ -603,71 +572,6 @@ def build_coaching_css() -> str:
   margin-top: var(--rl-spacing-xs);
   max-width: 68ch;
   margin-bottom: 0;
-}
-
-/* ── Testimonials — quiet stack, hairline dividers ── */
-.rl-coach-testimonials {
-  display: flex;
-  flex-direction: column;
-}
-.rl-coach-testimonial {
-  margin: 0;
-  padding: var(--rl-spacing-lg) 0;
-  border-bottom: 1px solid var(--rl-color-silver);
-}
-.rl-coach-testimonial:first-child {
-  border-top: 1px solid var(--rl-color-silver);
-}
-.rl-coach-testimonial p {
-  font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-base);
-  font-style: italic;
-  line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-dark-navy);
-  margin: 0 0 var(--rl-spacing-sm) 0;
-  max-width: 68ch;
-}
-.rl-coach-testimonial footer {
-  display: flex;
-  align-items: baseline;
-  gap: var(--rl-spacing-sm);
-}
-.rl-coach-testimonial footer strong {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-xs);
-  font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-navy);
-  letter-spacing: var(--rl-letter-spacing-wide);
-}
-.rl-coach-testimonial-meta {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-steel);
-  letter-spacing: var(--rl-letter-spacing-normal);
-}
-.rl-coach-testimonials-provenance {
-  margin: var(--rl-spacing-md) 0 0 0;
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-steel);
-  letter-spacing: var(--rl-letter-spacing-normal);
-  max-width: 68ch;
-}
-.rl-coach-testimonials-more {
-  margin: var(--rl-spacing-sm) 0 0 0;
-  font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-sm);
-}
-.rl-coach-testimonials-more a {
-  color: var(--rl-color-steel);
-  text-decoration: none;
-  border-bottom: 1px solid var(--rl-color-silver);
-  transition: color var(--rl-transition-hover),
-              border-color var(--rl-transition-hover);
-}
-.rl-coach-testimonials-more a:hover {
-  color: var(--rl-color-dark-navy);
-  border-color: var(--rl-color-dark-navy);
 }
 
 /* ── A fit, or not ───────────────────────────────── */
@@ -944,7 +848,6 @@ def build_coaching_js() -> str:
     { id: 'terms', label: '15_terms' },
     { id: 'tiers', label: '35_tiers' },
     { id: 'fit', label: '55_fit' },
-    { id: 'results', label: '70_results' },
     { id: 'faq', label: '85_faq' },
     { id: 'final-cta', label: '100_final_cta' }
   ];
@@ -1037,7 +940,6 @@ def generate_coaching_page(external_assets: dict = None) -> str:
     terms = build_terms()
     tiers = build_tiers()
     honest = build_honest_check()
-    testimonials = build_testimonials()
     faq = build_faq()
     final_cta = build_application_close()
     footer = build_footer()
@@ -1102,7 +1004,6 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
   {honest}
 
-  {testimonials}
 
   {faq}
 

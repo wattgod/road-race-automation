@@ -27,12 +27,10 @@ sys.path.insert(0, str(WORDPRESS_DIR))
 
 from generate_coaching import (
     QUESTIONNAIRE_URL,
-    FEATURED_TESTIMONIAL_NAMES,
     build_nav,
     build_hero,
     build_terms,
     build_tiers,
-    build_testimonials,
     build_honest_check,
     build_faq,
     build_application_close,
@@ -141,25 +139,28 @@ class TestNav:
         assert 'aria-current="page">SERVICES</a>' in coaching_html
 
 
-# ── Hero — "The Dossier" file-strip hero, no CTA ────────────
+# ── Hero — "The Dossier" hero with corner CTA ───────────────
 
 
 class TestHero:
     def test_hero_id(self):
         assert 'id="hero"' in build_hero()
 
-    def test_no_cta(self):
-        """The Dossier hero has no CTA link/button at all — the first CTA
-        appears in the tiers section."""
+    def test_hero_has_corner_cta(self):
+        """Owner revision 2026-07-18: an obvious CTA on arrival, no scroll
+        required. One link, the corner imperative."""
         hero = build_hero()
-        assert '<a ' not in hero
-        assert 'data-cta' not in hero
+        assert 'class="rl-coach-hero-cta"' in hero
+        assert 'data-cta="hero_apply"' in hero
+        assert "GET ME IN YOUR CORNER" in hero
 
-    def test_file_strip(self):
+    def test_no_file_strip(self):
+        """Owner revision 2026-07-18: file strip removed, not replaced."""
         hero = build_hero()
-        assert "rl-coach-file-strip" in hero
-        assert "COACHING &mdash; TERMS OF WORK" in hero
-        assert "ONE COACH &middot; 427 COURSES ON FILE" in hero
+        assert "rl-coach-file-strip" not in hero
+        assert "TERMS OF WORK" not in hero
+        assert "COURSES ON FILE" not in hero
+
 
     def test_headline(self):
         hero = build_hero()
@@ -239,7 +240,7 @@ class TestFullBleedLayout:
     def test_all_sections_use_inner_wrapper(self, coaching_html):
         bands = coaching_html.count('<section class="rl-coach-band')
         inners = coaching_html.count('class="rl-coach-inner"')
-        assert bands == inners == 7
+        assert bands == inners == 6
 
     def test_terms_tiers_seamless(self, coaching_css):
         """Terms section has zero bottom padding, tiers section has zero
@@ -337,42 +338,6 @@ class TestFit:
     def test_no_sand_bg(self):
         assert "rl-coach-band--sand" not in build_honest_check()
 
-
-# ── Testimonials ─────────────────────────────────────────────
-
-
-class TestTestimonials:
-    def test_results_id(self):
-        assert 'id="results"' in build_testimonials()
-
-    def test_section_title(self):
-        assert "From athletes" in build_testimonials()
-
-    def test_no_carousel(self):
-        t = build_testimonials()
-        assert "rl-coach-carousel" not in t
-        assert "rl-coach-prev" not in t
-        assert "rl-coach-next" not in t
-
-    def test_three_curated(self):
-        t = build_testimonials()
-        assert t.count("<blockquote") == 3
-        for name in FEATURED_TESTIMONIAL_NAMES:
-            assert name in t, f"Missing featured testimonial: {name}"
-
-    def test_featured_names(self):
-        assert FEATURED_TESTIMONIAL_NAMES == ("Tony V.", "Laura M.", "Rob L.")
-
-    def test_provenance_line(self):
-        t = build_testimonials()
-        assert "Gravel God athletes" in t
-        assert "same coach" in t
-        assert "Roadie Labs is new" in t
-
-    def test_link_to_full_set(self):
-        t = build_testimonials()
-        assert f"{SITE_BASE_URL}/about/" in t
-        assert "fifty athletes" in t
 
 
 # ── FAQ ──────────────────────────────────────────────────────
@@ -537,7 +502,7 @@ class TestGA4Events:
         sections — no dead ids, no missing sections."""
         section_ids = re.findall(r"id:\s*'([\w-]+)'", coaching_js)
         assert set(section_ids) == {
-            "hero", "terms", "tiers", "fit", "results", "faq", "final-cta",
+            "hero", "terms", "tiers", "fit", "faq", "final-cta",
         }
         for sid in section_ids:
             assert f'id="{sid}"' in coaching_html, f"Dead section id in scroll-depth JS: {sid}"
@@ -650,9 +615,6 @@ class TestScrollAnimations:
         html = build_terms()
         assert 'data-animate' not in html
 
-    def test_no_animation_on_testimonials(self):
-        html = build_testimonials()
-        assert 'data-animate' not in html
 
     def test_css_has_reduced_motion_guard(self, coaching_css):
         assert "prefers-reduced-motion: no-preference" in coaching_css
@@ -736,16 +698,12 @@ class TestRestraintGuard:
 
 
 class TestRequiredContent:
-    def test_course_count(self, coaching_html):
-        assert "427" in coaching_html
-        assert "COURSES ON FILE" in coaching_html
+    def test_no_visible_course_count(self, coaching_html):
+        """Owner revision 2026-07-18: the courses-on-file flex removed from
+        visible copy. (JSON-LD metadata may still carry it.)"""
+        assert "COURSES ON FILE" not in coaching_html
 
-    def test_provenance_line_present(self, coaching_html):
-        assert "Gravel God athletes" in coaching_html
-        assert "Roadie Labs is new" in coaching_html
 
-    def test_three_testimonial_blockquotes(self, coaching_html):
-        assert coaching_html.count('<blockquote class="rl-coach-testimonial">') == 3
 
     def test_link_to_about(self, coaching_html):
         assert f"{SITE_BASE_URL}/about/" in coaching_html
@@ -790,10 +748,10 @@ class TestCrossBrandLeakage:
     def test_apply_no_gravel_domain(self, apply_html):
         assert "gravelgodcycling.com" not in apply_html
 
-    def test_gravel_god_prose_allowed(self, coaching_html):
-        """The provenance line explicitly names Gravel God — that's fine,
-        only the CSS-class/domain leakage above is banned."""
-        assert "Gravel God" in coaching_html
+    def test_no_gravel_god_prose(self, coaching_html):
+        """Testimonials + provenance removed 2026-07-18 — nothing on the
+        page should reference the sibling brand anymore."""
+        assert "Gravel God" not in coaching_html
 
 
 # ── Apply Page ───────────────────────────────────────────────
