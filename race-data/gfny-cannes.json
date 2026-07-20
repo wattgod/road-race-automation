@@ -98,7 +98,7 @@
       "lodging_strategy": "",
       "transport": "Start/finish at Plage de Cannes La Bocca along Boulevard du Midi. Race week expo and activities at Palais des Festivals and Gare Maritime. Nice Côte d'Azur Airport (NCE) primary access. Registration requires age 18+ verification and medical documentation for competitive long course[1][2][3][4]",
       "food": "",
-      "official_site": ""
+      "official_site": "https://cannes.gfny.com/?lang=en"
     },
     "history": {
       "founded": 2022,
@@ -119,7 +119,28 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://cannes.gfny.com/?lang=en",
+        "category": "official",
+        "label": "GFNY Cannes Official Site"
+      },
+      {
+        "url": "https://cannes.gfny.com/rules/?lang=en",
+        "category": "official",
+        "label": "GFNY Cannes Official Rules"
+      },
+      {
+        "url": "https://cannes.gfny.com/register/?lang=en",
+        "category": "official",
+        "label": "GFNY Cannes Official Registration"
+      },
+      {
+        "url": "https://cannes.gfny.com/wp-content/uploads/sites/70/2026/03/GFNY-CANNES-26-Guide-de-course-FR-EN-V4.pdf",
+        "category": "official",
+        "label": "GFNY Cannes 2026 Race Guide (PDF)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Cannes gran fondo cycling Cannes",
@@ -208,6 +229,11 @@
         "additional_quotes": [],
         "search_text": "The provided transcript from GFNY Cannes contains only music and promotional content without any rider intelligence, course details, or race-specific information. No actionable insights about the 68.4-mile course through the French Riviera, terrain conditions, gear recommendations, or racing strategies are available from this source. The transcript appears to be from a promotional or music video rather than race coverage or rider commentary."
       }
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://cannes.gfny.com/?lang=en"
     }
   }
 }

@@ -13,7 +13,7 @@
       "location_badge": "Fruška Gora National Park",
       "country": "Serbia",
       "date": "June",
-      "date_specific": "June 7, 2026",
+      "date_specific": "2026: June 7 (completed, third edition, part of UCI Gran Fondo World Series). 2027 date not yet announced.",
       "field_size": "Nearly 1000 riders[3]",
       "start_format": null,
       "registration": "https://granfondons.com/",
@@ -117,7 +117,23 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondons.com/race/",
+        "category": "official",
+        "label": "Granfondo Novi Sad Official Race Page"
+      },
+      {
+        "url": "https://granfondons.com/",
+        "category": "official",
+        "label": "Granfondo Novi Sad Official Site"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Novi Sad gran fondo cycling Novi Sad",
@@ -206,6 +222,11 @@
         }
       ],
       "quotes": []
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://granfondons.com/race/"
     }
   }
 }

@@ -13,7 +13,7 @@
       "location_badge": "Vosges Mountains",
       "country": "France",
       "date": "May",
-      "date_specific": "2026: May 17",
+      "date_specific": "2026: May 17 (completed, UCI Granfondo Vosges). 2027 date not yet published.",
       "field_size": "Unspecified",
       "start_format": null,
       "registration": "Open via official website",
@@ -131,7 +131,23 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondovosges.com/",
+        "category": "official",
+        "label": "Gran Fondo Vosges Official Race Site"
+      },
+      {
+        "url": "https://cyclingclassics.fr/",
+        "category": "official",
+        "label": "Cycling Classics (Gran Fondo Vosges Organizer) Official Site"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Vosges gran fondo cycling La Bresse Hohneck ski station",
@@ -212,6 +228,11 @@
         "additional_quotes": [],
         "search_text": "No race-specific content was extractable from the available transcript. The provided video transcript consists entirely of music lyrics and does not contain any rider commentary, race analysis, or cycling-related information about the Gran Fondo Vosges. Riders looking for intelligence about this 108.7-mile race in the Vosges mountains of France will need to seek additional video sources that contain actual race discussion, course breakdowns, or rider experiences from this event held at La Bresse Hohneck ski station."
       }
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://cyclingclassics.fr/"
     }
   }
 }
