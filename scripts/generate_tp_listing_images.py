@@ -60,7 +60,16 @@ DEFAULT_PLANS_DB = REPO_ROOT.parent / "gravel-god-training-plans" / "db" / "plan
 # with FreeType's .notdef fallback glyph until/unless a proper multi-file
 # glyph-fallback wrapper is built (out of scope here — narrow, flagged gap,
 # not a blocker).
-FONT_DIR = REPO_ROOT.parent / "road-labs-brand" / "assets" / "fonts"
+#
+# The woff2 files are VENDORED in-repo (assets/fonts/, copied from
+# road-labs-brand — OFL-licensed) so CI and standalone checkouts render with
+# real fonts instead of silently falling back to Pillow's 10px default and
+# tripping the type floor (this broke Regression Tests from Jul 18-19 2026:
+# CI has no sibling road-labs-brand checkout). The sibling path is kept as a
+# fallback so a brand-repo font refresh can be picked up before re-vendoring.
+_VENDORED_FONT_DIR = REPO_ROOT / "assets" / "fonts"
+_SIBLING_FONT_DIR = REPO_ROOT.parent / "road-labs-brand" / "assets" / "fonts"
+FONT_DIR = _VENDORED_FONT_DIR if _VENDORED_FONT_DIR.exists() else _SIBLING_FONT_DIR
 FONT_EDITORIAL = str(FONT_DIR / "SourceSerif4-normal-latin.woff2")
 FONT_EDITORIAL_ITALIC = str(FONT_DIR / "SourceSerif4-italic-latin.woff2")
 FONT_DATA = str(FONT_DIR / "SometypeMono-normal-latin.woff2")
