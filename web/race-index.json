@@ -455,10 +455,10 @@
     "country": "USA",
     "region": "North America",
     "month": "September",
-    "distance_km": 160.9,
-    "distance_mi": 100.0,
-    "elevation_m": 3048,
-    "elevation_ft": 10000.0,
+    "distance_km": 140.0,
+    "distance_mi": 87.0,
+    "elevation_m": 2591,
+    "elevation_ft": 8500.0,
     "tier": 1,
     "overall_score": 83,
     "scores": {
@@ -478,15 +478,16 @@
       "expenses": 3,
       "cultural_impact": 3
     },
-    "tagline": "100 miles of savage Maryland climbs crushing souls with 10,000ft through Catoctin wilds.",
+    "tagline": "87 miles of savage Maryland climbs gaining 8,500ft through Catoctin wilds.",
     "has_profile": true,
     "profile_url": "/race/gran-fondo-maryland/",
     "discipline": "gran_fondo",
     "lat": 39.4143,
     "lng": -77.4103,
     "route_options": [
-      "Gran Route: 100mi, 10,000ft — brutal national champs course with 4 timed KOMs",
-      "Medio Route: 65mi, 4,500ft — shares final timed beast on Gambrill",
+      "Gran Route: 87mi, 8,500ft — open fondo and national championship course with 5 timed sections",
+      "Junior 14-16 / Senior 70+ National Championship Route: 70mi",
+      "Medio Route: 60mi — 3 timed sections",
       "Piccolo Route: 30mi — social spin for the less masochistic"
     ]
   },
@@ -581,10 +582,10 @@
     "country": "France",
     "region": "Western Europe",
     "month": "August",
-    "distance_km": 1218.3,
-    "distance_mi": 757.0,
-    "elevation_m": 11750,
-    "elevation_ft": 38550.0,
+    "distance_km": 1220.0,
+    "distance_mi": 758.1,
+    "elevation_m": 11000,
+    "elevation_ft": 36089.0,
     "tier": 1,
     "overall_score": 83,
     "scores": {
@@ -1498,14 +1499,14 @@
   {
     "name": "Tour of Nilgiris",
     "slug": "tour-of-nilgiris",
-    "location": "Nilgiris District, Tamil Nadu, India",
+    "location": "Mysuru to Ooty via Karnataka, Kerala, and Tamil Nadu, India",
     "country": "India",
     "region": "Asia",
     "month": "December",
-    "distance_km": 700.0,
-    "distance_mi": 435.0,
-    "elevation_m": 15000.0,
-    "elevation_ft": 49212.0,
+    "distance_km": 694.0,
+    "distance_mi": 431.2,
+    "elevation_m": 14529.0,
+    "elevation_ft": 47667.0,
     "tier": 2,
     "overall_score": 77,
     "scores": {
@@ -1528,7 +1529,7 @@
     "tagline": "Asia's premier multi-stage endurance cycling expedition through the Western Ghats",
     "has_profile": true,
     "profile_url": "/race/tour-of-nilgiris/",
-    "discipline": "gran_fondo",
+    "discipline": "multi_stage",
     "lat": null,
     "lng": null,
     "route_options": []
@@ -2924,10 +2925,10 @@
     "country": "Italy",
     "region": "Southern Europe",
     "month": "October",
-    "distance_km": 126.9,
-    "distance_mi": 78.84,
-    "elevation_m": 2500,
-    "elevation_ft": 8202.0,
+    "distance_km": 126.0,
+    "distance_mi": 78.3,
+    "elevation_m": 1993,
+    "elevation_ft": 6539.0,
     "tier": 2,
     "overall_score": 74,
     "scores": {
@@ -2947,16 +2948,15 @@
       "expenses": 2,
       "cultural_impact": 4
     },
-    "tagline": "A 127 km UCI World Series qualifier through three lakes and pro-race climbs in the Italian pre-Alps",
+    "tagline": "A 126 km UCI World Series qualifier with 1,993m of climbing through the Italian pre-Alps",
     "has_profile": true,
     "profile_url": "/race/granfondo-tre-valli-varesine/",
     "discipline": "gran_fondo",
     "lat": 45.8168,
     "lng": 8.8554,
     "route_options": [
-      "20 km: Short family-friendly loop",
-      "101 km (Mediofondo): 2,100m elevation, UCI World Championships qualifier for men 60+ and women 50+",
-      "127 km (Granfondo): 2,500m elevation, UCI World Series qualifier for all ages, longest course option"
+      "100 km (Medio Fondo): 1,447m elevation, qualifier for men 60+ and women 50+",
+      "126 km (Gran Fondo): 1,993m elevation, qualifier for men 19-59 and women 19-49"
     ]
   },
   {
@@ -5907,14 +5907,14 @@
   {
     "name": "Cycling Shimanami",
     "slug": "cycling-shimanami",
-    "location": "Imabari, Ehime Prefecture to Onomichi, Hiroshima Prefecture, Japan",
+    "location": "Onomichi, Hiroshima Prefecture to Imabari, Ehime Prefecture, Japan",
     "country": "Japan",
     "region": "Asia",
     "month": "October",
     "distance_km": 70.0,
     "distance_mi": 43.5,
-    "elevation_m": 396,
-    "elevation_ft": 1300.0,
+    "elevation_m": 737,
+    "elevation_ft": 2417.0,
     "tier": 2,
     "overall_score": 70,
     "scores": {
@@ -5940,7 +5940,16 @@
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "IMABARI 70: about 70 km, Onomichi to Imabari one way",
+      "INNOSHIMA 70: about 70 km, Onomichi to Kamijima round trip",
+      "AROUND OMISHIMA 100: about 100 km, Imabari to Omishima round trip",
+      "COMPLETE SHIMANAMI 140: about 140 km, Imabari to Onomichi round trip",
+      "ONOMICHI 65: about 65 km, Imabari to Onomichi one way",
+      "OMISHIMA 70: about 70 km, Imabari to Omishima round trip",
+      "YUMESHIMA 75: about 75 km, Imabari to Kamijima one way",
+      "OSHIMA 30: about 30 km, Imabari to Oshima round trip"
+    ]
   },
   {
     "name": "Love Tiles Douro Granfondo",
@@ -7197,14 +7206,14 @@
   {
     "name": "Gran Fondo Il Lombardia Felice Gimondi",
     "slug": "gran-fondo-il-lombardia",
-    "location": "Cantu, Como, Lombardy, Italy",
+    "location": "Bergamo, Lombardy, Italy",
     "country": "Italy",
     "region": "Southern Europe",
     "month": "October",
-    "distance_km": 109.4,
-    "distance_mi": 68.0,
-    "elevation_m": 1700,
-    "elevation_ft": 5577.0,
+    "distance_km": 108.5,
+    "distance_mi": 67.4,
+    "elevation_m": 2400,
+    "elevation_ft": 7874.0,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -7224,15 +7233,14 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "The Classic of the Falling Leaves. One Monument. Two legendary climbs. Lake Como in autumn. Ride the roads that close cycling's greatest season.",
+    "tagline": "The Classic of the Falling Leaves moves to Bergamo: Valcava, Miragolo, Salmezza, and a Bergamo Alta finish.",
     "has_profile": true,
     "profile_url": "/race/gran-fondo-il-lombardia/",
     "discipline": "gran_fondo",
-    "lat": 45.736,
-    "lng": 9.137,
+    "lat": 45.6983,
+    "lng": 9.6773,
     "route_options": [
-      "Gran Fondo: 109.5 km / 68 mi with 1,700m climbing — full route including Muro di Sormano and Madonna del Ghisallo",
-      "Alternative Sormano bypass: 2 km detour avoids the Muro di Sormano via a milder gradient to the same summit"
+      "Gran Fondo: 108.5 km / 67.4 mi with 2,400m climbing — Bergamo loop via Valico di Valcava, Sedrina, Miragolo San Salvatore, Passo di Salmezza, and Selvino"
     ]
   },
   {
@@ -8599,10 +8607,10 @@
     "country": "South Carolina",
     "region": "Other",
     "month": "October",
-    "distance_km": 133.6,
-    "distance_mi": 83.0,
-    "elevation_m": 2469,
-    "elevation_ft": 8100.0,
+    "distance_km": 136.8,
+    "distance_mi": 85.0,
+    "elevation_m": 2451,
+    "elevation_ft": 8040.0,
     "tier": 2,
     "overall_score": 67,
     "scores": {
@@ -8622,14 +8630,14 @@
       "expenses": 3,
       "cultural_impact": 3
     },
-    "tagline": "George Hincapie's Blue Ridge playground. 83 miles. 8,000 feet. Three timed climbs. Skyuka Mountain at 8.7%. The Southeast's premier gran fondo, born from 17 Tours de France.",
+    "tagline": "George Hincapie's Blue Ridge playground. About 85 miles. 8,040 feet. Three timed climbs. The Southeast's flagship Hincapie gran fondo.",
     "has_profile": true,
     "profile_url": "/race/gran-fondo-hincapie/",
     "discipline": "gran_fondo",
     "lat": 34.9684,
     "lng": -82.4417,
     "route_options": [
-      "Gran: 83 miles, ~8,100 ft climbing — 3 timed climbs including Skyuka Mountain and Green River Cove",
+      "Gran: about 85 miles, 8,040 ft climbing — 3 timed climbs and 1 speed zone; a few short unpaved sections",
       "Grandito: 67 miles — the Gran's climbs with the Medio's distance, 2 timed climbs",
       "Medio: 50 miles — rolling Blue Ridge foothills through North and South Carolina, 2 rest stops",
       "Piccolo: 15 miles, ~1,245 ft — family-friendly loop from Hotel Domestique"
@@ -8868,16 +8876,16 @@
     "route_options": []
   },
   {
-    "name": "UCI Gran Fondo Brasil – Pomerode",
+    "name": "UCI Gran Fondo Brasil",
     "slug": "granfondo-pomerode",
-    "location": "Pomerode, Santa Catarina, Brazil",
+    "location": "Timbó, Santa Catarina, Brazil",
     "country": "Brazil",
     "region": "South America",
     "month": "November",
-    "distance_km": 109.4,
-    "distance_mi": 68.0,
-    "elevation_m": 1300,
-    "elevation_ft": 4265.0,
+    "distance_km": 108.0,
+    "distance_mi": 67.1,
+    "elevation_m": 1000,
+    "elevation_ft": 3281.0,
     "tier": 2,
     "overall_score": 67,
     "scores": {
@@ -8903,7 +8911,10 @@
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "Gran Fondo: 108km published course map; regulations specify +1,000m with adjustments permitted",
+      "Mediofondo: 80km, +600m"
+    ]
   },
   {
     "name": "Granfondo Vosges",
@@ -10068,8 +10079,8 @@
     "month": "October",
     "distance_km": 125.0,
     "distance_mi": 78.0,
-    "elevation_m": 900.0,
-    "elevation_ft": 2953.0,
+    "elevation_m": 1131.0,
+    "elevation_ft": 3711.0,
     "tier": 2,
     "overall_score": 66,
     "scores": {
@@ -10096,9 +10107,9 @@
     "lat": 51.9607,
     "lng": 7.6261,
     "route_options": [
-      "LeezenCup 60 km — 60 km / 100m elevation — flat park landscape, ideal for beginners",
-      "LeezenCup 95 km — 95 km / 500m elevation — rolling Munsterland terrain for ambitious amateurs",
-      "LeezenCup 125 km — 125 km / 900m elevation — Teutoburg Forest foothills for strong riders"
+      "LeezenCup 65 km — official GPX 68.1 km / 500m elevation — Baumberge route for first-time racers",
+      "LeezenCup 95 km — official GPX 93.9 km / 825m elevation — extended Baumberge route",
+      "LeezenCup 125 km — official GPX 125.4 km / 1,131m elevation — longest Baumberge route"
     ]
   },
   {
@@ -10918,8 +10929,8 @@
     "month": "November",
     "distance_km": 112.0,
     "distance_mi": 69.6,
-    "elevation_m": 1000,
-    "elevation_ft": 3281.0,
+    "elevation_m": 1360,
+    "elevation_ft": 4462.0,
     "tier": 2,
     "overall_score": 64,
     "scores": {
@@ -11523,19 +11534,18 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "210 km around Port Phillip Bay. Ferry crossing, Beach Road, 10,000 riders, and 30 years of Melbourne cycling tradition. Australia's biggest one-day ride, and it is not even close.",
+    "tagline": "220 km around Port Phillip Bay. Ferry crossing, Beach Road, and more than 30 years of Melbourne cycling tradition.",
     "has_profile": true,
     "profile_url": "/race/around-the-bay-in-a-day/",
     "discipline": "gran_fondo",
     "lat": -37.8448,
     "lng": 144.9756,
     "route_options": [
-      "300 km (Legend — extended loop with additional climbing)",
-      "210 km (Classic — full circumnavigation of Port Phillip Bay)",
+      "220 km (Classic — full circumnavigation of Port Phillip Bay)",
       "135 km (Geelong start to Albert Park via ferry)",
       "100 km (Mornington Peninsula to Albert Park)",
       "50 km (shorter loop)",
-      "20 km (Family Ride — Lap the Track at Albert Park)"
+      "Lap the Track (6 km laps at Albert Park)"
     ]
   },
   {
@@ -12307,7 +12317,7 @@
   {
     "name": "Levi's GranFondo",
     "slug": "levis-granfondo",
-    "location": "Santa Rosa, Sonoma County, California, USA",
+    "location": "Windsor, Sonoma County, California, USA (relocated from Santa Rosa in 2022)",
     "country": "USA",
     "region": "North America",
     "month": "April",
@@ -12999,8 +13009,8 @@
     "month": "November",
     "distance_km": 160.0,
     "distance_mi": 99.4,
-    "elevation_m": 1953,
-    "elevation_ft": 6407.0,
+    "elevation_m": 1779,
+    "elevation_ft": 5837.0,
     "tier": 2,
     "overall_score": 61,
     "scores": {
