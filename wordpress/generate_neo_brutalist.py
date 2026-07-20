@@ -237,6 +237,37 @@ SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs news
 SUBSTACK_EMBED = "https://gravelgodcycling.substack.com/embed"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = str(datetime.now().year)
 
+# Ported from gravel-race-automation SITE-SYNC S2 — race-page "Train for this
+# race" plan ladder block, road-discipline variant.
+# Flip to False to disable the block globally without touching call sites
+# (build_plan_ladder / generate_page still run, they just short-circuit).
+PLAN_LADDER_ENABLED = True
+
+# db/plans.json lives in the sibling gravel-god-training-plans repo, keyed
+# by race_slug. Resolved relative to this file so it works regardless of cwd.
+PLANS_DB_PATH = Path(__file__).resolve().parent.parent.parent / 'gravel-god-training-plans' / 'db' / 'plans.json'
+
+# Road page slug -> plans-db race_slug, for races whose canonical page slug
+# diverged from the slug the plan ladder was built under. The plans-db slug is
+# load-bearing (deployed guide URLs are baked into published TP plans' notes),
+# so the page side aliases to it rather than the other way around.
+PLAN_SLUG_ALIASES = {
+    "munsterland-giro": "sparkassen-munsterland-giro",
+    "gran-fondo-il-lombardia": "gran-fondo-il-lombardia-felice-gimondi",
+    "granfondo-pomerode": "uci-gran-fondo-brasil-pomerode",
+    "gran-fondo-loutraki": "uci-gran-fondo-loutraki",
+}
+
+# Display order for the plan ladder — full plan first, emergency/short plan
+# last. Unknown tiers sort after all known ones instead of erroring.
+PLAN_TIER_ORDER = {
+    'Finisher': 0,
+    'Time-Crunched': 1,
+    'Compete': 2,
+    'Masters': 3,
+    'Save My Race': 4,
+}
+
 
 def build_seo_title(rd: dict) -> str:
     """Build an SEO-optimized <title> tag.
@@ -1314,6 +1345,46 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
     form.style.display='none';
     var success=document.getElementById('rl-email-capture-success');
     if(success) success.style.display='block';
+  });
+})();
+
+// Plan ladder — race-specific plan capture. Multiple independent forms can
+// exist on one page (one per not-yet-published tier), so this attaches
+// per-form instead of assuming a single #id like the handlers above.
+(function() {
+  var WORKER_URL='https://fueling-lead-intake.gravelgodcoaching.workers.dev';
+  var forms=document.querySelectorAll('.rl-plan-ladder-form');
+  forms.forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email=form.email.value.trim();
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        alert('Please enter a valid email address.');return;
+      }
+      if(form.website&&form.website.value) return;
+      var payload={
+        email:email,
+        brand:'roadielabs',
+        race_slug:form.race_slug.value,
+        race_name:form.race_name.value,
+        tier:form.tier.value,
+        source:form.source.value,
+        website:form.website.value
+      };
+      fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+        .then(function(r){
+          if(!r.ok) throw new Error('bad status');
+          if(typeof gtag==='function'){
+            gtag('event','email_capture',{race_slug:form.race_slug.value,tier:form.tier.value,source:'race_plan_ladder'});
+          }
+          form.style.display='none';
+          var success=form.nextElementSibling;
+          if(success&&success.classList.contains('rl-plan-ladder-success')) success.style.display='block';
+        })
+        .catch(function(){
+          alert('Something went wrong — please try again.');
+        });
+    });
   });
 })();
 
@@ -4037,6 +4108,137 @@ def build_prep_strip(rd: dict) -> str:
   </section>'''
 
 
+_PLANS_BY_SLUG_CACHE: Optional[dict] = None
+
+
+def _load_plans_by_slug() -> dict:
+    """Load ../gravel-god-training-plans/db/plans.json, grouped by race_slug.
+
+    Filters to discipline == "road" — the db is shared with the gravel
+    generator, so a road race slug must never pick up a gravel plan row.
+    Cached at module scope — the db has 700+ entries and races regenerate
+    in batches, so this should be read once, not once per race. A missing
+    file or malformed JSON degrades to an empty dict rather than crashing
+    the generator: races with no plan data render nothing, which is exactly
+    what an empty lookup produces.
+    """
+    global _PLANS_BY_SLUG_CACHE
+    if _PLANS_BY_SLUG_CACHE is not None:
+        return _PLANS_BY_SLUG_CACHE
+    by_slug: dict = {}
+    try:
+        with open(PLANS_DB_PATH, 'r', encoding='utf-8') as f:
+            db = json.load(f)
+        for plan in db.get('plans', []):
+            if plan.get('discipline') != 'road':
+                continue
+            slug = plan.get('race_slug')
+            if not slug:
+                continue
+            by_slug.setdefault(slug, []).append(plan)
+    except (OSError, json.JSONDecodeError):
+        by_slug = {}
+    _PLANS_BY_SLUG_CACHE = by_slug
+    return by_slug
+
+
+def build_plan_ladder(rd: dict) -> str:
+    """Build the "Train for this race" TrainingPeaks plan ladder block.
+
+    Sourced from db/plans.json (sibling gravel-god-training-plans repo),
+    keyed by race_slug — NOT read/written here, this is display-only.
+    Published rows with a live marketplace_url get a buy CTA linking
+    straight to the TP store page. Every other row (private-ready, or
+    published-but-not-yet-backfilled with a store URL) gets an email-gate
+    "notify me" capture tagged with race_slug + tier so the lead is
+    attributable per-SKU. Renders '' for races with no plans in the db —
+    no empty shell — and is gated by PLAN_LADDER_ENABLED.
+    Normie-safe copy only: tier / length / price, no TSS/FTP/watts.
+    """
+    if not PLAN_LADDER_ENABLED:
+        return ''
+
+    slug = rd['slug']
+    lookup = _load_plans_by_slug()
+    plans = lookup.get(slug) or lookup.get(PLAN_SLUG_ALIASES.get(slug, ''), [])
+    if not plans:
+        return ''
+
+    name = rd['name']
+
+    # Validate + normalize each plan; skip malformed rows instead of
+    # crashing an otherwise-good page over one bad db record.
+    valid = []
+    for plan in plans:
+        tier = plan.get('tier')
+        try:
+            length_wk = int(plan.get('length_wk'))
+            price = int(round(float(plan.get('price'))))
+        except (TypeError, ValueError):
+            continue
+        if not tier or length_wk <= 0 or price < 0:
+            continue
+        valid.append({
+            'tier': tier,
+            'length_wk': length_wk,
+            'price': price,
+            'status': plan.get('status'),
+            'marketplace_url': (plan.get('marketplace_url') or '').strip(),
+        })
+    if not valid:
+        return ''
+
+    valid.sort(key=lambda p: (-p['length_wk'], PLAN_TIER_ORDER.get(p['tier'], 99)))
+
+    rows = []
+    for plan in valid:
+        tier_esc = esc(plan['tier'])
+        info = (
+            f'<div class="rl-plan-ladder-info">'
+            f'<span class="rl-plan-ladder-tier">{tier_esc}</span>'
+            f'<span class="rl-plan-ladder-sep">&middot;</span>'
+            f'<span class="rl-plan-ladder-length">{plan["length_wk"]} wk</span>'
+            f'<span class="rl-plan-ladder-sep">&middot;</span>'
+            f'<span class="rl-plan-ladder-price">${plan["price"]}</span>'
+            f'</div>'
+        )
+
+        if plan['status'] == 'published' and plan['marketplace_url']:
+            cta = (
+                f'<a href="{esc(plan["marketplace_url"])}" class="rl-btn rl-plan-ladder-cta" '
+                f'data-cta="plan_ladder_buy" data-tier="{tier_esc}" target="_blank" rel="noopener">'
+                f'Get the plan</a>'
+            )
+        else:
+            cta = f'''<form class="rl-plan-ladder-form" data-tier="{tier_esc}">
+        <input type="hidden" name="race_slug" value="{esc(slug)}">
+        <input type="hidden" name="race_name" value="{esc(name)}">
+        <input type="hidden" name="tier" value="{tier_esc}">
+        <input type="hidden" name="source" value="race_plan_ladder">
+        <input type="hidden" name="website" value="">
+        <input type="email" name="email" required placeholder="you@email.com" class="rl-plan-ladder-input" aria-label="Email me when the {tier_esc} plan for {esc(name)} is ready">
+        <button type="submit" class="rl-plan-ladder-btn" data-cta="plan_ladder_notify">Get notified</button>
+      </form>
+      <p class="rl-plan-ladder-success" style="display:none">You&rsquo;re on the list.</p>'''
+
+        rows.append(f'''<div class="rl-plan-ladder-row" data-tier="{tier_esc}">
+      {info}
+      {cta}
+    </div>''')
+
+    return f'''<section class="rl-plan-ladder rl-section rl-fade-section" id="plan-ladder">
+    <div class="rl-section-header">
+      <span class="rl-section-kicker">[PLANS]</span>
+      <h2 class="rl-section-title">Train for {esc(name)}</h2>
+    </div>
+    <div class="rl-section-body">
+      <div class="rl-plan-ladder-table">
+        {"".join(rows)}
+      </div>
+    </div>
+  </section>'''
+
+
 def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
     """Build [08] Train for This Race with optional plan-selling controls.
 
@@ -5373,6 +5575,29 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-email-capture-link {{ display: inline-block; font-family: var(--rl-font-data); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--rl-color-white); background: var(--rl-color-signal-red); padding: 10px 20px; text-decoration: none; border: 2px solid var(--rl-color-signal-red); transition: background 0.2s; }}
 .rl-neo-brutalist-page .rl-email-capture-link:hover {{ background: var(--rl-color-coral); }}
 
+/* Plan ladder */
+.rl-neo-brutalist-page .rl-plan-ladder-table {{ display: flex; flex-direction: column; }}
+.rl-neo-brutalist-page .rl-plan-ladder-row {{ display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 14px 0; border-bottom: 1px solid var(--rl-color-silver); }}
+.rl-neo-brutalist-page .rl-plan-ladder-row:last-child {{ border-bottom: none; }}
+.rl-neo-brutalist-page .rl-plan-ladder-info {{ display: flex; align-items: baseline; gap: 8px; font-family: var(--rl-font-data); }}
+.rl-neo-brutalist-page .rl-plan-ladder-tier {{ font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-plan-ladder-sep {{ color: var(--rl-color-silver); }}
+.rl-neo-brutalist-page .rl-plan-ladder-length {{ font-size: 12px; color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-plan-ladder-price {{ font-size: 13px; font-weight: 700; color: var(--rl-color-signal-red); }}
+.rl-neo-brutalist-page .rl-plan-ladder-cta {{ background: var(--rl-color-signal-red); color: var(--rl-color-white); border-color: var(--rl-color-signal-red); }}
+.rl-neo-brutalist-page .rl-plan-ladder-cta:hover {{ background: var(--rl-color-coral); }}
+.rl-neo-brutalist-page .rl-plan-ladder-form {{ display: flex; gap: 0; }}
+.rl-neo-brutalist-page .rl-plan-ladder-input {{ flex: 1; font-family: var(--rl-font-data); font-size: 12px; padding: 8px 12px; border: 2px solid var(--rl-color-silver); border-right: none; background: var(--rl-color-white); color: var(--rl-color-dark-navy); min-width: 0; }}
+.rl-neo-brutalist-page .rl-plan-ladder-input:focus {{ outline: none; border-color: var(--rl-color-signal-red); }}
+.rl-neo-brutalist-page .rl-plan-ladder-btn {{ font-family: var(--rl-font-data); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 8px 14px; background: var(--rl-color-signal-red); color: var(--rl-color-white); border: 2px solid var(--rl-color-signal-red); cursor: pointer; white-space: nowrap; }}
+.rl-neo-brutalist-page .rl-plan-ladder-btn:hover {{ background: var(--rl-color-coral); }}
+.rl-neo-brutalist-page .rl-plan-ladder-success {{ font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; color: var(--rl-color-signal-red); margin: 0; }}
+@media (max-width: 600px) {{
+  .rl-neo-brutalist-page .rl-plan-ladder-row {{ flex-direction: column; align-items: flex-start; }}
+  .rl-neo-brutalist-page .rl-plan-ladder-form {{ width: 100%; }}
+  .rl-neo-brutalist-page .rl-plan-ladder-btn {{ min-height: 44px; }}
+}}
+
 /* Countdown */
 .rl-neo-brutalist-page .rl-countdown {{ border: 1px solid var(--rl-color-signal-red); background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); padding: var(--rl-spacing-md); text-align: center; font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); margin-bottom: 20px; }}
 .rl-neo-brutalist-page .rl-countdown-num {{ font-size: 32px; color: var(--rl-color-signal-red); display: block; line-height: 1.2; }}
@@ -5798,6 +6023,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     custom_plan = build_custom_plan_offer(rd)
     coaching = build_coaching_footnote(rd)
     training = build_training_intelligence(rd)
+    plan_ladder = build_plan_ladder(rd)
     train_for_race = build_train_for_race(rd, include_commerce=False)
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
@@ -5844,9 +6070,9 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
 
     deep_sections = []
     for section in [course_overview, history, pullquote, course_route,
-                    from_the_field, racer_reviews, training, train_for_race,
-                    email_capture, news, logistics_sec, tire_picks,
-                    similar, visible_faq, citations_sec]:
+                    from_the_field, racer_reviews, training, plan_ladder,
+                    train_for_race, email_capture, news, logistics_sec,
+                    tire_picks, similar, visible_faq, citations_sec]:
         if section:
             deep_sections.append(section)
 
