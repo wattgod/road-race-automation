@@ -12,8 +12,8 @@
       "location": "Miami, Florida, USA",
       "location_badge": "MIAMI, FLORIDA",
       "country": "USA",
-      "date": "November annually",
-      "date_specific": "2026: November 8",
+      "date": "April annually (moved from November to April starting the 2027 edition)",
+      "date_specific": "2027: April 4",
       "field_size": "~2,000-3,000 riders",
       "start_format": null,
       "registration": "Online via gfreg.com. Cost: ~$100-150",
@@ -137,12 +137,17 @@
     },
     "citations": [
       {
-        "url": "https://www.gfny.com/miami/",
+        "url": "https://miami.gfny.com/",
         "category": "official",
         "label": "GFNY Miami — Official Site"
       },
       {
-        "url": "https://www.gfny.com/",
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY World Series Race Finder — Official Calendar"
+      },
+      {
+        "url": "https://gfny.com/",
         "category": "official",
         "label": "GFNY Global Series — Official Site"
       }
@@ -261,6 +266,11 @@
         ],
         "search_text": "GFNY Miami riders report a challenging course featuring key climbs including the Alpine climb where early positioning matters and sprint opportunities exist at the summit. The cheese coat summit is noted as a decisive point where challengers typically get dropped. The race starts on the George Washington Bridge, passes through Fort Lee, and continues into Palisades Interstate Park. Racing is described as fast and competitive with pack dynamics being crucial, as groups of nearly 30 riders with race favorites stay close behind early breakaways. The finish area features a village atmosphere in Fort Lee where riders collect medals and reunite with family. The event combines pro and amateur cyclists in an international field with intermediate sprint prizes throughout the course."
       }
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://miami.gfny.com/"
     }
   }
 }

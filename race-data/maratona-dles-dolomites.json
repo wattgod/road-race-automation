@@ -4,7 +4,6 @@
     "slug": "maratona-dles-dolomites",
     "display_name": "Maratona dles Dolomites",
     "tagline": "Seven Dolomite passes, 4,230m of climbing, and a lottery you'll pray to win.",
-
     "vitals": {
       "distance_km": 138,
       "distance_mi": 85.7,
@@ -14,7 +13,7 @@
       "location_badge": "Alta Badia, Italy",
       "country": "Italy",
       "date": "First Sunday in July",
-      "date_specific": "July 5, 2026",
+      "date_specific": "2027: July 4",
       "field_size": "~8,000-9,000 riders (from ~30,000 applicants)",
       "start_format": "wave_start",
       "registration": "Lottery — opens annually, ~4:1 odds",
@@ -29,7 +28,6 @@
         "Maratona: 138km / 4,230m — 7 passes (adds Falzarego, Valparola)"
       ]
     },
-
     "climate": {
       "primary": "Alpine mountain",
       "description": "Valley 20-28°C, summits 8-15°C lower. Dawn start potentially single digits. 63% rain chance. Thunderstorm risk HIGH — afternoon storms common. Mandatory rain jacket enforced (no vests).",
@@ -40,7 +38,6 @@
         "Mandatory rain jacket — no vests allowed"
       ]
     },
-
     "terrain": {
       "primary": "Alpine mountain passes",
       "surface": "Fully paved — high-quality Italian/South Tyrolean mountain roads",
@@ -53,7 +50,6 @@
         "UNESCO World Heritage Dolomite scenery throughout"
       ]
     },
-
     "fondo_rating": {
       "overall_score": 90,
       "tier": 1,
@@ -77,7 +73,6 @@
       "prestige_override": null,
       "scoring_notes": "Calibration anchor — Tier 1 ceiling. 7 Dolomite passes, UNESCO scenery, lottery from 30K applicants, 39-year heritage. Road surface scored 1 (fresh tarmac = low difficulty). Prestige 5 confirmed (prestige_5_events list). Cultural impact 5 — defines the gran fondo genre."
     },
-
     "climb_profile": {
       "total_climbs": 7,
       "hc_climbs": 1,
@@ -166,7 +161,6 @@
       "profile_type": "mountain",
       "king_of_mountain": "Passo Giau"
     },
-
     "course_description": {
       "character": "An operatic cycling pilgrimage through the heart of the Dolomites. Seven named passes, each with its own personality — from the warmup of Campolongo to the soul-crushing 29 hairpins of Giau. The course loops through UNESCO World Heritage landscapes that make even suffering beautiful. Three route options let you choose your level of punishment.",
       "signature_challenge": "Passo Giau — 9.9km at 9.3% average with 29 hairpins. After 80km and four passes already in the legs, this is where dreams and delusions separate.",
@@ -176,7 +170,6 @@
         "Passo Sella: 7.9% avg comes early but the 12% max gradient kicks when you're not ready"
       ]
     },
-
     "logistics": {
       "airport": "Venice Marco Polo (VCE, 3hr drive, best for international), Innsbruck (INN, 2hr), Bolzano (BZO, 1.5hr, limited flights)",
       "lodging_strategy": "Book 1 year ahead — Alta Badia hotels prefer full-week bookings during Rider's Week. Tour operator packages EUR 1,399-4,399+. Alternatively, stay in Bolzano/Bressanone and shuttle in.",
@@ -184,7 +177,6 @@
       "food": "Feed zones serve Enervit nutrition, local specialties (speck, strudel, tortellini), prosecco at finish. Post-race pasta party in Corvara.",
       "official_site": "https://www.maratona.it"
     },
-
     "history": {
       "founded": 1987,
       "origin_story": "Founded in 1987 to celebrate the 10th anniversary of Cycling Club Alta Badia. Just 166 riders showed up for the first edition. Named in Ladin — the minority Alpine language of the Dolomite valleys — reflecting deep local cultural roots.",
@@ -198,7 +190,6 @@
       ],
       "reputation": "National Geographic called it 'one of the biggest, most passionate, and most chaotic bike races on Earth.' Pirelli: 'almost certainly the most scenic bike race in the world.' Rouleur: 'Italy's grandest gran fondo.' The Maratona IS the gran fondo — it defined the format."
     },
-
     "biased_opinion": {
       "verdict": "The one gran fondo you absolutely must ride before you die.",
       "summary": "If cycling had a spiritual pilgrimage, the Maratona would be Mecca. Seven Dolomite passes of escalating beauty and suffering, culminating in the 29 hairpins of Giau that break you physically and reconstruct you emotionally. The lottery system means you can't just buy your way in — you have to earn the right to suffer. EUR 180 entry for a day that includes speck, strudel, tortellini, and prosecco on the summit? Italy understands value.",
@@ -218,23 +209,58 @@
       ],
       "bottom_line": "The Maratona is the undisputed T1 anchor of road cycling events. It's not the hardest (Haute Route), not the longest (Ötztaler), not the most exclusive (Cape Town by sheer numbers) — but it's the most complete package of scenery, suffering, culture, history, and value in the gran fondo world."
     },
-
     "final_verdict": {
       "score": "90/100",
       "one_liner": "Seven Dolomite passes, 4,230m of climbing, and a lottery you'll pray to win — the Maratona defines what a gran fondo should be.",
       "should_you_race": "Yes, if you can win the lottery. This is the bucket-list gran fondo. You need solid climbing legs (4,000m+ is no joke) and a willingness to suffer beautifully. The three route options mean you can ride the Sellaronda (55km) as a stunning intro or go full Maratona for the complete experience.",
       "alternatives": "Gran Fondo Stelvio (higher single pass, same Dolomite region), Ötztaler Radmarathon (similar altitude, more savage), Nove Colli (flatter Italian classic if Dolomites intimidate you)."
     },
-
     "citations": [
-      {"url": "https://www.maratona.it/en/138km", "category": "official", "label": "Official course data — full 138km route"},
-      {"url": "https://www.maratona.it/en/how-to-register-2026", "category": "official", "label": "2026 registration and lottery info"},
-      {"url": "https://en.wikipedia.org/wiki/Maratona_dles_Dolomites", "category": "reference", "label": "Wikipedia — history and statistics"},
-      {"url": "https://www.rouleur.cc/en-ca/blogs/rouleur-explore/maratona-dles-dolomites", "category": "editorial", "label": "Rouleur — 'Italy's grandest gran fondo'"},
-      {"url": "https://www.maratona.it/en/refreshments", "category": "official", "label": "Official feed zone details"},
-      {"url": "https://www.maratona.it/en/conditionsofentry-2026", "category": "official", "label": "2026 conditions of entry, cutoffs, rules"},
-      {"url": "https://epicroadrides.com/cycling-italy/dolomites/passo-giau/", "category": "data", "label": "Passo Giau climb profile and gradient data"},
-      {"url": "https://www.pirelli.com/global/en-ww/road/bicycles/maratona-dles-dolomites-an-italian-classic-99685/", "category": "editorial", "label": "Pirelli — 'most scenic bike race in the world'"}
-    ]
+      {
+        "url": "https://www.maratona.it/en/138km",
+        "category": "official",
+        "label": "Official course data — full 138km route"
+      },
+      {
+        "url": "https://www.maratona.it/en/how-to-register-2026",
+        "category": "official",
+        "label": "2026 registration and lottery info"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Maratona_dles_Dolomites",
+        "category": "reference",
+        "label": "Wikipedia — history and statistics"
+      },
+      {
+        "url": "https://www.rouleur.cc/en-ca/blogs/rouleur-explore/maratona-dles-dolomites",
+        "category": "editorial",
+        "label": "Rouleur — 'Italy's grandest gran fondo'"
+      },
+      {
+        "url": "https://www.maratona.it/en/refreshments",
+        "category": "official",
+        "label": "Official feed zone details"
+      },
+      {
+        "url": "https://www.maratona.it/en/conditionsofentry-2026",
+        "category": "official",
+        "label": "2026 conditions of entry, cutoffs, rules"
+      },
+      {
+        "url": "https://epicroadrides.com/cycling-italy/dolomites/passo-giau/",
+        "category": "data",
+        "label": "Passo Giau climb profile and gradient data"
+      },
+      {
+        "url": "https://www.pirelli.com/global/en-ww/road/bicycles/maratona-dles-dolomites-an-italian-classic-99685/",
+        "category": "editorial",
+        "label": "Pirelli — 'most scenic bike race in the world'"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://www.maratona.it/it/date2026"
+    }
   }
 }

@@ -117,7 +117,23 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://slovakia.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Etape Slovakia — Official Stages/Distances Page"
+      },
+      {
+        "url": "https://slovakia.letapeseries.com/rules",
+        "category": "official",
+        "label": "L'Etape Slovakia — Official Rules"
+      },
+      {
+        "url": "https://www.letapeseries.com/",
+        "category": "official",
+        "label": "L'Etape Series — Official ASO Series Site"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "L'Etape Slovakia by Tour de France gran fondo cycling Bratislava",
@@ -306,6 +322,11 @@
         }
       ],
       "quotes": []
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://slovakia.letapeseries.com/stages"
     }
   }
 }

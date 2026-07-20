@@ -199,9 +199,9 @@
     ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-17",
+      "verified": "2026-07-20",
       "source": "https://www.taiwankom.org/en/news.asp",
-      "note": "Aggregator listings (battistrada, alpinecadence, cycloworld) report Oct 23 2026, but the official site's own news page could not be independently confirmed to show a 2026 main-event announcement (self-signed cert blocked direct fetch on this pass; a search-engine AI summary of the same page reported it currently advertises only a 2026 Spring sub-event and the 2025 edition as the last confirmed main KOM). Downgraded to unknown pending a direct official-source confirmation — do not treat as pilot-ready."
+      "note": "Site has a self-signed SSL certificate that blocks automated fetch/curl (confirmed independently on this pass); domain itself is live (curl -k returns 200). The official news index is updated through mid-2026 but its only 2026 items are 'Road to Taiwan KOM' Spring and Summer sub-events -- the 2026 Summer sub-event was itself cancelled (announced June 10, 2026). No 2026 (or later) main Taiwan KOM Challenge / Pacific Classic edition announcement or registration was found. Organizer's 2025 announcement stated the classic Taroko Gorge-Wuling route is suspended pending forest recovery and 2025 ran a temporary coastal 'Pacific Classic' route instead. Net: organizer is active, but no confirmed 2026 main-event edition exists -- status left unknown rather than active. On-file date_specific ('2026: October 23') is unconfirmed by any official source found; left unchanged rather than invented."
     }
   }
 }

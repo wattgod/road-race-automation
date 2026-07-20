@@ -137,12 +137,22 @@
       {
         "url": "https://chile.gfny.com",
         "category": "official",
-        "label": "GFNY Chile Official Site"
+        "label": "GFNY Chile — Official Site"
+      },
+      {
+        "url": "https://chile.gfny.com/register/?lang=en",
+        "category": "official",
+        "label": "GFNY Chile — Registration Page (Official; ticket sales currently closed)"
       },
       {
         "url": "https://www.endurancesportswire.com/gfny-super-sunday-with-two-races-in-south-america/",
         "category": "news",
         "label": "GFNY Super Sunday with two races in South America"
+      },
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY World Series Race Finder — Official Calendar"
       }
     ],
     "youtube_data": {
@@ -241,6 +251,12 @@
         }
       ],
       "quotes": []
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://chile.gfny.com",
+      "note": "Event and Sep 27, 2026 date confirmed via GFNY's official race finder (gfny.com/race-finder/) and the organizer's own event site. However, the live GFNY ticket widget (gfny.cc) currently shows 'There are currently no tickets available' with a sales-end date in the past (Aug 1, 2026 per the widget) -- registration is NOT currently open, likely sold out or awaiting a later sales window. Status left 'active' (the event itself is real and upcoming) but do not represent registration as open."
     }
   }
 }

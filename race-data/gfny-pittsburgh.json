@@ -156,6 +156,12 @@
         "category": "official",
         "label": "GFNY Pittsburgh Official Website"
       }
-    ]
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://pgh.gfny.com/",
+      "note": "Corrected after adversarial re-check: pennsylvania.gfny.com (initially assumed to be the current canonical URL based on a client-side nav link) is actually the separate GFNY York, Pennsylvania event page, not Pittsburgh. GFNY's own race finder (gfny.com/race-finder/) links Pittsburgh-Monroeville to pgh.gfny.com, which independently confirms 'September 20, 2026 Pittsburgh-Monroeville' at CCAC Boyce Campus in Monroeville. Date unchanged."
+    }
   }
 }

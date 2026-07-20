@@ -13,7 +13,7 @@
       "location_badge": "SOUTHERN POLAND",
       "country": null,
       "date": "Late July / August annually (coincides with professional Tour de Pologne)",
-      "date_specific": "2026: August 1 (provisional — follows pro race calendar)",
+      "date_specific": "2026: August 8",
       "field_size": "~3,000-5,000 riders",
       "start_format": null,
       "registration": "Online via Lang Team. Cost: ~PLN 200-350 (~€45-80 / ~$50-85 USD)",
@@ -144,7 +144,17 @@
         "url": "https://www.langteam.pl/",
         "category": "official",
         "label": "Lang Team — Event Organizer"
+      },
+      {
+        "url": "https://tourdepologneamatorow.pl/en/race/",
+        "category": "official",
+        "label": "Tour de Pologne Amatorow — Official Race Page (2026 date + registration)"
       }
-    ]
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-20",
+      "source": "https://tourdepologneamatorow.pl/en/race/"
+    }
   }
 }
