@@ -308,8 +308,11 @@ class TestDeterminism:
 class TestIntegration:
     def test_real_corpus_well_formed(self):
         payload = plan_readiness.build()
-        assert payload["summary"]["total"] == 427
         real_slugs = {p.stem for p in (PROJECT_ROOT / "race-data").glob("*.json")}
+        # Corpus size derives from disk — races get added and duplicates
+        # retired (e.g. gran-fondo-greece-loutraki, Jul 2026); a pinned count
+        # just breaks on the next curation pass.
+        assert payload["summary"]["total"] == len(real_slugs) >= 400
         assert set(payload["races"].keys()) == real_slugs
         for slug in payload["ranked_queue"]:
             assert slug in payload["races"]
