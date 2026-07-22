@@ -54,6 +54,13 @@ EXTRA_URLS = [
 
 UA = "RoadieLabs-LinkCheck/1.0 (+https://roadielabs.com; weekly self-audit)"
 
+# SiteGround's bot protection answers with HTTP 202 + an `sg-captcha` header
+# instead of the page (seen 2026-07-22: 18 false "dead" findings, all 202).
+# A 202 is never a real response from this static site, so treat it as a
+# challenge: back off, retry, and report still-challenged URLs separately
+# rather than as dead links.
+CHALLENGE_BACKOFF = (20, 45)  # seconds to wait before each retry
+
 
 class LinkExtractor(HTMLParser):
     def __init__(self):
@@ -73,18 +80,32 @@ class LinkExtractor(HTMLParser):
                 self.urls.add(f"{parsed.scheme}://{parsed.netloc}{parsed.path}")
 
 
-def fetch(url: str, timeout: int = 15) -> tuple[int, str]:
-    """GET a URL following redirects; return (final_status, body_or_empty)."""
+def fetch_once(url: str, timeout: int = 15) -> tuple[int, str, bool]:
+    """GET a URL following redirects; return (final_status, body, challenged)."""
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             body = resp.read(400_000).decode("utf-8", "replace") \
                 if "text/html" in resp.headers.get("Content-Type", "") else ""
-            return resp.status, body
+            challenged = resp.status == 202 or "sg-captcha" in resp.headers
+            return resp.status, body, challenged
     except urllib.error.HTTPError as e:
-        return e.code, ""
+        challenged = e.code == 202 or (e.headers is not None and "sg-captcha" in e.headers)
+        return e.code, "", challenged
     except Exception:
-        return 0, ""
+        return 0, "", False
+
+
+def fetch(url: str, timeout: int = 15) -> tuple[int, str, bool]:
+    """fetch_once, retrying with backoff while the WAF challenges us."""
+    status, body, challenged = fetch_once(url, timeout)
+    for pause in CHALLENGE_BACKOFF:
+        if not challenged:
+            break
+        print(f"  WAF challenge on {url} — retrying in {pause}s")
+        time.sleep(pause)
+        status, body, challenged = fetch_once(url, timeout)
+    return status, body, challenged
 
 
 def main() -> int:
@@ -95,10 +116,14 @@ def main() -> int:
 
     to_check: set[str] = set(EXTRA_URLS)
     seed_failures = []
+    challenged_urls = []
 
     for path in SEED_PATHS:
         url = SITE + path
-        status, body = fetch(url)
+        status, body, challenged = fetch(url)
+        if challenged:
+            challenged_urls.append((status, url))
+            continue
         if status != 200:
             seed_failures.append((status, url))
             continue
@@ -117,17 +142,29 @@ def main() -> int:
 
     dead = list(seed_failures)
     for url in urls:
-        status, _ = fetch(url)
-        if status != 200:
+        status, _, challenged = fetch(url)
+        if challenged:
+            challenged_urls.append((status, url))
+        elif status != 200:
             dead.append((status, url))
         time.sleep(args.delay)
 
     print(f"Checked {len(SEED_PATHS)} seed pages + {len(urls)} discovered URLs")
+    # Print challenged BEFORE dead: immune_check parses everything after the
+    # "DEAD LINKS" header as dead links.
+    if challenged_urls:
+        print(f"\nWAF-CHALLENGED ({len(challenged_urls)}): still behind SiteGround's "
+              f"bot challenge after retries — scan inconclusive, NOT dead links")
+        for status, url in sorted(challenged_urls, key=lambda d: d[1]):
+            print(f"  {status or 'ERR':>4}  {url}")
     if dead:
         print(f"\nDEAD LINKS ({len(dead)}):")
         for status, url in sorted(dead, key=lambda d: d[1]):
             print(f"  {status or 'ERR':>4}  {url}")
         return 1
+    if challenged_urls:
+        print("No dead links; some URLs unverifiable this run (WAF challenge).")
+        return 0
     print("All links alive.")
     return 0
 
