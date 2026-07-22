@@ -252,10 +252,25 @@ PLANS_DB_PATH = Path(__file__).resolve().parent.parent.parent / 'gravel-god-trai
 # load-bearing (deployed guide URLs are baked into published TP plans' notes),
 # so the page side aliases to it rather than the other way around.
 PLAN_SLUG_ALIASES = {
+    # race-data page slug -> db/plans.json race_slug (marketing-name slugs)
     "munsterland-giro": "sparkassen-munsterland-giro",
     "gran-fondo-il-lombardia": "gran-fondo-il-lombardia-felice-gimondi",
     "granfondo-pomerode": "uci-gran-fondo-brasil-pomerode",
     "gran-fondo-loutraki": "uci-gran-fondo-loutraki",
+    "letape-mexico-city": "l-etape-mexico-city",
+    "letape-brazil": "l-etape-brasil-by-tour-de-france",
+    "letape-turkey": "l-etape-turkey-by-tour-de-france",
+    "letape-costa-rica": "l-etape-costa-rica-by-tour-de-france",
+    "prosecco-cycling": "prosecco-cycling-gran-fondo-prosecco",
+    "bike-ms-nyc": "bike-ms-new-york-city",
+    "granfondo-alberto-contador": "gran-fondo-alberto-contador",
+    "lotoja-classic": "lotoja-classic-logan-to-jackson",
+    "amys-gran-fondo": "amy-s-gran-fondo",
+    "strade-bianche-gran-fondo": "gran-fondo-strade-bianche",
+    "la-stelvio-santini": "la-stelvio-santini-granfondo",
+    "gran-fondo-la-fausto-coppi": "granfondo-la-fausto-coppi",
+    "triple-bypass": "triple-bypass-colorado-s-three-pass-challenge",
+    "cyprus-gran-fondo": "uci-cyprus-gran-fondo",
 }
 
 # Display order for the plan ladder — full plan first, emergency/short plan
