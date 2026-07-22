@@ -13,7 +13,7 @@
       "location_badge": "Qiandao Lake (Thousand Island Lake)",
       "country": "China",
       "date": "May",
-      "date_specific": "2026: May 23",
+      "date_specific": "2026: May 23-24 (confirmed two-day UCI Gran Fondo World Series qualifier; gran fondo held Sunday May 24).",
       "field_size": "1500+",
       "start_format": null,
       "registration": "Open",
@@ -111,7 +111,23 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/hangzhou/",
+        "category": "official",
+        "label": "UCI Gran Fondo Hangzhou Qiandao Lake — UCI Gran Fondo World Series"
+      },
+      {
+        "url": "https://www.ucigranfondochina.com/",
+        "category": "official",
+        "label": "UCI Gran Fondo Hangzhou — Official China Site"
+      },
+      {
+        "url": "https://www.finishers.com/en/event/uci-gran-fondo-hangzhou-qiandao-lake",
+        "category": "reference",
+        "label": "UCI Gran Fondo Hangzhou Qiandao Lake — Finishers"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "UCI Gran Fondo Hangzhou Qiandao Lake gran fondo cycling Qiandao Lake",
@@ -130,6 +146,11 @@
         }
       ],
       "quotes": []
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-22",
+      "source": "https://ucigranfondoworldseries.com/en/hangzhou/"
     }
   }
 }

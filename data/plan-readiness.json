@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T16:54:44",
+  "generated_at": "2026-07-22T06:23:26",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -309,17 +309,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-18",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 38,
+      "race_date": "2027-04-17",
+      "blockers": []
     },
     "amys-gran-fondo": {
       "slug": "amys-gran-fondo",
@@ -330,15 +327,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 6,
-      "race_date": "2026-09-06",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 7,
+      "race_date": "2026-09-13",
+      "blockers": []
     },
     "arlberg-giro": {
       "slug": "arlberg-giro",
@@ -349,15 +344,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 1,
       "race_date": "2026-08-02",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "around-the-bay-in-a-day": {
       "slug": "around-the-bay-in-a-day",
@@ -605,15 +598,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 12,
       "race_date": "2026-10-18",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "birkebeinerrittet-road": {
       "slug": "birkebeinerrittet-road",
@@ -709,15 +700,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 12,
       "race_date": "2026-10-18",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "bp-ms-150-texas": {
       "slug": "bp-ms-150-texas",
@@ -880,15 +869,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "cheaha-challenge-gran-fondo": {
@@ -900,15 +888,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-16",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "chiang-mai-gran-fondo": {
@@ -1050,15 +1037,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 1,
       "race_date": "2026-08-01",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "crc-506-gran-fondo-costa-rica": {
       "slug": "crc-506-gran-fondo-costa-rica",
@@ -1187,21 +1172,17 @@
       "tier": 2,
       "score": 73,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-03",
-      "blockers": [
-        "validator: 1 error(s) — cyprus-gran-fondo: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-02",
+      "blockers": []
     },
     "dartmoor-classic": {
       "slug": "dartmoor-classic",
@@ -1212,15 +1193,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-21",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "dartmoor-legend-ultra": {
@@ -1387,15 +1367,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-28",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "el-tour-de-tucson": {
@@ -1885,15 +1864,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-06-28",
+      "race_date": "2026-07-05",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gf-samoens-ultra-raid": {
@@ -2008,40 +1986,35 @@
       "tier": 2,
       "score": 64,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-08-30",
-      "blockers": [
-        "validator: 1 error(s) — gfny-bremen: Only 0 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "gfny-cannes": {
       "slug": "gfny-cannes",
       "tier": 2,
       "score": 77,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-12",
       "blockers": [
-        "validator: 1 error(s) — gfny-cannes: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-chile": {
@@ -2049,20 +2022,17 @@
       "tier": 2,
       "score": 73,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 9,
       "race_date": "2026-09-27",
-      "blockers": [
-        "validator: 1 error(s) — gfny-chile: Only 2 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "gfny-colombia": {
       "slug": "gfny-colombia",
@@ -2075,13 +2045,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "gfny-cozumel": {
@@ -2093,15 +2063,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 15,
       "race_date": "2026-11-08",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "gfny-dominican-republic": {
       "slug": "gfny-dominican-republic",
@@ -2224,15 +2192,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-14",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-maryland-cambridge": {
@@ -2262,20 +2229,17 @@
       "tier": 3,
       "score": 47,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 15,
-      "race_date": "2026-11-08",
-      "blockers": [
-        "validator: 1 error(s) — gfny-miami: Only 2 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-04",
+      "blockers": []
     },
     "gfny-new-york": {
       "slug": "gfny-new-york",
@@ -2393,15 +2357,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 8,
       "race_date": "2026-09-20",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "gfny-punta-del-este": {
       "slug": "gfny-punta-del-este",
@@ -2633,15 +2595,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-14",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-argentina": {
@@ -3103,17 +3064,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-28",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 48,
+      "race_date": "2027-06-27",
+      "blockers": []
     },
     "gran-fondo-loutraki": {
       "slug": "gran-fondo-loutraki",
@@ -3403,17 +3361,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-07",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 45,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "gran-fondo-suisse": {
       "slug": "gran-fondo-suisse",
@@ -3424,15 +3379,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-10",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-utah": {
@@ -3444,15 +3398,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-13",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-via-del-sale": {
@@ -3483,20 +3436,18 @@
       "tier": 2,
       "score": 73,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
-        "validator: 1 error(s) — gran-fondo-vosges: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-zadar": {
@@ -3531,15 +3482,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 8,
       "race_date": "2026-09-19",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "granfondo-alpe-adria": {
       "slug": "granfondo-alpe-adria",
@@ -3850,15 +3799,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 4,
       "race_date": "2026-08-23",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "granfondo-la-guadeloupe": {
       "slug": "granfondo-la-guadeloupe",
@@ -3979,15 +3926,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 7,
       "race_date": "2026-09-13",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "granfondo-mont-sainte-anne": {
       "slug": "granfondo-mont-sainte-anne",
@@ -4063,20 +4008,18 @@
       "tier": 2,
       "score": 76,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
       "blockers": [
-        "validator: 1 error(s) — granfondo-novi-sad: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-pinarello": {
@@ -4455,15 +4398,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "haute-route-dolomites": {
@@ -4477,13 +4419,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "haute-route-pyrenees": {
@@ -4518,13 +4460,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "helsinki-gran-fondo": {
@@ -4536,15 +4478,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-08-30",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "highlands-gran-fondo": {
       "slug": "highlands-gran-fondo",
@@ -4601,15 +4541,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-08-29",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "inthanon-challenge": {
       "slug": "inthanon-challenge",
@@ -4643,15 +4581,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-05-24",
+      "race_date": "2026-05-22",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "istria-gran-fondo": {
@@ -4862,15 +4799,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-28",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "la-ruta-de-los-conquistadores": {
@@ -4903,17 +4839,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-07",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 45,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "la-vaujany": {
       "slug": "la-vaujany",
@@ -4962,15 +4895,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-10",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "lariegeoise-cyclosportive": {
@@ -5004,17 +4936,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-27",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 48,
+      "race_date": "2027-06-26",
+      "blockers": []
     },
     "le-race": {
       "slug": "le-race",
@@ -5045,15 +4974,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "les-trois-ballons": {
@@ -5128,15 +5056,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 9,
       "race_date": "2026-09-27",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "letape-bulgaria": {
       "slug": "letape-bulgaria",
@@ -5211,15 +5137,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 2,
-      "race_date": "2026-08-09",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 7,
+      "race_date": "2026-09-13",
+      "blockers": []
     },
     "letape-czech-republic": {
       "slug": "letape-czech-republic",
@@ -5270,15 +5194,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-07-19",
+      "race_date": null,
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-du-tour-femmes": {
@@ -5290,15 +5213,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 2,
       "race_date": "2026-08-06",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "letape-dubai": {
       "slug": "letape-dubai",
@@ -5411,20 +5332,17 @@
       "tier": 2,
       "score": 66,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 19,
-      "race_date": "2026-11-30",
-      "blockers": [
-        "validator: 1 error(s) — letape-mexico-city: Only 0 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 16,
+      "race_date": "2026-11-15",
+      "blockers": []
     },
     "letape-norway": {
       "slug": "letape-norway",
@@ -5497,19 +5415,18 @@
       "tier": 2,
       "score": 70,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
-        "active_registerable": false
+        "future_date": false,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
-      "runway_weeks": 10,
-      "race_date": "2026-09-29",
+      "runway_weeks": null,
+      "race_date": "2026-06-14",
       "blockers": [
-        "validator: 1 error(s) — letape-poland: Only 1 citations (minimum 3)",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-portugal": {
@@ -5541,35 +5458,30 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 3,
-      "race_date": "2026-08-16",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 5,
+      "race_date": "2026-08-30",
+      "blockers": []
     },
     "letape-slovakia": {
       "slug": "letape-slovakia",
       "tier": 2,
       "score": 74,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 4,
       "race_date": "2026-08-23",
-      "blockers": [
-        "validator: 1 error(s) — letape-slovakia: Only 0 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "letape-slovenia": {
       "slug": "letape-slovenia",
@@ -5641,15 +5553,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 8,
       "race_date": "2026-09-19",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "levis-granfondo": {
       "slug": "levis-granfondo",
@@ -5680,15 +5590,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-25",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "london-edinburgh-london": {
@@ -5743,15 +5652,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 7,
       "race_date": "2026-09-12",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "majka-gran-fondo": {
       "slug": "majka-gran-fondo",
@@ -5848,17 +5755,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-05",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 49,
+      "race_date": "2027-07-04",
+      "blockers": []
     },
     "marmotte-granfondo-sestriere": {
       "slug": "marmotte-granfondo-sestriere",
@@ -5906,20 +5810,18 @@
       "tier": 2,
       "score": 77,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-14",
       "blockers": [
-        "validator: 1 error(s) — midnight-sun-randonnee: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "milano-sanremo-gran-fondo": {
@@ -5968,15 +5870,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 3,
       "race_date": "2026-08-15",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "mt-evans-hill-climb": {
       "slug": "mt-evans-hill-climb",
@@ -5987,15 +5887,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 0,
       "race_date": "2026-07-25",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "mt-fuji-hill-climb": {
       "slug": "mt-fuji-hill-climb",
@@ -6314,20 +6212,18 @@
       "tier": 2,
       "score": 77,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-16",
       "blockers": [
-        "validator: 1 error(s) — oregon-gran-fondo: Only 0 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "otztaler-radmarathon": {
@@ -6339,15 +6235,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-08-30",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "pan-mass-challenge": {
       "slug": "pan-mass-challenge",
@@ -6358,15 +6252,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 1,
       "race_date": "2026-08-01",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "paris-brest-paris": {
       "slug": "paris-brest-paris",
@@ -6394,15 +6286,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-11",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "peaks-and-plains": {
@@ -6501,15 +6392,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 1,
       "race_date": "2026-08-01",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "perth-hills-gran-fondo": {
       "slug": "perth-hills-gran-fondo",
@@ -6543,15 +6432,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 9,
       "race_date": "2026-09-27",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "quebrantahuesos": {
       "slug": "quebrantahuesos",
@@ -6995,15 +6882,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 7,
       "race_date": "2026-09-12",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "redlands-bicycle-classic": {
       "slug": "redlands-bicycle-classic",
@@ -7099,13 +6984,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "rift-valley-odyssey": {
@@ -7117,15 +7002,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 9,
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 8,
       "race_date": "2026-09-21",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "ring-of-clare": {
       "slug": "ring-of-clare",
@@ -7223,15 +7106,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-30",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "sea-otter-ciclobrava": {
@@ -7243,15 +7125,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 8,
       "race_date": "2026-09-20",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "sea-otter-classic-gran-fondo": {
       "slug": "sea-otter-classic-gran-fondo",
@@ -7408,17 +7288,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-14",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 47,
+      "race_date": "2027-06-20",
+      "blockers": []
     },
     "sriwijaya-ranau-gran-fondo": {
       "slug": "sriwijaya-ranau-gran-fondo",
@@ -7474,17 +7351,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-08",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 32,
+      "race_date": "2027-03-07",
+      "blockers": []
     },
     "struggle-dales": {
       "slug": "struggle-dales",
@@ -7685,17 +7559,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-07",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 45,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "the-majestics": {
       "slug": "the-majestics",
@@ -7774,15 +7645,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 3,
       "race_date": "2026-08-12",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "tour-de-big-bear": {
       "slug": "tour-de-big-bear",
@@ -7793,15 +7662,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 1,
       "race_date": "2026-08-01",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "tour-de-brisbane": {
       "slug": "tour-de-brisbane",
@@ -7952,20 +7819,17 @@
       "tier": 3,
       "score": 50,
       "checks": {
-        "validator_clean": false,
+        "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 1,
-      "race_date": "2026-08-01",
-      "blockers": [
-        "validator: 1 error(s) — tour-de-pologne-amatorow: Only 2 citations (minimum 3)",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 2,
+      "race_date": "2026-08-08",
+      "blockers": []
     },
     "tour-de-romandie-cyclosportive": {
       "slug": "tour-de-romandie-cyclosportive",
@@ -8490,15 +8354,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-19",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "triple-bypass": {
@@ -8509,17 +8372,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-11",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 50,
+      "race_date": "2027-07-10",
+      "blockers": []
     },
     "turkcell-granfondo-izmir": {
       "slug": "turkcell-granfondo-izmir",
@@ -8621,15 +8481,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-08-26",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "utrecht-ultra": {
       "slug": "utrecht-ultra",
@@ -8933,15 +8791,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
+      "eligibility_status": "active",
+      "ready": true,
       "runway_weeks": 7,
       "race_date": "2026-09-12",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "blockers": []
     },
     "white-horse-challenge": {
       "slug": "white-horse-challenge",
@@ -8974,17 +8830,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-31",
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 48,
+      "race_date": "2027-06-27",
+      "blockers": []
     },
     "wicklow-200": {
       "slug": "wicklow-200",
@@ -8995,15 +8848,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "yangyang-gran-fondo": {
@@ -9032,9 +8884,22 @@
   },
   "ranked_queue": [
     "paris-brest-paris",
+    "maratona-dles-dolomites",
+    "le-loop",
+    "gran-fondo-stelvio",
+    "white-rose-classic",
+    "triple-bypass",
+    "gran-fondo-la-fausto-coppi",
+    "sportful-dolomiti-race",
+    "la-stelvio-santini",
+    "tartu-rattaralli",
+    "amstel-gold-race-toerversie",
+    "cyprus-gran-fondo",
+    "strade-bianche-gran-fondo",
+    "gfny-miami",
     "tour-of-nilgiris",
-    "letape-mexico-city",
     "lake-taupo-cycle-challenge",
+    "letape-mexico-city",
     "taiwan-kom-challenge",
     "granfondo-pomerode",
     "cycling-shimanami",
@@ -9044,15 +8909,13 @@
     "gran-fondo-il-lombardia",
     "around-the-bay-in-a-day",
     "granfondo-tre-valli-varesine",
-    "gfny-miami",
-    "letape-poland",
     "bike-ms-nyc",
     "bowral-classic",
-    "rift-valley-odyssey",
     "gran-fondo-maryland",
     "munsterland-giro",
     "gfny-chile",
     "sea-otter-ciclobrava",
+    "rift-valley-odyssey",
     "mount-baker-hill-climb",
     "prosecco-cycling",
     "letape-brazil",
@@ -9061,34 +8924,31 @@
     "letape-turkey",
     "granfondo-matildica",
     "lotoja-classic",
+    "letape-costa-rica",
     "rbc-granfondo-whistler",
     "whistler-granfondo",
+    "amys-gran-fondo",
     "otztaler-radmarathon",
     "hottern-hell-hundred",
     "uci-gran-fondo-world-championships",
-    "amys-gran-fondo",
     "gfny-bremen",
     "helsinki-gran-fondo",
+    "letape-romania",
     "letape-slovakia",
     "granfondo-gottardo",
     "tortour",
-    "letape-romania",
     "mount-washington-hillclimb",
     "letape-du-tour-femmes",
-    "letape-costa-rica",
+    "tour-de-pologne-amatorow",
     "arlberg-giro",
     "tour-de-big-bear",
     "pan-mass-challenge",
     "copper-triangle",
     "pelotonia",
-    "tour-de-pologne-amatorow",
     "letape-du-tour",
-    "maratona-dles-dolomites",
     "cheaha-challenge-gran-fondo",
-    "gran-fondo-stelvio",
     "haute-route-alps",
     "la-marmotte",
-    "le-loop",
     "leroica",
     "lardechoise",
     "paris-roubaix-challenge",
@@ -9096,30 +8956,21 @@
     "grafton-to-inverell-classic",
     "haute-route-dolomites",
     "schleck-gran-fondo",
-    "white-rose-classic",
     "gfny-cannes",
-    "gran-fondo-la-fausto-coppi",
-    "la-stelvio-santini",
     "liege-bastogne-liege-challenge",
     "midnight-sun-randonnee",
     "oregon-gran-fondo",
-    "strade-bianche-gran-fondo",
     "dreilander-giro",
     "gf-gavia-e-mortirolo",
     "granfondo-novi-sad",
     "haute-route-ventoux",
     "ride-the-rockies",
-    "sportful-dolomiti-race",
     "trek-across-maine",
     "chasing-cancellara",
     "gran-fondo-suisse",
     "iron-horse-bicycle-classic",
     "mt-evans-hill-climb",
-    "tartu-rattaralli",
-    "triple-bypass",
     "wicklow-200",
-    "amstel-gold-race-toerversie",
-    "cyprus-gran-fondo",
     "dartmoor-classic",
     "gfny-colombia",
     "gran-fondo-utah",
@@ -9149,6 +9000,7 @@
     "granfondo-felice-gimondi",
     "istria-granfondo",
     "letape-norway",
+    "letape-poland",
     "letape-taiwan",
     "maraton-franja",
     "niseko-classic",
@@ -9233,8 +9085,21 @@
   ],
   "pilot_candidates": [
     "paris-brest-paris",
+    "maratona-dles-dolomites",
+    "le-loop",
+    "gran-fondo-stelvio",
+    "white-rose-classic",
+    "triple-bypass",
+    "gran-fondo-la-fausto-coppi",
+    "sportful-dolomiti-race",
+    "la-stelvio-santini",
+    "tartu-rattaralli",
+    "amstel-gold-race-toerversie",
+    "cyprus-gran-fondo",
+    "strade-bianche-gran-fondo",
     "tour-of-nilgiris",
     "lake-taupo-cycle-challenge",
+    "letape-mexico-city",
     "granfondo-pomerode",
     "cycling-shimanami",
     "gran-fondo-loutraki",
@@ -9243,18 +9108,26 @@
     "around-the-bay-in-a-day",
     "granfondo-tre-valli-varesine",
     "gran-fondo-maryland",
-    "munsterland-giro"
+    "munsterland-giro",
+    "gfny-chile",
+    "sea-otter-ciclobrava",
+    "rift-valley-odyssey",
+    "prosecco-cycling",
+    "letape-brazil",
+    "gfny-pittsburgh",
+    "granfondo-alberto-contador",
+    "letape-turkey"
   ],
   "summary": {
     "total": 426,
-    "ready": 13,
+    "ready": 62,
     "content_present": 199,
-    "validator_clean": 213,
-    "pilot_candidates": 12,
+    "validator_clean": 226,
+    "pilot_candidates": 33,
     "by_tier_ready": {
-      "1": 3,
-      "2": 10,
-      "3": 0,
+      "1": 7,
+      "2": 48,
+      "3": 7,
       "4": 0
     }
   }
