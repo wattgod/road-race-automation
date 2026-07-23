@@ -13,7 +13,7 @@
       "location_badge": "VALDIVIA, LOS RIOS",
       "country": "Chile",
       "date": "November",
-      "date_specific": "2026: November TBD",
+      "date_specific": "2026: November 1",
       "field_size": "1,500-3,000 ambitious amateurs chasing TdF glory",
       "start_format": null,
       "registration": "Opens early 2026 via official site; expect €150-250 including finisher's jersey, support, and Tour prestige",
@@ -144,6 +144,11 @@
         "url": "https://chile.letapeseries.com",
         "category": "official",
         "label": "Official L'Etape Chile"
+      },
+      {
+        "url": "https://chile.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Etape Chile — Official Stages/Dates"
       }
     ],
     "youtube_data": {
@@ -164,6 +169,12 @@
         }
       ],
       "quotes": []
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-22",
+      "source": "https://chile.letapeseries.com/stages",
+      "note": "Official Chile event page confirms the inaugural Valdivia/Niebla edition for Sunday, November 1, 2026 (weekday-checked), with amateur-open routes."
     }
   }
 }

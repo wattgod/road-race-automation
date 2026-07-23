@@ -13,7 +13,7 @@
       "location_badge": "West Bay Street near Goodman's Bay Park, The Bahamas",
       "country": "The Bahamas",
       "date": "November",
-      "date_specific": "2025: November 9",
+      "date_specific": "2026: October 18",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -147,6 +147,12 @@
         "category": "reference",
         "label": "GFNY Bahamas: Home"
       }
-    ]
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-22",
+      "source": "https://gfny.com/race-finder/",
+      "note": "GFNY's official race finder lists the Nassau edition for Sunday, October 18, 2026 (weekday-checked). Prior DB date (2025: November 9) was stale."
+    }
   }
 }

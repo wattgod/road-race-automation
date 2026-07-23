@@ -13,7 +13,7 @@
       "location_badge": "Pacific Coast",
       "country": "Costa Rica",
       "date": "June 7",
-      "date_specific": "2026: June 7",
+      "date_specific": "2026: September 13 (rescheduled from original June 7 date due to storm risk)",
       "field_size": 1000,
       "start_format": null,
       "registration": "Open via www.crc-506.com",
@@ -121,7 +121,23 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondocostarica.com/",
+        "category": "official",
+        "label": "UCI Gran Fondo Costa Rica — Official Site"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series — Calendar"
+      },
+      {
+        "url": "https://www.miprensacr.com/crc-506-gran-fondo-costa-rica-se-realizara-el-13-de-septiembre-y-reabre-sus-inscripciones/",
+        "category": "reference",
+        "label": "Mi Prensa CR — CRC-506 Gran Fondo Costa Rica rescheduled to September 13"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "CRC 506 Gran Fondo Costa Rica gran fondo cycling Jacó",
@@ -205,6 +221,12 @@
         "additional_quotes": [],
         "search_text": "The available transcript for the CRC 506 Gran Fondo Costa Rica contains minimal intelligible content, with only brief mentions of heat and music. No specific course details, terrain descriptions, or racing insights are provided in the transcript. The race is an 87.6-mile gravel event in Jacó, Costa Rica with 2,759 feet of elevation gain, but rider experiences and course characteristics cannot be extracted from the current transcript material."
       }
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-07-22",
+      "source": "https://ucigranfondocostarica.com/",
+      "notes": "Original June 7, 2026 date was postponed due to high thunderstorm risk; organizer rescheduled to September 13, 2026 and reopened registration. The UCI Gran Fondo World Series calendar still shows 'Postponed' and has not caught up with the rescheduled date."
     }
   }
 }
