@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T11:39:46",
+  "generated_at": "2026-07-23T11:48:06",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -446,16 +446,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 6,
+      "race_date": "2026-09-05",
+      "blockers": []
     },
     "belgrade-gran-fondo": {
       "slug": "belgrade-gran-fondo",
@@ -1850,7 +1848,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-06-21",
       "blockers": [
         "no parsed future date"
       ]
@@ -4969,15 +4967,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": false
       },
       "eligibility_status": "unknown",
       "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
+      "runway_weeks": 48,
+      "race_date": "2027-06-26",
       "blockers": [
-        "no parsed future date",
         "eligibility unverified (unknown)"
       ]
     },
@@ -7123,15 +7120,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": false
       },
       "eligibility_status": "cancelled",
       "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
+      "runway_weeks": 47,
+      "race_date": "2027-06-18",
       "blockers": [
-        "no parsed future date",
         "eligibility: cancelled"
       ]
     },
@@ -8552,11 +8548,13 @@
     "la-stelvio-santini",
     "marmotte-granfondo-sestriere",
     "tartu-rattaralli",
+    "styrkeproven",
     "engadin-radmarathon",
     "nove-colli",
     "seattle-to-portland",
     "alpe-dhuzes",
     "london-to-brighton",
+    "letape-denmark",
     "letape-czech-republic",
     "amstel-gold-race-toerversie",
     "tour-of-georgia-gran-fondo",
@@ -8607,6 +8605,7 @@
     "crc-506-gran-fondo-costa-rica",
     "gfny-dominican-republic",
     "rbc-granfondo-whistler",
+    "bealach-mor",
     "whistler-granfondo",
     "letape-slovenia",
     "amys-gran-fondo",
@@ -8672,7 +8671,6 @@
     "ramrod",
     "sellaronda-bike-day",
     "trek-100",
-    "bealach-mor",
     "bike-abu-dhabi-gran-fondo",
     "giro-ride-like-a-pro-usa",
     "granfondo-bogota",
@@ -8683,7 +8681,6 @@
     "letape-taiwan",
     "maraton-franja",
     "niseko-classic",
-    "styrkeproven",
     "947-ride-joburg",
     "ford-ridelondon",
     "gent-wevelgem-cyclo",
@@ -8708,7 +8705,6 @@
     "granfondo-san-sebastian",
     "letape-italy-piemonte",
     "levis-granfondo",
-    "letape-denmark",
     "cape-rouleur",
     "letape-australia",
     "ring-of-kerry-charity-cycle",
@@ -8799,13 +8795,13 @@
   ],
   "summary": {
     "total": 425,
-    "ready": 88,
+    "ready": 89,
     "content_present": 199,
     "validator_clean": 238,
     "pilot_candidates": 55,
     "by_tier_ready": {
       "1": 7,
-      "2": 74,
+      "2": 75,
       "3": 7,
       "4": 0
     }
