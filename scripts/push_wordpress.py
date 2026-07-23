@@ -1527,6 +1527,11 @@ RewriteRule ^race/?$ /road-races/ [R=301,L]
 RewriteRule ^race/chiang-mai-gran-fondo/?$ /road-races/ [R=301,L]
 RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
 
+# gfny-bali -> gfny-belitung (event relocated/rebranded 2026; bali.gfny.com
+# itself 301s to belitung.gfny.com). Subpaths preserved.
+RewriteRule ^race/gfny-bali/?$ /race/gfny-belitung/ [R=301,L]
+RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
+
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
 RewriteRule ^belgian-waffle-ride-race-guide/?$ /race/bwr-california/ [R=301,L]

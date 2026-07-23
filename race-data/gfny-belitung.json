@@ -1,15 +1,15 @@
 {
   "race": {
-    "name": "GFNY Bali",
-    "slug": "gfny-bali",
-    "display_name": "GFNY Bali",
+    "name": "GFNY Belitung",
+    "slug": "gfny-belitung",
+    "display_name": "GFNY Belitung",
     "tagline": "A GFNY World series gran fondo that climbs from Bali's black-sand coast to the crater rim of Kintamani volcano. Tropical heat, 2,230 meters of climbing through rice terraces and temple villages, and the Island of the Gods as your backdrop.",
     "vitals": {
       "distance_km": 136.8,
       "distance_mi": 85.0,
       "elevation_m": 2230,
       "elevation_ft": 7316.0,
-      "location": "Lebih, Klungkung, Bali, Indonesia",
+      "location": "Tanjung Pandan, Belitung, Indonesia",
       "location_badge": "BALI, INDONESIA",
       "country": "Indonesia",
       "date": "February annually (historically variable — August in 2022-2023, February in 2025-2026)",
@@ -86,7 +86,7 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A point-to-summit-and-back volcanic mountain gran fondo that starts at Bali's coast, climbs relentlessly through the island's cultural and agricultural heartland to the rim of the Kintamani volcanic caldera, then descends back to the sea. The course is defined by one sustained ascent and one sustained descent, bookended by rolling coastal terrain. The climbing is not Alpine-steep but it is Alpine-long, and the tropical heat transforms moderate gradients into savage efforts. The Kintamani crater rim provides the emotional and physical summit — a view of Lake Danau Batur and Mount Batur that rewards every watt spent getting there.",
+      "character": "NOTE: course details describe the Bali-era editions (Sayan/Lebih). The 2026 relocation to Tanjung Pandan, Belitung brings a new venue; course specifics pending re-research. A point-to-summit-and-back volcanic mountain gran fondo that starts at Bali's coast, climbs relentlessly through the island's cultural and agricultural heartland to the rim of the Kintamani volcanic caldera, then descends back to the sea. The course is defined by one sustained ascent and one sustained descent, bookended by rolling coastal terrain. The climbing is not Alpine-steep but it is Alpine-long, and the tropical heat transforms moderate gradients into savage efforts. The Kintamani crater rim provides the emotional and physical summit — a view of Lake Danau Batur and Mount Batur that rewards every watt spent getting there.",
       "signature_challenge": "The Kintamani volcano ascent. A 25-30 km sustained climb from the lowland rice terraces to the volcanic crater rim at 1,500 meters, performed in equatorial tropical heat. The gradient is steady (4-6% average, 8-12% pitches) but the length and conditions make it brutal. This is where the race breaks apart every year — the lead group of 15-20 fragments to 5-7 by the summit. The crater rim view of Lake Danau Batur is the payoff: one of the most dramatic summit finishes (mid-course) in world gran fondo cycling.",
       "suffering_zones": [
         "Coastal Start — Lebih to Lowland Villages",
@@ -114,7 +114,8 @@
         "2025: 6th edition opens the 2025 GFNY season in February — Mitchell and Brittain win Asian Championship titles; 1,000+ riders from 45+ countries",
         "2026: GFNY Asia Championship moves to new GFNY Belitung event; GFNY Bali continues as standalone edition"
       ],
-      "reputation": "The most beautiful course in the GFNY calendar. A genuine climbing gran fondo in an exotic tropical setting that delivers adventure, culture, and physiological challenge in equal measure. Regionally prestigious as the GFNY Asia Championship (through 2025), but limited international field depth keeps it below the series' European and NYC events in competitive terms."
+      "reputation": "The most beautiful course in the GFNY calendar. A genuine climbing gran fondo in an exotic tropical setting that delivers adventure, culture, and physiological challenge in equal measure. Regionally prestigious as the GFNY Asia Championship (through 2025), but limited international field depth keeps it below the series' European and NYC events in competitive terms.",
+      "name_history": "Ran as GFNY Bali (Lebih, Klungkung, Bali) through 2025; relocated to Belitung and rebranded GFNY Belitung for 2026."
     },
     "biased_opinion": {
       "verdict": "The Volcano Gran Fondo",
@@ -341,7 +342,7 @@
       "status": "active",
       "verified": "2026-07-22",
       "source": "https://belitung.gfny.com/",
-      "notes": "FLAG: relocated/rebranded from Bali to GFNY Belitung (Tanjung Pandan, Belitung, Indonesia) — bali.gfny.com redirects to belitung.gfny.com; 2026 edition ran Jun 21 as GFNY Asia Championship. Name/location fields still say Bali — rename decision pending Matti."
+      "notes": "Relocated/rebranded from GFNY Bali (Lebih, Klungkung) to GFNY Belitung — bali.gfny.com 301s to belitung.gfny.com (verified 2026-07-23); 2026 edition ran Jun 21 as the GFNY Asia Championship. Profile renamed 2026-07-23 (was slug gfny-bali); Bali lineage preserved in history."
     }
   }
 }

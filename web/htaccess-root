@@ -22,4 +22,8 @@ RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 RewriteRule ^race/chiang-mai-gran-fondo/?$ /road-races/ [R=301,L]
 RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
 
+# gfny-bali -> gfny-belitung (relocated/rebranded 2026)
+RewriteRule ^race/gfny-bali/?$ /race/gfny-belitung/ [R=301,L]
+RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
+
 ErrorDocument 404 /404.html
