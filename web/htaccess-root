@@ -16,4 +16,10 @@ RewriteRule ^(.*)$ https://roadielabs.com/$1 [R=301,L]
 # emails + council copy use). One canonical, one 301.
 RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 
+# chiang-mai-gran-fondo: fabricated-as-named (2026-07-23 audit — GFNY never
+# ran Chiang Mai; every reference was circular self-sourcing). Profile
+# tombstoned on main AND the race-page spine branch. Subpaths covered.
+RewriteRule ^race/chiang-mai-gran-fondo/?$ /road-races/ [R=301,L]
+RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
+
 ErrorDocument 404 /404.html

@@ -1522,6 +1522,11 @@ RewriteRule ^guide\\.html$ /guide/ [R=301,L]
 # /race/ directory index → search page (prevents 403)
 RewriteRule ^race/?$ /road-races/ [R=301,L]
 
+# chiang-mai-gran-fondo: fabricated-as-named (2026-07-23 audit — GFNY never
+# ran Chiang Mai; every reference was circular self-sourcing). Subpaths covered.
+RewriteRule ^race/chiang-mai-gran-fondo/?$ /road-races/ [R=301,L]
+RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
+
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
 RewriteRule ^belgian-waffle-ride-race-guide/?$ /race/bwr-california/ [R=301,L]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T11:18:42",
+  "generated_at": "2026-07-23T11:39:46",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -860,27 +860,6 @@
       "race_date": "2026-05-16",
       "blockers": [
         "no parsed future date"
-      ]
-    },
-    "chiang-mai-gran-fondo": {
-      "slug": "chiang-mai-gran-fondo",
-      "tier": 2,
-      "score": 67,
-      "checks": {
-        "validator_clean": true,
-        "editorial": false,
-        "course_character": true,
-        "future_date": false,
-        "active_registerable": false
-      },
-      "eligibility_status": "defunct",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility: defunct"
       ]
     },
     "cicloturista-cerdanya": {
@@ -8819,10 +8798,10 @@
     "letape-turkey"
   ],
   "summary": {
-    "total": 426,
+    "total": 425,
     "ready": 88,
     "content_present": 199,
-    "validator_clean": 239,
+    "validator_clean": 238,
     "pilot_candidates": 55,
     "by_tier_ready": {
       "1": 7,
