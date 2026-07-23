@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T08:37:22",
+  "generated_at": "2026-07-23T11:18:42",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -873,14 +873,14 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-22",
       "blockers": [
         "no editorial (biased_opinion.summary)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "cicloturista-cerdanya": {
@@ -1226,9 +1226,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-14",
@@ -1236,8 +1236,7 @@
         "validator: 1 error(s) — dolomitenradrundfahrt: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "douro-gran-fondo": {
@@ -1249,9 +1248,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-10",
@@ -1259,8 +1258,7 @@
         "validator: 1 error(s) — douro-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "dragon-ride": {
@@ -1272,16 +1270,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-14",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "dreilaendergiro": {
@@ -1293,9 +1290,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-28",
@@ -1303,8 +1300,7 @@
         "validator: 1 error(s) — dreilaendergiro: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "dreilander-giro": {
@@ -1335,15 +1331,14 @@
         "editorial": true,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 17,
       "race_date": "2026-11-21",
       "blockers": [
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "engadin-radmarathon": {
@@ -1372,9 +1367,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-02-07",
@@ -1382,8 +1377,7 @@
         "validator: 1 error(s) — epic-gran-canaria: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "eroica-california": {
@@ -1418,9 +1412,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-02-14",
@@ -1428,8 +1422,7 @@
         "validator: 1 error(s) — eroica-cuba: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "eroica-dolomiti": {
@@ -1441,17 +1434,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 6,
       "race_date": "2026-09-05",
       "blockers": [
         "validator: 1 error(s) — eroica-dolomiti: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "eroica-germania": {
@@ -1463,17 +1455,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 4,
       "race_date": "2026-08-22",
       "blockers": [
         "validator: 1 error(s) — eroica-germania: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "eroica-hispania": {
@@ -1508,9 +1499,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-11",
@@ -1518,8 +1509,7 @@
         "validator: 1 error(s) — eroica-japan: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "eroica-south-africa": {
@@ -1554,16 +1544,15 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
         "validator: 1 error(s) — etape-caledonia: Only 2 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "etape-du-dales": {
@@ -1575,16 +1564,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-06-08",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "etape-loch-ness": {
@@ -1613,15 +1601,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-03",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "flandrien-ride": {
@@ -1674,9 +1661,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -1684,8 +1671,7 @@
         "validator: 1 error(s) — formosa-900: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "fred-whitton-challenge": {
@@ -1697,16 +1683,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-10",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "fuji-panorama-gran-fondo": {
@@ -1741,9 +1726,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-03",
@@ -1751,8 +1736,7 @@
         "validator: 1 error(s) — fyn-rundt: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "galibier-challenge": {
@@ -1764,9 +1748,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -1774,8 +1758,7 @@
         "validator: 1 error(s) — galibier-challenge: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gent-wevelgem-cyclo": {
@@ -1825,9 +1808,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-05",
@@ -1835,8 +1818,7 @@
         "validator: 1 error(s) — gf-samoens-ultra-raid: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-aguascalientes": {
@@ -2035,7 +2017,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2044,7 +2026,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "gfny-grand-ballon": {
@@ -2056,9 +2038,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2066,8 +2048,7 @@
         "validator: 1 error(s) — gfny-grand-ballon: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-kuala-lumpur": {
@@ -2104,7 +2085,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-21",
@@ -2113,7 +2094,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "gfny-lourdes-tourmalet": {
@@ -2144,17 +2125,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 10,
       "race_date": "2026-10-04",
       "blockers": [
         "validator: 1 error(s) — gfny-maryland-cambridge: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "gfny-miami": {
@@ -2202,15 +2182,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-orcieres": {
@@ -2222,9 +2201,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2232,8 +2211,7 @@
         "validator: 1 error(s) — gfny-orcieres: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-paracas": {
@@ -2390,17 +2368,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 4,
       "race_date": "2026-08-23",
       "blockers": [
         "validator: 1 error(s) — gfny-uppsala: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "gfny-villard-de-lans": {
@@ -2412,9 +2389,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2422,8 +2399,7 @@
         "validator: 1 error(s) — gfny-villard-de-lans: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gfny-zapopan": {
@@ -2435,9 +2411,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-03",
@@ -2445,8 +2421,7 @@
         "validator: 1 error(s) — gfny-zapopan: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "giro-delle-dolomiti": {
@@ -2458,9 +2433,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-13",
@@ -2468,8 +2443,7 @@
         "validator: 1 error(s) — giro-delle-dolomiti: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "giro-ride-like-a-pro-usa": {
@@ -2542,9 +2516,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-10-12",
@@ -2552,8 +2526,7 @@
         "validator: 2 error(s) — gran-fondo-argentina: Only 0 citations (minimum 3); gran-fondo-argentina: Missing final_verdict.one_liner",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-asheville": {
@@ -2582,16 +2555,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-04",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-baskent": {
@@ -2603,17 +2575,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 4,
       "race_date": "2026-08-23",
       "blockers": [
         "validator: 1 error(s) — gran-fondo-baskent: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "gran-fondo-chile-uci": {
@@ -2625,9 +2596,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2635,8 +2606,7 @@
         "validator: 1 error(s) — gran-fondo-chile-uci: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-coimbra": {
@@ -2650,7 +2620,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2659,7 +2629,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "gran-fondo-collado-del-condor": {
@@ -2671,9 +2641,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-22",
@@ -2681,8 +2651,7 @@
         "validator: 1 error(s) — gran-fondo-collado-del-condor: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-curacavi": {
@@ -2694,9 +2663,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-19",
@@ -2704,8 +2673,7 @@
         "validator: 1 error(s) — gran-fondo-curacavi: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-eilat": {
@@ -2717,17 +2685,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 20,
       "race_date": "2026-12-11",
       "blockers": [
         "validator: 1 error(s) — gran-fondo-eilat: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "gran-fondo-felice-gimondi": {
@@ -2739,9 +2706,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-10",
@@ -2749,8 +2716,7 @@
         "validator: 1 error(s) — gran-fondo-felice-gimondi: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-firenze": {
@@ -2764,14 +2730,14 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2024-04-14",
       "blockers": [
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "gran-fondo-florida": {
@@ -2783,16 +2749,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-22",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-gdynia": {
@@ -2804,9 +2769,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-21",
@@ -2814,8 +2779,7 @@
         "validator: 1 error(s) — gran-fondo-gdynia: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-guadeloupe": {
@@ -2827,9 +2791,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-12-07",
@@ -2837,8 +2801,7 @@
         "validator: 1 error(s) — gran-fondo-guadeloupe: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-hainan": {
@@ -2850,16 +2813,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-12-12",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-hangzhou": {
@@ -2924,15 +2886,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-06",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-jordan": {
@@ -2964,9 +2925,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -2974,8 +2935,7 @@
         "validator: 1 error(s) — gran-fondo-kazakhstan: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-la-fausto-coppi": {
@@ -3103,9 +3063,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -3113,8 +3073,7 @@
         "validator: 1 error(s) — gran-fondo-mont-ventoux: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-montevideo": {
@@ -3126,9 +3085,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3136,8 +3095,7 @@
         "validator: 1 error(s) — gran-fondo-montevideo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-nirvana-antalya": {
@@ -3149,17 +3107,16 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-11-07",
       "blockers": [
         "validator: 1 error(s) — gran-fondo-nirvana-antalya: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-novi-sad": {
@@ -3171,9 +3128,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -3181,8 +3138,7 @@
         "validator: 1 error(s) — gran-fondo-novi-sad: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-panama": {
@@ -3194,9 +3150,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-08",
@@ -3204,8 +3160,7 @@
         "validator: 1 error(s) — gran-fondo-panama: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-pirineus": {
@@ -3217,9 +3172,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-28",
@@ -3227,8 +3182,7 @@
         "validator: 1 error(s) — gran-fondo-pirineus: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-san-diego": {
@@ -3240,16 +3194,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-19",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-sibiu": {
@@ -3339,9 +3292,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-29",
@@ -3349,8 +3302,7 @@
         "validator: 1 error(s) — gran-fondo-via-del-sale: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gran-fondo-vosges": {
@@ -3381,9 +3333,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3391,8 +3343,7 @@
         "validator: 1 error(s) — gran-fondo-zadar: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-alberto-contador": {
@@ -3444,17 +3395,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 8,
       "race_date": "2026-09-20",
       "blockers": [
         "validator: 1 error(s) — granfondo-alpi-del-mare: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "granfondo-antalya": {
@@ -3466,9 +3416,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3476,8 +3426,7 @@
         "validator: 1 error(s) — granfondo-antalya: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-belgium": {
@@ -3530,7 +3479,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3539,7 +3488,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "granfondo-bulgaria": {
@@ -3551,17 +3500,16 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-21",
       "blockers": [
         "validator: 1 error(s) — granfondo-bulgaria: Only 0 citations (minimum 3)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-campagnolo-roma": {
@@ -3593,9 +3541,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-31",
@@ -3603,8 +3551,7 @@
         "validator: 1 error(s) — granfondo-charlevoix: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-colnago": {
@@ -3616,15 +3563,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-10",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-ecuador": {
@@ -3636,9 +3582,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3646,8 +3592,7 @@
         "validator: 1 error(s) — granfondo-ecuador: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-eddy-merckx": {
@@ -3755,9 +3700,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -3765,8 +3710,7 @@
         "validator: 1 error(s) — granfondo-la-nucia: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-laigueglia": {
@@ -3778,9 +3722,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-02-22",
@@ -3788,8 +3732,7 @@
         "validator: 1 error(s) — granfondo-laigueglia: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-leiria": {
@@ -3803,14 +3746,14 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-29",
       "blockers": [
         "no editorial (biased_opinion.summary)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "granfondo-livigno-ale": {
@@ -3822,9 +3765,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
@@ -3832,8 +3775,7 @@
         "validator: 1 error(s) — granfondo-livigno-ale: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-matildica": {
@@ -3885,9 +3827,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-05",
@@ -3895,8 +3837,7 @@
         "validator: 1 error(s) — granfondo-moser: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-nove-colli": {
@@ -3908,9 +3849,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-24",
@@ -3918,8 +3859,7 @@
         "validator: 1 error(s) — granfondo-nove-colli: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-novi-sad": {
@@ -3987,9 +3927,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-18",
@@ -3997,8 +3937,7 @@
         "validator: 1 error(s) — granfondo-riviera-nayarit: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-san-sebastian": {
@@ -4030,9 +3969,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-28",
@@ -4040,8 +3979,7 @@
         "validator: 1 error(s) — granfondo-serra-da-estrela: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-sestriere": {
@@ -4053,9 +3991,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4063,8 +4001,7 @@
         "validator: 1 error(s) — granfondo-sestriere: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-siete-lagos": {
@@ -4076,9 +4013,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4086,8 +4023,7 @@
         "validator: 1 error(s) — granfondo-siete-lagos: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-strade-bianche": {
@@ -4099,9 +4035,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-08",
@@ -4109,8 +4045,7 @@
         "validator: 1 error(s) — granfondo-strade-bianche: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-tre-valli-varesine": {
@@ -4156,9 +4091,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4166,8 +4101,7 @@
         "validator: 1 error(s) — granfondo-vosges: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granfondo-yunnan": {
@@ -4179,9 +4113,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4189,8 +4123,7 @@
         "validator: 1 error(s) — granfondo-yunnan: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "granguanche-audax-road": {
@@ -4202,9 +4135,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4212,8 +4145,7 @@
         "validator: 1 error(s) — granguanche-audax-road: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "gruyere-cycling-tour": {
@@ -4248,16 +4180,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "haleakala-cycle-to-the-sun": {
@@ -4289,9 +4220,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-06",
@@ -4299,8 +4230,7 @@
         "validator: 1 error(s) — halvvattern: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "haute-route-alps": {
@@ -4409,9 +4339,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -4419,8 +4349,7 @@
         "validator: 1 error(s) — highlands-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "hong-kong-cyclothon": {
@@ -4432,9 +4361,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4442,8 +4371,7 @@
         "validator: 1 error(s) — hong-kong-cyclothon: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "hottern-hell-hundred": {
@@ -4472,9 +4400,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-02-08",
@@ -4482,8 +4410,7 @@
         "validator: 1 error(s) — inthanon-challenge: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "iron-horse-bicycle-classic": {
@@ -4514,9 +4441,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-11",
@@ -4524,8 +4451,7 @@
         "validator: 1 error(s) — istria-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "istria-granfondo": {
@@ -4556,16 +4482,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 3,
       "race_date": "2026-08-15",
       "blockers": [
         "validator: 1 error(s) — jamtlandspilen: Only 2 citations (minimum 3)",
-        "no editorial (biased_opinion.summary)",
-        "eligibility unverified (unknown)"
+        "no editorial (biased_opinion.summary)"
       ]
     },
     "jedermann-rennen-koln": {
@@ -4577,9 +4502,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
@@ -4587,8 +4512,7 @@
         "validator: 1 error(s) — jedermann-rennen-koln: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "k2-road-ride": {
@@ -4600,9 +4524,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4610,8 +4534,7 @@
         "validator: 1 error(s) — k2-road-ride: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "knysna-cycle-tour": {
@@ -4623,9 +4546,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-12",
@@ -4633,8 +4556,7 @@
         "validator: 1 error(s) — knysna-cycle-tour: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "korea-epic-ride": {
@@ -4648,7 +4570,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -4657,7 +4579,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "krk-gran-fondo": {
@@ -4669,9 +4591,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-25",
@@ -4679,8 +4601,7 @@
         "validator: 1 error(s) — krk-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "la-leggendaria-charly-gaul": {
@@ -4731,17 +4652,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 14,
       "race_date": "2026-10-29",
       "blockers": [
         "validator: 1 error(s) — la-ruta-de-los-conquistadores: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "la-stelvio-santini": {
@@ -4770,16 +4690,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-06-15",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "lake-taupo-cycle-challenge": {
@@ -4827,9 +4746,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
@@ -4837,8 +4756,7 @@
         "validator: 1 error(s) — lariegeoise-cyclosportive: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "le-loop": {
@@ -4903,9 +4821,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -4913,8 +4831,7 @@
         "validator: 1 error(s) — les-trois-ballons: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-argentina": {
@@ -4926,15 +4843,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-22",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-australia": {
@@ -4983,17 +4899,16 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-05",
       "blockers": [
         "validator: 1 error(s) — letape-bulgaria: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-cancun": {
@@ -5005,16 +4920,15 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
         "validator: 1 error(s) — letape-cancun: Only 1 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-chile": {
@@ -5133,15 +5047,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-01-25",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-greece": {
@@ -5153,15 +5066,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-04",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-indonesia": {
@@ -5196,9 +5108,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5206,8 +5118,7 @@
         "validator: 1 error(s) — letape-ireland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-italy-piemonte": {
@@ -5274,9 +5185,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5284,8 +5195,7 @@
         "validator: 1 error(s) — letape-parma: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-piemonte": {
@@ -5297,9 +5207,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5307,8 +5217,7 @@
         "validator: 1 error(s) — letape-piemonte: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-poland": {
@@ -5339,15 +5248,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-09-28",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "letape-romania": {
@@ -5505,9 +5413,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5515,8 +5423,7 @@
         "validator: 1 error(s) — london-edinburgh-london: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "london-to-brighton": {
@@ -5562,9 +5469,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5572,8 +5479,7 @@
         "validator: 1 error(s) — majka-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "mallorca-312": {
@@ -5585,16 +5491,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-25",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "manali-khardungla-cycling-championship": {
@@ -5606,9 +5511,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -5616,8 +5521,7 @@
         "validator: 1 error(s) — manali-khardungla-cycling-championship: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "maraton-franja": {
@@ -5684,14 +5588,14 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-08-24",
       "blockers": [
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "midnight-sun-randonnee": {
@@ -5792,9 +5696,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -5802,8 +5706,7 @@
         "validator: 1 error(s) — mt-fuji-hill-climb: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "mt-washington-hillclimb": {
@@ -5815,15 +5718,14 @@
         "editorial": true,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 3,
       "race_date": "2026-08-15",
       "blockers": [
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "muju-gran-fondo": {
@@ -5930,16 +5832,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-13",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "nove-colli": {
@@ -5968,9 +5869,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-06",
@@ -5978,8 +5879,7 @@
         "validator: 1 error(s) — nxt-classic: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "nyc-century": {
@@ -5991,15 +5891,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-09-21",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "ocbc-cycle-singapore": {
@@ -6011,9 +5910,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-09",
@@ -6021,8 +5920,7 @@
         "validator: 1 error(s) — ocbc-cycle-singapore: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "oetztaler-radmarathon": {
@@ -6034,17 +5932,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 5,
       "race_date": "2026-08-30",
       "blockers": [
         "validator: 1 error(s) — oetztaler-radmarathon: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "old-mutual-wealth-double-century": {
@@ -6056,9 +5953,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -6066,8 +5963,7 @@
         "validator: 1 error(s) — old-mutual-wealth-double-century: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "omloop-het-nieuwsblad-sportive": {
@@ -6187,9 +6083,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-29",
@@ -6197,8 +6093,7 @@
         "validator: 1 error(s) — peaks-and-plains: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "peaks-challenge-falls-creek": {
@@ -6229,9 +6124,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -6239,8 +6134,7 @@
         "validator: 1 error(s) — pedal-imua: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "pekan-classics": {
@@ -6290,9 +6184,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-29",
@@ -6300,8 +6194,7 @@
         "validator: 1 error(s) — perth-hills-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "prosecco-cycling": {
@@ -6330,16 +6223,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-20",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-america": {
@@ -6370,9 +6262,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-27",
@@ -6380,8 +6272,7 @@
         "validator: 1 error(s) — race-across-belgium: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-benelux": {
@@ -6393,9 +6284,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-27",
@@ -6403,8 +6294,7 @@
         "validator: 1 error(s) — race-across-benelux: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-france": {
@@ -6416,16 +6306,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-18",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-germany": {
@@ -6437,16 +6326,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-02",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-italy-300": {
@@ -6458,9 +6346,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-02",
@@ -6468,8 +6356,7 @@
         "validator: 1 error(s) — race-across-italy-300: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-portugal": {
@@ -6481,9 +6368,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-25",
@@ -6491,8 +6378,7 @@
         "validator: 1 error(s) — race-across-portugal: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-across-spain": {
@@ -6504,15 +6390,14 @@
         "editorial": false,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 7,
       "race_date": "2026-09-16",
       "blockers": [
-        "no editorial (biased_opinion.summary)",
-        "eligibility unverified (unknown)"
+        "no editorial (biased_opinion.summary)"
       ]
     },
     "race-around-austria": {
@@ -6524,9 +6409,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -6534,8 +6419,7 @@
         "validator: 1 error(s) — race-around-austria: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-around-ireland": {
@@ -6547,9 +6431,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -6557,8 +6441,7 @@
         "validator: 1 error(s) — race-around-ireland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-around-netherlands": {
@@ -6570,9 +6453,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-02",
@@ -6580,8 +6463,7 @@
         "validator: 1 error(s) — race-around-netherlands: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-around-poland": {
@@ -6593,9 +6475,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
@@ -6603,8 +6485,7 @@
         "validator: 1 error(s) — race-around-poland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "race-through-poland": {
@@ -6616,9 +6497,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-23",
@@ -6626,8 +6507,7 @@
         "validator: 1 error(s) — race-through-poland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "rad-am-ring": {
@@ -6656,16 +6536,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-18",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "raid-pyreneen": {
@@ -6741,13 +6620,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "rbc-granfondo-whistler": {
@@ -6795,17 +6674,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 6,
       "race_date": "2026-09-05",
       "blockers": [
         "validator: 1 error(s) — ride-across-britain: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "ride-across-indiana": {
@@ -6817,15 +6695,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "ride-across-wisconsin": {
@@ -6837,15 +6714,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-11",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "ride-the-rockies": {
@@ -6894,16 +6770,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-18",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "ring-of-kerry-charity-cycle": {
@@ -6957,9 +6832,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
@@ -6967,8 +6842,7 @@
         "validator: 1 error(s) — sado-long-ride-210: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "schleck-gran-fondo": {
@@ -7069,9 +6943,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -7079,8 +6953,7 @@
         "validator: 1 error(s) — seorak-granfondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "sierra-nevada-limite": {
@@ -7092,16 +6965,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-23",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "sovev-jerusalem": {
@@ -7113,9 +6985,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-08",
@@ -7123,8 +6995,7 @@
         "validator: 1 error(s) — sovev-jerusalem: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "spinneys-dubai-92": {
@@ -7170,9 +7041,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2025-11-15",
@@ -7180,8 +7051,7 @@
         "validator: 1 error(s) — sriwijaya-ranau-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "stellenbosch-cycle-tour": {
@@ -7233,16 +7103,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-24",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "struggle-moors": {
@@ -7254,9 +7123,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-05",
@@ -7264,8 +7133,7 @@
         "validator: 1 error(s) — struggle-moors: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "styrkeproven": {
@@ -7314,15 +7182,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "surrey-rumble": {
@@ -7334,9 +7201,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
@@ -7344,8 +7211,7 @@
         "validator: 1 error(s) — surrey-rumble: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "suzuka-endurance-road": {
@@ -7357,9 +7223,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-03",
@@ -7367,8 +7233,7 @@
         "validator: 1 error(s) — suzuka-endurance-road: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "taiwan-kom-challenge": {
@@ -7438,9 +7303,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -7448,8 +7313,7 @@
         "validator: 1 error(s) — the-majestics: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "the-millars-gran-fondo": {
@@ -7461,17 +7325,16 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-22",
       "blockers": [
         "validator: 1 error(s) — the-millars-gran-fondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tjejvattern": {
@@ -7483,9 +7346,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-06",
@@ -7493,8 +7356,7 @@
         "validator: 1 error(s) — tjejvattern: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tortour": {
@@ -7557,15 +7419,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-de-fukushima": {
@@ -7596,16 +7457,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-31",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-de-matra": {
@@ -7617,17 +7477,16 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-29",
       "blockers": [
         "validator: 1 error(s) — tour-de-matra: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-de-okinawa": {
@@ -7656,15 +7515,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-02-07",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-de-pologne-amatorow": {
@@ -7737,17 +7595,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 17,
       "race_date": "2026-11-21",
       "blockers": [
         "validator: 1 error(s) — tour-de-tucson: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "tour-de-yabakei": {
@@ -7759,9 +7616,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -7769,8 +7626,7 @@
         "validator: 1 error(s) — tour-de-yabakei: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-de-yorkshire-sportive": {
@@ -7844,15 +7700,14 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-19",
       "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-o-the-borders": {
@@ -7864,9 +7719,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -7874,8 +7729,7 @@
         "validator: 1 error(s) — tour-o-the-borders: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-cambridgeshire": {
@@ -7889,13 +7743,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "tour-of-flanders-sportive": {
@@ -7907,16 +7761,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-04",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-georgia-gran-fondo": {
@@ -7985,9 +7838,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-23",
@@ -7995,8 +7848,7 @@
         "validator: 1 error(s) — tour-of-pembrokeshire: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-southland": {
@@ -8008,9 +7860,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-01-18",
@@ -8018,8 +7870,7 @@
         "validator: 1 error(s) — tour-of-southland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-the-battenkill-road": {
@@ -8031,16 +7882,15 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-09",
       "blockers": [
         "validator: 1 error(s) — tour-of-the-battenkill-road: Only 1 citations (minimum 3)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-the-gila": {
@@ -8071,16 +7921,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-17",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-thekkady": {
@@ -8092,16 +7941,15 @@
         "editorial": false,
         "course_character": true,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-14",
       "blockers": [
         "no editorial (biased_opinion.summary)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "tour-of-wessex": {
@@ -8136,17 +7984,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 9,
       "race_date": "2026-09-25",
       "blockers": [
         "validator: 1 error(s) — trans-pyrenees-race: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "transatlanticway": {
@@ -8158,9 +8005,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-18",
@@ -8168,8 +8015,7 @@
         "validator: 1 error(s) — transatlanticway: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "trek-100": {
@@ -8258,9 +8104,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-26",
@@ -8268,8 +8114,7 @@
         "validator: 1 error(s) — two-volcano-sprint: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "uci-gran-fondo-hangzhou": {
@@ -8281,9 +8126,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -8291,8 +8136,7 @@
         "validator: 1 error(s) — uci-gran-fondo-hangzhou: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "uci-gran-fondo-ireland": {
@@ -8304,9 +8148,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-27",
@@ -8314,8 +8158,7 @@
         "validator: 1 error(s) — uci-gran-fondo-ireland: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "uci-gran-fondo-world-championships": {
@@ -8344,9 +8187,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-05-23",
@@ -8354,8 +8197,7 @@
         "validator: 1 error(s) — utrecht-ultra: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "valley-granfondo": {
@@ -8367,9 +8209,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-07",
@@ -8377,8 +8219,7 @@
         "validator: 1 error(s) — valley-granfondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "vatternrundan": {
@@ -8390,16 +8231,15 @@
         "editorial": true,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-12",
       "blockers": [
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "velo-vietnam-northern-frontier": {
@@ -8411,17 +8251,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 10,
       "race_date": "2026-10-02",
       "blockers": [
         "validator: 1 error(s) — velo-vietnam-northern-frontier: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "velomediane-criquielion": {
@@ -8433,17 +8272,16 @@
         "editorial": false,
         "course_character": false,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": 4,
       "race_date": "2026-08-22",
       "blockers": [
         "validator: 1 error(s) — velomediane-criquielion: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
-        "no course_character (course_description.character)",
-        "eligibility unverified (unknown)"
+        "no course_character (course_description.character)"
       ]
     },
     "velothon-berlin": {
@@ -8457,14 +8295,14 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2024-07-28",
       "blockers": [
         "no editorial (biased_opinion.summary)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "veloturk-gran-fondo-cesme": {
@@ -8476,9 +8314,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -8486,8 +8324,7 @@
         "validator: 1 error(s) — veloturk-gran-fondo-cesme: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "vermont-gran-fondo": {
@@ -8501,7 +8338,7 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "cancelled",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -8510,7 +8347,7 @@
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: cancelled"
       ]
     },
     "viana-granfondo": {
@@ -8522,9 +8359,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-03-15",
@@ -8532,8 +8369,7 @@
         "validator: 1 error(s) — viana-granfondo: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "vietnam-cycling-challenge": {
@@ -8568,9 +8404,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -8578,8 +8414,7 @@
         "validator: 1 error(s) — vuelta-cicloturista-ibiza: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "vuelta-puerto-rico": {
@@ -8591,9 +8426,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
@@ -8601,8 +8436,7 @@
         "validator: 1 error(s) — vuelta-puerto-rico: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "wadi-dayqah-challenge": {
@@ -8614,9 +8448,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-01-24",
@@ -8624,8 +8458,7 @@
         "validator: 1 error(s) — wadi-dayqah-challenge: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "whistler-granfondo": {
@@ -8654,9 +8487,9 @@
         "editorial": false,
         "course_character": false,
         "future_date": false,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-19",
@@ -8664,8 +8497,7 @@
         "validator: 1 error(s) — white-horse-challenge: Only 0 citations (minimum 3)",
         "no editorial (biased_opinion.summary)",
         "no course_character (course_description.character)",
-        "no parsed future date",
-        "eligibility unverified (unknown)"
+        "no parsed future date"
       ]
     },
     "white-rose-classic": {
