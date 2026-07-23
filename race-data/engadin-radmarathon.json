@@ -9,6 +9,8 @@
       "distance_mi": 137.0,
       "elevation_m": 4000,
       "elevation_ft": 13123.0,
+      "start_elevation_asl_ft": 4836,
+      "avg_elevation_asl_ft": 5840,
       "location": "Zernez, Engadin Valley, Graubunden, Switzerland",
       "location_badge": "ZERNEZ, SWITZERLAND",
       "country": "Switzerland",
@@ -140,6 +142,16 @@
       "alternatives": "If you want a harder single-day Alpine sportive: the Otztaler Radmarathon (227 km, 5,500m). If you want Dolomite grandeur with a bigger field: the Maratona dles Dolomites. If you want a Swiss climbing event with global prestige: the Alpenbrevet. If you want a multi-day cycling adventure without the sportive format: the Tour du Mont-Blanc Cyclo."
     },
     "citations": [
+      {
+        "url": "https://www.rad-marathon.ch/de/rennen/strecken/prolog",
+        "category": "official",
+        "label": "Engadin Radmarathon — Official Route Pages: Zernez start \"Via Suot (1474 m ü. M.)\" — basis for start ASL 4,836 ft / avg ASL ~5,840 ft estimate (Wave-C QC fix: altitude wording verified and kept, 2026-07-23)"
+      },
+      {
+        "url": "https://www.rad-marathon.ch/sites/engadin_radmarathon/files/2026-06/Programmheft_ERM_2026.pdf",
+        "category": "official",
+        "label": "Engadin Radmarathon — Official 2026 Program/Course Profiles (Ofenpass/Forcola/Bernina/Fluela/Albula pass elevations)"
+      },
       {
         "url": "https://www.rad-marathon.ch/en",
         "category": "official",
