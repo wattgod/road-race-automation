@@ -271,6 +271,15 @@ PLAN_SLUG_ALIASES = {
     "gran-fondo-la-fausto-coppi": "granfondo-la-fausto-coppi",
     "triple-bypass": "triple-bypass-colorado-s-three-pass-challenge",
     "cyprus-gran-fondo": "uci-cyprus-gran-fondo",
+    "marmotte-granfondo-sestriere": "granfondo-sestriere-colle-delle-finestre",
+    "seattle-to-portland": "stp-seattle-to-portland",
+    "letape-czech-republic": "l-etape-czech-republic-by-tour-de-france",
+    "london-to-brighton": "london-to-brighton-bike-ride",
+    "alpe-dhuzes": "alpe-d-huzes",
+    "nove-colli": "granfondo-nove-colli",
+    "sudety-tour": "dekom-system-sudety-tour",
+    "spinneys-dubai-92": "spinneys-dubai-92-cycle-challenge",
+    "letape-chile": "l-etape-chile-by-tour-de-france",
 }
 
 # Display order for the plan ladder — full plan first, emergency/short plan
