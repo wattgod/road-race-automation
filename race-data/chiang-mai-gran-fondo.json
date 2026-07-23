@@ -129,10 +129,10 @@
       }
     ],
     "eligibility": {
-      "status": "unknown",
+      "status": "defunct",
       "verified": "2026-07-23",
-      "source": "https://chiangmaigranfondo.com/",
-      "notes": "our profile is GFNY Chiang Mai but research only surfaced 'Chiang Mai Gran Fondo' (Gran Fondo World Tour, Dec 13 2026) — likely a DIFFERENT event; GFNY edition unconfirmed, site bot-blocked; needs human check for conflation"
+      "source": "https://gfny.com/race-finder/",
+      "notes": "No evidence any 'GFNY Chiang Mai' edition ever ran: GFNY's complete Asia rosters (Krabi, Khao Yai, Bali, Mandalika, Kuala Lumpur — gfny.com newsroom 2022-2023 + Gran Fondo Guide's full GFNY calendars) never include Chiang Mai, and every web reference to this name traces back to our own pages. A separate non-GFNY 'Chiang Mai Gran Fondo' runs in December (grandfondodailynews calendar). Profile is fabricated-as-named/conflated; defunct chosen so downstream surfaces suppress it. RECOMMEND full tombstone removal (both brands) at next catalog pass."
     }
   }
 }
