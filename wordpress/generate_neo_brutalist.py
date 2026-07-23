@@ -452,6 +452,8 @@ def normalize_race_data(data: dict) -> dict:
 
     return {
         'name': race.get('display_name') or race.get('name', 'Unknown Race'),
+        # R4 eligibility (2026-07-23): drives the not-running commerce gate
+        'eligibility': race.get('eligibility') or {},
         'slug': race.get('slug', ''),
         'tagline': race.get('tagline', ''),
         'overall_score': rating.get('overall_score', 0),
@@ -1297,7 +1299,12 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
       if (T.indexOf('BUILD MY') !== -1) cta_type = 'build_plan';
       else if (T.indexOf('PREP KIT') !== -1) cta_type = 'prep_kit';
       else if (T.indexOf('COACHING') !== -1) cta_type = 'coaching';
-      var section = this.closest('.rl-section, .rl-sticky-cta');
+      var section = this.closest('.rl-section, 
+  /* not-running status notice (defunct/cancelled, 2026-07-23) */
+  .rl-status-notice { border: 2px solid var(--rl-color-ink, #1a1a1a); padding: 14px 18px; margin: 20px auto; max-width: var(--rl-max-width, 1080px); display: flex; align-items: baseline; gap: 14px; background: var(--rl-color-paper, #f5f5f0); }
+  .rl-status-notice-label { font-family: var(--rl-font-mono, 'Sometype Mono', monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; white-space: nowrap; border: 2px solid var(--rl-color-ink, #1a1a1a); padding: 2px 8px; }
+  .rl-status-notice p { margin: 0; font-size: 14px; }
+  .rl-sticky-cta');
       var section_id = section ? (section.id || section.className.split(' ')[0]) : 'unknown';
       gtag('event', 'cta_click', {
         cta_type: cta_type,
@@ -4157,6 +4164,30 @@ def _load_plans_by_slug() -> dict:
     return by_slug
 
 
+def build_status_notice(rd: dict) -> str:
+    """Honest not-running notice for defunct/cancelled races (2026-07-23).
+
+    Trust-first: the profile stays up as a record, but a visitor planning a
+    season must see the status before anything sells to them. Plan commerce
+    (custom-plan offer, plan ladder) is suppressed on these pages; coaching
+    stays (bikepacking-shelf precedent)."""
+    status = (rd.get('eligibility') or {}).get('status')
+    if status == 'defunct':
+        msg = ("This event is no longer running. The profile stays up as a "
+               "record&mdash;the ratings describe the race as it was.")
+        label = "NO LONGER RUNNING"
+    elif status == 'cancelled':
+        msg = ("The upcoming edition has been cancelled. Check the "
+               "organizer&rsquo;s site before planning a season around this one.")
+        label = "EDITION CANCELLED"
+    else:
+        return ''
+    return f'''<div class="rl-status-notice" role="note">
+    <span class="rl-status-notice-label">{label}</span>
+    <p>{msg}</p>
+  </div>'''
+
+
 def build_plan_ladder(rd: dict) -> str:
     """Build the "Train for this race" TrainingPeaks plan ladder block.
 
@@ -6035,10 +6066,15 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     email_capture = build_email_capture(rd)
     visible_faq = build_visible_faq(rd)
     news = build_news_section(rd)
-    custom_plan = build_custom_plan_offer(rd)
+    # Defunct/cancelled races (race-data eligibility, R4 audit): no plan
+    # commerce — selling a $15/wk build for a race that will not happen is a
+    # trust breach. Coaching stays; an honest status notice renders instead.
+    not_running = (rd.get('eligibility') or {}).get('status') in ('defunct', 'cancelled')
+    status_notice = build_status_notice(rd)
+    custom_plan = '' if not_running else build_custom_plan_offer(rd)
     coaching = build_coaching_footnote(rd)
     training = build_training_intelligence(rd)
-    plan_ladder = build_plan_ladder(rd)
+    plan_ladder = '' if not_running else build_plan_ladder(rd)
     train_for_race = build_train_for_race(rd, include_commerce=False)
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
@@ -6143,6 +6179,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   {nav_header}
 
   {hero}
+  {status_notice}
 
   {spine}
 
