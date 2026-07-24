@@ -1004,8 +1004,8 @@
     "name": "White Rose Classic",
     "slug": "white-rose-classic",
     "location": "Ilkley, West Yorkshire, UK",
-    "country": "USA",
-    "region": "North America",
+    "country": "England",
+    "region": "UK & Ireland",
     "month": "May",
     "distance_km": 201.2,
     "distance_mi": 125.0,
@@ -1446,7 +1446,7 @@
       "expenses": 3,
       "cultural_impact": 3
     },
-    "tagline": "Three countries. 48 hairpins up the Stelvio. 3,000 riders from 30 nations. The Alpine tri-border gran fondo that sells out in hours.",
+    "tagline": "Three countries. 48 hairpins up the Stelvio. 3,000 riders from 40+ nations. The Alpine tri-border gran fondo that sells out in hours.",
     "has_profile": true,
     "profile_url": "/race/dreilander-giro/",
     "discipline": "gran_fondo",
@@ -3687,10 +3687,10 @@
     "country": "Colombia",
     "region": "South America",
     "month": "April",
-    "distance_km": 121.0,
-    "distance_mi": 75.0,
-    "elevation_m": 2563,
-    "elevation_ft": 8408.0,
+    "distance_km": 101.1,
+    "distance_mi": 62.8,
+    "elevation_m": 2321,
+    "elevation_ft": 7615.0,
     "tier": 2,
     "overall_score": 73,
     "scores": {
@@ -3728,10 +3728,10 @@
     "country": "USA",
     "region": "North America",
     "month": "June",
-    "distance_km": 160.9,
-    "distance_mi": 100.0,
-    "elevation_m": 2743,
-    "elevation_ft": 9000.0,
+    "distance_km": 149.7,
+    "distance_mi": 93.0,
+    "elevation_m": 2073,
+    "elevation_ft": 6800.0,
     "tier": 2,
     "overall_score": 73,
     "scores": {
@@ -3766,10 +3766,10 @@
     "country": "France",
     "region": "Western Europe",
     "month": "May",
-    "distance_km": 174.9,
-    "distance_mi": 108.7,
-    "elevation_m": 2894,
-    "elevation_ft": 9495.0,
+    "distance_km": 177.5,
+    "distance_mi": 110.3,
+    "elevation_m": 3087,
+    "elevation_ft": 10128.0,
     "tier": 2,
     "overall_score": 73,
     "scores": {
@@ -3798,10 +3798,10 @@
     "route_options": [
       {
         "name": "Granfondo",
-        "distance_km": 175,
-        "distance_mi": 108.7,
-        "elevation_m": 2894,
-        "elevation_ft": 9495,
+        "distance_km": 177.5,
+        "distance_mi": 110.3,
+        "elevation_m": 3087,
+        "elevation_ft": 10128,
         "qualifier": "Men 19-59 for UCI Worlds"
       },
       {
@@ -3890,7 +3890,7 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "141 kilometers and 4,000 meters of climbing from Trento's Cathedral Square to the summit of Monte Bondone — the same finish where Charly Gaul collapsed, frozen and victorious, in the 1956 Giro d'Italia. UCI Gran Fondo World Series qualifier since 2012.",
+    "tagline": "141 kilometers and 4,000 meters of climbing from Trento's Cathedral Square to the summit of Monte Bondone — the same finish where Charly Gaul collapsed, frozen and victorious, in the 1956 Giro d'Italia. A UCI Gran Fondo World Series qualifier from 2012 until its final edition in 2019.",
     "has_profile": true,
     "profile_url": "/race/la-leggendaria-charly-gaul/",
     "discipline": "gran_fondo",
@@ -5874,10 +5874,10 @@
     "country": "Colombia",
     "region": "South America",
     "month": "December",
-    "distance_km": 109.4,
-    "distance_mi": 68.0,
-    "elevation_m": 1500,
-    "elevation_ft": 4921.0,
+    "distance_km": 128.0,
+    "distance_mi": 79.5,
+    "elevation_m": 1276,
+    "elevation_ft": 4186.0,
     "tier": 2,
     "overall_score": 70,
     "scores": {
@@ -5897,7 +5897,7 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "High-altitude UCI qualifier in Colombia's cycling capital",
+    "tagline": "High-altitude UCI qualifier that ran once in Bogotá before the series relocated to Medellín",
     "has_profile": true,
     "profile_url": "/race/granfondo-bogota/",
     "discipline": "gran_fondo",
@@ -5966,8 +5966,8 @@
     "country": "Croatia",
     "region": "Southern Europe",
     "month": "April",
-    "distance_km": 112.0,
-    "distance_mi": 69.6,
+    "distance_km": 105.0,
+    "distance_mi": 65.2,
     "elevation_m": 1745,
     "elevation_ft": 5725.0,
     "tier": 2,
@@ -5989,15 +5989,15 @@
       "expenses": 4,
       "cultural_impact": 3
     },
-    "tagline": "UCI qualifier crams 112km and 1745m into Istria's savage coastal climbs—pure sufferfest gold.",
+    "tagline": "UCI qualifier crams 105km into Istria's savage coastal climbs—pure sufferfest gold.",
     "has_profile": true,
     "profile_url": "/race/istria-granfondo/",
     "discipline": "gran_fondo",
     "lat": 45.4342,
     "lng": 13.5254,
     "route_options": [
-      "Granfondo: 69.6mi, 5725ft — brutal Istrian climbs with Oprtalj repeat",
-      "Mediofondo: ~55mi, 4114ft — scaled-down central peninsula punishment",
+      "Granfondo: 65.2mi (105km), elevation not independently reconfirmed for this distance (prior-year figure was 5725ft/1745m on a longer 112km course) — brutal Istrian climbs with Oprtalj repeat (2026 official distance; some prior editions ran 112km/119km — course length varies by year)",
+      "Mediofondo: 49.7mi (80km) — scaled-down central peninsula punishment (2026 official distance; prior editions ran ~87-94km)",
       "Time Trial: 13.9mi, ~1050ft — flat-out Friday qualifier blast"
     ]
   },
@@ -6813,10 +6813,10 @@
     "country": "Belgium",
     "region": "Western Europe",
     "month": "March",
-    "distance_km": 65.0,
-    "distance_mi": 40.4,
-    "elevation_m": 2901350.0,
-    "elevation_ft": 951.0,
+    "distance_km": 225.0,
+    "distance_mi": 139.8,
+    "elevation_m": 1100,
+    "elevation_ft": 3609.0,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -6842,7 +6842,13 @@
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "225 km — +1,100m gain — flagship route, crosses into France, Plugstreets unpaved sectors, cobbles",
+      "150 km — +1,100m gain",
+      "125 km — +900m gain",
+      "95 km — +600m gain",
+      "70 km — +340m gain — shortest route"
+    ]
   },
   {
     "name": "GFNY New York",
@@ -6892,10 +6898,10 @@
     "country": "USA",
     "region": "North America",
     "month": "September",
-    "distance_km": 112.7,
-    "distance_mi": 70.0,
-    "elevation_m": 2364,
-    "elevation_ft": 7756.0,
+    "distance_km": 128.6,
+    "distance_mi": 79.9,
+    "elevation_m": 2652,
+    "elevation_ft": 8701.0,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -6915,14 +6921,14 @@
       "expenses": 3,
       "cultural_impact": 2
     },
-    "tagline": "The hardest GFNY in America: 70 miles and 7,756 feet of climbing through Pennsylvania's relentless hills",
+    "tagline": "The hardest GFNY in America: 79.9 miles and 8,701 feet of climbing through Pennsylvania's relentless hills",
     "has_profile": true,
     "profile_url": "/race/gfny-pittsburgh/",
     "discipline": "gran_fondo",
     "lat": 40.4237,
     "lng": -79.7849,
     "route_options": [
-      "Long Course: 70 miles, 7,756 feet elevation — the competitive route featuring all 10 signature climbs",
+      "Long Course: 79.9 miles, 8,701 feet elevation — the competitive route featuring all 10 signature climbs (actual course as raced; pre-race billing was 70mi/7,756ft)",
       "Medium Course: 41 miles, shared climbs — recreational option tackling the same 10 climbs with full support"
     ]
   },
@@ -6973,8 +6979,8 @@
     "country": "Spain",
     "region": "Southern Europe",
     "month": "September",
-    "distance_km": 146.4,
-    "distance_mi": 91.0,
+    "distance_km": 138.43,
+    "distance_mi": 86.0,
     "elevation_m": 2538,
     "elevation_ft": 8327.0,
     "tier": 2,
@@ -6996,15 +7002,14 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "Ride with a legend. 146 km through the Costa Blanca mountains, alongside the man who won the Tour, the Giro, and the Vuelta — and still shows up to pedal with the field.",
+    "tagline": "Ride with a legend. 138 km through the Costa Blanca mountains, alongside the man who won the Tour, the Giro, and the Vuelta — and still shows up to pedal with the field.",
     "has_profile": true,
     "profile_url": "/race/granfondo-alberto-contador/",
     "discipline": "gran_fondo",
     "lat": 38.919,
     "lng": -0.123,
     "route_options": [
-      "Gran Fondo: 146 km (91 mi), ~2,538 m gain — full route with Coll de Rates, Sa Creueta, Fageca, Muro de Tollos, Mirador del Xap/El Miserat, Vall d'Ebo, and Pego",
-      "Medio Fondo: 111 km (69 mi), ~1,800 m gain — includes Coll de Rates, Sa Creueta, Vall d'Ebo, and Pego (bypasses the interior mountain loop)"
+      "Single route (2026): 138.43 km (86 mi) — official 2026 rules specify one route only, no separate Medio Fondo distance. The 2,538m elevation-gain figure carried in vitals is from the prior route configuration and has not been independently reconfirmed against the shorter 2026 course. Prior years offered a Gran Fondo (~146 km) / Medio Fondo (~111 km) split; that split is not current for 2026."
     ]
   },
   {
@@ -7016,8 +7021,8 @@
     "month": "June",
     "distance_km": 140.0,
     "distance_mi": 87.0,
-    "elevation_m": 1905,
-    "elevation_ft": 6250.0,
+    "elevation_m": 1961,
+    "elevation_ft": 6433.7,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -7048,16 +7053,16 @@
         "name": "Granfondo",
         "distance_km": 140,
         "distance_mi": 87,
-        "elevation_m": 1905,
-        "elevation_ft": 6250,
+        "elevation_m": 1961,
+        "elevation_ft": 6434,
         "qualifies": "Men under 60, Women under 50"
       },
       {
         "name": "Mediofondo",
         "distance_km": 70,
         "distance_mi": 43.5,
-        "elevation_m": 620,
-        "elevation_ft": 2034,
+        "elevation_m": 663,
+        "elevation_ft": 2175,
         "qualifies": "Men over 60, Women over 50"
       }
     ]
@@ -7739,8 +7744,8 @@
     "name": "UCI Gran Fondo World Championships",
     "slug": "uci-gran-fondo-world-championships",
     "location": "Venue rotates annually (2026: Niseko, Hokkaido, Japan)",
-    "country": "Japan)",
-    "region": "Other",
+    "country": "Japan",
+    "region": "Asia",
     "month": "August",
     "distance_km": 140.0,
     "distance_mi": 87.0,
@@ -10388,7 +10393,7 @@
       "expenses": 2,
       "cultural_impact": 3
     },
-    "tagline": "Greece's inaugural UCI Gran Fondo qualifier combining Mediterranean coastal riding with mountain climbing on the Isthmus of Corinth",
+    "tagline": "Greece's UCI Gran Fondo qualifier combining Mediterranean coastal riding with mountain climbing on the Isthmus of Corinth",
     "has_profile": true,
     "profile_url": "/race/gran-fondo-loutraki/",
     "discipline": "gran_fondo",
@@ -14603,7 +14608,7 @@
       "expenses": 3,
       "cultural_impact": 3
     },
-    "tagline": "The flagship edition of the world's largest cycling fundraising series. 30 or 50 traffic-free miles around Manhattan — through Battery Park Tunnel, past the Brooklyn Bridge, across the George Washington Bridge — raising money to end multiple sclerosis.",
+    "tagline": "The New York City edition of the world's largest cycling fundraising series. 30 or 50 traffic-free miles around Manhattan — through Battery Park Tunnel, past the Brooklyn Bridge, across the George Washington Bridge — raising money to end multiple sclerosis.",
     "has_profile": true,
     "profile_url": "/race/bike-ms-nyc/",
     "discipline": "gran_fondo",
@@ -14976,11 +14981,11 @@
     "location": "Cancun, Quintana Roo, Mexico",
     "country": "Mexico",
     "region": "North America",
-    "month": "May",
+    "month": "February",
     "distance_km": 101.9,
     "distance_mi": 63.3,
-    "elevation_m": null,
-    "elevation_ft": 0.0,
+    "elevation_m": 133,
+    "elevation_ft": 436.0,
     "tier": 3,
     "overall_score": 57,
     "scores": {
@@ -15007,8 +15012,8 @@
     "lat": 21.1619,
     "lng": -86.8515,
     "route_options": [
-      "Ruta Corta: 34mi, 0ft — breezy intro to paradise pedaling",
-      "Ruta Larga: 63mi, 0ft — full-throttle Caribbean crusher"
+      "Ruta Corta: 34mi (55.57km), 240ft (73m) — breezy intro to paradise pedaling",
+      "Ruta Larga: 63mi (101.48km), 436ft (133m) — full-throttle Caribbean crusher"
     ]
   },
   {
@@ -15630,7 +15635,7 @@
       "expenses": 4,
       "cultural_impact": 2
     },
-    "tagline": "ASO's Tour de France franchise returns to Argentina after an 11-year absence -- 134 km through the Sierras de Cordoba with the Argentine National Road Championship running alongside.",
+    "tagline": "ASO's Tour de France franchise returns to Argentina after an 11-year absence -- 134 km through the Sierras de Cordoba, the same province that separately hosted the returning Argentine National Road Championship a month later.",
     "has_profile": true,
     "profile_url": "/race/letape-argentina/",
     "discipline": "gran_fondo",
@@ -16055,13 +16060,13 @@
     "name": "Etape Caledonia",
     "slug": "etape-caledonia",
     "location": "Pitlochry, Perthshire, Scotland, UK",
-    "country": "USA",
-    "region": "North America",
+    "country": "United Kingdom",
+    "region": "Other",
     "month": "May",
-    "distance_km": 128.7,
-    "distance_mi": 80.0,
-    "elevation_m": 1554,
-    "elevation_ft": 5100.0,
+    "distance_km": 136.8,
+    "distance_mi": 85.0,
+    "elevation_m": 1555,
+    "elevation_ft": 5101.0,
     "tier": 3,
     "overall_score": 54,
     "scores": {
@@ -16081,15 +16086,16 @@
       "expenses": 3,
       "cultural_impact": 1
     },
-    "tagline": "Scotland's premier closed-road sportive. 80 miles through Highland Perthshire in the shadow of Schiehallion — the fairy hill where they first weighed the Earth.",
+    "tagline": "Scotland's premier closed-road sportive. 85 miles through Highland Perthshire in the shadow of Schiehallion — the fairy hill where they first weighed the Earth.",
     "has_profile": true,
     "profile_url": "/race/etape-caledonia/",
     "discipline": "gran_fondo",
     "lat": 56.7053,
     "lng": -3.734,
     "route_options": [
-      "Full Etape: ~128 km (80 miles), ~1,800m climbing",
-      "Shorter option typically available (~40 miles)"
+      "Full Etape: 136.8 km (85 miles), 1,555m / 5,101ft climbing",
+      "55 miles: 88.5 km, 1,166m / 3,826ft climbing",
+      "40 miles: 64.4 km, 860m / 2,823ft climbing"
     ]
   },
   {
