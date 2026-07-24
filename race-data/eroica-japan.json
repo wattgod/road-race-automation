@@ -9,11 +9,11 @@
       "distance_mi": 113.0,
       "elevation_m": 3856,
       "elevation_ft": 12651.0,
-      "location": "Kitakaruizawa, Gunma Prefecture, Japan",
-      "location_badge": "Kitakaruizawa, Japan",
+      "location": "Hitachinaka, Ibaraki Prefecture, Japan",
+      "location_badge": "Hitachinaka, Japan",
       "country": "Japan",
-      "date": "2026: April 11",
-      "date_specific": "2026: April 11",
+      "date": "2026: October 31 - November 1",
+      "date_specific": "2026: October 31 - November 1",
       "field_size": "N/A",
       "start_format": null,
       "registration": null,
@@ -70,9 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A vintage-bike festival, not a conventional timed gran fondo, and part of the international Eroica family that began at Gaiole in Chianti in 1997. The Sunday Eroica Classic requires vintage or vintage-mechanism equipment (down-tube shifters and toe clips are the baseline; some modern components are permitted only when they meet the organizer's specified mechanical criteria) across four distances: KAKUSAN 50 (48.2 km), SUKESAN 100 (100.3 km), MITSUKUNI 150 (150.9 km), and SHOGUN 190 (185.9 km, rounded to 190 on the schedule). A separate Saturday REYNOLDS Ride opens the same three shorter distances to modern road, disc-brake, and compliant e-bikes. The 2026 edition relocates the event to Hitachinaka, Ibaraki Prefecture, from its previous Izu Peninsula home (2025).",
+      "signature_challenge": "Completing SHOGUN 190 on vintage-mechanism equipment — mixed paved and unpaved roads, with down-tube shifting and toe clips as the baseline rather than modern indexed gearing.",
+      "suffering_zones": [
+        "Mixed unpaved sections — Ibaraki Prefecture's own announcement confirms gravel/unpaved roads are part of the 2026 course",
+        "Equipment constraints as much as terrain — vintage-mechanism down-tube shifters and toe clips on any real gradient are a different discipline from modern indexed gearing",
+        "The Oarai-Hitachi seaside route sections, finishing toward the 'Mito 531' aid station"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +92,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Vintage Pilgrimage, Moving Target",
+      "summary": "Eroica Japan is the real thing — a licensed outpost of the Eroica family that started in Tuscany in 1997, running in Japan since 2013 and marking its tenth anniversary in 2024. But this is fundamentally a vintage-bike festival, not a scored gran fondo: the Sunday Classic ride requires vintage-mechanism equipment (down-tube shifters and toe clips as the baseline, with only limited modern components permitted), and mixed paved/unpaved roads mean you're navigating real terrain on largely pre-indexed-shifting technology. The event has also moved location repeatedly — previously Izu Peninsula, relocating to Hitachinaka, Ibaraki for 2026.",
+      "strengths": [
+        "Genuine connection to the original L'Eroica lineage (Gaiole in Chianti, 1997) — not an imitation using the name",
+        "Ten-plus years running in Japan (since 2013), with a real festival atmosphere around vintage cycling culture",
+        "Four distance options (48-190 km) on the vintage Classic ride, plus a separate modern-bike Saturday ride for riders without period equipment",
+        "Confirmed mixed-surface course — genuine terrain variety, not a closed-loop pavement circuit"
+      ],
+      "weaknesses": [
+        "Not a timed, scored race — this is a vintage-equipment festival ride, so competitive riders looking for a ranked result should look elsewhere",
+        "Location changes between editions (Izu Peninsula historically, Hitachinaka/Ibaraki for 2026) — course character is not stable year to year",
+        "Vintage-equipment rules are a real barrier: no refunds after entry, and a mandatory bicycle inspection (¥4,400 without a pre-approved inspection sheet) adds cost and logistics most gran fondos don't require",
+        "No published field size or entrant cap found — hard to gauge event scale in advance"
+      ],
+      "bottom_line": "A genuine, well-pedigreed vintage-cycling pilgrimage rather than a competitive gran fondo — go for the equipment culture and the mixed-terrain course, not for a race result. Verify the current year's location directly with the organizer before booking travel; it moves."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Iconic vintage road event blending Japanese onsen culture with Eroica's retro prestige.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if vintage-bike culture and a genuine Eroica-family event appeal to you and you own or can source period-correct equipment. Skip if you want a timed, competitive result — this is a festival ride, not a race.",
+      "alternatives": "If you want the original vintage-bike event: L'Eroica (Gaiole in Chianti, Italy). If you want modern-bike gravel in Japan without the vintage-equipment requirement, look for Japan's other gravel gran fondos."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.eroica.cc/en/events/eroica-japan/",
+        "category": "official",
+        "label": "Eroica Japan — Official 2026 Event and Route Page"
+      },
+      {
+        "url": "https://www.eroica.cc/en/regulations/",
+        "category": "official",
+        "label": "Official Rules — Vintage Equipment Requirements"
+      },
+      {
+        "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/pressrelease/hodohappyoushiryou/2203/documents/260513sports3.pdf",
+        "category": "official",
+        "label": "Ibaraki Prefecture — 2026 Relocation and Gravel/Unpaved Course Confirmation"
+      },
+      {
+        "url": "https://www.eroica.cc/en/eroica-japan-10th-special-items/",
+        "category": "official",
+        "label": "Official Eroica Japan History — 2013 Founding, 10th Anniversary"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",

@@ -70,9 +70,14 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Two distinct races out of Lienz, East Tyrol: the 112 km Classic Dolomitenradrundfahrt (~1,870m) and the 218 km SuperGiroDolomiti (~5,060m) that this profile's vitals describe. The SuperGiro crosses the Austria-Italy border into Carinthia and Friuli, taking in Monte Zoncolan alongside the passes shared with the Classic route, before returning to Lienz. The Dolomitenradrundfahrt itself is Austria's oldest cycling marathon, first held in 1951; the SuperGiro is a later addition, launched in 2014 as the harder long-distance option (the 2026 editions were the 38th Dolomitenradrundfahrt and 11th SuperGiroDolomiti).",
+      "signature_challenge": "Monte Zoncolan — one of cycling's hardest climbs, tackled only on the 218 km SuperGiroDolomiti alongside a double ascent of the Plöckenpass.",
+      "suffering_zones": [
+        "Gailbergsattel — used by both the Classic and SuperGiro routes",
+        "Plöckenpass — climbed twice on the SuperGiro, the border crossing into Italy",
+        "Monte Zoncolan — the defining climb of the long route",
+        "Kartitscher Sattel through the Lesachtal — a late, remote test as the route returns toward Lienz"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +93,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Real Deal, Two Tiers",
+      "summary": "First run in 1951, the Dolomitenradrundfahrt is a genuine Austrian institution — 38 editions deep by 2026 and billed as the country's oldest cycling marathon. The 218 km SuperGiroDolomiti, added in 2014, is the race this profile's numbers describe: a border-crossing route into Italy that tackles Monte Zoncolan, one of cycling's hardest climbs, alongside a double Plöckenpass ascent. More than 2,000 riders from 26 countries took part across both distances in 2026. The organizer's own material has minor inconsistencies (a one-year gap in founding-year claims, some pages still citing the SuperGiro's older 228-240 km course length), which is worth knowing but doesn't undercut the core event's substance.",
+      "strengths": [
+        "Genuine, long-running institution — first held in 1951, one of Austria's oldest cycling marathons",
+        "Monte Zoncolan on the SuperGiro route — a legitimately brutal, world-class climb, not just a marketing name",
+        "Cross-border route through Austria, Carinthia, and Friuli adds real geographic and cultural variety",
+        "Two distance tiers (112 km Classic, 218 km SuperGiro) let riders choose their day"
+      ],
+      "weaknesses": [
+        "Course-length data drift: some secondary and tourism pages still cite an older 228-240 km SuperGiro distance instead of the current 218 km",
+        "The organizer's own material is inconsistent about the founding year (1951 vs. a 'since 1950' figure on other pages)",
+        "Firm cutoffs — 19:30 for the SuperGiro, 16:30 for the Classic — with no recorded finish for riders arriving later",
+        "€125-145 entry for the SuperGiro is a meaningful cost for a race without a marquee international brand name"
+      ],
+      "bottom_line": "A genuinely historic race with a genuinely hard signature climb in Zoncolan — go for the SuperGiro if you want the full test, the Classic if 112 km and 1,870m is enough. Just don't trust every course-length figure you find outside the organizer's current official pages."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Legendary Austrian road ultra with epic Dolomites climbing and 70+ years of history.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuinely historic Alpine marathon with a world-class signature climb (Zoncolan) and don't mind firm time cutoffs. Consider the shorter Classic route if 218 km/5,060m is more than you want to take on.",
+      "alternatives": "If you want Zoncolan without the full SuperGiro distance: research standalone Zoncolan climbing routes from Ovaro. If you want a similarly historic Austrian/Italian border-region gran fondo: Alpenbrevet (Switzerland) covers comparable Alpine-pass volume."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.dolomitensport.at/en/supergirodolomiti-race-program.html",
+        "category": "official",
+        "label": "Official 2026 Program, Fees and Cutoffs"
+      },
+      {
+        "url": "https://www.dolomitensport.at/images/dolomitenradrundfahrt-supergirodolomiti/divers/Presse/medienservice-roseneder-14-06-2026.pdf",
+        "category": "official",
+        "label": "Organizer's 2026 Post-Event Report — Field Size, Course Figures"
+      },
+      {
+        "url": "https://www.dolomitensport.at/en/supergirodolomiti-results.html",
+        "category": "official",
+        "label": "Official Results Archive"
+      },
+      {
+        "url": "https://www.worldloppet.com/supergirodolomiti-the-ultimate-endurance-test-in-the-dolomites/",
+        "category": "media",
+        "label": "Contemporary Announcement of the First SuperGiro (2014)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Dolomitenradrundfahrt / SuperGiroDolomiti gran fondo cycling Lienz",

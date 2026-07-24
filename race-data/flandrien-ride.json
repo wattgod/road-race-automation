@@ -1,25 +1,25 @@
 {
   "race": {
-    "name": "Flandrien Ride",
+    "name": "The Flandrien Challenge",
     "slug": "flandrien-ride",
-    "display_name": "Flandrien Ride",
+    "display_name": "The Flandrien Challenge",
     "tagline": "",
     "vitals": {
-      "distance_km": 159.3,
-      "distance_mi": 99.0,
-      "elevation_m": 1676,
-      "elevation_ft": 5500.0,
-      "location": "Oudenaarde, Belgium",
+      "distance_km": 410.0,
+      "distance_mi": 254.8,
+      "elevation_m": 5540,
+      "elevation_ft": 18176.0,
+      "location": "Oudenaarde and Heuvelland, Flanders, Belgium",
       "location_badge": "Oudenaarde, Belgium",
       "country": "Belgium",
-      "date": "2026: April 4",
-      "date_specific": "2026: April 4",
+      "date": "Year-round — permanent, self-guided challenge with no fixed event date",
+      "date_specific": "No fixed date; attempt any time, 59 segments must be completed within a rolling 72-hour window",
       "field_size": null,
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "No sign-up or start list. Connect a Strava account to Cycling in Flanders and ride the 59 designated segments; the system validates completion automatically.",
+      "entry_fee": "Free to attempt. Optional third-party guided travel packages (Sportive Breaks) run roughly £749-£1,928 per person for a 4-night, 3-riding-day itinerary.",
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "72 hours from the first qualifying segment to the last — this is a self-timed challenge, not a race cutoff.",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -72,12 +72,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Punchy hellingen and vicious cobbled sectors through Flemish Ardennes, evoking Tour of Flanders suffering in self-paced glory.",
-      "signature_challenge": "Conquer all 59 marked berg & cobble Strava segments within 72 hours for your engraved stone on the Wall of Fame.",
+      "character": "Not a course in the normal sense — a permanent, self-guided Strava challenge across 59 designated segments split between two regions: nine around the Kemmelberg/Heuvelland area in West Flanders and fifty around Oudenaarde and the Flemish Ardennes, the beating heart of the Tour of Flanders cobbled climbs. There is no fixed route; riders choose how to connect the segments, and published routings range from a single ~304 km day to a standard three-day itinerary of roughly 410 km and 5,540 m. The only fixed rule is the clock: all 59 segments must register on Strava within a rolling 72-hour window.",
+      "signature_challenge": "The 72-hour Strava clock across all 59 segments — not any single climb, but the logistics of covering two separated regions and dozens of short, brutal hellingen before the window closes.",
       "suffering_zones": [
-        "Oude Kwaremont - Paterberg - Koppenberg finale: Legendary triple-threat combo; relentless cobbled ascents that break souls in the Tour of Flanders.",
-        "Day 2 Main Course: 190km with 12 climbs and 7 cobbled sectors; endless unheralded ups where true Flandriens earn their spurs.",
-        "West Flanders Starter: Ypres to Oudenaarde via Ghent-Wevelgem cobbles; 75km appetizer with 914m vert to whet the appetite."
+        "Oude Kwaremont, Paterberg, Koppenberg — the Tour of Flanders' most famous cobbled climbs, all part of the eastern segment cluster",
+        "Muur van Geraardsbergen (Kapelmuur) and Bosberg — historic Flandrien terrain southeast of Oudenaarde",
+        "Kemmelberg (both sides) — the western outlier cluster, geographically separate from the Oudenaarde segments and adding real connecting mileage"
       ]
     },
     "logistics": {
@@ -94,40 +94,64 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Not a Race",
+      "summary": "Read this carefully before you file it next to a gran fondo: The Flandrien Challenge is not an organized event. There's no start line, no field, no closed roads, no date. Visit Flanders launched it in November 2020 as a permanent, self-guided Strava challenge — ride all 59 designated segments across the Flemish Ardennes and Kemmelberg/Heuvelland areas, upload them to Strava, and complete the first-to-last interval inside a rolling 72-hour window. The climbs themselves are the real thing — Oude Kwaremont, Paterberg, Koppenberg, the Kapelmuur — roads the Tour of Flanders has made famous. But you're riding them alone or with friends on open Belgian roads, on your own schedule, racing a clock against yourself rather than a field. It is not a gran fondo.",
+      "strengths": [
+        "Real, iconic Flandrien terrain — Oude Kwaremont, Paterberg, Koppenberg, the Kapelmuur, and dozens more Tour of Flanders climbs, verified as actual designated segments",
+        "Free to attempt — no entry fee, no registration, just a Strava account and the willingness to ride",
+        "Total scheduling flexibility — attempt it any week of the year; published itineraries typically spread it across three riding days",
+        "A tangible finish-line moment: a personalized stone/plaque and a place on the Wall of Fame at the Centrum Ronde van Vlaanderen museum in Oudenaarde"
+      ],
+      "weaknesses": [
+        "This is not a race or organized sportive — no start list, no field, no shared-suffering atmosphere, no closed roads, nothing to actually 'enter'",
+        "No fixed course: total distance and elevation vary by how you connect the 59 segments — published routings range from roughly 304 km in a single day to 410+ km over three days",
+        "The segment list spans two separated regions (Kemmelberg/Heuvelland in the west, Oudenaarde/Flemish Ardennes in the east), which adds real, unglamorous connecting mileage between the famous climbs",
+        "Doing it properly from outside Belgium effectively requires a paid guided travel package (roughly £749-£1,928 per person via third-party operators) or serious self-arranged logistics"
+      ],
+      "bottom_line": "If you want the Tour of Flanders climbs under your own wheels on your own schedule, The Flandrien Challenge delivers exactly that. If you're looking for an organized gran fondo with a start line, a field, and race-day atmosphere, this isn't it — go ride We Ride Flanders or a similar dated sportive instead."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Ultimate Flandrien proving ground – suffer on hallowed cobbles, claim immortality in stone.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Attempt it if you want a self-directed, bucket-list tour of the actual Tour of Flanders cobbled climbs and don't need an organized-event atmosphere. Skip it if you're looking for a scored, dated gran fondo — this is a permanent Strava challenge, not a race.",
+      "alternatives": "If you want the same Flemish cobbles in an organized, dated mass-participation event: We Ride Flanders (Oudenaarde, official Tour of Flanders sportive). If you want a shorter, more casual Flanders-region ride: Flandrien 0.0 Cyclo (Haacht) or Flandrien Ride (Eindhoven, Netherlands-based recreational tour — a different, unrelated event despite the similar name)."
     },
     "citations": [
       {
         "url": "https://www.cyclinginflanders.cc/flandrien-challenge",
+        "category": "official",
+        "label": "The Flandrien Challenge — Official Cycling in Flanders Page"
+      },
+      {
+        "url": "https://cycling.vlaanderen/magazine/nieuws/de-flandrien-challenge-de-onwaarschijnlijke-rit",
+        "category": "official",
+        "label": "Cycling Vlaanderen — Launch Announcement (Nov 2020)"
+      },
+      {
+        "url": "https://partners.strava.com/case-studies/cycling-in-flanders-amplifying-a-legendary-tradition",
         "category": "reference",
-        "label": "Flandrien Challenge"
+        "label": "Strava Partner Case Study — Cycling in Flanders Integration"
       },
       {
         "url": "https://sportivebreaks.com/belgium-road-cycling-holidays/flandrien-challenge/",
-        "category": "reference",
-        "label": "Flandrien Challenge with Sportive Breaks"
+        "category": "other",
+        "label": "Sportive Breaks — Guided Flandrien Challenge Travel Package"
       },
       {
-        "url": "https://www.youtube.com/watch?v=iVsFVcneuUE",
-        "category": "media",
-        "label": "Flandrien Challenge. The unbelievable ride - YouTube"
+        "url": "https://colchesterrovers.org.uk/2023/04/25/flandrien-challenge-by-ray-robins/",
+        "category": "community",
+        "label": "Colchester Rovers CC — First-Person Three-Day Completion Report"
       }
     ],
+    "catalog_flags": {
+      "status_note": "Identity-corrected this wave (see eligibility.notes): content describes The Flandrien Challenge, a permanent self-guided Strava event, not the literal 'Flandrien Ride' (Eindhoven, nltourrides.nl) the slug/original name implied. Flagging for a human call on whether a permanent, dateless, non-race Strava challenge belongs in a database of scored, dated gran fondos at all — it doesn't fit the fondo_rating dimensions (field_depth, prestige, organization, etc. assume a race format) cleanly.",
+      "ruled": "2026-07-23 editorial calibration wave"
+    },
     "eligibility": {
-      "status": "unknown",
+      "status": "active",
       "verified": "2026-07-23",
-      "source": "https://www.cyclinginflanders.cc/faq",
-      "notes": "Search only surfaced We Ride Flanders and Flandrien 0.0 Cyclo, with no clear evidence of a distinct Oudenaarde-based road event named Flandrien Ride, so its current status cannot be determined.; via sonar-pro eligibility_audit"
+      "source": "https://sportivebreaks.com/belgium-road-cycling-holidays/flandrien-challenge/",
+      "notes": "IDENTITY CORRECTION (2026-07-23): this profile was mislabeled 'Flandrien Ride' with fabricated-looking vitals (159km/1,676m, fixed April date) that match neither of the two real events sharing similar names. The content (Kwaremont/Paterberg/Koppenberg, Wall of Fame, 59 segments) actually describes 'The Flandrien Challenge,' a permanent self-guided Strava challenge launched Nov 2020 by Cycling in Flanders/Visit Flanders — no fixed date, confirmed active via Sportive Breaks' live 2026 listing, a 2025 Strava case study, and multiple 2025 first-person completion reports. It is NOT the same event as 'Flandrien Ride' (a separate, real, Eindhoven-based Dutch recreational tour, nltourrides.nl) or 'We Ride Flanders' (the official Oudenaarde Tour of Flanders sportive). Renamed race.name/display_name to 'The Flandrien Challenge' to match; slug left unchanged (flandrien-ride) to avoid breaking existing URLs — flagging for a human call on whether this profile belongs in a database of scored, dated gran fondos at all, per the source research's own recommendation."
     }
   }
 }

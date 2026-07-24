@@ -72,15 +72,15 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Brutal Yorkshire Dales epic featuring seven monster climbs through wild moorland, remote valleys, and iconic high passes. Cinematic scenery meets relentless gradient.",
-      "signature_challenge": "Coal Road to Dent Station - relentless 7.8% gradient delivering you to England's highest mainline railway station through remote gritstone wilderness.",
+      "character": "A loop out of and back to Settle (the HQ moved here from Horton-in-Ribblesdale for 2026) through remote corners of the Yorkshire Dales National Park — moorland, gritstone valleys, and exposed high passes on roads that stay open to normal traffic throughout. Riders start in small groups of no more than 20, which thins the field-atmosphere but also means you're often alone with the terrain. The organizer has had to alter the route repeatedly in recent years for roadworks and winter damage, so the exact course is less stable year to year than most established sportives.",
+      "signature_challenge": "Park Rash — sections reported at 22-25% gradient, the course's hardest test. A longer, less brutal bypass via Kidstones Pass (max 13.8%) exists for riders who don't want the direct line.",
       "suffering_zones": [
-        "Langcliffe Scar: 2.3km @ 7.8% avg (18% max) - brutal race opener after 3km warm-up",
-        "Fleet Moss: Highest road in Yorkshire - bleak moorland exposure",
-        "Tan Hill Inn: Highest pub in England - remote grit test",
-        "Buttertubs Pass: Iconic Tour de Yorkshire climb with butter churn landmarks",
-        "Coal Road: 2.8km @ 7.8% avg to highest mainline station in England",
-        "Grinton Moor: 3.8km grind across wild Swaledale moorland"
+        "Langcliffe Scar: 2.3km at 7.8% average, 18% max — a brutal opener",
+        "Malham Tarn and Nab End — early exposed moorland",
+        "Park Rash: the intended signature climb at up to 22-25%",
+        "Grinton Moor: roughly 3.8km grinding across wild Swaledale moorland",
+        "Coal Road: 2.8km at 7.8% average, delivering riders to Dent Station, England's highest mainline railway stop",
+        "Birkdale and Mallerstang Common — remote, exposed, with little to no mobile coverage"
       ]
     },
     "logistics": {
@@ -97,50 +97,61 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Faded Monument",
+      "summary": "Étape du Dales was created to fund the Dave Rayner Foundation, which sends young British riders racing in continental Europe, and BikeRadar has historically ranked it alongside the Fred Whitton Challenge as one of the 'monuments' of the UK sportive scene. A 2025 BikeRadar assessment even judged its course harder than the Fred Whitton over comparable distance. But the numbers tell a different story than the reputation: BikeRadar reported entries had been 'falling off a cliff,' and the 2026 results page shows roughly 128 timed finishers across both distances — a fraction of the event's historic peak field. The terrain (Park Rash at up to 22-25%, remote exposed moorland, unpredictable road surfaces) is still genuinely brutal. What's changed is the atmosphere around it.",
+      "strengths": [
+        "Genuine charitable purpose — proceeds support the Dave Rayner Foundation's work funding young British riders racing in Europe",
+        "Real, unfiltered Yorkshire Dales terrain — Park Rash's 22-25% ramps and remote moorland sections are genuinely severe climbing",
+        "A 2025 BikeRadar assessment rated the course harder than the Fred Whitton Challenge over comparable distance and elevation",
+        "Small start groups (max 20 riders) reduce bunch chaos on narrow Dales roads"
+      ],
+      "weaknesses": [
+        "Field size has shrunk dramatically from its 'monument' peak — BikeRadar described entries as 'falling off a cliff,' and the 2026 results show roughly 128 finishers across both distances",
+        "Not closed-road — riders share the route with normal traffic throughout",
+        "Course instability: Park Rash and Langcliffe Scar were pulled from the route only five days before the 2024 event due to roadworks, and the organizer cited winter road damage when altering the 2026 course",
+        "Remote, exposed sections have little to no mobile phone coverage, and DNF riders may need to arrange their own return transport",
+        "The organizer's own material is inconsistent about the event's founding — BikeRadar says 2005, the organizer's rider information claims 'over 25 years' by counting an earlier charity-ride lineage"
+      ],
+      "bottom_line": "The terrain still earns the reputation — this is a genuinely hard, honest Yorkshire Dales test, and the Dave Rayner Foundation cause is worth supporting. But go in knowing you'll likely be riding a much smaller field than the event's 'UK monument' reputation implies, on open roads, with a course that can change on short notice."
     },
     "final_verdict": {
       "score": "76/100",
       "one_liner": "Ultimate Yorkshire Dales sufferfest - 10,500ft of cinematic climbing punishment.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want genuinely hard Yorkshire Dales climbing for a real cause and don't need a large-field atmosphere. Skip if you're chasing the event's historic 'UK monument' reputation — the field has shrunk well below that scale.",
+      "alternatives": "If you want the large-field version of a hard UK sportive: Fred Whitton Challenge (Lake District). If you want similarly remote Dales moorland with a different organizer: Struggle Dales."
     },
     "citations": [
       {
-        "url": "https://etapedudales.eventrac.co.uk/e/etape-du-dales-11892",
-        "category": "reference",
-        "label": "Etape Du Dales"
+        "url": "https://www.etapedudales.org/",
+        "category": "official",
+        "label": "Étape du Dales — Official 2026 Site"
       },
       {
-        "url": "https://en.wikipedia.org/wiki/Etape_du_Dales",
-        "category": "reference",
-        "label": "Etape du Dales - Wikipedia"
+        "url": "https://www.etapedudales.org/long-route-2026",
+        "category": "official",
+        "label": "Official 2026 Long Route"
+      },
+      {
+        "url": "https://www.bikeradar.com/features/routes-and-rides/this-sportive-is-harder-than-the-fred-whitto-why-you-need-to-ride-the-etape-du-dales",
+        "category": "media",
+        "label": "BikeRadar — History, Reputation and Field-Size Decline"
+      },
+      {
+        "url": "https://results.opentracking.co.uk/event/etapedales26",
+        "category": "other",
+        "label": "2026 Timing/Results — Field Size Confirmation"
       },
       {
         "url": "https://www.britishcycling.org.uk/events/details/310455/Etape-du-Dales-by-the-Rayner-Foundation",
         "category": "reference",
-        "label": "Etape du Dales by the Rayner Foundation"
-      },
-      {
-        "url": "https://www.etapedudales.org/long-route-2026",
-        "category": "reference",
-        "label": "Long Route 2026 - ETAPE du DALES 2026"
-      },
-      {
-        "url": "https://www.etapedudales.org",
-        "category": "reference",
-        "label": "Home | Etape du Dales Cycling Challenge 2026"
+        "label": "British Cycling — Étape du Dales by the Rayner Foundation"
       }
     ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
-      "source": "https://www.cycloworld.cc/en/gran-fondo/united-kingdom/etape-du-dales/39283",
-      "notes": "2026 edition listed for 5 July in Grassington; 2025 date on file (8 June, Settle) conflicts with listings showing late June and different start town.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "source": "https://www.etapedudales.org/",
+      "notes": "Resolved via official site: 2026 edition ran 5 July 2026, HQ at Settle (moved from Horton-in-Ribblesdale) — confirms Settle over the third-party 'Grassington' listing previously flagged as a conflict."
     }
   }
 }

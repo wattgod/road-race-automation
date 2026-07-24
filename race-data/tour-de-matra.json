@@ -82,9 +82,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Multi-day format: 19km flat-fast TT + gran fondo stage. GF: 15km neutral + 67km circuit (1-2x) through Mátra + Kékestető finale. **Suffering zones**: 12km climb to 710m (500m vert); GF repeat; 4km@7.3% finale to 1014m (max 8.7%). Rolling connectors[1][2][7]",
-      "signature_challenge": null,
-      "suffering_zones": []
+      "character": "A multi-day format built around a single mountaintop finish. A flat, fast 19 km time trial runs on its own day; the Medio Fondo (94 km) and Gran Fondo (161 km) share a roughly 67 km circuit through the Mátra range — the Gran Fondo riders lap it twice — before both funnel into the same final climb to Kékestető, Hungary's highest point at 1,014 m. The route is not fully closed to traffic: some sections run under full closure, others under police/marshal control, and riders who fall behind the sweep vehicle lose protected-race status.",
+      "signature_challenge": "The Kékestető summit finish — a steep final push to Hungary's highest paved point, reached only after the Mátra circuit has already been ridden once or twice depending on distance.",
+      "suffering_zones": [
+        "The Mátra circuit itself — repeated for Gran Fondo riders, meaning the same climbing twice before the final push",
+        "The descent after Mátraháza — flagged by the organizer as steep, a technical test on tired legs",
+        "The Kékestető finishing climb — the last and hardest ramps of the day, arriving after 94 or 161 km already in the legs"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -100,19 +104,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The New Qualifier",
+      "summary": "Tour de Mátra has run as a local road event since 2021, but 2026 was its real coming-out: the sixth edition became Hungary's first UCI Gran Fondo World Series round and a World Championship qualifier, drawing riders from 15+ countries to a mountaintop finish at Kékestető. The format is genuinely well-built — a flat TT, a shared Mátra circuit for the Medio and Gran Fondo, and a summit finish at the country's highest point — organized by a nonprofit club (Mátra Biker Sport Club) with a YouTube livestream carrying Eurosport Hungary commentary. The catch is that its UCI-series credibility is one year old: this is not a race with a decade of qualifier history behind it, and the route is not fully closed to traffic, which matters on a course this technical.",
+      "strengths": [
+        "Hungary's first UCI Gran Fondo World Series qualifier — genuine World Championship stakes for the 161 km and 94 km distances",
+        "A real mountaintop finish at Kékestető, Hungary's highest point, gives the event a natural signature moment",
+        "Four distance options (19 km TT, 16 km, 94 km, 161 km) plus free entry for youth categories broadens who can take part",
+        "Livestreamed on YouTube with Eurosport Hungary commentary, plus a growing international field (15+ countries)"
+      ],
+      "weaknesses": [
+        "Only one year into UCI Gran Fondo World Series status as of 2026 — no long qualifier track record yet",
+        "Route is not fully closed to traffic; some sections run under police/marshal control rather than a closed road, and riders behind the sweep vehicle must follow ordinary traffic rules",
+        "No private team support vehicles or spare-wheel cars allowed — only organizer-run neutral assistance",
+        "Time limits are tight: eight hours for the 161 km course, six hours for the 94 km"
+      ],
+      "bottom_line": "Tour de Mátra is a legitimate, well-organized UCI qualifier with a genuine mountaintop finish — but it's new to the world stage. Go for the Kékestető summit finish and the qualifier stakes; know the traffic-control format and support restrictions before you sign up."
     },
     "final_verdict": {
       "score": "77/100",
       "one_liner": "Tier T2 - Emerging UCI powerhouse with stunning scenery and serious climbs; perfect for age-group qualifiers seeking value adventure",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a UCI World Championship qualifying shot on a genuine mountaintop-finish course and don't need decades of race history behind it. Skip if you want fully closed roads and unrestricted personal support crews.",
+      "alternatives": "If you want a longer-established Central European UCI qualifier: look at Austria's Dolomitenradrundfahrt. If you want the summit-finish format without the qualifier pressure, look for regional Hungarian cyclotourist rides in the Mátra range."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.tourdematra.hu/english",
+        "category": "official",
+        "label": "Tour de Mátra — Official Site (English)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/gyongyos/",
+        "category": "organizer",
+        "label": "UCI Gran Fondo World Series — Gyöngyös Event Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/fr/hoogerland-et-ambrusics-brillent-lors-des-debuts-spectaculaires-du-tour-de-matra-en-hongrie/",
+        "category": "organizer",
+        "label": "UCI Gran Fondo World Series — 2026 Post-Event Report"
+      },
+      {
+        "url": "https://www.tourdematra.hu/szabalyzat",
+        "category": "official",
+        "label": "Official Regulations — Traffic Management and Support Rules"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Tour de Mátra gran fondo cycling Gyöngyös",

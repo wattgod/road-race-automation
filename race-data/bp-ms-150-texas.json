@@ -19,7 +19,7 @@
       "registration": "Tiered fees $100-$140 plus $400 fundraising minimum; includes T-shirt at $500, medal, jersey perks",
       "entry_fee": "$100-140",
       "feed_zones": "Every 8-18 miles with hydration, snacks, mechanics, medical, SAG wagons",
-      "cutoff_time": "Self-paced with full support, no hard cutoffs",
+      "cutoff_time": "Route closures apply: 6:00pm Saturday, 5:30pm Sunday",
       "lat": 30.6133,
       "lng": -96.3403,
       "route_options": [
@@ -85,9 +85,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The event has drifted well past its old 'Houston to Austin, 150 miles' identity. It's now officially Bike MS: ACC Texas MS 150 — BP dropped sponsorship — with multiple route combinations starting from Houston-area locations, Austin, or Bastrop, overnighting in La Grange, and finishing at Kyle Field, Texas A&M, in College Station. Total mileage depends on which route combination you pick; the longest two-day option runs roughly 178 miles, not a fixed 150. This is a charity ride on open public roads, not a closed-course race.",
+      "signature_challenge": "There is no signature climb — Texas Hill Country rollers, not mountains. The real test is the distance-and-heat combination across two late-April days, plus navigating which of six-plus route options actually gets you to College Station.",
+      "suffering_zones": [
+        "Houston Energy Corridor to La Grange (96 mi) — the longest single-day option",
+        "Buescher and Bastrop State Parks — tree cover breaks up otherwise open, exposed prairie riding",
+        "La Grange to College Station via Carmine (82 mi) — the closing day, arriving into the Kyle Field finish"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -103,19 +107,51 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Name Doesn't Match the Ride Anymore",
+      "summary": "This has been Texas's largest Bike MS fundraiser for four decades, but the name is legacy branding now: BP is no longer the title sponsor (it's officially Bike MS: ACC Texas MS 150), and it no longer runs the historic Houston-to-Austin route. Riders now choose from several Houston-, Austin-, or Bastrop-area starts, overnight in La Grange, and finish at Texas A&M's Kyle Field — with total distance varying by route combination rather than a fixed 150 miles. The 2026 edition drew more than 5,000 riders and raised over $9.2 million, still the largest event in the national Bike MS series, but well down from the roughly 13,000-rider peak of earlier decades.",
+      "strengths": [
+        "The largest fundraising event in the national Bike MS series — $9.2M+ raised in 2026 for a real, longstanding cause",
+        "Four decades of organizational experience (founded 1985) and a genuinely large support infrastructure",
+        "Multiple route/distance options let riders of different fitness levels choose their day",
+        "A memorable finish inside Kyle Field at Texas A&M"
+      ],
+      "weaknesses": [
+        "Database entries or expectations built around 'Houston to Austin, 150 miles' are obsolete — the course and even the name have changed",
+        "Each cyclist carries a $400 fundraising minimum, separate from any registration fee",
+        "Point-to-point logistics require real planning: officially offered return shuttles cost $45-$85, and overnight tent reservations at La Grange run extra",
+        "Field size has declined substantially from the event's historic peak of roughly 13,000 riders to just over 5,000 in 2026",
+        "Roads remain open to traffic throughout — this is a charity ride, not a closed-course race"
+      ],
+      "bottom_line": "A well-run, high-impact charity ride with real fundraising scale — but if you're picturing the old Houston-to-Austin 150-mile course, update your mental map. Come for the cause and the Kyle Field finish, not for a fixed 150-mile point-to-point."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "5,000+ riders crush 150 miles over two days for MS, Texas-style grit and glory.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want to support the National MS Society through Texas's largest Bike MS fundraiser and can meet the $400 fundraising minimum. Know going in that the course is no longer a fixed Houston-to-Austin 150 miles — it's now Houston/Austin/Bastrop starts through La Grange to a Texas A&M finish.",
+      "alternatives": "If you want a similar-scale charity ride with fixed point-to-point distance: LoToJa Classic (Utah/Idaho/Wyoming). If you want the historic Houston-to-Austin distance specifically, note that course no longer exists in this event."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://events.nationalmssociety.org/pages/10235",
+        "category": "official",
+        "label": "Bike MS: ACC Texas MS 150 — Official 2026 Event Page"
+      },
+      {
+        "url": "https://multiplesclerosisnewstoday.com/news-posts/2026/05/08/bike-ms-event-texas-largest-us-fundraiser-nets-9m-support-research-care/",
+        "category": "media",
+        "label": "2026 Participation and Fundraising Report ($9.2M+)"
+      },
+      {
+        "url": "https://www.houstonchronicle.com/lifestyle/article/2024-texas-ms-150-jerseys-19420382.php",
+        "category": "media",
+        "label": "Houston Chronicle — 40th Anniversary History and 2024 Field Size"
+      },
+      {
+        "url": "https://www.chron.com/sports/article/Cycling-Notebook-From-humble-beginnings-MS-150-1562332.php",
+        "category": "media",
+        "label": "Houston Chronicle — 1985 Founding History"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "BP MS 150 gran fondo cycling Houston to College Station",

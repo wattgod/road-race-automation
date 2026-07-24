@@ -5,16 +5,16 @@
     "display_name": "GFNY Grand Ballon",
     "tagline": "",
     "vitals": {
-      "distance_km": 146.4,
-      "distance_mi": 91.0,
-      "elevation_m": 2286,
-      "elevation_ft": 7500.0,
+      "distance_km": 146.8,
+      "distance_mi": 91.2,
+      "elevation_m": 4043,
+      "elevation_ft": 13264.0,
       "location": "Thann, Alsace, France",
       "location_badge": "Thann, France",
       "country": "France",
-      "date": "2026: July TBD",
-      "date_specific": "2026: July TBD",
-      "field_size": null,
+      "date": "2026: July 12",
+      "date_specific": "2026: July 12",
+      "field_size": "Nearly 2,000 (sold out, record field)",
       "start_format": null,
       "registration": "https://grandballon.gfny.com",
       "entry_fee": null,
@@ -70,12 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Start/finish in Thann, Alsace, through the Ballons des Vosges Regional Nature Park, with two ascents of the Grand Ballon (1,325m) bookending a route through Le Markstein, Petit Ballon, the Route des Crêtes, and the WWI battlefield site of Vieil Armand/Hartmannswillerkopf. The 2026 long course ran 146.8 km / 4,043m per the organizer's post-event report — noticeably more than the 145 km / 3,921m in the pre-race guide, a real gap worth noting rather than smoothing over. The medium course (~71 km, ~1,800m) is explicitly non-competitive — riders get a finish time but results are published alphabetically, not ranked.",
+      "signature_challenge": "The second ascent of the Grand Ballon, arriving after Le Markstein, Col du Firstplan, Petit Ballon, and Col du Platzerwasel have already taken their toll — climbing the same mountain twice in one day.",
       "suffering_zones": [
-        "Firstplan Furnace: 21% ramps shred legs mid-race after Grand Ballon descent in Florival Valley.",
-        "Double Ballon Death: Second Grand Ballon via Platzerwasel ridges crushes after 70km of Vosges abuse.",
-        "Viel Verdict: WWI climb saps final energy before exposed flats into Thann."
+        "Plan Diebold — beginning roughly 1 km after the start, an immediate test",
+        "Wasserbourg — a stated maximum gradient above 21%, the steepest ramp on course",
+        "Route des Crêtes and Vieil Armand/Hartmannswillerkopf — exposed ridge riding past a First World War memorial site, late in the race",
+        "The flat return through Cernay to Thann — the organizer specifically warns about headwinds on this closing stretch"
       ]
     },
     "logistics": {
@@ -92,19 +93,51 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Real GFNY Format, Two Tiers of Honesty",
+      "summary": "GFNY Grand Ballon is a legitimate entry in the global GFNY series, now in its fifth edition (founded 2022) and included in the French Cycling Federation's Trophée Label d'Or calendar. The 2026 edition sold out at nearly 2,000 riders — real, growing demand for a race climbing the Grand Ballon twice through the Vosges. Like other GFNY events, it's honest about its two-tier structure: the long course is fully competitive with age-category classification, but the medium course, despite receiving a finish time, is explicitly non-competitive with alphabetical-only results. Course figures also shifted between the pre-race guide and the post-event report (145 km/3,921m planned vs. 146.8 km/4,043m actual) — worth knowing rather than treating either number as fixed.",
+      "strengths": [
+        "Legitimate GFNY-series pedigree with real competitive stakes on the long course — age-category and overall classification",
+        "Genuine double ascent of the Grand Ballon (1,325m) through the Vosges, plus the Vieil Armand/Hartmannswillerkopf WWI memorial site",
+        "Strong, growing demand — nearly 2,000 riders in 2026, a sold-out record field",
+        "Included in the French Cycling Federation's Trophée Label d'Or calendar — external validation beyond the organizer's own branding"
+      ],
+      "weaknesses": [
+        "The medium course is explicitly non-competitive despite receiving a finish time — riders expecting a ranked result on that distance will be disappointed",
+        "Entries are non-refundable, non-transferable, and non-deferrable",
+        "Course totals shifted between the pre-race guide and post-event report (145 km/3,921m vs. 146.8 km/4,043m) — treat published figures as edition-specific, not fixed",
+        "The official GFNY jersey is mandatory during the event",
+        "Only five editions deep as of 2026 — a much shorter track record than Europe's Alpine monuments"
+      ],
+      "bottom_line": "If you want the long course's genuine competitive format and a real double-Grand-Ballon test, this delivers. If you're eyeing the medium course, know upfront it's a supported ride with a finish time, not a ranked race, regardless of how it's marketed."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Vosges climb fest with double Grand Ballon punishment and Tour heritage.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes for the long course if you want genuine GFNY competitive racing and a real double-summit test. Choose the medium course only if you're fine with a non-competitive, supported ride despite the finish-time format.",
+      "alternatives": "If you want the double-Ballon climbing without the competitive format: look for a supported Vosges cyclotourisme route instead. If you want a comparable GFNY-format Alpine race: The Millars (Spain) or other GFNY World Series events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfny.com/fifth-edition-of-gfny-grand-ballon-sees-nearly-2000-riders-tackle-4000m-of-climbing/",
+        "category": "official",
+        "label": "GFNY — 2026 Post-Event Report, Actual Course and Field Size"
+      },
+      {
+        "url": "https://grandballon.gfny.com/rules/?lang=en",
+        "category": "official",
+        "label": "Official Rules — Competitive/Non-Competitive Distinction"
+      },
+      {
+        "url": "https://grandballon.gfny.com/results/?lang=en",
+        "category": "official",
+        "label": "Official Results Archive, 2022-2026"
+      },
+      {
+        "url": "https://grandballon.gfny.com/help-center/?lang=en",
+        "category": "official",
+        "label": "Official Help Center — Refund/Transfer/Deferral Policies"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Grand Ballon gran fondo cycling Thann",

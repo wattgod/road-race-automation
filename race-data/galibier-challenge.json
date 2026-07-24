@@ -70,9 +70,14 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Two formats out of Saint-Michel-de-Maurienne: the main 110 km cyclosportive (~3,350m) taking in Montée d'Orelle, Col de Beau Plan, Col du Télégraphe, and Col du Galibier, and a separate 35 km 'La Grimpée' timed ascent (~2,100m) linking just Télégraphe and Galibier from Saint-Michel. On the main route, timing and classification stop at the Galibier summit or tunnel — the descent back to Saint-Michel-de-Maurienne is untimed, free-pace riding, not part of the race result. Most of the route stays open to ordinary traffic with riders given passage priority, but the upper Galibier climb itself is closed to motor traffic during set event hours (9:00am-3:00pm in 2026).",
+      "signature_challenge": "Col du Galibier — 18 km from Valloire, 1,239m of gain to the 2,642m summit, the finale of both the full cyclosportive and the standalone Grimpée.",
+      "suffering_zones": [
+        "Col de Beau Plan — 11 km at 6.5% average, early in the long route",
+        "Col du Télégraphe — 12 km at 7% average",
+        "Col du Galibier — 18 km at 7% average to the 2,642m summit, the defining climb of the day",
+        "Early-June snow risk — the organizer can move the finish to the Galibier tunnel, about 1 km below the true summit, if conditions demand it"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +93,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Timed Ascent, Untimed Return",
+      "summary": "Only six years old (founded 2021), Galibier Challenge has already built real demand — 1,326 starters in 2026, a record, up from roughly 1,000 in 2025, and the event sold out. It earns that growth honestly: the Col du Galibier, one of the Tour de France's most storied climbs, is the genuine centerpiece, and the standalone 35 km Grimpée gives riders a shorter way to just do Télégraphe-Galibier without the full 110 km. The honest-critic catch: classification stops at the summit or tunnel. The descent and return to Saint-Michel-de-Maurienne — real kilometers, on a road shared with traffic — happen after the timing ends.",
+      "strengths": [
+        "Col du Galibier, a genuine Tour de France monument climb, as the literal finish line",
+        "Two formats (110 km full cyclosportive, 35 km Grimpée) let riders choose full commitment or a focused climb-only test",
+        "Real, fast-growing demand — a record 1,326 starters in 2026, sold out",
+        "Early-June timing puts riders on the Galibier before high-summer crowds, though it raises snow risk"
+      ],
+      "weaknesses": [
+        "Timing and classification end at the Galibier summit/tunnel — the descent and ride back to Saint-Michel is untimed and not part of your official result, despite being real mileage and real risk",
+        "The untimed return leg to Saint-Michel-de-Maurienne is on roads open to ordinary traffic — only the upper Galibier climb gets set closure hours during the event",
+        "Early-June scheduling creates real snow risk — the organizer has a standing contingency to move the finish to the tunnel below the true summit",
+        "Only six years of history as of 2026 — a much shorter track record than the Alpine monuments it's compared to"
+      ],
+      "bottom_line": "A genuinely well-built young event with a real Tour de France climb at its core — just understand that your competitive result ends at the summit, and the ride home is on you and on open roads."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "A prestigious Alpine cyclosportive that delivers authentic Tour de France climbing on two of cycling's most iconic passes, ideal for experienced riders seeking high-altitude challenge with strong community atmosphere.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuine, well-organized shot at the Col du Galibier with growing prestige and don't mind an untimed return leg. Consider the 35 km Grimpée if you want the climb without the full 110 km commitment.",
+      "alternatives": "If you want Galibier as part of a longer, multi-pass Alpine day: La Marmotte (adds Col de Glandon and Alpe d'Huez). If you want a fully timed return leg included: research closed-loop Alpine sportives with full-course classification."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.galibier-challenge.com/cyclosportive",
+        "category": "official",
+        "label": "Official Cyclosportive Route and 2027 Dates"
+      },
+      {
+        "url": "https://www.galibier-challenge.com/la-grimpee",
+        "category": "official",
+        "label": "Official 35 km Grimpée (Ascent-Only) Page"
+      },
+      {
+        "url": "https://en.galibier-challenge.com/classements",
+        "category": "official",
+        "label": "Official Results Archive, Including 2021 Founding"
+      },
+      {
+        "url": "https://www.ledauphine.com/sport/2026/06/07/un-nouveau-record-de-participation-pour-le-galibier-challenge",
+        "category": "media",
+        "label": "Le Dauphiné — 2026 Record Field Size Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Galibier Challenge gran fondo cycling Saint-Michel-de-Maurienne",

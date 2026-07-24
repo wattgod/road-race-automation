@@ -7,8 +7,8 @@
     "vitals": {
       "distance_km": 321.9,
       "distance_mi": 200.0,
-      "elevation_m": 6005,
-      "elevation_ft": 19700.0,
+      "elevation_m": 5486,
+      "elevation_ft": 18000.0,
       "location": "Exeter Racecourse, Kennford, Exeter, Devon, EX6 7XS, England",
       "location_badge": "Exeter Racecourse, England",
       "country": "England",
@@ -72,13 +72,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Brutal figure-eight through Dartmoor National Park featuring iconic granite climbs, coastal roads, and remote moorland traverses. Riders pass Postbridge feedstation three times, Princetown twice, creating rhythm of suffering and recovery across Devon's wild interior.",
-      "signature_challenge": "19-hour time limit from 5AM to midnight averaging 10.5mph including all stops - Dartmoor takes no prisoners.",
+      "character": "Multiple loops across Dartmoor from a start/finish at Exeter Racecourse, with a principal feed station at Postbridge passed three times over the roughly 200-mile / 323 km route. The course has moved to this Exeter-based configuration from an earlier planned layout; the organizer describes an especially difficult final climb without naming it in current material. Elevation gain is reported inconsistently by the organizer (18,000 ft alongside both 5,500 m and an apparently miscalculated 6,000 m) — 18,000 ft / roughly 5,500 m is the more defensible figure.",
+      "signature_challenge": "The 19-hour time limit itself — 05:00 to midnight, averaging roughly 10.5 mph including every stop, with intermediate cutoffs that can retire riders who fall behind.",
       "suffering_zones": [
-        "Haytor Climb: Iconic Dartmoor granite tor ascent - relentless gradients through exposed moorland.",
-        "Princetown Triple Passage: Passing through remote prison town three times with pace clock pressure each visit.",
-        "Postbridge Bag Drop Loop: Main feedstation visited three times - psychological checkpoint amid accumulating fatigue.",
-        "Coastal Rollercoaster: Exmouth to Dawlish undulating seaside roads - deceptive after moorland brutality."
+        "Postbridge — passed three times as the principal feed station, a recurring psychological checkpoint",
+        "Repeated Dartmoor loops — the moorland terrain compounds across multiple passes rather than a single point-to-point route",
+        "The unnamed final climb the organizer describes as especially difficult, arriving deep into a very long day"
       ]
     },
     "logistics": {
@@ -95,50 +94,61 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Small, Hard One",
+      "summary": "Dartmoor Legend calls itself the UK's toughest sportive — treat that as the organizer's own marketing claim, not an independently verified fact, though BikeRadar has included it among the UK's toughest long-distance events. What's verifiable: roughly 200 miles and 18,000 ft of climbing across repeated Dartmoor loops, a strict 19-hour cutoff, and a field that stays small relative to mainstream sportives — 2025 recorded 28 full-route finishers from 43 entrants. The event's history is rockier than its current branding suggests: a planned 2021 inaugural edition was cancelled, and the first edition that actually ran was in 2022. The organizer's own web presence is untidy — conflicting dates and elevation figures across different pages — which matters more here than on a bigger, better-resourced event.",
+      "strengths": [
+        "A genuinely long, hard single-day ultra format — roughly 200 miles / 18,000 ft across Dartmoor",
+        "Full support for the distance: five feed stations, RFID timing, GPS tracking, mechanical support, and a broom wagon",
+        "BikeRadar has listed it among the UK's toughest long-distance sportives — independent, if not exhaustive, corroboration",
+        "A generous 19-hour window (05:00 to midnight) makes the distance achievable for strong but not elite riders"
+      ],
+      "weaknesses": [
+        "Small full-distance field relative to mainstream UK sportives — 2025 recorded only 28 full-route ultra finishers",
+        "Rocky history: the advertised 2021 inaugural edition was cancelled; the event's actual first completed edition was 2022, not the earlier founding year sometimes cited",
+        "The organizer's own web material is inconsistent — conflicting elevation figures (18,000 ft alongside both 5,500 m and an apparently miscalculated 6,000 m) and conflicting 2026 event dates across different pages",
+        "'UK's toughest sportive' is the organizer's own claim, not an independently established fact",
+        "No same-day entry — advance registration only"
+      ],
+      "bottom_line": "A real, demanding one-day ultra with solid support infrastructure, let down by a small track record and untidy official information. Verify the current date and course details directly with the organizer before committing — this profile's own data conflicts are a symptom of the same problem."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "UK's definitive ultra sportive - 200 miles of Dartmoor savagery.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuine 200-mile UK ultra-distance test with real support and can tolerate a small field and some organizational untidiness. Skip if you want a large-field event or need rock-solid, consistent official information before you commit.",
+      "alternatives": "If you want a similarly long UK ultra with a larger, more established field: LoToJa Classic-style format isn't available in the UK, but check London-Edinburgh-London for extreme distance. If you want Dartmoor terrain in a shorter package: Dartmoor Classic (same region, shorter distance)."
     },
     "citations": [
       {
         "url": "https://sportivaevents.co.uk/events/dartmoor-legend/",
-        "category": "reference",
-        "label": "Dartmoor Legend Ultra - Sportiva Events"
+        "category": "official",
+        "label": "Dartmoor Legend — Official Sportiva Events Page"
       },
       {
-        "url": "https://sportivaevents.clubtrac.co.uk/e/moor-to-sea-and-dartmoor-legend-7613",
-        "category": "reference",
-        "label": "Moor to Sea & Dartmoor Legend - Sportiva Events"
+        "url": "https://www.webscorer.com/race?raceid=282631",
+        "category": "other",
+        "label": "2022 Results — First Confirmed Completed Edition"
       },
       {
-        "url": "https://www.timeoutdoors.com/events/dartmoor-legend-ultra",
-        "category": "reference",
-        "label": "Dartmoor Legend Ultra | Sat 11 Jul 2026 - TimeOutdoors"
+        "url": "https://www.webscorer.com/race?raceid=389228",
+        "category": "other",
+        "label": "2025 Results — Field Size Confirmation"
       },
       {
-        "url": "https://findarace.com/events/moor-to-sea-dartmoor-legend",
+        "url": "https://www.britishcycling.org.uk/events/details/219887/Dartmoor-Legend-ULTRA-Sportive-2021",
         "category": "reference",
-        "label": "Moor to Sea & Dartmoor Legend 2026 | Sat 11 Jul | Book @ Findarace"
+        "label": "British Cycling — Cancelled 2021 Inaugural Listing"
       },
       {
-        "url": "https://surreycyclingclub.co.uk/blog/dartmoor-legend-ultra-how-bad-can-318k-be/",
-        "category": "editorial",
-        "label": "Dartmoor Legend Ultra 2025 - Surrey Cycling Club"
+        "url": "https://www.bikeradar.com/features/routes-and-rides/2022-cycling-events",
+        "category": "media",
+        "label": "BikeRadar — UK Toughest Long-Distance Sportives Overview"
       }
     ],
     "eligibility": {
-      "status": "unknown",
+      "status": "active",
       "verified": "2026-07-23",
-      "source": "https://www.dartmoorlegend.co.uk/",
-      "notes": "agent reported Jul 11 2026 confirmed but the official site is unreachable on repeated direct checks — unverifiable; recheck later"
+      "source": "https://sportivaevents.co.uk/events/dartmoor-legend/",
+      "notes": "RESOLVED (was 'unknown'): the dartmoorlegend.co.uk domain remains unreliable, but organizer Sportiva Events maintains a live event page advertising the next edition (May 8, 2027, entries open) as of 2026-07-23. Some stale 2026 copy remains on the page and the organizer's results index/date fields are internally inconsistent (July 5 vs July 11 for 2026), but the active 2027 listing supports current operating status."
     }
   }
 }

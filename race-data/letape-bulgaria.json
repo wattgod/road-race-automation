@@ -5,10 +5,10 @@
     "display_name": "L'Étape Bulgaria by Tour de France - Peshtera",
     "tagline": "Experience the Tour de France atmosphere on fully closed roads in the Rhodope Mountains",
     "vitals": {
-      "distance_km": 102.0,
-      "distance_mi": 63.4,
-      "elevation_m": 2500,
-      "elevation_ft": 8202.0,
+      "distance_km": 112.0,
+      "distance_mi": 69.6,
+      "elevation_m": 2140,
+      "elevation_ft": 7021.0,
       "location": "Peshtera, Bulgaria",
       "location_badge": "Rhodope Mountains",
       "country": "Bulgaria",
@@ -101,9 +101,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Start Peshtera city center → climb through town → **SUFFERING ZONE 1: Sustained ascent to Sveti Konstantin resort (1,350m highest point)** → scenic descent past Batak Dam → through Batak town → **FINAL SUFFERING ZONE: City center finish circuits**. Fully closed roads showcase Rhodope beauty[1].",
-      "signature_challenge": null,
-      "suffering_zones": []
+      "character": "Two laps of a roughly 58 km closed-road circuit through the Western Rhodope Mountains for the long race (112 km / 2,140m), one lap for the short race. Start and finish are in central Peshtera; the circuit climbs to the Sveti Konstantin resort at approximately 1,350m — the course high point — before descending past the Batak Reservoir and through the historic town of Batak back toward Peshtera. Because the long race repeats the lap, the St. Konstantin climb comes twice.",
+      "signature_challenge": "The St. Konstantin climb, ridden twice on the 112 km long course — the second ascent arriving with a full lap already in the legs.",
+      "suffering_zones": [
+        "First ascent to Sveti Konstantin resort (1,350m) — the course's high point",
+        "Descent through the Batak Gorge area — technical, high-speed, specifically flagged by the organizer",
+        "Second ascent to St. Konstantin (long race only) — repeating the climb on tired legs"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -119,19 +123,56 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Official Franchise",
+      "summary": "L'Étape Bulgaria is a genuine A.S.O.-licensed entry in the global L'Étape by Tour de France series, not a locally branded imitation — and it delivers what that franchise promises: fully closed roads, Tour de France-style yellow/green/polka-dot classifications, and real competitive timing. Now in its fourth edition, it moved from Velingrad (its first two editions) to Peshtera starting in 2025, and the 2026 race sold out. The catch is course variety: the 112 km long race is two laps of the same 58 km circuit, not a point-to-point journey, and entry is pricier than you'd expect for a regional event of this length.",
+      "strengths": [
+        "Genuine A.S.O.-licensed L'Étape by Tour de France series event, not a locally branded lookalike",
+        "Fully closed roads with real competitive timing and Tour de France-style jersey classifications",
+        "2026 edition sold out — real and growing demand for a race only in its fourth year",
+        "Technical, high-speed descents and a genuine mountain-pass high point (St. Konstantin, ~1,350m) through the Western Rhodope Mountains"
+      ],
+      "weaknesses": [
+        "The 112 km long course is two laps of the same 58 km circuit — limited course variety for the distance",
+        "Relatively expensive for a regional event of this length: €70-€100 depending on registration timing",
+        "Race numbers cannot be mailed or collected on race day — pre-event collection is mandatory",
+        "Only road or drop-bar gravel bikes are accepted on the long course; triathlon extensions and disc wheels are prohibited",
+        "The event moved location once in four editions (Velingrad for the first two, Peshtera from 2025 on), so course specifics may not be stable long-term"
+      ],
+      "bottom_line": "If the appeal is the official L'Étape brand — closed roads, real competition, Tour de France atmosphere — this delivers it honestly. Just know the 102 km is two laps of one circuit, not a point-to-point tour of the Rhodopes."
     },
     "final_verdict": {
       "score": "76/100",
       "one_liner": "T2 - Premium Tour de France franchise sportive delivering authentic Gran Fondo experience in spectacular Rhodope Mountains. Excellent for climbers seeking closed-road adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want genuine closed-road racing with official Tour de France branding and don't mind a repeated-lap course. Skip if you want route variety over a full 100+ km distance.",
+      "alternatives": "If you want a point-to-point Rhodope Mountains route instead of a repeated lap: check regional Bulgarian Cycling Federation road races. If you want the L'Étape brand with a different course character: other national L'Étape by Tour de France events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://bulgaria.letapeseries.com/",
+        "category": "official",
+        "label": "L'Étape Bulgaria by Tour de France — Official Site"
+      },
+      {
+        "url": "https://bulgaria.letapeseries.com/stages",
+        "category": "official",
+        "label": "Official Course/Closed-Road Description"
+      },
+      {
+        "url": "https://bulgaria.letapeseries.com/rules",
+        "category": "official",
+        "label": "Official Rules and Fees"
+      },
+      {
+        "url": "https://www.letapeseries.com/memories/events/l-etape-bulgaria-2026-a-spectacular-4th-edition-in-peshtera",
+        "category": "organizer",
+        "label": "Official L'Étape Series 2026 Recap"
+      },
+      {
+        "url": "https://www.bta.bg/en/news/943791-peshtera-hosts-l-etape-bulgaria-by-tour-de-france-cycling-race",
+        "category": "media",
+        "label": "Bulgarian News Agency — 2025 Peshtera Edition Report"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",

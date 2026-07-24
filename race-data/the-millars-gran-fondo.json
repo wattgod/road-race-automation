@@ -76,9 +76,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "158.9km / 2,213m from Castellón de la Plana via Mijares River valley. **Suffering Zones:** 1) Coll de la Ibola (km 27-44, 17km @ 3% to 580m) - long steady grind. 2) Coll de la Lloma (km 80+, 10km with 6-8% opening 5km to 593m) - race's steepest test. Fast descent to sea level finish[2][4]",
-      "signature_challenge": null,
-      "suffering_zones": []
+      "character": "A single 157 km loop out of Castellón de la Plana, following the Mijares/Millars river corridor through more than 20 municipalities and into Serra d'Espadà Natural Park before returning to the coast. The route is front-loaded with climbing — the Coll de la Ibola grind comes early and the steeper Coll de la Lloma follows mid-race — then descends back to sea level for a flat run to the finish. There is no shorter medio fondo option; you ride the full 157 km or you don't start.",
+      "signature_challenge": "Coll de la Lloma — roughly 10 km with an opening 5 km at 6-8%, the steepest sustained test on the course, arriving after Coll de la Ibola has already spent your legs.",
+      "suffering_zones": [
+        "Coll de la Ibola — a long, steady 17 km grind at around 3% to 580 m that softens riders up early",
+        "Coll de la Lloma — the race's steepest climbing, 6-8% opening ramps to 593 m",
+        "Serra d'Espadà exposure — natural-park terrain with limited shelter from Mediterranean sun and wind"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -94,19 +98,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Young Qualifier",
+      "summary": "The Millars is barely three years old, but it already carries real weight: it's Spain's only UCI Gran Fondo World Series qualifier, and it sold out its 2026 edition at 2,000 riders from 36 nationalities (the 2024 debut drew 27 countries). The 157 km route through the Mijares river valley and Serra d'Espadà Natural Park is genuinely demanding — two real climbs, Coll de la Ibola and Coll de la Lloma, stacked into a single loop with no shorter option. This is a timed, UCI-licensed qualifier, not a casual cyclotourist ride, and the organization (ambassadors like Ivan Basso and Purito Rodríguez, a growing international field) is building fast. What it lacks is longevity — a three-year track record and a still-provisional route that can shift with roadworks.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series qualifier — a fast top-25% in your age group sends you to Worlds",
+        "Only one route: 157 km with two real climbs, so there's no soft option diluting the field",
+        "International draw from 27 countries in its 2024 debut, sold out at 2,000 riders from 36 nationalities by year three",
+        "Ambassador roster (Ivan Basso, Purito Rodríguez, Fabio Aru) signals real investment from the organizer"
+      ],
+      "weaknesses": [
+        "Young event — only three editions as of 2026, so there's limited track record on consistency year to year",
+        "No shorter medio fondo option — riders who can't handle 157 km and two climbs have nowhere to go but DNF",
+        "Non-federation-licensed riders pay a €12 surcharge on top of registration, plus optional €20 cancellation insurance",
+        "The official route is explicitly described as provisional and can change for roadworks or other contingencies"
+      ],
+      "bottom_line": "If you want a serious, timed UCI qualifier on a genuinely hard Spanish coastal-mountain course and don't mind a young organizer still building its reputation, The Millars delivers. It is not a beginner's gran fondo — there's no shorter route to fall back on."
     },
     "final_verdict": {
       "score": "77/100",
       "one_liner": "Spain's only UCI Gran Fondo World Series qualifier through Sierra de Espadán Natural Park",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a UCI-qualifying result and can handle 157 km with two real climbs and no bailout distance. Skip if you're newer to gran fondos and want a shorter option, or if you want a race with decades of established reputation behind it.",
+      "alternatives": "If you want a longer-established Spanish UCI qualifier with a shorter distance option: Aitana Tour (Alicante). If you want the Mediterranean-coast climbing test without the UCI qualifier pressure: look at regional Comunitat Valenciana cyclotourist rides."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.millarsgranfondo.com/en/",
+        "category": "official",
+        "label": "The Millars UCI Gran Fondo World Series — Official Site"
+      },
+      {
+        "url": "https://www.millarsgranfondo.com/en/race/",
+        "category": "official",
+        "label": "Official Distance, Ascent and History"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/van-der-lijke-zijlaard-wolos-grab-victory-in-sold-out-millars-granfondo/",
+        "category": "organizer",
+        "label": "UCI Gran Fondo World Series — 2026 Sold-Out Field Report"
+      },
+      {
+        "url": "https://cadenaser.com/comunitat-valenciana/2024/09/30/the-millars-uci-gran-fondo-world-series-sigue-creciendo-y-se-traslada-a-castellon-de-la-plana-para-su-segunda-edicion-radio-castellon/",
+        "category": "media",
+        "label": "Cadena SER — Founding Field and 2025 Relocation to Castellón"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "The Millars Gran Fondo gran fondo cycling Castellón de la Plana",

@@ -7,8 +7,8 @@
     "vitals": {
       "distance_km": 135.2,
       "distance_mi": 84.0,
-      "elevation_m": 3600,
-      "elevation_ft": 11811.0,
+      "elevation_m": 3200,
+      "elevation_ft": 10499.0,
       "location": "Vaison-la-Romaine, Vaucluse, France (Mont Ventoux summit finish)",
       "location_badge": "Vaison-la-Romaine, France (Mont Ventoux summit finish)",
       "country": "France (Mont Ventoux summit finish)",
@@ -70,9 +70,14 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "135 km from Vaison-la-Romaine through Provençal cols — Fontaube, Col des Aires, Barret-de-Lioure, Col de l'Homme Mort — and the Gorges de la Nesque before reaching the mountain itself at Bédoin. From there it's the classic Tour de France ascent through Saint-Estève and Chalet Reynard to the summit at 1,912m. Exactly one ascent of Ventoux — this is not Les Cinglés du Mont Ventoux, which requires three. The timed race ends at the summit; getting back down and the roughly 30 km back to Vaison-la-Romaine is unsupported, untimed, and on your own legs.",
+      "signature_challenge": "The classic Bédoin ascent of Mont Ventoux — Saint-Estève, the exposed moonscape past Chalet Reynard, and the final push to the 1,912m summit, arriving after 100+ km of Provençal cols already in the legs.",
+      "suffering_zones": [
+        "Col de Fontaube and Col des Aires — early Provençal climbing before the mountain",
+        "Gorges de la Nesque — scenic but technical descending",
+        "Saint-Estève to Chalet Reynard — the forested lower slopes of Ventoux, where the real climbing begins",
+        "The final exposed kilometers above Chalet Reynard — barren, windswept, and fully exposed to whatever Ventoux's weather is doing that day"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +93,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Summit Finish, With a Catch",
+      "summary": "This is the mass-participation version of Mont Ventoux — one timed ascent of the classic Bédoin side, on a course that's sold out and turned away riders for its 2026 edition. Founded in 2015 as GFNY Mont Ventoux, it has since carried other title sponsors including Colnago and built real demand: roughly 4,500 road entrants for 2026. The climbing (135 km, ~3,200m, one Ventoux summit) is the real deal. The catch, which the organizer states plainly, is that the race is over at the summit — there's no shuttle down. You descend and ride roughly 30 km back to Vaison-la-Romaine yourself, tired, on a reopened road, at descending speeds the organizer explicitly warns can exceed 80 km/h.",
+      "strengths": [
+        "A genuine summit finish on the classic Tour de France ascent of Mont Ventoux from Bédoin — one of cycling's defining climbs",
+        "Strong, sold-out demand: 2026 road entries were capped near 4,500 and moved to a waiting list",
+        "Route also covers the Gorges de la Nesque and several lesser-known Provençal cols before the mountain, not just a shuttle-to-the-base format",
+        "Multiple distance options (135/106/80 km) plus separate gravel rides broaden who can take part"
+      ],
+      "weaknesses": [
+        "No return shuttle from the summit — riders face an unsupported ~30 km descent and ride back to Vaison-la-Romaine after the timed finish, on a reopened road with fast traffic",
+        "Relatively expensive for a European sportive: 2026 road entry ran €93-€116 plus a 4% platform fee, with the post-race meal, clothing transport, and spectator shuttle all charged separately",
+        "Weather-dependent finish — the organizer reserves the right to shorten or move the summit finish if Ventoux conditions turn dangerous",
+        "Cutoffs at Reilhanette, Sault, and Sainte-Colombe can redirect slower Granfondo riders onto a shorter course"
+      ],
+      "bottom_line": "If summiting Ventoux on the classic Bédoin road, timed, in a big organized field, is the goal, this delivers it — the sold-out 2026 field shows the format works for a lot of riders. Just budget the descent and the ride home as part of your day — the organizer is explicit that the event ends at the summit, not back in town."
     },
     "final_verdict": {
       "score": "76/100",
       "one_liner": "A notable French cyclosportive with iconic Mont Ventoux summit finish, excellent organization, and stunning Provençal scenery that rivals top European sportives.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a timed, mass-participation summit finish on the classic Ventoux ascent and don't mind the unsupported ride back down. Skip if a full closed-loop, return-to-town format matters to you, or if you want the harder three-ascent Cinglés du Mont Ventoux challenge instead.",
+      "alternatives": "If you want the extreme version — three ascents in one day: Les Cinglés du Mont Ventoux. If you want a similarly iconic French summit finish with return support: Étape du Tour (varies by year)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfmontventoux.com/en/",
+        "category": "official",
+        "label": "Colnago GF Mont Ventoux — Official Site"
+      },
+      {
+        "url": "https://gfmontventoux.com/en/parcours-2/135-km-2/",
+        "category": "official",
+        "label": "Official 135 km Course"
+      },
+      {
+        "url": "https://gfmontventoux.com/en/infos-pratiques/questions-frequentes/",
+        "category": "official",
+        "label": "Official FAQ — Fees, Entry Cap, Summit/Return Logistics"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/1122/gran-fondo-new-york-announces-gfny-mont-ventoux-to-be-held-on-june-28-2015",
+        "category": "media",
+        "label": "GranFondoGuide — First-Edition Announcement (2015)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Colnago Gran Fondo Mont Ventoux gran fondo cycling Vaison-la-Romaine",

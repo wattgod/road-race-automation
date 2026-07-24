@@ -5,12 +5,12 @@
     "display_name": "Algarve Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 135.2,
-      "distance_mi": 84.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
-      "location": "Lagoa, Algarve, Portugal",
-      "location_badge": "Lagoa, Portugal",
+      "distance_km": 130.0,
+      "distance_mi": 80.8,
+      "elevation_m": 2213,
+      "elevation_ft": 7261.0,
+      "location": "Lagos, Algarve, Portugal",
+      "location_badge": "Lagos, Portugal",
       "country": "Portugal",
       "date": "2026: February 21",
       "date_specific": "2026: February 21",
@@ -70,9 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The official gran fondo of the Volta ao Algarve, scheduled as part of the professional stage race's event programme, but its host town has moved repeatedly — Tavira, Loulé, Lagoa, and Lagos across various editions. The 2026 tenth edition ran from Lagos. Despite chip timing, category rankings, and trophies, the organizer's own regulations explicitly define the event as non-competitive with no official classification — a mixed positioning that doesn't match the timed-race look and feel most riders expect. Roads remain open to ordinary traffic throughout.",
+      "signature_challenge": "There is no organizer-published signature climb for the current Lagos-based course — earlier editions used different Algarve climbs (Fóia, Picota, Malhão, Barranco do Velho), but the route changes with the host town, so these should not be assumed to still be on course.",
+      "suffering_zones": [
+        "Open-road sections — no closed-course protection, so normal traffic rules and priority apply throughout",
+        "Late-course pacing — riders must maintain at least 20 km/h at checkpoints and finish within 5 hours 30 minutes or risk being pulled by sweep vehicles"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +91,51 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Mixed Signal",
+      "summary": "Algarve Gran Fondo carries real pedigree — it's the official gran fondo of the Volta ao Algarve, Portugal's top professional stage race, now in its tenth edition (with a two-year pandemic hiatus along the way). But read the regulations, not just the branding: despite chip timing, rankings, and a yellow-jersey-style leader's award, the organizer explicitly calls the event non-competitive with no official classification. The course itself has moved repeatedly — Tavira, Loulé, Lagoa, and now Lagos for 2026 — so 'Algarve Gran Fondo' describes a changing route, not a fixed one. Entry is genuinely affordable (€40-€50) and the Volta connection gives it real atmosphere, but the mixed competitive/non-competitive positioning and shifting course are honest weaknesses to know going in.",
+      "strengths": [
+        "Official gran fondo of the Volta ao Algarve — genuine pro-race pedigree and programme placement",
+        "Tenth edition in 2026, with a real multi-year track record despite a pandemic-era hiatus",
+        "Inexpensive relative to comparable European gran fondos: €40-€50 including insurance, feeds, medical/mechanical support, and a finisher medal",
+        "Two distances (130 km Gran Fondo, 90 km Mediofondo) let riders self-select"
+      ],
+      "weaknesses": [
+        "Officially non-competitive despite chip timing, rankings, and trophies — the regulations explicitly state there is no official classification, which may disappoint riders expecting a fully sanctioned race",
+        "Roads remain open to ordinary traffic for the full course",
+        "Course and host town change by edition — Tavira, Loulé, Lagoa, and Lagos have all hosted it, so named climbs and route character from past editions may not carry over",
+        "Restrictive refund policy: only 50% recoverable before a set date, then entries are final",
+        "Course documentation has minor inconsistencies across secondary sources — a third-party route-mapping link associated with the event shows a higher raw ascent figure than the official regulations' 2,213m, though the official figure is the more defensible one"
+      ],
+      "bottom_line": "Ride it for the Volta ao Algarve atmosphere and the affordable price, not for a certified competitive result — the organizer's own rules say this is a well-supported, non-competitive ride wearing a race's trophies and rankings."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Official amateur counterpart to Portugal's premier pro race, with pro climbs and Algarve beauty.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want an affordable, well-supported ride tied to a real professional stage race atmosphere. Skip if you specifically want certified competitive results — the organizer's own regulations define this as non-competitive.",
+      "alternatives": "If you want a genuinely competitive UCI-format Iberian gran fondo instead: The Millars (Castellón, Spain). If you want fixed, stable course character year to year: look for an Algarve gran fondo with a permanent host town."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.algarvegranfondo.com/",
+        "category": "official",
+        "label": "Algarve Gran Fondo — Official Site"
+      },
+      {
+        "url": "https://www-static.algarvegranfondo.com/wp-content/uploads/2025/12/REGULATIONS-AGF-26-1.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations — Non-Competitive Classification, Cutoffs, Refunds"
+      },
+      {
+        "url": "https://voltaaoalgarve.com/en/the-algarve-granfondo-is-back/",
+        "category": "official",
+        "label": "Volta ao Algarve — Official Gran Fondo History and 2023 Return"
+      },
+      {
+        "url": "https://cm-lagos.pt/municipio/noticias/15228-lagos-celebra-o-ciclismo-com-dois-grandes-eventos",
+        "category": "media",
+        "label": "Lagos Municipality — Tenth Edition Confirmation"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Algarve Gran Fondo gran fondo cycling Lagoa",

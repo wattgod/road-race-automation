@@ -14,7 +14,7 @@
       "country": "Switzerland",
       "date": "2026: September 5",
       "date_specific": "2026: September 5",
-      "field_size": "3000",
+      "field_size": "3250",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,9 +70,14 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Four route tiers out of Andermatt, in the central Swiss Alps: Platinum (267 km, 6,800m — five passes: Sustenpass, Grimselpass, Nufenenpass, Lukmanierpass, Oberalppass), Gold (212 km, 5,000m), Silver (108 km, 3,100m), and Bronze (68 km, 2,100m, including the cobbled Tremola ascent). The vitals on this profile describe the Platinum route, the event's hardest and longest option. Roads are not closed to traffic on any tier — riders share the passes, including tunnels, with normal Swiss road traffic and must run lights and follow standard rules throughout.",
+      "signature_challenge": "Five Alpine passes in one day on the Platinum route — Sustenpass, Grimselpass, Nufenenpass, Lukmanierpass, and Oberalppass — with a 21:00 finish cutoff and intermediate cutoffs on the longer distances.",
+      "suffering_zones": [
+        "Sustenpass — the opening pass on the Platinum route",
+        "Grimselpass and Nufenenpass — back-to-back climbing through the Alpine core",
+        "Lukmanierpass and Oberalppass — the closing passes, arriving late in a very long day",
+        "The Tremola cobbled ascent (Bronze route) — historic paved switchbacks, not gravel, but a genuine technical test"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +93,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Institution, Not the Race",
+      "summary": "Alpenbrevet has run since 1978 — the 2026 edition is its 48th, not a fully unbroken run, but still a genuinely long-lived Swiss Alpine institution that regularly sells out its 3,250 places within about two weeks. But it's explicitly built as a 'no-race': the organizer times riders but publishes finishers alphabetically, not ranked, and holds no winners' ceremony. Four route tiers (Bronze through Platinum) make it accessible to a wide range of ability, and the passes themselves — Sustenpass, Grimselpass, Nufenenpass, the cobbled Tremola on Bronze — are the real Alpine deal. The catch: roads stay open to ordinary traffic throughout, including in tunnels, so this is a personal-challenge ride through real Alpine road conditions, not a closed-course race.",
+      "strengths": [
+        "48 editions since founding in 1978 — genuine Swiss cycling institution status",
+        "Four route tiers (Bronze 68 km to Platinum 267 km) let riders self-select the right level of suffering",
+        "Real high Alpine passes: Sustenpass, Grimselpass, Nufenenpass, Gotthardpass, and the historic cobbled Tremola ascent",
+        "Consistent, reliable demand — sells out within roughly two weeks every year"
+      ],
+      "weaknesses": [
+        "Explicitly non-competitive — finishers are listed alphabetically, not ranked, and there's no winners' ceremony, which will disappoint riders wanting a real race result",
+        "Roads are not closed to traffic anywhere on the course, including tunnels — lights and full Swiss traffic-law compliance are mandatory",
+        "Fast sellout means registration timing matters as much as fitness — miss the window and you're waiting a year",
+        "Platinum, the marquee 267 km route, is capped at just 500 of the 3,250 total starting places"
+      ],
+      "bottom_line": "Ride Alpenbrevet for the passes and the history, not for a competitive result — the organizer tells you plainly this is a personal challenge, not a race. The Platinum route's five passes in one day is a serious undertaking by any measure."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Switzerland's ultimate Alpine pass conquest – brutal beauty that defines gran fondo greatness.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuine multi-pass Alpine day with nearly 50 years of organizational pedigree and don't need ranked results. Skip if you specifically want a closed-road, competitively timed race.",
+      "alternatives": "If you want a similar multi-pass format with a competitive classification: La Marmotte (French Alps). If you want a shorter single-pass Alpine test: pick Alpenbrevet's own Bronze or Silver tier instead of Platinum."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://alpenbrevet.ch/alle-touren/",
+        "category": "official",
+        "label": "Alpenbrevet — Official 2026 Route Overview"
+      },
+      {
+        "url": "https://alpenbrevet.ch/en/about-us/",
+        "category": "official",
+        "label": "Official History and Participation Information"
+      },
+      {
+        "url": "https://alpenbrevet.ch/en/services/rules/",
+        "category": "official",
+        "label": "Official Rules — Traffic and Safety Requirements"
+      },
+      {
+        "url": "https://alpenbrevet.ch/en/swiss-cycling-alpenbrevet-2025-sold-out-after-just-over-two-weeks/",
+        "category": "official",
+        "label": "Official 2025 Sellout Announcement"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Alpenbrevet gran fondo cycling Andermatt",

@@ -86,9 +86,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A point-to-point charity century from the JFK Library in Boston to Craigville Beach in Hyannis Port, with shorter 55-mile (Carver) and 20-mile (Sandwich) start options feeding into the same finish. The route is rolling-to-flat New England back roads — Duxbury Bay, Myles Standish State Forest, quiet Cape Cod towns — with no categorized climbs. Roads are not exclusively closed to traffic. The terrain never punishes; the mileage and the multi-start shuttle logistics do the work instead.",
+      "signature_challenge": "There is no signature climb. The test is 100 miles of open New England road on a coastal spring day, plus the point-to-point logistics of getting yourself, and eventually your car, between three different start towns and one beach finish.",
+      "suffering_zones": [
+        "Duxbury Bay exposure — open coastal miles with variable Atlantic winds and no terrain to hide behind",
+        "Myles Standish State Forest — a long, tree-covered stretch where the field spreads thin between rest stops",
+        "Final miles into Craigville Beach — flat but long, arriving on tired legs after 90+ miles with no late climb to break the monotony"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -104,19 +108,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Fundraiser",
+      "summary": "Best Buddies Challenge: Hyannis Port is not a gran fondo in the competitive sense — it is a fully supported 100-mile charity ride from Boston to Cape Cod, gun-timed but built around participation and fundraising, not racing. Now in its 27th year (inaugural edition 2000), it has grown into one of the largest cycling fundraisers in the country, pulling in more than $4 million in 2026 alone for Best Buddies International. The terrain is flat-to-rolling New England road with no categorized climbs, which makes the fundraising commitment, not the course, the real barrier to entry. This is a well-organized, well-supported day on the bike for people who want to raise real money for a real cause and don't need a race to justify the effort.",
+      "strengths": [
+        "Purpose-built fundraising machine: 27 years running, $4M+ raised in 2026 alone, a genuine track record most charity rides never reach",
+        "Full support: five fully stocked rest stops roughly every 25 miles, mechanics, medical, and a beach finish at Craigville with a clambake and concert",
+        "Multiple entry points (100/55/20 miles) let riders of different fitness levels reach the same finish line and celebration",
+        "Draws professional cyclists and celebrities, which raises the event's profile and fundraising ceiling"
+      ],
+      "weaknesses": [
+        "The real cost of entry is the fundraising minimum, not the registration fee — standard tier requires $100 to register plus a $2,800 fundraising commitment, with premium tiers running $5,000-$10,000",
+        "This is a charity ride, not a race — no categorized climbs, no competitive format, nothing here for riders chasing a genuine test of fitness",
+        "Roads are not exclusively closed to traffic along the full route",
+        "Point-to-point format with three separate start towns means real logistics: shuttles in, and getting yourself and your gear back afterward"
+      ],
+      "bottom_line": "Sign up for Best Buddies Hyannis Port if the mission matters to you and you can meet the fundraising ask — the organization, support, and finish-line atmosphere are genuinely excellent. Skip it if you're looking for a competitive gran fondo; the flat course and non-competitive format mean the challenge here is fundraising and mileage, not terrain."
     },
     "final_verdict": {
       "score": "79/100",
       "one_liner": "100-mile charity rocket from Boston to Cape Cod with pros, celebs, and lobster-fueled glory.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a well-run, well-supported charity century for a cause you believe in and can meet the fundraising minimum. Skip if you want a competitive gran fondo with real climbing — this is flat New England road and a non-competitive format.",
+      "alternatives": "If you want the same charity-ride format with a real climbing test: Assault on Mt. Mitchell (NC). If you want a competitive New England century instead of a charity ride: look at regional USAC road events in Massachusetts."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.bestbuddieschallenge.org/hp/",
+        "category": "official",
+        "label": "Best Buddies Challenge: Hyannis Port — Official Site"
+      },
+      {
+        "url": "https://www.bestbuddieschallenge.org/hp/routes/",
+        "category": "official",
+        "label": "Official Routes, Elevation and Support"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/the-27th-annual-best-buddies-challenge-hyannis-port-presented-by-jersey-mikes-subs-shaws-and-star-market-foundation-and-the-tjx-companies-inc-raises-more-than-4-million-to-support-people-with-intellectual-and-developmental--302789835.html",
+        "category": "media",
+        "label": "PR Newswire — 27th Annual Best Buddies Challenge Raises $4M+"
+      },
+      {
+        "url": "https://www.bestbuddieschallenge.org/hp/fundraising-levels/",
+        "category": "official",
+        "label": "Fundraising Requirements by Tier"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",

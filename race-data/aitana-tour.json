@@ -70,9 +70,14 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starting and finishing at the municipal sports complex in Callosa d'en Sarrià, the Gran Fondo (165 km, ~3,350-3,400m) and Medio Fondo (100 km) both climb through the Marina Baixa mountains around Aitana on roads used by Vuelta a España stages and by pro teams training on the Costa Blanca. Despite the 'Gran Fondo' branding, the event is run as a non-competitive, neutralized ride — traffic is closed only inside a moving red-to-green-flag safety capsule, with a handful of designated segments timed separately.",
+      "signature_challenge": "Puerto de Sa Creueta (Gran Fondo only) — 12.5 km climbing 624 m to around 780 m at gradients up to 14%, the last major test after Tudons, Confrides, and Coll de Rates have already worn the field down.",
+      "suffering_zones": [
+        "Puerto de Tudons — 12 km, 603 m of gain to 1,024 m, max gradient 11%",
+        "Puerto de Confrides — 4.6 km, 257 m of gain to 970 m, max gradient 12%",
+        "Coll de Rates — 6.7 km with ramps up to 14.1%, one of the Costa Blanca's best-known climbs",
+        "Puerto de Sa Creueta — Gran Fondo-only finale, 12.5 km at up to 14%, arriving on legs already spent by three earlier climbs"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,19 +93,50 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Neutralized Fondo",
+      "summary": "Aitana Tour has grown into a reference Costa Blanca gran fondo in five years, riding climbs — Tudons, Confrides, Coll de Rates, Sa Creueta — that pro teams use for winter training and the Vuelta has used for stages. But read the fine print before you call it a race: the event is explicitly non-competitive. The peloton rides inside a moving 'safety capsule' between a red flag and a green flag, with only a handful of timed segments (two on the Medio Fondo, four on the Gran Fondo) counting for any placing. If you came for a start-to-finish race, this isn't it; if you came for a hard, scenic, well-marshaled day on real Vuelta roads, it delivers.",
+      "strengths": [
+        "Genuine Vuelta a España climbing pedigree — Tudons, Confrides, Coll de Rates, and Sa Creueta are roads pro teams actually train and race on",
+        "165 km / ~3,350-3,400m Gran Fondo is a serious physical test regardless of the non-competitive format",
+        "Two distances (165 km Gran Fondo, 100 km Medio Fondo) let riders self-select their day",
+        "Established five-year run has made it a reference event on the Costa Blanca cycling calendar"
+      ],
+      "weaknesses": [
+        "Despite the 'Gran Fondo' name, it's officially non-competitive — the field is neutralized and speed-controlled outside a few timed segments, with no unrestricted start-to-finish classification",
+        "Traffic is closed only inside the moving safety capsule; riders passed by the green flag rejoin open roads as ordinary traffic",
+        "A hard cutoff at km 99.8 (12:15pm) demotes late riders from the Gran Fondo to the Medio Fondo route regardless of intent",
+        "Official elevation figures are inconsistent between the event website (3,350m) and the published regulations (3,400m) — a minor but real data-quality gap"
+      ],
+      "bottom_line": "Go to Aitana Tour for the climbs and the scenery, not for a race result. The Tudons-Confrides-Rates-Sa Creueta combination is a genuinely hard Costa Blanca test, but the neutralized, capsule-controlled format means this reads more like a very hard supported ride than a competitive gran fondo."
     },
     "final_verdict": {
       "score": "76/100",
       "one_liner": "Elite road sportive conquering Alicante's mythic climbs with pro-level suffering and support.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want to ride genuine Vuelta a España climbs on a well-organized, well-marshaled Costa Blanca route. Skip if you specifically want a timed, competitive start-to-finish race — the neutralized format won't deliver that.",
+      "alternatives": "If you want the same Costa Blanca climbs with a genuine competitive UCI format: The Millars (Castellón). If you want a shorter day on similar terrain: the Aitana Tour Medio Fondo (100 km) instead of the full Gran Fondo."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.aitanatour.com/es/",
+        "category": "official",
+        "label": "Aitana Tour Gran Fondo — Official Site"
+      },
+      {
+        "url": "https://www.aitanatour.com/reglamento-marcha",
+        "category": "official",
+        "label": "Official Regulations — Traffic, Timed Segments and Cutoffs"
+      },
+      {
+        "url": "https://ciclink.es/evento/aitana-tour/",
+        "category": "media",
+        "label": "Ciclink — Aitana Tour Completed-Event Confirmation"
+      },
+      {
+        "url": "https://cadenaser.com/comunitat-valenciana/2026/03/05/la-aitana-tour-cumple-cinco-anos-asentada-como-la-marcha-de-referencia-en-espana-radio-benidorm/",
+        "category": "media",
+        "label": "Cadena SER — Aitana Tour's Fifth Anniversary Coverage"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Aitana Tour Gran Fondo gran fondo cycling Callosa d'en Sarrià",
