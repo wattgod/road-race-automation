@@ -6231,6 +6231,13 @@ def load_race_data(filepath: Path) -> dict:
     """Load and normalize race data from a JSON file."""
     with open(filepath, 'r', encoding='utf-8') as f:
         raw = json.load(f)
+    flags = (raw.get("race") or {}).get("catalog_flags") or {}
+    if flags.get("duplicate_of") or flags.get("discipline_mismatch"):
+        raise SystemExit(
+            f"REFUSED: {filepath.name} is catalog-flagged "
+            f"({'duplicate of ' + str(flags.get('duplicate_of')) if flags.get('duplicate_of') else 'discipline mismatch'}) "
+            f"— its live page is a redirect stub; do not regenerate."
+        )
     rd = normalize_race_data(raw)
     # Store file mtime for accurate dateModified in JSON-LD
     rd['_file_mtime'] = datetime.fromtimestamp(filepath.stat().st_mtime).strftime('%Y-%m-%d')
