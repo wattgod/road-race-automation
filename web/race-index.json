@@ -8116,56 +8116,6 @@
     ]
   },
   {
-    "name": "GFNY Uppsala",
-    "slug": "gfny-uppsala",
-    "location": "Uppsala, Sweden (start/finish at Ulva Kvarn)",
-    "country": "Sweden",
-    "region": "Northern Europe",
-    "month": "August",
-    "distance_km": 133.5,
-    "distance_mi": 83.0,
-    "elevation_m": 494,
-    "elevation_ft": 1621.0,
-    "tier": 2,
-    "overall_score": 67,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 3,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/gfny-uppsala/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Long course (competitive, 2024)",
-        "distance_km": 133.5,
-        "elevation_m": 494,
-        "surface": "6 gravel sectors totaling ~38km (~28% of route)"
-      },
-      {
-        "name": "Medium course (timed, non-competitive, 2024)",
-        "distance_km": 79,
-        "surface": "3 gravel sectors totaling ~19km (~24% of route)"
-      }
-    ]
-  },
-  {
     "name": "GFNY Villard de Lans",
     "slug": "gfny-villard-de-lans",
     "location": "Villard-de-Lans, Isere, France",
@@ -8620,6 +8570,44 @@
         "distance_km": 150
       }
     ]
+  },
+  {
+    "name": "London Edinburgh London",
+    "slug": "london-edinburgh-london",
+    "location": "London area, England, UK (start venue varies by edition — Loughton/Debden, Essex in 2022; Writtle, near Chelmsford, scheduled for 2029)",
+    "country": "United Kingdom",
+    "region": "Other",
+    "month": "August",
+    "distance_km": 1540.0,
+    "distance_mi": 956.9,
+    "elevation_m": 14080,
+    "elevation_ft": 46194.0,
+    "tier": 2,
+    "overall_score": 67,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/london-edinburgh-london/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
   },
   {
     "name": "Marmotte Granfondo Sestriere",
@@ -9302,6 +9290,56 @@
     ]
   },
   {
+    "name": "GFNY Uppsala",
+    "slug": "gfny-uppsala",
+    "location": "Uppsala, Sweden (start/finish at Ulva Kvarn)",
+    "country": "Sweden",
+    "region": "Northern Europe",
+    "month": "August",
+    "distance_km": 133.5,
+    "distance_mi": 83.0,
+    "elevation_m": 494,
+    "elevation_ft": 1621.0,
+    "tier": 2,
+    "overall_score": 66,
+    "scores": {
+      "distance": 3,
+      "climbing": 1,
+      "descent_technicality": 3,
+      "road_surface": 3,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/gfny-uppsala/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Long course (competitive, 2024)",
+        "distance_km": 133.5,
+        "elevation_m": 494,
+        "surface": "6 gravel sectors totaling ~38km (~28% of route)"
+      },
+      {
+        "name": "Medium course (timed, non-competitive, 2024)",
+        "distance_km": 79,
+        "surface": "3 gravel sectors totaling ~19km (~24% of route)"
+      }
+    ]
+  },
+  {
     "name": "Gran Fondo Hainan",
     "slug": "gran-fondo-hainan",
     "location": "Lingao, Danzhou/Yangpu & Wuzhishan, Hainan Island, China",
@@ -9454,44 +9492,6 @@
     ]
   },
   {
-    "name": "London Edinburgh London",
-    "slug": "london-edinburgh-london",
-    "location": "London area, England, UK (start venue varies by edition — Loughton/Debden, Essex in 2022; Writtle, near Chelmsford, scheduled for 2029)",
-    "country": "United Kingdom",
-    "region": "Other",
-    "month": "August",
-    "distance_km": 1540.0,
-    "distance_mi": 956.9,
-    "elevation_m": 14080,
-    "elevation_ft": 46194.0,
-    "tier": 2,
-    "overall_score": 66,
-    "scores": {
-      "distance": 5,
-      "climbing": 4,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 4,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 1,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/london-edinburgh-london/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
     "name": "Majka Gran Fondo",
     "slug": "majka-gran-fondo",
     "location": "Dobczyce, Lesser Poland (Małopolskie), Poland — near Kraków",
@@ -9630,6 +9630,55 @@
     "lat": null,
     "lng": null,
     "route_options": []
+  },
+  {
+    "name": "Race Around Netherlands",
+    "slug": "race-around-netherlands",
+    "location": "Amerongen, Netherlands (fixed anticlockwise loop)",
+    "country": "Netherlands",
+    "region": "Western Europe",
+    "month": "May",
+    "distance_km": 1950.0,
+    "distance_mi": 1211.7,
+    "elevation_m": 7000,
+    "elevation_ft": 22966.0,
+    "tier": 2,
+    "overall_score": 66,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/race-around-netherlands/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Full Loop",
+        "distance_km": 1950.0,
+        "elevation_m": 7000
+      },
+      {
+        "name": "North Loop",
+        "distance_km": 1315.0,
+        "elevation_m": 800
+      }
+    ]
   },
   {
     "name": "Rad am Ring",
@@ -10528,6 +10577,60 @@
     "route_options": []
   },
   {
+    "name": "Korea Epic Ride",
+    "slug": "korea-epic-ride",
+    "location": "Songjeon Beach, Sonyang-myeon, Yangyang-gun, Gangwon-do, South Korea",
+    "country": "South Korea",
+    "region": "Asia",
+    "month": "June",
+    "distance_km": 328.0,
+    "distance_mi": 203.8,
+    "elevation_m": 8004,
+    "elevation_ft": 26260.0,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "road_surface": 5,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 1,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/korea-epic-ride/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Epic Road 1000 (paved)",
+        "distance_km": 1024.0,
+        "elevation_m": 17670
+      },
+      {
+        "name": "Epic Offroad 500",
+        "distance_km": 500.0,
+        "elevation_m": 12240
+      },
+      {
+        "name": "Epic Offroad 300",
+        "distance_km": 328.0,
+        "elevation_m": 8004
+      }
+    ]
+  },
+  {
     "name": "Les Trois Ballons",
     "slug": "les-trois-ballons",
     "location": "Ronchamp, Haute-Saône, France (finishes at La Planche des Belles Filles)",
@@ -10652,6 +10755,44 @@
       "Gran Fondo (Road): ~100 km (62 mi), 1,560 m (5,118 ft) climbing — the flagship route through UNESCO Prosecco Hills with 4 timed climbs",
       "Gravel: ~70 km (43 mi) — gravel route through the vineyard back roads (same day, same start)"
     ]
+  },
+  {
+    "name": "Race Across Italy 300",
+    "slug": "race-across-italy-300",
+    "location": "Silvi Paese, Teramo, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "month": "May",
+    "distance_km": 330.0,
+    "distance_mi": 205.1,
+    "elevation_m": 4600,
+    "elevation_ft": 15092.0,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/race-across-italy-300/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
   },
   {
     "name": "Race Around Austria",
@@ -12102,6 +12243,63 @@
     ]
   },
   {
+    "name": "BalatonFondo",
+    "slug": "balatonfondo",
+    "location": "Balatonfüred and the Balaton Uplands, Hungary",
+    "country": "Hungary",
+    "region": "Eastern Europe",
+    "month": "May",
+    "distance_km": 177.0,
+    "distance_mi": 110.0,
+    "elevation_m": 1716,
+    "elevation_ft": 5630.0,
+    "tier": 2,
+    "overall_score": 61,
+    "scores": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/balatonfondo/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Granfondo",
+        "distance_km": 177,
+        "elevation_m": 1716,
+        "note": "Timed race"
+      },
+      {
+        "name": "Mediofondo",
+        "distance_km": 59.2,
+        "elevation_m": 623,
+        "note": "Timed race"
+      },
+      {
+        "name": "Piccolofondo",
+        "distance_km": 54.5,
+        "elevation_m": 380,
+        "note": "Guided, untimed cycle tour"
+      }
+    ]
+  },
+  {
     "name": "Eroica California",
     "slug": "eroica-california",
     "location": "Cambria, Central Coast, California, USA",
@@ -12444,6 +12642,55 @@
     "route_options": []
   },
   {
+    "name": "Granfondo Top Dolomites",
+    "slug": "granfondo-moser",
+    "location": "Pinzolo, Trentino, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "month": "June",
+    "distance_km": 111.0,
+    "distance_mi": 69.0,
+    "elevation_m": 2780,
+    "elevation_ft": 9121.0,
+    "tier": 2,
+    "overall_score": 61,
+    "scores": {
+      "distance": 2,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/granfondo-moser/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Granfondo",
+        "distance_km": 111.0,
+        "elevation_m": 2780
+      },
+      {
+        "name": "Mediofondo",
+        "distance_km": 77.0,
+        "elevation_m": 1930
+      }
+    ]
+  },
+  {
     "name": "Helsinki Gran Fondo",
     "slug": "helsinki-gran-fondo",
     "location": "Helsinki Velodrome, Helsinki, Finland",
@@ -12561,15 +12808,16 @@
       "expenses": 3,
       "cultural_impact": 3
     },
-    "tagline": "110km of Chilean coastal fury with 1,804m punch—Tour de France soul hits the Southern Hemisphere!",
+    "tagline": "",
     "has_profile": true,
     "profile_url": "/race/letape-chile/",
     "discipline": "gran_fondo",
     "lat": -39.8142,
     "lng": -73.2459,
     "route_options": [
-      "Main: 110km, 1,804m — full coastal immersion",
-      "Short: 60km, 600m — beginner TdF taste"
+      "Long: 110km, 1,804m — main TdF-branded route",
+      "Short: 60km, 1,292m — e-bikes/MTBs permitted",
+      "Family: 30km, 372m — e-bikes/MTBs permitted"
     ]
   },
   {
@@ -12817,6 +13065,55 @@
     ]
   },
   {
+    "name": "Bordeaux-Paris Ultra Cycling Challenge",
+    "slug": "bordeaux-paris-ultra-cycling",
+    "location": "Bordeaux to Saint-Remy-les-Chevreuse (near Paris), France",
+    "country": "France",
+    "region": "Western Europe",
+    "month": "May",
+    "distance_km": 650.0,
+    "distance_mi": 403.9,
+    "elevation_m": 4500,
+    "elevation_ft": 14764.0,
+    "tier": 2,
+    "overall_score": 60,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/bordeaux-paris-ultra-cycling/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Main route (Bordeaux-Paris)",
+        "distance_km": 650.0,
+        "elevation_m": 4500
+      },
+      {
+        "name": "Secondary route (from Chateauroux)",
+        "distance_km": 305.0,
+        "elevation_m": 1450
+      }
+    ]
+  },
+  {
     "name": "Cape Rouleur",
     "slug": "cape-rouleur",
     "location": "Franschhoek, Western Cape, South Africa",
@@ -12856,6 +13153,44 @@
       "Full Cape Rouleur: ~600 km over 5 stages with ~6,000m climbing",
       "Optional Cape Town Cycle Tour entry: additional 109 km on the final day"
     ]
+  },
+  {
+    "name": "Cykelvasan",
+    "slug": "cykelvasan",
+    "location": "Sälen to Mora, Sweden",
+    "country": "Sweden",
+    "region": "Northern Europe",
+    "month": "August",
+    "distance_km": 92.0,
+    "distance_mi": 57.2,
+    "elevation_m": null,
+    "elevation_ft": null,
+    "tier": 2,
+    "overall_score": 60,
+    "scores": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 3,
+      "road_surface": 5,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/cykelvasan/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
   },
   {
     "name": "Etape Loch Ness",
@@ -13185,55 +13520,6 @@
     "route_options": []
   },
   {
-    "name": "Race Around Netherlands",
-    "slug": "race-around-netherlands",
-    "location": "Amerongen, Netherlands (fixed anticlockwise loop)",
-    "country": "Netherlands",
-    "region": "Western Europe",
-    "month": "May",
-    "distance_km": 1950.0,
-    "distance_mi": 1211.7,
-    "elevation_m": 7000,
-    "elevation_ft": 22966.0,
-    "tier": 2,
-    "overall_score": 60,
-    "scores": {
-      "distance": 5,
-      "climbing": 1,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/race-around-netherlands/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Full Loop",
-        "distance_km": 1950.0,
-        "elevation_m": 7000
-      },
-      {
-        "name": "North Loop",
-        "distance_km": 1315.0,
-        "elevation_m": 800
-      }
-    ]
-  },
-  {
     "name": "Ring of Kerry Charity Cycle",
     "slug": "ring-of-kerry-charity-cycle",
     "location": "Killarney, County Kerry, Ireland",
@@ -13310,55 +13596,6 @@
     "lat": null,
     "lng": null,
     "route_options": []
-  },
-  {
-    "name": "Surrey Rumble",
-    "slug": "surrey-rumble",
-    "location": "Cobham, Surrey, England",
-    "country": "England",
-    "region": "UK & Ireland",
-    "month": "March",
-    "distance_km": 128.7,
-    "distance_mi": 80.0,
-    "elevation_m": 1270,
-    "elevation_ft": 4167.0,
-    "tier": 2,
-    "overall_score": 60,
-    "scores": {
-      "distance": 3,
-      "climbing": 4,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 2,
-      "value": 5,
-      "expenses": 4,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/surrey-rumble/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Long",
-        "distance_km": 128.7,
-        "distance_mi": 80.0
-      },
-      {
-        "name": "Short",
-        "distance_km": 96.6,
-        "distance_mi": 60.0
-      }
-    ]
   },
   {
     "name": "Tour de Yabakei",
@@ -13671,63 +13908,6 @@
     ]
   },
   {
-    "name": "BalatonFondo",
-    "slug": "balatonfondo",
-    "location": "Balatonfüred and the Balaton Uplands, Hungary",
-    "country": "Hungary",
-    "region": "Eastern Europe",
-    "month": "May",
-    "distance_km": 177.0,
-    "distance_mi": 110.0,
-    "elevation_m": 1716,
-    "elevation_ft": 5630.0,
-    "tier": 3,
-    "overall_score": 59,
-    "scores": {
-      "distance": 3,
-      "climbing": 2,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/balatonfondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Granfondo",
-        "distance_km": 177,
-        "elevation_m": 1716,
-        "note": "Timed race"
-      },
-      {
-        "name": "Mediofondo",
-        "distance_km": 59.2,
-        "elevation_m": 623,
-        "note": "Timed race"
-      },
-      {
-        "name": "Piccolofondo",
-        "distance_km": 54.5,
-        "elevation_m": 380,
-        "note": "Guided, untimed cycle tour"
-      }
-    ]
-  },
-  {
     "name": "Eroica Cuba",
     "slug": "eroica-cuba",
     "location": "Viñales, Pinar del Río Province, Cuba",
@@ -13809,16 +13989,16 @@
     ]
   },
   {
-    "name": "GFNY Florida Sebring",
-    "slug": "gfny-florida-sebring",
-    "location": "Sebring, Florida, USA",
+    "name": "GFNY Florida Hardee",
+    "slug": "gfny-florida-hardee",
+    "location": "Wauchula, Hardee County, Florida, USA",
     "country": "USA",
     "region": "North America",
     "month": "October",
-    "distance_km": 132.0,
-    "distance_mi": 82.0,
+    "distance_km": 135.7,
+    "distance_mi": 84.3,
     "elevation_m": 244,
-    "elevation_ft": 800.0,
+    "elevation_ft": 800.5,
     "tier": 3,
     "overall_score": 59,
     "scores": {
@@ -13840,11 +14020,14 @@
     },
     "tagline": "",
     "has_profile": true,
-    "profile_url": "/race/gfny-florida-sebring/",
+    "profile_url": "/race/gfny-florida-hardee/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "Long/Competitive: 135.7km, 244m — category rankings, Overall and Podium awards",
+      "Medium/Recreational: ~72.4km (45mi), ~122m (400ft) — non-competitive, finish time given but not ranked"
+    ]
   },
   {
     "name": "GFNY Maryland Cambridge",
@@ -13923,44 +14106,6 @@
     "route_options": []
   },
   {
-    "name": "Gran Fondo Asociación Española (Montevideo)",
-    "slug": "gran-fondo-montevideo",
-    "location": "Montevideo and Canelones Department, Uruguay",
-    "country": "Uruguay",
-    "region": "Other",
-    "month": "September",
-    "distance_km": 138.0,
-    "distance_mi": 85.8,
-    "elevation_m": null,
-    "elevation_ft": 0.0,
-    "tier": 3,
-    "overall_score": 59,
-    "scores": {
-      "distance": 3,
-      "climbing": 1,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/gran-fondo-montevideo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
     "name": "Granfondo Campagnolo Roma",
     "slug": "granfondo-campagnolo-roma",
     "location": "Rome, Lazio, Italy",
@@ -13999,55 +14144,6 @@
     "route_options": [
       "Gran Fondo: 123 km (76 mi), ~2,000 m gain — 4 timed climbs through the Castelli Romani",
       "Medio Fondo: 62 km (39 mi) — 'In Bici ai Castelli Romani' — shorter loop through the Roman hills"
-    ]
-  },
-  {
-    "name": "Granfondo Top Dolomites",
-    "slug": "granfondo-moser",
-    "location": "Pinzolo, Trentino, Italy",
-    "country": "Italy",
-    "region": "Southern Europe",
-    "month": "June",
-    "distance_km": 111.0,
-    "distance_mi": 69.0,
-    "elevation_m": 2780,
-    "elevation_ft": 9121.0,
-    "tier": 3,
-    "overall_score": 59,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 3,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 3,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/granfondo-moser/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Granfondo",
-        "distance_km": 111.0,
-        "elevation_m": 2780
-      },
-      {
-        "name": "Mediofondo",
-        "distance_km": 77.0,
-        "elevation_m": 1930
-      }
     ]
   },
   {
@@ -14132,44 +14228,6 @@
       "63 km (39.1 mi) — Shorter gran fondo option",
       "26 km (16.2 mi) — Time trial on Saturday with 200m elevation"
     ]
-  },
-  {
-    "name": "Race Across Italy 300",
-    "slug": "race-across-italy-300",
-    "location": "Silvi Paese, Teramo, Italy",
-    "country": "Italy",
-    "region": "Southern Europe",
-    "month": "May",
-    "distance_km": 330.0,
-    "distance_mi": 205.1,
-    "elevation_m": 4600,
-    "elevation_ft": 15092.0,
-    "tier": 3,
-    "overall_score": 59,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/race-across-italy-300/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
   },
   {
     "name": "Stellenbosch Cycle Tour",
@@ -14468,44 +14526,6 @@
     "route_options": []
   },
   {
-    "name": "Cykelvasan",
-    "slug": "cykelvasan",
-    "location": "Sälen to Mora, Sweden",
-    "country": "Sweden",
-    "region": "Northern Europe",
-    "month": "August",
-    "distance_km": 92.0,
-    "distance_mi": 57.2,
-    "elevation_m": null,
-    "elevation_ft": null,
-    "tier": 3,
-    "overall_score": 57,
-    "scores": {
-      "distance": 4,
-      "climbing": 2,
-      "descent_technicality": 3,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 2,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/cykelvasan/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
     "name": "El Tour de Tucson",
     "slug": "el-tour-de-tucson",
     "location": "Tucson, Arizona, USA",
@@ -14660,44 +14680,6 @@
     "tagline": "",
     "has_profile": true,
     "profile_url": "/race/goteborgsgirot/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
-    "name": "Gran Fondo Curacavi",
-    "slug": "gran-fondo-curacavi",
-    "location": "Curacaví, Santiago Metropolitan Region, Chile (course crosses into Casablanca, Valparaíso Region)",
-    "country": "Chile",
-    "region": "South America",
-    "month": "April",
-    "distance_km": 127.0,
-    "distance_mi": 78.9,
-    "elevation_m": 1200,
-    "elevation_ft": 3937.0,
-    "tier": 3,
-    "overall_score": 57,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 3,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/gran-fondo-curacavi/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
@@ -14911,6 +14893,55 @@
     ]
   },
   {
+    "name": "Surrey Rumble",
+    "slug": "surrey-rumble",
+    "location": "Cobham, Surrey, England",
+    "country": "England",
+    "region": "UK & Ireland",
+    "month": "March",
+    "distance_km": 128.7,
+    "distance_mi": 80.0,
+    "elevation_m": 1270,
+    "elevation_ft": 4167.0,
+    "tier": 3,
+    "overall_score": 57,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 4,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/surrey-rumble/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Long",
+        "distance_km": 128.7,
+        "distance_mi": 80.0
+      },
+      {
+        "name": "Short",
+        "distance_km": 96.6,
+        "distance_mi": 60.0
+      }
+    ]
+  },
+  {
     "name": "aQuelle Tour Durban",
     "slug": "tour-durban",
     "location": "Durban, KwaZulu-Natal, South Africa",
@@ -15038,44 +15069,6 @@
     ]
   },
   {
-    "name": "UCI Gran Fondo Ireland",
-    "slug": "uci-gran-fondo-ireland",
-    "location": "Sligo, Ireland",
-    "country": "Ireland",
-    "region": "UK & Ireland",
-    "month": "June",
-    "distance_km": 135.0,
-    "distance_mi": 83.9,
-    "elevation_m": 1050,
-    "elevation_ft": 3445.0,
-    "tier": 3,
-    "overall_score": 57,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 2,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 2,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/uci-gran-fondo-ireland/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
     "name": "Valley GranFondo",
     "slug": "valley-granfondo",
     "location": "Langley, Fraser Valley, BC, Canada",
@@ -15131,60 +15124,6 @@
     ]
   },
   {
-    "name": "Viana Granfondo",
-    "slug": "viana-granfondo",
-    "location": "Viana do Castelo, Alto Minho, Portugal",
-    "country": "Portugal",
-    "region": "Southern Europe",
-    "month": "March",
-    "distance_km": 130.0,
-    "distance_mi": 80.8,
-    "elevation_m": 1869,
-    "elevation_ft": 6132.0,
-    "tier": 3,
-    "overall_score": 57,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/viana-granfondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Granfondo",
-        "distance_km": 130.0,
-        "elevation_m": 1869
-      },
-      {
-        "name": "Mediofondo",
-        "distance_km": 99.0,
-        "elevation_m": 1105
-      },
-      {
-        "name": "Minifondo",
-        "distance_km": 53.0,
-        "elevation_m": 544
-      }
-    ]
-  },
-  {
     "name": "Amy's Gran Fondo",
     "slug": "amys-gran-fondo",
     "location": "Lorne, Great Ocean Road, Victoria, Australia",
@@ -15223,55 +15162,6 @@
     "route_options": [
       "103 km Gran Fondo (~64 mi, ~1,500m climbing)",
       "60 km Medio Fondo"
-    ]
-  },
-  {
-    "name": "Bordeaux-Paris Ultra Cycling Challenge",
-    "slug": "bordeaux-paris-ultra-cycling",
-    "location": "Bordeaux to Saint-Remy-les-Chevreuse (near Paris), France",
-    "country": "France",
-    "region": "Western Europe",
-    "month": "May",
-    "distance_km": 650.0,
-    "distance_mi": 403.9,
-    "elevation_m": 4500,
-    "elevation_ft": 14764.0,
-    "tier": 3,
-    "overall_score": 56,
-    "scores": {
-      "distance": 5,
-      "climbing": 1,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/bordeaux-paris-ultra-cycling/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Main route (Bordeaux-Paris)",
-        "distance_km": 650.0,
-        "elevation_m": 4500
-      },
-      {
-        "name": "Secondary route (from Chateauroux)",
-        "distance_km": 305.0,
-        "elevation_m": 1450
-      }
     ]
   },
   {
@@ -15315,6 +15205,44 @@
       "120km Challenge Classic: 122.9 km (76 mi), 2,029 m climbing, 15.2% max gradient, 3 K/QOM segments",
       "85km Rouleurs Classic: 85.7 km (53 mi), 1,324 m climbing, 11% max gradient, 1 K/QOM segment"
     ]
+  },
+  {
+    "name": "Gran Fondo Curacavi",
+    "slug": "gran-fondo-curacavi",
+    "location": "Curacaví, Santiago Metropolitan Region, Chile (course crosses into Casablanca, Valparaíso Region)",
+    "country": "Chile",
+    "region": "South America",
+    "month": "April",
+    "distance_km": 127.0,
+    "distance_mi": 78.9,
+    "elevation_m": 1200,
+    "elevation_ft": 3937.0,
+    "tier": 3,
+    "overall_score": 56,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/gran-fondo-curacavi/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
   },
   {
     "name": "Gran Fondo Jasper",
@@ -15362,58 +15290,42 @@
     ]
   },
   {
-    "name": "Korea Epic Ride",
-    "slug": "korea-epic-ride",
-    "location": "Songjeon Beach, Sonyang-myeon, Yangyang-gun, Gangwon-do, South Korea",
-    "country": "South Korea",
-    "region": "Asia",
-    "month": "June",
-    "distance_km": 328.0,
-    "distance_mi": 203.8,
-    "elevation_m": 8004,
-    "elevation_ft": 26260.0,
+    "name": "Gran Fondo Asociación Española (Montevideo)",
+    "slug": "gran-fondo-montevideo",
+    "location": "Montevideo and Canelones Department, Uruguay",
+    "country": "Uruguay",
+    "region": "Other",
+    "month": "September",
+    "distance_km": 138.0,
+    "distance_mi": 85.8,
+    "elevation_m": null,
+    "elevation_ft": 0.0,
     "tier": 3,
     "overall_score": 56,
     "scores": {
-      "distance": 2,
-      "climbing": 3,
+      "distance": 3,
+      "climbing": 2,
       "descent_technicality": 1,
       "road_surface": 1,
       "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 3,
       "community_culture": 3,
       "field_depth": 2,
       "value": 4,
       "expenses": 4,
-      "cultural_impact": 1
+      "cultural_impact": 2
     },
     "tagline": "",
     "has_profile": true,
-    "profile_url": "/race/korea-epic-ride/",
+    "profile_url": "/race/gran-fondo-montevideo/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": [
-      {
-        "name": "Epic Road 1000 (paved)",
-        "distance_km": 1024.0,
-        "elevation_m": 17670
-      },
-      {
-        "name": "Epic Offroad 500",
-        "distance_km": 500.0,
-        "elevation_m": 12240
-      },
-      {
-        "name": "Epic Offroad 300",
-        "distance_km": 328.0,
-        "elevation_m": 8004
-      }
-    ]
+    "route_options": []
   },
   {
     "name": "L'Etape Argentina by Tour de France",
@@ -15496,61 +15408,6 @@
       "Long route: ~140 km / 87 mi with ~2,500m / 8,202 ft of climbing — full Alto Minho route with all classified climbs",
       "Medium route: ~100 km / 62 mi with ~1,600m / 5,249 ft of climbing — abbreviated route bypassing longest climbs",
       "Short route: ~50 km / 31 mi with ~700m / 2,297 ft of climbing — introductory distance for less experienced riders"
-    ]
-  },
-  {
-    "name": "OCBC Cycle Singapore",
-    "slug": "ocbc-cycle-singapore",
-    "location": "The Kallang (formerly Singapore Sports Hub), Singapore",
-    "country": "Singapore",
-    "region": "Other",
-    "month": "May",
-    "distance_km": 40.0,
-    "distance_mi": 24.9,
-    "elevation_m": null,
-    "elevation_ft": null,
-    "tier": 3,
-    "overall_score": 56,
-    "scores": {
-      "distance": 2,
-      "climbing": 1,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 2,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/ocbc-cycle-singapore/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Sportive Ride",
-        "distance_km": 40.0
-      },
-      {
-        "name": "Foldie Ride by Brompton",
-        "distance_km": 40.0
-      },
-      {
-        "name": "The Straits Times Ride",
-        "distance_km": 20.0
-      },
-      {
-        "name": "Brompton World Championship (800m circuit, up to 5 laps)",
-        "distance_km": null
-      }
     ]
   },
   {
@@ -15791,6 +15648,60 @@
     "route_options": []
   },
   {
+    "name": "Viana Granfondo",
+    "slug": "viana-granfondo",
+    "location": "Viana do Castelo, Alto Minho, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "month": "March",
+    "distance_km": 130.0,
+    "distance_mi": 80.8,
+    "elevation_m": 1869,
+    "elevation_ft": 6132.0,
+    "tier": 3,
+    "overall_score": 56,
+    "scores": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/viana-granfondo/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Granfondo",
+        "distance_km": 130.0,
+        "elevation_m": 1869
+      },
+      {
+        "name": "Mediofondo",
+        "distance_km": 99.0,
+        "elevation_m": 1105
+      },
+      {
+        "name": "Minifondo",
+        "distance_km": 53.0,
+        "elevation_m": 544
+      }
+    ]
+  },
+  {
     "name": "5 Mila Marche Gran Fondo",
     "slug": "5-mila-marche-gran-fondo",
     "location": "Porto Recanati (MC), Marche, Italy",
@@ -15909,85 +15820,6 @@
     ]
   },
   {
-    "name": "Knysna Cycle Tour",
-    "slug": "knysna-cycle-tour",
-    "location": "Knysna Waterfront (Oyster Festival Grounds), Garden Route, Western Cape, South Africa",
-    "country": "South Africa",
-    "region": "Africa",
-    "month": "July",
-    "distance_km": 102.0,
-    "distance_mi": 63.4,
-    "elevation_m": null,
-    "elevation_ft": 0.0,
-    "tier": 3,
-    "overall_score": 54,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/knysna-cycle-tour/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "102 km Road (long)",
-      "42 km Road (short)"
-    ]
-  },
-  {
-    "name": "Krk Gran Fondo",
-    "slug": "krk-gran-fondo",
-    "location": "Punat, Island of Krk, Primorje-Gorski Kotar County, Croatia",
-    "country": "Croatia",
-    "region": "Southern Europe",
-    "month": "April",
-    "distance_km": 82.0,
-    "distance_mi": 51.0,
-    "elevation_m": 1320,
-    "elevation_ft": 4331.0,
-    "tier": 3,
-    "overall_score": 54,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 3,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 3,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 2,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/krk-gran-fondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
-  },
-  {
     "name": "Mt. Washington Auto Road Bicycle Hillclimb",
     "slug": "mount-washington-hillclimb",
     "location": "Mt. Washington Auto Road, Pinkham Notch, NH → Summit of Mt. Washington (6,288ft)",
@@ -16068,6 +15900,99 @@
       "Casual Explorer (35 miles) — Manhattan, Queens, and Brooklyn with iconic bridge crossings",
       "Family Fun Ride (15 miles) — relaxed spin with NYPD escort, perfect for kids and first-timers"
     ]
+  },
+  {
+    "name": "OCBC Cycle Singapore",
+    "slug": "ocbc-cycle-singapore",
+    "location": "The Kallang (formerly Singapore Sports Hub), Singapore",
+    "country": "Singapore",
+    "region": "Other",
+    "month": "May",
+    "distance_km": 40.0,
+    "distance_mi": 24.9,
+    "elevation_m": null,
+    "elevation_ft": null,
+    "tier": 3,
+    "overall_score": 54,
+    "scores": {
+      "distance": 1,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/ocbc-cycle-singapore/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Sportive Ride",
+        "distance_km": 40.0
+      },
+      {
+        "name": "Foldie Ride by Brompton",
+        "distance_km": 40.0
+      },
+      {
+        "name": "The Straits Times Ride",
+        "distance_km": 20.0
+      },
+      {
+        "name": "Brompton World Championship (800m circuit, up to 5 laps)",
+        "distance_km": null
+      }
+    ]
+  },
+  {
+    "name": "UCI Gran Fondo Ireland",
+    "slug": "uci-gran-fondo-ireland",
+    "location": "Sligo, Ireland",
+    "country": "Ireland",
+    "region": "UK & Ireland",
+    "month": "June",
+    "distance_km": 135.0,
+    "distance_mi": 83.9,
+    "elevation_m": 1050,
+    "elevation_ft": 3445.0,
+    "tier": 3,
+    "overall_score": 54,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/uci-gran-fondo-ireland/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
   },
   {
     "name": "Clare Classic",
@@ -16166,8 +16091,8 @@
     "tier": 3,
     "overall_score": 53,
     "scores": {
-      "distance": 4,
-      "climbing": 1,
+      "distance": 3,
+      "climbing": 2,
       "descent_technicality": 1,
       "road_surface": 1,
       "climate_risk": 3,
@@ -16192,6 +16117,47 @@
       "127 km Gran Fondo (2 laps)",
       "~63 km Medio Fondo (1 lap)",
       "24 km Family Fondo"
+    ]
+  },
+  {
+    "name": "Knysna Cycle Tour",
+    "slug": "knysna-cycle-tour",
+    "location": "Knysna Waterfront (Oyster Festival Grounds), Garden Route, Western Cape, South Africa",
+    "country": "South Africa",
+    "region": "Africa",
+    "month": "July",
+    "distance_km": 102.0,
+    "distance_mi": 63.4,
+    "elevation_m": null,
+    "elevation_ft": 0.0,
+    "tier": 3,
+    "overall_score": 53,
+    "scores": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/knysna-cycle-tour/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "102 km Road (long)",
+      "42 km Road (short)"
     ]
   },
   {
@@ -16325,6 +16291,44 @@
     ]
   },
   {
+    "name": "Vuelta Puerto Rico",
+    "slug": "vuelta-puerto-rico",
+    "location": "San Juan (start/finish), full island circumnavigation, Puerto Rico",
+    "country": "Puerto Rico",
+    "region": "Other",
+    "month": "February",
+    "distance_km": 604.0,
+    "distance_mi": 375.0,
+    "elevation_m": null,
+    "elevation_ft": null,
+    "tier": 3,
+    "overall_score": 53,
+    "scores": {
+      "distance": 5,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 1
+    },
+    "tagline": "A supported tour, not a race — circumnavigate Puerto Rico in three days.",
+    "has_profile": true,
+    "profile_url": "/race/vuelta-puerto-rico/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
+  },
+  {
     "name": "Gran Fondo Cycling Challenge – Ciudad de Panamá",
     "slug": "gran-fondo-panama",
     "location": "Panama City / Panamá Oeste, Panama — course location is contested between sources (see catalog_flags)",
@@ -16367,24 +16371,24 @@
     ]
   },
   {
-    "name": "Granfondo Charlevoix",
-    "slug": "granfondo-charlevoix",
-    "location": "Baie-Saint-Paul, Quebec, Canada",
-    "country": "Canada",
-    "region": "North America",
-    "month": "May",
-    "distance_km": 87.0,
-    "distance_mi": 54.1,
-    "elevation_m": null,
-    "elevation_ft": null,
+    "name": "Krk Gran Fondo",
+    "slug": "krk-gran-fondo",
+    "location": "Punat, Island of Krk, Primorje-Gorski Kotar County, Croatia",
+    "country": "Croatia",
+    "region": "Southern Europe",
+    "month": "April",
+    "distance_km": 82.0,
+    "distance_mi": 51.0,
+    "elevation_m": 1320,
+    "elevation_ft": 4331.0,
     "tier": 3,
     "overall_score": 51,
     "scores": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 2,
-      "descent_technicality": 2,
+      "descent_technicality": 3,
       "road_surface": 1,
-      "climate_risk": 3,
+      "climate_risk": 4,
       "altitude": 2,
       "logistics": 3,
       "prestige": 2,
@@ -16393,12 +16397,12 @@
       "community_culture": 3,
       "field_depth": 2,
       "value": 3,
-      "expenses": 3,
+      "expenses": 2,
       "cultural_impact": 1
     },
-    "tagline": "Rolling Charlevoix backroads, no podium pressure.",
+    "tagline": "",
     "has_profile": true,
-    "profile_url": "/race/granfondo-charlevoix/",
+    "profile_url": "/race/krk-gran-fondo/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
@@ -16448,38 +16452,38 @@
     ]
   },
   {
-    "name": "Vuelta Puerto Rico",
-    "slug": "vuelta-puerto-rico",
-    "location": "San Juan (start/finish), full island circumnavigation, Puerto Rico",
-    "country": "Puerto Rico",
-    "region": "Other",
-    "month": "February",
-    "distance_km": 604.0,
-    "distance_mi": 375.0,
+    "name": "Gran Fondo Estonia (Tallinn-Tartu)",
+    "slug": "tallinn-gran-fondo",
+    "location": "Tallinn to Tartu, Estonia (point-to-point)",
+    "country": "Estonia",
+    "region": "Northern Europe",
+    "month": "August",
+    "distance_km": 230.0,
+    "distance_mi": 142.9,
     "elevation_m": null,
     "elevation_ft": null,
     "tier": 3,
     "overall_score": 51,
     "scores": {
-      "distance": 4,
+      "distance": 5,
       "climbing": 2,
-      "descent_technicality": 2,
+      "descent_technicality": 1,
       "road_surface": 1,
       "climate_risk": 3,
       "altitude": 1,
-      "logistics": 4,
+      "logistics": 3,
       "prestige": 2,
       "organization": 3,
       "scenic_experience": 3,
       "community_culture": 3,
-      "field_depth": 2,
+      "field_depth": 1,
       "value": 3,
-      "expenses": 2,
+      "expenses": 4,
       "cultural_impact": 1
     },
-    "tagline": "A supported tour, not a race — circumnavigate Puerto Rico in three days.",
+    "tagline": "A discontinued Baltic point-to-point — not a race, a controlled group ride.",
     "has_profile": true,
-    "profile_url": "/race/vuelta-puerto-rico/",
+    "profile_url": "/race/tallinn-gran-fondo/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
@@ -16499,11 +16503,11 @@
     "tier": 3,
     "overall_score": 50,
     "scores": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 2,
       "descent_technicality": 1,
       "road_surface": 1,
-      "climate_risk": 3,
+      "climate_risk": 4,
       "altitude": 1,
       "logistics": 3,
       "prestige": 2,
@@ -16518,6 +16522,44 @@
     "tagline": "Ran two editions (2024-2025), then dropped from GFNY's calendar.",
     "has_profile": true,
     "profile_url": "/race/gfny-paracas/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": []
+  },
+  {
+    "name": "Granfondo Charlevoix",
+    "slug": "granfondo-charlevoix",
+    "location": "Baie-Saint-Paul, Quebec, Canada",
+    "country": "Canada",
+    "region": "North America",
+    "month": "May",
+    "distance_km": 87.0,
+    "distance_mi": 54.1,
+    "elevation_m": null,
+    "elevation_ft": null,
+    "tier": 3,
+    "overall_score": 50,
+    "scores": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "Rolling Charlevoix backroads, no podium pressure.",
+    "has_profile": true,
+    "profile_url": "/race/granfondo-charlevoix/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
@@ -16607,44 +16649,6 @@
       "60-mile loop",
       "10-mile Family Ride"
     ]
-  },
-  {
-    "name": "Gran Fondo Estonia (Tallinn-Tartu)",
-    "slug": "tallinn-gran-fondo",
-    "location": "Tallinn to Tartu, Estonia (point-to-point)",
-    "country": "Estonia",
-    "region": "Northern Europe",
-    "month": "August",
-    "distance_km": 230.0,
-    "distance_mi": 142.9,
-    "elevation_m": null,
-    "elevation_ft": null,
-    "tier": 3,
-    "overall_score": 50,
-    "scores": {
-      "distance": 3,
-      "climbing": 2,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 3,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 4,
-      "cultural_impact": 1
-    },
-    "tagline": "A discontinued Baltic point-to-point — not a race, a controlled group ride.",
-    "has_profile": true,
-    "profile_url": "/race/tallinn-gran-fondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
   },
   {
     "name": "Tour de Pologne Amatorów",
