@@ -48,7 +48,7 @@
     },
     "fondo_rating": {
       "distance": 5,
-      "climbing": 1,
+      "climbing": 5,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 4,
@@ -62,12 +62,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 60,
+      "overall_score": 66,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 — dimensions/overall_score left as-is, though the climbing=1 dimension was set against a null elevation figure; the corrected ~7,000m total (see vitals) is not trivial for a flat-country loop and a human may want to revisit this dimension in a future scoring pass."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 — dimensions/overall_score left as-is, though the climbing=1 dimension was set against a null elevation figure; the corrected ~7,000m total (see vitals) is not trivial for a flat-country loop and a human may want to revisit this dimension in a future scoring pass. DELEGATED RESCORE (2026-07-24): climbing 1->5. climbing 1->5: corrected vitals record ~7,000m of total elevation gain, which falls in the 4,000m+ rubric band (5, 'Mountain'), not <500m (1, 'Flat') -- the prior climbing=1 was set against a null/missing elevation figure. overall_score recalculated 60->66 per formula ((sum14+cultural_impact)/70*100); tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -120,7 +120,7 @@
       "bottom_line": "If you want an active self-supported ultra-distance test through the Netherlands, this is real — just understand it's an unsupported multi-day race, not a one-day fondo, and the next classic-loop edition isn't until 2028."
     },
     "final_verdict": {
-      "score": "60/100",
+      "score": "66/100",
       "one_liner": "An active self-supported ultra loop through the Netherlands — currently biennial, and not a gran fondo.",
       "should_you_race": "Yes, if you specifically want a self-supported, unsupported multi-day ultra-distance test and understand the format (no outside crew or drafting allowed). No, if you're looking for a supported one-day gran fondo — this isn't that, and the next classic full-loop edition isn't until 2028.",
       "alternatives": "For a supported one-day Dutch gran fondo instead, look at organized sportive events in the Netherlands rather than this self-supported ultra format. For a comparable self-supported ultra-distance test, see other Adventure Bike Racing / similar-format European loop races."

@@ -54,7 +54,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 3,
       "climbing": 3,
       "descent_technicality": 2,
       "climate_risk": 4,
@@ -69,12 +69,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 57,
+      "overall_score": 56,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=4 for 130km is generous under the repo rubric (implies 3), and climate_risk/scenic_experience at 4 and organization at 3 are not clearly evidenced by the research dump for this open-road, chip-timed format. Flagging for a human rescoring pass, not auto-applying."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=4 for 130km is generous under the repo rubric (implies 3), and climate_risk/scenic_experience at 4 and organization at 3 are not clearly evidenced by the research dump for this open-road, chip-timed format. Flagging for a human rescoring pass, not auto-applying. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 4->3. distance 4->3: vitals record 130km, which falls in the 120-160km rubric band (3, 'Standard'), not 160-200km (4, 'Long'). (climbing at 1,869m already correctly falls in the 1,500-2,500m band=3 -- not changed.) overall_score recalculated 57->56 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -129,7 +129,7 @@
       "bottom_line": "A legitimate, scenic early-season option if you're chasing Superprestigio points or want a rolling-to-mountainous Alto Minho fondo — just don't trust the published km/elevation/field-size numbers to the decimal, and dress for March Atlantic weather."
     },
     "final_verdict": {
-      "score": "57/100",
+      "score": "56/100",
       "one_liner": "A young, scenic Alto Minho fondo with real climbing and a habit of publishing conflicting numbers.",
       "should_you_race": "Yes, if you want an early-season European fondo with genuine hills and coastal scenery — just confirm the current year's official course figures directly rather than trusting any single published source.",
       "alternatives": "For a more established, better-documented Portuguese road fondo, compare against other Bikeservice Superprestigio rounds later in the same series calendar."

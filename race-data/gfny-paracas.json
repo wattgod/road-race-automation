@@ -38,10 +38,10 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 2,
       "descent_technicality": 1,
-      "climate_risk": 3,
+      "climate_risk": 4,
       "organization": 3,
       "scenic_experience": 4,
       "community_culture": 3,
@@ -58,7 +58,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): sol review notes distance=3 sits high for a 116km course (rubric line closer to 2), climate_risk=3 looks low against the persistent, powerful wind described as the course's defining difficulty, cultural_impact=1 is generous for a two-edition discontinued event, and road_surface=1/organization=3/community_culture/value/expenses lack direct evidentiary support in the wave-10 research. Numbers left unchanged pending human review."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): sol review notes distance=3 sits high for a 116km course (rubric line closer to 2), climate_risk=3 looks low against the persistent, powerful wind described as the course's defining difficulty, cultural_impact=1 is generous for a two-edition discontinued event, and road_surface=1/organization=3/community_culture/value/expenses lack direct evidentiary support in the wave-10 research. Numbers left unchanged pending human review. DELEGATED RESCORE (2026-07-24): distance 3->2. distance 3->2: verified course distance is 116km, which falls in the 80-120km rubric band (2, 'Moderate'), not 120-160km (3, 'Standard'). overall_score recalculated 50->49 per formula ((sum14+cultural_impact)/70*100); tier remains T3. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): climate_risk 3->4. climate_risk 3->4: course_description states 'persistent, powerful Pacific coastal wind across exposed desert was the course's real signature difficulty' -- this matches rubric band 4's standalone 'strong winds' clause ('High heat, strong winds, or unpredictable mountain weather'), not band 3 ('some wind exposure'). overall_score recalculated 49->50 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,

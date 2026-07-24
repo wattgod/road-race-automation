@@ -37,7 +37,7 @@
     },
     "fondo_rating": {
       "distance": 5,
-      "climbing": 4,
+      "climbing": 5,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 4,
@@ -51,12 +51,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 66,
+      "overall_score": 67,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. field_depth corrected 3->1 during editorial wave 4 (2026-07-24): rubric value 3 ('structured competitive waves, official age-group prizes') directly contradicted this profile's confirmed non-competitive, alphabetical-finisher format; rubric 1 ('casual only, no competition') is the accurate literal fit even though LEL itself is far from casual in difficulty — see catalog_flags for the broader taxonomy mismatch. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. field_depth corrected 3->1 during editorial wave 4 (2026-07-24): rubric value 3 ('structured competitive waves, official age-group prizes') directly contradicted this profile's confirmed non-competitive, alphabetical-finisher format; rubric 1 ('casual only, no competition') is the accurate literal fit even though LEL itself is far from casual in difficulty — see catalog_flags for the broader taxonomy mismatch. Score recalculated: 66. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): climbing 4->5. climbing 4->5: vitals record 14,080m of total elevation gain, which falls in the 4,000m+ rubric band (5, 'Mountain'), not 2,500-4,000m (4, 'Hilly'). This was missed in the original wave-4 pass (which only corrected field_depth) and is a leftover mismatch caught during Sol adversarial review of this delegated-rescore batch. overall_score recalculated 66->67 per formula; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -110,7 +110,7 @@
       "bottom_line": "A legitimate, historically significant ultra-distance randonnée for experienced self-supported riders who want a navigation-and-endurance challenge — not something to compare against a gran fondo, and not something to plan around on any normal event calendar given its four-year (or longer) cadence."
     },
     "final_verdict": {
-      "score": "66/100",
+      "score": "67/100",
       "one_liner": "A historic quadrennial ultra-randonnée to Edinburgh and back — not a gran fondo, and not scheduled again until 2029.",
       "should_you_race": "Only if you have self-supported multi-day cycling experience and want a navigation-and-endurance challenge rather than a competitive event. It won't run again until August 2029 at the earliest, so this isn't something to plan around for 2026 or 2027.",
       "alternatives": "For a similar self-supported ultra-distance format that actually runs annually, see Race Through Poland or Trans Pyrenees Race (both in this database). For a shorter UK audax taste of the format, look at Audax UK's calendar of 200-600 km brevets before attempting LEL."

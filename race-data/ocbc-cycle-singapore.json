@@ -55,7 +55,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 2,
+      "distance": 1,
       "climbing": 1,
       "descent_technicality": 1,
       "climate_risk": 2,
@@ -70,12 +70,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 56,
+      "overall_score": 54,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=2 is generous for a 40km ride (rubric implies 1), and organization/scenic_experience/community_culture/logistics/value at 3-4 are not clearly evidenced by the research dump for this format. Flagging for a human rescoring pass, not auto-applying."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=2 is generous for a 40km ride (rubric implies 1), and organization/scenic_experience/community_culture/logistics/value at 3-4 are not clearly evidenced by the research dump for this format. Flagging for a human rescoring pass, not auto-applying. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 2->1. distance 2->1: vitals record 40km, which falls in the <80km rubric band (1, 'Short'), not 80-120km (2, 'Moderate'). overall_score recalculated 56->54 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -131,7 +131,7 @@
       "bottom_line": "A genuinely rare once-a-year closed-road ride through central Singapore, with safety measures added after a real 2014 incident — just don't expect a climbing challenge, and build in flexibility if traveling internationally given the 2025 scheduling-conflict precedent."
     },
     "final_verdict": {
-      "score": "56/100",
+      "score": "54/100",
       "one_liner": "Singapore's closed-CBD mass ride — flat, added real safety measures after a 2014 incident, once hit by an election-date scheduling conflict.",
       "should_you_race": "Yes, for the novelty of closed-road riding through central Singapore and over Benjamin Sheares Bridge — go in expecting a flat urban experience ride, not a climbing gran fondo, and if traveling internationally, build in flexibility given the 2025 scheduling-conflict precedent.",
       "alternatives": "For a similarly urban, closed-road mass-participation ride elsewhere in Asia, compare against other national capital city rides in this database. For actual climbing in the region, look further afield."

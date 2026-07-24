@@ -36,7 +36,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 2,
       "climbing": 2,
       "descent_technicality": 3,
       "climate_risk": 3,
@@ -49,14 +49,14 @@
       "field_depth": 2,
       "value": 3,
       "expenses": 2,
-      "road_surface": 1,
+      "road_surface": 5,
       "cultural_impact": 2,
-      "overall_score": 57,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): road_surface=1 ('fresh tarmac throughout' per config/dimensions.json rubric) directly conflicts with verified 2026 course data showing ~97% unpaved forest road/gravel on the main race — dimension not changed per standing rule against silent numeric edits, but this is almost certainly a mis-scored dimension pending human review."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): road_surface=1 ('fresh tarmac throughout' per config/dimensions.json rubric) directly conflicts with verified 2026 course data showing ~97% unpaved forest road/gravel on the main race — dimension not changed per standing rule against silent numeric edits, but this is almost certainly a mis-scored dimension pending human review. DELEGATED RESCORE (2026-07-24): road_surface 1->5. road_surface 1->5: verified 2026 course data show ~97% unpaved forest road/gravel on the main race, directly contradicting road_surface=1 ('Fresh tarmac throughout'). Corrected to 5 ('Significant... deteriorated surfaces') as the closest rubric fit for a course that is almost entirely unpaved. overall_score recalculated 57->63 per formula ((sum14+cultural_impact)/70*100); tier changed T3->T2. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 4->2. distance 4->2: vitals record 92km, which falls in the 80-120km rubric band (2, 'Moderate'), not 160-200km (4, 'Long'). Missed in the first rescore pass (only road_surface was checked); caught during Sol adversarial review. overall_score recalculated 63->60 per formula; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -107,7 +107,7 @@
       "bottom_line": "If you're a gravel or all-road rider looking for a historic Nordic forest event, this is worth a look. If you came here expecting a paved gran fondo, bring a gravel bike or look elsewhere — this database's road classification undersells how off-road this event actually is."
     },
     "final_verdict": {
-      "score": "57/100",
+      "score": "60/100",
       "one_liner": "A historic Vasaloppet-family event that's roughly 97% gravel/forest road — a gravel race mislabeled as a road gran fondo.",
       "should_you_race": "Race it on a gravel bike, not a road bike — the surface mismatch with a 'gran fondo' listing is real. If you want the Vasaloppet-family history and don't mind mixed terrain, it's worth entering.",
       "alternatives": "For a genuinely paved Swedish/Nordic road fondo, look elsewhere in the catalog; for more forest/gravel Nordic ultra-endurance events, Norway's Birkebeinerrittet (the event that partly inspired Cykelvasan) is a natural comparison."

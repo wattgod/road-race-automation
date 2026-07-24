@@ -39,7 +39,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 5,
       "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 3,
@@ -54,12 +54,12 @@
       "expenses": 2,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 51,
+      "overall_score": 53,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51. FLAG (wave 10, not applied): sol review notes several dimensions sit awkwardly against wave-10 research — distance=4 vs. rubric-5 for a 604km aggregate; climbing=2 vs. the ~12,000ft/3,658m aggregate cited in the tour's own (older) materials; road_surface=1 (pristine tarmac) vs. cited older pothole reports; organization=3 assumes timed-race closures for what is an explicitly untimed supported tour; field_depth=2 implies rankings the event doesn't have; expenses=2 looks low against a $795-$1,195 entry before flights/lodging. Numbers left unchanged pending human review."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51. FLAG (wave 10, not applied): sol review notes several dimensions sit awkwardly against wave-10 research — distance=4 vs. rubric-5 for a 604km aggregate; climbing=2 vs. the ~12,000ft/3,658m aggregate cited in the tour's own (older) materials; road_surface=1 (pristine tarmac) vs. cited older pothole reports; organization=3 assumes timed-race closures for what is an explicitly untimed supported tour; field_depth=2 implies rankings the event doesn't have; expenses=2 looks low against a $795-$1,195 entry before flights/lodging. Numbers left unchanged pending human review. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 4->5. distance 4->5: vitals record a 604km aggregate tour distance, which falls in the 200km+ rubric band (5, 'Ultra'), not 160-200km (4, 'Long'). (Climbing left unchanged: the ~3,658m/12,000ft figure cited in older tour materials is not a current verified vital, per Sol review -- deferring is defensible.) overall_score recalculated 51->53 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -111,7 +111,7 @@
       "bottom_line": "A credible, long-running option if you want a genuine multi-day island tour with real support infrastructure and don't need a competitive result. Go in with clear expectations on the strict refund policy and ask current-year questions about road conditions and pace-group discipline before committing."
     },
     "final_verdict": {
-      "score": "51/100",
+      "score": "53/100",
       "one_liner": "A fully supported, non-competitive three-day circumnavigation of Puerto Rico — real logistics, real history, no podium.",
       "should_you_race": "Sign up if you want a genuine multi-day, fully supported island tour and are comfortable with a non-refundable entry. Skip it if you want a timed, competitive event, or if the strict cancellation terms are a dealbreaker.",
       "alternatives": "For a competitive island tour with real classification, look at a UCI Gran Fondo World Series stop instead. For a similarly supported multi-day tour format in the U.S., Seattle-to-Portland or Ride Across Wisconsin offer comparable fully-supported, non-competitive structures."

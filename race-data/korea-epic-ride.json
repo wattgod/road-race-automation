@@ -55,27 +55,27 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 2,
-      "climbing": 3,
+      "distance": 5,
+      "climbing": 5,
       "descent_technicality": 1,
       "climate_risk": 4,
-      "organization": 3,
+      "organization": 1,
       "scenic_experience": 4,
       "community_culture": 3,
       "altitude": 2,
       "logistics": 3,
       "prestige": 2,
-      "field_depth": 2,
+      "field_depth": 1,
       "value": 4,
       "expenses": 4,
-      "road_surface": 1,
+      "road_surface": 5,
       "cultural_impact": 1,
-      "overall_score": 56,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance/climbing/road_surface/organization/field_depth ratings are fundamentally incompatible with a 328km+, mostly-unpaved, fully self-supported ultra-bikepacking format — as with flandrien-ride, the displayed score is not meaningfully comparable to a standard gran fondo's. Flagging for a human call on whether this belongs in the gran_fondo tier's rubric at all; see catalog_flags."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance/climbing/road_surface/organization/field_depth ratings are fundamentally incompatible with a 328km+, mostly-unpaved, fully self-supported ultra-bikepacking format — as with flandrien-ride, the displayed score is not meaningfully comparable to a standard gran fondo's. Flagging for a human call on whether this belongs in the gran_fondo tier's rubric at all; see catalog_flags. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 2->5; climbing 3->5; road_surface 1->5; organization 3->1; field_depth 2->1. distance 2->5: corrected identity's real course (328km route, the distance this profile scores against) falls in the 200km+ rubric band (5, 'Ultra'), not 80-120km (2, 'Moderate'). climbing 3->5: the 328km route's vitals record 8,004m of elevation gain, which falls in the 4,000m+ rubric band (5, 'Mountain'), not 1,500-2,500m (3, 'Rolling'). road_surface 1->5: course_description records ~194km of the 328km route (~59%) as unpaved forest road with washout-damaged surfaces, directly contradicting road_surface=1 ('Fresh tarmac throughout'); corrected to 5 as the closest rubric fit. organization 3->1: eligibility/course_description confirm the organizer explicitly describes the event as 'not a race' with 'no timing stops, no aid stations, and no organizer support along the way' -- riders self-navigate by GPS with no road closures. This is the literal fit for band 1 ('Basic: volunteer-only, partial road closures, no timing'), not band 3 ('Good: full road closures, reliable timing, good feed zones'). field_depth 2->1: fully self-supported, non-timed, organizer states 'not a race' -- band 1 ('Casual only, no competition'), not band 2. Same precedent as London-Edinburgh-London/Bordeaux-Paris/Tallinn. overall_score recalculated 56->64 per formula; tier changed T3->T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -132,7 +132,7 @@
       "bottom_line": "If you want a serious, honestly self-supported ultra-bikepacking test through remote Korean mountains, the real Korea Epic Ride is worth researching directly on its own terms — but it is not a gran fondo, and the 2026 edition isn't happening."
     },
     "final_verdict": {
-      "score": "56/100",
+      "score": "64/100",
       "one_liner": "A self-supported Gangwon-do ultra-bikepacking event, not the Incheon road gran fondo this profile used to describe — and cancelled for 2026.",
       "should_you_race": "Not this year — the 2026 edition is cancelled. If a future edition is announced, go in understanding this is a fully self-supported ultra-distance mountain/forest-road event, not a timed, aided road race.",
       "alternatives": "For an actual supported road gran fondo in South Korea, see Yangyang Gran Fondo (same region, chip-timed, traffic-managed, supported courses) — a genuinely different event despite the geographic overlap."

@@ -38,7 +38,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 3,
@@ -53,12 +53,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 51,
+      "overall_score": 50,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51. FLAG (wave 10, not applied): sol review notes road_surface=1 (implies pristine tarmac) sits awkwardly against wave-10 research finding of frequently rough/granular pavement on the backroads sections, and field_depth=2 (implies some competitive rankings) against the event being explicitly non-competitive/finish-time-only. Numbers left unchanged pending human review."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51. FLAG (wave 10, not applied): sol review notes road_surface=1 (implies pristine tarmac) sits awkwardly against wave-10 research finding of frequently rough/granular pavement on the backroads sections, and field_depth=2 (implies some competitive rankings) against the event being explicitly non-competitive/finish-time-only. Numbers left unchanged pending human review. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 3->2. distance 3->2: vitals record 87km, which falls in the 80-120km rubric band (2, 'Moderate'), not 120-160km (3, 'Standard'). overall_score recalculated 51->50 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -110,7 +110,7 @@
       "bottom_line": "Fine as a scenic, low-pressure Charlevoix ride if you're already in the region or building a Quebec cyclosportive calendar. Not worth traveling internationally for."
     },
     "final_verdict": {
-      "score": "51/100",
+      "score": "50/100",
       "one_liner": "A scenic, accessible cyclosportive through Quebec's Charlevoix region offering personal challenge without competitive pressure in a UNESCO biosphere reserve setting.",
       "should_you_race": "Race it if you live in or near Quebec and want a scenic, well-organized regional cyclosportive without much travel hassle. Skip it if you need a competitive field, verified climbing stats, or an event with an established international reputation.",
       "alternatives": "For a better-documented Quebec option with real elevation data, look at Gran Fondo Mont-Tremblant. If you want the same Charlevoix roads with actual competitive stakes, the Grand Prix Cycliste de Charlevoix (same organizer, same weekend) is the elite race — but it's a licensed competition, not an open cyclosportive."

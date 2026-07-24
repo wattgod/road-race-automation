@@ -46,8 +46,8 @@
       ]
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 1,
+      "distance": 3,
+      "climbing": 2,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 3,
@@ -66,7 +66,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): on-file vitals (130.4km/184m) were wrong on both counts — 184m badly understated the verified 1,220m course, and 134km traced to the 2018 GFNY-era course, not the current 127km/2-lap route. Elevation and climbing-difficulty scores below were inherited from the understated profile and have not been re-evaluated against the corrected, materially hillier course (1,220m over 127km is a genuinely rolling/climby profile, not a flat 184m one) — flagging for human rescoring. No numeric changes made this wave."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): on-file vitals (130.4km/184m) were wrong on both counts — 184m badly understated the verified 1,220m course, and 134km traced to the 2018 GFNY-era course, not the current 127km/2-lap route. Elevation and climbing-difficulty scores below were inherited from the understated profile and have not been re-evaluated against the corrected, materially hillier course (1,220m over 127km is a genuinely rolling/climby profile, not a flat 184m one) — flagging for human rescoring. No numeric changes made this wave. DELEGATED RESCORE (2026-07-24): distance 4->3; climbing 1->2. distance 4->3: vitals record the current 2-lap route at 127km, which falls in the 120-160km rubric band (3, 'Standard'), not 160-200km (4, 'Long') -- the prior 134km figure traced to the discontinued 2018 GFNY-era course. climbing 1->2: vitals record the verified 1,220m elevation for the current 127km course, which falls in the 500-1,500m rubric band (2, 'Gentle'), not <500m (1, 'Flat'). overall_score recalculated 53->53 per formula ((sum14+cultural_impact)/70*100); tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,

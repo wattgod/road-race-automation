@@ -36,8 +36,8 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 3,
+      "distance": 5,
+      "climbing": 5,
       "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 4,
@@ -51,12 +51,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 59,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave -- distance was corrected from 299.3km to the verified 330km, but dimension values (distance, field_depth, community_culture, etc.) were left as inherited since a proper re-score would need to weigh this against other ultra-distance/non-mass-participation events, which this database's gran_fondo dimensions don't cleanly fit. See catalog_flags."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave -- distance was corrected from 299.3km to the verified 330km, but dimension values (distance, field_depth, community_culture, etc.) were left as inherited since a proper re-score would need to weigh this against other ultra-distance/non-mass-participation events, which this database's gran_fondo dimensions don't cleanly fit. See catalog_flags. DELEGATED RESCORE (2026-07-24): distance 3->5; climbing 3->5. distance 3->5: vitals record the verified distance as 330km (corrected from 299.3km), which falls in the 200km+ rubric band (5, 'Ultra'), not 120-160km (3, 'Standard'). climbing 3->5: vitals record 4,600m of total elevation gain, which falls in the 4,000m+ rubric band (5, 'Mountain'), not 1,500-2,500m (3, 'Rolling'). overall_score recalculated 59->64 per formula ((sum14+cultural_impact)/70*100); tier changed T3->T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -105,7 +105,7 @@
       "bottom_line": "If you want a real, small-field ultracycling test through Abruzzo with a fair no-drafting format, RAI300 delivers -- just don't expect a gran fondo, and don't expect the name to describe the actual distance."
     },
     "final_verdict": {
-      "score": "59/100",
+      "score": "64/100",
       "one_liner": "A genuine ~330km ultracycling race from the Abruzzo coast into the Apennines -- not a gran fondo, and not really 300km anymore.",
       "should_you_race": "Yes, if you're specifically looking for a small-field, continuously-timed ultra-distance race with flexible supported/self-supported formats. No, if you want a mass-participation gran fondo experience -- this isn't one.",
       "alternatives": "For a similar Italian ultra-distance format at greater distance: Race Across Italy's own longer RAI775. For a mass-participation Italian gran fondo instead: Nove Colli or Maratona dles Dolomites."

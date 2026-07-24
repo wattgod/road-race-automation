@@ -36,7 +36,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 5,
       "climbing": 2,
       "descent_technicality": 1,
       "climate_risk": 3,
@@ -46,17 +46,17 @@
       "altitude": 1,
       "logistics": 3,
       "prestige": 2,
-      "field_depth": 2,
+      "field_depth": 1,
       "value": 3,
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 50,
+      "overall_score": 51,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 51. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): the identity correction changed the verified distance from a fabricated 130.4km to a real ~230km, which sits well above the distance=3 rubric band; field_depth=2 also assumes rankings this non-competitive group ride never had. Numbers left unchanged pending human review — this entire profile may warrant a full rescore or removal given the identity/defunct findings."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 51. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): the identity correction changed the verified distance from a fabricated 130.4km to a real ~230km, which sits well above the distance=3 rubric band; field_depth=2 also assumes rankings this non-competitive group ride never had. Numbers left unchanged pending human review — this entire profile may warrant a full rescore or removal given the identity/defunct findings. DELEGATED RESCORE (2026-07-24): distance 3->5. distance 3->5: identity correction replaced a fabricated 130.4km figure with the verified real distance of ~230km, which falls in the 200km+ rubric band (5, 'Ultra'), not 120-160km (3, 'Standard'). overall_score recalculated 50->53 per formula ((sum14+cultural_impact)/70*100); tier remains T3. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): field_depth 2->1. field_depth 2->1: corrected course_description is explicit -- 'It was a controlled, non-competitive group ride, not a timed race -- riders moved in escorted pace groups with food, medical, and mechanical support' -- literal fit for band 1 ('Casual only, no competition'), not band 2. Same precedent as London-Edinburgh-London. overall_score recalculated 53->51 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -107,7 +107,7 @@
       "bottom_line": "This entry exists as a historical correction, not a recommendation — no edition of the event it actually describes has been confirmed since 2019. If you want a real, currently active Baltic road event, look elsewhere in Estonia or Latvia's active calendars rather than searching for this one."
     },
     "final_verdict": {
-      "score": "50/100",
+      "score": "51/100",
       "one_liner": "A discontinued Tallinn-Tartu group ride, previously mislabeled in this database as an active gran fondo that never matched the real event.",
       "should_you_race": "You can't — no edition has run since 2019 and it's absent from Estonia's current calendar. If a similarly named event resurfaces, verify it independently before trusting any figures carried over from this profile's history.",
       "alternatives": "For an active Estonian/Baltic road cycling option, check Estonia's current national federation (EJL) event calendar directly rather than relying on this listing."

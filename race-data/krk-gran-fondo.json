@@ -39,8 +39,8 @@
       ]
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 3,
+      "distance": 2,
+      "climbing": 2,
       "descent_technicality": 3,
       "climate_risk": 4,
       "organization": 3,
@@ -54,12 +54,12 @@
       "expenses": 2,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 54,
+      "overall_score": 51,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: original score not on file. adventure dimension dropped, road_surface added. Score recalculated: 54. EDITORIAL WAVE 10 (2026-07-24): elevation added (1,320m, was null) and distance/field confirmed via official race propositions — dimension scores below were NOT re-evaluated against this newly-confirmed profile (a real 1,320m/82km rolling island course with a punishing relative cutoff is more demanding than a 'null elevation' placeholder implies); flagging for human rescoring rather than silently changing numbers."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: original score not on file. adventure dimension dropped, road_surface added. Score recalculated: 54. EDITORIAL WAVE 10 (2026-07-24): elevation added (1,320m, was null) and distance/field confirmed via official race propositions — dimension scores below were NOT re-evaluated against this newly-confirmed profile (a real 1,320m/82km rolling island course with a punishing relative cutoff is more demanding than a 'null elevation' placeholder implies); flagging for human rescoring rather than silently changing numbers. DELEGATED RESCORE (2026-07-24): distance 3->2; climbing 3->2. distance 3->2: official race propositions confirm the course at 82km, which falls in the 80-120km rubric band (2, 'Moderate'), not 120-160km (3, 'Standard'). climbing 3->2: confirmed elevation of 1,320m falls in the 500-1,500m rubric band (2, 'Gentle'), not 1,500-2,500m (3, 'Rolling'). overall_score recalculated 54->51 per formula ((sum14+cultural_impact)/70*100); tier remains T3."
     },
     "climb_profile": {
       "total_climbs": 4,
@@ -68,10 +68,34 @@
       "cat_2_climbs": 0,
       "cat_3_climbs": 3,
       "key_climbs": [
-        {"name": "Km 3.2 climb", "distance_km": 5.8, "gradient_pct": 1.9, "gain_m": 108, "category": "Cat 4"},
-        {"name": "Km 36.4 climb", "distance_km": 3.8, "gradient_pct": 5.4, "gain_m": 204, "category": "Cat 3"},
-        {"name": "Km 52.2 climb (Treskavac side)", "distance_km": 3.1, "gradient_pct": 5.8, "gain_m": 178, "category": "Cat 3"},
-        {"name": "Km 67.0 return climb", "distance_km": 7.9, "gradient_pct": 3.6, "gain_m": 288, "category": "Cat 3"}
+        {
+          "name": "Km 3.2 climb",
+          "distance_km": 5.8,
+          "gradient_pct": 1.9,
+          "gain_m": 108,
+          "category": "Cat 4"
+        },
+        {
+          "name": "Km 36.4 climb",
+          "distance_km": 3.8,
+          "gradient_pct": 5.4,
+          "gain_m": 204,
+          "category": "Cat 3"
+        },
+        {
+          "name": "Km 52.2 climb (Treskavac side)",
+          "distance_km": 3.1,
+          "gradient_pct": 5.8,
+          "gain_m": 178,
+          "category": "Cat 3"
+        },
+        {
+          "name": "Km 67.0 return climb",
+          "distance_km": 7.9,
+          "gradient_pct": 3.6,
+          "gain_m": 288,
+          "category": "Cat 3"
+        }
       ],
       "profile_type": "Rolling with 4 categorized climbs",
       "king_of_mountain": null,
@@ -118,7 +142,7 @@
       "bottom_line": "An island road race for riders who want real Adriatic climbing without epic length — verify logistics against the live site, and pace conservatively given the km-52 cutoff."
     },
     "final_verdict": {
-      "score": "54/100",
+      "score": "51/100",
       "one_liner": "A young Krk Island road race with four categorized climbs and a stricter-than-expected mid-race cutoff.",
       "should_you_race": "Yes, if you want a compact (82km) Adriatic island road race with real climbing and don't mind registering early — it reportedly sold out weeks ahead in 2026. Pace conservatively: riders 40+ minutes behind the leader at km 52 are diverted to a shortened finish.",
       "alternatives": "For a longer, UCI-qualifying Croatian gran fondo: Istria Gran Fondo (Umag, 105km, UCI Gran Fondo World Series). For another Adriatic island event: Granfondo Pag - Cycling on the Moon (Novalja, ~107km/1,210m)."

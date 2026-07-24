@@ -23,8 +23,16 @@
       "lat": null,
       "lng": null,
       "route_options": [
-        {"name": "Long", "distance_km": 128.7, "distance_mi": 80.0},
-        {"name": "Short", "distance_km": 96.6, "distance_mi": 60.0}
+        {
+          "name": "Long",
+          "distance_km": 128.7,
+          "distance_mi": 80.0
+        },
+        {
+          "name": "Short",
+          "distance_km": 96.6,
+          "distance_mi": 60.0
+        }
       ]
     },
     "climate": {
@@ -40,7 +48,7 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 4,
+      "climbing": 2,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 4,
@@ -54,12 +62,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 60,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 despite the elevation correction (2,405m to ~1,270m) — dimensions/overall_score left as-is; a human may want to revisit the climbing dimension given the corrected, lower elevation figure."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 despite the elevation correction (2,405m to ~1,270m) — dimensions/overall_score left as-is; a human may want to revisit the climbing dimension given the corrected, lower elevation figure. DELEGATED RESCORE (2026-07-24): climbing 4->2. climbing 4->2: corrected elevation figure is ~1,270m (down from a prior stale 2,405m), which falls in the 500-1,500m rubric band (2, 'Gentle'), not 2,500-4,000m (4, 'Hilly'). overall_score recalculated 60->57 per formula ((sum14+cultural_impact)/70*100); tier changed T2->T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -111,7 +119,7 @@
       "bottom_line": "A legitimate, long-running regional club sportive at a modest price — reasonable to enter if you're near London/Surrey and want an early-season hilly test, but don't mistake it for a major national event, and expect March weather to be part of the challenge."
     },
     "final_verdict": {
-      "score": "60/100",
+      "score": "57/100",
       "one_liner": "Friendly early-season Surrey Hills club sportive at a bargain price — now with the correct March date.",
       "should_you_race": "Yes, if you're UK-based and want an accessible, well-organized early-season Surrey Hills sportive at modest cost. Not a destination event worth major travel for.",
       "alternatives": "For a similar Surrey Hills sportive experience with a bigger national profile, look at RideLondon-adjacent or Prudential-style mass events; for other early-season UK club sportives, check British Cycling's regional events calendar directly."

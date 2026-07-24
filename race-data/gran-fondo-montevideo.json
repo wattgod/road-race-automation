@@ -37,26 +37,26 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 1,
+      "climbing": 2,
       "descent_technicality": 1,
       "climate_risk": 4,
       "organization": 4,
-      "scenic_experience": 4,
+      "scenic_experience": 3,
       "community_culture": 3,
       "altitude": 1,
-      "logistics": 4,
+      "logistics": 2,
       "prestige": 3,
       "field_depth": 2,
       "value": 4,
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 59,
+      "overall_score": 56,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. EDITORIAL WAVE 9 FLAG (2026-07-24): this profile's identity was corrected this wave (see eligibility.notes/catalog_flags) from a conflated 'Gran Fondo Movistar Montevideo' identity to the actual subject, Gran Fondo Asociación Española. The 14 dimension scores below were inherited from the pre-correction profile and have NOT been independently re-evaluated against the corrected identity — flagging for human review rather than silently rescoring. No numeric changes made this wave."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. EDITORIAL WAVE 9 FLAG (2026-07-24): this profile's identity was corrected this wave (see eligibility.notes/catalog_flags) from a conflated 'Gran Fondo Movistar Montevideo' identity to the actual subject, Gran Fondo Asociación Española. The 14 dimension scores below were inherited from the pre-correction profile and have NOT been independently re-evaluated against the corrected identity — flagging for human review rather than silently rescoring. No numeric changes made this wave. DELEGATED RESCORE (2026-07-24): climbing 1->2; logistics 4->2; scenic_experience 4->3. climbing 1->2: no 2026 elevation figure has been published yet, but the most recent comparable route (2025, 130km, same event/character per corrected identity) carried 512m of total ascent, which falls just inside the 500-1,500m rubric band (2, 'Gentle'), not <500m (1, 'Flat'). Flagging genuine uncertainty: the 2026 138km route (8km longer) has no independently confirmed elevation figure of its own. logistics 4->2: corrected identity places this race in Montevideo, Uruguay's capital city -- the profile's own logistics text documents hotels in multiple central neighborhoods (Ciudad Vieja, near Rambla, modern areas). CORRECTION (post-Sol-review): the profile does not itself document a specific airport-transit time (logistics.airport is blank in-file) -- the 'airport 30-60min' component of band 2 rests on general knowledge of Montevideo/Carrasco International Airport rather than an in-file citation. Regardless, 'small town... lodging books up early' (band 4) is squarely contradicted by the documented multi-neighborhood capital-city lodging, so this is corrected to logistics=2 ('Major town, good lodging options') as the more defensible fit versus leaving band 4 in place; exact placement vs. band 1 is not independently confirmed. scenic_experience 4->3: corrected course_description is explicit that only ~2km of coastal Rambla opens the route and ~30km of coastal riding closes it, with the remainder running through inland Canelones farmland (Barros Blancos, Santa Rosa, San Jacinto) -- this doesn't support 'stunning scenery throughout, multiple jaw-drop moments' (4). Corrected to 'beautiful route with several memorable sections' (3). overall_score recalculated 59->56 per formula ((sum14+cultural_impact)/70*100); tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -109,7 +109,7 @@
       "bottom_line": "A real, currently active club-organized fondo worth considering if you want a flat-to-rolling Uruguayan road event with genuine coastal scenery — just don't confuse it with the Movistar-branded Montevideo race under a similar name, and don't assume UCI-qualifier status without checking the current calendar yourself."
     },
     "final_verdict": {
-      "score": "59/100",
+      "score": "56/100",
       "one_liner": "A genuine Montevideo fondo (Asociación Española) — real and running, but distinct from the similarly-named Movistar event and not currently on the UCI's own qualifier calendar.",
       "should_you_race": "Yes, if you want a flat-to-rolling Uruguayan road fondo mixing coastal Rambla and Canelones farm roads and don't need it to be a confirmed UCI qualifier. Verify current UCI-qualifier status directly with the organizer if that status matters to you.",
       "alternatives": "If you specifically want the Movistar-branded Montevideo event (a separate, unrelated April race), look for 'Gran Fondo Movistar Montevideo' directly — do not treat it as the same event as this profile. For a confirmed GFNY-franchise option in Uruguay instead, see GFNY Punta del Este, a distinct and separately-verified event."

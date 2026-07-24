@@ -23,8 +23,16 @@
       "lat": null,
       "lng": null,
       "route_options": [
-        {"name": "Granfondo", "distance_km": 111.0, "elevation_m": 2780},
-        {"name": "Mediofondo", "distance_km": 77.0, "elevation_m": 1930}
+        {
+          "name": "Granfondo",
+          "distance_km": 111.0,
+          "elevation_m": 2780
+        },
+        {
+          "name": "Mediofondo",
+          "distance_km": 77.0,
+          "elevation_m": 1930
+        }
       ]
     },
     "climate": {
@@ -39,12 +47,12 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 3,
+      "distance": 2,
+      "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 3,
-      "scenic_experience": 3,
+      "scenic_experience": 5,
       "community_culture": 3,
       "altitude": 3,
       "logistics": 3,
@@ -54,12 +62,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 59,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave despite the location/identity correction (Trento -> Pinzolo) -- dimensions left untouched pending a full re-review; flagging that field_depth/prestige/scenic_experience were originally set against a different (Trento city, UCI Worlds-adjacent) profile and may not reflect the actual Pinzolo/Top Dolomites event."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave despite the location/identity correction (Trento -> Pinzolo) -- dimensions left untouched pending a full re-review; flagging that field_depth/prestige/scenic_experience were originally set against a different (Trento city, UCI Worlds-adjacent) profile and may not reflect the actual Pinzolo/Top Dolomites event. DELEGATED RESCORE (2026-07-24): distance 3->2; climbing 3->4; scenic_experience 3->5. distance 3->2: corrected identity (Granfondo Top Dolomites, Pinzolo) main Granfondo route is 111km per vitals/route_options, which falls in the 80-120km rubric band (2, 'Moderate'), not 120-160km (3, 'Standard'). climbing 3->4: organizer's own 2026 elevation figure for the Granfondo route is 2,780m (post-event report gives an alternate 2,600m; both fall in the 2,500-4,000m rubric band (4, 'Hilly')), not 1,500-2,500m (3, 'Rolling'). scenic_experience 3->5: corrected identity confirms the event is genuinely held in the Brenta Dolomites (Val Rendena, Trentino, a UNESCO Dolomites system) -- the rubric's own band-5 definition names 'Dolomites' as the direct exemplar. Prior score (3) was set against the erroneous Trento-city/UCI-Worlds identity, not the real Brenta Dolomites mountain setting. overall_score recalculated 59->61 per formula ((sum14+cultural_impact)/70*100); tier changed T3->T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -109,7 +117,7 @@
       "bottom_line": "If you want a real, competitive Moser-associated gran fondo, this is Granfondo Top Dolomites in Pinzolo -- not a Trento city event, and not the same thing as the non-competitive La Francesco Moser ride or the vintage La Moserissima. Book accordingly, and expect the organizer's own elevation figures to disagree with themselves by a couple hundred meters."
     },
     "final_verdict": {
-      "score": "59/100",
+      "score": "61/100",
       "one_liner": "Pinzolo's Brenta Dolomites gran fondo carries a real Moser tie-in, but it isn't the Trento race the old name implied.",
       "should_you_race": "Yes, if you want genuine competitive racing in the Brenta Dolomites with FCI classification and don't mind the Trentino mountains rather than Trento city itself. Skip it if you were expecting a Trento-based ride -- that's La Francesco Moser (casual cicloturistica) or La Moserissima (vintage), both different events.",
       "alternatives": "For the casual, Trento-based Moser connection: La Francesco Moser cicloturistica (60 km, non-competitive). For vintage/retro: La Moserissima. For a bigger competitive Dolomites test at similar distance: Maratona dles Dolomites or Sportful Dolomiti Race."

@@ -43,7 +43,7 @@
       ]
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 3,
       "descent_technicality": 1,
       "climate_risk": 3,
@@ -58,12 +58,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 54,
+      "overall_score": 53,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 54. EDITORIAL WAVE 10 FLAG (2026-07-24): prior course_description and youtube_data described a ~130km remote gravel ride over Prince Alfred's Pass (Cape Epic-adjacent terrain) — that is a different, unrelated ride, not this paved 102km road event. Corrected this wave. Dimension scores below were inherited from the pre-correction profile and have NOT been independently re-evaluated against the corrected identity (a flat-to-rolling paved coastal road race is a materially different difficulty profile than a remote gravel mountain-pass ride) — flagging for human rescoring rather than silently changing numbers. No numeric changes made this wave."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 54. EDITORIAL WAVE 10 FLAG (2026-07-24): prior course_description and youtube_data described a ~130km remote gravel ride over Prince Alfred's Pass (Cape Epic-adjacent terrain) — that is a different, unrelated ride, not this paved 102km road event. Corrected this wave. Dimension scores below were inherited from the pre-correction profile and have NOT been independently re-evaluated against the corrected identity (a flat-to-rolling paved coastal road race is a materially different difficulty profile than a remote gravel mountain-pass ride) — flagging for human rescoring rather than silently changing numbers. No numeric changes made this wave. DELEGATED RESCORE (2026-07-24): distance 3->2. distance 3->2: identity correction replaced a ~130km remote gravel Prince Alfred's Pass description with the real event, a paved 102km road race; 102km falls in the 80-120km rubric band (2, 'Moderate'), not 120-160km (3, 'Standard'). overall_score recalculated 54->53 per formula ((sum14+cultural_impact)/70*100); tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -116,7 +116,7 @@
       "bottom_line": "A Garden Route road race worth riding if you're already in Knysna for Oyster Festival weekend — go in expecting a modest field and thin pre-race course documentation."
     },
     "final_verdict": {
-      "score": "54/100",
+      "score": "53/100",
       "one_liner": "A modest, founded-1987 Garden Route road race built around Oyster Festival weekend.",
       "should_you_race": "Worth it if you're in Knysna for Oyster Festival weekend anyway and want a paved road race with one real late climb (Barrington Hill). Not worth a dedicated trip on its own merits — field size and course information are both modest.",
       "alternatives": "For another South African road event: Cape Town Cycle Tour (109km, Cape Town). For the actual gravel Prince Alfred's Pass experience: Lions Karoo to Coast (Uniondale to Knysna, ~96km off-road, held separately in September)."

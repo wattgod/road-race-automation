@@ -50,7 +50,7 @@
     },
     "fondo_rating": {
       "distance": 5,
-      "climbing": 1,
+      "climbing": 5,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 3,
@@ -59,17 +59,17 @@
       "altitude": 1,
       "logistics": 3,
       "prestige": 3,
-      "field_depth": 2,
+      "field_depth": 1,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 56,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes climbing=1 badly understates a verified 4,500m route, and scenic_experience/organization/community_culture/value at 3-4 are not clearly evidenced by the research dump. Flagging for a human rescoring pass, not auto-applying — see also catalog_flags taxonomy note on whether this format belongs in the gran_fondo tier's rubric at all."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes climbing=1 badly understates a verified 4,500m route, and scenic_experience/organization/community_culture/value at 3-4 are not clearly evidenced by the research dump. Flagging for a human rescoring pass, not auto-applying — see also catalog_flags taxonomy note on whether this format belongs in the gran_fondo tier's rubric at all. DELEGATED RESCORE (2026-07-24): climbing 1->5. climbing 1->5: vitals record 4,500m of total elevation gain over the 650km route, which falls in the 4,000m+ rubric band (5, 'Mountain'), not <500m (1, 'Flat'). overall_score recalculated 56->61 per formula ((sum14+cultural_impact)/70*100); tier changed T3->T2. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): field_depth 2->1. field_depth 2->1: course_description is explicit -- 'There's no competitive classification -- only individual completion times inside a 50-hour limit,' which is the literal fit for band 1 ('Casual only, no competition'), not band 2 ('Some competitive riders, informal age-group rankings'). Same precedent as London-Edinburgh-London's field_depth correction. overall_score recalculated 61->60 per formula; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -126,7 +126,7 @@
       "bottom_line": "If you want to ride a route with a real name and real history, this delivers that — but understand you're signing up for a solo semi-autonomous ultra-distance test with no official results ranking and a rocky recent track record, not a supported gran fondo."
     },
     "final_verdict": {
-      "score": "56/100",
+      "score": "60/100",
       "one_liner": "A historic name attached to a genuinely modern ultra-distance revival — with a rocky recent past.",
       "should_you_race": "Only if you specifically want a semi-autonomous, minimally-supported ultra-distance challenge — this is not a supported gran fondo, and you should verify current registration details directly given the site's documented inconsistencies and the 2023/2024 cancellations.",
       "alternatives": "For a supported, competitively classified road gran fondo instead, look elsewhere in this database's standard gran-fondo tier. For another historic-route French ultra-distance event, Paris-Brest-Paris is the better-known comparison — verify its own current format and classification directly rather than assuming parity with this event."

@@ -37,7 +37,7 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 3,
+      "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 3,
@@ -51,12 +51,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 57,
+      "overall_score": 56,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): per config/dimensions.json rubric, climbing=3 ('Rolling: 1,500-2,500m') doesn't fit the verified ~1,200m figure (falls in the 2='Gentle: 500-1,500m' band), and organization=3 ('full road closures') conflicts with the verified open-road/traffic-sharing format. Dimensions not changed per standing rule against silent numeric edits — flagged for human-reviewed recalculation."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): per config/dimensions.json rubric, climbing=3 ('Rolling: 1,500-2,500m') doesn't fit the verified ~1,200m figure (falls in the 2='Gentle: 500-1,500m' band), and organization=3 ('full road closures') conflicts with the verified open-road/traffic-sharing format. Dimensions not changed per standing rule against silent numeric edits — flagged for human-reviewed recalculation. DELEGATED RESCORE (2026-07-24): climbing 3->2. climbing 3->2: vitals record ~1,200m of total elevation gain, which falls in the 500-1,500m rubric band (2, 'Gentle'), not 1,500-2,500m (3, 'Rolling'). overall_score recalculated 57->56 per formula ((sum14+cultural_impact)/70*100); tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -109,7 +109,7 @@
       "bottom_line": "A real wine-country gran fondo worth considering if you're a confident descender who takes open-road racing seriously — just respect the descents, they've drawn a documented safety incident."
     },
     "final_verdict": {
-      "score": "57/100",
+      "score": "56/100",
       "one_liner": "A five-edition-strong Chilean wine-country gran fondo with real climbing via El Pangue — respect the open-road descents, they've produced a documented crash.",
       "should_you_race": "Yes, if you're comfortable descending on open roads and want real Chilean wine-country climbing — but come prepared for traffic-open conditions and be honest about your descending skill on El Pangue.",
       "alternatives": "Gran Fondo Nevados de Chillán, also organized by Epic Rides Chile, for another Chilean gran fondo from the same team."

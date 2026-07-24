@@ -55,8 +55,8 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 2,
+      "distance": 4,
+      "climbing": 3,
       "descent_technicality": 1,
       "climate_risk": 4,
       "organization": 3,
@@ -70,12 +70,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 59,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 61,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. Vitals corrected 2026-07-24 editorial wave 9 (distance 120.7->177km, elevation 610->1716m — a substantially longer/hillier corrected course). Dimensions (distance=3, climbing=2) and overall_score retained as-is per eroica-dolomiti precedent rather than unilaterally rescored; flagged for a human-led rescoring pass since the corrected course likely rates higher on both dimensions under config/dimensions.json's rubric."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. Vitals corrected 2026-07-24 editorial wave 9 (distance 120.7->177km, elevation 610->1716m — a substantially longer/hillier corrected course). Dimensions (distance=3, climbing=2) and overall_score retained as-is per eroica-dolomiti precedent rather than unilaterally rescored; flagged for a human-led rescoring pass since the corrected course likely rates higher on both dimensions under config/dimensions.json's rubric. DELEGATED RESCORE (2026-07-24): distance 3->4; climbing 2->3. distance 3->4: verified 2026 course distance is 177km (redesigned/lengthened from 2025's 134km per course_description), which falls in the 160-200km rubric band (4, 'Long'), not 120-160km (3, 'Standard'). climbing 2->3: verified 2026 elevation is 1,716m, which falls in the 1,500-2,500m rubric band (3, 'Rolling'), not 500-1,500m (2, 'Gentle'). overall_score recalculated 59->61 per formula ((sum14+cultural_impact)/70*100); tier changed T3->T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -128,7 +128,7 @@
       "bottom_line": "An established and apparently growing regional fondo with genuine Uplands climbing — but come in knowing it's not a lake-circling ride, and that the course you read about from a past year may not be the course run in 2026."
     },
     "final_verdict": {
-      "score": "59/100",
+      "score": "61/100",
       "one_liner": "A growing Hungarian fondo through the Balaton Uplands — real climbing, but not the lake-circling ride its name implies.",
       "should_you_race": "Consider it if you want an established regional European fondo with real hill terrain and don't mind that it isn't a Lake Balaton circumnavigation. Confirm the current year's course and distance directly — both have changed significantly year to year.",
       "alternatives": "Look for a dedicated round-the-lake cyclotourism route (e.g. the Balaton Circuit bike path) if you specifically want a full lake circumnavigation — this event doesn't offer one."

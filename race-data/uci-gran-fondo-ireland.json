@@ -38,8 +38,8 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 3,
+      "distance": 3,
+      "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 2,
       "organization": 4,
@@ -53,12 +53,12 @@
       "expenses": 2,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 57,
+      "overall_score": 54,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes organization=4 is hard to reconcile with the documented council criticism (short-notice changes, poor communication, unfulfilled commitments), and scenic_experience=4 is weakly supported since Benbulben was tourism copy, not an actual course feature. Flagging for a human rescoring pass, not auto-applying."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes organization=4 is hard to reconcile with the documented council criticism (short-notice changes, poor communication, unfulfilled commitments), and scenic_experience=4 is weakly supported since Benbulben was tourism copy, not an actual course feature. Flagging for a human rescoring pass, not auto-applying. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 4->3; climbing 3->2. distance 4->3: vitals record 135km, which falls in the 120-160km rubric band (3, 'Standard'), not 160-200km (4, 'Long'). climbing 3->2: vitals record 1,050m of elevation gain, which falls in the 500-1,500m rubric band (2, 'Gentle'), not 1,500-2,500m (3, 'Rolling'). overall_score recalculated 57->54 per formula; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -112,7 +112,7 @@
       "bottom_line": "This profile documents a defunct one-off. If you're weighing whether to travel for it: don't — there's no evidence a second edition is coming, and the one edition that happened drew real organizational criticism from its own host council."
     },
     "final_verdict": {
-      "score": "57/100",
+      "score": "54/100",
       "one_liner": "Ireland's one and only UCI Gran Fondo — held once in 2024, then gone.",
       "should_you_race": "You can't — no edition has been scheduled since June 2024 and it's off the current UCI calendar entirely. Treat this as a historical record, not a race to plan around.",
       "alternatives": "For an active, currently-scheduled Irish road event: L'Etape Ireland (Carrick-on-Suir, ASO-organized, typically a September date — verify the current year's date directly). For closed-road UCI-series racing elsewhere, look to other active UCI Gran Fondo World Series qualifiers on the current calendar."
