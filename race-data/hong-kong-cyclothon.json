@@ -5,35 +5,55 @@
     "display_name": "Hong Kong Cyclothon",
     "tagline": "",
     "vitals": {
-      "distance_km": 49.9,
-      "distance_mi": 31.0,
-      "elevation_m": 366,
-      "elevation_ft": 1200.0,
-      "location": "Hong Kong, China",
+      "distance_km": 50.0,
+      "distance_mi": 31.1,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Tsim Sha Tsui East, Kowloon, Hong Kong",
       "location_badge": "Hong Kong, China",
       "country": "China",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": null,
-      "start_format": null,
-      "registration": "https://www.discoverhongkong.com/eng/what-s-new/events/cyclothon.html",
+      "date": "2026: October 11 (tentative)",
+      "date_specific": "2026: October 11 (tentative — organizer has not issued a final mass-ride confirmation)",
+      "field_size": "~6,000 riders (2024 edition, a record; the planned 2025 edition was cancelled)",
+      "start_format": "Mass start, closed roads",
+      "registration": "https://www.discoverhongkong.com/eng/events/cyclothon.html",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "50km",
+          "note": "\"Four tunnels, three bridges\" — Cheung Tsing/Cheung Ching Tunnel, Tsing Ma Bridge, Ting Kau Bridge, Nam Wan Tunnel, Stonecutters Bridge, Eagle's Nest Tunnel, Sha Tin Heights Tunnel"
+        },
+        {
+          "name": "32km",
+          "note": "\"Two tunnels, two bridges\" — Cheung Ching Tunnel, Nam Wan Tunnel, Ting Kau Bridge, Stonecutters Bridge"
+        }
+      ]
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Subtropical",
+      "description": "Early-to-mid October in Hong Kong falls in the tail of typhoon/monsoon season — real risk of winds strong enough to force course changes.",
+      "challenges": [
+        "High-wind risk on exposed bridge sections — official rules allow rerouting or shortening the course based on measured bridge wind speeds; in 2022, winds over 35 km/h forced removal of Tsing Ma and Ting Kau bridges, cutting the 50km route to roughly 36km mid-cycle",
+        "Humidity typical of Hong Kong autumn"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Flat urban highway, bridge, and tunnel network",
+      "surface": "Fully paved highways, bridges, and tunnels, closed to traffic for the event",
       "technical_rating": 1,
-      "features": []
+      "features": [
+        "Tsing Ma Bridge (50km route only)",
+        "Ting Kau Bridge",
+        "Stonecutters Bridge",
+        "Cheung Tsing/Cheung Ching Tunnel",
+        "Nam Wan Tunnel",
+        "Eagle's Nest Tunnel (50km route only)",
+        "Sha Tin Heights Tunnel (50km route only)"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,7 +76,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63. EDITORIAL WAVE 8 (2026-07-24): no dimension changes made. The prior 366m/1,200ft elevation figure traced back only to this database's own prior content, not any independent source, and was removed; no official elevation figure exists for either public route. Climbing (3) and other dimensions are left unchanged rather than speculatively re-scored against an unverified terrain estimate — this is a flat, engineered highway/bridge/tunnel network, but without a real elevation source we are not confident enough to move the number in either direction. Prestige (3) retained: the event does have a genuine UCI 1.1 professional race component, but that doesn't automatically transfer to the non-competitive mass-ride portion this profile primarily describes."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -65,17 +85,17 @@
       "cat_2_climbs": null,
       "cat_3_climbs": null,
       "key_climbs": [],
-      "profile_type": null,
+      "profile_type": "No official elevation profile or GPX exists for either public mass-ride route; the course is an engineered highway/bridge/tunnel network with minimal expected elevation change, but this is not independently confirmed",
       "king_of_mountain": null,
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "The Hong Kong Cyclothon is built around closed-road access to infrastructure cyclists cannot otherwise ride: Tsing Ma Bridge, Ting Kau Bridge, Stonecutters Bridge, and a series of highway tunnels across the New Territories and Kowloon. The latest published mass-ride program (2024/planned 2025) offered two distances: a 50km ride (\"four tunnels, three bridges\") running via the Cheung Tsing/Cheung Ching Tunnel, Tsing Ma Bridge, Ting Kau Bridge, Nam Wan Tunnel, Stonecutters Bridge, Eagle's Nest Tunnel, and Sha Tin Heights Tunnel; and a shorter 32km ride (\"two tunnels, two bridges\") via Cheung Ching Tunnel, Nam Wan Tunnel, Ting Kau Bridge, and Stonecutters Bridge. Both start near the Empire Centre on Salisbury Road, Tsim Sha Tsui East, and finish at the Jordan Road flyover in Kowloon. A separate, genuinely competitive UCI 1.1-class professional race runs alongside the mass rides — a different field and format from the closed-road public ride. No official source publishes an exact measured distance or elevation total for either public route; treat 50km/32km as organizer-branded nominal distances, and course details for the still-tentative 2026 edition have not yet been finalized.",
+      "signature_challenge": "Closed-road passage across Tsing Ma Bridge and Stonecutters Bridge is the real draw — and the real risk. Hong Kong's rules allow rerouting or shortening the course based on measured bridge wind speeds; in 2022 the 50km ride was cut to roughly 36km mid-cycle when winds exceeded 35km/h and organizers pulled Tsing Ma and Ting Kau from the route.",
       "suffering_zones": [
-        "Tsing Ma Bridge Wind Tunnel: Headwinds on the 2km span amplify 1200ft total gain efforts amid harbor gusts. Exposed position tests sustained power in the pack.",
-        "Tunnel Succession Grind: Back-to-back Cheung Ching, Nam Wan, and Eagle's Nest passages build cumulative fatigue with dim lighting and echoing packs. Heat buildup spikes without breeze.",
-        "Late-Stage Urban Push: Final 10km through Kowloon traffic closures demands leg preservation after bridges. Humidity saps energy on rolling finishes."
+        "Tsing Ma Bridge and Ting Kau Bridge — genuinely wind-exposed spans that can be removed from the course entirely if wind speeds exceed operational thresholds on race day",
+        "Cheung Tsing/Cheung Ching, Nam Wan, Eagle's Nest, and Sha Tin Heights tunnels — real infrastructure on the 50km route, though no credible source documents a specific back-to-back sequence or sensory conditions inside them",
+        "Kowloon finish at the Jordan Road flyover after the bridge-and-tunnel loop — the general finish location is confirmed for the most recent editions, though the 2026 route has not yet been published"
       ]
     },
     "logistics": {
@@ -83,33 +103,82 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://www.discoverhongkong.com/eng/what-s-new/events/cyclothon.html"
+      "official_site": "https://www.discoverhongkong.com/eng/events/cyclothon.html"
     },
     "history": {
-      "founded": 2014,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2015,
+      "origin_story": "Launched by the Hong Kong Tourism Board in 2015 as the territory's first Cyclothon, drawing more than 3,600 participants from 17 countries and regions in its debut edition. Title-sponsored by Sun Hung Kai Properties, with technical cycling involvement from the Cycling Association of Hong Kong, China.",
+      "notable_moments": [
+        "2019: cancelled amid that year's social unrest.",
+        "2020-2021: no edition staged during the COVID-19 pandemic.",
+        "January 2022: planned edition cancelled after the government ordered large-scale events suspended under COVID restrictions.",
+        "December 2022: event returned, but winds over 35 km/h forced removal of Tsing Ma and Ting Kau bridges mid-cycle, shortening the 50km route to roughly 36km.",
+        "2023: the elite UCI 1.1 race drew nearly 100 professionals across 14 teams, spanning WorldTour, ProTeam, Continental, and national squads.",
+        "2024: a record 6,000 riders and 20,000 spectators; four-time Tour de France winner Chris Froome rode the 50km mass ride.",
+        "November 2025: the entire planned edition was cancelled following the Wang Fuk Court fire in Tai Po, with HKTB and Sun Hung Kai Properties redirecting HK$15 million to the fire relief fund instead."
+      ],
+      "reputation": "A genuinely distinctive closed-road bridge-and-tunnel ride with a real UCI 1.1 professional race component, undercut by one of the road-cycling calendar's rockiest recent operating records — cancelled or skipped five times since 2019."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Bridges and Tunnels, Invented Suffering — And a Real Record of Cancellations",
+      "summary": "The Hong Kong Cyclothon is an HKTB-organized mass-participation ride offering closed-road access to Tsing Ma Bridge, Stonecutters Bridge, and several road tunnels normally off-limits to cyclists, bundled with a UCI 1.1 professional race that drew nearly 100 pros across 14 teams (spanning WorldTour, ProTeam, Continental, and national squads) in 2023. It also has a rocky history: cancelled in 2019 (social unrest), skipped entirely in 2020-21 (COVID), cancelled again in January 2022 (COVID restrictions), and cancelled again for 2025 following the Wang Fuk Court fire in Tai Po. When it has run, it's drawn real numbers — 6,000 riders and 20,000 spectators in its 2024 record edition, with Chris Froome among the 50km field. But our prior course description invented specifics no official source supports: a 'Tsing Ma Bridge Wind Tunnel' nickname, a fabricated 1,200ft elevation figure, a 'back-to-back' tunnel sequence that isn't how the tunnels are actually ordered on course, and sensory details (dim lighting, echoing packs, heat spikes) with no traceable source. None of that was needed — the actual course and cancellation history speak for themselves.",
+      "strengths": [
+        "Genuine closed-road access to Tsing Ma Bridge, Ting Kau Bridge, Stonecutters Bridge, and multiple highway tunnels — infrastructure cyclists cannot otherwise ride",
+        "A real UCI 1.1 professional race component — nearly 100 pros across 14 teams (WorldTour, ProTeam, Continental, and national squads) in 2023, back on the 2026 UCI calendar",
+        "Genuine scale when it runs: 6,000 riders and 20,000 spectators in the 2024 record edition, with elite names like Chris Froome in the mass-ride field",
+        "Organized by the Hong Kong Tourism Board with a title sponsor (Sun Hung Kai Properties) and Cycling Association of Hong Kong technical involvement — real institutional backing"
+      ],
+      "weaknesses": [
+        "A genuinely rocky operating history: cancelled in 2019 (social unrest), skipped in 2020-21 (COVID), cancelled again in January 2022, and cancelled again for the planned November 2025 edition following the Wang Fuk Court fire in Tai Po",
+        "Course is meaningfully wind-exposed — in 2022 the 50km ride was shortened to roughly 36km mid-cycle after wind readings forced the removal of Tsing Ma and Ting Kau bridges; expect the same risk on future editions",
+        "No official source publishes an exact distance or elevation figure for the mass rides — treat 50km/32km as nominal, organizer-branded distances, not measured GPS totals",
+        "The 2026 date (October 11) is still explicitly labeled 'tentative' by the organizer, and final route/registration details for 2026 were not yet published at research time"
+      ],
+      "bottom_line": "A real, distinctive bridge-and-tunnel closed-road ride with a legitimate UCI-race pedigree — just go in knowing this event has been cancelled or skipped in five separate years since 2019, confirm the current year's date and route before booking travel, and don't expect a single-summit climbing test — it's an engineered, largely flat highway network."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "Urban bridge-blasting sportive blending Hong Kong's skyline with mass-ride energy.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Hong Kong hands cyclists its bridges and tunnels for a day — when the event actually happens.",
+      "should_you_race": "Yes if you want closed-road access to Tsing Ma, Stonecutters, and Ting Kau bridges plus a real UCI-race atmosphere, and you're comfortable with genuine schedule risk — this event has been cancelled or skipped in five of the last seven years. Confirm the current year's date and route before committing travel.",
+      "alternatives": "For a similarly infrastructure-driven closed-road urban ride with a more stable operating history: Cape Town Cycle Tour. For a UCI 1.1-caliber Asian road race without the mass-ride bundling: check the broader Asia Tour calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.discoverhongkong.com/eng/events/cyclothon.html",
+        "category": "official",
+        "label": "Hong Kong Cyclothon — Official HKTB Event Page"
+      },
+      {
+        "url": "https://www.info.gov.hk/gia/general/202511/24/P2025112400242p.htm",
+        "category": "official",
+        "label": "Hong Kong Transport Department — 2025 Route/Traffic Notice"
+      },
+      {
+        "url": "https://www.shkp.com/en-US/media/press-releases/15-million-from-shkp-hong-kong-cyclothon-goes-to-tai-po-fire-relief-fund",
+        "category": "official",
+        "label": "SHKP/HKTB — 2025 Cancellation and Tai Po Fire Relief Redirect"
+      },
+      {
+        "url": "https://www.discoverhongkong.com/eng/about-hktb/annual-report/annual-report-20242025/driving-events-plus-tourism.html",
+        "category": "official",
+        "label": "HKTB 2024-25 Annual Report — 2024 Field Size and Chris Froome Participation"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/ROA/78464",
+        "category": "official",
+        "label": "UCI — 2026 Sun Hung Kai Properties Hong Kong Cyclothon (Class 1.1) Listing"
+      },
+      {
+        "url": "https://www.td.gov.hk/en/transport_in_hong_kong/tunnels_and_bridges_n/location_map/index.html",
+        "category": "official",
+        "label": "Hong Kong Transport Department — Bridge/Tunnel Reference"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://partnernet.hktb.com/russia/ru/destination/events_festivals/index.html?eventID=85023",
-      "notes": "Listed as a 2026 Sun Hung Kai Properties Hong Kong Cyclothon with October 2026 date; no rebrand found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.discoverhongkong.com/eng/events/cyclothon.html",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 8): date corrected from 'November TBD' to 'October 11 (tentative)' — the November date appears carried forward from the cancelled Nov 30, 2025 edition; HKTB's own sponsorship material and the UCI 2026 calendar both list Oct 11, 2026, but HKTB has not yet issued a final mass-ride confirmation. Founded corrected from 2014 to 2015 (HKTB's own annual report calls 2015 the debut edition). Distance corrected from an unsupported 49.9km/366m to the official nominal 50km/32km route pair; elevation nulled — no official GPX, elevation profile, or government route notice publishes a climbing total for either route, and the prior 366m/1,200ft figure traced back only to this database's own earlier content, not an independent source. Field_size added (~6,000, 2024 record edition). Purged and rewrote all three prior suffering_zones entries: the 'Tsing Ma Bridge Wind Tunnel' nickname, its '1,200ft'/'2km span' figures, the claimed 'back-to-back' Cheung Ching/Nam Wan/Eagle's Nest tunnel sequence, and sensory details (dim lighting, echoing packs, heat spikes, rolling Kowloon finish) were all unsupported by any official or credible source — replaced with the verified route list and a sourced wind-rerouting risk (2022 precedent). Added full cancellation history (2019, 2020-21, Jan 2022, Nov 2025) — a materially important honesty gap in the prior 'active' listing, which gave no indication of how frequently this event has failed to run."
     }
   }
 }

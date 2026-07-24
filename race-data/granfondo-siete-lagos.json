@@ -5,35 +5,41 @@
     "display_name": "Gran Fondo Siete Lagos",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
+      "distance_km": 110.0,
+      "distance_mi": 68.4,
       "elevation_m": 1500,
-      "elevation_ft": 4920.0,
-      "location": "San Martín de los Andes, Neuquén, Argentina",
+      "elevation_ft": 4921.0,
+      "location": "Villa La Angostura ↔ San Martín de los Andes, Neuquén, Argentina",
       "location_badge": "San Martín de los Andes, Argentina",
       "country": "Argentina",
-      "date": "2026: March TBD",
-      "date_specific": "2026: March TBD",
-      "field_size": "2,000 riders",
+      "date": "2026: November 20-22 (110K main race Nov 22)",
+      "date_specific": "2026: November 22 (110K); full event program Nov 20-22",
+      "field_size": "~3,000 riders",
       "start_format": null,
-      "registration": null,
+      "registration": "https://granfondosietelagos.com/inscripciones/",
       "entry_fee": null,
-      "feed_zones": "4 feed zones with hydration and nutrition",
-      "cutoff_time": "6 hours",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Temperate mountain, Patagonian spring",
+      "description": "Late-November Patagonian spring can swing hard within a single race day — the 2024 edition moved from sun into rain, cold, and wind.",
+      "challenges": [
+        "Variable spring weather: documented swings from sun to rain/cold/wind on race day (2024 edition)",
+        "Wind exposure along open lakeside corridors between climbs"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Rolling mountain roads",
+      "surface": "Fully paved/asphalt (RN40) — Argentina's tourism authority documents more than 96km of the Ruta de los Siete Lagos corridor as completely asphalted; no verified gravel sector on the main course despite a co-located MTB category using the same paved road",
+      "technical_rating": 2,
+      "features": [
+        "Ruta de los Siete Lagos (RN40) through Lanín and Nahuel Huapi national parks",
+        "Lácar, Machónico, Falkner, Villarino, Espejo, Correntoso, and Nahuel Huapi lakes"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -45,62 +51,127 @@
       "community_culture": 3,
       "altitude": 2,
       "logistics": 3,
-      "prestige": 3,
+      "prestige": 4,
       "field_depth": 3,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 63,
+      "overall_score": 64,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 63. EDITORIAL WAVE 8 (2026-07-24): prestige raised 3→4 — verified via UCI's own 2026 series-expansion announcement and event listing that this is the first UCI Gran Fondo World Series round held in Argentina (2026 debut) and a qualifier for the 2027 UCI Gran Fondo World Championships, a real and dated external-validation signal, not a self-reported claim. New sum of 14 dimensions = 42 + cultural_impact 3 = 45; 45/70*100 = 64.29, rounds to 64. Tier remains T2. No other dimensions changed."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 3,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        {
+          "name": "Opening ascent to course high point (~1,175m)",
+          "length_km": 15.0,
+          "gradient_pct": 3.5
+        },
+        {
+          "name": "Late ramp 1",
+          "length_km": 1.9,
+          "gradient_pct": 7.2
+        },
+        {
+          "name": "Late ramp 2",
+          "length_km": 1.2,
+          "gradient_pct": 6.5
+        }
+      ],
+      "profile_type": "Long rolling mountain corridor with one sustained early climb and two short, steep late ramps — no single summit finish",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A point-to-point road gran fondo along RN40's Ruta de los Siete Lagos, linking Villa La Angostura and San Martín de los Andes through Lanín and Nahuel Huapi national parks — past the Lácar, Machónico, Falkner, Villarino, Espejo, Correntoso, and Nahuel Huapi lakes. The 110km course is fully paved (Argentina's tourism authority documents more than 96km of the corridor as completely asphalted); an MTB category rides the same paved road, so this is not a gravel event despite the mixed-discipline field. Direction alternates by year — 2025 ran Villa La Angostura to San Martín de los Andes, 2026 reverses to San Martín de los Andes to Villa La Angostura, which changes which climbs land early versus late. The profile is a long rolling mountain corridor rather than a single summit finish: an early sustained climb, extended lakeside descents, and two short, steep ramps late in the race.",
+      "signature_challenge": "The opening climb — roughly 15km averaging 3.5% to the course's 1,175m high point — sets the tone early, but the real sting comes late: two short, steep ramps (1.9km at 7.2% and 1.2km at 6.5%) hit tired legs well into the 110km.",
+      "suffering_zones": [
+        "The 15km opening climb to 1,175m — long rather than steep, but the first test of the day and the one that sets pacing for everything after",
+        "Late 1.9km/7.2% and 1.2km/6.5% ramps — short, sharp efforts arriving deep into the race",
+        "Open lakeside corridors between climbs — extended descents and frequent bends where Patagonian spring weather (sun to rain/cold/wind, documented in 2024) can turn exposure into a real factor"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "San Martín de los Andes has ample lodging from hostels ($30/night) to lakeside cabañas ($120/night). Book early — March is peak autumn season in Patagonia. Villa La Angostura offers post-race accommodation.",
-      "transport": "",
+      "lodging_strategy": "San Martín de los Andes and Villa La Angostura offer lodging from hostels to lakeside cabañas; book early — late November is high season for outdoor tourism in this part of Patagonia and coincides with the event's ~3,000-rider field.",
+      "transport": "Point-to-point course between Villa La Angostura and San Martín de los Andes (roughly 100km apart by road); direction alternates by year, so the start and finish towns swap accordingly — plan return transport either way.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondosietelagos.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2012,
+      "origin_story": "Created by two local Patagonian athletes, Ileana Suffern and Agustín Neiman, and later formalized under organizer JAUQUE Eventos. Edition numbering (15th edition in 2026, 14th in 2025) implies a 2012 launch consistent with the official site's copyright date, though no inaugural-edition announcement could be independently verified — treat the founding year as a well-supported inference, not a confirmed fact.",
+      "notable_moments": [
+        "2024 edition drew Argentine sporting figures Lionel Scaloni, Pablo Aimar, Gabriela Sabatini, and Olympic sailing champion Santiago Lange as participants; Scaloni finished the 110K in 3:12:58.",
+        "2025 road winners: former professional Lucas Gaday and Argentine national road medalist Sofía Martelli.",
+        "2026 edition became the first UCI Gran Fondo World Series round held in Argentina, and a qualifier for the 2027 UCI Gran Fondo World Championships."
+      ],
+      "reputation": "Patagonia's highest-profile UCI-recognized gran fondo as of 2026, drawing national sporting figures and roughly 3,000 riders annually along the Ruta de los Siete Lagos."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A UCI-Series Gran Fondo — Just Verify the Season Before You Book",
+      "summary": "Gran Fondo Siete Lagos is a growing Patagonian road gran fondo along the Ruta de los Siete Lagos between Villa La Angostura and San Martín de los Andes, and as of 2026 it's the first UCI Gran Fondo World Series round held in Argentina — a dated, externally verified prestige signal, not a self-reported claim. It draws roughly 3,000 riders each November (Patagonian spring, not the March date this profile long listed in error) and has attracted notable sporting names — Lionel Scaloni, Pablo Aimar, and Gabriela Sabatini among them in 2024. The course is fully paved despite an MTB category riding the same road, and the profile rewards riders comfortable with a long early climb followed by short, steep late ramps rather than one big summit test. One caution: no single organizer-published total elevation-gain figure exists — GPS tracks from different editions and directions range roughly 1,300–1,800m, so treat any single number, including ours, as an estimate rather than a certified total.",
+      "strengths": [
+        "First UCI Gran Fondo World Series round in Argentina (2026) and a qualifier for the 2027 UCI Gran Fondo World Championships — a dated, externally verified prestige signal, not a self-reported claim",
+        "Fully paved point-to-point route through Lanín and Nahuel Huapi national parks past seven named lakes",
+        "Real growth and drawing power — roughly 3,000 riders annually, a provincial tourism-interest declaration, and celebrity/elite participation (Scaloni, Aimar, Sabatini, Lange in 2024; a former pro and a national medalist won in 2025)",
+        "Multi-day event program (time trial, kids' event, expo) around the main 110K gives it festival depth beyond a single race day"
+      ],
+      "weaknesses": [
+        "No organizer-published total elevation-gain figure — third-party GPS tracks range roughly 1,300–1,800m depending on year and direction, so any single number on this or any other database is an estimate, not a certified total",
+        "Course direction alternates by year (Villa La Angostura to San Martín de los Andes one year, reversed the next), which changes which climbs come early versus late — check the current year's direction before you plan pacing",
+        "Prior public listings (including this one, until this correction) had the race in March — it is actually a November race; anyone who trusted the old date would have missed it entirely",
+        "UCI Series status is brand new as of 2026 — one edition of world-series-level scrutiny is not the same track record as Europe's longest-running UCI gran fondos"
+      ],
+      "bottom_line": "A growing, now UCI-recognized Patagonian gran fondo with a scenic paved course — just go in knowing the race is in November, the total elevation figure is an estimate rather than a certified number, and the direction (and therefore the climbing order) flips year to year."
     },
     "final_verdict": {
-      "score": "63/100",
-      "one_liner": "Seven lakes, one unforgettable day in Patagonia.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "64/100",
+      "one_liner": "Seven lakes, one paved Patagonian test — now Argentina's first stop on the UCI Gran Fondo World Series.",
+      "should_you_race": "Yes if you want a scenic, well-supported November gran fondo in Patagonia with a growing UCI-Series pedigree. Confirm the current year's direction and don't expect a single-summit profile — it's a long early climb plus two short, steep late ramps.",
+      "alternatives": "For a similar Patagonian lakes setting without the UCI-series format: regional cicloturismo rides along RN40. For another UCI Gran Fondo World Series stop added in 2026: check the series' other newly added rounds."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondosietelagos.com/",
+        "category": "official",
+        "label": "Gran Fondo Siete Lagos — Official Site"
+      },
+      {
+        "url": "https://granfondosietelagos.com/cronograma/",
+        "category": "official",
+        "label": "Official 2026 Event Schedule (Nov 20-22 program)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/siete-lagos/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Event Listing and Course Description"
+      },
+      {
+        "url": "https://www.angosturainforma.gob.ar/gran-fondo-siete-lagos-dia-3-mas-de-3000-ciclistas-largaron-desde-villa-la-angostura-rumbo-a-san-martin-de-los-andes/",
+        "category": "media",
+        "label": "Villa La Angostura Municipal Report — 2025 Field Size (3,000+ riders)"
+      },
+      {
+        "url": "https://www.lanacion.com.ar/deportes/scaloni-aimar-sabatini-y-lange-un-domingo-de-campeones-en-el-gran-fondo-7-lagos-nid24112024/",
+        "category": "media",
+        "label": "La Nación — 2024 Edition, Celebrity Participants and Weather"
+      },
+      {
+        "url": "https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/conducir-por-la-ruta-de-los-siete-lagos",
+        "category": "official",
+        "label": "Argentina.gob.ar — Ruta de los Siete Lagos Surface/Pavement Confirmation"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Siete Lagos gran fondo cycling San Martín de los Andes",
@@ -179,9 +250,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/en/siete-lagos/",
-      "notes": "2026 edition is announced for Nov 21-22 in San Martín de los Andes to Villa La Angostura; date on file (March TBD) conflicts.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondosietelagos.com/cronograma/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 8): date changed from stale 'March TBD' to the real November event — 2026 program runs Nov 20-22 with the 110K main race on Nov 22 (UCI lists formal competition dates Nov 21-22). Distance changed from 99.8km to the official 110km (distance_mi recalculated to 68.4). Field_size changed from 2,000 to ~3,000, confirmed independently by municipal reporting, the UCI event page, and the organizer. Added UCI Gran Fondo World Series status — first Argentina round, 2026 debut, qualifier for the 2027 UCI Gran Fondo World Championships (prestige dimension raised 3→4 accordingly — see fondo_rating.scoring_notes for the recomputed score). Elevation gain (1,500m) has no single authoritative organizer figure — third-party GPS tracks range roughly 1,300–1,800m depending on year/direction; retained as a defensible estimate and flagged as such throughout, not presented as certified. Course direction alternates annually (2025: Villa La Angostura → San Martín de los Andes; 2026: reversed). Removed previously unverifiable 'feed_zones: 4 feed zones' and 'cutoff_time: 6 hours' claims — could not confirm either in current official regulations or any cited source; nulled rather than guessed. location updated to reflect the point-to-point, direction-alternating course rather than a single fixed town."
     }
   }
 }

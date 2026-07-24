@@ -5,35 +5,52 @@
     "display_name": "Gran Fondo Argentina",
     "tagline": "",
     "vitals": {
-      "distance_km": 123.9,
-      "distance_mi": 77.0,
-      "elevation_m": 91,
-      "elevation_ft": 300.0,
-      "location": "Buenos Aires, Argentina",
+      "distance_km": 122.0,
+      "distance_mi": 75.8,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Parque Sarmiento, Buenos Aires, Argentina",
       "location_badge": "Buenos Aires, Argentina",
       "country": "Argentina",
-      "date": "2025: October 12",
-      "date_specific": "2025: October 12",
-      "field_size": null,
-      "start_format": null,
-      "registration": null,
+      "date": "2026: October 11",
+      "date_specific": "2026: October 11 (122km start 06:00, 46km start 06:20)",
+      "field_size": "4,000-rider cap (2,000 per distance); 4,000 reported by city government in 2025",
+      "start_format": "Mass start, closed roads",
+      "registration": "https://go.granfondoargentina.com/",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long",
+          "distance_km": 122,
+          "note": "Elevation unverified — organizer's own course page lists conflicting figures (323m 'vertical' vs 233m/1,060ft)"
+        },
+        {
+          "name": "Short",
+          "distance_km": 46
+        }
+      ]
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Temperate — Buenos Aires spring",
+      "description": "October is early spring in Buenos Aires — generally mild, with real rain risk. The 2024 edition ran in rain.",
+      "challenges": [
+        "Spring rain risk (documented in the 2024 edition)",
+        "Organizer reserves the right to cancel for weather without refund"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Flat to gently rolling urban terrain",
+      "surface": "Fully paved city streets and motorways, closed to traffic for the event",
       "technical_rating": 1,
-      "features": []
+      "features": [
+        "Buenos Aires motorway network — General Paz, Perito Moreno, 25 de Mayo, 9 de Julio Sur, Illia, Cantilo/Lugones",
+        "Parque de los Niños",
+        "Finish lap on the Parque Sarmiento cycling track"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,7 +73,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61. EDITORIAL WAVE 8 (2026-07-24): no dimension changes made despite new research. Climbing stays at 1 — Buenos Aires is genuinely flat and the organizer's own current course page gives two contradictory elevation figures (323m 'vertical' vs 233m/1,060ft) for the same course; rather than pick one and change the score off unreliable data, the dimension is left as-is and the elevation field is nulled (see eligibility.notes). Prestige stays at 2 — confirmed via the UCI's own 2026 series-expansion material that this event is NOT part of the UCI Gran Fondo World Series (that Argentina slot belongs to Gran Fondo Siete Lagos), so no prestige upgrade is warranted. Sum of 14 dimensions unchanged at 41 + cultural_impact 2 = 43; 43/70*100 = 61.43, rounds to 61 — score unchanged."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -65,47 +82,96 @@
       "cat_2_climbs": null,
       "cat_3_climbs": null,
       "key_climbs": [],
-      "profile_type": null,
+      "profile_type": "Flat-to-gently-rolling closed-road urban course; organizer's own elevation figures conflict (233m vs 323m for the 122km distance) and are not resolved — no reliable per-climb segment data exists to enrich this field",
       "king_of_mountain": null,
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A fast, predominantly flat closed-road urban gran fondo entirely within Buenos Aires city limits — not a pampas or rural fondo. For 2026 (the event's 4th edition), the start and finish move to Parque Sarmiento (Av. Dr. Ricardo Balbín 4750). The 122km long course and 46km short course run on ordinary paved city arterials and motorways — current official regulations name General Paz, Perito Moreno, 25 de Mayo, 9 de Julio Sur, Illia, and Cantilo/Lugones — fully closed to motor traffic and monitored by the city's traffic-camera network — though a fully settled 2026 turn-by-turn sequence was not independently confirmed at research time. Finishers ride a ceremonial lap on the Parque Sarmiento cycling track for the medal ceremony. The prior (2025) edition started from Puerto Madero and passed Paseo del Bajo, the Costanera, and areas near the Monumental and Vélez stadiums — those landmarks should not be assumed to carry over to the 2026 route given the new start/finish.",
+      "signature_challenge": "There is no climbing test here — the challenge is pack speed and positioning across a fast, flat, fully closed motorway network that's normally off-limits to cyclists, not terrain.",
+      "suffering_zones": [
+        "Sustained high pace in a large closed-road peloton across motorway sections — positioning and drafting discipline matter more than power here",
+        "Spring weather variability — the 2024 edition ran in rain, and the organizer can cancel for weather without refund",
+        "The final push back into Parque Sarmiento after a long flat effort, where pack speed rather than terrain determines who's still in contention"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "",
-      "transport": "",
+      "lodging_strategy": "Buenos Aires offers a full range of citywide lodging with no race-specific accommodation block documented. As a closed-road urban event, expect road closures across northern Buenos Aires on race morning — plan arrival at Parque Sarmiento accordingly.",
+      "transport": "Fully closed-road course within Buenos Aires city limits — no point-to-point travel logistics. Start and finish are both at Parque Sarmiento (Av. Dr. Ricardo Balbín 4750) as of the 2026 edition, a change from 2025's Puerto Madero start.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondoargentina.com/en/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2023,
+      "origin_story": "Founded in 2023 by Gaby Castillo (co-creator, general producer and race director) and Matías Gutiérrez Moyano (co-creator and executive director), with Darío Colla as sporting director, and run by the nonprofit Gran Fondo Asociación Civil (personería No. 1959279). Grew from a 90km/45km first edition to a 122km/46km fourth edition in 2026, with reported participation climbing from roughly 2,300 registered riders (2023) to an official city-government-reported 4,000 (2025).",
+      "notable_moments": [
+        "Declared of sporting interest by the City of Buenos Aires legislature.",
+        "2025 edition drew an official city-government-reported 4,000 cyclists, per the Buenos Aires government's own post-event report.",
+        "2026 edition (4th) moves the start/finish to Parque Sarmiento and closes sections of General Paz, Perito Moreno, 25 de Mayo, and 9 de Julio Sur to traffic for the day."
+      ],
+      "reputation": "A young (founded 2023) but fast-growing Buenos Aires closed-road mass-participation event — not UCI-sanctioned or part of an international series, but a legitimate, city-government-backed urban fondo with real year-over-year growth."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Fast-Growing Closed-Road City Fondo — With Some Real Data Gaps",
+      "summary": "Gran Fondo Argentina is a young (founded 2023) closed-road mass-participation ride through Buenos Aires with documented city-government backing and reported growth from roughly 2,300 riders in its first edition to an official city-government-reported 4,000 by its third. It is not part of the UCI Gran Fondo World Series or the UCI's international calendar — that distinction, as of 2026, belongs to Gran Fondo Siete Lagos in Patagonia, not this event. This is a national urban event, not an internationally ranked one. The organizer's own course pages are also inconsistent: the current 122km long-course page lists both '323m vertical' and '233m/1,060ft elevation' on the same page, numbers that don't reconcile, so we're not carrying forward a single elevation figure we can't verify. Buenos Aires is genuinely flat, and the appeal here is riding motorways normally closed to cyclists in a full mass-start peloton, not a scenic or climbing test.",
+      "strengths": [
+        "Real closed-road access to Buenos Aires's motorway network (General Paz, Perito Moreno, 25 de Mayo, 9 de Julio Sur, Illia, Cantilo/Lugones) — roads cyclists cannot otherwise ride, monitored by the city's traffic-camera network",
+        "Genuine, documented year-over-year growth: roughly 2,300 riders (2023) to an official city-government-reported 4,000 (2025)",
+        "City-government backing and a legislative sporting-interest declaration — a real, verifiable civic relationship, not a marketing claim",
+        "Two accessible distances (122km/46km for 2026) with a 4,000-rider combined cap and a ceremonial finish lap on the Parque Sarmiento cycling track"
+      ],
+      "weaknesses": [
+        "Not part of the UCI Gran Fondo World Series and not on the UCI's international calendar — Argentina's UCI Gran Fondo World Series slot belongs to Gran Fondo Siete Lagos in Patagonia, not this event (this doesn't rule out separate national-federation-level authorization, which we could not independently verify either way)",
+        "The organizer's own current course pages contradict themselves on elevation (323m 'vertical' vs 233m/1,060ft on the same page for the same course) — we could not verify a single trustworthy elevation figure and have marked it unverified rather than guess",
+        "Course details shift materially year to year — 2026 moves the start/finish to Parque Sarmiento from 2025's Puerto Madero start, and the exact 2026 turn-by-turn route was not fully confirmed at research time",
+        "Organizer's weather-cancellation policy allows the race to be called off without refund"
+      ],
+      "bottom_line": "A growing Buenos Aires closed-road fondo with genuine motorway access — just don't mistake it for a UCI-ranked or internationally established event, and don't trust a single elevation number off the organizer's own site until they fix their internal contradiction."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Buenos Aires opens its motorways for a day — a young, fast-growing closed-road fondo, not (yet) an internationally ranked one.",
+      "should_you_race": "Yes if you want a flat, fast, closed-road city ride through normally-inaccessible Buenos Aires motorways with real government backing and growing fields. Skip it if you're chasing UCI-series prestige or scenic/climbing terrain — neither is what this race offers.",
+      "alternatives": "For an internationally ranked Argentine gran fondo: Gran Fondo Siete Lagos (Patagonia), Argentina's first UCI Gran Fondo World Series round as of 2026. For another major closed-road city fondo elsewhere: look at other national-capital urban fondos in the region."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondoargentina.com/en/",
+        "category": "official",
+        "label": "Gran Fondo Argentina — Official Site"
+      },
+      {
+        "url": "https://granfondoargentina.com/info/cronograma/",
+        "category": "official",
+        "label": "Official 2026 Schedule (4th edition, Oct 11)"
+      },
+      {
+        "url": "https://granfondoargentina.com/reglamento/",
+        "category": "official",
+        "label": "Official 2026 Regulations (field cap, courses, categories)"
+      },
+      {
+        "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/cuatro-mil-ciclistas-pedalearon-por-las-autopistas-portenas-pura",
+        "category": "official",
+        "label": "City of Buenos Aires Government — 2025 Post-Event Report (4,000 riders)"
+      },
+      {
+        "url": "https://granfondoargentina.com/nosotros/quienes-somos/",
+        "category": "official",
+        "label": "Organizer/Team Page — Gran Fondo Asociación Civil"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/2026-uci-gran-fondo-world-series-expands-with-nine-new-events/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series 2026 Expansion — Confirms Argentina Slot Is Gran Fondo Siete Lagos, Not This Event"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondoargentina.com/en/",
-      "notes": "Fourth edition clearly announced for October 11, 2026 in Buenos Aires with registrations open, confirming the event is still running; 2025 race date on file (Oct 12) matches third edition.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondoargentina.com/info/cronograma/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 8): distance corrected from stale 123.9km (a 2025-edition figure) to the current 2026 long-course distance of 122km (distance_mi recalculated to 75.8); a 46km short course exists alongside it. Elevation (91m) removed — unverifiable and contradicted by the organizer's own current course pages, which display both '323m vertical' and '233m/1,060ft' for the same course on the same page; nulled rather than guessed. Date corrected/confirmed: 2026 edition (4th) runs Sunday, October 11, 2026, with the 122km starting 06:00 and 46km starting 06:20 — start/finish moves to Parque Sarmiento (Av. Dr. Ricardo Balbín 4750) from 2025's Puerto Madero start. Field_size added: 4,000-rider combined cap (2,000 per distance) for 2026; Buenos Aires city government reported 4,000 participants after the 2025 edition. Confirmed NOT part of the UCI Gran Fondo World Series — the UCI's own 2026 series-expansion material identifies Gran Fondo Siete Lagos (Patagonia) as Argentina's first and only Series round; prestige dimension left unchanged (2) accordingly, no upgrade warranted (see fondo_rating.scoring_notes). Organizer identified: Gran Fondo Asociación Civil (nonprofit, personería No. 1959279); founded 2023 by Gaby Castillo and Matías Gutiérrez Moyano."
     }
   }
 }

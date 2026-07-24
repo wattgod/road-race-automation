@@ -1,62 +1,64 @@
 {
   "race": {
-    "name": "Turkcell Granfondo Izmir",
+    "name": "Gran Fondo Izmir",
     "slug": "turkcell-granfondo-izmir",
-    "display_name": "Turkcell Granfondo Izmir",
+    "display_name": "Gran Fondo Izmir (formerly Turkcell Granfondo Izmir)",
     "tagline": "",
     "vitals": {
-      "distance_km": 104.6,
-      "distance_mi": 65.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Izmir, Turkey",
-      "location_badge": "Izmir, Turkey",
+      "distance_km": 92.9,
+      "distance_mi": 57.7,
+      "elevation_m": 1570,
+      "elevation_ft": 5151.0,
+      "location": "Sigacik, Seferihisar, Izmir Province, Turkey",
+      "location_badge": "Sigacik, Turkey",
       "country": "Turkey",
-      "date": "2026: October 4",
-      "date_specific": "2026: October 4",
-      "field_size": "Full capacity in recent seasons (part of series with 4,835 total riders in 2025)",
+      "date": "2025: September 14 (last confirmed edition; dropped from the Turkish Cycling Federation's 2026 calendar)",
+      "date_specific": "2025: September 14 (last confirmed edition; dropped from the Turkish Cycling Federation's 2026 calendar)",
+      "field_size": "500 riders (2025)",
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "Long course ₺1,300; short course ₺1,200; tandem/paralympic free (2025)",
       "feed_zones": "At least 2 feed zones",
-      "cutoff_time": "Unknown",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Short: 45.9km, 486m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
+      "description": "Mid-September on the Aegean coast: warm, dry, minimal rain risk.",
       "challenges": []
     },
     "terrain": {
       "primary": "Mixed terrain",
       "surface": "Paved roads",
-      "technical_rating": 1,
+      "technical_rating": 2,
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 2,
+      "distance": 2,
+      "climbing": 3,
       "descent_technicality": 2,
       "climate_risk": 4,
-      "organization": 4,
+      "organization": 3,
       "scenic_experience": 4,
       "community_culture": 4,
       "altitude": 1,
       "logistics": 3,
-      "prestige": 3,
-      "field_depth": 3,
+      "prestige": 2,
+      "field_depth": 2,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 61,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "GOLD wave 2026-07-24 (batch C): substantial correction, sol-reviewed. Research (codex/gpt-5.6-sol web search against the Turkish Cycling Federation's official 2026 calendar PDF, granfondo.com.tr cycling-media coverage, and Turkcell's own sponsorship history page) found: (1) 2023 is the last documented Turkcell-titled edition — the 2024-25 editions ran as unbranded 'Gran Fondo Izmir', organized by 78 Event; a contemporaneous report attributes Bisan to a course-category sponsorship ('Bisan Parkuru'), not the organizer role, though an explicit sponsor-role source was not independently re-verified; (2) the race relocated from central Izmir to Sigacik/Seferihisar in 2024-25 after a reported route-permission problem; (3) the Federation's original Dec 2025 calendar listed a 2026 Izmir-area slot for Oct 4, but its Mar 11 2026 revision replaced that slot with Canakkale Gran Fondo — there is no confirmed 2026 Izmir/Sigacik edition (a separate VeloTurk Gran Fondo Cesme, also Izmir province, remains on the calendar for Oct 25); (4) the '4,835 riders' figure in our old data was the Federation's entire 12-race national 2025 season total, not this race's field (which was 500 in 2025, down roughly 75% from ~2,000 in 2022-23 — corrected from an earlier draft's inaccurate 'nearly halved'); (5) real distance is 92.9km/1,570m (2025 long course) or 45.9km/486m (short), not 104.6km. Five dimension changes from research: distance 3->2 (92.9km falls in the 80-120km/2 bracket, not 120-160km/3); climbing 2->3 (1,570m of climbing in under 93km is a genuinely hilly course, well above the old data's flat assumption); prestige 3->2 (field and branding have both shrunk substantially since the Turkcell-sponsored 2021-23 peak — this is now a mid-sized domestic fondo, not the flagship of a national series); field_depth 3->2 (documented 2025 field of 500 is well below the assumed depth); organization 4->3 (a 2024 postponement/relocation after a reported route-permission problem is a real organizational stumble, not a 4-level record). descent_technicality, climate_risk, scenic_experience, community_culture, altitude, logistics, value, expenses, road_surface, and cultural_impact are UNCHANGED from the pre-wave values — no research basis was found to adjust them. Net dimension change: -1(distance)+1(climbing)-1(prestige)-1(field_depth)-1(organization) = -3. overall_score: 61 -> 57 (TIER 2 -> TIER 3, since 57 falls below the 60 T2 threshold). Original score before this wave: 64 (migrated from gravel-race-automation, pre-recalculation)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,126 +72,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The route's identity has changed materially over its five-edition history. From 2021-23 it ran a fast, urban/coastal course starting at Izmir's Cumhuriyet Square through Balcova, Narlidere and Guzelbahce toward Urla. In 2024-25 it moved south to Sigacik/Seferihisar: the 2025 race started and finished at Sigacik Sahil Park/Akkum, then went inland via Karakoc, Kavakdere, Orhanli, Catalca, Efemcukuru and Camtepe, returning through Kurucesme and Beyler. That combination of an Aegean harbor start, rural village roads, and 1,570m of climbing in only 92.9km makes the current version considerably hillier and more selective than its flatter, urban-Izmir origins. It's a closed public-road event; no gravel sectors are advertised, but no independent pavement-quality assessment was found either.",
+      "signature_challenge": "Efemcukuru and Camtepe — the identifiable climbing zones on the inland loop from Sigacik, packing 1,570m of gain into a 92.9km course. No formally named or classified climbs have been published; treat these as the general climbing area, not a documented KOM segment.",
+      "suffering_zones": [
+        "Sigacik-to-Efemcukuru inland climbing loop — the course's real test, rural village roads well away from the Aegean coastline",
+        "Camtepe — the other identifiable climbing zone on the 2024-25 route, though no gradient data has been published"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels available near Konak, Izmir; check for event partner discounts.",
+      "lodging_strategy": "Hotels available in Seferihisar/Sigacik or central Izmir; the race site relocated south of the city in 2024-25, so check current start-location logistics before booking near old central-Izmir listings.",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2021,
+      "origin_story": "Launched 2021 as a two-stop Turkcell-sponsored series with Istanbul, drawing roughly 1,500 riders in its first year and growing to nearly 2,000 by 2022-23 as a three-city Istanbul-Ankara-Izmir series finale. Turkcell's naming sponsorship ended after 2023; the race continued unbranded as 'Gran Fondo Izmir' under organizer 78 Event, relocating to Sigacik/Seferihisar in 2024 after a postponement tied to route-permission problems in central Izmir.",
+      "notable_moments": [
+        "2021-22: launch years, ~1,500-2,000 riders, Turkcell title sponsorship",
+        "2023: final Turkcell-branded edition, reported field approaching 2,000",
+        "2024: postponed and relocated to Seferihisar after central-Izmir route-permission issues",
+        "2025: 500-rider field at the new Sigacik/Seferihisar course"
+      ],
+      "reputation": "Historically one of Turkey's larger domestic fondos and a series finale during its Turkcell-sponsored years, but not clearly the national flagship even then. Recent field depth (500 in 2025, down from ~2,000) is mid-sized rather than elite or internationally deep."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Shrunk, Relocated, and Missing From the 2026 Calendar",
+      "summary": "Gran Fondo Izmir — as it's now branded, since Turkcell's title sponsorship ended after 2023 — is a real event with a genuine five-edition history, but it looks very different from the 'Turkcell Granfondo Izmir' our old data described. The Turkcell-sponsored peak years (2021-23) drew up to 2,000 riders on a fast coastal/urban Izmir course. Since a 2024 relocation to Sigacik/Seferihisar (following route-permission problems in central Izmir), the field has shrunk to 500 and the course has become a hillier rural-village route (1,570m in under 93km). Most importantly: the Turkish Cycling Federation's original December 2025 calendar listed an Izmir-area slot for October 4, 2026, but its March 2026 revision replaced that slot with Canakkale Gran Fondo — there is currently no confirmed 2026 edition anywhere in Izmir province except a separate, unrelated VeloTurk Gran Fondo Cesme event.",
+      "strengths": [
+        "Genuine five-edition history (2021-2025) with real, documented field data at each stage",
+        "The relocated 2024-25 Sigacik/Seferihisar course is a legitimately hillier, more selective test than the race's flat urban-Izmir origins — 1,570m over 92.9km",
+        "Reasonable entry fees (₺1,200-1,300 in 2025) with tandem and paralympic categories offered free"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition — the Federation's official calendar revision dropped Izmir's Oct 4 slot in favor of Canakkale, with no replacement Izmir date announced",
+        "Field has dropped to roughly a quarter of its 2022-23 peak — 500 riders in 2025 versus reported figures approaching 2,000 in 2022-23, a decline of about 75%",
+        "The event's own identity has been unstable: renamed after losing its Turkcell title sponsorship, then relocated an hour south after a 2024 postponement tied to route-permission problems",
+        "No formally documented named climbs or gradient data for the current Sigacik/Efemcukuru/Camtepe route",
+        "Our own prior data conflated this race's identity — wrong distance (104.6km vs. the real 92.9km), wrong organizer (Bisan, actually just a course-category sponsor; the real organizer is 78 Event), and a national-season attendance total (4,835) misrepresented as this single race's field"
+      ],
+      "bottom_line": "This was a legitimate mid-sized Turkish domestic fondo through 2025, but it's currently missing from the 2026 Federation calendar. Don't plan travel around an Izmir-area edition until a 2026+ date is officially confirmed on the Federation's calendar or granfondo.com.tr."
     },
     "final_verdict": {
-      "score": "61/100",
-      "one_liner": "Scenic Aegean Coast gran fondo in Turkey's cycling hub with growing popularity and solid organization.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "57/100",
+      "one_liner": "A shrinking, relocated Aegean fondo that's missing from the 2026 Turkish Federation calendar.",
+      "should_you_race": "Not for 2026 as currently planned — no confirmed edition exists. If a future date is announced, it's a reasonable mid-sized hilly Aegean-coast option, but verify the calendar directly first.",
+      "alternatives": "VeloTurk Gran Fondo Cesme (also Izmir province, Oct 25 in recent years) is currently the confirmed Izmir-area stop on the Federation's 2026 calendar. Canakkale Gran Fondo now holds the Oct 4 slot this race previously occupied."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Turkcell Granfondo Izmir gran fondo cycling Izmir",
-      "videos": [
-        {
-          "video_id": "xPIYVhb3MSI",
-          "title": "Turkcell Granfondo İzmir",
-          "channel": "Bisan Official",
-          "view_count": 696,
-          "upload_date": "20210908",
-          "duration_string": "1:58",
-          "description": "Bisan'ın ana sponsorluğunda İzmir'de ilk kez düzenlenen Turkcell Granfondo İzmir yarışında tüm sporcular keyifli bir rotada sürüş yaparak ve birbirinden eğlenceli etkinlikler, dans gösterileri  ve konser ile keyifli vakit geçirdiler. İzmir’de düzenlenen Turkcell Granfondo Türkiye’de bugüne kadar yapılan yarışlardaki en yüksek sporcu katılımı ile bir ilke imza attı. Yine Türkiye’de ilk defa bu yarışta kayıt alanı dahil olmak üzere, standımızda, yarış rotasında, finishde ve her yerde Bisan fabrika çalışanları görev aldı. Bisiklete gönül vermiş siz değerli sporculara bundan sonraki süreçlerde bu seriyi  geleneksel hale getirerek bir sonraki granfondo etkinliğimizde bir araya gelmek için sabırsızlanıyoruz.\n\nwww.bisan.com.tr\n\nBizi sosyal medya hesaplarımızdan takip etmeyi unutmayın!\n\nInstagram; https://www.instagram.com/bisanofficial/\nFacebook; https://www.facebook.com/bisanofficial/\nTwitter; https://twitter.com/BisanOfficialTr\nLinkedin; https://www.linkedin.com/company/bisan",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=xPIYVhb3MSI",
-          "curated": false
-        },
-        {
-          "video_id": "dA-OBMqhhaE",
-          "title": "Turkcell Granfondo İzmir Röpörtajları",
-          "channel": "Bisan Official",
-          "view_count": 287,
-          "upload_date": "20210913",
-          "duration_string": "7:00",
-          "description": "Yaptığımız röportajlarda gördüğümüz üzere Bisan ve yeni modellerine olan ilginiz bizleri çok memnun etti. Bisan hakkındaki düşüncelerinizi öğrenmek ve sizlere sorduğumuz soruların cevaplarını dinlemekten oldukça keyif aldık. Çeşitli sorulardan oluşan röportajımıza katılan misafirlerimize ilgilerinden dolayı ayrıca çok teşekkür ederiz.\n\nwww.bisan.com.tr\n\nBizi sosyal medya hesaplarımızdan takip etmeyi unutmayın!\n\nInstagram; https://www.instagram.com/bisanofficial/\nFacebook; https://www.facebook.com/bisanofficial/\nTwitter; https://twitter.com/BisanOfficialTr\nLinkedin; https://www.linkedin.com/company/bisan",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=dA-OBMqhhaE",
-          "curated": false
-        },
-        {
-          "video_id": "fr-65m9NbPc",
-          "title": "Turkcell Granfondo Serisi | İzmir Yarışı",
-          "channel": "Turkcell Granfondo Serisi",
-          "view_count": 222,
-          "upload_date": "20210908",
-          "duration_string": "1:00",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=fr-65m9NbPc",
-          "curated": false
-        },
-        {
-          "video_id": "te-LUBwduH0",
-          "title": "Turkcell Gran Fondo İzmir Parkur Testi",
-          "channel": "Asla Durma",
-          "view_count": 7643,
-          "upload_date": "20210811",
-          "duration_string": "26:25",
-          "description": "5 Eylül 2021 tarihinde İzmir'de ilk defa yapılacak, Turkcell Gran Fondo İzmir'in Uzun parkurunu test ettim. %90 kısa parkuruda barındıran bu videoda, yarışın can alıcı yerlerini belirledim. Bu noktalara dikkat ederseniz daha keyifle bitirebilirsiniz. \n\nYarışın web Sitesi: https://turkcellgranfondoserisi.com/\n\n00:00 Başlangıç\n06:18 1. Su istasyonu ve Kısa parkur ayrım noktası\n10:10 İlk yokuş başlangıcı\n17:00 İkinci Yokuş\n20:07 Kısa Parkur Devamı\n21:10 Son sert, kısa yokuş\n\n\n\nYarış Takvimi: http://bit.ly/2VjL1Cl\nAsla Durma Nerede: http://bit.ly/2Vls7vb\n \n\n---------------------------------------------------------------------------------------\n✩ ABONE OLMAYI UNUTMA: https://www.youtube.com/channel/UC_aTJV1Wrjd78tntlVIrhKQ?sub_confirmation=1\n\nLİNKLER\n\n✩ STRAVA : https://www.strava.com/athletes/6998123",
-          "tags": [
-            "asla durma",
-            "asladurma",
-            "vlog",
-            "turkcell",
-            "turkcell gran fondo",
-            "gran fondo",
-            "granfondo",
-            "gran fondo izmir",
-            "izmir",
-            "izmir bisiklet yarışı",
-            "bisiklet yarışı",
-            "bisiklet"
-          ],
-          "url": "https://www.youtube.com/watch?v=te-LUBwduH0",
-          "curated": true,
-          "curation_reason": "Comprehensive 26-minute course preview with specific terrain details and climbing analysis, highest view count among available videos.",
-          "display_order": 1,
-          "thumbnail_url": "https://i.ytimg.com/vi/te-LUBwduH0/maxresdefault.jpg",
-          "thumbnail_score": 84.0
-        },
-        {
-          "video_id": "eMh0ABUvvmI",
-          "title": "Turkcell Granfondo Serisi | İzmir Yarışı Tanıtımı",
-          "channel": "Turkcell Granfondo Serisi",
-          "view_count": 134,
-          "upload_date": "20210908",
-          "duration_string": "1:00",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=eMh0ABUvvmI",
-          "curated": false
-        }
-      ],
-      "quotes": []
-    },
+    "citations": [
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — Official 2026 Gran Fondo Calendar (Izmir slot replaced by Canakkale)"
+      },
+      {
+        "url": "https://bisiklet.org.tr/turkiye-bisiklet-federasyonu-2025-gran-fondo-sezonu-sona-erdi/",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2025 Season Recap (confirms 4,835 was the 12-race national season total, not Izmir's field)"
+      },
+      {
+        "url": "https://granfondo.com.tr/gran-fondo/gran-fondo-izmir-2025-kayitlari-basladi/5298/",
+        "category": "media",
+        "label": "granfondo.com.tr (cycling media, not the event's own site) — 2025 Registration Details, Sigacik/Seferihisar Course, Distances, Fees"
+      },
+      {
+        "url": "https://medya.turkcell.com.tr/bulletins/turkcell-granfondo-izmirde-pedallar-surdurulebilir-bir-dunya-icin-dondu/",
+        "category": "reference",
+        "label": "Turkcell — 2022 Post-Race Release (last verified as Turkcell-branded era, ~2,000 riders)"
+      }
+    ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://cyclingtr.com/haberler/turkcell-gran-fondo-izmir-2025-bisiklet-yarisi-ege-sahillerinde-111-km-pedal-heyecani/",
-      "notes": "Evidence of a 2025 edition but no 2026 Izmir event announced; 2026 Turkish gran fondo calendar omits Izmir.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+      "notes": "IDENTITY AND STATUS CORRECTION (2026-07-24, sol-reviewed): 2023 is the last documented Turkcell-titled edition; the race ran as unbranded 'Gran Fondo Izmir' in 2024-25 under organizer 78 Event. A contemporaneous report attributes Bisan to a course-category sponsorship, not the organizer role, though that specific sponsor-role claim was not independently re-verified against a primary source. The event relocated from central Izmir to Sigacik/Seferihisar in 2024, reportedly after a route-permission problem. The Turkish Cycling Federation's original December 2025 calendar listed an Izmir-area slot for October 4, 2026, but its official March 11, 2026 revision replaced that slot with Canakkale Gran Fondo — no confirmed 2026 Izmir/Sigacik edition exists as of this verification (a separate VeloTurk Gran Fondo Cesme, also in Izmir province, remains on the Oct 25, 2026 calendar slot). Status held at 'unknown' rather than 'defunct' because no explicit cancellation was announced, only a calendar-slot replacement; the Federation's broader Gran Fondo program continues. Do not use the old '4,835 riders' figure for this race specifically — that was the Federation's entire 12-race 2025 national season total, not this race's field (500 in 2025)."
     }
   }
 }

@@ -5,24 +5,27 @@
     "display_name": "Gran Fondo Chile",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 975,
-      "elevation_ft": 3200.0,
-      "location": "Valdivia, Los Rios, Chile",
-      "location_badge": "Valdivia, Chile",
+      "distance_km": 114.0,
+      "distance_mi": 70.8,
+      "elevation_m": 1554,
+      "elevation_ft": 5099.0,
+      "location": "Lago Ranco, Los Rios, Chile",
+      "location_badge": "Lago Ranco, Chile",
       "country": "Chile",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
+      "date": "2026: October 4",
+      "date_specific": "2026: October 4 (inaugural edition)",
       "field_size": null,
       "start_format": null,
-      "registration": "https://chile.letapeseries.com",
+      "registration": null,
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Gran Fondo: 114km, 1,554m — the qualifying distance for men 19-59/women 19-49 per the UCI Gran Fondo World Series page",
+        "Medio Fondo: 80km, 723m per the UCI Gran Fondo World Series page — the qualifying distance for men 60+/women 50+ (the 114km Gran Fondo qualifies men 19-59/women 19-49). A July 2026 Chilean Cycling Federation announcement instead cites roughly 120km/2,000m+ and 80km/900m+ for the same two courses, saying official routes would be finalized later — treat exact figures as unsettled until a final route file appears"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -36,7 +39,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 3,
       "descent_technicality": 1,
       "climate_risk": 4,
@@ -44,9 +47,9 @@
       "scenic_experience": 4,
       "community_culture": 3,
       "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "field_depth": 3,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 60."
+      "scoring_notes": "GOLD wave 2026-07-24 (batch C): identity-corrected — this is the real UCI Gran Fondo World Series 'Granfondo Chile' stop (confirmed via ucigranfondoworldseries.com and uci.org competition record 2026/CPT/78757), not the L'Etape Chile event our old registration URL pointed to. Four dimension changes from research: distance 3->2 (real course is 114km, which falls in the 80-120km/2 bracket per config/dimensions.json, not the 120-160km/3 bracket the old 99.8km figure implied); prestige 2->3 (confirmed genuine UCI Gran Fondo World Series affiliation and international organizer — a real step up from an unbranded local ride, but capped below 4 because this is an unproven inaugural edition); field_depth 3->2 (zero editions run — no field-size or depth data exists yet for this first-ever edition, so a mid-tier assumption is unsupported); logistics 3->4 (actual host is Lago Ranco, a small lake town roughly two hours from Valdivia's airport, not central Valdivia as previously assumed). Net effect on overall_score: zero (+1/-1/-1/+1 cancel out) — still 60/T2. Original score before this wave: 64 (migrated from gravel-race-automation, pre-recalculation)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,149 +73,82 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": [
-        "Rainforest Burn: Mid-course 8-mile climb at mile 35 through dripping temperate canopy; 1500 feet gain saps legs before lake views.",
-        "Volcanic Kicker: Final 4 miles to finish with steep pitches amid Osorno-like peaks; crowds in Valdivia spur the pain.",
-        "River Headwind Slog: Exposed 15-mile valley section post-start; persistent damp breeze tests resolve early."
-      ]
+      "character": "The UCI page describes the Gran Fondo distance as a 114km loop starting and finishing in Lago Ranco, a small lake town in Chile's Los Rios lake district roughly two hours southeast of Valdivia, circling the lake itself through Andean-foothill roads. The organizer (Riders Sports, the team behind Granfondo Brazil and Granfondo Colombia) has not published a detailed segment-by-segment route map or named-climb list as of this writing — this is an inaugural event, so there's no prior-year course report to draw on either. Treat any specific climb names or gradient claims for this race as unverified until a route file or post-event report exists.",
+      "signature_challenge": "1,554m of climbing packed into the 114km Gran Fondo loop around Lago Ranco (the qualifying distance for men 19-59/women 19-49; the 80km Medio Fondo is the separate qualifying distance for men 60+/women 50+) — a genuinely hilly circumnavigation of the lake, even without published named climbs. Note: a July 2026 Chilean Cycling Federation announcement cites larger figures (~120km/2,000m+ and ~80km/900m+) for the same two courses and says official routes would be finalized later.",
+      "suffering_zones": []
     },
     "logistics": {
-      "airport": "",
+      "airport": "Nearest airport is Valdivia (ZAL); Lago Ranco itself is roughly a 2-hour drive southeast, per the UCI event page.",
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://chile.letapeseries.com"
+      "official_site": "https://www.ucigranfondochile.com/"
     },
     "history": {
-      "founded": 2024,
-      "origin_story": "",
+      "founded": 2026,
+      "origin_story": "\"Gran Fondo Chile is a new event on the UCI calendar and will take place for the first time in October 2026\" (UCI Gran Fondo World Series). Organized by Riders Sports, the group behind Granfondo Brazil and Granfondo Colombia, extending the UCI Gran Fondo World Series' Latin American footprint into Chile's lake district.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real UCI Qualifier, Zero Track Record",
+      "summary": "Gran Fondo Chile is a genuine UCI Gran Fondo World Series stop — confirmed directly on ucigranfondoworldseries.com and the official UCI competition record (class UGF, 2026/CPT/78757) — not the L'Etape Chile event our own data previously pointed its registration link to. It's run by Riders Sports, the organizer behind Granfondo Brazil and Granfondo Colombia, extending that Latin American UCI footprint into Chile's lake district for the first time on October 4, 2026. That's the good news: real UCI affiliation, an experienced multi-country organizer, and a scenic 114km loop around Lago Ranco with 1,554m of climbing. The bad news is this is a first edition with no track record whatsoever — no prior field size, no course reputation, no confirmed registration page as of this writing — and 'Valdivia' undersells the real logistics: Lago Ranco is a small lake town roughly two hours from the nearest airport.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series affiliation — a real qualifying race for the UCI Gran Fondo World Championship, independently confirmed via uci.org's own competition record, not just organizer branding",
+        "Backed by an established international operator (Riders Sports) with a working template from Granfondo Brazil and Granfondo Colombia",
+        "Scenic Chilean Lake District course circling Lago Ranco in the Andean foothills — a genuinely different setting from the coastal/rainforest L'Etape Chile route an hour or two away"
+      ],
+      "weaknesses": [
+        "Zero track record — this is the event's first-ever edition, so field size, organizational execution, and course quality are all unproven",
+        "Registration details could not be independently confirmed as of verification — a public launch event was held in Lago Ranco on July 8, 2026 with Chilean Cycling Federation and municipal officials present, but no working registration flow was located",
+        "Lago Ranco is roughly two hours from Valdivia's airport, real logistics friction the 'Valdivia' location label understates",
+        "No published segment-by-segment route map or named climbs — buyers are trusting the UCI class designation more than any concrete course detail",
+        "Easy to confuse with the separate, unrelated L'Etape Chile event roughly an hour away in Valdivia/Niebla — different date, different organizer, different UCI status, and our own data conflated the two until this correction"
+      ],
+      "bottom_line": "If UCI Gran Fondo World Series qualification matters to you and you're comfortable being an inaugural-edition guinea pig, this is legitimate — verify registration is actually live before booking travel to Lago Ranco. If you want a proven event in the same corner of Chile, look at L'Etape Chile instead, which at least has a confirmed official site and route, even without UCI status."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Scenic UCI qualifier blending Chilean rainforests with solid road suffering.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real UCI Gran Fondo World Series stop debuting in Chile's lake district — genuine pedigree, zero history.",
+      "should_you_race": "Yes if you specifically want the UCI Gran Fondo World Series qualifier and don't mind first-edition uncertainty — confirm registration is live before committing. Skip it if you want a proven event with a track record; this has none yet.",
+      "alternatives": "L'Etape Chile (letape-chile) — a different, unrelated event roughly an hour away in Valdivia/Niebla, Nov 1 2026, with a confirmed official site and published route, but no UCI affiliation. For other UCI Gran Fondo World Series stops with more history, see the series' longer-running Granfondo Brazil or Granfondo Colombia editions."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Gran Fondo Chile gran fondo cycling Valdivia",
-      "videos": [
-        {
-          "video_id": "mdzec6dL31A",
-          "title": "COPA CHILE RUTA VALDIVIA 2023-2024-2025",
-          "channel": "Club Ciclismo Rio Cruces",
-          "view_count": 101,
-          "upload_date": "20231007",
-          "duration_string": "58",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=mdzec6dL31A",
-          "transcript": "the this I'm about to win it again I let\nthe energy in then I can maneuver you\nshould be witnessing this I got to win\nit again I'm on an energy kick I got to\nmaneuver I got a\nmaneuver\nI got to\nmaneuver are we giving it all or nothing\nsee the people are ready for something\nget the vision I'm doing it justice I\ngot to",
-          "curated": false
-        },
-        {
-          "video_id": "pWnLIsxiKy8",
-          "title": "Copa Chile XCO Valdivia by Specialized 2022",
-          "channel": "Club Ciclismo Rio Cruces",
-          "view_count": 724,
-          "upload_date": "20220527",
-          "duration_string": "4:52",
-          "description": "Proyecto financiado con fondos del Gobierno Regional de Los Rios",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=pWnLIsxiKy8",
-          "curated": false
-        },
-        {
-          "video_id": "qvGm3j0dPV8",
-          "title": "CARRERA ANIVERSARIO CICLISMO RIO CRUCES",
-          "channel": "Club Ciclismo Rio Cruces",
-          "view_count": 164,
-          "upload_date": "20180702",
-          "duration_string": "1:46",
-          "description": "Todos los créditos a Nimbus Drone Valdivia.-\n\nPequeño resumen de nuestra primera gran carrera aniversario celebrada el pasado 6 de mayo de 2018.\n\nGracias nuestros auspiciadores por hacer realidad nuestra celebración!",
-          "tags": [
-            "Club de Ciclismo Río Cruces",
-            "Río Cruces",
-            "Valdivia",
-            "Ciclismo",
-            "Ciclismo de carretera",
-            "Ciclismo de ruta",
-            "Peter Sagan",
-            "Aniversario",
-            "Nimbus Drone Valdivia",
-            "Los Ríos",
-            "Región de Los Rios"
-          ],
-          "url": "https://www.youtube.com/watch?v=qvGm3j0dPV8",
-          "curated": false
-        },
-        {
-          "video_id": "4IoLwMhlHeQ",
-          "title": "Dos antioqueños en travesía de los Andes en Chile con su bici de montaña",
-          "channel": "Hora 13 Noticias",
-          "view_count": 94,
-          "upload_date": "20170126",
-          "duration_string": "1:39",
-          "description": "Dos antioqueños se le midieron a la dura travesía de 5 días en los andes chilenos con su bici de ciclomontañismo. Esta es una aventura para los amantes del ciclomontañismo de gran fondo. en chile están 33 representantes colombianos, donde se destacan los antioqueños Sebastían y Juan Pablo Mejía.",
-          "tags": [
-            "antioqueños Sebastían y Juan Pablo Mejía",
-            "h13n",
-            "hora 13 noticias",
-            "ciclomontañismo"
-          ],
-          "url": "https://www.youtube.com/watch?v=4IoLwMhlHeQ",
-          "curated": false
-        },
-        {
-          "video_id": "D9Aclljv7j4",
-          "title": "Ultracycling | Gravel | Brevet: Desafío 200K organizado por Gravel Chile",
-          "channel": "FZ",
-          "view_count": 397,
-          "upload_date": "20220214",
-          "duration_string": "4:05",
-          "description": "Registró de la Brevet 200km en terreno de Gravel organizada por la comunidad de @gravelchile, un desafío de esos que te quedas sin aliento pero que pones todo el corazón para poder terminarlo, ya que no solo es pedalear también hay un esfuerzo enorme de la comunidad y todas las personas que pusieron un granito de #tierra para que está actividad se hiciera posible 🙌.\n\nUn desafío marcado por la dificultad de la ruta, ya que su desnivel acumulado estaba bordeando los 4000m, pero más terrible aun era que gran parte del recorrido fue por caminos no asfaltados (tierra, arena, barro y cruzar un río). Este desafío era para tomárselo con mesura, sin apurarse y gastar energía de más. Había que ir escuchando como el cuerpo reaccionaba y que él marcara la pauta con que intensidad ir pedaleando, de esta forma logre disfrutar este brígido desafío que marco un antes y un después en las Brevet realizadas en Chile, ya que es la primera que se realiza en caminos de Gravel.\n–\nGracias a la @_.gabiem._ y el @pedaleanoma por aportar con un par de videos ☺️\n–\n30 de Octubre 2021, Pichilemu.\n–\nAgradecimientos a:\n@pack2ride.cc\n@twonav_official\n@daigorobici\n@panaracerchile\n@quenotefalteaire\n·\n#bikelife #gravel #bikepacking #gravelbike #ultracycling #ultraciclismo",
-          "tags": [
-            "ciclismo",
-            "ultraciclismo",
-            "gravel",
-            "brevet",
-            "chile",
-            "cycling",
-            "gravelbikes",
-            "ultracycling"
-          ],
-          "url": "https://www.youtube.com/watch?v=D9Aclljv7j4",
-          "curated": false
-        }
-      ],
-      "quotes": [],
-      "rider_intel": {
-        "extracted_at": "2026-03-06",
-        "key_challenges": [],
-        "terrain_notes": [],
-        "gear_mentions": [],
-        "race_day_tips": [],
-        "additional_quotes": [],
-        "search_text": "Limited information available about Gran Fondo Chile from rider accounts. The available transcript contains fragmented commentary focused on race energy and maneuvering during competition, but lacks specific details about course conditions, terrain features, or practical racing advice. Riders mention the competitive atmosphere and the need for tactical positioning during the event. More comprehensive rider reports would be needed to provide detailed insights about this 62-mile gravel race in Valdivia, Los Rios, Chile with 3200 feet of elevation gain."
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-chile/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Official Gran Fondo Chile Event Page (Lago Ranco, Oct 4 2026, distances/elevation)"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/78757",
+        "category": "official",
+        "label": "UCI Official Competition Record — GRANFONDO CHILE, Lago Ranco, Class UGF"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2026 Calendar (confirms Lago Ranco, Valdivia, Los Rios listing)"
+      },
+      {
+        "url": "https://www.ucigranfondobrasil.com.br/",
+        "category": "reference",
+        "label": "Granfondo Brasil — Official Site of the Riders Sports Organizer Group Running Gran Fondo Chile"
+      },
+      {
+        "url": "https://fdnciclismochile.cl/blogs/noticias/chile-sera-sede-por-primera-vez-de-una-fecha-de-la-uci-gravel-world-series-y-uci-gran-fondo-world-series",
+        "category": "official",
+        "label": "Chilean Cycling Federation — July 8 2026 Official Launch Announcement (Lago Ranco, Oct 3-4 2026, differing course figures)"
       }
-    },
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/fr/uci-gran-fondo-chile/",
-      "notes": "First edition announced for 4 October 2026 in Lago Ranco, Valdivia, with published regulations and remaining on the UCI Gran Fondo World Series calendar.; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-chile/",
+      "notes": "IDENTITY CORRECTION (2026-07-24): this profile's registration URL previously pointed to chile.letapeseries.com (L'Etape Chile), a separate, unrelated event roughly an hour away in Valdivia/Niebla with a different date (Nov 1 2026), different organizer (World Centric Group), and no UCI affiliation. Verified via ucigranfondoworldseries.com, the official UCI competition record (2026/CPT/78757, class UGF), and a July 8, 2026 Chilean Cycling Federation launch announcement (fdnciclismochile.cl) that Gran Fondo Chile is a real, distinct UCI Gran Fondo World Series stop: inaugural edition October 4, 2026, in Lago Ranco (not Valdivia city itself — roughly a 2-hour drive southeast), organized by Riders Sports (also behind Granfondo Brazil/Colombia). The same weekend (Oct 3) also hosts a separate UCI Gravel World Series round at the same venue — a different discipline, not part of this road gran fondo profile. Both gran-fondo-chile-uci and letape-chile are genuine, separate events — neither is a duplicate of the other. Registration flow could not be independently confirmed as of this verification; do not present chile.letapeseries.com as this event's registration. Course figures differ between sources: the UCI Gran Fondo World Series page gives 114km/1,554m (Gran Fondo) and 80km/723m (Medio Fondo), while the Chilean federation's own July 2026 announcement gives larger, rounder figures (~120km/2,000m+ and ~80km/900m+) and says official routes would be finalized later — treat exact figures as unsettled."
+    },
+    "catalog_flags": {
+      "status_note": "Confirmed NOT a duplicate of letape-chile — two genuinely distinct 2026 events in the same general Los Rios region (see eligibility.notes for the full identity correction). This profile's location/distance/registration were fixed to match the real UCI Gran Fondo World Series stop in Lago Ranco; the old 99.8km/Valdivia/letapeseries.com data was a conflation error.",
+      "ruled": "2026-07-24 editorial wave 8 batch C"
     }
   }
 }

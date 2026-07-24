@@ -5,35 +5,54 @@
     "display_name": "Eroica California",
     "tagline": "",
     "vitals": {
-      "distance_km": 177.0,
-      "distance_mi": 110.0,
-      "elevation_m": 2286,
-      "elevation_ft": 7500.0,
+      "distance_km": 172.7,
+      "distance_mi": 107.3,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Cambria, Central Coast, California, USA",
       "location_badge": "Cambria, USA",
       "country": "USA",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
-      "field_size": "2,000 participant limit",
+      "date": "Defunct — last held September 15-17, 2023",
+      "date_specific": "Defunct — last held September 15-17, 2023 (7th and final edition)",
+      "field_size": "No verified field cap; final editions drew roughly 1,126-1,500 total attendees across the co-located NOVA and Classic rides (county/organizer figures, not an official limit)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "5+ (Santa Rita Road, Kiler Canyon, Halter Ranch Vineyards, Cypress Mountain Drive, Cayucos)",
-      "cutoff_time": "Unknown",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Heroic (long)",
+          "distance_km": 172.7,
+          "note": "Archived final-era route (107.3mi); roughly 20-30% unpaved (estimate, no official surface breakdown published)"
+        },
+        {
+          "name": "Santa Lucia (short)",
+          "note": "56 paved miles plus approximately 16 gravel miles — a verified breakdown of about 78% paved / 22% gravel"
+        }
+      ]
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Temperate — California Central Coast",
+      "description": "Cambria mornings can bring dense coastal fog, as documented in contemporary rider footage of the Old Creek Road climb.",
+      "challenges": [
+        "Early (5am) starts in coastal fog with very limited visibility on the first major climb"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Mixed pavement and dirt — Central Coast coastal/inland",
+      "surface": "Mixed: paved Highway 1 coastal sections plus unpaved climbs (Santa Rita Creek Road, Kiler Canyon); roughly 20-30% unpaved on the archived Heroic route (estimate), with a verified 78% paved/22% gravel split on the shorter Santa Lucia route",
+      "technical_rating": 3,
+      "features": [
+        "Highway 1 coastal riding, Cambria to Cayucos",
+        "Old Creek Road (paved inland climb)",
+        "Santa Rita Creek Road (gravel climb)",
+        "Kiler Canyon (steep dirt/gravel, frequently walked)",
+        "Cypress Mountain (mixed gravel/paved climb and descent via Santa Rosa Road — own retained rider footage shows a gravel descent start transitioning to pavement lower down)",
+        "Halter Ranch, Cass Winery, and Olea Farm stops"
+      ]
     },
     "fondo_rating": {
       "distance": 4,
@@ -56,51 +75,135 @@
       "tier_label": "TIER 2",
       "discipline": "sportive",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61. EDITORIAL WAVE 8 (2026-07-24): no dimension changes made — this event is now confirmed defunct (last held 2023), so the score is retained as a historical rating of the event as it existed rather than rescored, consistent with how birkebeinerrittet-road.json handles a defunct event. See catalog_flags for a taxonomy caveat matching eroica-dolomiti.json's precedent: fondo_rating.discipline is 'sportive' but the actual event had substantial unpaved content (~20-30% estimated on the Heroic route, verified 22% gravel on the Santa Lucia route) and vintage-bike equipment rules — it doesn't cleanly fit a paved-sportive taxonomy, and road_surface=1/descent_technicality=4 should be read with that in mind."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 4,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        {
+          "name": "Old Creek Road",
+          "note": "Paved inland climb, on some Cambria route versions; contemporary rider footage documents it in dense coastal fog"
+        },
+        {
+          "name": "Santa Rita Creek Road",
+          "length_mi": 4.5,
+          "gradient_pct": 4.5,
+          "note": "Gravel climb, roughly 4-5 miles at an estimated ~4.5% average with pitches around 9%"
+        },
+        {
+          "name": "Kiler Canyon",
+          "note": "Narrow, steep dirt/gravel climb, frequently walked by riders"
+        },
+        {
+          "name": "Cypress Mountain",
+          "length_mi": 4.2,
+          "elevation_ft": 1083,
+          "note": "Mixed gravel/paved climb with sections exceeding 10%; the Santa Rosa Road descent starts on gravel before transitioning to pavement (per contemporary rider footage), not a purely paved climb as this profile previously stated"
+        }
+      ],
+      "profile_type": "Mixed paved/unpaved Central Coast climbing — no single summit, several distinct climbs combining steep dirt (Kiler Canyon, Santa Rita Creek Road, and the Cypress Mountain/Santa Rosa Road gravel descent) with paved ramps (Old Creek Road)",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Eroica California (also called L'Eroica California) was a vintage-bicycle heritage ride based in Cambria on California's Central Coast — mixed paved and unpaved terrain, not the purely paved sportive this profile previously described. The final-era Heroic route ran approximately 107.3 miles/172.7km with roughly 20-30% unpaved sections (an estimate; no official surface breakdown was published for that specific route). It combined paved Highway 1 coastal riding between Cambria and Cayucos with genuine dirt climbing on Santa Rita Creek Road and Kiler Canyon, plus the paved Old Creek Road climb and the mixed gravel/paved Cypress Mountain climb and Santa Rosa Road descent. A shorter Santa Lucia route had a verified breakdown of 56 paved miles plus roughly 16 gravel miles (about 78% paved/22% gravel). Wine-country stops at Halter Ranch, Cass Winery, and Olea Farm were regular features. Riders on the vintage Classic used pre-1987 (or period-style) steel bicycles with downtube shifters and toe clips, per the general Eroica standard — though California's on-course enforcement of those rules was reportedly looser than the written standard, per participant testimony. A separate, co-located modern-bike ride, NOVA Eroica California (launched 2017), ran on Saturdays with road/gravel/cyclocross bikes and timed sectors; it never replaced the vintage Classic — both ran the same weekend through 2023. The event was last held September 15-17, 2023, and has not returned since. This profile now describes a discontinued event, not a bookable one.",
+      "signature_challenge": "Cypress Mountain — roughly 4.2 miles climbing to 1,083 feet with sections over 10%, followed by the long Santa Rosa Road descent that starts on gravel before transitioning to pavement — was the course's defining mixed-surface test, alongside Santa Rita Creek Road and Kiler Canyon.",
+      "suffering_zones": [
+        "Santa Rita Creek Road — roughly 4-5 miles of gravel climbing averaging an estimated 4.5% with pitches around 9%",
+        "Kiler Canyon — narrow, steep dirt/gravel that riders frequently walked",
+        "Cypress Mountain — approximately 4.2 miles and 1,083 feet with sections exceeding 10%, into the long Santa Rosa Road descent that begins on gravel before transitioning to pavement"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Cambria and Paso Robles offer hotels, vacation rentals, and campgrounds. Event is part of a weekend festival format",
+      "lodging_strategy": "Cambria and Paso Robles offered hotels, vacation rentals, and campgrounds during the event's run; it was part of a multi-day festival weekend alongside the co-located, modern-bike NOVA Eroica California ride.",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2015,
+      "origin_story": "Founded in 2015 as the California edition of the L'Eroica vintage-cycling family, with an inaugural ride on April 12, 2015 in Paso Robles (Eroica's own history page currently states 2016, but contemporary 2015 evidence — including Bianchi's 2015 event calendar — is more authoritative). Later editions were based in Cambria. Operated by Eroica USA Ride & Festival (recorded as an LLC in county contracts, an Inc. in Eroica's own privacy policy — the corporate suffix is inconsistent across official records). Wesley Hatakeyama was the inaugural organizer; Amedeo Polito headed the event in its final years.",
+      "notable_moments": [
+        "2017: NOVA Eroica California launched as a co-located, modern-bike (road/gravel/cyclocross) gravel-fondo companion to the vintage Classic — a genuine Eroica-family spinoff, not a rebrand of the Classic.",
+        "2020: postponed from its original April date due to COVID-19; ultimately cancelled for both 2020 and 2021.",
+        "2022: returned April 30-May 1; a federal BLM report confirms hundreds of vintage cyclists used the Piedras Blancas Light Station on course.",
+        "2022: Cambria Tourism Board minutes cite operational strain — the event coordinator left before the event, the event was reportedly not profitable, and Italy-based Eroica management created time-zone coordination friction; these are credible contributing circumstances, not a formally confirmed cause of the eventual shutdown.",
+        "2023: final verified edition, held September 15-17 (7th edition) — NOVA on Saturday, the vintage Classic on Sunday.",
+        "2024: the planned edition was cancelled; surviving organizer text says only the event 'will not be held this year,' with no reason given.",
+        "2025-2026: no Eroica California edition has run; the event does not appear on Eroica's official global calendar. An independent, unaffiliated ride — Central Coast Classico — launched in the same region in April 2026 as a de facto local successor, though it is not branded or operated as an Eroica event."
+      ],
+      "reputation": "A real but ultimately unsustainable regional L'Eroica outpost — genuine vintage-cycling heritage and real Central Coast terrain, undercut by COVID interruption and reported profitability/coordination strain that preceded its quiet 2024 cancellation and non-return."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Defunct",
+      "summary": "There is no current Eroica California to rate. The event's last verified edition ran September 15-17, 2023 — its 7th year — after COVID cancelled the 2020 and 2021 editions and the event returned for 2022 and 2023. The planned 2024 edition was cancelled outright with no reason given, and no edition has run since; California does not appear on Eroica's official global calendar for 2025 or 2026. Cambria Tourism Board minutes from 2022 point to real operational strain behind the scenes — an event coordinator who left before the event, reported unprofitability, and time-zone coordination friction with Italy-based Eroica management — credible contributing circumstances, though no source formally confirms them as the reason for the final shutdown. When it ran, it was a genuine vintage-bicycle heritage ride with real Central Coast dirt (Santa Rita Creek Road, Kiler Canyon) alongside paved Highway 1 and inland climbs, plus a co-located modern-bike NOVA Eroica ride — a real event with real terrain, not a marketing shell. An independent, unaffiliated ride called Central Coast Classico launched in the same region in April 2026, but it is not an Eroica-branded event and should not be treated as this event's continuation.",
+      "strengths": [
+        "When it ran, genuine vintage-cycling heritage-ride terrain — real dirt on Santa Rita Creek Road and Kiler Canyon, not just a paved sportive with a costume theme",
+        "Distinctive wine-country stops at Halter Ranch and Cass Winery integrated into the route",
+        "A real multi-year track record (2015-2023, with a 2020-2021 COVID gap) rather than a one-off event",
+        "Co-located NOVA Eroica California gave modern-bike riders a legitimate parallel option on the same weekend"
+      ],
+      "weaknesses": [
+        "This event does not currently exist — it should not be presented to riders as a bookable ride",
+        "Even during its run, on-course rule enforcement of vintage-bike standards was reportedly looser than the written Eroica standard, per participant testimony",
+        "No reliable official field-size or elevation figure exists for the final-era course — the prior '2,000-rider limit' and '7,500ft' figures on this profile were not well-sourced and may reflect cross-route contamination from other Eroica or NOVA route descriptions",
+        "Real operational strain (unprofitability, coordinator turnover, cross-timezone management friction with Italy) preceded the quiet 2024 cancellation — this was not simply a COVID casualty"
+      ],
+      "bottom_line": "Retired as of 2023. If you want a Central Coast vintage-bike or gravel-heritage ride today, look at the independent Central Coast Classico — a genuine but unaffiliated local successor, not an Eroica-branded continuation."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "A challenging Central Coast gravel adventure with stunning ocean and wine country views, though event continuity and logistics require verification",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "California's L'Eroica outpost — genuine Central Coast dirt and wine-country stops, retired after 2023.",
+      "should_you_race": "No — this event does not currently exist. If you want the experience it offered, look at the independent Central Coast Classico, which picked up similar Cambria-area terrain in 2026 without the Eroica branding.",
+      "alternatives": "Central Coast Classico (unaffiliated local successor, Cambria area) for similar terrain; Eroica Dolomiti or the original L'Eroica (Tuscany) for a currently-active vintage-bike heritage ride within the actual Eroica family."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://cyclecentralcoast.com/event/eroica-california-2023/",
+        "category": "media",
+        "label": "Cycle Central Coast — 2023 Final Edition Listing"
+      },
+      {
+        "url": "https://www.bikeforums.net/classic-vintage/1288120-eroica-california-sept-22-2024-no-complaining-thread-4.html",
+        "category": "community",
+        "label": "Archived Rider Discussion — 2024 Cancellation Notice"
+      },
+      {
+        "url": "https://www.eroica.cc/en/events/?categoria=Classic",
+        "category": "official",
+        "label": "Official Eroica Global Calendar — No California Listing (2025-2026)"
+      },
+      {
+        "url": "https://highway1roadtrip.com/events/central-coast-classico/",
+        "category": "media",
+        "label": "Highway 1 Road Trip — Central Coast Classico as Local Successor"
+      },
+      {
+        "url": "https://www.blm.gov/sites/default/files/docs/2023-08/2022_Piedras_Blancas_Managers%20Report.pdf",
+        "category": "official",
+        "label": "BLM 2022 Manager's Report — Course Confirmation (Piedras Blancas)"
+      },
+      {
+        "url": "https://cyclecentralcoast.com/routes/eroica-heroic-route/",
+        "category": "media",
+        "label": "Cycle Central Coast — Archived Heroic Route (Final-Era Distance/Stops)"
+      },
+      {
+        "url": "https://cyclecentralcoast.com/routes/eroica-santa-lucia-route/",
+        "category": "media",
+        "label": "Cycle Central Coast — Santa Lucia Route Surface Breakdown"
+      },
+      {
+        "url": "https://roadbikeaction.com/bianchi-joins-with-eroica-with-a-new-bike/",
+        "category": "media",
+        "label": "Road Bike Action — 2015 Founding Confirmation"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Eroica California gran fondo cycling Cambria",
@@ -132,7 +235,6 @@
             "Ronnie romance jr"
           ],
           "url": "https://www.youtube.com/watch?v=GgIHKRQmpQs",
-          "transcript": "[Music]\nwelcome to Cambria we are here to do the\nLa Jolla California\n[Applause]\nI will be writing this old-school 1960s\nBianchi this is a 700cc bike with 32\nmillimeter wide tires so it's not your\nultimate all road bike but it is good\nenough for what we'll be doing the\ngearing I didn't change the gearing from\nlast year it's still the the pretty tall\ngearing for a bike like for a bike that\nyou're going to be using to climb some\nsteep gravel roads\ngot a nice little breakfast spot in this\nbowls do you like it oh good this market\ngood choice miss clueless Wow Cambria is\nnice and what about all those green lush\nmountains when we came in hmm they are\ngreen yeah really great it's crazy\nwe're gonna be riding through all those\nI know I can't wait\ntomorrow's gonna be a super fun ride\nyeah we'll figure out something yeah\nyeah you want to go for a stroll and go\nto the show okay so a lot of people have\nbeen asking how do you pronounce Bello\nViraj Bello Orange\nso today we're gonna get the official\npronunciation because I'm here with Igor\nand Bello Bello or on so here's the\nofficial way to say this company name\nhowever you'd like Nancy you are thank\nyou for having me\nso look who I found cycling out on the\nroads of Central Coast of California\nAustin found Central Coast edition so\nwhat brings you out here today draw a\nwrong turn really\nit happens taking photos at our wake of\nCalifornia and went the wrong way on\nHighway one story my life that happened\n20 what years ago yeah then you're still\ngoing alright so are you gonna be doing\nthe official Arroyo ride tomorrow I will\nbe yes go to the right direction 50-50\nchance\nyeah yeah but uh yeah I'm looking\nforward to getting least a few food\nstops that's honestly why I was going\nout today so get some feet stops food\nyeah the food stops is what you do these\nthings for that's true olive oil french\nfries\nwe got the Jersey oh my gosh\nso Doug from lucky duck bicycles in\nOakland stopped by and picked up the\nJersey that we accidentally left at home\nin our rush to get out of town we hung\nthe Jersey up to dry and we forgot to\ngrab it our brains were fried from the\n17 hour train ride and yet it's here I\ndon't even I don't even know what to say\nI know yeah\nthe barrier is already busy to get\naround hassle to get anywhere this is a\n1974 Jack Taylor tourist yeah it's a\nfileted brazed you know their their\neconomy tour\nsomebody told me what's never owned a\nbike older than you are never broke my\nrule by going this way so Joe what route\nare you taking tomorrow we'll see when\nthe morning comes and I was hoping to do\nthe long longest are the longer and I\nfigured all the names are but depends on\nwhat time I wake up yeah that's an early\nstart yeah they want us to be there like\n5:30\nonce you get over Santa Rita\nlonger routes\nyou're out you guys go in\nOh\noh I did too I did that years ago\nMarnie buongiorno buongiorno what a\nmorning morning morning play nineteen\nyou know what it is\nyou're making me feel bad okay welcome\nto the 2019 Eroica California we're\ndoing the heroic route this morning we\nleft at 5:00\nwell little after 5:00 they broke us up\ninto three groups about five to ten\nminutes apart and sir what did you think\nof that climb yeah\ngood strong trust climb yeah so far so\ngood okay but Kyla Kenyon is coming up\nso you're saving it for that yeah me\nthere's a lot of energy for that okay\nlet's see what happens all right well\ngood luck have a good ride\nall right we're about halfway through\nthis ride we're a mile 55 this year it's\nonly a hundred and seven miles I think\nlast year was a hundred and thirty-five\nthey're both blends are Rhone blends we\nhave a ruse on motor saw and vielen yay\nstainless steel fermented and then we\nhave our G assemblage all right well I'm\nabout halfway through the ride it's a\nmile 55 or something like that and I did\nthe big climb of the day which was old\nCreek Road and it was super foggy I\ncould couldn't see this morning we left\nwhen it was dark out but it was really\nfun going down the coast that early in\nthe morning on highway 1 there was\nreally just maybe one car and old Creek\nRoad was amazing that's a great climb if\nyou're in the area I highly recommend\ndoing just doing that climb alone is\nworth it\nanyway this is Cass winery behind me\nthis is one of the control stops part of\nthis ride goes through their property\nhere this vineyard right this is the guy\nright here this is Doug from lucky duck\ncycles who brought this Jersey all the\nway down so that I could be out here\ntoday wearing it thank you very much my\npleasure all right I'm back on killer\nCanyon Road but this time it's in the\nafternoon because the course was changed\nthis year instead of starting in Paso\nRobles we started in Cambria so now\nwe're heading back to Cambria via killer\nCanyon Road so let's be a little bit\ndifferent riding this in the afternoon\nafter having more miles in my legs so\nwe'll see how it goes but here comes the\nsteep part right up here around this\ncorner\nall right well I guess I better start\nbreathing and put this camera away\nall right well we're coming into the\nfinal stretch here on Santa Rosa Creek\nRoad into the town of Cambria to finish\nup the 2019 Roya cook California what a\nspecial day it was and before I go I\nwant to thank the organizers of the ride\nI want to especially thank all the\nvolunteers and the businesses who helped\nmake this day super special thank you\nall I also want to thank everyone who\ncame up and said hello it's really nice\nto meet some of you hope to be more of\nyou soon so until next time have a great\nrest of your weekend and I'll see you\nsoon",
           "curated": true,
           "curation_reason": "High-quality race documentation with detailed first-person experience of the 107-mile Heroic route starting from Cambria at 5AM.",
           "display_order": 1,
@@ -190,19 +292,6 @@
             "recherche"
           ],
           "url": "https://www.youtube.com/watch?v=HFtYnwRo8nY",
-          "curated": false
-        },
-        {
-          "video_id": "JjuEwcbSdAk",
-          "title": "L'EROICA - BEST RIDE EVER with Grand Tours Project",
-          "channel": "Amy Cycling Adventures",
-          "view_count": 24840,
-          "upload_date": "20231008",
-          "duration_string": "21:47",
-          "description": "Didn't think I'd come away saying that was the best day ride I've ever done; the people, the views, atmosphere, food it was incredible and I 100% recommend it to anyone that can do it. \n\nDiscount code for Grand Tours Project 2024 trips - AMY for 290euros off\nhttps://grandtoursproject.com/cycling-tours/\n\nIf you can spare a second to hit subscribe with your pinky that would be awesome. \n\nWe were gifted this trip by Grand Tours Project in return for social media content - MASSIVELY grateful for this opportunity. \n\n^ Strava - https://www.strava.com/athletes/30216361\n^ Instagram - https://www.instagram.com/amy.cycling.adventures/?igshid=YmMyMTA2M2Y%3D\n^ Chai latte fund - https://www.buymeacoffee.com/amycyclingadven\n\nIf you're riding, enjoy it and stay safe x\n\nThe following brands support me by gifting me products, you will see their products in my videos, I'm beyond grateful & in disbelief that I get these opportunities :\n\nVeloforte - https://veloforte.com/pages/about-us \nIf you fancy trying the Veloforte snacks AMY-20 = 20% discount\n(I do get commission for use of my code) \n\nSunGod - https://www.sungod.co/s/GHe8c9RS/ \nGarmin - https://www.garmin.com/en-GB/\nQuoc Shoes - https://quoc.cc/collections/sho",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=JjuEwcbSdAk",
-          "transcript": "hello and welcome to day five aka the\nday that we do laa got my number on and\nbit like we in\naex got brev card or as I like to call\nit the brevette we're doing the 106 km\nroute so it is 651 in the a.m. and we're\nready to go Kyle let's see your nice\nkit lovely got my hat on to get into\nreal Vibe we've just got to where the\nstart is in aora and we're just looking\nfor something to get some somewhere to\nget some breakfast before we start the\nride because you know you got a fuel UPA\nCafe is 20K in so we're going to go\nthere cuz we've had a little cereal bar\nand we're want to soak in The Vibes\nthere we know there's some good music\nthere don't we so walking the cial bar\ndown I'm going to do the first 20K check\nyou got a vintage bik you're in a wol\njersey we\ngo let's go and we've gone through the\nstart line time to go woohoo let's do\nthis we're on the road and we're\nclimbing the the other half of the tour\nhave decided to do the shorter route\ntoday so they're leaving a little bit\nlater with the other tour guide and it's\njust me Mahal and Kyle today a little\nTrio and we are at the cafe cuz I can\nhear that music Calling My Name AKA\n[Music]\nbreakfast two pastries each We're Here\nfor a Good\nTime pastry is down and we're onto a\nclimb I think there's a bit of gravel at\nthe top of this on so got to get in the\neasy\ngear I think there's a castle at the top\nso that'll be nice a nice reward and\nwe're at the top of the first CL look at\nthis beautiful I think those pastries\nhelp me up I was up there like Speed\nDemon got Sugar\nRush gorgeous look at the castle as well\nbeautiful wow look at this it's gorgeous\nthere's the castle we were at a minute\nago wow look at look at this it's\nbeautiful oh no puncture literally like\nevery 10 m you see someone with a\npuncture not good but so far so good\nlet's not jinx it Yoo oh no more\npumes\ne old fashioned pumps going up it's\nnormally me and car with the punes just\ncame down a gravel descent and I was\nreally nervous before but it's actually\nreally it was fine just went nice and\nslow and took it ready yipp woohoo look\nat this view it's beautiful the St of be\nyane and it's\ngorgeous oh Blom I'm in the wrong area\nhello\nco if you can see them but they're just\nover there top of the morning to you so\nwe're having a slight issues that my\ngears have got stuck in like the small\nring at the front's fine I can I can\nchange the front ring but the back cogs\nI can only in the stiffest one and we're\ngoing a very steep climb I tried to do\nit but I lost momentum so I'm having to\nwalk I'm stuck in the\ngear so we're going to find the next\nmechanic stop to\nuh change my gears around and try and\nsort it out but you know it's an old\ngirl so she's been through it but it's\nbeautiful and it's a lot easier to walk\nin these shoes compared to cleat so it's\nall good the basically it's stuck in\nthat the small one at the back so when I\nput it up it just goes straight back\ndown again\nsee\nsping the cable\nreally very technical gearing on this\none it's okay\nBravo y thank\nyou he we're on the road again let's go\nworking fun this morning and all of a\nsudden i' got\nsee the climbing feels better now I've\ngot all my gears again thank goodness\nfor that it's a cycling Paradise CIA\nwe're going to\nSienna\nwow look at this\ncheckpoint checkpoint num got my brother\nvery SC stamp oh sorry I'm trying to\nwalk and hold it all sorts\nyeah do it for the camera\nperfecty so this is one of the first\ncheckpoints and if we have a problem\nlater we can just respawn here so that\nmakes it really feel safe Yes we made it\nto Sienna oh yeah riding through Sienna\nwow these buildings are\ngorgeous this is beautiful I just feel\nso grateful to have this experience it's\nsuch a good atmosphere and in a minute\nwe're going to go into the big Plaza\nwhich you're not normally allowed to\ncycle them it's only two two times of\nthe year can Cy on it apparently for\nthis and for the Str bian race so\nlooking forward to that right behind us\nwe're about to enter Piaza Del Campo and\nlook you see a big tower up there let\nput your go for up see it's to BL and T\nlet's go k you loving it loving it I'm\nloving it beautiful look at this old bad\nboy Banger look at all the people wow\nlook at all the\ncess this is where we were um was it\nyesterday or the day before I think it\nwas yesterday I can't remember now where\nwe got told for putting our bikes in\nhere but now look at all the bikes\nthey're lot in here\nnow what you\ndoing oh BL Dan with people that have a\nclue where the other two have gone give\ngive free food you get me some of\nthat oh wow all this food\nyummy this is ride I can get used to\nfound even better one here got all these\nItalian Delights and little lemon drink\ndon't know where the men have gone but\nI'm it's not well might as well guess if\nit's\nfree Kyle's getting some ice on his wish\njust brought that green that's perfect\nthank\nyou the\nwater please get nice and fresh\noh dear you're a warrior I'm glad\nthey've give me this a back oh straight\ndown the neck good idea we keeping cool\nnow right then got a water got a tummy\nfull of sweets ready to hit the road\nagain yippe food in our bellies and\nwe're feeling good look at that view the\nmountains are gorgeous the roads are\nsmooth living our best life right now\nI'm just so grateful to be here\nit's beautiful next control points ready\nfor another\nSt down we go bumpy bumpy time Kyle's\ngot some cream on Kyle you okay Kyle\njust went to some medical and got some\ncream so he's all\ngood rocky rocky o wow look at this\nview it's\ngorgeous wow\noh I'm in the bumpy bit I think I've\nchosen the most bumpy line here now we\ngo\nwoohoo\no oh\nwow you're nice and steady slow and\nsteady in my comfort\nzone wow oh okay good of a secret here\nooh hello horses\noh there's\nhorses no\nhorsey nice steady climb now by the\ntrees oh I've just about figured out the\ngears now I'm glad my gears are working\nagain now I like to spinning like coming\nas fast as i' ever\ngone go on Kyle spin those\nloonies yeah yeah\nyeah\nyippee\nwoohoo oh this is\nlovely\nwow I don't think I've never been\nanywhere like this before it's just it's\njust so\nnice everyone's\nlovely and I'm getting a bit more\nconfident on the gravel yay oh blinging\nover wow the views just keep getting\nbetter I was going slow just to take it\nall in cuz I don't want this bit to end\nit's just you look at views like this\nand it makes you realize how small you\nactually are in this world and none of\nyour worries really matter just enjoy\nyourself as much as you can and work\nhard and play hard is what I say work in\nthe week ride on the weekend I'm ride on\nyour holidays actually really getting\nused to this SP now I like the old style\nit's cool I'm channeling my inner barel\nBon and arene Sheridan don't know how\nthey went those speeds on bikes like\nthis though make you realize how epic\nthey actually\nwere\ncow climbing\nclimbing these climbs are getting hot\naren't they Kyle it's getting\nhot we\ngo yay we made it made it to\nthe that quick salty snack car how you\nfeeling okay let's see that\ncream lovely it's looking is actually\nlooking a bit better good you'll surviv\nto the end of the eyes at the top the\nclimb and is gorgeous look at this and\nlook at this road we're about to go down\nbeautiful or\nbisim to the hill dance\nbaby wow look at this it's\ngorgeous oh I'm so happy it's\nbeautiful\nwow this is what dreams are made of\nwoohoo look at this\nstunning absolutely stunning there's no\nother way to describe it there food on\norder again BL and EO be fitting into\nthis Jersey by the end of this ride look\nat this Italian stew don't mind if oh my\ngoodness\nmusic great\nwhat I like this\nmusic Kyle dropped this banana on the\nfloor oh dear K you had your bean St is\nit nice delicious oh my goodness over\nthere I've just spotted crunchy apple\nbeing prepared so I'm going to wait here\nand I'm going to get myself some crunchy\napple yay we got the crunchy apple too\nyou like it wow look at this road we're\ngoing to go up it's\ngorgeous wow look at that white Road\nover there we're about to go up so I\nthink we're going be going down here and\nthen up there it's absolutely beautiful\nbut it's absolutely boiling but it's\nit's really nice especially in this woly\njersey I'm sweating just came up two\npretty seat climbs on the gravel lots of\npeople walking lots of people riding but\nit's quite hard to dodge it when people\nare walking cuz you have to kind of go\naround them and then you in fear of\ncoming off on a rock but it's all good\nwow look at that robot going up your arm\nlooks like it's crazy car's just\nstruggling with his arm aren't you Kyle\nthe gravel's bumping it around but\nyou're fighting on you're doing\nwell m is demonstrating the arm shake to\nstop you from swelling toir my hands are\nswelling a bit cuz it is so warm isn't\nit your arms are always up so it's the\nheat it's the heat wave hey it's the\nheat\nwave I think I'm iny in Paradise I think\nI just died and went to heaven although\nin heaven I would have a woolly Jersey\non had a be something a bit cool an ass\np d back but you can't have it all can\nyou\nhonestly I think this is the best day\nI've ever had on the bike like I'm just\nthinking through all the rides I've ever\ndone and I can't think of better ride\nlike honestly it's amazing I'm yeah the\nviews are\nincredible it's\nwarm I didn't think I'd I'd come here\nand say this would be my best ever a\nride but I'm shocked in a good way done\nabout 44 malonies AKA about 73 km just\nstopped off for a quick drink at this\nbar car's going to get a Coke just going\nto be M my little Beauty look at her in\nall the glory so for eroa you're only\nallowed to ride a bike that's pre9 87 I\nthink and you have to wear wo Jersey so\nyeah feels like going back in time\nalthough I wasn't even born then so yeah\nbut this is what I imagine it would be\nlike so just met another Michael from\nAustria um he wanted to do the 46 km\nrout but what happened so I took the\nwrong turn in so I'm under 100 TI now oh\nno are you enjoying it though yeah\nperfect I think it's the best thing he's\never done\nTak you've not got long to go now really\nthere woohoo H long we go bumy you right\n[Laughter]\nKyle 54 Maloney is down we' got about 12\nleft to go and it's still just as\nbeautiful just coming to the top of the\nhighest point of the day I think we've\ngot a control Point coming up and Kyle\ndid promise a top of the hill D so let's\nsee if he's going to do it or not it's\nvery very hot stamp on the gravel this\ntime I'm going I'm going to have to got\nthere you\ngo got no\non what about top of the hill dance\ncontrol AR okay we'll do it when we've\ngot food this is a busy one lots of\npeople we finally got car through top\nHill you ready 3 2 1\naction the\nbaby can't beat it can you I mean fresh\neggs over there cups not for me\nPor Michael again hello hello see you\nagain again yes we've got a steep\ndescent now I'm a bit scared about it\nI'm at I'm at fine we are fine yeah you\ntwo are fine fine the\nbest car will be fine I'm a bit scared I\ndon't like the downhill bits but if I\nneed to walk I'll just walk it's all\nright not got long left now got about 8\nmiles left I'm looking at this one and\nI'm thinking no I can't pull the brakes\nI can't pull the brakes fast enough to\ngo down this so I'm walking are you\nwalking as well yeah yeah I am too I'm\ntoo scared and also I just feel I can't\npull the brakes fast enough if I need to\nbreak so I'm just going to walk down at\nthe side in case anyone else comes off\nyou go Kyle K's going for it\nBL but it's okay if you need to walk\nit's not not an issue just do what\nyou're comfortable with I say I'm\ncomfortable with this w w w actually it\nmight be easier to ride it's very skiddy\noh my goodness look at that so pretty\nokay I walked down half of it and then I\ngot on a free wheeel down the rest it\nwasn't that bad so now we're climbing\nagain which I'm a lot more comfy with\nbut I'm proud of myself because although\nI walked half I did free whee down half\nso I fought Maia and went for it and it\nwasn't too bad but look at this lovely\nview it's gorgeous I just don't feel\nsafe well not I don't feel safe but I'm\njust not not confident on it so I'd\nrather just walk take my time but that's\nokay or I'm just going to get out of the\nway leave people\nin Nora it's quite olda someone's\nfalling\noff I'm walking down my gravel descent\nbut I'm so happy is Larry because if\nyou're not comfortable with something\nyou don't have to do it and if you do\nhave to do it you can make it easy for\nyourself okay walking might take me a\nbit longer but I don't mind cuz I'd\nrather just be happier than going down\nthinking oh my like stressing maybe if I\ndo it again next year it can be an aim\nto try and do the whole thing without\ngetting off the bik but I've never\nreally done much gravel before so it's\nokay here car's waiting for me hello\nKyle sorry I had to walk\nagain car I just had to walk again cuz I\njust felt a bit scared and someone else\njust fell off and they cut their elbow\nso it doesn't really inspire me to get\nback on at the moment oh my goodness how\nlong since s gone for a car a bit scared\nI don't know but you know the man that's\nuh got the squeaky break you cuz\ncan oh look at that dust oh nor five\nMalone AKA five miles left to go back on\nthe smooth smooth Tac oh there's a few\npeople struggling towards the end youve\ngot this go go\ngo hey\n[Applause]\nwo we did\nit oh\ngot a little medal a I didn't think I\nwas going to get a medal my neck great\ntrying to get my final stump how you\nfind it beauti so good wasn't it\nhonestly best day on the bike yeah\nhonestly that was I didn't think I'd say\nI think that was the best bite R I've\never done in my life like I can't\ncompare it to anything else I've done so\nyeah it was awesome It's Time to Say\nGoodbye little baby she's done well\nshe's a lot more Dusty than she was when\nI started look at this\nbut she's done well she's treating me\nwell she treating me B well and that was\nthe best ride ever so yeah but am\nlooking forward to my uh carbon bik when\nI get home again cuz these\nbreakes they're hard wow what a ride my\nwater bottle looks like it's been used\nfor about 10 years look at the state of\nit did you enjoy it Kyle yeah great so\nwe've got one thing on our mind now ice\ncream so we're going to go and find one\nwe found the rest of the crew did you\nenjoy it have a good time yeah really\ngood one only one small injury dann's oh\nno what happened I well walking down the\nhill my leg gave out because of the\ndoubt walking the bike and I just s\nChristian was there I just I just kind\nof like fell into the ditch oh no and\nthen I was like\nembarrassed you've got proof that you\ndid it now a little w i w down it was\nreally good I walked down like some of\nthe it the ice cream queue is so long\nand it's so hot so we're just leaving\nthe ice cream get a nice lemonade and\ncar's going to get a beer instead with\ntheal this I\nneed's got a really good lemonade that's\nlovely it'll be the best lemonade it is\nthe best lemonade in the year I guess\nbest day in the bike\neverose to it i' say it's up there top\nthree but I can't even think of the\nother two I'm just reserving the right\nto think that but no yeah maybe the best\nyeah it was really good I think it's\njust because it w trying to go fast we\njust enjoying it taking it in\nfantastic everyone you just hear\neveryone chitchatting with soft fam\ntogether we just saw so many new things\nall day and no one no one's in a\nrush it's let's just enjoy L here\nexactly nice it's not competitive it's\njust like you're on holiday it's holiday\ny James got me a\ns Che Cheers\nCheers one\ngoing up Italian wow what a Daye and\nwhat a trip like that was the last ride\nof the trip and that was the best ride\nof my life and I'm not even joking it\nwas Inc it was amazing the atmosphere\nthe people the scenes you just couldn't\nbeat it and I just feel so grateful that\nwe got this opportunity it doesn't\nactually feel real um so yeah that's our\nding dang dulo that's our Italy trip\nDing Dang dulo got to go home tomorrow\nbut massive thank you to grantor's\nproject for bringing us along it's c\ntired um yeah we really appreciate it oh\nyou're going that way are you um we're\ngoing out for a five star gastro meal or\nsomething tonight so that's going to be\nabsolutely great we've had really good\nmeals every single night we've not\nfilmed them because we just wanted to\nenjoy them without the camera um but\nyeah Grand to's projects has treated us\namazingly and 100% recommend them to\nanyone obviously they've given us this\ntrip in return for my socials but I'm\nalways honest and yeah it's been amazing\num so massive thank you to them and most\nimportantly thank you to everyone\nwatching this because\nwithout you guys I won't be here doing\nthese trips on G the lighting's going\ndown see if you can see me for the last\nbit but yeah um so I'm going to say bye\nI'm going to stop waffling I'm going to\nput a discount code in my description if\nyou want to try a grand Tours project\ntrip and that's it from me thank you so\nmuch for watching Chia Chow love you all",
           "curated": false
         }
       ],
@@ -300,10 +389,14 @@
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://sfbike.org/event/eroica-california/",
-      "notes": "Search results show only past references and generic Eroica info with no clear evidence of a recent or upcoming Eroica California edition in Cambria.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://highway1roadtrip.com/events/central-coast-classico/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 8): status changed from 'unknown' to 'defunct' — high confidence. Last verified edition ran September 15-17, 2023 (7th edition, NOVA on Saturday/Classic on Sunday). The 2024 edition was cancelled with no reason given ('will not be held this year'); no 2025 or 2026 edition has run, and California does not appear on Eroica's official global events calendar. Distance corrected from an uncited '110mi/177km' to the archived final-era Heroic route figure of 107.3mi/172.7km. Elevation (2286m/7500ft) removed — not securely sourced for the Classic route; the 7,500ft figure may reflect cross-route contamination from a 2020 NOVA long-route description (97mi/7,535ft), a different route entirely. Field_size corrected from an unsupported '2,000 participant limit' to a sourced description of actual final-era attendance (county-reported ~1,126 total attendees in 2022; organizer claimed ~1,500 across NOVA+Classic combined; a 2023 projection of ~1,500) — none of these are a field cap. Founded corrected to 2015 (contemporary Bianchi 2015 event-calendar evidence is more authoritative than Eroica's own history page, which currently and likely incorrectly states 2016). Purged one contaminating YouTube entry (video_id JjuEwcbSdAk, 'L'EROICA - BEST RIDE EVER') — its content (Siena, Piazza del Campo, Italian countryside) describes the original L'Eroica in Tuscany, not Eroica California; kept the four videos genuinely about the California event. Added full COVID/discontinuation history and the NOVA Eroica relationship (a genuine co-located spinoff since 2017, not a rebrand of the Classic). See catalog_flags for the successor-event note (Central Coast Classico) and the taxonomy caveat matching eroica-dolomiti.json's precedent."
+    },
+    "catalog_flags": {
+      "status_note": "Defunct — last verified edition ran September 15-17, 2023 (7th edition). The 2024 edition was cancelled with no reason given, and no edition has run since; California does not appear on Eroica's official 2025/2026 global calendar. Locally 'replaced' per Central Coast tourism messaging by the independent, unaffiliated Central Coast Classico (inaugural edition April 24-26, 2026) — this is NOT an Eroica-branded continuation or the same organizer, so no duplicate_of relationship applies; recommend a human call on whether/how to cross-reference the unaffiliated successor in the alternatives/final_verdict copy. Also carries the same taxonomy caveat as eroica-dolomiti.json: fondo_rating.discipline is 'sportive' but the actual event (when it ran) was a vintage-bike heritage ride with substantial unpaved content (~20-30% estimated on the Heroic route; verified 22% gravel on the shorter Santa Lucia route) — doesn't cleanly fit a paved-sportive taxonomy or scoring dimensions (road_surface, descent_technicality assume a paved-road competitive event).",
+      "ruled": "2026-07-24"
     }
   }
 }

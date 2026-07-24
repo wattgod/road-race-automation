@@ -110,6 +110,11 @@
       "verified": "2026-07-23",
       "source": "https://ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/",
       "notes": "UCI Gran Fondo in Capesterre-Belle-Eau ran on 7 Dec 2025; 2026 World Series calendar PDF references continuation but no specific 2026 date found.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "granfondo-la-guadeloupe",
+      "ruled": "2026-07-24",
+      "notes": "SAME EVENT as granfondo-la-guadeloupe.json: identical location (Capesterre-Belle-Eau, Guadeloupe), same 7 Dec 2025 inaugural date, near-identical elevation (2884m vs 2883m) and Col des Mamelles climb detail, both citing ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/ as the registration/official source. granfondo-la-guadeloupe.json is the richer profile (filled tagline, climate description, course_description.character, logistics.airport/lodging, confirmed 2026 date) and is treated as canonical. No editorial work performed on this slug per pipeline step 0."
     }
   }
 }

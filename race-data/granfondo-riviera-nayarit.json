@@ -5,24 +5,26 @@
     "display_name": "GranFondo Riviera Nayarit",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Riviera Nayarit, Mexico",
+      "distance_km": 130.0,
+      "distance_mi": 80.8,
+      "elevation_m": 1120,
+      "elevation_ft": 3675.0,
+      "location": "Nuevo Vallarta, Riviera Nayarit, Mexico",
       "location_badge": "Riviera Nayarit, Mexico",
       "country": "Mexico",
       "date": "2026: April 18",
-      "date_specific": "2026: April 18",
-      "field_size": "Not specified",
+      "date_specific": "2026: April 18 (second edition of the current RBC GranFondo-backed event)",
+      "field_size": "400-500 riders (2026)",
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "From $199 USD (2026 standard price; historical promotional tiers varied)",
       "feed_zones": "Full support with aid stations",
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Gran Fondo: 92km, 980m — marketed by the organizer as the '90/100km' distance"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -44,19 +46,19 @@
       "scenic_experience": 5,
       "community_culture": 3,
       "altitude": 1,
-      "logistics": 4,
+      "logistics": 2,
       "prestige": 3,
       "field_depth": 2,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 60,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 60."
+      "scoring_notes": "GOLD wave 2026-07-24 (batch C, sol-reviewed): vitals correction plus one dimension change. Research (codex/gpt-5.6-sol web search against rbcgranfondo.com, Race Roster, and Mexican/endurance-sports media, independently re-confirmed on rbcgranfondo.com/event-resources/nayarit/race-distances) confirmed the event is active and backed by the RBC GranFondo/Whistler organizing team, locally produced with Sabino Creaciones. Field size (400-500) is the producer's/organizer's own reported figure, not an independently audited count. Real 2026 course: Forte 130km/1,120m (main distance used here) and Gran Fondo 92km/980m (added as route_options) — the old 140km figure and the 2016 YouTube-sourced '165km/9 climbs/1,800m' course description both describe an unrelated, earlier same-region event; the current event's own organizer calls 2025 its inaugural edition. Field corrected to 400-500 (2026, second edition) from 'not specified'; entry fee corrected to 'from $199' from unspecified. One dimension change: logistics 4->2 (the real host area, Nuevo Vallarta/Bahia de Banderas, sits roughly 30-40 minutes from Puerto Vallarta International Airport with abundant resort lodging — a genuine resort corridor, not the remote/limited-lodging profile the old logistics=4 implied). All other dimensions left unchanged — no research basis found to adjust distance, climbing, descent_technicality, climate_risk, organization, scenic_experience, community_culture, altitude, prestige, field_depth, value, expenses, road_surface, or cultural_impact. Net dimension change: -2 (logistics). overall_score: 60 -> 57 (TIER 2 -> TIER 3, since 57 falls below the 60 T2 threshold). Original score before this wave: 64 (migrated from gravel-race-automation, pre-recalculation)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,108 +72,80 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A paved, northbound coastal-highway fondo starting at Boulevard Nuevo Vallarta (event hub at Playa FIBBA), running through Higuera Blanca, Sayulita, Lo de Marcos and Monteon to La Pena for the 130km Forte distance. The route transitions from the Nuevo Vallarta resort zone into tropical vegetation and the protected Sierra de Vallejo landscape, passing surf and coastal communities with intermittent Pacific views. The organizer describes it as rolling terrain with short, steep climbs rather than a single marquee mountain ascent. Roads are not fully closed to traffic — the 2026 municipal notice described controlled circulation with only a temporary closure on Paseo de los Cocoteros, a real difference from a closed-highway event.",
+      "signature_challenge": "The transition from resort boulevard to rural coastal highway north of Nuevo Vallarta — repeated short, steep rollers through the Sierra de Vallejo foothills rather than one defining climb.",
+      "suffering_zones": [
+        "Sierra de Vallejo coastal foothills between Higuera Blanca and Sayulita — the organizer's 'rolling terrain, short steep climbs' zone, no individual gradient data published",
+        "Open highway sections toward La Pena on the 130km Forte route — controlled but not fully closed circulation, real traffic-awareness required"
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Official partner Marival Resorts offers 35% discount with code SPIN2WIN at Marival Emotions Resort & Suites (host hotel) or Marival Distinct Luxury Residences.[1]",
+      "airport": "Puerto Vallarta International Airport (PVR) — roughly 30-40 minutes from the Nuevo Vallarta start/hub.",
+      "lodging_strategy": "Official partner Marival Resorts offers a discount at Marival Emotions Resort & Suites (host hotel) or Marival Distinct Luxury Residences; abundant additional resort lodging throughout the Nuevo Vallarta/Bahia de Banderas corridor.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.rbcgranfondo.com/event/nayarit"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2025,
+      "origin_story": "Launched in 2025 as the current, RBC GranFondo/Whistler-team-backed edition of a Riviera Nayarit gran fondo, locally produced with Sabino Creaciones. This is a distinct, more recent iteration from an earlier same-region gran fondo documented in 2016 (a 165km, nine-climb, 1,800m course) — the organizer treats 2025 as the inaugural edition of the current event, not a continuation of that older race.",
+      "notable_moments": [
+        "2025: inaugural edition of the current RBC GranFondo-backed event",
+        "2026: second edition, 400-500 riders from Mexico, Canada, the US, Colombia and Spain"
+      ],
+      "reputation": "A young destination fondo backed by the RBC GranFondo/Whistler organizing team, with an international field (Mexico, Canada, US, Colombia, Spain per Nayarit tourism-board reporting) for a second-year event, but not yet a long-track-record or major-field classic. Its reputation currently rests on the organizing team's experience and the resort/coastal setting rather than longevity or competitive depth."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Young, Well-Backed Destination Fondo — Not Yet a Classic",
+      "summary": "GranFondo Riviera Nayarit is an active destination event, run by the RBC GranFondo/Whistler team with local production by Sabino Creaciones. Its 2026 (second) edition drew a producer-reported 400-500 riders from at least five countries per Nayarit tourism-board coverage — no independently audited starter/finisher count was found. The course is a coastal-highway route through the Sierra de Vallejo foothills north of Nuevo Vallarta, not the mountain-gran-fondo profile our old data (borrowed from a 2016 predecessor event) implied: a resort-corridor fondo with rolling terrain and short climbs, not a closed-highway mountain classic. Roads aren't fully closed to traffic either — a 2026 municipal notice describes controlled circulation with only a temporary closure on one boulevard.",
+      "strengths": [
+        "Genuinely active with a real, confirmed 2026 edition — published results, organizer statements, and local/tourism-board coverage all agree",
+        "Backed by the experienced RBC GranFondo/Whistler organizing team, with professional local production",
+        "Easy resort-corridor logistics — 30-40 minutes from Puerto Vallarta International Airport, with abundant partner lodging",
+        "Growing international draw for a second-year event — riders from Mexico, Canada, the US, Colombia and Spain in 2026"
+      ],
+      "weaknesses": [
+        "Only two editions deep (2025-2026) under the current organizer — no long track record, and the field size (400-500) is modest",
+        "Roads are not fully closed — 2026 municipal notices describe controlled circulation with only a temporary closure on one boulevard, a real step down from a closed-highway event",
+        "Rolling coastal terrain with short climbs, not a marquee mountain ascent — riders expecting Alpine-scale climbing will be disappointed",
+        "No official source names a headline climb or publishes individual gradient data",
+        "Our own prior data conflated this event with an unrelated 2016 predecessor (165km/9 climbs/1,800m) — a different course under a similar regional banner"
+      ],
+      "bottom_line": "A legitimate destination fondo for riders who want an easy-access resort trip with a supported ride attached — not a mountain-climbing classic. Go in with rolling-terrain, moderate-suffering expectations."
     },
     "final_verdict": {
-      "score": "60/100",
-      "one_liner": "Premium beachside gran fondo blending epic coastal rides with Mexican festival vibes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "57/100",
+      "one_liner": "A young, well-backed Pacific-coast destination fondo — easy resort access, rolling terrain, not a mountain classic.",
+      "should_you_race": "Yes if you want an easy-logistics resort trip with a genuine supported ride and international field. Skip it if you're chasing serious elevation or a closed-highway race atmosphere.",
+      "alternatives": "For closed-highway mountain climbing from the same RBC GranFondo organizing team, see RBC GranFondo Whistler (Canada) directly. For a more established Mexican road gran fondo, research options with a longer track record than this two-edition event."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "GranFondo Riviera Nayarit gran fondo cycling Riviera Nayarit",
-      "videos": [
-        {
-          "video_id": "XdhDoYHrsL8",
-          "title": "From Sand To Sun - GranFondo Riviera Nayarit 2025",
-          "channel": "RBC GranFondo",
-          "view_count": 421,
-          "upload_date": "20250430",
-          "duration_string": "3:02",
-          "description": "Granfondo Riviera Nayarit is an unforgettable cycling experience along Mexico’s stunning Pacific coastline, blending world-class riding with vibrant local culture.\n\nFrom the golden beaches to the lush Sierra Madre mountains, riders of all levels came together for an epic day on two wheels.\n\n📍 Explore the route, the community, and the energy that made this year’s edition one to remember.\n\nOpen to all – join us for the next adventure: https://www.rbcgranfondo.com/event/nayarit",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=XdhDoYHrsL8",
-          "curated": false
-        },
-        {
-          "video_id": "STQan1Icxjk",
-          "title": "🏝🛣𝗚𝗿𝗮𝗻 𝗙𝗼𝗻𝗱𝗼 𝗪𝗵𝗶𝘀𝘁𝗹𝗲𝗿 - 𝗥𝗶𝘃𝗶𝗲𝗿𝗮 𝗡𝗮𝘆𝗮𝗿𝗶𝘁 🚲🏁",
-          "channel": "Badeba Media",
-          "view_count": 153,
-          "upload_date": "20240722",
-          "duration_string": "1:40",
-          "description": "𝗘𝗹 𝗚𝗿𝗮𝗻𝗙𝗼𝗻𝗱𝗼 𝗪𝗵𝗶𝘀𝘁𝗹𝗲𝗿, 𝗰𝗲𝗹𝗲𝗯𝗿𝗮𝗱𝗼 𝗱𝘂𝗿𝗮𝗻𝘁𝗲 𝟭𝟱 𝗮𝗻̃𝗼𝘀 𝗲𝗻 𝗖𝗮𝗻𝗮𝗱𝗮́, 𝗲𝘀 𝘂𝗻𝗼 𝗱𝗲 𝗹𝗼𝘀 𝗲𝘃𝗲𝗻𝘁𝗼𝘀 𝗱𝗲 𝗰𝗶𝗰𝗹𝗶𝘀𝗺𝗼 𝗱𝗲 𝗰𝗮𝗿𝗿𝗲𝘁𝗲𝗿𝗮 𝗺𝗮́𝘀 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁𝗲𝘀 𝗱𝗲 𝗔𝗺𝗲́𝗿𝗶𝗰𝗮 𝗱𝗲𝗹 𝗡𝗼𝗿𝘁𝗲, 𝗿𝗲𝘂𝗻𝗶𝗲𝗻𝗱𝗼 𝗮 𝗺𝗮́𝘀 𝗱𝗲 𝟱,𝟬𝟬𝟬 𝗰𝗶𝗰𝗹𝗶𝘀𝘁𝗮𝘀 𝗰𝗮𝗱𝗮 𝗮𝗻̃𝗼.\n\n𝗣𝗼𝗿 𝗽𝗿𝗶𝗺𝗲𝗿𝗮 𝘃𝗲𝘇, 𝗹𝗹𝗲𝗴𝗮 𝗮 𝗠𝗲́𝘅𝗶𝗰𝗼 𝗮𝗹 𝗲𝘀𝗽𝗲𝗰𝘁𝗮𝗰𝘂𝗹𝗮𝗿 𝗱𝗲𝘀𝘁𝗶𝗻𝗼 𝗱𝗲 𝗕𝗮𝗵𝗶́𝗮 𝗱𝗲 𝗕𝗮𝗻𝗱𝗲𝗿𝗮𝘀, 𝗼𝗳𝗿𝗲𝗰𝗶𝗲𝗻𝗱𝗼 𝘂𝗻𝗮 𝗿𝘂𝘁𝗮 𝗱𝗲 𝗰𝗶𝗰𝗹𝗶𝘀𝗺𝗼 𝗱𝗲 𝗰𝗮𝗿𝗿𝗲𝘁𝗲𝗿𝗮 𝗱𝗲 𝟭𝟬𝟬 𝗸𝗺 𝘆 𝗲𝘀𝗽𝗲𝗿𝗮𝗻𝗱𝗼 𝗺𝗶𝗹𝗲𝘀 𝗱𝗲 𝗰𝗶𝗰𝗹𝗶𝘀𝘁𝗮𝘀.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=STQan1Icxjk",
-          "curated": false
-        },
-        {
-          "video_id": "ZqJV0ytO868",
-          "title": "Gran Fondo Riviera Nayarit Course Preview",
-          "channel": "Joel Goralski: The Accidental Retiree",
-          "view_count": 799,
-          "upload_date": "20160321",
-          "duration_string": "51",
-          "description": "Join us on April 24, 2016 for an aventure that will always be remembered. Whether you decide to race, ride a personal best or just enjoy the day, the Riviera Nayarit Grand Fondo will be an event that you will never forget!  Our Gran Fondo will take you from La Cruz de Huanacaxtle to Sayulita and back. Over the course of three laps and over 165 km, you will be tested with a total of NINE short but challenging climbs - a total elevation gain of over 1800 meters! In addition, an 8 km section along the coastal road to La Cruz will push the peloton to the limit. If you are coming to race this event - be prepared - at this will be a very tough and competitive race. We expect that the many local and international top athletes that will be in attendance will be setting a blistering pace on the climbs, the flats and the coastal rollers. Come see why Bucerias and the Riviera Nayarit region has been growing rapidly in popularity amongst Mexican, American and Canadian cyclists alike.",
-          "tags": [
-            "Gran Fondo",
-            "Cycling Mexico",
-            "Road Cycling Mexico",
-            "Bici Bucerias",
-            "Bike Rentals Mexico",
-            "Bike Tours Mexico"
-          ],
-          "url": "https://www.youtube.com/watch?v=ZqJV0ytO868",
-          "curated": true,
-          "curation_reason": "Course preview with specific details about the challenging route including nine climbs and 1800 meters of elevation gain.",
-          "display_order": 1,
-          "thumbnail_url": "https://i.ytimg.com/vi/ZqJV0ytO868/maxresdefault.jpg",
-          "thumbnail_score": 60.0
-        },
-        {
-          "video_id": "-2NeoJEWbXk",
-          "title": "GRAN FONDO RIVIERA NAYARIT 2025",
-          "channel": "Badeba Media",
-          "view_count": 112,
-          "upload_date": "20250327",
-          "duration_string": "1:18",
-          "description": "𝗣𝗥𝗘𝗣𝗔𝗥𝗔𝗧𝗘 𝗣𝗢𝗥 𝗘𝗟 𝗖𝗜𝗘𝗥𝗥𝗘 𝗗𝗘 𝗟𝗔 𝗖𝗔𝗥𝗥𝗘𝗧𝗘𝗥𝗔 𝗙𝗘𝗗𝗘𝗥𝗔𝗟 𝟮𝟬𝟬\n\n𝗘𝘀𝘁𝗼 𝗽𝗼𝗿 𝗹𝗮 𝗽𝗿𝗼́𝘅𝗶𝗺𝗮 𝗰𝗮𝗿𝗿𝗲𝗿𝗮 𝗰𝗶𝗰𝗹𝗶𝘀𝘁𝗮 𝗾𝘂𝗲 𝘀𝗲 𝗹𝗹𝗲𝘃𝗮𝗿𝗮́  𝗮𝗰𝗮𝗯𝗼 𝗲𝗹 𝟱 𝗱𝗲 𝗮𝗯𝗿𝗶𝗹 𝗱𝗼𝗻𝗱𝗲 𝘀𝗲𝗿𝗮́ 𝗼𝗰𝘂𝗽𝗮𝗱𝗮 𝗽𝗼𝗿 𝗹𝗼𝘀 𝗰𝗶𝗰𝗹𝗶𝘀𝘁𝗮𝘀 𝘁𝗲𝗻𝗶𝗲𝗻𝗱𝗼 𝗰𝗼𝗺𝗼 𝗿𝘂𝘁𝗮 𝗼𝗳𝗶𝗰𝗶𝗮𝗹 𝗹𝗮 𝗰𝗼𝗻𝗴𝗲𝘀𝘁𝗶𝗼𝗻𝗮𝗱𝗮 𝗰𝗮𝗿𝗿𝗲𝘁𝗲𝗿𝗮.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=-2NeoJEWbXk",
-          "curated": false
-        }
-      ],
-      "quotes": []
-    },
+    "citations": [
+      {
+        "url": "https://www.rbcgranfondo.com/event/nayarit",
+        "category": "official",
+        "label": "RBC GranFondo — Official Riviera Nayarit Event Page"
+      },
+      {
+        "url": "https://www.rbcgranfondo.com/event-resources/nayarit/race-distances",
+        "category": "official",
+        "label": "RBC GranFondo Nayarit — Official Distance/Elevation Page (92km/980m Gran Fondo, 130km/1,120m Forte)"
+      },
+      {
+        "url": "https://www.endurancesportswire.com/granfondo-riviera-nayarit-returns-april-18-2026-registration-now-open/",
+        "category": "media",
+        "label": "Endurance Sportswire — 2026 Edition Announcement and Course Character"
+      },
+      {
+        "url": "https://turismo.nayarit.gob.mx/2026/04/18/riviera-nayarit-se-consolida-como-sede-internacional-con-el-gran-fondo/",
+        "category": "official",
+        "label": "Nayarit Tourism Board — 2026 Post-Event Report (international field: Mexico, Canada, US, Colombia, Spain)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.endurancesportswire.com/granfondo-riviera-nayarit-returns-april-18-2026-registration-now-open/",
-      "notes": "Mass-participation road Gran Fondo in Riviera Nayarit with 2026 edition completed and no discontinuation signals.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.rbcgranfondo.com/event/nayarit",
+      "notes": "Successfully held Saturday, April 18, 2026 — the second edition of the current RBC GranFondo-backed event (first edition April 5, 2025), with published results and post-event coverage. No discontinuation signal found, but a 2027 edition has not yet been officially confirmed. VITALS CORRECTION: real 2026 courses are Forte 130km/1,120m and Gran Fondo 92km/980m; the old 140km figure and the 2016-video-sourced '165km/9 climbs/1,800m' course description both describe a different, earlier same-region event, not the current one — the organizer treats 2025 as this event's own inaugural edition."
     }
   }
 }

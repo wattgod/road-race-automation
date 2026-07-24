@@ -5,18 +5,18 @@
     "display_name": "Gran Fondo Başkent",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "distance_km": 90.61,
+      "distance_mi": 56.3,
+      "elevation_m": 1237,
+      "elevation_ft": 4058.5,
       "location": "Ankara, Turkey",
       "location_badge": "Ankara, Turkey",
       "country": "Turkey",
       "date": "2026: August 23",
-      "date_specific": "2026: August 23",
-      "field_size": "Hundreds of amateur and professional cyclists; 2025 saw 4,835 total riders across 12 Turkish Gran Fondo events",
+      "date_specific": "2026: August 23 (start/finish at Bilkent Center)",
+      "field_size": "Approximately 1,000-1,200 riders historically (1,200 from 34 countries in 2024, nearly 1,000 in 2025); no official 2026 field cap published",
       "start_format": null,
-      "registration": null,
+      "registration": "https://granfondobaskent.com/bilgi-merkezi/",
       "entry_fee": null,
       "feed_zones": "Unknown",
       "cutoff_time": "Unknown",
@@ -70,37 +70,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A capital-city gran fondo, not a mountain-climbing one. The long course runs 90.6 km with roughly 1,237 m of climbing (about 14 m/km), starting and finishing at Bilkent Center. The route opens with an urban climbing stretch through Hoşdere Caddesi, Simon Bolivar Caddesi and Turan Güneş Bulvarı past the Atakule tower, then heads out to the exposed rolling steppe south of the city through İncek, Tulumtaş, Halaçlı and Koparan before returning. Official course sheets identify road segments, not named climbs — there is no equivalent of a categorized mountain pass here.",
+      "signature_challenge": "The city-centre climbing section past Atakule early in the route — the only sustained, tactically important climbing on an otherwise rolling, exposed course. Everything after it is a test of steppe headwinds and flat-out pace-holding, not gradient.",
+      "suffering_zones": [
+        "Hoşdere Caddesi / Simon Bolivar Caddesi / Turan Güneş Bulvarı — the urban climbing opener past Atakule, where the route's real elevation gain is concentrated",
+        "İncek to Koparan — long, exposed rolling sections across Ankara's steppe, wide open to wind with no shelter",
+        "Tulumtaş–Halaçlı–Koparan — the outer loop that adds unglamorous connecting mileage before the return to Bilkent"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Ankara offers standard urban accommodation options as a major capital city. Specific race-affiliated lodging information unavailable.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondobaskent.com"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "First run in 2022 as an Ankara-based road gran fondo organized by 78 Event & Ajans, with 2026 marking the fifth edition. Title sponsorship (İş Bankası's Maximum Kart / Visa Maximum) and support from Ankara's municipal government and the Turkish Cycling Federation have grown the event from a local capital-city race into one of Turkey's better-attended amateur road gran fondos, though it remains a national rather than internationally prestigious event.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Solid Capital-City Fondo, Not a Climbing Test",
+      "summary": "Gran Fondo Başkent (Maximum Gran Fondo Başkent) is a legitimate Turkish amateur road event — its fifth edition runs in 2026 (founded 2022), on the Turkish Cycling Federation's official Gran Fondo calendar, and it has drawn roughly 1,000-1,200 riders per edition since its 2022 launch, with international representation growing from about 25 to 34 countries even as overall turnout has stayed flat rather than climbed. The database's prior 99.8 km figure never matched any documented edition: the actual long course is 90.6 km with 1,237 m of climbing, a moderately hilly urban-and-steppe route rather than a mountain gran fondo. Don't come to Ankara expecting sustained climbing — the defining terrain is a short urban climb past Atakule followed by long, exposed, rolling steppe roads south of the city.",
+      "strengths": [
+        "On the Türkiye Bisiklet Federasyonu's official 2026 Gran Fondo calendar as a sanctioned amateur road race",
+        "Four completed editions since 2022 with a consistent ~1,000-1,200-rider turnout and international representation growing from roughly 25 to 34 countries",
+        "Municipal and federal government support (Ankara Governorate, Ankara Metropolitan Municipality) beyond a purely commercial production",
+        "A dual-distance format (short/long) plus paralympic and tandem categories broadens who can actually take part"
+      ],
+      "weaknesses": [
+        "Not a climbing gran fondo — 1,237 m over 90.6 km is moderately hilly at best; riders expecting Alpine-style suffering will be disappointed",
+        "Not a UCI Gran Fondo World Series qualifier — Turkey's UCI-series slot belongs to Granfondo Antalya, not Başkent",
+        "No categorized or named climbs beyond city-street segments — the course sheet lists road names, not mountain passes",
+        "A national-level event with some international participation (per this database's prestige rubric), not yet an internationally prestigious destination fondo"
+      ],
+      "bottom_line": "A well-run, federation-sanctioned capital-city fondo worth doing if you're in or near Ankara and want a moderately hilly, fast, urban-to-steppe test — just don't expect mountains, and don't confuse it with Turkey's actual UCI-series qualifier in Antalya."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "A well-organized, growing Turkish cycling event offering scenic Ankara routes with dual distance options for mixed ability levels.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Ankara's growing capital-city fondo — a short urban climb, then long, exposed steppe roads, not a mountain test.",
+      "should_you_race": "Yes if you want a well-organized, federation-backed Turkish road fondo with real international turnout and don't need sustained climbing. Skip it if you're chasing UCI Gran Fondo World Series points — that's Granfondo Antalya, not this race.",
+      "alternatives": "For Turkey's actual UCI Gran Fondo World Series qualifier, look at Granfondo Antalya (November). For a genuinely mountainous Anatolian road event, look elsewhere in the Turkish federation's Gran Fondo calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondobaskent.com/uzun-parkur/",
+        "category": "official",
+        "label": "Official Long-Course Page — 90.61 km / 1,237 m"
+      },
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2026 Gran Fondo Calendar (23 August Ankara Listing)"
+      },
+      {
+        "url": "https://ankara.ktb.gov.tr/Eklenti/133803%2Cparkur-bilgilendirme-belgesipdf.pdf?0=",
+        "category": "official",
+        "label": "Ankara Provincial Culture/Tourism Directorate — Official Route Sheet"
+      },
+      {
+        "url": "https://www.ekonomim.com/spor/ankara-visa-maximum-gran-fondo-baskente-besinci-kez-ev-sahipligi-yapacak-haberi-906725",
+        "category": "media",
+        "label": "Ekonomim — 2026 Fifth-Edition Announcement"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series — Official Calendar (Confirms Başkent Is Not a Qualifier)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Başkent gran fondo cycling Ankara",
@@ -233,14 +273,14 @@
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "The available transcript for Gran Fondo Başkent primarily consists of music and repeated mentions of heat, suggesting hot weather conditions during this 62-mile gravel race in Ankara, Turkey. While the transcript lacks detailed course descriptions or rider commentary, the emphasis on heat indicates that temperature management may be a significant factor for participants in this Turkish gran fondo event."
+        "search_text": "The available transcript for Gran Fondo Başkent primarily consists of music and repeated mentions of heat, suggesting hot weather conditions during this road gran fondo in Ankara, Turkey (corrected from a prior mislabel as a 'gravel race' — this is a paved-road event). While the transcript lacks detailed course descriptions or rider commentary, the emphasis on heat indicates that temperature management may be a significant factor for participants in this Turkish gran fondo event."
       }
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondo.com.tr/yaris/gran-fondo-baskent/",
-      "notes": "2026 edition in Ankara on 23 August is on the federation calendar and currently open with published program and registration details.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+      "notes": "CONFIRMED via codex gpt-5.6-sol foreground research, editorial wave 8. Fifth edition scheduled 23 August 2026, start/finish Bilkent Center, confirmed by the Turkish Cycling Federation's 2026 Gran Fondo calendar and July 2026 organizer/press coverage. Corrected this wave: distance_km 99.8->90.61 and elevation_m null->1237 (no credible source supported 99.8 km; the current official long-course page and the completed 2025 race both report 90.6 km/1,237 m). founded corrected to 2022 (first edition; 2026 is the fifth). Confirmed NOT a UCI Gran Fondo World Series qualifier (Turkey's 2026 qualifier is Granfondo Antalya) despite being on the national federation calendar. SOL REVIEW CORRECTION (2026-07-24): a follow-up sol adversarial review found the initial draft overstated 'growing participation' — the 2022 inaugural edition already drew ~1,200 riders (hurriyetdailynews.com), so turnout has stayed roughly flat (not grown) while international representation grew from ~25 to 34 countries; wording corrected in biased_opinion/history accordingly."
     }
   }
 }

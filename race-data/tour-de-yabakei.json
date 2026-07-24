@@ -5,58 +5,62 @@
     "display_name": "Tour de Yabakei",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 1067,
-      "elevation_ft": 3500.0,
+      "distance_km": 150.0,
+      "distance_mi": 93.2,
+      "elevation_m": 3230,
+      "elevation_ft": 10597.0,
       "location": "Nakatsu, Oita, Japan",
       "location_badge": "Nakatsu, Japan",
       "country": "Japan",
-      "date": "2026: May TBD",
-      "date_specific": "2026: May TBD",
-      "field_size": null,
-      "start_format": null,
-      "registration": "https://tourdeyabakei.studio.site",
-      "entry_fee": null,
+      "date": "2025: May 11 (last confirmed edition; no 2026 date announced as of Jul 2026)",
+      "date_specific": "2025: May 11 (last confirmed edition; no 2026 date announced as of Jul 2026)",
+      "field_size": "Approximately 480 riders across all courses (2025, 3rd edition; a later city-council document cites 478), against an 800-rider combined capacity",
+      "start_format": "Untimed, noncompetitive fan ride — no ranked results",
+      "registration": null,
+      "entry_fee": "Ranged ¥7,000-9,900 by course in 2025 (roughly $47-66 USD); optional carbo-loading party ¥4,000-4,500",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "A: 120km, 2,160m",
+        "B: 70km, 1,080m",
+        "K (\"Karaage\"): 40km, untimed fun-ride, climbing not published"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
+      "description": "Early May in Oita brings mild, increasingly humid conditions ahead of Kyushu's rainy season.",
       "challenges": []
     },
     "terrain": {
       "primary": "Mixed terrain",
       "surface": "Paved roads",
-      "technical_rating": 1,
+      "technical_rating": 2,
       "features": []
     },
     "fondo_rating": {
       "distance": 3,
       "climbing": 4,
-      "descent_technicality": 1,
+      "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 3,
       "scenic_experience": 4,
       "community_culture": 3,
-      "altitude": 2,
+      "altitude": 1,
       "logistics": 3,
       "prestige": 2,
-      "field_depth": 3,
+      "field_depth": 2,
       "value": 4,
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 61,
+      "overall_score": 60,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 64. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "GOLD wave 2026-07-24 (batch C): main distance/elevation corrected from an unsourced 99.8km/1,067m figure to the real S-course flagship (150km/3,230m, confirmed via Nakatsu City's 2025 press briefing and Sports Entry listing); A/B/K courses added as route_options; founded year corrected 2015->2023 (verified 3-edition history: Oct 2023, May 2024, May 2025). Three dimension changes from research: descent_technicality 1->2 (organizer explicitly warns of narrow roads and steep descents on the mountain sections — a real, sourced upgrade from the old 'flat/wide roads' default); altitude 2->1 (verified individual climbs gain only 200-300m each with no summit data suggesting the region exceeds ~500m absolute elevation — this is a low-elevation river-gorge region, not a high-altitude course); field_depth 3->2 (this is an explicitly untimed, noncompetitive fan ride that filled only 480 of an 800-rider capacity in 2025 — no competitive field depth exists to score at 3). Net effect: distance and climbing dimensions were re-verified against the corrected 150km/3,230m figure and happen to land on the same values (3 and 4) the old, wrong 99.8km/1,067m figure produced — a coincidence, not evidence the old vitals were right. Net dimension change: +1 (descent) -1 (altitude) -1 (field_depth) = -1. overall_score: 61 -> 60 (T2 unaffected). Original score before this wave: 64 (migrated from gravel-race-automation, pre-recalculation)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,85 +74,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A noncompetitive hill-climb fan ride through Yabakei, Hon-Yabakei and Sanko in Nakatsu, Oita — a nationally designated Place of Scenic Beauty (1923) and part of Japan Heritage story #054, \"Yabakei Excursion\" (recognized 2017). This is a Japanese national designation, not a UNESCO World Heritage listing. The riding mixes mountain public roads with sections of the Maple Yaba Cycling Road, built on the abandoned Yabakei Railway alignment, threading old railway tunnels and bridges through the river valley. Hon-Yabakei's landscape includes the Yamakuni River, the Ao-no-Domon tunnel, Kyoshuho cliffs, and the Rakanji rock formations and historic stone bridges, though the organizer's public materials don't specify which landmarks every route passes. Entry via Ura-Yabakei is not verified for the current course and shouldn't be assumed.",
+      "signature_challenge": "Repeated short, steep paved passes — up to nine on the 150km S course, seven on the 120km A course — with isolated ramps the organizer describes as exceeding 20%. Individual climbs generally gain 200-300m; no official gradient-by-gradient data or climb names have been published.",
       "suffering_zones": [
-        "Gorge Wall Climbs: Steep 10-15% gradients through Hon-Yabakei testing legs amid sheer rock faces.",
-        "Ura-Yabakei Pulls: Remote valley ascents with 3500 ft cumulative burn in humid May air."
+        "S/A course climbing: up to nine short, punchy passes on the flagship 150km S course, each roughly 200-300m of gain, with isolated ramps over 20% per the organizer's own course notes",
+        "Maple Yaba Cycling Road: the former railway alignment through old tunnels and river-valley bridges — scenic connective tissue between climbs, not a suffering zone itself, but real mileage",
+        "Narrow mountain roads with steep descents — flagged directly in the organizer's safety guidance, not marketing copy; roads remain open to normal traffic"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Start/finish at Yabakei Furusato Village Shunsaikan (second parking lot).",
       "food": "",
-      "official_site": "https://tourdeyabakei.studio.site"
+      "official_site": "https://tourdeyabakei.studio.site/"
     },
     "history": {
-      "founded": 2015,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2023,
+      "origin_story": "Inaugural edition held October 1, 2023 with 200+ riders, organized by the Tour de Yabakei Executive Committee to showcase the Yabakei gorge's Japan Heritage-recognized scenery. Grew to 480 riders by its third edition (May 2025), including an official delegation from Taichung, Taiwan.",
+      "notable_moments": [
+        "2023: inaugural edition, 200+ riders",
+        "2025: third edition draws 480 riders (ages 8-84) against an 800-rider capacity, including a Taichung, Taiwan delegation"
+      ],
+      "reputation": "A young, growing regional tourism ride — a 2024 development profile described the goal as eventually making it 'representative of Oita,' implying it hasn't reached that stature yet."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Young, Untimed Fan Ride — No Confirmed 2026 Date",
+      "summary": "Tour de Yabakei is a noncompetitive, untimed hill-climb fan ride through a Japan Heritage-designated gorge, now three editions deep (Oct 2023, May 2024, May 2025). The 2025 edition drew approximately 480 riders across four self-selected courses (150/120/70/40km) against an 800-rider combined capacity, including an official delegation from Taichung, Taiwan. It's a fan ride, not a race — no timing, no results, no ranked field. As of this verification (July 2026), no 2026 date has been announced on either the official event site or the local tourism association's calendar; status is unknown rather than confirmed-active until a new date appears.",
+      "strengths": [
+        "Nationally recognized terrain — Japan Heritage-designated Yabakei gorge (story #054), a real geological and cultural landmark, not a marketing label",
+        "Four course options (150/120/70/40km) let riders pick their own difficulty, including a relaxed, untimed 'Karaage' fun-ride tier",
+        "Transparent, modest entry fees (¥7,000-9,900) with an optional carbo-loading party add-on",
+        "Growing international reach for a young event — an official Taichung, Taiwan delegation rode in 2025"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition as of this verification — the event may be on pause; don't book travel assuming continuity",
+        "Untimed, noncompetitive format — no results, no ranked field, no elite depth; genuinely a fan ride rather than a race in the traditional sense",
+        "Only three editions deep (since 2023) with modest turnout (480 of an 800-rider capacity in 2025) — no long track record yet",
+        "Narrow roads and steep, technical descents flagged directly by the organizer as a real safety concern, not incidental",
+        "No verified segment-level climb data (names, exact gradients) beyond the organizer's general 'slopes over 20%' statement"
+      ],
+      "bottom_line": "If a 2026 date gets confirmed, this is a legitimate, low-key way to ride genuinely scenic, heritage-designated Japanese gorge roads without race pressure. But verify an actual current-year edition exists before planning travel — as of now, the last confirmed running was May 2025."
     },
     "final_verdict": {
-      "score": "61/100",
-      "one_liner": "Scenic Yabakei gorge ramble blending climbs and culture.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "60/100",
+      "one_liner": "A young, honest, untimed fan ride through a heritage-designated Japanese gorge — currently unconfirmed for 2026.",
+      "should_you_race": "Only once a 2026 date is officially confirmed — check tourdeyabakei.studio.site and nakatsuyaba.com directly before booking travel. If it's running, it's worthwhile for scenic, self-paced climbing without race pressure.",
+      "alternatives": "For a similar noncompetitive scenic Japanese road ride with a confirmed 2026 date, see Fuji-san 1-Lap Cycling / Fujiichi (Yamanashi/Shizuoka, Oct 25 2026) — a comparable supported long ride with a more established organizer and a larger field cap."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Tour de Yabakei gran fondo cycling Nakatsu",
-      "videos": [
-        {
-          "video_id": "Ua581QoSeqk",
-          "title": "TOUR DE YABAKEI",
-          "channel": "ツールドやばけい実行委員会",
-          "view_count": 187,
-          "upload_date": "20241113",
-          "duration_string": "51",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=Ua581QoSeqk",
-          "curated": false
-        },
-        {
-          "video_id": "DPhUluukZpA",
-          "title": "4K Japan Walk Tour with Relaxing ASMR Wave Sound in Aoshima Shrine Miyazaki - Sea with Rain Forest",
-          "channel": "Japan Travel Rec",
-          "view_count": 241,
-          "upload_date": "20211002",
-          "duration_string": "31:56",
-          "description": "Enjoy a guided walking tour on Aoshima Island in Miyazaki, Japan, where we visit the unique sea, Aoshima Shrine, subtropical rain forest and the local botanical garden area! Miyazaki is located in the Southern part of Honshu (mainland) in Japan and is known for its sunny weather and subtropical atmosphere. In this walking POV video, you can hear the ASMR sound of for example waves and cicada shrilling, which is typical for Japanese summer.\n\n\n00:00 Aoshima Island\n00:42 The morning sun on the sea\n01:49 Yayoi Bridge\n02:06 \"Goblin's Washboard\"\n03:25 A store selling handicrafts of the shells\n03:58 The gate of Aoshima Shrine\n05:02 Aoshima Shirine\n05:47 The spot for wishing of the match-making and love\n07:02 Fortune telling box\n07:21 Going into the shrine\n07:35 The main building of the shrine\n08:21 Path of wish\n08:44 The rain forest in the shrine site on the island\n09:54 The wish-making spot with shells\n10:11 The popular wish-making & fortune-telling spot\n11:11 Walking through the path in the rain forest\n13:15 Start walking on the beach around the shrine\n14:57 The popular photo spot with a lighthouse in the background\n15:12 \"Goblin's Washboard\"\n21:28 Go over the Yayoi Bridge\n25:50 Area with shops and restaurants\n27:10 Rental cycle\n27:45 Start walking toward the parking lot\n28:18 Miyakoh Botanic Garden Aoshima\n28:43 Cultivation greenhouse\n29:22 Aoshima Subtropical Botanical Garden, Big Greenhouse \n30:43 Restroom in the garden\n30:50 Free Parking",
-          "tags": [
-            "yt:cc=on",
-            "countryside",
-            "miyazaki",
-            "ASMR",
-            "UCv4_wsNMnwr0zjyz6RU3n_w",
-            "Japan Travel Rec",
-            "Shirine",
-            "Walk"
-          ],
-          "url": "https://www.youtube.com/watch?v=DPhUluukZpA",
-          "curated": false
-        }
-      ],
-      "quotes": []
-    },
+    "citations": [
+      {
+        "url": "https://www.city-nakatsu.jp/mayor-docs/2025060200021/",
+        "category": "official",
+        "label": "Nakatsu City — 2025 Post-Event Report (480 riders, Taichung delegation)"
+      },
+      {
+        "url": "https://www.sportsentry.ne.jp/event/t/99089",
+        "category": "official",
+        "label": "Sports Entry — 2025 Course/Fee/Capacity Detail (S/A/B/K breakdown)"
+      },
+      {
+        "url": "https://tourdeyabakei.studio.site/",
+        "category": "official",
+        "label": "Tour de Yabakei — Official Event Site (still shows 2025 branding as of Jul 2026)"
+      },
+      {
+        "url": "https://japan-heritage.bunka.go.jp/ja/stories/story054/",
+        "category": "reference",
+        "label": "Japan Agency for Cultural Affairs — Japan Heritage Story #054, \"Yabakei Excursion\""
+      }
+    ],
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://nakatsuyaba.com/en/pages/23?detail=1&b_id=104&r_id=54",
-      "notes": "The event ran in 2025 in Nakatsu, Oita as a leisure road ride; no cancellation or discontinuation signal was found, but no 2026 edition announcement was found and the file date still says 2026: May TBD.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "status": "unknown",
+      "verified": "2026-07-24",
+      "source": "https://tourdeyabakei.studio.site/",
+      "notes": "Last confirmed edition was the third Tour de Yabakei on May 11, 2025 (480 riders). As of July 24, 2026, no official 2026 announcement, date, registration page, or cancellation notice was found on the event site (still branded 'Tour de Yabakei 2025') or the Nakatsu Yabakei Tourism Association site. A third-party calendar guessed May 10, 2026 but labeled it 'unconfirmed'; that date has now passed with no corroboration. Founded 2023 (inaugural edition), not 2015 as previously listed. Treat status as unknown/on-hiatus rather than active until a 2026+ date is officially confirmed."
     }
   }
 }

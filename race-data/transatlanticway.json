@@ -5,35 +5,62 @@
     "display_name": "TransAtlanticWay",
     "tagline": "",
     "vitals": {
-      "distance_km": 2499.3,
-      "distance_mi": 1553.0,
-      "elevation_m": 29300,
-      "elevation_ft": 96128.0,
-      "location": "Cork to Derry, Ireland",
+      "distance_km": 2420.2,
+      "distance_mi": 1504.0,
+      "elevation_m": 27000,
+      "elevation_ft": 88583.0,
+      "location": "Cork/Kinsale to Derry, Ireland",
       "location_badge": "Cork to Derry, Ireland",
       "country": "Ireland",
-      "date": "2026: June TBD",
-      "date_specific": "2026: June 18",
-      "field_size": "Not specified",
-      "start_format": null,
+      "date": "2026: June 18 (11th edition)",
+      "date_specific": "2026: June 18 start; no official multi-day finish deadline published (a secondary listing shows a June 18-July 2 event window)",
+      "field_size": "~100 riders across all four distances (2025 benchmark); exact 2026 aggregate not published on the official site",
+      "start_format": "Self-supported, continuously timed — wave/group starts with no bunch-riding format and no drafting outside registered pairs",
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Two manned checkpoints",
-      "cutoff_time": "Not specified",
+      "feed_zones": "Two staffed checkpoints (organizer-provided); no aid stations between them",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Cú Chulainn (flagship/full)",
+          "distance_km": 2420,
+          "note": "Kinsale/Cork to Derry; organizer's own site is internally inconsistent, listing both 2,400km and 2,500km — the 2026 GPS tracker recorded 2,420.24km for finishers"
+        },
+        {
+          "name": "Setanta",
+          "distance_km": 1700,
+          "note": "Kinsale/Cork to Derry; 2026 tracker recorded 1,700.04km"
+        },
+        {
+          "name": "Cean beag Ó dheas (south)",
+          "distance_km": 1000,
+          "note": "Kinsale to Galway; 2026 tracker recorded approximately 1,036km"
+        },
+        {
+          "name": "Cean beag Ó thuaidh (north)",
+          "distance_km": 1000,
+          "note": "Galway to Derry; nominal distance"
+        }
+      ]
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Temperate — Atlantic maritime, highly variable",
+      "description": "Persistent or gale-force Atlantic winds on exposed headlands, fast-changing weather, and real rain risk across a multi-day route with no shelter beyond what riders arrange themselves.",
+      "challenges": [
+        "Gale-force coastal winds — Storm Hector forced riders to shelter mid-race in 2018",
+        "Rapidly changing temperatures and persistent Atlantic rain over a multi-day self-supported effort"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Mixed mountain-pass and coastal terrain",
+      "surface": "Organizer describes the route as paved throughout, but rider reports consistently note broken/deteriorating pavement, very narrow lanes, repeated short ramps over 20%, and occasional gravel sections in past editions",
+      "technical_rating": 3,
+      "features": [
+        "Wild Atlantic Way coastal corridor, Cork/Kinsale to Derry",
+        "Beara Peninsula, Dingle Peninsula, Connemara, Achill Island, Donegal coast"
+      ]
     },
     "fondo_rating": {
       "distance": 5,
@@ -56,7 +83,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 63. EDITORIAL WAVE 8 (2026-07-24): no dimension changes made — the corrected distance (~2,420km vs. the prior 2,499.3km) and elevation (an estimated ~27,000m vs. the prior uncited 29,300m) both fall within the range already captured by the existing distance=5/climbing=5 scores, so no rescoring was warranted. See catalog_flags for a taxonomy caveat: this event does not fit the gran_fondo discipline or several of these scoring dimensions (field_depth, prestige, community_culture) cleanly, since it is a self-supported ultra with no bunch-riding/aid-station format — flagged rather than silently rescored, per pipeline instructions not to invent a new discipline enum."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -64,48 +91,122 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        {
+          "name": "Priest's Leap"
+        },
+        {
+          "name": "Healy Pass (Beara Peninsula)"
+        },
+        {
+          "name": "Moll's Gap"
+        },
+        {
+          "name": "Conor Pass (Dingle Peninsula)"
+        },
+        {
+          "name": "Glengesh Gap (Donegal)"
+        },
+        {
+          "name": "Mamore Gap (Donegal)"
+        }
+      ],
+      "profile_type": "Multiple remote coastal mountain passes strung across a continuous multi-day route — not a categorized climbing profile in the road-race sense; total elevation gain has no single official current figure, and independent rider GPS data across editions clusters in the high-20,000-meter range",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "TransAtlanticWay is a self-supported, continuously timed road ultra following Ireland's Wild Atlantic Way, not a mass-participation gran fondo. The flagship Cú Chulainn route runs north from Cork/Kinsale through West Cork, Kerry, Clare, Galway/Connemara, Mayo, Sligo, and Donegal to finish in Derry — organizer materials are internally inconsistent on the exact distance (the homepage says 2,500km, the route page says 2,400km), with the 2026 GPS tracker recording 2,420.24km for riders who completed the full course. Three shorter routes also run point-to-point along the same corridor: Setanta (~1,700km), and two roughly 1,000km halves — Cean beag Ó dheas (Kinsale to Galway) and Cean beag Ó thuaidh (Galway to Derry). Total elevation gain has no single official current figure; independent rider GPS data across editions clusters in the high-20,000-meter range, but varies by exact route and measurement device. The organizer describes the roads as paved throughout, though rider reports consistently note broken pavement, very narrow lanes, repeated short ramps over 20%, and occasional gravel sections — a road-oriented ultra or gravel bike with wide tires and low gearing suits the course better than a standard road-race setup. Route direction and specific segments shift year to year (the 2025 edition, for example, bypassed part of Donegal due to a road rally), so individual landmarks should be read as characteristic route features, not fixed annual waypoints.",
+      "signature_challenge": "There is no single climb that defines TransAtlanticWay — the challenge is the format itself: a multi-day, self-supported effort along an entire Atlantic coastline, managing sleep, resupply, and mechanical problems alone between two staffed checkpoints, with mandatory GPS tracking and no private support crew allowed.",
+      "suffering_zones": [
+        "Priest's Leap, Caha Pass, and Healy Pass on the Beara Peninsula — steep, narrow, exposed climbs early on the flagship route",
+        "Moll's Gap, Ballaghbeama, the Gap of Dunloe, and the Dingle Peninsula's Conor Pass — a dense sequence of Kerry mountain passes",
+        "Achill Island's steep approach to Keem Bay, and Donegal's Glengesh and Mamore gaps — remote, weather-exposed terrain late in the route",
+        "Persistent or gale-force Atlantic headland winds and fast-changing weather — Storm Hector forced riders to shelter mid-race in 2018, and the route's south-to-north direction is partly chosen to manage prevailing wind exposure"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Not included in entry fee. Optional group accommodations available at start and finish locations (details to be confirmed). Riders are responsible for securing lodging along the route.",
-      "transport": "",
+      "lodging_strategy": "Entry does not include accommodation. Riders arrange their own hotels, B&Bs, camping, or bivouac stops along the route — contemporary rider reports describe overnight stops in bus shelters, fields, petrol stations, rugby clubs, and other found shelter when nothing else was available.",
+      "transport": "Two staffed checkpoints plus start/finish logistics and baggage transfer are organizer-provided; a mandatory GPS tracker is issued to every rider. No private support crew, follow vehicle, or personal roadside assistance is permitted — this is self-supported, not fully unsupported (some organizer logistics exist), but riders are on their own for lodging, food, and mechanical issues between checkpoints.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.transatlanticway.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2016,
+      "origin_story": "Founded in 2016 by Adrian O'Sullivan, an experienced ultra-distance rider (7th in the 2014 Transcontinental Race, 5th in the TransAm), who created TAW after identifying a shortage of Transcontinental-style self-supported road-bikepacking events in Ireland. The inaugural edition was won by Bernd Paul.",
+      "notable_moments": [
+        "Field grew from 30 riders (2016) to more than 160 (2018) before settling to roughly 100 riders across all four distances by 2025.",
+        "2018 edition: Storm Hector forced riders to shelter mid-race, illustrating the real weather risk on exposed Atlantic headlands.",
+        "Since 2019 the organizer has favored 'ride' over 'race' framing — there is no prize purse or formal podium, though riders remain GPS-tracked and timed and the fastest is recognized.",
+        "2026 (11th edition) retained the 2025 Cork-to-Derry direction, reversing the event's older Dublin-Derry-Kinsale format."
+      ],
+      "reputation": "An established, internationally recognized niche fixture in the European self-supported ultra-distance calendar, in the lineage of the Transcontinental Race and TransAm — though not at the Transcontinental Race's prestige, selectivity, or competitive depth."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Self-Supported Ultra — Filed in the Wrong Category",
+      "summary": "TransAtlanticWay is an established self-supported road ultra along Ireland's Wild Atlantic Way, now in its 11th edition (2026) and founded in 2016 by ultra-distance rider Adrian O'Sullivan. It belongs in the Transcontinental Race/TransAm lineage — multi-day, continuously GPS-tracked, no private support crew or drafting outside registered pairs, riders sourcing their own sleep and food between two staffed checkpoints. That is the core problem with how this profile has sat in this database: TransAtlanticWay is not a gran fondo in any real sense — riders start in waves rather than one shared field, there's no aid-station-supported single day, and no bunch riding (drafting is banned outside registered pairs). It's an entirely different kind of event, and describing it with gran-fondo vocabulary risks a rider showing up expecting supported infrastructure that doesn't exist. On its own terms: field growth from 30 riders (2016) to 160+ (2018), organizer-provided GPS tracking and checkpoints, and consistent completion data through the 2026 edition. The organizer's own course numbers are inconsistent (2,400km vs 2,500km on the same site) and no official elevation figure exists — independent GPS data puts the climbing in the high-20,000-meter range, but that's an estimate, not a certified total.",
+      "strengths": [
+        "A decade-plus-running self-supported ultra in the same lineage as the Transcontinental Race and TransAm, with a documented history and field growth to back it",
+        "Genuinely remote Wild Atlantic Way terrain — Healy Pass, the Beara Peninsula, Dingle's Conor Pass, Achill Island, Glengesh and Mamore gaps, with real route variation year to year",
+        "Real organizer infrastructure despite the self-supported format: mandatory GPS tracking, two staffed checkpoints, start/finish logistics, and baggage transfer",
+        "Four distance options (roughly 1,000km to 2,420km) let riders choose their level of ultra-distance commitment rather than an all-or-nothing flagship-only format"
+      ],
+      "weaknesses": [
+        "This is not a gran fondo — it's a multi-day, self-supported road ultra with wave starts (not a shared mass field), no aid stations, and no bunch riding (drafting is banned outside registered pairs); riders expecting gran-fondo-style support will be badly misled (see catalog_flags)",
+        "The organizer's own site is internally inconsistent on the flagship distance (2,400km vs 2,500km); the best available figure is the 2026 GPS tracker's 2,420.24km, not either organizer number",
+        "No official total elevation-gain figure exists for the current course — independent rider GPS data across editions clusters in the high-20,000-meter range, but varies materially by route and device",
+        "Real weather and mechanical risk with minimal outside support — Storm Hector forced riders to shelter in 2018, and the roads, while officially 'paved throughout,' include broken pavement, very narrow lanes, and repeated short ramps over 20%"
+      ],
+      "bottom_line": "An established self-supported road ultra on its own terms — but it is not a gran fondo, and riders should approach it exactly as they would the Transcontinental Race or TransAm: solo logistics, real mechanical and weather risk, and no supported infrastructure beyond two checkpoints and a GPS tracker."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "An epic self-supported road cycling odyssey along Ireland's most dramatic coastline, combining extreme distance and elevation with notable scenery and personal challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Ireland's Wild Atlantic Way, ridden solo and self-supported over 2,400+ km — a real ultra, not a gran fondo.",
+      "should_you_race": "Yes if you're an experienced self-supported ultra-distance rider looking for a Transcontinental-lineage event on remote Irish coastal terrain. No if you're looking for a mass-participation gran fondo with aid stations and bunch riding — that's not this event's format at all.",
+      "alternatives": "For the archetypal European self-supported road ultra: the Transcontinental Race. For a similar Irish ultra-distance test with a more traditional crew-supported option: Race Around Ireland."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.transatlanticway.com/",
+        "category": "official",
+        "label": "TransAtlanticWay — Official Site"
+      },
+      {
+        "url": "https://www.transatlanticway.com/enter/",
+        "category": "official",
+        "label": "Official 2026 Entry Page (11th edition, June 18 start)"
+      },
+      {
+        "url": "https://www.transatlanticway.com/rules/",
+        "category": "official",
+        "label": "Official Rules — Self-Support, No-Drafting, GPS Tracker Requirements"
+      },
+      {
+        "url": "https://www.followmychallenge.com/live/taw-2026/",
+        "category": "other",
+        "label": "Independent 2026 GPS Tracking Record (route distances, finishers)"
+      },
+      {
+        "url": "https://www.apidura.com/journal/transatlantic-way-ultra-distance-racing-in-irelands-wild-west/",
+        "category": "media",
+        "label": "Apidura — History, Founding, and Format Context"
+      },
+      {
+        "url": "https://www.sidetracked.com/fieldjournal/the-transatlantic-way-race/",
+        "category": "media",
+        "label": "Sidetracked — Rider Field Journal (weather, sleeping conditions)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.transatlanticway.com/enter/",
-      "notes": "2026 edition announced for June 18 in Cork-to-Derry; no rebrand or cancellation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 8): distance corrected from an uncited 2,499.3km to approximately 2,420.2km (distance_mi recalculated to 1,504.0) — the organizer's own site is internally inconsistent (homepage: 2,500km; route page: 2,400km), so the 2026 independent GPS tracker's measured 2,420.24km for the flagship Cú Chulainn route is used as the best defensible figure. Elevation corrected from an uncited 29,300m to an estimated ~27,000m, explicitly flagged as route- and device-dependent — no official current total-ascent figure exists; independent rider GPS data across editions ranges roughly 26,000-29,300m depending on year and route. route_options populated with all four current distances (Cú Chulainn ~2,420km, Setanta ~1,700km, Cean beag Ó dheas ~1,000km, Cean beag Ó thuaidh ~1,000km). Confirmed 2026 is the 11th edition, started Thursday June 18, 2026, retaining the 2025 Cork/Kinsale-to-Derry direction. Founded corrected from null to 2016 (organizer Adrian O'Sullivan; inaugural winner Bernd Paul). Field_size added (~100 riders across all distances, 2025 benchmark; exact 2026 aggregate not published). IMPORTANT TAXONOMY FINDING: this is a self-supported, continuously-timed road ultra (Transcontinental Race/TransAm lineage) with wave starts rather than a shared mass field, no aid stations, and no bunch riding — materially different from a gran fondo. Per pipeline instructions, the discipline enum is left unchanged (gran_fondo) rather than inventing a new value; see catalog_flags for the full taxonomy note and a recommendation that a human evaluate adding a proper ultra-distance/self-supported discipline to config/dimensions.json."
+    },
+    "catalog_flags": {
+      "taxonomy_note": "TransAtlanticWay is a multi-day, continuously-timed, self-supported road ultra (bikepacking-style, in the Transcontinental Race/TransAm lineage) — not a mass-participation gran fondo. It requires full self-support with no private outside assistance, no drafting outside registered pairs, and a mandatory organizer-provided GPS tracker; the organizer supplies only two staffed checkpoints plus start/finish logistics and baggage transfer, not aid stations or bunch-ride support. None of Roadie Labs' current five disciplines (gran_fondo, sportive, century, multi_stage, hillclimb) accurately describes this format — multi_stage is also wrong since TAW is explicitly a single continuous stage, not segmented days. Per pipeline instructions, the discipline enum is left unchanged (gran_fondo) rather than invented; flagging for a human call on whether to add a proper ultra-distance/self-supported discipline value to config/dimensions.json rather than continuing to file events like this under gran_fondo. Several fondo_rating dimensions (field_depth, prestige, community_culture, organization) also assume a mass-participation format and may not map cleanly onto a self-supported ultra — flagged rather than silently rescored.",
+      "ruled": "2026-07-24"
     }
   }
 }

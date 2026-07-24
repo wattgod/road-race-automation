@@ -5,21 +5,21 @@
     "display_name": "Round Denmark Bike Race",
     "tagline": "",
     "vitals": {
-      "distance_km": 1965.0,
-      "distance_mi": 1221.0,
-      "elevation_m": 8659,
-      "elevation_ft": 28409.0,
-      "location": "Denmark (circumnavigation)",
-      "location_badge": "Denmark (circumnavigation)",
-      "country": null,
+      "distance_km": 1964.0,
+      "distance_mi": 1220.6,
+      "elevation_m": 8658,
+      "elevation_ft": 28405.5,
+      "location": "Helsingør to Farum, Denmark (Zealand, southern islands and Jutland loop)",
+      "location_badge": "Denmark (national loop)",
+      "country": "Denmark",
       "date": "2026: July 5",
-      "date_specific": "2026: July 5",
-      "field_size": "30",
+      "date_specific": "2026: July 5, 08:00 start at Kronborg Castle, Helsingør (road-course edition)",
+      "field_size": "30-rider cap on the road course (historically much smaller starting fields; 16 starters in 2018, 12 in 2019); a separate gravel edition is capped at 20",
       "start_format": null,
-      "registration": null,
+      "registration": "https://www.rounddenmarkbikerace.dk/registration.html",
       "entry_fee": null,
-      "feed_zones": "none (unsupported)",
-      "cutoff_time": "N/A",
+      "feed_zones": "None from the organizer — self-supported between checkpoints; private crew support, private lodging and outside navigation help are prohibited, though ordinary public services (shops, cafes) equally available to all riders are permitted",
+      "cutoff_time": "No published time cutoff found; course record on the road edition is 5 days, 5 hours, 27 minutes (2023)",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -70,42 +70,91 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this is not a single-day gran fondo. Round Denmark Bike Race is a fixed-route, self-supported ultra-distance bikepacking time trial, run by an independent, non-profit volunteer organizer — genuinely distinct from Race Around Denmark (a separate 1,600 km event run by Uggi Kaldan's RAD team) and from Danmark Rundt (the UCI ProSeries professional stage race, an entirely different event). All riders share a common 08:00 start, then immediately disperse to ride solo/self-paced — placing is decided by finish time, not a shared-peloton race; the clock runs continuously, though riders may stop and sleep, and the route is a mandatory organizer-supplied GPX, not rider-chosen. The 2026 road course was scheduled to start at Kronborg Castle in Helsingør on July 5 and finish near Farum, broadly looping through Zealand and Denmark's southern islands before following Jutland's coasts and inland roads — a loose national loop rather than a literal coastline-hugging circumnavigation, requiring five ferry crossings. The road edition still includes roughly 122-130 km of gravel and about 1 km of cobbles despite its 'road' framing. Denmark is flat, so gradient isn't the challenge here: the load is nearly 2,000 km of exposed coastal wind, variable rain and temperature, accumulated sleep deprivation, self-managed food and repairs, and coordinating five separate ferry schedules — with only limited organizer support (luggage transport to Farum, a post-finish shower/possible overnight stay, and GPS tracking), not on-course provisioning or private crew support.",
+      "signature_challenge": "Nearly 2,000 km of continuous, self-navigated riding with no on-course provisioning or private crew support — riders manage their own sleep, nutrition, mechanical repairs and ferry timing for the entire route, with the current road-course record standing at 5 days, 5 hours, 27 minutes (2023).",
+      "suffering_zones": [
+        "Jutland's exposed coastal roads — persistent wind is the real terrain challenge in a country with almost no elevation",
+        "The five mandatory ferry crossings — timing arrivals against ferry schedules while managing an ongoing ultra-distance clock",
+        "Accumulated sleep deprivation over multiple days — riders choose their own rest strategy with no organizer-mandated stops",
+        "Roughly 122-130 km of gravel and occasional dirt/sand sections on what is marketed as the 'road' edition"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Self-supported; riders manage own overnight stops (non-profit event with no services provided).[3]",
-      "transport": "",
+      "lodging_strategy": "Fully self-supported; riders arrange and pay for their own overnight stops (hotels, private accommodation) — the non-profit organizer provides no lodging, food or support vehicles.",
+      "transport": "Riders must independently time and pay for five ferry crossings as part of the fixed route; no organizer transport support is provided between checkpoints.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.rounddenmarkbikerace.dk/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2018,
+      "origin_story": "Conceived in spring 2017 by an independent Danish volunteer team (current race director publicly known only as 'Lone'); the inaugural edition ran in 2018 with 16 starters, followed by 12 in 2019. A separate gravel-course edition was added later, capped at 20 riders. It remains a deliberately small, grassroots ultra — a 2022 finisher who had already completed the Transcontinental Race chose this event specifically as a lower-profile, fixed-route alternative.",
+      "notable_moments": [
+        "2018: Inaugural edition, 16 starters",
+        "2019: 12 starters",
+        "2023: Current road-course record set, 5 days 5 hours 27 minutes"
+      ],
+      "reputation": "A legitimate but deliberately small, grassroots self-supported ultra — not a high-profile peer of the Transcontinental Race or the separate, larger Race Around Denmark (RAD), which carries WUCA/RAAM-qualifier status this event does not."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine Grassroots Ultra, Not a Gran Fondo",
+      "summary": "Round Denmark Bike Race is a real, independently organized, self-supported ultra-distance bikepacking time trial — genuinely distinct from both the larger Race Around Denmark and the professional Danmark Rundt stage race, despite years of database confusion between the three. It should never have been catalogued as a single-day gran fondo: nearly 2,000 km on a fixed organizer GPX, a continuous multi-day clock, five mandatory ferry crossings, and a deliberately small field (a 30-rider cap on the road course, historically far smaller starting fields) put it firmly in grassroots ultra-distance territory. Denmark's flat terrain means the challenge here is entirely about distance, wind, sleep management and self-sufficiency rather than climbing.",
+      "strengths": [
+        "A genuine, long-running (since 2018) self-supported ultra with real rules rigor — mandatory GPX, prohibited private crew support, SPOT tracker requirement, and a real entry bar (rules test, proof of a recent 100+ km ride, mandatory briefing)",
+        "Clearly and independently confirmed as distinct from both Race Around Denmark and the professional Danmark Rundt stage race — no name-collision confusion once verified against official sources",
+        "A deliberately small, low-key grassroots field appeals to riders who want a serious ultra challenge without the scale or profile of the Transcontinental Race",
+        "A broad national loop — Zealand, the southern islands, and Jutland's coasts, tied together by five ferry crossings"
+      ],
+      "weaknesses": [
+        "Not a race in any conventional sense — riders do share an 08:00 start, but they immediately disperse to ride solo/self-paced with no closed roads and no organizer-run field logistics, nothing resembling a gran fondo experience",
+        "Historically tiny fields (16 starters in 2018, 12 in 2019) — even the current 30-rider road-course cap is small by any ultra-cycling standard",
+        "No WUCA championship or RAAM-qualifier status — that distinction belongs to the separate, larger Race Around Denmark, and should not be conflated with this event",
+        "The 'road' course still includes roughly 122-130 km of gravel and occasional dirt/sand — riders expecting a fully paved route will be surprised"
+      ],
+      "bottom_line": "A legitimate small-scale, self-supported Danish ultra worth entering if you want a serious multi-day distance test with real entry requirements and don't need a big field or prestige — just don't mistake it for a gran fondo, or for the larger, RAAM-qualifying Race Around Denmark."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "Ultimate unsupported circumnavigation of Denmark testing endurance, navigation, and self-reliance.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine self-supported ultra looping Denmark by ferry and coastal road — grassroots, small, and nothing like a gran fondo.",
+      "should_you_race": "Yes if you're specifically seeking a small, serious, self-supported ultra-distance challenge and can manage your own logistics, sleep and ferry timing across nearly 2,000 km. Not a fit if you're looking for a conventional single-day, mass-participation gran fondo.",
+      "alternatives": "For a larger-scale, RAAM-qualifying Danish ultra, see Race Around Denmark (a separate, distinct event run by Uggi Kaldan's RAD team). For a conventional single-day Danish road gran fondo, look elsewhere in the catalog."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.rounddenmarkbikerace.dk/",
+        "category": "official",
+        "label": "Official Event Site — Format, Route, Rules"
+      },
+      {
+        "url": "https://www.rounddenmarkbikerace.dk/rules.html",
+        "category": "official",
+        "label": "Official Rules — Self-Supported Requirements"
+      },
+      {
+        "url": "https://rounddenmarkbikerace.dk/athletesguide.html",
+        "category": "official",
+        "label": "Official 2026 Athlete's Guide — Vitals, Start Location, Ferry Route"
+      },
+      {
+        "url": "https://www.rounddenmarkbikerace.dk/halloffame.html",
+        "category": "official",
+        "label": "Official Hall of Fame — History, Starter Counts, Course Record"
+      },
+      {
+        "url": "https://racearounddenmark.org/",
+        "category": "reference",
+        "label": "Race Around Denmark (RAD) — The Separate, Larger Event, Confirming Distinct Identity"
+      }
+    ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.racearounddenmark.org",
-      "notes": "Search results show the pro race Danmark Rundt and Race Around Denmark but no clear evidence for a separate Round Denmark Bike Race circumnavigation event.; via sonar-pro eligibility_audit"
+      "status": "active",
+      "verified": "2026-07-24",
+      "source": "https://www.rounddenmarkbikerace.dk/",
+      "notes": "CONFIRMED via codex gpt-5.6-sol foreground research, editorial wave 8, resolving the identity uncertainty left by the prior automated check. Round Denmark Bike Race IS real and is NOT a name variant of Race Around Denmark (RAD) — RAD is a separate 1,600 km event run by Uggi Kaldan's team with WUCA/RAAM-qualifier status this event does not have. Neither is this the professional 'Danmark Rundt' (Tour of Denmark) UCI ProSeries stage race (July 29-Aug 2, 2026), a completely different event. Active based on current 2026 event materials, registration, route figures and athlete guide; no cancellation/closure notice found. The 2026 road-course start was scheduled for 08:00 July 5 at Kronborg Castle, Helsingør; as of this check (2026-07-24) the site had not yet posted 2026 results and some official documents were inconsistent on the exact start date (July 5 vs. July 6) — treat the 2026 edition as scheduled/likely-run rather than confirmed-completed until results post (latest Hall of Fame entries are 2023 road/2024 gravel). Corrected this wave: distance_km 1965.0->1964.0 and elevation_m 8659->8658 (one-unit rounding corrections to the organizer's current advertised figures); field_size corrected from a bare '30' to note this is a road-course cap, not a demonstrated field size (historical starts have been far smaller: 16 in 2018, 12 in 2019); location corrected from generic 'Denmark (circumnavigation)' to the actual start/finish (Helsingør to Farum) since the route is a loop through Zealand/southern islands/Jutland via five ferries, not a literal coastline-hugging circumnavigation; feed_zones and cutoff_time corrected to reflect the organizer's actual self-supported rules rather than placeholder 'N/A' text. SOL REVIEW CORRECTION (2026-07-24): a follow-up sol adversarial review found three factual overstatements in the initial draft, all corrected: (1) 'no mass start' was wrong — all riders share a common 08:00 start, then disperse to ride solo (fixed to 'shared start, no shared peloton'); (2) 'no organizer support beyond public services' was too absolute — the organizer transports luggage to Farum, offers a post-finish shower/possible overnight stay, and tracks riders via GPS (fixed to 'no on-course provisioning or private crew support'); (3) 'genuine full-country coverage' was hype conflicting with the organizer's own 'major parts of Denmark' wording (fixed to 'broad national loop'). Sol confirmed the underlying ultra-vs-gran_fondo taxonomy conclusion is correct."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a fixed-route, self-supported ultra-distance bikepacking time trial (continuous multi-day clock, mandatory GPX, no on-course provisioning or private crew support, five ferry crossings, 30-rider road-course cap) with a shared start but no shared peloton — riders disperse immediately to ride solo/self-paced — doesn't cleanly fit the gran_fondo taxonomy, whose scoring dimensions (field_depth, community_culture, organization, etc.) are designed primarily around mass-participation, shared-start-and-ride events. Not changing the discipline enum per editorial-wave scope, consistent with how race-across-germany.json and race-around-poland.json flag the same taxonomy mismatch — flagging for a human taxonomy decision.",
+      "ruled": "2026-07-24 editorial wave 8"
     }
   }
 }

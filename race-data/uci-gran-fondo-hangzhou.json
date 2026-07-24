@@ -109,6 +109,11 @@
       "verified": "2026-07-23",
       "source": "https://ucigranfondoworldseries.com/en/hangzhou/",
       "notes": "Event is scheduled for 23–24 May 2026 in Hangzhou, so the October TBD date on file is incorrect.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "gran-fondo-hangzhou",
+      "ruled": "2026-07-24",
+      "notes": "SAME EVENT as gran-fondo-hangzhou.json (UCI Gran Fondo Hangzhou Qiandao Lake): this profile's own suffering_zones text ('Qiandao Cat 3 Grinder: 3km at 5.2% around km30') matches gran-fondo-hangzhou's Cat3 climb spec verbatim (3km/5.2% @30km at Qiandao Lake), and this profile's own eligibility.notes already concede the on-file 'October TBD' date is wrong and the real date is 23-24 May 2026 — identical to gran-fondo-hangzhou's confirmed date. This profile is a degraded/genericized shell (location flattened to 'Hangzhou, Zhejiang' instead of the actual Qiandao Lake/Chun'an venue, no GPS, wrong date, thinner logistics) of the same race. gran-fondo-hangzhou.json is the richer, more accurate profile (GPS coords, confirmed two-day schedule, route_options, filled tagline) and is treated as canonical. No editorial work performed on this slug per pipeline step 0."
     }
   }
 }

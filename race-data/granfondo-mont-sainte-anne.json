@@ -12,9 +12,9 @@
       "location": "Beaupré, Quebec, Canada",
       "location_badge": "Beaupré, Canada",
       "country": "Canada",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
-      "field_size": "N/A",
+      "date": "No confirmed edition since 2019 — not currently bookable",
+      "date_specific": "Last confirmed edition: July 14, 2019; a planned July 19, 2020 edition was cancelled by Quebec's COVID-19 event shutdown and never revived",
+      "field_size": "~400 riders (2014, best-documented historical figure); the promotional '2,000 riders' claim was never independently verified",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 61. FLAG (2026-07-24 editorial wave 8): no confirmed edition since 2019 (planned July 2020 edition cancelled by Quebec's COVID-19 event shutdown, never revived) — every dimension score here (organization=4, field_depth=2, etc.) was set against a currently non-bookable event, matching the gran-fondo-mont-tremblant/birkebeinerrittet-road precedent. Recommend a human decide whether this profile should carry an active-style score at all. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,86 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — no confirmed edition has run since 2019. When it operated, this was an all-road Côte-de-Beaupré ride largely following Avenue Royale/Route de la Nouvelle-France near the St. Lawrence, then turning inland into the Laurentian foothills through L'Ange-Gardien, Château-Richer and Saint-Ferréol-les-Neiges, plus rang Saint-Achillée, Saint-Léon and Saint-Elzéar. 2014 offered four distances: 46, 80, 121 and 161 km. The largest ('Alto', ~160-161 km) advertised roughly 2,550 m of climbing with ramps to 17%. This database's prior 130.4 km/1,800 m figures are geographically plausible for the region but do not match any documented standard event distance — the closest historical routes were 115-121 km (medium) or 160-161 km (long); treat 130.4/1,800 as unverified rather than canonical.",
+      "signature_challenge": "Historically, the climb through Saint-Ferréol-les-Neiges and the inland Laurentian foothill roads (rang Saint-Achillée, Saint-Léon, Saint-Elzéar) on the 160 km Alto course — no longer verifiable as current given the event's lapsed status since 2019.",
+      "suffering_zones": [
+        "L'Ange-Gardien and Château-Richer — the historic Côte-de-Beaupré segments closest to the St. Lawrence",
+        "Saint-Ferréol-les-Neiges and the inland foothill climbs — where the route turned away from the river toward the Laurentians",
+        "Rang Saint-Achillée, Saint-Léon and Saint-Elzéar — the sustained inland climbing sections on the longer routes, with ramps reported up to 17%"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and resorts available in Beaupré and nearby Mont Sainte-Anne area, including ski lodges repurposed for summer/fall events.",
+      "lodging_strategy": "Hotels and resorts available in Beaupré and nearby Mont Sainte-Anne area, including ski lodges repurposed for summer/fall events; not verified as currently applicable given no confirmed edition since 2019.",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2013,
+      "origin_story": "First run June 22-23, 2013, founded by Sébastien Roy under the 'Gran Fondo Éco' umbrella, explicitly modeled on Gran Fondo New York, with Olympic alpine skier Mélanie Turgeon as ambassador. Luc Beaudet was event director by 2014. The event ran annually through 2019 (dates drifted from June to July across editions), with a planned July 19, 2020 eighth season cancelled by Quebec's province-wide summer event shutdown during COVID-19. It never relaunched.",
+      "notable_moments": [
+        "2013: Inaugural edition, June 22-23",
+        "2014-2019: Annual editions, dates drifting from June into July",
+        "2020: Planned July 19 edition cancelled by Quebec's COVID-19 public-event shutdown",
+        "2021-2026: No confirmed edition; the former granfondomsa.com domain was newly re-registered in July 2025, consistent with the original operation having lapsed"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Apparently Defunct — No Confirmed Edition Since 2019",
+      "summary": "There is no evidence GranFondo Mont Sainte-Anne has run since its last confirmed edition, July 14, 2019. It was a real, regionally solid Côte-de-Beaupré cyclosportive founded in 2013 by Sébastien Roy (explicitly modeled on Gran Fondo New York), running annually through 2019 with distances from 46 to 161 km and documented climbing to 2,550 m on the longest course. A planned eighth-season edition was scheduled for July 19, 2020 — a date that fell within Quebec's province-wide COVID-19 summer event shutdown, though no event-specific cancellation notice for this race was found, only the general provincial order. No organizer announcement, registration page, or independent result has surfaced for 2021-2026, and the event's former domain was newly re-registered by an unrelated party in 2025 — consistent with (though not proof of) the original operation having lapsed rather than merely paused.",
+      "strengths": [
+        "Historically real Côte-de-Beaupré and Laurentian-foothill terrain, with documented climbing to 2,550 m on the 160 km Alto course and ramps up to 17%",
+        "A credible regional organizer pedigree (Sébastien Roy's Gran Fondo Éco umbrella) and a recognizable local ambassador (Olympic skier Mélanie Turgeon) at launch",
+        "Four distances (46/80/121/161 km) historically gave a genuine range of entry points"
+      ],
+      "weaknesses": [
+        "No confirmed edition since July 14, 2019 — this is not a currently bookable event",
+        "The planned 2020 return fell within Quebec's province-wide COVID-19 event shutdown and was never rescheduled, with six years of silence since (no event-specific cancellation notice was found, only the general provincial order)",
+        "The promotional '2,000 riders / 600 finishers' claim in older coverage is not independently verified — the best-documented field figure is roughly 400 riders in 2014, against an original ~750-rider promotional capacity",
+        "This database's prior 130.4 km/1,800 m vitals don't match any documented historical route distance — treat them as unverified, not canonical"
+      ],
+      "bottom_line": "Treat this as defunct, not bookable. If you want the Côte-de-Beaupré/Mont Sainte-Anne cycling experience this event once offered, look for a currently confirmed Quebec road sportive instead."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "Quebec's top gran fondo delivers epic climbs and stunning fall foliage in the Laurentians.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real Côte-de-Beaupré fondo, silent since 2019 — its planned 2020 return fell within Quebec's COVID shutdown and was never revived.",
+      "should_you_race": "No — there is no current edition to register for, and no evidence of a 2021-2026 return. If a revival is ever announced, revisit; until then, choose an active Quebec road sportive instead.",
+      "alternatives": "For a currently active Quebec road sportive, check the FQSC (Fédération québécoise des sports cyclistes) event calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://cyclingmagazine.ca/sections/ridesevents/gran-fondo-mont-sainte-anne-debuts-in-june/",
+        "category": "media",
+        "label": "Canadian Cycling Magazine — Launch Article, Organizer Interview"
+      },
+      {
+        "url": "https://journalmetro.com/sports/328074/melanie-turgeon-a-finalement-trouve-sa-voie/amp/",
+        "category": "media",
+        "label": "Journal Metro — Turgeon Ambassador Role, Inaugural History"
+      },
+      {
+        "url": "https://laflammerouge.com/category/cyclosport/page/10/",
+        "category": "media",
+        "label": "La Flamme Rouge — 2013 Climb Preview and Course Capacity"
+      },
+      {
+        "url": "https://www.quebec.ca/nouvelles/actualites/details/pandemie-de-la-covid-19-le-gouvernement-du-quebec-demande-lannulation-des-festivals-et-evenements-prevus-au-cours-de-lete",
+        "category": "official",
+        "label": "Government of Quebec — Summer 2020 Event Cancellation Order (Covers the Planned July 19, 2020 Edition)"
+      },
+      {
+        "url": "https://sainttitedescaps.com/wp-content/uploads/2022/05/04-mars.pdf",
+        "category": "official",
+        "label": "Municipal Route Authorization — 2019 Edition, Last Confirmed Race"
+      },
+      {
+        "url": "https://domainbeat.com/nrds/com-domains-jul-05-2025-part-14/",
+        "category": "reference",
+        "label": "Domain Registration Record — granfondomsa.com Re-Registered by an Unrelated Party, July 2025"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GranFondo Mont Sainte-Anne gran fondo cycling Beaupré",
@@ -145,10 +194,14 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://gravelgodcycling.com/race/granfondo-mont-sainte-anne/",
-      "notes": "Listed as a 2026 September TBD event but no direct organizer or recent edition info could be verified; one local listing marks a Mont Sainte-Anne Gran Fondo as finished without clear year.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.quebec.ca/nouvelles/actualites/details/pandemie-de-la-covid-19-le-gouvernement-du-quebec-demande-lannulation-des-festivals-et-evenements-prevus-au-cours-de-lete",
+      "notes": "CONFIRMED via codex gpt-5.6-sol foreground research, editorial wave 8. No registration, results, organizer announcement, or confirmed edition found for 2020-2026. Annual editions ran 2013-2019 (dates drifted June to July: June 22-23 2013, July 13 2014, July 19 2015, July 3 2016, July 16 2017, July 15 2018, July 14 2019). A planned eighth season was scheduled for July 19, 2020, a date that fell within Quebec's province-wide summer public-event shutdown order, though no event-specific cancellation notice was found — only the general provincial order. It was never rescheduled. The event's former domain (granfondomsa.com) was newly re-registered by an unrelated party in July 2025 — consistent with, though not proof of, the original operation having lapsed. Corrected date field from a stale '2026: September TBD' placeholder to reflect the defunct status. Vitals (130.4 km/1,800 m) are geographically plausible for the Côte-de-Beaupré region but do not match any documented standard historical route distance (nearest were 121 km medium / 160-161 km long) — flagged via catalog_flags rather than silently rewritten, since no better-sourced figure exists. SOL REVIEW CORRECTION (2026-07-24): a follow-up sol adversarial review found the initial draft's 'defunct since 2020, cancelled by COVID' framing stated more certainty than the evidence supports (the provincial order is general, not an event-specific cancellation) and that the domain re-registration claim lacked a citation — both corrected above; status retained as 'defunct' given six-plus years of total silence, but causation language softened."
+    },
+    "catalog_flags": {
+      "status_note": "Apparently defunct since 2019 (last confirmed edition); a planned 2020 edition fell within Quebec's province-wide COVID-19 event shutdown (no event-specific cancellation notice found) and was never rescheduled; no evidence of any 2021-2026 return. Vitals (130.4 km/1,800 m) are unverified — they don't match any documented historical route distance (46/80/121/161 km were the confirmed 2014 options) and may be a fabricated-looking placeholder from the original migration. Recommend a human decide whether to keep this profile scored/active-styled in the catalog (same class of question as gran-fondo-mont-tremblant and birkebeinerrittet-road) or archive it.",
+      "ruled": "2026-07-24 editorial wave 8"
     }
   }
 }
