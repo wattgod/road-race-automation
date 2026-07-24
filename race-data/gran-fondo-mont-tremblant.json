@@ -5,24 +5,29 @@
     "display_name": "Gran Fondo Mont-Tremblant",
     "tagline": "",
     "vitals": {
-      "distance_km": 149.7,
-      "distance_mi": 93.0,
+      "distance_km": 125.0,
+      "distance_mi": 77.7,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Mont-Tremblant, Quebec, Canada",
       "location_badge": "Mont-Tremblant, Canada",
       "country": "Canada",
-      "date": "2026: August 21-22",
-      "date_specific": "2026: August 21-22",
-      "field_size": "2000",
+      "date": "No confirmed edition since 2019 — not currently bookable",
+      "date_specific": "Last held: May 26, 2019",
+      "field_size": "~1,500 (2015, historical)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Multiple (peloton-supported)",
-      "cutoff_time": "Unknown",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Super Fondo: 160 km (2019, historical)",
+        "Gran Fondo: 125 km (2019, historical)",
+        "Medio Fondo: 80 km (2019, historical)",
+        "Molo Fondo: 45 km (2019, historical)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +61,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): no confirmed edition since 2019 (postponed 2020-21 for COVID, Crossroads Tremblant festival cancelled 2022 with no evidence of a promised 2023+ return) — every dimension score here (organization=4, prestige=2, field_depth=3, etc.) was set against a currently non-bookable event. Recommend a human decide whether this profile should carry an active-style score at all, matching the birkebeinerrittet-road precedent for lapsed events. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +75,82 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "IMPORTANT — no confirmed edition has run since 2019. When it operated, this was a paved-road cyclosportive through the Laurentians based at Tremblant Resort, part of the wider Crossroads Tremblant cycling festival alongside separate MTB and Gravel Fondo events. Four distances were offered in 2019: Super Fondo (160 km), Gran Fondo (125 km), Medio Fondo (80 km) and Molo Fondo (45 km). The Nordet portion of the route was singled out for scenery. The format leaned toward personal-challenge riding with ride leaders managing pace groups, rather than a single-field competitive race, though selected KOM segments provided a timed/competitive element.",
+      "signature_challenge": "Historically, the Nordet section of the Laurentians route — the scenic core of the ride, no longer verifiable as current given the event's lapsed status.",
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Numerous hotels and resorts with participant discounts via Tourisme Mont-Tremblant; ideal for active weekends with family/friends.",
+      "lodging_strategy": "Numerous hotels and resorts with participant discounts via Tourisme Mont-Tremblant historically offered discounts during the event; not verified as currently applicable given no confirmed edition since 2019.",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2013,
+      "origin_story": "First edition staged September 7, 2013, per the City of Mont-Tremblant's technical-support agreement for that year. Later folded into the broader Crossroads Tremblant festival (Gran Fondo, Gravel Fondo, and MTB events run together under one umbrella) organized with Cycling Canada / FQSC support.",
+      "notable_moments": [
+        "2013: Inaugural edition, September 7",
+        "2019: Most recent confirmed edition, May 26 — four distances (160/125/80/45 km)",
+        "2020-2021: Postponed due to COVID-19 restrictions",
+        "2022: Crossroads Tremblant festival (including Gran Fondo) formally cancelled; organizer stated an intention to return in 2023, but no evidence of a 2023-2026 edition was found"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Dormant Since 2019",
+      "summary": "There is no evidence Gran Fondo Mont-Tremblant has run since May 26, 2019. It was a real, well-regarded Laurentians cyclosportive — police-escorted group pace riding, four distances from 45 to 160 km, roughly 1,500-2,000 riders at its peak, folded into the Crossroads Tremblant festival alongside MTB and Gravel Fondo events. COVID postponed 2020 and 2021, the entire 2022 Crossroads festival was then cancelled outright, and the organizer's stated intention to return in 2023 has no supporting evidence of ever happening. Mont-Tremblant's current event calendar lists Salsa Tremblant on the exact August weekend this database's prior file claimed for Gran Fondo Mont-Tremblant — that date appears to be contamination from an unrelated destination event, not evidence of a revival.",
+      "strengths": [
+        "Historically strong Laurentians scenery and a well-regarded pace-group format that welcomed first-timers alongside more competitive KOM-chasers",
+        "Four distances (45/80/125/160 km) gave a genuine range of entry points",
+        "Police-supported closed-enough roads and an established resort-town base at Tremblant"
+      ],
+      "weaknesses": [
+        "No confirmed edition since 2019 — this is not a currently bookable event",
+        "The broader Crossroads Tremblant festival it belonged to was cancelled in 2022 with no verified return",
+        "A rival Mont-Tremblant event (Salsa Tremblant) now occupies the August date this profile previously claimed, suggesting date contamination rather than a live listing",
+        "Never a fully competitive, ranked gran fondo — it was closer to a supported personal-challenge ride with optional timed segments"
+      ],
+      "bottom_line": "Treat this as dormant, not bookable. If you want the Laurentians cycling experience Gran Fondo Mont-Tremblant once offered, look for a currently confirmed Quebec sportive rather than this one."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Scenic, well-organized road sportive in Laurentians ideal for season-opening endurance challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Laurentians classic on ice since 2019 — no confirmed return after the 2022 Crossroads Tremblant cancellation.",
+      "should_you_race": "No — there is no current edition to register for. If a 2027+ edition is ever announced, revisit; until then, choose an active Quebec or Ontario sportive instead.",
+      "alternatives": "For a currently active Quebec road sportive, check the FQSC (Fédération québécoise des sports cyclistes) event calendar; for a similarly resort-based mountain ride, consider an active Whistler or Vermont-region gran fondo."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://fqsc.net/cyclisme-recreatif/evenements/2019-gran-fondo-mont-tremblant",
+        "category": "official",
+        "label": "FQSC — 2019 Edition, Last Confirmed (160/125/80/45 km Routes)"
+      },
+      {
+        "url": "https://fqsc.net/montagne/nouvelles/ledition-2022-du-crossroads-mont-tremblant-annule",
+        "category": "official",
+        "label": "FQSC — 2022 Crossroads Tremblant Festival Cancellation Notice"
+      },
+      {
+        "url": "https://cyclingcanada.ca/wp-content/uploads/2022/03/Crossroads_communique%CC%81_report-e%CC%81dition-2022_ENG.pdf",
+        "category": "official",
+        "label": "Cycling Canada — 2022 Crossroads Postponement/Cancellation Release"
+      },
+      {
+        "url": "https://www.mont-tremblant.ca/en/events",
+        "category": "official",
+        "label": "Current Tourisme Mont-Tremblant Event Calendar — No 2026 Gran Fondo Listed"
+      },
+      {
+        "url": "https://www.villedemont-tremblant.qc.ca/public_upload/files/archives/Conseil%20municipal/2013/2013-Proces-Verbaux.pdf?v=45889",
+        "category": "official",
+        "label": "City of Mont-Tremblant 2013 Council Minutes — First Edition, September 7, 2013"
+      },
+      {
+        "url": "https://cyclingmagazine.ca/sections/ridesevents/what-you-missed-at-crossroads-tremblant/",
+        "category": "media",
+        "label": "Canadian Cycling Magazine — Historical Format, Pace Groups, Timed KOMs"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Mont-Tremblant gran fondo cycling Mont-Tremblant",
@@ -277,7 +327,11 @@
       "status": "unknown",
       "verified": "2026-07-23",
       "source": "https://officialmonttremblant.com/activities/summer-activities/cycling/cycling-events/",
-      "notes": "Found a Mont-Tremblant cycling-events page, but no current Gran Fondo Mont-Tremblant edition or cancellation status was confirmed; 2026 date on file remains unverified.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "notes": "Found a Mont-Tremblant cycling-events page, but no current Gran Fondo Mont-Tremblant edition or cancellation status was confirmed; 2026 date on file remains unverified.; last edition evidenced: 2025; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol web research): status should read presumed lapsed/inactive, not unknown-pending-active. Last confirmed edition May 26, 2019; 2020-21 postponed for COVID; entire 2022 Crossroads Tremblant festival cancelled with no evidence of a 2023-2026 return. The file's prior August 21-22, 2026 date belongs to the unrelated Salsa Tremblant event, not Gran Fondo Mont-Tremblant."
+    },
+    "catalog_flags": {
+      "status_note": "No confirmed edition since 2019; the broader Crossroads Tremblant festival it belonged to was cancelled in 2022 with no verified 2023+ return. Recommend human review of whether this profile should remain scored/active-styled in the catalog (same class of question as gran-fondo-mont-tremblant's dormant peers, e.g. birkebeinerrittet-road) or be reclassified as defunct pending organizer confirmation of a revival.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

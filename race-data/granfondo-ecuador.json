@@ -5,24 +5,27 @@
     "display_name": "Granfondo Ecuador",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 762,
-      "elevation_ft": 2500.0,
+      "distance_km": 127.88,
+      "distance_mi": 79.5,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Salinas, Santa Elena, Ecuador",
       "location_badge": "Salinas, Ecuador",
       "country": "Ecuador",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": null,
+      "date": "2026: November 14 (first edition)",
+      "date_specific": "2026: November 14",
+      "field_size": "Capped at 1,000 riders",
       "start_format": null,
-      "registration": "https://salinas.gfny.com",
-      "entry_fee": null,
+      "registration": "https://www.touralecuador.ec/",
+      "entry_fee": "$89 early bird -> $99 -> $109 (Jun 15-Aug 16) -> $119 final phase",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long: 127.88 km (3 circuits) — men 19-59, women 19-49",
+        "Short: 87.62 km (2 circuits) — older age categories"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): this is a NEW, first-edition UCI Gran Fondo World Series event (Nov 14, 2026) — CONFIRMED DISTINCT from gfny-salinas.json (a separate, older, already-run GFNY event in the same town, March 1 2026). Vitals corrected from 99.8km/762m to the organizer-confirmed 127.88km/87.62km circuit distances; elevation set to null (organizer publishes only 184m/lap, not an event-total). Every dimension was scored against the old, wrong course facts; recommend a human re-check against the actual circuit-race format. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,128 +73,97 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A predominantly flat, fast multi-lap coastal circuit adjacent to Salinas's main beach — 3 laps for the 127.88 km long distance, 2 laps for the 87.62 km short distance. The organizer's regulations promise full traffic closure, with a caveat that vehicles may still enter from residential accesses. This is a genuinely new (first edition November 2026) UCI Gran Fondo World Series qualifier, distinct from the older, already-run GFNY Salinas race in the same town (see gfny-salinas.json) — different organizer, different course, different date.",
+      "signature_challenge": "An early 1.2 km climb averaging 6% (max 9.3%) toward the course's western turning point — not repeated on later laps, the one real elevation change on an otherwise flat, tactical circuit.",
       "suffering_zones": [
-        "Cerro El Morro Ramp: 1-mile grind to finish at 12% max; legs burn amid cheers and ocean views.",
-        "Mar Bravo Headwinds: 15-mile exposed coast battering pace lines; mental grit required."
+        "The early 1.2km/6% (max 9.3%) climb toward the western turning point — the course's only significant elevation change",
+        "The repeated flat circuit itself — 2-3 laps of the same course rewards positioning and tactics over raw climbing power"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Start/finish adjacent to Salinas's main beach.",
       "food": "",
-      "official_site": "https://salinas.gfny.com"
+      "official_site": "https://www.touralecuador.ec/"
     },
     "history": {
-      "founded": 2024,
-      "origin_story": "",
+      "founded": 2026,
+      "origin_story": "New for 2026: a UCI Gran Fondo World Series qualifier organized by MACMANE S.A.S. with Ecuadorian Cycling Federation sanction, first edition scheduled November 14, 2026, on a flat coastal circuit at Salinas beach. This is a separate, newly created event — not a rebrand of the existing GFNY Salinas race (see gfny-salinas.json), which is organized by a different company (GFNY) on a different course and has already run its own inaugural edition (March 1, 2026).",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine New UCI Qualifier — Not the GFNY Race Down the Road",
+      "summary": "Granfondo Ecuador is a brand-new (first edition November 14, 2026) UCI Gran Fondo World Series qualifier on a flat, fast, multi-lap coastal circuit in Salinas — organized by MACMANE S.A.S. with Ecuadorian Cycling Federation sanction, capped at 1,000 riders. It shares a town with GFNY Salinas (this catalog's gfny-salinas.json), which already ran its own inaugural edition in March 2026, but the two are genuinely separate events run by different organizers on different courses — don't confuse them. As a first edition, it has zero execution history to judge, and its own regulations contain an internal contradiction worth flagging: the 87.62 km short distance is labeled 'non-qualifying' in the organizer's own PDF, while the UCI series page assigns that distance to older age categories within a qualifier event.",
+      "strengths": [
+        "Genuine UCI World Championship qualification pathway — real competitive stakes beyond a typical mass-participation ride",
+        "Fast, tactical flat circuit with one meaningful climb, suited to riders who prefer positioning and pack racing over pure climbing",
+        "Broad age-category structure across both distances",
+        "Beach-adjacent start/finish with promised (if not fully guaranteed) traffic closure and organizer-provided mechanical/medical support"
+      ],
+      "weaknesses": [
+        "First edition with no execution history — treat all organizational claims as unproven until 2026 results are in",
+        "Repeating a flat circuit 2-3 times may lack the route variety riders expect from a destination gran fondo",
+        "The organizer's own regulations call the 87.62km distance 'non-qualifying' while the UCI series assigns it to a qualifier-event age category — a contradiction that should be resolved before treating either claim as final",
+        "Mandatory organizer jersey requirement adds a restriction beyond a typical entry fee"
+      ],
+      "bottom_line": "A legitimate new UCI qualifier worth watching, especially if you want real World Championship stakes on a fast coastal circuit — just don't mistake it for GFNY Salinas, a separate, older race in the same town, and go in knowing this is an unproven first edition."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "Coastal Ecuador gem with El Morro wall punch.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "New for 2026: a flat, fast UCI Gran Fondo World Series qualifier on a Salinas beach circuit — not the same race as GFNY Salinas.",
+      "should_you_race": "Yes if you want genuine UCI World Championship qualification on a fast, tactical coastal circuit and don't mind a first-edition event with no track record yet.",
+      "alternatives": "For the older, already-run GFNY-branded race in the same town, see gfny-salinas.json (different organizer, different course, different date — March vs. November)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-ecuador/",
+        "category": "official",
+        "label": "UCI Granfondo Ecuador Profile — Date, Distances, Route, First-Edition Status"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series Calendar"
+      },
+      {
+        "url": "https://www.touralecuador.ec/",
+        "category": "official",
+        "label": "Official Granfondo Ecuador Organizer Site"
+      },
+      {
+        "url": "https://www.touralecuador.ec/Reglamentos-y-categorias.html",
+        "category": "official",
+        "label": "Official Categories Page"
+      },
+      {
+        "url": "https://www.touralecuador.ec/REGLAMENTO/REGLAMENTO%20GENERAL%20UCI%20GF%20WS%20SALINAS.pdf",
+        "category": "official",
+        "label": "Official Regulations PDF — Organizer, Fees, Cap, Course, Safety, 'Non-Qualifying' Short-Distance Language"
+      },
+      {
+        "url": "https://gfny.com/sprint-finish-at-gfny-salinas/",
+        "category": "reference",
+        "label": "GFNY — Confirms GFNY Salinas Is a Separate, Already-Run Event (Not This Race)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Ecuador gran fondo cycling Salinas",
-      "videos": [
-        {
-          "video_id": "d6SLKmuwSJc",
-          "title": "GFNY Salinas 2026 | Ecuador, get Ready!",
-          "channel": "GFNY World",
-          "view_count": 119,
-          "upload_date": "20260108",
-          "duration_string": "27",
-          "description": "more info: salinas.gfny.com\n\n#cycling  #gfny #granfondo",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=d6SLKmuwSJc",
-          "transcript": "HEAT\n&gt;&gt; [music]\n&gt;&gt; UP HERE.\n[music]",
-          "curated": false
-        },
-        {
-          "video_id": "H6T-6aZWTQg",
-          "title": "¨El Campo de Batalla¨ Gran Fondo CUBE  (GYE- Salinas)",
-          "channel": "Pasión Por El Ciclismo",
-          "view_count": 1088,
-          "upload_date": "20161028",
-          "duration_string": "13:48",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=H6T-6aZWTQg",
-          "curated": true,
-          "curation_reason": "Full-length race coverage of a Salinas Gran Fondo with good view count and production value from a dedicated cycling channel.",
-          "display_order": 1,
-          "thumbnail_url": "https://i.ytimg.com/vi/H6T-6aZWTQg/maxresdefault.jpg",
-          "thumbnail_score": 75.85
-        },
-        {
-          "video_id": "2Wf2zfEEk7M",
-          "title": "Gran Fondo Guayaquil-Montañita",
-          "channel": "Juan Perez",
-          "view_count": 589,
-          "upload_date": "20141212",
-          "duration_string": "6:12",
-          "description": "Gran Fondo Ecuador",
-          "tags": [
-            "Carrera",
-            "Ecuador",
-            "bicicletas",
-            "rutas",
-            "rutas ecuador"
-          ],
-          "url": "https://www.youtube.com/watch?v=2Wf2zfEEk7M",
-          "curated": false
-        },
-        {
-          "video_id": "Dhs-w8SMZFI",
-          "title": "Gran fondo Erick Bike 2019 ciclismo",
-          "channel": "YanCHa CHristian",
-          "view_count": 69,
-          "upload_date": "20191231",
-          "duration_string": "16",
-          "description": "El autódromo internacional de Yahuarcocha de la ciudad de Ibarra acogió la clásica ciclistica erick bike 2019  evento que congrego a los mejores pedalistas élites del pais. #jonathanNarvaez #ineos #Monaco #cajarurral",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=Dhs-w8SMZFI",
-          "curated": false
-        },
-        {
-          "video_id": "tyCHm1xmbXQ",
-          "title": "Gran fondo en Yahuarcocha",
-          "channel": "ENtv",
-          "view_count": 1095,
-          "upload_date": "20170612",
-          "duration_string": "3:49",
-          "description": "Ibarra | 200 ciclistas de Ecuador y Colombia llegaron al Gran Fondo de ciclismo en #Yahuarcocha . Jefferson Cepeda ganó.",
-          "tags": [
-            "ciclismo",
-            "ibarra",
-            "imbabura",
-            "yahuarcocha"
-          ],
-          "url": "https://www.youtube.com/watch?v=tyCHm1xmbXQ",
-          "curated": false
-        }
-      ],
-      "quotes": []
+      "videos": [],
+      "quotes": [],
+      "purge_note": "2026-07-24 editorial wave 7: removed 5 videos. 'GFNY Salinas 2026' depicts the SEPARATE gfny-salinas.json event (different organizer/course), not this UCI Granfondo Ecuador event — do not conflate. The remaining 4 (Gran Fondo Guayaquil-Montanita, two Yahuarcocha/Ibarra videos, and an unrelated shop clip) depict unrelated historical Ecuadorian cycling events, not this newly created 2026 race."
     },
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://ucigranfondoworldseries.com/en/granfondo-ecuador/",
-      "notes": "First edition announced for 14 November 2026 in Salinas, Santa Elena, Ecuador.; via sonar-pro eligibility_audit"
+      "notes": "First edition announced for 14 November 2026 in Salinas, Santa Elena, Ecuador.; via sonar-pro eligibility_audit UPDATED (2026-07-24, codex gpt-5.6-sol): CONFIRMED this is a genuinely separate event from gfny-salinas.json — different organizer (MACMANE S.A.S. vs. GFNY), different official site (touralecuador.ec vs. salinas.gfny.com), different course (127.88/87.62km multi-lap circuit vs. GFNY's 110.8km point-to-point/loop), different date (Nov 14 vs. Mar 1). Do not merge these profiles."
+    },
+    "catalog_flags": {
+      "status_note": "Confirmed NOT a duplicate of gfny-salinas.json despite sharing a location — verified via codex web research as two genuinely separate events, same city, different organizers/courses/dates. The event's own regulations describe the 87.62km short distance as 'non-qualifying' while the UCI series page assigns it to older age categories in a qualifier event — a contradiction worth resolving before treating eligibility claims as final.",
+      "ruled": "2026-07-24 editorial calibration wave 7 (dedupe verification)"
     }
   }
 }

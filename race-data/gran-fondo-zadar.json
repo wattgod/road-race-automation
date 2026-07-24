@@ -1,28 +1,31 @@
 {
   "race": {
-    "name": "Gran Fondo Zadar",
+    "name": "Zadar Granfondo Falkensteiner Borik – Croatia",
     "slug": "gran-fondo-zadar",
-    "display_name": "Gran Fondo Zadar",
+    "display_name": "Zadar Granfondo Falkensteiner Borik",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 853,
-      "elevation_ft": 2800.0,
+      "distance_km": 112.0,
+      "distance_mi": 69.6,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Zadar, Croatia",
       "location_badge": "Zadar, Croatia",
       "country": "Croatia",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
-      "field_size": null,
+      "date": "2026: October 18",
+      "date_specific": "2026: October 18 (seventh edition)",
+      "field_size": "600-rider cap (2026); ~300 actual participants (2023-2024)",
       "start_format": null,
-      "registration": "https://www.granfondoguide.com/Events/Index/8778/zadar-granfondo",
-      "entry_fee": null,
+      "registration": "https://www.zadargranfondo.com/",
+      "entry_fee": "EUR40 (early) rising to EUR70 (final registration window); EUR60 published tier as of 2026-07-24",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Classic: 112 km",
+        "Small: 56 km"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): distance corrected 99.8km->112km (organizer-confirmed Classic route); elevation set to null (853m unverified for 2026 — a 2021 official figure was 1,034m for that year's course, not a current total); founded corrected 2018->2019. climbing=3 and altitude=2 were scored against the old, unverified figures; recommend a human re-check. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,40 +73,85 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Starts and finishes at Falkensteiner Club Funimation Borik in Zadar, running along Adriatic coastal roads out to the Vir bridge/island and inland into Zadar County's pastures and meadows. The Classic (112 km) route mixes longer flat coastal stretches with short, attractive inland climbs; the Small (56 km) route offers a shorter version of the same character. Aid zones sit at Vir and Matakov Brig.",
+      "signature_challenge": "The inland climbing sections on the Classic route's Zadar County loop, following the coastal run out to Vir — short but attractive rather than one dominant summit.",
       "suffering_zones": [
-        "Velebit Foothills Grinder: Mid-route 2800 ft cumulative climbs through pastures test pacing amid stunning north Zadar County views.",
-        "Island Bridge Push: Exposed coastal crossing with headwinds demands steady power before relief descent to Adriatic flats."
+        "The Vir bridge/island crossing — exposed coastal riding",
+        "The inland Zadar County climbing sections on the Classic route"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Start/finish: Falkensteiner Club Funimation Borik, Majstora Radovana 7, Zadar. Aid zones at Vir and Matakov Brig.",
       "food": "",
-      "official_site": "https://www.granfondoguide.com/Events/Index/8778/zadar-granfondo"
+      "official_site": "https://www.zadargranfondo.com/"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2019,
+      "origin_story": "First edition held October 19, 2019, per the organizer's official start list. Hosted and organized through Falkensteiner Hotels & Residences at Resort Borik; race director Toni Dujmenović, organizer Marin Kirin.",
+      "notable_moments": [
+        "2019: First edition, October 19",
+        "2020: No edition held",
+        "2021-2026: Annual editions resumed, 2026 marketed as the seventh"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Well-Priced Adriatic Fondo — With Sloppy Self-Marketing",
+      "summary": "Zadar Granfondo Falkensteiner Borik is a genuine, currently active resort-hosted road fondo now in its seventh year (first run 2019, no 2020 edition), combining Adriatic coastal riding out to the Vir bridge with inland Zadar County climbing. It's a reasonably priced, capped-field (600 riders), well-supported event with timing, photography, and a finisher package included. The catch is the organizer's own materials don't agree with themselves: the host-hotel page claims 128 km while the dedicated race site and Croatian Cycling Federation both confirm 112 km, and marketing promises full road closure while 2025 police notices described only partial, temporary closures. None of that makes it a bad event — it makes it one worth double-checking directly before you travel.",
+      "strengths": [
+        "Attractive coast-to-island Adriatic scenery with a genuine mix of flat coastal riding and short inland climbs",
+        "Straightforward resort-based logistics — start/finish at the host Falkensteiner hotel",
+        "Capped field (600 riders for 2026) keeps the event from feeling overcrowded",
+        "Comparatively reasonable pricing (EUR40-70 depending on registration timing) with timing, photos, lunch, and a finisher package included"
+      ],
+      "weaknesses": [
+        "The organizer's own pages disagree on the course distance — 128 km on the host-hotel page vs. 112 km on the dedicated race site and the Croatian Cycling Federation calendar",
+        "No current, authoritative elevation-gain figure is published for the 2026 course",
+        "Marketing promises full road closure, but 2025 police notices describe only partial/temporary intersection and street closures — verify this again close to race day",
+        "A relatively young event (first edition 2019, skipped 2020) without the multi-decade track record of Europe's bigger Adriatic fondos"
+      ],
+      "bottom_line": "A legitimate, reasonably priced Adriatic coastal fondo worth doing — just confirm the actual distance and road-closure scope directly with the organizer rather than trusting either of their own inconsistent pages."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "Scenic Adriatic sportive with Velebit climbs and resort perks.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Adriatic coast-to-island fondo out of Zadar's Falkensteiner resort — reasonably priced, but the organizer's own site disagrees on the distance.",
+      "should_you_race": "Yes for a well-supported, capped-field Adriatic coastal ride at a fair price — just verify the actual course distance and road-closure scope directly with the organizer beforehand.",
+      "alternatives": "For a comparable Adriatic coastal fondo with a longer track record, look at established Croatian or Slovenian coastal sportive calendars."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.zadargranfondo.com/",
+        "category": "official",
+        "label": "Official Event Homepage — Date, Routes, Fees, Field Cap, Organizers"
+      },
+      {
+        "url": "https://www.zadargranfondo.com/granfondo/",
+        "category": "official",
+        "label": "Official Course/Program Page — Route Character and Schedule"
+      },
+      {
+        "url": "https://www.hbs.hr/kalendar/biciklizam-za-sve/",
+        "category": "official",
+        "label": "Croatian Cycling Federation Calendar — Confirms 112km, Seventh Edition"
+      },
+      {
+        "url": "https://zadarska-policija.gov.hr/vijesti/6-zadar-granfondo-falkensteiner-borik-croatia-obavijest-sudionicima-u-prometu/15158",
+        "category": "official",
+        "label": "Zadar Police Notice — 2025 (Sixth Edition), Partial Traffic Closures"
+      },
+      {
+        "url": "https://zadargranfondo.com/start.pdf",
+        "category": "official",
+        "label": "Official 2019 First-Edition Start List"
+      },
+      {
+        "url": "https://www.antenazadar.hr/clanak/2023/10/sportski-entuzijazam-pobijedio-zadarski-kisni-dan-vise-od-300-sudionika-iz-cak-20-zemalja-uzivalo-u-medunarodnom-biciklistickom-spektaklu-zadar-granfondo/",
+        "category": "media",
+        "label": "2023 Participation Report — More Than 300 Riders"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Zadar gran fondo cycling Zadar",
@@ -194,7 +242,11 @@
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.cycloworld.cc/en/gran-fondo/croatia/zadar-gran-fondo-falkensteiner-borik/41452",
-      "notes": "Mass-participation road gran fondo in Zadar with a 18 Oct 2026 edition listed, confirming it is still active.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Mass-participation road gran fondo in Zadar with a 18 Oct 2026 edition listed, confirming it is still active.; last edition evidenced: 2026; via sonar-pro eligibility_audit UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed correct official name is 'Zadar Granfondo Falkensteiner Borik – Croatia'; correct distances are 112km (Classic) and 56km (Small); official site is zadargranfondo.com, not the granfondoguide.com aggregator listing; founded 2019 (first edition), not 2018; 2026 is the seventh edition, October 18, 600-rider cap. Full road closure is marketed by the organizer but 2025 police notices describe only partial/temporary closures — worth re-verifying near race day."
+    },
+    "catalog_flags": {
+      "status_note": "Organizer's own materials are internally inconsistent: the host-hotel page states 128km while the dedicated race site and Croatian Cycling Federation both confirm 112km. Also inconsistent on road-closure scope (marketing promises full closure; 2025 police notices describe partial/temporary closures). Treat elevation as unverified for the current course.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

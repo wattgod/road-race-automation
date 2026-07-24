@@ -5,21 +5,21 @@
     "display_name": "K2 Road Cycle Classic",
     "tagline": "",
     "vitals": {
-      "distance_km": 191.5,
-      "distance_mi": 119.0,
+      "distance_km": 192.0,
+      "distance_mi": 119.3,
       "elevation_m": 2300,
       "elevation_ft": 7546.0,
       "location": "Coromandel Peninsula, New Zealand",
       "location_badge": "Coromandel Peninsula, New Zealand",
       "country": "New Zealand",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": "N/A",
+      "date": "2026: October 31 (third-party listing, not organizer-confirmed)",
+      "date_specific": "2026: October 31 (unconfirmed)",
+      "field_size": "406 starters (2021, most recent confirmed edition)",
       "start_format": null,
-      "registration": null,
+      "registration": "https://www.gostride.co.nz/events/k2-cycle-classic",
       "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): continuity is doubtful — no confirmed edition since 2021 (534 entered/406 started), a planned 2022 edition was postponed (entries down ~70% amid Omicron), and the 2026 date exists only on a third-party listing site, not confirmed by organizer ARC Events. organization=4 and field_depth=3 were scored as if this were a live, confirmed annual event; recommend a human re-check given the uncertain continuity. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,9 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "An anticlockwise, roughly 192 km sealed-road circuit around the full Coromandel Peninsula, starting and finishing in Coromandel Town: Coromandel to Thames (53 km), Thames to Tairua via Kopu-Hikuai (53 km), Tairua to Whitianga via Coroglen (43 km), and Whitianga back to Coromandel via Kuaotunu (43 km). A shorter K1 (86 km) and the Nicholas Browne Challenge (43 km) run alongside the full circuit. The route is coastal and forested with repeated climbing rather than one dominant summit.",
+      "signature_challenge": "The Kopu-Hikuai climb on the Thames-Tairua leg, followed later by the Pumpkin Hill/Kuaotunu/Whangapoua sequence on the closing leg back into Coromandel Town — the two established decisive sectors of the full peninsula lap.",
+      "suffering_zones": [
+        "Kopu-Hikuai — the main climbing test on the Thames-to-Tairua leg",
+        "Pumpkin Hill, Kuaotunu, and Whangapoua — the closing climbing sequence on the Whitianga-to-Coromandel leg"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -82,30 +85,72 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2002,
+      "origin_story": "Founded in 2002 as a full-peninsula sealed-road circuit race organized by Adventure Racing Coromandel (ARC Events). Historic editions have used the names 'K2 bike race,' 'K2 Cycle Classic,' and 'MitoQ K2 Road Cycle Classic' depending on sponsor and year.",
+      "notable_moments": [
+        "2021: 19th edition, 534 entries / 406 starters — the most recent confirmed running",
+        "2022: Planned edition officially postponed after entries fell roughly 70% amid Omicron restrictions"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Race, Uncertain Continuity",
+      "summary": "K2 is a genuine, historically well-regarded full-circuit road race around the Coromandel Peninsula, running since 2002 with real elite and recreational history and roughly 192 km/2,300 m of sealed-road climbing. But its current status is shaky. The most recent confirmed edition was 2021 (406 starters); the planned 2022 running was officially postponed after entries collapsed roughly 70% during Omicron, and no confirmed 2023-2025 results or organizer announcement could be found. A 2026 date exists only on a third-party events listing (GoStride), not on any live ARC Events page — and the event's former standalone domain, still linked as 'official' by directories, now resolves to an unrelated gambling/spam site. That's a real trust problem for anyone trying to plan around this race.",
+      "strengths": [
+        "A rare full-peninsula circuit with substantial climbing (approximately 2,300 m) entirely on sealed roads",
+        "Real elite and recreational history back to 2002, with editions once drawing over 1,200 riders",
+        "Strong coastal and forested Coromandel scenery across four distinct legs"
+      ],
+      "weaknesses": [
+        "No confirmed edition since 2021 — the event's continuity into 2022-2026 is unverified",
+        "The formerly official k2cycle.co.nz domain is now compromised, redirecting to gambling/spam content — a genuine safety and trust issue for anyone searching for the 'official site'",
+        "The only 2026 listing is on a third-party events aggregator (GoStride), not confirmed by organizer ARC Events",
+        "No current entry fee, field-size target, or route-operation status could be verified"
+      ],
+      "bottom_line": "A legitimate race with a real history, but don't treat the 2026 date as confirmed — verify directly with ARC Events before planning around it, and be wary of any site claiming to be the 'official' K2 domain."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Toughest one-day road challenge on New Zealand's stunning Coromandel Peninsula.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Historic 192km Coromandel Peninsula circuit with uncertain continuity since its 2021 edition.",
+      "should_you_race": "Only after confirming directly with ARC Events that a 2026 (or later) edition is actually running — the only current listing is third-party and unconfirmed, and the event's own former domain is now compromised.",
+      "alternatives": "For a confirmed, currently active New Zealand road sportive with real continuity, check Cycling New Zealand's event calendar for an alternative."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.gostride.co.nz/events/k2-cycle-classic",
+        "category": "other",
+        "label": "GoStride — 2026 Listing (Third-Party, Not Organizer-Confirmed)"
+      },
+      {
+        "url": "https://www.arcevents.co.nz/20-years-adventure-racing",
+        "category": "official",
+        "label": "ARC Events — Organizer Identity and K2's Status as a Road Cycle Race"
+      },
+      {
+        "url": "https://granfondodailynews.com/2021/04/10/bad-weather-fails-to-stop-record-breaking-ride-at-k2-cycle-classic-race/",
+        "category": "media",
+        "label": "Gran Fondo Daily — 2021 Race Report (Most Recent Confirmed Edition)"
+      },
+      {
+        "url": "https://cfm.co.nz/event/k2-20th-anniversary/",
+        "category": "media",
+        "label": "Coromandel's CFM — 2022 Postponement Announcement"
+      },
+      {
+        "url": "https://www.infonews.co.nz/default.cfm?l=19&t=60",
+        "category": "media",
+        "label": "InfoNews — Coromandel Cycling Archive, 2002 Founding"
+      }
+    ],
     "eligibility": {
-      "status": "active",
+      "status": "unknown",
       "verified": "2026-07-23",
       "source": "https://www.gostride.co.nz/events/k2-cycle-classic",
-      "notes": "No rebrand found; listed for Coromandel on 1 Nov 2026, which conflicts with the file’s November TBD date only by being more specific.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "No rebrand found; listed for Coromandel on 1 Nov 2026, which conflicts with the file's November TBD date only by being more specific.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): status corrected to unknown, not active — most recent confirmed edition 2021, 2022 postponed, no 2023-2025 evidence; the GoStride listing now shows Oct 31, 2026 (not Nov 1) and is not organizer-confirmed. Former k2cycle.co.nz domain is now compromised/spam."
+    },
+    "catalog_flags": {
+      "status_note": "Continuity gap: no confirmed edition since 2021 (postponed 2022, no evidence 2023-2025). 2026 date exists only on a third-party listing (GoStride), not confirmed by organizer ARC Events. The event's former official domain (k2cycle.co.nz) now resolves to unrelated gambling/spam content.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

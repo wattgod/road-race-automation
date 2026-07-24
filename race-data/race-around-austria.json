@@ -5,24 +5,28 @@
     "display_name": "Race Around Austria",
     "tagline": "",
     "vitals": {
-      "distance_km": 560.1,
+      "distance_km": 560.0,
       "distance_mi": 348.0,
-      "elevation_m": 6492,
-      "elevation_ft": 21300.0,
-      "location": "St. Georgen im Attergau, Austria",
+      "elevation_m": 6500,
+      "elevation_ft": 21325.0,
+      "location": "St. Georgen im Attergau, Austria (CHALLENGE category route — the flagship Extreme race covers ~2,200km/30,000m around all of Austria)",
       "location_badge": "St. Georgen im Attergau, Austria",
       "country": "Austria",
-      "date": "2026: August TBD",
-      "date_specific": "2026: August TBD",
-      "field_size": null,
+      "date": "2026: August 10-16",
+      "date_specific": "2026: August 10-16 (Extreme starts Aug 10-11; other divisions through Aug 12; finishes to Aug 16)",
+      "field_size": "100+ starters across all divisions (2025 recap)",
       "start_format": null,
-      "registration": "https://www.racearoundaustria.at",
-      "entry_fee": null,
+      "registration": "https://www.racearoundaustria.at/challenge/anmeldeinfo",
+      "entry_fee": "CHALLENGE solo/unsupported EUR400-600; team EUR600-800 (2026)",
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "28 hours (supported solo); 26 hours (team); 29 hours (unsupported solo)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "CHALLENGE: 560 km / ~6,500m (this profile's vitals) — supported, unsupported, and 2-person team categories",
+        "Extreme (flagship): ~2,200 km / 30,000m nonstop, solo or 2-/4-person relay (2026 WUCA World Championship course: 2,160km)",
+        "RAA 1500: 1,500 km / ~17,500m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +60,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): this is a self-supported/supported ultracycling event (24hr-format CHALLENGE category, 560km/~6,500m), not a conventional gran_fondo — every fondo dimension here (descent_technicality, scenic_experience, community_culture, etc.) was scored against ultra-format assumptions that may not map cleanly. Also, founded year corrected 2011->2009. Recommend a human re-check the discipline/scoring fit (see catalog_flags taxonomy note). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,45 +74,91 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Race Around Austria is a family of ultracycling time trials based in St. Georgen im Attergau, Upper Austria. This profile's stored vitals (560km/~6,500m) describe the CHALLENGE category — a single loop around Upper Austria run in a 24-hour-race format, with both supported and unsupported solo options plus team categories. The flagship 'Extreme' race is a much bigger undertaking: a supported, nonstop individual time trial of roughly 2,200 km/30,000m around the entire country through eight Austrian states, including the Styrian wine roads, Großglockner, western Alpine passes, the Inn Valley and Salzburg approaches — with no stages and a clock that never stops. A 1,500 km/~17,500m 'RAA 1500' sits between the two. The 2025 and 2026 WUCA World Championships run on the Extreme course (2,160 km, supported mode).",
+      "signature_challenge": "For the CHALLENGE category this profile describes: a single 560km/~6,500m nonstop loop around Upper Austria within a 24-hour format. For the flagship Extreme race (a distinct, much longer event): the Großglockner and western Alpine passes deep into a nonstop, multi-day national circumnavigation.",
       "suffering_zones": [
-        "Midnight Border Void: Hours 8-12 bring darkness and isolation on quiet Upper Austria roads. Mental fatigue peaks without crowds post-300km.",
-        "Depot Grind Finale: Final 230km after km 330 depot tests depleted legs on rolling return. Cumulative 6500m saps power nearing St. Georgen."
+        "Overnight riding on Upper Austria back roads — sleep deprivation is a real factor even at the 560km CHALLENGE distance",
+        "The rolling return leg back into St. Georgen im Attergau, ridden on depleted legs late in the 24-hour window"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Start/finish: St. Georgen im Attergau, Upper Austria.",
       "food": "",
-      "official_site": "https://www.racearoundaustria.at"
+      "official_site": "https://www.racearoundaustria.at/"
     },
     "history": {
-      "founded": 2011,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2009,
+      "origin_story": "First official Race Around Austria held in 2009 (not 2011). The RAA 1500 was added in 2013, the CHALLENGE category in 2014, and the Unsupported Challenge option in 2020.",
+      "notable_moments": [
+        "2009: First official Race Around Austria",
+        "2013: RAA 1500 (1,500km) category added",
+        "2014: CHALLENGE (560km) category added",
+        "2020: Unsupported Challenge option added",
+        "2025/2026: WUCA World Championships integrated into the Extreme course"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Legitimate Ultra Series, But Not a Gran Fondo",
+      "summary": "Race Around Austria is a genuine, well-organized national ultracycling institution — first run in 2009, now hosting the WUCA World Championships on its flagship ~2,200km/30,000m Extreme course, with a 560km/~6,500m CHALLENGE category (this profile's stored distance) and a 1,500km RAA 1500 in between. It is fundamentally an ultracycling time trial festival, not a conventional single-day gran fondo, and its presence in this database under gran_fondo scoring dimensions is a taxonomy mismatch worth flagging rather than silently correcting. Whichever distance you enter, expect extraordinary crew, vehicle and travel burden well beyond what a headline entry fee suggests.",
+      "strengths": [
+        "Genuine national institution with real WUCA World Championship status on the flagship Extreme course",
+        "Well-organized, established event with a real history back to 2009 and a clear progression of distances (CHALLENGE 560km, RAA 1500, Extreme ~2,200km)",
+        "The CHALLENGE category offers supported, unsupported, and team options, giving a real entry point below the flagship Extreme distance",
+        "Genuine Alpine and cross-country Austrian scenery on the longer courses"
+      ],
+      "weaknesses": [
+        "Not a gran fondo despite this catalog's discipline tag — no stages, no closed course, no mass-participation single-day format",
+        "Extraordinarily high real-world cost on supported categories — crew, support vehicle, and travel expenses dwarf the headline entry fee (the Unsupported Challenge avoids this, but trades it for reduced intervention capacity)",
+        "Sleep deprivation, open traffic, and variable Alpine weather make this qualitatively different from any fondo on this list",
+        "This profile's stored 560km/~6,500m vitals describe only the CHALLENGE category, not the ~2,200km flagship Extreme race most people mean by 'Race Around Austria'"
+      ],
+      "bottom_line": "A legitimate, well-run ultracycling event worth respecting on its own terms — but score and market it as an ultra, not a fondo, and be clear about which of its three distances you're actually describing."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Austria's emotional ultra gateway via 560km Upper Austria border grind.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Legitimate Austrian ultracycling institution (CHALLENGE: 560km/~6,500m; flagship Extreme: ~2,200km/30,000m) — not a conventional gran fondo.",
+      "should_you_race": "Yes if you're specifically seeking an ultracycling challenge with real WUCA-championship pedigree and can absorb the crew/travel costs. Not a fit if you're looking for a single-day, closed-course mass-participation gran fondo experience.",
+      "alternatives": "For a comparable European national-circumnavigation ultra, see Race Around Poland (also in this catalog). For a conventional single-day Austrian road gran fondo, look elsewhere in the catalog."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.racearoundaustria.at/",
+        "category": "official",
+        "label": "Race Around Austria — Official Homepage, 2026 Dates and Division Overview"
+      },
+      {
+        "url": "https://www.racearoundaustria.at/raa/das-rennen",
+        "category": "official",
+        "label": "Official Flagship Race Description — Extreme (~2,200km), Team and RAA 1500 Formats"
+      },
+      {
+        "url": "https://www.racearoundaustria.at/challenge/das-rennen",
+        "category": "official",
+        "label": "Official CHALLENGE Description — 560km/~6,500m, Supported/Unsupported Formats"
+      },
+      {
+        "url": "https://www.racearoundaustria.at/en/wuca-world-championships",
+        "category": "official",
+        "label": "Official WUCA World Championship Page — 2,160km Course, Supported Mode"
+      },
+      {
+        "url": "https://www.racearoundaustria.at/en/raa/a-look-back",
+        "category": "official",
+        "label": "Official Event History — Founding and Division Timeline"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.salzkammergut.at/en/oesterreich-veranstaltung/detail/430004181/race-around-austria-2026.html",
-      "notes": "Official event listings and media show Race Around Austria 2026 scheduled 10–16 August in St. Georgen im Attergau with registration open and WUCA world championships integrated.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Official event listings and media show Race Around Austria 2026 scheduled 10–16 August in St. Georgen im Attergau with registration open and WUCA world championships integrated.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed founded 2009 (not 2011); confirmed the file's 560km/6,492m vitals describe the CHALLENGE category specifically, not the ~2,200km flagship Extreme race."
+    },
+    "catalog_flags": {
+      "status_note": "Taxonomy note: this is an ultracycling time-trial/festival (multiple distances: 560km CHALLENGE, 1,500km RAA 1500, ~2,200km flagship Extreme), not a conventional gran fondo. This profile's stored vitals describe the CHALLENGE category only. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision on whether/how to represent the flagship Extreme distance separately.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

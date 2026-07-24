@@ -5,24 +5,29 @@
     "display_name": "Sovev Jerusalem",
     "tagline": "",
     "vitals": {
-      "distance_km": 49.9,
-      "distance_mi": 31.0,
-      "elevation_m": 1500,
-      "elevation_ft": 4921.0,
+      "distance_km": 50.0,
+      "distance_mi": 31.1,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Jerusalem, Israel",
       "location_badge": "Jerusalem, Israel",
       "country": "Israel",
-      "date": "2026: May 8",
-      "date_specific": "2026: May 8",
-      "field_size": "7000+",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "3-4",
-      "cutoff_time": "4 hours",
+      "date": "2026: May 29",
+      "date_specific": "2026: May 29",
+      "field_size": "5,000+ expected riders (official estimate; third-party sources conflict, ranging 3,000-7,000)",
+      "start_format": "Staggered by distance: 50km 05:45, 30km 06:15, 15km 07:45, 8km 08:00",
+      "registration": "https://www.sovevjerusalem.co.il/RegSovevJrs.aspx",
+      "entry_fee": "50km ILS150; 30km ILS140; 15km/8km ILS120 (final registration window)",
+      "feed_zones": null,
+      "cutoff_time": "4.5 hours (50km, with a ~08:45 checkpoint reroute to the 30km route); 3 hours (30km); 2 hours (15km)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "50 km (longest route)",
+        "30 km",
+        "15 km",
+        "8 km"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,7 +36,7 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Mixed road and off-road (organizer states road/city bikes unsuitable; MTB recommended)",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +61,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): major taxonomy mismatch — the organizer's own registration page states courses combine road and off-road riding and that road/city bikes are unsuitable; mountain bikes are recommended. road_surface=1 and terrain.surface='Paved roads' contradict the organizer's own guidance. Recommend a human re-check whether this profile belongs in a pure road-cycling database at all (see catalog_flags). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,105 +75,88 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Sovev Jerusalem ('Around Jerusalem') starts at the First Station complex and runs four distances — 50, 30, 15 and 8 km — through Old City walls, City of David National Park, Emek Tzurim, Mount Scopus, Nahal Tzofim, Nahal Sorek Park, Cedar Park, the Jerusalem Hills, Aminadav Forest, the Biblical Zoo and Railway Park. IMPORTANT: the organizer's official registration page explicitly describes the courses as combining road and off-road riding, states that road and city bicycles are unsuitable, and recommends mountain bikes. This is a mixed-surface urban/off-road event, not a conventional road gran fondo, despite its inclusion in this database.",
+      "signature_challenge": "The mixed road/off-road terrain through the Jerusalem Hills and Aminadav Forest sections — the organizer's own bike-choice guidance (MTB recommended, road bikes discouraged) is the clearest signal of what kind of ride this actually is.",
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Abundant hotels and hostels in central Jerusalem near start area; book early for event weekend.",
-      "transport": "",
+      "transport": "Start at the First Station complex, Jerusalem.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.sovevjerusalem.co.il/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Earliest verified edition is 2014; the 2026 running was described as the 12th, though no explicit organizer founding-year statement was found to confirm a formal 2014 launch date.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Wrong Database — This Is a Mixed-Surface MTB Ride",
+      "summary": "Sovev Jerusalem is a real, well-supported, large mass-participation cycling event through some of Jerusalem's most historic and scenic terrain — Old City walls, the City of David, Mount Scopus, the Jerusalem Hills. But it is fundamentally misclassified here. The organizer's own registration page is explicit: courses combine road and off-road riding, road and city bikes are unsuitable, and mountain bikes are recommended. This is not a road gran fondo. It belongs in an MTB or mixed-surface database, not a pure road-cycling one, whatever this catalog's discipline tag says.",
+      "strengths": [
+        "Exceptional blend of historic cityscape, ancient sites, and Jerusalem Hills terrain in a single event",
+        "Four distances (50/30/15/8 km) make it unusually accessible for families and less experienced riders",
+        "Substantial municipal safety, medical, and organizational support (municipality projected 5,000+ riders for 2026)"
+      ],
+      "weaknesses": [
+        "Fundamentally misclassified for a road-fondo database — the organizer explicitly discourages road bikes and recommends mountain bikes",
+        "No official elevation-gain figure is published for any distance; the 50 km route's precise length is inconsistently reported (organizer markets it as 50 km; a processed community GPX shows 56.7 km/1,351 m)",
+        "Field-size estimates conflict sharply between sources — municipal (5,000+), tourism (7,000), and media (3,000+ cyclists, 5,000 overall) accounts don't agree",
+        "Primarily a participatory city celebration rather than a conventional timed, ranked gran fondo"
+      ],
+      "bottom_line": "A genuinely worthwhile Jerusalem cycling event — just not a road gran fondo. Bring a mountain bike, not a road bike, and don't expect a competitive result."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Jerusalem's iconic mass cycling celebration blending athletic challenge with historic wonders.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Historic Jerusalem mass ride through Old City, hills and forest — mixed-surface, MTB-recommended, not a road event.",
+      "should_you_race": "Only on a mountain bike, and only if you're after a participatory city celebration rather than a competitive road result — the organizer explicitly discourages road bikes.",
+      "alternatives": "For a conventional road gran fondo in the region, look elsewhere in the catalog; for a similar historic-city mixed-surface ride, treat this as belonging alongside MTB/gravel city events rather than road sportives."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.sovevjerusalem.co.il/Categories.aspx?Id=9234",
+        "category": "official",
+        "label": "Official English Event Page — Name and Date"
+      },
+      {
+        "url": "https://www.sovevjerusalem.co.il/RegSovevJrs.aspx",
+        "category": "official",
+        "label": "Official Registration Page — Distances, Fees, Mixed-Surface/MTB Requirement"
+      },
+      {
+        "url": "https://www.sovevjerusalem.co.il/Categories.aspx?cid=3455&id=9233",
+        "category": "official",
+        "label": "Official Schedule and Cutoffs Page"
+      },
+      {
+        "url": "https://t.me/s/jerusalemtelgram?before=787",
+        "category": "official",
+        "label": "Jerusalem Municipality Announcement — Date and Field Estimate"
+      },
+      {
+        "url": "https://jerusalem-online.co.il/en/israels-biggest-cycling-event-over-5000-riders-in-jerusalem/",
+        "category": "media",
+        "label": "Jerusalem Online — 2026 Event Report, Route Landmarks"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Sovev Jerusalem gran fondo cycling Jerusalem",
-      "videos": [
-        {
-          "video_id": "9HVT4Vgxz9o",
-          "title": "GFNY Jerusalem 130/72Km Route Video - 2020",
-          "channel": "Marina Grossmann",
-          "view_count": 16,
-          "upload_date": "20191022",
-          "duration_string": "2:03",
-          "description": "Watch Grand Fondo Jerusalem 2020 Race route video to get an exact idea of the course you are going to ride, the different climbs, location of aid stations, and top landmarks. \n\n---------------\nOUR EXCLUSIVE PACKAGES \nhttps://www.gfnyjerusalem.kenes-tours.com",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=9HVT4Vgxz9o",
-          "curated": false
-        },
-        {
-          "video_id": "sq8sA_cQEnQ",
-          "title": "Gran Fondo   Cycling Jerusalem at Dawn",
-          "channel": "Zeev Barkan",
-          "view_count": 120,
-          "upload_date": "20131011",
-          "duration_string": "1:26",
-          "description": "Gran Fondo cycling Jerusalem at Dawn uphill slowly and downhill too fast",
-          "tags": [
-            "Gran Fondo",
-            "cycling",
-            "Jerusalem",
-            "Bicycle (Sports Equipment)",
-            "Eventing (Sport)",
-            "sport",
-            "Israel (Country)"
-          ],
-          "url": "https://www.youtube.com/watch?v=sq8sA_cQEnQ",
-          "curated": false
-        },
-        {
-          "video_id": "G93pyoJdgXw",
-          "title": "GFNY Jerusalem 2018",
-          "channel": "David Guedalia",
-          "view_count": 54,
-          "upload_date": "20180429",
-          "duration_string": "1:03",
-          "description": "GFNY Jerusalem 2018",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=G93pyoJdgXw",
-          "curated": false
-        },
-        {
-          "video_id": "7H-a8-jaNK8",
-          "title": "Cycling for Palestine - Give to Jerusalem",
-          "channel": "Ahmad Abunameh",
-          "view_count": 54,
-          "upload_date": "20140208",
-          "duration_string": "4:25",
-          "description": "The next cycling event on Friday March 28, 2014 at the Dead sea.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=7H-a8-jaNK8",
-          "curated": false
-        }
-      ],
-      "quotes": []
+      "videos": [],
+      "quotes": [],
+      "purge_note": "2026-07-24 editorial wave 7: removed 4 videos — 2 were 'GFNY Jerusalem' (a different, separate event from Sovev Jerusalem, not evidenced as current/related), 1 was an unrelated Dead Sea charity ride ('Cycling for Palestine'), and 1 ('Gran Fondo Cycling Jerusalem at Dawn') could not be confirmed to depict this specific event. None were verifiably Sovev Jerusalem footage."
     },
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://itraveljerusalem.com/event/surrounding-jerusalem",
-      "notes": "Mass-participation cycling event in Jerusalem with 2026 edition announced for late May, differing from May 8 on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Mass-participation cycling event in Jerusalem with 2026 edition announced for late May, differing from May 8 on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed correct 2026 date is May 29 (not May 8); confirmed organizer explicitly requires mixed-surface/MTB riding, not road bikes."
+    },
+    "catalog_flags": {
+      "status_note": "Major taxonomy mismatch: organizer's official registration page states courses combine road and off-road riding, that road/city bikes are unsuitable, and recommends mountain bikes. This is a mixed-surface/MTB event, not a conventional road gran fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision on whether this profile belongs in a pure road-cycling database at all.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

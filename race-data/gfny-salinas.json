@@ -5,21 +5,21 @@
     "display_name": "GFNY Salinas",
     "tagline": "",
     "vitals": {
-      "distance_km": 104.6,
-      "distance_mi": 65.0,
+      "distance_km": 110.8,
+      "distance_mi": 68.8,
       "elevation_m": 878,
       "elevation_ft": 2881.0,
       "location": "Salinas, Santa Elena, Ecuador",
       "location_badge": "Salinas, Ecuador",
       "country": "Ecuador",
-      "date": "2026: March 1",
+      "date": "2026: March 1 (inaugural edition, held)",
       "date_specific": "2026: March 1",
-      "field_size": "N/A",
+      "field_size": null,
       "start_format": null,
-      "registration": null,
+      "registration": "https://salinas.gfny.com/?lang=en",
       "entry_fee": null,
       "feed_zones": "Full aid stations",
-      "cutoff_time": "N/A",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): CONFIRMED this is a real, distinct event from granfondo-ecuador.json (a separate, newer UCI Gran Fondo World Series race in the same town) — different organizer (GFNY vs. MACMANE S.A.S.), different course (110.8km point-to-point/loop via Cerro El Morro vs. 127.88km multi-lap circuit), different date (March 1 vs. November 14). Elevation/distance were already reasonably close to organizer-confirmed figures; minor precision fix only (104.6->110.8km)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,75 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "GFNY's inaugural Salinas edition (March 1, 2026) opened with a roughly 2 km neutralized rollout before racing began in earnest at Cerro El Morro/La Chocolatera, on Ecuador's Santa Elena Pacific coast. Riders encountered rain, fog, and exposed coastal crosswinds during the debut running. This is a separate event from the newer, UCI-sanctioned Granfondo Ecuador (see granfondo-ecuador.json), which debuts in the same town in November 2026 under a different organizer on a different multi-lap circuit course.",
+      "signature_challenge": "Cerro El Morro/La Chocolatera — the race's decisive climbing zone, reached after the neutralized rollout from the start.",
+      "suffering_zones": [
+        "Cerro El Morro/La Chocolatera — the main climbing test",
+        "Exposed Pacific coastal sections — the 2026 debut edition saw rain, fog, and crosswinds"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Wide range of hotels available in Salinas, with race week activities at Salón Hotel Presidente including Pasta Fest and group ride.[1][2]",
-      "transport": "",
+      "transport": "Start/finish near Cerro El Morro/La Chocolatera, Salinas.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://salinas.gfny.com/?lang=en"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2026,
+      "origin_story": "Inaugural GFNY Salinas edition held March 1, 2026, part of the global GFNY series. A two-kilometre neutralized section preceded racing proper at Cerro El Morro. This is a separate event from the newer, UCI-sanctioned Granfondo Ecuador (see granfondo-ecuador.json), which debuts in the same town in November 2026 under a different organizer (MACMANE S.A.S.) on a different course.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real GFNY Debut — Just Not the Only Salinas Race",
+      "summary": "GFNY Salinas is a genuine, confirmed GFNY-series event that held its inaugural edition on March 1, 2026, on Ecuador's Santa Elena coast — a 110.8 km course via Cerro El Morro that saw real weather (rain, fog, coastal crosswinds) on debut. GFNY's own post-event reporting is conclusive evidence this happened as scheduled. The one thing to get right: this catalog also carries a second, genuinely separate event in the same town — Granfondo Ecuador, a new UCI Gran Fondo World Series qualifier organized by a different company (MACMANE S.A.S.) on a different multi-lap circuit, debuting in November 2026. They share a location, not an organizer, course, or date — don't conflate them.",
+      "strengths": [
+        "A real, GFNY-network event with organizer-published post-event reporting confirming it ran as scheduled",
+        "Distinctive coastal Ecuadorian setting (Cerro El Morro/La Chocolatera) among GFNY's typically mountain-pass-oriented courses",
+        "Full aid-station support and race-week festival activities (Pasta Fest, group ride) in Salinas"
+      ],
+      "weaknesses": [
+        "Only one edition run so far (March 2026) — limited track record to judge organizational consistency",
+        "No verified field-size or entry-fee data available for this review",
+        "Easily confused with the separate, newer Granfondo Ecuador event in the same town — different organizer, course, and date",
+        "Debut edition faced real weather disruption (rain, fog, crosswinds), which may or may not recur in future years"
+      ],
+      "bottom_line": "A legitimate GFNY-series debut worth considering on its own terms — just be clear that it is a different race from Granfondo Ecuador, not a rebrand of it, despite sharing a host town."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "Inaugural GFNY opener on Ecuador's stunning Pacific coast with summit finish spectacle.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "GFNY's confirmed inaugural Salinas edition (March 2026) via Cerro El Morro — a separate race from the newer UCI Granfondo Ecuador event in the same town.",
+      "should_you_race": "Yes if you want a GFNY-network event on Ecuador's Pacific coast — just confirm you're registering for this race and not the separate, newer Granfondo Ecuador qualifier debuting in November.",
+      "alternatives": "For the newer UCI Gran Fondo World Series qualifier in the same town, see granfondo-ecuador.json (different organizer, course, and November date)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfny.com/sprint-finish-at-gfny-salinas/",
+        "category": "official",
+        "label": "GFNY — Post-Event Report Confirming the March 1, 2026 Inaugural Edition"
+      },
+      {
+        "url": "https://gfny.com/inaugural-gfny-salinas-this-sunday/",
+        "category": "official",
+        "label": "GFNY — Pre-Race Report, 110.8km/878m Course, Cerro El Morro"
+      },
+      {
+        "url": "https://salinas.gfny.com/?lang=en",
+        "category": "official",
+        "label": "GFNY Salinas — Official Event Site"
+      },
+      {
+        "url": "https://salinas.gfny.com/getting-here/?lang=en",
+        "category": "official",
+        "label": "GFNY Salinas — Official Travel Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-ecuador/",
+        "category": "reference",
+        "label": "UCI Granfondo Ecuador Profile — Confirms the Separate, Newer Event in the Same Town"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Salinas gran fondo cycling Salinas",
@@ -116,82 +154,22 @@
           "tags": [],
           "url": "https://www.youtube.com/watch?v=d6SLKmuwSJc",
           "transcript": "HEAT\n&gt;&gt; [music]\n&gt;&gt; UP HERE.\n[music]",
-          "curated": false
-        },
-        {
-          "video_id": "QL8NDEi_v3w",
-          "title": "GFNY Zapopan. Course 2023",
-          "channel": "GFNY World",
-          "view_count": 986,
-          "upload_date": "20230802",
-          "duration_string": "1:16",
-          "description": "more info: Zapopan.gfny.com",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=QL8NDEi_v3w",
-          "transcript": "[Music]\nthank you\nforeign",
-          "curated": false
-        },
-        {
-          "video_id": "cndmcPFFWR0",
-          "title": "GFNY Zapopan. The Course",
-          "channel": "GFNY World",
-          "view_count": 1345,
-          "upload_date": "20220819",
-          "duration_string": "1:19",
-          "description": "GFNY Zapopan. 2022 Course\n\nMore Info: Zapopan.gfny.com",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=cndmcPFFWR0",
-          "transcript": "[Music]\n[Applause]\nyou",
-          "curated": false
-        },
-        {
-          "video_id": "8f3NDlqM-hk",
-          "title": "$50,000mxn GFNY ZAPOPAN",
-          "channel": "GFNY World",
-          "view_count": 486,
-          "upload_date": "20220713",
-          "duration_string": "14:14",
-          "description": "#gfny #cycling #granfondo \n\n0:00 Inicio\n1:06 GFNY GRAND BALLON VIDEO OFICIAL\n2:40 CATEGORIAS GFNY\n3:30 RUTA LARGA & RUTA CORTA\n4:50 GENERAL\n5:25 POR EDADES\n6:55 EL Y ELLA\n9:23 POR EQUIPOS\n11:25 GFNY ZAPOPAN CONVOCATORIA\n13:04 GANADOR GIVEAWAY GFNY VAUJANY",
-          "tags": [
-            "gfny",
-            "cycling",
-            "gfny gruppo",
-            "gruppo",
-            "show",
-            "luis lemus",
-            "ann arbor",
-            "lourdes",
-            "tourmalett"
-          ],
-          "url": "https://www.youtube.com/watch?v=8f3NDlqM-hk",
-          "curated": false
-        },
-        {
-          "video_id": "2Wf2zfEEk7M",
-          "title": "Gran Fondo Guayaquil-Montañita",
-          "channel": "Juan Perez",
-          "view_count": 589,
-          "upload_date": "20141212",
-          "duration_string": "6:12",
-          "description": "Gran Fondo Ecuador",
-          "tags": [
-            "Carrera",
-            "Ecuador",
-            "bicicletas",
-            "rutas",
-            "rutas ecuador"
-          ],
-          "url": "https://www.youtube.com/watch?v=2Wf2zfEEk7M",
-          "curated": false
+          "curated": true,
+          "curation_reason": "Official GFNY World channel announcement for this specific event (GFNY Salinas 2026)."
         }
       ],
-      "quotes": []
+      "quotes": [],
+      "purge_note": "2026-07-24 editorial wave 7: removed 4 videos mislabeled onto this profile — 3 were GFNY Zapopan (a different GFNY event, Mexico) and 1 was 'Gran Fondo Guayaquil-Montanita' (a different, unrelated Ecuadorian event). Kept 'GFNY Salinas 2026 | Ecuador, get Ready!' as the only video genuinely about this specific race."
     },
     "eligibility": {
-      "status": "unknown",
+      "status": "active",
       "verified": "2026-07-23",
       "source": "https://gfny.com",
-      "notes": "No accessible evidence found for any edition of GFNY Salinas in Salinas, Santa Elena, Ecuador.; via sonar-pro eligibility_audit"
+      "notes": "UPDATED (2026-07-24, codex gpt-5.6-sol web research): CONFIRMED active and already run — GFNY's own March 3, 2026 report describes the inaugural GFNY Salinas edition as held March 1, 2026, with a 110.8km/878m course via Cerro El Morro, encountering rain, fog, and exposed coastal crosswinds. This is conclusive evidence the event is real and ran as scheduled. CONFIRMED distinct from granfondo-ecuador.json (separate organizer, course, and November date) — do not merge these profiles. Superseded the prior 'unknown, no accessible evidence' finding, which searched gfny.com generically rather than the event's own salinas.gfny.com microsite and GFNY's own post-event reporting."
+    },
+    "catalog_flags": {
+      "status_note": "Confirmed NOT a duplicate of granfondo-ecuador.json despite sharing a location — verified via codex web research (GFNY's own March 2026 post-event report) as two genuinely separate events, same city, different organizers/courses/dates.",
+      "ruled": "2026-07-24 editorial calibration wave 7 (dedupe verification)"
     }
   }
 }

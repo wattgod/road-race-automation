@@ -5,15 +5,15 @@
     "display_name": "GFNY San Juan",
     "tagline": "",
     "vitals": {
-      "distance_km": 154.5,
-      "distance_mi": 96.0,
+      "distance_km": 154.0,
+      "distance_mi": 95.7,
       "elevation_m": 1300,
       "elevation_ft": 4265.0,
       "location": "San Juan, Argentina",
       "location_badge": "San Juan, Argentina",
       "country": "Argentina",
-      "date": "2026: March 01",
-      "date_specific": "2026: March 01",
+      "date": "No confirmed edition since 2019 — not currently bookable",
+      "date_specific": "Last held: November 3, 2019 (third GFNY Argentina edition)",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -22,7 +22,10 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long: 154 km / ~1,300m (two-lap, competitive, historical figures — not current)",
+        "Medium: 91 km / ~670m (one-lap, timed but non-competitive, historical figures — not current)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -58,7 +61,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): no confirmed edition since November 3, 2019 — the 2026 GFNY calendar contains no Argentina/San Juan round, and the Argentina microsite is stale ('TBA Argentina' header, broken schedule content). organization=3, prestige=3, field_depth=3 and other dimensions were scored as if this were a currently bookable race. Recommend a human re-check whether this profile should carry an active-style score (see catalog_flags). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -72,67 +75,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Two laps through Ullum Valley's plains and hills, climbing to Punta Negra dam via spectacular Interlagos route, finishing in San Juan city center. Transitions from flatlands to Andean foothills on smooth pavement.",
-      "signature_challenge": "Double lap structure in Ullum Valley culminating at Punta Negra dam - power endurance meets Andean backdrop.",
+      "character": "IMPORTANT — no confirmed edition has run since November 3, 2019. When it operated, the long course ran two laps through Ullum Valley's plains and hills, climbing toward the Punta Negra dam via the Interlagos road, finishing in San Juan city center — transitioning from flatlands to Andean foothills on paved roads. The one-lap medium course was timed but explicitly non-competitive.",
+      "signature_challenge": "Historically, the Punta Negra dam climb after the Ullum Valley laps — no longer verifiable as current given the event's dormant status.",
       "suffering_zones": [
-        "Ullum Valley Laps: Repeated 48-mile loops build fatigue; cumulative climbing wears down legs before the dam ascent.",
-        "Punta Negra Dam Climb: Signature ascent after valley circuits; exposed to wind with mountain views rewarding the effort.",
-        "Interlagos Route: Technical paved section through rocky terrain; fast descents demand focus amid scenic drama."
+        "Ullum Valley — repeated laps building fatigue before the dam climb (2019 and earlier editions)",
+        "Punta Negra Dam — the signature ascent, exposed to wind with Andean views"
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Numerous hotels in San Juan city center near start line. Stay local to avoid transfers.",
-      "transport": "City-center start/finish in San Juan. 7AM corral opening, 8AM mass start. Chip-timed with results at gfny.cc/results. Long course only eligible for rankings.",
+      "lodging_strategy": "Numerous hotels in San Juan city center near start line historically served the event; not verified as currently applicable given no confirmed edition since 2019.",
+      "transport": "",
       "food": "",
       "official_site": "https://argentina.gfny.com/?lang=en"
     },
     "history": {
-      "founded": 2022,
-      "origin_story": "GFNY Argentina edition held in San Juan, part of global gran fondo series. Long course qualifies top 10% for World Championship corral.",
-      "notable_moments": [],
+      "founded": null,
+      "origin_story": "Founding year not verified — the prior 2022 date is impossible, since official GFNY reporting documents a San Juan edition already in 2019, described as the third GFNY Argentina edition. Earlier GFNY Argentina editions may have used a different host city; do not assume a 2017 San Juan founding from the 'third edition' language alone.",
+      "notable_moments": [
+        "2019: Most recent confirmed edition, November 3, described by GFNY as the third GFNY Argentina edition"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Dormant Since 2019",
+      "summary": "GFNY San Juan is a real event with a genuine history — an Ullum Valley/Punta Negra Dam course that ran at least through November 2019 as GFNY's third Argentina edition. But there is no evidence of a 2020-2026 running, the Argentina microsite currently displays a stale 'TBA Argentina' header with broken schedule content, and the 2026 GFNY global calendar contains no Argentina or San Juan round at all. The March 1, 2026 date this profile previously carried actually belongs to a different race — GFNY Salinas in Ecuador — and should not be read as evidence San Juan is running.",
+      "strengths": [
+        "Historically distinctive Ullum Valley/Punta Negra Dam/Interlagos setting, unlike GFNY's more typical mountain-pass courses",
+        "Straightforward city-center San Juan logistics when the event was running",
+        "A genuine competitive long course paired with a more approachable, non-competitive medium option"
+      ],
+      "weaknesses": [
+        "No confirmed edition since November 2019 — this is not a currently bookable event",
+        "The organizer's own Argentina microsite is stale and internally inconsistent ('TBA' header, mismatched schedule content)",
+        "Moderate rather than marquee mountain climbing compared to GFNY's Alpine/Andean flagship events",
+        "The two-lap long course repeats the same Ullum Valley loop, which some riders may find repetitive"
+      ],
+      "bottom_line": "Treat as dormant, not bookable. If a future edition is announced, revisit; until then, this is not a current GFNY option."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "GFNY's Andean gateway: accessible distance, scenic climbs, pro experience.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "GFNY's Ullum Valley/Punta Negra Dam course, dormant since its 2019 edition with no confirmed return.",
+      "should_you_race": "No — there is no current edition to register for. GFNY's 2026 global calendar contains no Argentina/San Juan round.",
+      "alternatives": "For a currently active GFNY South American event, check GFNY's global calendar for a confirmed edition elsewhere in the region."
     },
     "citations": [
       {
         "url": "https://argentina.gfny.com/?lang=en",
-        "category": "reference",
-        "label": "GFNY Argentina: Home"
+        "category": "official",
+        "label": "GFNY Argentina/San Juan Course Page — Historical Course Data; Currently Marked 'TBA'"
       },
       {
-        "url": "https://gfny.com",
-        "category": "reference",
-        "label": "GFNY World: Home"
+        "url": "https://argentina.gfny.com/results/?lang=en",
+        "category": "official",
+        "label": "GFNY Argentina Results Page — Last Available Results Are From 2019"
       },
       {
-        "url": "https://argentina.gfny.com/schedule-of-events/?lang=en",
-        "category": "reference",
-        "label": "Schedule of Events - GFNY Argentina"
+        "url": "https://gfny.com/gfny-argentina-carrera-dia-manana/",
+        "category": "official",
+        "label": "GFNY's 2019 San Juan Report — Confirms the Third Edition, November 3, 2019"
       },
       {
-        "url": "https://argentina.gfny.com/news/?lang=en",
+        "url": "https://uppsala.gfny.com/",
         "category": "reference",
-        "label": "News - GFNY Argentina"
+        "label": "GFNY Uppsala Microsite — Checked for San Juan/Argentina Cross-Reference (None Found)"
       }
     ],
     "eligibility": {
       "status": "unknown",
       "verified": "2026-07-23",
-      "source": "",
-      "notes": "No search results were provided to verify whether GFNY San Juan in San Juan, Argentina is active, cancelled, or defunct, so the status cannot be confirmed.; via sonar-pro eligibility_audit"
+      "source": "https://gfny.com/gfny-argentina-carrera-dia-manana/",
+      "notes": "No search results were provided to verify whether GFNY San Juan in San Juan, Argentina is active, cancelled, or defunct, so the status cannot be confirmed.; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed dormant, not active — most recent confirmed edition November 3, 2019 (third GFNY Argentina edition); no 2020-2026 evidence; 2026 GFNY global calendar contains no Argentina/San Juan round; the March 1, 2026 date on the prior file actually belongs to GFNY Salinas (Ecuador), a different race."
+    },
+    "catalog_flags": {
+      "status_note": "No confirmed edition since November 2019. Argentina microsite is stale ('TBA' header, broken schedule). Recommend human review of whether this profile should remain scored/active-styled in the catalog or be reclassified as defunct pending organizer confirmation of a revival.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

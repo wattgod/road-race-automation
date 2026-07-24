@@ -5,24 +5,28 @@
     "display_name": "Gran Fondo San Diego",
     "tagline": "",
     "vitals": {
-      "distance_km": 162.5,
-      "distance_mi": 101.0,
+      "distance_km": 160.9,
+      "distance_mi": 100.0,
       "elevation_m": 2012,
       "elevation_ft": 6600.0,
       "location": "San Diego, California, USA",
       "location_badge": "San Diego, USA",
       "country": "USA",
       "date": "2026: April 19",
-      "date_specific": "2026: April 19",
-      "field_size": null,
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "date_specific": "2026: April 19 (next: 2027: April 18)",
+      "field_size": "~2,500 (third-party capacity estimate, not organizer-confirmed)",
+      "start_format": "Staggered route starts (not a single mass start): Gran Fondo 7:15am, Medio 7:30am, Piccolo 7:45am",
+      "registration": "https://runscore.runsignup.com/Race/CA/SanDiego/GranfondoSanDiego",
+      "entry_fee": "~$182.50 (100mi, late registration, incl. processing fee); ~$157.84 (60mi); ~$93.49 (35mi)",
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "5:00pm course closure (100mi rider manual); city permit lists 5:30pm as overall event end",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Gran Fondo: 100 mi / 160.9 km, 6,600 ft / 2,012m",
+        "Medio Fondo: 60 mi / 96.6 km, 3,100 ft / 945m",
+        "Piccolo Fondo: 35 mi / 56.3 km, 1,300 ft / 396m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -58,7 +62,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): distance corrected 162.5km->160.9km (organizer's 100mi conversion); founded corrected 2008->2009. Minor corrections only — dimension scores likely still hold."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -83,61 +87,76 @@
     "logistics": {
       "airport": "",
       "lodging_strategy": "Downtown San Diego offers numerous hotel and lodging options suitable for event participants. The waterfront location provides convenient access to accommodations ranging from budget to luxury properties.",
-      "transport": "The Gran Fondo San Diego is a two-day festival held in downtown San Diego, starting and finishing at Ruocco Park. The event operates under open start line rules with no mass start; participants begin at assigned times based on event staging. All participants must provide photo ID and signed county and event waivers at packet pickup. The course closes at 5:30 PM with a 10.5-hour time limit to complete the ride.",
+      "transport": "The Gran Fondo San Diego is a two-day festival held in downtown San Diego, starting and finishing at Ruocco Park (585 Harbor Lane). The event uses staggered route starts rather than a single mass start (Gran Fondo 7:15am, Medio 7:30am, Piccolo 7:45am) — riders still obey signals and ride single file on open, normal-traffic public roads. All participants must provide photo ID and signed county and event waivers at packet pickup. The 100-mile rider manual states a 5:00pm course closure; the City of San Diego's permit separately lists 5:30pm as the overall event end.",
       "food": "",
       "official_site": "https://www.sdgranfondo.com"
     },
     "history": {
-      "founded": 2008,
-      "origin_story": "The Gran Fondo San Diego is an established cycling event that has grown into a premier Southern California cycling celebration. The event combines Italian Gran Fondo tradition with San Diego's cycling culture, featuring the classic Great Western Loop through East County backcountry.",
+      "founded": 2009,
+      "origin_story": "Founded in March 2009 by GranFondo Cycling Tours/KOZ Events, combining Italian gran fondo tradition with San Diego's cycling culture around the Great Western Loop through East County backcountry. A 2018 organizer release referred to that year's edition as the tenth.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine, Well-Run Century With Overstated 'Open Start' Framing",
+      "summary": "Gran Fondo San Diego is a real, continuously run event since 2009, now heading into its 19th annual edition in 2027. Three well-differentiated distances (100/60/35 miles), a waterfront Ruocco Park base, and a timed Japatul Road KOM/QOM segment give it genuine structure without pretending the whole ride is a closed-road race — it isn't. The event bills itself as 'open start / no mass start,' which is broadly true but slightly oversold: riders still leave in staggered blocks by route (7:15/7:30/7:45am), obey traffic signals, and ride single file on public roads open to normal traffic. The organizer's own materials also disagree with the City's permit on the exact closure time (5:00pm vs. 5:30pm) and with themselves on whether the long route is 100 or 101 miles — small inconsistencies worth knowing before race day.",
+      "strengths": [
+        "Three genuinely distinct route levels (100/60/35 mi) suit a wide range of riders in one event",
+        "Real continuity since 2009, with a confirmed 2027 date already on the calendar",
+        "A named, timed KOM/QOM climb (Japatul Road, mile 36) gives the long route a genuine competitive element without overselling the whole ride as raced",
+        "Strong festival package — SAG/mechanical support, aid stations, waterfront start/finish, meal and medal included"
+      ],
+      "weaknesses": [
+        "Open, normal traffic on all three routes, plus mandatory single-file riding — this materially changes the experience from a closed-road European-style gran fondo",
+        "Late-entry pricing is steep (~$182.50 for the 100-mile route with processing fees)",
+        "Organizer pages disagree with each other on 100 vs. 101 miles and on the exact course-closure time (5:00pm vs. the city's 5:30pm)",
+        "\"Open start / no mass start\" undersells that specific staggered start times still apply per route"
+      ],
+      "bottom_line": "A legitimate, long-running Southern California century with real distance options and a fun festival atmosphere — just don't expect closed roads, and double-check the current closure time and course length directly with the organizer before race day."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "A well-organized, community-focused century ride through San Diego's scenic backcountry with excellent support infrastructure and celebratory atmosphere.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Established since 2009, three-distance San Diego century with a timed Japatul Road KOM — open roads, not a closed-course race.",
+      "should_you_race": "Yes if you want a well-organized, multi-distance Southern California century with real event infrastructure and a fun waterfront festival. Know going in that roads stay open to traffic and 'open start' means staggered, not free-for-all.",
+      "alternatives": "For a closer-to-authentic closed-road gran fondo experience in California, compare against other CA sportives with confirmed road closures; for a similar East County-area century, look at other San Diego-region century rides."
     },
     "citations": [
       {
-        "url": "https://www.sdgranfondo.com",
-        "category": "reference",
-        "label": "GranFondo San Diego - Voted Top 10 Century Ride in the USA"
-      },
-      {
         "url": "https://www.sdgranfondo.com/overview",
-        "category": "reference",
-        "label": "San Diego Cycling Events: Gran Fond Routes Overview"
+        "category": "official",
+        "label": "Official Route Overview — Distances, Elevation, Route Character"
       },
       {
-        "url": "https://www.sdgranfondo.com/details",
-        "category": "reference",
-        "label": "Important info about the Campagnolo Granfondo San Diego"
+        "url": "https://www.sdgranfondo.com/rider-manual",
+        "category": "official",
+        "label": "2026 Rider Manual — Starts, Open Roads, Japatul Climb, 5:00pm Closure"
       },
       {
-        "url": "https://www.granfondoguide.com/Events/Index/404/gran-fondo-san-diego",
-        "category": "reference",
-        "label": "Gran Fondo San Diego"
+        "url": "https://www.sdgranfondo.com/press-release",
+        "category": "official",
+        "label": "Organizer Press Releases — 2026 Date, Producer, 2009 Origin"
       },
       {
-        "url": "https://findarace.com/us/events/2026-granfondo-san-diego",
-        "category": "reference",
-        "label": "2026 Granfondo San Diego 2026 | Sun 19 Apr"
+        "url": "https://www.sdgranfondo.com/past-results",
+        "category": "official",
+        "label": "Official Results Archive"
+      },
+      {
+        "url": "https://www.sandiego.gov/event/san-diego-granfondo-2",
+        "category": "official",
+        "label": "City of San Diego 2026 Permit Listing — 5:30pm Overall Event End"
+      },
+      {
+        "url": "https://runscore.runsignup.com/Race/CA/SanDiego/GranfondoSanDiego",
+        "category": "official",
+        "label": "2026 Registration Listing and Fee Snapshot"
       }
     ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.sdgranfondo.com/",
-      "notes": "2026 edition is announced; no rebrand found; date on file matches April 19, 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition is announced; no rebrand found; date on file matches April 19, 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed founded 2009 (not 2008); 2027 edition confirmed April 18 (19th annual); 5:00pm/5:30pm closure-time discrepancy between organizer and city permit."
     }
   }
 }

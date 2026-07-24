@@ -5,24 +5,31 @@
     "display_name": "Granfondo Yunnan",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": 2286,
-      "elevation_ft": 7500.0,
-      "location": "Kunming, Yunnan, China",
-      "location_badge": "Kunming, China",
+      "distance_km": 650.0,
+      "distance_mi": 404.0,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Mangshi to Jinghong, Yunnan, China (multi-city stage race)",
+      "location_badge": "Yunnan, China",
       "country": "China",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": null,
+      "date": "2026: early November (13th edition, exact dates not yet published)",
+      "date_specific": "2026: early November TBD",
+      "field_size": "2,000+ (2025); full 5-stage tour capped around 1,000",
       "start_format": null,
-      "registration": "https://www.granfondoyunnan.com",
+      "registration": "https://www.granfondoyunnan.com/2023-registration",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Stage 1: 116 km (Mangshi area, includes Jiandong Mountain climb, ~1,000 m gain)",
+        "Stage 2: 160 km (2025: shortened by heavy rain to 137 km)",
+        "Stage 3: 158 km (2025: shortened and neutralized after landslides/road collapse)",
+        "Stage 4: 107 km",
+        "Stage 5: 133 km, ~2,500 m climbing, finishing Jinghong/Xishuangbanna area",
+        "Duo TT prologue: 9 km (non-GC)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +63,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): this is a 5-stage, ~650+km multi-day stage race (organizer's own format), not a single 140km/2,286m one-day fondo — the prior vitals appear to be an unsourced single-stage extract. distance=3 and every other dimension were scored against the wrong event shape entirely; recommend a human re-score against the actual multi-stage format, and consider whether discipline should be multi_stage rather than gran_fondo (see catalog_flags). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,46 +77,97 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A multi-city, multi-day timed stage race across western Yunnan, not a single one-day fondo. The 2025 (12th) edition ran five GC stages totaling roughly 650+ km plus a non-GC 9 km Duo TT prologue, moving through Mangshi, Tengchong, Fengqing, Pu'er/Simao, and finishing in the Xishuangbanna/Jinghong area — Kunming was not the 2025 event base, despite this database's prior listing. General classification is genuinely competitive (active UCI professionals are excluded), with traffic-controlled stages and organizer-run inter-city bus/hotel logistics between stage towns.",
+      "signature_challenge": "Stage 1's Jiandong Mountain climb (~1,000 m gain) sets the GC tone early; Stage 5 (133 km, ~2,500 m climbing) into the Jinghong/Xishuangbanna finish closes out the tour as the hardest single day.",
       "suffering_zones": [
-        "Tea Plantation Punches: Endless 15-20% switchbacks through Pu’er and Fengqing plantations sap legs after flats. Heat and views tempt easing off, but GC demands push.",
-        "Highland Descent Gauntlet: Technical drops from Tengchong passes past ethnic villages test brakes and nerves amid 1600-rider traffic. Cumulative fatigue peaks here.",
-        "Multi-Day Accumulation: Day 3-5 in Lincang-Xishuangbanna compounds 12,000m total gain, hitting recovery walls despite aid."
+        "Jiandong Mountain (Stage 1) — the tour's first major selection point, ~1,000 m of gain",
+        "Stage 5 (133 km / ~2,500 m) — the hardest closing day, finishing in the Xishuangbanna/Jinghong area",
+        "Weather and terrain disruption is a real, documented risk, not a hypothetical: heavy rain shortened Stage 2 to 137 km in 2025, and landslides/a road collapse forced Stage 3 to be shortened and neutralized that same year"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Organizer-run inter-city bus transfers and hotel packages between stage towns; multiple long transfers scheduled across the tour.",
       "food": "",
-      "official_site": "https://www.granfondoyunnan.com"
+      "official_site": "https://www.granfondoyunnan.com/home"
     },
     "history": {
       "founded": 2014,
-      "origin_story": "",
-      "notable_moments": [],
+      "origin_story": "Founded in November 2014 as a multi-stage amateur road race across western Yunnan. Continuity has been uneven: reduced to a single stage in 2020, cancelled entirely in 2021, returned with a four-day format in 2022 and 2023, and restored to five stages in 2024. The organizer's own edition numbering (2023/2024/2025/2026 labeled 10th/11th/12th/13th) appears to count a cancelled or otherwise unlisted edition — treat the numbering as organizer branding, not proof that twelve full stage races had actually been ridden by 2025.",
+      "notable_moments": [
+        "2014: Founded",
+        "2020: Reduced to one stage",
+        "2021: Entirely cancelled",
+        "2022-2023: Returned with a four-day format",
+        "2024-2025: Five-stage format restored, 2025 edition run October 31-November 8 with 2,000+ participants"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Stage Race, Mislabeled as a One-Day Fondo",
+      "summary": "Granfondo Yunnan is a genuine, competitive multi-day amateur stage race — five GC stages across roughly 650+ km through western Yunnan's Mangshi, Tengchong, Fengqing, Pu'er and Xishuangbanna regions, plus a non-GC Duo TT prologue. That's a materially bigger and more complicated undertaking than the single 140 km/2,286m Kunming fondo this database previously described, which appears to have been an unsourced single-stage extract rather than the actual event. The 2025 edition drew more than 2,000 riders and delivered real GC racing with professional exclusions — but it also delivered real disruption, with heavy rain shortening one stage and landslides forcing another to be neutralized. This is a rare amateur stage-race experience, not a weekend fondo, and should be marketed and scored as such.",
+      "strengths": [
+        "Genuinely rare format for amateur cyclists: a real multi-day GC stage race with timed classification, not a single-day mass ride",
+        "Substantial field (2,000+ in 2025) and organizer-run inter-city logistics (buses, hotel packages) that lower the coordination burden of a multi-city tour",
+        "Real geographic and cultural variety across western Yunnan's Mangshi-Tengchong-Fengqing-Xishuangbanna corridor",
+        "Traffic-controlled, competitive racing with professional-rider exclusions to keep the amateur GC meaningful"
+      ],
+      "weaknesses": [
+        "Considerably more complicated and expensive than a one-day fondo — multiple stage towns, long transfers, and multi-day logistics",
+        "Documented weather and terrain risk: 2025 saw one stage shortened by heavy rain and another neutralized after landslides and a road collapse",
+        "2026 specifics (exact dates, cities, fees) are not yet published as of this review, and the organizer's own registration page still points to stale prior-year material",
+        "The organizer's edition-numbering (10th-13th) glosses over a cancelled 2021 edition and a reduced 2020 edition — don't take 'Nth edition' at face value"
+      ],
+      "bottom_line": "If you want a genuine, competitive amateur stage race through dramatic western Yunnan terrain, this delivers — but budget for the logistics of a multi-city tour, not a weekend fondo, and go in with eyes open about weather-driven route changes."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "China’s premier amateur stage race blends epic Yunnan climbs with cultural immersion.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A ~650km, 5-stage amateur GC race across western Yunnan — not the single-day Kunming fondo this profile used to describe.",
+      "should_you_race": "Yes if you want a rare, genuinely competitive multi-day amateur stage race with real GC stakes and don't mind the added logistics of a multi-city tour. Skip if you're looking for a simple one-day fondo — that's not what this is.",
+      "alternatives": "For a comparable multi-day amateur stage race format, look at the Tour of Southland (New Zealand) or an established European amateur stage race; for a single-day Yunnan-region ride, look for a dedicated Kunming-area sportive instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondoyunnan.com/home",
+        "category": "official",
+        "label": "Granfondo Yunnan Homepage — Active Status, 13th Edition Announcement"
+      },
+      {
+        "url": "https://www.granfondoyunnan.com/about",
+        "category": "official",
+        "label": "Official History/About Page — 2014 Founding, Multi-Stage Format, 2020-2021 Disruption"
+      },
+      {
+        "url": "https://www.granfondoyunnan.com/stages-1",
+        "category": "official",
+        "label": "Official 2025 Stages Overview — 5 Stages, ~650+ km, Cities, Transfers"
+      },
+      {
+        "url": "https://www.granfondoyunnan.com/news",
+        "category": "official",
+        "label": "Official Event News — 2025 Completion, Field Size, Weather Disruption"
+      },
+      {
+        "url": "https://www.granfondoyunnan.com/rules-regulations",
+        "category": "official",
+        "label": "Official Competition Regulations — Timed GC Format, Professional Exclusions"
+      },
+      {
+        "url": "https://www.granfondoyunnan.com/results-2",
+        "category": "official",
+        "label": "Official Results Archive — Edition Numbering History"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.granfondoyunnan.com/home",
-      "notes": "Official site announces 13th edition in early November 2026 in Yunnan following a 12th edition held November 1–8, 2025.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Official site announces 13th edition in early November 2026 in Yunnan following a 12th edition held November 1–8, 2025.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed this is a 5-stage, ~650+km multi-city tour, not a single-stage Kunming fondo; prior vitals (140km/2,286m/Kunming) were unsourced and likely extracted from a single stage."
+    },
+    "catalog_flags": {
+      "status_note": "Taxonomy note: organizer markets this as 'Granfondo Yunnan' but the actual format (5 GC stages, ~650+km, multi-city tour with inter-city transfers) aligns much more closely with Roadie Labs' multi_stage discipline than gran_fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

@@ -5,24 +5,28 @@
     "display_name": "Deccan Cliffhanger",
     "tagline": "",
     "vitals": {
-      "distance_km": 120.7,
-      "distance_mi": 75.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Pune to Mahabaleshwar, Maharashtra, India",
-      "location_badge": "Pune to Mahabaleshwar, India",
+      "distance_km": 643.0,
+      "distance_mi": 399.6,
+      "elevation_m": 5907,
+      "elevation_ft": 19381.0,
+      "location": "Pune to Bogmallo Beach, Goa, India",
+      "location_badge": "Pune to Goa, India",
       "country": "India",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": "TBD",
-      "start_format": null,
+      "date": "2026: November 28 (13th edition)",
+      "date_specific": "2026: November 28",
+      "field_size": "~65 solo riders + 8 relay teams (2025 roster, ~89 listed cyclists)",
+      "start_format": "Nonstop point-to-point ultra; solo self-supported, solo crew-supported, and 2-/3-/4-person relay categories",
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "TBD",
-      "cutoff_time": "TBD",
+      "feed_zones": "Organizer-arranged midpoint drop-bag support (self-supported categories); full crew support (supported categories)",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Solo self-supported (RAAM qualifier)",
+        "Solo crew-supported (RAAM qualifier)",
+        "2-, 3-, and 4-person relay teams"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +60,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 63. FLAG (2026-07-24 editorial wave 7): major vitals correction — this is a 643km/5,907m ultra-distance race (organizer-confirmed), not the 120.7km/null-elevation entry previously on file, which described only a fraction of the actual event. distance=2, climbing=4, and every other dimension were scored against wildly wrong course facts; recommend a full human re-score against the actual 643km ultra format (see catalog_flags taxonomy note). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +74,87 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A nonstop, point-to-point ultra-distance race across the Deccan Plateau and the Sahyadris (Western Ghats), starting at Keshavbaug, DP Road, Karve Nagar, Pune, and finishing 643 km later at Bogmallo Beach, Goa. Mahabaleshwar/Panchgani is only an early waypoint on the route (via the Pasarni Ghat), not the finish — this database previously described the race as ending there. The route also passes Satara, Karad, Kolhapur and Belgaum before a forested descent into Goa, entirely on paved public roads and highways.",
+      "signature_challenge": "The full 643 km distance itself — a nonstop RAAM-qualifier ultra with no shorter competitive category. All formats (solo self-supported, solo crew-supported, and relay teams of 2-4) ride the same course.",
+      "suffering_zones": [
+        "Katraj/Khambatki — early Ghat climbing out of Pune",
+        "Panchgani/Pasarni Ghat — the Mahabaleshwar-area climbing this profile previously (and wrongly) treated as the finish",
+        "The Satara-Karad-Kolhapur-Belgaum corridor — long sustained distance on the Deccan Plateau",
+        "The forested descent into Goa — technical descending after 600+ km of accumulated fatigue"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and guesthouses abundant in Pune and Mahabaleshwar; book early for event weekend.",
-      "transport": "",
+      "lodging_strategy": "Hotels and guesthouses abundant in Pune and Goa; solo self-supported riders rely on organizer-arranged midpoint drop-bag support rather than a personal follow vehicle.",
+      "transport": "Start: Keshavbaug, DP Road, Karve Nagar, Pune. Finish: Bogmallo Beach, Goa.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.inspireindia.net.in/deccan-cliffhanger"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2014,
+      "origin_story": "Founded in 2014 (initially held in February) by organizer Inspire India. The solo categories operate as Race Across America (RAAM) qualifiers.",
+      "notable_moments": [
+        "2014: Founded, initially run in February",
+        "2024: 11th edition, Pune-to-Goa, 643 km",
+        "2025: 12th edition, November 1",
+        "2026: 13th edition, November 28"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Serious Indian Ultra, Not a Sportive",
+      "summary": "Deccan Cliffhanger is a genuine, established Indian ultracycling race — a nonstop 643 km/5,907m point-to-point from Pune to Goa across the Deccan Plateau and Western Ghats, running since 2014 with real RAAM-qualifier stakes for its solo categories. That's a fundamentally different and far more demanding event than the 120.7 km sportive-style entry this database previously carried, which appears to have captured only an early fragment of the route. Every rider covers the same full 643 km, whether solo self-supported, solo crew-supported, or as part of a relay team — there is no shorter competitive category to ease into.",
+      "strengths": [
+        "Established, continuously run Indian ultra since 2014 with genuine RAAM-qualifier stakes",
+        "Consequential, varied terrain across the Western Ghats and Deccan Plateau, finishing at the Goa coast",
+        "Both self-supported and crew-supported solo pathways, plus 2-/3-/4-person relay options that broaden accessibility below the full solo distance",
+        "A real, credible organizer (Inspire India) with over a decade of continuity"
+      ],
+      "weaknesses": [
+        "Exceptionally demanding — 643 km nonstop with no shorter competitive category, unlike a conventional gran fondo's multi-distance options",
+        "Traffic, night riding, and variable road conditions on Indian highways are a real safety factor over such distance",
+        "Small field (roughly 65 solo riders plus 8 relay teams in 2025) and no current entry-fee transparency",
+        "Crew-supported entries require substantial logistics beyond what most riders bring to a sportive-style event"
+      ],
+      "bottom_line": "A legitimate, serious ultracycling institution that has nothing in common with the sportive-style entry this profile used to describe — score, market, and prepare for it as a 643 km ultra, not a 120 km fondo."
     },
     "final_verdict": {
       "score": "63/100",
-      "one_liner": "Iconic Indian sportive with brutal Ghats climbs and stunning plateau-to-hill views.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A 643km/5,907m nonstop Pune-to-Goa RAAM-qualifier ultra — not the 120km sportive this profile previously described.",
+      "should_you_race": "Yes if you're specifically seeking a serious ultracycling RAAM-qualifier challenge across the Western Ghats. Not a fit if you're looking for a conventional single-day gran fondo — there's no shorter competitive category here.",
+      "alternatives": "For a comparable Indian road ultra, look at other RAAM-qualifier events on the subcontinent; for a conventional single-day Indian road sportive, look elsewhere in the catalog."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.inspireindia.net.in/deccan-cliffhanger",
+        "category": "official",
+        "label": "Deccan Cliffhanger — Official Organizer Page, 2026 Date, Edition Number, Course, Formats"
+      },
+      {
+        "url": "https://www.inspireindia.net.in/race-roster",
+        "category": "official",
+        "label": "Official 2025 Race Roster — Category Composition"
+      },
+      {
+        "url": "https://ultracycling.com/calendar/the-deccan-cliffhanger-12th-edition/",
+        "category": "reference",
+        "label": "WUCA Calendar — 12th Edition Listing, 643km, Solo/Relay Formats"
+      },
+      {
+        "url": "https://www.mangalorean.com/mangalore-boy-hardik-rai-completes-deccan-cliffhanger-643km-ultra-cycle-race-from-pune-to-goa/",
+        "category": "media",
+        "label": "Mangalorean — 2024 (11th Edition) Report, Confirms 643km Pune-to-Goa"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.cobbledclimbs.com/blogs/articles/deccan-cliffhanger-2026-the-complete-gear-guide-for-indian-riders",
-      "notes": "annual Nov ultra (643 km); 11th edition 2024 evidenced, 2026 coverage exists; organizer Inspire India active"
+      "notes": "annual Nov ultra (643 km); 11th edition 2024 evidenced, 2026 coverage exists; organizer Inspire India active. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed 643km/5,907m Pune-to-Goa (not Pune-to-Mahabaleshwar/120.7km), 13th edition November 28 2026, founded 2014."
+    },
+    "catalog_flags": {
+      "status_note": "Taxonomy note: this is a nonstop, self-supported/crew-supported ultracycling RAAM qualifier (643km/5,907m), not a conventional gran fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

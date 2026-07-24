@@ -14,15 +14,19 @@
       "country": "Wales",
       "date": "2026: May 23",
       "date_specific": "2026: May 23",
-      "field_size": "1600",
+      "field_size": "1,600+ (2025 attendance; 2026 exact field not verified)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "4",
+      "registration": "https://bigcowsports.com/tour-of-pembrokeshire/",
+      "entry_fee": "Epic (105mi) GBP40; Classic (60mi) GBP40; Community (25mi) GBP30",
+      "feed_zones": "4 (Epic); 3 (Classic); 1 (Community)",
       "cutoff_time": "18:00",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Epic: 105 mi / 169.0 km, over 10,000 ft / 3,048m",
+        "Classic: 60 mi / 96.6 km, over 4,000 ft / 1,219m",
+        "Community: 25 mi / 40.2 km, over 1,500 ft / 457m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +60,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): 3,048m is the organizer's 'over 10,000 ft' threshold figure, not a precise surveyed total — climbing=4 should be sanity-checked against that imprecision. field_size 1,600 is 2025 attendance, not a confirmed 2026 number."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +74,76 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A JCP Solicitors-titled road sportive based at Ysgol Penrhyn Dewi (Dewi Campus), Millard Park, St Davids, offering three distances through rugged Pembrokeshire coastline, narrow country lanes and the Preseli Hills. The organizer (BCS Events, formerly Big Cow Sports) does not publish a definitive list of named climbs, but the Epic route's severity for its distance (over 10,000 ft across 105 miles) is well documented by riders and media.",
+      "signature_challenge": "The cumulative climbing of the Preseli Hills and coastal lanes on the Epic route — severe for a UK sportive of this distance, with exposed weather adding to the difficulty.",
+      "suffering_zones": [
+        "The Preseli Hills sections — the route's main sustained climbing",
+        "Exposed coastal stretches where Pembrokeshire weather can turn conditions taxing with little shelter"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Local options in St Davids and Pembrokeshire; book early due to sell-out event.",
-      "transport": "",
+      "transport": "Venue: Ysgol Penrhyn Dewi - Dewi Campus, Millard Park, St Davids, Haverfordwest SA62 6QH.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://bigcowsports.com/tour-of-pembrokeshire/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Founding year not securely verified — British Cycling documented the event returning in 2010, and 2025 media coverage called that year's edition the '14th year,' but neither statement establishes an unambiguous inaugural year. Currently organized by BCS Events (formerly Big Cow Sports).",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuinely Hard UK Sportive, Honestly Run",
+      "summary": "Tour of Pembrokeshire is a well-organized, currently active Welsh road sportive with three genuinely differentiated distances — the 105-mile Epic (over 10,000 ft of climbing), the 60-mile Classic, and the 25-mile Community ride. The Epic's climbing-to-distance ratio is unusually severe for a UK sportive, and the Pembrokeshire coastline and Preseli Hills scenery back it up. The organizer publishes only threshold elevation figures ('over 10,000 ft') rather than precise surveyed totals, and 2026 participation numbers weren't independently confirmed at the time of this review — but there's no sign of cancellation or decline, and the event has real multi-year continuity under BCS Events.",
+      "strengths": [
+        "An unusually hard UK sportive for its distance — 'over 10,000 ft' across 105 miles is a serious climbing ratio",
+        "Distinctive Pembrokeshire coastal and Preseli Hills scenery not replicated elsewhere in UK sportive calendars",
+        "Three well-differentiated distances (105/60/25 mi) give genuine entry points for different ability levels",
+        "Established, continuously run organizer (BCS Events) with clear event infrastructure — chip timing, mechanical/medical support, feed stations"
+      ],
+      "weaknesses": [
+        "Exposed weather and narrow country lanes can make conditions genuinely taxing, especially on the Epic route",
+        "The organizer publishes only threshold elevation figures, not precise route totals — treat '3,048m' as an approximation, not a surveyed exact",
+        "2026 participation numbers are not independently confirmed; the 1,600-rider figure on file is 2025 attendance",
+        "Founding year isn't clearly established by the organizer despite the event's evident longevity"
+      ],
+      "bottom_line": "One of the harder one-day sportives in the UK relative to its distance, with genuine coastal and hill-country character. A safe, currently active choice for riders wanting a serious Welsh climbing test."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Iconic Welsh sportive with breathtaking scenery and brutal climbs that sells out annually.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Severe climbing-to-distance ratio through Pembrokeshire coast and Preseli Hills — over 10,000ft across 105 miles.",
+      "should_you_race": "Yes if you want one of the harder one-day UK sportives for its distance, with distinctive coastal scenery. Choose the 60-mile Classic or 25-mile Community route if the full Epic's climbing is beyond your current fitness.",
+      "alternatives": "For a comparable UK coastal sportive with serious climbing, look at other Welsh or Southwest England sportive calendars; for a shorter, more casual Pembrokeshire ride, the Community 25-mile option covers similar terrain at lower intensity."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://bigcowsports.com/tour-of-pembrokeshire/",
+        "category": "official",
+        "label": "Tour of Pembrokeshire — Official Event Page (Organizer, Date, Venue, Distances, Fees)"
+      },
+      {
+        "url": "https://bigcowsports.com/events/",
+        "category": "official",
+        "label": "BCS Events Calendar — 2027 Edition Listed (Date TBC)"
+      },
+      {
+        "url": "https://bigcowsports.com/about-us/",
+        "category": "official",
+        "label": "BCS Events About Page — Confirms BCS Events Was Previously Big Cow Sports"
+      },
+      {
+        "url": "https://pembrokeshire-herald.com/113881/cyclists-tackle-epic-routes-in-tour-of-pembrokeshire/",
+        "category": "media",
+        "label": "Pembrokeshire Herald — 2025 Event Report, 1,600+ Riders"
+      },
+      {
+        "url": "https://www.britishcycling.org.uk/sportives/article/sp20100330-Tour-of-Pembrokeshire-Returns-for-2010-0",
+        "category": "reference",
+        "label": "British Cycling — Confirms Event Existed by 2010"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Tour of Pembrokeshire gran fondo cycling St Davids",
@@ -156,70 +199,6 @@
           ],
           "url": "https://www.youtube.com/watch?v=B7J6edqWGBQ",
           "curated": false
-        },
-        {
-          "video_id": "VdZHmCY5cys",
-          "title": "Saturday at the Long Course Weekend  Tenby 2015 , the cycle stages.",
-          "channel": "tenbyhouse",
-          "view_count": 752,
-          "upload_date": "20150704",
-          "duration_string": "1:24",
-          "description": "Brief iphone movie from Tenby House Hotel  of Saturday at the Long Course Weekend 2015 Tenby, the cycle stages.",
-          "tags": [
-            "Tenby (City/Town/Village)",
-            "tenby house hotel",
-            "Saturday",
-            "cycling",
-            "Bike",
-            "Bicycle (Product Category)",
-            "triathlon",
-            "Biking",
-            "tenby",
-            "pembrokeshire",
-            "wales"
-          ],
-          "url": "https://www.youtube.com/watch?v=VdZHmCY5cys",
-          "transcript": "[Music]\nw\nif you want to about long course lour\nweekend.com is the website and last year\nring the rain to see the finish of the\nbike race you can see lots of photos\nthere lots of pictures of some very\ndetermined people coming across the\nFinish Line we'll do the",
-          "curated": false
-        },
-        {
-          "video_id": "BpRkZH8fiUg",
-          "title": "GYPSY TRAVELLER GIRL GOES BARE KNUCKLE ON HARD MAN  ( PART 1 )",
-          "channel": "Davo Devigne",
-          "view_count": 2454716,
-          "upload_date": "20220717",
-          "duration_string": "2:08",
-          "description": "WHEN A GYPSY TRAVELLER GIRL AND HER DOG ENCOUNTER A HARD MAN FROM THE STREETS, THEY DON'T GET ON, AND LET'S JUST SAY THINGS DON'T END WELL.\nSee Part 2 of this video here: https://www.youtube.com/watch?v=hGNJzq80_Zc",
-          "tags": [
-            "Gypsy traveller",
-            "gypsy beef",
-            "traveller beef",
-            "gypsy callout",
-            "traveller callout",
-            "paddy doherty",
-            "tommy joyce",
-            "mountbellew ward",
-            "dougie joyce",
-            "gypsy grabbing",
-            "here come the gypsies",
-            "gypsy rose",
-            "gypsy vs settled man",
-            "appleby fair",
-            "dean lynch ward",
-            "decca heggie",
-            "bkb travellers",
-            "decca dean lynch ward",
-            "boxing media",
-            "eddie hearn",
-            "OMG weddings",
-            "thelma's gypsy girls",
-            "Ryan garcia vs javier fortuna",
-            "gervonta davis",
-            "brian ortega vs rodriguez",
-            "jake paul vs hasim rahman"
-          ],
-          "url": "https://www.youtube.com/watch?v=BpRkZH8fiUg",
-          "curated": false
         }
       ],
       "quotes": [],
@@ -229,24 +208,15 @@
         "terrain_notes": [],
         "gear_mentions": [],
         "race_day_tips": [],
-        "additional_quotes": [
-          {
-            "text": "You can see lots of photos there lots of pictures of some very determined people coming across the Finish Line",
-            "source_video_id": "VdZHmCY5cys",
-            "source_channel": "tenbyhouse",
-            "source_view_count": 752,
-            "category": "community",
-            "curated": true
-          }
-        ],
-        "search_text": "The Tour of Pembrokeshire features determined riders crossing the finish line in challenging conditions. Past race coverage shows riders competing through rain, with the long course being a significant test of endurance. The race appears to attract committed gravel cyclists willing to push through difficult weather conditions to complete the 105-mile distance with 10,000 feet of elevation gain through the Welsh countryside around St Davids."
+        "additional_quotes": [],
+        "search_text": "Purged 2026-07-24 (editorial wave 7): prior search_text and quotes were sourced from a Tenby Long Course Weekend triathlon video (a different event, different town) and an unrelated non-cycling video, neither of which describes Tour of Pembrokeshire. No verified rider intel currently available for this event."
       }
     },
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://resultsbase.net/event/7556",
-      "notes": "2026 edition is listed for 23 May 2026 in St David's/SA62 6QH; no cancellation or discontinuation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition is listed for 23 May 2026 in St David's/SA62 6QH; no cancellation or discontinuation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed organizer is BCS Events (formerly Big Cow Sports); confirmed three-distance structure and 2027 edition already listed (date TBC)."
     }
   }
 }

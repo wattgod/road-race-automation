@@ -5,24 +5,27 @@
     "display_name": "Les Trois Ballons",
     "tagline": "",
     "vitals": {
-      "distance_km": 180.2,
-      "distance_mi": 112.0,
-      "elevation_m": 4019,
-      "elevation_ft": 13186.0,
-      "location": "Ronchamp, Haute-Saône, France",
+      "distance_km": 181.0,
+      "distance_mi": 112.5,
+      "elevation_m": 4020,
+      "elevation_ft": 13189.0,
+      "location": "Ronchamp, Haute-Saône, France (finishes at La Planche des Belles Filles)",
       "location_badge": "Ronchamp, France",
       "country": "France",
-      "date": "2026: June 7",
-      "date_specific": "2026: June 7",
-      "field_size": "N/A",
+      "date": "2026: June 6",
+      "date_specific": "2026: June 6",
+      "field_size": "~2,500 across both routes (2026, unofficial club estimate); 3,500 (2024, regional government report)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "registration": "https://les3ballons.com/en/pricing-and-rules/",
+      "entry_fee": "Granfondo EUR75/80/85 by registration tier; Mediofondo EUR70/75/80; +EUR5 day-before or +EUR10 race-day, subject to space",
+      "feed_zones": "4 feed stations (Granfondo)",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Granfondo: 181 km / 4,020m D+",
+        "Mediofondo: 93 km / 2,200m D+"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): date corrected from June 7 to the organizer-confirmed June 6, 2026; distance/elevation adjusted from 180.2km/4,019m to the organizer-advertised 181km/4,020m (the organizer's own portfolio page separately says 178km, so treat as approximate). Not a duplicate of gfny-grand-ballon.json (confirmed distinct routes/organizers by codex research) despite sharing the Grand Ballon-Markstein corridor. Note: prose previously called the descents 'technical,' which conflicted with the on-file descent_technicality=1/technical_rating=1 — softened to avoid contradicting the stored scores; a human descent-difficulty re-check may still be warranted given the Grand Ballon/Ballon d'Alsace descents."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +73,88 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Officially branded 'Les 3 Ballons Chef de File,' this cyclosportive starts at the Esplanade du Stade in Ronchamp and climbs through a dense sequence of southern Vosges massifs — Ballon de Servance, Col d'Oderen, Le Markstein, Grand Ballon, and Ballon d'Alsace — before an uphill finish at the summit of La Planche des Belles Filles, whose closing ramps exceed 15%. Riders return to Ronchamp afterward, roughly 14 km of mostly descending travel from the foot of the climb. It shares the Grand Ballon-Markstein corridor with GFNY Grand Ballon (Thann), but the two events are genuinely distinct: different organizers (Top Club France/Sport Communication vs. GFNY), different exact routes, and different dates.",
+      "signature_challenge": "The summit finish at La Planche des Belles Filles, arriving after Servance, Oderen, Markstein, Grand Ballon and Ballon d'Alsace have already been climbed — a true summit-finish sportive rather than a loop back to a flat finish.",
+      "suffering_zones": [
+        "Ballon de Servance and Col d'Oderen — the opening climbing sequence",
+        "Le Markstein and Grand Ballon — the massif's best-known ascents, shared geographically (not by route) with GFNY Grand Ballon",
+        "Ballon d'Alsace",
+        "La Planche des Belles Filles — the finishing climb, with closing ramps exceeding 15%"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "N/A",
-      "transport": "",
+      "lodging_strategy": "",
+      "transport": "Point-to-point finish at La Planche des Belles Filles summit adds post-race logistics — plan return transport from Ronchamp in advance.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://les3ballons.com/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Founding year not securely verified — secondary sources conflict, placing the event's origin generally in the 1990s (one calendar cites 1997). The organizer of record is Top Club France, with Sport Communication/3 Ballons as operating contact and the wider portfolio presented by Cycling Classics/Golazo.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine Vosges Classic, Not a Grand Ballon Duplicate",
+      "summary": "Les 3 Ballons is a well-established French cyclosportive built around an unusually dense sequence of major Vosges climbs — Servance, Oderen, Markstein, Grand Ballon, Ballon d'Alsace — capped by a genuine summit finish at La Planche des Belles Filles. It shares its home massif and one climbing corridor with GFNY Grand Ballon in nearby Thann, but the two are run by different organizers on different routes on different dates; they should be catalogued as distinct events, not duplicates. Entry pricing (EUR75-85) is reasonable for the density of climbing on offer, though the organizer's own materials disagree with themselves on the exact distance (178 km on one portfolio page, 181 km on the dedicated 2026 course page) — a small but real precision problem.",
+      "strengths": [
+        "Unusually dense sequence of major Vosges climbs in a single day, capped by a true summit finish at La Planche des Belles Filles",
+        "Comparatively reasonable entry fee (EUR75-85) for the climbing on offer",
+        "Two well-differentiated distances (181 km Granfondo, 93 km Mediofondo) suit both serious and moderate riders",
+        "Genuinely distinct from GFNY Grand Ballon despite the geographic overlap — worth doing both if you love this massif"
+      ],
+      "weaknesses": [
+        "Open-road operation and a multi-thousand-rider field raises real safety considerations on the descents between climbs",
+        "Point-to-point summit finish adds logistics — you don't simply ride back to your car at day's end",
+        "The organizer's own portfolio page (178 km) and dedicated course page (181 km) disagree, undermining confidence in precise figures",
+        "Founding year and exact historical field-size trends are not well documented by the organizer"
+      ],
+      "bottom_line": "One of the Vosges' best single-day climbing tests, distinct from — and complementary to — GFNY Grand Ballon nearby. Book transport out of La Planche des Belles Filles in advance."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Epic Vosges gran fondo with brutal climbs and iconic summit finish.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Dense Vosges climbing gauntlet — Servance, Markstein, Grand Ballon, Ballon d'Alsace — finishing atop La Planche des Belles Filles.",
+      "should_you_race": "Yes if you want one of the hardest single-day amateur climbing tests in the Vosges with a genuine summit finish. Choose the 93 km Mediofondo if the full 181 km/4,020m Granfondo is beyond your current fitness.",
+      "alternatives": "For the same massif with a different route and a second Grand Ballon ascent: GFNY Grand Ballon (Thann). For other Vosges climbing sportives, look at regional cyclosportive calendars for the Ballon d'Alsace and Route des Crêtes corridor."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://les3ballons.com/",
+        "category": "official",
+        "label": "Les 3 Ballons — Official Homepage"
+      },
+      {
+        "url": "https://les3ballons.com/en/granfondo/",
+        "category": "official",
+        "label": "Official 2026 Granfondo Course Page — Distance, Elevation, Climbs, Feed Stations"
+      },
+      {
+        "url": "https://les3ballons.com/en/pricing-and-rules/",
+        "category": "official",
+        "label": "Official Pricing and Rules Page"
+      },
+      {
+        "url": "https://les3ballons.com/wp-content/uploads/sites/10/2025/11/3B26-RULES-AND-GENERAL-CONDITIONS-OF-SALE.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations PDF — Open-Road Format, Ranking, Organizer Contact"
+      },
+      {
+        "url": "https://velo.ffc.fr/courses/les-3-ballons-chef-de-file/",
+        "category": "official",
+        "label": "French Cycling Federation Event Listing — Date and Organizer of Record"
+      },
+      {
+        "url": "https://gfny.com/almost-2000-riders-set-to-tackle-gfny-grand-ballon-this-sunday/",
+        "category": "reference",
+        "label": "GFNY — Confirms GFNY Grand Ballon Is a Distinct Event (Different Route/Date/Organizer)"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.estrepublicain.fr/sport/2026/06/03/la-cyclosportive-des-3-ballons-a-l-assaut-des-cols-vosgiens-ce-samedi",
-      "notes": "2026 edition was announced and covered as taking place from Ronchamp; date on file conflicts slightly (June 7 vs June 6).; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition was announced and covered as taking place from Ronchamp; date on file conflicts slightly (June 7 vs June 6).; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed correct date is June 6, 2026 (Saturday); confirmed genuinely distinct from GFNY Grand Ballon despite shared massif."
     }
   }
 }

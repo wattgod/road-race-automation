@@ -5,24 +5,29 @@
     "display_name": "Race Around Poland",
     "tagline": "",
     "vitals": {
-      "distance_km": 3600.1,
+      "distance_km": 3600.0,
       "distance_mi": 2237.0,
-      "elevation_m": 33104,
-      "elevation_ft": 108610.0,
-      "location": "Poland (circumnavigation)",
+      "elevation_m": 33100,
+      "elevation_ft": 108596.0,
+      "location": "Poland (national circumnavigation, honorary start Warsaw Royal Wilanów)",
       "location_badge": "Poland (circumnavigation)",
-      "country": null,
-      "date": "2026: June 27",
+      "country": "Poland",
+      "date": "2026: June 27 (sixth edition, concluded July 2026)",
       "date_specific": "2026: June 27",
-      "field_size": "Unknown",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Multiple checkpoints on route with minimum speed requirements",
-      "cutoff_time": "RAP solo: 12 days | 1/2 RAP solo: 6 days | 1/4 RAP: 3 days | RAP team: 8 days | Challenge 300: 24 hours",
+      "field_size": "100 athletes from 12 countries (2026)",
+      "start_format": "Individual departures at 1-4 minute intervals; drafting prohibited",
+      "registration": "https://racearoundpoland.pl/",
+      "entry_fee": "2026 solo unsupported (3,600km): EUR160-256; solo supported: EUR410-656; 2-person team: EUR533-853; 4-person team: EUR693-1,109",
+      "feed_zones": "Timed checkpoints with minimum-speed requirements",
+      "cutoff_time": "Solo: 3,600km 12 days, 1,800km 6 days, 900km 3 days. Teams: 3,600km 8 days, 1,800km 4 days, 900km 2 days. Challenge 300: 24 hours",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "RAP (full): 3,600 km / 33,100m — solo unsupported, solo supported, 2-/4-person team",
+        "1/2 RAP: 1,800 km, finishing near Grudza/Szklarska Poręba",
+        "1/4 RAP: 900 km, finishing at Czorsztyn",
+        "Challenge 300: 150 km out-and-back to Czemierniki (solo unsupported, solo semi-supported, 2-person team)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +61,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): this is an extreme self-supported/supported ultracycling national circumnavigation (3,600km/33,100m, 100-athlete field in 2026), not a conventional gran_fondo — field_depth=2, community_culture=3 and other fondo-shaped dimensions were scored against ultra-format assumptions. Recommend a human re-check the discipline/scoring fit (see catalog_flags taxonomy note). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +75,95 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A full national circumnavigation ultracycling time trial, honorary-started at Warsaw's Royal Wilanów with a timed start outside the city at Obórki, looping the entire Polish border: the eastern frontier via Włodawa and the Ukrainian border, the Bieszczady and Beskids, Czorsztyn and the Tatras, the Karkonosze/Sudetes, the German border, the Baltic coast, Masuria, and the Lithuania/Belarus border area before returning to Warsaw. Riders start individually at 1-4 minute intervals with drafting prohibited — this is an individual time trial, not a mass-start race.",
+      "signature_challenge": "The full 3,600 km/33,100m loop itself — no single climb or sector defines the race; the challenge is sustaining pace and sleep management across 12 days (solo) through eight distinct Polish regions.",
+      "suffering_zones": [
+        "The eastern border stretch along the Ukrainian frontier — remote, exposed riding early in the loop",
+        "The Bieszczady, Beskids and Tatras (Czorsztyn) — the route's main climbing zones",
+        "The Karkonosze/Sudetes mountain crossing",
+        "The Baltic coast and Masuria sections — long, exposed flat riding late in the loop when fatigue has accumulated"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Not specified in available information. Racers in supported categories have crew assistance; unsupported racers must arrange their own rest stops at stationary support points or casual accommodations.",
+      "lodging_strategy": "Solo unsupported riders arrange their own rest stops at stationary support points or casual accommodations; supported and team categories use a crew and support vehicle.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://racearoundpoland.pl/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2021,
+      "origin_story": "First edition run in 2021 as a full Polish national-circumnavigation ultracycling race. Shorter 1,800km (1/2 RAP) and 900km (1/4 RAP) distances, plus the 150km Challenge 300, were introduced later to provide progression paths below the full distance.",
+      "notable_moments": [
+        "2021: First edition",
+        "2026: Sixth edition, 100 athletes from 12 countries, including 58 in the 3,600km solo-unsupported WUCA championship category"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine National Circumnavigation Ultra, Not a Gran Fondo",
+      "summary": "Race Around Poland is a real, well-organized extreme ultracycling event — a full 3,600km/33,100m loop of the entire country, first run in 2021 and now hosting a genuine WUCA solo-unsupported world championship category. It offers real progression (150km Challenge 300, 900km 1/4 RAP, 1,800km 1/2 RAP, full 3,600km) and both supported and unsupported options. But with only 100 athletes across every distance in 2026, it should never be presented as a large-field mass-participation fondo — it's a small, serious ultracycling field tackling one of Europe's most complete national circumnavigations, and its own website is inconsistent about exactly how many category types it offers (the rules say seven, the homepage says eight).",
+      "strengths": [
+        "An unusually complete national circumnavigation — few ultras cover an entire country's border this thoroughly",
+        "Real progression path via shorter distances (Challenge 300, 1/4 RAP, 1/2 RAP) below the full 3,600km distance",
+        "Genuine WUCA world-championship depth on the 3,600km solo-unsupported category",
+        "Both supported and unsupported options across all main distances"
+      ],
+      "weaknesses": [
+        "Small field (100 athletes total in 2026) — not a mass-participation event despite its scale of distance",
+        "Open traffic and variable road quality across 3,600km, with the unsupported category offering only limited intervention if things go wrong",
+        "The organizer's own site disagrees with itself on category count (seven per the rules, 'eight solo&teams' on the homepage)",
+        "No official 2027 date published as of this review"
+      ],
+      "bottom_line": "A legitimate, serious ultracycling national-circumnavigation race, best understood and scored as an ultra-format event rather than a conventional gran fondo."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "An elite ultracycling championship offering multiple distance formats around Poland's circumference, combining extreme endurance with organized support infrastructure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Genuine 3,600km/33,100m national circumnavigation ultra with WUCA championship status — a small serious field, not a mass fondo.",
+      "should_you_race": "Yes if you're specifically seeking an extreme ultracycling national-circumnavigation challenge and can commit to the solo or team logistics. Not a fit if you're looking for a conventional single-day, mass-participation gran fondo.",
+      "alternatives": "For a comparable European national-circumnavigation ultra, see Race Around Austria (also in this catalog). For a conventional single-day Polish road gran fondo, look elsewhere in the catalog."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://racearoundpoland.pl/",
+        "category": "official",
+        "label": "Race Around Poland — Official Homepage, 2026 Date and Completion Reports"
+      },
+      {
+        "url": "https://racearoundpoland.pl/route",
+        "category": "official",
+        "label": "Official Route Page — Start/Finish, Geography, Shorter Distances"
+      },
+      {
+        "url": "https://racearoundpoland.pl/race",
+        "category": "official",
+        "label": "Official Race Overview — Supported/Unsupported and Team Structure"
+      },
+      {
+        "url": "https://racearoundpoland.pl/files/2025-07/regulamin-eng-rap-2026.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations PDF — Categories, Start Intervals, Cutoffs"
+      },
+      {
+        "url": "https://racearoundpoland.pl/news/press-release-no-5-registration-closed-100-athletes-at-the-start-of-rap-2026",
+        "category": "official",
+        "label": "Official 2026 Field Announcement — 100 Athletes"
+      },
+      {
+        "url": "https://board.racearoundpoland.pl/news/new-distances-and-change-of-regulations",
+        "category": "official",
+        "label": "Official First-Edition Retrospective — 2021 Founding, Introduction of Shorter Distances"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://racearoundpoland.pl/",
-      "notes": "Sixth edition Race Around Poland 2026 started on 27 June 2026 around Poland.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Sixth edition Race Around Poland 2026 started on 27 June 2026 around Poland.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed founded 2021, 100 athletes from 12 countries in 2026, no 2027 date published yet."
+    },
+    "catalog_flags": {
+      "status_note": "Taxonomy note: this is an extreme self-supported/supported ultracycling national circumnavigation (3,600km/33,100m, 100-athlete field), not a conventional mass-participation gran fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision.",
+      "ruled": "2026-07-24 editorial calibration wave 7"
     }
   }
 }

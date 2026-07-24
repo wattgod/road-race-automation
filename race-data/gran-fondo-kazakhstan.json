@@ -5,19 +5,19 @@
     "display_name": "Gran Fondo Kazakhstan",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 1067,
-      "elevation_ft": 3500.0,
+      "distance_km": 95.0,
+      "distance_mi": 59.0,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Almaty, Kazakhstan",
       "location_badge": "Almaty, Kazakhstan",
       "country": "Kazakhstan",
-      "date": "2026: August TBD",
-      "date_specific": "2026: August TBD",
+      "date": "2026: August 16",
+      "date_specific": "2026: August 16",
       "field_size": null,
       "start_format": null,
       "registration": "https://www.granfondo.com.kz/en/",
-      "entry_fee": null,
+      "entry_fee": "KZT 15,000 through June 30; KZT 20,000 from July 1; KZT 25,000 for foreign participants",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): vitals corrected from 99.8km/1,067m (unsourced) to the organizer-confirmed 95km course; elevation set to null (no official figure found, was invented). altitude=4 and climbing=4 were scored against unverified numbers — recommend a human re-check whether those hold for a 95km lap-course race with no confirmed elevation total. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,40 +70,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": [
-        "Tien Shan Steeps: Relentless 15-mile mid-course climbs in Almaty foothills with 2000+ feet gain testing legs at altitude.",
-        "High Plateau Push: Sustained efforts near Medeu reaching 5000 feet where thin air amplifies 3500 feet total burn."
-      ]
+      "character": "A lap-based road course starting and finishing at the Halyk Bank parking area on Al-Farabi Street in Almaty. The organizer runs three linked categories on the same asphalt circuit: a 95 km Gran Fondo and 50 km Media Fondo for road bikes, plus a separate 37 km MTB category. The organizer describes the course as hilly, with steep ascents and smooth descents, rather than a single point-to-point mountain profile — but has not published a route-level elevation total or climb-by-climb breakdown to back that characterization.",
+      "signature_challenge": "The repeated hill sequences within the lap circuit — no single named climb dominates, since the organizer markets the course as a hilly asphalt loop rather than a mountain point-to-point.",
+      "suffering_zones": []
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "",
+      "transport": "Start/finish at the Halyk Bank parking area, 40 Al-Farabi Street, Almaty; 06:00 start.",
       "food": "",
       "official_site": "https://www.granfondo.com.kz/en/"
     },
     "history": {
-      "founded": 2022,
-      "origin_story": "",
+      "founded": 2016,
+      "origin_story": "First run as an amateur race in late September 2016, per an organizer interview with founder Samat Sapazhanov. Now organized in partnership with the Kazakhstan Cycling Federation and marketed as part of the Gran Fondo World Tour (GFWT) network.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Race, Overstated Branding",
+      "summary": "Gran Fondo Kazakhstan is a genuine, timed road race in Almaty — a 95 km Gran Fondo and 50 km Media Fondo on a timed asphalt lap course, plus a separate 37 km MTB category that doesn't compromise the road event's identity. It has run since 2016 and has real continuity: a 2025 edition with organizer-published results, and a confirmed 2026 date. The catch is the marketing. The organizer calls it the \"Gran Fondo World Championship,\" but its own regulations qualify that as a title \"according to the GFWT version\" — Gran Fondo World Tour branding, not a UCI World Championship. Read the name literally and you'll overrate what this is.",
+      "strengths": [
+        "Genuinely timed, continuously run road race with a real 2016 founding and organizer-published 2025 results",
+        "Clear separation between the 95/50 km road categories and the 37 km MTB option — the road event isn't diluted by mixed-surface entries",
+        "Accessible entry fee (KZT 15,000-25,000, roughly $30-50) relative to most international gran fondos",
+        "Kazakhstan Cycling Federation involvement gives independent verification beyond the organizer's own site"
+      ],
+      "weaknesses": [
+        "\"Gran Fondo World Championship\" branding invites confusion with the UCI Gran Fondo World Championships — it is not that; it's a GFWT-network title",
+        "No official elevation-gain figure has ever been published for the 95 km course, despite this database's prior file inventing a 1,067m figure and a Tien Shan/Medeu climbing narrative unsupported by organizer material",
+        "No verified field-size data — the 48,000 figure sometimes shown on the homepage is a GFWT network-wide statistic, not the Almaty race's actual attendance",
+        "English-language race pages contain untranslated fee text, and the lap-based course format is less destination-scenic than the branding implies"
+      ],
+      "bottom_line": "A legitimate, long-running Central Asian road race worth trusting for what it actually is — a well-priced, organized 95 km/50 km timed event — as long as you discount the \"World Championship\" language and don't expect a documented mountain profile."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Central Asia's mountain road gem hosting GFWT Worlds.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Legitimate Almaty road race since 2016, oversold as a 'World Championship' it isn't.",
+      "should_you_race": "Yes if you want an affordable, genuinely timed road race in Central Asia with real organizational continuity. Don't expect a UCI-sanctioned World Championship field or documented high-mountain climbing — this is a hilly asphalt lap course, not a Tien Shan epic.",
+      "alternatives": "For a mountain road gran fondo with verified high-altitude climbing, look at established Alpine or Pyrenean GFNY/UCI Gran Fondo World Series events instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondo.com.kz/en/",
+        "category": "official",
+        "label": "Gran Fondo Kazakhstan 2026 — Official Homepage (Date, Fees, Registration)"
+      },
+      {
+        "url": "https://www.granfondo.com.kz/ru/about/",
+        "category": "official",
+        "label": "Official 'About' Page — 95/50/37 km Category Breakdown"
+      },
+      {
+        "url": "https://www.granfondo.com.kz/ru/news/4/",
+        "category": "official",
+        "label": "Organizer Interview — First Race Held September 2016"
+      },
+      {
+        "url": "https://www.granfondo.com.kz/ru/results_2025/",
+        "category": "official",
+        "label": "Official 2025 Results Page"
+      },
+      {
+        "url": "https://cycling.kz/gran-fondo-world-championship/",
+        "category": "official",
+        "label": "Kazakhstan Cycling Federation — 2025 Edition Confirmation"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Kazakhstan gran fondo cycling Almaty",
@@ -193,7 +226,7 @@
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://www.granfondo.com.kz/en/",
-      "notes": "Mass-participation road Gran Fondo in Almaty with registration and schedule published for 16 August 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Mass-participation road Gran Fondo in Almaty with registration and schedule published for 16 August 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit; codex gpt-5.6-sol web research (2026-07-24) confirmed 95km course, Aug 16 start, KZT entry fees, and 2016 founding (not 2022); elevation and field size remain unverified."
     }
   }
 }

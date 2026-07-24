@@ -5,21 +5,21 @@
     "display_name": "HalvVättern",
     "tagline": "",
     "vitals": {
-      "distance_km": 149.7,
-      "distance_mi": 93.0,
-      "elevation_m": 1524,
-      "elevation_ft": 5000.0,
+      "distance_km": 150.0,
+      "distance_mi": 93.2,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Motala, Sweden",
       "location_badge": "Motala, Sweden",
       "country": "Sweden",
       "date": "2026: June 6",
-      "date_specific": "2026: June 6",
-      "field_size": "Thousands, part of Vätternrundan series",
+      "date_specific": "2026: June 6 (next: 2027: June 12)",
+      "field_size": "3,183 starters / 3,132 finishers (2026)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Multiple, similar to Vätternrundan",
-      "cutoff_time": "Not specified",
+      "registration": "https://www.vatternrundan.se/en/races/halvvattern-150km",
+      "entry_fee": "SEK 848 early bird; SEK 1,060-1,160 by registration period; SEK 1,300 on-site (2026)",
+      "feed_zones": "Timing/aid points at Stocklycke (42km), Boet (80km), Skänninge (125km); rest stops at Borghamn, Ödeshög, Rök",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): confirmed non-competitive — organizer publishes no ranked results, only completion times/diplomas. prestige=3 and field_depth=3 were scored as if this were a ranked race; recommend a human re-check whether those dimensions still apply to a non-competitive recreational ride. elevation_m set to null (no official figure found; a 2014 rider GPX trace measured 1,233m over 151km, but is not a current organizer figure). Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,76 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A 150 km paved-road ride starting and finishing in Motala, run under the Vätternrundan organization's Bike Week umbrella. The route takes in the Omberg hills and Lake Vättern shoreline, alternating winding lakeside roads with forest and open agricultural landscapes. Roads remain open to normal traffic throughout — this is not a closed-course race, and the organizer explicitly cautions riders about group-riding risk, recommending no more than two abreast.",
+      "signature_challenge": "The Omberg climbs — the course's only real elevation, set against an otherwise rolling lakeside profile.",
+      "suffering_zones": [
+        "Omberg — the ride's signature climbing zone",
+        "The open, exposed stretches around Rök and Borghamn, where Lake Vättern crosswinds can bite"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Available in Motala; check official site for participant services and local options.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.vatternrundan.se/en/races/halvvattern-150km"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2007,
+      "origin_story": "Introduced in 2007 as a half-distance companion to the full 315 km Vätternrundan, giving riders a shorter route around the southern portion of Lake Vättern under the same organization and Bike Week infrastructure.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Well-Run Recreational Ride, Not a Race",
+      "summary": "HalvVättern is exactly what its name says — the half-distance version of Vätternrundan, a 150 km ride around the southern shore of Lake Vättern out of Motala. It's genuinely well organized, with more than 3,000 riders in 2026, clear timing checkpoints, and Vätternrundan's established Bike Week infrastructure. What it is not is competitive: like the rest of the Vätternrundan family, there's no ranked result list, no crowned winner, and no race classification — just a completion time and a diploma. Riders coming from a GFNY- or UCI-style gran fondo background should recalibrate their expectations accordingly.",
+      "strengths": [
+        "Established, well-supported organization under the Vätternrundan Bike Week umbrella, with more than 3,000 participants and clear timing infrastructure",
+        "Scenic, rolling route around Omberg and Lake Vättern's southern shore",
+        "A genuine, accessible half-distance entry point relative to the full 315 km Vätternrundan",
+        "Multiple timing points and rest stops (Borghamn, Ödeshög, Boet, Rök, Skänninge) provide real structure for a non-competitive ride"
+      ],
+      "weaknesses": [
+        "Not competitive despite the timing chips — there is no official ranked result, only a completion time",
+        "Open roads shared with normal traffic, and a roughly 3,000-rider field creates real overtaking and group-riding friction",
+        "No official elevation-gain figure is published, making it hard to judge the Omberg climbing honestly against other Tier 2 fondos",
+        "Easy to confuse with its siblings — Vätternrundan (315 km) and Tjejvättern (100 km, women's) — since all three share an organizer, a Motala base, and overlapping route sections"
+      ],
+      "bottom_line": "A legitimate, well-organized recreational ride worth doing for the Lake Vättern scenery and Bike Week atmosphere — just don't come expecting a ranked race."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Iconic half-distance sportive around southern Lake Vättern, blending challenge, scenery, and community.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "150km non-competitive lakeside ride around Omberg and southern Lake Vättern — Bike Week atmosphere, no ranked result.",
+      "should_you_race": "Yes if you want a well-organized, scenic recreational ride with real infrastructure and don't need a competitive classification. Skip if you specifically want a ranked, timed race result.",
+      "alternatives": "For the full-distance version of the same route family: Vätternrundan (315 km). For a women's-focused half-distance option under the same organizer: Tjejvättern (100 km). For a genuinely competitive Scandinavian road fondo, look elsewhere in the catalog."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.vatternrundan.se/en/races/halvvattern-150km",
+        "category": "official",
+        "label": "Halvvättern 150 km — Official Race Page"
+      },
+      {
+        "url": "https://result.vatternrundan.se/search/HV",
+        "category": "official",
+        "label": "Official 2026 Timing/Results Record — Starter/Finisher Counts"
+      },
+      {
+        "url": "https://www.vatternrundan.se/en/guide",
+        "category": "official",
+        "label": "Vätternrundan FAQ — Non-Ranked/Recreational Status, Timing Points"
+      },
+      {
+        "url": "https://www.vatternrundan.se/en/rules",
+        "category": "official",
+        "label": "Vätternrundan Rules — Open Roads, Group-Riding Guidance, Age Requirement"
+      },
+      {
+        "url": "https://www.svt.se/nyheter/lokalt/skane/klassiska-vatternrundan-letade-cyklister-i-malmo-jag-ar-den-mesta-nyborjaren-har",
+        "category": "media",
+        "label": "SVT — Halvvättern Introduced 2007, Relationship to Vätternrundan/Tjejvättern"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "HalvVättern gran fondo cycling Motala",
@@ -214,7 +253,7 @@
       "status": "active",
       "verified": "2026-07-23",
       "source": "https://vatternrundan.se/halvvattern/en/om-loppet/",
-      "notes": "Halvvättern is listed as a 150 km recreational ride starting and finishing in Motala, with 2026 event pages showing June 6 and no discontinuation signals.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Halvvättern is listed as a 150 km recreational ride starting and finishing in Motala, with 2026 event pages showing June 6 and no discontinuation signals.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed 3,183 starters/3,132 finishers June 6, 2026; next edition June 12, 2027; founded 2007; explicitly non-competitive (no ranked results published)."
     }
   }
 }
