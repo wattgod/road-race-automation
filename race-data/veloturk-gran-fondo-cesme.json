@@ -5,24 +5,40 @@
     "display_name": "VeloTurk Gran Fondo Cesme",
     "tagline": "",
     "vitals": {
-      "distance_km": 91.7,
-      "distance_mi": 57.0,
-      "elevation_m": 1036,
-      "elevation_ft": 3400.0,
+      "distance_km": 91.0,
+      "distance_mi": 56.5,
+      "elevation_m": 1025,
+      "elevation_ft": 3363.0,
       "location": "Cesme, Izmir, Turkey",
       "location_badge": "Cesme, Turkey",
       "country": "Turkey",
-      "date": "2026: April TBD",
-      "date_specific": "2026: April TBD",
-      "field_size": null,
-      "start_format": null,
-      "registration": "https://granfondocesme.com/en",
-      "entry_fee": null,
+      "date": "2026: October 25",
+      "date_specific": "2026: October 24-25 (Oct 24 registration/expo, Oct 25 race day, 08:00 start)",
+      "field_size": "1,000-rider cap across all three courses combined (2025: 715 riders from 17 countries)",
+      "start_format": "Staggered starts from Çeşme city center: 91km at 08:00, 67km/41km at 08:30",
+      "registration": "https://granfondocesme.com/en/events/gran_fondo_cesme_long",
+      "entry_fee": "Tiered by registration window and course: SALCANO 91km 1,250-2,100 TL; TOYOTA HYBRID 67km 990-1,650 TL; CESME 41km 900-1,300 TL (2026 pricing, rises through 3 booking windows May-October)",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "SALCANO Course (Long)",
+          "distance_km": 91,
+          "elevation_m": 1025
+        },
+        {
+          "name": "TOYOTA HYBRID Course (Medium)",
+          "distance_km": 67,
+          "elevation_m": 787
+        },
+        {
+          "name": "CESME Course (Short)",
+          "distance_km": 41,
+          "elevation_m": 382
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,12 +86,9 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
+      "character": "A road gran fondo on the Çeşme Peninsula, Aegean coast, Turkey, offering three loop courses that all start and finish in Çeşme city center: the SALCANO long course (91km, 1,025m+), the TOYOTA HYBRID medium course (67km, 787m+), and the CESME short course (41km, 382m+), staggered starting at 08:00/08:30. The event is produced by Argeus Travel & Events with VeloTurk, a Turkish cycling group tied to the 'Bir Çocuk Gülerse Dünya Güler' (If a Child Smiles, the World Smiles) bicycle-donation project; Salcano has been a title sponsor in recent editions (the 2025 edition was branded 'Veloturk Gran Fondo Çeşme by Salcano'). The race weekend runs Saturday registration/expo into a Sunday race day.",
       "signature_challenge": "",
-      "suffering_zones": [
-        "Peninsula Punchies: Mid-route series of 1-2 km climbs on exposed coastal roads sap legs with headwinds and heat. Cumulative 2000 ft here turns quads to jelly amid epic views.",
-        "Final Coastal Grind: Last 15 miles feature rolling undulations back to Cesme, where fatigue meets sea breezes for mental test. Paceline discipline key to surviving the grind."
-      ]
+      "suffering_zones": []
     },
     "logistics": {
       "airport": "",
@@ -85,30 +98,66 @@
       "official_site": "https://granfondocesme.com/en"
     },
     "history": {
-      "founded": 2017,
-      "origin_story": "",
+      "founded": 2016,
+      "origin_story": "Launched in 2016 in Çeşme, Izmir Province, produced by Argeus Travel & Events in cooperation with VeloTurk, a Turkish cycling group tied to a bicycle-donation social project. Çeşme Municipality called the 2025 running its ninth edition (the official history's own edition list skips 2020); the current site's 'eighth time' homepage copy is stale template text and doesn't match that dated edition history.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Long-Running Aegean Fondo — But the Date on File Was Wrong By Six Months",
+      "summary": "Veloturk Gran Fondo Çeşme is a genuine, roughly decade-old road gran fondo on Turkey's Çeşme Peninsula, produced by Argeus Travel & Events with VeloTurk (a Turkish cycling group tied to a bicycle-donation social project) and listed on the Turkish Cycling Federation's official gran fondo calendar. The prior profile had the event scheduled for an unspecified April date — both the organizer's site and the federation calendar place the 2026 edition on October 25, six months off. The event itself offers three loop courses (91/67/41km) all starting and finishing in Çeşme city center, capped at 1,000 riders combined; 2025 drew 715 riders from 17 countries. The long course's 91km/1,025m profile is a moderate ride by this database's standards, not a marquee climbing test.",
+      "strengths": [
+        "Genuinely long-running for the region — roughly a decade of editions since 2016 (ninth edition in 2025, though the official history skips 2020) with a stable organizer and venue",
+        "Independently confirmed on the Turkish Cycling Federation's official gran fondo calendar, not just the organizer's own marketing",
+        "Real, published logistics: a firm 1,000-rider cap across three distances, tiered registration pricing, and verified 2025 turnout (715 riders, 17 countries) — this isn't a paper event",
+        "Charity/community tie-in through VeloTurk's bicycle-donation project gives the event an identity beyond a standard commercial sportive"
+      ],
+      "weaknesses": [
+        "The date on file was wrong by roughly six months (April vs. the actual October 25 date) — a real data-quality failure for anyone trying to plan around it",
+        "The long course's 91km/1,025m profile is modest — climbing and distance are well below what most Tier 1-2 European gran fondos in this database offer, despite sharing the tier bracket here",
+        "No independent (non-organizer, non-municipal) media coverage found beyond local Turkish press and the Cycling Federation calendar listing — hard to gauge rider-reported course quality or organization independent of promotional sources",
+        "Registration fees escalate through three booking windows (roughly 70% higher for late sign-up on the long course) — a real cost penalty for riders who don't commit early"
+      ],
+      "bottom_line": "A real, long-running regional fondo with genuine logistics (rider cap, tiered pricing, verified turnout) behind it — but go in expecting a moderate single-day course rather than a major European-style climbing test, and double-check the date directly with the organizer given this database's prior six-month error."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Scenic Aegean gran fondo blending coastal beauty, moderate challenge, and Turkish charity vibes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Established Aegean-coast gran fondo on the Çeşme Peninsula — a modest 91km/1,025m single loop, not a major climbing test.",
+      "should_you_race": "Worth considering if you're already in the Izmir/Çeşme region and want a well-established local fondo with a charity angle. Not worth traveling far for on the strength of the course alone — the distance and climbing are modest.",
+      "alternatives": "Other Turkish Cycling Federation gran fondo calendar events (e.g. Bodrum, AKRA Gran Fondo) for a similar regional Turkish fondo circuit experience."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondocesme.com/en/events/gran_fondo_cesme_long",
+        "category": "official",
+        "label": "Official 2026 Long/SALCANO Course Page — Distance, Elevation, Start Time"
+      },
+      {
+        "url": "https://granfondocesme.com/en/info/programme",
+        "category": "official",
+        "label": "Official 2026 Event Program — Oct 24-25 Weekend Schedule"
+      },
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2026 Gran Fondo Calendar (Confirms Oct 25 Date)"
+      },
+      {
+        "url": "https://www.cesme.bel.tr/haberler/gran-fondo-cesme-2025-pedallar-dokuzuncu-kez-cesme-icin-donuyor",
+        "category": "media",
+        "label": "Çeşme Municipality — 2025 Ninth-Edition Announcement (Founding Year Cross-Check)"
+      },
+      {
+        "url": "https://argeus.com/our-legacy/",
+        "category": "reference",
+        "label": "Argeus Travel & Events — Organizer Portfolio Listing"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondocesme.com/",
-      "notes": "Official site and federation calendar list a 25 October 2026 road gran fondo in Cesme, differing from April TBD on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondocesme.com/en/events/gran_fondo_cesme_long",
+      "notes": "CORRECTIONS (2026-07-24): date changed from '2026: April TBD' to '2026: October 25' — both the official 2026 course page and the Turkish Cycling Federation's 2026 gran fondo calendar PDF confirm October 25, 2026 (weekend of Oct 24-25); the April date on file was wrong and doesn't match any Çeşme entry on the federation calendar (April slots belong to other races like Bodrum/AKRA). distance_km changed from 91.7 to 91, elevation_m from 1036 to 1025, matching the official long/SALCANO course page's finish table (live-curl-verified). founded changed from 2017 to 2016 per the official event history and Çeşme Municipality's 2025 ninth-edition announcement (that history skips 2020). Organizer identified as Argeus Travel & Events with VeloTurk (a Turkish cycling group tied to a bicycle-donation social project) — 'VeloTurk' is part of the event's real brand name, not a misattribution. Added route_options (91/67/41km courses with official elevation figures), field_size (1,000-rider cap; 2025: 715 riders/17 countries per Çeşme Municipality), entry_fee (tiered by course and registration window) via live curl of the official course page. Confirmed active: 2025 edition held Oct 26, 2025; 2026 program/registration live on official site; listed on the federation's March 2026 calendar update. SOL REVIEW: rejected an initial 'no independently reported field-size/entry-fee data' weakness claim after live-curling the official page and finding published fees + rider cap; corrected 'continuous editions' (2020 is missing from the official edition history) and softened an unsupported 'single-loop'/'sponsor branding unstable' framing."
     }
   }
 }

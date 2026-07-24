@@ -5,10 +5,10 @@
     "display_name": "Gran Fondo Badlands",
     "tagline": "",
     "vitals": {
-      "distance_km": 162.5,
-      "distance_mi": 101.0,
-      "elevation_m": 875,
-      "elevation_ft": 2870.0,
+      "distance_km": 163.2,
+      "distance_mi": 101.4,
+      "elevation_m": 874,
+      "elevation_ft": 2867.0,
       "location": "Drumheller, Alberta, Canada",
       "location_badge": "Drumheller, Canada",
       "country": "Canada",
@@ -33,7 +33,7 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Fully paved",
+      "surface": "99.9% paved (per official FAQ)",
       "technical_rating": 1,
       "features": []
     },
@@ -73,11 +73,11 @@
     },
     "course_description": {
       "character": "A scenic road cycling journey through Alberta's iconic badlands landscape, featuring rolling prairie terrain, dramatic hoodoo formations, a memorable ferry crossing of the Red Deer River, and short but challenging hill climbs. The route celebrates the Dinosaur Valley's unique geological and cultural heritage while offering well-supported riding through picturesque river valleys and historic villages.",
-      "signature_challenge": "The Ferry Hill Climb: a 1km timed ascent immediately following the scenic Red Deer River ferry crossing, which all riders complete and which determines the King and Queen of the Mountain awards for each distance category",
+      "signature_challenge": "The Ferry Hill Climb: a 1km timed ascent immediately following the Red Deer River ferry crossing. Per the organizer's current FAQ, this segment does not carry formal King/Queen of the Mountain awards — it's a timed bragging-rights segment, not a scored competition point. Correcting a claim previously on file that overstated it as an awards-determining climb.",
       "suffering_zones": [
-        "Ferry Hill Climb: A 1km timed segment immediately after the Red Deer River ferry crossing that serves as the event's signature climbing challenge and King/Queen of the Mountain competition point",
-        "Mid-Route Elevation Gains: Multiple short but serious hill climbs distributed throughout the course, particularly in the hoodoos region, creating cumulative fatigue over the 101-mile distance",
-        "Final Approach: The closing kilometers back to Badlands Community Facility after the turnaround points test rider endurance on a day with significant cumulative elevation"
+        "Ferry Hill Climb: A 1km timed segment immediately after the Red Deer River ferry crossing — the event's signature feature, timed for bragging rights rather than a formal award",
+        "Mid-Route Elevation Gains: Multiple short hill climbs distributed throughout the course, particularly in the hoodoos region, adding up over the 101-mile distance — though at 874m total for the full route, this is a moderate profile, not a mountain-fondo-level climbing day",
+        "The Ferry Crossing Itself as a Logistical Bottleneck: the organizer's own materials warn of lineups/capacity limits at the ferry, which can bunch riders and affect pacing into the timed climb that follows"
       ]
     },
     "logistics": {
@@ -89,22 +89,32 @@
     },
     "history": {
       "founded": 2011,
-      "origin_story": "Gran Fondo Badlands is one of Canada's top 10 Gran Fondo cycling events, established in 2011 and relocated to the Drumheller Valley where it gained significant popularity due to the exceptional riding experience, unique dinosaur-themed setting, and stunning badlands scenery.",
+      "origin_story": "Founded in 2011 at an earlier Alberta location; contemporary reporting identifies June 28, 2014 as the 'inaugural Gran Fondo Badlands' under its current Drumheller identity, with roughly 490 riders at that debut. TransRockies Race Series acquired ownership of the event in 2023 — RnR Premier Events assisted with that transition, though their current, ongoing involvement is not independently confirmed. Field size has grown to an estimated 2,000+ riders in 2026 (per TransRockies' own post-event figures, carried by local media), up from roughly 1,500 in 2025.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Solid, Growing Regional Fondo — Now a TransRockies Portfolio Property",
+      "summary": "Gran Fondo Badlands has an unusual signature feature: a timed 1km hill climb immediately after riders cross the Red Deer River on a working ferry — timed for bragging rights, not a formal award, per the organizer's own FAQ (correcting a claim previously on file that it determined King/Queen of the Mountain honors). One independent, non-organizer ride report (Canadian Cycling Magazine, 2016, predating the current ownership) describes good organization and worthwhile hoodoo-badlands scenery; we don't have equivalent independent coverage of the event under its current operator. The event has grown — roughly 490 riders at its 2014 Drumheller debut to an estimated 2,000+ in 2026 (TransRockies' own figure, carried by local media) — and TransRockies Race Series bought the event in 2023, meaning it's now part of a multi-event race-series portfolio rather than a purely local, grassroots operation. Our fondo_rating score (59/100, Tier 3) reflects a solid but unspectacular profile: modest national prestige (2/5), moderate field depth, and a climbing/scenic package (874m/163km) that's real but far from exceptional next to Canada's mountain fondos.",
+      "strengths": [
+        "The ferry-crossing-into-hill-climb sequence is a distinctive signature feature — not a generic KOM segment, even though it doesn't carry a formal award",
+        "At least one independent (non-organizer) ride report confirms solid organization and worthwhile badlands/hoodoo scenery, albeit from 2016, before the current ownership",
+        "A verifiable growth trajectory — roughly 490 riders in 2014 to an estimated 2,000+ in 2026 — suggests the event isn't fading",
+        "Near-fully-paved course (99.9% per organizer FAQ) and a moderate 874m/163km profile make it accessible to a broad range of fitness levels, with four distance options"
+      ],
+      "weaknesses": [
+        "Now owned and operated by TransRockies Race Series (since 2023) rather than an independent local organizer — part of a multi-event portfolio brand, which changes what the event is even if execution hasn't suffered",
+        "Modest national prestige (2/5 on our scale) — this is a strong regional Alberta fondo, not a nationally prestigious one, and shouldn't be marketed as such",
+        "Founding-year history is muddled by the organizer's own materials: 2011 is cited as the founding year at an earlier location, but the current Drumheller-identity event's actual inaugural edition was 2014 — treat pre-2014 'founded' claims as referring to a predecessor, not this specific course",
+        "The Red Deer River ferry crossing is a single-point logistical bottleneck by design — a queue or delay there affects every rider's pacing on the signature climb that follows, and this scales worse as field size grows toward 2,000+"
+      ],
+      "bottom_line": "A scenic regional fondo built around one distinctive feature (the ferry-into-hill-climb), with real growth and at least one solid independent review behind it. Go in knowing it's now a TransRockies-run property with modest national prestige, not a marquee Canadian classic."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "A well-organized, scenic road cycling celebration of Alberta's badlands landscape that delivers excellent value and community atmosphere for riders of all abilities seeking a memorable weekend adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Alberta's dinosaur-country fondo: a real ferry-to-hill-climb signature feature, growing fast, now under TransRockies ownership.",
+      "should_you_race": "Yes, if you want a scenic Alberta weekend fondo with a distinctive signature climb and don't need national-prestige bragging rights.",
+      "alternatives": "For a similarly distinctive Canadian regional fondo experience: look at other TransRockies-portfolio or Western Canada fondos. For genuine national/international prestige in Canada, look toward events with longer UCI or international-field track records."
     },
     "citations": [
       {
@@ -125,7 +135,7 @@
       {
         "url": "https://www.granfondobadlands.ca",
         "category": "official",
-        "label": "TransRockies Gran Fondo Badlands Official Site"
+        "label": "TransRockies Gran Fondo Badlands Official Site (TransRockies acquired the event in 2023 — label verified current, not stale)"
       },
       {
         "url": "https://www.travelalberta.com/events/gran-fondo-badlands-23593",
@@ -141,13 +151,33 @@
         "url": "https://www.movemint.cc/events/gran_fondo_badlands_2026",
         "category": "reference",
         "label": "Gran Fondo Badlands 2026 - MoveMint"
+      },
+      {
+        "url": "https://www.drumhelleronline.com/2026/07/06/gran-fondo-badlands-huge-success-once-again/",
+        "category": "media",
+        "label": "Drumheller Online — 2026 Post-Event Report, ~2,000+ Riders (up from ~1,500 in 2025)"
+      },
+      {
+        "url": "https://cyclingmagazine.ca/sections/ridesevents/bad-enough-gran-fondo-badlands/",
+        "category": "media",
+        "label": "Canadian Cycling Magazine — Independent Ride Report, Course and Organization Review"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/1059/great-start-for-gran-fondo-badlands",
+        "category": "media",
+        "label": "Gran Fondo Guide — 2014 Inaugural Drumheller Edition Report (~490 riders)"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca/faq",
+        "category": "official",
+        "label": "Official FAQ — Course Surface (99.9% paved), Ferry Hill Climb Has No Formal KOM/QOM Award"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.granfondobadlands.ca/eventoverview",
-      "notes": "2026 road gran fondo in Drumheller ran successfully on July 4 with no indication of discontinuation.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.drumhelleronline.com/2026/07/06/gran-fondo-badlands-huge-success-once-again/",
+      "notes": "2026 edition confirmed held July 4, 2026 with an estimated 2,000+ riders (up from ~1,500 in 2025) per independent local media post-event coverage. TransRockies Race Series confirmed as current operator (acquired 2023); the existing 'TransRockies' citation label is accurate, not stale. Corrected course figures to official Brontosaurus page data (163.2km/101.4mi, 874m/2,867ft) and clarified founding history: 2011 founding claim refers to an earlier location, with the current Drumheller-identity event's actual inaugural edition in 2014."
     }
   }
 }

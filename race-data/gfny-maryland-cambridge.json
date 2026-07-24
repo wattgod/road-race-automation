@@ -5,16 +5,16 @@
     "display_name": "GFNY Maryland Cambridge",
     "tagline": "",
     "vitals": {
-      "distance_km": 148.1,
-      "distance_mi": 92.0,
-      "elevation_m": 366,
-      "elevation_ft": 1200.0,
+      "distance_km": 148.7,
+      "distance_mi": 92.4,
+      "elevation_m": 147,
+      "elevation_ft": 481.0,
       "location": "Cambridge, Maryland, USA",
       "location_badge": "Cambridge, USA",
       "country": "USA",
       "date": "2026: October 4",
       "date_specific": "2026: October 4",
-      "field_size": null,
+      "field_size": "552 riders, 15 countries, 20 US states (2023 inaugural edition — no independently confirmed total for 2024 or 2025)",
       "start_format": null,
       "registration": "https://maryland.gfny.com/registro/",
       "entry_fee": null,
@@ -70,12 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "GFNY Maryland runs the standard GFNY two-tier format on Dorchester County's flat Eastern Shore marsh-and-farmland terrain: a 92.4-mile Long Course (481 ft climbing) that is fully competitive with overall and age-group classification, and a 48-mile Medium Course (254 ft) that receives a finish time but is explicitly non-competitive, published alphabetically rather than ranked. GFNY itself describes the route as 'flat and fast,' with wind rather than elevation as the real variable. Long Course riders repeat a loop out of downtown Cambridge. Inaugurated October 1, 2023, the race has run three editions (2023-2025); 2026 will be its fourth.",
+      "signature_challenge": "Holding position in a large, fast, flat group where breaks rarely stick — per rider accounts, the race stays bunched for long stretches and positioning/patience matter more than raw power on this terrain.",
       "suffering_zones": [
-        "Peloton Pace Hell: Mile 0-46: Locked in at 25+ mph on flat Eastern Shore roads with no breakaways sticking.",
-        "Late-Race Surge: Mile 70-92: Burning legs pushing for qualifiers after early attacks gap the field.",
-        "Autumn Headwinds: Exposed US-50 stretches near Choptank River testing sustained power in cool October air."
+        "The flat, fast opening miles where a big group locks in together and few breakaways survive",
+        "Open, wind-exposed Eastern Shore farmland and marsh roads — wind, not elevation, is the course's real difficulty",
+        "The closing miles of the Long Course, where riders in contention for an age-group qualifying placement (GFNY's qualification is placement-based within category, not a fixed time standard) have to commit fully rather than coast to the line"
       ]
     },
     "logistics": {
@@ -92,19 +92,55 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Legitimate GFNY Stop, Honest About What the Medium Course Actually Is",
+      "summary": "GFNY Maryland is a real, still-young addition to the GFNY U.S. calendar — inaugurated October 1, 2023 with 552 riders from 15 countries and 20 states, and confirmed again for October 4, 2026. It runs GFNY's standard two-tier format on Dorchester County's flat Eastern Shore terrain: the 92.4-mile Long Course carries genuine age-group competition, while the 48-mile Medium Course gets a finish time but no ranking. Our prior elevation figure (1,200 ft) overstated the course by roughly 2.5x — official and municipal documentation puts the Long Course at 481 ft, consistent with rider reports describing the race as 'very flat' with a big, hard-to-break group. As with other GFNY stops, wind is the real obstacle here, not terrain.",
+      "strengths": [
+        "GFNY's standard competitive structure applies on the Long Course, with age-group placement stakes",
+        "Flat course rewards positioning and group tactics as much as pure power",
+        "552 riders from 15 countries and 20 states at the 2023 debut — a real number, not an organizer estimate",
+        "Flat Eastern Shore terrain and a compact Cambridge base keep the course itself simple to navigate, though we have no independent data on broader event logistics (parking, lodging supply, etc.)"
+      ],
+      "weaknesses": [
+        "Only three editions deep (2023-2025) — a short track record next to GFNY's longer-running franchise stops",
+        "The 48-mile Medium Course pays a finish time but is explicitly non-competitive — alphabetical results only, no ranking, even though GFNY markets it as a race distance",
+        "Flat, low-elevation terrain (481 ft over 92.4 miles) means minimal scenic or physical variety compared to GFNY's mountain fondos — wind exposure is the main variable, and it's unpredictable",
+        "No independently confirmed field-size figure exists for 2024 or 2025, so year-over-year growth can't be verified from public sources"
+      ],
+      "bottom_line": "A structurally sound GFNY stop for riders who want age-group competitive stakes on flat terrain. Choose the Long Course if you actually want to race; the Medium Course is a supported ride with a clock, not a result."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Fast, flat GFNY qualifier on Chesapeake's autumn roads.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Fast, flat GFNY qualifier on the Chesapeake's Eastern Shore — real racing on the Long Course, a supported ride on the Medium.",
+      "should_you_race": "Yes for the Long Course if you want genuine GFNY age-group competition on flat, fast terrain. Choose the Medium Course only if you're fine with a non-competitive, timed-but-unranked ride.",
+      "alternatives": "For a comparable flat, wind-exposed GFNY stop in the U.S.: GFNY Florida (now relocated to Hardee County for 2026). For genuine climbing instead of flat-terrain racing: GFNY Grand Ballon (France)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://maryland.gfny.com/",
+        "category": "official",
+        "label": "Official Course Page — Long/Medium Course Distances, Two-Tier Format"
+      },
+      {
+        "url": "https://gfny.com/gfny-announces-inaugural-gfny-maryland-usa/",
+        "category": "official",
+        "label": "GFNY — Inaugural Announcement (Dec 2022, first edition Oct 1 2023)"
+      },
+      {
+        "url": "https://gfny.com/sprint-finish-at-michelob-ultra-gfny-cambridge-maryland/",
+        "category": "official",
+        "label": "GFNY — 2025 (Third Edition) Post-Race Report"
+      },
+      {
+        "url": "https://www.choosecambridge.com/AgendaCenter/ViewFile/Agenda/_10072024-1355",
+        "category": "reference",
+        "label": "City of Cambridge Council Agenda — 2023 Field Size (552 riders, 15 countries, 20 states)"
+      },
+      {
+        "url": "https://www.choosecambridge.com/AgendaCenter/ViewFile/ArchivedAgenda/_03022026-1799",
+        "category": "reference",
+        "label": "City of Cambridge — 2026 Course Operations Document (Confirms Oct 4 2026 Date, Course Details)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Maryland Cambridge gran fondo cycling Cambridge",
@@ -261,9 +297,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.endurancesportswire.com/gfny-announces-seven-2026-usa-races-on-the-road-to-nyc/",
-      "notes": "2026 edition explicitly announced for October 4 in Cambridge, Maryland.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://maryland.gfny.com/",
+      "notes": "2026 edition confirmed for October 4 in Cambridge, Maryland via both the official GFNY site and the City of Cambridge's 2026 course-operations document. Corrected elevation from a previously overstated 1,200 ft to the officially/municipally documented 481 ft (Long Course). Founded 2023 confirmed correct (announced Dec 2022, first edition Oct 1 2023); three editions run through 2025, 2026 will be the fourth."
     }
   }
 }

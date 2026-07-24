@@ -5,21 +5,21 @@
     "display_name": "Race Around Ireland",
     "tagline": "",
     "vitals": {
-      "distance_km": 2150.1,
-      "distance_mi": 1336.0,
-      "elevation_m": 21946,
-      "elevation_ft": 72000.0,
+      "distance_km": 2157.5,
+      "distance_mi": 1340.7,
+      "elevation_m": 22000,
+      "elevation_ft": 72178.0,
       "location": "Trim, County Meath, Ireland",
       "location_badge": "Trim, Ireland",
       "country": "Ireland",
-      "date": "2026: August TBD",
-      "date_specific": "2026: August TBD",
+      "date": "No confirmed edition since 2019 — cancelled 2020, 2021, 2022; no announced return through 2026",
+      "date_specific": "Last completed 2019 (11th edition). Cancelled 2020, 2021, and 2022 (organizer's Jan 2022 notice cites a new COVID variant driving rider withdrawals and says the race 'will come back in the future' with no date given). No edition or announcement found in reviewed sources 2023-2026.",
       "field_size": null,
-      "start_format": null,
-      "registration": "https://en.wikipedia.org/wiki/Race_Around_Ireland",
+      "start_format": "Solo (men/women), tandem, or 2/4/8-person relay teams — supported (mandatory 3-person crew + vehicle), not self-supported",
+      "registration": null,
       "entry_fee": null,
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "2019 rulebook: solo men 132h, solo women 144h, tandem/2-person team 132h, 4/8-person team 96h",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 60."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 66. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 — dimensions/overall_score left as-is; see catalog_flags for the taxonomy mismatch this masks (a supported multi-day ultra scored on a single-day gran-fondo rubric)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,45 +70,87 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A real, distinct ultra-endurance ROAD CYCLING race — not to be confused with the Wicklow Sailing Club's separate 'Round Ireland Race' offshore yacht race, a different sport run by a different organization. Race Around Ireland is a single-stage, continuous-clock circumnavigation of the island: an anticlockwise loop starting and finishing in Trim, County Meath, passing Newgrange/Brú na Bóinne, the Causeway Coast, Malin Head, Connemara, the Cliffs of Moher, the Ring of Kerry, Mizen Head, the Wexford coast, and the Wicklow Mountains before returning to Trim. It is supported, not self-supported — every rider or team must run a minimum three-person crew with a following vehicle, whose crews phone in check-ins at 21 unmanned time stations along an unmarked route navigated by route book. Solo riders (men and women), tandems, and 2/4/8-person relay teams all race the same course on the same continuous clock, which runs through all sleep, food, and mechanical stops. The race last ran in 2019 (its 11th edition) and has not run since — it was cancelled in 2020, 2021, and 2022, and the organizer's own January 2022 cancellation notice, while stating the race 'will come back in the future,' gives no return date and none has surfaced through 2026.",
+      "signature_challenge": "Completing a full, continuous, ~2,150 km lap of Ireland's coastline inside a hard 132-hour (solo men) or 144-hour (solo women) clock — not a single climb or sector, but the accumulated sleep deprivation and roughly 22,000 m of climbing across four-plus days without a stage break.",
       "suffering_zones": [
-        "Hour 80-100 Wall: Deep into northwest Ireland, cumulative sleep debt and 15,000 m climbed trigger hallucinations on empty coastal roads. Headwinds from Slieve League cliffs amplify the void.",
-        "Final 200 km Push: Exhausted return to Trim after full circumnavigation brings cramp city on familiar Meath lanes. 132-hour clock ticks mercilessly with every pedal stroke."
+        "Deep-race sleep-debt wall: somewhere past the race's midpoint, accumulated sleep deprivation and a large share of the ~22,000m total climbing combine on exposed, isolated coastal roads — the exact hour and location vary by rider/edition and aren't independently documented here.",
+        "Final push to Trim: the exhausted return after a full circumnavigation, with the 132-hour solo-men's clock (144h women, 96h for 4/8-person teams) still running down to the finish."
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "",
-      "transport": "",
+      "lodging_strategy": "Not applicable — riders and crews travel with the race; there is no single event lodging base since the route circumnavigates the country.",
+      "transport": "Requires a self-organized, minimum three-person support crew with at least one follow vehicle (mandatory during darkness); riders navigate the unmarked route via route book, supplemented by atlas and GPS.",
       "food": "",
-      "official_site": "https://en.wikipedia.org/wiki/Race_Around_Ireland"
+      "official_site": "https://racearoundireland.com/home"
     },
     "history": {
-      "founded": 2011,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2009,
+      "origin_story": "Founded by Alan Heary, who owns and operates the race. Reached its 11th edition in 2019, run alongside a shorter companion event, the Irish Ultra Challenge (6th edition in 2019, roughly 1,100 km).",
+      "notable_moments": [
+        "2019: Germany's Bischoff wins the 11th and, to date, final completed edition."
+      ],
+      "reputation": "Listed among the world's toughest endurance cycling events during its active run (2009-2019); has not held an edition since due to a string of cancellations."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Race, Currently Dormant",
+      "summary": "Race Around Ireland is a genuine ultra-endurance road race — a continuous, supported circumnavigation of Ireland from Trim, roughly 2,150-2,160 km and 22,000 m of climbing, run 11 times between 2009 and 2019. It is a completely different event from the Wicklow Sailing Club's similarly-named offshore yacht race, and a prior audit pass on this profile wrongly concluded otherwise — that was a research error, not a fact about the race. The real problem with this listing today isn't identity, it's currency: the race has not run since 2019. It was cancelled in 2020, 2021, and again in January 2022, when the organizer said the event 'will come back in the future' without giving a date. No 2023, 2024, 2025, or 2026 announcement, results, or working registration turned up in this research — though official social channels are only partially indexable, so a comeback announced solely there could be missed.",
+      "strengths": [
+        "A genuine, demanding full-country circumnavigation format with a real 11-edition track record (2009-2019), not a marketing invention",
+        "Format variety — solo men/women, tandem, and 2/4/8-person relay teams all race the same course and clock",
+        "Documented logistical structure: 21 unmanned time stations requiring crew phone check-ins, mandatory support crew, hard cutoff times differentiated by category (132h/144h/96h)",
+        "Distinctive route touching Newgrange, the Causeway Coast, Malin Head, Connemara, the Cliffs of Moher, the Ring of Kerry, and Mizen Head in one continuous effort"
+      ],
+      "weaknesses": [
+        "No edition has run since 2019 — as of July 2026 this is a seven-year gap with no announced return date, not an active event you can currently enter",
+        "The organizer's own last public statement (Jan 2022) is vague about the future ('will come back... in the future') and nothing has followed it in over four years",
+        "Requires a fully self-organized minimum three-person crew and vehicle — a major logistical and financial barrier even if it does return",
+        "A third-party aggregator's listing of a supposed 2022 edition directly contradicts the organizer's own cancellation notice for that year — don't trust secondhand calendars over the primary source here"
+      ],
+      "bottom_line": "This was, and may again be, a legitimate entry in the ultra-cycling world — but right now there is nothing to sign up for. Treat this listing as historical reference, not a bookable 2026 or 2027 event, until the organizer actually announces a comeback."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Brutal non-stop Irish coastal ultra for true endurance masochists.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real Irish circumnavigation ultra with an 11-edition history — that hasn't run since 2019.",
+      "should_you_race": "Not currently possible — no edition has been held or announced since 2019, and the organizer's last public word (Jan 2022) gave no return date. Watch racearoundireland.com for an actual comeback announcement before planning around this.",
+      "alternatives": "If you want a currently-active supported multi-day country-circumnavigation ultra, look at events like the Transcontinental Race (unsupported, Europe-wide) or a national audax/randonneuring series with actual live calendars. If it's specifically an Irish ultra-distance test you want, check Cycling Ireland's current audax calendar for live alternatives."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://racearoundireland.com/home",
+        "category": "official",
+        "label": "Official Race Around Ireland Event Profile"
+      },
+      {
+        "url": "https://racearoundireland.com/cancellation-2022",
+        "category": "official",
+        "label": "Organizer's Official 2022 Cancellation Notice"
+      },
+      {
+        "url": "https://racearoundireland.com/wp-content/uploads/2019/01/Race_Around_Ireland_RuleBook_2019.pdf",
+        "category": "official",
+        "label": "2019 Official Rulebook — Categories, Time Limits, Rules"
+      },
+      {
+        "url": "https://racearoundireland.com/germanys-bischoff-wins-race-around-ireland-2019",
+        "category": "official",
+        "label": "2019 Race Report — Last Completed Edition (11th)"
+      },
+      {
+        "url": "https://ultracycling.com/calendar/race-around-ireland-2019/",
+        "category": "reference",
+        "label": "WUCA Calendar Listing — 2019 Edition, Course Distance"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Two issues: (1) IDENTITY CORRECTION — a prior audit pass on this profile wrongly concluded 'this is the sailing Round Ireland Race in Wicklow, not a road-cycling event.' That was itself a research error. Race Around Ireland is a real, distinct road-cycling ultra (racearoundireland.com, organizer Alan Heary), unrelated to the Wicklow Sailing Club's offshore yacht race of a similar name. (2) TAXONOMY MISMATCH — even corrected, this is a multi-stage-clock, supported, team-eligible ultra-distance race, not a single-day gran fondo; fondo_rating dimensions (field_depth, prestige, organization, etc.) are built for a one-day fondo format and don't cleanly capture an 11-edition-but-currently-dormant continuous ultra. Recommend a human decide whether this profile belongs in the database at all while inactive, and whether the discipline taxonomy needs a distinct ultra-cycling category long-term.",
+      "ruled": "2026-07-24 editorial wave 9"
+    },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://roundireland.ie/wp/wp-content/uploads/2026/01/Round-Ireland-2026-Notice-of-Race-v1.pdf",
-      "notes": "This is the sailing Round Ireland Race in Wicklow, not a road-cycling event; no rebrand found and the 2026 edition is scheduled for 20 June 2026, conflicting with the August TBD date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "cancelled",
+      "verified": "2026-07-24",
+      "source": "https://racearoundireland.com/cancellation-2022",
+      "notes": "IDENTITY CORRECTION: the previous eligibility.notes on this profile ('this is the sailing Round Ireland Race in Wicklow, not a road-cycling event') was itself a research error and is retracted. Race Around Ireland is a real, distinct road-cycling ultra circumnavigating Ireland (racearoundireland.com, organizer Alan Heary) — a different event from the Wicklow Sailing Club's Round Ireland Yacht Race (roundireland.ie), which is a separate offshore sailing race with no connection to this one. Verified status: 11 completed editions 2009-2019; cancelled 2020 (COVID-adjacent), 2021 (per WUCA calendar), and 2022 (organizer's own notice, cited a new COVID variant driving rider withdrawals — the notice does not name a specific variant). The organizer's Jan 2022 statement said the race 'will come back in the future' but gave no date, and no edition, date, or comeback announcement was found in reviewed sources 2023-2026 on the official site (some social-channel content is not fully indexable and could not be ruled out). 'Cancelled' rather than 'defunct' reflects that stated-but-undated intent to return; if no further update appears in future audits, reclassify to 'defunct.'"
     }
   }
 }

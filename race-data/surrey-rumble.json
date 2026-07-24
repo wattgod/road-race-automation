@@ -7,22 +7,25 @@
     "vitals": {
       "distance_km": 128.7,
       "distance_mi": 80.0,
-      "elevation_m": 2405,
-      "elevation_ft": 7890.0,
+      "elevation_m": 1270,
+      "elevation_ft": 4167.0,
       "location": "Cobham, Surrey, England",
       "location_badge": "Cobham, England",
       "country": "England",
-      "date": "2026: May 17",
-      "date_specific": "2026: May 17",
-      "field_size": "200",
-      "start_format": null,
+      "date": "2026: March 22",
+      "date_specific": "2026: Sunday, March 22 (entries closed 17 March 2026) — corrects a previously-listed May 17 date with no primary-source support",
+      "field_size": "~200 long-route + ~100 short-route places (250+ total entrants in 2026)",
+      "start_format": "Mass-start club sportive, two route options",
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "GBP 22 (before 31 Dec 2025), GBP 26 (after), GBP 30 on the day if available",
       "feed_zones": "2",
       "cutoff_time": "15:00 (course closes)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Long", "distance_km": 128.7, "distance_mi": 80.0},
+        {"name": "Short", "distance_km": 96.6, "distance_mi": 60.0}
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 60. NOT re-scored during 2026-07-24 editorial wave 9 despite the elevation correction (2,405m to ~1,270m) — dimensions/overall_score left as-is; a human may want to revisit the climbing dimension given the corrected, lower elevation figure."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +73,76 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A club-run early-season road sportive through the Surrey Hills, starting from Downside Village Hall near Cobham, England — not Surrey, British Columbia. Two route options: an 80-mile/128.7km long route and a 60-mile/95km short route, both riding classic Surrey Hills roads. Older public GPS route traces (not necessarily the current/2026 route) suggest climbing on the long route in the range of roughly 1,255-1,294m, well below the 2,405m previously listed here — the organizer itself does not publish an official elevation figure, so treat this as an estimate.",
+      "signature_challenge": "Stringing together Surrey Hills climbs across 80 miles in March, when early-season fitness and unpredictable UK spring weather are as much a factor as the terrain itself.",
+      "suffering_zones": [
+        "The Surrey Hills climbing on the long route, concentrated enough to add ~1,270m of ascent over 128.7km without any single monster climb dominating the profile.",
+        "March weather variability — this is an early-season UK sportive, and conditions can range from mild to genuinely cold and wet with no guarantee of dry roads."
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "N/A",
+      "lodging_strategy": "N/A — day event, Cobham/Surrey commutable from London",
       "transport": "",
-      "food": "",
-      "official_site": ""
+      "food": "Two feed zones on course",
+      "official_site": "https://twickenhamcc.co.uk/events/surrey-rumble/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2008,
+      "origin_story": "Organized annually by Twickenham Cycling Club; first run in 2008. An apparent pandemic-era gap aside, 2026 was roughly its 18th running (the organizer does not officially number editions).",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "Long-running, modestly-priced club sportive with a loyal regional following rather than a marquee national event."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Solid, Modest Club Sportive — With a Corrected Date and Elevation",
+      "summary": "Surrey Rumble is a genuine, long-running (since 2008) club-organized road sportive through the Surrey Hills near Cobham, England, put on by Twickenham Cycling Club. It ran again in 2026 with no cancellation signal found in reviewed sources. Two things on this listing needed fixing: the date was wrong (17 May on file vs. the confirmed 22 March date both the organizer and British Cycling list), and the elevation was significantly overstated (2,405m vs. older GPS route traces clustering around 1,255-1,294m). This is a modest, regional event — a club sportive, not a marquee national one — and should be judged as exactly that.",
+      "strengths": [
+        "Genuine, long track record — running since 2008, with only an apparent pandemic-era gap in the intervening years (exact edition count not officially published)",
+        "Two accessible route lengths (80mi/60mi) covering Surrey Hills climbing without requiring a huge single day",
+        "Modestly priced relative to comparable UK sportives (GBP22-26 advance, GBP30 on the day)",
+        "Club-organized with a stable annual date pattern (March) and no cancellation history found"
+      ],
+      "weaknesses": [
+        "This listing's date and elevation were both wrong before this correction — a reminder that even 'clean' active-status profiles can carry stale or fabricated-looking vitals",
+        "Regional, single-club event with modest field size (roughly 200-300 total entrants across both routes) and no national prestige to speak of",
+        "Early-season (March) UK timing means genuine weather risk with no guaranteed good conditions",
+        "No official published elevation figure from the organizer — the corrected ~1,270m here is a GPS-route estimate, not an organizer-verified number"
+      ],
+      "bottom_line": "A legitimate, long-running regional club sportive at a modest price — reasonable to enter if you're near London/Surrey and want an early-season hilly test, but don't mistake it for a major national event, and expect March weather to be part of the challenge."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Friendly early-season road sportive with hilly Surrey classics at bargain price.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Friendly early-season Surrey Hills club sportive at a bargain price — now with the correct March date.",
+      "should_you_race": "Yes, if you're UK-based and want an accessible, well-organized early-season Surrey Hills sportive at modest cost. Not a destination event worth major travel for.",
+      "alternatives": "For a similar Surrey Hills sportive experience with a bigger national profile, look at RideLondon-adjacent or Prudential-style mass events; for other early-season UK club sportives, check British Cycling's regional events calendar directly."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://twickenhamcc.co.uk/events/surrey-rumble/",
+        "category": "official",
+        "label": "Organizer (Twickenham CC) Official Event Page"
+      },
+      {
+        "url": "https://www.britishcycling.org.uk/events/details/318031/Surrey-Rumble",
+        "category": "official",
+        "label": "British Cycling Official 2026 Event Listing"
+      },
+      {
+        "url": "https://www.britishcycling.org.uk/events/details/333871/Surrey-Rumble",
+        "category": "official",
+        "label": "British Cycling 2027 Listing (2026 Entrant Numbers)"
+      },
+      {
+        "url": "https://roadcyclinguk.com/news/rides-news/the-surrey-rumble-cyclosportive.html",
+        "category": "media",
+        "label": "Road Cycling UK — Early History, 2009 'Second Running' Reference"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://twickenhamcc.co.uk/events/surrey-rumble/",
-      "notes": "Club-run road sportive in Cobham with a 2026 edition dated 22 March, conflicting with 17 May on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.britishcycling.org.uk/events/details/318031/Surrey-Rumble",
+      "notes": "Confirmed genuine club-run sportive in Cobham, Surrey, ENGLAND (not Surrey, British Columbia). DATE CORRECTED: 2026 edition confirmed for Sunday 22 March 2026 (entries closed 17 March) per both the organizer (Twickenham CC) and British Cycling's official listing — the previously-listed 17 May date had no primary-source support. ELEVATION CORRECTED: 2,405m was not supported by the organizer and is corrected to ~1,270m, an estimate based on older public GPS route traces (organizer does not publish an official elevation figure, and these traces may not reflect the current/2026 route exactly). Per a 2027 British Cycling listing, the 2026 event drew 250+ entrants across both routes. No cancellation signal found in reviewed sources; a 2027 British Cycling listing is already live."
     }
   }
 }

@@ -1,22 +1,22 @@
 {
   "race": {
-    "name": "Gran Fondo Montevideo",
+    "name": "Gran Fondo Asociación Española (Montevideo)",
     "slug": "gran-fondo-montevideo",
-    "display_name": "Gran Fondo Montevideo",
+    "display_name": "Gran Fondo Asociación Española",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 512,
-      "elevation_ft": 1679.0,
-      "location": "Montevideo, Uruguay",
+      "distance_km": 138.0,
+      "distance_mi": 85.8,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
+      "location": "Montevideo and Canelones Department, Uruguay",
       "location_badge": "Montevideo, Uruguay",
       "country": "Uruguay",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
-      "field_size": "N/A",
+      "date": "2026: September 12-13 (main race Sunday, Sept 13, 08:00)",
+      "date_specific": "2026: September 12-13",
+      "field_size": "N/A — not independently published",
       "start_format": null,
-      "registration": null,
+      "registration": "https://ticketfacil.uy/event/Gran-Fondo-Asociacion-Espaola/registerToEvent",
       "entry_fee": null,
       "feed_zones": "2",
       "cutoff_time": "N/A",
@@ -56,7 +56,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. EDITORIAL WAVE 9 FLAG (2026-07-24): this profile's identity was corrected this wave (see eligibility.notes/catalog_flags) from a conflated 'Gran Fondo Movistar Montevideo' identity to the actual subject, Gran Fondo Asociación Española. The 14 dimension scores below were inherited from the pre-correction profile and have NOT been independently re-evaluated against the corrected identity — flagging for human review rather than silently rescoring. No numeric changes made this wave."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,93 +70,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This is not a purely flat coastal Rambla ride, despite how it's sometimes marketed. The most recently documented route (2025, 130km) runs only about 2km along the Montevideo coast before turning inland through Barros Blancos, Santa Rosa, and San Jacinto in Canelones Department, includes a short categorized climb around km 71, and returns via roughly 30km of coastal riding into the finish. That 2025 course carried 512m of total ascent with a highest point of just 74m — genuinely flat-to-rolling, not mountainous, but not a pure beachfront out-and-back either. For 2026 the organizer (Asociación Española) has changed the marquee distance to 138km with a new Medio Fondo option at 60.7km; no official elevation figure has been published yet for the 2026 route, so treat the 512m/74m figures as 2025 route history rather than a current-year fact.",
+      "signature_challenge": "The short categorized climb inland near km 71 (on the 2025 route) — brief by mountain-fondo standards, but the only real elevation feature on an otherwise flat, wind-exposed course.",
+      "suffering_zones": [
+        "Open, wind-exposed coastal Rambla stretches at both the start and the closing ~30km",
+        "The inland Canelones farmland sections (Barros Blancos, Santa Rosa, San Jacinto) — inland terrain type confirmed by the UCI course description, though we have no sourced detail on wind shelter specifically",
+        "The single categorized climb — short, but the one point on course where a flat-terrain field will actually separate"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Montevideo offers hotels in Ciudad Vieja, near Rambla, and modern areas; day trips to Colonia del Sacramento or Punta del Este possible.[1]",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://espanolagranfondo.uy/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized by Asociación Española de Socorros Mutuos, a long-established Montevideo mutual health and social association (not strictly a 'sports club'), with event production/logistics support documented alongside eSPORT-affiliated event production credits in official race materials; exact founding year of the fondo itself not independently confirmed. Distinct from — and should not be confused with — 'Gran Fondo Movistar Montevideo,' a separately-branded, separately-scheduled (April) event with its own site and results history. Note: some of the same event-production infrastructure may serve both races, so 'unrelated' should be read as 'a different, separately-branded event,' not necessarily 'no shared production ties.'",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Identity-Corrected: This Is Gran Fondo Asociación Española, Not Gran Fondo Movistar",
+      "summary": "This profile was previously conflated with 'Gran Fondo Movistar Montevideo,' a separately-branded, separately-scheduled April event with its own site (granfondomovistar.uy) and its own results history — the prior youtube_data entries in this file (ESPORT, Gastón Umpierrez, ARN TEAM footage) documented that different race, not this one. The event this profile's citations actually point to (via the UCI Gran Fondo World Series listing) is Gran Fondo Asociación Española, also styled 'Gran Fondo Española,' organized by the Asociación Española club and held in September, not April. It's confirmed running again September 12-13, 2026, now at 138km with a new 60.7km Medio Fondo option — a change from the 130km course our old vitals described. One real caveat worth flagging: Montevideo does not currently appear on the UCI's published 2025-26 or 2026-27 Gran Fondo World Series qualifier calendar, even though the ucigranfondoworldseries.com listing page for it still exists — so while the race itself is confirmed and real, its 2026 UCI-qualifier status is not currently verifiable from the UCI's own calendar.",
+      "strengths": [
+        "A real, currently-scheduled event (confirmed for September 12-13, 2026) with an official site and live registration, not a defunct or fabricated listing",
+        "Two genuine distance options for 2026 (138km Gran Fondo, 60.7km Medio Fondo), giving riders a real choice",
+        "Route mixes a short stretch of Montevideo's scenic coastal Rambla with inland Canelones farm roads — more varied than a pure beachfront loop",
+        "Organized by an established, long-running Uruguayan institution (Asociación Española de Socorros Mutuos) rather than an ad-hoc promoter, with dedicated event-production support"
+      ],
+      "weaknesses": [
+        "This profile's media/video content was previously mismatched to a different event ('Gran Fondo Movistar Montevideo') — that footage has been removed rather than left to mislead riders about what they're actually looking at",
+        "Montevideo does not currently appear on the UCI's own published 2025-26/2026-27 qualifier calendar despite the UCI series website still hosting a Montevideo page — riders chasing a UCI Gran Fondo World Series qualifying slot should verify current UCI-qualifier status directly with the organizer before assuming it, rather than trusting the older listing page",
+        "No official elevation figure has been published yet for the new 2026 138km route — the only sourced figure (512m/74m high point) describes the prior year's 130km course and shouldn't be assumed to carry over exactly",
+        "Field size is not independently published for any recent edition — there's no verifiable way to gauge how competitive or well-attended this event actually is"
+      ],
+      "bottom_line": "A real, currently active club-organized fondo worth considering if you want a flat-to-rolling Uruguayan road event with genuine coastal scenery — just don't confuse it with the Movistar-branded Montevideo race under a similar name, and don't assume UCI-qualifier status without checking the current calendar yourself."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Flat, fast UCI qualifier along Montevideo's stunning Rambla coastline – Uruguay's premier road gran fondo.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine Montevideo fondo (Asociación Española) — real and running, but distinct from the similarly-named Movistar event and not currently on the UCI's own qualifier calendar.",
+      "should_you_race": "Yes, if you want a flat-to-rolling Uruguayan road fondo mixing coastal Rambla and Canelones farm roads and don't need it to be a confirmed UCI qualifier. Verify current UCI-qualifier status directly with the organizer if that status matters to you.",
+      "alternatives": "If you specifically want the Movistar-branded Montevideo event (a separate, unrelated April race), look for 'Gran Fondo Movistar Montevideo' directly — do not treat it as the same event as this profile. For a confirmed GFNY-franchise option in Uruguay instead, see GFNY Punta del Este, a distinct and separately-verified event."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Gran Fondo Montevideo gran fondo cycling Montevideo",
-      "videos": [
-        {
-          "video_id": "OqElwPuebEc",
-          "title": "Gran Fondo Movistar Montevideo",
-          "channel": "ESPORT",
-          "view_count": 328,
-          "upload_date": "20200115",
-          "duration_string": "55",
-          "description": "Luego de una exitosa primera edición en Punta del Este, Gran Fondo Movistar desembarca en Montevideo el próximo 26 de abril para ofrecerles a todos los amantes del ciclismo una nueva experiencia. \n\nEste nuevo evento se desarrollará al más alto nivel y ofrecerá a los corredores la posibilidad de  optar entre dos distancias, en las cuales podrán disfrutar de desafiantes recorridos por parte de los departamentos de Montevideo y Canelones. \n\nSabemos que te mueve la pasión y el deseo de superación. Vení a vivir una nueva experiencia dentro del pelotón de Gran Fondo Movistar Montevideo.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=OqElwPuebEc",
-          "curated": false
-        },
-        {
-          "video_id": "PPKESzU4kHA",
-          "title": "Gran fondo Movistar 2024 Montevideo Uruguay",
-          "channel": "Gastón Umpierrez",
-          "view_count": 3282,
-          "upload_date": "20240422",
-          "duration_string": "40:03",
-          "description": "Primeros 40 minutos del fondo movistar \ndesde la salida hasta donde se divide el circuito",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=PPKESzU4kHA",
-          "curated": true,
-          "curation_reason": "First-person race footage covering the start and course division with good view count.",
-          "display_order": 2,
-          "thumbnail_url": "https://i.ytimg.com/vi/PPKESzU4kHA/maxresdefault.jpg",
-          "thumbnail_score": 92.0
-        },
-        {
-          "video_id": "DA1MB5hqy3Y",
-          "title": "ARN TEAM Gran Fondo Montevideo 2025 Carrera Completa con Telemetria",
-          "channel": "ARN TEAM",
-          "view_count": 4072,
-          "upload_date": "20250501",
-          "duration_string": "2:28:09",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=DA1MB5hqy3Y",
-          "curated": true,
-          "curation_reason": "Recent complete race footage with telemetry data providing comprehensive race experience.",
-          "display_order": 1,
-          "thumbnail_url": "https://i.ytimg.com/vi/DA1MB5hqy3Y/maxresdefault.jpg",
-          "thumbnail_score": 72.0
-        }
-      ],
-      "quotes": []
-    },
+    "citations": [
+      {
+        "url": "https://espanolagranfondo.uy/",
+        "category": "official",
+        "label": "Official 2026 Event Site — Dates, Distances (138km/60.7km), Registration Link"
+      },
+      {
+        "url": "https://ticketfacil.uy/event/Gran-Fondo-Asociacion-Espaola/registerToEvent",
+        "category": "official",
+        "label": "Official Registration Portal (TicketFácil)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/montevideo/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series — Montevideo Listing (describes the 2025, 130km/512m route; identity confirmed as this event, not Movistar; 2026 UCI-qualifier status unconfirmed on UCI's current calendar)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "reference",
+        "label": "UCI Gran Fondo World Series — Current Published Calendar (Montevideo not listed for 2025-26/2026-27 as of this review)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/en/montevideo/",
-      "notes": "This appears to be the Granfondo Asociación Española/Gran Fondo Española in Montevideo; no 2026 edition found and the file date conflicts with a 2025 date on the event page.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://espanolagranfondo.uy/",
+      "notes": "IDENTITY CORRECTION (2026-07-24): this profile was previously conflated with 'Gran Fondo Movistar Montevideo,' a separately-branded, separately-scheduled April event with its own site (granfondomovistar.uy) and results history — the removed youtube_data entries (ESPORT/Gastón Umpierrez/ARN TEAM channels) documented that different race. This profile's actual subject, per its own citations (ucigranfondoworldseries.com/en/montevideo/), is Gran Fondo Asociación Española (aka Gran Fondo Española), organized by the Asociación Española club, confirmed running September 12-13, 2026 with new distances (138km Gran Fondo, 60.7km Medio Fondo) via the organizer's own 2026 site and TicketFácil registration. Renamed race.name/display_name to match the real event; slug left unchanged (gran-fondo-montevideo) to avoid breaking existing URLs. Caveat: the September 2026 event date is confirmed by the organizer, but Montevideo does not currently appear on the UCI's own published 2025-26 or 2026-27 Gran Fondo World Series qualifier calendar despite the still-live UCI listing page — treat 2026 UCI-qualifier status as unconfirmed pending direct organizer/UCI confirmation."
+    },
+    "catalog_flags": {
+      "status_note": "Identity-corrected this wave (see eligibility.notes): all youtube_data/rider_intel content previously attached to this profile documented 'Gran Fondo Movistar Montevideo,' a separate, unrelated event (own site granfondomovistar.uy, own April date, own results) — removed rather than left in place. The content now accurately describes 'Gran Fondo Asociación Española' (aka 'Gran Fondo Española'), the event our citations (via the UCI Gran Fondo World Series listing page) actually point to. Flagging for a human call on whether 2026 UCI-qualifier status should be asserted at all, given Montevideo is absent from the UCI's own currently-published qualifier calendar despite the still-live UCI series listing page for it.",
+      "ruled": "2026-07-24 editorial wave 9"
     }
   }
 }

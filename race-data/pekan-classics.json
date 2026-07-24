@@ -5,15 +5,15 @@
     "display_name": "Gran Fondo Pekan / Pekan Classic",
     "tagline": "",
     "vitals": {
-      "distance_km": 162.5,
-      "distance_mi": 101.0,
-      "elevation_m": 762,
-      "elevation_ft": 2500.0,
+      "distance_km": 162.7,
+      "distance_mi": 101.1,
+      "elevation_m": 1072,
+      "elevation_ft": 3517.0,
       "location": "Royal Town of Pekan, Pahang, Malaysia",
       "location_badge": "Royal Town of Pekan, Malaysia",
       "country": "Malaysia",
-      "date": "2026: June 28",
-      "date_specific": "2026: June 28",
+      "date": "No confirmed 2026 edition — last confirmed edition 20 June 2025",
+      "date_specific": "Last confirmed edition: 20 June 2025. A third-party calendar lists 19 June 2026 marked 'unconfirmed'; that date has passed with no results, race report, or 2026 UCI calendar entry found as of 24 Jul 2026.",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -22,7 +22,10 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Gran Fondo", "distance_km": 162.7, "elevation_m": 1072},
+        {"name": "Medio Fondo", "distance_km": 93.5, "elevation_m": 470}
+      ]
     },
     "climate": {
       "primary": "Tropical",
@@ -72,67 +75,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Flat river-hugging out-and-back with a central loop deviation, featuring moderate rolling hills and short steep pitches amid tropical scenery.",
-      "signature_challenge": "Pahang River double-sided routing: 108km flat borders punctuated by a hilly loop for 2500ft gain.",
+      "character": "Per the organizer's own course report: 'both sides of the flat borders of the Pahang river during the first 40km and the last 68km,' with a hillier backcountry middle section (roughly 55km) supplying most of the route's climbing. Overall officially described as 'flat and fast' — 162.7 km with 1,072 m of climbing and a maximum single peak of just 84m (not the 762 m previously listed here). A shorter Medio Fondo (93.5 km / 470 m, mostly along the river borders) serves as the age-category route for older riders (men 60+, women 50+) rather than an open fitness-level choice.",
+      "signature_challenge": "Holding pace on a genuinely flat, fast 162.7 km course where the modest 1,072 m of climbing is spread as gentle backcountry undulation (max peak 84m) rather than any single defined climb — the challenge is speed and heat management, not technical terrain.",
       "suffering_zones": [
-        "River Border Push (First 40km): Sustained flat effort along Pahang River banks tests pacing in humid conditions before the loop.",
-        "Loop Deviation: Short interior loop introduces the event's 2500ft elevation via rolling short steep hills.",
-        "Return River Grind (Last 68km): Fatigue sets in on the flat return, where heat and wind amplify the distance."
+        "First ~40km: flat river-border riding on the outbound side of the Pahang River in humid, tropical conditions.",
+        "Backcountry middle section (~55km): the only hillier part of the route, supplying most of the total 1,072 m of climbing via small climbs (max 84m) rather than one defined ascent.",
+        "Final ~68km: flat river-border return on the opposite bank, where accumulated heat and distance — not terrain — are the main limiter."
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and homestays in Pekan town; book early for June event weekend.",
-      "transport": "UCI Gran Fondo weekend event with 80km/120km distances; international field; held in Royal Town of Pekan.",
+      "lodging_strategy": "Hotels and homestays in Pekan town; book early for event weekend if a future edition is confirmed.",
+      "transport": "",
       "food": "",
-      "official_site": "https://www.uci.org/competition-details/2025/CPT/75415"
+      "official_site": "https://ucigranfondoworldseries.com/en/pekan-classics/"
     },
     "history": {
-      "founded": 2023,
-      "origin_story": "UCI Gran Fondo World Series qualifier attracting international pelotons to Malaysia's Pahang region.",
+      "founded": 2025,
+      "origin_story": "UCI Gran Fondo World Series stop in Malaysia's Pahang region, organized by FR Exhibitions Sdn Bhd; the official event page states it was organized for the first time in 2025, drawing 803 registered riders from 18 countries in its debut edition.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A World Series Stop With Exactly One Confirmed Edition, and No Second Yet",
+      "summary": "Pekan Classics is a UCI Gran Fondo World Series event confirmed on both uci.org and the official World Series calendar — its debut and, so far, only confirmed edition ran 20 June 2025 (803 riders from 18 countries, per the organizer's own report), not the 2023 debut this listing previously implied. The Gran Fondo distance is 162.7 km with 1,072 m of climbing on an organizer-described 'flat and fast' course (max single peak 84m); this listing previously understated the climbing at 762 m. No 2026 edition has been confirmed: a third-party calendar floated 19 June 2026 but marked it explicitly unconfirmed, that date has passed with no results or report, the event is absent from the current UCI/World Series 2026 calendar, and the organizer's own domain was unreachable during this research. None of that amounts to a formal cancellation, but a rider should treat it as a real, unresolved hiatus rather than a confirmed annual fixture.",
+      "strengths": [
+        "Verifiable UCI Gran Fondo World Series affiliation, confirmed directly on uci.org",
+        "A flat, fast, approachable profile (1,072 m over 162.7 km, no climb over 84m) suited to riders who want distance without serious climbing",
+        "Two distances (162.7 km Gran Fondo, 93.5 km Medio Fondo, the latter an age-category route for men 60+/women 50+)",
+        "A real international field in its debut — 803 registered riders from 18 countries, per the organizer's own report"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition — the only 2026 date circulating is explicitly flagged 'unconfirmed' by the source carrying it, and it has already passed without a result",
+        "Organizer website (pekan-classics.com / .com.my) was unreachable during this research pass, a bad sign for an event trying to sell registration",
+        "Tropical monsoon-adjacent climate risk (inter-monsoon shower probability) on a course with minimal shade cover",
+        "Exactly one confirmed edition to date (2025, per the organizer's own 'first time' language) — a single data point, not an established annual fixture, while its 2026 status is unresolved"
+      ],
+      "bottom_line": "This is a real UCI-affiliated event with one solid debut edition behind it — but don't book travel around a 2026 Pekan Classics until the organizer or UCI actually confirms one. Check ucigranfondoworldseries.com directly before planning."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Scenic, affordable UCI gran fondo blending flat speed with moderate Pahang hills.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real Gran Fondo World Series stop in Pahang with a flat river route and one hilly loop — but 2026 status is unconfirmed.",
+      "should_you_race": "If a 2026 or later edition is confirmed by the organizer, yes for riders wanting an approachable, mostly-flat World Series stop. Don't commit travel plans on the strength of the current unconfirmed 19 June 2026 date alone.",
+      "alternatives": "For a similarly flat, affiliated Southeast Asian gran fondo with more certain scheduling, check the current Gran Fondo World Series calendar directly at ucigranfondoworldseries.com for confirmed regional stops."
     },
     "citations": [
       {
         "url": "https://www.uci.org/competition-details/2025/CPT/75415",
-        "category": "reference",
-        "label": "Gran Fondo Pekan / Pekan Classic - UCI"
+        "category": "official",
+        "label": "UCI Official 2025 Competition Record"
       },
       {
-        "url": "https://www.cycloworld.cc/en/gran-fondo/malaysia/gran-fondo-pekan---pekan-classic/39631",
-        "category": "reference",
-        "label": "Gran Fondo Pekan / Pekan Classic"
+        "url": "https://ucigranfondoworldseries.com/en/pekan-classics/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Pekan Classics Event Profile"
       },
       {
         "url": "https://ucigranfondoworldseries.com/en/pekan-classics-with-very-international-field-at-the-start/",
-        "category": "reference",
-        "label": "Pekan Classics with very international field at the start"
+        "category": "official",
+        "label": "Official Pre-Race Course Report (162.7km/1,072m, 19 June 2025)"
       },
       {
-        "url": "https://www.granfondoguide.com/Events/Index/12386/uci-pekan-classics",
+        "url": "https://battistrada.com/en/event/gran-fondo-pekan-classic/22224/",
         "category": "reference",
-        "label": "UCI Pekan Classics - Gran Fondo Guide"
+        "label": "Battistrada — Last Confirmed Edition 20 June 2025, No 2026 Announcement"
       }
     ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/en/pekan-classics/",
-      "notes": "Pekan Classics in Pekan ran in 2025; no 2026 edition or cancellation info found.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://battistrada.com/en/event/gran-fondo-pekan-classic/22224/",
+      "notes": "Confirmed real UCI Gran Fondo World Series stop (uci.org, ucigranfondoworldseries.com), last confirmed edition 20 June 2025. No 2026 edition confirmed: the only 2026 date circulating (19 June 2026, granfondoguide.com) is explicitly marked 'unconfirmed' and has passed with no results; absent from current UCI/World Series 2026 calendars; organizer domain (pekan-classics.com/.com.my) unreachable as of 24 Jul 2026. No explicit cancellation statement found from UCI or the organizer, so 'unknown' (hiatus/undetermined) rather than 'defunct' or 'cancelled' is the defensible status."
     }
   }
 }

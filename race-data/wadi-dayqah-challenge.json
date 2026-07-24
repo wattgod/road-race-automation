@@ -5,24 +5,37 @@
     "display_name": "Wadi Dayqah Challenge",
     "tagline": "",
     "vitals": {
-      "distance_km": 239.8,
-      "distance_mi": 149.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Muscat, Oman",
+      "distance_km": 240.0,
+      "distance_mi": 149.1,
+      "elevation_m": 2138,
+      "elevation_ft": 7014.0,
+      "location": "Qurum Park, Muscat to Wadi Dayqah Dam and back, Oman",
       "location_badge": "Muscat, Oman",
       "country": "Oman",
       "date": "2026: January 24",
       "date_specific": "January 24, 2026 at 5:45 AM",
-      "field_size": "Unknown",
-      "start_format": null,
-      "registration": null,
+      "field_size": "Not officially published; ride-leader accounts describe 90+ riders in a single pace group on the 240km course in 2026",
+      "start_format": "5:45 AM start, Qurum Park, Muscat",
+      "registration": "https://bookings.muscatbike.com/event",
       "entry_fee": null,
       "feed_zones": "Unknown",
       "cutoff_time": "Unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long (240km)",
+          "distance_km": 240,
+          "elevation_m": 2138,
+          "note": "Highest point approximately 400m — climbing is accumulated rolling terrain, not altitude. Some promotional material rounds this to ~2,300m."
+        },
+        {
+          "name": "Short (140km)",
+          "distance_km": 140,
+          "elevation_m": 1670,
+          "note": "Joins the long-course field near Al Massara Hospital/Arqi Loop, roughly 50km into the long route"
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,42 +83,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A supported, largely non-competitive road-cycling endurance challenge organized by Muscat Bikes LLC. The 240km long course starts and finishes at Qurum Park in Muscat, travels through the eastern Hajar foothills/Quriyat area to Wadi Dayqah Dam — the turnaround point, at a modest ~400m high point — and returns to Muscat; the 140km short course starts near Al Massara Hospital/Arqi Loop, roughly 50km into the long route, and merges with the corresponding 240km groups. It's a pre-dawn ride (5:45 AM start): the organizer publishes support cars, an ambulance, and group mechanical support along the route, plus police assistance at the start/finish area and select road crossings (not a full route-long closure). Riders receive finisher medals rather than a ranked overall classification, though the organizer has run at least one Strava-based 'Fastest Climber' segment challenge alongside the main ride.",
+      "signature_challenge": "Nearly 2,140m of accumulated rolling climbing over 240km in the eastern Hajar foothills despite a modest ~400m high point — sustained terrain rather than a single defining climb, ridden from a 5:45 AM pre-dawn start.",
+      "suffering_zones": [
+        "The 5:45 AM start — riding out from Muscat in the dark ahead of a full day in the saddle",
+        "The out-and-back turnaround at Wadi Dayqah Dam on the long course — the psychological halfway point, still requiring the full return leg to Muscat",
+        "The merge zone near Al Massara Hospital/Arqi Loop (roughly 50km into the long route), where the 140km short-course field joins the 240km riders"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and resorts in Muscat; camping or lodges near Wadi Dayqah for event weekend.",
+      "lodging_strategy": "Hotels and resorts in Muscat; the route is a supported day ride rather than an overnight event weekend.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://muscatbike.com/pages/wadi-dayqah-challenge"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized annually in January by Muscat Bikes LLC, a Muscat-based cycling retailer/community operator (no evidence found of Oman Cycling Association involvement as organizer). Confirmed held in 2025 (Jan 25) and 2026 (Jan 24); a 2027 edition (Jan 23) is already scheduled and open for registration, indicating the event is an established annual fixture rather than a one-off.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "An Organized, Supported Ride — Not a Scored Competitive Race",
+      "summary": "Wadi Dayqah Challenge is an annually-run road cycling endurance event organized by Muscat Bikes LLC, a Muscat-based cycling retailer rather than a national federation. It uses Wadi Dayqah Dam as its turnaround point on the 240km long course, though the ride starts and finishes in Muscat (Qurum Park), not at the dam itself — so 'Wadi Dayqah' names the destination, not the whole location. It's a supported but largely non-competitive ride: the organizer publishes support cars, an ambulance, and mechanical support, plus police assistance at the start/finish and select crossings — but riders receive finisher medals rather than an overall ranked classification (the organizer has separately run a Strava-based 'Fastest Climber' segment challenge). The prior profile's elevation was blank; the organizer's own route page states roughly 2,138m of climbing on the long course against a modest ~400m high point — real rolling terrain in the Hajar foothills, not altitude, and prior promotional material rounds this figure up to about 2,300m.",
+      "strengths": [
+        "Established as a recurring annual fixture: rider-reported completions circulate for the 2025 and 2026 editions, and a 2027 edition (Jan 23) is already scheduled and open for registration",
+        "A documented, specific route — 240km/140km out-and-back from Muscat to Wadi Dayqah Dam through the eastern Hajar foothills — not a vaguely described event",
+        "Two distances (240km/140km) give riders a meaningful choice in commitment level",
+        "Published on-course support (support cars, ambulance, mechanical assistance) beyond a purely informal, unsupported club ride"
+      ],
+      "weaknesses": [
+        "Non-competitive by design — riders get finisher medals but no overall ranked classification, so this is a supported endurance ride, not a scored race, despite sharing a tier with competitive gran fondos in this database",
+        "Organized by a regional bike retailer (Muscat Bikes LLC), not a national cycling federation — thinner institutional pedigree than federation-backed events elsewhere in this database",
+        "No published cutoff time found — riders should confirm current-year timing/support logistics directly with the organizer rather than assume parity with larger European fondos",
+        "Elevation reporting is inconsistent across sources (roughly 2,138m per the current official route page vs. ~2,300m in prior promotional copy) — a real, if minor, data-quality gap"
+      ],
+      "bottom_line": "A real, recurring supported ride to Wadi Dayqah Dam through Oman's Hajar foothills — go in knowing it's a non-competitive endurance ride organized by a local bike shop, not a scored, federation-backed gran fondo."
     },
     "final_verdict": {
       "score": "60/100",
-      "one_liner": "Epic road sportive conquering Oman's Al Hajar mountains with unrivaled scenery.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Supported out-and-back ride from Muscat to Wadi Dayqah Dam through the Hajar foothills — non-competitive, but a real and recurring event.",
+      "should_you_race": "Consider it if you're based in or traveling to Muscat and want a genuine, organized long ride through Omani terrain with real logistical support. It is not a scored race — go in expecting a supported endurance ride, not competitive classification.",
+      "alternatives": "Look for Oman Cycling Association-sanctioned events if you want federation-backed competitive racing in the region; this event is better compared to other regional retailer/community-organized endurance rides than to European federation gran fondos."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://muscatbike.com/pages/wadi-dayqah-challenge",
+        "category": "official",
+        "label": "Official Event Landing Page — Muscat Bikes LLC"
+      },
+      {
+        "url": "https://muscatbike.com/pages/route-start-finish-1",
+        "category": "official",
+        "label": "Official Route/Start-Finish Page — Elevation, Distance, Merge-Point Detail"
+      },
+      {
+        "url": "https://bookings.muscatbike.com/event",
+        "category": "official",
+        "label": "Official Booking Directory — Confirms 2027 Edition Scheduled"
+      },
+      {
+        "url": "https://www.sported.ae/events/wadi-dayqah-challenge-240-140-km/",
+        "category": "media",
+        "label": "Sported.ae — 2025 Edition Listing, Distances and Date"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://bookings.muscatbike.com/event/wadi-dayqah-challenge-240140-km-2026",
-      "notes": "Mass-participation road cycling event in Muscat with registration open and 2026 edition scheduled matching date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://muscatbike.com/pages/wadi-dayqah-challenge",
+      "notes": "CORRECTIONS (2026-07-24): organizer identified as Muscat Bikes LLC (no evidence of Oman Cycling Association involvement found). distance_km changed from 239.8 to 240 (official long-course figure; both are effectively the organizer's rounded ~240km value, no material change). elevation_m changed from null/0 to 2138, sourced from the official route page (muscatbike.com/pages/route-start-finish-1); noted that prior promotional copy rounds this to ~2,300m. location changed from a bare 'Muscat, Oman' to 'Qurum Park, Muscat to Wadi Dayqah Dam and back' to reflect that the ride starts/finishes in Muscat with Wadi Dayqah Dam as the turnaround, not the whole route. Added route_options for the 240km/140km courses. Active and annually recurring: 2025 (Jan 25) and 2026 (Jan 24) editions both have rider-reported completions (named individuals' posts describing finishing the ride); 2027 edition (Jan 23) already scheduled and open for registration on the official booking platform. SOL REVIEW: corrected an overclaimed 'police-assisted traffic corridor' to the accurate scope (start/finish area and select crossings only, per the official entry-fee-inclusions page); corrected a claimed absence of safety/support planning — the organizer in fact publishes support cars, an ambulance, and mechanical support; softened 'riders get a finish time' to 'finisher medals' since no individual chip-timing claim is verifiable; added a Strava-based 'Fastest Climber' challenge detail found on the 2027 listing; removed unsupported 'rising Omani heat' framing and hype phrasing ('genuine destination', 'not an armchair or paper event')."
     }
   }
 }

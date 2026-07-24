@@ -5,24 +5,43 @@
     "display_name": "BalatonFondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 120.7,
-      "distance_mi": 75.0,
-      "elevation_m": 610,
-      "elevation_ft": 2000.0,
-      "location": "Lake Balaton, Hungary",
-      "location_badge": "Lake Balaton, Hungary",
+      "distance_km": 177.0,
+      "distance_mi": 110.0,
+      "elevation_m": 1716,
+      "elevation_ft": 5630.0,
+      "location": "Balatonfüred and the Balaton Uplands, Hungary",
+      "location_badge": "Balatonfüred, Hungary",
       "country": "Hungary",
-      "date": "May 1, TBD",
+      "date": "2026: May 1",
       "date_specific": "May 1, 2026",
-      "field_size": null,
-      "start_format": null,
+      "field_size": "Approximately 1,600 riders from 15 countries (2026 edition)",
+      "start_format": "Neutral rollout from Balatonfüred to Tihany, timed racing start from Tihany",
       "registration": "https://balatonfondo.com/en/entry",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Granfondo",
+          "distance_km": 177,
+          "elevation_m": 1716,
+          "note": "Timed race"
+        },
+        {
+          "name": "Mediofondo",
+          "distance_km": 59.2,
+          "elevation_m": 623,
+          "note": "Timed race"
+        },
+        {
+          "name": "Piccolofondo",
+          "distance_km": 54.5,
+          "elevation_m": 380,
+          "note": "Guided, untimed cycle tour"
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +75,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. Vitals corrected 2026-07-24 editorial wave 9 (distance 120.7->177km, elevation 610->1716m — a substantially longer/hillier corrected course). Dimensions (distance=3, climbing=2) and overall_score retained as-is per eroica-dolomiti precedent rather than unilaterally rescored; flagged for a human-led rescoring pass since the corrected course likely rates higher on both dimensions under config/dimensions.json's rubric."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,11 +89,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Contrary to what the 'Balaton' branding suggests, this is not a lake-circumnavigation event — the Granfondo and Mediofondo start and finish in Balatonfüred, with a neutral rollout to Tihany before the timed racing start, then a circuit north/northwest through the Balaton Uplands (Tótvázsony, Kab-hegy/Kab Hill, Hegymagas, Tagyon, Dörgicse, Mencshely, Vászoly) before returning to Balatonfüred. It does not traverse the lake's southern shore. The 2026 route was substantially redesigned and lengthened from 2025 (134km/Granfondo) to 177km/1,716m — a real, meaningful change riders comparing past reviews to the current course should know about.",
+      "signature_challenge": "The Balaton Uplands climbing circuit (Tótvázsony, Kab-hegy, Hegymagas, Tagyon) north of the lake — rolling hill terrain rather than a flat lakeside cruise, despite the event's lake-branded name.",
       "suffering_zones": [
-        "Windy Lake Exposures: Open southern shores of Lake Balaton whip up crosswinds, shredding packs and spiking efforts on flats. Sustained exposure tests mental grit over 20 miles.",
-        "Late-Race Fatigue Fade: Final 15 miles back to Balatonfüred bring cumulative rolling drain after 60 miles, where legs burn without crowd relief. Pace discipline early prevents bonk."
+        "The Kab-hegy (Kab Hill) climb and surrounding Uplands terrain, named as a feed-station point on the official route",
+        "Dörgicse, Mencshely, and Vászoly, which the organizer's own safety notes place late in the route",
+        "The 2024 edition was shortened to the ~62km Mediofondo course on short notice due to a high-wind forecast — a real precedent for weather-driven route changes on this course"
       ]
     },
     "logistics": {
@@ -86,29 +106,65 @@
     },
     "history": {
       "founded": 2023,
-      "origin_story": "",
+      "origin_story": "First held May 1, 2023, organized at the time by Bringatúra Kft. In 2024, the event entered a naming-rights sponsorship with KÉSZ Group, becoming 'KÉSZ Group Balatonfondo' — a sponsorship rebrand, not a new event. The Hungarian Cycling Federation's 2026 listing identifies the current organizer as Orbitrex (Orbitrex-SDM Kft.), a change from the 2023-2024 Bringatúra Kft. listing. 2026 marks the fourth edition.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "An Established, Regionally Growing Hungarian Fondo — Not a Lake Balaton Loop",
+      "summary": "Balatonfondo (currently sponsor-branded 'KÉSZ Group Balatonfondo') is an established Hungarian gran fondo now in its fourth edition (founded 2023), listed on the Hungarian Cycling Federation's official calendar. Despite the lake-branded name, it is not a Lake Balaton circumnavigation: the Granfondo and Mediofondo start and finish in Balatonfüred and loop through the Balaton Uplands to the north, never touching the lake's southern shore. The course has also changed between recent editions — the 2026 Granfondo runs 177km, up from 134km in 2025 — so expectations based on a past edition's distance shouldn't be assumed to carry over.",
+      "strengths": [
+        "Organizer-reported field growth (roughly 1,600 riders from 15 countries in 2026) and a listing on the Hungarian Cycling Federation's official calendar since its 2023 launch — this isn't a paper event",
+        "A climbing route through the Balaton Uplands (past Kab-hegy and surrounding hill terrain per the official route notes), not simply a flat lakeside cruise despite the lake-branded name",
+        "Multiple distance options, including a guided, untimed Piccolofondo for less competitive or family riders alongside the timed Granfondo/Mediofondo",
+        "Established annual fixture on the Hungarian Cycling Federation's calendar since 2023"
+      ],
+      "weaknesses": [
+        "The 'Balaton' branding can mislead riders expecting a lake circumnavigation — the course doesn't circle the lake or touch its southern shore; it's an Uplands circuit that starts and finishes in Balatonfüred",
+        "The course itself has been redesigned between 2025 and 2026 (134km to 177km Granfondo) — past-year race reports and reviews don't necessarily describe the current course",
+        "The 2024 Granfondo was shortened on short notice to the ~62km Mediofondo distance due to a high-wind forecast — real precedent that the marquee long-course distance isn't guaranteed to run as advertised",
+        "Reported field-size and turnout figures trace back to organizer/sponsor communications repeated by local media, not an independently audited attendance count"
+      ],
+      "bottom_line": "An established and apparently growing regional fondo with genuine Uplands climbing — but come in knowing it's not a lake-circling ride, and that the course you read about from a past year may not be the course run in 2026."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Hungary's premier gran fondo delivers scenic Lake Balaton bliss on pro-closed roads.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A growing Hungarian fondo through the Balaton Uplands — real climbing, but not the lake-circling ride its name implies.",
+      "should_you_race": "Consider it if you want an established regional European fondo with real hill terrain and don't mind that it isn't a Lake Balaton circumnavigation. Confirm the current year's course and distance directly — both have changed significantly year to year.",
+      "alternatives": "Look for a dedicated round-the-lake cyclotourism route (e.g. the Balaton Circuit bike path) if you specifically want a full lake circumnavigation — this event doesn't offer one."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.balatonfondo.com/en/races/granfondo",
+        "category": "official",
+        "label": "Official Granfondo Route Page — 2026 Distance, Elevation, Course Detail"
+      },
+      {
+        "url": "https://bringasport.hu/verseny/kesz-group-balatonfondo-2/",
+        "category": "reference",
+        "label": "Hungarian Cycling Federation — 2026 Event/Results Listing, Organizer ID"
+      },
+      {
+        "url": "https://bringasport.hu/2023/05/02/tobb-mint-1300-an-indultak-az-elso-balatonfondon/",
+        "category": "media",
+        "label": "Hungarian Cycling Federation — 2023 First-Edition Report (Founding Year Confirmation)"
+      },
+      {
+        "url": "https://www.balatonfondo.com/hirek/biztonsag-es-kozosseg-a-kesz-group-balatonfondon-granfondo-tav-modositasa",
+        "category": "official",
+        "label": "Official 2024 Route-Change Notice — Wind-Related Granfondo Shortening"
+      },
+      {
+        "url": "https://hamuesgyemant.hu/utazas/kesz-group-balatonfondo-kerekparos-verseny-balatonfured/",
+        "category": "media",
+        "label": "2026 Post-Event Coverage — Field Size (~1,600 Riders, 15 Countries)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.balatonfondo.com/en",
-      "notes": "4th edition May 1 2026"
+      "verified": "2026-07-24",
+      "source": "https://www.balatonfondo.com/en/races/granfondo",
+      "notes": "CORRECTIONS (2026-07-24): distance_km changed from 120.7 to 177, elevation_m from 610 to 1716 — the 2026 Granfondo course page gives these figures directly; the prior 120.7km/610m figures didn't match either the 2025 (134km) or 2026 course, and no source confirms 2025's exact elevation, so only the distance change (134->177km) is asserted, not an elevation trend. location/location_badge changed from 'Lake Balaton, Hungary' to 'Balatonfüred and the Balaton Uplands, Hungary' / 'Balatonfüred, Hungary' — the route does NOT circumnavigate the lake or touch its southern shore, contrary to what the prior location field implied; it's an Uplands circuit starting/finishing in Balatonfüred. date changed from 'May 1, TBD' to '2026: May 1' (house date format; date was already correct, just malformed). Added route_options (Granfondo 177km/1716m, Mediofondo 59.2km/623m, Piccolofondo 54.5km/380m guided/untimed) and field_size (~1,600 riders/15 countries per organizer/media reporting, 2026 — not an independently audited count). Organizer identified as Orbitrex-SDM Kft. (current, per Hungarian Cycling Federation), a change from Bringatúra Kft. (2023-2024 federation listings); KÉSZ Group is the title sponsor, not the organizer. Confirmed founded 2023 (federation's first-edition report). Fixed a fabrication: prior suffering_zones described 'open southern shores of Lake Balaton' whipping up crosswinds — the course doesn't touch the southern shore at all, so this was inaccurate; replaced with sourced Balaton Uplands climbing detail. fondo_rating dimensions/overall_score were NOT changed despite the vitals correction materially increasing both distance (120.7->177km) and elevation (610->1716m), following the eroica-dolomiti precedent of retaining scores as-is and flagging the mismatch rather than unilaterally rescoring — recommend a human-led rescoring pass given the magnitude of this correction (distance and climbing dimensions likely underrate the corrected course). SOL REVIEW: removed an unsupported 'elevation nearly tripling 2025->2026' claim (no confirmed 2025 elevation figure exists) and softened 'verified growth'/attendance language to 'organizer-reported' since the 1,600-rider figure traces to organizer/sponsor communications repeated by media, not an independent count; removed unsupported narrative color ('gives the course its actual elevation gain', 'after the climbing has taken its toll') not backed by the cited official route notes; reduced repeated hype words ('genuine', 'real', 'legitimate')."
     }
   }
 }

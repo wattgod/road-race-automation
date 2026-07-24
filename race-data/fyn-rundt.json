@@ -5,24 +5,29 @@
     "display_name": "Fyn Rundt (Tour of Funen)",
     "tagline": "",
     "vitals": {
-      "distance_km": 199.6,
-      "distance_mi": 124.0,
+      "distance_km": 177.0,
+      "distance_mi": 110.0,
       "elevation_m": null,
       "elevation_ft": 0.0,
-      "location": "Funen Island, Denmark",
+      "location": "Funen Island, Denmark (2026: start/finish in Middelfart)",
       "location_badge": "Funen Island, Denmark",
       "country": "Denmark",
       "date": "2026: May 3",
       "date_specific": "2026: May 3",
-      "field_size": "100-250 riders",
-      "start_format": null,
-      "registration": null,
+      "field_size": "Public sportive total not officially published. The same-day UCI elite race recorded 150 starters / 119 finishers in 2026.",
+      "start_format": "Public sportive riders start in Sportstiming-managed groups of up to 50; the UCI elite race has a separate, single mass start.",
+      "registration": "https://fyenrundt.com/motion-info-ny/",
       "entry_fee": null,
       "feed_zones": "Standard for UCI race",
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "74 km (public sportive, short)",
+        "113 km (public sportive, medium)",
+        "177 km (public sportive, long)",
+        "188 km + ~10 km neutralized rollout (separate UCI Men Elite 1.2 race, same day, not open to public entry)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,42 +75,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Fyen/Fyn Rundt is two events sharing a name, a date, and a start/finish town: a UCI Men Elite 1.2 one-day road race (roughly 188 km per ProCyclingStats' course data, though other official materials list distances closer to 180-184 km — treat the exact figure as edition-specific, not fixed — with roughly 1,323 m of climbing plus about 10 km of neutralized rollout) and a separate public, chip-timed sportive offering 74, 113, and 177 km options on rolling — not flat — Funen roads. The public rider is not racing the pros; the two events use separate published courses and are administratively and competitively distinct, sharing only the date and the Middelfart start/finish for the 2026 edition. The event's 130+ year lineage belongs to the elite side: first run in 1894 by the Fyens Cykle Union, with the public component added in 1978 and the two folded into one shared event day since 2002.",
+      "signature_challenge": "For the public sportive: covering the full 177 km option across Funen's rolling terrain within the Sportstiming-managed wave-start format. For the elite race run the same day: the 188 km distance itself, contested as a full UCI 1.2 with age-old Danish road-race pedigree.",
+      "suffering_zones": [
+        "The open-road wave starts (groups of up to 50) mean pacing and traffic discipline matter as much as fitness for public riders",
+        "Funen's terrain is rolling rather than mountainous but not flat — the elite course profile (1,323 m over 188 km) indicates real cumulative climbing, not a pancake-flat island loop",
+        "No verified finisher-time cutoff structure is published for the public sportive; riders should confirm current-year rules directly rather than assume race-style cutoffs"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels in Odense and coastal towns on Funen.",
+      "lodging_strategy": "Hotels in Middelfart (2026 start/finish town), Odense, and coastal towns across Funen.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://fyenrundt.com"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 1894,
+      "origin_story": "Founded in 1894 by the Fyens Cykle Union as an elite road race; a public mass-participation component was added in 1978. The two have run as a single combined event day since 2002 — one of the oldest continuously-run road cycling events in Denmark.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Genuine Historic Race, But Read the Fine Print on What You're Actually Entering",
+      "summary": "Fyn Rundt is real and it is old — 1894 origins, a public sportive bolted on in 1978, both folded into one event day since 2002. But the name covers two different products: a UCI Men Elite 1.2 road race (team-entry Men Elite/U23 field — national, regional, and club teams, not individual public entry) and a public, chip-timed sportive most riders will actually be entering, offered at 74, 113, or 177 km. Our on-file vitals previously listed 199.6 km with no elevation data — that number tracks closest to the elite race's total distance including neutralized rollout, not any distance a public entrant can actually register for. We've corrected the public-facing distance to 177 km (the long sportive option) and added the full route menu. Field size for the public ride isn't published anywhere we could verify; only the elite race discloses numbers (150 starters, 119 finishers in 2026).",
+      "strengths": [
+        "Legitimate 130+ year history — one of Denmark's oldest continuously-run road cycling events",
+        "Three public distance options (74/113/177 km) give riders a real choice rather than a single fixed course",
+        "Chip-timed via Sportstiming with organized wave starts",
+        "Rolling Funen scenery gives genuine variety across the three public distance options, on a single, geographically compact island"
+      ],
+      "weaknesses": [
+        "The event's headline history and UCI pedigree belong to the elite race, not the public sportive most riders will actually enter — don't conflate the two when deciding what you're signing up for",
+        "No published field-size total for the public sportive, and no verifiable cutoff-time policy — plan around uncertainty rather than assumed race-day structure",
+        "Terrain is rolling, not the flat island cruise the name might imply, but no reliable elevation figure exists for the public 177 km course specifically (only the separate elite 188 km course has a sourced climbing total)",
+        "Prize structure for public finishers is described as draw prizes, not competitive results — this is a supported sportive, not a scored race, despite chip timing"
+      ],
+      "bottom_line": "A real, old event worth doing if you want a multi-distance, chip-timed sportive through Funen with genuine Danish cycling heritage attached — just go in knowing you're entering the public ride, not the UCI race that gives the event its prestige."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Historic Danish road classic with 130+ years of tradition and solid UCI competition.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Historic Danish cycling day with real 1894 roots — but know you're entering the public sportive, not the UCI elite race.",
+      "should_you_race": "Yes, if you want an organized, chip-timed multi-distance sportive with genuine long-running heritage. Confirm current-year field size and course details directly with the organizer before booking travel, since public participation numbers aren't independently published.",
+      "alternatives": "For a similarly historic Scandinavian road sportive with clearer public-facing data: look at other Danish or Nordic cycling federation-affiliated tours. For the UCI-race side of this same event, that's a separate, licensed-elite-only entry point, not something a recreational rider can register for."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://fyenrundt.com/motion-info-ny/",
+        "category": "official",
+        "label": "Official Public Sportive Info — Distances, Rules, Registration Link"
+      },
+      {
+        "url": "https://fyenrundt.com/uci-elite-info-ny/",
+        "category": "official",
+        "label": "Official UCI Elite Race Info Page"
+      },
+      {
+        "url": "https://fyenrundt.com/faelles-historien-om-fyen-rundt-ny/",
+        "category": "official",
+        "label": "Official Combined History — 1894 Founding, 1978 Public Addition, 2002 Merge"
+      },
+      {
+        "url": "https://www.procyclingstats.com/race/albani-classic-fyen-rundt/2026/result/result/result",
+        "category": "reference",
+        "label": "ProCyclingStats — 2026 Elite Results, Course Stats (188km, ~1,323m climbing)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://fyenrundt.com/wp-content/uploads/2026/04/Fyen-Rundt_magasin_2026_k1-1.pdf",
-      "notes": "No rebrand found; the 2026 edition is announced for 3 May 2026, which conflicts with the date on file only if that date is meant to be a specific schedule snapshot.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://fyenrundt.com/motion-info-ny/",
+      "notes": "Confirmed held 3 May 2026, start/finish Middelfart. Corrected vitals: the previously-listed 199.6km distance does not match any 2026 public sportive option (74/113/177km) and appears to track the separate UCI elite race's ~198km total (188km competitive + ~10km neutralized rollout) instead — that elite race is a distinct, licensed-only event run the same day as the public sportive, not something a recreational entrant can register for. Public sportive field size is not independently published; only the elite race discloses numbers (150 starters/119 finishers, 2026)."
     }
   }
 }

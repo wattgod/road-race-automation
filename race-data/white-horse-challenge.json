@@ -5,24 +5,27 @@
     "display_name": "White Horse Challenge",
     "tagline": "",
     "vitals": {
-      "distance_km": 144.8,
-      "distance_mi": 90.0,
+      "distance_km": 145.0,
+      "distance_mi": 90.1,
       "elevation_m": 1400,
       "elevation_ft": 4593.0,
       "location": "Shrivenham, Oxfordshire, England",
       "location_badge": "Shrivenham, England",
       "country": "England",
       "date": "2026: April 19",
-      "date_specific": "2026: April 19",
-      "field_size": "500",
+      "date_specific": "Sunday, April 19, 2026 -- Shrivenham Memorial Hall, 07:30 start",
+      "field_size": "500 (advertised capacity; verified finisher/starter count not published)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://whitehorsechallenge.eventrac.co.uk/e/white-horse-challenge-13802",
+      "entry_fee": "GBP40 online / GBP50 cash on the day; online entries closed April 5, 2026",
       "feed_zones": "2",
-      "cutoff_time": "8 hours",
+      "cutoff_time": "No explicit rider cutoff confirmed. British Cycling's 2022-23 listings show '8hr' (long route) / '9hr' (short route) duration fields, but neither the organizer nor British Cycling labels these as finishing deadlines -- treat as approximate ride-time estimates, not a confirmed cutoff.",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Long", "distance_km": 145.0, "elevation_m": 1400},
+        {"name": "Short", "distance_km": 112.0, "elevation_m": 1194}
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave -- dimensions unchanged; only vitals/course_description/citations were enriched."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +73,78 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A real charity sportive starting and finishing at Shrivenham Memorial Hall (Oxfordshire), running through Oxfordshire, Wiltshire, and Berkshire since 2007. The name refers to the several chalk-hill white horses the route passes -- Uffington, Broad Town, Cherhill, and Hackpen on the long route -- not solely the famous Uffington White Horse, though Uffington (Britain's oldest scientifically dated chalk hill figure) is the signature climax on the long course. Two distances: a 145 km/90 mi long route (approximately 1,400 m of climbing) taking in all four horses, and a shorter route of roughly 112 km/70 mi (approximately 1,194 m) taking in three. It's organized independently by Fergal McGrath (with Sarah McGrath historically), not by a cycling club and not by the beneficiary charity itself. It originally raised money for WaterAid; for 2025-26 the beneficiary changed to Prospect Hospice.",
+      "signature_challenge": "Reaching the Uffington White Horse itself late on the long route, after the route has already passed three other chalk hill figures across Oxfordshire, Wiltshire, and Berkshire.",
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Local villages or Swindon area; book early for event weekend.",
+      "lodging_strategy": "Local villages or the Swindon area; book early for event weekend.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.whitehorsechallenge.com"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2007,
+      "origin_story": "Grew out of Ride the Ridgeway, a 2004 fundraising ride organized by Fergal McGrath and friends after a Kilimanjaro trip, which evolved into the White Horse Challenge in 2007. Over GBP170,000 has been raised for charity across its history, most of it for WaterAid, its long-standing beneficiary; the beneficiary charity changed to Prospect Hospice for the 2025-26 editions.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Solid, Real Charity Sportive",
+      "summary": "The White Horse Challenge is a long-running charity sportive, founded in 2007 (evolving from an earlier 2004 ride called Ride the Ridgeway). It's independently organized -- no organizing cycling club was identified, and no evidence found that the organizing team is itself a registered charity -- and it's registered with British Cycling, with the 2026 edition confirmed held on its scheduled April 19 date. The name comes from the several chalk-hill white horses along the route, not just the famous Uffington figure, though Uffington is the signature climax of the long course. It's an unpretentious regional sportive rather than anything with national prestige, and this profile previously carried an '8 hours' cutoff figure that doesn't hold up -- no organizer source labels any published duration as a rider cutoff.",
+      "strengths": [
+        "Genuinely long track record -- founded 2007, with the 2026 edition confirmed actually held, independently organized rather than a one-off",
+        "Two real distance options (145km/90mi and roughly 112km/70mi) taking in multiple chalk-hill figures, not just a single signature climb",
+        "Modest, accessible entry fee (GBP40 online) for a full day of supported riding",
+        "Genuine charity fundraising history -- over GBP170,000 raised across its history, most of it for WaterAid, now supporting Prospect Hospice"
+      ],
+      "weaknesses": [
+        "No verified official course cutoff time exists -- the '8 hours' figure this profile previously carried doesn't appear in any organizer or aggregator source; treat pacing requirements as unpublished",
+        "No verified finisher or actual-starter counts for any recent edition -- the 500-rider figure is advertised capacity, not confirmed attendance",
+        "Elevation figures vary by source -- the organizer's own 'about 1,400m' for the long route sits alongside third-party GPS-based figures of roughly 1,194-1,429m across both routes, so treat these as approximate",
+        "Regional/modest prestige -- this is a well-run local charity ride, not a nationally significant event"
+      ],
+      "bottom_line": "A regional charity sportive with a real, multi-year history and two distance options. Don't expect a confirmed cutoff or verified attendance figures -- those simply aren't published -- and expect the elevation numbers to be approximate rather than exact."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Classic southern England sportive blending history, hills and hospitality.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine, modestly-priced Oxfordshire/Wiltshire charity sportive built around a string of chalk-hill white horses.",
+      "should_you_race": "Yes, if you want an accessible, well-established regional charity sportive with a real choice of two distances. Don't expect a strict cutoff or a big-event atmosphere -- this is a modest, volunteer-run ride, not a national prestige event.",
+      "alternatives": "For a bigger, more competitive UK sportive series: the UCI Gran Fondo World Series UK qualifiers. For a similarly chalk-downland-themed regional ride: other Wiltshire/Oxfordshire charity sportives via British Cycling's regional event listings."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://whitehorsechallenge.eventrac.co.uk/e/white-horse-challenge-13802",
+        "category": "official",
+        "label": "Official Event Entry Page (Eventrac)"
+      },
+      {
+        "url": "https://www.whitehorsechallenge.com/route.htm",
+        "category": "official",
+        "label": "Official Route Page (Chalk Horse List, Distances)"
+      },
+      {
+        "url": "https://www.britishcycling.org.uk/events/details/325406/White-Horse-Challenge",
+        "category": "official",
+        "label": "British Cycling -- Event Registration Record"
+      },
+      {
+        "url": "https://www.wateraid.org/uk/sites/g/files/jkxoof211/files/2025-01/WaterAid%20fundraising%20guide.pdf",
+        "category": "reference",
+        "label": "WaterAid Fundraising Guide -- Founding History (2004 Ride the Ridgeway -> 2007 White Horse Challenge)"
+      },
+      {
+        "url": "https://road.cc/content/feature/17042-riding-white-horses",
+        "category": "media",
+        "label": "road.cc -- 2010 Ride Report (Independently Corroborates 4th Edition / 2007 Founding)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://whitehorsechallenge.eventrac.co.uk/e/white-horse-challenge-13802/route-maps",
-      "notes": "Mass-participation road sportive from Shrivenham with a 19 April 2026 edition listed as next ride; no indication of discontinuation.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://whitehorsechallenge.eventrac.co.uk/e/white-horse-challenge-13802",
+      "notes": "Confirmed real and currently active; the 2026 edition was held as scheduled on April 19, 2026 (photo gallery and results-pending page confirm it took place). Beneficiary charity for 2025-26 is Prospect Hospice (previously WaterAid). Course cutoff time removed from vitals as unverifiable -- no organizer or independent source publishes an official rider cutoff."
     }
   }
 }

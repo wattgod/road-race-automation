@@ -5,28 +5,28 @@
     "display_name": "Race Across Italy 300",
     "tagline": "",
     "vitals": {
-      "distance_km": 299.3,
-      "distance_mi": 186.0,
+      "distance_km": 330.0,
+      "distance_mi": 205.1,
       "elevation_m": 4600,
       "elevation_ft": 15092.0,
       "location": "Silvi Paese, Teramo, Italy",
       "location_badge": "Silvi Paese, Italy",
       "country": "Italy",
       "date": "2026: May 2",
-      "date_specific": "May 2, 2026 at 09:00",
-      "field_size": "N/A",
+      "date_specific": "May 2, 2026 at approximately 09:00 (individual staggered start slots)",
+      "field_size": "N/A (organizer does not publish a start-list total; results are ranked by category)",
       "start_format": null,
-      "registration": null,
+      "registration": "https://raceacrossitaly.com/ultracycling-rai300/?lang=en",
       "entry_fee": null,
-      "feed_zones": "1 checkpoint (TimeStation with snacks and drinks)",
-      "cutoff_time": "18 hours supported, 21 hours self-supported",
+      "feed_zones": "1 official time station (food/drink provided); public shops along the route otherwise permitted",
+      "cutoff_time": "18 hours supported, 20 hours self-supported (2026-facing organizer pages); the standing rules document and English event page still list 21 hours self-supported -- treat as an unresolved organizer inconsistency",
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
+      "description": "Early May in Abruzzo -- coastal start, climbing into the Apennine foothills; expect cool mornings and variable conditions over an 18-20 hour effort.",
       "challenges": []
     },
     "terrain": {
@@ -56,7 +56,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59. NOT re-scored this wave -- distance was corrected from 299.3km to the verified 330km, but dimension values (distance, field_depth, community_culture, etc.) were left as inherited since a proper re-score would need to weigh this against other ultra-distance/non-mass-participation events, which this database's gran_fondo dimensions don't cleanly fit. See catalog_flags."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,42 +70,82 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A non-stop, continuously-timed ultracycling race on open public roads, starting and finishing in Silvi Paese (Teramo province, Abruzzo) and looping from the Adriatic coast up into the Apennine foothills and back. Entry formats include solo supported (with a following support vehicle/crew), supported 2- or 4-rider relay teams, solo self-supported, and self-supported pairs -- the self-supported category bans private outside assistance beyond the organizer's single official time station, though riders may use public shops along the route. Despite the '300' in the name, the 2026 course was published as roughly 330 km with about 4,600 m of climbing. The organizer's own pages don't fully agree with each other (325 km on one Italian page vs. 330 km on the homepage, English page, and 2026 media coverage), no public final GPX was found, and the organizer states the route can change -- so treat 330 km as a published figure, not a measured one.",
+      "signature_challenge": "The single official time station is the only guaranteed support point on course -- solo self-supported riders are otherwise on their own for roughly 330 km and 4,600 m of climbing inside an 18-20 hour window.",
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Pre-race check-in April 30-May 1; post-race celebration May 3; no specific accommodations listed.",
+      "lodging_strategy": "Pre-race check-in April 30-May 1; post-race celebration May 3; no specific accommodations listed by the organizer.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://raceacrossitaly.com/ultracycling-rai300/?lang=en"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "Launched in 2022 as the 300 km category within the Race Across Italy ultracycling series (alongside the longer RAI775). By its fifth edition in 2026, the actual course had grown to roughly 330 km while retaining the 'RAI300' branding -- the '300' now functions as a nominal distance-class name rather than a literal course length.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Ultra-Race, Filed Under the Wrong Category",
+      "summary": "Race Across Italy 300 (RAI300) is a real, currently active ultracycling race -- its fifth edition ran May 2, 2026, from Silvi Paese in Abruzzo. It's continuously timed, GPS-tracked, has category rankings and a no-drafting rule, and offers solo supported, relay, and self-supported entry formats. What it is not is a gran fondo or mass-participation sportive: there's no expo-style field, no closed-road mass-start atmosphere, and no ranked-vs-alphabetical two-tier format to weigh the way you would with a GFNY event. It also isn't the distance its name implies anymore -- the published course has grown from roughly 299 km at its 2023 (second) edition to roughly 330 km by 2026, while keeping the '300' brand name.",
+      "strengths": [
+        "Legitimate, continuously operating ultracycling race -- five editions since 2022, with published rankings and GPS tracking",
+        "Genuine format flexibility: solo supported, 2/4-rider supported relay, solo self-supported, or self-supported pairs",
+        "Real route through Abruzzo's Adriatic coast and Apennine foothills",
+        "Transparent no-drafting and mandatory-routing rules for a fair ultra-race format"
+      ],
+      "weaknesses": [
+        "This is an ultra-distance race, not a gran fondo -- riders expecting mass-participation sportive atmosphere (expo, closed roads, thousands of riders) will find something entirely different: small fields, continuous timing, and long solo stretches",
+        "The '300' in the name no longer matches the actual course -- the 2026 route measured roughly 330 km, not 300, and the organizer's own pages don't agree on the exact figure (325 vs. 330 km)",
+        "Only one official time station on course -- self-supported riders are genuinely on their own for most of roughly 330 km",
+        "The organizer's own cutoff figures are inconsistent between its 2026-facing pages (18h/20h) and its standing rules document (18h/21h)"
+      ],
+      "bottom_line": "If you want a real, small-field ultracycling test through Abruzzo with a fair no-drafting format, RAI300 delivers -- just don't expect a gran fondo, and don't expect the name to describe the actual distance."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Perfect entry to ultracycling: stunning Abruzzo day ride from sea to mountains.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine ~330km ultracycling race from the Abruzzo coast into the Apennines -- not a gran fondo, and not really 300km anymore.",
+      "should_you_race": "Yes, if you're specifically looking for a small-field, continuously-timed ultra-distance race with flexible supported/self-supported formats. No, if you want a mass-participation gran fondo experience -- this isn't one.",
+      "alternatives": "For a similar Italian ultra-distance format at greater distance: Race Across Italy's own longer RAI775. For a mass-participation Italian gran fondo instead: Nove Colli or Maratona dles Dolomites."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://raceacrossitaly.com/ultracycling-rai300/?lang=en",
+        "category": "official",
+        "label": "Official RAI300 Event Page"
+      },
+      {
+        "url": "https://raceacrossitaly.com/race-across-italy-series-rules/?lang=en",
+        "category": "official",
+        "label": "Official Race Across Italy Series Rules"
+      },
+      {
+        "url": "https://raceacrossitaly.com/race-across-italy-ranking-ultracycling/?lang=en",
+        "category": "official",
+        "label": "Official Results/Ranking Archive"
+      },
+      {
+        "url": "https://www.quicicloturismo.it/2026/04/01/race-across-italy-ancora-pochissimi-giorni-per-iscriversi-alla-storica-non-stop/",
+        "category": "media",
+        "label": "QuiCicloturismo -- April 2026 Race Preview (330km Confirmation)"
+      },
+      {
+        "url": "https://bikepacking.com/event/race-across-italy-rai300-2023/",
+        "category": "reference",
+        "label": "Bikepacking.com -- 2023 Historical Event Listing (Second Edition, ~299km)"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Taxonomy mismatch, not touched at the discipline-enum level per policy: RAI300 is a genuine ultra-distance/ultracycling race (continuous timing, GPS tracking, solo/relay/supported/self-supported categories, no-drafting rule, single time station) -- not a mass-participation gran fondo or sportive. The fondo_rating dimensions (field_depth, community_culture, organization, etc.) assume a gran-fondo format and may not meaningfully describe this event. Also flagging that the '300' brand name no longer matches the actual course length (~330km in 2026, up from ~299km at its 2022 launch).",
+      "ruled": "2026-07-24 editorial wave 9"
+    },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://raceacrossitaly.com/ultracycling-rai300/?lang=en",
-      "notes": "Official site lists the 5th edition RAI300 starting from Silvi Paese on May 2, 2026 with registration open and schedule confirmed.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Confirmed currently active: fifth edition held May 2, 2026, from Silvi Paese (Teramo, Abruzzo), with an official results/ranking PDF posted post-race. Distance corrected from the prior 299.3km figure to ~330km, matching the organizer's current homepage, English event page, and 2026 media coverage (though an Italian organizer page still shows 325km -- treat as an unresolved internal inconsistency, not a settled exact figure). Cutoff times also show organizer inconsistency: 18h/20h on 2026-facing pages vs. 18h/21h in the standing rules document."
     }
   }
 }
