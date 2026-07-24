@@ -5,24 +5,27 @@
     "display_name": "Gruyère Cycling Tour",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 2798,
-      "elevation_ft": 9180.0,
-      "location": "Gruyères, Fribourg, Switzerland",
-      "location_badge": "Gruyères, Switzerland",
+      "distance_km": 114.0,
+      "distance_mi": 70.8,
+      "elevation_m": 1917,
+      "elevation_ft": 6289.0,
+      "location": "Charmey, Fribourg, Switzerland (final editions — the historical starting point for earlier editions is unconfirmed)",
+      "location_badge": "Charmey, Switzerland",
       "country": "Switzerland",
-      "date": "2026: July 12",
-      "date_specific": "2026: July 12",
-      "field_size": "N/A",
+      "date": "Defunct — last held September 4, 2016",
+      "date_specific": "Last edition: 2016-09-04 (19th edition, Charmey)",
+      "field_size": "600+ (2016, final edition)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long course: 114 km (sometimes listed 115 km), 1,917 m gain — Col des Mosses, Col du Pillon, Col du Mittelberg",
+        "Short course: 76 km, 1,073 m gain — Col du Mittelberg (summit ~1,633 m) as the principal climb"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAG (2026-07-24 editorial wave 5): event confirmed defunct since 2017 (last run 2016) — these dimension scores describe an event that no longer exists and should not be read as a current recommendation. Additionally, the corrected vitals (114km/1,917m, ~1,633m high point) conflict with the stored distance=3/climbing=4/altitude=4 under the repo's dimension rubric (config/dimensions.json) — recommend a human re-check all three alongside the defunct-status question. Numbers left untouched per no-silent-reshuffle rule; see birkebeinerrittet-road.json for precedent."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,8 +73,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "IMPORTANT — this event no longer exists. In its final 2015-2016 editions the route started and finished in Charmey, opening with a controlled descent (Descente de Bataille) before the long course climbed Col des Mosses and Col du Pillon en route to a finishing ascent of Col du Mittelberg; the short course used the Mittelberg as its one major pass. The Pringy-to-Mittelberg section, including descents, was the fully timed portion in these final editions — not a simple start-to-finish clock. The event began in 1998 as 'La Pascal Richard,' honoring the Swiss Olympic road champion, before being renamed Gruyère Cycling Tour.",
+      "signature_challenge": null,
       "suffering_zones": []
     },
     "logistics": {
@@ -82,25 +85,80 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 1998,
+      "origin_story": "Founded 1998 as 'La Pascal Richard,' named for the Swiss Olympic road champion, before being renamed Gruyère Cycling Tour. One of the inaugural 2011 UCI World Cycling Tour qualifying events — the program now known as the UCI Gran Fondo World Series — and listed in a 2009 UCI Golden Bike brochure among selected international cyclosportives.",
+      "notable_moments": [
+        "2011: One of the inaugural UCI World Cycling Tour (now UCI Gran Fondo World Series) qualifying events",
+        "2016 (19th edition, September 4, Charmey): final edition held, 600+ riders",
+        "2017: 20th edition cancelled — organizer cited a lack of partners and financial support"
+      ],
+      "reputation": "A well-regarded Swiss cyclosportive in its run, with real UCI World Cycling Tour pedigree from 2011. Now explicitly described by at least one Swiss cycling-route source as 'aujourd'hui défunte' — defunct today."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Defunct",
+      "summary": "There is no current Gruyère Cycling Tour to rate. The last confirmed edition ran September 4, 2016 in Charmey — its 19th — drawing 600+ riders on a course combining Col des Mosses, Col du Pillon and Col du Mittelberg on the long route. The planned 20th edition was cancelled in 2017 when the organizer lost its partners and funding, and no edition has run since. The event does not appear in the current Swiss Cycling calendar; it was included in the inaugural 2011 UCI World Cycling Tour qualifying series, the program now known as the UCI Gran Fondo World Series, but is absent from that series' current calendar too. A third-party aggregator lists a May 2026 date in Bulle, but it has no working organizer page, no registration, and no results; treat it as stale or erroneous, not a revival.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not currently exist — it should not be presented to riders as a bookable gran fondo",
+        "Discontinued since 2017 (last run 2016) with no revival evidence in any current official Swiss or UCI calendar",
+        "Despite the name, the final editions started and finished in Charmey, not the town of Gruyères itself",
+        "A third-party listing claiming a 2026 revival in Bulle has no supporting organizer page, registration, or results — do not trust it"
+      ],
+      "bottom_line": "Retired since 2016-2017. If you want to ride this terrain — Col du Mittelberg, Col des Mosses, Col du Pillon — you'll need to string it together yourself; there is no organized event to enter."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Challenging alpine road sportive through cheese country and pre-Alps.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A defunct Swiss cyclosportive — real pre-Alpine climbing, no current event to enter.",
+      "should_you_race": "No — this event does not exist. The 2016 edition was its last; the 2017 edition was cancelled and none has run since.",
+      "alternatives": "For similar Fribourg/pre-Alpine Swiss terrain with a currently active event, check the Swiss Cycling calendar (swiss-cycling.ch) for current Fribourg-region cyclosportives."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.laliberte.ch/articles/sports/cyclisme/pas-de-gruyere-cycling-tour-en-2017-514053",
+        "category": "media",
+        "label": "La Liberté — 20th Edition Cancelled for 2017, Organizer Cites Funding"
+      },
+      {
+        "url": "https://www.laliberte.ch/articles/sports/cyclisme/plus-de-600-participants-au-gruyere-cycling-tour-479901",
+        "category": "media",
+        "label": "La Liberté — Final 2016 Edition Race Report, 600+ Participants"
+      },
+      {
+        "url": "https://www.swiss-cycling.ch/de/veranstaltungen/kalender/?y=2026",
+        "category": "official",
+        "label": "Swiss Cycling — 2026 Calendar (No Gruyère Cycling Tour Listed)"
+      },
+      {
+        "url": "https://www.cycliste.ch/itineraires-velo-route/le-col-du-mittelberg-et-la-gruyere/",
+        "category": "reference",
+        "label": "Cycliste.ch — Describes Event as 'Aujourd'hui Défunte' (Defunct Today)"
+      },
+      {
+        "url": "https://www.cyclingnews.com/news/uci-launches-amateur-world-cycling-tour/",
+        "category": "media",
+        "label": "Cyclingnews — 2011 UCI World Cycling Tour Launch, Inaugural Qualifiers"
+      },
+      {
+        "url": "https://www.brevet.cc/cycling-sportives/gruyere-cycling-tour/",
+        "category": "reference",
+        "label": "Brevet — 2015 Course Detail (76km/114km, Climbs, Elevation)"
+      },
+      {
+        "url": "https://www.acaleysin.ch/data/_uploaded/image/archives%20journal/Leysin%20Actualite%CC%81s%20ete%202016.pdf",
+        "category": "reference",
+        "label": "ACA Leysin — 2016 Event Notice, Reversed Route/Timed Section Confirmation"
+      },
+      {
+        "url": "https://www.granfondobgy.it/wp-content/uploads/2019/01/Brochure-2009_100-dpi.pdf",
+        "category": "reference",
+        "label": "2009 UCI Golden Bike Brochure — International Cyclosportive Selection"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Current Calendar (No Gruyère Cycling Tour Listed)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gruyère Cycling Tour gran fondo cycling Gruyères",
@@ -166,32 +224,9 @@
           "url": "https://www.youtube.com/watch?v=VsfgJDqYHGg",
           "transcript": "so we're in um granard guer guer um this\nis this town has been here from the\n1500s in fact so this is a very very old\nchatau you got so many sculptures you\ngot this sculpture of I think a bunch of\nskeletons\nfighting the French Revolution maybe or\nwhen the French invaded Switzerland\nmaybe true and um so where did we go\ntoday before we came here uh the\nChocolate Factory um that was a cool\nplace um you have you have you see\npeople making chocolate you get to see\nthe Machinery that was back in what the\n1800s uh some of the things that were\nlike\nproduced really old and everything was\nso amazing in the Chocolate Factory it\nit shows people that they they actually\nhave the experience it's a really cool\nexperience cool so we're here uh the\ntour of uh tour to France is going to\ncome up through uh here on Sunday today\nis Friday so we're doing a little bit of\nInvestigation the weather's not so good\nso decided to take a bike uh break from\nbiking\nand uh this just been really nice we\ncame up sampled the chocolate wow we ate\na lot of chocolate there's this point in\nthe chocolate factory tour it's the cier\ncay Chocolate Factory it's part of\nnestle and um there's a part in there\nwhere you come in there just a room\nwhere you can just eat all the chocolate\nyou want so how was that it was good\nbecause you don't have to pay any money\nyou just get to eat all the chocolate\nyou want right you could just take all\nyou don't have anything to drink in\nthere though so you can't you know it'\nbe great if you had some milk because\nyou can only eat so much chocolate\nwithout any milk so but it's beautiful\nhere um just in this beautiful Valley uh\nsun's not out today but you can kind of\nget an idea it's an old town right back\nthere and there course the chatau here\num and the inventor of the alien\ncreatures from the alien movie that\nSigourney Weaver was in is from this\ntown so they have actually a alien\nmuseum which is kind of cool uh it's\ncontrast the the futuristic in contrast\nwith the\nwith uh yeah with the old city and the\nuh futuristic aliens so kind of an\ninteresting uh kind of contrast there\nkind of deal huh so we'd love to just\nhang out here for for a whole day but I\nthink we're going to head back and maybe\nweather will clear up and tun we'll do a\nlittle more biking but uh this is uh\nLiam and Bill's race report Liam and\nBill's race report we're out we're out\n[Music]\nn",
           "curated": false
-        },
-        {
-          "video_id": "M7hurEoPig0",
-          "title": "Heck of the North 2017 55mi Gravel Bike Race",
-          "channel": "Chris Milton",
-          "view_count": 7210,
-          "upload_date": "20171003",
-          "duration_string": "1:05:31",
-          "description": "Two Harbors, MN",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=M7hurEoPig0",
-          "curated": false
-        },
-        {
-          "video_id": "dnA-4CnmrWU",
-          "title": "Open U.P.  San Vigilo Dolomites",
-          "channel": "GRAN FONDO Cycling Magazine",
-          "view_count": 2113,
-          "upload_date": "20160511",
-          "duration_string": "21",
-          "description": "__\n\n\n__\n\nFilm & Edit: Klaus Kneist\n1st Assistant Camera: Sebastian Hermann",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=dnA-4CnmrWU",
-          "curated": false
         }
       ],
+      "purge_note": "2026-07-24 editorial wave 5: removed two cross-race mislabeled videos — 'Heck of the North 2017 55mi Gravel Bike Race' (unrelated US gravel race, Two Harbors, MN) and 'Open U.P. San Vigilo Dolomites' (unrelated Italian gravel race, Dolomites) — neither describes this event.",
       "quotes": [],
       "rider_intel": {
         "extracted_at": "2026-03-06",
@@ -213,10 +248,14 @@
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://roadielabs.com/race/gruyere-cycling-tour/",
-      "notes": "Only a listing for a 2026-07-12 edition is found with no direct confirmation from an official organizer, so current status cannot be confidently determined.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.laliberte.ch/articles/sports/cyclisme/pas-de-gruyere-cycling-tour-en-2017-514053",
+      "notes": "IDENTITY CORRECTION (2026-07-24 editorial wave 5): prior eligibility status was 'unknown' based only on an unconfirmed roadielabs.com listing for a 2026-07-12 date. codex gpt-5.6-sol foreground research + curl-verification of laliberte.ch (200 OK) confirms the event is defunct: last edition 2016-09-04 (19th, Charmey, 600+ riders), 20th edition cancelled in 2017 for lack of partners/funding, no edition since, not in the 2026 Swiss Cycling calendar or current UCI Gran Fondo World Series calendar. A third-party aggregator's May 2026 Bulle listing has no organizer page, registration, or results and should be treated as stale/erroneous. Vitals rebuilt around the final documented long-course configuration (114km/1,917m) rather than the unsupported 130.4km/2,798m previously on file, which matched no verified edition."
+    },
+    "catalog_flags": {
+      "status_note": "Defunct road cyclosportive (2016 final edition, 2017 cancellation confirmed) — course_description and biased_opinion rewritten to honest discontinuation framing per the birkebeinerrittet-road.json precedent. Recommend a human decide whether this profile stays in the active catalog or is archived.",
+      "ruled": "2026-07-24 editorial wave 5"
     }
   }
 }

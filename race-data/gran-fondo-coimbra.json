@@ -5,18 +5,18 @@
     "display_name": "Gran Fondo Coimbra Region",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 1981,
-      "elevation_ft": 6500.0,
+      "distance_km": 148.0,
+      "distance_mi": 92.0,
+      "elevation_m": 1548,
+      "elevation_ft": 5079.0,
       "location": "Coimbra, Portugal",
       "location_badge": "Coimbra, Portugal",
       "country": "Portugal",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
+      "date": "Discontinued — last held March 2, 2025",
+      "date_specific": "Discontinued — last held March 2, 2025",
       "field_size": null,
       "start_format": null,
-      "registration": "https://www.granfondocoimbraregion.com",
+      "registration": null,
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
@@ -70,12 +70,9 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": [
-        "Bussaco Big Climb: Mid-race ascents through dense forest shred legs after early flats, with punchy gradients forcing pace cracks.",
-        "Late Sicó Rolls: Final 30 miles of undulating paved roads near Pombal sap energy, turning groups into survival solos."
-      ]
+      "character": "IMPORTANT — this profile describes a race that no longer exists under this name or in this location. Granfondo Coimbra Region ran as a UCI Gran Fondo World Series qualifier through the Coimbra region for five editions (October 2021 - March 2025, roughly 3.5 years) before being officially relocated and rebranded as Granfondo Leiria Region – Sicó Lands for 2026 — a new host territory and course under the same organizer (Cabreira Solutions), same underlying UCI-series lineage. There is no 2026 or later Coimbra edition to race; the 148 km distance above is confirmed by the final 2025 UCI results report, and the 1,548 m elevation figure is the organizer's published course total for that final edition — treat it as a published figure rather than independently verified by this profile's citations.",
+      "signature_challenge": null,
+      "suffering_zones": []
     },
     "logistics": {
       "airport": "",
@@ -85,30 +82,67 @@
       "official_site": "https://www.granfondocoimbraregion.com"
     },
     "history": {
-      "founded": 2012,
-      "origin_story": "",
+      "founded": 2021,
+      "origin_story": "The UCI called the October 2021 race the 'very first UCI Granfondo Coimbra Region,' launching what became a five-edition run (2021-2025) as a Portuguese qualifier on the UCI Gran Fondo World Series calendar before its January 2026 relocation to Leiria.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Discontinued — Relocated and Rebranded to Leiria",
+      "summary": "There is no current Granfondo Coimbra Region to rate. The UCI Gran Fondo World Series announced on January 15, 2026 that the Portuguese round, originally slated for Coimbra, had been 'officially relocated and rescheduled' to Leiria/Pombal under a new name: Granfondo Leiria Region – Sicó Lands, organized by the same Cabreira Solutions team. The UCI's own Leiria event page is explicit that Leiria 'is the new name for the successful Granfondo Coimbra Region.' Coimbra ran for five UCI-branded editions (debuting October 2021) with its final edition on March 2, 2025. This is not a case of two coexisting races — it's one lineage that changed host region, course, and name.",
+      "strengths": [
+        "Five-edition track record (2021-2025) as a UCI Gran Fondo World Series qualifier under this name",
+        "Real UCI-series credibility and continuity — the organizer carried the same event forward rather than folding it entirely"
+      ],
+      "weaknesses": [
+        "This event does not currently exist under the Coimbra name or in the Coimbra region — it should not be presented to riders as a bookable 2026+ race",
+        "The successor event (Granfondo Leiria Region – Sicó Lands) has itself had a troubled launch: its planned 2026 debut was cancelled by the organizer and postponed to spring 2027 due to storm damage, per the UCI's own cancellation notice (see granfondo-leiria.json)",
+        "No evidence of any independent Coimbra-branded race continuing in 2026 or beyond; verify against the current UCI Leiria listing rather than older third-party Coimbra listings, which may be stale"
+      ],
+      "bottom_line": "Retired under this name. The UCI-series race that used to run here is now Granfondo Leiria Region – Sicó Lands, itself currently postponed to spring 2027 after storm damage forced a cancellation of its planned 2026 debut."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "UCI qualifier blending Coimbra's heritage with hilly Portuguese roads for solid sportive suffering.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Discontinued — relocated and rebranded as Granfondo Leiria Region for 2026; no current Coimbra edition exists.",
+      "should_you_race": "No — this race does not exist under this name or location anymore. If you want the UCI-series event that replaced it, track Granfondo Leiria Region – Sicó Lands, currently postponed to spring 2027.",
+      "alternatives": "Granfondo Leiria Region – Sicó Lands (granfondo-leiria.json) — the direct successor, same organizer, same UCI Gran Fondo World Series lineage, new host region."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/portuguese-uci-gran-fondo-world-series-event-moves-to-leiria-region/",
+        "category": "official",
+        "label": "UCI — Official Relocation Announcement, Jan 15 2026"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-leiria-region/",
+        "category": "official",
+        "label": "UCI Leiria Event Page — 'New Name for the Successful Granfondo Coimbra Region'"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/loureiro-and-lenehan-to-win-granfondo-coimbra-region-time-trials-for-pinheiro-and-ostergaard/",
+        "category": "official",
+        "label": "UCI — Final Coimbra Edition Results, March 2025"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-coimbra-region-a-very-successful-newcomer-in-the-series/",
+        "category": "official",
+        "label": "UCI — Inaugural October 2021 Coimbra Edition Report"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-granfondo-leiria-sica-lands-cancelled-due-to-exceptional-circumstances/",
+        "category": "official",
+        "label": "UCI — Successor Event Cancellation Notice, Feb 20 2026, Storm Kristin"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Discontinued/superseded (2021-2025), relocated and rebranded as granfondo-leiria.json for 2026 per UCI's own announcement — not a duplicate_of relationship since the successor runs under a different slug/name with a different course, but recommend a human call on whether a defunct predecessor profile should stay in the live catalog, be cross-linked more prominently to the successor, or be archived, consistent with how birkebeinerrittet-road.json handles a defunct predecessor of a still-branded lineage.",
+      "ruled": "2026-07-24 editorial wave 5"
+    },
     "eligibility": {
-      "status": "cancelled",
-      "verified": "2026-07-23",
+      "status": "defunct",
+      "verified": "2026-07-24",
       "source": "https://ucigranfondoworldseries.com/en/portuguese-uci-gran-fondo-world-series-event-moves-to-leiria-region/",
-      "notes": "Coimbra-region event was relocated and rebranded to Leiria Region for 2026, and that 2026 edition has been officially cancelled/postponed.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "notes": "SUPERSEDED, not merely cancelled (corrected from prior 'cancelled' status). UCI officially relocated/rebranded this event to Granfondo Leiria Region - Sico Lands for 2026 (announced Jan 15 2026); UCI's own Leiria page calls it 'the new name for the successful Granfondo Coimbra Region,' same organizer (Cabreira Solutions). Final Coimbra edition ran March 1-2, 2025 (curl-verified 200, 2026-07-24). No credible evidence of an independent Coimbra edition in 2026+; stale third-party listings recycling the old name should not be trusted. Corrected this wave: distance_km 160.9->148.0 and elevation_m 1981->1548 (final 2025 edition's actual figures, not fabricated placeholders); founded 2012->2021 (UCI's own inaugural-edition report calls Oct 2021 the 'very first' UCI Coimbra race); date changed from '2026: September TBD' (a date the event never had) to a discontinuation notice. See granfondo-leiria.json for the successor event, which was itself cancelled/postponed to spring 2027. Via codex gpt-5.6-sol foreground research, editorial wave 5, cross-checked against UCI, organizer, and Portuguese local press sources."
     }
   }
 }

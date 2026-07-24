@@ -5,24 +5,24 @@
     "display_name": "Gran Fondo Pirineus",
     "tagline": "",
     "vitals": {
-      "distance_km": 143.2,
-      "distance_mi": 89.0,
+      "distance_km": 144.0,
+      "distance_mi": 89.5,
       "elevation_m": 3600,
       "elevation_ft": 11811.0,
       "location": "Camprodon, Girona, Spain",
       "location_badge": "Camprodon, Spain",
       "country": "Spain",
-      "date": "2026: June 28",
-      "date_specific": "2026: June 28",
-      "field_size": "N/A",
+      "date": "2026: June 28 (last held; no 2027 date published yet)",
+      "date_specific": "2026: June 28 (last held; no 2027 date published yet)",
+      "field_size": null,
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://web.rockthesport.com/es/event/gran-fondo-pirineus-2026",
+      "entry_fee": "€70 (2026); €10 optional insurance supplement for riders without a cycling-federation license",
       "feed_zones": "4",
-      "cutoff_time": "4 hours (must finish by 4:00 PM)",
+      "cutoff_time": "Finish closes at 16:00 — an 8-hour window for the 144/122 km routes (08:00 start), 7h45 for the 78 km route (08:15 start)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["144 km / 3,600m+ (long)", "122 km / 2,400m+ (medium, omits Vallter)", "78 km / 1,400m+ (short)"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,104 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A noncompetitive, mass-start paved-road sportive out of Camprodon in the Catalan Pyrenees, part of the three-event Gran Fondo 360 circuit. The long route (144 km, 3,600 m+) runs through the Vall del Bac and the villages of Oix and Beget before the signature climb to Vallter 2000 from Setcases; the 122 km medium route covers the same core climbs (Coll de Capsacosta, Coll de Pera, Santigosa, Coll de Rocabruna) but skips Vallter, and a 78 km short route covers just Pera and Rocabruna. Roads stay open to ordinary traffic throughout — this is explicitly a supported ride with a common start/finish window, not a closed-course race, and the organizer states no competitive time lists will be produced.",
+      "signature_challenge": "The Vallter 2000 climb from Setcases on the long route only: roughly 12 km at 7.18% average (14% max, ~900m gain) — the hardest single climb on course, and the dividing line between the 144 km and 122 km routes.",
+      "suffering_zones": [
+        "Coll de Capsacosta: early climb shared by the two longer routes, first major test of the day.",
+        "Coll de Pera and Coll de Rocabruna: shared by all three route lengths, the terrain backbone of the event.",
+        "Santigosa: mid-route climb on the 144 km and 122 km routes, stacking fatigue before the route's hardest terrain.",
+        "Vallter 2000 (from Setcases): ~12 km at 7.18%, up to 14%, exclusive to the long route and the last major effort of the day."
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Camprodon offers village accommodations; nearby areas in Pyrenees.",
-      "transport": "",
+      "transport": "Start/finish operations centered at Polideportivo Llandrius, Camprodon. Long/medium routes start 08:00, short route 08:15.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.granfondo360.com/gfpirineus"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2023,
+      "origin_story": "Debuted July 2, 2023 as a Camprodon-based sportive through Beget and Vallter, drawing 600+ riders on its first outing; part of the Gran Fondo 360 series alongside two other Catalan events. The organizer's official media archive documents further editions in 2024, 2025 and 2026, though the exact route has changed year to year (the 2024 long route used a temporary 130 km/2,400m course through Vallter, materially different from 2026's 144 km/3,600m).",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Pyrenean Climbing, Openly Noncompetitive",
+      "summary": "Gran Fondo Pirineus is a real, multi-year Catalan sportive out of Camprodon — running since July 2023 with editions documented through 2026, three route lengths, and a genuine signature climb up Vallter 2000 on the long course. The organizer is upfront that it's noncompetitive: official regulations state roads stay open to traffic and no time lists are produced. Where the on-file profile fell short was accuracy, not honesty — the prior cutoff time ('4 hours, must finish by 4:00 PM') was simply wrong; the actual window is roughly 8 hours (08:00 start, 16:00 close) for the long and medium routes. Field-size reporting also conflicts across sources for the 2024 edition (600 per a Catalan government report vs. over 1,000 per a university outlet), so treat any specific number as unverified.",
+      "strengths": [
+        "Genuine, established Pyrenean terrain — Coll de Capsacosta, Coll de Pera, Santigosa, Coll de Rocabruna, and the Vallter 2000 climb from Setcases (~12 km at 7.18%, up to 14%) on the long route",
+        "Multi-year operation since its July 2023 debut, with further editions documented in 2024, 2025 and 2026",
+        "Three route lengths (144/122/78 km) let riders self-select difficulty without losing the shared start/finish atmosphere",
+        "Organized support: aid stations, basic mechanical assistance, medical/evacuation coverage, and a following vehicle",
+        "The organizer is transparent about the noncompetitive format in its own regulations, rather than hiding it in fine print"
+      ],
+      "weaknesses": [
+        "Noncompetitive by the organizer's own regulations — roads stay open to traffic and no time lists are produced, so riders expecting a ranked result from the 'gran fondo' name and finish-time format should recalibrate",
+        "The route itself isn't fixed year to year: 2024 used a temporary 130 km/2,400m course, materially different from 2026's 144 km/3,600m — don't assume continuity of terrain across editions",
+        "No reliable, single field-size figure exists; a Catalan government report and a university outlet give conflicting 2024 counts (600 vs. over 1,000)",
+        "No 2027 date published yet as of this writing"
+      ],
+      "bottom_line": "Go for genuine Pyrenean climbing on open roads with real organizational support and honest noncompetitive framing — just don't expect a timed, ranked result."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Epic Pyrenean road sportive with brutal climbs and stunning valleys, SCOTT-sponsored gem for endurance cyclists.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Real Pyrenean climbs out of Camprodon, run as an openly noncompetitive supported sportive.",
+      "should_you_race": "Yes if you want genuine Pyrenean climbing (Vallter 2000 on the long route) with organized support and don't need a competitive result — the organizer explicitly runs it noncompetitive with no time lists.",
+      "alternatives": "For a comparable Pyrenean/Catalan sportive with genuine competitive timing, look at other UCI- or federation-sanctioned Spanish gran fondos rather than assuming this one delivers ranked results."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondo360.com/gfpirineus",
+        "category": "official",
+        "label": "Gran Fondo 360 — Official Event Page"
+      },
+      {
+        "url": "https://www.granfondo360.com/_files/ugd/f81f4e_8086550ee47a4be3bb37a831c9839c4f.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations — Noncompetitive Status, Cutoffs, Entry"
+      },
+      {
+        "url": "https://www.granfondo360.com/puertosgfpirineos",
+        "category": "official",
+        "label": "Official Climb Profiles by Route Length"
+      },
+      {
+        "url": "https://www.ciclisme.cat/cursa/cicloturisme/gran-fondo-pirineus-0",
+        "category": "reference",
+        "label": "Federació Catalana de Ciclisme — Event Listing"
+      },
+      {
+        "url": "https://www.onvelocycling.com/blog/marxa-cicloturista-gran-fondo-pirineos-1/",
+        "category": "community",
+        "label": "Onveló — First-Edition (2023) Participant Report"
+      },
+      {
+        "url": "https://www.rockthesport.com/es/evento/gran-fondo-pirineus-2026",
+        "category": "reference",
+        "label": "RockTheSport — 2026 Edition Registration/Status"
+      },
+      {
+        "url": "https://www.granfondo360.com/mediagfpirineus",
+        "category": "official",
+        "label": "Gran Fondo 360 — Official Media Archive, 2024/2025/2026 Editions"
+      },
+      {
+        "url": "https://www.ciclisme.cat/noticies/cicloturisme/arriba-gran-fondo-pirineus-una-experiencia-inoblidable-lentorn-de-camprodon",
+        "category": "reference",
+        "label": "Federacio Catalana — 2024 Preview, Temporary 130km/2,400m Route"
+      },
+      {
+        "url": "https://govern.cat/gov/notes-premsa/621182/vallter-port-protagonista-gran-fondo-pirineus",
+        "category": "official",
+        "label": "Generalitat de Catalunya — 2024 Edition, 600 Participants"
+      },
+      {
+        "url": "https://www.blanquerna.edu/ca/noticies/gran-fondo-pirineus",
+        "category": "media",
+        "label": "Blanquerna — 2024 Edition, 1,000+ Participants (Conflicting Count)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Pirineus gran fondo cycling Camprodon",
@@ -171,120 +238,28 @@
           "display_order": 2,
           "thumbnail_url": "https://i.ytimg.com/vi/EYrwrY-veCY/maxresdefault.jpg",
           "thumbnail_score": 72.0
-        },
-        {
-          "video_id": "Av0gO9VHkn4",
-          "title": "Ride 443 - Day 4 of our epic ride through the Pyrenees. It got biblical",
-          "channel": "Cycl'n Vancouver",
-          "view_count": 153,
-          "upload_date": "20251119",
-          "duration_string": "45:29",
-          "description": "I joined a group of riders heading north from Girona to the Pyrenees. We planned to cross into France and then turn east towards the Mediterranean and then work our way along the Spanish (the Costa Brava) all the way back to Girona. I normally do not ride on consecutive days, and this challenge was spread across six consecutive days. I was really quite unsure whether I'd actually be able to complete it. Of course, that wasn't the story I told everyone else.\n\nIn this video, after leaving Camprodon, we have climbed north up the border between Spain and France. We descended down into France to the town of Prats de Mollo la Preste and stopped for lunch. It was pretty hot there, but we managed to get a table under cover. After a nice lunch and a beer or two, we started the portion of this day's ride, a descent east along the river through the canyon to Can Partere. We spent the rest of the afternoon lounging around the swimming pool enjoying the odd beverage. What an enjoyable day. Too bad we are expecting the weather to drastically change for tomorrow's stage. Oh well, that's then, and this is now. Cheers.\n\nIf you are interested in a cycling trip through the Pyrenees, check out Pyrenees cycling adventures:  https://pyrenees.cc/\n\nRide 367 https://www.youtube.com/watch?v=tvDO_YyiT0c",
-          "tags": [
-            "cycling",
-            "cycling vancouver",
-            "stanley park",
-            "cycling stanley park",
-            "okanagan gran fondo",
-            "whistler granfondo",
-            "cycling malta",
-            "malta",
-            "mosta",
-            "golden bay",
-            "mdina",
-            "safa brian",
-            "Spain",
-            "descent",
-            "cycling spain",
-            "cycling catalonia"
-          ],
-          "url": "https://www.youtube.com/watch?v=Av0gO9VHkn4",
-          "transcript": "Welcome to Cycling Vancouver. Hi, my\nname is Steve. I'm a 60-year-old guy,\n6'5, around 250 lbs, who loves getting\nout on the bike and going cycling. Well,\nthat and eating lots of baked goods.\nNormally, I'm cycling around Vancouver,\nbut this week I am in the northeast area\nof Spain on an epic cycling adventure\nheading north through the Pyrenees. So,\nif you're interested in seeing what day\nfour of our epic ride through the\nPyrenees look like from the back of a\nroad bike ridden by some spandex wearing\nold dude, sit back and relax. This is\nRide 443.\nToday is Sunday, September 21st, 2025,\nand we have extremely different weather\ntoday than we've had on this trip so\nfar. The sun is gone, and now we have a\nvery gray, nasty looking sky and a\ntemperature of around 19 C for this\nride.\nIn today's ride, we're going to head to\nthe Mediterranean and the French town of\nBurme.\nBut unlike yesterday, today's ride will\nmainly be downhill for the first half or\nso, and all the climbing will be packed\ninto the end. Here is my Straa root map\nfor this ride.\nI did this ride last year.\nUnfortunately, just before arriving at\nthe hotel for the night, I managed to\nscrew up a hard right turn, crashed, and\nbroke five ribs in a collar bone. I also\nsuffered a nasty head injury, which as a\nresult, I barely remember anything that\noccurred over the following week. I was\nso happy that I had recorded the ride.\nIn fact, I have almost no memory of that\nride other than what I saw in the video.\nIf you're interested, I posted a link to\nride 367 in the description below. That\ncrash and the week following it was\ndifficult. I've never known pain like\nthat, which I experienced with those\nbroken ribs, or just how difficult it\nwould be to find a position comfortable\nenough so I could sleep. Now, I'm not\none of those people that gets worked up\nor triggered at the thought of riding\nhere again. I am not worried about\nreliving the trauma, and this is not\nsome form of catharsis for me. I have\nbeen thinking about that missed turn off\nand on ever since. And the opportunity\nto finish today's ride is one of the\nreasons that I came back here. And even\nthough Leonard used that approach as\nsome form of hook to encourage me to\ncome, it probably wasn't necessary.\nRather, I love cycling in Europe. And\ndespite what happened to me last year, I\nknew I would absolutely love to return\nand ride here again. And the itinerary\nmade this cycling trip look intriguing.\nIn fact, as Chris reminded me this year,\nI swore to him last year that I would\nreturn and complete it. Of course, I\nhave no memory of that. I did tell\nmyself to be a bit more careful this\ntime around, though.\nHeat.\nHeat. Heat.\nHeat\nup\nsince I arrived in Jirona. On the 17th,\nChris has been warning us about the\nweather forecasted for today's ride and\nhe has been steadily following that\nforecast. Those forecasts have remained\npretty consistent and it looks like this\narea is going to be inundated with rain\ntoday. While we had planned to get out\nearly and try our best to stay ahead of\nthe expected storm, our start was\ndelayed for several reasons. And now\nit's quite uncertain what weather we\nwill encounter today. But right now it's\ndry and at least for me nicely warm.\nthough. I hadn't asked Chris or anyone\nelse for that matter. I kind of expected\nwe would just follow the same route that\nwe rode last year. And while it started\nout that way, construction issues\nquickly led us to divert onto a new\nroute. I like that.\nOf\ncourse, there aren't that many different\nways here to get to the coast, so I\nwasn't overly surprised to find us back\non familiar territory.\nThe end of the bridge left up to you.\nOkay.\npeople.\nMercy.\nThat paper mill there is on the site of\na former cigarette paper mill from the\nturn of the 20th century.\nThe owner of that former mill built a\nhouse for his daughter in Bananiel\nSirare. That house has since been\nconverted into a hotel and we will be\nstaying at that hotel tonight.\nWhat's that?\nI thought we're going up the rest of the\noff.\nYeah.\ndriveway. So you might be\nYeah, right.\n&gt;&gt; Do you remember this bridge?\n&gt;&gt; Yep. Mr. Eiffel,\n&gt;&gt; this was Eiffel inspired copycat.\nRemember the bullet holes?\n&gt;&gt; Yeah.\n&gt;&gt; Yeah. I'm trying to regroup for a video\nin here. Okay.\nAn unplanned rolling selfie video. Yes,\n&gt;&gt; team. What a team.\n&gt;&gt; I seem to recall last year hearing Chris\nsay that this bridge was built by the\nEiffel Company. It turns out that I\nmisheard him. This bridge was built to\nlook like it was constructed by Eiffel.\nI definitely see the style similarities,\nthough. And yes, I did check the\nreported bullet holes left behind from a\ngun battle that occurred on the bridge\nback in World War II. And those holes\ndid have the characteristic protruding\nmetal edges that one would expect to\nfind remaining after an object forcibly\npassed through the metal. Those holes\ndefinitely were not drilled.\nGet some fire.\nI rode out in front for a while and\nthough I had suffered a bad concussion\nlast year and couldn't remember much of\nthat ride, I had recorded it and turned\nit into a video which I have watched\nseveral times. Though I was surprised to\nremember many parts of this route as I\nencountered them, it was impossible for\nme to say whether I had actually\nremembered them from the ride or just\nfrom the video. While it's probably the\nlatter, I am curious whether I would\nhave remembered any of the former route\nwithout the video aid. Of course, I'll\nnever know.\nWhat?\nExcuse\nyou.\nI think there is a cherry orchard just\nto the left that we rode through last\nyear. I was expecting the group to turn\ntowards it, but we went straight\ninstead. I like all the new areas, but I\nwas looking forward to the orchard.\nPerhaps this way is a little quicker,\nand we took it to try to keep ahead of\nthe storm. Chris says that he spoke with\nVicki and that she told him that our\nmorning starting point was getting hit\nhard by that storm. We'd better ride\nquicker.\nBye-bye. Heat. Heat.\nHeat up\nhere.\nback onto familiar territory once again.\nUh-oh. I'm starting to feel raindrops.\nIt's pretty light at the moment, but\nthis is not a good sign.\nThe one thing I really hate about disc\nbrakes is the squealing they make when\nthey get wet. Although I've only had\nthis bike for a few months, I've never\nheard the brakes squeal until I brought\nthe bike here. What a horrible noise.\nIt's very\ndeep about\nThe rain is starting to get heavier.\nSome group members brought rain gear and\nthey've switched into that. I normally\ndon't ride in the rain, so I have no\nneed for rain gear. I'm just wearing my\nusual summer get up shorts and a\nt-shirt. But right now, I'm perfectly\nfine.\nNumber\nAs I was approaching the overpass, I\nmanaged to drop my chain. I did the\nusual and reverse the shift. Normally\nthat fixes the problem. I get the chain\nback on. This time it didn't work.\nRather, every time I tried to pedal, the\nchain refused to budge. It was as if it\nwere jammed somehow, and I was reluctant\nto try to force it to my will. You know\nwhat they say, don't force it. Use a\nbigger hammer. Well, I didn't have a\nhammer, so I just pulled over instead to\nmanually fix it. Chris quickly joined\nme, and we got it all worked out. At\nleast we had cover from the rain under\nthat overpass. That was nice. I didn't\nreally want to leave that cover, but we\ndidn't have much choice.\nIs that the last of them? Yeah.\n&gt;&gt; If we get to any wooden bridges, they're\ngoing to be slippery.\n&gt;&gt; Yeah,\n&gt;&gt; there's a few up here.\nWhat's wrong?\nWow.\nHello.\nAs we rode along, the rain just got\nheavier and heavier. Strangely, as much\nas I wasn't enjoying riding in the rain,\nat least I still felt pleasantly warm.\nCloser,\n&gt;&gt; huh?\nI'm off the ground.\nParts of the trail may have been blocked\nfor construction, but we were not going\nto let that put us off, even if we had\nto ride across mud and grass to get by.\nLet me get him.\nOh,\nheat, heat.\nWhat a delightful day.\n&gt;&gt; I don't know.\nI'm waiting to be struck by lightning\nfor all of my\n&gt;&gt; Yeah, I reckon they're quite low down.\nI started to get a little more concerned\nwhen the thunder started. Then we got a\nnice big crack of lightning off to the\nside. After that, the rain became\nbiblical. Overwhelming really. I was\nreally hoping that we were going to stop\nsoon and take cover. I was absolutely\nsoaked head to toe, but we pressed on.\nWe really didn't have much choice at the\nmoment. I suspect that Chris was really\ntrying to find somewhere we could stop\nand get out of this mess. Or at least\naway from the lightning.\nFind you a shelter.\nWe finally found a shopping market in a\nsmall town and we pulled undercover by\nthe pickup window. We stayed there long\nenough until the storm passed as we\nwaited for Vicki to pick us up and drive\nus to Banar Mayor. I guess I'm still not\ngoing to finish this ride, but at least\nthis ending is much more preferable to\nlast year's. Thanks to that biblical\nrainstorm, we only rode 44 km and\nclimbed 119 meters. And even though I\nhad resigned myself with continuing the\nride to Bananiel, by the time the storm\nsubsided, I had cooled down to the point\nwhere I was now just cold and wet. It\ndidn't take long in a well-heated van\nfor me to quickly move past the idea of\ngetting back out on the bike and cycling\nto the hotel. By then, I was quite\ncontent to enjoy the drive.\nHeating on in the van. If you feel cold,\nplease get your temperature up.",
-          "curated": false
-        },
-        {
-          "video_id": "5S2LdrOtX_A",
-          "title": "Ride 444 - Descent into Cadaquez, Spain. Former home to Salvador Dali.",
-          "channel": "Cycl'n Vancouver",
-          "view_count": 46,
-          "upload_date": "20251127",
-          "duration_string": "10:04",
-          "description": "I joined a group of riders heading north from Girona to the Pyrenees. We planned to cross into France and then turn east towards the Mediterranean and then work our way along the Spanish (the Costa Brava) all the way back to Girona. I normally do not ride on consecutive days, and this challenge was spread across six consecutive days. I was really quite unsure whether I'd actually be able to complete it. Of course, that wasn't the story I told everyone else.\n\nIn this video, after leaving Camprodon, we have climbed north up the border between Spain and France. We descended down into France to the town of Prats de Mollo la Preste and stopped for lunch. It was pretty hot there, but we managed to get a table under cover. After a nice lunch and a beer or two, we started the portion of this day's ride, a descent east along the river through the canyon to Can Partere. We spent the rest of the afternoon lounging around the swimming pool enjoying the odd beverage. What an enjoyable day. Too bad we are expecting the weather to drastically change for tomorrow's stage. Oh well, that's then, and this is now. Cheers.\n\nIf you are interested in a cycling trip through the Pyrenees, check out Pyrenees cycling adventures:  https://pyrenees.cc/",
-          "tags": [
-            "cycling",
-            "cycling vancouver",
-            "stanley park",
-            "cycling stanley park",
-            "okanagan gran fondo",
-            "whistler granfondo",
-            "cycling malta",
-            "malta",
-            "mosta",
-            "golden bay",
-            "mdina",
-            "safa brian",
-            "Spain",
-            "descent",
-            "cycling spain",
-            "cycling catalonia"
-          ],
-          "url": "https://www.youtube.com/watch?v=5S2LdrOtX_A",
-          "curated": false
         }
       ],
       "quotes": [],
       "rider_intel": {
-        "extracted_at": "2026-03-06",
-        "key_challenges": [
-          {
-            "name": "Hard right turn near hotel",
-            "description": "Previous rider crashed here breaking five ribs and collarbone, warning to be careful on this turn",
-            "source_video_ids": [
-              "Av0gO9VHkn4"
-            ]
-          }
-        ],
-        "terrain_notes": [
-          {
-            "text": "Route is mainly downhill for the first half with all the climbing packed into the end",
-            "source_video_ids": [
-              "Av0gO9VHkn4"
-            ]
-          }
-        ],
+        "extracted_at": "2026-07-24",
+        "key_challenges": [],
+        "terrain_notes": [],
         "gear_mentions": [],
-        "race_day_tips": [
-          {
-            "text": "Weather can change dramatically - riders warned about rain inundating the area and gray nasty skies replacing sun",
-            "source_video_ids": [
-              "Av0gO9VHkn4"
-            ]
-          },
-          {
-            "text": "Construction issues can force route diversions from planned course",
-            "source_video_ids": [
-              "Av0gO9VHkn4"
-            ]
-          }
-        ],
-        "additional_quotes": [
-          {
-            "text": "While we had planned to get out early and try our best to stay ahead of the expected storm, our start was delayed for several reasons. And now it's quite uncertain what weather we will encounter today.",
-            "source_video_id": "Av0gO9VHkn4",
-            "source_channel": "Cycl'n Vancouver",
-            "source_view_count": 153,
-            "category": "logistics",
-            "curated": true
-          }
-        ],
-        "search_text": "The Gran Fondo Pirineus route through the Pyrenees features a distinct elevation profile with mainly downhill terrain for the first half and all climbing packed into the end. Riders report significant weather variability, with conditions changing from sunny to gray skies and rain threats that can affect start times. Construction issues may force route diversions from the planned course. The area has limited route options to reach the coast, often bringing riders back to familiar territory. Temperature was around 19C during one rider's experience. Weather forecasts consistently showed rain inundating the area, requiring early starts to stay ahead of storms. There's a notable dangerous hard right turn near the hotel finish area where crashes have occurred."
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "No verified rider intel currently exists for Gran Fondo Pirineus. (Two cross-race-mislabeled videos and their derived intel were purged 2026-07-24, editorial wave 5 — they documented an unrelated personal multi-day tour, not this organized event; see git history for detail.)"
       }
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but the organizer's own regulations explicitly describe this as a noncompetitive road sportive/marcha cicloturista — roads stay open to traffic and no time lists are produced, despite riders receiving a finish window. This doesn't cleanly fit a scoring taxonomy built around competitive gran fondos (field_depth, prestige and organization dimensions implicitly assume ranked competition). Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 5"
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://web.rockthesport.com/en/event/gran-fondo-pirineus-2026",
-      "notes": "Mass-participation road gran fondo in Camprodon with 2026 edition confirmed and registration open; date on file (June 28, 2026) matches.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondo360.com/gfpirineus",
+      "notes": "Fourth consecutive edition ran 28 June 2026 in Camprodon (debuted July 2023); curl-verified 200 (2026-07-24). No 2027 date published yet as of this writing. Corrected this wave: distance_km 143.2->144 (organizer/federation both publish 144 km; 143.2 appears to be a GPX-track measurement, not the advertised distance); cutoff_time corrected from the clearly-wrong '4 hours (must finish by 4:00 PM)' to the actual ~8-hour window (08:00 start, 16:00 close) for the long/medium routes; field_size changed from the placeholder 'N/A' to null since 2024 attendance reporting conflicts by source (Generalitat de Catalunya reports 600 for 2024; Blanquerna reports over 1,000 for the same 2024 edition) and no reliable 2026 figure exists; registration/entry_fee populated from RockTheSport/official regs. Via codex gpt-5.6-sol foreground research, editorial wave 5."
     }
   }
 }

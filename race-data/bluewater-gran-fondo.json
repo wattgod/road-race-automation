@@ -5,34 +5,68 @@
     "display_name": "Bluewater International Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 149.7,
-      "distance_mi": 93.0,
-      "elevation_m": 853,
-      "elevation_ft": 2800.0,
-      "location": "Sarnia, Ontario, Canada",
+      "distance_km": 161.0,
+      "distance_mi": 100.0,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Bright's Grove/Sarnia, Ontario, Canada",
       "location_badge": "Sarnia, Canada",
       "country": "Canada",
       "date": "2026: August 2",
-      "date_specific": "2026: August 2",
-      "field_size": null,
-      "start_format": null,
-      "registration": null,
+      "date_specific": "2026: August 2 (10th annual; all categories sold out)",
+      "field_size": "1,000-rider cap (2026 sold out)",
+      "start_format": "Staggered starts by distance (7:00/7:45/8:30/9:00); chip-timed segments only, no overall start-to-finish time",
+      "registration": "https://raceroster.com/events/2026/108967/bluewater-international-gran-fondo-2026",
       "entry_fee": null,
-      "feed_zones": null,
+      "feed_zones": "Fuel stops on course; bike/SAG support; finish meal",
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long (10th-anniversary 100 mi)",
+          "distance_km": 161.0,
+          "distance_mi": 100.0,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "Organizer says 161 km; Race Roster labels it '160K' but describes 162 km. 4 timed sections. Rolling."
+        },
+        {
+          "name": "100 km",
+          "distance_km": 100.0,
+          "distance_mi": 62.1,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "3 timed sections. Rolling."
+        },
+        {
+          "name": "50 km",
+          "distance_km": 50.0,
+          "distance_mi": 31.1,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "1 timed section. Flat."
+        },
+        {
+          "name": "30 km family",
+          "distance_km": 30.0,
+          "distance_mi": 18.6,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "Untimed; explicitly 'not to be raced'. Flat."
+        }
+      ]
     },
     "climate": {
-      "primary": "Tropical",
-      "description": "Typical southern Ontario summer: warm, humid days with lake moderation.",
+      "primary": "Humid continental",
+      "description": "Typical southern Ontario summer: warm, humid days with Lake Huron moderation; wind off the lake is a real course factor on exposed rural roads.",
       "challenges": [
-        "Precipitation: Low to moderate in August."
+        "Wind exposure on open farmland and lakeshore roads",
+        "Heat and humidity by late morning in early August"
       ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
+      "primary": "Flat to rolling rural",
       "surface": "Fully paved",
       "technical_rating": 1,
       "features": []
@@ -58,7 +92,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66. FLAG (2026-07-24 editorial wave 5): long-course distance corrected 149.7->161 km (10th-anniversary extension) and stale 853 m elevation dropped to null pending an organizer figure — distance=4/climbing=2 were scored on the old vitals; a human may want a re-look, numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -72,71 +106,96 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Scenic paved routes along Lake Huron shores, quiet country roads, rolling hills in Arkona, and picturesque orchards, with timed segments for competitive fun.",
-      "signature_challenge": "Timed segments on rolling terrain allowing pacing between efforts, finishing with stunning Lake Huron views.",
+      "character": "Out of Mike Weir Park in Bright's Grove on the Lake Huron shore, the routes run quiet, paved rural Lambton County roads — lakeshore, fruit orchards and flat-to-rolling farmland. The organizer classifies the 30 km and 50 km routes as flat and the 100 km and 161 km routes as rolling, and publishes no named or categorized climbs; a detailed rider report identifies the Arkona/Parkhill farmland hills as the hilliest portion of the longer routes and wind as a meaningful course factor. For the 10th anniversary the long route grew to roughly 161 km/100 mi (from the previous ~150 km), and timing is by chip on selected sections only — 4 on the long route, 3 on the 100 km, 1 on the 50 km — with awards decided on cumulative segment time rather than a full-course start-to-finish result.",
+      "signature_challenge": "Repeated efforts across the timed sections on flat-to-rolling roads, with Lake Huron's wind across open farmland as the course's main variable — this event's difficulty is wind and pacing, not elevation.",
       "suffering_zones": [
-        "Arkona Rolling Hills: Challenging climbs through rural hills that test legs mid-ride.",
-        "Lake Huron Finish: Exposed coastal push to the line with potential headwinds."
+        "Arkona/Parkhill farmland hills: identified in a detailed rider report as the hilliest portion of the longer routes",
+        "Exposed lakeshore and open rural roads: the same report flags wind as a meaningful factor on this course"
       ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Hotels and lodging available in Sarnia; contact local tourism for options near Mike Weir Park.",
-      "transport": "Fully supported event with fuel stations, bike support, hot meals, live music, and beer at Mike Weir Park start/finish.",
-      "food": "",
-      "official_site": "https://www.ontariobybike.ca/event-item/10th-annual-bluewater-international-granfondo/"
+      "airport": "London (YXU) ~1h; Detroit (DTW) ~1.5h across the border; Toronto (YYZ) ~3h",
+      "lodging_strategy": "Hotels in Sarnia; the start/finish is Mike Weir Park, 2354 Lakeshore Road, Bright's Grove.",
+      "transport": "Fully supported: marked routes, fuel stops, bike/SAG support, event jersey, finisher medal, finish meal and entertainment at Mike Weir Park.",
+      "food": "Fuel stops on course and a finish-line meal.",
+      "official_site": "https://www.ourbco.ca/bluewater-international-granfondo"
     },
     "history": {
-      "founded": 2017,
-      "origin_story": "Celebrated gran fondo ranked Ontario's #1, supporting local palliative care with strong community backing.",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2016,
+      "origin_story": "Founded in 2016 by the Bluewater Cycling Organization; the inaugural edition sold out at 500 riders. Cancelled in 2020, run virtually in 2021, then back in person and growing since — by May 2026 organizers reported more than $500,000 returned to community palliative-care causes: the Bluewater Palliative Care Retreat, Bluewater Health's palliative-care program and St. Joseph's Hospice.",
+      "notable_moments": [
+        "2016: inaugural edition sells out at 500 riders",
+        "2020: cancelled (COVID); 2021 run as a virtual event that still raised ~$40k for palliative care",
+        "2019: ranked #1 in Ontario / #2 in Canada / #14 in North America by Gran Fondo Guide (editorial award)",
+        "2026: 10th anniversary — long route extended to ~161 km/100 mi, 1,000-rider cap sold out in every category"
+      ],
+      "reputation": "A well-loved, well-run community fondo — Gran Fondo Guide placed it #4 in North America on its 2026 editorial list — with an unusually concrete charitable record for local palliative care."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Community Fondo Done Right — Just Don't Expect Mountains or a Race",
+      "summary": "The Bluewater International Granfondo is what a community gran fondo looks like when it's run seriously: a 1,000-rider cap that sold out for the 10th anniversary, four route options from a 30 km family ride to a new ~161 km/100-mile long course, real support (fuel stops, SAG, finish meal), and over $500,000 returned to named local palliative-care causes since 2016. Two honesty notes. First, the terrain: this is flat-to-rolling Lambton County farmland — the organizer publishes no named or categorized climbs, the Arkona-area hills are the hilliest part of the course, and a rider report flags Lake Huron's wind as a meaningful factor. Second, the format: the organizer itself says this is not a race — timing is chip-based on selected segments only (4 on the long route), and awards run on cumulative segment time, not a full-course start-to-finish result. Also know the numbers wobble: the organizer says 161 km, Race Roster says '160K' but describes 162 km, and no current elevation figure is published for the new long course — we've dropped the old 853 m figure rather than carry stale data.",
+      "strengths": [
+        "Sold out at its 1,000-rider cap across all categories for the 2026 10th anniversary — demand is real",
+        "Concrete, named charitable impact — $500,000+ to Bluewater-area palliative care since 2016, not vague 'proceeds to charity' language",
+        "Four honest route tiers including an untimed family ride; e-bikes accommodated",
+        "Externally recognized: #4 North American gran fondo on Gran Fondo Guide's 2026 editorial list (and #1 Ontario in 2019)"
+      ],
+      "weaknesses": [
+        "Flat-to-rolling farmland with no real climbs — riders wanting elevation should look elsewhere; wind is the only mountain here",
+        "Not a race, by the organizer's own definition: chip timing on selected segments only, no full-course start-to-finish classification — pure racers may find the format unsatisfying",
+        "Published distances are sloppy (161 vs 160 vs 162 km across official channels) and no elevation figure is published for the new long course",
+        "Sells out — 85% full by late May 2026, so late deciders are out of luck"
+      ],
+      "bottom_line": "A sold-out, externally recognized community fondo and an easy recommendation for the supported-ride experience and the cause — as long as flat-to-rolling, wind-exposed, segment-timed riding is what you're signing up for."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Ontario's top gran fondo: scenic, supported, and community-driven perfection.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A sold-out, well-run Lake Huron community fondo — real support and real charity, flat-rolling terrain, segment timing only.",
+      "should_you_race": "Yes for a supported community fondo with genuine charitable impact and family-friendly options. No if you want mountains or a full start-to-finish race — the course is flat-to-rolling and only selected segments are timed.",
+      "alternatives": "For actual climbing in Ontario, look to the Niagara Escarpment events; for a bigger competitive fondo field in Canada, RBC Gran Fondo Whistler. The same organizer's BIG Gravel Grind covers the off-road itch."
     },
     "citations": [
       {
-        "url": "https://www.ontariobybike.ca/event-item/10th-annual-bluewater-international-granfondo/",
-        "category": "reference",
-        "label": "10th Annual Bluewater International Granfondo - Ontario By Bike"
+        "url": "https://www.ourbco.ca/bluewater-international-granfondo",
+        "category": "official",
+        "label": "Official event page — Aug 2 2026, routes 30/50/100/161 km, staggered starts, timed sections, Mike Weir Park venue"
       },
       {
         "url": "https://raceroster.com/events/2026/108967/bluewater-international-gran-fondo-2026",
-        "category": "reference",
-        "label": "Bluewater International Gran Fondo 2026"
+        "category": "official",
+        "label": "Race Roster 2026 registration — all categories sold out; beneficiaries listed"
       },
       {
-        "url": "https://findarace.com/ca/events/bluewater-international-gran-fondo-2026",
-        "category": "reference",
-        "label": "Bluewater International Gran Fondo 2026 2026 | Sun 2 Aug"
+        "url": "https://www.ourbco.ca/the-bluewater-international-granfondo-faqs",
+        "category": "official",
+        "label": "Official FAQ — 'not a race': segment-only chip timing, cumulative segment time for awards"
       },
       {
-        "url": "https://www.granfondoguide.com/Contents/Index/7627/bluewater-international-granfondo-returns-to-support-local-palliative-care",
-        "category": "reference",
-        "label": "Bluewater International Granfondo returns to support Local Palliative ..."
+        "url": "https://www.granfondoguide.com/Contents/Index/1604/500-riders-complete-inaugural-bluewater-gran-fondo",
+        "category": "news",
+        "label": "Gran Fondo Guide — inaugural 2016 edition sold out at 500 riders (founding-year correction)"
       },
       {
-        "url": "https://www.ourbco.ca",
+        "url": "https://sarnianewstoday.ca/sarnia/news/2026/05/26/granfondo-marks-10-years",
+        "category": "news",
+        "label": "Sarnia News Today (May 2026) — 10th anniversary, 1,000-rider cap 85% full, $500k+ community total"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Awards/Top10NorthAmericanGranFondos2026",
         "category": "reference",
-        "label": "Bluewater International Granfondo"
+        "label": "Gran Fondo Guide 2026 editorial awards — #4 North America; 2025 edition recap"
+      },
+      {
+        "url": "https://cknxnewstoday.ca/sarnia/news/2019/3/27/bluewater-granfondo-roll",
+        "category": "news",
+        "label": "2019 ranking report — #1 Ontario / #2 Canada / #14 North America (Gran Fondo Guide, 2019)"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.ourbco.ca/bluewater-international-granfondo",
-      "notes": "10th annual Aug 2 2026, Sarnia"
+      "verified": "2026-07-24",
+      "source": "https://raceroster.com/events/2026/108967/bluewater-international-gran-fondo-2026",
+      "notes": "Active; 10th annual edition Sunday August 2, 2026, all ride categories sold out on Race Roster (curl-verified 2026-07-24: 'Sold out' + 'August 2, 2026' present). Most recent completed edition: August 3, 2025. VITALS CORRECTIONS (2026-07-24 editorial wave 5): long-course distance corrected 149.7 km/93 mi -> ~161 km/100 mi (10th-anniversary route; organizer says 161 km, Race Roster '160K'/162 km — internal discrepancy noted); elevation 853 m/2,800 ft dropped to null — it belonged to the former ~150 km route and no figure is published for the new course (official long-route map: ridewithgps.com/routes/39792548); founded corrected 2017 -> 2016 (inaugural sold out at 500 riders); field_size set to the 1,000-rider cap; 30/50/100 km route options added; climate.primary corrected from 'Tropical' to humid continental. Format note: organizer states it is NOT a race — chip timing on selected segments only, no overall start-to-finish classification. Verified via codex gpt-5.6-sol foreground research + curl of Race Roster."
     }
   }
 }

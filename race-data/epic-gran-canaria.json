@@ -5,24 +5,35 @@
     "display_name": "Epic Gran Canaria",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 2286,
-      "elevation_ft": 7500.0,
-      "location": "Las Palmas, Gran Canaria, Spain",
-      "location_badge": "Las Palmas, Spain",
+      "distance_km": 187.0,
+      "distance_mi": 116.2,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Maspalomas, Gran Canaria, Spain",
+      "location_badge": "Maspalomas, Spain",
       "country": "Spain",
-      "date": "February 7, 2026",
-      "date_specific": "February 7, 2026",
-      "field_size": null,
-      "start_format": null,
+      "date": "2026: February 7-8",
+      "date_specific": "February 7-8, 2026 (two-day event)",
+      "field_size": "680 (2026, from 28 countries)",
+      "start_format": "Group/event start (08:30) each day; individually chip-timed climbing sectors; cumulative two-stage GC",
       "registration": "https://epicgrancanaria.com",
       "entry_fee": null,
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "45 min (sector 1), ~1:50-2:15 (sector 2, organizer sources conflict), 1:50 (sector 3)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Stage 1 (Saturday)",
+          "distance_km": 112,
+          "timed_sectors": ["Ayagaures/Pedro Gonzalez climb (12.3km/423m)", "Pasito Blanco-Alto Salto del Perro (29km/997m)"]
+        },
+        {
+          "name": "Stage 2 (Sunday)",
+          "distance_km": 75,
+          "timed_sectors": ["Tirajana/Tunte climb (22km/1,005m)"]
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -30,7 +41,7 @@
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
+      "primary": "Mountainous paved road",
       "surface": "Paved roads",
       "technical_rating": 1,
       "features": []
@@ -56,26 +67,44 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67. Vitals corrections (2026-07-24 editorial wave 5) did not change the scoring basis materially — retained as-is."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 3,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
+      "key_climbs": [
+        {
+          "name": "Ayagaures / Pedro Gonzalez",
+          "length_km": 12.3,
+          "elevation_gain_m": 423,
+          "avg_gradient": "3.7%"
+        },
+        {
+          "name": "Pasito Blanco - Alto Salto del Perro",
+          "length_km": 29,
+          "elevation_gain_m": 997,
+          "avg_gradient": "4.2%"
+        },
+        {
+          "name": "Tirajana / Tunte",
+          "length_km": 22,
+          "elevation_gain_m": 1005
+        }
+      ],
       "profile_type": null,
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A two-day, paved-road event on Gran Canaria starting and finishing at Hotel Riu Palace in Maspalomas: a 112km Saturday stage with two timed climbing sectors (Ayagaures and the long Pasito Blanco-Salto del Perro climb), and a 75km Sunday stage built around a single 22km climb to Tirajana/Tunte. The roughly 187km weekend total (regulations say 186km) includes only three individually chip-timed climbing sectors, about 63km combined, that count toward the overall classification — the rest of Stage 1 is documented as a neutralized descent toward Mogan followed by a regrouped return to Maspalomas; the organizer's published Stage 2 schedule doesn't document the same regrouping language for the untimed portion. It's a genuine mountain test on volcanic terrain, but not a continuously timed single-day race the way the name \"Epic Gran Canaria\" might suggest.",
+      "signature_challenge": "The Pasito Blanco to Alto Salto del Perro climb — 29km (from km 33 to km 62) and roughly 997m of gain, the longest single timed sector of the weekend.",
       "suffering_zones": [
-        "Ayagaurers Viewpoint Grind: 45-minute cutoff forces relentless pacing up the initial Stage 1 climb from Aqualand. Exposed volcanic slopes amplify early fatigue under Canarian sun.",
-        "Salto del Perro Inferno: 1:50-hour limit on the longest time trial demands sustained power after 50+ miles. Steep pitches near Pasito Blanco break legs before Maspalomas return.",
-        "Stage 2 Accumulator: Post-recovery climb time trial compounds weekend fatigue on 75 km loop. Shorter distance hides the cumulative toll of volcanic repeats."
+        "Ayagaures/Pedro Gonzalez climb: the opening 12.3km, 423m timed sector straight out of Maspalomas — a 45-minute cutoff forces pace discipline immediately.",
+        "Pasito Blanco-Alto Salto del Perro: 29km (km 33-62) / 997m, the longest timed climb of the weekend.",
+        "Tirajana/Tunte on Stage 2: a 22km/1,005m climb finishing in Tunte, deciding the final overall classification."
       ]
     },
     "logistics": {
@@ -86,30 +115,71 @@
       "official_site": "https://epicgrancanaria.com"
     },
     "history": {
-      "founded": 2013,
+      "founded": 2018,
       "origin_story": "",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Two-Day Climbing Test, Not a Single-Day Race",
+      "summary": "Epic Gran Canaria is a legitimate and growing event — 680 riders from 28 countries in its 2026 ninth edition, up from 500 the year before, and confirmed by GFWT's own calendar as the season opener of the Gran Fondo World Tour. But the format needs stating plainly: this is not one continuously timed 187km race. It's a two-day, 112km + 75km weekend where only three named climbs (about 63km combined) are individually chip-timed, and the overall result is the sum of those three sector times, not elapsed time over the full route. The organizer documents Stage 1's non-timed portion as a neutralized descent toward Mogan followed by a regrouped return to Maspalomas; the published Stage 2 schedule doesn't document the same regrouping for its untimed section, so treat that as unconfirmed rather than assuming an identical format. The organizer's own regulations file it under Spain's \"Cycling for All\" category, which is formally non-competitive, even though the event runs chip timing, classifications, and a leader jersey. Course figures also carry small internal inconsistencies: the event page says 187km/186km depending on document, and cutoff times differ between the homepage and PDF regulations for the second sector.",
+      "strengths": [
+        "Legitimate, growing field — 680 riders from 28 countries in 2026, up from 500 in 2025",
+        "Genuine mountain climbing on volcanic terrain — three named climbs totaling ~2,425m of documented timed-sector gain",
+        "Confirmed GFWT season opener per the Gran Fondo World Tour's own events calendar; Gran Canaria's official tourism authority separately confirms the event's GFWT membership",
+        "Two-day format with a rest evening spreads the effort rather than demanding it all in one push"
+      ],
+      "weaknesses": [
+        "Not a single continuously timed race — the overall result is the sum of three chip-timed climbing sectors, with Stage 1's untimed portion documented as a regrouped group ride (Stage 2's untimed portion is not documented the same way)",
+        "Course distance is internally inconsistent between the event's own website (187km) and PDF regulations (186km)",
+        "No verified total-route elevation figure exists — only the three timed climbs are documented (2,425m combined), and that is a floor, not the full number, so vitals.elevation_m is left unset rather than presenting that floor as a total",
+        "Cutoff times for the second timed sector conflict between the organizer's homepage and its official PDF regulations"
+      ],
+      "bottom_line": "A real, well-attended climbing weekend on Gran Canaria worth doing — just go in understanding you're racing three timed climbs across two days, not one 187km time trial."
     },
     "final_verdict": {
       "score": "67/100",
       "one_liner": "Pre-season volcanic punchbowl opener that kicks off GFWT with island flair.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuine climbing test with real GFWT-series stakes and don't mind a two-day, sector-timed format rather than a single continuously timed race.",
+      "alternatives": "GranGuanche Audax Road (also Gran Canaria) is a different, self-supported multi-island crossing format — not a substitute for riders wanting a conventional mass-start, ranked event."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://epicgrancanaria.com/en-gb/",
+        "category": "official",
+        "label": "Official Event Site — 2026 Stages, Timed Sectors, Results Format"
+      },
+      {
+        "url": "https://epicgrancanaria.com/ws/media-library/9ca47b43478f539c6a736526fa972f22/gb-regulation-epic-gran-canaria-2026-2.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations PDF"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/78703",
+        "category": "official",
+        "label": "UCI Event Record — Maspalomas, Feb 7-8 2026"
+      },
+      {
+        "url": "https://www.topbici.es/epic-gran-canaria-cita-ciclista-internacional/",
+        "category": "media",
+        "label": "TopBici — 2026 Course/Climb Breakdown"
+      },
+      {
+        "url": "https://www.grancanaria.com/turismo/area-profesional/noticias/noticia/?cHash=8b23893ba491102f3717584482dca42b&tx_ttnews%5Btt_news%5D=5465",
+        "category": "official",
+        "label": "Gran Canaria Tourism Authority — 2026 Field Size, GFWT Status"
+      },
+      {
+        "url": "https://www.granfondoworldtour.com/events",
+        "category": "reference",
+        "label": "Gran Fondo World Tour — Current Events Calendar (GFWT status confirmation)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://epicgrancanaria.com/en-gb/",
-      "notes": "Road gran fondo in Maspalomas ran February 7–8, 2026 with 2026 regulations and reports confirming the edition.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): distance_km changed from 160.9 to 187 (official event page total; 186km per PDF regulations — organizer-source discrepancy noted). elevation_m/elevation_ft changed from 2286/null to null/null after sol review (see below) — 2,425m is the documented sum of the three timed-climb sectors and is a FLOOR, not a verified full-route total; no organizer GPX-based total elevation figure was found, so it is not presented as a vitals number. date changed from single-day \"February 7, 2026\" to the correct two-day \"February 7-8, 2026\". location changed from \"Las Palmas\" to \"Maspalomas\" (actual start/finish location; Las Palmas is the province). field_size added (680, 2026). founded changed from 2013 to 2018 (first edition per contemporary 2018 coverage). discipline retained as gran_fondo per standing rule against changing the discipline field; the two-day/timed-sector structure is described honestly in course_description/biased_opinion instead. GFWT claim in final_verdict.one_liner verified as accurate via GFWT's own events calendar. SOL REVIEW (2026-07-24): moved elevation_m to null (previously presented the 2,425m timed-sector floor as if it were a total, contradicting the profile's own weaknesses bullet); fixed Salto del Perro position by live-fetching https://epicgrancanaria.com/en-gb/, which gives km 33 to km 62 (29km), not the vaguer 'after 50+ km' framing; corrected an overgeneralization that ALL untimed riding is 'regrouped' — verified via the same live fetch that only Stage 1's post-CRONO2 return is explicitly documented as regrouped ('Final Section... with all riders regrouped'); Stage 2's schedule (climb to Tirajana, feed zone, lunch, awards) does not use the same language, so the claim is now scoped to Stage 1 only; split the GFWT-opener claim so only GFWT's own calendar is cited for 'season opener' status, with the tourism authority cited separately for GFWT membership/participation (not opener status, which its article doesn't state); trimmed unsourced atmospheric color ('exposed volcanic slopes under the Canarian sun')."
     }
   }
 }

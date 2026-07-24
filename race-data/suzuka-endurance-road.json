@@ -1,37 +1,65 @@
 {
   "race": {
-    "name": "Suzuka Endurance Road",
+    "name": "Suzuka 8 Hours Enduro",
     "slug": "suzuka-endurance-road",
-    "display_name": "Suzuka Endurance Road",
+    "display_name": "Suzuka 8 Hours Enduro",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
+      "distance_km": 232.3,
+      "distance_mi": 144.3,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Suzuka Circuit, Mie Prefecture, Japan",
       "location_badge": "Suzuka Circuit, Japan",
       "country": "Japan",
-      "date": "2026: July 3-5",
-      "date_specific": "2026: July 3-5",
-      "field_size": "Hundreds of teams",
-      "start_format": null,
-      "registration": null,
+      "date": "2026: November 14",
+      "date_specific": "2026: November 14 (27th edition)",
+      "field_size": "4,000+ participants across all formats (2025); 350-team cap in 8-hour team classes (2026)",
+      "start_format": "Rolling start behind a pace motorcycle; solo or relay teams exchanging a timing transponder in the pits",
+      "registration": "https://suzuka8h.powertag.jp/",
       "entry_fee": null,
-      "feed_zones": "Pit stops with team support",
-      "cutoff_time": "Fixed duration (e.g., 4 or 8 hours)",
+      "feed_zones": "Pit-based; teams self-manage support from the pit lane",
+      "cutoff_time": "Timed formats: 4-hour and 8-hour enduros; Attack 240 has an 8-hour limit",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "8-hour enduro (solo/team)",
+          "distance_km": null,
+          "distance_mi": null,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "Most laps in 8 hours on the 5.807 km circuit; 2025 leader logged 58 laps (~336.8 km)"
+        },
+        {
+          "name": "4-hour enduro",
+          "distance_km": null,
+          "distance_mi": null,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "Most laps in 4 hours; includes road, women, flat-bar/recumbent, city-bike and family classes"
+        },
+        {
+          "name": "Attack 240",
+          "distance_km": 232.28,
+          "distance_mi": 144.3,
+          "elevation_m": null,
+          "elevation_ft": null,
+          "notes": "Fixed 40 laps x 5.807 km = 232.28 km within an 8-hour limit"
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Mid-November in Mie Prefecture: cool autumn conditions, a far cry from the summer heat associated with the circuit's famous motorcycle race.",
+      "challenges": [
+        "Cool morning starts in November",
+        "Wind exposure on the West Straight over a long timed effort"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Closed racing circuit",
+      "surface": "Fully paved racing circuit (10-16 m wide)",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +84,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAG (2026-07-24 editorial wave 5): prestige=5, cultural_impact=5, field_depth=4, organization=5, scenic_experience=4 and descent_technicality=4 were scored against the Suzuka 8 Hours MOTORCYCLE race this profile previously described. The actual event (Suzuka 8 Hours Enduro, amateur bicycle circuit enduro) has a materially different honest scoring basis — recommend a human re-score; numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,321 +98,115 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Laps of the Suzuka Circuit International Racing Course — the 5.807 km figure-eight famous from Formula 1 — ridden counterclockwise, the opposite direction to motorsport. This is a timed circuit enduro, not a point-to-point course: solo riders or relay teams accumulate as many laps as possible in 4 or 8 hours, or ride the fixed 40-lap Attack 240 (232.28 km). The lap rolls constantly through the chicane, West Straight, Spoon, the hairpin, the 25R-Degner complex and the descending S-curves — technical circuit features rather than named climbs — on fully paved racing tarmac 10 to 16 metres wide. Total distance and climbing depend entirely on how many laps you complete; the 2025 8-hour leader logged 58 laps, roughly 336.8 km.",
+      "signature_challenge": "Pacing a 4- or 8-hour circuit effort: the lap's rhythm — descending S-curves, the Degner complex, the hairpin, and the rising drag to the line — repeats every 5.807 km, and lap consistency is the whole game.",
+      "suffering_zones": [
+        "The closing hours of the 8-hour enduro: most-laps scoring means there is never a point where slowing down doesn't cost you.",
+        "The rise to the finish line each lap — the official course guidance notes the drag up to the line, and the official 2019 report describes a headwind on the home straight."
+      ]
     },
     "logistics": {
-      "airport": "",
+      "airport": "Chubu Centrair International (NGO), ~1.5h; Osaka Kansai (KIX) also workable",
       "lodging_strategy": "On-site hotel at Suzuka Circuit, nearby hotels in Suzuka city, or camping areas.",
-      "transport": "",
-      "food": "",
-      "official_site": ""
+      "transport": "Suzuka Circuit Ino station (Ise Railway) plus shuttle/taxi; the venue is a full resort complex with parking.",
+      "food": "Circuit resort concessions on site; teams typically self-cater in the pits.",
+      "official_site": "https://suzuka8h.powertag.jp/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2000,
+      "origin_story": "Began in 2000 as one of Japan's early bicycle circuit enduros; the 8-hour race was added at the third edition. It has grown into one of the country's biggest participation cycling festivals, drawing over 4,000 riders across its formats. It borrows the '8 Hours' name and venue from the famous Suzuka 8 Hours motorcycle race (held since 1978) but is an entirely separate amateur bicycle event, run in November and ridden in the reverse direction.",
+      "notable_moments": [
+        "2025 (26th edition, November 1): 4,000+ participants across the 4-hour enduro, 8-hour enduro and Attack 240",
+        "2026 (27th edition): scheduled November 14, registration open July 17 - October 5"
+      ],
+      "reputation": "A high-volume Japanese amateur enduro festival on a world-famous circuit — held since 2000, little covered in Western cycling media, and routinely confused online with the Suzuka 8 Hours motorcycle race."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Bike Event, Wrong Name — and Not a Gran Fondo",
+      "summary": "Housekeeping first: 'Suzuka Endurance Road' is not a thing. No event uses that name — it's a hybrid of the Suzuka 8 Hours Enduro (a real amateur bicycle event) and the Suzuka 8 Hours Endurance Road Race (the famous FIM motorcycle race). This profile previously carried the motorcycle race's dates, videos and atmosphere; all of that has been purged. What's left is genuinely worth knowing about: in November 2025 more than 4,000 cyclists took over the Formula 1 circuit for timed enduros — 4 hours, 8 hours solo or in relay teams of up to six, or the fixed 40-lap Attack 240 — riding the 5.807 km lap counterclockwise on closed racing tarmac, with transponder timing, pit lanes and rolling starts. But be honest about the format: this is lap racing against a clock, not a gran fondo. There is no course to discover, no summit, no scenery beyond the circuit complex — the appeal is the circuit itself and the event around it, and registration, rules and communications are in Japanese.",
+      "strengths": [
+        "Riding a genuinely world-famous F1 circuit — S-curves, Spoon, the West Straight — closed, fully paved and 10-16 m wide",
+        "Big event with real infrastructure: 4,000+ participants in 2025, transponder relay timing, pit lanes, on-site resort hotel and camping",
+        "Formats for everyone: 8-hour solo or 2-6 rider relay, 4-hour classes including city-bike and family, and the fixed-distance Attack 240",
+        "Long-running: held since 2000, with the 8-hour format added at the third edition — the 27th edition runs in 2026"
+      ],
+      "weaknesses": [
+        "Not a gran fondo in any sense — it's a timed circuit enduro/relay; there is no point-to-point course, and total distance depends on laps ridden",
+        "Zero route variety: the same 5.807 km lap for up to eight hours, inside a motorsports complex",
+        "A domestic-facing event: registration, rules and communications are in Japanese, with little English-language support",
+        "The event's own '8 Hours' branding invites confusion with the motorcycle race that shares its name — this database included; the previous version of this profile described the wrong sport"
+      ],
+      "bottom_line": "If you're in Japan in November and want to ride the actual Suzuka F1 circuit hard for four or eight hours, this is a well-established way to do it — provided you can handle Japanese-language registration. Just don't come looking for a gran fondo, and don't confuse it with the motorcycle race that shares its name."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Iconic Japanese motorcycle endurance racing on legendary Suzuka Circuit.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Japan's big amateur circuit enduro on the Suzuka F1 track — a timed lap race, not a gran fondo (and not the motorcycle race).",
+      "should_you_race": "Yes if a timed 4/8-hour team or solo enduro on a legendary closed circuit appeals and you can navigate Japanese-language registration. No if you want a point-to-point gran fondo with real terrain — this is the same 5.807 km lap all day.",
+      "alternatives": "Shimano Suzuka Road (September, same circuit) for a mass-start road-race festival format; Japan's public-road fondos (e.g. Niseko Classic) for actual open-road racing."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Suzuka Endurance Road gran fondo cycling Suzuka Circuit",
-      "videos": [
-        {
-          "video_id": "JlpT0-Yw6M0",
-          "title": "1970s.JAPAN.SUZUKA CIRCUIT.Pref MIE.Amusement park area.International racing course.HONDA BIKE.",
-          "channel": "World Vintage Films",
-          "view_count": 303,
-          "upload_date": "20220129",
-          "duration_string": "9:58",
-          "description": "Suzuka Circuit is a leisure facility located in Suzuka City, Mie Prefecture, which is centered around an international racing course and is known for hosting the F1 Japanese Grand Prix and the Suzuka 8-Hour Endurance Road Race. It is known for hosting the F1 Japanese Grand Prix and the Suzuka 8-Hour Endurance Road Race. In addition to the racing course, there is an amusement park and a hotel, forming a resort. The circuit was built in 1962 by Honda Motor Company (Honda) as Japan's first circuit with both pavement and spectator seating. The circuit was completed in September 1962, and the first All Japan Road Race was held as the opening race on November 3 and 4 of the same year. The total construction cost, including ancillary facilities, reached 1.5 billion yen (25.5 billion yen in modern terms). At the time, thundering motorcycles were becoming a social problem. Fujisawa was a man of principle who believed that \"enjoying engines from childhood would contribute to the develo\n pment of the future automobile environment,\" and from the beginning he had been thinking of adding an automobile amusement park to the circuit for families to enjoy. Under this \"Motor Sports Land Concept,\" Tama Tech in Tokyo (1961), Ikoma Tech in Nara Prefecture (1961), Mortopia at Suzuka Circuit (1963), and Asaka Tech in Saitama Prefecture (1964) were opened one after another.\n\nIn Japan, when we say simply \"pre-war\", we usually refer to the period before the outbreak of World War II, starting with the attack on Pearl Harbor. The Japanese economy grew by leaps and bounds over a period of about 19 years, from 1954 to 1973, when the domestic postal code system and Euroclear were established in 1968, followed by rapid progress in bringing the bill clearing system online. In 1956, the White Paper on the Economy was published. During the period of rapid economic growth in the 1960s and 1970s, the economy benefited from special demand from the 1964 Tokyo Olympics and the 1970 Osaka World's Fair. In 1968, the country's gross national product (GNP) surpassed that of West Germany to become the second largest in the world. Bullet trains and expressways were built. Just before the 1970s, when Japan became a creditor nation, foreigners began to invest more in Japanese stocks. The Nixon Shock of 1971 led to a substantial revaluation of the yen, which corrected th\n e excessive surplus in the balance of payments and contributed to economic stability. In October 1973, the Fourth Middle East War triggered a rise in the price of crude oil, and Japan fell into an oil shock (the First Oil Shock). Thereafter, the economy moved into a period of stable growth (from December 1973 to February 1991, when the bubble economy burst).\n\nAbout World Vintage Films\n\nI'm doing a Youtube video of footage taken from the 1910s to the 1980s.\nThe footage is original and was filmed by my family and my friends while they were traveling.\nThat's why most of the footage was shot in Japan.\n\nThe first step in the editing process is to convert the video from analog to digital. Then I remove the unnecessary parts and add the original music and subtitles. We don't want to hide the footage, so we don't have many subtitles.\nBlack and white footage may be converted to color.\n\nInternational and domestic travel around the world, before, during and after the war.\nWe have over 10,000 films that have not yet been released to the public. We will continue to edit and distribute a few more in the future.\n\nThere is a lot of valuable footage. Especially rare are old footage from less developed countries. At that time, the equipment for filming was rare. Pre-war footage of Japan is also valuable. Old cars and trains. There is also footage of airplanes shot from the sky. Towns and markets, and people. And people. Famous tourist spots and natural scenery. The fashion sense is also interesting and different from today. Enjoy the scenery in the old style.\n\nMostly on 8mm, 16mm, 9.5mm, 35mm, etc. Newer types of video, such as VHS, are not covered.\n\n(I translate in multiple languages, so my writing is poor.)\n#1970s\n#JAPAN\n#SUZUKA CIRCUIT\n\nBGM：MusMus",
-          "tags": [
-            "日本",
-            "温泉",
-            "ホームムービー",
-            "旅行",
-            "ノスタルジック",
-            "昭和",
-            "8ミリフィルム",
-            "レトロ",
-            "記録映像",
-            "戦後",
-            "高度経済成長期",
-            "鉄道",
-            "自動車",
-            "美人",
-            "ムービー",
-            "古写真",
-            "風景",
-            "Japan",
-            "Home Movies",
-            "Travel",
-            "Old times",
-            "Nostalgic",
-            "Antique",
-            "Showa",
-            "8mm film",
-            "Retro",
-            "Documentary",
-            "Pre-War",
-            "Railroad",
-            "Car",
-            "Beauty",
-            "Building",
-            "Movie",
-            "日本人",
-            "Japanese",
-            "ホンダ",
-            "レース",
-            "ライダー",
-            "バイク",
-            "オートバイ",
-            "モータースポーツ",
-            "鈴鹿",
-            "鈴鹿サーキット",
-            "三重県",
-            "本田宗一郎",
-            "Honda",
-            "Race",
-            "Rider",
-            "Bike",
-            "Motorcycle",
-            "Motorsports",
-            "Suzuka",
-            "Suzuka Circuit",
-            "Mie",
-            "Soichiro Honda",
-            "F1",
-            "F1グランプリ",
-            "F1 Grand Prix",
-            "motoGP",
-            "遊園地",
-            "モートピア",
-            "でんでんむし",
-            "テーマパーク",
-            "amusement park",
-            "Theme park",
-            "ヤマハ",
-            "カワサキ",
-            "スズキ",
-            "yamaha",
-            "kawasaki",
-            "suzuki",
-            "ducati"
-          ],
-          "url": "https://www.youtube.com/watch?v=JlpT0-Yw6M0",
-          "transcript": "[Music]\ndo\nso\n[Applause]\nyou",
-          "curated": false
-        },
-        {
-          "video_id": "4rogboAzyLg",
-          "title": "🔙 to a paddock tour at Suzuka 8 Hours",
-          "channel": "FIM EWC",
-          "view_count": 879,
-          "upload_date": "20221009",
-          "duration_string": "3:03",
-          "description": "🇯🇵 At Suzuka 8 Hours this year, we had the chance to go behind the scenes of this legendary circuit with Freddy Foray and Gregg Black. Enjoy! \n\n#FIMEWC #Suzuka8Hours \n\nStill haven’t subscribed to FIM EWC on YouTube? ►► https://goo.gl/vJdzYp\r\n\r\nConnect with the FIM EWC\r\nFacebook: https://www.facebook.com/fim.ewc/\r\nTwitter: https://twitter.com/FIM_EWC\r\nInstagram: https://www.instagram.com/fim_ewc_official/\r\nWebsite: https://www.fimewc.com/",
-          "tags": [
-            "moto",
-            "motorbike",
-            "motorbike racing",
-            "FIM EWC",
-            "Endurance sport",
-            "motorbike sport",
-            "endurance moto",
-            "Endurance",
-            "endurance",
-            "Endurance World Championships",
-            "moto madness",
-            "motorbikes",
-            "24 heures moto",
-            "Le Mans",
-            "circuit 24h du mans moto",
-            "bol d'or moto",
-            "bol d'or",
-            "oschersleben onboard",
-            "12 hours of Estoril",
-            "suzuki motorcycle race"
-          ],
-          "url": "https://www.youtube.com/watch?v=4rogboAzyLg",
-          "transcript": "to see you\nso we are in the paddock at Suzuka\nzupado katsuga is quite different than\nthe European Paddock because that work\nis smaller and also we have less trucks\nso as you can see this is a garage of\nthe search and if we each stint The\nWider after deep breathing coming here\nwith his Japanese helper\nhe go in the womb cool room and\nunder the uh Under the Tent you can see\na swimming pool every wider go in the\nswimming pool five minutes after the\nstints but not long time because the\nwater is very cold and after you can see\neverything it's drying here\nthe suit\na lot of power because as you can see\nthis is just air but it's so important\nto have a dry suits when you come back\non the on the track because the Japanese\npeople are very organized you can see a\nwash machine and after every stint they\nwash everything for the wider\nI don't know but that's great\nit's okay\nso we are in the Chrome of the search so\nnow we have Greg back and please Greg\nyou can explain your column with your\nspecial French accent please\nI am not Freddy as you can see but I\nhave a very good French accent no sorry\nso here we are in my cooling room here\nin Japan it's a bit a bit special we\nhave no hospitality and it's a bit\ndifferent uh compared to all the other\nraces so we've got the air conditioning\nin this room we need it here in Japan\nhere got the first part here we've got\nmy teammate Kazuki and uh his manager\nwhich are here we've got a bit of food\nfridges and everything to uh to eat\nduring the during the race and then here\nwe've got the uh Freddie don't eat all\nthe food please so here we've got the\nphysio Fabiana physio uh and where we\nget massage and get a good rest during\nthe rest doing the stints after the\nstints and they're here we've got all\nour gear so we got my leather suits\nKazuki suits because as you know only\ntwo Riders at this race and all our gear\nhere basically uh got our helmets risers\nall our things for our hands uh our\ndrinks and this is where we basically\nget uh get changed get everything ready\num we've got our helper switch with us\nall the time and uh we've got to try and\ncool down so we've got the pool outside\nand a lot of ice and Etc and stuff in\nhere and and don't forget the TV we've\ngot live lap time live TV always and um\nyeah thank you thank you Freddie thank\nyou thank you yeah I need some of that\nand we've got to hear our two beds where\nwe can have a good rest so uh there you\ngo basically that's uh that's it for\nhere but we uh need a lot of help\nbecause it's really hard race\n[Music]",
-          "curated": true,
-          "curation_reason": "Behind-the-scenes paddock tour showing the unique logistics and preparation aspects specific to racing at Suzuka.",
-          "display_order": 2,
-          "thumbnail_url": "https://i.ytimg.com/vi/4rogboAzyLg/maxresdefault.jpg",
-          "thumbnail_score": 84.0
-        },
-        {
-          "video_id": "Ry0DXX4R4j8",
-          "title": "Suzuka is just around the corner",
-          "channel": "FIM EWC",
-          "view_count": 2707,
-          "upload_date": "20220704",
-          "duration_string": "30",
-          "description": "Suzuka, we can't wait to see you again. 🤩\n\n#FIMEWC #Suzuka8Hours\n\nStill haven’t subscribed to FIM EWC on YouTube? ►► https://goo.gl/vJdzYp\r\n\r\nConnect with the FIM EWC\r\nFacebook: https://www.facebook.com/fim.ewc/\r\nTwitter: https://twitter.com/FIM_EWC\r\nInstagram: https://www.instagram.com/fim_ewc_official/\r\nWebsite: https://www.fimewc.com/",
-          "tags": [
-            "moto",
-            "motorbike",
-            "motorbike racing",
-            "FIM EWC",
-            "Endurance sport",
-            "motorbike sport",
-            "endurance moto",
-            "Endurance",
-            "endurance",
-            "Endurance World Championships",
-            "moto madness",
-            "motorbikes",
-            "24 heures moto",
-            "Le Mans",
-            "circuit 24h du mans moto",
-            "bol d'or moto",
-            "bol d'or",
-            "oschersleben onboard",
-            "12 hours of Estoril",
-            "suzuki motorcycle race"
-          ],
-          "url": "https://www.youtube.com/watch?v=Ry0DXX4R4j8",
-          "curated": false
-        },
-        {
-          "video_id": "bKK2hzIzjNg",
-          "title": "Suzuka 8 Hours 2017 Atmosphere",
-          "channel": "FIM EWC",
-          "view_count": 4274,
-          "upload_date": "20170808",
-          "duration_string": "1:04",
-          "description": "Enjoy the special atmosphere of an amazing race, Suzuka 8 Hours.",
-          "tags": [
-            "FIM EWC",
-            "Suzuka 8 Hours"
-          ],
-          "url": "https://www.youtube.com/watch?v=bKK2hzIzjNg",
-          "curated": false
-        },
-        {
-          "video_id": "0Q9vPXHx2FQ",
-          "title": "Suzuka 8 Hours 2019  - A very special race for the Japanese manufacturers",
-          "channel": "FIM EWC",
-          "view_count": 5228,
-          "upload_date": "20190819",
-          "duration_string": "2:36",
-          "description": "Still haven’t subscribed to FIM EWC on YouTube? ►► https://goo.gl/vJdzYp\n\nConnect with the FIM EWC\nFacebook: https://www.facebook.com/fim.ewc/\nTwitter: https://twitter.com/FIM_EWC\nInstagram: https://www.instagram.com/fim_ewc_official/\nWebsite: https://www.fimewc.com/",
-          "tags": [
-            "Suzuka 8 Hours",
-            "FIM EWC",
-            "Yamaha",
-            "Kawasaki",
-            "Honda",
-            "Suzuki"
-          ],
-          "url": "https://www.youtube.com/watch?v=0Q9vPXHx2FQ",
-          "transcript": "since 1978 the Suzuka eight hours has\nheld a special place in the hearts of\nJapan's motorcycle manufacturers we have\nhuge factory here in Suzuka city so here\nis the one part of the hour how do you\nsay home grant and the eight hours\nendurance race is the one part of our\nphilosophy so we need to win every year\nso it's very important activity for us\neight hours is most popular a motorsport\nevent in Japan this is a base of\nmotorcycle development\nI know from the past when my father was\nriding and when MotoGP was still here\nso everybody said this is a fantastic\nracetrack and yes it is a really great\nracetrack but also the Japanese\natmosphere the fans and everything this\nis so nice and they are so happy to see\nus racing and the Suzuka ours is a so\nmuch history and tradition that is\nsomething very special and always was a\ndream for me to be to be here in racing\nespecially you know with the factory\nteam of Honda is is a great pleasure\nalso there is a lot of pressure because\nwe want to win the race on Sunday\nobviously the other manufacturers are\nvery well prepared as well so we have to\nsee\nit's a massive event you know a lot of\nfunds and it's an important event for\nall Japanese manufacturers since I've\nbeen with Kawasaki the last years\nthey've been increasing the support so\nit's very important for them to try and\ndo well and yeah we're here trying to\nmake the best result possible you know\nyou have three riders and the team it's\nnot our main priority for the season so\nwe arrived here with a bike that we did\nalmost no testing so the base setup even\nyesterday we're still changing a lot of\nthings on the bike so we're in panic\nmode if you like trying to fix\neverything but in the end it hours is a\nbig race a lot a lot of things can\nhappen so it's important to be\nconsistent make no mistakes and see\nwhere we finish",
-          "curated": true,
-          "curation_reason": "Best available content with rider interviews discussing the significance of Suzuka and race atmosphere from manufacturer perspectives.",
-          "display_order": 1,
-          "thumbnail_url": "https://i.ytimg.com/vi/0Q9vPXHx2FQ/maxresdefault.jpg",
-          "thumbnail_score": 83.27
-        }
-      ],
-      "quotes": [
-        {
-          "text": "The Japanese atmosphere, the fans and everything - this is so nice and they are so happy to see us racing, and the Suzuka has so much history and tradition that is something very special.",
-          "source_video_id": "0Q9vPXHx2FQ",
-          "source_channel": "FIM EWC",
-          "source_view_count": 5228,
-          "category": "race_atmosphere",
-          "curated": true
-        },
-        {
-          "text": "The paddock at Suzuka is quite different than the European paddock because it's smaller and we have less trucks. The Japanese people are very organized - they have wash machines and after every stint they wash everything for the rider.",
-          "source_video_id": "4rogboAzyLg",
-          "source_channel": "FIM EWC",
-          "source_view_count": 879,
-          "category": "logistics",
-          "curated": true
-        }
-      ],
-      "rider_intel": {
-        "extracted_at": "2026-03-06",
-        "key_challenges": [],
-        "terrain_notes": [],
-        "gear_mentions": [],
-        "race_day_tips": [
-          {
-            "text": "Use a cooling room with air conditioning during rest periods between stints, as the heat is a major factor.",
-            "source_video_ids": [
-              "4rogboAzyLg"
-            ]
-          },
-          {
-            "text": "Take ice baths in a swimming pool for about five minutes after each stint to cool down, but don't stay in too long as the water is very cold.",
-            "source_video_ids": [
-              "4rogboAzyLg"
-            ]
-          },
-          {
-            "text": "Focus on being consistent and making no mistakes rather than aggressive riding, as it's a long race where many things can happen.",
-            "source_video_ids": [
-              "0Q9vPXHx2FQ"
-            ]
-          },
-          {
-            "text": "Have suits washed and dried after every stint using air drying equipment to ensure dry gear when returning to the track.",
-            "source_video_ids": [
-              "4rogboAzyLg"
-            ]
-          }
-        ],
-        "additional_quotes": [
-          {
-            "text": "The Japanese people are very organized you can see a wash machine and after every stint they wash everything for the rider",
-            "source_video_id": "4rogboAzyLg",
-            "source_channel": "FIM EWC",
-            "source_view_count": 879,
-            "category": "logistics",
-            "curated": true
-          },
-          {
-            "text": "The paddock at Suzuka is quite different than the European Paddock because that work is smaller and also we have less trucks",
-            "source_video_id": "4rogboAzyLg",
-            "source_channel": "FIM EWC",
-            "source_view_count": 879,
-            "category": "logistics",
-            "curated": true
-          },
-          {
-            "text": "We arrived here with a bike that we did almost no testing so the base setup even yesterday we're still changing a lot of things on the bike so we're in panic mode",
-            "source_video_id": "0Q9vPXHx2FQ",
-            "source_channel": "FIM EWC",
-            "source_view_count": 5228,
-            "category": "logistics",
-            "curated": true
-          }
-        ],
-        "search_text": "The Suzuka Endurance Road takes place at the legendary Suzuka Circuit, home to Japan's most popular motorsport event since 1978. Riders describe this as a challenging endurance race where heat management is crucial. The paddock setup is notably different from European events, being smaller with fewer support vehicles. Teams use specialized cooling facilities including air-conditioned rooms, ice baths, and equipment drying systems between riding stints. Riders emphasize the importance of consistency over aggressive riding, noting that many things can happen over the long distance. The Japanese organization is praised, with support staff washing and maintaining gear after every stint. The atmosphere is described as fantastic with enthusiastic fans, and the circuit holds special significance for Japanese manufacturers who view it as their home ground and a critical part of their racing philosophy."
+    "citations": [
+      {
+        "url": "https://suzuka8h.powertag.jp/",
+        "category": "official",
+        "label": "Suzuka 8 Hours Enduro official site — 27th edition November 14, 2026; registration July 17-October 5"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/report/2025/index.html",
+        "category": "official",
+        "label": "Official 2025 report — 26th edition, November 1, 2025, 4,000+ participants"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/2026/01_1.html",
+        "category": "official",
+        "label": "Official 2026 formats/categories — 4h and 8h enduros, Attack 240, team caps and classes"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/2026/03_1.html",
+        "category": "official",
+        "label": "Official competition rules — Attack 240 = 40 laps x 5.807 km (232.28 km), 8-hour limit; transponder relay; rolling start"
+      },
+      {
+        "url": "https://www.suzukacircuit.jp/eng/course_s/",
+        "category": "reference",
+        "label": "Suzuka Circuit course specification — 5.807 km lap, fully paved, 10-16 m wide"
+      },
+      {
+        "url": "https://www.suzukacircuit.jp/eng/8tai/guide/step1/",
+        "category": "reference",
+        "label": "Suzuka Circuit's own explainer of the Suzuka 8 Hours MOTORCYCLE race (July 3-5, 2026) — the separate event this profile previously conflated"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/report/2019/01_1.html",
+        "category": "official",
+        "label": "Official 20th-edition (2019) report — event history since 2000, 8-hour race added at third edition; home-straight headwind account"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/2025/result/8h_sogo.pdf",
+        "category": "official",
+        "label": "Official 2025 8-hour overall result — leader completed 58 laps (~336.8 km)"
+      },
+      {
+        "url": "https://suzuka8h.powertag.jp/2026/05_1.html",
+        "category": "official",
+        "label": "Official 2026 course guidance — counterclockwise lap features: chicane, West Straight, Spoon, hairpin, 25R-Degner, S-curves, rise to the line"
       }
+    ],
+    "youtube_data": {
+      "researched_at": "2026-07-24",
+      "search_query": "Suzuka Endurance Road gran fondo cycling Suzuka Circuit",
+      "videos": [],
+      "quotes": [],
+      "purge_note": "2026-07-24 editorial wave 5: all previous videos, quotes and rider_intel were FIM EWC / Suzuka 8 Hours MOTORCYCLE race or vintage motorsports content — cross-sport mislabeling — and were removed. No bicycle-event footage was verified in their place."
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://en.wikipedia.org/wiki/2026_Suzuka_8_Hours",
-      "notes": "Motorcycle endurance road race at Suzuka Circuit ran July 3–5, 2026 and continues annually.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://suzuka8h.powertag.jp/",
+      "notes": "IDENTITY CORRECTION (2026-07-24 editorial wave 5): this profile was a conflation of two different sports. 'Suzuka Endurance Road' matched no real event; the vitals (July 3-5 2026 date, 'hundreds of teams', pit-stop feed zones) and all youtube_data/rider_intel described the 47th FIM Suzuka 8 Hours MOTORCYCLE endurance race (suzukacircuit.jp/eng/8tai/), and the prior eligibility source was the motorcycle race's Wikipedia page. The real bicycle event at this venue is the Suzuka 8 Hours Enduro (suzuka8h.powertag.jp): 27th edition November 14, 2026, registration open July 17-October 5; 26th edition held November 1, 2025 with 4,000+ participants. Renamed name/display_name to 'Suzuka 8 Hours Enduro' (slug unchanged to preserve URLs, per flandrien-ride precedent); vitals rebuilt around the bicycle event: date Nov 14 2026, vitals.distance set to the Attack 240 fixed format (232.28 km, the only fixed-distance class, per race-through-poland nominal-distance precedent); the 4h/8h timed enduros are lap-dependent with no fixed distance; elevation left null (no official cumulative figure), motorcycle media purged. Distinct from Shimano Suzuka Road (September 26-27, 2026, same circuit). Verified via codex gpt-5.6-sol foreground research + curl of suzuka8h.powertag.jp."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a timed bicycle circuit enduro / team relay (4h/8h most-laps formats plus fixed 232.28 km Attack 240) on a closed motorsports circuit — doesn't cleanly fit the gran_fondo taxonomy or its scoring dimensions (distance/climbing assume a fixed course; prestige/cultural_impact were previously scored against the Suzuka 8 Hours MOTORCYCLE race this profile conflated). Recommend a human call on reclassifying discipline, re-scoring, or removing the profile, consistent with how flandrien-ride.json flags taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 5"
     }
   }
 }

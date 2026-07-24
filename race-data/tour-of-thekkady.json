@@ -5,28 +5,39 @@
     "display_name": "Tour of Thekkady — Kerala Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 144.8,
-      "distance_mi": 90.0,
-      "elevation_m": 2987,
-      "elevation_ft": 9800.0,
-      "location": "Kottayam to Thekkady, Kerala, India",
+      "distance_km": 145.0,
+      "distance_mi": 90.1,
+      "elevation_m": 3000,
+      "elevation_ft": 9843.0,
+      "location": "Kottayam to Anakkara/Thekkady, Kerala, India",
       "location_badge": "Kottayam to Thekkady, India",
       "country": "India",
-      "date": "2026: March 14",
-      "date_specific": "2026: March 14",
-      "field_size": null,
-      "start_format": null,
+      "date": "2026: March 14 (5th edition, completed)",
+      "date_specific": "March 14, 2026 (most recent edition); 2027 date not yet officially confirmed",
+      "field_size": "~240 (combined Race + Tour, 2026)",
+      "start_format": "Mass start on open (non-closed) roads; Race category 5:30am, Tour category 5:45am",
       "registration": null,
       "entry_fee": null,
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "8 hours (Men Elite), 9 hours (Masters/Women), 14 hours (Tour category)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Race (competitive)",
+          "distance_km": 145,
+          "finish": "Anakkara, Idukki"
+        },
+        {
+          "name": "Tour (non-competitive)",
+          "distance_km": 160,
+          "finish": "Treetop Hotel, Thekkady"
+        }
+      ]
     },
     "climate": {
       "primary": "Tropical",
-      "description": "Tropical warmth in March dry season, ideal for long rides with lush scenery.",
+      "description": "Tropical dry season in March: hot and humid with low rain risk; the mass start is pre-dawn (5:30am) to beat the daytime heat.",
       "challenges": [
         "Precipitation: Low (10-20%)"
       ]
@@ -58,86 +69,122 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69. Vitals corrections (2026-07-24 editorial wave 5) did not change the scoring basis materially — retained as-is."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
+      "total_climbs": 4,
+      "hc_climbs": 1,
+      "cat_1_climbs": 1,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
+      "key_climbs": [
+        {
+          "name": "Opening climb near km 32",
+          "length_km": 4,
+          "category": "uncategorized"
+        },
+        {
+          "name": "12km HC climb (~750m gain)",
+          "length_km": 12,
+          "elevation_gain_m": 750,
+          "category": "HC"
+        },
+        {
+          "name": "8km Cat 1 climb",
+          "length_km": 8,
+          "category": "1"
+        },
+        {
+          "name": "Final major climb from km 127",
+          "category": "uncategorized"
+        }
+      ],
       "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "king_of_mountain": "King/Queen of Calvary Mount (8km timed ascent to the Calvary Mount viewpoint near km 116, introduced 2026)",
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "A scenic rollercoaster of relentless climbs through Kerala's lush plantations, serene lakes, iconic dams, and wildlife-rich forests, blending Tour de France-style elevation with tropical tranquility on smooth, low-traffic roads.",
-      "signature_challenge": "The 3000m+ elevation gain over 145km, replicating TdF stage difficulty amid Kerala's ever-changing landscapes from backwaters to highland forests.",
+      "character": "A relentless climbing route through Kerala's plantation hills, running Kottayam - Ettumanoor - Pala - Neeloor - Muttam - Kulamavu - Cheruthoni - Kattappana - Puliyanmala - Anakkara, passing the Kulamavu Dam (~km 75), Cheruthoni (~km 103), and Idukki Dam (~km 105) en route to a finish at Anakkara (Race) or a further descent into Thekkady (Tour). The roads are paved and generally well maintained, but this is not a closed-road event — the organizer's own FAQ states riders share the route with normal traffic throughout, singling out a busier ~7km stretch between Kattappana and Puliyanmala, and a 2025 rider account separately describes buses, trucks, and several close calls in the dark early kilometers out of Kottayam.",
+      "signature_challenge": "Four named climbs and roughly 3,000+ meters of gain over 145km — a 4km opener at km 32, a 12km HC climb gaining ~750m, an 8km Cat 1 climb, and a final major climb from km 127 — plus, new in 2026, a King/Queen of Calvary Mount competition on the 8km climb to the Calvary Mount viewpoint near km 116.",
       "suffering_zones": [
-        "Kulamavu and Idukki Dams Climb: Steep ascents crossing massive dams after passing through Pala and Muttom, with 1000m+ cumulative gain in exposed, panoramic sections.",
-        "Cardamom Estates to Kattappana: Long, grinding pulls through aromatic spice hills and rubber plantations, heat-building mid-route where fatigue sets in amid stunning vistas.",
-        "Final Push to Thekkady: Rainforest finale with punchy rollers into wildlife sanctuary, testing legs after 3000m total gain."
+        "12km HC climb (~750m gain): the second of the route's four major climbs, following the flat opening 30km and the 4km warm-up climb at km 32.",
+        "8km Cat 1 climb: the third major climb of the day — a 2025 rider account describes a competitor bonking mid-climb after a nutrition mistake here.",
+        "Final major climb from km 127: the last big test before the Anakkara/Thekkady finish, arriving after the Kulamavu/Cheruthoni/Idukki dams and the Calvary Mount timed segment, and run on open roads with live traffic."
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Kottayam town near Kumarakom backwaters offers hotels/homestays; Thekkady finish has rainforest resorts; book early for event weekend.",
-      "transport": "Self-supported Gran Fondo with hydration, medical aid, bag drop from Kottayam to Thekkady, optional bike return; registration open until Feb 16, 2026; categories close at 8-9-14 hours.",
+      "transport": "Paid registration, organizer-approval based. Entry covers timing/certificate, medal, hydration, limited technical and medical support, bag transfer, and finish food — not accommodation, en-route food, merchandise, or return transport. \"Self-supported\" refers to rider responsibility for repairs/personal food, not an unsupported ultra format.",
       "food": "",
       "official_site": "https://www.tourofthekkady.com"
     },
     "history": {
       "founded": 2022,
-      "origin_story": "India's premier Gran Fondo launched by KEG Bikers as not-for-profit cyclosportive, aspiring to be largest international cycling event; supported by Kerala Tourism.",
+      "origin_story": "Launched by KEG Bikers on April 30, 2022, with about 54 riders in its first edition, and supported by Kerala Tourism. The field has grown steadily since — 236 riders in 2025, roughly 240 in the 2026 fifth edition.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Growing Gran Fondo — Not a Closed-Road Race",
+      "summary": "Tour of Thekkady is a legitimate, organizer-run road gran fondo in Kerala's Western Ghats, now in its fifth year and growing steadily from a 54-rider debut to roughly 240 riders in 2026. The route itself is genuinely tough — around 3,000m of climbing over 145km across four named climbs, passing the Kulamavu, Cheruthoni, and Idukki dams en route to a finish near the Periyar Tiger Reserve. To the organizer's credit, this isn't hidden: its own FAQ is explicit that Tour of Thekkady is not a closed-road event, and singles out a busier ~7km stretch between Kattappana and Puliyanmala. Riders still share the tarmac with normal Kerala traffic throughout, and a 2025 rider report separately flags buses, trucks, and close calls in the pre-dawn kilometers out of Kottayam. \"Self-supported\" here means riders handle their own food and mechanicals between checkpoints, not that this is an unsupported wilderness ride — the organizer still runs hydration stations, medical/ambulance coverage, and bag transfer.",
+      "strengths": [
+        "Genuinely demanding paved-road climbing — ~3,000m over 145km across four named climbs, including a 12km HC ascent",
+        "Real, verifiable growth: from ~54 riders at the 2022 launch to ~240 in 2026, with Kerala Tourism backing",
+        "Scenic route through tea/cardamom plantation country, dam crossings, and Periyar wildlife sanctuary approach",
+        "A genuine two-tier structure — a competitive Race (145km, 8-9hr cutoffs) and a non-competitive Tour (160km, 14hr cutoff) for riders who want the experience without racing it"
+      ],
+      "weaknesses": [
+        "Not a closed-road race — riders ride on open roads with live traffic; a 2025 participant reported buses, trucks, and near-misses in the dark early kilometers",
+        "Small field (~240 in 2026) means limited field depth and competitive stakes at the sharp end",
+        "No published GPX-verified elevation figure — the organizer only states \"3,000+ meters,\" so treat any more precise number as an estimate",
+        "2027 edition date is not yet officially confirmed"
+      ],
+      "bottom_line": "A legitimate, well-run climbing test in a beautiful part of Kerala, but go in knowing it's an open-road event, not a protected race course — pace and position accordingly."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "India's must-do Gran Fondo: TdF climbs meet Kerala paradise.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "India's highest-profile road gran fondo: four dam-side climbs and ~3,000m of gain through Kerala's Western Ghats, on open roads.",
+      "should_you_race": "Yes if you want a genuinely tough climbing day in a scenic, growing Indian gran fondo and don't mind sharing the road with local traffic. The Tour option is a good lower-stakes entry point.",
+      "alternatives": "Tour of Nilgiris (India) offers a longer, fully supported multi-stage alternative through Karnataka, Kerala, and Tamil Nadu for riders wanting a bigger logistical undertaking."
     },
     "citations": [
       {
-        "url": "https://www.keralatourism.org/event/tour-of-thekkady-a-top-tier-cycling-adventure-through-kerala/129/",
-        "category": "reference",
-        "label": "Tour of Thekkady 2026 | Cycling in Kerala | Gran Fondo India"
+        "url": "https://www.onmanorama.com/travel/travel-news/2026/03/16/tour-of-thekkady-2026-winners.html",
+        "category": "media",
+        "label": "Onmanorama — Tour of Thekkady 2026 Winners and Results (curl-verified)"
       },
       {
-        "url": "https://www.tourofthekkady.com/about",
-        "category": "reference",
-        "label": "About | Tour of Thekkady"
+        "url": "https://www.tourofthekkady.com/termsandconditions",
+        "category": "official",
+        "label": "Official Terms & Conditions — Race/Tour Distances, Cutoffs, Categories"
       },
       {
-        "url": "https://www.tourofthekkady.com",
-        "category": "reference",
-        "label": "Tour of Thekkady I Best Granfondo in India"
+        "url": "https://www.tourofthekkady.com/faq",
+        "category": "official",
+        "label": "Official FAQ — Traffic, Surface, Route Split"
       },
       {
-        "url": "https://zenmountain.in/event/tour-of-thekkady-2026/",
-        "category": "reference",
-        "label": "Tour of Thekkady 2026 - Zen Mountain"
+        "url": "https://bvcoaching.in/2025/03/tour-of-thekkady-2025/",
+        "category": "community",
+        "label": "BVCoaching — First-Person 2025 Rider Report (climbs, field size, traffic)"
+      },
+      {
+        "url": "https://www.onmanorama.com/travel/kerala/2026/02/04/tour-of-thekkady-season-5-cycling-race.html",
+        "category": "media",
+        "label": "Onmanorama — 2026 Season 5 Preview and Route"
       },
       {
         "url": "https://www.granfondoguide.com/Events/Index/13675/tour-of-thekkady",
         "category": "reference",
-        "label": "Tour of Thekkady - Gran Fondo Guide"
+        "label": "Gran Fondo Guide — Tour of Thekkady Listing (2027 date unconfirmed)"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.tourofthekkady.com/termsandconditions",
-      "notes": "Official site and tourism/media posts show the 5th edition Gran Fondo from Kottayam to Thekkady scheduled for March 14, 2026 with registration open, matching the road event and location.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.onmanorama.com/travel/travel-news/2026/03/16/tour-of-thekkady-2026-winners.html",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): distance_km changed from 144.8 to 145 (official Race distance per organizer terms; 160km Tour option added to route_options). elevation_m changed from 2987 (false precision) to organizer's stated 3,000+ figure. field_size added (~240, 2026 combined Race+Tour). date/date_specific updated to reflect the 2026 edition has already run (March 14) and the 2027 date is unconfirmed. Added course/traffic honesty: this is NOT a closed-road event. 5th edition confirmed via https://www.onmanorama.com/travel/travel-news/2026/03/16/tour-of-thekkady-2026-winners.html (curl-verified 200). SOL REVIEW (2026-07-24): fixed a fact-merge where the 12km HC climb had been asserted to pass both the Kulamavu and Idukki dams without source support (rider report and 2026 route preview only establish the climb and the dams separately at different km marks); fixed a conflation of the km-127 final climb with the 2026 Calvary Mount segment (verified via the 2026 route preview that Calvary Mount sits near km 116, a separate feature); removed the unsupported 'Cardamom Estates to Kattappana' place-name for the 8km Cat 1 climb (not in the rider report; the 2026 preview places spice plantations after km 132, past Kattappana); softened 'what the marketing glosses over' framing since the organizer's own FAQ explicitly and prominently discloses the open-road/non-closed-course status; removed hype language ('must-do', 'ideal for long rides') per GOLD voice rules. REJECTED one sol finding: sol flagged the 'busier Kattappana-Puliyanmala stretch (~7km)' claim as untraceable to the cited FAQ — verified false by live-fetching https://www.tourofthekkady.com/faq, which states verbatim: 'Except for the Kattappana–Puliyanmala stretch (approx. 7 km), the route generally experiences low to moderate traffic.' Claim retained as originally sourced."
     }
   }
 }

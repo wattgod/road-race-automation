@@ -5,21 +5,21 @@
     "display_name": "Granfondo Laigueglia",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": 2500,
-      "elevation_ft": 8202.0,
+      "distance_km": 112.0,
+      "distance_mi": 69.6,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
       "location": "Laigueglia, Liguria, Italy",
       "location_badge": "Laigueglia, Italy",
       "country": "Italy",
       "date": "2026: February 22",
-      "date_specific": "2026: February 22",
-      "field_size": "1000-1500",
+      "date_specific": "2026: February 22 (28th edition, completed)",
+      "field_size": "1,600 (2026 capped field)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://granfondolaigueglia.it/en/registration/",
+      "entry_fee": "EUR55 through Jan 31, EUR60 Feb 1-18, EUR70 on-site; EUR80 for one of 100 first-grid places",
       "feed_zones": "multiple",
-      "cutoff_time": "7 hours",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAG (2026-07-24 editorial wave 5): vitals corrected from 140km/2,500m to the organizer-confirmed 112km/1,700m (2026 edition) — distance/climbing dimension scores were set against the old, unsupported figures; recommend a human re-check whether distance=3/climbing=4 still fit the shorter, less extreme course. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,105 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Opens on the Riviera coast at Corso Badarò in Laigueglia, following the Via Aurelia along the sea for roughly 20 flat kilometres before turning inland into the Ligurian hills. The route's decisive terrain comes at Paravenna and Testico — the climbs the organizer identifies as the race's selection points — before an uphill finish at Colla Micheri. It shares its town and, in Paravenna, an emblematic climb with the professional Trofeo Laigueglia, the amateur race's original inspiration, though the two events run on different dates with different organizers.",
+      "signature_challenge": "Paravenna and Testico, back to back, after 20 flat coastal kilometres — the pair of climbs the organizer names as where the race is decided, ahead of the uphill finish at Colla Micheri.",
+      "suffering_zones": [
+        "Paravenna — the climb also used by the professional Trofeo Laigueglia, promoted as 'the climb of the champions'",
+        "Testico — paired with Paravenna as the race's second decisive ascent",
+        "Colla Micheri — the uphill finish, arriving after the other major climbs of the day"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels and B&Bs in Laigueglia and Andora; book early for seafront options.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondolaigueglia.it/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 1999,
+      "origin_story": "Conceived by Bruno Zanoni, a former professional rider and organizer, to bring amateur cyclists and fans closer to the professional Trofeo Laigueglia. First run in 1999 under Zanoni; GS Alpi, under Vittorio Mevio, took over organizing the race roughly two decades later and runs it today. The 2026 edition was the 28th.",
+      "notable_moments": [
+        "1999: First edition, organized by Bruno Zanoni to complement the professional Trofeo Laigueglia",
+        "2026: 28th edition, 1,600-rider capped field, won by Nardin and Bussone; Olympic road champion Pascal Richard attended"
+      ],
+      "reputation": "A well-established Ligurian season-opener — GS Alpi's own billing calls it 'the great classic that opens the international season.' Contemporary editions have been reported at 114 km/1,962 m (2017), 118 km/1,780 m (2020), and 112 km/1,700 m (2024, 2026) — a course that shifts by edition rather than staying fixed."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Solid Season-Opener, Overstated Vitals",
+      "summary": "Granfondo Laigueglia is a legitimate, 28-edition-deep Ligurian classic — a real competitive road race with seeded start grids, timing chips, and category results, run every February as the season's first major Italian gran fondo. The course is honest, punchy Riviera-to-hills terrain: a flat coastal warm-up along the Aurelia, then Paravenna and Testico as the selection climbs, finishing uphill at Colla Micheri. But the database's prior vitals (140 km, 2,500 m, a 7-hour cutoff) don't match anything the organizer has published for any recent edition — the actual 2026 course, confirmed in both the pre-race announcement and post-race report, was 112 km with 1,700 m of gain, and no numeric finishing cutoff appears anywhere in the current regulations. The 1,600-rider field is a hard organizer-imposed cap, not an open field.",
+      "strengths": [
+        "28 editions deep (founded 1999) with a real competitive format — grids, timing chips, category results, awards",
+        "Historic tie to the professional Trofeo Laigueglia, sharing Paravenna, 'the climb of the champions'",
+        "Season-opening slot (late February) gives it real calendar prestige as Italy's first major gran fondo",
+        "Reasonable entry fee (EUR55-70 depending on registration window) for a race of this pedigree"
+      ],
+      "weaknesses": [
+        "This database's prior vitals (140 km/2,500 m/7-hour cutoff) don't match any recent edition we could verify — the actual course has run 112-118 km with 1,600-1,900 m of gain in the editions we sourced (2017-2026), and no cutoff time is published at all",
+        "Course distance and elevation have shifted from year to year rather than staying fixed, so treat any single figure as edition-specific",
+        "No official 2027 date has been announced as of this writing; a third-party aggregator's February 21, 2027 listing is unconfirmed",
+        "A parallel, non-competitive Gravel Experience and e-bike category exist alongside the main road race — don't confuse them with the competitive gran fondo"
+      ],
+      "bottom_line": "A real, well-run Ligurian season-opener with genuine competitive stakes and a direct line to the professional Trofeo Laigueglia — just don't trust any previously published vitals on this one without checking the current year's regulations first."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Premier Italian granfondo with Riviera beauty and punchy climbs.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Liguria's season-opening classic — real racing on Paravenna and Testico, but check the current year's course figures before you trust them.",
+      "should_you_race": "Yes if you want a legitimate, competitive February season-opener on the Italian Riviera with real selection climbs. Confirm the current year's distance/elevation on the official site first — this course has changed size more than once.",
+      "alternatives": "If you want the professional race on the same roads: Trofeo Laigueglia (different date, different organizer). If you want a bigger, more internationally known Italian season-opener: look at the UCI Gran Fondo World Series Italian qualifiers instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondolaigueglia.it/en/granfondo-laigueglia-2026-the-great-classic-that-opens-the-international-season-returns-on-sunday-february-22nd/",
+        "category": "official",
+        "label": "GS Alpi — Official 2026 Pre-Race Announcement (112 km / 1,700 m)"
+      },
+      {
+        "url": "https://granfondolaigueglia.it/en/the-2026-granfondo-internazionale-laigueglia-is-packed-with-participants-nardin-and-bussone-win/",
+        "category": "official",
+        "label": "GS Alpi — Official 2026 Post-Race Report (1,600 starters, results)"
+      },
+      {
+        "url": "https://granfondolaigueglia.it/en/regulation/",
+        "category": "official",
+        "label": "GS Alpi — Official 2026 Regulations (no numeric cutoff published)"
+      },
+      {
+        "url": "https://granfondolaigueglia.it/en/registration/",
+        "category": "official",
+        "label": "GS Alpi — Official 2026 Registration and Entry Fees"
+      },
+      {
+        "url": "https://granfondolaigueglia.it/en/gs-alpi-the-dates-of-the-four-events-for-the-2026-season/",
+        "category": "official",
+        "label": "GS Alpi — 2026 Season Schedule (28th edition, organizer confirmation)"
+      },
+      {
+        "url": "https://www.quicicloturismo.it/2024/01/13/prestigio-la-prima-occasione-e-la-gf-laigueglia-torna-il-paravenna-la-salita-dei-campioni/",
+        "category": "media",
+        "label": "QuiCicloturismo — Paravenna's Link to the Professional Trofeo Laigueglia, GS Alpi Handoff"
+      },
+      {
+        "url": "https://www.ivg.it/2012/02/trofeo-laigueglia-parola-allex-professionista-ed-organizzatore-bruno-zanoni/",
+        "category": "media",
+        "label": "IVG — 2012 Bruno Zanoni Interview, Amateur Race's Origin Alongside the Trofeo"
+      },
+      {
+        "url": "https://trofeolaigueglia.it/",
+        "category": "reference",
+        "label": "Official Trofeo Laigueglia Site — Separate Professional Race"
+      },
+      {
+        "url": "https://www.sevenpress.com/boom-di-ciclisti-alla-gf-laigueglia-ale/2017/02/24/160560/",
+        "category": "media",
+        "label": "Seven Press — 2017 Edition Report (114 km / 1,962 m)"
+      },
+      {
+        "url": "https://www.fcicomo.it/bici-club-2000-comunicato-stampa-24-02-2020/",
+        "category": "media",
+        "label": "FCI Como — 2020 Edition Report (118 km / 1,780 m)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Laigueglia gran fondo cycling Laigueglia",
@@ -183,9 +251,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondolaigueglia.it/en/granfondo-laigueglia-2026-the-great-classic-that-opens-the-international-season-returns-on-sunday-february-22nd/",
-      "notes": "Mass-participation road granfondo in Laigueglia ran on 22 Feb 2026 and is presented as ongoing with no discontinuation signals.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondolaigueglia.it/en/the-2026-granfondo-internazionale-laigueglia-is-packed-with-participants-nardin-and-bussone-win/",
+      "notes": "28th edition ran 2026-02-22, 1,600-rider capped field, results published. Prior vitals (140km/2,500m/7hr cutoff) matched no documented edition; corrected to organizer-confirmed 112km/1,700m with no published numeric cutoff, per codex gpt-5.6-sol foreground research + curl-verification of granfondolaigueglia.it (200 OK). No official 2027 date announced yet; a third-party aggregator's Feb 21, 2027 listing is unconfirmed."
     }
   }
 }

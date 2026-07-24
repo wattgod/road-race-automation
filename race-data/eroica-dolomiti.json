@@ -5,8 +5,8 @@
     "display_name": "Eroica Dolomiti",
     "tagline": "",
     "vitals": {
-      "distance_km": 109.4,
-      "distance_mi": 68.0,
+      "distance_km": 118.0,
+      "distance_mi": 73.3,
       "elevation_m": 2740,
       "elevation_ft": 8990.0,
       "location": "San Candido, South Tyrol, Italy",
@@ -14,15 +14,37 @@
       "country": "Italy",
       "date": "2026: September 4-6",
       "date_specific": "September 5, 2026 (main ride)",
-      "field_size": "N/A",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "field_size": "500-bib regulatory cap; ~400 participated in 2025",
+      "start_format": "08:00 start per official regulations, open roads",
+      "registration": "https://www.eroica.cc/en/dolomites-registrations/",
+      "entry_fee": "EUR 70 (Ciclo Club members) to EUR 110, depending on registration window",
       "feed_zones": "N/A",
-      "cutoff_time": "13 hours",
+      "cutoff_time": "Long route only: signage/food-stop support begins being removed from Dobbiaco starting at 17:00 (a wind-down, not a single hard course-wide cutoff)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long",
+          "distance_km": 118,
+          "elevation_m": 2740,
+          "surface": "55km white road (strade bianche) + 63km asphalt",
+          "note": "Official route page states 110km, regulations state 118km — discrepancy not resolved"
+        },
+        {
+          "name": "Medium",
+          "distance_km": 95,
+          "elevation_m": 1870,
+          "surface": "45km white road + 50km asphalt",
+          "note": "Official route page states 91km, regulations state 95km — discrepancy not resolved"
+        },
+        {
+          "name": "Short",
+          "distance_km": 73,
+          "elevation_m": 1258,
+          "surface": "43km white road + 30km asphalt",
+          "note": "Short route also accepts other vintage bicycle types (service/postman/work bikes), not just vintage steel road bikes"
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,9 +53,9 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "surface": "Mixed: asphalt and strade bianche (unpaved white roads) — roughly 47% unpaved on the long route, up to 59% on the short route",
+      "technical_rating": 2,
+      "features": ["strade bianche / white gravel roads", "vintage bicycles mandatory (steel road bikes on long/medium; other vintage bike types accepted on the short route)"]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,7 +78,7 @@
       "tier_label": "TIER 2",
       "discipline": "sportive",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67. Vitals corrections (2026-07-24 editorial wave 5) did not change the scoring basis materially — retained as-is; see catalog_flags for a taxonomy caveat on the road_surface/descent_technicality dimensions given the substantial unpaved content."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -64,43 +86,95 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
+      "key_climbs": [
+        {
+          "name": "Prato Piazza (white-road climb, ~2,000m refreshment point)"
+        },
+        {
+          "name": "Cornetto di Confine / Markinkele (long route, toward the Austrian border)"
+        }
+      ],
       "profile_type": null,
       "king_of_mountain": null,
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Eroica Dolomiti is a vintage-bike heritage ride (a ciclostorica in the L'Eroica family, distinct from the original L'Eroica in Tuscany) based in San Candido, South Tyrol. It is emphatically not a paved-road-only sportive: the long route runs 118km with roughly 55km of strade bianche (white gravel roads) against 63km of asphalt — about 47% unpaved — climbing to Prato Piazza and on toward Cornetto di Confine/Markinkele near the Austrian border, while the short route winds between Cortina d'Ampezzo, Passo Tre Croci, and Lake Misurina. On the long and medium routes, only vintage or vintage-style steel bicycles are permitted — pre-1987 steel road frames (with a narrow Alan/Vitus aluminium exception), downtube shifters, toe clips instead of clipless pedals, external brake cables, and low-profile wheels with at least 32 spokes; the short route additionally accepts other vintage bicycle types (service, postman, and general work bikes), and the regulations carve out exceptions for riders with motor or sensory disabilities. It is non-competitive: riders collect checkpoint stamps rather than race for a ranked finish, and the roads remain open to normal traffic throughout.",
+      "signature_challenge": "Roughly 55km of strade bianche white roads on the long route, ridden on a mandatory vintage steel bike with toe clips and downtube shifters — the surface and equipment combination, not any single climb, is what defines the day.",
+      "suffering_zones": [
+        "White-road climb to Prato Piazza: unpaved, with a refreshment point at roughly 2,000m elevation.",
+        "Cornetto di Confine/Markinkele (long route): the final landmark toward the Austrian border, on the unpaved back portion of the course per the organizer's published surface breakdown.",
+        "The equipment itself: riders tackle the white-road climbs on period-correct steel bikes with toe-clip pedals rather than clipless — a real constraint on cadence and control that modern gravel/road bikes don't impose, though the organizer does not publish gradient data to quantify the difference."
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Book early in San Candido due to multi-day festival popularity; hotels and guesthouses in the area.",
-      "transport": "",
+      "transport": "Individual online registration via MyEroica. A cycling-specific medical certificate is required — a competitive-cycling certificate for the 118km/95km routes, a non-competitive certificate accepted for the 73km route.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.eroica.cc/en/events/eroica-dolomiti/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2017,
+      "origin_story": "Launched in San Candido in 2017 as the Dolomites edition of the L'Eroica vintage-cycling family (a separate event from the original 1997 L'Eroica in Tuscany/Siena). Sources disagree on the exact edition count for 2026 (an 8th-edition pre-event report for 2025 vs. a 10th-edition listing for 2026 elsewhere) — treat any specific edition number as unconfirmed.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Vintage Heritage Ride With Real Dirt, Not a Paved Sportive",
+      "summary": "Eroica Dolomiti is a vintage-bicycle heritage ride in South Tyrol's Val Pusteria — but it is not the paved-road event our prior profile described. Roughly 47% of the long route (55 of 118km) is strade bianche white gravel road, rising to about 59% on the short route. On the long and medium routes, riders must show up on a pre-1987 steel bike (or a vintage-style equivalent) with toe-clip pedals and downtube shifters — no clipless pedals, no modern groupsets; the short route accepts a wider range of vintage bikes, and the regulations include disability exceptions. It's explicitly non-competitive: there's no ranked finish, just a checkpoint stamp book. That makes it closer to a supported cycling festival than a race, and it belongs in a different conversation than a normal gran fondo or club sportive. The organizer's own published figures aren't fully consistent either — its regulations and route pages disagree on both the long route (118km vs. 110km) and the medium route (95km vs. 91km) — a minor but real data-quality gap worth flagging.",
+      "strengths": [
+        "Dolomites terrain along documented landmarks — Prato Piazza, Cornetto di Confine/Markinkele on the long route; Cortina d'Ampezzo, Passo Tre Croci, and Lake Misurina on the short route",
+        "A defined checkpoint and support structure despite the non-competitive format — food stops and medical-certificate requirements, with long-route signage/support winding down from Dobbiaco starting at 17:00",
+        "A distinctive, low-tech riding experience — vintage steel bikes and toe clips over real gravel, not a modern carbon-and-clipless event",
+        "Part of the L'Eroica brand family (the same lineage as the original Tuscany L'Eroica), with a festival program around the ride itself"
+      ],
+      "weaknesses": [
+        "Roughly 47-59% of the course is unpaved strade bianche — riders expecting a road sportive on the strength of the prior \"Paved roads\" listing would be materially misled",
+        "Mandatory vintage/steel-bike-with-toe-clips equipment rules on the long and medium routes exclude most modern cyclists from participating without acquiring or sourcing a dedicated bike",
+        "Non-competitive format — no ranked results, which matters if you're looking for a scored, competitive gran fondo rather than a heritage ride",
+        "The organizer's own regulations and route pages disagree on both the long route's distance (118km vs. 110km) and the medium route's distance (95km vs. 91km), and 2026's edition number is disputed across sources"
+      ],
+      "bottom_line": "A distinctive vintage-cycling festival through real Dolomites gravel and asphalt — but go in knowing it demands a specific bike, isn't a race, and isn't the paved sportive it's sometimes filed as."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Vintage cycling paradise in the majestic Dolomites.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Vintage-bike heritage ride through the Dolomites — nearly half gravel, no clipless pedals allowed, no ranked finish.",
+      "should_you_race": "Go for the experience and the terrain if you own or can source a compliant vintage steel bike and want a non-competitive, checkpoint-stamped ride. Skip it if you're looking for a scored, competitive road gran fondo.",
+      "alternatives": "Maratona dles Dolomites (nearby, competitive, fully paved, modern equipment) for riders who want Dolomites climbing without the vintage-bike/gravel requirements."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.eroica.cc/regolamento-dolomiti/",
+        "category": "official",
+        "label": "Official Regulations — Format, Equipment Rules, Cutoffs (curl-verified)"
+      },
+      {
+        "url": "https://www.eroica.cc/en/long-dolomites-route/",
+        "category": "official",
+        "label": "Official Long Route Page — Distance, Elevation, Surface Split"
+      },
+      {
+        "url": "https://www.eroica.cc/en/percorso-medio-dolomiti/",
+        "category": "official",
+        "label": "Official Medium Route Page — Distance, Elevation, Surface Split"
+      },
+      {
+        "url": "https://eroica.cc/en/eroica-dolomiti/short-route-dolomiti",
+        "category": "official",
+        "label": "Official Short Route Page — Distance, Elevation, Surface Split"
+      },
+      {
+        "url": "https://www.osttirol-heute.at/wirtschaft/innichen-rueckblick-auf-einen-tollen-sommer-2025/",
+        "category": "media",
+        "label": "San Candido 2025 Summer Retrospective — Field Size (~400 participants)"
+      },
+      {
+        "url": "https://www.sportfair.it/ciclismo/ciclismo-il-maltempo-non-ha-fermato-a-san-candido-la-prima-edizione-di-eroica-dolomiti/604772/",
+        "category": "media",
+        "label": "Sportfair — First-Edition (2017) Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Eroica Dolomiti gran fondo cycling San Candido",
@@ -154,89 +228,19 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/dlTEPVQrdGQ/maxresdefault.jpg",
           "thumbnail_score": 70.35
-        },
-        {
-          "video_id": "StTxTBwLoFM",
-          "title": "DOLOMITI - MARE: LA CICLOVIA PIÚ BELLA D'ITALIA",
-          "channel": "Pietro Franzese",
-          "view_count": 60240,
-          "upload_date": "20240918",
-          "duration_string": "30:00",
-          "description": "La scorsa estate ho percorso in bicicletta quella che è forse la ciclovia più bella d'Italia ovvero la Dolomiti - Mare, che parte da Dobbiaco e termina dopo 290 chilometri sul mare adriatico\n\nIl tracciato è in gran parte su pista ciclabile o comunque su strade lontane dal traffico ma sopratutto è un percorso dai panorami mozzafiato: dalle Dolomiti alla valle del Cadore, dai borghi storici alle colline del Prosecco e dalla valle del Piave fino ad arrivare alla costa adriatica\n\nIn questo viaggio c'è tutto: natura, storia ed enogastronomia! Venite con me a scoprire la ciclovia più bella d'Italia...\n\nORGANIZZA IL TUO VIAGGIO CON FUN ACTIVE ► https://www.funactive.info/tour/dallalta-pusteria-a-venezia/\n\nLA TRACCIA ► https://www.komoot.com/it-it/tour/1866448832\n\n---------------------------------\n\nSECONDO CANALE ► https://www.youtube.com/@GravelHouseItalia\nEntra nel gruppo! ► https://www.patreon.com/pietrofranzese\nIL MIO EBOOK ► https://amzn.to/2WrXYyP\nLa mia maglietta a tema cicloturismo ► https://bikecreative.it/\n\nCODICE SCONTO (valido su tutti i prodotti) DEL 20% ► PIETRO_20\nACQUISTA DAL SITO ► https://www.phapparel.com/\n\nSELLE SAN MARCO ► https://it.sellesanmarco.com/\nSCONTO 15% CON CODICE PIETRO-SSM\n\nUSA IL CODICE PER IL 30% DI SCONTO ► LIMAR30FRANZESE \nIL SITO DI LIMAR ► https://limar.com/\n\nSOCIAL:\nInstagram ►https://www.instagram.com/pietro_franzese/\nFacebook ► https://www.facebook.com/profile.php?id=100088245820674\nStrava ► https://www.strava.com/athletes/32522831\nKomoot ► https://www.komoot.it/user/809059879775\nCanale Telegram ► https://t.me/pietrofranzeseofficial\n\nBLOG ► https://pietrofranzese.com/\nPodcast su Spotify ► https://open.spotify.com/show/5ha5TLmh5NpA7qyAQVApdF",
-          "tags": [
-            "cicloturismo",
-            "viaggiare in solitaria",
-            "viaggiare in bicicletta",
-            "viaggio in bici",
-            "viaggiare",
-            "pietro franzese",
-            "viaggio in bicicletta",
-            "dino lanzaretti",
-            "lorenzo barone",
-            "davide travelli",
-            "ilbiker",
-            "andrea ziliani",
-            "gravellata",
-            "cicloturismo dolomiti mare",
-            "viaggio in bicicletta dalle dolomiti al mare adriatico",
-            "monaco venezia in bicicletta ciclabile",
-            "la ciclovia più bella d'italia",
-            "ciclismo turismo dobbiaco",
-            "fun active tour recensione",
-            "tour in bicicletta su pista ciclabile"
-          ],
-          "url": "https://www.youtube.com/watch?v=StTxTBwLoFM",
-          "curated": false
-        },
-        {
-          "video_id": "uJIV6lSSeoY",
-          "title": "L'Eroica",
-          "channel": "Giulia Rocco",
-          "view_count": 2749,
-          "upload_date": "20120404",
-          "duration_string": "3:04",
-          "description": "Fino a 200 chilometri di gara, tra strade bianche e campagna senese. L'Eroica è una cicloturistica che si svolge ogni anno nella provincia di Siena e riunisce gli appassionati di ciclismo.\n\nTrailer ideato da:\nAemilius srl\nMontaggio:\nGiulia Rocco\nMusiche:\nFederico Nicolis Preto",
-          "tags": [
-            "bici",
-            "cicloturistica",
-            "Siena",
-            "competizione",
-            "ciclistica"
-          ],
-          "url": "https://www.youtube.com/watch?v=uJIV6lSSeoY",
-          "curated": false
-        },
-        {
-          "video_id": "rgAcb20C4Ds",
-          "title": "LA TOSCANA IN BICICLETTA È BELLISSIMA! 🚴🏻‍♂️ Val D'Orcia Gravel",
-          "channel": "Roby Bragotto",
-          "view_count": 51416,
-          "upload_date": "20221102",
-          "duration_string": "14:25",
-          "description": "Ho girato la Toscana in bicicletta partecipando alla prima bellissima edizione della Val D'Orcia Gravel. Paesaggi incredibili, panorami stupendi, vino buono e le colline della Toscana conosciute in tutto il mondo, è stato incredibile girarle in bicicletta gravel!\n\n#toscana  #gravel #ciclismo   \n\n_____\n\n► SHOP FOTO EDIZIONE LIMITATA: \nhttps://bit.ly/37IEInA\n\n► NFT PEZZO SINGOLO: \nhttps://bit.ly/3Pgp97w\n\n_____\n\n► BICI GRAVEL JENA WILIER:  https://bit.ly/2QMXfGQ\n\n► RAVE SLR WILIER: https://bit.ly/3sTNXZm\n\n► RUOTE URSUS:  https://bit.ly/2XmYUpv\n\n► BICI E-MTB WILIER: https://bit.ly/2WlAJ7D\n\n► SITO WILIER: https://bit.ly/3ddHa2N\n\n► ACCESSORI WILIER: https://bit.ly/2YBHFil\n\n► ABBIGLIAMENTO WILIER: https://bit.ly/2Z5WlFu\n\n_____\n\n► SUPPORTA IL CANALE! DONAZIONI: \nhttps://paypal.me/robybragotto\n\n► Collaborazioni: \nrobybragotto@gmail.com\n\n_____\n\n► Quello che uso: \nhttps://amzn.to/3DZGMlk\n\n____\n\n► Link Social\n• INSTAGRAM: https://bit.ly/3AXZHLq\n• Strava: https://bit.ly/2XwfJ1I\n• Telegram: https://t.me/robybragottoyoutube\n• Facebook: https://bit.ly/3G5jBba\n• Sito: https://bit.ly/3aPpQ4K\n\n____\n\n► Chi sono?\n\n• Nome : Roby Bragotto\n• Residenza : Bassano del Grappa (VI)\n• Professione : Fotografo Professionista Outdoor\n• Statura : 175 cm\n• Peso : 73 Kg",
-          "tags": [
-            "toscana in bicicletta",
-            "toscana gravel",
-            "tuscany gravel ride",
-            "toscana in gravel",
-            "gravel toscana",
-            "val d'orcia gravel",
-            "val d'orcia in bicicletta",
-            "roby bragotto",
-            "bragotto bici",
-            "wilier triestina jena gravel"
-          ],
-          "url": "https://www.youtube.com/watch?v=rgAcb20C4Ds",
-          "curated": false
         }
       ],
       "quotes": []
     },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'sportive' but this is actually a non-competitive vintage-bike heritage ride (ciclostorica) with substantial unpaved content — the long route is roughly 47% strade bianche/white gravel road (55 of 118km) and the short route is roughly 59% unpaved, with mandatory pre-1987 steel bicycles (or vintage-style equivalents) and no clipless pedals allowed. Doesn't cleanly fit the road-sportive taxonomy or its scoring dimensions (road_surface, descent_technicality, prestige assume a competitive paved road event). Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 5"
+    },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://eroica.cc/de/eroica-dolomiti/regulation-eroica-dolomiti",
-      "notes": "2025 edition held and 2026 edition scheduled for September 4–6 with main ride on September 5 in San Candido.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.eroica.cc/regolamento-dolomiti/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): terrain.surface changed from 'Paved roads' to a mixed asphalt/strade-bianche description — the long route is documented at 55km white road / 63km asphalt (~47% unpaved), directly contradicting the prior 'Paved roads' listing. distance_km changed from 109.4 to 118 (official regulations figure; the organizer's own route page says 110km — noted discrepancy, not silently resolved). cutoff_time changed from an unsupported '13 hours' to the documented long-route-only support wind-down from Dobbiaco starting at 17:00. field_size added (500-bib cap, ~400 in 2025). founded changed from null to 2017 (San Candido edition; distinct from L'Eroica Tuscany's 1997 founding — do not conflate). route_options added for Long/Medium/Short with documented surface splits. Purged 3 of 5 youtube_data entries that were not about this race: one was about the original L'Eroica in Tuscany/Siena (a different event), two were unrelated Tuscany/Val d'Orcia bike-touring videos with no connection to Eroica Dolomiti or San Candido — kept only the 2 curated, genuinely on-topic videos. Added catalog_flags per flandrien-ride.json precedent given the discipline='sportive' vs. majority-unpaved/non-competitive reality mismatch. SOL REVIEW (2026-07-24): softened absolute 'only steel bikes'/'every rider' equipment claims — verified via live fetch of https://www.eroica.cc/regolamento-dolomiti/ that the short route accepts other vintage bike types (service/postman/work bikes) and the regulations carve out disability exceptions; now scoped equipment mandate to long/medium routes. Removed fabricated-sounding sensory narrative in suffering_zones ('exposed', 'tired legs', 'deep into the unpaved back half') not supported by the cited route pages; softened the external-brake-cables mechanical claim to note the organizer doesn't publish gradient data to quantify it. Removed unsupported quality judgments 'well-organized'/'well-run' (regulations prove checkpoints/food-stops exist, not execution quality) and hype language 'genuinely spectacular'/'genuinely special'/unqualified 'internationally recognized'. Fixed a location error: the short route's official description places it between Cortina d'Ampezzo/Passo Tre Croci/Lake Misurina, not explicitly 'views toward' those landmarks from the long route as previously implied. Added the medium-route distance discrepancy (95km regs vs. 91km route page) alongside the already-flagged long-route discrepancy — verified both are real organizer-source inconsistencies, not resolved by this pass. Scoped the 17:00 support wind-down explicitly to the long route only (regulations text: 'Tempo massimo – percorso lungo') rather than presenting it as a course-wide window."
     }
   }
 }

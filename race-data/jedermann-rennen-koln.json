@@ -5,24 +5,27 @@
     "display_name": "Jedermann-Rennen Rund um Köln",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 1500,
-      "elevation_ft": 4921.0,
-      "location": "Cologne, Germany",
+      "distance_km": 121.0,
+      "distance_mi": 75.2,
+      "elevation_m": 1170,
+      "elevation_ft": 3839.0,
+      "location": "Cologne, Germany (Rheinauhafen start/finish, through Bergisches Land)",
       "location_badge": "Cologne, Germany",
       "country": "Germany",
-      "date": "2026: May 17",
-      "date_specific": "2026: May 17",
-      "field_size": "Large (hundreds)",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "date": "2027: May 23 (109th edition)",
+      "date_specific": "2027: May 23 (109th edition; last completed: 2026-05-17, 108th edition)",
+      "field_size": "Velodom 120 cap 5,000; Velodom 60 cap 4,500 (2027)",
+      "start_format": "Speed-based rolling start blocks, separate from the professional race start",
+      "registration": "https://www.rundumkoeln.de/",
+      "entry_fee": "Velodom 120: EUR90 (1-500) / EUR105 (501-1,000) / EUR125 thereafter. Velodom 60: EUR70 launch price, rising by tranche.",
       "feed_zones": "Multiple on course",
-      "cutoff_time": "N/A",
+      "cutoff_time": "Minimum average speed of 25 km/h including feed stops; riders falling behind can be pulled and recorded DNF",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Velodom 120: 121 km, 1,170 m gain — full Granfondo route sharing much of the professional course",
+        "Velodom 60: 65.8 km, 490 m gain — shorter route via the Bensberg cobbles"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAG (2026-07-24 editorial wave 5): vitals corrected from an unsourced 99.8km/1,500m to the organizer-confirmed Velodom 120 course (121km/1,170m) — longer and flatter than the prior figures. Under the repo's dimension rubric this leaves distance=3 supported but conflicts with climbing=4 (1,170m implies lower); the course also includes a cobbled Schloss Bensberg passage that road_surface=1 (fresh tarmac throughout) doesn't account for. Recommend a human re-check climbing and road_surface against these corrected facts. Numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +73,93 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starts and finishes at Rheinauhafen in central Cologne, running out through eastern and northern Cologne into the Bergisches Land before returning. The Velodom 120 pushes further — through the airport area, Lohmar, Overath/Ferrenberg, Kürten and Wipperfeld — while the Velodom 60 takes a shorter loop through Bergisch Gladbach. Both routes share the race's signature obstacle on the way back: a cobbled climb up to Schloss Bensberg, the one non-smooth section on an otherwise fully paved course. The Granfondo waves start separately and earlier than the professional Rund um Köln classic (which begins at 11:30, hours after the Velodom fields), sharing roads and the Rheinauhafen finish line but running as their own timed, ranked races.",
+      "signature_challenge": "The cobbled climb to Schloss Bensberg, arriving on both routes after the Bergisches Land rollers have already worn riders down — the defining non-smooth section on an otherwise fully paved course.",
+      "suffering_zones": [
+        "Wand von Sand — the climb out of Cologne into Bergisch Gladbach that opens the real work",
+        "Schloss Bensberg cobbles — the race's signature obstacle, hit on both the 60 and 120",
+        "The Bergisches Land rollers (Overath, Kürten, Wipperfeld on the 120) — sustained short, sharp climbing rather than one defining ascent",
+        "Maintaining the mandatory 25 km/h minimum average, including feed stops, for the full distance — fall behind and you can be pulled and recorded DNF"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Abundant hotels in Cologne; book early for race weekend.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.rundumkoeln.de/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 1908,
+      "origin_story": "The professional Rund um Köln was founded by four Cologne cycling clubs and first held September 13, 1908 — the organizer calls it Germany's oldest surviving road race, with more editions than any other German race. The modern open-entry mass-participation Granfondo/Jedermann product (branded Velodom) is much younger: it premiered in 2004, when non-licensed recreational riders were first allowed onto the professional course. The two histories are related but distinct — don't read the 1908 founding date onto the amateur race itself.",
+      "notable_moments": [
+        "1908: Professional Rund um Köln founded by four Cologne cycling clubs",
+        "2004: Modern open-entry Jedermann/Velodom mass-participation race launched alongside the professional event",
+        "2026 (108th edition, May 17): 8,500+ combined Velodom entries; Laurence Pithie won the professional race",
+        "2027 (109th edition, May 23): registration opened with Velodom 60 and 120 only — Velodom 30, held in 2026, is not offered"
+      ],
+      "reputation": "A long-running, well-organized German Jedermann race riding real sections of the country's oldest professional classic, with genuine competitive structure (speed-based start blocks, age categories, team classifications) rather than a loose group ride."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Competitive Race, Sharing the Old Roads",
+      "summary": "The Jedermann-Rennen at Rund um Köln is a genuine, competitively structured mass-participation race, not a curtain-raiser tacked onto a professional event. Riders start in speed-based blocks hours ahead of the professional race, run their own transponder-timed results with age categories and team classifications, and finish under a mandatory 25 km/h minimum average pace. The course shares real roads with Germany's oldest surviving professional race (founded 1908) — including the cobbled climb to Schloss Bensberg — but the modern open-entry Granfondo product itself dates only to 2004; don't confuse the parent race's century-plus pedigree with the amateur event's shorter history. The organizer trimmed its lineup for 2027, dropping the shorter Velodom 30 and offering only the 60 and 120.",
+      "strengths": [
+        "Genuinely separate, competitively structured race — speed blocks, transponder timing, age categories, team classifications — not a loose ride alongside the pros",
+        "Real historical roads: shares course sections, including the Schloss Bensberg cobbles, with Germany's oldest surviving professional road race",
+        "Strong, growing demand — 2027 registration was more than half sold within a week of opening",
+        "Clear competitive standard (25 km/h minimum average) that keeps the field genuinely racing rather than touring"
+      ],
+      "weaknesses": [
+        "The 1908 founding date belongs to the professional race, not the amateur Jedermann/Velodom product, which only dates to 2004 — treat any '100+ years' framing of the amateur race itself skeptically",
+        "The shorter Velodom 30 option was dropped for 2027 — only the 60 and 120 remain",
+        "Entry pricing rises in tranches through the registration window (EUR90 to EUR125 on the 120), so late registrants pay meaningfully more",
+        "The mandatory minimum average speed means this isn't a casual ride — riders who can't hold 25 km/h risk being pulled from the course"
+      ],
+      "bottom_line": "A legitimate, well-organized German Jedermann race with real competitive stakes and genuine ties to Rund um Köln's professional heritage — go in ready to hold pace, not to tour."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Classic German amateur road race sharing pro roads with punchy hills and great atmosphere.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real competitive Jedermann race on Germany's oldest professional cycling roads — bring race fitness, not tourist legs.",
+      "should_you_race": "Yes if you want a genuinely competitive, well-organized German road race with historical roads and clear categories. Skip it if you want a casual group ride — the mandatory 25 km/h minimum average is enforced.",
+      "alternatives": "For a similarly historic German road event with an amateur component, check other Bundesliga-adjacent Jedermann races on the German cycling calendar; for a less competitive touring alternative in the same region, look for a Bergisches Land ADFC-style recreational tour instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.rundumkoeln.de/anmeldung-fuer-die-109-auflage-von-rund-um-koeln-geoeffnet/",
+        "category": "official",
+        "label": "Official 2027 Registration Announcement — 109th Edition, Velodom 60/120 Only"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/laurence-pithie-gewinnt-rund-um-koeln/",
+        "category": "official",
+        "label": "Official 2026 Race Report — 108th Edition, Professional Winner"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/wettbewerbe/velodom-120/",
+        "category": "official",
+        "label": "Official Velodom 120 Competition Page — Course, Fees, Regulations"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/wettbewerbe/velodom-60/",
+        "category": "official",
+        "label": "Official Velodom 60 Competition Page — Course, Fees"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/wp-content/uploads/sites/9/2026/05/150505_RUK26_Roadbook_200x280_RZ_Web.pdf",
+        "category": "official",
+        "label": "Official 2026 Roadbook — Detailed Course Maps and Timing"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/hilfe/altersklassen/",
+        "category": "official",
+        "label": "Official Age Categories — Youth Through Masters 4"
+      },
+      {
+        "url": "https://www.rundumkoeln.de/rund-um-koeln-steuert-auf-den-naechsten-anmelderekord-zu-bereits-nach-einer-woche-mehr-als-die-haelfte-aller-startplaetze-vergeben/",
+        "category": "official",
+        "label": "Official 2027 Registration Pace Update — Half Sold Within One Week"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Jedermann-Rennen Rund um Köln gran fondo cycling Cologne",
@@ -213,9 +272,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.rundumkoeln.de/allgemeine-informationen-zu-rund-um-koeln-2026/",
-      "notes": "2026 edition is announced and detailed on the official site; no rebrand found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.rundumkoeln.de/anmeldung-fuer-die-109-auflage-von-rund-um-koeln-geoeffnet/",
+      "notes": "109th edition (Velodom 60/120) scheduled 2027-05-23, registration open and more than half sold within one week. 108th edition completed 2026-05-17 (Laurence Pithie won the professional race). Vitals corrected from an unsourced 99.8km/1,500m to the organizer-confirmed Velodom 120 course (121km/1,170m); Velodom 30 (shorter option, run 2026) is not offered for 2027. Verified via codex gpt-5.6-sol foreground research + curl-verification of rundumkoeln.de (200 OK)."
     }
   }
 }

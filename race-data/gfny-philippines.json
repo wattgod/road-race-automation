@@ -5,35 +5,44 @@
     "display_name": "GFNY Philippines",
     "tagline": "",
     "vitals": {
-      "distance_km": 135.2,
-      "distance_mi": 84.0,
-      "elevation_m": 1219,
-      "elevation_ft": 4000.0,
-      "location": "Subic Bay, Philippines",
-      "location_badge": "Subic Bay, Philippines",
+      "distance_km": 133.0,
+      "distance_mi": 82.6,
+      "elevation_m": 650,
+      "elevation_ft": 2133.0,
+      "location": "Iloilo City, Philippines (last held; earlier 2019 edition was in Bohol)",
+      "location_badge": "Iloilo City, Philippines",
       "country": "Philippines",
-      "date": "2026: March 15",
-      "date_specific": "2026: March 15",
-      "field_size": null,
-      "start_format": null,
+      "date": "Last held: September 22, 2019 (GFNY Asian Championship)",
+      "date_specific": "Last held: September 22, 2019. No 2025/2026 edition exists.",
+      "field_size": "300+ riders from 15 countries (2019, Iloilo)",
+      "start_format": "Mass start, chip-timed",
       "registration": null,
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long course (competitive, 2019 Iloilo)",
+          "distance_km": 133,
+          "elevation_m": 650
+        },
+        {
+          "name": "Medium course (timed, non-competitive, 2019 Iloilo)",
+          "distance_km": 64,
+          "elevation_m": 220
+        }
+      ]
     },
     "climate": {
       "primary": "Tropical",
-      "description": "Tropical dry season in March: hot, humid, sunny with low rain risk.",
-      "challenges": [
-        "Precipitation: Low (10-20%)"
-      ]
+      "description": "Tropical climate; the two known editions ran in different seasons — Bohol in late January 2019, Iloilo in September 2019 — so no single stale-date climate description applies.",
+      "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Fully paved",
+      "primary": "Rolling countryside roads",
+      "surface": "Paved roads",
       "technical_rating": 1,
       "features": []
     },
@@ -58,7 +67,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67. Score reflects the event's only confirmed active year (2019, two editions: Bohol and Iloilo); not recalculated for defunct status per standing rule not to silently reshuffle scores — see catalog_flags/eligibility.notes."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -72,67 +81,92 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Rolling paved roads departing Subic Bay Freeport Zone into the scenic Bataan province, featuring coastal views, moderate climbs, and a fast return to the finish. Long course emphasizes endurance with qualifier potential for top age-groupers.",
-      "signature_challenge": "The 84-mile loop through Bataan province, mirroring pro routes with scenic yet demanding paved roads.",
-      "suffering_zones": [
-        "Bataan Outbound Climb: Early punchy ascent out of Subic Bay into Bataan roads, testing legs in humid conditions.",
-        "Mid-Route Rollers: Constant undulations through picturesque countryside accumulating the 4000 ft gain.",
-        "Return Push: Final efforts back to Subic Bay with fatigue setting in under tropical sun."
-      ]
+      "character": "IMPORTANT — this profile describes an inactive event with no evidence of any edition since 2019 (no organizer statement of discontinuation was found, so treat this as prolonged inactivity rather than a confirmed shutdown). GFNY Philippines held two known editions, both in 2019: Bohol (January 27, ~140km/~1,554m on well-paved backroads) and Iloilo City (September 22, the GFNY Asian Championship, 133km/650m long course plus a 64km/220m timed non-competitive medium course, starting from Iloilo Business Park/Festive Walk and crossing 14 municipalities and two cities). The official results page lists nothing more recent, and Philippines is absent from GFNY's current worldwide race calendar. The prior version of this profile's Subic Bay/Bataan course description closely resembles content from PRUride Philippines, a separate, unrelated 2018 multi-event program that was never a GFNY chapter — the wording overlap is strong, though direct provenance isn't independently confirmed.",
+      "signature_challenge": null,
+      "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Subic Bay hotels and resorts abundant; book early for freeport zone proximity.",
-      "transport": "Hosted in cyclist-friendly Subic Bay Freeport Zone with exhibition center start/finish. Expect smooth GFNY operations including packet pickup and aid stations.",
+      "lodging_strategy": "",
+      "transport": "",
       "food": "",
       "official_site": "https://philippines.gfny.com"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "Part of GFNY World series, with roots in events like PRUride Philippines Gran Fondo. Established as GFNY chapter with competitive long course rankings.",
+      "founded": 2019,
+      "origin_story": "First staged in Bohol in January 2019, then re-staged in Iloilo City that September as the GFNY Asian Championship — functioning as a GFNY country chapter that moved location between its two known editions rather than a single fixed annual race. No edition has been reported since.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Inactive — No Edition Since 2019",
+      "summary": "There is no current GFNY Philippines to rate. The event held two editions, both in 2019 — Bohol in January, then Iloilo City in September as the GFNY Asian Championship — and nothing since. The official results page confirms only those two dates, and GFNY's current worldwide race calendar doesn't list a Philippines chapter at all; the philippines.gfny.com site still resolves but is a stale shell (its header still references a 2025 date, its registration page still says \"COMING SOON\"). No organizer statement confirming discontinuation was found — this is a call based on six years of silence and absence from GFNY's live calendar, not a confirmed shutdown announcement. Compounding the problem, the version of this profile prior to this correction described a Subic Bay/Bataan course that never belonged to GFNY Philippines at all — that content closely resembles PRUride Philippines, an unrelated 2018 event program, though direct provenance isn't independently confirmed.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not currently exist — it should not be presented to riders as a bookable 2026 race",
+        "It moved location between its two known 2019 editions (Bohol, then Iloilo City) rather than running as a single fixed annual race",
+        "Six years of silence since the last confirmed edition (September 2019) with no organizer announcement of cancellation or revival",
+        "The prior profile mixed in course details from a different, unrelated event (PRUride Philippines) — a data-quality failure worth a human double-check"
+      ],
+      "bottom_line": "No edition since 2019, with no formal organizer announcement of discontinuation found. If you want a GFNY event in Asia, check GFNY's current worldwide race calendar directly — Philippines is not on it."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "GFNY Philippines delivers pro-level road racing in tropical paradise.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "GFNY Philippines: two 2019 editions, Bohol then Iloilo, nothing since.",
+      "should_you_race": "No — this event does not currently exist. Check GFNY's live race calendar (gfny.com) for its current active Asia-Pacific chapters instead.",
+      "alternatives": "No current Philippines-based GFNY alternative found in this research pass; consult GFNY's official race calendar for the current Asia-Pacific chapter list."
     },
     "citations": [
       {
-        "url": "https://philippines.gfny.com",
-        "category": "reference",
-        "label": "GFNY Philippines: Home"
+        "url": "https://philippines.gfny.com/results/",
+        "category": "official",
+        "label": "Official GFNY Philippines Results — Only 2019 Editions Listed (curl-verified)"
       },
       {
-        "url": "https://philippines.gfny.com/course/",
-        "category": "reference",
-        "label": "Course - GFNY Philippines"
+        "url": "https://philippines.gfny.com/register/",
+        "category": "official",
+        "label": "Official Registration Page — Still Says \"Coming Soon\" (stale shell)"
+      },
+      {
+        "url": "https://gfny.com/race-finder/?fwp_race_finder_event_type=cycling",
+        "category": "official",
+        "label": "GFNY Worldwide Race Finder — Philippines Absent from Current Calendar (curl-verified)"
+      },
+      {
+        "url": "https://www.sunstar.com.ph/iloilo/barber-from-marikina-wins-gfny-asia-championship",
+        "category": "media",
+        "label": "SunStar — Iloilo 2019 GFNY Asian Championship Race Report"
+      },
+      {
+        "url": "https://www.iloilotoday.com/iloilo-gfny-asian-championship/",
+        "category": "media",
+        "label": "Iloilo Today — 2019 Iloilo Course Announcement"
+      },
+      {
+        "url": "https://boholnewsdaily.com/2019/01/page/2",
+        "category": "media",
+        "label": "Bohol News Daily — January 2019 Bohol Edition Coverage"
+      },
+      {
+        "url": "https://tpb.gov.ph/wp-content/uploads/2019/04/1Q-Accomplishment-Report-2019.pdf",
+        "category": "official",
+        "label": "Philippine Tourism Promotions Board — 2019 Bohol Event Completion Report"
       },
       {
         "url": "https://www.granfondoguide.com/Contents/Index/3419/pruride-phillipines-to-attract-over-5000-cyclists-across-southeast-asia",
-        "category": "reference",
-        "label": "PRUride Phillipines to attract over 5,000 cyclists across Southeast Asia"
-      },
-      {
-        "url": "https://gfny.com",
-        "category": "reference",
-        "label": "GFNY World: Home"
+        "category": "media",
+        "label": "PRUride Philippines 2018 (unrelated event) — Source of the Prior Profile's Subic Bay/Bataan Content"
       }
     ],
+    "catalog_flags": {
+      "status_note": "Defunct since 2019 (last edition: Iloilo City, Sept 22, 2019; an earlier 2019 edition was in Bohol — never Subic Bay). The prior profile's Subic Bay/Bataan location and course description appear to have been contaminated with content from PRUride Philippines, an unrelated 2018 multi-event program that was never a GFNY chapter. Vitals, location, and history have been corrected to the actual last confirmed edition (Iloilo) in this pass; recommend a human sanity-check given the two-city (Bohol/Iloilo) history and the prior data contamination.",
+      "ruled": "2026-07-24 editorial wave 5"
+    },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.youtube.com/watch?v=GOFPrURDszk",
-      "notes": "Only 2019 race-day media found; no evidence of 2025-2026 editions or current announcements.; last edition evidenced: 2019; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://philippines.gfny.com/results/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): status changed from 'unknown' to 'defunct' — official results page lists only two 2019 editions (Bohol Jan 27, Iloilo Sept 22) and nothing since; GFNY's current worldwide Race Finder does not list a Philippines chapter (it assigns March 15, 2026 to GFNY Punta del Este instead, the date our prior vitals had misattributed to Philippines). location changed from 'Subic Bay, Philippines' (unsupported — no GFNY Philippines edition was ever held in Subic Bay) to 'Iloilo City, Philippines' (the last confirmed edition). distance_km changed from 135.2 to 133, elevation_m from 1219 to 650 (both matching the actual 2019 Iloilo long course; the prior figures matched neither known 2019 course). founded changed from 2018 to 2019 (first held edition, per official results and Philippine Tourism Promotions Board records). date changed from a fabricated-looking 'March 15, 2026' to 'Last held: September 22, 2019'. The prior Subic Bay/Bataan course_description content closely resembles PRUride Philippines (a different, unrelated 2018 event) and has been removed. SOL REVIEW (2026-07-24): fixed a stale climate.description that still said 'dry season in March' after the date correction to September/January; fixed scoring_notes which still said '2018-2019' after founded was corrected to 2019-only; softened 'traces to PRUride' (unproven provenance) to 'closely resembles PRUride' and added the PRUride citation to the citations array (it was referenced in prose but missing from citations); softened verdict/bottom_line from 'Discontinued'/'Retired' to 'Inactive — No Edition Since 2019' since — unlike the birkebeinerrittet-road.json precedent, which has a direct organizer shutdown-confirmation source — no organizer statement confirming discontinuation was found for GFNY Philippines; this is an evidence-based inactivity call (6 years of silence + absence from GFNY's live calendar), not a confirmed shutdown, and the profile now says so explicitly. Removed an unsourced comparative judgment ('unusual instability for a GFNY chapter'). Added official rules and registration-page citations for direct source coverage of previously-uncited claims."
     }
   }
 }

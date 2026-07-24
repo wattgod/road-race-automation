@@ -128,11 +128,15 @@
         "label": "JOIN US AT THE DOURO GRANFONDO AND GET A FREE ..."
       }
     ],
+    "catalog_flags": {
+      "duplicate_of": "douro-gran-fondo.json",
+      "ruled": "2026-07-24 dedupe sweep"
+    },
     "eligibility": {
       "status": "unknown",
       "verified": "2026-07-23",
       "source": "https://www.granfondoguide.com/GlobalGranFondoResultsHub/Season2026",
-      "notes": "No reliable information found for a Granfondo do Porto road event in Porto; other Portuguese granfondos appear but not this one.; via sonar-pro eligibility_audit"
+      "notes": "No reliable information found for a Granfondo do Porto road event in Porto; other Portuguese granfondos appear but not this one.; via sonar-pro eligibility_audit; DUPLICATE — same underlying event (Love Tiles Douro Granfondo, Peso da Regua/Douro Valley, official site bikeservice.pt/event/douro-granfondo/, same 2026-04-26 date) already exists as the fuller, GOLD-written race-data/douro-gran-fondo.json (real biased_opinion, wave-3-verified eligibility, matching citations). This profile's own official_site and citations point to the same bikeservice.pt Douro Granfondo, but its display name ('Granfondo do Porto') and location ('Porto, Portugal') don't match the actual host town (Peso da Regua, ~100km from Porto) — flagged duplicate_of douro-gran-fondo.json rather than written up separately. Per pipeline spec, no editorial content added to this lower-quality/emptier profile."
     }
   }
 }

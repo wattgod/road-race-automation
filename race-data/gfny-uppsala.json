@@ -5,24 +5,36 @@
     "display_name": "GFNY Uppsala",
     "tagline": "",
     "vitals": {
-      "distance_km": 120.7,
-      "distance_mi": 75.0,
-      "elevation_m": 1800,
-      "elevation_ft": 5906.0,
-      "location": "Uppsala, Sweden",
+      "distance_km": 133.5,
+      "distance_mi": 83.0,
+      "elevation_m": 494,
+      "elevation_ft": 1621.0,
+      "location": "Uppsala, Sweden (start/finish at Ulva Kvarn)",
       "location_badge": "Uppsala, Sweden",
       "country": "Sweden",
-      "date": "2026: August 23",
-      "date_specific": "2026: August 23",
-      "field_size": "N/A",
-      "start_format": null,
+      "date": "Last held: August 24, 2024 (2nd edition, GFNY European Championship)",
+      "date_specific": "Last held: August 24, 2024. No 2025/2026 edition exists.",
+      "field_size": null,
+      "start_format": "One corralled start: licensed/qualified riders, then age-group long-course riders, then medium-course riders",
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "6.5 hours (course closes 3:30 PM)",
+      "feed_zones": null,
+      "cutoff_time": "6.5 hours (2024 edition: 09:00 start, course closed 15:30) — historical, not evidence of an active future edition",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Long course (competitive, 2024)",
+          "distance_km": 133.5,
+          "elevation_m": 494,
+          "surface": "6 gravel sectors totaling ~38km (~28% of route)"
+        },
+        {
+          "name": "Medium course (timed, non-competitive, 2024)",
+          "distance_km": 79,
+          "surface": "3 gravel sectors totaling ~19km (~24% of route)"
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -30,8 +42,8 @@
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Rolling countryside, flat-to-gently-rolling",
+      "surface": "Mixed paved and hard-packed gravel roads (~24-28% gravel by sector)",
       "technical_rating": 1,
       "features": []
     },
@@ -56,22 +68,22 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAGGED (2026-07-24, sol review): the corrected vitals (133.5km/494m, ~24-28% gravel, replacing the prior 120.7km/1800m/'Paved roads') materially change the honest basis for at least three dimensions per config/dimensions.json's rubric — distance=4 implies 160-200km (actual 133.5km maps to distance=3); climbing=3 implies 1,500-2,500m of gain (actual 494m maps to climbing=1); road_surface=1 implies fresh tarmac throughout (actual ~24-28% gravel maps to road_surface=3+). Per standing rule, dimension values and overall_score/tier are NOT silently reshuffled here — flagging for a human-reviewed recalculation instead. Also not recalculated for defunct status — see catalog_flags/eligibility.notes."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
-      "cat_2_climbs": null,
-      "cat_3_climbs": null,
+      "total_climbs": 0,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
       "key_climbs": [],
-      "profile_type": null,
+      "profile_type": "Flat-to-rolling, no named/significant climbs",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "IMPORTANT — this profile describes an inactive event with no evidence of any edition since 2024 (no organizer statement of discontinuation was found — this is a call based on calendar absence and results-page silence, not a confirmed shutdown). GFNY Uppsala ran two known editions, 2023 and 2024, from a start/finish at Ulva Kvarn through rolling Uppsala countryside — lakes, forests, nature preserves, villages, and farms. It was genuinely mixed-surface, not the fully paved race the prior profile described: the 2024 long course (133.5km/494m) included six gravel sectors totaling roughly 38km, about 28% of the route, and the medium course (79km) had three gravel sectors totaling roughly 19km. There are no named or significant climbs — the official course page identifies the rolling topography and the wind as the day's principal difficulties. GFNY's current worldwide race calendar does not list Uppsala, and the uppsala.gfny.com site, while still resolving, is a stale shell referencing 2024 medals and the 2025 New York championship.",
+      "signature_challenge": null,
       "suffering_zones": []
     },
     "logistics": {
@@ -79,28 +91,69 @@
       "lodging_strategy": "N/A; Uppsala offers options as Sweden's 4th largest city near Stockholm.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://uppsala.gfny.com"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2023,
+      "origin_story": "Originally announced in 2022 for a very different proposed course (168km/1,862m from Uppsala's city ice rink) that was never actually raced. The first real edition ran August 27, 2023 (~144km, with unpaved roads); GFNY's own reporting calls the August 24, 2024 edition the second, confirming only two actual editions took place. No edition has been reported since.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Inactive — No Edition Since 2024",
+      "summary": "There is no current GFNY Uppsala to rate. The event ran two real editions — 2023 and 2024 — after an initial 2022 course proposal that was never raced as announced. GFNY's own site confirms 2024 as the second edition. Since then, nothing: Uppsala is absent from GFNY's current worldwide race calendar (which assigns the August 23, 2026 date our prior profile had used to a different event, GFNY Orcieres, in France), and no organizer statement confirming discontinuation was found — this is an evidence-based inactivity call, not a confirmed shutdown. The uppsala.gfny.com site still resolves, which can make the chapter look alive, but its content is stale — referencing 2024 finisher medals and the 2025 New York championship, with no working registration form. Worth correcting on the way out: this was never the fully paved race our prior profile described. Roughly a quarter of both the long and medium courses ran on hard-packed gravel sectors through the Uppsala countryside.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not currently exist — it should not be presented to riders as a bookable 2026 race",
+        "Only two real editions (2023, 2024) took place before an apparent quiet inactivity, with no organizer announcement of cancellation found",
+        "The stale uppsala.gfny.com site (referencing 2024/2025 content with no working registration) makes the chapter's inactive status easy to miss on a casual check",
+        "Even during its active years, the surface was materially different from a standard paved GFNY race — ~24-28% gravel — a fact the prior profile's 'Paved roads' listing obscured"
+      ],
+      "bottom_line": "No edition since 2024, with no formal organizer announcement of discontinuation found. If you want a GFNY event with genuine Vosges climbing in this same database, see GFNY Grand Ballon — its 2026 edition (July 12) has already run, so check GFNY's calendar for the next confirmed date."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "GFNY Uppsala blends Swedish history, rolling gravel-road loops, and GFNY prestige near Stockholm.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "GFNY Uppsala: two real editions (2023-2024), mixed paved/gravel terrain, nothing since.",
+      "should_you_race": "No — this event does not currently exist. Check GFNY's live race calendar (gfny.com) for its current active European chapters instead.",
+      "alternatives": "GFNY Grand Ballon (Thann, France) is a currently active GFNY event in the same database — its 2026 edition (July 12) has already been held, so check GFNY's calendar for the next date — with a mountain climbing course through the Vosges rather than Uppsala's flat-to-rolling terrain."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://uppsala.gfny.com/results/?lang=en",
+        "category": "official",
+        "label": "Official GFNY Uppsala Results — Only 2023/2024 Editions Listed (curl-verified)"
+      },
+      {
+        "url": "https://gfny.com/race-finder/?fwp_race_finder_event_type=cycling",
+        "category": "official",
+        "label": "GFNY Worldwide Race Finder — Uppsala Absent from Current Calendar (curl-verified)"
+      },
+      {
+        "url": "https://gfny.com/gfny-double-race-weekend-results/",
+        "category": "official",
+        "label": "GFNY Official 2024 Post-Race Report — Distance, Elevation, Winners"
+      },
+      {
+        "url": "https://uppsala.gfny.com/course/?lang=en",
+        "category": "official",
+        "label": "Official Course Page — Gravel Sector Breakdown by Route"
+      },
+      {
+        "url": "https://gfny.com/gfny-expands-to-scandinavia-with-gfny-sweden-uppsala/",
+        "category": "official",
+        "label": "GFNY — Original 2022 Launch Announcement (superseded course plan)"
+      },
+      {
+        "url": "https://uppsala.gfny.com/?lang=en",
+        "category": "official",
+        "label": "GFNY Uppsala Homepage — Stale Content (2024 medals, 2025 NYC championship) (curl-verified)"
+      },
+      {
+        "url": "https://uppsala.gfny.com/register/?lang=en",
+        "category": "official",
+        "label": "Official Registration Page — No Ticket/Date/Form Present"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Uppsala gran fondo cycling Uppsala",
@@ -170,11 +223,15 @@
       ],
       "quotes": []
     },
+    "catalog_flags": {
+      "status_note": "Defunct since 2024 (last edition: August 24, 2024, the 2nd edition/GFNY European Championship). Absent from GFNY's current worldwide race calendar; uppsala.gfny.com still resolves but is a stale shell with no working registration. The prior profile's 'August 23, 2026' date actually belongs to a different current GFNY event (GFNY Orcieres, France) on GFNY's own calendar. Recommend a human sanity-check on whether this profile should stay listed at all, or be archived, per the birkebeinerrittet-road.json precedent for defunct events.",
+      "ruled": "2026-07-24 editorial wave 5"
+    },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://worldracecalendar.com/event/gfny-uppsala/",
-      "notes": "Upcoming 2026 edition is announced; no rebrand or cancellation evidence found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://uppsala.gfny.com/results/?lang=en",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): status changed from 'active' to 'defunct' — official results page lists only 2023/2024 editions and nothing since; GFNY's current worldwide Race Finder does not list Uppsala (it assigns August 23, 2026 — the date our prior vitals had used — to GFNY Orcieres in France instead). date changed from 'August 23, 2026' to 'Last held: August 24, 2024'. distance_km changed from 120.7 to 133.5, elevation_m from 1800 to 494 (both matching the actual, documented 2024 long course; the prior 1800m figure appears to trace to the abandoned 2022 course proposal's 1,862m, never actually raced). terrain.surface changed from 'Paved roads' (false) to a mixed paved/gravel description — the 2024 long course had 6 gravel sectors totaling ~38km (~28% of the route), directly contradicting the prior listing; this also explains the prior course_description's odd 'rolling gravel-road loops' phrase, which was directionally correct but never reconciled with the 'Paved roads' terrain field. cutoff_time relabeled as historical (2024-specific), not a live future-event figure. field_size left null rather than invented — no defensible public figure was found. discipline retained as gran_fondo per standing rule against changing the discipline field and consistent with birkebeinerrittet-road.json (also a mixed-surface gran_fondo). youtube_data retained unchanged — all 5 videos are genuinely GFNY Uppsala content (GFNY World channel, race-specific titles), no cross-race mislabeling found. SOL REVIEW (2026-07-24): flagged in fondo_rating.scoring_notes that the corrected vitals materially change the honest scoring basis for distance/climbing/road_surface per config/dimensions.json's rubric (distance=4 implies 160-200km vs. actual 133.5km; climbing=3 implies 1,500-2,500m vs. actual 494m; road_surface=1 implies fresh tarmac throughout vs. actual ~24-28% gravel) — dimension values themselves are NOT changed here per standing rule, only flagged for human-reviewed recalculation. Softened verdict/bottom_line from 'Discontinued'/'Retired'/'dead status' to 'Inactive — No Edition Since 2024' since no organizer statement confirming discontinuation was found (unlike birkebeinerrittet-road.json's precedent, which has a direct shutdown-confirmation source) — this is now explicit in the profile as an evidence-based inactivity call, not a confirmed shutdown. Fixed overstated 'wind, not gradient, was the main difficulty' — verified via live fetch of https://uppsala.gfny.com/course/?lang=en that the official text calls topography adaptation 'probably the biggest challenge of the day besides the wind,' i.e. both matter, not wind alone. Fixed 'Vosges/Alpine climbing' to 'Vosges climbing' (Grand Ballon is in the Vosges massif, not the Alps) and removed the implication that GFNY Grand Ballon's 2026 date is still upcoming/bookable — its July 12, 2026 edition has already been held per its own eligibility.notes, so the alternatives text now points readers to check GFNY's calendar for the next date. Added homepage and registration-page citations to close a coverage gap for the 'stale shell' claims."
     }
   }
 }

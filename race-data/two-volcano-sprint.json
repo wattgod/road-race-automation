@@ -5,33 +5,36 @@
     "display_name": "Two Volcano Sprint",
     "tagline": "",
     "vitals": {
-      "distance_km": 1200.6,
-      "distance_mi": 746.0,
-      "elevation_m": 24000,
-      "elevation_ft": 78740.0,
-      "location": "Ercolano (Vesuvius) to Catania (Etna), Italy",
-      "location_badge": "Ercolano (Vesuvius) to Catania (Etna), Italy",
+      "distance_km": 1221.0,
+      "distance_mi": 758.7,
+      "elevation_m": 25000,
+      "elevation_ft": 82000.0,
+      "location": "Ercolano (Mt Vesuvius) to Nicolosi (Mt Etna), Italy",
+      "location_badge": "Vesuvius to Etna, Italy",
       "country": "Italy",
-      "date": "2026: April 26",
-      "date_specific": "2026: April 26",
-      "field_size": "Small (experienced ultra riders)",
-      "start_format": null,
-      "registration": null,
+      "date": "2026: April 26 (held)",
+      "date_specific": "2026: April 26 (held; no 2027 edition officially announced yet)",
+      "field_size": "~112 tracked starters in 2026 (77 solo, 31 pair riders, 4 out-of-classification)",
+      "start_format": "Mass start; solo or pair; fixed GPX route, GPS-tracked, self-supported",
+      "registration": "https://www.twovolcanosprint.com/",
       "entry_fee": null,
-      "feed_zones": "None (self-supported)",
-      "cutoff_time": "N/A",
+      "feed_zones": "None — commercial self-resupply only (occasional event/sponsor stops have appeared)",
+      "cutoff_time": "168h reported by current listings; earlier editions used a 110h classification deadline",
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Mediterranean",
+      "description": "Late April in southern Italy: mild coastal temperatures but real cold at altitude — the route tops out around 2,000 m on Etna, and Apennine crossings can be wet and cold at night.",
+      "challenges": [
+        "Night cold on the Pollino, Sila and Aspromonte crossings and the final Etna ascent",
+        "Late-April weather swings between coastal warmth and near-freezing summits"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Mountainous point-to-point",
+      "surface": "Predominantly paved but often rough/degraded; documented farm-track sections and broken pavement (notably in Calabria)",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +59,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 67."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 67. FLAG (2026-07-24 editorial wave 5): vitals corrected (1,200.6->1,221 km; 24,000->~25,000 m; ~112 tracked starters in 2026) and surface is documented as substantially rougher than 'paved roads' (farm tracks, degraded tarmac) — organization=4, road_surface=1, descent_technicality=2 and altitude=2 (route tops ~2,000 m on Etna) were scored on the old framing and may need a human re-look; numbers left untouched per no-silent-reshuffle rule."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -64,48 +67,147 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        {
+          "name": "Mt Vesuvius (opening ascent)",
+          "length_km": null,
+          "avg_gradient": null,
+          "notes": "Race opens straight onto Vesuvius from Ercolano"
+        },
+        {
+          "name": "Monte Gelbison",
+          "length_km": 30,
+          "avg_gradient": null,
+          "notes": "~30 km of climbing with sections above 12% (2026 rider account)"
+        },
+        {
+          "name": "Sicilian coast ascent",
+          "length_km": 38,
+          "avg_gradient": null,
+          "notes": "38 km climb from the coast after the Messina ferry"
+        },
+        {
+          "name": "Mt Etna finish",
+          "length_km": 22,
+          "avg_gradient": null,
+          "notes": "~22 km final climb to ~2,000 m before the drop to Nicolosi"
+        }
+      ],
+      "profile_type": "mountainous point-to-point",
       "king_of_mountain": null,
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A single-stage, fixed-route, self-supported ultracycling race from one active volcano to another: roughly 1,221 km and on the order of 25,000 m of climbing from Ercolano on Vesuvius's flank to Nicolosi on Etna's. The 2026 GPX opened straight up Vesuvius, then ran the Amalfi/Cilento side of the Tyrrhenian coast, over Monte Gelbison (about 30 km of climbing with ramps over 12%), past Cristo Redentore above Maratea, through the Pollino, Sila and Aspromonte massifs, across the Strait of Messina by ferry, up a 38 km climb from the Sicilian coast, and finally about 22 km up Etna to roughly 2,000 m before dropping to the finish. Riders follow the compulsory track, carry a live GPS tracker, and handle all food, water, sleep and mechanicals themselves — drafting is prohibited except within a pair entry. The surface is road-bike terrain on paper, but rider reports document rough farm tracks, technical descents and Calabrian potholes reported at up to 30 cm deep.",
+      "signature_challenge": "Racing 1,200+ km with ~25,000 m of climbing unsupported, then finishing on a 22 km ascent of Etna to ~2,000 m after two-plus days without proper sleep.",
+      "suffering_zones": [
+        "Monte Gelbison: ~30 km of climbing with sections above 12%, early enough in the route to punish overpacing",
+        "The Pollino-Sila-Aspromonte sequence: prolonged Apennine climbing through remote Calabria on degraded, pothole-strewn roads",
+        "The final Etna ascent: ~22 km to ~2,000 m on empty legs, with summit cold waiting"
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Riders self-manage; no provided support.",
-      "transport": "",
-      "food": "",
-      "official_site": ""
+      "airport": "Naples (NAP) for the start; Catania (CTA) for the finish — a one-way logistics problem by design",
+      "lodging_strategy": "Riders self-manage; no provided support. Sleep is wherever you stop — hotels, benches, bivvy bags.",
+      "transport": "Point-to-point with a mandatory Villa San Giovanni-Messina ferry crossing; getting a bike box from Naples to Catania is the rider's problem.",
+      "food": "Commercial resupply only, per self-support rules.",
+      "official_site": "https://www.twovolcanosprint.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2019,
+      "origin_story": "Founded in 2019 as a Vesuvius-to-Etna unsupported race: 17 starters, six classified finishers, with Ulrich Bartholmoes winning the ~1,100 km/24,000 m inaugural route in 59h58. Run as a not-for-profit — after tracker costs, entry fees fund an annual sustainability/community grant. Editions ran through the early 2020s (organizer results pages exist for 2020 and 2021); the planned 2023 edition was cancelled for lack of checkpoint volunteers, and the race returned in 2024 and 2026.",
+      "notable_moments": [
+        "2019: inaugural edition — 17 starters, 6 classified finishers; Ulrich Bartholmoes wins in 59h58",
+        "2020-2021: editions held with organizer-published results despite the pandemic era",
+        "2023: planned edition cancelled (insufficient checkpoint volunteers)",
+        "2026: Bruno Wicht wins the solo race in 59h23; 62 solo finishers plus 20 pair participants classified"
+      ],
+      "reputation": "A respected fixture on the European unsupported-ultra calendar — Transcontinental-tradition racing with a brutal climbing ratio, run at cost by an organizer with an environmental-grant mission."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Self-Supported Ultra — Nothing About It Is a Gran Fondo",
+      "summary": "Two Volcano Sprint is a genuine, currently active self-supported ultracycling race in the Transcontinental tradition: one stage, a compulsory ~1,221 km GPX from Vesuvius to Etna with around 25,000 m of climbing, live GPS tracking, and riders handling their own food, sleep and mechanicals — no drafting outside pair entries, no support crews. The 2026 edition put roughly 112 tracked riders on the road and classified 62 solo finishers, with Bruno Wicht winning in 59h23. It's run as a not-for-profit — after tracker costs, entry fees fund an environmental grant — but be clear-eyed about the details: the 'road' classification undersells documented farm tracks, broken tarmac and Calabrian potholes reported at 30 cm deep; published elevation figures conflict (24,000 m is stale, from the shorter early routes; 2026 reporting says 25,000-26,000 m); the planned 2023 edition was cancelled for lack of checkpoint volunteers; and as of this writing no 2027 edition has been announced. This is racing for experienced ultra riders, and our database's gran fondo framing simply doesn't fit it.",
+      "strengths": [
+        "A volcano-to-volcano route that delivers what it promises: Vesuvius start, the Amalfi/Cilento coast, three Apennine massifs, a ferry crossing, and a finish at ~2,000 m on Etna",
+        "Authentic self-supported rules with GPS tracking and published results — race history across editions since 2019",
+        "Not-for-profit ethos: after tracker costs, entry fees fund an annual sustainability/community grant",
+        "A serious, experienced field — 2026 drew Transcontinental/Badlands-calibre riders, and the solo win took 59h23"
+      ],
+      "weaknesses": [
+        "Not remotely a gran fondo despite our discipline label — no feed zones, no closed roads, no mass-participation format; do not show up expecting support",
+        "Road surfaces are significantly worse than a 'road' classification suggests: documented farm tracks, degraded tarmac and deep Calabrian potholes",
+        "Organizational continuity is thin — the 2023 edition was cancelled for lack of checkpoint volunteers, and no 2027 edition is announced yet",
+        "Key numbers are unstable across sources: elevation reported anywhere from 24,000 m (stale) to 26,000 m, and the cutoff (168h reported) isn't clearly published by the organizer"
+      ],
+      "bottom_line": "A demanding, well-documented unsupported ultra for riders with the multi-day racing experience to attempt it — and completely the wrong event if you want a supported gran fondo. Confirm the next edition and current rules directly with the organizer before planning around it."
     },
     "final_verdict": {
       "score": "67/100",
-      "one_liner": "Epic self-supported odyssey linking Italy's iconic volcanoes for hardened ultra cyclists.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine Vesuvius-to-Etna self-supported ultra — 1,221 km, ~25,000 m, GPS-tracked and unsupported. Not a gran fondo.",
+      "should_you_race": "Only with real multi-day self-supported ultra experience — 1,200+ km unsupported with a mountain finish is not an entry point to the discipline. If you want supported southern-Italy climbing, look elsewhere.",
+      "alternatives": "Trans Pyrenees Race or Race Through Poland (both in this database) for comparable self-supported ultras; Etna's gran fondos (e.g. Giro dell'Etna events) for supported volcano climbing."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.twovolcanosprint.com/",
+        "category": "official",
+        "label": "Two Volcano Sprint official site — rules (self-supported, GPS tracker, no drafting), 2026 results (Wicht 59h23; 62 solo finishers), not-for-profit grant model"
+      },
+      {
+        "url": "https://www.followmychallenge.com/live/2vs26/",
+        "category": "reference",
+        "label": "Follow My Challenge 2026 live tracker — April 26 start, 1,221.01 km course, rider list"
+      },
+      {
+        "url": "https://www.twovolcanosprint.com/race-report-2019/",
+        "category": "official",
+        "label": "Official 2019 race report — inaugural ~1,100 km/24,000 m edition, 17 starters, Bartholmoes 59h58, route description"
+      },
+      {
+        "url": "https://ultracyclingraces.com/races/two-volcano-sprint-2026",
+        "category": "reference",
+        "label": "Ultracycling Races 2026 listing — road classification, 168h time limit"
+      },
+      {
+        "url": "https://gregortowers.substack.com/p/2-volcano-sprint-my-best-ultra-cycling",
+        "category": "rider_report",
+        "label": "2026 rider account — Gelbison/Etna climb details, farm tracks, broken pavement, 30 cm Calabrian potholes"
+      },
+      {
+        "url": "https://www.amalficoast.com/en/lifestyle-9/registrations-open-for-the-two-volcano-sprint-2026-2074/article",
+        "category": "news",
+        "label": "2026 registration announcement — April 26 date confirmation"
+      },
+      {
+        "url": "https://www.merkur.de/sport/lokalsport/miesbach/andreas-lenz-vollendet-two-volcano-sprint-trotz-teampartner-ausfall-miesbach-radsport-94299001.html",
+        "category": "news",
+        "label": "Merkur (2026) — rider report: ~25,000 m elevation, Nicolosi finish"
+      },
+      {
+        "url": "https://fiabciclocittavarese.it/2024/02/03/basilicata-bike-trail/",
+        "category": "rider_report",
+        "label": "FIAB Ciclocitta Varese rider account — 2023 edition cancelled for lack of checkpoint volunteers"
+      },
+      {
+        "url": "https://www.twovolcanosprint.com/2vs-2020/",
+        "category": "official",
+        "label": "Official 2020 results page — evidence of 2020 edition"
+      },
+      {
+        "url": "https://www.twovolcanosprint.com/2vs-2021/",
+        "category": "official",
+        "label": "Official 2021 results page — evidence of 2021 edition"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.amalficoast.com/en/lifestyle-9/registrations-open-for-the-two-volcano-sprint-2026-2074/article",
-      "notes": "2026 unsupported road race from Vesuvius to Etna is announced with registrations open; some sources list an October 1, 2026 date instead of April 26.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.twovolcanosprint.com/",
+      "notes": "Active; most recent edition held April 26, 2026 (organizer-published results: Bruno Wicht solo winner 59h23; 62 solo finishers, 20 pair participants; ~112 tracked non-DNS riders per Follow My Challenge). No 2027 edition officially announced as of 2026-07-24 — a directory listing of April 26, 2027 is unconfirmed. DATE CONFLICT RESOLVED: April 26, 2026 is correct (organizer + GPS tracker + registration announcement); the October 1 date came from a stale German directory also carrying an obsolete 1,000 km distance. VITALS CORRECTIONS (2026-07-24 editorial wave 5): distance 1,200.6->1,221 km per the 2026 tracking course; elevation 24,000 m (stale, early ~1,100 km editions) -> ~25,000 m with sources ranging 25,000-26,000 m pending an organizer GPX total; finish is Nicolosi on Etna, not central Catania; cutoff '168h reported' replaces the misleading 'N/A' (earlier editions used 110h). 2023 edition was cancelled (volunteer shortage, per a rider account); organizer results pages confirm 2020 and 2021 editions, and GPS trackers confirm 2024 and 2026. Verified via codex gpt-5.6-sol foreground research + curl of twovolcanosprint.com."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a single-stage, fixed-route, GPS-tracked, SELF-SUPPORTED ultracycling race in the Transcontinental tradition (no feed zones, no drafting outside pairs, commercial self-resupply, ~112 starters) — doesn't cleanly fit the gran_fondo taxonomy or its mass-participation scoring dimensions. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 5"
     }
   }
 }
