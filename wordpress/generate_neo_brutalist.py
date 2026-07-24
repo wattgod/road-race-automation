@@ -280,6 +280,7 @@ PLAN_SLUG_ALIASES = {
     "sudety-tour": "dekom-system-sudety-tour",
     "spinneys-dubai-92": "spinneys-dubai-92-cycle-challenge",
     "letape-chile": "l-etape-chile-by-tour-de-france",
+    "sea-otter-ciclobrava": "sea-otter-ciclobrava",
 }
 
 # Display order for the plan ladder — full plan first, emergency/short plan
