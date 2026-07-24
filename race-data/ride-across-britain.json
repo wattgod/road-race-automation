@@ -5,21 +5,21 @@
     "display_name": "Ride Across Britain",
     "tagline": "",
     "vitals": {
-      "distance_km": 1577.2,
-      "distance_mi": 980.0,
+      "distance_km": 1561.1,
+      "distance_mi": 970.0,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Land's End to John O'Groats, UK",
       "location_badge": "Land's End to John O'Groats, UK",
-      "country": "USA",
+      "country": "UK",
       "date": "2026: September 5-13",
       "date_specific": "2026: September 5-13",
-      "field_size": "900 riders",
+      "field_size": "900 riders (advertised cap)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "Regular rest stops with food, drinks, and sport nutrition",
-      "cutoff_time": "9 days",
+      "cutoff_time": "9 days (nine consecutive riding stages)",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -70,37 +70,72 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A fully supported, signposted end-to-end ride rather than a race — Ride Across Britain travels north from Land's End, Cornwall, to John O'Groats, Scotland, crossing 23 counties across England, Wales and Scotland over nine consecutive riding stages. It links Cornwall and Devon's steep lanes and moorland with Cheddar Gorge, the Severn crossing, the Wye Valley, northern England and Shap Fell, before the Scottish stages cross the Grampians and Cairngorms to the remote Strathnaver Valley and North Atlantic coast. No official 2026 elevation total is published; official distance materials themselves disagree, with the website's rounded '980 miles' headline against the 2026 event sheet's more specific 970 miles.",
+      "signature_challenge": "Stage 7, Hopetoun House to Strathdon — 180.2 km with approximately 2,449 m ascent, rated 5/5 by the organizer, crossing the Cairngorms and climbing Glenshee late in the day.",
+      "suffering_zones": [
+        "Stage 1, Land's End-Okehampton — 169.8 km with approximately 2,510 m ascent; relentless short, steep Cornwall/Devon climbs around Bodmin Moor and Dartmoor",
+        "Stage 7, Hopetoun House-Strathdon — see signature_challenge",
+        "Nine consecutive century-length days — cumulative fatigue, not any single stage, is the event's central difficulty"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Overnight basecamps with pre-set 2-person tents, power showers, and fantastic food.",
+      "lodging_strategy": "Overnight basecamps with pre-set 2-person tents, power showers, and fantastic food. Hotels are available as a paid upgrade over standard camping.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.rideacrossbritain.com/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized by Threshold Sports as a fully supported, signposted end-to-end (LEJOG) ride rather than a competitive race.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Well-Supported End-to-End — Not a Race",
+      "summary": "Ride Across Britain is a genuine, well-established fully supported traverse of the UK, run by Threshold Sports over nine consecutive riding days. It delivers exceptional geographic variety — Cornwall's steep lanes, the Wye Valley, the Grampians and Cairngorms, the remote Scottish north coast — with extensive support: route signage, regular rest stops, medical and mechanical assistance, chaperones, baggage transport, meals, showers and pre-pitched tents. This is explicitly a supported, non-competitive challenge ride, not a race with a field to compete against. Even the organizer's own materials aren't fully consistent — the main site advertises a rounded '980 miles' while the 2026 event sheet specifies 970 miles, and no verified elevation total is published.",
+      "strengths": [
+        "A true point-to-point traversal with exceptional geographic variety across 23 counties",
+        "Extensive support: route signage, regular rest stops, medical and mechanical assistance, chaperones, baggage transport, meals, showers and pre-pitched tents",
+        "Well-established with Threshold Sports as organizer, running charity, corporate and standard entry packages",
+        "Structured nine-stage format lets riders pace a genuinely long-distance challenge without navigation or logistics stress"
+      ],
+      "weaknesses": [
+        "Nine consecutive century-length days make cumulative fatigue the central difficulty — this is a serious endurance undertaking, not a casual tour",
+        "Standard accommodation is camping; hotels are a paid upgrade",
+        "Official distance claims conflict (970 vs. 980 miles) and no verified 2026 elevation total is published",
+        "This is a supported ride, not a competitive race — riders expecting a field to race against will be disappointed"
+      ],
+      "bottom_line": "A genuinely demanding, exceptionally well-supported way to see the length of Britain by bike over nine days — go in expecting a supported endurance tour, not a race, and confirm current-year pricing/fundraising terms directly given the organizer's own materials aren't fully consistent."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "Premier fully-supported LEJOG charity ride delivering epic UK scenery and camaraderie.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A fully supported nine-day Land's End to John O'Groats ride through varied UK scenery — a supported endurance tour, not a competitive race.",
+      "should_you_race": "Yes if you want a genuinely demanding, exceptionally well-supported nine-day traverse of Britain. This is a challenge ride, not a competitive race — go in with that expectation.",
+      "alternatives": "For a similar supported, multi-day point-to-point format, compare against Formosa 900 (also in this database) — both are supported tours rather than mass-start races."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.rideacrossbritain.com/",
+        "category": "official",
+        "label": "Official Event Site"
+      },
+      {
+        "url": "https://www.rideacrossbritain.com/route/stage-1/",
+        "category": "official",
+        "label": "Official Stage 1 Detail — Land's End-Okehampton"
+      },
+      {
+        "url": "https://www.rideacrossbritain.com/route/stage-7/",
+        "category": "official",
+        "label": "Official Stage 7 Detail — Hopetoun House-Strathdon"
+      },
+      {
+        "url": "https://www.thresholdsports.co.uk/app/uploads/2024/05/ride-across-britain-website-2025.pdf",
+        "category": "official",
+        "label": "Threshold Sports — 2026 Event Sheet (970 Miles)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Ride Across Britain gran fondo cycling Land's End to John O'Groats",
@@ -369,9 +404,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.thresholdsports.co.uk/app/uploads/2024/05/ride-across-britain-website-2025.pdf",
-      "notes": "Threshold Sports materials list a 5–13 September 2026 Land’s End–John O’Groats Ride Across Britain with registration details, matching the road event and route.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.rideacrossbritain.com/",
+      "notes": "Confirmed scheduled 5-13 September 2026, organized by Threshold Sports; participant invoicing/deferral deadlines through 20 August 2026. Vitals corrected to 970 miles/1,561.1 km per the 2026 event sheet (down from 980 miles/1,577.2 km previously on file); country field corrected from erroneous 'USA' to 'UK'. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a fully supported, non-competitive nine-stage end-to-end tour with no field to race against — doesn't cleanly fit the gran_fondo taxonomy or its competitive scoring dimensions. Recommend a human call on reclassifying discipline (multi_stage may fit better) or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 3, sol review follow-up"
     }
   }
 }

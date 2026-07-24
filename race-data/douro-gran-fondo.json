@@ -5,24 +5,24 @@
     "display_name": "Love Tiles Douro Granfondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 151.3,
-      "distance_mi": 94.0,
-      "elevation_m": 2274,
-      "elevation_ft": 7460.0,
+      "distance_km": 140.3,
+      "distance_mi": 87.2,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Peso da Régua, Douro Valley, Portugal",
       "location_badge": "Peso da Régua, Portugal",
       "country": "Portugal",
-      "date": "2026: May 10",
-      "date_specific": "2026: May 10",
-      "field_size": "3000",
+      "date": "2026: April 26",
+      "date_specific": "2026: April 26, 09:00",
+      "field_size": "~2,000 riders (official cap; 25 nationalities)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "feed_zones": "Electronic timing with feed stations along the course, per organizer regulations",
+      "cutoff_time": "16:00 (approx. 7 hours for the longest route)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["140.3 km Granfondo", "105.4 km Mediofondo", "71.1 km Minifondo"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "All three routes start and finish in Peso da Régua. The Granfondo heads south through Lamego, Tarouca, Moimenta da Beira, São João da Pesqueira, Tabuaço and Armamar on paved, hilly Douro roads, following the EN226 toward Faia and the Vilar reservoir before returning through vineyard villages and Tabuaço to the Douro-side EN222. Terraced vineyards, river valleys, sustained climbing and steep descents define the route; the southern alignment was introduced after winter landslides damaged the traditional northern roads, and total elevation gain remains unpublished by the organizer. All three distances start together with only about 2 km controlled, creating a potentially crowded opening.",
+      "signature_challenge": "The Tabuaço climb — 9 km at 5.6% average, the principal quantified climb on the course, followed by a steep, technical descent through Barcos, Adorigo and Tedo.",
+      "suffering_zones": [
+        "EN226 from Régua through Lamego/Tarouca to Granja Nova — the long shared opening section",
+        "Moimenta da Beira-Faia-Vilar reservoir-Paredes da Beira-Espinhosa-Castanheiro do Sul — the extended Granfondo-only inland loop",
+        "Tabuaço climb — see signature_challenge",
+        "Tabuaço-Barcos-Adorigo-Tedo descent — explicitly described by the organizer as steep, before the final EN222 run back toward Régua"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and guesthouses in Peso da Régua and nearby Douro Valley towns; book early due to wine tourism popularity.[1]",
+      "lodging_strategy": "Hotels and guesthouses in Peso da Régua and nearby Douro Valley towns; book early due to wine tourism popularity.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://bikeservice.pt/event/douro-granfondo/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Part of Portugal's Superprestígio competitive series.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Well-Attended Portuguese Fondo — With Data Gaps",
+      "summary": "Love Tiles Douro Granfondo is a legitimate, well-attended event through UNESCO-listed Alto Douro vineyard country, drawing roughly 2,000 riders from 25 nationalities and carrying real competitive credibility through Portugal's Superprestígio series — Rui Costa and Pepe have both been associated with the event. But the organizer's own published course figures don't agree with each other (140.3/105.4/71.1 km in official documentation versus 135/100/69 km elsewhere in the same narrative materials), and total elevation gain for the Granfondo route is not published anywhere found. The southern route alignment used in 2026 was itself a reroute forced by winter landslide damage to the traditional course.",
+      "strengths": [
+        "UNESCO-listed Alto Douro vineyard scenery with terraced hills, river valleys and vineyard villages",
+        "Substantial international field — roughly 2,000 riders from 25 nationalities",
+        "Three route lengths with electronic timing, feed stations, medical and professional mechanical support",
+        "Strong competitive credibility through Portugal's Superprestígio series"
+      ],
+      "weaknesses": [
+        "Official sources conflict on distances (140.3/105.4/71.1 km vs. 135/100/69 km elsewhere in the organizer's own materials)",
+        "Total Granfondo elevation gain is not published anywhere found — treat any figure as an estimate",
+        "The route required a reroute after winter landslides damaged the traditional northern roads",
+        "All three distances start together with only about 2 km controlled, creating a potentially crowded opening"
+      ],
+      "bottom_line": "A genuinely scenic, well-organized Portuguese fondo with real competitive pedigree — just don't expect the organizer's own numbers to agree with each other, and confirm the current year's route given recent weather-forced changes."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Iconic Portuguese granfondo blending epic Douro climbs with notable wine country scenery.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Portuguese granfondo blending Douro climbs with wine-country scenery — genuinely well-attended, but the organizer's own course figures don't agree with each other.",
+      "should_you_race": "Yes for the scenery, international field and Superprestígio pedigree. Confirm the current year's exact route and distance directly — recent landslide damage forced a reroute, and published figures conflict.",
+      "alternatives": "For similarly scenic wine-region climbing in Iberia, compare against other Portuguese or Spanish Superprestígio-series gran fondos."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://bikeservice.pt/event/douro-granfondo/regulamento-douro-granfondo/",
+        "category": "official",
+        "label": "Official 2026 Regulations"
+      },
+      {
+        "url": "https://results.stopandgo.pro/1766/ranking/individual/1/2",
+        "category": "official",
+        "label": "Official Results"
+      },
+      {
+        "url": "https://www.rtp.pt/noticias/outras-modalidades/rui-costa-e-pepe-encabecam-pelotao-este-domingo-no-love-tiles-douro-granfondo_d1736548",
+        "category": "media",
+        "label": "RTP — Pre-Race Coverage, Rui Costa/Pepe"
+      },
+      {
+        "url": "https://www.airinformacao.pt/2026/04/27/pepe-e-rui-costa-apadrinham-vitoria-de-goncalo-freitas-e-ana-caramelo-no-douro-granfondo/",
+        "category": "media",
+        "label": "2026 Post-Race Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Love Tiles Douro Granfondo gran fondo cycling Peso da Régua",
@@ -190,9 +226,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://bikeservice.pt/event/douro-granfondo/regulamento-douro-granfondo/",
-      "notes": "2026 edition confirmed for April 26 in Peso da Régua; date on file May 10 is incorrect.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.airinformacao.pt/2026/04/27/pepe-e-rui-costa-apadrinham-vitoria-de-goncalo-freitas-e-ana-caramelo-no-douro-granfondo/",
+      "notes": "SUPERSEDES prior date. Completed 26 April 2026 (post-race report published 27 April) — corrected from the erroneous May 10 date previously on file. Distance corrected to 140.3 km (down from 151.3 km); elevation set to unconfirmed/null since no source publishes a total. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

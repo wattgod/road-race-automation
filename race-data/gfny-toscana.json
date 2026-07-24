@@ -5,16 +5,16 @@
     "display_name": "GFNY Toscana",
     "tagline": "",
     "vitals": {
-      "distance_km": 117.5,
-      "distance_mi": 73.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
+      "distance_km": 127.0,
+      "distance_mi": 78.9,
+      "elevation_m": 1389,
+      "elevation_ft": 4557.7,
       "location": "Pistoia, Tuscany, Italy",
       "location_badge": "Pistoia, Italy",
       "country": "Italy",
-      "date": "2026: April 6",
-      "date_specific": "2026: April 6",
-      "field_size": "N/A",
+      "date": "2026: provisionally March 29 — official event page still lists as TBD, unconfirmed",
+      "date_specific": "Last confirmed edition: April 6, 2025",
+      "field_size": "~700 riders expected (2025); actual field unconfirmed",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["127 km Gran Fondo", "52 km Medio Fondo (non-competitive)"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,74 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The confirmed 2025 course started and finished in Pistoia's Piazza del Duomo. After roughly 26 flat kilometres, it crossed the Arno into the Chianti-side hills before returning through Montalbano, Vinci and San Baronto — vineyards, olive groves, repeated rolling climbs and twisty descents define the route, with the final 25 km from Lamporecchio rolling rather than mountainous. The organizer's early preliminary route (117.1 km/1,966 m) differed materially from what was actually delivered on race day (127 km/1,389 m) — a real gap worth knowing rather than treating either figure as fixed, especially with the 2026 date still listed as provisional/TBD on the official page.",
+      "signature_challenge": "Castra — 6 km at 6.2% average with ramps to 13%, reaching the course high point at 420 m, followed by a descent to Vinci that the race report called highly technical.",
+      "suffering_zones": [
+        "Montespertoli — the first substantial ascent, cresting around 305 m",
+        "Castra — see signature_challenge",
+        "Castra-Vinci descent — officially described as twisty, with the Montalbano descents called highly technical in the race report",
+        "San Baronto — 11 km at 2.7% average, gradual but arriving late in the route"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Pistoia offers medieval charm with hotels; nearby Montecatini Terme for spas; explore Florence, Lucca, Pisa[1]",
+      "lodging_strategy": "Pistoia offers medieval-town hotels; nearby Montecatini Terme for spas; Florence, Lucca and Pisa are all within reach.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://pistoia.gfny.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2025,
+      "origin_story": "Inaugural 2025 edition drew a genuinely international field representing 26 countries, part of the global GFNY series.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real First Edition — But 2026 Status Is Genuinely Unclear",
+      "summary": "GFNY Toscana ran a legitimate inaugural edition on 6 April 2025 through Pistoia's Chianti-side hills, drawing riders from 26 countries, and GFNY's own post-race report called it 'proper Italian bike racing.' What it doesn't have is a confirmed 2026 edition: the calendar shows a provisional 29 March 2026 date, but the official event page still says 'TBD Toscana' and no results or race-day confirmation for 2026 exist as of this research. The 2025 edition itself also revealed a major route-planning gap — the preliminary course guide (117.1 km/1,966 m) and what actually ran on race day (127 km/1,389 m) disagreed by nearly 10 km and 600 m of elevation.",
+      "strengths": [
+        "Historic central-Pistoia start/finish with genuinely varied terrain rather than one-dimensional climbing",
+        "Attractive Montalbano, Chianti, vineyard and olive-grove scenery",
+        "Chip timing and a genuinely international inaugural field representing 26 countries",
+        "Part of the global GFNY series, which runs events across dozens of countries"
+      ],
+      "weaknesses": [
+        "2026 status is genuinely unconfirmed — the official event page still lists the race as 'TBD' despite a provisional calendar date, with no results or confirmation found",
+        "The inaugural 2025 edition's preliminary route guide (117.1 km/1,966 m) and the actual delivered course (127 km/1,389 m) disagreed materially",
+        "The medium (52 km) route is timed but explicitly non-competitive",
+        "Technical Montalbano-area descents add real risk for less experienced fondo riders",
+        "The official GFNY jersey is mandatory"
+      ],
+      "bottom_line": "A promising, well-run inaugural edition — but confirm directly with GFNY whether a 2026 Toscana edition is actually happening before you book travel around it."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "Epic Tuscan granfondo through pro cycling heartland and Leonardo's birthplace.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A Tuscan granfondo through Chianti-side hills near Vinci — a real 2025 debut, but 2026 status is unconfirmed.",
+      "should_you_race": "Confirm directly with GFNY that a 2026 edition is actually scheduled before planning around it — the official page still lists the date as TBD despite a provisional calendar listing.",
+      "alternatives": "For a confirmed, currently-running GFNY event in Italy, compare against other established GFNY World Series stops with a longer track record."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://pistoia.gfny.com/",
+        "category": "official",
+        "label": "Official GFNY Pistoia Event Page (2026 Listed as TBD)"
+      },
+      {
+        "url": "https://gfny.com/gfny-toscana-pistoia-offered-proper-italian-bike-racing/",
+        "category": "official",
+        "label": "GFNY — 2025 Post-Race Report, Actual Course Figures"
+      },
+      {
+        "url": "https://www.comune.pistoia.it/it/news/128812/ciclismo-domenica-6-aprile-la-gfny-fa-tappa-a-pistoia",
+        "category": "official",
+        "label": "Comune di Pistoia — 2025 Race Notice"
+      },
+      {
+        "url": "https://gfny.cc/results/2025/pistoia",
+        "category": "official",
+        "label": "GFNY — 2025 Pistoia Results Portal"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Toscana gran fondo cycling Pistoia",
@@ -193,9 +230,9 @@
     },
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.dalzero.it/manifestazione/gfny-pistoia/",
-      "notes": "GFNY Pistoia (GFNY Toscana) road gran fondo in Pistoia has a scheduled 2026 edition on March 29 with official site active.; last edition evidenced: 2026; [auditor: source URL not among API citations — downgraded]; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://pistoia.gfny.com/",
+      "notes": "2026 status genuinely unconfirmed: GFNY's calendar shows a provisional 29 March 2026 date, but the official event page itself still displays 'TBD Toscana' with no 2026 results or race-day confirmation found. Last confirmed edition: 6 April 2025 (inaugural). Vitals corrected to the actual 2025 delivered course (127 km/1,389 m), which differed materially from the preliminary route guide (117.1 km/1,966 m) previously reflected in the file. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

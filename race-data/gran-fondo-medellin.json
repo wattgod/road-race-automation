@@ -1,20 +1,20 @@
 {
   "race": {
-    "name": "Gran Fondo Medellín",
+    "name": "UCI Gran Fondo Colombia",
     "slug": "gran-fondo-medellin",
-    "display_name": "Gran Fondo Medellín",
+    "display_name": "UCI Gran Fondo Colombia (Medellín)",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": 2370,
-      "elevation_ft": 7776.0,
+      "distance_km": 120.0,
+      "distance_mi": 74.6,
+      "elevation_m": 2000,
+      "elevation_ft": 6561.7,
       "location": "Medellín, Antioquia, Colombia",
       "location_badge": "Medellín, Colombia",
       "country": "Colombia",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
-      "field_size": "N/A",
+      "date": "2026: November 29",
+      "date_specific": "2026: November 29",
+      "field_size": "Unconfirmed for 2026",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["120 km"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starts in central Medellín on Avenida del Ferrocarril at 1,480 m and climbs immediately through Antioquia's Andean terrain, reaching 2,525 m by km 21. A 10 km descent leads toward Rionegro, followed by flatter riding through Guarne toward Bello, then a 17 km descent back into Medellín with the final 13 km flat to the city finish. This is the 2026 UCI Gran Fondo Colombia — a UCI Gran Fondo World Series qualifier now based in Medellín. It is not clearly a continuation of the earlier, separately branded 'Gran Fondo Medellín' associated with Nairo Quintana (a roughly 150 km event); riders should treat this as the current, UCI-affiliated event rather than assuming direct lineage from that earlier race.",
+      "signature_challenge": "The opening 16 km — identified by the organizer as the hardest section of the course, gaining approximately 1,045 m of altitude straight out of central Medellín.",
+      "suffering_zones": [
+        "Opening 16 km — see signature_challenge",
+        "Km 16-21 — continued climbing to the 2,525 m course high point",
+        "10 km descent toward Rionegro — sustained high-speed, technical exposure immediately after the main climb",
+        "17 km descent back into Medellín — a long late-race descent before the flat 13 km finish"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels and accommodations available in Medellín and surrounding Oriente Antioqueño towns like El Retiro.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.ucigranfondocolombia.com/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "A separately branded 'Gran Fondo Medellín' (roughly 150 km) was associated with Nairo Quintana in earlier years. The current UCI Gran Fondo Colombia is a Medellín relocation of the UCI-affiliated Gran Fondo Colombia series, not confirmed as a direct continuation of that earlier event.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real UCI Qualifier — But Verify Which 'Gran Fondo Medellín' You're Getting",
+      "summary": "UCI Gran Fondo Colombia is a genuine UCI Gran Fondo World Series qualifier scheduled for Medellín on 29 November 2026, timing all participants by age group with the top 25% advancing to the UCI World Championships. What's genuinely unclear is its relationship to an earlier, separately branded 'Gran Fondo Medellín' associated with Nairo Quintana that covered roughly 150 km — the current 120 km UCI event isn't confirmed as a direct continuation of that race. The organizer's own site consistently references Medellín as of this research, with no stale Bogotá wording found.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series qualifier — top 25% of age-group finishers advance to the UCI World Championships",
+        "Real Andean climbing profile — 1,045 m gained in the opening 16 km alone, reaching a 2,525 m high point",
+        "Marked/controlled roads with mechanical assistance, hydration and food support advertised by the organizer",
+        "Based in Medellín, a genuine hub of Colombian cycling culture"
+      ],
+      "weaknesses": [
+        "Not confirmed to be a continuation of the earlier Nairo Quintana-associated 'Gran Fondo Medellín' (roughly 150 km) — treat the name as similar but the event as distinct unless the organizer confirms otherwise",
+        "Field size, detailed road map, gradients, feed-zone locations and a final technical guide all remain unconfirmed as of this research",
+        "2026 elevation figure (2,000 m) is 'just under' per organizer language, not a precisely published total",
+        "This is a relocation of the broader UCI Gran Fondo Colombia series to Medellín, so operational track record specific to this exact venue is limited"
+      ],
+      "bottom_line": "A legitimate UCI qualifier worth entering for the World Championships pathway and genuine Andean climbing — just don't assume this is the same event as an earlier Nairo Quintana-associated 'Gran Fondo Medellín' you may have heard about."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Epic high-altitude road challenge in Colombia's cycling epicenter.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A high-altitude Andean UCI qualifier in Medellín — real and scheduled for 2026, though its link to an earlier Nairo Quintana-associated race of the same name is unconfirmed.",
+      "should_you_race": "Yes for the UCI World Championships qualification pathway and genuine Andean climbing. Confirm current operational details directly given some stale content on the organizer's own site.",
+      "alternatives": "For other UCI Gran Fondo World Series qualifiers in South America, compare against Gran Fondo Collado del Condor (also in this database, Venezuela) or other regional UCI-affiliated events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-colombia-2026/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2026 Colombia Event Page"
+      },
+      {
+        "url": "https://www.ucigranfondocolombia.com/",
+        "category": "official",
+        "label": "Official Event Site"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/regulations/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Qualification Regulations"
+      },
+      {
+        "url": "https://www.ciclismocolombiano.com/actualidad/nairo-quintana-es-captado-a-toda-velocidad-en-el-gran-fondo-medellin/",
+        "category": "media",
+        "label": "Coverage of the Earlier, Separately Branded Nairo Quintana-Associated Event"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Medellín gran fondo cycling Medellín",
@@ -253,14 +289,14 @@
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "The provided transcript from the Gran Fondo Medellín race video contains only fragmented audio snippets and music segments without coherent race commentary or rider insights. No specific information about the 87-mile course through Medellín, Antioquia, Colombia is available from this source. The transcript lacks details about terrain conditions, elevation challenges, gear recommendations, or race strategy advice that would typically be found in cycling race coverage. Without substantive content about the course features, riding conditions, or participant experiences, this transcript does not provide actionable intelligence for potential race participants regarding the Gran Fondo Medellín's 7,776 feet of elevation gain or specific challenges riders might encounter on this Tier 2 gravel cycling event."
+        "search_text": "No usable rider intelligence was extracted from available video transcripts — content was fragmented audio/music without coherent race commentary. This search_text previously cited stale course figures (87 miles, 7,776 ft, 'Tier 2 gravel') that predate this profile's 2026-07-24 research correction (this is a road event, current vitals: 120 km / ~2,000 m) and should not be relied on."
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/fr/uci-gran-fondo-colombia-2026/",
-      "notes": "Evidence points to UCI Gran Fondo Colombia 2026 in Medellín, but this is not clearly the same as Gran Fondo Medellín and the file date conflicts with the 29 Nov 2026 listing.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "active",
+      "verified": "2026-07-24",
+      "source": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-colombia-2026/",
+      "notes": "Confirmed active as UCI Gran Fondo Colombia, Medellín, 29 November 2026 (corrected from October TBD previously on file). No distinct 2026 event officially named plain 'Gran Fondo Medellín' was found; this profile now describes the confirmed UCI event and is not confirmed to be a direct continuation of the earlier, separately branded Nairo Quintana-associated race of a similar name — see biased_opinion for the honest disclosure. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

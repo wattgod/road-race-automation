@@ -5,24 +5,28 @@
     "display_name": "Race Through Poland",
     "tagline": "",
     "vitals": {
-      "distance_km": 1799.2,
-      "distance_mi": 1118.0,
+      "distance_km": 1800.0,
+      "distance_mi": 1118.5,
       "elevation_m": 27000,
       "elevation_ft": 88583.0,
-      "location": "Nowy Targ, Lesser Poland",
-      "location_badge": "Nowy Targ, Lesser Poland",
-      "country": "Lesser Poland",
+      "location": "Nowy Targ, Poland",
+      "location_badge": "Nowy Targ, Poland",
+      "country": "Poland",
       "date": "2026: May 23",
       "date_specific": "2026: May 23",
-      "field_size": "N/A",
+      "field_size": "78 starters, 44 finishers (Race No.8, 2026)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "4 control points (self-supported)",
-      "cutoff_time": "N/A",
+      "feed_zones": "4 mandatory control points (self-supported between them)",
+      "cutoff_time": "One week, self-supported",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Full Route Solo",
+        "Full Route Pair",
+        "RTPL900 Solo (~900 km)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,8 +35,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Mostly paved backroads, with rider-chosen gravel sections through the Carpathians",
+      "technical_rating": 3,
       "features": []
     },
     "fondo_rating": {
@@ -70,37 +74,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This is a one-stage, self-supported, Transcontinental-style bikepacking race, not a mass gran fondo. Race No.8 (2026) started and finished at Rynek in Nowy Targ, linking four mandatory control points and parcours through the Western Carpathians using rider-selected roads — because riders choose their own connections between controls, full-route finishers actually logged anywhere from 1,681 to 1,876 km in 2026, so any single distance figure is a nominal estimate, not a fixed course measurement. Documented geography centers on Poland, Slovakia and the Czech Republic; despite the organizer's broader PL/SK/CZ/DE/AT/HU/RO branding header, Germany, Austria, Hungary and Romania were not part of the actual No.8 route.",
+      "signature_challenge": "The Low Tatras crossing — explicitly designated the race's main mountain course, combining difficult routing choices with sustained Carpathian climbing between controls.",
+      "suffering_zones": [
+        "CP1 Kudłacze — roughly 491-572 km into tracked routes; numerous DNFs occurred at or shortly after this point",
+        "Low Tatras crossing — see signature_challenge",
+        "CP4 Kojšovská hoľa — summit at 1,246 m; the mandatory parcours here runs 76 km / 1,450 m, approximately 90% paved",
+        "Spiš-Podhale finale — 104 km / 1,550 m, 92% paved, returning beneath the High Tatras to Nowy Targ"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Self-supported; riders manage own sleep; control points offer stamps, potential rest spots like mountain huts or hotels.",
+      "lodging_strategy": "Self-supported; riders manage own sleep; control points offer stamps and potential rest spots like mountain huts or hotels.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://racethroughpoland.pl/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "An annual self-supported, Transcontinental-style ultra-distance bikepacking race through the Western Carpathians, now in its eighth running.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Ultra-Distance Bikepacking Race — Not a Gran Fondo",
+      "summary": "Race Through Poland is a genuine, currently active self-supported bikepacking race, now on its eighth edition. It is not a mass-participation gran fondo and shouldn't be evaluated as one: there's no closed course, no fixed distance, no aid stations beyond four mandatory control points, and riders choose their own roads between them. The 2026 field of 78 starters produced only 44 finishers — a real, demanding event with a genuine attrition rate, verified by public GPS tracking and manually checked results rather than a self-reported honor system. The branding overstates the geography: despite a marketed 'seven-country' framing, the actual No.8 route stayed within Poland, Slovakia and the Czech Republic.",
+      "strengths": [
+        "Authentic self-supported ultra-distance rules with meaningful route-choice strategy, not a prescribed peloton course",
+        "Public GPS dot-watching and manually checked tracks/results rather than an honor-system finish",
+        "Exceptional Low and High Tatra / Beskid mountain scenery through the Western Carpathians",
+        "A real, non-trivial attrition rate (44 of 78 finished in 2026) that signals genuine difficulty rather than marketing hype"
+      ],
+      "weaknesses": [
+        "No fixed course — distance and elevation are inherently non-comparable rider to rider, since everyone chooses their own roads between the four mandatory controls",
+        "The 'Race Through Poland' name and seven-country branding both overstate how much of the route is actually in Poland or crosses seven countries — the verified 2026 route stayed in Poland/Slovakia/Czech Republic",
+        "Only 44 of 78 starters finished in 2026 — this is not an entry-level event",
+        "Third-party race calendars retain stale data (1,500 km/22,000 m/Polanica-Zdrój) from earlier editions, making the event unusually easy to misidentify if you don't go to the official source"
+      ],
+      "bottom_line": "A legitimate, tough self-supported ultra-distance race for riders who want Transcontinental-style route-choice racing through the Carpathians — not a mass-participation fondo, and not a fixed-distance event. Confirm the current edition's control points and rules directly with the organizer rather than trusting any single quoted distance."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Epic self-supported bikepacking odyssey through Carpathian mountains across 7 countries.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine self-supported ultra-distance bikepacking race through the Carpathians — not a mass gran fondo, and the '7 countries' branding overstates the actual route.",
+      "should_you_race": "Only if you want genuine self-supported ultra-distance racing with route-choice strategy and are prepared for a real chance of not finishing — 44 of 78 starters finished in 2026. This is not an entry-level gran fondo.",
+      "alternatives": "For similar self-supported ultra-distance racing, see Trans Pyrenees Race (also in this database) or other Lost Dot / Transcontinental-style events. For a mass-participation gran fondo in the same region, look at organized Polish or Slovak sportive calendars instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://racethroughpoland.pl/",
+        "category": "official",
+        "label": "Official Race Through Poland Site"
+      },
+      {
+        "url": "https://bikepacking.com/event/race-through-poland-no-8/",
+        "category": "reference",
+        "label": "Bikepacking.com — Race No.8 Listing"
+      },
+      {
+        "url": "https://www.followmychallenge.com/live/rtpl8/",
+        "category": "official",
+        "label": "2026 GPS Tracking and Results"
+      },
+      {
+        "url": "https://www.events1000.com/PL/Wroclaw/159112644813703/Race-Through-Poland",
+        "category": "reference",
+        "label": "Organizer Social-Post Archive"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Race Through Poland gran fondo cycling Nowy Targ",
@@ -247,9 +287,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://racethroughpoland.pl/",
-      "notes": "Bikepacking road race from Nowy Targ with edition No.8 scheduled for 23 May 2026, matching the date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://bikepacking.com/event/race-through-poland-no-8/",
+      "notes": "Race No.8 started 23 May 2026 in Nowy Targ; results confirmed 7 June 2026 (78 starters, 44 finishers). Confirmed self-supported ultra-distance bikepacking format, not a mass gran fondo; distance is nominal/rider-dependent (1,681-1,876 km logged by full-route finishers in 2026), not a fixed 1,799.2 km course. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a self-supported ultra-distance bikepacking race with no fixed course and route choice between mandatory controls — doesn't cleanly fit the gran_fondo taxonomy or its mass-participation scoring dimensions (field_depth, community_culture, etc. assume a shared-course format). Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 3, sol review follow-up"
     }
   }
 }

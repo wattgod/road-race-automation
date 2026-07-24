@@ -5,16 +5,16 @@
     "display_name": "ADAC Velotour (Eschborn-Frankfurt)",
     "tagline": "",
     "vitals": {
-      "distance_km": 104.6,
-      "distance_mi": 65.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
+      "distance_km": 97.0,
+      "distance_mi": 60.3,
+      "elevation_m": 1500,
+      "elevation_ft": 4921.3,
       "location": "Eschborn/Frankfurt, Germany",
       "location_badge": "Eschborn/Frankfurt, Germany",
       "country": "Germany",
       "date": "2026: May 1",
       "date_specific": "2026: May 1",
-      "field_size": "10,000",
+      "field_size": "12,000 registered, sold out",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["97 km Taunus Classic", "85 km Taunus Express", "42 km Skyline"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "All routes start and finish at the Eschborn Ost event area, passing through Frankfurt before heading toward Oberursel and the Taunus. The Classic (97 km) crosses the Großer Feldberg, continues through Eppstein, Königstein and Kronberg, and adds the Mammolshainer Stich before returning to Eschborn; the Express (85 km) follows much of the same course but omits Mammolshain and the Königstein/Kronberg loop. It combines urban closed-road riding through Frankfurt, wooded Mittelgebirge climbing, fast descents and a lightly uphill finish back into Eschborn Ost.",
+      "signature_challenge": "The Mammolshainer Stich — the Classic-only final major test, reaching a reported 23% maximum gradient, arriving after the Feldberg has already taken its toll.",
+      "suffering_zones": [
+        "Großer Feldberg — roughly 11 km from Oberursel to the plateau, with a separately timed mountain classification",
+        "Eppstein — an old-town cobblestone section explicitly described by organizers as feared",
+        "Mammolshainer Stich — see signature_challenge",
+        "The final approach into Eschborn Ost — widened but slightly uphill, a sting in the tail after 90+ km"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Frankfurt hotels; event near city center Alte Oper finish.",
+      "lodging_strategy": "Frankfurt or Eschborn hotels; start/finish is at the Eschborn Ost event area, not central Frankfurt.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.eschborn-frankfurt.de/en/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Runs alongside the professional Eschborn-Frankfurt WorldTour one-day race, sharing substantial course overlap with the pro route.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Record Sellout on Real WorldTour Roads — With Sloppy Route Bookkeeping",
+      "summary": "ADAC Velotour Eschborn-Frankfurt is a genuinely major German amateur sportive, running on substantial overlap with the professional Eschborn-Frankfurt WorldTour race and closing real roads to do it. The 2026 edition sold out a record 12,000-rider field nearly ten weeks before race day. What it doesn't have is stable published vitals: official materials gave conflicting route figures across the promotion cycle — 103/92/40 km early on versus roughly 97/85/42 km in the final event material — and the file previously carried a 104.6 km/2,000 m figure that matches neither.",
+      "strengths": [
+        "Fully closed roads with substantial overlap with the professional WorldTour race",
+        "Three difficulty levels (97/85/42 km) plus a separately timed Feldberg mountain classification",
+        "Major-event atmosphere demonstrated by a record 12,000-place sellout nearly ten weeks early",
+        "Genuine Taunus climbing (Feldberg, Mammolshainer Stich) rather than a flat urban loop"
+      ],
+      "weaknesses": [
+        "Official materials gave conflicting route figures across the promotion cycle (103/92/40 km early vs. approximately 97/85/42 km final)",
+        "A 12,000-rider field creates real congestion risk on narrow Taunus roads despite staggered starts",
+        "Some route sections aren't normally open to bicycles, limiting riders' ability to pre-ride the full course legally",
+        "The Express is only about 12 km shorter than the Classic but skips Mammolshain and the Königstein/Kronberg loop — a materially easier ride than the distance gap suggests"
+      ],
+      "bottom_line": "A legitimately major event worth entering for the WorldTour road overlap and Feldberg climb alone — register early given the sellout history, and don't be surprised if the organizer's own distance figures shift as race day approaches."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "Premier German amateur sportive on pro WorldTour roads with Taunus punch.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A major German amateur sportive on pro WorldTour roads with Taunus climbing — sells out fast, but the organizer's own route figures keep shifting.",
+      "should_you_race": "Yes if you want a major, well-attended sportive on real WorldTour roads with genuine Taunus climbing. Register early — the 2026 edition sold out roughly ten weeks before race day.",
+      "alternatives": "For a similar pro-race-overlap amateur sportive, look at other WorldTour-adjacent European gran fondos run alongside their professional counterpart race."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.timeto.com/de/event/adac-velotour",
+        "category": "official",
+        "label": "Official Event/Results Page"
+      },
+      {
+        "url": "https://storage-aso.lequipe.fr/ASO/cycling_efr/rennzeitung-ef-26.pdf",
+        "category": "official",
+        "label": "Official 2026 Race Newspaper — Final Route Figures"
+      },
+      {
+        "url": "https://www.eschborn-frankfurt.de/en/news/2026/adac-velotour-sold-out-with-12-000-participants/44",
+        "category": "official",
+        "label": "Official Sellout Announcement — 12,000 Participants"
+      },
+      {
+        "url": "https://www.adac.de/veranstaltungen/adac-velotour-eschborn-frankfurt-2026/",
+        "category": "official",
+        "label": "ADAC 2026 Event Listing"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "ADAC Velotour (Eschborn-Frankfurt) gran fondo cycling Eschborn/Frankfurt",
@@ -214,9 +250,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.adac.de/veranstaltungen/adac-velotour-eschborn-frankfurt-2026/",
-      "notes": "May 1 2026 ran alongside Eschborn-Frankfurt; 12,000 places sold out"
+      "verified": "2026-07-24",
+      "source": "https://www.timeto.com/de/event/adac-velotour",
+      "notes": "Held 1 May 2026 alongside the professional Eschborn-Frankfurt WorldTour race; official results confirm route winners and a Feldberg climbing champion. Vitals corrected to Taunus Classic (97 km, just over 1,500 m) from the prior 104.6 km/2,000 m figure, which matched neither the early nor final published route data. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

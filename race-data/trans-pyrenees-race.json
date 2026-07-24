@@ -5,24 +5,24 @@
     "display_name": "Trans Pyrenees Race",
     "tagline": "",
     "vitals": {
-      "distance_km": 2000.4,
-      "distance_mi": 1243.0,
-      "elevation_m": 45000,
-      "elevation_ft": 147637.0,
-      "location": "Atlantic to Mediterranean, France/Spain",
-      "location_badge": "Atlantic to Mediterranean, France/Spain",
-      "country": "France/Spain",
+      "distance_km": 1800.0,
+      "distance_mi": 1118.5,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Girona to Girona (via Atlantic and Mediterranean Pyrenees), Spain/France",
+      "location_badge": "Girona, Spain (Pyrenean loop)",
+      "country": "Spain/France",
       "date": "2026: September 25",
-      "date_specific": "2026: September 25",
-      "field_size": "limited, solo or pairs",
+      "date_specific": "2026: September 25, 06:00 CEST",
+      "field_size": "142 riders at briefing (2025 edition, TPRNo5); 2026 field unconfirmed",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "self-supported, no aid stations",
-      "cutoff_time": "9 days (finish cut-off 3rd October 23:59 CEST)",
+      "feed_zones": "self-supported, no aid stations beyond mandatory controls",
+      "cutoff_time": "9 days (finish cut-off October 3, 2026, 23:59 CEST)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["Solo", "Pairs"]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,8 +31,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Road-focused for 2026 (no mandatory gravel), on mountain and secondary roads with limited connecting tracks",
+      "technical_rating": 3,
       "features": []
     },
     "fondo_rating": {
@@ -70,37 +70,73 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This is a genuine self-supported ultra-distance race organized by Lost Dot, not a mass gran fondo. TPRNo6 (2026) starts and finishes in Girona, initially touching the Costa Brava before traversing the Spanish Pyrenees to Atlantic-side Orio and returning through France. Riders design their own routes between mandatory controls and fixed parcours across Catalan, Aragonese, Basque and French Pyrenean terrain; 2026 returns to a road-focused format with no mandatory gravel. Because riders choose their own connections, there is no single fixed distance or elevation — the organizer's own materials inconsistently describe the route as 'up to 2,000 km' and 'almost 1,800 km' in the same season, and the most recent completed edition (TPRNo5, October 2025) was organizer-estimated at roughly 1,900 km / 40,000 m.",
+      "signature_challenge": "The compulsory Pyrenean ridge crossing near St-Jean-Pied-de-Port into France, arriving after riders have already crossed the range once from the Mediterranean side.",
+      "suffering_zones": [
+        "The RAID Pyrénéen sequence — Bagargi, Marie-Blanque, Aubisque, Soulor, Tourmalet, Aspin and Peyresourde in succession",
+        "Cim de Coma Morera — the 2026 high point/parcours finish at 2,200 m, above the Tourmalet",
+        "Coll d'Arques-Coll de Boixols — forested cross-country route choices followed by exposed balcony roads",
+        "St-Jean-Pied-de-Port / Imperial Peaks Road — the compulsory ridge crossing into France, see signature_challenge"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Self-supported; riders source own bivouac or hotels en route.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.lostdot.cc/tpr"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized by Lost Dot, the same organization behind other self-supported ultra-distance races; now on its sixth edition (TPRNo6, 2026) with five completed prior editions, published results and public GPS dot-watching.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Self-Supported Ultra — Selective Entry, No Fixed Distance",
+      "summary": "Trans Pyrenees Race is a genuine self-supported ultra-distance race with five completed editions, published results and public GPS dot-watching — this is not a marketing-only 'challenge' like some entries in this category. Entry is by assessed application rather than open registration or a stated lottery, costs £415 plus a refundable £130 tracker deposit, and the organizer expects prior multi-day ultra-cycling experience. There is no genuinely fixed distance or elevation because riders choose their own routes between mandatory controls — official copy itself gives inconsistent figures ('up to 2,000 km' vs. 'almost 1,800 km') within the same season, and the most recently completed edition (TPRNo5, 2025) is organizer-estimated at roughly 1,900 km / 40,000 m with 142 riders at the start briefing.",
+      "strengths": [
+        "Proven organizer (Lost Dot) with a real results history across five completed editions and live GPS dot-watching",
+        "Genuine navigation and route-choice strategy rather than a prescribed peloton course",
+        "Iconic Pyrenean cols (Tourmalet, Aubisque, Peyresourde, Marie-Blanque) combined with obscure mountain roads most riders never see",
+        "Rules explicitly enforce self-sufficiency and separate solo/pair classifications"
+      ],
+      "weaknesses": [
+        "No genuinely fixed distance or elevation — route choices differ rider to rider, and organizer copy itself is inconsistent ('up to 2,000 km' vs. 'almost 1,800 km')",
+        "Entry is selective (assessed application, £415 plus a refundable £130 tracker deposit) rather than open registration, and expects prior multi-day ultra-cycling experience",
+        "Late-September mountain weather, remote resupply and a nine-day-scale cutoff materially increase risk versus a supported mass event",
+        "2026 field size and start list remain unpublished as of research"
+      ],
+      "bottom_line": "A legitimate, demanding self-supported ultra-distance race for experienced riders who want real Pyrenean route-choice racing — not a beginner-friendly gran fondo, not open entry, and not a fixed-distance course. Confirm the current parcours and application requirements directly with Lost Dot before planning around any single distance figure."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Epic self-supported Pyrenees double-crossing for grimpeurs seeking ultimate adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine self-supported ultra-distance Pyrenees crossing run by Lost Dot — selective entry, no fixed distance, not a mass gran fondo.",
+      "should_you_race": "Only if you have prior multi-day self-supported ultra-cycling experience and can pass Lost Dot's application process — this is not an open-entry or beginner event.",
+      "alternatives": "For a similar self-supported ultra-distance format, see Race Through Poland (also in this database) or other Lost Dot events. For a supported, mass-participation Pyrenees crossing, look at the Raid Pyrénéen cyclotourisme challenge instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.lostdot.cc/race/trans-pyrenees-race-no6",
+        "category": "official",
+        "label": "Lost Dot — TPRNo6 (2026) Official Race Page"
+      },
+      {
+        "url": "https://www.lostdot.cc/results/tprno5",
+        "category": "official",
+        "label": "Lost Dot — TPRNo5 (2025) Results"
+      },
+      {
+        "url": "https://www.lostdot.cc/tpr",
+        "category": "official",
+        "label": "Lost Dot — Trans Pyrenees Race Series Page"
+      },
+      {
+        "url": "https://followmychallenge.com/event/944/",
+        "category": "reference",
+        "label": "GPS Dot-Watching / Live Tracking"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Trans Pyrenees Race gran fondo cycling Atlantic to Mediterranean",
@@ -149,9 +185,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.lostdot.cc/tpr",
-      "notes": "Upcoming TPR No6 is announced for 25 September 2026 with rider applications open, matching the Atlantic-to-Mediterranean France/Spain ultra road race.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.lostdot.cc/race/trans-pyrenees-race-no6",
+      "notes": "TPRNo6 confirmed for 25 September 2026, 06:00 CEST, cutoff October 3, 2026, 23:59 CEST — sixth edition, five completed prior editions with published results and public GPS tracking. Confirmed self-supported ultra-distance format, application-based entry (not open registration or lottery). Distance is nominal/rider-dependent, not a fixed 2,000.4 km course. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a self-supported, application-based ultra-distance race with no fixed course — doesn't cleanly fit the gran_fondo taxonomy or its mass-participation scoring dimensions. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 3, sol review follow-up"
     }
   }
 }

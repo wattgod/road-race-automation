@@ -5,24 +5,27 @@
     "display_name": "Manali-Khardung La Cycling Championship",
     "tagline": "",
     "vitals": {
-      "distance_km": 558.4,
-      "distance_mi": 347.0,
-      "elevation_m": 10668,
-      "elevation_ft": 35000.0,
+      "distance_km": 505.0,
+      "distance_mi": 313.8,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Manali to Leh, Himachal Pradesh / Ladakh, India",
       "location_badge": "Manali to Leh, India",
       "country": "India",
-      "date": "2026: August TBD",
-      "date_specific": "2026: August TBD",
-      "field_size": "Approximately 100 riders (2022 edition)",
+      "date": "2026: unconfirmed — no verified edition since 2015, promoter status unclear",
+      "date_specific": "2026: unconfirmed",
+      "field_size": "63 riders (last independently verified edition, 2015); promoter claims 100+ for a disputed 2022 edition",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "Multiple support stations along route",
-      "cutoff_time": "7 days racing",
+      "cutoff_time": "Multi-stage event (9 stages in the last verified 2015 edition, not a fixed 7-day cutoff)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Competitive multi-stage race",
+        "Parallel untimed adventure tour"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,8 +34,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Predominantly paved high-altitude highway, interrupted by sand, gravel and rocky stretches",
+      "technical_rating": 3,
       "features": []
     },
     "fondo_rating": {
@@ -70,42 +73,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starts in Manali, crosses from Himachal Pradesh over the Great Himalaya into the Trans-Himalayan terrain of Ladakh, passes through Leh, and finishes atop Khardung La. It covers roughly 500-510 km of the Manali-Leh-Khardung La corridor over multiple stages (nine in the last independently verified 2015 edition — not a fixed seven-day cutoff, despite marketing copy suggesting one). The surface is predominantly paved high-altitude highway, interrupted by sand, gravel and rocky stretches. Repeated high passes, large daily altitude changes and a final ascent above 5,300 m define it — this is a supported high-altitude endurance/expedition race, not a conventional one-day mass-start road event, and the promoter runs a competitive timed format alongside a parallel untimed adventure-tour option for the same route.",
+      "signature_challenge": "The Leh-Khardung La finale, finishing around 5,359-5,375 m, where hypoxia compounds the final climb after days of accumulated high-altitude fatigue.",
+      "suffering_zones": [
+        "Rohtang Pass (~13,000 ft / ~3,960 m) — the initial crossing from green Manali into the harsher, drier Lahaul terrain",
+        "The central high-pass sequence — four passes reportedly exceeding 15,000 ft (~4,570 m), with relentless gradient and altitude swings",
+        "Mixed-surface highway sectors — paved road interrupted by sand, gravel and rocky sections at altitude",
+        "Leh-Khardung La finale — see signature_challenge"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Mix of hotel stays in Manali and Leh, with camping/dome tents and Swiss tents at high-altitude base camps during the 7-day race. Post-race accommodation in Leh hotels.",
+      "lodging_strategy": "Mix of hotel stays in Manali and Leh, with camping/dome tents and Swiss tents at high-altitude base camps during the multi-stage event. Post-race accommodation in Leh hotels.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.manalikhardungla.in/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized by Northern Escapes Outdoors Pvt. Ltd. (promoter Gaurav Schimar); Cycling 4 Change/Anil Uchil co-organized the last independently verified edition in 2015, which produced named men's and women's winners from a 63-rider field over nine stages.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Once, Unverifiable Now",
+      "summary": "This is a genuinely demanding high-altitude, multi-stage cycling event on the Manali-Leh-Khardung La corridor — but its current operating status cannot be confirmed. The last independently verifiable edition finished on 3 August 2015 with a real 63-rider field and named winners. The promoter (Northern Escapes Outdoors) has since advertised further editions, including a claimed 2022 running and a 2024 edition scheduled for 7-16 August, but no independent source confirms either actually took place — the official site itself has remained frozen on the 2024 dates with no post-event report. Promoter marketing also overstates the route: distance is claimed at 558.4 km against the promoter's own more conservative 500-510 km figure, and Khardung La is still billed as the 'world's highest motorable pass,' a claim Guinness World Records no longer supports (that title now belongs to Umling La at 5,798 m). Treat every current-year claim from this promoter with real skepticism until a 2026 edition is independently verified.",
+      "strengths": [
+        "A real competitive edition existed: the verified 2015 running produced named winners, a 63-rider field and medical support with staged acclimatization",
+        "Genuinely exceptional route — sustained high-altitude endurance racing across the Great Himalaya into Trans-Himalayan Ladakh, finishing above 5,300 m",
+        "Progressive multi-day staging designed for acclimatization rather than a single reckless push to altitude"
+      ],
+      "weaknesses": [
+        "No independent confirmation of any edition since 2015 — the promoter's own site remains frozen on 2024 dates with no verified post-event report, and 2026 status is unconfirmed",
+        "Distance is inflated in promoter marketing (558.4 km claimed vs. the promoter's own 500-510 km figure elsewhere) and elevation gain is unverified",
+        "Combines timed racing and untimed touring under one banner, described by a past winner as a 'nine-day MTB marathon' — riders should not assume this is a straightforward one-day mass-start road championship",
+        "The 'world's highest motorable road/pass' claim attached to Khardung La is outdated; Guinness now recognizes Umling La (5,798 m) for that title"
+      ],
+      "bottom_line": "If you can independently confirm a current edition is actually running — start with the promoter directly, not just their website — this is a genuinely extreme high-altitude test. Until then, treat 2026 registration claims with skepticism; the last verifiable finish line was in 2015."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "The world's highest long-distance cycling race—a transcendent Himalayan ultra-endurance test combining extreme altitude, technical terrain, and notable scenery for elite mountain cyclists seeking ultimate adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "An extreme Himalayan high-altitude stage race on paper — but unverified since 2015, so confirm it's actually running before you book.",
+      "should_you_race": "Only after independently confirming a current edition is scheduled and has run recently — the promoter's marketing has outpaced verifiable results for over a decade.",
+      "alternatives": "For verified, currently-active extreme high-altitude cycling in the same region, look at organized Manali-Leh or Khardung La cycling expeditions run by established Himalayan adventure-tourism operators with recent, documented departures."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.manalikhardungla.in/",
+        "category": "official",
+        "label": "Promoter Site — Frozen on 2024 Dates, No Verified Post-Event Report"
+      },
+      {
+        "url": "https://www.tribuneindia.com/news/archive/community/manali-khardung-la-cycling-c-ship-flagged-off-111659/",
+        "category": "media",
+        "label": "The Tribune — Race Flag-Off Coverage"
+      },
+      {
+        "url": "https://www.dailyexcelsior.com/news/archive/laxmi-pradhan-win-manali-khardungla-cycling-cship/",
+        "category": "media",
+        "label": "Daily Excelsior — Last Independently Verified Winner Report (2015)"
+      },
+      {
+        "url": "https://www.guinnessworldrecords.com/world-records/62927-highest-road",
+        "category": "reference",
+        "label": "Guinness World Records — Highest Road Is Now Umling La, Not Khardung La"
+      }
+    ],
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
+      "status": "unknown",
+      "verified": "2026-07-24",
       "source": "https://www.manalikhardungla.in/",
-      "notes": "Official site lists 4th edition in Aug 2024 and continues promoting the Manali–Leh–Khardung La road cycling championship, with similar 2026 Manali–Leh–Khardung La cycling expeditions open for registration indicating the route event is still running.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "SUPERSEDES prior 'active' status. No 2025 or 2026 edition independently confirmed; official site remains frozen on 7-16 August 2024 dates with no independent report that edition occurred. Last independently verified finish: 3 August 2015 (63-rider field, named winners). Promoter alone claims a 2022 edition. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a multi-stage event (9 stages in the last verified 2015 edition) combining a timed race with a parallel untimed adventure tour — doesn't cleanly fit the gran_fondo taxonomy or its single-day scoring dimensions. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json and birkebeinerrittet-road.json flag similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 3, sol review follow-up"
     }
   }
 }

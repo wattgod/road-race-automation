@@ -3,7 +3,7 @@
     "name": "Gran Fondo Nirvana Antalya",
     "slug": "gran-fondo-nirvana-antalya",
     "display_name": "UCI Gran Fondo World Series Antalya",
-    "tagline": "Fast Turkish Riviera qualifier with luxury resort vibes",
+    "tagline": "",
     "vitals": {
       "distance_km": 98.0,
       "distance_mi": 60.9,
@@ -78,7 +78,7 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "98km mainly flat/fast loop from resort: beach roads → backcountry near airport → short steep hills (253m northern section). 66km skips climbs. 23km flat TT river loop[1][2][7]. **Suffering zones**: Headwind sections (6 Beaufort), gravel corners, final kickers.",
+      "character": "This is a duplicate stub — see race-data/granfondo-antalya.json for the current, maintained course description.",
       "signature_challenge": null,
       "suffering_zones": []
     },
@@ -104,11 +104,27 @@
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Excellent amateur qualifier combining fast racing with Turkish Riviera luxury. Perfect for age-group qualification without suffering.",
+      "one_liner": "Duplicate profile — see race-data/granfondo-antalya.json for the current, maintained entry for this event.",
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/78761",
+        "category": "official",
+        "label": "UCI — 2026 Competition Listing (Same Event, Current Non-Nirvana Branding)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/nirvana-granfondo-antalya-concludes-2024-with-thrilling-action/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2024 Recap Under This Entry's 'Nirvana' Branding"
+      },
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2026 Calendar, Lists Only the Non-Nirvana Name"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Nirvana Antalya gran fondo cycling Antalya",
@@ -235,6 +251,11 @@
       "verified": "2026-07-23",
       "source": "https://ucigranfondoantalya.com/en/about",
       "notes": "Official site and media report confirm the 6–9 November 2025 edition took place and 2026 date is listed as upcoming, so the event is still active; date on file (7 Nov 2025) conflicts with 6–9 Nov 2025.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "granfondo-antalya",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "Same event as race-data/granfondo-antalya.json under a former sponsor name. 'Nirvana' was the Nirvana Hotels title sponsorship; the current (2026) UCI and Turkish federation calendars list this event as 'UCI Gran Fondo World Series Antalya' / 'UCI Gran Fondo Antalya' with no 'Nirvana' branding. Confirmed via codex gpt-5.6-sol foreground research 2026-07-24: identical official site (ucigranfondoantalya.com), identical Kadriye/Belek resort start location, and overlapping YouTube race footage (video IDs fM30BFU2qR0, 7uBi_4uaqMg appear in both profiles). Editorial work (biased_opinion, course_description, citations) consolidated onto the canonical granfondo-antalya profile; this entry is left as a redirect stub per dedupe policy."
     }
   }
 }

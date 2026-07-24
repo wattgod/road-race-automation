@@ -5,10 +5,10 @@
     "display_name": "Tour of the Peak",
     "tagline": "",
     "vitals": {
-      "distance_km": 181.9,
-      "distance_mi": 113.0,
-      "elevation_m": 2896,
-      "elevation_ft": 9500.0,
+      "distance_km": 182.1,
+      "distance_mi": 113.2,
+      "elevation_m": 3406,
+      "elevation_ft": 11175.2,
       "location": "Bakewell, Derbyshire, England",
       "location_badge": "Bakewell, England",
       "country": "England",
@@ -22,7 +22,7 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["182.1 km Long", "95.6 km Medium"]
     },
     "climate": {
       "primary": "Temperate",
@@ -72,13 +72,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Brutal road sportive through Peak District National Park, relentless hills with savage short pitches and long grinds, rewarded by stunning vistas and fast descents.",
-      "signature_challenge": "The 'ride of heroes' long route tackling Winnats Pass, Holme Moss, and Cat and Fiddle in one day—over 10,000ft of Peak District punishment.",
+      "character": "Both the Long and Medium routes start and finish at Bakewell Showground in Derbyshire's Peak District. After a gentle opening, climbing begins just beyond Ashford-in-the-Water and stays frequent. Both routes cross Winnats Pass; the Long route adds Holme Moss before rejoining the Medium course, and Cat and Fiddle supplies the major late climb before the return to Bakewell. Organizer pages themselves aren't fully consistent — the linked Long-route detail page gives a slightly different 182.8 km/3,701 m — so treat these as best-available, not exact, figures.",
+      "signature_challenge": "Winnats Pass' timed 'Killer Mile' closed-road section, with ramps reportedly reaching 28% — the defining early test that splits Medium from Long routes.",
       "suffering_zones": [
-        "Winnats Pass: Killer steep ramp early on, splitting medium from long routes; unrelenting gradient tests resolve.",
-        "Holme Moss: Long, enduring climb on long route; high-altitude grind after Winnats.",
-        "Cat and Fiddle: Final major test before Bakewell; iconic high road with wind exposure.",
-        "Whetstone Ridge: Long route high point; cumulative fatigue from 9500ft total ascent hits here."
+        "Winnats Pass — timed 'Killer Mile' on a closed-road section, ramps reportedly up to 28%",
+        "Holme Moss — Long-route-only moorland climb, roughly 4 km, 274 m gain, 6.9% average, with gradients up to about 13%",
+        "Cat and Fiddle — long, exposed final major climb after the routes rejoin",
+        "The post-Ashford section — the first ascent begins early and introduces the route's relentless succession of hills"
       ]
     },
     "logistics": {
@@ -95,45 +95,55 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuinely Historic, Genuinely Hard Sportive — With Sloppy Route Data",
+      "summary": "Tour of the Peak has real pedigree: it revives the 1943-2005 Tour of the Peak road race, and the current sportive delivers three major, nationally recognized climbs (Winnats Pass, Holme Moss, Cat and Fiddle) across the Peak District — with Winnats specifically run as a closed-road, separately timed 'Killer Mile' section. The event is well-organized on race day — chip timing, feed stations, that one closed-road timed climb — but its own published route data doesn't agree with itself: the main event page and the linked Long-route detail page give materially different distance and elevation figures for the same course. Entry also requires a narrow Tuesday-Thursday booking window with a mandatory questionnaire, and no day-of entries are accepted.",
+      "strengths": [
+        "Historic course derived from the original 1943-2005 Tour of the Peak road race",
+        "Three nationally recognized major climbs — Winnats Pass, Holme Moss, Cat and Fiddle — with Winnats run as a closed-road, separately timed section",
+        "Attractive Peak District setting with a Medium-route escape option at Winnats Pass",
+        "Chip timing, feed stations and a genuinely closed-road timed climb (the Winnats 'Killer Mile')"
+      ],
+      "weaknesses": [
+        "Organizer pages materially disagree on Long-route distance and elevation (182.1 km/3,406 m vs. 182.8 km/3,701 m on the linked route-detail page)",
+        "The Long course is a 7-10 hour undertaking with only three listed feed stations",
+        "Mandatory questionnaire and start-slot booking occurs in a narrow Tuesday-Thursday window — no entries accepted on the day",
+        "Winnats' extreme gradient and the exposed moorland climbs make weather and gearing genuinely consequential, not just marketing language"
+      ],
+      "bottom_line": "A legitimately hard, historically rooted Peak District sportive worth entering for the three major climbs alone — just book inside the narrow entry window and don't expect the organizer's own numbers to be internally consistent."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Peak District's savage climbs on historic roads—a true test of grit.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Peak District climbing on historic roads, undercut by the organizer's own inconsistent route data.",
+      "should_you_race": "Yes if you want a historically rooted, genuinely hard Peak District sportive with three major climbs. Book inside the Tuesday-Thursday entry window — there are no day-of entries.",
+      "alternatives": "For a similarly hard closed-climb Peak District test, look at other Derbyshire sportives built around Winnats Pass, Cat and Fiddle or the Snake Pass corridor."
     },
     "citations": [
       {
         "url": "https://velo29events.com/sportives/tour-of-the-peak-sportive/",
-        "category": "reference",
-        "label": "Tour of the Peak Sportive"
+        "category": "official",
+        "label": "Official Event Page"
       },
       {
-        "url": "https://racepass.com/gb/races/the-peaks-tour",
-        "category": "reference",
-        "label": "The Peaks Tour | 2026 | Cycling Races in Derbyshire"
+        "url": "https://velo29events.com/sportives/tour-of-the-peak-sportive/tour-of-the-peak-long/",
+        "category": "official",
+        "label": "Official Long-Route Detail Page (Conflicting Vitals)"
       },
       {
-        "url": "https://findarace.com/events/ukce-peaks-tour",
-        "category": "reference",
-        "label": "The UKCE Peaks Tour 2026 | Sat 5 Sept | Book @ Findarace"
+        "url": "https://velo29events.com/black-friday-sale/",
+        "category": "official",
+        "label": "Organizer 2026 Calendar Confirmation"
       },
       {
-        "url": "https://www.timeoutdoors.com/events/the-peaks-tour-1/long",
+        "url": "https://cyclinguphill.com/holme-moss/",
         "category": "reference",
-        "label": "The Peaks Tour | Long | Sat 27 Sep 2025 - TimeOutdoors"
+        "label": "Holme Moss Climb Data"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://velo29events.com/sportives/tour-of-the-peak-sportive/tour-of-the-peak-long/",
-      "notes": "Velo29 lists the Tour of the Peak Sportive in Bakewell on 17 May 2026 with event details and contact info, indicating it is currently running.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://velo29events.com/sportives/tour-of-the-peak-sportive/",
+      "notes": "Official calendar lists 17 May 2026; organizer now advertises the next edition for May 2027. Vitals corrected: Long route 182.1 km/3,406 m (up from 181.9 km/2,896 m previously on file, which understated elevation by 510 m). Note the organizer's own linked Long-route page gives a further different 182.8 km/3,701 m. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

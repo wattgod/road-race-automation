@@ -1,12 +1,12 @@
 {
   "race": {
-    "name": "Granfondo Alpi del Mare",
+    "name": "L'Étape Mondovì by Tour de France",
     "slug": "granfondo-alpi-del-mare",
-    "display_name": "Granfondo Alpi del Mare",
+    "display_name": "L'Étape Mondovì by Tour de France (formerly Granfondo Alpi del Mare)",
     "tagline": "",
     "vitals": {
-      "distance_km": 110.7,
-      "distance_mi": 68.8,
+      "distance_km": 110.5,
+      "distance_mi": 68.7,
       "elevation_m": 2271,
       "elevation_ft": 7451.0,
       "location": "Mondovì, Piedmont, Italy",
@@ -14,7 +14,7 @@
       "country": "Italy",
       "date": "2026: September 20",
       "date_specific": "2026: September 20",
-      "field_size": "2000 maximum participants",
+      "field_size": "2,400 participants (2025 inaugural edition, actual turnout); 2026 organizer target is 2,000+",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["110.5 km Granfondo", "60.35 km Cicloturistica"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,83 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starts in central Mondovì at Piazza Ellero and finishes uphill in Mondovì's Piazza. The route loops through the Alta Langa and Monregalese valleys, including Murazzano, Vicoforte, Frabosa Soprana/Sottana and numerous smaller communes. The defining character is persistent rolling terrain — repeated panoramic climbs, descents and rhythm changes rather than one enormous Alpine pass — returning to Mondovì after approximately 110.5 km and 2,271 m of climbing. Now in its second edition (2026), the event was rebranded L'Étape Mondovì by Tour de France after debuting in 2025 as Granfondo Alpi del Mare — the same race, course region and organizer, under official Tour de France/L'Étape branding for its second year.",
+      "signature_challenge": "The Alta Langa/Monregalese 'sawtooth' — continuous climbing and descending throughout the route, making pacing and repeated accelerations the decisive factor rather than any single summit.",
+      "suffering_zones": [
+        "Oberti — 1.8 km gaining 160 m, approximately 8.9% average; the designated mountains-jersey climb",
+        "Sbaranzo — new climb added for the 2026 route; length and gradient not yet published",
+        "The Alta Langa/Monregalese sawtooth — see signature_challenge",
+        "The late-season return through the Monregalese valleys — accumulated climbing, not altitude, is the principal difficulty here"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Mondovì and surrounding Alta Langa region offer accommodation options. The event weekend (September 19-21, 2026) includes festival activities, suggesting local hospitality infrastructure. Specific recommendations not detailed in official materials.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://letapeitaly.it/i-percorsi-mondovi/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2025,
+      "origin_story": "Debuted in 2025 as Granfondo Alpi del Mare, an independent Mondovì granfondo; rebranded L'Étape Mondovì by Tour de France for its 2026 second edition, joining the official L'Étape Italy calendar alongside L'Étape Piemonte (Entracque).",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Promising Debut, Now Under Official Tour de France Branding",
+      "summary": "This race debuted in 2025 as Granfondo Alpi del Mare and drew 2,400 riders in its first year through the Alta Langa and Monregalese valleys — the organizer's 2026 target of 'over 2,000' is actually a step down from that actual 2025 turnout. For 2026, it was absorbed into the official L'Étape Italy calendar and rebranded L'Étape Mondovì by Tour de France — the same course region and organizer, now carrying Tour de France/L'Étape closed-road protection and chip timing. As a second-year event under new branding, it lacks a long operating history, and its own official pages already disagree with each other on the basics: the event homepage shows 2,201 m of climbing while the route page, FAQ and regulations all say 2,271 m.",
+      "strengths": [
+        "Official Tour de France/L'Étape affiliation as of 2026, with closed-road protection for riders inside the race convoy",
+        "Scenic Alta Langa and Monregalese roads with a gourmet Murazzano feed zone",
+        "Persistent rolling terrain that rewards pacing and repeated accelerations, not just raw climbing power",
+        "A shorter, e-bike-compatible Cicloturistica option (60.35 km) alongside the full Granfondo"
+      ],
+      "weaknesses": [
+        "Only the second edition overall (first as L'Étape Mondovì), so it lacks a long operating history",
+        "The organizer's own pages already conflict on basics — 2,201 m vs. 2,271 m of climbing across different official pages",
+        "Roads are closed only within the moving race envelope; riders passed by the end vehicle must continue under normal traffic rules",
+        "Competitive entry requires cycling-specific medical certification"
+      ],
+      "bottom_line": "A well-located Piedmont climbing test that just gained real Tour de France pedigree — worth watching as it establishes itself, but confirm the current year's exact vitals directly given the organizer's own pages don't agree."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "A prestigious, well-organized gran fondo through stunning Piedmont hills with Tour de France-affiliated credibility and strong community atmosphere.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A well-attended gran fondo through the Alta Langa and Monregalese hills — now officially L'Étape Mondovì by Tour de France as of its 2026 second edition.",
+      "should_you_race": "Yes if you want genuine Alta Langa/Monregalese climbing with new Tour de France/L'Étape pedigree. Confirm current-year climbing figures directly — the organizer's own pages disagree by 70 m.",
+      "alternatives": "For the other 2026 Piedmont L'Étape stop, see L'Étape Piemonte (Entracque, May) — also in this database."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://letapeitaly.it/regolamento-mondovi/",
+        "category": "official",
+        "label": "Official 2026 Regulations"
+      },
+      {
+        "url": "https://letapeitaly.it/faq-mondovi/",
+        "category": "official",
+        "label": "Official 2026 FAQ"
+      },
+      {
+        "url": "https://letapeitaly.it/i-percorsi-mondovi/",
+        "category": "official",
+        "label": "Official 2026 Route Pages"
+      },
+      {
+        "url": "https://www.targatocn.it/2025/09/18/leggi-notizia/argomenti/attualita/articolo/a-mondovi-arriva-la-granfondo-alpi-del-mare-annalisa-minetti-madrina-dellevento-attesi-2000-gra.html",
+        "category": "media",
+        "label": "2025 Debut Coverage, 2,000 Expected Registrations"
+      },
+      {
+        "url": "https://granfondoalpidelmare.com/",
+        "category": "official",
+        "label": "Original 2025 Granfondo Alpi del Mare Site"
+      },
+      {
+        "url": "https://www.targatocn.it/2026/07/10/leggi-notizia/argomenti/sport-2/articolo/ciclismo-vincenzo-nibali-accende-lentusiasmo-presentata-ufficialmente-letape-mondovi-by-tour-2.html",
+        "category": "media",
+        "label": "July 2026 Official Presentation, Confirms 2,400 Actual 2025 Turnout"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Alpi del Mare gran fondo cycling Mondovì",
@@ -171,9 +217,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondoalpidelmare.com/presentazione-ufficiale-etape-mondovi-2026/",
-      "notes": "Rebranded as L’Étape Mondovì for 20 September 2026 but remains a Mondovì road granfondo in the same series.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://letapeitaly.it/regolamento-mondovi/",
+      "notes": "Confirmed rebranded to L'Étape Mondovì by Tour de France for its second edition, Sunday 20 September 2026, registrations open. Vitals confirmed: Granfondo 110.5 km/2,271 m, Cicloturistica 60.35 km/1,104 m. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "Not a duplicate of race-data/letape-piemonte.json — this is a separate 2026 Piedmont stop (Mondovì, September) rebranded L'Étape Mondovì by Tour de France, distinct from L'Étape Piemonte (Entracque, May). Both trace to the same 2026 A.S.O./L'Étape Italy relocation that discontinued L'Étape Parma (see race-data/letape-parma.json).",
+      "ruled": "2026-07-24 dedupe sweep"
     }
   }
 }

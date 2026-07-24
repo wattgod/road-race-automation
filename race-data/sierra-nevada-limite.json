@@ -5,16 +5,16 @@
     "display_name": "Sierra Nevada Límite Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 146.4,
-      "distance_mi": 91.0,
-      "elevation_m": 3353,
-      "elevation_ft": 11000.0,
+      "distance_km": 119.0,
+      "distance_mi": 73.9,
+      "elevation_m": 3319,
+      "elevation_ft": 10890.6,
       "location": "Cenes de la Vega, Granada, Spain",
       "location_badge": "Cenes de la Vega, Spain",
       "country": "Spain",
       "date": "2026: May 23",
       "date_specific": "2026: May 23",
-      "field_size": null,
+      "field_size": "500+",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["119 km Gran Fondo"]
     },
     "climate": {
       "primary": "Temperate",
@@ -72,18 +72,18 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Brutal high-altitude road gran fondo through Sierra Nevada's demanding alpine passes, blending endurance suffering with panoramic mountain beauty.",
-      "signature_challenge": "The continuous 38km+ mountain passes culminating near Veleta peak at over 3100m, Europe's highest road finish line.",
+      "character": "A point-to-point road route starting at the Cenes de la Vega sports centre and finishing at Pradollano ski station, around 2,100 m altitude — not at the Veleta summit itself; the separate Subida al Veleta timed climb (38 km, 2,236 m, run the following day) is a different event, not part of this Gran Fondo. The route traverses mountainous roads east of Granada through the Sierra Nevada foothills, climbing Puerto de Blancares twice — once from Quéntar, once from La Peza — before turning through Güéjar Sierra toward El Duque and Las Sabinas. 2026 course figures (119 km / 3,319 m) run materially shorter than the 146.4 km / 3,353 m previously on file; the organizer's own site is internally inconsistent, with current Spanish-language pages giving 119 km/3,319 m and older English/homepage material still showing 140 km/3,200 m or other stale figures.",
+      "signature_challenge": "The dense 3,319 m of climbing packed into 119 km, capped by a classified high-mountain timed ascent on the Hotel El Duque-Las Sabinas segment (roughly 15 km, 1,177 m+) that alone decided the 2026 overall classification.",
       "suffering_zones": [
-        "Initial Ascent from Cenes de la Vega: Steep ramps out of the lowlands quickly sap early energy before the main Sierra Nevada walls.",
-        "Mid-Route Mountain Passes: Relentless climbs through Genil Pines and Las Sabinas Pass accumulate massive vertical.",
-        "Final Push to Pradollano Finish: Highest efforts near 2100-3100m altitude where thin air and fatigue collide."
+        "Puerto de Blancares from Quéntar — approximately 7.3 km, the first of two ascents of the same pass",
+        "Puerto de Blancares from La Peza — approximately 9.4 km, the second ascent from the opposite side",
+        "Hotel El Duque-Las Sabinas — official results measured this roughly 15 km / 1,177 m+ segment (km 97.0-112.5) as the decisive classified climb"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Collaborations with TODOSIERRANEVADA for discounts; Granada city offers charming hotels minutes away.",
-      "transport": "Efficiently organized with staggered starts (146km at 8AM, 114km at 9:30AM), bib pickup at Polideportivo Municipal de Cenes de la Vega, bag drop, bike wash, and finish services at Pradollano.",
+      "transport": "Bib pickup at Polideportivo Municipal de Cenes de la Vega, bag drop, bike wash, and finish services at Pradollano. Prior editions used staggered starts for multiple distances; confirm current-year start-time logistics directly given the 2026 course is now a single 119 km route.",
       "food": "",
       "official_site": "https://sierranevadalimite.com/en/"
     },
@@ -94,50 +94,60 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Dense, Legitimate Climbing — But Don't Trust the Published Numbers",
+      "summary": "Sierra Nevada Límite is a real, well-organized gran fondo with exceptional climbing density — 3,319 m packed into just 119 km for the 2026 edition, finishing at the Pradollano ski station east of Granada. It has genuine high-mountain roads, aid stations, medical teams, bag transfer, timing and finish food for 500+ riders. The problem is the organizer's own website: the current Spanish-language pages give one set of vitals (119 km/3,319 m, Cenes-Pradollano) while stale English/homepage material shows a different, larger course (140 km/3,200 m or other retained figures) — and the finish is at Pradollano, not the Veleta summit itself, despite marketing occasionally implying otherwise. The separate Subida al Veleta (38 km, 2,236 m) run the following day is the actual timed ascent to altitude, and it's a different event from this Gran Fondo.",
+      "strengths": [
+        "Exceptional climbing density — 3,319 m across just 119 km is a genuinely brutal ratio",
+        "Authentic Sierra Nevada high-mountain roads with a Pradollano ski-station finish around 2,100 m",
+        "500+ participants with aid stations, medical teams, bag transfer, timing and finish food",
+        "Two ascents of Puerto de Blancares from different sides adds real route variety to the climbing"
+      ],
+      "weaknesses": [
+        "The organizer's own site is internally inconsistent — current Spanish pages say 119 km/3,319 m while older English/homepage material still shows 140 km/3,200 m or other stale figures",
+        "This Gran Fondo finishes at Pradollano (~2,100 m), not the Veleta summit — the higher-altitude, higher-profile ascent is a separate event (Subida al Veleta, 38 km/2,236 m, run the following day)",
+        "Only a roughly 15 km climbing segment (Hotel El Duque-Las Sabinas) determined the 2026 classification — this was not a full-course timed race result",
+        "Riders dropped behind the safety capsule enter open traffic and must surrender their bib; there are no finish-area showers"
+      ],
+      "bottom_line": "A legitimately hard, well-supported climbing test — just verify the current year's route on the organizer's Spanish-language pages before you go, and don't confuse it with the separate Subida al Veleta if you're after the Europe's-highest-finish bragging rights."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Ultimate Spanish climbing crucible for masochists who crave thin air and endless VAM.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Dense Sierra Nevada climbing test finishing at Pradollano — legitimately hard, but verify the current course, the organizer's own site disagrees with itself.",
+      "should_you_race": "Yes if you want an exceptionally dense climbing test near Granada with solid event support. If you specifically want the Veleta summit and Europe's-highest-finish bragging rights, that's the separate Subida al Veleta event, not this Gran Fondo.",
+      "alternatives": "For the actual Veleta summit ascent, ride the Subida al Veleta (same organizer, the following day). For a comparably dense Spanish climbing fondo, look at other high-Sierra or Pyrenees gran fondos."
     },
     "citations": [
       {
-        "url": "https://worldsmarathons.com/marathon/sierra-nevada-gran-fondo",
-        "category": "reference",
-        "label": "Sierra Nevada Límite Gran Fondo, 23 May 2026 | World's Marathons"
+        "url": "https://www.cruzandolameta.es/clasificaciones/v2/sierra-nevada-limite-gran-fondo-26---2599/",
+        "category": "official",
+        "label": "Official 2026 Timing — Confirms 119 km/3,319 m Course"
       },
       {
-        "url": "https://sierranevadalimite.com/en/",
-        "category": "reference",
-        "label": "Sierra Nevada Límite"
+        "url": "https://sierranevadalimite.com/snl-info/",
+        "category": "official",
+        "label": "Official 2026 Event Information"
       },
       {
-        "url": "https://www.finishers.com/en/event/sierra-nevada-limite-gran-fondo",
-        "category": "reference",
-        "label": "Sierra Nevada Limite - Gran Fondo 2026 - Finishers"
+        "url": "https://sierranevadalimite.com/en/snl-granfondo-carrera-145k/",
+        "category": "official",
+        "label": "Official Course and Climb Detail"
       },
       {
-        "url": "https://worldsmarathons.com/marathon/sierra-nevada-limite-subida-al-veleta",
-        "category": "reference",
-        "label": "Sierra Nevada Limite Subida al Veleta 2026"
+        "url": "https://www.cruzandolameta.es/clasificaciones/v2/resultados/sierra-nevada-limite-gran-fondo-26---2599/7755/",
+        "category": "official",
+        "label": "Official Detailed 2026 Results"
       },
       {
-        "url": "https://web.rockthesport.com/en/event/sierra-nevada-limite-2026",
-        "category": "reference",
-        "label": "sierra nevada límite 2026 - RockTheSport"
+        "url": "https://www.elindependientedegranada.es/node/75461",
+        "category": "media",
+        "label": "2026 Event Report"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://sierranevadalimite.com/snl-granfondo/",
-      "notes": "The event is listed for 23 May 2026 with open registration elsewhere on the organizer site; date on file matches the announced 2026 edition.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.cruzandolameta.es/clasificaciones/v2/sierra-nevada-limite-gran-fondo-26---2599/",
+      "notes": "2026 edition held 23 May 2026 with official timing results confirming the course; distance/elevation corrected to 119 km/3,319 m (down from 146.4 km/3,353 m previously on file) per the organizer's current Spanish-language course pages. Note the organizer's own English/homepage pages retain stale, conflicting figures. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

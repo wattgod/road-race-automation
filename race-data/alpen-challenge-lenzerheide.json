@@ -5,24 +5,24 @@
     "display_name": "Alpen Challenge Lenzerheide",
     "tagline": "",
     "vitals": {
-      "distance_km": 188.3,
-      "distance_mi": 117.0,
-      "elevation_m": 4378,
-      "elevation_ft": 14364.0,
-      "location": "Lenzerheide, Graubünden, Switzerland",
+      "distance_km": 189.0,
+      "distance_mi": 117.4,
+      "elevation_m": 4400,
+      "elevation_ft": 14435.7,
+      "location": "Lantsch/Lenz, Graubünden, Switzerland",
       "location_badge": "Lenzerheide, Switzerland",
       "country": "Switzerland",
-      "date": "2026: June 21",
-      "date_specific": "2026: June 21",
-      "field_size": "1500",
+      "date": "2026: September 20",
+      "date_specific": "2026: September 20 (25th edition)",
+      "field_size": "775 registered as of research (463 long, 312 short); final cap unconfirmed",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "feed_zones": "Aid stations along the route with food, per official service listing",
+      "cutoff_time": "Tiefencastel 17:00 / finish 17:30 (long route)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["189 km Long", "115 km Short"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +70,78 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Both routes start and finish in Lantsch/Lenz, in the Lenzerheide region of Graubünden. The long course crosses the Albula Pass, the Upper Engadine and Maloja before descending through Bergell into Italy, then climbs the Splügen Pass and returns through Viamala. The short course shares the Albula/Engadine opening before turning over the Julier Pass and returning via Savognin and Salouf, with route-switching permitted at Silvaplana. This is an open-road granfondo — roads are not closed to traffic — defined by major Alpine passes, long descents and a final uphill return to Lantsch/Lenz.",
+      "signature_challenge": "The Splügen Pass — 30.4 km and 1,842 m of continuous climbing from Chiavenna, 500 m more ascent than the Albula, arriving deep into the long route after the Engadine and Bergell have already taken their toll.",
+      "suffering_zones": [
+        "Albula Pass — the principal early climb, beginning after only a short opening descent through the Albula valley",
+        "Splügen Pass — see signature_challenge",
+        "Julier Pass (short route) — summit at 2,284 m, followed by the energy-sapping Salouf detour",
+        "Viamala Gorge and the finale — precedes the last climb from Tiefencastel back to Lantsch/Lenz; long-route riders face a 17:00 Tiefencastel cutoff and 17:30 finish cutoff"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Numerous options in Lenzerheide ski resort area.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.alpenchallengelenzerheide.ch/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "The 2026 edition is the 25th running of the event.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Long-Running Alpine Fondo — On Open Roads, With Real Weather Risk",
+      "summary": "Alpen Challenge Lenzerheide is a legitimate, long-running Swiss Alpine gran fondo — the 2026 edition marks its 25th year — offering two genuinely major routes through some of Graubünden's most scenic terrain: the Albula Pass, Upper Engadine, Bergell, and either the Splügen Pass (long) or Julier Pass (short). It's a UNESCO-adjacent ride through the Albula railway landscape with timed classification, aid stations and medical support. But it is not a closed-road event — riders share the route with normal traffic throughout — and high-pass Alpine weather is a real operational risk, not just marketing language: the 2024 edition was cancelled minutes before the start due to snow cover.",
+      "strengths": [
+        "Outstanding scenery across the UNESCO-listed Albula railway landscape, Upper Engadine lakes, Bergell granite valleys and Viamala Gorge",
+        "Two meaningful route choices (189 km long, 115 km short) with switching permitted at Silvaplana",
+        "25 editions deep — genuine longevity and organizational experience",
+        "Timed event with aid stations, medical support, signage and organized race escort"
+      ],
+      "weaknesses": [
+        "Roads are not closed to traffic — riders share the route with normal vehicles throughout",
+        "Riders reaching Silvaplana after 10:40 are forcibly redirected onto the short route, and cutoffs may tighten further for weather",
+        "The 2024 edition was cancelled minutes before the start because of snow cover — genuine high-pass weather risk, not hypothetical",
+        "Some official pages retain stale prior-year details or inconsistent update dates"
+      ],
+      "bottom_line": "A genuinely major Alpine gran fondo with 25 years of history — go in prepared for open roads, real weather risk at altitude, and cutoffs that can reroute you onto the short course if you're not fast enough early."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Iconic Swiss Alps gran fondo with stunning passes and extreme challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real 25-edition-deep Swiss Alps gran fondo over the Albula, Splügen and Julier passes — open roads and genuine high-pass weather risk, not a closed-course event.",
+      "should_you_race": "Yes if you want genuine Alpine passes (Albula, Splügen or Julier) with real organizational depth. Come prepared for open-road traffic and real weather risk — the 2024 edition was cancelled for snow.",
+      "alternatives": "For a similarly major Alpine gran fondo with comparable pass climbing, look at other long-running Swiss or Italian Alps events in this database."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.alpenchallengelenzerheide.ch/",
+        "category": "official",
+        "label": "Official Event Site"
+      },
+      {
+        "url": "https://www.alpenchallengelenzerheide.ch/alpen-challenge/strecken/langstrecke/",
+        "category": "official",
+        "label": "Official Long-Route Detail"
+      },
+      {
+        "url": "https://www.alpenchallengelenzerheide.ch/alpen-challenge/strecken/kurzstrecke/",
+        "category": "official",
+        "label": "Official Short-Route Detail"
+      },
+      {
+        "url": "https://results.datasport.com/de/anlass/alpen-challenge-lenzerheide-2026/startlist",
+        "category": "official",
+        "label": "2026 Start List (775 Registered)"
+      },
+      {
+        "url": "https://www.alpenchallengelenzerheide.ch/english/",
+        "category": "official",
+        "label": "Official Service Details (Aid Stations, Support)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Alpen Challenge Lenzerheide gran fondo cycling Lenzerheide",
@@ -242,9 +283,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.alpenchallengelenzerheide.ch/",
-      "notes": "2026 event Sep 19-20 — conflicts with our Jun 21 date field"
+      "notes": "SUPERSEDES prior date. Confirmed 25th edition on Sunday, September 20, 2026 — corrected from the erroneous June 21 date previously on file. Vitals confirmed: 189 km/4,400 m long route, 115 km/2,900 m short route. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }

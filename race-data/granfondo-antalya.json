@@ -2,27 +2,31 @@
   "race": {
     "name": "Granfondo Antalya",
     "slug": "granfondo-antalya",
-    "display_name": "Granfondo Antalya",
+    "display_name": "UCI Gran Fondo World Series Antalya",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": 1585,
-      "elevation_ft": 5200.0,
-      "location": "Antalya, Turkey",
+      "distance_km": 105.0,
+      "distance_mi": 65.2,
+      "elevation_m": 658,
+      "elevation_ft": 2158.8,
+      "location": "Kadriye/Belek, Antalya, Turkey",
       "location_badge": "Antalya, Turkey",
       "country": "Turkey",
-      "date": "2026: November TBD",
-      "date_specific": "2026: November TBD",
-      "field_size": null,
+      "date": "2026: November 6-8 (road races November 8)",
+      "date_specific": "2026: November 8",
+      "field_size": "207 long-course starters (2025); 2026 field size unconfirmed",
       "start_format": null,
-      "registration": "https://ucigranfondoantalya.com",
+      "registration": "https://ucigfantalya.com/races",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "105 km Gran Fondo",
+        "73 km Short Course",
+        "20 km Time Trial"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,12 +74,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Start and finish sit outside The Land of Legends resort in the Kadriye/Belek district east of Antalya. The route stays in the Turkish Riviera's low, rolling hinterland rather than climbing into the Taurus Mountains — the 2025 long course (92.6 km/512 m) ran from Prof. Dr. Erdal İnönü Kent Parkı to Düden Waterfall through the Lara–Aksu/EXPO corridor and Kurşunlu-area backroads, mixing fast flat/rolling tempo sections with a handful of short, sharper rises around Aksu and Kurşunlu. The course has changed materially edition to edition — 98 km/517 m in 2024, 92.6 km/512 m in 2025, a reported 105 km/658 m for 2026 — so treat any single year's vitals as edition-specific, not fixed.",
+      "signature_challenge": "No single decisive climb — the course rewards sustained bunch speed across repeated shallow rollers rather than a marquee mountain pass; the closest thing to a defining test is the string of short Kurşunlu-area rises (documented 2025 examples run roughly 1.4-4.0 km at 2.8-6.0%).",
       "suffering_zones": [
-        "Minor Hills to 133m: 40km mark backcountry climb tests legs after flat start; steady power needed on exposed coastal roads.",
-        "Late Flat Grind: Final 40km airport flats demand sustained effort in warm sun to hold position.",
-        "Time Trial Push: 20km out-and-back solo effort next to Kadriye channel separates big engines early."
+        "EXPO-road tempo sections — long, flat-to-gently-rolling stretches (documented 2025: ~11 km/+13 m then ~10 km/+9 m) where positioning in the bunch matters more than power",
+        "Kurşunlu/Güloluk climb cluster — the route's sharpest rises, documented in 2025 at roughly 1.4-4.0 km, 2.8-6.0% average",
+        "The time trial — a short (2025: 22.8 km), nearly flat individual effort held as a separate discipline alongside the gran fondo and short course"
       ]
     },
     "logistics": {
@@ -83,7 +87,7 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://ucigranfondoantalya.com"
+      "official_site": "https://ucigfantalya.com/races"
     },
     "history": {
       "founded": 2019,
@@ -92,19 +96,60 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Fast, Flat UCI Qualifier — Just Don't Trust the Vitals",
+      "summary": "UCI Gran Fondo World Series Antalya (formerly branded Nirvana Granfondo Antalya, after title sponsor Nirvana Hotels) is a real, currently active UCI Gran Fondo World Series qualifier held every November in the Kadriye/Belek resort corridor east of Antalya. It delivers what it promises: closed-road racing, genuine UCI World Championships qualification for the top 25% of finishers by age group, and warm late-autumn weather on the Turkish Riviera. What it does not deliver is a stable course — published distance and elevation have shifted every year on record (98 km/517 m in 2024, 92.6 km/512 m in 2025, a reported 105 km/658 m for 2026), and even within a single season the organizer's own pages have disagreed with the federation calendar and the UCI listing on both distance and dates. This is a fast, rolling course for rouleurs, not a mountain test — 658 m of climbing across 105 km is thin for a 'gran fondo' billing, and the organizer publishes no detailed climb map or gradient breakdown for the current route.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series qualifier — top 25% of age-group finishers advance to the UCI Gran Fondo World Championships",
+        "Fully closed, traffic-free roads with motorcycle security and first aid on course",
+        "Resort-zone start/finish next to Antalya's airport and extensive hotel infrastructure makes international travel unusually convenient",
+        "Fast, rolling course suits sprinters and rouleurs who don't want a mountain fondo"
+      ],
+      "weaknesses": [
+        "Course length and climbing have changed every documented year — 98 km/517 m (2024), 92.6 km/512 m (2025), a reported 105 km/658 m (2026) — so any vitals quoted here are edition-specific, not a fixed course",
+        "Very little climbing for a race marketed as a 'gran fondo' — under 700 m across the long course, concentrated in a handful of short rises rather than any real mountain test",
+        "Organizer, federation calendar, and UCI listing have published conflicting dates and distances within the same season; no detailed current-year route map or gradient data is publicly available",
+        "This entry was previously duplicated under a legacy 'Nirvana Granfondo Antalya' listing in this database — the two profiles describe the same race under different sponsor-era names"
+      ],
+      "bottom_line": "Take this one for the UCI qualification and the fast, flat racing on a well-supported course near Antalya's airport — not for mountain terrain, and not for confidence in any single published distance figure until the current year's official route page is live."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "Warm late-season UCI qualifier on Antalya's flats with luxury resort vibes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Warm late-season UCI qualifier on Antalya's flats near a major resort corridor — but check the current year's course, it moves every edition.",
+      "should_you_race": "Yes if you want a genuine UCI Gran Fondo World Series qualifier on fast, flat-to-rolling roads with warm November weather and convenient resort/airport logistics. Skip it if you want real Turkish mountain climbing — this course stays in the coastal hinterland, not the Taurus range.",
+      "alternatives": "For genuine climbing in Turkey, look at Alanya's Taurus-facing routes or Cappadocia-region gran fondos. For a similarly fast, resort-adjacent UCI qualifier with more stable course data, compare against other UCI Gran Fondo World Series stops."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.uci.org/competition-details/2026/CPT/78761",
+        "category": "official",
+        "label": "UCI — 2026 Competition Listing, Dates and Qualifier Status"
+      },
+      {
+        "url": "https://ucigfantalya.com/races",
+        "category": "official",
+        "label": "Official Race/Route Options Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-antalya-2026/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2026 Antalya Event Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/nirvana-granfondo-antalya-concludes-2024-with-thrilling-action/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2024 Recap Under Prior 'Nirvana' Branding"
+      },
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2026 Gran Fondo Calendar"
+      },
+      {
+        "url": "https://ucigranfondoantalya.com/uploads/11-2025/ucigranfondoantalya_1762796883.pdf",
+        "category": "official",
+        "label": "2025 Long-Course Results (207 Starters)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Antalya gran fondo cycling Antalya",
@@ -236,9 +281,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://ucigranfondoworldseries.com/en/granfondo-antalya-2026/",
-      "notes": "UCI calendar and Turkish gran fondo calendar list a 2026 edition in Antalya in early November, with dates slightly adjusted versus the November TBD on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.uci.org/competition-details/2026/CPT/78761",
+      "notes": "UCI's own 2026 competition listing confirms 6-8 November 2026 (road races 8 November) as UCI Gran Fondo World Series Antalya; distance/elevation updated to the reported 2026 long-course figures (105 km/658 m), up from 92.6 km/512 m in 2025 and 98 km/517 m in 2024 — this course changes materially every edition. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3.; last edition evidenced: 2025 (2026 is scheduled, not yet run as of this research)"
+    },
+    "catalog_flags": {
+      "status_note": "Dedupe sweep 2026-07-24: this profile absorbs the duplicate entry previously filed separately as 'Gran Fondo Nirvana Antalya' (race-data/gran-fondo-nirvana-antalya.json), which described the same race under its former Nirvana Hotels sponsor-era name. That entry has been flagged duplicate_of this profile and left as a stub.",
+      "ruled": "2026-07-24 dedupe sweep"
     }
   }
 }

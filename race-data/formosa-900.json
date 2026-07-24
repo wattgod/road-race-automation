@@ -5,24 +5,24 @@
     "display_name": "Formosa 900",
     "tagline": "",
     "vitals": {
-      "distance_km": 899.6,
-      "distance_mi": 559.0,
+      "distance_km": 900.0,
+      "distance_mi": 559.2,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Circumnavigation of Taiwan",
       "location_badge": "Circumnavigation of Taiwan",
-      "country": null,
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
-      "field_size": "1268 (2025)",
+      "country": "Taiwan",
+      "date": "2026: dates vary by tour operator/group (no single event-wide date)",
+      "date_specific": "2026: e.g. November 6-15 (Giant Japanese-market package, 8 riding days)",
+      "field_size": "1,268 participants including 381 international riders (2025, Taiwan Cycling Festival total)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "Multiple daily stops with breaks, meals",
-      "cutoff_time": "9 days",
+      "cutoff_time": "8-9 riding days, varies by operator/itinerary",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["Standard 9-day loop", "8-day itinerary", "4-extremities themed routes"]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,42 +70,87 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "'Formosa 900' is a category name, not a single fixed event — there is no closed course, no start list and no unified date. Groups depart representative Taiwanese cities and circumnavigate the island using Cycling Route No. 1 plus organizer-selected variants, run as fully supported, non-competitive multi-day group tours rather than a mass-start race or self-supported challenge. The standard Taipei framework starts near Songshan Station, follows the urbanized western side south through Pingtung, crosses the southern mountains, then returns north through the Pacific coast and Huadong Rift Valley. Terrain combines river bikeways, cities, agricultural plains, coast roads, rolling hills and the Shouka mountain crossing. Published distances for '900' vary from roughly 900 to 950 km depending on operator and itinerary, and the full Cycling Route No. 1 measures 960.8 km — treat '900' as branding, not a fixed measurement.",
+      "signature_challenge": "The Shouka crossing (County Highway 199, climbing to roughly 450 m) — a representative day totals about 1,300 m of ascent before descending to the east coast, the main geographic pinch-point of the loop.",
+      "suffering_zones": [
+        "Shouka crossing — County Highway 199 climbs to roughly 450 m; a representative day totals about 1,300 m ascent before the descent to the coast",
+        "Daren-Taitung coast — exposed to prevailing northeast wind, with repeated additional ~100 m rises after Shouka",
+        "Western cities — numerous traffic lights repeatedly disrupt rhythm through the populated western corridor",
+        "Suhua Highway — heavy traffic and recurring rockfall risk mean most operators substitute a Hualien-Su'ao train segment rather than ride it, so some itineraries are not a literal continuous wheel-on-road circumnavigation"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "8 nights included in tour (hotels/B&Bs), bike-friendly options.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.cycling-lifestyle.org.tw/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Formosa 900 is part of the Taiwan Cycling Festival, promoted by Taiwan's Cycling Lifestyle Foundation as the flagship circumnavigation product for both domestic and international groups.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Well-Supported Tour Category — Not One Standardized Event",
+      "summary": "Formosa 900 is a legitimate, well-supported circumnavigation-of-Taiwan cycling product — 1,268 riders including 381 international participants took part in 2025 — but it is not a single race or standardized event. It's a collection of paid, fully supported group-tour packages sold by different operators (Giant and others) under a shared '900' brand, each with its own dates, starting city, exact route and difficulty. Full support (bilingual guides, two support vehicles, luggage transport, meals, lodging, mechanical assistance) is genuinely strong, and the full-island format delivers unusually varied urban, rural, mountain, coastal and cultural landscapes in one trip. But comparing date, route, difficulty or field size across 'Formosa 900' entries is not meaningful — they're different products under one name.",
+      "strengths": [
+        "Full operator support: bilingual guides, two support vehicles, luggage transport, food/drinks, mechanical assistance, lodging and an official completion certificate",
+        "Genuinely varied route — urban, rural, mountain, coastal and cultural landscapes across the full island in one trip",
+        "Real, growing participation — 1,268 riders including 381 international in 2025",
+        "Progressive, multi-day staging designed for touring riders rather than racers"
+      ],
+      "weaknesses": [
+        "'900' is branding, not a fixed measurement — published versions range from roughly 900 to 950 km, and the full Cycling Route No. 1 is 960.8 km",
+        "No single standardized event — date, route, difficulty and field size are not comparable across operators/packages sold under the same name",
+        "Some itineraries substitute a Hualien-Su'ao train segment for the hazardous Suhua Highway, meaning not every 'circumnavigation' is a literal continuous ride",
+        "Popular packages (e.g. the Japanese-market Giant tour) can sell out, and premium options run well over ¥500,000 including flights"
+      ],
+      "bottom_line": "A genuinely well-supported way to ride around Taiwan — just treat it as a category of tour products to compare against each other, not a single dated race with fixed vitals."
     },
     "final_verdict": {
       "score": "71/100",
-      "one_liner": "Iconic 9-day circumnavigation blending epic Taiwanese scenery, culture, and social cycling vibes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A well-supported circumnavigation-of-Taiwan tour category, not one standardized race — compare operators, don't trust a single '900 km' figure.",
+      "should_you_race": "Yes if you want a fully supported, non-competitive multi-day tour around Taiwan with strong logistics. Compare specific operator packages carefully — dates, exact routes and distances vary meaningfully under the shared '900' branding.",
+      "alternatives": "For a similarly supported multi-day circumnavigation format elsewhere, compare against Ride Across Britain (also in this database) — both are supported point-to-point/loop tours rather than mass-start races."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.giant-bicycles.com/jp/events/2026-formosa-900-giant/10137",
+        "category": "official",
+        "label": "Giant — 2026 Japanese-Market Formosa 900 Package"
+      },
+      {
+        "url": "https://www.cycling-lifestyle.org.tw/activity/view/94",
+        "category": "official",
+        "label": "Cycling Lifestyle Foundation — Format Confirmation"
+      },
+      {
+        "url": "https://www.tad.gov.tw/m1.aspx?sNo=0044222",
+        "category": "official",
+        "label": "Taiwan Tourism Administration — 2025 Participation Report (1,268 Riders, 381 International)"
+      },
+      {
+        "url": "https://www.taiwanngo.tw/Post/83695",
+        "category": "reference",
+        "label": "Route Overview — Cycling Route No. 1"
+      },
+      {
+        "url": "https://www.bikeexpress.com.tw/2025/the-classic-9-day-cycling-around-taiwan-along-cycling-route-no-1-or-alternative-routes/",
+        "category": "reference",
+        "label": "Nine-Day Route Analysis"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://en.tbnet.org.tw/news/6/57",
-      "notes": "Flagship Formosa 900 road circumnavigation ride of the Taiwan Cycling Festival ran in November 2025; 2026 date on file (October) conflicts with November timing but event appears ongoing.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.giant-bicycles.com/jp/events/2026-formosa-900-giant/10137",
+      "notes": "Confirmed active for 2026 (e.g. Giant's Japanese-market package, 6-15 November 2026, currently full). This is a category of paid group-tour products under a shared 'Formosa 900' brand, not one standardized event with a single date — reframed accordingly. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "This is a category of paid group-tour products sold by different operators under a shared 'Formosa 900' brand, not one standardized race — no single date, distance, field size or organizer. fondo_rating.discipline ('gran_fondo') and single-value vitals don't cleanly represent a category rather than one event. Recommend a human call on whether this belongs in the database as a single scored profile, and if so, which operator's package the vitals should represent.",
+      "ruled": "2026-07-24 editorial wave 3, sol review follow-up"
     }
   }
 }

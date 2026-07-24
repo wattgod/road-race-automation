@@ -5,16 +5,16 @@
     "display_name": "L'Étape Parma",
     "tagline": "",
     "vitals": {
-      "distance_km": 133.6,
-      "distance_mi": 83.0,
-      "elevation_m": 2800,
-      "elevation_ft": 9186.0,
+      "distance_km": 134.0,
+      "distance_mi": 83.3,
+      "elevation_m": 2660,
+      "elevation_ft": 8726.0,
       "location": "Parma, Emilia-Romagna, Italy",
       "location_badge": "Parma, Italy",
       "country": "Italy",
-      "date": "2026: May TBD",
-      "date_specific": "2026: May TBD",
-      "field_size": "N/A",
+      "date": "No 2026 edition — discontinued after 2025 (L'Étape Italy relocated to Piedmont)",
+      "date_specific": "Last edition: May 4, 2025",
+      "field_size": "2,000+ (2025, riders from 20 countries; exact cap unverified)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,9 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The 2025 (final) edition started and finished inside Parma's Parco Ducale. It crossed the plains and foothills south of Parma before entering the Emilia-Romagna Apennines around Lesignano de' Bagni, Neviano degli Arduini and Tizzano Val Parma. The defining section climbed through Lagrimone to Schia-Monte Caio and Passo dei Caprioli before descending back toward Parma — long flat urban approaches bookending a concentrated, repeatedly rolling mountain middle.",
+      "signature_challenge": "The Lagrimone-Schia/Monte Caio climb (km 56.8-63.9, 7.1 km at roughly 7.3% net average, cresting at 1,228 m before continuing to Passo dei Caprioli at 1,273 m) — the high point of the course, arriving with the finish still 30+ km away.",
+      "suffering_zones": [
+        "Rivalta KOM (km 18.9-22.9, 4.0 km, 165-353 m) — the first real test after the flat urban start",
+        "Passo del Crocione KOM (km 33.2-38.6, 5.4 km, finishing at 629 m) — climbed twice, once outbound and again on the return (km 89.4-91.5, 2.1 km, ~7.4% net average)",
+        "Lagrimone-Schia/Monte Caio-Passo dei Caprioli — the course's high-mountain block, see signature_challenge"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -82,25 +86,56 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2024,
+      "origin_story": "Launched in 2024 as part of the official L'Étape by Tour de France series, run in partnership with A.S.O., the Comune di Parma and the Emilia-Romagna region.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Discontinued — Relocated to Piedmont",
+      "summary": "L'Étape Parma ran for exactly two editions (2024, 2025) before A.S.O. moved L'Étape Italy out of Emilia-Romagna entirely. The official 2026 announcement (27 December 2025) lists two new Piedmont stops — Entracque in May and Mondovì in September — with no Parma date anywhere on the calendar. While it ran, it was a legitimate Tour de France-branded event: closed/controlled roads, real climbing through the Apennines (Lagrimone, Schia, Monte Caio, Passo dei Caprioli), and a genuinely international field (20 countries in 2025). But its own published figures didn't agree with each other even in its final year — the organizer's course guide said 134 km/2,660 m while the municipal roadbook filed for road closures said 133.4 km/3,167 m, a 507 m gap in the same edition's stated climbing.",
+      "strengths": [
+        "Was a real, official Tour de France/A.S.O.-linked event with closed/controlled roads while it ran",
+        "Genuine Apennine climbing (Lagrimone, Schia, Monte Caio, Passo dei Caprioli) plus accessible shorter non-competitive distances",
+        "Drew a genuinely international field — riders from 20 countries in its final 2025 edition",
+        "Substantial city festival, food and Tour-history programming tied to Parma's food-region identity"
+      ],
+      "weaknesses": [
+        "Discontinued after only two editions (2024-2025) — there is no 2026 Parma date, and none is expected",
+        "This event does not currently exist and should not be presented to riders as bookable",
+        "Even in its final year, organizer and municipal figures for course elevation disagreed materially (2,660 m vs 3,167 m)",
+        "The long course was reportedly modified shortly before race day in 2025, and reported 2,000+ attendance was never a verified field-size figure"
+      ],
+      "bottom_line": "Retired after two editions. If you want the current Italian L'Étape experience, look at L'Étape Piemonte instead — Entracque in May and Mondovì (as Granfondo Alpi del Mare/L'Étape Mondovì) in September 2026."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Tour de France-branded gran fondo in Parma's stunning food hills.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Discontinued — Tour de France-branded gran fondo that ran two editions in Parma's food hills before A.S.O. relocated L'Étape Italy to Piedmont.",
+      "should_you_race": "No — this event does not exist for 2026 or beyond. If you want the current L'Étape Italy experience, look at L'Étape Piemonte (Entracque, May) or Granfondo Alpi del Mare/L'Étape Mondovì (Mondovì, September).",
+      "alternatives": "L'Étape Piemonte (Entracque, Cuneo, Italy — race-data/letape-piemonte.json) and Granfondo Alpi del Mare / L'Étape Mondovì by Tour de France (Mondovì, Piedmont — race-data/granfondo-alpi-del-mare.json), the two Piedmont stops that replaced Parma on the 2026 L'Étape Italy calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://letapeitaly.it/en/focus-in-piedmont/",
+        "category": "official",
+        "label": "L'Étape Italy — 2026 Announcement Confirming Relocation to Piedmont, No Parma Date"
+      },
+      {
+        "url": "https://italy.letapeseries.com/blog/race/due-giorni-di-festa-con-partecipanti-da-20-paesi-e-vittoria-di-rinaldi",
+        "category": "official",
+        "label": "L'Étape Series — 2025 Parma Recap (Final Edition, 20 Countries)"
+      },
+      {
+        "url": "https://atti.comune.parma.it/AttiVisualizzatore/download/determina/3176331?fId=3176836",
+        "category": "official",
+        "label": "Comune di Parma — Municipal Road-Closure Roadbook, 2025 Course Detail"
+      },
+      {
+        "url": "https://www.gazzettadiparma.it/parma/2025/05/04/gallery/oltre-2000-partecipanti-alla-seconda-edizione-de-l-etape-parma-del-tour-de-france-862448/15",
+        "category": "media",
+        "label": "Gazzetta di Parma — 2025 Race-Day Coverage, 2,000+ Participants"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "L'Étape Parma gran fondo cycling Parma",
@@ -261,10 +296,14 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.comune.parma.it/it/novita/notizie/letape-by-tour-de-france-fa-tappa-nella-food-valley",
-      "notes": "Second edition ran on 4 May 2025 in Parma; no conflicting 2026 announcement found, and the event is the road granfondo L'Étape Parma by Tour de France.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://letapeitaly.it/en/focus-in-piedmont/",
+      "notes": "SUPERSEDES prior 'active' status. The official 2026 L'Étape Italy announcement (27 December 2025) lists only two Piedmont stops — Entracque (May) and Mondovì (September) — with no Parma date. L'Étape Parma ran two editions (2024, 2025; last confirmed 4 May 2025) before being discontinued at this location. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+    },
+    "catalog_flags": {
+      "status_note": "Discontinued at this location after 2 editions (2024-2025) — L'Étape Italy relocated to Piedmont for 2026 (Entracque + Mondovì), tracked separately in this database as race-data/letape-piemonte.json and race-data/granfondo-alpi-del-mare.json (rebranded L'Étape Mondovì). Recommend a human decide whether to prune this entry from the active catalog or keep it as a historical/discontinued record — matches the birkebeinerrittet-road precedent for defunct entries.",
+      "ruled": "2026-07-24 editorial wave 3"
     }
   }
 }

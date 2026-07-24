@@ -5,16 +5,16 @@
     "display_name": "Struggle Dales",
     "tagline": "",
     "vitals": {
-      "distance_km": 175.4,
-      "distance_mi": 109.0,
-      "elevation_m": 2874,
-      "elevation_ft": 9430.0,
+      "distance_km": 165.0,
+      "distance_mi": 102.5,
+      "elevation_m": 3116,
+      "elevation_ft": 10223.1,
       "location": "Harrogate, North Yorkshire, England",
       "location_badge": "Harrogate, England",
       "country": "England",
       "date": "2026: May 24",
       "date_specific": "2026: May 24",
-      "field_size": null,
+      "field_size": "Up to 1,000 entries (250 Ultra, 500 Classic, 250 short)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,7 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["250 km Ultra", "165 km Classic", "120 km Short"]
     },
     "climate": {
       "primary": "Temperate",
@@ -72,13 +72,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Struggle Dales is one of the UK's hardest sportives, set in the beautiful but brutal Yorkshire Dales landscape. The event takes riders over stunning yet unforgiving terrain through the Yorkshire Dales National Park, featuring seven iconic climbing challenges that have earned the route cult status among ambitious road cyclists nationwide.",
-      "signature_challenge": "Park Rash stands as the most renowned climb on the route, recognized as a defining feature of the Struggle Dales experience and a bucket-list challenge for serious road cyclists.",
+      "character": "Struggle Dales is a redesigned-for-2026, three-distance sportive (250 km Ultra, 165 km Classic, 120 km Short) based near Harrogate, running on paved roads through the Yorkshire Dales National Park's steep, rolling terrain. The 165 km Classic route contains six principal climbs; the 250 km Ultra contains ten. Sustained climbing rather than one isolated summit defines the route — one rider's 2026 GPS track logged 166.7 km and 3,116 m on the Classic, roughly 18.7 climbing metres per kilometre, though the organizer does not publish an official elevation figure.",
+      "signature_challenge": "The organizer has not published individual climb gradients for the redesigned 2026 route — the difficulty comes from the accumulation of six (Classic) or ten (Ultra) named climbs rather than one standout ascent.",
       "suffering_zones": [
-        "Park Rash: A jaw-clenching climb that features prominently in the route and is noted by cycling experts as a signature challenge of the event.",
-        "Greenhow Hill: One of seven major climbs integrated throughout the 109-mile route, contributing to the sustained elevation gain.",
-        "Malham Cove: A stunningly beautiful but challenging climb that tests riders' endurance and mental fortitude.",
-        "Trapping Hill: A significant climbing challenge among the seven iconic ascents that define the route's difficulty."
+        "Langbar — a new ascent added to the 2026 Classic route",
+        "High Hill — another new ascent added for 2026",
+        "Norwood Edge — also newly included in the redesigned route",
+        "The route overall — sustained, repeated climbing (roughly 18.7 m/km on one rider's recorded 2026 Classic ride) rather than a single defining summit"
       ]
     },
     "logistics": {
@@ -89,56 +89,66 @@
       "official_site": "https://ridethestruggle.com"
     },
     "history": {
-      "founded": 2010,
-      "origin_story": "Struggle Dales has become an iconic must-ride cycling challenge for avid road cyclists, earning cult status nationwide with riders traveling hundreds of miles year after year to tackle the grueling challenge. Cycling Weekly has reviewed it as 'One of the best sportive events in the UK.'",
+      "founded": null,
+      "origin_story": "The 2026 edition is billed by the organizer as the tenth running of the event. Cycling Weekly reviewed an early edition (calling it a rising 'classic hardman ride' at the time), but the exact founding year is not independently confirmed — earlier file data claiming a 2010 founding conflicts with organizer materials describing the event as only in its second year in that same review period.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Genuinely Tough, Well-Run — But Bring Your Own Elevation Data",
+      "summary": "Struggle Dales is a real, well-supported UK sportive marking its tenth anniversary in 2026, offering three distances (120/165/250 km) through the Yorkshire Dales with route-switching permitted on the day. Cycling Weekly reviewed an early edition favorably, and the organizer backs the event with marshals, medical/mechanical support, a hotline, broomwagon, signposted courses with GPX files, and instant results. The route was redesigned for 2026 with new named climbs (Langbar, High Hill, Norwood Edge), but the organizer publishes rounded distances only — no official elevation or detailed climb-gradient data for the current route, so riders are left triangulating difficulty from other entrants' GPS tracks rather than the organizer's own materials.",
+      "strengths": [
+        "Three distances with permitted route switching on the day, plus signposted courses and downloadable GPX files",
+        "Solid event-day support: marshals, medical/mechanical assistance, hotline, broomwagon, stocked feeds",
+        "Free finish photographs, instant results, free parking, medal and bidon included",
+        "Reviewed favorably by Cycling Weekly in its early years, and now billed as the event's tenth edition in 2026"
+      ],
+      "weaknesses": [
+        "No official elevation figure published for the 2026 route — the 2,874 m previously on file matched the legacy course, not the redesigned 2026 Classic route",
+        "No running water or showers at the start/finish",
+        "Entries are non-refundable, with deadline-limited transfers and deferrals only",
+        "The organizer's own landing page has visibly retained placeholder testimonial cards — a small but real quality-control blemish for a marquee event"
+      ],
+      "bottom_line": "A genuinely demanding, well-organized Yorkshire Dales sportive worth entering on reputation and support alone — just don't take the published distance/elevation figures as gospel until you've checked a recent GPS track from the current route."
     },
     "final_verdict": {
       "score": "73/100",
-      "one_liner": "Struggle Dales is one of the UK's most challenging and prestigious sportives, offering ambitious road cyclists an unforgettable test of endurance across the stunning Yorkshire Dales.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuinely tough, well-supported Yorkshire Dales sportive marking its tenth anniversary — the 2026 route was redesigned and the organizer still hasn't published official elevation for it.",
+      "should_you_race": "Yes if you want a legitimately hard, well-marshalled UK sportive with route-switching flexibility. Just verify current climb/elevation data from a recent rider's GPS track rather than trusting the organizer's rounded distance figures alone.",
+      "alternatives": "For a similarly demanding Yorkshire Dales sportive, look at Étape du Dales or Struggle Moors (same organizer family) for a different route through the same region."
     },
     "citations": [
       {
-        "url": "https://www.britishcycling.org.uk/events/details/275508/Struggle-Dales",
-        "category": "reference",
-        "label": "Struggle Dales Events - British Cycling"
+        "url": "https://ridethestruggle.com/pages/struggle-2026",
+        "category": "official",
+        "label": "Official 2026 (Tenth Anniversary) Event Page"
       },
       {
         "url": "https://ridethestruggle.com/products/struggle-dales-hardest-sportive-in-yorkshire",
-        "category": "reference",
-        "label": "Struggle Dales - Hardest UK Sportive in Yorkshire - 24 May 2026"
+        "category": "official",
+        "label": "Official Route/Distance Options — 120/165/250 km"
       },
       {
-        "url": "https://racebest.com/races/awv78",
-        "category": "reference",
-        "label": "Struggle Dales - RaceBest"
+        "url": "https://my.raceresult.com/400150/",
+        "category": "official",
+        "label": "Official Timing/Results Record"
       },
       {
-        "url": "https://ridethestruggle.com",
+        "url": "https://ridewithgps.com/trips/385568460?lang=fr",
         "category": "reference",
-        "label": "Struggle Events: Struggle Cycling Events Yorkshire UK"
+        "label": "2026 Rider GPS Track — 166.7 km / 3,116 m Classic Route"
       },
       {
-        "url": "https://www.granfondoguide.com/Events/Index/6292/struggle-dales",
-        "category": "reference",
-        "label": "Struggle Dales - Gran Fondo Guide"
+        "url": "https://ridethestruggle.com/blogs/struggle/cycling-weekly-struggle-dales-review",
+        "category": "media",
+        "label": "Cycling Weekly Review, Reprinted by Organizer"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://ridethestruggle.com/pages/struggle-2026",
-      "notes": "2026 Harrogate Yorkshire Dales sportive is advertised with entries open for Sunday 24 May 2026, matching location and type.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 (tenth-anniversary) edition held Sunday 24 May 2026 per official listing, timing page and same-day rider activity. Distance corrected to 165 km Classic (down from the legacy 175.4 km course figure); elevation is a rider-recorded estimate (3,116 m), not an official organizer figure. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
     }
   }
 }
