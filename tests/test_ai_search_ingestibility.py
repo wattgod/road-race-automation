@@ -75,7 +75,8 @@ class TestMarkdownGenerator:
             slug = entry["slug"]
             try:
                 md = generate_markdown_profiles.generate_profile(
-                    slug, index_map[slug], generate_markdown_profiles.RACE_DATA_DIR
+                    slug, index_map[slug], generate_markdown_profiles.RACE_DATA_DIR,
+                    len(index), {slug},
                 )
             except Exception:
                 continue
@@ -88,6 +89,19 @@ class TestMarkdownGenerator:
         assert md.startswith("---"), "Markdown profile must open with YAML frontmatter"
         assert f'slug: "{slug}"' in md
         assert f"https://roadielabs.com/race/{slug}/" in md
+        # Citation-shaping contract (AEO wave 2)
+        assert "Source: [Roadie Labs](https://roadielabs.com/)" in md
+        assert f"covering {len(index)} races" in md
+        assert "## Training Guide" in md
+        assert f"https://roadielabs.com/race/{slug}/training-plan/" in md
+        assert 'Cite as: "Roadie Labs —' in md
+        assert "independent" not in md.lower()
+        # Slug NOT in the live inventory must omit the guide section
+        md_no_guide = generate_markdown_profiles.generate_profile(
+            slug, index_map[slug], generate_markdown_profiles.RACE_DATA_DIR,
+            len(index), set(),
+        )
+        assert "## Training Guide" not in md_no_guide
 
 
 # ── IndexNow payload builder (no network) ───────────────────────────────

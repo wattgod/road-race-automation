@@ -1,16 +1,16 @@
 # Roadie Labs Race Database
 
 > The definitive road race database. 425 races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
-> Last generated: 2026-07-23
+> Last generated: 2026-07-24
 
 ## Overview
 
-Roadie Labs is an independent road cycling event database covering 425 races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=elite, T2=strong, T3=solid, T4=developing).
+Roadie Labs is a road cycling event database covering 425 races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
 
 - **Tier 1 (Elite)**: 22 races — score >= 80 or prestige override
-- **Tier 2 (Strong)**: 329 races — score >= 60
-- **Tier 3 (Solid)**: 73 races — score >= 45
-- **Tier 4 (Developing)**: 1 races — score < 45
+- **Tier 2 (Contender)**: 329 races — score >= 60
+- **Tier 3 (Rising)**: 73 races — score >= 45
+- **Tier 4 (Local)**: 1 races — score < 45
 
 Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, Other, South America, Southern Europe, UK & Ireland, Western Europe.
