@@ -5,21 +5,21 @@
     "display_name": "Eroica Germania",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 2148,
-      "elevation_ft": 7047.0,
-      "location": "Eltville am Rhein, Hesse, Germany",
-      "location_badge": "Eltville am Rhein, Germany",
+      "distance_km": 122.0,
+      "distance_mi": 75.8,
+      "elevation_m": 2150,
+      "elevation_ft": 7053.8,
+      "location": "Eltville-Erbach, Rheingau, Hesse, Germany",
+      "location_badge": "Eltville-Erbach, Germany",
       "country": "Germany",
       "date": "2026: August 22",
       "date_specific": "2026: August 22",
-      "field_size": "1000",
+      "field_size": "1,000 (2026 advertised target; not a documented hard registration cap)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "multiple (festival-style)",
-      "cutoff_time": "N/A",
+      "registration": "https://www.eroica.cc/en/registrations-germany/",
+      "entry_fee": "€90 regular (rising to €99 Aug 1-15); Eroica Cycling Club members €45 (€49.50 late)",
+      "feed_zones": "3 stops on the long route, 2 on medium, 1 on short",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -31,8 +31,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Mixed asphalt and gravel/unpaved roads (official regulations specify both surfaces; exact gravel percentage not published)",
+      "technical_rating": 2,
       "features": []
     },
     "fondo_rating": {
@@ -70,78 +70,96 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Riders leave the central square in Erbach (a district of Eltville am Rhein) on period-correct bicycles — road-racing bikes built in 1987 or earlier, typically steel frames with downtube shifters, external brake cables, and toe clips — and pass through Rheingau vineyards and the landscape around Schloss Johannisberg before an asphalt forest descent gives way to harder climbing. The long route continues into the Rhine-Taunus Nature Park. Three route options are offered: 122 km/2,150 m, 80 km/1,290 m, and a 42.8 km/600 m short option. The organizer's regulations specify a mix of asphalt and unpaved 'white road' (gravel) sectors, though no gravel-percentage breakdown is published, and no named climbs or gradients appear on the official course pages. It finishes at Weingut Baron Knyphausen (Draiser Hof), about 850 meters from the start, with a wine-region festival atmosphere consistent with the Eroica series' heritage format.",
+      "signature_challenge": "The long route's unnamed gravel and forest climbs — official pages disagree on total ascent (2,150 m in the structured route data vs. roughly 2,400-2,500 m in narrative copy), so the real climbing load is difficult to assess beforehand.",
+      "suffering_zones": [
+        "The long route's gravel/white-road sectors — a 2023 rider account describes coarse, washed-out gravel climbs reaching roughly 16% and narrow, muddy forest stretches (rider-reported color, not an organizer-guaranteed feature of every edition)",
+        "The Rhine-Taunus Nature Park portion of the long route, following the shared vineyard and forest sections"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Plentiful in Rheingau wine region; book early for festival weekend[4].",
+      "lodging_strategy": "Plentiful in Rheingau wine region; book early for festival weekend.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.eroica.cc/en/events/germania/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2018,
+      "origin_story": "German producer die wellenmaschine has held the German Eroica license since 2017 (with a 2017 test/prologue edition); the official premiere ran in August 2018. Like all Eroica Classic events, it requires 1987-or-earlier road-racing bicycles and classically inspired clothing, run as a non-competitive historical ride rather than a timed race.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Legitimate Licensed Eroica Edition, Light on Published Course Detail",
+      "summary": "Eroica Germania has run since its 2018 premiere, produced by German licensee die wellenmaschine (license held since 2017). It follows the series' core format — 1987-or-earlier road-racing bicycles, typically steel, classically inspired clothing, non-competitive ride rather than a timed race — over mixed asphalt/gravel terrain through the Rheingau wine region. What it doesn't offer is much verifiable course precision: the organizer's own site gives two different elevation totals for the long route, publishes no named climbs or gradients, and provides no breakdown of how much of the course is actually unpaved.",
+      "strengths": [
+        "Licensed Eroica-series event with a continuous run since 2018, not a name-alike or fan-organized imitation",
+        "Mixed asphalt/gravel terrain through Rheingau vineyards and forest, consistent with the series' heritage-bike format",
+        "Three distance options (122/80/42.8 km) suiting a range of rider commitment",
+        "Festival finish at Weingut Baron Knyphausen (Draiser Hof), with local wine and vintage-bike programming"
+      ],
+      "weaknesses": [
+        "Organizer's own published elevation figures are internally inconsistent — narrative copy claims 2,400-2,500 m of climbing while the structured route data says 2,150 m for the same long route",
+        "No named climbs, gradients, or gravel-percentage breakdown are published, making it hard to scout the course's real difficulty in advance",
+        "The long-course distance has shrunk over time without explanation — roughly 130 km in the 2019 and 2023 editions, down to 122 km for 2026",
+        "As a non-competitive ride rather than a timed race, it won't suit riders specifically looking for a ranked road event"
+      ],
+      "bottom_line": "A licensed piece of the Eroica heritage-cycling series with genuine mixed-surface Rheingau terrain, but go in expecting a heritage ride, not a precisely documented, timed race."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Vintage cycling festival through Rhine vineyards with heroic climbs and retro charm.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Licensed Eroica heritage ride through Rheingau vineyards — light on published course precision.",
+      "should_you_race": "Yes if you want an Eroica-series experience on a period-correct bike through German wine country and don't need a precisely scouted, timed course.",
+      "alternatives": "For other licensed Eroica Classic editions with similar heritage-bike rules, see Eroica Dolomiti (Italy), the original L'Eroica (Gaiole in Chianti, Tuscany), or Eroica Japan."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.eroica.cc/en/events/germania/",
+        "category": "official",
+        "label": "Official Eroica Germania Event Page"
+      },
+      {
+        "url": "https://www.eroica.cc/en/registrations-germany/",
+        "category": "official",
+        "label": "Official 2026 Registration Page"
+      },
+      {
+        "url": "https://www.eroica.cc/en/german-regulations/",
+        "category": "official",
+        "label": "Official Germany-Specific Regulations (Surface, Bike Rules)"
+      },
+      {
+        "url": "https://www.eroica.cc/en/long-route-3/",
+        "category": "official",
+        "label": "Official Long-Route Course Page"
+      },
+      {
+        "url": "https://www.diewellenmaschine.com/eroica-germania/",
+        "category": "official",
+        "label": "German Licensee (die wellenmaschine) — License History Since 2017"
+      },
+      {
+        "url": "https://www.eroica.cc/en/events/?categoria=Classic",
+        "category": "reference",
+        "label": "Official Eroica Classic Event Catalog"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Eroica Germania gran fondo cycling Eltville am Rhein",
-      "videos": [
-        {
-          "video_id": "dlTEPVQrdGQ",
-          "title": "Eroica Dolomiti 2023 - Official Video",
-          "channel": "eroica",
-          "view_count": 6079,
-          "upload_date": "20230913",
-          "duration_string": "3:14",
-          "description": "Sotto il sole radiante delle Dolomiti attorno a San Candido, abbiamo vissuto una giornata magica insieme. Non avremmo potuto chiedere di meglio per questa sesta edizione di Eroica Dolomiti!\n\nLe montagne ci hanno abbracciato con la loro bellezza mozzafiato, e più di 300 Eroici hanno portato energia e passione in ogni pedalata. È stato un viaggio incredibile grazie a ciascuno di voi.\n\nUn grazie speciale a tutti i partecipanti, volontari e sponsor che hanno reso questo evento un successo straordinario. Senza di voi, non sarebbe stato possibile.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=dlTEPVQrdGQ",
-          "curated": false
-        },
-        {
-          "video_id": "kVEYwXOsoJs",
-          "title": "„Radklassiker“ L’Eroica: Technik von heute ist verpönt",
-          "channel": "euronews (deutsch)",
-          "view_count": 5783,
-          "upload_date": "20221003",
-          "duration_string": "1:12",
-          "description": "Seit 1997 gibt es die Rundfahrt durch die Toskana, bei der es nicht um die Sekundenjagd, sondern die Freude am Radeln geht.\n\nLESEN SIE MEHR : https://de.euronews.com/2022/10/03/radklassiker-leroica-technik-von-heute-ist-verpont\n\nAbonnieren Sie! https://www.youtube.com/c/euronewsde?sub_confirmation=1\n\nSehen Sie Euronews live TV : https://www.youtube.com/c/euronewsde/live\n\nEuronews gibt es in 12 Sprachen: https://www.youtube.com/user/euronewsnetwork/channels\n\n#World",
-          "tags": [
-            "welt",
-            "Radsport",
-            "Italien",
-            "Tourismus"
-          ],
-          "url": "https://www.youtube.com/watch?v=kVEYwXOsoJs",
-          "curated": false
-        }
-      ],
+      "videos": [],
       "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.cycloworld.cc/en/gran-fondo/germany/eroica-germania/40479",
-      "notes": "last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.eroica.cc/en/events/germania/",
+      "notes": "2026 edition confirmed for Saturday, August 22, 2026, with active registration. Non-competitive historical ride, not a timed race, per official regulations (https://www.eroica.cc/en/german-regulations/)."
+    },
+    "catalog_flags": {
+      "status_note": "Corrected this wave: long-route distance/elevation updated from stale 130.4km/2,148m (a ~2019/2023-era figure) to the current official 122km/2,150m. Surface corrected from 'Paved roads' to mixed asphalt/gravel per official regulations. Location precision corrected to 'Eltville-Erbach, Rheingau, Hesse, Germany' (Erbach is a district of Eltville am Rhein; both descriptions refer to the same host area). Founding year set to 2018 (was null). Purged two mislabeled YouTube videos: an 'Eroica Dolomiti 2023' official video (wrong Eroica edition — Italy, not Germany) and a Euronews segment about the original L'Eroica in Tuscany (also a different event). Eroica cluster identity check completed this wave: eroica-germania, eroica-south-africa (also in this batch, found defunct), and eroica-hispania (owned by another batch, confirmed distinct, not touched) are all genuinely separate licensed editions, not duplicates.",
+      "ruled": "2026-07-24 editorial wave 6 (batch D)"
     }
   }
 }

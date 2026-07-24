@@ -5,19 +5,19 @@
     "display_name": "Raul Alcala Challenge Oaxaca",
     "tagline": "",
     "vitals": {
-      "distance_km": 109.4,
-      "distance_mi": 68.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "distance_km": 103.45,
+      "distance_mi": 64.3,
+      "elevation_m": 703,
+      "elevation_ft": 2306.0,
       "location": "Oaxaca de Juárez, Oaxaca, Mexico",
       "location_badge": "Oaxaca de Juárez, Mexico",
       "country": "Mexico",
-      "date": "2026: April 19",
-      "date_specific": "2026: April 19",
-      "field_size": "TBD",
-      "start_format": null,
+      "date": "2023: February (last confirmed completed edition); 2026 Oaxaca leg cancelled",
+      "date_specific": "2026 Oaxaca leg: cancelled (listed 19 April 2026, marked \"Fecha anulada\")",
+      "field_size": "300+ (2022 debut); 500 (2023, last confirmed completed edition)",
+      "start_format": "Mass start, central Oaxaca de Juárez",
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "Historical (2024 registration page, unconfirmed as run): MXN 1,000 early / 1,300 advance / 1,500 regular / 2,500 at expo",
       "feed_zones": "TBD",
       "cutoff_time": "TBD",
       "lat": null,
@@ -37,7 +37,7 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 4,
+      "climbing": 2,
       "descent_technicality": 1,
       "climate_risk": 3,
       "organization": 3,
@@ -51,12 +51,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 66,
+      "overall_score": 63,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): climbing corrected 4->2 after research sourced the organizer's own 2022 Strava route at 703m total climbing (rubric band 2, 'Gentle: 500-1,500m') — the prior climbing=4 implied 2,500-4,000m, which is unsupported by any source found. Score recalculated: 66 -> 63 (provisional). Note: the previously-filed 109.4km distance figure (superseded by the sourced 103.45km value above) also has no traceable source. altitude=4 left unchanged pending a peak-elevation source (Oaxaca valley floor sits ~1,550m already; no specific route-peak figure was found this wave — flagged in catalog_flags for a human to verify against a GPX if one surfaces)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,9 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "In the confirmed 2022 and 2023 editions, the Oaxaca leg started in central Oaxaca de Juárez, following Avenida Independencia/Boulevard Eduardo Vasconcelos onto Federal Highway 190 before splitting into 70 km and 100-110 km options — distances that shifted between those two editions rather than holding to a fixed course. In 2022, the short route turned back near Yaguar Xoo/Tlacolula and the long route continued through Tlacolula and Santiago Matatlán toward Nueve Puntas, returning on Highway 190 to a finish at the Eduardo Vasconcelos baseball stadium; the 2023 edition added a documented detour through Mitla. The organizer's own 2022 Strava route for the long course measures 103.45 km with 703 m of climbing — the most reliably sourced distance/elevation pair for this event.",
+      "signature_challenge": "Nueve Puntas — the long course's turnaround point and the site of the timed competitive segment in the 2022 edition.",
+      "suffering_zones": [
+        "Federal Highway 190 — the main paved out-and-back artery, exposed to Oaxacan valley heat and highway traffic",
+        "Nueve Puntas — the timed competitive segment and turnaround for the long course",
+        "The Mitla detour (2023 edition only) — added distance and a pass through the archaeological-site town, illustrating how much the route varied year to year"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -82,25 +86,71 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "The Oaxaca leg debuted in February 2022, billed at the time as the tenth anniversary of the national Raúl Alcalá Challenge series (founded 2012) and Oaxaca's first time hosting a stop. The series honors retired Mexican professional Raúl Alcalá Gallegos, a two-time Tour de France stage winner (1989 and 1990), and rotates its multi-city calendar (Oaxaca, CDMX, Morelos, León, Monterrey in 2022; Oaxaca, Morelos, Monterrey as a package by 2024; San Luis Potosí, Morelos, Nuevo León in 2025) — Oaxaca has since dropped off the rotation.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "2026 Oaxaca Date Cancelled — Parent Series Continued Elsewhere in 2025",
+      "summary": "The only Oaxaca-specific 2026 listing found for the Raúl Alcalá Challenge is marked 'Fecha anulada' (date cancelled) on a third-party cycling calendar; no organizer notice was found either way. This is not evidence the whole series has folded: the parent series continued elsewhere in 2025 — San Luis Potosí held an April 2025 edition drawing 2,000+ riders — and remains listed in Sport City's 2026 program, subject to a confirmed date. Oaxaca itself, however, has no confirmed or completed 2026 edition. The last confirmed completed Oaxaca edition was 2023, drawing roughly 500 riders across 70/110 km courses.",
+      "strengths": [
+        "Named for Raúl Alcalá, who won Tour de France stages in 1989 and 1990 and remains the only Mexican rider with two Tour stage wins",
+        "Grew from 300 riders at its 2022 debut to roughly 500 in 2023 — modest but real momentum across its two confirmed editions",
+        "State-government-backed (Instituto del Deporte del Estado de Oaxaca) with both road and MTB bikes welcomed, lowering the entry bar",
+        "2024 fee schedule (MXN 1,000-2,500 depending on tier) is the last available pricing reference, if the leg returns"
+      ],
+      "weaknesses": [
+        "No confirmed or completed 2026 Oaxaca edition — the only specific 2026 listing found is marked cancelled on a third-party calendar",
+        "Course distances were not stable across its two confirmed editions (70/100 km in 2022, 70/110 km in 2023)",
+        "A 300-500 rider field across its confirmed editions — a small, regional-scale event",
+        "The public record is incomplete: a 2024 registration page exists, but no post-event report or results for a 2024 edition were verified"
+      ],
+      "bottom_line": "Not currently bookable in Oaxaca for 2026. If you want to ride in Alcalá's honor, check which city currently holds a confirmed date in the parent series rather than planning a trip to Oaxaca around this name."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Iconic Mexican road challenge through stunning Sierra Norte mountains, named for a cycling legend.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "63/100",
+      "one_liner": "A tribute ride to a genuine two-time Tour de France stage winner — but no confirmed 2026 edition in Oaxaca.",
+      "should_you_race": "Not in Oaxaca for 2026 — no confirmed or completed edition was found there. If you want to ride in Alcalá's honor, check which city currently holds a confirmed date in the parent series.",
+      "alternatives": "The wider Raúl Alcalá Challenge series (run under Emoción Deportiva/Sport City), which held 2025 editions in San Luis Potosí, Morelos, and Nuevo León rather than Oaxaca — verify current-year city assignments before assuming Oaxaca is on the calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://battistrada.com/es/calendario-marchas-cicloturistas/edition/raul-alcala-challenge-oaxaca-de-juarez-2026/47841/",
+        "category": "reference",
+        "label": "2026 Oaxaca Listing (Third-Party Calendar) — Marked \"Fecha Anulada\" (Cancelled)"
+      },
+      {
+        "url": "https://oem.com.mx/elsoldesanluis/deportes/el-raul-alcala-challenge-reune-a-mas-de-2-mil-ciclistas-22888997",
+        "category": "media",
+        "label": "2025 Series Event Held in San Luis Potosí (2,000+ Riders) — Confirms Series Continued Elsewhere in 2025"
+      },
+      {
+        "url": "https://www.oaxaca.gob.mx/deporte/todo-un-exito-el-raul-alcala-challenge-que-registro-asistencia-de-mas-de-trescientos-pedalistas/",
+        "category": "official",
+        "label": "Oaxaca State Government — 2022 Debut Post-Event Report (300+ Riders)"
+      },
+      {
+        "url": "https://www.diariomarca.com.mx/2023/02/fiesta-del-ciclismo-en-oaxaca-con-el-raul-alcala-challenge-2023/",
+        "category": "media",
+        "label": "2023 Completed Edition Report — 70/110 km, ~500 Riders, Mitla Route Addition"
+      },
+      {
+        "url": "https://www.strava.com/routes/2911352029187166798",
+        "category": "other",
+        "label": "Organizer's 2022 Strava Route — 103.45 km / 703 m, Sourced Distance/Elevation"
+      },
+      {
+        "url": "https://sucedioenoaxaca.com/2022/02/18/todo-listo-para-el-raul-alcala-challenge-oaxaca/",
+        "category": "media",
+        "label": "2022 Detailed Route Description and 10th-Anniversary/Founding Context"
+      },
+      {
+        "url": "https://www.letour.fr/en/news/2026/stage-2/pogacar-gifts-montjuic-to-del-toro/1334899",
+        "category": "reference",
+        "label": "Tour de France Official — Confirms Raúl Alcalá's Two Stage Wins (1989, 1990)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Raul Alcala Challenge Oaxaca gran fondo cycling Oaxaca de Juárez",
@@ -180,10 +230,14 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://battistrada.com/es/calendario-marchas-cicloturistas/edition/raul-alcala-challenge-oaxaca-de-juarez-2025/37690/",
-      "notes": "2025 Oaxaca edition is marked as cancelled and only vague mention of a future April Oaxaca event exists, with no concrete 2026 announcement.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "status": "cancelled",
+      "verified": "2026-07-24",
+      "source": "https://battistrada.com/es/calendario-marchas-cicloturistas/edition/raul-alcala-challenge-oaxaca-de-juarez-2026/47841/",
+      "notes": "The only Oaxaca-specific 2026 listing found (19 April 2026, on a third-party cycling calendar, not an organizer notice) explicitly reads 'Fecha anulada' (date cancelled) — no confirmed or completed 2026 Oaxaca edition found. This does not indicate a series shutdown: the parent Raúl Alcalá Challenge continued elsewhere in 2025 (San Luis Potosí held an April 2025 edition drawing 2,000+ riders) and remains listed in Sport City's 2026 program, subject to a confirmed date. Last confirmed completed Oaxaca edition: 2023."
+    },
+    "catalog_flags": {
+      "status_note": "Oaxaca leg cancelled for 2026 per official calendar listing; parent series (Raúl Alcalá Challenge, founded 2012) remains active in other Mexican cities (San Luis Potosí, Morelos, Nuevo León as of the 2025 rotation). Recommend a human decide whether this profile stays in the active catalog as a cancelled/dormant leg or should be pruned, consistent with how other cancelled-status profiles in this database are handled. Also flagging fondo_rating.altitude=4 as unverified this wave: Oaxaca de Juárez's valley floor already sits at roughly 1,550m, and no specific route peak-elevation figure was found (only total climbing, 703m, was sourced) — a human with access to a GPX trace should confirm whether altitude=4 ('high passes 2,000-2,500m') is accurate or should be revised alongside the climbing correction already made this wave.",
+      "ruled": "2026-07-24 editorial wave 6 (batch C)"
     }
   }
 }

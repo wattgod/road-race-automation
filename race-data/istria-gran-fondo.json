@@ -109,6 +109,11 @@
       "verified": "2026-07-23",
       "source": "https://ucigranfondoworldseries.com/en/istria-gran-fondo/",
       "notes": "UCI Gran Fondo World Series mass-participation road event in Umag held on 11 April 2026 with ongoing promotion and official listing.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "istria-granfondo",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT: identical location (Umag, Istria County, Croatia), identical official site (coloursofistria.com/en/events/istria-granfondo), identical 2026 date (April 11, 12th edition), same UCI Gran Fondo World Series qualifier status. 'Istria Gran Fondo' vs 'Istria Granfondo' is a spacing variant of the same event. istria-granfondo.json is the richer profile (field_size, route_options with Granfondo/Mediofondo/Time Trial split, founding history with notable_moments and reputation, 3 citations vs 0 here); this slug is the duplicate. No further editorial work performed on this stub per dedupe policy."
     }
   }
 }

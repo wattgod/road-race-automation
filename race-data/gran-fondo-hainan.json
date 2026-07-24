@@ -5,24 +5,46 @@
     "display_name": "Gran Fondo Hainan",
     "tagline": "",
     "vitals": {
-      "distance_km": 109.4,
-      "distance_mi": 68.0,
-      "elevation_m": 1219,
-      "elevation_ft": 4000.0,
-      "location": "Hainan Island, China",
+      "distance_km": 210.54,
+      "distance_mi": 130.8,
+      "elevation_m": 2201,
+      "elevation_ft": 7221.0,
+      "location": "Lingao, Danzhou/Yangpu & Wuzhishan, Hainan Island, China",
       "location_badge": "Hainan Island, China",
       "country": "China",
-      "date": "2025: December 12-14",
-      "date_specific": "2025: December 12-14",
-      "field_size": null,
+      "date": "2026: December 18-20",
+      "date_specific": "2026: December 18-20",
+      "field_size": "~2,300 aggregate stage entries, 34 countries (2025 edition) — aggregate across three separately-entered days, not a confirmed unique-rider count",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://www.ucigranfondo.cn",
+      "entry_fee": "2025 rates only, sold per day: Day 1 $40/$55/$80, ITT $35/$45/$60, Day 3 $40/$55/$80; all three bundled $115/$155/$220. 2026 fees not yet published.",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Day 1 — Coastal Sprint (Lingao to Danzhou/Yangpu)",
+          "distance_km": 110.4,
+          "distance_mi": 68.6,
+          "elevation_m": 557,
+          "elevation_ft": 1827
+        },
+        {
+          "name": "Day 2 — Yangpu Individual Time Trial",
+          "distance_km": 19.4,
+          "distance_mi": 12.1,
+          "elevation_m": null,
+          "elevation_ft": null
+        },
+        {
+          "name": "Day 3 — Wuzhishan Rainforest Queen Stage",
+          "distance_km": 80.74,
+          "distance_mi": 50.2,
+          "elevation_m": 1644,
+          "elevation_ft": 5394
+        }
+      ]
     },
     "climate": {
       "primary": "Tropical",
@@ -72,67 +94,107 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Three-day UCI stage race blending coastal flats, time trial, and rainforest mountains on China's tropical island paradise.",
-      "signature_challenge": "Wuzhishan Rainforest queen stage with dual climbs through lush jungle to 787m summit finish.",
+      "character": "A three-day UCI-branded program across Hainan Island rather than a single ridden course: Day 1 is a 110.4km coastal sprint along the Hainan Coastal Scenic Highway from Lingao to Danzhou/Yangpu (557m gain), Day 2 is a flat, wind-exposed 19.4km individual time trial on a repeated 5km loop in Yangpu, and Day 3 is an 80.74km queen stage climbing into the Wuzhishan rainforest to a 787m summit finish at Atuoling. Riders can enter one day, two, or all three — the organizer sells and enters each day separately, with no cumulative general classification published in the results, so despite the UCI's 'three-day stage race' label this behaves more like three independently-run qualifiers sharing a weekend than a true stage race.",
+      "signature_challenge": "The Wuzhishan queen stage's closing 13.4km at 4.1% to the 787m Atuoling summit — the decisive, longest-defined climb of the weekend, though not the only sustained climbing on Day 3: the stage first rises to roughly 755m before a long descent resets the legs for the final ascent.",
       "suffering_zones": [
-        "Queen Stage Climb: 15km two-part ascent to 729m in Wuzhishan Rainforest followed by 13.4km @4.1% to 787m finish.",
-        "Time Trial Loops: 19km out-and-back with double 5km loop in Yangpu, testing solo power on flat roads.",
-        "Coastal Sprint Stage: 108km flat coastal highway from Lingao to Danzhou with minor 557m gain, bunch sprint finish."
+        "Yangpu ITT — 19.4km mostly flat but exposed to coastal wind, out on a 4.5km approach plus a 5km loop ridden twice",
+        "Wuzhishan early rise — a climb to ~755m in the first half of Day 3 before the long descent that resets the legs for the closing ascent",
+        "Atuoling summit finish — 13.4km @4.1% to close Day 3, the only climb with a published length and gradient",
+        "Day 1 coastal highway — flat and fast with only 557m of gain, but 110.4km is the longest single day; for riders entering all three days, it sets up fatigue for the TT and queen stage that follow"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels near Haikou Airport (north), Danzhou, and Wuzhishan; tropical resorts and beaches available.",
-      "transport": "Three-day event across Lingao, Danzhou/Yangpu, and Wuzhishan; qualifiers close Oct 20; professional support from Tour of Hainan organizers.",
+      "transport": "Three-day event across Lingao, Danzhou/Yangpu, and Wuzhishan; separate registration and pricing per day; professional support from Tour of Hainan organizers.",
       "food": "",
       "official_site": "https://www.ucigranfondo.cn"
     },
     "history": {
       "founded": 2025,
-      "origin_story": "New addition to UCI Gran Fondo World Series as Hainan season finale; leverages Tour of Hainan expertise.",
+      "origin_story": "Launched in 2025 as a new UCI Gran Fondo World Series stop pairing a coastal sprint stage with a time trial and a rainforest queen stage. The Day 3 Wuzhishan queen stage absorbs an older local event — the Wuzhishan Rainforest Road Cycling Challenge, first run in 2023 as the 'Cadillac Cup TREK100 Wuzhishan Rainforest Road Cycling Challenge' — but that's a constituent-race lineage, not evidence Gran Fondo Hainan itself predates 2025.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real UCI Debut Still Working Out Its Own Numbers",
+      "summary": "Gran Fondo Hainan is a genuine, UCI-sanctioned event on Hainan Island, separate from the professional Tour of Hainan. Its inaugural 2025 running drew roughly 2,300 stage entries from 34 countries across three days: a flat coastal sprint, a windy Yangpu time trial, and a rainforest queen stage climbing to the 787m Atuoling summit. But 'three-day stage race,' the UCI series' own label for the event, oversells the format — in 2025, each day was sold and entered separately with no published cumulative classification, so this reads as three independently entered and classified qualifiers sharing a weekend and a location rather than a Tour-style stage race. The event's own numbers haven't settled either: official UCI World Series sources published three different queen-stage elevation totals (1,535m, then 1,236m, then a final 1,644m) across three separate announcements, and the organizer's site was still displaying 2025 dates and fees as of this research despite December 2026 being on the UCI calendar.",
+      "strengths": [
+        "Genuinely UCI-sanctioned qualifier status, confirmed on both the UCI competition record and the 2026-2027 World Series calendar",
+        "Real terrain variety in one trip: flat coastal highway, an exposed flat TT, and a genuine rainforest climb to a 787m summit finish",
+        "A December qualifier on tropical terrain, a schedule slot most Northern Hemisphere UCI Gran Fondo World Series stops don't occupy",
+        "An international field in its first year, with 34 countries represented in 2025"
+      ],
+      "weaknesses": [
+        "Only one edition run (2025) — no track record, and official UCI World Series sources published three different queen-stage elevation totals without public explanation",
+        "The UCI's 'three-day stage race' framing is misleading: no cumulative GC was published for 2025, entries and results were per-day, and riders could enter a single stage — treat it as three separate qualifiers unless the 2026 edition confirms otherwise",
+        "As of this research (2026-07-24) the organizer's site had not rolled over from 2025 content — 2026 registration, fees, and any course changes are unverified",
+        "Field-size figures describe aggregate stage entries (day totals summing to ~2,300), not a confirmed unique-rider count"
+      ],
+      "bottom_line": "If you want a genuinely UCI-qualifying gran fondo with real terrain variety and don't mind a first-generation event that's still settling its own data and communications, Gran Fondo Hainan delivered three legitimately different days of racing in 2025. Verify the dates on the UCI calendar and wait for the organizer to publish 2026 registration and fees before booking travel — and if the inaugural per-day-entry format carries over, don't expect a genuine cumulative stage-race classification."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Exotic tropical stage race blending coast, TT, and rainforest climbs for winter UCI qualifier fun.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A tropical UCI debut with real terrain variety across three separately-entered days — treat the 'stage race' label skeptically pending a 2026 confirmation.",
+      "should_you_race": "Yes if you want a UCI-qualifying event with genuine terrain variety (coastal flat, TT, rainforest climb) and a December racing window. Verify 2026 dates on the UCI calendar and wait for the organizer to publish registration and fees before booking, since the site hadn't updated from 2025 as of this research.",
+      "alternatives": "For a more established, single-course UCI Gran Fondo World Series stop with a longer track record, look at other Series stops on the calendar (ucigranfondoworldseries.com/en/calendar/). For the separate professional Tour of Hainan (UCI ProSeries, five stages, cumulative GC, April), that's a different event entirely — don't confuse it with this amateur gran fondo."
     },
     "citations": [
       {
-        "url": "https://ucigranfondoworldseries.com/en/gran-fondo-hainan-wraps-up-the-2025-uci-gran-fondo-world-series-with-an-impressive-three-day-stage-race/",
-        "category": "reference",
-        "label": "Gran Fondo Hainan wraps up the 2025 UCI Gran Fondo World Series"
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — 2026-2027 Calendar (Hainan Dec 18-20)"
       },
       {
         "url": "https://ucigranfondoworldseries.com/en/hainan/",
-        "category": "reference",
-        "label": "Hainan - UCI Gran Fondo World Series"
+        "category": "official",
+        "label": "Hainan — UCI Gran Fondo World Series Event Page"
       },
       {
         "url": "https://www.ucigranfondo.cn",
-        "category": "reference",
-        "label": "UCI Gran Fondo World Series Hainan"
+        "category": "official",
+        "label": "Gran Fondo Hainan — Organizer Site"
       },
       {
         "url": "https://www.uci.org/competition-details/2025/CPT/76670",
+        "category": "official",
+        "label": "Gran Fondo Hainan — UCI Competition Record"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/chen-hao-and-li-si-impress-in-uci-gran-fondo-hainan/",
         "category": "reference",
-        "label": "Gran Fondo Hainan - UCI"
+        "label": "UCI Post-Race Report — 2025 Final Course Distances, Wind Conditions, and Final Elevation (787m/1,644m)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/gran-fondo-hainan-wraps-up-the-2025-uci-gran-fondo-world-series-with-an-impressive-three-day-stage-race/",
+        "category": "reference",
+        "label": "UCI December Preview — ~2,300 Entries, 34 Countries, Preliminary 1,236m Elevation Figure"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/fr/la-serie-mondiale-gran-fondo-uci-setend-en-chine/",
+        "category": "reference",
+        "label": "UCI April 2025 Announcement — Original 1,535m Elevation Figure"
+      },
+      {
+        "url": "https://www.hi.chinanews.com.cn/hnnew/2025-12-16/733563.html",
+        "category": "media",
+        "label": "China News Service — 2025 Race Report, Wuzhishan Queen Stage"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/ROA/78085",
+        "category": "reference",
+        "label": "Tour of Hainan (Separate Pro Event) — UCI Record, for Identity Contrast"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.cycloworld.cc/en/gran-fondo/china/gran-fondo-hainan/37655",
-      "notes": "2026 edition listed for December 13 in Lingao, confirming event is still running.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://ucigranfondoworldseries.com/en/calendar/",
+      "notes": "CORRECTED (2026-07-24, wave 6): confirmed active and scheduled for December 18-20, 2026 on the UCI Gran Fondo World Series 2026-2027 qualifier calendar. Prior eligibility.source (CycloWorld, cycloworld.cc) published conflicting date/route/distance details for this event and has been replaced — do not use it as a source for this profile. 2026 registration, fees, and course details are not yet published by the organizer as of this verification date; only 2025 figures are confirmed."
+    },
+    "catalog_flags": {
+      "status_note": "TAXONOMY: this event functions as three independently-entered, independently-priced single-day qualifiers (coastal sprint, ITT, rainforest queen stage) rather than a true cumulative-GC stage race — no published overall classification was found. `fondo_rating.discipline` left as `gran_fondo` per repo rule (the enum is fixed and this profile predates the multi_stage option in practice), but `multi_stage` would better describe the actual format; flagging for a human call on reclassification. VITALS: prior on-file distance/elevation (109.4km/1,219m) matched no single stage, weekend total, or documented combination — corrected to the 210.54km weekend total across three stages with elevation flagged as the best-documented floor (2,201m; TT elevation gain was never published so the true total may be somewhat higher).",
+      "ruled": "2026-07-24 editorial wave 6"
     }
   }
 }

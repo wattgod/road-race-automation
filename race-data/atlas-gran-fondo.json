@@ -5,21 +5,21 @@
     "display_name": "Atlas Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 159.3,
-      "distance_mi": 99.0,
-      "elevation_m": 1800,
-      "elevation_ft": 5906.0,
+      "distance_km": 160.0,
+      "distance_mi": 99.4,
+      "elevation_m": 2100,
+      "elevation_ft": 6889.8,
       "location": "Taroudant, Morocco",
       "location_badge": "Taroudant, Morocco",
       "country": "Morocco",
-      "date": "2026: November 21",
-      "date_specific": "2026: November 21",
-      "field_size": "N/A",
+      "date": "2026: November 22 (road gran fondo day; gravel/MTB runs November 21 as part of the same weekend)",
+      "date_specific": "2026: November 22",
+      "field_size": null,
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://www.atlasgranfondo.com/granfondo/inscription-international/",
+      "entry_fee": "160km €95 / 120km €85 / 80km €80 / 40km €55 (2026 international pricing)",
       "feed_zones": "meals and mechanical support provided",
-      "cutoff_time": "N/A",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -31,7 +31,7 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Paved roads (road bikes only; e-bikes prohibited)",
       "technical_rating": 1,
       "features": []
     },
@@ -70,67 +70,92 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Part of a three-day weekend (village/packet pickup Fri Nov 20, gravel/MTB Sat Nov 21, road gran fondo Sun Nov 22) based in Taroudant, at the foot of the Anti-Atlas/High Atlas ranges. The road event offers four distances — 160, 120, 80, and 40 km. The 120 km and 80 km courses are described as Taroudant start/finish loops; the 160 km and 40 km route geometries are not clearly documented by the organizer. The organizer gives the public no route file to scout gradients or segments for any option; the 80 km course's main climbing section runs roughly km 27-46 and tops out around 940 m altitude, and the 120 km reaches a demanding pass around km 26 before a long climb. Distances and elevations should be read as organizer-advertised rather than independently verified — the 2026 course page still uses an image asset labeled 'map-gran-fondo-2025,' and its OpenRunner link redirects to OpenRunner's generic homepage rather than a specific route file.",
+      "signature_challenge": "The 160 km option's roughly 2,100 m of total climbing — the highest elevation total among the four road distances, though the 120 km's ~1,500 m is a real climbing day in its own right.",
+      "suffering_zones": [
+        "A long, unnamed climb beginning around km 26 on the 120 km route",
+        "The main climbing section on the 80 km course, roughly km 27-46, topping out near 940 m altitude — neither segment has a published name or gradient"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "4-star accommodation included.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.atlasgranfondo.com/granfondo/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Organized by Association Multi Social Challenge (site publisher of record: SARL Morocco All Races). The earliest edition that could be substantiated from independent sources is 2025; no source confirms an inaugural year, so founding year is left unverified rather than guessed. Some 2025 regional listings used the name 'Atlas Gran Fondo Pikala,' likely reflecting a sponsor or partner suffix rather than a separate event.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Event, Thin on Verifiable Course Detail",
+      "summary": "Atlas Gran Fondo is a physically organized road cycling weekend in Taroudant, Morocco, with bib pickup, timing, feed zones, and medical support; the official participation rules ban e-bikes and require road bicycles for the road-day categories. The 2026 edition is confirmed and open for registration. It is not a well-documented event: there's no current public route file for any distance, no named climbs, no confirmed field size, and no verified founding year — the 2026 course page still uses an image asset labeled 'map-gran-fondo-2025,' and its legal notice contains leftover boilerplate referencing a different event ('L'EPIC DESERT RACE'), suggesting template reuse across the operator's portfolio.",
+      "strengths": [
+        "Confirmed, currently bookable 2026 road gran fondo with four distance options (160/120/80/40 km) suiting a range of rider ambition",
+        "Real event infrastructure: bib pickup, timing, feed zones, and medical support, with official rules requiring road bicycles and banning e-bikes",
+        "Genuine Atlas-foothill setting in Taroudant with roughly 2,100 m of climbing on the long course",
+        "Part of a broader three-day festival weekend if riders also want the separate gravel/MTB day"
+      ],
+      "weaknesses": [
+        "The organizer gives the public no route file to scout gradients or segments for any distance",
+        "Field size is not published anywhere the organizer controls; treat any specific number as unverified",
+        "The 2026 course page still uses an image asset labeled 'map-gran-fondo-2025,' and the site's legal notice reuses boilerplate from an unrelated event, both of which lower confidence in unattributed site copy",
+        "No verified founding year or edition count — this is not an event with a long, independently documented track record",
+        "Moroccan-resident entry pricing is not visibly published on the public resident registration form — only international pricing is transparent"
+      ],
+      "bottom_line": "A real, bookable Atlas-foothill road weekend, but confirm the route file and current rules directly with the organizer before booking travel — the public documentation has real gaps."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Morocco's premier road sportive blending epic Atlas climbs with cultural adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A bookable Atlas-foothill road weekend in Taroudant — light on published course documentation.",
+      "should_you_race": "Yes if you want Atlas-foothill road climbing as part of a supported festival weekend and don't need a pre-scouted route file. Confirm current-year specifics directly with the organizer before booking travel, given the documentation gaps.",
+      "alternatives": "For a similarly organized North African road weekend with better-documented course data, look at other UCI-affiliated or established regional gran fondos in Morocco or neighboring countries."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.atlasgranfondo.com/granfondo/",
+        "category": "official",
+        "label": "Official 2026 Event Page"
+      },
+      {
+        "url": "https://www.atlasgranfondo.com/granfondo/parcours/",
+        "category": "official",
+        "label": "Official Program and Distances"
+      },
+      {
+        "url": "https://www.atlasgranfondo.com/granfondo/regles-de-participation/",
+        "category": "official",
+        "label": "Official Participation Rules"
+      },
+      {
+        "url": "https://www.atlasgranfondo.com/granfondo/inscription-international/",
+        "category": "official",
+        "label": "Official International Registration and Pricing"
+      },
+      {
+        "url": "https://www.finishers.com/course/atlas-gran-fondo-2",
+        "category": "reference",
+        "label": "Finishers — Independent Course/Date Validation"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Atlas Gran Fondo gran fondo cycling Taroudant",
-      "videos": [
-        {
-          "video_id": "q4fyWq-T5bw",
-          "title": "BMW GS 1200 ADV MOROCCO DESERT 2015",
-          "channel": "Nawfalus",
-          "view_count": 779,
-          "upload_date": "20150519",
-          "duration_string": "2:27",
-          "description": "BMW GS1200  BIG TRAIL ON SANDY DESERT IN MOROCCO BTW MHAMID AND FOUM ZGUID\nPart 2",
-          "tags": [
-            "BMW GS",
-            "BMW R 1200 GS K50",
-            "Morocco (Country)",
-            "Desert (Geographical Feature Category)",
-            "Maroc"
-          ],
-          "url": "https://www.youtube.com/watch?v=q4fyWq-T5bw",
-          "curated": false
-        }
-      ],
+      "videos": [],
       "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.atlasgranfondo.com/granfondo/",
-      "notes": "2026 edition Nov 21-22"
+      "notes": "2026 edition confirmed: gravel/MTB Sat Nov 21, road gran fondo Sun Nov 22 (160/120/80/40 km). Prior database date of Nov 21 mismatched the road-race day, which is actually Nov 22 — corrected here. Corroborated by a Finishers listing marked as validated by the organizer."
+    },
+    "catalog_flags": {
+      "status_note": "Corrected this wave: distance/elevation updated from stale 159.3km/1,800m to the organizer-validated 160km/2,100m; date corrected from Nov 21 (the gravel/MTB day) to Nov 22 (the actual road gran fondo day). Purged one mislabeled YouTube video ('BMW GS 1200 ADV MOROCCO DESERT 2015') — unrelated motorcycle-tour footage, not associated with this cycling event. Founding year left null; no source substantiates an inaugural year, and the event should not be confused with the unrelated, unsupported ~1,200km Atlas Mountain Race gravel ultra.",
+      "ruled": "2026-07-24 editorial wave 6 (batch D)"
     }
   }
 }

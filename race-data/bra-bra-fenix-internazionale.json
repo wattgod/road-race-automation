@@ -5,24 +5,27 @@
     "display_name": "Bra-Bra Fenix Internazionale",
     "tagline": "",
     "vitals": {
-      "distance_km": 149.7,
-      "distance_mi": 93.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Bra, Piedmont, Italy",
+      "distance_km": 126.0,
+      "distance_mi": 78.3,
+      "elevation_m": 2390,
+      "elevation_ft": 7841.0,
+      "location": "Pollenzo, Bra, Piedmont, Italy",
       "location_badge": "Bra, Italy",
       "country": "Italy",
-      "date": "2026: May 16-17",
+      "date": "2026: May 16-17 (Granfondo/Mediofondo road race May 17)",
       "date_specific": "2026: May 17",
-      "field_size": "Unknown",
+      "field_size": "2,000+ starters (nominal bib allocation up to 2,500; official materials are internally contradictory on the cap)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://brabra.org/",
+      "entry_fee": "€50 (through Dec 31, 2025) rising in tiers to €70 on-site; Gold €120 / Silver €90 packages; +€10 one-day competitive license where required",
       "feed_zones": "Unknown",
       "cutoff_time": "Unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Granfondo: ~126 km / ~2,390 m",
+        "Mediofondo: ~105 km / ~1,900 m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +73,103 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Both the Granfondo (~126 km/~2,390 m) and Mediofondo (~105 km/~1,900 m) start and finish in Pollenzo, then cross the Roero, skirt the Monferrato, and climb into the Langhe/Alta Langa. The two courses split at a junction near Coste Pomo/Sinio, where the Granfondo takes a harder extension through Pedaggera, Serravalle Langhe, Cissone and the SP56/Serralunga sector before the routes come back together (per the official timing tables, the courses rejoin around the end of the Valdicroce climb, ahead of Serralunga). Named selection points along the shared portion include Bra/Orti, Monticello d'Alba, Guarene, Neive Borgo Alto, Neviglie, Trezzo Tinella, Benevello, the Dorsale delle Langhe, Tre Cunei and Albaretto Torre. Strada Paciarini to the Cedro del Libano is a shared late-race climb/GPM point, not the reunion point itself, followed by La Morra, Verduno and back to Pollenzo. The formerly prominent Mur d'la Mura climb, with its reported gradients up to 20% and short gravel sector, was removed from the course for 2026 — older descriptions of it no longer apply. The official 2026 materials reviewed do not publish per-climb gradients, so exact pitches on the Langhe/Alta Langa climbs remain unverified.",
+      "signature_challenge": "The Cedro del Libano ascent via Strada Paciarini — a shared late climb/GPM point, arriving after the Granfondo field has already absorbed its harder Serralunga-sector extension.",
+      "suffering_zones": [
+        "The Langhe/Alta Langa climbing block between Trezzo Tinella and Albaretto Torre — the meat of the route's elevation gain",
+        "The Granfondo-only extension past the Coste Pomo/Sinio split through Pedaggera, Serravalle Langhe and Cissone — where the two courses' difficulty diverges",
+        "Strada Paciarini to the Cedro del Libano — a shared late-race climb before the closing run through La Morra and Verduno"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Available in the picturesque town of Pollenzo and surrounding Piedmont region known for wine tourism.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://brabra.org/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 1992,
+      "origin_story": "First edition held June 28, 1992, drawing 560 entrants; won by Michele Pepino. Now in its 33rd edition as of 2026 — sources establish a 1992 founding and the current organizer, not uninterrupted same-club operation (the current organizing president's own account describes taking over management in 2004 and first organizing the event in 2006, plus a pandemic-era postponement). Has run under a series of sponsor-driven names since — Granfondo Bra-Bra, then Bra-Bra Specialized, then Bra-Bra Specialized – FENIX Gran Prix (2021), with FENIX and Specialized swapping title/main sponsor roles in 2022.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Long-Running Piedmont Granfondo With a Fatal 2026 Crash on Record",
+      "summary": "Bra-Bra Fenix Internazionale is a legitimate amateur road Granfondo founded in 1992 and now in its 33rd edition, run by A.S.D. Gran Fondo Bra Bra out of Pollenzo. The course crosses the Roero and Langhe/Alta Langa wine country on paved roads, with a 2,000+ rider field in 2026. During the 2026 edition, a participant died in a crash near Neviglie; organizers suspended celebratory/collateral activities and said there would be no further competitive communications. Separately, the event's own published course figures are inconsistent: the regulations, timing tables, homepage and race-week press give a range of about 124.7-126 km and 2,375-2,390 m for the Granfondo (103.98-105 km/1,900-1,906 m for the Mediofondo) depending on which official page you read.",
+      "strengths": [
+        "Founded in 1992 and now in its 33rd edition, run by A.S.D. Gran Fondo Bra Bra",
+        "2,000+ starters in 2026 on a route through the Roero and Langhe/Alta Langa, UNESCO wine-heritage terrain",
+        "Two-tier course structure (Granfondo/Mediofondo) sharing a start/finish in Pollenzo",
+        "Tiered early-bird pricing from €50"
+      ],
+      "weaknesses": [
+        "A participant died after a crash near Neviglie during the 2026 edition; the organizer suspended celebratory/collateral activities and said no further competitive communications would follow — a critical disclosure, though the available reporting does not establish organizer fault or an ongoing safety deficiency",
+        "Official 2026 course figures are internally inconsistent across the event's own regulations, timing tables and homepage — riders can't get one authoritative distance/elevation number from the organizer",
+        "The previously signature Mur d'la Mura climb (up to 20% gradients, short gravel sector) was removed for 2026",
+        "The official 2026 materials reviewed do not publish per-climb gradient data for the current route",
+        "Per the official regulations, roads reopen to two-way traffic 30 minutes after the lead rider passes, after which participants must obey normal traffic controls — a real, unglamorous exposure for back-of-pack riders"
+      ],
+      "bottom_line": "A real, historic Piedmont granfondo with a genuine field and route through wine country — but riders should know about the fatal 2026 crash and that the organizer's own published course figures don't agree with each other."
     },
     "final_verdict": {
       "score": "66/100",
       "one_liner": "A well-organized, scenic granfondo through UNESCO wine regions offering excellent early-season preparation with reasonable costs and flexible route options.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes, if you want a historic Piedmont wine-country granfondo with a real field — but go in aware of the 2026 fatal incident and the organizer's inconsistent published course figures.",
+      "alternatives": "For similar Piedmont/Langhe terrain with cleaner published data, look at other regional granfondi in the Cuneo/Asti area; for a comparable early-season Italian wine-country ride, consider Nove Colli (Romagna) or Gran Fondo Coppi (Cuneo)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://brabra.org/",
+        "category": "official",
+        "label": "Bra-Bra Fenix — Official Site"
+      },
+      {
+        "url": "https://www.brabra.org/pagina/6/regolamento",
+        "category": "official",
+        "label": "Official 2026 Regulations — Distances, Categories, Course Points"
+      },
+      {
+        "url": "https://www.brabra.org/pagina/4/programma-e-quote",
+        "category": "official",
+        "label": "Official 2026 Program and Entry Fee Tiers"
+      },
+      {
+        "url": "https://www.brabra.org/cronotabella.aspx?id=0",
+        "category": "official",
+        "label": "Official Granfondo Timing Table — Route Points"
+      },
+      {
+        "url": "https://www.brabra.org/cronotabella.aspx?id=1",
+        "category": "official",
+        "label": "Official Mediofondo Timing Table — Route Points"
+      },
+      {
+        "url": "https://brabra.org/pagina/1/editoriale",
+        "category": "official",
+        "label": "Official 2026 Editorial — Confirms Mur d'la Mura Removal, Cedro del Libano as Shared GPM"
+      },
+      {
+        "url": "https://www.ideawebtv.it/2026/05/17/al-via-la-33a-edizione-della-bra-bra-fenix-foto-e-video/",
+        "category": "media",
+        "label": "Ideawebtv — 33rd Edition Start Report, May 17, 2026"
+      },
+      {
+        "url": "https://www.targatocn.it/2026/05/17/amp/argomenti/cronaca-1/articolo/e-giuseppe-beppe-olivero-62-anni-di-piasco-il-ciclista-morto-durante-la-granfondo-bra-bra-f.html",
+        "category": "media",
+        "label": "TargatoCN — Fatal Incident Report, 2026 Edition"
+      },
+      {
+        "url": "https://www.gazzettadalba.it/2026/05/ricco-programma-per-la-granfondo-di-ciclismo-bra-bra-fenix-di-domenica-17-maggio-sulle-strade-di-langhe-e-roero/",
+        "category": "media",
+        "label": "Gazzetta d'Alba — 2026 Race-Week Program and Course Reporting"
+      },
+      {
+        "url": "https://www.ideawebtv.it/2022/04/14/bra-bra-si-parte-non-e-soltanto-una-gara-di-bicii/",
+        "category": "media",
+        "label": "Ideawebtv — Founding History Interview (1992 First Edition)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Bra-Bra Fenix Internazionale gran fondo cycling Bra",
@@ -192,9 +261,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://brabra.org/",
-      "notes": "33rd edition ran May 17 2026 from Pollenzo/Bra"
+      "verified": "2026-07-24",
+      "source": "https://www.ideawebtv.it/2026/05/17/al-via-la-33a-edizione-della-bra-bra-fenix-foto-e-video/",
+      "notes": "33rd edition started May 17, 2026 from Pollenzo/Bra with 2,000+ riders (per the start report cited above). During the event a participant died in a crash near Neviglie; see the separate TargatoCN incident report in citations for that fact — organizers suspended celebratory/collateral activities and said there would be no further competitive communications. No 2027 date is published on the official site (brabra.org) as of this review, so a future edition should not be presented as already scheduled."
     }
   }
 }

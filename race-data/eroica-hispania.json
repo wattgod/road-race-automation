@@ -5,16 +5,16 @@
     "display_name": "Eroica Hispania",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
-      "location": "Haro, La Rioja, Spain",
+      "distance_km": 184.0,
+      "distance_mi": 114.3,
+      "elevation_m": 3700,
+      "elevation_ft": 12139.0,
+      "location": "Haro, La Rioja, Spain (last host — event dormant, no 2024-2026 edition)",
       "location_badge": "Haro, Spain",
       "country": "Spain",
-      "date": "2026: June 6",
-      "date_specific": "2026: June 6",
-      "field_size": "500-1000",
+      "date": "Dormant since 2023 — no confirmed 2024, 2025, or 2026 edition",
+      "date_specific": "Dormant since 2023 — no confirmed 2024, 2025, or 2026 edition",
+      "field_size": "approximately 600 (619 entered for the last edition, June 2023)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,12 @@
       "cutoff_time": "unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Paseo Eroico: 24-25 km / ~250 m",
+        "Short: 74 km / ~960-1,000 m",
+        "Medium: 122 km / ~1,655-1,700 m",
+        "Long: 184 km / ~3,076-3,700 m (source figures for elevation conflict; both preserved rather than averaged)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,13 +36,13 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Mixed asphalt and gravel/track (organizer-described mixed-surface routes; one rider report estimated ~30-35% unpaved on the long course)",
+      "technical_rating": 2,
       "features": []
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 3,
+      "distance": 4,
+      "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 4,
@@ -49,14 +54,14 @@
       "field_depth": 2,
       "value": 4,
       "expenses": 3,
-      "road_surface": 1,
+      "road_surface": 5,
       "cultural_impact": 3,
-      "overall_score": 66,
+      "overall_score": 74,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "sportive",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): corrected against the real last-edition (2023 Haro) course data — distance 3->4 (130.4km stale figure replaced with the documented 184km long course, rubric: 160-200km). climbing 3->4: the documented elevation range (3,076-3,700m, source figures conflict and are preserved as a range rather than a single number) falls in the 2,500-4,000m rubric band either way; no categorized-climb data has been published, so this dimension is scored on total climbing meters only, not climb categorization. road_surface 1->5: organizer-described mixed asphalt/dirt-track routes with a rider-estimated 30-35% unpaved long-course sector — described directly as dirt/stone track per the research, not asserted as strade-bianche-branded terrain. overall_score recalculated 66->74 per formula ((sum14+cultural_impact)/70*100); tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,158 +75,132 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This describes the last actual edition (Haro, June 2023), not a current or future course. Four routes shared a Haro start/finish: Paseo Eroico (24-25 km/~250 m), Short (74 km/~1,000 m), Medium (122 km/~1,700 m), and Long (184 km/~3,076-3,700 m, source figures conflict on elevation). The long route ran through San Vicente de la Sonsierra, Laguardia, Labraza, Logroño, Navarrete, Nájera, San Millán de la Cogolla, and Santo Domingo de la Calzada, incorporating sections of the Camino Francés and the Camino de Santiago Vasco del Interior. All routes mixed asphalt with gravel/track sections — the organizer described genuine mixed-surface routes, and a participant's route report on the long course estimated roughly 30-35% unpaved. For Eroica Hispania, entry required a steel, drop-handlebar road bicycle built through 1987, ridden in period clothing (note: not every event under the wider Eroica banner shares this rule — Eroica's own NOVA-branded events allow modern bikes), and the format was explicitly noncompetitive — no ranked times, every finisher treated equally.",
+      "signature_challenge": "The vintage-bike mandate itself — completing 184 km and roughly 3,076-3,700 m of climbing (source figures conflict), with real gravel/track sectors, on a pre-1987 steel bike with none of the gearing or braking modern riders take for granted.",
+      "suffering_zones": [
+        "The Camino Francés/Camino Vasco del Interior sections on the long route — pilgrim-trail terrain repurposed for the ride, mixing surfaces and grades",
+        "The unpaved gravel/track sectors (roughly 30-35% of the long course per one participant's route report) — genuinely harder on period steel bikes than modern gravel bikes",
+        "San Millán de la Cogolla to Santo Domingo de la Calzada — the closing stretch of the long route; the one participant route report on file recorded a 12h46 finishing time"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels in Logroño like Hotel Murrieta; options in Haro and Cenicero during event weekend.",
+      "lodging_strategy": "Hotels in Logroño like Hotel Murrieta; options in Haro and Cenicero during event weekend (historical — no current edition to plan travel around).",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2015,
+      "origin_story": "Founded 2015 in Cenicero, La Rioja, with roughly 600 riders at the inaugural edition; ran there for five editions (2015-2019) before relocating to Haro. The Haro move stalled repeatedly: 2020 cancelled for COVID-19, an October 2021 attempt cancelled immediately before the event over a contested permit/authorization dispute between the Riojan cycling federation and Spain's DGT. The first completed Haro edition was 2022, followed by a seventh and, to date, final edition in June 2023. Haro withdrew its budget/support ahead of 2024; the organizer described 'hibernating' the event while searching for a new host, with no return materializing through 2025 or 2026.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Dormant — No Edition Since 2023, Status Genuinely Unresolved",
+      "summary": "Eroica Hispania is the real Spanish member of the international Eroica family — founded 2015 in Cenicero, relocated to Haro, and run there in 2022 and 2023 with a genuine ~600-rider field on real mixed-surface routes requiring pre-1987 steel bikes. But there has been no edition since June 2023. Haro withdrew the event's funding ahead of 2024, saying it 'hadn't consolidated'; separately, local reporting notes the underlying four-year sponsorship agreement was worth roughly €336,000 and had drawn earlier local criticism as excessive (the sources establish both facts but not that the criticism caused the funding decision). The organizer says Haro's six-month delay in responding left no time to redesign four mixed-surface routes and secure permits elsewhere, and publicly described 'hibernating' the event in early 2024 while shopping for a new host, hoping to return in 2025 — it didn't. As of this review, there is no confirmed 2024, 2025, or 2026 edition, but also no formal announcement that the event is permanently discontinued — a genuinely unresolved status, not a clean 'active' or 'defunct' call.",
+      "strengths": [
+        "Seven completed editions between 2015 and 2023 as a legitimate part of the international Eroica family (2020 and 2021 did not produce a completed event), with an independently documented ~600-rider field",
+        "Genuine mixed-surface vintage format — asphalt plus real gravel/track sectors, historic Rioja terrain through Laguardia and the Camino Francés, pre-1987 steel bikes required",
+        "The noncompetitive format removes racing pressure — no ranked times, every finisher counted — though the 184 km mixed-surface long route still demands substantial fitness regardless"
+      ],
+      "weaknesses": [
+        "No edition has run since June 2023 — this is not currently a bookable event",
+        "The organizer and its former host municipality (Haro) give conflicting accounts of why the relationship ended, including disputed sponsorship-value and timeline claims on both sides",
+        "A 2021 return was cancelled immediately before the event amid a permit/fee dispute involving the organizer, the Riojan cycling federation, and Spain's DGT; the surviving accounts conflict, so sole blame cannot be assigned — but it is a pattern of operational fragility that predates the current hiatus",
+        "No new host has been announced as of this review despite the organizer's stated 2024 search — the longer this drags on, the more it resembles quiet discontinuation without ever being formally announced as such"
+      ],
+      "bottom_line": "A real event with a real history, currently dormant with no confirmed return date. Don't plan travel or training around a 2026 edition — none is confirmed to exist."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Epic vintage road ride through Rioja's vineyards and castles, blending cycling heritage with wine culture.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "74/100",
+      "one_liner": "Dormant Rioja vintage sportive — real history through 2023, no confirmed edition since.",
+      "should_you_race": "Not currently — there is no confirmed 2026 (or 2024/2025) edition to register for. Check the organizer's current status directly before planning around it.",
+      "alternatives": "For an active vintage/steel-bike sportive, look at other current Eroica-family editions (Eroica Dolomiti, Eroica California, NOVA Eroica events) directly via eroica.cc/en/events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://riojadeporte.larioja.org/federacion-riojana-de-ciclismo",
+        "category": "official",
+        "label": "Federación Riojana de Ciclismo — Club Eroica Hispania Directory Listing"
+      },
+      {
+        "url": "https://www.eroica.cc/en/events/",
+        "category": "official",
+        "label": "Official Eroica Current Event Calendar (No Hispania Edition Listed)"
+      },
+      {
+        "url": "https://www.haro.org/es/noticias/detalles/6140",
+        "category": "official",
+        "label": "Haro Municipal News — 2023 Edition Confirmation"
+      },
+      {
+        "url": "https://nuevecuatrouno.com/2023/05/09/las-cuatro-rutas-riojanas-de-la-fiesta-del-ciclismo-clasico/",
+        "category": "media",
+        "label": "2023 Route Announcement — Four Course Distances/Elevations"
+      },
+      {
+        "url": "https://harodigital.com/noticias-de-haro/haro-dice-no-a-la-eroica-en-2024-es-una-actividad-que-no-se-ha-consolidado/",
+        "category": "media",
+        "label": "Haro's 2024 Budget-Removal Rationale"
+      },
+      {
+        "url": "https://www.europapress.es/la-rioja/noticia-eroica-hispania-no-celebrara-2024-no-poder-ofrecer-evento-maximas-garantias-participantes-20240130101108.html",
+        "category": "media",
+        "label": "Organizer's 2024 Account of the Haro Break and Cancellation"
+      },
+      {
+        "url": "https://palco23.mundodeportivo.com/competiciones/eroica-hispania-busca-nueva-ubicacion-tras-romper-con-haro",
+        "category": "media",
+        "label": "Organizer's 2024 'Hibernating'/Relocation-Search Interview"
+      },
+      {
+        "url": "https://nuevecuatrouno.com/2021/10/16/eroica-hispania-haro-comunicado-federacion-riojana-ciclismo/",
+        "category": "media",
+        "label": "2021 Permit-Dispute Cancellation — Federation's Account"
+      },
+      {
+        "url": "https://www.radioharo.com/2021/10/15/el-ayuntamiento-de-haro-lamenta-la-suspension-de-eroica-hispania-por-motivos-ajenos-a-su-responsabilidad-y-estudia-emprender-acciones-legales-ante-las-posibles-responsabilidades/",
+        "category": "media",
+        "label": "2021 Permit-Dispute Cancellation — Haro Municipal Government's Account"
+      },
+      {
+        "url": "https://www.eroica.cc/en/heroic-bike-register-regulations/",
+        "category": "official",
+        "label": "Official Eroica 'Heroic Bike' Regulations (Pre-1987 Steel Bicycle Requirement)"
+      },
+      {
+        "url": "https://es.wikiloc.com/rutas-ciclismo/eroica-hispania-2023-recorrido-largo-haro-laguardia-labraza-logrono-najera-s-m-cogolla-sto-domingo-136886345",
+        "category": "community",
+        "label": "Participant Route Report, 2023 Long Course (Surface/Finish-Time Detail)"
+      },
+      {
+        "url": "https://www.eurosport.es/ciclismo/ivan-helguera-tambien-se-sube-a-la-bici_sto4775546/story.shtml",
+        "category": "media",
+        "label": "2015 First-Edition Report (Cenicero Founding)"
+      },
+      {
+        "url": "https://nuevecuatrouno.com/tema/haro/page/15/",
+        "category": "media",
+        "label": "2023 Field-Size Reporting (619 Entered)"
+      }
+    ],
     "youtube_data": {
-      "researched_at": "2026-03-05",
+      "researched_at": "2026-07-24",
       "search_query": "Eroica Hispania gran fondo cycling Haro",
-      "videos": [
-        {
-          "video_id": "NGRM0q4TXbs",
-          "title": "Eroica Dolomiti 2019",
-          "channel": "3 Zinnen Dolomites",
-          "view_count": 3583,
-          "upload_date": "20200209",
-          "duration_string": "6:33",
-          "description": "San Candido, in Val Pusteria, and the enchanting mountainous landscapes of the Dolomites, where cycling has been both history and legend, in the natural context of bike, fatigue, adventure and heroism.",
-          "tags": [
-            "Hochpustertal. Drei Zinnen",
-            "Alta Pusteria",
-            "Tre Cime",
-            "Sexten",
-            "Sesto",
-            "Innichen",
-            "San Candido",
-            "Toblach",
-            "Dobbiaco",
-            "Niederdorf",
-            "Villabassa",
-            "Prags",
-            "Braies",
-            "Eroica",
-            "Dolomiti",
-            "Vintage",
-            "bike"
-          ],
-          "url": "https://www.youtube.com/watch?v=NGRM0q4TXbs",
-          "curated": false
-        },
-        {
-          "video_id": "8rrc8-3Sb3w",
-          "title": "Eroica 2019 - Hexlox Does the Eroica Retro-Gravel Gran Fondo",
-          "channel": "Hexlox",
-          "view_count": 212,
-          "upload_date": "20200212",
-          "duration_string": "1:46",
-          "description": "Eroica Gaiole in Chianti - 2019\n\nWhat better way to chase away the winter blues than to watch this delightful video about Hexlox’s very own CEO, Marcus, retro-adventures In Tuscany recently.\n\nJuggling their smartphones, a glass of wine (or two) and lots of ice cream, Marcus and 2 industry partners took part in the epic Eroica, a +200 km ride through the Tuscan Hills.  \n\nThis legendary ride, the full name being Eroica Gaiole in Chianti, covers 209 km through the heart of the Terre di Siena, crossing the Chianti, the Crete Senesi, and the Val d’Orcia, completing a journey into the artistic essence of the legendary Tuscan countryside. \n\nSetting off in the pitch-black morning with his crew, Marcus covered over 3000m altitude difference and finished super hungry but with a big smile. The average ride is about 15 hrs and many riders finish well after 10 pm!  \n\nThe riders must ride on period-correct, vintage steel bikes which of course makes it both harder and more fun. A big part of the allure of this unforgettable adventure lies in the Strade Bianchi - the dusty unpaved white roads - that the riders have to traverse using no modern equipment like carbon frames or disk brakes.\n\nL'Eroica was born in 1997 in Gaiole in Chianti, a small village in the province of Siena, where creator Giancarlo Brocci, together with 92 hunters of “feelings and emotions” - as he called them - started the first edition of a magical cycling event; an event combining challenging routes, magnificent landscapes and unforgettable refreshments in a unique way.",
-          "tags": [
-            "Bike",
-            "bike lock",
-            "lock",
-            "smart lock",
-            "bike accessories",
-            "best bike lock",
-            "top bike lock",
-            "keyless bike lock",
-            "cycle lock",
-            "bike parts",
-            "best bicycle lock",
-            "bike security",
-            "mtb",
-            "biking",
-            "mountain bike",
-            "best bike lock 2020",
-            "bike lock review",
-            "most secure lock",
-            "best lock",
-            "cycling",
-            "best",
-            "BikeSecurity",
-            "Saddle Lock",
-            "Bike Saddle",
-            "Bike Wheel",
-            "Bike Theft",
-            "Saddle Theft",
-            "Wheel Theft",
-            "Bike Safety",
-            "Bicycle",
-            "Wheel lock for bike",
-            "Bike Wheel Lock",
-            "Thru Axel",
-            "Bike Seat Lock",
-            "Bicycle Seat Lock"
-          ],
-          "url": "https://www.youtube.com/watch?v=8rrc8-3Sb3w",
-          "curated": false
-        },
-        {
-          "video_id": "puMRs2NNTKc",
-          "title": "EROICA: IL PERCORSO LUNGO.",
-          "channel": "Filippo Nati Poltri",
-          "view_count": 4845,
-          "upload_date": "20220628",
-          "duration_string": "12:09",
-          "description": "L'Eroica di Gaiole, la ciclostorica per eccellenza. Qui, nella XX edizione del 2016, mi ritovai a pedalare la strada più lunga. Ecco la mia soggettiva, un POV, come si dice oggi.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=puMRs2NNTKc",
-          "transcript": "[Music]\nso\ndo\n[Applause]\nbye\nyou",
-          "curated": false
-        },
-        {
-          "video_id": "yu4UPFJYyd8",
-          "title": "La Eroica",
-          "channel": "Havana Club Rum",
-          "view_count": 267,
-          "upload_date": "20200401",
-          "duration_string": "1:22",
-          "description": "Cocktail created by Carina Soto Velasquez  with Havana Club Professional Edition C.\n\" Asbel Morales is a man of traditions, his incredible knowledge and his vision was a big inspiration to me. Is a short drink that highlights the gold color of Edition C, is elegant and classic like the provenance of the rum \"",
-          "tags": [
-            "Havana Club",
-            "Professional Edition",
-            "Edition C",
-            "La Eroica"
-          ],
-          "url": "https://www.youtube.com/watch?v=yu4UPFJYyd8",
-          "transcript": "[Music]\nmy name is Karina so Tom I'm one of the\nfounders of quixotic projects and we are\nin Lemuria Celeste our third venue that\nopened in 2013 for the addition see\nhighball the first thing we're gonna do\nis squeeze 20 MLS of lime juice then\nwe're gonna add 20 ml of velvet falernum\nadd 25 MLS of carpenter Bianco and we're\ngonna have 30 ml of efficiency as the\nbody of our cartel on top with 60 ml of\nsoda water\nice and Willow squeeze a lime twist I\nput it in here is our addition see hi",
-          "curated": false
-        }
-      ],
-      "quotes": []
+      "videos": [],
+      "quotes": [],
+      "purge_note": "WAVE 6 (2026-07-24): purged all 4 prior videos — none showed Eroica Hispania. They covered Eroica Dolomiti (Italy, a different Eroica-family event), Eroica Gaiole in Chianti (the original Tuscan Eroica, also a different event), and an unrelated Havana Club rum cocktail video that only shared the word 'Eroica' in its title. No genuine Eroica Hispania footage was found in this pass."
+    },
+    "catalog_flags": {
+      "status_note": "Corrected this wave (2026-07-24): the prior profile's 2026 date and 130.4km/2000m vitals had no supporting source and were replaced with the documented last-edition (Haro, June 2023) course data — a data-quality failure on the prior version of this profile, not a weakness of the event itself; terrain.surface corrected from 'Paved roads' to mixed asphalt/gravel; fondo_rating.road_surface raised 1->5 and distance/climbing raised 3->4 each to match verified figures (see fondo_rating.scoring_notes); all 4 prior youtube_data videos purged as mismatched (Eroica Dolomiti, Eroica Gaiole in Chianti, and an unrelated rum-cocktail video — none showed this event). Flagging for a human call on whether to keep this as an active-but-dormant entry (current treatment) or reclassify as defunct if no 2027 edition surfaces — the organizer's 2024 statements left the door open but no revival has occurred as of this review.",
+      "ruled": "2026-07-24 editorial wave 6 batch A"
     },
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.eldiario.es/la-rioja/haro-rechaza-la-celebracion-de-la-eroica-hispania-y-la-fiesta-del-ciclismo-clasico-tendra-que-esperar-a-2025_1_11207116.html",
-      "notes": "2024 was explicitly not held and only a vague 2025 delay is mentioned; no clear evidence of a 2025–2026 edition or formal discontinuation.; last edition evidenced: 2023; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.eroica.cc/en/events/",
+      "notes": "DORMANT, NOT CONFIRMED DEFUNCT (2026-07-24): last documented edition was June 4, 2023 in Haro (~619 entered). Haro withdrew the event's budget ahead of 2024, citing that it 'hadn't consolidated'; the organizer says Haro's ~6-month delayed negative response left no time to redesign four mixed-surface routes and secure permits elsewhere, and described 'hibernating' the event while searching for a new host, hoping to return in 2025. No return has materialized through 2025 or 2026, and the event does not appear on Eroica's current official event calendar. However, no formal discontinuation announcement was found either, and Club Eroica Hispania remains listed by Riojan cycling authorities. 'unknown' (kept from prior review) remains the closest fit of the existing status enum — do not present this as 'active' (no current listing anywhere) or as confirmed 'defunct' (no shutdown announcement exists)."
     }
   }
 }

@@ -1,23 +1,23 @@
 {
   "race": {
-    "name": "Gran Fondo & Ultra Raid Samoëns",
+    "name": "Gran Fondo Samoëns – Montagnes du Giffre",
     "slug": "gf-samoens-ultra-raid",
-    "display_name": "Gran Fondo & Ultra Raid Samoëns",
+    "display_name": "Gran Fondo Samoëns – Montagnes du Giffre",
     "tagline": "",
     "vitals": {
-      "distance_km": 173.8,
-      "distance_mi": 108.0,
-      "elevation_m": 5000,
-      "elevation_ft": 16404.0,
+      "distance_km": 285.0,
+      "distance_mi": 177.1,
+      "elevation_m": 8100,
+      "elevation_ft": 26574.8,
       "location": "Samoëns, Haute-Savoie, France",
       "location_badge": "Samoëns, France",
       "country": "France",
-      "date": "2026: June 5-7",
-      "date_specific": "2026: June 5-7",
-      "field_size": "Unknown",
+      "date": "2026: June 6-7 (two-day combined Gran Fondo; single-day Sat/Sun entries also available)",
+      "date_specific": "2026: June 6-7",
+      "field_size": "Unknown (no consolidated organizer total published)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://www.granfondo-samoens.com/registrations",
+      "entry_fee": "Two-day Gran Fondo: €115/€125/€140; one-day Gran Fondo: €60/€70/€80 (2026 pricing, tiered by registration date)",
       "feed_zones": "Unknown",
       "cutoff_time": "Unknown",
       "lat": null,
@@ -31,7 +31,7 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Paved mountain roads, partially open to normal traffic with selected closures",
       "technical_rating": 1,
       "features": []
     },
@@ -70,61 +70,99 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This profile describes only the road event, Gran Fondo Samoëns – Montagnes du Giffre; it previously carried the tourism-office umbrella name 'Gran Fondo & Ultra Raid Samoëns,' which also covers a separate three-day mountain-bike stage competition (Ultra Raid Samoëns) with its own courses and results — see eligibility.notes for the correction. The 2026 edition was the inaugural running of both. The road Gran Fondo is a two-day stage cyclosportive with a combined general classification: Saturday runs Samoëns through Joux Plane, Joux Verte/Avoriaz, and Col de la Ramaz to a finish at Le Praz-de-Lys (130 km/3,800 m); Sunday runs Samoëns through Les Esserts to a summit finish at Samoëns 1600 (155 km/4,300 m). Riders may enter either day alone or both days for the two-day GC (285 km/8,100 m combined). A shorter Medio Fondo option follows the same two-day structure at reduced distance (85 km/3,000 m Saturday, 112 km/3,000 m Sunday). All routes are paved mountain roads, partially open to normal traffic with selected closures — there is no gravel or MTB component in the Gran Fondo itself.",
+      "signature_challenge": "The two-day combined general classification — Saturday's Joux Plane/Ramaz stage followed by Sunday's summit finish at Samoëns 1600, with no rest day between them.",
+      "suffering_zones": [
+        "Joux Plane — a genuine Tour de France climb, tackled on Saturday's stage",
+        "Col de la Ramaz — the second major pass on Saturday, arriving after Joux Plane and Joux Verte/Avoriaz have already taken their toll",
+        "Les Esserts — the approach climb on Sunday's stage, the day after Saturday's full effort",
+        "Samoëns 1600 — the Sunday summit finish, and the final test for anyone racing the two-day combined classification"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Accommodation packages available through event organizers. Lodging options can be booked through the official Gran Fondo & Ultra Raid website.",
+      "lodging_strategy": "Accommodation packages available through event organizers. Lodging options can be booked through the official Gran Fondo Samoëns website.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.granfondo-samoens.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2026,
+      "origin_story": "Inaugural edition in 2026, organized under the 'Baroudeurs des Alpes' weekend brand by ULTRA RAID ASBL (a Belgian nonprofit) with the Samoëns Office de Tourisme as local host. Shares its weekend with the separate Ultra Raid Samoëns MTB stage race — a different competition with its own courses, registrations, and results, though the two share overlapping organizing infrastructure and are not confirmed to have entirely distinct organizers.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Inaugural Road Event, Bundled Under a Confusing Umbrella Name",
+      "summary": "Gran Fondo Samoëns is a newly launched (2026) competitive road cyclosportive climbing Tour de France heritage terrain — Joux Plane, Col de la Ramaz — over a two-day format with a combined general classification. This profile's prior name, 'Gran Fondo & Ultra Raid Samoëns,' was the tourism office's umbrella branding for a shared weekend that also includes a separate three-day mountain-bike stage competition (Ultra Raid Samoëns), with different courses, surfaces (road vs. technical MTB trail), registrations, and results. Bundling them under one name and one set of vitals, as the prior version of this profile did, misrepresented both events.",
+      "strengths": [
+        "Tour de France climbing heritage — Joux Plane and Col de la Ramaz are well-known Alpine passes regularly used by the Tour de France and Critérium du Dauphiné",
+        "Flexible entry structure: riders can do either day alone or both days for the combined GC, across full Gran Fondo or shorter Medio Fondo distances",
+        "All-paved road course with no MTB/gravel conflation, despite the event's confusing shared branding with the separate Ultra Raid",
+        "Promoted locally through the Samoëns Office de Tourisme, which hosts the shared festival weekend"
+      ],
+      "weaknesses": [
+        "Brand new as of 2026 — this is the road event's first edition, with no track record to evaluate consistency or field growth",
+        "No consolidated participation total is published; partial Saturday-stage results show a partial ranked field, but this excludes the Medio, ride-libre, and possibly Sunday-only entrants, so no usable total figure exists",
+        "The two-day stage format with a combined GC sits closer to a multi-stage race than a standard single-day gran fondo — worth knowing before entering if you expected a one-day event",
+        "Substantial portions of the course remain open to normal traffic with normal road-code obligations rather than fully closed to cars",
+        "The event's own branding history (shared umbrella listing with a separate MTB race under the same weekend name) has caused real confusion, including in this database, about what the road event actually is"
+      ],
+      "bottom_line": "A brand-new two-day road cyclosportive with real Tour de France climbs — just don't confuse it with the separate MTB Ultra Raid event bundled with it under the tourism-office weekend listing."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "A well-organized alpine Gran Fondo combining legendary Tour de France passes with festival atmosphere, ideal for riders seeking challenging mountain cycling in an accessible, community-focused format.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Genuine 2026-debut two-day road cyclosportive over Joux Plane and Col de la Ramaz — not to be confused with the separate MTB Ultra Raid sharing its weekend.",
+      "should_you_race": "Yes if you want real Tour de France climbing in a flexible one- or two-day road format and don't mind being a first-edition rider with no track record to lean on.",
+      "alternatives": "For a single-day version of similar Haute-Savoie Tour de France climbs, look at other regional cyclosportives in the area. If you actually want the multi-day off-road format, Ultra Raid Samoëns is the separate MTB stage race under the same Samoëns weekend umbrella — it is not part of this road profile."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondo-samoens.com/",
+        "category": "official",
+        "label": "Official Gran Fondo Samoëns Site"
+      },
+      {
+        "url": "https://www.granfondo-samoens.com/gran-fondo-item",
+        "category": "official",
+        "label": "Official Gran Fondo Course Page (Saturday/Sunday Stages)"
+      },
+      {
+        "url": "https://www.granfondo-samoens.com/registrations",
+        "category": "official",
+        "label": "Official Registration and 2026 Pricing"
+      },
+      {
+        "url": "https://www.samoens.com/gran-fondo-ultra-raid/",
+        "category": "official",
+        "label": "Samoëns Tourism Office — Umbrella Weekend Listing (Shows Both Events Split Out)"
+      },
+      {
+        "url": "https://www.baroudeursdesalpes.com/les-courses",
+        "category": "official",
+        "label": "Baroudeurs des Alpes — Event Hub Distinguishing Gran Fondo from Ultra Raid"
+      },
+      {
+        "url": "https://www.velo-ouest.com/saison-2026/resultats-2026/cyclosportive-granfondo-samoens.html",
+        "category": "reference",
+        "label": "2026 Saturday-Stage Results"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo & Ultra Raid Samoëns gran fondo cycling Samoëns",
-      "videos": [
-        {
-          "video_id": "V1PmR3N2bo4",
-          "title": "Vidéo 1 Reco XMB Les Monts d'Aspremont",
-          "channel": "JLI06 SLV",
-          "view_count": 500,
-          "upload_date": "20150214",
-          "duration_string": "7:45",
-          "description": "Reco course VTT XMB Les Monts d'Aspremont.\nVenez nombreux découvrir les traces d'un parcours ouvert par certains membres du club de l'AS Var Mer.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=V1PmR3N2bo4",
-          "curated": false
-        }
-      ],
+      "videos": [],
       "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.samoens.com/gran-fondo-ultra-raid/",
-      "notes": "2026 edition in Samoëns (Gran Fondo road + Ultra Raid MTB) is announced for June 5-7 with registration/info pages live.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondo-samoens.com/",
+      "notes": "IDENTITY/TAXONOMY CORRECTION (2026-07-24): this profile was previously named 'Gran Fondo & Ultra Raid Samoëns' with conflated vitals (173.8km/5,000m across 'June 5-7') that matched neither the road Gran Fondo (max verified: 285km/8,100m two-day combined, or 155km/4,300m one-day) nor the Ultra Raid MTB race (up to 175km/7,200m). The content now describes only Gran Fondo Samoëns – Montagnes du Giffre, the road event (confirmed active, 2026 was its inaugural edition, June 6-7). Renamed race.name/display_name to match the organizer's own event name; slug left unchanged (gf-samoens-ultra-raid) to avoid breaking existing URLs. The 'Ultra Raid Samoëns' half of the old name is a separate three-day MTB stage competition (different courses, registrations, and results — organizing relationship overlaps but is not confirmed to be fully distinct) that does not belong in this road-cycling profile — flagging for a human call on whether Ultra Raid Samoëns warrants its own separate off-road-database entry elsewhere, since it is out of scope for Roadie Labs."
+    },
+    "catalog_flags": {
+      "status_note": "Taxonomy flag (fondo_rating.discipline left as 'gran_fondo' per policy, enum not changed): the road Gran Fondo Samoëns's own flagship format is a two-day stage cyclosportive with a combined general classification, which sits closer to 'multi_stage' than a standard single-day gran fondo. Recommend a human review whether this should be recategorized to multi_stage discipline given the two-day combined-GC structure is the organizer's primary framing (single-day entry is offered but secondary). Identity correction also applied — see eligibility.notes for the full name/vitals conflation and correction.",
+      "ruled": "2026-07-24 editorial wave 6 (batch D)"
     }
   }
 }

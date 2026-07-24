@@ -5,16 +5,16 @@
     "display_name": "GFNY Zapopan",
     "tagline": "",
     "vitals": {
-      "distance_km": 146.4,
-      "distance_mi": 91.0,
-      "elevation_m": 1234,
-      "elevation_ft": 4049.0,
+      "distance_km": 125.0,
+      "distance_mi": 77.7,
+      "elevation_m": null,
+      "elevation_ft": 0.0,
       "location": "Zapopan (Guadalajara), Jalisco, Mexico",
       "location_badge": "Zapopan (Guadalajara), Mexico",
       "country": "Mexico",
-      "date": "2026: May 3",
-      "date_specific": "2026: May 3",
-      "field_size": "Not specified",
+      "date": "Last held: May 4, 2025 — no 2026 edition confirmed",
+      "date_specific": "Last held: May 4, 2025 — no 2026 edition confirmed",
+      "field_size": "2,074 registered participants (2025)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,9 @@
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long: 125 km (2025, post-race figure; a 62 km medium course also runs)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -31,13 +33,13 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Paved urban roads/avenues",
       "technical_rating": 1,
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 3,
+      "distance": 3,
+      "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 3,
       "organization": 4,
@@ -51,12 +53,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 66,
+      "overall_score": 63,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): distance 4->3 to match the verified last-held (2025) course of 125km, which falls in the 120-160km rubric band, not 160-200km; the prior roughly 146km/1,234m figures came from the pre-race 2022 announcement, not what was ever actually run (the actual 2022 race was 129.3km/875m per GFNY's own recap, and the course has shifted by a few km each documented edition since: 126km in 2023, 125km in 2025). climbing 3->2 because official course material describes a fast, peloton-oriented route with maximum grades of only ~3% and no named climbs identified — no 2025 elevation-gain total was found in the reviewed official materials (elevation_m set to null rather than carrying forward the unsupported 1,234m), so 'gentle' rather than 'rolling' is the better-supported estimate. overall_score recalculated 66->63 per formula; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +72,111 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Start/finish at Parque de las Niñas y los Niños in Zapopan. The route runs along Laureles, Ávila Camacho, Glorieta de La Normal, Circunvalación Álvarez del Castillo, López Mateos, Camino al ITESO, Periférico, and Guadalupe, with long-course riders completing a second lap to reach the full distance. This is a paved, urban/metropolitan course through Zapopan and Guadalajara's road network: GFNY's own course material describes it as fast and peloton-oriented, with maximum gradients around 3% and no named climbs identified in official materials. The city sits at roughly 1,680 m above sea level, which GFNY's own course material says 'adds an extra challenge' for riders arriving from lower elevations. Course distance has moved by a few kilometers each documented edition — 129.3 km in 2022, 126 km in 2023, 125 km in 2025.",
+      "signature_challenge": "A fast, largely flat two-lap urban gran fondo at 1,680 m altitude, where moderate altitude and peloton dynamics matter more than sustained climbing.",
+      "suffering_zones": [
+        "Periférico and Circunvalación Álvarez del Castillo — the busier metropolitan arterials mid-route",
+        "The second lap for long-course riders, who cover the loop twice to reach the full distance"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Multiple hotel options available in the Guadalajara/Zapopan area, including Hard Rock Hotel Guadalajara (Avenida Vallarta, approximately 20 minutes from downtown), Fiesta Inn Guadalajara Poniente (Anillo Periférico Manuel González Morín), and other business-class hotels. Downtown Guadalajara and nearby Tlaquepaque offer additional lodging and cultural experiences.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://zapopan.gfny.com/?lang=en"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "Founded 2022 as 'Ford GFNY Zapopan-Guadalajara' (Ford as title sponsor), part of the GFNY Global Endurance Sports Series. By 2025 the public name had simplified to 'GFNY Zapopan.' Ran 2022, 2023, and 2025 — no recorded 2024 edition; the 2025 edition is documented as the third.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Currently Unconfirmed GFNY Chapter",
+      "summary": "GFNY Zapopan is a GFNY World Series race in Zapopan/Guadalajara, Jalisco, that ran three editions (2022, 2023, 2025) — 2,074 riders participated in 2025. There is no confirmed 2026 edition: GFNY's own global race finder omits Zapopan, the official site still displays 2025 content and 'no tickets available,' and the only 2026 listing found comes from a third-party site that now describes the event in the past tense rather than GFNY's own channels. The course is a fast, low-gradient urban course at 1,680m altitude with minimal climbing — a very different profile than the prior figures suggested, which came from the pre-race 2022 announcement (roughly 146km/1,234m), not what the race has ever actually run in any documented edition.",
+      "strengths": [
+        "Three-edition history (2022, 2023, 2025) as part of the GFNY World Series",
+        "2,074 riders participated in 2025, a sizeable field for a Latin American GFNY chapter",
+        "A fast urban course suited to peloton racing and drafting, if that's what a rider wants"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition — GFNY's own global race finder doesn't list it, and the only 2026 listing found traces to a third-party site that now reads as past-tense/unconfirmed",
+        "The event skipped 2024 entirely (results jump from 2023 straight to 2025) and currently has no confirmed next edition — a real continuity problem beyond the year-to-year distance shifts (129.3km in 2022, 126km in 2023, 125km in 2025)",
+        "No 2025 elevation-gain total was found in the reviewed official materials — riders can't verify how flat the course actually is beyond GFNY's own 'max ~3% grade' characterization",
+        "Minimal climbing (max ~3% grades per official course materials, no named climbs identified) — a real limitation for riders seeking the mountain-focused GFNY experience other chapters offer",
+        "GFNY currently publishes no event-specific price or open registration for this race"
+      ],
+      "bottom_line": "A previously well-attended GFNY chapter with a fast, flat urban course — but don't book travel around a 2026 edition until GFNY's own official channels confirm one exists."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "A well-organized, fast-paced gran fondo in Mexico's cultural heartland that prioritizes peloton racing and festive atmosphere over technical challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "63/100",
+      "one_liner": "A fast, flat urban GFNY chapter in Jalisco with a real track record but no confirmed 2026 date.",
+      "should_you_race": "Only once a 2026 (or later) edition is confirmed directly on GFNY's official channels — as of this review, none is.",
+      "alternatives": "For a climbing-focused GFNY Latin American race instead, check GFNY Chile or other mountain-course GFNY World Series chapters via gfny.com/race-finder."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY World Race Finder (No Zapopan Listing)"
+      },
+      {
+        "url": "https://zapopan.gfny.com/?lang=en",
+        "category": "official",
+        "label": "Official Zapopan Homepage (Stale 2025 Content)"
+      },
+      {
+        "url": "https://zapopan.gfny.com/results/?lang=en",
+        "category": "official",
+        "label": "Official Results Archive (2022, 2023, 2025 Only)"
+      },
+      {
+        "url": "https://gfny.com/gfny-mexico-adds-gfny-zapopan/",
+        "category": "official",
+        "label": "GFNY 2022 Founding Announcement (Ford GFNY Zapopan)"
+      },
+      {
+        "url": "https://gfny.com/ford-gfny-zapopan-guadalajara-rios-and-muniz-win/",
+        "category": "official",
+        "label": "GFNY 2022 Race Recap — Actual Course Run (129.3km/875m)"
+      },
+      {
+        "url": "https://www.zapopan.gob.mx/v3/noticias/mas-de-dos-mil-participantes-corrieron-el-gran-fondo-nueva-york-zapopan-de-ciclismo",
+        "category": "official",
+        "label": "Zapopan Municipal Government — 2025 Post-Race Report (Field Size, Distance)"
+      },
+      {
+        "url": "https://zapopan.gfny.com/course/?lang=en",
+        "category": "official",
+        "label": "Official Course Page (Altitude, Gradient Characterization)"
+      },
+      {
+        "url": "https://zapopan.gfny.com/rules/?lang=en",
+        "category": "official",
+        "label": "Official Rules — Competitive Long / Non-Competitive Medium Classification"
+      },
+      {
+        "url": "https://gfny.cc/iframe?id=237&lang=es-ES",
+        "category": "official",
+        "label": "Official Registration Iframe (2025 Event, No Tickets Available)"
+      },
+      {
+        "url": "https://battistrada.com/es/calendario-marchas-cicloturistas/edition/gfny-zapopan-2026/48128/",
+        "category": "other",
+        "label": "Third-Party 2026 Listing (Uncorroborated Date, Now Past-Tense Wording)"
+      },
+      {
+        "url": "https://www.zapopan.gob.mx/v3/noticias/zapopan-listo-para-la-tercera-edicion-del-gran-fondo-nueva-york",
+        "category": "official",
+        "label": "Zapopan Municipal Government — 2025 Pre-Race/Route Announcement (Third Edition)"
+      },
+      {
+        "url": "https://www.zapopan.gob.mx/v3/noticias/zapopan-anuncia-la-segunda-edicion-del-gran-fondo-nueva-york",
+        "category": "official",
+        "label": "Zapopan Municipal Government — 2023 Second-Edition Announcement (126km/63km)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Zapopan gran fondo cycling Zapopan (Guadalajara)",
@@ -171,11 +247,15 @@
       ],
       "quotes": []
     },
+    "catalog_flags": {
+      "status_note": "Corrected this wave (2026-07-24): the prior eligibility.notes claim that the official site listed a 2026 edition was checked directly and found incorrect — the site shows 2025 content ('2025 Champions,' no tickets available). Status changed from 'active' to 'unknown' since no 2026 (or later) edition is confirmed anywhere, but no formal cancellation exists either. vitals.distance_km/elevation_m were also wrong: 146.4km/1,234m was the ORIGINAL PRE-RACE 2022 announcement, never what was actually run in any edition. Flagging for a human call in case GFNY confirms a 2026+ date after this review.",
+      "ruled": "2026-07-24 editorial wave 6 batch A"
+    },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://zapopan.gfny.com/?lang=en",
-      "notes": "Official site lists the 2026 GFNY Zapopan edition, confirming the event is still running though specific date differs slightly from May 3.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "unknown",
+      "verified": "2026-07-24",
+      "source": "https://gfny.com/race-finder/",
+      "notes": "CORRECTED (2026-07-24): the prior source claim that the official site listed a 2026 edition was independently checked and found incorrect. GFNY's current global race finder does not list Zapopan; the official Zapopan homepage still shows 2025 content ('2025 Champions'); the official registration iframe identifies the event as '2025, May 4, 2025' with no tickets available; the official results page has 2025, 2023, and 2022 only. A third-party listing (Battistrada) shows a May 3, 2026 date but now describes it in the past tense and asks users to submit a future edition — not corroborated by GFNY. No official cancellation/closure announcement was found either, so 'unknown' (not 'active' or 'defunct') is the accurate call. Last confirmed edition: May 4, 2025."
     }
   }
 }

@@ -5,24 +5,46 @@
     "display_name": "Majka Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 117.5,
-      "distance_mi": 73.0,
-      "elevation_m": 1585,
-      "elevation_ft": 5200.0,
-      "location": "Krakow, Poland",
-      "location_badge": "Krakow, Poland",
+      "distance_km": 86.1,
+      "distance_mi": 53.5,
+      "elevation_m": 1510,
+      "elevation_ft": 4954.0,
+      "location": "Dobczyce, Lesser Poland (Małopolskie), Poland — near Kraków",
+      "location_badge": "Dobczyce, Poland",
       "country": "Poland",
-      "date": "2026: August TBD",
-      "date_specific": "2026: August TBD",
-      "field_size": null,
+      "date": "Revival announced, unscheduled — last held June 8-9, 2024",
+      "date_specific": "Revival announced, unscheduled — last held June 8-9, 2024",
+      "field_size": "500+ riders started the 2024 road races across all three distances combined (not confirmed per-distance)",
       "start_format": null,
-      "registration": "https://www.majkagranfondo.com",
-      "entry_fee": null,
-      "feed_zones": null,
+      "registration": null,
+      "entry_fee": "Not currently verifiable — 2024 rules reference a tiered payment schedule without stated amounts; the linked registration service has expired",
+      "feed_zones": "~km38 and ~km56 on the 2024 Gran Fondo course",
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Gran Fondo",
+          "distance_km": 86.1,
+          "distance_mi": 53.5,
+          "elevation_m": 1510,
+          "elevation_ft": 4954
+        },
+        {
+          "name": "Medio Fondo",
+          "distance_km": 68.1,
+          "distance_mi": 42.3,
+          "elevation_m": 1180,
+          "elevation_ft": 3871
+        },
+        {
+          "name": "Adventure",
+          "distance_km": 48.5,
+          "distance_mi": 30.1,
+          "elevation_m": 825,
+          "elevation_ft": 2707
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,11 +92,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A road cycling gran fondo, paired with an individual time trial, created and hosted by Polish pro Rafał Majka. The 2024 edition (the last one held) started and finished at Dobczyce town hall/sports complex, routing through the Pogórze Wielickie foothills via Wiśniowa, Raciechowice, and Zegartowice — Majka's home village — with the Gran Fondo and Medio Fondo splitting at km 52.3. Earlier editions (2022-2023) were based around nearby Myślenice with a longer, 105km course that added a 34km loop, including a repeated section; that layout is obsolete relative to the latest completed 2024 Dobczyce course. No named or categorized climbs are published for the Gran Fondo route itself — a separate, organizer-linked 16km time trial route (not the Sunday road race) names Brzezowa Up (2.68km @4.9%) and Dębowa Climb (1.48km @7.3%). No primary source documents guaranteed Tatra Mountain views on the 2024 route.",
+      "signature_challenge": "The Pogórze Wielickie foothill rollers between Dobczyce and Zegartowice — no single named climb defines the 2024 course, just sustained rolling terrain accumulating to 1,510m over 86km.",
       "suffering_zones": [
-        "Foothills Accumulator: Endless rollers over first 42km from Dobczyce sap legs with steady 5200ft total. Tatra views distract but elevation bites accumulate.",
-        "Loop Repeat Grind: GranFondo's double km32-42 section near Myslenice doubles the moderate climbs. Heat in August foothills turns it into a sufferfest."
+        "Dobczyce-to-Wiśniowa foothill rollers — the course's main character, steady accumulation rather than one defined climb",
+        "Raciechowice-Zegartowice sector — routes past Majka's home village, deep into the Pogórze Wielickie terrain",
+        "km 52.3 Gran Fondo/Medio Fondo split — Gran Fondo riders continue on the long branch past this point with feed stations at roughly km38 and km56"
       ]
     },
     "logistics": {
@@ -82,33 +105,98 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://www.majkagranfondo.com"
+      "official_site": "https://www.majkagranfondo.com (stale as of this research — still displays 2024 dates, routes, and rules)"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "Created by Polish road pro Rafał Majka as creator/host/ambassador, organized by G&G Promotion (Grzegorz Golonko). UCI called the 2022 running a new, first-edition gran fondo. Distinct from the older, separate 'Małopolska Majka Days' event (running since at least 2018, presented from 2023 as the second race in a two-event Małopolska series alongside Majka Gran Fondo) — do not conflate their founding years or editions.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Inactive — Revival Announced, No Date Set",
+      "summary": "Majka Gran Fondo last ran June 8-9, 2024, based in Dobczyce near Kraków. It is not on the current UCI Gran Fondo World Series calendar, and the event's published claim that it would return to the UCI series in 2025 did not materialize — the official site is still displaying stale 2024 content. It isn't dead, though: in March 2026 the Małopolska regional government reported discussions with Rafał Majka about developing the event and said organizers intended to hold another edition, but supplied no year, date, course, or registration. That leaves the race in limbo: direct Majka involvement and three completed editions (2022-2024), but nothing bookable.",
+      "strengths": [
+        "Athlete-eponymous event created and hosted by Rafał Majka, with a three-edition track record (2022-2024)",
+        "The 2024 edition had a documented foothill course through the Pogórze Wielickie near Majka's home village, with three distance options (Gran Fondo/Medio Fondo/Adventure) for different ability levels",
+        "Active regional government interest in a revival as of March 2026 — this isn't a fully abandoned event"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 (or any future) edition — no date, course, or registration published as of this research",
+        "The event's own published 2025 UCI-series-return claim did not materialize, so a stated revival intent shouldn't be taken as a booking guarantee",
+        "The official site is stale, still showing 2024 information with no visible update",
+        "Entry fee is unverifiable for even the last completed edition — the linked registration service has expired",
+        "Published 2024 route information gives total ascent but no climb-by-climb breakdown for the Gran Fondo course"
+      ],
+      "bottom_line": "Don't book travel around this yet. There's an event with a real track record and a stated intent to return, but no date, course, or registration exists as of this research — wait for the organizer to publish a dated registration page before planning travel, and treat any advertised date as unconfirmed until it appears alongside actual registration."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "UCI qualifier in Polish foothills delivers solid climbing value near Krakow.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Rafał Majka's Polish foothills gran fondo — real track record, revival talks underway, but no 2026 date yet.",
+      "should_you_race": "Not yet bookable — no confirmed next edition. Wait for majkagranfondo.com to publish a dated registration page before planning travel; the March 2026 revival talk is not a scheduled event.",
+      "alternatives": "For a currently active UCI Gran Fondo World Series event in Poland, check the series calendar directly. For the related but distinct 'Małopolska Majka Days' event, note it has separate editions and history — don't assume it shares Majka Gran Fondo's schedule."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://majkagranfondo.com/wyniki",
+        "category": "official",
+        "label": "Official Results Archive (Stops at 2024)"
+      },
+      {
+        "url": "https://www.majkagranfondo.com/trasy-uci-gran-fondo",
+        "category": "official",
+        "label": "Official Route Page — 2024 Distances/Elevations for All Three Courses"
+      },
+      {
+        "url": "https://www.malopolska.pl/aktualnosci/sport/rozmowy-o-rozwoju-majka-grand-fondo",
+        "category": "official",
+        "label": "Małopolska Regional Government — March 2026 Revival-Talks Announcement"
+      },
+      {
+        "url": "https://www.majkagranfondo.com/regulamin",
+        "category": "official",
+        "label": "Official 2024 Regulations — Organizer Identity, Bike Rules, Fee Schedule Reference"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/rescheduled-majka-gran-fondo-no-longer-part-of-2024-uci-gran-fondo-world-series/",
+        "category": "reference",
+        "label": "UCI — Original 2024 Rescheduling / Series-Exit Notice"
+      },
+      {
+        "url": "https://www.malopolska.pl/aktualnosci/sport/majka-gran-fondo-2024",
+        "category": "media",
+        "label": "Małopolska Post-Event Recap — 2024 Route Region, Field Size"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Current Calendar (Majka Gran Fondo Absent)"
+      },
+      {
+        "url": "https://www.majkagranfondo.com/co-gdzie-kiedy",
+        "category": "official",
+        "label": "Official Race Logistics — Course Split Point, Feed Stations"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/new-majka-granfondo-on-beautiful-scenic-but-challenging-roads/",
+        "category": "reference",
+        "label": "UCI — 2022 First-Edition Report"
+      },
+      {
+        "url": "https://www.majkagranfondo.com/jak-najwiecej-flow-6",
+        "category": "official",
+        "label": "Official Organizer Page — Rafał Majka's Role, G&G Promotion"
+      }
+    ],
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.majkagranfondo.com/en",
-      "notes": "The event is announced to return in 2025; the on-file August 2026 date conflicts with the found June 2024 edition details and a Krakow-area location.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "status": "inactive",
+      "verified": "2026-07-24",
+      "source": "https://www.malopolska.pl/aktualnosci/sport/rozmowy-o-rozwoju-majka-grand-fondo",
+      "notes": "CORRECTED (2026-07-24, wave 6): last completed edition June 8-9, 2024 in Dobczyce (not Krakow proper, and not August — on-file 'August TBD 2026' date is unsupported; no August edition has ever been held). Not on the current UCI Gran Fondo World Series calendar. A March 2026 Małopolska regional government announcement reports discussions with Rafał Majka about developing the event and states organizers intend to hold another edition, but supplies no date, course, or registration — status reflects a real but unscheduled revival, not a confirmed 2026 event. No formal cancellation found, so 'inactive' rather than 'defunct.'"
+    },
+    "catalog_flags": {
+      "status_note": "CORRECTIONS this wave: location changed from 'Krakow, Poland' to 'Dobczyce, Lesser Poland (near Kraków)' — Dobczyce is the actual host town, Krakow only a broad regional locator. founded changed from 2018 to 2022 — 2018 belongs to a separate, related event ('Małopolska Majka Days'), not to Majka Gran Fondo itself; do not conflate the two when researching further. distance/elevation changed from 117.5km/1,585m to 86.1km/1,510m (2024's verified Gran Fondo figures — the on-file numbers matched no documented edition). date changed from 'August TBD 2026' (unsupported; no August edition ever held) to a revival-announced/unscheduled status. eligibility.status changed from 'active' to 'inactive' pending a confirmed next edition.",
+      "ruled": "2026-07-24 editorial wave 6"
     }
   }
 }

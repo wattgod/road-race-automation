@@ -1,35 +1,33 @@
 {
   "race": {
-    "name": "Velothon Berlin",
+    "name": "VeloCity Berlin",
     "slug": "velothon-berlin",
-    "display_name": "Velothon Berlin",
+    "display_name": "VeloCity Berlin",
     "tagline": "",
     "vitals": {
-      "distance_km": 159.3,
-      "distance_mi": 99.0,
-      "elevation_m": 610,
-      "elevation_ft": 2000.0,
+      "distance_km": 100.0,
+      "distance_mi": 62.1,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Berlin, Germany",
       "location_badge": "Berlin, Germany",
       "country": "Germany",
-      "date": "2024: July 28",
-      "date_specific": "2024: July 28",
-      "field_size": null,
-      "start_format": null,
+      "date": "Last held: August 4, 2024; paused for 2025 and 2026",
+      "date_specific": "2024: August 4 (last held; 2025-2026 editions officially paused)",
+      "field_size": "Not specified",
+      "start_format": "Mass start, Straße des 17. Juni (between Victory Column and Brandenburg Gate)",
       "registration": null,
       "entry_fee": null,
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "Long course (2024): minimum speed 25 km/h, 3:45 time limit",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": ["100 km long course (2024)", "60 km short course (2024)"]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "Early summer conditions ideal for record-breaking speeds with comfortable temperatures and minimal weather interference.",
-      "challenges": [
-        "Precipitation: Low (15-20%)"
-      ]
+      "description": "Early August in Berlin: typically warm, dry summer conditions.",
+      "challenges": []
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -38,7 +36,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 2,
       "climbing": 1,
       "descent_technicality": 1,
       "climate_risk": 4,
@@ -53,12 +51,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 66,
+      "overall_score": 63,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): distance corrected 4->2 after research found the previously-filed 159.3km figure did not match either 2024 VeloCity Berlin course option (100km long / 60km short, per the organizer's own 2024 registration page) — rubric band 2 ('Moderate: 80-120km'), not band 4 ('Long: 160-200km'). Score recalculated: 66 -> 63."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -72,67 +70,110 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Lightning-fast urban circuit showcasing Berlin's landmarks on completely closed roads, prioritizing pure speed and spectator energy over climbing challenges.",
-      "signature_challenge": "Sustaining 45+ kph average speeds for 99 miles on flat roads past Reichstag, East Side Gallery, and Victory Column with 13,000 competitors.",
+      "character": "The last confirmed edition (August 4, 2024) ran a flat, closed-road course starting and finishing on Straße des 17. Juni between the Victory Column and Brandenburg Gate, with a 100 km long course and a 60 km short course. The route headed south out of central Berlin through Kleinmachnow, Stahnsdorf, Ahrensdorf and Großbeeren before returning — the organizer itself describes this Brandenburg-area section as very flat. No organizer-published elevation figure could be found for this or any recent edition in this research; treat the course as flat rather than assigning it a specific climbing total.",
+      "signature_challenge": "The long course's 25 km/h minimum-speed requirement and 3:45 time limit (2024 rules) — a genuinely fast-paced format rather than a climbing test.",
       "suffering_zones": [
-        "Final Sprint - Straße des 17. Juni: Monumental 2km finishing straight past Tiergarten demands explosive power after hours of high-speed pacing.",
-        "Brandenburg Gate Circuits: Repeated passages through Berlin's heart build fatigue while dodging crowds and maintaining 45+ kph pace.",
-        "Extended Loops (Longer Distances): Outskirts detours to Brandenburg countryside add endurance test before returning to urban sprint frenzy."
+        "The Kleinmachnow-Stahnsdorf-Ahrensdorf-Großbeeren loop south of the city — flat, exposed mileage where the minimum-speed rule does the work a climb would do elsewhere",
+        "The Straße des 17. Juni finish between the Victory Column and Brandenburg Gate — Berlin's landmark closing stretch"
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Abundant hotels near Tiergarten and Brandenburg Gate. Book early for race weekend in tourist-heavy Berlin.",
-      "transport": "Central Berlin start/finish at Tiergarten/Brandenburg Gate with full road closures. Multiple distances (60km, 100km, 120km, 180km) accommodate all levels. Team registration available.",
+      "lodging_strategy": "Abundant hotels near Tiergarten and Brandenburg Gate. Book early if/when the event resumes in tourist-heavy Berlin.",
+      "transport": "Central Berlin start/finish at Straße des 17. Juni (Victory Column/Brandenburg Gate) with full road closures, when the event runs.",
       "food": "",
       "official_site": "https://velocity.berlin/en/"
     },
     "history": {
-      "founded": 2011,
-      "origin_story": "Evolved from ProRace Berlin (2011) to UCI Europe Tour 1.1 event, won by sprint stars like Marcel Kittel and André Greipel. Rebranded as VeloCity Berlin successor event continues mass-participation tradition.",
+      "founded": 2008,
+      "origin_story": "The mass-participation event began in 2008 as Skoda Velothon Berlin, with SCC EVENTS providing partial organization through 2018. A separate UCI 1.1 professional race, ProRace Berlin, was added alongside the existing amateur event in 2011 (won by sprint stars like Marcel Kittel and Andre Greipel) and ran through 2015 as Garmin ProRace Berlin/Garmin Velothon Berlin before ending after five editions — the amateur mass-participation event continued on its own. Velothon Berlin itself was cancelled in 2019 after Ironman (who held the event license) and SCC EVENTS (the local delivery partner) failed to agree on licensing terms. Rather than continue under Ironman's Velothon license, SCC launched a new successor, VeloCity Berlin, which debuted July 3, 2022 after two pandemic postponements; Generali became title sponsor from 2023 (GENERALI VeloCity Berlin). The event is now officially paused for 2025 and 2026.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Paused, Not Defunct — On Hold for 2025-2026",
+      "summary": "VeloCity Berlin is SCC EVENTS' successor to the mass-participation Velothon Berlin, which began in 2008 as Skoda Velothon Berlin. It is officially suspended for 2025 and 2026, with no permanent closure announced. SCC EVENTS says it suspended both editions while it works out a sustainable way to cover the cost of security and road closures in central Berlin; Berlin's own events portal independently confirms no 2026 edition will happen. No organizer has announced a 2027 return. The last confirmed edition ran August 4, 2024, with 100 km and 60 km flat, closed-road options finishing on Straße des 17. Juni.",
+      "strengths": [
+        "A continuous mass-participation lineage back to 2008 (as Skoda Velothon Berlin), through multiple sponsor eras, a 2019 licensing-dispute cancellation, and a 2022 relaunch as SCC's VeloCity Berlin successor — not a one-off event",
+        "Flat, fast, closed-road course through central Berlin landmarks (Victory Column, Brandenburg Gate) when it runs — a speed-focused format distinct from a climbing test",
+        "Historically included an attached UCI 1.1 professional race (ProRace Berlin, 2011-2015) alongside the mass event",
+        "The organizer has publicly stated the reason for the pause (security/road-closure cost sustainability) rather than going silent"
+      ],
+      "weaknesses": [
+        "Not currently bookable — officially suspended for both 2025 and 2026 with no announced return date",
+        "The organizer has not resolved the underlying cost/sustainability problem that triggered the pause, so financial viability of a future edition is uncertain",
+        "No organizer-published elevation figure could be found for the 2024 or any recent edition",
+        "The 2024 long course carried a 25 km/h minimum-speed requirement and 3:45 time limit — a real constraint for slower riders, not just a fast-format selling point"
+      ],
+      "bottom_line": "Not something to book right now. If VeloCity Berlin returns after its 2025-2026 pause, it's a flat, fast, closed-road city event with real history behind it — but there's currently no confirmed future edition to plan around."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Berlin's fastest, flashiest road race - pure speed through history's epicenter.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "63/100",
+      "one_liner": "Berlin's flat, fast closed-road city ride — officially suspended for 2025 and 2026, future uncertain but not declared dead.",
+      "should_you_race": "Not currently possible — the event is officially suspended for both 2025 and 2026 with no announced 2027 return. Check the organizer's own site (velocity.berlin) before planning around this event.",
+      "alternatives": "For a similar flat, fast closed-road city format elsewhere in Europe, look at other UCI-adjacent city sportives rather than assuming VeloCity Berlin will return on any particular timeline."
     },
     "citations": [
       {
-        "url": "https://northsouth.live/event/velothon-berlin",
-        "category": "reference",
-        "label": "Velothon Berlin | Raceatlas - NORTHSOUTH Live"
+        "url": "https://velocity.berlin/en/",
+        "category": "official",
+        "label": "Official VeloCity Berlin Statement — 2025-2026 Pause and Reasoning"
       },
       {
         "url": "https://www.berlin.de/en/events/62031-2842498-velocity-berlin.en.html",
-        "category": "reference",
-        "label": "VeloCity Berlin - Berlin.de"
-      },
-      {
-        "url": "https://en.wikipedia.org/wiki/Velothon_Berlin",
-        "category": "reference",
-        "label": "Velothon Berlin - Wikipedia"
-      },
-      {
-        "url": "https://velocity.berlin/en/register",
         "category": "official",
-        "label": "Registration - VeloCity Berlin"
+        "label": "Berlin.de Official Events Portal — \"Will Not Take Place in 2026\""
+      },
+      {
+        "url": "https://velocity.berlin/en/registration/100-km",
+        "category": "official",
+        "label": "Official 2024 100km Registration Page — Actual Last-Edition Distances"
+      },
+      {
+        "url": "https://velocity.berlin/en/news-media/news-blog/detail/the-route-description-of-the-generali-velocity-berlin-2024",
+        "category": "official",
+        "label": "Official 2024 Route Description"
+      },
+      {
+        "url": "https://www.radsport-news.com/freizeit/freizeitnews_113704.htm",
+        "category": "media",
+        "label": "2019 Cancellation Report — Ironman/SCC Licensing Dispute"
+      },
+      {
+        "url": "https://www.tagesspiegel.de/berlin/der-velothon-kommt-zuruck-nach-berlin-6787468.html",
+        "category": "media",
+        "label": "VeloCity Relaunch Announcement (SCC's Successor to the Ironman-Licensed Velothon)"
+      },
+      {
+        "url": "https://www.generali.de/presse/mitteilungen/generali-velocity-berlin-70120",
+        "category": "official",
+        "label": "Generali Title-Sponsor Announcement — Confirms 2022 SCC Launch of VeloCity"
+      },
+      {
+        "url": "https://www.uci.org/article/uci-velothon-majors--175026/5sUSu5QHLsfjIhs0hGu1Pg",
+        "category": "reference",
+        "label": "UCI 2016 Velothon Majors Announcement — Confirms Berlin/Wales/Stockholm as Separate City Events"
+      },
+      {
+        "url": "https://www.scc-events.com/en/about-us/references",
+        "category": "official",
+        "label": "SCC EVENTS References Page — Confirms 2008-2018 Involvement with Velothon Berlin"
+      },
+      {
+        "url": "https://www.radsport-news.com/sport/sportnews_123299.htm",
+        "category": "media",
+        "label": "VeloCity Berlin's January 2021 Pandemic Postponement to 2022"
       }
     ],
     "eligibility": {
       "status": "cancelled",
-      "verified": "2026-07-23",
-      "source": "https://www.berliner-zeitung.de/news/velocity-berlin-fuer-2025-und-2026-abgesagt-das-ist-der-grund-li.2283011",
-      "notes": "Mass-participation successor VeloCity Berlin in Berlin is officially paused/abgesagt for 2025 and 2026, so no upcoming edition is scheduled.; last edition evidenced: 2024; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://velocity.berlin/en/",
+      "notes": "SCC EVENTS has officially suspended VeloCity Berlin (the current name for the Velothon Berlin mass-participation lineage) for both 2025 and 2026 while evaluating the cost and sustainability of security and road closures. Berlin's own official events portal independently confirms no 2026 edition. No 2027 return is currently announced, but no permanent closure has been declared either — this is a pause, not a confirmed end. Last held: August 4, 2024 (100km/60km options)."
+    },
+    "catalog_flags": {
+      "status_note": "Renamed race.name/display_name from 'Velothon Berlin' to 'VeloCity Berlin' to match current organizer branding (slug left unchanged to avoid breaking existing URLs) — this is the same continuous mass-participation lineage (Skoda Velothon Berlin 2008 -> various sponsor eras -> cancelled 2019 in an Ironman/SCC licensing dispute -> relaunched as VeloCity Berlin 2022 -> Generali title sponsorship 2023-2024 -> paused 2025-2026), not a different event. Corrected this wave: vitals previously described a 159.3km/610m course that matched neither actual 2024 VeloCity distance (100km or 60km); the previous history.origin_story incorrectly conflated the separate UCI 1.1 professional race 'ProRace Berlin' (2011-2015, run alongside the mass event) with the founding of the whole amateur event. Confirmed via UCI's own 2016 announcement that Velothon Wales and Velothon Stockholm were separate city events under the same series umbrella — neither has its own profile in this database, and this profile should not be confused with or absorb their history.",
+      "ruled": "2026-07-24 editorial wave 6 (batch C)"
     }
   }
 }

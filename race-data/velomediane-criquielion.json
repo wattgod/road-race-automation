@@ -1,23 +1,23 @@
 {
   "race": {
-    "name": "Vélomediane Claudy Criquielion",
+    "name": "Vélomédiane Claudy Criquiélion",
     "slug": "velomediane-criquielion",
-    "display_name": "Vélomediane Claudy Criquielion",
+    "display_name": "Vélomédiane Claudy Criquiélion",
     "tagline": "",
     "vitals": {
-      "distance_km": 165.8,
-      "distance_mi": 103.0,
+      "distance_km": 165.0,
+      "distance_mi": 102.5,
       "elevation_m": 3570,
-      "elevation_ft": 11712.0,
+      "elevation_ft": 11713.0,
       "location": "La Roche-en-Ardenne, Belgium",
       "location_badge": "La Roche-en-Ardenne, Belgium",
       "country": "Belgium",
       "date": "2026: August 22",
-      "date_specific": "August 22, 2026 at 09:00",
-      "field_size": "Not specified",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "date_specific": "August 22, 2026 (grouped start 09:00, rolling 09:00-09:45; medium/Petite Crique 09:30)",
+      "field_size": "Not specified (most recent reported whole-event turnout: ~1,600 riders in 2024)",
+      "start_format": "Grouped/rolling mass start, open to all cyclists 18+",
+      "registration": "https://www.sqmtime.com/fr-velomediane",
+      "entry_fee": "2026: Grand Challenge (165km) EUR34 + EUR5 onsite; Challenge (134km) EUR32 + EUR5 onsite; Gravel (86km) EUR26 + EUR5 onsite; Petite Crique EUR20 + EUR3 onsite",
       "feed_zones": "Not specified",
       "cutoff_time": "Not specified",
       "lat": null,
@@ -37,7 +37,7 @@
     },
     "fondo_rating": {
       "distance": 4,
-      "climbing": 5,
+      "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 3,
       "organization": 4,
@@ -51,12 +51,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 66,
+      "overall_score": 64,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): climbing corrected 5->4 — the organizer's own stated elevation for the Grand Challenge is 3,570m, which fits rubric band 4 ('Hilly: 2,500-4,000m'), not band 5 ('Mountain: 4,000m+'). A route-engine recalculation of the same published 167km trace gives 3,121m (RouteYou); a separate ~3,200m figure comes from a rider's 2024 ride report on a different 171km/19-climb edition of the course, not a second measurement of the current route — these are two distinct data points, not corroborating recalculations. Score recalculated: 66 -> 64."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,107 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A La Roche-en-Ardenne loop through the deep Ardennes: out through Vecmont, Ortho, Warempage, Wibrin, Chabrehez and Maboge, back through La Roche, then a second sweep through Samrée, Manhay, Roche-à-Frêne, Rideux, Fisenne, Beffe and Dochamps before finishing where it started. The Grand Challenge is marketed at 165 km, though the organizer's own detailed itinerary and independent route tools put the actual mapped course closer to 167 km. Elevation is where the numbers diverge: the organizer states 3,570 m for 2026, while a route-engine recalculation of the same published 167 km trace comes in around 3,121 m (a separate ~3,200 m figure circulating from a 2024 rider's ride report belongs to a different 171 km/19-climb edition of the course, not a second measurement of the current route) — treat 3,570 m as the organizer-stated figure that is not independently corroborated. The course itself lists 18 named climbs, including the Mur de la Vélomédiane, Saint-Quoilin, Parc à Gibier, Haussire, Roche-à-Frêne and Rideux Nord.",
+      "signature_challenge": "The Mur de la Vélomédiane — the event's namesake wall climb, one of 18 named ascents packed into the Grand Challenge's second half.",
+      "suffering_zones": [
+        "The opening climbs out of La Roche — a first-person 2017 rider video documents an 18% ramp arriving around 69 km in",
+        "Mur de la Vélomédiane — the signature wall climb the long course is built around",
+        "Saint-Quoilin, Parc à Gibier, Haussire, Roche-à-Frêne and Rideux Nord — five more of the course's 18 named climbs, backloaded into the route's second sweep through Manhay and Beffe"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels, B&Bs, and campsites available in La Roche-en-Ardenne and surrounding Ardennes villages; book early for August event.[1]",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.velomediane.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 1989,
+      "origin_story": "Founded in 1989 by Hubert Goffinet in La Roche-en-Ardenne as roughly a 170 km ride with 3,300 m of climbing over 20+ climbs — the organizer's own site calls it 'the first Belgian cyclosportive.' Claude 'Claudy' Criquiélion, the 1984 professional road World Champion, was the event's patron from its first edition — the name predates his 2015 death and was never a posthumous rebrand. He crashed after contact with Steve Bauer in the 1988 World Championship sprint, for which Bauer was disqualified. Criquiélion died on 18 February 2015 following a stroke and severe brain hemorrhage.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Long-Running Ardennes Climbing Test, With Published-Number Gaps",
+      "summary": "The Vélomédiane Claudy Criquiélion is a 37-edition-deep Ardennes cyclosportive named for Claude 'Claudy' Criquiélion, the 1984 professional road World Champion, who was the event's patron from its 1989 founding — the name predates his 2015 death and is not a posthumous rebrand. The 2026 Grand Challenge lists 18 named climbs on a course marketed at 165 km, and the organizer's elevation figure (3,570 m) is not independently corroborated: a route-engine recalculation of the same 167 km published trace gives 3,121 m. It's technically a timed randonnée rather than a ranked race — under the post-2019 format, times are published alphabetically, not as an official classification — and the organizer's own course-option distances are inconsistent across its current 2026 pages.",
+      "strengths": [
+        "37 editions since 1989, with Criquiélion as the event's patron from its founding — not a marketing rebrand adopted after his death",
+        "A genuinely demanding Ardennes climbing course: 18 named ascents including the signature Mur de la Vélomédiane, roughly 170 km at its 1989 launch and 165-173 km across documented recent editions",
+        "Four route options (Grand Challenge, Challenge, Gravel, Petite Crique) at modest entry fees (EUR20-34), appropriate for the event's actual randonnée format",
+        "Confirmed active for 2026 with open registration, direct from the organizer and its registration platform"
+      ],
+      "weaknesses": [
+        "Not a ranked race despite the timing and diploma — under the current format, results are published alphabetically, so don't expect a competitive classification",
+        "The organizer's elevation claim (3,570 m) is not independently corroborated — a route-engine recalculation of the same published 167 km trace gives 3,121 m",
+        "Course-option distances are inconsistent within the organizer's own current pages: the Petite Crique is listed at 93 km on registration, 96 km/1,800 m on its own detail page, and 93 km/1,910 m on the French homepage (96 km/1,910 m on the English homepage) — four different figures for the same short option",
+        "No 2026 field-size cap or expected turnout was found in the organizer material reviewed; the latest event-wide turnout figure found was 1,600 participants in 2024"
+      ],
+      "bottom_line": "A legitimate, long-running Ardennes climbing test worth doing for the course and the Criquiélion connection — just don't expect a ranked race, and treat the elevation figure as organizer-stated rather than independently surveyed."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Legendary Ardennes gran fondo with brutal climbs named after Claude Criquielion.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "64/100",
+      "one_liner": "18 named Ardennes climbs and a real namesake — but a randonnée, not a ranked race, with an uncorroborated elevation claim.",
+      "should_you_race": "Yes, if you want a decades-deep Ardennes climbing test at an approachable price. Go in expecting a timed randonnée with alphabetical results, not a competitive classification, and treat the 3,570m elevation figure as organizer-stated rather than independently surveyed.",
+      "alternatives": "For a similarly namesake-driven Belgian climbing event with a more competitive format, look at the professional Grand Prix Criquiélion (Ath/Lessines, UCI 1.1) as a spectator event rather than a participation option. For another Ardennes-region mass-participation climbing test, compare against other La Roche/Ardennes-area cyclosportives directly."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.velomediane.com/",
+        "category": "official",
+        "label": "Official Event Homepage"
+      },
+      {
+        "url": "https://www.sqmtime.com/fr-velomediane",
+        "category": "official",
+        "label": "Official Registration Platform (SQM Time) — 2026 Entry Fees, Route Options"
+      },
+      {
+        "url": "https://www.velomediane.com/velomediane-grand-challenge-challenge-infos/",
+        "category": "official",
+        "label": "Official Grand Challenge Practical Information — Distance, Elevation, Fees, Format"
+      },
+      {
+        "url": "https://www.velomediane.com/carte-grand-challenge/",
+        "category": "official",
+        "label": "Official 2026 Turn-by-Turn Itinerary — 167km Route, 18 Named Climbs"
+      },
+      {
+        "url": "https://www.velomediane.com/carriere-cc/",
+        "category": "official",
+        "label": "Official Criquiélion Career Biography — 1984 World Championship, 1988 Bauer Collision"
+      },
+      {
+        "url": "https://www.ardennebelge.be/nl/ontdekken/toppers/roche-en-ardenne.php",
+        "category": "reference",
+        "label": "Ardenne Belge Tourism — 1989 Founding, Hubert Goffinet"
+      },
+      {
+        "url": "https://www.cyclingnews.com/news/claude-criquielion-dies-aged-58/",
+        "category": "media",
+        "label": "Cyclingnews — Criquiélion's Actual Cause of Death (Stroke, 2015)"
+      },
+      {
+        "url": "https://www.routeyou.com/fr-be/route/view/11931878",
+        "category": "reference",
+        "label": "RouteYou — Independent Route Calculation (167km / 3,121m)"
+      },
+      {
+        "url": "https://www.uci.org/competition-details/2026/ROA/78203",
+        "category": "reference",
+        "label": "UCI — Grand Prix Criquiélion (Separate Professional Race, Ath/Lessines)"
+      },
+      {
+        "url": "https://www.cycloworld.cc/en/article/criq/4050",
+        "category": "community",
+        "label": "CycloWorld 2024 Ride Report (~3,200m Over a Different 171km/19-Climb Edition)"
+      },
+      {
+        "url": "https://www.tvlux.be/video/info/cyclisme-vtt/la-roche-35e-edition-de-la-velomediane-une-histoire-de-famille-et-de-monts_46428.html",
+        "category": "media",
+        "label": "TV Lux — 2024 (35th Edition) Turnout Report (~1,600 Riders)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Vélomediane Claudy Criquielion gran fondo cycling La Roche-en-Ardenne",
@@ -188,9 +258,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.la-roche-tourisme.com/en/events/velomediane-claudy-criquielion-2/",
-      "notes": "2026 edition on 22 August 09:00 in La Roche-en-Ardenne with registration promoted; 2025 edition also listed.; last edition evidenced: 2026|2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.velomediane.com/",
+      "notes": "37th edition confirmed for Saturday, 22 August 2026, La Roche-en-Ardenne; registration open on the organizer's own site and its SQM Time registration platform (advance entries close 17 August, onsite 21-22 August). The organizer's homepage footer still displays a stale '23-08-2025' date, but page body, programme, course material, and registration are all current for 2026 — this is template staleness, not evidence of cancellation."
     }
   }
 }

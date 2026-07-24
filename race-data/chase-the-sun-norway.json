@@ -9,17 +9,17 @@
       "distance_mi": 280.0,
       "elevation_m": 3300,
       "elevation_ft": 10827.0,
-      "location": "Bergen to Kristiansand, Norway",
+      "location": "Bergen to Kristiansand, Norway (no organized event confirmed on this corridor — see eligibility)",
       "location_badge": "Bergen to Kristiansand, Norway",
       "country": "Norway",
-      "date": "2026: June 20",
-      "date_specific": "2026: June 20",
-      "field_size": "N/A",
+      "date": "No confirmed event exists — see eligibility.notes",
+      "date_specific": "No confirmed event exists — see eligibility.notes",
+      "field_size": "N/A — no event exists to have a field",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "grab-and-go snacks en-route, lunch venue mid-day, finish line food",
-      "cutoff_time": "sunrise to sunset (~17.5 hours)",
+      "feed_zones": "UNVERIFIED — traced to Chase the Sun UK North's real package, not a Norwegian event",
+      "cutoff_time": "UNVERIFIED — traced to Chase the Sun UK North's real ~17.5-hour window, not a Norwegian event",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -56,7 +56,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): dimension scores NOT independently re-verified or changed — the underlying event was found to be fabricated (see catalog_flags/eligibility), so no per-dimension score can honestly be assigned to a real course, field, or organization. Score/tier retained unchanged only because the schema requires them; do not treat overall_score or tier as meaningful for this profile."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,13 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "No course exists to describe. The numerical and operational claims previously on file for this profile trace to two different real Chase the Sun events: the 450.6 km/3,300 m figures are the real Chase the Sun Italia course (280 km/3,300 m, Cesenatico-Tirrenia) with the 280 misread as miles and converted to km; the June 20 date and ~17.5-hour riding window match Chase the Sun UK North's real 2026 edition. The support-package details were conflated across UK North's tiers: snacks and mechanic support belong to its £79 'Just Ride' tier, while lunch, finish-line dinner, and baggage transfer belong to its separate £169 'Ride Plus' tier; the £210 relay/team price includes the Just Ride tier, not Ride Plus. Bergen-to-Kristiansand is a real geographic corridor (the Norwegian leg of EuroVelo 12/Nordsjøruta), but the only itinerary found for it describes multi-day cycle touring (roughly 701 km over 8 days with 8,420 m of climbing in the cited Komoot itinerary) — nothing resembling this profile's claimed one-day 450.6 km paved event. No organized Chase the Sun Norway edition or comparable Bergen-Kristiansand event was found in this research.",
+      "signature_challenge": null,
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Self-arranged; bag drop available from 04:00 on ride day.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
       "official_site": ""
@@ -88,24 +88,68 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Fabricated Profile — No Real Event Exists",
+      "summary": "There is no organized cycling event called 'Chase the Sun Norway,' and research found no Bergen-to-Kristiansand one-day ride under this or a comparable Norwegian name (searched 'Jag Sola,' 'Jage Sola,' 'Jakten pa sola'). The real Chase the Sun organization runs UK South, UK North, Ireland, and Italia editions only, with Japan announced for 2027 — Norway has never appeared on its calendar or historical records. This profile's prior numbers trace to two different real Chase the Sun editions: the distance/elevation figures are Chase the Sun Italia's real course with a unit-conversion error (280 km misread as 280 miles), and the date and riding window are Chase the Sun UK North's real 2026 edition, with support-package details blended across two of UK North's separate pricing tiers. Bergen-Kristiansand is a real place — the Norwegian section of the EuroVelo 12/Nordsjøruta touring route — but the only itinerary found for it describes multi-day cycle touring, not a one-day timed event.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not exist — it should not be presented to riders as one they can register for or prepare for",
+        "The prior version of this profile's quantitative claims (distance, elevation, date, fee, support package, cutoff window) trace to two different real Chase the Sun events, not anything happening in Norway",
+        "The only published itinerary for the Bergen-Kristiansand corridor describes an 8-day, ~701 km touring route, not a one-day 450.6 km event"
+      ],
+      "bottom_line": "Do not train for or attempt to register for this. If you want the real Chase the Sun experience, it exists in the UK (South/North) and Italy (Italia), not Norway. If you want a genuine long Norwegian road ride, look at real Norwegian sportives instead."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Epic sunrise-to-sunset coast-to-coast challenge through Norway's stunning fjords and mountains.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Fabricated profile — no organized Bergen-to-Kristiansand cycling event exists under this or any similar name.",
+      "should_you_race": "No — this event does not exist. Do not plan travel or training around it.",
+      "alternatives": "For the genuine Chase the Sun format, see Chase the Sun UK North, UK South, or Italia (chasethesun.org). For a real long Norwegian road ride, look at Styrkeproven or other documented Norwegian sportives in this database."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.chasethesun.org/live/",
+        "category": "official",
+        "label": "Official Chase the Sun — 2026 Results (No Norway Edition Listed)"
+      },
+      {
+        "url": "https://www.chasethesun.org/",
+        "category": "official",
+        "label": "Official Chase the Sun — Route Inventory (UK/Ireland/Italy Only)"
+      },
+      {
+        "url": "https://www.chasethesun.org/italia/",
+        "category": "official",
+        "label": "Official Chase the Sun Italia — Source of the Misattributed 280km/3,300m Figures"
+      },
+      {
+        "url": "https://www.chasethesun.org/uk-north/",
+        "category": "official",
+        "label": "Official Chase the Sun UK North — Source of the Misattributed Date, Fee and Support Package"
+      },
+      {
+        "url": "https://www.chasethesun.org/records/",
+        "category": "official",
+        "label": "Official Chase the Sun — Historical Records (No Norway Edition Listed)"
+      },
+      {
+        "url": "https://en.eurovelo.com/ev12/norway",
+        "category": "reference",
+        "label": "EuroVelo 12 Norway — Identifies Bergen-Kristiansand as the North Sea Cycle Route"
+      },
+      {
+        "url": "https://www.komoot.com/collection/376/the-north-sea-cycle-path-from-bergen-to-kristiansand",
+        "category": "reference",
+        "label": "Komoot — Bergen-Kristiansand Touring Itinerary Cited (8 Days, Not a One-Day Event)"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "FABRICATED PROFILE (2026-07-24, wave 6 batch A): no organized 'Chase the Sun Norway' event exists. The prior vitals traced to two different real Chase the Sun editions (Italia for distance/elevation via a km-as-miles conversion error; UK North for date/riding-window/support-package details, themselves blended across two of UK North's separate pricing tiers) stitched onto a real but unrelated Norwegian touring corridor (Bergen-Kristiansand, EuroVelo 12/Nordsjoruta). eligibility.status is 'unknown,' NOT a custom 'fabricated' value, despite that being semantically closer — verified against this repo's own scripts/eligibility_audit.py (line 152) and qc/plan_readiness.py (line 132), both of which force any status outside {active, defunct, cancelled, unknown} back to 'unknown' silently, and scripts/generate_index.py, which doesn't gate on eligibility at all — so a non-enum 'fabricated' value would give a false sense of a distinct, tooling-recognized status when the actual downstream effect is identical to 'unknown' anyway. The fabrication finding lives in this note, in eligibility.notes, and in biased_opinion, all free-text fields not constrained by the enum. Recommend a human decide whether to remove this profile from the catalog entirely (the research's own stated preference, since no lifecycle status honestly applies to a race that never existed) or retain it as a flagged data-integrity record — and if the catalog wants a real 'fabricated'/quarantine status going forward, that requires a schema/tooling change out of this wave's scope, not just a value in one profile. Distance/elevation/location vitals fields are retained only because the schema requires non-empty values; treat them as demonstrated-false, not as approximate facts.",
+      "ruled": "2026-07-24 editorial wave 6 batch A"
+    },
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.cyclinguk.org/local-groups/chase-the-sun",
-      "notes": "no Bergen-Kristiansand event found under this name; only the UK Chase the Sun surfaced — needs deeper research"
+      "verified": "2026-07-24",
+      "source": "https://www.chasethesun.org/records/",
+      "notes": "FABRICATED, NOT MERELY UNVERIFIED (2026-07-24): no Bergen-Kristiansand or any other Norwegian Chase the Sun edition exists or has ever existed — the real Chase the Sun organizer's historical records list only UK South (from 2008), Italia (from 2017), UK North, and Ireland (Japan announced for 2027); Norway has never appeared. This profile's prior vitals were a composite of Chase the Sun Italia's real course figures (280km misread as miles, producing 450.6km) and Chase the Sun UK North's real date/riding-window details, layered onto the real but unrelated Bergen-Kristiansand EuroVelo 12 touring corridor. Status is recorded as 'unknown' rather than a custom 'fabricated' value: this repo's own scripts/eligibility_audit.py and qc/plan_readiness.py both silently coerce any non-enum status back to 'unknown', so introducing 'fabricated' here would not actually behave as a distinct status anywhere downstream. See catalog_flags for the full fabrication finding and a recommendation that a human decide whether to remove this profile or add real tooling support for a fabricated/quarantine status."
     }
   }
 }

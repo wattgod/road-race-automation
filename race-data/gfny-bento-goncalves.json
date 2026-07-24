@@ -5,16 +5,16 @@
     "display_name": "GFNY Bento Gonçalves",
     "tagline": "",
     "vitals": {
-      "distance_km": 170.6,
-      "distance_mi": 106.0,
-      "elevation_m": 2500,
-      "elevation_ft": 8202.0,
+      "distance_km": 122.5,
+      "distance_mi": 76.1,
+      "elevation_m": 3218,
+      "elevation_ft": 10558.0,
       "location": "Bento Gonçalves, Rio Grande do Sul, Brazil",
       "location_badge": "Bento Gonçalves, Brazil",
       "country": "Brazil",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
-      "field_size": "500-1000",
+      "date": "Last held: May 4, 2025 — no 2026 edition confirmed",
+      "date_specific": "Last held: May 4, 2025 — no 2026 edition confirmed",
+      "field_size": "approximately 800 (2022-2023 editions; no current field/capacity published)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -36,7 +36,7 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 3,
       "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 4,
@@ -51,12 +51,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 66,
+      "overall_score": 64,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66. WAVE 6 (2026-07-24): distance 4->3 to match the verified last-held (2025) course of 122.5km, which falls in the 120-160km rubric band rather than 160-200km; the prior 170.6km figure was unsupported by any documented edition (real course history: 2022 ~145km, 2023 135.9km, 2025 122.5km — the route has been redesigned repeatedly, not stable at 170.6km). climbing left at 4 (3,218m verified 2025 elevation still falls in the 2,500-4,000m rubric). road_surface left at 1 (predominantly paved; historic cobbled sectors documented only on the discontinued 2022-23 route, not confirmed on the 2025 course). overall_score recalculated 66->64 per formula; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,116 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The event used Fundaparque, Bento Gonçalves' expo center, for race-week operations and the start/finish. The competitive distance changed from about 145 km in 2022 to 135.9 km in 2023, followed by a materially redesigned 122.5 km route in 2025 — limiting year-to-year comparability rather than offering one stable, repeatable course. The original 2022-23 alignment started/finished at Fundaparque with a 75 km loop east and south (an early 10 km gradual climb with 8-10% sections, then a 3 km climb into Caravaggio), followed by 40 km of rolling countryside through Farroupilha, Carlos Barbosa and Garibaldi, before the medium-course finish and a long-course-only 60 km western extension through the Vale dos Vinhedos wine region — vineyard-covered hills, historic cobbled sections, repeated 1-4 km climbs at 8-16%, and a 12 km/~4% closing climb out of Santa Tereza. For the 2025 edition (the last held, and the one this profile's vitals now reflect), the route was redesigned: Igreja Pipa, Caminhos de Pedra, Ponte de Ferro, Nova Roma do Sul, Casa Corba, Pinto Bandeira, and the Barracão climb back toward Alameda Fenavinho and Fundaparque — still Serra Gaúcha wine country, but a different course than the earlier Vale dos Vinhedos loop. No 2026 edition has been confirmed as of this review.",
+      "signature_challenge": "On the 2022-23 course, the Vale dos Vinhedos western extension's 12 km/~4% closing climb out of Santa Tereza, arriving after a full day of shorter 8-16% ramps. On the redesigned 2025 course, the Barracão climb late in the return toward Fundaparque.",
+      "suffering_zones": [
+        "The early climbing block out of Fundaparque (2022-23 course) — an immediate 10 km gradual climb with 8-10% sections right from the start",
+        "The Vale dos Vinhedos loop's repeated short, steep ramps (1-4 km at 8-16%) — the 2022-23 course's defining western extension",
+        "The redesigned 2025 route's Barracão climb and the closing stretch back toward Alameda Fenavinho and Fundaparque"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels in Bento Gonçalves; ExpoBento hosts race week activities.",
+      "lodging_strategy": "Hotels in Bento Gonçalves; ExpoBento/Fundaparque hosts race week activities.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://bento.gfny.com/?lang=en"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "Founded 2022 as GFNY's return to Brazil, held October 16 that year, distinct from the older GFNY Conservatória chapter in Rio de Janeiro state. Ran three editions total: 2022, 2023, and a May 4, 2025 edition (the planned October 2024 third edition was postponed after the catastrophic Rio Grande do Sul floods).",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Inactive — No Edition Since 2025",
+      "summary": "GFNY Bento Gonçalves is a GFNY World Series race with a three-edition history (2022, 2023, and a flood-delayed 2025) in Brazil's Serra Gaúcha wine region, with a ~800-rider field in its first two years. But it is currently absent from GFNY's live global calendar: the official Bento site is reduced to a 'Subscribe to learn more' placeholder still showing 2025 content, the registration page has no date or price, and the results archive stops at 2025. A Brazil-specific site operated locally by Global Sports advertised May 3, 2026, but that edition never appeared in GFNY's global calendar or official results archive — the regional homepage still displays the stale listing, while its linked event-detail page now redirects to an account-suspended page. No organizer statement formally discontinuing the race was found, so this is an evidence-based inactivity call, not a confirmed shutdown.",
+      "strengths": [
+        "Three-edition history (2022, 2023, 2025) as part of the legitimate GFNY World Series, distinct from GFNY's other Brazil chapter (Conservatória)",
+        "~800-rider field in its first two years, run through Serra Gaúcha wine country with 3,218 m of climbing on the 2025 long course",
+        "The flood-postponed 2024 edition was eventually held on May 4, 2025, rather than being cancelled outright"
+      ],
+      "weaknesses": [
+        "No confirmed edition since May 2025 — GFNY's own global race finder omits Bento Gonçalves through its published 2027 calendar",
+        "The competitive distance changed from about 145 km in 2022 to 135.9 km in 2023, followed by a materially redesigned 122.5 km route in 2025, limiting year-to-year comparability",
+        "A Brazil-specific regional site advertised a May 3, 2026 date that never produced a result in GFNY's official archive or the reviewed regional pages, and whose event-detail link now redirects to an account-suspended page — a confusing, unresolved status for anyone trying to plan around this race",
+        "No current fee, field cap, or working registration process appears on the official Bento pages reviewed"
+      ],
+      "bottom_line": "A race with a genuine three-edition history, but there's nothing to register for right now. Don't plan travel around a future edition without direct confirmation from GFNY's official channels first."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Epic road ride through Brazil's stunning Serra Gaúcha vineyards with climbs and culture.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "64/100",
+      "one_liner": "A genuine but currently dormant GFNY Brazil chapter — three editions through 2025, nothing confirmed since.",
+      "should_you_race": "Not right now — no confirmed future edition exists, and the event is absent from GFNY's live global calendar. Verify directly with GFNY before planning travel.",
+      "alternatives": "For an active GFNY Brazil race, check GFNY Conservatória (Rio de Janeiro state, returned 2024) directly via gfny.com/race-finder."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY World Race Finder (No Bento Gonçalves or Brazil Listing Through 2027)"
+      },
+      {
+        "url": "https://bento.gfny.com/?lang=en",
+        "category": "official",
+        "label": "Official Bento Homepage (Reduced to Placeholder, Stale 2025 Content)"
+      },
+      {
+        "url": "https://bento.gfny.com/results/?lang=en",
+        "category": "official",
+        "label": "Official Results Archive (2022, 2023, 2025 Only)"
+      },
+      {
+        "url": "https://gfny.com/gfny-is-back-in-brazil/",
+        "category": "official",
+        "label": "GFNY 2022 Founding Announcement"
+      },
+      {
+        "url": "https://gfny.com/gfny-latam-super-sunday-results/",
+        "category": "official",
+        "label": "GFNY 2025 Post-Race Report — Third Edition, 122.5km/3,218m"
+      },
+      {
+        "url": "https://bento.gfny.com/course/?lang=en",
+        "category": "official",
+        "label": "Official 2025 Course Page (Redesigned Route)"
+      },
+      {
+        "url": "https://bento.tur.br/2023/10/16/gfny-bento-e-regiao-recebem-pelo-segundo-ano-consecutivo-a-maior-competicao-de-ciclismo-amador-do-mundo/",
+        "category": "media",
+        "label": "Bento Tourism Report — 2022/2023 Field Size (~800 Riders)"
+      },
+      {
+        "url": "https://leouve.com.br/blogs/bento-goncalves-confirma-terceira-edicao-de-prova-de-ciclismo-em-maio-de-2025/",
+        "category": "media",
+        "label": "2024 Postponement Report (Rio Grande do Sul Floods)"
+      },
+      {
+        "url": "https://gfny.com/gfny-brasil-back-in-conservatoria/",
+        "category": "official",
+        "label": "GFNY Conservatória History (Separate GFNY Brazil Event, Not a Duplicate)"
+      },
+      {
+        "url": "https://bento.gfny.com/register/?lang=en",
+        "category": "official",
+        "label": "Official Registration Page (No Date/Price/Widget)"
+      },
+      {
+        "url": "https://bento.gfny.com/gfny-is-back-in-brazil-2/",
+        "category": "official",
+        "label": "Original 2022-23 Official Course Description (Fundaparque Loop, Vale dos Vinhedos)"
+      },
+      {
+        "url": "https://www.gfnybrazil.com.br/",
+        "category": "other",
+        "label": "Regional Brazil Site (Still Advertises Stale May 3, 2026 Listing)"
+      },
+      {
+        "url": "https://www.gfnybrazil.com.br/evento/gfny-bento-golcalves/novo-na-gfny",
+        "category": "other",
+        "label": "Regional Event-Detail Page (Redirects to Account-Suspended Page)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Bento Gonçalves gran fondo cycling Bento Gonçalves",
@@ -187,13 +266,18 @@
           "thumbnail_score": 89.17
         }
       ],
-      "quotes": []
+      "quotes": [],
+      "course_note": "This video's course description (75km loop, Vale dos Vinhedos western extension) reflects the original 2022-23 route, not the redesigned 2025 course this profile's vitals now describe. Retained as genuine event footage, not purged, since it is real GFNY Bento Gonçalves content — just from an earlier course."
+    },
+    "catalog_flags": {
+      "status_note": "Corrected during wave-6 sol review (2026-07-24): eligibility.status changed from a first-draft 'defunct' to 'unknown' — this repo's own scripts/eligibility_audit.py defines defunct as organizer-confirmed ending OR 2+ years with no edition and no announcement; Bento last ran May 2025, only ~14 months before this review, well short of that threshold (contrast the GFNY Philippines precedent, which had 6+ years of silence before being marked defunct). The editorial verdict 'Inactive — No Edition Since 2025' is retained since it accurately describes the current gap without overstating it via the machine-readable status. Flagging for a human call in case GFNY reactivates this chapter, an official closure statement surfaces, or enough time passes to justify 'defunct' under the repo's own rule.",
+      "ruled": "2026-07-24 editorial wave 6 batch A"
     },
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://bento.tur.br/page/31/?plugin=all-in-one-event-calendar&controller=ai1ec_exporter_controller&action=export_events&ai1ec_post_ids=23553&no_html=true",
-      "notes": "Only 2023 edition in Bento Gonçalves is documented; no reliable evidence of 2024–2026 editions or explicit cancellation.; last edition evidenced: 2023; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://gfny.com/race-finder/",
+      "notes": "INACTIVE, NOT YET DEFUNCT UNDER THIS REPO'S OWN RULE (2026-07-24, wave 6): GFNY Bento Gonçalves ran three editions — 2022, 2023, and a flood-delayed May 4, 2025 — but is absent from GFNY's current global race finder through its published 2027 calendar. The official Bento site is reduced to a 'Subscribe to learn more' placeholder still showing 2025 content; its registration page has no date or price; its results archive stops at 2025 with no 2026 entry. A Brazil-specific site operated locally by Global Sports (gfnybrazil.com.br, distinct from GFNY's global site) advertised May 3, 2026, but that edition never appeared in GFNY's global calendar or official results archive — the regional homepage still shows the stale listing, while its linked event-detail page now redirects to an account-suspended page. No organizer statement formally discontinuing the race was found. Status is 'unknown' rather than 'defunct': scripts/eligibility_audit.py's own rule requires organizer confirmation OR 2+ years of silence for a defunct call, and Bento's ~14-month gap since May 2025 falls well short of that (contrast GFNY Philippines, wave 5, which had 6+ years before being marked defunct)."
     }
   }
 }

@@ -5,19 +5,19 @@
     "display_name": "Vermont Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 1463,
-      "elevation_ft": 4800.0,
-      "location": "Stowe, Vermont, USA",
-      "location_badge": "Stowe, USA",
+      "distance_km": 175.0,
+      "distance_mi": 108.7,
+      "elevation_m": 2950,
+      "elevation_ft": 9680.0,
+      "location": "Bristol, Vermont, USA",
+      "location_badge": "Bristol, USA",
       "country": "USA",
-      "date": "2026: June TBD",
-      "date_specific": "2026: June TBD",
-      "field_size": null,
+      "date": "2026: Cancelled (one-year hiatus; organizer states a 2027 return, no date confirmed yet)",
+      "date_specific": "2026: Cancelled (one-year hiatus; organizer states a 2027 return, no date confirmed yet)",
+      "field_size": "371 (2025, across all four routes)",
       "start_format": null,
       "registration": "https://vermontgranfondo.com",
-      "entry_fee": null,
+      "entry_fee": "2025 pricing (last held edition): $85 Piccolo / $140 Medio / $160 Gran / $260 Gran-X",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
@@ -31,8 +31,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Mixed paved roads and hard-packed dirt (roughly 18 of 109 miles unpaved on the flagship Gran per organizer figures)",
+      "technical_rating": 2,
       "features": []
     },
     "fondo_rating": {
@@ -70,12 +70,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Four route options starting and finishing at Bristol Rec Park in Bristol, Vermont, using different combinations of the LAMB gaps — Lincoln, Appalachian, Middlebury, Brandon — that cut through Vermont's Green Mountains: Piccolo (40 mi) climbs no gap at all, Medio (80 mi) crosses two (Middlebury, Brandon), the flagship Gran (roughly 109 miles, ~9,680 ft climbing, also cited as 9,850+ ft in the organizer's own overview) runs clockwise over four (Appalachian, Lincoln, Middlebury, Brandon), and the Gran-X (roughly 149 miles, ~15,090 ft) adds Roxbury and Rochester Gaps for six gaps total in a figure-eight layout. None of the four routes is fully paved: the organizer's detailed course data lists roughly 10 dirt miles each on Piccolo and Medio, 18 on the Gran, and 21.5 on the Gran-X, and the FAQ recommends road or gravel bikes with at least 28-30mm tires.",
+      "signature_challenge": "The four-gap sequence on the Gran — Appalachian, then Lincoln, Middlebury, and Brandon — back to back over roughly 109 miles.",
       "suffering_zones": [
-        "Lincoln Gap Climb: Steep 7-mile ascent early in ride from Bristol, testing legs amid Green Mountains.",
-        "Middlebury Gap Summit: Sustained effort to 23 miles with cutoff risks, rewarded by panoramic views.",
-        "Brandon Gap Finale: Pushes fatigue over 50 miles, completing LAMB-style epic."
+        "Appalachian Gap — the first gap on the Gran route, setting the tone early rather than serving as a warm-up",
+        "Lincoln Gap — the steep east-side pitch, roughly 1.4 miles per the organizer's detailed climb data, not a 7-mile ascent as previously described here",
+        "Middlebury Gap — roughly 7 miles long per the Gran-X climb table, arriving with real accumulated fatigue",
+        "Brandon Gap — the closing gap on the Gran, the last significant climb before the return to Bristol"
       ]
     },
     "logistics": {
@@ -86,25 +87,71 @@
       "official_site": "https://vermontgranfondo.com"
     },
     "history": {
-      "founded": 2016,
-      "origin_story": "",
+      "founded": 2014,
+      "origin_story": "Launched in 2014 (planning began in 2013) starting at the Middlebury College Snow Bowl in Hancock, with 181 registrants and 160 starters at the inaugural edition. Originally produced by Cycle Addison County, Inc.; Todd Warnock's Ride It If You Can LLC took over direction in 2018 and moved the start/finish to Bristol Rec Park in 2019, where it has run since. Became a partner event of the Gran Fondo National Series in 2022.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Event, On Hiatus for 2026",
+      "summary": "The Vermont Gran Fondo is an organized mass-participation ride through the LAMB gaps of Vermont's Green Mountains, held annually since 2014, under Todd Warnock's direction since 2018 and based in Bristol since 2019 (current organizer: Ride It If You Can LLC). It is explicitly non-competitive except for timed gap-climb segments — there's no racing license requirement and no overall finish-order competition. The organizer's own site confirms a hiatus for 2026 ('We're Taking a Break in 2026 — See You in 2027'), though no 2027 date or registration has been published yet. The 2025 edition was held in Bristol on June 28, drawing 371 registrations across four routes.",
+      "strengths": [
+        "Four genuine LAMB-gap climbs (Appalachian, Lincoln, Middlebury, Brandon) across its routes, plus two more (Roxbury, Rochester) on the Gran-X",
+        "Four distance options (Piccolo/Medio/Gran/Gran-X) covering a wide range of rider ambition, from a no-gap 40-mile ride to a 149-mile, six-gap route",
+        "A decade-plus track record dating to 2014, with the current organizer (Todd Warnock/Ride It If You Can LLC) running it since 2018",
+        "Explicitly non-competitive format for most of the field, reducing the pressure of a full-blown race for riders who just want the climbs"
+      ],
+      "weaknesses": [
+        "No 2026 edition — the organizer has taken a confirmed one-year break with no locked-in 2027 date yet, so this is not currently a bookable event",
+        "Course is not fully paved despite the 'road' framing: roughly 10 dirt miles on Piccolo/Medio, 18 on the Gran, and 21.5 on the Gran-X, per the organizer's own detailed figures — riders on typical narrow road tires are below the FAQ's recommended 28-30mm minimum",
+        "Organizer's own published stats are internally inconsistent between the narrative overview and the detailed route data (9,680 ft vs. 9,850+ ft on the Gran, with a similar gap reported on the Gran-X)",
+        "Registration count is modest for a four-route event (371 in 2025) — this is a regional ride, not a marquee national fondo"
+      ],
+      "bottom_line": "A well-established Green Mountains gap-climbing ride with a confirmed hiatus for 2026. Worth tracking for a 2027 return if you want the LAMB gaps in one supported day, but there's nothing to register for right now."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Challenging Green Mountains gaps with support and scenery.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Vermont's LAMB gaps in one supported day — currently on a confirmed one-year hiatus.",
+      "should_you_race": "Not in 2026 — there's no edition to enter. If it returns in 2027 as the organizer intends, it's a solid regional option for riders who want Appalachian, Lincoln, Middlebury, and Brandon Gaps in a single supported ride, on gravel-capable tires.",
+      "alternatives": "For a similar Vermont/New England gap-climbing ride while this is on hiatus, look at other Green Mountain National Forest-area gran fondos and gravel events that use the same gap network."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://vermontgranfondo.com/",
+        "category": "official",
+        "label": "Official Site — 2026 Hiatus Notice"
+      },
+      {
+        "url": "https://vermontgranfondo.com/explore-the-course/",
+        "category": "official",
+        "label": "Official Course Page — Route Stats, All Four Distances"
+      },
+      {
+        "url": "https://vermontgranfondo.com/faq/",
+        "category": "official",
+        "label": "Official FAQ — Surface, Non-Competitive Format, Moto Support"
+      },
+      {
+        "url": "https://vermontgranfondo.com/about-vermont-gran-fondo/",
+        "category": "official",
+        "label": "Official History — Founding, Organizer Transition"
+      },
+      {
+        "url": "https://www.addisonindependent.com/2014/06/18/first-vermont-gran-fondo-seen-as-a-success/",
+        "category": "media",
+        "label": "Addison Independent — Inaugural 2014 Event Report"
+      },
+      {
+        "url": "https://www.bikereg.com/Confirmed/67919",
+        "category": "reference",
+        "label": "BikeReg — 2025 Registration Roster (371 Entrants)"
+      },
+      {
+        "url": "https://www.granfondonationalseries.com/blog/2022/4/4/the-vermont-gran-fondo-joins-the-gran-fondo-national-series",
+        "category": "media",
+        "label": "Gran Fondo National Series — 2022 Partnership Announcement"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Vermont Gran Fondo gran fondo cycling Stowe",
@@ -223,9 +270,13 @@
     },
     "eligibility": {
       "status": "cancelled",
-      "verified": "2026-07-23",
-      "source": "https://www.cycloworld.cc/en/gran-fondo/united-states/the-vermont-gran-fondo/39709",
-      "notes": "2026 Vermont Gran Fondo in Bristol, VT is listed as cancelled; 2025 edition ran June 28 in Bristol.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://vermontgranfondo.com/",
+      "notes": "The organizer's own site states: 'We're Taking a Break in 2026 — See You in 2027.' This is a confirmed one-year hiatus, not a permanent discontinuation — no official 2027 date has been published yet, and third-party listings showing a June 2027 date should be treated as provisional. Last completed edition: June 28, 2025, Bristol, Vermont, 371 registered riders across four routes."
+    },
+    "catalog_flags": {
+      "status_note": "Corrected this wave: location was wrongly recorded as Stowe, VT (a stale third-party 'Vermont Grand Fondo' calendar mirror places the event in Stowe under a misspelled name and appears to be the likely source of the contamination, though causation isn't provable) — current start/finish is Bristol Rec Park, Bristol, VT, the venue since 2019 (the inaugural 2014 edition was based at Middlebury College Snow Bowl in Hancock, not Bristol). Vitals (99.8km/1,463m) were also stale, matching a 2018 'Medio Facile' intermediate course rather than the flagship Gran (109mi/175km, ~9,680ft/2,950m); corrected to the flagship Gran figures. Founding year corrected from 2016 to 2014. Organizer corrected from Cycle Addison County (original 2014-2018 producer) to current organizer Ride It If You Can LLC (Todd Warnock, director since 2018).",
+      "ruled": "2026-07-24 editorial wave 6 (batch D)"
     }
   }
 }

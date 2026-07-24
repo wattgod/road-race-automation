@@ -1,24 +1,24 @@
 {
   "race": {
-    "name": "Granfondo Alpe Adria",
+    "name": "Alpe-Adria Giro",
     "slug": "granfondo-alpe-adria",
-    "display_name": "Granfondo Alpe Adria",
+    "display_name": "Alpe-Adria Giro",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 2073,
-      "elevation_ft": 6800.0,
-      "location": "Villach, Carinthia, Austria",
+      "distance_km": 165.0,
+      "distance_mi": 102.5,
+      "elevation_m": 2280,
+      "elevation_ft": 7480.0,
+      "location": "Villach, Carinthia, Austria (route through Italy and Slovenia)",
       "location_badge": "Villach, Austria",
       "country": "Austria",
-      "date": "2026: July TBD",
-      "date_specific": "2026: July TBD",
-      "field_size": null,
+      "date": "Discontinued — last held June 19, 2016",
+      "date_specific": "Discontinued — last held June 19, 2016",
+      "field_size": "2016 registration cap: 1,000; 2016 results show 234 classified finishers (not necessarily the full starting field); a 2015 rider report describes ~330 starters",
       "start_format": null,
-      "registration": "https://www.bike-alpeadria.eu/en/",
-      "entry_fee": null,
-      "feed_zones": null,
+      "registration": null,
+      "entry_fee": "2016: tiered €49/€55/€59/€69 depending on registration date, +€20 for late entry",
+      "feed_zones": "Tarvisio km29, Cave del Predil km38, Bovec km60, Trenta km80, Vršič km93, Tarvisio km118",
       "cutoff_time": null,
       "lat": null,
       "lng": null,
@@ -70,11 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "IMPORTANT — this profile describes a defunct event under a corrected identity. No standalone race officially named 'Granfondo Alpe Adria' could be verified. The real event was the Alpe-Adria Giro, the long-course road marathon within the broader Alpe-Adria Bikefestival Villach, last documented on June 19, 2016. It ran as a loop starting and finishing in Villach, out through Tarvisio and Cave del Predil to the Predil Pass, on to Bovec and the Vršič Pass, then back through Kranjska Gora and Tarvisio to Villach — a genuine three-country route (Austria, Italy, Slovenia) on public roads that were only partially traffic-controlled, not a closed-road race. The two defined climbs were Predil Pass (1,156m) and Vršič Pass (1,611m); the organizer specifically warned riders about both descents. The Karawanken-tunnel feature and the '2000-foot border-pass climb' previously in this profile don't match the documented Alpe-Adria Giro route — the Karawanken is an unrelated ~8km motorway tunnel south of Villach, not part of this course.",
+      "signature_challenge": "The Vršič Pass (1,611m) — the higher of the two defined climbs, arriving with its warned-about descent well into the second half of a route that has already crossed the Predil Pass.",
       "suffering_zones": [
-        "Karawanken Grind: Relentless 2000-foot haul through tunnels tests legs mid-race after Villach warm-up. Heat buildup and gradient force pacing discipline.",
-        "Border Pass Bonk: Final climbs into Slovenia after 70 miles drain energy reserves. Exposed alpine winds amplify fatigue on 6800-foot total."
+        "Predil Pass (1,156m) — the first of the two major climbs, with an organizer-flagged descent",
+        "Vršič Pass (1,611m) — the higher climb, deep into Slovenia before the long return leg",
+        "The return through Tarvisio to Villach — roughly the back third of a 165km day, on the tail end of two mountain passes"
       ]
     },
     "logistics": {
@@ -82,33 +83,88 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://www.bike-alpeadria.eu/en/"
+      "official_site": "No current edition verified — the surviving event site (alpe-adria-bikefestival.com) still presents the June 19, 2016 edition, its results archive ends in 2016, and its homepage now also carries unrelated pharmaceutical spam links; stale and unsuitable as a current registration source. The on-file registration link (bike-alpeadria.eu) was never the race's site — it is a separate, still-active EU-funded cross-border cycle-route platform."
     },
     "history": {
-      "founded": 2010,
-      "origin_story": "",
+      "founded": 2014,
+      "origin_story": "Premiered June 2014 as the Alpe-Adria Giro, the flagship long road race of the Alpe-Adria Bikefestival Villach, alongside a Medio Giro, MTB Giro, and Dobratsch hillclimb as separate race variants. The City of Villach and the Austrian Alpine Club both documented the June 2014 running as the first edition (the Alpine Club report describes the cross-border event as occurring 'for the first time' that year). The 2010 founding date previously on file was also incorrect — no source ties this race to 2010.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "No Longer Documented — And Filed Under the Wrong Name",
+      "summary": "No current 'Granfondo Alpe Adria' could be verified, and no standalone event ever officially carried that exact name. The real event was the Alpe-Adria Giro, the long-course road marathon inside the Alpe-Adria Bikefestival Villach, which ran from 2014 through at least 2016 — a genuine three-country route over the Predil and Vršič passes. Its last documented edition was June 19, 2016; the event's own website still presents that 2016 edition, its results archive ends there, and Villach's current cycling-events calendar (Velovista, ROSA200, Carinthia200) doesn't include it. No formal cancellation notice was found, so this is an evidence-based call from a decade without a documented edition, not a confirmed organizer shutdown. Compounding the problem, this profile's on-file 'official site' (bike-alpeadria.eu) was never the race's site at all — it's a separate, still-active EU-funded cross-border cycle-route platform, and the profile's Karawanken-tunnel course detail doesn't match the documented Predil/Vršič route.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "No current edition could be verified, and it should not be presented as a bookable 2026 gran fondo",
+        "The previously on-file official site (bike-alpeadria.eu) is not and never was the race's site; it's a separate EU cross-border cycle-route platform",
+        "Even the real event's own historical site is now stale and unsuitable as a current registration source — still displaying the 2016 edition, with unrelated spam content on its homepage",
+        "Course details previously on file (Karawanken tunnels, a border-pass climb into Slovenia) don't match the documented Predil/Vršič route — a genuine identity mismatch, not just a stale date"
+      ],
+      "bottom_line": "A decade without a documented edition, and filed under a name it never officially had. If you want a current Villach-based road event, Carinthia200 (Villach's current large road race) is scheduled to debut on September 20, 2026 — no evidence found that it's a continuation or rebrand of the Alpe-Adria Giro, just the city's present-day option."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Alpine tri-nation road epic from Villach delivering big climbs and border thrills.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "No longer documented three-country Alpine road marathon — last verified 2016, filed under a name it never officially had.",
+      "should_you_race": "No — no current edition could be verified. If you want a current Villach road event, Carinthia200 is scheduled to debut September 20, 2026; no evidence it's connected to this race.",
+      "alternatives": "Carinthia200 (Villach's current large road cycling event, carinthia200.com, scheduled to debut September 20, 2026) for a present-day Villach option — no evidence found that it's a continuation of the Alpe-Adria Giro. The current 'Alpe Adria Tour' circuit (helphaiti.it) is a separate 6-race series whose Austrian round is in Bad Kleinkirchheim, not Villach."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://alpe-adria-bikefestival.com/de/alpe-adria-giro/",
+        "category": "official",
+        "label": "Alpe-Adria Giro — Official Course Page (2016, Distance/Elevation/Route/Climbs)"
+      },
+      {
+        "url": "https://alpe-adria-bikefestival.com/de/teilnahmebedingungen/",
+        "category": "official",
+        "label": "Official Participation Conditions — Confirms Real Road Event, Sole Official Info Source"
+      },
+      {
+        "url": "https://alpe-adria-bikefestival.com/de/ergebnisse/",
+        "category": "official",
+        "label": "Results Archive — Covers Only 2014-2016"
+      },
+      {
+        "url": "https://www.visitvillach.at/de/radveranstaltungen-rund-um-villach.html",
+        "category": "tourism",
+        "label": "Villach's Current (2026) Cycling Events Listing — No Alpe-Adria Giro"
+      },
+      {
+        "url": "https://www.bike-alpeadria.eu/en/",
+        "category": "other",
+        "label": "Bike Alpe-Adria — the Real, Unrelated EU Cycle-Touring-Route Platform (Wrongly Listed as Official Site Pre-Correction)"
+      },
+      {
+        "url": "https://villach.at/VillachPortal/media/Downloads/Stadtzeitung/2013_14_villach_stadtzeitung.pdf",
+        "category": "official",
+        "label": "City of Villach — 2014 Premiere Announcement"
+      },
+      {
+        "url": "https://carinthia200.com/en/carinthia200-road-cycling-event-in-villach-postponed-new-date-in-september-2026/",
+        "category": "reference",
+        "label": "Carinthia200 — Villach's Current Road Event, Inaugural Edition Scheduled September 20 2026, No Evidence of Lineage"
+      },
+      {
+        "url": "https://alpe-adria-bikefestival.com/de/",
+        "category": "official",
+        "label": "Alpe-Adria Bikefestival Homepage — Still Showing 2016 Content, Now Also Carrying Unrelated Spam Links"
+      },
+      {
+        "url": "https://www.slovenia.info/sl/novinarsko-sredisce/novice/13257-nova-spletna-platforma-kolesarskih-povezav",
+        "category": "reference",
+        "label": "Slovenian Tourist Board — 2020 Launch Announcement for bike-alpeadria.eu (Confirms It Was Never the Race's Site)"
+      }
+    ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.helphaiti.it/i-circuiti/alpe-adria-tour/",
-      "notes": "Search results show the Alpe Adria Tour circuit in 2026, but not a verified page for Granfondo Alpe Adria in Villach, so the specific event cannot be confirmed.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://alpe-adria-bikefestival.com/de/ergebnisse/",
+      "notes": "IDENTITY CORRECTION + DEFUNCT (2026-07-24, wave 6): this profile was mislabeled 'Granfondo Alpe Adria' with an unverified official site (bike-alpeadria.eu, actually a separate EU cross-border cycle-route platform launched 2020) and course details (Karawanken tunnels) that don't match the documented Alpe-Adria Giro route. The content actually describes the Alpe-Adria Giro, the long road race of the Alpe-Adria Bikefestival Villach, founded 2014 (not 2010, also incorrect on the prior record), last documented June 19, 2016. Results archive stops at 2016, the festival's own site still presents that 2016 edition, and Villach's current cycling calendar doesn't list it. No formal cancellation notice found — this is an evidence-based inactivity call from a decade without a documented edition, not a confirmed organizer shutdown, following the GFNY Philippines precedent from wave 5. Renamed race.name/display_name to 'Alpe-Adria Giro' to match; slug left unchanged (granfondo-alpe-adria) to avoid breaking existing URLs."
+    },
+    "catalog_flags": {
+      "status_note": "Identity-corrected and marked defunct this wave (see eligibility.notes): content now describes the real Alpe-Adria Giro/Bikefestival Villach event with its actual verified 2016 facts, not the fabricated-looking 'Granfondo Alpe Adria' course (Karawanken tunnels, bike-alpeadria.eu) previously on file. Flagging for a human call on whether to keep this as a historical/defunct entry (per the birkebeinerrittet-road.json precedent) or remove it from the active catalog entirely, since no current Villach event carries this name or lineage.",
+      "ruled": "2026-07-24 editorial wave 6"
     }
   }
 }

@@ -5,19 +5,19 @@
     "display_name": "Eroica South Africa",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 2499,
-      "elevation_ft": 8200.0,
+      "distance_km": 172.0,
+      "distance_mi": 106.9,
+      "elevation_m": 1978,
+      "elevation_ft": 6489.5,
       "location": "Montagu, Western Cape, South Africa",
       "location_badge": "Montagu, South Africa",
       "country": "South Africa",
-      "date": "2026: April 10",
-      "date_specific": "2026: April 10",
-      "field_size": "small, intimate",
+      "date": "Discontinued — no future edition scheduled (last ran April 2024)",
+      "date_specific": "Discontinued — no future edition scheduled (last ran April 2024)",
+      "field_size": "~150 (2024, last edition, across Classic/Hero/Nova formats — rider-observed, not organizer-published)",
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "ZAR 1,200+ (2024, Classic/Hero pricing; last edition)",
       "feed_zones": "multiple with local refreshments",
       "cutoff_time": "unknown",
       "lat": null,
@@ -31,8 +31,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "Predominantly gravel/dirt farm roads with paved sections (roughly one-third tar on the longer routes in later editions)",
+      "technical_rating": 3,
       "features": []
     },
     "fondo_rating": {
@@ -70,9 +70,11 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "This event no longer runs. Eroica South Africa was an official Eroica-series edition, founded in 2016 by local organizer Stan Engelbrecht in Montagu, Western Cape, as part of Eroica's 2016 international expansion (alongside Eroica Limburg and Eroica Punta del Este). It ran across 2016-2024 (with a modified format in 2021), over gravel farm roads, Ouberg Pass, and remote Karoo terrain, with routes changing substantially over its history — from the 2016 inaugural (50/90/140 km) to the final 2024 weekend's Classic (68-70 km), Hero (170-173 km), and Nova (170 km, modern gravel bikes) formats. The final verified edition ran 12-14 April 2024. Bicycling South Africa reported on 27 January 2025 that 'Eroica South Africa is no more,' and the event is absent from Eroica's own current official event roster. Unlike the mainline Eroica 1987-or-earlier bicycle cutoff, South Africa relaxed its vintage cutoff to pre-1999 steel road bikes given the smaller local vintage-bike market.",
+      "signature_challenge": null,
+      "suffering_zones": [
+        "Ouberg Pass — a recurring feature of the longer Hero/Nova routes in the event's later editions, climbing into remote Karoo terrain"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -82,30 +84,65 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2016,
+      "origin_story": "Founded by local organizer Stan Engelbrecht in Montagu as part of Eroica's official 2016 international expansion. Eroica founder Giancarlo Brocci attended the inaugural edition and publicly praised Engelbrecht's interpretation of the Eroica philosophy. The event ended after its 2024 edition.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Discontinued",
+      "summary": "There is no current edition of Eroica South Africa to rate. This was an official Eroica-series event founded in 2016 and run through 2024 in Montagu, Western Cape, over predominantly gravel Karoo terrain including Ouberg Pass. Bicycling South Africa reported on 27 January 2025 that the event had ended, introducing a new event ('il Classico,' in Riebeek Kasteel) as a separately organized substitute. Eroica South Africa is absent from Eroica's own current official event roster, which includes event dates through 2027 for its active Classic editions.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not currently exist — it should not be presented to riders as a bookable event",
+        "Course distances and formats changed substantially across its history, so there was never a single stable, comparable course to rate consistently",
+        "The final edition appears to have drawn roughly 150 riders across all formats, based on one rider's estimate — no organizer-published 2024 participant count was found",
+        "South Africa's relaxed pre-1999 bike-era cutoff was a real departure from the mainline Eroica 1987-or-earlier standard, diluting the series' core vintage-authenticity premise for this edition specifically"
+      ],
+      "bottom_line": "Retired. A former official Eroica-series event that has not run since 2024, with no return announced. A current Western Cape alternative is 'il Classico' in Riebeek Kasteel — a new, separately organized event, not an Eroica-licensed continuation."
     },
     "final_verdict": {
       "score": "64/100",
-      "one_liner": "Vintage cycling celebration in South Africa's stunning wine lands.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Former licensed Eroica edition through Karoo gravel and Ouberg Pass — ended after 2024.",
+      "should_you_race": "No — this event does not exist anymore. If you want a similar vintage-bike ride in the Western Cape, look at 'il Classico' in Riebeek Kasteel, a newer, unaffiliated event.",
+      "alternatives": "il Classico (Riebeek Kasteel, Western Cape — new event, not an Eroica-licensed successor) or another currently active Eroica Classic edition such as Eroica Dolomiti, Eroica Japan, or the original L'Eroica in Tuscany."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.bicycling.co.za/events/celebrate-the-soul-of-cycling-at-il-classico-a-new-event-for-vintage-enthusiasts/",
+        "category": "media",
+        "label": "Bicycling South Africa — 'Eroica South Africa Is No More' / il Classico Launch (2025-01-27)"
+      },
+      {
+        "url": "https://www.eroica.cc/en/events/",
+        "category": "official",
+        "label": "Official Eroica Event Roster (Current — No South Africa Listing)"
+      },
+      {
+        "url": "https://www.eroica.cc/leroica-e-sempre-uguale-se-stessa-come-nel-1997/",
+        "category": "official",
+        "label": "Official Eroica History — 2016 International Expansion"
+      },
+      {
+        "url": "https://www.cyclist.co.uk/in-depth/eroica-south-africa-sportive-african-heroes",
+        "category": "media",
+        "label": "Cyclist Magazine — Inaugural 2016 Edition Report"
+      },
+      {
+        "url": "https://www.there-yet.com/blog/a-pickle-in-the-desert",
+        "category": "community",
+        "label": "First-Person 2024 Ride Report — Final Edition Course Detail"
+      }
+    ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://luckystarscooter.com/event/eroica-south-africa",
-      "notes": "Only a generic passed-event listing is found with no clear year, future edition, or cancellation info.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.bicycling.co.za/events/celebrate-the-soul-of-cycling-at-il-classico-a-new-event-for-vintage-enthusiasts/",
+      "notes": "Last verified edition ran 12-14 April 2024. Bicycling South Africa reported on 2025-01-27 that Eroica South Africa 'is no more.' It is absent from Eroica.cc's current official event roster. No 2026 edition is confirmed; the previously stored 'April 10, 2026' date appears to have been an unsupported recurring-calendar projection, not an organizer-confirmed date."
+    },
+    "catalog_flags": {
+      "status_note": "Defunct event confirmed this wave (last edition 2024; ended per organizer-adjacent reporting Jan 2025). This was a former official Eroica-series event, not a fabrication — no underlying commercial license document was located during research, but the sanctioning is well established via Eroica's own history, editorial coverage, and founder involvement (see research-dumps/eroica-south-africa.md). Founded 2016 as part of Eroica's international expansion, distinct from eroica-germania (this same batch) and eroica-hispania (owned by another batch this wave; confirmed distinct, not touched). Vitals updated from an unverifiable 130.4km/2,499m to the last-verified 2024 long-course figures (172km/1,978m, rider-recorded, format not disambiguated between Hero and Nova in the source account) since no single canonical course existed across the event's history — distances and formats changed substantially across its run (see course_description and research-dumps/eroica-south-africa.md for the year-by-year breakdown). Date/date_specific set to a discontinued-status string (validate_profile.py requires a non-null value) rather than left null. South Africa's relaxed pre-1999 vintage-bike cutoff (vs. the mainline 1987-or-earlier Eroica standard) is noted as a real rule variance, not an error.",
+      "ruled": "2026-07-24 editorial wave 6 (batch D)"
     }
   }
 }
