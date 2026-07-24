@@ -14,7 +14,7 @@
       "country": "USA",
       "date": "May annually",
       "date_specific": "2026: May 9",
-      "field_size": "~2,000-3,000 riders (all distances including competitive categories)",
+      "field_size": "~1,500 riders (2026 registration cap, all distances including competitive categories; field peaked at ~2,000-3,000 in the mid-2010s)",
       "start_format": null,
       "registration": "Online. Cost: ~$75-120",
       "entry_fee": "~$75-120",
@@ -99,13 +99,13 @@
       "lodging_strategy": "Cambridge is tiny — book early or stay in Saratoga Springs (30 min), which has hotels, restaurants, and a vibrant town center. Manchester, VT is also nearby across the state line.",
       "transport": "",
       "food": "Limited options in Cambridge. Saratoga Springs has excellent restaurants. Pack post-ride food or plan a Saratoga dinner.",
-      "official_site": "https://tourofthebattenkill.com/"
+      "official_site": "https://anthemsportstours.com/battenkill"
     },
     "history": {
       "founded": 2005,
-      "origin_story": "The Tour of the Battenkill launched in 2007 as a spring road race through Washington County, New York. The route's use of dirt farm roads — a necessity of the local road network, not a marketing gimmick — predated the gravel cycling movement by years. The event grew to include gran fondo options alongside competitive race categories. The Battenkill Valley's covered bridges, stone walls, and dairy farms became the backdrop for what many consider the Northeast's most characterful cycling event.",
+      "origin_story": "The Tour of the Battenkill launched in 2005 as a spring road race through Washington County, New York. The route's use of dirt farm roads — a necessity of the local road network, not a marketing gimmick — predated the gravel cycling movement by years. The event grew to include gran fondo options alongside competitive race categories. The Battenkill Valley's covered bridges, stone walls, and dairy farms became the backdrop for what many consider the Northeast's most characterful cycling event.",
       "notable_moments": [
-        "2007: First edition establishes the Battenkill as a Northeast spring cycling fixture",
+        "2005: First edition establishes the Battenkill as a Northeast spring cycling fixture",
         "Dirt farm road sectors predated the gravel movement — this was mixed-surface before the genre existed",
         "Both competitive road racing and gran fondo components attract distinct but overlapping fields",
         "Cambridge, NY embraced cycling tourism as part of the local economy"
@@ -137,9 +137,19 @@
     },
     "citations": [
       {
-        "url": "https://tourofthebattenkill.com/",
+        "url": "https://anthemsportstours.com/battenkill",
         "category": "official",
-        "label": "Tour of the Battenkill — Official Site"
+        "label": "Battenkill (formerly Tour of the Battenkill) — Official Site, Anthem Sports"
+      },
+      {
+        "url": "https://www.bikereg.com/tour-of-the-battenkill-open-gran-fondo",
+        "category": "official",
+        "label": "Battenkill Open Gran Fondo — BikeReg Registration"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Tour_of_the_Battenkill",
+        "category": "reference",
+        "label": "Tour of the Battenkill — Wikipedia"
       }
     ],
     "youtube_data": {
@@ -312,9 +322,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://anthemsportstours.com/battenkill",
-      "notes": "2026 edition is announced for Cambridge, NY on May 9; this is the Gran Fondo event, not the 2017 UCI pro race that was cancelled.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition confirmed for Cambridge, NY on May 9; this is the Gran Fondo event, not the historical UCI pro race. UCI 1.2 status ran men's-only in 2010 and 2012; a UCI 1.2 race was added back to the 2017 America's Tour calendar but was cancelled that June for lack of funding (the amateur Pro/Am and Gran Fondo went ahead as scheduled) — GranFondoGuide's contemporaneous report. No UCI-sanctioned pro race has run since. Founded 2005 (corrected from a stray '2007' in origin_story/notable_moments, which contradicted this profile's own founded field and Wikipedia). The original domain tourofthebattenkill.com no longer resolves — `dig` against both 8.8.8.8 and 1.1.1.1 returns SERVFAIL, and the resolver's own extended-error text explicitly cites failure 'at delegation tourofthebattenkill.com,' i.e. the domain's DNS delegation is broken, not just an offline web server (verified 2026-07-24). The event was rebranded 'Battenkill' in 2025 under founder Dieter Drake's Anthem Sports after prior operator Ventures Endurance declined to continue it (Dec 2024); registration and official info now live at anthemsportstours.com/battenkill and battenkillrace.com (redirects to the same). logistics.official_site and citations updated accordingly. vitals.field_size updated to reflect the current 1,500-rider 2026 cap vs. the mid-2010s peak of 2,000-3,000; last edition evidenced: 2026."
     }
   }
 }

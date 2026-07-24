@@ -3,10 +3,10 @@
     "name": "Istria Granfondo",
     "slug": "istria-granfondo",
     "display_name": "Istria Granfondo",
-    "tagline": "UCI qualifier crams 112km and 1745m into Istria's savage coastal climbs—pure sufferfest gold.",
+    "tagline": "UCI qualifier crams 105km into Istria's savage coastal climbs—pure sufferfest gold.",
     "vitals": {
-      "distance_km": 112.0,
-      "distance_mi": 69.6,
+      "distance_km": 105.0,
+      "distance_mi": 65.2,
       "elevation_m": 1745,
       "elevation_ft": 5725.0,
       "location": "Umag, Istria County, Croatia",
@@ -23,8 +23,8 @@
       "lat": 45.4342,
       "lng": 13.5254,
       "route_options": [
-        "Granfondo: 69.6mi, 5725ft — brutal Istrian climbs with Oprtalj repeat",
-        "Mediofondo: ~55mi, 4114ft — scaled-down central peninsula punishment",
+        "Granfondo: 65.2mi (105km), elevation not independently reconfirmed for this distance (prior-year figure was 5725ft/1745m on a longer 112km course) — brutal Istrian climbs with Oprtalj repeat (2026 official distance; some prior editions ran 112km/119km — course length varies by year)",
+        "Mediofondo: 49.7mi (80km) — scaled-down central peninsula punishment (2026 official distance; prior editions ran ~87-94km)",
         "Time Trial: 13.9mi, ~1050ft — flat-out Friday qualifier blast"
       ]
     },
@@ -253,8 +253,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://www.istria-bike.com/en/events/istria-granfondo"
+      "verified": "2026-07-24",
+      "source": "https://www.istria-bike.com/en/events/istria-granfondo",
+      "notes": "UCI Gran Fondo World Series qualifier status confirmed TRUE: officially recognized by UCI since 2023 (corroborated independently by istria-bike.com official site and granfondoguide.com); 2026 edition (April 11) already held as a qualifier for the Aug 2026 UCI Gran Fondo World Championships in Niseko, Japan. Distance corrected this pass: 2026 Gran Fondo is 105km (was listed as 112km, which matches the 2024 edition's distance -- course length varies year to year: 94/119km per a 2027 aggregator listing, 112km in 2024, 105km/80km per the current 2026 official site). Elevation (1,745m) not independently reconfirmed for the shorter 105km 2026 course -- left as-is, flagged as unverified for 2026 specifically."
     }
   }
 }

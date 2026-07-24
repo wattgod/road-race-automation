@@ -11,7 +11,7 @@
       "elevation_ft": 7776.0,
       "location": "Venue rotates annually (2026: Niseko, Hokkaido, Japan)",
       "location_badge": "NISEKO, JAPAN (2026)",
-      "country": "Japan)",
+      "country": "Japan",
       "date": "Late August to October annually (varies by venue)",
       "date_specific": "2026: August 26-30 (Niseko, Japan)",
       "field_size": "~2,000 qualified riders from 55-60 countries",
@@ -102,12 +102,12 @@
       "official_site": "https://ucigranfondoworldseries.com/en/world-championships/"
     },
     "history": {
-      "founded": 2012,
-      "origin_story": "The UCI Gran Fondo World Series launched in 2011 as the governing body's answer to the growing global appetite for competitive mass-participation cycling. The concept was straightforward: create an official qualification pathway through sanctioned events worldwide, culminating in a world championship where amateur riders could earn the coveted rainbow jersey — the same band design worn by professional world champions. The first World Championships were held in 2012 in Pietermaritzburg, South Africa. The event quickly grew as national federations and event organizers recognized the commercial and sporting value of UCI-sanctioned status. By 2026, 36 qualifying events across five continents feed into the World Championship, and the host venue rotation has taken the championship to Italy, Slovenia, Denmark, Australia, France, Poland, Bosnia, Scotland, and Japan.",
+      "founded": 2011,
+      "origin_story": "The UCI Gran Fondo World Series launched in 2011 as the governing body's answer to the growing global appetite for competitive mass-participation cycling. The concept was straightforward: create an official qualification pathway through sanctioned events worldwide, culminating in a world championship where amateur riders could earn the coveted rainbow jersey — the same band design worn by professional world champions. The first World Championships were held in 2011 in Stavelot, Belgium, with Pietermaritzburg, South Africa hosting the second edition in 2012. The event quickly grew as national federations and event organizers recognized the commercial and sporting value of UCI-sanctioned status. By 2026, the qualifying calendar had expanded to 36 events across five continents feeding into the World Championship, and the host venue rotation has taken the championship to Belgium, Italy, Slovenia, Denmark, Australia, France, Poland, Bosnia, Scotland, and Japan.",
       "notable_moments": [
-        "2011: UCI Gran Fondo World Series launched — creating the first global qualification system for amateur road cycling",
-        "2012: First UCI Gran Fondo World Championships held in Pietermaritzburg, South Africa",
-        "2015-2019: Series matures with consistent European venues (Aarhus, Perth, Albi, Varese, Poznan)",
+        "2011: UCI Gran Fondo World Series launched — first edition of the World Championships held in Stavelot, Belgium, creating the first global qualification system for amateur road cycling",
+        "2012: Second UCI Gran Fondo World Championships held in Pietermaritzburg, South Africa",
+        "2015-2019: Series matures with consistent European venues (Aalborg, Perth, Albi, Varese, Poznan)",
         "2020: Vancouver edition cancelled due to COVID-19 pandemic",
         "2023: Gran Fondo World Championships included in the inaugural combined UCI Cycling World Championships in Glasgow, Scotland",
         "2025: Great Ocean Road, Australia — Southern Hemisphere showcase",
@@ -175,8 +175,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://ucigranfondoworldseries.com/en/2026-uci-gran-fondo-world-championships-head-to-asia-for-the-first-time-welcome-to-niseko-jpn/"
+      "verified": "2026-07-24",
+      "source": "https://ucigranfondoworldseries.com/en/2026-uci-gran-fondo-world-championships-head-to-asia-for-the-first-time-welcome-to-niseko-jpn/",
+      "notes": "2026 edition confirmed Aug 26-30, Niseko, Japan (matches profile, curl/WebFetch-verified on ucigranfondoworldseries.com's own Niseko announcement). Qualifying calendar: ucigranfondoworldseries.com announced a 36-event 2026 season (+9 new, up from 32) in a Nov 2025 release; a live-calendar check on 2026-07-24 counted 35 listed 'Qualifiers 2025-2026' events — close enough to read as the same season total (minor list drift, e.g. a late addition/cancellation) rather than a materially different claim, but flagging the small discrepancy rather than asserting an exact-36 count with high confidence. CORRECTION: history.founded and origin_story previously said the first Championships were held in 2012 in Pietermaritzburg, South Africa — the series' own Hall of Fame page (ucigranfondoworldseries.com) lists rider Molly Van Houweling's time-trial world titles in chronological order as 'Stavelot 2011, Pietermaritzburg 2012, Ljubljana 2014...', establishing Stavelot, Belgium 2011 as the actual first edition and Pietermaritzburg 2012 as the second. Corrected founded/origin_story/notable_moments accordingly, and fixed an unrelated 'Aarhus'→'Aalborg' host-city typo in notable_moments (the 2015 edition was in Aalborg, Denmark, confirmed via UCI.org and the official 2015 results PDF). 'Only world championship in amateur road cycling' is a defensible characterization, not a direct UCI-published superlative: the UCI Road World Championships field Elite/U23/Junior competitive categories but are not open to amateur/age-group entry; the Gran Fondo Worlds are the UCI's sole road-discipline championship open to amateur/age-group riders (distinct from UCI Gravel or MTB Marathon Worlds, which are different disciplines). Also fixed vitals.country, which read 'Japan)' with a stray trailing parenthesis — corrected to 'Japan'."
     }
   }
 }

@@ -123,9 +123,9 @@
     },
     "biased_opinion": {
       "verdict": "Walter's Lake",
-      "summary": "The Lake Taupō Cycle Challenge is not a race. It is a pilgrimage. Every last Saturday of November since 1977, thousands of New Zealanders have driven to a small volcanic-plateau town to circle a supervolcano's caldera on their bicycles, because a schoolteacher named Walter de Bont once thought it would be a good idea to ride around the lake with 26 of his mates. That ride became New Zealand's largest cycling event — peaking at 10,000 riders in its heyday and still drawing 7,000 annually after 47 editions. The 160 km circuit takes in geothermal steam fields, rolling Waikato farmland, three named hills that each provide their own variety of suffering, and the crystal-clear eastern shore of the largest lake in New Zealand. On a clear day, you ride toward the snow-capped volcanic peaks of Tongariro and Ruapehu. On a bad day, you ride into wind and rain on exposed state highways. Either way, you finish in a town that has been celebrating your ride all day long.",
+      "summary": "The Lake Taupō Cycle Challenge is not a race. It is a pilgrimage. Most last Saturdays of November since 1977 (the event was cancelled in 2020, 2021, and again in Feb 2022 due to Covid-19), thousands of New Zealanders have driven to a small volcanic-plateau town to circle a supervolcano's caldera on their bicycles, because a schoolteacher named Walter de Bont once thought it would be a good idea to ride around the lake with 26 of his mates. That ride became New Zealand's largest cycling event — peaking at 10,000 riders in its heyday and still drawing 7,000 annually after 47 editions. The 160 km circuit takes in geothermal steam fields, rolling Waikato farmland, three named hills that each provide their own variety of suffering, and the crystal-clear eastern shore of the largest lake in New Zealand. On a clear day, you ride toward the snow-capped volcanic peaks of Tongariro and Ruapehu. On a bad day, you ride into wind and rain on exposed state highways. Either way, you finish in a town that has been celebrating your ride all day long.",
       "strengths": [
-        "47 years of unbroken tradition — the longest-running mass-participation cycling event in the Southern Hemisphere",
+        "47 editions and counting (three Covid-era cancellations in 2020-2022 aside) — among the longest-running mass-participation cycling events in the Southern Hemisphere",
         "Extraordinary volcanic setting: a supervolcano caldera with geothermal steam fields and views of three volcanic peaks",
         "Genuine community event: $3.5M annual economic impact, $80K in community grants, 200,000+ lifetime participants",
         "Accessible at every level: nine events from 16 km to 322 km, priced from NZ$59, half price for kids"
@@ -179,6 +179,11 @@
         "url": "https://www.cyclechallenge.com/records",
         "category": "official",
         "label": "Records — Lake Taupō Cycle Challenge"
+      },
+      {
+        "url": "https://www.rnz.co.nz/news/national/460178/major-taupo-cycle-event-cancelled-again-due-to-covid-19-red-light-setting",
+        "category": "media",
+        "label": "RNZ: Major Taupō cycle event cancelled again due to Covid-19 red light setting (2020-2022 cancellation record)"
       },
       {
         "url": "https://www.plotaroute.com/route/124086",
@@ -283,8 +288,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-17",
-      "source": "https://www.cyclechallenge.com/"
+      "verified": "2026-07-24",
+      "source": "https://www.cyclechallenge.com/",
+      "notes": "[size claim] verified TRUE: 'largest cycling event in New Zealand' corroborated independently by lovetaupo.com (official Taupo tourism site), Te Ara Encyclopedia of New Zealand (govt reference, teara.govt.nz), Wikipedia, and sportzhub.com. All describe the 1977-founded, Walter de Bont-started event as NZ's biggest cycling event, peaking 10,000+ riders in the late 2000s, now ~4,000-7,000 riders. CORRECTED 2026-07-24 (sol adversarial review caught this): biased_opinion.summary and strengths[0] previously claimed unbroken annual continuity ('Every last Saturday of November since 1977', '47 years of unbroken tradition') — RNZ (rnz.co.nz) confirms the event was cancelled in 2020, 2021, and again in Feb 2022 due to the Covid-19 red traffic light setting. Corrected both fields to acknowledge the Covid-era gaps rather than claim unbroken continuity."
     }
   }
 }

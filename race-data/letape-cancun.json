@@ -7,13 +7,13 @@
     "vitals": {
       "distance_km": 101.9,
       "distance_mi": 63.3,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_m": 133,
+      "elevation_ft": 436.0,
       "location": "Cancun, Quintana Roo, Mexico",
       "location_badge": "CANCUN, QR",
       "country": "Mexico",
-      "date": "May",
-      "date_specific": "2026: May 17",
+      "date": "February (moved from May after the 2026 May 17 edition was cancelled)",
+      "date_specific": "2026: May 17 edition was cancelled (confirmed via official asdeporte.com registration listing, marked CANCELADO). Series continues: official site (cancun.letapeseries.com/stages) lists a new edition for Feb 14, 2027.",
       "field_size": "1,000+ amateurs chasing Tour vibes",
       "start_format": null,
       "registration": "Tour-branded closed-road ride with finisher perks; costs undisclosed but expect premium entry.",
@@ -23,13 +23,13 @@
       "lat": 21.1619,
       "lng": -86.8515,
       "route_options": [
-        "Ruta Corta: 34mi, 0ft — breezy intro to paradise pedaling",
-        "Ruta Larga: 63mi, 0ft — full-throttle Caribbean crusher"
+        "Ruta Corta: 34mi (55.57km), 240ft (73m) — breezy intro to paradise pedaling",
+        "Ruta Larga: 63mi (101.48km), 436ft (133m) — full-throttle Caribbean crusher"
       ]
     },
     "climate": {
       "primary": "Tropical heat bomb — brief",
-      "description": "May in Cancun slams 82-90°F days with crushing humidity and steady Caribbean breezes. Low rain risk early month keeps roads dry for speed. Tropical vibes demand smart hydration or you'll melt.",
+      "description": "The event has moved from its original May date to February (the cancelled May 17, 2026 edition was replaced by a Feb 14, 2027 edition). February in Cancun runs cooler and drier than the May conditions described below, which describe the prior May-date editions and have not been re-verified for the new February slot: May in Cancun slams 82-90°F days with crushing humidity and steady Caribbean breezes. Low rain risk early month keeps roads dry for speed. Tropical vibes demand smart hydration or you'll melt.",
       "challenges": [
         "scorching heat",
         "soul-sucking humidity",
@@ -92,18 +92,19 @@
     },
     "logistics": {
       "airport": "Cancun International (CUN) 15-20km from start—direct global flights swarm. Taxis, shuttles, rentals zip you beachside fast. No-fuss fly-in heaven.",
-      "lodging_strategy": "Hotel Zone resorts steps from Malecón Tajamar start—book early for May peak. All-inclusive packs race + vacay. Budget hostels inland if pinching pesos.",
+      "lodging_strategy": "Hotel Zone resorts steps from Malecón Tajamar start—book early for the Feb 14, 2027 date (previously a May peak, now moved to February). All-inclusive packs race + vacay. Budget hostels inland if pinching pesos.",
       "transport": "",
       "food": "Taco trucks to resort buffets—fuel cheap and flavorful. Pre-race ceviche vibes, post carbs galore. Hydrate heavy in humidity hell.",
       "official_site": "https://cancun.letapeseries.com"
     },
     "history": {
-      "founded": 2024,
-      "origin_story": "Born 2024 as L'Etape Series' Caribbean debut, bringing Tour's closed-road glory to Mexico's coast. Inaugural smashed with flat speed amid palms, targeting amateurs craving pro aura sans Alps. 2026 edition amps with open regs, three routes in turquoise paradise. Instant hit for tropical twist on gran fondo formula.",
+      "founded": 2023,
+      "origin_story": "Born 2023 as L'Etape Series' Caribbean debut, bringing Tour's closed-road glory to Mexico's coast (first edition: sprint/short/long routes of 40/75/160 km). Targeting amateurs craving pro aura sans Alps. The route was shortened for the (cancelled) 2026 edition -- its listed long route ran 101.48 km with 133m of gain. The originally-scheduled May 17, 2026 edition was cancelled; the series has since relaunched with a new February 14, 2027 edition on the official site, though that 2027 edition's own distance/elevation figures had not been separately published as of this pass -- the 101.48km/133m figures are verified for the cancelled 2026 course, not yet confirmed for 2027.",
       "notable_moments": [
-        "2024 inaugural flat-out success",
-        "2026 three-route expansion",
-        "Tour Series Mexico beachhead"
+        "2023 inaugural edition — first L'Etape event in the Caribbean",
+        "2025: third consecutive edition held",
+        "2026: May 17 edition cancelled (confirmed via asdeporte.com registration listing)",
+        "2027: series relaunches with a new February date"
       ],
       "reputation": "Rising star in L'Etape lineup—prestige punch with fun-first flats. Early buzz strong post-debut. Flat format divides purists but hooks speed demons."
     },
@@ -137,6 +138,21 @@
         "url": "https://cancun.letapeseries.com",
         "category": "official",
         "label": "L'Etape Cancun Official Site"
+      },
+      {
+        "url": "https://cancun.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Etape Cancun: routes/stages page (101.48km/133m long + 55.57km/73m short routes as listed for the cancelled May 17 2026 edition; page also shows a new Feb 14, 2027 edition date, distances not yet separately confirmed for 2027)"
+      },
+      {
+        "url": "https://www.asdeporte.com/evento/l-e-tape-cancu-n-by-tour-de-france-2026-vh1/datos-del-evento",
+        "category": "reference",
+        "label": "asdeporte.com registration listing confirming May 17, 2026 edition CANCELADO"
+      },
+      {
+        "url": "https://www.endondecorrer.com/events/letape-cancun-by-tour-de-france-2023",
+        "category": "reference",
+        "label": "En Donde Correr: L'Etape Cancun by Tour de France 2023 (first edition)"
       }
     ],
     "youtube_data": {
@@ -317,9 +333,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.asdeporte.com/evento/l-e-tape-cancu-n-by-tour-de-france-2026-vh1/datos-del-evento",
-      "notes": "The event is listed as L'Étape Cancún by Tour de France 2026 on May 17, 2026; no rebrand or cancellation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://cancun.letapeseries.com/stages",
+      "notes": "CORRECTED this pass: prior note claimed 'no cancellation signal found' for the May 17, 2026 edition, but asdeporte.com's registration listing for that exact date is explicitly marked CANCELADO ('LAMENTABLEMENTE EL EVENTO HA SIDO CANCELADO'), published:false. Independently, battistrada.com and the official cancun.letapeseries.com/stages page both show the series continuing with a new Feb 14, 2027 edition (moved from May to February) -- so the series itself is active, but the specific May 17, 2026 edition did not run as planned. Status kept 'active' at the series level per the confirmed 2027 edition; the 2026 cancellation is documented in history.notable_moments."
     }
   }
 }

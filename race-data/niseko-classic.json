@@ -124,8 +124,8 @@
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Niseko Classic is Asia's most prestigious gran fondo, offering world-class mountain cycling and cultural immersion as the official qualifier for the 2026 UCI Gran Fondo World Championships.",
-      "should_you_race": "Niseko Classic stands as a landmark event in amateur cycling, combining exceptional elevation gain (2,370 m), technical mountain terrain, and stunning Hokkaido scenery. Its status as the official 2026 UCI Gran Fondo World Championships qualifier elevates its prestige significantly. The event delivers on climbing quality and organization, with fully closed roads and professional support. However, international participants face substantial travel costs, uncertain registration fees, and limited information on field depth. Best suited for experienced climbers seeking a unique Asian cycling experience and potential qualification pathway to the World Championships. The June timing in early summer Hokkaido offers mild conditions but potential rain. Overall, a high-quality event with significant cultural and competitive value, though not optimized for budget-conscious riders.",
+      "one_liner": "Niseko Classic built a decade of pedigree as Asia's premier mountain gran fondo and a UCI Gran Fondo World Series qualifier — but the open-entry race isn't held in 2026, the year Niseko instead hosts the UCI Gran Fondo World Championships itself.",
+      "should_you_race": "Niseko Classic earned its reputation over 12 editions (2014-2025) as a UCI Gran Fondo World Series qualifier, combining exceptional elevation gain (2,370 m), technical mountain terrain, and stunning Hokkaido scenery. For 2026, though, the open-entry race is not running: Niseko is instead hosting the UCI Gran Fondo World Championships itself (Aug 26-30, qualification-only, no open registration), and Japan's UCI Gran Fondo World Series qualifier slot has moved to the new Tour de Fukushima. If a future open-entry edition returns, it's best suited for experienced climbers seeking a unique Asian cycling experience. For 2026, treat this profile as reference only — there's no event to register for.",
       "alternatives": ""
     },
     "citations": [
@@ -289,6 +289,10 @@
       "verified": "2026-07-22",
       "source": "https://nisekoclassic.com/en/info/faq",
       "notes": "Organizer FAQ: open-entry Niseko Classic not held 2026. nisekoclassic.com stays live only as host of the qualifier-restricted UCI Gran Fondo World Championships (Aug 26-30 2026, top-25% age-group qualification required). No future open-entry date published."
+    },
+    "catalog_flags": {
+      "status_note": "2026-07-24 debt-sweep: final_verdict.one_liner and .should_you_race corrected — no longer claim Niseko Classic itself is 'the official 2026 UCI Gran Fondo World Championships qualifier' (stale; the open-entry race is cancelled for 2026 and Japan's UCI GFWS qualifier slot moved to the new Tour de Fukushima; Niseko is only hosting the separate, qualification-only World Championships event). history.origin_story and biased_opinion.summary carry the same stale framing but were out of this batch's flagged-claims scope — left untouched, flagged here for a future wave or a human call on whether this profile should stay in active listing given the 2026 cancellation.",
+      "ruled": "2026-07-24 debt-sweep batch 7"
     }
   }
 }

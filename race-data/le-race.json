@@ -128,7 +128,7 @@
       "summary": "Le Race is New Zealand's one-day road cycling classic — 100 kilometres from Cathedral Square in earthquake-rebuilt Christchurch to the French harbour village of Akaroa, across the crater rim of an extinct volcanic complex that juts into the Pacific Ocean. The route climbs Dyers Pass out of the city, traverses the exposed Summit Road with panoramic views of Lyttelton Harbour and the Southern Alps, descends to Little River, then grinds back up to the Hilltop — 30-50 minutes of sustained climbing to the Banks Peninsula crater rim — before plunging down to the French-flavoured finish. The Hall of Fame includes Olympic medalists, world champions, and Commonwealth Games winners. Nate Pringle's 2024 victory — cramping on the final climb, squeezing out one last attack to hold off the chasing bunch — is the kind of desperate, decisive racing this course produces. Six hundred riders line up each March for New Zealand's most prestigious day on a road bike.",
       "strengths": [
         "Extraordinary setting: crossing the crater rim of an extinct volcanic complex with views into two flooded harbours and across to the Southern Alps",
-        "Genuine competitive pedigree: Hall of Fame includes Olympic medalists Hayden Roulston and Kate McIlroy, NZ national champions, and emerging talent like Nate Pringle",
+        "Genuine competitive pedigree: Hall of Fame includes Olympic medalist Hayden Roulston, world champion Kate McIlroy, NZ national champions, and emerging talent like Nate Pringle",
         "Point-to-point drama: 100 km from city to village with three major climbs, exposed ridgeline riding, and a finish in the French colonial charm of Akaroa",
         "25+ years of institutional knowledge: well-organised, well-marshalled, deeply embedded in Canterbury cycling culture"
       ],
@@ -183,6 +183,11 @@
         "label": "Riders Eye Milestone Victory in 25th Le Race — Otago Daily Times"
       },
       {
+        "url": "https://olympic.org.nz/athletes/kate-mcilroy",
+        "category": "reference",
+        "label": "Kate McIlroy — New Zealand Olympic Team athlete profile (Olympian, not medallist; World Champion 2005 Mountain Running)"
+      },
+      {
         "url": "https://granfondodailynews.com/2024/03/25/rising-star-nate-pringle-wins-grueling-le-race-in-new-zealand/",
         "category": "media",
         "label": "Rising Star Nate Pringle Wins Grueling Le Race — Gran Fondo Daily"
@@ -200,9 +205,10 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
+      "verified": "2026-07-24",
       "source": "https://lerace.co.nz/",
-      "note": "Official site confirms Golden Homes Le Race 2027 on Saturday, March 20, 2027 (weekday-checked)."
+      "note": "Official site confirms Golden Homes Le Race 2027 on Saturday, March 20, 2027 (weekday-checked).",
+      "notes": "[world championship] claim verified TRUE: lerace.co.nz/hall-of-fame/ (curl-verified 200) directly names Brian Fowler, Hayden Roulston, Kate McIlroy, and Linda Villumsen among its Hall of Fame -- collectively World Champions, Olympic medallists, and Commonwealth Games competitors; the collective history.origin_story claim needed no correction. CORRECTED 2026-07-24 (sol adversarial review caught this): biased_opinion.strengths[1] specifically mislabeled Kate McIlroy an 'Olympic medalist' -- she competed at the 2012 Olympics (triathlon, 10th place) and the 2006 Commonwealth Games (3000m steeplechase, 5th place) but won no medal at either; she IS a genuine World Champion (2005 World Mountain Running Championships) and NZ Sportswoman of the Year. Corrected to 'world champion Kate McIlroy' -- Roulston's 'Olympic medalist' label is independently confirmed accurate (double Olympic track medallist) and was left as-is."
     }
   }
 }

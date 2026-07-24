@@ -11,7 +11,7 @@
       "elevation_ft": 11071.0,
       "location": "Ilkley, West Yorkshire, UK",
       "location_badge": "ILKLEY, UK",
-      "country": "USA",
+      "country": "England",
       "date": "May-July",
       "date_specific": "2027: June 27 (2026 edition ran May 31; date moved to late June for 2027)",
       "field_size": "Up to 300 per long route, 200 on shorts",
@@ -102,10 +102,10 @@
       "official_site": "https://whiteroseclassic.org.uk"
     },
     "history": {
-      "founded": 2019,
-      "origin_story": "Born 2019 as Yorkshire's top sportive, White Rose plunged riders into Dales magic on TDF/Tour de Yorkshire roads. Started with three routes for all abilities, exploded in popularity. By 2025 added shortest 58km for casuals, cementing inclusive rep. Now carbon-neutral staple with pro-level support.",
+      "founded": 2012,
+      "origin_story": "Founded 2012 when Ilkley Cycle Club reformed, White Rose grew into Yorkshire's top sportive, plunging riders into Dales magic on TDF/Tour de Yorkshire roads. Started with three routes for all abilities, exploded in popularity. By 2025 added shortest 58km for casuals, cementing inclusive rep. Now carbon-neutral staple with pro-level support.",
       "notable_moments": [
-        "2019 launch on UCI Worlds roads",
+        "2012: Ilkley Cycle Club reforms, launches White Rose Classic",
         "2020 Dales debut pre-pandemic",
         "2024 'Must-Do' status with three routes",
         "2025 fourth short route launch",
@@ -294,8 +294,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://whiteroseclassic.org.uk/"
+      "verified": "2026-07-24",
+      "source": "https://whiteroseclassic.org.uk/",
+      "notes": "'Tour de France 2014 roads / UCI Worlds 2019 climbs' — the site's own copy ('roads made famous by the Tour de France in 2014, the Tour de Yorkshire ... and the UCI world championships in 2019') directly supports 'Tour de France 2014 roads' and the 2019 UCI Worlds tie-in; it says 'roads,' not 'climbs' specifically, so terrain.features' 'UCI Worlds 2019 climbs' is a reasonable compressed paraphrase (consistent with this profile's other short feature-list bullets) rather than a verbatim quote — left as-is but not overclaiming verbatim match. CORRECTION: history.founded/origin_story previously said 'Born 2019' — the official site states plainly 'Ilkley Cycle Club have been running the White Rose Classic since 2012 when the club reformed' (curl-verified, exact text), directly contradicting a 2019 founding. Corrected founded to 2012 and fixed origin_story/the first notable_moment accordingly; the remaining notable_moments bullets (2020 Dales debut, 2024 Must-Do status, 2025 fourth route, 2026 BC grading) were not independently re-verified this pass and may need a closer look given the founding-year correction. Separately corrected vitals.country from 'USA' to 'England' — the event is in Ilkley, West Yorkshire, UK; the prior value was an unrelated data-entry error."
     }
   }
 }

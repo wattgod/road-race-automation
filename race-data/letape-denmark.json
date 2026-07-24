@@ -13,7 +13,7 @@
       "location_badge": "JUTLAND / VIBORG, DENMARK",
       "country": "Denmark — all routes finish in Viborg",
       "date": "Late June annually",
-      "date_specific": "2027: June 26",
+      "date_specific": "2026: June 27 (ran under full L'Etape/ASO branding, now archived/post-event). 2027: the underlying DGI Hærvejsløbet event is confirmed for June 26, but denmark.letapeseries.com has not yet published a 2027 page, so L'Etape/ASO branding continuation for that specific date is probable but not independently confirmed.",
       "field_size": "7,000-7,500 riders (2024: 7,000 from 30+ countries)",
       "start_format": null,
       "registration": "Online via denmark.letapeseries.com. Entry fee varies by route. Early-bird discounts of 25-30% available. Includes official TdF cycling jersey.",
@@ -178,14 +178,19 @@
         "url": "https://pedalpeople.cc/l-etape-denmark",
         "category": "review",
         "label": "L'Etape Denmark — Pedal People"
+      },
+      {
+        "url": "https://www.visitsonderjylland.com/tourist/experiences/active-together/haervejen",
+        "category": "reference",
+        "label": "VisitSønderjylland: Hærvejen — \"Denmark's oldest highway\" (age-claim verification)"
       }
     ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-22",
-      "source": "https://sites.dgi.dk/haervejsloebet",
-      "note": "The underlying road event (DGI Hærvejsløbet) is confirmed by its organizer for Saturday, June 26, 2027 (\"DGI Hærvejsløbet køres 26. juni 2027. Tilmeldingen åbner til oktober.\"), but the page no longer clearly carries L'Etape/ASO branding, and ASO's own letapeseries.com calendar does not clearly list a 2027 Denmark edition. Unclear whether the specific ASO-branded \"L'Etape Denmark\" continues or the event has reverted to a standalone DGI ride — flagging as unknown pending clearer confirmation.",
-      "notes": "Underlying event (Hærvejsløbet) confirmed Jun 26 2027; L'Etape/ASO branding continuation unconfirmed."
+      "status": "active",
+      "verified": "2026-07-24",
+      "source": "https://denmark.letapeseries.com/",
+      "note": "RESOLVED this pass, upgraded from 'unknown' to 'active': the official denmark.letapeseries.com site (curl-verified 200) confirms the 2026 edition ran under full L'Etape by Tour de France / ASO branding on June 27, 2026 ('DGI Hærvejsløbet - L'Étape Denmark afholdes 27. juni 2026'), including TdF jersey-classification language. The page is now archived/post-event (registration closed, sold out, a 'look back' recap dated June 28, 2026), confirming the branded partnership was live through the most recent edition -- directly answering the prior uncertainty about whether ASO/L'Etape branding continued. The DGI Hærvejsløbet site separately confirms the underlying event's next date as June 26, 2027; independent confirmation that the 2027 edition specifically will retain L'Etape/ASO branding was not found this pass (denmark.letapeseries.com has not yet published a 2027 page), so treat the 2027 date/branding combination as likely-but-not-fully-confirmed.",
+      "notes": "Underlying event (Hærvejsløbet) confirmed Jun 26 2027; 2026 edition confirmed to have run under full L'Etape/ASO branding (resolves prior uncertainty); 2027 branding continuation probable but not independently confirmed."
     }
   }
 }

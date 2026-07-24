@@ -12,11 +12,11 @@
       "location": "Viana do Castelo, Alto Minho, Northern Portugal",
       "location_badge": "VIANA DO CASTELO, PORTUGAL",
       "country": "Northern Portugal",
-      "date": "Late September annually (typically last Sunday of September)",
+      "date": "Historically late September (typically last Sunday of September); next edition not yet announced as of this pass (last confirmed: Sept 28, 2025)",
       "date_specific": "2025: September 28",
       "field_size": "~800 riders (growing annually since 2022 inaugural edition)",
       "start_format": null,
-      "registration": "Online via official L'Etape Portugal website (portugal.letapebytourdefrance.com). Registration typically opens in spring. Managed by Podium Events in partnership with ASO.",
+      "registration": "The official site (portugal.letapebytourdefrance.com) is currently dead (expired TLS certificate since Feb 2026, HTTP 500), and the organizer's event page (podi1.com) shows only a placeholder as of this pass. No live registration channel confirmed. While it operated: online via the official site, registration typically opened in spring, managed by Podium Events in partnership with ASO.",
       "entry_fee": "EUR 40-68 depending on distance selected (tiered by route length). Includes race number, chip timing, feed zones, medical assistance, broom wagon, finisher medal, and pasta party. Official L'Etape Portugal jersey available for separate purchase (EUR 45-55).",
       "feed_zones": "3 feed zones along the route plus start/finish area support. Medical assistance and broom wagon throughout.",
       "cutoff_time": "Approximately 8 hours for the long route",
@@ -112,7 +112,7 @@
         "2023: Second edition — Viana do Castelo named European City of Sport 2023, aligning perfectly with the event's growth",
         "2023: Cyclist magazine review brings international attention — 'L'Etape Portugal review: 140km with 2,500m climbing ft. Didi the Devil'",
         "2024: Third edition (September 29) — route adjusted to 126/97/55 km distances, continued growth in participation",
-        "2025: Fourth edition scheduled for September 28 — route returns to approximately 140/100/50 km format"
+        "2025: Fourth edition ran September 28 — route returned to approximately 140/100/50 km format. Next edition not yet announced as of 2026-07-24."
       ],
       "reputation": "A young, well-organized Tour de France satellite event that has quickly established itself as one of Portugal's most notable road sportives. Known for tight organization, genuine competitive structure through the jersey classifications, and outstanding value in one of Europe's most affordable cycling destinations. Still building its reputation internationally, but respected within the Iberian cycling community."
     },
@@ -176,6 +176,11 @@
         "url": "https://battistrada.com/en/cycling-calendar/edition/letape-portugal-2025/42855/",
         "category": "reference",
         "label": "L'Etape Portugal 2025 Edition — Battistrada"
+      },
+      {
+        "url": "https://battistrada.com/en/event/letape-portugal/13576/",
+        "category": "reference",
+        "label": "Battistrada event page confirming last edition Sept 28 2025, next edition not yet announced (eligibility source, 2026-07-24)"
       },
       {
         "url": "https://breatheviana.pt/en/event/letape-portugal-by-tour-de-france-2/",
@@ -261,10 +266,10 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://portugal.letapebytourdefrance.com/participant-information",
-      "notes": "Official site lists a 3rd edition on 29 September 2024 in Viana do Castelo; a 2025 edition on 28 September is also listed on a cycling calendar, so the event appears ongoing.; last edition evidenced: 2024; via sonar-pro eligibility_audit"
+      "status": "unknown",
+      "verified": "2026-07-24",
+      "source": "https://battistrada.com/en/event/letape-portugal/13576/",
+      "notes": "DOWNGRADED this pass from 'active' to 'unknown': the prior eligibility.source (portugal.letapebytourdefrance.com/participant-information) is now dead -- its TLS certificate expired Feb 12, 2026 and the site returns HTTP 500 even with certificate validation disabled (curl-verified). The organizer's own event page (podi1.com/event/letape-portugal/, Podium Events -- the local organizer) currently shows only a placeholder ('Pardon our dust! We're working on something amazing'), not live event content. L'Etape Portugal is absent from letapeseries.com's main hub listing and from battistrada.com's 2026 L'Etape by Tour de France circuit page. battistrada.com's own event page confirms the last edition ran Sept 28, 2025 and states the next edition 'hasn't been announced yet.' No cancellation statement was found either -- this is genuine uncertainty (dead official site + no 2026 date + not on current circuit listings, but also no explicit discontinuation announcement), hence 'unknown' rather than 'defunct'. [UCI affiliation] flagged claim (final_verdict.should_you_race: '...expect the depth and intensity of UCI-sanctioned gran fondos') verified consistent: L'Etape Portugal is an ASO/Podium Events franchise sportive, not a UCI-sanctioned event -- no UCI competition record found for it -- so the comparison itself is accurate and needed no correction; text left as-is."
     }
   }
 }
