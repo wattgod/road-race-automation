@@ -5,21 +5,21 @@
     "display_name": "London Edinburgh London",
     "tagline": "",
     "vitals": {
-      "distance_km": 1528.9,
-      "distance_mi": 950.0,
-      "elevation_m": 10973,
-      "elevation_ft": 36000.0,
-      "location": "Chelmsford, Essex, UK",
-      "location_badge": "Chelmsford, UK",
-      "country": "USA",
-      "date": "2026: July TBD",
-      "date_specific": "2026: July TBD",
-      "field_size": null,
-      "start_format": null,
+      "distance_km": 1540.0,
+      "distance_mi": 956.9,
+      "elevation_m": 14080,
+      "elevation_ft": 46194.0,
+      "location": "London area, England, UK (start venue varies by edition — Loughton/Debden, Essex in 2022; Writtle, near Chelmsford, scheduled for 2029)",
+      "location_badge": "London area, UK",
+      "country": "United Kingdom",
+      "date": "Not held in 2026 — quadrennial randonnée. Last completed edition: 2022. Next scheduled edition: August 5, 2029",
+      "date_specific": "2029: Sunday, August 5 (primary start Writtle University College, Chelmsford; secondary start Guildhall Yard, London). This follows the abandonment of the 2025 edition due to Storm Floris.",
+      "field_size": "2022: 1,500 starters, 890 completions per Audax UK's annual report (59% completion). 2025: edition started but was abandoned mid-event due to Storm Floris — no official finishers recorded.",
+      "start_format": "Self-supported, staggered start groups (2022 offered a 100-hour 'fast' group and a 128h20m standard group); no personal support vehicles allowed",
       "registration": "https://londonedinburghlondon.com/",
       "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "feed_zones": "2022: 20 control visits across 13 locations (incl. St Ives, Boston, Louth, Barnard Castle, Moffat, Dunfermline) offering food, beds, showers, and limited mechanical/medical support — riders are self-supported between controls",
+      "cutoff_time": "128 hours 20 minutes (standard start group, 2022); an earlier-starting 100-hour 'fast' group option was also offered",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -46,17 +46,17 @@
       "altitude": 1,
       "logistics": 4,
       "prestige": 4,
-      "field_depth": 3,
+      "field_depth": 1,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 69,
+      "overall_score": 66,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. Score recalculated: 69."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 74. adventure dimension dropped, road_surface added. field_depth corrected 3->1 during editorial wave 4 (2026-07-24): rubric value 3 ('structured competitive waves, official age-group prizes') directly contradicted this profile's confirmed non-competitive, alphabetical-finisher format; rubric 1 ('casual only, no competition') is the accurate literal fit even though LEL itself is far from casual in difficulty — see catalog_flags for the broader taxonomy mismatch. Score recalculated: 66."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,11 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "London Edinburgh London is Audax UK's flagship randonnée — a fixed, prescribed 1,500 km-class course (1,540 km / 14,080 m in the last completed 2022 edition) that riders navigate exactly as designed, not a route-choice ultra like a bikepacking race. It is genuinely self-supported between controls — no personal support vehicles are permitted — but the organizer runs 20 control visits across 13 staffed locations offering food, beds, showers, and limited mechanical/medical help, which is a materially different support model from a fully unsupported bikepacking event. There are no placings: riders either finish inside the time limit or don't, and official finishers are published alphabetically, not ranked. It runs once every four years — 2017, a COVID-delayed 2022 (standing in for 2021), and a 2025 edition that started but was abandoned mid-event due to Storm Floris with no official finisher list. The next edition is scheduled for August 5, 2029.",
+      "signature_challenge": "Simply finishing inside the time limit — 128 hours 20 minutes for the standard start group in 2022 — after nearly 1,000 miles and roughly 14,000 m of climbing with no personal support crew, just the control network.",
       "suffering_zones": [
-        "The Scottish Borders Grind: Post-Edinburgh return through Hawick and hill ranges piles on 5000m+ climbing after 700 miles. Headwinds and fatigue turn remote lanes into a mental battle over 300km.",
-        "Fenland Headwind Plains: Flat 200 miles to Boston exposes riders to relentless crosswinds on exposed fens. Early pace discipline prevents blow-ups before northern hills hit."
+        "The northbound leg through the Lincolnshire and Yorkshire fens — long, exposed, flat miles where crosswinds and early pacing mistakes do more damage than any single climb.",
+        "The Scottish leg beyond Edinburgh to Dunfermline via the Forth Road Bridge, and the return south through the Scottish Borders — climbing accumulates here well after most riders are sleep-deprived.",
+        "Sleep management across the full 128-hour window — LEL's real signature difficulty is logistics and fatigue, not any single mountain pass; the 2022 finish rate was 59%, and the 2025 edition didn't reach a finish at all before being abandoned to weather."
       ]
     },
     "logistics": {
@@ -91,24 +92,70 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Not a Gran Fondo — A Historically Significant, Rarely-Run Ultra-Distance Randonnée",
+      "summary": "London Edinburgh London is a historically significant self-supported randonnée organized by Audax UK since 1989, and it deserves to be judged on its own terms — but those terms have almost nothing in common with a gran fondo. There is no field to compare yourself against competitively, no closed roads, no ranked result: riders navigate a fixed 1,540 km / 14,080 m course (2022 figures) within a 128-hour-plus time limit, resupplying at staffed controls between long, self-supported stretches. It runs once every four years, and even that cadence isn't reliable — the 2025 edition started and was abandoned mid-event to Storm Floris, producing no official finishers, and the next attempt isn't scheduled until August 2029. In the last edition that actually completed (2022), 41% of the 1,500 starters didn't make it back inside the time limit. This is not an event you can casually decide to enter next season; if the next edition happens on schedule, it's three years away.",
+      "strengths": [
+        "Historic and prestigious within UK audax/randonneuring — running since 1989, organized by Audax UK with international validation from Les Randonneurs Mondiaux",
+        "A self-supported ultra-distance challenge over a fixed 1,540 km / 14,080 m course (2022) through England and Scotland",
+        "A control network — 20 control visits across 13 locations in 2022 — offering food, beds, and showers, a materially different support model from a fully unsupported bikepacking race",
+        "A 59% completion rate in 2022 against a demanding 128h20m limit — finishing is a real achievement, not a formality"
+      ],
+      "weaknesses": [
+        "Not an annual, or even reliably scheduled, event — runs once every four years, and the 2025 attempt was abandoned mid-event to Storm Floris with no official finishers, so the practical gap since the last completed edition (2022) to the next scheduled one (2029) can run seven years",
+        "No competitive format at all — no placings, no field to race, alphabetical finisher lists only; riders who want anything resembling a ranked result should look elsewhere entirely",
+        "A meaningful DNF rate even in a completed edition — 41% of 2022 starters did not finish inside the time limit",
+        "Requires serious prior long-distance self-supported cycling experience and sleep-deprivation management; this is not an entry point into endurance cycling",
+        "Fits nowhere near this database's gran_fondo scoring dimensions — field_depth, prestige and organization are all built around an annual, competitive, mass-participation format that LEL, despite running on a fixed shared course, simply isn't (see catalog_flags)"
+      ],
+      "bottom_line": "A legitimate, historically significant ultra-distance randonnée for experienced self-supported riders who want a navigation-and-endurance challenge — not something to compare against a gran fondo, and not something to plan around on any normal event calendar given its four-year (or longer) cadence."
     },
     "final_verdict": {
-      "score": "69/100",
-      "one_liner": "Ultimate UK ultra-randonnée: 950 miles self-supported to Edinburgh and back.",
-      "should_you_race": "",
-      "alternatives": ""
+      "score": "66/100",
+      "one_liner": "A historic quadrennial ultra-randonnée to Edinburgh and back — not a gran fondo, and not scheduled again until 2029.",
+      "should_you_race": "Only if you have self-supported multi-day cycling experience and want a navigation-and-endurance challenge rather than a competitive event. It won't run again until August 2029 at the earliest, so this isn't something to plan around for 2026 or 2027.",
+      "alternatives": "For a similar self-supported ultra-distance format that actually runs annually, see Race Through Poland or Trans Pyrenees Race (both in this database). For a shorter UK audax taste of the format, look at Audax UK's calendar of 200-600 km brevets before attempting LEL."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://londonedinburghlondon.com/faq",
+        "category": "official",
+        "label": "Official LEL FAQ — 2029 Date, Start Locations, Format"
+      },
+      {
+        "url": "https://londonedinburghlondon.com/london-edinburgh-london-what-is-it",
+        "category": "official",
+        "label": "Official 'What Is LEL' Page — Self-Supported, Non-Competitive Format"
+      },
+      {
+        "url": "https://www.audax.uk/event-details/calendar/6617-london_edinburgh_london",
+        "category": "official",
+        "label": "Audax UK — 2022 Event Record (Distance, Elevation)"
+      },
+      {
+        "url": "https://www.audax.uk/media/2804/audax_uk-annual-report-2021-2022.pdf",
+        "category": "official",
+        "label": "Audax UK Annual Report 2021-2022 — Starter/Finisher Numbers"
+      },
+      {
+        "url": "https://www.audax.uk/about-audax/event-types/special-calendar-events/",
+        "category": "official",
+        "label": "Audax UK — Special Calendar Events, Quadrennial Cadence"
+      },
+      {
+        "url": "https://londonedinburghlondon.com/the-london-edinburgh-london-2025-route---published",
+        "category": "official",
+        "label": "Official 2025 Route Announcement (Edition Later Abandoned to Storm Floris)"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://londonedinburghlondon.com/faq",
-      "notes": "Official FAQ confirms next London–Edinburgh–London randonnée starts 5 August 2029 from Writtle near Chelmsford, so the event is ongoing though not in July 2026.; last edition evidenced: 2029; via sonar-pro eligibility_audit"
+      "notes": "LEL is a genuine, ongoing Audax UK event but runs only once every four years and is NOT held in 2026 (or 2027/2028). Official FAQ confirms the next edition is scheduled for Sunday, 5 August 2029, starting primarily from Writtle University College near Chelmsford (secondary start at Guildhall Yard, London); the 2029 route will not be finalized until March 2029. The most recently ATTEMPTED edition (2025) started but was abandoned mid-event due to Storm Floris with no official finishers; the most recent COMPLETED/validated edition remains 2022 (1,540 km / 14,080 m, 1,500 starters, 890 finishers), which was itself a COVID-delayed stand-in for the normal 2021 slot. Vitals in this profile reflect the 2022 completed edition. Fixed prior data-entry error: country field was 'USA', corrected to United Kingdom. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline remains 'gran_fondo' under existing catalog precedent (see Race Through Poland, Trans Pyrenees Race) — not changed here. LEL IS a fixed, shared, prescribed course (unlike those route-choice bikepacking ultras), but it is a self-supported, non-competitive, quadrennial audax/randonnée organized by Audax UK: riders follow the mandatory route, receive organized support at staffed controls, and are validated against a multi-day time limit (128h20m in 2022) rather than ranked — no placings, alphabetical finisher lists only. It also runs once every four years (last completed 2022; the 2025 attempt was abandoned to Storm Floris; next scheduled 2029), so it isn't an annual event a rider can casually plan around. The current scoring rubric — especially field_depth and organization, which assume an annual, competitive, mass-participation format — does not model this format cleanly even with field_depth corrected to 1 this wave. Recommend a human call on a dedicated audax/ultra-randonnée taxonomy or further scoring caveats, consistent with how flandrien-ride.json and the wave-3 ultra-distance races flag similar mismatches.",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

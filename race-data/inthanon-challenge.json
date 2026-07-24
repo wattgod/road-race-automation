@@ -5,16 +5,16 @@
     "display_name": "Inthanon Challenge",
     "tagline": "",
     "vitals": {
-      "distance_km": 48.3,
-      "distance_mi": 30.0,
-      "elevation_m": 2565,
-      "elevation_ft": 8415.0,
+      "distance_km": 48.0,
+      "distance_mi": 29.8,
+      "elevation_m": 2580,
+      "elevation_ft": 8465.0,
       "location": "Chom Thong, Chiang Mai, Thailand",
       "location_badge": "Chom Thong, Thailand",
       "country": "Thailand",
       "date": "2026: February 8",
       "date_specific": "2026: February 8",
-      "field_size": "thousands",
+      "field_size": "870 registered against a 1,500-rider cap (2026); historically much larger — roughly 5,900 in 2019 and 7,500 advertised in 2018",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -26,12 +26,16 @@
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Race-day forecasts point to a sharp thermal contrast: warm Chiang Mai valley conditions give way to a much colder, frequently foggy summit zone above 1,500m. The 8 Feb 2026 Thai Meteorological Department forecast called for roughly 18-34°C in Chiang Mai and 5-14°C on northern mountaintops — forecast ranges, not measured start/summit readings during the ride.",
+      "challenges": [
+        "Forecast valley-to-summit contrast — Chiang Mai 18-34°C vs. 5-14°C on northern mountaintops per race-day forecasts",
+        "Morning fog common on the upper mountain",
+        "Damp, narrow, quiet road surface near the summit"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Paved roads (Highway 1009, sealed asphalt)",
       "technical_rating": 1,
       "features": []
     },
@@ -70,42 +74,88 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A one-way, point-to-point summit race up Highway 1009 to the roof of Thailand, not a steady alpine grind. The first 8km from the start at km 0 is essentially flat warm-up. After the national park gate the road kicks with a short, sharp 1.3km at 7% (touching 13%), then settles into 10km of rolling false-flat. Near km 20 the road climbs 6km at 7% (ramping to 14%) through a forested gorge past Wachirathan waterfall, followed by a brief respite, then 3km at 9% to Ban Khun Klang around km 31. The road eases for two easier kilometers before another 3.3km at 10% (including roughly 800m at 16%). From about km 39, the final 9km averages roughly 9%, with a reported 3.5km stretch at 14% and pitches touching 25% before the summit. The route climbs from lowland deciduous forest through terraced paddies into cloud-covered montane evergreen forest above about 1,500m, passing twin royal stupas near the top.",
+      "signature_challenge": "The final 9km from roughly km 39 to the Doi Inthanon summit — averaging about 9% with a documented 3.5km stretch at 14% and pitches as steep as 25-23% above 2,000m, arriving as the air turns cold, damp, and frequently fogged in.",
+      "suffering_zones": [
+        "km 20-26 gorge climb: 6km at 7% ramping to 14%, past Wachirathan waterfall",
+        "km 31-34: 3.3km at 10% including roughly 800m at 16%",
+        "Final 9km (km 39-48): averages ~9%, with 3.5km at 14% and pitches to 23-25%, arriving in cold summit fog"
+      ]
     },
     "logistics": {
-      "airport": "",
+      "airport": "Chiang Mai International Airport (CNX) — roughly 60-75km / 1.5-2hr drive to the Highway 1009 start near Chom Thong.",
       "lodging_strategy": "Hotels and guesthouses in Chom Thong and Chiang Mai. Book early for event weekend.",
-      "transport": "",
+      "transport": "Self-drive or arranged transport from Chiang Mai to the Highway 1009 start; no official standalone event site, registration runs through the ThaiMTB platform.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://event.thaimtb.com/V3/event-detail.php?e=736&lang=EN"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2008,
+      "origin_story": "Began in 2008 as a mountain-bike race run on paved roads, organized by the Chom Thong Cycling for Health Association (สมาคมจักรยานเพื่อสุขภาพจอมทอง). Road bikes rode informally in early editions before getting an official road-bike category in 2011 (the fourth running). The event was postponed once for COVID (planned for 2022, held in 2023) but has otherwise run annually, reaching edition #17 in February 2026.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "One of Thailand's toughest annual hill-climb events — a summit finish at the country's highest point, historically drawing thousands of riders in its peak years before settling into a smaller, more serious field."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Summit Climb, Overpromised by Old Stats",
+      "summary": "The Inthanon Challenge is a genuine, currently active hill-climb race to the summit of Doi Inthanon, Thailand's highest point, now in its 17th edition. The database previously carried 48.3km/2,565m as course stats, but 2,565m is the mountain's summit elevation above sea level, not the race's climbing gain — the organizer has never published an official total-ascent figure, and the best route-specific estimate is closer to 2,580m of gain over roughly 48km. The 2026 field of 870 registered riders (against a 1,500 cap) is a fraction of the event's 2018-2019 peak, when it drew 6,000-7,500 entrants; the old 'thousands' field-size label describes a bigger, older version of this race. What hasn't diminished is the climb itself: a genuinely brutal final 9km averaging 9% with pitches over 20%, arriving in cold summit fog after riders start the day in Thai valley heat.",
+      "strengths": [
+        "A real summit finish at Thailand's highest point (2,565m) with a documented, brutal final 9km averaging ~9% and touching 23-25% gradient",
+        "Dramatic forecast thermal contrast — race-day forecasts put Chiang Mai at 18-34°C against 5-14°C on northern mountaintops, plus frequent summit fog, a genuine physiological test beyond just the climbing",
+        "Scenic route through national park forest, past Wachirathan waterfall and terraced paddies into cloud forest",
+        "Long-running event (17 editions since 2008) with a stable organizer (Chom Thong Cycling for Health Association)"
+      ],
+      "weaknesses": [
+        "The database's prior 2,565m elevation figure was the mountain's summit altitude, not its climbing gain — the organizer does not publish an official ascent total, so treat any total-elevation figure (including this profile's 2,580m) as a route estimate, not a certified number",
+        "Field size has shrunk sharply from its 2018-2019 peak (6,000-7,500 riders) to 870 registered in 2026 — a much smaller, quieter event than the 'thousands' framing implies",
+        "A 2017 race report documented only semi-closed roads with traffic building up behind the front of the field; 2018 and 2019 organizer records describe road closure, but current 2026 closure status wasn't independently confirmed — don't assume either way without checking the current year",
+        "A participant died in a 2018 descent collision with an uphill-traveling truck near km 40-41 — a documented, serious safety incident on this descent in that year, not evidence the event is unsafe every year but a real fact worth knowing",
+        "No standalone event website; registration and information run through the ThaiMTB platform, largely in Thai"
+      ],
+      "bottom_line": "If you want a genuinely hard, scenic summit hill-climb to the top of Thailand and can handle logistics run mostly in Thai through a regional cycling association, this delivers real difficulty. Go in with accurate expectations on field size (a few hundred to low thousands now, not the historical peak) and confirm current-year road-closure status and descent safety measures before race day."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Brutal Thai hill climb masterpiece to the roof of Thailand.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine, brutal summit climb to the roof of Thailand — smaller and quieter than its old 'thousands' framing suggests.",
+      "should_you_race": "Yes if you want a hard, scenic hill-climb race with a real summit finish and don't need a huge field. Prepare for the forecast valley-to-summit thermal contrast and confirm current road-closure and descent-safety measures — the descent has seen at least one serious traffic incident in 2018.",
+      "alternatives": "For a similar high-altitude summit hill-climb in Southeast Asia, look at other ThaiMTB-calendar mountain events. For a bigger-field Thai cycling experience, look toward Thailand's larger regional gran fondos."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://event.thaimtb.com/V3/event-detail.php?e=736&lang=EN",
+        "category": "official",
+        "label": "ThaiMTB — 2026 Inthanon Challenge Event Record (Edition #17, Registration, Field Size)"
+      },
+      {
+        "url": "https://cyclingchiangmai.cc/doi-inthanon",
+        "category": "reference",
+        "label": "Cycling Chiang Mai — Doi Inthanon Route Guide (Gradient Breakdown, GPX)"
+      },
+      {
+        "url": "https://www.sbs.com.au/sport/article/racing-to-the-top-of-thailand-the-doi-inthanon-challenge/0w4rg5k6u",
+        "category": "reference",
+        "label": "SBS Sport — 2017 Race Report (Course Character, Road-Closure Reality)"
+      },
+      {
+        "url": "https://www.thairath.co.th/news/local/north/1202255",
+        "category": "reference",
+        "label": "Thairath — 2018 Descent Fatality Report"
+      },
+      {
+        "url": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-02-08_06_thai_1.pdf",
+        "category": "reference",
+        "label": "Thai Meteorological Department — 8 Feb 2026 Race-Day Forecast"
+      },
+      {
+        "url": "https://www.facebook.com/doiinthanonchallenge/",
+        "category": "official",
+        "label": "Official Inthanon Challenge Facebook Page"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://event.thaimtb.com/V3/event-detail.php?e=736&lang=EN",
-      "notes": "Mass-participation road cycling climb at Doi Inthanon with edition #17 held on 8 Feb 2026 and no indication of discontinuation.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Mass-participation road cycling climb at Doi Inthanon; edition #17 held 8 Feb 2026 with 870 registered against a 1,500-rider cap, no indication of discontinuation. Organizer is the Chom Thong Cycling for Health Association; founded 2008 (not ~2009-2010 as previously estimated). Distance corrected to 48km (organizer-advertised, not 48.3km); elevation corrected to ~2,580m route-estimate climbing gain — the prior 2,565m figure was the summit's elevation above sea level, not a verified ascent total (organizer does not publish one). Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
     }
   }
 }

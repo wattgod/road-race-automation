@@ -5,24 +5,29 @@
     "display_name": "Axel Merckx Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 1200,
-      "elevation_ft": 3937.0,
+      "distance_km": 155.0,
+      "distance_mi": 96.3,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
       "location": "Penticton, British Columbia, Canada",
       "location_badge": "Penticton, Canada",
       "country": "Canada",
-      "date": "2026: July TBD",
-      "date_specific": "2026: July TBD",
-      "field_size": "3000+",
-      "start_format": null,
+      "date": "Discontinued after 13 July 2025 (13th and final edition); no 2026 event held",
+      "date_specific": "Final edition: 2025-07-13",
+      "field_size": "~1,700 (2025, final edition; city permit allowed for up to 2,000)",
+      "start_format": "Mass start, Skaha Lake Park Promenade (final 2025 route; earlier editions started downtown Penticton)",
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "Last published (2026 listing, since closed): CA$225 + fees/taxes (Granfondo/Velocefondo/Mediofondo); CA$150 + fees/taxes (Cortofondo)",
       "feed_zones": "multiple",
       "cutoff_time": "unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Granfondo", "distance_km": 155.0},
+        {"name": "Velocefondo", "distance_km": 120.0},
+        {"name": "Mediofondo", "distance_km": 85.0},
+        {"name": "Cortofondo", "distance_km": 35.0}
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +75,81 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "In its final form (2025), a South Okanagan wine-country loop starting and finishing at Skaha Lake Park in Penticton: Eastside Road through Okanagan Falls, Highway 97 through Oliver and Osoyoos, a climb up Highway 3 through Cawston and Keremeos, then back via Twin Lakes, White Lake, the Dominion Radio Astrophysical Observatory and Kaleden. Earlier editions (through 2024) instead started downtown and routed north along Okanagan Lake through Summerland before returning south past Skaha Lake — that version is retired.",
+      "signature_challenge": "A timed KOM/QOM roughly 38km into the final South Okanagan course — the exact climb it sits on isn't specified in available sources, only that it falls after the Highway 97 corridor through Oliver and Osoyoos and before the return leg.",
+      "suffering_zones": [
+        "The Highway 3 climb through Cawston toward Keremeos: the main sustained climbing on the final course, part of the return leg after Osoyoos.",
+        "The Highway 97 corridor through Oliver and Osoyoos: long, exposed, and often hot — South Okanagan summer heat is a real factor on race day. The timed KOM/QOM falls roughly 38km in, in this general stretch of the course.",
+        "Summerland KOM (historical, pre-2025 course only): earlier editions climbed Peach Orchard Road out of Summerland, roughly 1.7km at 7% around km 25 — no longer part of the final route, listed here for historical accuracy since older race reports reference it."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Hotels and resorts in Penticton and Okanagan wine country; book early due to festival weekend.",
-      "transport": "",
+      "airport": "Kelowna International Airport (YLW), roughly 1 hour from Penticton",
+      "lodging_strategy": "Hotels and resorts in Penticton and Okanagan wine country; book early for the July weekend when the event ran.",
+      "transport": "Point-to-point loop from Skaha Lake Park in the event's final years; self-drive from Kelowna or Vancouver, no organized shuttle documented.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://okanagangranfondo.com/ (now displays the organizer's discontinuation notice)"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2011,
+      "origin_story": "Launched in 2011 as the Valley First Granfondo Axel Merckx Okanagan, headlined by 1990s pro Axel Merckx (son of Eddy Merckx) and run out of downtown Penticton along Okanagan Lake through the wine country toward Summerland. Prospera later became the title sponsor, and the event was known as the Prospera Granfondo Axel Merckx Okanagan for much of its run.",
+      "notable_moments": [
+        "2022: renamed \"Okanagan Granfondo,\" dropping both the Prospera title sponsor and the Axel Merckx name from the event.",
+        "2025 (13th held edition, 13 July): final edition, run on a redesigned South Okanagan course starting at Skaha Lake Park. Held editions total 13 across 2011-2025, with at least one pandemic-era gap.",
+        "2 October 2025: organizer formally discontinued the event — no 2026 edition was held."
+      ],
+      "reputation": "A long-running Okanagan wine-country fondo in its active years, now closed. An old third-party listing still shows a July 2026 date; that listing is stale, not a live event."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Discontinued — Do Not Plan to Race This in 2026",
+      "summary": "The Axel Merckx Gran Fondo — renamed Okanagan Granfondo in 2022 — ran for 13 held editions across 2011-2025 as a genuine Penticton wine-country fondo, but the organizer formally discontinued it on 2 October 2025. There is no 2026 edition, despite an orphaned Race Roster listing still showing a 12 July 2026 date with closed registration. The final 2025 course (155km, 1,700+m, Skaha Lake Park start) was a South Okanagan loop through Oliver, Osoyoos, and the Cawston/Keremeos wine country, but it's a historical entry now, not a race you can sign up for.",
+      "strengths": [
+        "13 held editions across 2011-2025, with real field numbers (up to 3,000 registrants at its 2022 peak)",
+        "Final-year course (2025) crossed genuine South Okanagan wine country — Oliver, Osoyoos, Cawston, Keremeos — with a real timed KOM/QOM climb",
+        "Four distance options (155/120/85/35km) meant a route for most fitness levels",
+        "Long-standing local and regional press coverage throughout its active years"
+      ],
+      "weaknesses": [
+        "Discontinued as of October 2025 — there is no 2026 (or later) edition to register for, despite stale third-party listings implying otherwise",
+        "The course and even the distance changed materially across its history (160km/1,600m in 2017, down to 121km/1,200m in a 2023 reroute, up to 155km/1,700+m in its final 2025 form) — old race reports and this database's own prior entry mixed figures from different eras",
+        "Renamed away from \"Axel Merckx\" in 2022, so the event most riders will find searching for it today no longer carries the name on this profile",
+        "Field size trended down in its final years (from a 2022 peak of ~3,000 to roughly 1,700 in 2025) before the organizer pulled the plug entirely"
+      ],
+      "bottom_line": "This was a legitimate mid-size Canadian gran fondo for over a decade, but it's closed. Don't build 2026 race-season plans around it — look at the alternatives below instead."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Premier Canadian gran fondo in stunning wine country led by cycling legend Axel Merckx.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "An Okanagan wine-country fondo across 13 held editions (2011-2025) — discontinued after 2025, no 2026 edition.",
+      "should_you_race": "No — the event was formally discontinued in October 2025 and there is no 2026 edition, regardless of any stale listing you may find online. If you're chasing the historical result, the final edition ran 13 July 2025.",
+      "alternatives": "For a similar BC wine-country/interior fondo experience: look for other Okanagan-region rides filling the gap left by this event's closure. For a Canadian gran fondo with a confirmed active current calendar, check RBC GranFondo Whistler directly before registering — verify any other Canadian gran fondo's current status individually rather than assuming continuity from its past reputation."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://okanagangranfondo.com/OkanaganGranfondoNewsReleaseOct2.pdf",
+        "category": "official",
+        "label": "Organizer's Official Discontinuation Notice, 2 October 2025"
+      },
+      {
+        "url": "https://www.penticton.ca/sites/default/files/2025-07/2025%20Okanagan%20Granfondo%20Traffic%20notice.pdf",
+        "category": "official",
+        "label": "City of Penticton — 2025 (Final) Route and Traffic Notice"
+      },
+      {
+        "url": "https://raceroster.com/events/2026/60204/okanagan-granfondo",
+        "category": "reference",
+        "label": "Orphaned 2026 Race Roster Listing (Registration Closed)"
+      },
+      {
+        "url": "https://www.pentictonnow.com/watercooler/news/news/Penticton/Renamed_modified_and_busier_than_ever_Granfondo_s_back_in_town",
+        "category": "editorial",
+        "label": "PentictonNow — 2022 Rename from Axel Merckx to Okanagan Granfondo"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/IndexFull/8626/winkler-and-agur-fastest-at-the-13th-edition-of-the-okanagan-granfondo",
+        "category": "reference",
+        "label": "Gran Fondo Guide — 13th (Final) Edition Results, July 2025"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Axel Merckx Gran Fondo gran fondo cycling Penticton",
@@ -233,10 +282,14 @@
       }
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://cyclingmagazine.ca/sections/ridesevents/must-see/granfondo-axel-merckx-okanagan/",
-      "notes": "14th edition Jul 12 2026"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://okanagangranfondo.com/OkanaganGranfondoNewsReleaseOct2.pdf",
+      "notes": "STATUS CORRECTION (2026-07-24): prior eligibility pass marked this 'active' with a claimed '14th edition Jul 12 2026,' sourced only to a secondary cycling-magazine listicle. That is wrong. The organizer formally discontinued the event 2 October 2025, naming 13 July 2025 (13th edition) the final race. A stale Race Roster listing still displays 12 July 2026 but shows registration closed and post-dates the discontinuation notice. Event was also renamed 'Okanagan Granfondo' in 2022 (dropped 'Prospera'/'Axel Merckx' branding) before closing entirely in 2025. See research-dumps/axel-merckx-gran-fondo.md for full sourcing. Flagging for a human call on whether a defunct race with no 2026+ edition should stay in the active database index at its current tier, or be reclassified/archived."
+    },
+    "catalog_flags": {
+      "status_note": "This race is DISCONTINUED, not active. The batch brief that generated this editorial pass assumed it was a 'currently-active mass-participation gran fondo' — that assumption was factually wrong per direct research against the organizer's own discontinuation notice. The profile has been corrected to honest historical framing (final edition 13 July 2025, 155km/1,700+m, Skaha Lake Park), eligibility.status set to 'defunct', and biased_opinion/final_verdict rewritten to tell a 2026 reader not to plan around this race. Flagging for a human call on whether this profile should be pulled from active site indexing/search entirely rather than displayed alongside currently-racing events, consistent with how the site should treat other defunct profiles (see belgrade-gran-fondo.json for precedent pattern).",
+      "ruled": "2026-07-24 editorial wave 4 batch"
     }
   }
 }

@@ -5,24 +5,27 @@
     "display_name": "Race Across Benelux",
     "tagline": "",
     "vitals": {
-      "distance_km": 999.4,
-      "distance_mi": 621.0,
+      "distance_km": 1048.0,
+      "distance_mi": 651.2,
       "elevation_m": 11900,
       "elevation_ft": 39042.0,
-      "location": "Amsterdam to Arlon via Netherlands/Belgium/Luxembourg, with loops around Arlon",
-      "location_badge": "Amsterdam to Arlon via Netherlands/Belgium/Luxembourg, with loops around Arlon",
-      "country": "with loops around Arlon",
-      "date": "2026: May 27",
-      "date_specific": "2026: May 27",
+      "location": "Amsterdam to Arlon, plus an Arlon loop, via Netherlands, Belgium and Luxembourg",
+      "location_badge": "Amsterdam to Arlon, Belgium (with Arlon loop)",
+      "country": "Netherlands/Belgium/Luxembourg",
+      "date": "2026: May 27-31",
+      "date_specific": "2026: May 27-31, Amsterdam Olympic Stadium start",
       "field_size": "N/A",
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
-      "feed_zones": "assistance and refreshment points at life bases",
-      "cutoff_time": "N/A",
+      "entry_fee": "1,000 km solo: EUR 289 waiting list / EUR 309 standard / EUR 359 last-chance, excluding platform fees",
+      "feed_zones": "assistance and refreshment points at staffed life-bases",
+      "cutoff_time": "96 hours (1,000 km class), per the 2026 official rules",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "1,000 km (flagship): Amsterdam to Arlon (533.5 km, ~4,700 m) then an Arlon loop (515.3 km, ~7,165 m) — total ~1,048 km / ~11,900 m",
+        "500 km, 300 km and 200 km categories also offered per the 2026 official rules"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,42 +73,91 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A fixed, organizer-supplied GPX course run by Race Across Series, formerly named 'Race Across Belgium.' For the 2026 season (ran May 27-31, now completed) the organizer renamed and geographically expanded the event: the flagship started at Amsterdam's Olympic Stadium, crossed the flat Dutch and Belgian lowlands to reach Arlon (533.5 km, ~4,700 m), then completed a significantly hillier Arlon loop through the Belgian Ardennes and into Luxembourg (515.3 km, ~7,165 m) — meaning nearly two-thirds of the route's total climbing was concentrated in the second half. This is a semi-autonomous format: riders are self-sufficient between staffed life-bases (food, rest, showers, charging, drop bags), not a fully unsupported race. The organizer's own published route-planning article (issued before the race) carried minor internal inconsistencies (a 1,048 km headline total against a 1,048.8 km leg-sum, and two slightly different figures for the Arlon loop within the same article); these are the organizer's published planning figures, and no post-event public final-GPX audit was found to confirm the exact ridden distance.",
+      "signature_challenge": "The Arlon loop through the Belgian Ardennes — roughly half the total distance but nearly two-thirds of the total climbing (~7,165 m of ~11,900 m), arriving after riders had already crossed the flat Netherlands-to-Arlon leg.",
+      "suffering_zones": [
+        "Amsterdam to Arlon opening leg — 533.5 km, ~4,700 m: long, flat Dutch and Belgian lowland miles that front-load fatigue before the climbing begins",
+        "The Arlon loop — 515.3 km, ~7,165 m through the Belgian Ardennes and into Luxembourg, the genuinely mountainous heart of the route",
+        "Planning-figure inconsistency — the organizer's own pre-race 2026 route article contained internally inconsistent distance/elevation figures; no post-event final-GPX confirmation was found as of this research"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Main logistical base in Arlon with rest areas, showers, dormitories, meals.",
-      "transport": "",
+      "transport": "Semi-autonomous ultra with staffed life-bases along the route; the 500/300/200 km classes share the Arlon base infrastructure.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.raceacrossseries.com/race-across-belgique-2025"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2021,
+      "origin_story": "Launched August 19, 2021 in Arlon as 'Race Across Belgium' — the first Belgian ultra-cycling race, initiated by Michel Mussot with 300/600/1,000 km courses. It ran under that name through five editions (2021-2025); the 2025 flagship (Arlon to Braine-l'Alleud) measured approximately 1,015 km / 7,200 m. For the 2026 season, the organizer renamed and geographically expanded the event to 'Race Across Benelux,' extending the route from Belgium-only into a Netherlands-Belgium-Luxembourg crossing. The retired 'Race Across Belgium' name is preserved as a separate historical record at race-across-belgium.json.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Belgian Ultra, Renamed and Expanded for 2026 — Not a Gran Fondo",
+      "summary": "Race Across Benelux is a genuine, semi-autonomous Race Across Series ultra with five prior editions of organizer track record — it ran as 'Race Across Belgium' from 2021 through 2025 before the organizer renamed and geographically expanded it for 2026, extending the course from a Belgium-only race into a full Netherlands-Belgium-Luxembourg crossing. This is not a mass-participation gran fondo: it's a fixed organizer-GPX ultra with staffed life-bases rather than aid stations, GPS-tracked riders, and a route that front-loads flat Dutch and Belgian lowland miles before a genuinely mountainous Ardennes loop around Arlon. The rename is real and well-documented on the organizer's own site, but it also creates real confusion risk — the event still occupies its old 'race-across-belgique-2025' URL, and legacy calendars and results archives still reference the retired 'Race Across Belgium' name.",
+      "strengths": [
+        "Established organizer track record — five completed editions (2021-2025) under the prior name before this rename, not a first-year unknown",
+        "Genuine cross-border route variety: flat Dutch/Belgian lowlands into a real Ardennes mountain loop, rather than a single monotonous terrain type",
+        "Real semi-autonomous support infrastructure — staffed life-bases, GPS tracking — more organizer-provided support and monitoring than a pure unsupported race",
+        "Multiple distance classes (200/300/500/1,000 km) broaden access beyond the flagship crossing"
+      ],
+      "weaknesses": [
+        "Brand-new name for 2026 — the organizer's own event page still lives at the old 'race-across-belgique-2025' URL, and results archives still group editions under the retired 'Race Across Belgium' heading, creating real risk of confusing this with a still-active separate Belgium race (there isn't one)",
+        "The organizer's own pre-race published 2026 route figures were internally inconsistent — a 1,048 km headline total against a 1,048.8 km leg-sum, and two different figures for the Arlon loop within the same article — a real transparency/precision gap in the planning materials",
+        "No post-event public final-GPX audit was found to confirm the exact distance actually ridden versus the pre-race planning figures",
+        "No field-size data published as of this research"
+      ],
+      "bottom_line": "A legitimate, five-years-proven Race Across Series ultra that genuinely expanded its ambition for 2026 — worth noting that even the organizer's own pre-race planning materials weren't internally consistent, and don't confuse it with the retired 'Race Across Belgium' name still floating around older calendars."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Epic ultra-road odyssey blending flat crossings, Ardennes climbs, and Benelux culture.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Formerly Race Across Belgium (2021-2025), renamed and expanded for 2026 into a full Amsterdam-to-Arlon-and-back Netherlands/Belgium/Luxembourg crossing — flat lowlands into a real Ardennes climbing loop.",
+      "should_you_race": "Yes if you want a proven Race Across Series ultra with real organizer track record — confirm the current year's route and entry details directly with the organizer, since even 2026's own pre-race planning materials weren't internally consistent.",
+      "alternatives": "For the retired Belgium-only version of this race (2021-2025), see race-across-belgium.json — superseded, same organizer, kept as a historical record only. For a similar Race Across Series format, see Race Across France or Race Across Spain (also in this database)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.raceacrossseries.com/blog/rab-2026-ultra-cycling-les-parcours",
+        "category": "official",
+        "label": "Official 2026 Route Detail — Amsterdam to Arlon plus Arlon Loop"
+      },
+      {
+        "url": "https://www.raceacrossseries.com/race-across-belgique-2025",
+        "category": "official",
+        "label": "Official Event Page (Legacy URL) — States the Belgium-to-Benelux Rename Explicitly"
+      },
+      {
+        "url": "https://www.raceacrossseries.com/nos-evenements-2026",
+        "category": "official",
+        "label": "Official 2026 Race Across Series Calendar"
+      },
+      {
+        "url": "https://www.raceacrossseries.com/blog/une-course-de-vlo-mmorable-en-belgique-2025",
+        "category": "official",
+        "label": "2025 Retrospective — Final 'Race Across Belgium' Edition (~1,015 km / 7,200 m)"
+      },
+      {
+        "url": "https://www.tvlux.be/actu/sport/cyclisme/la-premiere-course-belge-d-ultra-cyclisme-est-partie-d-arlon-ce-jeudi-matin_38220",
+        "category": "media",
+        "label": "TV Lux — 2021 Founding Report, First Belgian Ultra-Cycling Race"
+      },
+      {
+        "url": "https://natlawreview.com/press-releases/race-across-series-2026-registration-now-open",
+        "category": "media",
+        "label": "2026 Season Announcement — 'Formerly Race Across Belgium'"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.raceacrossseries.com/blog/rab-2026-ultra-cycling-les-parcours",
-      "notes": "2026 Amsterdam–Arlon ultra-cycling edition is announced with dates, route and registration info; no indication of discontinuation.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Confirmed SAME EVENT, RENAMED (not a coincidental duplicate): 'Race Across Belgium' ran 2021-2025 (first edition 19 Aug 2021, Arlon start); the organizer renamed and geographically expanded it to 'Race Across Benelux' for the 2026 season (announced Oct-Nov 2025), extending the course into a Netherlands-Belgium-Luxembourg crossing. The retired name is preserved as a historical record at race-across-belgium.json, flagged catalog_flags.duplicate_of pointing here (this profile is canonical). Vitals corrected from a placeholder that exactly duplicated 999.4 km / 11,900 m across both files to the organizer's actual published 2026 figures: 1,048 km / ~11,900 m (Amsterdam to Arlon plus an Arlon loop). The organizer's pre-race route article has internal inconsistencies (1,048 km headline vs 1,048.8 km leg-sum); the 2026 edition ran May 27-31 and is now complete, so course_description language was corrected from prospective/provisional framing to past-tense with a note that no post-event final-GPX audit was found. A follow-up sol adversarial review confirmed the 96h/1,000km cutoff and EUR 289/309/359 solo fee schedule were in fact published (both fields were incorrectly left null/unpublished in the initial draft) and are now populated. Verified 2026-07-24 via codex gpt-5.6-sol foreground research plus a follow-up sol adversarial review, both as part of the Roadie Labs editorial wave 4."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a fixed-course, semi-autonomous ultra-distance road race with staffed life-bases rather than a mass-start peloton — doesn't cleanly fit the gran_fondo taxonomy, whose scoring dimensions (field_depth, community_culture, etc.) are designed primarily around mass-participation, open-entry events. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

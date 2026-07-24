@@ -5,29 +5,36 @@
     "display_name": "Seorak GranFondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 207.6,
-      "distance_mi": 129.0,
-      "elevation_m": 3505,
-      "elevation_ft": 11500.0,
-      "location": "Gangwon-do, South Korea",
+      "distance_km": 208.0,
+      "distance_mi": 129.2,
+      "elevation_m": 3800,
+      "elevation_ft": 12467.0,
+      "location": "Sangnam-myeon, Inje-gun, Gangwon-do, South Korea",
       "location_badge": "Gangwon-do, South Korea",
       "country": "South Korea",
-      "date": "2026: September TBD",
-      "date_specific": "2026: September TBD",
-      "field_size": null,
+      "date": "2026: June 20",
+      "date_specific": "2026: June 20 (originally scheduled May 30, rescheduled by the organizer on Feb 20, 2026 because the original date conflicted with early voting and required road closures)",
+      "field_size": "4,497 registered/announced for 2026: 3,210 for the Granfondo (208km), 1,287 for the Mediofondo (105km). The 208km Granfondo course was subsequently canceled on race day due to severe weather (up to 223mm of rain recorded nearby) — only the Mediofondo ran.",
       "start_format": null,
       "registration": "https://granfondo.co.kr",
       "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "feed_zones": "5 feed stations including one special-feed station (official Granfondo course spec)",
+      "cutoff_time": "12 hours (Granfondo course limit)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Granfondo 208km (long course)",
+        "Mediofondo 105km"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Inland Gangwon-do mountain weather — a genuine operational risk, not a background detail. The 2026 edition's own Granfondo course was canceled on race day for severe weather, and a 2016 organizer report documented a heat advisory with temperatures reaching 33°C.",
+      "challenges": [
+        "Severe-weather cancellation risk — the 208km course was dropped on race day in 2026 due to heavy rain",
+        "Summer heat on exposed mountain-pass climbs",
+        "Traffic exposure on narrow mountain roads shared with cars and construction/dump trucks"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -59,56 +66,135 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 69."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
-      "cat_2_climbs": null,
-      "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "total_climbs": 5,
+      "hc_climbs": 1,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 4,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Guryongryeong",
+          "distance_km": 6.4,
+          "gain_m": 395,
+          "avg_gradient": 6.1,
+          "category": "Cat 2"
+        },
+        {
+          "name": "Jochimnyeong",
+          "distance_km": 4.3,
+          "gain_m": 464,
+          "avg_gradient": 10.9,
+          "category": "Cat 2"
+        },
+        {
+          "name": "Sseurijae",
+          "distance_km": 6.3,
+          "gain_m": 335,
+          "avg_gradient": 5.2,
+          "category": "Cat 2"
+        },
+        {
+          "name": "Pillye-Hangyeryeong",
+          "distance_km": 10.5,
+          "gain_m": 487,
+          "avg_gradient": 4.4,
+          "category": "Cat 2"
+        },
+        {
+          "name": "Reverse Guryongryeong",
+          "distance_km": 20.5,
+          "gain_m": 870,
+          "avg_gradient": 4.2,
+          "category": "HC"
+        }
+      ],
+      "profile_type": "Inland mountain-pass circuit",
+      "king_of_mountain": "Reverse Guryongryeong (HC, 20.5km/870m)",
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "An inland mountain-pass circuit, not a coastal gran fondo, despite the Seoraksan-adjacent name. The standard route starts near Sangnam-myeon in Inje County and crosses a sequence of Baekdudaegan/Taebaek watershed passes — Saldun Pass, Guryongryeong, Jochimnyeong, Sseurijae, and Hangyeryeong — touching the southern Seorak (Nam-Seorak) landscape near Hangyeryeong-Osaek before returning west to the Inje Riding Center. Its defining feature is repeated climbing on four Cat 2 hills plus two unnamed Cat 4 climbs, capped by a long reverse ascent of Guryongryeong late in the route.",
+      "signature_challenge": "The reverse ascent of Guryongryeong — 20.5km at a 4.2% average gain of 870m, arriving late in the route as the HC-rated finale. It's an endurance test through sustained grinding distance rather than a single steep pitch.",
       "suffering_zones": [
-        "Guryongryeong Death March: 20km HC reverse climb shreds legs late at km 180 with 10%+ pitches amid granite solitude. Heat or wind turns it infernal for unpaced riders.",
-        "Cat 2 Cluster Gauntlet: Four relentless UCI Cat 2 hills mid-course accumulate fatigue before the HC finale. No flats for recovery in Seoraksan’s vertical world."
+        "Jochimnyeong: 4.3km at 10.9% average — the steepest sustained named climb on course",
+        "Pillye-Hangyeryeong: 10.5km at 4.4% average, with an official-reported final 2km at 10-15%",
+        "Reverse Guryongryeong (HC): 20.5km at 4.2% average, 870m gain — the long late-race finale"
       ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "",
-      "transport": "",
+      "airport": "Incheon/Seoul, then domestic transfer — no nearby rail station. Jinbu KTX station is ~65km away, Chuncheon station ~76km away; Dong-Seoul buses take roughly 1hr50min, with a Hongcheon connection running only once daily.",
+      "lodging_strategy": "Limited near Sangnam-myeon; most riders base in Inje or travel from Seoul the same day. Book early given limited local options.",
+      "transport": "Car-dependent — parking is limited near the venue and prohibited at the main venue itself. Bibs mail only within Korea.",
       "food": "",
       "official_site": "https://granfondo.co.kr"
     },
     "history": {
-      "founded": 2015,
-      "origin_story": "",
+      "founded": 2010,
+      "origin_story": "Traces to a June 5, 2010 club challenge — ten riders attempting a 265km, seven-pass unsupported route the organizer calls 'the beginning of Seorak GranFondo.' A 2011 follow-up used the name 'Granfondo Gangwon' as another unsupported club ride. The event became a scaled mass-participation race in 2014 with Giant Korea's support (562 total participants: 309 Granfondo, 253 Mediofondo) — contemporary reporting treats 2014 as the 'first race,' even though the concept dates to 2010.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "One of South Korea's most demanding inland mountain-pass gran fondos, known for its reverse Guryongryeong HC finale and genuine weather risk on exposed Gangwon-do passes."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Mountain Test — With a Date and a Weather Story Worth Knowing",
+      "summary": "Seorak GranFondo is a legitimate, currently active inland mountain-pass gran fondo in Inje County, Gangwon-do — genuinely difficult climbing across five named passes, not the coastal Seoraksan scenery its name might suggest. The database's prior 'September TBD' date was wrong: the 2026 edition was originally set for May 30, then formally rescheduled by the organizer to June 20 because the original date conflicted with early voting and the road closures the race needs. On race day itself, severe weather forced the organizer to cancel the 208km Granfondo course entirely and run only the shorter Mediofondo — a real, documented operational risk worth flagging rather than glossing over. The old 'four Cat 2 hills plus an HC finale' description was directionally right but the specific 'km 180, 10%+ pitches' detail on the HC climb wasn't supported by the organizer's own climb data, which puts the reverse Guryongryeong finale at 20.5km/4.2% average — a long grind, not a wall.",
+      "strengths": [
+        "Genuinely demanding inland mountain-pass course — five named climbs across the Baekdudaegan watershed, capped by a 20.5km reverse-Guryongryeong HC finale",
+        "Long track record for the concept (since 2010) and for the mass-participation race (since 2014), with a large registered field (4,497 in 2026)",
+        "Organizer publishes detailed per-climb gradient data (distance, gain, average grade, category) for every named climb — unusually transparent for this database's region",
+        "Foreigner admission and a listed official travel agency exist, despite the Korean-first site — this isn't a closed-off local-only event"
+      ],
+      "weaknesses": [
+        "Real, documented weather risk — the 2026 edition's own 208km Granfondo course was canceled on race day due to severe rain, and a 2016 report separately documented a heat advisory reaching 33°C",
+        "No nearby rail access — Sangnam-myeon sits 65-76km from the nearest train stations, with limited bus frequency, making it one of the more logistically awkward events in this database for travelers without a car",
+        "The database previously had the wrong month entirely ('September TBD' vs. the actual June 20 date, rescheduled once from an original May 30) — always verify the current-year date directly before planning around it",
+        "Elevation gain (3,800m) is a secondary-source estimate, not an organizer-published exact total — treat it as approximate",
+        "Korean-first official site: transport, parking, and detailed climb pages are not reliably translated, even though foreigner registration exists"
+      ],
+      "bottom_line": "A genuinely tough inland mountain gran fondo for riders who want real Gangwon-do climbing and can handle logistics run mostly in Korean — just confirm the current year's date directly with the organizer (it moved once in 2026, and the long course was separately canceled on race day for weather) and go in aware that severe-weather course cancellations are a real, recent precedent here, not a hypothetical."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Brutal 11,500ft paved beast through Seoraksan—Korea’s climb fest for the masochistic.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuinely tough Gangwon-do mountain-pass gran fondo — but confirm the date and expect weather risk; the 2026 long course was canceled on race day.",
+      "should_you_race": "Yes if you want real inland Korean mountain climbing across five named passes and can navigate a Korean-first registration site. Build in a weather contingency — the organizer has shown it will cut the long course on short notice.",
+      "alternatives": "For a coastal-to-mountain Gangwon-do gran fondo instead of this inland pass circuit, see Yangyang Gran Fondo (a genuinely separate event in neighboring Yangyang-gun, not a duplicate of this race)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondo.co.kr/",
+        "category": "official",
+        "label": "Seorak GranFondo — Official Homepage"
+      },
+      {
+        "url": "https://granfondo.co.kr/news1/news/view/315",
+        "category": "official",
+        "label": "Official 2026 Date-Change Notice (May 30 to June 20, Feb 20 2026)"
+      },
+      {
+        "url": "https://granfondo.co.kr/courseinfo1_3",
+        "category": "official",
+        "label": "Official Granfondo Course Specification (208km, Climb Categories, Feed Stations)"
+      },
+      {
+        "url": "https://granfondo.co.kr/courseinfo5",
+        "category": "official",
+        "label": "Official 2026 Course-Reduction Status (Weather Cancellation)"
+      },
+      {
+        "url": "https://www.yna.co.kr/view/AKR20260618085200062",
+        "category": "reference",
+        "label": "Yonhap — 2026 Pre-Event Field Size and Route Report"
+      },
+      {
+        "url": "https://granfondo.co.kr/history4",
+        "category": "official",
+        "label": "Official 2014 History — First Mass-Participation Edition"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://raceplan.co.kr/rallys/view?crid=5196",
-      "notes": "Mass-participation road gran fondo in Gangwon-do with 2026 edition scheduled for May 30, not September.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondo.co.kr/",
+      "notes": "DATE CORRECTION (2026-07-24): prior profile listed '2026: September TBD,' which was wrong. The 2026 edition was originally scheduled for 30 May 2026, then rescheduled by the organizer on 20 Feb 2026 to 20 June 2026 because the original date conflicted with early voting and required road closures. On race day, severe weather (up to 223mm of rain nearby) forced cancellation of the 208km Granfondo course; only the 105km Mediofondo ran. Distance corrected to 208km (was 207.6km); elevation (3,800m, was 3,505m) is a secondary-source estimate, not organizer-certified. Founded 2010 as an unsupported club challenge, not 2015; scaled to mass-participation in 2014. Confirmed Yangyang Gran Fondo (yangyang-gran-fondo.json) is a genuinely distinct event in neighboring Yangyang-gun, not a duplicate. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
     }
   }
 }

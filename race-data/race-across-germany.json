@@ -5,24 +5,27 @@
     "display_name": "Race Across Germany North–South",
     "tagline": "",
     "vitals": {
-      "distance_km": 1099.2,
-      "distance_mi": 683.0,
+      "distance_km": 1100.0,
+      "distance_mi": 683.5,
       "elevation_m": 7500,
       "elevation_ft": 24606.0,
       "location": "Flensburg to Garmisch-Partenkirchen, Germany",
       "location_badge": "Flensburg to Garmisch-Partenkirchen, Germany",
       "country": "Germany",
-      "date": "2026: July 2-5",
-      "date_specific": "2026: July 2-5",
-      "field_size": null,
-      "start_format": null,
+      "date": "Next edition: 2027, July 8-11 (2026 edition ran July 2-5, already completed)",
+      "date_specific": "2027: July 8-11; registration opens 27 May 2026",
+      "field_size": "Flensburg–Garmisch capped at 300 entrants (~236 starters tracked in the completed 2026 field); Eschwege–Garmisch capped at 50",
+      "start_format": "Staggered: 2 July 18:00–18:58 and 3 July 07:00–11:18 in 2026, up to two solo riders or one team every two minutes",
       "registration": null,
       "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "feed_zones": "Official time stations at Lauenburg, Bilderlahe, Berka, Kitzingen, Mauren and Moorenweis; no staffed life-bases — nonsupported riders resupply only at services open to the public",
+      "cutoff_time": "Two-tier limits by age/sex category: faster RAAM-qualifying times (48-52h across categories) plus separate, longer overall classification cutoffs (56-60h across categories) — e.g. Supported M50-: 48h to qualify for RAAM, 56h to be classified; Nonsupported F60+: 52h/60h",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Flensburg to Garmisch-Partenkirchen (North–South flagship): 1,100 km, 7,500 m, staggered starts 2–3 July 2026, 300-entrant cap",
+        "Eschwege to Garmisch-Partenkirchen (Bavaria Extrem): 550 km, 4,100 m, 4–5 July 2026, 50-entrant cap"
+      ]
     },
     "climate": {
       "primary": "Alpine mountain",
@@ -72,8 +75,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "An epic north-south traverse of Germany's complete geographic and cultural diversity, beginning at the Baltic harbor in Flensburg and concluding beneath the Zugspitze in the Bavarian Alps. The route progresses through distinct regional zones: coastal plains, low mountain ranges (Harz, Hessian uplands, Rhön, Franconia), and Alpine foothills, with each section presenting unique environmental and physical challenges.[1]",
-      "signature_challenge": "Maintaining pace and mental focus across 1,100 km of non-stop riding through Germany's complete geographic spectrum—from coastal exposure to Alpine altitude—while meeting strict time cutoffs (final finish by July 5, 23:20 UTC).[1]",
+      "character": "A fixed, organizer-supplied route, not a rider-chosen course — riders must follow the official GPX from Flensburg on the Baltic to Garmisch-Partenkirchen beneath the Zugspitze, with deviations permitted only for closures, accidents or construction. The route crosses coastal plains, the Harz, Hessian uplands, Rhön and Franconia before the Alpine approach. Riders choose between two support categories: Nonsupported (genuinely self-supported — no private crew, resupply limited to public services) or Supported (rider brings their own crew and vehicle). Neither category uses staffed life-bases like the France/Spain/Benelux 'Race Across Series' events — this is a different organizer and a different support model entirely, despite the similar name. The organizer's canonical vitals are 1,100 km / 7,500 m, though independent post-race sources measured the completed 2026 GPX at approximately 1,128–1,129 km / 7,800 m.",
+      "signature_challenge": "Maintaining pace and mental focus across 1,100 km of non-stop riding through Germany's complete geographic spectrum — from coastal exposure to Alpine altitude — against a two-tier time structure that separately tracks a faster RAAM-qualifying limit and a longer overall classification cutoff by age/sex category.",
       "suffering_zones": [
         "Northern Plains (Flensburg to Lauenburg): Exposed, flat terrain with Baltic Sea winds creating relentless headwind conditions and psychological monotony over extended distances.[1]",
         "Low Mountain Ranges (Harz to Franconia): Sustained climbing through Hessian uplands, Rhön, and Franconian regions; accumulated elevation gain tests riders after initial flat sections.[1]",
@@ -84,51 +87,85 @@
     "logistics": {
       "airport": "",
       "lodging_strategy": "Participants must arrange personal accommodation in Flensburg (start location) and Garmisch-Partenkirchen (finish location). Multi-night accommodation along the route is necessary for supported riders; solo unsupported riders typically manage sleep during brief stops.[1]",
-      "transport": "The Race Across Germany operates as a professionally managed ultracycling event with two route options (Flensburg-Garmisch at 1,100 km and Eschwege-Garmisch at 550 km), staggered start phases, official timestations, and structured support infrastructure. Participants receive GPX files and detailed briefings approximately four weeks before the event.[1]",
+      "transport": "The Race Across Germany operates as a professionally managed ultracycling event with two route options (Flensburg-Garmisch at 1,100 km and Eschwege-Garmisch at 550 km), staggered start phases, official timestations, and structured support infrastructure. Participants receive a written briefing about four weeks out; the final GPX follows roughly one week before the start.",
       "food": "",
       "official_site": "https://raceacrossgermany.de/en/north-south"
     },
     "history": {
-      "founded": 2010,
-      "origin_story": "The Race Across Germany is one of Germany's premier ultracycling events, hosting the German Ultracycling Championships and serving as a qualifying route for the Race Across America (RAAM). The event represents the 'royal class' of German ultracycling, connecting the nation's geographic extremes and cultural diversity.[1][5]",
+      "founded": 1999,
+      "origin_story": "Race Across Germany was founded in 1999 and is organized by ULTRAGRÜN GmbH (managing director Fritz Geers), a small team of experienced ultracyclists — it is not affiliated with 'Race Across Series' (Across and Beyond Endurance AG, Switzerland, run by Arnaud Manzanini), the organizer behind the similarly-named Race Across France/Spain/Benelux events also in this database. The 2026 edition hosted the German Ultracycling Championships (Solo Supported and Solo Nonsupported categories, awarded by age class) and is a verified RAAM (Race Across America) qualifier per the World UltraCycling Association calendar.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real German Ultra With Its Own Identity — Not Part of the 'Race Across Series'",
+      "summary": "Race Across Germany is a genuine, long-running national ultracycling event (founded 1999) that hosts the German Ultracycling Championships and is a verified RAAM qualifier — but it shares only a naming convention with the France/Spain/Benelux 'Race Across' events in this database, not an organizer. This is run by ULTRAGRÜN GmbH, a small independent German team, on a fixed organizer-supplied GPX course with no staffed life-bases: riders choose between a genuinely self-supported 'Nonsupported' category and a bring-your-own-crew 'Supported' category. The organizer's canonical published vitals (1,100 km / 7,500 m) undercount what independent post-race sources measured on the completed 2026 course (approximately 1,128–1,129 km / 7,800 m) — treat the official figure as a rounded planning number, not a precise ridden distance.",
+      "strengths": [
+        "27-year institution (founded 1999) that awarded German Ultracycling Championship titles by age class in 2026 and holds verified RAAM-qualifier standing",
+        "Two distance options: the 1,100 km Flensburg–Garmisch flagship and the shorter 550 km Eschwege–Garmisch ('Bavaria Extrem') for a lower-commitment entry",
+        "Real geographic range — Baltic coastal plains through the Harz, Hessian uplands, Rhön, Franconia and the Bavarian Alps — on a course the organizer actually enforces (GPS-verified, penalized shortcuts)",
+        "Open, document-request registration rather than a curated application process"
+      ],
+      "weaknesses": [
+        "Easy to conflate with the unrelated Race Across France/Spain/Benelux events — same 'Race Across X' naming convention, completely different organizer, and a materially different support model (no staffed life-bases here)",
+        "The 'Nonsupported' category is genuinely self-supported with no organizer-run rest infrastructure between six time stations — a real step up in logistics burden versus the semi-autonomous Race Across Series format",
+        "Entry fee is not published publicly; it only appears after starting registration, so budgeting in advance is harder than it should be",
+        "Official vitals (1,100 km / 7,500 m) are a rounded planning figure — the actual 2026 finished course measured closer to 1,128–1,129 km / 7,800 m by independent post-event sources"
+      ],
+      "bottom_line": "A legitimate, well-established German ultra with real championship and RAAM-qualifier credentials — just don't assume it's part of the Race Across Series family because of the name, and budget for materially more distance and climbing than the official 1,100 km / 7,500 m headline suggests."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Germany's ultimate ultracycling test: 1,100 km of non-stop riding from Baltic coast to Alpine peaks, combining geographic diversity, championship-level competition, and transformative endurance challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Germany's own 27-year ultracycling institution — Baltic to Alps, German championship and RAAM-qualifier status, but a different organizer entirely from the Race Across Series events sharing its name.",
+      "should_you_race": "Yes if you want a genuinely self-directed German ultra with real championship stakes and don't need staffed rest stops — choose Nonsupported for the full self-sufficiency test or Supported if you can arrange your own crew. Confirm the current entry fee directly with the organizer before registering.",
+      "alternatives": "For the staffed-life-base, semi-autonomous 'Race Across Series' format instead, see Race Across France, Race Across Spain or Race Across Benelux (also in this database) — a genuinely different organizer despite the near-identical name."
     },
     "citations": [
       {
         "url": "https://raceacrossgermany.de/en/north-south",
-        "category": "reference",
-        "label": "Race Across Germany North–South | 1100 km Ultracycling"
+        "category": "official",
+        "label": "Race Across Germany North–South | Official 2026 Route and Vitals"
       },
       {
-        "url": "https://www.isaac-cycle.com/en_US/blog/item/ultra-rider-daniel-polman-wins-the-race-across-around-germany-811/",
-        "category": "editorial",
-        "label": "Ultra rider Daniel Polman wins the Race Across / Around Germany!"
+        "url": "https://raceacrossgermany.de/impressum",
+        "category": "official",
+        "label": "Official Legal Notice — Organizer ULTRAGRÜN GmbH / Fritz Geers"
       },
       {
-        "url": "https://raceacrossgermany.de/en/",
+        "url": "https://raceacrossgermany.de/nonsupported",
+        "category": "official",
+        "label": "Official Nonsupported Category Rules — Fixed-Course Requirement"
+      },
+      {
+        "url": "https://raceacrossgermany.de/en/finishers?race=2026-flensburg-garmisch",
+        "category": "official",
+        "label": "2026 Finisher Results — German Champions and RAAM-Qualified Riders"
+      },
+      {
+        "url": "https://ultracycling.com/calendar/race-across-germany/",
         "category": "reference",
-        "label": "The Ultracycling Event in Germany"
+        "label": "World UltraCycling Association — Direct RAAM Qualifier Listing"
+      },
+      {
+        "url": "https://rst-luebeck.de/ultradistanz/race-across-germany-2026-britta-wilms-wieder-deutsche-meisterin/",
+        "category": "media",
+        "label": "Radsport Team Lübeck — 2026 German Champion Report, Post-Race ~1,129 km/7,800 m"
+      },
+      {
+        "url": "https://www.ndr.de/nachrichten/schleswig-holstein/radrennen-durch-deutschland-von-flensburg-in-sueden%2Cregionflensburgnews-300.html",
+        "category": "media",
+        "label": "NDR — 2025 Field Size Report (142 Solo Entrants and Relay Teams)"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://raceacrossgermany.de/en/north-south",
-      "notes": "Official site lists the Flensburg–Garmisch 1100 km road ultracycling race scheduled for July 2–5, 2026 with registration details and no cancellation notice.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Confirmed organizer is ULTRAGRÜN GmbH (Fritz Geers) via official Impressum — NOT part of Race Across Series/Across and Beyond Endurance AG despite the shared naming convention with race-across-france.json, race-across-spain.json and race-across-benelux.json. Founded 1999 (corrected from 2010). Distance corrected from false-precision 1,099.2 km to the organizer's canonical 1,100 km; the 2026 finisher/champion post-race report cites ~1,128-1,129 km / ~7,800 m. Confirmed fixed organizer-supplied course (not rider-chosen routing). The 2026 edition (completed July 2-5, 2026) awarded German Ultracycling Championship titles by age class (Solo Supported/Nonsupported) and carried verified RAAM-qualifier status per the WUCA calendar — the event publishes TWO separate time structures per category: a faster RAAM-qualifying limit (48-52h) and a longer overall classification cutoff (56-60h); the database field was corrected after an initial draft conflated the two. The site's 'Next date' has already rolled forward to July 8-11, 2027 (registration opens 27 May 2026) since the 2026 edition is complete — date fields updated accordingly. Confirmed the Eschwege-Garmisch 550 km 'Bavaria Extrem' shorter route remains active. 2026 field ~236 tracked starters against a 300-slot flagship cap. Entry fee not publicly disclosed pre-registration; left null rather than estimated. Verified 2026-07-24 via codex gpt-5.6-sol foreground research plus a follow-up sol adversarial review, both as part of the Roadie Labs editorial wave 4."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a fixed-course, self-supported-or-crew-supported ultra-distance road race with staggered individual starts and no shared peloton — doesn't cleanly fit the gran_fondo taxonomy, whose scoring dimensions (field_depth, community_culture, etc.) are designed primarily around mass-participation, shared-start events. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

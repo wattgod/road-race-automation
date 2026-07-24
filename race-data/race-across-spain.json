@@ -5,28 +5,31 @@
     "display_name": "Race Across Spain",
     "tagline": "",
     "vitals": {
-      "distance_km": 999.4,
-      "distance_mi": 621.0,
-      "elevation_m": 10668,
-      "elevation_ft": 35000.0,
-      "location": "Santander to Valencia, Spain",
-      "location_badge": "Santander to Valencia, Spain",
+      "distance_km": 1000.0,
+      "distance_mi": 621.4,
+      "elevation_m": 14000,
+      "elevation_ft": 45932.0,
+      "location": "Águilas to Santander, Spain",
+      "location_badge": "Águilas to Santander, Spain",
       "country": "Spain",
-      "date": "2026: September 16",
-      "date_specific": "2026: September 16",
-      "field_size": null,
+      "date": "2026: September 16-20",
+      "date_specific": "2026: September 16 (20:00 start) to September 20",
+      "field_size": "2025 (first edition): ~150 participants across all distances; no 2026 cap published",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "registration": "Public registration with qualification validation for the 1,000 km class (prior Race Across finish or equivalent, e.g. 300 km within 24h); opened October 16, 2025, closes September 14, 2026",
+      "entry_fee": "2026 1,000 km solo: EUR 289 priority / EUR 309 standard / EUR 359 last-chance, excluding platform fees (duo and 4-rider team pricing lower per rider)",
+      "feed_zones": "Staffed life-bases along the route (food, rest, showers, charging, bag drop); PGO 24-hour operational monitoring post; GPS beacon tracking for all riders",
+      "cutoff_time": "96 hours (1,000 km class)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "1,000 km (flagship): Águilas to Santander, ~1,000 km nominal, 14,000 m+, 96h cutoff",
+        "500 km, 300 km and 200 km categories also offered per the 2026 official rules (route detail not yet published)"
+      ]
     },
     "climate": {
       "primary": "Mediterranean",
-      "description": "Mild late-summer conditions ideal for ultra, starting cool/green in Cantabria, warming to dry Mediterranean south.",
+      "description": "The 2026 route runs south to north: Águilas (Murcia, Mediterranean) to Santander (Cantabria, Atlantic) — the reverse of the description on file until this edit. Organizer copy describes generically mild September conditions; no route-specific temperature/precipitation breakdown was published as of research.",
       "challenges": [
         "Precipitation: Low (10-20% north, near 0% south)"
       ]
@@ -72,67 +75,85 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A grand traverse of Spain from the wild Cantabrian north to Valencia's Mediterranean warmth, blending relentless climbs, picturesque villages, and diverse terrains through mountains, plateaus, and coasts.",
-      "signature_challenge": "Overcoming the cumulative 35,000ft elevation across 621 miles, punctuated by Spain's most scenic passes and cultural gems.",
+      "character": "IMPORTANT — this is a fixed, organizer-supplied GPX course, not rider-chosen routing, and the 2026 route reverses and relocates the 2025 inaugural edition entirely: the 1,000 km class now runs Águilas (Murcia) to Santander (Cantabria), not Santander to Valencia. As of research, the organizer had not yet published named climbs or a final GPX for the 2026 route — treat any specific col-by-col description below as 2025 history, not confirmed 2026 terrain. The format is semi-autonomous: riders are self-sufficient between staffed life-bases (food, rest, showers, charging, bag drop), with a 24-hour PGO operational post and GPS beacon tracking throughout. Entry to the 1,000 km class is qualification-validated, not open to first-time ultra riders — applicants must show a prior Race Across finish or equivalent (e.g. 300 km within 24 hours).",
+      "signature_challenge": "A full Spanish traverse between two coasts with 14,000 m+ of climbing — the specific marquee passes for the 2026 Águilas–Santander route were not yet published by the organizer as of this research.",
       "suffering_zones": [
-        "Portillo de la Lunada: Iconic 30km Cantabrian pass with steep gradients and exposed high-altitude scenery, a Vuelta a España regular.",
-        "Iberian Plateau: Arid, rolling expanses demanding sustained power and heat management midway.",
-        "Puerto de Almedijar & Oronet: Final Valencian Sierra climbs testing fatigued legs with technical descents to the coast."
+        "2025-route history only (route reversed for 2026, not confirmed to apply): Portillo de la Lunada, Puerto de Almedíjar, Puerto del Oronet, Sierra de la Demanda, Sierra Cebollera, Sierra de Gúdar-Javalambre — all named on the organizer's 2025 Santander-to-Valencia route article, none confirmed for the 2026 Águilas-to-Santander course.",
+        "Iberian mountain crossings are structurally guaranteed given the published 14,000 m+ elevation total, but the organizer had not released a named-climb breakdown or final GPX for 2026 as of this research — riders training off last year's climb list will prepare for the wrong mountains."
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Sleeping areas at living bases; Santander offers hotels near start/finish venue.",
-      "transport": "Semi-autonomous ultra with dedicated support: PGO tracking, living bases for rest/refuel, bib collection, briefings, and awards at Palacio de los Deportes in Santander.",
+      "transport": "Semi-autonomous ultra with dedicated support: staffed life-bases for rest/refuel, PGO 24-hour operational monitoring, GPS beacon tracking, bib collection and briefings ahead of the 20:00 September 16 start.",
       "food": "",
       "official_site": "https://en.raceacrossseries.com/race-across-spain-2025"
     },
     "history": {
       "founded": 2025,
-      "origin_story": "New flagship event in Race Across Series, launching Spain's ultra-cycling scene with inaugural 2025/2026 editions drawing international talent.",
+      "origin_story": "Launched in 2025 as a new flagship in the Race Across Series (Santander to Valencia, roughly 150 total participants across all distances). The 2026 edition is the second running and completely reverses and relocates the route — Águilas (Murcia) to Santander — rather than repeating the inaugural course.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine Second-Year Ultra — But the Route Changed Direction, Verify Before You Train",
+      "summary": "Race Across Spain is a semi-autonomous Race Across Series event with staffed life-bases, GPS tracking and a 24-hour operations post — more organizer-provided support and monitoring than a pure unsupported race, and a fixed organizer GPX rather than free rider-chosen routing. But this is only the second edition, and the 2026 course completely reverses and relocates the 2025 inaugural route: Águilas to Santander instead of Santander to Valencia. As of research, the organizer had not published a 2026 GPX or named-climb breakdown, so the previously published signature climbs (Portillo de la Lunada, Puerto de Almedíjar, Puerto del Oronet) belong to the retired 2025 course, not this year's race. Entry to the 1,000 km class also requires demonstrated prior ultra-distance experience — this is not an open beginner event.",
+      "strengths": [
+        "Real Race Across Series support infrastructure — staffed life-bases, 24-hour PGO monitoring, GPS beacon tracking on every rider — more organizer-provided support and monitoring than a pure unsupported race",
+        "Genuine full-country Spanish traverse with a guaranteed 14,000 m+ of climbing, whichever direction the route runs",
+        "Clear qualification standard for the flagship distance (prior Race Across finish or 300 km within 24h) keeps the 1,000 km field experienced",
+        "Multiple distance classes (200/300/500/1,000 km) broaden access beyond the flagship crossing"
+      ],
+      "weaknesses": [
+        "The 2026 route completely reverses the 2025 course — do not trust last year's climb list, terrain description, or marketing copy for this year's race",
+        "As of research, the organizer had not published a 2026 GPX or named-climb route breakdown, leaving real uncertainty about the actual terrain until closer to race day",
+        "Entry to the 1,000 km class is qualification-validated, not open registration — first-time ultra riders need a different on-ramp",
+        "No official 2026 field cap found; the inaugural 2025 edition drew only around 150 total participants across all distances, a small, unproven field for a flagship national crossing"
+      ],
+      "bottom_line": "A legitimate, well-supported second-year Spanish ultra with real Race Across Series infrastructure behind it — but confirm the actual 2026 route and climbs directly with the organizer before training, since the course has already reversed direction once in only its second year."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Spain's ultimate road ultra odyssey: 621 miles of mountains, culture, and unbreakable spirit.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Spain's second-year Race Across Series crossing — real staffed-base infrastructure, but the route reversed direction from Santander–Valencia to Águilas–Santander for 2026.",
+      "should_you_race": "Only if you already meet the 1,000 km class's qualification standard (a prior Race Across finish or 300 km within 24h) and can wait on the organizer's 2026 GPX before finalizing your prep — don't train off last year's climb list.",
+      "alternatives": "For a similar semi-autonomous Race Across Series format, see Race Across France or Race Across Benelux (also in this database). For a Spanish ultra with a longer, more stable route history, look at other established entries on the Spanish ultracycling calendar."
     },
     "citations": [
       {
         "url": "https://en.raceacrossseries.com/race-across-spain-2025",
-        "category": "reference",
-        "label": "Race Across Spain | Take the challenge now"
+        "category": "official",
+        "label": "Official Race Across Spain Page — Current 2026 Info (Retains 2025 URL Slug)"
+      },
+      {
+        "url": "https://en.raceacrossseries.com/reglement",
+        "category": "official",
+        "label": "Official 2026 Race Across Series Rules (Updated June 3, 2026)"
       },
       {
         "url": "https://fr.milesrepublic.com/en/event/race-across-spain-12384",
         "category": "reference",
-        "label": "Race Across Spain 2026 - Santander - Miles Republic"
+        "label": "Miles Republic — Official Registration Platform, 2025 Participation and 2026 Fees"
       },
       {
         "url": "https://en.raceacrossseries.com/blog/une-course-de-vlo-pique-travers-lespagne",
         "category": "editorial",
-        "label": "Race Across Spain 2025: routes, distances and new features"
+        "label": "Race Across Spain 2025 Route Article — Superseded by 2026 Route Reversal"
       },
       {
-        "url": "https://ultracycling.com/calendar/race-across-spain-2025/",
-        "category": "reference",
-        "label": "Race Across Spain 2025 - World UltraCycling Association"
+        "url": "https://en.raceacrossseries.com/notre-histoire-2025",
+        "category": "official",
+        "label": "Race Across Series — Official Series History"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://en.raceacrossseries.com/",
-      "notes": "Ultra road event Santander–Valencia with registrations open for its first edition on 16–20 September 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://en.raceacrossseries.com/race-across-spain-2025",
+      "notes": "2026 is confirmed as the second edition, running September 16-20. The route reversed and relocated from the 2025 inaugural course: 2026 runs Águilas (Murcia) to Santander, not Santander to Valencia as previously on file. Vitals corrected from false-precision 999.4 km / 10,668 m to the organizer's published nominal 1,000 km / 14,000 m+. Confirmed fixed organizer-GPX course (not free rider-chosen routing), semi-autonomous format with staffed life-bases and PGO/GPS tracking, and qualification-validated entry for the 1,000 km class (prior Race Across finish or 300 km/24h). 2025 participation was approximately 150 across all distances; no 2026 cap published. Fee schedule confirmed at EUR 289-359 solo (1,000 km). The previously listed signature climbs (Portillo de la Lunada, Puerto de Almedíjar, Puerto del Oronet) belong to the retired 2025 route and were not confirmed for 2026 as of this research — the organizer had not yet published a 2026 GPX or named-climb breakdown. A follow-up sol adversarial review caught and fixed a leftover climate.description sentence that still described the old north-to-south direction (cool Cantabria warming toward the Mediterranean) — corrected to reflect the actual south-to-north Águilas-to-Santander direction. Verified 2026-07-24 via codex gpt-5.6-sol foreground research plus a follow-up sol adversarial review, both as part of the Roadie Labs editorial wave 4."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a fixed-course, semi-autonomous ultra-distance road race with staffed life-bases and qualification-validated entry, not a mass-start peloton event — doesn't cleanly fit the gran_fondo taxonomy, whose scoring dimensions (field_depth, community_culture, etc.) are designed primarily around mass-participation, open-entry events. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

@@ -9,11 +9,11 @@
       "distance_mi": 100.0,
       "elevation_m": 2591,
       "elevation_ft": 8500.0,
-      "location": "Lausanne, Switzerland",
+      "location": "Lausanne, Switzerland (UNVERIFIED — no evidence this event exists, see biased_opinion)",
       "location_badge": "Lausanne, Switzerland",
       "country": "Switzerland",
-      "date": "2026: April 28",
-      "date_specific": "2026: April 28",
+      "date": "UNVERIFIED — no evidence this event exists (see biased_opinion); previously listed as 2026: April 28",
+      "date_specific": "UNVERIFIED — no evidence this event exists (see biased_opinion); previously listed as 2026: April 28",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -58,7 +58,7 @@
       "tier_label": "TIER 2",
       "discipline": "sportive",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70. UNRELIABLE (2026-07-24): this score and every dimension above it are unreviewed migration artifacts scoring an event that a thorough sourced audit found no evidence exists — see biased_opinion and catalog_flags. Left in place only because the schema requires a non-null score; do not treat 70/100 as a verified rating."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -72,72 +72,87 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Hilly road sportive emulating the Tour de Romandie's punchy Jura and Alpine foothills, featuring rolling terrain, steep kicks, and lake views culminating near Lausanne.",
-      "signature_challenge": "The 'Romandie Rollercoaster': 8500ft over 100 miles of Swiss climbs, blending endurance with explosive efforts akin to pro Queen stages.",
-      "suffering_zones": [
-        "Jura Foothills: Early undulating climbs building fatigue over 2000-3000ft gain with false flats.",
-        "Alpine Approaches: Mid-route ascents toward Thyon-like summits, delivering 4000ft of relentless gradient.",
-        "Lausanne Finale: Hilly time trial-inspired finish with uphill sting to Olympic stadium overlooking Lake Geneva."
-      ]
+      "character": "IMPORTANT — this profile does not appear to describe a real, bookable event. Research (2026-07-24) found no adult, public-entry cyclosportive or gran fondo tied to Tour de Romandie branding, in Lausanne or anywhere else (the only branded participant activity is the P'tit Tour de Romandie, a short untimed ride for roughly 15 invited children per stage). The professional Tour de Romandie (UCI WorldTour) is a closed race restricted to Elite Men and Under-23 Men — its official 2026 regulations have no public-registration section, and the official 2026 stage list had no Lausanne start or finish (it opened in Villars-sur-Glâne, with stage towns at Martigny, Rue/Vucherens, Orbe, Broc/Charmey, and Lucens/Leysin). The course description previously published here — 'Jura Foothills,' 'Alpine Approaches,' a 'Lausanne Finale' near the Olympic stadium, and a named 'Romandie Rollercoaster' signature challenge — traces to no official source found in research and has been removed rather than repeated as fact. No organizer record, registration page, results archive, or documented Lausanne course supports the listing; the vitals (100.0 mi / 8,500 ft, converting to 160.9 km / 2,591 m) read like a generic imperial century-ride template rather than a documented Swiss course.",
+      "signature_challenge": null,
+      "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Abundant hotels in Lausanne and along Lake Geneva; book early for spring demand.",
-      "transport": "Single-day event in late April, centered in Lausanne with easy urban access and pro-level organization.",
+      "lodging_strategy": "",
+      "transport": "",
       "food": "",
-      "official_site": "https://www.tourderomandie.ch/en/"
+      "official_site": ""
     },
     "history": {
-      "founded": 1947,
-      "origin_story": "Amateur sportive inspired by the prestigious Tour de Romandie stage race, bringing pro parcours to gran fondo enthusiasts in Romandie.",
+      "founded": null,
+      "origin_story": "IDENTITY CORRECTION (2026-07-24): the founded:1947 date and 'amateur sportive inspired by the Tour de Romandie' origin story previously here belong to the PROFESSIONAL Tour de Romandie's own founding (conceived 1946 for the Swiss cycling federation's 50th anniversary, first raced 1947 by ten invited teams of four riders). Research found no evidence that this founding date, or any origin story, applies to a separate amateur cyclosportive — no such currently-bookable event was found. Cleared rather than repeated as fact.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Does Not Check Out",
+      "summary": "This profile does not appear to describe a real, current, bookable gran fondo. Web research on 2026-07-24 found no adult, public-entry cyclosportive tied to Tour de Romandie branding — in Lausanne or anywhere in Romandie. The professional Tour de Romandie is a closed UCI WorldTour stage race for Elite Men and Under-23 Men only; its 2026 regulations contain no public-registration section, and the official 2026 stage list had no Lausanne start or finish. No organizer record, registration page, results archive, or documented Lausanne course supports this listing: the vitals on file (100.0 mi / 8,500 ft) convert to tidy round numbers rather than a documented Swiss course, and the citations previously in this profile referenced only the professional race — none supported a public sportive, a Lausanne course, or the 1947 founding date as applied here. A real but now-defunct amateur series called 'Tour de Romandie populaire' did exist (conceived 2011, documented from at least 2013 through 2016; organized by Chassot Concept as separately-named events at venues including Lucens, Aigle-Leysin, Charmey, Neuchâtel, and Verbier) — but no Lausanne edition or course matching this profile's 160.9 km / 2,591 m was found, and it is a different thing from what this profile describes. This is not a defunct race being restored to accuracy; it is an unsupported record that should not be presented to riders as a real event.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "No evidence this event currently exists, has ever existed in this form, or is bookable by any rider",
+        "The vitals (100.0mi/8,500ft) and previous course description read as generic templated content rather than researched facts about a real Swiss course",
+        "The 1947 founding date and origin story belong to the unrelated professional Tour de Romandie, not to any amateur equivalent",
+        "The real historical 'Tour de Romandie populaire' series (documented 2013-2016 at venues including Neuchâtel, Aigle-Leysin, and Charmey) is a different thing and should not be conflated with this Lausanne-specific record"
+      ],
+      "bottom_line": "Do not present this to riders as a bookable race. If you want a real, large, well-documented Lausanne-area cyclosportive, ride the Cyclotour du Léman instead (176 km around Lake Geneva, cyclotour.ch) — this profile should be flagged for a human decision on removal from the catalog."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Pro-caliber road suffering in postcard Switzerland—pure gran fondo gold.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Investigated 2026-07-24: no evidence this event exists — not a real, bookable gran fondo.",
+      "should_you_race": "No — this does not appear to be a real, bookable event. No current Tour de Romandie-branded amateur racing was found; the historical 'Tour de Romandie populaire' series (Neuchâtel/Aigle-Leysin/Charmey and other venues) is documented only through 2016.",
+      "alternatives": "For a real, large Lausanne-based cyclosportive: Cyclotour du Léman (176 km around Lake Geneva, cyclotour.ch). For Tour de Romandie exposure as a spectator: follow the professional UCI WorldTour stage race itself (tourderomandie.ch) — it has no adult public-entry component."
     },
     "citations": [
       {
-        "url": "https://en.wikipedia.org/wiki/Tour_de_Romandie",
-        "category": "reference",
-        "label": "Tour de Romandie - Wikipedia"
+        "url": "https://www.tourderomandie.ch/wp-content/uploads/2026/04/Programme_TDR2026_web.pdf",
+        "category": "official",
+        "label": "Official 2026 Programme/Regulations — Elite Men/U23 Only, No Public-Entry Section"
       },
       {
-        "url": "https://www.tourderomandie.ch/en/",
-        "category": "reference",
-        "label": "site officiel - Tour de Romandie (TDR)"
-      },
-      {
-        "url": "https://www.cyclingnews.com/tour-de-romandie/",
-        "category": "reference",
-        "label": "Tour de Romandie 2026 - Cyclingnews"
-      },
-      {
-        "url": "https://en.wikipedia.org/wiki/2025_Tour_de_Romandie",
-        "category": "reference",
-        "label": "2025 Tour de Romandie - Wikipedia"
+        "url": "https://www.tourderomandie.ch/en/tour-de-romandie-2026/",
+        "category": "official",
+        "label": "Official 2026 Route Page — No Lausanne Stage (Opened Villars-sur-Glâne)"
       },
       {
         "url": "https://www.tourderomandie.ch/en/about-tdr/",
+        "category": "official",
+        "label": "Official Tour History — 1947 First Edition Belongs to the Professional Race"
+      },
+      {
+        "url": "https://www.mso.swiss/events?filterEndDate=2016-12-31&filterStartDate=2016-1-1",
         "category": "reference",
-        "label": "About the Tour de Romandie"
+        "label": "MSO 2016 Calendar — Real But Now-Defunct 'Tour de Romandie Populaire' Series (Neuchâtel/Charmey, Distinct From This Profile)"
+      },
+      {
+        "url": "https://doc.rero.ch/record/77104/files/2011-03-26.pdf",
+        "category": "reference",
+        "label": "2011 Newspaper Archive — Chassot's Proposal of the 'Tour de Romandie Populaire' Series"
+      },
+      {
+        "url": "https://www.neuchatelville.ch/fileadmin/sites/ne_ville/fichiers/presse/Journal_N_/imported/2015/No18_03_06_2015_LOW_20_3_.pdf",
+        "category": "reference",
+        "label": "2015 Neuchâtel Municipal Publication — Series Composition and Chassot Concept as Organizer"
+      },
+      {
+        "url": "https://www.lausanne-tourisme.ch/en/event/cyclotour-du-leman/",
+        "category": "reference",
+        "label": "Cyclotour du Léman — The Real, Large Lausanne-Area Cyclosportive (Recommended Alternative)"
       }
     ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.tourderomandie.ch/en/",
-      "notes": "Search only shows the professional Tour de Romandie; no clear evidence of a mass-participation cyclosportive event in Lausanne.; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.tourderomandie.ch/wp-content/uploads/2026/04/Programme_TDR2026_web.pdf",
+      "notes": "Re-investigated 2026-07-24 (upgraded from a search-engine spot-check to a thorough sourced audit): no evidence found that 'Tour de Romandie Cyclosportive' as described in this profile (160.9km/2591m, Lausanne, 28 April 2026, founded 1947) exists or has existed — high confidence this is an unsupported composite record. The professional Tour de Romandie's 2026 regulations restrict entry to Elite Men/U23 with no public-registration path, and its official 2026 stage list had no Lausanne start or finish. A real but distinct and now-defunct amateur series ('Tour de Romandie populaire,' conceived 2011, documented 2013-2016 at venues including Lucens, Aigle-Leysin, Charmey, Neuchâtel, and Verbier) exists in the historical record but no Lausanne edition or matching course was found. See research-dumps/tour-de-romandie-cyclosportive.md for full research trail. Recommend human review for removal from the catalog."
+    },
+    "catalog_flags": {
+      "status_note": "AUTHENTICITY INVESTIGATION (2026-07-24): thorough codex web-search research found no evidence this event exists — not currently, not historically in this form. Identity-corrected this wave per the flandrien-ride.json pattern: unsupported course_description, origin_story, and logistics content removed rather than repeated as fact; biased_opinion now states plainly that this doesn't check out as a real gran fondo. Matching the hedged confidence level used in eligibility.status ('unknown') rather than overclaiming certainty: this is a strong negative-evidence finding — no organizer record, registration page, results archive, or documented course was found after a thorough sourced audit — not a confirmed fabrication with a known origin. FLAG FOR HUMAN: recommend deciding whether to remove this profile from the catalog entirely, since (unlike flandrien-ride or birkebeinerrittet-road) no real underlying event was found to correct toward. The vitals (160.9km/2,591m, Lausanne, 28 April 2026) and the 70/100 fondo_rating score below remain populated only because the schema requires non-null vitals/scores — they are NOT verified facts, see biased_opinion/eligibility for the actual finding; a human should decide whether an unsupported event should carry a displayed score or vitals at all.",
+      "ruled": "2026-07-24 editorial calibration wave"
     }
   }
 }

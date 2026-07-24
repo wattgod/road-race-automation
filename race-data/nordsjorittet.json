@@ -5,24 +5,29 @@
     "display_name": "Nordsjørittet",
     "tagline": "",
     "vitals": {
-      "distance_km": 154.5,
-      "distance_mi": 96.0,
-      "elevation_m": 1494,
-      "elevation_ft": 4900.0,
+      "distance_km": 88.0,
+      "distance_mi": 54.7,
+      "elevation_m": null,
+      "elevation_ft": null,
       "location": "Egersund to Sandnes, Norway",
       "location_badge": "Egersund to Sandnes, Norway",
       "country": "Norway",
-      "date": "2026: June 13",
-      "date_specific": "2026: June 13",
-      "field_size": null,
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "date": "2027: June 12 (2026 edition ran June 13, already held)",
+      "date_specific": "2027: June 12",
+      "field_size": "~1,200 starters (2026, all distances)",
+      "start_format": "Staggered wave starts (11 waves, 10:00-10:40 in 2026), not a single mass start — separate waves for timed CX/gravel, MTB and untimed riders",
+      "registration": "https://www.nordsjorittet.no/informasjon/early-bird-priser-n",
+      "entry_fee": "2026 fee schedule: NOK 690-1,400 (timed 88/43km, tiered by registration date); NOK 649-990 (untimed); NCF race licence required for timed categories, not included. 2027 pricing not yet published.",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Full (timed, flat-bar)", "distance_km": 88.0},
+        {"name": "Full (timed CX/gravel, drop-bar)", "distance_km": 88.0},
+        {"name": "Full (untimed, any bike incl. e-bike)", "distance_km": 88.0},
+        {"name": "Half", "distance_km": 43.0}
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -33,7 +38,7 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "60% paved, 20% gravel/unpaved",
+      "surface": "Mixed-surface MTB/gravel event, not a pure road course — organizer markets it for flat-bar, drop-bar CX/gravel, MTB, hybrid and e-bike riders. A secondary, non-organizer route guide estimates roughly 60% asphalt / 20% gravel / 20% paths-singletrack for an earlier course version; not confirmed for the revised 2026 route, which dropped the Vandavatn section.",
       "technical_rating": 3,
       "features": []
     },
@@ -72,45 +77,63 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A scenic coastal journey blending paved roads, gravel paths, forests, mountains, and North Sea beaches, emphasizing adventure and accessibility over pure speed.",
-      "signature_challenge": "The relentless North Sea wind combined with 4900 ft of elevation on exposed coastal roads, rewarding resilient riders with unparalleled fjord-edge views.",
+      "character": "An 88km point-to-point ride up Norway's coastal Jæren region from Egersund to Sandnes, using sections of Nordsjøveien (North Sea Road), Den Vestlandske Hovedveg (Western Main Highway) and Kongevegen (King's Road) through forests, exposed coastal rock, beaches and farmland. It is a mixed-surface event, not a pure road course — organizer categories include a timed flat-bar class, a timed drop-bar CX/gravel class, and an untimed class open to any bike including e-bikes. The 2026 route dropped the Vandavatn section, previously the course's most technically demanding stretch.",
+      "signature_challenge": "Tubakken, the signature late-race climb around km 68 — historically measured at roughly 450m and 10% gradient — remained the decisive point in 2026, where the eventual winner made the race-deciding attack.",
       "suffering_zones": [
-        "Coastal Hills: Rolling climbs along the North Sea Road with wind exposure and undulating terrain testing endurance.",
-        "Gravel Forest Sections: 20% gravel through wooded areas and mountains, demanding bike handling and steady power.",
-        "Final Push to Sandnes: Fatigue-building finale mixing surfaces after 96 miles of varied coastal landscapes."
+        "Tubakken (~km 68): the course's defining late climb and a popular spectator point — where the 2026 race was effectively decided.",
+        "Coastal exposure along Nordsjøveien: long, wind-exposed stretches of the North Sea Road with little shelter.",
+        "Mixed-surface sections: the course is not all pavement — riders on flat-bar or CX/gravel bikes handle unpaved stretches that a pure road bike would struggle with."
       ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Ample options in Sandnes, Egersund, and nearby Stavanger; book early for June event tied to local festivals.",
-      "transport": "Point-to-point from Egersund to Sandnes with shuttle options likely; mass-start event for 12,500 riders, strong safety measures, timed and non-timed categories.",
+      "airport": "Stavanger Airport (SVG), roughly 45 minutes from Sandnes",
+      "lodging_strategy": "Ample options in Sandnes, Egersund, and nearby Stavanger; book early for the June event.",
+      "transport": "Point-to-point from Egersund to Sandnes; staggered wave starts, not a single mass start.",
       "food": "",
       "official_site": "https://www.nordsjorittet.no"
     },
     "history": {
-      "founded": 1980,
-      "origin_story": "Norway's second-largest cycling event, grown into a massive participatory race emphasizing inclusivity, safety, and Western Norway's beauty.",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 1998,
+      "origin_story": "A long-running Western Norway mass-participation cycling event from Egersund to Sandnes, first held in 1998 (organizing company established 2008). Reported fields reached roughly 12,500 riders in the 2012-2014 period, per Stavanger Aftenblad.",
+      "notable_moments": [
+        "2012-2014: reported roughly 12,500-rider capacity/fields across at least two consecutive editions, the race's participation peak era (Stavanger Aftenblad).",
+        "2026: field settled around 1,200 starters across timed and untimed categories; Fredrik Dversnes won after attacking on Tubakken."
+      ],
+      "reputation": "A long-standing Western Norway fixture that has shifted from a road-leaning mass ride at its 2010s peak toward a smaller, mixed-surface MTB/gravel/CX event today — current field size is well below its historical high."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Shrunken, Mixed-Surface Ride — Not the Road Mega-Event Its Old Numbers Suggest",
+      "summary": "Nordsjørittet has real history — a Western Norway institution since 1998 that drew a reported ~12,500-rider field in its 2012-2014 peak era — but the event on the ground in 2026 is a much smaller, mixed-surface affair: roughly 1,200 starters across a timed flat-bar class, a timed drop-bar CX/gravel class, and an untimed class open to e-bikes, released in staggered waves rather than a single mass start. It's not a road gran fondo in the conventional sense; it's closer to a Norwegian touring ride (\"turritt\") with a genuine competitive layer at the front. The 88km course through coastal Jæren to Tubakken is scenic, and the racing is real — Tubakken decided the 2026 result — but riders expecting a big-field road event on the strength of the old participation numbers will be surprised by both the field size and the surface mix.",
+      "strengths": [
+        "Long history (first held 1998) as a Western Norway cycling institution, with a documented ~12,500-rider field in its 2012-2014 peak era",
+        "Genuine competitive layer at the front — Tubakken, the late climb around km 68, decided the actual race result in 2026",
+        "Flexible format: choose timed flat-bar, timed drop-bar CX/gravel, or untimed (any bike, including e-bikes) — accessible to a wide range of riders and bikes",
+        "Scenic coastal Jæren route through forests, exposed coastal rock and farmland between Egersund and Sandnes"
+      ],
+      "weaknesses": [
+        "Field size has dropped well below its documented ~12,500-rider peak-era fields (2012-2014) to roughly 1,200 starters in 2026",
+        "Not a pure road course — organizer explicitly markets it for flat-bar, gravel/CX, MTB and e-bike riders, with only a secondary, non-organizer estimate (not confirmed for the current route) putting the surface at roughly 60% paved",
+        "No current organizer-published elevation-gain figure for the 2026 course, after the route dropped the previously most technically demanding Vandavatn section — riders can't get a firm climbing estimate from official sources",
+        "Course and field numbers have shifted meaningfully year to year (2,312 across five distances in 2023 vs. ~1,200 in 2026), so treat any single year's data as a snapshot, not a stable baseline"
+      ],
+      "bottom_line": "Go for the coastal Jæren scenery, the Tubakken finale, and a flexible timed-or-untimed format on whatever bike you bring — not for the scale the old participation figures imply, and not expecting a pure road-surface event."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "Norway's ultimate coastal crusher: massive, scenic, and welcoming for every pedal-pusher.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A scenic Western Norway coastal ride that's shrunk from a ~12,500-rider peak era to roughly 1,200 starters on a mixed-surface course.",
+      "should_you_race": "Yes if you want a scenic, flexible-format coastal ride in Western Norway and don't mind mixed surfaces or a modest current field. Skip it if you specifically want a big-field, pure-road gran fondo — that's not what this has become.",
+      "alternatives": "For a similarly scenic but smaller Western Norway coastal ride, Nordsjørittet's current scale is comparable to regional Norwegian turritt events rather than the country's largest sportives — check current-year field sizes directly, since Norwegian mass-participation cycling turnout has been volatile in recent years."
     },
     "citations": [
       {
-        "url": "https://scanmagazine.co.uk/nordsjorittet-2/",
-        "category": "editorial",
-        "label": "Nordsjørittet & Tour des Fjords | Western Norway on two wheels"
+        "url": "https://www.nordsjorittet.no/informasjon/early-bird-priser-n",
+        "category": "official",
+        "label": "Official 2026 Pricing, Distances and Registration Categories"
+      },
+      {
+        "url": "https://www.nordsjorittet.no/informasjon/alt-du-trenger-vite-om-nordsjrittet-2026",
+        "category": "official",
+        "label": "Official 2026 Participant Briefing (Route, Checkpoints, Prizes)"
       },
       {
         "url": "https://www.fjordnorway.com/en/see-and-do/nordsjorittet-myyj8fnnsawctpwkdvxgkg",
@@ -118,26 +141,30 @@
         "label": "Nordsjørittet - Fjord Norway"
       },
       {
-        "url": "https://live.eqtiming.com/78177",
-        "category": "reference",
-        "label": "Nordsjørittet 2026 - EQ Timing"
+        "url": "https://www.aftenbladet.no/sport/i/XMd5bn/over-1000-paamelde-her-er-alt-du-treng-aa-vite-foer-nordsjoerittet",
+        "category": "editorial",
+        "label": "Stavanger Aftenblad — 2026 Pre-Race Field Size and Course Preview"
       },
       {
-        "url": "https://www.stavangerchamber.com/news/sports-outdoors",
-        "category": "reference",
-        "label": "Sports & Outdoors - Stavanger Chamber of Commerce"
+        "url": "https://www.kondis.no/idrett/fredrik-dversnes-lavik-innfridde-i-nordsjorittet/1573855",
+        "category": "editorial",
+        "label": "Kondis — 2026 Race Report (Tubakken Decisive Move)"
       },
       {
-        "url": "https://magmageopark.no/en/location-object/nordsjorittet-is-norways-second-largest-cycle-race/",
+        "url": "https://www.aftenbladet.no/lokalt/i/Gjy8V/skal-syklistene-bare-legge-igjen-bananskall",
         "category": "reference",
-        "label": "Nordsjørittet, 91 km from Egersund to Sandnes - Magma Geopark"
+        "label": "Stavanger Aftenblad — 2013 Report Documenting 12,500-Rider Peak"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.nordsjorittet.no/home",
-      "notes": "Mass-participation MTB/gravel event Egersund–Sandnes held June 13, 2026 and still promoted for 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.nordsjorittet.no/",
+      "notes": "2026 edition confirmed held 13 June 2026 (~1,200 starters); official site now shows next edition 12 June 2027. Distance, elevation, field size, surface framing and course facts corrected this pass — prior file's 154.5km/1494m/12,500-riders figures were unsupported or stale (12,500 is a 2013 peak-era number). This is a mixed-surface MTB/gravel/CX event, not a pure road course — see catalog_flags for a taxonomy flag. See research-dumps/nordsjorittet.md for full sourcing."
+    },
+    "catalog_flags": {
+      "status_note": "Surface taxonomy flag: the organizer markets Nordsjørittet for flat-bar, drop-bar CX/gravel, MTB, hybrid and e-bike riders, with only one of three entry categories being drop-bar/road-adjacent. terrain.surface and fondo_rating.road_surface already reflect a mixed-terrain event, but a human should decide whether a Norwegian mixed-surface touring ride (\"turritt\") with a competitive layer belongs in the Roadie Labs road-race database at all, versus being better suited to a gravel/MTB database. Field size has also shrunk from a documented 12,500-rider 2013 peak to roughly 1,200 in 2026 — treat the historical scale claims in older secondary sources with caution.",
+      "ruled": "2026-07-24 editorial wave 4 batch"
     }
   }
 }

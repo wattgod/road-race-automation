@@ -5,15 +5,15 @@
     "display_name": "Race Across Belgium",
     "tagline": "",
     "vitals": {
-      "distance_km": 999.4,
-      "distance_mi": 621.0,
-      "elevation_m": 11900,
-      "elevation_ft": 39042.0,
-      "location": "Belgium, Netherlands, Luxembourg (traverse)",
-      "location_badge": "Belgium, Luxembourg (traverse)",
-      "country": "Luxembourg (traverse)",
-      "date": "2026: May 27-31",
-      "date_specific": "2026: May 27",
+      "distance_km": 1015.0,
+      "distance_mi": 630.7,
+      "elevation_m": 7200,
+      "elevation_ft": 23622.0,
+      "location": "Arlon to Braine-l'Alleud, Belgium (2025, final edition under this name)",
+      "location_badge": "Arlon to Braine-l'Alleud, Belgium",
+      "country": "Belgium",
+      "date": "2025 (final edition; renamed Race Across Benelux for 2026)",
+      "date_specific": "2025 (retired name — see race-across-benelux.json for the current 2026+ event)",
       "field_size": "Not specified",
       "start_format": null,
       "registration": null,
@@ -79,11 +79,11 @@
       "lodging_strategy": "Base camp at Arlon provides dormitories, showers, and meals. Participants return to base camp after each loop on the 500km+ distances.[1]",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.raceacrossseries.com/race-across-belgique-2025"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2021,
+      "origin_story": "Launched August 19, 2021 in Arlon as the first Belgian ultra-cycling race, initiated by Michel Mussot. Ran under the 'Race Across Belgium' name for five editions (2021-2025); the final 2025 flagship (Arlon to Braine-l'Alleud) measured approximately 1,015 km / 7,200 m. For the 2026 season, the organizer renamed and geographically expanded the event into 'Race Across Benelux,' extending the course from Belgium-only into a Netherlands-Belgium-Luxembourg crossing. See race-across-benelux.json for the current, canonical profile.",
       "notable_moments": [],
       "reputation": ""
     },
@@ -96,11 +96,32 @@
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "A distinctive European ultra-cycling challenge combining Benelux geography, cycling heritage, and demanding terrain for serious endurance cyclists.",
+      "one_liner": "Belgium's original ultra-cycling crossing (2021-2025) — renamed and geographically expanded into Race Across Benelux for 2026; see race-across-benelux.json for the current profile.",
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.raceacrossseries.com/race-across-belgique-2025",
+        "category": "official",
+        "label": "Official Event Page — States the Belgium-to-Benelux Rename Explicitly"
+      },
+      {
+        "url": "https://www.tvlux.be/actu/sport/cyclisme/la-premiere-course-belge-d-ultra-cyclisme-est-partie-d-arlon-ce-jeudi-matin_38220",
+        "category": "media",
+        "label": "TV Lux — 2021 Founding Report, First Belgian Ultra-Cycling Race"
+      },
+      {
+        "url": "https://www.raceacrossseries.com/blog/une-course-de-vlo-mmorable-en-belgique-2025",
+        "category": "official",
+        "label": "2025 Retrospective — Final 'Race Across Belgium' Edition (~1,015 km / 7,200 m)"
+      },
+      {
+        "url": "https://www.raceacrossseries.com/nos-evenements-2026",
+        "category": "official",
+        "label": "Official 2026 Calendar — Confirms No Separate Active Belgium Listing"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Race Across Belgium gran fondo cycling Belgium",
@@ -310,10 +331,16 @@
       }
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://sportpress.international/cycling-race-across-benelux/",
-      "notes": "Event is still running under the rebranded name Race Across Benelux; 2026 edition confirmed for May 27–31 across Netherlands, Belgium and Luxembourg, matching the traverse format.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.raceacrossseries.com/race-across-belgique-2025",
+      "notes": "Retired name. Confirmed SAME EVENT RENAMED (not a coincidental duplicate): 'Race Across Belgium' ran 2021-2025 (first edition 19 Aug 2021, Arlon start, organizer Michel Mussot). For the 2026 season the organizer renamed and geographically expanded it to 'Race Across Benelux' — see race-across-benelux.json, the current canonical profile. The official event page (still on the legacy 'race-across-belgique-2025' URL) states outright: 'La Race Across Belgium change de nom et devient la Race Across Benelux.' The 2026 official calendar and rules pages list Benelux only, with no separate active Belgium listing. Vitals corrected from a placeholder that exactly duplicated race-across-benelux.json's figures (999.4 km / 11,900 m on both files) to the real final 2025 Belgium-only edition figures (1,015 km / 7,200 m, Arlon to Braine-l'Alleud) per the organizer's own 18 Sep 2025 retrospective. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 4."
+    },
+    "catalog_flags": {
+      "duplicate_of": "race-across-benelux",
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this was (and its successor still is) a fixed-course, semi-autonomous ultra-distance road race with staffed life-bases rather than a mass-start peloton — doesn't cleanly fit the gran_fondo taxonomy. Not actioned further here since duplicates receive no further editorial work per pipeline convention; see race-across-benelux.json's catalog_flags for the full taxonomy note on the active, canonical profile.",
+      "notes": "SAME EVENT RENAMED, not two distinct races: 'Race Across Belgium' ran 2021-2025 (first edition 19 Aug 2021, Arlon start, organizer Michel Mussot) under the Race Across Series banner. For the 2026 season the organizer renamed and geographically expanded it to 'Race Across Benelux' (Amsterdam start, route now spans Netherlands/Belgium/Luxembourg, ~1,048 km/~11,900 m vs. the 2025 Belgium-only ~1,015 km/7,200 m). Official evidence: the current event page at raceacrossseries.com/race-across-belgique-2025 (still on the legacy URL slug) states outright 'La Race Across Belgium change de nom et devient la Race Across Benelux'; the 2026 calendar and rules pages list Benelux only, with no separate active Belgium listing. This profile's vitals were previously an exact placeholder copy of Benelux's (999.4 km/11,900 m identical on both files) — corrected here to the real final 2025 Belgium-only edition figures (1,015 km/7,200 m, Arlon to Braine-l'Alleud) per the organizer's own 18 Sep 2025 retrospective. race-across-benelux.json is canonical (current, active, richer 2026 route detail); this profile is retained as the historical record of the retired name, per no-further-editorial-on-dupes convention (see gfny-la-vaujany-alpe-dhuez.json for precedent).",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

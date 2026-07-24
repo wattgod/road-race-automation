@@ -5,16 +5,16 @@
     "display_name": "Škoda Ring of Clare Sportive",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 1524,
-      "elevation_ft": 5000.0,
+      "distance_km": 160.0,
+      "distance_mi": 99.4,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
       "location": "Ennis, County Clare, Ireland",
       "location_badge": "Ennis, Ireland",
       "country": "Ireland",
-      "date": "2026: July 18",
-      "date_specific": "2026: July 18",
-      "field_size": null,
+      "date": "2026 edition/date not verified as of July 24, 2026; last confirmed edition held July 19, 2025",
+      "date_specific": "2026: not verified. Škoda's own promotional content (Aug 2025) says the event 'returns in July 2026' but gives no date; the official site had not published a 2026 date as of this write-up",
+      "field_size": "Over 2,000 riders (2025)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,10 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long: 160 km, approx. 1,700 m climbing (historical/third-party route files range roughly 1,611-1,855 m depending on which GPX and edition was mapped)",
+        "Short: 120 km, approx. 1,200-1,270 m climbing (historical/third-party estimate, not a confirmed current-course total)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -72,39 +75,49 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A scenic loop showcasing County Clare's rugged cliffs, rolling hills, quiet country lanes, and Shannon Estuary views; festive atmosphere with challenging yet rewarding climbs.",
-      "signature_challenge": "The Hand climb combined with coastal winds and estuary rollers, blending steep efforts with endurance-testing scenery.",
+      "character": "A two-route sportive (160 km and 120 km, both starting/finishing at Clarecastle GAA Club near Ennis) run under the Škoda Celtic Cycle Series banner, as confirmed for the last-held 2025 edition. The long route heads out to the Wild Atlantic Way through Doonbeg, Kilkee and Loop Head before turning back along the Shannon Estuary. It is an amateur leisure sportive, not UCI-sanctioned — entry requires Cycling Ireland membership or a one-day leisure licence for insurance. Organizer-published elevation figures are thin; independently mapped GPX tracks of the long route range from roughly 1,611 m to 1,855 m across different historical/third-party route files, so treat any single number as an approximation rather than a verified current-course total.",
+      "signature_challenge": "The Hand climb near Kilmaley — a short, steep wall (roughly 1.9 km at 4.2% average, with ramps up to 9.6%, per third-party VeloViewer/Strava-segment measurement) that arrives early and sets the tone before the coastal miles.",
       "suffering_zones": [
-        "The Hand: Steep wall-like climb outside Kilmaley; short but punchy, rewarding with panoramic hill views and fast descent.",
-        "Kilkee Cliffs Loop: Breathtaking coastal roads with rugged beauty; undulating terrain tests pacing amid stunning ocean vistas.",
-        "Shannon Estuary Rollers: Deceptively tough final stretch with headwinds, rolling hills, and estuary views demanding grit to the finish."
+        "The Hand: a steep, wall-like climb outside Kilmaley — short but punchy, with a fast descent on the other side.",
+        "Kilkee Cliffs Loop: exposed coastal roads along the Wild Atlantic Way, undulating terrain that tests pacing.",
+        "Shannon Estuary Rollers: rolling hills and estuary-exposed headwinds in the closing stretch back toward Ennis."
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Ennis offers hotels, B&Bs, and guesthouses; book early for July event; camping options nearby.",
-      "transport": "Hosted in Ennis town center; two routes (160km and 100km); starts with DJ hype, multiple food stops, medal finish, and post-ride BBQ.",
+      "transport": "Hosted at Clarecastle GAA Club near Ennis; two routes (160km and 120km); starts with DJ hype, multiple food stops, medal finish, and post-ride BBQ.",
       "food": "",
       "official_site": "https://ringofclare.ie"
     },
     "history": {
-      "founded": 2010,
-      "origin_story": "Annual sportive celebrating County Clare's scenery; known for community spirit, quality support, and as a summer highlight.",
+      "founded": 2017,
+      "origin_story": "First run 29 July 2017 in Ennis; grew into an annual sportive celebrating County Clare's scenery, known for community spirit, quality support, and as a summer highlight.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Popular, Community-Hosted Sportive — Poor Current Information",
+      "summary": "The Škoda Ring of Clare Cycle is a well-attended amateur sportive — over 2,000 riders turned out in 2025 for a route running the Wild Atlantic Way through Kilkee and Loop Head before returning along the Shannon Estuary. Clarecastle GAA Club hosts the start/finish. Where it falls short is information hygiene: the organizer doesn't publish reliable elevation figures for either route, its own site still showed the closed 2025 registration with no 2026 date as of this write-up, and Škoda's own promotional copy has mislabeled the short route's distance in the past. Škoda's own content says the event 'returns in July 2026,' but that's the only positive signal found — no first-party 2026 date, registration page, or route recap exists yet, so treat the 2026 edition as unverified rather than assumed.",
+      "strengths": [
+        "Over 2,000 riders in 2025",
+        "Wild Atlantic Way scenery: Kilkee's cliffs, Loop Head, and Shannon Estuary views on the long route",
+        "Clarecastle GAA Club hosts start/finish, with club fundraising documented at past editions",
+        "Two route lengths (160 km / 120 km) give riders a choice rather than one fixed distance"
+      ],
+      "weaknesses": [
+        "No reliable organizer-published elevation figures for either route — available totals come from differing historical/third-party route files, not one verified current GPX, and range roughly 1,611-1,855 m for the long route",
+        "No verified 2026 edition or date was found as of this write-up — only a vague, dateless 'returns in July 2026' statement from the sponsor's own promotional content",
+        "Limited mechanical/medical support infrastructure typical of a community-run leisure sportive rather than a large commercial production",
+        "Information quality is inconsistent across official and sponsor channels: stale pages, at least one date typo, and a Škoda article that mislabeled the short route's distance"
+      ],
+      "bottom_line": "A popular, community-hosted sportive with real Wild Atlantic Way scenery — worth entering once a verified 2026 date and route details are actually published, but go in expecting to chase down your own elevation numbers rather than trusting the official copy."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Ireland's most scenic and festive road sportive: cliffs, cakes, and community magic.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A well-attended Wild Atlantic Way sportive with real community roots and thin official data.",
+      "should_you_race": "Yes if you want a popular Irish coastal sportive with two distance options and don't mind sourcing your own route/elevation detail. Confirm a verified 2026 date and registration page have actually been published before booking travel.",
+      "alternatives": "For another well-established Irish road sportive with a similarly festive atmosphere, see L'Étape Ireland (also in this database, Carrick-on-Suir). For more Wild Atlantic Way coastal riding, look at other County Clare/Kerry cyclosportive calendars."
     },
     "citations": [
       {
@@ -118,26 +131,46 @@
         "label": "Škoda Ring of Clare - WeLoveCycling.com"
       },
       {
-        "url": "https://www.granfondo.com/events/skoda-ring-of-clare-cycle-2023/2023-07-22/6369/cycling",
-        "category": "reference",
-        "label": "Skoda Ring of Clare Cycle 2023 - GranFondo.com"
+        "url": "https://ringofclare.ie/",
+        "category": "official",
+        "label": "Official Ring of Clare Site"
       },
       {
-        "url": "https://www.granfondoguide.com/Events/Index/5514/skoda-ring-of-clare-cycle",
-        "category": "reference",
-        "label": "SKODA Ring of Clare Cycle - Gran Fondo Guide"
+        "url": "https://ringofclare.ie/routes/",
+        "category": "official",
+        "label": "Official Routes Page — 160 km / 120 km"
       },
       {
-        "url": "https://www.cycloworld.cc/en/gran-fondo/ireland/ring-of-clare/40045",
+        "url": "https://www.clarelive.ie/news/pictures---videos/1855417/pictures-over-2-000-cyclists-take-part-in-ring-of-clare-2025.html",
         "category": "reference",
-        "label": "Ring of Clare - cycloworld.cc"
+        "label": "Clare Live — Over 2,000 Cyclists in 2025 Edition"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/5514/skoda-gran-fondo-hibernia",
+        "category": "reference",
+        "label": "Gran Fondo Guide — 2026 Listing Marked Unconfirmed"
+      },
+      {
+        "url": "https://eventmaster.ie/event/5RnyHQvsEz",
+        "category": "reference",
+        "label": "Eventmaster — 2025 Event Listing (Routes, Licence Requirement)"
+      },
+      {
+        "url": "https://veloviewer.com/routes/2979817410421487994",
+        "category": "reference",
+        "label": "VeloViewer — Mapped Long-Route Track (The Hand Gradient, Elevation)"
+      },
+      {
+        "url": "https://www.irishcyclingnews.com/skoda-ring-of-clare-cycle-hosts-2200-cyclists-skodairl-irish_cycling/",
+        "category": "reference",
+        "label": "Irish Cycling News — First Running, 29 July 2017"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.hotelwoodstock.ie/attractions/skoda-ring-of-clare-cycle/",
-      "notes": "Hotel Woodstock and Škoda cycling article both state the Škoda Ring of Clare Cycle returns in July 2026 in Ennis, matching the road sportive.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.welovecycling.com/ie/2025/08/28/imogen-cotter-reflects-on-cycling-the-skoda-ring-of-clare/",
+      "notes": "No first-party 2026 date, registration page, event-day information, or recap was found as of July 24, 2026. Škoda's own promotional content (28 Aug 2025) says the event 'returns in July 2026' but gives no date; the official site (ringofclare.ie) still displays the closed 2025 registration. Third-party listing of 'July 18, 2026' is unconfirmed — Gran Fondo Guide explicitly marks its 2026 listing 'Unconfirmed.' No evidence of cancellation either; kept as 'active' on the strength of the sponsor's own dated continuation statement, but treat the 2026 edition as unverified, not assumed. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
     }
   }
 }

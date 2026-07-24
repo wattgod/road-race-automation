@@ -5,19 +5,19 @@
     "display_name": "Amashova National Classic",
     "tagline": "",
     "vitals": {
-      "distance_km": 106.2,
-      "distance_mi": 66.0,
-      "elevation_m": 975,
-      "elevation_ft": 3200.0,
+      "distance_km": 106.0,
+      "distance_mi": 65.9,
+      "elevation_m": 1146,
+      "elevation_ft": 3760.0,
       "location": "Pietermaritzburg to Durban, KwaZulu-Natal, South Africa",
       "location_badge": "Pietermaritzburg to Durban, South Africa",
       "country": "South Africa",
-      "date": "2026: July TBD",
-      "date_specific": "2026: July TBD",
-      "field_size": null,
+      "date": "2026: July 19",
+      "date_specific": "2026: July 19",
+      "field_size": "3,500+ across all distances (2025, most recent published total; no official 2026 count released)",
       "start_format": null,
       "registration": "https://www.shova.co.za",
-      "entry_fee": null,
+      "entry_fee": "R715 (106km, 2026 fee schedule as of Feb 2026); R475 (70km); R350 (40km); R70 CSA day licence if unlicensed",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
@@ -70,12 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A point-to-point road classic from Pietermaritzburg to Durban, now in its 40th year. The route climbs Alexander Road out of the city up Fox Hill toward Thornville, then rolls through Cato Ridge and Harrisons Flats into the Valley of a Thousand Hills, passing the Comrades Marathon Wall of Honour before a fast run down Botha's Hill and Fields Hill into greater Durban. The last rise crests beneath Tollgate Bridge before the finish along Monty Naicker Road and Masabalala Yengwa Avenue.",
+      "signature_challenge": "The 14km Alexander Road/Fox Hill climb inside the first third of the race — the main sustained effort on an otherwise rolling-to-fast course, with the Valley of a Thousand Hills adding a long undulating middle section before the Botha's Hill and Fields Hill descents into Durban.",
       "suffering_zones": [
-        "Fox Hill Grind: 14km Alexander Road climb from early route, relentless gradient testing legs before Valley relief.",
-        "Hills of a Thousand: Undulating mid-section post-Howick, accumulating 3200ft gain amid scenic but leg-sapping terrain.",
-        "Coastal Sprint: Final push on Western Freeway to Suncoast amid 10,000-rider surge and Durban humidity."
+        "Alexander Road/Fox Hill: the historic 14km climb out of Pietermaritzburg toward Thornville — the course's defining effort, early enough that legs are still fresh but long enough to hurt.",
+        "Valley of a Thousand Hills: the undulating middle section through Cato Ridge, Harrisons Flats and Inchanga — scenic but leg-sapping, with no single big climb but constant rolling terrain.",
+        "Botha's Hill and Fields Hill descents: fast drops toward Durban after Kearsney College, late in the race — not climbing suffering, but a reminder that a fast descent on tired legs still demands focus."
       ]
     },
     "logistics": {
@@ -87,24 +87,74 @@
     },
     "history": {
       "founded": 1986,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "origin_story": "Launched in 1986 as the Natal Mercury/Pick n Pay National Classic, designed to follow the Comrades Marathon route on two wheels for runners who wanted to try the challenge on a bike. Now known as the Amashova National Classic — \"Amashova\" means \"the shovers\" in Zulu, a nod to the pack riding that defines the middle of the race.",
+      "notable_moments": [
+        "2026 (40th edition, 19 July): Ryan Gibbons won the men's race in 2:12:11.",
+        "A 160km additional distance was added in 2018 when the race joined the Gran Fondo World Tour as its first African event; the traditional 106km Pietermaritzburg-start race remains the flagship distance for 2026."
+      ],
+      "reputation": "One of South Africa's oldest road classics — 40 editions since 1986, though not without interruption (1996 was cancelled and 2020 ran as a virtual-only event) — and a fixture on the KwaZulu-Natal cycling calendar under Cycling South Africa licensing rules. Still on the Gran Fondo World Tour's African calendar as of 2026."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Long-Running Classic — Just Not a National Championship",
+      "summary": "The Amashova National Classic is a legitimate road race from Pietermaritzburg to Durban with 40 editions since 1986 — not unbroken, since 1996 was cancelled and 2020 ran virtual-only. \"National\" has been part of its name since the 1986 launch. What it isn't is an officially sanctioned national road championship: South Africa's UCI-listed National Road Championships are a separate February event. Amashova runs under CSA licensing rules and appears on the Gran Fondo World Tour's African calendar for 2026. The 14km Alexander Road/Fox Hill climb early and the rolling Valley of a Thousand Hills mid-race give it real terrain, though the course profile is more attritional than technical, and the organizer hasn't published a hard 2026 field-size number.",
+      "strengths": [
+        "40 editions since 1986 — one of the oldest road classics in South Africa",
+        "A genuine, defining climb (Alexander Road/Fox Hill, 14km) early in the race, followed by the scenic, rolling Valley of a Thousand Hills",
+        "On the Gran Fondo World Tour's African calendar for 2026 — a private international circuit, distinct from UCI competition, but real third-party inclusion beyond the organizer's own branding",
+        "Point-to-point course from Pietermaritzburg to a finish near the Durban beachfront"
+      ],
+      "weaknesses": [
+        "\"National Classic\" in the name does not mean it's an officially sanctioned national championship — South Africa's UCI National Road Championships are a separate event held in February",
+        "40 editions is not 40 unbroken years — 1996 was cancelled and 2020 ran as a virtual-only event",
+        "No official 2026 field-size figure has been published; the best available number is 3,500+ across all distances from 2025, so current demand is harder to verify than for races with transparent entry data",
+        "The organizer's own route-profile page doesn't print a total elevation figure — the 1,146m used here is a ProCyclingStats-derived estimate, not an organizer-published number",
+        "Course distance has shifted across eras (106km historically, a 160km option added 2018-19, back to 106km as the flagship by 2022) — check the current year's official route before assuming continuity with older race reports"
+      ],
+      "bottom_line": "Race it for the genuine history, the Alexander Road/Fox Hill climb, and a point-to-point finish into Durban."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "South Africa's iconic mass-participation classic blending Comrades legacy with Valley of a Thousand Hills beauty.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "South Africa's 40-edition Pietermaritzburg-to-Durban classic — a real CSA-licensed road race, not an official national championship despite the name.",
+      "should_you_race": "Yes if you want a historic South African road classic with a genuine early climb and a rolling Valley of a Thousand Hills middle section. It is not an officially sanctioned national championship, despite the name.",
+      "alternatives": "For South Africa's biggest mass-participation road event: Cape Town Cycle Tour (109km, tens of thousands of riders, Chapman's Peak). For a Johannesburg-based classic: 947 Ride Joburg. For the actual UCI-listed South African National Road Championships, look for the separate February CSA-sanctioned event."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.shova.co.za/",
+        "category": "official",
+        "label": "Amashova National Classic — Official Homepage"
+      },
+      {
+        "url": "https://www.shova.co.za/route-description/",
+        "category": "official",
+        "label": "Official 2026 Route Description"
+      },
+      {
+        "url": "https://www.shova.co.za/history/",
+        "category": "official",
+        "label": "Official History and Route-Change Record"
+      },
+      {
+        "url": "https://www.procyclingstats.com/national-race/amashova-national-classic/2026/result",
+        "category": "reference",
+        "label": "ProCyclingStats — 2026 Result, Distance, Elevation"
+      },
+      {
+        "url": "https://www.granfondoworldtour.com/events",
+        "category": "reference",
+        "label": "Official Gran Fondo World Tour 2026 Calendar"
+      },
+      {
+        "url": "https://www.citizen.co.za/berea-mail/sports-news/2026/07/21/amashovas-40th-anniversary-rolls-into-the-history-books/",
+        "category": "editorial",
+        "label": "Berea Mail — 40th-Anniversary Post-Race Report"
+      },
+      {
+        "url": "https://www.discovery.co.za/wcm/discoverycoza/assets/vitality/race-events/vre-cycle-july-2026.pdf",
+        "category": "reference",
+        "label": "Discovery/Team Vitality — 2026 Entry Fee Schedule"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Amashova National Classic gran fondo cycling Pietermaritzburg to Durban",
@@ -276,9 +326,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.shova.co.za/",
-      "notes": "40th edition ran Jul 19 2026"
+      "notes": "40th edition confirmed held 19 July 2026 (Ryan Gibbons won men's race, 2:12:11, per official site + ProCyclingStats). Distance/elevation/date/entry-fee/field-size and course-feature names corrected this pass — see research-dumps/amashova-national-classic.md. Still on the Gran Fondo World Tour calendar as an African \"Premium\" event for 2026. \"National\" is genuine organizer branding since the 1986 launch, not a fabrication, but is not an official CSA/UCI national-championship designation (the real SA National Road Championships are a separate Feb 2026 event)."
     }
   }
 }

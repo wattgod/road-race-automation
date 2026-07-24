@@ -5,29 +5,32 @@
     "display_name": "Sado Long Ride 210",
     "tagline": "",
     "vitals": {
-      "distance_km": 209.2,
-      "distance_mi": 130.0,
-      "elevation_m": 3000,
-      "elevation_ft": 9843.0,
+      "distance_km": 210.0,
+      "distance_mi": 130.5,
+      "elevation_m": 2218,
+      "elevation_ft": 7277.0,
       "location": "Sado Island, Niigata Prefecture, Japan",
       "location_badge": "Sado Island, Japan",
       "country": "Japan",
       "date": "2026: May 17",
       "date_specific": "2026: May 17",
-      "field_size": "3000+",
+      "field_size": "Approximately 1,700 participants across all 2026 courses combined; historic peak was much larger — 3,043 starters in 2010, and as recently as 2019 the event drew 3,070 entries with 2,800 starters",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "6+ (Aikawa 19km, Nyuzaki 42km, Washizaki 75km, Ryotsu 103km, Tada 138km, Ogi 163km, Sobama 184km)",
-      "cutoff_time": "12.5 hours (5:30am-6:00pm)",
+      "cutoff_time": "12.5 hours (A1 starts 5:30am, A2 5:45am; both must finish by 6:00pm, with intermediate cutoffs at Ryotsu, Tada, Ogi and Sobama)",
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Mid-May island weather that can turn quickly — the organizer reserves the right to cancel for bad weather, high waves, or strong wind even when conditions on land look fine, since the ferry crossing is part of the risk calculus.",
+      "challenges": [
+        "Ferry/jetfoil crossing can be disrupted by wind and waves independent of on-course conditions",
+        "Numerous unlit tunnels along the coast road require a working front and rear light"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -70,42 +73,88 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A largely coastal, clockwise circumnavigation of Sado Island starting and finishing at Sawata: low in absolute altitude but relentlessly rolling. The first half follows the rugged Osado northern coast through Aikawa and outer-coast settlements, over the sharp Z-zaka/Hanezaka climb and past the Onogame and Futatsugame rock formations, reaching Ryotsu at 103km as the approximate halfway point. The second half follows the gentler Kosado southern coast through Tada and Ogi — the organizer specifically warns that the hardest sequence of steep hills on the whole route arrives after Ogi, late in the ride. The route threads gold-mining history at Aikawa (19km), preserved merchant-shipping port settlements like Shukunegi, and passes through numerous dark tunnels that require working lights. Osado Skyline, a separate ~30km mountain road exceeding 900m, is NOT part of this course — the mapped route tops out around 136m.",
+      "signature_challenge": "The Kosado coast climbs after Ogi (past km 163) — the organizer's own warning is that its steepest, most concentrated hill sequence is saved for the back third of the ride, well past the point most riders expect the hard part to be over.",
+      "suffering_zones": [
+        "Z-zaka/Hanezaka: a sharp early climb on the rugged Osado northern coast",
+        "Numerous unlit tunnels requiring front and rear lights throughout the route",
+        "Kosado coast climbs after Ogi (km 163+): the organizer-flagged hardest hill sequence, arriving late in a 210km day"
+      ]
     },
     "logistics": {
-      "airport": "",
+      "airport": "Niigata Airport, then ferry/jetfoil to Ryotsu, Sado Island",
       "lodging_strategy": "Available on Sado Island; bib pickup day before (May 16, 12-18:00) at venue.",
-      "transport": "",
+      "transport": "Niigata-Ryotsu crossing: ~2.5hr by car ferry or ~1hr 7min by jetfoil (bicycle must be disassembled/bagged for the jetfoil). Sado Kisen asks vehicle users to reserve in advance for event weekend.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.sado-longride.com/en/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2006,
+      "origin_story": "Launched in 2006 following Sado City's 2004 municipal formation, initially organized by Sado Kisen (the island ferry operator) and Sports Nippon, with 933 starters in its first edition. The event grew quickly — from the third edition its administration moved to the city's established triathlon office because it had outgrown initial expectations, reaching a peak of over 3,000 starters by 2010.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "A long-running, nationally prominent Japanese island road ride — a full circumnavigation of Sado combining coastal scenery, gold-mining history, and a genuinely demanding distance, though roads remain open to ordinary traffic rather than fully closed."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine Island Epic, With Real Access Costs",
+      "summary": "Sado Long Ride 210 is a real, currently active mass-participation long ride circling Sado Island, now in its 20th year. The 210km distance label is organizer-marketed rather than a survey-grade decimal figure (the database's prior 209.2km was unconfirmed), and the ~3,000m elevation figure long carried in this database does not match any organizer-published total — the best authoritative proxy for the coastal circuit is closer to 2,218m. Field size has fallen from a 2010 peak of over 3,000 starters to roughly 1,700 across all 2026 courses combined; the old '3,000+' label describes a bigger, older version of the event. The route itself is legitimate and demanding — 210km with a genuinely backloaded hill sequence after Ogi, real cutoffs, and mostly open roads shared with ordinary traffic — but reaching it requires a ferry or jetfoil crossing that the organizer can cancel independent of on-island conditions, and the 2026 edition itself had a documented aid-station food shortage.",
+      "strengths": [
+        "A real, demanding 210km full-island circumnavigation with genuine coastal scenery, gold-mining heritage at Aikawa, and preserved merchant-port settlements like Shukunegi",
+        "Long track record — 20 years running since 2006, verified via a government case study and the organizer's own anniversary history",
+        "Honest, sourced cutoff structure (12.5hr window with intermediate checkpoint cutoffs) that rewards real preparation rather than being a token time limit",
+        "Distinctive backloaded difficulty — the hardest hills specifically arrive after Ogi, late in the ride, which the organizer flags rather than hides"
+      ],
+      "weaknesses": [
+        "The database's prior elevation figure (~3,000m) does not match any organizer-published total — the best authoritative proxy for the mapped circuit is 2,218m, and no certified 2026 race-specific ascent figure exists",
+        "Field size has fallen sharply from its 2010 peak (3,043 starters) to roughly 1,700 in 2026 — a smaller event than the '3,000+' label implies",
+        "Real, non-trivial access costs and logistics: a Niigata-Sado ferry or jetfoil crossing (bicycle must be bagged for the jetfoil), reservations recommended for vehicles, and the organizer can cancel for weather/waves independent of on-course conditions",
+        "The 2026 edition had a documented aid-station food shortage — the organizer publicly apologized after some stations ran out before serving all riders",
+        "Not a fully closed-road event — Sado City states that, aside from limited sections, roads remain open to ordinary traffic, and riders must follow normal traffic law"
+      ],
+      "bottom_line": "A legitimate, demanding island epic worth the trip if you want genuine distance, real coastal scenery, and don't mind sharing open roads with traffic — just budget real time and money for the ferry crossing, respect the backloaded hills after Ogi, and go in with accurate expectations on field size and elevation rather than the historical peak numbers."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Japan's premier island road epic: breathtaking coasts meet savage climbs.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A genuine 210km island circumnavigation with real coastal scenery — but budget for the ferry, the backloaded hills after Ogi, and a smaller field than its old numbers suggest.",
+      "should_you_race": "Yes if you want a genuinely long, scenic island ride with real cutoffs and don't mind open roads and ferry logistics. Prepare specifically for the hardest climbing to arrive after Ogi, well past the 160km mark.",
+      "alternatives": "For a similarly scenic but shorter Japanese island ride, look at Sado's own shorter course options offered the same weekend. For a mainland Japanese long-distance road event with closed-course structure, compare against other JCA-sanctioned centuries."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.sado-longride.com/course/",
+        "category": "official",
+        "label": "Sado Long Ride 210 — Official 2026 Course Page"
+      },
+      {
+        "url": "https://www.sado-longride.com/en/",
+        "category": "official",
+        "label": "Sado Long Ride 210 — Official English Homepage"
+      },
+      {
+        "url": "https://www.pref.niigata.lg.jp/uploaded/life/811292_2600297_misc.pdf",
+        "category": "reference",
+        "label": "Niigata Prefecture Official Cycling Map — Sado Circuit Distance/Elevation"
+      },
+      {
+        "url": "https://www.city.sado.niigata.jp/uploaded/attachment/59731.pdf",
+        "category": "reference",
+        "label": "Sado City Press Release — 2026 Field Size (~1,700 Participants)"
+      },
+      {
+        "url": "https://www.sado-longride.com/2015/course/",
+        "category": "reference",
+        "label": "Organizer's 10th-Anniversary History — 2006 Founding, 2010 Peak Field"
+      },
+      {
+        "url": "https://www.sadokisen.co.jp/news/20260416-2/",
+        "category": "reference",
+        "label": "Sado Kisen — 2026 Ferry/Jetfoil Participant Access Notice"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.sado-longride.com/en/",
-      "notes": "Mass-participation road long-ride on Sado Island; 2026 edition held May 17 with prior 2025 edition also confirmed.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Mass-participation road long-ride on Sado Island; 2026 edition held 17 May with roughly 1,700 participants across all courses (Sado City press release), down sharply from a 2010 peak of 3,043 starters. Distance corrected to 210km (organizer-published label; 209.2km was unconfirmed); elevation corrected to ~2,218m (authoritative government/tourism route mapping) from the prior ~3,000m, which had no organizer source. Founded 2006, not previously specified. The 2026 edition had a documented aid-station food shortage per the organizer's own public apology. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
     }
   }
 }

@@ -109,6 +109,11 @@
       "verified": "2026-07-23",
       "source": "https://www.finishers.com/en/event/the-tour-of-tucson",
       "notes": "Mass-participation road cycling event in Tucson has a confirmed upcoming edition on November 21, 2026 with registration/info live.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "el-tour-de-tucson",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT as el-tour-de-tucson.json: identical location (Tucson, Arizona), identical distance (164.2km/102mi), same official site (eltourdetucson.org, registration URL here is a mirror/aggregator), same November date pattern (Saturday before Thanksgiving), same founding lineage (Perimeter Bicycling Association's annual century). el-tour-de-tucson.json is the richer, already-researched profile (full vitals, GOLD-register biased_opinion, 10 citations, YouTube rider intel, verified 2026-07-23) and is treated as canonical. This slug's generic name 'Tour de Tucson' appears to be an alternate/shortened listing of the same event picked up during initial data collection, not a distinct race."
     }
   }
 }

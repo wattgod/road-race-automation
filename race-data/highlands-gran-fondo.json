@@ -5,24 +5,28 @@
     "display_name": "Highlands Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 2438,
-      "elevation_ft": 8000.0,
+      "distance_km": 165.8,
+      "distance_mi": 103.0,
+      "elevation_m": 2292,
+      "elevation_ft": 7521.0,
       "location": "Butler, New Jersey, USA",
       "location_badge": "Butler, USA",
       "country": "USA",
       "date": "2026: June 7",
       "date_specific": "2026: June 7",
-      "field_size": "N/A",
+      "field_size": "Approximately 900-1,000 riders; sold out 4+ consecutive years",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://www.bikereg.com/71259",
+      "entry_fee": "$160-$200 (Gran/Medio, tiered by registration date); $110-$150 (Piccolo)",
       "feed_zones": "4 (Gran Route)",
-      "cutoff_time": "10 mph progression speed cutoff (no exceptions)",
+      "cutoff_time": "Gran-route riders must maintain >10 mph progression speed (includes stopped time, enforced at course splits, no exceptions) or are rerouted to a shorter course; timed sections separately require a 10-23 mph progression window to be award-eligible",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {"name": "Gran", "distance_km": 165.8, "elevation_m": 2292},
+        {"name": "Medio", "distance_km": 101.4, "elevation_m": 1358},
+        {"name": "Piccolo", "distance_km": 57.9, "elevation_m": 794}
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,37 +74,80 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A Gran Fondo National Series stop through the hilly Highlands region outside Butler, New Jersey, crossing three counties and two states. The Gran route (103 mi / 165.8 km) climbs toward High Point, New Jersey's highest point, and crosses the Appalachian Trail eight times, on quiet country roads, shaded tree canopy and rolling farmland. Four timed sections break the Gran into distinct efforts, the first of which — Macopin — hits within 1.5 miles of the start.",
+      "signature_challenge": "Macopin, the opening timed climb — arriving barely a mile past the start line. One Gran Fondo National Series partner's detailed course-preview video measured it at roughly 4.6-4.7 miles, averaging 2.4% with ramps north of 8%; the organizer's own general course copy characterizes the Gran's climbing more mildly overall, so treat the exact grade as source-dependent rather than an official number.",
+      "suffering_zones": [
+        "Macopin: the opening timed climb, hitting within 1.5 miles of the start — legs aren't warmed up, and a detailed rider account describes ramps north of 8% with repeated false flats (the organizer's own copy is milder on specifics).",
+        "The Gran's later timed sections — Clinton Reservoir, the Ridge Road/High Point climb, and the NY/NJ State Line section — carry the race's remaining competitive structure after Macopin.",
+        "The >10 mph progression-speed cutoff: riders who fall below it on the Gran are rerouted to a shorter course mid-race, per official policy."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "N/A",
-      "transport": "",
+      "airport": "Newark Liberty International (EWR), roughly 30-40 minutes from Butler",
+      "lodging_strategy": "Butler and the surrounding Morris/Passaic/Sussex County area have standard highway-hotel options; no dedicated event lodging block documented.",
+      "transport": "Self-drive; organizer materials cite roughly 30 minutes from New York City, though independent route estimates put it closer to 45-55 minutes without traffic.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.granfondonationalseries.com/gran-fondo-highlands"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2013,
+      "origin_story": "A Gran Fondo National Series event based in Butler, New Jersey, built around the hilly Highlands region and a climb to High Point, the state's highest elevation.",
+      "notable_moments": [
+        "2026: 1,000 participants and 23 teams took part, per Gran Fondo Guide's post-event report.",
+        "Sold out for at least 4 consecutive years (2023-2026) with a field of roughly 900-1,000 riders."
+      ],
+      "reputation": "A reliably sold-out mid-Atlantic Gran Fondo National Series stop, known for punchy early climbing and an enforced progression-speed cutoff on the long route."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Well-Organized, Sold-Out Series Stop — With a Real Cutoff Bite",
+      "summary": "Highlands Gran Fondo is a consistently sold-out Gran Fondo National Series event in the hilly New Jersey Highlands, climbing toward the state's highest point and crossing the Appalachian Trail eight times on the Gran route. Four timed sections structure the Gran, and a >10 mph progression-speed cutoff (including stopped time) reroutes slower riders to a shorter course mid-event — a documented policy, not a soft suggestion. The organizer's own published spec (165.8 km / 2,292 m) and the event-day GPS/weather feed (165.8 km / 2,505 m) disagree modestly on total climbing, worth knowing rather than treating either number as gospel. At roughly 900-1,000 riders, the field is modest by gran fondo standards but has sold out multiple years running.",
+      "strengths": [
+        "Consistently sold out (4+ consecutive years) at a field of roughly 900-1,000 riders — real, sustained demand for a regional event",
+        "Genuine climbing to High Point, New Jersey's highest elevation, plus eight Appalachian Trail crossings on the Gran route",
+        "Four distinct timed sections give the Gran real competitive structure, not just a mass ride with a finish clock",
+        "Reasonably convenient to New York City — organizer materials cite roughly 30 minutes, though plan for 45-55 minutes without traffic"
+      ],
+      "weaknesses": [
+        "The >10 mph progression-speed cutoff (including stopped time) reroutes Gran riders to a shorter course if they fall behind — a real risk for slower or more casual riders, not just a theoretical policy",
+        "Organizer-published elevation (2,292 m) and the event-day GPS feed (2,505 m) disagree by roughly 200m — don't treat either figure as exact",
+        "The opening Macopin climb arrives just 1.5 miles into the ride, before legs are warmed up — a tough way to start a century-distance event, though the exact grade numbers vary by source",
+        "Modest field size (900-1,000) relative to marquee national gran fondos — this is a regional stop, not a bucket-list mega-event"
+      ],
+      "bottom_line": "A solid regional gran fondo with real climbing and an enforced cutoff — go in prepared for Macopin early and the progression-speed policy late."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Epic climbs to NJ's highest point on quiet roads, just 30 minutes from NYC, with timed racing in a national series.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A sold-out New Jersey Highlands climb to the state's highest point, with an enforced progression-speed cutoff.",
+      "should_you_race": "Yes if you want a competitively structured regional gran fondo within reach of New York City and can hold pace on the Gran's cutoff. Choose the Medio or Piccolo if you're not confident about the >10 mph progression-speed requirement.",
+      "alternatives": "For similar Mid-Atlantic/Northeast climbing terrain: other Gran Fondo National Series stops on the same calendar. For a bigger-field national event with similar climbing character: Gran Fondo Asheville or Boone Gran Fondo further south."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondonationalseries.com/gran-fondo-highlands",
+        "category": "official",
+        "label": "Official Race Page — Course, Cutoff, History"
+      },
+      {
+        "url": "https://www.granfondonationalseries.com/highlands-2026-results",
+        "category": "official",
+        "label": "Official 2026 Results Page"
+      },
+      {
+        "url": "https://www.granfondonationalseries.com/highlands-maps",
+        "category": "official",
+        "label": "Official Course Maps, Including Macopin Timed Section"
+      },
+      {
+        "url": "https://www.bikereg.com/71259",
+        "category": "official",
+        "label": "BikeReg — 2026 Registration and Entry Fees"
+      },
+      {
+        "url": "https://www.granfondoguide.com/RaceDashboard/GranFondoNationalSeries/1/9216/beatriz-vanegas-and-dan-montgomery-fastest-at-2026-gran-fondo-highlands",
+        "category": "editorial",
+        "label": "Gran Fondo Guide — 2026 Post-Event Report (Field Size, Results)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Highlands Gran Fondo gran fondo cycling Butler",
@@ -229,7 +276,7 @@
         "extracted_at": "2026-03-06",
         "key_challenges": [
           {
-            "name": "Macca Pin Climb",
+            "name": "Macopin Climb (transcribed as \"Macca Pin\" in source video audio)",
             "mile_marker": "1.5",
             "description": "First time section hits just 1.5 miles into course - 4.7 miles with average 2.4% grade but steepest sections north of 8% in early part with lots of false flats to power through",
             "source_video_ids": [
@@ -308,9 +355,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.granfondonationalseries.com/gran-fondo-highlands",
-      "notes": "2026 edition in Butler, NJ on June 7 is listed as an upcoming Gran Fondo National Series event with registration info.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondonationalseries.com/highlands-2026-results",
+      "notes": "2026 edition confirmed HELD 7 June 2026 (1,000 participants, 23 teams, per Gran Fondo Guide's post-event report — not an organizer-published figure). Official race page has already rolled forward to 6 June 2027. Distance/elevation, field size, entry fee, cutoff detail and the Macopin climb name (prior file had phonetic \"Macca Pin\") corrected this pass. See research-dumps/highlands-gran-fondo.md for full sourcing."
     }
   }
 }

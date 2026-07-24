@@ -5,16 +5,16 @@
     "display_name": "SBS Bank Tour of Southland",
     "tagline": "",
     "vitals": {
-      "distance_km": 799.8,
-      "distance_mi": 497.0,
+      "distance_km": 867.2,
+      "distance_mi": 538.9,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Invercargill, Southland, New Zealand",
       "location_badge": "Invercargill, New Zealand",
       "country": "New Zealand",
-      "date": "2026: January 18-24",
-      "date_specific": "2026: January 18-24",
-      "field_size": "Teams and individual riders, typically 100+ participants",
+      "date": "2026: January 18-24 (69th edition, rescheduled from Nov 2025) and November 1-7 (70th edition)",
+      "date_specific": "Rescheduled 69th edition raced 18-24 January 2026; 70th edition scheduled 1-7 November 2026, returning to the traditional slot. Two editions land in calendar year 2026 because of the postponement.",
+      "field_size": "96 riders in 16 six-rider teams (69th edition, Jan 2026); typically ~100 riders from 16-18 teams. Team-based entry only — no mass amateur wave.",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,12 +22,19 @@
       "cutoff_time": "Unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Team time-trial prologue (4.2km)",
+        "8 numbered road/circuit/ITT stages"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Southland's deep-south weather is a genuine race factor in both scheduling slots — the January finale was raced in wind and rain, and the traditional November date has historically brought severe wind and rapidly changing weather. The 2025 edition was postponed outright after a regional storm triggered a Southland State of Emergency.",
+      "challenges": [
+        "Severe storm risk — the 2025 edition was postponed after a state-of-emergency-triggering storm",
+        "Wind and rain exposure on exposed Southland roads and mountain-finish stages",
+        "Rapidly changing conditions typical of New Zealand's deep south"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -64,43 +71,106 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        {
+          "name": "Blackmount Hill",
+          "note": "Stage 3 (Riverton-Te Anau) — a significant tactical point; the location of a key early move in the January 2026 stage."
+        },
+        {
+          "name": "The Remarkables",
+          "note": "The current queen-stage mountain finish (Stage 4), a roughly 6km ski-field access road ascent. Replaced Coronet Peak as the tour's climbing finale in 2020."
+        },
+        {
+          "name": "Bluff Hill / Motupohue",
+          "note": "The other decisive hilltop finish, reached after the long Stage 6 into Bluff."
+        }
+      ],
+      "profile_type": "Multi-day team stage race, rolling to hilltop-finish terrain",
       "king_of_mountain": null,
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A fully organized, team-based national road stage race, not a mass-participation gran fondo you can enter as an individual. The rescheduled 69th edition (Jan 2026) ran a 4.2km team time-trial prologue plus eight numbered stages — a street race, road stages between Southland towns, an individual time trial, and mountain-finish stages — totaling 867.2km over seven days. Elite and Under-23 riders race together in one men's team peloton (U23 and Over-35 are secondary in-race classifications, not separate fields), with GC, KOM, sprint and team classifications. The traditional queen-stage finish is now The Remarkables ski-field access road, which replaced the historic Coronet Peak climb in 2020 — Coronet Peak, referenced in this profile's older 2015-2016 video archive, is no longer part of the current route.",
+      "signature_challenge": "The Remarkables mountain finish (current queen stage) — a roughly 6km ski-field access climb that decides the general classification, having replaced Coronet Peak as the tour's defining ascent in 2020.",
+      "suffering_zones": [
+        "Blackmount Hill (Stage 3, Riverton-Te Anau): a significant early tactical point, site of a key move in the January 2026 stage",
+        "The Remarkables (Stage 4, queen stage): the current mountain finish and GC-deciding climb",
+        "Bluff Hill/Motupohue (Stage 6): the tour's other decisive hilltop finish, arriving after a long stage"
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Limited availability considered in scheduling; book early due to regional events and post-emergency recovery.[1]",
-      "transport": "",
+      "airport": "Invercargill Airport has scheduled direct domestic flights from Auckland, Christchurch, and Wellington; international arrivals require a domestic connection.",
+      "lodging_strategy": "A week-long team campaign across Invercargill, Te Anau, and the wider Southland region — book early, especially given regional-event competition for rooms. The organizer maintains dedicated accommodation and van-hire information.",
+      "transport": "Team-based logistics: riders travel with manager/driver support, team vehicles, and equipment for the full seven-day, multi-town circuit.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.tourofsouthland.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 1956,
+      "origin_story": "The inaugural three-day Tour began 27 September 1956 as part of Invercargill's centenary celebrations, won by Kelvin Hastie. No Tour was held in 1958, which is why the edition number doesn't equal elapsed calendar years. The race became a team-based format in 1995 and gained UCI 2.2 status in 2002 before later relinquishing international UCI classification to run as a stand-alone national tour under UCI-style regulations on the Cycling New Zealand national calendar.",
+      "notable_moments": [
+        "2025 postponement: the planned 2-8 November 2025 edition (69th) was postponed after an unprecedented 23 October 2025 regional storm triggered a Southland State of Emergency, with scarce traffic-management resources prioritized for community recovery",
+        "Rescheduled to 18-24 January 2026; storm damage to the traditional Queens Park course also forced the prologue, street race, and final circuit to relocate to Bainfield Road/Queens Drive in Waikiwi",
+        "2020: The Remarkables replaced Coronet Peak as the tour's queen-stage mountain finish"
+      ],
+      "reputation": "New Zealand's oldest and most prestigious national team stage race — genuinely tough, historically UCI-sanctioned, and still run under UCI-style regulations, though it no longer carries current UCI-calendar classification."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real National Stage Race, Not a Fondo You Can Just Enter",
+      "summary": "The SBS Bank Tour of Southland is a legitimate, fully organized, team-based national road stage race — commissaires, race radio, neutral technical support, and team-manager meetings are all part of the official regulations. It is not something an individual amateur can register for like a gran fondo: entry is by selected six-rider team, with 96 riders across 16 teams contesting the rescheduled 69th edition in January 2026. That edition itself was a genuine emergency response — the traditional November 2025 date was postponed after a regional storm triggered a state of emergency, pushing the race to January 2026 and forcing a course relocation away from storm-damaged Queens Park. A 70th edition returns to the traditional November slot in 2026, but as of the most recent federation announcement its course and exact distance were still pending. The tour no longer carries current UCI-calendar international classification, though it runs under UCI-style national regulations.",
+      "strengths": [
+        "A genuinely competitive, fully organized national team stage race with real commissaires, race radio, neutral support, and GC/KOM/sprint/U23/O35 classifications",
+        "Deep history — founded 1956, New Zealand's oldest and most prestigious stage race, with UCI 2.2 status held from 2002",
+        "Real, current mountain-finish drama at The Remarkables (queen stage) and Bluff Hill/Motupohue, plus the tactically significant Blackmount Hill",
+        "Demonstrated organizational resilience — the 2025 storm postponement was handled as a genuine emergency response, and the rescheduled race was completed successfully in January 2026"
+      ],
+      "weaknesses": [
+        "Not an event an individual amateur can simply enter — it's a selected, team-based race (96 riders / 16 six-rider teams in Jan 2026), with high barriers to casual participation",
+        "No current UCI-calendar international classification — the tour relinquished that status and now runs as a Cycling New Zealand national tour under UCI-style regulations, which matters if you're specifically chasing UCI ranking points",
+        "No credible aggregate elevation-gain figure exists for any recent edition — the organizer publishes stage distances and climb/KOM locations but not a tour-wide ascent total; treat any summed number as an unverified third-party estimate, not a race statistic",
+        "Genuine recent schedule uncertainty — the 2025 storm postponement materially disrupted teams, accommodation, volunteers, and the course, and as of the most recent update the November 2026 (70th) route and exact distance were still unpublished",
+        "Team-intensive logistics (manager/driver support, vehicles, equipment) across a week-long, multi-town campaign in Invercargill, Te Anau, and the wider region — not a fly-in-and-ride event"
+      ],
+      "bottom_line": "A real, historically significant national team stage race for riders who can field or join a selected squad — not a mass-participation gran fondo despite superficially similar branding in some listings. Confirm the current edition's dates and route directly before planning, since the schedule has been genuinely disrupted in 2025-2026."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "New Zealand's iconic multi-day road stage race, toughest in the south with dual 2026 editions.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "New Zealand's oldest national team stage race — genuinely tough and historic, but team-entry-only and still recovering its normal November slot after a 2025 storm postponement.",
+      "should_you_race": "Only relevant if you can field or join a selected six-rider team — this is not an individual mass-participation entry event. If you can, it's a real, demanding national tour with genuine mountain-finish stages and 70 years of history.",
+      "alternatives": "If you want a mass-participation individual gran fondo elsewhere in New Zealand, see Lake Taupo Cycle Challenge (7,000 riders, volcanic lake circuit) or Le Race (Christchurch to Akaroa). If you want a comparable national/UCI-heritage team stage race, look at other Oceania national tours."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.tourofsouthland.com/pages/course-information/",
+        "category": "official",
+        "label": "Official Course Information — January 2026 Stage-by-Stage Distances"
+      },
+      {
+        "url": "https://www.tourofsouthland.com/pages/history/",
+        "category": "official",
+        "label": "Official History — 1956 Founding, UCI Status, Coronet Peak/Remarkables Transition"
+      },
+      {
+        "url": "https://www.scoop.co.nz/stories/BU2510/S00491/sbs-bank-tour-of-southland-rescheduled-for-2026.htm",
+        "category": "reference",
+        "label": "Scoop — Official Reschedule Announcement (29 Oct 2025)"
+      },
+      {
+        "url": "https://www.scoop.co.nz/stories/CU2510/S00219/tour-of-southland-postponed-due-to-state-of-emergency.htm",
+        "category": "reference",
+        "label": "Scoop — Postponement Announcement, State of Emergency (27 Oct 2025)"
+      },
+      {
+        "url": "https://www.cyclingnewzealand.nz/blog/post/166691/tour-of-southland-turns-70/",
+        "category": "reference",
+        "label": "Cycling New Zealand — 70th Edition Announcement, Nov 2026 (24 Jun 2026)"
+      },
+      {
+        "url": "https://www.tourofsouthland.com/pages/teams/",
+        "category": "official",
+        "label": "Official Teams Page — January 2026 Field (96 Riders, 16 Teams)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "SBS Bank Tour of Southland gran fondo cycling Invercargill",
@@ -228,9 +298,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.scoop.co.nz/stories/BU2510/S00491/sbs-bank-tour-of-southland-rescheduled-for-2026.htm",
-      "notes": "Road stage race in Southland with a postponed 69th edition on 18–24 January 2026 and a 70th edition scheduled for November 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.tourofsouthland.com/pages/history/",
+      "notes": "Road stage race in Southland. The 69th edition was originally scheduled 2-8 November 2025 but was postponed on 27 Oct 2025 after a regional storm triggered a Southland State of Emergency; rescheduled to 18-24 January 2026 (announced 29 Oct 2025) and completed successfully with a relocated course (storm damage forced the prologue/street race/final circuit off the traditional Queens Park route). A 70th edition is scheduled for 1-7 November 2026, returning to the traditional slot; as of the 24 June 2026 Cycling New Zealand announcement, its exact route and distance were still unpublished. Distance corrected to 867.2km (was 799.8km) for the completed January 2026 69th edition; do not apply this figure to the pending November 2026 70th edition without confirming the new course. Elevation remains null/unconfirmed — no organizer-published tour-wide aggregate ascent figure exists for any recent edition (elevation_ft corrected from a misleading 0.0 to null, since 0.0 implied a verified-flat course). Founded 1956, not an inferred ~1957. Field size corrected to team-based entry (96 riders/16 teams, Jan 2026), not 'teams and individual riders.' Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 4."
+    },
+    "catalog_flags": {
+      "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a genuine multi-day, fully organized, team-based national road stage race (prologue + 8 stages, elite/U23/O35 team peloton, GC/KOM/sprint classifications) — it does not fit the gran_fondo mass-participation taxonomy or its individual-entry scoring dimensions (field_depth, community_culture, value, expenses all assume an individual rider can register and ride the course, which isn't how this event works). This is a corpus-wide pre-existing pattern, not unique to this race — other genuine UCI-heritage stage races in this database (e.g. tour-of-the-gila.json, redlands-bicycle-classic.json) are also labeled gran_fondo, and config/dimensions.json already lists 'multi_stage' as a valid discipline. Recommend a human call on reclassifying discipline to multi_stage, consistent with how flandrien-ride.json and race-through-poland.json flag similar taxonomy mismatches rather than silently changing the discipline field.",
+      "ruled": "2026-07-24 editorial wave 4"
     }
   }
 }

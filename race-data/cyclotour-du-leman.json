@@ -5,24 +5,28 @@
     "display_name": "Cyclotour du Léman",
     "tagline": "",
     "vitals": {
-      "distance_km": 175.4,
-      "distance_mi": 109.0,
+      "distance_km": 176.0,
+      "distance_mi": 109.4,
       "elevation_m": 890,
       "elevation_ft": 2920.0,
       "location": "Lausanne, Switzerland",
       "location_badge": "Lausanne, Switzerland",
       "country": "Switzerland",
       "date": "2026: October 18",
-      "date_specific": "2026: October 18",
-      "field_size": "4000",
+      "date_specific": "2026: October 18 (23rd edition; moved from the traditional late-spring slot because anticipated security and traffic restrictions around the June 2026 G7 summit in Évian conflicted with the event)",
+      "field_size": "~4,000 registrations in recent editions; 3,500-3,600 actual starters (2024-2025 official figures)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "multiple along course, at start/finish",
-      "cutoff_time": "16 hours (full course)",
+      "cutoff_time": "Lausanne finish closes at 16:00 (roughly a 10-hour window from the morning start; intermediate cutoffs apply per the regulations)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Lausanne → Lausanne, full lake circuit: 176 km / 890 m (headline route; vitals above)",
+        "Évian → Lausanne: 112 km / 640 m",
+        "Lausanne → Évian: 64 km / 250 m"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,16 +74,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A full lap of Lake Geneva on marshalled but OPEN roads — the route stays open to normal traffic, and the regulations require riders to obey traffic lights, use cycle lanes where present, and share the road throughout. The headline route runs Lausanne to Lausanne, 176 km with just 890 m of climbing — the official organizer figures, and the numbers to plan around (a 175.4 km figure previously on file didn't match the official route pages and has been corrected). That is gently rolling at most for a ride this long: no cols, no major climbing objective, a continuous lakeside circuit through Vevey, Montreux, the Rhône delta, the French shore past Évian, and back through Geneva to Lausanne. The 176 km figure describes only ONE of three route options — riders can also start in Évian for a 112 km / 640 m half-lake ride, or do the 64 km / 250 m Lausanne-to-Évian leg. The challenge isn't terrain; it's distance discipline on an exposed lakeside circuit where wind can become the main difficulty — one rider account in our intel describes a closing stretch ridden into a headwind as the day's real mental test. With no timing and no ranking (the 2026 slogan is literally 'NO RACE – JUST PACE'), pacing is entirely self-managed inside big, mixed-ability groups. Note for 2026: the ride moved from its traditional late-May slot to October 18 because of anticipated G7-summit restrictions around Évian, and the organizer has revised its Geneva route and safety concept.",
+      "signature_challenge": "Riding 176 km of low-gradient lakeside road at a sustainable pace in a 3,500-rider mixed-ability field on open roads — with lake wind, not gradients, likely to decide how hard the closing stretch feels.",
+      "suffering_zones": [
+        "Wind exposure on the lakeside circuit — one rider account describes the closing kilometers into a headwind as the day's real mental test on an otherwise easy-gradient course",
+        "The sheer unbroken distance: 176 km with no major climbs to break the rhythm — low-gradient does not mean easy at this length",
+        "October weather risk (new for 2026): an autumn date on a big lake means shorter daylight and cooler conditions than the event's traditional spring slot"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels in Lausanne and Evian; book early due to popularity.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://cyclotour.ch/"
     },
     "history": {
       "founded": null,
@@ -88,19 +96,60 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Anti-Race, Stated Plainly",
+      "summary": "The Cyclotour du Léman is exactly what it says it is, which is rarer than it should be: a 176 km lap of Lake Geneva with roughly 3,500 starters, no timing, no ranking, and a 2026 slogan that spells it out — 'NO RACE, JUST PACE.' Official event materials describe it as Switzerland's largest non-competitive cycling event, and the recent sold-out fields (3,800-4,000+ registrations each year 2023-2025) confirm it operates at serious national-event scale across its 22 completed editions, with the 23rd scheduled for 2026. Be clear-eyed about what you're buying: this is an OPEN-ROAD event — normal traffic rules apply, including traffic lights and cycle-lane requirements — and 890 m of climbing over 176 km means there is no terrain story. With no results published, you get nothing to measure yourself against except your own computer. For 2026 the event also moved from its traditional late-May date to October 18 because of anticipated G7-summit restrictions around Évian — an autumn slot this event has not used before. If you need a scored result, this will feel hollow. If you want a well-organized, supported long day around one of Europe's great lakes, it delivers exactly that.",
+      "strengths": [
+        "The full-lake circuit is a rare packaged experience — 176 km around Lake Geneva through Vevey, Montreux, the French shore and Geneva, with organized pelotons, marshals, aid stations, and route support handling the logistics of a two-country lake loop",
+        "Real scale and real demand: sold out at 3,800-4,000+ registrations three years running (2023-2025), with 3,500-3,600 riders actually starting",
+        "Three clearly-stated route options (176 km / 112 km / 64 km) make it one of the most accessible big-name sportives in Switzerland — the 64 km leg is a realistic first-event distance",
+        "The non-competitive format is stated plainly, not fudged: the 2026 regulations say outright it is not a race and no timing or ranking is carried out"
+      ],
+      "weaknesses": [
+        "The entire route remains open to normal traffic: riders must stop at red lights, use cycle lanes where required, and accept marshal neutralizations — an unavoidable interruption to rhythm on a mass-participation day",
+        "No timing, no ranking, no results — riders who want any measured outcome, even an unranked finish time, get nothing official as of 2026",
+        "890 m of climbing in 176 km leaves wind and distance as the only difficulty; on a calm day strong riders will find it one-dimensional",
+        "The 2026 date change to October 18 (G7 fallout) moves the event from its long-standing spring slot to shorter daylight and cooler autumn conditions — a slot this event has never used before"
+      ],
+      "bottom_line": "A lap of Lake Geneva with the logistics — border crossing, feed stops, marshals, mixed-ability pelotons — handled for you, sold out year after year on scenery and organization rather than a results page. Go for the experience and bring your own pacing discipline; don't expect closed roads, and don't expect a single number next to your name afterward."
     },
     "final_verdict": {
       "score": "69/100",
-      "one_liner": "Switzerland's largest non-competitive cyclosportive: stunning Lake Geneva loop for all levels.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Billed by its organizer as Switzerland's largest non-competitive cyclosportive: a stunning 176 km Lake Geneva loop for all levels.",
+      "should_you_race": "Yes if you want a supported, well-marshalled full lap of Lake Geneva and don't need a result: there is no timing and no ranking, by design, and the roads stay open to normal traffic. Choose the 112 km or 64 km option if the full lap is a stretch. Skip it if you want competition, climbing, closed roads, or any measured outcome — this is deliberately not a race.",
+      "alternatives": "If you want Lake Geneva scenery WITH a competitive format and real climbing: the UCI-affiliated gran fondo weekend at Villars-sur-Ollon (The Majestics / former Gran Fondo Suisse) is in the same region. If you want a flat, mass-participation lake/loop ride with actual timing: Vätternrundan (Sweden, 315 km around Lake Vättern) is the north-European reference point."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://cyclotour.ch/en/grande-nouvelle-pour-tous-les-passionnes-de-cyclisme",
+        "category": "official",
+        "label": "Official Announcement — 2026 Date Change to October 18 (G7 Summit) and Route Revision"
+      },
+      {
+        "url": "https://cyclotour.ch/assets/documents/reglement_fr_26_v05.pdf",
+        "category": "official",
+        "label": "Official 2026 Regulations — Not a Race, No Timing or Ranking"
+      },
+      {
+        "url": "https://humansports.ch/wp-content/uploads/2026/02/080126_MM-Cyclotour_GER_final.pdf",
+        "category": "official",
+        "label": "Human Sports Management 2026 Press Release — Route Options and 'Largest Non-Competitive' Billing"
+      },
+      {
+        "url": "https://cyclotour.ch/lausanne-lausanne",
+        "category": "official",
+        "label": "Official Full-Circuit Route Page — 176 km / 890 m"
+      },
+      {
+        "url": "https://cyclotour.ch/news/thank-you-6839",
+        "category": "official",
+        "label": "Official 2025 Post-Event Report — 4,000+ Entries, 3,600 Starters"
+      },
+      {
+        "url": "https://humansports.ch/wp-content/uploads/2024/05/260524_MM-Cyclotour.pdf",
+        "category": "official",
+        "label": "Official 2024 Post-Event Release — 3,518 Starters, Unranked Alphabetical Times"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Cyclotour du Léman gran fondo cycling Lausanne",
@@ -237,9 +286,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://cyclotour.ch/",
-      "notes": "23rd edition Oct 18 2026 (moved from May/June due to G7 summit) — our October date is correct"
+      "verified": "2026-07-24",
+      "source": "https://cyclotour.ch/en/grande-nouvelle-pour-tous-les-passionnes-de-cyclisme",
+      "notes": "Re-verified 2026-07-24: 23rd edition confirmed Sunday Oct 18 2026 on official site and 2026 regulations (reglement_fr_26_v05.pdf); moved from the traditional spring slot because of anticipated security and traffic restrictions around the June 2026 G7 summit in Évian. Current route options confirmed: 176km/890m full circuit, 112km/640m Évian-Lausanne, 64km/250m Lausanne-Évian (the historical 60km Genève-Lausanne option is not offered in 2026). Vitals updated from an unsourced 175.4km figure to the organizer's official 176km figure. Note: open-road event — regulations state the route remains open to normal traffic."
     }
   }
 }
