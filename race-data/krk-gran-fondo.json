@@ -5,35 +5,38 @@
     "display_name": "Krk Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 82.1,
+      "distance_km": 82.0,
       "distance_mi": 51.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Island of Krk, Croatia",
-      "location_badge": "Island of Krk, Croatia",
+      "elevation_m": 1320,
+      "elevation_ft": 4331.0,
+      "location": "Punat, Island of Krk, Primorje-Gorski Kotar County, Croatia",
+      "location_badge": "Punat, Krk Island, Croatia",
       "country": "Croatia",
       "date": "2026: April 25",
       "date_specific": "2026: April 25",
-      "field_size": "500 participants",
+      "field_size": "400 starters (2026, ~500-rider advertised cap sold out ~6 weeks prior)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Unknown",
-      "cutoff_time": "Unknown",
+      "feed_zones": "2 (near Omišalj ~km29, atop Treskavac ~km55)",
+      "cutoff_time": "Relative cutoff at km-52 control: riders 40+ min behind the leader diverted to a shortened finish",
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
+      "primary": "Mediterranean",
+      "description": "Late-April Adriatic island weather — no organizer-published weather or wind data for this specific route.",
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Rolling island roads",
+      "surface": "Paved public roads",
+      "technical_rating": 2,
+      "features": [
+        "Treskavac Pass",
+        "Baška descent/climb"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,51 +59,102 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 57. adventure dimension dropped, road_surface added. Score recalculated: 54."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: original score not on file. adventure dimension dropped, road_surface added. Score recalculated: 54. EDITORIAL WAVE 10 (2026-07-24): elevation added (1,320m, was null) and distance/field confirmed via official race propositions — dimension scores below were NOT re-evaluated against this newly-confirmed profile (a real 1,320m/82km rolling island course with a punishing relative cutoff is more demanding than a 'null elevation' placeholder implies); flagging for human rescoring rather than silently changing numbers."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
-      "cat_2_climbs": null,
-      "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "total_climbs": 4,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 3,
+      "key_climbs": [
+        {"name": "Km 3.2 climb", "distance_km": 5.8, "gradient_pct": 1.9, "gain_m": 108, "category": "Cat 4"},
+        {"name": "Km 36.4 climb", "distance_km": 3.8, "gradient_pct": 5.4, "gain_m": 204, "category": "Cat 3"},
+        {"name": "Km 52.2 climb (Treskavac side)", "distance_km": 3.1, "gradient_pct": 5.8, "gain_m": 178, "category": "Cat 3"},
+        {"name": "Km 67.0 return climb", "distance_km": 7.9, "gradient_pct": 3.6, "gain_m": 288, "category": "Cat 3"}
+      ],
+      "profile_type": "Rolling with 4 categorized climbs",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "An island-wide paved road circuit out of Punat on Krk, one of Croatia's largest Adriatic islands (second-largest after Cres). The 82km route runs north from Punat through Krk town, Malinska, Njivice and Omišalj, cuts inland through the karst villages of Dobrinj and Vrbnik, climbs to Treskavac Pass, descends into Baška on the island's south coast, then turns back over a 7.9km climb toward Punat. Four categorized ascents break up otherwise rolling terrain — nothing alpine, but persistent enough that the course rewards pacing over raw power.",
+      "signature_challenge": "The Vrbnik-side climb to Treskavac Pass, immediately followed by the long descent into Baška.",
+      "suffering_zones": [
+        "Km 36.4: 3.8km at 5.4% (Category 3)",
+        "Km 52.2: 3.1km at 5.8% (Category 3), also the relative-cutoff control point",
+        "Km 67.0: 7.9km at 3.6% (Category 3) — the return climb toward Punat"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Bike camp included with event registration. Additional accommodation available in Punat and across the island.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://krkgranfondo.com/index.php/english/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2024,
+      "origin_story": "Inaugural edition held in Punat on April 27, 2024, organized by Hoteli Punat/Falkensteiner Punat with support from the Punat Tourist Board; Marin Kirin and Toni Dujmenović have directed the race since. Run with the Croatian Cycling Federation and Granfondo World Tour, though it is not a UCI Gran Fondo World Series qualifier.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "A young but quickly-sold-out event — the 2026 field cap was reached about six weeks before race day."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real, Young, Popular — But Read the Fine Print",
+      "summary": "Krk Gran Fondo is only in its third edition in 2026. Sources variously report 400 actual starters, roughly 450 expected riders, and a 500-place registration allocation — organizer materials aren't internally consistent on this point, but registration was reported sold out about six weeks ahead, and a 600-rider allocation is already open for 2027. The course is a rolling-island circuit with four categorized climbs and a Treskavac-to-Baška high point, not a flat coastal cruise. The organizer's paperwork has real problems: the 2026 race propositions PDF misprints the year, inconsistently rounds the distance, and carries over a stray reference to package pickup in Zadar — worth double-checking any detail against the live event page rather than the PDF alone. The relative cutoff at km 52 (riders 40+ minutes behind the leader are diverted to a shortened finish) is also stricter than the 'fondo' framing suggests for a recreational field.",
+      "strengths": [
+        "Registration reportedly sold out ~6 weeks ahead in 2026, with a 600-rider allocation already open for 2027",
+        "Rolling-island course with four categorized climbs and a Treskavac Pass high point",
+        "Post-race coverage reports extensive road control and a 190-person event operating team",
+        "Adriatic island route through Malinska, Njivice, Omišalj, Dobrinj, Vrbnik and Baška"
+      ],
+      "weaknesses": [
+        "Official race-propositions PDF has real document-control problems (wrong year printed, distance rounding inconsistencies, a leftover Zadar reference) — don't take the PDF as gospel over the live event page",
+        "Riders 40+ minutes behind the leader at the km-52 control are diverted to a shortened finish — stricter than typical recreational-fondo pacing",
+        "Not a UCI Gran Fondo World Series qualifier, unlike nearby Istria Gran Fondo — lower competitive prestige",
+        "Young event (3rd edition in 2026) with a correspondingly thin track record",
+        "Organizer's own field-size reporting is inconsistent (400 vs. ~450 vs. 500 across different materials)"
+      ],
+      "bottom_line": "An island road race for riders who want real Adriatic climbing without epic length — verify logistics against the live site, and pace conservatively given the km-52 cutoff."
     },
     "final_verdict": {
       "score": "54/100",
-      "one_liner": "A growing Adriatic island gran fondo offering scenic coastal riding with challenging climbs, ideal for cyclists seeking an accessible European cycling experience with included bike camp.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A young Krk Island road race with four categorized climbs and a stricter-than-expected mid-race cutoff.",
+      "should_you_race": "Yes, if you want a compact (82km) Adriatic island road race with real climbing and don't mind registering early — it reportedly sold out weeks ahead in 2026. Pace conservatively: riders 40+ minutes behind the leader at km 52 are diverted to a shortened finish.",
+      "alternatives": "For a longer, UCI-qualifying Croatian gran fondo: Istria Gran Fondo (Umag, 105km, UCI Gran Fondo World Series). For another Adriatic island event: Granfondo Pag - Cycling on the Moon (Novalja, ~107km/1,210m)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://krkgranfondo.com/index.php/english/",
+        "category": "official",
+        "label": "Krk Gran Fondo — Official Event Page"
+      },
+      {
+        "url": "https://krkgranfondo.com/wp-content/uploads/2026/04/3.-GF-KRK-RACE-PROPOSITIONS-2026.pdf",
+        "category": "official",
+        "label": "Official 2026 Race Propositions PDF"
+      },
+      {
+        "url": "https://krkgranfondo.com/index.php/en/register/",
+        "category": "official",
+        "label": "Official Registration Page"
+      },
+      {
+        "url": "https://www.novilist.hr/rijeka-regija/otoci/krk-granfondo-biciklisticki-spektakl-nadmasio-ocekivanja/",
+        "category": "reference",
+        "label": "Novi list — 2026 Post-Race Report"
+      },
+      {
+        "url": "https://www.novilist.hr/rijeka-regija/otoci/u-subotu-ce-otok-krk-biti-preplavljen-biciklistima-stize-ih-oko-450/",
+        "category": "reference",
+        "label": "Novi list — 2026 Pre-Race Report"
+      },
+      {
+        "url": "https://www.krk-outdoor.com/novosti/otok-krk-je-simply-the-best-a-obecavajuci-rezultati-u-predsezoni-pokazuju-da-ce-to-i-ostati-e40",
+        "category": "reference",
+        "label": "Krk Outdoor — Inaugural 2024 Edition Coverage"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Krk Gran Fondo gran fondo cycling Island of Krk",
@@ -120,55 +174,19 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/peCifOG1nHY/maxresdefault.jpg",
           "thumbnail_score": 92.0
-        },
-        {
-          "video_id": "cH003V9LldU",
-          "title": "Tour Of Krk",
-          "channel": "dinkec24",
-          "view_count": 173,
-          "upload_date": "20151201",
-          "duration_string": "1:34",
-          "description": "Relaxing cycling season closing on the sunny island of Krk. #CYCLElife",
-          "tags": [
-            "cyclelife",
-            "croatia",
-            "cycling",
-            "bicikl",
-            "otok",
-            "Krk (Geographical Feature)",
-            "krk",
-            "merida",
-            "bianchi",
-            "infinito cv",
-            "cube litening",
-            "Bike",
-            "Bicycle",
-            "Biking",
-            "Riding"
-          ],
-          "url": "https://www.youtube.com/watch?v=cH003V9LldU",
-          "curated": false
-        },
-        {
-          "video_id": "2GeA3kHOs4o",
-          "title": "Krk wine & bike",
-          "channel": "Ride Croatia",
-          "view_count": 245,
-          "upload_date": "20200615",
-          "duration_string": "55",
-          "description": "Ride Croatia bike tour of the Croatia's biggest island well known for its wine and cycling paths.\n\nhttps://ridecroatia.com/bike-tours/island-krk\nContact us if you would like to visit an experience the Krk island.\ninfo@ridecroatia.com\n\nOur bike tour takes you to the most beautiful parts of the island. A route that takes you through Krk’s well known vineyards and hidden lagoons. A chance to taste the local food and wine while having a great time on a bike or e-bike. Starting from Omišalj, Krk or Malinska at 9AM our tour takes from 4-8 hours depending on the groups physical abilities and condition.\n\nWhen in Rome see the pope, when on Krk try as much wine as possible. Whith a perfect climate for growing wine there are a lots of vinyeards through the whole island. The main sort is white gentle Žlahtina which we aree going to try in a local winery that will spoil us with local cheese, olives, Prosciutto and wine!\n\n\nKrk is one of Croatia’s best cycling islands. Many marked cycling routs for road and MTB give a lot of options for great riding. There is even a nice cave on the route well worth a visit.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=2GeA3kHOs4o",
-          "curated": false
         }
       ],
       "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://krk.hr/en/dogadanja/granfondo-cycling-event-25188-en/",
-      "notes": "2026 edition on Krk island is announced for April 25 with registration details, matching the database date.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://krkgranfondo.com/index.php/en/register/",
+      "notes": "2026 (3rd) edition ran Saturday, April 25, 2026, 10:00 start, Punat. 400 actual starters against a 500-rider advertised cap (sold out ~6 weeks prior); 2027 registration already open with a 600-rider allocation. Elevation added (1,320m, was null) from official race propositions. via codex gpt-5.6-sol web research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "Two of three youtube_data videos removed as non-matching this wave (2026-07-24): 'Tour Of Krk' (2015, generic island cycling footage, not this race) and 'Krk wine & bike' (a private tour operator's ad, unrelated to the organized event). Kept: '2025 Krk Granfondo Falkensteiner' — matches the event by name, organizer (Falkensteiner Punat), and near-identical date to the confirmed 2026 edition.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

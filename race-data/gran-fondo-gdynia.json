@@ -5,35 +5,45 @@
     "display_name": "Gran Fondo Gdynia",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": 184,
-      "elevation_ft": 604.0,
-      "location": "Gdynia, Poland",
+      "distance_km": 127.0,
+      "distance_mi": 78.9,
+      "elevation_m": 1220,
+      "elevation_ft": 4003.0,
+      "location": "Gdynia, Poland (start/finish ul. Olimpijska, loop through Wejherowo/Kartuzy Kashubian hinterland)",
       "location_badge": "Gdynia, Poland",
       "country": "Poland",
-      "date": "2026: June 21",
-      "date_specific": "2026: June 21",
-      "field_size": "unknown",
+      "date": "No confirmed 2026 edition — last held September 14, 2025; 2026 PZU Gran Fondo Series calendar (Ełk, Poznań, Warsaw, Toruń) does not include Gdynia",
+      "date_specific": "Unconfirmed for 2026",
+      "field_size": null,
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "unknown",
-      "cutoff_time": "unknown",
+      "feed_zones": null,
+      "cutoff_time": "5h30 (Gran Fondo) / 4h (Medio Fondo) — as of the 2025 edition",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "127 km Gran Fondo (2 laps)",
+        "~63 km Medio Fondo (1 lap)",
+        "24 km Family Fondo"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Baltic-coast September weather; the organizer's own course preview describes exposed sections where crosswinds could split the field.",
+      "challenges": [
+        "Crosswind-exposed sections (organizer's own course preview)"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Rolling Kashubian hinterland",
+      "surface": "Paved roads (closed public roads)",
+      "technical_rating": 2,
+      "features": [
+        "Repeated short steep rollers",
+        "Timed mountain prime",
+        "Fast, technical descending finish"
+      ]
     },
     "fondo_rating": {
       "distance": 4,
@@ -56,7 +66,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): on-file vitals (130.4km/184m) were wrong on both counts — 184m badly understated the verified 1,220m course, and 134km traced to the 2018 GFNY-era course, not the current 127km/2-lap route. Elevation and climbing-difficulty scores below were inherited from the understated profile and have not been re-evaluated against the corrected, materially hillier course (1,220m over 127km is a genuinely rolling/climby profile, not a flat 184m one) — flagging for human rescoring. No numeric changes made this wave."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +80,88 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A rolling two-lap circuit out of Gdynia's Olimpijska stadium area, looping through the Kashubian hinterland in the Wejherowo and Kartuzy districts: steep short climbs, scarce flat ground, and repeated up-and-down terrain rather than one defining ascent. The route passes forests, ponds and lakes before returning to the coast. The official rulebook describes the course as run on closed public roads, effectively paved/asphalt throughout.",
+      "signature_challenge": "The fast, technical descending finale — 2025 winner Adrian Mrówka described a sharp final corner and called the course selective, the closing sprint an all-in risk.",
+      "suffering_zones": [
+        "The accumulated short, steep rollers across both laps — no single named climb, but constant terrain change",
+        "A timed mountain-prime sector",
+        "Crosswind-exposed hinterland stretches that the organizer's own course preview says can split the field",
+        "The fast, technical descending finish into a sharp final corner"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and hostels abundant in Gdynia, Gdansk, and Sopot; book early for summer event.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://gfseries.pl/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2018,
+      "origin_story": "Launched May 27, 2018 as GFNY Gdynia — the first Polish race in the international GFNY series, organized locally by Sport Evolution/SE Group, drawing ~350 riders from 25+ countries on 80km/134km courses. For 2019, Sport Evolution split from the GFNY brand over what race director Michał Drelich called irreconcilable business differences and renamed the continuing event Gran Fondo Gdynia. The physical 2020 edition was cancelled during COVID-19 restrictions (partially replaced by a virtual event); conventional editions resumed in 2021 and 2022, and the race returned again in 2025 as part of the PZU Gran Fondo Series. No 2026 edition has been announced.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "An eight-year-old event with a history of gaps — cancelled once for COVID with a disputed administrative-fee refund, absent from the calendar some years, and currently absent again from the 2026 PZU Gran Fondo Series lineup."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Eight-Year History, Uncertain Future",
+      "summary": "Gran Fondo Gdynia has an eight-year history — GFNY-branded in 2018, independently rebranded in 2019, cancelled by COVID in 2020, revived in 2021-22, and returned again in 2025 under the PZU Gran Fondo Series banner with a 127km/1,220m rolling Kashubian course. What it doesn't have is a confirmed spot on the 2026 calendar: PZU's 2026 announcement lists Ełk, Poznań, Warsaw and Toruń, and Gdynia is absent. That's not the same as cancelled — the organizer has run gaps before and come back — but don't book travel around an unannounced date. There's also a documented blemish: when COVID killed the 2020 edition, more than 100 riders disputed the organizer's refusal to refund a 100 zł administrative fee, and a contemporary report said Wejherowo county had not yet approved the route before the pandemic cancellation.",
+      "strengths": [
+        "127km/1,220m of rolling terrain, with repeated short steep climbs and little flat ground — not a flat coastal cruise",
+        "Eight-year history with a track record of returning after gaps (COVID 2020, absent some other years)",
+        "Ran as part of the larger PZU Gran Fondo Series in 2025",
+        "A fast, technical descending finish — the 2025 winner called the course selective"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition — absent from the organizer's published 2026 series calendar",
+        "History of gaps: cancelled 2020 (COVID), and years without a Gdynia edition in the official archive",
+        "A documented dispute: 100+ riders unhappy with the organizer's refusal to refund a 100 zł administrative fee after the 2020 cancellation, plus a contemporary report that Wejherowo county had not yet approved the route before the cancellation",
+        "Significant local traffic disruption — the closed-road course intersects a major expressway junction, drawing resident complaints about limited neighborhood escape routes"
+      ],
+      "bottom_line": "A race with an eight-year history, but currently in one of its recurring gaps — confirm directly with the PZU Gran Fondo Series before planning around it, and go in expecting a hilly Kashubian circuit, not a flat Baltic coast ride."
     },
     "final_verdict": {
       "score": "53/100",
-      "one_liner": "Premier Baltic coast gran fondo for amateur cyclists seeking scenic, low-stress endurance riding.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A hilly Kashubian circuit race with an eight-year history of comebacks — currently absent from the 2026 calendar.",
+      "should_you_race": "Only if the organizer confirms a 2026 date directly — it's not on the published PZU Gran Fondo Series calendar as of this wave. If it returns, expect a demanding 127km/1,220m rolling course, not the flat ride the old on-file vitals implied.",
+      "alternatives": "For a currently-scheduled 2026 PZU Gran Fondo Series race: Gran Fondo Poznań, Warsaw, Ełk, or Toruń. For a Tour de France-branded Polish sportive: L'Étape Poland (Zakopane, June 14 2026)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfseries.pl/",
+        "category": "official",
+        "label": "PZU Gran Fondo Series — Official Site"
+      },
+      {
+        "url": "https://gfseries.pl/wp-content/uploads/2025/09/Regulamin-PZU-Gran-Fondo-Gdynia-2025.pdf",
+        "category": "official",
+        "label": "Official 2025 Gran Fondo Gdynia Rulebook"
+      },
+      {
+        "url": "https://gfseries.pl/klasyk-dla-amatorow-finiszuje-nad-baltykiem-znane-sa-juz-wszystkie-trasy-wyscigow-w-ramach-pzu-gran-fondo-gdynia/",
+        "category": "official",
+        "label": "Official 2025 Route Article"
+      },
+      {
+        "url": "https://gfseries.pl/en/pzu-gran-fondo-series-2026-with-two-new-races/?amp=1",
+        "category": "official",
+        "label": "Official 2026 Series Announcement (Gdynia absent)"
+      },
+      {
+        "url": "https://gfseries.pl/en/adrian-mrowka-wins-in-gdynia-the-most-demanding-course-at-the-pzu-gran-fondo-series-finale/",
+        "category": "official",
+        "label": "Official 2025 Race Report"
+      },
+      {
+        "url": "https://www.trojmiasto.pl/rowery/Spor-o-odwolane-Gran-Fondo-Gdynia-2020-Kto-ma-racje-n144848.html",
+        "category": "community",
+        "label": "Trojmiasto — 2020 Cancellation/Refund Dispute Report"
+      },
+      {
+        "url": "https://gdyniasport.pl/pl/aktualnosci/gran-fondo-gdynia-zmiany-w-organizacji-ruchu",
+        "category": "reference",
+        "label": "Gdynia Sports Center — 2025 Traffic Disruption Notice"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Gran Fondo Gdynia gran fondo cycling Gdynia",
@@ -153,10 +214,14 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://trojmiasto.eska.pl/wyscig-gran-fondo-gdynia-zmiany-w-organizacji-ruchu-aa-mrvB-AzBT-A8bY.html",
-      "notes": "Mass-participation road Gran Fondo in Gdynia with 2025 edition announced for 14 September; 2026 June 21 date on file conflicts with current scheduling.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "status": "unknown",
+      "verified": "2026-07-24",
+      "source": "https://gfseries.pl/en/pzu-gran-fondo-series-2026-with-two-new-races/?amp=1",
+      "notes": "Real, repeatedly-run event (GFNY Gdynia 2018 -> renamed Gran Fondo Gdynia 2019 -> COVID-cancelled 2020 -> resumed 2021-22 -> returned 2025 under PZU Gran Fondo Series). No 2026 edition on the organizer's published 2026 calendar (Ełk, Poznań, Warsaw, Toruń only) as of verification — not declared defunct or cancelled, just absent this cycle, matching the event's history of gaps. via codex gpt-5.6-sol web research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "On-file date (June 21, 2026) traced to a Gran Fondo Guide listing explicitly marked 'Unconfirmed'; PZU Gran Fondo Series' own 2026 announcement omits Gdynia from its four confirmed 2026 cities (Ełk, Poznań, Warsaw, Toruń). On-file vitals (130.4km/184m) corrected to the last verified edition (127km/1,220m, 2025) — the old figures traced to a stale 2018 GFNY-era course, not the current route.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

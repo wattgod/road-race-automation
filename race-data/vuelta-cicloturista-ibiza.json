@@ -5,35 +5,46 @@
     "display_name": "Vuelta Cicloturista a Ibiza",
     "tagline": "",
     "vitals": {
-      "distance_km": 280.0,
-      "distance_mi": 174.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6561.0,
-      "location": "Ibiza, Balearic Islands, Spain",
+      "distance_km": 171.4,
+      "distance_mi": 106.5,
+      "elevation_m": 2750,
+      "elevation_ft": 9022.0,
+      "location": "Ibiza, Balearic Islands, Spain (Stage 1 from Ibiza Town, Stage 2 from Sant Josep de sa Talaia, TT from Sant Antoni de Portmany)",
       "location_badge": "Ibiza, Spain",
       "country": "Spain",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
-      "field_size": "Unknown",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Unknown",
-      "cutoff_time": "Unknown",
+      "date": "2026: October 9-12 (Oct 9 registration/presentation; riding Oct 10-12)",
+      "date_specific": "2026: October 9-12",
+      "field_size": "~500 planned/authorized (DGT provisional reservation; no confirmed-entry count published)",
+      "start_format": "Group starts (Stages 1-2), individual departures (final 4.4km time trial)",
+      "registration": "https://www.rockthesport.com/es/evento/vuelta-cicloturista-a-ibiza-campagnolo",
+      "entry_fee": "€140 standard (through Aug 31), €150 from Sept 1 (plus platform commission)",
+      "feed_zones": "Stage 1: 2 (Es Cubells, Cala Molí). Stage 2: 3 (Sant Llorenç, Portinatx, Santa Agnès). None on the TT.",
+      "cutoff_time": "No fixed pace cutoff published; broom-vehicle removal, scheduled finishes 13:00 (Stage 1) / 15:00 (Stage 2)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Stage 1: ~60km",
+        "Stage 2: ~107km",
+        "Stage 3: 4.4km individual time trial"
+      ]
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Mediterranean",
+      "description": "Early-to-mid October in the Balearics, with roads open to normal traffic throughout the event.",
+      "challenges": [
+        "Riding on open (non-closed) public roads shared with normal traffic"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
-      "features": []
+      "primary": "Punchy island roads",
+      "surface": "Paved public roads (open to traffic)",
+      "technical_rating": 2,
+      "features": [
+        "Camí de Cas Coll",
+        "Cala Vedella",
+        "Cala Sant Vicent ascent",
+        "Ses Marrades"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,7 +67,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): on-file 280km/2,000m was not a real single-day figure or a documented cumulative total for this event — the verified 2026 event is a 3-day, 171.4km/2,750m+ multi-stage format (two mass-start road stages plus a short time trial), materially shorter in single-day distance but denser in climbing per km than the old figures implied. Dimension scores below were inherited from the incorrect vitals and have not been re-evaluated — flagging for human rescoring. No numeric changes made this wave."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +81,90 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A three-day, multi-stage cicloturista around Ibiza rather than a single long ride — the on-file '280km' never matched a real single day or the organizer's own published cumulative total (171.4km across three riding days; climbing is at least 2,750m — the organizer has not published an elevation figure for the closing time trial). Stage 1 runs from Ibiza Town to Sant Antoni via Es Cubells and Cala Molí; Stage 2 runs from Sant Josep to Sant Antoni via Sant Llorenç, Portinatx and Santa Agnès; the event closes with a short 4.4km individual time trial. The two road stages average roughly 18 and 15 meters of climbing per kilometer — dense, repeated punchy climbing rather than one defining summit. Roads stay open to normal traffic throughout, and only timed sectors plus the final TT determine classification; most of the riding is social group touring through Ibiza's five municipalities.",
+      "signature_challenge": "The closing individual time trial in Sant Antoni de Portmany, following two days of dense, punchy road-stage climbing — the only fully timed stage; Stages 1-2 contain timed sectors but are not fully raced.",
+      "suffering_zones": [
+        "Camí de Cas Coll and Cala Vedella (Stage 1 timed sectors)",
+        "The Cala Sant Vicent ascent and Ses Marrades (Stage 2 timed features)",
+        "Riding on open public roads shared with normal traffic across all three days"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Cycling Friendly certified accommodations available throughout Ibiza. Sant Antoni serves as a key hub for the event.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.ibizabtt.com/vuelta-cicloturista-a-ibiza-campagnolo/2026"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2004,
+      "origin_story": "Project created by Bartolo Planells in 2002; first held edition ran in 2004 with roughly 200 riders across three routes spanning Ibiza and Formentera. Now organized by Club Esportiu Ibiza Sport (also referenced as Club Esportiu IbizaSport / Ibiza Bike S.C.P.), with Bartolo's brother Juanjo Planells as the current organizer. The 2026 edition is the XXIII (23rd).",
+      "notable_moments": [
+        "Featured a dedicated women's/adapted-cycling category in 2021, drawing over 360 participants and honoring Paralympic medalist Ricardo Ten"
+      ],
+      "reputation": "A long-running (23-edition), family-run Balearic cicloturista — more social touring event with a competitive time-trial finale than a fully raced gran fondo."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "23 Editions Since 2004 — Just Not the 280km Ride On File",
+      "summary": "Vuelta Cicloturista a Ibiza Campagnolo is a 23-edition, family-organized event on Ibiza — but this profile's 280km/2,000m vitals never matched any real single day or documented total. The actual 2026 format is a three-day, 171.4km cumulative cicloturista: two social group-ride stages with timed climbing sectors, closed out by a short competitive time trial. It's dense, punchy island climbing (roughly 18m/km on Stage 1) over a three-day format, and roads stay open to normal traffic throughout — riders share the road, they don't get it closed for them. The organizer's own 'provisional' regulations misnumber the edition count and retain a leftover 2025 image-rights reference, and Juanjo Planells has publicly apologized for the disruption a past three-day edition caused residents.",
+      "strengths": [
+        "Long-running (23 editions since 2004) and family-organized, founded by Bartolo Planells, now run by his brother Juanjo Planells",
+        "Dense, punchy climbing across two road stages plus a competitive time-trial finale",
+        "Tours five Ibiza municipalities with a documented history of inclusive programming (2021 adapted-cycling/women's category, 360+ participants)",
+        "Multi-day format for traveling riders who want to combine racing with an island trip"
+      ],
+      "weaknesses": [
+        "On-file 280km/2,000m never matched reality — actual cumulative distance is 171.4km, materially different from the former on-file figures",
+        "Roads are open to normal traffic throughout, not closed — a safety consideration the regulations themselves flag",
+        "Documented resident/traffic disruption complaints, with a public apology from the organizer for a past edition",
+        "Official provisional regulations misnumber the edition count and retain a leftover 2025 image-rights reference — verify details against the live event page",
+        "Strict late-withdrawal terms: 50% refund Sept 1-15, no refund after Sept 16"
+      ],
+      "bottom_line": "A long-running Balearic cicloturista worth considering if you want punchy island climbing plus a time-trial finish over a social three-day format — just go in expecting 171km cumulative, not a 280km ride, and know the roads aren't closed."
     },
     "final_verdict": {
       "score": "53/100",
-      "one_liner": "Accessible Mediterranean island cyclosportive offering scenic coastal and inland riding with flexible participation options.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A 23-edition, three-day Ibiza cicloturista with punchy climbing and a time-trial finale — correcting a badly overstated 280km on-file distance.",
+      "should_you_race": "Yes, if you want a social multi-day island cycling trip with real climbing and a competitive TT finish. Don't expect a 280km single-day distance, and be ready to share open roads with traffic.",
+      "alternatives": "For a bigger single-day Balearic gran fondo: Mallorca 312 (312/226/167km, Playa de Muro, April). For another Mallorca multi-stage option: research the current status of Cinturón Ciclista Internacional a Mallorca before assuming it still runs as a stage race."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.ibizabtt.com/vuelta-cicloturista-a-ibiza-campagnolo/2026",
+        "category": "official",
+        "label": "Official 2026 Event Page (IbizaBTT)"
+      },
+      {
+        "url": "https://www.ibizabtt.com/vuelta-cicloturista-a-ibiza-campagnolo/2026/recorridos",
+        "category": "official",
+        "label": "Official 2026 Route Pages (All 3 Stages)"
+      },
+      {
+        "url": "https://www.ibizabtt.com/vuelta-cicloturista-a-ibiza-campagnolo/2026/reglamento",
+        "category": "official",
+        "label": "Official Provisional Regulations"
+      },
+      {
+        "url": "https://www.rockthesport.com/es/evento/vuelta-cicloturista-a-ibiza-campagnolo",
+        "category": "official",
+        "label": "Official Registration (RockTheSport)"
+      },
+      {
+        "url": "https://www.periodicodeibiza.es/deportes/deporte-ibiza/2026/05/12/2628027/vuelta-cicloturista-ibiza-campagnolo-abrira-inscripciones-mayo-para-edicion-mas-completa.html",
+        "category": "reference",
+        "label": "Periódico de Ibiza — 2026 Edition Announcement"
+      },
+      {
+        "url": "https://www.periodicodeibiza.es/deportes/deporte-ibiza/2004/10/23/635747/unos-200-participantes-recorreran-las-pitiuses.html",
+        "category": "reference",
+        "label": "Periódico de Ibiza — 2004 Inaugural Edition Report"
+      },
+      {
+        "url": "https://www.periodicodeibiza.es/opinion/firmas-del-dia/2023/10/19/2033229/vuelta-suenos-bartolo-planells.html",
+        "category": "community",
+        "label": "Periódico de Ibiza — Organizer's Account, Incl. Resident-Disruption Apology"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Vuelta Cicloturista a Ibiza gran fondo cycling Ibiza",
@@ -178,22 +242,17 @@
           "thumbnail_score": 60.0
         }
       ],
-      "quotes": [],
-      "rider_intel": {
-        "extracted_at": "2026-03-06",
-        "key_challenges": [],
-        "terrain_notes": [],
-        "gear_mentions": [],
-        "race_day_tips": [],
-        "additional_quotes": [],
-        "search_text": "The available video transcript for the Vuelta Cicloturista a Ibiza contains only fragmentary audio elements including music, applause, and disconnected words, without any substantive rider commentary or race analysis. No specific information about the 174-mile course through the Balearic Islands, terrain conditions, elevation challenges, or racing strategies could be extracted from the transcript. The video appears to be primarily visual content without detailed verbal discussion of race features, logistics, or rider experiences on Ibiza's roads and countryside."
-      }
+      "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.periodicodeibiza.es/deportes/deporte-ibiza/2026/05/12/2628027/vuelta-cicloturista-ibiza-campagnolo-abrira-inscripciones-mayo-para-edicion-mas-completa.html",
-      "notes": "2026 edition announced with registrations opening and dates set for 9–12 October, matching a road cicloturista in Ibiza.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.ibizabtt.com/vuelta-cicloturista-a-ibiza-campagnolo/2026",
+      "notes": "XXIII (23rd) edition confirmed for October 9-12, 2026 (Oct 9 registration/presentation, riding Oct 10-12), live registration open via RockTheSport at €140 (rising to €150 Sept 1). Confirmed genuinely distinct from Mallorca-island events (Mallorca 312, Cinturón Ciclista Internacional a Mallorca) in this database — no conflation. via codex gpt-5.6-sol web research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "On-file vitals (280km/2,000m) corrected to the organizer's documented 2026 format: 171.4km cumulative over 3 riding days, 2,750m+ climbing. Taxonomy note: the event's own official FAQ describes it as a multi-stage format (two mass-start road stages plus an individual time trial), which may fit the corpus's `multi_stage` discipline better than `gran_fondo` — flagging for human taxonomy review, discipline enum left unchanged this wave.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

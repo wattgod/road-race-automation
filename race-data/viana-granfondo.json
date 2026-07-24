@@ -5,29 +5,47 @@
     "display_name": "Viana Granfondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "distance_km": 130.0,
+      "distance_mi": 80.8,
+      "elevation_m": 1869,
+      "elevation_ft": 6132.0,
       "location": "Viana do Castelo, Alto Minho, Portugal",
       "location_badge": "Viana do Castelo, Portugal",
       "country": "Portugal",
       "date": "2026: March 15",
       "date_specific": "2026: March 15",
-      "field_size": "Not specified",
+      "field_size": "1,775 entry cap across all distances; ~1,900 estimated participants from 22 nationalities in 2026",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Multiple aid stations throughout route",
+      "registration": "https://bikeservice.pt/event/viana-granfondo/",
+      "entry_fee": "EUR43 (Portuguese Cycling Federation-licensed riders) / EUR47 (non-federated, incl. all foreign entrants)",
+      "feed_zones": "Multiple aid stations along the route (exact count not published)",
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Granfondo",
+          "distance_km": 130.0,
+          "elevation_m": 1869
+        },
+        {
+          "name": "Mediofondo",
+          "distance_km": 99.0,
+          "elevation_m": 1105
+        },
+        {
+          "name": "Minifondo",
+          "distance_km": 53.0,
+          "elevation_m": 544
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Mid-March in Alto Minho: cool, Atlantic-influenced, with a real chance of rain and wind off the coast.",
+      "challenges": [
+        "March Atlantic weather — cool temperatures and rain/wind risk are common"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -56,7 +74,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=4 for 130km is generous under the repo rubric (implies 3), and climate_risk/scenic_experience at 4 and organization at 3 are not clearly evidenced by the research dump for this open-road, chip-timed format. Flagging for a human rescoring pass, not auto-applying."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +88,89 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A distinctly Alto Minho course: green Atlantic valleys, an inland mountain section, and a fast coastal return. The Granfondo skirts Serra d'Arga through Amonde, Meixedo and Lanheses, climbs Cabracao (3km at 6.6%), then extends toward Paredes de Coura through Agualonga, Rubiaes, Sapardos and Covas before its principal late difficulty — the climb to Sopos (4.5km at 6.2%) — ahead of Vilar de Mouros, Venade, Caminha and the return to Viana. It's rolling-to-mountainous rather than alpine or genuinely mountainous: repeated transitions between the Lima and Minho valleys and the Serra d'Arga/Formigoso foothills matter more than any single summit. The roads are open to traffic under the Highway Code, not fully closed.",
+      "signature_challenge": "The late climb to Sopos (4.5km at 6.2%) — the harder of the route's two named ascents and the last major test before the run back to Viana.",
+      "suffering_zones": [
+        "Cabracao (3km at 6.6%) — the first real test, early enough to sort the field before the Paredes de Coura loop",
+        "Sopos (4.5km at 6.2%) — the closing climb, hitting riders late with the coastal finish still ahead",
+        "Open-road sections through farm and mountain villages — no full closures, so Highway Code traffic rules apply throughout"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Not specified in search results. Viana do Castelo is a coastal city with typical tourist infrastructure.",
+      "lodging_strategy": "Viana do Castelo is a mid-size coastal city with standard tourist accommodation.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://bikeservice.pt/event/viana-granfondo/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2023,
+      "origin_story": "Launched 19 March 2023 by organizer Bikeservice as part of Viana do Castelo's year as European City of Sport, debuting with 131/84/62km routes through Viana do Castelo, Ponte de Lima, Paredes de Coura and Caminha, and drawing an estimated 1,700-2,000 riders in its first edition.",
+      "notable_moments": [
+        "Reached its fourth edition in 2026, now serving as the season-opening round of Bikeservice's Superprestigio amateur series (turnout has held in the 1,700-1,900 range since its 2023 debut, without an established growth trend)"
+      ],
+      "reputation": "A young Alto Minho fondo with a strong, consistent debut-level turnout and a genuinely rolling-to-mountainous course for the region — its own published numbers, however, don't always agree with each other."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Young, Scenic, Slightly Sloppy on Paperwork",
+      "summary": "Viana Granfondo is a real event — launched in 2023 for Viana do Castelo's European City of Sport year, it drew an estimated 1,700-2,000 riders in its debut and has held similar turnout (~1,900 in 2026) through its fourth edition, now anchoring Bikeservice's Superprestigio amateur series. The course earns its Alto Minho setting: two named climbs (Cabracao and Sopos) bookending a rolling-to-mountainous loop through the Lima and Minho valleys with a coastal finish. What it hasn't nailed down is its own numbers — official sources disagree on the shorter routes' distances (53/99km on one page, 60/80km on the regulation PDF), the published entry cap (1,775) doesn't obviously reconcile with a reported ~1,900 participants, and post-race coverage has reported the Granfondo itself at 127km, 129km, and the advertised 130km in different places.",
+      "strengths": [
+        "Genuinely varied Alto Minho terrain with two named, graded climbs (Cabracao 3km/6.6%, Sopos 4.5km/6.2%)",
+        "Consistent turnout since its 2023 debut, drawing riders from 22 nationalities by 2026",
+        "Now the season-opening round of an established regional amateur series (Bikeservice Superprestigio)",
+        "Scenic coastal-to-mountain route touching Ponte de Lima, Paredes de Coura and Caminha"
+      ],
+      "weaknesses": [
+        "Materially inconsistent published course data across the organizer's own pages and post-race reports — verify current-year distances before you commit to pacing plans",
+        "Published entry cap (1,775) and reported participant count (~1,900) don't cleanly reconcile — likely different count definitions, but the organizer doesn't explain the gap",
+        "Open roads, not full closures — Highway Code traffic rules apply for the whole route",
+        "A March date means real weather risk (cold, wind, rain) on the Atlantic coast"
+      ],
+      "bottom_line": "A legitimate, scenic early-season option if you're chasing Superprestigio points or want a rolling-to-mountainous Alto Minho fondo — just don't trust the published km/elevation/field-size numbers to the decimal, and dress for March Atlantic weather."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "A well-organized, scenic Portuguese granfondo offering three accessible distance options through stunning river valleys and coastal landscapes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A young, scenic Alto Minho fondo with real climbing and a habit of publishing conflicting numbers.",
+      "should_you_race": "Yes, if you want an early-season European fondo with genuine hills and coastal scenery — just confirm the current year's official course figures directly rather than trusting any single published source.",
+      "alternatives": "For a more established, better-documented Portuguese road fondo, compare against other Bikeservice Superprestigio rounds later in the same series calendar."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://bikeservice.pt/event/viana-granfondo/",
+        "category": "official",
+        "label": "Bikeservice — Viana Granfondo Official Event Page"
+      },
+      {
+        "url": "https://bikeservice.pt/event/viana-granfondo/regulamento-viana/",
+        "category": "official",
+        "label": "Official 2026 Regulation"
+      },
+      {
+        "url": "https://www.cm-viana-castelo.pt/areas-de-atividade/comunicacao/agenda-de-eventos/evento/viana-granfondo-2026",
+        "category": "official",
+        "label": "Viana do Castelo Municipality — Event Listing"
+      },
+      {
+        "url": "https://www.altominho.tv/site/2023/03/10/primeira-edicao-do-viana-granfondo-realiza-se-a-19-de-marco/",
+        "category": "reference",
+        "label": "AltoMinho.TV — 2023 Inaugural Edition Report"
+      },
+      {
+        "url": "https://ominho.pt/jorge-mariz-e-susana-lourenco-vencem-viana-granfondo/",
+        "category": "reference",
+        "label": "O Minho — 2026 Results Report"
+      },
+      {
+        "url": "https://www.radiovaledominho.com/alto-minho-ciclista-do-granfondo-cai-em-zona-de-mato-teve-de-ser-resgatado/",
+        "category": "reference",
+        "label": "Radio Vale do Minho — 2026 Safety Incident Report"
+      },
+      {
+        "url": "https://granfondodailynews.com/2026/03/16/viana-granfondo-mariz-and-lourenco-prevail-in-portugal-results/",
+        "category": "reference",
+        "label": "Gran Fondo Daily — 2026 Results Report (Conflicting Distance Figure)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Viana Granfondo gran fondo cycling Viana do Castelo",
@@ -198,9 +268,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://bikeservice.pt/event/viana-granfondo/regulamento-viana/",
-      "notes": "4th edition scheduled and registrations open for 15 March 2026 in Viana do Castelo, matching a still-active road granfondo.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Fourth edition held 15 March 2026, results and photos remain linked from the organizer's page; the race opened Bikeservice's seven-event 2026 Superprestigio series. No official 2027 edition announced yet as of this verification."
     }
   }
 }

@@ -3,22 +3,22 @@
     "name": "Perth Hills Gran Fondo",
     "slug": "perth-hills-gran-fondo",
     "display_name": "Perth Hills Gran Fondo",
-    "tagline": "",
+    "tagline": "A Perth Hills climbing test built around the Zig Zag Scenic Drive and Heritage Drive",
     "vitals": {
       "distance_km": 140.0,
       "distance_mi": 87.0,
       "elevation_m": null,
       "elevation_ft": 0.0,
-      "location": "Kalamunda, Perth, Western Australia",
+      "location": "Gooseberry Hill, Kalamunda, Perth, Western Australia",
       "location_badge": "Kalamunda, Western Australia",
-      "country": "Western Australia",
-      "date": "2026: March 29",
-      "date_specific": "2026: March 29",
-      "field_size": "TBD",
-      "start_format": null,
-      "registration": null,
+      "country": "Australia",
+      "date": "2026: May 24",
+      "date_specific": "2026: Sunday, May 24 — moved from the original March 29 date due to Tropical Cyclone Narelle; the Race Roster registration page header still incorrectly shows March 29",
+      "field_size": "~100-150 riders targeted, ~200 total attendees (council planning estimate, not a verified finisher count)",
+      "start_format": "Mass start at Gooseberry Hill Hall; three distances (Piccolo ~45-50km, Medio ~85-90km, Gran ~135-140km)",
+      "registration": "Via Race Roster (raceroster.com) — note the page header is stuck on the old March 29 date though event copy confirms May 24",
       "entry_fee": null,
-      "feed_zones": "Hydration and food stops provided",
+      "feed_zones": "Unconfirmed — not documented in current research",
       "cutoff_time": "TBD",
       "lat": null,
       "lng": null,
@@ -70,37 +70,89 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A hilly, entirely-paved loop east of Perth through Gooseberry Hill, Kalamunda, Boya, Darlington, Mundaring, Carmel, and Pickering Brook — open roads, normal WA traffic rules, no closures. Three distances (Piccolo, Medio, Gran) share the Perth Hills terrain but the Gran adds the event's signature hill-climbing sector.",
+      "signature_challenge": "Heritage Drive — the event's own billed hallmark hill-climbing sector on the Gran course — plus the Zig Zag Scenic Drive/Kalamunda climb.",
+      "suffering_zones": [
+        "Zig Zag Scenic Drive / Kalamunda climb",
+        "Patterson Road near Perth Observatory",
+        "Heritage Drive (Gran course only) — the event's marquee climbing test"
+      ]
     },
     "logistics": {
-      "airport": "",
+      "airport": "Perth Airport (PER)",
       "lodging_strategy": "Perth Hills area; options in Kalamunda, Gooseberry Hill, or nearby Perth.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://piet.com.au/perth-hills-gran-fondo"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2014,
+      "origin_story": "Descends from the City of Armadale Gran Fondo, launched 2014 and billed by organizer Perth Integrated Events Team (PIET) as Western Australia's first gran fondo. Returned as the Perth Hills Gran Fondo in 2024 after a pandemic hiatus; 2026 is its third edition in the current Gooseberry Hill format.",
+      "notable_moments": [
+        "2026: original March 29 date postponed to May 24 due to Tropical Cyclone Narelle"
+      ],
+      "reputation": "A small, still-establishing regional fondo — not yet a proven fixture, and organizer logistics (routes labeled approximate/TBC, GPX released only close to the event, an act-of-God no-refund policy that applied to the cyclone postponement) are the documented rough edges rather than any rider-reported course or safety issue."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real, Small, Still Finding Its Footing",
+      "summary": "Perth Hills Gran Fondo is a genuine, currently-active regional fondo run by PIET (descended from the 2014 City of Armadale Gran Fondo), not a defunct or conflated event — but it's also a small, young event still working out its operational kinks. The 2026 edition was pushed from March 29 to May 24 by Tropical Cyclone Narelle, and the registration platform never fixed its header, which is exactly the kind of loose-thread detail that makes a small event feel less buttoned-up than it should. Climbing is real (Zig Zag Scenic Drive, Heritage Drive) but there's no defensible current elevation figure — the widely-repeated 2,369m stat belongs to a 2024 course that started from a different town (Karragullen, not Gooseberry Hill).",
+      "strengths": [
+        "Genuinely real, currently-active event with a traceable history back to what PIET bills as WA's first gran fondo (2014)",
+        "Real hill-climbing content — Zig Zag Scenic Drive, Patterson Road, and the billed Heritage Drive climbing sector on the Gran course",
+        "Three distance options (Piccolo/Medio/Gran) give a genuine on-ramp for less experienced riders alongside the full 140km test",
+        "No credible independent rider complaints about the actual on-course experience turned up in research"
+      ],
+      "weaknesses": [
+        "Small and still establishing itself — 2026 is only the third edition of the current format, with a council planning estimate of just ~100-150 riders",
+        "2026 date moved by cyclone disruption and the registration page never corrected its header — a real source of rider confusion, not just a database error",
+        "No defensible current elevation figure exists; don't trust the commonly-cited 2,369m number, which describes a different, earlier course from a different start town",
+        "Organizer logistics run loose — approximate/TBC routes, GPX released only shortly before race day, an act-of-God no-refund clause that applied when the cyclone forced the postponement"
+      ],
+      "bottom_line": "A real, small, hilly Perth-area fondo worth considering if you want genuine WA hill-climbing content without the scale or polish of a bigger-name event — just double-check the current date directly with the organizer before booking travel, since the registration platform itself still shows the wrong one."
     },
     "final_verdict": {
       "score": "56/100",
-      "one_liner": "Premier gran fondo filling WA's hilly road cycling gap with scenic climbs east of Perth.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A small, genuine Perth Hills climbing test still working out its operational rough edges.",
+      "should_you_race": "Worth it if you live in or near Perth and want a real, hilly local fondo with three distance options. Confirm the current date directly with PIET before traveling — the registration platform's header is stale.",
+      "alternatives": "For comparable Perth Hills climbing without event logistics, the Zig Zag Scenic Drive and Kalamunda climbs are public roads open year-round."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://piet.com.au/perth-hills-gran-fondo",
+        "category": "official",
+        "label": "Perth Integrated Events Team (PIET) — Official Event Page"
+      },
+      {
+        "url": "https://raceroster.com/events/2026/112138/perth-hills-gran-fondo",
+        "category": "official",
+        "label": "Race Roster — 2026 Registration"
+      },
+      {
+        "url": "https://www.kalamunda.wa.gov.au/event-details/2026/05/23/arts-culture/perth-hills-gran-fondo",
+        "category": "official",
+        "label": "City of Kalamunda — 2026 Event Listing (May 24)"
+      },
+      {
+        "url": "https://www.kalamunda.wa.gov.au/docs/default-source/agenda-and-minutes/2026/ordinary-council-meeting-agenda---24-march-2026.pdf?sfvrsn=647a2e6d_6",
+        "category": "reference",
+        "label": "City of Kalamunda Council Agenda — Field Size Planning Estimate"
+      },
+      {
+        "url": "https://www.bom.gov.au/cyclone/history/Narelle2026.shtml",
+        "category": "reference",
+        "label": "Australian Bureau of Meteorology — Tropical Cyclone Narelle 2026 (Mar 23-28)"
+      },
+      {
+        "url": "https://westcycle.org.au/wc-event/perth-hills-gran-fondo/",
+        "category": "reference",
+        "label": "WestCycle — Event Listing and Organizer History"
+      },
+      {
+        "url": "https://southperthrouleurs.com.au/2024/04/05/ride-routes-6th-12th-april-2/",
+        "category": "community",
+        "label": "South Perth Rouleurs — 2024 Course Figures (Karragullen start, not current venue)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Perth Hills Gran Fondo gran fondo cycling Kalamunda",
@@ -120,79 +172,15 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/n09FlypQDe8/hqdefault.jpg",
           "thumbnail_score": 72.0
-        },
-        {
-          "video_id": "rlrHXQhDTqs",
-          "title": "VeloCity Rides Perth Hills  F3BFBC8A E33C 45C7 BC22 7561BBF14AE6",
-          "channel": "David Hayter",
-          "view_count": 66,
-          "upload_date": "20160125",
-          "duration_string": "50",
-          "description": "Perth hills group cycling ride",
-          "tags": [
-            "VeloCity Rides"
-          ],
-          "url": "https://www.youtube.com/watch?v=rlrHXQhDTqs",
-          "curated": false
-        },
-        {
-          "video_id": "-QkakESDEQs",
-          "title": "Perth Hills Tri Club Christmas Ride 2016",
-          "channel": "Perth Hills Tri Club",
-          "view_count": 44,
-          "upload_date": "20161219",
-          "duration_string": "8:20",
-          "description": "Merry Christmas from all of us here at Perth Hills Tri Club.  Enjoy following our little jaunt through Kalamunda and Pickering Brook.",
-          "tags": [
-            "Triathlon",
-            "Cycling",
-            "Perth",
-            "Kalamunda",
-            "Training"
-          ],
-          "url": "https://www.youtube.com/watch?v=-QkakESDEQs",
-          "curated": false
-        },
-        {
-          "video_id": "dIHM7Y_DOd8",
-          "title": "Kalamunda Circuit Mountain Bike Trail",
-          "channel": "nick69nitro69",
-          "view_count": 2921,
-          "upload_date": "20101128",
-          "duration_string": "2:09",
-          "description": "The last section of the Kalamunda Circuit mountain bike trail. Highlight is a cool 'North Shore' log ride\r\n\r\nShot with my Lumix FT1 mounted to my helmet",
-          "tags": [
-            "Mountain Biking",
-            "MTB",
-            "Kalamunda Circuit"
-          ],
-          "url": "https://www.youtube.com/watch?v=dIHM7Y_DOd8",
-          "curated": false
-        },
-        {
-          "video_id": "AvWQarp-OZQ",
-          "title": "Cycling Buddies Perth Adventure",
-          "channel": "sgtmwong",
-          "view_count": 202,
-          "upload_date": "20160416",
-          "duration_string": "4:50",
-          "description": "",
-          "tags": [
-            "MTB",
-            "Perth",
-            "Kalamunda"
-          ],
-          "url": "https://www.youtube.com/watch?v=AvWQarp-OZQ",
-          "curated": false
         }
       ],
       "quotes": []
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.kalamunda.wa.gov.au/event-details/2026/05/23/arts-culture/perth-hills-gran-fondo",
-      "notes": "2026 edition is announced for May 24, conflicting with March 29 date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://piet.com.au/perth-hills-gran-fondo",
+      "notes": "DATE CONFLICT RESOLVED: 2026 edition confirmed for Sunday, May 24 (not the previously-listed March 29) — the original date was postponed by Tropical Cyclone Narelle (WA, Mar 23-28, per Bureau of Meteorology). The Race Roster registration page header still incorrectly displays March 29 despite event copy showing May 24; this is an organizer-side data-hygiene issue, not evidence of a second event. Third edition of the current Gooseberry Hill format (2024-2026), descended from the 2014 City of Armadale Gran Fondo."
     }
   }
 }

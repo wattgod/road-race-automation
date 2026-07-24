@@ -1,37 +1,37 @@
 {
   "race": {
-    "name": "Tallinn Gran Fondo",
+    "name": "Gran Fondo Estonia (Tallinn-Tartu)",
     "slug": "tallinn-gran-fondo",
-    "display_name": "Tallinn Gran Fondo",
-    "tagline": "",
+    "display_name": "Gran Fondo Estonia (Tallinn-Tartu)",
+    "tagline": "A discontinued Baltic point-to-point — not a race, a controlled group ride.",
     "vitals": {
-      "distance_km": 130.4,
-      "distance_mi": 81.0,
+      "distance_km": 230.0,
+      "distance_mi": 142.9,
       "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Tallinn, Estonia",
-      "location_badge": "Tallinn, Estonia",
+      "elevation_ft": null,
+      "location": "Tallinn to Tartu, Estonia (point-to-point)",
+      "location_badge": "Tallinn to Tartu, Estonia",
       "country": "Estonia",
-      "date": "2026: August 15",
-      "date_specific": "2026: August 15",
-      "field_size": "Unknown",
+      "date": "Discontinued — traditionally held around August 20; last confirmed edition 2019",
+      "date_specific": "Last confirmed edition: 2019. A 2020 edition was planned but no evidence it occurred; absent from Estonia's 2026 road calendar.",
+      "field_size": null,
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Unknown",
-      "cutoff_time": "Unknown",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
+      "description": "Late-August Estonia: mild Baltic summer conditions along the Tallinn-Tartu corridor.",
       "challenges": []
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Mostly paved roads, with one short gravel sector and a cobbled finishing climb in Tartu",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +56,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 51. adventure dimension dropped, road_surface added. Score recalculated: 50."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 51. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): the identity correction changed the verified distance from a fabricated 130.4km to a real ~230km, which sits well above the distance=3 rubric band; field_depth=2 also assumes rankings this non-competitive group ride never had. Numbers left unchanged pending human review — this entire profile may warrant a full rescore or removal given the identity/defunct findings."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,70 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this profile was mislabeled 'Tallinn Gran Fondo' with fabricated-looking vitals (130.4 km, a fixed August 15 date) that match no verifiable event. The real event behind this entry is Gran Fondo Estonia, a point-to-point ride between Tallinn and Tartu, roughly 230-234 km depending on the year, traditionally held around August 20. It was a controlled, non-competitive group ride, not a timed race — riders moved in escorted pace groups with food, medical, and mechanical support, and a roughly 100-115 km Medio Fondo option ended around Tamsalu rather than continuing to Tartu. The route ran mostly flat from Tallinn to Tamsalu before hillier terrain through the Pandivere Upland; the documented 2015 route included a short (~1 km, ~10% grade) climb at Emumägi, one short gravel sector despite the 'road' framing, and a narrow cobbled finishing climb beneath Tartu's Angel's Bridge (Inglisild). No edition has been confirmed since 2019 — a planned 2020 edition under a new organizer (MTÜ Sportlik Eesti) has no evidence it ran, and the event is absent from Estonia's current road-cycling calendar.",
+      "signature_challenge": "Covering 230+ km point-to-point in an escorted pace group, capped by a narrow, cobbled finishing climb at Tartu's Angel's Bridge that riders expecting a standard paved fondo weren't necessarily braced for.",
+      "suffering_zones": [
+        "The Emumägi climb: short but genuinely steep (~10%) in an otherwise mostly flat route.",
+        "The Tartu finish: a constricted cobbled climb beneath Angel's Bridge — an unusual, technical finale for what was marketed as a road event."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Abundant hotels in Tallinn's historic Old Town and surrounding areas.",
+      "airport": "Tallinn (TLL) for the start; Tartu (TAY) near the finish.",
+      "lodging_strategy": "Abundant hotels in Tallinn's historic Old Town for a pre-event stay; this is moot for the event itself, which is discontinued.",
       "transport": "",
-      "food": "",
+      "food": "Historically fully supported with food stops along the route, consistent with its controlled-group-ride format.",
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2015,
+      "origin_story": "First held in 2015 and organized by MTÜ TriSmile, led by former triathlete Ain-Alar Juhanson, with Hawaii Express as title sponsor. The 2017 edition was described locally as the third running. Direction reversed to Tartu-Tallinn in 2018, then returned to Tallinn-Tartu in 2019 — the last confirmed edition. A planned 2020 edition was handed to a different organizer (MTÜ Sportlik Eesti); no evidence it took place.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Wrong Name, Real (But Gone) Event",
+      "summary": "There is no evidence a 'Tallinn Gran Fondo' matching this profile's vitals (130.4 km, fixed August 15 date) ever existed. What the underlying research and video footage actually document is Gran Fondo Estonia, a real, roughly 230 km Tallinn-to-Tartu controlled group ride that ran from 2015 through at least 2019 under sponsor Hawaii Express and organizer MTÜ TriSmile. It was never a timed race — riders moved in escorted pace groups — and it included a short gravel sector and a narrow cobbled Tartu finish despite being marketed as a road event. No edition has been confirmed since 2019, and it's absent from Estonia's current cycling calendar.",
+      "strengths": [
+        "A genuine, multi-year event (2015-2019 confirmed) with real sponsor and organizer backing, not a fabrication",
+        "Fully supported format with food, medical, and mechanical support for a demanding 230+ km point-to-point",
+        "A real geographic through-route connecting Estonia's two largest cities, with some genuine terrain variety (Pandivere hills, the Emumägi climb)"
+      ],
+      "weaknesses": [
+        "Discontinued — no confirmed edition since 2019, absent from Estonia's current road calendar",
+        "Never a competitive, timed race despite gran-fondo framing — it was an escorted group ride",
+        "Included an unadvertised gravel sector and a technical cobbled finish, a mismatch for riders expecting a straightforward paved fondo",
+        "This database profile itself was previously mislabeled with unverifiable vitals under the wrong name — a reminder to double-check any 'Tallinn Gran Fondo' listing you find elsewhere"
+      ],
+      "bottom_line": "This entry exists as a historical correction, not a recommendation — no edition of the event it actually describes has been confirmed since 2019. If you want a real, currently active Baltic road event, look elsewhere in Estonia or Latvia's active calendars rather than searching for this one."
     },
     "final_verdict": {
       "score": "50/100",
-      "one_liner": "Scenic Baltic road gran fondo blending forests, coast, and Estonian charm.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A discontinued Tallinn-Tartu group ride, previously mislabeled in this database as an active gran fondo that never matched the real event.",
+      "should_you_race": "You can't — no edition has run since 2019 and it's absent from Estonia's current calendar. If a similarly named event resurfaces, verify it independently before trusting any figures carried over from this profile's history.",
+      "alternatives": "For an active Estonian/Baltic road cycling option, check Estonia's current national federation (EJL) event calendar directly rather than relying on this listing."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://sport.err.ee/94058/suur-rattasoit-labi-eesti-toimub-ka-jargmisel-aastal",
+        "category": "reference",
+        "label": "ERR (Estonian Public Broadcasting) — Gran Fondo Estonia Coverage"
+      },
+      {
+        "url": "https://tartu.ee/et/uudised/gran-fondo-rattasoit-toob-20-augustil-ajutised-liiklusmuudatused",
+        "category": "reference",
+        "label": "City of Tartu — 2019 Traffic Notice for Gran Fondo Estonia"
+      },
+      {
+        "url": "https://www.sportos.eu/ee/ru/gran-fondo-estonia-tartu-tallinn/registreerunud/yvJO/",
+        "category": "reference",
+        "label": "Sportos — Archived Registration/History Record"
+      },
+      {
+        "url": "https://ejl.ee/alad/maantee/voistluskalender/",
+        "category": "reference",
+        "label": "Estonian Cycling Federation (EJL) — Current Road Calendar (event absent)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Tallinn Gran Fondo gran fondo cycling Tallinn",
@@ -118,23 +151,6 @@
           "curated": false
         },
         {
-          "video_id": "NqhXT1udMMI",
-          "title": "Tour of Estonia 2017: Tallinn-Tartu GP",
-          "channel": "TartuMaratoniKlassik",
-          "view_count": 1920,
-          "upload_date": "20170526",
-          "duration_string": "2:06",
-          "description": "Eestimaa Velotuuri esimese etapi, Tallinn-Tartu GP (211,2 km) võitis Eesti koondise värvides sõitnud Karl Patrick Lauk.\n//\nKarl Patrick Lauk, who was cycling in Estonian team colours, won the first stage of the Tour of Estonia 2017 - Tallinn-Tartu GP (211,2 km).",
-          "tags": [
-            "Tour of Estonia",
-            "Eestimaa Velotuur",
-            "Tallinn-Tartu GP",
-            "Karl Patrick Lauk"
-          ],
-          "url": "https://www.youtube.com/watch?v=NqhXT1udMMI",
-          "curated": false
-        },
-        {
           "video_id": "8ZWmoJu1WIk",
           "title": "Hawaii Express Grand Fondo Estonia Tallinn - Tartu 2016",
           "channel": "Evgeni Nikolaevski",
@@ -144,25 +160,6 @@
           "description": "Music: Joakim Karud - Road Trip",
           "tags": [],
           "url": "https://www.youtube.com/watch?v=8ZWmoJu1WIk",
-          "curated": false
-        },
-        {
-          "video_id": "c6EFCx_TEhc",
-          "title": "Cycling - Tallinn March",
-          "channel": "Olga Poliakova",
-          "view_count": 88,
-          "upload_date": "20170319",
-          "duration_string": "4:15",
-          "description": "Music:\nJack Garratt – the love you're given\n\nVideo:\nhttps://www.instagram.com/weirdo.with.a.beardo/",
-          "tags": [
-            "kadriorg",
-            "tallinn",
-            "pirita",
-            "bike",
-            "gopro",
-            "dreadlocks"
-          ],
-          "url": "https://www.youtube.com/watch?v=c6EFCx_TEhc",
           "curated": false
         },
         {
@@ -181,10 +178,15 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.granfondoguide.com/GlobalGranFondoResultsHub/Season2026",
-      "notes": "No reliable information found about a Tallinn Gran Fondo road event in Estonia, so current status cannot be determined.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://ejl.ee/alad/maantee/voistluskalender/",
+      "notes": "SUPERSEDES prior 'unknown' status. The real event behind this profile, Gran Fondo Estonia (Tallinn-Tartu), last confirmed in 2019; a planned 2020 edition under a new organizer has no evidence it occurred, and no event by this or a related name appears on Estonia's current (EJL) road-cycling calendar. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 10.",
+      "identity_correction": "IDENTITY CORRECTION (2026-07-24): this profile was mislabeled 'Tallinn Gran Fondo' with fabricated-looking vitals (130.4 km, fixed August 15 date) matching no verifiable event. The content and attached video footage actually describe Gran Fondo Estonia, a real ~230km Tallinn-Tartu controlled group ride (2015-2019, organizer MTÜ TriSmile, sponsor Hawaii Express). It is NOT the same event as the Tallinn-Tartu GP stage of the Tour of Estonia, a separate licensed professional stage race — that footage was purged from youtube_data. Renamed race.name/display_name to 'Gran Fondo Estonia (Tallinn-Tartu)' to match; slug left unchanged (tallinn-gran-fondo) to avoid breaking existing URLs."
+    },
+    "catalog_flags": {
+      "status_note": "Discontinued (last confirmed 2019) and previously mislabeled with unverifiable vitals — matches the flandrien-ride precedent for identity-corrected, defunct entries. Recommend a human decide whether to keep this as a historical/corrected record or prune it from the active catalog.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

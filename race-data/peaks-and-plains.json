@@ -3,7 +3,7 @@
     "name": "Peaks and Plains",
     "slug": "peaks-and-plains",
     "display_name": "Peaks and Plains",
-    "tagline": "",
+    "tagline": "Unsupported ultra-distance loop over the Harz's highest passes",
     "vitals": {
       "distance_km": 555.2,
       "distance_mi": 345.0,
@@ -12,13 +12,13 @@
       "location": "Magdeburg/Harz Mountains, Germany",
       "location_badge": "Magdeburg/Harz Mountains, Germany",
       "country": "Germany",
-      "date": "2026: May 29",
-      "date_specific": "2026: May 29",
-      "field_size": "unknown (small, new event)",
-      "start_format": null,
-      "registration": null,
+      "date": "2026: May 29-31",
+      "date_specific": "2026: May 29 18:00 start, 48-hour cutoff",
+      "field_size": "~150 starters (2026 edition; solo + 2-person pair categories)",
+      "start_format": "Mass start, solo or 2-person pair categories, GPS tracker mandatory",
+      "registration": "Online via race|result (my.raceresult.com); 2026 places sold out in ~2 minutes; 2027 switched to a lottery",
       "entry_fee": null,
-      "feed_zones": "none (unsupported)",
+      "feed_zones": "None — fully unsupported; riders carry or source their own food/water",
       "cutoff_time": "48 hours",
       "lat": null,
       "lng": null,
@@ -70,42 +70,90 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A self-navigated, unsupported ultra-distance loop out of Magdeburg: riders cross the flat Magdeburger Börde to reach the Harz, then zigzag across the range's highest peaks and passes — including the Brocken, the Harz's tallest summit — before returning across the plains. Riders follow a prescribed GPX route solo or in registered pairs, carry live GPS trackers, and get no feed zones, mechanical support, or marshaled traffic control; the clock (48 hours) and the route file are the only structure. Published 2026 rider accounts (a finisher and the winner) separately reported storms, heat, punctures, navigation-equipment failure, and repeated mechanicals during the race, on top of the climbing itself.",
+      "signature_challenge": "The Brocken and a claimed circuit of the ten highest Harz passes, tackled solo or in a pair with zero outside support across one or two overnight stretches.",
+      "suffering_zones": [
+        "Brocken ascent — the Harz's highest summit, the marquee climb of the route",
+        "The Harz pass circuit — repeated short, steep climbs back-to-back with no feed support between them",
+        "Overnight Börde crossings — flat but exposed return legs where fatigue and navigation errors (GPS/route-file failures were reported in 2026) compound"
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Self-arranged; unsupported event, plan overnight stays as needed within 48 hours.",
+      "airport": "Berlin Brandenburg (BER) or Hannover (HAJ) are the nearest major airports, each reachable from Magdeburg by road/rail",
+      "lodging_strategy": "Self-arranged; unsupported event, plan overnight stays in Magdeburg or en route as needed within the 48-hour window.",
       "transport": "",
-      "food": "",
-      "official_site": ""
+      "food": "None provided on course — fully unsupported; riders must carry or self-source all food and water.",
+      "official_site": "https://peaksandplains.cc/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2024,
+      "origin_story": "Organized by freshpepper GmbH & Co. KG, a Magdeburg event company (managing director Martin Hummelt) that ran the regional CYCLE TOUR road-cycling program for a decade before ending it in 2025; Peaks & Plains launched in 2024 (initially ~500km/6,000m) as one of the organizer's continuing focus projects and has run annually since (2024, 2025, 2026).",
+      "notable_moments": [
+        "2026: Sebastian Trimborn reported as first rider back into Magdeburg",
+        "2026: registration sold out in roughly 2 minutes, prompting the organizer to switch 2027 entry to a lottery"
+      ],
+      "reputation": "Young but growing fast — demand for the ~150 available 2026 spots outstripped supply badly enough that the organizer moved to a lottery system for 2027."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Young, In-Demand Unsupported Ultra",
+      "summary": "Peaks & Plains is exactly what it advertises: a timed, competitive, fully unsupported ultra-distance loop through the Harz's highest passes, run by an established German event organizer (freshpepper, ex-CYCLE TOUR) rather than an ad-hoc grassroots effort. It's genuinely competitive — GPS-tracked, disqualifiable for shortcuts or outside assistance, with recorded placings and a named 2026 winner — not a brevet-style completion ride. Only three editions in (2024-2026), it's already outgrown its own field size: 2026 places vanished in about two minutes, and the organizer is moving to a lottery for 2027. That's a good problem for the event but a bad one for anyone hoping to just sign up.",
+      "strengths": [
+        "Legitimate, competitive ultra format — GPS trackers, no-drafting rules outside pairs, recorded placings and a named winner, not a self-reported brevet",
+        "Run by an experienced organizer (freshpepper, a decade of CYCLE TOUR behind it) rather than a first-time grassroots operation",
+        "Genuine Harz highlights — the Brocken and a claimed circuit of the range's ten highest passes — on a route that's clearly drawn real, credible rider reports of tough conditions",
+        "Real demand signal: sold out in ~2 minutes in 2026, which is a meaningfully different problem than most Tier 3 events in this database have"
+      ],
+      "weaknesses": [
+        "Only 3 editions old (debuted 2024) — no long track record yet on organization consistency year-to-year",
+        "Small field (~150 in 2026) that already can't meet demand — expect a 2027 lottery, not a guaranteed entry, even if you want in early",
+        "Zero support on course (no feed zones, no mechanical support) raises the self-sufficiency bar well above a typical gran fondo — this is closer to an unsupported ultra-race than the mixed-terrain gran fondo framing the database's dimension set assumes",
+        "Advertised course specs (555km/7,300m) run slightly ahead of what post-race rider and press accounts actually measured (~550km/7,200m) — close enough to not matter for planning, but worth knowing the advertised numbers are a touch generous"
+      ],
+      "bottom_line": "If you want a real, competitively-timed, unsupported ultra through some of the Harz's best climbing and you can get a spot (increasingly a lottery, not a sign-up), Peaks & Plains delivers. It is not a supported gran fondo — go in ready to navigate, fix mechanicals, and feed yourself for up to 48 hours solo or with one partner."
     },
     "final_verdict": {
       "score": "56/100",
-      "one_liner": "Unsupported road ultra through Harz peaks offers epic climbing and scenery at entry-level ultra price.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "Unsupported road ultra through Harz peaks offers epic climbing and scenery.",
+      "should_you_race": "Race it if you want a legitimate, GPS-timed, self-supported ultra-distance test through real Harz mountain terrain and can handle solo/pair logistics with zero course support. Skip it if you want a marshaled, fed, supported gran fondo experience — this is an ultra-race, not a sportive, despite living in a gran-fondo-labeled database.",
+      "alternatives": "For a similarly self-supported German/Alpine ultra format, look at other freshpepper-adjacent or Rad-Race-style ultracycling events; for the same Harz climbing with full event support, look for a traditional marshaled Harz-region gran fondo or sportive instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://peaksandplains.cc/",
+        "category": "official",
+        "label": "Peaks & Plains — Official Site"
+      },
+      {
+        "url": "https://my.raceresult.com/363843/",
+        "category": "official",
+        "label": "race|result — 2026 Registration/Timing Record"
+      },
+      {
+        "url": "https://peaksandplains.cc/impressum",
+        "category": "official",
+        "label": "Official Imprint — freshpepper GmbH & Co. KG, Martin Hummelt"
+      },
+      {
+        "url": "https://orthomechanik.de/blogs/news/sebastian-trimborn-peaks-and-plains-2026-erfahrungsbericht",
+        "category": "community",
+        "label": "2026 Winner's Race Report — Sebastian Trimborn"
+      },
+      {
+        "url": "https://www.reddit.com/r/ultracycling/comments/1opu6p7/peaks_and_plains_sold_out_after_2_mins/",
+        "category": "community",
+        "label": "r/ultracycling — 2026 Registration Sold Out in ~2 Minutes"
+      },
+      {
+        "url": "https://www.cycletour.de/event/news/10-jahre-cycle-tour",
+        "category": "reference",
+        "label": "CYCLE TOUR — Organizer History, 10 Years + Peaks & Plains Continuation"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://peaksandplains.cc/",
-      "notes": "Ultracycling road event in Magdeburg/Harz with 2026 edition listed and registration info available.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Third annual edition held 2026 (debuted 2024); organizer freshpepper GmbH & Co. KG already announced a May 2027 edition. 2026 field (~150 riders) sold out in ~2 minutes, prompting a switch to lottery-based entry for 2027 — expect limited/lottery access, not open registration."
     }
   }
 }

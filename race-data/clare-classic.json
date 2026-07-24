@@ -5,35 +5,44 @@
     "display_name": "Clare Classic",
     "tagline": "",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 1800,
-      "elevation_ft": 5906.0,
-      "location": "Clare Valley, South Australia",
+      "distance_km": 160.0,
+      "distance_mi": 99.4,
+      "elevation_m": 1600,
+      "elevation_ft": 5249.0,
+      "location": "Clare and the Clare Valley wine region, South Australia, Australia",
       "location_badge": "Clare Valley, South Australia",
-      "country": "South Australia",
-      "date": "2026: February 15",
-      "date_specific": "2026: February 15",
-      "field_size": "800-1000",
+      "country": "Australia",
+      "date": "No edition held since 2018; the planned 2020 return was cancelled for COVID-19, and no future edition has been announced",
+      "date_specific": "Unannounced / TBA",
+      "field_size": "~900 riders (2018, last confirmed edition; ~40% interstate)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "4-5",
-      "cutoff_time": "8 hours",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "160 km Maxi",
+        "110 km Challenge",
+        "50 km Social"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "South Australian autumn heat is a real factor — the 2018 edition saw 33-36°C with hot, gusty northerlies.",
+      "challenges": [
+        "High heat (33-36°C recorded in 2018)",
+        "Gusty northerly crosswinds — organizer materials warned deep-section wheels could be affected"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Rolling wine-country roads",
+      "surface": "Paved roads (semi-closed, not fully closed)",
       "technical_rating": 1,
-      "features": []
+      "features": [
+        "Mintaro rest stop/course feature"
+      ]
     },
     "fondo_rating": {
       "distance": 3,
@@ -56,7 +65,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): this profile's on-file date (Feb 15 2026) actually belongs to a different race entirely (Spain's Clásica de Almería) and the youtube_data/rider_intel described Ireland's ŠKODA Ring of Clare Cycle, not this event. No edition has run since 2018 (the only edition ever held); the planned 2020 return was cancelled for COVID-19 and never rescheduled. field_depth/prestige/organization dimensions below were inherited from the contaminated profile and have not been re-evaluated — flagging for human rescoring given the event has held only one edition. No numeric changes made this wave."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,197 +79,95 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The last confirmed edition (2018) ran as an open, undulating road gran fondo through the Clare Valley wine region roughly 140km north of Adelaide — vineyards, sweeping valley views, and historic rural towns rather than one defining climb. Terrain was described as rolling and punchy: frequent short rises and pinches over ~1,600m across the 160km Maxi course, not an alpine profile. Roads were semi-closed, not fully closed — the organizer's own materials later identified a different event (2022 Snowy Classic) as its first fully closed-road race.",
+      "signature_challenge": "No named KOM or signature climb is documented — the character is sustained rolling wine-country terrain and heat/wind exposure rather than a single defining ascent.",
+      "suffering_zones": [
+        "Sustained heat exposure — 33-36°C recorded in 2018",
+        "Gusty northerly crosswinds across open valley roads — organizer materials warned deep-section wheels could be affected",
+        "Mintaro and the surrounding rolling sections — one contemporary rider report described the 110km course as harder than the organizer's Bowral Classic event"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Abundant wineries, B&Bs, and hotels in Clare town; book early for race weekend.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://cyclingclassics.com.au/clare/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2018,
+      "origin_story": "Announced September 2017 as the second gran fondo in The Classics series (Yaffa Media/Bicycling Australia, founded 2016; Bowral Classic in New South Wales is the series' flagship). Debuted Sunday, 8 April 2018 with roughly 900 riders across 160/110/50km courses, about 40% from interstate. A second edition — including a planned Saturday 'Dirty Clare' 80km gravel fondo — was scheduled for April 2020 but cancelled 16 March 2020 due to COVID-19. No edition has run since, and the organizer's current site shows only stale/misapplied date copy for Clare while Bowral and Mudgee carry live 2026 dates.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "The organizer's own post-event coverage described the 2018 debut as a major success; no edition has run since."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "No Edition Since 2018 — Don't Plan a Trip Around This",
+      "summary": "Clare Classic held one edition — 8 April 2018, roughly 900 riders through Clare Valley wine country, ~40% from interstate. The planned 2020 return was cancelled for COVID-19 and never rescheduled; no edition has run since, and the organizer's current site shows only stale, misapplied date text for Clare while sibling events Bowral and Mudgee carry live 2026 dates. This profile previously carried Ireland's ŠKODA Ring of Clare Cycle footage and an incorrect Spanish race date — corrected this wave (see catalog_flags). What's documented is a single well-organized debut with no announced path back to the calendar.",
+      "strengths": [
+        "The one confirmed edition (2018): ~900 riders, ~40% interstate, rolling Clare Valley wine-country roads",
+        "Three distance options (160/110/50km) made it accessible to a range of riders",
+        "Part of an established organizer series (The Classics/Bicycling Australia, also behind Bowral)"
+      ],
+      "weaknesses": [
+        "No edition held since 2018 — the planned 2020 return was cancelled for COVID-19 and never rescheduled",
+        "Current organizer website shows stale, misapplied date information rather than a clear 'discontinued' or 'returning' statement",
+        "Roads were only semi-closed, not fully closed, in the one edition that ran",
+        "Significant heat exposure risk (33-36°C recorded in 2018) with gusty crosswinds"
+      ],
+      "bottom_line": "A single well-organized 2018 debut with no edition since — don't book travel around it without confirming directly with the organizer first."
     },
     "final_verdict": {
       "score": "53/100",
-      "one_liner": "Premier gran fondo blending Clare Valley's wine country beauty with solid road challenge.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A 2018 Clare Valley gran fondo debut with no edition held since — the planned 2020 return was cancelled and never rescheduled.",
+      "should_you_race": "Not currently — there's no confirmed 2026 edition. Contact the organizer (The Classics) directly before planning any trip around this event.",
+      "alternatives": "For an active event from the same organizer: Bowral Classic in New South Wales."
     },
-    "citations": [],
-    "youtube_data": {
-      "researched_at": "2026-03-05",
-      "search_query": "Clare Classic gran fondo cycling Clare Valley",
-      "videos": [
-        {
-          "video_id": "wOnG3OIZldA",
-          "title": "Clare Classic - Sunday, 5 April 2020",
-          "channel": "Bicycling Australia",
-          "view_count": 573,
-          "upload_date": "20190901",
-          "duration_string": "1:00",
-          "description": "The Clare Classic returns to the beautiful Clare Valley of South Australia on the weekend 3-5 April, 2020.\n\n160km-110km-50km courses available.\n\nRegister now - www.clareclassic.com.au",
-          "tags": [
-            "clare classic",
-            "cycling",
-            "gran fondo",
-            "bicycling australia",
-            "event",
-            "bicycling",
-            "cycle",
-            "south australia",
-            "clare valley"
-          ],
-          "url": "https://www.youtube.com/watch?v=wOnG3OIZldA",
-          "curated": false
-        },
-        {
-          "video_id": "4DiQQYiTR_4",
-          "title": "2018 Clare Classic Post Event Video",
-          "channel": "Bicycling Australia",
-          "view_count": 473,
-          "upload_date": "20190118",
-          "duration_string": "1:48",
-          "description": "Catch all the highlights from the inaugural 2018 Clare Classic cycling gran fondo through the beautiful Clare Valley region of South Australia.\nFor more information on upcoming events, visit: www.clareclassic.com.au",
-          "tags": [
-            "cycling",
-            "bicycling australia",
-            "clare classic",
-            "clare valley",
-            "south australia",
-            "cycling event",
-            "gran fondo"
-          ],
-          "url": "https://www.youtube.com/watch?v=4DiQQYiTR_4",
-          "curated": false
-        },
-        {
-          "video_id": "RC3oB5A_Zdo",
-          "title": "SKODA Ring of Clare Cycle 2017",
-          "channel": "Celtic Series",
-          "view_count": 1278,
-          "upload_date": "20161211",
-          "duration_string": "36",
-          "description": "SKODA Ring of Clare Cycle 2017 (formerly Granfondo Hibernia) - Starting and finishing in Ennis on Saturday 29th July 2017 - choice of 160km and 120km routes taking you by the Clare coast, loop head and Shannon estuary",
-          "tags": [
-            "Clare cycling sportive",
-            "ring of clare cycle"
-          ],
-          "url": "https://www.youtube.com/watch?v=RC3oB5A_Zdo",
-          "curated": false
-        },
-        {
-          "video_id": "BSU7RLAfYUg",
-          "title": "ŠKODA Ring of Clare 2017",
-          "channel": "Škoda Ireland",
-          "view_count": 829,
-          "upload_date": "20170731",
-          "duration_string": "2:32",
-          "description": "Over 2,000 cyclists took part in the Ring of Clare Cycle​ on Saturday July 29th which marked the second event in the 2017 ŠKODA Celtic Series. The next ŠKODA Celtic Series event rolls into Drogheda on September 10th for the Tour de Boyne Valley, check out http://celticseries.ie/ for additional information.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=BSU7RLAfYUg",
-          "transcript": "[Music]\nwe're here at Al Motors in Anis for the\npre-registration event for tomorrow's\nring of Cl cycle we have 2,000 people\ntaking part tomorrow so like this\ntomorrow I have an option of two routes\na 120 km route and a 160 km route oh\nyou'll do to 160 today yeah yeah Chan uh\npretty nervous all my friends backed out\nlast minute so I'm doing it for myself\nthis morning\nI'm here\nwe did 120\n160 Marshalls food stuff everything yeah\nreally really really well organized it's\ngood good tough one out tough one out\nall the way to the coast into the window\n60k straight into it first 80k was\nreally top into a headwind but as soon\nas we turned Bas went through the roof\nCU all enjy once we finished in this\nkind of weather show more one it's good\nit was tough very tough it's nice to\nhave it done now going to have a beer\nand a burger but I tell you one thing on\nthe way back it was Heaven and Earth\ncome next to year trust me on it it's\nlike being on the edge of the world it's\nabsolutely amazing fantastic\nfantastically well run great event jeez\nthere's a lot of hills in\nclarida lp8\nhe",
-          "curated": false
-        },
-        {
-          "video_id": "nT8NjLCqt1E",
-          "title": "ŠKODA Boyne Valley Classic 2016",
-          "channel": "Škoda Ireland",
-          "view_count": 395,
-          "upload_date": "20160919",
-          "duration_string": "2:10",
-          "description": "Over 500 cyclists took part in the ŠKODA Boyne Valley Classic on Sunday September 18th 2016. Irish cycling legend Stephen Roche led the group, for this, the final event of the inaugural ‘ŠKODA Celtic Cycle Series 2016’. The Drogheda event brings the total number of cyclists that took to the saddle for ŠKODA’s cycling events this year to over 4,000. \n\nThe Tour de Conamara and the ŠKODA Granfondo Hibernia in Ennis, which both took place earlier this year, made up the trio of the events for 2016.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=nT8NjLCqt1E",
-          "transcript": "[Music]\nthe weather's looking good um so oh no\nwe we're looking forward to a very good\nday out\ntomorrow you here it's a nice Coast rout\nso and it's great that the Sun's shining\nthis s challenge can we actually get\naround and do it and try the ride this\nis the last in the series we get this\none done we'll retire for the winter\nfirst time it's been ran and hopefully\nwe'll be here again next year successive\nyears sun is with us today so you know\nlooking forward to a great ride meeting\na lot of lot of people having a good\nchat on the road and uh staying safe of\ncourse\ngot the big J but it's uh good\none oh great great really enjoyed it\ntoday part many events and promote\nbecause so yeah glad to be up here\nnow and that's the beauty of cycling you\nget to see all these lovely lovely\nlovely places I have enjoyed it\nimmensely immensely R was fabulous like\neven with the drop of rain out there it\nwas a fabulous R the family atmosphere\nand the warmth of the crowd and the all\nthe kind of people that rocked up for it\nit was absolutely amazing down really\nwell a lot of people\nComon in how nice the Roth was and good\ncycling and uh so really really looking\nforward to next year and hopefully um\nit's bigger better next year",
-          "curated": false
-        }
-      ],
-      "quotes": [],
-      "rider_intel": {
-        "extracted_at": "2026-03-06",
-        "key_challenges": [
-          {
-            "name": "First 80k headwind section",
-            "mile_marker": "50",
-            "description": "Really tough into a headwind for the first 80k, but once you turn the pace goes through the roof.",
-            "source_video_ids": [
-              "BSU7RLAfYUg"
-            ]
-          },
-          {
-            "name": "Clare hills",
-            "description": "There's a lot of hills in Clare according to riders.",
-            "source_video_ids": [
-              "BSU7RLAfYUg"
-            ]
-          }
-        ],
-        "terrain_notes": [
-          {
-            "text": "Coastal route with significant hills throughout Clare. The return section after turning from the headwind feels like heaven and earth, described as being on the edge of the world.",
-            "source_video_ids": [
-              "BSU7RLAfYUg",
-              "nT8NjLCqt1E"
-            ]
-          }
-        ],
-        "gear_mentions": [],
-        "race_day_tips": [
-          {
-            "text": "Expect a tough first 80k into headwind, but pace will increase significantly once you turn and have the wind at your back.",
-            "source_video_ids": [
-              "BSU7RLAfYUg"
-            ]
-          }
-        ],
-        "additional_quotes": [
-          {
-            "text": "We have 2,000 people taking part tomorrow so like this tomorrow I have an option of two routes a 120 km route and a 160 km route",
-            "source_video_id": "BSU7RLAfYUg",
-            "source_channel": "Škoda Ireland",
-            "source_view_count": 829,
-            "category": "logistics",
-            "curated": true
-          },
-          {
-            "text": "Really really really well organized it's good good tough one out tough one out all the way to the coast",
-            "source_video_id": "BSU7RLAfYUg",
-            "source_channel": "Škoda Ireland",
-            "source_view_count": 829,
-            "category": "logistics",
-            "curated": true
-          },
-          {
-            "text": "The family atmosphere and the warmth of the crowd and the all the kind of people that rocked up for it it was absolutely amazing",
-            "source_video_id": "nT8NjLCqt1E",
-            "source_channel": "Škoda Ireland",
-            "source_view_count": 395,
-            "category": "community",
-            "curated": true
-          }
-        ],
-        "search_text": "The Ring of Clare cycle features two distance options: 120km and 160km routes with 2,000 participants. Riders describe it as a coastal route with significant hills throughout Clare Valley. The major challenge is the first 80k into a tough headwind, but once riders turn, the pace increases dramatically with tailwind assistance. The terrain takes riders all the way to the coast, with the return section described as feeling like being on the edge of the world. Weather conditions can include headwinds and occasional rain. The event is noted as very well organized with good marshalling, food stations, and support throughout. Riders emphasize the challenging hill sections and the dramatic difference between the outbound headwind section and the return journey with favorable winds."
+    "citations": [
+      {
+        "url": "https://cyclingclassics.com.au/clare/",
+        "category": "official",
+        "label": "Clare Classic — Official Page (The Classics)"
+      },
+      {
+        "url": "https://cyclingclassics.com.au/clare/2017/09/12/clare-classic-gran-fondo-cycling-event-south-australia/",
+        "category": "official",
+        "label": "Official 2017 Launch Announcement"
+      },
+      {
+        "url": "https://cyclingclassics.com.au/clare/2019/09/02/clare-classic-early-bird-registrations-now-open/",
+        "category": "official",
+        "label": "Official 2020 Registration Announcement (later cancelled)"
+      },
+      {
+        "url": "https://bicyclingaustralia.com.au/news/clare-classic-gran-fondo-cancelled-due-to-covid-19-pandemic/",
+        "category": "official",
+        "label": "Bicycling Australia — 2020 Cancellation Notice"
+      },
+      {
+        "url": "https://bicyclingaustralia.com.au/places/clare-classic-a-major-success-as-attention-turns-to-noosa/",
+        "category": "reference",
+        "label": "Bicycling Australia — 2018 Event Report"
+      },
+      {
+        "url": "https://cyclingclassics.com.au/clare/2017/11/10/riders-review-put-cervelo-s5-sram-etap-zipp-303s-test/",
+        "category": "reference",
+        "label": "Official 2018 Course Test / Rider Review"
+      },
+      {
+        "url": "https://bicyclingaustralia.com.au/news/dirty-clare-2020-south-australian-clare-classic-to-feature-a-gravel-fondo/",
+        "category": "reference",
+        "label": "Bicycling Australia — Planned 2020 'Dirty Clare' Gravel Add-On (never ran)"
       }
-    },
+    ],
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
+      "status": "unknown",
+      "verified": "2026-07-24",
       "source": "https://cyclingclassics.com.au/clare/",
-      "notes": "organizer site active; specific 2026 date not confirmed (medium confidence)"
+      "notes": "Only one edition ever ran (8 April 2018, ~900 riders). The planned 2020 edition (with a Saturday 'Dirty Clare' gravel add-on) was cancelled 16 March 2020 for COVID-19 and has not been rescheduled or relaunched as of 2026 (no edition held since 2018) — organizer's current Clare page shows only stale/misapplied date text ('Sunday, 19 October 2025') while sibling events Bowral and Mudgee carry live 2026 dates. No explicit discontinuation notice found, so status is unknown rather than defunct. Prior on-file date (Feb 15 2026) actually belonged to Spain's Clásica de Almería (UCI record), a wholly different, unrelated race. via codex gpt-5.6-sol web research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "Identity-corrected this wave (2026-07-24): all prior youtube_data/quotes/rider_intel (ŠKODA Ring of Clare Cycle, ŠKODA Boyne Valley Classic — both Irish events near Ennis, County Clare and Drogheda) were unrelated contamination; Ring of Clare was name-confusable ('Clare' in County Clare, Ireland vs. Clare Valley, South Australia), while Boyne Valley Classic was simply unrelated. The on-file date (Feb 15 2026) also belonged to a different, unrelated race (Spain's Clásica de Almería). This is the real, separate South Australian Clare Classic (Clare Valley, ~140km north of Adelaide, Bicycling Australia's Classics series), whose only confirmed edition ran in 2018; the planned 2020 edition was cancelled for COVID-19 and no edition has run since. All youtube_data removed as non-matching.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

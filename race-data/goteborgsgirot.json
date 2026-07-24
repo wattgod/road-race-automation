@@ -5,16 +5,16 @@
     "display_name": "Göteborgsgirot",
     "tagline": "",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
+      "distance_km": 150.0,
+      "distance_mi": 93.2,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Gothenburg, Sweden",
       "location_badge": "Gothenburg, Sweden",
       "country": "Sweden",
-      "date": "2026: May 24",
-      "date_specific": "2026: May 24",
-      "field_size": "5,000",
+      "date": "2026: no date announced",
+      "date_specific": "Paused since 2024; 2025 edition formally cancelled; no 2026 edition, date, or registration announced as of this writing",
+      "field_size": "Unknown",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,37 +70,83 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A Gothenburg-based cycling festival (not to be confused with the Göteborgsvarvet running half marathon) that ran ten editions from 2013 through 2023, then paused in 2024 and was formally cancelled for 2025. In its last documented program, riders chose between a 150km Gran Fondo road race, a 60km Stadsgirot road ride, and a 50km XC MTB option, crossing Gothenburg neighborhoods and the surrounding municipalities of Härryda, Mölndal, Mark and Kungsbacka.",
+      "signature_challenge": "No reliable elevation total was ever published by the organizer for the Gran Fondo road race across any documented edition — the course's character is better defined by its rolling, multi-municipality distance than by one named climb.",
+      "suffering_zones": [
+        "150km distance itself, given no organizer-published elevation figure to gauge total effort against.",
+        "The separate 50km XC MTB option (not the Gran Fondo road race) historically had muddy, difficult sections that the organizer acknowledged before a course redesign."
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Numerous hotels and accommodations available in Gothenburg city center.",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://goteborgsgirot.se/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2013,
+      "origin_story": "Conceived by Christer Wallin in autumn 2012 and launched in May 2013, operated by Göteborgsgirot/Giro Cycle Club with local clubs and companies; early corporate backing involved GAIS, Frölunda HC and GT/Expressen.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "A once-established, decade-running Gothenburg cycling festival (10 editions, 2013-2023) whose participation numbers failed to recover post-pandemic, forcing a 2024 pause and a formal 2025 cancellation — status beyond that is currently unclear."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "On Hold — Status Unclear",
+      "summary": "Göteborgsgirot ran for a full decade (2013-2023) as a genuine multi-format cycling festival — road Gran Fondo, a shorter Stadsgirot ride, and an XC MTB option — through Gothenburg and its surrounding municipalities. It didn't collapse overnight: participation slipped after the pandemic, the organizer paused 2024, then formally cancelled 2025 while saying it was still exploring a comeback. As of this writing, there's no 2026 date, course, or registration anywhere, and the official site still displays stale 2023-era registration and pricing content that could mislead a rider into thinking this is currently bookable.",
+      "strengths": [
+        "A decade of organizational track record (2013-2023, ten editions) with a genuine multi-format program",
+        "Distinctive route breadth — crossing Gothenburg proper plus four surrounding municipalities gave the Gran Fondo real regional character",
+        "The organizer has been transparent about the pause/cancellation rather than quietly disappearing, and has stated an intent to return"
+      ],
+      "weaknesses": [
+        "No 2026 edition, date, or registration — the event has not raced since 2023",
+        "The official website still hosts stale 2023 registration/pricing content, which risks misleading a visitor into thinking the event is currently bookable",
+        "No organizer-published elevation figure exists for any edition, making it hard to honestly assess the climbing demand even from historical data"
+      ],
+      "bottom_line": "Don't book around this one — it hasn't run since 2023 and there's no confirmed return. Watch goteborgsgirot.se directly for a genuine comeback announcement before planning a trip."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "Sweden's premier west coast gran fondo with challenging hills and large community turnout.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A decade-old Gothenburg cycling festival, paused since 2024 and formally cancelled for 2025 — no confirmed 2026 return.",
+      "should_you_race": "Not currently possible to plan around — no 2026 date exists. Check goteborgsgirot.se directly before assuming this is bookable.",
+      "alternatives": "For a currently-active Swedish road gran fondo, look elsewhere in the catalog rather than relying on Göteborgsgirot's stale registration pages."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://goteborgsgirot.se/",
+        "category": "official",
+        "label": "Göteborgsgirot — Official Site"
+      },
+      {
+        "url": "https://goteborgsgirot.se/goteborgsgirot-2024-stalls-in-men-hoppet-lever-vidare/",
+        "category": "official",
+        "label": "Göteborgsgirot — 2025 Cancellation Notice"
+      },
+      {
+        "url": "https://goteborgsgirot.se/goteborgsgirot-parkerar/",
+        "category": "official",
+        "label": "Göteborgsgirot — 2024 Pause Explanation"
+      },
+      {
+        "url": "https://svenskacykelforbundet.klubbenonline.se/nyheter/114681/premiar-for-goteborgsgirot-10-12-maj-2013",
+        "category": "reference",
+        "label": "Swedish Cycling Federation — 2013 Premiere Announcement"
+      },
+      {
+        "url": "https://goteborgsgirot.se/loppen/",
+        "category": "official",
+        "label": "Göteborgsgirot — Last Documented Race Program"
+      },
+      {
+        "url": "https://goteborgsgirot.se/ny-banstrackning-pa-bra-bil-xc-mtb/",
+        "category": "reference",
+        "label": "Göteborgsgirot — MTB Course Redesign (criticism source)"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Identity-corrected this wave: this is a genuine cycling festival, not the Göteborgsvarvet running half marathon the previous eligibility source pointed to. Confirmed on hold — paused 2024, formally cancelled 2025, no 2026 edition announced. Flagging for a human call on whether to keep this scored/active-styled in the catalog pending a possible comeback, per the birkebeinerrittet-road/goteborgsgirot class of dormant-event precedent.",
+      "ruled": "2026-07-24 editorial wave 10"
+    },
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Göteborgsgirot gran fondo cycling Gothenburg",
@@ -134,20 +180,6 @@
           "curated": false
         },
         {
-          "video_id": "bfGBUaKiMu0",
-          "title": "GRAND  PRIX  Cyckellopp Avenyn Göteborg Fre 6 Maj 2016",
-          "channel": "Bosse685",
-          "view_count": 299,
-          "upload_date": "20160508",
-          "duration_string": "10:02",
-          "description": "PRIORITET GRAND PRIX-Pemiär för Grand Prixlopp i Göteborg  Där Mölndals CK Damer Höll sig väl Framme Bland Proffsen Jeanette Arbjörk tog en fin 5:e Plats Gick i mål med segerklungan.",
-          "tags": [
-            "CYCKELSPORT"
-          ],
-          "url": "https://www.youtube.com/watch?v=bfGBUaKiMu0",
-          "curated": false
-        },
-        {
           "video_id": "Tw2j_Dmnkvc",
           "title": "GBG Girot 2014",
           "channel": "100GOPRO",
@@ -174,13 +206,22 @@
           "thumbnail_score": 72.0
         }
       ],
-      "quotes": []
+      "quotes": [],
+      "rider_intel": {
+        "extracted_at": "2026-07-24",
+        "key_challenges": [],
+        "terrain_notes": [],
+        "gear_mentions": [],
+        "race_day_tips": [],
+        "additional_quotes": [],
+        "search_text": "Purged this wave: one video ('GRAND PRIX Cyckellopp Avenyn Göteborg') documented a separate criterium race on Avenyn, not the Göteborgsgirot Gran Fondo. Retained three videos that genuinely document the Göteborgsgirot event across 2014, 2016 and 2023."
+      }
     },
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://vdoto2.com/race/goteborgsvarvet",
-      "notes": "Search results only show the Göteborgsvarvet running half marathon in Gothenburg, not a clearly identified Göteborgsgirot road-cycling event.; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://goteborgsgirot.se/",
+      "notes": "Identity-corrected: this is a real, distinct cycling festival, not Göteborgsvarvet. Ran 2013-2023 (10 editions), paused 2024, formally cancelled 2025 with organizer stating intent to explore a return. No 2026 date, course, or registration found (curl-verified official site live but showing stale 2023 content)."
     }
   }
 }

@@ -3,31 +3,33 @@
     "name": "L'Étape Indonesia",
     "slug": "letape-indonesia",
     "display_name": "L'Étape Indonesia",
-    "tagline": "",
+    "tagline": "Two editions in Lombok, then quietly discontinued.",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Mandalika, Lombok, Indonesia",
-      "location_badge": "Mandalika, Indonesia",
+      "distance_km": 141.0,
+      "distance_mi": 87.6,
+      "elevation_m": 1301,
+      "elevation_ft": 4268.0,
+      "location": "Pertamina Mandalika International Circuit, Central Lombok, West Nusa Tenggara, Indonesia",
+      "location_badge": "Mandalika, Lombok, Indonesia",
       "country": "Indonesia",
-      "date": "2026: May TBD",
-      "date_specific": "2026: May TBD",
-      "field_size": "Unknown",
+      "date": "Discontinued — last held May 28, 2023",
+      "date_specific": "Last confirmed edition: May 28, 2023. A 2024 relocation to Solo, Java was announced but no completed edition is verifiable; Indonesia is absent from L'Étape's official 2026 series calendar.",
+      "field_size": null,
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Unknown",
-      "cutoff_time": "Unknown",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Tropical",
+      "description": "Late-May Lombok: tropical heat and humidity, with the route running from coastal circuit terrain into rolling inland hills.",
+      "challenges": [
+        "Heat and humidity: tropical conditions typical of late May in Lombok"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -56,7 +58,7 @@
       "tier_label": "TIER 4",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 47. adventure dimension dropped, road_surface added. Score recalculated: 44."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 47. adventure dimension dropped, road_surface added. Score recalculated: 44. NOTE (wave 10): climbing=2 correctly matches the confirmed 1,301m of gain on the 141km long route (rubric band 500-1,500m). FLAG (wave 10, not applied): the event is now confirmed discontinued (last held 2023), which may warrant a full rescore or removal alongside gfny-paracas and tallinn-gran-fondo; road_surface=1 and organization=3 also sit awkwardly against documented 2022 road-preparation and security shortfalls. Numbers left unchanged pending human review."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +72,75 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this event is discontinued at this location; the profile describes a race that no longer runs in Lombok. L'Étape Indonesia started and finished at the Pertamina Mandalika International Circuit (the MotoGP venue) in Central Lombok, offering two routes: The Ride (79 km / 494 m) and The Race (141 km / 1,301 m). Official race materials describe rolling southern-Lombok roads with short, steep climbs, remote villages, rice paddies, beaches, and coastal views, with the long route's hills overlooking Lombok's southern coastline. It ran only twice — 2022 and 2023 — before disappearing from the calendar; a 2024 relocation to Solo, Java was announced but no completed edition was verifiable, and Indonesia is absent from L'Étape's official 2026 series calendar.",
+      "signature_challenge": "The short, steep climbs overlooking Lombok's southern coastline on The Race's 141 km route — punchy rather than long, in tropical heat.",
+      "suffering_zones": [
+        "Southern Lombok's short, steep coastal-hill sectors on the 141 km route.",
+        "Sustained tropical heat and humidity across the full distance."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Hotels near Mandalika with parking; combine with Bali holiday.[2]",
+      "airport": "Lombok International Airport (LOP), the nearest commercial airport to Mandalika.",
+      "lodging_strategy": "Hotels near the Mandalika circuit area; the region is commonly combined with a Bali trip, though the event itself is discontinued.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.letapebytourdefrance.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2022,
+      "origin_story": "Announced in 2020 as a partnership between A.S.O. (Tour de France organizer) and local promoter Rocca, but pandemic delays pushed the first completed edition to 2022. A second edition followed in 2023 under A.S.O. with local promoter Veloism Danendra Aksata. The 2022 debut was troubled by unresolved road-preparation and security issues shortly before race day, and that edition recorded three crashes, including one rider hospitalized with a head laceration.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Two-Edition L'Étape Stop, Now Gone From Lombok",
+      "summary": "L'Étape Indonesia was a genuine entry in the official L'Étape by Tour de France series, run at Lombok's Mandalika circuit in 2022 and 2023 with two honest distance options and real A.S.O. backing. It wasn't trouble-free — the 2022 debut had documented last-minute road-preparation and security gaps, and recorded crashes including one rider hospitalized. It also wasn't durable: after two editions, the race disappeared from Lombok, a reported 2024 move to Solo never produced a verifiable completed event, and Indonesia is absent from L'Étape's current global calendar.",
+      "strengths": [
+        "Official L'Étape by Tour de France series backing (A.S.O.-run), with two documented editions",
+        "Two honest distance options (79 km / 141 km) with genuine scenic variety — rice paddies, remote villages, coastal hills",
+        "A distinctive, non-European venue for the series: the Mandalika MotoGP circuit"
+      ],
+      "weaknesses": [
+        "Discontinued after only two editions (2022-2023) — not currently a bookable event in Lombok",
+        "The 2022 debut had documented pre-race road-condition and security shortfalls, plus multiple rider crashes",
+        "A reported 2024 relocation to Solo, Java never produced a verifiable completed edition",
+        "The former letapeindonesia.com domain is no longer a reliable source — it currently resolves to unrelated content"
+      ],
+      "bottom_line": "This entry exists as a historical record, not a current recommendation — L'Étape Indonesia hasn't run in Lombok since 2023. If you want an active L'Étape series stop in the region, check L'Étape's official calendar (letapebytourdefrance.com) for what's currently running in Asia."
     },
     "final_verdict": {
       "score": "44/100",
-      "one_liner": "Scenic road sportive in paradise-like Lombok near MotoGP circuit.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A real but short-lived L'Étape stop at Lombok's Mandalika circuit — two editions, then gone.",
+      "should_you_race": "You can't — no edition has run in Lombok since 2023, and an announced Solo, Java relocation never produced a verified completed event. Check L'Étape's official calendar for current Asia-Pacific stops instead.",
+      "alternatives": "For an active L'Étape series stop in Asia or nearby, check letapebytourdefrance.com's current calendar directly rather than relying on this listing."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.letapebytourdefrance.com/",
+        "category": "official",
+        "label": "L'Étape by Tour de France — Official Series Hub (current calendar)"
+      },
+      {
+        "url": "https://www.itdc.co.id/press-release/letape-indonesia-by-tour-de-france-digelar-kedua-kalinya-di-mandalika-20230528053611",
+        "category": "reference",
+        "label": "ITDC — Official 2023 (Second Edition) Press Release"
+      },
+      {
+        "url": "https://www.thejakartapost.com/news/2020/02/27/mandalika-to-host-international-cycling-event-la-tour-de-france.html",
+        "category": "reference",
+        "label": "Jakarta Post — 2020 Announcement"
+      },
+      {
+        "url": "https://www.antaranews.com/berita/2670813/rute-tour-de-france-letape-indonesia-di-lombok-tengah-diperbaiki",
+        "category": "reference",
+        "label": "Antara News — 2022 Pre-Race Road-Condition Report"
+      },
+      {
+        "url": "https://ntbsatu.com/2022/02/20/alami-kecelakaan-peserta-letape-indonesia-asal-balikpapan-gagal-lanjutkan-balapan.html",
+        "category": "reference",
+        "label": "NTB Satu — 2022 Rider Crash Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "L'Étape Indonesia gran fondo cycling Mandalika",
@@ -159,148 +199,19 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/gf3oPAk1_-A/maxresdefault.jpg",
           "thumbnail_score": 100.0
-        },
-        {
-          "video_id": "rivkGSfQ1HQ",
-          "title": "Tour De Lombok Mandalika 2017",
-          "channel": "Laluakhsan Tastura",
-          "view_count": 28,
-          "upload_date": "20170418",
-          "duration_string": "1:00",
-          "description": "",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=rivkGSfQ1HQ",
-          "curated": false
-        },
-        {
-          "video_id": "qyeG7lxthkU",
-          "title": "L´Étape Ciudad de México 2021 - Highlights | L'Etape by Tour de France",
-          "channel": "L'Etape Series by Tour de France",
-          "view_count": 812,
-          "upload_date": "20211126",
-          "duration_string": "2:29",
-          "description": "L'Etape Ciudad de México came back for another year through the Mexican Capital alongside Oscar Pereiro!\n\n---------\n\nL'Etape by Tour de France is a series of amateur cycling events designed to experience the Tour de France Legend. It is the only event where you can race and feel like a Tour de France champion, and where you can enjoy the Tour de France unique atmosphere and passion.\n\n“The Tour de France is the world's greatest cycling race. Each year it is passionately followed by fans around the world so it has naturally given rise to L'Etape by Tour de France series”, says Christian Prudhomme, Tour de France director. \n\nThe series has now expanded to more than 20 international locations including:\n🇫🇷 France\n🇧🇷 Brasil\n🇲🇽 México\n🇨🇴 Colombia\n🇨🇳 China\n🇦🇺 Australia\n🇹🇭 Thailand\n🇨🇭 Switzerland\n🇮🇩 Indonesia\n🇪🇸 Spain\n🇲🇾 Malaysia\n🇸🇰 Slovakia\n🇨🇿 Czech Republic\n🇷🇺 Russia\n🇬🇧 UK\n🇨🇦 Canada\n🇺🇸 USA\n🇳🇱 Netherlands\n🇨🇾 Cyprus\n🇸🇮 Slovenia\n🇪🇨 Ecuador\n\nAmong these Tour de France official cycling events is of course L'Étape du Tour. With a peloton of 15 000 riders and 50 nationalities, it is Europe's biggest cycling event. Riding on the same routes and under the same conditions as Tour de France champions: this is the promise that L'Étape du Tour has kept since 1993.\n\nCheck out https://www.letapebytourdefrance.com/ for more information.\n\nJoin us on:\n-Facebook 👉 https://www.facebook.com/letapebytourdefrance\n-Instagram 👉 https://www.instagram.com/letapebytourdefrance/\n-Strava 👉 https://www.strava.com/clubs/letapebyletourdefrance",
-          "tags": [
-            "Cycling",
-            "Road",
-            "Sportive",
-            "Cyclosportive",
-            "Gran",
-            "Fondo",
-            "Tour",
-            "de",
-            "France",
-            "GCN",
-            "Global Cycling Network",
-            "Sports",
-            "Bike",
-            "Bikes",
-            "Bicycle (Product Category)",
-            "Road Bike",
-            "Cyclist",
-            "world",
-            "champion",
-            "haute route",
-            "haute",
-            "route",
-            "race",
-            "racing",
-            "bike race",
-            "sportive",
-            "time trial",
-            "stage race",
-            "driver",
-            "GCN Cycling",
-            "Cycling tips",
-            "cycling workout",
-            "cycling training",
-            "velo",
-            "ollie bridgewood",
-            "sec-feature",
-            "eroica",
-            "ironman"
-          ],
-          "url": "https://www.youtube.com/watch?v=qyeG7lxthkU",
-          "curated": false
-        },
-        {
-          "video_id": "88O4cIM0XAM",
-          "title": "Trailer 2023 - L'Etape by Tour de France",
-          "channel": "L'Etape Series by Tour de France",
-          "view_count": 2318,
-          "upload_date": "20230321",
-          "duration_string": "59",
-          "description": "L'Etape by Tour de France is a series of amateur cycling events designed to experience the Tour de France Legend. It is the only event where you can race and feel like a Tour de France champion, and where you can enjoy the Tour de France unique atmosphere and passion.\n\n“The Tour de France is the world's greatest cycling race. Each year it is passionately followed by fans around the world so it has naturally given rise to L'Etape by Tour de France series”, says Christian Prudhomme, Tour de France director. \n\nThe series has now expanded to more than 20 international locations including:\n🇫🇷 France\n🇧🇷 Brasil\n🇲🇽 México\n🇨🇴 Colombia\n🇨🇳 China\n🇦🇺 Australia\n🇹🇭 Thailand\n🇨🇭 Switzerland\n🇮🇩 Indonesia\n🇪🇸 Spain\n🇲🇾 Malaysia\n🇸🇰 Slovakia\n🇨🇿 Czech Republic\n🇬🇧 UK\n🇨🇦 Canada\n🇺🇸 USA\n🇳🇱 Netherlands\n🇨🇾 Cyprus\n🇸🇮 Slovenia\n🇪🇨 Ecuador\n\nAmong these Tour de France official cycling events is of course L'Étape du Tour. With a peloton of 15 000 riders and 50 nationalities, it is Europe's biggest cycling event. Riding on the same routes and under the same conditions as Tour de France champions: this is the promise that L'Étape du Tour has kept since 1993.\n\nCheck out https://www.letapebytourdefrance.com/ for more information.\n\nJoin us on:\n-Facebook 👉 https://www.facebook.com/letapebytourdefrance\n-Instagram 👉 https://www.instagram.com/letapebytourdefrance/\n-Strava 👉 https://www.strava.com/clubs/letapebyletourdefrance",
-          "tags": [
-            "Cycling",
-            "Road",
-            "Sportive",
-            "Cyclosportive",
-            "Gran",
-            "Fondo",
-            "Tour",
-            "de",
-            "France",
-            "GCN",
-            "Global Cycling Network",
-            "Sports",
-            "Bike",
-            "Bikes",
-            "Bicycle (Product Category)",
-            "Road Bike",
-            "Cyclist",
-            "world",
-            "champion",
-            "haute route",
-            "haute",
-            "route",
-            "race",
-            "racing",
-            "bike race",
-            "sportive",
-            "time trial",
-            "stage race",
-            "driver",
-            "GCN Cycling",
-            "Cycling tips",
-            "cycling workout",
-            "cycling training",
-            "velo",
-            "ollie bridgewood",
-            "sec-feature",
-            "eroica",
-            "ironman"
-          ],
-          "url": "https://www.youtube.com/watch?v=88O4cIM0XAM",
-          "transcript": "[Music]\nthank you\nall right\n[Applause]",
-          "curated": false
-        },
-        {
-          "video_id": "csCpS6u42aw",
-          "title": "Etape 4 & 5 Level Tersulit Tour De Indonesia 2019",
-          "channel": "KOMPASTV",
-          "view_count": 2300,
-          "upload_date": "20190825",
-          "duration_string": "2:20",
-          "description": "Tour De Indonesia 2019 telah usai, rute panjang serta tanjakan terjal Indonesia di apresiasi perwakilan Commissioner UCI Jacky Verdenet.\r\n\r\nTour De Indonesia 2019 dengan klasifikasi two point one sukses diselenggarakan dengan lima etape. Etape empat jember hingga Paltuding Pegunungan Ijen dengan kemiringan 45 derajat serta etape lima yang dimulai dari Gilimanuk ke Batur Unesco Global Park menjadi level tersulit para pebalap menghadapi tanjakan terjal Indonesia.\r\n\r\n#TourDeIndonesia #UCI #BalapSepeda\r\n\r\n\r\n\n\rJangan lewatkan live streaming Kompas TV 24 jam non stop di https://www.kompas.tv/live. Supaya tidak ketinggalan berita-berita terkini, terlengkap, serta laporan langsung dari berbagai daerah di Indonesia, yuk subscribe channel youtube Kompas TV. Aktifkan juga lonceng supaya kamu dapat notifikasi kalau ada video baru. \n\rMedia social Kompas TV: \nFacebook: https://www.facebook.com/KompasTV \nInstagram: https://www.instagram.com/kompastv \nTwitter: https://twitter.com/KompasTV \nLINE: https://line.me/ti/p/%40KompasTV",
-          "tags": [
-            "babe",
-            "kompas sport",
-            "tour de indonesia",
-            "gilimanuk",
-            "balap sepeda"
-          ],
-          "url": "https://www.youtube.com/watch?v=csCpS6u42aw",
-          "curated": false
         }
       ],
       "quotes": []
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://sport.detik.com/sport-lain/d-6714084/ada-tour-de-france-di-indonesia-bulan-ini-pemanasan-di-kalimantan",
-      "notes": "2026 edition was reported for Mandalika on May 28, but no current 2026 registration or status confirmation was found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.letapebytourdefrance.com/",
+      "notes": "SUPERSEDES prior 'unknown' status. Last verified Mandalika edition was May 28, 2023. A 2024 relocation to Solo, Java was announced but no completed edition is verifiable, and Indonesia is absent from L'Étape's official 2026 series calendar. The former letapeindonesia.com domain now resolves to unrelated content and should not be used as a source despite returning HTTP 200. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "Discontinued at this location after 2 editions (2022-2023) — same pattern as letape-parma (wave 3 precedent) and gfny-paracas (this wave). Purged 3 mismatched YouTube videos (Tour De Lombok Mandalika, L'Étape Ciudad de México, Tour De Indonesia 2019) that had nothing to do with this event; kept only the confirmed 2023 official highlights video. Recommend a human decide whether to keep this as a historical/discontinued record or prune it from the active catalog.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

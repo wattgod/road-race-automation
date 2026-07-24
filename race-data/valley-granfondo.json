@@ -5,33 +5,52 @@
     "display_name": "Valley GranFondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 120.7,
-      "distance_mi": 75.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "distance_km": 125.4,
+      "distance_mi": 77.9,
+      "elevation_m": 990,
+      "elevation_ft": 3248.0,
       "location": "Langley, Fraser Valley, BC, Canada",
       "location_badge": "Langley, Canada",
       "country": "Canada",
       "date": "June 7",
       "date_specific": "2026: June 7",
-      "field_size": "Not specified",
+      "field_size": "~676 long-course finishers; 1,600 entry cap across all distances",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "5",
+      "registration": "https://raceroster.com/events/2026/111916/2026-valley-granfondo",
+      "entry_fee": "CA$220-295 tiered by registration date (CA$239-320 all-in with mandatory fees)",
+      "feed_zones": "4 aid stations on the long course (~30, 49, 76/77, 103 km)",
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "GranFondo",
+          "distance_km": 125.4
+        },
+        {
+          "name": "MedioFondo",
+          "distance_km": 87.73
+        },
+        {
+          "name": "PrestoFondo",
+          "distance_km": 47.97
+        },
+        {
+          "name": "FamilyFondo",
+          "distance_km": 18.42
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Early June in the Fraser Valley: mild, often sunny, with a real chance of a wet start given the region's Pacific climate.",
+      "challenges": [
+        "Occasional early-June rain typical of the Pacific Northwest"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "surface": "Paved roads, open to traffic (traffic-managed, not fully closed)",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +75,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes organization/scenic_experience/community_culture/logistics/value at 4 are not clearly evidenced by the research dump (open-road/traffic-managed format, farmland-not-alpine scenery, no documented event inclusions for the value score). Flagging for a human rescoring pass, not auto-applying."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +89,89 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A paved, predominantly agricultural Fraser Valley circuit, not a mountain gran fondo. It leaves Fort Langley beside the Fraser River, crosses the Langley-Abbotsford farm-road grid through Bradner and Mt. Lehman, runs out toward the Canada-US border roads, and returns to Eagle Acres Dairy Farm. Its 990m of climbing comes from repeated rollers and low foothill benches rather than one defining ascent — the three longest climbing sections are only 5.8-7.9km with 61-79m gain apiece. Expect open farmland, Fraser River flats, semi-rural rollers and distant mountain views rather than alpine scenery.",
+      "signature_challenge": "No single signature climb — the challenge is accumulated rolling terrain over 125km, with the final stretch back toward Eagle Acres wearing riders down after repeated small rises.",
+      "suffering_zones": [
+        "The Bradner/Mt. Lehman benchland rollers — not steep individually, but the 61-79m repeated climbs add up over the full 125km distance",
+        "Open-road sections with real traffic: railway crossings, vehicle lanes, and raised bike-lane dividers per the official rider guide — this is traffic-managed, not fully closed roads"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Special rates at Sandman Hotel Langley and Sandman Signature Langley Hotel (block code: 2606GFONDO) for June 5-8; book early due to high occupancy.",
-      "transport": "",
+      "transport": "Start/finish at Eagle Acres Dairy Farm, 8796 240 Street, Langley Township, BC — roughly 45 minutes from Vancouver by car.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://valleygranfondo.com/registration/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2012,
+      "origin_story": "Conceived by Jeffrey Hansen-Carlson and developed over roughly 14 months by a volunteer organizing team led operationally by Bruce Dayton, debuting in July 2012 with just under 1,200 riders under the sponsor name Prospera Valley GranFondo. It later ran as the Applewood Valley GranFondo (2022-2024 title sponsorship, the era captured in this profile's YouTube footage) before returning to the neutral Valley GranFondo branding — same event, same Eagle Acres venue, across all three sponsor names, though the research does not establish an unchanged route or organizing team across the full 12+ years (recent editions are run by M1 Sports Management).",
+      "notable_moments": [
+        "Won Tourism Langley's event-of-the-year Tourism Excellence Award in its early years",
+        "Entry cap of 1,600 across all distances as of the 2026 edition (not established as growth from any earlier baseline)"
+      ],
+      "reputation": "A long-running Fraser Valley fondo with a documented 2012 founding and continuous editions since. The research found no substantiated major controversy, but that's an absence of evidence, not proof of smooth operation — riders comparing it to bigger BC events describe it as comparatively bare-bones."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Long-Running Fraser Valley Fondo, Not a Marquee Event",
+      "summary": "Valley GranFondo has run out of Fort Langley since 2012 under three different sponsor names — Prospera, Applewood, now just Valley — at the same Eagle Acres Dairy Farm start/finish. It's an agricultural Fraser Valley circuit: farmland, river flats, and repeated low rollers rather than real climbing, run on open roads with traffic management rather than full closures. No substantiated major controversy turned up in research, but that's an absence of evidence rather than a track record of smooth execution — riders who've done bigger BC fondos like Whistler describe this one as comparatively bare-bones, and the official rider guide itself flags real open-road hazards: railway crossings, vehicle lanes, limited-sightline corners.",
+      "strengths": [
+        "Documented 12+ year history under the same core event (across three sponsor names) at a consistent venue",
+        "Scenic, accessible Fraser Valley farmland course close to Vancouver (~45 minutes by car)",
+        "Four aid stations and a four-route structure (Family through full GranFondo) for mixed-ability groups",
+        "Tourism Langley recognition in its earlier years"
+      ],
+      "weaknesses": [
+        "Open, traffic-managed roads rather than full closures — riders share railway crossings, vehicle lanes and raised dividers with regular traffic",
+        "Minimal real climbing (990m over 125km via repeated low rollers) — not a course for riders seeking mountain-fondo challenge",
+        "Strict non-refundable/non-deferrable entry policy, including for weather cancellations, unless riders buy third-party refund protection",
+        "Rider comparisons to bigger regional events (Whistler GranFondo) describe it as comparatively bare-bones in production value"
+      ],
+      "bottom_line": "A workable local fondo for Vancouver-area riders who want an accessible farmland ride — go in with realistic expectations about open roads and modest climbing, and don't expect the production values of a bigger regional event."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "Fraser Valley's largest community-focused GranFondo with epic post-ride party and charity impact.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A dependable Fraser Valley farmland fondo, honest about being open-road rather than closed-course.",
+      "should_you_race": "If you're BC-based or nearby and want an accessible century-distance ride through Fraser Valley farmland, this delivers that — go in expecting open roads and modest climbing, not a mountain-fondo spectacle or big-event production values.",
+      "alternatives": "For a bigger-production BC gran fondo with more climbing, Whistler GranFondo is the regional comparison riders reach for (verify its own closure/course details directly). For gravel instead of pavement in the same region, Ride for Water (Chilliwack) or the Cowichan Crusher/Burnt Bridge fondos on Vancouver Island are separate, unrelated events worth comparing."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://valleygranfondo.com/registration/",
+        "category": "official",
+        "label": "Valley GranFondo — Official Registration & Policies"
+      },
+      {
+        "url": "https://raceroster.com/events/2026/111916/2026-valley-granfondo",
+        "category": "official",
+        "label": "Race Roster — 2026 Valley GranFondo Registration"
+      },
+      {
+        "url": "https://valleygranfondo.com/wp-content/uploads/2026/05/ValleyGranFondo-Rider-Guide_2026.pdf",
+        "category": "official",
+        "label": "Official 2026 Rider Guide"
+      },
+      {
+        "url": "https://valleygranfondo.com/wp-content/uploads/2026/03/ValleyGranFondo-Maps_GranFondo.pdf",
+        "category": "official",
+        "label": "Official 2026 Course Map & Elevation Profile"
+      },
+      {
+        "url": "https://valleygranfondo.com/past-event-resources/",
+        "category": "official",
+        "label": "Official Event Archive (2012-2026)"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/798/accolades-for-prospera-valley-gran-fondo",
+        "category": "reference",
+        "label": "Gran Fondo Guide — Founding History & Tourism Award"
+      },
+      {
+        "url": "https://www.reddit.com/r/vancouvercycling/comments/1l84scb",
+        "category": "community",
+        "label": "r/vancouvercycling — Rider Comparison Discussion"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Valley GranFondo gran fondo cycling Langley",
@@ -292,9 +363,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://valleygranfondo.com/registration/",
-      "notes": "2026 edition in Langley BC is announced with registration info for June 7.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition ran Sunday June 7 with official results and photos posted afterward; registration is closed only because that edition has passed, not due to cancellation. Organizer describes it as an annual event. Historically ran as Prospera Valley GranFondo and Applewood Valley GranFondo (sponsor-era names, same event as this profile's existing YouTube footage) and is occasionally called Fraser Valley GranFondo in charity partner listings — all the same race."
     }
   }
 }

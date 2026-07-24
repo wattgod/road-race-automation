@@ -5,15 +5,15 @@
     "display_name": "Yangyang Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 149.7,
-      "distance_mi": 93.0,
-      "elevation_m": 2073,
-      "elevation_ft": 6800.0,
-      "location": "Yangyang, Gangwon-do, South Korea",
+      "distance_km": 151.0,
+      "distance_mi": 93.8,
+      "elevation_m": 2380,
+      "elevation_ft": 7808.0,
+      "location": "Yangyang and Inje, Gangwon-do, South Korea",
       "location_badge": "Yangyang, South Korea",
       "country": "South Korea",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
+      "date": "2026: not yet announced",
+      "date_specific": "No 2026 edition announced as of this writing; last held 26 April 2025",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -70,11 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A supported road gran fondo through Yangyang and Inje counties on South Korea's east coast, held by the Yangyang County Sports Council since 2023 with registration/logistics run through Wizrun. The 151 km long course (68 km mediofondo option) starts and finishes at Yangyang Namdaecheon Sports Park and strings together exposed East Sea coastal roads with real inland climbing around Garisan and Osaek Pass/Hangyeryeong — not a flat coastal spin, but not a high-mountain fondo either.",
+      "signature_challenge": "Osaek Pass (Hangyeryeong), a key climb at roughly 897 m, followed by an East Sea coastal return where at least one rider reported strong headwinds — weather-dependent exposure, not a guaranteed daily feature.",
       "suffering_zones": [
-        "Osaek Ascent: The main climb gains 500m over 15km through dense forest. Steady gradient with limited shade breaks.",
-        "Coastal Headwinds: The return coastal section often faces strong onshore winds in the afternoon."
+        "Osaek Pass/Hangyeryeong: a genuine mountain climb around 897m — confirmed real, not the flatter 'Osaek Ascent' figure previously logged here.",
+        "East Sea coastal roads: exposed, and at least one 2024 rider reported strong headwinds there — conditions vary by year rather than a fixed course feature.",
+        "Km 105 rough pavement and shared-road descents on Hangyeryeong, per a credible 2024 finisher report that also flagged corrupted GPX elevation data that year."
       ]
     },
     "logistics": {
@@ -82,33 +83,77 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://ygranfondo.raceplan.co.kr/"
     },
     "history": {
-      "founded": 2017,
-      "origin_story": "",
+      "founded": 2023,
+      "origin_story": "Launched by Yangyang County (with Wizrun Solution handling registration/logistics) on 17 June 2023 as a 130 km/2,371 m inaugural edition with roughly 1,200 finishers — not 2017, as this profile previously stated.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "Young event (three editions through 2025) without a substantiated controversy, but a credible 2024 finisher account cited corrupted GPX elevation data, rough pavement near km 105, and traffic control on Hangyeryeong that varied between slowed traffic and full closure rather than a fully closed course."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real, Young, 2026 Unconfirmed",
+      "summary": "Yangyang Gran Fondo is a real Yangyang County Sports Council-run road fondo — three editions have run since its June 2023 launch, most recently in April 2025, with organizer infrastructure (Wizrun registration, county traffic notices, local press coverage). But in the sources checked, there's no 2026 date, registration link, or cancellation notice, which is a meaningfully different situation than a race with a confirmed slot on the calendar. The course itself has real substance: a genuine climb over Osaek Pass/Hangyeryeong into East Sea coastal roads, not just a flat scenic ride.",
+      "strengths": [
+        "Real mountain climbing on Osaek Pass/Hangyeryeong (~897m), not just a coastal cruise",
+        "Three consecutive editions 2023-2025 run by county government with a dedicated registration platform (Wizrun)",
+        "68 km mediofondo option alongside the 151 km long course for riders who want the coastal/mountain route without the full distance"
+      ],
+      "weaknesses": [
+        "No 2026 edition announced as of this writing — the official registration site is still showing the 2025 edition with no forward date",
+        "A credible 2024 finisher report flagged corrupted GPX elevation data and incomplete traffic closure on the main descent — worth knowing before you trust the course profile on your device",
+        "Very young event (three editions) with limited independent race coverage outside Korean-language local press and forums"
+      ],
+      "bottom_line": "If a 2026 date gets announced, this is a legitimate east-coast Korean fondo worth a look for the Osaek climb and coastal finish — just don't book travel around it until the organizer actually posts a date."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "A scenic Korean coastal-to-mountain gran fondo showcasing Gangwon Province's autumn beauty.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A young Yangyang County fondo pairing a real mountain climb with East Sea coastal roads — currently without a confirmed 2026 date.",
+      "should_you_race": "Watch the official registration site for a 2026 announcement before planning around it; if it returns, it's a reasonable pick for riders wanting an East Coast Korean fondo with genuine climbing rather than a flat coastal cruise.",
+      "alternatives": "Korea Epic Ride (self-supported, ~500km, 55% unpaved forest roads — a very different, tougher event despite regional proximity) for riders wanting more adventure-format Korean cycling."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ygranfondo.raceplan.co.kr/",
+        "category": "official",
+        "label": "Yangyang Gran Fondo — Official Registration Site (Wizrun/Raceplan)"
+      },
+      {
+        "url": "https://www.newsis.com/view/NISX20250113_0003030448",
+        "category": "reference",
+        "label": "Newsis — 2025 Edition Course Report"
+      },
+      {
+        "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1141349",
+        "category": "reference",
+        "label": "Jeonmae — 2025 Course Report (151km/2,380m)"
+      },
+      {
+        "url": "https://www.ajunews.com/view/20230618151614053",
+        "category": "reference",
+        "label": "Ajunews — 2023 Inaugural Edition Report"
+      },
+      {
+        "url": "https://www.yangyang.go.kr/gw/portal/yyc_news_notice?articleSeq=239324&mode=readForm",
+        "category": "official",
+        "label": "Yangyang County — Traffic Control Notice"
+      },
+      {
+        "url": "https://damoang.net/bicycle/2672",
+        "category": "community",
+        "label": "Rider Report — 2024 Edition (GPX data, pavement, traffic control)"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/epicoffroad500",
+        "category": "other",
+        "label": "Korea Epic Ride — Comparison Event (different, self-supported format)"
+      }
+    ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.ahotu.com/event/yang-yang-gran-fondo",
-      "notes": "2025 edition in Yangyang is documented but no clear 2026 announcement or cancellation found; some listings show 2025 Seoul or Korea Epic Ride in other cities, so future status is unclear.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://ygranfondo.raceplan.co.kr/",
+      "notes": "Official registration site is live (curl-verified 200) but frozen on the 2025 edition; no 2026 date, registration, or cancellation notice found as of this research. Last edition evidenced: 26 April 2025 (151km/2,380m). Not the same event as Korea Epic Ride."
     }
   }
 }

@@ -3,31 +3,33 @@
     "name": "GFNY Paracas",
     "slug": "gfny-paracas",
     "display_name": "GFNY Paracas",
-    "tagline": "",
+    "tagline": "Ran two editions (2024-2025), then dropped from GFNY's calendar.",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
+      "distance_km": 116.0,
+      "distance_mi": 72.1,
       "elevation_m": 662,
       "elevation_ft": 2172.0,
-      "location": "Paracas, Peru",
+      "location": "Paracas, Ica, Peru",
       "location_badge": "Paracas, Peru",
       "country": "Peru",
-      "date": "2026: June 7",
-      "date_specific": "2026: June 7",
-      "field_size": "N/A",
+      "date": "Discontinued — last held June 8, 2025",
+      "date_specific": "Last edition: June 8, 2025. No 2026 edition; absent from GFNY's current race calendar.",
+      "field_size": "~186 finishers across long, medium, and Him & Her categories (2025 results count, not a registration total)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Arid/Desert",
+      "description": "Coastal Peruvian desert in June (Southern Hemisphere winter): mild temperatures, minimal rain, but persistent, powerful Pacific onshore wind.",
+      "challenges": [
+        "Wind: the course's defining difficulty is sustained coastal wind across exposed desert, not climbing"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -56,7 +58,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 50."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 50. FLAG (wave 10, not applied): sol review notes distance=3 sits high for a 116km course (rubric line closer to 2), climate_risk=3 looks low against the persistent, powerful wind described as the course's defining difficulty, cultural_impact=1 is generous for a two-edition discontinued event, and road_surface=1/organization=3/community_culture/value/expenses lack direct evidentiary support in the wave-10 research. Numbers left unchanged pending human review."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +72,75 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this event is discontinued; the profile describes a race that no longer runs. GFNY Paracas was mostly flat, fast paved racing starting and finishing at Kite Club Paracas, routed through the Paracas National Reserve, the San Martín port area, and roads near Pisco airport. It was not a climbing gran fondo — the highest point on the 2025 long course was only around 74m — but a genuinely tough one anyway, because persistent, powerful Pacific coastal wind across exposed desert was the course's real signature difficulty. Scenery combined desert, cliffs, and ocean. GFNY ran only two editions (June 2024, June 2025) before the race vanished from its official calendar with no public cancellation notice.",
+      "signature_challenge": "Sustained Pacific coastal wind across open desert roads — not a climb, but a relentless crosswind/headwind test.",
+      "suffering_zones": [
+        "The exposed coastal stretches near San Martín port, where wind exposure was constant with little shelter.",
+        "The Paracas National Reserve sections: flat, fast, and fully exposed desert terrain."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Kite Club Paracas hosts race week activities; explore Paracas National Reserve and Ballestas Islands nearby.",
+      "airport": "Pisco (PIO) is the nearest regional airport; most riders connected via Lima (LIM).",
+      "lodging_strategy": "Kite Club Paracas hosted race-week activities in both editions; the Paracas National Reserve and Ballestas Islands were the area's other draws.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://gfny.com/gfny-announces-gfny-paracas/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2024,
+      "origin_story": "Announced by GFNY on December 21, 2023, as an expansion into Peru. The inaugural edition ran June 2024; a second followed June 2025. Paracas finished runner-up for GFNY's own 2024 'Best New Race' award in its Athletes' Choice voting — genuine early rider enthusiasm — but the race was discontinued after just two editions.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Discontinued After Two Editions — Real While It Lasted",
+      "summary": "GFNY Paracas was a real addition to the GFNY World Series: a wind-battered, mostly-flat desert-and-coast course through Peru's Paracas National Reserve, launched in 2024 and runner-up in GFNY's own 2024 'Best New Race' Athletes' Choice vote. It ran a second time in June 2025 — then dropped out of GFNY's official race calendar, with no cancellation notice found. That silence is the most honest thing to flag here: GFNY also published inconsistent elevation figures for the same course between its pre-race and post-race reports (653m vs. 662m) — a small but real data-hygiene lapse.",
+      "strengths": [
+        "Runner-up for GFNY's 2024 Athletes' Choice 'Best New Race' in its debut year",
+        "A real, verifiable course through a distinctive desert-and-coast setting (Paracas National Reserve), not a generic add-on",
+        "Ran under GFNY's standard series timing and results infrastructure both years"
+      ],
+      "weaknesses": [
+        "Discontinued after only two editions (2024-2025) — no longer a bookable event",
+        "No cancellation or discontinuation notice was found — it simply dropped off GFNY's calendar",
+        "Course elevation figures were inconsistent between GFNY's own pre-race and post-race reporting for the same 2025 edition",
+        "Mostly flat with minimal climbing (long-course high point ~74m) — its difficulty depends almost entirely on wind conditions on the day, which is a less reliable draw than a climbing course"
+      ],
+      "bottom_line": "This entry exists as a historical record, not a recommendation — GFNY Paracas is gone. If you're chasing a GFNY-series event in South America, check GFNY's current race finder for what's actually still running."
     },
     "final_verdict": {
       "score": "50/100",
-      "one_liner": "Wind-swept coastal gran fondo in Peru's stunning Paracas desert.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A two-edition, wind-battered Peruvian desert gran fondo — discontinued after 2025, absent from GFNY's calendar since.",
+      "should_you_race": "You can't — this event is discontinued. Check GFNY's current race finder (gfny.com/race-finder) for active GFNY-series events instead.",
+      "alternatives": "For an active GFNY-series South American race, look at GFNY's current calendar. For a similarly wind-exposed, mostly-flat coastal desert gran fondo elsewhere, look for coastal Chilean or Baja California events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://gfny.com/gfny-announces-gfny-paracas/",
+        "category": "official",
+        "label": "GFNY — Original Paracas Announcement and Course Description"
+      },
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY — Current Official Race Finder (Paracas absent)"
+      },
+      {
+        "url": "https://gfny.com/sprint-finish-at-gfny-paracas-peru/",
+        "category": "reference",
+        "label": "GFNY — 2025 Official Race Report"
+      },
+      {
+        "url": "https://cronometrajeinstantaneo.com/resultados/gfny-paracas-2025",
+        "category": "reference",
+        "label": "2025 Full Results (162 long / 8 Him & Her / 16 medium)"
+      },
+      {
+        "url": "https://puertorico.gfny.com/athletes-choice-awards-24/?lang=en",
+        "category": "reference",
+        "label": "GFNY 2024 Athletes' Choice Awards (Paracas runner-up, Best New Race)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Paracas gran fondo cycling Paracas",
@@ -161,27 +201,19 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/_o5FdKmQlWA/maxresdefault.jpg",
           "thumbnail_score": 84.0
-        },
-        {
-          "video_id": "FpVI7p7zO6k",
-          "title": "GFNY Manta 2022. Race video, best moments!",
-          "channel": "GFNY World",
-          "view_count": 400,
-          "upload_date": "20220929",
-          "duration_string": "1:43",
-          "description": "#cycling #granfondo #gfny \nMore info: manta.gfny.com",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=FpVI7p7zO6k",
-          "curated": false
         }
       ],
       "quotes": []
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://none.example.com",
-      "notes": "No search results were available to verify any edition or current status.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://gfny.com/race-finder/",
+      "notes": "SUPERSEDES prior 'unknown' status (which cited a non-functional placeholder URL). GFNY Paracas ran two editions (June 2024, June 2025; last confirmed June 8, 2025) before disappearing from GFNY's current official race finder with no public cancellation notice. paracas.gfny.com is no longer live. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 10."
+    },
+    "catalog_flags": {
+      "status_note": "Discontinued after 2 editions (2024-2025), same pattern as letape-parma (wave 3 precedent) — GFNY dropped it from its calendar without explanation. Recommend a human decide whether to keep this as a historical/discontinued record or prune it from the active catalog.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

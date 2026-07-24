@@ -5,20 +5,20 @@
     "display_name": "Tour of Wessex",
     "tagline": "",
     "vitals": {
-      "distance_km": 375.0,
-      "distance_mi": 233.0,
-      "elevation_m": 4570,
-      "elevation_ft": 14993.0,
-      "location": "Yeovil, Somerset, England",
-      "location_badge": "Yeovil, England",
+      "distance_km": 538.0,
+      "distance_mi": 334.4,
+      "elevation_m": 5300,
+      "elevation_ft": 17388.0,
+      "location": "Langport, Somerset, England (classic three-day format, ran through at least 2023; Yeovil was on-route, not the event base)",
+      "location_badge": "Langport, England",
       "country": "England",
-      "date": "2026: May TBD",
-      "date_specific": "2026: May TBD",
-      "field_size": "Limited, regional sportive",
+      "date": "No 2026 edition or registration found — appears defunct",
+      "date_specific": "Classic three-day format last confirmed 27-29 May 2023 (Langport HQ). By 2024-2025 the name was repurposed for a Sherborne-based, primarily one-day repeated-lap event (last confirmed 24 May 2025); no 2026 edition of either format found.",
+      "field_size": "2,300 riders (2012), 1,458 riders (2013) — no credible 2024-25 field total published",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Multiple feed stations per stage",
+      "feed_zones": "Multiple feed stations per stage (classic three-day format)",
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
@@ -70,42 +70,91 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this profile describes a classic format that appears to no longer run. From roughly 2006 through at least 2023, Tour of Wessex was a genuine three-day West Country stage sportive based in Langport, Somerset (earlier editions used Somerton; Yeovil sat on-route, never as event HQ), covering approximately 538km and 5,300m of climbing across three consecutive century-scale days on open West Country lanes. By 2024-2025 the same name was repurposed for a substantially different, Sherborne-based event: primarily a one-day repeated-lap challenge (one to three laps of a 125km circuit, 125/250/375km options) plus a separate 110km cafe ride, run under Saint Piran Service Course branding. No 2026 edition of either format has been found, and the former official tourofwessex.com/enter URL now redirects to an unrelated site with no connection to cycling — treat that domain as dead, not as a live source. The organizer (Nick Bourne, originally via Pendragon Sports, later Earth Sports) was still promoting the 2025 edition, but nothing confirms continuation into 2026.",
+      "signature_challenge": "In the classic three-day format: the hardest climbing traditionally landed late on stage three.",
+      "suffering_zones": [
+        "Cheddar Gorge",
+        "King Alfred's Tower",
+        "Lulworth/Purbeck roads",
+        "Quantock Common",
+        "Porlock Toll Road"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels and B&Bs in Yeovil, Somerset; book early for multi-day event.",
+      "lodging_strategy": "Historically: hotels and B&Bs in Langport/Somerton, Somerset; book early for multi-day event. Uncertain applicability given the event's unclear current status.",
       "transport": "",
       "food": "",
       "official_site": ""
     },
     "history": {
       "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "origin_story": "Created and promoted by Nick Bourne (Pendragon Sports, later marketed under Earth Sports) as a three-day West Country stage sportive, confirmed running by 2006 (exact founding year not established). Separate proposed Premier Calendar road races linked to the Tour of Wessex name were cancelled in 2008-09 over policing and rolling-road-closure objections, but the sportive itself continued for well over a decade afterward.",
+      "notable_moments": [
+        "2012: reported field of 2,300 riders",
+        "2024-2025: format substantially changed from the classic 3-day/538km stage sportive to a shorter, Sherborne-based repeated-lap event"
+      ],
+      "reputation": "A long-running UK stage sportive in its classic form — a 2016 review praised the ride itself while criticizing the organizer's website for thin maps, feed-station details, and climb profiles. Its current status is the real story: format changed and no 2026 edition has surfaced."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Likely Defunct — Classic Format Discontinued, Successor Status Unclear",
+      "summary": "Read this carefully before planning around it: the Tour of Wessex this database has historically described — a genuine three-day, ~538km West Country stage sportive out of Langport — appears to have ended after at least 2023. The name was repurposed for 2024-2025 into a much shorter, Sherborne-based repeated-lap event under different branding (Saint Piran Service Course), and no 2026 edition of either version has been found. The former official domain no longer points anywhere related to cycling. This isn't a database error to fix with an updated date — it's a genuinely uncertain event status that a prospective rider needs to know before booking travel.",
+      "strengths": [
+        "In its classic form, a real, long-running UK three-day stage sportive (praised in a 2016 review) with genuine signature climbs (Cheddar Gorge, King Alfred's Tower, Porlock Toll Road)",
+        "Long track record (running by 2006 through at least 2023) under a consistent promoter (Nick Bourne)",
+        "Covered varied, scenic West Country terrain across three consecutive days — a format very few UK sportives replicate"
+      ],
+      "weaknesses": [
+        "No confirmed 2026 edition in either its classic three-day format or its 2024-2025 Sherborne successor format",
+        "Official domain (tourofwessex.com) no longer resolves to anything cycling-related — a strong defunct signal",
+        "Even the last confirmed years show a name/format in flux (three-day epic -> one-day repeated-lap challenge), which itself signals organizational instability before the apparent lapse",
+        "No credible field-size data published for 2024-2025, making it impossible to assess how healthy the event was even in its final known years"
+      ],
+      "bottom_line": "Do not plan a trip around the Tour of Wessex as described in this profile without directly confirming a live 2026+ edition first — the evidence points to a defunct or at minimum dormant event, and its last known successor format was already a different, shorter event under different branding."
     },
     "final_verdict": {
       "score": "56/100",
-      "one_liner": "Rare UK multi-stage road sportive through stunning Somerset landscapes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A long-running UK three-day stage sportive that appears to have quietly ended.",
+      "should_you_race": "Don't book travel around this profile's classic description without first confirming a live, current registration page — research found no 2026 edition of either the classic three-day format or its 2024-2025 shortened successor.",
+      "alternatives": "For a genuine multi-day UK stage sportive experience, look at other British multi-stage cyclosportives currently running; for similar West Country terrain (Cheddar Gorge, Quantocks, Exmoor roads) without the event uncertainty, those are public roads open year-round to self-organized touring."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.britishcycling.org.uk/sportives/article/sp20121016-Wendy-Houvenaghel-launches-the-2013-Tour-of-Wessex-sportive-0",
+        "category": "reference",
+        "label": "British Cycling — 2013 Edition History and Organizer Background"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/sportives/sportive-reviews/tour-of-wessex-sportive-28922",
+        "category": "reference",
+        "label": "Cycling Weekly — Sportive Review and 2013 Field Size"
+      },
+      {
+        "url": "https://www.mapmytracks.com/events/tour-of-wessex/routes",
+        "category": "community",
+        "label": "MapMyTracks — 2021 Route Archive (538km/5,300m Classic Format)"
+      },
+      {
+        "url": "https://www.broleur.com/tour-of-wessex/",
+        "category": "community",
+        "label": "Broleur — 2016 Ride Review (praises ride, criticizes organizer website)"
+      },
+      {
+        "url": "https://www.redbull.com/gb-en/cycling-sportives-events",
+        "category": "reference",
+        "label": "Red Bull UK — 2023 Listing, Langport HQ, 355/535km"
+      },
+      {
+        "url": "https://www.saintpiranservicecourse.com/pages/tour-of-wessex",
+        "category": "other",
+        "label": "Saint Piran Service Course — 2025 Sherborne-Based Successor Format (last known live page)"
+      }
+    ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.cyclingweekly.com/news/latest-news/tour-of-wessex-marks-a-sportive-revolution-88214",
-      "notes": "Only historical references found; no evidence of any recent or upcoming editions for a Yeovil-based Tour of Wessex sportive or race.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://www.saintpiranservicecourse.com/pages/tour-of-wessex",
+      "notes": "MEDIUM-HIGH CONFIDENCE DEFUNCT. Classic three-day Langport-based stage sportive (538km/5,300m) confirmed running through at least 27-29 May 2023. By 2024-2025 the name was repurposed for a shorter, Sherborne-based one-day repeated-lap event (125/250/375km, last confirmed 24 May 2025) under Saint Piran Service Course branding -- not the same event/format, and that page itself is now stale on 2025. No 2026 edition of either format found. The former official tourofwessex.com/enter URL now redirects to an unrelated, non-cycling site -- do not treat that domain as a live source. Not marked 'cancelled' because no formal closure announcement was found; 'defunct' better reflects the evidence."
     }
   }
 }

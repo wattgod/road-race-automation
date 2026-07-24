@@ -5,33 +5,52 @@
     "display_name": "Korea Epic Ride",
     "tagline": "",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 762,
-      "elevation_ft": 2500.0,
-      "location": "Incheon, South Korea",
-      "location_badge": "Incheon, South Korea",
+      "distance_km": 328.0,
+      "distance_mi": 203.8,
+      "elevation_m": 8004,
+      "elevation_ft": 26260.0,
+      "location": "Songjeon Beach, Sonyang-myeon, Yangyang-gun, Gangwon-do, South Korea",
+      "location_badge": "Yangyang-gun, South Korea",
       "country": "South Korea",
-      "date": "2026: June TBD",
-      "date_specific": "2026: June TBD",
-      "field_size": null,
+      "date": "Cancelled for 2026; last held June 6, 2025",
+      "date_specific": "2026 edition cancelled by organizer. Last completed edition: June 6, 2025.",
+      "field_size": "Very small, self-selecting ultra-bikepacking field — a 2022 recap of a differently configured route documented 16 starters/8 finishers; current field size not independently verified",
       "start_format": null,
-      "registration": "https://www.koreaepicride.kr",
-      "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "registration": null,
+      "entry_fee": "KRW100,000 / ~US$75 (2026 pre-cancellation pricing)",
+      "feed_zones": "None — fully self-supported; riders arrange their own food, accommodation, navigation and repairs",
+      "cutoff_time": "No fixed cutoff — self-supported ultra format; estimated 2-5 day completion for the shortest route",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        {
+          "name": "Epic Road 1000 (paved)",
+          "distance_km": 1024.0,
+          "elevation_m": 17670
+        },
+        {
+          "name": "Epic Offroad 500",
+          "distance_km": 500.0,
+          "elevation_m": 12240
+        },
+        {
+          "name": "Epic Offroad 300",
+          "distance_km": 328.0,
+          "elevation_m": 8004
+        }
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "description": "Early June in Gangwon-do's mountains and East Sea coast: variable mountain weather with real rain risk, and forest roads vulnerable to washout.",
+      "challenges": [
+        "Mountain weather variability over multi-day self-supported riding",
+        "Forest roads at risk of landslide or washout after rain"
+      ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "Mixed mountain/forest — mostly unpaved on the Offroad routes",
+      "surface": "Mix of paved and unpaved/forest road, self-supported ultra-distance format",
       "technical_rating": 1,
       "features": []
     },
@@ -56,7 +75,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance/climbing/road_surface/organization/field_depth ratings are fundamentally incompatible with a 328km+, mostly-unpaved, fully self-supported ultra-bikepacking format — as with flandrien-ride, the displayed score is not meaningfully comparable to a standard gran fondo's. Flagging for a human call on whether this belongs in the gran_fondo tier's rubric at all; see catalog_flags."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,45 +89,105 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Korea Epic Ride is a self-supported ultra-distance bikepacking event through Gangwon-do's mountains and East Sea coast, not a conventional timed road gran fondo. Three route options — a fully paved 1,024km/17,670m Epic Road 1000, a 500km/12,240m Offroad route (276km unpaved), and a 328km/8,004m Offroad route (~194km unpaved) — all start from a simultaneous grand depart at Songjeon Beach with no timing stops, no aid stations, and no organizer support along the way. Riders navigate by GPS through remote forest roads, rural mountain settlements, and major passes.",
+      "signature_challenge": "The 25km Hangyeoryeong ascent on the road route, or on the offroad routes, forest sections with gradients exceeding 15% and rough gravel descents through terrain vulnerable to landslides and washouts.",
       "suffering_zones": [
-        "Mid-Course Gangwon Grind: 2500ft cumulative climbs peak here on paved pitches after Incheon flats.",
-        "June Humidity Hammer: Coastal moisture turns 62 miles into endurance test post-checkpoint."
+        "Hangyeoryeong, Dolsanryeong, Haesanryeong, Manhangjae, and Anbandegi — the major named passes threaded together on the road route",
+        "The unpaved forest-road sections on both Offroad routes, where gradients exceed 15% and washout-damaged roads can force riders into self-found detours",
+        "Full self-support with no aid stations and no organizer presence at official checkpoints — a documented 2022 finisher account (on that year's differently configured route) describes three days of rain, GPS failure, long stretches without resupply, and dangerous after-dark fatigue"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
       "transport": "",
-      "food": "",
-      "official_site": "https://www.koreaepicride.kr"
+      "food": "None provided — fully self-supported; riders carry or source their own food and water along the route.",
+      "official_site": "https://www.koreaepicride.kr/intro"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2020,
+      "origin_story": "Founded by Kiseok Uhm, who also founded Seorak Gran Fondo, with the explicit purpose of introducing riders to remote Korean landscapes while forcing self-reliance and problem-solving. The 2025 edition was its sixth running.",
+      "notable_moments": [
+        "2022: 16 riders attempted the full 536km course as then configured; 8 completed it",
+        "2026 edition cancelled by the organizer"
+      ],
+      "reputation": "A small, demanding, self-supported ultra-bikepacking event with a real six-edition history — not built for or marketed as a mass-participation gran fondo, and not independently documented as having a large or loyal following."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Not the Race This Profile Described — And It's Cancelled",
+      "summary": "The stub profile had this wrong on nearly every axis: it described a ~100km supported road gran fondo in Incheon. The real Korea Epic Ride is a self-supported ultra-distance bikepacking event based in Yangyang, Gangwon-do, with routes from 328km to 1,024km through mountain passes and unpaved forest roads — explicitly 'not a race' per the organizer's own site, with no aid stations, no timing stops, and no organizer support between the grand depart and the finish. It's a real, honestly-run event founded in 2020 by Kiseok Uhm with a genuine six-edition history, but it bears no resemblance to a conventional gran fondo, and the 2026 edition has been cancelled outright.",
+      "strengths": [
+        "Genuinely remote, scenic Gangwon-do mountain and coastal terrain, honestly marketed as a self-reliance challenge rather than a supported race",
+        "Real six-edition track record (2020-2025) with a consistent founder and route philosophy",
+        "Three distance options (328km to 1,024km) for riders choosing their own level of ultra-distance commitment — though even the shortest is a fully self-supported 328km/8,004m route, not an entry-level distance"
+      ],
+      "weaknesses": [
+        "The 2026 edition is cancelled — there is currently nothing to register for",
+        "Zero organizer support: no aid stations, no timing stops, and the organizer explicitly disclaims responsibility for navigation, logistics and medical response",
+        "No event insurance is provided or required by the organizer",
+        "The cancelled 2026 event page still displays prospective registration and payment details with a no-refund statement, creating avoidable post-cancellation ambiguity",
+        "A documented 2022 finisher account (on that year's differently configured route) describes multi-day rain, GPS failure, long unsupported stretches, and no organizer presence at the finish — real risk, though from one account on an older route configuration, not necessarily every edition",
+        "Does not fit this database's gran-fondo format at all — no closed roads, no aid, no classification; it's ultra-distance bikepacking"
+      ],
+      "bottom_line": "If you want a serious, honestly self-supported ultra-bikepacking test through remote Korean mountains, the real Korea Epic Ride is worth researching directly on its own terms — but it is not a gran fondo, and the 2026 edition isn't happening."
     },
     "final_verdict": {
       "score": "56/100",
-      "one_liner": "Scenic paved road fondo in Korea's cycling festival scene.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A self-supported Gangwon-do ultra-bikepacking event, not the Incheon road gran fondo this profile used to describe — and cancelled for 2026.",
+      "should_you_race": "Not this year — the 2026 edition is cancelled. If a future edition is announced, go in understanding this is a fully self-supported ultra-distance mountain/forest-road event, not a timed, aided road race.",
+      "alternatives": "For an actual supported road gran fondo in South Korea, see Yangyang Gran Fondo (same region, chip-timed, traffic-managed, supported courses) — a genuinely different event despite the geographic overlap."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.koreaepicride.kr/intro",
+        "category": "official",
+        "label": "Official Event Introduction & 2026 Cancellation Notice"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/eventvenue?lang=ko",
+        "category": "official",
+        "label": "Official Venue Page (Songjeon Beach, Yangyang-gun)"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/epicroad1000",
+        "category": "official",
+        "label": "Official Epic Road 1000 Route Page"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/epicoffroad500",
+        "category": "official",
+        "label": "Official Epic Offroad 500 Route Page"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/epicoffroad300",
+        "category": "official",
+        "label": "Official Epic Offroad 300 Route Page"
+      },
+      {
+        "url": "https://www.koreaepicride.kr/rule",
+        "category": "official",
+        "label": "Official Rules — Self-Supported Format"
+      },
+      {
+        "url": "https://bikepacking.com/plog/2022-korea-epic-ride-event-recap/",
+        "category": "reference",
+        "label": "Bikepacking.com — 2022 Event Recap"
+      },
+      {
+        "url": "https://www.bikem.co.kr/article/read.php?num=15652",
+        "category": "reference",
+        "label": "BikeM Korea — 2025 Registration Report"
+      }
+    ],
     "eligibility": {
       "status": "cancelled",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.koreaepicride.kr/intro",
-      "notes": "2026 Korea Epic Ride is explicitly announced as cancelled; 2025 edition ran in Yangyang as a self-supported bikepacking event, not a road race.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+      "notes": "IDENTITY CORRECTION (2026-07-24): this profile was mislabeled as a ~100km supported road gran fondo in Incheon. The real Korea Epic Ride is a self-supported ultra-distance bikepacking event based at Songjeon Beach, Yangyang-gun, Gangwon-do (not Incheon), with routes from 328km to 1,024km, explicitly described by the organizer as 'not a race.' The organizer's own 2026 event page states the 2026 edition is cancelled. Last completed edition: June 6, 2025. Unquestionably distinct from Yangyang Gran Fondo, a separate supported road event also based in Yangyang County."
+    },
+    "catalog_flags": {
+      "taxonomy_note": "This is a self-supported ultra-distance bikepacking event (328-1,024km, mixed paved/unpaved, no aid stations, no timing, no organizer support) — not a road gran fondo. The fondo_rating dimensions (road_surface, organization, field_depth, prestige, etc.) were built for supported, timed road races and don't map cleanly onto this format. Flagging for a human call on whether it belongs in this database's gran_fondo tier at all, per the flandrien-ride precedent; discipline enum left unchanged.",
+      "ruled": "2026-07-24 editorial wave 10"
     }
   }
 }

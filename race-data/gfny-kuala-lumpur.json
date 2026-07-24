@@ -5,15 +5,15 @@
     "display_name": "GFNY Kuala Lumpur",
     "tagline": "",
     "vitals": {
-      "distance_km": 138.4,
-      "distance_mi": 86.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
+      "distance_km": 129.1,
+      "distance_mi": 80.2,
+      "elevation_m": 1726,
+      "elevation_ft": 5663.0,
       "location": "Kuala Lumpur, Malaysia",
       "location_badge": "Kuala Lumpur, Malaysia",
       "country": "Malaysia",
-      "date": "2026: May 12",
-      "date_specific": "2026: May 12",
+      "date": "Defunct — last raced May 12, 2024",
+      "date_specific": "No 2026 edition announced; last held May 12, 2024",
       "field_size": "TBD",
       "start_format": null,
       "registration": null,
@@ -25,7 +25,7 @@
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
+      "primary": "Tropical",
       "description": "",
       "challenges": []
     },
@@ -70,37 +70,94 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "An urban-start GFNY chapter: closed roads through central Kuala Lumpur from Dataran Merdeka/Sultan Abdul Samad Building, then out into hilly outskirts. Only two editions were ever raced (2023, 2024) before the chapter went dark — no 2025 or 2026 edition has appeared on GFNY's calendar.",
+      "signature_challenge": "The Rawang Bypass Bridge into a 10km/300m climb to Ulu Yam, followed by a 10km descent and a short, steep 1km kicker before a flat, fast final 25km back into the city.",
+      "suffering_zones": [
+        "First climb around km 11 — the ramp-up out of the flat urban opening.",
+        "10km/300m climb to Ulu Yam via the Rawang Bypass Bridge, the course's main climbing test.",
+        "Short, steep 1km kicker after the Ulu Yam descent, right before the long flat run to the finish."
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Wide range from luxury hotels near Petronas Towers to budget options; shopping malls and street food abundant[1].",
+      "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://kualalumpur.gfny.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2023,
+      "origin_story": "Announced by GFNY in August 2022 and launched with its inaugural edition in February 2023. Local leadership included event manager Syed M Feisal and cycling official Jamaludin Mahmood.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "Only two editions ever raced (Feb 2023, May 2024) before going dark — a short-lived GFNY chapter, not an established fixture."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Defunct GFNY Chapter",
+      "summary": "GFNY Kuala Lumpur raced twice — an inaugural February 2023 edition and a May 2024 edition through central KL and out to the Ulu Yam climb — before disappearing from GFNY's global calendar. The official microsite is still online but functions as an archive: it still displays 2024 finisher-medal content, its registration page has no live event, and no 2025 or 2026 date has ever been announced. No organizer statement confirms a permanent shutdown, but two straight years of silence and absence from GFNY's current race finder is a clear signal.",
+      "strengths": [
+        "An urban-to-hills route — closed-road racing starting at Dataran Merdeka in central Kuala Lumpur",
+        "Competitive GFNY-series structure while it ran, with a documented podium finisher account from the 2024 edition",
+        "The Ulu Yam climb via the Rawang Bypass Bridge gave the course a real signature challenge beyond just an urban parade"
+      ],
+      "weaknesses": [
+        "Only ever raced twice (2023, 2024)",
+        "No 2025 or 2026 edition, and GFNY's current worldwide race finder does not list Kuala Lumpur at all",
+        "The official microsite is stale and misleading — it stays live with old finisher content instead of a clear closure notice, which risks confusing a rider into thinking this is bookable"
+      ],
+      "bottom_line": "Don't plan a trip around this — it hasn't raced since 2024 and shows no sign of returning. If you want a GFNY event in Southeast Asia, check GFNY's current race finder for an active chapter instead."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "Iconic GFNY debut in Malaysia blending urban landmarks with cultural adventure.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A short-lived GFNY chapter through central Kuala Lumpur and the Ulu Yam climb — raced twice (2023-2024), then went dark.",
+      "should_you_race": "Don't plan around it — no 2026 date exists and the chapter has been silent for two years. Check GFNY's live race finder for a current Southeast Asia option instead.",
+      "alternatives": "Check GFNY's current global race finder (gfny.com/race-finder) for currently-active chapters."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://kualalumpur.gfny.com/",
+        "category": "official",
+        "label": "GFNY Kuala Lumpur — Official Microsite (archival)"
+      },
+      {
+        "url": "https://kualalumpur.gfny.com/register/",
+        "category": "official",
+        "label": "GFNY Kuala Lumpur — Registration Page (no live event)"
+      },
+      {
+        "url": "https://gfny.com/chambers-and-samosir-win-gfny-kuala-lumpur/",
+        "category": "reference",
+        "label": "GFNY — 2024 Race Report"
+      },
+      {
+        "url": "https://gfny.com/race-finder/?fwp_race_finder_event_type=cycling",
+        "category": "official",
+        "label": "GFNY — Current Global Race Finder (Kuala Lumpur absent)"
+      },
+      {
+        "url": "https://gfny.com/gfny-announces-gfny-kuala-lumpur/",
+        "category": "reference",
+        "label": "GFNY — 2022 Launch Announcement"
+      },
+      {
+        "url": "https://gfny.com/gfny-took-over-city-roads-of-kuala-lumpur/",
+        "category": "reference",
+        "label": "GFNY — 2023 Inaugural Edition Recap"
+      },
+      {
+        "url": "https://kualalumpur.gfny.com/course/",
+        "category": "official",
+        "label": "GFNY Kuala Lumpur — Official Course Page"
+      },
+      {
+        "url": "https://kualalumpur.gfny.com/our-team/",
+        "category": "official",
+        "label": "GFNY Kuala Lumpur — Official Team Page"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Marked defunct this wave: only two editions ever raced (Feb 2023, May 2024); absent from GFNY's current global race finder with no 2025/2026 date announced and no organizer shutdown statement. Official microsite remains live as a stale archive.",
+      "ruled": "2026-07-24 editorial wave 10"
+    },
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GFNY Kuala Lumpur gran fondo cycling Kuala Lumpur",
@@ -180,48 +237,24 @@
           "display_order": 1,
           "thumbnail_url": "https://i.ytimg.com/vi/nNzwYkVoCwI/maxresdefault.jpg",
           "thumbnail_score": 72.0
-        },
-        {
-          "video_id": "EZSC24upK6E",
-          "title": "GFNY Krabi. Course video 2024",
-          "channel": "GFNY World",
-          "view_count": 813,
-          "upload_date": "20221011",
-          "duration_string": "2:17",
-          "description": "more info: krabi.gfny.com",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=EZSC24upK6E",
-          "curated": false
-        },
-        {
-          "video_id": "9dyD9P1iSV8",
-          "title": "GFNY Bali 2023. Official Race Video!",
-          "channel": "GFNY World",
-          "view_count": 339,
-          "upload_date": "20230922",
-          "duration_string": "1:04",
-          "description": "more info: bali.gfny.com\n\n#race #cycling #granfondo #bali",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=9dyD9P1iSV8",
-          "curated": false
         }
       ],
       "quotes": [],
       "rider_intel": {
-        "extracted_at": "2026-03-06",
+        "extracted_at": "2026-07-24",
         "key_challenges": [],
         "terrain_notes": [],
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "No race-specific information about GFNY Kuala Lumpur is available in the provided transcript. The video appears to be personal content about birthday celebrations and sightseeing in Kuala Lumpur, with no discussion of the race course, conditions, challenges, or rider experiences from this 86-mile event in Malaysia."
+        "search_text": "Purged this wave: GFNY Krabi and GFNY Bali videos were different GFNY chapters mislabeled under this profile. Retained: the 2023 launch clip, a 2023 travel vlog that documents the event weekend, and a full 2024 130km podium-finish ride video that is genuine, detailed GFNY Kuala Lumpur race footage."
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://kualalumpur.gfny.com/schedule-of-events/",
-      "notes": "Official GFNY Kuala Lumpur page exists but no clear evidence of a 2025–2026 edition or cancellation.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://gfny.com/chambers-and-samosir-win-gfny-kuala-lumpur/",
+      "notes": "Last verified edition May 12, 2024. Absent from GFNY's current worldwide race finder (curl-verified). Official microsite (kualalumpur.gfny.com) still live but stale — no 2025/2026 date, no live registration. No formal organizer shutdown statement found."
     }
   }
 }

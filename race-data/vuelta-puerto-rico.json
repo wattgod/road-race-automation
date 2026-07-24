@@ -3,31 +3,34 @@
     "name": "Vuelta Puerto Rico",
     "slug": "vuelta-puerto-rico",
     "display_name": "Vuelta Puerto Rico",
-    "tagline": "",
+    "tagline": "A supported tour, not a race — circumnavigate Puerto Rico in three days.",
     "vitals": {
-      "distance_km": 600.3,
-      "distance_mi": 373.0,
+      "distance_km": 604.0,
+      "distance_mi": 375.0,
       "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Circumnavigation of Puerto Rico",
-      "location_badge": "Circumnavigation of Puerto Rico",
-      "country": null,
-      "date": "2026: February TBD",
-      "date_specific": "2026: February TBD",
-      "field_size": "Unknown",
+      "elevation_ft": null,
+      "location": "San Juan (start/finish), full island circumnavigation, Puerto Rico",
+      "location_badge": "San Juan, Puerto Rico",
+      "country": "Puerto Rico",
+      "date": "2026: February 15-17 (Presidents Day weekend)",
+      "date_specific": "2026: February 15-17 (Presidents Day weekend)",
+      "field_size": null,
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Rest stops spaced at average of 25 miles apart",
-      "cutoff_time": "Unknown",
+      "registration": "https://vueltapuertorico.com/?page_id=191",
+      "entry_fee": "2026: $795 (early) rising to $1,195, plus taxes and ACTIVE.com registration fees",
+      "feed_zones": "Rest stops spaced 20-25 miles apart with water, sports drink, and snacks",
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
     },
     "climate": {
-      "primary": "Temperate",
-      "description": "",
-      "challenges": []
+      "primary": "Tropical",
+      "description": "February in Puerto Rico: average highs around 83°F, brief but possible rain showers, consistent humidity and sun exposure across all three days.",
+      "challenges": [
+        "Heat and humidity: sustained tropical exposure over 375 miles/three days",
+        "Sun: high UV exposure, riders advised on SPF and hydration"
+      ]
     },
     "terrain": {
       "primary": "Mixed terrain",
@@ -56,7 +59,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 53. adventure dimension dropped, road_surface added. Score recalculated: 51. FLAG (wave 10, not applied): sol review notes several dimensions sit awkwardly against wave-10 research — distance=4 vs. rubric-5 for a 604km aggregate; climbing=2 vs. the ~12,000ft/3,658m aggregate cited in the tour's own (older) materials; road_surface=1 (pristine tarmac) vs. cited older pothole reports; organization=3 assumes timed-race closures for what is an explicitly untimed supported tour; field_depth=2 implies rankings the event doesn't have; expenses=2 looks low against a $795-$1,195 entry before flights/lodging. Numbers left unchanged pending human review."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +73,76 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A fully supported, non-racing three-day tour that circumnavigates the entire island clockwise from San Juan: east through Luquillo and Fajardo, south along the coast to Ponce, west across the dry southwest through Guánica, La Parguera and Cabo Rojo to Mayagüez/Rincón, then back around the west and north coasts through Aguadilla, Arecibo, Manatí and Dorado to Old San Juan. Riders self-sort into three controlled pelotons by pace — roughly 21 mph, 18 mph, and 16 mph averages — with mechanical, medical, and luggage support throughout. There is no competitive classification; it's an endurance tour framed as a 'pro-like' peloton experience, not a timed race.",
+      "signature_challenge": "Simply finishing 375 miles across three consecutive days in tropical heat and humidity, holding a controlled peloton pace for hours at a stretch.",
+      "suffering_zones": [
+        "The dry southwest coast (Guánica to Cabo Rojo): exposed, hot, and long between towns.",
+        "Cumulative fatigue over three back-to-back full days — the tour's own materials put total climbing around 12,000 ft across the three days, mostly gradual but with a handful of steep short pitches."
+      ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "Not included in event registration. Participants must arrange their own lodging in San Juan or nearby areas.",
-      "transport": "",
-      "food": "",
-      "official_site": ""
+      "airport": "San Juan (SJU) — start/finish city",
+      "lodging_strategy": "Not included in registration; participants arrange their own lodging in San Juan and each night's stopover town along the route.",
+      "transport": "Fully supported: rest-stop vehicles, mechanical support (light adjustments included, parts/major repairs cash-only), medical/EMS on course, and transport back to your hotel if you can't complete a day.",
+      "food": "Breakfast and lunch stops provided daily; rest stops every 20-25 miles with water, sports drink, fruit, and snacks.",
+      "official_site": "https://vueltapuertorico.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2006,
+      "origin_story": "Founded in 2006 by William Medina as 'La Vuelta de los Nueve Faros de Puerto Rico' (the Nine Lighthouses tour), with 89 riders in its inaugural three-day edition. The event is organized by Puerto Rico 360, Inc. and has run as an annual Presidents Day weekend fixture since.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real, Long-Running Supported Tour — Not a Race, and It Doesn't Pretend to Be",
+      "summary": "Vuelta Puerto Rico is a legitimate, two-decade-old fixture: a fully supported, three-day, 375-mile clockwise circumnavigation of the island, run every February by the same organizer since 2006. It's honest about its format — three pace-based pelotons (roughly 16/18/21 mph averages), no competitive classification, no podium. The logistics are real (rest stops every 20-25 miles, mechanical/medical support, luggage transfer), and the route is a genuine island-spanning tour through both tourist coastline and the drier, less-visited southwest. Older rider reports flag real friction points worth knowing before you sign up: road-surface hazards, uneven advance disclosure of steeper pitches, and unusually strict no-refund/no-transfer terms.",
+      "strengths": [
+        "Long track record — organized annually since 2006 by the same operator, with a real inaugural-edition history",
+        "Genuinely supported: rest stops every 20-25 miles, mechanical and medical support on course, luggage transfer, and three pace groups so riders of different abilities can hold a sustainable pace",
+        "A real full-island route, not just the tourist coastline — it crosses the drier, less-touristed southwest between Ponce and Mayagüez",
+        "Honest about format: marketed and run as a supported endurance tour, not dressed up as a competitive race"
+      ],
+      "weaknesses": [
+        "Not a race — no competitive classification or ranked results, despite the 'pro-like peloton' marketing framing",
+        "Entry terms are unusually strict: non-transferable, non-refundable, and non-deferrable without buying optional ACTIVE Refund coverage",
+        "Older rider reports describe real friction: pothole-related crashes, late luggage, too few portable toilets, and a roughly 17% climb some riders felt was under-disclosed in advance — worth asking the organizer about current-year conditions rather than assuming they're fixed",
+        "Total cost is steep once flights, lodging for three overnight towns, and the $795-$1,195 entry are added up"
+      ],
+      "bottom_line": "A credible, long-running option if you want a genuine multi-day island tour with real support infrastructure and don't need a competitive result. Go in with clear expectations on the strict refund policy and ask current-year questions about road conditions and pace-group discipline before committing."
     },
     "final_verdict": {
       "score": "51/100",
-      "one_liner": "A well-organized Caribbean circumnavigation offering scenic coastal riding with solid logistics and international participation.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A fully supported, non-competitive three-day circumnavigation of Puerto Rico — real logistics, real history, no podium.",
+      "should_you_race": "Sign up if you want a genuine multi-day, fully supported island tour and are comfortable with a non-refundable entry. Skip it if you want a timed, competitive event, or if the strict cancellation terms are a dealbreaker.",
+      "alternatives": "For a competitive island tour with real classification, look at a UCI Gran Fondo World Series stop instead. For a similarly supported multi-day tour format in the U.S., Seattle-to-Portland or Ride Across Wisconsin offer comparable fully-supported, non-competitive structures."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://vueltapuertorico.com/",
+        "category": "official",
+        "label": "Vuelta Puerto Rico — Official Site"
+      },
+      {
+        "url": "https://vueltapuertorico.com/?page_id=191",
+        "category": "official",
+        "label": "Official 2026 Pricing / Registration"
+      },
+      {
+        "url": "https://www.bicycling.com/rides/a20007927/bicycling-travel/",
+        "category": "reference",
+        "label": "Bicycling.com — Vuelta Puerto Rico History and Ride Report"
+      },
+      {
+        "url": "https://tntvc.wordpress.com/la-vuelta-puerto-rico/",
+        "category": "community",
+        "label": "Rider Trip Report — TNT Velo Club"
+      },
+      {
+        "url": "https://discover.events.com/pr/san-juan/san-juan/e/food/2026-vuelta-puerto-rico-san-juan-pr-438508612",
+        "category": "reference",
+        "label": "2026 Event Listing (events.com)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Vuelta Puerto Rico gran fondo cycling Circumnavigation of Puerto Rico",
@@ -139,9 +181,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://vueltapuertorico.com/",
-      "notes": "Website describes it as an ongoing three-day circumnavigation tour over Presidents Day weekend with 2026 edition references.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition confirmed February 15-17, official site live with current pricing ($795-$1,195) and ACTIVE.com registration. No 2027 date posted yet as of verification. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 10."
     }
   }
 }

@@ -5,15 +5,15 @@
     "display_name": "Cappadocia Gran Fondo",
     "tagline": "",
     "vitals": {
-      "distance_km": 109.4,
-      "distance_mi": 68.0,
-      "elevation_m": 1500,
-      "elevation_ft": 4921.0,
-      "location": "Nevşehir/Göreme, Cappadocia, Turkey",
-      "location_badge": "Nevşehir/Göreme, Turkey",
+      "distance_km": 108.0,
+      "distance_mi": 67.1,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Uçhisar, Cappadocia, Turkey (historical course; current Büyük Sürüş ride is Ürgüp-based)",
+      "location_badge": "Cappadocia, Turkey",
       "country": "Turkey",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
+      "date": "Defunct — last competitive edition 2018",
+      "date_specific": "Discontinued as a competitive gran fondo; the Cappadocia Bike Festival's current road component (Büyük Sürüş) is an open-traffic, noncompetitive ride, most recently 18 July 2026",
       "field_size": "Unknown",
       "start_format": null,
       "registration": null,
@@ -70,91 +70,93 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this profile describes a competitive gran fondo that no longer exists. Argeus launched Turkey's first Gran Fondo inside the Cappadocia Bike Festival in 2015, with 90km/2,000m+ and 47km/600m+ (and later a 108km long/41km short Uçhisar-based) courses through the fairy-chimney landscape. That competitive gran fondo format ended after 2018 (the research does not confirm whether roads were fully closed to traffic). The festival's current road offering is the Büyük Sürüş — an open-traffic, noncompetitive group ride (most recently 112km/1,700m+, 18 July 2026, Ürgüp-based) that explicitly states in its own terms that it is 'not a race.'",
+      "signature_challenge": "Historically: the fairy-chimney descent into Ürgüp on the old 41km short course. That course no longer runs as a race.",
+      "suffering_zones": [
+        "Historical short course (pre-2019): a fast descent past the iconic fairy chimneys into Ürgüp, then a climb toward Mustafapaşa through Ayvalı and Bahçeli back to Uçhisar — this routing is retired, not currently run as a competitive event."
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Hotels in Göreme; many events include packages with stays.",
+      "lodging_strategy": "Hotels in Göreme/Ürgüp.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://cappadociabikefestival.com/EN/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2015,
+      "origin_story": "Launched by Argeus (a Cappadocia tour operator founded 1993 by Aydın Ayhan Güney, Muammer Sak and Veli Tören) as Turkey's first Gran Fondo, staged inside the Cappadocia Bike Festival.",
+      "notable_moments": [
+        "A rider died during the 2018 short-course race after missing a bend and striking a tree and road sign — contemporary rider discussion (participant testimony, not a formal investigation) criticized late publication of the risk report and called for the km-11 section to be removed."
+      ],
+      "reputation": "Discontinued as a competitive race after 2018; the festival itself survives as a noncompetitive open-traffic ride (Büyük Sürüş), a real but materially different product than the gran fondo this profile was built around."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Defunct — Do Not List As A Race",
+      "summary": "The Cappadocia Gran Fondo you'd find described online — competitive, fairy-chimney descents — stopped happening after 2018, the same year a rider died on the short course after striking a tree off a missed bend. The Cappadocia Bike Festival itself is still alive, but its current road component, Büyük Sürüş, is an open-traffic, noncompetitive group ride that the organizer's own terms describe as 'not a race.' If you're picking this profile because you want a scored, competitive gran fondo through Cappadocia's volcanic landscape, that event doesn't exist anymore.",
+      "strengths": [
+        "The historical course concept was genuinely distinctive — competitive racing through fairy-chimney terrain",
+        "The festival brand survived, so the region hasn't lost cycling tourism infrastructure entirely",
+        "The current Büyük Sürüş ride still lets riders see the fairy-chimney landscape on a bike, just without race stakes or closed roads"
+      ],
+      "weaknesses": [
+        "The competitive gran fondo format this profile describes ended after 2018 and has not been revived",
+        "A rider fatality in the final competitive edition (2018) is a serious, documented safety incident on the discontinued course",
+        "The current replacement (Büyük Sürüş) is explicitly non-competitive and shares open traffic with vehicles — a different risk and experience profile than a closed-road fondo"
+      ],
+      "bottom_line": "Don't book this expecting a race. If you want to ride Cappadocia's fairy-chimney roads on an organized, non-competitive group ride, the festival's Büyük Sürüş is real and current — but it is not the closed-course gran fondo this database entry was originally built to describe."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "Epic road cycling through Earth's most otherworldly landscapes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A once-real Cappadocia gran fondo, last raced in 2018 — the year a rider died on the short course — with no revival since; the festival lives on as a noncompetitive group ride, not a race.",
+      "should_you_race": "Skip it as a 'race' — it isn't one anymore. If you want to ride the Cappadocia landscape on an organized group ride, look at the festival's current Büyük Sürüş instead, with clear eyes that it's open-traffic and noncompetitive.",
+      "alternatives": "For a real competitive road gran fondo elsewhere in Turkey, check the Turkish Cycling Federation's current 2026 gran fondo calendar (bisiklet.org.tr) rather than this discontinued event."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://cappadociabikefestival.com/EN/etkinlikler/buyuk_surus_salcano",
+        "category": "official",
+        "label": "Cappadocia Bike Festival — Büyük Sürüş 2026 Official Terms (current road offering, explicitly non-competitive)"
+      },
+      {
+        "url": "https://bisiklet.org.tr/gran-fondo/",
+        "category": "official",
+        "label": "Turkish Cycling Federation — Gran Fondo Program History"
+      },
+      {
+        "url": "https://bisiklet.org.tr/depolama/2026/03/2026-Granfondo-Takvimi.pdf",
+        "category": "official",
+        "label": "Turkish Cycling Federation — 2026 Gran Fondo Calendar (Cappadocia absent)"
+      },
+      {
+        "url": "https://2015.cappadociabikefestival.com/",
+        "category": "reference",
+        "label": "Cappadocia Bike Festival 2015 — Inaugural Gran Fondo Archive"
+      },
+      {
+        "url": "https://www.discovercappadocia.com/bisiklet/cappadocia-gran-fondo-short-track/16",
+        "category": "reference",
+        "label": "DiscoverCappadocia — Historical Short Course Route Description"
+      },
+      {
+        "url": "https://www.cumhuriyet.com.tr/haber/bisiklet-festivalinde-olumlu-kaza-1071211",
+        "category": "reference",
+        "label": "Cumhuriyet — 2018 Race Fatality Report"
+      },
+      {
+        "url": "https://www.bisikletforum.com/konu/2018-yili-tum-gran-fondolara-genel-bakis.158265/",
+        "category": "community",
+        "label": "Turkish Cycling Forum — 2018 Rider Discussion/Criticism"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Marked defunct this wave: the competitive, closed-course Cappadocia Gran Fondo ended after 2018 (a rider fatality that year). The Cappadocia Bike Festival's current road offering, Büyük Sürüş, is a separate, noncompetitive, open-traffic ride whose own terms state it is 'not a race' — flagging for a human call on whether to keep this as a historical/defunct entry or tombstone it outright.",
+      "ruled": "2026-07-24 editorial wave 10"
+    },
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Cappadocia Gran Fondo gran fondo cycling Nevşehir/Göreme",
       "videos": [
-        {
-          "video_id": "9PmgoZYpPtI",
-          "title": "Bisikletle Kapadokya",
-          "channel": "Zamanın Seyyahı",
-          "view_count": 298,
-          "upload_date": "20150307",
-          "duration_string": "7:01",
-          "description": "Bisikletle Kapadokya\nAli Babi zamaninseyyahi.blogspot.com.tr/",
-          "tags": [
-            "Cappadocia (Location)"
-          ],
-          "url": "https://www.youtube.com/watch?v=9PmgoZYpPtI",
-          "curated": false
-        },
-        {
-          "video_id": "3BMfsggSbtY",
-          "title": "Kapadokya Bisiklet Gezisi/Cycling trip in Cappadocia",
-          "channel": "Bisiklete Dair Her Şey",
-          "view_count": 959,
-          "upload_date": "20190708",
-          "duration_string": "14:34",
-          "description": "Merhaba, Türkiye'nin en güzel yerlerinden biri olan Kapadokya'yı Bisikletle gezdik. Sizler için güzel görüntüler yakaladık. İyi Seyirler...\nLütfen videoyu beğenmeyi ve abone olmayı unutmayın...\n#kapadokya#cappadocia#bisiklet#Gezi",
-          "tags": [
-            "kapadokya",
-            "cappadocia",
-            "kapadokya seyahat",
-            "kapadokya gezi",
-            "kapadokya travel"
-          ],
-          "url": "https://www.youtube.com/watch?v=3BMfsggSbtY",
-          "transcript": "[Music]\nstarted before and well how could I know\nyou're falling to reading low and\ncutting my skinny but it's hard because\nyou\nyou hear\nbut you do\n[Applause]\nI dunno\nshe told me short show\nbut you",
-          "curated": false
-        },
-        {
-          "video_id": "zssnA4UvDUQ",
-          "title": "Cappadocia Cycling Festival",
-          "channel": "Hasan Yıldız (FOTOHASAN)",
-          "view_count": 1122,
-          "upload_date": "20150914",
-          "duration_string": "3:17",
-          "description": "Kapadokya Bisiklet Festivali",
-          "tags": [
-            "Kapadokya",
-            "Cappadocia",
-            "Cappadocia Cycling Festival",
-            "FOTOHASAN"
-          ],
-          "url": "https://www.youtube.com/watch?v=zssnA4UvDUQ",
-          "curated": false
-        },
         {
           "video_id": "JQO1H4yj-F4",
           "title": "Kapadokya Gran Fondo Kısa Parkur Start",
@@ -168,36 +170,24 @@
           ],
           "url": "https://www.youtube.com/watch?v=JQO1H4yj-F4",
           "curated": false
-        },
-        {
-          "video_id": "0uYcfnme6YA",
-          "title": "Uluslararası Kapadokya Bisiklet Turu",
-          "channel": "Ulusal Kanal",
-          "view_count": 250,
-          "upload_date": "20180915",
-          "duration_string": "57",
-          "description": "Üç etaplı Uluslararası Kapadokya Bisiklet Turu'nun ikinci ayağı  başladı. Nevşehir-Erciyes etabında sporcular, 131 kilometrelik parkurda liderlik için mücadele edecek.",
-          "tags": [],
-          "url": "https://www.youtube.com/watch?v=0uYcfnme6YA",
-          "curated": false
         }
       ],
       "quotes": [],
       "rider_intel": {
-        "extracted_at": "2026-03-06",
+        "extracted_at": "2026-07-24",
         "key_challenges": [],
         "terrain_notes": [],
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "The available transcript for the Cappadocia Gran Fondo contains primarily music and fragmented audio without clear rider commentary about the race experience. No specific course details, terrain conditions, challenges, or actionable race intelligence could be extracted from the provided content."
+        "search_text": "Purged this wave: 4 of 5 videos were generic Cappadocia tourism/cycling-trip footage or a different event (Uluslararası Kapadokya Bisiklet Turu, an unrelated stage race) with no rider commentary on the Gran Fondo itself. Retained only the one video that directly documents the historical Gran Fondo's short-course start (2015)."
       }
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://cappadociabikefestival.com/EN/",
-      "notes": "part of Cappadocia Bike Festival, 2026 Jul 18-19 — conflicts with our October date field"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://cappadociabikefestival.com/EN/etkinlikler/buyuk_surus_salcano",
+      "notes": "The competitive, closed-course Cappadocia Gran Fondo ended after 2018 (a rider fatality that year); no revival since. The Cappadocia Bike Festival itself is alive and its current road offering, Büyük Sürüş (curl-verified 200, most recently 18 July 2026), is a separate, noncompetitive, open-traffic ride whose own terms state it is 'not a race.'"
     }
   }
 }

@@ -5,18 +5,18 @@
     "display_name": "Gran Fondo Curacavi",
     "tagline": "",
     "vitals": {
-      "distance_km": 120.7,
-      "distance_mi": 75.0,
-      "elevation_m": 1372,
-      "elevation_ft": 4500.0,
-      "location": "Curacavi, Valparaiso Region, Chile",
-      "location_badge": "Curacavi, Chile",
+      "distance_km": 127.0,
+      "distance_mi": 78.9,
+      "elevation_m": 1200,
+      "elevation_ft": 3937.0,
+      "location": "Curacaví, Santiago Metropolitan Region, Chile (course crosses into Casablanca, Valparaíso Region)",
+      "location_badge": "Curacaví, Chile",
       "country": "Chile",
-      "date": "April 19, 2026",
-      "date_specific": "April 19, 2026",
+      "date": "2027: April 18 (6th edition)",
+      "date_specific": "6th edition announced for April 18, 2027, following the completed 5th edition on April 19, 2026",
       "field_size": null,
       "start_format": null,
-      "registration": "https://www.granfondocuracavi.cl",
+      "registration": "https://welcu.com/epic-rides-chile-spa/granfondocuracavi2026",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
@@ -56,7 +56,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): per config/dimensions.json rubric, climbing=3 ('Rolling: 1,500-2,500m') doesn't fit the verified ~1,200m figure (falls in the 2='Gentle: 500-1,500m' band), and organization=3 ('full road closures') conflicts with the verified open-road/traffic-sharing format. Dimensions not changed per standing rule against silent numeric edits — flagged for human-reviewed recalculation."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,12 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A paved, rolling-to-hilly wine-country loop organized by Fernando \"Feña\" Almuna and Epic Rides Chile since its 2022 debut, starting and finishing at Fundo El Molino, Curacaví. A 16km neutralized opening leads into a 111km competitive section that dips into Casablanca (Valparaíso Region) before returning through María Pinto back to Curacaví — the event is based in the Santiago Metropolitan Region, not Valparaíso, despite the wine-country association.",
+      "signature_challenge": "El Pangue, the signature ascent to the course's 700m high point, followed by a fast, technical descent into Casablanca — the site of a serious high-speed rider crash in the 2026 edition.",
       "suffering_zones": [
-        "Casablanca Climbing Section: The middle 35 kilometers through Casablanca wine country concentrate the route's most sustained elevation gain. Riders encounter multiple back-to-back climbs without significant recovery sections, testing endurance and mental fortitude.",
-        "María Pinto Final Push: The final 35 kilometers through María Pinto present cumulative fatigue challenges as riders tackle sustained climbing on tired legs. The route's most demanding grades appear in this section before the final descent toward Curacavi.",
-        "Distance Endurance: The 120-kilometer total distance demands sustained aerobic effort over 4-6 hours of riding. Riders unaccustomed to extended gran fondo distances may struggle with pacing and nutrition management across the full route."
+        "El Pangue climb and its fast, technical descent into Casablanca — the course's defining test and the site of a documented serious crash in 2026.",
+        "Cuesta Ibacache: the other named climbing/descending section, with deceptive curves flagged by a 2022 rider report (historical observation, not verified current conditions).",
+        "127km/~1,200m total demand (2026 course spec; the announced 2027 edition is advertised at 130km, exact profile not yet published) on open roads shared with normal traffic — riders must be mechanically and nutritionally self-sufficient per the official rules."
       ]
     },
     "logistics": {
@@ -83,33 +83,79 @@
       "lodging_strategy": "",
       "transport": "",
       "food": "",
-      "official_site": "https://www.granfondocuracavi.cl"
+      "official_site": "https://www.granfondocuracavi.cl/"
     },
     "history": {
-      "founded": 2021,
-      "origin_story": "",
-      "notable_moments": [],
-      "reputation": ""
+      "founded": 2022,
+      "origin_story": "Debuted April 24, 2022, organized by Fernando \"Feña\" Almuna and Epic Rides Chile (which also produces Gran Fondo Nevados de Chillán). Reached its fifth edition April 19, 2026.",
+      "notable_moments": [
+        "A participant suffered a serious high-speed crash descending El Pangue during the 2026 edition."
+      ],
+      "reputation": "A regional gran fondo with five editions run (2022-2026) and a sixth already announced — but open roads and a technical descent produced a documented serious crash in the 2026 edition, not just theoretical risk."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real, Active, Real Safety Exposure",
+      "summary": "Gran Fondo Curacaví is an established Chilean wine-country gran fondo — five editions run since its 2022 debut, a sixth already announced for April 2027, organized by Epic Rides Chile, who also runs Gran Fondo Nevados de Chillán. The course delivers real climbing via El Pangue and Cuesta Ibacache, not just a scenic flat loop. But the open-road format has real teeth: a participant suffered a serious high-speed crash on the El Pangue descent in 2026, and a 2022 rider report had already flagged dirt, potholes and deceptive curves on these same descents (a separate, earlier observation, not a second crash). This is a race that rewards descending skill and self-sufficiency, not a low-stakes cruise.",
+      "strengths": [
+        "Five consecutive editions (2022-2026) with a sixth already announced — real organizational continuity, not a one-off",
+        "Genuine climbing via El Pangue (700m high point) and Cuesta Ibacache, giving the course real substance beyond wine-country scenery",
+        "Organized by Epic Rides Chile, which also runs Gran Fondo Nevados de Chillán"
+      ],
+      "weaknesses": [
+        "Open roads shared with normal traffic — riders must be fully self-sufficient mechanically and nutritionally per the official rules",
+        "A serious high-speed crash on the El Pangue descent in 2026; a separate 2022 rider report also flagged dirt, potholes and deceptive curves on the same descents",
+        "No refund for voluntary withdrawal and only limited remedies for organizer cancellation, per the official regulations"
+      ],
+      "bottom_line": "A real wine-country gran fondo worth considering if you're a confident descender who takes open-road racing seriously — just respect the descents, they've drawn a documented safety incident."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "A solid regional gran fondo offering pleasant wine country scenery and moderate climbing for recreational Chilean cyclists seeking community-focused riding.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A five-edition-strong Chilean wine-country gran fondo with real climbing via El Pangue — respect the open-road descents, they've produced a documented crash.",
+      "should_you_race": "Yes, if you're comfortable descending on open roads and want real Chilean wine-country climbing — but come prepared for traffic-open conditions and be honest about your descending skill on El Pangue.",
+      "alternatives": "Gran Fondo Nevados de Chillán, also organized by Epic Rides Chile, for another Chilean gran fondo from the same team."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondocuracavi.cl/",
+        "category": "official",
+        "label": "Gran Fondo Curacaví — Official Site"
+      },
+      {
+        "url": "https://www.granfondocuracavi.cl/_files/ugd/547fa0_f0979bce312746df98f9e1266b0cae9b.pdf",
+        "category": "official",
+        "label": "Gran Fondo Curacaví — 2026 Official Regulations/Course Spec"
+      },
+      {
+        "url": "https://welcu.com/epic-rides-chile-spa/granfondocuracavi2026",
+        "category": "official",
+        "label": "2026 Registration Listing (Welcu)"
+      },
+      {
+        "url": "https://www.ridechile.cl/2026/02/el-gran-fondo-curacavi-2026-presento-su-ruta-oficial/",
+        "category": "reference",
+        "label": "RideChile — 2026 Official Route Presentation"
+      },
+      {
+        "url": "https://www.ridechile.cl/2022/04/el-ciclismo-se-tomo-curacavi-de-la-mano-de-epic-rides/",
+        "category": "reference",
+        "label": "RideChile — 2022 Debut Report and Rider Criticism"
+      },
+      {
+        "url": "https://www.ridechile.cl/2026/04/estable-dentro-de-su-gravedad-el-estado-de-salud-de-jose-salinas-tras-su-accidente-en-curacavi/",
+        "category": "reference",
+        "label": "RideChile — 2026 Rider Crash Report"
+      },
+      {
+        "url": "https://epicrideschile.com/races/",
+        "category": "official",
+        "label": "Epic Rides Chile — Organizer Race Portfolio"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.granfondocuracavi.cl/",
-      "notes": "Road gran fondo in Curacaví ran its 5th edition on April 19, 2026 with current materials online and no discontinuation signals.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "5th edition completed April 19, 2026; 6th edition announced for April 18, 2027 (curl-verified official site live). 2027 registration not yet open."
     }
   }
 }

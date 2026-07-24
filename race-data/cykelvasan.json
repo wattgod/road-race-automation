@@ -5,20 +5,20 @@
     "display_name": "Cykelvasan",
     "tagline": "",
     "vitals": {
-      "distance_km": 95.0,
-      "distance_mi": 59.0,
+      "distance_km": 92.0,
+      "distance_mi": 57.2,
       "elevation_m": null,
-      "elevation_ft": 0.0,
+      "elevation_ft": null,
       "location": "Sälen to Mora, Sweden",
       "location_badge": "Sälen to Mora, Sweden",
       "country": "Sweden",
       "date": "2026: August 7-8",
-      "date_specific": "2026: August 7 (Friday) and August 8 (Saturday)",
+      "date_specific": "2026: 32km/45km Aug 7 (Oxberg-Mora), 92km main race Aug 8 (Sälen-Mora, via Berga by)",
       "field_size": "Unknown",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "Classic Vasaloppet checkpoints (Oxberg, Hökberg, Eldris)",
+      "feed_zones": "Unknown",
       "cutoff_time": "Unknown",
       "lat": null,
       "lng": null,
@@ -31,8 +31,8 @@
     },
     "terrain": {
       "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "surface": "~97% forest road/gravel, ~3% asphalt on the 92km main race (verified 2026 organizer figures) — this is an MTB/gravel event, not a paved road course",
+      "technical_rating": 3,
       "features": []
     },
     "fondo_rating": {
@@ -56,7 +56,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 57. WAVE 10 FLAG (2026-07-24): road_surface=1 ('fresh tarmac throughout' per config/dimensions.json rubric) directly conflicts with verified 2026 course data showing ~97% unpaved forest road/gravel on the main race — dimension not changed per standing rule against silent numeric edits, but this is almost certainly a mis-scored dimension pending human review."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,84 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The bike edition of Sweden's legendary Vasaloppet ski race, run by Vasaloppsföreningen Sälen-Mora (owned by IFK Mora and Sälens IF) since 2009 — inspired partly by Norway's Birkebeinerrittet. Three distances: 32km and 45km (Oxberg to Mora, Aug 7) and the 92km main race (Sälen to Mora via Berga by, Aug 8). Despite this database's road-catalog placement, the main race is roughly 97% unpaved — forest roads, gravel, classic ski trail, and constructed boardwalks over marshland — with only about 3km of asphalt. This is a gravel/forest-road event wearing a gran fondo's clothes, not a paved sportive.",
+      "signature_challenge": "The opening climb: 178m of gain over the first 3km, up to the course's 528m high point — then close to 90km of forest road, gravel and boardwalk before Mora.",
+      "suffering_zones": [
+        "Opening 3km climb (178m gain to 528m high point) right off the start in Sälen.",
+        "Constructed boardwalks over marshland sections of the classic Vasaloppet ski trail — a road-oriented rider will find this course technical throughout, and even gravel riders report elevated puncture/crash risk on rough sections.",
+        "Congestion and limited passing room around the start and finish, per rider accounts, plus a real risk of mud or rerouted sections if heavy rain hits."
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "SkiStar Lodge Lindvallen offers on-site lodging near the Vasaloppet Arena. The event runs during Vasaloppet's Summer Week (August 3-9, 2026) with family-oriented activities and dining options.",
+      "lodging_strategy": "The event runs during Vasaloppet's Summer Week (early August) in the Sälen-Mora corridor.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://vasaloppet.se/en/bike/cykelvasan-90/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 2009,
+      "origin_story": "Vasaloppet tested a bike route in 2008 and launched Cykelvasan in 2009, partly inspired by Norway's Birkebeinerrittet bike race — it drew nearly 2,000 riders in its debut year.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "A well-established Vasaloppet-family event, but its own organizer material and course pages have had inconsistent asphalt/gravel percentage figures year to year — treat any single-source vitals figure with some caution."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Event, Wrong Catalog",
+      "summary": "Cykelvasan is a real event with genuine Vasaloppet pedigree — nonprofit-run since 2009, part of Swedish endurance-sport culture, drawing nearly 2,000 riders in its 2009 debut. The problem isn't the race, it's the label: roughly 97% of the 92km main course is forest road, gravel, ski-trail and marshland boardwalk, not pavement. A road cyclist showing up expecting a gran fondo on tarmac will be riding the wrong bike. This is a gravel/MTB event that happens to share a start-finish town pairing with road cycling's vocabulary.",
+      "strengths": [
+        "Established Vasaloppet organizational pedigree — a nonprofit organizer with 15+ years running this specific event",
+        "Three distance options (32/45/92km) that let riders self-select difficulty",
+        "A forest route through Dalarna tied to the Vasaloppet ski legacy"
+      ],
+      "weaknesses": [
+        "Roughly 97% unpaved on the main course — this is not a road gran fondo, and the surface mismatch is the single most important thing a road-focused rider needs to know before entering",
+        "No reliable bike-specific total elevation figure is currently published by the organizer — only a partial 178m opening-climb figure is confirmed",
+        "Congestion around start/finish and mud risk in wet years, per rider accounts"
+      ],
+      "bottom_line": "If you're a gravel or all-road rider looking for a historic Nordic forest event, this is worth a look. If you came here expecting a paved gran fondo, bring a gravel bike or look elsewhere — this database's road classification undersells how off-road this event actually is."
     },
     "final_verdict": {
       "score": "57/100",
-      "one_liner": "A historic, scenic Nordic mountain bike experience that honors Sweden's legendary Vasaloppet legacy with accessible distance options for all skill levels.",
-      "should_you_race": "",
-      "alternatives": ""
+      "one_liner": "A historic Vasaloppet-family event that's roughly 97% gravel/forest road — a gravel race mislabeled as a road gran fondo.",
+      "should_you_race": "Race it on a gravel bike, not a road bike — the surface mismatch with a 'gran fondo' listing is real. If you want the Vasaloppet-family history and don't mind mixed terrain, it's worth entering.",
+      "alternatives": "For a genuinely paved Swedish/Nordic road fondo, look elsewhere in the catalog; for more forest/gravel Nordic ultra-endurance events, Norway's Birkebeinerrittet (the event that partly inspired Cykelvasan) is a natural comparison."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://vasaloppet.se/en/bike/cykelvasan-90/",
+        "category": "official",
+        "label": "Cykelvasan 92km — Official Race Page"
+      },
+      {
+        "url": "https://vasaloppet.se/en/bike/cykelvasan-45/",
+        "category": "official",
+        "label": "Cykelvasan 45km — Official Race Page"
+      },
+      {
+        "url": "https://vasaloppet.se/en/bike/cykelvasan-30/",
+        "category": "official",
+        "label": "Cykelvasan 32km (\"30\") — Official Race Page"
+      },
+      {
+        "url": "https://vasaloppet.se/en/about-us/organization/",
+        "category": "official",
+        "label": "Vasaloppsföreningen Sälen-Mora — Organizer Info"
+      },
+      {
+        "url": "https://vasaloppet.se/en/about-us/history/vasaloppets-summer-week/",
+        "category": "reference",
+        "label": "Vasaloppet — Cykelvasan History"
+      },
+      {
+        "url": "https://happyride.se/forum/threads/ni-som-korde-gravel-pa-cykelvasan-i-ar.3694325/",
+        "category": "community",
+        "label": "Swedish Gravel-Rider Forum Discussion"
+      }
+    ],
+    "catalog_flags": {
+      "status_note": "Taxonomy flag: 2026 organizer-verified course data puts the 92km main race at ~97% unpaved (forest road, gravel, ski trail, marshland boardwalk) — this is an MTB/gravel event, not a paved road gran fondo. terrain.surface corrected to reflect reality; fondo_rating.discipline left as gran_fondo per wave policy (numeric/taxonomy reclassification is a human call, not an automated edit).",
+      "ruled": "2026-07-24 editorial wave 10"
+    },
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Cykelvasan gran fondo cycling Sälen to Mora",
@@ -167,9 +214,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://vasaloppet.se/en/bike/",
-      "notes": "Aug 7-8 2026, 10k+ registered; NOTE: Vasaloppet bike event runs forest/gravel terrain — road-catalog discipline classification worth a human look"
+      "verified": "2026-07-24",
+      "source": "https://vasaloppet.se/en/bike/cykelvasan-90/",
+      "notes": "Registration open for Aug 7-8 2026 editions (curl-verified 200). Confirmed ~97% unpaved on the 92km main course — see catalog_flags for taxonomy note."
     }
   }
 }

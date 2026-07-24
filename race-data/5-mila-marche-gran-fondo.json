@@ -3,20 +3,20 @@
     "name": "5 Mila Marche Gran Fondo",
     "slug": "5-mila-marche-gran-fondo",
     "display_name": "5 Mila Marche Gran Fondo",
-    "tagline": "",
+    "tagline": "Coastal-start Marche hill country, no single climb but relentless rollers all day",
     "vitals": {
-      "distance_km": 132.0,
-      "distance_mi": 82.0,
-      "elevation_m": 1660,
-      "elevation_ft": 5446.0,
-      "location": "Porto Recanati, Marche, Italy",
+      "distance_km": 115.0,
+      "distance_mi": 71.5,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
+      "location": "Porto Recanati (MC), Marche, Italy",
       "location_badge": "Porto Recanati, Italy",
       "country": "Italy",
-      "date": "2026: September 19-21",
-      "date_specific": "2026: September 20",
-      "field_size": null,
-      "start_format": null,
-      "registration": "https://www.5milamarche.com",
+      "date": "2026: September 20",
+      "date_specific": "2026: Sunday, September 20, 08:00 start. Medium route distance conflicts between official sources: course page says 87km/1,240m, regulations document still says 82km/1,220m — confirm final GPX before race day.",
+      "field_size": "Gran Fondo entries capped at 1,500 (2026); ~1,600 riders started the two Gran Fondo routes in 2024",
+      "start_format": "Mass start; Long (115km) and Medium (82-87km, sources conflict) route options",
+      "registration": "https://www.5milamarche.com/iscrizioni/ (links to ENDU registration portal)",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
@@ -70,41 +70,82 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Ten flat coastal kilometers out of Porto Recanati give way to relentless, scenic Marche hill country — there's no single alpine centerpiece here, and the difficulty instead comes from repeated short climbs, descents, and late-race ramps through Macerata, Filottrano, and Recanati.",
+      "signature_challenge": "No single defining climb — the challenge is the accumulation: a 6.5km/4.5% opener at Porto Potenza Picena, rollers reaching 8%, Montecassiano/Montefano pitches around 5-7%, Filottrano's stepped 6-7% climb finishing at 8-9%, then more ramps near Montefiore and a late 2.5km/6% pitch before the final descent to Porto Recanati.",
       "suffering_zones": [
-        "Marche Hill Country Sustained Climbing: The middle 50 kilometers feature relentless rolling climbs through olive grove terrain with limited flat recovery sections. Cumulative elevation gain across multiple pitches creates sustained aerobic demand requiring strong pacing discipline.",
-        "Late-Race Fatigue Management: After 60+ kilometers of climbing, the final 20 kilometers demand mental resilience despite physical fatigue. Descent sections provide limited recovery before final rolling terrain toward Porto Recanati.",
-        "September Heat Exposure: Despite moderate September temperatures, the Adriatic coastal location and exposed hill country create sun exposure risk. Adequate hydration and electrolyte management are critical across the 4-5 hour effort window."
+        "Porto Potenza Picena climb — 6.5km at 4.5%, the opening test after the flat coastal start",
+        "Filottrano's stepped climb — 6-7% ramping to 8-9% near the top",
+        "Late-race pitches near Montefiore — roughly 2km at 6-7% and a final 2.5km at 6% before the descent home"
       ]
     },
     "logistics": {
-      "airport": "",
-      "lodging_strategy": "",
+      "airport": "Ancona-Falconara (AOI), roughly 30-40 minutes from Porto Recanati",
+      "lodging_strategy": "Porto Recanati and nearby Recanati/Macerata offer Adriatic-coast hotel options; book ahead for the September race weekend.",
       "transport": "",
       "food": "",
       "official_site": "https://www.5milamarche.com"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "",
+      "founded": 2021,
+      "origin_story": "Launched in 2021 as the Gran Fondo Vincenzo Nibali-5Mila Marche, organized by ASD Bike Division under former professional Andrea Tonti to promote Marche cycling tourism. The organizer calls 2026 the sixth edition.",
       "notable_moments": [],
-      "reputation": ""
+      "reputation": "A regional Gran Fondo World Tour stop with real organizer pedigree (Nibali branding, a former pro at the helm), though official 2026 documents still disagree with each other on the medium-route distance — a small but real gap in event execution worth knowing about."
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Marche Hill-Country Fondo",
+      "summary": "5 Mila Marche is a legitimate, currently-active Gran Fondo World Tour stop now in its sixth year, organized by ASD Bike Division under former professional Andrea Tonti and carrying Vincenzo Nibali branding from its 2021 launch. The course is honest rolling-hills racing rather than a single-climb spectacle — ten flat coastal kilometers into a string of short, punchy Marche climbs with no marquee summit. The one real paperwork flag: the official course page and the official regulations document disagree with each other on the medium route's distance (87km vs 82km) — worth confirming directly before race day rather than trusting either figure blindly.",
+      "strengths": [
+        "Real organizer credibility — Gran Fondo World Tour stop, former pro (Andrea Tonti) running it, Nibali branding since the 2021 launch",
+        "Genuine, well-documented climbing content — five-plus named ramps and rollers with specific gradients, not vague scenery-first marketing copy",
+        "Two distance options (Long 115km, Medium ~82-87km) for different fitness levels",
+        "Solid field (~1,600 riders across both Gran Fondo routes in 2024; capped at 1,500 for 2026)"
+      ],
+      "weaknesses": [
+        "Official 2026 documents contradict each other on the medium route's distance/elevation (87km/1,240m course page vs 82km/1,220m regulations) — confirm the final GPX yourself before race day",
+        "Force-majeure cancellation policy offers no cash refund, only a following-year transfer minus a EUR10 fee",
+        "No single marquee climb — this is a rolling-hills accumulation race, which is a real strength for some riders and a letdown for anyone expecting an alpine-scale centerpiece",
+        "Regional event without the international prestige of Italy's headline gran fondos — a strong choice for Marche-based or nearby riders, less of a destination pull otherwise"
+      ],
+      "bottom_line": "A legitimate regional Italian gran fondo built on relentless rolling hills rather than one big climb — a good pick if you're in the Marche region or want genuine, well-documented Italian hill-country racing without headline-event scale. Confirm the medium-route distance directly with the organizer given the conflicting official documents."
     },
     "final_verdict": {
       "score": "54/100",
       "one_liner": "A regional Italian gran fondo combining competitive cycling with cultural immersion through the Marche's rolling hills and Adriatic heritage.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Race it if you want genuine Marche hill-country climbing (five-plus named ramps, no single marquee summit) with real organizer credibility behind it. Confirm the medium route's exact distance directly with the organizer first, since the official course page and regulations disagree.",
+      "alternatives": "For a bigger-name Italian gran fondo with similar rolling-hills character, look at Nove Colli."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.5milamarche.com/iscrizioni/",
+        "category": "official",
+        "label": "5 Mila Marche — Official 2026 Registration"
+      },
+      {
+        "url": "https://www.5milamarche.com/en/percorsi-granfondo-5mila/",
+        "category": "official",
+        "label": "Official Course Page — Long/Medium Route Details, Signature Climbs"
+      },
+      {
+        "url": "https://www.5milamarche.com/en/regolamento-5mila-medio-lungo/",
+        "category": "official",
+        "label": "Official 2026 Regulations — Field Cap, Cancellation Policy, Conflicting Medium-Route Figure"
+      },
+      {
+        "url": "https://www.granfondoworldtour.com/events",
+        "category": "reference",
+        "label": "Gran Fondo World Tour — Calendar Listing"
+      },
+      {
+        "url": "https://www.quicicloturismo.it/2021/04/28/nibali-5-mila-marche-un-multievento-nel-paradiso-del-bike-tonti-valorizziamo-la-nostra-regione/",
+        "category": "reference",
+        "label": "QuiCicloTurismo — 2021 Launch and Organizer History"
+      },
+      {
+        "url": "https://www.quicicloturismo.it/2024/09/22/5mila-marche-e-scattata-la-penultima-prova-del-prestigio-cicloturismo/",
+        "category": "reference",
+        "label": "QuiCicloTurismo — 2024 Edition Field Size Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "5 Mila Marche Gran Fondo gran fondo cycling Porto Recanati",
@@ -227,14 +268,14 @@
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "The transcript provided for the 5 Mila Marche Gran Fondo in Porto Recanati, Italy appears to contain only music lyrics and does not include any rider commentary or race-specific information. No actionable intelligence about the 82-mile course, its 5,446 feet of elevation gain, terrain conditions, key challenges, gear recommendations, or race day tips could be extracted from this content. Riders seeking information about this Tier 3 gravel event would need additional video sources that contain actual race footage or rider commentary to gain insights about the course characteristics, surface conditions, or strategic advice for tackling this event in the Marche region of Italy."
+        "search_text": "The only transcript available (tfYMGz03bLY) contains music lyrics, not rider commentary, and yields no actionable course intelligence. No rider-derived intel extracted; see race-data course_description and citations for organizer-sourced course details instead."
       }
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.granfondo.it/granfondo/5-mila-marche/",
-      "notes": "2026 Gran Fondo World Tour stop, Porto Recanati, Sept 19-20 weekend"
+      "verified": "2026-07-24",
+      "source": "https://www.5milamarche.com/iscrizioni/",
+      "notes": "6th edition, Sunday Sept 20 2026, Porto Recanati. Registration open via official site (links to ENDU portal). Official course page and regulations document disagree on the medium route's distance (87km/1,240m vs 82km/1,220m) as of this verification -- confirm final GPX directly with organizer."
     }
   }
 }
