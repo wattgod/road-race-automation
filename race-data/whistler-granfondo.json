@@ -321,6 +321,10 @@
       "verified": "2026-07-20",
       "source": "https://www.rbcgranfondo.com/event/whistler",
       "note": "Duplicate database entry for the same physical event as slug 'rbc-granfondo-whistler' -- flagged for Matti to consider consolidating."
+    },
+    "catalog_flags": {
+      "duplicate_of": "rbc-granfondo-whistler",
+      "ruled": "2026-07-23 Matti-delegated: RBC entry is canonical, no plans for this profile"
     }
   }
 }
