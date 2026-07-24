@@ -1,28 +1,31 @@
 {
   "race": {
-    "name": "GFNY Florida Sebring",
-    "slug": "gfny-florida-sebring",
-    "display_name": "GFNY Florida Sebring",
+    "name": "GFNY Florida Hardee",
+    "slug": "gfny-florida-hardee",
+    "display_name": "GFNY Florida Hardee",
     "tagline": "",
     "vitals": {
-      "distance_km": 132.0,
-      "distance_mi": 82.0,
+      "distance_km": 135.7,
+      "distance_mi": 84.3,
       "elevation_m": 244,
-      "elevation_ft": 800.0,
-      "location": "Sebring, Florida, USA",
-      "location_badge": "Sebring, USA",
+      "elevation_ft": 800.5,
+      "location": "Wauchula, Hardee County, Florida, USA",
+      "location_badge": "Hardee County, USA",
       "country": "USA",
-      "date": "Defunct at this venue — last held October 26, 2025 (6th and final Sebring edition). GFNY Florida continues in 2026 as a separate, relocated event: GFNY Florida Hardee, October 25, 2026.",
-      "date_specific": "Discontinued at Sebring after Oct 26, 2025",
+      "date": "2026: October 25",
+      "date_specific": "2026: October 25",
       "field_size": null,
       "start_format": null,
-      "registration": "https://florida.gfny.com",
+      "registration": "https://florida.gfny.com/register/",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long/Competitive: 135.7km, 244m — category rankings, Overall and Podium awards",
+        "Medium/Recreational: ~72.4km (45mi), ~122m (400ft) — non-competitive, finish time given but not ranked"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -30,7 +33,7 @@
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
+      "primary": "Flat",
       "surface": "Paved roads",
       "technical_rating": 1,
       "features": []
@@ -56,7 +59,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 60. adventure dimension dropped, road_surface added. Score recalculated: 59. FLAG (2026-07-24 re-slug research, sol-reviewed): this score/dimension set is Sebring-era and unrevalidated for the Hardee course specifically. scenic_experience=4 sits oddly next to the profile's own weakness naming 'minimal scenic variety'; organization=3 and prestige=2 also predate GFNY's own 'brand-new course'/'redesigned route' language for 2026 (see course_description) and have not been re-tested at the new venue. Numerics left untouched per established scope discipline (flag, don't silently rescroe); flagging for a human scoring call once the Hardee edition has actually run."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,9 +73,11 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "This profile describes the Sebring, Florida edition of GFNY Florida, which ran for six editions (October 2020 through October 26, 2025) on flat-to-rolling Highlands County roads through orange groves and scrub farmland — though GFNY says the course itself had already shifted west, crossing into neighboring Hardee County for its mileage starting around 2021, even while race headquarters and festivities stayed Sebring-based. The Sebring edition ran GFNY's standard two-tier format: a competitive long course with age-group classification and a shorter, non-competitive medium course that received a finish time but no ranking. GFNY relocated the Florida event's headquarters and branding to Hardee County entirely for 2026, citing 'evolving course challenges' in its own announcement, and renamed it GFNY Florida Hardee with race headquarters at the Hardee County Agri Civic Center. The Sebring venue itself is discontinued, not the Florida franchise.",
-      "signature_challenge": "N/A — this specific Sebring edition is discontinued. Its signature challenge while active was the exposed, wind-affected farmland roads around Sebring rather than climbing, since the terrain is essentially flat.",
-      "suffering_zones": []
+      "character": "GFNY Florida's 7th edition (October 25, 2026) is the first held fully in Hardee County, at the Hardee County Agri Civic Center in Wauchula. GFNY's own announcement gives two things worth holding side by side: it markets the 2026 route as 'a brand-new course' with a 'redesigned route,' while its own quoted reasoning is that Hardee County 'has been an outstanding partner since 2021' and 'the majority of the racecourse has taken place in Hardee County in recent years' — a geographic continuity, not a from-scratch build. Take GFNY's 'brand-new' framing as promotional emphasis on a real route change, not confirmation the course is unrelated to prior Hardee-area mileage. The 135.7km/244m long course runs fast, flat, rural Central Florida farm roads and is a full competition with category rankings and Overall/Podium awards; the roughly 72km/122m medium course is explicitly non-competitive, receiving a finish time but alphabetical-only results, GFNY's standard two-tier format. The franchise itself is not new — six prior editions ran at Sebring (2020-2025) — but this specific 2026 Hardee routing has not been run before.",
+      "signature_challenge": "The exposed, wind-affected flat farmland terrain of Hardee County. Riders who did Sebring editions faced the same general wind/flat-terrain profile, but GFNY calls the 2026 route itself new/redesigned, so the specific turns, road surfaces, and aid-station placement are unconfirmed until the race actually runs.",
+      "suffering_zones": [
+        "Open, shade-free farmland stretches — wind (not climbing) is the terrain's defining difficulty on this essentially flat course"
+      ]
     },
     "logistics": {
       "airport": "",
@@ -88,46 +93,63 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "Discontinued at This Venue — Relocated, Not Cancelled",
-      "summary": "GFNY Florida Sebring ran six editions (October 2020 through October 26, 2025) as a GFNY franchise stop: a competitive long course with age-group qualification bolted to a shorter, non-competitive medium course, on flat-to-rolling Highlands and Hardee County farm roads through orange groves. GFNY officially relocated the Florida event's headquarters to Hardee County for 2026, renaming it GFNY Florida Hardee and citing 'evolving course challenges' as the reason in its own announcement — not a marketing spin we're adding, but GFNY's stated explanation. Either way, this specific profile, tied to the Sebring venue and vitals, is now describing a race that no longer exists at that location. Riders searching for 'GFNY Florida' in 2026 need to look for Hardee County, not Sebring.",
+      "verdict": "Same Franchise, New Course — Continuity at the Business Level, Not Confirmed on the Road",
+      "summary": "GFNY Florida Hardee is the 7th edition of GFNY's Florida franchise, moved for 2026 from Sebring (six editions, 2020-2025) to the Hardee County Agri Civic Center in Wauchula. GFNY's own announcement holds two claims at once: it markets 2026 as 'a brand-new course' with a 'redesigned route,' while separately explaining that Hardee County has hosted the majority of recent racecourse mileage since 2021 — geographic continuity dressed as a fresh launch, or a genuinely new route in a familiar region; GFNY's own language doesn't fully resolve which. The long course is a real competition — 135.7km/244m with category rankings and Overall/Podium awards — bolted to a shorter, explicitly non-competitive medium course (finish time given, no ranking), GFNY's standard two-tier format. It's flat, fast, rural Central Florida farmland, same general character as Sebring, but this exact 2026 routing has never been run. This is franchise continuity (7th edition, same organizer, same infrastructure), not course continuity.",
       "strengths": [
-        "Was a multi-year GFNY franchise stop (six editions, 2020-2025) with the standard GFNY competitive structure on the long course",
-        "Flat, approachable terrain made it accessible to riders without mountain-climbing legs",
-        "Part of the established GFNY franchise infrastructure (timing, age-group awards, SAG support), though we have no independent third-party review confirming execution quality at this specific venue"
+        "A continuing, multi-year GFNY franchise (6 prior editions at Sebring, now edition 7) — the organization and infrastructure are proven, even though this specific course is not",
+        "Real competitive structure on the long course: category rankings, Overall and Podium awards, standard GFNY timing/SAG infrastructure",
+        "GFNY's own stated reason for the move (majority of recent racecourse mileage already in Hardee County since 2021) is a checkable geographic explanation, not pure marketing spin",
+        "Flat, approachable terrain and course length make it accessible to riders without serious climbing legs, consistent with the franchise's long-standing character"
       ],
       "weaknesses": [
-        "This venue no longer exists — the race relocated to Hardee County for 2026 under the name GFNY Florida Hardee",
-        "Flat, wind-exposed farmland terrain with minimal scenic variety was always a modest draw compared to GFNY's mountain-fondo events",
-        "Riders should not book Sebring-area travel expecting a 2026 GFNY Florida race there — the host city changed"
+        "Flat, wind-exposed farmland terrain with minimal scenic variety — a modest draw next to GFNY's mountain-fondo events",
+        "The medium course is explicitly non-competitive despite receiving a finish time — riders wanting a ranked result need the long course",
+        "GFNY itself calls the 2026 route 'brand-new' and 'redesigned' — no independent review or prior field has run this specific course, so execution quality at Hardee is unconfirmed",
+        "Riders who know the race as 'GFNY Florida Sebring' need to search for Hardee County / Wauchula for 2026 — a real naming trap for returning riders"
       ],
-      "bottom_line": "Historically a real, if unremarkable, flat-terrain GFNY stop. Retired as of the 2025 edition — the franchise continues in 2026, but in Hardee County, not Sebring."
+      "bottom_line": "If you rode GFNY Florida at Sebring, expect the same organizer, same flat/windy Central Florida character, and a genuinely new route GFNY hasn't run before — not a simple copy-paste relocation. New riders get a flat, wind-driven GFNY franchise stop with a real competitive long course, on a course with no track record yet."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "Discontinued: GFNY Florida moved on from Sebring after 2025 — the franchise now runs as GFNY Florida Hardee.",
-      "should_you_race": "No — not at this venue. If you want the current GFNY Florida event, look for GFNY Florida Hardee (Hardee County Agri Civic Center), scheduled October 25, 2026.",
-      "alternatives": "GFNY Florida Hardee (same franchise, new host city, 2026) is the direct continuation. For a comparable flat-terrain GFNY stop elsewhere in the U.S., see GFNY Maryland Cambridge."
+      "one_liner": "GFNY Florida's 7th edition, moved from Sebring to a course GFNY itself calls 'brand-new' in Hardee County — same franchise, unproven route.",
+      "should_you_race": "Yes if you want a flat, fast GFNY franchise stop with a genuine competitive long course and don't need mountain scenery — but know the specific 2026 course hasn't been run before. Search for 'GFNY Florida Hardee' or 'Wauchula,' not 'Sebring' — that name is retired.",
+      "alternatives": "For a comparable flat-terrain GFNY stop elsewhere in the U.S., see GFNY Maryland Cambridge. For GFNY's mountain-fondo format instead of flat farmland, see GFNY Grand Ballon or GFNY Lourdes-Tourmalet."
     },
     "citations": [
       {
+        "url": "https://florida.gfny.com/",
+        "category": "official",
+        "label": "GFNY Florida Hardee — Official Site: Venue, Two-Tier Competitive Format, Registration"
+      },
+      {
+        "url": "https://florida.gfny.com/register/",
+        "category": "official",
+        "label": "GFNY Florida Hardee — Official Registration Page, Oct 25 2026"
+      },
+      {
+        "url": "https://gfny.com/gfny-announces-seven-2026-usa-races-on-the-road-to-nyc/",
+        "category": "official",
+        "label": "GFNY — Official 2026 USA Race Calendar: Florida Hardee 135.7km/244m Course Figures"
+      },
+      {
         "url": "https://gfny.com/gfny-usa-announces-new-host-location-for-gfny-florida-2026/",
         "category": "official",
-        "label": "GFNY — Official Announcement, Sebring-to-Hardee County Relocation for 2026"
-      },
-      {
-        "url": "https://gfny.com/flynn-and-pallone-win-6th-gfny-florida-sebring/",
-        "category": "official",
-        "label": "GFNY — 6th (Final) GFNY Florida Sebring Post-Race Report, Oct 26 2025"
-      },
-      {
-        "url": "https://florida.gfny.com/course/",
-        "category": "official",
-        "label": "Official GFNY Florida Course Page — Two-Tier Format, 2026 Hardee Details"
+        "label": "GFNY — Official Announcement: Sebring-to-Hardee County Relocation for 2026. Contains both 'brand-new course'/'redesigned route' marketing language AND 'majority of the racecourse has taken place in Hardee County in recent years' continuity language — both quoted verbatim in course_description"
       },
       {
         "url": "https://www.endurancesportswire.com/gfny-usa-announces-new-host-location-for-gfny-florida-2026/",
         "category": "media",
-        "label": "Endurance Sportswire — Independent Coverage of the Relocation"
+        "label": "Endurance Sportswire — Syndicated Coverage Reproducing GFNY's Own Relocation Release (not independent reporting), Long/Medium Course Figures"
+      },
+      {
+        "url": "https://gfny.com/flynn-and-pallone-win-6th-gfny-florida-sebring/",
+        "category": "official",
+        "label": "GFNY — 6th (Final) GFNY Florida Sebring Post-Race Report, Oct 26 2025 (historical, pre-rename)"
+      },
+      {
+        "url": "https://florida.gfny.com/gfny-florida-sebring-course-guide/",
+        "category": "official",
+        "label": "GFNY — Sebring Course Guide (historical, describes the retired pre-2026 course, not current vitals)"
       }
     ],
     "youtube_data": {
@@ -259,14 +281,6 @@
           "source_view_count": 7904,
           "category": "course_difficulty",
           "curated": true
-        },
-        {
-          "text": "You leave here from the staging area and then you ride a couple miles and then you do a loop people that are doing like the 50 mile ride will do one loop and the ones that are doing the 100 mile ride does the loop twice.",
-          "source_video_id": "g62E8UKCJXw",
-          "source_channel": "Alex Regino - The Ride Xperience",
-          "source_view_count": 3014,
-          "category": "logistics",
-          "curated": true
         }
       ],
       "rider_intel": {
@@ -319,28 +333,20 @@
             "source_view_count": 3014,
             "category": "logistics",
             "curated": true
-          },
-          {
-            "text": "The course does a loop - people that are doing like the 50 mile ride will do one loop and the ones that are doing the 100 mile ride does the loop twice.",
-            "source_video_id": "g62E8UKCJXw",
-            "source_channel": "Alex Regino - The Ride Xperience",
-            "source_view_count": 3014,
-            "category": "logistics",
-            "curated": true
           }
         ],
-        "search_text": "GFNY Florida Sebring features a totally flat 82-mile course through endless agricultural fields with watermelon and orange plantations. The main challenge is constant wind conditions that get worse as the morning progresses, including side winds, headwinds and occasional tailwinds. Riders emphasize the need to draft extensively and train with higher cadence in smaller gears. The course uses a loop format where 50-mile riders do one loop and longer distance riders repeat it twice. The venue is located about 30 minutes from typical Airbnb accommodations. Weather is described as perfect for riding with temperatures in the 60-70 degree range. The terrain is beautifully scenic but completely exposed with palm trees scattered throughout the flat landscape. About 500 riders participate in this tier 2 event."
+        "search_text": "HISTORICAL (Sebring venue, 2020-2025 editions, retired after Oct 2025 — see catalog_flags.status_note): GFNY Florida Sebring featured a totally flat course through agricultural fields with watermelon and orange plantations, using a 50-mile/100-mile double-loop format. The main challenge was constant wind conditions that got worse as the morning progressed, including side winds, headwinds and occasional tailwinds; riders emphasized the need to draft extensively and train with higher cadence in smaller gears. This loop structure and mileage do NOT describe the 2026 Hardee course (GFNY's own announcement calls it a 'brand-new'/'redesigned' route with a Long 84.3mi/Medium 45mi format, not a 50/100mi double loop) — retained here as franchise history and general Central Florida wind/terrain context only, not as a description of the current course."
       }
     },
     "eligibility": {
-      "status": "defunct",
+      "status": "active",
       "verified": "2026-07-24",
-      "source": "https://gfny.com/gfny-usa-announces-new-host-location-for-gfny-florida-2026/",
-      "notes": "Confirmed via GFNY's own announcement: the Florida event relocated from Sebring to neighboring Hardee County for 2026, renamed GFNY Florida Hardee, with headquarters at the Hardee County Agri Civic Center and a new date of October 25, 2026. The 6th and final Sebring edition ran October 26, 2025 (per gfny.com/flynn-and-pallone-win-6th-gfny-florida-sebring). This is a relocation of the continuing GFNY Florida franchise, not a cancellation of the franchise itself — but the Sebring venue this profile documents is discontinued. Corrected founding year to 2020 (inaugural edition Oct 25, 2020, per endurancesportswire.com/gfny-florida-sebring-breaks-records/) from a previously listed 2022. Also corrected: the race course itself had already shifted west into Hardee County for mileage starting around 2021, even while HQ/branding stayed Sebring-based through 2025; GFNY's own 2026 announcement cites 'evolving course challenges' as the stated reason for the full relocation."
+      "source": "https://florida.gfny.com/",
+      "notes": "Re-slugged from gfny-florida-sebring (2026-07-24): GFNY's own official announcement (gfny.com/gfny-usa-announces-new-host-location-for-gfny-florida-2026/, curl-verified 200) confirms this is the 7th edition of the same continuing GFNY Florida franchise, not a new event — same organizer, same 2026 USA calendar slot. That announcement, however, contains BOTH continuity language ('the majority of the racecourse has taken place in Hardee County in recent years,' quoting GFNY President Lidia Fluhme) AND promotional 'brand-new course'/'redesigned route' language for the 2026 routing specifically — both are quoted in course_description rather than resolved into a single claim. The 7th edition runs October 25, 2026 at the Hardee County Agri Civic Center, Wauchula, FL. The prior editorial pass (Editorial wave 9, 2026-07-24, before this research) marked this profile 'defunct' and flagged the re-slug-vs-defunct call for a human; a sol adversarial review (2026-07-24) confirmed the re-slug/continuation call is correct at the franchise level while catching that an earlier draft of this profile overstated 'same roads' confidence — corrected. 6 prior editions ran at Sebring (Oct 2020 - Oct 26, 2025, per gfny.com/flynn-and-pallone-win-6th-gfny-florida-sebring)."
     },
     "catalog_flags": {
-      "status_note": "Sebring host venue discontinued after the Oct 26, 2025 edition (6th edition). GFNY officially relocated the Florida event to Hardee County for 2026, rebranded GFNY Florida Hardee. Recommend a human decide whether to rename/re-slug this profile to track the new Hardee County location going forward, or retire it and create a new gfny-florida-hardee profile — leaving both would risk a near-duplicate GFNY Florida entry once Hardee is added.",
-      "ruled": "2026-07-24 editorial wave 9"
+      "status_note": "RE-SLUGGED 2026-07-24: this profile was gfny-florida-sebring, renamed to gfny-florida-hardee. GFNY's own announcement confirms the same Florida franchise (7th edition, previously 6 editions at Sebring 2020-2025) moved host venue to the Hardee County Agri Civic Center (Wauchula, FL) for October 25, 2026. Old slug for redirect: gfny-florida-sebring -> gfny-florida-hardee. Vitals/course_description/biased_opinion/final_verdict rewritten for the new Hardee course (135.7km/244m long, ~72km/122m medium) sourced from gfny.com's own 2026 race-calendar announcement and endurancesportswire.com's syndicated coverage; see research-dumps/gfny-florida-hardee.md. KNOWN GAP flagged by sol adversarial review, NOT fixed in this pass (out of file-scope — requires wordpress/generate_neo_brutalist.py changes, a shared generator across 397 profiles): youtube_data below is Sebring-era footage/quotes/rider_intel (2021-2024) that the page generator (generate_neo_brutalist.py, see build_hero/build_course_route/logistics sections) renders directly into the live page's 'Riders Report' and logistics content. Two items describing the OLD Sebring 50mi/100mi double-loop course structure (which does not match the new Long-85mi/Medium-45mi Hardee format) were removed from quotes/rider_intel below as actively stale; the remaining wind/flat-terrain/gear content is generic enough to still be plausible for the new venue but has NOT been re-verified against the actual 2026 Hardee course. A human should decide whether to suppress youtube_data rendering entirely for this profile until Hardee-specific footage exists, or accept the residual staleness risk.",
+      "ruled": "2026-07-24 re-slug research + sol adversarial review, supersedes 'editorial wave 9' defunct call"
     }
   }
 }

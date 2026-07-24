@@ -3,7 +3,7 @@
     "name": "L'Etape Chile by Tour de France",
     "slug": "letape-chile",
     "display_name": "L'Etape Chile by Tour de France",
-    "tagline": "110km of Chilean coastal fury with 1,804m punch—Tour de France soul hits the Southern Hemisphere!",
+    "tagline": "",
     "vitals": {
       "distance_km": 110.0,
       "distance_mi": 68.35,
@@ -14,17 +14,18 @@
       "country": "Chile",
       "date": "November",
       "date_specific": "2026: November 1",
-      "field_size": "1,500-3,000 ambitious amateurs chasing TdF glory",
+      "field_size": "Organizer (WCG) projection: 2,000+ riders, debut edition — not a confirmed turnout",
       "start_format": null,
-      "registration": "Opens early 2026 via official site; expect €150-250 including finisher's jersey, support, and Tour prestige",
-      "entry_fee": "$200-300",
-      "feed_zones": "6-8 fully stocked with gels, bars, hydration, and Chilean empanadas every 15-20km",
-      "cutoff_time": "8-10 hours for masses; broom wagon mercy",
+      "registration": "https://chile.letapeseries.com — final registration wave opened July 24, 2026; no published entry fee found",
+      "entry_fee": null,
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": -39.8142,
       "lng": -73.2459,
       "route_options": [
-        "Main: 110km, 1,804m — full coastal immersion",
-        "Short: 60km, 600m — beginner TdF taste"
+        "Long: 110km, 1,804m — main TdF-branded route",
+        "Short: 60km, 1,292m — e-bikes/MTBs permitted",
+        "Family: 30km, 372m — e-bikes/MTBs permitted"
       ]
     },
     "climate": {
@@ -70,7 +71,7 @@
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 61."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 61. FLAG (2026-07-24 GOLD rewrite research, sol-reviewed): organization=4 implies verified execution quality, but this is a first-ever (2026) debut edition with zero prior track record — organization confidence is currently unverifiable, not confirmed strong. value=4 is also questionable: no entry fee is published anywhere found in research, so 'value' cannot be honestly assessed against price. Numerics left untouched per explicit task scope; flagging both dimensions for a human scoring call."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -84,8 +85,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Coastal launch from Niebla rockets into Valdivia's emerald valleys. Rollers twist through ancient forests, rivers flashing beside. Gentle climbs build to panoramic payoffs—no endless grinds, all scenic reward. TdF signage elevates every pedal.",
-      "signature_challenge": "The Niebla-to-Valdivia coastal traverse: 110km essence in rainforest-wrapped rollers. 1,200m spread thin but relentless, with humidity amplifying burn. TdF finish line in Valdivia seals the conquest.",
+      "character": "The 110km long route runs closed roads from Niebla into Valdivia's Los Ríos region, combining Pacific coastline with river-valley and forest terrain for 1,804m of gain. Two shorter options exist alongside it: a 60km route (1,292m) and a 30km family route (372m), both of which permit e-bikes and MTBs. This is a debut edition with no prior field to have ridden it — official figures come from the organizer's own route pages, not an independent post-event report.",
+      "signature_challenge": "The Niebla-to-Valdivia coastal-to-river traverse on the 110km long course: 1,804m of gain on closed roads. No independent course profile is available to confirm how the climbing is distributed across the route, since the organizer has not yet run an edition.",
       "suffering_zones": [
         "Valdivia River Punch",
         "Coastal Headwind Hell"
@@ -100,38 +101,35 @@
     },
     "history": {
       "founded": 2026,
-      "origin_story": "Born from TdF's global conquest, L'Etape Chile plants the yellow jersey in Patagonia. First Southern Cone edition targets nature-loving amateurs. Valdivia chosen for epic coast-river fusion. Debut promises closed roads and pro vibes.",
+      "origin_story": "Announced as part of the L'Etape by Tour de France series' international expansion (25 countries and cities across 5 continents per the series' own history page). The series already has a Brazil edition, active since 2015 — Chile is a new country for the series, not a new continent for it. Chile's edition is organized by World Centric Group, with the Ilustre Municipalidad de Valdivia hosting the inaugural Niebla/Valdivia edition on closed roads.",
       "notable_moments": [
-        "Inaugural 2026 edition",
-        "Niebla coastal start innovation",
-        "Rainforest TdF immersion",
-        "Southernmost L'Etape yet"
+        "Inaugural 2026 edition — first L'Etape event in Chile",
+        "Niebla/Valdivia start-finish location on the Los Rios coast",
+        "Long-course winner earns a wildcard entry into the Etape du Tour de France in Europe"
       ],
-      "reputation": "Tour pedigree ensures quality. Chile's debut builds hype. Early buzz solid from series fans."
+      "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "Exotic TdF appetizer",
-      "summary": "L'Etape Chile blasts Tour spirit into Chile's lush south, blending coastal beauty with manageable suffering. Debut 110km from Niebla immerses you in rainforest rollers under Tour branding—no French Alps brutality, but fresh adventure. Skeptics yawn at low vert; purists drool over novelty. Valdivia's charm post-ride rivals any podium.",
+      "verdict": "Debut TdF Import, Unproven",
+      "summary": "L'Etape Chile is the first L'Etape by Tour de France event held in Chile, landing November 1, 2026 in Niebla/Valdivia's Los Rios region — not the series' first Southern Hemisphere event (L'Etape Brasil has run since 2015), but a genuine new country for the series. The long course is real: 1,804m over 110km on closed roads through Pacific coastline and river-valley terrain, and the winner earns a wildcard into the Etape du Tour de France in Europe. Organizer World Centric Group is projecting over 2,000 riders and 10,000 visitors, but that's a debut-year projection, not a result — there is no prior Chile edition to check it against. No entry fee is published anywhere we could find, which is a real gap for a race asking international riders to book flights to Chile on faith. As of the final registration wave (opened July 24, 2026), organizers report interest from 15-plus countries — solid early demand, not a confirmed sellout.",
       "strengths": [
-        "Tour de France prestige",
-        "stunning coastal scenery",
-        "manageable challenge",
-        "exotic destination",
-        "pro-level organization"
+        "Genuine TdF-series wildcard: the long-course winner earns a spot in the Etape du Tour de France in Europe",
+        "Real, closed-road 110km/1,804m course through Chilean Pacific coastline and river valleys — not a manufactured stat",
+        "First L'Etape event in Chile, part of a series that already runs in Brazil (since 2015) and 25 countries/cities total per the series' own history page",
+        "Active, growing international registration (15-plus countries) ahead of a debut edition"
       ],
       "weaknesses": [
-        "light elevation",
-        "remote logistics",
-        "debut uncertainties",
-        "humid weather",
-        "shallow field"
+        "First-ever Chile edition — zero local track record, so field size, organization quality, and course execution are all projections, not results",
+        "No published entry fee found on the official site or in press coverage as of this research",
+        "Projected field of 2,000-plus riders is an organizer estimate; the race has not yet run",
+        "International riders are committing to remote southern-Chile travel for an unproven debut with no prior edition to reference"
       ],
-      "bottom_line": "Signature entry for Southern Hemisphere TdF dreams. Nail training, dodge rain—claim your jersey. World needs more events like this."
+      "bottom_line": "If you want to be part of an L'Etape series debut with real Tour de France pedigree and can live with unknowns — no track record, no published price, a projected rather than proven field — the 1,804m Niebla-Valdivia coastal course is genuine. If you want confirmed execution before booking international travel, wait for the second edition."
     },
     "final_verdict": {
       "score": "61/100",
-      "one_liner": "TdF magic meets Chilean wilderness—worth the trek!",
-      "should_you_race": "Yes if craving exotic road prestige without Alpine agony. Skip if chasing mega-vert or elite competition.",
+      "one_liner": "L'Etape's debut Chile edition: a real 1,804m coastal course, unproven organization, no published price.",
+      "should_you_race": "Yes if you want to be part of an L'Etape series debut with genuine Tour de France pedigree and can handle unknowns — no track record, no published entry fee. Wait for a later edition if you want confirmed execution before booking international travel.",
       "alternatives": "Unreal Gran Fondo (unreal-granfondo), L'Etape Costa Rica (letape-costa-rica), TransAndes Challenge (transandes)"
     },
     "citations": [
@@ -148,7 +146,27 @@
       {
         "url": "https://chile.letapeseries.com/stages",
         "category": "official",
-        "label": "L'Etape Chile — Official Stages/Route: 110 km Long Route, 1,804m gain (Wave-C QC fix: 1,200m -> 1,804m, 2026-07-23)"
+        "label": "L'Etape Chile — Official Stages/Route: 110 km Long Route 1,804m, 60 km Short Route 1,292m, 30 km Family Route 372m (GOLD rewrite QC fix, 2026-07-24: 60km corrected 600m -> 1,292m, 30km route added)"
+      },
+      {
+        "url": "https://chile.letapeseries.com/history",
+        "category": "official",
+        "label": "L'Etape Chile — Official History Page: World Centric Group organizer, Etape du Tour de France wildcard mechanism"
+      },
+      {
+        "url": "https://www.biobiochile.cl/noticias/deportes/mas-deportes/2025/11/08/letape-by-tour-de-france-llega-a-chile-en-2026-cita-esta-en-mas-de-20-paises-y-aterriza-en-valdivia.shtml",
+        "category": "media",
+        "label": "BioBioChile — Launch Coverage: WCG Projections (2,000+ riders, 10,000 visitors), Race Director Quote"
+      },
+      {
+        "url": "https://www.ridechile.cl/2026/07/ultima-apertura-de-inscripciones-para-letape-chile-by-tour-de-france-2026/",
+        "category": "media",
+        "label": "RideChile — Final Registration Wave Opens July 24, 2026, 15+ Countries Registered"
+      },
+      {
+        "url": "https://serranegra.letapeseries.com/about-us",
+        "category": "official",
+        "label": "L'Etape Serra Negra (Brasil) — Official Series History: Confirms L'Etape Brasil Active Since 2015, Predating Chile"
       }
     ],
     "youtube_data": {
@@ -172,9 +190,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
+      "verified": "2026-07-24",
       "source": "https://chile.letapeseries.com/stages",
-      "note": "Official Chile event page confirms the inaugural Valdivia/Niebla edition for Sunday, November 1, 2026 (weekday-checked), with amateur-open routes."
+      "note": "Official Chile event page confirms the inaugural Valdivia/Niebla edition for Sunday, November 1, 2026 (weekday-checked), with amateur-open routes (110km/60km/30km). Registration confirmed open via the organizer's final registration-wave announcement, published July 24, 2026: https://www.ridechile.cl/2026/07/ultima-apertura-de-inscripciones-para-letape-chile-by-tour-de-france-2026/ (curl-verified 200). First-ever L'Etape edition IN CHILE — not the series' first Southern Hemisphere event (L'Etape Brasil has run since 2015, per serranegra.letapeseries.com/about-us) — no prior Chile-specific year to confirm track record. Correction applied 2026-07-24 after sol adversarial review caught the original overclaim."
     }
   }
 }
