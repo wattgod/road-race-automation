@@ -13,7 +13,7 @@
       "location_badge": "Canet-en-Roussillon, France",
       "country": "France",
       "date": "April",
-      "date_specific": "2026: April 18",
+      "date_specific": "2026: April 23-25 (La Cyclo, 6th edition; road races Saturday April 25)",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -233,9 +233,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://francecourses.fr/en/course/66-degres-sud-la-cyclo-2026",
-      "notes": "2026 cyclo runs Apr 25 (6th ed.), not Apr 18 as our date field says"
+      "verified": "2026-07-24",
+      "source": "https://ucigranfondoworldseries.com/fr/66-degres-sud-2/",
+      "notes": "CORRECTED (2026-07-24): vitals.date_specific was '2026: April 18' — wrong. Official site (66-degres-sud.fr) confirms 'La cyclo Edition #6 — Du 23 au 25 Avril 2026 au départ de Canet en Roussillon'; the UCI Gran Fondo World Series calendar (ucigranfondoworldseries.com/en/calendar/) independently confirms 'Thursday 23 Apr 2026 - 25 Apr 2026' for the Canet-en-Roussillon entry. Corrected date_specific to April 23-25, 2026. UCI Gran Fondo World Series affiliation (tagline, should_you_race) reconfirmed current and accurate — event is a live 2026 GFWS calendar stop as of Jul 2026."
     }
   }
 }

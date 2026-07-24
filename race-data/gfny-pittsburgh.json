@@ -3,12 +3,12 @@
     "name": "GFNY Pittsburgh",
     "slug": "gfny-pittsburgh",
     "display_name": "GFNY Pittsburgh",
-    "tagline": "The hardest GFNY in America: 70 miles and 7,756 feet of climbing through Pennsylvania's relentless hills",
+    "tagline": "The hardest GFNY in America: 79.9 miles and 8,701 feet of climbing through Pennsylvania's relentless hills",
     "vitals": {
-      "distance_km": 112.7,
-      "distance_mi": 70.0,
-      "elevation_m": 2364,
-      "elevation_ft": 7756.0,
+      "distance_km": 128.6,
+      "distance_mi": 79.9,
+      "elevation_m": 2652,
+      "elevation_ft": 8701.0,
       "location": "Monroeville, Pennsylvania, USA",
       "location_badge": "MONROEVILLE, PA",
       "country": "USA",
@@ -23,7 +23,7 @@
       "lat": 40.4237,
       "lng": -79.7849,
       "route_options": [
-        "Long Course: 70 miles, 7,756 feet elevation — the competitive route featuring all 10 signature climbs",
+        "Long Course: 79.9 miles, 8,701 feet elevation — the competitive route featuring all 10 signature climbs (actual course as raced; pre-race billing was 70mi/7,756ft)",
         "Medium Course: 41 miles, shared climbs — recreational option tackling the same 10 climbs with full support"
       ]
     },
@@ -84,8 +84,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "GFNY Pittsburgh is a relentless climbing test through the rolling hills of Allegheny and Westmoreland Counties. The 70-mile route features 10 signature climbs distributed throughout, meaning there are no flat recovery sections—just sustained elevation gain from start to finish. The course winds through scenic countryside with paved roads and police-moderated intersections, offering beautiful vistas of the region while delivering genuine suffering. This is not a technical challenge or an adventure ride; it's a pure climbing fitness test designed to separate strong climbers from the rest. The medium 41-mile option shares the same 10 climbs, making it a legitimate alternative for building fitness.",
-      "signature_challenge": "The 10 signature climbs distributed throughout the 70-mile course define GFNY Pittsburgh. With 7,756 feet of elevation gain over 70 miles (111 feet per mile), there is no mercy—every section climbs. The climbs are shared across both long and medium distance options, meaning the medium course tackles the same brutal climbing in fewer miles. This is climbing-focused racing at its most unforgiving, with no flat sections to recover and no technical descents to break the monotony.",
+      "character": "GFNY Pittsburgh is a relentless climbing test through the rolling hills of Allegheny and Westmoreland Counties. The 79.9-mile route features 10 signature climbs distributed throughout, meaning there are no flat recovery sections—just sustained elevation gain from start to finish. The course winds through scenic countryside with paved roads and police-moderated intersections, offering beautiful vistas of the region while delivering genuine suffering. This is not a technical challenge or an adventure ride; it's a pure climbing fitness test designed to separate strong climbers from the rest. The medium 41-mile option shares the same 10 climbs, making it a legitimate alternative for building fitness.",
+      "signature_challenge": "The 10 signature climbs distributed throughout the 79.9-mile course define GFNY Pittsburgh. With 8,701 feet of elevation gain over 79.9 miles (109 feet per mile), there is no mercy—every section climbs. The climbs are shared across both long and medium distance options, meaning the medium course tackles the same brutal climbing in fewer miles. This is climbing-focused racing at its most unforgiving, with no flat sections to recover and no technical descents to break the monotony.",
       "suffering_zones": [
         "Start at Monroeville",
         "Mid-Course Climbing Gauntlet",
@@ -112,9 +112,9 @@
     },
     "biased_opinion": {
       "verdict": "Climb-focused excellence",
-      "summary": "GFNY Pittsburgh is a masterclass in organized climbing. The 70-mile route with 7,756 feet of elevation gain is genuinely the hardest GFNY USA event, and the organization reflects three decades of mass-participation racing expertise. This is not a technical challenge or an adventure ride—it's a pure climbing test on paved roads with professional support. If you're seeking to prove your climbing fitness against a quality field and global GFNY brand, Pittsburgh delivers. The inaugural 2025 event executed flawlessly, and the September timing avoids extreme weather. However, the road-only format and lack of technical terrain limit broader appeal. This is a specialist event for climbers, not a well-rounded cycling challenge.",
+      "summary": "GFNY Pittsburgh is a masterclass in organized climbing. The 79.9-mile route with 8,701 feet of elevation gain is genuinely the hardest GFNY USA event, and the organization reflects three decades of mass-participation racing expertise. This is not a technical challenge or an adventure ride—it's a pure climbing test on paved roads with professional support. If you're seeking to prove your climbing fitness against a quality field and global GFNY brand, Pittsburgh delivers. The inaugural 2025 event executed flawlessly, and the September timing avoids extreme weather. However, the road-only format and lack of technical terrain limit broader appeal. This is a specialist event for climbers, not a well-rounded cycling challenge.",
       "strengths": [
-        "Hardest climbing in GFNY USA calendar—7,756 feet over 70 miles is genuinely brutal",
+        "Hardest climbing in GFNY USA calendar—8,701 feet over 79.9 miles is genuinely brutal",
         "Professional GFNY organization with three decades of experience and full police escort",
         "Global prestige and qualification pathways to GFNY World Championship",
         "Scenic Allegheny and Westmoreland County countryside with 10 signature climbs",
@@ -155,13 +155,18 @@
         "url": "https://pgh.gfny.com",
         "category": "official",
         "label": "GFNY Pittsburgh Official Website"
+      },
+      {
+        "url": "https://gfny.com/dominating-solo-wins-at-michelob-ultra-gfny-pittsburgh-monroeville/",
+        "category": "official",
+        "label": "GFNY — Post-Event Report (actual course: 79.9mi / 8,701ft, supersedes pre-race 70mi/7,756ft billing)"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
+      "verified": "2026-07-24",
       "source": "https://pgh.gfny.com/",
-      "note": "Corrected after adversarial re-check: pennsylvania.gfny.com (initially assumed to be the current canonical URL based on a client-side nav link) is actually the separate GFNY York, Pennsylvania event page, not Pittsburgh. GFNY's own race finder (gfny.com/race-finder/) links Pittsburgh-Monroeville to pgh.gfny.com, which independently confirms 'September 20, 2026 Pittsburgh-Monroeville' at CCAC Boyce Campus in Monroeville. Date unchanged."
+      "notes": "Corrected after adversarial re-check: pennsylvania.gfny.com (initially assumed to be the current canonical URL based on a client-side nav link) is actually the separate GFNY York, Pennsylvania event page, not Pittsburgh. GFNY's own race finder (gfny.com/race-finder/) links Pittsburgh-Monroeville to pgh.gfny.com, which independently confirms 'September 20, 2026 Pittsburgh-Monroeville' at CCAC Boyce Campus in Monroeville. Date unchanged. Re-verified this pass: [size claim] 'world's largest cycling marathon brand' TRUE per GFNY's own About page ('world's largest endurance sports marathon,' 30+ events/15+ countries) — no text change needed. Fixed stale vitals: long course was billed pre-race at 70mi/7,756ft but GFNY's own post-event report confirms actual raced course was 79.9mi/8,701ft — corrected vitals, route_options, and all matching prose mentions (tagline, course_description, biased_opinion) for consistency. Full research dump at research-dumps/gfny-pittsburgh.md."
     }
   }
 }

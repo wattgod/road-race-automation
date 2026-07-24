@@ -5,10 +5,10 @@
     "display_name": "Gran Fondo Utah",
     "tagline": "Ride the Wasatch Front: Conquer Nebo Loop in Utah's Gran Fondo National Series",
     "vitals": {
-      "distance_km": 160.9,
-      "distance_mi": 100.0,
-      "elevation_m": 2743,
-      "elevation_ft": 9000.0,
+      "distance_km": 149.7,
+      "distance_mi": 93.0,
+      "elevation_m": 2073,
+      "elevation_ft": 6800.0,
       "location": "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA",
       "location_badge": "Payson Memorial Park, USA",
       "country": "USA",
@@ -123,6 +123,11 @@
         "url": "https://www.granfondoguide.com/Events/Index/12568/gran-fondo-utah",
         "category": "reference",
         "label": "Gran Fondo Utah"
+      },
+      {
+        "url": "https://www.paysonutah.gov/385/Gran-Fondo-Utah",
+        "category": "official",
+        "label": "Payson City: Gran Fondo Utah event page (Gran Route 93 miles, 6,800 ft elevation)"
       }
     ],
     "youtube_data": {
@@ -183,8 +188,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.granfondonationalseries.com/gran-fondo-utah"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondonationalseries.com/gran-fondo-utah",
+      "notes": "2026 (2nd Annual) edition completed June 13, 2026. Not a UCI Gran Fondo World Series event -- GFNS (USA) qualifier only. Vitals corrected: Gran Route is 93 mi / 6,800 ft (confirmed via granfondonationalseries.com and paysonutah.gov), not the prior 100 mi / 9,000 ft. granfondoguide.com lists a tentative, explicitly 'Unconfirmed' June 12, 2027 date. Verified 2026-07-24 via codex gpt-5.6-sol foreground research + curl verification as part of the Roadie Labs debt-sweep."
     }
   }
 }

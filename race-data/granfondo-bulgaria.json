@@ -7,8 +7,8 @@
     "vitals": {
       "distance_km": 140.0,
       "distance_mi": 87.0,
-      "elevation_m": 1905,
-      "elevation_ft": 6250.0,
+      "elevation_m": 1961,
+      "elevation_ft": 6433.7,
       "location": "Velingrad, Bulgaria",
       "location_badge": "Rhodope Mountains",
       "country": "Bulgaria",
@@ -27,16 +27,16 @@
           "name": "Granfondo",
           "distance_km": 140,
           "distance_mi": 87,
-          "elevation_m": 1905,
-          "elevation_ft": 6250,
+          "elevation_m": 1961,
+          "elevation_ft": 6434,
           "qualifies": "Men under 60, Women under 50"
         },
         {
           "name": "Mediofondo",
           "distance_km": 70,
           "distance_mi": 43.5,
-          "elevation_m": 620,
-          "elevation_ft": 2034,
+          "elevation_m": 663,
+          "elevation_ft": 2175,
           "qualifies": "Men over 60, Women over 50"
         }
       ]
@@ -106,7 +106,7 @@
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "Granfondo Bulgaria debuts as Bulgaria's first UCI Gran Fondo World Series qualifier, delivering 140km/1905m of Rhodope Mountain suffering around stunning Batak Reservoir. The 21.6km @ 5.4% monster climb (km 78-100) crowns the highest point at 1337m, flanked by long rewarding descents. Velingrad's spa culture and Balkan beauty elevate this beyond typical qualifiers. Strong T2 contender for Eastern European climbers seeking World Champs qualification.",
+      "summary": "Granfondo Bulgaria debuts as Bulgaria's first UCI Gran Fondo World Series qualifier, delivering 140km/1961m of Rhodope Mountain suffering around stunning Batak Reservoir. The 21.6km @ 5.4% monster climb (km 78-100) crowns the highest point at 1337m, flanked by long rewarding descents. Velingrad's spa culture and Balkan beauty elevate this beyond typical qualifiers. Strong T2 contender for Eastern European climbers seeking World Champs qualification.",
       "strengths": [],
       "weaknesses": [],
       "bottom_line": ""
@@ -117,7 +117,28 @@
       "should_you_race": "",
       "alternatives": ""
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://granfondobulgaria.com/en/race/",
+        "category": "official",
+        "label": "Granfondo Bulgaria — Official Race Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/velingrad/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Velingrad Event Page"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/borislav-hadzhistoyanov-and-bel-levene-conquer-tough-rhodope-mountains-at-granfondo-bulgaria/",
+        "category": "reference",
+        "label": "UCI GFWS Post-Race Report — Granfondo Bulgaria 2026"
+      },
+      {
+        "url": "https://tracksport.live/en/r/gran-fondo",
+        "category": "reference",
+        "label": "TrackSport — Independent Timing/Results Listing"
+      }
+    ],
     "eligibility": {
       "status": "active",
       "verified": "2026-07-23",

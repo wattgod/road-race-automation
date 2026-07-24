@@ -103,8 +103,8 @@
       "official_site": "https://www.granfondonationalseries.com/gran-fondo-maryland"
     },
     "history": {
-      "founded": 2014,
-      "origin_story": "Born in 2014 as part of the National Series quest to crown American fondo kings, Maryland edition locked in Frederick's hilly heartland. Evolved into USA Cycling Gran Fondo Nationals powerhouse, blending competitive fire with East Coast allure. Consistent since 2021 with Catoctin classics defining its soul.",
+      "founded": 2012,
+      "origin_story": "Born in 2012 as the founding event of the Gran Fondo National Series' quest to crown American fondo kings, Maryland edition locked in Frederick's hilly heartland. Evolved into USA Cycling Gran Fondo Nationals powerhouse, blending competitive fire with East Coast allure. Consistent since 2021 with Catoctin classics defining its soul.",
       "notable_moments": [
         "Hosts USA Cycling Gran Fondo National Championships annually",
         "2024 GPS track hits 99.4mi/10,066ft with 13.1% max grade",
@@ -158,6 +158,11 @@
         "url": "https://www.granfondonationalseries.com/gfns-routes",
         "category": "official",
         "label": "Gran Fondo National Series Routes"
+      },
+      {
+        "url": "https://www.granfondonationalseries.com/blog/2022/9/14/gran-fondo-maryland-announced-as-usa-cycling-gran-fondo-national-championship-for-2023",
+        "category": "official",
+        "label": "GFNS: Gran Fondo Maryland, first held in 2012, was the founding event of the series"
       }
     ],
     "youtube_data": {
@@ -325,8 +330,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-17",
-      "source": "https://www.granfondonationalseries.com/gran-fondo-maryland"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondonationalseries.com/gran-fondo-maryland",
+      "notes": "2026 edition confirmed for September 20. Founding year corrected 2014 -> 2012 (GFNS founder confirms Maryland was the founding event of the series). Verified 2026-07-24 via codex gpt-5.6-sol foreground research + curl verification as part of the Roadie Labs debt-sweep."
     }
   }
 }

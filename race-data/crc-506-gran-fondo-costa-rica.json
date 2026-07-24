@@ -136,6 +136,11 @@
         "url": "https://www.miprensacr.com/crc-506-gran-fondo-costa-rica-se-realizara-el-13-de-septiembre-y-reabre-sus-inscripciones/",
         "category": "reference",
         "label": "Mi Prensa CR — CRC-506 Gran Fondo Costa Rica rescheduled to September 13"
+      },
+      {
+        "url": "https://semanariouniversidad.com/deportes/alerta-meteorologica-lleva-a-reprogramacion-de-gran-fondo-crc-506-en-septiembre/",
+        "category": "reference",
+        "label": "Semanario Universidad — Weather alert leads to CRC 506 reprogramming in September"
       }
     ],
     "youtube_data": {
@@ -224,9 +229,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://ucigranfondocostarica.com/",
-      "notes": "Original June 7, 2026 date was postponed due to high thunderstorm risk; organizer rescheduled to September 13, 2026 and reopened registration. The UCI Gran Fondo World Series calendar still shows 'Postponed' and has not caught up with the rescheduled date."
+      "verified": "2026-07-24",
+      "source": "https://www.miprensacr.com/crc-506-gran-fondo-costa-rica-se-realizara-el-13-de-septiembre-y-reabre-sus-inscripciones/",
+      "notes": "Original June 7, 2026 date was postponed due to high thunderstorm risk; organizer rescheduled to September 13, 2026 and reopened registration. The UCI Gran Fondo World Series calendar still shows 'Postponed' and has not caught up with the rescheduled date. Reconfirmed 2026-07-24: official site ucigranfondocostarica.com currently returns HTTP 500 (database error) — used miprensacr.com (curl-verified live) and the UCI GFWS calendar (curl-verified live, 'CRC 506 Gran Fondo of Costa Rica,' Jaco, status 'Postponed') as primary sources instead. Tagline/one_liner UCI qualifier claims TRUE — event remains a live GFWS calendar entry (rescheduled, not cancelled/removed)."
     }
   }
 }

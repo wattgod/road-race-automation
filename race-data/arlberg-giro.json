@@ -140,7 +140,7 @@
     "final_verdict": {
       "score": "69/100",
       "one_liner": "150 km of Austrian Alpine gran fondo perfection — two passes, world-class scenery, and ski-resort-level organization in one of the Alps' most charming villages.",
-      "should_you_race": "If you want a well-organized Alpine gran fondo with stunning scenery and a genuine festival atmosphere — absolutely. This is European cycling at its most enjoyable. If you are chasing UCI points, maximum vertical, or global prestige — the Maratona dles Dolomites or Otztaler Radmarathon may be better targets. If you are coming from outside Europe, combine it with a broader Alps cycling trip to justify the travel.",
+      "should_you_race": "If you want a well-organized Alpine gran fondo with stunning scenery and a genuine festival atmosphere — absolutely. This is European cycling at its most enjoyable. If you are chasing UCI Gran Fondo World Championships qualification, maximum vertical, or global prestige — the Maratona dles Dolomites or Otztaler Radmarathon may be better targets. If you are coming from outside Europe, combine it with a broader Alps cycling trip to justify the travel.",
       "alternatives": "For harder Austrian climbing: Otztaler Radmarathon (238 km, 5,500m). For UCI prestige: UCI Gran Fondo World Championships. For Italian Dolomite drama: Maratona dles Dolomites. For similar-scale Alpine events: Engadin Cycling Marathon (Switzerland)."
     },
     "citations": [
@@ -345,8 +345,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://arlberg-giro.com/en/rules-of-participation"
+      "verified": "2026-07-24",
+      "source": "https://arlberg-giro.com/en/rules-of-participation",
+      "notes": "UCI affiliation checked (2026-07-24): Arlberg Giro does NOT appear anywhere on the UCI Gran Fondo World Series calendar (ucigranfondoworldseries.com/en/calendar/ — zero hits for 'Arlberg', 'St. Anton', 'Tyrol', or 'Austria'), and the official site (home + route pages) has zero mentions of 'UCI' anywhere. Corrected should_you_race's 'chasing UCI points' to 'chasing UCI Gran Fondo World Championships qualification' for precision — the event is not UCI-sanctioned and offers no qualification pathway, which the surrounding text (steering UCI-seekers to Maratona dles Dolomites/Otztaler) already correctly implied."
     }
   }
 }

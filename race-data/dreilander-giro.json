@@ -3,7 +3,7 @@
     "name": "Dreilander Giro",
     "slug": "dreilander-giro",
     "display_name": "Dreiländergiro",
-    "tagline": "Three countries. 48 hairpins up the Stelvio. 3,000 riders from 30 nations. The Alpine tri-border gran fondo that sells out in hours.",
+    "tagline": "Three countries. 48 hairpins up the Stelvio. 3,000 riders from 40+ nations. The Alpine tri-border gran fondo that sells out in hours.",
     "vitals": {
       "distance_km": 167.4,
       "distance_mi": 104.0,
@@ -104,7 +104,7 @@
     },
     "history": {
       "founded": 1994,
-      "origin_story": "The Dreiländergiro was born in 1994 when the Bikeclub Nauders — a small, non-profit cycling club in a Tyrolean village of 1,500 people — created a road cycling marathon that would exploit Nauders' unique geographic position at the tri-border point of Austria, Italy, and Switzerland. The concept was simple and irresistible: start in Austria, cross into Italy, climb the legendary Stelvio Pass, descend into Switzerland, and return to Nauders — three countries, one ride. The Stelvio, already hallowed by decades of Giro d'Italia history, gave the event instant credibility. What began as a local cycling adventure grew steadily through the 2000s and 2010s, propelled by word of mouth in the German-speaking cycling world. By the 2020s, the event had become one of Europe's largest cycling marathons — 3,000 riders from 30 nations, selling out within hours. The 30th edition in 2023 was a milestone celebration. The 33rd edition in 2026 continues the tradition.",
+      "origin_story": "The Dreiländergiro was born in 1994 when the Bikeclub Nauders — a small, non-profit cycling club in a Tyrolean village of 1,500 people — created a road cycling marathon that would exploit Nauders' unique geographic position at the tri-border point of Austria, Italy, and Switzerland. The concept was simple and irresistible: start in Austria, cross into Italy, climb the legendary Stelvio Pass, descend into Switzerland, and return to Nauders — three countries, one ride. The Stelvio, already hallowed by decades of Giro d'Italia history, gave the event instant credibility. What began as a local cycling adventure grew steadily through the 2000s and 2010s, propelled by word of mouth in the German-speaking cycling world. By the 2020s, the event had drawn 3,000 riders from 40+ nations annually, selling out within hours — one of the Alps' most in-demand cycling marathons. The 30th edition in 2023 was a milestone celebration. The 33rd edition in 2026 continues the tradition.",
       "notable_moments": [
         "1994: Inaugural Dreiländergiro — Bikeclub Nauders creates the tri-border Alpine marathon concept",
         "Growth from local event to one of Europe's largest cycling marathons — 3,000 riders from 30 nations",
@@ -150,6 +150,16 @@
         "url": "https://www.tyrol.com/activities/events/all-events/dreilaendergiro",
         "category": "reference",
         "label": "Dreiländergiro — Tyrol Tourism"
+      },
+      {
+        "url": "https://www.tour-magazin.de/event/jedermann-rennen/dreilandergiro-2026-nauders/",
+        "category": "editorial",
+        "label": "TOUR Magazin — 2026 preview, ~3,000 riders from 40+ nations confirmed"
+      },
+      {
+        "url": "https://www.dreilaendergiro.at/de/Service/AGB",
+        "category": "official",
+        "label": "Dreiländergiro — Official Terms (organizer BikeClub Nauders, 1,500-per-route cap)"
       },
       {
         "url": "https://www.granfondoguide.com/Events/Index/10231/dreilandergiro",
@@ -239,8 +249,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.dreilaendergiro.at/faq"
+      "verified": "2026-07-24",
+      "source": "https://www.dreilaendergiro.at/faq",
+      "notes": "Re-verified this pass. 2026 edition held June 28 (33rd edition); 2027 edition officially announced for June 27. Corrected tagline/origin_story: field size confirmed still ~3,000 riders but nation count was stale ('30 nations' -> '40+ nations' per TOUR Magazin's 2026 preview). Softened 'one of Europe's largest cycling marathons' to 'one of the Alps' most in-demand cycling marathons' — no source found ranking this event among Europe's largest by field size (3,000 riders is modest next to L'Etape du Tour ~16,000, Maratona dles Dolomites ~9,000); the defensible superlative is the hard 1,500-per-route cap that sells out fast. Full research dump at research-dumps/dreilander-giro.md."
     }
   }
 }

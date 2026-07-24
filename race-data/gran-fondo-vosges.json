@@ -5,10 +5,10 @@
     "display_name": "Gran Fondo Vosges",
     "tagline": "Longest UCI Gran Fondo qualifier in the forested Vosges mountains with relentless climbs",
     "vitals": {
-      "distance_km": 174.9,
-      "distance_mi": 108.7,
-      "elevation_m": 2894,
-      "elevation_ft": 9495.0,
+      "distance_km": 177.5,
+      "distance_mi": 110.3,
+      "elevation_m": 3087,
+      "elevation_ft": 10128.0,
       "location": "La Bresse Hohneck ski station, Vosges, France",
       "location_badge": "Vosges Mountains",
       "country": "France",
@@ -25,10 +25,10 @@
       "route_options": [
         {
           "name": "Granfondo",
-          "distance_km": 175,
-          "distance_mi": 108.7,
-          "elevation_m": 2894,
-          "elevation_ft": 9495,
+          "distance_km": 177.5,
+          "distance_mi": 110.3,
+          "elevation_m": 3087,
+          "elevation_ft": 10128,
           "qualifier": "Men 19-59 for UCI Worlds"
         },
         {
@@ -110,7 +110,7 @@
       "lodging_strategy": "",
       "transport": "La Bresse Hohneck ski station (elev. 1100-1350m), 9km above La Bresse town. Nearest airports: Strasbourg (SXB ~150km), Basel-Mulhouse (BSL ~150km). Family-friendly summer bike park area with kids activities.[1]",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondovosges.com/en/uci-granfondo/"
     },
     "history": {
       "founded": 2021,
@@ -146,6 +146,11 @@
         "url": "https://ucigranfondoworldseries.com/",
         "category": "reference",
         "label": "UCI Gran Fondo World Series"
+      },
+      {
+        "url": "https://granfondovosges.com/en/uci-granfondo/",
+        "category": "official",
+        "label": "Gran Fondo Vosges: UCI Granfondo course page (177.5km, 3,087m gain)"
       }
     ],
     "youtube_data": {
@@ -231,8 +236,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://cyclingclassics.fr/"
+      "verified": "2026-07-24",
+      "source": "https://granfondovosges.com/en/uci-granfondo/",
+      "notes": "2026 (9th edition, 6th consecutive UCI GFWS year) completed May 17. UCI's own event page confirms this is the longest Granfondo in the UCI Gran Fondo World Series. Vitals corrected: 177.5km/3,087m (organizer's current course page) vs prior 174.9km/2,894m. No 2027 date published yet as of Jul 2026. Verified 2026-07-24 via codex gpt-5.6-sol foreground research + curl verification as part of the Roadie Labs debt-sweep."
     }
   }
 }

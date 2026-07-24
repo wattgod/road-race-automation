@@ -5,10 +5,10 @@
     "display_name": "GFNY Bogota",
     "tagline": "The world's highest gran fondo starts inside a salt cathedral 200 meters underground, then climbs into the Colombian Andes above 3,000 meters. Race where Egan Bernal learned to pedal, where oxygen is rationed, and where cycling is a national religion.",
     "vitals": {
-      "distance_km": 121.0,
-      "distance_mi": 75.0,
-      "elevation_m": 2563,
-      "elevation_ft": 8408.0,
+      "distance_km": 101.1,
+      "distance_mi": 62.8,
+      "elevation_m": 2321,
+      "elevation_ft": 7615.0,
       "location": "Zipaquira, Cundinamarca, Colombia",
       "location_badge": "ZIPAQUIRA, COLOMBIA",
       "country": "Colombia",
@@ -106,7 +106,7 @@
     },
     "history": {
       "founded": 2015,
-      "origin_story": "GFNY Colombia launched in April 2015 as one of the first international expansion events for the Gran Fondo New York series, branded as CRM GFNY Colombia. The event was the brainchild of GFNY CEO Uli Fluhme and Colombian organizer Juan Carlos Martinez, who saw an opportunity to bring the world's first competitive gran fondo format to one of cycling's most passionate countries. Colombia — home to Lucho Herrera, Nairo Quintana, and the rising Egan Bernal — had a deep cycling culture but lacked a mass-participation international cycling event. The inaugural edition started in Bogota at 2,640m and climbed to over 3,350m, immediately establishing it as the world's highest gran fondo. Early editions were based around La Cuchilla mountain near Guatavita, with the long route summiting at 3,365m. By the 3rd edition in 2017, the event sold out at 1,800 places and attracted 1,700 starters — making it the largest cycling race in Colombian history at the time. The course evolved in 2023 when the start moved to the Salt Cathedral of Zipaquira, Egan Bernal's hometown, adding a dramatic underground start and shifting the primary climb to El Aguila. The event has run 8+ editions through varying COVID disruptions and continues as a cornerstone of the GFNY World series calendar.",
+      "origin_story": "GFNY Colombia launched in April 2015 as one of the first international expansion events for the Gran Fondo New York series, branded as CRM GFNY Colombia. The event was the brainchild of GFNY CEO Uli Fluhme and Colombian organizer Juan Carlos Martinez, who saw an opportunity to bring the world's first competitive gran fondo format to one of cycling's most passionate countries. Colombia — home to Lucho Herrera, Nairo Quintana, and the rising Egan Bernal — had a deep cycling culture but lacked a mass-participation international cycling event. The inaugural edition started in Bogota at 2,640m and climbed to over 3,350m, immediately establishing it as the world's highest gran fondo. Early editions were based around La Cuchilla mountain near Guatavita, with the long route summiting at 3,365m. By the 3rd edition in 2017, the event sold out at 1,800 places and attracted 1,700 starters — a new participation record for the event at the time. The course evolved in 2023 when the start moved to the Salt Cathedral of Zipaquira, Egan Bernal's hometown, adding a dramatic underground start and shifting the primary climb to El Aguila. The event has run 8+ editions through varying COVID disruptions and continues as a cornerstone of the GFNY World series calendar.",
       "notable_moments": [
         "2015: Inaugural CRM GFNY Colombia — the world's highest gran fondo launches in Bogota, finishing above 3,350m",
         "2017: 3rd edition sells out at 1,800 places; 1,700 starters and 1,378 finishers make it Colombia's largest cycling race",
@@ -327,9 +327,9 @@
     },
     "eligibility": {
       "status": "defunct",
-      "verified": "2026-07-20",
+      "verified": "2026-07-24",
       "source": "https://gfny.com/gfny-is-back-in-colombia/",
-      "notes": "DEFUNCT as Bogota edition. GFNY returns to Colombia with a NEW event, GFNY Villavicencio, Apr 25 2027 — different host city, not a continuation."
+      "notes": "DEFUNCT as Bogota edition. GFNY returns to Colombia with a NEW event, GFNY Villavicencio, Apr 25 2027 — different host city, not a continuation. Re-verified this pass. Corrected origin_story's unsupported '[size claim] largest cycling race in Colombian history' — no source (GFNY's own materials or press) makes that national-history claim; the verifiable framing is 'a new participation record for the event,' matching GFNY's own 'Sets Record With 1700 Riders' reporting. Sol adversarial review caught a second issue: vitals (121km/2,563m) described the pre-2023 Guatavita/La Cuchilla course, while vitals.location already said 'Zipaquira' (the post-2023 course) and route_options already gave the post-2023 Aguila-finish figures (~101km/~2,321m) — origin_story text explicitly documents the 2023 move but vitals hadn't been updated to match. Corrected vitals.distance_km/mi and elevation_m/ft to the current (final, since defunct) 101.1km/2,321m Zipaquira-to-Aguila course, confirmed via a 2023 event listing (ahotu.com/granfondoguide, cross-checked against the pre-existing route_options figures already in the file). Full research dump at research-dumps/gfny-colombia.md."
     }
   }
 }

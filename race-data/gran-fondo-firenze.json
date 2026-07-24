@@ -316,10 +316,14 @@
       }
     },
     "eligibility": {
-      "status": "cancelled",
-      "verified": "2026-07-23",
-      "source": "https://www.cycleclassictours.com/tours/gran-fondo/gran-fondo-florence/",
-      "notes": "Page states there is no Gran Fondo Florence for 2025, indicating a specific cancellation while the organizer site remains active.; last edition evidenced: 2024; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://cycleclassictours.com/tours/gran-fondo/gran-fondo-florence/",
+      "notes": "Tour operator page states explicitly: 'PLEASE NOTE FOR 2025 THERE IS NO GF FLORENCE.' No 2026 edition found on any source checked (organizer site, granfondoguide.com, granfondo.it, Mugello municipal road-closure notices). The official organizer domain granfondofirenze.it now resolves to unrelated third-party betting content, indicating the domain has lapsed/been repurposed rather than merely paused. granfondo.it's own listing marks the event as past with no upcoming edition. Last confirmed edition evidenced in this pass: 2017 (Apr 23, 2017 Mugello road-closure notice); a prior pass noted evidence as recent as 2024 via a different source not re-confirmed here. Status raised from 'cancelled' (single-year) to 'defunct' (multi-year absence + lapsed official domain) this pass; via direct WebSearch/WebFetch research, debt-sweep batch 3, 2026-07-24."
+    },
+    "catalog_flags": {
+      "status_note": "eligibility.status raised to 'defunct' this pass (was 'cancelled') — no 2025 or 2026 edition found in sources checked, official domain lapsed to third-party betting content (inferred from current domain content, not an organizer statement). vitals.date ('Mid-April annually') and biased_opinion/final_verdict text still describe the event in present-tense/recurring terms; left as-is per surgical-fix scope (the 'World Championship wall' claims themselves are verified true — see research-dumps/gran-fondo-firenze.md — this note is about ongoing-recurrence framing only). Flagging for a human call on whether to rewrite to past-tense historical framing or pull from active site display, consistent with other defunct-status profiles in this catalog (e.g. axel-merckx-gran-fondo.json, cappadocia-gran-fondo.json).",
+      "ruled": "2026-07-24 debt-sweep batch 3"
     }
   }
 }

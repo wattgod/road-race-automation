@@ -239,8 +239,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://themajestics.ch/en/"
+      "verified": "2026-07-24",
+      "source": "https://themajestics.ch/en/",
+      "notes": "UCI GFWS qualifier status confirmed current for 2026 under new 'The Majestics' event branding (UCI competition record https://www.uci.org/competition-details/2026/CPT/78749). 2027 UCI sanction not yet published. race-data/the-majestics.json describes the same Villars-sur-Ollon event lineage under a different official_site URL; already flagged there as catalog_flags.duplicate_of gran-fondo-suisse (2026-07-24 dedupe sweep) -- confirmed correct on this pass, this (fuller) profile is the intended canonical one."
     }
   }
 }

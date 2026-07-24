@@ -369,8 +369,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://nyc.gfny.com/register2027/"
+      "verified": "2026-07-24",
+      "source": "https://nyc.gfny.com/register2027/",
+      "notes": "Re-verified this pass. All 4 flagged [world championship] claims TRUE: GFNY's own 'About' page states 'GFNY NYC serves as the GFNY World Championship for the GFNY World Series of races' — official branding, not marketing embellishment ('Michelob ULTRA GFNY World Championship New York City' used consistently across GFNY channels). No text changes needed. HUMAN CALL NEEDED (flagged by sol adversarial review, not auto-corrected): vitals (136.8km/85mi, 1945m/6,380ft) conflicts with vitals.route_options (100mi/8,500ft) and the file's own tagline/one_liner ('100 miles from the George Washington Bridge to Bear Mountain and back'). Sources conflict too — one search summary echoed 137km/85mi/1,945m 'for the 2026 UCI Gran Premio New York City race, which shares the same course with the main GFNY World Championship,' while roadmancycling.com gives 175km/2,300m, and the file's own long-standing tagline says 100mi/~8,500ft. Did not guess at a fix given 3-way disagreement across sources with no clear tiebreaker — needs someone with direct access to the current nyc.gfny.com course page/GPX to resolve. Full research dump at research-dumps/gfny-new-york.md."
     }
   }
 }

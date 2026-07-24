@@ -1,5 +1,11 @@
 # Research Dump: Etape Caledonia
 
+## Addendum (2026-07-24 debt-sweep pass) — date correction + citation floor
+- **File's `vitals.date_specific` was stale/wrong.** File said "2026: May 17"; the official event-info page confirms "ready to ride the 19th edition of Etape Caledonia on **Sunday 10 May 2026**" with itinerary entries for "Sunday 10 May" throughout — https://www.etapecaledonia.com/event-info (curl-verified 200, live-fetched content). **CORRECTED** `vitals.date_specific` to "2026: May 10." This also resolves the discrepancy the prior eligibility-audit pass had already flagged in `eligibility.notes` but not yet applied to vitals.
+- Citations were below the 3-citation floor (2 on file). Added 2 more from this already-extensive Quick Facts dump, both curl-verified 200: the official event-info page (date/logistics source) and the official 2026 registration page.
+- Domain note: file's existing citations use `etapecaledonia.co.uk`; this dump and the official 2026 event pages resolve on `etapecaledonia.com`. Both domains return 200; `.com` is the one carrying live 2026 event content and is what this pass verified directly, so new citations use `.com`.
+- **Sol adversarial review catch:** vitals.distance (80mi/128.7km) contradicted this dump's own Quick Facts (85mi/136.8km, sourced from the official routes page) even though vitals.elevation (1554m/5100ft) already matched the 85-mile figure almost exactly. Corrected distance_km/mi, route_options, tagline, one_liner, and the "80 miles" strength bullet to 85 miles for internal consistency. One unrelated pre-existing "80-mile" reference in `youtube_data.rider_intel.search_text` (raw enrichment substrate, not an editorial claim path) was left untouched as out of scope.
+
 ## Quick Facts
 - 85 miles / 136.8km (flagship route), 1,555m / 5,101ft total climbing
 - Route options: 85 miles (full Etape experience), 55 miles / 88.5km (1,166m / 3,826ft climbing), 40 miles / 64.4km (860m / 2,823ft climbing)

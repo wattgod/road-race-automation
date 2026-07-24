@@ -3,7 +3,7 @@
     "name": "Bike MS: New York City",
     "slug": "bike-ms-nyc",
     "display_name": "Bike MS: New York City",
-    "tagline": "The flagship edition of the world's largest cycling fundraising series. 30 or 50 traffic-free miles around Manhattan — through Battery Park Tunnel, past the Brooklyn Bridge, across the George Washington Bridge — raising money to end multiple sclerosis.",
+    "tagline": "The New York City edition of the world's largest cycling fundraising series. 30 or 50 traffic-free miles around Manhattan — through Battery Park Tunnel, past the Brooklyn Bridge, across the George Washington Bridge — raising money to end multiple sclerosis.",
     "vitals": {
       "distance_km": 80.5,
       "distance_mi": 50.0,
@@ -114,7 +114,7 @@
         "Series milestone: Bike MS riders have raised over $1.4 billion for the National MS Society since 1980",
         "2026: Bike MS NYC scheduled for October 18 at Pier 76, Manhattan"
       ],
-      "reputation": "The flagship urban edition of the world's largest cycling fundraising series. Where Manhattan's highways go car-free and thousands ride together to end multiple sclerosis."
+      "reputation": "The New York City edition of the world's largest cycling fundraising series. Where Manhattan's highways go car-free and thousands ride together to end multiple sclerosis."
     },
     "biased_opinion": {
       "verdict": "The Cause",
@@ -420,8 +420,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://events.nationalmssociety.org/2778"
+      "verified": "2026-07-24",
+      "source": "https://events.nationalmssociety.org/2778",
+      "notes": "Size claim checked (2026-07-24): National MS Society's own 'About Bike MS' page (events.nationalmssociety.org, fuseaction=cms.page&id=1227) states 'Bike MS raises more money than any other cycling series for any other cause' — substantively supports 'world's largest cycling fundraising series' (tagline, one_liner, history.origin_story/reputation). No source found calling the NYC edition specifically the 'flagship' edition — corrected tagline and history.reputation from 'flagship edition/urban edition' to 'New York City edition' since that superlative was unsupported. NYC is one of ~70 annual Bike MS events nationwide per the org's own origin-story figures."
     }
   }
 }

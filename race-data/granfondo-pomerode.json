@@ -95,7 +95,7 @@
     },
     "history": {
       "founded": null,
-      "origin_story": "UCI Gran Fondo Brasil began in Pomerode in 2023 and moved to Timbó for its 2026 edition. It is Brazil's official UCI Gran Fondo World Series qualifier, bringing UCI-sanctioned age-group racing to the Vale Europeu Catarinense.",
+      "origin_story": "UCI Gran Fondo Brasil began in Pomerode in 2023 and moved to nearby Timbó for its November 9, 2025 (third) edition. It is Brazil's official UCI Gran Fondo World Series qualifier, bringing UCI-sanctioned age-group racing to the Vale Europeu Catarinense.",
       "notable_moments": [
         "2023: Inaugural edition launched as South America's first UCI Gran Fondo World Series qualifier",
         "2024: Second edition reinforced event's status as flagship South American gran fondo",
@@ -317,6 +317,10 @@
       "status": "active",
       "verified": "2026-07-17",
       "source": "https://ucigranfondobrasil.com.br"
+    },
+    "catalog_flags": {
+      "taxonomy_note": "Slug (granfondo-pomerode) reflects the race's original host city, Pomerode. Per a UCI Gran Fondo World Series calendar-updates article dated 9 July 2025, the race relocated to nearby Timbó, Santa Catarina starting with its November 9, 2025 edition (the article: 'UCI Granfondo Brazil who took place in Pomerode in the past two years will relocate to the nearby city of Timbo on November 9th'). race.display_name/vitals.location already correctly reflect Timbó. Slug left unchanged to avoid breaking existing URLs.",
+      "ruled": "2026-07-24 debt-sweep batch 5"
     }
   }
 }

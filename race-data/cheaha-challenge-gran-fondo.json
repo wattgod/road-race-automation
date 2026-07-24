@@ -155,6 +155,11 @@
         "url": "https://northsouth.live/event/cheaha-challenge-gran-fondo",
         "category": "results",
         "label": "Cheaha Challenge Gran Fondo | Raceatlas"
+      },
+      {
+        "url": "https://www.cheahachallenge.com/Race/CheahaChallengeGranFondo/Page/ucigfws",
+        "category": "official",
+        "label": "Cheaha Challenge — UCI Gran Fondo World Series Qualifying Info"
       }
     ],
     "youtube_data": {
@@ -328,8 +333,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.cheahachallenge.com/"
+      "verified": "2026-07-24",
+      "source": "https://www.cheahachallenge.com/",
+      "notes": "UCI qualifier claim reconfirmed 2026-07-24: official site's dedicated UCI GFWS page (cheahachallenge.com/Race/CheahaChallengeGranFondo/Page/ucigfws, curl-verified live, title 'Cheaha Challenge Gran Fondo: UCI Gran Fondo World Series Qualifying Info') and the UCI GFWS calendar itself (Cheaha Challenge Granfondo, Jacksonville AL, Sat 16 May 2026 - 17 May 2026) both confirm current UCI Gran Fondo World Series qualifying status. should_you_race's 'UCI qualifier ambitions' claim is TRUE — no correction needed."
     }
   }
 }

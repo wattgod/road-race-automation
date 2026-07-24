@@ -5,10 +5,10 @@
     "display_name": "In Flanders Fields Cyclo - Wevelgem",
     "tagline": "Ride the legendary Flemish classic's course through war history and cobbled climbs",
     "vitals": {
-      "distance_km": 65.0,
-      "distance_mi": 40.4,
-      "elevation_m": 2901350.0,
-      "elevation_ft": 951.0,
+      "distance_km": 225.0,
+      "distance_mi": 139.8,
+      "elevation_m": 1100,
+      "elevation_ft": 3609.0,
       "location": "Wevelgem, West Flanders, Belgium",
       "location_badge": "Wevelgem, Belgium",
       "country": "Belgium",
@@ -17,12 +17,18 @@
       "field_size": null,
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
+      "entry_fee": "EUR25 (70km) to EUR45 (225km), tiered by distance, plus a EUR5 refundable ID-tag deposit",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "225 km — +1,100m gain — flagship route, crosses into France, Plugstreets unpaved sectors, cobbles",
+        "150 km — +1,100m gain",
+        "125 km — +900m gain",
+        "95 km — +600m gain",
+        "70 km — +340m gain — shortest route"
+      ]
     },
     "climate": {
       "primary": "Hot",
@@ -115,7 +121,7 @@
     "final_verdict": {
       "score": "69/100",
       "one_liner": "A prestige-laden, historically rich mirror of a UCI WorldTour classic with multiple distance options and genuine Flemish character—ideal for riders seeking authentic spring classic experience.",
-      "should_you_race": "Gent-Wevelgem Cyclo delivers what few sportives can: direct access to a legendary professional race's course, complete with the Kemmelberg's infamous cobbles, Plugstreets' technical unpaved sections, and the emotional weight of riding through Ypres's Menin Gate. The 2026 edition's alignment with the pro race's new Middelkerke-to-Wevelgem route ensures you're riding current UCI WorldTour terrain. Multiple distance options (65–220 km) make it accessible to various fitness levels, though even the shortest routes include serious climbing and technical descents. Late March conditions are typically cool, wet, and windy—classic Flemish spring racing weather that adds authenticity but demands preparation. At an estimated €47–60 entry with 5,000 participants (40% international), it offers strong community and prestige without premium pricing. Best suited for riders who value cycling history, don't mind suffering on cobbles, and want to experience the spring classics' soul rather than chase personal records.",
+      "should_you_race": "Gent-Wevelgem Cyclo delivers what few sportives can: direct access to a legendary professional race's course, complete with the Kemmelberg's infamous cobbles, Plugstreets' technical unpaved sections, and the emotional weight of riding through Ypres's Menin Gate. The 2026 edition's alignment with the pro race's new Middelkerke-to-Wevelgem route ensures you're riding current UCI WorldTour terrain. Multiple distance options (70–225 km) make it accessible to various fitness levels, though even the shortest routes include serious climbing and technical descents. Late March conditions are typically cool, wet, and windy—classic Flemish spring racing weather that adds authenticity but demands preparation. At tiered entry fees of €25–45 depending on distance, with an estimated 5,000 participants (40% international), it offers strong community and prestige without premium pricing. Best suited for riders who value cycling history, don't mind suffering on cobbles, and want to experience the spring classics' soul rather than chase personal records.",
       "alternatives": ""
     },
     "citations": [
@@ -345,8 +351,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://inflandersfieldscyclo.be/en/"
+      "verified": "2026-07-24",
+      "source": "https://inflandersfieldscyclo.be/en/",
+      "notes": "Re-verified this pass. [UCI affiliation] claims TRUE: the pro Gent-Wevelgem ('In Flanders Fields — From Middelkerke to Wevelgem') was the 12th round of the 2026 UCI WorldTour, all 18 WorldTeams + 7 ProTeams starting — no text change needed. Fixed a stale/broken vitals block: distance_km/mi (65.0/40.4, no longer an offered distance) and elevation_m (2,901,350 — data-entry error) corrected to the flagship 225km route (1,100m gain) per the official 2026 site's 5-distance lineup (70/95/125/150/225km); added route_options. Corrected should_you_race's stale '€47-60 entry' and '65-220km' range to current tiered pricing (€25-45) and current distance range (70-225km). Full research dump at research-dumps/gent-wevelgem-cyclo.md."
     }
   }
 }

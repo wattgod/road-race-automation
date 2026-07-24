@@ -149,6 +149,11 @@
         "label": "Five Boro Bike Tour — Wikipedia"
       },
       {
+        "url": "https://www.granfondoguide.com/Events/Index/234/five-boro-bike-tour",
+        "category": "reference",
+        "label": "Gran Fondo Guide — direct source for \"America's largest cycling event\" claim"
+      },
+      {
         "url": "https://www.bike.nyc/about/our-story/",
         "category": "official",
         "label": "Our Story — Bike New York"
@@ -383,9 +388,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.nyc.gov/assets/cecm/downloads/pdf/five-boro-street-closures-doc-2026.pdf",
-      "notes": "2026 edition was scheduled and reported to take place on May 3 in New York City; no rebrand or cancellation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 edition was scheduled and reported to take place on May 3 in New York City; no rebrand or cancellation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit. Re-verified this pass: 'largest cycling event in the United States' claim (tagline, final_verdict.one_liner) is TRUE, directly sourced to granfondoguide.com's own ranking language, not fabricated. No text changes needed. Full research dump at research-dumps/five-boro-bike-tour.md."
     }
   }
 }
