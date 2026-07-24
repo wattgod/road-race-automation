@@ -5,16 +5,16 @@
     "display_name": "L'Ariégeoise Cyclosportive",
     "tagline": "",
     "vitals": {
-      "distance_km": 177.0,
-      "distance_mi": 110.0,
-      "elevation_m": 4877,
-      "elevation_ft": 16000.0,
+      "distance_km": 182.0,
+      "distance_mi": 113.1,
+      "elevation_m": 4150,
+      "elevation_ft": 13615.0,
       "location": "Tarascon-sur-Ariège, France",
       "location_badge": "Tarascon-sur-Ariège, France",
       "country": "France",
-      "date": "2026: June 27",
+      "date": "2026: June 27 (planned route; 2026 race-day route was shortened to 124km/2,850m due to extreme heat — see eligibility notes)",
       "date_specific": "2026: June 27",
-      "field_size": "5000-5300",
+      "field_size": "5,300 registration ceiling, not a confirmed starter count (30th edition, 100,000+ cumulative starters over its history)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,37 +70,74 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The planned flagship route runs from Tarascon-sur-Ariège to Auzat through the wooded, often narrow Ariège Pyrenees, climbing the Col du Portel via Péguère, Col de la Core, Col de Latrape, Col d'Agnes, and Port de Lers — a course defined by cumulative climbing and repeated valley-to-pass transitions rather than extreme altitude. Weather can materially rewrite the event: in 2026, extreme heat forced the flagship onto the shorter 124 km Mountagnole course, dropping Core and Latrape and leaving the Portel/Péguère and Agnes-Lers sequences as the principal tests. A separate non-competitive XXL ultra (298 km/7,500 m, run over two days) exists alongside the main timed field and should not be conflated with it.",
+      "signature_challenge": "Col d'Agnes — 10 km at 8.2% average, a sustained first-category-grade effort that survives even when the flagship route is shortened.",
+      "suffering_zones": [
+        "Col du Portel via Péguère — almost 32 km of continuous net ascent from Foix, long rather than uniformly steep, with Péguère providing the sting",
+        "Col d'Agnes — 10 km at 8.2% average, a sustained first-category effort",
+        "Agnes-Port de Lers sequence — only a short recovery before the Port de Lers counter-climb and descent toward Vicdessos",
+        "Plateau de Beille (XXL only) — approximately 15.8 km at 7.9%, one of the ultra's historical marquee finishing climbs"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Book early in Tarascon-sur-Ariège; campsites, hotels, and guesthouses in prehistoric valley area.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.cyclosport-ariegeoise.com/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
+      "origin_story": "Thirty editions deep as of 2026, with over 100,000 cumulative starters across its history — real institutional depth for a regional Pyrenean cyclosportive.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Pyrenean Institution, Vulnerable to Its Own Numbers",
+      "summary": "Thirty editions and 100,000+ cumulative starters give L'Ariégeoise genuine institutional depth in the French Pyrenees, with a large registration ceiling and route choice spanning the 298 km non-competitive XXL down to a 74 km entry option. But 2026 exposed how much the event bends to conditions: extreme heat forced the flagship off its planned 182 km/4,150 m course and onto the 124 km Mountagnole route, dropping the Core and Latrape climbs entirely. Official data hygiene doesn't help — the same regulations document lists conflicting distance figures for the flagship route, and there's no verified, consolidated 2026 starter count to confirm the oft-repeated '5th largest gran fondo in France' claim, which reads as promotional language rather than a sourced ranking.",
+      "strengths": [
+        "Thirty editions and 100,000+ cumulative starters — real institutional depth, not a new event borrowing prestige",
+        "A large registration ceiling (5,300) and extensive route choice from a 74 km entry option up to the 298 km non-competitive XXL ultra",
+        "Authentic, less commercial-feeling Pyrenean mountain roads with repeated major passes rather than a single showcase climb",
+        "Strong, well-spaced climbing on the core route — Col du Portel/Péguère and Col d'Agnes both deliver genuine Pyrenean difficulty"
+      ],
+      "weaknesses": [
+        "Weather can materially rewrite the event — in 2026 the flagship lost 58 km when heat forced a shift to the shorter Mountagnole route",
+        "Official route data is internally inconsistent, with different figures for the flagship distance appearing across the organizer's own pages",
+        "\"France's 5th-largest gran fondo\" is unverifiable — no current independent national participation table supports an exact ranking, and no consolidated 2026 starter total was published",
+        "Roads remain open to traffic; riders must obey the highway code, adding real risk on descents and in the bunch",
+        "The XXL is a non-competitive, semi-autonomous ultra, not a conventional timed gran fondo — it shouldn't be conflated with the main mass-start field"
+      ],
+      "bottom_line": "A genuinely deep-rooted Pyrenean cyclosportive with real climbing and real scale — just don't assume the advertised course or field-size superlatives will hold on any given year."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Pyrenean climbing showcase, France's 5th largest gran fondo.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes for genuine Pyrenean climbing with real institutional history. Check the current-year route before you commit — the flagship distance can and does change with conditions.",
+      "alternatives": "For a similarly deep-rooted Pyrenean cyclosportive with a more stable advertised course, compare against other long-running French Pyrenees events."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.cyclosport-ariegeoise.com/ariegeoise-cyclosportive/",
+        "category": "official",
+        "label": "Official Event Page"
+      },
+      {
+        "url": "https://www.cyclosport-ariegeoise.com/communique-adaptation-de-lepreuve/",
+        "category": "official",
+        "label": "Official Heat-Adaptation Notice, 2026"
+      },
+      {
+        "url": "https://www.cyclosport-ariegeoise.com/ariegeoise-cyclosportive/reglement/",
+        "category": "official",
+        "label": "Official Regulations"
+      },
+      {
+        "url": "https://d3g42de5vbfx19.cloudfront.net/races/roadbooks/2024_Tour_de_France2.pdf",
+        "category": "reference",
+        "label": "Official Tour de France Roadbook — Plateau de Beille Climb Data"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "L'Ariégeoise Cyclosportive gran fondo cycling Tarascon-sur-Ariège",
@@ -189,9 +226,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.cyclosport-ariegeoise.com/ariegeoise-cyclosportive/reglement/",
-      "notes": "Road cyclosportive in Tarascon-sur-Ariège; 2026 edition is announced for 27 June 2026, with registrations/open status and no discontinuation signal found.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "30th edition completed 27 June 2026, but extreme heat forced the flagship route from the planned 182km/4,150m onto the shorter 124km Mountagnole course on race day. Field size in vitals is the registration ceiling, not a verified starter count — no consolidated 2026 total was published."
     }
   }
 }

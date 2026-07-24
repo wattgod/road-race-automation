@@ -5,21 +5,21 @@
     "display_name": "Tour de Suisse Challenge",
     "tagline": "",
     "vitals": {
-      "distance_km": 1013.9,
-      "distance_mi": 630.0,
-      "elevation_m": null,
-      "elevation_ft": 0.0,
-      "location": "Various, Switzerland",
+      "distance_km": 1013.0,
+      "distance_mi": 629.6,
+      "elevation_m": 18790,
+      "elevation_ft": 61647.0,
+      "location": "Various, Switzerland (last confirmed: full pro Tour de Suisse route, 2023)",
       "location_badge": "Various, Switzerland",
       "country": "Switzerland",
-      "date": "2026: June TBD",
-      "date_specific": "2026: June 11 (start)",
-      "field_size": "TBD",
+      "date": "No current edition — last confirmed 11-18 June 2023",
+      "date_specific": "No 2026 edition found",
+      "field_size": "Not published for the last confirmed (2023) edition",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
-      "feed_zones": "TBD",
-      "cutoff_time": "TBD",
+      "feed_zones": null,
+      "cutoff_time": null,
       "lat": null,
       "lng": null,
       "route_options": []
@@ -70,8 +70,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "IMPORTANT — this profile describes a defunct amateur program. 'Tour de Suisse Challenge' was launched in 2015 as mass-participation rides on that year's pro Tour de Suisse stages, then reformatted in 2021 as the 'NEW Tour de Suisse Challenge' offering four or all eight professional stages on the same routes and days as the pros (the 2021 pro route totaled 1,013 km, close to the 1,014 km on file). The last verifiable bookable edition ran 11-18 June 2023. As of 2026, the organizer's official portfolio (Cycling Unlimited) lists the pro race, TdS Explorer (a separate, non-competitive self-paced checkpoint activity), and Alpenbrevet — but no Tour de Suisse Challenge. The former /challenge URL on tourdesuisse.ch now carries no event details or registration.",
+      "signature_challenge": null,
       "suffering_zones": []
     },
     "logistics": {
@@ -82,25 +82,56 @@
       "official_site": ""
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 2015,
+      "origin_story": "Launched in 2015 as mass-participation amateur rides on that year's professional Tour de Suisse stages; reformatted in 2021 as the 'NEW Tour de Suisse Challenge' with four- or eight-stage options mirroring the pro route. Last confirmed edition ran 11-18 June 2023. No 2024, 2025, or 2026 edition has been found.",
+      "notable_moments": [
+        "2015: launched as amateur rides shadowing that year's pro Tour de Suisse stages",
+        "2021: reformatted as 'NEW Tour de Suisse Challenge,' 1,013 km across the full pro route",
+        "2023: last confirmed edition, 11-18 June, four or eight stages",
+        "2024-2026: no confirmed edition; organizer's current portfolio lists TdS Explorer instead"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
+      "verdict": "Discontinued",
+      "summary": "There is no current, bookable 'Tour de Suisse Challenge' to rate. This was a real amateur program — riding the current year's professional Tour de Suisse stages on the same roads, same days — that ran from 2015 through at least 2023, when it offered a four- or eight-stage format covering the pro route (a participant recorded 1,131 km and 18,790 m on the eight-stage version that year). But there is no evidence of a 2024, 2025, or 2026 edition: the organizer's current official portfolio (Cycling Unlimited) lists the professional Tour de Suisse, TdS Explorer, and Alpenbrevet, with no Tour de Suisse Challenge among them. The former registration URL on tourdesuisse.ch now shows no event details. This profile's own YouTube enrichment data was also misattributed — the videos on file are entirely about a different, still-active event, 'Tour des Stations,' a separate Valais ride through Swiss Alps passes with its own organizer, unrelated to the Tour de Suisse.",
       "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "weaknesses": [
+        "This event does not currently exist and should not be presented to riders as a bookable amateur cycling challenge",
+        "No official or registration listing has been found for any edition after 2023",
+        "The organizer's current Tour-linked amateur product, TdS Explorer, is a self-paced, non-competitive checkpoint activity, not a like-for-like replacement",
+        "This profile's YouTube enrichment data is misattributed to a different, unrelated event ('Tour des Stations')"
+      ],
+      "bottom_line": "Inactive — no edition has been found since 2023, and the organizer's current portfolio doesn't include it. That's not the same as a formal permanent cancellation, but treat it as unavailable until a new edition is announced. If you want an amateur ride linked to Tour de Suisse territory today, look at the organizer's current TdS Explorer product — it's a different, non-competitive format, not a revival of this challenge."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Epic amateur multi-day road challenge shadowing the revamped Tour de Suisse pros.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "No — this event does not currently exist. Its last confirmed edition ran in 2023.",
+      "alternatives": "TdS Explorer (current organizer product, self-paced non-competitive checkpoints) or Tour des Stations (a separate, active Valais multi-distance event through Swiss Alps passes) — neither is a direct revival of this event."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.tourdesuisse.ch/die-streckenfuhrung-der-tour-de-suisse-2021/",
+        "category": "official",
+        "label": "Official 2021 'NEW Tour de Suisse Challenge' Announcement"
+      },
+      {
+        "url": "https://www.radsport-news.com/freizeit/freizeitnews_133506.htm",
+        "category": "media",
+        "label": "2023 Event Notice — Last Confirmed Edition"
+      },
+      {
+        "url": "https://cycling-unlimited.ch/en/",
+        "category": "official",
+        "label": "Current Organizer Portfolio (No Tour de Suisse Challenge Listed)"
+      },
+      {
+        "url": "https://www.tourdesuisse.ch/en/explorer/",
+        "category": "official",
+        "label": "TdS Explorer — Current Amateur Tour-Linked Product"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Tour de Suisse Challenge gran fondo cycling Various",
@@ -419,10 +450,14 @@
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://www.tourdesuisse.ch/en/",
-      "notes": "Search results only cover the UCI WorldTour pro race Tour de Suisse, not a mass-participation road event called 'Tour de Suisse Challenge', so its current status cannot be determined.; via sonar-pro eligibility_audit"
+      "status": "defunct",
+      "verified": "2026-07-24",
+      "source": "https://cycling-unlimited.ch/en/",
+      "notes": "Last confirmed bookable edition ran 11-18 June 2023 (four/eight-stage format shadowing the pro Tour de Suisse). No 2024, 2025, or 2026 edition found; the organizer's current official portfolio lists TdS Explorer instead, a different non-competitive product. The former registration URL (tourdesuisse.ch/challenge) now shows no event details."
+    },
+    "catalog_flags": {
+      "status_note": "Defunct amateur program (last edition 2023); no current 2026 event to score. This profile's youtube_data (Furka/Nufenen/San Gottardo videos) is misattributed to a different, still-active event called 'Tour des Stations' — a separate Valais multi-distance ride with its own organizer, unrelated to Tour de Suisse. Recommend a human decide whether this profile should be removed from the active catalog entirely, since Roadie Labs is a database of current, bookable events and this one has had no edition in three years.",
+      "ruled": "2026-07-24 editorial wave 2"
     }
   }
 }

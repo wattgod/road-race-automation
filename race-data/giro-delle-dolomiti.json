@@ -5,21 +5,21 @@
     "display_name": "Giro delle Dolomiti",
     "tagline": "",
     "vitals": {
-      "distance_km": 479.6,
-      "distance_mi": 298.0,
-      "elevation_m": 9000,
-      "elevation_ft": 29527.0,
+      "distance_km": 345.8,
+      "distance_mi": 214.9,
+      "elevation_m": 9524,
+      "elevation_ft": 31247.0,
       "location": "Bolzano, South Tyrol, Italy",
       "location_badge": "Bolzano, Italy",
       "country": "Italy",
-      "date": "2026: July 13",
-      "date_specific": "2026: July 13",
-      "field_size": "up to 600 athletes per stage",
+      "date": "2026: July 13-17",
+      "date_specific": "2026: July 13-17",
+      "field_size": "400 registrations per stage",
       "start_format": null,
       "registration": null,
-      "entry_fee": null,
-      "feed_zones": "feed zones on each stage (e.g., San Cipriano, Passo Costalunga)",
-      "cutoff_time": "no overall time limit; group riding pace with timed sections",
+      "entry_fee": "EUR 550-650 for the 5-stage entry, excluding accommodation, travel, and meals outside the event",
+      "feed_zones": "Feed stops and meals on each of the 5 stages",
+      "cutoff_time": "No overall time limit; only the timed uphill Crono per stage counts toward classification, ridden as an escorted convoy otherwise",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -70,37 +70,74 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A five-day amateur road-cycling tour based around Bolzano that combines controlled-speed group riding with one traffic-free timed uphill Crono per stage — only those climbing segments count toward the daily and overall classification, so it rides more like a competitive cycling holiday than a conventional stage race. The 2026 route covered 345.8 km and 9,524 m across five stages of very different character, from a short 20.5 km transfer stage to the 107 km Sellaronda stage crossing Passo Sella, Pordoi, Campolongo and Gardena. Riders regroup around feed stops and cover the untimed portions in an escorted convoy, trading full-distance racing for guaranteed access to famous Dolomite passes.",
+      "signature_challenge": "The Sellaronda stage (107 km, 3,102 m) — the event's biggest day, crossing four Giro d'Italia-storied Dolomite passes (Sella, Pordoi, Campolongo, Gardena) in one loop, with the timed Colfosco-Passo Gardena climb (6.3 km/439 m) as the classified test.",
+      "suffering_zones": [
+        "Passo Nigra Crono (Stage 1) — 6.9 km/542 m with ramps to 13%, the event's opening timed test",
+        "Sellaronda (Stage 2) — Passo Sella, Pordoi, Campolongo and Gardena in one 107 km/3,102 m day, the queen stage by scale",
+        "Passo Rolle/San Pellegrino Crono (Stage 4) — 13.4 km/550 m timed to Passo Rolle, followed later by roughly 760 m more to Passo San Pellegrino",
+        "Terlano-Frassineto Crono (Stage 5) — 9 km/789 m closing climb, nearly 8.8% average, the event's final classified test"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Bolzano base with hotels; bike-friendly options in South Tyrol; multi-day event allows central stay.",
+      "lodging_strategy": "Bolzano base with hotels; bike-friendly options in South Tyrol; multi-day event allows central stay. Stage 2 starts at Ponte Gardena and Stage 4 at Predazzo, not Bolzano — an organizer bus between Bolzano and Predazzo costs an additional EUR 30.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.girodolomiti.com/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 1977,
+      "origin_story": "Organized by a Bolzano-based association founded more than 45 years ago; 2026 marked the 49th edition, one of the longest-running amateur multi-day road tours in the Dolomites.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Cycling Holiday Wearing a Race's Clothes",
+      "summary": "The 49th Giro delle Dolomiti (13-17 July 2026) is a genuinely unusual format: five days of controlled-pace group riding through South Tyrol's most famous passes, but only one traffic-free uphill Crono per stage actually counts for time. That means the overall classification is the sum of five short climbing efforts, not a continuous race — riders get the Sellaronda, Passo Rolle, and San Pellegrino under their wheels without needing to hold a race pace for 345.8 km. It's 49 editions deep (2020 cancelled due to COVID-19, resuming in 2021), runs on roughly 60 volunteers, and includes meals, mechanical support, luggage transfer, and massage — real infrastructure, not just a start list. But it isn't cheap (EUR 550-650 for the entry alone) and it isn't hub-and-spoke: stage starts shift between Bolzano, Ponte Gardena, and Predazzo, adding logistics most single-town gran fondos don't have.",
+      "strengths": [
+        "49 editions since 1977 (2020 was cancelled due to COVID-19, resuming in 2021) and genuine community infrastructure — roughly 60 volunteers, food stops, medical/mechanical support, luggage transfer",
+        "Access to iconic Dolomite passes (Sella, Pordoi, Campolongo, Gardena, Rolle, San Pellegrino) without needing to hold race pace across the untimed sections",
+        "A real international, sociable atmosphere distinct from a full-gas competitive stage race",
+        "Five varied stages spanning 20.5 to 107 km keep any single day from being unmanageable"
+      ],
+      "weaknesses": [
+        "Not a true stage race — the 'GC' is only the sum of five short timed Cronos, which will disappoint riders expecting continuous racing over 345.8 km",
+        "Expensive for a week: EUR 550-650 for the entry alone, before accommodation, travel, and meals outside the event",
+        "Logistics are not centralized in Bolzano — Stage 2 starts at Ponte Gardena and Stage 4 at Predazzo, with a paid EUR 30 bus transfer between Bolzano and Predazzo",
+        "Field is capped at 400 per stage and past that, priority goes to riders from Belluno/Trento/Bolzano and 10+-time returnees — a real barrier for first-time international entrants",
+        "Mid-July heat is a documented issue; past participants have described the event in terms of 'heat battles,' and a 400-rider controlled convoy mixing ability levels has produced reports of stressful braking and erratic descending"
+      ],
+      "bottom_line": "If you want the Dolomites' signature passes with organized support and don't need a continuous race clock, this delivers a well-run week. If you want a true multi-day stage race decided over full distance, the timed-Crono format will feel like a compromise."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Historic 5-day Dolomites road epic blending social rides with brutal timed climbs.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a supported week accessing the Sellaronda, Passo Rolle, and San Pellegrino without racing full distance. Skip it if you want a continuous, fully timed stage race — only short uphill Cronos count here.",
+      "alternatives": "For a genuine timed multi-stage road race in the Dolomites region, look at shorter single-day granfondos on the same passes (e.g., Maratona dles Dolomites for a one-day timed event over similar terrain)."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.girodolomiti.com/giro-2026",
+        "category": "official",
+        "label": "Official 2026 Event Page and Rules"
+      },
+      {
+        "url": "https://www.girodolomiti.com/faq",
+        "category": "official",
+        "label": "Official FAQ — Format, Costs and Logistics"
+      },
+      {
+        "url": "https://www.girodolomiti.com/location",
+        "category": "official",
+        "label": "Official Post-Event News, 2026"
+      },
+      {
+        "url": "https://youmecycling.com/en/rides/giro-delle-dolomiti-the-bike-race-in-the-dolomites/",
+        "category": "community",
+        "label": "Participant Account — Peloton, Heat and Timed-Climb Experience"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Giro delle Dolomiti gran fondo cycling Bolzano",
@@ -216,9 +253,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://www.girodolomiti.com/giro-2026",
-      "notes": "Mass-participation amateur road stage event in Bolzano with the 49th edition scheduled and registration open for 13–17 July 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "49th edition completed as scheduled 13-17 July 2026; organizer reported winners and posted post-event coverage. Not a continuous stage race — classification is the sum of one timed uphill Crono per stage; vitals corrected from a single-day 479.6km/9000m guess to the actual 5-stage total of 345.8km/9,524m."
     }
   }
 }

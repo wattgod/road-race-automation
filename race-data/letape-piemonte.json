@@ -133,6 +133,11 @@
       "verified": "2026-07-23",
       "source": "https://letapeitaly.it/en/rules-granfondo/",
       "notes": "Official 2026 granfondo in Entracque on 31 May with registrations open; date on file as May TBD is now confirmed as May 31.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "letape-italy-piemonte",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT as letape-italy-piemonte.json: identical official site (letapeitaly.it/en/letape-piemonte-homepage-2/), identical location (Entracque, Cuneo, Piemonte). letape-italy-piemonte.json is the researched profile with confirmed 2026 vitals (49.9km/795m, the actual inaugural 2026 accessibility-focused route) and full editorial; this profile's vitals (130.4km/2,286m) do not match the researched course and appear to be inherited placeholder figures, not this event's real course."
     }
   }
 }

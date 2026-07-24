@@ -5,16 +5,16 @@
     "display_name": "Mt. Fuji Hill Climb",
     "tagline": "",
     "vitals": {
-      "distance_km": 24.1,
-      "distance_mi": 15.0,
-      "elevation_m": 1402,
-      "elevation_ft": 4600.0,
+      "distance_km": 24.0,
+      "distance_mi": 14.9,
+      "elevation_m": 1255,
+      "elevation_ft": 4118.0,
       "location": "Fujiyoshida, Yamanashi, Japan",
       "location_badge": "Fujiyoshida, Japan",
       "country": "Japan",
-      "date": "First Sunday of June or TBD",
+      "date": "2026: June 7 (annual, typically early June)",
       "date_specific": "June 7, 2026",
-      "field_size": null,
+      "field_size": "9,492 entered, 8,810 started, 8,731 finished (2026)",
       "start_format": null,
       "registration": "https://www.fujihc.jp/",
       "entry_fee": null,
@@ -70,16 +70,18 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "Riders leave Fuji Hokuroku Park (1,035 m), complete an untimed parade approach to the timing start near the Tainai intersection (1,050 m), then climb the paved Fuji Subaru Line continuously to Mount Fuji's 5th Station at 2,305 m — 1,255 timed meters over 24 km on broad, moderate gradients rather than alpine-style walls. The Subaru Line is fully closed to ordinary traffic during the event, an unusually clean mass-participation climbing course by hill-climb standards. Only the ascent is timed; there is no competitive descent, and riders return in controlled groups afterward.",
+      "signature_challenge": "The Mountain Split — a separately timed, steep one-kilometer sector at 19-20 km carrying the course's hardest gradients, arriving after riders have already spent over an hour above 2,000 m.",
       "suffering_zones": [
-        "Hypoxic Burn: Above 2000m on upper Fuji Subaru Line, oxygen debt compounds with 7-9% ramps. Legs fill with lactate amid thinning air and wind gusts.",
-        "Treeline Break: Mid-climb at 1700-1900m where forest ends and exposure begins. Steady 6% erodes power as mental fatigue from endless switchbacks peaks."
+        "Opening to 1st Station — a long, comparatively steep opening where overpacing can ruin the second half",
+        "19-20 km Mountain Split — a separately timed, steep 1 km sector with the course's hardest gradients",
+        "Upper mountain (from roughly 18 km) — riders are above 2,000 m for the final stretch, adding reduced-oxygen strain after an hour-plus of climbing",
+        "Final 200 m — a conspicuous steep finishing ramp after a faster, gentler upper approach"
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "",
+      "lodging_strategy": "Mandatory prior-day registration, limited direct transit, remote parking, and early starts effectively require a multi-day trip for international riders.",
       "transport": "",
       "food": "",
       "official_site": "https://www.fujihc.jp/"
@@ -91,24 +93,56 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuine National Benchmark, One Ascent Only",
+      "summary": "The 22nd Mt. Fuji Hill Climb (7 June 2026) is a fully closed-road climb up the paved Fuji Subaru Line to the 2,305 m 5th Station — 1,255 timed meters over 24 km at a broad, moderate 5.2% average with a 7.8% max, not an alpine-style wall. With 8,810 starters in 2026, it's one of Japan's largest hill climbs and a recognized national benchmark with finisher-ring time standards. But it's a one-day, ascent-only effort: there's no competitive descent, riders return in controlled groups afterward (with a real cold-wait risk at 2,305 m), and international logistics — mandatory prior-day registration, bike transport, limited transit, early starts — effectively require a multi-day trip for a single climb.",
+      "strengths": [
+        "World Heritage Mount Fuji setting, forest giving way to views toward the Minami Alps",
+        "Exceptional scale and domestic prestige — 8,810 starters in 2026, the event's second-highest total on record",
+        "Fully closed toll road with broad pavement and no opposing traffic — a clean climbing experience",
+        "Recognizable time standards and finisher-ring system make it a genuine national climbing benchmark"
+      ],
+      "weaknesses": [
+        "Weather exposure at altitude — the 5th Station averages roughly 6°C in early June, and 2026 began under cloud with rain forecast",
+        "The 2,305 m finish can noticeably affect unacclimatized riders, though it's below the altitude where serious acute mountain sickness typically becomes common",
+        "No competitive descent — only the ascent is timed, and riders return in controlled groups with a possible cold wait",
+        "International logistics are real: mandatory prior-day registration, bike transport, remote parking, and early starts effectively require a multi-day trip",
+        "A single annual one-day effort with little flexibility for poor weather, despite the surrounding expo and registration day"
+      ],
+      "bottom_line": "A genuinely prestigious, well-organized closed-road climb and a real Japanese cycling benchmark — just know it's one ascent, one day, with real trip logistics for anyone traveling internationally."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Brutal paved assault up Mt. Fuji—Japan's signature sufferfest.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuinely prestigious closed-road climb and don't mind a single ascent-only effort with real trip logistics. Plan for a multi-day visit, not a fly-in-fly-out race weekend.",
+      "alternatives": "For a comparable closed-road hill climb with a shorter international-logistics footprint, look at established European hill climbs with easier multi-modal access."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.fujihc.jp/course/",
+        "category": "official",
+        "label": "Official Course Page"
+      },
+      {
+        "url": "https://www.fujihc.jp/outline/",
+        "category": "official",
+        "label": "Official Event Outline"
+      },
+      {
+        "url": "https://www.fujihc.jp/info/cheduled/",
+        "category": "official",
+        "label": "Official 2026 Race-Day Confirmation"
+      },
+      {
+        "url": "https://www.yamanashi-kankou.jp/zenryoku/en/hill-climb/course/001.html",
+        "category": "official",
+        "label": "Yamanashi Official Course Guide"
+      }
+    ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.fujihc.jp/english/",
-      "notes": "22nd Mt. Fuji Hill Climb held June 7, 2026 in Fujiyoshida with standard event info and no discontinuation notice.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.fujihc.jp/info/cheduled/",
+      "notes": "22nd edition held as scheduled 7 June 2026. Vitals corrected to official figures: timed distance 24.0km (not 24.1), timed elevation 1,255m (not 1,402m, which is not supported by official organizer data)."
     }
   }
 }

@@ -5,24 +5,30 @@
     "display_name": "Race Across France",
     "tagline": "",
     "vitals": {
-      "distance_km": 2499.3,
-      "distance_mi": 1553.0,
-      "elevation_m": 24384,
-      "elevation_ft": 80000.0,
-      "location": "Dinan to Mandelieu-la-Napoule, France",
-      "location_badge": "Dinan to Mandelieu-la-Napoule, France",
+      "distance_km": 2500.0,
+      "distance_mi": 1553.4,
+      "elevation_m": 28600,
+      "elevation_ft": 93832.0,
+      "location": "Hendaye to Mandelieu-la-Napoule, France",
+      "location_badge": "Hendaye to Mandelieu-la-Napoule, France",
       "country": "France",
       "date": "2026: June 18",
-      "date_specific": "2026: June 18",
-      "field_size": null,
+      "date_specific": "2026: June 18 (20:00 start)",
+      "field_size": "~1,400 riders from 26 nations across all 2026 formats",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://en.raceacrossseries.com/reglement",
+      "entry_fee": "2026 flagship solo: EUR 429 standard / EUR 509 last-chance, excluding platform fees",
       "feed_zones": null,
-      "cutoff_time": null,
+      "cutoff_time": "240 hours (10 days); mandatory 4-hour rest every 36 hours",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Flagship: Hendaye to Mandelieu-la-Napoule, 2,500 km, 28,600 m+, 240h limit",
+        "RAF 1000: Orleans to Mandelieu (relocated to Albertville during 2026 heatwave), 1,000 km nominal, 15,000 m+, 96h limit",
+        "RAF 500: Albertville to Mandelieu, 500 km, 8,500 m+, 48h limit",
+        "RAF 300: Bollene to Mandelieu, 300 km, 5,327 m+, 24h limit",
+        "RAF 200 By Night: Mandelieu loop, 200 km, 3,800 m+, 12h limit"
+      ]
     },
     "climate": {
       "primary": "Alpine mountain",
@@ -72,67 +78,79 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A monumental road ultra traversing France from Brittany's rugged coast to the French Riviera, blending coastal paths, rural farmlands, volcanic Massif Central climbs, and culminating in the high Alps with relentless elevation and visual splendor.",
-      "signature_challenge": "Cime de la Bonette ascent: Europe's highest paved road at 2802m, the ultimate test of power, pacing, and altitude tolerance after 1,400+ miles.",
+      "character": "IMPORTANT — the route changes by edition; this profile previously described the 2025 course (Dinan/Brittany start, Cime de la Bonette, Massif Central) which is NOT the 2026 route. The 2026 flagship crossed France from Hendaye on the Atlantic to Mandelieu-la-Napoule on the Mediterranean: Basque foothills and Pyrenees, then Gascony, Saint-Emilion, and the Loire, continuing through the Morvan, Jura, Grand Colombier, and Bauges toward the Alps. From Albertville it turned through the Drôme and Provence before a late Mont Ventoux ascent and the run to the Riviera. The format is semi-autonomous, not fully unsupported: riders are self-sufficient between staffed bases, but outside assistance and drafting are prohibited except at bases, where food, rest, showers, charging, drop bags, and limited assistance are available, with mandatory GPS tracking throughout.",
+      "signature_challenge": "Mont Ventoux from Malaucène (21.2 km at 7.2%) — the final marquee climb, arriving after roughly 2,160 km already ridden, before the run to the Riviera finish.",
       "suffering_zones": [
-        "Monts d'Arrée (Brittany): Early steep climbs after coastal start, testing legs with misty moors and relentless undulation.",
-        "Massif Central (Cantal & Cézallier): Volcanic plateaus with prolonged ascents and exposed winds, grinding endurance in central France.",
-        "Cime de la Bonette (Alps): Highest point at 2802m, a 20+km high-altitude grind with thin air and brutal gradients."
+        "Col d'Aubisque/Soulor (early Pyrenees) — Aubisque listed at 1,709 m, 16.6 km at 7.2%",
+        "The Loire corridor — Saint-Emilion, Saumur, and the Loire châteaux (Chambord around km 1,085), the major scenic counterpoint to the mountain sections",
+        "Grand Colombier (approached via Lochieu) — 13 km at 7%, followed by the Bauges and the Albertville life base",
+        "Mont Ventoux from Malaucène — 21.2 km at 7.2%, the final marquee climb after ~2,160 km"
       ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Life bases provide rest stops; hotels in Dinan start town and Mandelieu finish; plan self-supported sleep strategies.",
-      "transport": "Semi-autonomous ultra with life bases at Creon, Orleans, Albertville, Bollène for the 2500km; multiple distances start from different points converging on Mandelieu finish.",
+      "lodging_strategy": "Life bases provide rest stops with food, showers, charging, and drop bags; plan self-supported sleep strategy between bases.",
+      "transport": "Semi-autonomous ultra with staffed life bases along the route; the 1000/500/300/200 km formats start from different points (Orleans/relocated to Albertville, Albertville, Bollène, Mandelieu) all converging on the Mandelieu-la-Napoule finish.",
       "food": "",
       "official_site": "https://en.raceacrossseries.com/race-across-france-2025"
     },
     "history": {
       "founded": 2018,
-      "origin_story": "Founded in 2018 by Arnaud Manzanini as France's premier ultra-cycling event, evolving into a multi-distance series with record fields and iconic routes honoring the nation's cycling legacy.",
+      "origin_story": "Founded in 2018 by Arnaud Manzanini as France's premier ultra-cycling event, evolving into a multi-distance series with record fields and a route that changes materially by year — the 2025 edition started in Dinan/Brittany and summited the Cime de la Bonette; the 2026 edition started in Hendaye and summited Mont Ventoux instead.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Genuinely Brutal Ultra, With a Route That Moves Every Year",
+      "summary": "Race Across France's 2026 flagship crossed the country coast to coast, Hendaye to Mandelieu-la-Napoule, 2,500 km and 28,600 m+ of climbing with a 240-hour cutoff and mandatory rest every 36 hours — this is a serious, well-organized ultra with GPS-tracked semi-autonomy (staffed bases, not full self-support) rather than a pure unsupported race. But the route is not fixed: the 2025 edition started in Dinan and climbed the Cime de la Bonette; 2026 started in Hendaye and climbed Mont Ventoux instead. Don't trust last year's course description for this year's race. The 2026 heatwave also forced real disruption — some 1,000 km riders had their start relocated to Albertville, and some 2,500 km riders faced stoppages and restarts, meaning not every finisher rode the identical advertised course that year.",
+      "strengths": [
+        "Rare coast-to-coast French ultra with highly varied landscapes and several historic cycling climbs each year",
+        "Five distances plus solo, duo, and team formats broaden access well beyond the 2,500 km flagship",
+        "Stronger safety/logistics framework than a pure unsupported race — GPS monitoring, 24/7 operations, staffed bases, meals, sleeping space, baggage transport",
+        "Established international draw — approximately 1,400 riders from 26 nations across all 2026 formats"
+      ],
+      "weaknesses": [
+        "The route changes materially by year — treat any prior-edition course description (climbs, regions, even the start city) as invalid for the current year",
+        "The flagship remains exceptionally severe: 2,500 km, 28,600 m+, a 240-hour cutoff, sleep deprivation, and mandatory 4-hour rest every 36 hours",
+        "Semi-autonomy still places substantial responsibility on riders for food, repairs, navigation, and overnight strategy between widely spaced bases",
+        "Expensive for a niche event — 2026 flagship solo entry was EUR 429-509, excluding platform fees, travel between distant start/finish cities, and personal logistics",
+        "Weather and administrative exposure is real: the 2026 heatwave forced route stoppages, cutoffs, and restarts, so not every participant completed an identical course"
+      ],
+      "bottom_line": "A legitimately brutal, well-run French coast-to-coast ultra — just verify the current year's actual route before you train for it, since the start city and marquee climb change from edition to edition."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Ultimate French ultra-road odyssey: suffer the miles, conquer the cols, celebrate on the Riviera.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuinely severe, well-supported French ultra and can handle a route that changes materially year to year. Confirm the current edition's actual start city and marquee climbs before committing — don't assume last year's course.",
+      "alternatives": "For a fixed-route French coast-to-coast ultra with a stable course description, compare against other established Race Across-series or Transcontinental-style events with a consistent annual route."
     },
     "citations": [
       {
-        "url": "https://jonas.verest.ch/stories/2025-race-across-france-en",
-        "category": "reference",
-        "label": "Ultra-Cycling Story: Race Across France 2025 - Jonas Verest"
+        "url": "https://en.raceacrossseries.com/blog/race-across-france-2026-dcouvrez-le-parcours-officiel",
+        "category": "official",
+        "label": "Official 2026 Route Announcement"
       },
       {
-        "url": "https://en.raceacrossseries.com/race-across-france-2025",
-        "category": "reference",
-        "label": "Race Across France - Ultra cycling across France"
+        "url": "https://en.raceacrossseries.com/reglement",
+        "category": "official",
+        "label": "Official Rules"
       },
       {
-        "url": "https://www.ahotu.com/event/race-across-france",
-        "category": "reference",
-        "label": "Race Across France, 20-29 Jun, 2024 (Thu - Sat) | Ahotu"
+        "url": "https://www.raceacrossseries.com/blog/race-across-france-2025-lultime-dfi-de-course-de-vlo-en-ultra",
+        "category": "official",
+        "label": "Official 2025 Route (Prior-Year Course, Now Superseded)"
       },
       {
-        "url": "https://raceacrossfrance.cc/en/",
-        "category": "reference",
-        "label": "Race Across France"
+        "url": "https://endurance.biz/2026/featured-news/ultra-cycling-keeps-up-momentum-as-race-across-france-adapts-to-extreme-heatwave/",
+        "category": "media",
+        "label": "Post-Event Report — 2026 Heatwave Disruption"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://en.raceacrossseries.com/blog/race-across-france-2026-dcouvrez-le-parcours-officiel",
-      "notes": "2026 edition is announced and confirmed with June 18 start in Mandelieu-la-Napoule; no rebrand found, and the date on file matches the announced date.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "2026 flagship ran 18-28 June, starting in Hendaye (not Dinan, which was the 2025 start) and finishing in Mandelieu-la-Napoule, 2,500km/28,600m+. The raceacrossfrance.cc domain on file is no longer official (redirects to unrelated content as of this check) — current official site is raceacrossseries.com/en.raceacrossseries.com. Course/vitals corrected from stale 2025-edition figures (Dinan start, 2,499km/24,384m, Cime de la Bonette) to the actual 2026 route."
     }
   }
 }

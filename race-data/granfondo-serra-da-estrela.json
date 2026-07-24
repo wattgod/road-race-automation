@@ -5,16 +5,16 @@
     "display_name": "Granfondo Serra da Estrela",
     "tagline": "",
     "vitals": {
-      "distance_km": 173.8,
-      "distance_mi": 108.0,
-      "elevation_m": 4600,
-      "elevation_ft": 15092.0,
+      "distance_km": 115.0,
+      "distance_mi": 71.5,
+      "elevation_m": 4170,
+      "elevation_ft": 13681.0,
       "location": "Seia, Serra da Estrela, Portugal",
       "location_badge": "Seia, Portugal",
       "country": "Portugal",
       "date": "2026: June 28",
       "date_specific": "2026: June 28",
-      "field_size": "1,200+",
+      "field_size": "1,142 finishers across both distances, 24 nationalities (pre-event 1,500 figure was a forecast, not actual attendance)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,16 +70,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "Starting in Seia, the route enters the Serra da Estrela's steep, twisting mountain roads and accumulates an unusually dense 4,170 m of climbing in just 115 km — roughly 36 m of ascent per kilometer. The 2026 route introduced a new ascent to Portela de Folgosinho before descending toward Manteigas, then tackles the defining final climb through the Zêzere glacial valley to Torre, mainland Portugal's highest point at 1,993 m. Timing stops at the summit; riders then descend and return to Seia for the finish-line services. It runs on roads open to traffic, and despite being formally a non-competitive cicloturismo, the event uses chip timing, classification, and a timed mountain prize.",
+      "signature_challenge": "The Manteigas-Torre ascent — 20.7 km at 5.6% average, roughly 1,151 m of gain, finishing at 1,993 m, mainland Portugal's highest point.",
+      "suffering_zones": [
+        "Portela de Folgosinho — 10.7 km at 6.6% average, new to the route in 2026 and already decisive enough to split the leading group",
+        "Manteigas-Torre — 20.7 km at 5.6% average, ~1,151 m gain, finishing at 1,993 m",
+        "The Folgosinho-then-Torre sequence makes the final third an attritional double-climb stretch rather than a single summit effort"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Book in Seia or Manteigas; event headquarters in Manteigas with post-race activities in Seia; options near Serra da Estrela Natural Park.[2][3]",
-      "transport": "",
+      "lodging_strategy": "Book in Seia or Manteigas; event headquarters in Manteigas with post-race activities in Seia; options near Serra da Estrela Natural Park.",
+      "transport": "Riders finish the timed climb at Torre (1,993 m) and must still descend back to Seia for showers and the post-race meal — extra logistics on top of an already exposed high-mountain finish.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondoserradaestrela.com/"
     },
     "history": {
       "founded": null,
@@ -88,19 +92,52 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Summit Finish, Not Quite a Race",
+      "summary": "The 11th Granfondo Serra da Estrela (28 June 2026) delivers something few European gran fondos can claim: a genuine timed finish at mainland Portugal's highest point, 1,993 m at Torre, reached via a 20.7 km/1,151 m climb through the Zêzere glacial valley. At 115 km and 4,170 m of climbing, it's exceptionally dense — about 36 m of ascent per kilometer. But its identity is a little muddled: it's formally a non-competitive cicloturismo event, yet it runs full chip timing, classification, and a timed mountain prize, and the roads stay open to traffic throughout. Field counts are also inconsistent — 1,142 finishers reported post-race versus 1,113 confirmed registrations on the timing platform, both well short of the pre-event 1,500 forecast.",
+      "strengths": [
+        "A genuine summit finish at Torre (1,993 m), mainland Portugal's highest point — not a manufactured claim",
+        "Exceptional climbing density: roughly 36 m of ascent per kilometer over 115 km",
+        "Distinctive scenery inside Serra da Estrela Natural Park, especially the Zêzere glacial valley on the final climb",
+        "Real event infrastructure: chip timing, medical/mechanical support, summit refreshments, clothing-bag transport, post-ride meal",
+        "A substantial international field (24 nationalities) without feeling anonymous"
+      ],
+      "weaknesses": [
+        "Roads remain open to traffic throughout — riders must obey normal traffic rules despite the timed classification",
+        "The Torre summit finish adds real logistics: riders must descend from an exposed 1,993 m finish back to Seia for showers and the meal",
+        "Official documentation is inconsistent — the regulation lists Seia as start/finish while the program places the timed finish at Torre, and archived course pages retain stale prior-year distances",
+        "Field counts conflict: 1,142 reported finishers vs. 1,113 confirmed timing-platform registrations, both below the pre-event 1,500 forecast — don't treat 1,500 as actual attendance",
+        "Formally a non-competitive cicloturismo event that nonetheless runs full timing and classification — an ambiguous race/sportive identity"
+      ],
+      "bottom_line": "If you want a genuine high-mountain summit finish in Portugal with real climbing density, this delivers. Go in knowing it's officially a cicloturismo, not a closed-road race, and that published field figures don't fully agree with each other."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Portugal's toughest granfondo: epic climbs to Torre with stunning Serra da Estrela views.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a genuine summit finish at mainland Portugal's highest point and dense, sustained climbing. Know it's formally a non-competitive cicloturismo on open roads, not a closed-road race.",
+      "alternatives": "For a fully competitive climbing event with a comparable summit-finish format, look at Spanish or French Pyrenean gran fondos with verified closed-road status."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.granfondoserradaestrela.com/pt/programa/",
+        "category": "official",
+        "label": "Official 2026 Programme"
+      },
+      {
+        "url": "https://granfondoserradaestrela.com/",
+        "category": "official",
+        "label": "Official Event Site"
+      },
+      {
+        "url": "https://seiadigital.pt/2026/06/26/granfondo-serra-da-estrela-regressa-a-seia-para-a-11a-edicao/",
+        "category": "media",
+        "label": "2026 Route Preview — Seia Digital"
+      },
+      {
+        "url": "https://radio-covilha.pt/2026/07/noticias/francisco-macedo-sobe-ao-podio-no-mediofondo-serra-da-estrela-com-2-o-lugar-na-elite/",
+        "category": "media",
+        "label": "Post-Race Field Report — Rádio Covilhã"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Serra da Estrela gran fondo cycling Seia",
@@ -220,9 +257,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.granfondoserradaestrela.com/en/",
-      "notes": "Official site and registration pages confirm the 11th road granfondo in Seia on June 28, 2026 with entries open.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://www.granfondoserradaestrela.com/pt/programa/",
+      "notes": "11th edition completed 28 June 2026 as scheduled; site now links to results and promotes the 2027 edition. Vitals corrected from a stale 173.8km/4600m guess to the actual 2026 course (115km/4,170m, timed finish at Torre 1,993m)."
     }
   }
 }

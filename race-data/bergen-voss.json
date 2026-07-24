@@ -5,16 +5,16 @@
     "display_name": "Bergen-Voss",
     "tagline": "",
     "vitals": {
-      "distance_km": 170.6,
-      "distance_mi": 106.0,
-      "elevation_m": 2097,
-      "elevation_ft": 6880.0,
+      "distance_km": 173.0,
+      "distance_mi": 107.5,
+      "elevation_m": 2100,
+      "elevation_ft": 6890.0,
       "location": "Bergen to Voss, Norway",
       "location_badge": "Bergen to Voss, Norway",
       "country": "Norway",
       "date": "2026: June 6",
       "date_specific": "2026: June 6",
-      "field_size": "2,000-5,000",
+      "field_size": "~1,400 (1,395 reported finishers, 2026); historical peak near 5,000 in 2011/2013 — current participation is well below that peak",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -70,37 +70,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "A 173 km point-to-point ride from central Bergen to Voss station (about 11 km longer than the usual 162 km course in 2026). The new opening heads south through Os and Rolvsvågen, adding a scenic Bjørnafjord section before climbing toward the Kvamskogen plateau. Riders then descend to Norheimsund and follow the narrow, twisting Hardangerfjord road through Kvanndal toward Voss. The defining challenge is repeated climbing and descending — 2,100 m total — combined with long, narrow fjord-side roads with oncoming traffic, rather than one dominant alpine pass. Significant sections are not closed to traffic, and several descents are neutralized with speed caps and no-passing rules for safety.",
+      "signature_challenge": "The Kvamskogen-Norheimsund descent — a steep, twisting run through dark tunnels, neutralized as a single-file, no-passing timeout zone rather than a free-for-all descent.",
+      "suffering_zones": [
+        "Rolvsvågen-Lønningdalen (approx. km 35-65) — narrow road with oncoming traffic; the Lønningdalen descent is capped at 20 km/h with overtaking prohibited",
+        "Climb toward Kvamskogen (approx. km 65-85) — the principal mid-course mountain ascent, reached after the rolling new Bjørnafjord opening",
+        "Kvamskogen-Norheimsund descent (after km 85) — steep, twisting, through dark tunnels, neutralized as a single-file no-passing timeout zone",
+        "Hardangerfjord (approx. km 95-150) — roughly 55 km of narrow, winding fjord road with oncoming traffic; more cumulative fatigue and concentration than a discrete climb"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Available in Bergen and Voss resort; Voss sports arena for post-race showers and hot meal.",
-      "transport": "",
+      "transport": "Point-to-point logistics require advance return-train or bus planning from Voss back to Bergen; trains can fill on event day.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://bergen-voss.no/"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "founded": 1977,
+      "origin_story": "Organized continuously by Bergen Cykleklubb (Bergen CK) since 1977; 2026 marked the 50th edition.",
+      "notable_moments": [
+        "2011/2013: historical participation peak near 5,000 riders",
+        "2026: 50th anniversary edition, new 173km route via Bjørnafjord, ~1,395 finishers"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Fifty Years Deep, Far Off Its Peak",
+      "summary": "Bergen-Voss is a genuinely historic Norwegian sportive — 50 continuous editions under Bergen CK, tracing a 173 km fjord-to-mountain route from Bergen to Voss through Bjørnafjord, Kvamskogen, and the Hardangerfjord. Kondis calls it one of Norway's most traditional sportives, and the scenery is real: fjords, mountain plateau, a historic finish town. But it's not a closed-road event — long stretches share the road with normal traffic, several descents are neutralized with speed caps and no-passing rules, and there's no finish sprint. Participation has also fallen a long way from its historical peak: roughly 1,395 finishers in the 50th-anniversary edition against a near-5,000 peak in 2011/2013, which makes any '4,000+ participants' marketing figure misleading for the event as it exists today.",
+      "strengths": [
+        "Fifty continuous editions under Bergen CK since 1977 — real institutional history, not a recent revival",
+        "Exceptional scenery across the full route: Bergen, Bjørnafjord, Kvamskogen, and the Hardangerfjord to Voss",
+        "Legitimate Norwegian prestige — Kondis frames it as a major annual training goal for the country's sportive riders",
+        "Strong club culture and mass-participation atmosphere, with the lead group averaging over 40 km/h in 2026"
+      ],
+      "weaknesses": [
+        "Significant sections run on narrow roads with oncoming traffic — this is not a fully closed-road experience",
+        "Neutralized descents, overtaking bans, and no finish sprint interrupt conventional race dynamics",
+        "The 2026 route (173 km) differs from the traditional 162 km course, making times incomparable year to year",
+        "Point-to-point logistics require advance return-train or bus planning; trains can fill on event day",
+        "Current participation (~1,395 finishers) is far below the historical ~5,000 peak — marketing that implies the old scale is misleading for the event today"
+      ],
+      "bottom_line": "A genuinely historic Norwegian fjord classic with real scenery and a 50-year pedigree — just go in knowing it's an open-road event at a fraction of its historical field size, not a closed-road spectacle."
     },
     "final_verdict": {
       "score": "73/100",
       "one_liner": "Norway's iconic Fjord Classic: breathtaking scenery meets solid challenge on roads.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes for genuine fjord-to-mountain scenery and 50 years of history. Know it's open-road with neutralized descents, not a closed-course race, and participation is well below its historical peak.",
+      "alternatives": "For a closed-road Norwegian sportive with a similarly scenic mountain-to-fjord route, compare against other established Norwegian gran fondos with fully closed courses."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://bergen-voss.no/",
+        "category": "official",
+        "label": "Official Homepage"
+      },
+      {
+        "url": "https://bergen-voss.no/english",
+        "category": "official",
+        "label": "Official English Event Details"
+      },
+      {
+        "url": "https://www.bergen-voss.no/nyheter-2026/ny-trasee-2026",
+        "category": "official",
+        "label": "Official 2026 Route Notice"
+      },
+      {
+        "url": "https://www.kondis.no/idrett/vestlandsnatur-fra-sin-beste-side-i-den-50-utgaven-av-sykkelrittet-bergen-voss/1571789",
+        "category": "media",
+        "label": "Kondis Post-Event Report, 50th Edition"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Bergen-Voss gran fondo cycling Bergen to Voss",
@@ -200,9 +240,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.bergen-voss.no/praktisk-info",
-      "notes": "50th edition Jun 6 2026, Bergen CK"
+      "verified": "2026-07-24",
+      "source": "https://www.kondis.no/idrett/vestlandsnatur-fra-sin-beste-side-i-den-50-utgaven-av-sykkelrittet-bergen-voss/1571789",
+      "notes": "50th edition completed 6 June 2026, organized by Bergen CK. Field size corrected from an unsourced 2,000-5,000 range to ~1,395 confirmed finishers; the wide old range conflated a 2011/2013 historical peak near 5,000 with current participation."
     }
   }
 }

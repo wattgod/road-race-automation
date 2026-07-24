@@ -1,28 +1,32 @@
 {
   "race": {
-    "name": "La Cicloturista Internacional de la Cerdanya",
+    "name": "Alpinum Alp-Cerdanya Cycle Tour",
     "slug": "cicloturista-cerdanya",
-    "display_name": "La Cicloturista Internacional de la Cerdanya",
+    "display_name": "Alpinum Alp-Cerdanya Cycle Tour",
     "tagline": "",
     "vitals": {
-      "distance_km": 144.8,
-      "distance_mi": 90.0,
-      "elevation_m": 2673,
-      "elevation_ft": 8770.0,
-      "location": "Puigcerdà, Catalonia, Spain",
-      "location_badge": "Puigcerdà, Spain",
+      "distance_km": 185.0,
+      "distance_mi": 115.0,
+      "elevation_m": 3635,
+      "elevation_ft": 11926.0,
+      "location": "Alp, Girona, Spain",
+      "location_badge": "Alp, Spain",
       "country": "Spain",
       "date": "2026: July 4",
       "date_specific": "2026: July 4",
-      "field_size": "1000",
+      "field_size": "~1,200 actual participants (1,500 registration cap)",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
       "feed_zones": "N/A",
-      "cutoff_time": "N/A",
+      "cutoff_time": "5h30 cutoff at km 105 for Medial/Endurance riders (~19.1 km/h including stops)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Endurance: 185 km, 3,635 m gain — the four-pass circuit including the Collada de Toses finale",
+        "Medial: 145 km, 2,673 m gain",
+        "Sport: 89 km, 1,267 m gain"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,16 +74,21 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The ride starts and finishes in Alp, not Puigcerdà, circulating through the broad, high-altitude Cerdanya valley on secondary Pyrenean roads. It crosses from Catalonia into France via the Col du Calvaire, then reaches the forests and quieter roads of Capcir and the Aude valley through the Col de la Llose and Col de la Creu. The Endurance route adds the long Collada de Toses return, creating a four-pass circuit between Spanish and French Cerdanya. Its signature is sustained mountain mileage and expansive valley scenery rather than exceptionally steep average gradients — this is an international, noncompetitive road cyclotour with no ranked classification, and traffic stays open throughout.",
+      "signature_challenge": "The Collada de Toses via Alp/La Molina — 18.6 km at 3.4% average, arriving late on the Endurance route after riders pass within meters of the finish line before turning away to complete the climb.",
+      "suffering_zones": [
+        "Col du Calvaire — 12.4 km at 5.1% average, summit around 1,836 m",
+        "Col de la Llose — 6.4 km at 6.1% average, the shortest but steepest of the four named climbs",
+        "Col de la Creu — 13.2 km at 4.8% average, through forest and gorges toward the Aude valley",
+        "Collada de Toses via Alp/La Molina — 18.6 km at 3.4% average, the psychologically awkward finale that passes near the finish before turning away to complete the climb"
+      ]
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Available in Puigcerdà and surrounding Cerdanya towns during summer cycling season.[1]",
+      "lodging_strategy": "Available in Alp and surrounding Cerdanya towns during summer cycling season.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.alpinum-ride.cc/en"
     },
     "history": {
       "founded": null,
@@ -88,19 +97,52 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Rebranded, Relocated, and Not a Race",
+      "summary": "This event has been rebranded and relocated since it was last documented: it's now the Alpinum TotalEnergies Alp-Cerdanya Cycle Tour, based in Alp (not Puigcerdà), and the former lacerdanyacycletour.com domain is obsolete. The 2026 edition (4 July, ~1,200 riders of a 1,500 cap) delivers a genuinely rare cross-border route — four Pyrenean passes linking Catalan Cerdanya, French Cerdanya, Capcir, and the Aude valley, with real Tour de France relevance since the 2026 Tour used Collada de Toses and Col du Calvaire two days later. But it is explicitly not a race: no competitive classification, roads open to traffic throughout, and the organizer's own official documents disagree with each other on the route distances (the regulations list one set of figures in Article 1 and a different set in Article 5, and the current website shows a third).",
+      "strengths": [
+        "A rare cross-border route joining Catalan and French Cerdanya, Capcir, and the Aude valley",
+        "Four substantial, well-spaced Pyrenean passes on the long route without extreme average gradients",
+        "Three distances (89/145/185 km) make the event accessible beyond elite climbers",
+        "Genuine Tour de France relevance — the 2026 Tour used Collada de Toses and Col du Calvaire two days after this event",
+        "Predominantly scenic secondary roads, open valleys, and high-altitude forest"
+      ],
+      "weaknesses": [
+        "Not a race — no competitive classification, and roads run open to traffic throughout",
+        "Official route data is internally contradictory: even the 2026 regulations list different distances in different articles, and the current route-detail pages show a third set of figures",
+        "Medial and Endurance riders face a 5h30 cutoff at km 105, requiring roughly 19.1 km/h including stops",
+        "The Endurance finale is psychologically awkward — riders pass close to the finish line before undertaking the final Collada de Toses climb",
+        "Location has changed from the previously-documented Puigcerdà to Alp, Girona — check current logistics before booking"
+      ],
+      "bottom_line": "A genuinely scenic cross-border Pyrenean cyclotour with real route variety — but come as a rider on a supported ride, not a racer, and verify the current-year distances directly since the organizer's own documents don't agree."
     },
     "final_verdict": {
       "score": "73/100",
       "one_liner": "Spectacular Pyrenean cyclotourist ride with stunning valley views and iconic climbs across Spain-France border.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Ride it for the cross-border Cerdanya scenery and four-pass variety — it's not a competitive event, so go in with touring expectations, not racing ones.",
+      "alternatives": "For a competitive, timed cross-border Pyrenean event, look at cyclosportives with verified closed-road, ranked-classification formats instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://www.alpinum-ride.cc/en",
+        "category": "official",
+        "label": "Official Event Homepage"
+      },
+      {
+        "url": "https://www.alpinum-ride.cc/ca/reglamento",
+        "category": "official",
+        "label": "Official 2026 Regulations"
+      },
+      {
+        "url": "https://www.alpinum-ride.cc/en/distancia185k",
+        "category": "official",
+        "label": "Official Endurance Route and Course Description"
+      },
+      {
+        "url": "https://www.ciclisme.cat/cursa/cicloturisme/alpinum-cerdanya-cycle-tour-0",
+        "category": "official",
+        "label": "Catalan Cycling Federation Event Record"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "La Cicloturista Internacional de la Cerdanya gran fondo cycling Puigcerdà",
@@ -151,9 +193,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://lacerdanyacycletour.com/",
-      "notes": "now branded Alpinum Cerdanya Cycle Tour; Jul 4 2026"
+      "verified": "2026-07-24",
+      "source": "https://www.alpinum-ride.cc/en",
+      "notes": "IDENTITY CORRECTION (2026-07-24): rebranded to 'Alpinum TotalEnergies Alp-Cerdanya Cycle Tour'; the former lacerdanyacycletour.com domain is obsolete, current official site is alpinum-ride.cc. Location corrected from Puigcerdà to Alp, Girona (start/finish town). 2026 edition completed 4 July with ~1,200 of a 1,500-rider cap. Not a race — noncompetitive road cyclotour with open traffic."
     }
   }
 }

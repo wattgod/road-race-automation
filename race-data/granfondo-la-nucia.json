@@ -7,14 +7,14 @@
     "vitals": {
       "distance_km": 132.0,
       "distance_mi": 82.0,
-      "elevation_m": 2286,
-      "elevation_ft": 7500.0,
+      "elevation_m": 2275,
+      "elevation_ft": 7464.0,
       "location": "La Nucia, Alicante, Spain",
       "location_badge": "La Nucia, Spain",
       "country": "Spain",
-      "date": "2026: October TBD",
-      "date_specific": "2026: October TBD",
-      "field_size": null,
+      "date": "2026: October 18",
+      "date_specific": "2026: October 18",
+      "field_size": "3,000 declared/authorized (planned capacity, not a confirmed starter count)",
       "start_format": null,
       "registration": "https://granfondolanucia.com/en/",
       "entry_fee": null,
@@ -70,12 +70,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
+      "character": "A 132 km loop starting and finishing at La Nucia's Camilo Cano Olympic Stadium, heading inland through Finestrat and Relleu before climbing into the Sierra de Aitana toward the Safari Aitana area, just above 1,000 m. The organizer markets this high point as \"Alto de Aitana,\" but it's not the 1,558 m Aitana summit — riders top out at Safari Aitana, roughly 1,000 m, on a long ascent that's mostly a moderate 3-4%, not a genuine HC wall. A long middle section links small valleys and villages — Gorga, Fageca, Famorca, Castell de Castells — over repeated rolling climbs, before the decisive late feature: the timed Coll de Rates ascent at km 99-105, followed by a technical descent and rolling return to La Nucia.",
+      "signature_challenge": "The timed Coll de Rates climb (6.6 km at 5.4% average) arriving at km 99-105, roughly 20 km from the finish — the course's genuine late-race benchmark test.",
       "suffering_zones": [
-        "Alto de Aitana Grind: 25 km effort from km 20 peaking above 1000 m; relentless gradients shred legs mid-race.",
-        "Finestrat-Relleu Ramp-Up: Early Alicante interior climbs post-5 km starter; heat legs before big Aitana.",
-        "Late Mountain Descent-Remontée: Post-Aitana rollers demand recovery power over final 80+ km to La Nucia."
+        "Opening climb — begins around km 5, 3.6 km at 5.5%",
+        "Sierra de Aitana/Safari Aitana — roughly km 20-45, approximately 25 km generally at 3-4%, topping just above 1,000 m (not the 1,558 m Aitana summit the name implies)",
+        "Coll de Rates — 6.6 km at 5.4% average, timed from approximately km 99 to 105, the course's decisive late climb"
       ]
     },
     "logistics": {
@@ -87,24 +87,56 @@
     },
     "history": {
       "founded": 2024,
-      "origin_story": "",
+      "origin_story": "A young Miguel Indurain-designed event on the Costa Blanca, now in its third edition and its first as a genuine UCI Gran Fondo World Series qualifying round for the 2027 UCI Gran Fondo World Championships in France.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Qualifier, an Overstated Name",
+      "summary": "Granfondo La Nucia is a genuine UCI Gran Fondo World Series qualifier — men 19-59 and women 19-49 earn a shot at the 2027 Worlds over the 132 km/2,275 m Gran Fondo course, with a 71 km Medio Fondo for older age brackets. That's real stakes, not borrowed branding. But the marquee name doesn't match the terrain: \"Alto de Aitana\" implies the 1,558 m Aitana summit, and riders actually top out at Safari Aitana around 1,000 m on a long, mostly 3-4% grind — a solid climb, not the HC wall the name suggests. Official data hygiene is also shaky this early in the event's life: the UCI's own summary lists 131 km against the organizer's 132 km, and Medio Fondo elevation figures conflict by a few meters depending on the source.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series qualification — real competitive stakes, not just UCI branding for marketing",
+        "Attractive, low-traffic Alicante mountain roads in a region WorldTour teams use for winter training",
+        "Well-balanced route: sustained climbing, linked valleys, technical descending, and a late timed benchmark climb (Coll de Rates) rather than one front-loaded effort",
+        "Miguel Indurain-designed course with a real stadium event hub in La Nucia"
+      ],
+      "weaknesses": [
+        "2026 is only the third edition and its first as a GFWS qualifier — the operational track record as a qualifier is unproven",
+        "\"Alto de Aitana\" overstates the climb: riders reach Safari Aitana at roughly 1,000 m, not Aitana's 1,558 m summit, and the main ascent runs mostly 3-4%",
+        "Official numbers disagree with each other — the UCI series page lists 131 km vs. the organizer's 132 km, and Medio Fondo elevation varies by source",
+        "Qualification distance depends on age and sex, and Open-category riders don't qualify at all — entrants have to pick the correct category or the UCI credit doesn't count",
+        "Some registration-page details (deadlines, etc.) had not been updated from the prior year as of research"
+      ],
+      "bottom_line": "A legitimate UCI qualifier with a well-built route on quiet Alicante roads — just don't expect the advertised Aitana summit, and double-check your qualifying category before you register."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Indurain-designed Costa Blanca beast: UCI qualifier with Aitana summit suffering.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want a real UCI Gran Fondo World Series qualifier on quiet Alicante mountain roads and understand the climb is Safari Aitana, not the true Aitana summit. Confirm your age/sex qualifying category before entering — Open riders don't qualify.",
+      "alternatives": "For an actual summit finish above 1,500m in the same region, look at other Alicante-area climbs with verified HC-grade ascents rather than this event's Safari Aitana high point."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-la-nucia/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Event Listing"
+      },
+      {
+        "url": "https://granfondolanucia.com/",
+        "category": "official",
+        "label": "Official Event Homepage"
+      },
+      {
+        "url": "https://granfondolanucia.com/recorridos/",
+        "category": "official",
+        "label": "Official 2026 Routes and Category Rules"
+      },
+      {
+        "url": "https://inscripciones.chiplevante.com/es/evento/uci-gran-fondo-world-series-la-nucia-2026",
+        "category": "official",
+        "label": "Official Registration Provider"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo La Nucia gran fondo cycling La Nucia",
@@ -189,9 +221,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://ucigranfondoworldseries.com/en/granfondo-la-nucia/",
-      "notes": "Road granfondo in La Nucia with confirmed UCI World Series edition on 18 Oct 2026; date on file refined from TBD to 18 Oct.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "Confirmed genuine UCI Gran Fondo World Series qualifier for 18 Oct 2026, an early qualifier for the 2027 UCI Gran Fondo World Championships in France. Field size in vitals is the DGT calendar's authorized/planned capacity (3,000), not a verified starter count."
     }
   }
 }

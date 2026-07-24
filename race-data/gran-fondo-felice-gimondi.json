@@ -220,6 +220,11 @@
       "verified": "2026-07-23",
       "source": "https://www.cyclonline.com/127-granfondo-2026-event-calendars/4224-2026-may-road-cycling-gran-fondo-calendar-the-ultimate-global-guide",
       "notes": "Listed as BGY Airport Granfondo / Felice Gimondi in Bergamo on May 10, 2026, indicating the event is still running under this branding.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "granfondo-felice-gimondi",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT, verified via web search: the official site (granfondobgy.it) confirms the first 24 editions were run as 'Gran Fondo/Granfondo Felice Gimondi' before the event was renamed 'BGY Airport Granfondo' — 'Gran Fondo' vs 'Granfondo' is a spelling variation of the same Bergamo, May event. granfondo-felice-gimondi.json carries the official site and is the richer profile; this slug is the duplicate-spelling entry."
     }
   }
 }

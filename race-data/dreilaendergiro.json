@@ -5,16 +5,16 @@
     "display_name": "Dreiländergiro",
     "tagline": "",
     "vitals": {
-      "distance_km": 165.8,
-      "distance_mi": 103.0,
-      "elevation_m": 3000,
-      "elevation_ft": 9843.0,
+      "distance_km": 168.0,
+      "distance_mi": 104.4,
+      "elevation_m": 3600,
+      "elevation_ft": 11811.0,
       "location": "Nauders, Tirol, Austria",
       "location_badge": "Nauders, Austria",
       "country": "Austria",
       "date": "2026: June 28",
       "date_specific": "2026: June 28",
-      "field_size": "3000",
+      "field_size": "3,000 capacity (1,500 per route); actual 2026 starter count unconfirmed",
       "start_format": null,
       "registration": null,
       "entry_fee": null,
@@ -22,7 +22,10 @@
       "cutoff_time": "not specified",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Stelvio Engadin: 168 km, 3,600 m gain — the longer route via Ofenpass and Engadin before the final Norbertshöhe climb into Austria",
+        "Stelvio Vinschgau: 120 km, 3,000 m gain — the shorter route returning via the upper Vinschgau and Reschenpass"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -70,16 +73,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "From Nauders, riders cross the Reschenpass into Italy and climb the Stelvio from Prato allo Stelvio before descending the Umbrailpass into Switzerland. The shorter Vinschgau route (120 km/3,000 m) returns via the upper Vinschgau and Reschenpass; the longer Engadin route (168 km/3,600 m) adds the Ofenpass and the Engadin before a final climb over the Norbertshöhe back into Austria. The defining feature is the genuine three-country routing built around one of cycling's most famous passes — this is not a manufactured 'three countries' marketing claim, riders actually cross Austria, Italy, and Switzerland in one day. Roads remain open to normal traffic throughout.",
+      "signature_challenge": "The Stelvio from Prato allo Stelvio — 24.3 km, 1,808 m of gain, 7.4% average with ramps to 14%, one of cycling's most iconic ascents and the physical and symbolic centerpiece of the route.",
+      "suffering_zones": [
+        "Stelvio from Prato — 24.3 km, 1,808 m gain, 7.4% average, 14% maximum",
+        "Ofenpass (Engadin route only) — approximately 13.4 km at 5.5-6%",
+        "Norbertshöhe — the final Engadin-route sting, 13 hairpins closing into Austria; race-specific gradient/length unconfirmed"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Nauders offers various options; arrive early for Girodays week events.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.dreilaendergiro.at/"
     },
     "history": {
       "founded": null,
@@ -88,19 +95,45 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "The Real Deal on the Stelvio",
+      "summary": "The Dreiländergiro delivers exactly what its name promises: a genuine three-country day (Austria, Italy, Switzerland) built around the Stelvio Pass, cycling's most storied climb — 24.3 km at 7.4% average with ramps to 14%, from Prato allo Stelvio. The 33rd edition (28 June 2026) offers two real distance choices, a shorter 120 km/3,000 m Vinschgau loop and a longer 168 km/3,600 m Engadin route that adds the Ofenpass before the closing Norbertshöhe hairpins into Austria. It's a legitimate Alpine classic, not a marketing exercise — but the roads stay open to normal traffic throughout, and the combination of severe altitude, sustained climbing, and firm cutoffs leaves little margin for a bad weather day or a pacing mistake.",
+      "strengths": [
+        "A genuinely iconic climb — the Stelvio from Prato is one of cycling's most famous ascents, not a manufactured signature",
+        "Real three-country routing across Austria, Italy, and Switzerland in a single day",
+        "Two legitimate distance options (120 km/3,000 m and 168 km/3,600 m) rather than one fixed route",
+        "33 editions deep with a genuine Alpine-classic reputation"
+      ],
+      "weaknesses": [
+        "Roads remain open to normal traffic — this is not a closed-course event despite the Stelvio's fame",
+        "Severe altitude and cumulative climbing load with firm cutoffs leave little margin for weather disruption or pacing errors",
+        "Field capacity (3,000, split 1,500 per route) is a stated cap, not a confirmed actual starter count",
+        "Race-specific gradient/length data for some closing climbs (Norbertshöhe) is not published by the organizer"
+      ],
+      "bottom_line": "If you want the real Stelvio experience with genuine three-country routing and a choice of distances, this is the genuine article — just respect that it's an open-road Alpine day with real weather and pacing risk, not a sanitized closed-course event."
     },
     "final_verdict": {
       "score": "73/100",
       "one_liner": "Legendary Alpine road classic conquering Stelvio and tri-national passes.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want the authentic Stelvio experience with real three-country routing. Choose the 120km Vinschgau route if you want the Stelvio without the extra Ofenpass/Engadin distance.",
+      "alternatives": "For the Stelvio climb without the full Dreiländergiro distance, look at standalone Stelvio hill-climb events or shorter regional Vinschgau/Alto Adige gran fondos."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://my.raceresult.com/356805/results",
+        "category": "official",
+        "label": "Official 2026 Results"
+      },
+      {
+        "url": "https://www.dreilaendergiro.at/de/Service/AGB",
+        "category": "official",
+        "label": "Official Regulations and Route Data"
+      },
+      {
+        "url": "https://climb-quest.com/en/climbs/passo-dello-stelvio",
+        "category": "reference",
+        "label": "Stelvio Climb Statistics"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Dreiländergiro gran fondo cycling Nauders",
@@ -290,9 +323,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.dreilaendergiro.at/de",
-      "notes": "Mass-participation road event in Nauders; 2027 edition is already announced and 2026 results confirm the 33rd edition ran on 28 June 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://my.raceresult.com/356805/results",
+      "notes": "33rd edition confirmed held 28 June 2026 with published results. Vitals updated to the two actual route options (Vinschgau 120km/3,000m; Engadin 168km/3,600m) rather than a single blended figure."
     }
   }
 }

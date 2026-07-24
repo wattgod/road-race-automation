@@ -5,8 +5,8 @@
     "display_name": "Granfondo Livigno Alè",
     "tagline": "",
     "vitals": {
-      "distance_km": 167.4,
-      "distance_mi": 104.0,
+      "distance_km": 166.8,
+      "distance_mi": 103.7,
       "elevation_m": 4300,
       "elevation_ft": 14108.0,
       "location": "Livigno, Italy",
@@ -14,10 +14,10 @@
       "country": "Italy",
       "date": "2026: June 27",
       "date_specific": "2026: June 27",
-      "field_size": "N/A",
+      "field_size": "850+ starters (organizer did not publish a precise total)",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://join.endu.net/entry?edition=101134",
+      "entry_fee": "Late entry EUR 70; on-site entry EUR 100 (non-refundable)",
       "feed_zones": "N/A",
       "cutoff_time": "N/A",
       "lat": null,
@@ -70,37 +70,77 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "An all-asphalt loop leaving Aquagranda in Livigno (already at 1,816 m), crossing the town and climbing the Forcola di Livigno into Switzerland to reach Passo Bernina. The route continues through the Upper Engadin to Zernez, crosses Pass dal Fuorn and the Umbrail Pass, then descends toward the Bormio/Valdidentro side of the Rhaetian Alps. The decisive return climbs Passo del Foscagno and Passo d'Eira before a steep finishing road alongside the Mottolino ski slope. Classification is the sum of designated climbing-sector times — between timed climbs, riders ride under normal road rules, not a continuous race clock.",
+      "signature_challenge": "The Eira-Mottolino finale (1.9 km at roughly 9.3%) to the 2,385 m Mottolino gondola station — the same finish where Tadej Pogačar soloed the 2024 Giro d'Italia queen stage, now the granfondo's dedicated closing test.",
+      "suffering_zones": [
+        "Bernina approach — 3.4 km, roughly 8.0% average",
+        "Umbrail Pass — 13.1 km at roughly 8.6% average, arriving after more than 100 km already ridden",
+        "Foscagno — 15.1 km from Isolaccia at roughly 6.3% average",
+        "Eira-Mottolino finale — 1.9 km at roughly 9.3% average to the 2,385 m finish, the steepest section concentrated right at the line"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Abundant in Livigno, Europe's cycling capital with training camps; book early due to 2026 Olympics proximity.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granfondolivigno.eu/"
     },
     "history": {
       "founded": null,
-      "origin_story": "",
-      "notable_moments": [],
+      "origin_story": "Ran in 2024 as 'Granfondo Alé La Merckx' for its first Livigno edition; by 2026 the official regulations and ENDU listing had dropped the La Merckx name in favor of 'Granfondo Livigno Alé.'",
+      "notable_moments": [
+        "2024: inaugural Livigno edition branded 'Alé La Merckx,' drawing roughly 800 riders on the climbs Pogačar had just soloed at the Giro",
+        "2026: rebranded 'Granfondo Livigno Alé,' 850+ starters"
+      ],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Real Altitude, Small Field, Confusing Branding",
+      "summary": "Livigno sits at 1,816 m and is a legitimate high-altitude training hub, which gives this granfondo a genuine cycling identity rather than a manufactured one — the 166.8 km/4,300 m route links major Rhaetian Alps passes across Italy and Switzerland with sustained riding above 2,000 m, and the Eira-Mottolino finale climbs the exact slope where Tadej Pogačar soloed the 2024 Giro d'Italia queen stage. But it's a modestly sized field (850+ starters in 2026) for a heavily promoted international event, and the branding has been inconsistent — 2024's 'Granfondo Alé La Merckx' became 2026's 'Granfondo Livigno Alé,' with older pages and search results for the old name still circulating. Classification only counts designated climbing sectors, not the full 166.8 km, so this isn't a continuous timed race either.",
+      "strengths": [
+        "Genuine high-altitude cycling identity — Livigno at 1,816 m, sustained riding above 2,000 m across Italian and Swiss Rhaetian Alps passes",
+        "The Eira-Mottolino finale directly retraces the 2024 Giro d'Italia queen-stage finish where Pogačar soloed to the win",
+        "Multiple named passes (Bernina, Umbrail, Foscagno, Eira) create a genuinely demanding, varied high-mountain course",
+        "Mediofondo option (106.5 km/2,050 m) for riders who want the altitude and scenery without the full distance"
+      ],
+      "weaknesses": [
+        "Remote high-altitude border resort location means more planning for transfers, accommodation, and weather contingencies than a valley-floor event",
+        "850+ starters is a relatively small field for how heavily the event is promoted internationally",
+        "Branding has shifted from 'Granfondo Alé La Merckx' (2024) to 'Granfondo Livigno Alé' (2026) with no clean transition — old pages and search results for the former name persist",
+        "Only selected climbing sectors are timed; it is not a conventional continuous-time road race",
+        "Entry fees are non-refundable (EUR 70 late / EUR 100 on-site), and foreign riders need a competitive cycling medical certificate"
+      ],
+      "bottom_line": "If you want genuine high-altitude Alpine passes and the actual Pogačar finishing climb, this delivers — just come in knowing the field is modest, the branding has changed recently, and only the climbs are timed."
     },
     "final_verdict": {
       "score": "74/100",
       "one_liner": "Ultimate high-alpine road suffering with notable scenery and climbs.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Yes if you want genuine high-altitude Rhaetian Alps climbing and the real Pogačar finishing slope. The field is modest and only climbing sectors are timed, not the full route.",
+      "alternatives": "For a similarly high-altitude Alpine granfondo with a larger, more established field, look at other Dolomites/Alps events with longer competitive track records."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://join.endu.net/entry?edition=101134",
+        "category": "official",
+        "label": "ENDU Registration Listing"
+      },
+      {
+        "url": "https://granfondolivigno.eu/granfondo-ale-il-grande-ciclismo-accende-la-1816-bike-zone-livigno/",
+        "category": "official",
+        "label": "Official 2026 Post-Event Report"
+      },
+      {
+        "url": "https://granfondolivigno.eu/percorso-granfondo/",
+        "category": "official",
+        "label": "Official Course Page"
+      },
+      {
+        "url": "https://www.livigno.eu/en/news/granfondo-al%C3%A9-la-merckx-great-success-for-the-first-edition-in-livigno-in-800-on-the-climbs-of-pogacar",
+        "category": "official",
+        "label": "Official Livigno 2024 First-Edition Account (Pogačar Connection)"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "Granfondo Livigno Alè gran fondo cycling Livigno",
@@ -186,9 +226,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granfondolivigno.eu/",
-      "notes": "Official site announces next edition on 26 June 2027 in Livigno, confirming the event continues after the 27 June 2026 race.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://granfondolivigno.eu/granfondo-ale-il-grande-ciclismo-accende-la-1816-bike-zone-livigno/",
+      "notes": "2026 edition ran 27 June 2026 as planned with 850+ starters confirmed by official post-event report; ENDU registration now closed. Event dropped the 'La Merckx' branding used in its 2024 debut edition."
     }
   }
 }

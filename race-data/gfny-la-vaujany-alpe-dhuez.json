@@ -174,6 +174,11 @@
       "verified": "2026-07-23",
       "source": "https://www.cycloworld.cc/en/gran-fondo/france/gfny-alpes-vaujany/40542",
       "notes": "2026 GFNY Alpes Vaujany in Vaujany/Alpe d’Huez is listed as cancelled despite 2025 edition having taken place.; last edition evidenced: 2025; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "la-vaujany",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT as la-vaujany.json (GFNY La Vaujany / GFNY Alpes-Vaujany): identical location (Vaujany, Isère, near Alpe d'Huez), same GFNY chapter, this profile's own youtube_data links to lavaujany.gfny.com. la-vaujany.json is richer (founded 2021, full citations, official site) and is treated as canonical. FLAG FOR HUMAN: the two profiles' eligibility blocks directly contradict each other — this slug's eligibility (verified 2026-07-23) says the 2026 edition is CANCELLED, while la-vaujany.json's eligibility (also verified 2026-07-23) says a 21 June 2026 edition is listed as active. This status conflict needs reconciling on the canonical (la-vaujany) profile; not resolved here since duplicates get no further editorial work per pipeline step 0."
     }
   }
 }

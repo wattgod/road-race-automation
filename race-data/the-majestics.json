@@ -165,6 +165,11 @@
       "verified": "2026-07-23",
       "source": "https://www.mso.swiss/en/events/2563-the-majestics-2026-uci-granfondo-suisse",
       "notes": "Mass-participation UCI Gran Fondo road event in Villars-sur-Ollon ran 10–12 July 2026.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+    },
+    "catalog_flags": {
+      "duplicate_of": "gran-fondo-suisse",
+      "ruled": "2026-07-24 dedupe sweep",
+      "notes": "SAME EVENT LINEAGE as gran-fondo-suisse.json: verified via web search, 'The Majestics' is the current umbrella brand for the Villars-sur-Ollon cycling weekend, combining the former UCI Gran Fondo Suisse road event with UCI Gravel Suisse. gran-fondo-suisse.json already documents this rebrand in its own vitals.date_specific field ('inaugural combined edition under new organizer branding The Majestics') and its 150km/3,700m vitals match the researched 2026 Granfondo route (150km/3,760m) almost exactly — it is the richer, already-current profile. This profile's vitals (130.4km/2,682m/July TBD) are stale and do not match either the old UCI Gran Fondo Suisse or the current Majestics course."
     }
   }
 }

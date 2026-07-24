@@ -9,15 +9,15 @@
       "distance_mi": 162.0,
       "elevation_m": 9845,
       "elevation_ft": 32300.0,
-      "location": "San José to Limón, Costa Rica",
-      "location_badge": "San José to Limón, Costa Rica",
+      "location": "Jaco to Turrialba area, Costa Rica (2026 total distance/elevation not published — figures below are historical, vary by edition)",
+      "location_badge": "Costa Rica",
       "country": "Costa Rica",
       "date": "2026: October 29-31",
       "date_specific": "2026: October 29-31",
-      "field_size": "limited (Tico Package max 100)",
+      "field_size": "Tico (local) allocation capped at 100 entries; total field not published",
       "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "registration": "https://racelaruta.com/events/la-ruta/",
+      "entry_fee": "US$575 base price (2026)",
       "feed_zones": "N/A",
       "cutoff_time": "N/A",
       "lat": null,
@@ -30,9 +30,9 @@
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
-      "technical_rating": 1,
+      "primary": "Mountain bike stage race — gravel, technical singletrack, jungle, volcanic ground, mud/river crossings, with some paved connectors",
+      "surface": "Predominantly unpaved: gravel roads, technical singletrack, jungle trail, volcanic terrain, mud and river crossings — NOT a road cycling surface",
+      "technical_rating": 5,
       "features": []
     },
     "fondo_rating": {
@@ -54,9 +54,9 @@
       "overall_score": 73,
       "tier": 2,
       "tier_label": "TIER 2",
-      "discipline": "gran_fondo",
+      "discipline": "multi_stage",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 73."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 73. NOTE: 'multi_stage' is the closest fit in this repo's road-cycling discipline taxonomy (gran_fondo/sportive/century/multi_stage/hillclimb) — none of these accurately describe an MTB stage race; see catalog_flags."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -70,37 +70,72 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this is a mountain bike (MTB) stage race, not a road cycling event, and does not belong in a road-cycling database's active catalog. La Ruta traditionally traverses Costa Rica from the Pacific side toward the Caribbean through mountains, tropical forest, and volcanic country, on gravel roads, technical singletrack, banana plantations, dense jungle, river crossings, and climbs above 3,000 m — with some paved connectors, but never a road-surface event. The announced 2026 sequence runs Jaco-San José, Tres Ríos-Turrialba, then Turrialba toward Limón and back to the Casa Turire/Turrialba area over 3 stages (29-31 October). Total 2026 distance, elevation, and surface percentages are not published by the organizer as of this research; historical editions have varied substantially (a widely-cited 2016 edition ran 217 km with 343 entrants — treat any single historical total as edition-specific, not a fixed course figure).",
+      "signature_challenge": "The Tres Ríos-Turrialba volcanic mountain stage — historically crosses toward Irazú/Turrialba near 3,000 m, though the organizer has not explicitly confirmed this alignment for 2026.",
+      "suffering_zones": [
+        "Stage 1 (Jaco-San José) — Pacific-side start into the race's characteristic steep, humid off-road terrain; historically muddy jungle, clay, river crossings, and extensive hike-a-bike",
+        "Stage 2 (Tres Ríos-Turrialba) — the volcanic mountain stage, historically reaching roughly 3,000 m near Irazú/Turrialba",
+        "Stage 3 (Turrialba toward Limón, back to Casa Turire) — Caribbean lowlands and banana-growing country; historic signature obstacles include old railway tracks, exposed railway bridges, and beach riding"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Organized stage race with packages; hotels in San José, Turrialba likely included in entries.",
-      "transport": "",
+      "transport": "Considerable travel, bike-support, and stage-transfer complexity between the three stage locations.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://racelaruta.com"
     },
     "history": {
-      "founded": null,
-      "origin_story": "",
+      "founded": 1993,
+      "origin_story": "A pioneering MTB stage race founded by Roman Urbina in 1993, with more than three decades of history and international recognition for its exceptionally varied terrain, extreme climatic contrasts, and coast-to-coast concept — a distinctive expedition-style challenge, not a road gran fondo or marathon.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "Not a Road Race — This Is an MTB Legend, Misfiled",
+      "summary": "La Ruta de los Conquistadores is a pioneering three-stage mountain bike race, founded in 1993, that crosses Costa Rica from the Pacific to the Caribbean through jungle, volcanic terrain, mud, and river crossings. The New York Times called it one of the world's toughest bike races, and it remains a well-regarded MTB expedition three decades on. But it is a mountain bike race, run predominantly on gravel roads, technical singletrack, and jungle trail with some paved connectors — not a road cycling event, and this database's prior 'Paved roads' surface classification and gran_fondo framing misrepresented it entirely. The 2026 edition (29-31 October, US$575 base entry) remains thinly documented on the organizer's own site: no total distance, elevation gain, field cap, or surface percentages are published, and the English page even carries a conflicting date header alongside the correct October dates.",
+      "strengths": [
+        "A pioneering, internationally recognized MTB stage race with more than three decades of history (founded 1993)",
+        "Exceptionally varied terrain and extreme climatic contrasts — a genuine coast-to-coast expedition concept",
+        "Real editorial recognition, including New York Times coverage calling it one of the world's toughest bike races"
+      ],
+      "weaknesses": [
+        "This is not a road cycling event — it is an MTB stage race on gravel, singletrack, jungle, and volcanic terrain, and it does not belong in a road-race database as currently filed",
+        "Extremely demanding and unsuitable for road-fondo riders: steep hike-a-bike climbs, technical descents, mud, rivers, heat/humidity, and potentially cold high-altitude weather",
+        "Considerable travel, bike-support, and stage-transfer complexity, plus a US$575 starting entry price",
+        "The 2026 course remains thinly documented: no total distance, elevation gain, field cap, or surface percentages published as of this research",
+        "Official-page quality issues include a conflicting date header, contradictory route-direction text, and numerous 'TBD' fields"
+      ],
+      "bottom_line": "A respected, three-decade-old event that deserves recognition — as an MTB race. It should not be scored or presented as a road gran fondo; recommend removal from this catalog or reclassification into an MTB-appropriate database."
     },
     "final_verdict": {
       "score": "73/100",
       "one_liner": "Legendary brutal coast-to-coast MTB epic across Costa Rica's wild heart.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Not applicable to a road-cycling audience — this is an MTB stage race, not a road event. If you ride mountain bikes and want a demanding, historic expedition-style challenge, it's worth serious consideration on its own terms.",
+      "alternatives": "For a road-cycling event with genuine Central/South American mountain scenery, look for dedicated road gran fondos in the region rather than this MTB race."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://racelaruta.com/events/la-ruta/",
+        "category": "official",
+        "label": "Official 2026 Event Page"
+      },
+      {
+        "url": "https://racelaruta.com/en/la-ruta-front-page-en/",
+        "category": "official",
+        "label": "Official History/Landing Page"
+      },
+      {
+        "url": "https://www.qatar-tribune.com/article/40116/CHILLOUT/Conquering-river-jungle-and-the-toughest-bike-race",
+        "category": "media",
+        "label": "NYT-Syndicated 2016 Report — 'Conquering River, Jungle and the World's Toughest Bike Race'"
+      },
+      {
+        "url": "https://www.bike-magazin.de/en/race/la-ruta-de-los-conquistadores/",
+        "category": "reference",
+        "label": "Historical Course Report"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "La Ruta de los Conquistadores gran fondo cycling San José to Limón",
@@ -279,9 +314,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://racelaruta.com/en/events/la-ruta-en/",
-      "notes": "Official site lists the 3‑day La Ruta de los Conquistadores MTB race in Costa Rica running October 29–31, 2026, matching the date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://racelaruta.com/events/la-ruta/",
+      "notes": "Confirmed active as an MTB event: official site lists the 3-day La Ruta de los Conquistadores running October 29-31, 2026. IDENTITY CORRECTION (2026-07-24): confirmed via web search that this is a mountain bike stage race on gravel/singletrack/jungle terrain with some paved connectors — NOT a road cycling event. terrain.surface and terrain.primary corrected from a fabricated 'Paved roads' classification; 2026 total distance/elevation/field are not published by the organizer, so historical vitals are retained with an explicit caveat."
+    },
+    "catalog_flags": {
+      "status_note": "IDENTITY CORRECTION this wave: confirmed MTB stage race (gravel, technical singletrack, jungle, volcanic terrain, mud/river crossings), not a road cycling event — surface/terrain fields corrected from a fabricated 'Paved roads' classification, and course_description/biased_opinion rewritten to be honest about the format. Roadie Labs is a road-cycling database; recommend a human decide whether this profile should be removed from the catalog entirely rather than scored alongside road gran fondos, per the same logic applied to other identity-corrected non-road entries.",
+      "ruled": "2026-07-24 editorial wave 2"
     }
   }
 }

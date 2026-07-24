@@ -7,19 +7,19 @@
     "vitals": {
       "distance_km": 750.0,
       "distance_mi": 466.0,
-      "elevation_m": 15000,
-      "elevation_ft": 49213.0,
-      "location": "Lanzarote, Canary Islands, Spain",
-      "location_badge": "Lanzarote, Spain",
+      "elevation_m": 17000,
+      "elevation_ft": 55774.0,
+      "location": "Lanzarote to La Gomera, Canary Islands, Spain",
+      "location_badge": "Canary Islands, Spain",
       "country": "Spain",
-      "date": "2026: January TBD",
-      "date_specific": "2026: January TBD",
-      "field_size": "small, ~20-30 riders",
+      "date": "2026: January 24-31",
+      "date_specific": "2026: January 24-31",
+      "field_size": "approximately 100 riders",
       "start_format": null,
-      "registration": null,
+      "registration": "https://granguanche.com",
       "entry_fee": null,
-      "feed_zones": "self-supported; supermarkets, gas stations for resupply",
-      "cutoff_time": "flexible Audax format with ferry timing constraints",
+      "feed_zones": "Self-supported; supermarkets, gas stations for resupply",
+      "cutoff_time": "One-week window, governed by inter-island ferry timing rather than a single race-clock cutoff",
       "lat": null,
       "lng": null,
       "route_options": []
@@ -70,16 +70,19 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "IMPORTANT — this is not a conventional gran fondo. GranGuanche Audax Road is a self-supported, single-stage, fixed-route audax across five Canary Islands (Lanzarote, Fuerteventura, Gran Canaria, Tenerife, La Gomera) — organized and tracked, with published classifications, but governed by inter-island ferry timing rather than a start list and finish clock in the conventional sense. The road edition covers roughly 750 km and 17,000 m of gain almost entirely on paved, low-traffic roads and major mountain passes, though one Gran Canaria climb runs on deteriorated tarmac that can carry loose gravel after rain. There are separate trail and gravel editions of the same event on different surfaces/months; this profile is specifically the road edition.",
+      "signature_challenge": "The Tauro Pass-GC-210 leg on Gran Canaria — roughly 245 km and 5,500 m of gain on a steep, narrow, partly deteriorated mountain road, the hardest single-island leg of the crossing.",
+      "suffering_zones": [
+        "Tauro Pass-GC-210, Gran Canaria — 245 km island leg, approximately 5,500 m gain; GC-210 is steep, narrow, and partly deteriorated tarmac",
+        "Mount Teide, Tenerife — 145 km island leg, approximately 3,700 m gain; the fastest ferry schedule allows only about 6.5 hours to cross the island"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Self-supported; some book hotels for rest (e.g., Tenerife). Final La Gomera has mandatory overnight for fast riders.",
-      "transport": "",
+      "transport": "Entirely governed by inter-island ferry schedules — riders effectively plan each day's ride around the ferry departure for the next island, not a fixed daily stage distance.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://granguanche.com"
     },
     "history": {
       "founded": null,
@@ -88,19 +91,45 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "",
-      "summary": "",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "verdict": "A Real Ride, Not a Gran Fondo",
+      "summary": "GranGuanche Audax Road is exactly what its name says: a self-supported audax, not an organized race, and it doesn't belong in a database of scored, dated gran fondos the way this profile presents it. It IS organized and tracked — published classifications, a one-week cutoff window (24-31 January 2026) — but the format is fundamentally a personal-challenge crossing of five Canary Islands (roughly 750 km, 17,000 m gain, ~100 riders) governed by inter-island ferry timing rather than a mass-start field with a shared finish clock. The terrain is genuinely demanding — the Tauro Pass/GC-210 leg on Gran Canaria alone is 245 km/5,500 m on steep, partly deteriorated tarmac — and the volcanic island-hopping concept is distinctive and well-regarded among ultra-distance/audax riders. But it has no start list in the conventional sense, no ranked results comparable to a gran fondo, and no fixed daily distance — everything bends around ferry schedules.",
+      "strengths": [
+        "Genuinely distinctive island-hopping format across five Canary Islands with real ferry-logistics complexity",
+        "Demanding, varied terrain — major volcanic mountain passes on mostly paved but sometimes deteriorated roads",
+        "Organized and tracked with published classifications, not an entirely informal group ride",
+        "Real cycling-community respect as one of the notable European multi-day audax/self-supported formats"
+      ],
+      "weaknesses": [
+        "Not a mass-participation gran fondo — self-supported, ferry-governed, personal-challenge format with a small field (~100 riders)",
+        "No conventional start list, cutoff clock, or ranked classification comparable to the scored events in this database",
+        "Fixed-route but not fixed-pace — daily distance depends entirely on ferry timing, not a defined stage",
+        "Small, niche audience — this format won't suit riders looking for a supported, timed gran fondo experience"
+      ],
+      "bottom_line": "A genuinely impressive self-supported island-crossing challenge for ultra-distance/audax riders — but it isn't a gran fondo, and presenting it as a scored, dated race misrepresents the format. Flagging for a human call on whether it belongs in this catalog at all."
     },
     "final_verdict": {
       "score": "73/100",
       "one_liner": "Epic island-hopping Audax on volcanic roads with ferry chases and Teide summit.",
-      "should_you_race": "",
-      "alternatives": ""
+      "should_you_race": "Attempt it if you want a self-supported, ferry-timed island-crossing challenge and are an experienced ultra-distance/audax rider. Skip it if you're looking for a scored, mass-start gran fondo with a conventional finish clock.",
+      "alternatives": "For a mass-participation Canary Islands road gran fondo with a conventional start/finish and ranked results, look at Epic Gran Canaria instead."
     },
-    "citations": [],
+    "citations": [
+      {
+        "url": "https://outerdetours.com/granguanche/audax-road/",
+        "category": "reference",
+        "label": "Format Confirmation — Self-Supported Audax, Not a Race"
+      },
+      {
+        "url": "https://outerdetours.com/ggar5-granguanche-audax-road-2026/",
+        "category": "reference",
+        "label": "2026 Edition Details"
+      },
+      {
+        "url": "https://www.followmychallenge.com/live/granguanche-audax/road-26/",
+        "category": "official",
+        "label": "Official 2026 Live Tracking/Classification"
+      }
+    ],
     "youtube_data": {
       "researched_at": "2026-03-05",
       "search_query": "GranGuanche Audax Road gran fondo cycling Lanzarote",
@@ -358,9 +387,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://granguanche.com/ride/",
-      "notes": "5th edition scheduled 25 Jan 2026 in Lanzarote with registration and event info live, and organizer listing it among upcoming events.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-07-24",
+      "source": "https://outerdetours.com/granguanche/audax-road/",
+      "notes": "5th edition confirmed 24-31 January 2026 across 5 Canary Islands (Lanzarote, Fuerteventura, Gran Canaria, Tenerife, La Gomera), ~750km/17,000m, ~100 riders. Confirmed format: self-supported audax with published classifications and ferry-governed timing, not a conventional mass-start gran fondo — vitals and field size corrected from prior guesses."
+    },
+    "catalog_flags": {
+      "status_note": "IDENTITY CORRECTION this wave: this is a self-supported audax (organized/tracked but ferry-timed personal challenge, ~100 riders), not a conventional scored gran fondo — course_description and biased_opinion updated to reflect this honestly. Flagging for a human call on whether a self-supported, ferry-governed audax belongs in a database of scored, dated mass-participation gran fondos at all, per the same logic applied to other identity-corrected non-race entries in this catalog.",
+      "ruled": "2026-07-24 editorial wave 2"
     }
   }
 }
