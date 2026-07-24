@@ -99,6 +99,11 @@ def main():
     for path in profiles:
         try:
             data = json.loads(path.read_text())
+            flags = (data.get("race") or {}).get("catalog_flags") or {}
+            if flags.get("duplicate_of") or flags.get("discipline_mismatch"):
+                print(f"  EXCLUDE {path.name}: catalog_flags "
+                      f"({'dup of ' + str(flags.get('duplicate_of')) if flags.get('duplicate_of') else 'discipline mismatch'})")
+                continue
             entry = build_index_entry(data)
             entries.append(entry)
         except (json.JSONDecodeError, KeyError) as e:
