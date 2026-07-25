@@ -74,7 +74,7 @@ class TestLayout:
     def test_both_scores_in_scores_wrapper(self):
         html = build_hero(_rd())
         assert "rl-hero-scores" in html
-        assert "RL SCORE" in html
+        assert "LAB SCORE" in html
         assert "RIDER SCORE" in html
 
 

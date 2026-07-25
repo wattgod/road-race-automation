@@ -29,6 +29,7 @@
   var savedConfigs = [];
   try { savedConfigs = JSON.parse(localStorage.getItem('rl-saved-filters') || '[]'); } catch(e) { savedConfigs = []; }
   var activeSavedIndex = -1;
+  var lastTrackedSearchSignature = '';
 
   var COMPARE_COLORS = [
     { stroke: '#1a1a2e', fill: 'rgba(26,26,46,0.15)' },
@@ -446,7 +447,7 @@
   // ── URL state ──
   function loadFromURL() {
     var params = new URLSearchParams(window.location.search);
-    if (params.get('q')) document.getElementById('rl-search').value = params.get('q');
+    if (params.get('q')) document.getElementById('rl-search').value = normalizeSearchQuery(params.get('q'));
     if (params.get('tier')) document.getElementById('rl-tier').value = params.get('tier');
     if (params.get('region')) document.getElementById('rl-region').value = params.get('region');
     if (params.get('distance')) document.getElementById('rl-distance').value = params.get('distance');
@@ -535,6 +536,10 @@
   }
 
   // ── Filter helpers ──
+  function normalizeSearchQuery(value) {
+    return String(value || '').trim().replace(/\s+/g, ' ').toLowerCase();
+  }
+
   function countByFilter(filterKey, filterValue) {
     return allRaces.filter(function(r) {
       if (filterKey === 'tier') return r.tier == filterValue;
@@ -619,7 +624,7 @@
   }
 
   function getFilters() {
-    var search = document.getElementById('rl-search').value.toLowerCase();
+    var search = normalizeSearchQuery(document.getElementById('rl-search').value);
     var tier = document.getElementById('rl-tier').value;
     var region = document.getElementById('rl-region').value;
     var distance = document.getElementById('rl-distance').value;
@@ -1492,6 +1497,23 @@
     document.getElementById('rl-count').textContent =
       filtered.length + ' race' + (filtered.length !== 1 ? 's' : '') + ' found';
 
+    var filters = getFilters();
+    var searchSignature = [filters.search, filters.tier, filters.region, filters.distance, filters.month, filters.discipline].join('|');
+    if (searchSignature !== lastTrackedSearchSignature && searchSignature.replace(/\|/g, '')) {
+      lastTrackedSearchSignature = searchSignature;
+      if (typeof gtag === 'function') {
+        gtag('event', 'race_search', {
+          search_term: filters.search,
+          result_count: filtered.length,
+          tier: filters.tier,
+          region: filters.region,
+          distance: filters.distance,
+          month: filters.month,
+          discipline: filters.discipline
+        });
+      }
+    }
+
     if (compareMode && compareSlugs.length >= 2) {
       renderComparePanel();
       renderActivePills();
@@ -1559,6 +1581,18 @@
 
   // Delegated event listeners — avoid inline onclick/onchange (XSS prevention)
   document.addEventListener('click', function(e) {
+    var raceLink = e.target.closest('a[href*="/race/"]');
+    if (raceLink) {
+      var match = (raceLink.getAttribute('href') || '').match(/\/race\/([^/?#]+)/);
+      if (match && typeof gtag === 'function') {
+        gtag('event', 'race_result_click', {
+          race_slug: match[1],
+          search_term: getFilters().search,
+          result_mode: displayMode,
+          result_sort: currentSort
+        });
+      }
+    }
     var favBtn = e.target.closest('.rl-fav-btn');
     if (favBtn && favBtn.dataset.slug) {
       toggleFavorite(favBtn.dataset.slug);

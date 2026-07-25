@@ -1,5 +1,12 @@
 # Roadie Labs — LLM Handoff (as of 2026-07-01)
 
+> **Canonical race-page update — 2026-07-17:** Read
+> [`race-page-spine-v2-canonical.md`](race-page-spine-v2-canonical.md) before changing
+> or regenerating race pages. It records the final owner-approved structure, exact
+> offer/coaching copy, commerce-free Deep Dive rule, Roadie-specific brand invariants,
+> catalog verification, commit references, and deploy gate. Where this older handoff
+> describes the previous race-page offer or layout, the canonical document wins.
+
 You are picking up work on **Roadie Labs** (roadielabs.com), the road-cycling
 sibling of Gravel God Cycling. This doc is everything you need to continue. Read
 it fully before touching anything. Also read `CLAUDE.md` (repo rules) and, in the

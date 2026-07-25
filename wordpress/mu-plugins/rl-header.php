@@ -79,7 +79,8 @@ header.site-header,
 
 .rl-site-header { padding: 16px 24px !important; border-bottom: 2px solid #333333 !important; background: #f5f5f0 !important; }
 .rl-site-header-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 960px !important; margin: 0 auto !important; }
-.rl-site-header-logo img { display: block !important; height: 50px !important; width: auto !important; }
+.rl-site-header-logo { display: block !important; color: #1a1a1a !important; }
+.rl-site-header-logo svg { display: block !important; height: 58px !important; width: auto !important; }
 .rl-site-header-nav { display: flex !important; gap: 24px !important; align-items: center !important; }
 .rl-site-header-nav > a,
 .rl-site-header-nav > a:link,
@@ -109,7 +110,7 @@ header.site-header,
 @media (max-width: 600px) {
   .rl-site-header { padding: 12px 16px !important; }
   .rl-site-header-inner { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; }
-  .rl-site-header-logo img { height: 40px !important; }
+  .rl-site-header-logo svg { height: 46px !important; }
   .rl-site-header-nav { gap: 12px !important; flex-wrap: wrap !important; justify-content: center !important; }
   .rl-site-header-nav > a,
   .rl-site-header-item > a { font-size: 10px !important; letter-spacing: 1.5px !important; }
@@ -148,8 +149,11 @@ function rl_shared_header_html() {
     ?>
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
-    <a href="<?php echo $base; ?>/" class="rl-site-header-logo">
-      <img src="<?php echo $base; ?>/wp-content/uploads/road-labs-logo.png" alt="Roadie Labs" width="50" height="50">
+    <a href="<?php echo $base; ?>/" class="rl-site-header-logo" aria-label="Roadie Labs">
+      <svg class="rl-site-header-mark" viewBox="0 0 800 1600" aria-hidden="true" focusable="false">
+        <defs><mask id="rl-wp-slick-grooves"><rect width="800" height="1600" fill="white"/><path d="M400 188V1412" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/><g fill="none" stroke="black" stroke-width="20" stroke-linecap="round"><path d="M270 380 300 390M310 380 340 390M350 380 380 390M270 470 300 480M350 470 380 480M270 560 300 570M350 560 380 570M270 650 300 660M310 650 340 660M350 650 380 660M270 740 300 750M310 740 340 750M270 830 300 840M350 830 380 840M270 920 300 930M350 920 380 930M270 1010 300 1020M350 1010 380 1020M270 1100 300 1110M350 1100 380 1110M270 1190 300 1200M350 1190 380 1200"/><path d="M420 390 450 380M420 480 450 470M420 570 450 560M420 660 450 650M420 750 450 740M420 840 450 830M420 930 450 920M420 1020 450 1010M420 1110 450 1100M420 1200 450 1190M460 1200 490 1190M500 1200 530 1190"/></g></mask></defs>
+        <path fill="currentColor" mask="url(#rl-wp-slick-grooves)" d="M400 24C490 24 535 140 552 320 570 520 570 1080 552 1280 535 1460 490 1576 400 1576S265 1460 248 1280C230 1080 230 520 248 320 265 140 310 24 400 24Z"/>
+      </svg>
     </a>
     <nav class="rl-site-header-nav">
       <div class="rl-site-header-item">
