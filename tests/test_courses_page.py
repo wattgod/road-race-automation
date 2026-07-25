@@ -161,6 +161,23 @@ class TestCrossSellContent:
         assert BUNDLE_URL == "https://gravelgodcycling.com/course/"
         assert BUNDLE_URL in page_html
 
+    def test_offsite_ctas_open_safely_and_show_external_indicator(self, page_html):
+        for url, course_id in [
+            (HYDRATION_URL, "hydration_mastery"),
+            (DIRT_CRAFT_URL, "dirt_craft"),
+            (BUNDLE_URL, "bundle"),
+        ]:
+            cta = re.search(
+                rf'<a href="{re.escape(url)}"[^>]*data-course-cta="{course_id}"[^>]*>(.*?)</a>',
+                page_html,
+                re.DOTALL,
+            )
+            assert cta, f"Missing {course_id} CTA"
+            opening_tag = cta.group(0).split(">", 1)[0]
+            assert 'target="_blank"' in opening_tag
+            assert 'rel="noopener"' in opening_tag
+            assert 'class="rl-external-indicator"' in cta.group(1)
+
     def test_prices(self, page_html):
         assert HYDRATION_PRICE == 19
         assert DIRT_CRAFT_PRICE == 29

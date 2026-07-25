@@ -242,7 +242,7 @@ class TestSectionBuilders:
         assert ">RACES</a>" in nav
         assert ">PRODUCTS</a>" in nav
         assert ">SERVICES</a>" in nav
-        assert ">ARTICLES</a>" in nav
+        assert '>ARTICLES<span class="rl-external-indicator"' in nav
         assert ">ABOUT</a>" in nav
 
     def test_nav_has_dropdowns(self):

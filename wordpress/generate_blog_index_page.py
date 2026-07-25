@@ -22,6 +22,17 @@ from brand_tokens import get_ga4_head_snippet
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
 INDEX_JSON = PROJECT_ROOT / "web" / "blog-index.json"
+RACE_INDEX_JSON = PROJECT_ROOT / "web" / "race-index.json"
+
+
+def load_race_count() -> int:
+    """Race count from race-index.json — never hardcode (stale-count trap, see ab_experiments.py)."""
+    if not RACE_INDEX_JSON.exists():
+        raise RuntimeError(
+            f"Required race index is missing: {RACE_INDEX_JSON}. "
+            "Run python3 scripts/generate_index.py before generating the blog index."
+        )
+    return len(json.loads(RACE_INDEX_JSON.read_text(encoding="utf-8")))
 SITE_URL = "https://roadielabs.com"
 
 TIER_COLORS = {1: "#555555", 2: "#7d695d", 3: "#766a5e", 4: "#5e6868"}
@@ -68,6 +79,7 @@ def generate_blog_index_page(output_dir=None):
     out_dir = output_dir or OUTPUT_DIR
     today = date.today()
     today_str = today.strftime("%B %d, %Y")
+    race_count = load_race_count()
 
     # Load blog-index.json for SSR (server-side rendered cards)
     ssr_cards_html = ""
@@ -100,9 +112,9 @@ def generate_blog_index_page(output_dir=None):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {get_ga4_head_snippet()}
   <title>Roadie Labs Blog — Race Previews, Roundups &amp; Recaps</title>
-  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs road race database. 427 races rated and ranked.">
+  <meta name="description" content="Race previews, season roundups, and race recaps from the Roadie Labs road race database. {race_count} races rated and ranked.">
   <meta property="og:title" content="Roadie Labs Blog — Race Previews, Roundups &amp; Recaps">
-  <meta property="og:description" content="Race previews, season roundups, and race recaps. 427 road races rated and ranked.">
+  <meta property="og:description" content="Race previews, season roundups, and race recaps. {race_count} road races rated and ranked.">
   <meta property="og:url" content="{SITE_URL}/blog/">
   <link rel="canonical" href="{SITE_URL}/blog/">
   <script type="application/ld+json">{jsonld}</script>

@@ -54,7 +54,7 @@ def get_site_header_html(active: str | None = None) -> str:
       </div>
       <a href="{SITE_BASE_URL}/courses/"{_aria("courses")}>COURSES</a>
       <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
-      <a href="{SUBSTACK_URL}" target="_blank" rel="noopener"{_aria("articles")}>ARTICLES</a>
+      <a href="{SUBSTACK_URL}" target="_blank" rel="noopener" aria-label="ARTICLES (opens in a new tab)"{_aria("articles")}>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
       <a href="{SITE_BASE_URL}/about/"{_aria("about")}>ABOUT</a>
     </nav>
   </div>
@@ -79,6 +79,7 @@ def get_site_header_css() -> str:
 .rl-site-header-item > a:hover { color: var(--rl-color-orange); }
 .rl-site-header-nav > a[aria-current="page"],
 .rl-site-header-item > a[aria-current="page"] { color: var(--rl-color-orange); }
+.rl-external-indicator { margin-left: 2px; font-size: 0.75em; letter-spacing: normal; vertical-align: 0.15em; }
 
 /* Dropdown container */
 .rl-site-header-item { position: relative; }

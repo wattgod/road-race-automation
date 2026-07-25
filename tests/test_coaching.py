@@ -557,6 +557,17 @@ class TestJSSyntax:
 
 
 class TestJSONLD:
+    def test_race_count_loaders_require_the_race_index(self, monkeypatch, tmp_path):
+        """A missing index must fail the build instead of publishing a zero count."""
+        import generate_blog_index_page
+        import generate_coaching
+
+        missing_index = tmp_path / "missing-race-index.json"
+        for module in [generate_coaching, generate_blog_index_page]:
+            monkeypatch.setattr(module, "RACE_INDEX_JSON", missing_index)
+            with pytest.raises(RuntimeError, match="Required race index is missing"):
+                module.load_race_count()
+
     def test_webpage_schema(self):
         ld = build_jsonld()
         assert '"@type":"WebPage"' in ld
@@ -571,10 +582,18 @@ class TestJSONLD:
     def test_description_reflects_new_hero(self):
         """The old description referenced the removed 'Fitness is common'
         hero — it must be gone, replaced by wording consistent with the
-        new one-coach / 427-courses hero."""
+        one-coach / N-courses hero. The count is dynamic from
+        race-index.json (never hardcode — stale-count trap)."""
+        from generate_coaching import load_race_count
         ld = build_jsonld()
+        page = generate_coaching_page()
+        count = load_race_count()
         assert "Fitness is common" not in ld
-        assert "427 courses on file" in ld
+        assert count > 300
+        assert f"{count} courses on file" in ld
+        assert f"built on {count} analyzed courses" in page
+        assert f"behind {count} course profiles" in page
+        assert "427 courses" not in ld or count == 427
 
     def test_uses_safe_json_for_script(self):
         """JSON-LD must go through _safe_json_for_script — a '</script>'

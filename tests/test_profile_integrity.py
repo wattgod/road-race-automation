@@ -235,6 +235,24 @@ class TestDuplicateDetection:
 class TestSecurityRegressions:
     """Static analysis tests to prevent XSS/injection regression."""
 
+    def test_search_discipline_all_is_the_only_ui_reset_state(self):
+        """The default All discipline must not silently reset to Gran Fondo."""
+        src = Path(__file__).parent.parent / "web" / "road-labs-search.js"
+        content = src.read_text()
+
+        assert not re.search(r"(?:\\.value|value)\\s*=\\s*['\"]gran_fondo['\"]", content)
+        assert "discipline: f.discipline ? discLabels[f.discipline] : null" in content
+        assert "var resetVal = '';" in content
+        assert "document.getElementById('rl-discipline').value = '';" in content
+        assert "document.getElementById('rl-discipline').value = f.discipline || '';" in content
+
+    def test_search_score_label_uses_roadie_labs_brand(self):
+        """The search card score badge must not leak the Gravel God label."""
+        src = Path(__file__).parent.parent / "web" / "road-labs-search.js"
+        content = src.read_text()
+        assert '<span class="rl-card-score-label">RL</span>' in content
+        assert '>GG<' not in content
+
     def test_no_inline_onclick_with_slug_in_search_js(self):
         """search.js must not contain inline onclick handlers interpolating slugs."""
         src = Path(__file__).parent.parent / "web" / "road-labs-search.js"

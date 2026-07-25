@@ -447,7 +447,7 @@ class TestTocIntegration:
     def test_toc_includes_from_the_field_when_active(self):
         toc = build_toc({'course', 'from-the-field', 'ratings', 'training'})
         assert 'from-the-field' in toc
-        assert '04 From the Field' in toc
+        assert '>From the Field</a>' in toc
 
     def test_toc_excludes_from_the_field_when_not_active(self):
         toc = build_toc({'course', 'ratings', 'training'})

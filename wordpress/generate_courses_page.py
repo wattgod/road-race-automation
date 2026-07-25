@@ -106,7 +106,7 @@ def build_course_cards() -> str:
             <li>Race hydration planner: an hour-by-hour bottle and electrolyte schedule for your event</li>
             <li>Race-day execution &mdash; what to drink, when, and what to do when the plan breaks</li>
           </ul>
-          <a href="{HYDRATION_URL}" class="rl-course-card-btn" data-course-cta="hydration_mastery">GET HYDRATION MASTERY &mdash; ${HYDRATION_PRICE}</a>
+          <a href="{HYDRATION_URL}" class="rl-course-card-btn" data-course-cta="hydration_mastery" target="_blank" rel="noopener">GET HYDRATION MASTERY &mdash; ${HYDRATION_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
         </article>
 
         <article class="rl-course-card">
@@ -124,7 +124,7 @@ def build_course_cards() -> str:
             <li>Built for riders with strong fitness and road handling, zero gravel mileage</li>
             <li>Self-paced, ride the drills on your own schedule</li>
           </ul>
-          <a href="{DIRT_CRAFT_URL}" class="rl-course-card-btn" data-course-cta="dirt_craft">GET DIRT CRAFT &mdash; ${DIRT_CRAFT_PRICE}</a>
+          <a href="{DIRT_CRAFT_URL}" class="rl-course-card-btn" data-course-cta="dirt_craft" target="_blank" rel="noopener">GET DIRT CRAFT &mdash; ${DIRT_CRAFT_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
         </article>
 
       </div>
@@ -142,7 +142,7 @@ def build_bundle_strip() -> str:
           <h3 class="rl-courses-bundle-title">Both Courses &mdash; ${BUNDLE_PRICE}</h3>
           <p>Hydration Mastery (${HYDRATION_PRICE}) + Dirt Craft (${DIRT_CRAFT_PRICE}) together for ${BUNDLE_PRICE}. Saves ${savings}.</p>
         </div>
-        <a href="{BUNDLE_URL}" class="rl-course-card-btn rl-courses-bundle-btn" data-course-cta="bundle">GET THE BUNDLE &mdash; ${BUNDLE_PRICE}</a>
+        <a href="{BUNDLE_URL}" class="rl-course-card-btn rl-courses-bundle-btn" data-course-cta="bundle" target="_blank" rel="noopener">GET THE BUNDLE &mdash; ${BUNDLE_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>'''

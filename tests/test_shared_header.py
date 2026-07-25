@@ -16,8 +16,9 @@ class TestHeaderHTML:
 
     def test_six_nav_items(self):
         html = get_site_header_html()
-        for label in ["RACES", "PRODUCTS", "COURSES", "SERVICES", "ARTICLES", "ABOUT"]:
+        for label in ["RACES", "PRODUCTS", "COURSES", "SERVICES", "ABOUT"]:
             assert f">{label}</a>" in html
+        assert '>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>' in html
 
     def test_two_dropdown_containers(self):
         # RACES + PRODUCTS keep dropdowns; SERVICES/ARTICLES became plain
@@ -109,6 +110,7 @@ class TestHeaderHTML:
         # Substack link should have target and rel
         assert 'target="_blank"' in html
         assert 'rel="noopener"' in html
+        assert 'class="rl-external-indicator"' in html
 
     def test_substack_url(self):
         html = get_site_header_html()

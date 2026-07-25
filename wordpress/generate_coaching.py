@@ -23,6 +23,7 @@ Usage:
 
 import argparse
 import html
+import json
 from pathlib import Path
 
 from generate_neo_brutalist import (
@@ -39,6 +40,18 @@ from cookie_consent import get_consent_banner_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+RACE_INDEX_JSON = PROJECT_ROOT / "web" / "race-index.json"
+
+
+def load_race_count() -> int:
+    """Race count from race-index.json — never hardcode (stale-count trap, see ab_experiments.py)."""
+    if not RACE_INDEX_JSON.exists():
+        raise RuntimeError(
+            f"Required race index is missing: {RACE_INDEX_JSON}. "
+            "Run python3 scripts/generate_index.py before generating coaching."
+        )
+    return len(json.loads(RACE_INDEX_JSON.read_text(encoding="utf-8")))
+
 
 # ── Constants ─────────────────────────────────────────────────
 
@@ -904,7 +917,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Coaching | Roadie Labs",
-        "description": "Road cycling coaching from one coach, 427 courses on file. A human who reads your training data, adjusts the plan when your life changes, and tells you the truth.",
+        "description": f"Road cycling coaching from one coach, {load_race_count()} courses on file. A human who reads your training data, adjusts the plan when your life changes, and tells you the truth.",
         "url": f"{SITE_BASE_URL}/coaching/",
         "isPartOf": {
             "@type": "WebSite",
@@ -954,10 +967,10 @@ def generate_coaching_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = "Road cycling coaching built on 427 analyzed courses. A human coach, a plan that adjusts weekly, and honest feedback. From $199 every 4 weeks."
+    meta_desc = f"Road cycling coaching built on {load_race_count()} analyzed courses. A human coach, a plan that adjusts weekly, and honest feedback. From $199 every 4 weeks."
 
     og_tags = f'''<meta property="og:title" content="Coaching | Roadie Labs">
-  <meta property="og:description" content="Coaching built around your race, your hours, and your life. From the coach behind 427 course profiles.">
+  <meta property="og:description" content="Coaching built around your race, your hours, and your life. From the coach behind {load_race_count()} course profiles.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -966,7 +979,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Coaching | Roadie Labs">
-  <meta name="twitter:description" content="Coaching built around your race, your hours, and your life. From the coach behind 427 course profiles.">
+  <meta name="twitter:description" content="Coaching built around your race, your hours, and your life. From the coach behind {load_race_count()} course profiles.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()

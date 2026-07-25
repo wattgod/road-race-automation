@@ -11,6 +11,8 @@ import pytest
 # Ensure wordpress/ is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
 
+import generate_neo_brutalist as neo
+
 from generate_neo_brutalist import (
     ALL_DIMS,
     COUNTRY_CODES,
@@ -918,7 +920,7 @@ class TestNav:
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
-        assert '>ARTICLES</a>' in html
+        assert '>ARTICLES<span class="rl-external-indicator"' in html
         assert '>ABOUT</a>' in html
         assert '/road-races/' in html
         assert '/training-plans/' in html
@@ -1077,6 +1079,66 @@ class TestFullPage:
         assert 'id="training"' in html
         assert 'id="logistics"' in html
         assert 'data-page-format="spine-v2-approved"' in html
+
+    def test_numeric_kickers_are_sequential_when_sections_are_missing(self, stub_race_data):
+        """Optional sections must not leave gaps or duplicate numeric kickers."""
+        rd = normalize_race_data(stub_race_data)
+        rd["eligibility"] = {"status": "defunct"}
+        html = generate_page(rd)
+
+        # This minimal/defunct profile suppresses several optional sections.
+        assert 'id="history"' not in html
+        assert 'id="route"' not in html
+        assert 'class="rl-plan-ladder' not in html
+
+        kickers = re.findall(
+            r'<span class="rl-section-kicker">\[(\d{2})\]</span>', html
+        )
+        assert kickers == [f"{number:02d}" for number in range(1, len(kickers) + 1)]
+
+    def test_toc_numbers_follow_rendered_section_order(self, normalized_data):
+        html = generate_page(normalized_data)
+        toc = re.search(r'<nav class="rl-toc".*?</nav>', html, re.DOTALL).group(0)
+        numbers = re.findall(r'>(\d{2}) ', toc)
+        assert numbers == [f"{number:02d}" for number in range(1, len(numbers) + 1)]
+
+    def test_all_skips_catalog_flagged_race_and_continues(self, tmp_path, monkeypatch, capsys):
+        data_dir = tmp_path / "race-data"
+        output_dir = tmp_path / "output"
+        data_dir.mkdir()
+        flagged = data_dir / "flagged.json"
+        following = data_dir / "following.json"
+        flagged.write_text("{}")
+        following.write_text("{}")
+
+        generated = []
+        monkeypatch.setattr(neo, "write_shared_assets", lambda _output: {})
+
+        def fake_load(path):
+            if path == flagged:
+                raise SystemExit("REFUSED: catalog-flagged")
+            return {"slug": path.stem}
+
+        def fake_generate(rd, _race_index, external_assets=None):
+            generated.append(rd["slug"])
+            return "<html></html>"
+
+        monkeypatch.setattr(neo, "load_race_data", fake_load)
+        monkeypatch.setattr(neo, "generate_page", fake_generate)
+        monkeypatch.setattr(
+            sys,
+            "argv",
+            [
+                "generate_neo_brutalist.py", "--all", "--data-dir", str(data_dir),
+                "--output-dir", str(output_dir),
+            ],
+        )
+
+        neo.main()
+
+        assert generated == ["following"]
+        assert (output_dir / "following.html").exists()
+        assert "SKIP: flagged: REFUSED: catalog-flagged" in capsys.readouterr().err
 
     def test_decision_spine_precedes_deep_dive(self, normalized_data):
         html = generate_page(normalized_data)

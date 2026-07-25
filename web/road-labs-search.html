@@ -11,7 +11,7 @@
   Self-contained: no React, no build step, vanilla JS + CSS.
 -->
 <div id="rl-race-search">
-  <link rel="stylesheet" href="/search/rl-search.css?v=20260717">
+  <link rel="stylesheet" href="/search/rl-search.css?v=20260724a">
 
   <!-- Questionnaire -->
   <div class="rl-questionnaire">
@@ -69,8 +69,8 @@
     <div class="rl-filter-group">
       <label for="rl-discipline">Discipline</label>
       <select id="rl-discipline">
-        <option value="">All Types</option>
-        <option value="gran_fondo" selected>Gran Fondo</option>
+        <option value="" selected>All</option>
+        <option value="gran_fondo">Gran Fondo</option>
         <option value="sportive">Sportive</option>
         <option value="century">Century</option>
         <option value="multi_stage">Multi-Stage</option>
@@ -575,7 +575,7 @@
     <a href="/race/methodology/">How We Rate Races</a>
   </div>
 
-  <script src="/search/road-labs-search.js?v=20260717"></script>
+  <script src="/search/road-labs-search.js?v=20260724a"></script>
   <!-- JS extracted to external file to prevent WordPress from stripping inline scripts.
        Original inline <script> block was being removed by SiteGround Optimizer / AIOS / WP sanitization.
        Deploy: python3 scripts/push_wordpress.py --sync-widget -->

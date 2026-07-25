@@ -503,7 +503,7 @@
     if (f.region) params.set('region', f.region);
     if (f.distance) params.set('distance', f.distance);
     if (f.month) params.set('month', f.month);
-    if (f.discipline !== 'gran_fondo') params.set('discipline', f.discipline);
+    if (f.discipline) params.set('discipline', f.discipline);
     if (currentSort !== 'score') params.set('sort', currentSort);
 
     if (displayMode === 'match') {
@@ -611,7 +611,7 @@
 
     var discSel = document.getElementById('rl-discipline');
     var currentDisc = discSel.value;
-    discSel.innerHTML = '<option value="">All Types</option>';
+    discSel.innerHTML = '<option value="">All</option>';
     [['gran_fondo', 'Gran Fondo'], ['sportive', 'Sportive'], ['century', 'Century'], ['multi_stage', 'Multi-Stage'], ['hillclimb', 'Hillclimb']].forEach(function(pair) {
       var count = countByFilter('discipline', pair[0]);
       if (count > 0) {
@@ -620,7 +620,7 @@
         discSel.appendChild(opt);
       }
     });
-    discSel.value = currentDisc || 'gran_fondo';
+    discSel.value = currentDisc;
   }
 
   function getFilters() {
@@ -810,7 +810,7 @@
     if (race.overall_score) {
       scoreHero = '<div class="rl-card-score-hero">' +
         '<span class="rl-card-score-big" style="color:' + scoreColor(race.overall_score) + '">' + race.overall_score + '</span>' +
-        '<span class="rl-card-score-label">GG</span>' +
+        '<span class="rl-card-score-label">RL</span>' +
       '</div>';
     }
 
@@ -1052,7 +1052,7 @@
       region: f.region || null,
       distance: f.distance ? distLabels[f.distance] : null,
       month: f.month || null,
-      discipline: f.discipline !== 'gran_fondo' ? (f.discipline ? discLabels[f.discipline] : 'All Disciplines') : null
+      discipline: f.discipline ? discLabels[f.discipline] : null
     };
 
     // Add favorites pill
@@ -1069,7 +1069,7 @@
       var key = pair[0], label = pair[1];
       if (label) {
         var inputId = key === 'search' ? 'rl-search' : 'rl-' + key;
-        var resetVal = key === 'discipline' ? 'gran_fondo' : '';
+        var resetVal = '';
         pills.push('<span class="rl-filter-pill">' + label + '<button onclick="document.getElementById(\'' + inputId + '\').value=\'' + resetVal + '\';document.getElementById(\'' + inputId + '\').dispatchEvent(new Event(\'change\'))">×</button></span>');
       }
     });
@@ -1320,7 +1320,7 @@
     document.getElementById('rl-region').value = '';
     document.getElementById('rl-distance').value = '';
     document.getElementById('rl-month').value = '';
-    document.getElementById('rl-discipline').value = 'gran_fondo';
+    document.getElementById('rl-discipline').value = '';
     // Also clear near me
     if (userLat !== null) activateNearMe();
     showFavoritesOnly = false;
@@ -1400,7 +1400,7 @@
     document.getElementById('rl-region').value = f.region || '';
     document.getElementById('rl-distance').value = f.distance || '';
     document.getElementById('rl-month').value = f.month || '';
-    document.getElementById('rl-discipline').value = f.discipline || 'gran_fondo';
+    document.getElementById('rl-discipline').value = f.discipline || '';
     // Restore sort
     if (config.sort) {
       currentSort = config.sort;

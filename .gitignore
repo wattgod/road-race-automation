@@ -101,3 +101,6 @@ Thumbs.db
 # Immune system scan telemetry (churns every run; immune/ledger.jsonl stays tracked)
 immune/report.json
 immune/scans.jsonl
+
+# Staged race-page builds (any output* variant)
+wordpress/output*/

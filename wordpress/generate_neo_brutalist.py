@@ -2098,29 +2098,73 @@ def build_photos_section(rd: dict) -> str:
 </section>'''
 
 
-def build_toc(active_sections=None) -> str:
+def build_toc(active_sections=None, section_numbers: dict[str, str] | None = None) -> str:
     """Build table of contents nav.
 
     If *active_sections* is provided, only show links whose anchor id is
     in the set.  Pass ``None`` to show all links (backward-compatible).
     """
     all_links = [
-        ('course', '01 Course Overview'),
-        ('history', '02 Facts &amp; History'),
-        ('route', '03 The Course'),
-        ('from-the-field', '04 From the Field'),
-        ('ratings', '05 The Ratings'),
-        ('verdict', '06 Final Verdict'),
-        ('training', '07 Training'),
-        ('train-for-race', '08 Train for This Race'),
-        ('logistics', '09 Race Logistics'),
-        ('tires', '10 Tire Picks'),
-        ('citations', '11 Sources'),
+        ('ratings', 'The Ratings'),
+        ('course', 'Course Overview'),
+        ('history', 'Facts &amp; History'),
+        ('route', 'The Course'),
+        ('from-the-field', 'From the Field'),
+        ('verdict', 'Final Verdict'),
+        ('training', 'Training'),
+        ('train-for-race', 'Train for This Race'),
+        ('logistics', 'Race Logistics'),
+        ('tires', 'Tire Picks'),
+        ('citations', 'Sources'),
     ]
-    links = [(href, label) for href, label in all_links
-             if active_sections is None or href in active_sections]
+    section_numbers = section_numbers or {}
+    links = [
+        (href, f"{section_numbers[href]} {label}" if href in section_numbers else label)
+        for href, label in all_links
+        if active_sections is None or href in active_sections
+    ]
     items = '\n  '.join(f'<a href="#{href}">{label}</a>' for href, label in links)
     return f'<nav class="rl-toc" aria-label="Table of contents">\n  {items}\n</nav>'
+
+
+def renumber_numeric_section_kickers(markup: str) -> tuple[str, dict[str, str]]:
+    """Renumber numeric section kickers and return their section-id mapping.
+
+    Section builders are intentionally optional, so their literal source-order
+    numbers cannot be relied upon after page assembly. Only ``[NN]`` kickers
+    are rewritten; descriptive kickers such as ``[PLANS]`` and ``RACER`` stay
+    intact.
+    """
+    counter = 1
+
+    def replace(match: re.Match) -> str:
+        nonlocal counter
+        replacement = f'{match.group(1)}{counter:02d}{match.group(2)}'
+        counter += 1
+        return replacement
+
+    kicker_re = re.compile(
+        r'(<span class="rl-section-kicker">\[)\d{2}(\]</span>)'
+    )
+    renumbered = kicker_re.sub(replace, markup)
+
+    # The TOC displays numbers too. Derive them from the post-processed markup
+    # so its labels always match the rendered document order.
+    section_numbers = {}
+    section_starts = list(re.finditer(r'<section\b[^>]*>', renumbered))
+    for index, section_start in enumerate(section_starts):
+        section_html = renumbered[
+            section_start.start(): section_starts[index + 1].start()
+            if index + 1 < len(section_starts) else len(renumbered)
+        ]
+        id_match = re.search(r'\bid="([^"]+)"', section_start.group(0))
+        kicker_match = re.search(
+            r'<span class="rl-section-kicker">\[(\d{2})\]</span>', section_html
+        )
+        if id_match and kicker_match:
+            section_numbers[id_match.group(1)] = kicker_match.group(1)
+
+    return renumbered, section_numbers
 
 
 def _extract_state(location: str) -> str:
@@ -6108,7 +6152,6 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         active.add('train-for-race')
     if citations_sec:
         active.add('citations')
-    toc = build_toc(active)
     breakdown = build_breakdown_tiles(active)
 
     # Use external assets if provided, otherwise inline
@@ -6137,7 +6180,14 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         if section:
             deep_sections.append(section)
 
-    deep_content = '\n\n  '.join(deep_sections)
+    # Builders use readable source-order literals for their kickers, but many
+    # sections above are optional. Renumber the final assembled order instead.
+    numbering_boundary = '\n<!-- rl-section-numbering-boundary -->\n'
+    numbered_content, section_numbers = renumber_numeric_section_kickers(
+        spine + numbering_boundary + '\n\n  '.join(deep_sections)
+    )
+    spine, _, deep_content = numbered_content.partition(numbering_boundary)
+    toc = build_toc(active, section_numbers)
 
     # SEO-optimized title and description
     seo_title = build_seo_title(rd)
@@ -6298,6 +6348,7 @@ def main():
         total = len(files)
         success = 0
         errors = []
+        skipped = []
 
         # Write shared CSS/JS assets
         assets = write_shared_assets(output_dir)
@@ -6312,6 +6363,9 @@ def main():
                 success += 1
                 if i % 50 == 0 or i == total:
                     print(f"  [{i}/{total}] Generated {slug}.html")
+            except SystemExit as e:
+                skipped.append((slug, str(e)))
+                print(f"  SKIP: {slug}: {e}", file=sys.stderr)
             except Exception as e:
                 errors.append((slug, str(e)))
                 print(f"  ERROR: {slug}: {e}", file=sys.stderr)
@@ -6321,6 +6375,10 @@ def main():
             print(f"\n{len(errors)} errors:")
             for slug, err in errors:
                 print(f"  {slug}: {err}")
+        if skipped:
+            print(f"\n{len(skipped)} catalog-flagged races skipped:")
+            for slug, reason in skipped:
+                print(f"  {slug}: {reason}")
     else:
         # Single race
         filepath = find_data_file(args.slug, data_dirs)
