@@ -34,3 +34,37 @@ One underlying event lineage and organizer (Cabreira Solutions), relocated to a 
 - eligibility.status: "cancelled" (unchanged, but refined with the spring-2027 postponement date and full source trail)
 
 See also: research-dumps/gran-fondo-coimbra.md (the predecessor event's own research).
+
+## Delegated re-review, 2026-07-24 (straggler pass): score re-derivation
+
+Wave 5 left dimensions un-recalculated and flagged a human-call question: null the dimensions
+(since zero Leiria editions have run) or keep/re-derive them? DECISION (delegated authority):
+keep numeric dimensions, but split them into two evidentiary classes rather than nulling
+wholesale.
+
+Course-fact dimensions — re-derivable from the organizer's officially announced (still-cancelled)
+2026 course plan, which is real published data even though unrun:
+- distance 4->3: 146.0km falls in rubric band 3 "Standard: 120-160km," not band 4
+  "Long: 160-200km." (This banding error predates the identity question — even the old,
+  now-superseded 148.1km figure was in band 3, not 4.)
+- climbing 4->2: corrected elevation gain is 1,478m over 146km -> rubric band 2
+  "Gentle: 500-1,500m," not band 4 "Hilly: 2,500-4,000m."
+- altitude 3->2: NEW SOURCE this pass — Serra de Sicó's highest points top out at
+  approximately 553-618m above sea level (pt.wikipedia.org/wiki/Serra_de_Sicó, curl-verified
+  200, 2026-07-24; corroborated by a second web source giving 553m). This is a limestone hill
+  range, not a mountain pass -> rubric band 2 "Peaks at 500-1,000m," not band 3
+  "Summit passes at 1,000-2,000m."
+
+Editorial/experiential dimensions (organization, scenic_experience, community_culture,
+field_depth, value, expenses, prestige) — left UNCHANGED. These remain genuinely unvalidated
+with zero editions run under the Leiria brand; they are carried over from the Coimbra-lineage
+migration baseline, not scored against an actual Leiria event. Flagging explicitly rather than
+asserting false precision.
+
+Net: overall_score 67->61. Tier unchanged (TIER 2), but now much closer to the 60-point T2/T3
+boundary — worth a fresh full look once (if) a 2027 edition actually runs with its own confirmed
+figures.
+
+All citations re-curl-verified 2026-07-24 (all 200 OK, including UCI URLs via direct resolution —
+the --resolve 8.8.8.8 workaround failed at the network level in this environment, direct
+resolution succeeded cleanly).

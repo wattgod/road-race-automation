@@ -60,3 +60,23 @@ rider consensus.
 
 All content (Ring of Clare Cycle, Boyne Valley Classic) was Irish, unrelated to this Australian
 event.
+
+## Delegated re-review, 2026-07-24 (straggler pass): score re-derivation
+
+Identity/status was already fully resolved in editorial wave 10 above. This pass completes the
+flagged-but-not-done dimension re-derivation, re-banding two dimensions against
+config/dimensions.json using facts wave 10 already established:
+
+- climate_risk 3->4: 33-36°C (2018) + organizer crosswind warnings for deep-section wheels ->
+  rubric band 4 "High heat, strong winds," not band 3.
+- organization 4->2: course_description already documents roads were semi-closed, not fully
+  closed (organizer's own materials later named the 2022 Snowy Classic as its first fully-closed
+  race) -> rubric band 2 "some road closures, chip timing, basic aid," not band 4 (which requires
+  moto escort/medical support/pro-level timing, unevidenced) or band 3 (requires full closures).
+- All other dimensions left unchanged; the 2018-edition facts already on file support their
+  current bands.
+- overall_score 53->51 (recomputed via corpus formula: round((sum14+cultural_impact)/70*100)).
+  Tier unchanged (TIER 3).
+
+All citations re-curl-verified 2026-07-24 (all 200 OK). No new identity/status findings this
+pass — Clare Classic remains a single-edition (2018), status-`unknown` dormant event.

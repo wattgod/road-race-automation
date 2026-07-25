@@ -36,14 +36,14 @@
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 3,
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
       "climate_risk": 4,
       "organization": 3,
       "scenic_experience": 3,
       "community_culture": 3,
-      "altitude": 3,
+      "altitude": 2,
       "logistics": 3,
       "prestige": 3,
       "field_depth": 3,
@@ -51,12 +51,12 @@
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 67,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 67. NOTE (2026-07-24, editorial wave 5): dimension scores (organization, field_depth, value, expenses, etc.) predate this wave's discovery that zero Leiria-branded editions have actually been held — they were inherited unchanged from the migrated Coimbra-lineage baseline, not scored against a real Leiria event. Not recalculated this wave per the 'don't reshuffle numbers' rule; flagging for a human call on whether these should be nulled/marked provisional until a 2027 edition actually runs."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated 2026-07-24 (delegated re-review, straggler pass), resolving the wave-5 flag on whether dimensions should be nulled pending a real edition. DECISION: keep numeric dimensions rather than null them, but distinguish two categories — course-fact dimensions (re-derivable from the organizer's officially announced, still-cancelled 2026 course plan, which is real published data even though unrun) vs. editorial/experiential dimensions (organization, scenic_experience, community_culture, field_depth, value, expenses, prestige, climate_risk — genuinely unvalidated with zero editions run under this brand; left unchanged and flagged as CARRIED-OVER ESTIMATES from the Coimbra-lineage migration baseline, not scored against an actual Leiria event; do not read them as independently re-verified this pass). Course-fact changes, old->new, with evidence: distance 4->3 (146.0km falls in rubric band 3 'Standard: 120-160km', not band 4 'Long: 160-200km' — this was a banding error independent of the identity question, present even under the pre-wave-5 148.1km figure). climbing 4->2 (corrected elevation is 1,478m total gain over 146km, which falls in rubric band 2 'Gentle: 500-1,500m', not band 4 'Hilly: 2,500-4,000m' — a large banding error). altitude 3->2 (Serra de Sicó's own summit is 559m above sea level per pt.wikipedia.org/wiki/Serra_de_Sicó, quote 'erguendo-se a 559 metros de altitude', curl-verified 200 and text-extracted directly 2026-07-24 — this falls in rubric band 2 'Peaks at 500-1,000m', not band 3 'Summit passes at 1,000-2,000m'). descent_technicality 3->1 (SOL-REVIEW CORRECTION, applied after verification: no course-geometry evidence exists for this never-run course — the scoring_notes itself admitted 'no course-geometry evidence found,' yet the prior value asserted rubric band 3's specific claim of 'moderate switchbacks, some narrow sections.' Absent any evidence, defaulting to band 1 rather than asserting an unevidenced middle band is the honest call; corpus precedent shows terrain.technical_rating and this dimension are NOT required to track each other 1:1 across profiles, so this is not a mechanical copy of terrain.technical_rating=1, but an independent 'no evidence exists' default). climate_risk (4, unchanged) and road_surface (1, unchanged): SOL-REVIEW CORRECTION — a prior draft of this note cited Storm Kristin's cancellation-forcing damage as evidence for climate_risk=4; on review that conflates event-cancellation risk with mid-race climate exposure (the rubric's actual subject) and was retracted. climate_risk=4 is left as an unvalidated carried-over estimate, not as evidenced. Net: overall_score 67->59; TIER CHANGES 2->3 (band 45-59) — this is a real, evidence-driven tier drop, not a migration artifact, driven primarily by the climbing/distance/descent corrections."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -99,12 +99,13 @@
         "Zero editions actually held under the Leiria name — the entire course and format picture above is a cancelled organizer plan, not race-day fact; field_size is null because no field has ever assembled",
         "The planned 2026 debut was cancelled outright due to Storm Kristin damage, not merely rescheduled within the year",
         "No confirmed 2027 date as of this writing — only an unconfirmed third-party calendar listing exists",
-        "Course figures (146 km/1,478 m) could change before an actual 2027 edition runs; treat them as provisional"
+        "Course figures (146 km/1,478 m) could change before an actual 2027 edition runs; treat them as provisional",
+        "Re-scored 2026-07-24: the planned course is gentler than this profile previously rated it — 1,478m of climbing bands as 'Gentle,' not 'Hilly,' and the Serra de Sicó tops out at 559m, well short of true summit-pass territory. Combined with zero course-geometry evidence for descent technicality, the corrected score moved this profile from TIER 2 to TIER 3."
       ],
       "bottom_line": "A legitimate UCI-series successor to a real predecessor race, but don't book travel around it yet — nothing has actually run under this name, and the next date isn't confirmed."
     },
     "final_verdict": {
-      "score": "67/100",
+      "score": "59/100",
       "one_liner": "UCI qualifier with real lineage, but the 2026 debut was cancelled after storm damage and no confirmed date exists yet.",
       "should_you_race": "Not yet — no edition has run. Watch for an official 2027 date from the UCI Gran Fondo World Series or Cabreira Solutions before planning around it.",
       "alternatives": "For the same UCI-series lineage's real, held editions, see gran-fondo-coimbra.json (2021-2025, now discontinued). For an active Portuguese road gran fondo, see douro-gran-fondo.json (Peso da Régua, Douro Valley)."
@@ -144,6 +145,11 @@
         "url": "https://www.granfondoguide.com/Events/Index/13623/granfondo-leiria-region-sico-lands",
         "category": "reference",
         "label": "Gran Fondo Guide — Unconfirmed March 2027 Listing (treat as speculative, not official)"
+      },
+      {
+        "url": "https://pt.wikipedia.org/wiki/Serra_de_Sic%C3%B3",
+        "category": "reference",
+        "label": "Wikipédia (PT) — Serra de Sicó Elevation (559m), Used to Re-derive the Altitude Dimension"
       }
     ],
     "eligibility": {

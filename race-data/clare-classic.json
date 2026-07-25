@@ -48,8 +48,8 @@
       "distance": 3,
       "climbing": 3,
       "descent_technicality": 1,
-      "climate_risk": 3,
-      "organization": 4,
+      "climate_risk": 4,
+      "organization": 2,
       "scenic_experience": 4,
       "community_culture": 3,
       "altitude": 1,
@@ -60,12 +60,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 53,
+      "overall_score": 51,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated: 53. EDITORIAL WAVE 10 FLAG (2026-07-24): this profile's on-file date (Feb 15 2026) actually belongs to a different race entirely (Spain's Clásica de Almería) and the youtube_data/rider_intel described Ireland's ŠKODA Ring of Clare Cycle, not this event. No edition has run since 2018 (the only edition ever held); the planned 2020 return was cancelled for COVID-19 and never rescheduled. field_depth/prestige/organization dimensions below were inherited from the contaminated profile and have not been re-evaluated — flagging for human rescoring given the event has held only one edition. No numeric changes made this wave."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 54. adventure dimension dropped, road_surface added. Score recalculated 2026-07-24 (delegated re-review, straggler pass), completing the wave-10 flag that left dimensions un-re-evaluated after the identity correction. Changes, old->new, with evidence, both directly tied to facts the identity correction established about the real (Australian) 2018 edition: climate_risk 3->4 (33-36°C recorded heat plus organizer materials explicitly warning deep-section wheels could be affected by gusty northerly crosswinds — this combination of documented high heat and strong-wind warnings matches rubric band 4 'High heat, strong winds,' not band 3 'moderate heat/cold likely'). organization 4->2 (the course_description explicitly documents that roads were semi-closed, not fully closed — the organizer's own later materials named a different event, the 2022 Snowy Classic, as its first fully-closed-road race; rubric band 4 requires 'moto escort, medical support, pro-level timing' with no supporting evidence, while band 3 requires 'full road closures' which this event did not have — band 2 'some road closures, basic aid' is the best-supported call; the official site does link a 2018 results page via racetecresults, so timing existed, correcting a draft of this note that overstated the timing gap). distance/climbing/road_surface/altitude/logistics/prestige/scenic_experience/community_culture/field_depth left unchanged — the corrected 2018-edition facts (160/110/50km routes, ~1,600m climbing, ~900 riders 40% interstate, Clare Valley wine country, Bicycling Australia's Classics series) already support their current bands. value=3/expenses=3 ALSO left unchanged but flagged explicitly as UNVALIDATED ESTIMATES, not evidenced ones — entry_fee, lodging, transport, and food fields are all null/empty on file, so no dollar-based facts exist to actually band these against the rubric; the distance/scenery/series facts cannot substitute for cost data (SOL-REVIEW CORRECTION: a prior draft of this note incorrectly implied these were evidence-supported). Score 53->51; tier unchanged (TIER 3, band 45-59)."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -117,7 +117,7 @@
       "bottom_line": "A single well-organized 2018 debut with no edition since — don't book travel around it without confirming directly with the organizer first."
     },
     "final_verdict": {
-      "score": "53/100",
+      "score": "51/100",
       "one_liner": "A 2018 Clare Valley gran fondo debut with no edition held since — the planned 2020 return was cancelled and never rescheduled.",
       "should_you_race": "Not currently — there's no confirmed 2026 edition. Contact the organizer (The Classics) directly before planning any trip around this event.",
       "alternatives": "For an active event from the same organizer: Bowral Classic in New South Wales."

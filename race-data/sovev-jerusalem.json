@@ -54,14 +54,14 @@
       "field_depth": 3,
       "value": 4,
       "expenses": 3,
-      "road_surface": 1,
+      "road_surface": 4,
       "cultural_impact": 3,
-      "overall_score": 64,
+      "overall_score": 69,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7): major taxonomy mismatch — the organizer's own registration page states courses combine road and off-road riding and that road/city bikes are unsuitable; mountain bikes are recommended. road_surface=1 and terrain.surface='Paved roads' contradict the organizer's own guidance. Recommend a human re-check whether this profile belongs in a pure road-cycling database at all (see catalog_flags). Numbers left untouched per no-silent-reshuffle rule."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 67. adventure dimension dropped, road_surface added. Score recalculated: 64. FLAG (2026-07-24 editorial wave 7, corrected 2026-07-24 straggler re-review): major taxonomy mismatch — the organizer's own registration page states courses combine road and off-road riding and that road/city bikes are unsuitable; mountain bikes are recommended. terrain.surface has already been corrected to reflect this ('Mixed road and off-road...'); the remaining contradiction is fondo_rating.road_surface=1, which still scores this as a fully-paved course. Recommend a human re-check whether this profile belongs in a pure road-cycling database at all (see catalog_flags). Numbers left untouched per no-silent-reshuffle rule. | 2026-07-24 delegated re-review: road_surface 1->4 — organizer's own registration states road/city bikes unsuitable, MTB recommended (mixed road/off-road course); band 1 ('fresh tarmac throughout') indefensible; band 4 per mixed-surface precedent (cykelvasan 97% unpaved=5, gfny-uppsala ~25% gravel=3). overall 64->69, tier stays T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -109,7 +109,7 @@
       "bottom_line": "A genuinely worthwhile Jerusalem cycling event — just not a road gran fondo. Bring a mountain bike, not a road bike, and don't expect a competitive result."
     },
     "final_verdict": {
-      "score": "64/100",
+      "score": "69/100",
       "one_liner": "Historic Jerusalem mass ride through Old City, hills and forest — mixed-surface, MTB-recommended, not a road event.",
       "should_you_race": "Only on a mountain bike, and only if you're after a participatory city celebration rather than a competitive road result — the organizer explicitly discourages road bikes.",
       "alternatives": "For a conventional road gran fondo in the region, look elsewhere in the catalog; for a similar historic-city mixed-surface ride, treat this as belonging alongside MTB/gravel city events rather than road sportives."
@@ -150,9 +150,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-07-24",
       "source": "https://itraveljerusalem.com/event/surrounding-jerusalem",
-      "notes": "Mass-participation cycling event in Jerusalem with 2026 edition announced for late May, differing from May 8 on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed correct 2026 date is May 29 (not May 8); confirmed organizer explicitly requires mixed-surface/MTB riding, not road bikes."
+      "notes": "Mass-participation cycling event in Jerusalem with 2026 edition announced for late May, differing from May 8 on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed correct 2026 date is May 29 (not May 8); confirmed organizer explicitly requires mixed-surface/MTB riding, not road bikes. Re-verified 2026-07-24 (straggler re-review): registration and event-detail pages still live, May 29 date and MTB/mixed-surface requirement stand."
     },
     "catalog_flags": {
       "status_note": "Major taxonomy mismatch: organizer's official registration page states courses combine road and off-road riding, that road/city bikes are unsuitable, and recommends mountain bikes. This is a mixed-surface/MTB event, not a conventional road gran fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision on whether this profile belongs in a pure road-cycling database at all.",

@@ -79,3 +79,66 @@ Miami "event ambassador") — this is a firsthand account, not independent rider
 - No independently documented rider reviews exist — RaceResult review page and organizer's
   product page show zero reviews
 - Marketing/technical-route distance discrepancy (125km vs 134km) — verify against current GPX
+
+## Delegated re-review, 2026-07-24 (straggler pass): course conflict RESOLVED + score re-derivation
+
+### Course conflict: not actually a conflict
+
+Wave 10 flagged the Battistrada "Panamá Pacífico/pineapple country" listing as contradicting the
+retained 2025 video's "Amador Causeway / Puente de las Américas" account. Direct curl of
+battistrada.com's raw HTML (bypassing whatever truncated the quote wave 10 captured) shows the
+FULL organizer copy:
+
+> "Start your journey in the charming Casco Viejo, a World Heritage Site, and cycle towards the
+> iconic Bridge of the Americas. As you go, you'll explore Panama's rich west, famous for its
+> pineapple crops and warm local culture."
+
+This is the SAME narrative as the retained video (Casco Viejo/Amador-area start -> Puente de las
+Américas canal crossing -> west into Panamá Oeste). Independently corroborated by cycloworld.cc,
+which republishes the identical organizer copy verbatim
+(https://www.cycloworld.cc/en/gran-fondo/panama/gran-fondo-cycling-challenge/37432, found via
+websearch; WebFetch on this URL 403'd, but the search-engine excerpt matches the curl-verified
+Battistrada text word-for-word). Also corroborated by RaceResult's own 2026 event metadata
+(my.raceresult.com/375733/info, curl-verified 200) which lists the registered address as
+"Panama Pacifico" — consistent with a westward finish/expo venue past the bridge.
+
+**Conclusion: the 2026 course is Casco Viejo -> Puente de las Américas -> Panamá Oeste pineapple
+country. Both prior sources were describing the same route; wave 10's "genuine conflict" flag is
+retracted.**
+
+### NEW finding: 2027 edition confirmed, course start point moves
+
+Curling the organizer's live page (gfcyclingchallenges.com/ciudad-de-panama/, 2026-07-24) surfaced
+copy not present in wave 10's research: "El Gran Fondo Cycling Challenge Ciudad de Panamá 2027
+regresa el 14 de marzo... Con salida desde Panamá Pacífico, los ciclistas recorrerán rutas
+espectaculares hacia el oeste" — i.e., the 2027 edition (confirmed date: March 14, 2027) departs
+directly FROM Panamá Pacífico, west of the bridge, rather than starting at Casco Viejo. This is a
+real, sourced course change between 2026 and 2027, not a data error. Checked organizer's Facebook
+(facebook.com/granfondopanama) and a dedicated panama-2026 gallery page for corroborating detail;
+the gallery page is photos-only with no route narrative, and Facebook content isn't
+curl-fetchable — noted as an unresolved minor gap (route narrative for 2027 not independently
+confirmed beyond the organizer's own summary copy above).
+
+### Score re-derivation (identity was materially wrong in wave 10 -> RE-DERIVE per ruling 3)
+
+Re-banded against config/dimensions.json using the now-corrected facts:
+- descent_technicality 1->2 (Puente de las Américas bridge climb ~5-6% grade + mixed
+  historic-city/rural-west roads -> band 2, not band 1's "straight, wide roads")
+- climate_risk 2->3 (documented 2025 heat wave forced a firsthand rider to drop distances ->
+  band 3, real documented impact)
+- logistics 3->2 (Panama City is the national capital, Tocumen Int'l Airport, ample lodging,
+  ~35min/$35 airport taxi per firsthand account -> band 2, not band 3's "regional town")
+- prestige 2->3 (Ministry of Culture + PROMTUR support, documented multi-country series, national
+  press coverage -> band 3, "national-level event, some international participation")
+- field_depth 2->3 (RaceResult chip timing + documented age-group prizes + built-in competitive
+  "chrono section" -> band 3, "structured competitive waves, official age-group prizes")
+- cultural_impact 1->2 (organizer's own sports-tourism-culture-gastronomy branding + documented
+  Ministry of Culture partnership -> modest bump)
+- distance/climbing/road_surface/altitude/organization/scenic_experience/community_culture
+  unchanged (already correctly banded); value/expenses unchanged (no entry-fee/cost evidence
+  found, flagged as unvalidated estimates)
+
+Net: overall_score 51->57. Tier unchanged (TIER 3, band 45-59).
+
+All citations re-curl-verified 2026-07-24 (all 200 OK), plus two new citations added
+(cycloworld.cc corroboration, RaceResult /info metadata).
