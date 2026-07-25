@@ -1532,6 +1532,14 @@ RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
 RewriteRule ^race/gfny-bali/?$ /race/gfny-belitung/ [R=301,L]
 RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
 
+# gran-fondo-greece-loutraki -> gran-fondo-loutraki (duplicate profile of the
+# same event, adjudicated deleted 2026-07-20; canonical page carries the
+# published plan ladder). NOTE: the physical page dir must stay deleted on the
+# server — SiteGround's nginx serves existing files before this rule is ever
+# consulted. Subpaths preserved.
+RewriteRule ^race/gran-fondo-greece-loutraki/?$ /race/gran-fondo-loutraki/ [R=301,L]
+RewriteRule ^race/gran-fondo-greece-loutraki/(.*)$ /race/gran-fondo-loutraki/$1 [R=301,L]
+
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
 RewriteRule ^belgian-waffle-ride-race-guide/?$ /race/bwr-california/ [R=301,L]
