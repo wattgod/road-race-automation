@@ -55,7 +55,7 @@ CURRENT_YEAR = date.today().year
 FEATURED_SLUGS = [
     "letape-du-tour",
     "maratona-dles-dolomites",
-    "gran-fondo-stelvio",
+    "la-stelvio-santini",
 ]
 
 # ── Stat bar dimensions for bento feature cards ─────

@@ -71,6 +71,15 @@ class TestDateFormat:
             re.compile(r'(?i)\b(tbd|paused|cancelled|canceled|uncertain|no future|final)\b'),
             re.compile(r'(?i)^(event|status)'),                # Event cancelled, Status: ...
             re.compile(r'(?i)^self-scheduled'),                # Self-scheduled events
+            # Honest-register statuses (Jul 2026 editorial campaign):
+            re.compile(r'(?i)\b(revival announced|not yet announced|no confirmed edition|rescheduled|one edition ever held)\b'),
+            re.compile(r'(?i)^(sportive ride|classic three-day format)\b'),
+            re.compile(r'(?i)^(no \d{4} edition|last (confirmed |completed )?(edition|held)|\d{4} (event|edition|adult edition)|\d{1,2}(st|nd|rd|th) edition)\b'),
+            re.compile(r'(?i)\b(postponed|not take place|never revived)\b'),
+            re.compile(r'(?i)\b(sunday|saturday|friday|monday|tuesday|wednesday|thursday),\s+\w+\s+\d{1,2},?\s+\d{4}'),
+            re.compile(r'(?i)^(defunct|discontinued|dormant|unannounced|unconfirmed|suspended|no fixed date|most recent confirmed edition)\b'),
+            re.compile(r'(?i)^(friday|saturday|sunday|monday|tuesday|wednesday|thursday),\s'),
+            re.compile(r'(?i)\b(defunct|discontinued|dormant|noncompetitive)\b'),
         ]
         violations = []
         for fname, _, data in get_all_profiles():

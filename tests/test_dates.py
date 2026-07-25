@@ -41,6 +41,17 @@ VALID_DATE_PATTERNS = [
     r"^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}",  # "August 29, 2026 (...)"
     r"^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}-\d{1,2},?\s+\d{4}",  # "August 23-29, 2026 (note)"
     r"^Cancelled\s+for\s+\d{4}",  # "Cancelled for 2026"
+    # Honest-register statuses adopted by the Jul 2026 editorial campaign:
+    r"(?i)\b(revival announced|not yet announced|no confirmed edition|rescheduled|one edition ever held|no \d{4} edition)\b",
+    r"(?i)^(sportive ride|classic three-day format)\b",
+    r"(?i)\b(tbd|cancelled|canceled|paused|postponed|not take place|never revived)\b",
+    r"(?i)^(no \d{4} edition|last (confirmed |completed )?(edition|held)|\d{4} (event|edition|adult edition))\b",
+    r"(?i)^\d{1,2}(st|nd|rd|th) edition\b",
+    r"(?i)\b(sunday|saturday|friday|monday|tuesday|wednesday|thursday),\s+\w+\s+\d{1,2},?\s+\d{4}",
+    r"(?i)^(defunct|discontinued|dormant|unannounced|unconfirmed|suspended)\b",
+    r"(?i)^(no fixed date|most recent confirmed edition)\b",
+    r"(?i)^(friday|saturday|sunday|monday|tuesday|wednesday|thursday),\s+\w+\s+\d{1,2},\s+\d{4}",  # "Friday, May 21, 2027, ..."
+    r"(?i)\b(defunct|discontinued|dormant|noncompetitive ride)\b",
 ]
 
 

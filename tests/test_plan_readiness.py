@@ -312,7 +312,9 @@ class TestIntegration:
         # Corpus size derives from disk — races get added and duplicates
         # retired (e.g. gran-fondo-greece-loutraki, Jul 2026); a pinned count
         # just breaks on the next curation pass.
-        assert payload["summary"]["total"] == len(real_slugs) >= 400
+        # Floor recalibrated Jul 2026 after the catalog-integrity prune
+        # (21 duplicate tombstones + 7 fabricated events deleted; 397 remain).
+        assert payload["summary"]["total"] == len(real_slugs) >= 390
         assert set(payload["races"].keys()) == real_slugs
         for slug in payload["ranked_queue"]:
             assert slug in payload["races"]

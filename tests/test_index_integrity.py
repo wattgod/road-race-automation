@@ -90,7 +90,18 @@ class TestIndexSync:
         index_slugs = {e["slug"] for e in data if "slug" in e}
         profile_slugs = {f.stem for f in RACE_DATA_DIR.glob("*.json")}
 
-        missing = profile_slugs - index_slugs - self.REDIRECTED_SLUGS
+        # Profiles carrying catalog_flags.duplicate_of or .discipline_mismatch
+        # are deliberately excluded by generate_index.py (Jul 2026 contract).
+        flagged = set()
+        for f in RACE_DATA_DIR.glob("*.json"):
+            try:
+                flags = (json.loads(f.read_text()).get("race") or {}).get("catalog_flags") or {}
+            except Exception:
+                continue
+            if flags.get("duplicate_of") or flags.get("discipline_mismatch"):
+                flagged.add(f.stem)
+
+        missing = profile_slugs - index_slugs - self.REDIRECTED_SLUGS - flagged
         if missing:
             pytest.fail(
                 f"{len(missing)} profiles not in index:\n" +
