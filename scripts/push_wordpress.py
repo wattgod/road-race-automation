@@ -2534,25 +2534,42 @@ def sync_insights(insights_file: str):
         print(f"✗ Error uploading insights page: {e}")
         return None
 
-    # Upload shared CSS/JS assets (insights page references them via /race/assets/)
+    # Upload shared CSS/JS assets (insights page references them via /race/assets/).
+    # A page with a new asset hash and an old asset directory is a broken page,
+    # so treat any missing or failed asset as a failed sync rather than quietly
+    # reporting a successful insights deployment.
     assets_dir = html_path.parent / "assets"
     remote_assets = f"{REMOTE_BASE}/race/assets"
-    for pattern in ("rl-styles.*.css", "rl-scripts.*.js"):
-        for asset in assets_dir.glob(pattern):
-            try:
-                subprocess.run(
-                    [
-                        "scp", "-i", str(SSH_KEY), "-P", port,
-                        str(asset),
-                        f"{user}@{host}:{remote_assets}/{asset.name}",
-                    ],
-                    check=True,
-                    capture_output=True,
-                    text=True,
-                    timeout=30,
-                )
-            except subprocess.CalledProcessError:
-                pass  # Asset may already exist
+    assets = [
+        asset
+        for pattern in ("rl-styles.*.css", "rl-scripts.*.js")
+        for asset in assets_dir.glob(pattern)
+    ]
+    if len(assets) < 2:
+        print(f"✗ Insights shared assets missing in: {assets_dir}")
+        return None
+    uploaded_assets = 0
+    for asset in assets:
+        try:
+            subprocess.run(
+                [
+                    "scp", "-i", str(SSH_KEY), "-P", port,
+                    str(asset),
+                    f"{user}@{host}:{remote_assets}/{asset.name}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            uploaded_assets += 1
+        except subprocess.CalledProcessError as e:
+            print(f"✗ SCP failed for insights asset {asset.name}: {e.stderr.strip()}")
+        except Exception as e:
+            print(f"✗ Error uploading insights asset {asset.name}: {e}")
+    if uploaded_assets != len(assets):
+        print(f"✗ Insights deploy incomplete: {uploaded_assets}/{len(assets)} shared assets uploaded")
+        return None
 
     # Fix permissions
     try:
