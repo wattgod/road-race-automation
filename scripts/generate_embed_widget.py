@@ -18,6 +18,10 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+
+from brand_tokens import COLORS  # noqa: E402
+
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 EMBED_DIR = PROJECT_ROOT / "web" / "embed"
@@ -68,17 +72,17 @@ def generate_embed_js():
 .rl-embed-name{font-size:14px;font-weight:700;flex:1}
 .rl-embed-tier{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;color:#fff;letter-spacing:1px;white-space:nowrap}
 .rl-embed-tier-1{background:#555555}
-.rl-embed-tier-2{background:#7d695d}
-.rl-embed-tier-3{background:#766a5e}
-.rl-embed-tier-4{background:#5e6868}
+.rl-embed-tier-2{background:RL_TIER_2}
+.rl-embed-tier-3{background:RL_TIER_3}
+.rl-embed-tier-4{background:RL_TIER_4}
 .rl-embed-score-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
 .rl-embed-score-num{font-size:20px;font-weight:700;min-width:36px}
 .rl-embed-score-bar{flex:1;height:8px;background:#d0d0c8;position:relative}
 .rl-embed-score-fill{position:absolute;top:0;left:0;height:100%;background:#555555}
-.rl-embed-meta{font-size:11px;color:#7d695d;display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:8px}
-.rl-embed-link{display:block;font-size:11px;font-weight:700;color:#178079;letter-spacing:0.5px}
+.rl-embed-meta{font-size:11px;color:RL_TIER_2;display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:8px}
+.rl-embed-link{display:block;font-size:11px;font-weight:700;color:RL_SIGNAL_RED;letter-spacing:0.5px}
 .rl-embed-link:hover{text-decoration:underline}
-.rl-embed-powered{font-size:9px;color:#7d695d;margin-top:6px;text-align:right}
+.rl-embed-powered{font-size:9px;color:RL_TIER_2;margin-top:6px;text-align:right}
 `;
 
   var styleInjected=false;
@@ -163,7 +167,7 @@ def generate_embed_js():
         if(race){
           renderCard(els[j],race);
         }else{
-          els[j].innerHTML='<div class="rl-embed-card" style="text-align:center;padding:20px"><span style="color:#7d695d">Race not found: '+esc(slug)+'</span></div>';
+          els[j].innerHTML='<div class="rl-embed-card" style="text-align:center;padding:20px"><span style="color:RL_TIER_2">Race not found: '+esc(slug)+'</span></div>';
         }
       }
     });
@@ -175,7 +179,7 @@ def generate_embed_js():
     init();
   }
 })();
-"""
+""".replace("RL_TIER_2", COLORS["tier_2"]).replace("RL_TIER_3", COLORS["tier_3"]).replace("RL_TIER_4", COLORS["tier_4"]).replace("RL_SIGNAL_RED", COLORS["signal_red"])
 
 
 def generate_demo_html():
@@ -201,26 +205,26 @@ def generate_demo_html():
 
 <h2>Quick Start</h2>
 <p>Paste this where you want the badge to appear:</p>
-<pre>&lt;div class="rl-embed" data-slug="unbound-200"&gt;&lt;/div&gt;
+<pre>&lt;div class="rl-embed" data-slug="letape-du-tour"&gt;&lt;/div&gt;
 &lt;script src="{SITE_URL}/embed/rl-embed.js" async&gt;&lt;/script&gt;</pre>
 
-<p>Change <code>data-slug</code> to any race slug from the <a href="{SITE_URL}/gravel-races/">race database</a>.</p>
+<p>Change <code>data-slug</code> to any race slug from the <a href="{SITE_URL}/road-races/">race database</a>.</p>
 
 <h2>Multiple Badges</h2>
 <p>Include the script once, add as many badges as you want:</p>
-<pre>&lt;div class="rl-embed" data-slug="unbound-200"&gt;&lt;/div&gt;
-&lt;div class="rl-embed" data-slug="leadville-100"&gt;&lt;/div&gt;
-&lt;div class="rl-embed" data-slug="crusher-in-the-tushar"&gt;&lt;/div&gt;
+<pre>&lt;div class="rl-embed" data-slug="letape-du-tour"&gt;&lt;/div&gt;
+&lt;div class="rl-embed" data-slug="maratona-dles-dolomites"&gt;&lt;/div&gt;
+&lt;div class="rl-embed" data-slug="la-marmotte"&gt;&lt;/div&gt;
 &lt;script src="{SITE_URL}/embed/rl-embed.js" async&gt;&lt;/script&gt;</pre>
 
 <h2>Live Examples</h2>
 <div class="demo-row">
-  <div class="rl-embed" data-slug="unbound-200"></div>
-  <div class="rl-embed" data-slug="leadville-100"></div>
+  <div class="rl-embed" data-slug="letape-du-tour"></div>
+  <div class="rl-embed" data-slug="maratona-dles-dolomites"></div>
 </div>
 <div class="demo-row">
-  <div class="rl-embed" data-slug="crusher-in-the-tushar"></div>
-  <div class="rl-embed" data-slug="mid-south"></div>
+  <div class="rl-embed" data-slug="la-marmotte"></div>
+  <div class="rl-embed" data-slug="mallorca-312"></div>
 </div>
 
 <h2>How It Works</h2>

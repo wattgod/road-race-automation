@@ -122,16 +122,12 @@ class TestHexParity:
     """Every hex color in the banner must match a tokens.css value."""
 
     EXPECTED_MAPPING = {
-        "#555555": "rl-color-primary-brown",
-        "#8c7568": "rl-color-secondary-brown",
-        "#d0d0c8": "rl-color-tan",
-        "#1a8a82": "rl-color-teal",
-        "#4ecdc4": "rl-color-light-teal",
-        "#333333": "rl-color-gold",
+        "#555555": "rl-color-coral",
+        "#d0d0c8": "rl-color-silver",
+        "#333333": "rl-color-signal-red",
         "#ffffff": "rl-color-white",
     }
 
-    @pytest.mark.skip(reason="Cookie consent still uses legacy palette — needs migration to Roadie Labs colors")
     def test_all_hex_in_tokens(self, banner, tokens):
         """Every hex in the banner must exist in tokens.css."""
         token_hex = {v.lower() for v in tokens.values()}
@@ -139,23 +135,15 @@ class TestHexParity:
         unknown = banner_hex - token_hex
         assert not unknown, f"Hex not in tokens.css: {unknown}"
 
-    def test_primary_brown_present(self, css):
+    def test_coral_present(self, css):
         assert "#555555" in css
 
-    def test_teal_present(self, css):
-        assert "#1A8A82".lower() in css.lower()
+    def test_signal_red_present(self, css):
+        assert "#333333" in css
 
-    def test_gold_present(self, css):
-        assert "#333333".lower() in css.lower()
-
-    def test_secondary_brown_present(self, css):
-        assert "#8c7568" in css
-
-    def test_tan_present(self, css):
+    def test_silver_present(self, css):
         assert "#d0d0c8" in css
 
-    def test_light_teal_present(self, css):
-        assert "#4ECDC4".lower() in css.lower()
 
 
 # ── Accessibility ──────────────────────────────────────────

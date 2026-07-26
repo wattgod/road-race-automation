@@ -765,6 +765,13 @@ def main():
     print("  BLOG CONTENT QUALITY GATE")
     print(f"{'═' * 50}")
 
+    # Roadie Labs has no live /blog/ surface. Its historical index artifact
+    # is intentionally not deployed, so the preview/recap/roundup pipeline
+    # must not block validate-mode preflight while no blog output exists.
+    if not BLOG_DIR.exists():
+        print("\n  SKIPPED — no live /blog/ surface or generated blog output")
+        return 0
+
     check_blog_index_schema(v)
     check_html_quality(v)
     check_no_python_repr(v)

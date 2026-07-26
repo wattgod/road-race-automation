@@ -13,8 +13,9 @@ pytestmark = pytest.mark.skipif(
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 EMBED_DIR = PROJECT_ROOT / "web" / "embed"
 EMBED_DATA = EMBED_DIR / "embed-data.json"
-EMBED_JS = EMBED_DIR / "gg-embed.js"
+EMBED_JS = EMBED_DIR / "rl-embed.js"
 EMBED_DEMO = EMBED_DIR / "demo.html"
+RACE_INDEX = PROJECT_ROOT / "web" / "race-index.json"
 GENERATOR = PROJECT_ROOT / "scripts" / "generate_embed_widget.py"
 PUSH_SCRIPT = PROJECT_ROOT / "scripts" / "push_wordpress.py"
 
@@ -31,7 +32,8 @@ class TestEmbedData:
 
     def test_has_all_races(self):
         data = json.loads(EMBED_DATA.read_text())
-        assert len(data) == 328, f"Expected 328 races, got {len(data)}"
+        expected_count = len(json.loads(RACE_INDEX.read_text()))
+        assert len(data) == expected_count, f"Expected {expected_count} races, got {len(data)}"
 
     def test_entry_has_required_fields(self):
         data = json.loads(EMBED_DATA.read_text())
@@ -43,8 +45,8 @@ class TestEmbedData:
     def test_slug_field(self):
         data = json.loads(EMBED_DATA.read_text())
         slugs = [e["s"] for e in data]
-        assert "unbound-200" in slugs
-        assert "leadville-100" in slugs
+        assert "letape-du-tour" in slugs
+        assert "maratona-dles-dolomites" in slugs
 
     def test_tier_range(self):
         data = json.loads(EMBED_DATA.read_text())
@@ -82,10 +84,10 @@ class TestEmbedData:
 
 
 class TestEmbedJS:
-    """Tests for gg-embed.js."""
+    """Tests for rl-embed.js."""
 
     def test_file_exists(self):
-        assert EMBED_JS.exists(), "gg-embed.js not found"
+        assert EMBED_JS.exists(), "rl-embed.js not found"
 
     def test_is_iife(self):
         content = EMBED_JS.read_text()
@@ -102,8 +104,8 @@ class TestEmbedJS:
 
     def test_contains_css(self):
         content = EMBED_JS.read_text()
-        assert ".gg-embed-card" in content
-        assert ".gg-embed-tier" in content
+        assert ".rl-embed-card" in content
+        assert ".rl-embed-tier" in content
 
     def test_contains_ga4_event(self):
         content = EMBED_JS.read_text()
@@ -120,7 +122,7 @@ class TestEmbedJS:
     def test_tier_css_classes(self):
         content = EMBED_JS.read_text()
         for tier in (1, 2, 3, 4):
-            assert f"gg-embed-tier-{tier}" in content
+            assert f"rl-embed-tier-{tier}" in content
 
     def test_no_border_radius(self):
         """Neo-brutalist brand rule: no border-radius."""
@@ -140,17 +142,17 @@ class TestEmbedDemo:
 
     def test_has_example_embeds(self):
         content = EMBED_DEMO.read_text()
-        assert 'data-slug="unbound-200"' in content
-        assert 'data-slug="leadville-100"' in content
+        assert 'data-slug="letape-du-tour"' in content
+        assert 'data-slug="maratona-dles-dolomites"' in content
 
     def test_has_copy_paste_code(self):
         content = EMBED_DEMO.read_text()
-        assert "gg-embed.js" in content
-        assert 'class="gg-embed"' in content
+        assert "rl-embed.js" in content
+        assert 'class="rl-embed"' in content
 
     def test_references_local_js(self):
         content = EMBED_DEMO.read_text()
-        assert 'src="gg-embed.js"' in content
+        assert 'src="rl-embed.js"' in content
 
 
 class TestGenerator:

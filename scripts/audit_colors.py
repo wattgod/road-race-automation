@@ -62,6 +62,7 @@ BANNED_COLORS = {
 # Files to scan (glob patterns relative to project root)
 SCAN_PATTERNS = [
     "wordpress/*.py",
+    "web/*.css",
     "web/*.html",
     "web/*.js",
     "scripts/*.py",

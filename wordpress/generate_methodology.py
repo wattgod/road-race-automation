@@ -94,7 +94,7 @@ def build_tier_system() -> str:
             <td><a href="{SITE_BASE_URL}/race/americas-most-beautiful-bike-ride/" style="color:var(--rl-color-signal-red);font-weight:700">America's Most Beautiful Bike Ride</a></td>
           </tr>
           <tr>
-            <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#5e6868;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #5e6868">TIER 4</span></td>
+            <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-tier-4);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid var(--rl-color-tier-4)">TIER 4</span></td>
             <td style="font-weight:700">Local</td>
             <td>&lt; 45</td>
             <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots road racing.</td>

@@ -17,7 +17,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from brand_tokens import get_ga4_head_snippet
+from brand_tokens import COLORS, get_ga4_head_snippet
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
@@ -35,7 +35,12 @@ def load_race_count() -> int:
     return len(json.loads(RACE_INDEX_JSON.read_text(encoding="utf-8")))
 SITE_URL = "https://roadielabs.com"
 
-TIER_COLORS = {1: "#555555", 2: "#7d695d", 3: "#766a5e", 4: "#5e6868"}
+TIER_COLORS = {
+    1: COLORS["coral"],
+    2: COLORS["tier_2"],
+    3: COLORS["tier_3"],
+    4: COLORS["tier_4"],
+}
 CAT_LABELS = {"preview": "Race Preview", "roundup": "Season Roundup", "recap": "Race Recap"}
 
 
@@ -52,7 +57,7 @@ def _render_card_ssr(entry):
     tier = entry.get("tier", 0)
     tier_html = ""
     if tier and 1 <= tier <= 4:
-        color = TIER_COLORS.get(tier, "#5e6868")
+        color = TIER_COLORS.get(tier, COLORS["tier_4"])
         tier_html = f'<span class="rl-bi-tier" style="background:{color}">T{tier}</span>'
     date_str = entry.get("date", "")
     excerpt = entry.get("excerpt", "")
@@ -122,8 +127,8 @@ def generate_blog_index_page(output_dir=None):
     :root {{
       --rl-dark-brown: #1a1a1a;
       --rl-primary-brown: #555555;
-      --rl-secondary-brown: #7d695d;
-      --rl-teal: #178079;
+      --rl-secondary-brown: var(--rl-color-tier-2);
+      --rl-teal: var(--rl-color-signal-red);
       --rl-light-teal: #4ECDC4;
       --rl-warm-paper: #f5f5f0;
       --rl-sand: #f5f5f0;
@@ -364,7 +369,7 @@ def generate_blog_index_page(output_dir=None):
 
   <script>
   (function() {{
-    var TIER_COLORS = {{1:'#555555',2:'#7d695d',3:'#766a5e',4:'#5e6868'}};
+    var TIER_COLORS = {{1:'var(--rl-color-coral)',2:'var(--rl-color-tier-2)',3:'var(--rl-color-tier-3)',4:'var(--rl-color-tier-4)'}};
     var CAT_LABELS = {{preview:'Race Preview',roundup:'Season Roundup',recap:'Race Recap'}};
     var blogData = [];
     var currentCategory = 'all';
@@ -429,7 +434,7 @@ def generate_blog_index_page(output_dir=None):
       var catLabel = CAT_LABELS[entry.category] || entry.category;
       var tierHtml = '';
       if (entry.tier > 0) {{
-        var color = TIER_COLORS[entry.tier] || '#5e6868';
+        var color = TIER_COLORS[entry.tier] || 'var(--rl-color-tier-4)';
         tierHtml = '<span class="rl-bi-tier" style="background:' + color + '">T' + entry.tier + '</span>';
       }}
       var dateStr = entry.date || '';

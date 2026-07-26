@@ -381,8 +381,8 @@ def generate_preview_html(slug):
     :root {{
       --rl-dark-brown: #1a1a1a;
       --rl-primary-brown: #555555;
-      --rl-secondary-brown: #7d695d;
-      --rl-teal: #178079;
+      --rl-secondary-brown: var(--rl-color-tier-2);
+      --rl-teal: var(--rl-color-signal-red);
       --rl-warm-paper: #f5f5f0;
       --rl-sand: #f5f5f0;
       --rl-white: #ffffff;

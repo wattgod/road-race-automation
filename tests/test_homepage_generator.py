@@ -516,9 +516,9 @@ class TestCSS:
 
     def test_css_uses_brand_colors(self):
         css = build_homepage_css()
-        assert "#555555" in css  # primary brown
-        assert "#178079" in css  # teal
-        assert "#333333" in css  # gold
+        assert "var(--rl-color-coral)" in css
+        assert "var(--rl-color-signal-red)" in css
+        assert "#333333" in css  # signal red token definition
 
     def test_css_sometype_mono(self):
         css = build_homepage_css()
@@ -2255,9 +2255,9 @@ class TestHeroRadarViz:
         css = build_homepage_css()
         # Extract just the hero radar viz CSS section
         known_colors = {
-            "#555555", "#7d695d", "#178079", "#4ecdc4", "#333333",
+            "#555555", "#333333",
             "#c9a92c", "#c4b5ab", "#d0d0c8", "#f5f5f0", "#1a1a1a",
-            "#1a1a1a", "#333333", "#766a5e", "#5e6868", "#8c7568",
+            "#1a1a1a", "#333333",
             "#f5f5f0", "#fff",
         }
         # Find hex colors specifically in the hv- rules

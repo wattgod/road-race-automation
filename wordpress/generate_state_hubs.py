@@ -42,7 +42,7 @@ TIER_COLORS = {
     1: COLORS["primary_brown"],
     2: COLORS["secondary_blue"],
     3: COLORS["steel"],
-    4: "#5e6868",
+    4: COLORS["tier_4"],
 }
 
 # US state abbreviation → full name
