@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Push landing page JSON or race index to WordPress.
-"""
+"""Deploy Roadie Labs static-site content to SiteGround."""
 
 import argparse
 import json
@@ -13,7 +11,6 @@ import sys
 import tempfile
 from datetime import date
 
-import requests
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -21,20 +18,8 @@ load_dotenv()
 
 SSH_KEY = Path.home() / ".ssh" / "roadlabs_key"
 REMOTE_BASE = os.environ.get("REMOTE_BASE", "/home/customer/www/roadielabs.com/public_html")
-WP_UPLOADS = f"{REMOTE_BASE}/wp-content/uploads"
-
-
-def get_wp_credentials():
-    """Return (wp_url, wp_user, wp_password) or exit with warning."""
-    wp_url = os.environ.get("WP_URL")
-    wp_user = os.environ.get("WP_USER")
-    wp_password = os.environ.get("WP_APP_PASSWORD")
-
-    if not all([wp_url, wp_user, wp_password]):
-        print("⚠️  WordPress credentials not set. Required env vars:")
-        print("   WP_URL, WP_USER, WP_APP_PASSWORD")
-        return None
-    return wp_url, wp_user, wp_password
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 
 
 def get_ssh_credentials():
@@ -66,58 +51,8 @@ def get_ssh_credentials():
     return host, user, port
 
 
-def push_to_wordpress(json_path: str):
-    """Push JSON to WordPress."""
-    creds = get_wp_credentials()
-    if not creds:
-        return None
-    wp_url, wp_user, wp_password = creds
-
-    data = json.loads(Path(json_path).read_text())
-
-    # Extract race name for page title
-    race_name = data.get("race", {}).get("name", "Race Landing Page")
-    display_name = data.get("race", {}).get("display_name", race_name)
-
-    # Create page via WordPress REST API
-    endpoint = f"{wp_url}/wp-json/wp/v2/pages"
-
-    page_data = {
-        "title": display_name,
-        "content": "",  # Elementor uses its own data
-        "status": "draft",  # Start as draft for review
-        "meta": {
-            "_yoast_wpseo_title": f"{display_name} – Race Info & Training Guide | Roadie Labs",
-            "_yoast_wpseo_metadesc": f"Complete guide to {display_name}: race vitals, route, history, and how to train for success.",
-        }
-    }
-
-    try:
-        response = requests.post(
-            endpoint,
-            json=page_data,
-            auth=(wp_user, wp_password),
-            timeout=30
-        )
-
-        if response.status_code in [200, 201]:
-            page_id = response.json()["id"]
-            page_url = response.json()["link"]
-            print(f"✓ Page created: {page_url}")
-            print(f"  ID: {page_id}")
-            print(f"  Status: draft (review before publishing)")
-            return page_id
-        else:
-            print(f"✗ Failed to create page: {response.status_code}")
-            print(response.text)
-            return None
-    except Exception as e:
-        print(f"✗ Error pushing to WordPress: {e}")
-        return None
-
-
 def sync_index(index_file: str):
-    """Upload race-index.json to WP uploads via SCP."""
+    """Upload the live search index to /search/ via SCP."""
     ssh = get_ssh_credentials()
     if not ssh:
         return None
@@ -128,8 +63,19 @@ def sync_index(index_file: str):
         print(f"✗ Index file not found: {index_path}")
         return None
 
-    remote_path = f"{WP_UPLOADS}/{index_path.name}"
+    remote_path = f"{REMOTE_BASE}/search/race-index.json"
     try:
+        subprocess.run(
+            [
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                f"mkdir -p {REMOTE_BASE}/search && chmod 755 {REMOTE_BASE}/search",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
         subprocess.run(
             [
                 "scp", "-i", str(SSH_KEY), "-P", port,
@@ -141,8 +87,7 @@ def sync_index(index_file: str):
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-        public_url = f"{wp_url}/wp-content/uploads/{index_path.name}"
+        public_url = "https://roadielabs.com/search/race-index.json"
         print(f"✓ Uploaded: {public_url}")
         return public_url
     except subprocess.CalledProcessError as e:
@@ -154,7 +99,7 @@ def sync_index(index_file: str):
 
 
 def sync_widget(widget_file: str):
-    """Upload road-labs-search.html, .js, and external CSS to WP uploads via SCP."""
+    """Deploy the static search assets and both search-page wrappers."""
     ssh = get_ssh_credentials()
     if not ssh:
         return None
@@ -165,145 +110,85 @@ def sync_widget(widget_file: str):
         print(f"✗ Widget file not found: {widget_path}")
         return None
 
-    # Upload HTML widget
-    remote_path = f"{WP_UPLOADS}/{widget_path.name}"
+    css_match = re.search(r'<link[^>]+href=["\'](?:/search/)?([^?"\']+\.css)', widget_path.read_text())
+    css_path = widget_path.parent / css_match.group(1) if css_match else None
+    if css_path and not css_path.exists():
+        print(f"✗ Search CSS referenced by {widget_path} not found: {css_path}")
+        return None
+
+    wrapper_paths = [
+        PROJECT_ROOT / "wordpress" / "output" / "road-races" / "index.html",
+        PROJECT_ROOT / "wordpress" / "output" / "search" / "index.html",
+    ]
+    if not all(path.exists() for path in wrapper_paths):
+        print("  Search wrappers missing; building them first")
+        build = subprocess.run(
+            [sys.executable, str(SCRIPTS_DIR / "build_search_page.py")],
+            capture_output=False,
+            timeout=60,
+        )
+        if build.returncode != 0 or not all(path.exists() for path in wrapper_paths):
+            print("✗ Could not build static search wrappers")
+            return None
+
+    uploads = [
+        (widget_path.parent / "road-labs-search.js", f"{REMOTE_BASE}/search/road-labs-search.js"),
+        (wrapper_paths[0], f"{REMOTE_BASE}/road-races/index.html"),
+        (wrapper_paths[1], f"{REMOTE_BASE}/search/index.html"),
+    ]
+    if css_path:
+        uploads.insert(1, (css_path, f"{REMOTE_BASE}/search/{css_path.name}"))
+    missing = [local for local, _ in uploads if not local.exists()]
+    if missing:
+        print(f"✗ Search deploy files not found: {', '.join(map(str, missing))}")
+        return None
+
     try:
         subprocess.run(
             [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(widget_path),
-                f"{user}@{host}:{remote_path}",
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                f"mkdir -p {REMOTE_BASE}/search {REMOTE_BASE}/road-races && "
+                f"chmod 755 {REMOTE_BASE}/search {REMOTE_BASE}/road-races",
             ],
             check=True,
             capture_output=True,
             text=True,
             timeout=30,
         )
-        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-        public_url = f"{wp_url}/wp-content/uploads/{widget_path.name}"
-        print(f"✓ Uploaded widget: {public_url}")
     except subprocess.CalledProcessError as e:
-        print(f"✗ SCP failed for widget HTML: {e.stderr.strip()}")
+        print(f"✗ Failed to create search directories: {e.stderr.strip()}")
         return None
     except Exception as e:
-        print(f"✗ Error uploading widget HTML: {e}")
+        print(f"✗ Error preparing search deploy: {e}")
         return None
 
-    # Upload companion JS file (same directory as HTML)
-    js_path = widget_path.parent / "road-labs-search.js"
-    if js_path.exists():
-        remote_js = f"{WP_UPLOADS}/{js_path.name}"
+    succeeded = 0
+    for local, remote in uploads:
         try:
             subprocess.run(
                 [
                     "scp", "-i", str(SSH_KEY), "-P", port,
-                    str(js_path),
-                    f"{user}@{host}:{remote_js}",
+                    str(local),
+                    f"{user}@{host}:{remote}",
                 ],
                 check=True,
                 capture_output=True,
                 text=True,
                 timeout=30,
             )
-            js_url = f"{wp_url}/wp-content/uploads/{js_path.name}"
-            print(f"✓ Uploaded widget JS: {js_url}")
+            succeeded += 1
+            print(f"✓ Uploaded search asset: /{remote.removeprefix(REMOTE_BASE + '/')}")
         except subprocess.CalledProcessError as e:
-            print(f"✗ SCP failed for widget JS: {e.stderr.strip()}")
+            print(f"✗ SCP failed for {local.name}: {e.stderr.strip()}")
         except Exception as e:
-            print(f"✗ Error uploading widget JS: {e}")
-    else:
-        print(f"⚠ Widget JS not found: {js_path} (widget may not work without it)")
+            print(f"✗ Error uploading {local.name}: {e}")
 
-    # Upload external CSS file (rl-search.{hash}.css)
-    css_files = list(widget_path.parent.glob("rl-search.*.css"))
-    if css_files:
-        css_path = css_files[0]  # Should be exactly one
-        remote_css = f"{WP_UPLOADS}/{css_path.name}"
-        try:
-            subprocess.run(
-                [
-                    "scp", "-i", str(SSH_KEY), "-P", port,
-                    str(css_path),
-                    f"{user}@{host}:{remote_css}",
-                ],
-                check=True,
-                capture_output=True,
-                text=True,
-                timeout=30,
-            )
-            css_url = f"{wp_url}/wp-content/uploads/{css_path.name}"
-            print(f"✓ Uploaded widget CSS: {css_url}")
-        except subprocess.CalledProcessError as e:
-            print(f"✗ SCP failed for widget CSS: {e.stderr.strip()}")
-        except Exception as e:
-            print(f"✗ Error uploading widget CSS: {e}")
-    else:
-        print(f"⚠ No rl-search.*.css found in {widget_path.parent} (CSS may be inline)")
-
-    return public_url
-
-
-def sync_training(js_file: str):
-    """Upload training-plans.js and training-plans-form.js to WP uploads via SCP."""
-    ssh = get_ssh_credentials()
-    if not ssh:
+    if succeeded != len(uploads):
+        print(f"✗ Search deploy incomplete: {succeeded}/{len(uploads)} files uploaded")
         return None
-    host, user, port = ssh
-
-    js_path = Path(js_file)
-    if not js_path.exists():
-        print(f"✗ Training plans JS not found: {js_path}")
-        return None
-
-    remote_path = f"{WP_UPLOADS}/{js_path.name}"
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(js_path),
-                f"{user}@{host}:{remote_path}",
-            ],
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=30,
-        )
-        wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
-        public_url = f"{wp_url}/wp-content/uploads/{js_path.name}"
-        print(f"✓ Uploaded training plans JS: {public_url}")
-    except subprocess.CalledProcessError as e:
-        print(f"✗ SCP failed: {e.stderr.strip()}")
-        return None
-    except Exception as e:
-        print(f"✗ Error uploading: {e}")
-        return None
-
-    # Upload companion form JS file (same directory as landing JS)
-    form_js_path = js_path.parent / "training-plans-form.js"
-    if form_js_path.exists():
-        remote_form = f"{WP_UPLOADS}/{form_js_path.name}"
-        try:
-            subprocess.run(
-                [
-                    "scp", "-i", str(SSH_KEY), "-P", port,
-                    str(form_js_path),
-                    f"{user}@{host}:{remote_form}",
-                ],
-                check=True,
-                capture_output=True,
-                text=True,
-                timeout=30,
-            )
-            form_url = f"{wp_url}/wp-content/uploads/{form_js_path.name}"
-            print(f"✓ Uploaded training form JS: {form_url}")
-        except subprocess.CalledProcessError as e:
-            print(f"✗ SCP failed for form JS: {e.stderr.strip()}")
-        except Exception as e:
-            print(f"✗ Error uploading form JS: {e}")
-    else:
-        print(f"⚠ Form JS not found: {form_js_path} (questionnaire page may not work without it)")
-
-    return public_url
+    print(f"✓ Search surface deployed: {succeeded}/{len(uploads)} files")
+    return "https://roadielabs.com/road-races/"
 
 
 def sync_guide(guide_dir: str):
@@ -705,8 +590,7 @@ def sync_questionnaire(questionnaire_dir: str):
 
     The directory must contain index.html and training-plans-form.js
     (both produced by wordpress/generate_questionnaire.py). The form JS is
-    served from the same directory so the page has no dependency on
-    wp-content/uploads or mu-plugins.
+    served from the same directory so the page has no server-side dependency.
     """
     ssh = get_ssh_credentials()
     if not ssh:
@@ -1094,31 +978,6 @@ def sync_legal(output_dir: str):
                 pass
 
     return uploaded or None
-
-
-def sync_consent():
-    """Upload rl-cookie-consent.php mu-plugin to SiteGround."""
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return None
-    host, user, port = ssh
-
-    mu_plugin = Path(__file__).parent.parent / "wordpress" / "mu-plugins" / "rl-cookie-consent.php"
-    if not mu_plugin.exists():
-        print(f"✗ Cookie consent mu-plugin not found: {mu_plugin}")
-        return None
-
-    remote = f"{REMOTE_BASE}/wp-content/mu-plugins/rl-cookie-consent.php"
-    try:
-        subprocess.run(
-            ["scp", "-i", str(SSH_KEY), "-P", port, str(mu_plugin), f"{user}@{host}:{remote}"],
-            check=True, capture_output=True, text=True, timeout=30,
-        )
-        print("✓ Deployed rl-cookie-consent.php mu-plugin")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"✗ Failed to deploy cookie consent: {e.stderr.strip()}")
-        return None
 
 
 def sync_training_plans(training_plans_file: str):
@@ -1795,277 +1654,13 @@ def sync_sitemap():
         return False
 
 
-def sync_noindex():
-    """Deploy the noindex mu-plugin to WordPress.
-
-    Uploads rl-noindex.php to wp-content/mu-plugins/ via SCP.
-    This adds <meta name="robots" content="noindex, follow"> to junk pages
-    (date archives, pagination, categories, WooCommerce, LearnDash, feeds).
-    """
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return False
-    host, user, port = ssh
-
-    project_root = Path(__file__).resolve().parent.parent
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-noindex.php"
-    if not plugin_file.exists():
-        print(f"✗ mu-plugin not found: {plugin_file}")
-        return False
-
-    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
-
-    # Ensure mu-plugins directory exists
-    try:
-        subprocess.run(
-            [
-                "ssh", "-i", str(SSH_KEY), "-p", port,
-                f"{user}@{host}",
-                f"mkdir -p {remote_path}",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-    except Exception:
-        pass  # Directory likely already exists
-
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(plugin_file),
-                f"{user}@{host}:{remote_path}/rl-noindex.php",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-        print("✓ Deployed rl-noindex.php mu-plugin")
-        print("  Noindex: date archives, pagination, categories, feeds, search")
-        print("  Noindex: WooCommerce (cart, my-account), LearnDash (lessons, courses)")
-        print("  Noindex: dashboard, xAPI content, WC-AJAX endpoints")
-        return True
-    except Exception as e:
-        print(f"✗ Failed to deploy mu-plugin: {e}")
-        return False
-
-
-def sync_meta_descriptions():
-    """Deploy meta description mu-plugin + JSON data to WordPress.
-
-    Uploads:
-      1. rl-meta-descriptions.php → wp-content/mu-plugins/
-      2. meta-descriptions.json → wp-content/uploads/rl-meta-descriptions.json
-
-    The mu-plugin reads the JSON and overrides AIOSEO meta descriptions
-    via filter hooks for all WordPress pages and posts.
-    """
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return False
-    host, user, port = ssh
-
-    project_root = Path(__file__).resolve().parent.parent
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-meta-descriptions.php"
-    json_file = project_root / "seo" / "meta-descriptions.json"
-
-    if not plugin_file.exists():
-        print(f"✗ mu-plugin not found: {plugin_file}")
-        return False
-    if not json_file.exists():
-        print(f"✗ JSON data not found: {json_file}")
-        print("  Run: python scripts/generate_meta_descriptions.py")
-        return False
-
-    # Validate JSON before uploading
-    try:
-        data = json.loads(json_file.read_text())
-        count = len(data.get("entries", []))
-        if count < 100:
-            print(f"✗ Only {count} entries in JSON (expected 131+)")
-            return False
-    except json.JSONDecodeError as e:
-        print(f"✗ Invalid JSON: {e}")
-        return False
-
-    mu_plugins_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
-    uploads_path = f"{REMOTE_BASE}/wp-content/uploads"
-
-    # Ensure directories exist
-    try:
-        subprocess.run(
-            [
-                "ssh", "-i", str(SSH_KEY), "-p", port,
-                f"{user}@{host}",
-                f"mkdir -p {mu_plugins_path} {uploads_path}",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-    except Exception:
-        pass  # Directories likely already exist
-
-    # Upload JSON data FIRST — mu-plugin reads it on activation, so data
-    # must be present before the PHP file arrives to avoid a race condition.
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(json_file),
-                f"{user}@{host}:{uploads_path}/rl-meta-descriptions.json",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-    except Exception as e:
-        print(f"✗ Failed to upload JSON data: {e}")
-        return False
-
-    # Upload mu-plugin
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(plugin_file),
-                f"{user}@{host}:{mu_plugins_path}/rl-meta-descriptions.php",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-    except Exception as e:
-        print(f"✗ Failed to upload mu-plugin: {e}")
-        return False
-
-    # Set file permissions (644 = owner rw, group/others read)
-    try:
-        subprocess.run(
-            [
-                "ssh", "-i", str(SSH_KEY), "-p", port,
-                f"{user}@{host}",
-                f"chmod 644 {mu_plugins_path}/rl-meta-descriptions.php "
-                f"{uploads_path}/rl-meta-descriptions.json",
-            ],
-            capture_output=True, text=True, timeout=10, check=True,
-        )
-    except Exception:
-        pass  # Non-fatal — SCP usually sets sane defaults
-
-    print(f"✓ Deployed meta descriptions ({count} entries)")
-    print("  → rl-meta-descriptions.json (data file, uploaded first)")
-    print("  → rl-meta-descriptions.php (mu-plugin)")
-    return True
-
-
-def sync_ctas():
-    """Deploy the race CTA mu-plugin to WordPress.
-
-    Uploads rl-race-ctas.php to wp-content/mu-plugins/ via SCP.
-    This appends race profile + prep kit CTAs to blog posts that reference
-    specific races in the database.
-    """
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return False
-    host, user, port = ssh
-
-    project_root = Path(__file__).resolve().parent.parent
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-race-ctas.php"
-    if not plugin_file.exists():
-        print(f"✗ mu-plugin not found: {plugin_file}")
-        return False
-
-    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
-
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(plugin_file),
-                f"{user}@{host}:{remote_path}/rl-race-ctas.php",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-        print("✓ Deployed rl-race-ctas.php mu-plugin")
-        print("  Race CTAs: 14 race posts + 1 hydration post → race profiles + prep kits")
-        return True
-    except Exception as e:
-        print(f"✗ Failed to deploy CTA mu-plugin: {e}")
-        return False
-
-
-def sync_ga4():
-    """Deploy the GA4 analytics mu-plugin to WordPress.
-
-    Uploads rl-ga4.php to wp-content/mu-plugins/ via SCP.
-    Lightweight replacement for MonsterInsights Pro + 6 addons.
-    """
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return False
-    host, user, port = ssh
-
-    project_root = Path(__file__).resolve().parent.parent
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-ga4.php"
-    if not plugin_file.exists():
-        print(f"✗ mu-plugin not found: {plugin_file}")
-        return False
-
-    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
-
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(plugin_file),
-                f"{user}@{host}:{remote_path}/rl-ga4.php",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-        print("✓ Deployed rl-ga4.php mu-plugin")
-        print("  GA4 tracking: G-WQ7W8XN11N (replaces MonsterInsights)")
-        return True
-    except Exception as e:
-        print(f"✗ Failed to deploy GA4 mu-plugin: {e}")
-        return False
-
-
-def sync_header():
-    """Deploy the shared header mu-plugin to WordPress.
-
-    Uploads rl-header.php to wp-content/mu-plugins/ via SCP.
-    Injects dropdown nav on WordPress-managed pages (e.g. /road-races/).
-    """
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return False
-    host, user, port = ssh
-
-    project_root = Path(__file__).resolve().parent.parent
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-header.php"
-    if not plugin_file.exists():
-        print(f"✗ mu-plugin not found: {plugin_file}")
-        return False
-
-    remote_path = f"{REMOTE_BASE}/wp-content/mu-plugins"
-
-    try:
-        subprocess.run(
-            [
-                "scp", "-i", str(SSH_KEY), "-P", port,
-                str(plugin_file),
-                f"{user}@{host}:{remote_path}/rl-header.php",
-            ],
-            capture_output=True, text=True, timeout=15, check=True,
-        )
-        print("✓ Deployed rl-header.php mu-plugin (shared dropdown header)")
-        return True
-    except Exception as e:
-        print(f"✗ Failed to deploy header mu-plugin: {e}")
-        return False
-
-
 def sync_ab():
-    """Deploy A/B test assets: JS (hashed + unhashed), config JSON, and mu-plugin.
+    """Deploy A/B test assets for static pages.
 
     Uploads:
-      - web/rl-ab-tests.js       → /ab/rl-ab-tests.js (for mu-plugin)
+      - web/rl-ab-tests.js       → /ab/rl-ab-tests.js
       - web/rl-ab-tests.js       → /ab/rl-ab-tests.{hash}.js (for static pages)
       - web/ab/experiments.json   → /ab/experiments.json
-      - wordpress/mu-plugins/rl-ab.php → wp-content/mu-plugins/rl-ab.php
     """
     import hashlib
 
@@ -2077,10 +1672,7 @@ def sync_ab():
     project_root = Path(__file__).resolve().parent.parent
     js_file = project_root / "web" / "rl-ab-tests.js"
     config_file = project_root / "web" / "ab" / "experiments.json"
-    plugin_file = project_root / "wordpress" / "mu-plugins" / "rl-ab.php"
-
-    for f, label in [(js_file, "rl-ab-tests.js"), (config_file, "experiments.json"),
-                     (plugin_file, "rl-ab.php")]:
+    for f, label in [(js_file, "rl-ab-tests.js"), (config_file, "experiments.json")]:
         if not f.exists():
             print(f"✗ A/B file not found: {f}")
             print(f"  Run: python wordpress/ab_experiments.py first")
@@ -2093,7 +1685,6 @@ def sync_ab():
 
     remote_base = f"{REMOTE_BASE}"
     remote_ab = f"{remote_base}/ab"
-    remote_mu = f"{remote_base}/wp-content/mu-plugins"
 
     # Create /ab/ directory and clean old hashed JS files
     try:
@@ -2110,12 +1701,11 @@ def sync_ab():
         print(f"✗ Failed to create /ab/ directory: {e.stderr.strip()}")
         return False
 
-    # Upload: unhashed (for mu-plugin) + hashed (for static pages) + config + plugin
+    # Upload unhashed and cache-busted JS plus the experiment configuration.
     uploads = [
         (js_file, f"{remote_ab}/rl-ab-tests.js"),
         (js_file, f"{remote_ab}/{hashed_js_name}"),
         (config_file, f"{remote_ab}/experiments.json"),
-        (plugin_file, f"{remote_mu}/rl-ab.php"),
     ]
     for local, remote in uploads:
         try:
@@ -2132,10 +1722,9 @@ def sync_ab():
             return False
 
     print("✓ Deployed A/B testing assets:")
-    print(f"  /ab/rl-ab-tests.js (unhashed, for mu-plugin)")
+    print(f"  /ab/rl-ab-tests.js")
     print(f"  /ab/{hashed_js_name} (cache-busted, for static pages)")
     print("  /ab/experiments.json")
-    print("  wp-content/mu-plugins/rl-ab.php")
     return True
 
 
@@ -3374,12 +2963,11 @@ def sync_markdown(markdown_dir: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Push race pages or sync race index to WordPress"
+        description="Deploy Roadie Labs static-site content to SiteGround"
     )
-    parser.add_argument("--json", help="Path to landing page JSON")
     parser.add_argument(
         "--sync-index", action="store_true",
-        help="Upload race-index.json to WP uploads via SCP"
+        help="Upload race-index.json to /search/ via SCP"
     )
     parser.add_argument(
         "--index-file", default="web/race-index.json",
@@ -3387,19 +2975,11 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--sync-widget", action="store_true",
-        help="Upload search widget HTML to WP uploads via SCP"
+        help="Deploy static search assets and page wrappers via SCP"
     )
     parser.add_argument(
         "--widget-file", default="web/road-labs-search.html",
         help="Path to widget file (default: web/road-labs-search.html)"
-    )
-    parser.add_argument(
-        "--sync-training", action="store_true",
-        help="Upload training-plans.js to WP uploads via SCP"
-    )
-    parser.add_argument(
-        "--training-file", default="web/training-plans.js",
-        help="Path to training plans JS (default: web/training-plans.js)"
     )
     parser.add_argument(
         "--sync-guide", action="store_true",
@@ -3478,10 +3058,6 @@ if __name__ == "__main__":
         help="Upload legal pages (privacy, terms, cookies) via SCP"
     )
     parser.add_argument(
-        "--sync-consent", action="store_true",
-        help="Upload cookie consent mu-plugin to WordPress"
-    )
-    parser.add_argument(
         "--sync-insights", action="store_true",
         help="Upload insights page to /insights/ via SCP"
     )
@@ -3536,22 +3112,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--sync-redirects", action="store_true",
         help="Deploy redirect rules to .htaccess"
-    )
-    parser.add_argument(
-        "--sync-noindex", action="store_true",
-        help="Deploy noindex mu-plugin to wp-content/mu-plugins/"
-    )
-    parser.add_argument(
-        "--sync-ctas", action="store_true",
-        help="Deploy race CTA mu-plugin to wp-content/mu-plugins/"
-    )
-    parser.add_argument(
-        "--sync-ga4", action="store_true",
-        help="Deploy GA4 analytics mu-plugin to wp-content/mu-plugins/"
-    )
-    parser.add_argument(
-        "--sync-header", action="store_true",
-        help="Deploy shared header mu-plugin to wp-content/mu-plugins/"
     )
     parser.add_argument(
         "--sync-photos", action="store_true",
@@ -3647,12 +3207,8 @@ if __name__ == "__main__":
              "(never fails the deploy — a ping failure only prints a warning)"
     )
     parser.add_argument(
-        "--sync-meta-descriptions", action="store_true",
-        help="Deploy meta description mu-plugin + JSON data to WordPress"
-    )
-    parser.add_argument(
         "--sync-ab", action="store_true",
-        help="Deploy A/B test assets (JS, config, mu-plugin) to /ab/"
+        help="Deploy static A/B test assets (JS and config) to /ab/"
     )
     parser.add_argument(
         "--sync-mission-control", action="store_true",
@@ -3700,9 +3256,6 @@ if __name__ == "__main__":
         args.sync_success = True
         args.sync_sitemap = True
         args.sync_redirects = True
-        args.sync_noindex = True
-        args.sync_ctas = True
-        args.sync_ga4 = True
         args.sync_prep_kits = True
         args.sync_tire_guides = True
         args.sync_series = True
@@ -3710,9 +3263,7 @@ if __name__ == "__main__":
         args.sync_blog_index = True
         args.sync_photos = True
         args.sync_ab = True
-        args.sync_header = True
         args.sync_courses = True
-        args.sync_meta_descriptions = True
         args.sync_insights = True
         args.sync_whitepaper = True
         args.sync_embed = True
@@ -3721,33 +3272,28 @@ if __name__ == "__main__":
         args.sync_markdown = True
         args.sync_guide_cluster = True
         args.sync_legal = True
-        args.sync_consent = True
         args.purge_cache = True
 
-    has_action = any([args.json, args.sync_index, args.sync_widget, args.sync_training,
+    has_action = any([args.sync_index, args.sync_widget,
                       args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_about,
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_training_plans, args.sync_methodology, args.sync_success, args.sync_pages,
                       args.sync_sitemap, args.sync_redirects,
-                      args.sync_noindex, args.sync_ctas, args.sync_ga4, args.sync_header, args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
+                      args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
                       args.sync_series, args.sync_blog,
                       args.sync_blog_index, args.sync_photos, args.sync_ab, args.sync_courses,
-                      args.sync_meta_descriptions, args.sync_mission_control,
+                      args.sync_mission_control,
                       args.sync_insights, args.sync_whitepaper, args.sync_embed, args.sync_rss,
                       args.sync_llms_txt, args.sync_markdown,
                       args.purge_cache])
     if not has_action:
         parser.error("Provide a sync flag (--sync-pages, --sync-index, etc.), --deploy-content, or --deploy-all")
 
-    if args.json:
-        push_to_wordpress(args.json)
     if args.sync_index:
         sync_index(args.index_file)
     if args.sync_widget:
         sync_widget(args.widget_file)
-    if args.sync_training:
-        sync_training(args.training_file)
     if args.sync_guide:
         sync_guide(args.guide_dir)
     if args.sync_guide_cluster:
@@ -3768,8 +3314,6 @@ if __name__ == "__main__":
         sync_consulting(args.consulting_file)
     if args.sync_legal:
         sync_legal("wordpress/output")
-    if args.sync_consent:
-        sync_consent()
     if args.sync_training_plans:
         sync_training_plans(args.training_plans_file)
     if args.sync_methodology:
@@ -3782,14 +3326,6 @@ if __name__ == "__main__":
         sync_sitemap()
     if args.sync_redirects:
         sync_redirects()
-    if args.sync_noindex:
-        sync_noindex()
-    if args.sync_ctas:
-        sync_ctas()
-    if args.sync_ga4:
-        sync_ga4()
-    if args.sync_header:
-        sync_header()
     if args.sync_photos:
         sync_photos(args.photos_dir)
     if args.sync_prep_kits:
@@ -3806,8 +3342,6 @@ if __name__ == "__main__":
         sync_blog_index(args.blog_index_page, args.blog_index_json)
     if args.sync_ab:
         sync_ab()
-    if args.sync_meta_descriptions:
-        sync_meta_descriptions()
     if args.sync_courses:
         sync_courses(args.course_dir)
     if args.sync_mission_control:

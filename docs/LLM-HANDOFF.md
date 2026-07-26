@@ -40,8 +40,8 @@ Rating key is `race.fondo_rating` (NOT `gravel_god_rating`). 14 scored dimension
 ## 2. ⚠️ DEPLOY REALITY (read this or you WILL break things)
 
 **roadielabs.com is a STATIC HTML site on SiteGround. It is NOT WordPress.**
-There is no `wp-content/`. `scripts/push_wordpress.py` is WordPress-oriented and
-several of its functions target dead paths — trust it only where verified below.
+There is no `wp-content/`. `scripts/push_wordpress.py` keeps its inherited name,
+but its supported sync paths now target the static host layout below.
 
 - **SSH/SCP:** host `giow1060.siteground.us`, user `u3586-cbpfw5houmt3`, port
   `18765`, key `~/.ssh/roadlabs_key`. Doc root
@@ -56,6 +56,8 @@ several of its functions target dead paths — trust it only where verified belo
   - `/race/<slug>/` → race pages. `/race/methodology/` → methodology page.
   - `/assets/rl-styles.<hash>.css` + `/assets/rl-scripts.<hash>.js` → shared page CSS/JS (content-hashed). `/ab/experiments.json` + `/ab/rl-ab-tests.<hash>.js` → A/B engine.
   - `/questionnaire/` → training-plan questionnaire (`index.html` + `training-plans-form.js`).
+- **Search deploy (scripted):** `python3 scripts/push_wordpress.py --sync-index --sync-widget` now uploads `web/race-index.json` to `/search/race-index.json`, the JS and CSS referenced by `web/road-labs-search.html` to `/search/`, and both generated wrappers to `/road-races/index.html` and `/search/index.html`. If either wrapper is missing, `--sync-widget` runs `scripts/build_search_page.py` first. `--deploy-content` includes both syncs.
+- **Search deploy (manual fallback):** use the SCP recipe above for each of `web/race-index.json`, `web/road-labs-search.js`, `web/rl-search.css`, `wordpress/output/road-races/index.html`, and `wordpress/output/search/index.html`, targeting the corresponding `/search/` or `/road-races/` server paths. This remains the fallback if the scripted deploy needs diagnosis.
 - **`/assets/` gotcha:** it was MISSING entirely until this session (every page's 89KB external stylesheet 404'd site-wide; pages ran on ~5.7KB inline critical CSS). When you regenerate pages, the asset hash may change — if so, SCP the new `wordpress/output/assets/rl-*.{css,js}` to `/assets/` or pages break. Current hashes: CSS `5f337585`, JS `7354be26`.
 - **CACHE:** SiteGround dynamic cache serves stale pages. `wp sg purge` does NOT
   work (no WordPress) — `purge_cache()` now detects this and prints the manual

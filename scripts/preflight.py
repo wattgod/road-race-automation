@@ -166,21 +166,8 @@ def main():
         pf.summary()
         return 1
 
-    ok = pf.run_step(
-        "generate_season_roundup.py --all",
-        [sys.executable, str(WORDPRESS_DIR / "generate_season_roundup.py"), "--all"],
-    )
-    if not ok:
-        pf.summary()
-        return 1
-
-    ok = pf.run_step(
-        "generate_blog_index.py",
-        [sys.executable, str(SCRIPTS_DIR / "generate_blog_index.py")],
-    )
-    if not ok:
-        pf.summary()
-        return 1
+    # Roadie Labs has no season-roundup surface.
+    # Roadie Labs has no live /blog/ surface.
 
     ok = pf.run_step(
         "generate_blog_index_page.py",
@@ -270,11 +257,7 @@ def main():
         pf.summary()
         return 1
 
-    ok = pf.run_step(
-        "validate_redirects.py",
-        [sys.executable, str(SCRIPTS_DIR / "validate_redirects.py")],
-        optional=True,  # redirect validation is supplementary
-    )
+    # Redirect validation has not yet been ported to the static site.
 
     pf.summary()
     return 1 if pf.failed else 0

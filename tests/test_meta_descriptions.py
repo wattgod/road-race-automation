@@ -402,53 +402,15 @@ class TestGeneratorScript:
 
 # ── Deploy Function Tests ────────────────────────────────────────────
 
-class TestDeployFunction:
-    """Tests for sync_meta_descriptions() in push_wordpress.py."""
+class TestStaticHostingDeploy:
+    """Meta descriptions are generated into static HTML, not deployed as PHP."""
 
     PUSH_SCRIPT = PROJECT_ROOT / "scripts" / "push_wordpress.py"
 
-    def test_push_script_has_sync_flag(self):
+    def test_push_script_does_not_offer_php_meta_sync(self):
         content = self.PUSH_SCRIPT.read_text()
-        assert "--sync-meta-descriptions" in content
-
-    def test_push_script_has_sync_function(self):
-        content = self.PUSH_SCRIPT.read_text()
-        assert "def sync_meta_descriptions" in content
-
-    def test_push_script_validates_json_count(self):
-        """Deploy must validate entry count before uploading."""
-        content = self.PUSH_SCRIPT.read_text()
-        assert "< 100" in content or ">= 100" in content, \
-            "sync_meta_descriptions should validate entry count"
-
-    def test_push_script_uploads_both_files(self):
-        """Deploy must upload both the mu-plugin and JSON data."""
-        content = self.PUSH_SCRIPT.read_text()
-        assert "rl-meta-descriptions.php" in content
-        assert "rl-meta-descriptions.json" in content
-
-    def test_push_script_included_in_deploy_all(self):
-        """--sync-meta-descriptions should be included in --deploy-all."""
-        content = self.PUSH_SCRIPT.read_text()
-        assert "sync_meta_descriptions = True" in content, \
-            "--sync-meta-descriptions not included in --deploy-all"
-
-    def test_push_script_uploads_json_before_php(self):
-        """JSON data must be uploaded before the mu-plugin to avoid race condition."""
-        content = self.PUSH_SCRIPT.read_text()
-        json_pos = content.find("rl-meta-descriptions.json")
-        php_pos = content.find("rl-meta-descriptions.php", content.find("def sync_meta_descriptions"))
-        # Skip the variable definition lines — find the actual SCP upload lines
-        json_scp = content.find("rl-meta-descriptions.json", content.find("scp", content.find("def sync_meta_descriptions")))
-        php_scp = content.find("rl-meta-descriptions.php", content.find("scp", content.find("def sync_meta_descriptions")))
-        assert json_scp < php_scp, \
-            "JSON data must be uploaded before PHP mu-plugin"
-
-    def test_push_script_sets_permissions(self):
-        """Deploy should set file permissions after SCP."""
-        content = self.PUSH_SCRIPT.read_text()
-        assert "chmod 644" in content, \
-            "Should chmod 644 deployed files"
+        assert "--sync-meta-descriptions" not in content
+        assert "def sync_meta_descriptions" not in content
 
 
 # ── Validate Deploy Tests ────────────────────────────────────────────
