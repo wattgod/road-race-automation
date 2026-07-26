@@ -193,6 +193,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         ("/race/methodology/", "monthly", "0.8"),
         ("/prep-kit/", "monthly", "0.7"),
         ("/training-plans/", "monthly", "0.8"),
+        ("/insights/", "weekly", "0.8"),
     ]:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}{path}"
