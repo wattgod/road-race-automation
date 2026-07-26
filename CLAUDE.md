@@ -9,14 +9,14 @@ advance the current phase's KPI gate — read `gravel-god-cycling/NORTHSTAR.md`
 (canonical plan, phases, anti-shill rules, baseline metrics) before large or
 ambiguous work.
 
-## ⚠ RACE-PAGE DEPLOY SOURCE (do not skip)
-The PRODUCTION race pages (427, spine-v2) deploy from branch
-`race-page-canonical-rollout` (HEAD 4d93df0), NOT from main — main's
-generate_neo_brutalist.py is 1,100+ diff lines behind the deployed spine and
-regenerating+deploying race pages from main OVERWRITES the approved layout
-(this fired Jul 18 2026; restored same day from the branch via worktree).
-Until the branch is merged, any race-page regen/deploy must run from a
-worktree of that branch. Verify after any race-page deploy:
+## Race-page deploy source (updated 2026-07-25)
+`race-page-canonical-rollout` has been MERGED into main — main's
+generate_neo_brutalist.py is now the canonical spine generator (verified:
+staged regen from main passes scripts/audit_spine_v2_catalog.py 396/396 and
+live pages carry spine-v2-approved). Deploy race pages from main via:
+stage to wordpress/output-spine-v2-stage → run the audit → 
+`push_wordpress.py --sync-pages --pages-dir wordpress/output-spine-v2-stage`.
+Verify after any race-page deploy:
 `curl -s https://roadielabs.com/race/paris-brest-paris/ | grep spine-v2-approved`.
 
 ## Project Overview
