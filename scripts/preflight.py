@@ -159,8 +159,8 @@ def main():
     # ── Phase 2: Generation ──────────────────────────────────────
 
     ok = pf.run_step(
-        "generate_index.py --with-jsonld",
-        [sys.executable, str(SCRIPTS_DIR / "generate_index.py"), "--with-jsonld"],
+        "generate_index.py",
+        [sys.executable, str(SCRIPTS_DIR / "generate_index.py")],
     )
     if not ok:
         pf.summary()
