@@ -88,7 +88,7 @@ class Finding:
 # Ordered — first match wins. Unmatched errors default to YELLOW/high (a human
 # decides), which is the safe direction: never auto-touch something we can't
 # confidently classify.
-REGEN_INDEX = "python3 scripts/generate_index.py --with-jsonld"
+REGEN_INDEX = "python3 scripts/generate_index.py"
 REGEN_PAGES = "python3 wordpress/generate_neo_brutalist.py --all"
 
 RULES: list[tuple[str, str, str, str, str, str | None]] = [
@@ -215,7 +215,17 @@ def check_security() -> list[Finding]:
 def check_search_index() -> list[Finding]:
     """web/race-index.json must exist and have one entry per profile."""
     index_file = PROJECT_ROOT / "web" / "race-index.json"
-    n_profiles = len(list(RACE_DATA_DIR.glob("*.json")))
+    n_profiles = 0
+    for profile_file in RACE_DATA_DIR.glob("*.json"):
+        try:
+            data = json.loads(profile_file.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        # Keep this eligibility check in sync with scripts/generate_index.py.
+        flags = (data.get("race") or {}).get("catalog_flags") or {}
+        if flags.get("duplicate_of") or flags.get("discipline_mismatch"):
+            continue
+        n_profiles += 1
     if not index_file.exists():
         return [classify("race-index.json not found")]
     try:
