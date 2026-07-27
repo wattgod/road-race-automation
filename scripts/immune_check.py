@@ -299,6 +299,16 @@ def check_fuzzy_duplicates() -> list[Finding]:
             return urlparse(citations[0]["url"]).netloc.lower()
         return ""
 
+    def country_signal(race: dict) -> str:
+        vitals = race.get("vitals") or {}
+        country = vitals.get("country")
+        if country:
+            return str(country).strip().casefold()
+        location = vitals.get("location")
+        if location:
+            return str(location).rsplit(",", 1)[-1].strip().casefold()
+        return ""
+
     NAME_THRESHOLD = 0.88  # tuned in the XC Ski template: catches near-duplicates, skips series
     for i in range(len(profiles)):
         slug_a, race_a = profiles[i]
@@ -308,6 +318,10 @@ def check_fuzzy_duplicates() -> list[Finding]:
             name_b = canon(race_b.get("name") or slug_b)
             ratio = SequenceMatcher(None, name_a, name_b).ratio()
             if ratio >= NAME_THRESHOLD:
+                country_a = country_signal(race_a)
+                country_b = country_signal(race_b)
+                if country_a and country_b and country_a != country_b:
+                    continue
                 same_domain = (first_citation_domain(race_a)
                                and first_citation_domain(race_a) == first_citation_domain(race_b))
                 conf = "same citation domain too" if same_domain else "distinct sources"
