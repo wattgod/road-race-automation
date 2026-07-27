@@ -2977,7 +2977,7 @@
     "name": "L'Etape Slovakia by Tour de France",
     "slug": "letape-slovakia",
     "location": "Bratislava",
-    "country": "",
+    "country": "Slovakia",
     "region": "Other",
     "month": "",
     "distance_km": 112.0,
@@ -3596,47 +3596,6 @@
         "min_age": 14,
         "entry_fee_gbp": 65
       }
-    ]
-  },
-  {
-    "name": "Dreiländergiro",
-    "slug": "dreilaendergiro",
-    "location": "Nauders, Tirol, Austria",
-    "country": "Austria",
-    "region": "Western Europe",
-    "month": "June",
-    "distance_km": 168.0,
-    "distance_mi": 104.4,
-    "elevation_m": 3600,
-    "elevation_ft": 11811.0,
-    "tier": 2,
-    "overall_score": 73,
-    "scores": {
-      "distance": 4,
-      "climbing": 5,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 5,
-      "logistics": 4,
-      "prestige": 4,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 4
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/dreilaendergiro/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "Stelvio Engadin: 168 km, 3,600 m gain — the longer route via Ofenpass and Engadin before the final Norbertshöhe climb into Austria",
-      "Stelvio Vinschgau: 120 km, 3,000 m gain — the shorter route returning via the upper Vinschgau and Reschenpass"
     ]
   },
   {
