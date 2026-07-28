@@ -1399,6 +1399,18 @@ RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
 RewriteRule ^race/gran-fondo-greece-loutraki/?$ /race/gran-fondo-loutraki/ [R=301,L]
 RewriteRule ^race/gran-fondo-greece-loutraki/(.*)$ /race/gran-fondo-loutraki/$1 [R=301,L]
 
+# dreilaendergiro -> dreilander-giro (duplicate profile of the same event,
+# adjudicated deleted 2026-07-27 via immune-fix PR #4; canonical kept the
+# richer profile). Physical page dir must stay deleted on the server.
+RewriteRule ^race/dreilaendergiro/?$ /race/dreilander-giro/ [R=301,L]
+RewriteRule ^race/dreilaendergiro/(.*)$ /race/dreilander-giro/$1 [R=301,L]
+
+# mount-washington-hillclimb -> mt-washington-hillclimb (duplicate profile of
+# the same event, adjudicated deleted 2026-07-27 via immune-fix PR #4).
+# Physical page dir must stay deleted on the server.
+RewriteRule ^race/mount-washington-hillclimb/?$ /race/mt-washington-hillclimb/ [R=301,L]
+RewriteRule ^race/mount-washington-hillclimb/(.*)$ /race/mt-washington-hillclimb/$1 [R=301,L]
+
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
 RewriteRule ^belgian-waffle-ride-race-guide/?$ /race/bwr-california/ [R=301,L]
