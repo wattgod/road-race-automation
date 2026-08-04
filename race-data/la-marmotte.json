@@ -13,13 +13,13 @@
       "location_badge": "BOURG D'OISANS, FRANCE",
       "country": "France",
       "date": "Late June annually",
-      "date_specific": "2026: June 28 (completed); 2027 dates not yet announced",
+      "date_specific": "2027: June 27 (provisional; entries expected to open early October 2026)",
       "field_size": "~7,000-7,500 riders",
-      "start_format": null,
-      "registration": "Online via marmottegranfondoalpes.com. Tiered pricing opens October/November. Sells out within hours. Cost: EUR110-130",
-      "entry_fee": "EUR110-130 (tiered by registration batch)",
-      "feed_zones": "4 official feed stations: Col du Glandon, Valloire, Col du Galibier (tunnel level), Bourg d'Oisans (before Alpe d'Huez).",
-      "cutoff_time": "Must pass base of Alpe d'Huez by 18:15 (6:15 PM). Strict enforcement.",
+      "start_format": "Staggered mass start from Bourg d'Oisans in three color-coded bib waves: 6:30 (green/yellow), 6:50 (blue), 7:10 (red). Start pens open at 5:30.",
+      "registration": "Online via marmottegranfondoalpes.com. 2027 entries expected to open early October 2026. Tiered pricing by registration batch: EUR110 (first 500) rising to EUR130 (final batch). Sells out within hours.",
+      "entry_fee": "EUR110-130 (tiered by registration batch; 2026 pricing)",
+      "feed_zones": "4 official feed stations: Col du Glandon summit (km 36), Valloire (km 98), Col du Galibier summit (km 115), Bourg d'Oisans (km 162, before Alpe d'Huez). Additional water points at Saint-Michel-de-Maurienne, Col du Telegraphe, Plan Lachat, La Garde, and Huez.",
+      "cutoff_time": "Galibier summit by 15:30; foot of Alpe d'Huez (Bourg d'Oisans) by 17:45. Strict enforcement.",
       "lat": 45.052,
       "lng": 6.033,
       "route_options": [
@@ -121,7 +121,7 @@
       "weaknesses": [
         "Remote access: 2+ hours from the nearest major airport to a small Alpine town",
         "Weather roulette: near-freezing at Galibier, potentially scorching at Alpe d'Huez, in the same ride",
-        "The cutoff: 18:15 at the base of Alpe d'Huez means genuine time pressure all day — no leisure riding"
+        "The cutoff: 17:45 at the base of Alpe d'Huez means genuine time pressure all day — no leisure riding"
       ],
       "bottom_line": "If you want to test yourself against the mountains that made cycling legends, La Marmotte is where you do it. The Galibier will humble you, and Alpe d'Huez will reward you."
     },
@@ -156,6 +156,21 @@
         "url": "https://www.sportive.com/cycling-training/512968/la-marmotte-sportive-gold-and-silver-medal-timings",
         "category": "reference",
         "label": "La Marmotte Gold and Silver Medal Timings"
+      },
+      {
+        "url": "https://sportive.com/event/marmotte-granfondo-alps-2027/",
+        "category": "reference",
+        "label": "Marmotte Granfondo Alps 2027 — date and entry window (provisional)"
+      },
+      {
+        "url": "https://marmottegranfondoalpes.com/en/pricing-and-rules/",
+        "category": "official",
+        "label": "Marmotte Granfondo Alpes — Pricing and Rules (tiered entry fees)"
+      },
+      {
+        "url": "https://marmottegranfondoalpes.com/en/marmotte-granfondo-alpes/",
+        "category": "official",
+        "label": "Marmotte Granfondo Alpes — course, start waves, feed stations, cutoffs"
       }
     ],
     "youtube_data": {
@@ -367,7 +382,7 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
+      "verified": "2026-08-03",
       "source": "https://marmottegranfondoalpes.com/en/"
     }
   }

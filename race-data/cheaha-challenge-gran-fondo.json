@@ -12,8 +12,8 @@
       "location": "Jacksonville, Alabama, USA",
       "location_badge": "JACKSONVILLE, AL",
       "country": "USA",
-      "date": "May",
-      "date_specific": "2026: May 16-17 (Saturday time trial, Sunday gran fondo/UCI qualifier); 2027 dates not yet announced",
+      "date": "May, annual (mid-May weekend)",
+      "date_specific": "2026: May 16-17 (completed; 33rd edition — Saturday time trial, Sunday gran fondo/UCI qualifier). 2027 dates not yet announced by NEABA as of 2026-08-03: official site and UCI GFWS calendar still list only May 16-17, 2026; granfondoguide shows a May 15-16, 2027 window but explicitly marks it 'Unconfirmed' — do not promote to a parsed date until the organizer announces.",
       "field_size": "Hundreds from 26+ states and 9+ countries, all levels chasing UCI glory",
       "start_format": null,
       "registration": "Includes pre-ride party meal, free breakfast for riders/families, post-ride feast, finisher swag, BikeExpo, and packet pickup",
@@ -105,13 +105,15 @@
       "official_site": "https://www.cheahachallenge.com"
     },
     "history": {
-      "founded": 1996,
-      "origin_story": "Born as a humble century over Alabama's highest peak, Mount Cheaha, starting from Jacksonville State University campus. NEABA crafted a loop of pain that hooked riders instantly. Evolved into the state's biggest bike bash, adding Ultra brutality and UCI glory. Now 31 years strong, it's the South's toughest tradition.",
+      "founded": 1993,
+      "origin_story": "Born in 1993 as a humble century over Alabama's highest peak, Mount Cheaha. NEABA crafted a loop of pain that hooked riders instantly; the start moved to the Jacksonville State University campus in 2014, putting a ridge line between riders and the Cheaha climb. Evolved into the state's biggest bike bash, adding Ultra brutality and UCI glory — 33 editions strong through 2026, the South's toughest tradition.",
       "notable_moments": [
         "First USA UCI Gran Fondo qualifier",
         "Ultra addition with 12,000+ft monster",
         "Chief Ladiga ITT festival kickoff",
-        "Grew to riders from 26 states/9 countries"
+        "Grew to riders from 26 states/9 countries",
+        "2014: 22nd Annual — start relocated to Jacksonville State University campus",
+        "2026: 33rd edition held May 16-17 as a UCI Gran Fondo World Series qualifier"
       ],
       "reputation": "Toughest ride in the South with heart. Legendary for climbs that break and bond. UCI stamp cements elite status amid family charm."
     },
@@ -160,6 +162,21 @@
         "url": "https://www.cheahachallenge.com/Race/CheahaChallengeGranFondo/Page/ucigfws",
         "category": "official",
         "label": "Cheaha Challenge — UCI Gran Fondo World Series Qualifying Info"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/402/cheaha-challenge-gran-fondo",
+        "category": "reference",
+        "label": "Gran Fondo Guide event listing — shows May 15-16, 2027 window flagged 'Unconfirmed' (checked 2026-08-03)"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Contents/Index/6982/register-now-for-the-30th-annual-cheaha-challenge-gran-fondo-century-and-ultra-and-save",
+        "category": "press",
+        "label": "Gran Fondo Guide (Nov 2022): 30th Annual Cheaha Challenge, May 20-21, 2023 — edition-count basis for 1993 founding"
+      },
+      {
+        "url": "https://www.lake.com/events/cheaha-challenge-gran-fondo-weekend/",
+        "category": "reference",
+        "label": "Lake.com 2026 preview — 33rd edition May 16-17 2026, Pete Mathews Coliseum start, Ultra 126mi routes"
       }
     ],
     "youtube_data": {
@@ -333,9 +350,13 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
+      "verified": "2026-08-03",
       "source": "https://www.cheahachallenge.com/",
-      "notes": "UCI qualifier claim reconfirmed 2026-07-24: official site's dedicated UCI GFWS page (cheahachallenge.com/Race/CheahaChallengeGranFondo/Page/ucigfws, curl-verified live, title 'Cheaha Challenge Gran Fondo: UCI Gran Fondo World Series Qualifying Info') and the UCI GFWS calendar itself (Cheaha Challenge Granfondo, Jacksonville AL, Sat 16 May 2026 - 17 May 2026) both confirm current UCI Gran Fondo World Series qualifying status. should_you_race's 'UCI qualifier ambitions' claim is TRUE — no correction needed."
+      "notes": "Re-verified 2026-08-03 (readiness wave D): official site live (JSON-LD SportsEvent still carries 2026-05-16/17; event page states 'We are excited to continue the tradition' with 2026 event kits on sale) — event is active and recurring, 2026 edition completed. 2027 dates NOT yet announced: UCI GFWS calendar lists Cheaha only at 16-17 May 2026, and granfondoguide's May 15-16 2027 listing is explicitly flagged 'Unconfirmed' on-page. Prior 2026-07-24 verification: UCI GFWS qualifier status confirmed on both the official ucigfws page (curl-verified live) and the UCI GFWS calendar; should_you_race's 'UCI qualifier ambitions' claim is TRUE."
+    },
+    "catalog_flags": {
+      "status_note": "2026-08-03 readiness-wave-D enrichment: sole readiness blocker is 'no parsed future date' and it cannot be honestly cleared — no organizer-announced 2027 date exists (official site JSON-LD = 2026 only; UCI GFWS calendar = 2026 only; granfondoguide 2027-05-15/16 is marked 'Unconfirmed', matching the death-ride aggregator-projection precedent). Fixed verifiably-wrong history.founded 1996 -> 1993 (22nd Annual in 2014 per JSU video already cited in youtube_data; 30th Annual May 2023 per granfondoguide Nov 2022 article; 33rd edition 2026 per lake.com — consistent with a single skipped year). Corrected origin_story JSU-start claim: start MOVED to JSU in 2014 per SBL ride-director video cited in this profile. Re-check for a 2027 announcement around registration open (historically fall/winter); when announced, lead date_specific with '2027: May D-D' to clear the blocker.",
+      "ruled": "2026-08-03 readiness wave D"
     }
   }
 }

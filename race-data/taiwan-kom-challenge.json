@@ -5,17 +5,17 @@
     "display_name": "Taiwan KOM Challenge — The Ascent to the Clouds",
     "tagline": "105 kilometers from the Pacific Ocean to 3,275 meters. Through Taroko Gorge's marble cathedrals to the roof of Taiwan. Asia's most iconic hill climb — where WorldTour pros and amateur dreamers start together at sea level and finish above the clouds.",
     "vitals": {
-      "distance_km": 150.0,
-      "distance_mi": 93.0,
-      "elevation_m": 3275,
-      "elevation_ft": 10745.0,
-      "location": "Yilan to Wuling Pass, Taiwan",
+      "distance_km": 105.0,
+      "distance_mi": 65.2,
+      "elevation_m": 3426,
+      "elevation_ft": 11239.0,
+      "location": "Hualien (Qixingtan Beach) to Wuling Pass, Taiwan",
       "location_badge": "HUALIEN → WULING PASS, TAIWAN",
       "country": "Taiwan",
       "date": "Late October annually (typically fourth Friday of October)",
       "date_specific": "2026: October 23",
       "field_size": "~800-1,000 riders from 40+ countries",
-      "start_format": null,
+      "start_format": "Mass start at dawn from Qixingtan Beach with an 18.5 km neutralized coastal rollout to the Taroko Archway, where the ~87 km timed climb begins",
       "registration": "Online via taiwankom.org and cyclist.org.tw. Registration opens mid-year, typically closes late September. Open to riders aged 16+. Elite category available for pro teams and riders targeting sub-4-hour finishes.",
       "entry_fee": "NT$5,000 (~$150 USD) plus NT$500 refundable timing chip deposit",
       "feed_zones": "Support stations along the route with water, food, and mechanical assistance. Medical support at key checkpoints. SAG vehicles on course.",
@@ -46,7 +46,7 @@
         "18.5 km neutral coastal rollout from Qixingtan Beach to Taroko Archway — flat, fast warmup along the Pacific",
         "Taroko Gorge section: narrow road carved through sheer marble cliffs hundreds of meters high, with hand-hewn tunnels and bridges over the Liwu River",
         "Mid-section from Tianxiang to Dayuling: steady 5-7% gradient through forested valleys and open meadows",
-        "Final 10 km from Dayuling to Wuling Pass: savage switchbacks averaging 17% with maximum gradients reaching 27%",
+        "Final 10 km from Dayuling to Wuling Pass: ~710 m of gain (2,565 m to 3,275 m, roughly 7% average) with sustained double-digit pitches and ramps reported up to 27% on the summit switchbacks — the last kilometer alone averages 11%",
         "Altitude gain: sea level to 3,275m (10,745 ft) in a single continuous ascent — one of the highest paved road climbs on Earth",
         "Multiple tunnels through the gorge — some unlit, requiring attention in a mass-start field"
       ]
@@ -75,19 +75,30 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 83. adventure dimension dropped, road_surface added. Score recalculated: 80."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
-      "cat_2_climbs": null,
-      "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "total_climbs": 1,
+      "hc_climbs": 1,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        {
+          "name": "Wuling Pass (east approach via Taroko Gorge)",
+          "km_from_start": 18.5,
+          "distance_km": 87.4,
+          "elevation_gain_m": 3426,
+          "average_gradient_pct": 3.5,
+          "max_gradient_pct": 27,
+          "category": "HC",
+          "summit_altitude_m": 3275,
+          "tactical_notes": "One climb, three acts. Steady 3-6% through Taroko Gorge and the forested mid-mountain (54% of the climb sits at 0-5%, 30% at 5-10% per PJAMM), one 3.6 km descent at -5.3% breaking the rhythm before the finale, then the Dayuling-to-Wuling summit section: sustained double-digit pitches, ramps reported up to 27% on the switchbacks, and an 11% average final kilometer at 3,200m+. Steepest continuous 5 km of the whole ascent averages 8.6%. Pace the gorge like a time trial, save matches for the last 10 km, and gear for 34/34 or lower."
+        }
+      ],
+      "profile_type": "mountain — single continuous summit-finish ascent, sea level to 3,275m",
+      "king_of_mountain": "Wuling Pass — 3,275m, the highest paved road in Taiwan"
     },
     "course_description": {
-      "character": "The Taiwan KOM Challenge is a 105 km journey from the Pacific Ocean to the roof of Taiwan — a single, continuous ascent from sea level to 3,275 meters that passes through one of the natural wonders of Asia. The first 18.5 km is a neutral rollout along the coast from Qixingtan Beach to the Taroko Gorge entrance, where the official timing begins. From there, the road enters a different world: Taroko Gorge's marble walls rise hundreds of meters on either side, the Liwu River carves through the canyon floor far below, tunnels pierce the rock, and red bridges span impossible gaps. The gradient through the gorge is steady — 5-7% for roughly 50 km — and the scenery is so extraordinary that first-time riders forget they are in a race. Past Tianxiang, the gorge opens into forested mountain valleys. The road continues climbing through temperate forest and alpine meadow. Then comes Dayuling at 2,565m — the psychological halfway point of the high-altitude suffering. The final 10 km from Dayuling to Wuling Pass delivers the coup de grace: switchbacks averaging 17% with pitches to 27%, at an altitude where your lungs can extract only 70% of the oxygen they are used to. The summit at 3,275m is above the cloud line more often than not. You rode there from the beach.",
-      "signature_challenge": "The final 10 km from Dayuling to Wuling Pass. The combination of extreme gradient (17% average, 27% max) and genuine high altitude (2,565-3,275m) on legs that have already climbed for 3-5 hours creates a physiological crisis that no amount of sea-level training fully prepares you for. The oxygen deficit compounds the muscular fatigue. The cold compounds both. This is where the Taiwan KOM separates itself from every other hill climb on Earth — it does not merely climb high, it climbs brutally to get there.",
+      "character": "The Taiwan KOM Challenge is a 105 km journey from the Pacific Ocean to the roof of Taiwan — a single, continuous ascent from sea level to 3,275 meters that passes through one of the natural wonders of Asia. The first 18.5 km is a neutral rollout along the coast from Qixingtan Beach to the Taroko Gorge entrance, where the official timing begins. From there, the road enters a different world: Taroko Gorge's marble walls rise hundreds of meters on either side, the Liwu River carves through the canyon floor far below, tunnels pierce the rock, and red bridges span impossible gaps. The gradient through the gorge is steady — 5-7% for roughly 50 km — and the scenery is so extraordinary that first-time riders forget they are in a race. Past Tianxiang, the gorge opens into forested mountain valleys. The road continues climbing through temperate forest and alpine meadow. Then comes Dayuling at 2,565m — the psychological halfway point of the high-altitude suffering. The final 10 km from Dayuling to Wuling Pass delivers the coup de grace: another 710 vertical meters through switchbacks with sustained double-digit pitches and ramps reported up to 27%, at an altitude where your lungs can extract only about 70% of the oxygen they are used to. The summit at 3,275m is above the cloud line more often than not. You rode there from the beach.",
+      "signature_challenge": "The final 10 km from Dayuling to Wuling Pass. The combination of steep gradient (sustained double-digit pitches, ramps reported up to 27%, the last kilometer averaging 11%) and genuine high altitude (2,565-3,275m) on legs that have already climbed for 3-5 hours creates a physiological crisis that no amount of sea-level training fully prepares you for. The oxygen deficit compounds the muscular fatigue. The cold compounds both. This is where the Taiwan KOM separates itself from every other hill climb on Earth — it does not merely climb high, it climbs brutally to get there.",
       "suffering_zones": [
         "Qixingtan Beach to Taroko Archway — The Coastal Prologue",
         "Taroko Gorge — The Marble Cathedral",
@@ -123,7 +134,7 @@
     },
     "biased_opinion": {
       "verdict": "The Roof of Taiwan",
-      "summary": "The Taiwan KOM Challenge is one of the most extraordinary single-day efforts in competitive cycling. From the moment you roll off Qixingtan Beach at dawn, the Pacific Ocean still audible behind you, the road points upward and does not relent for 87 timed kilometers. Through Taroko Gorge — marble walls hundreds of meters high, tunnels carved through the mountain by hand, bridges spanning the Liwu River far below — the road climbs steadily, almost gently, lulling you into believing the gradient is manageable. Then the gorge ends, the valley opens, and the switchbacks begin. The final 10 kilometers to Wuling Pass — where gradients average 17% and spike to 27% at an altitude where the air holds 70% of the oxygen your lungs are accustomed to — are among the hardest paved kilometers in world cycling. When you reach 3,275 meters, you are standing on the highest paved road in Taiwan, above the cloud line, and you rode there from the beach. WorldTour Grand Tour winners have raced this course. The record stands at 3:16:09. Most riders take 4-6 hours. All of them remember it forever.",
+      "summary": "The Taiwan KOM Challenge is one of the most extraordinary single-day efforts in competitive cycling. From the moment you roll off Qixingtan Beach at dawn, the Pacific Ocean still audible behind you, the road points upward and does not relent for 87 timed kilometers. Through Taroko Gorge — marble walls hundreds of meters high, tunnels carved through the mountain by hand, bridges spanning the Liwu River far below — the road climbs steadily, almost gently, lulling you into believing the gradient is manageable. Then the gorge ends, the valley opens, and the switchbacks begin. The final 10 kilometers to Wuling Pass — where the road pitches into sustained double-digit ramps that spike to 27% at an altitude where the air holds about 70% of the oxygen your lungs are accustomed to — are among the hardest paved kilometers in world cycling. When you reach 3,275 meters, you are standing on the highest paved road in Taiwan, above the cloud line, and you rode there from the beach. WorldTour Grand Tour winners have raced this course. The record stands at 3:16:09. Most riders take 4-6 hours. All of them remember it forever.",
       "strengths": [
         "Sea level to 3,275m in a single ride — one of the highest continuous paved ascents on Earth, through one of Asia's great natural wonders",
         "Taroko Gorge: marble canyons, hand-carved tunnels, cliff-edge temples, roaring rivers — the most spectacular cycling scenery in Asia",
@@ -195,13 +206,23 @@
         "url": "https://pjammcycling.com/climb/22.Cycling-Wuling-Pass-East",
         "category": "reference",
         "label": "Wuling Pass East — PJAMM Cycling"
+      },
+      {
+        "url": "https://alpinecadence.com/schedule/taiwan-kom-challenge-tour/",
+        "category": "logistics",
+        "label": "Taiwan KOM Challenge Tour, October 2026 (dates TBC) — Alpine Cadence"
+      },
+      {
+        "url": "https://www.granfondoguide.com/Events/Index/10289/taiwan-kom-challenge",
+        "category": "directory",
+        "label": "Taiwan KOM Challenge (listed Unconfirmed) — Gran Fondo Guide"
       }
     ],
     "eligibility": {
       "status": "unknown",
-      "verified": "2026-07-20",
+      "verified": "2026-08-03",
       "source": "https://www.taiwankom.org/en/news.asp",
-      "note": "Site has a self-signed SSL certificate that blocks automated fetch/curl (confirmed independently on this pass); domain itself is live (curl -k returns 200). The official news index is updated through mid-2026 but its only 2026 items are 'Road to Taiwan KOM' Spring and Summer sub-events -- the 2026 Summer sub-event was itself cancelled (announced June 10, 2026). No 2026 (or later) main Taiwan KOM Challenge / Pacific Classic edition announcement or registration was found. Organizer's 2025 announcement stated the classic Taroko Gorge-Wuling route is suspended pending forest recovery and 2025 ran a temporary coastal 'Pacific Classic' route instead. Net: organizer is active, but no confirmed 2026 main-event edition exists -- status left unknown rather than active. On-file date_specific ('2026: October 23') is unconfirmed by any official source found; left unchanged rather than invented."
+      "note": "Re-verified 2026-08-03 (self-signed SSL still blocks normal fetch; curl -k returns the live site). Official news index still carries NO 2026 main-edition announcement or registration: the only 2026 items are the Spring sub-event (ran March) and the Summer sub-event (cancelled June 10, 2026); the homepage countdown widget still targets 2025-10-27 (stale). Independent cross-checks: GranFondoGuide lists the event as 'Unconfirmed'; tour operator Alpine Cadence holds an Oct 24-31, 2026 tour window but states 'exact dates to be confirmed'; third-party calendars (Battistrada, Cycloworld) list Fri 2026-10-23, which matches the historical fourth-Friday pattern and the on-file date_specific but is a projection, not an organizer announcement. Historical registration windows for the main event open mid-Aug to late-Sep (2023: Aug 13; 2024: Aug 28; 2025 Pacific Classic: Sep 3; 2021: Sep 30), so absence today is not proof of cancellation — RE-CHECK EARLY-TO-MID SEPTEMBER 2026. Classic Taroko route remains suspended since the April 2024 earthquake; 2025 ran the alternate 203 km 'Pacific Classic'. If a 2026 edition is announced, verify which route format applies before marking active. date_specific ('2026: October 23') is retained as a well-corroborated projection, not an organizer-confirmed date."
     }
   }
 }

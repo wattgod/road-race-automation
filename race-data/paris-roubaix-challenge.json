@@ -13,11 +13,11 @@
       "location_badge": "ROUBAIX, FRANCE",
       "country": "France",
       "date": "Saturday before Paris-Roubaix (April)",
-      "date_specific": "2026: April 11 (completed, sold out); 2027 pre-registration open, exact date not yet announced",
+      "date_specific": "2027: April 10 (Saturday, day before the pro Paris-Roubaix on April 11)",
       "field_size": "~6,500 riders",
       "start_format": null,
-      "registration": "Online via paris-roubaix-challenge.com. Tiered pricing by distance and registration date. Entry: EUR84-94.",
-      "entry_fee": "EUR84-94 (tiered by distance and registration date)",
+      "registration": "Online via parisroubaixchallenge.com (official Time To platform). 2026 edition sold out; pre-registration for the 2027 edition is open. Tiered pricing by distance and registration date. 2026 entry: EUR84-94.",
+      "entry_fee": "EUR84-94 for the 2026 edition (tiered by distance and registration date); 2027 pricing not yet published",
       "feed_zones": "Feed zones between cobbled sectors. Water, energy food, basic mechanical assistance. The cobbles destroy wheels and tires — mechanical support is critical.",
       "cutoff_time": "Broom wagon enforced. Must maintain minimum average speed to reach Roubaix Velodrome.",
       "lat": 50.694,
@@ -139,7 +139,7 @@
     },
     "citations": [
       {
-        "url": "https://www.paris-roubaix-challenge.com/",
+        "url": "https://www.parisroubaixchallenge.com/en/",
         "category": "official",
         "label": "Paris-Roubaix Challenge — Official Site"
       },
@@ -149,19 +149,29 @@
         "label": "Paris-Roubaix — Wikipedia"
       },
       {
-        "url": "https://sportivebreaks.com/sportives/paris-roubaix-challenge/",
-        "category": "review",
-        "label": "Paris-Roubaix Challenge — Sportive Breaks"
+        "url": "https://www.domestiquecycling.com/en/2027-uci-worldtour-calendar/",
+        "category": "reference",
+        "label": "2027 UCI WorldTour Calendar — Paris-Roubaix on April 11, 2027 (Challenge runs the Saturday before)"
       },
       {
-        "url": "https://www.cyclingweekly.com/news/paris-roubaix-challenge-guide",
+        "url": "https://sportivebreaks.com/classics/paris-roubaix/",
         "category": "review",
-        "label": "Paris-Roubaix Challenge Guide — Cycling Weekly"
+        "label": "Paris Roubaix Challenge 2027 — Sportive Breaks (Challenge Saturday 10 April 2027; 70/145/170 km with 8/19/30 sectors; long route starts Busigny)"
+      },
+      {
+        "url": "https://www.cyclingweekly.com/racing/paris-roubaix/paris-roubaix-the-key-cobbled-sectors",
+        "category": "review",
+        "label": "Paris-Roubaix: The Key Cobbled Sectors — Cycling Weekly"
+      },
+      {
+        "url": "https://www.bikeradar.com/features/routes-and-rides/paris-roubaix-challenge",
+        "category": "review",
+        "label": "I Rode the Paris-Roubaix Course — BikeRadar first-person Challenge report"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
+      "verified": "2026-08-03",
       "source": "https://www.parisroubaixchallenge.com/en/"
     }
   }

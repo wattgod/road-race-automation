@@ -6,28 +6,28 @@
     "tagline": "ASO's Tour de France franchise on Denmark's ancient Viking road. 7,000 riders. Five routes up to 300 km. TdF jerseys. All roads lead to Viborg.",
     "vitals": {
       "distance_km": 300.0,
-      "distance_mi": 186.0,
-      "elevation_m": 1400,
-      "elevation_ft": 4593.0,
+      "distance_mi": 186.4,
+      "elevation_m": 2500,
+      "elevation_ft": 8202.0,
       "location": "Various start points across Jutland, Denmark — all routes finish in Viborg",
       "location_badge": "JUTLAND / VIBORG, DENMARK",
       "country": "Denmark — all routes finish in Viborg",
       "date": "Late June annually",
-      "date_specific": "2026: June 27 (ran under full L'Etape/ASO branding, now archived/post-event). 2027: the underlying DGI Hærvejsløbet event is confirmed for June 26, but denmark.letapeseries.com has not yet published a 2027 page, so L'Etape/ASO branding continuation for that specific date is probable but not independently confirmed.",
+      "date_specific": "2027: June 26 (confirmed by organizer DGI: 'DGI Hærvejsløbet køres 26. juni 2027'; registration opens October 2026. Prior edition ran June 27, 2026 under full L'Etape/ASO branding and sold out. L'Etape/ASO branding continuation for 2027 is probable but not yet published on denmark.letapeseries.com.)",
       "field_size": "7,000-7,500 riders (2024: 7,000 from 30+ countries)",
-      "start_format": null,
-      "registration": "Online via denmark.letapeseries.com. Entry fee varies by route. Early-bird discounts of 25-30% available. Includes official TdF cycling jersey.",
+      "start_format": "Point-to-point with staggered starts by route (2026 verified): 300 km 06:30-07:30 from Flensburg (Schiffbruecke 17), 160 km 09:30-11:00 from Vejen Idraetscenter, 125 km 10:00-11:00 from Godthaab Hammervaerk (Svenstrup, Aalborg), 75 km 11:30 from Noerre Snede, 50 km 11:30 from Funder (Silkeborg). All routes finish in Viborg.",
+      "registration": "Online via denmark.letapeseries.com (Sportstiming platform). 2026 edition sold out before race day. 2027 registration opens October 2026 per organizer DGI. Entry fee varies by route. Early-bird discounts of 25-30% available. Includes official TdF cycling jersey.",
       "entry_fee": "Varies by route (early-bird discounts 25-30%)",
-      "feed_zones": "4-7 feed stations depending on route distance. Staffed by local volunteers from 25+ clubs. Renowned for quality food and festive atmosphere.",
+      "feed_zones": "300 km route has eight feed depots plus the finish; shorter routes have progressively fewer stops en route to Viborg. Staffed by local volunteers from 25+ clubs. Renowned for quality food and festive atmosphere.",
       "cutoff_time": "Route-dependent",
       "lat": 56.4532,
       "lng": 9.4023,
       "route_options": [
         "300 km road — Flensburg (Germany) to Viborg: 2,500 m elevation (Queen Stage)",
-        "160 km road — Vejen to Viborg: 1,400 m elevation",
-        "125 km road — Aalborg to Viborg: 1,000 m elevation",
-        "75 km road: 600 m elevation",
-        "50 km road: 300 m elevation"
+        "160 km road — Vejen to Viborg: 1,600 m elevation",
+        "125 km road — Aalborg (Godthaab Hammervaerk, Svenstrup) to Viborg: 1,100 m elevation",
+        "75 km road — Noerre Snede to Viborg: 700 m elevation",
+        "50 km road — Funder (Silkeborg) to Viborg: 400 m elevation"
       ]
     },
     "climate": {
@@ -102,7 +102,7 @@
     "logistics": {
       "airport": "Billund (BLL) — 1.5 hours drive to Viborg. Copenhagen (CPH) — 3-4 hours drive or train. Aalborg (AAL) — 1.5 hours drive. Hamburg (HAM) — 4 hours drive (for 300 km Flensburg start).",
       "lodging_strategy": "Viborg is the universal finish city — book accommodation there. Mid-size Danish city with hotels, B&Bs, and vacation rentals at reasonable (non-resort) prices. For the 300 km route starting in Flensburg, overnight accommodation near the German-Danish border is needed the night before. Book 2-3 months in advance — the event fills Viborg's accommodation capacity. Camping options available through local clubs.",
-      "transport": "",
+      "transport": "Official bus transport is offered between the finish city Viborg and all five start towns, both before and after the race (booked via the event site). Point-to-point format makes this the standard logistics play: base in Viborg, bus out to your start.",
       "food": "Danish cycling culture meets Viking tradition. Feed stations staffed by local sports clubs are famous for their quality — expect fresh pastries, fruit, energy foods, and enthusiastic volunteers. Viborg's finish festival features food vendors and live music. Pre-race carb loading: Danish bakeries deliver excellent pastries and bread. Post-race: the Viborg festival area has ample food and drink options.",
       "official_site": "https://denmark.letapeseries.com/"
     },
@@ -115,7 +115,8 @@
         "2023: Official partnership with ASO — becomes L'Etape Denmark by Tour de France (2,500 riders, 11 routes)",
         "2024: Explosive growth to 7,000 riders from 30+ countries on 16 routes — Denmark's largest cycling event",
         "2025: Continued expansion with 7,500+ expected participants",
-        "2026: Fourth edition as L'Etape Denmark, June 27 — five road routes from 50 km to 300 km"
+        "2026: Fourth edition as L'Etape Denmark, June 27 — five road routes from 50 km to 300 km, sold out",
+        "2027: Next edition confirmed by organizer DGI for June 26, 2027 — registration opens October 2026"
       ],
       "reputation": "Denmark's largest recreational cycling event and the fastest-growing L'Etape franchise worldwide. The Viking road narrative and Danish community organization give it an identity that transcends the generic TdF franchise model."
     },
@@ -133,7 +134,7 @@
         "Festival finish in Viborg with live music, parade lap, and yellow celebration"
       ],
       "weaknesses": [
-        "Denmark is flat — 1,400m of climbing over 160 km is modest by international road cycling standards",
+        "Denmark is flat — 1,600m of climbing over 160 km is modest by international road cycling standards",
         "No altitude challenge whatsoever — highest point barely above sea level",
         "Satellite L'Etape franchise event, not the original L'Etape du Tour — less prestige per kilometer",
         "Young event (2013 founding, TdF branding since 2023) — lacks the decades-deep reputation of established sportives",
@@ -157,7 +158,22 @@
       {
         "url": "https://sites.dgi.dk/haervejsloebet-en",
         "category": "official",
-        "label": "Haervejsloebet — The Viking Gran Fondo (DGI Official)"
+        "label": "Haervejsloebet — The Viking Gran Fondo (DGI Official, English)"
+      },
+      {
+        "url": "https://sites.dgi.dk/haervejsloebet",
+        "category": "official",
+        "label": "DGI Haervejsloebet (Danish) — 2027 date confirmation: 'DGI Haervejsloebet koeres 26. juni 2027', registration opens October 2026"
+      },
+      {
+        "url": "https://denmark.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Etape Denmark — 5 Routes (official distances, elevation, start towns, timed jersey segments)"
+      },
+      {
+        "url": "https://denmark.letapeseries.com/participant-information",
+        "category": "official",
+        "label": "L'Etape Denmark — Participant Information (start times/locations, feed depots, bus transport)"
       },
       {
         "url": "https://www.sporteventdenmark.com/en/2024/06/30/a-grand-depart-with-a-danish-twist-7000-cyclists-ride-the-ancient-road/",
@@ -187,10 +203,10 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://denmark.letapeseries.com/",
-      "note": "RESOLVED this pass, upgraded from 'unknown' to 'active': the official denmark.letapeseries.com site (curl-verified 200) confirms the 2026 edition ran under full L'Etape by Tour de France / ASO branding on June 27, 2026 ('DGI Hærvejsløbet - L'Étape Denmark afholdes 27. juni 2026'), including TdF jersey-classification language. The page is now archived/post-event (registration closed, sold out, a 'look back' recap dated June 28, 2026), confirming the branded partnership was live through the most recent edition -- directly answering the prior uncertainty about whether ASO/L'Etape branding continued. The DGI Hærvejsløbet site separately confirms the underlying event's next date as June 26, 2027; independent confirmation that the 2027 edition specifically will retain L'Etape/ASO branding was not found this pass (denmark.letapeseries.com has not yet published a 2027 page), so treat the 2027 date/branding combination as likely-but-not-fully-confirmed.",
-      "notes": "Underlying event (Hærvejsløbet) confirmed Jun 26 2027; 2026 edition confirmed to have run under full L'Etape/ASO branding (resolves prior uncertainty); 2027 branding continuation probable but not independently confirmed."
+      "verified": "2026-08-03",
+      "source": "https://sites.dgi.dk/haervejsloebet",
+      "note": "Re-verified 2026-08-03 (plan-readiness enrichment pass): organizer DGI's Danish site states 'DGI Hærvejsløbet køres 26. juni 2027' with registration opening October 2026 ('Tilmeldingen åbner til oktober') — day-level future date confirmed directly by the organizer. The 2026 edition (June 27) ran under full L'Etape by Tour de France / ASO branding and sold out (denmark.letapeseries.com, archived/post-event). denmark.letapeseries.com has not yet published a 2027 page, so L'Etape/ASO branding continuation for 2027 is probable but not yet independently confirmed; the underlying event itself is confirmed active and annual.",
+      "notes": "Next edition: June 26, 2027 (organizer-confirmed, day-level). Registration opens October 2026. 2027 L'Etape/ASO branding continuation probable but not yet published."
     }
   }
 }

@@ -3,32 +3,31 @@
     "name": "Styrkeproven",
     "slug": "styrkeproven",
     "display_name": "Styrkeprøven",
-    "tagline": "540 km from Trondheim to Oslo. Over Dovrefjell in the midsummer night. Norway's ultimate test of strength since 1967.",
+    "tagline": "515 km from Trondheim to Oslo. Over Dovrefjell in the midsummer night. Norway's ultimate test of strength since 1967.",
     "vitals": {
-      "distance_km": 539.1,
-      "distance_mi": 335.0,
-      "elevation_m": 3597,
-      "elevation_ft": 11800.0,
+      "distance_km": 515.0,
+      "distance_mi": 320.0,
+      "elevation_m": 4220,
+      "elevation_ft": 13845.0,
       "location": "Trondheim to Oslo, Norway",
       "location_badge": "TRONDHEIM → OSLO, NORWAY",
       "country": "Norway",
-      "date": "Late June annually (Saturday start, near summer solstice)",
+      "date": "Mid-to-late June annually, near the summer solstice",
       "date_specific": "2027: June 18-20",
       "field_size": "~600 riders (Trondheim-Oslo full distance); ~1,250+ total across all distances",
-      "start_format": null,
-      "registration": "Online via styrkeproven.no. NOK 1,900-2,950 (~$180-280 USD) depending on registration period. Opens October prior year. Luggage transport included.",
-      "entry_fee": "NOK 1,900-2,950 (~$180-280 USD)",
-      "feed_zones": "8 staffed food stations from Trondheim to Oslo. Baguettes, wraps, hot soup, sports drinks, juice, water, bananas, fruit. Clothing bags delivered to Oppdal, Ringebu, and Skreia.",
+      "start_format": "Self-paced tour start from Munkegata square in central Trondheim — rolling early-morning start window, first start 4:00 AM, last start 4:45 AM. Riders choose their own time budget; not a mass-start race.",
+      "registration": "Online via styrkeproven.no. 2027 registration opens autumn 2026 ('opens soon' as of Aug 2026). 2026 cycle pricing was tiered NOK 1,900-2,950 (~$180-280 USD) from an October 1 opening through race week; luggage transport included.",
+      "entry_fee": "NOK 1,900-2,950 (~$180-280 USD; 2026 tiered pricing — 2027 fees TBA)",
+      "feed_zones": "8 staffed food stations from Trondheim to Oslo (Soknedal 65 km, Oppdal/Fagerhaug 107 km, Folldal 195 km, Ringebu 280 km, Lillehammer 340 km, Skreia/Totenvika 410 km, Eidsvoll 459 km, Frogner 491 km). Baguettes, wraps, hot soup, sports drinks, juice, water, bananas, fruit. Up to 3 waterproof clothing bags (max 1.5 kg each) transported to the Oppdal, Ringebu, and Skreia bag stops.",
       "cutoff_time": "Self-paced. Riders choose their own time budget at registration. Fastest finishers ~13 hours, average 18-24 hours.",
       "lat": 63.4305,
       "lng": 10.3951,
       "route_options": [
-        "Trondheim–Oslo: 540 km (335 mi) — the full Styrkeprøven",
-        "Fellesstart Trondheim–Oslo: 522 km — mass start variant",
-        "Kvam–Oslo: 275 km",
-        "Lillehammer–Oslo: 182 km (also Women Vélo edition)",
-        "Gjøvik–Oslo: 135 km",
-        "Eidsvoll–Oslo: 62 km"
+        "Trondheim–Oslo: 515 km (320 mi), 4,220 m — the full Styrkeprøven, via Folldal and Venabygdsfjellet",
+        "Lillehammer–Oslo: 176 km — the most popular distance, part of Styrkeprøven since 1997",
+        "Women – Vélo: 176 km — women's edition of Lillehammer–Oslo",
+        "Eidsvoll–Oslo: 55 km — the shortest distance",
+        "Young in Styrkeprøven — youth event"
       ]
     },
     "climate": {
@@ -78,37 +77,59 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 2,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        {
+          "name": "Dovrefjell (Soknedal–Oppdal–Hjerkinn)",
+          "km_from_start": 80,
+          "distance_km": 80.0,
+          "elevation_gain_m": null,
+          "average_gradient_pct": null,
+          "max_gradient_pct": null,
+          "category": null,
+          "summit_altitude_m": 1026,
+          "tactical_notes": "Eighty kilometers of gradual climbing from the Trondheim lowlands through Soknedal and Oppdal to the exposed plateau at Hjerkinn (1,026 m). Never steep, but relentless — and the weather door slams shut up here: near-freezing temperatures and 15 m/s headwinds have been recorded in June."
+        },
+        {
+          "name": "Venabygdsfjellet",
+          "km_from_start": null,
+          "distance_km": null,
+          "elevation_gain_m": null,
+          "average_gradient_pct": null,
+          "max_gradient_pct": 12.0,
+          "category": null,
+          "summit_altitude_m": 1060,
+          "tactical_notes": "The route's highest point (1,060 m), crossed between the Folldal (195 km) and Ringebu (280 km) food stations on the E6-avoiding routing introduced in 2024. Gradients touch 12% — the steepest pitches of the ride, arriving with 200+ km already in the legs."
+        }
+      ],
+      "profile_type": "Front-loaded point-to-point — two mountain crossings (Dovrefjell, Venabygdsfjellet) inside the first 280 km, then predominantly flat valley and lakeside roads to Oslo",
+      "king_of_mountain": null
     },
     "course_description": {
-      "character": "A 540 km point-to-point journey from Norway's third city across the Dovrefjell mountain plateau to the capital. Front-loaded climbing over the first 160 km, followed by a long descent and valley run to Oslo. The Dovrefjell crossing is the crux — exposed mountain plateau at 1,000+ meters with unpredictable weather. The second half from Lillehammer to Oslo is predominantly flat along Lake Mjøsa.",
+      "character": "A 515 km point-to-point journey from Norway's third city across the Dovrefjell mountain plateau to the capital. Front-loaded climbing — Dovrefjell inside the first 160 km, Venabygdsfjellet before Ringebu — followed by a long descent and valley run to Oslo. The Dovrefjell crossing is the crux — exposed mountain plateau at 1,000+ meters with unpredictable weather. The second half from Lillehammer to Oslo is predominantly flat along Lake Mjøsa.",
       "signature_challenge": "The Dovrefjell crossing. Eighty kilometers of exposed mountain plateau at 1,000+ meters where the weather can shift from calm to hostile in minutes. Snow in June. Headwinds of 15 m/s. Near-freezing temperatures when you left Trondheim in 18C. This is where Styrkeprøven separates those who brought enough layers from those who did not.",
       "suffering_zones": [
-        "Trondheim to Oppdal (km 0-120)",
-        "Oppdal to Hjerkinn (km 120-160)",
-        "Hjerkinn to Ringebu via Folldal (km 160-280)",
-        "Ringebu to Lillehammer (km 280-350)",
-        "Lillehammer to Oslo via Lake Mjøsa (km 350-540)"
+        "Trondheim to Oppdal (km 0-107)",
+        "Oppdal to Hjerkinn over Dovrefjell (km 107-160)",
+        "Hjerkinn to Ringebu via Folldal and Venabygdsfjellet (km 160-280)",
+        "Ringebu to Lillehammer (km 280-340)",
+        "Lillehammer to Oslo via Lake Mjøsa (km 340-515)"
       ]
     },
     "logistics": {
       "airport": "Trondheim Værnes (TRD) — domestic flights from Oslo plus European connections via SAS, Norwegian, Widerwe. Return from Oslo Gardermoen (OSL) — major international hub.",
       "lodging_strategy": "Book Trondheim accommodation early — race weekend demand is high. Post-race accommodation in Oslo is straightforward with many options. Some riders take the train to Trondheim the day before.",
-      "transport": "",
+      "transport": "Point-to-point logistics: reach Trondheim by air (TRD) or by train from Oslo (Dovrebanen line, ~7 hours). The organizer transports your luggage from start to finish. The finish area is in Groruddalen, Oslo, with metro and taxi connections to the city center and Gardermoen airport.",
       "food": "8 staffed food stations between Trondheim and Oslo serve hot soup, baguettes, wraps, sports drinks, juice, water, bananas, and fruit. Clothing bags transported to Oppdal (station 2), Ringebu (station 5), and Skreia (station 7). Carry supplemental nutrition for the mountain sections between stations.",
       "official_site": "https://styrkeproven.no/?lang=en"
     },
     "history": {
       "founded": 1967,
-      "origin_story": "Erik Gjems-Onstad organized the first Styrkeprøven in 1967 with 121 participants riding from Trondheim to Oslo. The name — 'The Strength Test' — was deliberate: this was meant to be the ultimate test of cycling endurance in Norway. The event grew steadily, crossing 1,000 participants in 1979. A new participant record of 4,644 was set in 1988, and by 1990 total registrations exceeded 5,000 for the first time. By 2015, more than 105,000 cyclists had completed the Trondheim-Oslo ride. The event has run continuously since 1967, pausing only for COVID in 2020 and 2021. The 2026 edition will be the 58th.",
+      "origin_story": "Erik Gjems-Onstad organized the first Styrkeprøven in 1967 with 121 participants riding from Trondheim to Oslo. The name — 'The Strength Test' — was deliberate: this was meant to be the ultimate test of cycling endurance in Norway. The event grew steadily, crossing 1,000 participants in 1979. A new participant record of 4,644 was set in 1988, and by 1990 total registrations exceeded 5,000 for the first time. By 2015, more than 105,000 cyclists had completed the Trondheim-Oslo ride. The event has run since 1967, pausing for COVID in 2020-2021; in 2026 the flagship Trondheim-Oslo was cancelled over a road-authority permit refusal (reversed on appeal too late to remobilize) while the shorter distances ran. The 2027 edition will be the 58th running of Trondheim-Oslo.",
       "notable_moments": [
         "1967: First edition with 121 riders, organized by Erik Gjems-Onstad of SK Rye",
         "1979: Participant count crosses 1,000 for the first time",
@@ -120,15 +141,16 @@
         "2015: Cumulative participation surpasses 105,000 riders since 1967",
         "2019: Women's team record set at 17 hours 56 minutes",
         "2020-2021: Event cancelled due to COVID-19 — only interruption in history",
-        "2024: Route changed to go via Folldal and Venabygdsfjellet, avoiding the busy E6 highway"
+        "2024: Route changed to go via Folldal and Venabygdsfjellet, avoiding the busy E6 highway",
+        "2026: Trondheim-Oslo cancelled after Statens vegvesen initially refused the event permit; the refusal was overturned too late to stage the full distance, but Lillehammer-Oslo and Eidsvoll-Oslo ran"
       ],
       "reputation": "Norway's most iconic endurance cycling event. Completing the full 540 km Trondheim-Oslo is a genuine rite of passage in Scandinavian cycling culture. The combination of extreme distance, mountain weather, and midsummer timing gives it a character unlike any other sportive in Europe."
     },
     "biased_opinion": {
       "verdict": "Norway's Ultimate Cycling Pilgrimage",
-      "summary": "Styrkeprøven is 540 km from Trondheim to Oslo across the Dovrefjell mountain plateau in the midsummer night. It is not technically demanding, it is not a race, and it will never be cheap. What it is: one of the most transformative point-to-point cycling experiences on earth. The name means 'The Strength Test' and 57 years of history confirm it earns that name every June.",
+      "summary": "Styrkeprøven is 515 km from Trondheim to Oslo across the Dovrefjell mountain plateau in the midsummer night. It is not technically demanding, it is not a race, and it will never be cheap. What it is: one of the most transformative point-to-point cycling experiences on earth. The name means 'The Strength Test' and 57 years of history confirm it earns that name every June.",
       "strengths": [
-        "540 km ultra-distance — one of the world's longest single-stage events",
+        "515 km ultra-distance — one of the world's longest single-stage events",
         "Dovrefjell mountain crossing in midsummer twilight is otherworldly",
         "57 years of continuous history and deep Norwegian cultural significance",
         "Excellent organization: 8 food stations, luggage transport, self-seeded starts",
@@ -139,13 +161,14 @@
         "Relatively small full-distance field (~600 riders) limits community scale",
         "Non-competitive format with no rankings or race results",
         "Remote start in Trondheim requires significant travel logistics",
-        "Mountain weather exposure on Dovrefjell is serious and unpredictable"
+        "Mountain weather exposure on Dovrefjell is serious and unpredictable",
+        "Permit friction with the Norwegian road authority is a live risk — the 2026 Trondheim-Oslo was cancelled over a late permit refusal"
       ],
-      "bottom_line": "If you want to test yourself over 540 km through Norway's mountains in the midnight sun, Styrkeprøven is the only answer. Budget for the Norway premium, prepare for Dovrefjell's weather, and ride from Trondheim to Oslo. You will not forget it."
+      "bottom_line": "If you want to test yourself over 515 km through Norway's mountains in the midnight sun, Styrkeprøven is the only answer. Budget for the Norway premium, prepare for Dovrefjell's weather, and ride from Trondheim to Oslo. You will not forget it."
     },
     "final_verdict": {
       "score": "70/100",
-      "one_liner": "540 km from Trondheim to Oslo over Dovrefjell. The Strength Test since 1967.",
+      "one_liner": "515 km from Trondheim to Oslo over Dovrefjell. The Strength Test since 1967.",
       "should_you_race": "If ultra-distance road cycling through wild Norwegian terrain in the midsummer night sounds like your idea of a life experience — absolutely yes. Budget for Norway's costs and respect Dovrefjell's weather. If you want a competitive race with a large international field, look elsewhere.",
       "alternatives": "For similar ultra-distance road: Paris-Brest-Paris (1,200 km, quadrennial), Vätternrundan (315 km, Sweden, midsummer night). For Norwegian cycling: Birkebeinerrittet (84 km MTB). For long-distance European sportives: Ötztaler Radmarathon (238 km, Austrian Alps)."
     },
@@ -199,6 +222,16 @@
         "url": "https://yellow-gear.com/blogs/news/den-store-styrkeproven-the-longest-day-of-the-year",
         "category": "review",
         "label": "Den Store Styrkeprøven: The Longest Day of the Year — Yellow Gear"
+      },
+      {
+        "url": "https://www.nrk.no/innlandet/styrkeproven-optimistisk-for-normal-gjennomforing-i-2027-1.17908521",
+        "category": "news",
+        "label": "Styrkeprøven optimistic about normal 2027 running — NRK (June 4, 2026)"
+      },
+      {
+        "url": "https://styrkeproven.no/for-deg-som-hadde-planlagt-trondheim-oslo-i-ar/",
+        "category": "official",
+        "label": "For those who had planned Trondheim-Oslo this year (2026 cancellation notice) — Styrkeprøven Official"
       }
     ],
     "youtube_data": {
@@ -286,10 +319,10 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "cancelled",
-      "verified": "2026-07-22",
-      "source": "https://styrkeproven.no/for-deg-som-hadde-planlagt-trondheim-oslo-i-ar/",
-      "notes": "Trondheim-Oslo 2026 CANCELLED (permit refused, appeal-overturned too late to remobilize); shorter 2026 distances (Lillehammer-Oslo, Eidsvoll-Oslo) ran. 2027 Jun 18-20 advertised but permits still being pursued as of Jun 2026 — planned, not permit-confirmed."
+      "status": "active",
+      "verified": "2026-08-03",
+      "source": "https://styrkeproven.no/?lang=en",
+      "notes": "2027 (58th) edition confirmed on the official site: Trondheim-Oslo June 18-20, 2027, with Lillehammer-Oslo, Women-Vélo, Eidsvoll-Oslo, and youth distances; registration 'opens soon' (2026 cycle opened October 1). Context: 2026 Trondheim-Oslo was cancelled after Statens vegvesen's permit refusal (reversed on appeal too late to remobilize); shorter 2026 distances ran. NRK (2026-06-04): organizers report 'clear signals' for a normal 2027 running and are working to finalize permits by autumn 2026 — re-verify permit confirmation when registration opens."
     }
   }
 }

@@ -13,11 +13,11 @@
       "location_badge": "Tuscany, Italy",
       "country": "Italy",
       "date": "First weekend of October",
-      "date_specific": "October 3-4, 2026 (30th anniversary edition)",
-      "field_size": "~9,000 riders from dozens of countries",
+      "date_specific": "2026: October 3-4 (29th edition)",
+      "field_size": "~8,000-9,000 riders from 50+ countries (8,328 riders from 51 countries in 2025)",
       "start_format": "individual",
-      "registration": "Open registration, EUR 80-90. Opens December 2025 for 2026. Ciclo Club members get priority.",
-      "entry_fee": "EUR 80 (CCE members), EUR 90 (standard)",
+      "registration": "Open — 2026 registration opened December 10, 2025. EUR 80 (Ciclo Club Eroica members), EUR 90 (privilege tier, first 1,000), EUR 100 standard (2,500 tickets), EUR 125 late (from April 2, 2026). Combined tickets with Eroica Montalcino and NOVA Eroica available.",
+      "entry_fee": "EUR 80 (CCE members), EUR 90 (privilege), EUR 100 (standard), EUR 125 (late, from April 2, 2026)",
       "feed_zones": "1-6 ristori depending on route — ribollita, salumi, pecorino, crostini, Chianti Classico wine, Brunello di Montalcino, coffee. Not fuel stops — convivial gatherings.",
       "cutoff_time": "No formal cutoff. Non-competitive. Long-route riders commonly finish after 10pm (15+ hour ride).",
       "lat": 43.468,
@@ -132,8 +132,9 @@
         "2007: Success of L'Eroica inspired the professional Strade Bianche race ('Monte Paschi Eroica')",
         "Global expansion: 10+ Classic events + 10+ Nova events across 4 continents",
         "Strade Bianche became UCI WorldTour in 2017 — informally cycling's 'sixth Monument'",
-        "2026: 30th anniversary edition",
-        "The event has run uninterrupted every year since 1997"
+        "2020: only cancellation in event history (COVID-19)",
+        "2025: 28th edition drew 8,328 riders from 51 countries",
+        "2026: 29th edition, October 3-4"
       ],
       "reputation": "Il Sole 24 Ore: 'The most classic of cycle races.' CyclingUK: 'The world's premier event for lovers of old-school cycling.' L'Eroica has become a philosophy of cycling that values heritage, effort, community, and simplicity over technology and competition."
     },
@@ -142,11 +143,11 @@
       "summary": "L'Eroica exists in a category of one. No other cycling event has created an entire cultural movement — vintage bikes, strade bianche, Tuscan wine stops, and a philosophy of cycling that rejects modernity. EUR 80 buys you Chianti Classico at every ristoro, ribollita ladled by Tuscan nonnas, and 104km of white roads through UNESCO landscapes on a steel bike. It's not fast. It's not competitive. It's not even technically a race. It's the most beautiful day you'll ever spend on a bike.",
       "strengths": [
         "Cultural phenomenon — defined the vintage cycling movement worldwide",
-        "EUR 80-90 for Chianti wine, Brunello, ribollita, pecorino at every stop",
+        "EUR 80-100 for Chianti wine, Brunello, ribollita, pecorino at every stop",
         "UNESCO landscapes: Chianti, Crete Senesi, Val d'Orcia on white roads",
         "5 route options from 45km leisure to 211km epic",
         "Directly inspired the Strade Bianche pro race (now a WorldTour Monument-in-waiting)",
-        "30th anniversary in 2026 — unbroken since 1997"
+        "29th edition in 2026 — run every year since 1997 except 2020 (COVID)"
       ],
       "weaknesses": [
         "Non-competitive: no timing, no rankings — not for racers",
@@ -180,6 +181,21 @@
         "label": "2026 regulations and vintage bike requirements"
       },
       {
+        "url": "https://www.eroica.cc/en/registration-leroica/",
+        "category": "official",
+        "label": "2026 registration: opened December 10, 2025 — EUR 80 CCE / EUR 90 privilege / EUR 100 standard / EUR 125 late"
+      },
+      {
+        "url": "https://www.bike-mag.com/leroica-2025-vintage-cycling",
+        "category": "editorial",
+        "label": "BIKE Magazine — 2025 was the 28th edition: 8,328 riders from 51 countries"
+      },
+      {
+        "url": "https://cyclinside.it/en/leroica-2020-annullata-la-xxiv-edizione/",
+        "category": "editorial",
+        "label": "2020 edition (24th) cancelled due to COVID-19 — only interruption since 1997"
+      },
+      {
         "url": "https://en.wikipedia.org/wiki/L%27Eroica",
         "category": "reference",
         "label": "Wikipedia — overview and history"
@@ -207,8 +223,8 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.eroica.cc/eventi/leroica/"
+      "verified": "2026-08-03",
+      "source": "https://www.eroica.cc/en/eventi/leroica/"
     }
   }
 }
