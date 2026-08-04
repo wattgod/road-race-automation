@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T08:04:13",
+  "generated_at": "2026-08-04T14:24:04",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -5057,16 +5057,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2025-09-21",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 11,
+      "race_date": "2026-10-25",
+      "blockers": []
     },
     "ocbc-cycle-singapore": {
       "slug": "ocbc-cycle-singapore",
@@ -7414,6 +7412,7 @@
     "gran-fondo-zadar",
     "gran-fondo-il-lombardia",
     "gfny-bahamas",
+    "nyc-century",
     "granfondo-tre-valli-varesine",
     "bike-ms-nyc",
     "velo-vietnam-northern-frontier",
@@ -7698,7 +7697,6 @@
     "etape-caledonia",
     "gfny-nyc",
     "gran-fondo-panama",
-    "nyc-century",
     "ocbc-cycle-singapore",
     "uci-gran-fondo-ireland",
     "gran-fondo-gdynia",
@@ -7798,14 +7796,14 @@
   ],
   "summary": {
     "total": 395,
-    "ready": 128,
+    "ready": 129,
     "content_present": 378,
     "validator_clean": 395,
     "pilot_candidates": 76,
     "by_tier_ready": {
       "1": 11,
       "2": 107,
-      "3": 10,
+      "3": 11,
       "4": 0
     }
   }
