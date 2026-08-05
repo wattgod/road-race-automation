@@ -1,0 +1,161 @@
+{
+  "race": {
+    "name": "GFNY Puerto Rico",
+    "slug": "gfny-puerto-rico",
+    "display_name": "GFNY Puerto Rico",
+    "tagline": "A fast 115-kilometer Caribbean race from Ponce, with coastal wind and one gradual fifteen-kilometer climb.",
+    "vitals": {
+      "distance_km": 115.3,
+      "distance_mi": 71.6,
+      "elevation_m": 556,
+      "elevation_ft": 1824,
+      "location": "Ponce, Puerto Rico, USA",
+      "location_badge": "PONCE, PUERTO RICO, USA",
+      "country": "Puerto Rico",
+      "date": "March annually",
+      "date_specific": "2027: March 7 (Sunday)",
+      "field_size": "Established regional GFNY field",
+      "start_format": "Mass-start competitive long course with chip timing",
+      "registration": "Online through the official GFNY race site",
+      "entry_fee": "See official registration",
+      "feed_zones": "Official GFNY aid stations with hydration, food, technical, and medical support",
+      "cutoff_time": "See current race guide and official course rules",
+      "route_options": [
+        "Competitive long route: 115.3 km / 556 m+",
+        "Recreational medium route: see official race site"
+      ]
+    },
+    "climate": {
+      "primary": "Hot, humid Caribbean conditions",
+      "description": "March in southern Puerto Rico is warm, sunny, and humid. Coastal wind offers some cooling but also creates tactical crosswind exposure on the fastest parts of the course.",
+      "challenges": [
+        "Heat and humidity",
+        "Strong sun",
+        "Coastal crosswinds",
+        "High fluid demand at race speed"
+      ]
+    },
+    "terrain": {
+      "primary": "Fast coastal roads with one gradual inland climb",
+      "surface": "Paved highways and rural roads across Puerto Rico's southern coastal plain.",
+      "technical_rating": 2,
+      "features": [
+        "Fast opening roads through Ponce and along PR-1",
+        "A long exposed coastal approach through Santa Isabel and Salinas",
+        "A 15-kilometer gradual climb from sea level",
+        "A 7.5-kilometer descent before the coastal return"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 4,
+      "overall_score": 70,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Established GFNY organization, accessible logistics, and a fast competitive course score well. Modest climbing and limited global prestige cap the grade."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "Fast opening roads through Ponce and along PR-1",
+        "A long exposed coastal approach through Santa Isabel and Salinas",
+        "A 15-kilometer gradual climb from sea level",
+        "A 7.5-kilometer descent before the coastal return"
+      ],
+      "profile_type": "Fast coastal roads with one gradual inland climb",
+      "king_of_mountain": "The 15-kilometer climb from sea level, whose final four kilometers become the course's clearest selection point.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "The long race starts and finishes at the Ponce Hilton, uses broad and fast roads across the southern coastal plain, and introduces its decisive terrain with a gradual 15-kilometer climb beginning around kilometer 40. The elevation is modest, but Caribbean heat, wind, and high group speed keep the race demanding.",
+      "signature_challenge": "The 15-kilometer climb from sea level, whose final four kilometers become the course's clearest selection point.",
+      "suffering_zones": [
+        "Ponce rollout",
+        "Santa Isabel crosswinds",
+        "Fifteen-kilometer climb",
+        "PR-3 coastal return"
+      ]
+    },
+    "logistics": {
+      "airport": "Mercedita International Airport (PSE) is closest; Luis Muñoz Marín International Airport (SJU) has the broadest service and is roughly 90 minutes from Ponce.",
+      "lodging_strategy": "The Ponce Hilton is race headquarters. Central Ponce offers additional hotels, but confirm bike storage and race-morning access.",
+      "transport": "Use official race-week instructions for packet pickup, start access, and bike transport.",
+      "food": "Ponce has plentiful rice, plantain, seafood, and criollo options. Keep the pre-race meal simple and begin hydration before arriving in the heat.",
+      "official_site": "https://puertorico.gfny.com/"
+    },
+    "history": {
+      "founded": 2022,
+      "origin_story": "GFNY brought its competitive gran fondo format to Puerto Rico in 2022 and later moved the event to Ponce, where the southern-coast course became faster and more accessible.",
+      "notable_moments": [
+        "2022: GFNY Puerto Rico launches",
+        "2024: The race moves to a mountainous Ponce course",
+        "2025: A new 115.3-kilometer coastal course debuts",
+        "2027: Next edition confirmed for March 7"
+      ],
+      "reputation": "A fast Caribbean GFNY backed by an established local field and the series' standard competitive rules."
+    },
+    "biased_opinion": {
+      "verdict": "The Caribbean Fast Race",
+      "summary": "The long race starts and finishes at the Ponce Hilton, uses broad and fast roads across the southern coastal plain, and introduces its decisive terrain with a gradual 15-kilometer climb beginning around kilometer 40. The elevation is modest, but Caribbean heat, wind, and high group speed keep the race demanding.",
+      "strengths": [
+        "Competitive long-course timing",
+        "Accessible Ponce venue",
+        "Fast tactical racing",
+        "Strong local cycling culture"
+      ],
+      "weaknesses": [
+        "Heat can overshadow the terrain",
+        "Much of the course is exposed highway",
+        "The route lacks a major signature mountain"
+      ],
+      "bottom_line": "A legitimate fast-road GFNY where heat management and peloton skill matter more than climbing pedigree."
+    },
+    "final_verdict": {
+      "score": "70/100",
+      "one_liner": "A fast 115-kilometer Caribbean race from Ponce, with coastal wind and one gradual fifteen-kilometer climb.",
+      "should_you_race": "A legitimate fast-road GFNY where heat management and peloton skill matter more than climbing pedigree.",
+      "alternatives": "GFNY República Dominicana for another Caribbean GFNY, or GFNY Miami for an even flatter wind-driven race."
+    },
+    "citations": [
+      {
+        "url": "https://puertorico.gfny.com/",
+        "category": "official",
+        "label": "GFNY Puerto Rico official site"
+      },
+      {
+        "url": "https://gfny.com/4th-gfny-puerto-rico-won-by-defending-champions/",
+        "category": "official",
+        "label": "GFNY official announcement and course facts"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/51202785",
+        "category": "official",
+        "label": "GFNY official calendar or route"
+      }
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-05",
+      "race_date": "2027-03-07",
+      "facts_scope": "Date, competitive status, long-course distance, elevation, and named course features verified against first-party GFNY sources."
+    }
+  }
+}

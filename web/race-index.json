@@ -876,14 +876,14 @@
   {
     "name": "Taiwan KOM Challenge",
     "slug": "taiwan-kom-challenge",
-    "location": "Yilan to Wuling Pass, Taiwan",
+    "location": "Hualien (Qixingtan Beach) to Wuling Pass, Taiwan",
     "country": "Taiwan",
     "region": "Asia",
     "month": "October",
-    "distance_km": 150.0,
-    "distance_mi": 93.0,
-    "elevation_m": 3275,
-    "elevation_ft": 10745.0,
+    "distance_km": 105.0,
+    "distance_mi": 65.2,
+    "elevation_m": 3426,
+    "elevation_ft": 11239.0,
     "tier": 2,
     "overall_score": 80,
     "scores": {
@@ -1041,6 +1041,47 @@
       "Challenge: 84mi, ~8100ft — serious test",
       "Intermediate: 47-71mi, 5748ft — balanced sufferfest",
       "Short: 36-37mi, 2858ft — Dales taster"
+    ]
+  },
+  {
+    "name": "GFNY Cali",
+    "slug": "gfny-cali",
+    "location": "Cali, Valle del Cauca, Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "month": "July",
+    "distance_km": 160.8,
+    "distance_mi": 99.9,
+    "elevation_m": 1653,
+    "elevation_ft": 5423,
+    "tier": 2,
+    "overall_score": 77,
+    "scores": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 4,
+      "altitude": 3,
+      "logistics": 4,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 5
+    },
+    "tagline": "A 100-mile Colombian race across sugar-cane flats and Andean foothills, with 1,653 meters of climbing and tropical heat.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-cali/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 160.8 km / 1653 m+",
+      "Recreational medium route: see official race site"
     ]
   },
   {
@@ -2484,6 +2525,88 @@
     "lat": null,
     "lng": null,
     "route_options": []
+  },
+  {
+    "name": "GFNY Villavicencio",
+    "slug": "gfny-villavicencio",
+    "location": "Villavicencio, Meta, Colombia",
+    "country": "Colombia",
+    "region": "South America",
+    "month": "April",
+    "distance_km": 109.0,
+    "distance_mi": 67.7,
+    "elevation_m": 1308,
+    "elevation_ft": 4291,
+    "tier": 2,
+    "overall_score": 74,
+    "scores": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 5
+    },
+    "tagline": "Fast Llanos roads give way to Puerto de Buenavista: 109 kilometers and 1,308 meters at Colombia's Andean edge.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-villavicencio/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 109.0 km / 1308 m+",
+      "Recreational medium route: see official race site"
+    ]
+  },
+  {
+    "name": "GFNY Walnut Creek",
+    "slug": "gfny-walnut-creek",
+    "location": "Walnut Creek, California, USA",
+    "country": "USA",
+    "region": "North America",
+    "month": "April",
+    "distance_km": 103.8,
+    "distance_mi": 64.5,
+    "elevation_m": 2106,
+    "elevation_ft": 6909,
+    "tier": 2,
+    "overall_score": 74,
+    "scores": {
+      "distance": 3,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 4,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 4
+    },
+    "tagline": "Sixty-four timed miles, Morgan Territory's technical rollers, and an eleven-mile summit finish on Mount Diablo.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-walnut-creek/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 103.8 km / 2106 m+",
+      "Recreational medium route: see official race site"
+    ]
   },
   {
     "name": "Giro delle Dolomiti",
@@ -5700,6 +5823,47 @@
     ]
   },
   {
+    "name": "GFNY Puerto Rico",
+    "slug": "gfny-puerto-rico",
+    "location": "Ponce, Puerto Rico, USA",
+    "country": "Puerto Rico",
+    "region": "Other",
+    "month": "March",
+    "distance_km": 115.3,
+    "distance_mi": 71.6,
+    "elevation_m": 556,
+    "elevation_ft": 1824,
+    "tier": 2,
+    "overall_score": 70,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 4
+    },
+    "tagline": "A fast 115-kilometer Caribbean race from Ponce, with coastal wind and one gradual fifteen-kilometer climb.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-puerto-rico/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 115.3 km / 556 m+",
+      "Recreational medium route: see official race site"
+    ]
+  },
+  {
     "name": "Giro d'Italia Ride Like a Pro USA",
     "slug": "giro-ride-like-a-pro-usa",
     "location": "Doral, Florida, USA",
@@ -6392,10 +6556,10 @@
     "country": "Norway",
     "region": "Northern Europe",
     "month": "June",
-    "distance_km": 539.1,
-    "distance_mi": 335.0,
-    "elevation_m": 3597,
-    "elevation_ft": 11800.0,
+    "distance_km": 515.0,
+    "distance_mi": 320.0,
+    "elevation_m": 4220,
+    "elevation_ft": 13845.0,
     "tier": 2,
     "overall_score": 70,
     "scores": {
@@ -6415,19 +6579,18 @@
       "expenses": 2,
       "cultural_impact": 4
     },
-    "tagline": "540 km from Trondheim to Oslo. Over Dovrefjell in the midsummer night. Norway's ultimate test of strength since 1967.",
+    "tagline": "515 km from Trondheim to Oslo. Over Dovrefjell in the midsummer night. Norway's ultimate test of strength since 1967.",
     "has_profile": true,
     "profile_url": "/race/styrkeproven/",
     "discipline": "gran_fondo",
     "lat": 63.4305,
     "lng": 10.3951,
     "route_options": [
-      "Trondheim–Oslo: 540 km (335 mi) — the full Styrkeprøven",
-      "Fellesstart Trondheim–Oslo: 522 km — mass start variant",
-      "Kvam–Oslo: 275 km",
-      "Lillehammer–Oslo: 182 km (also Women Vélo edition)",
-      "Gjøvik–Oslo: 135 km",
-      "Eidsvoll–Oslo: 62 km"
+      "Trondheim–Oslo: 515 km (320 mi), 4,220 m — the full Styrkeprøven, via Folldal and Venabygdsfjellet",
+      "Lillehammer–Oslo: 176 km — the most popular distance, part of Styrkeprøven since 1997",
+      "Women – Vélo: 176 km — women's edition of Lillehammer–Oslo",
+      "Eidsvoll–Oslo: 55 km — the shortest distance",
+      "Young in Styrkeprøven — youth event"
     ]
   },
   {
@@ -6436,11 +6599,11 @@
     "location": "Johannesburg, South Africa",
     "country": "South Africa",
     "region": "Africa",
-    "month": "October",
+    "month": "November",
     "distance_km": 97.0,
     "distance_mi": 60.0,
-    "elevation_m": 1200.0,
-    "elevation_ft": 3937.0,
+    "elevation_m": 1398.0,
+    "elevation_ft": 4587.0,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -6460,7 +6623,7 @@
       "expenses": 4,
       "cultural_impact": 4
     },
-    "tagline": "Own the streets of Joburg. 97km through Africa's City of Gold on fully closed roads. The world's second-largest timed cycle race.",
+    "tagline": "Own the streets of Joburg. 97km from Kyalami through Africa's City of Gold on fully closed roads.",
     "has_profile": true,
     "profile_url": "/race/947-ride-joburg/",
     "discipline": "gran_fondo",
@@ -6854,6 +7017,47 @@
     ]
   },
   {
+    "name": "GFNY Ventura",
+    "slug": "gfny-ventura",
+    "location": "Ventura, California, USA",
+    "country": "USA",
+    "region": "North America",
+    "month": "April",
+    "distance_km": 140.0,
+    "distance_mi": 87.0,
+    "elevation_m": 1981,
+    "elevation_ft": 6499,
+    "tier": 2,
+    "overall_score": 69,
+    "scores": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 3
+    },
+    "tagline": "Eighty-seven miles from the Pacific through Santa Paula and Ojai, with 6,500 feet of climbing and an eight-mile Dennison Grade.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-ventura/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 140.0 km / 1981 m+",
+      "Recreational medium route: see official race site"
+    ]
+  },
+  {
     "name": "Gran Fondo Il Lombardia Felice Gimondi",
     "slug": "gran-fondo-il-lombardia",
     "location": "Bergamo, Lombardy, Italy",
@@ -7075,10 +7279,10 @@
     "country": "USA",
     "region": "North America",
     "month": "June",
-    "distance_km": 165.8,
-    "distance_mi": 103.0,
-    "elevation_m": 2292,
-    "elevation_ft": 7521.0,
+    "distance_km": 166.57,
+    "distance_mi": 103.5,
+    "elevation_m": 2297,
+    "elevation_ft": 7535,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -7107,8 +7311,8 @@
     "route_options": [
       {
         "name": "Gran",
-        "distance_km": 165.8,
-        "elevation_m": 2292
+        "distance_km": 166.57,
+        "elevation_m": 2297
       },
       {
         "name": "Medio",
@@ -7496,8 +7700,8 @@
     "month": "August",
     "distance_km": 160.9,
     "distance_mi": 100.0,
-    "elevation_m": 2591,
-    "elevation_ft": 8500.0,
+    "elevation_m": 2617,
+    "elevation_ft": 8585.0,
     "tier": 2,
     "overall_score": 69,
     "scores": {
@@ -7524,10 +7728,10 @@
     "lat": 34.2439,
     "lng": -116.9114,
     "route_options": [
-      "100 miles: The Climb (8,500+ ft elevation gain)",
-      "70 miles (6,000+ ft elevation gain)",
-      "50 miles (4,000+ ft elevation gain)",
-      "25 miles (1,500+ ft elevation gain)",
+      "100 miles: The Climb (8,585 ft elevation gain)",
+      "70 miles (4,755 ft elevation gain)",
+      "50 miles (2,938 ft elevation gain)",
+      "25 miles (1,331 ft elevation gain)",
       "Family Fun Ride"
     ]
   },
@@ -7707,9 +7911,9 @@
   {
     "name": "UCI Gran Fondo World Championships",
     "slug": "uci-gran-fondo-world-championships",
-    "location": "Venue rotates annually (2026: Niseko, Hokkaido, Japan)",
-    "country": "Japan",
-    "region": "Asia",
+    "location": "Venue rotates annually (2027: Thônes-La Clusaz, Haute-Savoie, France)",
+    "country": "France",
+    "region": "Western Europe",
     "month": "August",
     "distance_km": 140.0,
     "distance_mi": 87.0,
@@ -10259,6 +10463,47 @@
     "route_options": []
   },
   {
+    "name": "GFNY José Ignacio",
+    "slug": "gfny-jose-ignacio",
+    "location": "Pueblo Garzón, Maldonado Department, Uruguay",
+    "country": "Uruguay",
+    "region": "Other",
+    "month": "January",
+    "distance_km": 129.6,
+    "distance_mi": 80.5,
+    "elevation_m": 954,
+    "elevation_ft": 3130,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "Atlantic wind, open Uruguayan rollers, and 130 kilometers from Pueblo Garzón to the ocean and back.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-jose-ignacio/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 129.6 km / 954 m+",
+      "Recreational medium route: see official race site"
+    ]
+  },
+  {
     "name": "Gran Fondo Kazakhstan",
     "slug": "gran-fondo-kazakhstan",
     "location": "Almaty, Kazakhstan",
@@ -11304,10 +11549,10 @@
     "country": "USA",
     "region": "North America",
     "month": "March",
-    "distance_km": 160.9,
-    "distance_mi": 100.0,
-    "elevation_m": 990,
-    "elevation_ft": 3248.0,
+    "distance_km": 162.68,
+    "distance_mi": 101.08,
+    "elevation_m": 1039,
+    "elevation_ft": 3409,
     "tier": 2,
     "overall_score": 63,
     "scores": {
@@ -11336,8 +11581,8 @@
     "route_options": [
       {
         "name": "Gran",
-        "distance_mi": 100,
-        "elevation_ft": 3248,
+        "distance_mi": 101.08,
+        "elevation_ft": 3409,
         "timed_segments": 4
       },
       {
@@ -11781,10 +12026,10 @@
     "country": "USA",
     "region": "North America",
     "month": "April",
-    "distance_km": 165.8,
-    "distance_mi": 103.0,
-    "elevation_m": 2591,
-    "elevation_ft": 8500.0,
+    "distance_km": 222.1,
+    "distance_mi": 138.0,
+    "elevation_m": 4267,
+    "elevation_ft": 14000.0,
     "tier": 2,
     "overall_score": 63,
     "scores": {
@@ -11804,17 +12049,19 @@
       "expenses": 3,
       "cultural_impact": 2
     },
-    "tagline": "King Ridge through the redwoods. 8,500 feet of Sonoma County climbing. Wine country meets Pacific Coast. Northern California's signature gran fondo.",
+    "tagline": "The Growler: 138 miles and 14,000 feet through Sonoma County's redwoods, ridgelines, and wine country.",
     "has_profile": true,
     "profile_url": "/race/levis-granfondo/",
     "discipline": "gran_fondo",
     "lat": 38.44,
     "lng": -122.714,
     "route_options": [
-      "Gran Fondo: 103 mi (166 km), ~8,500 ft — the full route with King Ridge",
-      "Medio Fondo: 80 mi (129 km) — skips the most remote coastal sections",
-      "Piccolo Fondo: 60 mi (97 km) — wine country focus without the coastal climbs",
-      "Growler: optional extra climbing challenge for the masochistic"
+      "Family: 8 mi, ~100 ft",
+      "Piccolo: 38 mi, ~1,500 ft",
+      "Medio: 68 mi, ~3,000 ft",
+      "Geysers: 86 mi, ~6,500 ft",
+      "Gran: 113 mi, ~10,000 ft",
+      "Growler: 138 mi, ~14,000 ft — the competitive route with age-category placings and awards"
     ]
   },
   {
@@ -12745,9 +12992,9 @@
     "region": "Other",
     "month": "June",
     "distance_km": 300.0,
-    "distance_mi": 186.0,
-    "elevation_m": 1400,
-    "elevation_ft": 4593.0,
+    "distance_mi": 186.4,
+    "elevation_m": 2500,
+    "elevation_ft": 8202.0,
     "tier": 2,
     "overall_score": 61,
     "scores": {
@@ -12775,10 +13022,10 @@
     "lng": 9.4023,
     "route_options": [
       "300 km road — Flensburg (Germany) to Viborg: 2,500 m elevation (Queen Stage)",
-      "160 km road — Vejen to Viborg: 1,400 m elevation",
-      "125 km road — Aalborg to Viborg: 1,000 m elevation",
-      "75 km road: 600 m elevation",
-      "50 km road: 300 m elevation"
+      "160 km road — Vejen to Viborg: 1,600 m elevation",
+      "125 km road — Aalborg (Godthaab Hammervaerk, Svenstrup) to Viborg: 1,100 m elevation",
+      "75 km road — Noerre Snede to Viborg: 700 m elevation",
+      "50 km road — Funder (Silkeborg) to Viborg: 400 m elevation"
     ]
   },
   {
@@ -15292,11 +15539,11 @@
     "location": "Cordoba, Cordoba Province, Argentina (Estadio Mario Alberto Kempes start/finish)",
     "country": "Argentina",
     "region": "South America",
-    "month": "March",
+    "month": "April",
     "distance_km": 133.6,
     "distance_mi": 83.0,
-    "elevation_m": 2000,
-    "elevation_ft": 6562.0,
+    "elevation_m": 1780,
+    "elevation_ft": 5840.0,
     "tier": 3,
     "overall_score": 56,
     "scores": {
@@ -15323,8 +15570,8 @@
     "lat": -31.369,
     "lng": -64.2462,
     "route_options": [
-      "The Race (Long Course): 134 km, 2,067 m elevation gain",
-      "The Ride (Short Course): 64 km, moderate elevation gain"
+      "The Race (Long Course): 134 km, 1,780 m elevation gain",
+      "The Ride (Short Course): 64 km, 673 m elevation gain"
     ]
   },
   {
@@ -15824,9 +16071,9 @@
     "name": "NYC Century Bike Tour",
     "slug": "nyc-century",
     "location": "New York City, New York, USA — Meatpacking District start/finish, four-borough route through Manhattan, Brooklyn, Queens, and the Bronx",
-    "country": "and the Bronx",
-    "region": "Other",
-    "month": "September",
+    "country": "USA",
+    "region": "North America",
+    "month": "October",
     "distance_km": 160.9,
     "distance_mi": 100.0,
     "elevation_m": 914,

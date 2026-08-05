@@ -1,0 +1,160 @@
+{
+  "race": {
+    "name": "GFNY Villavicencio",
+    "slug": "gfny-villavicencio",
+    "display_name": "GFNY Villavicencio",
+    "tagline": "Fast Llanos roads give way to Puerto de Buenavista: 109 kilometers and 1,308 meters at Colombia's Andean edge.",
+    "vitals": {
+      "distance_km": 109.0,
+      "distance_mi": 67.7,
+      "elevation_m": 1308,
+      "elevation_ft": 4291,
+      "location": "Villavicencio, Meta, Colombia",
+      "location_badge": "VILLAVICENCIO, META, COLOMBIA",
+      "country": "Colombia",
+      "date": "April annually",
+      "date_specific": "2027: April 25 (Sunday)",
+      "field_size": "Inaugural 2027 edition",
+      "start_format": "Mass-start competitive long course with chip timing",
+      "registration": "Online through the official GFNY race site",
+      "entry_fee": "See official registration",
+      "feed_zones": "Official GFNY aid stations with hydration, food, technical, and medical support",
+      "cutoff_time": "See current race guide and official course rules",
+      "route_options": [
+        "Competitive long route: 109.0 km / 1308 m+",
+        "Recreational medium route: see official race site"
+      ]
+    },
+    "climate": {
+      "primary": "Hot, humid tropical conditions",
+      "description": "Villavicencio is warm and humid year-round. April brings meaningful rain risk, and the transition from exposed plains to climbing magnifies heat and hydration errors.",
+      "challenges": [
+        "High humidity",
+        "Tropical heat",
+        "Heavy-rain potential",
+        "Rapid effort change from plains to climbing"
+      ]
+    },
+    "terrain": {
+      "primary": "Fast tropical plains with a decisive mountain climb",
+      "surface": "Paved urban, plains, and mountain roads around Villavicencio and Restrepo.",
+      "technical_rating": 2,
+      "features": [
+        "A false-flat rollout from Parque Las Malocas",
+        "Fast roads across the Meta department",
+        "The sustained Puerto de Buenavista climb",
+        "A hot lower course at the edge of the Eastern Andes"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 5,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 5,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Colombia's cycling culture and a well-defined plains-to-mountain course rate highly. Inaugural execution and moderate global prestige keep it in Tier 2."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "A false-flat rollout from Parque Las Malocas",
+        "Fast roads across the Meta department",
+        "The sustained Puerto de Buenavista climb",
+        "A hot lower course at the edge of the Eastern Andes"
+      ],
+      "profile_type": "Fast tropical plains with a decisive mountain climb",
+      "king_of_mountain": "Puerto de Buenavista, where the fast plains race becomes a mountain race and pacing errors become visible immediately.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "The race begins on the fast, warm roads of the Llanos before turning toward the Eastern Andes. Puerto de Buenavista supplies the decisive sustained climbing, making the course a contrast between group speed, tropical heat, and late climbing economy.",
+      "signature_challenge": "Puerto de Buenavista, where the fast plains race becomes a mountain race and pacing errors become visible immediately.",
+      "suffering_zones": [
+        "Las Malocas rollout",
+        "Meta plains",
+        "Restrepo approach",
+        "Puerto de Buenavista climb",
+        "Villavicencio return"
+      ]
+    },
+    "logistics": {
+      "airport": "La Vanguardia Airport (VVC) serves Villavicencio; most international riders connect through Bogotá El Dorado (BOG) and travel by air or road.",
+      "lodging_strategy": "Stay near Parque Las Malocas or central Villavicencio. Confirm race transfers and allow margin for Bogotá-to-Villavicencio travel disruption.",
+      "transport": "Use official race-week instructions for packet pickup, start access, and bike transport.",
+      "food": "Villavicencio offers abundant rice, grilled meat, plantain, fruit, and soups. Heat and humidity make pre-race hydration more important than heavy loading.",
+      "official_site": "https://villavicencio.gfny.com/"
+    },
+    "history": {
+      "founded": 2027,
+      "origin_story": "GFNY announced its return to Colombia in June 2026 through a new Villavicencio race linking the Llanos with Puerto de Buenavista.",
+      "notable_moments": [
+        "2026: GFNY announces Villavicencio",
+        "2027: Inaugural edition scheduled for April 25"
+      ],
+      "reputation": "A new Colombian GFNY whose course and likely field are credible, but whose first-edition operations remain untested."
+    },
+    "biased_opinion": {
+      "verdict": "The Llanos-to-Andes Race",
+      "summary": "The race begins on the fast, warm roads of the Llanos before turning toward the Eastern Andes. Puerto de Buenavista supplies the decisive sustained climbing, making the course a contrast between group speed, tropical heat, and late climbing economy.",
+      "strengths": [
+        "Clear tactical contrast",
+        "Strong Colombian field potential",
+        "Meaningful climbing",
+        "High local cycling culture"
+      ],
+      "weaknesses": [
+        "Inaugural logistics are unproven",
+        "Heat and rain can dominate",
+        "International access usually requires a Bogotá connection"
+      ],
+      "bottom_line": "A compact but serious Colombian race where riders must arrive with both peloton speed and climbing durability."
+    },
+    "final_verdict": {
+      "score": "74/100",
+      "one_liner": "Fast Llanos roads give way to Puerto de Buenavista: 109 kilometers and 1,308 meters at Colombia's Andean edge.",
+      "should_you_race": "A compact but serious Colombian race where riders must arrive with both peloton speed and climbing durability.",
+      "alternatives": "GFNY Cali for a longer Colombian course, or Alto de Letras for a far more extreme climbing challenge."
+    },
+    "citations": [
+      {
+        "url": "https://villavicencio.gfny.com/",
+        "category": "official",
+        "label": "GFNY Villavicencio official site"
+      },
+      {
+        "url": "https://gfny.com/gfny-is-back-in-colombia/",
+        "category": "official",
+        "label": "GFNY official announcement and course facts"
+      },
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY official calendar or route"
+      }
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-05",
+      "race_date": "2027-04-25",
+      "facts_scope": "Date, competitive status, long-course distance, elevation, and named course features verified against first-party GFNY sources."
+    }
+  }
+}
