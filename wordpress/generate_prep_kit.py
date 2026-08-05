@@ -2658,7 +2658,7 @@ def build_pk_email_gate(rd: dict) -> str:
     )
     return f'''<div class="rl-pk-gate" id="rl-pk-gate">
     <div class="rl-pk-gate-inner">
-      <div class="rl-pk-gate-badge">FREE DOWNLOAD</div>
+      <div class="rl-pk-gate-badge">FREE</div>
       <h2 class="rl-pk-gate-title">Unlock Your {name} Prep Kit</h2>
       <p class="rl-pk-gate-text">12-week training timeline, race-day checklists, packing list, and a personalized fueling calculator — free, instant access.</p>
       <div class="rl-pk-gate-preview">{preview_html}</div>
