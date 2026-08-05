@@ -239,12 +239,20 @@ def render_tabs(block: dict) -> str:
     tabs = block["tabs"]
     tab_id = f"tabs-{hashlib.md5(tabs[0]['label'].encode()).hexdigest()[:8]}"
 
+    # Rider-typed tab groups default to the same rider as personalized_content
+    # blocks (finisher), so a fresh visit shows one consistent athlete.
+    default_idx = 0
+    for i, tab in enumerate(tabs):
+        if tab.get("rider_type") == "finisher":
+            default_idx = i
+            break
+
     tab_buttons = []
     tab_panels = []
     for i, tab in enumerate(tabs):
-        active = ' rl-guide-tab--active' if i == 0 else ''
-        hidden = '' if i == 0 else ' style="display:none"'
-        selected = 'true' if i == 0 else 'false'
+        active = ' rl-guide-tab--active' if i == default_idx else ''
+        hidden = '' if i == default_idx else ' style="display:none"'
+        selected = 'true' if i == default_idx else 'false'
         label = esc(tab["label"])
         title = esc(tab.get("title", tab["label"]))
         content_html = _md_block(esc(tab["content"]))
@@ -1349,13 +1357,19 @@ def build_rider_selector(content: dict) -> str:
     if not rider_types:
         return ''
 
+    rider_ids = [rt["id"] for rt in rider_types]
+    default_rider = "finisher" if "finisher" in rider_ids else rider_ids[0]
+
     btns = []
     for rt in rider_types:
         rid = esc(rt["id"])
         label = esc(rt["label"])
         hours = esc(rt.get("hours", ""))
+        is_default = rt["id"] == default_rider
+        checked = "true" if is_default else "false"
+        active_cls = " rl-guide-rider-btn--active" if is_default else ""
         btns.append(
-            f'<button class="rl-guide-rider-btn" role="radio" aria-checked="false" '
+            f'<button class="rl-guide-rider-btn{active_cls}" role="radio" aria-checked="{checked}" '
             f'data-rider="{rid}" data-ftp="{rt.get("default_ftp", 200)}">'
             f'<span class="rl-guide-rider-btn-label">{label}</span>'
             f'<span class="rl-guide-rider-btn-hours">{hours}</span>'
@@ -1453,14 +1467,12 @@ def build_chapter_email_capture(chapter: dict) -> str:
     title = esc(chapter["title"])
     form_id = f"rl-guide-capture-{ch_id}"
     return f'''<div class="rl-guide-email-capture" id="{form_id}-block">
-    <p class="rl-guide-email-capture-text">Training for something? Leave your email and tell me the race — I'll help.</p>
+    <p class="rl-guide-email-capture-text">Training for something? Leave your email — then reply to the welcome note and tell me the race. I'll help.</p>
     <form class="rl-guide-email-capture-form" id="{form_id}" autocomplete="off">
       <input type="hidden" name="guide_chapter" value="{title}">
       <input type="hidden" name="website" value="">
-      <div class="rl-guide-email-capture-row">
-        <input type="email" name="email" required placeholder="your@email.com" class="rl-guide-email-capture-input" aria-label="Email address">
-        <button type="submit" class="rl-guide-email-capture-btn">SEND</button>
-      </div>
+      <input type="email" name="email" required placeholder="your@email.com" class="rl-guide-email-capture-input" aria-label="Email address">
+      <button type="submit" class="rl-guide-email-capture-btn">SEND</button>
     </form>
     <p class="rl-guide-email-capture-success" id="{form_id}-success" style="display:none">&#10003; Got it &mdash; hit reply anytime.</p>
   </div>'''
@@ -1734,7 +1746,7 @@ def build_guide_css() -> str:
 
 /* ── Knowledge Check ── */
 .rl-guide-knowledge-check{border:3px solid #1a1a1a;margin:0 0 24px;background:#f5f5f0}
-.rl-guide-kc-label{background:#555555;color:#1a1a1a;padding:8px 16px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.rl-guide-kc-label{background:#1a1a1a;color:#f5f5f0;padding:8px 16px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
 .rl-guide-kc-question{font-family:'Source Serif 4',Georgia,serif;padding:16px 20px 8px;font-size:14px;font-weight:700;color:#1a1a1a;margin:0}
 .rl-guide-kc-options{padding:8px 20px 16px;display:flex;flex-direction:column;gap:8px}
 .rl-guide-kc-option{padding:10px 16px;background:#f5f5f0;border:2px solid #1a1a1a;cursor:pointer;font-family:'Sometype Mono',monospace;font-size:12px;text-align:left}
@@ -1790,8 +1802,8 @@ def build_guide_css() -> str:
 
 /* ── Buttons ── */
 .rl-guide-btn{display:inline-block;padding:12px 24px;font-family:'Sometype Mono',monospace;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer;border:3px solid #1a1a1a}
-.rl-guide-btn--primary{background:#555555;color:#1a1a1a;border-color:#555555}
-.rl-guide-btn--primary:hover{background:#555555;border-color:#555555}
+.rl-guide-btn--primary{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.rl-guide-btn--primary:hover{background:#333333;border-color:#333333}
 .rl-guide-btn--secondary{background:#333333;color:#fff;border-color:#333333}
 .rl-guide-btn--secondary:hover{background:#b8b8b0;border-color:#b8b8b0}
 
@@ -2723,7 +2735,7 @@ function computeFtpZones(calc,output){
 clearCalcErrors(calc);
 var ftpInput=calc.querySelector("#rl-calc-ftp-power");
 var testInput=calc.querySelector("#rl-calc-ftp-test");
-var ageInput=calc.querySelector("#rl-calc-ftp-age");
+var lthrInput=calc.querySelector("#rl-calc-ftp-lthr");
 var ftp=0;
 if(ftpInput&&ftpInput.value)ftp=parseInt(ftpInput.value,10);
 if((!ftp||ftp<50)&&testInput&&testInput.value)ftp=Math.round(parseInt(testInput.value,10)*0.95);
@@ -2733,10 +2745,10 @@ if(testInput)testInput.classList.add("rl-guide-calc-input--error");
 showCalcError(calc,"Enter FTP (50-600w) or a 20-min test power.");
 return;
 }
-var age=ageInput&&ageInput.value?parseInt(ageInput.value,10):0;
-var hrmax=age>=16?Math.round(211-0.64*age):0;
+var lthr=lthrInput&&lthrInput.value?parseInt(lthrInput.value,10):0;
+if(lthr&&(lthr<100||lthr>220))lthr=0;
 var ftpDisp=output.querySelector(".rl-guide-calc-ftp-display");
-if(ftpDisp)ftpDisp.textContent="Your FTP: "+ftp+" watts"+(hrmax?" | HRmax: "+hrmax+" bpm":"");
+if(ftpDisp)ftpDisp.textContent="Your FTP: "+ftp+" watts"+(lthr?" | Threshold HR: "+lthr+" bpm":"");
 output.style.display="block";
 var zones=output.querySelectorAll(".rl-guide-calc-zone");
 zones.forEach(function(zone,i){
@@ -2749,13 +2761,17 @@ if(range)range.textContent=minW+"-"+maxW+"w";
 var fill=zone.querySelector(".rl-guide-calc-zone-fill");
 if(fill)setTimeout(function(){fill.style.width=Math.min(maxPct/2,100)+"%";},i*80);
 var hrEl=zone.querySelector(".rl-guide-calc-zone-hr");
-if(hrEl&&hrmax){
+if(hrEl&&lthr){
 var hrMinPct=zone.getAttribute("data-hr-min");
 var hrMaxPct=zone.getAttribute("data-hr-max");
-if(hrMinPct&&hrMaxPct)hrEl.textContent=Math.round(hrmax*parseInt(hrMinPct,10)/100)+"-"+Math.round(hrmax*parseInt(hrMaxPct,10)/100)+" bpm";
+if(hrMinPct!==null&&hrMaxPct){
+var hrLo=Math.round(lthr*parseInt(hrMinPct,10)/100);
+var hrHi=Math.round(lthr*parseInt(hrMaxPct,10)/100);
+hrEl.textContent=(parseInt(hrMinPct,10)===0?"\u2264 "+hrHi:hrLo+"-"+hrHi)+" bpm";
+}
 }
 });
-track("guide_calculator_use",{type:"ftp_zones",ftp:ftp,has_hr:hrmax>0});
+track("guide_calculator_use",{type:"ftp_zones",ftp:ftp,has_hr:lthr>0});
 }
 function setOut(id,t){var e=document.getElementById("rl-calc-out-"+id);if(e)e.textContent=t;}
 function computeDailyNutrition(calc,output){
@@ -2791,7 +2807,7 @@ showCalcError(calc,"Enter a valid duration (0.5-24 hours).");
 return;
 }
 var ints=calc.querySelector("#rl-calc-wf-intensity");
-var rate={z2:50,tempo:65,race:75}[ints?ints.value:"z2"]||40;
+var rate={z2:50,tempo:65,race:85,high:75}[ints?ints.value:"z2"]||50;
 var tc=Math.round(dur*rate),hy=Math.round(dur*500);
 output.style.display="block";
 setOut("total-carbs",tc+"g");
@@ -3052,7 +3068,7 @@ var asc=th.getAttribute("data-sort-dir")!=="asc";
 rows.sort(function(a,b){
 var aText=(a.children[col]||{}).textContent||"";
 var bText=(b.children[col]||{}).textContent||"";
-var aNum=parseFloat(aText.replace(/[^0-9.\-]/g,""));
+var aNum=parseFloat(aText.replace(/[^0-9.-]/g,""));
 var bNum=parseFloat(bText.replace(/[^0-9.\-]/g,""));
 if(!isNaN(aNum)&&!isNaN(bNum))return asc?aNum-bNum:bNum-aNum;
 return asc?aText.localeCompare(bText):bText.localeCompare(aText);
@@ -3163,12 +3179,19 @@ var resultEl=tree.querySelector(".rl-decision-tree__result");
 var bodyEl=tree.querySelector(".rl-decision-tree__body");
 var restartEl=tree.querySelector(".rl-decision-tree__restart");
 if(bodyEl)bodyEl.style.display="none";
-if(resultEl){
-var resultHtml='<div class="rl-decision-tree__result-title">WE RECOMMEND</div>';
-resultHtml+='<div class="rl-decision-tree__result-race">';
-resultHtml+='<a href="/race/'+target+'/">'+target.replace(/-/g," ").replace(/\b\w/g,function(c){return c.toUpperCase();})+'</a>';
-resultHtml+='</div>';
-resultEl.innerHTML=resultHtml;
+if(resultEl&&/^[a-z0-9-]+$/.test(target)){
+resultEl.textContent="";
+var titleEl=document.createElement("div");
+titleEl.className="rl-decision-tree__result-title";
+titleEl.textContent="WE RECOMMEND";
+var raceEl=document.createElement("div");
+raceEl.className="rl-decision-tree__result-race";
+var linkEl=document.createElement("a");
+linkEl.href="/race/"+target+"/";
+linkEl.textContent=target.split("-").map(function(w){return w.charAt(0).toUpperCase()+w.slice(1);}).join(" ");
+raceEl.appendChild(linkEl);
+resultEl.appendChild(titleEl);
+resultEl.appendChild(raceEl);
 resultEl.style.display="block";
 }
 if(restartEl)restartEl.style.display="block";
@@ -3303,7 +3326,7 @@ def generate_guide_page(content: dict, inline: bool = False, assets_dir: Path = 
   <meta property="og:type" content="article">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{esc(og_image)}">
-  <meta property="og:site_name" content="Gravel God Cycling">
+  <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(content["title"])}">
   <meta name="twitter:description" content="{esc(content["meta_description"])}">
@@ -3314,7 +3337,7 @@ def generate_guide_page(content: dict, inline: bool = False, assets_dir: Path = 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{esc(content["title"])} — Gravel God Cycling</title>
+  <title>{esc(content["title"])} — Roadie Labs</title>
   <meta name="description" content="{esc(content["meta_description"])}">
   <link rel="canonical" href="{esc(canonical_url)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3393,7 +3416,7 @@ def generate_guide_page(content: dict, inline: bool = False, assets_dir: Path = 
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Gravel God Training Guide page")
+    parser = argparse.ArgumentParser(description="Generate Roadie Labs Training Guide page")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR), help="Output directory")
     parser.add_argument("--inline", action="store_true", help="Inline CSS/JS for local preview")
     args = parser.parse_args()

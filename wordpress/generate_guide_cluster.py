@@ -155,7 +155,7 @@ def build_chapter_grid(chapters: list, config: GuideConfig = ROAD_GUIDE) -> str:
         gated = ch.get("gated", False)
         read_time = _estimate_read_time(ch)
 
-        lock_icon = '<span class="rl-cluster-card-lock" aria-hidden="true">&#333333;</span>' if gated else ''
+        lock_icon = '<span class="rl-cluster-card-lock" aria-hidden="true">&#128274;</span>' if gated else ''
         lock_class = ' rl-cluster-card--locked' if gated else ''
         badge = '<span class="rl-cluster-card-badge">FREE</span>' if not gated else '<span class="rl-cluster-card-badge rl-cluster-card-badge--locked">SUBSCRIBER</span>'
 
@@ -383,7 +383,7 @@ def build_prev_next_nav(chapter: dict, chapters: list,
         next_slug = esc(next_ch["id"])
         lock = ''
         if next_ch.get("gated"):
-            lock = ' <span class="rl-cluster-nav-lock" aria-hidden="true">&#333333;</span>'
+            lock = ' <span class="rl-cluster-nav-lock" aria-hidden="true">&#128274;</span>'
         parts.append(
             f'<a href="{_guide_url(config, next_slug)}" class="rl-cluster-nav-next">'
             f'<span class="rl-cluster-nav-dir">NEXT &rarr;{lock}</span>'
@@ -402,14 +402,15 @@ def build_chapter_gate(chapter: dict, config: GuideConfig = ROAD_GUIDE) -> str:
     """Build the gate overlay for gated chapter pages."""
     title = esc(chapter["title"])
     if config.gate_form.endpoint_mode is GateEndpointMode.WORKER_FIRST:
-        # The action is intentionally retained as a no-JS FormSubmit fallback.
-        # JavaScript posts to the worker first and unlocks without waiting.
+        # JavaScript posts to the worker and unlocks only on success; on worker
+        # failure it submits the native FormSubmit action, whose _next redirect
+        # returns with ?unlocked=1 so the capture is never silently dropped.
         return f'''<div class="rl-guide-gate rl-cluster-gate" id="rl-guide-gate">
     <div class="rl-guide-gate-inner">
       <span class="rl-guide-gate-kicker">THIS CHAPTER IS LOCKED</span>
       <h2>Unlock {title}</h2>
       <p>Subscribe to unlock all premium chapters instantly.</p>
-      <form action="{esc(config.gate_form.formsubmit_endpoint)}" method="POST" class="rl-cluster-gate-form" id="rl-cluster-gate-form">
+      <form action="{esc(config.gate_form.formsubmit_endpoint)}" method="POST" class="rl-cluster-gate-form" id="rl-cluster-gate-form" data-chapter="{title}">
         <input type="hidden" name="_subject" value="{esc(config.gate_form.subject_label)}: {title}">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -510,30 +511,12 @@ def build_chapter_jsonld(chapter: dict, content: dict,
         ],
     }
 
-    # HowTo for chapters with step-like content
-    howto_steps = []
-    for section in chapter.get("sections", []):
-        sec_title = section.get("title")
-        if sec_title:
-            howto_steps.append({
-                "@type": "HowToStep",
-                "name": sec_title,
-                "url": f"{canonical}#{section['id']}",
-            })
-
+    # No HowTo schema: chapters are editorial articles, not procedures, and
+    # marking section headings as HowToSteps mislabels the content type.
     parts = [
         f'<script type="application/ld+json">{_safe_json_for_script(article, separators=(",", ":"))}</script>',
         f'<script type="application/ld+json">{_safe_json_for_script(breadcrumb, separators=(",", ":"))}</script>',
     ]
-
-    if howto_steps:
-        howto = {
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": f"Chapter {chapter['number']}: {chapter['title']}",
-            "step": howto_steps,
-        }
-        parts.append(f'<script type="application/ld+json">{_safe_json_for_script(howto, separators=(",", ":"))}</script>')
 
     return '\n'.join(parts)
 
@@ -656,8 +639,12 @@ var gateForm=document.getElementById("rl-cluster-gate-form");
 if(gateForm)gateForm.addEventListener("submit",function(e){{
 e.preventDefault();
 if(gateForm.website&&gateForm.website.value)return;
-postLead({{email:gateForm.email.value.trim(),source:SOURCE,brand:BRAND,guide_chapter:"{config.guide_label}",website:""}}).catch(function(){{}});
-unlock("email_form");
+var gateBtn=gateForm.querySelector("button[type=submit]");
+if(gateBtn)gateBtn.disabled=true;
+var gateChapter=gateForm.getAttribute("data-chapter")||"{config.guide_label}";
+postLead({{email:gateForm.email.value.trim(),source:SOURCE,brand:BRAND,guide_chapter:gateChapter,website:""}})
+.then(function(){{unlock("email_form");}})
+.catch(function(){{gateForm.submit();}});
 }});
 document.querySelectorAll(".rl-guide-email-capture-form").forEach(function(form){{
 form.addEventListener("submit",function(e){{
@@ -1435,6 +1422,15 @@ def generate_configurator_page(content: dict, guide_css: str, guide_js: str,
                                 cluster_css: str, cluster_js: str, inline: bool,
                                 config: GuideConfig = ROAD_GUIDE) -> str:
     """Generate the race prep configurator page HTML."""
+    # Ported from the gravel repo but never adapted: the body/JS still use
+    # gravel rider ids, gravel demand-score keys (climate/technicality/
+    # adventure), and gravel gear recommendations. Blocked until a road
+    # version exists so flipping include_configurator can't publish it.
+    raise NotImplementedError(
+        "The race-prep configurator has not been ported for road: its rider "
+        "types, demand scores, and gear logic are still gravel-specific. "
+        "Port build_configurator_body/js/race_data before enabling."
+    )
     canonical = f"{SITE_BASE_URL}{_guide_url(config, 'race-prep-configurator')}"
     cfg_css = build_configurator_css()
     cfg_js = build_configurator_js()
