@@ -801,6 +801,22 @@
               ]
             },
             {
+              "type": "prose",
+              "content": "No power meter, no heart-rate strap? The zones are still available — your breathing has been publishing them all along. The talk test is less precise than a power meter and more honest than plenty of the riders using one:"
+            },
+            {
+              "type": "data_table",
+              "caption": "The Talk Test",
+              "headers": ["Zone", "What talking feels like", "What it's for"],
+              "rows": [
+                ["Z1 — Recovery", "Nose-breathing territory. You could sing, though nobody asked", "Flushing the legs; genuinely easy days"],
+                ["Z2 — Endurance", "Full sentences, comfortably. The conversation is the pace check", "Most of your riding, most weeks"],
+                ["Z3 — Tempo", "Sentences shorten; you pause mid-thought to breathe", "Prescribed tempo only — this is the gray zone"],
+                ["Z4 — Threshold", "The pace at which the group ride goes quiet", "Intervals, and long climbs ridden seriously"],
+                ["Z5+ — VO2max and up", "Words are a luxury you can no longer afford", "Short, hard intervals — nothing else lives here"]
+              ]
+            },
+            {
               "type": "zone_visualizer",
               "title": "Zone Intensity Spectrum",
               "zones": [
