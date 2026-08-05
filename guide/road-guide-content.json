@@ -34,6 +34,8 @@
     "neutral start": "The controlled opening kilometres behind a lead vehicle before racing officially begins. Not the place to move up — and rarely as easy as advertised.",
     "gran fondo": "Italian for 'big ride' — a mass-start, chip-timed road event, typically 100-200 km with real climbing. Raced from the front, ridden everywhere else.",
     "sportive": "The British and northern-European cousin of the gran fondo — often completion-focused, sometimes segment-timed rather than raced gun-to-line.",
+    "criterium": "A short race on a closed loop of roughly 1-2 km, usually 30-90 minutes, decided by repeated surges out of corners and a field sprint. The most accessible licensed racing format — and the most trainable on limited hours.",
+    "time trial": "A race alone against the clock, no drafting allowed — \"the race of truth.\" Rewards threshold power, aerodynamic position, and disciplined pacing.",
     "cat": "Racing category. Licensed road racing groups riders into cats — you move up by finishing races and scoring points.",
     "UCI Gran Fondo World Series": "The worldwide qualification circuit of gran fondos: finish high enough in your age group at a qualifier and you earn a start at the UCI Gran Fondo World Championships."
   },
@@ -86,6 +88,8 @@
                 ["Sportive", "The British and northern-European cousin — completion-focused, often segment-timed rather than raced gun-to-line", "80-250 km, terrain varies wildly", "Endurance, self-sufficiency, weather tolerance"],
                 ["Century", "100 miles, usually untimed, usually (not always) flatter. The classic North American entry point", "160 km", "Aerobic durability, group riding, fueling"],
                 ["Hillclimb", "One climb, all-out, against the clock. The purest fitness test in cycling", "20 minutes to 3+ hours of uninterrupted ascent", "W/kg, then more W/kg"],
+                ["Criterium", "Short-circuit racing on a closed 1-2 km loop: 30-90 minutes of corners, surges, and a sprint. Licensed racing's front door", "20-60 km, lap after lap", "Anaerobic punch, cornering, positioning — intensity over volume"],
+                ["Time trial", "You, the bike, and the clock. No draft, no pack, no hiding — the race of truth", "15-40 km alone, occasionally longer", "Threshold power, aero position, ruthless pacing"],
                 ["Multi-stage", "A week of back-to-back timed days. A fondo every morning, with yesterday in your legs", "300-800+ km across 3-7 stages", "Recovery between stages, relentless consistency"],
                 ["Randonnée / audax", "Self-supported long distance with time limits. Officially not a race; ask a randonneur about their finish time anyway", "200-1,200+ km", "Sleep management, logistics, stubbornness"]
               ]
@@ -111,7 +115,7 @@
             {
               "type": "callout",
               "style": "highlight",
-              "content": "Licensed racing — criteriums, road races, the cat system — is its own ladder with its own rulebook, and mostly beyond this guide's scope. But the skills overlap almost completely. Chapter 6 is the same chapter a first-year cat 5 needs; the fondo just gives you more time to make friends."
+              "content": "Criteriums and time trials earn a special mention for a reason most guides miss: they're the events where limited training hours stop being a handicap. A crit is decided by anaerobic punch and cornering; a TT by threshold power and position. Neither demands a 20-hour aerobic base — which makes them the best-kept secret for riders with real jobs. The {{cat}} system's licensing and upgrade logistics are their own rulebook; the fitness and the skills are all in this guide."
             },
             {
               "type": "prose",
@@ -134,7 +138,7 @@
                   "label": "Autobus",
                   "rider_type": "autobus",
                   "title": "The Autobus (0-5 hrs/week)",
-                  "content": "In a pro race, the autobus is the group that forms at the back on mountain days — sprinters, domestiques, and anyone having a bad one, organized around a single goal: finish inside the time cut. It is not a failure state. It is a working system with rules, experienced drivers, and a proud tradition of getting everyone home.\n\nIf you're training 0-5 hours a week for a big road event, this is your bus. The plan is damage control: enough riding to finish, ruthless pacing so that hour two doesn't write a check hour five can't cash, and zero heroics.\n\n**Training reality:** 0-5 hours per week. Underprepared by conventional standards — and you know it. The plan's job is to get you to the line anyway."
+                  "content": "In a pro race, the autobus is the group that forms at the back on mountain days — sprinters, domestiques, and anyone having a bad one, organized around a single goal: finish inside the time cut. It is not a failure state. It is a working system with rules, experienced drivers, and a proud tradition of getting everyone home.\n\nIf you're training 0-5 hours a week for a big fondo, this is your bus. The plan is damage control: enough riding to finish, ruthless pacing so that hour two doesn't write a check hour five can't cash, and zero heroics.\n\nBut don't let the name settle your ambition. Five hours is only \"underprepared\" when the event is long. Point the same hours at a criterium, a short time trial, or a sub-hour hillclimb and you can genuinely race — those events pay out on anaerobic punch, skill, and freshness, all of which fit inside a small, sharp week. The autobus is a mountain-fondo identity, not a life sentence.\n\n**Training reality:** 0-5 hours per week. Underprepared for a long day; competitive in a short one. The plan's job is to match the ambition to the event — then get you to whichever line you pick."
                 },
                 {
                   "label": "Finisher",
@@ -356,6 +360,8 @@
                 ["Mountain gran fondo", "Sustained 30-90 minute climbs; W/kg is speed; long technical descents", "Light, patient pacers with a big threshold", "Starting the first col at someone else's pace"],
                 ["Classics-style sportive", "Repeated 1-5 minute violent efforts; cobbles and narrow roads; positioning battles", "Punchy riders who handle a bike well", "Arriving at every berg at the back and sprinting to hold on"],
                 ["Hillclimb", "One sustained maximal effort; nothing else matters", "Pure climbers; anyone chasing a clean fitness test", "Treating it as a fondo. It's an hour-record effort with scenery"],
+                ["Criterium", "Repeated anaerobic surges out of corners for 30-90 minutes; position is everything", "Punchy riders on small time budgets; anyone who likes their racing concentrated", "Assuming fondo fitness transfers directly — it's a different energy system wearing the same kit"],
+                ["Time trial", "One steady maximal effort against the clock; the purest pacing exam in cycling", "Diesel engines, data lovers, and the time-crunched", "Buying aero before building the engine that pushes it"],
                 ["Multi-stage", "A fondo every morning with yesterday in your legs; recovery is the competition", "Diesel engines with disciplined routines", "Racing stage one like it's the only one"],
                 ["Randonnée / audax", "Duration beyond fitness — sleep, logistics, morale", "The organized and the stubborn", "Assuming fitness alone covers a 1,200 km problem"]
               ]
@@ -368,6 +374,25 @@
               "type": "race_reference",
               "slug": "la-marmotte",
               "context": "elevation"
+            }
+          ]
+        },
+        {
+          "id": "ch2-time-budget",
+          "title": "Match the Event to Your Hours",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Here's the selection variable most riders never put on the table: your training hours shouldn't just determine how prepared you are — they should help pick the event type itself. Long events are volume exams. A mountain fondo off five hours a week is survival, and Chapter 1 was honest about that. But the relationship inverts at the short end of the calendar: a {{criterium}} or a {{time trial}} is won on intensity, skill, and freshness — three things that fit inside a small week beautifully."
+            },
+            {
+              "type": "prose",
+              "content": "The math is blunt. Finishing a seven-hour alpine day comfortably requires an aerobic base that only months of volume can build; there is no intensity shortcut, whatever the training app promises. But racing a 45-minute crit properly takes roughly five well-aimed hours a week — two genuinely hard interval sessions, one endurance ride, and some cornering practice. A flat 25-40 km TT is even more time-efficient: threshold power plus a position you can hold, both trainable on a lunch-break schedule. If your calendar caps you at five hours and your goal is to *race* rather than to complete, short events aren't the consolation prize. They're the correct answer."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Hours pick the event as much as the heart does. Five hours a week at a mountain fondo makes you a passenger; the same five hours at a crit or a TT makes you a contender. Both are legitimate ambitions — just don't train for one and enter the other."
             }
           ]
         },
@@ -1007,7 +1032,7 @@
               "type": "personalized_content",
               "variants": {
                 "autobus": {
-                  "content": "Three rides a week: two easy, one long — and the long ride is the non-negotiable. On 0-5 hours, structured intervals are a luxury the schedule can't really afford; frequency and the steadily growing long ride do almost all the work. If a fourth short ride appears some weeks, easy spinning beats intervals. Your enemy is the zero week, not the missing workout."
+                  "content": "Three rides a week: two easy, one long — and the long ride is the non-negotiable. On 0-5 hours, structured intervals are a luxury the schedule can't really afford; frequency and the steadily growing long ride do almost all the work. If a fourth short ride appears some weeks, easy spinning beats intervals. Your enemy is the zero week, not the missing workout.\n\nThat's the fondo version. If your target is a crit or a short time trial, invert the week: two short, genuinely hard sessions (VO2max or threshold) plus one endurance ride is honest race preparation — short events are the one corner of the sport where a small week trains like a strength, because they reward intensity and freshness over accumulated volume."
                 },
                 "finisher": {
                   "content": "Four rides: two easy endurance spins, one quality session (threshold or tempo, per your plan), one long ride that grows through the base. That structure fits 5-12 hours with room for recovery, and it builds a genuine engine. Protect the long ride first, the quality session second — when a week collapses, the easy rides are the ones to shrink."
@@ -1714,6 +1739,29 @@
               "type": "callout",
               "style": "highlight",
               "content": "Cold changes descents. A 30-minute alpine descent after a sweaty hour-long climb is its own weather system — pack a light shell for any course with real altitude, and put it on at the summit even when the valley was warm. Shivering hands brake badly."
+            }
+          ]
+        },
+        {
+          "id": "ch6-short-sharp",
+          "title": "The Short, Sharp Ones",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Everything above assumes a long day in a big pack. Two event types compress the whole tactical game into under an hour — and since they're where small training weeks genuinely get to race (Chapter 2), they've earned their own field notes."
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Racing a criterium",
+                  "content": "A crit is a corner-exit interval session with consequences. The field strings out into every corner and accelerates hard out of it — and the further back you sit, the more violent that acceleration gets, because the elastic stretches through the field. This is why position is the whole strategy: spend your budget living in the front 10-15 wheels, where the surges are smallest and the crashes are behind you.\n\nCorner smooth, exit on the wheel, recover mid-straight — the race is a rhythm, and the riders who look effortless have simply stopped braking where others panic. And before the bell lap, know the final three corners by heart: crit sprints are decided by who exits the last corner in position, not by who has the freshest legs."
+                },
+                {
+                  "title": "Pacing a time trial",
+                  "content": "The TT is the purest pacing exam in cycling, and nearly everyone fails it the same way: target power feels insultingly easy for the first five minutes, so they go harder, and the final third collects the debt with interest. Ride the first quarter deliberately restrained — a shade under target — the middle half at your honest threshold, and empty whatever is left over the final quarter. A well-paced TT feels wrong early and terrible late; that's the exam working.\n\nAero matters enormously — at race speed the great majority of your power is spent on the wind — but a position you can't hold for the full distance is slower than a modest one you can. Train at race position and race intensity before race day, because the position is a fitness of its own."
+                }
+              ]
             }
           ]
         },
