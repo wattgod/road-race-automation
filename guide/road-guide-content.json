@@ -1137,15 +1137,16 @@
               "options": [
                 {
                   "label": "Execute as written — consistency is everything",
-                  "response": "This is how holes get dug. Every signal says your body is still paying for yesterday; stacking a threshold session on top buys low-quality reps at double the recovery price, and probably wrecks Thursday too. Consistency means weeks and months, not never adjusting a Tuesday."
+                  "result": "This is how holes get dug. Every signal says your body is still paying for yesterday; stacking a threshold session on top buys low-quality reps at double the recovery price, and probably wrecks Thursday too. Consistency means weeks and months, not never adjusting a Tuesday."
                 },
                 {
                   "label": "Swap to 60-90 minutes of genuinely easy riding",
-                  "response": "Right call. Multiple red signals — short sleep, high stress, elevated resting HR — mean recovery is the productive choice. An easy spin keeps the rhythm and blood flow without adding a debt. The threshold session moves, it doesn't vanish, and Thursday-you inherits legs that can actually do it."
+                  "best": true,
+                  "result": "Right call. Multiple red signals — short sleep, high stress, elevated resting HR — mean recovery is the productive choice. An easy spin keeps the rhythm and blood flow without adding a debt. The threshold session moves, it doesn't vanish, and Thursday-you inherits legs that can actually do it."
                 },
                 {
                   "label": "Do the session but drop the targets 10 watts",
-                  "response": "Reasonable on a yellow day; optimistic on this one. With this many signals stacked up, even a discounted threshold session mostly deepens the hole. Save the discount strategy for a single-signal day — today, the smart money is on easy."
+                  "result": "Reasonable on a yellow day; optimistic on this one. With this many signals stacked up, even a discounted threshold session mostly deepens the hole. Save the discount strategy for a single-signal day — today, the smart money is on easy."
                 }
               ]
             },
@@ -1652,15 +1653,16 @@
               "options": [
                 {
                   "label": "Stay put — mid-pack is sheltered, and moving up burns energy you'll want later",
-                  "response": "Sheltered until the turn, then trapped. When the echelon forms it will hold maybe the first 20-30 riders; everyone behind lands in the gutter, single-file, taking full wind for the length of the plain. The energy you saved staying put is a fraction of what the gutter is about to charge you."
+                  "result": "Sheltered until the turn, then trapped. When the echelon forms it will hold maybe the first 20-30 riders; everyone behind lands in the gutter, single-file, taking full wind for the length of the plain. The energy you saved staying put is a fraction of what the gutter is about to charge you."
                 },
                 {
                   "label": "Move up progressively now, aiming for the first 15-20 wheels before the turn",
-                  "response": "Correct — and this is exactly why you studied the route. Moving up on calm sheltered road costs a small, budgeted effort; being at the front when the road turns means you're *in* the echelon instead of queuing behind it. Ten kilometres is the right runway: gradual, along the protected side, no sprinting required."
+                  "best": true,
+                  "result": "Correct — and this is exactly why you studied the route. Moving up on calm sheltered road costs a small, budgeted effort; being at the front when the road turns means you're *in* the echelon instead of queuing behind it. Ten kilometres is the right runway: gradual, along the protected side, no sprinting required."
                 },
                 {
                   "label": "Sprint to the very front at the turn itself, when it's clearly about to matter",
-                  "response": "Half right, fully late. By the turn, forty other riders have had the same idea, the pace is already rising, and the move now costs a genuine match — a violent, wind-exposed effort straight into the hardest section of the course. Same destination as the smart move, at five times the price."
+                  "result": "Half right, fully late. By the turn, forty other riders have had the same idea, the pace is already rising, and the move now costs a genuine match — a violent, wind-exposed effort straight into the hardest section of the course. Same destination as the smart move, at five times the price."
                 }
               ]
             },
@@ -1839,15 +1841,16 @@
               "options": [
                 {
                   "label": "A proper 2×20 threshold session to confirm the fitness is still there",
-                  "response": "The most expensive reassurance available. The fitness is fine — it's under a layer of clearing fatigue, which is exactly what mid-taper legs feel like. A hard Wednesday session buys you one good feeling and sells your Sunday freshness to pay for it. This is the single most common taper error in amateur racing."
+                  "result": "The most expensive reassurance available. The fitness is fine — it's under a layer of clearing fatigue, which is exactly what mid-taper legs feel like. A hard Wednesday session buys you one good feeling and sells your Sunday freshness to pay for it. This is the single most common taper error in amateur racing."
                 },
                 {
                   "label": "Trust the plan: keep the rides short and easy, let the week do its work",
-                  "response": "Correct. Dead legs on day three or four of a taper are the system working — fatigue clears before form arrives, and the gap between them feels terrible. The confirmation you're craving comes from tomorrow's openers feeling a little better, and race-morning adrenaline finishing the job."
+                  "best": true,
+                  "result": "Correct. Dead legs on day three or four of a taper are the system working — fatigue clears before form arrives, and the gap between them feels terrible. The confirmation you're craving comes from tomorrow's openers feeling a little better, and race-morning adrenaline finishing the job."
                 },
                 {
                   "label": "Take the rest of the week completely off the bike, just to be safe",
-                  "response": "Overcorrection. Total shutdown for four-plus days tends to produce the opposite problem — stale, sluggish legs that need an hour of racing to wake up. The short spins and openers exist precisely to keep the machinery ticking over while the fatigue drains. Easy is the target; zero is a different mistake."
+                  "result": "Overcorrection. Total shutdown for four-plus days tends to produce the opposite problem — stale, sluggish legs that need an hour of racing to wake up. The short spins and openers exist precisely to keep the machinery ticking over while the fatigue drains. Easy is the target; zero is a different mistake."
                 }
               ]
             },
