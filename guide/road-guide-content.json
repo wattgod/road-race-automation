@@ -2,6 +2,41 @@
   "title": "The Road Racing Guide",
   "subtitle": "Everything you need to train for and race gran fondos, sportives, and centuries.",
   "meta_description": "A complete road racing training guide — from building your aerobic engine to pack tactics, fueling, and race-week execution. Written by coaches who race.",
+  "personalization": {
+    "rider_types": [
+      {"id": "autobus", "label": "Autobus", "hours": "0-5 hrs/week", "default_ftp": 150},
+      {"id": "finisher", "label": "Finisher", "hours": "5-12 hrs/week", "default_ftp": 200},
+      {"id": "sharp-end", "label": "Sharp End", "hours": "12-18 hrs/week", "default_ftp": 260},
+      {"id": "racer", "label": "Racer", "hours": "18+ hrs/week", "default_ftp": 320}
+    ],
+    "storage_key": "rl_guide_rider_type"
+  },
+  "glossary": {
+    "FTP": "Functional Threshold Power — the highest power you can sustain for roughly an hour. The anchor for training zones and the number every other number is a percentage of.",
+    "W/kg": "Watts per kilogram — power divided by body weight. The currency of climbing: on a steep col, W/kg is speed.",
+    "CTL": "Chronic Training Load — a rolling average of your daily training stress over roughly six weeks. A proxy for fitness.",
+    "ATL": "Acute Training Load — the same average over roughly seven days. A proxy for fatigue.",
+    "TSB": "Training Stress Balance — CTL minus ATL. Positive means fresh, negative means loaded. Race day wants it positive.",
+    "TSS": "Training Stress Score — a single number combining how long and how hard a ride was. 100 TSS is roughly one hour all-out at threshold.",
+    "IF": "Intensity Factor — a ride's normalized power divided by your FTP. How hard the ride was, relative to you.",
+    "NP": "Normalized Power — a power average weighted to account for surges and variability. Closer to a ride's true physiological cost than plain average power.",
+    "RPE": "Rating of Perceived Exertion — how hard an effort feels, usually on a 1-10 scale. The cheapest power meter you own.",
+    "Z2": "Zone 2 — the conversational endurance intensity (roughly 56-75% of FTP) where most of your training hours belong.",
+    "VO2max": "Your body's maximum rate of oxygen uptake. Trained with short, very hard intervals; it sets the ceiling your threshold lives under.",
+    "PMC": "Performance Management Chart — the graph that plots CTL, ATL, and TSB over time so you can see fitness, fatigue, and freshness in one place.",
+    "DOMS": "Delayed Onset Muscle Soreness — the ache that arrives 24-48 hours after unaccustomed effort.",
+    "DNF": "Did Not Finish.",
+    "bonk": "The abrupt collapse that happens when your body runs out of stored carbohydrate. Preventable. See Chapter 5.",
+    "echelon": "The diagonal paceline that forms in a crosswind, where shelter sits beside and behind the rider ahead instead of directly behind. When the road runs out of width, the race splits.",
+    "autobus": "The survival group that forms at the back on hard days — in pro races, the sprinters' bus riding together to beat the time cut. Organized, unhurried, and usually good company.",
+    "feed zone": "A designated stretch of course where events hand up bottles and food. Plan for chaos: slow down, grab, and don't stop at the first table.",
+    "broom wagon": "The vehicle at the back of an event that collects riders outside the time cut. Its arrival is polite but non-negotiable.",
+    "neutral start": "The controlled opening kilometres behind a lead vehicle before racing officially begins. Not the place to move up — and rarely as easy as advertised.",
+    "gran fondo": "Italian for 'big ride' — a mass-start, chip-timed road event, typically 100-200 km with real climbing. Raced from the front, ridden everywhere else.",
+    "sportive": "The British and northern-European cousin of the gran fondo — often completion-focused, sometimes segment-timed rather than raced gun-to-line.",
+    "cat": "Racing category. Licensed road racing groups riders into cats — you move up by finishing races and scoring points.",
+    "UCI Gran Fondo World Series": "The worldwide qualification circuit of gran fondos: finish high enough in your age group at a qualifier and you earn a start at the UCI Gran Fondo World Championships."
+  },
   "chapters": [
     {
       "number": 1,
@@ -14,7 +49,6 @@
       "sections": [
         {
           "id": "what-is-road-racing-main",
-          "title": "What Is Road Racing?",
           "blocks": [
             {
               "type": "prose",
@@ -25,8 +59,205 @@
               "content": "What makes the road different from gravel or the trail is the pack. Drafting is the whole game — sit in the right wheel and you save 25-30% of your energy; get caught in the wind alone and the day falls apart. The surface is predictable; the tactics are not. Positioning, timing, and knowing when to spend your matches matter more than raw watts."
             },
             {
+              "type": "callout",
+              "style": "highlight",
+              "content": "The clock doesn't grade on effort. A gran fondo has chip timing, a results page, and a finish-line photo you didn't pose for. Whether you call your day a race is up to you — the event will treat it like one either way."
+            },
+            {
               "type": "prose",
               "content": "This guide is built around that reality: an aerobic engine big enough to finish strong, the threshold to hold a hard group, and the handling to stay safe and efficient in a bunch. Everything here is written by coaches who actually pin numbers on."
+            }
+          ]
+        },
+        {
+          "id": "ch1-event-landscape",
+          "title": "The Event Landscape",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "\"Road racing\" is an umbrella over events that share pavement and almost nothing else. A flat century and a Dolomites gran fondo are different sports that happen to use the same bike. Before you train for \"road racing,\" know which one you actually signed up for — because the event type determines the plan, the fueling, and which chapters of this guide will save your day."
+            },
+            {
+              "type": "data_table",
+              "caption": "The Event Landscape",
+              "headers": ["Event", "What it is", "Typical shape", "What it rewards"],
+              "rows": [
+                ["Gran fondo", "Mass-start, chip-timed, usually with serious climbing. Raced hard at the front, ridden everywhere else", "100-200 km, 1,500-5,000+ m of climbing", "Power-to-weight, pacing discipline, pack craft"],
+                ["Sportive", "The British and northern-European cousin — completion-focused, often segment-timed rather than raced gun-to-line", "80-250 km, terrain varies wildly", "Endurance, self-sufficiency, weather tolerance"],
+                ["Century", "100 miles, usually untimed, usually (not always) flatter. The classic North American entry point", "160 km", "Aerobic durability, group riding, fueling"],
+                ["Hillclimb", "One climb, all-out, against the clock. The purest fitness test in cycling", "20 minutes to 3+ hours of uninterrupted ascent", "W/kg, then more W/kg"],
+                ["Multi-stage", "A week of back-to-back timed days. A fondo every morning, with yesterday in your legs", "300-800+ km across 3-7 stages", "Recovery between stages, relentless consistency"],
+                ["Randonnée / audax", "Self-supported long distance with time limits. Officially not a race; ask a randonneur about their finish time anyway", "200-1,200+ km", "Sleep management, logistics, stubbornness"]
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "At one end of the spectrum sits the mountain gran fondo — the format that built the sport in Europe and the one most people mean when they say they're \"training for a big one\":"
+            },
+            {
+              "type": "race_reference",
+              "slug": "maratona-dles-dolomites",
+              "context": "elevation"
+            },
+            {
+              "type": "prose",
+              "content": "At the other end, the randonneuring tradition, where the question isn't how fast you can ride but whether you can keep riding at all:"
+            },
+            {
+              "type": "race_reference",
+              "slug": "paris-brest-paris",
+              "context": "distance"
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Licensed racing — criteriums, road races, the cat system — is its own ladder with its own rulebook, and mostly beyond this guide's scope. But the skills overlap almost completely. Chapter 6 is the same chapter a first-year cat 5 needs; the fondo just gives you more time to make friends."
+            },
+            {
+              "type": "prose",
+              "content": "Everything downstream — the plan you follow, the food you carry, the skills you practice — inherits from the event you choose. That choice is the whole of Chapter 2. For now, one honest question: which of these events do you actually want, as opposed to the one your group chat picked?"
+            }
+          ]
+        },
+        {
+          "id": "ch1-rider-types",
+          "title": "Where You Fit",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Before you pick a race or a plan, be honest about the raw material: the hours you will actually train, not the hours you intend to. These four profiles run through the whole guide — later chapters serve different advice depending on which one you pick, so pick the one that matches your calendar, not your self-image."
+            },
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "label": "Autobus",
+                  "rider_type": "autobus",
+                  "title": "The Autobus (0-5 hrs/week)",
+                  "content": "In a pro race, the autobus is the group that forms at the back on mountain days — sprinters, domestiques, and anyone having a bad one, organized around a single goal: finish inside the time cut. It is not a failure state. It is a working system with rules, experienced drivers, and a proud tradition of getting everyone home.\n\nIf you're training 0-5 hours a week for a big road event, this is your bus. The plan is damage control: enough riding to finish, ruthless pacing so that hour two doesn't write a check hour five can't cash, and zero heroics.\n\n**Training reality:** 0-5 hours per week. Underprepared by conventional standards — and you know it. The plan's job is to get you to the line anyway."
+                },
+                {
+                  "label": "Finisher",
+                  "rider_type": "finisher",
+                  "title": "The Finisher (5-12 hrs/week)",
+                  "content": "Finishers sign up for the big one — [Mallorca 312](/race/mallorca-312/), [L'Étape du Tour](/race/letape-du-tour/) — and want to finish strong, not crawl in. This is most first-time fondo riders, and it is the right ambition: strong enough to enjoy the last 30 km instead of merely surviving them.\n\n**Training reality:** 5-12 hours per week. Enough for a real base and a real build without surrendering your job, your weekends, or your marriage. Most of this guide is written with you in mind."
+                },
+                {
+                  "label": "Sharp End",
+                  "rider_type": "sharp-end",
+                  "title": "The Sharp End (12-18 hrs/week)",
+                  "content": "The sharp end is the front of the local chaingang and the first start pen at the fondo. You're not just finishing — you're racing the course, the clock, and a handful of specific people you would never admit you're racing.\n\n**Training reality:** 12-18 hours per week. At this volume the limiter flips: recovery, not training, is the thing you have to get right. Structure stops being optional, and the gray zone (Chapter 4) becomes your most expensive habit."
+                },
+                {
+                  "label": "Racer",
+                  "rider_type": "racer",
+                  "title": "The Racer (18+ hrs/week)",
+                  "content": "Licensed, or effectively licensed: results are the point. Age-group podiums, UCI Gran Fondo qualification, the pointy end of whatever you enter. Little in this guide will be new to you in concept — the value is in execution, and in the race-craft chapters most training resources skip.\n\n**Training reality:** 18+ hours per week across periodized blocks. Every session has a purpose, and the calendar is built around the season. Ideally your family has agreed to this."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Pick where you are, not where you'd like to be. A Sharp End plan on Autobus hours doesn't make you faster — it makes you tired, then injured, then absent. The archetypes exist so the advice fits the life you're actually training in."
+            }
+          ]
+        },
+        {
+          "id": "ch1-demands",
+          "title": "What the Road Actually Demands",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Road events demand four things, in roughly this order:\n\n**An aerobic engine.** Even the \"short\" events run for hours. The engine — built slowly, mostly at conversational pace — is what lets you produce power deep into a long day. There is no workaround and no product that replaces it.\n\n**A threshold you can lean on.** The climbs, the crosswind sections, and the moments a group splits are all decided at or near your {{FTP}}. The bigger it is relative to your weight, the more of the race happens below your panic line.\n\n**Pack skills.** Free speed, measured in whole percentages. Riding a wheel well, holding position without surging, and reading the group are learnable skills that most riders never deliberately practice.\n\n**Durability.** Not just finishing — still functioning at hour five. The rider who fades least usually beats the rider who was fastest at hour one."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Fitness",
+                  "detail": "Costs nothing but time. The engine decides whether you're in the group or watching it ride away.",
+                  "percentage": 60
+                },
+                {
+                  "label": "Pack craft & positioning",
+                  "detail": "The same watts can finish 20 minutes apart depending on where they're spent. Free speed for anyone willing to practice it.",
+                  "percentage": 20
+                },
+                {
+                  "label": "Pacing",
+                  "detail": "You can be fit and still detonate on the first col. Discipline early buys speed late.",
+                  "percentage": 10
+                },
+                {
+                  "label": "Fueling",
+                  "detail": "Bonking is a fueling failure, not a fitness one. Cheap to fix, catastrophic to ignore.",
+                  "percentage": 8
+                },
+                {
+                  "label": "Equipment",
+                  "detail": "Real, but last. Aero gains are worth minutes; everything above is worth hours.",
+                  "percentage": 2
+                }
+              ]
+            },
+            {
+              "type": "hero_stat",
+              "value": "30",
+              "unit": "%",
+              "context": "Energy saved sitting in a good draft at speed. The largest free speed in the sport — and it's a skill, not a purchase."
+            },
+            {
+              "type": "prose",
+              "content": "Notice what sits at the bottom of that list. Road cycling is the most equipment-obsessed corner of the sport, and the order above does not care. Deep wheels and an aero frame are real speed — a fraction of what the draft gives you for free, and a rounding error next to the engine. Buy fitness first. It's cheaper, and nobody has ever stolen it from a roof rack."
+            }
+          ]
+        },
+        {
+          "id": "ch1-can-i-finish",
+          "title": "The Honest Answer to \"Can I Finish?\"",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Almost certainly — with caveats that scale with the course. A flat-to-rolling century off 14-18 weeks of consistent training from a real base is a very achievable first goal; Chapter 2 covers the runway math. The pack helps you here: a steady group at conversational effort moves faster than you'd believe, and events are built to carry first-timers home.\n\nMountain fondos are a different contract. Time cuts are real and enforced by the {{broom wagon}}. Long alpine descents demand bike handling that flat-land training never teaches. Weather at 2,000 metres does not read the forecast you packed for. None of this is a reason not to go — it is a reason to respect the runway and pick the right first event."
+            },
+            {
+              "type": "prose",
+              "content": "Distance isn't the only axis, either. The spring-classics sportives trade altitude for violence — cobbles, bergs, and weather — and beat you up more per kilometre than anything with a col in it:"
+            },
+            {
+              "type": "race_reference",
+              "slug": "tour-of-flanders-sportive",
+              "context": "distance"
+            },
+            {
+              "type": "knowledge_check",
+              "question": "You want to finish a mountain gran fondo comfortably next season. Which factor best predicts how your day goes?",
+              "options": [
+                {
+                  "text": "The weight and price of your bike",
+                  "correct": false
+                },
+                {
+                  "text": "Your weight-adjusted threshold power and the discipline to pace the climbs",
+                  "correct": true
+                },
+                {
+                  "text": "Your best 30-second sprint power",
+                  "correct": false
+                }
+              ],
+              "explanation": "On a climbing course, gravity is the tax collector: W/kg sets your climbing speed, and pacing discipline decides whether you can hold it on the last col as well as the first. Equipment shifts the result by low single-digit percentages. The engine, and how you spend it, decides the rest."
+            }
+          ]
+        },
+        {
+          "id": "ch1-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Mass-participation road racing is the most accessible version of bike racing there is: no license, no team, no tactics meeting — a course, a clock, and you. It is also deeper than it looks. The pack is chess at 40 km/h, the mountains don't negotiate, and the difference between a good day and a very long one is mostly decisions you can learn in advance.\n\nThat's what the rest of this guide is: the decisions, in order. Next up — [choosing the race](/guide/choosing-your-race/) that fits the engine you have and the life you're training in."
             }
           ]
         }
@@ -38,12 +269,11 @@
       "title": "Choosing Your Race",
       "subtitle": "Pick the event that fits your engine and your calendar",
       "gated": false,
-      "cta_after": null,
+      "cta_after": "training_plans",
       "hero_image": "ch2-hero",
       "sections": [
         {
           "id": "choosing-your-race-main",
-          "title": "Choosing Your Race",
           "blocks": [
             {
               "type": "prose",
@@ -51,11 +281,332 @@
             },
             {
               "type": "prose",
+              "content": "Most riders do this backwards. They pick the event with the best photos, register in a January enthusiasm spike, and only later discover what the course actually asks of them. This chapter is the antidote: a way to read a race's demands before you commit, and to match them against the two resources you can't fake — your engine and your calendar."
+            }
+          ]
+        },
+        {
+          "id": "ch2-demands-first",
+          "title": "Read the Demands First",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Every road event is a bundle of demands, and you can read most of them off the route page: total distance, total climbing, how the climbing is distributed, altitude, and what the weather does there in that month. Two numbers do most of the work. The first is distance, which sets the duration of your day and therefore the fueling and durability problem. The second — more predictive than distance on any hilly course — is **metres of climbing per kilometre of route**. A course that climbs 30 metres per kilometre is a climbing race that happens to have flat bits. A course at 9 m/km is a rouleur's race where the climbs are punchy interruptions."
+            },
+            {
+              "type": "prose",
+              "content": "Two Tier 1 monuments make the point. The [Maratona dles Dolomites](/race/maratona-dles-dolomites/) packs 4,230 m of climbing into 138 km — over 30 m/km, a day spent almost entirely going up or coming down. The [Tour of Flanders Sportive](/race/tour-of-flanders-sportive/) climbs 2,260 m across 241 km — around 9 m/km, but delivered in short, brutal cobbled bergs where position into the base decides your whole effort. Same sport on paper. Different bodies, different plans, different chapters of this guide doing the heavy lifting."
+            },
+            {
+              "type": "data_table",
+              "caption": "Course Types and What They Reward",
+              "headers": ["Course type", "The demand profile", "Who thrives", "The red flag"],
+              "rows": [
+                ["Flat / rolling fondo or century", "Long hours at steady output; pack riding the whole day; wind is the terrain", "Riders with durability and group skills", "Riding it alone. The draft is worth more here than anywhere"],
+                ["Mountain gran fondo", "Sustained 30-90 minute climbs; W/kg is speed; long technical descents", "Light, patient pacers with a big threshold", "Starting the first col at someone else's pace"],
+                ["Classics-style sportive", "Repeated 1-5 minute violent efforts; cobbles and narrow roads; positioning battles", "Punchy riders who handle a bike well", "Arriving at every berg at the back and sprinting to hold on"],
+                ["Hillclimb", "One sustained maximal effort; nothing else matters", "Pure climbers; anyone chasing a clean fitness test", "Treating it as a fondo. It's an hour-record effort with scenery"],
+                ["Multi-stage", "A fondo every morning with yesterday in your legs; recovery is the competition", "Diesel engines with disciplined routines", "Racing stage one like it's the only one"],
+                ["Randonnée / audax", "Duration beyond fitness — sleep, logistics, morale", "The organized and the stubborn", "Assuming fitness alone covers a 1,200 km problem"]
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Altitude deserves its own line. Events that spend real time above 2,000 metres tax you in ways sea-level training can't fully prepare — expect your power at altitude to be meaningfully down, and pace accordingly. If the profile shows long stretches at elevation and you live at sea level, that's not a dealbreaker. It's a pacing instruction."
+            },
+            {
+              "type": "race_reference",
+              "slug": "la-marmotte",
+              "context": "elevation"
+            }
+          ]
+        },
+        {
+          "id": "ch2-runway",
+          "title": "The Runway",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Give yourself runway. A first century or fondo wants 14-18 weeks from a real base; if you're starting from the couch, more. Slot one A-event per season and build everything around it — B-events become hard training days, not goals that fragment your focus."
             },
             {
               "type": "prose",
+              "content": "\"A real base\" means you are already riding several times a week, comfortably, and have been for a couple of months. It does not mean fast — it means consistent. If that's not you yet, the honest move is to add 8-12 weeks of easy, frequent riding before the 14-18 week plan even starts. The event date doesn't care when you registered; it only cares what you did between then and now."
+            },
+            {
+              "type": "timeline",
+              "title": "A 16-Week Runway, From the Top",
+              "steps": [
+                {
+                  "label": "Base (weeks 1-6)",
+                  "content": "Mostly easy volume, building the aerobic engine. The long ride grows steadily. Intensity is sparse and gentle. This is the least glamorous and most important block — Chapter 3 lives here."
+                },
+                {
+                  "label": "Build (weeks 7-12)",
+                  "content": "Structured intensity arrives: threshold and VO2max work sharpen the engine the base built. Volume holds or edges down as intensity climbs. B-events slot in here as dress rehearsals."
+                },
+                {
+                  "label": "Peak (weeks 13-15)",
+                  "content": "The hardest, most race-specific work: efforts that mimic the course's actual demands — long climbs at target pace, or repeated punchy efforts for a classics-style course."
+                },
+                {
+                  "label": "Taper (final 7-10 days)",
+                  "content": "Volume drops 40-60%; short, sharp openers keep the legs awake. You cannot add fitness now — only reveal what you built. Chapter 7 covers the whole week."
+                },
+                {
+                  "label": "Race day",
+                  "content": "Execution: pacing, fueling, and positioning. Chapters 5 and 6 earn their keep. The result was mostly decided in the previous 15 weeks — today you just collect it."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Count backwards before you register. Event date, minus taper, minus build, minus base — if the arithmetic lands before today, you're not picking a goal, you're scheduling a bad day. Pick a later event or a kinder course. Both count as smart, neither counts as quitting."
+            }
+          ]
+        },
+        {
+          "id": "ch2-climbing-honesty",
+          "title": "The Climbing Question",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Be honest about the climbing. The single biggest predictor of how your day goes on a hilly course is your weight-adjusted threshold. If the route climbs, the plan climbs."
+            },
+            {
+              "type": "prose",
+              "content": "Here's the physics, without flinching: on a steep gradient, aerodynamics fade and gravity takes over, so speed becomes almost purely {{W/kg}} — your sustainable watts divided by everything you're hauling uphill. Two riders with identical 250 W thresholds climb very differently at 65 kg and 85 kg. That's not a moral judgment; it's arithmetic. It means a mountain fondo asks a different question than a flat one, and you should know your answer before you register, not at the base of the first col.\n\nThe good news: both sides of the fraction are trainable, and the watts side responds faster than most riders expect (Chapter 3). The other good news: courses publish their profiles. Nobody has to be ambushed by 5,000 metres of climbing they could have read about in January."
+            },
+            {
+              "type": "prose",
+              "content": "And check the time cuts. The big alpine events enforce them at intermediate points, not just the finish — the {{broom wagon}} works to a schedule. If the cut math looks tight for your current speed, that's your training target for the next four months, or your cue to pick the shorter course option most fondos offer. Riding the medio instead of the gran is how experienced riders handle an honest mismatch. It beats a DNF collected in a van."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "You're choosing between two events: 138 km with 4,230 m of climbing, or 241 km with 2,260 m. Which is the harder climbing day?",
+              "options": [
+                {
+                  "text": "The 241 km event — it's much longer and total fatigue is what matters",
+                  "correct": false
+                },
+                {
+                  "text": "The 138 km event — at over 30 m of climbing per kilometre, it's a mountain race; the longer course is a rouleur's race",
+                  "correct": true
+                },
+                {
+                  "text": "They're equivalent — climbing totals within 2,000 m of each other ride the same",
+                  "correct": false
+                }
+              ],
+              "explanation": "Climbing density beats climbing total. 4,230 m in 138 km means the road is essentially never flat — your day is a chain of long cols ridden at threshold-adjacent effort, and W/kg decides everything. 2,260 m spread across 241 km is a long endurance day with punchy interruptions, where the draft, positioning, and durability matter more than raw climbing power. These are the real numbers for the Maratona dles Dolomites and the Tour of Flanders Sportive."
+            }
+          ]
+        },
+        {
+          "id": "ch2-ratings",
+          "title": "How We Rate Races",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Every race this guide links to comes from our database of scored road events. Each one is rated across 14 dimensions — distance, climbing, logistics, prestige, organization, scenic experience, field depth, value, and more — and the scores are earned, not sponsored. Famous races land in Tier 2 all the time. That's the point: a rating you can't disagree with is a rating that isn't saying anything."
+            },
+            {
+              "type": "hero_stat",
+              "value": "4.6",
+              "unit": "%",
+              "context": "Of 395 rated road races earn Tier 1 status. The bar is deliberately high."
+            },
+            {
+              "type": "race_callout",
+              "slugs": ["maratona-dles-dolomites", "tour-of-flanders-sportive"],
+                "dimension": "climbing",
+              "caption": "Two Tier 1 races, two different sports. The Maratona is 138 km of Dolomite passes; Flanders is 241 km of cobbles and short, violent bergs. The tier tells you they're both worth your season — the dimensions tell you which one fits your engine."
+            },
+            {
+              "type": "prose",
+              "content": "Use the tiers to shortlist and the dimensions to decide. A Tier 1 badge means the whole package — course, organization, experience — justifies building a season around it. The dimension scores tell you whether *your* season should be the one."
+            }
+          ]
+        },
+        {
+          "id": "ch2-a-and-b",
+          "title": "One A-Event. Disposable B-Events.",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The single-A-event rule survives because it works. One goal event gives the entire season a spine: every block, every long ride, every recovery week exists in service of one date. Riders who chase three \"A\" events a season usually arrive at all three in the same state — half-built, half-rested, and wholly annoyed about it."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Pick the A-event",
+                  "detail": "One date, one course, chosen against your engine and your calendar using everything above."
+                },
+                {
+                  "label": "Anchor the plan to it",
+                  "detail": "Count backwards from race day to lay out base, build, peak, and taper. The date dictates the plan — never the reverse."
+                },
+                {
+                  "label": "Slot B-events as rehearsals",
+                  "detail": "One or two, placed in the build phase. Ride them hard, test your fueling and pacing, and treat the result as data, not identity."
+                },
+                {
+                  "label": "Protect the goal",
+                  "detail": "When life compresses training, the B-event is what gets sacrificed. The A-event only moves for weddings and surgeons."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "B-events answer questions the plan can't: Does your fueling survive race intensity? Can you hold position in a real pack? Does your pacing discipline hold when adrenaline argues otherwise? A B-event that goes badly is a gift — the same lesson at your A-event would have cost you the season."
+            }
+          ]
+        },
+        {
+          "id": "ch2-find-your-race",
+          "title": "Find Your Race",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "A starting point, not a verdict — every result below is a rated race from the database, so follow the link and read the dimensions before you commit a season to it."
+            },
+            {
+              "type": "decision_tree",
+              "title": "Find Your Race",
+              "tree": {
+                "root": {
+                  "question": "What are you looking for in your next road event?",
+                  "options": [
+                    {
+                      "text": "My first big one — real, but achievable",
+                      "next": "first"
+                    },
+                    {
+                      "text": "The high mountains — bucket-list cols",
+                      "next": "mountains"
+                    },
+                    {
+                      "text": "Classics romance — cobbles and bergs",
+                      "next": "classics"
+                    },
+                    {
+                      "text": "Something bigger than one day",
+                      "next": "beyond"
+                    }
+                  ]
+                },
+                "first": {
+                  "question": "How hard do you want the introduction to be?",
+                  "options": [
+                    {
+                      "text": "A serious course with friendly logistics",
+                      "result": "gran-fondo-maryland"
+                    },
+                    {
+                      "text": "A genuine test — give me the full experience",
+                      "result": "cheaha-challenge-gran-fondo"
+                    }
+                  ]
+                },
+                "mountains": {
+                  "question": "Which flavor of suffering?",
+                  "options": [
+                    {
+                      "text": "The Tour de France experience, closed roads and all",
+                      "result": "letape-du-tour"
+                    },
+                    {
+                      "text": "The Dolomites — the most beautiful day in cycling",
+                      "result": "maratona-dles-dolomites"
+                    },
+                    {
+                      "text": "The hardest one-day test I can register for",
+                      "result": "la-marmotte"
+                    },
+                    {
+                      "text": "A monster with Spanish fans lining the cols",
+                      "result": "quebrantahuesos"
+                    }
+                  ]
+                },
+                "classics": {
+                  "question": "Which classic?",
+                  "options": [
+                    {
+                      "text": "Flanders — the bergs and the beer afterwards",
+                      "result": "tour-of-flanders-sportive"
+                    },
+                    {
+                      "text": "Roubaix — the cobbles, properly",
+                      "result": "paris-roubaix-challenge"
+                    },
+                    {
+                      "text": "Tuscany — white roads, vintage soul",
+                      "result": "leroica"
+                    }
+                  ]
+                },
+                "beyond": {
+                  "question": "How much bigger?",
+                  "options": [
+                    {
+                      "text": "One giant day — the longest fondo in the calendar conversation",
+                      "result": "mallorca-312"
+                    },
+                    {
+                      "text": "A timed week across the Alps",
+                      "result": "haute-route-alps"
+                    },
+                    {
+                      "text": "The 1,200 km pilgrimage",
+                      "result": "paris-brest-paris"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch2-reality-checks",
+          "title": "Reality Checks Before You Register",
+          "blocks": [
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Read the time cuts",
+                  "content": "The big alpine fondos publish intermediate cut times, and the broom wagon honors them. Estimate your speed on the course's hardest sections honestly — your easy-ride average on flat roads is not evidence. If the math is tight, the shorter course option is the smart registration, not the sad one."
+                },
+                {
+                  "title": "Check the altitude",
+                  "content": "Sustained riding above 2,000 m costs real power for sea-level residents. If the course lives up high, plan to arrive a few days early if you can, pace the high sections conservatively, and expect the numbers on your head unit to read lower than the effort feels."
+                },
+                {
+                  "title": "Respect the weather window",
+                  "content": "Mountain events can serve four seasons in one day — alpine descents in cold rain are a skill and an equipment problem, not just a fitness one. Classics weather is its own hazard in the opposite direction. Look up what the event's worst recent edition looked like and pack for that."
+                },
+                {
+                  "title": "Price the logistics",
+                  "content": "Flights, bike transport or rental, accommodation near a start line in a resort town in high season — the entry fee is often the cheapest line in the budget. Budget the whole trip before you commit, and book beds early; the good ones go when registration opens."
+                },
+                {
+                  "title": "Watch the registration calendar",
+                  "content": "The marquee fondos sell out fast, some by lottery or ballot months ahead. If your target uses one, register first and build the season after — a plan without an entry is a hypothesis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch2-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Choose with your calendar and your engine, not your camera roll. Read the demands off the route page, do the runway arithmetic backwards from race day, and be honest about the climbing question — the course will be honest with you either way.\n\nOnce the race is chosen, the plan has a shape. Building the engine that plan depends on is [Chapter 3](/guide/building-the-engine/)."
             }
           ]
         }
@@ -67,12 +618,11 @@
       "title": "Building the Engine",
       "subtitle": "Base, then build — the aerobic foundation under everything",
       "gated": false,
-      "cta_after": null,
+      "cta_after": "gate",
       "hero_image": "ch3-hero",
       "sections": [
         {
           "id": "building-the-engine-main",
-          "title": "Building the Engine",
           "blocks": [
             {
               "type": "prose",
@@ -84,7 +634,355 @@
             },
             {
               "type": "prose",
+              "content": "This chapter is the physiology and the framework: how adaptation actually works, what the zones mean and how to find yours, why most of your riding should be easy, and what a sane week looks like at your training volume. Chapter 4 covers executing the individual workouts. Get this one right and Chapter 4 gets much easier."
+            }
+          ]
+        },
+        {
+          "id": "ch3-adaptation",
+          "title": "How Fitness Actually Happens",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Training doesn't make you fitter. Training makes you tired; **recovering from training** makes you fitter. Every plan ever written is a scheme for repeating that cycle without breaking the athlete, and understanding it is the difference between following a plan and merely surviving one."
+            },
+            {
+              "type": "timeline",
+              "title": "The Adaptation Cycle",
+              "steps": [
+                {
+                  "label": "Stress",
+                  "content": "A workout exceeds what your body is currently built for — a long climb at threshold, a set of VO2max intervals, or simply a longer ride than last week. Muscle fibers micro-tear, glycogen drains, and your body files the event as a problem worth solving."
+                },
+                {
+                  "label": "Fatigue",
+                  "content": "Immediately afterwards, you are worse at cycling than before you started. If you tested your {{FTP}} the evening after a hard session, it would be down. This is not failure — fatigue is the signal that starts the rebuilding."
+                },
+                {
+                  "label": "Recovery",
+                  "content": "With sleep, food, and easy days, the repair crew works: fibers rebuild, mitochondria multiply, capillaries spread, glycogen storage expands. Muscle repair takes roughly 24-48 hours; deeper aerobic adaptations accrue over weeks."
+                },
+                {
+                  "label": "Supercompensation",
+                  "content": "The body doesn't rebuild to spec — it rebuilds with margin, slightly stronger than before, so the same stress hurts less next time. That small overshoot is fitness. It's also why cramming doesn't work: the overshoot only appears after recovery completes."
+                },
+                {
+                  "label": "Repeat, slightly harder",
+                  "content": "Apply a slightly bigger stress to the slightly stronger body. Stack this cycle for months and the compounding is startling. Skip the recovery half and the cycle runs backwards — stress without adaptation is just damage on a schedule."
+                }
+              ]
+            },
+            {
+              "type": "prose",
               "content": "Build progressively. Add no more than ~10% volume per week, take a recovery week every third or fourth, and let the long ride grow toward (but not absurdly past) your event duration. The engine is built in months, not weekends."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Consistency is the entire trick. Eight rides a week for one heroic week does less than four rides a week for three months — the cycle only compounds if you keep turning it. The best plan is the one your actual life can repeat."
+            }
+          ]
+        },
+        {
+          "id": "ch3-zones",
+          "title": "Zones: The Shared Language",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Training zones are percentage bands of your {{FTP}} — a shared language for describing intensity precisely enough to prescribe it. Seven zones cover everything from coffee-ride spinning to finish-line sprints. You don't need to memorize them today; you need to know they exist, know where zone 2 and threshold sit, and know your own numbers."
+            },
+            {
+              "type": "flashcard",
+              "title": "Zone Definitions — Quick Reference",
+              "cards": [
+                {
+                  "front": "Zone 1",
+                  "back": "Active Recovery: <55% FTP. Gentle spinning that feels like almost nothing. Its job is blood flow, not fitness."
+                },
+                {
+                  "front": "Zone 2",
+                  "back": "Endurance: 56-75% FTP. All-day pace — you can hold a conversation. Where most of your training hours belong."
+                },
+                {
+                  "front": "Zone 3",
+                  "back": "Tempo: 76-87% FTP. Comfortably hard, deceptively expensive. The gray zone — ride it when prescribed, not by accident."
+                },
+                {
+                  "front": "Zone 4",
+                  "back": "Lactate Threshold: 93-105% FTP. Hard, controlled, sustainable in 10-30 minute blocks. Where climbs and splits are decided."
+                },
+                {
+                  "front": "Zone 5",
+                  "back": "VO2max: 106-120% FTP. Very hard, 2-8 minute efforts, heavy breathing. Raises the ceiling everything else lives under."
+                },
+                {
+                  "front": "Zone 6",
+                  "back": "Anaerobic Capacity: 121-150% FTP. Sharp 30-second to 3-minute efforts — attacks, berg crests, closing gaps."
+                },
+                {
+                  "front": "Zone 7",
+                  "back": "Neuromuscular Power: >150% FTP. All-out sprints lasting seconds. Pure explosive power, no pacing involved."
+                }
+              ]
+            },
+            {
+              "type": "zone_visualizer",
+              "title": "Zone Intensity Spectrum",
+              "zones": [
+                {
+                  "name": "Z1 Recovery",
+                  "max_pct": 55,
+                  "label": "55%",
+                  "color": "#d0d0c8"
+                },
+                {
+                  "name": "Z2 Endurance",
+                  "max_pct": 75,
+                  "label": "75%",
+                  "color": "#b8b8b0"
+                },
+                {
+                  "name": "Z3 Tempo",
+                  "max_pct": 87,
+                  "label": "87%",
+                  "color": "#999999"
+                },
+                {
+                  "name": "Z4 Threshold",
+                  "max_pct": 105,
+                  "label": "105%",
+                  "color": "#777777"
+                },
+                {
+                  "name": "Z5 VO2max",
+                  "max_pct": 120,
+                  "label": "120%",
+                  "color": "#555555"
+                },
+                {
+                  "name": "Z6 Anaerobic",
+                  "max_pct": 150,
+                  "label": "150%",
+                  "color": "#333333"
+                },
+                {
+                  "name": "Z7 Neuromusc.",
+                  "max_pct": 200,
+                  "label": "200%",
+                  "color": "#1a1a1a"
+                }
+              ]
+            },
+            {
+              "type": "calculator",
+              "calculator_id": "ftp-zones",
+              "title": "Your Personal Zone Calculator",
+              "description": "Enter your FTP or 20-minute test power to see your training zones.",
+              "inputs": [
+                {
+                  "id": "ftp-power",
+                  "label": "FTP (watts)",
+                  "type": "number",
+                  "placeholder": "e.g., 250",
+                  "min": 50,
+                  "max": 600
+                },
+                {
+                  "id": "ftp-test",
+                  "label": "OR 20-min test power",
+                  "type": "number",
+                  "placeholder": "e.g., 263",
+                  "min": 50,
+                  "max": 650,
+                  "transform": "multiply_0.95"
+                },
+                {
+                  "id": "ftp-age",
+                  "label": "Age (optional, for HR zones)",
+                  "type": "number",
+                  "placeholder": "e.g., 38",
+                  "min": 16,
+                  "max": 80,
+                  "optional": true
+                }
+              ],
+              "zones": [
+                {
+                  "name": "Z1 - Active Recovery",
+                  "min_pct": 0,
+                  "max_pct": 55,
+                  "hr_min_pct": 55,
+                  "hr_max_pct": 72,
+                  "color": "#d0d0c8"
+                },
+                {
+                  "name": "Z2 - Endurance",
+                  "min_pct": 56,
+                  "max_pct": 75,
+                  "hr_min_pct": 72,
+                  "hr_max_pct": 82,
+                  "color": "#b8b8b0"
+                },
+                {
+                  "name": "Z3 - Tempo",
+                  "min_pct": 76,
+                  "max_pct": 87,
+                  "hr_min_pct": 82,
+                  "hr_max_pct": 87,
+                  "color": "#999999"
+                },
+                {
+                  "name": "Z4 - Threshold",
+                  "min_pct": 93,
+                  "max_pct": 105,
+                  "hr_min_pct": 87,
+                  "hr_max_pct": 92,
+                  "color": "#777777"
+                },
+                {
+                  "name": "Z5 - VO2max",
+                  "min_pct": 106,
+                  "max_pct": 120,
+                  "hr_min_pct": 92,
+                  "hr_max_pct": 100,
+                  "color": "#555555"
+                },
+                {
+                  "name": "Z6 - Anaerobic",
+                  "min_pct": 121,
+                  "max_pct": 150,
+                  "color": "#333333"
+                },
+                {
+                  "name": "Z7 - Neuromuscular",
+                  "min_pct": 151,
+                  "max_pct": 200,
+                  "color": "#1a1a1a"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "The zones are only as good as the {{FTP}} under them, so test — and re-test every 6-8 weeks during a build, because the number should move. Three honest ways to get it:"
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "The 20-minute test",
+                  "content": "Warm up thoroughly, then ride 20 minutes as hard as you can sustain evenly — a steady climb is ideal. Multiply the average power by 0.95. The classic, for good reason. The most common error is starting like a hero and fading like one too: aim for even or slightly negative pacing."
+                },
+                {
+                  "title": "The ramp test",
+                  "content": "Power rises steadily every minute until you can't continue; your FTP is estimated from the final steps. Shorter and less psychologically brutal, and easy to do indoors. It tends to flatter riders with a strong top end, so treat the result as a starting estimate and check it against how threshold intervals actually feel."
+                },
+                {
+                  "title": "The real-world check",
+                  "content": "Your best sustained power from a long climb or a hard solo effort of 40-60 minutes is close to FTP by definition. If your test number and your real-world numbers disagree, believe the real world — the point of the number is to describe you, not to impress your head unit."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch3-mostly-easy",
+          "title": "Mostly Easy, Occasionally Brutal",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The distribution that builds engines looks nothing like how most people ride. Elite endurance athletes across sports spend the great majority of their training time at low intensity, with a small, sharply focused slice of genuinely hard work — and decades of both research and results back the pattern. Most self-coached riders invert it: every ride lands in the middle, hard enough to feel productive, too easy to force top-end adaptation, too hard to recover from by tomorrow."
+            },
+            {
+              "type": "prose",
+              "content": "That middle — zone 3, the gray zone — feels like work because it is work. That's the trap. It taxes you enough to compromise Thursday's intervals while providing less aerobic stimulus per unit of fatigue than the boring zone 2 riding it replaced. The fix costs nothing: ride your easy days embarrassingly easy, ride your hard days properly hard, and let the middle exist only when a plan deliberately puts it there."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "If your group ride ego can't survive being seen at 180 watts, ride alone on easy days. The engine doesn't know who was watching."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "You have 8 hours to train this week. Which distribution builds the most fitness?",
+              "options": [
+                {
+                  "text": "Eight hours at a solid, moderately-hard pace — maximize the average intensity",
+                  "correct": false
+                },
+                {
+                  "text": "Six-plus hours genuinely easy, with one or two focused hard sessions",
+                  "correct": true
+                },
+                {
+                  "text": "Four hours very hard, then four days of recovery",
+                  "correct": false
+                }
+              ],
+              "explanation": "Mostly-easy-plus-focused-hard wins because each part does its actual job: the easy volume builds the aerobic engine while staying recoverable, and the hard sessions arrive on legs fresh enough to hit real targets. The all-moderate week generates fatigue that blunts every session, and the all-brutal week runs the adaptation cycle without enough stress-free volume to compound."
+            }
+          ]
+        },
+        {
+          "id": "ch3-wkg",
+          "title": "Power-to-Weight, Honestly",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "On climbing courses, {{W/kg}} is the number that predicts your day — and it's a fraction, which means two levers. The watts side responds to everything in this chapter, and for most riders it's the better lever: it climbs steadily with consistent training and carries no downside. The weight side is real but sharp-edged. Chasing it with restriction while training hard is how riders get slower, sicker, and miserable, in that order. Fuel the work (Chapter 5), let body composition follow the training, and treat any advice that starts with skipping meals as the red flag it is."
+            },
+            {
+              "type": "prose",
+              "content": "For calibration on what pure W/kg racing looks like, the extreme end of the sport is instructive — an event that is essentially one enormous climb, where the fraction is nearly the entire result:"
+            },
+            {
+              "type": "race_reference",
+              "slug": "taiwan-kom-challenge",
+              "context": "elevation"
+            },
+            {
+              "type": "prose",
+              "content": "Your fondo is not that. On a typical mountain gran fondo, W/kg dominates the cols but pack craft still rules the valleys, and descending skill gives back minutes that climbing legs bought. Raise the watts, respect the fueling, and let the fraction improve from both ends at the speed your actual life supports."
+            }
+          ]
+        },
+        {
+          "id": "ch3-your-week",
+          "title": "Your Week, By Rider Type",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The principles are universal; the week that expresses them depends entirely on your hours. Select your rider type to see the structure that fits:"
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "Three rides a week: two easy, one long — and the long ride is the non-negotiable. On 0-5 hours, structured intervals are a luxury the schedule can't really afford; frequency and the steadily growing long ride do almost all the work. If a fourth short ride appears some weeks, easy spinning beats intervals. Your enemy is the zero week, not the missing workout."
+                },
+                "finisher": {
+                  "content": "Four rides: two easy endurance spins, one quality session (threshold or tempo, per your plan), one long ride that grows through the base. That structure fits 5-12 hours with room for recovery, and it builds a genuine engine. Protect the long ride first, the quality session second — when a week collapses, the easy rides are the ones to shrink."
+                },
+                "sharp-end": {
+                  "content": "Five rides: two easy, two structured quality sessions (one threshold-focused, one VO2max during the build), one long ride with race-specific efforts folded in. At 12-18 hours the risk inverts — you have room to bury yourself, so the easy days have to be genuinely easy and the recovery weeks genuinely count. Your gray-zone habit is the first thing a coach would fix."
+                },
+                "racer": {
+                  "content": "Five to six rides across periodized blocks: two high-intensity days, two-to-three volume days, one long ride carrying race-simulation work — full-gas efforts at the durations your target event demands. At 18+ hours, the plan lives and dies on recovery logistics: sleep, fueling, and the discipline to keep the easy 70% of your volume boring. Every session has a stated purpose or it doesn't happen."
+                }
+              }
+            },
+            {
+              "type": "prose",
+              "content": "The long ride deserves its own sentence at every level: it grows gradually toward your event's duration — not to it, toward it. For most riders, topping out around 70-80% of expected race duration in the final weeks of the build is enough; the pack, the taper, and race-day adrenaline cover the rest. Riding the full distance three weeks out proves nothing except that you could have, once, while tired."
+            }
+          ]
+        },
+        {
+          "id": "ch3-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The engine is built from unglamorous parts: easy volume you can repeat, a small dose of properly hard work, recovery treated as training, and months of showing up. Test your FTP so the zones mean something, keep the middle out of your week unless it's prescribed, and let power-to-weight improve from the watts side first.\n\nWhat's left is execution — turning a written workout into the ride your plan intended, on days when sleep, weather, and your legs have their own opinions. That's [Chapter 4](/guide/workout-execution/)."
             }
           ]
         }
@@ -101,7 +999,6 @@
       "sections": [
         {
           "id": "workout-execution-main",
-          "title": "Workout Execution",
           "blocks": [
             {
               "type": "prose",
@@ -109,11 +1006,167 @@
             },
             {
               "type": "prose",
-              "content": "Power is the primary target; heart rate is the cross-check. If you're HR-based, your zones are a percentage of threshold HR — not max HR. On a hot or fatigued day, trust HR over the number on the screen."
+              "content": "A workout on paper and a workout in your legs are different documents. This chapter is about closing the gap: how to set a session up so it can succeed, how to pace intervals so the last rep counts, and what to do when sleep, work, or weather rewrite the plan mid-week — which they will, because you have a life, which is the whole reason the plan has to survive contact with one."
+            }
+          ]
+        },
+        {
+          "id": "ch4-before-you-start",
+          "title": "Before You Press Start",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Most failed workouts fail before the first interval. The session was doomed at the front door — under-fueled, under-warmed, or ridden without knowing what it was for. Three habits fix nearly all of it:"
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Know the intent",
+                  "detail": "Every session has one job: raise threshold, touch VO2max, extend endurance, or recover. If you can't name the job, you can't protect it — and you'll 'improve' the workout into something that does nothing well."
+                },
+                {
+                  "label": "Fuel the work",
+                  "detail": "Interval days start with carbohydrate on board and continue with it — a hard session ridden empty produces junk numbers and doubled recovery cost. Easy days can be relaxed about this. Hard days can't. Chapter 5 has the details."
+                },
+                {
+                  "label": "Warm up like it matters",
+                  "detail": "Ten to twenty minutes building from easy spinning through a few short accelerations, finishing just before the first effort. The first interval of an unwarmed session is a lie: legs that aren't open yet report the wrong RPE and produce the wrong power."
+                }
+              ]
             },
             {
               "type": "prose",
+              "content": "Power is the primary target; heart rate is the cross-check. If you're HR-based, your zones are a percentage of threshold HR — not max HR. On a hot or fatigued day, trust HR over the number on the screen."
+            }
+          ]
+        },
+        {
+          "id": "ch4-the-big-three",
+          "title": "Executing the Big Three",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Almost every session in a road plan is one of three species. Each has its own execution rules, and its own signature way of going wrong:"
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Threshold sessions (e.g., 3×15 min at 93-105% FTP)",
+                  "content": "The workhorse of road fitness — the intensity where long climbs and group splits are decided. Execution: settle into the effort over the first minute, then hold power steady and cadence comfortable. It should feel hard but governed; you're a diesel, not a firework.\n\n**How it goes wrong:** starting each rep 20 watts hot and bleeding power from minute five. A threshold rep that fades below zone isn't threshold training — it's expensive tempo. If you can't hold the target, the target is wrong for today: drop 5-10 watts and finish the set properly."
+                },
+                {
+                  "title": "VO2max sessions (e.g., 5×4 min at 106-120% FTP)",
+                  "content": "Short, brutal, and the most honest work you'll do. The goal is accumulated time near maximal oxygen uptake, which means the reps only count if you're genuinely deep in them — breathing like the air owes you money by halfway.\n\n**How it goes wrong:** two ways. Pacing rep one like a sprint and dying by rep three; or protecting yourself so well that no rep ever gets truly hard. Start each rep strong but repeatable, and expect the last one to require an argument with yourself. Full recoveries between reps aren't laziness — they're what makes the next rep count."
+                },
+                {
+                  "title": "Endurance rides (zone 2, most of your hours)",
+                  "content": "The easiest workout to describe and the hardest to leave alone. Execution: conversational effort, stable power, cadence relaxed, ego switched off. On a long endurance ride your only quality metrics are time in zone and how boring you managed to keep it.\n\n**How it goes wrong:** drift. Every hill becomes a small test, every rider ahead becomes a rabbit, and the ride files as tempo. If your endurance rides keep averaging above zone 2, do them alone, on flatter roads, or indoors until the discipline sticks."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "The first rep should feel too easy. That's not a flaw in the plan — it's what correct pacing feels like from inside. Intervals are graded on the last rep, and the last rep is bought with restraint in the first."
+            }
+          ]
+        },
+        {
+          "id": "ch4-autoregulation",
+          "title": "Green, Yellow, Red",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Plans are written for the average week; you ride them in specific ones. Autoregulation is the skill of adjusting honestly — neither soft-pedaling every session that feels hard (they're supposed to) nor bulldozing through genuine warning signs. A simple traffic-light check before quality sessions: **Green** — slept fine, legs normal, motivation ordinary or better: execute as written. **Yellow** — one system complaining (short sleep, heavy legs, elevated stress): start the session, reassess after rep one, and be willing to drop the last rep or 5-10 watts. **Red** — multiple signals at once (bad sleep and elevated resting heart rate and dread at the sight of the bike): swap to easy endurance or rest. The workout will still exist on Thursday."
+            },
+            {
+              "type": "scenario",
+              "prompt": "It's Tuesday: 3×15 minutes at threshold on the plan. You slept five hours, work was a wreck, and your resting heart rate is up 8 bpm over baseline. What's the call?",
+              "options": [
+                {
+                  "label": "Execute as written — consistency is everything",
+                  "response": "This is how holes get dug. Every signal says your body is still paying for yesterday; stacking a threshold session on top buys low-quality reps at double the recovery price, and probably wrecks Thursday too. Consistency means weeks and months, not never adjusting a Tuesday."
+                },
+                {
+                  "label": "Swap to 60-90 minutes of genuinely easy riding",
+                  "response": "Right call. Multiple red signals — short sleep, high stress, elevated resting HR — mean recovery is the productive choice. An easy spin keeps the rhythm and blood flow without adding a debt. The threshold session moves, it doesn't vanish, and Thursday-you inherits legs that can actually do it."
+                },
+                {
+                  "label": "Do the session but drop the targets 10 watts",
+                  "response": "Reasonable on a yellow day; optimistic on this one. With this many signals stacked up, even a discounted threshold session mostly deepens the hole. Save the discount strategy for a single-signal day — today, the smart money is on easy."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Then there's the other adjustment problem: the week that shrinks. Meetings metastasize, kids get sick, and the 8-hour plan meets a 4-hour reality. The rule: **protect intensity when time is short, protect the long ride when the shortage is chronic.** Select your rider type for what that looks like in practice:"
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "When your already-small week shrinks, protect the long ride above all — it's the one session your finish depends on. Everything else can compress to 30-45 minute easy spins whose only job is keeping the habit alive. Do not respond to a lost week by doubling the next one; on low volume, a spike is an injury with a date on it."
+                },
+                "finisher": {
+                  "content": "One-off crunch week: keep the quality session and the long ride, drop the easy rides, and don't mourn them. If the long ride has to shrink too, cut it by a third rather than skipping it. Chronic crunch — several tight weeks in a row: keep the long ride, alternate which second session survives, and downgrade the plan's ambitions honestly rather than failing a bigger plan weekly."
+                },
+                "sharp-end": {
+                  "content": "You lose the least fitness by keeping both quality sessions and sacrificing easy volume — a 12-hour week compressed to 7 with intensity intact holds surprisingly well for a few weeks. What you may not do is convert easy rides into extra intensity to 'make up' the load. Two quality days stays two, however small the week gets."
+                },
+                "racer": {
+                  "content": "Short weeks are when discipline pays: hold the two intensity days at full quality, shrink volume days without guilt, and treat the long ride as droppable once — not twice. If the compression runs longer than two weeks, re-plan the block rather than improvising; a coherent smaller block beats a shredded bigger one every time."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch4-indoors",
+          "title": "Indoors Counts",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The trainer is the most time-efficient interval venue you own: no junctions, no coasting, no traffic-shaped excuses between you and the target. A few realities to respect. Cooling is performance — without a serious fan, your heart rate climbs and your power sags for reasons that have nothing to do with fitness. Indoor and outdoor power can read a few watts apart depending on your setup; keep your test conditions consistent with your training conditions and the zones stay honest. And erg mode is a superb servant and a poor master: excellent for locking in threshold work, worth switching off for VO2max sessions, where fighting for the power is part of the training effect."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Indoor sessions can run shorter than their outdoor equivalents at equal training effect — no coasting means every minute is load-bearing. A focused 60-minute trainer session replaces a 90-minute outdoor window with change left over. On dark weeks, that arithmetic is a gift."
+            }
+          ]
+        },
+        {
+          "id": "ch4-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Two to three quality days a week is plenty for most road athletes. Keep hard days hard and easy days genuinely easy. The plan controls how much time you spend in each zone; your only job is to hit the prescribed zone when the workout calls for it."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "Rep two of five VO2max intervals, and your power is 15% above target — you feel great. What should you do?",
+              "options": [
+                {
+                  "text": "Keep riding at whatever feels strong — more power means more fitness",
+                  "correct": false
+                },
+                {
+                  "text": "Rein it back toward the target so reps four and five can still be completed at quality",
+                  "correct": true
+                },
+                {
+                  "text": "Abandon the remaining reps — you've clearly already achieved the training effect",
+                  "correct": false
+                }
+              ],
+              "explanation": "VO2max sessions are scored on accumulated quality time across the whole set, and feeling heroic on rep two is the oldest trap in interval training. Overshooting early is how rep four becomes a surrender. Ride to the target, bank the full set, and if the last rep still feels strong — that's what re-testing FTP is for."
+            },
+            {
+              "type": "prose",
+              "content": "Execution turns a plan into fitness. The other half of every long-day equation is fuel — the tank that decides whether hour five gets to use the engine you built. That's [Chapter 5](/guide/fueling-for-the-distance/)."
             }
           ]
         }
@@ -130,7 +1183,6 @@
       "sections": [
         {
           "id": "fueling-for-the-distance-main",
-          "title": "Fueling for the Distance",
           "blocks": [
             {
               "type": "prose",
@@ -138,11 +1190,267 @@
             },
             {
               "type": "prose",
+              "content": "Fueling has a property no other race-day factor shares: it fails on a delay. The under-fueled first hour feels fine — better than fine, you're fresh and the pace is easy. The invoice arrives at hour four, when the glycogen is gone, the pack surges, and no amount of willpower converts body fat into a threshold effort. Everything in this chapter exists to keep you off that invoice."
+            }
+          ]
+        },
+        {
+          "id": "ch5-carb-math",
+          "title": "The Carb Math",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Your body stores roughly enough glycogen for 90 or so minutes of hard riding, and a long fondo asks for several times that. The difference has to come through your mouth, on schedule, starting early — not when you feel empty, because by the time you feel it, you're already an hour behind. The targets scale with duration and intensity:"
+            },
+            {
+              "type": "data_table",
+              "caption": "Carbohydrate Targets by Ride",
+              "headers": ["Ride", "Carbs per hour", "Notes"],
+              "rows": [
+                ["Easy ride under 90 minutes", "0-30 g", "Stored glycogen covers it. Coffee optional but traditional"],
+                ["Endurance ride, 2-4 hours", "40-60 g", "Steady drip from the first hour — this is also where you practice race fueling"],
+                ["Hard training day / B-event", "60-90 g", "Race rehearsal territory: exact products, exact schedule, full dress"],
+                ["A-event, 4+ hours at race effort", "80-90+ g", "The full program. Only sustainable if the gut has been trained for it — see below"]
+              ]
+            },
+            {
+              "type": "hero_stat",
+              "value": "90",
+              "unit": "g/hr",
+              "context": "The upper end of race-day carbohydrate targets. A trained gut absorbs it comfortably; an untrained one files a formal protest around hour three."
+            },
+            {
+              "type": "calculator",
+              "calculator_id": "workout-fueling",
+              "title": "Workout Fueling Calculator",
+              "description": "Plan your fueling based on workout duration and intensity.",
+              "inputs": [
+                {
+                  "id": "wf-duration",
+                  "label": "Duration (hours)",
+                  "type": "number",
+                  "placeholder": "e.g., 4",
+                  "min": 0.5,
+                  "max": 24
+                },
+                {
+                  "id": "wf-intensity",
+                  "label": "Intensity",
+                  "type": "select",
+                  "options": [
+                    {
+                      "value": "z2",
+                      "label": "Z2 Easy"
+                    },
+                    {
+                      "value": "tempo",
+                      "label": "Tempo"
+                    },
+                    {
+                      "value": "race",
+                      "label": "Race Pace"
+                    },
+                    {
+                      "value": "high",
+                      "label": "High Intensity"
+                    }
+                  ]
+                }
+              ],
+              "output_fields": [
+                {
+                  "id": "total-carbs",
+                  "label": "Total Carbs"
+                },
+                {
+                  "id": "fuel-rate",
+                  "label": "Fueling Rate"
+                },
+                {
+                  "id": "hydration",
+                  "label": "Hydration"
+                },
+                {
+                  "id": "gels",
+                  "label": "Carry"
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Where the grams come from matters less than that they arrive on schedule. Drink mix, gels, chews, rice cakes, the fig rolls your grandmother would recognize — all valid. The practical pattern for most riders: a carbohydrate drink covering a baseline, topped up with solid or gel calories on a timer (every 20-30 minutes), shifting toward liquids and gels as intensity rises and the stomach gets pickier."
+            }
+          ]
+        },
+        {
+          "id": "ch5-gut-training",
+          "title": "Training the Gut",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Your gut is trainable. Practice race-day fueling on your long rides — the exact gels, drink mix, and real food you'll use — so race day is a rehearsal, not an experiment. A stomach that's never seen 80g/hr will reject it when you need it most."
             },
             {
               "type": "prose",
+              "content": "Gut training works like any other training: progressive overload, applied politely. The absorption machinery — transporters, gastric emptying, the gut's general willingness to cooperate at threshold heart rates — adapts to what you practice. Which means the long ride is doing double duty: building the engine and teaching the fuel system that feeds it."
+            },
+            {
+              "type": "timeline",
+              "title": "A Four-Week Gut Progression",
+              "steps": [
+                {
+                  "label": "Week 1 — Baseline",
+                  "content": "On your long ride, fuel at a comfortable 40-50 g/hr with products you already trust. Note what your stomach says in the final hour — that's your starting point, not your ceiling."
+                },
+                {
+                  "label": "Week 2 — Nudge",
+                  "content": "Raise the rate 10-15 g/hr. Set a timer and eat on it, not on appetite: hunger is a lagging indicator and comfort is a trailing one. Mild fullness is normal; actual distress means back off one step."
+                },
+                {
+                  "label": "Week 3 — Race products, race timing",
+                  "content": "Switch entirely to your event-day lineup — the exact mix, gels, and solids, at the exact planned schedule. If the event publishes what's at its feed stations, audition those products now."
+                },
+                {
+                  "label": "Week 4 — Dress rehearsal",
+                  "content": "Full race fueling at race-adjacent intensity, ideally in a B-event or hard group ride. If 80-90 g/hr survives a hard four hours in training, race day is arithmetic instead of adventure."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Nothing new on race day. Not the flavor, not the brand, not the interesting gel a stranger hands you at a feed zone with kind eyes and unknown ingredients. Your gut's trust is earned in training and spent on race day — it does not extend credit."
+            }
+          ]
+        },
+        {
+          "id": "ch5-hydration",
+          "title": "Hydration and Sodium",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Hydrate to thirst plus a plan: know your sweat rate, carry enough, and don't forget sodium on hot days. Start fueling early, before you feel empty — by the time you're hungry, you're already behind."
+            },
+            {
+              "type": "prose",
+              "content": "The plan part is simple to build. Weigh yourself before and after a representative ride, add back what you drank, and you have a personal sweat rate — most riders land somewhere around one bottle to two per hour depending on heat and effort. Sodium scales with the same weather: what a mild-day drink mix covers on its own needs deliberate supplementing when it's properly hot, especially if your kit dries with white edges. Practical fondo notes: know the distance between feed stations and do the bottle math before the start; on mountain courses remember that an hour-long climb in the sun can quietly drink both your bottles before the summit — arrive at the base full."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Dehydration and bonking impersonate each other — both present as fading power and a bad attitude. Diagnose by inventory: when did you last eat, when did you last drink, and which one is overdue? The fix only works if it matches the failure."
+            }
+          ]
+        },
+        {
+          "id": "ch5-race-day",
+          "title": "Race Day: The Moving Picnic",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "A gran fondo feed zone is a beautiful piece of chaos: tables of food, hundreds of riders arriving at speed with strong opinions about banana halves. It rewards a plan. Ride past the first tables (that's where everyone stops), slow down properly, take what your plan says rather than what looks exciting, and get rolling — thirty seconds of standing still costs little, but five minutes of browsing adds up across four stations. Better yet, decide in advance which stations you'll actually use: carrying your first two hours of fuel from the start means the early zones are optional, and skipping a crowded one becomes a tactical gift instead of a crisis."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Before the start",
+                  "detail": "Familiar breakfast, ~3 hours out, heavy on carbs you've tested. Bottles mixed, pockets loaded with hours one and two. Nothing new, nothing clever."
+                },
+                {
+                  "label": "First hour",
+                  "detail": "Adrenaline suppresses appetite exactly when the pace is fastest — eat by the clock anyway. The first missed feed is the cheapest one to prevent and the most expensive one to repay."
+                },
+                {
+                  "label": "Feed zones",
+                  "detail": "Plan which stations you use, roll past the first tables, grab, go. Refill sodium in the heat. Check bottle math against the distance to the next station before leaving."
+                },
+                {
+                  "label": "The final hour",
+                  "detail": "If fueling has gone right, this is where it pays — keep drip-feeding fast carbs even when the stomach votes no. If it's gone wrong, downshift the plan: liquid calories, easier gear, and get to the line."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Duration changes the problem. A four-hour fondo at race effort is a pure high-rate carb exercise — gels and mix, minimal chewing, no drama. A seven-plus-hour mountain day is a logistics problem wearing a nutrition costume: your stomach will want real food by mid-afternoon, feed stations become load-bearing, and the difference between a good day and a death march is usually a sandwich eaten at the right col. At the far end of the scale, an event like the [Mallorca 312](/race/mallorca-312/) is closer to catering management than sports nutrition — which is precisely why the long-ride rehearsals matter."
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "Your race is longer than the winners' — possibly by hours — so your fueling problem is bigger than theirs, not smaller. Plan for time-on-course, not distance: more total carbs, more real food, and use every feed station; with your time budget, skipping stops saves less than fading does. Practice eating on the bike anyway, because the autobus doesn't wait forever either."
+                },
+                "finisher": {
+                  "content": "Target 60-80 g/hr, built up through the gut progression above, with the first two hours carried from the start. Your biggest risk is the classic one: feeling great early, skipping feeds, and paying at hour four. Set the timer, obey the timer, and treat the last feed station before the final climb as mandatory even if the bottles feel heavy."
+                },
+                "sharp-end": {
+                  "content": "You're riding at intensities where chewing is a liability — bias hard toward drink mix and gels at 80-90 g/hr, and rehearse taking feeds at speed, because your groups won't pause. Decide pre-race which stations you can afford to use without losing your group, and load pockets accordingly. Your fueling errors will look like tactical errors: the gap you couldn't close at hour five was usually a gel you skipped at hour three."
+                },
+                "racer": {
+                  "content": "Fueling is part of your race plan, not a support function: 90+ g/hr if your gut is trained for it, mapped against the course — top up ahead of decisive sectors so the matches have something behind them. Bottle logistics get planned like tactics (which stations, which pockets, what's droppable). You already know all this; the difference at your level is that everyone's legs are good, and the podium often goes to the least-empty tank."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch5-when-it-goes-wrong",
+          "title": "When It Goes Wrong",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Even good plans meet bad days. The failures are predictable, which means the responses can be too:"
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "The bonk, mid-ride",
+                  "content": "Power fades, hills grow, and the world becomes unreasonable — classic glycogen depletion. Triage: slow down immediately, get fast-acting carbs in (drink mix, gel, regular cola at a feed station — the rare exception to the nothing-new rule), and give it 20-30 minutes of easy riding to take effect. You can usually ride out of a mild bonk if you catch it early; a deep one sets your ceiling at 'survival pace' for the rest of the day. The real fix happened three hours earlier, or didn't."
+                },
+                {
+                  "title": "GI distress",
+                  "content": "Sloshing, cramping, or outright rebellion — usually from exceeding your trained absorption rate, heavy solids at high intensity, or heat. Back the intensity off a notch, switch to plain water for 20-30 minutes to let the backlog clear, then resume fueling gently with liquids only. Prevention is the gut progression above; the riders who suffer most on race day are usually the ones who fueled hardest with the least practice."
+                },
+                {
+                  "title": "Cramping",
+                  "content": "The honest answer is that cramp science is unsettled — but the practical pattern is consistent: cramps track with unaccustomed intensity and duration, heat, and depletion. Immediate response: reduce the effort, stretch the complaining muscle briefly, take in fluids, sodium, and carbs together, and restart gently. Long-term response: train the durations and intensities the event actually demands, so race day isn't your body's first exposure to them."
+                },
+                {
+                  "title": "The brutally hot day",
+                  "content": "Heat raises your sweat rate, suppresses appetite, and makes solids unappealing — a triple tax exactly when the fueling matters most. Shift the plan liquid: more mix, more sodium, cold fluids whenever available, and pour water over your neck at feed zones rather than skipping them to save time. Pace expectations shift too — the fit rider who adjusts early beats the fitter one who negotiates with thermodynamics."
+                }
+              ]
+            },
+            {
+              "type": "knowledge_check",
+              "question": "Three hours into a five-hour fondo, your power is fading and your mood has turned philosophical. You last ate 90 minutes ago. What's the move?",
+              "options": [
+                {
+                  "text": "Push through — fading late in a long ride is normal and mostly mental",
+                  "correct": false
+                },
+                {
+                  "text": "Ease off, take in fast-acting carbs now, and ride gently for 20-30 minutes while they land",
+                  "correct": true
+                },
+                {
+                  "text": "Stop eating entirely — your stomach clearly isn't absorbing anything anyway",
+                  "correct": false
+                }
+              ],
+              "explanation": "Fading power plus a 90-minute fueling gap is a bonk announcing itself, and the window to catch it is now. Fast carbs plus reduced effort lets absorption catch up before the deficit gets structural. 'Pushing through' a fuel deficit isn't toughness — it's converting a recoverable dip into a fixed ceiling for the rest of your day."
+            }
+          ]
+        },
+        {
+          "id": "ch5-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Fueling is the most trainable, most controllable, most frequently botched variable in long-distance road riding. The numbers are known, the gut adapts on schedule, and every element can be rehearsed for weeks before it matters. Do the rehearsals and race day becomes arithmetic.\n\nWith the engine built and the tank managed, what's left is the part of road racing no other discipline has: the pack. [Chapter 6](/guide/pack-skills-and-tactics/) is the chapter this guide exists for."
             }
           ]
         }
@@ -159,7 +1467,6 @@
       "sections": [
         {
           "id": "pack-skills-and-tactics-main",
-          "title": "Pack Skills & Race Tactics",
           "blocks": [
             {
               "type": "prose",
@@ -167,11 +1474,246 @@
             },
             {
               "type": "prose",
-              "content": "In a crosswind the shelter sits diagonally behind and to the leeward side — that's an echelon, and when the road tilts into the wind, the front splits into groups. Know which way the wind comes from, fight for the front before the exposed section, and never get caught in the gutter."
+              "content": "This is the chapter with no equivalent in any other cycling discipline, and the one that separates road results from road fitness. Two riders with identical engines can finish twenty minutes apart on the same fondo course, and the difference is everything below: where they sat, when they moved, what they spent, and what they got for free. None of it requires talent. All of it requires practice and attention — which is good news, because those are cheaper than watts."
+            }
+          ]
+        },
+        {
+          "id": "ch6-drafting",
+          "title": "The Physics of Free Speed",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "At road speeds, most of your power is spent pushing air out of the way — and a rider in front of you has already done it. Sitting in a good draft cuts your energy cost by a quarter to a third at pace, more in a big group. There is no training adaptation, no equipment purchase, and no diet that returns anything close. The draft is the single largest performance lever in the sport, and it's sitting there, free, behind the person ahead of you."
             },
             {
               "type": "prose",
+              "content": "Using it well is a skill with specific mechanics. **Distance:** 30-60cm off the wheel — close enough that the shelter is real, far enough that a surprise doesn't become a crash. **Eyes:** look through the rider ahead to the front of the group; their body will telegraph what the road is about to do, and you'll respond a half-second earlier and a lot smoother. **Speed matching:** soft-pedal and feather the brakes while still pedaling; every hard brake in a pack sends a shockwave backwards that arrives at the tenth rider as a slammed stop. And mind the wind angle — the shelter sits directly behind only in a dead headwind. Any crosswind slides it diagonally, and finding it is the difference between resting and merely following."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Never overlap your front wheel with the rear wheel ahead. If that rider drifts sideways — and they will, eventually, innocently — the contact takes *you* down, not them. Overlap is the cardinal sin of pack riding, and nearly every 'mystery' crash in a fondo group starts with it."
+            }
+          ]
+        },
+        {
+          "id": "ch6-bunch-craft",
+          "title": "Bunch Craft",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "A good pack rider is above all **predictable** — smooth lines, gradual changes, no surprises. Predictability isn't just etiquette; it's what allows everyone around you to ride closer, save more energy, and trust you with their front wheel. The specific skills:"
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Holding a wheel",
+                  "content": "Your job is constant, small corrections — a soft-pedal here, a touch of brake while pedaling there — so the gap stays steady without drama. If a gap opens, close it gradually; sprinting into it wastes the exact energy the draft was saving and usually ends with you braking hard at the wheel you chased."
+                },
+                {
+                  "title": "Braking in company",
+                  "content": "Feather, never grab. In a pack your braking budget is whatever the rider behind you can absorb — brake early and gently rather than late and hard, and keep pedaling lightly while you do it so your body language doesn't scream panic. If you need real braking, drift slightly to one side first so the rider behind inherits space instead of your rear wheel."
+                },
+                {
+                  "title": "Standing up on climbs",
+                  "content": "When you stand, your bike kicks backwards half a wheel — straight into the front wheel of whoever's on you. The fix: shift up a gear and apply pressure on the pedals *as* you rise, keeping the bike's speed constant. Practice it on solo climbs until it's automatic; in a fondo bunch on the first col, it will matter within minutes."
+                },
+                {
+                  "title": "Signals and pointing",
+                  "content": "In a group, the riders behind can't see the pothole, the parked car, or the glass — you are their eyes. Point at hazards, indicate slowing with a flat palm, and pass signals backwards. Groups that communicate ride faster and crash less, and the habit costs nothing."
+                },
+                {
+                  "title": "Eating and drinking at speed",
+                  "content": "Wait for calm road — no corners, no climbs imminent — drop to the back of your group if you're not confident, and keep your eyes up while reaching for bottles. Chapter 5's fueling plan only works if the mechanics of eating in a pack are second nature, so rehearse them on group rides, not on race day."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "All of this is practicable before race day. Ride the local chaingang, sit in different positions, practice touching your brakes less each lap. The riders who look effortless in a bunch aren't relaxed because they're confident — they're confident because these mechanics stopped requiring thought years ago."
+            }
+          ]
+        },
+        {
+          "id": "ch6-shape-of-the-day",
+          "title": "The Shape of the Day",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Every mass-start road event runs on roughly the same script. Knowing the acts in advance turns chaos into schedule — you stop reacting to the race and start recognizing it:"
+            },
+            {
+              "type": "timeline",
+              "title": "Anatomy of a Fondo",
+              "steps": [
+                {
+                  "label": "The start surge",
+                  "content": "The first 30-60 minutes are the fastest and most nervous of the day: fresh legs, big adrenaline, everyone convinced their fondo is won before the first climb. Your job is position without panic — hold your zone discipline, stay near the front third of your group, and let the heroes go. Most of them are deposits you'll collect at hour four."
+                },
+                {
+                  "label": "The settle",
+                  "content": "Groups sort themselves by pace and the road quiets. This is where you audit: right group? Fueling on schedule? Matches still in the box? The settle is also the cheapest place to fix position — moving up now costs a fraction of what it will cost when the road decides things."
+                },
+                {
+                  "label": "The decisive terrain",
+                  "content": "Every course has a stretch where the result gets written: the long col, the crosswind plain, the chain of bergs. You know where it is from the route map — arrive at the front of your group, fueled, and expect the pace to lie just above comfortable for longer than you'd like."
+                },
+                {
+                  "label": "The selection",
+                  "content": "Groups shatter and reform. The decision here is honest arithmetic, not pride: hold a wheel that's 5% too fast and you'll be dropped anyway in twenty minutes, having paid full price for the privilege. Sometimes the smart ride is letting a group go and forming the next one."
+                },
+                {
+                  "label": "The run-in",
+                  "content": "The final stretch rewards whoever saved something. Rotate honestly with what's left of your group, spend the last matches on the final climb or the last kilometres, and remember the day's actual goals — a strong finish photo is fine; the clock is finer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch6-positioning",
+          "title": "Position Is a Budget",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "In any moving group there is one iron rule: **drifting backwards is free and constant; moving up always costs.** Do nothing and the pack slowly digests you toward the back. Which means positioning isn't a one-time decision — it's a small, continuous spend, and the skill is spending at the right times. The front third of the group is the good neighborhood: full draft, clear sight lines, first news of every attack and pothole, and insulation from the concertina effect that makes the back of a big group surge and brake like a whip being cracked."
+                },
+            {
+              "type": "prose",
+              "content": "The timing rule does most of the work: **move up before the road gets decisive, not during.** Before the climb, before the narrow section, before the crosswind turn, before the feed zone. Moving up on calm road costs a handful of watts along the side of the group; moving up when the race has already exploded costs a match you'll want later — if it's possible at all. Study the route the night before and you already know your move-up points; everyone else is discovering them in real time."
+            },
+            {
+              "type": "prose",
+              "content": "Big-field fondos sharpen all of this. When thousands of riders hit a course with a decisive early climb, the fight for position starts well before the gun — which start pen you qualify for, where you stage inside it, how you ride the neutral roll-out. An event like the [Quebrantahuesos](/race/quebrantahuesos/) turns the first approach into a positioning exam: the riders who treat the opening valley as a rest are the ones who meet the first col from 400 wheels back, where every surge is amplified and the climb starts twice as hard as it needed to."
+            },
+            {
+              "type": "scenario",
+              "prompt": "Ten kilometres ahead, the route turns left onto an exposed plain with a hard crosswind from the right. You're sitting comfortably mid-pack, about 40 wheels back. What's the move?",
+              "options": [
+                {
+                  "label": "Stay put — mid-pack is sheltered, and moving up burns energy you'll want later",
+                  "response": "Sheltered until the turn, then trapped. When the echelon forms it will hold maybe the first 20-30 riders; everyone behind lands in the gutter, single-file, taking full wind for the length of the plain. The energy you saved staying put is a fraction of what the gutter is about to charge you."
+                },
+                {
+                  "label": "Move up progressively now, aiming for the first 15-20 wheels before the turn",
+                  "response": "Correct — and this is exactly why you studied the route. Moving up on calm sheltered road costs a small, budgeted effort; being at the front when the road turns means you're *in* the echelon instead of queuing behind it. Ten kilometres is the right runway: gradual, along the protected side, no sprinting required."
+                },
+                {
+                  "label": "Sprint to the very front at the turn itself, when it's clearly about to matter",
+                  "response": "Half right, fully late. By the turn, forty other riders have had the same idea, the pace is already rising, and the move now costs a genuine match — a violent, wind-exposed effort straight into the hardest section of the course. Same destination as the smart move, at five times the price."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "In a crosswind the shelter sits diagonally behind and to the leeward side — that's an echelon, and when the road tilts into the wind, the front splits into groups. Know which way the wind comes from, fight for the front before the exposed section, and never get caught in the gutter."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Read the wind before the start: flags, trees, which way the clouds move. A crosswind section is marked on no course profile, but it decides fondos as surely as any col — and unlike the col, you can't see it coming from the road."
+            }
+          ]
+        },
+        {
+          "id": "ch6-corners-descents",
+          "title": "Corners and Descents in Company",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Cornering well in a group is mostly cornering well, plus manners. The mechanics:"
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Brake before, not during",
+                  "detail": "All meaningful braking happens on the straight, while upright. Braking mid-corner stands the bike up and sends you wide — into the rider beside you."
+                },
+                {
+                  "label": "Outside-inside-outside, if the road is yours",
+                  "detail": "In a group it often isn't — so the real rule is: hold your line. Riders around you are betting on your predictability, not your racing line."
+                },
+                {
+                  "label": "Look through the exit",
+                  "detail": "The bike goes where your eyes go. In a group, look past the corner to where the pack is going, not at the wheel in front — target fixation on a wheel follows its mistakes."
+                },
+                {
+                  "label": "Power on smoothly at the exit",
+                  "detail": "Corners are where packs stretch. The riders who exit already pedaling close the gap for free; the ones who coast and then sprint pay for the same distance in matches. Corner exits are the quietest big drain in racing."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Descending in a group adds one rule to everything above: **space multiplies.** Following distances that are polite at 40 km/h are reckless at 70 — open the gap to several bike lengths, never overlap through corners, and let braking start earlier than solo instinct suggests. Take your own lines at your own limit, and let faster descenders past without defending anything: a fondo descent is transit, not a contest, and the seconds available are small next to the consequences. If big-mountain descending isn't yet a skill you trust, treat it as a training item — ride your local descents solo, deliberately, until smooth is boring. On an alpine course, descending skill returns whole minutes and costs zero watts; it's the cheapest speed in Chapter 6."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Cold changes descents. A 30-minute alpine descent after a sweaty hour-long climb is its own weather system — pack a light shell for any course with real altitude, and put it on at the summit even when the valley was warm. Shivering hands brake badly."
+            }
+          ]
+        },
+        {
+          "id": "ch6-matches",
+          "title": "The Matchbook",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Spend your matches deliberately. Move up before climbs and corners, not during them; cover the moves that matter and let the rest go. The strongest rider doesn't always win — the one who wastes the least energy getting to the finish does."
+            },
+            {
+              "type": "prose",
+              "content": "A match is any effort hard enough that you can't repeat it indefinitely — closing a real gap, cresting a berg with the group, the move-up before the col. You have a finite book of them, the number is set by your training (Chapter 3), and no display on your head unit shows how many are left. What burns them wastefully is almost always the same list: surging when the pack surges instead of letting elastic gaps close naturally, pulling on the front of a big group out of politeness, chasing every acceleration on a climb instead of riding your own pace back up to the group over the top. What they're *for* is the short list of moments that decide your day — and you already know where those are, because you read the course."
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "Your tactical book is thin, so the strategy is beautiful in its simplicity: spend almost nothing. Ride the start surge like it's someone else's race, join a group that's genuinely sustainable, and let every hero move go. Your matches are reserved for exactly two things — staying with your bus when the road pinches, and the last hour. The autobus finishes because it refuses to race anyone before it has to."
+                },
+                "finisher": {
+                  "content": "You have a few matches and one goal: finish strong. Spend them on position before the decisive terrain and on staying with a good group through the selection — never on the front of a big bunch doing unpaid labor into the wind. If you finish having burned your last match on the final climb rather than at hour two closing a gap that didn't matter, you played it right."
+                },
+                "sharp-end": {
+                  "content": "Your race is decided at two or three moments you can name in advance, and your book exists for those. The discipline is refusal: every surge you don't chase, every pull you skip in a group that's working fine without you, is a match carried forward to the berg or the col where the front of the fondo actually forms. Ride the decisive sections from the front, commit fully when you commit, and be honest when a selection is above your ceiling — the second group ridden well beats the first group ridden briefly."
+                },
+                "racer": {
+                  "content": "You already run match accounting; the fondo-specific note is field scale. A thousand-rider event makes the pre-decisive positioning more expensive and more mandatory than a cat race — budget more of the book for it. Otherwise the classics rules apply: never work for free in a group with sprinters aboard, make your efforts decisive rather than demonstrative, and if you're targeting a UCI Gran Fondo qualifier, remember the age-group race inside the race — the wheels that matter to you may not be the ones on the front."
+                }
+              }
+            },
+            {
+              "type": "knowledge_check",
+              "question": "Halfway through a fondo, your group of 25 is working steadily. A strong-looking pair attacks off the front. Nobody chases. What's your play?",
+              "options": [
+                {
+                  "text": "Jump across immediately — never let a strong move go",
+                  "correct": false
+                },
+                {
+                  "text": "Stay with the group and keep your rhythm — two riders up the road change nothing about your race",
+                  "correct": true
+                },
+                {
+                  "text": "Go to the front and pull the group up to them — someone has to take responsibility",
+                  "correct": false
+                }
+              ],
+              "explanation": "In a fondo you're racing the clock and your own day, not a points system — two riders up the road take nothing from you. Jumping across costs a real match for zero return, and towing 25 riders around is charity with your matches as the donation. The move that serves your result is the boring one: rhythm, draft, fuel, and the front third of a group that's working."
+            }
+          ]
+        },
+        {
+          "id": "ch6-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Pack craft is a fitness multiplier: every skill in this chapter makes the engine you built in Chapter 3 worth more on the road. Ride predictably, live in the front third, move before it matters, descend like an adult, and guard the matchbook like it's the last one in the house — because from hour four onwards, it is.\n\nAll of it assumes you arrive at the start line fresh enough to use it. Making sure of that is [Chapter 7](/guide/race-week/)."
             }
           ]
         }
@@ -188,7 +1730,6 @@
       "sections": [
         {
           "id": "race-week-main",
-          "title": "Race Week",
           "blocks": [
             {
               "type": "prose",
@@ -196,11 +1737,228 @@
             },
             {
               "type": "prose",
-              "content": "Dial the logistics: know the route profile, the feed zones, the weather, and your pacing plan before you pin a number. Lay out kit and nutrition the night before. The calmer the morning, the better the day."
+              "content": "Race week has a strange emotional physics: the less there is to do, the more the mind invents. Doubt fills the hours that training used to occupy, and the classic response — a reassuring hard ride on Wednesday, just to check the legs still work — is how months of preparation get discounted at the last minute. This chapter is the antidote: a schedule for the legs, a checklist for the logistics, and a script for the morning, so the only improvisation left on race day is the racing."
+            }
+          ]
+        },
+        {
+          "id": "ch7-taper",
+          "title": "The Taper, Day by Day",
+          "blocks": [
+            {
+              "type": "timeline",
+              "title": "The Final Seven Days",
+              "steps": [
+                {
+                  "label": "Days 7-5 — Volume drops",
+                  "content": "Rides shrink to 60-75 minutes, mostly easy, one with a few short efforts at race intensity to keep the systems awake. The 40-60% volume cut starts here. Sleep gets promoted to a training session — the adaptation you're waiting on happens there."
+                },
+                {
+                  "label": "Day 4 — The dead-leg trough",
+                  "content": "For many riders this is the worst-feeling day of the week: heavy, flat, vaguely insulted legs. It's the fatigue leaving, not the fitness. Do not schedule anything hard today, and above all don't test anything — there's nothing to learn and plenty to spend."
+                },
+                {
+                  "label": "Day 3 — Easy spin, bike check",
+                  "content": "A short, genuinely easy ride, then the mechanical once-over (below) — three days out, so there's still time for a shop to fix what you find. Race wheels and race tires go on now, not the night before."
+                },
+                {
+                  "label": "Day 2 — Openers or rest",
+                  "content": "Either a full rest day or a short spin with two or three 90-second builds to race effort — whichever your legs historically prefer the day before the day before. Start the carbohydrate emphasis at meals. Hydrate normally, not heroically."
+                },
+                {
+                  "label": "Day 1 — Short openers, long logistics",
+                  "content": "20-40 minutes with a handful of short, sharp efforts — enough to keep the legs snappy, nowhere near enough to fatigue. Then the boring victories: kit laid out, pockets pre-loaded, bottles mixed, number pinned, alarm set, everything downstairs by the door. Dinner is familiar, carb-forward, and unheroic."
+                },
+                {
+                  "label": "Race morning",
+                  "content": "Scripted below. If yesterday's list got done, today has exactly one job."
+                }
+              ]
+            },
+            {
+              "type": "scenario",
+              "prompt": "It's Wednesday before Sunday's fondo. Your legs felt dead on today's easy spin and panic is whispering that the fitness is gone. What do you do?",
+              "options": [
+                {
+                  "label": "A proper 2×20 threshold session to confirm the fitness is still there",
+                  "response": "The most expensive reassurance available. The fitness is fine — it's under a layer of clearing fatigue, which is exactly what mid-taper legs feel like. A hard Wednesday session buys you one good feeling and sells your Sunday freshness to pay for it. This is the single most common taper error in amateur racing."
+                },
+                {
+                  "label": "Trust the plan: keep the rides short and easy, let the week do its work",
+                  "response": "Correct. Dead legs on day three or four of a taper are the system working — fatigue clears before form arrives, and the gap between them feels terrible. The confirmation you're craving comes from tomorrow's openers feeling a little better, and race-morning adrenaline finishing the job."
+                },
+                {
+                  "label": "Take the rest of the week completely off the bike, just to be safe",
+                  "response": "Overcorrection. Total shutdown for four-plus days tends to produce the opposite problem — stale, sluggish legs that need an hour of racing to wake up. The short spins and openers exist precisely to keep the machinery ticking over while the fatigue drains. Easy is the target; zero is a different mistake."
+                }
+              ]
             },
             {
               "type": "prose",
               "content": "Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
+            }
+          ]
+        },
+        {
+          "id": "ch7-logistics",
+          "title": "Logistics Are Fitness You Don't Lose",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Dial the logistics: know the route profile, the feed zones, the weather, and your pacing plan before you pin a number. Lay out kit and nutrition the night before. The calmer the morning, the better the day."
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Course recon, from the couch",
+                  "content": "One evening with the route profile answers the questions that decide your day: where the decisive terrain is (Chapter 6), where the feed zones fall and how far apart (Chapter 5), where you'd put your move-up efforts, and what the final 20 km look like. Write the plan down in five lines. Riders with a written plan ride the plan; riders without one ride their adrenaline."
+                },
+                {
+                  "title": "Travel and the bike",
+                  "content": "Arrive with a buffer day if the event is far enough to need a flight — for the legs, the bike reassembly, and the missing-bag contingency all at once. If you're flying, know the airline's bike rules before you book, and pack pedals, shoes, and helmet in carry-on: a rental bike is survivable, rental shoes are a blister delivery system. Going high? Altitude arrival strategy is either 'get there 5+ days early' or 'arrive as late as practical' — the days in between are the worst of both."
+                },
+                {
+                  "title": "Registration and the expo",
+                  "content": "Collect your number at the earliest boring opportunity, then leave. The expo is a lovely place to spend two hours on your feet the day before a six-hour race, sampling untested nutrition and buying things you won't use — treat it like a museum gift shop: brief, budgeted, and after the important business is done."
+                },
+                {
+                  "title": "Weather, decided in advance",
+                  "content": "Check the forecast for the whole course, not just the start village — a mountain fondo can span three climates before lunch. Make the clothing decisions the night before with written if-then rules ('below 8°C at the gun: vest and arm warmers; rain risk over 40%: shell in pocket'). Race-morning-you has worse judgment and less time."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ch7-kit-check",
+          "title": "The Bike and Kit Check",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Three days out, give the bike the once-over that turns mechanical luck into mechanical certainty. None of this requires a workshop — it requires a checklist and twenty minutes:"
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Drivetrain",
+                  "detail": "Chain clean, lubed, and not worn past its marker; shifting crisp across the whole cassette under load. A skipping chain on the first col is a preventable tragedy."
+                },
+                {
+                  "label": "Brakes",
+                  "detail": "Pads with real life left, levers firm, nothing rubbing. If the course has alpine descents, this line item outranks every other one on the list."
+                },
+                {
+                  "label": "Tires",
+                  "detail": "Race tires seated, checked for cuts and embedded glass, pressures written down for race morning. Fresh sealant if tubeless. The night-before tire change is a superstition that creates the flats it fears."
+                },
+                {
+                  "label": "Contact points and bolts",
+                  "detail": "Stem, bars, seatpost, cleats — snug to spec. Cleat bolts in particular: they loosen quietly and fail loudly."
+                },
+                {
+                  "label": "The repair kit",
+                  "detail": "Tube or plugs, inflation, tire levers, multi-tool, quick link. Then the test that matters: can you actually fix a flat with what you're carrying, at the side of a road, with cold hands?"
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Nothing new on race day applies to equipment with the same force as food: no new saddle, no new shoes, no new insoles, no freshly-adjusted position. Race week is for confirming what works, and the confirmation window closed last month."
+            }
+          ]
+        },
+        {
+          "id": "ch7-final-48",
+          "title": "The Final 48 Hours of Eating",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Carb-loading works, and it's gentler than its reputation: for the last two days, shift your plates toward carbohydrate — more rice, pasta, potatoes, bread — at normal total portions, while easing back fiber and anything adventurous. You're topping off glycogen, not training for competitive eating. The night-before dinner should be the most boring meal you know your stomach loves. Hydrate steadily with electrolytes in the mix, and stop trying at bedtime; sleep beats one more bottle."
+            },
+            {
+              "type": "prose",
+              "content": "Race morning breakfast: roughly three hours before the gun, carb-heavy, tested weeks ago on long-ride mornings — the same porridge, the same toast, the same everything. Then a small top-up (a banana, half a bar, sips of mix) in the last hour while you stage. Between breakfast and the start, coffee behaves exactly as usual, which is to say: as tested."
+            }
+          ]
+        },
+        {
+          "id": "ch7-race-morning",
+          "title": "Race Morning, Scripted",
+          "blocks": [
+            {
+              "type": "timeline",
+              "title": "From Alarm to Gun",
+              "steps": [
+                {
+                  "label": "T-3:00 — Wake and eat",
+                  "content": "The tested breakfast, unhurried. Kit on, weather rules applied as written. Resist the urge to check the forecast a ninth time; the clouds haven't read it either."
+                },
+                {
+                  "label": "T-1:30 — Arrive",
+                  "content": "Big fondos are big: parking, toilets (queue once, early), and the walk to staging all take longer than the village map suggests. Arriving with ninety minutes turns every small surprise into a shrug."
+                },
+                {
+                  "label": "T-1:00 — Stage",
+                  "content": "Into your start pen early enough to be in its front half — Chapter 6 starts at the gun, and staging position is the day's first free positioning move. Layers you'll shed stay on until late; a bin-bag vest has started more fondos than any aero jersey."
+                },
+                {
+                  "label": "T-0:30 — Warm up, to taste",
+                  "content": "See your rider-type note below. At minimum: a few minutes of spinning if space allows, or on-the-spot leg swings and a hard think about the first 10 km if it doesn't."
+                },
+                {
+                  "label": "T-0:00 — The gun",
+                  "content": "The plan exists. Ride the plan. The first thirty minutes will try very hard to talk you out of it — that's not information, that's just the start surge (Chapter 6) doing what it always does."
+                }
+              ]
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "Your warmup is the first hour of the event — genuinely. With finishing as the goal, starting slightly cool costs nothing, and the energy others spend on warmup routines is energy you'd rather have at hour five. Your race-morning priorities, in order: breakfast on schedule, pockets loaded, staged early enough to avoid panic, and a firm agreement with yourself about ignoring the start surge."
+                },
+                "finisher": {
+                  "content": "Ten to fifteen minutes of easy spinning with two or three builds to tempo is plenty — enough to open the legs without spending anything. Your real race-morning risk is logistical, not physiological: the missed toilet queue, the late staging, the rushed start that has your heart rate at threshold before the gun. Buy calm with earliness; it's the cheapest performance enhancer available."
+                },
+                "sharp-end": {
+                  "content": "If your fondo starts fast into early decisive terrain — and the ones you target usually do — a real warmup matters: 20 minutes with a couple of efforts touching threshold, timed to finish shortly before staging closes. The start surge is your first selection, and meeting it cold wastes the front-pen position you earned. Trainer warmups near the car solve the crowded-road problem."
+                },
+                "racer": {
+                  "content": "You have a warmup protocol; race morning is about protecting it from fondo-scale logistics — pen closures, long walks, portaloo queues sized for thousands. Recon the staging geography the day before, know exactly when your pen shuts, and have a compressed fallback version of the warmup for when the morning eats the full one. Consistency of arousal beats perfection of protocol."
+                }
+              }
+            },
+            {
+              "type": "knowledge_check",
+              "question": "Race week, five days out, and a training partner offers you their spare set of aero race wheels — noticeably nicer than yours. What's the right call?",
+              "options": [
+                {
+                  "text": "Fit them — free speed is free speed, and race week is what spares are for",
+                  "correct": false
+                },
+                {
+                  "text": "Decline (or test them months earlier next time) — unfamiliar equipment violates the one rule race week actually has",
+                  "correct": true
+                },
+                {
+                  "text": "Fit them for race day only, keeping your own wheels for the final training spins",
+                  "correct": false
+                }
+              ],
+              "explanation": "Different wheels mean different braking, different handling in crosswinds, possibly different tires at unknown pressures — all discovered live, in a pack, on race day. The marginal aero gain is real and small; the unfamiliarity risk is real and not small. 'Nothing new on race day' outranks free upgrades, and option three is the same mistake with extra steps."
+            }
+          ]
+        },
+        {
+          "id": "ch7-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Race week rewards the disciplined and punishes the bored. Taper on schedule, trust the dead-leg trough, make every decision the night before it's needed, and let the checklist carry the anxiety so your legs don't have to.\n\nThen race. And when it's done — whatever it turned out to be — [Chapter 8](/guide/after-the-finish/) is about collecting everything the day just taught you."
             }
           ]
         }
@@ -212,12 +1970,11 @@
       "title": "After the Finish",
       "subtitle": "Recovery, reflection, and building the next season",
       "gated": true,
-      "cta_after": null,
+      "cta_after": "finale",
       "hero_image": "ch8-hero",
       "sections": [
         {
           "id": "after-the-finish-main",
-          "title": "After the Finish",
           "blocks": [
             {
               "type": "prose",
@@ -225,11 +1982,172 @@
             },
             {
               "type": "prose",
+              "content": "What you do in the two weeks after an A-event quietly shapes the whole next season. Handle them well and you bank the fitness, the lessons, and the appetite. Handle them badly — the immediate return to training, the skipped debrief, the revenge registration — and you start the next build from a worse place than you finished this one. This chapter is short because the job is simple. That's never made it easy."
+            }
+          ]
+        },
+        {
+          "id": "ch8-first-48",
+          "title": "The First 48 Hours",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Eat, without a spreadsheet",
+                  "detail": "Real meals, carb- and protein-forward, starting soon after the finish. The repair bill from a six-hour race is large; pay it promptly and generously."
+                },
+                {
+                  "label": "Sleep, aggressively",
+                  "detail": "The adaptation and repair you want happen there. Early nights for several days — race-night sleep is often poor (adrenaline, travel, celebratory beverages), so the nights after carry the load."
+                },
+                {
+                  "label": "Spin, don't train",
+                  "detail": "Twenty to forty minutes of genuinely easy riding, or walking, keeps the blood moving and the legs civil. Zone 2 counts as training. Training is not this week's job."
+                },
+                {
+                  "label": "Notice the mood swing",
+                  "detail": "A post-race emotional dip a few days after a big goal is common and normal — months of purpose just ended on schedule. It passes. Don't make decisions from inside it."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "A 72-hour rule for registrations: sign up for nothing while the finish-line glow (or the finish-line grudge) is still talking. Both are terrible negotiators, and both have your credit card. The race that still looks right on Thursday is the one worth entering."
+            }
+          ]
+        },
+        {
+          "id": "ch8-debrief",
+          "title": "The Debrief",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Review honestly. Where did the day come apart — fueling, pacing, positioning, the legs? The race is the most unfakeable feedback you'll get all year; mine it for the one or two things to fix, not a list of twenty."
             },
             {
               "type": "prose",
+              "content": "Do it within the week, while the details are honest — memory starts editing immediately, and by next month your race will have been either much better or much worse than it was. The file and your recollections, cross-examined:"
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Pacing: the power file doesn't flinch",
+                  "content": "Compare the first hour's effort to the plan and to the last hour's output. The classic fondo signature — a heroic opening hour followed by a long fade — shows up in the file as clearly as it felt on the road. If the last quarter of your race was your weakest riding, the first quarter is usually where it was decided."
+                },
+                {
+                  "title": "Fueling: reconstruct the log",
+                  "content": "What actually went in, hour by hour, versus the Chapter 5 plan? Missed feeds cluster exactly where files show fades, and the correlation is rarely a coincidence. If the plan was right but didn't happen, that's an execution note for race morning; if it happened and still wasn't enough, the gut progression gets another block."
+                },
+                {
+                  "title": "Positioning and matches: the honest replay",
+                  "content": "Where were you when the decisive terrain arrived? Which matches bought something, and which bought nothing? The expensive habits — surfing too far back, pulling out of politeness, chasing surges — repeat until they're named. Name them while the memory is fresh enough to be embarrassing."
+                },
+                {
+                  "title": "Equipment and logistics: the small frictions",
+                  "content": "Anything that cost time, comfort, or attention: numb hands from a day in the drops, race-morning chaos, the shell you wished you'd packed at the summit. Individually trivial, collectively a checklist upgrade for next season — and the cheapest gains in this whole debrief."
+                }
+              ]
+            },
+            {
+              "type": "knowledge_check",
+              "question": "Your debrief turns up six things that went wrong. What's the productive response?",
+              "options": [
+                {
+                  "text": "Build a six-point improvement plan and attack every weakness in the next block",
+                  "correct": false
+                },
+                {
+                  "text": "Pick the one or two with the biggest cost, fix those, and file the rest",
+                  "correct": true
+                },
+                {
+                  "text": "Focus on the day's strengths instead — confidence matters more than corrections",
+                  "correct": false
+                }
+              ],
+              "explanation": "Six simultaneous fixes is zero fixes with extra admin. Training addresses one or two limiters per block properly; the rest wait their turn, and several will resolve themselves as side effects. The power of a debrief comes from ruthless prioritization, not thoroughness — the twenty-item list feels rigorous and changes nothing."
+            }
+          ]
+        },
+        {
+          "id": "ch8-next-objective",
+          "title": "The Next Objective",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "The debrief tells you what to fix; the next objective decides where you'll prove it. The best next race rhymes with your ambition but stretches one specific dimension — longer, hillier, more competitive, or simply *executed better* on the same course, which is the most underrated goal in the sport. Chapter 2's machinery applies in full, now powered by a season of your own data instead of guesswork."
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "You finished — which means the question changes from 'can I?' to 'what now?'. Three honest options: the same event, finished more comfortably on the same hours; a modest step up in distance or climbing; or graduating to Finisher hours because the finish line converted you (it does that). Any of the three works. The trap is only the fourth option: registering for triple the difficulty because the finish-line photo made everything look easy."
+                },
+                "finisher": {
+                  "content": "You finished strong, so the menu is real: a bigger course (more mountain, more distance), a faster goal on familiar ground, or the first deliberately competitive goal — the front pen, a time standard, the sharp end of your age group. Pick the one that makes the winter's training feel like it has a point. If the Chapter 2 arithmetic says the dream race is two seasons away rather than one, believe it — the season in between is the reason it'll go well."
+                },
+                "sharp-end": {
+                  "content": "Your next objective is usually less about the event and more about the limiter the debrief named — the climbing W/kg, the fade after hour four, the positioning that kept costing matches. Choose a race that forces exactly that adaptation, and consider one 'reach' event where you're honestly outgunned: riding above your class once a season teaches things winning your local fondo never will."
+                },
+                "racer": {
+                  "content": "Season architecture is the question: which qualifier, which championship, which block structure gets you to the start line you actually care about at genuine peak. One debrief note worth elevating — the race you executed worst is often a better target than the race that suits you, because the weakness it exposed is coming to championship day whether you address it or not."
+                }
+              }
+            },
+            {
+              "type": "prose",
+              "content": "And when the step-up itch is real, the calendar has an answer at every scale — up to and including the events where recovery itself becomes the competition:"
+            },
+            {
+              "type": "race_reference",
+              "slug": "haute-route-alps",
+              "context": "distance"
+            }
+          ]
+        },
+        {
+          "id": "ch8-offseason",
+          "title": "The Off-Season",
+          "blocks": [
+            {
+              "type": "prose",
               "content": "Then build forward. A short, deliberate off-season, a fresh base, and a new A-event give the next plan a target. Compounding small, repeatable work is how riders get genuinely fast — season over season, not week over week."
+            },
+            {
+              "type": "timeline",
+              "title": "From Finish Line to First Base Week",
+              "steps": [
+                {
+                  "label": "Weeks 1-2 — Unstructured",
+                  "content": "Ride when you feel like it, don't when you don't. No plan, no targets, no guilt. The body finishes its repairs; the mind remembers that bikes are fun. Riders who skip this step tend to take it involuntarily in February."
+                },
+                {
+                  "label": "Weeks 3-4 — Transition",
+                  "content": "Gentle structure returns: regular easy rides, some off-bike strength work (the off-season is the natural home for it), and the planning session — debrief notes plus Chapter 2 equals next season's A-event and its backwards-counted runway."
+                },
+                {
+                  "label": "Week 5 onward — Base begins",
+                  "content": "Chapter 3, from the top — except now with a season of data behind it: a real FTP history, a tested fueling system, a known long-ride ceiling, and a much better idea of which week-structure your life can actually repeat. This is what compounding looks like from the inside."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "The off-season detrains you slightly. It's supposed to. Fitness at the level below your peak is the price of arriving at next season's base hungry, healthy, and durable — pay it every year, on purpose."
+            }
+          ]
+        },
+        {
+          "id": "ch8-bottom-line",
+          "title": "The Bottom Line",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Recover like it's a job, debrief while the memory is honest, pick one or two fixes, choose a target that stretches one dimension, and take the off-season on purpose. That's the whole loop — this guide, run again with better inputs.\n\nThe first season is the hardest, because everything is new: the zones, the gut training, the pack, the taper. The second season is where it gets interesting, because nothing is new and everything compounds. The riders at the front of the fondo aren't there because of one great year. They're there because they've closed this loop more times than everyone behind them."
             }
           ]
         }
