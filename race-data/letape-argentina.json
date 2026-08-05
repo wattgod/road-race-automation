@@ -7,13 +7,13 @@
     "vitals": {
       "distance_km": 133.6,
       "distance_mi": 83.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
+      "elevation_m": 1780,
+      "elevation_ft": 5840.0,
       "location": "Cordoba, Cordoba Province, Argentina (Estadio Mario Alberto Kempes start/finish)",
       "location_badge": "CORDOBA, ARGENTINA",
       "country": "Argentina",
-      "date": "Late March annually",
-      "date_specific": "2026: March 22",
+      "date": "Early April (2027 edition)",
+      "date_specific": "2027: Sunday, April 4",
       "field_size": "3,000+ riders expected",
       "start_format": null,
       "registration": "Online via argentina.letapeseries.com. Each cyclist receives timing chip, race number, access wristband, insurance, hydration, food, medical, mechanical, and sweep services.",
@@ -23,8 +23,8 @@
       "lat": -31.369,
       "lng": -64.2462,
       "route_options": [
-        "The Race (Long Course): 134 km, 2,067 m elevation gain",
-        "The Ride (Short Course): 64 km, moderate elevation gain"
+        "The Race (Long Course): 134 km, 1,780 m elevation gain",
+        "The Ride (Short Course): 64 km, 673 m elevation gain"
       ]
     },
     "climate": {
@@ -337,9 +337,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://cordobaturismo.gov.ar/evento/letape-argentina-by-tour-de-france-2026/",
-      "notes": "Mass-participation road cycling event in Córdoba ran on March 22, 2026 with open registrations and full event description matching the Estadio Mario Alberto Kempes start/finish.; last edition evidenced: 2026; via sonar-pro eligibility_audit; [national championship] co-location claim -- CORRECTED 2026-07-24 (sol adversarial review caught this; verified against primary results before applying). Initial pass found conflicting Championship dates across sources and left the 'co-location' framing unchanged based on a Cordoba tourism page using the word 'simultáneo.' That was wrong. The Argentine Cycling Federation's own program (ciclismoarg.com.ar/programa-campeonato-argentino-de-ruta-elite/) and its post-race results report (ciclismoarg.com.ar/nicolas-tivani-se-consagro-campeon-argentino-de-ruta/) confirm the Campeonato Argentino de Ruta Elite ran April 16-19, 2026 entirely at the Rio Cuarto autodrome -- a different city from Cordoba capital (~200km away) and a different month from L'Etape's March 22 Kempes Stadium date. The two events are NOT co-located or concurrent. All 'co-location'/'alongside'/'concurrent' framing across tagline, terrain.features, history, biased_opinion, and final_verdict was corrected this pass to accurately describe them as separate events that both happened to return to Cordoba province in 2026."
+      "verified": "2026-08-05",
+      "source": "https://argentina.letapeseries.com/",
+      "notes": "Official L'Etape Argentina site confirms registration is open for Sunday, April 4, 2027. It publishes a 134 km long route with 1,780 m of climbing and a 64 km short route with 673 m, starting at 07:00 and 08:30 respectively. Earlier national-championship co-location claims were corrected in 2026 and remain intentionally absent: the Argentine road championships were a separate event in Rio Cuarto."
     }
   }
 }

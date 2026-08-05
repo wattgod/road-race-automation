@@ -304,16 +304,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-08-02",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 51.6,
+      "race_date": "2027-08-01",
+      "blockers": []
     },
     "around-the-bay-in-a-day": {
       "slug": "around-the-bay-in-a-day",
@@ -4077,16 +4075,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 34.6,
+      "race_date": "2027-04-04",
+      "blockers": []
     },
     "letape-australia": {
       "slug": "letape-australia",

@@ -9,11 +9,11 @@
       "distance_mi": 87.0,
       "elevation_m": 2370,
       "elevation_ft": 7776.0,
-      "location": "Venue rotates annually (2026: Niseko, Hokkaido, Japan)",
-      "location_badge": "NISEKO, JAPAN (2026)",
-      "country": "Japan",
+      "location": "Venue rotates annually (2027: Thônes-La Clusaz, Haute-Savoie, France)",
+      "location_badge": "THÔNES-LA CLUSAZ, FRANCE (2027)",
+      "country": "France",
       "date": "Late August to October annually (varies by venue)",
-      "date_specific": "2026: August 26-30 (Niseko, Japan)",
+      "date_specific": "2027: August 22 and 24 Gran Fondo competition days (Thônes-La Clusaz, France); edition-specific road-race course not yet published",
       "field_size": "~2,000 qualified riders from 55-60 countries",
       "start_format": null,
       "registration": "By qualification only. Top 25% in each age group at any UCI Gran Fondo World Series qualifier event (36 events globally in 2026). Qualified riders receive email invitation to register. Entry fee ~EUR200-350 depending on venue.",
@@ -175,9 +175,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://ucigranfondoworldseries.com/en/2026-uci-gran-fondo-world-championships-head-to-asia-for-the-first-time-welcome-to-niseko-jpn/",
-      "notes": "2026 edition confirmed Aug 26-30, Niseko, Japan (matches profile, curl/WebFetch-verified on ucigranfondoworldseries.com's own Niseko announcement). Qualifying calendar: ucigranfondoworldseries.com announced a 36-event 2026 season (+9 new, up from 32) in a Nov 2025 release; a live-calendar check on 2026-07-24 counted 35 listed 'Qualifiers 2025-2026' events — close enough to read as the same season total (minor list drift, e.g. a late addition/cancellation) rather than a materially different claim, but flagging the small discrepancy rather than asserting an exact-36 count with high confidence. CORRECTION: history.founded and origin_story previously said the first Championships were held in 2012 in Pietermaritzburg, South Africa — the series' own Hall of Fame page (ucigranfondoworldseries.com) lists rider Molly Van Houweling's time-trial world titles in chronological order as 'Stavelot 2011, Pietermaritzburg 2012, Ljubljana 2014...', establishing Stavelot, Belgium 2011 as the actual first edition and Pietermaritzburg 2012 as the second. Corrected founded/origin_story/notable_moments accordingly, and fixed an unrelated 'Aarhus'→'Aalborg' host-city typo in notable_moments (the 2015 edition was in Aalborg, Denmark, confirmed via UCI.org and the official 2015 results PDF). 'Only world championship in amateur road cycling' is a defensible characterization, not a direct UCI-published superlative: the UCI Road World Championships field Elite/U23/Junior competitive categories but are not open to amateur/age-group entry; the Gran Fondo Worlds are the UCI's sole road-discipline championship open to amateur/age-group riders (distinct from UCI Gravel or MTB Marathon Worlds, which are different disciplines). Also fixed vitals.country, which read 'Japan)' with a stray trailing parenthesis — corrected to 'Japan'."
+      "verified": "2026-08-05",
+      "source": "https://www.uci.org/pressrelease/decouvrez-le-calendrier-des-championnats-du-monde-de-cyclisme-uci-2027-de/1tEIUtEoRq13aaef4p3bdx",
+      "notes": "The UCI's official Haute-Savoie 2027 programme confirms the championship window and places Gran Fondo medal competition on August 22 and 24 at Thônes-La Clusaz. The edition-specific Gran Fondo road-race distance, elevation, and route are not yet published, so the 2026 Niseko 140 km / 2,370 m course remains historical context only and must not be used to author a 2027 plan. Earlier verification confirmed the 2026 Niseko edition and corrected the championship history to Stavelot 2011 as the first edition. Re-check the UCI and host programme when the 2027 course is released."
     }
   }
 }
