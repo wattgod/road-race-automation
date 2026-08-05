@@ -214,6 +214,56 @@
           ]
         },
         {
+          "id": "ch1-gear",
+          "title": "The Gear Reality Check",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Equipment sits at the bottom of the hierarchy — but you still have to buy some, and road cycling's marketing department would like a word with your savings. Here is the honest priority order. The pattern to notice: everything near the top is about *fit, reliability, and contact with the bike*, and everything the ads push hardest lives near the bottom."
+            },
+            {
+              "type": "data_table",
+              "caption": "Road Gear Priorities",
+              "headers": ["Component", "Minimum viable", "Why", "Skip until later"],
+              "rows": [
+                ["Frame", "Any road bike that fits you and shifts reliably", "Fit and reliability decide your day; frame material mostly decides your invoice", "Superbikes, integrated cockpits, paint-deep upgrades"],
+                ["Contact points", "A tested saddle, bars you can hold all day, stiff-enough shoes", "Six hours on the wrong saddle ruins any frame ever made", "Carbon finishing kit"],
+                ["Gearing", "Compact chainrings with a wide cassette — 32t or bigger for mountain courses", "Grinding a col at 50 rpm breaks legs; spinning saves them", "Boutique cassettes, marginal-gram cranks"],
+                ["Tires", "Quality 28-30mm rubber, pressure matched to your weight and the road", "The cheapest real speed and comfort on the entire bike", "Nothing — good tires are never a 'later'"],
+                ["Wheels", "True, reliable, brakes that work in the rain", "Reliability outranks rim depth until you're racing for position", "Deep carbon — fitness first, then aero"],
+                ["Power meter", "Optional; single-sided is fine", "Turns Chapter 3's zones from theory into targets", "Dual-sided precision upgrades"],
+                ["Head unit + HR strap", "Anything that shows power, heart rate, and the route", "The cross-check that keeps hot days honest (Chapter 4)", "Radar, touchscreens, maps of places you aren't"]
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "And the best equipment money you'll spend isn't a component at all: it's a professional bike fit. Road riding means hours in essentially one position — a fit that lets you stay in the drops comfortably is worth real watts (aero you can actually hold beats aero you bought), and it prevents the numb hands, hot feet, and grumpy lower backs that end more long days than fitness ever does. Get the fit before the wheels. Get the fit before most things."
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Gearing for the mountains",
+                  "content": "If the course climbs seriously and you're debating cassettes, take the easier one. Nobody has ever crested a col wishing their gears were harder, and a 34t (or bigger) sprocket lets you keep a rideable cadence at the gradients where fondos are lost. Modern drivetrains accommodate wide ranges without drama — spin the climbs, save the knees, drop nobody's respect."
+                },
+                {
+                  "title": "Tires, the short version",
+                  "content": "The modern consensus is friendly to comfort: wider tires (28-30mm on most rims) at moderate pressures roll as fast or faster than the old narrow-and-rock-hard setup, and they corner and descend better — which on an alpine course is time, not just comfort. Buy supple over light, match pressure to your weight and width rather than to tradition, and settle your exact setup in training. Race day inherits it; it doesn't audition it."
+                },
+                {
+                  "title": "Do you need a power meter?",
+                  "content": "Need? No — Chapter 3's zones work off heart rate and RPE, and riders raced brilliantly for a century without wattage. But if you're training seriously, it's the best measurement money you can spend: precise interval targets, honest pacing on long climbs, and a record that makes Chapter 8's debrief factual instead of impressionistic. A basic single-sided unit does the whole job."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Every upgrade competes with the training it could have bought. The industry sells watts in boxes; most of yours are still in your legs, at a much better price per watt."
+            }
+          ]
+        },
+        {
           "id": "ch1-can-i-finish",
           "title": "The Honest Answer to \"Can I Finish?\"",
           "blocks": [
@@ -1523,6 +1573,14 @@
                 {
                   "title": "Signals and pointing",
                   "content": "In a group, the riders behind can't see the pothole, the parked car, or the glass — you are their eyes. Point at hazards, indicate slowing with a flat palm, and pass signals backwards. Groups that communicate ride faster and crash less, and the habit costs nothing."
+                },
+                {
+                  "title": "Riding a paceline",
+                  "content": "A paceline is shared work with rules, and the rules exist because breaking them hurts everyone behind you. Pull through at the group's speed — the classic error is surging the moment you hit the front, which snaps the elastic for the whole line. Keep pulls short and honest, rotate off to the agreed side (into the wind, so the line shelters behind you), soft-pedal back, and latch on smoothly at the rear.\n\nOn gradients, match **effort**, not speed — a constant-power line climbs together; a constant-speed line shells its lightest riders downhill and its heaviest ones up. And if you're too cooked to pull, say so and sit on: an honest passenger is useful ballast, a fake worker who surges and fades is a hazard. In a fondo, a well-run paceline of strangers is the difference between a group that survives the windy sections and one that doesn't."
+                },
+                {
+                  "title": "When wheels touch",
+                  "content": "Ride in enough packs and eventually there's contact — a shoulder, an elbow, a wheel kissed. The riders who stay upright aren't lucky; they're the ones whose reflexes were trained before it mattered. The drill is old and unglamorous: on grass, at walking pace, with a friend, practice shoulder-to-shoulder and elbow bumps until contact registers as information instead of emergency.\n\nIf your front wheel touches the rear wheel ahead: do not grab the brakes and do not jerk away — both are how the touch becomes the crash. Stay loose, keep your weight settled, keep pedaling lightly, and steer gently to re-separate. The bike is more willing to sort it out than your panic is. Loose elbows, relaxed grip, eyes up: the same posture that makes you smooth also makes you crash-resistant."
                 },
                 {
                   "title": "Eating and drinking at speed",
