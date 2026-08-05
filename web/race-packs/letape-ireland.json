@@ -1,7 +1,7 @@
 {
   "slug": "letape-ireland",
   "race_name": "L'Etape Ireland",
-  "distance_mi": 93.0,
+  "distance_mi": 93.2,
   "demands": {
     "durability": 4,
     "climbing": 7,
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "67ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "68ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
@@ -44,13 +44,13 @@
       "workout_context": "Race-pace efforts that mimic L'Etape Ireland's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 80,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Etape Ireland's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
+      "workout_context": "L'Etape Ireland's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 93 miles."
     },
     {
       "category": "Over_Under",
@@ -69,7 +69,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,200ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,339ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "G_Spot",
@@ -97,7 +97,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "6,200ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "6,339ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Critical_Power",
@@ -135,5 +135,5 @@
     "terrain": "Mixed terrain at L'Etape Ireland requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 93 miles of mixed terrain in Carrick-on-Suir, County Tipperary, Ireland.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

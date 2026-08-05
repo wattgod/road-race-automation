@@ -1,7 +1,7 @@
 {
   "slug": "lariegeoise-cyclosportive",
   "race_name": "L'Ari\u00e9geoise Cyclosportive",
-  "distance_mi": 110.0,
+  "distance_mi": 113.1,
   "demands": {
     "durability": 6,
     "climbing": 10,
@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "16,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "13,615ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "145ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "120ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Over_Under",
@@ -50,7 +50,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 110, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 113, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Race_Simulation",
@@ -69,7 +69,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "16,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "13,615ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "G_Spot",
@@ -88,16 +88,16 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 110 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 113 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 57,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Ari\u00e9geoise Cyclosportive's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 110 miles."
+      "workout_context": "L'Ari\u00e9geoise Cyclosportive's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 113 miles."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -106,7 +106,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 16,000ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 13,615ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Blended",
@@ -115,7 +115,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 16,000ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 13,615ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -128,9 +128,9 @@
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for L'Ari\u00e9geoise Cyclosportive\u2019s 110 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "L'Ari\u00e9geoise Cyclosportive with 16,000ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "nutrition": "Target 60\u201380g carbs/hour for L'Ari\u00e9geoise Cyclosportive\u2019s 113 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "L'Ari\u00e9geoise Cyclosportive with 13,615ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, TT Threshold, and Over Under to prepare you for 110 miles of mixed terrain in Tarascon-sur-Ari\u00e8ge, France.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, TT Threshold, and Over Under to prepare you for 113 miles of mixed terrain in Tarascon-sur-Ari\u00e8ge, France.",
+  "generated_at": "2026-08-05"
 }

@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-eilat",
   "race_name": "Gran Fondo Eilat",
-  "distance_mi": 85.0,
+  "distance_mi": 87.0,
   "demands": {
     "durability": 4,
     "climbing": 5,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 85, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "54ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "53ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
@@ -63,13 +63,13 @@
       "workout_context": "At Gran Fondo Eilat, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 64,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Eilat's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 85 miles."
+      "workout_context": "Gran Fondo Eilat's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 87 miles."
     },
     {
       "category": "VO2max",
@@ -88,7 +88,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 85 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "HVLI_Extended",
@@ -98,7 +98,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 85 miles without cracking. No shortcuts."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 87 miles without cracking. No shortcuts."
     },
     {
       "category": "Norwegian_Double",
@@ -107,7 +107,7 @@
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 85 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
     },
     {
       "category": "Blended",
@@ -116,7 +116,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,593ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,570ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Mixed_Climbing",
@@ -130,8 +130,8 @@
   ],
   "race_overlay": {
     "heat": "December in Eilat, Negev Desert, Israel can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Eilat. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Eilat\u2019s 85 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Eilat\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 85 miles of mixed terrain in Eilat, Negev Desert, Israel.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 87 miles of mixed terrain in Eilat, Negev Desert, Israel.",
+  "generated_at": "2026-08-05"
 }

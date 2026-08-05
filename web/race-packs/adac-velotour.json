@@ -1,7 +1,7 @@
 {
   "slug": "adac-velotour",
   "race_name": "ADAC Velotour (Eschborn-Frankfurt)",
-  "distance_mi": 65.0,
+  "distance_mi": 60.3,
   "demands": {
     "durability": 2,
     "climbing": 7,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "65 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "60 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Race_Simulation",
@@ -41,7 +41,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,562ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "TT_Threshold",
@@ -51,7 +51,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "101ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "82ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Over_Under",
@@ -63,13 +63,13 @@
       "workout_context": "At ADAC Velotour (Eschborn-Frankfurt), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 79,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "ADAC Velotour (Eschborn-Frankfurt)'s mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 65 miles."
+      "workout_context": "ADAC Velotour (Eschborn-Frankfurt)'s mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 60 miles."
     },
     {
       "category": "G_Spot",
@@ -88,7 +88,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "6,562ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "Endurance",
@@ -124,14 +124,14 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 6,562ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 4,921ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "heat": "May in Eschborn/Frankfurt, Germany can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before ADAC Velotour (Eschborn-Frankfurt). Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for ADAC Velotour (Eschborn-Frankfurt)\u2019s 65 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "nutrition": "Target 40\u201360g carbs/hour for ADAC Velotour (Eschborn-Frankfurt)\u2019s 60 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Moderate altitude at ADAC Velotour (Eschborn-Frankfurt). Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 65 miles of mixed terrain in Eschborn/Frankfurt, Germany.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 60 miles of mixed terrain in Eschborn/Frankfurt, Germany.",
+  "generated_at": "2026-08-05"
 }

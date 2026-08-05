@@ -1,139 +1,138 @@
 {
   "slug": "granfondo-moser",
-  "race_name": "Granfondo Moser",
-  "distance_mi": 87.0,
+  "race_name": "Granfondo Top Dolomites",
+  "distance_mi": 69.0,
   "demands": {
-    "durability": 4,
-    "climbing": 4,
+    "durability": 2,
+    "climbing": 8,
     "vo2_power": 5,
-    "threshold": 8,
+    "threshold": 6,
     "technical": 4,
-    "heat_resilience": 8,
+    "heat_resilience": 6,
     "altitude": 6,
-    "race_specificity": 7
+    "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 78,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "Granfondo Moser's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
-    },
-    {
-      "category": "VO2max",
-      "score": 78,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "Endurance",
-      "score": 75,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 70,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic Granfondo Moser's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+      "workout_context": "Race-pace efforts that mimic Granfondo Top Dolomites' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 68,
+      "category": "Durability",
+      "score": 95,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "69 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 91,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "132ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "VO2max",
+      "score": 91,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "9,121ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Granfondo Moser's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 87 miles."
+      "workout_context": "Granfondo Top Dolomites' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 69 miles."
+    },
+    {
+      "category": "Over_Under",
+      "score": 88,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Granfondo Top Dolomites, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 73,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "9,121ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "G_Spot",
-      "score": 62,
+      "score": 70,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
         "Criss-Cross"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Moser. Train it until it feels boring."
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Top Dolomites. Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 57,
+      "category": "Endurance",
+      "score": 67,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "At Granfondo Moser, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Base fitness for Granfondo Top Dolomites. Without this, the hard workouts break you down instead of building you up."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 47,
+      "category": "SFR_Muscle_Force",
+      "score": 48,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "SFR Low Cadence",
+        "Force Repeats"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 87 miles without cracking. No shortcuts."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 42,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Low-cadence force work for 9,121ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Critical_Power",
-      "score": 40,
+      "score": 47,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo Moser, that number decides whether you bridge or get dropped."
+      "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo Top Dolomites, that number decides whether you bridge or get dropped."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 36,
+      "score": 42,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     }
   ],
   "race_overlay": {
-    "heat": "June in Trento, Italy. Begin heat acclimatization 10\u201314 days before Granfondo Moser \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Granfondo Moser\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Granfondo Moser. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Granfondo Moser requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "heat": "June in Pinzolo, Trentino, Italy can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Granfondo Top Dolomites. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 40\u201360g carbs/hour for Granfondo Top Dolomites\u2019s 69 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "altitude": "Moderate altitude at Granfondo Top Dolomites. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
+    "terrain": "Mixed terrain at Granfondo Top Dolomites requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and VO2max to prepare you for 87 miles of mixed terrain in Trento, Italy.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and TT Threshold to prepare you for 69 miles of mixed terrain in Pinzolo, Trentino, Italy.",
+  "generated_at": "2026-08-05"
 }

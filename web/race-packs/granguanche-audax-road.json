@@ -59,7 +59,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "49,213ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "55,774ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Race_Simulation",
@@ -78,7 +78,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "49,213ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "55,774ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
@@ -88,16 +88,16 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "106ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "120ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 50,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GranGuanche Audax Road's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 466 miles."
+      "workout_context": "GranGuanche Audax Road's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 466 miles."
     },
     {
       "category": "Blended",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 49,213ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 55,774ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "G_Spot",
@@ -125,15 +125,15 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 49,213ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 55,774ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
-    "heat": "January in Lanzarote, Canary Islands, Spain. Begin heat acclimatization 10\u201314 days before GranGuanche Audax Road \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
+    "heat": "January in Lanzarote to La Gomera, Canary Islands, Spain. Begin heat acclimatization 10\u201314 days before GranGuanche Audax Road \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
     "nutrition": "Ultra-distance fueling for 466 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 466 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
     "altitude": "Moderate altitude at GranGuanche Audax Road. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at GranGuanche Audax Road requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and HVLI Extended to prepare you for 466 miles of mixed terrain in Lanzarote, Canary Islands, Spain.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and HVLI Extended to prepare you for 466 miles of mixed terrain in Lanzarote to La Gomera, Canary Islands, Spain.",
+  "generated_at": "2026-08-05"
 }

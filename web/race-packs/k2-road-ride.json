@@ -1,7 +1,7 @@
 {
   "slug": "k2-road-ride",
   "race_name": "K2 Road Cycle Classic",
-  "distance_mi": 119.0,
+  "distance_mi": 119.3,
   "demands": {
     "durability": 6,
     "climbing": 8,
@@ -31,7 +31,7 @@
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic K2 Road Cycle Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before November."
+      "workout_context": "Race-pace efforts that mimic K2 Road Cycle Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before October."
     },
     {
       "category": "Over_Under",
@@ -53,13 +53,13 @@
       "workout_context": "At mile 60 of 119, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 83,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "K2 Road Cycle Classic's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 119 miles."
+      "workout_context": "K2 Road Cycle Classic's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 119 miles."
     },
     {
       "category": "G_Spot",
@@ -132,5 +132,5 @@
     "terrain": "Mixed terrain at K2 Road Cycle Classic requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Over Under to prepare you for 119 miles of mixed terrain in Coromandel Peninsula, New Zealand.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

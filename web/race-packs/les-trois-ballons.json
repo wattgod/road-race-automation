@@ -1,7 +1,7 @@
 {
   "slug": "les-trois-ballons",
   "race_name": "Les Trois Ballons",
-  "distance_mi": 112.0,
+  "distance_mi": 112.5,
   "demands": {
     "durability": 6,
     "climbing": 9,
@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "118ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "117ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Over_Under",
@@ -40,7 +40,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "13,186ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "13,189ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Durability",
@@ -79,16 +79,16 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "13,186ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "13,189ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 64,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Les Trois Ballons' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 112 miles."
+      "workout_context": "Les Trois Ballons' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 112 miles."
     },
     {
       "category": "Endurance",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 13,186ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 13,189ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -115,7 +115,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 13,186ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 13,189ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Norwegian_Double",
@@ -131,6 +131,6 @@
     "nutrition": "Target 60\u201380g carbs/hour for Les Trois Ballons\u2019s 112 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Les Trois Ballons. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and VO2max to prepare you for 112 miles of mixed terrain in Ronchamp, Haute-Sa\u00f4ne, France.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and VO2max to prepare you for 112 miles of mixed terrain in Ronchamp, Haute-Sa\u00f4ne, France (finishes at La Planche des Belles Filles).",
+  "generated_at": "2026-08-05"
 }

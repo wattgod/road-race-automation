@@ -1,7 +1,7 @@
 {
   "slug": "white-horse-challenge",
   "race_name": "White Horse Challenge",
-  "distance_mi": 90.0,
+  "distance_mi": 90.1,
   "demands": {
     "durability": 4,
     "climbing": 5,
@@ -63,13 +63,13 @@
       "workout_context": "Race-pace efforts that mimic White Horse Challenge's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before April."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 57,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "White Horse Challenge's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 90 miles."
+      "workout_context": "White Horse Challenge's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 90 miles."
     },
     {
       "category": "VO2max",
@@ -131,5 +131,5 @@
     "nutrition": "Target 60\u201380g carbs/hour for White Horse Challenge\u2019s 90 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, G Spot, and Over Under to prepare you for 90 miles of mixed terrain in Shrivenham, Oxfordshire, England.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

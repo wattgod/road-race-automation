@@ -1,7 +1,7 @@
 {
   "slug": "tour-of-wessex",
   "race_name": "Tour of Wessex",
-  "distance_mi": 233.0,
+  "distance_mi": 334.4,
   "demands": {
     "durability": 10,
     "climbing": 9,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "233 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "334 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
       "category": "Over_Under",
@@ -40,7 +40,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "64ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "52ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Mixed_Climbing",
@@ -49,7 +49,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "14,993ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "17,388ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "HVLI_Extended",
@@ -59,7 +59,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "233 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "334 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Endurance",
@@ -68,7 +68,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 233 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 334 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "G_Spot",
@@ -87,7 +87,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 14,993ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 17,388ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Race_Simulation",
@@ -97,7 +97,7 @@
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic Tour of Wessex's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
+      "workout_context": "Race-pace efforts that mimic Tour of Wessex's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -106,16 +106,16 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 14,993ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 17,388ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 46,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Tour of Wessex's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 233 miles."
+      "workout_context": "Tour of Wessex's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 334 miles."
     },
     {
       "category": "VO2max",
@@ -125,12 +125,12 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "14,993ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "17,388ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 233 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 233 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
+    "nutrition": "Ultra-distance fueling for 334 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 334 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Over Under, and TT Threshold to prepare you for 233 miles of mixed terrain in Yeovil, Somerset, England.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Over Under, and TT Threshold to prepare you for 334 miles of mixed terrain in Langport, Somerset, England (classic three-day format, ran through at least 2023; Yeovil was on-route, not the event base).",
+  "generated_at": "2026-08-05"
 }

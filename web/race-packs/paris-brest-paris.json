@@ -1,7 +1,7 @@
 {
   "slug": "paris-brest-paris",
   "race_name": "Paris-Brest-Paris Randonneur",
-  "distance_mi": 757.0,
+  "distance_mi": 758.1,
   "demands": {
     "durability": 10,
     "climbing": 10,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "757 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "758 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
       "category": "VO2max",
@@ -31,7 +31,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "38,550ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "36,089ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Race_Simulation",
@@ -59,7 +59,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "38,550ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "36,089ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
@@ -69,7 +69,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "51ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "Paris-Brest-Paris Randonneur's paved French roads through rolling countryside rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
       "category": "HVLI_Extended",
@@ -79,16 +79,16 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "757 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "758 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 55,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Paris-Brest-Paris Randonneur's paved French roads through rolling countryside forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 757 miles."
+      "workout_context": "Paris-Brest-Paris Randonneur's paved French roads through rolling countryside forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 758 miles."
     },
     {
       "category": "Blended",
@@ -97,7 +97,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 38,550ft of climbing on paved French roads through rolling countryside does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 36,089ft of climbing on paved French roads through rolling countryside does to your power file on race day."
     },
     {
       "category": "Endurance",
@@ -106,7 +106,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 757 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 758 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "G_Spot",
@@ -129,8 +129,8 @@
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 757 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 757 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
+    "nutrition": "Ultra-distance fueling for 758 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 758 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 757 miles of paved french roads through rolling countryside in Rambouillet to Brest and back, France.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 758 miles of paved french roads through rolling countryside in Rambouillet to Brest and back, France.",
+  "generated_at": "2026-08-05"
 }

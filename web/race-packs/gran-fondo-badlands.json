@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-badlands",
   "race_name": "Gran Fondo Badlands",
-  "distance_mi": 101.0,
+  "distance_mi": 101.4,
   "demands": {
     "durability": 6,
     "climbing": 5,
@@ -63,13 +63,13 @@
       "workout_context": "At Gran Fondo Badlands, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 76,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Badlands' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 101 miles."
+      "workout_context": "Gran Fondo Badlands' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 101 miles."
     },
     {
       "category": "Race_Simulation",
@@ -134,5 +134,5 @@
     "terrain": "Mixed terrain at Gran Fondo Badlands requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, Durability, and G Spot to prepare you for 101 miles of mixed terrain in Drumheller, Alberta, Canada.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

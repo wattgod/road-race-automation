@@ -1,7 +1,7 @@
 {
   "slug": "algarve-gran-fondo",
   "race_name": "Algarve Gran Fondo",
-  "distance_mi": 84.0,
+  "distance_mi": 80.8,
   "demands": {
     "durability": 4,
     "climbing": 7,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 84, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 80, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Race_Simulation",
@@ -41,16 +41,16 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "78ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "90ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 68,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Algarve Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 84 miles."
+      "workout_context": "Algarve Gran Fondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 80 miles."
     },
     {
       "category": "Over_Under",
@@ -68,7 +68,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 84 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 80 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "VO2max",
@@ -78,7 +78,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,562ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "7,261ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "G_Spot",
@@ -97,7 +97,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "6,562ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "7,261ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "HVLI_Extended",
@@ -107,7 +107,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 84 miles without cracking. No shortcuts."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 80 miles without cracking. No shortcuts."
     },
     {
       "category": "Critical_Power",
@@ -125,15 +125,15 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 6,562ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,261ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "heat": "February in Lagoa, Algarve, Portugal. Begin heat acclimatization 10\u201314 days before Algarve Gran Fondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Algarve Gran Fondo\u2019s 84 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "heat": "February in Lagos, Algarve, Portugal. Begin heat acclimatization 10\u201314 days before Algarve Gran Fondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
+    "nutrition": "Target 60\u201380g carbs/hour for Algarve Gran Fondo\u2019s 80 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Algarve Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Algarve Gran Fondo requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 84 miles of mixed terrain in Lagoa, Algarve, Portugal.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 80 miles of mixed terrain in Lagos, Algarve, Portugal.",
+  "generated_at": "2026-08-05"
 }

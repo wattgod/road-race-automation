@@ -1,16 +1,16 @@
 {
   "slug": "granfondo-leiria",
   "race_name": "Granfondo Leiria Region \u2013 Sico Lands",
-  "distance_mi": 92.0,
+  "distance_mi": 90.7,
   "demands": {
     "durability": 4,
-    "climbing": 7,
+    "climbing": 4,
     "vo2_power": 6,
-    "threshold": 8,
-    "technical": 6,
+    "threshold": 7,
+    "technical": 2,
     "heat_resilience": 6,
-    "altitude": 6,
-    "race_specificity": 9
+    "altitude": 4,
+    "race_specificity": 7
   },
   "top_categories": [
     {
@@ -21,59 +21,50 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 92, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 96,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Granfondo Leiria Region \u2013 Sico Lands' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 92 miles."
-    },
-    {
-      "category": "Race_Simulation",
-      "score": 96,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic Granfondo Leiria Region \u2013 Sico Lands' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before March."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 92,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "71ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "At mile 60 of 90, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "VO2max",
-      "score": 88,
+      "score": 81,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,500ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Over_Under",
-      "score": 79,
+      "category": "TT_Threshold",
+      "score": 78,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
       ],
-      "workout_context": "At Granfondo Leiria Region \u2013 Sico Lands, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "53ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 70,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Granfondo Leiria Region \u2013 Sico Lands' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
+    },
+    {
+      "category": "Endurance",
+      "score": 67,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 90 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "G_Spot",
-      "score": 72,
+      "score": 62,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,35 +73,36 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Leiria Region \u2013 Sico Lands. Train it until it feels boring."
     },
     {
-      "category": "Endurance",
-      "score": 69,
+      "category": "Over_Under",
+      "score": 59,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 92 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At Granfondo Leiria Region \u2013 Sico Lands, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Mixed_Climbing",
-      "score": 56,
+      "category": "Road_Specific",
+      "score": 58,
       "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "6,500ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "Granfondo Leiria Region \u2013 Sico Lands' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 90 miles."
     },
     {
-      "category": "Critical_Power",
-      "score": 56,
+      "category": "HVLI_Extended",
+      "score": 46,
       "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo Leiria Region \u2013 Sico Lands, that number decides whether you bridge or get dropped."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 90 miles without cracking. No shortcuts."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 48,
+      "score": 41,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -118,22 +110,29 @@
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 43,
+      "category": "Norwegian_Double",
+      "score": 41,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 92 miles without cracking. No shortcuts."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 90 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Blended",
+      "score": 38,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,849ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "heat": "March in Pombal, Portugal can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Granfondo Leiria Region \u2013 Sico Lands. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Granfondo Leiria Region \u2013 Sico Lands\u2019s 92 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Granfondo Leiria Region \u2013 Sico Lands. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Granfondo Leiria Region \u2013 Sico Lands requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "heat": "Complete 3\u20134 heat exposure sessions in the final 2 weeks before Granfondo Leiria Region \u2013 Sico Lands. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 60\u201380g carbs/hour for Granfondo Leiria Region \u2013 Sico Lands\u2019s 90 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Moderate altitude at Granfondo Leiria Region \u2013 Sico Lands. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Gravel Specific, and Race Simulation to prepare you for 92 miles of mixed terrain in Pombal, Portugal.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and TT Threshold to prepare you for 90 miles of mixed terrain in Pombal, Portugal.",
+  "generated_at": "2026-08-05"
 }

@@ -43,13 +43,13 @@
       "workout_context": "At Race Around Poland, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 71,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Race Around Poland's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 2237 miles."
+      "workout_context": "Race Around Poland's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 2237 miles."
     },
     {
       "category": "Mixed_Climbing",
@@ -58,7 +58,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "108,610ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "108,596ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
@@ -78,7 +78,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "108,610ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "108,596ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Endurance",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 108,610ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 108,596ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "G_Spot",
@@ -125,7 +125,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 108,610ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 108,596ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
@@ -133,6 +133,6 @@
     "altitude": "Moderate altitude at Race Around Poland. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Race Around Poland requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Over Under to prepare you for 2237 miles of mixed terrain in Poland (circumnavigation).",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Over Under to prepare you for 2237 miles of mixed terrain in Poland (national circumnavigation, honorary start Warsaw Royal Wilan\u00f3w).",
+  "generated_at": "2026-08-05"
 }

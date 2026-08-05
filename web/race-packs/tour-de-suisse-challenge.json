@@ -1,10 +1,10 @@
 {
   "slug": "tour-de-suisse-challenge",
   "race_name": "Tour de Suisse Challenge",
-  "distance_mi": 630.0,
+  "distance_mi": 629.6,
   "demands": {
     "durability": 10,
-    "climbing": 8,
+    "climbing": 10,
     "vo2_power": 5,
     "threshold": 5,
     "technical": 4,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "630 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "629 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
       "category": "Endurance",
@@ -30,7 +30,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 630 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 629 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "VO2max",
@@ -40,7 +40,16 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+      "workout_context": "61,647ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Over_Under",
+      "score": 59,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Tour de Suisse Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "Race_Simulation",
@@ -60,35 +69,35 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "630 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "629 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Mixed_Climbing",
       "score": 54,
       "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Tour de Suisse Challenge's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 630 miles."
-    },
-    {
-      "category": "Over_Under",
-      "score": 50,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Tour de Suisse Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "61,647ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
-      "score": 49,
+      "score": 54,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "Tour de Suisse Challenge's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+      "workout_context": "98ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 54,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Tour de Suisse Challenge's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 629 miles."
     },
     {
       "category": "Blended",
@@ -97,20 +106,11 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Tour de Suisse Challenge's mixed terrain actually does to you."
-    },
-    {
-      "category": "Mixed_Climbing",
-      "score": 43,
-      "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
-      ],
-      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 61,647ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "G_Spot",
-      "score": 37,
+      "score": 41,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -120,20 +120,20 @@
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 29,
+      "score": 36,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Torque for headwinds and mixed terrain. When cadence drops below 70rpm, muscular strength keeps the watts up."
+      "workout_context": "Low-cadence force work for 61,647ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
-    "heat": "June in Various, Switzerland can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Tour de Suisse Challenge. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Ultra-distance fueling for 630 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 630 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Tour de Suisse Challenge demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "heat": "June in Various, Switzerland (last confirmed: full pro Tour de Suisse route, 2023) can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Tour de Suisse Challenge. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Ultra-distance fueling for 629 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 629 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "altitude": "Tour de Suisse Challenge with 61,647ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
     "terrain": "Mixed terrain at Tour de Suisse Challenge requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 630 miles of mixed terrain in Various, Switzerland.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 629 miles of mixed terrain in Various, Switzerland (last confirmed: full pro Tour de Suisse route, 2023).",
+  "generated_at": "2026-08-05"
 }

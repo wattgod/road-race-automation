@@ -1,0 +1,136 @@
+{
+  "slug": "gfny-ventura",
+  "race_name": "GFNY Ventura",
+  "distance_mi": 87.0,
+  "demands": {
+    "durability": 4,
+    "climbing": 7,
+    "vo2_power": 5,
+    "threshold": 8,
+    "technical": 6,
+    "heat_resilience": 1,
+    "altitude": 2,
+    "race_specificity": 8
+  },
+  "top_categories": [
+    {
+      "category": "TT_Threshold",
+      "score": 100,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "75ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 99,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "GFNY Ventura's long coastal-and-mountain loop forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 87 miles."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 96,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic GFNY Ventura's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before April."
+    },
+    {
+      "category": "Over_Under",
+      "score": 86,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At GFNY Ventura, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "G_Spot",
+      "score": 78,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY Ventura. Train it until it feels boring."
+    },
+    {
+      "category": "Durability",
+      "score": 75,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 61,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "6,499ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "VO2max",
+      "score": 58,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "6,499ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 57,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Ventura, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 46,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on long coastal-and-mountain loop. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 46,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Blended",
+      "score": 41,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 6,499ft of climbing on long coastal-and-mountain loop does to your power file on race day."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Target 60\u201380g carbs/hour for GFNY Ventura\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "terrain": "Mixed terrain at GFNY Ventura requires surface adaptability. Include weekly rides on long coastal-and-mountain loop to build confidence."
+  },
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Road Specific, and Race Simulation to prepare you for 87 miles of long coastal-and-mountain loop in Ventura, California, USA.",
+  "generated_at": "2026-08-05"
+}

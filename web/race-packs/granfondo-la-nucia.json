@@ -4,7 +4,7 @@
   "distance_mi": 82.0,
   "demands": {
     "durability": 4,
-    "climbing": 8,
+    "climbing": 7,
     "vo2_power": 6,
     "threshold": 8,
     "technical": 4,
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 79,
+      "score": 76,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -41,7 +41,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "7,500ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "7,464ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Race_Simulation",
@@ -63,8 +63,17 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 82 miles, base fitness is the difference between racing and surviving."
     },
     {
+      "category": "Road_Specific",
+      "score": 66,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Granfondo La Nucia's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 82 miles."
+    },
+    {
       "category": "Over_Under",
-      "score": 70,
+      "score": 65,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -72,17 +81,8 @@
       "workout_context": "At Granfondo La Nucia, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 66,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Granfondo La Nucia's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 82 miles."
-    },
-    {
       "category": "G_Spot",
-      "score": 62,
+      "score": 59,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -92,12 +92,12 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 53,
+      "score": 46,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "7,500ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "7,464ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "HVLI_Extended",
@@ -119,13 +119,13 @@
       "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo La Nucia, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "SFR_Muscle_Force",
+      "category": "Anaerobic_Capacity",
       "score": 35,
       "workouts": [
-        "SFR Low Cadence",
-        "Force Repeats"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Low-cadence force work for 7,500ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     }
   ],
   "race_overlay": {
@@ -135,5 +135,5 @@
     "terrain": "Mixed terrain at Granfondo La Nucia requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and VO2max to prepare you for 82 miles of mixed terrain in La Nucia, Alicante, Spain.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

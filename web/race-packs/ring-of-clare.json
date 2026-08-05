@@ -1,9 +1,9 @@
 {
   "slug": "ring-of-clare",
   "race_name": "\u0160koda Ring of Clare Sportive",
-  "distance_mi": 100.0,
+  "distance_mi": 99.4,
   "demands": {
-    "durability": 6,
+    "durability": 4,
     "climbing": 6,
     "vo2_power": 5,
     "threshold": 8,
@@ -14,13 +14,13 @@
   },
   "top_categories": [
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 100,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "\u0160koda Ring of Clare Sportive's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "\u0160koda Ring of Clare Sportive's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 99 miles."
     },
     {
       "category": "TT_Threshold",
@@ -30,7 +30,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "50ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "56ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
@@ -41,16 +41,6 @@
         "Sector Simulation"
       ],
       "workout_context": "Race-pace efforts that mimic \u0160koda Ring of Clare Sportive's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
-    },
-    {
-      "category": "Durability",
-      "score": 88,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Over_Under",
@@ -79,7 +69,17 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "5,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "5,577ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "Durability",
+      "score": 71,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 99, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Critical_Power",
@@ -91,31 +91,13 @@
       "workout_context": "How long can you hold 105% FTP before you blow? At \u0160koda Ring of Clare Sportive, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Endurance",
-      "score": 53,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Mixed_Climbing",
       "score": 53,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "5,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
-    },
-    {
-      "category": "Blended",
-      "score": 50,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,000ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "5,577ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -125,13 +107,31 @@
         "90sec Repeats"
       ],
       "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 47,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 99 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Endurance",
+      "score": 41,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 99 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for \u0160koda Ring of Clare Sportive\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for \u0160koda Ring of Clare Sportive\u2019s 99 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at \u0160koda Ring of Clare Sportive. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at \u0160koda Ring of Clare Sportive requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Gravel Specific, TT Threshold, and Race Simulation to prepare you for 100 miles of mixed terrain in Ennis, County Clare, Ireland.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Road Specific, TT Threshold, and Race Simulation to prepare you for 99 miles of mixed terrain in Ennis, County Clare, Ireland.",
+  "generated_at": "2026-08-05"
 }

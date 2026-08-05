@@ -1,7 +1,7 @@
 {
   "slug": "highlands-gran-fondo",
   "race_name": "Highlands Gran Fondo",
-  "distance_mi": 100.0,
+  "distance_mi": 103.5,
   "demands": {
     "durability": 6,
     "climbing": 8,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 103, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "80ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "73ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Over_Under",
@@ -49,7 +49,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 103 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Race_Simulation",
@@ -79,7 +79,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "8,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "7,535ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Mixed_Climbing",
@@ -88,16 +88,16 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "8,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "7,535ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 51,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Highlands Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "Highlands Gran Fondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 103 miles."
     },
     {
       "category": "HVLI_Extended",
@@ -107,7 +107,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "103 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Blended",
@@ -116,7 +116,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,000ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,535ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -125,14 +125,14 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 8,000ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 7,535ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "heat": "June in Butler, New Jersey, USA. Begin heat acclimatization 10\u201314 days before Highlands Gran Fondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Highlands Gran Fondo\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for Highlands Gran Fondo\u2019s 103 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Highlands Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Over Under to prepare you for 100 miles of mixed terrain in Butler, New Jersey, USA.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Over Under to prepare you for 103 miles of mixed terrain in Butler, New Jersey, USA.",
+  "generated_at": "2026-08-05"
 }

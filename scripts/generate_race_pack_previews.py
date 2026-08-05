@@ -71,7 +71,7 @@ DEMAND_TO_CATEGORY_WEIGHTS = {
         'Tempo': 1.0,
     },
     'technical': {
-        'Gravel_Specific': 3.0,
+        'Road_Specific': 3.0,
         'Cadence_Work': 2.0,
         'Critical_Power': 2.0,
         'Race_Simulation': 1.5,
@@ -89,7 +89,7 @@ DEMAND_TO_CATEGORY_WEIGHTS = {
     },
     'race_specificity': {
         'Race_Simulation': 3.0,
-        'Gravel_Specific': 2.0,
+        'Road_Specific': 2.0,
         'Durability': 1.5,
         'Blended': 1.0,
     },
@@ -111,7 +111,7 @@ CATEGORY_SAMPLE_ARCHETYPES = {
     'G_Spot': ['G-Spot Standard', 'G-Spot Extended', 'Criss-Cross'],
     'Mixed_Climbing': ['Seated/Standing Climbs', 'Variable Grade Simulation'],
     'Over_Under': ['Classic Over-Unders', 'Ladder Over-Unders'],
-    'Gravel_Specific': ['Surge and Settle', 'Terrain Microbursts'],
+    'Road_Specific': ['Surge and Settle', 'Terrain Microbursts'],
     'Endurance': ['Pre-Race Openers', 'Terrain Simulation Z2'],
     'Critical_Power': ['Above CP Repeats', 'W-Prime Depletion'],
     'Anaerobic_Capacity': ['2min Killers', '90sec Repeats'],
@@ -128,7 +128,7 @@ CATEGORY_SAMPLE_ARCHETYPES = {
 # Default number of top categories to include in a race pack preview.
 # Must be high enough that ultra-distance races still get 5 eligible workouts
 # after filtering (up to 7 categories can be filtered for ultra: VO2max,
-# Race_Simulation, Gravel_Specific, Critical_Power, Anaerobic, Sprint, Norwegian).
+# Race_Simulation, Road_Specific, Critical_Power, Anaerobic, Sprint, Norwegian).
 TOP_N_DEFAULT = 12
 # Minimum number of top categories
 TOP_N_MIN = 3
@@ -541,12 +541,12 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
             return f"Varied gradients on {terrain_str} demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     elif category == 'Over_Under':
         return f"At {race_name}, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    elif category == 'Gravel_Specific':
+    elif category == 'Road_Specific':
         terrain_detail = ', '.join(terrain_types[:2]) if terrain_types else terrain_str
         # Truncate absurdly long terrain descriptions
         if len(terrain_detail) > 60:
             terrain_detail = terrain_detail[:60].rsplit(' ', 1)[0]
-        return f"{_poss(race_name)} {terrain_detail} forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for {int(distance)} miles."
+        return f"{_poss(race_name)} {terrain_detail} forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for {int(distance)} miles."
     elif category == 'Endurance':
         if distance >= 80:
             return f"Every hard session works better with a bigger aerobic base. At {int(distance)} miles, base fitness is the difference between racing and surviving."

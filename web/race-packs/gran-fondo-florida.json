@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-florida",
   "race_name": "Gran Fondo Florida",
-  "distance_mi": 100.0,
+  "distance_mi": 101.08,
   "demands": {
     "durability": 6,
     "climbing": 5,
@@ -21,16 +21,16 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 101, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 83,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Florida's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "Gran Fondo Florida's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 101 miles."
     },
     {
       "category": "Race_Simulation",
@@ -78,7 +78,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 101 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "HVLI_Extended",
@@ -88,7 +88,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "101 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "VO2max",
@@ -116,7 +116,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,248ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,409ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -130,9 +130,9 @@
   ],
   "race_overlay": {
     "heat": "March in Dade City, Florida, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Florida. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Florida\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Florida\u2019s 101 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "terrain": "Mixed terrain at Gran Fondo Florida requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Gravel Specific, and Race Simulation to prepare you for 100 miles of mixed terrain in Dade City, Florida, USA.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Road Specific, and Race Simulation to prepare you for 101 miles of mixed terrain in Dade City, Florida, USA.",
+  "generated_at": "2026-08-05"
 }

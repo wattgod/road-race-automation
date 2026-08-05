@@ -1,21 +1,40 @@
 {
   "slug": "gran-fondo-pirineus",
   "race_name": "Gran Fondo Pirineus",
-  "distance_mi": 89.0,
+  "distance_mi": 89.5,
   "demands": {
     "durability": 4,
     "climbing": 10,
     "vo2_power": 4,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 8,
+    "heat_resilience": 6,
     "altitude": 8,
     "race_specificity": 8
   },
   "top_categories": [
     {
-      "category": "Durability",
+      "category": "TT_Threshold",
       "score": 100,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "132ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
+      "category": "Over_Under",
+      "score": 95,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Gran Fondo Pirineus, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
+      "category": "Durability",
+      "score": 92,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -24,36 +43,8 @@
       "workout_context": "At mile 60 of 89, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "TT_Threshold",
-      "score": 98,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "133ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
-    },
-    {
-      "category": "Over_Under",
-      "score": 92,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Gran Fondo Pirineus, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 80,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 89 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "VO2max",
-      "score": 80,
+      "score": 82,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -63,7 +54,7 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 75,
+      "score": 77,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -72,7 +63,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 75,
+      "score": 77,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,7 +73,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 75,
+      "score": 77,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -91,17 +82,26 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Pirineus' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 70,
+      "category": "Endurance",
+      "score": 74,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 89 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 72,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Pirineus' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 89 miles."
+      "workout_context": "Gran Fondo Pirineus' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 89 miles."
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 50,
+      "score": 51,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
@@ -110,7 +110,7 @@
     },
     {
       "category": "HVLI_Extended",
-      "score": 45,
+      "score": 41,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -120,7 +120,7 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 40,
+      "score": 41,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -129,11 +129,11 @@
     }
   ],
   "race_overlay": {
-    "heat": "June in Camprodon, Girona, Spain. Begin heat acclimatization 10\u201314 days before Gran Fondo Pirineus \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
+    "heat": "June in Camprodon, Girona, Spain can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Pirineus. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Pirineus\u2019s 89 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Gran Fondo Pirineus with 11,811ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
     "terrain": "Mixed terrain at Gran Fondo Pirineus requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Over Under to prepare you for 89 miles of mixed terrain in Camprodon, Girona, Spain.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and Durability to prepare you for 89 miles of mixed terrain in Camprodon, Girona, Spain.",
+  "generated_at": "2026-08-05"
 }

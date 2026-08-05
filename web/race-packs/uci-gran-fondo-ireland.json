@@ -1,12 +1,12 @@
 {
   "slug": "uci-gran-fondo-ireland",
   "race_name": "UCI Gran Fondo Ireland",
-  "distance_mi": 95.0,
+  "distance_mi": 83.9,
   "demands": {
     "durability": 4,
-    "climbing": 5,
+    "climbing": 4,
     "vo2_power": 6,
-    "threshold": 8,
+    "threshold": 7,
     "technical": 4,
     "heat_resilience": 0,
     "altitude": 2,
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 86,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,36 +34,17 @@
       "workout_context": "Race-pace efforts that mimic UCI Gran Fondo Ireland's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 83,
+      "category": "Road_Specific",
+      "score": 96,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "UCI Gran Fondo Ireland's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 95 miles."
-    },
-    {
-      "category": "G_Spot",
-      "score": 79,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of UCI Gran Fondo Ireland. Train it until it feels boring."
-    },
-    {
-      "category": "Over_Under",
-      "score": 78,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At UCI Gran Fondo Ireland, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "UCI Gran Fondo Ireland's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 83 miles."
     },
     {
       "category": "VO2max",
-      "score": 73,
+      "score": 85,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -73,17 +54,36 @@
     },
     {
       "category": "Durability",
-      "score": 71,
+      "score": 83,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 95, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 83, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "G_Spot",
+      "score": 80,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of UCI Gran Fondo Ireland. Train it until it feels boring."
+    },
+    {
+      "category": "Over_Under",
+      "score": 76,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At UCI Gran Fondo Ireland, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
       "category": "Critical_Power",
-      "score": 54,
+      "score": 63,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
@@ -92,7 +92,7 @@
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 51,
+      "score": 59,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -101,36 +101,36 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 51,
+      "score": 52,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 95 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 83 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Blended",
+      "score": 48,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,445ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 48,
+      "score": 44,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
       "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
-    },
-    {
-      "category": "Blended",
-      "score": 41,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,858ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for UCI Gran Fondo Ireland\u2019s 95 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for UCI Gran Fondo Ireland\u2019s 83 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "terrain": "Mixed terrain at UCI Gran Fondo Ireland requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Gravel Specific to prepare you for 95 miles of mixed terrain in Sligo, Ireland.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Road Specific to prepare you for 83 miles of mixed terrain in Sligo, Ireland.",
+  "generated_at": "2026-08-05"
 }

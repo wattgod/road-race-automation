@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-mont-tremblant",
   "race_name": "Gran Fondo Mont-Tremblant",
-  "distance_mi": 93.0,
+  "distance_mi": 77.7,
   "demands": {
     "durability": 4,
     "climbing": 4,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "77 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "TT_Threshold",
@@ -41,16 +41,16 @@
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic Gran Fondo Mont-Tremblant's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
+      "workout_context": "Race-pace efforts that mimic Gran Fondo Mont-Tremblant's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 78,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Mont-Tremblant's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 93 miles."
+      "workout_context": "Gran Fondo Mont-Tremblant's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 77 miles."
     },
     {
       "category": "VO2max",
@@ -79,7 +79,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Base fitness for Gran Fondo Mont-Tremblant. Without this, the hard workouts break you down instead of building you up."
     },
     {
       "category": "Over_Under",
@@ -98,7 +98,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 93 miles without cracking. No shortcuts."
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 77 miles without cracking. No shortcuts."
     },
     {
       "category": "Norwegian_Double",
@@ -107,7 +107,7 @@
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 93 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     },
     {
       "category": "Critical_Power",
@@ -129,11 +129,11 @@
     }
   ],
   "race_overlay": {
-    "heat": "August in Mont-Tremblant, Quebec, Canada can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Mont-Tremblant. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Mont-Tremblant\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "heat": "Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Mont-Tremblant. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 40\u201360g carbs/hour for Gran Fondo Mont-Tremblant\u2019s 77 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Moderate altitude at Gran Fondo Mont-Tremblant. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Gran Fondo Mont-Tremblant requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 93 miles of mixed terrain in Mont-Tremblant, Quebec, Canada.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 77 miles of mixed terrain in Mont-Tremblant, Quebec, Canada.",
+  "generated_at": "2026-08-05"
 }

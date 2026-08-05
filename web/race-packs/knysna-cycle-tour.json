@@ -1,10 +1,10 @@
 {
   "slug": "knysna-cycle-tour",
   "race_name": "Knysna Cycle Tour",
-  "distance_mi": 62.0,
+  "distance_mi": 63.4,
   "demands": {
     "durability": 2,
-    "climbing": 5,
+    "climbing": 4,
     "vo2_power": 4,
     "threshold": 6,
     "technical": 2,
@@ -21,20 +21,11 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "79ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
-    },
-    {
-      "category": "Over_Under",
-      "score": 84,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Knysna Cycle Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Knysna Cycle Tour's rolling coastal road rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
       "category": "Race_Simulation",
-      "score": 82,
+      "score": 88,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -43,8 +34,17 @@
       "workout_context": "Race-pace efforts that mimic Knysna Cycle Tour's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before July."
     },
     {
+      "category": "Over_Under",
+      "score": 79,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Knysna Cycle Tour, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+    },
+    {
       "category": "G_Spot",
-      "score": 78,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -53,46 +53,46 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Knysna Cycle Tour. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 71,
+      "category": "Road_Specific",
+      "score": 75,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Knysna Cycle Tour's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 62 miles."
+      "workout_context": "Knysna Cycle Tour's rolling coastal road forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 63 miles."
     },
     {
       "category": "VO2max",
-      "score": 67,
+      "score": 71,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+      "workout_context": "When someone attacks on rolling coastal road, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "Durability",
-      "score": 59,
+      "score": 62,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "62 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "63 miles on rolling coastal road burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 59,
+      "score": 50,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+      "workout_context": "Varied gradients on rolling coastal road demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "Norwegian_Double",
-      "score": 47,
+      "score": 50,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -100,36 +100,36 @@
       "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     },
     {
-      "category": "SFR_Muscle_Force",
-      "score": 39,
-      "workouts": [
-        "SFR Low Cadence",
-        "Force Repeats"
-      ],
-      "workout_context": "Low-cadence force work for 4,921ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
-    },
-    {
       "category": "Anaerobic_Capacity",
-      "score": 39,
+      "score": 42,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "2-minute all-out efforts on rolling coastal road. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
       "category": "Critical_Power",
-      "score": 39,
+      "score": 42,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
       "workout_context": "How long can you hold 105% FTP before you blow? At Knysna Cycle Tour, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "Blended",
+      "score": 38,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Knysna Cycle Tour's rolling coastal road actually does to you."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for Knysna Cycle Tour\u2019s 62 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "nutrition": "Target 40\u201360g carbs/hour for Knysna Cycle Tour\u2019s 63 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
   },
-  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and Race Simulation to prepare you for 62 miles of mixed terrain in Knysna, Garden Route, South Africa.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Over Under to prepare you for 63 miles of rolling coastal road in Knysna Waterfront (Oyster Festival Grounds), Garden Route, Western Cape, South Africa.",
+  "generated_at": "2026-08-05"
 }

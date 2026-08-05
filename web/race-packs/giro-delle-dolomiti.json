@@ -1,7 +1,7 @@
 {
   "slug": "giro-delle-dolomiti",
   "race_name": "Giro delle Dolomiti",
-  "distance_mi": 298.0,
+  "distance_mi": 214.9,
   "demands": {
     "durability": 10,
     "climbing": 10,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "298 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "214 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
       "category": "Endurance",
@@ -30,7 +30,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 298 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 214 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "VO2max",
@@ -40,7 +40,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "29,527ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "31,247ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "HVLI_Extended",
@@ -50,7 +50,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "298 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "214 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Race_Simulation",
@@ -78,7 +78,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "29,527ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "31,247ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
@@ -88,16 +88,16 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "99ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "145ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 43,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Giro delle Dolomiti's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 298 miles."
+      "workout_context": "Giro delle Dolomiti's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 214 miles."
     },
     {
       "category": "Blended",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 29,527ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 31,247ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "G_Spot",
@@ -125,14 +125,14 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 29,527ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 31,247ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
     "heat": "July in Bolzano, South Tyrol, Italy. Begin heat acclimatization 10\u201314 days before Giro delle Dolomiti \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Ultra-distance fueling for 298 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 298 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Giro delle Dolomiti with 29,527ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "nutrition": "Ultra-distance fueling for 214 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 214 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "altitude": "Giro delle Dolomiti with 31,247ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 298 miles of mixed terrain in Bolzano, South Tyrol, Italy.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 214 miles of mixed terrain in Bolzano, South Tyrol, Italy.",
+  "generated_at": "2026-08-05"
 }

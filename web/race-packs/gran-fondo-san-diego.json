@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-san-diego",
   "race_name": "Gran Fondo San Diego",
-  "distance_mi": 101.0,
+  "distance_mi": 100.0,
   "demands": {
     "durability": 6,
     "climbing": 7,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 101, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "65ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "66ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Endurance",
@@ -40,7 +40,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 101 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "VO2max",
@@ -72,13 +72,13 @@
       "workout_context": "At Gran Fondo San Diego, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 67,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo San Diego's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 101 miles."
+      "workout_context": "Gran Fondo San Diego's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 100 miles."
     },
     {
       "category": "G_Spot",
@@ -98,7 +98,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "101 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Mixed_Climbing",
@@ -125,15 +125,15 @@
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 101 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
     }
   ],
   "race_overlay": {
     "heat": "April in San Diego, California, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo San Diego. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo San Diego\u2019s 101 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo San Diego\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Gran Fondo San Diego. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Gran Fondo San Diego requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Endurance to prepare you for 101 miles of mixed terrain in San Diego, California, USA.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Endurance to prepare you for 100 miles of mixed terrain in San Diego, California, USA.",
+  "generated_at": "2026-08-05"
 }

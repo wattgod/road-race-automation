@@ -1,60 +1,51 @@
 {
   "slug": "boone-gran-fondo",
   "race_name": "Boone Gran Fondo",
-  "distance_mi": 100.0,
+  "distance_mi": 94.0,
   "demands": {
-    "durability": 6,
+    "durability": 4,
     "climbing": 8,
     "vo2_power": 6,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 8,
+    "heat_resilience": 6,
     "altitude": 8,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "VO2max",
-      "score": 80,
+      "score": 100,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "7,714ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "8,432ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Endurance",
-      "score": 76,
+      "category": "Durability",
+      "score": 99,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At mile 60 of 94, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "TT_Threshold",
-      "score": 76,
+      "score": 95,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "77ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "90ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
-      "score": 69,
+      "score": 87,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -64,7 +55,7 @@
     },
     {
       "category": "Over_Under",
-      "score": 67,
+      "score": 84,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -72,17 +63,26 @@
       "workout_context": "At Boone Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 63,
+      "category": "Road_Specific",
+      "score": 79,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Boone Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 100 miles."
+      "workout_context": "Boone Gran Fondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 94 miles."
+    },
+    {
+      "category": "Endurance",
+      "score": 76,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 94 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "G_Spot",
-      "score": 59,
+      "score": 74,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -92,48 +92,48 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 51,
+      "score": 63,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "7,714ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 48,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
-      "category": "Blended",
-      "score": 38,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,714ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "8,432ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Critical_Power",
-      "score": 36,
+      "score": 45,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
       "workout_context": "How long can you hold 105% FTP before you blow? At Boone Gran Fondo, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 42,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 94 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "SFR_Muscle_Force",
+      "score": 42,
+      "workouts": [
+        "SFR Low Cadence",
+        "Force Repeats"
+      ],
+      "workout_context": "Low-cadence force work for 8,432ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
-    "heat": "August in Boone, North Carolina, USA. Begin heat acclimatization 10\u201314 days before Boone Gran Fondo \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Boone Gran Fondo\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Boone Gran Fondo with 7,714ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "heat": "August in Boone, North Carolina, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Boone Gran Fondo. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 60\u201380g carbs/hour for Boone Gran Fondo\u2019s 94 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Boone Gran Fondo with 8,432ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
     "terrain": "Mixed terrain at Boone Gran Fondo requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 100 miles of mixed terrain in Boone, North Carolina, USA.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Durability, and TT Threshold to prepare you for 94 miles of mixed terrain in Boone, North Carolina, USA.",
+  "generated_at": "2026-08-05"
 }

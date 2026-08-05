@@ -1,7 +1,7 @@
 {
   "slug": "gran-fondo-hincapie",
   "race_name": "Gran Fondo Hincapie",
-  "distance_mi": 83.0,
+  "distance_mi": 85.0,
   "demands": {
     "durability": 4,
     "climbing": 8,
@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "98ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "95ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
@@ -43,13 +43,13 @@
       "workout_context": "At Gran Fondo Hincapie, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 89,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Hincapie's paved Blue Ridge foothill roads with sustained forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 83 miles."
+      "workout_context": "Gran Fondo Hincapie's mostly paved Blue Ridge foothill roads with forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 85 miles."
     },
     {
       "category": "Durability",
@@ -59,7 +59,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 83, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 85, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "G_Spot",
@@ -78,7 +78,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "8,100ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "8,040ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "VO2max",
@@ -88,7 +88,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "8,100ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "8,040ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Critical_Power",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,100ft of climbing on paved Blue Ridge foothill roads with sustained does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,040ft of climbing on mostly paved Blue Ridge foothill roads with does to your power file on race day."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -115,7 +115,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 8,100ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 8,040ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -124,13 +124,13 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved Blue Ridge foothill roads with sustained. If you haven't trained them, you'll crack."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mostly paved Blue Ridge foothill roads with. If you haven't trained them, you'll crack."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Hincapie\u2019s 83 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "terrain": "Mixed terrain at Gran Fondo Hincapie requires surface adaptability. Include weekly rides on paved blue ridge foothill roads with sustained mountain climbs to build confidence."
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Hincapie\u2019s 85 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "terrain": "Mixed terrain at Gran Fondo Hincapie requires surface adaptability. Include weekly rides on mostly paved blue ridge foothill roads with sustained mountain climbs to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Over Under to prepare you for 83 miles of paved blue ridge foothill roads with sustained mountain climbs in Travelers Rest, South Carolina.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Over Under to prepare you for 85 miles of mostly paved blue ridge foothill roads with sustained mountain climbs in Travelers Rest, South Carolina.",
+  "generated_at": "2026-08-05"
 }

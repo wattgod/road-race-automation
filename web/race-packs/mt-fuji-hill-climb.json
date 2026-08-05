@@ -1,7 +1,7 @@
 {
   "slug": "mt-fuji-hill-climb",
   "race_name": "Mt. Fuji Hill Climb",
-  "distance_mi": 15.0,
+  "distance_mi": 14.9,
   "demands": {
     "durability": 1,
     "climbing": 8,
@@ -43,13 +43,13 @@
       "workout_context": "At Mt. Fuji Hill Climb, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 59,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Mt. Fuji Hill Climb's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 15 miles."
+      "workout_context": "Mt. Fuji Hill Climb's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 14 miles."
     },
     {
       "category": "Mixed_Climbing",
@@ -68,7 +68,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "307ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "276ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Durability",
@@ -78,7 +78,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "15 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "14 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "G_Spot",
@@ -106,7 +106,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 4,600ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 4,118ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Critical_Power",
@@ -129,8 +129,8 @@
   ],
   "race_overlay": {
     "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
-    "altitude": "Mt. Fuji Hill Climb with 4,600ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "Mt. Fuji Hill Climb with 4,118ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Over Under to prepare you for 15 miles of mixed terrain in Fujiyoshida, Yamanashi, Japan.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Over Under to prepare you for 14 miles of mixed terrain in Fujiyoshida, Yamanashi, Japan.",
+  "generated_at": "2026-08-05"
 }

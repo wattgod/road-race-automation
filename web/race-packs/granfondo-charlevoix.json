@@ -1,7 +1,7 @@
 {
   "slug": "granfondo-charlevoix",
   "race_name": "Granfondo Charlevoix",
-  "distance_mi": 52.0,
+  "distance_mi": 54.1,
   "demands": {
     "durability": 2,
     "climbing": 3,
@@ -14,13 +14,13 @@
   },
   "top_categories": [
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 100,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Granfondo Charlevoix's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 52 miles."
+      "workout_context": "Granfondo Charlevoix's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 54 miles."
     },
     {
       "category": "Race_Simulation",
@@ -70,7 +70,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "52 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "54 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Over_Under",
@@ -128,10 +128,10 @@
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for Granfondo Charlevoix\u2019s 52 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "nutrition": "Target 40\u201360g carbs/hour for Granfondo Charlevoix\u2019s 54 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Moderate altitude at Granfondo Charlevoix. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Granfondo Charlevoix requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and VO2max to prepare you for 52 miles of mixed terrain in Baie-Saint-Paul, Quebec, Canada.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Road Specific, Race Simulation, and VO2max to prepare you for 54 miles of mixed terrain in Baie-Saint-Paul, Quebec, Canada.",
+  "generated_at": "2026-08-05"
 }

@@ -5,15 +5,15 @@
     "display_name": "Granfondo La Guadeloupe",
     "tagline": "Tropical UCI Gran Fondo qualifier with Caribbean climbs and sea views.",
     "vitals": {
-      "distance_km": 124.0,
-      "distance_mi": 77.1,
+      "distance_km": 126.0,
+      "distance_mi": 78.3,
       "elevation_m": 2883.0,
       "elevation_ft": 9459.0,
       "location": "Capesterre-Belle-Eau, Guadeloupe",
       "location_badge": "Capesterre-Belle-Eau, Guadeloupe",
       "country": "Guadeloupe",
-      "date": "2025: December 7",
-      "date_specific": "2026: Sunday, December 6 (Capesterre-Belle-Eau, Guadeloupe) — UCI Gran Fondo World Series. First edition was December 7, 2025.",
+      "date": "2026: December 6",
+      "date_specific": "2026: Sunday, December 6",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -22,7 +22,10 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Granfondo: 126 km, 2,883 m climbing — UCI Gran Fondo World Series qualifier",
+        "Cyclo Découverte: non-qualifying Saturday ride on Grande-Terre"
+      ]
     },
     "climate": {
       "primary": "Tropical",
@@ -111,13 +114,18 @@
     "citations": [
       {
         "url": "https://ucigranfondoworldseries.com/fr/granfondo-la-guadeloupe/",
-        "category": "reference",
+        "category": "official",
         "label": "Guadeloupe - UCI Gran Fondo World Series (FR)"
       },
       {
         "url": "https://ucigranfondoworldseries.com/en/granfondo-la-guadeloupe/",
-        "category": "reference",
+        "category": "official",
         "label": "Guadeloupe - UCI Gran Fondo World Series (EN)"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series Calendar — December 6, 2026"
       },
       {
         "url": "https://granfondodailynews.com/2025/12/09/uci-granfondo-guadeloupe-results-mountain-goat-benjamin-le-ny-climbs-to-victory/",

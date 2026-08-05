@@ -1,10 +1,10 @@
 {
   "slug": "letape-denmark",
   "race_name": "L'Etape Denmark by Tour de France",
-  "distance_mi": 186.0,
+  "distance_mi": 186.4,
   "demands": {
     "durability": 8,
-    "climbing": 4,
+    "climbing": 5,
     "vo2_power": 5,
     "threshold": 4,
     "technical": 2,
@@ -34,13 +34,13 @@
       "workout_context": "Race-pace efforts that mimic L'Etape Denmark by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 64,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Etape Denmark by Tour de France's paved roads along the Haervejen (Ancient Road) forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 186 miles."
+      "workout_context": "L'Etape Denmark by Tour de France's paved roads along the Haervejen (Ancient Road) forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 186 miles."
     },
     {
       "category": "Blended",
@@ -49,7 +49,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,593ft of climbing on paved roads along the Haervejen (Ancient Road) does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 8,202ft of climbing on paved roads along the Haervejen (Ancient Road) does to your power file on race day."
     },
     {
       "category": "HVLI_Extended",
@@ -69,7 +69,17 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "When someone attacks on paved roads along the Haervejen (Ancient Road), you have 10 seconds to respond or you're off the back. This builds that response."
+      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 52,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "L'Etape Denmark by Tour de France's paved roads along the Haervejen (Ancient Road) rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
       "category": "Endurance",
@@ -81,18 +91,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 186 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "TT_Threshold",
-      "score": 48,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "L'Etape Denmark by Tour de France's paved roads along the Haervejen (Ancient Road) rewards steady threshold power. Surging and recovering costs more watts than just holding."
-    },
-    {
       "category": "Over_Under",
-      "score": 43,
+      "score": 49,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -100,8 +100,17 @@
       "workout_context": "At L'Etape Denmark by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
+      "category": "Mixed_Climbing",
+      "score": 40,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "8,202ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
       "category": "G_Spot",
-      "score": 37,
+      "score": 40,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -117,20 +126,11 @@
         "Extended Tempo"
       ],
       "workout_context": "Tempo is L'Etape Denmark by Tour de France's race pace. The wattage you'll hold for 186 miles on paved roads along the Haervejen (Ancient Road). Train it until it's automatic."
-    },
-    {
-      "category": "Mixed_Climbing",
-      "score": 32,
-      "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
-      ],
-      "workout_context": "Varied gradients on paved roads along the Haervejen (Ancient Road) demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     }
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 186 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 186 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 186 miles of paved roads along the haervejen (ancient road) ridgeline through jutland in Various start points across Jutland, Denmark \u2014 all routes finish in Viborg.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Road Specific to prepare you for 186 miles of paved roads along the haervejen (ancient road) ridgeline through jutland in Various start points across Jutland, Denmark \u2014 all routes finish in Viborg.",
+  "generated_at": "2026-08-05"
 }

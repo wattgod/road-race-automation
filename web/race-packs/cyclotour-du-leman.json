@@ -1,7 +1,7 @@
 {
   "slug": "cyclotour-du-leman",
   "race_name": "Cyclotour du L\u00e9man",
-  "distance_mi": 109.0,
+  "distance_mi": 109.4,
   "demands": {
     "durability": 6,
     "climbing": 5,
@@ -82,13 +82,13 @@
       "workout_context": "At Cyclotour du L\u00e9man, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 55,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Cyclotour du L\u00e9man's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 109 miles."
+      "workout_context": "Cyclotour du L\u00e9man's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 109 miles."
     },
     {
       "category": "HVLI_Extended",
@@ -134,5 +134,5 @@
     "altitude": "Moderate altitude at Cyclotour du L\u00e9man. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 109 miles of mixed terrain in Lausanne, Switzerland.",
-  "generated_at": "2026-06-25"
+  "generated_at": "2026-08-05"
 }

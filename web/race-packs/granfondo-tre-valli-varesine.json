@@ -1,10 +1,10 @@
 {
   "slug": "granfondo-tre-valli-varesine",
   "race_name": "Granfondo Tre Valli Varesine",
-  "distance_mi": 78.84,
+  "distance_mi": 78.3,
   "demands": {
     "durability": 4,
-    "climbing": 8,
+    "climbing": 7,
     "vo2_power": 6,
     "threshold": 8,
     "technical": 8,
@@ -14,13 +14,13 @@
   },
   "top_categories": [
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 100,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Granfondo Tre Valli Varesine's hilly pre-alpine terrain with significant forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 78 miles."
+      "workout_context": "Granfondo Tre Valli Varesine's hilly pre-alpine terrain with significant forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 78 miles."
     },
     {
       "category": "Race_Simulation",
@@ -34,13 +34,13 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 86,
+      "score": 82,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "104ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "84ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "VO2max",
@@ -50,11 +50,11 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "8,202ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,539ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Over_Under",
-      "score": 76,
+      "score": 70,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -63,7 +63,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 67,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -92,12 +92,12 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 57,
+      "score": 50,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "8,202ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "6,539ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -118,13 +118,13 @@
       "workout_context": "Base fitness for Granfondo Tre Valli Varesine. Without this, the hard workouts break you down instead of building you up."
     },
     {
-      "category": "SFR_Muscle_Force",
+      "category": "Norwegian_Double",
       "score": 38,
       "workouts": [
-        "SFR Low Cadence",
-        "Force Repeats"
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
       ],
-      "workout_context": "Low-cadence force work for 8,202ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     }
   ],
   "race_overlay": {
@@ -132,6 +132,6 @@
     "altitude": "Moderate altitude at Granfondo Tre Valli Varesine. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Highly technical terrain at Granfondo Tre Valli Varesine demands practice on similar surfaces. Ride hilly pre-alpine terrain with significant climbing on fully paved roads at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 78 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on Gravel Specific, Race Simulation, and TT Threshold to prepare you for 78 miles of hilly pre-alpine terrain with significant climbing on fully paved roads in Varese, Lombardy, Italy.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Road Specific, Race Simulation, and TT Threshold to prepare you for 78 miles of hilly pre-alpine terrain with significant climbing on fully paved roads in Varese, Lombardy, Italy.",
+  "generated_at": "2026-08-05"
 }

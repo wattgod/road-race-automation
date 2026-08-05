@@ -1,12 +1,12 @@
 {
   "slug": "sierra-nevada-limite",
   "race_name": "Sierra Nevada L\u00edmite Gran Fondo",
-  "distance_mi": 91.0,
+  "distance_mi": 73.9,
   "demands": {
-    "durability": 4,
+    "durability": 2,
     "climbing": 8,
     "vo2_power": 5,
-    "threshold": 8,
+    "threshold": 6,
     "technical": 8,
     "heat_resilience": 0,
     "altitude": 10,
@@ -21,26 +21,16 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "11,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "10,890ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 100,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Sierra Nevada L\u00edmite Gran Fondo's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 91 miles."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 90,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "121ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "Sierra Nevada L\u00edmite Gran Fondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 73 miles."
     },
     {
       "category": "Race_Simulation",
@@ -53,33 +43,23 @@
       "workout_context": "Race-pace efforts that mimic Sierra Nevada L\u00edmite Gran Fondo's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
+      "category": "TT_Threshold",
+      "score": 75,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "147ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+    },
+    {
       "category": "Over_Under",
-      "score": 80,
+      "score": 72,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
       "workout_context": "At Sierra Nevada L\u00edmite Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "G_Spot",
-      "score": 70,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Sierra Nevada L\u00edmite Gran Fondo. Train it until it feels boring."
-    },
-    {
-      "category": "Durability",
-      "score": 60,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 91, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Mixed_Climbing",
@@ -88,7 +68,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "11,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "10,890ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Critical_Power",
@@ -100,13 +80,33 @@
       "workout_context": "How long can you hold 105% FTP before you blow? At Sierra Nevada L\u00edmite Gran Fondo, that number decides whether you bridge or get dropped."
     },
     {
-      "category": "Endurance",
+      "category": "G_Spot",
       "score": 57,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Sierra Nevada L\u00edmite Gran Fondo. Train it until it feels boring."
+    },
+    {
+      "category": "Endurance",
+      "score": 48,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 91 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Base fitness for Sierra Nevada L\u00edmite Gran Fondo. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "Durability",
+      "score": 45,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "73 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -124,14 +124,14 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 11,000ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 10,890ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for Sierra Nevada L\u00edmite Gran Fondo\u2019s 91 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Sierra Nevada L\u00edmite Gran Fondo with 11,000ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Precipitation: Moderate, with possible flurries at elevation.",
-    "terrain": "Highly technical terrain at Sierra Nevada L\u00edmite Gran Fondo demands practice on similar surfaces. Ride mixed terrain at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 91 miles."
+    "nutrition": "Target 40\u201360g carbs/hour for Sierra Nevada L\u00edmite Gran Fondo\u2019s 73 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "altitude": "Sierra Nevada L\u00edmite Gran Fondo with 10,890ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Precipitation: Moderate, with possible flurries at elevation.",
+    "terrain": "Highly technical terrain at Sierra Nevada L\u00edmite Gran Fondo demands practice on similar surfaces. Ride mixed terrain at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 73 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Gravel Specific, and TT Threshold to prepare you for 91 miles of mixed terrain in Cenes de la Vega, Granada, Spain.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Road Specific, and Race Simulation to prepare you for 73 miles of mixed terrain in Cenes de la Vega, Granada, Spain.",
+  "generated_at": "2026-08-05"
 }

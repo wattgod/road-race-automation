@@ -24,13 +24,13 @@
       "workout_context": "200 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 95,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Dartmoor Legend Ultra Sportive's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 200 miles."
+      "workout_context": "Dartmoor Legend Ultra Sportive's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 200 miles."
     },
     {
       "category": "Race_Simulation",
@@ -68,7 +68,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "19,700ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "18,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Mixed_Climbing",
@@ -77,7 +77,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "19,700ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "18,000ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "TT_Threshold",
@@ -87,7 +87,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "98ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "90ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "HVLI_Extended",
@@ -106,7 +106,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 19,700ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 18,000ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "G_Spot",
@@ -130,9 +130,9 @@
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 200 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 200 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Dartmoor Legend Ultra Sportive with 19,700ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "altitude": "Dartmoor Legend Ultra Sportive with 18,000ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
     "terrain": "Highly technical terrain at Dartmoor Legend Ultra Sportive demands practice on similar surfaces. Ride mixed terrain at race-day cadence weekly. Practice cornering, descending, and power delivery on unstable surfaces. Dial in tire pressure before race week \u2014 5 PSI wrong costs you 15+ minutes over 200 miles."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Gravel Specific, and Race Simulation to prepare you for 200 miles of mixed terrain in Exeter Racecourse, Kennford, Exeter, Devon, EX6 7XS, England.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Road Specific, and Race Simulation to prepare you for 200 miles of mixed terrain in Exeter Racecourse, Kennford, Exeter, Devon, EX6 7XS, England.",
+  "generated_at": "2026-08-05"
 }

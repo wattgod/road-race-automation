@@ -1,7 +1,7 @@
 {
   "slug": "race-across-benelux",
   "race_name": "Race Across Benelux",
-  "distance_mi": 621.0,
+  "distance_mi": 651.2,
   "demands": {
     "durability": 10,
     "climbing": 10,
@@ -21,16 +21,16 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "621 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "651 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 65,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Race Across Benelux's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 621 miles."
+      "workout_context": "Race Across Benelux's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 651 miles."
     },
     {
       "category": "Race_Simulation",
@@ -58,7 +58,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 621 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 651 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "HVLI_Extended",
@@ -68,7 +68,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "621 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "651 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Mixed_Climbing",
@@ -87,7 +87,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "63ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "60ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Blended",
@@ -129,10 +129,10 @@
     }
   ],
   "race_overlay": {
-    "heat": "May in Amsterdam to Arlon via Netherlands/Belgium/Luxembourg, with loops around Arlon can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Race Across Benelux. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Ultra-distance fueling for 621 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 621 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
+    "heat": "May in Amsterdam to Arlon, plus an Arlon loop, via Netherlands, Belgium and Luxembourg can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Race Across Benelux. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Ultra-distance fueling for 651 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 651 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
     "terrain": "Mixed terrain at Race Across Benelux requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Gravel Specific, and Race Simulation to prepare you for 621 miles of mixed terrain in Amsterdam to Arlon via Netherlands/Belgium/Luxembourg, with loops around Arlon.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Road Specific, and Race Simulation to prepare you for 651 miles of mixed terrain in Amsterdam to Arlon, plus an Arlon loop, via Netherlands, Belgium and Luxembourg.",
+  "generated_at": "2026-08-05"
 }

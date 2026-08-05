@@ -1,7 +1,7 @@
 {
   "slug": "pedal-imua",
   "race_name": "Pedal IMUA",
-  "distance_mi": 62.0,
+  "distance_mi": 62.1,
   "demands": {
     "durability": 2,
     "climbing": 7,
@@ -21,7 +21,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "62 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "62 miles on rolling coastal burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Race_Simulation",
@@ -41,16 +41,16 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "94ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "67ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 74,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Pedal IMUA's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 62 miles."
+      "workout_context": "Pedal IMUA's rolling coastal forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 62 miles."
     },
     {
       "category": "Over_Under",
@@ -87,7 +87,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "5,800ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "Varied gradients on rolling coastal demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
       "category": "VO2max",
@@ -97,7 +97,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "5,800ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "When someone attacks on rolling coastal, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
       "category": "HVLI_Extended",
@@ -107,7 +107,7 @@
         "Multi-Hour Z2",
         "Back-to-Back Long"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 62 miles without cracking. No shortcuts."
+      "workout_context": "The aerobic base that lets you ride rolling coastal at tempo for 62 miles without cracking. No shortcuts."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -116,7 +116,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 5,800ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 4,173ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
     },
     {
       "category": "Critical_Power",
@@ -129,10 +129,10 @@
     }
   ],
   "race_overlay": {
-    "heat": "December in Maui, Hawaii, USA. Begin heat acclimatization 10\u201314 days before Pedal IMUA \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
+    "heat": "December in Kahului, Maui, Hawaii, USA \u2014 Tropical Maui in December: warm and humid with trade winds; exposed coastal sections and rain showers possible on the windward north side. Begin heat acclimatization 10\u201314 days before Pedal IMUA \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day. Race-day realities: Humidity and sun exposure on the coastal sections.",
     "nutrition": "Target 40\u201360g carbs/hour for Pedal IMUA\u2019s 62 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "terrain": "Mixed terrain at Pedal IMUA requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "terrain": "Mixed terrain at Pedal IMUA requires surface adaptability. Include weekly rides on rolling coastal to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 62 miles of mixed terrain in Maui, Hawaii, USA.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 62 miles of rolling coastal in Kahului, Maui, Hawaii, USA.",
+  "generated_at": "2026-08-05"
 }

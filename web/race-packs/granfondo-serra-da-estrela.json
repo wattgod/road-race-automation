@@ -1,12 +1,12 @@
 {
   "slug": "granfondo-serra-da-estrela",
   "race_name": "Granfondo Serra da Estrela",
-  "distance_mi": 108.0,
+  "distance_mi": 71.5,
   "demands": {
-    "durability": 6,
+    "durability": 2,
     "climbing": 10,
     "vo2_power": 6,
-    "threshold": 8,
+    "threshold": 6,
     "technical": 2,
     "heat_resilience": 6,
     "altitude": 10,
@@ -14,38 +14,18 @@
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 108, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "VO2max",
-      "score": 96,
+      "score": 100,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "15,092ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 87,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "140ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "13,681ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Over_Under",
-      "score": 82,
+      "score": 79,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -53,17 +33,28 @@
       "workout_context": "At Granfondo Serra da Estrela, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Endurance",
-      "score": 80,
+      "category": "Durability",
+      "score": 77,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 108 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "71 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 77,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "191ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Race_Simulation",
-      "score": 73,
+      "score": 77,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -73,16 +64,34 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 67,
+      "score": 70,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "15,092ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "13,681ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Endurance",
+      "score": 65,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Granfondo Serra da Estrela. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 60,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Granfondo Serra da Estrela's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 71 miles."
     },
     {
       "category": "G_Spot",
-      "score": 67,
+      "score": 58,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,48 +100,38 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Granfondo Serra da Estrela. Train it until it feels boring."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 58,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Granfondo Serra da Estrela's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 108 miles."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 47,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "108 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
       "category": "SFR_Muscle_Force",
-      "score": 44,
+      "score": 47,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 15,092ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work for 13,681ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 33,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     },
     {
       "category": "Blended",
-      "score": 42,
+      "score": 30,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 15,092ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 13,681ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
     "heat": "June in Seia, Serra da Estrela, Portugal can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Granfondo Serra da Estrela. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Granfondo Serra da Estrela\u2019s 108 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Granfondo Serra da Estrela with 15,092ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "nutrition": "Target 40\u201360g carbs/hour for Granfondo Serra da Estrela\u2019s 71 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "altitude": "Granfondo Serra da Estrela with 13,681ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and TT Threshold to prepare you for 108 miles of mixed terrain in Seia, Serra da Estrela, Portugal.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Over Under, and Durability to prepare you for 71 miles of mixed terrain in Seia, Serra da Estrela, Portugal.",
+  "generated_at": "2026-08-05"
 }

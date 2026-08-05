@@ -1,7 +1,7 @@
 {
   "slug": "granfondo-alberto-contador",
   "race_name": "Gran Fondo Alberto Contador",
-  "distance_mi": 91.0,
+  "distance_mi": 86.0,
   "demands": {
     "durability": 4,
     "climbing": 6,
@@ -31,16 +31,16 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "92ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "97ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 89,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Alberto Contador's paved Mediterranean mountain roads through the forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 91 miles."
+      "workout_context": "Gran Fondo Alberto Contador's paved Mediterranean mountain roads through the forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 86 miles."
     },
     {
       "category": "VO2max",
@@ -60,7 +60,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 91, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 86, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Over_Under",
@@ -124,14 +124,14 @@
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 91 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 86 miles, sustainable FTP gains matter more than peak power."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Alberto Contador\u2019s 91 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Alberto Contador\u2019s 86 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "altitude": "Moderate altitude at Gran Fondo Alberto Contador. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at Gran Fondo Alberto Contador requires surface adaptability. Include weekly rides on paved mediterranean mountain roads through the costa blanca interior to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, TT Threshold, and Gravel Specific to prepare you for 91 miles of paved mediterranean mountain roads through the costa blanca interior in Oliva, Valencia, Spain.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, TT Threshold, and Road Specific to prepare you for 86 miles of paved mediterranean mountain roads through the costa blanca interior in Oliva, Valencia, Spain.",
+  "generated_at": "2026-08-05"
 }

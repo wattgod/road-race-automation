@@ -1,16 +1,16 @@
 {
   "slug": "korea-epic-ride",
   "race_name": "Korea Epic Ride",
-  "distance_mi": 62.0,
+  "distance_mi": 203.8,
   "demands": {
-    "durability": 2,
-    "climbing": 5,
-    "vo2_power": 4,
-    "threshold": 6,
+    "durability": 10,
+    "climbing": 10,
+    "vo2_power": 3,
+    "threshold": 5,
     "technical": 2,
     "heat_resilience": 6,
     "altitude": 4,
-    "race_specificity": 6
+    "race_specificity": 8
   },
   "top_categories": [
     {
@@ -21,31 +21,20 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "62 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "203 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "TT_Threshold",
-      "score": 94,
+      "category": "Endurance",
+      "score": 65,
       "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Korea Epic Ride's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
-    },
-    {
-      "category": "VO2max",
-      "score": 81,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 203 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Over_Under",
-      "score": 80,
+      "score": 60,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -53,42 +42,14 @@
       "workout_context": "At Korea Epic Ride, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "Race_Simulation",
-      "score": 78,
+      "category": "HVLI_Extended",
+      "score": 57,
       "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
       ],
-      "workout_context": "Race-pace efforts that mimic Korea Epic Ride's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
-    },
-    {
-      "category": "G_Spot",
-      "score": 74,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Korea Epic Ride. Train it until it feels boring."
-    },
-    {
-      "category": "Endurance",
-      "score": 70,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Korea Epic Ride. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "Gravel_Specific",
-      "score": 67,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "Korea Epic Ride's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 62 miles."
+      "workout_context": "203 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Mixed_Climbing",
@@ -97,26 +58,55 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+      "workout_context": "26,260ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Norwegian_Double",
-      "score": 44,
+      "category": "TT_Threshold",
+      "score": 56,
       "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
       ],
-      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+      "workout_context": "129ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
-      "category": "HVLI_Extended",
+      "category": "Race_Simulation",
+      "score": 50,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Korea Epic Ride's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
+    },
+    {
+      "category": "Blended",
+      "score": 43,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 26,260ft of climbing on mixed mountain/forest \u2014 mostly unpaved on the does to your power file on race day."
+    },
+    {
+      "category": "G_Spot",
+      "score": 42,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Korea Epic Ride. Train it until it feels boring."
+    },
+    {
+      "category": "Road_Specific",
       "score": 41,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 62 miles without cracking. No shortcuts."
+      "workout_context": "Korea Epic Ride's mixed mountain/forest \u2014 mostly unpaved on the forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 203 miles."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -125,14 +115,24 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Torque for headwinds and mixed terrain. When cadence drops below 70rpm, muscular strength keeps the watts up."
+      "workout_context": "Low-cadence force work for 26,260ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+    },
+    {
+      "category": "VO2max",
+      "score": 35,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "26,260ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     }
   ],
   "race_overlay": {
-    "heat": "June in Incheon, South Korea can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Korea Epic Ride. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for Korea Epic Ride\u2019s 62 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
+    "heat": "June in Songjeon Beach, Sonyang-myeon, Yangyang-gun, Gangwon-do, South Korea can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Korea Epic Ride. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Ultra-distance fueling for 203 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 203 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
     "altitude": "Moderate altitude at Korea Epic Ride. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and VO2max to prepare you for 62 miles of mixed terrain in Incheon, South Korea.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and Over Under to prepare you for 203 miles of mixed mountain/forest \u2014 mostly unpaved on the offroad routes in Songjeon Beach, Sonyang-myeon, Yangyang-gun, Gangwon-do, South Korea.",
+  "generated_at": "2026-08-05"
 }

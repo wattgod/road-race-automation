@@ -1,12 +1,12 @@
 {
   "slug": "eroica-cuba",
   "race_name": "Eroica Cuba",
-  "distance_mi": 87.0,
+  "distance_mi": 71.5,
   "demands": {
-    "durability": 4,
+    "durability": 2,
     "climbing": 3,
     "vo2_power": 5,
-    "threshold": 7,
+    "threshold": 5,
     "technical": 2,
     "heat_resilience": 6,
     "altitude": 2,
@@ -21,50 +21,21 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 74,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "Eroica Cuba's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+      "workout_context": "71 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Race_Simulation",
-      "score": 70,
+      "score": 84,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic Eroica Cuba's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
-    },
-    {
-      "category": "G_Spot",
-      "score": 59,
-      "workouts": [
-        "G-Spot Standard",
-        "G-Spot Extended",
-        "Criss-Cross"
-      ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Eroica Cuba. Train it until it feels boring."
-    },
-    {
-      "category": "Endurance",
-      "score": 58,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Race-pace efforts that mimic Eroica Cuba's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before November."
     },
     {
       "category": "VO2max",
-      "score": 58,
+      "score": 70,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -73,17 +44,46 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Gravel_Specific",
-      "score": 58,
+      "category": "Road_Specific",
+      "score": 70,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Eroica Cuba's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 87 miles."
+      "workout_context": "Eroica Cuba's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 71 miles."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 68,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Eroica Cuba's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Endurance",
+      "score": 56,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Eroica Cuba. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "G_Spot",
+      "score": 54,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Eroica Cuba. Train it until it feels boring."
     },
     {
       "category": "Over_Under",
-      "score": 52,
+      "score": 53,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -91,47 +91,47 @@
       "workout_context": "At Eroica Cuba, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 46,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 87 miles without cracking. No shortcuts."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 41,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 87 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Blended",
-      "score": 38,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Eroica Cuba's mixed terrain actually does to you."
-    },
-    {
       "category": "Anaerobic_Capacity",
-      "score": 35,
+      "score": 42,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
       "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 40,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "How long can you hold 105% FTP before you blow? At Eroica Cuba, that number decides whether you bridge or get dropped."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 39,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 71 miles without cracking. No shortcuts."
+    },
+    {
+      "category": "Blended",
+      "score": 35,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Eroica Cuba's mixed terrain actually does to you."
     }
   ],
   "race_overlay": {
-    "heat": "February in Caimito, Artemisa Province, Cuba can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Eroica Cuba. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for Eroica Cuba\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
+    "heat": "November in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Eroica Cuba. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 40\u201360g carbs/hour for Eroica Cuba\u2019s 71 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 87 miles of mixed terrain in Caimito, Artemisa Province, Cuba.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 71 miles of mixed terrain in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba.",
+  "generated_at": "2026-08-05"
 }

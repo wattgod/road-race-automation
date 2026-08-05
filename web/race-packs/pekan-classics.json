@@ -1,7 +1,7 @@
 {
   "slug": "pekan-classics",
   "race_name": "Gran Fondo Pekan / Pekan Classic",
-  "distance_mi": 101.0,
+  "distance_mi": 101.1,
   "demands": {
     "durability": 6,
     "climbing": 4,
@@ -34,13 +34,13 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Pekan / Pekan Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 69,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Pekan / Pekan Classic's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 101 miles."
+      "workout_context": "Gran Fondo Pekan / Pekan Classic's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 101 miles."
     },
     {
       "category": "TT_Threshold",
@@ -107,7 +107,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Gran Fondo Pekan / Pekan Classic's mixed terrain actually does to you."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,517ft of climbing on mixed terrain does to your power file on race day."
     },
     {
       "category": "Critical_Power",
@@ -125,7 +125,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
     }
   ],
   "race_overlay": {
@@ -133,6 +133,6 @@
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Pekan / Pekan Classic\u2019s 101 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
     "terrain": "Mixed terrain at Gran Fondo Pekan / Pekan Classic requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Gravel Specific to prepare you for 101 miles of mixed terrain in Royal Town of Pekan, Pahang, Malaysia.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Road Specific to prepare you for 101 miles of mixed terrain in Royal Town of Pekan, Pahang, Malaysia.",
+  "generated_at": "2026-08-05"
 }

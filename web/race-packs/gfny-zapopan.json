@@ -1,12 +1,12 @@
 {
   "slug": "gfny-zapopan",
   "race_name": "GFNY Zapopan",
-  "distance_mi": 91.0,
+  "distance_mi": 77.7,
   "demands": {
     "durability": 4,
-    "climbing": 5,
+    "climbing": 3,
     "vo2_power": 6,
-    "threshold": 8,
+    "threshold": 7,
     "technical": 4,
     "heat_resilience": 0,
     "altitude": 6,
@@ -34,23 +34,13 @@
       "workout_context": "Race-pace efforts that mimic GFNY Zapopan's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
-      "category": "TT_Threshold",
-      "score": 95,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "GFNY Zapopan's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
-    },
-    {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GFNY Zapopan's mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 91 miles."
+      "workout_context": "GFNY Zapopan's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 77 miles."
     },
     {
       "category": "Durability",
@@ -60,11 +50,21 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 91, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "77 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 77,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "GFNY Zapopan's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
       "category": "G_Spot",
-      "score": 76,
+      "score": 62,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -74,7 +74,7 @@
     },
     {
       "category": "Over_Under",
-      "score": 74,
+      "score": 55,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
@@ -88,7 +88,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 91 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Base fitness for GFNY Zapopan. Without this, the hard workouts break you down instead of building you up."
     },
     {
       "category": "Critical_Power",
@@ -106,16 +106,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 48,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 91 miles, sustainable FTP gains matter more than peak power."
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
       "category": "Blended",
@@ -124,14 +115,23 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,049ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what GFNY Zapopan's mixed terrain actually does to you."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 42,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for GFNY Zapopan\u2019s 91 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "nutrition": "Target 40\u201360g carbs/hour for GFNY Zapopan\u2019s 77 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
     "altitude": "Moderate altitude at GFNY Zapopan. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
     "terrain": "Mixed terrain at GFNY Zapopan requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and TT Threshold to prepare you for 91 miles of mixed terrain in Zapopan (Guadalajara), Jalisco, Mexico.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Road Specific to prepare you for 77 miles of mixed terrain in Zapopan (Guadalajara), Jalisco, Mexico.",
+  "generated_at": "2026-08-05"
 }

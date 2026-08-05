@@ -1,7 +1,7 @@
 {
   "slug": "struggle-dales",
   "race_name": "Struggle Dales",
-  "distance_mi": 109.0,
+  "distance_mi": 102.5,
   "demands": {
     "durability": 6,
     "climbing": 8,
@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "9,430ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "10,223ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
     },
     {
       "category": "Race_Simulation",
@@ -34,13 +34,13 @@
       "workout_context": "Race-pace efforts that mimic Struggle Dales' demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
-      "category": "Gravel_Specific",
+      "category": "Road_Specific",
       "score": 83,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Struggle Dales' mixed terrain forces constant power changes. Surge over the rough stuff, settle on the smooth, repeat for 109 miles."
+      "workout_context": "Struggle Dales' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 102 miles."
     },
     {
       "category": "TT_Threshold",
@@ -50,7 +50,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "87ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "100ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
     },
     {
       "category": "Durability",
@@ -60,7 +60,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "At mile 60 of 109, glycogen is gone. This workout teaches your body to produce watts on fumes."
+      "workout_context": "At mile 60 of 102, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Over_Under",
@@ -88,7 +88,7 @@
         "Pre-Race Openers",
         "Terrain Simulation Z2"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 109 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 102 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Mixed_Climbing",
@@ -97,7 +97,7 @@
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "9,430ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "10,223ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Critical_Power",
@@ -124,14 +124,14 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 9,430ft of climbing on mixed terrain does to your power file on race day."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 10,223ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 60\u201380g carbs/hour for Struggle Dales\u2019s 109 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Struggle Dales with 9,430ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
+    "nutrition": "Target 60\u201380g carbs/hour for Struggle Dales\u2019s 102 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Struggle Dales with 10,223ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
     "terrain": "Mixed terrain at Struggle Dales requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Gravel Specific to prepare you for 109 miles of mixed terrain in Harrogate, North Yorkshire, England.",
-  "generated_at": "2026-06-25"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Road Specific to prepare you for 102 miles of mixed terrain in Harrogate, North Yorkshire, England.",
+  "generated_at": "2026-08-05"
 }
