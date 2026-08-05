@@ -7017,6 +7017,47 @@
     ]
   },
   {
+    "name": "GFNY Punta del Este",
+    "slug": "gfny-punta-del-este",
+    "location": "Punta del Este, Maldonado Department, Uruguay",
+    "country": "Uruguay",
+    "region": "Other",
+    "month": "March",
+    "distance_km": 146.0,
+    "distance_mi": 90.7,
+    "elevation_m": 1700,
+    "elevation_ft": 5577.0,
+    "tier": 2,
+    "overall_score": 69,
+    "scores": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "146km of beach glamour meets brutal hills in Uruguay's sexiest sufferfest.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-punta-del-este/",
+    "discipline": "gran_fondo",
+    "lat": -34.9636,
+    "lng": -54.9491,
+    "route_options": [
+      "Long competitive: 146 km / 90.7 mi with 1,700 m / 5,577 ft of climbing",
+      "Medium recreational: 86 km / 53.4 mi with 715 m / 2,346 ft of climbing"
+    ]
+  },
+  {
     "name": "GFNY Ventura",
     "slug": "gfny-ventura",
     "location": "Ventura, California, USA",
@@ -9410,47 +9451,6 @@
         "elevation_m": 803,
         "elevation_ft": 2634
       }
-    ]
-  },
-  {
-    "name": "GFNY Punta del Este",
-    "slug": "gfny-punta-del-este",
-    "location": "Punta del Este, Maldonado Department, Uruguay",
-    "country": "Uruguay",
-    "region": "Other",
-    "month": "March",
-    "distance_km": 146.0,
-    "distance_mi": 90.7,
-    "elevation_m": 1653,
-    "elevation_ft": 5423.0,
-    "tier": 2,
-    "overall_score": 66,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 5,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "146km of beach glamour meets brutal hills in Uruguay's sexiest sufferfest.",
-    "has_profile": true,
-    "profile_url": "/race/gfny-punta-del-este/",
-    "discipline": "gran_fondo",
-    "lat": -34.9636,
-    "lng": -54.9491,
-    "route_options": [
-      "Long Competitive: 90.7mi, 5423ft — Hilly beast for elites chasing qualifiers",
-      "Medium Recreational: 52mi, 2215ft — Beginner-friendly coastal cruise"
     ]
   },
   {
@@ -16908,22 +16908,22 @@
     "country": "USA",
     "region": "North America",
     "month": "April",
-    "distance_km": 114.0,
-    "distance_mi": 71.0,
-    "elevation_m": 457,
-    "elevation_ft": 1500.0,
+    "distance_km": 84.0,
+    "distance_mi": 52.0,
+    "elevation_m": null,
+    "elevation_ft": null,
     "tier": 3,
-    "overall_score": 47,
+    "overall_score": 49,
     "scores": {
-      "distance": 3,
+      "distance": 2,
       "climbing": 1,
       "descent_technicality": 1,
-      "road_surface": 3,
+      "road_surface": 4,
       "climate_risk": 2,
       "altitude": 1,
       "logistics": 5,
       "prestige": 2,
-      "organization": 3,
+      "organization": 4,
       "scenic_experience": 2,
       "community_culture": 2,
       "field_depth": 3,
@@ -16931,16 +16931,15 @@
       "expenses": 2,
       "cultural_impact": 1
     },
-    "tagline": "100 flat miles through South Florida's wind corridors. The GFNY series' warm-weather edition where the bridges are the only climbing.",
+    "tagline": "Two fully closed-road laps on Krome Avenue: 52 fast, exposed miles where wind, positioning, and group discipline decide the race.",
     "has_profile": true,
     "profile_url": "/race/gfny-miami/",
     "discipline": "gran_fondo",
     "lat": 25.7617,
     "lng": -80.1918,
     "route_options": [
-      "GFNY: ~100 miles, ~1,500 ft",
-      "Medium: ~60 miles",
-      "Short: ~30 miles"
+      "Competitive long route: 84 km / 52 mi — two laps",
+      "Recreational medium route: 42 km / 26 mi — one lap"
     ]
   },
   {

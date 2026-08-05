@@ -7,8 +7,8 @@
     "vitals": {
       "distance_km": 146.0,
       "distance_mi": 90.7,
-      "elevation_m": 1653,
-      "elevation_ft": 5423.0,
+      "elevation_m": 1700,
+      "elevation_ft": 5577.0,
       "location": "Punta del Este, Maldonado Department, Uruguay",
       "location_badge": "PUNTA DEL ESTE, URY",
       "country": "Uruguay",
@@ -23,30 +23,30 @@
       "lat": -34.9636,
       "lng": -54.9491,
       "route_options": [
-        "Long Competitive: 90.7mi, 5423ft — Hilly beast for elites chasing qualifiers",
-        "Medium Recreational: 52mi, 2215ft — Beginner-friendly coastal cruise"
+        "Long competitive: 146 km / 90.7 mi with 1,700 m / 5,577 ft of climbing",
+        "Medium recreational: 86 km / 53.4 mi with 715 m / 2,346 ft of climbing"
       ]
     },
     "climate": {
-      "primary": "Hot late-summer scorchers",
-      "description": "March delivers Punta del Este's steamy Southern Hemisphere sendoff with temps pushing 85°F and relentless coastal winds. Late summer heat bakes the beaches while ocean breezes offer fleeting mercy. Hydration is non-negotiable amid the glamour.",
+      "primary": "Late-summer coastal exposure",
+      "description": "The March route begins beside the ocean, turns inland for the major climbing, and returns across exposed rolling roads. Heat, humidity, and coastal wind can amplify the effort, especially after the sustained Route 12 climb.",
       "challenges": [
-        "scorching heat",
-        "gale-force headwinds",
-        "high humidity",
-        "sudden squalls"
+        "Late-summer heat",
+        "Coastal wind",
+        "High humidity",
+        "Limited shelter on exposed roads"
       ]
     },
     "terrain": {
-      "primary": "Flat-to-hilly coastal crusher with wind-whipped drama",
-      "surface": "Silky paved paradise from beachfront boulevards to smooth inland climbs. Police escort tames traffic for pro-peloton flow. Luxury villa views mask the sneaky suffering.",
+      "primary": "Coastal start, steep inland hills, and a rolling return",
+      "surface": "Paved Uruguayan roads, including a rehabilitated Route 60 and finished sections of Route 12. The route mixes broad highways, rolling interior roads, and the final approach over Punta Ballena.",
       "technical_rating": 2,
       "features": [
-        "wild beach rollers",
-        "Punta Ballena icon",
-        "pine forest punch",
-        "El Chorro selector",
-        "Interbalnearia panorama"
+        "Pan de Azucar approach",
+        "Route 60 hills with ramps above 10 percent",
+        "Approximately eight kilometers of climbing on Route 12",
+        "Rolling roads after crossing Route 9",
+        "East face of Punta Ballena ten kilometers from the finish"
       ]
     },
     "fondo_rating": {
@@ -63,14 +63,14 @@
       "field_depth": 3,
       "value": 4,
       "expenses": 3,
-      "road_surface": 1,
+      "road_surface": 3,
       "cultural_impact": 3,
-      "overall_score": 66,
+      "overall_score": 69,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 71. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "Regraded after verification of the 2027 route and road works. The official course description identifies rehabilitated Route 60 and completed Route 12 surfaces, replacing the unsupported minimum road-surface score."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -78,18 +78,24 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        "Route 60 hills with ramps above 10 percent",
+        "Route 12: approximately eight kilometers of sustained climbing followed by rollers",
+        "East face of Punta Ballena, ten kilometers from the finish"
+      ],
+      "profile_type": "Hilly coastal-and-interior loop",
+      "king_of_mountain": "The Route 12 climb is the longest sustained climbing section at approximately eight kilometers.",
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "Playa Mansa erupts into 22km coastal flats before El Chorro's 800m hammer splits the bunch. Pine forests and wild beaches yield to Punta Ballena's iconic sting, looping back via Piriápolis oceanway. Interbalnearia finale panoramas reward survivors amid luxury ranches and lakes—windy, wavy, wildly scenic road poetry.",
-      "signature_challenge": "Punta Ballena's mid-race bite atop early El Chorro damage—where groups shatter and solo quests ignite. Winds amplify the isolation, turning paradise into personal hell.",
+      "character": "The long route leaves Playa Mansa beside the ocean, heads toward Pan de Azucar, and reaches the first serious selection on Route 60, where the repaired road still includes ramps above 10 percent. After the Ramallo descent, Route 12 supplies roughly eight kilometers of sustained climbing and more rolling terrain. The course then crosses Route 9, returns via Interbalnearia, and climbs the east face of Punta Ballena ten kilometers before the finish at Parador Pedro Figari.",
+      "signature_challenge": "The Route 60 and Route 12 combination. Repeated steep ramps lead into the course's longest sustained climb, and Punta Ballena adds one final selection close to the finish.",
       "suffering_zones": [
-        "El Chorro Selection",
-        "Punta Ballena Icon",
-        "Piriápolis Coastway"
+        "Pan de Azucar approach",
+        "Route 60 ramps",
+        "Ramallo descent",
+        "Route 12 climb and rollers",
+        "East Punta Ballena"
       ]
     },
     "logistics": {
@@ -111,28 +117,27 @@
       "reputation": "GFNY's beach-circuit crown jewel for wind-battered warriors. Riders rave about the vibe; elites target for regional hardware."
     },
     "biased_opinion": {
-      "verdict": "Beach brutalizer supreme",
-      "summary": "GFNY Punta del Este fuses St. Tropez glamour with sneaky South American hills, turning beach bums into qualifiers. Winds howl off Playa Mansa while Punta Ballena snaps the elastic—pure pro drama in paradise. Redesigned yearly, it's the GFNY you didn't know you craved. Families lounge while you suffer; post-race feasts seal the legend. Skip if flats bore you—this undulating beast demands respect.",
+      "verdict": "The Coastal Climber",
+      "summary": "GFNY Punta del Este is not a beach cruise. The verified 146-kilometer course stacks 1,700 meters of gain across Route 60, Route 12, and a late Punta Ballena ascent. Its strongest feature is the contrast: a glamorous oceanfront base attached to a legitimate inland climbing race.",
       "strengths": [
-        "ocean-view savagery",
-        "luxury resort recovery",
-        "elite qualifiers on cheap",
-        "wind-whipped selection",
-        "winery paradise vibes"
+        "A substantial 146-kilometer long course",
+        "Multiple distinct climbing sectors",
+        "Oceanfront start and finish",
+        "Destination infrastructure in Punta del Este",
+        "Late Punta Ballena selection"
       ],
       "weaknesses": [
-        "heat hammer potential",
-        "regional field limits",
-        "vert shy of Alps",
-        "resort price creep",
-        "no gravel grit"
+        "Late-summer heat and wind can compound the climbing",
+        "International travel is more involved than a domestic event",
+        "Resort lodging can be expensive",
+        "Course changes make old ride reports unreliable"
       ],
-      "bottom_line": "Exotic GFNY gem for early-season glory. Pin it if you crave coastal crushers; dodge if mountains are your mistress."
+      "bottom_line": "A credible climbing fondo with a distinctive oceanfront setting, worth dedicated preparation rather than generic flat-road fitness."
     },
     "final_verdict": {
-      "score": "66/100",
-      "one_liner": "Uruguay's hilly beach party punches way above its vert.",
-      "should_you_race": "Yes if you're chasing qualifiers in sun-soaked style or opening North American legs jet-lag free. Skip if deep fields or mega climbs define your fix—stick to Euros for that.",
+      "score": "69/100",
+      "one_liner": "A 146-kilometer Uruguayan coastal fondo with 1,700 meters of climbing and a late Punta Ballena sting.",
+      "should_you_race": "Yes if you want a destination fondo that combines a beach-resort base with real sustained climbing. Skip it if the international trip outweighs the appeal of a regional GFNY field.",
       "alternatives": "GFNY Punta Cana for Caribbean flats, GFNY Cozumel for island rollers, GFNY Los Cabos for Mexico heat."
     },
     "citations": [
@@ -228,9 +233,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://puntadeleste.gfny.com/?lang=en",
-      "notes": "Individually confirmed city edition. GFNY José Ignacio (Jan 3, 2027) is a separate Uruguayan GFNY edition and should not be conflated with Punta del Este."
+      "verified": "2026-08-05",
+      "source": "https://puntadeleste.gfny.com/",
+      "notes": "The 2027 date, 146 km / 1,700 m long route, 86 km / 715 m medium route, and current course sequence were verified against the official event site. GFNY José Ignacio is a separate Uruguayan edition."
     }
   }
 }
