@@ -6387,16 +6387,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-08-01",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 52.4,
+      "race_date": "2027-08-07",
+      "blockers": []
     },
     "tour-de-brisbane": {
       "slug": "tour-de-brisbane",
