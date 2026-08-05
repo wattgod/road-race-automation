@@ -118,6 +118,12 @@
               "content": "Criteriums and time trials earn a special mention for a reason most guides miss: they're the events where limited training hours stop being a handicap. A crit is decided by anaerobic punch and cornering; a TT by threshold power and position. Neither demands a 20-hour aerobic base — which makes them the best-kept secret for riders with real jobs. The {{cat}} system's licensing and upgrade logistics are their own rulebook; the fitness and the skills are all in this guide."
             },
             {
+              "type": "image",
+              "asset_id": "ch1-event-demand-matrix",
+              "alt": "Matrix of eight road event types against the five demands that decide them, shaded by importance",
+              "caption": "The whole chapter in one grid. Chapter 2 teaches you to read a course; this is what you're reading it for."
+            },
+            {
               "type": "prose",
               "content": "Everything downstream — the plan you follow, the food you carry, the skills you practice — inherits from the event you choose. That choice is the whole of Chapter 2. For now, one honest question: which of these events do you actually want, as opposed to the one your group chat picked?"
             }
@@ -439,6 +445,12 @@
               ]
             },
             {
+              "type": "image",
+              "asset_id": "ch2-build-curves",
+              "alt": "Sixteen-week training load chart comparing a fondo volume ramp against a flat-hours criterium build with rising intensity",
+              "caption": "Hours pick the event: the fondo build needs room to grow, the crit/TT build never needs more than the week you already have."
+            },
+            {
               "type": "callout",
               "style": "highlight",
               "content": "Count backwards before you register. Event date, minus taper, minus build, minus base — if the arithmetic lands before today, you're not picking a goal, you're scheduling a bad day. Pick a later event or a kinder course. Both count as smart, neither counts as quitting."
@@ -750,6 +762,12 @@
                   "content": "Apply a slightly bigger stress to the slightly stronger body. Stack this cycle for months and the compounding is startling. Skip the recovery half and the cycle runs backwards — stress without adaptation is just damage on a schedule."
                 }
               ]
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-supercompensation",
+              "alt": "Supercompensation curve showing fitness dipping below baseline after training stress, then overshooting during recovery",
+              "caption": "The adaptation cycle, drawn. Every training decision in this guide is downstream of this one curve."
             },
             {
               "type": "prose",
@@ -1200,6 +1218,12 @@
               ]
             },
             {
+              "type": "image",
+              "asset_id": "ch4-traffic-light",
+              "alt": "Green, yellow, red autoregulation check with criteria and prescriptions for each state",
+              "caption": "Click a signal for the prescription. Calibrate honestly \u2014 every day is not a yellow day."
+            },
+            {
               "type": "prose",
               "content": "Then there's the other adjustment problem: the week that shrinks. Meetings metastasize, kids get sick, and the 8-hour plan meets a 4-hour reality. The rule: **protect intensity when time is short, protect the long ride when the shortage is chronic.** Select your rider type for what that looks like in practice:"
             },
@@ -1472,6 +1496,12 @@
               ]
             },
             {
+              "type": "image",
+              "asset_id": "ch5-fueling-timeline",
+              "alt": "Race-day fueling timeline from the pre-race breakfast through hourly intake and hydration",
+              "caption": "The plan compresses to five moments. Tap each for the detail."
+            },
+            {
               "type": "prose",
               "content": "Duration changes the problem. A four-hour fondo at race effort is a pure high-rate carb exercise — gels and mix, minimal chewing, no drama. A seven-plus-hour mountain day is a logistics problem wearing a nutrition costume: your stomach will want real food by mid-afternoon, feed stations become load-bearing, and the difference between a good day and a death march is usually a sandwich eaten at the right col. At the far end of the scale, an event like the [Mallorca 312](/race/mallorca-312/) is closer to catering management than sports nutrition — which is precisely why the long-ride rehearsals matter.\n\nAnd at the near end of the scale, the problem disappears almost entirely: a 45-minute crit or a short TT runs on glycogen you stored yesterday. One bottle, maybe a caffeinated gel twenty minutes before the start, and you're fueled — this chapter's machinery is for the events long enough to need it. The short-event version of nutrition is the final 48 hours (Chapter 7), not anything you eat mid-race. Nobody has ever been dropped from a crit for skipping a gel; plenty have been for trying to eat one in a corner."
             },
@@ -1718,6 +1748,12 @@
             {
               "type": "prose",
               "content": "In a crosswind the shelter sits diagonally behind and to the leeward side — that's an echelon, and when the road tilts into the wind, the front splits into groups. Know which way the wind comes from, fight for the front before the exposed section, and never get caught in the gutter."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch6-echelon-diagram",
+              "alt": "Top-down diagram of a crosswind echelon angled across the road with a single-file gutter line getting no shelter",
+              "caption": "The geometry that empties fondos: the echelon has seats, the gutter has a bill."
             },
             {
               "type": "callout",
