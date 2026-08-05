@@ -4567,17 +4567,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date",
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 37,
+      "race_date": "2027-04-24",
+      "blockers": []
     },
     "liege-bastogne-liege-challenge": {
       "slug": "liege-bastogne-liege-challenge",
