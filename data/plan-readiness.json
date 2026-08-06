@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T14:24:04",
+  "generated_at": "2026-08-05T19:52:44",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -304,14 +304,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 51.6,
-      "race_date": "2027-08-01",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "around-the-bay-in-a-day": {
       "slug": "around-the-bay-in-a-day",
@@ -1694,6 +1696,25 @@
       "race_date": "2026-08-30",
       "blockers": []
     },
+    "gfny-cali": {
+      "slug": "gfny-cali",
+      "tier": 2,
+      "score": 77,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 50,
+      "race_date": "2027-07-25",
+      "blockers": [
+        "eligibility unverified (unknown)"
+      ]
+    },
     "gfny-cannes": {
       "slug": "gfny-cannes",
       "tier": 2,
@@ -1820,6 +1841,25 @@
         "no parsed future date"
       ]
     },
+    "gfny-jose-ignacio": {
+      "slug": "gfny-jose-ignacio",
+      "tier": 2,
+      "score": 64,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 21,
+      "race_date": "2027-01-03",
+      "blockers": [
+        "eligibility unverified (unknown)"
+      ]
+    },
     "gfny-kuala-lumpur": {
       "slug": "gfny-kuala-lumpur",
       "tier": 3,
@@ -1879,7 +1919,7 @@
     "gfny-miami": {
       "slug": "gfny-miami",
       "tier": 3,
-      "score": 47,
+      "score": 49,
       "checks": {
         "validator_clean": true,
         "editorial": true,
@@ -2005,10 +2045,29 @@
       "race_date": "2026-09-20",
       "blockers": []
     },
+    "gfny-puerto-rico": {
+      "slug": "gfny-puerto-rico",
+      "tier": 2,
+      "score": 70,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 30,
+      "race_date": "2027-03-07",
+      "blockers": [
+        "eligibility unverified (unknown)"
+      ]
+    },
     "gfny-punta-del-este": {
       "slug": "gfny-punta-del-este",
       "tier": 2,
-      "score": 66,
+      "score": 69,
       "checks": {
         "validator_clean": true,
         "editorial": true,
@@ -2101,6 +2160,25 @@
         "eligibility: defunct"
       ]
     },
+    "gfny-ventura": {
+      "slug": "gfny-ventura",
+      "tier": 2,
+      "score": 69,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 35,
+      "race_date": "2027-04-11",
+      "blockers": [
+        "eligibility unverified (unknown)"
+      ]
+    },
     "gfny-villard-de-lans": {
       "slug": "gfny-villard-de-lans",
       "tier": 2,
@@ -2118,6 +2196,44 @@
       "race_date": null,
       "blockers": [
         "no parsed future date"
+      ]
+    },
+    "gfny-villavicencio": {
+      "slug": "gfny-villavicencio",
+      "tier": 2,
+      "score": 74,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 37,
+      "race_date": "2027-04-25",
+      "blockers": [
+        "eligibility unverified (unknown)"
+      ]
+    },
+    "gfny-walnut-creek": {
+      "slug": "gfny-walnut-creek",
+      "tier": 2,
+      "score": 74,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": false
+      },
+      "eligibility_status": "unknown",
+      "ready": false,
+      "runway_weeks": 36,
+      "race_date": "2027-04-18",
+      "blockers": [
+        "eligibility unverified (unknown)"
       ]
     },
     "gfny-zapopan": {
@@ -2407,18 +2523,15 @@
       "checks": {
         "validator_clean": true,
         "editorial": true,
-        "course_character": false,
-        "future_date": false,
+        "course_character": true,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 32,
+      "race_date": "2027-03-21",
+      "blockers": []
     },
     "gran-fondo-gdynia": {
       "slug": "gran-fondo-gdynia",
@@ -3038,16 +3151,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-10",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 35,
+      "race_date": "2027-04-09",
+      "blockers": []
     },
     "granfondo-ecuador": {
       "slug": "granfondo-ecuador",
@@ -3656,16 +3767,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-07",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 43,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "hong-kong-cyclothon": {
       "slug": "hong-kong-cyclothon",
@@ -4075,14 +4184,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 34.6,
-      "race_date": "2027-04-04",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "letape-australia": {
       "slug": "letape-australia",
@@ -4511,16 +4622,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 8,
+      "race_date": "2026-10-03",
+      "blockers": []
     },
     "letape-thailand": {
       "slug": "letape-thailand",
@@ -4567,14 +4676,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 37,
-      "race_date": "2027-04-24",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "liege-bastogne-liege-challenge": {
       "slug": "liege-bastogne-liege-challenge",
@@ -6180,14 +6291,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 45,
-      "race_date": "2027-06-19",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "sudety-tour": {
       "slug": "sudety-tour",
@@ -6380,14 +6493,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 52.4,
-      "race_date": "2027-08-07",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "tour-de-brisbane": {
       "slug": "tour-de-brisbane",
@@ -7024,8 +7139,8 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 3,
-      "race_date": "2026-08-26",
+      "runway_weeks": 54,
+      "race_date": "2027-08-22",
       "blockers": []
     },
     "utrecht-ultra": {
@@ -7333,6 +7448,8 @@
     "maratona-dles-dolomites",
     "la-marmotte",
     "le-loop",
+    "gfny-cali",
+    "uci-gran-fondo-world-championships",
     "white-rose-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
@@ -7342,9 +7459,9 @@
     "la-stelvio-santini",
     "marmotte-granfondo-sestriere",
     "tartu-rattaralli",
-    "styrkeproven",
     "nordsjorittet",
     "engadin-radmarathon",
+    "highlands-gran-fondo",
     "seattle-to-portland",
     "nove-colli",
     "alpe-dhuzes",
@@ -7352,22 +7469,29 @@
     "london-to-brighton",
     "letape-denmark",
     "jedermann-rennen-koln",
+    "gfny-villavicencio",
     "letape-czech-republic",
+    "gfny-walnut-creek",
     "amstel-gold-race-toerversie",
     "tour-of-georgia-gran-fondo",
     "cyprus-gran-fondo",
     "sudety-tour",
+    "gfny-ventura",
     "strade-bianche-gran-fondo",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
     "gfny-punta-del-este",
+    "gfny-puerto-rico",
     "granfondo-via-del-sale",
+    "gran-fondo-florida",
     "le-race",
+    "granfondo-colnago",
     "cape-town-cycle-tour",
     "gfny-miami",
     "cadel-evans-great-ocean-road-ride",
     "spinneys-dubai-92",
+    "gfny-jose-ignacio",
     "tour-of-nilgiris",
     "gran-fondo-hainan",
     "gran-fondo-eilat",
@@ -7408,6 +7532,7 @@
     "bike-ms-nyc",
     "velo-vietnam-northern-frontier",
     "hong-kong-cyclothon",
+    "letape-taiwan",
     "bowral-classic",
     "gran-fondo-argentina",
     "munsterland-giro",
@@ -7444,7 +7569,6 @@
     "otztaler-radmarathon",
     "birkebeinerrittet-road",
     "hottern-hell-hundred",
-    "uci-gran-fondo-world-championships",
     "gfny-bremen",
     "helsinki-gran-fondo",
     "letape-romania",
@@ -7545,9 +7669,9 @@
     "letape-ireland",
     "letape-norway",
     "letape-poland",
-    "letape-taiwan",
     "maraton-franja",
     "niseko-classic",
+    "styrkeproven",
     "947-ride-joburg",
     "amashova-national-classic",
     "arlberg-giro",
@@ -7557,7 +7681,6 @@
     "gfny-new-york",
     "granfondo-eddy-merckx",
     "granfondo-la-guadeloupe",
-    "highlands-gran-fondo",
     "inthanon-challenge",
     "peaks-challenge-falls-creek",
     "race-across-benelux",
@@ -7661,7 +7784,6 @@
     "five-boro-bike-tour",
     "gfny-kuala-lumpur",
     "goteborgsgirot",
-    "granfondo-colnago",
     "granfondo-riviera-nayarit",
     "letape-cancun",
     "letape-greece",
@@ -7713,6 +7835,7 @@
     "maratona-dles-dolomites",
     "la-marmotte",
     "le-loop",
+    "uci-gran-fondo-world-championships",
     "white-rose-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
@@ -7722,9 +7845,9 @@
     "la-stelvio-santini",
     "marmotte-granfondo-sestriere",
     "tartu-rattaralli",
-    "styrkeproven",
     "nordsjorittet",
     "engadin-radmarathon",
+    "highlands-gran-fondo",
     "seattle-to-portland",
     "nove-colli",
     "alpe-dhuzes",
@@ -7743,6 +7866,7 @@
     "tour-de-brisbane",
     "gfny-punta-del-este",
     "granfondo-via-del-sale",
+    "gran-fondo-florida",
     "le-race",
     "cape-town-cycle-tour",
     "cadel-evans-great-ocean-road-ride",
@@ -7781,20 +7905,21 @@
     "granfondo-tre-valli-varesine",
     "velo-vietnam-northern-frontier",
     "hong-kong-cyclothon",
+    "letape-taiwan",
     "gran-fondo-argentina",
     "munsterland-giro",
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 395,
-    "ready": 129,
-    "content_present": 378,
-    "validator_clean": 395,
-    "pilot_candidates": 76,
+    "total": 401,
+    "ready": 132,
+    "content_present": 385,
+    "validator_clean": 401,
+    "pilot_candidates": 79,
     "by_tier_ready": {
       "1": 11,
-      "2": 107,
-      "3": 11,
+      "2": 109,
+      "3": 12,
       "4": 0
     }
   }
