@@ -12,17 +12,22 @@
       "location": "Drumheller, Alberta, Canada",
       "location_badge": "Drumheller, Canada",
       "country": "Canada",
-      "date": "2026: July 4",
-      "date_specific": "2026: July 4",
-      "field_size": null,
+      "date": "2027: July 3",
+      "date_specific": "2027: July 3",
+      "field_size": "2,000 rider cap (2027)",
       "start_format": null,
-      "registration": null,
+      "registration": "https://www.granfondobadlands.ca/registration/",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Brontosaurus: 163 km",
+        "T-Rex: 100 km",
+        "Triceratops: 75 km",
+        "Velociraptor: 50 km"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -171,13 +176,28 @@
         "url": "https://www.granfondobadlands.ca/faq",
         "category": "official",
         "label": "Official FAQ — Course Surface (99.9% paved), Ferry Hill Climb Has No Formal KOM/QOM Award"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca/registration/",
+        "category": "official",
+        "label": "Official Registration — July 3 2027 Date, Distances, Pricing, Registration Opening"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca/results",
+        "category": "official",
+        "label": "Official Results Archive — Individually Timed Distance Results"
+      },
+      {
+        "url": "https://www.granfondobadlands.ca/rules-of-the-road",
+        "category": "official",
+        "label": "Official Rules — Timing, Disqualification, and Finish Procedure"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://www.drumhelleronline.com/2026/07/06/gran-fondo-badlands-huge-success-once-again/",
-      "notes": "2026 edition confirmed held July 4, 2026 with an estimated 2,000+ riders (up from ~1,500 in 2025) per independent local media post-event coverage. TransRockies Race Series confirmed as current operator (acquired 2023); the existing 'TransRockies' citation label is accurate, not stale. Corrected course figures to official Brontosaurus page data (163.2km/101.4mi, 874m/2,867ft) and clarified founding history: 2011 founding claim refers to an earlier location, with the current Drumheller-identity event's actual inaugural edition in 2014."
+      "verified": "2026-08-06",
+      "source": "https://www.granfondobadlands.ca/registration/",
+      "notes": "2026 edition confirmed held July 4, 2026 with an estimated 2,000+ riders (up from ~1,500 in 2025) per independent local media post-event coverage. TransRockies Race Series confirmed as current operator (acquired 2023); the existing 'TransRockies' citation label is accurate, not stale. Corrected course figures to official Brontosaurus page data (163.2km/101.4mi, 874m/2,867ft) and clarified founding history: 2011 founding claim refers to an earlier location, with the current Drumheller-identity event's actual inaugural edition in 2014. UPDATED 2026-08-06: the organizer's current homepage and registration page confirm Saturday, July 3, 2027, four paved distances (163/100/75/50 km), registration opening October 7, 2026, and a 2,000-rider cap. The event remains in scope as a timed road race/ride: the official rules allow disqualification, stop timing before the finish photo arch, and the official site publishes distance results, even though it does not give age-group awards."
     }
   }
 }

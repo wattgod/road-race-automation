@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:07:23",
+  "generated_at": "2026-08-06T03:19:43",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1217,16 +1217,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-02-07",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 27,
+      "race_date": "2027-02-13",
+      "blockers": []
     },
     "eroica-california": {
       "slug": "eroica-california",
@@ -2159,13 +2157,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "gfny-san-luis-potosi": {
@@ -2438,16 +2436,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-04",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 47,
+      "race_date": "2027-07-03",
+      "blockers": []
     },
     "gran-fondo-baskent": {
       "slug": "gran-fondo-baskent",
@@ -2511,16 +2507,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 32,
+      "race_date": "2027-03-21",
+      "blockers": []
     },
     "gran-fondo-curacavi": {
       "slug": "gran-fondo-curacavi",
@@ -7544,6 +7538,7 @@
     "paris-roubaix-challenge",
     "london-to-brighton",
     "letape-denmark",
+    "gran-fondo-badlands",
     "jedermann-rennen-koln",
     "dartmoor-legend-ultra",
     "gfny-villavicencio",
@@ -7559,6 +7554,7 @@
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "gran-fondo-san-diego",
+    "gran-fondo-collado-del-condor",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7570,6 +7566,7 @@
     "gran-fondo-curacavi",
     "granfondo-colnago",
     "cape-town-cycle-tour",
+    "epic-gran-canaria",
     "gfny-miami",
     "cadel-evans-great-ocean-road-ride",
     "gfny-jose-ignacio",
@@ -7747,7 +7744,6 @@
     "boone-gran-fondo",
     "douro-gran-fondo",
     "giro-ride-like-a-pro-usa",
-    "gran-fondo-collado-del-condor",
     "granfondo-bogota",
     "istria-granfondo",
     "la-vaujany",
@@ -7778,7 +7774,6 @@
     "aids-lifecycle",
     "cingles-du-mont-ventoux",
     "death-ride",
-    "epic-gran-canaria",
     "gfny-belitung",
     "gfny-philippines",
     "gfny-villard-de-lans",
@@ -7851,7 +7846,6 @@
     "americas-most-beautiful-bike-ride",
     "eroica-cuba",
     "fyn-rundt",
-    "gran-fondo-badlands",
     "granfondo-campagnolo-roma",
     "granfondo-leiria",
     "muju-gran-fondo",
@@ -7950,6 +7944,7 @@
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "gran-fondo-san-diego",
+    "gran-fondo-collado-del-condor",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7958,6 +7953,7 @@
     "gran-fondo-florida",
     "le-race",
     "cape-town-cycle-tour",
+    "epic-gran-canaria",
     "cadel-evans-great-ocean-road-ride",
     "tour-of-nilgiris",
     "gfny-san-luis-potosi",
@@ -8004,14 +8000,14 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 152,
+    "ready": 155,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 92,
+    "pilot_candidates": 94,
     "by_tier_ready": {
       "1": 12,
-      "2": 124,
-      "3": 16,
+      "2": 126,
+      "3": 17,
       "4": 0
     }
   }

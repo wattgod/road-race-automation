@@ -12,11 +12,11 @@
       "location": "Maspalomas, Gran Canaria, Spain",
       "location_badge": "Maspalomas, Spain",
       "country": "Spain",
-      "date": "2026: February 7-8",
-      "date_specific": "February 7-8, 2026 (two-day event)",
+      "date": "2027: February 13-14",
+      "date_specific": "2027: February 12-14 (event weekend; competitive stages February 13-14)",
       "field_size": "680 (2026, from 28 countries)",
       "start_format": "Group/event start (08:30) each day; individually chip-timed climbing sectors; cumulative two-stage GC",
-      "registration": "https://epicgrancanaria.com",
+      "registration": "https://epicgrancanaria.com/en-gb/",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": "45 min (sector 1), ~1:50-2:15 (sector 2, organizer sources conflict), 1:50 (sector 3)",
@@ -171,15 +171,15 @@
       },
       {
         "url": "https://www.granfondoworldtour.com/events",
-        "category": "reference",
-        "label": "Gran Fondo World Tour — Current Events Calendar (GFWT status confirmation)"
+        "category": "official",
+        "label": "Gran Fondo World Tour — Official Calendar, February 12-14 2027"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://epicgrancanaria.com/en-gb/",
-      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): distance_km changed from 160.9 to 187 (official event page total; 186km per PDF regulations — organizer-source discrepancy noted). elevation_m/elevation_ft changed from 2286/null to null/null after sol review (see below) — 2,425m is the documented sum of the three timed-climb sectors and is a FLOOR, not a verified full-route total; no organizer GPX-based total elevation figure was found, so it is not presented as a vitals number. date changed from single-day \"February 7, 2026\" to the correct two-day \"February 7-8, 2026\". location changed from \"Las Palmas\" to \"Maspalomas\" (actual start/finish location; Las Palmas is the province). field_size added (680, 2026). founded changed from 2013 to 2018 (first edition per contemporary 2018 coverage). discipline retained as gran_fondo per standing rule against changing the discipline field; the two-day/timed-sector structure is described honestly in course_description/biased_opinion instead. GFWT claim in final_verdict.one_liner verified as accurate via GFWT's own events calendar. SOL REVIEW (2026-07-24): moved elevation_m to null (previously presented the 2,425m timed-sector floor as if it were a total, contradicting the profile's own weaknesses bullet); fixed Salto del Perro position by live-fetching https://epicgrancanaria.com/en-gb/, which gives km 33 to km 62 (29km), not the vaguer 'after 50+ km' framing; corrected an overgeneralization that ALL untimed riding is 'regrouped' — verified via the same live fetch that only Stage 1's post-CRONO2 return is explicitly documented as regrouped ('Final Section... with all riders regrouped'); Stage 2's schedule (climb to Tirajana, feed zone, lunch, awards) does not use the same language, so the claim is now scoped to Stage 1 only; split the GFWT-opener claim so only GFWT's own calendar is cited for 'season opener' status, with the tourism authority cited separately for GFWT membership/participation (not opener status, which its article doesn't state); trimmed unsourced atmospheric color ('exposed volcanic slopes under the Canarian sun')."
+      "verified": "2026-08-06",
+      "source": "https://www.granfondoworldtour.com/",
+      "notes": "CORRECTIONS (2026-07-24, editorial wave 5): distance_km changed from 160.9 to 187 (official event page total; 186km per PDF regulations — organizer-source discrepancy noted). elevation_m/elevation_ft changed from 2286/null to null/null after sol review (see below) — 2,425m is the documented sum of the three timed-climb sectors and is a FLOOR, not a verified full-route total; no organizer GPX-based total elevation figure was found, so it is not presented as a vitals number. date changed from single-day \"February 7, 2026\" to the correct two-day \"February 7-8, 2026\". location changed from \"Las Palmas\" to \"Maspalomas\" (actual start/finish location; Las Palmas is the province). field_size added (680, 2026). founded changed from 2013 to 2018 (first edition per contemporary 2018 coverage). discipline retained as gran_fondo per standing rule against changing the discipline field; the two-day/timed-sector structure is described honestly in course_description/biased_opinion instead. GFWT claim in final_verdict.one_liner verified as accurate via GFWT's own events calendar. SOL REVIEW (2026-07-24): moved elevation_m to null (previously presented the 2,425m timed-sector floor as if it were a total, contradicting the profile's own weaknesses bullet); fixed Salto del Perro position by live-fetching https://epicgrancanaria.com/en-gb/, which gives km 33 to km 62 (29km), not the vaguer 'after 50+ km' framing; corrected an overgeneralization that ALL untimed riding is 'regrouped' — verified via the same live fetch that only Stage 1's post-CRONO2 return is explicitly documented as regrouped ('Final Section... with all riders regrouped'); Stage 2's schedule (climb to Tirajana, feed zone, lunch, awards) does not use the same language, so the claim is now scoped to Stage 1 only; split the GFWT-opener claim so only GFWT's own calendar is cited for 'season opener' status, with the tourism authority cited separately for GFWT membership/participation (not opener status, which its article doesn't state); trimmed unsourced atmospheric color ('exposed volcanic slopes under the Canarian sun'). UPDATED 2026-08-06: the Gran Fondo World Tour's official current calendar now confirms the 2027 event weekend for February 12-14. The established two competitive stages fall on Saturday-Sunday, February 13-14; Friday is retained in date_specific as part of the official event weekend."
     }
   }
 }
