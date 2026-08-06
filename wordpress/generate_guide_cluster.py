@@ -36,7 +36,7 @@ from generate_neo_brutalist import (
 )
 
 from guide_infographics import INFOGRAPHIC_RENDERERS
-from guide_plates import render_chapter_plate
+from guide_plates import render_chapter_plate, _ROMAN as _ROMAN_NUMERALS
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from cookie_consent import get_consent_banner_html
@@ -168,7 +168,7 @@ def build_chapter_grid(chapters: list, config: GuideConfig = ROAD_GUIDE) -> str:
 
         cards.append(f'''<a href="{_guide_url(config, esc(ch_id))}" class="rl-cluster-card{lock_class}" data-chapter="{num}">
       <div class="rl-cluster-card-header" style="background:{bg}">
-        <span class="rl-cluster-card-num">CHAPTER {num:02d}</span>
+        <span class="rl-cluster-card-num">CHAPTER {_ROMAN_NUMERALS.get(num, num)}</span>
         {lock_icon}
       </div>
       <div class="rl-cluster-card-body">
@@ -303,13 +303,14 @@ def build_chapter_hero(chapter: dict) -> str:
     title = esc(chapter["title"])
     subtitle = esc(chapter.get("subtitle", ""))
     subtitle_html = f'<p class="rl-guide-chapter-subtitle">{subtitle}</p>' if subtitle else ''
-    variant = "dark" if num in {2, 4, 6, 8} else "light"
+    variant = "light"  # engraved plates print on cream paper only
     plate = render_chapter_plate(num, {"race_index": generate_guide._RACE_INDEX})
+    roman = _ROMAN_NUMERALS.get(num, str(num))
 
     return f'''<div class="rl-guide-chapter-hero rl-guide-chapter-hero--{variant}">
       {plate}
       <div class="rl-guide-chapter-title-block">
-        <span class="rl-guide-chapter-num">CHAPTER {num:02d}</span>
+        <span class="rl-guide-chapter-num">CHAPTER {roman} &middot; N&ordm; {num} OF 8</span>
         <h2 class="rl-guide-chapter-title">{title}</h2>
         {subtitle_html}
       </div>

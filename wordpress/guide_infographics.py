@@ -1512,6 +1512,66 @@ def render_season_arc(block: dict) -> str:
     )
 
 
+def _bike_glyph(x: float, y: float, color: str, filled: bool) -> str:
+    """Small engraved bicycle pictogram (Isotype unit = one training hour)."""
+    wheel_fill = color if filled else "none"
+    return (
+        f'<g transform="translate({x:.0f},{y:.0f})">'
+        f'<circle cx="9" cy="20" r="8" fill="{wheel_fill}" stroke="{color}" stroke-width="1.6"></circle>'
+        f'<circle cx="37" cy="20" r="8" fill="{wheel_fill}" stroke="{color}" stroke-width="1.6"></circle>'
+        f'<path d="M9 20 L19 6 L31 6 L37 20 M19 6 L17 20 M31 6 L25 20 M17 20 L25 20" '
+        f'fill="none" stroke="{color}" stroke-width="1.6" stroke-linejoin="round"></path>'
+        f'<line x1="17.5" y1="3" x2="22" y2="3" stroke="{color}" stroke-width="1.6"></line>'
+        f'<line x1="30" y1="3" x2="34" y2="6" stroke="{color}" stroke-width="1.6"></line>'
+        f'</g>'
+    )
+
+
+def render_week_isotype(block: dict) -> str:
+    """Isotype figure: eight weekly training hours as bicycle pictograms.
+
+    Period plate treatment \u2014 cream paper, engraved frame, one bike per
+    hour, spot ink on the two hard hours. After Neurath, after Seiler.
+    """
+    ink = "var(--rl-plate-ink,#1b1712)"
+    accent = "var(--rl-garnish,#a8781f)"
+    accent_deep = "var(--rl-garnish-deep,#7d5a17)"
+    vb_w, vb_h = 1120, 400
+
+    svg = [
+        f'<svg viewBox="0 0 {vb_w} {vb_h}" class="rl-infographic-svg rl-infographic-svg--plate" '
+        f'xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">',
+        f'<rect x="0" y="0" width="{vb_w}" height="{vb_h}" fill="var(--rl-plate-paper,#f4eed9)"></rect>',
+        f'<rect x="12" y="12" width="{vb_w - 24}" height="{vb_h - 24}" fill="none" stroke="{ink}" stroke-width="1.2"></rect>',
+        f'<rect x="19" y="19" width="{vb_w - 38}" height="{vb_h - 38}" fill="none" stroke="{ink}" stroke-width="0.5" opacity="0.7"></rect>',
+        f'<text x="56" y="82" font-family="var(--rl-font-editorial)" font-size="30" font-weight="700" '
+        f'letter-spacing="6" fill="{ink}">YOUR EIGHT TRAINING HOURS</text>',
+        f'<line x1="56" y1="100" x2="{vb_w - 56}" y2="100" stroke="{ink}" stroke-width="1"></line>',
+        f'<text x="56" y="152" font-family="var(--rl-font-data)" font-size="17" '
+        f'letter-spacing="4" fill="{ink}" opacity="0.85">RIDDEN EASY \u2014 CONVERSATIONAL</text>',
+    ]
+    for i in range(6):
+        svg.append(_bike_glyph(56 + i * 116, 168, ink, filled=False))
+    svg.append(
+        f'<text x="56" y="282" font-family="var(--rl-font-data)" font-size="17" '
+        f'letter-spacing="4" fill="{accent_deep}">RIDDEN HARD \u2014 ON PURPOSE</text>'
+    )
+    for i in range(2):
+        svg.append(_bike_glyph(56 + i * 116, 298, accent, filled=True))
+    svg.append(
+        f'<text x="{vb_w - 56}" y="{vb_h - 34}" text-anchor="end" font-family="var(--rl-font-data)" '
+        f'font-size="14" letter-spacing="3" fill="{ink}" opacity="0.7">'
+        f'CHAQUE SYMBOLE = 1 HEURE PAR SEMAINE \u00b7 APR\u00c8S SEILER</text>'
+    )
+    svg.append("</svg>")
+    return _figure_wrap(
+        "".join(svg), block.get("caption", ""), block.get("layout", "inline"),
+        block.get("asset_id", ""), block.get("alt", ""),
+        title="Fig. \u2014 The Week, Counted",
+        takeaway="Six of your eight hours should be rides you could narrate. The two hard ones carry the adaptation \u2014 and only if the six stay honest.",
+    )
+
+
 # ── Registry ─────────────────────────────────────────────────
 
 INFOGRAPHIC_RENDERERS = {
@@ -1522,6 +1582,7 @@ INFOGRAPHIC_RENDERERS = {
     "ch2-tier-distribution": render_tier_distribution,
     "ch3-supercompensation": render_supercompensation,
     "ch3-polarized-guess": render_polarized_guess,
+    "ch3-week-isotype": render_week_isotype,
     "ch3-phase-shift": render_phase_shift,
     "ch4-traffic-light": render_traffic_light,
     "ch4-interval-anatomy": render_interval_anatomy,

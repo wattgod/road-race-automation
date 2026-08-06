@@ -45,7 +45,7 @@ from generate_neo_brutalist import (
 )
 
 from guide_infographics import INFOGRAPHIC_RENDERERS
-from guide_plates import render_chapter_plate
+from guide_plates import render_chapter_plate, _ROMAN as _ROMAN_NUMERALS
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
 from brand_tokens import get_ga4_head_snippet
@@ -1342,8 +1342,9 @@ def build_chapter(chapter: dict) -> str:
 
     subtitle_html = f'<p class="rl-guide-chapter-subtitle">{subtitle}</p>' if subtitle else ''
 
-    variant = "dark" if num in {2, 4, 6, 8} else "light"
+    variant = "light"  # engraved plates print on cream paper only
     plate = render_chapter_plate(num, {"race_index": _RACE_INDEX})
+    roman = _ROMAN_NUMERALS.get(num, str(num))
 
     sections_html = []
     for section in chapter["sections"]:
@@ -1363,7 +1364,7 @@ def build_chapter(chapter: dict) -> str:
     <div class="rl-guide-chapter-hero rl-guide-chapter-hero--{variant}">
       {plate}
       <div class="rl-guide-chapter-title-block">
-        <span class="rl-guide-chapter-num">CHAPTER {num:02d}</span>
+        <span class="rl-guide-chapter-num">CHAPTER {roman} &middot; N&ordm; {num} OF 8</span>
         <h2 class="rl-guide-chapter-title">{title}</h2>
         {subtitle_html}
       </div>
@@ -1683,6 +1684,12 @@ def build_guide_css() -> str:
 --rl-zone-4:#a88850;
 --rl-zone-5:#b07858;
 --rl-zone-6:#8a4040;
+/* Period garnish — ochre spot ink + plate paper */
+--rl-garnish:#a8781f;
+--rl-garnish-deep:#7d5a17;
+--rl-garnish-tint:rgba(168,120,31,0.10);
+--rl-plate-paper:#f4eed9;
+--rl-plate-ink:#1b1712;
 /* Hairlines and depth */
 --rl-hairline:rgba(0,0,0,0.06);
 --rl-hairline-strong:rgba(0,0,0,0.12);
@@ -1712,16 +1719,14 @@ def build_guide_css() -> str:
 
 /* ── Chapter — instrument housing, not a boxed frame ── */
 .rl-guide-chapter{margin-bottom:48px;background:var(--rl-surface);border-radius:12px;box-shadow:var(--rl-shadow-card);overflow:hidden}
-.rl-guide-chapter-hero{min-height:312px;padding:48px 32px;position:relative;overflow:hidden;background:var(--rl-color-cool-white);display:flex;align-items:flex-end}
+.rl-guide-chapter-hero{min-height:312px;padding:48px 32px;position:relative;overflow:hidden;background:var(--rl-plate-paper);border-bottom:1px solid var(--rl-hairline-strong);display:flex;align-items:flex-end}
 .rl-guide-chapter-hero--dark{background:var(--rl-color-near-black)}
 .rl-guide-plate{position:absolute;inset:0;width:100%;height:100%;display:block}
 .rl-guide-chapter-title-block{position:relative;z-index:1;max-width:460px}
-.rl-guide-chapter-num{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rl-color-secondary-blue);margin-bottom:8px}
+.rl-guide-chapter-num{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rl-garnish-deep);margin-bottom:8px}
 .rl-guide-chapter-title{font-family:'Source Serif 4',Georgia,serif;font-size:32px;font-weight:700;text-transform:uppercase;letter-spacing:2px;line-height:1.1;margin:0;color:var(--rl-color-near-black)}
 .rl-guide-chapter-subtitle{font-family:'Source Serif 4',Georgia,serif;font-size:14px;color:var(--rl-color-primary-navy);margin-top:8px}
-.rl-guide-chapter-hero--dark .rl-guide-chapter-num{color:var(--rl-color-light-steel)}
-.rl-guide-chapter-hero--dark .rl-guide-chapter-title{color:var(--rl-color-white)}
-.rl-guide-chapter-hero--dark .rl-guide-chapter-subtitle{color:var(--rl-color-silver)}
+.rl-guide-chapter-title-block{margin:0 0 16px 16px}
 .rl-guide-chapter-body{padding:40px 48px}
 
 /* ── Gating ── */
@@ -1745,6 +1750,8 @@ def build_guide_css() -> str:
 
 /* ── Prose ── */
 .rl-guide-chapter-body p{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.75;margin:0 0 14px;color:#2a2a2c}
+/* Period garnish: drop cap on the first paragraph of each chapter */
+.rl-guide-chapter-body .rl-guide-section:first-child p:first-of-type::first-letter{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:50px;line-height:0.82;float:left;padding:5px 9px 0 0;color:var(--rl-garnish)}
 .rl-guide-chapter-body strong{font-weight:700}
 .rl-guide-list{font-family:'Source Serif 4',Georgia,serif;padding-left:20px;margin:0 0 16px;font-size:14px;line-height:1.75}
 .rl-guide-list li{margin-bottom:6px}
@@ -2009,7 +2016,7 @@ def build_guide_css() -> str:
 /* ── Image / Video Blocks ── */
 .rl-guide-img{margin:0 0 20px;line-height:0}
 .rl-guide-img-el{width:100%;height:auto;display:block;border:1px solid var(--rl-hairline);border-radius:8px}
-.rl-guide-img-caption{font-size:10px;color:#8a8a90;padding:10px 4px;line-height:1.5;font-family:'Sometype Mono',monospace;font-style:normal;letter-spacing:0.08em;background:transparent;border-top:1px solid var(--rl-hairline);margin-top:8px}
+.rl-guide-img-caption{font-size:10px;color:#8a8a90;padding:10px 4px;line-height:1.5;font-family:'Sometype Mono',monospace;font-style:normal;letter-spacing:0.08em;background:transparent;border-top:4px double rgba(27,23,18,0.35);margin-top:8px}
 .rl-guide-img--full-width{margin-left:-24px;margin-right:-24px}
 .rl-guide-img--half-width{float:right;width:50%;margin:0 0 16px 20px}
 .rl-guide-img-placeholder{display:none;padding:32px 24px;background:#1a1a1a;color:#d0d0c8;font-family:'Sometype Mono',monospace;font-size:12px;letter-spacing:1px;text-align:center;border-radius:8px;min-height:120px;align-items:center;justify-content:center}
@@ -2217,7 +2224,7 @@ def build_guide_css() -> str:
 /* Instrument housing: white card on warm paper, layered soft shadow */
 .rl-infographic{margin:0 0 24px;line-height:1.4;background:var(--rl-surface);border-radius:8px;padding:20px 20px 6px;box-shadow:var(--rl-shadow-card)}
 .rl-infographic--full-width{margin-left:-24px;margin-right:-24px}
-.rl-infographic-caption{font-size:10px;color:#8a8a90;padding:10px 4px;line-height:1.5;font-family:var(--rl-font-data);letter-spacing:0.08em;background:transparent;border-top:1px solid var(--rl-hairline);margin-top:8px}
+.rl-infographic-caption{font-size:10px;color:#8a8a90;padding:10px 4px;line-height:1.5;font-family:var(--rl-font-data);letter-spacing:0.08em;background:transparent;border-top:4px double rgba(27,23,18,0.35);margin-top:8px}
 .rl-infographic-svg{display:block;width:100%;height:auto}
 .rl-infographic-card{border:1px solid var(--rl-hairline);border-radius:8px;padding:16px;background:var(--rl-surface)}
 .rl-infographic-card-icon{margin-bottom:8px}
@@ -2442,7 +2449,7 @@ def build_guide_css() -> str:
 
 /* ── Infographic Editorial Framing ── */
 /* Engraved gauge caption over the old shouting serif title */
-.rl-infographic-title{font-family:var(--rl-font-data);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a90;border-bottom:none;padding:0;margin:0 0 14px}
+.rl-infographic-title{font-family:var(--rl-font-data);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--rl-garnish-deep);border-bottom:none;padding:0;margin:0 0 14px}
 .rl-infographic-takeaway{border-left:2px solid var(--rl-cobalt);background:var(--rl-cobalt-tint);border-radius:0 6px 6px 0;padding:0.75rem 1rem;margin:1.25rem 0 0 0;font-family:var(--rl-font-editorial);font-style:normal;font-size:0.9rem;color:#58585a}
 
 /* ── Infographic Tooltips ── */
