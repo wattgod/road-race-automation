@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T02:15:51",
+  "generated_at": "2026-08-06T02:28:43",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -2333,16 +2333,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-13",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 49,
+      "race_date": "2027-07-19",
+      "blockers": []
     },
     "giro-ride-like-a-pro-usa": {
       "slug": "giro-ride-like-a-pro-usa",
@@ -2936,16 +2934,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-19",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-18",
+      "blockers": []
     },
     "gran-fondo-suisse": {
       "slug": "gran-fondo-suisse",
@@ -7531,6 +7527,7 @@
     "gfny-cali",
     "uci-gran-fondo-world-championships",
     "white-rose-classic",
+    "giro-delle-dolomiti",
     "amashova-national-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
@@ -7564,6 +7561,7 @@
     "gfny-ventura",
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
+    "gran-fondo-san-diego",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7705,7 +7703,6 @@
     "flandrien-ride",
     "galibier-challenge",
     "gfny-grand-ballon",
-    "giro-delle-dolomiti",
     "gran-fondo-suisse",
     "granfondo-livigno-ale",
     "granfondo-serra-da-estrela",
@@ -7830,7 +7827,6 @@
     "gfny-salinas",
     "gfny-san-juan",
     "gfny-zapopan",
-    "gran-fondo-san-diego",
     "granfondo-belgium",
     "granfondo-pinarello",
     "granfondo-san-sebastian",
@@ -7926,6 +7922,7 @@
     "le-loop",
     "uci-gran-fondo-world-championships",
     "white-rose-classic",
+    "giro-delle-dolomiti",
     "amashova-national-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
@@ -7955,6 +7952,7 @@
     "bordeaux-paris-ultra-cycling",
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
+    "gran-fondo-san-diego",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -8009,13 +8007,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 147,
+    "ready": 149,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 87,
+    "pilot_candidates": 89,
     "by_tier_ready": {
       "1": 12,
-      "2": 119,
+      "2": 121,
       "3": 16,
       "4": 0
     }
