@@ -18,6 +18,20 @@ monochrome, so renderers encode meaning with value (light→dark), not hue.
 """
 
 import html as _html
+import json as _json
+from pathlib import Path
+
+_RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
+_RACE_INDEX_CACHE = None
+
+
+def _load_race_index() -> list:
+    """Load and cache web/race-index.json (the same index the site renders)."""
+    global _RACE_INDEX_CACHE
+    if _RACE_INDEX_CACHE is None:
+        _RACE_INDEX_CACHE = _json.loads(_RACE_INDEX_PATH.read_text())
+    return _RACE_INDEX_CACHE
+
 
 # ── Helpers ─────────────────────────────────────────────────
 
@@ -654,11 +668,223 @@ def render_fueling_timeline(block: dict) -> str:
     )
 
 
+# ── Data-driven renderers (computed from web/race-index.json) ─
+
+
+# Tier → point fill. Value encodes prestige: darker = higher tier.
+_TIER_FILLS = {
+    1: "var(--rl-color-near-black)",
+    2: "var(--rl-color-steel)",
+    3: "var(--rl-color-silver)",
+    4: "var(--rl-color-silver)",
+}
+
+# Slug → (label, dx, dy) for annotated points. Offsets hand-tuned so labels
+# don't collide in the dense 100-200km band.
+_SCATTER_CALLOUTS = {
+    "letape-du-tour": ("L'\u00c9tape du Tour", 14, -14),
+    "maratona-dles-dolomites": ("Maratona dles Dolomites", 14, 22),
+    "tour-of-flanders-sportive": ("Tour of Flanders", 10, -16),
+    "paris-roubaix-challenge": ("Paris-Roubaix Challenge", 10, 26),
+    "mallorca-312": ("Mallorca 312", -14, -16),
+}
+
+_SCATTER_MAX_KM = 350
+_SCATTER_MAX_DENSITY = 40.0
+
+
+def render_race_scatter(block: dict) -> str:
+    """Scatter of every rated single-day race: distance vs climbing density.
+
+    Computed at build time from web/race-index.json, so the chart is always
+    in sync with the database. Races over 350 km (randonn\u00e9es, multi-day
+    totals) are outside the guide's scope and excluded; hillclimbs steeper
+    than 40 m/km are clipped to the top edge.
+    """
+    races = [
+        r for r in _load_race_index()
+        if r.get("distance_km") and r.get("elevation_m") is not None
+        and r["distance_km"] <= _SCATTER_MAX_KM
+    ]
+    n_total = len(_load_race_index())
+
+    vb_w, vb_h = 1400, 640
+    margin_l, margin_r, chart_top, chart_bot = 90, 40, 50, 540
+    chart_w = vb_w - margin_l - margin_r
+    chart_h = chart_bot - chart_top
+
+    def _to_xy(km, density):
+        x = margin_l + (km / _SCATTER_MAX_KM) * chart_w
+        y = chart_bot - (min(density, _SCATTER_MAX_DENSITY) / _SCATTER_MAX_DENSITY) * chart_h
+        return x, y
+
+    svg = [_svg_open(vb_w, vb_h, "rl-infographic-svg")]
+
+    # Grid + axis labels
+    for dens_mark in range(0, 41, 10):
+        _, y = _to_xy(0, dens_mark)
+        svg.append(_svg_line(margin_l, y, margin_l + chart_w, y,
+                             stroke="var(--rl-color-silver)", stroke_width=1,
+                             extra='stroke-dasharray="4 4"'))
+        svg.append(_svg_text(margin_l - 10, y + 5, f"{dens_mark}",
+                             font_size=13, fill="var(--rl-color-steel)",
+                             anchor="end", family="var(--rl-font-data)"))
+    for km_mark in range(0, _SCATTER_MAX_KM + 1, 50):
+        x, _ = _to_xy(km_mark, 0)
+        svg.append(_svg_text(x, chart_bot + 26, f"{km_mark}km",
+                             font_size=13, fill="var(--rl-color-steel)",
+                             anchor="middle", family="var(--rl-font-data)"))
+    svg.append(_svg_text(margin_l - 60, chart_top - 18, "CLIMBING DENSITY (M/KM)",
+                         font_size=13, fill="var(--rl-color-near-black)",
+                         weight="700", family="var(--rl-font-data)",
+                         extra='letter-spacing="2"'))
+
+    # Points — tier 2-4 first (light), tier 1 on top (dark, larger)
+    def _point(r):
+        density = r["elevation_m"] / r["distance_km"]
+        x, y = _to_xy(r["distance_km"], density)
+        tier = r.get("tier", 3)
+        size = 13 if tier == 1 else 9
+        tip = (f"{r['name']}: {r['distance_km']:.0f}km, "
+               f"{r['elevation_m']:.0f}m ({density:.1f} m/km), Tier {tier}")
+        return _svg_rect(
+            x - size / 2, y - size / 2, size, size,
+            fill=_TIER_FILLS.get(tier, "var(--rl-color-silver)"),
+            stroke="var(--rl-color-cool-white)" if tier == 1 else "",
+            stroke_width=1.5 if tier == 1 else 0,
+            extra=f'data-tooltip="{_esc(tip)}" tabindex="0"',
+        )
+
+    for r in races:
+        if r.get("tier", 3) != 1:
+            svg.append(_point(r))
+    for r in races:
+        if r.get("tier", 3) == 1:
+            svg.append(_point(r))
+
+    # Callout labels for the monuments the chapters discuss
+    by_slug = {r["slug"]: r for r in races}
+    for slug, (label, dx, dy) in _SCATTER_CALLOUTS.items():
+        r = by_slug.get(slug)
+        if not r:
+            continue
+        density = r["elevation_m"] / r["distance_km"]
+        x, y = _to_xy(r["distance_km"], density)
+        anchor = "end" if dx < 0 else "start"
+        svg.append(_svg_text(
+            x + dx, y + dy, label,
+            font_size=15, fill="var(--rl-color-near-black)",
+            anchor=anchor, weight="700", family="var(--rl-font-editorial)"
+        ))
+
+    # Legend
+    ly = chart_bot + 58
+    lx = margin_l
+    for tier, label in [(1, "Tier 1"), (2, "Tier 2"), (3, "Tier 3-4")]:
+        size = 13 if tier == 1 else 9
+        svg.append(_svg_rect(lx, ly - size / 2, size, size,
+                             fill=_TIER_FILLS[tier]))
+        svg.append(_svg_text(lx + size + 10, ly + 5, label,
+                             font_size=14, fill="var(--rl-color-near-black)",
+                             family="var(--rl-font-data)"))
+        lx += 130
+    svg.append(_svg_text(
+        lx + 20, ly + 5,
+        f"{len(races)} of {n_total} rated races (single-day, \u2264{_SCATTER_MAX_KM}km)",
+        font_size=13, fill="var(--rl-color-steel)", family="var(--rl-font-data)"
+    ))
+
+    svg.append(_svg_close())
+    return _figure_wrap(
+        "".join(svg), block.get("caption", ""), block.get("layout", "full-width"),
+        block.get("asset_id", ""), block.get("alt", ""),
+        title="Every Rated Race: Distance vs Climbing Density",
+        takeaway=(
+            "Height decides the training, not width. The Maratona is 100km "
+            "shorter than Flanders and three times harder per kilometre."
+        ),
+    )
+
+
+def render_tier_distribution(block: dict) -> str:
+    """Horizontal bar chart of races per tier, computed live from the index.
+
+    This is the graphic behind the chapter's scarcity claim: the count and
+    percentage are derived at build time, so they can never drift from the
+    database the way hardcoded prose can.
+    """
+    idx = _load_race_index()
+    counts = {t: 0 for t in (1, 2, 3, 4)}
+    for r in idx:
+        counts[r.get("tier", 3)] = counts.get(r.get("tier", 3), 0) + 1
+    total = len(idx)
+    t1_pct = counts[1] / total * 100
+
+    tier_meta = [
+        (1, "Tier 1 \u00b7 Monuments", "var(--rl-color-near-black)"),
+        (2, "Tier 2 \u00b7 Contenders", "var(--rl-color-steel)"),
+        (3, "Tier 3 \u00b7 Regional", "var(--rl-color-silver)"),
+        (4, "Tier 4 \u00b7 Local", "var(--rl-color-silver)"),
+    ]
+
+    vb_w = 1400
+    label_w = 300
+    bar_max_w = 900
+    bar_h = 64
+    gap = 18
+    top = 30
+    vb_h = top + len(tier_meta) * (bar_h + gap) + 20
+    max_count = max(counts.values())
+
+    svg = [_svg_open(vb_w, vb_h, "rl-infographic-svg")]
+    for i, (tier, label, fill) in enumerate(tier_meta):
+        y = top + i * (bar_h + gap)
+        count = counts[tier]
+        w = max((count / max_count) * bar_max_w, 6)
+        pct = count / total * 100
+        svg.append(_svg_text(
+            label_w - 16, y + bar_h / 2 + 6, label,
+            font_size=17, fill="var(--rl-color-near-black)",
+            anchor="end", weight="700", family="var(--rl-font-editorial)"
+        ))
+        svg.append(_svg_rect(
+            label_w, y, w, bar_h, fill=fill,
+            extra=f'data-tooltip="{_esc(f"{count} races \u00b7 {pct:.1f}% of {total}")}" tabindex="0"',
+        ))
+        count_label = f"{count} ({pct:.1f}%)"
+        # Inside the bar if it fits, outside otherwise
+        if w > 150:
+            svg.append(_svg_text(
+                label_w + w - 14, y + bar_h / 2 + 6, count_label,
+                font_size=16, fill="var(--rl-color-cool-white)",
+                anchor="end", weight="700", family="var(--rl-font-data)"
+            ))
+        else:
+            svg.append(_svg_text(
+                label_w + w + 14, y + bar_h / 2 + 6, count_label,
+                font_size=16, fill="var(--rl-color-near-black)",
+                weight="700", family="var(--rl-font-data)"
+            ))
+
+    svg.append(_svg_close())
+    return _figure_wrap(
+        "".join(svg), block.get("caption", ""), block.get("layout", "inline"),
+        block.get("asset_id", ""), block.get("alt", ""),
+        title=f"How the {total} Rated Races Break Down",
+        takeaway=(
+            f"Only {t1_pct:.1f}% of rated events earn Tier 1. If your target "
+            "is one of them, the field, the speed, and the stakes all scale up."
+        ),
+    )
+
+
 # ── Registry ─────────────────────────────────────────────────
 
 INFOGRAPHIC_RENDERERS = {
     "ch1-event-demand-matrix": render_event_demand_matrix,
     "ch2-build-curves": render_build_curves,
+    "ch2-race-scatter": render_race_scatter,
+    "ch2-tier-distribution": render_tier_distribution,
     "ch3-supercompensation": render_supercompensation,
     "ch4-traffic-light": render_traffic_light,
     "ch5-fueling-timeline": render_fueling_timeline,
