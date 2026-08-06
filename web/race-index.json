@@ -2858,14 +2858,14 @@
   {
     "name": "Granfondo Serra da Estrela",
     "slug": "granfondo-serra-da-estrela",
-    "location": "Seia, Serra da Estrela, Portugal",
+    "location": "Manteigas, Serra da Estrela, Portugal",
     "country": "Portugal",
     "region": "Southern Europe",
     "month": "June",
-    "distance_km": 115.0,
-    "distance_mi": 71.5,
-    "elevation_m": 4170,
-    "elevation_ft": 13681.0,
+    "distance_km": 132.0,
+    "distance_mi": 82.0,
+    "elevation_m": 4200,
+    "elevation_ft": 13780.0,
     "tier": 2,
     "overall_score": 74,
     "scores": {
@@ -3232,7 +3232,7 @@
     ]
   },
   {
-    "name": "Bob Cook Memorial Mt. Evans Hill Climb",
+    "name": "Bob Cook Memorial Mt. Blue Sky Hill Climb",
     "slug": "mt-evans-hill-climb",
     "location": "Idaho Springs, Colorado",
     "country": "Colorado",
@@ -3951,7 +3951,7 @@
     "location": "Lanzarote to La Gomera, Canary Islands, Spain",
     "country": "Spain",
     "region": "Southern Europe",
-    "month": "January",
+    "month": "February",
     "distance_km": 750.0,
     "distance_mi": 466.0,
     "elevation_m": 17000,
@@ -14517,7 +14517,12 @@
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "Brontosaurus: 163 km",
+      "T-Rex: 100 km",
+      "Triceratops: 75 km",
+      "Velociraptor: 50 km"
+    ]
   },
   {
     "name": "Granfondo Campagnolo Roma",
