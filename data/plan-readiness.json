@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:41:07",
+  "generated_at": "2026-08-06T03:42:48",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4865,13 +4865,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "maraton-franja": {
@@ -5011,16 +5011,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-25",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 50,
+      "race_date": "2027-07-24",
+      "blockers": []
     },
     "mt-fuji-hill-climb": {
       "slug": "mt-fuji-hill-climb",
@@ -7505,6 +7503,7 @@
     "le-loop",
     "gfny-cali",
     "uci-gran-fondo-world-championships",
+    "mt-evans-hill-climb",
     "white-rose-classic",
     "giro-delle-dolomiti",
     "amashova-national-classic",
@@ -7694,7 +7693,6 @@
     "iron-horse-bicycle-classic",
     "lariegeoise-cyclosportive",
     "letape-du-tour-femmes",
-    "mt-evans-hill-climb",
     "mt-fuji-hill-climb",
     "race-across-france",
     "tour-de-suisse-challenge",
@@ -7900,6 +7898,7 @@
     "la-marmotte",
     "le-loop",
     "uci-gran-fondo-world-championships",
+    "mt-evans-hill-climb",
     "white-rose-classic",
     "giro-delle-dolomiti",
     "amashova-national-classic",
@@ -7995,13 +7994,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 160,
+    "ready": 161,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 99,
+    "pilot_candidates": 100,
     "by_tier_ready": {
       "1": 12,
-      "2": 131,
+      "2": 132,
       "3": 17,
       "4": 0
     }

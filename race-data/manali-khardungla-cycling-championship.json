@@ -140,10 +140,10 @@
       }
     ],
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-24",
+      "status": "defunct",
+      "verified": "2026-08-06",
       "source": "https://www.manalikhardungla.in/",
-      "notes": "SUPERSEDES prior 'active' status. No 2025 or 2026 edition independently confirmed; official site remains frozen on 7-16 August 2024 dates with no independent report that edition occurred. Last independently verified finish: 3 August 2015 (63-rider field, named winners). Promoter alone claims a 2022 edition. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+      "notes": "No current or future edition is published, and the promoter site remains frozen on August 7-16, 2024 without independent evidence that event occurred. The last independently verified finish remains August 3, 2015 with 63 riders and named winners; the promoter alone claims a 2022 edition. Rechecked 2026-08-06: more than a decade without an independently verified race and two years of a stale organizer page satisfies the dormant-event exclusion rule."
     },
     "catalog_flags": {
       "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a multi-stage event (9 stages in the last verified 2015 edition) combining a timed race with a parallel untimed adventure tour — doesn't cleanly fit the gran_fondo taxonomy or its single-day scoring dimensions. Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json and birkebeinerrittet-road.json flag similar taxonomy mismatches rather than silently changing the discipline field.",
