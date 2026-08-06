@@ -1623,9 +1623,13 @@ def build_guide_css() -> str:
 --rl-color-light-steel:#d0d0c8;
 --rl-color-silver:#d0d0c8;
 --rl-color-cool-white:#f5f5f0;
---rl-color-orange:#555555;
+/* Accent: the one non-monochrome value in the system, used the way Rapha
+   uses its pink — a single high-vis stripe against an austere garment.
+   Everything "signal" (race refs, envelope lines, the race-day card, the
+   anaerobic training bucket) routes through this token. */
+--rl-color-orange:#e6007e;
 --rl-color-light-gold:#555555;
---rl-color-signal-red:#333333;
+--rl-color-signal-red:#e6007e;
 --rl-color-light-orange:#b8b8b0;
 --rl-color-near-black:#1a1a1a;
 --rl-color-white:#ffffff;
@@ -1640,14 +1644,14 @@ def build_guide_css() -> str:
 
 /* ── Guide Progress Bar ── */
 .rl-guide-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:1001;background:transparent}
-.rl-guide-progress-bar{height:100%;width:0%;background:#333333}
+.rl-guide-progress-bar{height:100%;width:0%;background:var(--rl-color-signal-red)}
 
 /* ── Chapter Nav ── */
 .rl-guide-chapnav{position:sticky;top:3px;z-index:1000;background:#1a1a1a;display:flex;justify-content:center;gap:0;border:3px solid #1a1a1a;margin-bottom:32px}
 .rl-guide-chapnav-item{color:#999999;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:1px;padding:10px 16px;display:flex;align-items:center;gap:4px;border-right:1px solid #1a1a1a;border-bottom:3px solid transparent}
 .rl-guide-chapnav-item:last-child{border-right:none}
 .rl-guide-chapnav-item:hover{color:#d0d0c8;background:transparent}
-.rl-guide-chapnav-item--active{color:#fff;border-bottom-color:#555555;background:transparent}
+.rl-guide-chapnav-item--active{color:#fff;border-bottom-color:var(--rl-color-signal-red);background:transparent}
 .rl-guide-chapnav-item--locked .rl-guide-chapnav-lock{font-size:9px;opacity:0.5}
 .rl-guide-chapnav-item--unlocked .rl-guide-chapnav-lock{display:none}
 
@@ -1893,7 +1897,7 @@ def build_guide_css() -> str:
 .rl-guide-rider-btn{padding:10px 16px;background:transparent;color:#999999;border:none;border-right:1px solid #1a1a1a;border-bottom:3px solid transparent;cursor:pointer;font-family:'Sometype Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;display:flex;flex-direction:column;gap:2px}
 .rl-guide-rider-btn:last-child{border-right:none}
 .rl-guide-rider-btn:hover{color:#d0d0c8;background:transparent}
-.rl-guide-rider-btn--active{background:#1a1a1a;color:#fff;border-bottom:3px solid #555555}
+.rl-guide-rider-btn--active{background:#1a1a1a;color:#fff;border-bottom:3px solid var(--rl-color-signal-red)}
 .rl-guide-rider-btn-hours{font-size:9px;font-weight:400;opacity:0.7}
 .rl-guide-rider-badge{position:fixed;bottom:20px;right:20px;z-index:999;background:#1a1a1a;border:3px solid #333333;padding:8px 14px;display:flex;align-items:center;gap:10px}
 .rl-guide-rider-badge-type{color:#fff;font-size:11px;font-weight:700;letter-spacing:1px}
