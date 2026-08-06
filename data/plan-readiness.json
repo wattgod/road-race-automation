@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:19:43",
+  "generated_at": "2026-08-06T03:26:02",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -2833,13 +2833,13 @@
         "future_date": false,
         "active_registerable": false
       },
-      "eligibility_status": "unknown",
+      "eligibility_status": "defunct",
       "ready": false,
       "runway_weeks": null,
       "race_date": null,
       "blockers": [
         "no parsed future date",
-        "eligibility unverified (unknown)"
+        "eligibility: defunct"
       ]
     },
     "gran-fondo-mont-ventoux": {

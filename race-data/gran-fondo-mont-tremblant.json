@@ -324,10 +324,10 @@
       }
     },
     "eligibility": {
-      "status": "unknown",
-      "verified": "2026-07-23",
-      "source": "https://officialmonttremblant.com/activities/summer-activities/cycling/cycling-events/",
-      "notes": "Found a Mont-Tremblant cycling-events page, but no current Gran Fondo Mont-Tremblant edition or cancellation status was confirmed; 2026 date on file remains unverified.; last edition evidenced: 2025; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol web research): status should read presumed lapsed/inactive, not unknown-pending-active. Last confirmed edition May 26, 2019; 2020-21 postponed for COVID; entire 2022 Crossroads Tremblant festival cancelled with no evidence of a 2023-2026 return. The file's prior August 21-22, 2026 date belongs to the unrelated Salsa Tremblant event, not Gran Fondo Mont-Tremblant."
+      "status": "defunct",
+      "verified": "2026-08-06",
+      "source": "https://www.mont-tremblant.ca/en/events",
+      "notes": "Defunct/dormant for catalog purposes. The last confirmed Gran Fondo Mont-Tremblant was May 26, 2019; the 2020-2021 editions were postponed, the entire 2022 Crossroads Tremblant festival was cancelled, and neither the municipal/current tourism calendar nor cycling calendars show a 2023-2027 return. Seven years without an edition satisfies the catalog's dormant-event exclusion rule. The August 21-22, 2026 date previously attached to this profile belonged to the unrelated Salsa Tremblant event."
     },
     "catalog_flags": {
       "status_note": "No confirmed edition since 2019; the broader Crossroads Tremblant festival it belonged to was cancelled in 2022 with no verified 2023+ return. Recommend human review of whether this profile should remain scored/active-styled in the catalog (same class of question as gran-fondo-mont-tremblant's dormant peers, e.g. birkebeinerrittet-road) or be reclassified as defunct pending organizer confirmation of a revival.",
