@@ -10105,6 +10105,55 @@
     ]
   },
   {
+    "name": "Utrecht Ultra XL",
+    "slug": "utrecht-ultra-xl",
+    "location": "Utrecht, Netherlands (loop through Belgium, Luxembourg, Germany, and France)",
+    "country": "Netherlands",
+    "region": "Western Europe",
+    "month": "August",
+    "distance_km": 1600.0,
+    "distance_mi": 994.2,
+    "elevation_m": 14000,
+    "elevation_ft": 45932.0,
+    "tier": 2,
+    "overall_score": 66,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 1,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "A 1,600-kilometer self-supported road ultra from Utrecht through the Vosges and Flemish Ardennes",
+    "has_profile": true,
+    "profile_url": "/race/utrecht-ultra-xl/",
+    "discipline": "gran_fondo",
+    "lat": 52.0907,
+    "lng": 5.1214,
+    "route_options": [
+      {
+        "name": "Solo",
+        "distance_km": 1600,
+        "elevation_m": 14000
+      },
+      {
+        "name": "Pairs",
+        "distance_km": 1600,
+        "elevation_m": 14000
+      }
+    ]
+  },
+  {
     "name": "Vermont Gran Fondo",
     "slug": "vermont-gran-fondo",
     "location": "Bristol, Vermont, USA",
@@ -14837,7 +14886,7 @@
     "location": "Yangyang and Inje, Gangwon-do, South Korea",
     "country": "South Korea",
     "region": "Asia",
-    "month": "",
+    "month": "April",
     "distance_km": 151.0,
     "distance_mi": 93.8,
     "elevation_m": 2380,

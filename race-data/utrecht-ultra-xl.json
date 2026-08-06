@@ -1,0 +1,174 @@
+{
+  "race": {
+    "name": "Utrecht Ultra XL",
+    "slug": "utrecht-ultra-xl",
+    "display_name": "Utrecht Ultra XL",
+    "tagline": "A 1,600-kilometer self-supported road ultra from Utrecht through the Vosges and Flemish Ardennes",
+    "vitals": {
+      "distance_km": 1600.0,
+      "distance_mi": 994.2,
+      "elevation_m": 14000,
+      "elevation_ft": 45932.0,
+      "location": "Utrecht, Netherlands (loop through Belgium, Luxembourg, Germany, and France)",
+      "location_badge": "Utrecht, Netherlands",
+      "country": "Netherlands",
+      "date": "2026: August 1-7",
+      "date_specific": "2026: August 1 (mass start 08:00; finish deadline August 7 at 22:00)",
+      "field_size": "Not publicly disclosed",
+      "start_format": "Mass start; solo and pairs categories; continuously GPS-tracked",
+      "registration": "2026 entry closed; no 2027 registration cycle published",
+      "entry_fee": "EUR200 (2026, including tracker and staffed Vosges checkpoint)",
+      "feed_zones": "Self-supported commercial resupply; one staffed Vosges checkpoint offers beds and showers",
+      "cutoff_time": "158 hours",
+      "lat": 52.0907,
+      "lng": 5.1214,
+      "route_options": [
+        {
+          "name": "Solo",
+          "distance_km": 1600,
+          "elevation_m": 14000
+        },
+        {
+          "name": "Pairs",
+          "distance_km": 1600,
+          "elevation_m": 14000
+        }
+      ]
+    },
+    "climate": {
+      "primary": "Temperate and mountain-variable",
+      "description": "August conditions range from exposed lowland heat and rain to cooler nights and fast-changing weather in the Vosges.",
+      "challenges": [
+        "Nearly seven days of weather exposure across five countries",
+        "Cold or wet overnight conditions in the Vosges",
+        "Wind exposure on the Dutch and Belgian return"
+      ]
+    },
+    "terrain": {
+      "primary": "Mixed lowland and mountain roads",
+      "surface": "Approximately 99% tarmac with short mandatory gravel sectors and cobbled climbs",
+      "technical_rating": 3,
+      "features": [
+        "Free-routed connections between mandatory parcours",
+        "218 km Vosges parcours with nearly 5,000 m of climbing",
+        "Flemish cobbled climbs around Oudenaarde",
+        "Fixed Zeeland-to-Utrecht finish route"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 1,
+      "field_depth": 2,
+      "value": 5,
+      "expenses": 3,
+      "road_surface": 2,
+      "cultural_impact": 1,
+      "overall_score": 66,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "First-edition self-supported road ultra scored from the organizer's published 1,600 km, 14,000 m, 158-hour course and EUR200 entry. The gran_fondo discipline is retained for schema compatibility; catalog_flags records the ultra-distance taxonomy mismatch."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        {
+          "name": "Vosges checkpoint parcours",
+          "distance_km": 218,
+          "elevation_m": 5000,
+          "description": "The organizer's hardest mandatory block, crossing the Vosges from the northern hills into sustained mountain terrain."
+        }
+      ],
+      "profile_type": "Ultra-distance mountain loop",
+      "king_of_mountain": null
+    },
+    "course_description": {
+      "character": "A partly free-routed, partly fixed 1,600 km road ultra. Riders leave Utrecht together, choose their own commercially supportable lines between three checkpoints, and complete mandatory parcours along the Luxembourg-Germany border, through the Vosges, and across the cobbled hills near Oudenaarde before following the fixed return through Zeeland.",
+      "signature_challenge": "The 218 km Vosges parcours: nearly 5,000 m of climbing inside one mandatory block, reached after riders have already navigated hundreds of self-supported kilometers.",
+      "suffering_zones": [
+        "The Luxembourg-Germany border parcours — river valleys and repeated climbs after the opening free-route section",
+        "The 218 km Vosges block — nearly 5,000 m of climbing, mountain weather, and a staffed refuge checkpoint",
+        "Oudenaarde and the Flemish cobbled climbs — rough, punchy terrain late in the race",
+        "The fixed Zeeland-to-Utrecht return — exposed lowland kilometers against the closing 158-hour clock"
+      ]
+    },
+    "logistics": {
+      "airport": "Amsterdam Schiphol is the main international gateway; Utrecht is directly connected by train.",
+      "lodging_strategy": "Book Utrecht accommodation before and after the event; during the race, only services commercially available to every rider are allowed and cannot be pre-booked before the start.",
+      "transport": "The event starts and finishes in Utrecht. The entry includes a GPS tracker, pre-start bike check, secure storage, a staffed Vosges checkpoint, and a finish party.",
+      "food": "Commercial self-resupply throughout; no private resupply or outside support.",
+      "official_site": "https://utrechtultra.com/utrechtultraxl/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Introduced as the longer sister race to the 1,000 km Utrecht Ultra, adding substantially more climbing and a deep Vosges parcours while retaining the organizer's mixed fixed/free-routing format.",
+      "notable_moments": [
+        "Inaugural edition started August 1, 2026"
+      ],
+      "reputation": "A new extension of an established Dutch self-supported ultra organizer rather than a long-running standalone classic."
+    },
+    "biased_opinion": {
+      "verdict": "A Smart Step Up From Utrecht Ultra",
+      "summary": "Utrecht Ultra XL takes the original race's approachable route-choice concept and turns it into a serious trans-European ultra: 1,600 km, 14,000 m, a 158-hour clock, a 218 km Vosges block, and cobbles near Oudenaarde. The EUR200 entry is unusually strong value for a tracker, staffed mountain checkpoint, storage, media, and finish support. Its limitation is history: 2026 is the inaugural edition, so the course has not yet accumulated the repeat-edition evidence of Europe's established ultras.",
+      "strengths": [
+        "A clearly differentiated 1,600 km course rather than a token extension of the standard Utrecht Ultra",
+        "The Vosges and Flemish mandatory parcours create real mountain and classics-road specificity",
+        "EUR200 includes tracker rental, bike check, secure storage, a staffed checkpoint with beds and showers, and the finish party",
+        "Solo and pairs categories preserve a genuine self-supported racing format"
+      ],
+      "weaknesses": [
+        "The inaugural edition has no multi-year reliability or route-history record",
+        "Free routing makes the exact rider distance and climbing dependent on navigation choices",
+        "No private support, no pre-booked lodging, and only one staffed refuge make logistics part of the competition",
+        "The closing cobbles and exposed Dutch return arrive after more than 1,000 km"
+      ],
+      "bottom_line": "A well-designed, good-value European road ultra for riders who want materially more mountain work than Utrecht Ultra without stepping all the way to a continent-crossing race."
+    },
+    "final_verdict": {
+      "score": "66/100",
+      "one_liner": "A strong-value 1,600 km self-supported ultra with a real Vosges centerpiece and first-edition uncertainty.",
+      "should_you_race": "Yes if route planning, commercial self-resupply, long mountain blocks, and a six-day clock are the challenge you want. Wait for more editions if proven course continuity matters more than novelty.",
+      "alternatives": "Choose the standard Utrecht Ultra for a 1,000 km and 100-hour version of the same format, or Race Around the Netherlands for a longer fixed-loop Dutch ultra."
+    },
+    "citations": [
+      {
+        "url": "https://utrechtultra.com/utrechtultraxl/",
+        "category": "official",
+        "label": "Utrecht Ultra XL — Official Race, Route, Entry, and FAQ"
+      },
+      {
+        "url": "https://utrechtultra.com/",
+        "category": "official",
+        "label": "Utrecht Ultra — Official Organizer Homepage"
+      },
+      {
+        "url": "https://utrechtultra.com/utrechtultraxl/register/",
+        "category": "official",
+        "label": "Utrecht Ultra XL — Official 2026 Registration Terms and Included Services"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-06",
+      "source": "https://utrechtultra.com/utrechtultraxl/",
+      "notes": "New relevant race discovered during the Roadie Labs final source audit and added under the standing catalog rule. The inaugural competitive self-supported edition is currently running August 1-7, 2026 with a 1,600 km course, 14,000 m of climbing, mass start, solo and pairs categories, GPS tracking, and a 158-hour cutoff. The organizer has not published a 2027 date, registration cycle, checkpoints, parcours, or race manual, so the event is editorially eligible but source-blocked for a next-edition training fleet."
+    },
+    "catalog_flags": {
+      "status_note": "This is a self-supported ultra-distance road race with mixed free routing and mandatory parcours, not a mass-participation gran fondo. The existing discipline enum is retained to avoid inventing schema; a future multi_stage or ultra_distance taxonomy should classify it explicitly.",
+      "ruled": "2026-08-06 final Roadie Labs source audit"
+    }
+  }
+}

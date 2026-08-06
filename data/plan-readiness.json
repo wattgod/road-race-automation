@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T04:10:11",
+  "generated_at": "2026-08-06T04:20:03",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -7209,6 +7209,25 @@
         "no parsed future date"
       ]
     },
+    "utrecht-ultra-xl": {
+      "slug": "utrecht-ultra-xl",
+      "tier": 2,
+      "score": 66,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-08-01",
+      "blockers": [
+        "no parsed future date"
+      ]
+    },
     "valley-granfondo": {
       "slug": "valley-granfondo",
       "tier": 3,
@@ -7420,16 +7439,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-19",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-18",
+      "blockers": []
     },
     "white-rose-classic": {
       "slug": "white-rose-classic",
@@ -7548,6 +7565,7 @@
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
     "gfny-punta-del-este",
+    "white-horse-challenge",
     "granguanche-audax-road",
     "gfny-puerto-rico",
     "granfondo-via-del-sale",
@@ -7781,6 +7799,7 @@
     "majka-gran-fondo",
     "rad-am-ring",
     "redlands-bicycle-classic",
+    "utrecht-ultra-xl",
     "vermont-gran-fondo",
     "3rides-gran-fondo",
     "adelaide-epic-ride",
@@ -7836,7 +7855,6 @@
     "neusiedlersee-radmarathon",
     "stellenbosch-cycle-tour",
     "struggle-moors",
-    "white-horse-challenge",
     "yangyang-gran-fondo",
     "66-degres-sud",
     "cappadocia-gran-fondo",
@@ -7988,15 +8006,15 @@
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 407,
-    "ready": 164,
-    "content_present": 394,
-    "validator_clean": 407,
+    "total": 408,
+    "ready": 165,
+    "content_present": 395,
+    "validator_clean": 408,
     "pilot_candidates": 101,
     "by_tier_ready": {
       "1": 12,
       "2": 133,
-      "3": 19,
+      "3": 20,
       "4": 0
     }
   }
