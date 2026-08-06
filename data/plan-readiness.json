@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T01:42:59",
+  "generated_at": "2026-08-06T01:52:05",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1153,16 +1153,15 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": false,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
       "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-14",
+      "runway_weeks": 44,
+      "race_date": "2027-06-13",
       "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
+        "no course_character (course_description.character)"
       ]
     },
     "dreilander-giro": {
@@ -1509,18 +1508,15 @@
       "checks": {
         "validator_clean": true,
         "editorial": true,
-        "course_character": false,
-        "future_date": false,
+        "course_character": true,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-10",
-      "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 39,
+      "race_date": "2027-05-09",
+      "blockers": []
     },
     "fyn-rundt": {
       "slug": "fyn-rundt",
@@ -4880,18 +4876,15 @@
       "checks": {
         "validator_clean": true,
         "editorial": true,
-        "course_character": false,
-        "future_date": false,
+        "course_character": true,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-25",
-      "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 37,
+      "race_date": "2027-04-24",
+      "blockers": []
     },
     "manali-khardungla-cycling-championship": {
       "slug": "manali-khardungla-cycling-championship",
@@ -7285,16 +7278,15 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": false,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
       "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-12",
+      "runway_weeks": 45,
+      "race_date": "2027-06-18",
       "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
+        "no course_character (course_description.character)"
       ]
     },
     "velo-vietnam-northern-frontier": {
@@ -7553,10 +7545,12 @@
     "sportful-dolomiti-race",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
+    "mallorca-312",
     "tartu-rattaralli",
     "nordsjorittet",
     "engadin-radmarathon",
     "highlands-gran-fondo",
+    "fred-whitton-challenge",
     "seattle-to-portland",
     "nove-colli",
     "alpe-dhuzes",
@@ -7945,10 +7939,12 @@
     "sportful-dolomiti-race",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
+    "mallorca-312",
     "tartu-rattaralli",
     "nordsjorittet",
     "engadin-radmarathon",
     "highlands-gran-fondo",
+    "fred-whitton-challenge",
     "seattle-to-portland",
     "nove-colli",
     "alpe-dhuzes",
@@ -8017,13 +8013,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 141,
-    "content_present": 391,
+    "ready": 143,
+    "content_present": 393,
     "validator_clean": 407,
-    "pilot_candidates": 82,
+    "pilot_candidates": 84,
     "by_tier_ready": {
-      "1": 11,
-      "2": 115,
+      "1": 12,
+      "2": 116,
       "3": 15,
       "4": 0
     }

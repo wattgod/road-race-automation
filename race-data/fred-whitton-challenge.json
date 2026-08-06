@@ -12,8 +12,8 @@
       "location": "Grasmere, Lake District, Cumbria, England, UK",
       "location_badge": "LAKE DISTRICT, ENGLAND, UK",
       "country": "USA",
-      "date": "Second Sunday of May annually",
-      "date_specific": "2026: May 10",
+      "date": "2027: May 9",
+      "date_specific": "2027: Sunday, May 9",
       "field_size": "~2,500 riders (ballot entry from 5,000+ applicants)",
       "start_format": null,
       "registration": "Ballot entry via RaceBest. General ballot opens December for 10 days. 400 first-time rider places drawn first. Group entries (2-4 riders) available. Charity places guarantee entry with fundraising commitment.",
@@ -90,16 +90,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The 180.2-kilometer Grasmere loop links the Lake District's major paved passes in sequence: Kirkstone, Honister, Newlands, Whinlatter, Cold Fell, Hardknott, Wrynose, and Blea Tarn. Rough single-track tarmac, extreme gradients, open roads, technical descents, and roughly 3,900 meters of climbing make this an accumulation event long before the famous final passes arrive.",
+      "signature_challenge": "Hardknott Pass begins around mile 96 after most of the route's distance and climbing are already in the legs. Its 2.2 kilometers average roughly 13.5 percent and reach 33 percent, then Wrynose and Blea Tarn follow before the return to Grasmere.",
+      "suffering_zones": [
+        "Honister and Newlands, where double-digit gradients and technical descents punish early overconfidence",
+        "Cold Fell and Irton Pike, the exposed late-middle transition before the hardest passes",
+        "Hardknott, Wrynose, and Blea Tarn after mile 96, when traction, gearing, pacing, and judgment all matter at once"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Grasmere village has B&Bs, guesthouses, and The Inn at Grasmere — all book out months ahead for the Fred weekend. Ambleside (10 min drive) offers more options. Windermere (20 min) and Keswick (25 min) are also feasible bases. Budget £80-200/night for B&Bs. Event campervan site at Grasmere School: £25/night with hard standing and water. Book as early as possible — December ballot confirmation should trigger immediate accommodation booking.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://fredwhittonchallenge.co.uk/"
     },
     "history": {
       "founded": null,
@@ -580,9 +584,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-08-06",
       "source": "https://fredwhittonchallenge.co.uk/entry/",
-      "notes": "Mass-participation road sportive from Grasmere ran on 10 May 2026 in the Lake District with no indication of discontinuation.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "notes": "The official entry page confirms Sunday, May 9, 2027. The organizer publishes electronic timing, positions, checkpoint splits, and annual results for the 180-kilometer Lake District challenge."
     }
   }
 }

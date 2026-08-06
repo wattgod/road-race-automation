@@ -12,8 +12,8 @@
       "location": "Playa de Muro, Mallorca, Spain",
       "location_badge": "PLAYA DE MURO, MALLORCA",
       "country": "Spain",
-      "date": "Late April annually",
-      "date_specific": "2026: April 25",
+      "date": "2027: April 24",
+      "date_specific": "2027: Saturday, April 24",
       "field_size": "8,500 riders across all distances (312km, 225km, 167km)",
       "start_format": null,
       "registration": "Opens early October, sells out within minutes. 2026 entry fee EUR 159.99 (includes jersey, timing chip, finisher medal). Waiting list available after sellout.",
@@ -85,16 +85,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The 312-kilometer long route starts and finishes at Playa de Muro on fully closed paved roads. Its 5,050 meters of climbing are front-loaded through the Serra de Tramuntana, where sustained passes and switchback descents around Puig Major and Coll de Soller demand restraint, before the course turns toward faster rolling and exposed roads in eastern Mallorca. The shorter 226-kilometer and 167-kilometer routes share the same event framework but split before the full island-scale distance accumulates.",
+      "signature_challenge": "The decisive problem is the combination of Serra de Tramuntana climbing and the enormous distance that remains afterward. Riders who treat the early mountain passes as the whole race still have hours of exposed, faster roads to cover after the major elevation has already depleted them.",
+      "suffering_zones": [
+        "The pre-dawn start and early Serra de Tramuntana passes, when cool conditions make pacing and layering easy to misjudge",
+        "Puig Major and the long mountain descents, where climbing fatigue must not compromise handling",
+        "The final eastern kilometers after the mountains, where wind, fueling debt, and 250-plus kilometers of accumulated fatigue become the course"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Playa de Muro is the start/finish — stay within 5km for race morning convenience. Official race hotels include Vanity Hotel Golf, Sunrise Aparthotel, and Eden Lago. Port d'Alcudia offers more options 10 minutes away. Book 6+ months in advance as race week accommodation sells out nearly as fast as entries. Tour operator packages (Sportive Breaks, Love Velo, Sports Tours International) bundle entry, hotel, and transfers.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://mallorca312.com/en/"
     },
     "history": {
       "founded": null,
@@ -422,9 +426,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://mallorca312.com/en/rules/",
-      "notes": "Official rules page confirms the XVI edition on 25 April 2026 in Platja de Muro; no rebrand detected and the date matches the file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-08-06",
+      "source": "https://mallorca312.com/en/",
+      "notes": "The organizer's current homepage confirms the next Mallorca 312 OK Mobility on Saturday, April 24, 2027, with three closed-road routes and classifications."
     }
   }
 }
