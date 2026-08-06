@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:42:48",
+  "generated_at": "2026-08-06T03:52:46",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -5375,16 +5375,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-29",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 42,
+      "race_date": "2027-05-28",
+      "blockers": []
     },
     "peaks-challenge-falls-creek": {
       "slug": "peaks-challenge-falls-creek",
@@ -7544,6 +7542,7 @@
     "alpe-gran-fondo",
     "bordeaux-paris-ultra-cycling",
     "gfny-ventura",
+    "peaks-and-plains",
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "gran-fondo-san-diego",
@@ -7860,7 +7859,6 @@
     "gran-fondo-jasper",
     "letape-argentina",
     "letape-portugal",
-    "peaks-and-plains",
     "perth-hills-gran-fondo",
     "ride-across-indiana",
     "sriwijaya-ranau-gran-fondo",
@@ -7994,14 +7992,14 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 161,
+    "ready": 162,
     "content_present": 394,
     "validator_clean": 407,
     "pilot_candidates": 100,
     "by_tier_ready": {
       "1": 12,
       "2": 132,
-      "3": 17,
+      "3": 18,
       "4": 0
     }
   }

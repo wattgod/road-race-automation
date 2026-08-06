@@ -12,8 +12,8 @@
       "location": "The Kallang (formerly Singapore Sports Hub), Singapore",
       "location_badge": "The Kallang, Singapore",
       "country": "Singapore",
-      "date": "2026: May 10 (Sportive Ride; overall event May 9-10)",
-      "date_specific": "Sportive Ride: 10 May 2026, 5:00 a.m. start; overall event ran 9-10 May 2026. Next edition not yet announced.",
+      "date": "2026: May 10 (completed; next edition not announced)",
+      "date_specific": "Sportive Ride: 10 May 2026, 5:00 a.m. start; overall event ran 9-10 May 2026. The organizer says the event will return but has not announced a 2027 date.",
       "field_size": "~7,000 event-wide including virtual categories; 5,600+ in the three physical mass categories; 2,200+ specifically in the Sportive Ride",
       "start_format": null,
       "registration": "https://ocbccycle.com/rides-sportive-ride/",
@@ -213,9 +213,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://ocbccycle.com/rides-sportive-ride/",
-      "notes": "2026 edition ran 9-10 May 2026 (Sportive Ride on May 10), sold out with registration closed 27 April. Next edition date not yet announced. The 2025 physical edition was cancelled in favor of virtual-only rides due to a scheduling conflict with Singapore's general election, then returned to a physical format in 2026."
+      "verified": "2026-08-06",
+      "source": "https://ocbccycle.com/faq/",
+      "notes": "The event remains active, but the official FAQ states that all rides are noncompetitive for safety and that no prizes are awarded. It is therefore outside Roadie Labs' timed or scored race-plan scope regardless of its next date. The completed physical edition ran May 9-10, 2026; the organizer has not announced a 2027 date."
     },
     "catalog_flags": {
       "taxonomy_note": "This is a 40km, flat, noncompetitive closed-road mass-participation ride (multiple distance/format options, no overall classification on the Sportive category) rather than a standard climbing gran fondo. Flagging alongside this wave's other taxonomy calls (bordeaux-paris-ultra-cycling, korea-epic-ride) for a human review of whether format-mismatched entries like this belong in the gran_fondo tier as currently scored; discipline enum left unchanged.",
