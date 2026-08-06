@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:01:56",
+  "generated_at": "2026-08-06T03:07:23",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1535,16 +1535,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-07",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 43,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "gent-wevelgem-cyclo": {
       "slug": "gent-wevelgem-cyclo",
@@ -7534,6 +7532,7 @@
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
     "mallorca-312",
+    "galibier-challenge",
     "tartu-rattaralli",
     "nordsjorittet",
     "engadin-radmarathon",
@@ -7698,7 +7697,6 @@
     "chasing-cancellara",
     "eroica-hispania",
     "flandrien-ride",
-    "galibier-challenge",
     "gfny-grand-ballon",
     "gran-fondo-suisse",
     "granfondo-livigno-ale",
@@ -7929,6 +7927,7 @@
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
     "mallorca-312",
+    "galibier-challenge",
     "tartu-rattaralli",
     "nordsjorittet",
     "engadin-radmarathon",
@@ -8005,13 +8004,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 151,
+    "ready": 152,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 91,
+    "pilot_candidates": 92,
     "by_tier_ready": {
       "1": 12,
-      "2": 123,
+      "2": 124,
       "3": 16,
       "4": 0
     }
