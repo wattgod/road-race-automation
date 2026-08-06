@@ -295,13 +295,22 @@ def build_fueling(rd: dict) -> str:
 
 
 def load_sku_link(slug: str) -> dict:
-    """TP static-plan links for this race's SKU family (northstar P3.1).
+    """Published TP plans for this race, with family links as a fallback.
 
-    Reads data/tp-sku-map.json (race → family, from assign_tp_skus.py) and
-    data/tp-sku-links.json (family → {weeks: TP url}, filled as the TP
-    marketplace plans get published). Returns {} until links exist, so the
-    section renders nothing — safe to ship ahead of the TP builds.
+    Exact race-plan links are synced from the canonical TP database by
+    scripts/sync_tp_race_plan_links.py. The older family mapping remains as a
+    fallback for races whose dedicated suite has not been published yet.
     """
+    try:
+        race_links = json.loads(
+            (PROJECT_ROOT / "data" / "tp-race-plan-links.json").read_text()
+        )
+    except (OSError, json.JSONDecodeError):
+        race_links = {}
+    exact = race_links.get(slug, [])
+    if exact:
+        return {"mode": "race", "links": exact}
+
     try:
         sku_map = json.loads((PROJECT_ROOT / "data" / "tp-sku-map.json").read_text())
         links = json.loads((PROJECT_ROOT / "data" / "tp-sku-links.json").read_text())
@@ -311,13 +320,32 @@ def load_sku_link(slug: str) -> dict:
     if not family:
         return {}
     fam_links = {w: u for w, u in links.get(family, {}).items() if u}
-    return {"family": family, "links": fam_links} if fam_links else {}
+    return {"mode": "family", "family": family, "links": fam_links} if fam_links else {}
 
 
 def build_static_plan(rd: dict) -> str:
     sku = load_sku_link(rd["slug"])
     if not sku:
         return ""
+    if sku["mode"] == "race":
+        links = "\n    ".join(
+            f'<a href="{esc(plan["url"])}" class="rl-btn rl-btn--outline" '
+            f'data-cta="tpp_race_sku" data-plan-id="{int(plan["planId"])}" '
+            f'rel="noopener" target="_blank">{esc(plan["tier"])} &middot; '
+            f'{int(plan["weeks"])}WK &middot; ${int(plan["price"])} &rarr;</a>'
+            for plan in sku["links"]
+        )
+        return f"""<section class="rl-tpp-section" id="ready-made">
+  <h2>Choose Your {esc(rd["name"])} Plan</h2>
+  <p>These are the published, race-specific TrainingPeaks plans for
+  <strong>{esc(rd["name"])}</strong>. Pick the tier and runway that match your
+  goal; each uses this race&rsquo;s date, terrain, race-week layout, guide, and
+  pacing context.</p>
+  <div class="rl-tpp-cta-row rl-tpp-plan-grid">
+    {links}
+  </div>
+</section>"""
+
     fam_label = sku["family"].replace("-", " ").title()
     links = "\n    ".join(
         f'<a href="{esc(u)}" class="rl-btn rl-btn--outline" data-cta="tpp_static_sku" rel="noopener" target="_blank">{w}-WEEK PLAN &rarr;</a>'
@@ -487,6 +515,7 @@ def build_css() -> str:
 .rl-tpp-faq-item p { padding: 0 16px 14px; margin: 0; line-height: 1.6; }
 .rl-tpp-cta-section { background: var(--rl-color-warm-paper); border: 4px solid #000; padding: 28px; }
 .rl-tpp-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 10px; }
+.rl-tpp-plan-grid .rl-btn { flex: 1 1 220px; text-align: center; }
 .rl-tpp-guarantee { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0; }
 a { color: var(--rl-color-teal); }
 @media (max-width: 640px) { .rl-tpp-demand-grid { grid-template-columns: 1fr; } .rl-tpp-cta-row { flex-direction: column; } .rl-tpp-cta-row .rl-btn { text-align: center; } }
