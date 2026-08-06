@@ -465,8 +465,8 @@
             {
               "type": "image",
               "asset_id": "ch2-race-scatter",
-              "alt": "Scatter plot of every rated single-day road race showing distance against climbing density, with Tier 1 monuments like the Maratona dles Dolomites and Tour of Flanders labelled",
-              "caption": "Every rated single-day race in the database, plotted live at build time. The vertical spread is the story: distance tells you how long the day is, density tells you what kind of engine it takes."
+              "alt": "Scatter plot of rated races by distance and climbing density, with an optional per-rider-type envelope that dims races beyond the reader's training hours",
+              "caption": "Every rated single-day race in the database, plotted by distance and climbing density and rebuilt automatically as races are added. Pick your rider type on this page and the map redraws around your weekly hours: full-strength squares are inside your envelope, faded ones want a season you don't have yet."
             },
             {
               "type": "data_table",
@@ -705,6 +705,12 @@
             {
               "type": "prose",
               "content": "The single-A-event rule survives because it works. One goal event gives the entire season a spine: every block, every long ride, every recovery week exists in service of one date. Riders who chase three \"A\" events a season usually arrive at all three in the same state — half-built, half-rested, and wholly annoyed about it."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch2-race-calendar",
+              "alt": "Bar chart of rated races per month showing the season peaking in early summer, with a bracket marking where a 16-week build must start",
+              "caption": "Rated races per month, computed from the race database at build time. The bracket is the part nobody plans for: a 16-week build for a peak-season target starts in late winter."
             },
             {
               "type": "process_list",
@@ -1204,6 +1210,12 @@
           "title": "Mostly Easy, Occasionally Brutal",
           "blocks": [
             {
+              "type": "image",
+              "asset_id": "ch3-polarized-guess",
+              "alt": "Interactive guess: what share of elite endurance training time is easy? Answer: roughly 80 percent easy, 20 percent hard",
+              "caption": "Committing to a guess before seeing the answer measurably improves how well you remember it (Kim, Reinecke & Hullman 2017) — which is why this chart makes you pick first."
+            },
+            {
               "type": "prose",
               "content": "The distribution that builds engines looks nothing like how most people ride. Elite endurance athletes across sports spend the great majority of their training time at low intensity, with a small, sharply focused slice of genuinely hard work. Stephen Seiler's research on elite endurance athletes put a number on it — training time splits roughly 80% easy, 20% hard — and decades of results back the pattern. Most self-coached riders invert it: every ride lands in the middle, hard enough to feel productive, too easy to force top-end adaptation, too hard to recover from by tomorrow."
             },
@@ -1267,6 +1279,12 @@
             {
               "type": "prose",
               "content": "The principles are universal; the week that expresses them depends entirely on your hours. Select your rider type to see the structure that fits:"
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-phase-shift",
+              "alt": "Toggleable stacked bar chart comparing weekly training hours by intensity across a 16-week fondo build versus a crit or time trial build",
+              "caption": "The same 16 weeks under two different events. If you arrived here from the crit track, the chart already opened on your build."
             },
             {
               "type": "personalized_content",
@@ -1403,6 +1421,12 @@
             {
               "type": "prose",
               "content": "Almost every session in a road plan is one of three species — plus a fourth that only enters the rotation if your target is a criterium or another short, punchy race. Each has its own execution rules, and its own signature way of going wrong:"
+            },
+            {
+              "type": "image",
+              "asset_id": "ch4-interval-anatomy",
+              "alt": "Annotated power trace of a 4 by 4 minute VO2max session showing the target power band, the settled start, the recovery float, and rep four matching rep one",
+              "caption": "One VO2max session, annotated with the three execution rules from this chapter. The trace is what a well-executed session looks like on the power file afterward."
             },
             {
               "type": "accordion",
@@ -1988,6 +2012,12 @@
               "content": "At road speeds, most of your power is spent pushing air out of the way — and a rider in front of you has already done it. Sitting in a good draft cuts your energy cost by a quarter to a third at pace, more in a big group. There is no training adaptation, no equipment purchase, and no diet that returns anything close. The draft is the single largest performance lever in the sport, and it's sitting there, free, behind the person ahead of you."
             },
             {
+              "type": "image",
+              "asset_id": "ch6-draft-savings",
+              "alt": "Bar chart of aerodynamic drag by pack position: solo 100 percent, second wheel about 73 percent, belly of the peloton 5 to 10 percent",
+              "caption": "Aerodynamic drag by position, from Blocken et al.'s 2018 CFD and wind-tunnel study of a 121-rider peloton. The mid-pack number is the most surprising figure in the sport."
+            },
+            {
               "type": "prose",
               "content": "Using it well is a skill with specific mechanics. **Distance:** 30-60cm off the wheel — close enough that the shelter is real, far enough that a surprise doesn't become a crash. **Eyes:** look through the rider ahead to the front of the group; their body will telegraph what the road is about to do, and you'll respond a half-second earlier and a lot smoother. **Speed matching:** soft-pedal and feather the brakes while still pedaling; every hard brake in a pack sends a shockwave backwards that arrives at the tenth rider as a slammed stop. And mind the wind angle — the shelter sits directly behind only in a dead headwind. Any crosswind slides it diagonally, and finding it is the difference between resting and merely following."
             },
@@ -2338,6 +2368,12 @@
               "content": "The shape of a good taper is settled science: Bosquet and colleagues' 2007 meta-analysis found the biggest performance gains came from cutting training volume by 41-60% over about two weeks while keeping intensity and frequency intact — you ride less, not easier. Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
             },
             {
+              "type": "image",
+              "asset_id": "ch7-taper-curve",
+              "alt": "Line chart of the final three weeks before a race: fitness declines one to two percent, fatigue drops thirty to forty percent, and form rises as a result",
+              "caption": "The taper's trade, drawn. Fitness (black) barely moves; fatigue (dashed) collapses; form (red) is the difference between them arriving on race day."
+            },
+            {
               "type": "prose",
               "content": "Racing something short? The taper shrinks with the event. A crit or short TT doesn't need a week of ceremony — you can't lose meaningful fitness in seven days and you weren't carrying fondo-scale fatigue to begin with. Keep the week nearly normal, drop the last hard session two or three days out, and ride openers the day before: a handful of short surges to remind the legs what maximal feels like. The one thing that grows instead of shrinking is the warm-up — a crit starts at full gas and a TT starts at threshold, so twenty to thirty minutes with real efforts in it isn't preparation for the race, it's the first act of it. Fondo riders roll to the line warm; crit riders arrive already sweating."
             }
@@ -2659,6 +2695,12 @@
             {
               "type": "prose",
               "content": "Then build forward. A short, deliberate off-season, a fresh base, and a new A-event give the next plan a target. Compounding small, repeatable work is how riders get genuinely fast — season over season, not week over week."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch8-season-arc",
+              "alt": "A full season's form curve with race markers at two summer peaks and an annotated off-season dip in November",
+              "caption": "A season as a shape: two genuine peaks, a deliberate valley. The dip is not lost fitness — it is what makes next year's curve start higher than this year's did."
             },
             {
               "type": "timeline",
