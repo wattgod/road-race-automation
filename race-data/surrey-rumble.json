@@ -5,19 +5,19 @@
     "display_name": "Surrey Rumble",
     "tagline": "",
     "vitals": {
-      "distance_km": 128.7,
+      "distance_km": 129.0,
       "distance_mi": 80.0,
       "elevation_m": 1270,
       "elevation_ft": 4167.0,
       "location": "Cobham, Surrey, England",
       "location_badge": "Cobham, England",
       "country": "England",
-      "date": "2026: March 22",
-      "date_specific": "2026: Sunday, March 22 (entries closed 17 March 2026) — corrects a previously-listed May 17 date with no primary-source support",
-      "field_size": "~200 long-route + ~100 short-route places (250+ total entrants in 2026)",
-      "start_format": "Mass-start club sportive, two route options",
-      "registration": null,
-      "entry_fee": "GBP 22 (before 31 Dec 2025), GBP 26 (after), GBP 30 on the day if available",
+      "date": "2027: March 14",
+      "date_specific": "2027: March 14 (Sunday); rolling departures from 07:45 to 09:15",
+      "field_size": "300 estimated places across both routes; the organizer reports 250+ total entrants in 2026",
+      "start_format": "Rolling departures for a British Cycling-registered noncompetitive sportive",
+      "registration": "Online through British Cycling",
+      "entry_fee": "GBP 21 plus GBP 1 application fee online; GBP 30 on the day if available",
       "feed_zones": "2",
       "cutoff_time": "15:00 (course closes)",
       "lat": null,
@@ -25,12 +25,12 @@
       "route_options": [
         {
           "name": "Long",
-          "distance_km": 128.7,
+        "distance_km": 129.0,
           "distance_mi": 80.0
         },
         {
           "name": "Short",
-          "distance_km": 96.6,
+        "distance_km": 97.0,
           "distance_mi": 60.0
         }
       ]
@@ -148,9 +148,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://www.britishcycling.org.uk/events/details/318031/Surrey-Rumble",
-      "notes": "Confirmed genuine club-run sportive in Cobham, Surrey, ENGLAND (not Surrey, British Columbia). DATE CORRECTED: 2026 edition confirmed for Sunday 22 March 2026 (entries closed 17 March) per both the organizer (Twickenham CC) and British Cycling's official listing — the previously-listed 17 May date had no primary-source support. ELEVATION CORRECTED: 2,405m was not supported by the organizer and is corrected to ~1,270m, an estimate based on older public GPS route traces (organizer does not publish an official elevation figure, and these traces may not reflect the current/2026 route exactly). Per a 2027 British Cycling listing, the 2026 event drew 250+ entrants across both routes. No cancellation signal found in reviewed sources; a 2027 British Cycling listing is already live."
+      "verified": "2026-08-06",
+      "source": "https://www.britishcycling.org.uk/events/details/333871/Surrey-Rumble",
+      "notes": "British Cycling confirms a March 14, 2027 edition with 129- and 97-kilometer routes, rolling departures, electronic timing, and online entry. The same official listing explicitly classifies the event as a noncompetitive cycle sportive. Recorded individual times do not create a competitive classification, placing, or podium, so Surrey Rumble is outside Roadie Labs race-plan scope. The roughly 1,270-meter climbing value remains an older GPS-route estimate, not an organizer-certified figure."
     }
   }
 }

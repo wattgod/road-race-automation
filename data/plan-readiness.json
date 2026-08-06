@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T04:02:54",
+  "generated_at": "2026-08-06T04:04:58",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -6399,16 +6399,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 31,
+      "race_date": "2027-03-14",
+      "blockers": []
     },
     "suzuka-endurance-road": {
       "slug": "suzuka-endurance-road",
@@ -7560,6 +7558,7 @@
     "granfondo-colnago",
     "cape-town-cycle-tour",
     "epic-gran-canaria",
+    "surrey-rumble",
     "gfny-miami",
     "cadel-evans-great-ocean-road-ride",
     "gfny-jose-ignacio",
@@ -7851,7 +7850,6 @@
     "letape-greece",
     "rbc-gran-fondo-banff",
     "superior-morgul-road-race",
-    "surrey-rumble",
     "tour-durban",
     "tour-of-cambridgeshire",
     "turkcell-granfondo-izmir",
@@ -7992,14 +7990,14 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 162,
+    "ready": 163,
     "content_present": 394,
     "validator_clean": 407,
     "pilot_candidates": 100,
     "by_tier_ready": {
       "1": 12,
       "2": 132,
-      "3": 18,
+      "3": 19,
       "4": 0
     }
   }
