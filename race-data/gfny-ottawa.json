@@ -1,0 +1,164 @@
+{
+  "race": {
+    "name": "GFNY Ottawa",
+    "slug": "gfny-ottawa",
+    "display_name": "GFNY Ottawa",
+    "tagline": "A fully closed 118-kilometer race where Kanata rollers, technical turns, and crosswinds make a flat profile tactically expensive.",
+    "vitals": {
+      "distance_km": 118.3,
+      "distance_mi": 73.5,
+      "elevation_m": 784,
+      "elevation_ft": 2572,
+      "location": "Ottawa, Ontario, Canada",
+      "location_badge": "OTTAWA, ONTARIO, CANADA",
+      "country": "Canada",
+      "date": "September annually",
+      "date_specific": "2026: September 13 (Sunday)",
+      "field_size": "Inaugural 2026 edition",
+      "start_format": "Mass-start competitive long course with chip timing on fully closed roads",
+      "registration": "Online through the official GFNY race site",
+      "entry_fee": "See official registration",
+      "feed_zones": "Four official aid stations on the long route",
+      "cutoff_time": "See current race guide and official course rules",
+      "route_options": [
+        "Competitive long route: 118.3 km / 784 m+",
+        "Recreational medium route: 66 km"
+      ]
+    },
+    "climate": {
+      "primary": "Early-fall wind on exposed rural roads",
+      "description": "The official course description warns that proximity to the river makes crosswinds likely. Riders move quickly from an urban opening to wooded rural roads, so exposure and temperature can change across the lap.",
+      "challenges": [
+        "Crosswinds near Constance Lake",
+        "Open false-flat roads",
+        "Cool-to-warm September conditions",
+        "High speed on exposed sections"
+      ]
+    },
+    "terrain": {
+      "primary": "Fast two-lap rolling course",
+      "surface": "Paved urban and rural roads around the Kanata North tech hub, fully closed to vehicle traffic for the race.",
+      "technical_rating": 3,
+      "features": [
+        "A flat, fast opening with sharp technical turns",
+        "Seven kilometers of false flat on Marchurst Road",
+        "A three-kilometer rise gaining 50 meters at up to 4.5 percent",
+        "A second long-course lap after roughly 60 kilometers"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 4,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Canada's first GFNY pairs a credible fully closed course with championship positioning and strong city access. Inaugural execution and modest climbing cap the score."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "Marchurst Road false flat",
+        "Three-kilometer northern rise",
+        "Fifth Line Road ridge"
+      ],
+      "profile_type": "Fast two-lap rolling course",
+      "king_of_mountain": "There is no major mountain; the selection comes from repeated false flats, crosswinds, and the second lap's accumulated speed.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "Ottawa's long race covers 118.3 kilometers and 784 meters of climbing on a fully closed course. The route mixes technical early turns, long false-flat roads, a short northern climb, and two laps, making group economy and repeatable power more important than pure climbing speed.",
+      "signature_challenge": "Beginning the second lap after roughly 60 kilometers without having overspent on the fast first circuit.",
+      "suffering_zones": [
+        "Kanata technical opening",
+        "Marchurst Road false flat",
+        "Northern turnaround climb",
+        "Constance Lake crosswinds",
+        "Second lap"
+      ]
+    },
+    "logistics": {
+      "airport": "Ottawa International Airport (YOW) is the primary gateway for the host city.",
+      "lodging_strategy": "Stay in Kanata near the Richcraft Recreation Complex or along a direct route to the race hub.",
+      "transport": "Use official race-week instructions for packet pickup, road closures, parking, and start access.",
+      "food": "Kanata and central Ottawa have abundant restaurants and groceries; practice taking fuel while riding in a fast group before race week.",
+      "official_site": "https://ottawa.gfny.com/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "GFNY announced its first Canadian race in April 2026, using a fully closed course based at the Richcraft Recreation Complex in Kanata.",
+      "notable_moments": [
+        "2026: GFNY announces its first race in Canada",
+        "2026: Inaugural edition scheduled for September 13"
+      ],
+      "reputation": "A high-potential inaugural race with unusually strong road closure support but no execution history yet."
+    },
+    "biased_opinion": {
+      "verdict": "The Closed-Road Speed Test",
+      "summary": "Ottawa looks easy if you read only the elevation total. That misses the point. The combination of full road closure, technical turns, false flats, crosswinds, and a second lap encourages speed that can turn small positioning mistakes into a very long chase.",
+      "strengths": [
+        "Fully closed race course",
+        "Clear fast-course tactical demands",
+        "Accessible major-city logistics",
+        "Competitive long-route format"
+      ],
+      "weaknesses": [
+        "Inaugural operations are unproven",
+        "Limited major climbing",
+        "Wind can dominate the race character"
+      ],
+      "bottom_line": "Race Ottawa if you want a fast, tactical fondo where efficiency and position matter every bit as much as watts per kilogram."
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "A fully closed 118-kilometer race where Kanata rollers, technical turns, and crosswinds make a flat profile tactically expensive.",
+      "should_you_race": "Race Ottawa if you want a fast, tactical fondo where efficiency and position matter every bit as much as watts per kilogram.",
+      "alternatives": "GFNY Pittsburgh for more climbing, or GFNY Maryland Cambridge for a longer established Mid-Atlantic race."
+    },
+    "citations": [
+      {
+        "url": "https://ottawa.gfny.com/",
+        "category": "official",
+        "label": "GFNY Ottawa official site and course"
+      },
+      {
+        "url": "https://gfny.com/gfny-is-coming-to-canada/",
+        "category": "official",
+        "label": "GFNY official announcement, date, distance, and elevation"
+      },
+      {
+        "url": "https://gfny.com/race-finder/",
+        "category": "official",
+        "label": "GFNY official 2026 calendar"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-05",
+      "source": "https://gfny.com/race-finder/"
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-05",
+      "race_date": "2026-09-13",
+      "facts_scope": "Date, competitive status, road closure, long-course distance and elevation, and named course features verified against first-party GFNY sources."
+    }
+  }
+}

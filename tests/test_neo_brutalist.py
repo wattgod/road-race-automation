@@ -286,6 +286,17 @@ class TestCountryDetection:
     def test_taiwan(self):
         assert detect_country("Hualien to Wuling Pass, Taiwan") == "TW"
 
+    @pytest.mark.parametrize(
+        ("location", "country"),
+        [
+            ("San Luis Potosí, Mexico", "MX"),
+            ("Pérez Zeledón, Costa Rica", "CR"),
+            ("Colonia del Sacramento, Uruguay", "UY"),
+        ],
+    )
+    def test_latin_american_countries(self, location, country):
+        assert detect_country(location) == country
+
     def test_parenthetical_state(self):
         assert detect_country("Pisgah, North Carolina (Pisgah National Forest)") == "US"
 

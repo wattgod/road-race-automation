@@ -876,14 +876,14 @@
   {
     "name": "Taiwan KOM Challenge",
     "slug": "taiwan-kom-challenge",
-    "location": "Hualien (Qixingtan Beach) to Wuling Pass, Taiwan",
+    "location": "Hualien to Wuling Pass, Taiwan",
     "country": "Taiwan",
     "region": "Asia",
-    "month": "October",
+    "month": "November",
     "distance_km": 105.0,
     "distance_mi": 65.2,
-    "elevation_m": 3426,
-    "elevation_ft": 11239.0,
+    "elevation_m": 3400,
+    "elevation_ft": 11155.0,
     "tier": 2,
     "overall_score": 80,
     "scores": {
@@ -903,15 +903,15 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "105 kilometers from the Pacific Ocean to 3,275 meters. Through Taroko Gorge's marble cathedrals to the roof of Taiwan. Asia's most iconic hill climb — where WorldTour pros and amateur dreamers start together at sea level and finish above the clouds.",
+    "tagline": "105 kilometers from Hualien through Taroko Gorge to Wuling Pass at 3,275 meters.",
     "has_profile": true,
     "profile_url": "/race/taiwan-kom-challenge/",
     "discipline": "gran_fondo",
     "lat": 24.0295,
     "lng": 121.6043,
     "route_options": [
-      "Taiwan KOM Challenge: 105 km (65 mi) from Qixingtan Beach to Wuling Pass summit at 3,275m — the classic route",
-      "2025 alternate: 203 km Classic Euro-style road race (used when traditional Taroko route is unavailable)"
+      "Taiwan KOM Challenge: 105 km (65.2 mi) from Hualien through Taroko Gorge to Wuling Pass at 3,275 m",
+      "Two-day 2026 event also includes a Hualien individual time-trial prologue"
     ]
   },
   {
@@ -1615,6 +1615,47 @@
     "route_options": [
       "Granfondo: ~135 km (84 mi), ~4,000 m gain — the full event with Mortirolo, Gavia, and Tonale",
       "Mediofondo: ~80 km shorter route — Gavia and Tonale without the Mortirolo"
+    ]
+  },
+  {
+    "name": "GFNY San Luis Potosí",
+    "slug": "gfny-san-luis-potosi",
+    "location": "San Luis Potosí, Mexico",
+    "country": "Mexico",
+    "region": "North America",
+    "month": "December",
+    "distance_km": 154.3,
+    "distance_mi": 95.9,
+    "elevation_m": 2237,
+    "elevation_ft": 7339,
+    "tier": 2,
+    "overall_score": 76,
+    "scores": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 4,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "Two high-altitude laps, 154 kilometers, and 2,237 meters of climbing built around a 13-kilometer Pozuelos ascent.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-san-luis-potosi/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 154.3 km / 2237 m+",
+      "Recreational medium route: 77.1 km / 1122 m+"
     ]
   },
   {
@@ -3989,7 +4030,7 @@
     "slug": "la-ruta-de-los-conquistadores",
     "location": "Jaco to Turrialba area, Costa Rica (2026 total distance/elevation not published — figures below are historical, vary by edition)",
     "country": "Costa Rica",
-    "region": "Other",
+    "region": "North America",
     "month": "October",
     "distance_km": 260.7,
     "distance_mi": 162.0,
@@ -4027,7 +4068,7 @@
     "slug": "letape-costa-rica",
     "location": "Cartago, Cartago Province, Costa Rica",
     "country": "Costa Rica",
-    "region": "Other",
+    "region": "North America",
     "month": "August",
     "distance_km": 130.0,
     "distance_mi": 80.8,
@@ -4821,6 +4862,47 @@
       "Standard 9-day loop",
       "8-day itinerary",
       "4-extremities themed routes"
+    ]
+  },
+  {
+    "name": "GFNY Pérez Zeledón",
+    "slug": "gfny-perez-zeledon",
+    "location": "Pérez Zeledón, San José Province, Costa Rica",
+    "country": "Costa Rica",
+    "region": "North America",
+    "month": "October",
+    "distance_km": 115.4,
+    "distance_mi": 71.7,
+    "elevation_m": 1903,
+    "elevation_ft": 6243,
+    "tier": 2,
+    "overall_score": 71,
+    "scores": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 4,
+      "climate_risk": 4,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "A fast 115-kilometer Costa Rican course that saves 1,903 meters of climbing and an eight-kilometer ascent for the back half.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-perez-zeledon/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 115.4 km / 1903 m+",
+      "Recreational medium route: see official race site"
     ]
   },
   {
@@ -6290,12 +6372,12 @@
     ]
   },
   {
-    "name": "L'Etape Taiwan by Tour de France",
+    "name": "L'Étape Sun Moon Lake by Tour de France",
     "slug": "letape-taiwan",
     "location": "Sun Moon Lake, Nantou County, Taiwan",
     "country": "Taiwan",
     "region": "Asia",
-    "month": "",
+    "month": "October",
     "distance_km": 104.0,
     "distance_mi": 64.6,
     "elevation_m": 1500,
@@ -6319,15 +6401,15 @@
       "expenses": 3,
       "cultural_impact": 4
     },
-    "tagline": "104km of Taiwanese lake paradise with 1,500m pain—Tour de France vibes in Asia!",
+    "tagline": "104 kilometers and 1,500 meters of climbing around Taiwan's Sun Moon Lake.",
     "has_profile": true,
     "profile_url": "/race/letape-taiwan/",
     "discipline": "gran_fondo",
     "lat": 23.864,
     "lng": 120.903,
     "route_options": [
-      "104km: 64.6mi, 4,921ft — serious climbs and pro demands",
-      "29km: 18mi, 2,145ft — scenic lake shores via Ita Thao Pier"
+      "Challenge route: 104 km and 1,500 m of climbing",
+      "Recreational route: 29 km"
     ]
   },
   {
@@ -7021,7 +7103,7 @@
     "slug": "gfny-punta-del-este",
     "location": "Punta del Este, Maldonado Department, Uruguay",
     "country": "Uruguay",
-    "region": "Other",
+    "region": "South America",
     "month": "March",
     "distance_km": 146.0,
     "distance_mi": 90.7,
@@ -8317,6 +8399,47 @@
     ]
   },
   {
+    "name": "GFNY Colonia",
+    "slug": "gfny-colonia",
+    "location": "Colonia del Sacramento, Uruguay",
+    "country": "Uruguay",
+    "region": "South America",
+    "month": "September",
+    "distance_km": 125.0,
+    "distance_mi": 77.7,
+    "elevation_m": 900,
+    "elevation_ft": 2953,
+    "tier": 2,
+    "overall_score": 67,
+    "scores": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "One hundred twenty-five rolling kilometers where the Río San Juan rise and Uruguay River wind decide who still has a group.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-colonia/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 125 km / 900 m+",
+      "Recreational medium route: 87 km / 670 m+"
+    ]
+  },
+  {
     "name": "GFNY Philippines",
     "slug": "gfny-philippines",
     "location": "Iloilo City, Philippines (last held; earlier 2019 edition was in Bohol)",
@@ -9353,7 +9476,7 @@
     "slug": "crc-506-gran-fondo-costa-rica",
     "location": "Jacó, Garabito, Puntarenas Province, Costa Rica",
     "country": "Costa Rica",
-    "region": "Other",
+    "region": "North America",
     "month": "June",
     "distance_km": 141.0,
     "distance_mi": 87.6,
@@ -10470,7 +10593,7 @@
     "slug": "gfny-jose-ignacio",
     "location": "Pueblo Garzón, Maldonado Department, Uruguay",
     "country": "Uruguay",
-    "region": "Other",
+    "region": "South America",
     "month": "January",
     "distance_km": 129.6,
     "distance_mi": 80.5,
@@ -10504,6 +10627,47 @@
     "route_options": [
       "Competitive long route: 129.6 km / 954 m+",
       "Recreational medium route: see official race site"
+    ]
+  },
+  {
+    "name": "GFNY Ottawa",
+    "slug": "gfny-ottawa",
+    "location": "Ottawa, Ontario, Canada",
+    "country": "Canada",
+    "region": "North America",
+    "month": "September",
+    "distance_km": 118.3,
+    "distance_mi": 73.5,
+    "elevation_m": 784,
+    "elevation_ft": 2572,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 4,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 4
+    },
+    "tagline": "A fully closed 118-kilometer race where Kanata rollers, technical turns, and crosswinds make a flat profile tactically expensive.",
+    "has_profile": true,
+    "profile_url": "/race/gfny-ottawa/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Competitive long route: 118.3 km / 784 m+",
+      "Recreational medium route: 66 km"
     ]
   },
   {
@@ -15503,7 +15667,7 @@
     "slug": "gran-fondo-montevideo",
     "location": "Montevideo and Canelones Department, Uruguay",
     "country": "Uruguay",
-    "region": "Other",
+    "region": "South America",
     "month": "September",
     "distance_km": 138.0,
     "distance_mi": 85.8,

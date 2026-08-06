@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T20:26:14",
+  "generated_at": "2026-08-05T21:02:52",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1771,6 +1771,23 @@
         "eligibility: defunct"
       ]
     },
+    "gfny-colonia": {
+      "slug": "gfny-colonia",
+      "tier": 2,
+      "score": 67,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 4,
+      "race_date": "2026-09-06",
+      "blockers": []
+    },
     "gfny-cozumel": {
       "slug": "gfny-cozumel",
       "tier": 3,
@@ -1988,6 +2005,23 @@
       "race_date": "2026-08-23",
       "blockers": []
     },
+    "gfny-ottawa": {
+      "slug": "gfny-ottawa",
+      "tier": 2,
+      "score": 64,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 5,
+      "race_date": "2026-09-13",
+      "blockers": []
+    },
     "gfny-paracas": {
       "slug": "gfny-paracas",
       "tier": 3,
@@ -2007,6 +2041,23 @@
         "no parsed future date",
         "eligibility: defunct"
       ]
+    },
+    "gfny-perez-zeledon": {
+      "slug": "gfny-perez-zeledon",
+      "tier": 2,
+      "score": 71,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 9,
+      "race_date": "2026-10-11",
+      "blockers": []
     },
     "gfny-philippines": {
       "slug": "gfny-philippines",
@@ -2119,6 +2170,23 @@
         "no parsed future date",
         "eligibility unverified (unknown)"
       ]
+    },
+    "gfny-san-luis-potosi": {
+      "slug": "gfny-san-luis-potosi",
+      "tier": 2,
+      "score": 76,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 17,
+      "race_date": "2026-12-06",
+      "blockers": []
     },
     "gfny-toscana": {
       "slug": "gfny-toscana",
@@ -7491,6 +7559,7 @@
     "spinneys-dubai-92",
     "gfny-jose-ignacio",
     "tour-of-nilgiris",
+    "gfny-san-luis-potosi",
     "gran-fondo-hainan",
     "gran-fondo-eilat",
     "pedal-imua",
@@ -7521,6 +7590,7 @@
     "leroica",
     "veloturk-gran-fondo-cesme",
     "gfny-florida-hardee",
+    "gfny-perez-zeledon",
     "around-the-bay-in-a-day",
     "gran-fondo-zadar",
     "gran-fondo-il-lombardia",
@@ -7556,6 +7626,7 @@
     "letape-costa-rica",
     "crc-506-gran-fondo-costa-rica",
     "gfny-dominican-republic",
+    "gfny-ottawa",
     "rbc-granfondo-whistler",
     "alpenbrevet",
     "ride-across-britain",
@@ -7563,6 +7634,7 @@
     "amys-gran-fondo",
     "gran-fondo-montevideo",
     "eroica-dolomiti",
+    "gfny-colonia",
     "letape-slovenia",
     "otztaler-radmarathon",
     "birkebeinerrittet-road",
@@ -7870,6 +7942,7 @@
     "cadel-evans-great-ocean-road-ride",
     "spinneys-dubai-92",
     "tour-of-nilgiris",
+    "gfny-san-luis-potosi",
     "gran-fondo-hainan",
     "gran-fondo-eilat",
     "pedal-imua",
@@ -7897,6 +7970,7 @@
     "gran-fondo-hincapie",
     "leroica",
     "veloturk-gran-fondo-cesme",
+    "gfny-perez-zeledon",
     "around-the-bay-in-a-day",
     "gran-fondo-zadar",
     "gran-fondo-il-lombardia",
@@ -7910,14 +7984,14 @@
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 401,
-    "ready": 133,
-    "content_present": 385,
-    "validator_clean": 401,
-    "pilot_candidates": 80,
+    "total": 405,
+    "ready": 137,
+    "content_present": 389,
+    "validator_clean": 405,
+    "pilot_candidates": 82,
     "by_tier_ready": {
       "1": 11,
-      "2": 110,
+      "2": 114,
       "3": 12,
       "4": 0
     }

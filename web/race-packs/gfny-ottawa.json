@@ -1,0 +1,136 @@
+{
+  "slug": "gfny-ottawa",
+  "race_name": "GFNY Ottawa",
+  "distance_mi": 73.5,
+  "demands": {
+    "durability": 2,
+    "climbing": 4,
+    "vo2_power": 6,
+    "threshold": 5,
+    "technical": 4,
+    "heat_resilience": 0,
+    "altitude": 2,
+    "race_specificity": 9
+  },
+  "top_categories": [
+    {
+      "category": "Race_Simulation",
+      "score": 100,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic GFNY Ottawa's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 91,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "GFNY Ottawa's fast two-lap rolling course rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 73 miles."
+    },
+    {
+      "category": "VO2max",
+      "score": 70,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "When someone attacks on fast two-lap rolling course, you have 10 seconds to respond or you're off the back. This builds that response."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 64,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "GFNY Ottawa's fast two-lap rolling course rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Durability",
+      "score": 59,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "73 miles on fast two-lap rolling course burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "Over_Under",
+      "score": 53,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At GFNY Ottawa, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 52,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GFNY Ottawa. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "G_Spot",
+      "score": 50,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY Ottawa. Train it until it feels boring."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 48,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on fast two-lap rolling course. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+    },
+    {
+      "category": "Blended",
+      "score": 36,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what GFNY Ottawa's fast two-lap rolling course actually does to you."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 36,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on fast two-lap rolling course demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 30,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Use training to rehearse an eating and drinking plan for GFNY Ottawa's 73 miles. Start early, use products you tolerate, and carry enough between the organizer\u2019s confirmed resupply points.",
+    "terrain": "The course profile at GFNY Ottawa rewards specific practice. Include regular rides on fast two-lap rolling course to build confidence."
+  },
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Road Specific, and VO2max to prepare you for 73 miles of fast two-lap rolling course in Ottawa, Ontario, Canada.",
+  "generated_at": "2026-08-05"
+}
