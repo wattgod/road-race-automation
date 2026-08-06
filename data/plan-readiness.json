@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T02:28:43",
+  "generated_at": "2026-08-06T02:43:35",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -5713,16 +5713,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-02",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 91,
+      "race_date": "2028-05-06",
+      "blockers": []
     },
     "race-around-poland": {
       "slug": "race-around-poland",
@@ -7519,6 +7517,7 @@
     }
   },
   "ranked_queue": [
+    "race-around-netherlands",
     "paris-brest-paris",
     "letape-du-tour",
     "maratona-dles-dolomites",
@@ -7804,7 +7803,6 @@
     "gfny-uppsala",
     "granfondo-alpe-adria",
     "majka-gran-fondo",
-    "race-around-netherlands",
     "rad-am-ring",
     "redlands-bicycle-classic",
     "vermont-gran-fondo",
@@ -7915,6 +7913,7 @@
     "letape-indonesia"
   ],
   "pilot_candidates": [
+    "race-around-netherlands",
     "paris-brest-paris",
     "letape-du-tour",
     "maratona-dles-dolomites",
@@ -8007,13 +8006,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 149,
+    "ready": 150,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 89,
+    "pilot_candidates": 90,
     "by_tier_ready": {
       "1": 12,
-      "2": 121,
+      "2": 122,
       "3": 16,
       "4": 0
     }
