@@ -4,10 +4,30 @@
   "meta_description": "A complete road racing training guide — from building your aerobic engine to pack tactics, fueling, and race-week execution. Written by coaches who race.",
   "personalization": {
     "rider_types": [
-      {"id": "autobus", "label": "Autobus", "hours": "0-5 hrs/week", "default_ftp": 150},
-      {"id": "finisher", "label": "Finisher", "hours": "5-12 hrs/week", "default_ftp": 200},
-      {"id": "sharp-end", "label": "Sharp End", "hours": "12-18 hrs/week", "default_ftp": 260},
-      {"id": "racer", "label": "Racer", "hours": "18+ hrs/week", "default_ftp": 320}
+      {
+        "id": "autobus",
+        "label": "Autobus",
+        "hours": "0-5 hrs/week",
+        "default_ftp": 150
+      },
+      {
+        "id": "finisher",
+        "label": "Finisher",
+        "hours": "5-12 hrs/week",
+        "default_ftp": 200
+      },
+      {
+        "id": "sharp-end",
+        "label": "Sharp End",
+        "hours": "12-18 hrs/week",
+        "default_ftp": 260
+      },
+      {
+        "id": "racer",
+        "label": "Racer",
+        "hours": "18+ hrs/week",
+        "default_ftp": 320
+      }
     ],
     "storage_key": "rl_guide_rider_type"
   },
@@ -82,16 +102,61 @@
             {
               "type": "data_table",
               "caption": "The Event Landscape",
-              "headers": ["Event", "What it is", "Typical shape", "What it rewards"],
+              "headers": [
+                "Event",
+                "What it is",
+                "Typical shape",
+                "What it rewards"
+              ],
               "rows": [
-                ["Gran fondo", "Mass-start, chip-timed, usually with serious climbing. Raced hard at the front, ridden everywhere else", "100-200 km, 1,500-5,000+ m of climbing", "Power-to-weight, pacing discipline, pack craft"],
-                ["Sportive", "The British and northern-European cousin — completion-focused, often segment-timed rather than raced gun-to-line", "80-250 km, terrain varies wildly", "Endurance, self-sufficiency, weather tolerance"],
-                ["Century", "100 miles, usually untimed, usually (not always) flatter. The classic North American entry point", "160 km", "Aerobic durability, group riding, fueling"],
-                ["Hillclimb", "One climb, all-out, against the clock. The purest fitness test in cycling", "20 minutes to 3+ hours of uninterrupted ascent", "W/kg, then more W/kg"],
-                ["Criterium", "Short-circuit racing on a closed 1-2 km loop: 30-90 minutes of corners, surges, and a sprint. Licensed racing's front door", "20-60 km, lap after lap", "Anaerobic punch, cornering, positioning — intensity over volume"],
-                ["Time trial", "You, the bike, and the clock. No draft, no pack, no hiding — the race of truth", "15-40 km alone, occasionally longer", "Threshold power, aero position, ruthless pacing"],
-                ["Multi-stage", "A week of back-to-back timed days. A fondo every morning, with yesterday in your legs", "300-800+ km across 3-7 stages", "Recovery between stages, relentless consistency"],
-                ["Randonnée / audax", "Self-supported long distance with time limits. Officially not a race; ask a randonneur about their finish time anyway", "200-1,200+ km", "Sleep management, logistics, stubbornness"]
+                [
+                  "Gran fondo",
+                  "Mass-start, chip-timed, usually with serious climbing. Raced hard at the front, ridden everywhere else",
+                  "100-200 km, 1,500-5,000+ m of climbing",
+                  "Power-to-weight, pacing discipline, pack craft"
+                ],
+                [
+                  "Sportive",
+                  "The British and northern-European cousin — completion-focused, often segment-timed rather than raced gun-to-line",
+                  "80-250 km, terrain varies wildly",
+                  "Endurance, self-sufficiency, weather tolerance"
+                ],
+                [
+                  "Century",
+                  "100 miles, usually untimed, usually (not always) flatter. The classic North American entry point",
+                  "160 km",
+                  "Aerobic durability, group riding, fueling"
+                ],
+                [
+                  "Hillclimb",
+                  "One climb, all-out, against the clock. The purest fitness test in cycling",
+                  "20 minutes to 3+ hours of uninterrupted ascent",
+                  "W/kg, then more W/kg"
+                ],
+                [
+                  "Criterium",
+                  "Short-circuit racing on a closed 1-2 km loop: 30-90 minutes of corners, surges, and a sprint. Licensed racing's front door",
+                  "20-60 km, lap after lap",
+                  "Anaerobic punch, cornering, positioning — intensity over volume"
+                ],
+                [
+                  "Time trial",
+                  "You, the bike, and the clock. No draft, no pack, no hiding — the race of truth",
+                  "15-40 km alone, occasionally longer",
+                  "Threshold power, aero position, ruthless pacing"
+                ],
+                [
+                  "Multi-stage",
+                  "A week of back-to-back timed days. A fondo every morning, with yesterday in your legs",
+                  "300-800+ km across 3-7 stages",
+                  "Recovery between stages, relentless consistency"
+                ],
+                [
+                  "Randonnée / audax",
+                  "Self-supported long distance with time limits. Officially not a race; ask a randonneur about their finish time anyway",
+                  "200-1,200+ km",
+                  "Sleep management, logistics, stubbornness"
+                ]
               ]
             },
             {
@@ -234,15 +299,55 @@
             {
               "type": "data_table",
               "caption": "Road Gear Priorities",
-              "headers": ["Component", "Minimum viable", "Why", "Skip until later"],
+              "headers": [
+                "Component",
+                "Minimum viable",
+                "Why",
+                "Skip until later"
+              ],
               "rows": [
-                ["Frame", "Any road bike that fits you and shifts reliably", "Fit and reliability decide your day; frame material mostly decides your invoice", "Superbikes, integrated cockpits, paint-deep upgrades"],
-                ["Contact points", "A tested saddle, bars you can hold all day, stiff-enough shoes", "Six hours on the wrong saddle ruins any frame ever made", "Carbon finishing kit"],
-                ["Gearing", "Compact chainrings with a wide cassette — 32t or bigger for mountain courses", "Grinding a col at 50 rpm breaks legs; spinning saves them", "Boutique cassettes, marginal-gram cranks"],
-                ["Tires", "Quality 28-30mm rubber, pressure matched to your weight and the road", "The cheapest real speed and comfort on the entire bike", "Nothing — good tires are never a 'later'"],
-                ["Wheels", "True, reliable, brakes that work in the rain", "Reliability outranks rim depth until you're racing for position", "Deep carbon — fitness first, then aero"],
-                ["Power meter", "Optional; single-sided is fine", "Turns Chapter 3's zones from theory into targets", "Dual-sided precision upgrades"],
-                ["Head unit + HR strap", "Anything that shows power, heart rate, and the route", "The cross-check that keeps hot days honest (Chapter 4)", "Radar, touchscreens, maps of places you aren't"]
+                [
+                  "Frame",
+                  "Any road bike that fits you and shifts reliably",
+                  "Fit and reliability decide your day; frame material mostly decides your invoice",
+                  "Superbikes, integrated cockpits, paint-deep upgrades"
+                ],
+                [
+                  "Contact points",
+                  "A tested saddle, bars you can hold all day, stiff-enough shoes",
+                  "Six hours on the wrong saddle ruins any frame ever made",
+                  "Carbon finishing kit"
+                ],
+                [
+                  "Gearing",
+                  "Compact chainrings with a wide cassette — 32t or bigger for mountain courses",
+                  "Grinding a col at 50 rpm breaks legs; spinning saves them",
+                  "Boutique cassettes, marginal-gram cranks"
+                ],
+                [
+                  "Tires",
+                  "Quality 28-30mm rubber, pressure matched to your weight and the road",
+                  "The cheapest real speed and comfort on the entire bike",
+                  "Nothing — good tires are never a 'later'"
+                ],
+                [
+                  "Wheels",
+                  "True, reliable, brakes that work in the rain",
+                  "Reliability outranks rim depth until you're racing for position",
+                  "Deep carbon — fitness first, then aero"
+                ],
+                [
+                  "Power meter",
+                  "Optional; single-sided is fine",
+                  "Turns Chapter 3's zones from theory into targets",
+                  "Dual-sided precision upgrades"
+                ],
+                [
+                  "Head unit + HR strap",
+                  "Anything that shows power, heart rate, and the route",
+                  "The cross-check that keeps hot days honest (Chapter 4)",
+                  "Radar, touchscreens, maps of places you aren't"
+                ]
               ]
             },
             {
@@ -358,18 +463,69 @@
               "content": "Two Tier 1 monuments make the point. The [Maratona dles Dolomites](/race/maratona-dles-dolomites/) packs 4,230 m of climbing into 138 km — over 30 m/km, a day spent almost entirely going up or coming down. The [Tour of Flanders Sportive](/race/tour-of-flanders-sportive/) climbs 2,260 m across 241 km — around 9 m/km, but delivered in short, brutal cobbled bergs where position into the base decides your whole effort. Same sport on paper. Different bodies, different plans, different chapters of this guide doing the heavy lifting."
             },
             {
+              "type": "image",
+              "asset_id": "ch2-race-scatter",
+              "alt": "Scatter plot of every rated single-day road race showing distance against climbing density, with Tier 1 monuments like the Maratona dles Dolomites and Tour of Flanders labelled",
+              "caption": "Every rated single-day race in the database, plotted live at build time. The vertical spread is the story: distance tells you how long the day is, density tells you what kind of engine it takes."
+            },
+            {
               "type": "data_table",
               "caption": "Course Types and What They Reward",
-              "headers": ["Course type", "The demand profile", "Who thrives", "The red flag"],
+              "headers": [
+                "Course type",
+                "The demand profile",
+                "Who thrives",
+                "The red flag"
+              ],
               "rows": [
-                ["Flat / rolling fondo or century", "Long hours at steady output; pack riding the whole day; wind is the terrain", "Riders with durability and group skills", "Riding it alone. The draft is worth more here than anywhere"],
-                ["Mountain gran fondo", "Sustained 30-90 minute climbs; W/kg is speed; long technical descents", "Light, patient pacers with a big threshold", "Starting the first col at someone else's pace"],
-                ["Classics-style sportive", "Repeated 1-5 minute violent efforts; cobbles and narrow roads; positioning battles", "Punchy riders who handle a bike well", "Arriving at every berg at the back and sprinting to hold on"],
-                ["Hillclimb", "One sustained maximal effort; nothing else matters", "Pure climbers; anyone chasing a clean fitness test", "Treating it as a fondo. It's an hour-record effort with scenery"],
-                ["Criterium", "Repeated anaerobic surges out of corners for 30-90 minutes; position is everything", "Punchy riders on small time budgets; anyone who likes their racing concentrated", "Assuming fondo fitness transfers directly — it's a different energy system wearing the same kit"],
-                ["Time trial", "One steady maximal effort against the clock; the purest pacing exam in cycling", "Diesel engines, data lovers, and the time-crunched", "Buying aero before building the engine that pushes it"],
-                ["Multi-stage", "A fondo every morning with yesterday in your legs; recovery is the competition", "Diesel engines with disciplined routines", "Racing stage one like it's the only one"],
-                ["Randonnée / audax", "Duration beyond fitness — sleep, logistics, morale", "The organized and the stubborn", "Assuming fitness alone covers a 1,200 km problem"]
+                [
+                  "Flat / rolling fondo or century",
+                  "Long hours at steady output; pack riding the whole day; wind is the terrain",
+                  "Riders with durability and group skills",
+                  "Riding it alone. The draft is worth more here than anywhere"
+                ],
+                [
+                  "Mountain gran fondo",
+                  "Sustained 30-90 minute climbs; W/kg is speed; long technical descents",
+                  "Light, patient pacers with a big threshold",
+                  "Starting the first col at someone else's pace"
+                ],
+                [
+                  "Classics-style sportive",
+                  "Repeated 1-5 minute violent efforts; cobbles and narrow roads; positioning battles",
+                  "Punchy riders who handle a bike well",
+                  "Arriving at every berg at the back and sprinting to hold on"
+                ],
+                [
+                  "Hillclimb",
+                  "One sustained maximal effort; nothing else matters",
+                  "Pure climbers; anyone chasing a clean fitness test",
+                  "Treating it as a fondo. It's an hour-record effort with scenery"
+                ],
+                [
+                  "Criterium",
+                  "Repeated anaerobic surges out of corners for 30-90 minutes; position is everything",
+                  "Punchy riders on small time budgets; anyone who likes their racing concentrated",
+                  "Assuming fondo fitness transfers directly — it's a different energy system wearing the same kit"
+                ],
+                [
+                  "Time trial",
+                  "One steady maximal effort against the clock; the purest pacing exam in cycling",
+                  "Diesel engines, data lovers, and the time-crunched",
+                  "Buying aero before building the engine that pushes it"
+                ],
+                [
+                  "Multi-stage",
+                  "A fondo every morning with yesterday in your legs; recovery is the competition",
+                  "Diesel engines with disciplined routines",
+                  "Racing stage one like it's the only one"
+                ],
+                [
+                  "Randonnée / audax",
+                  "Duration beyond fitness — sleep, logistics, morale",
+                  "The organized and the stubborn",
+                  "Assuming fitness alone covers a 1,200 km problem"
+                ]
               ]
             },
             {
@@ -402,7 +558,20 @@
             },
             {
               "type": "prose",
-              "content": "One scope note, so nobody trains off the wrong map: this guide's plan chapters are built for single-day events — everything from a 45-minute crit to a long alpine fondo. Multi-stage events and randonnées appeared in Chapter 1's landscape because you'll meet them on registration sites, but they add whole disciplines this guide doesn't teach: stage racing is decided as much by between-stage recovery — eating, sleeping, and starting tomorrow on yesterday's legs — as by fitness, and a 1,200 km randonnée is a sleep-management and logistics exam with some cycling attached. The engine you build in Chapters 3-5 transfers to both; the execution playbook does not. If one of those is your target, treat this guide as the foundation and go find the specialist literature for the rest."
+              "content": "One scope note, so nobody trains off the wrong map: this guide's plan chapters are built for single-day events — everything from a 45-minute crit to a long alpine fondo. Multi-stage events and randonnées appeared in Chapter 1's landscape because you'll meet them on registration sites, but they add whole disciplines this guide doesn't teach: stage racing is decided as much by between-stage recovery — eating, sleeping, and starting tomorrow on yesterday's legs — as by fitness, and a 1,200 km randonnée is a sleep-management and logistics exam with some cycling attached. The engine you build in Chapters 3-5 transfers to both; the execution playbook does not. If one of those is your target, treat this guide as the foundation — and start with the two panels below, which cover the parts the plan chapters won't."
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "If your target is a multi-stage",
+                  "content": "The engine chapters transfer whole; what's missing is the recovery discipline, and it starts in training. Convert the single long ride into back-to-back weekend blocks — say four hours Saturday, three Sunday at endurance pace — so your body learns the multi-stage skill nobody can fake: starting on yesterday's legs. On the event, the first hour after each stage decides the next one: get carbohydrate in at roughly a gram per kilogram of body weight within the hour, add some protein, then defend your sleep like it's a stage result, because it is. Pace day one like an exam you can't ace, only fail — stage races are lost early and won late. And rehearse the boring machinery beforehand: packing, laundry, bottle prep. Every unpracticed chore eats the recovery window that was supposed to rebuild your legs."
+                },
+                {
+                  "title": "If your target is a randonnée",
+                  "content": "Randonneuring already has a built-in training plan: the brevet series. Ride a 200, 300, 400, and 600 km event, in order, in the season before the big one — the qualification requirement doubles as exactly the progressive overload chapter 3 preaches, stretched to the discipline's scale. Two rules govern the riding itself. First, ride at a pace you can eat at; anything above conversation pace steals blood from digestion, and on a 1,200 the rider who can't eat is done regardless of fitness. Second, speed comes from stopped-time management, not watts — the fast finishers aren't riding much harder, they're spending minutes at controls where others spend an hour. Practice night riding before the event asks for it, plan where you'll sleep rather than deciding at 3 a.m., and expect to bank only a few hours a night on the long ones. The 90-hour clock at Paris–Brest–Paris includes every nap."
+                }
+              ]
             }
           ]
         },
@@ -509,9 +678,18 @@
               "context": "Of 394 rated road races earn Tier 1 status. The bar is deliberately high."
             },
             {
+              "type": "image",
+              "asset_id": "ch2-tier-distribution",
+              "alt": "Horizontal bar chart showing how many rated road races fall into each tier, with Tier 1 the smallest group",
+              "caption": "Computed from the live database at build time, so the counts never drift from reality."
+            },
+            {
               "type": "race_callout",
-              "slugs": ["maratona-dles-dolomites", "tour-of-flanders-sportive"],
-                "dimension": "climbing",
+              "slugs": [
+                "maratona-dles-dolomites",
+                "tour-of-flanders-sportive"
+              ],
+              "dimension": "climbing",
               "caption": "Two Tier 1 races, two different sports. The Maratona is 138 km of Dolomite passes; Flanders is 241 km of cobbles and short, violent bergs. The tier tells you they're both worth your season — the dimensions tell you which one fits your engine."
             },
             {
@@ -829,13 +1007,37 @@
             {
               "type": "data_table",
               "caption": "The Talk Test",
-              "headers": ["Zone", "What talking feels like", "What it's for"],
+              "headers": [
+                "Zone",
+                "What talking feels like",
+                "What it's for"
+              ],
               "rows": [
-                ["Z1 — Recovery", "Nose-breathing territory. You could sing, though nobody asked", "Flushing the legs; genuinely easy days"],
-                ["Z2 — Endurance", "Full sentences, comfortably. The conversation is the pace check", "Most of your riding, most weeks"],
-                ["Z3 — Tempo", "Sentences shorten; you pause mid-thought to breathe", "Prescribed tempo only — this is the gray zone"],
-                ["Z4 — Threshold", "The pace at which the group ride goes quiet", "Intervals, and long climbs ridden seriously"],
-                ["Z5+ — VO2max and up", "Words are a luxury you can no longer afford", "Short, hard intervals — nothing else lives here"]
+                [
+                  "Z1 — Recovery",
+                  "Nose-breathing territory. You could sing, though nobody asked",
+                  "Flushing the legs; genuinely easy days"
+                ],
+                [
+                  "Z2 — Endurance",
+                  "Full sentences, comfortably. The conversation is the pace check",
+                  "Most of your riding, most weeks"
+                ],
+                [
+                  "Z3 — Tempo",
+                  "Sentences shorten; you pause mid-thought to breathe",
+                  "Prescribed tempo only — this is the gray zone"
+                ],
+                [
+                  "Z4 — Threshold",
+                  "The pace at which the group ride goes quiet",
+                  "Intervals, and long climbs ridden seriously"
+                ],
+                [
+                  "Z5+ — VO2max and up",
+                  "Words are a luxury you can no longer afford",
+                  "Short, hard intervals — nothing else lives here"
+                ]
               ]
             },
             {
@@ -1003,7 +1205,7 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "The distribution that builds engines looks nothing like how most people ride. Elite endurance athletes across sports spend the great majority of their training time at low intensity, with a small, sharply focused slice of genuinely hard work — and decades of both research and results back the pattern. Most self-coached riders invert it: every ride lands in the middle, hard enough to feel productive, too easy to force top-end adaptation, too hard to recover from by tomorrow."
+              "content": "The distribution that builds engines looks nothing like how most people ride. Elite endurance athletes across sports spend the great majority of their training time at low intensity, with a small, sharply focused slice of genuinely hard work. Stephen Seiler's research on elite endurance athletes put a number on it — training time splits roughly 80% easy, 20% hard — and decades of results back the pattern. Most self-coached riders invert it: every ride lands in the middle, hard enough to feel productive, too easy to force top-end adaptation, too hard to recover from by tomorrow."
             },
             {
               "type": "prose",
@@ -1082,6 +1284,46 @@
                   "content": "Five to six rides across periodized blocks: two high-intensity days, two-to-three volume days, one long ride carrying race-simulation work — full-gas efforts at the durations your target event demands. At 18+ hours, the plan lives and dies on recovery logistics: sleep, fueling, and the discipline to keep the easy 70% of your volume boring. Every session has a stated purpose or it doesn't happen."
                 }
               }
+            },
+            {
+              "type": "prose",
+              "content": "One more thing the five-hour rider deserves: a whole progression, not just a week. The fondo build in chapter 2 grows by adding hours; the crit and time-trial build grows by sharpening the hours you already have. Same sixteen weeks, opposite shape — volume stays flat while the intensity distribution shifts steadily toward what the race actually asks for. Here's how the phases map."
+            },
+            {
+              "type": "data_table",
+              "caption": "The 16 Weeks, Crit/TT Version — Same Calendar, Different Lever",
+              "headers": [
+                "Phase",
+                "Weeks",
+                "The hard days become",
+                "What you're buying"
+              ],
+              "rows": [
+                [
+                  "Base",
+                  "1–6",
+                  "2×20 min tempo→threshold, plus 4–6 short sprints tucked into easy rides",
+                  "Aerobic floor and neuromuscular speed — sprinting is a skill that rusts"
+                ],
+                [
+                  "Build",
+                  "7–12",
+                  "Threshold work (2–3×12–20 min at 91–105% FTP) and VO2max blocks (4–5×4 min)",
+                  "The engine that lets you recover between surges instead of getting shelled by them"
+                ],
+                [
+                  "Sharpen",
+                  "13–15",
+                  "Race-specific anaerobic sets (2×6×30 s at 130–150% FTP) and race-simulation efforts",
+                  "Repeatability at the exact duration crits punish — corner, sprint, recover, again"
+                ],
+                [
+                  "Race",
+                  "16+",
+                  "The races themselves, plus openers the day before",
+                  "Racing weekly is the sharpening — midweek you just maintain and recover"
+                ]
+              ]
             },
             {
               "type": "prose",
@@ -1221,7 +1463,7 @@
               "type": "image",
               "asset_id": "ch4-traffic-light",
               "alt": "Green, yellow, red autoregulation check with criteria and prescriptions for each state",
-              "caption": "Click a signal for the prescription. Calibrate honestly \u2014 every day is not a yellow day."
+              "caption": "Click a signal for the prescription. Calibrate honestly — every day is not a yellow day."
             },
             {
               "type": "prose",
@@ -1329,12 +1571,32 @@
             {
               "type": "data_table",
               "caption": "Carbohydrate Targets by Ride",
-              "headers": ["Ride", "Carbs per hour", "Notes"],
+              "headers": [
+                "Ride",
+                "Carbs per hour",
+                "Notes"
+              ],
               "rows": [
-                ["Easy ride under 90 minutes", "0-30 g", "Stored glycogen covers it. Coffee optional but traditional"],
-                ["Endurance ride, 2-4 hours", "40-60 g", "Steady drip from the first hour — this is also where you practice race fueling"],
-                ["Hard training day / B-event", "60-90 g", "Race rehearsal territory: exact products, exact schedule, full dress"],
-                ["A-event, 4+ hours at race effort", "80-90+ g", "The full program. Only sustainable if the gut has been trained for it — see below"]
+                [
+                  "Easy ride under 90 minutes",
+                  "0-30 g",
+                  "Stored glycogen covers it. Coffee optional but traditional"
+                ],
+                [
+                  "Endurance ride, 2-4 hours",
+                  "40-60 g",
+                  "Steady drip from the first hour — this is also where you practice race fueling"
+                ],
+                [
+                  "Hard training day / B-event",
+                  "60-90 g",
+                  "Race rehearsal territory: exact products, exact schedule, full dress"
+                ],
+                [
+                  "A-event, 4+ hours at race effort",
+                  "80-90+ g",
+                  "The full program. Only sustainable if the gut has been trained for it — see below"
+                ]
               ]
             },
             {
@@ -1402,7 +1664,7 @@
             },
             {
               "type": "prose",
-              "content": "Where the grams come from matters less than that they arrive on schedule. Drink mix, gels, chews, rice cakes, the fig rolls your grandmother would recognize — all valid. The practical pattern for most riders: a carbohydrate drink covering a baseline, topped up with solid or gel calories on a timer (every 20-30 minutes), shifting toward liquids and gels as intensity rises and the stomach gets pickier."
+              "content": "The 90 g/hour ceiling isn't arbitrary: your gut absorbs a single sugar at only about 60 g/hour before the transporter saturates, so hitting 90 means pairing glucose with fructose, which rides a second transporter — Asker Jeukendrup's \"multiple transportable carbohydrates\" work is where that number and that trick come from. Where the grams come from matters less than that they arrive on schedule. Drink mix, gels, chews, rice cakes, the fig rolls your grandmother would recognize — all valid. The practical pattern for most riders: a carbohydrate drink covering a baseline, topped up with solid or gel calories on a timer (every 20-30 minutes), shifting toward liquids and gels as intensity rises and the stomach gets pickier."
             }
           ]
         },
@@ -1717,7 +1979,7 @@
             {
               "type": "prose",
               "content": "In any moving group there is one iron rule: **drifting backwards is free and constant; moving up always costs.** Do nothing and the pack slowly digests you toward the back. Which means positioning isn't a one-time decision — it's a small, continuous spend, and the skill is spending at the right times. The front third of the group is the good neighborhood: full draft, clear sight lines, first news of every attack and pothole, and insulation from the concertina effect that makes the back of a big group surge and brake like a whip being cracked."
-                },
+            },
             {
               "type": "prose",
               "content": "The timing rule does most of the work: **move up before the road gets decisive, not during.** Before the climb, before the narrow section, before the crosswind turn, before the feed zone. Moving up on calm road costs a handful of watts along the side of the group; moving up when the race has already exploded costs a match you'll want later — if it's possible at all. Study the route the night before and you already know your move-up points; everyone else is discovering them in real time."
@@ -1964,7 +2226,7 @@
             },
             {
               "type": "prose",
-              "content": "Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
+              "content": "The shape of a good taper is settled science: Bosquet and colleagues' 2007 meta-analysis found the biggest performance gains came from cutting training volume by 41-60% over about two weeks while keeping intensity and frequency intact — you ride less, not easier. Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
             },
             {
               "type": "prose",
