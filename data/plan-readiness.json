@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T19:52:44",
+  "generated_at": "2026-08-05T20:26:14",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -6383,15 +6383,13 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": false
+        "active_registerable": true
       },
-      "eligibility_status": "unknown",
-      "ready": false,
-      "runway_weeks": 11,
-      "race_date": "2026-10-23",
-      "blockers": [
-        "eligibility unverified (unknown)"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 12,
+      "race_date": "2026-11-02",
+      "blockers": []
     },
     "tallinn-gran-fondo": {
       "slug": "tallinn-gran-fondo",
@@ -7500,6 +7498,7 @@
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
+    "taiwan-kom-challenge",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
     "suzuka-endurance-road",
@@ -7508,7 +7507,6 @@
     "eroica-japan",
     "best-buddies-challenge-miami",
     "granfondo-ecuador",
-    "taiwan-kom-challenge",
     "la-ruta-de-los-conquistadores",
     "granfondo-pomerode",
     "tour-de-okinawa",
@@ -7879,6 +7877,7 @@
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
+    "taiwan-kom-challenge",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
     "suzuka-endurance-road",
@@ -7912,13 +7911,13 @@
   ],
   "summary": {
     "total": 401,
-    "ready": 132,
+    "ready": 133,
     "content_present": 385,
     "validator_clean": 401,
-    "pilot_candidates": 79,
+    "pilot_candidates": 80,
     "by_tier_ready": {
       "1": 11,
-      "2": 109,
+      "2": 110,
       "3": 12,
       "4": 0
     }
