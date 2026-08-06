@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T02:05:10",
+  "generated_at": "2026-08-06T02:15:51",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -83,16 +83,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-01",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 38,
+      "race_date": "2027-05-01",
+      "blockers": []
     },
     "adelaide-epic-ride": {
       "slug": "adelaide-epic-ride",
@@ -247,16 +245,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-19",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 52,
+      "race_date": "2027-08-08",
+      "blockers": []
     },
     "americas-most-beautiful-bike-ride": {
       "slug": "americas-most-beautiful-bike-ride",
@@ -1060,16 +1056,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-07-11",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 37,
+      "race_date": "2027-04-24",
+      "blockers": []
     },
     "death-ride": {
       "slug": "death-ride",
@@ -7537,6 +7531,7 @@
     "gfny-cali",
     "uci-gran-fondo-world-championships",
     "white-rose-classic",
+    "amashova-national-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
     "gran-fondo-asheville",
@@ -7556,9 +7551,11 @@
     "london-to-brighton",
     "letape-denmark",
     "jedermann-rennen-koln",
+    "dartmoor-legend-ultra",
     "gfny-villavicencio",
     "granfondo-felice-gimondi",
     "letape-czech-republic",
+    "adac-velotour",
     "gfny-walnut-creek",
     "amstel-gold-race-toerversie",
     "cyprus-gran-fondo",
@@ -7703,7 +7700,6 @@
     "algarve-gran-fondo",
     "bp-ms-150-texas",
     "chasing-cancellara",
-    "dartmoor-legend-ultra",
     "dolomitenradrundfahrt",
     "eroica-hispania",
     "flandrien-ride",
@@ -7742,7 +7738,6 @@
     "tour-du-mont-blanc-cyclo",
     "tour-of-the-gila",
     "tour-of-the-peak",
-    "adac-velotour",
     "assault-on-mt-mitchell",
     "colnago-cycling-festival",
     "formosa-900",
@@ -7771,7 +7766,6 @@
     "niseko-classic",
     "styrkeproven",
     "947-ride-joburg",
-    "amashova-national-classic",
     "arlberg-giro",
     "axel-merckx-gran-fondo",
     "ford-ridelondon",
@@ -7932,6 +7926,7 @@
     "le-loop",
     "uci-gran-fondo-world-championships",
     "white-rose-classic",
+    "amashova-national-classic",
     "triple-bypass",
     "gran-fondo-la-fausto-coppi",
     "gran-fondo-asheville",
@@ -7951,8 +7946,10 @@
     "london-to-brighton",
     "letape-denmark",
     "jedermann-rennen-koln",
+    "dartmoor-legend-ultra",
     "granfondo-felice-gimondi",
     "letape-czech-republic",
+    "adac-velotour",
     "amstel-gold-race-toerversie",
     "cyprus-gran-fondo",
     "bordeaux-paris-ultra-cycling",
@@ -8012,13 +8009,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 144,
+    "ready": 147,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 84,
+    "pilot_candidates": 87,
     "by_tier_ready": {
       "1": 12,
-      "2": 116,
+      "2": 119,
       "3": 16,
       "4": 0
     }
