@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T02:43:35",
+  "generated_at": "2026-08-06T02:58:26",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1109,16 +1109,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-14",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 44,
+      "race_date": "2027-06-13",
+      "blockers": []
     },
     "douro-gran-fondo": {
       "slug": "douro-gran-fondo",
@@ -7534,6 +7532,7 @@
     "sportful-dolomiti-race",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
+    "dolomitenradrundfahrt",
     "mallorca-312",
     "tartu-rattaralli",
     "nordsjorittet",
@@ -7697,7 +7696,6 @@
     "algarve-gran-fondo",
     "bp-ms-150-texas",
     "chasing-cancellara",
-    "dolomitenradrundfahrt",
     "eroica-hispania",
     "flandrien-ride",
     "galibier-challenge",
@@ -7929,6 +7927,7 @@
     "sportful-dolomiti-race",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
+    "dolomitenradrundfahrt",
     "mallorca-312",
     "tartu-rattaralli",
     "nordsjorittet",
@@ -8006,13 +8005,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 150,
+    "ready": 151,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 90,
+    "pilot_candidates": 91,
     "by_tier_ready": {
       "1": 12,
-      "2": 122,
+      "2": 123,
       "3": 16,
       "4": 0
     }
