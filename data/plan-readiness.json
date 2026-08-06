@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T04:04:58",
+  "generated_at": "2026-08-06T04:10:11",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -6642,7 +6642,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-05-29",
+      "race_date": "2026-07-03",
       "blockers": [
         "no parsed future date"
       ]
@@ -6975,16 +6975,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-17",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 40,
+      "race_date": "2027-05-16",
+      "blockers": []
     },
     "tour-of-thekkady": {
       "slug": "tour-of-thekkady",
@@ -7521,6 +7519,7 @@
     "highlands-gran-fondo",
     "fred-whitton-challenge",
     "seattle-to-portland",
+    "tour-of-the-peak",
     "nove-colli",
     "alpe-dhuzes",
     "paris-roubaix-challenge",
@@ -7713,7 +7712,6 @@
     "tortour",
     "tour-du-mont-blanc-cyclo",
     "tour-of-the-gila",
-    "tour-of-the-peak",
     "assault-on-mt-mitchell",
     "colnago-cycling-festival",
     "formosa-900",
@@ -7916,6 +7914,7 @@
     "highlands-gran-fondo",
     "fred-whitton-challenge",
     "seattle-to-portland",
+    "tour-of-the-peak",
     "nove-colli",
     "alpe-dhuzes",
     "paris-roubaix-challenge",
@@ -7990,13 +7989,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 163,
+    "ready": 164,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 100,
+    "pilot_candidates": 101,
     "by_tier_ready": {
       "1": 12,
-      "2": 132,
+      "2": 133,
       "3": 19,
       "4": 0
     }
