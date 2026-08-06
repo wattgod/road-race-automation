@@ -1751,7 +1751,7 @@ def build_guide_css() -> str:
 /* ── Prose ── */
 .rl-guide-chapter-body p{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:1.75;margin:0 0 14px;color:#2a2a2c}
 /* Period garnish: drop cap on the first paragraph of each chapter */
-.rl-guide-chapter-body .rl-guide-section:first-child p:first-of-type::first-letter{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:50px;line-height:0.82;float:left;padding:5px 9px 0 0;color:var(--rl-garnish)}
+.rl-guide-chapter-body .rl-guide-section:first-child > p:first-of-type::first-letter{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:50px;line-height:0.82;float:left;padding:5px 9px 0 0;color:var(--rl-garnish)}
 .rl-guide-chapter-body strong{font-weight:700}
 .rl-guide-list{font-family:'Source Serif 4',Georgia,serif;padding-left:20px;margin:0 0 16px;font-size:14px;line-height:1.75}
 .rl-guide-list li{margin-bottom:6px}

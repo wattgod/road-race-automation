@@ -65,11 +65,11 @@ def _tier_bars(data: dict | None) -> str:
 
 def _motif(chapter_number: int, data: dict | None) -> str:
     motifs = {
-        1: '''
-<path class="rl-plate-line rl-plate-line-soft" d="M584 306 C628 270 654 338 696 290 S760 248 800 288 866 342 934 278"></path>
-<path class="rl-plate-line" d="M604 360 C646 326 686 372 724 336 S802 296 842 332 894 382 962 322"></path>
-<path class="rl-plate-line rl-plate-line-soft" d="M628 414 C682 386 716 422 762 394 S842 356 906 404"></path>
-''',
+        1: (
+            f'<path class="rl-plate-line rl-plate-line-soft" d="{_ridge_path(584, 934, 300, 30, 1.3, 0.3)}"></path>\n'
+            f'<path class="rl-plate-line" d="{_ridge_path(604, 962, 344, 26, 1.1, 2.1)}"></path>\n'
+            f'<path class="rl-plate-line rl-plate-line-soft" d="{_ridge_path(628, 906, 402, 16, 0.9, 4.2)}"></path>\n'
+        ),
         2: _tier_bars(data),
         3: '''
 <line class="rl-plate-line" x1="610" y1="300" x2="950" y2="300"></line>
@@ -80,14 +80,14 @@ def _motif(chapter_number: int, data: dict | None) -> str:
 <rect class="rl-plate-zone rl-plate-zone-5" x="882" y="264" width="68" height="72"></rect>
 <text class="rl-plate-label" x="630" y="358">Z1</text><text class="rl-plate-label" x="698" y="358">Z2</text><text class="rl-plate-label" x="766" y="358">Z3</text><text class="rl-plate-label" x="834" y="358">Z4</text><text class="rl-plate-label" x="902" y="358">Z5</text>
 ''',
-        4: '''
-<rect class="rl-plate-signal rl-plate-signal-red" x="628" y="252" width="84" height="84"></rect>
-<rect class="rl-plate-signal rl-plate-signal-gold" x="748" y="252" width="84" height="84"></rect>
-<rect class="rl-plate-signal rl-plate-signal-teal" x="868" y="252" width="84" height="84"></rect>
-<path class="rl-plate-check" d="M650 294 l14 14 l28 -32"></path>
-<path class="rl-plate-check" d="M770 294 l14 14 l28 -32"></path>
-<path class="rl-plate-check" d="M890 294 l14 14 l28 -32"></path>
-''',
+        4: (
+            '<rect class="rl-plate-signal rl-plate-signal-red" x="628" y="252" width="84" height="84"></rect>\n'
+            '<rect class="rl-plate-signal rl-plate-signal-gold" x="748" y="252" width="84" height="84"></rect>\n'
+            '<rect class="rl-plate-signal rl-plate-signal-teal" x="868" y="252" width="84" height="84"></rect>\n'
+            f"{_pixel_check(645, 276)}\n"
+            f"{_pixel_check(765, 276)}\n"
+            f"{_pixel_check(885, 276)}\n"
+        ),
         5: '''
 <line class="rl-plate-line" x1="610" y1="302" x2="952" y2="302"></line>
 <line class="rl-plate-line" x1="650" y1="270" x2="650" y2="334"></line>
@@ -97,15 +97,15 @@ def _motif(chapter_number: int, data: dict | None) -> str:
 <text class="rl-plate-label rl-plate-label-strong" x="752" y="358">60g/hr</text>
 <text class="rl-plate-label rl-plate-label-strong" x="882" y="358">90g/hr</text>
 ''',
-        6: '''
-<path class="rl-plate-line" d="M610 356 C660 252 710 252 760 330 S850 430 944 250"></path>
-<rect class="rl-plate-dot" x="645" y="283" width="10" height="10"></rect>
-<rect class="rl-plate-dot" x="755" y="325" width="10" height="10"></rect>
-<rect class="rl-plate-dot" x="887" y="295" width="10" height="10"></rect>
-<text class="rl-plate-label" x="626" y="246">SURGE</text>
-<text class="rl-plate-label" x="730" y="380">SETTLE</text>
-<text class="rl-plate-label" x="850" y="256">SELECT</text>
-''',
+        6: (
+            f'<path class="rl-plate-line" d="{_stepped_path([(610, 356), (660, 262), (710, 268), (760, 330), (816, 368), (880, 330), (944, 250)])}"></path>\n'
+            '<rect class="rl-plate-dot" x="645" y="283" width="10" height="10"></rect>\n'
+            '<rect class="rl-plate-dot" x="755" y="325" width="10" height="10"></rect>\n'
+            '<rect class="rl-plate-dot" x="887" y="295" width="10" height="10"></rect>\n'
+            '<text class="rl-plate-label" x="626" y="246">SURGE</text>\n'
+            '<text class="rl-plate-label" x="730" y="392">SETTLE</text>\n'
+            '<text class="rl-plate-label" x="850" y="256">SELECT</text>\n'
+        ),
         7: '''
 <line class="rl-plate-line" x1="612" y1="304" x2="952" y2="304"></line>
 <line class="rl-plate-line" x1="632" y1="270" x2="632" y2="338"></line>
@@ -114,14 +114,14 @@ def _motif(chapter_number: int, data: dict | None) -> str:
 <line class="rl-plate-line" x1="932" y1="270" x2="932" y2="338"></line>
 <text class="rl-plate-label" x="612" y="362">-7D</text><text class="rl-plate-label" x="712" y="362">-3D</text><text class="rl-plate-label" x="812" y="362">-1D</text><text class="rl-plate-label" x="912" y="362">RACE</text>
 ''',
-        8: '''
-<path class="rl-plate-line rl-plate-line-soft" d="M610 294 C686 290 708 418 768 396 S826 250 944 244"></path>
-<path class="rl-plate-line" d="M610 338 C680 338 716 338 758 338 S860 338 952 338"></path>
-<rect class="rl-plate-dot" x="753" y="333" width="10" height="10"></rect>
-<rect class="rl-plate-dot" x="881" y="253" width="10" height="10"></rect>
-<text class="rl-plate-label" x="716" y="420">RECOVER</text>
-<text class="rl-plate-label" x="834" y="232">ADAPT</text>
-''',
+        8: (
+            f'<path class="rl-plate-line rl-plate-line-soft" d="{_stepped_path([(610, 294), (686, 296), (712, 412), (768, 396), (826, 268), (944, 244)])}"></path>\n'
+            '<line class="rl-plate-line" x1="610" y1="338" x2="952" y2="338"></line>\n'
+            '<rect class="rl-plate-dot" x="753" y="333" width="10" height="10"></rect>\n'
+            '<rect class="rl-plate-dot" x="881" y="253" width="10" height="10"></rect>\n'
+            '<text class="rl-plate-label" x="716" y="432">RECOVER</text>\n'
+            '<text class="rl-plate-label" x="834" y="232">ADAPT</text>\n'
+        ),
     }
     return motifs.get(chapter_number, motifs[1])
 
@@ -140,54 +140,127 @@ _PLATE_TITLES = {
 }
 
 
-def _profile_path(chapter_number: int) -> tuple[str, str, float, float]:
-    """Deterministic engraved stage profile for the top strip.
+def _quant(v: float, q: float) -> float:
+    return round(v / q) * q
 
-    Returns (polyline_points, hatch_lines, peak_x, peak_y).
+
+def _stepped_path(pts: list[tuple[float, float]], step: float = 16.0, quant: float = 6.0) -> str:
+    """Linear-interpolate keypoints, then quantize into a stepped pixel path.
+
+    Vertical/horizontal moves only — the pixel-planche drawing rule.
+    """
+    def y_at(x: float) -> float:
+        for i in range(1, len(pts)):
+            x0, y0 = pts[i - 1]
+            x1, y1 = pts[i]
+            if x0 <= x <= x1:
+                t = (x - x0) / (x1 - x0)
+                return y0 + (y1 - y0) * t
+        return pts[-1][1]
+
+    x0, x1 = pts[0][0], pts[-1][0]
+    d = ""
+    y_prev: float | None = None
+    x = x0
+    while x < x1:
+        seg_end = min(x + step, x1)
+        y = _quant(y_at(x + step / 2), quant)
+        if y_prev is None:
+            d = f"M {x:.0f} {y:.0f}"
+        elif y != y_prev:
+            d += f" V {y:.0f}"
+        d += f" H {seg_end:.0f}"
+        y_prev = y
+        x += step
+    return d
+
+
+def _ridge_path(x0: float, x1: float, base: float, amp: float,
+                cycles: float, phase: float) -> str:
+    """A stepped sine ridge — the pixel replacement for engraved curve motifs."""
+    n = 24
+    pts = [
+        (x0 + (x1 - x0) * i / n,
+         base + amp * math.sin((i / n) * cycles * math.tau + phase))
+        for i in range(n + 1)
+    ]
+    return _stepped_path(pts)
+
+
+_CHECK_CELLS = [(0, 2), (1, 3), (2, 4), (3, 3), (4, 2), (5, 1), (6, 0)]
+
+
+def _pixel_check(x: float, y: float, cell: float = 7.0) -> str:
+    """Chunky pixel checkmark, sprite-style."""
+    rects = "".join(
+        f'<rect x="{x + cx * cell:.0f}" y="{y + cy * cell:.0f}" width="{cell:.0f}" height="{cell:.0f}"></rect>'
+        for cx, cy in _CHECK_CELLS
+    )
+    return f'<g class="rl-plate-check-px">{rects}</g>'
+
+
+def _pixel_skyline(chapter_number: int) -> tuple[str, tuple[float, float]]:
+    """Deterministic stage profile quantized to a step grid.
+
+    Returns (stepped_path_d, (peak_x, peak_y)). Same elevation function as
+    the engraved pass — only the rendering resolution changed.
     """
     base_y = 116.0
-    points: list[tuple[float, float]] = []
+    step = 20.0
+    quant = 6.0
     seed = chapter_number * 1.7
-    for i in range(49):
-        x = 20 + i * 20
-        t = i / 48
+
+    def elev(x: float) -> float:
+        t = (x - 20) / 960
         h = (
             22 * math.sin(t * 6.1 + seed)
             + 14 * math.sin(t * 13.7 + seed * 2.3)
             + 8 * math.sin(t * 23.9 + seed * 4.1)
         )
-        h = max(4.0, 32 + h)
-        points.append((x, base_y - h))
-    peak_x, peak_y = min(points, key=lambda p: p[1])
-    poly = " ".join(f"{x:.0f},{y:.1f}" for x, y in points)
-    hatches = []
-    for i, (x, y) in enumerate(points):
-        if i % 2 == 0 and base_y - y > 10:
-            hatches.append(f'<line class="rl-plate-hatch" x1="{x:.0f}" y1="{y + 3:.1f}" x2="{x:.0f}" y2="{base_y:.0f}"></line>')
-    return poly, "\n  ".join(hatches), peak_x, peak_y
+        return max(6.0, 32 + h)
+
+    d = f"M 20 {base_y:.0f}"
+    y_prev: float | None = None
+    peak = (20.0, base_y)
+    x = 20.0
+    while x < 980:
+        seg_end = min(x + step, 980)
+        y = _quant(base_y - elev(x + step / 2), quant)
+        if y_prev is None or y != y_prev:
+            d += f" V {y:.0f}"
+        d += f" H {seg_end:.0f}"
+        if y < peak[1]:
+            peak = (x, y)
+        y_prev = y
+        x += step
+    d += f" V {base_y:.0f} Z"
+    return d, peak
 
 
 def render_chapter_plate(chapter_number: int, data: dict | None) -> str:
-    """Return the inline SVG engraved plate for a guide chapter hero."""
+    """Return the inline SVG pixel-planche plate for a guide chapter hero."""
     roman = _ROMAN.get(chapter_number, str(chapter_number))
     plate_title = _PLATE_TITLES.get(chapter_number, "")
-    poly, hatches, peak_x, peak_y = _profile_path(chapter_number)
-    return f'''<svg class="rl-guide-plate rl-guide-plate--light" viewBox="0 0 1000 520" role="img" aria-label="Chapter {chapter_number} engraved plate" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    skyline, (peak_x, peak_y) = _pixel_skyline(chapter_number)
+    dither_id = f"rl-dither-ch{chapter_number}"
+    return f'''<svg class="rl-guide-plate rl-guide-plate--light" viewBox="0 0 1000 520" role="img" aria-label="Chapter {chapter_number} pixel planche plate" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <style>
     .rl-guide-plate .rl-plate-bg{{fill:var(--rl-plate-paper,#f4eed9)}}
     .rl-guide-plate .rl-plate-frame{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.6}}
     .rl-guide-plate .rl-plate-frame-inner{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:.5;opacity:.75}}
     .rl-guide-plate .rl-plate-tick{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.4}}
-    .rl-guide-plate .rl-plate-profile{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.6;stroke-linejoin:round}}
-    .rl-guide-plate .rl-plate-hatch{{stroke:var(--rl-plate-ink,#1b1712);stroke-width:.6;opacity:.38}}
-    .rl-guide-plate .rl-plate-baseline{{stroke:var(--rl-plate-ink,#1b1712);stroke-width:.9}}
-    .rl-guide-plate .rl-plate-flag{{fill:var(--rl-garnish,#a8781f)}}
+    .rl-guide-plate .rl-plate-px{{shape-rendering:crispEdges}}
+    .rl-guide-plate .rl-plate-skyline{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:3;shape-rendering:crispEdges}}
+    .rl-guide-plate .rl-plate-flag{{fill:var(--rl-garnish,#a8781f);shape-rendering:crispEdges}}
+    .rl-guide-plate .rl-plate-flag-pole{{fill:var(--rl-plate-ink,#1b1712);shape-rendering:crispEdges}}
+    .rl-guide-plate .rl-plate-check-px{{fill:var(--rl-garnish,#a8781f);shape-rendering:crispEdges}}
     .rl-guide-plate .rl-plate-cartouche{{fill:var(--rl-plate-paper,#f4eed9);stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.2}}
     .rl-guide-plate .rl-plate-cartouche-inner{{fill:none;stroke:var(--rl-garnish,#a8781f);stroke-width:.8}}
     .rl-guide-plate .rl-plate-cart-title{{font-family:var(--rl-font-editorial);font-size:19px;font-weight:700;letter-spacing:4px;fill:var(--rl-plate-ink,#1b1712);text-anchor:middle}}
     .rl-guide-plate .rl-plate-cart-sub{{font-family:var(--rl-font-data);font-size:10px;font-weight:500;letter-spacing:3px;fill:var(--rl-garnish-deep,#7d5a17);text-anchor:middle}}
-    .rl-guide-plate .rl-plate-rule,.rl-guide-plate .rl-plate-line,.rl-guide-plate .rl-plate-check{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.8;stroke-linecap:square;stroke-linejoin:miter}}
-    .rl-guide-plate .rl-plate-rule-soft,.rl-guide-plate .rl-plate-line-soft{{stroke:var(--rl-plate-ink,#1b1712);opacity:.34;stroke-width:1.2}}
+    .rl-guide-plate .rl-plate-rule,.rl-guide-plate .rl-plate-line{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;shape-rendering:crispEdges}}
+    .rl-guide-plate .rl-plate-rule{{stroke-width:1.8}}
+    .rl-guide-plate .rl-plate-rule-soft,.rl-guide-plate .rl-plate-line-soft{{stroke:var(--rl-plate-ink,#1b1712);opacity:.34;stroke-width:2}}
     .rl-guide-plate .rl-plate-numeral{{font-family:var(--rl-font-editorial);font-size:230px;font-weight:700;fill:var(--rl-plate-ink,#1b1712);opacity:.07;text-anchor:middle}}
     .rl-guide-plate .rl-plate-label{{font-family:var(--rl-font-data);font-size:15px;font-weight:600;letter-spacing:2px;fill:var(--rl-plate-ink,#1b1712)}}
     .rl-guide-plate .rl-plate-label-strong{{fill:var(--rl-plate-ink,#1b1712);font-weight:700}}
@@ -198,19 +271,25 @@ def render_chapter_plate(chapter_number: int, data: dict | None) -> str:
     .rl-guide-plate .rl-plate-tier-2{{fill:var(--rl-garnish,#a8781f)}}
     .rl-guide-plate .rl-plate-tier-3{{fill:var(--rl-plate-ink,#1b1712);opacity:.55}}
     .rl-guide-plate .rl-plate-tier-4{{fill:var(--rl-plate-ink,#1b1712);opacity:.3}}
-    .rl-guide-plate .rl-plate-signal{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.6}}
-    .rl-guide-plate .rl-plate-check{{stroke:var(--rl-garnish,#a8781f);stroke-width:4}}
+    .rl-guide-plate .rl-plate-signal{{fill:none;stroke:var(--rl-plate-ink,#1b1712);stroke-width:1.6;shape-rendering:crispEdges}}
     .rl-guide-plate .rl-plate-zone-1{{fill:var(--rl-zone-1,#c0c0bc)}}.rl-guide-plate .rl-plate-zone-2{{fill:var(--rl-zone-2,#4a78b0)}}.rl-guide-plate .rl-plate-zone-3{{fill:var(--rl-zone-3,#4a8860)}}.rl-guide-plate .rl-plate-zone-4{{fill:var(--rl-zone-4,#a88850)}}.rl-guide-plate .rl-plate-zone-5{{fill:var(--rl-zone-5,#b07858)}}
   </style>
+  <defs>
+    <pattern id="{dither_id}" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="var(--rl-plate-paper,#f4eed9)"></rect>
+      <rect width="4" height="4" fill="var(--rl-plate-ink,#1b1712)" opacity="0.4"></rect>
+      <rect x="4" y="4" width="4" height="4" fill="var(--rl-plate-ink,#1b1712)" opacity="0.4"></rect>
+    </pattern>
+  </defs>
   <rect class="rl-plate-bg" x="0" y="0" width="1000" height="520"></rect>
   <rect class="rl-plate-frame" x="14" y="14" width="972" height="492"></rect>
   <rect class="rl-plate-frame-inner" x="21" y="21" width="958" height="478"></rect>
   <path class="rl-plate-tick" d="M14 40 h12 M40 14 v12 M986 40 h-12 M960 14 v12 M14 480 h12 M40 506 v-12 M986 480 h-12 M960 506 v-12"></path>
-  {hatches}
-  <polyline class="rl-plate-profile" points="{poly}"></polyline>
-  <line class="rl-plate-baseline" x1="20" y1="116" x2="980" y2="116"></line>
-  <rect class="rl-plate-flag" x="{peak_x:.0f}" y="{peak_y - 14:.1f}" width="9" height="7"></rect>
-  <line class="rl-plate-baseline" x1="{peak_x:.0f}" y1="{peak_y - 14:.1f}" x2="{peak_x:.0f}" y2="{peak_y:.1f}"></line>
+  <path class="rl-plate-px" d="{skyline}" fill="url(#{dither_id})"></path>
+  <path class="rl-plate-skyline" d="{skyline}"></path>
+  <rect class="rl-plate-flag-pole" x="{peak_x + 8:.0f}" y="{peak_y - 24:.0f}" width="4" height="24"></rect>
+  <rect class="rl-plate-flag" x="{peak_x + 12:.0f}" y="{peak_y - 24:.0f}" width="14" height="6"></rect>
+  <rect class="rl-plate-flag" x="{peak_x + 12:.0f}" y="{peak_y - 18:.0f}" width="10" height="4"></rect>
   <rect class="rl-plate-cartouche" x="370" y="34" width="260" height="58"></rect>
   <rect class="rl-plate-cartouche-inner" x="375" y="39" width="250" height="48"></rect>
   <text class="rl-plate-cart-title" x="500" y="60">PLANCHE {roman}</text>

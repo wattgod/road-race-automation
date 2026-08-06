@@ -1512,18 +1512,34 @@ def render_season_arc(block: dict) -> str:
     )
 
 
-def _bike_glyph(x: float, y: float, color: str, filled: bool) -> str:
-    """Small engraved bicycle pictogram (Isotype unit = one training hour)."""
-    wheel_fill = color if filled else "none"
+# Bicycle sprite on a 14x10 cell grid; wheels are 4x4 pixel rings.
+_PIXEL_BIKE_FRAME = [
+    (3, 0), (4, 0), (4, 1),                          # seat + post
+    (9, 0), (10, 0), (9, 1),                         # handlebar + stem
+    (4, 2), (5, 2), (6, 2), (7, 2), (8, 2), (9, 2),  # top tube
+    (4, 3), (4, 4), (5, 5), (6, 6),                  # seat tube to bottom bracket
+    (9, 3), (8, 4), (7, 5),                          # down tube
+    (5, 7), (4, 7),                                  # chain stay
+    (10, 3), (10, 4), (11, 5),                       # fork
+]
+
+
+def _bike_glyph(x: float, y: float, color: str, filled: bool, cell: float = 6.0) -> str:
+    """Chunky pixel bicycle sprite (Isotype unit = one training hour)."""
+    cells = list(_PIXEL_BIKE_FRAME)
+    for ox in (0, 10):
+        for i in range(4):
+            for j in range(4):
+                edge = i in (0, 3) or j in (0, 3)
+                if edge or filled:
+                    cells.append((ox + i, 6 + j))
+    rects = "".join(
+        f'<rect x="{cx * cell:.0f}" y="{cy * cell:.0f}" width="{cell:.0f}" height="{cell:.0f}"></rect>'
+        for cx, cy in cells
+    )
     return (
-        f'<g transform="translate({x:.0f},{y:.0f})">'
-        f'<circle cx="9" cy="20" r="8" fill="{wheel_fill}" stroke="{color}" stroke-width="1.6"></circle>'
-        f'<circle cx="37" cy="20" r="8" fill="{wheel_fill}" stroke="{color}" stroke-width="1.6"></circle>'
-        f'<path d="M9 20 L19 6 L31 6 L37 20 M19 6 L17 20 M31 6 L25 20 M17 20 L25 20" '
-        f'fill="none" stroke="{color}" stroke-width="1.6" stroke-linejoin="round"></path>'
-        f'<line x1="17.5" y1="3" x2="22" y2="3" stroke="{color}" stroke-width="1.6"></line>'
-        f'<line x1="30" y1="3" x2="34" y2="6" stroke="{color}" stroke-width="1.6"></line>'
-        f'</g>'
+        f'<g transform="translate({x:.0f},{y:.0f})" fill="{color}" shape-rendering="crispEdges">'
+        f"{rects}</g>"
     )
 
 
