@@ -222,6 +222,19 @@ class TestIndividualChecks:
         record = plan_readiness.score_race(path, TODAY)
         assert record["runway_weeks"] == 8
 
+    def test_canonical_race_day_wins_over_event_weekend_start(self, tmp_path):
+        race = _base_race()
+        race["vitals"] = dict(race["vitals"])
+        race["vitals"]["date"] = "2026: December 19"
+        race["vitals"]["date_specific"] = (
+            "2026: December 18-19 (KOM Friday, main Gran Fondo Saturday Dec 19)"
+        )
+        path = _write_fixture(tmp_path, "race-weekend", race)
+
+        record = plan_readiness.score_race(path, TODAY)
+
+        assert record["race_date"] == "2026-12-19"
+
     def test_malformed_eligibility_not_a_dict(self, tmp_path):
         race = _base_race()
         race["eligibility"] = "active"  # malformed: string instead of dict

@@ -111,7 +111,15 @@ def score_race(path: Path, today: date) -> dict[str, Any]:
 
     # --- future parsed date / runway ---
     vitals = _as_dict(race.get("vitals"))
-    parsed_iso = parse_date_specific(vitals.get("date_specific"))
+    # ``vitals.date`` is the canonical target-race day. ``date_specific`` may
+    # describe the whole event weekend (for example a Friday KOM followed by a
+    # Saturday gran fondo), so taking its first day can start a plan one day
+    # too early. Fall back to date_specific for older profiles whose date field
+    # contains only a month or other unparseable general label.
+    parsed_iso = (
+        parse_date_specific(vitals.get("date"))
+        or parse_date_specific(vitals.get("date_specific"))
+    )
     race_date: date | None = None
     if parsed_iso:
         try:

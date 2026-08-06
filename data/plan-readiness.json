@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T22:57:40",
+  "generated_at": "2026-08-06T01:14:02",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -28,16 +28,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 6,
+      "race_date": "2026-09-20",
+      "blockers": []
     },
     "66-degres-sud": {
       "slug": "66-degres-sud",
@@ -433,14 +431,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 4,
-      "race_date": "2026-09-05",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-05-16",
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "belgrade-gran-fondo": {
       "slug": "belgrade-gran-fondo",
@@ -618,16 +618,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 41,
+      "race_date": "2027-05-21",
+      "blockers": []
     },
     "bowral-classic": {
       "slug": "bowral-classic",
@@ -679,7 +677,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-05-17",
+      "race_date": "2026-05-16",
       "blockers": [
         "no parsed future date"
       ]
@@ -1009,16 +1007,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 0,
+      "race_date": "2026-08-07",
+      "blockers": []
     },
     "cyprus-gran-fondo": {
       "slug": "cyprus-gran-fondo",
@@ -1238,7 +1234,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-02-07",
       "blockers": [
         "no parsed future date"
       ]
@@ -1297,7 +1293,7 @@
       "eligibility_status": "active",
       "ready": true,
       "runway_weeks": 4,
-      "race_date": "2026-09-05",
+      "race_date": "2026-09-04",
       "blockers": []
     },
     "eroica-germania": {
@@ -1578,7 +1574,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-03-28",
       "blockers": [
         "no parsed future date"
       ]
@@ -2552,16 +2548,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-18",
+      "blockers": []
     },
     "gran-fondo-eilat": {
       "slug": "gran-fondo-eilat",
@@ -2577,7 +2571,7 @@
       "eligibility_status": "active",
       "ready": true,
       "runway_weeks": 19,
-      "race_date": "2026-12-18",
+      "race_date": "2026-12-19",
       "blockers": []
     },
     "gran-fondo-firenze": {
@@ -3107,7 +3101,7 @@
       "eligibility_status": "active",
       "ready": true,
       "runway_weeks": 13,
-      "race_date": "2026-11-08",
+      "race_date": "2026-11-06",
       "blockers": []
     },
     "granfondo-belgium": {
@@ -3326,16 +3320,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 17,
+      "race_date": "2026-12-06",
+      "blockers": []
     },
     "granfondo-la-nucia": {
       "slug": "granfondo-la-nucia",
@@ -3463,7 +3455,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-06-05",
       "blockers": [
         "no parsed future date"
       ]
@@ -3596,7 +3588,7 @@
       "eligibility_status": "active",
       "ready": true,
       "runway_weeks": 15,
-      "race_date": "2026-11-22",
+      "race_date": "2026-11-20",
       "blockers": []
     },
     "granfondo-tre-valli-varesine": {
@@ -4108,14 +4100,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 43,
-      "race_date": "2027-06-06",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-06-07",
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "la-vaujany": {
       "slug": "la-vaujany",
@@ -5286,7 +5280,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-05-10",
       "blockers": [
         "no parsed future date"
       ]
@@ -5524,7 +5518,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-05-24",
       "blockers": [
         "no parsed future date"
       ]
@@ -5691,7 +5685,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 6,
+      "runway_weeks": 5,
       "race_date": "2026-09-16",
       "blockers": []
     },
@@ -5746,7 +5740,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-05-02",
       "blockers": [
         "no parsed future date"
       ]
@@ -6265,14 +6259,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 26,
-      "race_date": "2027-02-07",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-02-15",
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "sportful-dolomiti-race": {
       "slug": "sportful-dolomiti-race",
@@ -6380,7 +6376,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-07-05",
       "blockers": [
         "no parsed future date"
       ]
@@ -6412,14 +6408,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 39,
-      "race_date": "2027-05-08",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-05-09",
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "superior-morgul-road-race": {
       "slug": "superior-morgul-road-race",
@@ -6454,7 +6452,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-03-22",
       "blockers": [
         "no parsed future date"
       ]
@@ -6581,7 +6579,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 1,
+      "runway_weeks": 0,
       "race_date": "2026-08-12",
       "blockers": []
     },
@@ -6857,16 +6855,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 4,
+      "race_date": "2026-09-06",
+      "blockers": []
     },
     "tour-of-cambridgeshire": {
       "slug": "tour-of-cambridgeshire",
@@ -6916,14 +6912,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 37,
-      "race_date": "2027-04-25",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-04-19",
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "tour-of-nilgiris": {
       "slug": "tour-of-nilgiris",
@@ -6975,7 +6973,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-01-18",
       "blockers": [
         "no parsed future date"
       ]
@@ -7257,7 +7255,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-05-23",
       "blockers": [
         "no parsed future date"
       ]
@@ -7369,7 +7367,7 @@
       "eligibility_status": "active",
       "ready": true,
       "runway_weeks": 11,
-      "race_date": "2026-10-24",
+      "race_date": "2026-10-25",
       "blockers": []
     },
     "vermont-gran-fondo": {
@@ -7480,7 +7478,7 @@
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": null,
+      "race_date": "2026-04-19",
       "blockers": [
         "no parsed future date"
       ]
@@ -7556,7 +7554,6 @@
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
     "race-across-germany",
-    "la-stelvio-santini",
     "marmotte-granfondo-sestriere",
     "tartu-rattaralli",
     "nordsjorittet",
@@ -7573,10 +7570,9 @@
     "letape-czech-republic",
     "gfny-walnut-creek",
     "amstel-gold-race-toerversie",
-    "tour-of-georgia-gran-fondo",
     "cyprus-gran-fondo",
     "alpe-gran-fondo",
-    "sudety-tour",
+    "bordeaux-paris-ultra-cycling",
     "gfny-ventura",
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
@@ -7588,15 +7584,16 @@
     "granfondo-via-del-sale",
     "gran-fondo-florida",
     "le-race",
+    "gran-fondo-curacavi",
     "granfondo-colnago",
     "cape-town-cycle-tour",
     "gfny-miami",
     "cadel-evans-great-ocean-road-ride",
-    "spinneys-dubai-92",
     "gfny-jose-ignacio",
     "tour-of-nilgiris",
     "gfny-san-luis-potosi",
     "gran-fondo-hainan",
+    "granfondo-la-guadeloupe",
     "gran-fondo-eilat",
     "pedal-imua",
     "gran-fondo-medellin",
@@ -7652,7 +7649,6 @@
     "letape-brazil",
     "granfondo-alpi-del-mare",
     "alpen-challenge-lenzerheide",
-    "race-across-spain",
     "mount-baker-hill-climb",
     "gfny-pittsburgh",
     "granfondo-alberto-contador",
@@ -7660,15 +7656,17 @@
     "granfondo-matildica",
     "lotoja-classic",
     "letape-costa-rica",
+    "race-across-spain",
     "crc-506-gran-fondo-costa-rica",
+    "5-mila-marche-gran-fondo",
     "gfny-dominican-republic",
     "gfny-ottawa",
     "rbc-granfondo-whistler",
     "alpenbrevet",
     "ride-across-britain",
-    "bealach-mor",
     "amys-gran-fondo",
     "gran-fondo-montevideo",
+    "tour-o-the-borders",
     "eroica-dolomiti",
     "gfny-colonia",
     "letape-slovenia",
@@ -7685,7 +7683,6 @@
     "eroica-germania",
     "velomediane-criquielion",
     "gran-fondo-baskent",
-    "tortour",
     "gran-fondo-kazakhstan",
     "cheaha-challenge-gran-fondo",
     "lardechoise",
@@ -7695,6 +7692,7 @@
     "best-buddies-challenge-hyannis-port",
     "schleck-gran-fondo",
     "gfny-cannes",
+    "la-stelvio-santini",
     "liege-bastogne-liege-challenge",
     "midnight-sun-randonnee",
     "oregon-gran-fondo",
@@ -7748,6 +7746,7 @@
     "raid-pyreneen",
     "sierra-nevada-limite",
     "struggle-dales",
+    "tortour",
     "tour-du-mont-blanc-cyclo",
     "tour-of-the-gila",
     "tour-of-the-peak",
@@ -7762,7 +7761,9 @@
     "omloop-het-nieuwsblad-sportive",
     "ramrod",
     "sellaronda-bike-day",
+    "tour-of-georgia-gran-fondo",
     "trek-100",
+    "bealach-mor",
     "bike-abu-dhabi-gran-fondo",
     "boone-gran-fondo",
     "douro-gran-fondo",
@@ -7786,7 +7787,6 @@
     "gent-wevelgem-cyclo",
     "gfny-new-york",
     "granfondo-eddy-merckx",
-    "granfondo-la-guadeloupe",
     "inthanon-challenge",
     "peaks-challenge-falls-creek",
     "race-across-benelux",
@@ -7796,7 +7796,6 @@
     "sovev-jerusalem",
     "tour-de-big-bear",
     "tour-de-fukushima",
-    "tour-o-the-borders",
     "tour-of-southland",
     "tour-of-thekkady",
     "aids-lifecycle",
@@ -7853,6 +7852,7 @@
     "letape-italy-piemonte",
     "levis-granfondo",
     "raul-alcala-challenge-oaxaca",
+    "sudety-tour",
     "tjejvattern",
     "transatlanticway",
     "velothon-berlin",
@@ -7863,13 +7863,13 @@
     "granfondo-moser",
     "race-across-portugal",
     "round-denmark-bike-race",
-    "bordeaux-paris-ultra-cycling",
     "cape-rouleur",
     "cykelvasan",
     "letape-australia",
     "pekan-classics",
     "race-around-ireland",
     "ring-of-kerry-charity-cycle",
+    "spinneys-dubai-92",
     "tour-de-yabakei",
     "utrecht-ultra",
     "wadi-dayqah-challenge",
@@ -7900,7 +7900,6 @@
     "tour-of-cambridgeshire",
     "turkcell-granfondo-izmir",
     "valley-granfondo",
-    "gran-fondo-curacavi",
     "gran-fondo-jasper",
     "letape-argentina",
     "letape-portugal",
@@ -7911,7 +7910,6 @@
     "tour-de-cure",
     "tour-of-wessex",
     "viana-granfondo",
-    "5-mila-marche-gran-fondo",
     "cinturon-ciclista-mallorca",
     "etape-caledonia",
     "gfny-nyc",
@@ -7948,7 +7946,6 @@
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
     "race-across-germany",
-    "la-stelvio-santini",
     "marmotte-granfondo-sestriere",
     "tartu-rattaralli",
     "nordsjorittet",
@@ -7963,9 +7960,8 @@
     "jedermann-rennen-koln",
     "letape-czech-republic",
     "amstel-gold-race-toerversie",
-    "tour-of-georgia-gran-fondo",
     "cyprus-gran-fondo",
-    "sudety-tour",
+    "bordeaux-paris-ultra-cycling",
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "etape-loch-ness",
@@ -7977,10 +7973,10 @@
     "le-race",
     "cape-town-cycle-tour",
     "cadel-evans-great-ocean-road-ride",
-    "spinneys-dubai-92",
     "tour-of-nilgiris",
     "gfny-san-luis-potosi",
     "gran-fondo-hainan",
+    "granfondo-la-guadeloupe",
     "gran-fondo-eilat",
     "pedal-imua",
     "gran-fondo-medellin",
@@ -8022,14 +8018,14 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 139,
+    "ready": 140,
     "content_present": 391,
     "validator_clean": 407,
-    "pilot_candidates": 83,
+    "pilot_candidates": 81,
     "by_tier_ready": {
       "1": 11,
-      "2": 115,
-      "3": 13,
+      "2": 114,
+      "3": 15,
       "4": 0
     }
   }
