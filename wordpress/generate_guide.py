@@ -2582,7 +2582,10 @@ def build_guide_css() -> str:
 }
 
 /* ── View Toggle (fondo vs crit build) ── */
-.rl-ig-view-toggle{display:flex;margin-bottom:12px;border:3px solid var(--rl-color-near-black);width:max-content}
+/* Hidden until JS arms it, so no-JS readers get a static fondo chart
+   instead of an inert toggle promising a comparison. */
+.rl-ig-view-toggle{display:none;margin-bottom:12px;border:3px solid var(--rl-color-near-black);width:max-content}
+[data-interactive='view-toggle'].rl-vt-armed .rl-ig-view-toggle{display:flex}
 .rl-ig-view-btn{padding:10px 18px;background:transparent;border:none;border-right:3px solid var(--rl-color-near-black);cursor:pointer;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:2px;color:var(--rl-color-steel)}
 .rl-ig-view-btn:last-child{border-right:none}
 .rl-ig-view-btn:hover{color:var(--rl-color-near-black)}
@@ -3018,7 +3021,21 @@ riderBadgeChange.addEventListener("click",function(){
 if(riderSelector)riderSelector.scrollIntoView({behavior:"smooth",block:"start"});
 });
 }
-try{var saved=localStorage.getItem(RIDER_STORAGE);if(saved)setRider(saved);}catch(e){}
+try{
+var saved=localStorage.getItem(RIDER_STORAGE);
+if(saved){setRider(saved);}
+else if(riderSelector){
+/* First visit: reflect the markup's default rider in the envelope charts
+   without writing a choice the reader never made */
+var actBtn=riderSelector.querySelector(".rl-guide-rider-btn--active");
+if(actBtn){
+var defRider=actBtn.getAttribute("data-rider");
+document.querySelectorAll("[data-interactive='envelope']").forEach(function(env){
+env.setAttribute("data-rider",defRider);
+});
+}
+}
+}catch(e){}
 var pageStartTime=Date.now();
 window.addEventListener("beforeunload",function(){
 var seconds=Math.round((Date.now()-pageStartTime)/1000);
@@ -3313,7 +3330,16 @@ track("infographic_interact",{type:"timeline"});
 });
 
 /* View toggle (fondo vs crit build) — default follows the reader's persona */
+function syncViewBtns(vt){
+var v=vt.getAttribute("data-view");
+vt.querySelectorAll(".rl-ig-view-btn").forEach(function(b){
+var on=b.getAttribute("data-view")===v;
+b.classList.toggle("rl-ig-view-btn--active",on);
+b.setAttribute("aria-pressed",on?"true":"false");
+});
+}
 document.querySelectorAll("[data-interactive='view-toggle']").forEach(function(vt){
+vt.classList.add("rl-vt-armed");
 var map=vt.getAttribute("data-persona-views")||"";
 var persona="";
 try{persona=localStorage.getItem("rl_guide_persona")||"";}catch(e){}
@@ -3323,15 +3349,14 @@ var kv=pair.split(":");
 if(kv[0]===persona&&kv[1])vt.setAttribute("data-view",kv[1]);
 });
 }
-var v=vt.getAttribute("data-view");
-vt.querySelectorAll(".rl-ig-view-btn").forEach(function(b){b.classList.toggle("rl-ig-view-btn--active",b.getAttribute("data-view")===v);});
+syncViewBtns(vt);
 });
 document.addEventListener("click",function(e){
 var btn=e.target.closest("[data-interactive='view-toggle'] .rl-ig-view-btn");
 if(!btn)return;
 var vt=btn.closest("[data-interactive='view-toggle']");
 vt.setAttribute("data-view",btn.getAttribute("data-view"));
-vt.querySelectorAll(".rl-ig-view-btn").forEach(function(b){b.classList.toggle("rl-ig-view-btn--active",b===btn);});
+syncViewBtns(vt);
 track("infographic_interact",{type:"view-toggle",view:btn.getAttribute("data-view")});
 });
 

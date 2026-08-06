@@ -1201,8 +1201,8 @@ def render_phase_shift(block: dict) -> str:
 
     toggle = (
         '<div class="rl-ig-view-toggle" role="group" aria-label="Choose which build to show">'
-        '<button type="button" class="rl-ig-view-btn" data-view="fondo">FONDO BUILD</button>'
-        '<button type="button" class="rl-ig-view-btn" data-view="crit">CRIT / TT BUILD</button>'
+        '<button type="button" class="rl-ig-view-btn" data-view="fondo" aria-pressed="true">FONDO BUILD</button>'
+        '<button type="button" class="rl-ig-view-btn" data-view="crit" aria-pressed="false">CRIT / TT BUILD</button>'
         '</div>'
     )
     inner = (
@@ -1318,9 +1318,9 @@ def render_draft_savings(block: dict) -> str:
     """
     positions = [
         ("Riding solo", 100, "Full wind bill \u2014 the reference"),
-        ("Second wheel", 73, "One wheel of shelter cuts the bill ~27%"),
-        ("Fifth wheel, single file", 60, "Deeper in the line, deeper discount"),
-        ("Sheltered in a small group", 50, "Half the wind, same speed"),
+        ("Second wheel", 60, "One wheel of shelter cuts the bill ~40%"),
+        ("Third wheel, single file", 52, "Deeper in the line, deeper discount"),
+        ("Fourth wheel, single file", 46, "The discount keeps compounding"),
         ("Belly of the peloton", 8, "5-10% of solo drag \u2014 nearly towed"),
     ]
     vb_w = 1400
@@ -1382,12 +1382,12 @@ def render_taper_curve(block: dict) -> str:
     chart_w = vb_w - margin_l - 60
     chart_h = chart_bot - chart_top
 
-    # Day -21 .. 0 (race day). Values in arbitrary "training load" units.
+    # Day -21 .. 0 (race day). Values in arbitrary "training load" units,
+    # matched to the labeled claims: fitness -1.6%, fatigue -35%.
     days = list(range(-21, 1))
-    fitness = [100 - (21 + d) * 0.15 for d in days]           # ~97 by race day
-    fatigue = [100 - (21 + d) * (100 - 55) / 21 * ((21 + d) / 21) for d in days]
-    # fatigue: gentle then steep — quadratic ease toward ~55
-    form = [fit - fat for fit, fat in zip(fitness, fatigue)]  # -0 → +42 (scaled)
+    fitness = [100 - (21 + d) * 0.075 for d in days]          # 98.4 by race day
+    fatigue = [100 - 35 * ((21 + d) / 21) ** 2 for d in days]  # eases to 65
+    form = [fit - fat for fit, fat in zip(fitness, fatigue)]
 
     y_min, y_max = 30, 110
 
