@@ -7,15 +7,15 @@
     "vitals": {
       "distance_km": 164.2,
       "distance_mi": 102.0,
-      "elevation_m": 917,
-      "elevation_ft": 3007.0,
+      "elevation_m": 880,
+      "elevation_ft": 2887.0,
       "location": "Tucson, Arizona, USA",
       "location_badge": "TUCSON, ARIZONA, USA",
       "country": "USA",
       "date": "Saturday before Thanksgiving, November annually",
       "date_specific": "2026: November 21",
       "field_size": "9,000-11,000 riders (all distances combined)",
-      "start_format": null,
+      "start_format": "Chip-timed mass start at 7:00 AM, with a qualification-gated Platinum corral at the front of the 102-mile event",
       "registration": "Online via eltourdetucson.org. Early-bird pricing available. $85-130 depending on distance and registration date. Platinum (competitive 102-mile) and standard categories.",
       "entry_fee": "$85-130 (varies by distance and registration date; Platinum 102-mile at higher tier)",
       "feed_zones": "8-10 aid stations on the 102-mile route, approximately every 7-12 miles. Staffed with water, bananas, oranges, cookies, pretzels, port-o-pots, and medical support.",
@@ -87,16 +87,20 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "",
-      "signature_challenge": "",
-      "suffering_zones": []
+      "character": "The 102-mile flagship starts and finishes at the Tucson Convention Center and makes a broad paved-road loop through the Sonoran Desert south and east of downtown. The official 2026 map lists 2,887 feet of climbing, so the defining demands are economical group speed, position, fueling, and exposure over a full century rather than sustained mountain passes. The route passes Davis-Monthan Air Force Base, Old Spanish Trail, Colossal Cave, Vail, Corona de Tucson, Sahuarita, and Green Valley before returning north to Tucson.",
+      "signature_challenge": "The decisive problem is preserving speed and position for 102 miles without treating the modest elevation as permission to over-ride the opening half. Platinum and standard riders are chip timed, and the final return to downtown exposes every unnecessary acceleration and missed feeding decision from the long southern loop.",
+      "suffering_zones": [
+        "Old Spanish Trail and the Colossal Cave corridor, where the field settles into sustained desert-road speed",
+        "The long southern loop through Corona de Tucson, Sahuarita, and Green Valley, where fueling discipline matters more than any single climb",
+        "The return north to downtown Tucson, when accumulated time at speed and repeated positioning efforts decide whether a rider can finish strongly"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Hotels within 1 mile of Tucson Convention Center include Leo Kent Hotel (0.2 mi), Hampton Inn & Suites (0.3 mi), Home2 Suites (0.3 mi), and Ramada by Wyndham (0.4 mi), ranging $115-230/night. Airport-area hotels (Courtyard by Marriott, Four Points by Sheraton) run $99-199/night. JW Marriott Starr Pass Resort (6 mi) is the premium option. Book early for race weekend but options are plentiful — Tucson has abundant lodging at reasonable Southwest prices.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://eltourdetucson.org/"
     },
     "history": {
       "founded": null,
@@ -430,9 +434,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://www.facebook.com/ElTourdeTucson/posts/registration-is-now-open-for-the-43rd-el-tour-de-tucson-the-iconic-event-was-rec/1392897212861772/",
-      "notes": "Mass-participation road cycling event in Tucson has 2026 edition on Nov 21 with registration open.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "verified": "2026-08-06",
+      "source": "https://eltourdetucson.org/el-tour-de-tucson/route/",
+      "notes": "The organizer confirms the chip-timed 102-mile flagship on Saturday, November 21, 2026, with a 7:00 AM start, qualification-gated Platinum corral, recorded results, and current 2,887-foot route map."
     }
   }
 }

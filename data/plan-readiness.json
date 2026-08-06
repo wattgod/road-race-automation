@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T01:52:05",
+  "generated_at": "2026-08-06T02:05:10",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1190,17 +1190,15 @@
       "checks": {
         "validator_clean": true,
         "editorial": true,
-        "course_character": false,
+        "course_character": true,
         "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
+      "ready": true,
       "runway_weeks": 15,
       "race_date": "2026-11-21",
-      "blockers": [
-        "no course_character (course_description.character)"
-      ]
+      "blockers": []
     },
     "engadin-radmarathon": {
       "slug": "engadin-radmarathon",
@@ -7605,6 +7603,7 @@
     "la-ruta-de-los-conquistadores",
     "granfondo-pomerode",
     "tour-de-okinawa",
+    "el-tour-de-tucson",
     "cycling-shimanami",
     "gran-fondo-loutraki",
     "k2-road-ride",
@@ -8013,14 +8012,14 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 143,
-    "content_present": 393,
+    "ready": 144,
+    "content_present": 394,
     "validator_clean": 407,
     "pilot_candidates": 84,
     "by_tier_ready": {
       "1": 12,
       "2": 116,
-      "3": 15,
+      "3": 16,
       "4": 0
     }
   }
