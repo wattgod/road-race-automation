@@ -161,9 +161,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-23",
+      "verified": "2026-08-06",
       "source": "https://www.granfondoyunnan.com/home",
-      "notes": "Official site announces 13th edition in early November 2026 in Yunnan following a 12th edition held November 1–8, 2025.; last edition evidenced: 2026; via sonar-pro eligibility_audit. UPDATED (2026-07-24, codex gpt-5.6-sol): confirmed this is a 5-stage, ~650+km multi-city tour, not a single-stage Kunming fondo; prior vitals (140km/2,286m/Kunming) were unsourced and likely extracted from a single stage."
+      "notes": "Rechecked 2026-08-06: the organizer still announces only 'early November 2026' for the 13th edition. Navigation, registration, stage pages, and competition regulations remain labeled 2025, so no exact 2026 dates or edition-specific stages can safely anchor a plan. This is a genuinely competitive five-stage, approximately 650 km multi-city road race with general, stage, age-group, and team classifications; it remains eligible but source-blocked."
     },
     "catalog_flags": {
       "status_note": "Taxonomy note: organizer markets this as 'Granfondo Yunnan' but the actual format (5 GC stages, ~650+km, multi-city tour with inter-city transfers) aligns much more closely with Roadie Labs' multi_stage discipline than gran_fondo. Not changing the discipline enum per editorial-wave scope — flagging for a human taxonomy decision.",

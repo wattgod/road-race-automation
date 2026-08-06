@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:30:51",
+  "generated_at": "2026-08-06T03:36:53",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3531,16 +3531,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-28",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 46,
+      "race_date": "2027-06-27",
+      "blockers": []
     },
     "granfondo-siete-lagos": {
       "slug": "granfondo-siete-lagos",
@@ -3620,16 +3618,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-01-24",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 29,
+      "race_date": "2027-02-28",
+      "blockers": []
     },
     "gruyere-cycling-tour": {
       "slug": "gruyere-cycling-tour",
@@ -3659,16 +3655,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-27",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 46,
+      "race_date": "2027-06-26",
+      "blockers": []
     },
     "haleakala-cycle-to-the-sun": {
       "slug": "haleakala-cycle-to-the-sun",
@@ -7519,6 +7513,8 @@
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
     "granfondo-livigno-ale",
+    "granfondo-serra-da-estrela",
+    "haervejslobet",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
@@ -7557,6 +7553,7 @@
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
     "gfny-punta-del-este",
+    "granguanche-audax-road",
     "gfny-puerto-rico",
     "granfondo-via-del-sale",
     "gran-fondo-florida",
@@ -7694,8 +7691,6 @@
     "flandrien-ride",
     "gfny-grand-ballon",
     "gran-fondo-suisse",
-    "granfondo-serra-da-estrela",
-    "haervejslobet",
     "iron-horse-bicycle-classic",
     "lariegeoise-cyclosportive",
     "letape-du-tour-femmes",
@@ -7710,7 +7705,6 @@
     "gfny-colombia",
     "gran-fondo-utah",
     "gran-fondo-vosges",
-    "granguanche-audax-road",
     "la-leggendaria-charly-gaul",
     "letape-parma",
     "manali-khardungla-cycling-championship",
@@ -7914,6 +7908,8 @@
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
     "granfondo-livigno-ale",
+    "granfondo-serra-da-estrela",
+    "haervejslobet",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
@@ -7947,6 +7943,7 @@
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
     "gfny-punta-del-este",
+    "granguanche-audax-road",
     "granfondo-via-del-sale",
     "gran-fondo-florida",
     "le-race",
@@ -7998,13 +7995,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 157,
+    "ready": 160,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 96,
+    "pilot_candidates": 99,
     "by_tier_ready": {
       "1": 12,
-      "2": 128,
+      "2": 131,
       "3": 17,
       "4": 0
     }
