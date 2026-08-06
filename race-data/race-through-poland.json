@@ -287,9 +287,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
+      "verified": "2026-08-06",
       "source": "https://bikepacking.com/event/race-through-poland-no-8/",
-      "notes": "Race No.8 started 23 May 2026 in Nowy Targ; results confirmed 7 June 2026 (78 starters, 44 finishers). Confirmed self-supported ultra-distance bikepacking format, not a mass gran fondo; distance is nominal/rider-dependent (1,681-1,876 km logged by full-route finishers in 2026), not a fixed 1,799.2 km course. Verified 2026-07-24 via codex gpt-5.6-sol foreground research as part of the Roadie Labs editorial wave 3."
+      "notes": "Race No.8 started May 23, 2026, in Nowy Targ; the official site remains on that edition and links its live commentary. Results confirmed 78 starters and 44 finishers, with full-route rider distances varying from 1,681 to 1,876 kilometers because participants choose among required parcours rather than follow one fixed 1,799.2-kilometer course. This is a genuine self-supported ultra-distance race, but no Race No.9 date, registration cycle, or next-edition course is published as of August 6, 2026."
     },
     "catalog_flags": {
       "status_note": "fondo_rating.discipline is 'gran_fondo' but this is a self-supported ultra-distance bikepacking race with no fixed course and route choice between mandatory controls — doesn't cleanly fit the gran_fondo taxonomy or its mass-participation scoring dimensions (field_depth, community_culture, etc. assume a shared-course format). Recommend a human call on reclassifying discipline or adding scoring caveats, consistent with how flandrien-ride.json flags similar taxonomy mismatches rather than silently changing the discipline field.",
