@@ -585,6 +585,28 @@ def build_cluster_css() -> str:
 .rl-guide-email-capture-success{font-family:var(--rl-font-data);font-size:13px;font-weight:700;color:var(--rl-color-light-orange);margin:16px 0 0}
 .rl-guide-email-capture-error{font-family:var(--rl-font-data);font-size:11px;font-weight:700;color:var(--rl-color-error);margin:8px 0 0}
 
+/* ── Persona Quiz (pillar) ── */
+.rl-guide-quiz{border:3px solid var(--rl-color-near-black);background:var(--rl-color-cool-white);padding:28px;margin:0 0 40px}
+.rl-guide-quiz-kicker{font-family:var(--rl-font-data);font-size:10px;font-weight:700;letter-spacing:3px;color:var(--rl-color-signal-red)}
+.rl-guide-quiz-title{font-family:var(--rl-font-editorial);font-size:20px;font-weight:700;color:var(--rl-color-primary-navy);margin:8px 0 20px}
+.rl-guide-quiz-q{margin:0 0 18px}
+.rl-guide-quiz-q-label{font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--rl-color-near-black);margin:0 0 10px}
+.rl-guide-quiz-options{display:flex;flex-wrap:wrap;gap:8px}
+.rl-guide-quiz-opt{font-family:var(--rl-font-data);font-size:12px;padding:10px 16px;background:var(--rl-color-white);color:var(--rl-color-near-black);border:2px solid var(--rl-color-near-black);cursor:pointer}
+.rl-guide-quiz-opt:hover{background:var(--rl-color-silver)}
+.rl-guide-quiz-opt--active{background:var(--rl-color-near-black);color:var(--rl-color-cool-white)}
+.rl-guide-quiz-result{border-top:4px double var(--rl-color-near-black);margin-top:20px;padding-top:20px}
+.rl-guide-quiz-result-kicker{font-family:var(--rl-font-data);font-size:10px;font-weight:700;letter-spacing:3px;color:var(--rl-color-signal-red)}
+.rl-guide-quiz-result-title{font-family:var(--rl-font-editorial);font-size:22px;font-weight:700;color:var(--rl-color-primary-navy);margin:6px 0 8px}
+.rl-guide-quiz-result-text{font-family:var(--rl-font-editorial);font-size:14px;line-height:1.6;color:var(--rl-color-secondary-blue);margin:0 0 16px}
+.rl-guide-quiz-skip{font-family:var(--rl-font-data);font-size:11px;color:var(--rl-color-secondary-blue);margin:16px 0 0}
+.rl-guide-quiz-skip a{color:var(--rl-color-near-black);font-weight:700}
+
+/* ── Rider Track pages ── */
+.rl-guide-track-back{margin:32px 0 0}
+.rl-guide-track-back a{font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--rl-color-near-black);text-decoration:none;border-bottom:2px solid var(--rl-color-near-black)}
+.rl-guide-track-back a:hover{color:var(--rl-color-signal-red);border-color:var(--rl-color-signal-red)}
+
 /* ── Responsive ── */
 @media(max-width:768px){
 .rl-cluster-grid{grid-template-columns:1fr}
@@ -596,6 +618,8 @@ def build_cluster_css() -> str:
 .rl-cluster-gate-form .rl-guide-btn{border-left:3px solid var(--rl-color-near-black)}
 .rl-guide-email-capture-form{flex-direction:column}
 .rl-guide-email-capture-input{border-right:2px solid var(--rl-color-near-black)}
+.rl-guide-quiz-options{flex-direction:column}
+.rl-guide-quiz-opt{text-align:left}
 }
 '''
 
@@ -617,6 +641,8 @@ var STORAGE_KEY="{storage_key}";
 var WORKER_URL="{worker_url}";
 var SOURCE="{source}";
 var BRAND="{brand}";
+var PERSONA_KEY="{config.local_storage_key_prefix}_persona";
+function getPersona(){{try{{return localStorage.getItem(PERSONA_KEY)||"";}}catch(e){{return "";}}}}
 function track(n,p){{if(typeof gtag==="function")gtag("event",n,Object.assign({{transport_type:"beacon"}},p||{{}}));}}
 function unlock(method){{
 try{{localStorage.setItem(STORAGE_KEY,"1");}}catch(e){{}}
@@ -642,7 +668,7 @@ if(gateForm.website&&gateForm.website.value)return;
 var gateBtn=gateForm.querySelector("button[type=submit]");
 if(gateBtn)gateBtn.disabled=true;
 var gateChapter=gateForm.getAttribute("data-chapter")||"{config.guide_label}";
-postLead({{email:gateForm.email.value.trim(),source:SOURCE,brand:BRAND,guide_chapter:gateChapter,website:""}})
+postLead({{email:gateForm.email.value.trim(),source:SOURCE,brand:BRAND,guide_chapter:gateChapter,persona:getPersona(),website:""}})
 .then(function(){{unlock("email_form");}})
 .catch(function(){{gateForm.submit();}});
 }});
@@ -654,7 +680,7 @@ if(!email||!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){{alert("Please enter a
 if(form.website&&form.website.value)return;
 var errEl=form.querySelector(".rl-guide-email-capture-error");
 if(errEl)errEl.style.display="none";
-postLead({{email:email,source:SOURCE,brand:BRAND,guide_chapter:form.guide_chapter.value,website:form.website.value}})
+postLead({{email:email,source:SOURCE,brand:BRAND,guide_chapter:form.guide_chapter.value,persona:getPersona(),website:form.website.value}})
 .then(function(){{
 form.style.display="none";
 var success=document.getElementById(form.id+"-success");
@@ -844,6 +870,211 @@ def build_head(title: str, description: str, canonical: str,
 </head>'''
 
 
+def build_persona_quiz(content: dict, config: GuideConfig = ROAD_GUIDE) -> str:
+    """Build the two-question 'find your track' quiz for the pillar page.
+
+    Two axes, deliberately: the event answer picks the *track* (which arc you
+    read), the hours answer picks the *rider type* (which inline variants you
+    see). Both persist to localStorage so every chapter page downstream and
+    every lead-capture payload knows who it's talking to.
+    """
+    tracks_by_persona = {
+        t.get("persona"): t for t in content.get("tracks", []) if t.get("persona")
+    }
+    crit_track = tracks_by_persona.get("crit-racer")
+    if not crit_track:
+        return ""
+    track_url = _guide_url(config, crit_track["id"])
+    ch1_url = _guide_url(config, "what-is-road-racing")
+    ch2_url = _guide_url(config, "choosing-your-race")
+    persona_key = f"{config.local_storage_key_prefix}_persona"
+    event_prefix = config.ga4_event_label_prefix
+
+    return f'''<div class="rl-guide-quiz" id="rl-guide-quiz">
+    <div class="rl-guide-quiz-kicker">FIND YOUR TRACK</div>
+    <h3 class="rl-guide-quiz-title">Two questions, then the right way through this guide</h3>
+    <div class="rl-guide-quiz-q" data-q="event">
+      <div class="rl-guide-quiz-q-label">What are you actually training for?</div>
+      <div class="rl-guide-quiz-options">
+        <button class="rl-guide-quiz-opt" data-value="crit-racer">Crits or short circuit races</button>
+        <button class="rl-guide-quiz-opt" data-value="tester">Time trials or hillclimbs</button>
+        <button class="rl-guide-quiz-opt" data-value="fondo">A fondo, century, or sportive</button>
+        <button class="rl-guide-quiz-opt" data-value="mountain">A mountain gran fondo</button>
+        <button class="rl-guide-quiz-opt" data-value="unsure">Haven't picked yet</button>
+      </div>
+    </div>
+    <div class="rl-guide-quiz-q" data-q="hours">
+      <div class="rl-guide-quiz-q-label">How many hours a week can you actually train?</div>
+      <div class="rl-guide-quiz-options">
+        <button class="rl-guide-quiz-opt" data-value="autobus">0-5</button>
+        <button class="rl-guide-quiz-opt" data-value="finisher">5-12</button>
+        <button class="rl-guide-quiz-opt" data-value="sharp-end">12-18</button>
+        <button class="rl-guide-quiz-opt" data-value="racer">18+</button>
+      </div>
+    </div>
+    <div class="rl-guide-quiz-result" id="rl-guide-quiz-result" style="display:none">
+      <div class="rl-guide-quiz-result-kicker">YOUR TRACK</div>
+      <div class="rl-guide-quiz-result-title" id="rl-guide-quiz-result-title"></div>
+      <p class="rl-guide-quiz-result-text" id="rl-guide-quiz-result-text"></p>
+      <a class="rl-guide-btn rl-guide-btn--primary" id="rl-guide-quiz-result-cta" href="{ch1_url}">START</a>
+    </div>
+    <p class="rl-guide-quiz-skip">Know your answer already? Go straight to <a href="{track_url}">{esc(crit_track["title"])}</a> or <a href="{ch1_url}">Chapter 1</a>.</p>
+  </div>
+  <script>
+  (function(){{
+  "use strict";
+  var quiz=document.getElementById("rl-guide-quiz");
+  if(!quiz)return;
+  var PERSONA_KEY="{persona_key}";
+  var picks={{event:null,hours:null}};
+  var RESULTS={{
+  "crit-racer":{{title:"The Crit Racer's Track",text:"Short, anaerobic, decided in corners. You get a different arc through this guide \\u2014 flat hours, sharpened intensity, and pack craft as the main event.",cta:"START YOUR TRACK",url:"{track_url}"}},
+  "tester":{{title:"The Crit Racer's Track (tester's fork)",text:"Same short-event build \\u2014 flat hours, sharpened intensity \\u2014 minus the pack craft, double the pacing discipline. The track calls out your fork where it matters.",cta:"START YOUR TRACK",url:"{track_url}"}},
+  "fondo":{{title:"The Standard Arc",text:"The guide was built spine-first for your event. Chapters 1 through 8, in order \\u2014 your weekly structure is set below and follows you through every chapter.",cta:"START CHAPTER 1",url:"{ch1_url}"}},
+  "mountain":{{title:"The Standard Arc, Climbing Emphasis",text:"Read in order, but linger in chapter 2 (time cuts, altitude) and chapter 3 (power-to-weight). The mountain decides with arithmetic; arrive knowing yours.",cta:"START CHAPTER 1",url:"{ch1_url}"}},
+  "unsure":{{title:"Start Where the Guide Starts: Pick the Race",text:"Chapter 2 exists for exactly this \\u2014 394 rated races, your hours, and an honest match between them. Decide the event first; the training writes itself after.",cta:"CHOOSE YOUR RACE",url:"{ch2_url}"}}
+  }};
+  function track(n,p){{if(typeof gtag==="function")gtag("event",n,Object.assign({{transport_type:"beacon"}},p||{{}}));}}
+  function render(){{
+  if(!picks.event||!picks.hours)return;
+  try{{localStorage.setItem(PERSONA_KEY,picks.event);}}catch(e){{}}
+  try{{localStorage.setItem("rl_guide_rider_type",picks.hours);}}catch(e){{}}
+  var riderBtn=document.querySelector('.rl-guide-rider-btn[data-rider="'+picks.hours+'"]');
+  if(riderBtn)riderBtn.click();
+  var r=RESULTS[picks.event]||RESULTS.unsure;
+  document.getElementById("rl-guide-quiz-result-title").textContent=r.title;
+  document.getElementById("rl-guide-quiz-result-text").textContent=r.text;
+  var cta=document.getElementById("rl-guide-quiz-result-cta");
+  cta.textContent=r.cta;cta.href=r.url;
+  document.getElementById("rl-guide-quiz-result").style.display="block";
+  track("{event_prefix}_quiz_complete",{{persona:picks.event,rider:picks.hours}});
+  }}
+  quiz.querySelectorAll(".rl-guide-quiz-q").forEach(function(q){{
+  var axis=q.getAttribute("data-q");
+  q.querySelectorAll(".rl-guide-quiz-opt").forEach(function(b){{
+  b.addEventListener("click",function(){{
+  q.querySelectorAll(".rl-guide-quiz-opt").forEach(function(o){{o.classList.remove("rl-guide-quiz-opt--active");}});
+  b.classList.add("rl-guide-quiz-opt--active");
+  picks[axis]=b.getAttribute("data-value");
+  render();
+  }});
+  }});
+  }});
+  }})();
+  </script>'''
+
+
+def build_track_jsonld(track: dict, content: dict,
+                       config: GuideConfig = ROAD_GUIDE) -> str:
+    """Article + BreadcrumbList JSON-LD for a rider-track page."""
+    canonical = f"{SITE_BASE_URL}{_guide_url(config, track['id'])}"
+    article = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": track["title"],
+        "description": track.get("meta_description", content.get("meta_description", "")),
+        "url": canonical,
+        "isPartOf": {"@type": "WebPage", "url": f"{SITE_BASE_URL}{_guide_url(config)}"},
+        "author": {"@type": "Organization", "name": "Roadie Labs"},
+        "publisher": {"@type": "Organization", "name": "Roadie Labs"},
+    }
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": config.guide_label,
+             "item": f"{SITE_BASE_URL}{_guide_url(config)}"},
+            {"@type": "ListItem", "position": 3, "name": track["title"], "item": canonical},
+        ],
+    }
+    return (
+        f'<script type="application/ld+json">{json.dumps(article)}</script>\n'
+        f'<script type="application/ld+json">{json.dumps(breadcrumb)}</script>'
+    )
+
+
+def generate_track_page(track: dict, content: dict,
+                        guide_css: str, guide_js: str,
+                        cluster_css: str, cluster_js: str, inline: bool,
+                        config: GuideConfig = ROAD_GUIDE) -> str:
+    """Generate a rider-track page: a persona's curated path through the guide.
+
+    Tracks are free (never gated) — they're the personalization layer that
+    routes readers into the shared chapters, not premium content themselves.
+    """
+    canonical = f"{SITE_BASE_URL}{_guide_url(config, track['id'])}"
+    css_html = f'<style>{guide_css}\n{cluster_css}</style>'
+    js_html = f'<script>{guide_js}\n{cluster_js}</script>'
+
+    nav = get_site_header_html(active="products")
+    breadcrumb = build_chapter_breadcrumb(track, config)
+    rider_selector = build_rider_selector(content)
+    body = build_chapter_content(track)
+    email_capture = build_chapter_email_capture(track)
+    finale = _build_config_ctas(config, config.cta_set.finale_blocks)
+    jsonld = build_track_jsonld(track, content, config)
+    footer = get_mega_footer_html()
+
+    subtitle = esc(track.get("subtitle", ""))
+    subtitle_html = f'<p class="rl-guide-chapter-subtitle">{subtitle}</p>' if subtitle else ''
+    hero = f'''<div class="rl-guide-chapter-hero rl-guide-chapter-hero--dark">
+      <div class="rl-guide-chapter-title-block">
+        <span class="rl-guide-chapter-num">RIDER TRACK</span>
+        <h2 class="rl-guide-chapter-title">{esc(track["title"])}</h2>
+        {subtitle_html}
+      </div>
+    </div>'''
+
+    back_link = f'''<div class="rl-guide-track-back">
+      <a href="{_guide_url(config)}">&larr; All chapters &amp; tracks</a>
+    </div>'''
+
+    head = build_head(
+        title=track.get("seo_title", f"{track['title']} — {config.guide_label}"),
+        description=track.get("meta_description", content.get("meta_description", "")),
+        canonical=canonical,
+        css_html=css_html,
+        jsonld=jsonld,
+        content=content,
+    )
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+{head}
+<body>
+
+<div class="rl-neo-brutalist-page" id="rl-guide-page">
+  {nav}
+
+  {breadcrumb}
+
+  <div class="rl-guide-chapter" data-track="{esc(track["id"])}">
+    {hero}
+
+    {rider_selector}
+
+    {body}
+
+    {email_capture}
+
+    {back_link}
+  </div>
+
+  {finale}
+</div>
+
+{footer}
+
+{js_html}
+
+<script>{get_site_header_js()}</script>
+
+{get_consent_banner_html()}
+</body>
+</html>'''
+
+
 def generate_pillar_page(content: dict, guide_css: str, guide_js: str,
                          cluster_css: str, cluster_js: str, inline: bool,
                          config: GuideConfig = ROAD_GUIDE) -> str:
@@ -865,6 +1096,7 @@ def generate_pillar_page(content: dict, guide_css: str, guide_js: str,
   </div>'''
 
     hero = build_pillar_hero(content)
+    persona_quiz = build_persona_quiz(content, config)
     rider_selector = build_rider_selector(content)
     chapter_grid = build_chapter_grid(content["chapters"], config)
     ctas = build_pillar_cta_section(config)
@@ -892,6 +1124,8 @@ def generate_pillar_page(content: dict, guide_css: str, guide_js: str,
   {breadcrumb}
 
   {hero}
+
+  {persona_quiz}
 
   {rider_selector}
 
@@ -1567,7 +1801,17 @@ def generate_cluster(output_dir: Path = None, inline: bool = False,
         gated_label = " (gated)" if chapter.get("gated") else " (free)"
         print(f"  Ch {chapter['number']}: {ch_file} ({len(ch_html):,} bytes){gated_label}")
 
-    page_count = 1 + len(chapters)
+    # 3. Generate rider-track pages (free persona paths through the chapters)
+    for track in content.get("tracks", []):
+        t_dir = output_dir / track["id"]
+        t_dir.mkdir(parents=True, exist_ok=True)
+        t_html = generate_track_page(track, content, guide_css, guide_js,
+                                     cluster_css, cluster_js, inline, config)
+        t_file = t_dir / "index.html"
+        t_file.write_text(t_html, encoding="utf-8")
+        print(f"  Track: {t_file} ({len(t_html):,} bytes) (free)")
+
+    page_count = 1 + len(chapters) + len(content.get("tracks", []))
     if config.include_configurator:
         cfg_dir = output_dir / "race-prep-configurator"
         cfg_dir.mkdir(parents=True, exist_ok=True)
