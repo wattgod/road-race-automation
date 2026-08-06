@@ -1,5 +1,6 @@
 """Tests for the RSS feed generator."""
 
+import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -7,6 +8,7 @@ import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 FEED_FILE = PROJECT_ROOT / "web" / "feed" / "races.xml"
+RACE_INDEX = PROJECT_ROOT / "web" / "race-index.json"
 
 _feed_skip = pytest.mark.skipif(
     not FEED_FILE.exists(),
@@ -69,11 +71,15 @@ class TestFeedFile:
         assert 'rel="self"' in content
         assert "races.xml" in content
 
-    def test_has_328_items(self):
+    def test_item_count_matches_authoritative_index(self):
         tree = ET.parse(str(FEED_FILE))
         channel = tree.getroot().find("channel")
         items = channel.findall("item")
-        assert len(items) == 427, f"Expected 427 items, got {len(items)}"
+        races = json.loads(RACE_INDEX.read_text(encoding="utf-8"))
+        assert len(items) == len(races), (
+            f"Expected one feed item for each of {len(races)} indexed races, "
+            f"got {len(items)}"
+        )
 
     def test_items_have_required_fields(self):
         tree = ET.parse(str(FEED_FILE))
@@ -134,7 +140,7 @@ class TestFeedFile:
 
     def test_file_size_reasonable(self):
         size = FEED_FILE.stat().st_size
-        # 427 items should be ~100-500KB
+        # The full catalog should remain substantial but comfortably below 500KB.
         assert 50_000 < size < 500_000, f"Unexpected feed size: {size:,} bytes"
 
 
