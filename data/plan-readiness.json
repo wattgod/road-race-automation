@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T03:26:02",
+  "generated_at": "2026-08-06T03:30:51",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3365,16 +3365,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-27",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 46,
+      "race_date": "2027-06-26",
+      "blockers": []
     },
     "granfondo-matildica": {
       "slug": "granfondo-matildica",
@@ -3421,16 +3419,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-05",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 43,
+      "race_date": "2027-06-06",
+      "blockers": []
     },
     "granfondo-novi-sad": {
       "slug": "granfondo-novi-sad",
@@ -7522,6 +7518,7 @@
     "gran-fondo-la-fausto-coppi",
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
+    "granfondo-livigno-ale",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
@@ -7547,6 +7544,7 @@
     "adac-velotour",
     "gfny-walnut-creek",
     "amstel-gold-race-toerversie",
+    "granfondo-moser",
     "cyprus-gran-fondo",
     "alpe-gran-fondo",
     "bordeaux-paris-ultra-cycling",
@@ -7696,7 +7694,6 @@
     "flandrien-ride",
     "gfny-grand-ballon",
     "gran-fondo-suisse",
-    "granfondo-livigno-ale",
     "granfondo-serra-da-estrela",
     "haervejslobet",
     "iron-horse-bicycle-classic",
@@ -7830,7 +7827,6 @@
     "eroica-california",
     "granfondo-bratislava",
     "granfondo-mont-sainte-anne",
-    "granfondo-moser",
     "race-across-portugal",
     "round-denmark-bike-race",
     "cape-rouleur",
@@ -7917,6 +7913,7 @@
     "gran-fondo-la-fausto-coppi",
     "gran-fondo-asheville",
     "sportful-dolomiti-race",
+    "granfondo-livigno-ale",
     "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
@@ -7939,6 +7936,7 @@
     "letape-czech-republic",
     "adac-velotour",
     "amstel-gold-race-toerversie",
+    "granfondo-moser",
     "cyprus-gran-fondo",
     "bordeaux-paris-ultra-cycling",
     "strade-bianche-gran-fondo",
@@ -8000,13 +7998,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 155,
+    "ready": 157,
     "content_present": 394,
     "validator_clean": 407,
-    "pilot_candidates": 94,
+    "pilot_candidates": 96,
     "by_tier_ready": {
       "1": 12,
-      "2": 126,
+      "2": 128,
       "3": 17,
       "4": 0
     }

@@ -144,9 +144,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
+      "verified": "2026-08-06",
       "source": "https://www.velocharlevoix.ca/evenement-cycliste/granfondo/",
-      "notes": "2026 edition confirmed run May 31, 2026 from Centre Éducatif Saint-Aubin, Baie-Saint-Paul (61 km / 87 km), with live 2026 registration via Endorphine. Verified 2026-07-24 via codex gpt-5.6-sol foreground research, editorial wave 10."
+      "notes": "The 2026 edition ran May 31 from Centre Éducatif Saint-Aubin in Baie-Saint-Paul with 61 km and 87 km routes. The organizer explicitly defines it as a timed personal challenge with no podium and no competitive pressure. It remains an active cycling event, but that format is outside the Roadie Labs timed/scored race-plan catalog."
     },
     "catalog_flags": {
       "status_note": "IDENTITY CORRECTION (2026-07-24): all four previously attached YouTube videos were confirmed wrong-event and purged. 'Critérium GP Charlevoix 2018' and the 'Canada Cup #1' interview footage document the separate Grand Prix Cycliste de Charlevoix (an elite multi-stage competition run by the same club the same weekend) and a mountain-bike Canada Cup round, not this cyclosportive — the rider_intel extracted from that Canada Cup interview (hardtail gear notes, pacing tips) was also removed since it describes a different discipline and event entirely. The other two videos ('Vélo Charlevoix août 2016' and a 2017 'Grand Rendez-Vous Cyclistes' TV segment) could not be confirmed as depicting this specific event either, so the whole youtube_data block was cleared rather than left half-verified.",
