@@ -1607,58 +1607,167 @@
             },
             {
               "type": "calculator",
-              "calculator_id": "workout-fueling",
-              "title": "Workout Fueling Calculator",
-              "description": "Plan your fueling based on workout duration and intensity.",
+              "calculator_id": "race-fueling",
+              "title": "Race-Day Fueling Calculator",
+              "description": "Your carbohydrate, fluid, and sodium targets for a specific event — then an hour-by-hour plan and a pack list. Carb rate is positioned by your power-to-weight inside physiology brackets; fluid and sodium come from your bodyweight, the heat, and how much you sweat.",
               "inputs": [
                 {
-                  "id": "wf-duration",
-                  "label": "Duration (hours)",
+                  "id": "rf-weight",
+                  "label": "Body weight",
                   "type": "number",
-                  "placeholder": "e.g., 4",
+                  "placeholder": "e.g., 72",
+                  "min": 30,
+                  "max": 500
+                },
+                {
+                  "id": "rf-unit",
+                  "label": "Units",
+                  "type": "toggle",
+                  "options": [
+                    {
+                      "value": "kg",
+                      "label": "kg"
+                    },
+                    {
+                      "value": "lbs",
+                      "label": "lbs"
+                    }
+                  ]
+                },
+                {
+                  "id": "rf-hours",
+                  "label": "Expected finish time (hours)",
+                  "type": "number",
+                  "placeholder": "e.g., 4.5",
                   "min": 0.5,
                   "max": 24
                 },
                 {
-                  "id": "wf-intensity",
-                  "label": "Intensity",
+                  "id": "rf-ftp",
+                  "label": "FTP (watts)",
+                  "type": "number",
+                  "placeholder": "e.g., 250",
+                  "optional": true,
+                  "min": 50,
+                  "max": 600
+                },
+                {
+                  "id": "rf-climate",
+                  "label": "Race-day heat",
                   "type": "select",
                   "options": [
                     {
-                      "value": "z2",
-                      "label": "Z2 Easy"
+                      "value": "cool",
+                      "label": "Cool (<10°C)"
                     },
                     {
-                      "value": "tempo",
-                      "label": "Tempo"
+                      "value": "mild",
+                      "label": "Mild (10-18°C)"
                     },
                     {
-                      "value": "race",
-                      "label": "Race Pace"
+                      "value": "warm",
+                      "label": "Warm (18-26°C)"
                     },
                     {
-                      "value": "high",
-                      "label": "High Intensity"
+                      "value": "hot",
+                      "label": "Hot (26-32°C)"
+                    },
+                    {
+                      "value": "extreme",
+                      "label": "Extreme (>32°C)"
+                    }
+                  ]
+                },
+                {
+                  "id": "rf-sweat",
+                  "label": "How much you sweat",
+                  "type": "select",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light — rarely soaked"
+                    },
+                    {
+                      "value": "moderate",
+                      "label": "Moderate — average"
+                    },
+                    {
+                      "value": "heavy",
+                      "label": "Heavy — salt-crusted kit"
+                    }
+                  ]
+                },
+                {
+                  "id": "rf-cramp",
+                  "label": "Cramp history",
+                  "type": "select",
+                  "options": [
+                    {
+                      "value": "rarely",
+                      "label": "Rarely cramp"
+                    },
+                    {
+                      "value": "sometimes",
+                      "label": "Sometimes cramp"
+                    },
+                    {
+                      "value": "frequent",
+                      "label": "Cramp often"
+                    }
+                  ]
+                },
+                {
+                  "id": "rf-format",
+                  "label": "Preferred fuel format",
+                  "type": "select",
+                  "options": [
+                    {
+                      "value": "mixed",
+                      "label": "Mixed — a bit of everything"
+                    },
+                    {
+                      "value": "liquid",
+                      "label": "Mostly drink mix"
+                    },
+                    {
+                      "value": "gels",
+                      "label": "Mostly gels"
+                    },
+                    {
+                      "value": "solid",
+                      "label": "Mostly real food"
                     }
                   ]
                 }
               ],
               "output_fields": [
                 {
+                  "id": "carb-rate",
+                  "label": "Carb target"
+                },
+                {
                   "id": "total-carbs",
-                  "label": "Total Carbs"
+                  "label": "Total carbs"
                 },
                 {
-                  "id": "fuel-rate",
-                  "label": "Fueling Rate"
+                  "id": "fluid-rate",
+                  "label": "Fluid target"
                 },
                 {
-                  "id": "hydration",
-                  "label": "Hydration"
+                  "id": "total-fluid",
+                  "label": "Total fluid"
                 },
                 {
-                  "id": "gels",
-                  "label": "Carry"
+                  "id": "sodium-rate",
+                  "label": "Sodium target"
+                },
+                {
+                  "id": "salt-caps",
+                  "label": "Salt capsules"
+                },
+                {
+                  "id": "bracket",
+                  "label": "Intensity bracket"
                 }
               ]
             },
