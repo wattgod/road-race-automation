@@ -1860,6 +1860,23 @@ def build_guide_css() -> str:
 .rl-guide-calc-result-value{display:block;font-size:18px;font-weight:700;color:#333333}
 .rl-guide-calc-input--error{border-color:#8b1a1a}
 .rl-guide-calc-error{color:#8b1a1a;font-size:11px;padding:0 20px 8px;display:none}
+.rl-guide-calc-custom{margin-top:20px}
+.rl-guide-calc-plan-note{font-size:11px;line-height:1.5;color:#555555;margin:8px 0 12px}
+.rl-guide-calc-plan-title{font-family:'Sometype Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a1a1a;margin:16px 0 8px;padding-bottom:4px;border-bottom:2px solid #1a1a1a}
+.rl-guide-calc-plan-scroll{overflow-x:auto}
+.rl-guide-calc-plan-table{width:100%;border-collapse:collapse;font-size:12px}
+.rl-guide-calc-plan-table th{font-family:'Sometype Mono',monospace;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:left;padding:8px 10px;background:#1a1a1a;color:#f5f5f0;white-space:nowrap}
+.rl-guide-calc-plan-table td{padding:8px 10px;border-bottom:1px solid #d0d0c8;color:#1a1a1a;vertical-align:top}
+.rl-guide-calc-plan-hr{display:inline-block;min-width:22px;height:22px;line-height:22px;text-align:center;background:#f5f5f0;border:2px solid #1a1a1a;font-weight:700;font-size:11px}
+.rl-guide-calc-plan-total td{font-weight:700;border-top:2px solid #1a1a1a;border-bottom:none;background:#f5f5f0}
+.rl-guide-calc-plan-item{display:inline-block;font-size:10px;padding:2px 6px;margin:1px 2px 1px 0;border:1px solid #555555;white-space:nowrap}
+.rl-guide-calc-plan-item--gel{background:#1a1a1a;color:#f5f5f0;border-color:#1a1a1a}
+.rl-guide-calc-plan-item--drink{background:#f5f5f0;color:#1a1a1a}
+.rl-guide-calc-plan-item--food{background:#d0d0c8;color:#1a1a1a;border-color:#1a1a1a}
+.rl-guide-calc-pack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:4px}
+.rl-guide-calc-pack-item{padding:12px;border:2px solid #1a1a1a;background:#f5f5f0;text-align:center}
+.rl-guide-calc-pack-qty{display:block;font-size:22px;font-weight:700;color:#1a1a1a;line-height:1.1}
+.rl-guide-calc-pack-label{display:block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555555;margin-top:4px}
 
 /* ── Zone Visualizer ── */
 .rl-guide-zone-viz{margin:0 0 24px}
@@ -2728,7 +2745,7 @@ b.classList.add("rl-guide-calc-toggle-btn--active");
 if(btn)btn.addEventListener("click",function(){
 if(calcType==="ftp-zones")computeFtpZones(calc,output);
 else if(calcType==="daily-nutrition")computeDailyNutrition(calc,output);
-else if(calcType==="workout-fueling")computeWorkoutFueling(calc,output);
+else if(calcType==="race-fueling")computeRaceFueling(calc,output);
 });
 });
 function computeFtpZones(calc,output){
@@ -2797,24 +2814,100 @@ setOut("fat",Math.round(kg*0.8)+"-"+Math.round(kg*1.2)+"g");
 setOut("calories",Math.round(kg*1.6*4+kg*cm[0]*4+kg*0.8*9)+"-"+Math.round(kg*2.2*4+kg*cm[1]*4+kg*1.2*9)+" kcal");
 track("guide_calculator_use",{type:"daily_nutrition",weight_kg:Math.round(kg)});
 }
-function computeWorkoutFueling(calc,output){
-clearCalcErrors(calc);
-var di=calc.querySelector("#rl-calc-wf-duration");
-var dur=di?parseFloat(di.value):0;
-if(!dur||dur<0.5||dur>24){
-if(di)di.classList.add("rl-guide-calc-input--error");
-showCalcError(calc,"Enter a valid duration (0.5-24 hours).");
-return;
+var RF_HEAT_MULT={cool:0.7,mild:1.0,warm:1.3,hot:1.6,extreme:1.9};
+var RF_SWEAT_MULT={light:0.7,moderate:1.0,heavy:1.3};
+var RF_FORMAT_SPLITS={liquid:{drink:0.80,gel:0.15,food:0.05},gels:{drink:0.20,gel:0.70,food:0.10},mixed:{drink:0.30,gel:0.40,food:0.30},solid:{drink:0.20,gel:0.20,food:0.60}};
+var RF_SODIUM_BASE=1000,RF_SODIUM_HEAT_BOOST={hot:200,extreme:300},RF_SODIUM_CRAMP_BOOST={sometimes:150,frequent:300};
+function rfCarbs(weightKg,ftp,hours){
+var bLo,bHi,bracket;
+if(hours<=4){bLo=80;bHi=100;bracket="High-intensity race pace";}
+else if(hours<=8){bLo=60;bHi=80;bracket="Endurance pace";}
+else if(hours<=12){bLo=50;bHi=70;bracket="Lower intensity";}
+else if(hours<=16){bLo=40;bHi=60;bracket="Ultra pace";}
+else{bLo=30;bHi=50;bracket="Survival pace";}
+var rate;
+if(ftp&&ftp>0){
+var wkg=ftp/weightKg;
+var lin=Math.max(0,Math.min(1,(wkg-1.5)/(4.5-1.5)));
+rate=Math.round(bLo+Math.pow(lin,1.4)*(bHi-bLo));
+}else{rate=Math.round((bLo+bHi)/2);}
+return{rate:rate,totalCarbs:Math.round(rate*hours),bracket:bracket,bracketLo:bLo,bracketHi:bHi,personalized:!!(ftp&&ftp>0)};
 }
-var ints=calc.querySelector("#rl-calc-wf-intensity");
-var rate={z2:50,tempo:65,race:85,high:75}[ints?ints.value:"z2"]||50;
-var tc=Math.round(dur*rate),hy=Math.round(dur*500);
+function rfSweat(weightKg,heat,tendency,hours){
+var base=weightKg*0.013;
+var intensity=hours<=4?1.15:hours<=8?1.0:hours<=12?0.9:hours<=16?0.8:0.7;
+var sr=base*(RF_HEAT_MULT[heat]||1.0)*(RF_SWEAT_MULT[tendency]||1.0)*intensity;
+return{sweatRate:sr,fluidLoMl:Math.round(sr*0.6*1000),fluidHiMl:Math.round(sr*0.8*1000)};
+}
+function rfSodium(sweatRate,heat,cramp){
+var conc=RF_SODIUM_BASE+(RF_SODIUM_HEAT_BOOST[heat]||0)+(RF_SODIUM_CRAMP_BOOST[cramp]||0);
+return Math.round(sweatRate*conc);
+}
+function rfHourlyPlan(hours,carbRate,fluidMlHr,sodiumMgHr,format){
+var total=Math.ceil(hours),splits=RF_FORMAT_SPLITS[format]||RF_FORMAT_SPLITS.mixed,plan=[];
+for(var h=1;h<=total;h++){
+var mult=h===1?0.8:(h===total&&hours%1>0)?hours%1:h===total?0.8:1.0;
+var hCarbs=Math.round(carbRate*mult),hFluid=Math.round(fluidMlHr*mult),hSodium=Math.round(sodiumMgHr*mult);
+var dCarbs=Math.round(hCarbs*splits.drink),gCarbs=Math.round(hCarbs*splits.gel),fCarbs=hCarbs-dCarbs-gCarbs,items=[];
+if(gCarbs>0){var gc=Math.max(1,Math.round(gCarbs/25));items.push({type:"gel",n:gc,label:gc+" gel"+(gc>1?"s":"")+" ("+(gc*25)+"g)"});}
+if(dCarbs>0){var dm=Math.round(dCarbs/40*500);items.push({type:"drink",ml:dm,label:dm+"ml mix ("+dCarbs+"g)"});}
+if(fCarbs>0){var bc=Math.max(1,Math.round(fCarbs/35));items.push({type:"food",n:bc,label:bc+" bar"+(bc>1?"s":"")+" ("+(bc*35)+"g)"});}
+plan.push({hour:h,carbs:hCarbs,fluid:hFluid,sodium:hSodium,items:items});
+}
+return plan;
+}
+function computeRaceFueling(calc,output){
+clearCalcErrors(calc);
+var wi=calc.querySelector("#rl-calc-rf-weight");
+var w=wi?parseFloat(wi.value):0;
+if(!w||w<30||w>500){if(wi)wi.classList.add("rl-guide-calc-input--error");showCalcError(calc,"Enter a valid weight (30-500).");return;}
+var tg=calc.querySelector(".rl-guide-calc-toggle[data-field='rf-unit']");
+var u="kg";if(tg){var a=tg.querySelector(".rl-guide-calc-toggle-btn--active");if(a)u=a.getAttribute("data-value")||"kg";}
+var kg=u==="lbs"?w*0.453592:w;
+var hi=calc.querySelector("#rl-calc-rf-hours");
+var hours=hi?parseFloat(hi.value):0;
+if(!hours||hours<0.5||hours>24){if(hi)hi.classList.add("rl-guide-calc-input--error");showCalcError(calc,"Enter an expected finish time (0.5-24 hours).");return;}
+var fi=calc.querySelector("#rl-calc-rf-ftp");
+var ftp=fi&&fi.value?parseFloat(fi.value):0;
+function sel(id,d){var e=calc.querySelector(id);return e&&e.value?e.value:d;}
+var heat=sel("#rl-calc-rf-climate","mild"),tendency=sel("#rl-calc-rf-sweat","moderate");
+var cramp=sel("#rl-calc-rf-cramp","rarely"),format=sel("#rl-calc-rf-format","mixed");
+var carbs=rfCarbs(kg,ftp,hours);
+var sweat=rfSweat(kg,heat,tendency,hours);
+var sodiumMgHr=rfSodium(sweat.sweatRate,heat,cramp);
+var fluidMlHr=Math.round((sweat.fluidLoMl+sweat.fluidHiMl)/2);
+var plan=rfHourlyPlan(hours,carbs.rate,fluidMlHr,sodiumMgHr,format);
 output.style.display="block";
-setOut("total-carbs",tc+"g");
-setOut("fuel-rate",rate+"g/hr");
-setOut("hydration",(hy/1000).toFixed(1)+"L ("+Math.round(hy/500)+" bottles)");
-setOut("gels",Math.ceil(tc/25)+" gels (or equivalent)");
-track("guide_calculator_use",{type:"workout_fueling",duration:dur});
+setOut("carb-rate",carbs.rate+"g/hr");
+setOut("total-carbs",carbs.totalCarbs.toLocaleString()+"g");
+setOut("fluid-rate",sweat.fluidLoMl+"-"+sweat.fluidHiMl+"ml/hr");
+setOut("total-fluid","~"+(Math.round(sweat.fluidHiMl*hours/1000*10)/10)+"L");
+setOut("sodium-rate",sodiumMgHr+"mg/hr");
+setOut("salt-caps","~"+Math.ceil(sodiumMgHr*hours/250)+" (250mg each)");
+setOut("bracket",carbs.bracket+" ("+carbs.bracketLo+"-"+carbs.bracketHi+"g/hr)");
+var custom=output.querySelector(".rl-guide-calc-custom");
+if(!custom){custom=document.createElement("div");custom.className="rl-guide-calc-custom";output.appendChild(custom);}
+var html="";
+html+='<div class="rl-guide-calc-plan-note">'+(carbs.personalized?"Personalized from your weight and FTP":"Enter your FTP for a sharper carb target")+'. Carb targets sit inside exercise-physiology brackets by duration (Jeukendrup 2014); start low in training and build toward these.</div>';
+html+='<div class="rl-guide-calc-plan-title">Hour by Hour</div>';
+html+='<div class="rl-guide-calc-plan-scroll"><table class="rl-guide-calc-plan-table"><thead><tr><th>Hr</th><th>Carbs</th><th>Fluid</th><th>Sodium</th><th>What to take</th></tr></thead><tbody>';
+var tC=0,tF=0,tS=0,totGels=0,totDrinkMl=0,totBars=0;
+plan.forEach(function(p){
+tC+=p.carbs;tF+=p.fluid;tS+=p.sodium;
+var its=p.items.map(function(it){if(it.type==="gel")totGels+=it.n;else if(it.type==="drink")totDrinkMl+=it.ml;else if(it.type==="food")totBars+=it.n;return '<span class="rl-guide-calc-plan-item rl-guide-calc-plan-item--'+it.type+'">'+it.label+'</span>';}).join(" ");
+html+='<tr><td><span class="rl-guide-calc-plan-hr">'+p.hour+'</span></td><td>'+p.carbs+'g</td><td>'+p.fluid+'ml</td><td>'+p.sodium+'mg</td><td>'+its+'</td></tr>';
+});
+html+='<tr class="rl-guide-calc-plan-total"><td>Tot</td><td>'+tC+'g</td><td>'+(Math.round(tF/1000*10)/10)+'L</td><td>'+(Math.round(tS/1000*10)/10)+'g</td><td></td></tr>';
+html+='</tbody></table></div>';
+var saltCaps=Math.ceil(sodiumMgHr*hours/250);
+html+='<div class="rl-guide-calc-plan-title">What to Pack</div><div class="rl-guide-calc-pack-grid">';
+if(totGels>0)html+='<div class="rl-guide-calc-pack-item"><span class="rl-guide-calc-pack-qty">'+totGels+'</span><span class="rl-guide-calc-pack-label">Gels (25g)</span></div>';
+if(totDrinkMl>0)html+='<div class="rl-guide-calc-pack-item"><span class="rl-guide-calc-pack-qty">'+(Math.round(totDrinkMl/1000*10)/10)+'L</span><span class="rl-guide-calc-pack-label">Drink mix</span></div>';
+if(saltCaps>0)html+='<div class="rl-guide-calc-pack-item"><span class="rl-guide-calc-pack-qty">'+saltCaps+'</span><span class="rl-guide-calc-pack-label">Salt caps (250mg)</span></div>';
+if(totBars>0)html+='<div class="rl-guide-calc-pack-item"><span class="rl-guide-calc-pack-qty">'+totBars+'</span><span class="rl-guide-calc-pack-label">Bars / rice cakes</span></div>';
+html+='</div><div class="rl-guide-calc-plan-note">Pack 10-15% extra for spills and bonk insurance. Nothing new on race day — rehearse this on long rides first.</div>';
+custom.innerHTML=html;
+track("guide_calculator_use",{type:"race_fueling",hours:hours,personalized:carbs.personalized});
 }
 var RIDER_STORAGE="rl_guide_rider_type";
 var riderSelector=document.getElementById("rl-guide-rider-selector");
