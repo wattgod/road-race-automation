@@ -22,6 +22,8 @@
             "distance_mi": {"type": "number", "minimum": 0},
             "elevation_m": {"type": "number", "minimum": 0},
             "elevation_ft": {"type": "number", "minimum": 0},
+            "start_elevation_asl_ft": {"type": "number", "minimum": 0},
+            "avg_elevation_asl_ft": {"type": "number", "minimum": 0},
             "location": {"type": "string"},
             "location_badge": {"type": "string"},
             "country": {"type": "string"},
