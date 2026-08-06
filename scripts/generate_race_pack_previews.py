@@ -382,13 +382,14 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
         )
     elif distance >= 40:
         overlay['nutrition'] = (
-            f"Target 40\u201360g carbs/hour for {race_name}\u2019s {int(distance)} miles. "
-            f"Front-load calories in the first half. One bottle per hour minimum, more in heat."
+            f"Use training to rehearse an eating and drinking plan for {_poss(race_name)} "
+            f"{int(distance)} miles. Start early, use products you tolerate, and carry enough "
+            f"between the organizer\u2019s confirmed resupply points."
         )
     else:
         overlay['nutrition'] = (
-            "Standard hydration and fueling. One bottle per hour minimum. "
-            "Gel or bar every 45 minutes at race intensity."
+            "Use training to rehearse an eating and drinking plan that matches the "
+            "ride duration, intensity, weather, and confirmed resupply points."
         )
 
     # ── Altitude ──
@@ -396,7 +397,7 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     if alt_score >= 7:
         elev_line = ''
         if elevation >= 1000:
-            elev_line = f"with {int(elevation):,}ft of climbing, much of it above 8,000ft"
+            elev_line = f"with {int(elevation):,}ft of climbing"
         alt_challenges = [c for c in challenges if any(w in c.lower() for w in ['altitude', 'elevation', 'feet', 'summit', 'thin air'])]
         challenge_line = ''
         if alt_challenges:
@@ -404,17 +405,16 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
 
         overlay['altitude'] = (
             f"{race_name} {elev_line + ' ' if elev_line else ''}"
-            f"demands altitude preparation. "
-            f"Arrive 5\u20137 days early for acclimatization. "
-            f"Expect 5\u201315% power reduction at altitude. "
-            f"Increase iron intake 4 weeks out. "
-            f"Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.{challenge_line}"
+            f"finishes high enough for reduced oxygen availability to affect sustainable "
+            f"power, pacing, and recovery. Use a conservative upper-mountain pacing plan, "
+            f"test any travel or acclimatization strategy before the event, and plan layers "
+            f"for changing conditions. Do not begin iron or other supplements without "
+            f"clinician-guided testing.{challenge_line}"
         )
     elif alt_score >= 4:
         overlay['altitude'] = (
-            f"Moderate altitude at {race_name}. "
-            f"Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. "
-            f"Hydrate aggressively."
+            f"Altitude may change sustainable power and recovery at {race_name}. "
+            f"Use conservative pacing and test any travel strategy before the event."
         )
 
     # ── Terrain ──
@@ -435,8 +435,8 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
         )
     elif tech_score >= 4:
         overlay['terrain'] = (
-            f"Mixed terrain at {race_name} requires surface adaptability. "
-            f"Include weekly rides on {terrain_str} to build confidence."
+            f"The course profile at {race_name} rewards specific practice. "
+            f"Include regular rides on {terrain_str} to build confidence."
             + (f" Expect: {terrain_detail}." if terrain_detail else "")
         )
 
@@ -514,7 +514,7 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
             return f"{int(distance)} miles on {terrain_str} burns energy faster than the distance suggests. Train the fade resistance now."
     elif category == 'VO2max':
         if elevation >= 5000:
-            return f"{int(elevation):,}ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+            return f"{int(elevation):,}ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
         else:
             return f"When someone attacks on {terrain_str}, you have 10 seconds to respond or you're off the back. This builds that response."
     elif category == 'HVLI_Extended':
@@ -529,7 +529,7 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
             return f"Race-pace efforts that mimic {_poss(race_name)} demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     elif category == 'TT_Threshold':
         if elev_per_mi >= 50:
-            return f"{elev_per_mi}ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+            return f"{elev_per_mi}ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
         else:
             return f"{_poss(race_name)} {terrain_str} rewards steady threshold power. Surging and recovering costs more watts than just holding."
     elif category == 'G_Spot':
@@ -540,23 +540,23 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
         else:
             return f"Varied gradients on {terrain_str} demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     elif category == 'Over_Under':
-        return f"At {race_name}, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+        return f"At {race_name}, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     elif category == 'Road_Specific':
         terrain_detail = ', '.join(terrain_types[:2]) if terrain_types else terrain_str
         # Truncate absurdly long terrain descriptions
         if len(terrain_detail) > 60:
             terrain_detail = terrain_detail[:60].rsplit(' ', 1)[0]
-        return f"{_poss(race_name)} {terrain_detail} forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for {int(distance)} miles."
+        return f"{_poss(race_name)} {terrain_detail} rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for {int(distance)} miles."
     elif category == 'Endurance':
         if distance >= 80:
             return f"Every hard session works better with a bigger aerobic base. At {int(distance)} miles, base fitness is the difference between racing and surviving."
         else:
             return f"Base fitness for {race_name}. Without this, the hard workouts break you down instead of building you up."
     elif category == 'Critical_Power':
-        return f"How long can you hold 105% FTP before you blow? At {race_name}, that number decides whether you bridge or get dropped."
+        return f"Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at {race_name}. Train them without letting those efforts derail the longer pacing plan."
     elif category == 'Anaerobic_Capacity':
         if elevation >= 3000:
-            return f"Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on {terrain_str}. If you haven't trained them, you'll crack."
+            return f"Steeper ramps, positioning, or pace changes on {terrain_str} can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
         else:
             return f"2-minute all-out efforts on {terrain_str}. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     elif category == 'Sprint_Neuromuscular':
@@ -568,7 +568,7 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
             return f"Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
     elif category == 'SFR_Muscle_Force':
         if elevation >= 3000:
-            return f"Low-cadence force work for {int(elevation):,}ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+            return f"Low-cadence force work supports {int(elevation):,}ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
         else:
             return f"Torque for headwinds and {terrain_str}. When cadence drops below 70rpm, muscular strength keeps the watts up."
     elif category == 'Cadence_Work':

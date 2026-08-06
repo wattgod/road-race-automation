@@ -210,7 +210,7 @@ COUNTRY_CODES = {
     'Morocco': 'MA', 'Monaco': 'MC', 'Luxembourg': 'LU',
     'Czech Republic': 'CZ', 'Slovenia': 'SI', 'Croatia': 'HR',
     'Kenya': 'KE', 'Slovakia': 'SK', 'Denmark': 'DK',
-    'UAE': 'AE', 'Dubai': 'AE', 'Israel': 'IL',
+    'UAE': 'AE', 'Dubai': 'AE', 'Israel': 'IL', 'Taiwan': 'TW',
 }
 
 
@@ -1874,12 +1874,15 @@ def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
         country = detect_country(location)
         place = {"@type": "Place", "name": location}
         if len(parts) >= 2:
-            place["address"] = {
+            address = {
                 "@type": "PostalAddress",
                 "addressLocality": parts[0],
-                "addressRegion": parts[1] if len(parts) > 2 else parts[-1],
                 "addressCountry": country,
             }
+            region = parts[1] if len(parts) > 2 else parts[-1]
+            if COUNTRY_CODES.get(region) != country:
+                address["addressRegion"] = region
+            place["address"] = address
         else:
             # Single-part location — still emit address to satisfy GSC
             place["address"] = {

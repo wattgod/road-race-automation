@@ -9,6 +9,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from generate_race_pack_previews import (  # noqa: E402
     calculate_category_scores,
     generate_preview,
+    generate_race_overlay,
+    generate_workout_context,
     get_top_categories,
 )
 
@@ -74,3 +76,37 @@ def test_generated_road_preview_uses_road_specific_context():
     assert "out of corners" in road_category["workout_context"]
     assert "rough stuff" not in road_category["workout_context"]
     assert "Gravel_Specific" not in str(preview)
+
+
+def test_high_altitude_overlay_avoids_unverified_medical_prescriptions():
+    race = {
+        "display_name": "Taiwan KOM Challenge",
+        "vitals": {"distance_mi": 65.2, "elevation_ft": 11155},
+        "terrain": {"primary": "paved mountain road"},
+        "climate": {
+            "challenges": ["High altitude changes pacing and recovery demands"],
+        },
+    }
+
+    overlay = generate_race_overlay(race, {"altitude": 10, "technical": 2})
+
+    assert "5\u201315%" not in overlay["altitude"]
+    assert "fluid loss" not in overlay["altitude"]
+    assert "Increase iron" not in overlay["altitude"]
+    assert "clinician-guided" in overlay["altitude"]
+
+
+def test_high_climb_context_does_not_invent_repeated_climbs_or_walking():
+    race = {
+        "display_name": "Taiwan KOM Challenge",
+        "vitals": {"distance_mi": 65.2, "elevation_ft": 11155},
+        "terrain": {"primary": "paved mountain road"},
+    }
+
+    vo2 = generate_workout_context(race, {}, "VO2max")
+    threshold = generate_workout_context(race, {}, "TT_Threshold")
+
+    assert "fifth climb" not in vo2
+    assert "repeated surges" not in vo2
+    assert "walk" not in threshold
+    assert "sustained" in threshold.lower()

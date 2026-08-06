@@ -283,6 +283,9 @@ class TestCountryDetection:
     def test_spain(self):
         assert detect_country("Girona, Spain") == "ES"
 
+    def test_taiwan(self):
+        assert detect_country("Hualien to Wuling Pass, Taiwan") == "TW"
+
     def test_parenthetical_state(self):
         assert detect_country("Pisgah, North Carolina (Pisgah National Forest)") == "US"
 
@@ -370,6 +373,14 @@ class TestJsonLD:
         jsonld = build_sports_event_jsonld(rd)
         addr = jsonld["location"]["address"]
         assert addr["addressCountry"] == "ES"
+
+    def test_sports_event_country_is_not_duplicated_as_region(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["location"] = "Hualien to Wuling Pass, Taiwan"
+        rd = normalize_race_data(sample_race_data)
+        jsonld = build_sports_event_jsonld(rd)
+        addr = jsonld["location"]["address"]
+        assert addr["addressCountry"] == "TW"
+        assert "addressRegion" not in addr
 
     def test_sports_event_start_date(self, normalized_data):
         jsonld = build_sports_event_jsonld(normalized_data)
