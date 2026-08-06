@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T21:02:52",
+  "generated_at": "2026-08-05T22:57:40",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -188,6 +188,23 @@
       "ready": true,
       "runway_weeks": 43,
       "race_date": "2027-06-03",
+      "blockers": []
+    },
+    "alpe-gran-fondo": {
+      "slug": "alpe-gran-fondo",
+      "tier": 3,
+      "score": 59,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 42,
+      "race_date": "2027-05-29",
       "blockers": []
     },
     "alpen-challenge-lenzerheide": {
@@ -4208,6 +4225,23 @@
       "race_date": "2027-03-20",
       "blockers": []
     },
+    "legendaria-gran-fondo-ontinyent": {
+      "slug": "legendaria-gran-fondo-ontinyent",
+      "tier": 2,
+      "score": 64,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 36,
+      "race_date": "2027-04-17",
+      "blockers": []
+    },
     "leroica": {
       "slug": "leroica",
       "tier": 1,
@@ -7541,9 +7575,11 @@
     "amstel-gold-race-toerversie",
     "tour-of-georgia-gran-fondo",
     "cyprus-gran-fondo",
+    "alpe-gran-fondo",
     "sudety-tour",
     "gfny-ventura",
     "strade-bianche-gran-fondo",
+    "legendaria-gran-fondo-ontinyent",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7931,6 +7967,7 @@
     "cyprus-gran-fondo",
     "sudety-tour",
     "strade-bianche-gran-fondo",
+    "legendaria-gran-fondo-ontinyent",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7984,15 +8021,15 @@
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 405,
-    "ready": 137,
-    "content_present": 389,
-    "validator_clean": 405,
-    "pilot_candidates": 82,
+    "total": 407,
+    "ready": 139,
+    "content_present": 391,
+    "validator_clean": 407,
+    "pilot_candidates": 83,
     "by_tier_ready": {
       "1": 11,
-      "2": 114,
-      "3": 12,
+      "2": 115,
+      "3": 13,
       "4": 0
     }
   }

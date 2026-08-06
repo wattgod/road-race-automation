@@ -1,0 +1,163 @@
+{
+  "race": {
+    "name": "Alpe Gran Fondo",
+    "slug": "alpe-gran-fondo",
+    "display_name": "Alpe Gran Fondo",
+    "tagline": "Three Alpine passes across 130 kilometers from Kamnik, with more than 2,000 meters of climbing.",
+    "vitals": {
+      "distance_km": 130.0,
+      "distance_mi": 80.8,
+      "elevation_m": 2000,
+      "elevation_ft": 6562,
+      "location": "Kamnik, Slovenia",
+      "location_badge": "KAMNIK, SLOVENIA",
+      "country": "Slovenia",
+      "date": "Late May",
+      "date_specific": "2027: May 29 (Saturday)",
+      "field_size": "Organizer reported a record field in 2026; no verified count published",
+      "start_format": "All courses start together at 09:00 from Kamnik's main square",
+      "registration": "2027 registration is open through the official event site",
+      "entry_fee": "Package pricing varies by timing, T-shirt, or cycling-jersey option; verify current checkout",
+      "feed_zones": "See the current official race guide",
+      "cutoff_time": "See the current official race guide",
+      "route_options": [
+        "Pro Course: 130 km / more than 2,000 m climbing / three mountain passes",
+        "Hobby Course: 75 km / 1,454 m climbing / two major climbs",
+        "Short Course: 15.4 km / 534 m climbing / summit finish on Crnivec"
+      ]
+    },
+    "climate": {
+      "primary": "Late-spring Alpine variability",
+      "description": "The long course crosses three mountain passes, so riders should prepare for cooler and less predictable conditions above the Kamnik valley even when the start is mild.",
+      "challenges": [
+        "Temperature changes between Kamnik and the passes",
+        "Rain exposure on long descents",
+        "Layering decisions for a three-pass route"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved Alpine gran fondo",
+      "surface": "Paved public roads through Slovenia and Austria, with event-day closures published by the organizer.",
+      "technical_rating": 3,
+      "features": [
+        "Crnivec",
+        "Pavlicevo sedlo",
+        "Jezersko",
+        "Kamnik start and finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 4,
+      "altitude": 3,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 0,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "A serious three-pass Alpine course and published road-closure plan score well. The event is still young, lacks a verified field count, and does not yet carry major-series prestige, keeping the evidence-based grade in Tier 3."
+    },
+    "climb_profile": {
+      "total_climbs": 3,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "Crnivec",
+        "Pavlicevo sedlo",
+        "Jezersko"
+      ],
+      "profile_type": "Three-pass Alpine loop",
+      "king_of_mountain": "Pavlicevo sedlo",
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The Pro Course leaves central Kamnik for a 130-kilometer loop over Crnivec, Pavlicevo sedlo, and Jezersko before returning to town. The challenge is cumulative rather than ultra-distance: three passes, more than 2,000 meters of climbing, and the need to descend well enough to preserve energy for the next ascent.",
+      "signature_challenge": "Managing three distinct passes without treating the first climb like the finish.",
+      "suffering_zones": [
+        "Crnivec opening climb",
+        "Pavlicevo sedlo",
+        "Jezersko",
+        "Final return to Kamnik"
+      ]
+    },
+    "logistics": {
+      "airport": "Kamnik is in central Slovenia; confirm the best current transfer through the official accommodation and location pages.",
+      "lodging_strategy": "Stay in or near Kamnik for the main-square start and finish. Use the organizer's accommodation page for current partner options.",
+      "transport": "The organizer publishes complete and rolling road closures around Kamnik and the course; follow the current race-week instructions for parking and access.",
+      "food": "All registration packages include a hot post-finish meal.",
+      "official_site": "https://alpegf.eu/en/home/"
+    },
+    "history": {
+      "founded": 2024,
+      "origin_story": "The event's third edition was held in 2026, linking Kamnik with the Kamnik-Savinja Alps and Austria before 2027 registration opened.",
+      "notable_moments": [
+        "2026: Third edition held with three course options",
+        "2027: Fourth edition scheduled for May 29"
+      ],
+      "reputation": "A young, ambitious Alpine event with a substantive long course and unusually detailed road-closure planning, but limited independent history so far."
+    },
+    "biased_opinion": {
+      "verdict": "A Real Alpine Course Before the Prestige Arrives",
+      "summary": "The event is young, but the course is not a novelty ride: 130 kilometers, three named passes, and more than 2,000 meters of climbing demand real pacing and descending competence.",
+      "strengths": [
+        "Three-pass course",
+        "Central start and finish",
+        "Published road closures and police support",
+        "Three distance options"
+      ],
+      "weaknesses": [
+        "Limited event history",
+        "No verified field-size figure",
+        "Current official pages do not publish every cutoff and feed-zone detail"
+      ],
+      "bottom_line": "Choose it for the Alpine route, not for a famous logo: the course already earns attention while the event's reputation is still being built."
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "Three Alpine passes across 130 kilometers from Kamnik, with more than 2,000 meters of climbing.",
+      "should_you_race": "Yes if you want a compact Alpine gran fondo with meaningful climbing and a smaller-event feel; wait if prestige and a long operating history matter more than the course.",
+      "alternatives": "Granfondo Alpe Adria for a more established cross-border event, or Maratona Franja for Slovenia's larger road-cycling stage."
+    },
+    "citations": [
+      {
+        "url": "https://alpegf.eu/en/home/",
+        "category": "official",
+        "label": "Alpe Gran Fondo official 2027 date and event page"
+      },
+      {
+        "url": "https://alpegf.eu/en/courses/",
+        "category": "official",
+        "label": "Alpe Gran Fondo official course distances and climbing"
+      },
+      {
+        "url": "https://alpegf.eu/en/road-information/",
+        "category": "official",
+        "label": "Alpe Gran Fondo official road-closure and safety information"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-05",
+      "source": "https://alpegf.eu/en/home/"
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-05",
+      "race_date": "2027-05-29",
+      "facts_scope": "Date, location, route options, distance, climbing, included finish meal, and road-closure support verified against first-party event pages."
+    }
+  }
+}
