@@ -69,9 +69,15 @@
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
+      "key_climbs": [
+        {
+          "name": "Passo dello Stelvio",
+          "summit_altitude_m": 2758,
+          "tactical_notes": "The long route finishes on Passo dello Stelvio; the pass summit is 2,758 m above sea level."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": "Passo dello Stelvio — 2,758 m summit finish",
       "_needs_enrichment": true
     },
     "course_description": {
@@ -117,6 +123,16 @@
       "alternatives": ""
     },
     "citations": [
+      {
+        "url": "https://www.lastelviosantini.com/lastelviosantini/percorso-lungo",
+        "category": "reference",
+        "label": "La Stelvio Santini - Official Long Route"
+      },
+      {
+        "url": "https://www.parconazionale-stelvio.it/it/il-parco-nazionale/strada-del-passo-dello-stelvio.html",
+        "category": "reference",
+        "label": "Stelvio National Park - Passo dello Stelvio 2,758 m"
+      },
       {
         "url": "https://www.bormio.eu/en/big-events/stelvio-santini",
         "category": "reference",
