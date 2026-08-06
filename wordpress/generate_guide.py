@@ -2562,6 +2562,53 @@ def build_guide_css() -> str:
 @media(prefers-reduced-motion:reduce){
 .rl-personalized__variant{transition:none}
 }
+
+/* ── Envelope Scatter (find yourself in the data) ── */
+[data-interactive='envelope'] .rl-ig-env-dot{transition:opacity 400ms ease}
+[data-interactive='envelope'] .rl-ig-env-line{display:none}
+[data-interactive='envelope'] .rl-ig-env-strip{display:none;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:0.5px;color:var(--rl-color-near-black);border:3px solid var(--rl-color-near-black);border-top:none;padding:10px 14px;background:var(--rl-color-cool-white)}
+[data-interactive='envelope'] .rl-ig-env-hint{font-family:var(--rl-font-data);font-size:11px;color:var(--rl-color-steel);padding:8px 14px;border:3px solid var(--rl-color-near-black);border-top:none;background:var(--rl-color-cool-white)}
+[data-interactive='envelope'][data-rider='autobus'] .rl-ig-env-hint,[data-interactive='envelope'][data-rider='finisher'] .rl-ig-env-hint,[data-interactive='envelope'][data-rider='sharp-end'] .rl-ig-env-hint,[data-interactive='envelope'][data-rider='racer'] .rl-ig-env-hint{display:none}
+[data-interactive='envelope'][data-rider='autobus'] .rl-ig-env-line[data-for='autobus'],[data-interactive='envelope'][data-rider='finisher'] .rl-ig-env-line[data-for='finisher'],[data-interactive='envelope'][data-rider='sharp-end'] .rl-ig-env-line[data-for='sharp-end']{display:block}
+[data-interactive='envelope'][data-rider='autobus'] .rl-ig-env-strip[data-for='autobus'],[data-interactive='envelope'][data-rider='finisher'] .rl-ig-env-strip[data-for='finisher'],[data-interactive='envelope'][data-rider='sharp-end'] .rl-ig-env-strip[data-for='sharp-end'],[data-interactive='envelope'][data-rider='racer'] .rl-ig-env-strip[data-for='racer']{display:block}
+[data-interactive='envelope'][data-rider='autobus'] .rl-ig-env-dot[data-env-autobus='st'],[data-interactive='envelope'][data-rider='finisher'] .rl-ig-env-dot[data-env-finisher='st'],[data-interactive='envelope'][data-rider='sharp-end'] .rl-ig-env-dot[data-env-sharp-end='st']{opacity:0.45}
+[data-interactive='envelope'][data-rider='autobus'] .rl-ig-env-dot[data-env-autobus='out'],[data-interactive='envelope'][data-rider='finisher'] .rl-ig-env-dot[data-env-finisher='out'],[data-interactive='envelope'][data-rider='sharp-end'] .rl-ig-env-dot[data-env-sharp-end='out']{opacity:0.12}
+@media(prefers-reduced-motion:reduce){
+[data-interactive='envelope'] .rl-ig-env-dot{transition:none}
+}
+
+/* ── View Toggle (fondo vs crit build) ── */
+.rl-ig-view-toggle{display:flex;margin-bottom:12px;border:3px solid var(--rl-color-near-black);width:max-content}
+.rl-ig-view-btn{padding:10px 18px;background:transparent;border:none;border-right:3px solid var(--rl-color-near-black);cursor:pointer;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:2px;color:var(--rl-color-steel)}
+.rl-ig-view-btn:last-child{border-right:none}
+.rl-ig-view-btn:hover{color:var(--rl-color-near-black)}
+.rl-ig-view-btn--active{background:var(--rl-color-near-black);color:var(--rl-color-cool-white)}
+.rl-ig-view-btn--active:hover{color:var(--rl-color-cool-white)}
+[data-interactive='view-toggle'][data-view='fondo'] .rl-ig-view-crit{display:none}
+[data-interactive='view-toggle'][data-view='crit'] .rl-ig-view-fondo{display:none}
+
+/* ── Guess-Before-Reveal (belief elicitation) ── */
+.rl-ig-guess-question{font-family:var(--rl-font-editorial);font-size:17px;font-weight:700;color:var(--rl-color-near-black);margin-bottom:12px;line-height:1.5}
+.rl-ig-guess-options{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.rl-ig-guess-btn{display:flex;flex-direction:column;gap:2px;align-items:center;padding:12px 22px;border:3px solid var(--rl-color-near-black);background:var(--rl-color-cool-white);cursor:pointer;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:1px;color:var(--rl-color-near-black)}
+.rl-ig-guess-btn:hover{background:var(--rl-color-silver)}
+.rl-ig-guess-pct{font-size:20px}
+.rl-guess-armed .rl-ig-guess-reveal{display:none}
+.rl-guess-revealed .rl-ig-guess-reveal{display:block}
+.rl-guess-revealed .rl-ig-guess-btn{pointer-events:none;opacity:0.45}
+.rl-guess-revealed .rl-ig-guess-btn--chosen{opacity:1;background:var(--rl-color-near-black);color:var(--rl-color-cool-white)}
+.rl-ig-guess-verdict{display:none;font-family:var(--rl-font-data);font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+.rl-guess-right .rl-ig-guess-verdict[data-when='right']{display:block;color:var(--rl-color-near-black)}
+.rl-guess-wrong .rl-ig-guess-verdict[data-when='wrong']{display:block;color:var(--rl-color-signal-red)}
+.rl-ig-guess-bar{display:flex;height:52px;border:3px solid var(--rl-color-near-black);margin-bottom:12px}
+.rl-ig-guess-bar-easy{background:var(--rl-color-silver);display:flex;align-items:center;justify-content:center;font-family:var(--rl-font-data);font-weight:700;font-size:14px;letter-spacing:2px;color:var(--rl-color-near-black)}
+.rl-ig-guess-bar-hard{background:var(--rl-color-signal-red);display:flex;align-items:center;justify-content:center;font-family:var(--rl-font-data);font-weight:700;font-size:14px;color:var(--rl-color-cool-white)}
+.rl-ig-guess-explain{font-family:var(--rl-font-editorial);font-size:14px;line-height:1.7;color:var(--rl-color-near-black);margin:0}
+@media(max-width:768px){
+.rl-ig-guess-options{gap:8px}
+.rl-ig-guess-btn{padding:10px 14px}
+.rl-ig-view-btn{padding:8px 12px;font-size:11px;letter-spacing:1px}
+}
 '''
 
 
@@ -2951,6 +2998,10 @@ var isMatch=v.getAttribute("data-rider-type")===type;
 v.classList.toggle("rl-personalized--active",isMatch);
 });
 });
+/* Envelope infographics: redraw the race map around this rider's hours */
+document.querySelectorAll("[data-interactive='envelope']").forEach(function(env){
+env.setAttribute("data-rider",type);
+});
 track("guide_rider_select",{rider_type:type});
 }
 if(riderSelector){
@@ -3255,6 +3306,43 @@ if(node)node.classList.toggle("open");
 var expand=header.querySelector(".rl-infographic-timeline-expand");
 if(expand)expand.textContent=node.classList.contains("open")?"\u2212":"+";
 track("infographic_interact",{type:"timeline"});
+});
+
+/* View toggle (fondo vs crit build) — default follows the reader's persona */
+document.querySelectorAll("[data-interactive='view-toggle']").forEach(function(vt){
+var map=vt.getAttribute("data-persona-views")||"";
+var persona="";
+try{persona=localStorage.getItem("rl_guide_persona")||"";}catch(e){}
+if(persona&&map){
+map.split(",").forEach(function(pair){
+var kv=pair.split(":");
+if(kv[0]===persona&&kv[1])vt.setAttribute("data-view",kv[1]);
+});
+}
+var v=vt.getAttribute("data-view");
+vt.querySelectorAll(".rl-ig-view-btn").forEach(function(b){b.classList.toggle("rl-ig-view-btn--active",b.getAttribute("data-view")===v);});
+});
+document.addEventListener("click",function(e){
+var btn=e.target.closest("[data-interactive='view-toggle'] .rl-ig-view-btn");
+if(!btn)return;
+var vt=btn.closest("[data-interactive='view-toggle']");
+vt.setAttribute("data-view",btn.getAttribute("data-view"));
+vt.querySelectorAll(".rl-ig-view-btn").forEach(function(b){b.classList.toggle("rl-ig-view-btn--active",b===btn);});
+track("infographic_interact",{type:"view-toggle",view:btn.getAttribute("data-view")});
+});
+
+/* Guess-before-reveal: commit first, then see the data (belief elicitation) */
+document.querySelectorAll("[data-interactive='guess-reveal']").forEach(function(g){g.classList.add("rl-guess-armed");});
+document.addEventListener("click",function(e){
+var btn=e.target.closest("[data-interactive='guess-reveal'] .rl-ig-guess-btn");
+if(!btn)return;
+var g=btn.closest("[data-interactive='guess-reveal']");
+if(g.classList.contains("rl-guess-revealed"))return;
+g.classList.remove("rl-guess-armed");
+g.classList.add("rl-guess-revealed");
+g.classList.add(btn.getAttribute("data-correct")==="1"?"rl-guess-right":"rl-guess-wrong");
+btn.classList.add("rl-ig-guess-btn--chosen");
+track("infographic_interact",{type:"guess-reveal",correct:btn.getAttribute("data-correct")});
 });
 
 /* Decision tree interaction */
