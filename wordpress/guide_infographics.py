@@ -1111,11 +1111,13 @@ _PHASE_MIX = {
         "anaerobic": [0.5, 0.25, 1.25, 1.5],
     },
 }
+# Zone-semantic fills: each bucket wears its training-zone color, cool to
+# hot, so the stack "re-colors" claim in the crit view is literally visible.
 _MIX_BUCKETS = [
-    ("endurance", "Endurance (Z1-2)", "var(--rl-color-silver)"),
-    ("tempo", "Tempo / Threshold (Z3-4)", "var(--rl-color-steel)"),
-    ("vo2", "VO2max (Z5)", "var(--rl-color-secondary-blue)"),
-    ("anaerobic", "Anaerobic / sprint (Z6+)", "var(--rl-color-signal-red)"),
+    ("endurance", "Endurance (Z1-2)", "var(--rl-zone-2)"),
+    ("tempo", "Tempo / Threshold (Z3-4)", "var(--rl-zone-4)"),
+    ("vo2", "VO2max (Z5)", "var(--rl-zone-5)"),
+    ("anaerobic", "Anaerobic / sprint (Z6+)", "var(--rl-zone-6)"),
 ]
 
 

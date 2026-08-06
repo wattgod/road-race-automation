@@ -142,7 +142,7 @@ def render_chapter_plate(chapter_number: int, data: dict | None) -> str:
     .rl-guide-plate .rl-plate-tier-2,.rl-guide-plate .rl-plate-signal-gold{{fill:var(--rl-color-orange)}}
     .rl-guide-plate .rl-plate-tier-3{{fill:var(--rl-color-signal-red)}}
     .rl-guide-plate .rl-plate-tier-4{{fill:var(--rl-color-secondary-blue)}}
-    .rl-guide-plate .rl-plate-zone-1{{opacity:.24}}.rl-guide-plate .rl-plate-zone-2{{opacity:.36}}.rl-guide-plate .rl-plate-zone-3{{opacity:.48}}.rl-guide-plate .rl-plate-zone-4{{opacity:.62}}.rl-guide-plate .rl-plate-zone-5{{opacity:.78}}
+    .rl-guide-plate .rl-plate-zone-1{{fill:var(--rl-zone-1,#c0c0bc)}}.rl-guide-plate .rl-plate-zone-2{{fill:var(--rl-zone-2,#4a78b0)}}.rl-guide-plate .rl-plate-zone-3{{fill:var(--rl-zone-3,#4a8860)}}.rl-guide-plate .rl-plate-zone-4{{fill:var(--rl-zone-4,#a88850)}}.rl-guide-plate .rl-plate-zone-5{{fill:var(--rl-zone-5,#b07858)}}
     .rl-guide-plate--dark .rl-plate-bg{{fill:var(--rl-color-near-black)}}
     .rl-guide-plate--dark .rl-plate-rule,.rl-guide-plate--dark .rl-plate-line,.rl-guide-plate--dark .rl-plate-check{{stroke:var(--rl-color-light-steel)}}
     .rl-guide-plate--dark .rl-plate-rule-soft,.rl-guide-plate--dark .rl-plate-line-soft{{stroke:var(--rl-color-coral);opacity:.42}}
