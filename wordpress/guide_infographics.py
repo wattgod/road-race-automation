@@ -1435,10 +1435,11 @@ def render_taper_curve(block: dict) -> str:
     svg.append(_svg_text(*xy(-10.2, 88), "FATIGUE \u2014 collapses (-30 to -40%)",
                          font_size=15, fill="var(--rl-color-steel)",
                          weight="700", family="var(--rl-font-editorial)"))
-    fx, fy = xy(-4, form_scaled[17])
-    svg.append(_svg_text(fx, fy + 34, "FORM \u2014 what's left when the fatigue leaves",
+    fx, fy = xy(-3, form_scaled[18])
+    svg.append(_svg_text(fx, fy + 40, "FORM \u2014 what's left when the fatigue leaves",
                          font_size=15, fill="var(--rl-color-signal-red)",
-                         weight="700", family="var(--rl-font-editorial)"))
+                         anchor="end", weight="700",
+                         family="var(--rl-font-editorial)"))
 
     svg.append(_svg_close())
     return _figure_wrap(
