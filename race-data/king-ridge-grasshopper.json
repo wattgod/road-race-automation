@@ -1,0 +1,267 @@
+{
+  "race": {
+    "name": "King Ridge Grasshopper",
+    "slug": "king-ridge-grasshopper",
+    "display_name": "King Ridge Grasshopper",
+    "tagline": "A 91-mile Sonoma road stage scored across three savage climbing segments.",
+    "vitals": {
+      "distance_km": 146.5,
+      "distance_mi": 91,
+      "elevation_m": 2779,
+      "elevation_ft": 9116,
+      "location": "Monte Rio, California",
+      "location_badge": "MONTE RIO, CA",
+      "country": "United States",
+      "date": "Annual; next edition date pending",
+      "date_specific": "TBD — next edition date pending",
+      "last_confirmed_date": "2026-03-28",
+      "field_size": "Several hundred riders; exact 2026 count not published",
+      "start_format": "Open-road ride with three chip-timed climbing segments for the long course",
+      "registration": "2026 registration closed; no official 2027 edition published",
+      "entry_fee": "Not preserved on the completed 2026 event page",
+      "feed_zones": "Two aid stations in 2026",
+      "cutoff_time": "Timed-segment closing windows; no overall finish cutoff published",
+      "lat": 38.4655,
+      "lng": -123.0089,
+      "route_options": [
+        "Long: 91 mi / 9,116 ft / 3 timed segments",
+        "Short: 58 mi / 6,330 ft / 2 timed segments"
+      ]
+    },
+    "climate": {
+      "primary": "Sonoma coastal spring",
+      "description": "Cool coastal mornings, possible fog, changing ridge exposure, and afternoon wind.",
+      "challenges": [
+        "Coastal fog",
+        "Ridge wind",
+        "Temperature changes",
+        "Open-road exposure"
+      ]
+    },
+    "terrain": {
+      "primary": "Remote paved climbing roads",
+      "surface": "96% paved and 4% dirt; the organizer recommends a road bike with 30-32 mm slick tires",
+      "technical_rating": 3,
+      "features": [
+        "Joy Road",
+        "Meyers Grade",
+        "Fort Ross Road",
+        "Kruse Ranch Road",
+        "King Ridge Road"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 4,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 2,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 4,
+      "value": 4,
+      "expenses": 2,
+      "cultural_impact": 3,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Scored 2026-08-06 from the organizer's 2026 route and independent race coverage. Kept in Roadie Labs because the official course is 96% paved and the organizer calls it a road stage."
+    },
+    "biased_opinion_ratings": {
+      "distance": {
+        "score": 3,
+        "explanation": "Ninety-one miles is a standard long gran fondo distance: enough to make fueling and durability decisive without crossing into an ultra."
+      },
+      "climbing": {
+        "score": 4,
+        "explanation": "The course gains 9,116 feet, and the three scored segments alone contain almost 4,800 feet of climbing."
+      },
+      "descent_technicality": {
+        "score": 3,
+        "explanation": "Remote Sonoma ribbon roads combine steep grades, narrow lanes, imperfect sight lines, and open traffic rather than closed-course alpine predictability."
+      },
+      "road_surface": {
+        "score": 4,
+        "explanation": "Although 96 percent paved, the route uses rough rural roads and a dirt section on Kruse Ranch Road; this is not fresh tarmac."
+      },
+      "climate_risk": {
+        "score": 3,
+        "explanation": "Coastal fog, ridge wind, and rapid temperature shifts can change grip and pacing even when March weather is broadly rideable."
+      },
+      "altitude": {
+        "score": 1,
+        "explanation": "The coastal mountains create steep relief without meaningful high-altitude exposure."
+      },
+      "logistics": {
+        "score": 3,
+        "explanation": "Monte Rio is a small regional base roughly two hours from major Bay Area airports, with adequate but limited lodging and no camping at the venue."
+      },
+      "prestige": {
+        "score": 3,
+        "explanation": "King Ridge has roughly two decades of Grasshopper history and recurring national cycling coverage, but is not a mass international gran fondo."
+      },
+      "organization": {
+        "score": 2,
+        "explanation": "Chip-timed segments, aid stations, medical and mechanical support are solid, but the event operates on open roads without full closures."
+      },
+      "scenic_experience": {
+        "score": 4,
+        "explanation": "Redwoods, coastal mountains, remote ridges, and a route local clubs call a crown-jewel North Bay ride create a consistently memorable day."
+      },
+      "community_culture": {
+        "score": 4,
+        "explanation": "Neutral riding between segments, a full lunch, a weekend shakeout and social ride, and deep Grasshopper roots make the social structure part of the event rather than decoration."
+      },
+      "field_depth": {
+        "score": 4,
+        "explanation": "The 2026 results included Brennan Wertz, Flavia Oliveira, Jen Tavé, and Peter Stetina, reflecting a strong national-level mixed-discipline field."
+      },
+      "value": {
+        "score": 4,
+        "explanation": "Timing, two aid stations, medical and mechanical support, event photos, lunch, and a full weekend program provide strong inclusions, although the current page omits price."
+      },
+      "expenses": {
+        "score": 2,
+        "explanation": "For Bay Area and Northern California riders this is generally a $300-500 regional weekend rather than a flight-based destination event."
+      },
+      "cultural_impact": {
+        "score": 3,
+        "explanation": "The route is a North Bay road-cycling landmark and the event receives national media attention, while remaining smaller than an iconic international fondo."
+      }
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        {
+          "name": "Joy Road timed segment",
+          "distance_km": 17.4,
+          "distance_mi": 10.8,
+          "elevation_m": 533,
+          "elevation_ft": 1747,
+          "average_gradient": null,
+          "max_gradient": null
+        },
+        {
+          "name": "Meyers Grade timed segment",
+          "distance_km": 7.9,
+          "distance_mi": 4.9,
+          "elevation_m": 394,
+          "elevation_ft": 1291,
+          "average_gradient": null,
+          "max_gradient": null
+        },
+        {
+          "name": "Kruse Road timed segment",
+          "distance_km": 11.3,
+          "distance_mi": 7.0,
+          "elevation_m": 531,
+          "elevation_ft": 1743,
+          "average_gradient": null,
+          "max_gradient": null
+        }
+      ],
+      "profile_type": "Repeated steep coastal climbing",
+      "king_of_mountain": "Cumulative time across three official segments",
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A 96-percent paved Sonoma County loop where the social neutral miles and three all-out climbing segments demand two different kinds of discipline.",
+      "signature_challenge": "The three timed segments total roughly 23 miles and nearly 4,800 feet of climbing, so riders must recover on open roads without letting the whole 91-mile day become one uncontrolled effort.",
+      "suffering_zones": [
+        {
+          "label": "Joy Road",
+          "description": "The 10.8-mile opening timed segment gains 1,747 feet and establishes the ranking before the day is half over."
+        },
+        {
+          "label": "Meyers Grade",
+          "description": "A shorter 4.9-mile segment gains 1,291 feet and rewards high sustainable climbing power."
+        },
+        {
+          "label": "Kruse Road",
+          "description": "The final seven-mile scored climb adds 1,743 feet after 60 miles of riding."
+        }
+      ]
+    },
+    "logistics": {
+      "airport": "San Francisco, Oakland, or Sonoma County airports",
+      "lodging_strategy": "Book Monte Rio, Guerneville, or nearby Sonoma lodging early; no camping was available at the 2026 venue.",
+      "transport": "A car is the practical option. Riders roll from the Monte Rio Community Center to the first timed segment on open public roads.",
+      "food": "The 2026 event included two aid stations and a post-ride lunch.",
+      "official_site": "https://www.grasshopperadventureseries.com/king-ridge"
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "Grasshopper has used Sonoma County roads for decades; King Ridge has been a named series fixture for roughly twenty years.",
+      "notable_moments": [
+        "Brennan Wertz and Jen Tavé won the 2025 edition.",
+        "Gavin Sherry and Flavia Oliveira won the 2026 cumulative timed-segment competition."
+      ],
+      "reputation": "A hard, scenic North Bay road classic with a mixed gravel-series audience."
+    },
+    "biased_opinion": {
+      "verdict": "A road race with gravel manners",
+      "summary": "King Ridge does not belong in Gravel God simply because Grasshopper promotes it. The official facts say 96 percent pavement, road-bike setup, and timed road climbs; Roadie Labs is the honest home.",
+      "strengths": [
+        "Exceptional climbing density",
+        "Memorable Sonoma scenery",
+        "Strong competitive field",
+        "Social neutral sections between hard timed efforts"
+      ],
+      "weaknesses": [
+        "Open-road traffic exposure",
+        "No full-road closure",
+        "Current organizer page does not preserve price or a 2027 date"
+      ],
+      "bottom_line": "A Tier 2 target for riders who want fondo distance, race-grade climbing, and a less transactional community format."
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "A Sonoma road classic where 4 percent dirt matters less than 9,116 feet of climbing.",
+      "should_you_race": "Yes when the organizer publishes the next edition. Train it as a road-climbing fondo with repeated threshold efforts, not as a gravel race.",
+      "alternatives": "Levi's GranFondo for a larger production; Grasshopper Low Gap for a dirt-primary NorCal race."
+    },
+    "citations": [
+      {
+        "url": "https://www.grasshopperadventureseries.com/king-ridge",
+        "category": "official",
+        "label": "King Ridge — official event page"
+      },
+      {
+        "url": "https://www.cyclingnews.com/pro-cycling/gavin-sherry-and-flavia-oliveira-scorch-through-timed-sections-to-claim-wins-at-third-event-in-grasshopper-series-king-ridge/",
+        "category": "media",
+        "label": "Cyclingnews — 2026 report and results"
+      },
+      {
+        "url": "https://www.cyclingnews.com/races/grasshopper-adventure-series-2025/king-ridge-hopper-5/results/",
+        "category": "results",
+        "label": "Cyclingnews — 2025 results"
+      },
+      {
+        "url": "https://www.joinbasecamp.com/post/doreens-story-king-ridge-grasshopper",
+        "category": "rider_report",
+        "label": "BaseCamp — 2026 rider report and bike choice"
+      },
+      {
+        "url": "https://www.srcc.com/page-274943",
+        "category": "local",
+        "label": "Santa Rosa Cycling Club — King Ridge route context"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-06",
+      "source": "https://www.grasshopperadventureseries.com/king-ridge",
+      "notes": "The event ran in 2026, but a 2027 date and route have not been published. Source profile and page are valid; TrainingPeaks production remains blocked."
+    }
+  }
+}
