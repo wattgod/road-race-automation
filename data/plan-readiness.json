@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T01:14:02",
+  "generated_at": "2026-08-06T01:42:59",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3284,16 +3284,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 39,
+      "race_date": "2027-05-09",
+      "blockers": []
     },
     "granfondo-gottardo": {
       "slug": "granfondo-gottardo",
@@ -7567,6 +7565,7 @@
     "letape-denmark",
     "jedermann-rennen-koln",
     "gfny-villavicencio",
+    "granfondo-felice-gimondi",
     "letape-czech-republic",
     "gfny-walnut-creek",
     "amstel-gold-race-toerversie",
@@ -7770,7 +7769,6 @@
     "giro-ride-like-a-pro-usa",
     "gran-fondo-collado-del-condor",
     "granfondo-bogota",
-    "granfondo-felice-gimondi",
     "istria-granfondo",
     "la-vaujany",
     "letape-ireland",
@@ -7958,6 +7956,7 @@
     "london-to-brighton",
     "letape-denmark",
     "jedermann-rennen-koln",
+    "granfondo-felice-gimondi",
     "letape-czech-republic",
     "amstel-gold-race-toerversie",
     "cyprus-gran-fondo",
@@ -8018,13 +8017,13 @@
   ],
   "summary": {
     "total": 407,
-    "ready": 140,
+    "ready": 141,
     "content_present": 391,
     "validator_clean": 407,
-    "pilot_candidates": 81,
+    "pilot_candidates": 82,
     "by_tier_ready": {
       "1": 11,
-      "2": 114,
+      "2": 115,
       "3": 15,
       "4": 0
     }
