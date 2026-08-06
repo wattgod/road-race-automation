@@ -2697,5 +2697,230 @@
         }
       ]
     }
+  ],
+  "tracks": [
+    {
+      "id": "crit-racer-track",
+      "persona": "crit-racer",
+      "title": "The Crit Racer's Track",
+      "subtitle": "Forty-five minutes, thirty corners, one sprint. A different way through this guide for the rider whose whole race fits inside a lunch break.",
+      "seo_title": "The Crit Racer's Track — How to Train for Criteriums on 5 Hours a Week",
+      "meta_description": "A curated path through the road training guide for crit and short-circuit racers: which chapters to read twice, which to skim, your default week, and race day compressed to 45 minutes.",
+      "sections": [
+        {
+          "id": "crt-who",
+          "title": "Who This Track Is For",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "You race for forty-five to seventy-five minutes. Your race has no summit finish, no feed zone, no hour of tempo where nothing happens. It has corners — thirty or forty of them a lap in aggregate effect — and every one of them is a small sprint out and a small negotiation in. Your sport is anaerobic, repeatable, and decided by position as much as power.\n\nHere's what that means for how you use this guide: **most of it applies to you, but not in page order, and not with equal weight.** The guide's spine was built for the rider training toward a long day — a fondo, a century, a mountain sportive. Their limiter is aerobic durability, so the chapters build toward it. Your limiter is different. You don't need to survive five hours; you need to produce thirty maximal efforts in one, recover between them at 90% of threshold, and still have a sprint at the end."
+            },
+            {
+              "type": "callout",
+              "style": "highlight",
+              "content": "Five hours a week is not a compromise in this sport. It's a strategy. The fondo rider on five hours is making peace with a slower day. The crit racer on five sharp hours can genuinely win. Short, anaerobic, position-driven racing rewards exactly what limited time forces you to do: make every interval count."
+            },
+            {
+              "type": "prose",
+              "content": "**Testing instead of racing crits?** If your event is a time trial or a hillclimb, ride this track with one fork: everything about flat volume, sharpened intensity, and short-event race week applies to you straight. Skip the pack-craft emphasis — chapter 6 is optional reading for you, not scripture — and double the pacing discipline. Your race has no one to hide behind and no corner to blame. The 16-week table in chapter 3 already carries your version: more threshold, fewer 30-second bullets."
+            }
+          ]
+        },
+        {
+          "id": "crt-reading-order",
+          "title": "How to Read This Guide",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Same eight chapters everyone gets. Different weights, different order. This is the sequence that serves your race — read them this way and you'll spend your reading time the way you should spend your training time: on what actually decides your result."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Chapter 6 first — it's your actual textbook",
+                  "detail": "[Pack Skills & Tactics](/guide/pack-skills-and-tactics/) is a supporting chapter for the fondo rider and the main event for you. Cornering lines, protecting your front wheel, moving up without burning matches, where to be with five laps to go. A crit racer who reads only one chapter should read this one — twice."
+                },
+                {
+                  "label": "Chapter 3 for your training frame",
+                  "detail": "[Building the Engine](/guide/building-the-engine/) holds your zones and — critically — the 16-week crit/TT periodization table: flat volume, intensity distribution shifting toward what the race asks. That table is this track's training plan. The surrounding fondo-volume prose is context, not instruction."
+                },
+                {
+                  "label": "Chapter 4, read twice",
+                  "detail": "[Workout Execution](/guide/workout-execution/) covers how to actually hit anaerobic and VO2max work — which is your whole sport. The 30-second repeats and 4-minute efforts other riders sprinkle in for variety are your bread and butter. Execution quality matters more for you than anyone."
+                },
+                {
+                  "label": "Chapter 7 for race week — short-event version",
+                  "detail": "[Race Week](/guide/race-week/) is written around a big single day, but the short-event logic is in there: you don't taper for a 45-minute race, you manage freshness. Openers the day before, a real warm-up on the day. More on that below."
+                },
+                {
+                  "label": "Chapter 1 — skim for the physics, skip the romance",
+                  "detail": "[What Is Road Racing](/guide/what-is-road-racing/) explains drafting and pack dynamics, which you need. The long-day culture you can wave at politely."
+                },
+                {
+                  "label": "Chapters 2, 5, and 8 — targeted reads",
+                  "detail": "[Choosing Your Race](/guide/choosing-your-race/) if you haven't picked a series yet. [Fueling](/guide/fueling-for-the-distance/) compresses to almost nothing for you — a bottle and maybe a gel — but read the carb-loading section for race morning. [After the Finish](/guide/after-the-finish/) matters once you're racing weekly, which is where this track ends up."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "content": "Reading order beats page order. The guide won't be offended. Every chapter link above remembers you're on this track — your rider type follows you through all of them."
+            }
+          ]
+        },
+        {
+          "id": "crt-week",
+          "title": "Your Default Week",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Five hours, laid out for the race you actually do. The shape below is the default; the 16-week table in chapter 3 tells you what the two hard days become as the season progresses — tempo in base, VO2max in build, 30-second bullets in the sharpening weeks. The volume never changes. Only the sharpness does."
+            },
+            {
+              "type": "data_table",
+              "caption": "The Crit Racer's Default Week — Five Hours, Two of Them Hard",
+              "headers": [
+                "Day",
+                "Ride",
+                "Why it earns its slot"
+              ],
+              "rows": [
+                [
+                  "Monday",
+                  "Off",
+                  "Recovery is where adaptation happens, and you only get two hard days to adapt from"
+                ],
+                [
+                  "Tuesday",
+                  "1 hr — intervals (the phase decides which)",
+                  "Hard day one. Tempo, VO2max, or anaerobic repeats per the 16-week table"
+                ],
+                [
+                  "Wednesday",
+                  "45 min — easy spin",
+                  "Genuinely easy. If you're proud of your average power, you did it wrong"
+                ],
+                [
+                  "Thursday",
+                  "1 hr — intervals plus 4-6 sprints",
+                  "Hard day two. Sprinting is a skill that rusts; touch it every week, all year"
+                ],
+                [
+                  "Friday",
+                  "Off",
+                  "Fresh legs are a tactical weapon. You cannot corner sharply while cooked"
+                ],
+                [
+                  "Saturday",
+                  "1.5 hr — race, race simulation, or group ride with intent",
+                  "The closest thing to a crit is a crit. Surges, corners, elbows"
+                ],
+                [
+                  "Sunday",
+                  "45 min — easy social spin",
+                  "Optional. Coffee counts as recovery nutrition if the ride was slow enough"
+                ]
+              ]
+            },
+            {
+              "type": "personalized_content",
+              "variants": {
+                "autobus": {
+                  "content": "**On your hours (0–5/wk):** this week *is* your ceiling, and that's fine — this track exists to tell you the ceiling is high enough. Keep both interval days, keep the weekly sprints, and let the Saturday ride flex to whatever life allows. You can be a genuinely decent crit racer on this exact schedule. Nobody in the field can tell how many hours you didn't ride; they can only tell whether you hold your line and close gaps."
+                },
+                "finisher": {
+                  "content": "**On your hours (5–12/wk):** the default week above is your floor, and your extra hours go into the easy rides, not the hard ones. Make Wednesday 90 minutes, make Sunday two hours, keep the two interval days exactly as prescribed. More aerobic base means you recover faster between surges — which in a crit is the difference between covering the winning move and watching it go."
+                },
+                "sharp-end": {
+                  "content": "**On your hours (12–18/wk):** you have room for a third quality day — but add race-specificity, not more intervals. A midweek group ride raced like a crit, a practice session that's nothing but corner entries and exits, motorpacing if you can get it. Your fitness is probably already sufficient to win local races; your craft is what decides whether you do."
+                },
+                "racer": {
+                  "content": "**On your hours (18+/wk):** the crit build barely uses your volume capacity, and that's the point — don't fill the space with junk tempo that blunts your top end. Big aerobic weeks in base, then protect the sharpness: when the 16-week table says sharpen, your extra hours should be embarrassingly easy. The rider who wins the crit is rarely the one who trained the most that week."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "crt-race-day",
+          "title": "Race Day, Compressed",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Chapter 7 walks through race week for a big single day — carb loading, taper math, logistics. Your version is smaller and meaner. You don't taper for a 45-minute race; you manage freshness. The day before: one hour easy with two or three 90-second openers at race intensity, just enough to remind the legs. Race morning: normal breakfast three hours out, no carb-loading ceremony required for an event your muscles could almost fuel from storage alone."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "90 minutes out — arrive, register, pin the number",
+                  "detail": "Walk or ride the course if they let you. Count the corners. Find the one where the wind changes and the one with the bad pavement — that's where the race will split."
+                },
+                {
+                  "label": "45 minutes out — warm-up starts, and it's real",
+                  "detail": "20-30 minutes on a trainer or quiet road: build gradually, touch threshold for 3-4 minutes, then 2-3 short sprints. End 10 minutes before staging. A crit starts at maximum — you cannot ride into it the way a fondo rider rides into their day."
+                },
+                {
+                  "label": "Staging — position is already racing",
+                  "detail": "Front two rows if you can get them. Every row back is ten extra accelerations out of corner one."
+                },
+                {
+                  "label": "First 10 minutes — the hardest of your season",
+                  "detail": "This is where the field decides who's racing and who's surviving. Spend what it takes to hold the front third. It gets easier — genuinely — once the sorting is done."
+                },
+                {
+                  "label": "Final 5 laps — position over power",
+                  "detail": "Top ten wheels, out of the wind, patient. The sprint you saved all race is worthless from thirtieth wheel. Chapter 6 covers the how; this is just the when."
+                }
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warning",
+              "content": "The warm-up is not optional and it is not a spin. The first five minutes of a crit are frequently the hardest five minutes of the entire race — harder than the finish. Riders get dropped from crits in lap two far more often than lap twenty, and it's almost never fitness. It's cold legs meeting a hot start."
+            }
+          ]
+        },
+        {
+          "id": "crt-weekly-racing",
+          "title": "Racing Weekly Is the Training",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Here's where this track ends up, and it's the best part of your sport: once the season starts, the races replace the intervals. A weekly crit is the highest-quality anaerobic session you can buy, with better motivation than any trainer screen. Your week simplifies — race hard, recover properly, touch the sprints midweek, stay fresh. The 16-week build was the price of admission; the racing itself is the sharpening.\n\nThat's also why the recovery chapter matters more for you than it looks. [After the Finish](/guide/after-the-finish/) reads like a post-event epilogue for the fondo rider. For you it's a weekly protocol — you're doing the finish-and-recover cycle thirty times a season, not once. Get it slightly wrong every week and the compound interest is a July where your legs are made of wet cardboard."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "It's the sharpening phase, you have five hours this week, and there's a Tuesday-night crit. What does your week look like?",
+              "options": [
+                {
+                  "text": "Skip the crit — the 16-week table says Tuesday is a 30-second repeat session",
+                  "correct": false
+                },
+                {
+                  "text": "Race the crit as the anaerobic session, keep Thursday's sprints, everything else easy",
+                  "correct": true
+                },
+                {
+                  "text": "Race the crit AND do the interval session Wednesday to double the stimulus",
+                  "correct": false
+                },
+                {
+                  "text": "Race the crit at 80% to save the intervals for later in the week",
+                  "correct": false
+                }
+              ],
+              "explanation": "The race is the workout — a crit produces more high-quality anaerobic work than any prescribed session, so it takes the hard-day slot rather than adding to it. Stacking intervals the next day just guarantees both are mediocre, and racing at 80% is how you practice losing. Keep the midweek sprint touch, make everything else genuinely easy."
+            },
+            {
+              "type": "prose",
+              "content": "That's the track. Start with [chapter 6](/guide/pack-skills-and-tactics/), keep the default week taped to the fridge, and let the 16-week table in [chapter 3](/guide/building-the-engine/) tell you what the hard days become. Everything else in this guide is here when you need it — just not in the order the fondo riders read it."
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
