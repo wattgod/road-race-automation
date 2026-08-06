@@ -12,8 +12,8 @@
       "location": "Merida, Venezuela",
       "location_badge": "Merida, Venezuela",
       "country": "Venezuela",
-      "date": "2027: March 21",
-      "date_specific": "2027: March 21",
+      "date": "2026: March 22",
+      "date_specific": "2026: March 22",
       "field_size": "1,000+ riders (2026)",
       "start_format": null,
       "registration": "https://www.granfondoworldtour.com",
@@ -221,7 +221,14 @@
       "status": "active",
       "verified": "2026-08-06",
       "source": "https://www.compasinformativo.com/2026/03/el-gran-fondo-collado-del-condor-2026.html",
-      "notes": "Sixth edition ran 22 March 2026 with 1,000+ finishers/participants reported. Vitals corrected: distance 123 km (down from 125.2 km), elevation reframed as 3,692 m net start-to-finish gain (426 m start to 4,118 m finish) rather than a flat 4,200 m figure, which conflated finish altitude with climbing total. UPDATED 2026-08-06: Compás Informativo's post-race report quotes organizer Ultrabikex inviting athletes to the next edition on March 21, 2027; the same report documents the 2026 podium, prize purse, and event format. The organizer's own event page remains on the completed 2026 edition, so current route facts continue to use the verified 123 km course rather than inventing a 2027 course change."
+      "notes": "Sixth edition ran 22 March 2026 with 1,000+ finishers/participants reported. Vitals corrected: distance 123 km (down from 125.2 km), elevation reframed as 3,692 m net start-to-finish gain (426 m start to 4,118 m finish) rather than a flat 4,200 m figure, which conflated finish altitude with climbing total. UPDATED 2026-08-06: Compás Informativo's post-race report quotes organizer Ultrabikex inviting athletes to a next edition on March 21, 2027, but no organizer-owned 2027 date, registration cycle, or edition-specific route is published. The profile therefore retains the completed 2026 edition as its verified date instead of promoting the third-party 2027 invitation as confirmed."
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "reviewed_at": "2026-08-06",
+      "blockers": [
+        "No organizer-confirmed 2027 date, registration cycle, or edition-specific route is published."
+      ]
     }
   }
 }

@@ -12,8 +12,8 @@
       "location": "Saint-Michel-de-Maurienne, Savoie, France",
       "location_badge": "Saint-Michel-de-Maurienne, France",
       "country": "France",
-      "date": "2027: June 6",
-      "date_specific": "2027: June 6 (Sunday cyclosportive; ascent event June 5)",
+      "date": "2027: June 5-6",
+      "date_specific": "2027: June 5-6",
       "field_size": "Approximately 1,500 participants",
       "start_format": null,
       "registration": null,
@@ -317,7 +317,14 @@
       "status": "active",
       "verified": "2026-08-06",
       "source": "https://www.galibier-challenge.com/cyclosportive",
-      "notes": "The organizer confirms the next Galibier Challenge weekend for June 5-6, 2027 and says registration opens October 1, 2026. The road cyclosportive is the Sunday event, June 6, with official timing and classification stopping at the Col du Galibier before a free-pace return to Saint-Michel-de-Maurienne. The current course page describes approximately 110-115 kilometers and 3,300-3,350 meters of climbing; existing profile vitals remain within that organizer-published range rather than inventing one false precision."
+      "notes": "The organizer's header confirms the next Galibier Challenge weekend for June 5-6, 2027 and says registration opens October 1, 2026. However, the registration and program body copy inconsistently places the leisure ride on June 6 and the cyclosportive on June 7, which is a Monday. The exact 2027 Race Day remains blocked pending organizer-corrected program details. The current course page describes approximately 110-115 kilometers and 3,300-3,350 meters of climbing; existing profile vitals remain within that organizer-published range rather than inventing one false precision."
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "reviewed_at": "2026-08-06",
+      "blockers": [
+        "Official 2027 header and program body conflict on the cyclosportive date; require an organizer correction before assigning Race Day."
+      ]
     }
   }
 }

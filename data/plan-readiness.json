@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T04:20:03",
+  "generated_at": "2026-08-06T14:36:08",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1218,13 +1218,17 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": true
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
-      "ready": true,
+      "ready": false,
       "runway_weeks": 27,
-      "race_date": "2027-02-13",
-      "blockers": []
+      "race_date": "2027-02-12",
+      "blockers": [
+        "plan clearance: Organizer has not published 2027 stage details, and the current single-Race-Day pipeline cannot represent both competitive days."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "eroica-california": {
       "slug": "eroica-california",
@@ -1534,13 +1538,17 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": true
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
-      "ready": true,
+      "ready": false,
       "runway_weeks": 43,
-      "race_date": "2027-06-06",
-      "blockers": []
+      "race_date": "2027-06-05",
+      "blockers": [
+        "plan clearance: Official 2027 header and program body conflict on the cyclosportive date; require an organizer correction before assigning Race Day."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "gent-wevelgem-cyclo": {
       "slug": "gent-wevelgem-cyclo",
@@ -2507,14 +2515,19 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
-        "active_registerable": true
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 32,
-      "race_date": "2027-03-21",
-      "blockers": []
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": "2026-03-22",
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: No organizer-confirmed 2027 date, registration cycle, or edition-specific route is published."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "gran-fondo-curacavi": {
       "slug": "gran-fondo-curacavi",
@@ -7560,7 +7573,6 @@
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "gran-fondo-san-diego",
-    "gran-fondo-collado-del-condor",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7747,6 +7759,7 @@
     "boone-gran-fondo",
     "douro-gran-fondo",
     "giro-ride-like-a-pro-usa",
+    "gran-fondo-collado-del-condor",
     "granfondo-bogota",
     "istria-granfondo",
     "la-vaujany",
@@ -7925,7 +7938,6 @@
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
     "mallorca-312",
-    "galibier-challenge",
     "tartu-rattaralli",
     "nordsjorittet",
     "engadin-radmarathon",
@@ -7950,7 +7962,6 @@
     "strade-bianche-gran-fondo",
     "legendaria-gran-fondo-ontinyent",
     "gran-fondo-san-diego",
-    "gran-fondo-collado-del-condor",
     "etape-loch-ness",
     "sea-otter-classic-gran-fondo",
     "tour-de-brisbane",
@@ -7960,7 +7971,6 @@
     "gran-fondo-florida",
     "le-race",
     "cape-town-cycle-tour",
-    "epic-gran-canaria",
     "cadel-evans-great-ocean-road-ride",
     "tour-of-nilgiris",
     "gfny-san-luis-potosi",
@@ -8007,13 +8017,13 @@
   ],
   "summary": {
     "total": 408,
-    "ready": 165,
+    "ready": 162,
     "content_present": 395,
     "validator_clean": 408,
-    "pilot_candidates": 101,
+    "pilot_candidates": 98,
     "by_tier_ready": {
       "1": 12,
-      "2": 133,
+      "2": 130,
       "3": 20,
       "4": 0
     }

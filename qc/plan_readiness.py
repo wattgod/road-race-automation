@@ -4,7 +4,8 @@ Per-race TrainingPeaks plan-catalog readiness for road-race-automation.
 
 Reads every race-data/*.json profile and scores it for readiness:
     validator-clean AND editorial-present AND course-character-present
-    AND active/registerable (web-verified eligibility) AND future-parsed-date.
+    AND active/registerable (web-verified eligibility) AND future-parsed-date
+    AND no explicit TrainingPeaks plan-clearance block.
 
 Emits data/plan-readiness.json:
     - per-race record: {slug, tier, score, checks{}, eligibility_status, ready,
@@ -149,6 +150,29 @@ def score_race(path: Path, today: date) -> dict[str, Any]:
         else:
             blockers.append(f"eligibility: {eligibility_status}")
 
+    # --- explicit TrainingPeaks plan clearance ---
+    # Most legacy profiles have no clearance object and retain the historical
+    # behavior. A reviewed exception can stop a race with a future date from
+    # entering the TP build queue when its edition facts or plan model are not
+    # yet defensible.
+    raw_clearance = race.get("training_plan_clearance")
+    if raw_clearance is None:
+        clearance_status = None
+        plan_clearance = True
+    elif not isinstance(raw_clearance, dict):
+        clearance_status = "invalid"
+        plan_clearance = False
+        blockers.append("plan clearance: malformed training_plan_clearance")
+    else:
+        clearance_status = raw_clearance.get("status") or "invalid"
+        plan_clearance = clearance_status == "ready"
+        if not plan_clearance:
+            clearance_blockers = raw_clearance.get("blockers")
+            if isinstance(clearance_blockers, list) and clearance_blockers:
+                blockers.extend(f"plan clearance: {item}" for item in clearance_blockers)
+            else:
+                blockers.append(f"plan clearance: {clearance_status}")
+
     checks = {
         "validator_clean": validator_clean,
         "editorial": editorial,
@@ -156,6 +180,8 @@ def score_race(path: Path, today: date) -> dict[str, Any]:
         "future_date": future_date,
         "active_registerable": active_registerable,
     }
+    if raw_clearance is not None:
+        checks["plan_clearance"] = plan_clearance
     ready = all(checks.values())
 
     rating = _as_dict(race.get("fondo_rating"))
@@ -166,7 +192,7 @@ def score_race(path: Path, today: date) -> dict[str, Any]:
     if not isinstance(score, (int, float)):
         score = None
 
-    return {
+    record = {
         "slug": slug,
         "tier": tier,
         "score": score,
@@ -177,6 +203,9 @@ def score_race(path: Path, today: date) -> dict[str, Any]:
         "race_date": race_date.isoformat() if race_date else None,
         "blockers": blockers,
     }
+    if clearance_status is not None:
+        record["plan_clearance_status"] = clearance_status
+    return record
 
 
 def _priority_key(record: dict[str, Any]) -> tuple:

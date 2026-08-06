@@ -117,6 +117,27 @@ class TestIndividualChecks:
         assert record["tier"] == 1
         assert record["score"] == 59
         assert record["eligibility_status"] == "active"
+        assert "plan_clearance_status" not in record
+
+    def test_explicit_plan_clearance_block_overrides_future_active_race(self, tmp_path):
+        race = _base_race(
+            training_plan_clearance={
+                "status": "source_blocked",
+                "reviewed_at": "2026-08-06",
+                "blockers": ["organizer has not confirmed the next-edition route"],
+            }
+        )
+        path = _write_fixture(tmp_path, "source-blocked", race)
+        record = plan_readiness.score_race(path, TODAY)
+
+        assert record["checks"]["future_date"] is True
+        assert record["checks"]["active_registerable"] is True
+        assert record["checks"]["plan_clearance"] is False
+        assert record["plan_clearance_status"] == "source_blocked"
+        assert record["ready"] is False
+        assert record["blockers"] == [
+            "plan clearance: organizer has not confirmed the next-edition route"
+        ]
 
     def test_missing_editorial(self, tmp_path):
         race = _base_race(biased_opinion={"verdict": "Solid", "strengths": [], "weaknesses": []})
