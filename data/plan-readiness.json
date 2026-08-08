@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T10:31:39",
+  "generated_at": "2026-08-08T10:38:45",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -6782,20 +6782,21 @@
     "tour-du-mont-blanc-cyclo": {
       "slug": "tour-du-mont-blanc-cyclo",
       "tier": 2,
-      "score": 73,
+      "score": 71,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": true
+        "active_registerable": false
       },
-      "eligibility_status": "active",
+      "eligibility_status": "unknown",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-07-11",
       "blockers": [
-        "no parsed future date"
+        "no parsed future date",
+        "eligibility unverified (unknown)"
       ]
     },
     "tour-durban": {
@@ -7745,7 +7746,6 @@
     "sierra-nevada-limite",
     "struggle-dales",
     "tortour",
-    "tour-du-mont-blanc-cyclo",
     "tour-of-the-gila",
     "assault-on-mt-mitchell",
     "colnago-cycling-festival",
@@ -7757,6 +7757,7 @@
     "omloop-het-nieuwsblad-sportive",
     "ramrod",
     "sellaronda-bike-day",
+    "tour-du-mont-blanc-cyclo",
     "tour-of-georgia-gran-fondo",
     "trek-100",
     "bealach-mor",

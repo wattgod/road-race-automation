@@ -4445,47 +4445,6 @@
     ]
   },
   {
-    "name": "Tour du Mont-Blanc Cyclo",
-    "slug": "tour-du-mont-blanc-cyclo",
-    "location": "Les Saisies, Haute-Savoie, France",
-    "country": "France",
-    "region": "Western Europe",
-    "month": "June",
-    "distance_km": 329.9,
-    "distance_mi": 205.0,
-    "elevation_m": 8000,
-    "elevation_ft": 26247.0,
-    "tier": 2,
-    "overall_score": 73,
-    "scores": {
-      "distance": 5,
-      "climbing": 5,
-      "descent_technicality": 1,
-      "road_surface": 3,
-      "climate_risk": 4,
-      "altitude": 5,
-      "logistics": 2,
-      "prestige": 4,
-      "organization": 3,
-      "scenic_experience": 5,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "Circumnavigate Western Europe's highest peak through three countries. 330 km. 8,000 meters of climbing. France, Switzerland, Italy, and back.",
-    "has_profile": true,
-    "profile_url": "/race/tour-du-mont-blanc-cyclo/",
-    "discipline": "gran_fondo",
-    "lat": 45.857,
-    "lng": 6.617,
-    "route_options": [
-      "Grand Tour: ~330 km (205 mi), ~8,000 m gain — the full circumnavigation through 3 countries",
-      "Medio: ~200 km shorter loop — France and Switzerland only"
-    ]
-  },
-  {
     "name": "Tour of the Gila",
     "slug": "tour-of-the-gila",
     "location": "Silver City, Grant County, New Mexico, USA",
@@ -5416,6 +5375,47 @@
     "route_options": [
       "Full Sellaronda circuit: 55 km / 1,780m elevation (counterclockwise)",
       "Partial circuit: ride any single pass or combination — no requirement to complete the full loop"
+    ]
+  },
+  {
+    "name": "Tour du Mont-Blanc Cyclo",
+    "slug": "tour-du-mont-blanc-cyclo",
+    "location": "Les Saisies, Haute-Savoie, France",
+    "country": "France",
+    "region": "Western Europe",
+    "month": "July",
+    "distance_km": 330.0,
+    "distance_mi": 205.1,
+    "elevation_m": 8300,
+    "elevation_ft": 27231.0,
+    "tier": 2,
+    "overall_score": 71,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 1,
+      "road_surface": 3,
+      "climate_risk": 4,
+      "altitude": 5,
+      "logistics": 2,
+      "prestige": 4,
+      "organization": 3,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 1,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "A noncompetitive 330 km, 8,300 m endurance ride around Mont Blanc through three countries",
+    "has_profile": true,
+    "profile_url": "/race/tour-du-mont-blanc-cyclo/",
+    "discipline": "gran_fondo",
+    "lat": 45.857,
+    "lng": 6.617,
+    "route_options": [
+      "Solo: 330 km / 8,300 m — one rider completes the full three-country loop",
+      "Duo: rider 1 completes 155 km / 4,300 m to Grand-Saint-Bernard; rider 2 completes 175 km / 4,000 m back to Les Saisies"
     ]
   },
   {
