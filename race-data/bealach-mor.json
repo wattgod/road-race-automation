@@ -1,58 +1,57 @@
 {
   "race": {
-    "name": "Bealach Mór",
+    "name": "The Bà Sportive",
     "slug": "bealach-mor",
-    "display_name": "Bealach Mór (The Bà Sportive)",
-    "tagline": "Holy Grail of UK cycling climbs: closed-road assault on Bealach na Bà.",
+    "display_name": "The Bà Sportive (formerly Bealach Mór)",
+    "tagline": "A timed 90-mile Highland sportive anchored by a closed-road ascent of Bealach na Bà",
     "vitals": {
-      "distance_km": 72.0,
-      "distance_mi": 44.7,
-      "elevation_m": 800.0,
-      "elevation_ft": 2625.0,
-      "location": "Shieldaig, Applecross Peninsula, Scottish Highlands, Scotland",
-      "location_badge": "Shieldaig, Scotland",
+      "distance_km": 143.9,
+      "distance_mi": 89.4,
+      "elevation_m": 2080.0,
+      "elevation_ft": 6824.0,
+      "location": "Kinlochewe, Wester Ross, Scottish Highlands, Scotland",
+      "location_badge": "Kinlochewe, Scotland",
       "country": "Scotland",
-      "date": "2026: May 16",
+      "date": "September 5, 2026",
       "date_specific": "2026: September 5",
-      "field_size": 400,
-      "start_format": null,
-      "registration": null,
-      "entry_fee": "£50 standard; £35 student",
-      "feed_zones": null,
-      "cutoff_time": null,
+      "field_size": 301,
+      "start_format": "Rolling start from 7:45-8:15 a.m.; the overall route and Bealach climb are timed",
+      "registration": "2026 entries through SiEntries; no 2027 registration cycle published",
+      "entry_fee": "£55 for the 2026 edition",
+      "feed_zones": "Supported feed stations are included; see final rider details for locations",
+      "cutoff_time": "See the organizer's final rider details",
       "lat": null,
       "lng": null,
       "route_options": [
-        "Main: 72km/45mi",
-        "Related: Bealach Beag (shorter)",
-        "2025 Bà Duathlon"
+        "The Bà Sportive: 143.9 km / 89.4 mi with approximately 2,080 m of climbing",
+        "The Bà Duathlon is a separate event that merges onto part of the sportive route"
       ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "Typical May Scottish Highlands: cool, rainy, windy, variable; exposed to Atlantic weather on Bealach na Bà.",
+      "description": "Early-September Scottish Highlands: cool, rainy, windy, and variable, with Atlantic exposure on Bealach na Bà and the Applecross coast.",
       "challenges": [
         "Precipitation: High"
       ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
+      "primary": "Paved Highland roads",
       "surface": "Fully paved",
       "technical_rating": 1,
       "features": [
-        "Closed Highland roads with rugged climbs",
-        "primarily paved ascent of Bealach na Bà"
+        "Open Highland roads around the Applecross peninsula",
+        "Traffic-free ascent of Bealach na Bà during the event closure"
       ]
     },
     "fondo_rating": {
-      "distance": 3,
+      "distance": 4,
       "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 3,
       "organization": 4,
       "scenic_experience": 5,
       "community_culture": 4,
-      "altitude": 3,
+      "altitude": 1,
       "logistics": 3,
       "prestige": 3,
       "field_depth": 3,
@@ -60,12 +59,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 70,
+      "overall_score": 69,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 76. adventure dimension dropped, road_surface added. Score recalculated: 70."
+      "scoring_notes": "Corrected to the current 143.9 km The Bà Sportive route rather than the separate 72 km Bealach na Bà event. Distance rises to 4; altitude falls to 1 because the route tops out at 626 m. Score recalculates to 69."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -79,7 +78,7 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Closed-road loop from Shieldaig over Bealach na Bà to Applecross peninsula, looping with Torridon/Skye views back to finish.",
+      "character": "A timed 143.9 km loop from Kinlochewe through the northwest Highlands and around the Applecross peninsula. Most of the route uses open Highland roads; the full 11-mile Bealach na Bà pass is closed to motor traffic for the event.",
       "signature_challenge": "Bealach na Bà pass—UK's biggest road climb.",
       "suffering_zones": [
         "Bealach na Bà: 9km, 632m gain, 7% avg/20% max."
@@ -87,14 +86,14 @@
     },
     "logistics": {
       "airport": "Inverness (INV, ~2.5hrs drive)",
-      "lodging_strategy": "Local Shieldaig/Applecross; book early for Highlands.",
-      "transport": "Start/finish Shieldaig; rolling 9:15-9:45am; closed roads.",
+      "lodging_strategy": "Stay in or near Kinlochewe; Shieldaig and Torridon are alternatives. Book early because Highland capacity is limited.",
+      "transport": "Start/finish in Kinlochewe; rolling start 7:45-8:15 a.m. Only the Bealach na Bà section is closed to motor traffic.",
       "food": "",
-      "official_site": "https://www.sientries.co.uk/event.php?elid=Y&event_id=14569"
+      "official_site": "https://www.sientries.co.uk/event/the-ba-sportive-2026"
     },
     "history": {
       "founded": 2006,
-      "origin_story": "Founded 2006 by Hands On Events; now Shieldaig Assoc./Jenny Graham (relaunched as The Bà 2025+).",
+      "origin_story": "Hands On Events managed Bealach Mór for 18 years before the event transferred to Jenny Graham and returned as The Bà Sportive in 2025.",
       "notable_moments": [
         "UK's 'prettiest and most challenging' ride.",
         "'Holy Grail' of British climbs.",
@@ -104,18 +103,33 @@
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "A savage, scenic masterpiece that punches way above its modest distance—pure suffering rewarded with Highland majesty. Prestige 3 belies its 'Holy Grail' status among UK climbs.",
+      "summary": "The Bà is a long, timed Highland sportive built around one of Britain's defining road climbs. Its 143.9 km loop and roughly 2,080 m of ascent make the full day materially harder than the short Bealach na Bà event with which this profile was previously conflated. The traffic-free climb is the centerpiece; the wider loop remains an exposed, remote road challenge.",
       "strengths": [],
       "weaknesses": [],
       "bottom_line": ""
     },
     "final_verdict": {
-      "score": "70/100",
-      "one_liner": "UK's ultimate road climb on closed roads: brutal, beautiful, bucket-list essential.",
-      "should_you_race": "Bealach Mór delivers the Bealach na Bà—626m over 9km at 20% max—in a 72km charity loop through paradise. Remote, raw, and relentlessly rewarding; T2 tier hides its elite suffering.",
+      "score": "69/100",
+      "one_liner": "A timed 143.9 km Highland loop with roughly 2,080 m of climbing and a traffic-free ascent of Bealach na Bà.",
+      "should_you_race": "Ride The Bà if you want a timed 90-mile Highland sportive whose defining feature is the traffic-free Bealach na Bà climb. Skip it if remote logistics, exposed weather, and a long day on mostly open roads are poor fits.",
       "alternatives": ""
     },
     "citations": [
+      {
+        "url": "https://www.sientries.co.uk/event/the-ba-sportive-2026",
+        "category": "official",
+        "label": "The Bà Sportive 2026 — Official Entry Page"
+      },
+      {
+        "url": "https://www.sientries.co.uk/terms.php?event_id=16478",
+        "category": "official",
+        "label": "The Bà Sportive 2026 — Event Terms"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/48981699",
+        "category": "official",
+        "label": "The Bà Sportive 2026 — Official Route"
+      },
       {
         "url": "https://stolengoat.com/2026/01/best-cycling-events-2026/",
         "category": "reference",
@@ -416,9 +430,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://www.sientries.co.uk/event.php?elid=Y&event_id=16478",
-      "notes": "RENAMED: now 'The Bà Sportive' (formerly Bealach Mór), transferred from Hands On Events to organizer Jenny Graham. Prior file date of May 16 was incorrect (belongs to the separate, shorter Bealach na Ba event)."
+      "verified": "2026-08-08",
+      "source": "https://www.sientries.co.uk/event/the-ba-sportive-2026",
+      "notes": "The Bà Sportive is the renamed Bealach Mór and has overall and climb-segment timing. The September 5, 2026 edition is inside the plan floor and no official 2027 edition or date has been published. The prior May 16 and 72 km facts belonged to a separate event."
     }
   }
 }

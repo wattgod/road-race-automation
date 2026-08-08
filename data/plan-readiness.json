@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T10:38:45",
+  "generated_at": "2026-08-08T10:45:09",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -422,21 +422,19 @@
     "bealach-mor": {
       "slug": "bealach-mor",
       "tier": 2,
-      "score": 70,
+      "score": 69,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-16",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 4,
+      "race_date": "2026-09-05",
+      "blockers": []
     },
     "belgrade-gran-fondo": {
       "slug": "belgrade-gran-fondo",
@@ -7675,6 +7673,7 @@
     "ride-across-britain",
     "amys-gran-fondo",
     "gran-fondo-montevideo",
+    "bealach-mor",
     "tour-o-the-borders",
     "gfny-colonia",
     "letape-slovenia",
@@ -7760,7 +7759,6 @@
     "tour-du-mont-blanc-cyclo",
     "tour-of-georgia-gran-fondo",
     "trek-100",
-    "bealach-mor",
     "bike-abu-dhabi-gran-fondo",
     "boone-gran-fondo",
     "douro-gran-fondo",
@@ -8023,13 +8021,13 @@
   ],
   "summary": {
     "total": 408,
-    "ready": 160,
+    "ready": 161,
     "content_present": 395,
     "validator_clean": 408,
     "pilot_candidates": 97,
     "by_tier_ready": {
       "1": 12,
-      "2": 128,
+      "2": 129,
       "3": 20,
       "4": 0
     }

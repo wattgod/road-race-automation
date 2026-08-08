@@ -5585,48 +5585,6 @@
     ]
   },
   {
-    "name": "Bealach Mór",
-    "slug": "bealach-mor",
-    "location": "Shieldaig, Applecross Peninsula, Scottish Highlands, Scotland",
-    "country": "Scotland",
-    "region": "UK & Ireland",
-    "month": "May",
-    "distance_km": 72.0,
-    "distance_mi": 44.7,
-    "elevation_m": 800.0,
-    "elevation_ft": 2625.0,
-    "tier": 2,
-    "overall_score": 70,
-    "scores": {
-      "distance": 3,
-      "climbing": 4,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 3,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 5,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 5,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "Holy Grail of UK cycling climbs: closed-road assault on Bealach na Bà.",
-    "has_profile": true,
-    "profile_url": "/race/bealach-mor/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "Main: 72km/45mi",
-      "Related: Bealach Beag (shorter)",
-      "2025 Bà Duathlon"
-    ]
-  },
-  {
     "name": "Bike Abu Dhabi Gran Fondo",
     "slug": "bike-abu-dhabi-gran-fondo",
     "location": "Hazza bin Zayed Stadium, Al Ain to Sheikh Zayed Festival, Al Wathba, Abu Dhabi, UAE",
@@ -6777,6 +6735,47 @@
         "name": "Cortofondo",
         "distance_km": 35.0
       }
+    ]
+  },
+  {
+    "name": "The Bà Sportive",
+    "slug": "bealach-mor",
+    "location": "Kinlochewe, Wester Ross, Scottish Highlands, Scotland",
+    "country": "Scotland",
+    "region": "UK & Ireland",
+    "month": "September",
+    "distance_km": 143.9,
+    "distance_mi": 89.4,
+    "elevation_m": 2080.0,
+    "elevation_ft": 6824.0,
+    "tier": 2,
+    "overall_score": 69,
+    "scores": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 5,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "A timed 90-mile Highland sportive anchored by a closed-road ascent of Bealach na Bà",
+    "has_profile": true,
+    "profile_url": "/race/bealach-mor/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "The Bà Sportive: 143.9 km / 89.4 mi with approximately 2,080 m of climbing",
+      "The Bà Duathlon is a separate event that merges onto part of the sportive route"
     ]
   },
   {
