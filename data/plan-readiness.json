@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T10:21:37",
+  "generated_at": "2026-08-08T10:31:39",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1034,20 +1034,21 @@
     "dartmoor-classic": {
       "slug": "dartmoor-classic",
       "tier": 2,
-      "score": 73,
+      "score": 69,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": true
+        "active_registerable": false
       },
-      "eligibility_status": "active",
+      "eligibility_status": "unknown",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-21",
       "blockers": [
-        "no parsed future date"
+        "no parsed future date",
+        "eligibility unverified (unknown)"
       ]
     },
     "dartmoor-legend-ultra": {
@@ -7731,7 +7732,6 @@
     "wicklow-200",
     "bergen-voss",
     "cicloturista-cerdanya",
-    "dartmoor-classic",
     "gfny-colombia",
     "gran-fondo-utah",
     "gran-fondo-vosges",
@@ -7777,6 +7777,7 @@
     "947-ride-joburg",
     "arlberg-giro",
     "axel-merckx-gran-fondo",
+    "dartmoor-classic",
     "ford-ridelondon",
     "gent-wevelgem-cyclo",
     "gfny-new-york",

@@ -3,21 +3,25 @@
     "name": "Dartmoor Classic",
     "slug": "dartmoor-classic",
     "display_name": "Dartmoor Classic Sportive",
-    "tagline": "Commit. Climb. Conquer. One of the UK's most prestigious open-road sportives.",
+    "tagline": "A noncompetitive Dartmoor sportive with 173 km, 2,777 m, and one timed hill-climb segment",
+    "catalog_flags": {
+      "race_plan_eligible": false,
+      "exclusion_reason": "The organizer explicitly says the Dartmoor Classic is not a race; only one closed-road hill-climb segment is timed for prizes."
+    },
     "vitals": {
       "distance_km": 173.0,
       "distance_mi": 107.5,
-      "elevation_m": 2700,
-      "elevation_ft": 8858.0,
+      "elevation_m": 2777,
+      "elevation_ft": 9111.0,
       "location": "Dartmoor National Park, Devon, England",
       "location_badge": "Dartmoor National Park, England",
       "country": "England",
       "date": "2026: June 21",
       "date_specific": "2026: June 21 (completed). 2027 date not yet confirmed on the official site; aggregator listings showing June 20, 2027 are unconfirmed.",
       "field_size": 4000,
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
+      "start_format": "Open-road sportive starts; only the designated hill-climb segment is closed to traffic and timed for prizes",
+      "registration": "2026 registration closed; no organizer-confirmed 2027 date or registration cycle",
+      "entry_fee": "£65 plus £2 card fee (2026)",
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
@@ -45,8 +49,8 @@
           "name": "Granite & Ghosts - Grande Route",
           "distance_miles": 107,
           "distance_km": 173,
-          "elevation_ft": 8858,
-          "elevation_m": 2700,
+          "elevation_ft": 9111,
+          "elevation_m": 2777,
           "min_age": 14,
           "entry_fee_gbp": 65
         }
@@ -79,17 +83,17 @@
       "altitude": 2,
       "logistics": 5,
       "prestige": 3,
-      "field_depth": 4,
+      "field_depth": 1,
       "value": 4,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 3,
-      "overall_score": 73,
+      "overall_score": 69,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 73."
+      "scoring_notes": "Corrected 2026-08-08 from the organizer's event page. The Dartmoor Classic is a supported open-road sportive, not a full-course race; one closed-road hill-climb segment is timed for prizes. Grande climbing updated from 2,700 m to the organizer's current 2,777 m. Field depth 4->1 because there is no full-course classification. Score 73->69; tier remains T2."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -104,7 +108,7 @@
     },
     "course_description": {
       "character": "Dramatic moorland challenge combining demanding ascents with exhilarating descents across Dartmoor's most iconic roads. The event showcases the rugged beauty of Dartmoor National Park with sweeping views and world-class event organization.",
-      "signature_challenge": "The Grande route's 107-mile, 2,700m elevation gain challenge through Dartmoor's toughest climbs, culminating in the closed-road hill climb competition segment where riders compete for King/Queen of the Mountain honors.",
+      "signature_challenge": "The Grande route's 107-mile, 2,777 m climbing challenge through Dartmoor's steep open roads, plus one closed-road hill-climb segment with fastest-rider prizes.",
       "suffering_zones": [
         "Haytor climb (featured in Tour of Britain) on Grande route",
         "Multiple high-moorland ascents on Grande route delivering 2,700m total elevation gain",
@@ -134,21 +138,21 @@
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "The Dartmoor Classic represents the gold standard for UK sportive organization and course design. Established in 2007, it has earned its reputation as one of Britain's most prestigious open-road events through consistent delivery of exceptional experiences. The 2026 edition's expansion of the closed-road hill climb competition to all routes—not just the Grande—demonstrates the organizers' commitment to competitive engagement across all distances. For riders seeking a genuinely challenging moorland experience with world-class logistics and a welcoming community atmosphere, the Dartmoor Classic is essential.",
+      "summary": "The Dartmoor Classic is a large, difficult open-road sportive rather than a full-course race. Its Grande route covers 173 kilometers with 2,777 meters of climbing, and all routes include one closed-road hill-climb segment where fastest riders win prizes. That segment adds a competitive target without changing the organizer's explicit event-wide classification: riders complete the remaining course at their own pace under ordinary road conditions.",
       "strengths": [],
       "weaknesses": [],
       "bottom_line": ""
     },
     "final_verdict": {
-      "score": "73/100",
-      "one_liner": "The Dartmoor Classic is the UK's premier moorland sportive, combining exceptional organization, iconic climbs, and genuine challenge in one of England's most dramatic landscapes.",
-      "should_you_race": "The Dartmoor Classic stands as a landmark fixture on the national cycling calendar, delivering a pro-tour experience to amateur cyclists since 2007. With three distance options ranging from 45 to 107 miles, it accommodates diverse ability levels while maintaining uncompromising course quality. The Grande route's 2,700m elevation gain ensures legitimate suffering, while the closed-road hill climb competition on all routes adds prestige and competitive engagement. Mid-Devon Cycling Club's volunteer-driven organization is exemplary, with comprehensive support including mechanical assistance, professional medical coverage, and celebrated feed stations. The event's sell-out field of 4,000 riders and international reputation reflect its status as one of Britain's best-organized and most respected sportives. For serious cyclists seeking a challenging, well-executed event in stunning scenery, the Dartmoor Classic is non-negotiable.",
+      "score": "69/100",
+      "one_liner": "A major moorland sportive with serious climbing and a timed hill segment, but no full-course race result.",
+      "should_you_race": "Ride the Dartmoor Classic if you want a supported 173-kilometer challenge through steep moorland and enjoy having one closed-road climb timed for prizes. Skip it if your goal is a ranked start-to-finish road race: the organizer explicitly says the event is not a race.",
       "alternatives": ""
     },
     "citations": [
       {
         "url": "https://sportive.com/event/dartmoor-classic-2026/",
-        "category": "reference",
+        "category": "official",
         "label": "Dartmoor Classic 2026 - Sportive.com"
       },
       {
@@ -305,9 +309,10 @@
       }
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.dartmoorclassic.co.uk/"
+      "status": "noncompetitive",
+      "verified": "2026-08-08",
+      "source": "https://www.dartmoorclassic.co.uk/",
+      "note": "The organizer explicitly says the Dartmoor Classic is not a race and describes it as a fully supported cycle challenge ridden at each participant's own pace. One closed-road hill-climb segment on each route is timed for fastest-rider prizes, but there is no full-course competitive classification. The event remains a valid public database entry but is outside the timed/scored Roadie Labs training-plan scope. The completed 2026 Grande route was 173 km with 2,777 m of climbing; no official 2027 date is published."
     }
   }
 }

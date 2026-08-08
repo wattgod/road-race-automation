@@ -3697,72 +3697,6 @@
     ]
   },
   {
-    "name": "Dartmoor Classic",
-    "slug": "dartmoor-classic",
-    "location": "Dartmoor National Park, Devon, England",
-    "country": "England",
-    "region": "UK & Ireland",
-    "month": "June",
-    "distance_km": 173.0,
-    "distance_mi": 107.5,
-    "elevation_m": 2700,
-    "elevation_ft": 8858.0,
-    "tier": 2,
-    "overall_score": 73,
-    "scores": {
-      "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 3,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 2,
-      "logistics": 5,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 4,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "Commit. Climb. Conquer. One of the UK's most prestigious open-road sportives.",
-    "has_profile": true,
-    "profile_url": "/race/dartmoor-classic/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Pixies Revenge",
-        "distance_miles": 45,
-        "distance_km": 74,
-        "elevation_ft": null,
-        "elevation_m": null,
-        "min_age": 11,
-        "entry_fee_gbp": 65
-      },
-      {
-        "name": "Mist & Myths - Medio Route",
-        "distance_miles": 66.6,
-        "distance_km": 107,
-        "elevation_ft": null,
-        "elevation_m": null,
-        "min_age": 12,
-        "entry_fee_gbp": 65
-      },
-      {
-        "name": "Granite & Ghosts - Grande Route",
-        "distance_miles": 107,
-        "distance_km": 173,
-        "elevation_ft": 8858,
-        "elevation_m": 2700,
-        "min_age": 14,
-        "entry_fee_gbp": 65
-      }
-    ]
-  },
-  {
     "name": "GFNY Chile",
     "slug": "gfny-chile",
     "location": "Casablanca, Valparaíso Region, Chile",
@@ -6926,6 +6860,72 @@
       "Lausanne → Lausanne, full lake circuit: 176 km / 890 m (headline route; vitals above)",
       "Évian → Lausanne: 112 km / 640 m",
       "Lausanne → Évian: 64 km / 250 m"
+    ]
+  },
+  {
+    "name": "Dartmoor Classic",
+    "slug": "dartmoor-classic",
+    "location": "Dartmoor National Park, Devon, England",
+    "country": "England",
+    "region": "UK & Ireland",
+    "month": "June",
+    "distance_km": 173.0,
+    "distance_mi": 107.5,
+    "elevation_m": 2777,
+    "elevation_ft": 9111.0,
+    "tier": 2,
+    "overall_score": 69,
+    "scores": {
+      "distance": 4,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 5,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 1,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "A noncompetitive Dartmoor sportive with 173 km, 2,777 m, and one timed hill-climb segment",
+    "has_profile": true,
+    "profile_url": "/race/dartmoor-classic/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Pixies Revenge",
+        "distance_miles": 45,
+        "distance_km": 74,
+        "elevation_ft": null,
+        "elevation_m": null,
+        "min_age": 11,
+        "entry_fee_gbp": 65
+      },
+      {
+        "name": "Mist & Myths - Medio Route",
+        "distance_miles": 66.6,
+        "distance_km": 107,
+        "elevation_ft": null,
+        "elevation_m": null,
+        "min_age": 12,
+        "entry_fee_gbp": 65
+      },
+      {
+        "name": "Granite & Ghosts - Grande Route",
+        "distance_miles": 107,
+        "distance_km": 173,
+        "elevation_ft": 9111,
+        "elevation_m": 2777,
+        "min_age": 14,
+        "entry_fee_gbp": 65
+      }
     ]
   },
   {
