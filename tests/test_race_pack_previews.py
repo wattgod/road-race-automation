@@ -167,3 +167,35 @@ def test_repair_ultra_nutrition_overlays_updates_only_stale_long_pack(tmp_path):
     assert repaired == 1
     assert "expected duration" in json.loads(stale_path.read_text())["race_overlay"]["nutrition"]
     assert json.loads(current_path.read_text()) == current
+
+
+def test_long_gran_fondo_copy_avoids_false_depletion_and_stale_month():
+    race = {
+        "display_name": "Example Alpine Gran Fondo",
+        "vitals": {
+            "distance_mi": 87.07,
+            "elevation_ft": 9255,
+            "date": "May",
+        },
+        "terrain": {
+            "primary": (
+                "Maritime Alps roads with three major climbs and a summit gravel sector"
+            )
+        },
+    }
+
+    durability = generate_workout_context(race, {}, "Durability")
+    simulation = generate_workout_context(race, {}, "Race_Simulation")
+    road = generate_workout_context(race, {}, "Road_Specific")
+    nutrition = generate_race_overlay(race, {})["nutrition"]
+
+    assert "glycogen is gone" not in durability
+    assert "final third" in durability
+    assert "before race day" in simulation
+    assert "before May" not in simulation
+    assert "Road-specific control matters" in road
+    assert "and a rewards" not in road
+    assert "roads with three major climbs rewards" not in road
+    assert "Bonking" not in nutrition
+    assert "60\u201380g" not in nutrition
+    assert "feed-zone locations" in nutrition

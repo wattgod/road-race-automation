@@ -3,169 +3,178 @@
     "name": "L'Etape Italy Piemonte by Tour de France",
     "slug": "letape-italy-piemonte",
     "display_name": "L'Etape Italy Piemonte by Tour de France",
-    "tagline": "50 km of Alpine charm through Italy's Maritime Alps with Tour de France flair and zero pretension",
+    "tagline": "Competitive Maritime Alps gran fondo: 140 km, 2,821 meters, and a steep gravel pass",
     "vitals": {
-      "distance_km": 49.9,
-      "distance_mi": 31.0,
-      "elevation_m": 795,
-      "elevation_ft": 2608.0,
+      "distance_km": 140.12,
+      "distance_mi": 87.07,
+      "elevation_m": 2821,
+      "elevation_ft": 9255.0,
       "location": "Entracque, Cuneo, Piemonte, Italy",
       "location_badge": "ENTRACQUE, IT",
       "country": "Italy",
-      "date": "May annually",
+      "date": "May",
       "date_specific": "2026: May 31 (completed). 2027 date not yet announced.",
-      "field_size": "Unspecified; open to all levels including families, e-bike users, and first-timers",
-      "start_format": null,
-      "registration": "€25 includes official jersey, race pack, on-route refreshments, and final pasta party",
-      "entry_fee": "€25",
-      "feed_zones": "On-route refreshments included",
-      "cutoff_time": "Not specified",
+      "field_size": "Not published by the organizer",
+      "start_format": "Gridded mass start; gun-time finish classification with the Colle delle Goderie gravel descent neutralized",
+      "registration": "2026 registration closed; no 2027 registration cycle published",
+      "entry_fee": "€50 early / €75 after April 30 (2026 competitive race); €25 applied only to the separate family ride",
+      "feed_zones": "2026: km 54.4 Festiona, km 83.1 Vernante, km 89.2 Colle delle Goderie, km 120.5 Festiona",
+      "cutoff_time": "15:00 at the Gran Fondo/Medio route split; later riders were directed onto the Medio course",
       "lat": 44.0833,
       "lng": 7.5667,
       "route_options": [
-        "50 km, 2,608 ft — scenic cycle-touring loop through Valle Gesso with moderate climbing"
+        "Granfondo: current route page 140.12 km / 2,821 m; formal 2026 regulations and FAQ list 144.9 km / 2,894 m",
+        "Mediofondo: current route page 110 km / 2,101 m; formal 2026 regulations and FAQ list 114.8 km / 2,184 m",
+        "Cicloturistica: separate noncompetitive family ride, current route page 55.71 km / 815 m"
       ]
     },
     "climate": {
-      "primary": "Alpine spring — mild with variable conditions",
-      "description": "Late May in Piemonte's Maritime Alps typically offers mild spring weather with moderate temperatures and potential for afternoon showers. The high elevation and alpine terrain mean conditions can shift rapidly, requiring layered clothing. Expect pleasant conditions for cycling but prepare for variable mountain weather.",
+      "primary": "Late-spring mountain conditions",
+      "description": "The race crosses three Maritime Alps valleys in late May. The organizer does not publish a fixed weather range, so use the current forecast and participant briefing rather than a historical temperature assumption.",
       "challenges": [
-        "rapid weather changes",
-        "afternoon thunderstorms possible",
-        "cool mornings",
-        "altitude exposure"
+        "Weather exposure across the Gesso, Stura, and Vermenagna valleys",
+        "Layering for long climbs and the neutralized Goderie descent"
       ]
     },
     "terrain": {
-      "primary": "Alpine cycle-touring with moderate climbing and scenic variety",
-      "surface": "Paved provincial roads with smooth stretches and steady gradients designed for accessibility rather than technical challenge. The route winds through varied alpine landscapes including forests, open valleys, and historic settlements, prioritizing scenic enjoyment over competitive difficulty. Surface quality supports both traditional bikes and e-bikes.",
-      "technical_rating": 2,
+      "primary": "Maritime Alps roads with three major climbs and a summit gravel sector",
+      "surface": "Mostly paved mountain roads. Colle delle Goderie climbs 6.1 km at 9.4% average, beginning on asphalt before a gravel sector; its gravel descent was neutralized until the route returned to asphalt.",
+      "technical_rating": 3,
       "features": [
-        "alpine forest passages",
-        "open valley vistas",
-        "historic settlements",
-        "steady gradient climbs",
-        "Valle Gesso scenery"
+        "Madonna del Colletto climbed from both sides on the long route",
+        "Colle delle Goderie: 6.1 km at 9.4% average",
+        "A gravel sector near the Goderie summit and a neutralized gravel descent",
+        "Gun-time overall classification plus timed jersey competitions"
       ]
     },
     "fondo_rating": {
-      "distance": 2,
-      "climbing": 2,
-      "descent_technicality": 2,
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
       "climate_risk": 3,
       "organization": 3,
       "scenic_experience": 4,
-      "community_culture": 5,
+      "community_culture": 4,
       "altitude": 2,
       "logistics": 3,
       "prestige": 3,
-      "field_depth": 2,
+      "field_depth": 3,
       "value": 4,
       "expenses": 4,
       "road_surface": 3,
       "cultural_impact": 2,
-      "overall_score": 63,
+      "overall_score": 69,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 63."
+      "scoring_notes": "Corrected 2026-08-08 from the organizer's regulations, route page, FAQ, and participant briefing. The old profile described only the separate 50 km family ride and incorrectly called the event noncompetitive. The 2026 Gran Fondo was a gun-time competitive race on a roughly 140 km / 2,821 m course, with a roughly 110 km Medio option, official classifications, category awards, and timed jersey competitions. Distance 2->3, climbing 2->4, descent technicality 2->3, community culture 5->4, and field depth 2->3. Score 63->69; tier remains T2."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 3,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        {
+          "name": "Madonna del Colletto",
+          "description": "Climbed from both sides on the Gran Fondo route and once from Valdieri on the Medio route."
+        },
+        {
+          "name": "Colle delle Goderie",
+          "distance_km": 6.1,
+          "average_gradient": 9.4,
+          "description": "The polka-dot jersey climb, with a steep paved opening and a gravel sector before a neutralized gravel descent."
+        }
+      ],
+      "profile_type": "Three-climb alpine gran fondo with a mixed-surface summit sector",
+      "king_of_mountain": "Colle delle Goderie"
     },
     "course_description": {
-      "character": "L'Etape Piemonte is a scenic cycle-touring loop designed for recreational enjoyment rather than competitive racing. The route winds through Valle Gesso's varied alpine landscapes—forests, open valleys, and historic settlements—with paved provincial roads and steady, manageable gradients. The course prioritizes visual and cultural immersion over physical suffering, passing through charming villages like Valdieri, Borgo San Dalmazzo, and Roccavione. The 795 meters of climbing is distributed evenly across the 50 km, creating a rhythm of gentle ascent and descent rather than dramatic Alpine suffering. This is deliberately beginner-friendly terrain that welcomes e-bikes and families while remaining scenically rewarding.",
-      "signature_challenge": "The signature challenge is not a single dramatic climb but rather the sustained, steady climbing across the entire 50 km loop. With 795 meters distributed evenly, riders face consistent 5-7% gradients rather than a single punishing ascent. The real challenge is maintaining pace and enjoying the scenery simultaneously—a mental and physical balance rather than a pure suffering test.",
+      "character": "The competitive Gran Fondo starts and finishes in Entracque and crosses the Gesso, Stura, and Vermenagna valleys. The long route tackles three major climbs, including both sides of Madonna del Colletto and the new Colle delle Goderie. Most of the course is paved, but Goderie finishes with gravel; the organizer removed the gravel descent time from the overall result until riders returned to asphalt.",
+      "signature_challenge": "Colle delle Goderie: 6.1 km at 9.4% average, with steep asphalt followed by gravel and a polka-dot jersey competition near the summit.",
       "suffering_zones": [
-        "Valdieri Approach",
-        "Borgo San Dalmazzo Transition",
-        "Roccavione Return Climb"
+        "The first Madonna del Colletto ascent from Valdieri",
+        "Colle delle Goderie at km 89.2, after two earlier feed zones and before its neutralized gravel descent",
+        "The second side of Madonna del Colletto on the long-route return"
       ]
     },
     "logistics": {
-      "airport": "Turin-Caselle Airport (TRN) is approximately 100 km north of Entracque and serves as the primary international gateway. Ground transport via rental car or shuttle service is necessary to reach the Maritime Alps. Consider arriving a day early to explore the region and acclimate to the terrain.",
-      "lodging_strategy": "Entracque is a small mountain village with limited accommodation; book early as the inaugural event may attract more interest than capacity allows. Consider lodging in nearby Cuneo (30 km south) for more options, or explore agritourism farms in the Piemonte region for authentic rural stays.",
-      "transport": "",
-      "food": "Piemonte is renowned for wine, truffles, and regional cuisine. Stock up on local specialties before or after the ride. The event includes a pasta party, but plan additional meals in Entracque or nearby villages. Mountain village dining may be limited; research restaurants in advance.",
+      "airport": "The organizer does not name a preferred airport. Its official road directions route drivers via the A6 Turin-Savona and A33 Asti-Cuneo motorways, then Borgo San Dalmazzo, Valdieri, and Entracque.",
+      "lodging_strategy": "The organizer offered territory accommodation packages through OM Cycling Tour. Verify the next edition before booking in or around Entracque.",
+      "transport": "The 2026 start and finish were on Viale J. F. Kennedy in Entracque; use the next-edition participant briefing for parking and village access.",
+      "food": "Four on-course feed zones, a pasta/hamburger party, and a Sunday gala dinner were published for 2026.",
       "official_site": "https://letapeitaly.it/en/letape-piemonte-homepage-2/"
     },
     "history": {
       "founded": 2026,
-      "origin_story": "L'Etape Italy Piemonte represents the expansion of the global L'Etape Series into Italy's Alpine regions, debuting in 2026 as an inaugural cycle-touring event. Rather than replicating the competitive granfondo model, the organizers deliberately designed this event to prioritize accessibility, community, and cultural immersion over racing credentials. The route through Valle Gesso and the Maritime Alps showcases Piemonte's wine country and historic settlements, positioning cycling as a celebration of regional identity rather than a competitive proving ground. This philosophy—'cycling is for everyone'—guides the event's inclusive approach to families, e-bikes, and all skill levels.",
+      "origin_story": "L'Étape Piemonte debuted in Entracque in 2026 as one of two Italian L'Étape by Tour de France events that season. It paired a competitive Gran Fondo and Medio Fondo with a separate family ride rather than treating the 50 km route as the flagship event.",
       "notable_moments": [
         "Inaugural 2026 debut in Piemonte's Maritime Alps",
-        "Launch of L'Etape Italy's cycle-touring series expanding Tour de France brand to Italy",
-        "Opening event of two-event 2026 L'Etape Italy calendar (Piemonte in May, Mondovì in September)",
-        "Emphasis on accessibility and community over competitive racing"
+        "First competitive ascent of Colle delle Goderie, used for the polka-dot jersey",
+        "The gravel descent from Goderie was neutralized and excluded from total race time",
+        "Official classifications included overall, age-category, and Tour de France jersey competitions"
       ],
-      "reputation": "As a new event, L'Etape Piemonte has no established reputation, but the L'Etape brand carries significant prestige from its Tour de France association. The organizers' explicit commitment to inclusivity and hospitality suggests a strong foundation for building community goodwill, though inaugural events always carry execution risk."
+      "reputation": "A first-edition competitive alpine gran fondo carrying the L'Étape brand; it does not yet have the multi-year record of established Italian classics."
     },
     "biased_opinion": {
-      "verdict": "Accessible Tour de France tourism",
-      "summary": "L'Etape Italy Piemonte is a masterclass in inclusive event design—it brings Tour de France atmosphere to recreational cyclists without pretense or gatekeeping. The 31-mile loop through Valle Gesso is genuinely scenic, the €25 entry fee is absurdly fair, and the community focus is refreshing in a cycling world obsessed with racing credentials. However, serious cyclists will find it underwhelming: the distance is short, the climbing is moderate, and the terrain is beginner-friendly. This is deliberately not a granfondo for racers; it's a celebration of cycling culture for families, e-bike users, and casual touring enthusiasts. If you're seeking a competitive test or serious Alpine suffering, look elsewhere. If you want to experience Tour de France magic without the suffering, this inaugural 2026 edition delivers.",
+      "verdict": "A real alpine race, not the family ride it was mistaken for",
+      "summary": "The competitive L'Étape Piemonte is a substantial first-edition gran fondo: roughly 140 kilometers, 2,821 meters of climbing, three major ascents, official gun-time results, and a 6.1-kilometer climb averaging 9.4% that changes from asphalt to gravel. The organizer also ran a short family ride, which is what the old profile accidentally described. The race's main uncertainty is continuity, not difficulty: its 2026 debut is complete and no 2027 date or route has been announced.",
       "strengths": [
-        "exceptional value at €25",
-        "genuinely inclusive community focus",
-        "Tour de France cultural immersion",
-        "scenic Maritime Alps routing",
-        "family-friendly and e-bike accessible"
+        "A legitimate 140-kilometer competitive course with nearly 2,900 meters of climbing",
+        "Colle delle Goderie adds a distinctive steep gravel-topped climb",
+        "Closed roads, chip timing, feed zones, and official classifications",
+        "Tour de France jersey competitions add clear race targets",
+        "The separate Medio Fondo preserves an in-race route choice"
       ],
       "weaknesses": [
-        "too short for serious cyclists",
-        "moderate climbing lacks challenge",
-        "inaugural status means unproven logistics",
-        "no competitive structure or field depth",
-        "beginner-friendly terrain eliminates technical satisfaction"
+        "No organizer-confirmed 2027 edition or route",
+        "Official 2026 pages conflict on final distance and climbing totals",
+        "The inaugural race lacks a multi-year execution record",
+        "A late 15:00 route split can force slower riders onto the Medio course",
+        "The Goderie gravel descent required neutralization"
       ],
-      "bottom_line": "L'Etape Piemonte succeeds brilliantly at what it intends: making Tour de France cycling accessible to everyone. It's not a race; it's a celebration. Approach it with that mindset and you'll love it."
+      "bottom_line": "Treat L'Étape Piemonte as a serious mixed-surface alpine gran fondo once the organizer publishes a next edition. Do not plan against the completed 2026 date."
     },
     "final_verdict": {
-      "score": "63/100",
-      "one_liner": "A charming, inclusive Tour de France experience that sacrifices competitive challenge for community and accessibility.",
-      "should_you_race": "Yes if you're a recreational cyclist, family, or e-bike user seeking Tour de France atmosphere without suffering. Skip if you're a serious racer wanting Alpine challenge—the 31 miles and 2,608 feet of climbing won't test you.",
-      "alternatives": "For serious Alpine granfondos, consider the 2026 Etape du Tour (170 km, 5,400 m) or L'Etape Mondovì (60 km, 1,104 m) later in September. For accessible Italian cycling tourism, L'Etape Parma offers a 140 km granfondo option."
+      "score": "69/100",
+      "one_liner": "A serious Maritime Alps debut with real climbing, official competition, and a memorable gravel-topped pass.",
+      "should_you_race": "Yes when a future edition is officially confirmed if you want a competitive Tour-branded alpine gran fondo with substantial climbing and a controlled mixed-surface sector. Wait to book or train until the organizer publishes the next date and route.",
+      "alternatives": "Consider Gran Fondo La Fausto Coppi for an established Cuneo alpine classic or L'Étape Mondovì for the other current Piedmont L'Étape event."
     },
     "citations": [
       {
-        "url": "https://www.bike-mag.com/letape-italy-launches-new-cycle-touring-rides-for-2026",
+        "url": "https://letapeitaly.it/en/rules-granfondo/",
         "category": "official",
-        "label": "L'Étape Italy launches new cycle‑touring rides for 2026"
+        "label": "L'Étape Piemonte 2026 official competitive regulations"
       },
       {
-        "url": "https://www.granfondoguide.com/Contents/IndexFull/8764/2026-etape-du-tour-one-of-the-most-demanding-editions-finishing-atop-alpe-dhuez",
-        "category": "reference",
-        "label": "2026 Etape du Tour one of the Most Demanding Editions Finishing atop Alpe d'Huez"
+        "url": "https://letapeitaly.it/en/the-routes-piemonte/",
+        "category": "official",
+        "label": "L'Étape Piemonte official route page"
       },
       {
-        "url": "https://www.letapeseries.com/memories/race/registrations-open-for-the-second-edition-of-l-etape-parma-by-tour-de-france",
-        "category": "reference",
-        "label": "Registrations Open for the Second Edition of L'Étape Parma by Tour de France"
+        "url": "https://letapeitaly.it/letape-piemonte-faq/",
+        "category": "official",
+        "label": "L'Étape Piemonte official FAQ, timing, classifications, and route options"
       },
       {
-        "url": "https://www.cycloworld.cc/en/gran-fondo/italy/letape-mondovi/42092",
-        "category": "reference",
-        "label": "L'Etape Mondovi"
+        "url": "https://letapeitaly.it/informazioni-importanti-piemonte/",
+        "category": "official",
+        "label": "L'Étape Piemonte 2026 participant briefing"
       },
       {
-        "url": "https://www.granfondoguide.com/Events/Index/4636/2026-letape-du-tour",
-        "category": "reference",
-        "label": "2026 L'Etape Du Tour - Gran Fondo Guide"
+        "url": "https://letapeitaly.it/en/letape-piemonte-homepage-2/",
+        "category": "official",
+        "label": "L'Étape Piemonte official event page"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://letapeitaly.it/en/letape-piemonte-homepage-2/",
-      "note": "The Entracque edition ran successfully May 31, 2026 (registration now shows CLOSED for that edition). No official 2027 date/registration has been published yet on the official site or ASO's calendar as of Jul 2026 — event is active, next date TBD."
+      "verified": "2026-08-08",
+      "source": "https://letapeitaly.it/en/rules-granfondo/",
+      "note": "The organizer's formal rules explicitly define the May 31, 2026 Gran Fondo and Medio Fondo as competitive, with gun-time results, classifications, and jersey competitions. The separate roughly 50-kilometer Cicloturistica was the noncompetitive family ride. The 2026 race is complete; no official 2027 date, registration cycle, regulations, or route has been published."
     }
   }
 }

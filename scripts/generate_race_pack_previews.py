@@ -220,6 +220,17 @@ def _safe_numeric(d: dict, key: str, default=0) -> float:
         return default
 
 
+def _truncate_phrase(text: str, max_length: int) -> str:
+    """Trim long prose at a word boundary without leaving a dangling connector."""
+    if len(text) <= max_length:
+        return text
+    words = text[:max_length].rsplit(" ", 1)[0].split()
+    dangling = {"a", "an", "and", "for", "of", "or", "the", "to", "with"}
+    while words and words[-1].lower().rstrip(".,;:") in dangling:
+        words.pop()
+    return " ".join(words)
+
+
 def _extract_terrain_primary(race: dict) -> str:
     """Extract primary terrain description from race data.
 
@@ -389,9 +400,10 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
         overlay['nutrition'] = generate_ultra_nutrition(distance)
     elif distance >= 80:
         overlay['nutrition'] = (
-            f"Target 60\u201380g carbs/hour for {race_name}\u2019s {int(distance)} miles. "
-            f"Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. "
-            f"Bonking at mile 60 is a nutrition failure, not a fitness failure."
+            f"Use long rides to rehearse a fueling and hydration plan for {_poss(race_name)} "
+            f"{int(distance)} miles. Start early, use carbohydrate and fluids you tolerate, "
+            f"scale intake to duration, intensity, and weather, and confirm the organizer's "
+            f"current feed-zone locations."
         )
     elif distance >= 40:
         overlay['nutrition'] = (
@@ -493,8 +505,7 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
     else:
         terrain_str = terrain_str[0].lower() + terrain_str[1:] if terrain_str else terrain_str
     # Truncate terrain_str if absurdly long (some race profiles have full descriptions)
-    if len(terrain_str) > 50:
-        terrain_str = terrain_str[:50].rsplit(' ', 1)[0]
+    terrain_str = _truncate_phrase(terrain_str, 50)
     elevation = _safe_numeric(vitals, 'elevation_ft', 0)
     terrain_types = vitals.get('terrain_types', []) or []
     # Title-case terrain_types entries that start with state names
@@ -509,20 +520,11 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
     terrain_types = clean_terrain_types
     elev_per_mi = round(elevation / distance) if distance > 0 else 0
 
-    # Extract month
-    date_str = vitals.get('date', '') or vitals.get('date_specific', '') or ''
-    month = ''
-    for m in ['January','February','March','April','May','June','July','August',
-              'September','October','November','December']:
-        if m in date_str:
-            month = m
-            break
-
     if category == 'Durability':
         if distance >= 150:
             return f"{int(distance)} miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
         elif distance >= 80:
-            return f"At mile 60 of {int(distance)}, glycogen is gone. This workout teaches your body to produce watts on fumes."
+            return f"The final third of {int(distance)} miles exposes pacing and fueling errors. Practice holding sustainable power after long aerobic work."
         else:
             return f"{int(distance)} miles on {terrain_str} burns energy faster than the distance suggests. Train the fade resistance now."
     elif category == 'VO2max':
@@ -536,20 +538,17 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
         else:
             return f"The aerobic base that lets you ride {terrain_str} at tempo for {int(distance)} miles without cracking. No shortcuts."
     elif category == 'Race_Simulation':
-        if month:
-            return f"Race-pace efforts that mimic {_poss(race_name)} demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before {month}."
-        else:
-            return f"Race-pace efforts that mimic {_poss(race_name)} demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
+        return f"Race-pace efforts that mimic {_poss(race_name)} demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     elif category == 'TT_Threshold':
         if elev_per_mi >= 50:
             return f"{elev_per_mi}ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
         else:
             return f"{_poss(race_name)} {terrain_str} rewards steady threshold power. Surging and recovering costs more watts than just holding."
     elif category == 'G_Spot':
-        return f"88\u201392% FTP is where you'll spend the hardest sustained miles of {race_name}. Train it until it feels boring."
+        return f"Upper-tempo and lower-threshold work builds the sustained power needed for {_poss(race_name)} longest efforts without making every session maximal."
     elif category == 'Mixed_Climbing':
         if elevation >= 5000:
-            return f"{int(elevation):,}ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+            return f"Across {int(elevation):,}ft of climbing, practice deliberate seated and standing transitions while keeping effort controlled."
         else:
             return f"Varied gradients on {terrain_str} demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     elif category == 'Over_Under':
@@ -557,9 +556,8 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
     elif category == 'Road_Specific':
         terrain_detail = ', '.join(terrain_types[:2]) if terrain_types else terrain_str
         # Truncate absurdly long terrain descriptions
-        if len(terrain_detail) > 60:
-            terrain_detail = terrain_detail[:60].rsplit(' ', 1)[0]
-        return f"{_poss(race_name)} {terrain_detail} rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for {int(distance)} miles."
+        terrain_detail = _truncate_phrase(terrain_detail, 60)
+        return f"Road-specific control matters at {race_name} on {terrain_detail}. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for {int(distance)} miles."
     elif category == 'Endurance':
         if distance >= 80:
             return f"Every hard session works better with a bigger aerobic base. At {int(distance)} miles, base fitness is the difference between racing and surviving."
@@ -576,9 +574,9 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
         return f"5-second power closes gaps and wins field sprints. At {race_name}, neuromuscular snap is a tactical tool, not just a finish-line move."
     elif category == 'Norwegian_Double':
         if distance >= 80:
-            return f"Two threshold sessions per week without the recovery cost of VO2max work. For {int(distance)} miles, sustainable FTP gains matter more than peak power."
+            return f"Threshold training supports sustainable power for {int(distance)} miles, but session frequency and volume must match experience and recovery."
         else:
-            return f"Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+            return "Threshold work can build sustained power, but session frequency and volume must match experience and recovery."
     elif category == 'SFR_Muscle_Force':
         if elevation >= 3000:
             return f"Low-cadence force work supports {int(elevation):,}ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."

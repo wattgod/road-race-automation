@@ -7490,6 +7490,48 @@
     "route_options": []
   },
   {
+    "name": "L'Etape Italy Piemonte by Tour de France",
+    "slug": "letape-italy-piemonte",
+    "location": "Entracque, Cuneo, Piemonte, Italy",
+    "country": "Italy",
+    "region": "Southern Europe",
+    "month": "May",
+    "distance_km": 140.12,
+    "distance_mi": 87.07,
+    "elevation_m": 2821,
+    "elevation_ft": 9255.0,
+    "tier": 2,
+    "overall_score": 69,
+    "scores": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "Competitive Maritime Alps gran fondo: 140 km, 2,821 meters, and a steep gravel pass",
+    "has_profile": true,
+    "profile_url": "/race/letape-italy-piemonte/",
+    "discipline": "gran_fondo",
+    "lat": 44.0833,
+    "lng": 7.5667,
+    "route_options": [
+      "Granfondo: current route page 140.12 km / 2,821 m; formal 2026 regulations and FAQ list 144.9 km / 2,894 m",
+      "Mediofondo: current route page 110 km / 2,101 m; formal 2026 regulations and FAQ list 114.8 km / 2,184 m",
+      "Cicloturistica: separate noncompetitive family ride, current route page 55.71 km / 815 m"
+    ]
+  },
+  {
     "name": "L'Etape Turkey by Tour de France",
     "slug": "letape-turkey",
     "location": "Beykoz, Istanbul, Turkey",
@@ -12234,46 +12276,6 @@
     "route_options": [
       "Long Course (Percurso Longo): 107 km, 2,300 m elevation gain",
       "Short Course (Percurso Curto): 66 km, 1,300 m elevation gain"
-    ]
-  },
-  {
-    "name": "L'Etape Italy Piemonte by Tour de France",
-    "slug": "letape-italy-piemonte",
-    "location": "Entracque, Cuneo, Piemonte, Italy",
-    "country": "Italy",
-    "region": "Southern Europe",
-    "month": "May",
-    "distance_km": 49.9,
-    "distance_mi": 31.0,
-    "elevation_m": 795,
-    "elevation_ft": 2608.0,
-    "tier": 2,
-    "overall_score": 63,
-    "scores": {
-      "distance": 2,
-      "climbing": 2,
-      "descent_technicality": 2,
-      "road_surface": 3,
-      "climate_risk": 3,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 5,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "50 km of Alpine charm through Italy's Maritime Alps with Tour de France flair and zero pretension",
-    "has_profile": true,
-    "profile_url": "/race/letape-italy-piemonte/",
-    "discipline": "gran_fondo",
-    "lat": 44.0833,
-    "lng": 7.5667,
-    "route_options": [
-      "50 km, 2,608 ft — scenic cycle-touring loop through Valle Gesso with moderate climbing"
     ]
   },
   {
