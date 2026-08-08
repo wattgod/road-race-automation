@@ -465,6 +465,7 @@ def normalize_race_data(data: dict) -> dict:
         'name': race.get('display_name') or race.get('name', 'Unknown Race'),
         # R4 eligibility (2026-07-23): drives the not-running commerce gate
         'eligibility': race.get('eligibility') or {},
+        'catalog_flags': race.get('catalog_flags') or {},
         'slug': race.get('slug', ''),
         'tagline': race.get('tagline', ''),
         'overall_score': rating.get('overall_score', 0),
@@ -4238,12 +4239,29 @@ def build_status_notice(rd: dict) -> str:
         msg = ("The upcoming edition has been cancelled. Check the "
                "organizer&rsquo;s site before planning a season around this one.")
         label = "EDITION CANCELLED"
+    elif not race_plan_eligible(rd):
+        reason = (rd.get('catalog_flags') or {}).get('exclusion_reason')
+        msg = (
+            esc(reason)
+            if reason
+            else "This event is not a timed or scored full-course race."
+        )
+        msg += (" The profile stays in the database, but Roadie Labs does not "
+                "sell race training plans for it.")
+        label = "NOT A COMPETITIVE RACE"
     else:
         return ''
     return f'''<div class="rl-status-notice" role="note">
     <span class="rl-status-notice-label">{label}</span>
     <p>{msg}</p>
   </div>'''
+
+
+def race_plan_eligible(rd: dict) -> bool:
+    """Return whether this profile may market a race-specific plan."""
+    flags = rd.get('catalog_flags') or {}
+    status = (rd.get('eligibility') or {}).get('status')
+    return flags.get('race_plan_eligible') is not False and status != 'noncompetitive'
 
 
 def build_plan_ladder(rd: dict) -> str:
@@ -6128,12 +6146,15 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     # commerce — selling a $15/wk build for a race that will not happen is a
     # trust breach. Coaching stays; an honest status notice renders instead.
     not_running = (rd.get('eligibility') or {}).get('status') in ('defunct', 'cancelled')
+    plan_eligible = race_plan_eligible(rd)
     status_notice = build_status_notice(rd)
-    custom_plan = '' if not_running else build_custom_plan_offer(rd)
+    custom_plan = '' if not_running or not plan_eligible else build_custom_plan_offer(rd)
     coaching = build_coaching_footnote(rd)
-    training = build_training_intelligence(rd)
-    plan_ladder = '' if not_running else build_plan_ladder(rd)
-    train_for_race = build_train_for_race(rd, include_commerce=False)
+    training = build_training_intelligence(rd) if plan_eligible else ''
+    plan_ladder = '' if not_running or not plan_eligible else build_plan_ladder(rd)
+    train_for_race = (
+        build_train_for_race(rd, include_commerce=False) if plan_eligible else ''
+    )
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)
     similar = build_similar_races(rd, race_index)
@@ -6141,7 +6162,9 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     footer = build_footer(rd)
 
     # Dynamic TOC — only link to sections that have content
-    active = {'course', 'ratings', 'training'}  # always present
+    active = {'course', 'ratings'}  # always present
+    if training:
+        active.add('training')
     if history:
         active.add('history')
     if course_route:

@@ -29,7 +29,11 @@ def audit_page(path: Path) -> list[str]:
     if profile.exists():
         with open(profile, "r", encoding="utf-8") as f:
             raw = json.load(f)
-        status = ((raw.get("race") or {}).get("eligibility") or {}).get("status")
+        race = raw.get("race") or {}
+        status = (race.get("eligibility") or {}).get("status")
+        flags = race.get("catalog_flags") or {}
+        if status == "noncompetitive" or flags.get("race_plan_eligible") is False:
+            return _audit_plan_ineligible_page(html)
         if status in ("defunct", "cancelled"):
             return _audit_not_running_page(html)
     try:
@@ -93,6 +97,67 @@ def audit_page(path: Path) -> list[str]:
     duplicates = sorted({value for value in ids if ids.count(value) > 1})
     if duplicates:
         issues.append(f"duplicate IDs: {', '.join(duplicates)}")
+    return issues
+
+
+def _audit_plan_ineligible_page(html: str) -> list[str]:
+    """Spine variant for database-worthy events outside plan scope."""
+    issues: list[str] = []
+    try:
+        deep_start = html.index('id="deep-dive"')
+        deep_end = html.index('<footer class="rl-mega-footer">', deep_start)
+    except ValueError:
+        return ["missing Deep Dive boundary"]
+
+    ordered = [
+        'id="ratings"',
+        'data-measure-section="coaching"',
+        'id="breakdown"',
+        'id="deep-dive"',
+        'id="course"',
+    ]
+    missing = [marker for marker in ordered if marker not in html]
+    if missing:
+        issues.append(f"missing required markers: {', '.join(missing)}")
+    elif [html.index(marker) for marker in ordered] != sorted(
+        html.index(marker) for marker in ordered
+    ):
+        issues.append("approved sections are out of order")
+
+    if html.count(EXPECTED_FORMAT) != 1:
+        issues.append("missing or duplicated approved page-format marker")
+    if "rl-status-notice" not in html:
+        issues.append("plan-ineligible event is missing the status notice")
+
+    forbidden = [
+        'data-measure-section="custom-plan"',
+        'id="training"',
+        'id="train-for-race"',
+        'id="plan-ladder"',
+        "START MY CUSTOM PLAN",
+        "BUILD MY PLAN",
+        "PREVIEW MY PLAN",
+        "rl-cfg-bar",
+        "rl-pack-cta",
+        "/training-plan/",
+        "rl-sticky-cta",
+        "/questionnaire",
+    ]
+    leaked = [marker for marker in forbidden if marker in html]
+    if leaked:
+        issues.append(f"plan marketing present on a plan-ineligible event: {', '.join(leaked)}")
+
+    if "https://roadielabs.com/race/" not in html:
+        issues.append("Roadie Labs canonical URL is missing")
+    if GA_ID not in html:
+        issues.append("Roadie Labs GA4 property is missing")
+    if 'class="gg-' in html or "--gg-" in html:
+        issues.append("Gravel God brand token/class leaked into Roadie Labs")
+
+    ids = re.findall(r'\bid="([^"]+)"', html)
+    duplicates = sorted({value for value in ids if ids.count(value) > 1})
+    if duplicates:
+        issues.append(f"duplicate element ids: {', '.join(duplicates)}")
     return issues
 
 

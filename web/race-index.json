@@ -14657,46 +14657,6 @@
     ]
   },
   {
-    "name": "Muju Gran Fondo",
-    "slug": "muju-gran-fondo",
-    "location": "Muju County, North Jeolla Province, South Korea",
-    "country": "South Korea",
-    "region": "Asia",
-    "month": "May",
-    "distance_km": 130.0,
-    "distance_mi": 80.8,
-    "elevation_m": 2000.0,
-    "elevation_ft": 6562.0,
-    "tier": 3,
-    "overall_score": 59,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 3,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "South Korea's largest road cycling race in scenic Muju County[6].",
-    "has_profile": true,
-    "profile_url": "/race/muju-gran-fondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "130 km Gran Fondo (assumed)"
-    ]
-  },
-  {
     "name": "Neusiedlersee Radmarathon",
     "slug": "neusiedlersee-radmarathon",
     "location": "Mörbisch am See, Burgenland, Austria",
@@ -16671,6 +16631,47 @@
     "route_options": [
       "The Race (Long): 140-166 km depending on venue, 1,000-1,552 m elevation gain",
       "The Ride (Short): 65-75 km depending on venue, lighter climbing"
+    ]
+  },
+  {
+    "name": "Muju Gran Fondo",
+    "slug": "muju-gran-fondo",
+    "location": "Muju County, North Jeolla Province, South Korea",
+    "country": "South Korea",
+    "region": "Asia",
+    "month": "June",
+    "distance_km": 123.05,
+    "distance_mi": 76.46,
+    "elevation_m": 2627.0,
+    "elevation_ft": 8619.0,
+    "tier": 3,
+    "overall_score": 53,
+    "scores": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 1,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 2
+    },
+    "tagline": "A mountainous noncompetitive road ride with an optional KOM contest",
+    "has_profile": true,
+    "profile_url": "/race/muju-gran-fondo/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "123.05 km Gran Fondo",
+      "70.5 km Medio Fondo"
     ]
   },
   {

@@ -1,5 +1,6 @@
 """Road race-pack previews must stay road-specific."""
 
+import json
 import sys
 from pathlib import Path
 
@@ -10,8 +11,10 @@ from generate_race_pack_previews import (  # noqa: E402
     calculate_category_scores,
     generate_preview,
     generate_race_overlay,
+    generate_ultra_nutrition,
     generate_workout_context,
     get_top_categories,
+    repair_ultra_nutrition_overlays,
 )
 
 
@@ -110,3 +113,57 @@ def test_high_climb_context_does_not_invent_repeated_climbs_or_walking():
     assert "repeated surges" not in vo2
     assert "walk" not in threshold
     assert "sustained" in threshold.lower()
+
+
+def test_ultra_nutrition_avoids_fixed_total_burn_and_short_event_target():
+    race = {
+        "display_name": "Example Multi-Day Ultra",
+        "vitals": {"distance_mi": 994.2, "elevation_ft": 45932},
+        "terrain": {"primary": "mixed lowland and mountain roads"},
+    }
+
+    nutrition = generate_race_overlay(race, {})["nutrition"]
+
+    assert "8,000" not in nutrition
+    assert "12,000" not in nutrition
+    assert "80\u2013100g" not in nutrition
+    assert "resupply plan" in nutrition
+    assert "sleep strategy" in nutrition
+    assert "fixed total-calorie estimate" in nutrition
+
+
+def test_long_one_day_nutrition_does_not_claim_multi_day_or_sleep_strategy():
+    nutrition = generate_ultra_nutrition(160)
+
+    assert "multi-day" not in nutrition
+    assert "sleep strategy" not in nutrition
+    assert "expected duration" in nutrition
+    assert "confirmed feed or commercial resupply options" in nutrition
+
+
+def test_repair_ultra_nutrition_overlays_updates_only_stale_long_pack(tmp_path):
+    stale = {
+        "distance_mi": 160,
+        "race_overlay": {
+            "nutrition": (
+                "Ultra-distance fueling for 160 miles: 80\u2013100g carbs/hour "
+                "from mile 1 \u2014 160 miles burns 8,000\u201312,000+ calories."
+            )
+        },
+        "generated_at": "2026-08-05",
+    }
+    current = {
+        "distance_mi": 100,
+        "race_overlay": {"nutrition": "Existing century guidance."},
+        "generated_at": "2026-08-05",
+    }
+    stale_path = tmp_path / "stale.json"
+    current_path = tmp_path / "current.json"
+    stale_path.write_text(json.dumps(stale))
+    current_path.write_text(json.dumps(current))
+
+    repaired = repair_ultra_nutrition_overlays(str(tmp_path))
+
+    assert repaired == 1
+    assert "expected duration" in json.loads(stale_path.read_text())["race_overlay"]["nutrition"]
+    assert json.loads(current_path.read_text()) == current

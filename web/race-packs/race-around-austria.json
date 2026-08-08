@@ -40,7 +40,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Race Around Austria, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Race Around Austria, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Mixed_Climbing",
@@ -59,7 +59,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "61ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "61ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "VO2max",
@@ -69,7 +69,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "21,325ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "21,325ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Road_Specific",
@@ -78,7 +78,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Race Around Austria's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 348 miles."
+      "workout_context": "Race Around Austria's mixed terrain rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 348 miles."
     },
     {
       "category": "Endurance",
@@ -125,14 +125,14 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 21,325ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 21,325ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 348 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 348 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Moderate altitude at Race Around Austria. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Race Around Austria requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "nutrition": "Ultra-distance fueling for 348 miles requires a practiced resupply plan built around confirmed course services and available commercial stops. Rehearse frequent carbohydrate intake on long rides, then scale the plan to intensity, sleep strategy, tolerance, and real food across the full event. Carry redundant fuel and avoid applying a short-event hourly target or fixed total-calorie estimate to a multi-day race.",
+    "altitude": "Altitude may change sustainable power and recovery at Race Around Austria. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Race Around Austria rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Over Under to prepare you for 348 miles of mixed terrain in St. Georgen im Attergau, Austria (CHALLENGE category route \u2014 the flagship Extreme race covers ~2,200km/30,000m around all of Austria).",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-08-08"
 }

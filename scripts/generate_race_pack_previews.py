@@ -289,6 +289,25 @@ def generate_pack_summary(race: dict, top_categories: list) -> str:
     )
 
 
+def generate_ultra_nutrition(distance: float) -> str:
+    """Return distance-appropriate nutrition copy for rides of 150+ miles."""
+    if distance >= 300:
+        return (
+            f"Ultra-distance fueling for {int(distance)} miles requires a practiced "
+            f"resupply plan built around confirmed course services and available "
+            f"commercial stops. Rehearse frequent carbohydrate intake on long rides, "
+            f"then scale the plan to intensity, sleep strategy, tolerance, and real food "
+            f"across the full event. Carry redundant fuel and avoid applying a short-event "
+            f"hourly target or fixed total-calorie estimate to a multi-day race."
+        )
+    return (
+        f"Fueling for {int(distance)} miles requires a practiced plan matched to expected "
+        f"duration, intensity, tolerance, and the course's confirmed feed or commercial "
+        f"resupply options. Rehearse the plan on long rides, begin early, carry redundant "
+        f"fuel, and avoid treating a fixed total-calorie estimate as a race prescription."
+    )
+
+
 def generate_race_overlay(race: dict, demands: dict) -> dict:
     """Generate race-specific preparation notes from race data and demands.
 
@@ -367,13 +386,7 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
 
     # ── Nutrition ──
     if distance >= 150:
-        overlay['nutrition'] = (
-            f"Ultra-distance fueling for {int(distance)} miles: 80\u2013100g carbs/hour from mile 1 \u2014 "
-            f"don\u2019t wait until you\u2019re hungry. "
-            f"Practice your exact race-day nutrition in every long training ride. "
-            f"Carry backup calories. "
-            f"{int(distance)} miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
-        )
+        overlay['nutrition'] = generate_ultra_nutrition(distance)
     elif distance >= 80:
         overlay['nutrition'] = (
             f"Target 60\u201380g carbs/hour for {race_name}\u2019s {int(distance)} miles. "
@@ -696,6 +709,37 @@ def _output_dir() -> str:
     )
 
 
+def repair_ultra_nutrition_overlays(output_dir: str) -> int:
+    """Repair known stale 150+ mile nutrition overlays in existing pack JSON."""
+    repaired = 0
+    stale_markers = (
+        "burns 8,000",
+        "80\u2013100g carbs/hour from mile 1",
+        "fixed total-calorie estimate",
+    )
+    for filename in sorted(os.listdir(output_dir)):
+        if not filename.endswith(".json"):
+            continue
+        path = os.path.join(output_dir, filename)
+        with open(path) as f:
+            preview = json.load(f)
+        distance = _safe_numeric(preview, "distance_mi", 0)
+        overlay = preview.get("race_overlay") or {}
+        nutrition = overlay.get("nutrition") or ""
+        if distance < 150 or not any(marker in nutrition for marker in stale_markers):
+            continue
+        updated = generate_ultra_nutrition(distance)
+        if nutrition == updated:
+            continue
+        overlay["nutrition"] = updated
+        preview["race_overlay"] = overlay
+        preview["generated_at"] = date.today().isoformat()
+        with open(path, "w") as f:
+            json.dump(preview, f, indent=2)
+        repaired += 1
+    return repaired
+
+
 def _get_race_tier(path: str) -> int:
     """Read a race JSON and return its tier (1-4), defaulting to 4."""
     try:
@@ -727,6 +771,11 @@ def main() -> None:
         "--tier", type=int, choices=[1, 2, 3, 4],
         help="Generate previews for a specific tier only"
     )
+    group.add_argument(
+        "--repair-ultra-nutrition",
+        action="store_true",
+        help="Repair stale nutrition overlays in existing 150+ mile preview JSON",
+    )
 
     args = parser.parse_args()
     race_dir = _race_data_dir()
@@ -741,6 +790,10 @@ def main() -> None:
         written = write_preview(preview, out_dir)
         print(f"Wrote {written}")
         _print_preview_summary(preview)
+
+    elif args.repair_ultra_nutrition:
+        repaired = repair_ultra_nutrition_overlays(out_dir)
+        print(f"Repaired {repaired} ultra-distance nutrition overlays in {out_dir}/")
 
     elif args.all or args.tier:
         json_files = sorted(f for f in os.listdir(race_dir) if f.endswith(".json"))

@@ -341,6 +341,19 @@ class TestNormalize:
         expected = sum(normalized_data["rating"].get(d, 0) for d in COURSE_DIMS)
         assert normalized_data["course_profile"] == expected
 
+    def test_preserves_catalog_plan_eligibility_flags(self, sample_race_data):
+        sample_race_data["race"]["catalog_flags"] = {
+            "race_plan_eligible": False,
+            "exclusion_reason": "Organizer classifies this as a noncompetitive ride.",
+        }
+
+        normalized = normalize_race_data(sample_race_data)
+
+        assert normalized["catalog_flags"]["race_plan_eligible"] is False
+        assert normalized["catalog_flags"]["exclusion_reason"] == (
+            "Organizer classifies this as a noncompetitive ride."
+        )
+
 
 # ── Hero ──────────────────────────────────────────────────────
 
@@ -1117,6 +1130,27 @@ class TestFullPage:
             r'<span class="rl-section-kicker">\[(\d{2})\]</span>', html
         )
         assert kickers == [f"{number:02d}" for number in range(1, len(kickers) + 1)]
+
+    def test_plan_ineligible_event_keeps_database_page_without_plan_marketing(
+        self, normalized_data
+    ):
+        normalized_data["eligibility"] = {"status": "noncompetitive"}
+        normalized_data["catalog_flags"] = {
+            "race_plan_eligible": False,
+            "exclusion_reason": "Organizer classifies this as a noncompetitive ride.",
+        }
+
+        html = generate_page(normalized_data)
+
+        assert "NOT A COMPETITIVE RACE" in html
+        assert "Organizer classifies this as a noncompetitive ride." in html
+        assert 'data-measure-section="coaching"' in html
+        assert 'data-measure-section="custom-plan"' not in html
+        assert 'id="training"' not in html
+        assert 'id="train-for-race"' not in html
+        assert 'id="plan-ladder"' not in html
+        assert re.search(r'href=["\'][^"\']*/questionnaire/', html) is None
+        assert 'class="rl-sticky-cta"' not in html
 
     def test_toc_numbers_follow_rendered_section_order(self, normalized_data):
         html = generate_page(normalized_data)

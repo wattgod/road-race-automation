@@ -1,0 +1,138 @@
+{
+  "slug": "utrecht-ultra-xl",
+  "race_name": "Utrecht Ultra XL",
+  "distance_mi": 994.2,
+  "demands": {
+    "durability": 10,
+    "climbing": 10,
+    "vo2_power": 3,
+    "threshold": 5,
+    "technical": 6,
+    "heat_resilience": 0,
+    "altitude": 4,
+    "race_specificity": 7
+  },
+  "top_categories": [
+    {
+      "category": "Durability",
+      "score": 100,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "994 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+    },
+    {
+      "category": "Over_Under",
+      "score": 80,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Utrecht Ultra XL, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 79,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Utrecht Ultra XL's mixed lowland and mountain roads rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 994 miles."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 74,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "45,932ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 74,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "Utrecht Ultra XL's mixed lowland and mountain roads rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 74,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Utrecht Ultra XL's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
+    },
+    {
+      "category": "Endurance",
+      "score": 64,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 994 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 62,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "994 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "G_Spot",
+      "score": 56,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Utrecht Ultra XL. Train it until it feels boring."
+    },
+    {
+      "category": "Blended",
+      "score": 54,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 45,932ft of climbing on mixed lowland and mountain roads does to your power file on race day."
+    },
+    {
+      "category": "SFR_Muscle_Force",
+      "score": 49,
+      "workouts": [
+        "SFR Low Cadence",
+        "Force Repeats"
+      ],
+      "workout_context": "Low-cadence force work supports 45,932ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
+    },
+    {
+      "category": "VO2max",
+      "score": 47,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "45,932ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
+    }
+  ],
+  "race_overlay": {
+    "nutrition": "Ultra-distance fueling for 994 miles requires a practiced resupply plan built around confirmed course services and available commercial stops. Rehearse frequent carbohydrate intake on long rides, then scale the plan to intensity, sleep strategy, tolerance, and real food across the full event. Carry redundant fuel and avoid applying a short-event hourly target or fixed total-calorie estimate to a multi-day race.",
+    "altitude": "Altitude may change sustainable power and recovery at Utrecht Ultra XL. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Utrecht Ultra XL rewards specific practice. Include regular rides on mixed lowland and mountain roads to build confidence."
+  },
+  "pack_summary": "This 10-workout pack focuses on Durability, Over Under, and Road Specific to prepare you for 994 miles of mixed lowland and mountain roads in Utrecht, Netherlands.",
+  "generated_at": "2026-08-08"
+}

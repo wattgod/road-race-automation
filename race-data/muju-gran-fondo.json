@@ -3,19 +3,19 @@
     "name": "Muju Gran Fondo",
     "slug": "muju-gran-fondo",
     "display_name": "Muju Gran Fondo",
-    "tagline": "South Korea's largest road cycling race in scenic Muju County[6].",
+    "tagline": "A mountainous noncompetitive road ride with an optional KOM contest",
     "vitals": {
-      "distance_km": 130.0,
-      "distance_mi": 80.8,
-      "elevation_m": 2000.0,
-      "elevation_ft": 6562.0,
+      "distance_km": 123.05,
+      "distance_mi": 76.46,
+      "elevation_m": 2627.0,
+      "elevation_ft": 8619.0,
       "location": "Muju County, North Jeolla Province, South Korea",
       "location_badge": "Muju County, South Korea",
       "country": "South Korea",
-      "date": "May",
+      "date": "June",
       "date_specific": "2026: June 13 (corrects stale May 17 date). 2027 date not yet announced.",
-      "field_size": "Large (largest in Korea implied)[6]",
-      "start_format": null,
+      "field_size": "Not published by the organizer",
+      "start_format": "Noncompetitive road ride; separate individual KOM event",
       "registration": null,
       "entry_fee": null,
       "feed_zones": null,
@@ -23,14 +23,15 @@
       "lat": null,
       "lng": null,
       "route_options": [
-        "130 km Gran Fondo (assumed)"
+        "123.05 km Gran Fondo",
+        "70.5 km Medio Fondo"
       ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "May in Muju typically features mild temperatures (15-25°C) with possible rain, though the event is scheduled for October suggesting cooler conditions.",
+      "description": "The verified 2026 edition ran in mid-June; the organizer does not publish a race-specific climate range.",
       "challenges": [
-        "Precipitation: 30"
+        "Mountain weather can change across the long course; consult the current organizer briefing"
       ]
     },
     "terrain": {
@@ -38,31 +39,31 @@
       "surface": "Fully paved",
       "technical_rating": 1,
       "features": [
-        "Mountainous roads in Muju County, likely featuring climbs through national park areas"
+        "Mountainous paved roads in Muju County"
       ]
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 3,
+      "distance": 3,
+      "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 3,
-      "organization": 3,
+      "organization": 2,
       "scenic_experience": 3,
       "community_culture": 3,
       "altitude": 2,
       "logistics": 3,
-      "prestige": 3,
-      "field_depth": 3,
+      "prestige": 2,
+      "field_depth": 1,
       "value": 3,
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 59,
+      "overall_score": 53,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 61. adventure dimension dropped, road_surface added. Score recalculated: 59."
+      "scoring_notes": "Corrected 2026-08-08 from the official Muju County notice: 123.05 km / 2,627 m, not the unsourced 130 km / 2,000 m. The organizer explicitly classifies the event as a noncompetitive road ride with a separate individual KOM event, so distance, climbing, organization, prestige, and field depth were rescored against the published Roadie Labs rubric. Score: 59 -> 53; tier remains T3."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -76,40 +77,45 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Mountainous road loops through Muju County, emphasizing climbs in a national park setting.",
-      "signature_challenge": "Cumulative 2,000 m elevation across 130 km in scenic terrain.",
+      "character": "A mountainous paved loop through Muju County with 2,627 meters of climbing on the 123.05-kilometer long route.",
+      "signature_challenge": "Cumulative 2,627 m elevation across 123.05 km in scenic terrain.",
       "suffering_zones": [
-        "Sustained ascents in Deogyusan area",
-        "Technical descents through forested roads"
+        "The cumulative 2,627 meters of climbing across the long route",
+        "Managing pace and fueling over 123.05 mountainous kilometers"
       ]
     },
     "logistics": {
-      "airport": "Gwangju (KWJ); Seoul Incheon (ICN); Jeonju (local)",
-      "lodging_strategy": "Resorts and hotels in Deogyusan National Park area.",
-      "transport": "Rural location requires planning; fly into regional airports and arrange ground transport.",
+      "airport": "The organizer does not publish airport guidance; plan ground transport to Muju County from your chosen Korean gateway.",
+      "lodging_strategy": "Use lodging in Muju County and verify proximity after the current start venue is published.",
+      "transport": "The 2026 organizer notice did not provide an international travel plan; confirm current start and finish logistics before booking.",
       "food": "",
-      "official_site": "https://www.granfondoguide.com/Events/Index/13324/muju-gran-fondo"
+      "official_site": "https://tour.muju.go.kr/tour/selectBbsNttView.do?bbsNo=9&key=124&nttNo=15438"
     },
     "history": {
-      "founded": 2025,
-      "origin_story": "Limited information; listed for 2025 as Korea's largest road cycling race. No confirmed founding in 2022 or international status.",
+      "founded": null,
+      "origin_story": "The current official notice does not establish a founding year or support the former claim that this is South Korea's largest road race.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "An emerging gem in South Korea's gran fondo scene, Muju Gran Fondo stands out as the country's largest road cycling event, set against Muju's mountainous backdrop. While details are sparse and it lacks the pedigree of established races, its national park vibes and solid 130 km/2,000 m profile make it a worthwhile adventure for riders seeking new horizons in Asia. Prestige at 3 reflects its local dominance, but watch for growth[6].",
+      "summary": "Muju is a demanding supported road ride through mountainous North Jeolla: the official 2026 long route covered 123.05 km with 2,627 m of climbing, with a 70.5 km Medio Fondo option. The organizer is equally clear about the format: the main event is noncompetitive, with only a separate individual KOM contest. Ride it for the terrain and regional cycling community, not for a full-course result or Roadie Labs race target.",
       "strengths": [],
       "weaknesses": [],
       "bottom_line": ""
     },
     "final_verdict": {
-      "score": "59/100",
-      "one_liner": "Korea's biggest road gran fondo: solid climbs, big fields, untapped potential.",
-      "should_you_race": "Muju Gran Fondo delivers a respectable challenge in a stunning location but suffers from limited published details and no confirmed history or options. Ideal for explorers; verify updates closer to date[2][6].",
+      "score": "53/100",
+      "one_liner": "A hard Korean mountain ride with a KOM contest, but no full-course race classification.",
+      "should_you_race": "Ride Muju if you want a substantial 123-kilometer climbing day and do not need a ranked full-course result. Skip it if your goal is a timed or scored gran fondo: the organizer explicitly calls the main event noncompetitive.",
       "alternatives": ""
     },
     "citations": [
+      {
+        "url": "https://tour.muju.go.kr/tour/selectBbsNttView.do?bbsNo=9&key=124&nttNo=15438",
+        "category": "official",
+        "label": "Muju County official 2026 event notice"
+      },
       {
         "url": "https://www.granfondoguide.com/Events/Index/13324/muju-gran-fondo",
         "category": "reference",
@@ -232,10 +238,14 @@
       "quotes": []
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-22",
+      "status": "noncompetitive",
+      "verified": "2026-08-08",
       "source": "https://tour.muju.go.kr/tour/selectBbsNttView.do?bbsNo=9&key=124&nttNo=15438",
-      "note": "Muju County's official tourism site confirms the 2026 Muju Gran Fondo/Medio Fondo (non-competitive road ride with KOM segment, organized with the Jeollabuk-do Cycling Federation) ran Saturday, June 13, 2026 — not the DB's prior May 17 date, which was stale. No 2027 date announced yet."
+      "note": "Muju County's official tourism site confirms the 2026 Muju Gran Fondo/Medio Fondo ran Saturday, June 13, 2026 and explicitly labels it a noncompetitive road ride with an individual KOM event. The official long route was 123.05 km with 2,627 m of climbing, plus a 70.5 km Medio Fondo. No 2027 date is announced. The event remains a valid public database entry but is outside the timed/scored Roadie Labs training-plan scope."
+    },
+    "catalog_flags": {
+      "race_plan_eligible": false,
+      "exclusion_reason": "Organizer explicitly classifies the event as a noncompetitive road ride; a separate KOM side event does not create a ranked full-course race."
     }
   }
 }
