@@ -4882,47 +4882,6 @@
     ]
   },
   {
-    "name": "UCI Gran Fondo Hangzhou Qiandao Lake",
-    "slug": "gran-fondo-hangzhou",
-    "location": "Qiandao Lake, Chun’an County, Hangzhou, Zhejiang Province, China",
-    "country": "China",
-    "region": "Asia",
-    "month": "May",
-    "distance_km": 107.0,
-    "distance_mi": 66.5,
-    "elevation_m": 1800,
-    "elevation_ft": 5906.0,
-    "tier": 2,
-    "overall_score": 71,
-    "scores": {
-      "distance": 4,
-      "climbing": 2,
-      "descent_technicality": 2,
-      "road_surface": 3,
-      "climate_risk": 4,
-      "altitude": 5,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 5,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 2,
-      "cultural_impact": 4
-    },
-    "tagline": "China's first UCI Gran Fondo World Series on the scenic 2022 Asian Games course at Thousand Island Lake",
-    "has_profile": true,
-    "profile_url": "/race/gran-fondo-hangzhou/",
-    "discipline": "gran_fondo",
-    "lat": 29.5333,
-    "lng": 118.8833,
-    "route_options": [
-      "21 km Time Trial",
-      "107 km Gran Fondo"
-    ]
-  },
-  {
     "name": "Gran Fondo Jordan",
     "slug": "gran-fondo-jordan",
     "location": "Dead Sea, Jordan",
@@ -10757,6 +10716,47 @@
     "route_options": [
       "Competitive long route: 118.3 km / 784 m+",
       "Recreational medium route: 66 km"
+    ]
+  },
+  {
+    "name": "UCI Gran Fondo Hangzhou Qiandao Lake",
+    "slug": "gran-fondo-hangzhou",
+    "location": "Qiandao Lake, Chun’an County, Hangzhou, Zhejiang Province, China",
+    "country": "China",
+    "region": "Asia",
+    "month": "May",
+    "distance_km": 97.0,
+    "distance_mi": 60.3,
+    "elevation_m": 755,
+    "elevation_ft": 2477.0,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 5,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 4
+    },
+    "tagline": "China's first UCI Gran Fondo World Series on the scenic 2022 Asian Games course at Thousand Island Lake",
+    "has_profile": true,
+    "profile_url": "/race/gran-fondo-hangzhou/",
+    "discipline": "gran_fondo",
+    "lat": 29.5333,
+    "lng": 118.8833,
+    "route_options": [
+      "21 km Time Trial",
+      "97 km Gran Fondo with 755 m of climbing"
     ]
   },
   {
