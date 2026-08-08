@@ -3,7 +3,11 @@
     "name": "Gran Fondo Jasper",
     "slug": "gran-fondo-jasper",
     "display_name": "Gran Fondo Jasper",
-    "tagline": "Canada's ONLY fondo inside a national park. 165 km through the Canadian Rockies. Marmot Basin — Alberta's #1 categorized climb. The Icefields Parkway. Jasper National Park, UNESCO World Heritage Site. Running since 2014.",
+    "tagline": "A noncompetitive, self-paced 165 km group ride through Jasper National Park",
+    "catalog_flags": {
+      "race_plan_eligible": false,
+      "exclusion_reason": "The organizer's rules explicitly define Gran Fondo Jasper as a self-paced group ride, not a race."
+    },
     "vitals": {
       "distance_km": 164.2,
       "distance_mi": 102.0,
@@ -12,28 +16,26 @@
       "location": "Jasper, Alberta, Canada",
       "location_badge": "JASPER, AB, CANADA",
       "country": "Canada",
-      "date": "Early June annually",
+      "date": "June 6, 2026",
       "date_specific": "2026: June 6",
-      "field_size": "300+ riders across six distances",
-      "start_format": null,
-      "registration": "Online via Race Roster. Charity fundraising entry at $115 CAD (requires $750 fundraising commitment). Standard registration pricing in CAD, closes at noon MST the day before. All prices subject to 5% GST.",
-      "entry_fee": "~$115-175 CAD depending on distance and registration timing",
-      "feed_zones": "Fully stocked aid stations along routes. On-course support. National park roads provide wide shoulders and relative traffic safety on event day.",
-      "cutoff_time": "Course support has time limits. Riders must maintain reasonable pace for their chosen distance.",
+      "field_size": "315 registered participants in 2026",
+      "start_format": "Self-paced group ride with an initial rolling closure; roads remain open to traffic after the rollout",
+      "registration": "2026 registration closed; no organizer-confirmed 2027 date, registration cycle, or route package",
+      "entry_fee": "See the organizer for the next edition",
+      "feed_zones": "2026 Gran Fondo route: three fully stocked feed stations",
+      "cutoff_time": "2026 support ended at 4:00 p.m.; the event closed at 4:30 p.m.",
       "lat": 52.8737,
       "lng": -118.0814,
       "route_options": [
-        "Forte Fondo: 190 km, 2,339 m climbing — Marmot Basin + Edith Cavell Road + Icefields Parkway to Poboktan Creek. Capped at 75 riders.",
-        "Gran Fondo: 165 km, 1,691 m climbing — Marmot Basin climb + Icefields Parkway south to Poboktan Creek turnaround",
-        "Leg Burner Fondo: 126 km, 1,899 m climbing — Forte route to Athabasca Falls, then south on 93A/Icefields Parkway to Goatlick turnaround",
-        "Medio Fondo: 100 km, 1,038 m climbing — Marmot Basin climb + rolling terrain along Hwy 93A",
-        "Piccolo Fondo: 65 km, 601 m climbing — Highway 93A loop, no major climbs, scenic Jasper townsite loop",
-        "Hill Climb: 65 km — Dedicated Marmot Basin hill climb category"
+        "Gran Fondo: 165 km / 1,691 m — Marmot Basin and the Icefields Parkway to Poboktan Creek",
+        "Medio Fondo: 100 km / 1,338 m — Marmot Basin and Highway 93A",
+        "Piccolo Fondo: 65 km / 601 m",
+        "E-Bike Fondo: 65 km or 100 km; not eligible for awards"
       ]
     },
     "climate": {
       "primary": "Canadian Rockies alpine — cool mornings, mild afternoons, June rainfall",
-      "description": "Early June in the Canadian Rockies delivers long days and cool temperatures, but Jasper's June is also its wettest month. Expect average highs around 18-21°C (64-70°F) and lows dropping to 4-9°C (39-48°F) — mornings at the start line will be cold. With 17 hours of daylight (sunrise at 5:05 AM, sunset at 10:02 PM), there is ample time to complete even the 190 km Forte distance. However, rain is expected on roughly 14-17 days in June, with approximately 117 mm of rainfall for the month. The Icefields Parkway corridor, sitting at higher elevations south of Jasper, can be significantly colder than town, with headwinds common on the return north. Mountain weather changes rapidly — sunshine at the start does not guarantee dry conditions at Poboktan Creek 80 km south.",
+      "description": "Early June in the Canadian Rockies brings long days and cool mountain conditions. Riders should prepare for a cold start, precipitation, wind, and rapid weather changes between Jasper townsite and the higher Icefields Parkway corridor.",
       "challenges": [
         "June is Jasper's wettest month — expect rain on roughly half the days, with sudden mountain storms possible",
         "Morning temperatures at 4-9°C demand arm warmers, vest, and potentially a rain jacket at the start",
@@ -44,14 +46,13 @@
     },
     "terrain": {
       "primary": "Paved mountain highway through Jasper National Park",
-      "surface": "All paved roads within Jasper National Park. The Icefields Parkway (Highway 93) features wide shoulders and well-maintained pavement — one of the world's great scenic driving roads. Marmot Basin Road is a quiet mountain road climbing to the ski resort, ranked Alberta's #1 categorized climb. Edith Cavell Road (Forte route only) is narrower and winding with tight switchbacks. Highway 93A provides a quieter parallel route to the Icefields Parkway. Note: the final 1.5 km of the Marmot Basin climb may include a short dirt section, but it is easily rideable on a road bike.",
+      "surface": "The 2026 routes used paved national-park roads including the Icefields Parkway, Highway 93A, and Marmot Basin Road. Roads remained open to traffic after the initial rollout, and riders were required to follow traffic laws.",
       "technical_rating": 1,
       "features": [
         "Marmot Basin Climb — 13-14 km at 5.4-5.8% average gradient, 770-828 m gain, Alberta's #1 categorized climb per Canadian Cycling Magazine",
         "Icefields Parkway — one of the world's great scenic corridors, glaciers and mountain peaks visible throughout",
-        "Mount Edith Cavell Road (Forte only) — 19 km at 3.4% average with tight switchbacks, narrow shoulders, scenic to the wilderness hostel",
-        "Athabasca Falls — landmark waypoint on the Forte and Leg Burner routes, 30 km south of Jasper",
-        "Poboktan Creek turnaround (Gran/Forte) — the deepest point into the Icefields Parkway at ~1,540 m elevation"
+        "Highway 93A — part of the 100 km and 165 km routes",
+        "Poboktan Creek turnaround — the far point of the 165 km route"
       ]
     },
     "fondo_rating": {
@@ -75,7 +76,7 @@
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 63. adventure dimension dropped, road_surface added. Score recalculated: 56 (corrected score-math error found by qc/plan_readiness.py R0 validator sweep, 2026-07-17: dimension sum 37 + cultural_impact 2 = 39/70*100 = 55.7 -> 56, was previously miscalculated as 57)."
+      "scoring_notes": "The organizer's rules define this as a noncompetitive, self-paced group ride. Score remains 56 for the route and experience; the grade does not imply competitive depth or race-plan eligibility."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -89,12 +90,11 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Every route option starts and finishes in Jasper townsite, radiating outward through the Canadian Rockies like spokes from a hub. The signature Gran Fondo (165 km) heads west on Connaught Drive, picks up the Icefields Parkway, then turns onto Highway 93A before attacking Marmot Basin — a 13-14 km climb averaging 5.4-5.8% to the ski resort base lodge, ranked Alberta's #1 categorized climb. After descending Marmot, the route continues south on the Icefields Parkway toward Poboktan Creek, where glaciers and 3,000 m peaks frame the turnaround before riders retrace north to Jasper. The Forte Fondo (190 km) adds Edith Cavell Road — 19 km of narrow, winding switchbacks climbing to the Mount Edith Cavell Wilderness Hostel with views of Angel Glacier — between Marmot and the Icefields Parkway push. The Leg Burner (126 km) reaches Athabasca Falls before routing south to Goatlick on the Parkway. The Medio (100 km) includes Marmot Basin and rolling 93A terrain. The Piccolo (65 km) loops through 93A without major climbs. Throughout every distance, you are inside a UNESCO World Heritage national park surrounded by the Canadian Rockies — elk on the roadside, glaciers on the horizon, and mountain air that tastes different from anywhere else.",
+      "character": "The completed 2026 event offered 165 km, 100 km, and 65 km routes through Jasper National Park. The 165 km Gran Fondo climbed Marmot Basin before continuing south on the Icefields Parkway to Poboktan Creek and returning to Jasper. The 100 km route paired Marmot Basin with Highway 93A, while the 65 km route provided the shorter scenic option. This was a self-paced group ride on roads that reopened to traffic after the initial rollout.",
       "signature_challenge": "Marmot Basin Climb. Alberta's #1 categorized road climb per Canadian Cycling Magazine. 13-14 km at 5.4-5.8% average gradient with 770-828 m of elevation gain. Maximum gradient 9.3%. Featured as Stage 4 of the 2015 Tour of Alberta, won by WorldTour rider Tom-Jelte Slagter. The climb winds through subalpine forest to the Marmot Basin ski resort base lodge, with panoramic views of the Athabasca Valley from the upper reaches. Steady, scenic, and relentless — the climb that defines the event.",
       "suffering_zones": [
         "Jasper Townsite to Highway 93A",
         "Marmot Basin Climb",
-        "Edith Cavell Road (Forte Only)",
         "Icefields Parkway South to Poboktan Creek",
         "The Return North — Headwind Home"
       ]
@@ -114,33 +114,33 @@
         "2015: Marmot Basin featured as Stage 4 of the Tour of Alberta, won by WorldTour rider Tom-Jelte Slagter (Cannondale-Garmin)",
         "2024: 10th running draws 300+ riders; weeks later, the July 2024 Jasper wildfire destroys 358 properties and 30% of the town's structures",
         "2025: Event continues post-wildfire as part of Jasper's recovery narrative, with potential course adjustments for fire mitigation",
-        "2026: 10th anniversary edition (by event numbering) scheduled for June 6 — six distances from 65-190 km, the Forte Fondo capped at 75 riders"
+        "2026: 10th edition held June 6 with 165 km, 100 km, and 65 km routes plus an e-bike category"
       ],
       "reputation": "The definitive national park cycling experience in Canada. Known for world-class scenery rather than competitive depth. The Marmot Basin climb carries WorldTour credibility from the 2015 Tour of Alberta. The post-wildfire editions carry emotional weight as part of Jasper's community recovery."
     },
     "biased_opinion": {
       "verdict": "The Cathedral Ride",
-      "summary": "Gran Fondo Jasper exists because no other organized cycling event in North America can put you inside a national park for 165 km of mountain riding. That is the entire value proposition, and it is enormous. The Icefields Parkway is not merely a beautiful road — it is consistently ranked among the most spectacular drives on Earth, and you get to ride it on a bicycle surrounded by glaciers, turquoise rivers, and peaks that pierce 3,000 meters. Marmot Basin — Alberta's top categorized climb, tested by WorldTour riders during the 2015 Tour of Alberta — delivers legitimate suffering on the way to the treeline. The Forte Fondo adds Edith Cavell Road for 190 km and 2,339 m of climbing through one of the Rockies' most iconic mountain approaches. This is not a race. It is 300 people riding through a cathedral of mountains in a UNESCO World Heritage Site. The 2024 wildfire that destroyed a third of Jasper adds a raw dimension — you ride through a landscape that is simultaneously spectacular and scarred, through a community that is rebuilding. The logistics are the price of admission: remote, expensive to reach, weather-dependent. But if you ride a road bike and want a single day of riding that you will remember for the rest of your life, this is it.",
+      "summary": "Gran Fondo Jasper is a scenic, self-paced group ride through Jasper National Park, not a race. The 165 km route combines Marmot Basin with the Icefields Parkway; shorter 100 km and 65 km options broaden access. The organizer's rules explicitly tell riders to follow open-road traffic laws and state that the event is noncompetitive. Its appeal is the national-park journey rather than an overall classification.",
       "strengths": [
         "Entirely within Jasper National Park — UNESCO World Heritage Site, Canadian Rockies",
         "Icefields Parkway — one of the world's most spectacular roads, glaciers and peaks throughout",
         "Marmot Basin — Alberta's #1 categorized climb, 2015 Tour of Alberta stage, 13-14 km at 5.4-5.8%",
-        "Six distance options from 65-190 km accommodate all fitness levels",
+        "Three route distances from 65-165 km plus an e-bike category accommodate varied abilities",
         "10th anniversary edition in 2026 — decade of organizational refinement in a national park setting"
       ],
       "weaknesses": [
         "Remote location — Edmonton YEG is 3.5-4 hours away, no closer major airport",
         "June is Jasper's wettest month — expect rain on roughly half the days",
         "Post-2024 wildfire Jasper has reduced lodging stock and potential course adjustments",
-        "Field of 300+ is small — limited competitive depth and social energy compared to major fondos",
+        "It is explicitly not a race, so riders seeking an overall classification need another event",
         "National park lodging is premium-priced and books months in advance"
       ],
       "bottom_line": "The most beautiful road fondo in Canada, and a legitimate contender for the most scenic one-day cycling event in North America. You pay the logistics tax to ride through a cathedral."
     },
     "final_verdict": {
-      "score": "57/100",
-      "one_liner": "Canada's only national park fondo. 165 km through the Canadian Rockies. Marmot Basin — Alberta's #1 climb. The Icefields Parkway. Jasper. A cathedral on two wheels.",
-      "should_you_race": "Yes if riding through a UNESCO World Heritage national park in the Canadian Rockies is your idea of a perfect day on a bike. Yes if the Icefields Parkway, glaciers, and mountain wildlife matter more to you than competitive depth or field size. Skip if the 4-hour drive from Edmonton and limited Jasper lodging is a dealbreaker. Skip if you need a large, competitive field — this is 300 riders enjoying mountains, not 3,000 racing each other.",
+      "score": "56/100",
+      "one_liner": "A noncompetitive, self-paced 165 km group ride through Jasper National Park.",
+      "should_you_race": "Ride it if the Icefields Parkway and a supported national-park day matter more than competition. Skip it if you want a ranked road race: the organizer explicitly defines the event as a self-paced group ride, and roads remain open after the initial rollout.",
       "alternatives": "For a bigger Canadian gran fondo: RBC GranFondo Whistler (3,000+ riders, Sea-to-Sky Highway). For more competitive Canadian climbing: Highwood Pass Gran Fondo. For the Icefields Parkway experience without a race: self-supported Jasper-to-Banff ride (290 km). For European national park riding: Gran Fondo Stelvio."
     },
     "citations": [
@@ -153,6 +153,11 @@
         "url": "https://www.granfondo-jasper.ca/routes/",
         "category": "official",
         "label": "Official Routes — Gran Fondo Jasper"
+      },
+      {
+        "url": "https://www.granfondo-jasper.ca/rules/",
+        "category": "official",
+        "label": "Official Rules and Conduct — Gran Fondo Jasper"
       },
       {
         "url": "https://raceroster.com/events/2026/111561/2026-gran-fondo-jasper",
@@ -494,10 +499,10 @@
       }
     },
     "eligibility": {
-      "status": "active",
-      "verified": "2026-07-23",
-      "source": "https://results.raceroster.com/v3/events/qecy5adjcqjufhz3/race/295709?filter_search=",
-      "notes": "Mass-participation road gran fondo in Jasper National Park with a 2026 edition listed as June 6, consistent with the date on file.; last edition evidenced: 2026; via sonar-pro eligibility_audit"
+      "status": "noncompetitive",
+      "verified": "2026-08-08",
+      "source": "https://www.granfondo-jasper.ca/rules/",
+      "notes": "The organizer explicitly says this is not a race but a self-paced group ride. Roads remain open to traffic after the initial rolling closure."
     }
   }
 }

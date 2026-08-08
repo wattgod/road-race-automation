@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T10:56:54",
+  "generated_at": "2026-08-08T11:06:09",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -2701,14 +2701,15 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": true
+        "active_registerable": false
       },
-      "eligibility_status": "active",
+      "eligibility_status": "unknown",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-06-06",
       "blockers": [
-        "no parsed future date"
+        "no parsed future date",
+        "eligibility unverified (unknown)"
       ]
     },
     "gran-fondo-jordan": {
