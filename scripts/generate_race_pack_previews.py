@@ -380,10 +380,10 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
 
         overlay['heat'] = (
             f"{climate_line}"
-            f"Begin heat acclimatization 10\u201314 days before {race_name} \u2014 "
-            f"20\u201330min sauna sessions or midday rides in full kit. "
-            f"Pre-load sodium 48 hours out. "
-            f"Target 500\u2013750ml/hr with electrolytes on race day.{challenge_line}"
+            f"If the race forecast is hot, build heat exposure gradually before {race_name} "
+            f"and rehearse an individualized drinking and electrolyte plan in training. "
+            f"Use your observed sweat response, product tolerance, and professional guidance "
+            f"where relevant instead of a fixed fluid or sodium prescription.{challenge_line}"
         )
     elif heat_score >= 5:
         climate_line = ''
@@ -391,8 +391,9 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
             climate_line = f"{month} in {location} can bring heat. "
         overlay['heat'] = (
             f"{climate_line}"
-            f"Complete 3\u20134 heat exposure sessions in the final 2 weeks before {race_name}. "
-            f"Increase sodium intake 48 hours before race day."
+            f"If the forecast warrants it, include controlled heat exposure before {race_name} "
+            f"and rehearse the drinking and electrolyte plan you tolerate in training. "
+            f"Do not introduce a fixed sodium protocol solely from this preview."
         )
 
     # ── Nutrition ──
@@ -408,13 +409,15 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     elif distance >= 40:
         overlay['nutrition'] = (
             f"Use training to rehearse an eating and drinking plan for {_poss(race_name)} "
-            f"{int(distance)} miles. Start early, use products you tolerate, and carry enough "
-            f"between the organizer\u2019s confirmed resupply points."
+            f"{int(distance)} miles. Start early, use products you tolerate, carry enough for "
+            f"gaps between stops, and confirm the organizer\u2019s current resupply locations "
+            f"before race day."
         )
     else:
         overlay['nutrition'] = (
             "Use training to rehearse an eating and drinking plan that matches the "
-            "ride duration, intensity, weather, and confirmed resupply points."
+            "ride duration, intensity, and weather. Confirm any organizer-provided "
+            "resupply locations before race day."
         )
 
     # ── Altitude ──
@@ -455,8 +458,8 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
             f"Highly technical terrain at {race_name} demands practice on similar surfaces. "
             f"Ride {terrain_str} at race-day cadence weekly.{detail_line} "
             f"Practice cornering, descending, and power delivery on unstable surfaces. "
-            f"Dial in tire pressure before race week \u2014 "
-            f"5 PSI wrong costs you 15+ minutes over {int(distance) if distance >= 1 else 'the full'} miles."
+            f"Test tires and pressure in comparable conditions before race week rather than "
+            f"guessing from a generic time-loss claim."
         )
     elif tech_score >= 4:
         overlay['terrain'] = (
@@ -738,6 +741,68 @@ def repair_ultra_nutrition_overlays(output_dir: str) -> int:
     return repaired
 
 
+def repair_safety_overlays(output_dir: str, race_dir: str) -> int:
+    """Replace known unsupported heat, resupply, and tire-pressure claims."""
+    stale_markers = {
+        "heat": (
+            "Pre-load sodium",
+            "Increase sodium intake",
+            "500\u2013750ml/hr",
+        ),
+        "nutrition": ("confirmed resupply points",),
+        "terrain": ("5 PSI wrong costs you 15+ minutes",),
+    }
+    repaired = 0
+
+    for filename in sorted(os.listdir(output_dir)):
+        if not filename.endswith(".json"):
+            continue
+        path = os.path.join(output_dir, filename)
+        with open(path) as f:
+            preview = json.load(f)
+        overlay = preview.get("race_overlay") or {}
+        stale_keys = {
+            key
+            for key, markers in stale_markers.items()
+            if any(marker in (overlay.get(key) or "") for marker in markers)
+        }
+        if not stale_keys:
+            continue
+
+        slug = preview.get("slug") or filename.removesuffix(".json")
+        race_path = os.path.join(race_dir, f"{slug}.json")
+        if os.path.exists(race_path):
+            with open(race_path) as f:
+                source = json.load(f)
+            race = source.get("race", source)
+        else:
+            # Older alias packs can outlive the source slug they were generated from.
+            # They still must not retain unsafe copy merely because the alias is stale.
+            race = {
+                "display_name": preview.get("race_name") or slug,
+                "vitals": {
+                    "distance_mi": preview.get("distance_mi") or 0,
+                    "elevation_ft": 0,
+                },
+                "terrain": {"primary": "race-specific roads"},
+                "climate": {},
+            }
+        refreshed = generate_race_overlay(race, preview.get("demands") or {})
+
+        for key in stale_keys:
+            if key in refreshed:
+                overlay[key] = refreshed[key]
+            else:
+                overlay.pop(key, None)
+        preview["race_overlay"] = overlay
+        preview["generated_at"] = date.today().isoformat()
+        with open(path, "w") as f:
+            json.dump(preview, f, indent=2)
+        repaired += 1
+
+    return repaired
+
+
 def _get_race_tier(path: str) -> int:
     """Read a race JSON and return its tier (1-4), defaulting to 4."""
     try:
@@ -774,6 +839,11 @@ def main() -> None:
         action="store_true",
         help="Repair stale nutrition overlays in existing 150+ mile preview JSON",
     )
+    group.add_argument(
+        "--repair-safety-overlays",
+        action="store_true",
+        help="Repair unsupported heat, resupply, and tire-pressure preview claims",
+    )
 
     args = parser.parse_args()
     race_dir = _race_data_dir()
@@ -792,6 +862,10 @@ def main() -> None:
     elif args.repair_ultra_nutrition:
         repaired = repair_ultra_nutrition_overlays(out_dir)
         print(f"Repaired {repaired} ultra-distance nutrition overlays in {out_dir}/")
+
+    elif args.repair_safety_overlays:
+        repaired = repair_safety_overlays(out_dir, race_dir)
+        print(f"Repaired {repaired} safety overlays in {out_dir}/")
 
     elif args.all or args.tier:
         json_files = sorted(f for f in os.listdir(race_dir) if f.endswith(".json"))

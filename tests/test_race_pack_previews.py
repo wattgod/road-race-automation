@@ -14,6 +14,7 @@ from generate_race_pack_previews import (  # noqa: E402
     generate_ultra_nutrition,
     generate_workout_context,
     get_top_categories,
+    repair_safety_overlays,
     repair_ultra_nutrition_overlays,
 )
 
@@ -199,3 +200,95 @@ def test_long_gran_fondo_copy_avoids_false_depletion_and_stale_month():
     assert "Bonking" not in nutrition
     assert "60\u201380g" not in nutrition
     assert "feed-zone locations" in nutrition
+
+
+def test_preview_overlays_avoid_fixed_heat_resupply_and_tire_claims():
+    race = {
+        "display_name": "Example Hot Technical Race",
+        "vitals": {"distance_mi": 65, "elevation_ft": 3000, "date": "July"},
+        "terrain": {
+            "primary": "technical paved roads",
+            "surface": "tight corners and variable pavement",
+        },
+        "climate": {"description": "hot and humid", "challenges": ["heat"]},
+    }
+
+    overlay = generate_race_overlay(
+        race,
+        {"heat_resilience": 9, "technical": 9, "altitude": 0},
+    )
+
+    assert "Pre-load sodium" not in overlay["heat"]
+    assert "500\u2013750ml/hr" not in overlay["heat"]
+    assert "fixed fluid or sodium prescription" in overlay["heat"]
+    assert "confirmed resupply points" not in overlay["nutrition"]
+    assert "confirm the organizer\u2019s current resupply locations" in overlay["nutrition"]
+    assert "5 PSI" not in overlay["terrain"]
+    assert "15+ minutes" not in overlay["terrain"]
+
+
+def test_repair_safety_overlays_updates_only_known_stale_claims(tmp_path):
+    output_dir = tmp_path / "packs"
+    race_dir = tmp_path / "races"
+    output_dir.mkdir()
+    race_dir.mkdir()
+    stale = {
+        "slug": "example-hot-race",
+        "demands": {"heat_resilience": 9, "technical": 9, "altitude": 0},
+        "race_overlay": {
+            "heat": "Pre-load sodium 48 hours out. Target 500–750ml/hr.",
+            "nutrition": "Carry enough between confirmed resupply points.",
+            "terrain": "5 PSI wrong costs you 15+ minutes.",
+        },
+        "generated_at": "2026-08-05",
+    }
+    current = {
+        "slug": "current-race",
+        "race_overlay": {"nutrition": "Current safe guidance."},
+        "generated_at": "2026-08-05",
+    }
+    (output_dir / "example-hot-race.json").write_text(json.dumps(stale))
+    (output_dir / "current-race.json").write_text(json.dumps(current))
+    (race_dir / "example-hot-race.json").write_text(json.dumps({
+        "race": {
+            "display_name": "Example Hot Race",
+            "vitals": {"distance_mi": 65, "elevation_ft": 3000, "date": "July"},
+            "terrain": {
+                "primary": "technical paved roads",
+                "surface": "tight corners and variable pavement",
+            },
+            "climate": {"description": "hot and humid", "challenges": ["heat"]},
+        }
+    }))
+
+    repaired = repair_safety_overlays(str(output_dir), str(race_dir))
+    updated = json.loads((output_dir / "example-hot-race.json").read_text())
+
+    assert repaired == 1
+    assert "Pre-load sodium" not in updated["race_overlay"]["heat"]
+    assert "confirmed resupply points" not in updated["race_overlay"]["nutrition"]
+    assert "5 PSI" not in updated["race_overlay"]["terrain"]
+    assert json.loads((output_dir / "current-race.json").read_text()) == current
+
+
+def test_repair_safety_overlays_repairs_orphaned_alias_pack(tmp_path):
+    output_dir = tmp_path / "packs"
+    race_dir = tmp_path / "races"
+    output_dir.mkdir()
+    race_dir.mkdir()
+    alias = {
+        "slug": "old-alias",
+        "race_name": "Old Alias Race",
+        "distance_mi": 70,
+        "demands": {"heat_resilience": 6, "technical": 8},
+        "race_overlay": {
+            "heat": "Increase sodium intake 48 hours before race day.",
+            "terrain": "5 PSI wrong costs you 15+ minutes.",
+        },
+    }
+    (output_dir / "old-alias.json").write_text(json.dumps(alias))
+
+    assert repair_safety_overlays(str(output_dir), str(race_dir)) == 1
+    repaired = json.loads((output_dir / "old-alias.json").read_text())
+    assert "Increase sodium intake" not in repaired["race_overlay"]["heat"]
+    assert "5 PSI" not in repaired["race_overlay"]["terrain"]
