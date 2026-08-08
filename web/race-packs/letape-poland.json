@@ -1,15 +1,15 @@
 {
   "slug": "letape-poland",
   "race_name": "L'Etape Poland by Tour de France",
-  "distance_mi": 52.2,
+  "distance_mi": 66.5,
   "demands": {
     "durability": 2,
-    "climbing": 7,
+    "climbing": 6,
     "vo2_power": 5,
     "threshold": 6,
     "technical": 6,
     "heat_resilience": 0,
-    "altitude": 6,
+    "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
@@ -20,7 +20,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Etape Poland by Tour de France's tatra mountain roadshell crusher forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 52 miles."
+      "workout_context": "Road-specific control matters at L'Etape Poland by Tour de France on paved Tatra mountain roads. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 66 miles."
     },
     {
       "category": "Race_Simulation",
@@ -30,55 +30,46 @@
         "Variable Pace Chaos",
         "Sector Simulation"
       ],
-      "workout_context": "Race-pace efforts that mimic L'Etape Poland by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
-    },
-    {
-      "category": "VO2max",
-      "score": 83,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "5,077ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "Race-pace efforts that mimic L'Etape Poland by Tour de France's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     },
     {
       "category": "TT_Threshold",
-      "score": 79,
+      "score": 75,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "97ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "79ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
-      "score": 74,
+      "score": 67,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At L'Etape Poland by Tour de France, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At L'Etape Poland by Tour de France, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 61,
+      "score": 58,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
         "Criss-Cross"
       ],
-      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of L'Etape Poland by Tour de France. Train it until it feels boring."
+      "workout_context": "Upper-tempo and lower-threshold work builds the sustained power needed for L'Etape Poland by Tour de France's longest efforts without making every session maximal."
     },
     {
-      "category": "Mixed_Climbing",
-      "score": 58,
+      "category": "VO2max",
+      "score": 56,
       "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
       ],
-      "workout_context": "5,077ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "5,249ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Durability",
@@ -88,7 +79,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "52 miles on tatra mountain roadshell crusher burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "66 miles on paved Tatra mountain roads burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Critical_Power",
@@ -97,7 +88,16 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At L'Etape Poland by Tour de France, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at L'Etape Poland by Tour de France. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 50,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Across 5,249ft of climbing, practice deliberate seated and standing transitions while keeping effort controlled."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -106,32 +106,31 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on tatra mountain roadshell crusher. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved Tatra mountain roads can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "Blended",
+      "score": 33,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,249ft of climbing on paved Tatra mountain roads does to your power file on race day."
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 39,
+      "score": 33,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 5,077ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
-    },
-    {
-      "category": "Endurance",
-      "score": 36,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for L'Etape Poland by Tour de France. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "Low-cadence force work supports 5,249ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for L'Etape Poland by Tour de France\u2019s 52 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at L'Etape Poland by Tour de France. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at L'Etape Poland by Tour de France requires surface adaptability. Include weekly rides on tatra mountain roadshell crusher to build confidence."
+    "nutrition": "Use training to rehearse an eating and drinking plan for L'Etape Poland by Tour de France's 66 miles. Start early, use products you tolerate, carry enough for gaps between stops, and confirm the organizer\u2019s current resupply locations before race day.",
+    "terrain": "The course profile at L'Etape Poland by Tour de France rewards specific practice. Include regular rides on paved tatra mountain roads to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Road Specific, Race Simulation, and VO2max to prepare you for 52 miles of tatra mountain roadshell crusher in Zakopane, Lesser Poland Voivodeship, Poland.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Road Specific, Race Simulation, and TT Threshold to prepare you for 66 miles of paved tatra mountain roads in Zakopane, Lesser Poland Voivodeship, Poland.",
+  "generated_at": "2026-08-08"
 }

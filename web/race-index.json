@@ -6179,49 +6179,6 @@
     ]
   },
   {
-    "name": "L'Etape Poland by Tour de France",
-    "slug": "letape-poland",
-    "location": "Zakopane, Lesser Poland Voivodeship, Poland",
-    "country": "Poland",
-    "region": "Eastern Europe",
-    "month": "June",
-    "distance_km": 84.0,
-    "distance_mi": 52.2,
-    "elevation_m": 1547,
-    "elevation_ft": 5077.0,
-    "tier": 2,
-    "overall_score": 70,
-    "scores": {
-      "distance": 3,
-      "climbing": 4,
-      "descent_technicality": 3,
-      "road_surface": 3,
-      "climate_risk": 3,
-      "altitude": 3,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 5,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "84km of Tatra brutality with 1,547m that punches above its Tour de France weight.",
-    "has_profile": true,
-    "profile_url": "/race/letape-poland/",
-    "discipline": "gran_fondo",
-    "lat": 49.299,
-    "lng": 19.949,
-    "route_options": [
-      "The Race: 52mi, 5077ft — flagship Tatra crusher",
-      "The Ride: 38-40mi, 4405ft — climber's appetizer",
-      "Family Ride: 12-15mi — scenic family spinner",
-      "Kids Race: 0.6-1mi — tiny legs big dreams"
-    ]
-  },
-  {
     "name": "L'Étape Sun Moon Lake by Tour de France",
     "slug": "letape-taiwan",
     "location": "Sun Moon Lake, Nantou County, Taiwan",
@@ -8852,6 +8809,49 @@
     "route_options": [
       "Velodom 120: 121 km, 1,170 m gain — full Granfondo route sharing much of the professional course",
       "Velodom 60: 65.8 km, 490 m gain — shorter route via the Bensberg cobbles"
+    ]
+  },
+  {
+    "name": "L'Etape Poland by Tour de France",
+    "slug": "letape-poland",
+    "location": "Zakopane, Lesser Poland Voivodeship, Poland",
+    "country": "Poland",
+    "region": "Eastern Europe",
+    "month": "June",
+    "distance_km": 107.0,
+    "distance_mi": 66.5,
+    "elevation_m": 1600,
+    "elevation_ft": 5249.0,
+    "tier": 2,
+    "overall_score": 67,
+    "scores": {
+      "distance": 4,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "A 107 km, 1,600 m Tour de France-branded road race through the Polish Tatras",
+    "has_profile": true,
+    "profile_url": "/race/letape-poland/",
+    "discipline": "gran_fondo",
+    "lat": 49.299,
+    "lng": 19.949,
+    "route_options": [
+      "The Race: 107 km / 1,600 m — competitive flagship course",
+      "The Ride: 51 km / 900 m",
+      "Family Ride: 2 km",
+      "Kids Race: 1.6 km"
     ]
   },
   {

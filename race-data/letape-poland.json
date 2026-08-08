@@ -3,30 +3,30 @@
     "name": "L'Etape Poland by Tour de France",
     "slug": "letape-poland",
     "display_name": "L'Etape Poland by Tour de France",
-    "tagline": "84km of Tatra brutality with 1,547m that punches above its Tour de France weight.",
+    "tagline": "A 107 km, 1,600 m Tour de France-branded road race through the Polish Tatras",
     "vitals": {
-      "distance_km": 84.0,
-      "distance_mi": 52.2,
-      "elevation_m": 1547,
-      "elevation_ft": 5077.0,
+      "distance_km": 107.0,
+      "distance_mi": 66.5,
+      "elevation_m": 1600,
+      "elevation_ft": 5249.0,
       "location": "Zakopane, Lesser Poland Voivodeship, Poland",
       "location_badge": "ZAKOPANE, PL",
       "country": "Poland",
-      "date": "June annually (date varies; 2027 date not yet announced)",
-      "date_specific": "2026: June 14 (held; 2027 edition not yet officially announced as of Jul 2026)",
-      "field_size": "Unknown cap, age-graded categories from 18-60+ drawing ambitious Eastern Europeans.",
-      "start_format": null,
-      "registration": "Costs via official site include premium Martombike jersey, race bib, mechanical and medical support on demanding Tatra roads.",
-      "entry_fee": "$XX-XX",
-      "feed_zones": "Technical zones with mechanical and medical support along the route.",
-      "cutoff_time": "Not specified; expect generous for family options but tight for Race glory.",
+      "date": "June 14, 2026",
+      "date_specific": "2026: June 14",
+      "field_size": "Not published by the organizer",
+      "start_format": "8:00 a.m. start for The Race and The Ride",
+      "registration": "2026 edition completed; no official 2027 registration cycle published",
+      "entry_fee": "See the organizer for the next edition",
+      "feed_zones": "See the next-edition roadbook",
+      "cutoff_time": "See the next-edition rules and roadbook",
       "lat": 49.299,
       "lng": 19.949,
       "route_options": [
-        "The Race: 52mi, 5077ft — flagship Tatra crusher",
-        "The Ride: 38-40mi, 4405ft — climber's appetizer",
-        "Family Ride: 12-15mi — scenic family spinner",
-        "Kids Race: 0.6-1mi — tiny legs big dreams"
+        "The Race: 107 km / 1,600 m — competitive flagship course",
+        "The Ride: 51 km / 900 m",
+        "Family Ride: 2 km",
+        "Kids Race: 1.6 km"
       ]
     },
     "climate": {
@@ -40,26 +40,24 @@
       ]
     },
     "terrain": {
-      "primary": "Tatra mountain roadshell crusher",
-      "surface": "Paved perfection suits road and gravel drop-bar rigs. Smooth asphalt winds through stunning peaks with no gravelly surprises. Technical enough to reward bike handling without shredding tires.",
+      "primary": "Paved Tatra mountain roads",
+      "surface": "Paved road course through Zakopane and the surrounding Tatra region",
       "technical_rating": 3,
       "features": [
-        "Steep Tatra pitches",
-        "Alpine vista payoffs",
-        "Partially closed roads",
-        "Mountain pass drama",
-        "Scenic valley rollers"
+        "Repeated climbing totaling 1,600 m on the flagship course",
+        "Mountain roads around Zakopane",
+        "Separate 51 km Ride course"
       ]
     },
     "fondo_rating": {
-      "distance": 3,
-      "climbing": 4,
+      "distance": 4,
+      "climbing": 3,
       "descent_technicality": 3,
       "climate_risk": 3,
       "organization": 4,
       "scenic_experience": 5,
       "community_culture": 3,
-      "altitude": 3,
+      "altitude": 1,
       "logistics": 3,
       "prestige": 3,
       "field_depth": 2,
@@ -67,12 +65,12 @@
       "expenses": 4,
       "road_surface": 3,
       "cultural_impact": 2,
-      "overall_score": 70,
+      "overall_score": 67,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 73. adventure dimension dropped, road_surface added. Score recalculated: 70."
+      "scoring_notes": "Corrected to the official completed 2026 flagship course: 107 km / 1,600 m. Distance rises to 4; climbing is 3 and altitude 1 because the route is not a high-altitude event. Score recalculates to 67."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -86,8 +84,8 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Tatra masterpiece mashes steep ramps, flowing valleys, peak panoramas. 84km Race demands climbing soul amid UNESCO-worthy drama. Paved purity favors road weapons; mountain finish crowns kings. Varied pitch keeps watts guessing through Polish paradise.",
-      "signature_challenge": "1,547m cumulative Tatra tooth in compact 84km—brutal VAM rivals pro stages. Mountain finish amid jagged peaks delivers Tour de France theater. Compact distance amplifies per-km pain.",
+      "character": "The completed 2026 Race covered 107 km with 1,600 m of climbing from Zakopane. Its training demand comes from repeated climbing on paved Tatra roads while maintaining efficient group position between the harder efforts. The separate 51 km Ride carried 900 m of climbing.",
+      "signature_challenge": "Accumulating 1,600 m of climbing across the 107 km competitive course",
       "suffering_zones": [
         "Tatra Rampage",
         "Peak Punisher"
@@ -96,9 +94,9 @@
     "logistics": {
       "airport": "Kraków John Paul II (KRK) 100km/2hrs north—budget flights galore. No Zakopane airstrip; trains/buses fill gaps. Rent cars for Tatra freedom.",
       "lodging_strategy": "Book Zakopane resorts early—peak season crush. Guesthouses abound; aim central for Tadeusza Kościuszki start. Shoulder season pricing sweet.",
-      "transport": "",
+      "transport": "Zakopane is reached overland from Kraków; confirm next-edition start, parking, and road-closure instructions before booking.",
       "food": "Pierogi power and mountain hearty fare. Zakopane's tourist scene delivers cyclist fuel. Post-race oscypek cheese rewards suffering.",
-      "official_site": "https://poland.letapebytourdefrance.com"
+      "official_site": "https://poland.letapeseries.com/"
     },
     "history": {
       "founded": 2024,
@@ -112,7 +110,7 @@
     },
     "biased_opinion": {
       "verdict": "Tatra gem in infancy",
-      "summary": "L'Etape Poland crashes Poland's cycling party with Tour de France swagger and Tatra tooth. 84km/1,547m serves compact savagery amid peaks rivaling Chamonix. ASO magic ensures polish, but newbie status means field lacks bite. Family options sweeten domestic appeal. This sleeper hits T2 velocity fast.",
+      "summary": "L'Étape Poland brings a Tour de France-branded mass-participation race to Zakopane. The completed second edition paired a 107 km / 1,600 m competitive course with a shorter 51 km Ride and family events. It is a legitimate climbing race, but its next plan suite must wait for an organizer-confirmed 2027 date and course.",
       "strengths": [
         "TdF-licensed prestige",
         "Insane Tatra visuals",
@@ -130,9 +128,9 @@
       "bottom_line": "Bucket-list for mountain lovers seeking branded pain without Alps prices. Prestige accelerates growth trajectory. Race it before crowds swarm."
     },
     "final_verdict": {
-      "score": "70/100",
-      "one_liner": "Tatra's TdF debutant punches like a veteran climber.",
-      "should_you_race": "Yes if you crave alpine pain on a budget or Polish passport flex. Skip if chasing deep fields or 100+km epics. Perfect mid-pack hero maker.",
+      "score": "67/100",
+      "one_liner": "A 107 km / 1,600 m competitive L'Étape course based in Zakopane.",
+      "should_you_race": "Race it if you want a medium-length climbing event with Tour de France presentation in the Polish Tatras. Wait for the organizer to publish the next edition before booking or starting a date-specific plan.",
       "alternatives": "Unreal Haute Route Poland for multi-day Tatras, Transcontinental Poland qualifiers for ultra-adventure, or classic Etape du Tour France for OG suffering."
     },
     "citations": [
@@ -173,8 +171,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://poland.letapeseries.com/"
+      "verified": "2026-08-08",
+      "source": "https://poland.letapeseries.com/",
+      "notes": "The official site confirms the completed June 14, 2026 edition and its 107 km / 1,600 m competitive course. No official 2027 date, registration cycle, rules, roadbook, or edition-specific course has been published."
     }
   }
 }
