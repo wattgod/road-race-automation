@@ -13,23 +13,18 @@
       "location_badge": "NURBURGRING, GERMANY",
       "country": "Germany",
       "date": "Late July annually",
-      "date_specific": "2026: July 24-26",
+      "date_specific": "2027: July 24",
       "field_size": "~12,000 participants across all disciplines (2025 record: 11,948)",
-      "start_format": null,
-      "registration": "Online via radamring.de. 24h slots sell out within 1 hour. Public races and touring still available.",
-      "entry_fee": "Varies by discipline. Public races estimated EUR50-120.",
+      "start_format": "Near-simultaneous starts from separate blocks",
+      "registration": "2027 public-race entry details pending; the organizer confirms the July 23-25 event weekend",
+      "entry_fee": "2027 fee pending",
       "feed_zones": "Feed zones on course. Full mechanical and medical support from motorsport-grade infrastructure.",
-      "cutoff_time": "Varies by discipline. 24h race runs midnight to midnight.",
+      "cutoff_time": "Verify the final 2027 public-race regulations",
       "lat": 50.3356,
       "lng": 6.9475,
       "route_options": [
-        "Public Race 25 km (1 lap): 560m elevation — entry level",
         "Public Race 75 km (3 laps): 1,680m elevation — intermediate",
-        "Public Race 150 km (6 laps): 3,360m elevation — ambitious",
-        "24h Road Race: as many 25.9 km laps as possible in 24 hours (solo or teams of 2/4/8)",
-        "22 km Time Trial: Friday evening on GP circuit",
-        "Gravel Race 25/50/100 km: on and off the Nordschleife (added 2025)",
-        "Touring Rides: non-competitive, multiple distances"
+        "Public Race 150 km (6 laps): 3,360m elevation — ambitious"
       ]
     },
     "climate": {
@@ -57,7 +52,7 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 3,
+      "climbing": 4,
       "descent_technicality": 2,
       "climate_risk": 2,
       "organization": 4,
@@ -71,12 +66,12 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 4,
-      "overall_score": 66,
+      "overall_score": 67,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 70. adventure dimension dropped, road_surface added. Score recalculated: 66."
+      "scoring_notes": "The organizer lists 3,360 meters / 11,024 feet for the 150 km public race. That meets the Roadie Labs 2,500-4,000-meter score-4 climbing rubric, correcting climbing from 3 to 4 and the overall score from 66 to 67."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -104,18 +99,18 @@
       "lodging_strategy": "Book early. Nurburg village is tiny with limited capacity. Adenau (5 km) has more options. Mayen, Bad Munstereifel, and Kelberg offer budget alternatives 20-30 km away. 24h participants can use paddock camping plots (book with race entry). Consider Cologne as a base with 1-hour commute if local lodging is sold out.",
       "transport": "",
       "food": "Limited dining in Nurburg village. Adenau has restaurants and supermarkets. The Nurburgring complex has catering during the event weekend. Stock race nutrition in advance — this is rural Eifel, not a city. 24h teams should plan self-sufficient catering from paddock area.",
-      "official_site": "https://radamring.de/en/"
+      "official_site": "https://radamring.de/de?lang-notice=en"
     },
     "history": {
       "founded": 2003,
-      "origin_story": "Rad am Ring began in 2003 as a small 24-hour road bike race with approximately 70 participants on the Nurburgring. The concept was simple but audacious: use the world's most famous motorsport circuit for bicycle racing. The Nurburgring's Nordschleife, built in 1927 and nicknamed the 'Green Hell' by Jackie Stewart, had never hosted organized cycling competition at scale. The event grew steadily, adding public races, mountain bike disciplines, and touring options. In 2016, a professional road race — the Rudi Altig Race — was added to honor German cyclist Rudi Altig, who won the Road World Championship at the Nurburgring in 1966. Altig died weeks before the inaugural pro race, adding poignant significance. Paul Voss won the first edition in a 70 km solo breakaway. The pro race ran as a UCI Europe Tour 1.1 event before moving to the German Bundesliga. By 2025, the event had grown to nearly 12,000 participants, with 24h race slots selling out in under one hour. In 2025, a gravel race was added, and the 2026 edition will host the German Gravel Championship.",
+      "origin_story": "Rad am Ring began in 2003 as a small 24-hour road bike race with approximately 70 participants on the Nurburgring. The concept was simple but audacious: use the world's most famous motorsport circuit for bicycle racing. The Nurburgring's Nordschleife, built in 1927 and nicknamed the 'Green Hell' by Jackie Stewart, had never hosted organized cycling competition at scale. The event grew steadily, adding public races, mountain bike disciplines, and touring options. In 2016, a professional road race — the Rudi Altig Race — was added to honor German cyclist Rudi Altig, who won the Road World Championship at the Nurburgring in 1966. Altig died weeks before the inaugural pro race, adding poignant significance. Paul Voss won the first edition in a 70 km solo breakaway. The pro race ran as a UCI Europe Tour 1.1 event before moving to the German Bundesliga. By 2025, the event had grown to nearly 12,000 participants, with 24h race slots selling out in under one hour. A gravel race was added in 2025 and hosted the German Gravel Championship in 2026.",
       "notable_moments": [
         "2003: First edition with approximately 70 riders in the 24h race",
         "2016: Inaugural Rudi Altig Race (pro road race, UCI 1.1). Paul Voss wins with 70 km solo breakaway. Emanuel Buchmann and Davide Rebellin in the field",
         "1966: Rudi Altig wins Road World Championship at the Nurburgring — the event's spiritual origin",
         "2025: Record 11,948 participants across all disciplines",
         "2025: Gravel race added for the first time, 550 participants in inaugural edition",
-        "2026: German Gravel Championship awarded to Rad am Ring"
+        "2026: Rad am Ring hosts the German Gravel Championship"
       ],
       "reputation": "Germany's premier motorsport-circuit cycling festival. The 24h race is the crown jewel — a unique endurance challenge on sacred motorsport ground. Growing rapidly with a passionate community and institutional support from Nurburgring 1927 GmbH."
     },
@@ -141,21 +136,21 @@
       "bottom_line": "If you have ever watched a Formula 1 race, a Nurburgring 24 Hours, or read about the Green Hell and thought 'I want to experience that' — Rad am Ring is how you do it on a bicycle. The venue elevates what would otherwise be a solid German sportive into something genuinely unique. The 24h race is the bucket-list version. The experience score earns a perfect 5 because nothing else compares. For German and European cyclists, this should be on the short list. For international travelers, pair it with a European cycling trip — the Nurburgring alone justifies the detour."
     },
     "final_verdict": {
-      "score": "66/100",
+      "score": "67/100",
       "one_liner": "Race the Green Hell. 12,000 cyclists on the world's most famous motorsport circuit — the Nurburgring Nordschleife.",
-      "should_you_race": "If you have any connection to motorsport culture, this is a mandatory pilgrimage on two wheels. The 24h race is the crown jewel — 24 hours of closed-circuit racing through the Nordschleife, including surreal night laps through forest fog. The public races (25/75/150 km) offer the venue experience in a single day. For German and European cyclists, this is one of the continent's most unique events. For international visitors, combine with a broader European cycling trip.",
+      "should_you_race": "If you have any connection to motorsport culture, this is a mandatory pilgrimage on two wheels. The 24h race is the crown jewel — 24 hours of closed-circuit racing through the Nordschleife, including surreal night laps through forest fog. The public races (75/150 km) offer the venue experience in a single day. For German and European cyclists, this is one of the continent's most unique events. For international visitors, combine with a broader European cycling trip.",
       "alternatives": "For other iconic European circuit events: Tour de Okinawa (road racing on closed circuit, Japan). For German cycling festivals: 3Rides Aachen (gravel, nearby), Cyclassics Hamburg (road). For 24h endurance cycling: 24h Montabaur, 24h Duisburg. For the ultimate European sportive experience: L'Etape du Tour, Maratona dles Dolomites."
     },
     "citations": [
       {
-        "url": "https://radamring.de/en/",
+        "url": "https://radamring.de/de?lang-notice=en",
         "category": "official",
         "label": "Rad am Ring Official Website"
       },
       {
-        "url": "https://radamring.de/en/disciplines/public-race/",
+        "url": "https://radamring.de/de/disziplinen/jedermannrennen",
         "category": "official",
-        "label": "Rad am Ring: Public Race Discipline Details"
+        "label": "Rad am Ring: 75 km and 150 km public-race course details"
       },
       {
         "url": "https://radamring.de/en/disciplines/24h-bike-race/",
@@ -188,7 +183,7 @@
         "label": "Radsport Events: 360 Degrees of Cycling at Nurburgring (2016 first pro race recap)"
       },
       {
-        "url": "https://radamring.de/en/gravel-race_eng/",
+        "url": "https://radamring.de/de/disziplinen/gravel-race?lang-notice=en",
         "category": "official",
         "label": "Rad am Ring: Gravel Race Discipline (added 2025)"
       },
@@ -372,9 +367,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://radamring.de/en/timetable/",
-      "notes": null
+      "verified": "2026-08-09",
+      "source": "https://radamring.de/de?lang-notice=en",
+      "notes": "The organizer confirms the July 23-25, 2027 festival. The public road race remains in Saturday's Grand Depart; final 2027 registration, regulations, and timetable are pending."
     }
   }
 }
