@@ -1,7 +1,7 @@
 {
   "slug": "galibier-challenge",
   "race_name": "Galibier Challenge",
-  "distance_mi": 71.0,
+  "distance_mi": 68.4,
   "demands": {
     "durability": 2,
     "climbing": 10,
@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "10,991ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "10,991ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
@@ -40,7 +40,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Galibier Challenge's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 71 miles."
+      "workout_context": "Galibier Challenge's high-Alpine paved climbing rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 68 miles."
     },
     {
       "category": "Over_Under",
@@ -49,7 +49,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Galibier Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Galibier Challenge, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "TT_Threshold",
@@ -59,7 +59,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "155ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "161ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Mixed_Climbing",
@@ -88,7 +88,7 @@
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "71 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+      "workout_context": "68 miles on high-Alpine paved climbing burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Critical_Power",
@@ -97,7 +97,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Galibier Challenge, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Galibier Challenge. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -106,7 +106,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 10,991ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 10,991ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Endurance",
@@ -124,14 +124,14 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on high-Alpine paved climbing can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for Galibier Challenge\u2019s 71 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Galibier Challenge with 10,991ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
-    "terrain": "Mixed terrain at Galibier Challenge requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "nutrition": "Use training to rehearse an eating and drinking plan for Galibier Challenge's 68 miles. Start early, use products you tolerate, and carry enough between the organizer\u2019s confirmed resupply points.",
+    "altitude": "Galibier Challenge with 10,991ft of climbing finishes high enough for reduced oxygen availability to affect sustainable power, pacing, and recovery. Use a conservative upper-mountain pacing plan, test any travel or acclimatization strategy before the event, and plan layers for changing conditions. Do not begin iron or other supplements without clinician-guided testing.",
+    "terrain": "The course profile at Galibier Challenge rewards specific practice. Include regular rides on high-alpine paved climbing to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Road Specific to prepare you for 71 miles of mixed terrain in Saint-Michel-de-Maurienne, Savoie, France.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Road Specific to prepare you for 68 miles of high-alpine paved climbing in Saint-Michel-de-Maurienne, Savoie, France.",
+  "generated_at": "2026-08-09"
 }

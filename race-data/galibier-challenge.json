@@ -3,26 +3,29 @@
     "name": "Galibier Challenge",
     "slug": "galibier-challenge",
     "display_name": "Galibier Challenge",
-    "tagline": "",
+    "tagline": "The season's first high-mountain cyclosportive, with the clock stopping atop the Galibier.",
     "vitals": {
-      "distance_km": 114.3,
-      "distance_mi": 71.0,
+      "distance_km": 110,
+      "distance_mi": 68.4,
       "elevation_m": 3350,
       "elevation_ft": 10991.0,
       "location": "Saint-Michel-de-Maurienne, Savoie, France",
       "location_badge": "Saint-Michel-de-Maurienne, France",
       "country": "France",
-      "date": "2027: June 5-6",
-      "date_specific": "2027: June 5-6",
-      "field_size": "Approximately 1,500 participants",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": "Multiple aid stations throughout course",
-      "cutoff_time": "Not specified",
+      "date": "Sunday, June 6, 2027",
+      "date_specific": "2027: June 6",
+      "field_size": "800-rider cap for the 110 km cyclosportive",
+      "start_format": "Neutralized group start at 8:15; timing and classification stop at the Galibier summit or tunnel",
+      "registration": "Online registration opens October 1, 2026 and closes May 31 at 23:59 or when the 800-rider cap is reached; no on-site registration",
+      "entry_fee": "EUR 50 through December 31, EUR 55 January-April, EUR 60 in May, plus platform fees and optional products",
+      "feed_zones": "Col de Beau Plan, Col du Télégraphe, Plan Lachat, and Col or Tunnel du Galibier",
+      "cutoff_time": "Col du Télégraphe at 12:30; Plan Lachat at 14:00",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Cyclosportive: 110 km / 3,350 m, timed to the Col or Tunnel du Galibier with an untimed return to Saint-Michel-de-Maurienne",
+        "Grimpée du Galibier: separate 35 km timed ascent linking Télégraphe and Galibier"
+      ]
     },
     "climate": {
       "primary": "Temperate",
@@ -30,10 +33,15 @@
       "challenges": []
     },
     "terrain": {
-      "primary": "Mixed terrain",
-      "surface": "Paved roads",
+      "primary": "High-Alpine paved climbing",
+      "surface": "Paved Maurienne Valley and Alpine pass roads",
       "technical_rating": 1,
-      "features": []
+      "features": [
+        "Four sustained climbs",
+        "Summit above 2,600 meters",
+        "Early-June snow contingency",
+        "Untimed descent after the classified finish"
+      ]
     },
     "fondo_rating": {
       "distance": 4,
@@ -59,15 +67,44 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 4,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        {
+          "name": "Montée d'Orelle",
+          "length_km": 6,
+          "avg_gradient": "Variable, including 7-8% ramps",
+          "note": "The opening climb immediately stretches the field from Saint-Michel-de-Maurienne."
+        },
+        {
+          "name": "Col de Beau Plan",
+          "length_km": 11,
+          "elevation_gain_m": 732,
+          "avg_gradient": "6.5%",
+          "note": "Irregular gradients and ramps near 9% create the first sustained selection."
+        },
+        {
+          "name": "Col du Télégraphe",
+          "length_km": 12,
+          "elevation_gain_m": 851,
+          "avg_gradient": "7%",
+          "note": "A steady Alpine climb that leads directly toward the Galibier finale."
+        },
+        {
+          "name": "Col du Galibier",
+          "length_km": 18,
+          "elevation_gain_m": 1239,
+          "avg_gradient": "7%",
+          "summit_altitude_m": 2642,
+          "note": "The classified finish; snow conditions can move the timing line to the tunnel."
+        }
+      ],
+      "profile_type": "Four-climb high-Alpine summit challenge",
+      "king_of_mountain": "Col du Galibier",
+      "_needs_enrichment": false
     },
     "course_description": {
       "character": "Two formats out of Saint-Michel-de-Maurienne: the main 110 km cyclosportive (~3,350m) taking in Montée d'Orelle, Col de Beau Plan, Col du Télégraphe, and Col du Galibier, and a separate 35 km 'La Grimpée' timed ascent (~2,100m) linking just Télégraphe and Galibier from Saint-Michel. On the main route, timing and classification stop at the Galibier summit or tunnel — the descent back to Saint-Michel-de-Maurienne is untimed, free-pace riding, not part of the race result. Most of the route stays open to ordinary traffic with riders given passage priority, but the upper Galibier climb itself is closed to motor traffic during set event hours (9:00am-3:00pm in 2026).",
@@ -81,10 +118,10 @@
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Saint-Michel-de-Maurienne and surrounding Maurienne Valley offer lodging options. The event spans June 6-7, allowing for weekend travel.",
+      "lodging_strategy": "Stay in Saint-Michel-de-Maurienne or elsewhere in the Maurienne Valley; arrive before Saturday packet pickup for the Sunday start.",
       "transport": "",
       "food": "",
-      "official_site": ""
+      "official_site": "https://www.galibier-challenge.com/"
     },
     "history": {
       "founded": null,
@@ -315,16 +352,14 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-08-06",
+      "verified": "2026-08-09",
       "source": "https://www.galibier-challenge.com/cyclosportive",
-      "notes": "The organizer's header confirms the next Galibier Challenge weekend for June 5-6, 2027 and says registration opens October 1, 2026. However, the registration and program body copy inconsistently places the leisure ride on June 6 and the cyclosportive on June 7, which is a Monday. The exact 2027 Race Day remains blocked pending organizer-corrected program details. The current course page describes approximately 110-115 kilometers and 3,300-3,350 meters of climbing; existing profile vitals remain within that organizer-published range rather than inventing one false precision."
+      "notes": "The organizer's current 2027 header confirms June 5-6, 2027. Its cyclosportive page assigns packet pickup to Saturday and the 110 km timed start to Sunday at 8:15. Since June 5 is Saturday and June 6 is Sunday, Race Day is June 6, 2027. The separate registration page's numeric 'June 7' is a stale template error that conflicts with both the confirmed weekend and the organizer's weekday schedule. The 110 km / 3,350 m headline, four climbs, feed points, cutoffs, registration window, and snow contingency are current organizer-published facts."
     },
     "training_plan_clearance": {
-      "status": "source_blocked",
-      "reviewed_at": "2026-08-06",
-      "blockers": [
-        "Official 2027 header and program body conflict on the cyclosportive date; require an organizer correction before assigning Race Day."
-      ]
+      "status": "build_ready",
+      "reviewed_at": "2026-08-09",
+      "blockers": []
     }
   }
 }

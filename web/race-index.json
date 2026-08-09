@@ -2460,8 +2460,8 @@
     "country": "France",
     "region": "Western Europe",
     "month": "June",
-    "distance_km": 114.3,
-    "distance_mi": 71.0,
+    "distance_km": 110,
+    "distance_mi": 68.4,
     "elevation_m": 3350,
     "elevation_ft": 10991.0,
     "tier": 2,
@@ -2483,13 +2483,16 @@
       "expenses": 2,
       "cultural_impact": 4
     },
-    "tagline": "",
+    "tagline": "The season's first high-mountain cyclosportive, with the clock stopping atop the Galibier.",
     "has_profile": true,
     "profile_url": "/race/galibier-challenge/",
     "discipline": "gran_fondo",
     "lat": null,
     "lng": null,
-    "route_options": []
+    "route_options": [
+      "Cyclosportive: 110 km / 3,350 m, timed to the Col or Tunnel du Galibier with an untimed return to Saint-Michel-de-Maurienne",
+      "Grimpée du Galibier: separate 35 km timed ascent linking Télégraphe and Galibier"
+    ]
   },
   {
     "name": "GFNY Grand Ballon",
