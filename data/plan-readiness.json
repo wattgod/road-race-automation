@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T14:45:38",
+  "generated_at": "2026-08-09T15:04:19",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4672,6 +4672,23 @@
       "race_date": "2026-08-30",
       "blockers": []
     },
+    "letape-serra-negra": {
+      "slug": "letape-serra-negra",
+      "tier": 2,
+      "score": 63,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 46,
+      "race_date": "2027-06-27",
+      "blockers": []
+    },
     "letape-slovakia": {
       "slug": "letape-slovakia",
       "tier": 2,
@@ -7572,6 +7589,7 @@
     "engadin-radmarathon",
     "tour-of-the-peak",
     "nove-colli",
+    "letape-serra-negra",
     "seattle-to-portland",
     "london-to-brighton",
     "alpe-dhuzes",
@@ -7968,6 +7986,7 @@
     "engadin-radmarathon",
     "tour-of-the-peak",
     "nove-colli",
+    "letape-serra-negra",
     "seattle-to-portland",
     "london-to-brighton",
     "alpe-dhuzes",
@@ -8036,14 +8055,14 @@
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 409,
-    "ready": 161,
-    "content_present": 396,
-    "validator_clean": 409,
-    "pilot_candidates": 96,
+    "total": 410,
+    "ready": 162,
+    "content_present": 397,
+    "validator_clean": 410,
+    "pilot_candidates": 97,
     "by_tier_ready": {
       "1": 12,
-      "2": 130,
+      "2": 131,
       "3": 19,
       "4": 0
     }
