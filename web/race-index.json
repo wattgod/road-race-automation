@@ -9134,6 +9134,47 @@
     ]
   },
   {
+    "name": "Rad am Ring",
+    "slug": "rad-am-ring",
+    "location": "Nurburgring, Nurburg, Rhineland-Palatinate, Germany",
+    "country": "Germany",
+    "region": "Western Europe",
+    "month": "July",
+    "distance_km": 149.7,
+    "distance_mi": 93.0,
+    "elevation_m": 3360,
+    "elevation_ft": 11024.0,
+    "tier": 2,
+    "overall_score": 67,
+    "scores": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 4,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 4
+    },
+    "tagline": "Race the Green Hell. 12,000 cyclists on the world's most famous motorsport circuit — the Nurburgring Nordschleife.",
+    "has_profile": true,
+    "profile_url": "/race/rad-am-ring/",
+    "discipline": "gran_fondo",
+    "lat": 50.3356,
+    "lng": 6.9475,
+    "route_options": [
+      "Public Race 75 km (3 laps): 1,680m elevation — intermediate",
+      "Public Race 150 km (6 laps): 3,360m elevation — ambitious"
+    ]
+  },
+  {
     "name": "Suzuka 8 Hours Enduro",
     "slug": "suzuka-endurance-road",
     "location": "Suzuka Circuit, Mie Prefecture, Japan",
@@ -9970,52 +10011,6 @@
         "distance_km": 1315.0,
         "elevation_m": 800
       }
-    ]
-  },
-  {
-    "name": "Rad am Ring",
-    "slug": "rad-am-ring",
-    "location": "Nurburgring, Nurburg, Rhineland-Palatinate, Germany",
-    "country": "Germany",
-    "region": "Western Europe",
-    "month": "July",
-    "distance_km": 149.7,
-    "distance_mi": 93.0,
-    "elevation_m": 3360,
-    "elevation_ft": 11024.0,
-    "tier": 2,
-    "overall_score": 66,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 2,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 4,
-      "organization": 4,
-      "scenic_experience": 5,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 4
-    },
-    "tagline": "Race the Green Hell. 12,000 cyclists on the world's most famous motorsport circuit — the Nurburgring Nordschleife.",
-    "has_profile": true,
-    "profile_url": "/race/rad-am-ring/",
-    "discipline": "gran_fondo",
-    "lat": 50.3356,
-    "lng": 6.9475,
-    "route_options": [
-      "Public Race 25 km (1 lap): 560m elevation — entry level",
-      "Public Race 75 km (3 laps): 1,680m elevation — intermediate",
-      "Public Race 150 km (6 laps): 3,360m elevation — ambitious",
-      "24h Road Race: as many 25.9 km laps as possible in 24 hours (solo or teams of 2/4/8)",
-      "22 km Time Trial: Friday evening on GP circuit",
-      "Gravel Race 25/50/100 km: on and off the Nordschleife (added 2025)",
-      "Touring Rides: non-competitive, multiple distances"
     ]
   },
   {
@@ -11134,6 +11129,47 @@
     "route_options": [
       "Granfondo: 181 km / 4,020m D+",
       "Mediofondo: 93 km / 2,200m D+"
+    ]
+  },
+  {
+    "name": "L'Étape Cunha by Tour de France",
+    "slug": "letape-cunha",
+    "location": "Cunha, São Paulo, Brazil",
+    "country": "Brazil",
+    "region": "South America",
+    "month": "April",
+    "distance_km": 111,
+    "distance_mi": 69.0,
+    "elevation_m": 2400,
+    "elevation_ft": 7874,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "Closed roads, 2,400 meters of climbing, and 111 mountainous kilometers in Brazil's Serra do Mar.",
+    "has_profile": true,
+    "profile_url": "/race/letape-cunha/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "Long course: 111 km / 2,400 m climbing",
+      "Short course: 53 km / 700 m climbing"
     ]
   },
   {

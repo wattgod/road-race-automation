@@ -355,6 +355,35 @@ class TestHero:
         html = build_hero(normalized_data)
         assert "TIER 2" in html
 
+
+class TestRaceSeoAndCalendar:
+    def test_seo_title_uses_confirmed_event_year(self, normalized_data):
+        normalized_data["vitals"]["date"] = "April 4, 2027"
+        normalized_data["vitals"]["date_specific"] = "2027: April 4 (Sunday)"
+        assert "Review 2027" in neo.build_seo_title(normalized_data)
+
+    def test_long_meta_tagline_stops_at_complete_clause(self):
+        rd = {
+            "tagline": (
+                "Closed roads, 2,400 meters of climbing, and 111 mountainous "
+                "kilometers in Brazil's Serra do Mar."
+            ),
+            "overall_score": 64,
+            "tier": 2,
+            "vitals": {"location": "Cunha, São Paulo, Brazil"},
+        }
+        description = neo.build_seo_description(rd)
+        assert description.startswith("Closed roads, 2,400 meters of climbing.")
+        assert "111 mountainous." not in description
+        assert len(description) <= 160
+
+    def test_single_day_calendar_uses_exclusive_next_day_end(self, normalized_data):
+        normalized_data["vitals"]["date_specific"] = "2027: April 4 (Sunday)"
+        html = build_course_overview(normalized_data)
+        assert "dates=20270404/20270405" in html
+        assert "DTSTART;VALUE=DATE:20270404" in html
+        assert "DTEND;VALUE=DATE:20270405" in html
+
     def test_tagline_in_course_overview(self, normalized_data):
         """Tagline moved from hero to course overview section."""
         html = build_course_overview(normalized_data)

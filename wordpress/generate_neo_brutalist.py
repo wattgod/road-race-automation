@@ -27,7 +27,7 @@ import math
 import re
 import shutil
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
@@ -303,16 +303,20 @@ def build_seo_title(rd: dict) -> str:
     """
     name = rd['name']
     location = rd['vitals'].get('location', '') or ''
+    date_text = ' '.join(str(rd['vitals'].get(field, '') or '')
+                         for field in ('date_specific', 'date'))
+    year_match = re.search(r'\b(20\d{2})\b', date_text)
+    review_year = year_match.group(1) if year_match else CURRENT_YEAR
     # Extract just state/country from full location like "Emporia, Kansas"
     loc_short = location.split(',')[-1].strip() if ',' in location else location
 
     # Try full format first
-    full = f"{name} Review {CURRENT_YEAR} | {loc_short} | Roadie Labs"
+    full = f"{name} Review {review_year} | {loc_short} | Roadie Labs"
     if len(full) <= 62:
         return full
 
     # Drop location if too long
-    medium = f"{name} Review {CURRENT_YEAR} | Roadie Labs"
+    medium = f"{name} Review {review_year} | Roadie Labs"
     if len(medium) <= 62:
         return medium
 
@@ -349,9 +353,9 @@ def build_seo_description(rd: dict) -> str:
     if max_tagline > 30:
         # Try to break at last complete sentence (period followed by space)
         candidate = tagline[:max_tagline]
-        last_period = candidate.rfind('. ')
-        if last_period > 30:
-            truncated = candidate[:last_period]
+        clause_break = max(candidate.rfind(mark) for mark in ('. ', '; ', ', ', ' — '))
+        if clause_break > 30:
+            truncated = candidate[:clause_break].rstrip('.,;:—-')
         else:
             truncated = candidate.rsplit(' ', 1)[0].rstrip('.,;:—-')
         return f"{truncated}.{suffix}"
@@ -2270,17 +2274,19 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
     # Calendar export — Google Calendar link + .ics download
     cal_html = ''
     date_specific = v.get('date_specific', '')
-    cal_start, _cal_end = parse_event_dates(date_specific)
+    cal_start, cal_end = parse_event_dates(date_specific)
 
     if cal_start:
         iso_date = cal_start.replace('-', '')
+        calendar_end = date.fromisoformat(cal_end or cal_start) + timedelta(days=1)
+        iso_end = calendar_end.strftime('%Y%m%d')
         race_title = rd['name']
         location_str = v.get('location', '')
         from urllib.parse import quote
         gcal_url = (
             f"https://calendar.google.com/calendar/render?action=TEMPLATE"
             f"&text={quote(race_title)}"
-            f"&dates={iso_date}/{iso_date}"
+            f"&dates={iso_date}/{iso_end}"
             f"&details={quote(f'Gran fondo — {race_title}. More info at roadielabs.com')}"
             f"&location={quote(location_str)}"
         )
@@ -2288,7 +2294,7 @@ def build_course_overview(rd: dict, race_index: list = None) -> str:
             f"BEGIN:VCALENDAR\\nVERSION:2.0\\nPRODID:-//RoadLabs//EN\\n"
             f"BEGIN:VEVENT\\n"
             f"DTSTART;VALUE=DATE:{iso_date}\\n"
-            f"DTEND;VALUE=DATE:{iso_date}\\n"
+            f"DTEND;VALUE=DATE:{iso_end}\\n"
             f"SUMMARY:{race_title}\\n"
             f"LOCATION:{location_str}\\n"
             f"DESCRIPTION:Gran fondo. More info at roadielabs.com\\n"

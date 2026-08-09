@@ -1,0 +1,181 @@
+{
+  "race": {
+    "name": "L'Étape Cunha by Tour de France",
+    "slug": "letape-cunha",
+    "display_name": "L'Étape Cunha by Tour de France",
+    "tagline": "Closed roads, 2,400 meters of climbing, and 111 mountainous kilometers in Brazil's Serra do Mar.",
+    "vitals": {
+      "distance_km": 111,
+      "distance_mi": 69.0,
+      "elevation_m": 2400,
+      "elevation_ft": 7874,
+      "location": "Cunha, São Paulo, Brazil",
+      "location_badge": "CUNHA, SÃO PAULO, BRAZIL",
+      "country": "Brazil",
+      "date": "April 4, 2027",
+      "date_specific": "2027: April 4 (Sunday)",
+      "field_size": "Not published for 2027",
+      "start_format": "Closed-road competitive long and short courses starting at 06:00",
+      "registration": "2027 registration is open through the official L'Étape Cunha site; riders must be at least 18 and present a valid competitive-cycling medical certificate",
+      "entry_fee": "See official 2027 registration",
+      "feed_zones": "Final 2027 rider documents control support locations and contents",
+      "cutoff_time": "Not published on the current 2027 course pages",
+      "route_options": [
+        "Long course: 111 km / 2,400 m climbing",
+        "Short course: 53 km / 700 m climbing"
+      ]
+    },
+    "climate": {
+      "primary": "Variable autumn mountain conditions",
+      "description": "Cunha is a mountain venue, and the April race can move between a cool early start, exposed sun, wind, cloud, and rain. The final forecast and organizer guidance should control clothing and hydration decisions.",
+      "challenges": [
+        "06:00 mountain start",
+        "Temperature changes across repeated climbs and descents",
+        "Rain and reduced visibility are possible",
+        "Sun and hydration exposure can still matter later in the ride"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain road course around Cunha",
+      "surface": "Paved roads closed to cars for the event. The organizer describes a mixture of short steep climbs, longer climbs, curves, and winding mountain sections; the final 2027 technical guide and route file control exact pavement and segment details.",
+      "technical_rating": 2,
+      "features": [
+        "111 kilometers of closed roads",
+        "2,400 meters of accumulated climbing",
+        "Short, steep climbs",
+        "Longer sustained climbs",
+        "Curved and winding mountain roads",
+        "A marked King and Queen of the Mountain segment"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 3,
+      "overall_score": 64,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "The 111 km distance is moderate, but 2,400 m of climbing, closed roads, the established L'Étape Brasil organization, and Cunha's mountain setting make this a serious national-level gran fondo. Exact 2027 GPX, summit altitude, pavement audit, field size, and technical guide remain pending, keeping it below flagship status."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "Organizer-described short steep climbs",
+        "Organizer-described longer sustained climbs",
+        "The marked King and Queen of the Mountain segment"
+      ],
+      "profile_type": "Dense mountain climbing",
+      "king_of_mountain": "A marked climbing segment will award the fastest long-course man and woman; the current 2027 page does not publish its exact location or gradient.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "L'Étape Cunha compresses 2,400 meters of climbing into 111 closed-road kilometers. The official course page describes short steep ramps, longer climbs, curves, and winding sections, so the day rewards repeated climbing rather than one isolated summit effort. The current 2027 cards confirm the target distance and gain, while the downloadable GPX still carries a 2026 filename; final 2027 rider documents win.",
+      "signature_challenge": "Climbing density: 2,400 meters in 111 kilometers, with enough short ramps and longer ascents that early over-pacing compounds through the second half.",
+      "suffering_zones": [
+        "The opening closed-road mountain kilometers",
+        "Repeated short steep climbs",
+        "The longer sustained climbing block",
+        "The marked King and Queen of the Mountain segment",
+        "The final winding return to Cunha"
+      ]
+    },
+    "logistics": {
+      "airport": "Most international riders will approach through São Paulo or Rio de Janeiro; confirm current ground transfer time before booking because Cunha is a mountain town rather than an airport city.",
+      "lodging_strategy": "Stay in or near Cunha and book early. Confirm bike storage, breakfast before the 06:00 start, packet pickup, and road-closure access directly with the property and organizer.",
+      "transport": "Use the final 2027 event schedule for race-village access, parking, packet pickup, and closed-road arrival windows.",
+      "food": "Cunha has a small-town restaurant and pousada network. Bring familiar race breakfast and on-bike nutrition rather than relying on early-morning availability.",
+      "official_site": "https://cunha.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2015,
+      "origin_story": "Cunha hosted the first L'Étape Brasil editions and remains one of the three named Brazilian stages alongside Serra Negra and Campos do Jordão. The official registration page confirms that the series returns to Cunha for April 2-4, 2027.",
+      "notable_moments": [
+        "2015: Cunha hosts the inaugural L'Étape Brasil",
+        "2025: The Cunha long route is reshaped around roughly 110 kilometers and 2,400 meters of climbing",
+        "2026: Cunha opens the three-event L'Étape Brasil calendar",
+        "2027: Registration opens for the April 2-4 event weekend and April 4 race"
+      ],
+      "reputation": "An established Tour de France-branded Brazilian mountain race with closed roads, repeat appearances in Cunha, and a clear competitive jersey structure."
+    },
+    "biased_opinion": {
+      "verdict": "The Dense One",
+      "summary": "Cunha is not long by international gran-fondo standards, but 2,400 meters in 111 kilometers changes the equation. Closed roads and L'Étape production make it feel substantial; short steep ramps and longer climbs make restraint more valuable than chasing every early acceleration.",
+      "strengths": [
+        "Closed roads throughout the advertised courses",
+        "High climbing density",
+        "Established L'Étape Brasil organization",
+        "Competitive Tour de France jersey classifications",
+        "Distinct Brazilian mountain setting"
+      ],
+      "weaknesses": [
+        "Moderate total distance",
+        "Exact 2027 GPX and technical guide are not yet published",
+        "Small-town logistics require planning",
+        "International field depth is limited compared with major European fondos"
+      ],
+      "bottom_line": "A legitimate climbing target for riders who want repeated mountain work, closed roads, and Tour de France event structure without an ultra-distance day."
+    },
+    "final_verdict": {
+      "score": "64/100",
+      "one_liner": "Closed roads, 2,400 meters of climbing, and 111 mountainous kilometers in Brazil's Serra do Mar.",
+      "should_you_race": "Race it for dense climbing and a professionally supported closed-road day; skip it if total distance or international prestige matters more than repeated mountain effort.",
+      "alternatives": "L'Étape Campos do Jordão for the flagship Brazilian stage, L'Étape Serra Negra for another current series stop, or L'Étape Argentina for a longer South American course."
+    },
+    "citations": [
+      {
+        "url": "https://cunha.letapeseries.com/",
+        "category": "official",
+        "label": "L'Étape Cunha official 2027 event page"
+      },
+      {
+        "url": "https://cunha.letapeseries.com/registration",
+        "category": "official",
+        "label": "L'Étape Cunha official 2027 registration and eligibility page"
+      },
+      {
+        "url": "https://cunha.letapeseries.com/route/66",
+        "category": "official",
+        "label": "L'Étape Cunha official 2027 long-course page"
+      },
+      {
+        "url": "https://cunha.letapeseries.com/stages",
+        "category": "official",
+        "label": "L'Étape Cunha official course and jersey page"
+      },
+      {
+        "url": "https://www.letapeseries.com/the-series-en",
+        "category": "official",
+        "label": "L'Étape Series official 2027 calendar"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-09",
+      "source": "https://cunha.letapeseries.com/registration",
+      "notes": "Official registration is open for the April 2-4, 2027 event weekend. The competitive road race is Sunday, April 4, with a closed-road 111 km / 2,400 m long course and 53 km / 700 m short course. Riders must be 18 or older and present a valid competitive-cycling medical certificate."
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-09",
+      "race_date": "2027-04-04",
+      "facts_scope": "Date, open registration, competitive eligibility, long- and short-course distance and elevation, closed-road status, start time, mountain-course character, and jersey classifications verified against first-party L'Étape sources. Exact 2027 GPX, named segments, summit altitude, pavement detail, support locations, and cutoff remain pending."
+    }
+  }
+}

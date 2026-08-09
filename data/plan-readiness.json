@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T11:28:43",
+  "generated_at": "2026-08-09T14:45:38",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1545,12 +1545,12 @@
       },
       "eligibility_status": "active",
       "ready": false,
-      "runway_weeks": 42,
-      "race_date": "2027-06-05",
+      "runway_weeks": 43,
+      "race_date": "2027-06-06",
       "blockers": [
-        "plan clearance: Official 2027 header and program body conflict on the cyclosportive date; require an organizer correction before assigning Race Day."
+        "plan clearance: build_ready"
       ],
-      "plan_clearance_status": "source_blocked"
+      "plan_clearance_status": "build_ready"
     },
     "gent-wevelgem-cyclo": {
       "slug": "gent-wevelgem-cyclo",
@@ -4375,6 +4375,23 @@
       "ready": true,
       "runway_weeks": 5,
       "race_date": "2026-09-13",
+      "blockers": []
+    },
+    "letape-cunha": {
+      "slug": "letape-cunha",
+      "tier": 2,
+      "score": 64,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 34,
+      "race_date": "2027-04-04",
       "blockers": []
     },
     "letape-czech-republic": {
@@ -7546,8 +7563,8 @@
     "marmotte-granfondo-sestriere",
     "rad-am-ring",
     "dolomitenradrundfahrt",
-    "tartu-rattaralli",
     "galibier-challenge",
+    "tartu-rattaralli",
     "mallorca-312",
     "nordsjorittet",
     "highlands-gran-fondo",
@@ -7579,6 +7596,7 @@
     "gran-fondo-san-diego",
     "legendaria-gran-fondo-ontinyent",
     "etape-loch-ness",
+    "letape-cunha",
     "tour-de-brisbane",
     "gfny-punta-del-este",
     "sea-otter-classic-gran-fondo",
@@ -7968,6 +7986,7 @@
     "gran-fondo-san-diego",
     "legendaria-gran-fondo-ontinyent",
     "etape-loch-ness",
+    "letape-cunha",
     "tour-de-brisbane",
     "gfny-punta-del-este",
     "sea-otter-classic-gran-fondo",
@@ -8017,14 +8036,14 @@
     "gran-fondo-chile-uci"
   ],
   "summary": {
-    "total": 408,
-    "ready": 160,
-    "content_present": 395,
-    "validator_clean": 408,
-    "pilot_candidates": 95,
+    "total": 409,
+    "ready": 161,
+    "content_present": 396,
+    "validator_clean": 409,
+    "pilot_candidates": 96,
     "by_tier_ready": {
       "1": 12,
-      "2": 129,
+      "2": 130,
       "3": 19,
       "4": 0
     }
