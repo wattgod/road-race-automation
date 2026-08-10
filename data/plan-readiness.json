@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T01:13:45",
+  "generated_at": "2026-08-10T01:51:20",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -5927,15 +5927,18 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": true
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
       "race_date": "2026-04-11",
       "blockers": [
-        "no parsed future date"
-      ]
+        "no parsed future date",
+        "plan clearance: The catalog target is the Legends' Fondo, which the organizer explicitly describes as a ride that is not a race; the separately listed licensed races are different events."
+      ],
+      "plan_clearance_status": "excluded"
     },
     "ride-across-britain": {
       "slug": "ride-across-britain",
