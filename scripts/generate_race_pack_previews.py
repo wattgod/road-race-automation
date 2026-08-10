@@ -321,7 +321,8 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     if isinstance(climate, dict):
         challenges = climate.get('challenges', []) or []
 
-    # Elevation
+    # Total elevation gain. This is a workload metric, not altitude above sea
+    # level; never use it to claim where a course starts, peaks, or finishes.
     elevation = _safe_numeric(vitals, 'elevation_ft', 0)
 
     # Terrain types for specificity
@@ -395,17 +396,27 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     # ── Altitude ──
     alt_score = demands.get('altitude', 0)
     if alt_score >= 7:
-        elev_line = ''
-        if elevation >= 1000:
-            elev_line = f"with {int(elevation):,}ft of climbing"
+        climb_profile = race.get('climb_profile') or {}
+        key_climbs = climb_profile.get('key_climbs') or []
+        summit_altitudes_m = [
+            climb.get('summit_altitude_m')
+            for climb in key_climbs
+            if isinstance(climb, dict)
+            and isinstance(climb.get('summit_altitude_m'), (int, float))
+        ]
+        altitude_lead = f"{race_name} includes meaningful altitude exposure. "
+        if summit_altitudes_m:
+            peak_ft = round(max(summit_altitudes_m) * 3.28084 / 100) * 100
+            altitude_lead = (
+                f"{race_name} reaches approximately {peak_ft:,}ft above sea level. "
+            )
         alt_challenges = [c for c in challenges if any(w in c.lower() for w in ['altitude', 'elevation', 'feet', 'summit', 'thin air'])]
         challenge_line = ''
         if alt_challenges:
             challenge_line = ' ' + '; '.join(c.rstrip('.') for c in alt_challenges[:2]) + '.'
 
         overlay['altitude'] = (
-            f"{race_name} {elev_line + ' ' if elev_line else ''}"
-            f"finishes high enough for reduced oxygen availability to affect sustainable "
+            f"{altitude_lead}Reduced oxygen availability can affect sustainable "
             f"power, pacing, and recovery. Use a conservative upper-mountain pacing plan, "
             f"test any travel or acclimatization strategy before the event, and plan layers "
             f"for changing conditions. Do not begin iron or other supplements without "

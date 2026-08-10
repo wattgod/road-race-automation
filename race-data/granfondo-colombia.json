@@ -1,0 +1,196 @@
+{
+  "race": {
+    "name": "Granfondo Colombia",
+    "slug": "granfondo-colombia",
+    "display_name": "UCI Granfondo Colombia",
+    "tagline": "A high-altitude UCI qualifier above Medellín",
+    "vitals": {
+      "distance_km": 138,
+      "distance_mi": 85.7,
+      "elevation_m": 2000,
+      "elevation_ft": 6562,
+      "location": "Medellín, Antioquia, Colombia",
+      "location_badge": "MEDELLÍN, COLOMBIA",
+      "country": "Colombia",
+      "date": "November 29, 2026",
+      "date_specific": "2026: November 29",
+      "field_size": "Registration capped at 5,000 riders across the event in the May 2026 regulations",
+      "start_format": "mass_start",
+      "registration": "https://registroucigranfondocolombia.azurewebsites.net/",
+      "entry_fee": "USD $150 through July 10, $180 through September 10, then $200 through November 26, 2026, per the May regulations",
+      "feed_zones": "Organizer-provided solid and liquid aid is included; final locations for the current 138 km route are not yet published",
+      "cutoff_time": "The May regulations list 6.3 hours for a provisional 150 km Gran Fondo; the final cutoff for the current 138 km route is not yet updated",
+      "lat": 6.24205,
+      "lng": -75.57547,
+      "route_options": [
+        "Gran Fondo: 138 km — the organizer's current route page and downloadable Medellín GPX; the organizer warns the route may change until race day",
+        "Medio Fondo: 91 km — the organizer's current route page",
+        "Official-source discrepancy: the UCI series overview currently says 120 km for all riders and just under 2,000 m of climbing, while the May regulations still say provisional 150 km / 80 km distances with a plus-or-minus 20 percent change allowance"
+      ]
+    },
+    "climate": {
+      "primary": "Warm highland",
+      "description": "The UCI series page describes Medellín's roughly 1,500 m valley climate as warm and pleasant year-round. The course rises to roughly 2,500 m, so riders still need an altitude and variable-weather plan.",
+      "challenges": [
+        "Starting at roughly 1,480 m above sea level",
+        "Racing for an extended period near or above 2,000 m",
+        "Possible temperature and weather changes between the valley and high country"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountain",
+      "surface": "Paved roads; the regulations warn that the course can include asphalt, pavement, uneven surfaces, steep climbs, and steep descents",
+      "technical_rating": 3,
+      "features": [
+        "City-center start and finish",
+        "Long climb from the Medellín valley to high terrain near 2,500 m",
+        "Extended high-country rolling roads",
+        "Long descent back toward Medellín"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 2,
+      "road_surface": 3,
+      "climate_risk": 2,
+      "altitude": 4,
+      "logistics": 2,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 1,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Editorial review 2026-08-10. The current organizer route page and Medellín GPX support distance=3 at 138 km; the UCI series page's 'just below 2,000 m' supports climbing=3. Altitude=4 is conservative: the course reaches roughly 2,500 m but does not finish at altitude, so it does not meet the rubric's 2,500 m-plus summit-finish standard for 5. Organization=4 is supported by chip timing, medical and mechanical support, aid stations, controlled traffic, category awards, and a 5,000-rider cap in the regulations, while prestige and field depth remain at 3 because Medellín is only the event's second edition. Road surface, descent technicality, climate, culture, and expenses stay conservative where the organizer has not published execution evidence. Value=4 reflects the included jersey, aid, finish food, medal, timing, medical support, and insurance. Dimension sum 41 plus cultural impact 1 yields 60/100 and T2. Official distance documents conflict: the live organizer route is 138 km, the UCI overview says 120 km, and the May regulations say provisional 150 km; the 138 km route is the current planning target and must be rechecked before race week."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        {
+          "name": "Medellín high-country ascent",
+          "summit_altitude_m": 2525,
+          "tactical_notes": "The official sources agree that the course climbs from a roughly 1,480 m city start to high terrain near 2,500 m, but their published distance and corridor descriptions conflict. Pace this as the race-defining sustained ascent rather than relying on an unconfirmed segment gradient."
+        }
+      ],
+      "profile_type": "mountain",
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "A high-altitude mass-start road race that leaves central Medellín, climbs from a roughly 1,480 m valley floor to terrain near 2,500 m, spends a substantial middle block on rolling mountain roads, and descends back to the city. The organizer's current route page publishes a 138 km Medellín GPX through the northern high country, while the UCI series overview still describes a different 120 km corridor and the May regulations retain provisional 150 km language. The physical demand is clear even though the final line on the map is not: sustained climbing at altitude, rolling work after the main ascent, and a long descent before the city finish.",
+      "signature_challenge": "The altitude stack: begin at roughly 1,480 m, climb toward 2,500 m, then keep producing power on the high plateau before descending back to Medellín.",
+      "suffering_zones": [
+        "The transition from Medellín's valley floor into the sustained high-country climb",
+        "The rolling roads near 2,000-2,500 m, where sea-level pacing mistakes compound",
+        "The long return descent, where fatigue and temperature changes punish poor preparation",
+        "The city run-in after more than 130 km on the current organizer route"
+      ]
+    },
+    "logistics": {
+      "airport": "Medellín is a major international destination, but the organizer has not published bike-transfer instructions; confirm bike-box transport directly before booking.",
+      "lodging_strategy": "The organizer links three official hotel options. Stay close to the central start/finish and confirm early breakfast, secure bike storage, and race-morning access.",
+      "transport": "The current start/finish is listed at Calle 41 #55-80 in La Candelaria. The UCI page notes Medellín's modern public transport, but riders should use the final event guide for bike access, parking, closures, and packet pickup.",
+      "food": "The May regulations include course aid, post-race hydration, fruit, and food. Carry a rehearsed personal fueling plan because final aid-station locations for the 138 km route are not yet published.",
+      "official_site": "https://www.ucigranfondocolombia.com/eng-uci-gran-fondo-colombia"
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "The UCI Gran Fondo World Series launched its Colombia qualifier in Bogotá in December 2025. The organizer and UCI moved the second edition to Medellín for November 29, 2026 rather than repeating the Bogotá course.",
+      "notable_moments": [
+        "2025: Inaugural UCI qualifier held in Bogotá",
+        "2026: Second edition relocates to Medellín",
+        "2026: Registration opens for a UCI age-group qualifier capped at 5,000 riders"
+      ],
+      "reputation": "A legitimate UCI qualifier with real altitude demands but only one completed edition and no Medellín execution history yet."
+    },
+    "biased_opinion": {
+      "verdict": "Real Qualifier, Moving Route",
+      "summary": "Granfondo Colombia has the bones of a serious Roadie Labs target: UCI age-group qualification, a live registration flow, a city-center start, roughly 2,000 m of climbing, and long stretches near 2,500 m. It also has a documentation problem. The organizer's current Medellín route page says 138 km, the UCI series overview says 120 km, and the May regulations still say provisional 150 km. Train for the longest current route and the altitude, then recheck the final event guide before race week.",
+      "strengths": [
+        "Genuine UCI Gran Fondo World Series qualification pathway with chip-timed age-group results",
+        "A high-altitude course that demands more than generic endurance fitness",
+        "Current registration is live and the organizer publishes a downloadable Medellín GPX",
+        "Included jersey, aid, finish food, medal, timing, medical support, insurance, and mechanical assistance",
+        "Central Medellín start with partner-hotel options"
+      ],
+      "weaknesses": [
+        "Three official sources currently publish three different Gran Fondo distances: 120, 138, and 150 km",
+        "The 138 km route may still change until race day",
+        "The race has no Medellín execution history yet",
+        "The USD $150-$200 entry price is substantial for a second-edition event",
+        "Starting at roughly 1,480 m leaves sea-level riders no gentle introduction to altitude"
+      ],
+      "bottom_line": "Race it for UCI qualification and a legitimate high-altitude challenge, but build for 138 km and roughly 2,000 m now, arrive with an acclimation plan, and treat the final route bulletin as required reading."
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "A real UCI qualifier above Medellín whose altitude is clearer than its still-moving distance.",
+      "should_you_race": "Yes if age-group qualification and high-altitude road racing are the point. Skip it if you need a proven local execution record or a frozen course months in advance.",
+      "alternatives": "For the completed 2025 Bogotá edition, see granfondo-bogota as a historical record. For a different active UCI qualifier in the region with lower-altitude demands, compare Granfondo Ecuador.",
+      "alternative_slugs": [
+        "granfondo-bogota",
+        "granfondo-ecuador"
+      ]
+    },
+    "citations": [
+      {
+        "url": "https://ucigranfondoworldseries.com/en/uci-gran-fondo-colombia-2026/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series — Medellín Date, 120 km Overview, Elevation, Course and Relocation"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/calendar/",
+        "category": "official",
+        "label": "UCI Gran Fondo World Series Calendar — November 29, 2026"
+      },
+      {
+        "url": "https://www.ucigranfondocolombia.com/eng-uci-gran-fondo-colombia",
+        "category": "official",
+        "label": "Organizer Site — Medellín Date, Live Registration and Partner Hotels"
+      },
+      {
+        "url": "https://www.ucigranfondocolombia.com/recorridos",
+        "category": "official",
+        "label": "Organizer Route Page — Current 138 km and 91 km Routes and Change Warning"
+      },
+      {
+        "url": "https://www.ucigranfondocolombia.com/_files/ugd/a46ac5_b30cf91cce304241900d7c22372c282c.pdf",
+        "category": "official",
+        "label": "May 2026 Regulations — Format, Qualification, Fees, Cap, Timing, Support and Provisional Distances"
+      },
+      {
+        "url": "https://registroucigranfondocolombia.azurewebsites.net/",
+        "category": "official",
+        "label": "Live 2026 Registration Form"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-10",
+      "source": "https://www.ucigranfondocolombia.com/eng-uci-gran-fondo-colombia",
+      "notes": "Registration is live for Sunday November 29, 2026 in Medellín. This is the relocated second edition of the UCI Gran Fondo Colombia lineage, not the defunct GFNY Colombia event. The current organizer route page publishes 138 km and 91 km Medellín routes; the UCI overview still says 120 km and the May regulations say provisional 150 km and 80 km, so the final route must be rechecked before race week."
+    },
+    "training_plan_clearance": {
+      "status": "ready",
+      "reviewed_at": "2026-08-10",
+      "blockers": [],
+      "notes": "Build a FULL-7 Alpine-Fondo ladder for Sunday November 29, 2026. Use 138 km as the current conservative distance target and approximately 2,000 m of climbing, with altitude acclimation, sustained climbing, rolling high-country work, descending, fueling, and final-route recheck notes."
+    },
+    "catalog_flags": {
+      "status_note": "New active Medellín identity for the relocated UCI event. granfondo-bogota remains the defunct 2025 predecessor. gfny-colombia is a separate defunct GFNY-branded event and must not be aliased to this race.",
+      "ruled": "2026-08-10 official-source adjudication"
+    }
+  }
+}

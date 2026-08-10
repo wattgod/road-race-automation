@@ -96,6 +96,26 @@ def test_high_altitude_overlay_avoids_unverified_medical_prescriptions():
     assert "clinician-guided" in overlay["altitude"]
 
 
+def test_altitude_overlay_never_treats_total_climbing_as_finish_altitude():
+    race = {
+        "display_name": "UCI Granfondo Colombia",
+        "vitals": {"distance_mi": 85.7, "elevation_ft": 6562},
+        "terrain": {"primary": "mountain road"},
+        "climb_profile": {
+            "key_climbs": [{"summit_altitude_m": 2525}],
+        },
+        "climate": {
+            "challenges": ["Racing for an extended period near or above 2,000 m"],
+        },
+    }
+
+    overlay = generate_race_overlay(race, {"altitude": 8, "technical": 4})
+
+    assert "8,300ft above sea level" in overlay["altitude"]
+    assert "6,562ft of climbing" not in overlay["altitude"]
+    assert "finishes high" not in overlay["altitude"]
+
+
 def test_high_climb_context_does_not_invent_repeated_climbs_or_walking():
     race = {
         "display_name": "Taiwan KOM Challenge",

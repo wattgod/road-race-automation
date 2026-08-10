@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T01:51:20",
+  "generated_at": "2026-08-10T03:51:21",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3227,6 +3227,25 @@
       "runway_weeks": 34,
       "race_date": "2027-04-09",
       "blockers": []
+    },
+    "granfondo-colombia": {
+      "slug": "granfondo-colombia",
+      "tier": 2,
+      "score": 60,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 15,
+      "race_date": "2026-11-29",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "granfondo-ecuador": {
       "slug": "granfondo-ecuador",
@@ -7645,6 +7664,7 @@
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
+    "granfondo-colombia",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
     "suzuka-endurance-road",
@@ -8028,6 +8048,7 @@
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
+    "granfondo-colombia",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
     "suzuka-endurance-road",
@@ -8055,14 +8076,14 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 410,
-    "ready": 163,
-    "content_present": 397,
-    "validator_clean": 410,
-    "pilot_candidates": 96,
+    "total": 411,
+    "ready": 164,
+    "content_present": 398,
+    "validator_clean": 411,
+    "pilot_candidates": 97,
     "by_tier_ready": {
       "1": 13,
-      "2": 131,
+      "2": 132,
       "3": 19,
       "4": 0
     }

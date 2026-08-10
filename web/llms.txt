@@ -1,14 +1,14 @@
 # Roadie Labs Race Database
 
-> The definitive road race database. 407 races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
-> Last generated: 2026-08-06
+> The definitive road race database. 410 races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
+> Last generated: 2026-08-10
 
 ## Overview
 
-Roadie Labs is a road cycling event database covering 407 races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
+Roadie Labs is a road cycling event database covering 410 races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
 
-- **Tier 1 (Elite)**: 18 races — score >= 80 or prestige override
-- **Tier 2 (Contender)**: 317 races — score >= 60
+- **Tier 1 (Elite)**: 19 races — score >= 80 or prestige override
+- **Tier 2 (Contender)**: 319 races — score >= 60
 - **Tier 3 (Rising)**: 71 races — score >= 45
 - **Tier 4 (Local)**: 1 races — score < 45
 
@@ -18,7 +18,7 @@ Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, 
 ## Machine-Readable Resources
 
 - [Full LLM context (this database as text)](https://roadielabs.com/llms-full.txt)
-- [Race index JSON (407 entries)](https://roadielabs.com/search/race-index.json)
+- [Race index JSON (410 entries)](https://roadielabs.com/search/race-index.json)
 - [RSS feed](https://roadielabs.com/feed/races.xml)
 - [Source code & data (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles](https://roadielabs.com/race/{slug}/)
