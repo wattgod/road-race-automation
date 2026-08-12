@@ -362,6 +362,70 @@ def run_fabricated_claims_check() -> list[Finding]:
     return findings
 
 
+def run_prep_kit_coverage() -> list[Finding]:
+    """Every gated race page must have a live prep-kit page — day-0 kit
+    delivery emails link straight to it, so a 404 is a broken link in an
+    email from Matti. Mirrors gravel-race-automation's check, road-scoped.
+
+    Fingerprint discipline: a 404 finding's detail is the URL alone; non-404
+    transport noise (WAF challenge / timeout) collapses into one count-free
+    finding so a flaky night can't mint fake "new" rows.
+    """
+    import urllib.error
+    import urllib.request
+    from concurrent.futures import ThreadPoolExecutor
+
+    index_file = PROJECT_ROOT / "web" / "race-index.json"
+    try:
+        races = json.loads(index_file.read_text())
+    except (OSError, ValueError) as e:
+        return [Finding("prep-kit-coverage-failed", YELLOW, "medium",
+                        "Prep-Kit Coverage Check Failed", str(e)[:200],
+                        "Couldn't read web/race-index.json.", None,
+                        "prep_kit_coverage")]
+
+    targets = [(r["slug"], f"https://roadielabs.com/race/{r['slug']}/prep-kit/")
+               for r in races if r.get("has_profile")]
+
+    def status_of(url: str) -> int | None:
+        req = urllib.request.Request(url, headers={"User-Agent": "GG-MissionControl/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=12) as resp:
+                return resp.status
+        except urllib.error.HTTPError as exc:
+            return exc.code
+        except urllib.error.URLError:
+            return None
+
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        statuses = list(pool.map(lambda t: status_of(t[1]), targets))
+
+    findings: list[Finding] = []
+    blocked = False
+    for (slug, url), status in zip(targets, statuses):
+        if status == 200:
+            continue
+        if status == 404:
+            findings.append(Finding(
+                "prep-kit-missing", YELLOW, "high",
+                f"Prep kit missing: {slug}", url,
+                "Race page carries the gate but the kit page 404s — generate "
+                f"(wordpress/generate_prep_kit.py {slug}) and deploy "
+                "(push_wordpress.py --sync-prep-kits).", None,
+                "prep_kit_coverage"))
+        else:
+            blocked = True
+    if blocked:
+        findings.append(Finding(
+            "prep-kit-check-blocked", YELLOW, "low",
+            "Prep-Kit Coverage Partially Blocked",
+            "some kit URLs returned non-404 errors (WAF challenge / timeout) — "
+            "coverage unverified for those",
+            "Transport noise, usually WAF variance. Re-run; investigate only "
+            "if it persists across days.", None, "prep_kit_coverage"))
+    return findings
+
+
 def run_live_link_check() -> list[Finding]:
     """Run the existing live checker as a subprocess and parse its DEAD LINKS block.
     A dead link on the money path (/questionnaire/ or /coaching/) is a RED P0."""
@@ -573,6 +637,7 @@ def main() -> int:
     findings += run_fabricated_claims_check()
     if args.live:
         findings += run_live_link_check()
+        findings += run_prep_kit_coverage()
 
     if args.accept_baseline:
         # RED is never baselined (mark_new keeps it alerting); only accept non-RED.
