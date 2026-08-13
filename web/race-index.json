@@ -4387,46 +4387,6 @@
     ]
   },
   {
-    "name": "Sierra Nevada Límite Gran Fondo",
-    "slug": "sierra-nevada-limite",
-    "location": "Cenes de la Vega, Granada, Spain",
-    "country": "Spain",
-    "region": "Southern Europe",
-    "month": "May",
-    "distance_km": 119.0,
-    "distance_mi": 73.9,
-    "elevation_m": 3319,
-    "elevation_ft": 10890.6,
-    "tier": 2,
-    "overall_score": 73,
-    "scores": {
-      "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 4,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 5,
-      "logistics": 4,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/sierra-nevada-limite/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "119 km Gran Fondo"
-    ]
-  },
-  {
     "name": "Struggle Dales",
     "slug": "struggle-dales",
     "location": "Harrogate, North Yorkshire, England",
@@ -11376,6 +11336,46 @@
       "1/2 RAP: 1,800 km, finishing near Grudza/Szklarska Poręba",
       "1/4 RAP: 900 km, finishing at Czorsztyn",
       "Challenge 300: 150 km out-and-back to Czemierniki (solo unsupported, solo semi-supported, 2-person team)"
+    ]
+  },
+  {
+    "name": "Sierra Nevada Límite Gran Fondo",
+    "slug": "sierra-nevada-limite",
+    "location": "Cenes de la Vega, Granada, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "month": "May",
+    "distance_km": 119.0,
+    "distance_mi": 73.9,
+    "elevation_m": 3300,
+    "elevation_ft": 10826.8,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 2,
+      "climbing": 4,
+      "descent_technicality": 4,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 4,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 2,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/sierra-nevada-limite/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "119 km Gran Fondo"
     ]
   },
   {

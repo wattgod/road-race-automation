@@ -438,11 +438,10 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
             detail_line = f" Expect: {terrain_detail}."
 
         overlay['terrain'] = (
-            f"Highly technical terrain at {race_name} demands practice on similar surfaces. "
+            f"The technical descents at {race_name} demand practice on similar paved roads. "
             f"Ride {terrain_str} at race-day cadence weekly.{detail_line} "
-            f"Practice cornering, descending, and power delivery on unstable surfaces. "
-            f"Dial in tire pressure before race week \u2014 "
-            f"5 PSI wrong costs you 15+ minutes over {int(distance) if distance >= 1 else 'the full'} miles."
+            f"Practice braking points, corner entry, line choice, and accelerating smoothly "
+            f"out of turns. Confirm tire pressure and equipment before race week."
         )
     elif tech_score >= 4:
         overlay['terrain'] = (
@@ -557,7 +556,7 @@ def generate_workout_context(race: dict, demands: dict, category: str) -> str:
         # Truncate absurdly long terrain descriptions
         if len(terrain_detail) > 60:
             terrain_detail = terrain_detail[:60].rsplit(' ', 1)[0]
-        return f"{_poss(race_name)} {terrain_detail} rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for {int(distance)} miles."
+        return f"Road-specific control matters at {race_name}. Practice on {terrain_detail}: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for {int(distance)} miles."
     elif category == 'Endurance':
         if distance >= 80:
             return f"Every hard session works better with a bigger aerobic base. At {int(distance)} miles, base fitness is the difference between racing and surviving."

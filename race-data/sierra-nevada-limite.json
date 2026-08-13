@@ -7,85 +7,102 @@
     "vitals": {
       "distance_km": 119.0,
       "distance_mi": 73.9,
-      "elevation_m": 3319,
-      "elevation_ft": 10890.6,
+      "elevation_m": 3300,
+      "elevation_ft": 10826.8,
       "location": "Cenes de la Vega, Granada, Spain",
       "location_badge": "Cenes de la Vega, Spain",
       "country": "Spain",
-      "date": "2026: May 23",
-      "date_specific": "2026: May 23",
-      "field_size": "500+",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": null,
-      "feed_zones": null,
-      "cutoff_time": null,
+      "date": "2027: May 15",
+      "date_specific": "2027: May 15 (Saturday, 08:00 start)",
+      "field_size": null,
+      "start_format": "08:00 start from the Cenes de la Vega municipal sports center; the current event page does not publish wave or start-box details",
+      "registration": "https://www.rockthesport.com/es/evento/sierra-nevada-limite-2027/inscripcion/selecciona-tarifa",
+      "entry_fee": "EUR55 Gran Fondo; EUR80 combined Gran Fondo plus Subida al Veleta entry",
+      "feed_zones": "Four on-course aid/control points are listed before the Pradollano finish; the organizer also displays a duplicate cutoff table with small location and distance conflicts",
+      "cutoff_time": "15:30 finish closure (7 hours 30 minutes after the 08:00 start); intermediate closures begin at 10:15 in the current aid-station table",
       "lat": null,
       "lng": null,
       "route_options": ["119 km Gran Fondo"]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "Classic Sierra Nevada spring: warm valley starts (60-70°F) contrast cold high-altitude summits (30-50°F), potential snow even in May.",
+      "description": "A May start in the Granada foothills followed by a high-mountain finish at Pradollano at approximately 2,100m altitude; riders need to prepare for a substantial temperature and exposure change from valley to ski station.",
       "challenges": [
-        "Precipitation: Moderate, with possible flurries at elevation."
+        "Mountain weather can change materially between Cenes de la Vega and the Pradollano finish."
       ]
     },
     "terrain": {
-      "primary": "Mixed terrain",
+      "primary": "Paved mountain roads",
       "surface": "Fully paved",
       "technical_rating": 1,
       "features": []
     },
     "fondo_rating": {
-      "distance": 4,
+      "distance": 2,
       "climbing": 4,
       "descent_technicality": 4,
       "climate_risk": 3,
       "organization": 3,
       "scenic_experience": 4,
       "community_culture": 4,
-      "altitude": 5,
-      "logistics": 4,
+      "altitude": 4,
+      "logistics": 2,
       "prestige": 2,
-      "field_depth": 3,
+      "field_depth": 2,
       "value": 4,
       "expenses": 4,
       "road_surface": 1,
       "cultural_impact": 2,
-      "overall_score": 73,
+      "overall_score": 64,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 73."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. 2027 SOURCE REFRESH (2026-08-13): distance 4->2 because the official 119km course is inside the 80-120km rubric band; altitude 5->4 because the Gran Fondo finishes at Pradollano around 2,100m, not at the separate Veleta summit; logistics 4->2 because the start is beside Granada with broad lodging access, though the point-to-point finish still needs a return plan; field depth 3->2 because the current rules publish no age-group categories or prizes and only a 15km segment is free-speed timed. Climbing remains 4 for the official 3,300m total. Overall score recalculated 73->64; tier remains T2."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 3,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        {
+          "name": "Puerto de Blancares from Quéntar",
+          "length_km": 7.3,
+          "note": "The current course page places this first crossing from km37.4 to km44.7"
+        },
+        {
+          "name": "Puerto de Blancares from La Peza",
+          "length_km": 9.4,
+          "note": "The current course page places the opposite-side crossing from km79.8 to km89.2"
+        },
+        {
+          "name": "Maitena-El Duque-La Sabina timed ascent",
+          "length_km": 15.0,
+          "gradient_pct": 7.8,
+          "note": "Officially stated as 15km with 1,177m of climbing and no drafting; 7.8% is the derived average"
+        }
+      ],
+      "profile_type": "Short, climbing-dense point-to-point mountain gran fondo with two Blancares crossings and a late 15km timed ascent to the Pradollano finish",
+      "king_of_mountain": "The organizer advertises a no-drafting, free-speed 15km timed ascent with 1,177m of climbing from the Maitena restaurant through El Duque and La Sabina.",
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "A point-to-point road route starting at the Cenes de la Vega sports centre and finishing at Pradollano ski station, around 2,100 m altitude — not at the Veleta summit itself; the separate Subida al Veleta timed climb (38 km, 2,236 m, run the following day) is a different event, not part of this Gran Fondo. The route traverses mountainous roads east of Granada through the Sierra Nevada foothills, climbing Puerto de Blancares twice — once from Quéntar, once from La Peza — before turning through Güéjar Sierra toward El Duque and Las Sabinas. 2026 course figures (119 km / 3,319 m) run materially shorter than the 146.4 km / 3,353 m previously on file; the organizer's own site is internally inconsistent, with current Spanish-language pages giving 119 km/3,319 m and older English/homepage material still showing 140 km/3,200 m or other stale figures.",
-      "signature_challenge": "The dense 3,319 m of climbing packed into 119 km, capped by a classified high-mountain timed ascent on the Hotel El Duque-Las Sabinas segment (roughly 15 km, 1,177 m+) that alone decided the 2026 overall classification.",
+      "character": "The 2027 Gran Fondo is a 119km point-to-point road route with 3,300m of climbing, starting at the Cenes de la Vega municipal sports center and finishing at Pradollano ski station at approximately 2,100m altitude. It is not the separate 38km Subida al Veleta held the following day. The current course page identifies two crossings of Puerto de Blancares and a late 15km timed ascent from Maitena through El Duque and La Sabina. Its climb table has not been fully cleaned for 2027: the El Duque and La Sabina kilometre markers run beyond the stated 119km finish, and the page's download button currently serves an unrelated HUEX Gran Fondo GPX. Those stale artifacts are not treated as 2027 route facts.",
+      "signature_challenge": "The official 15km no-drafting timed ascent packs 1,177m of climbing into the final mountain phase after riders have already accumulated two crossings of Puerto de Blancares.",
       "suffering_zones": [
-        "Puerto de Blancares from Quéntar — approximately 7.3 km, the first of two ascents of the same pass",
-        "Puerto de Blancares from La Peza — approximately 9.4 km, the second ascent from the opposite side",
-        "Hotel El Duque-Las Sabinas — official results measured this roughly 15 km / 1,177 m+ segment (km 97.0-112.5) as the decisive classified climb"
+        "Puerto de Blancares from Quéntar — 7.3km on the current organizer climb table, arriving before the first listed aid point",
+        "Puerto de Blancares from La Peza — 9.4km from the opposite side before the route reaches Güéjar Sierra",
+        "Maitena-El Duque-La Sabina — the 15km, 1,177m no-drafting timed ascent that defines the late race"
       ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "Collaborations with TODOSIERRANEVADA for discounts; Granada city offers charming hotels minutes away.",
-      "transport": "Bib pickup at Polideportivo Municipal de Cenes de la Vega, bag drop, bike wash, and finish services at Pradollano. Prior editions used staggered starts for multiple distances; confirm current-year start-time logistics directly given the 2026 course is now a single 119 km route.",
+      "transport": "Bib pickup is at the Cenes de la Vega municipal sports center Friday 17:00-21:00 or race morning 07:00-07:45. A start-line bag drop transfers belongings to Pradollano. The organizer describes the self-return as 25km of almost continuous descent with 1,454m of elevation loss; riders not descending by bike need their own transfer plan.",
       "food": "",
-      "official_site": "https://sierranevadalimite.com/en/"
+      "official_site": "https://sierranevadalimite.com/snl-granfondo/"
     },
     "history": {
       "founded": 2010,
@@ -94,43 +111,58 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "Dense, Legitimate Climbing — But Don't Trust the Published Numbers",
-      "summary": "Sierra Nevada Límite is a real, well-organized gran fondo with exceptional climbing density — 3,319 m packed into just 119 km for the 2026 edition, finishing at the Pradollano ski station east of Granada. It has genuine high-mountain roads, aid stations, medical teams, bag transfer, timing and finish food for 500+ riders. The problem is the organizer's own website: the current Spanish-language pages give one set of vitals (119 km/3,319 m, Cenes-Pradollano) while stale English/homepage material shows a different, larger course (140 km/3,200 m or other retained figures) — and the finish is at Pradollano, not the Veleta summit itself, despite marketing occasionally implying otherwise. The separate Subida al Veleta (38 km, 2,236 m) run the following day is the actual timed ascent to altitude, and it's a different event from this Gran Fondo.",
+      "verdict": "Dense, Legitimate Climbing — With a Sloppy Route Page",
+      "summary": "Sierra Nevada Límite is confirmed for 15 May 2027 with registration open: 119km, 3,300m of climbing, an 08:00 Cenes de la Vega start, and a Pradollano finish around 2,100m. That is a serious amount of vertical for a 119km road day, and the organizer adds a 15km, 1,177m no-drafting timed ascent late in the route. The operational page is detailed enough to plan aid and cutoff timing, but it also retains climb kilometre markers beyond the finish and links its GPX button to an unrelated HUEX course. Use the published race vitals and named challenges; wait for a corrected GPX before locking recon or pacing to exact kilometres.",
       "strengths": [
-        "Exceptional climbing density — 3,319 m across just 119 km is a genuinely brutal ratio",
+        "Exceptional climbing density — 3,300m across 119km is a genuinely hard ratio",
         "Authentic Sierra Nevada high-mountain roads with a Pradollano ski-station finish around 2,100 m",
-        "500+ participants with aid stations, medical teams, bag transfer, timing and finish food",
-        "Two ascents of Puerto de Blancares from different sides adds real route variety to the climbing"
+        "Four listed on-course aid points, a bag transfer, checkpoint closures, and finish food give riders a concrete support plan",
+        "Two sides of Puerto de Blancares lead into a distinct 15km timed mountain sector"
       ],
       "weaknesses": [
-        "The organizer's own site is internally inconsistent — current Spanish pages say 119 km/3,319 m while older English/homepage material still shows 140 km/3,200 m or other stale figures",
-        "This Gran Fondo finishes at Pradollano (~2,100 m), not the Veleta summit — the higher-altitude, higher-profile ascent is a separate event (Subida al Veleta, 38 km/2,236 m, run the following day)",
-        "Only a roughly 15 km climbing segment (Hotel El Duque-Las Sabinas) determined the 2026 classification — this was not a full-course timed race result",
-        "Riders dropped behind the safety capsule enter open traffic and must surrender their bib; there are no finish-area showers"
+        "The current climb table puts El Duque and La Sabina beyond the stated 119km finish, so those kilometre labels are stale",
+        "The official GPX button currently downloads a HUEX Gran Fondo route in another part of Spain, not Sierra Nevada",
+        "The regulations page still names the 2026 date even though the event page and registration system are current for 2027",
+        "This Gran Fondo finishes at Pradollano, not the Veleta summit; Subida al Veleta is a separate event the next day"
       ],
-      "bottom_line": "A legitimately hard, well-supported climbing test — just verify the current year's route on the organizer's Spanish-language pages before you go, and don't confuse it with the separate Subida al Veleta if you're after the Europe's-highest-finish bragging rights."
+      "bottom_line": "A legitimately hard and now-confirmed 2027 climbing test. Build for 119km and 3,300m, but do not trust the downloadable track until the organizer replaces the unrelated GPX."
     },
     "final_verdict": {
-      "score": "73/100",
-      "one_liner": "Dense Sierra Nevada climbing test finishing at Pradollano — legitimately hard, but verify the current course, the organizer's own site disagrees with itself.",
-      "should_you_race": "Yes if you want an exceptionally dense climbing test near Granada with solid event support. If you specifically want the Veleta summit and Europe's-highest-finish bragging rights, that's the separate Subida al Veleta event, not this Gran Fondo.",
+      "score": "64/100",
+      "one_liner": "A short, brutally vertical Sierra Nevada fondo with a real 2027 date and a route page that still needs cleanup.",
+      "should_you_race": "Yes if you want 3,300m of climbing in a compact 119km day and a timed late ascent. Confirm the corrected GPX before race week, and do not confuse the Pradollano finish with the separate Veleta event.",
       "alternatives": "For the actual Veleta summit ascent, ride the Subida al Veleta (same organizer, the following day). For a comparably dense Spanish climbing fondo, look at other high-Sierra or Pyrenees gran fondos."
     },
     "citations": [
+      {
+        "url": "https://sierranevadalimite.com/",
+        "category": "official",
+        "label": "Official 2027 Event Homepage — Date, Distance, Climbing and Registration Status"
+      },
+      {
+        "url": "https://sierranevadalimite.com/snl-granfondo/",
+        "category": "official",
+        "label": "Official 2027 Gran Fondo Page — Start, Finish, Timed Sector, Aid and Program"
+      },
+      {
+        "url": "https://www.rockthesport.com/es/evento/sierra-nevada-limite-2027/inscripcion/selecciona-tarifa",
+        "category": "official",
+        "label": "Official 2027 Registration — Live EUR55 Gran Fondo Entry"
+      },
       {
         "url": "https://www.cruzandolameta.es/clasificaciones/v2/sierra-nevada-limite-gran-fondo-26---2599/",
         "category": "official",
         "label": "Official 2026 Timing — Confirms 119 km/3,319 m Course"
       },
       {
-        "url": "https://sierranevadalimite.com/snl-info/",
+        "url": "https://sierranevadalimite.com/snl-reglamento/",
         "category": "official",
-        "label": "Official 2026 Event Information"
+        "label": "Official Regulations — Operational Rules with Stale 2026 Date"
       },
       {
-        "url": "https://sierranevadalimite.com/en/snl-granfondo-carrera-145k/",
+        "url": "https://sierranevadalimite.com/wp-content/uploads/2026/07/HUEX_GRAN_FONDO_V5.gpx",
         "category": "official",
-        "label": "Official Course and Climb Detail"
+        "label": "Organizer's Mislabeled 2027 Download — Unrelated HUEX GPX"
       },
       {
         "url": "https://www.cruzandolameta.es/clasificaciones/v2/resultados/sierra-nevada-limite-gran-fondo-26---2599/7755/",
@@ -145,9 +177,9 @@
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-08-06",
-      "source": "https://www.cruzandolameta.es/clasificaciones/v2/sierra-nevada-limite-gran-fondo-26---2599/",
-      "notes": "The May 23, 2026 edition used a 119-kilometer, roughly 3,300-meter route and published an official general classification determined by a 15-kilometer climbing sector between Hotel del Duque and Las Sabinas. Fernando Romera and Beatriz Lopes won that classification. The organizer's English pages retain stale conflicting figures, and no 2027 date, registration cycle, regulations, or edition-specific route is published as of August 6, 2026."
+      "verified": "2026-08-13",
+      "source": "https://sierranevadalimite.com/snl-granfondo/",
+      "notes": "CLEARED FOR PLAN BUILD. The organizer confirms the 2027 Gran Fondo for Saturday 15 May at 08:00, with live registration, 119km, 3,300m of climbing, a Cenes de la Vega start, a Pradollano finish, four listed aid points, and a 15km no-drafting timed climbing sector. Publication defects are preserved as caveats rather than silently reconciled: the current climb table contains El Duque/La Sabina kilometre labels beyond the 119km finish, the GPX button downloads an unrelated HUEX route, the aid/cutoff tables are duplicated with small differences, and the regulations still name 2026. These defects prevent exact kilometre-by-kilometre claims but do not block the current date, race demand, registration, or plan build. Verified 2026-08-13."
     }
   }
 }
