@@ -130,3 +130,19 @@ def test_high_climb_context_does_not_invent_repeated_climbs_or_walking():
     assert "repeated surges" not in vo2
     assert "walk" not in threshold
     assert "sustained" in threshold.lower()
+
+
+def test_high_technical_overlay_stays_road_specific_and_avoids_fake_time_claims():
+    race = {
+        "display_name": "Sierra Nevada Límite Gran Fondo",
+        "vitals": {"distance_mi": 73.9, "elevation_ft": 10826.8},
+        "terrain": {"primary": "paved mountain roads"},
+    }
+
+    overlay = generate_race_overlay(race, {"altitude": 2, "technical": 8})
+
+    assert "similar paved roads" in overlay["terrain"]
+    assert "braking points" in overlay["terrain"]
+    assert "unstable surfaces" not in overlay["terrain"]
+    assert "5 PSI" not in overlay["terrain"]
+    assert "15+ minutes" not in overlay["terrain"]
