@@ -4508,16 +4508,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": true
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-04",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 33,
+      "race_date": "2027-04-04",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "letape-indonesia": {
       "slug": "letape-indonesia",
@@ -7648,6 +7648,7 @@
     "le-race",
     "granfondo-colnago",
     "cape-town-cycle-tour",
+    "letape-greece",
     "epic-gran-canaria",
     "surrey-rumble",
     "gfny-miami",
@@ -7937,7 +7938,6 @@
     "goteborgsgirot",
     "granfondo-riviera-nayarit",
     "letape-cancun",
-    "letape-greece",
     "rbc-gran-fondo-banff",
     "superior-morgul-road-race",
     "tour-durban",
@@ -8077,14 +8077,14 @@
   ],
   "summary": {
     "total": 411,
-    "ready": 164,
+    "ready": 165,
     "content_present": 398,
     "validator_clean": 411,
     "pilot_candidates": 97,
     "by_tier_ready": {
       "1": 13,
       "2": 132,
-      "3": 19,
+      "3": 20,
       "4": 0
     }
   }
