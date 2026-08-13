@@ -7,36 +7,32 @@
     "vitals": {
       "distance_km": 130.0,
       "distance_mi": 80.8,
-      "elevation_m": 1869,
-      "elevation_ft": 6132.0,
       "location": "Viana do Castelo, Alto Minho, Portugal",
       "location_badge": "Viana do Castelo, Portugal",
       "country": "Portugal",
-      "date": "2026: March 15",
-      "date_specific": "2026: March 15",
-      "field_size": "1,775 entry cap across all distances; ~1,900 estimated participants from 22 nationalities in 2026",
-      "start_format": null,
-      "registration": "https://bikeservice.pt/event/viana-granfondo/",
-      "entry_fee": "EUR43 (Portuguese Cycling Federation-licensed riders) / EUR47 (non-federated, incl. all foreign entrants)",
-      "feed_zones": "Multiple aid stations along the route (exact count not published)",
-      "cutoff_time": "Not specified",
+      "date": "2027: March 14",
+      "date_specific": "2027: March 14 (Sunday, 09:00 start)",
+      "field_size": "1,500 total riders in Article 4; official conflict: the later registration-close rule and start-box allocation run to 1,800",
+      "start_format": "09:00 mass start; approximately 2 km controlled before free pace; chip-timed classification",
+      "registration": "€44 federated / €48 non-federated; register at https://stopandgo.net/events/viana-granfondo-by-ktm-2027",
+      "entry_fee": "EUR44 (Portuguese Cycling Federation-licensed riders) / EUR48 (non-federated, including foreign entrants)",
+      "feed_zones": "Liquid and solid aid included; exact number and locations not published in the regulation",
+      "cutoff_time": "Finish control closes at 16:00 (seven hours after the 09:00 start)",
       "lat": null,
       "lng": null,
       "route_options": [
         {
           "name": "Granfondo",
           "distance_km": 130.0,
-          "elevation_m": 1869
+          "distance_note": "The regulation advertises 130 km; the organizer's 2027 route graphic labels the mapped course 127 km"
         },
         {
           "name": "Mediofondo",
-          "distance_km": 99.0,
-          "elevation_m": 1105
+          "distance_km": 80.0
         },
         {
           "name": "Minifondo",
-          "distance_km": 53.0,
-          "elevation_m": 544
+          "distance_km": 60.0
         }
       ]
     },
@@ -55,13 +51,13 @@
     },
     "fondo_rating": {
       "distance": 3,
-      "climbing": 3,
+      "climbing": 2,
       "descent_technicality": 2,
       "climate_risk": 4,
       "organization": 3,
       "scenic_experience": 4,
       "community_culture": 3,
-      "altitude": 2,
+      "altitude": 1,
       "logistics": 3,
       "prestige": 2,
       "field_depth": 2,
@@ -69,31 +65,57 @@
       "expenses": 3,
       "road_surface": 1,
       "cultural_impact": 1,
-      "overall_score": 56,
+      "overall_score": 53,
       "tier": 3,
       "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. SOL REVIEW FLAG (2026-07-24, not applied — numeric dimensions locked per wave-10 rule): reviewer notes distance=4 for 130km is generous under the repo rubric (implies 3), and climate_risk/scenic_experience at 4 and organization at 3 are not clearly evidenced by the research dump for this open-road, chip-timed format. Flagging for a human rescoring pass, not auto-applying. DELEGATED RESCORE ROUND 2 (2026-07-24, post-Sol-review): distance 4->3. distance 4->3: vitals record 130km, which falls in the 120-160km rubric band (3, 'Standard'), not 160-200km (4, 'Long'). (climbing at 1,869m already correctly falls in the 1,500-2,500m band=3 -- not changed.) overall_score recalculated 57->56 per formula; tier remains T3."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 59. adventure dimension dropped, road_surface added. Score recalculated: 57. DELEGATED RESCORE ROUND 2 (2026-07-24): distance 4->3 because the advertised 130km falls in the 120-160km rubric band. 2027 SOURCE REFRESH (2026-08-13): climbing 3->2 and altitude 2->1. The current official profile names three moderate categorized climbs but publishes no total elevation gain; their stated lengths and average gradients account for roughly 618m of climbing, supporting the conservative 500-1,500m band rather than carrying the stale 2026 total. The highest labeled summit is Sapardos at 323m, which is inside the altitude=1 rubric. Overall score recalculated 56->53; tier remains T3."
     },
     "climb_profile": {
-      "total_climbs": null,
-      "hc_climbs": null,
-      "cat_1_climbs": null,
-      "cat_2_climbs": null,
-      "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "total_climbs": 3,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 2,
+      "key_climbs": [
+        {
+          "name": "Pedras Finas",
+          "length_km": 9.5,
+          "gradient_pct": 3.2,
+          "summit_m": 321,
+          "category": 3,
+          "note": "First categorized climb, shown near kilometre 50 on the official 2027 profile"
+        },
+        {
+          "name": "Sapardos",
+          "length_km": 2.5,
+          "gradient_pct": 5.5,
+          "summit_m": 323,
+          "category": 3,
+          "note": "Steepest average gradient and highest labeled point, shown near kilometre 70"
+        },
+        {
+          "name": "7 Caminhos",
+          "length_km": 5.5,
+          "gradient_pct": 3.2,
+          "summit_m": 187,
+          "category": 4,
+          "note": "Final categorized climb, shown near kilometre 101"
+        }
+      ],
+      "profile_type": "Rolling 127-130 km road course with three moderate categorized climbs and no high-altitude summit",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "A distinctly Alto Minho course: green Atlantic valleys, an inland mountain section, and a fast coastal return. The Granfondo skirts Serra d'Arga through Amonde, Meixedo and Lanheses, climbs Cabracao (3km at 6.6%), then extends toward Paredes de Coura through Agualonga, Rubiaes, Sapardos and Covas before its principal late difficulty — the climb to Sopos (4.5km at 6.2%) — ahead of Vilar de Mouros, Venade, Caminha and the return to Viana. It's rolling-to-mountainous rather than alpine or genuinely mountainous: repeated transitions between the Lima and Minho valleys and the Serra d'Arga/Formigoso foothills matter more than any single summit. The roads are open to traffic under the Highway Code, not fully closed.",
-      "signature_challenge": "The late climb to Sopos (4.5km at 6.2%) — the harder of the route's two named ascents and the last major test before the run back to Viana.",
+      "character": "The current 2027 organizer profile shows a rolling Alto Minho loop from Viana do Castelo with three categorized climbs spread across the middle and final third: Pedras Finas (9.5km at 3.2%), Sapardos (2.5km at 5.5%), and 7 Caminhos (5.5km at 3.2%). The route graphic labels 127km, while the regulation advertises 130km. Intermediate markers include Vila de Punhe around km17.5, Ponte das Poldras around km80, and Vila Praia de Ancora around km109 before the return to Viana. Roads remain open to traffic under the Portuguese Highway Code.",
+      "signature_challenge": "Pedras Finas (9.5km at 3.2%) is the longest sustained climb; Sapardos follows with the day's steepest published average at 5.5%.",
       "suffering_zones": [
-        "Cabracao (3km at 6.6%) — the first real test, early enough to sort the field before the Paredes de Coura loop",
-        "Sopos (4.5km at 6.2%) — the closing climb, hitting riders late with the coastal finish still ahead",
-        "Open-road sections through farm and mountain villages — no full closures, so Highway Code traffic rules apply throughout"
+        "Pedras Finas (9.5km at 3.2%) — the longest climb, beginning around the approach to kilometre 50",
+        "Sapardos (2.5km at 5.5%) — the sharpest average gradient and highest labeled point at 323m",
+        "7 Caminhos (5.5km at 3.2%) — the final categorized climb, around kilometre 101",
+        "Open-road racing — the Highway Code remains in force and riders must account for normal traffic controls"
       ]
     },
     "logistics": {
@@ -107,31 +129,31 @@
       "founded": 2023,
       "origin_story": "Launched 19 March 2023 by organizer Bikeservice as part of Viana do Castelo's year as European City of Sport, debuting with 131/84/62km routes through Viana do Castelo, Ponte de Lima, Paredes de Coura and Caminha, and drawing an estimated 1,700-2,000 riders in its first edition.",
       "notable_moments": [
-        "Reached its fourth edition in 2026, now serving as the season-opening round of Bikeservice's Superprestigio amateur series (turnout has held in the 1,700-1,900 range since its 2023 debut, without an established growth trend)"
+        "Reached its fourth edition in 2026 and is officially scheduled to return for a fifth edition on 14 March 2027"
       ],
       "reputation": "A young Alto Minho fondo with a strong, consistent debut-level turnout and a genuinely rolling-to-mountainous course for the region — its own published numbers, however, don't always agree with each other."
     },
     "biased_opinion": {
       "verdict": "Young, Scenic, Slightly Sloppy on Paperwork",
-      "summary": "Viana Granfondo is a real event — launched in 2023 for Viana do Castelo's European City of Sport year, it drew an estimated 1,700-2,000 riders in its debut and has held similar turnout (~1,900 in 2026) through its fourth edition, now anchoring Bikeservice's Superprestigio amateur series. The course earns its Alto Minho setting: two named climbs (Cabracao and Sopos) bookending a rolling-to-mountainous loop through the Lima and Minho valleys with a coastal finish. What it hasn't nailed down is its own numbers — official sources disagree on the shorter routes' distances (53/99km on one page, 60/80km on the regulation PDF), the published entry cap (1,775) doesn't obviously reconcile with a reported ~1,900 participants, and post-race coverage has reported the Granfondo itself at 127km, 129km, and the advertised 130km in different places.",
+      "summary": "Viana Granfondo returns for its fifth edition on 14 March 2027 with registration open and a clearly published competitive format. The current profile is more rolling than mountainous: Pedras Finas, Sapardos, and 7 Caminhos are all moderate categorized climbs, with the highest labeled point at only 323m. The organizer still has a paperwork problem. Its regulation advertises 130km while its own route graphic says 127km; Article 4 caps the field at 1,500 while a later closure rule and the box allocation run to 1,800; and the fee section carries one stale 2026 date inside an otherwise 2027 document.",
       "strengths": [
-        "Genuinely varied Alto Minho terrain with two named, graded climbs (Cabracao 3km/6.6%, Sopos 4.5km/6.2%)",
-        "Consistent turnout since its 2023 debut, drawing riders from 22 nationalities by 2026",
-        "Now the season-opening round of an established regional amateur series (Bikeservice Superprestigio)",
-        "Scenic coastal-to-mountain route touching Ponte de Lima, Paredes de Coura and Caminha"
+        "Three documented categorized climbs create a useful rolling-course progression without alpine altitude",
+        "Competitive amateur format with electronic timing, category classifications, and team awards",
+        "Participant package includes solid and liquid aid, medical support, mechanical assistance, and a finisher meal",
+        "City start and finish in Viana do Castelo simplify race-morning logistics"
       ],
       "weaknesses": [
-        "Materially inconsistent published course data across the organizer's own pages and post-race reports — verify current-year distances before you commit to pacing plans",
-        "Published entry cap (1,775) and reported participant count (~1,900) don't cleanly reconcile — likely different count definitions, but the organizer doesn't explain the gap",
+        "The organizer's own 2027 sources disagree on the flagship distance: 130km in the regulation, 127km on the route graphic",
+        "The same regulation gives both a 1,500-rider cap and a later 1,800-rider registration/box limit",
         "Open roads, not full closures — Highway Code traffic rules apply for the whole route",
         "A March date means real weather risk (cold, wind, rain) on the Atlantic coast"
       ],
-      "bottom_line": "A legitimate, scenic early-season option if you're chasing Superprestigio points or want a rolling-to-mountainous Alto Minho fondo — just don't trust the published km/elevation/field-size numbers to the decimal, and dress for March Atlantic weather."
+      "bottom_line": "A legitimate early-season fondo with three manageable climbs, real competition, and a compact city start — but build pacing around a 127-130km range until the organizer resolves its own distance and field-size conflicts."
     },
     "final_verdict": {
-      "score": "56/100",
-      "one_liner": "A young, scenic Alto Minho fondo with real climbing and a habit of publishing conflicting numbers.",
-      "should_you_race": "Yes, if you want an early-season European fondo with genuine hills and coastal scenery — just confirm the current year's official course figures directly rather than trusting any single published source.",
+      "score": "53/100",
+      "one_liner": "A young Alto Minho fondo with three moderate climbs, real competition, and still-conflicting official numbers.",
+      "should_you_race": "Yes, if you want an early-season European fondo with rolling terrain and chip-timed competition — prepare for 127-130km and confirm final organizer instructions before locking pacing or support plans.",
       "alternatives": "For a more established, better-documented Portuguese road fondo, compare against other Bikeservice Superprestigio rounds later in the same series calendar."
     },
     "citations": [
@@ -143,7 +165,22 @@
       {
         "url": "https://bikeservice.pt/event/viana-granfondo/regulamento-viana/",
         "category": "official",
-        "label": "Official 2026 Regulation"
+        "label": "Bikeservice — Official 2027 Regulation"
+      },
+      {
+        "url": "https://bikeservice.pt/event/viana-granfondo/granfondo-viana/",
+        "category": "official",
+        "label": "Bikeservice — Official 2027 Granfondo Route Profile"
+      },
+      {
+        "url": "https://cdn-images.bikeservice.pt/Viana_GF_27_granfondo_7525573b11.jpg",
+        "category": "official",
+        "label": "Bikeservice — 2027 Granfondo Route Graphic (127km and climb data)"
+      },
+      {
+        "url": "https://stopandgo.net/events/viana-granfondo-by-ktm-2027",
+        "category": "official",
+        "label": "STOP and GO — 2027 Registration Page"
       },
       {
         "url": "https://www.cm-viana-castelo.pt/areas-de-atividade/comunicacao/agenda-de-eventos/evento/viana-granfondo-2026",
@@ -268,9 +305,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-08-06",
+      "verified": "2026-08-13",
       "source": "https://bikeservice.pt/event/viana-granfondo/regulamento-viana/",
-      "notes": "Competitive amateur gran fondo with chip classification, category podiums, and team prizes. The organizer documents only the completed fourth edition on 15 March 2026 and the seven-race 2026 Superprestigio series; no official 2027 Viana date, registration cycle, regulations, or edition-specific routes are published. Keep it in the catalog but wait for a confirmed next edition before building its plan fleet. Verified 2026-08-06."
+      "notes": "CLEARED FOR PLAN BUILD. The organizer now publishes the fifth edition for Sunday 14 March 2027 at 09:00, live registration, edition-specific regulations, and a 2027 route profile. It is a competitive amateur gran fondo with electronic timing, category classifications, team awards, a controlled 2km rollout, and open-road Highway Code rules. Current official-source conflicts are preserved rather than silently reconciled: 130km regulation versus 127km route graphic, and 1,500-rider Article 4 cap versus later 1,800-rider closure/box language. No 2027 total elevation gain is published, so the stale 2026 elevation was removed. Verified 2026-08-13."
     }
   }
 }

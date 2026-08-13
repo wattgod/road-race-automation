@@ -2,6 +2,59 @@
 
 Source: codex exec (gpt-5.6-sol, web search), 2026-07-24.
 
+## 2027 source refresh — 2026-08-13
+
+The organizer has now published and opened registration for the fifth edition:
+
+- Sunday 14 March 2027, 09:00, starting and finishing at Avenida de
+  Figueiredo / Praia Norte in Viana do Castelo.
+- Start boxes open at 08:00; approximately 2km are controlled before free
+  pace; finish control closes at 16:00.
+- Competitive amateur event with electronic timing, category classifications,
+  team awards, liquid/solid aid, medical support, and mechanical assistance.
+- Advertised options: Granfondo 130km, Mediofondo 80km, Minifondo 60km.
+- Fees: EUR44 for Portuguese Cycling Federation-licensed riders and EUR48 for
+  non-federated riders, including foreign entrants.
+- Registration closes at 18:00 on 12 March 2027 or when the stated capacity is
+  reached.
+- Roads remain open; the Portuguese Highway Code applies.
+
+Official sources contain three material conflicts or stale fragments that must
+remain visible rather than be reconciled by inference:
+
+1. The regulation advertises 130km, while the organizer's 2027 Granfondo route
+   graphic labels the mapped course 127km.
+2. Regulation Article 4 says the three distances are capped at 1,500 riders,
+   while the later registration-close rule and start-box allocation run to
+   1,800.
+3. The fee section says its first phase ends 12 March 2026, but the later
+   registration-close sentence says 12 March 2027. The 2026 reference is stale
+   residue inside an otherwise edition-specific 2027 document.
+
+The 2027 route graphic names three climbs:
+
+- Pedras Finas: 9.5km at 3.2%, summit 321m, category 3, near km50.
+- Sapardos: 2.5km at 5.5%, summit 323m, category 3, near km70.
+- 7 Caminhos: 5.5km at 3.2%, summit 187m, category 4, near km101.
+
+Intermediate route markers shown are Vila de Punhe around km17.5, Ponte das
+Poldras around km80, and Vila Praia de Ancora around km109. The organizer does
+not publish a 2027 total elevation-gain figure. The prior 1,869m total and the
+Cabracao/Sopos climb descriptions belonged to 2026 and were removed from the
+current vitals/course copy. The three published climb lengths and gradients
+account for roughly 618m of ascent on those climbs, so the rating was
+conservatively changed from climbing=3 to climbing=2; altitude changed from 2
+to 1 because the highest labeled point is 323m. Score changes 56 to 53, still
+Tier 3.
+
+Sources:
+
+- https://bikeservice.pt/event/viana-granfondo/
+- https://bikeservice.pt/event/viana-granfondo/regulamento-viana/
+- https://bikeservice.pt/event/viana-granfondo/granfondo-viana/
+- https://cdn-images.bikeservice.pt/Viana_GF_27_granfondo_7525573b11.jpg
+- https://stopandgo.net/events/viana-granfondo-by-ktm-2027
+
 ## Status: active
 Fourth edition held 15 March 2026, results linked from organizer page, opens
 Bikeservice's seven-event 2026 Superprestigio series. No 2027 announcement yet.
