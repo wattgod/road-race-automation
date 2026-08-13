@@ -26,7 +26,7 @@ def test_letape_greece_is_cleared_for_a_sunday_full_ladder() -> None:
     assert clearance["status"] == "ready"
     assert clearance["race_date"] == "2027-04-04"
     assert clearance["ladder"] == "FULL-7"
-    assert clearance["variation"] == "Allrounder"
+    assert clearance["variation"] == "All-Rounder"
     assert clearance["blockers"] == []
 
 
