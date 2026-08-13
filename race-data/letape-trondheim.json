@@ -1,0 +1,210 @@
+{
+  "race": {
+    "name": "L'Étape Trondheim by Tour de France",
+    "slug": "letape-trondheim",
+    "display_name": "L'Étape Trondheim by Tour de France",
+    "tagline": "A 128 km, 1,570 m Tour de France-branded race through Trondheim, with three categorized climbs and timed jersey competitions",
+    "vitals": {
+      "distance_km": 128.0,
+      "distance_mi": 79.5,
+      "elevation_m": 1570,
+      "elevation_ft": 5151.0,
+      "location": "Trondheim, Trøndelag, Norway",
+      "location_badge": "TRONDHEIM, TRØNDELAG, NORWAY",
+      "country": "Norway",
+      "date": "June 12, 2027",
+      "date_specific": "June 12, 2027 (Saturday, 11:00 start)",
+      "field_size": "Not published for 2027",
+      "start_format": "Speed-seeded start corrals followed by a neutral 2.2 km rollout from Torvet",
+      "registration": "Open on the official L'Étape Trondheim registration page",
+      "entry_fee": "Current Breakaway Bird price: NOK 1,290 for 130 km and NOK 1,090 for 75 km, plus the applicable Norwegian Cycling Federation license",
+      "feed_zones": "Three on-course food stations for the long route, at Spongdal, Melhus/Gaula, and Klæbu/Lysklett, plus finish support",
+      "cutoff_time": "Not yet published for 2027; check the final participant guide",
+      "lat": 63.4305,
+      "lng": 10.3951,
+      "route_options": [
+        "130 km race: exactly 128 km, 1,570 m elevation gain, three categorized climbs, three food stations, KOM and sprint competitions",
+        "75 km race: 75 km, 1,058 m elevation gain, Côte de Grøset KOM, two on-course food stations, and a short gravel sector",
+        "75 km Social Ride: approximately 1,000 m elevation gain; registration and final details are still forthcoming",
+        "Mini L'Étape: 0.5 km children's event, outside the Roadie Labs training-plan scope"
+      ]
+    },
+    "climate": {
+      "primary": "Cool maritime early summer",
+      "description": "June in Trondheim brings very long daylight and changeable coastal weather. Riders should be prepared for cool starts, rain, fjord wind, and meaningful temperature swings even when the day begins dry.",
+      "challenges": [
+        "Fast-changing rain and wind exposure near Trondheimsfjord",
+        "Cool conditions on shaded descents",
+        "Long daylight can disguise an early fueling deficit",
+        "Wet pavement and short gravel sectors may reduce grip"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling fjord roads and three short climbs",
+      "surface": "Predominantly paved closed or regulated roads, with selected short gravel and pedestrian-path sectors identified by the organizer",
+      "technical_rating": 2,
+      "features": [
+        "Neutral rollout from Torvet in central Trondheim",
+        "Côte de Grøset: 1.9 km at 7.1%, category 3",
+        "Côte de Venn: 1.3 km at 7%, category 4",
+        "Côte de Ståggån: 1.7 km at 5%, category 4",
+        "Timed KOM challenges and a separate sprint competition",
+        "Rolling roads through Byneset, Skaun, Melhus, and Klæbu"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "climate_risk": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "road_surface": 3,
+      "cultural_impact": 3,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Roadie Labs 14-dimension rubric: strong Tour de France organization, city access, and scenery lift the event, while its moderate 128 km/1,570 m demand, young history, limited proven field depth, and Norway trip cost keep it below Tier 1. Score verified from the dimension sum on 2026-08-13."
+    },
+    "climb_profile": {
+      "total_climbs": 3,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 1,
+      "key_climbs": [
+        "Côte de Grøset — 1.9 km at 7.1% (category 3)",
+        "Côte de Venn — 1.3 km at 7% (category 4)",
+        "Côte de Ståggån — 1.7 km at 5% (category 4)"
+      ],
+      "profile_type": "Rolling endurance course punctuated by three short, timed climbing efforts",
+      "king_of_mountain": "Côte de Grøset is the longest and steepest named climb, but the decisive training demand is repeating hard efforts at Venn and Ståggån after the fast opening kilometers.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "The long race leaves Torvet behind a neutral vehicle, reaches Kilometer Zero after 2.2 km, and follows the fjord west toward the first KOM at Côte de Grøset. Rolling Byneset roads lead to Spongdal before the course extends through Buvika and Børsa to Côte de Venn, crosses Melhus, and turns through Klæbu for the final Côte de Ståggån effort. The return follows the Nidelva corridor to a central-Trondheim finish. The organizer mixes overall and age-group timing with separate sprint and KOM jersey targets.",
+      "signature_challenge": "Three short categorized climbs are spread across a fast 128 km race. Success depends less on one mountain threshold effort than on preserving repeatable five-to-ten-minute power after sustained group riding in wind and changeable weather.",
+      "suffering_zones": [
+        "Fjord exposure between Trondheim and Flakk before Côte de Grøset",
+        "Rolling Byneset roads after the first KOM effort",
+        "Côte de Venn after the Skaun extension",
+        "Late Côte de Ståggån KOM effort",
+        "Fast Nidelva return into central Trondheim"
+      ]
+    },
+    "logistics": {
+      "airport": "Trondheim Airport Værnes (TRD) is approximately 30–40 minutes from the city centre, with train and airport-bus connections.",
+      "lodging_strategy": "Stay in central Trondheim within riding distance of Torvet, Race Village, the start, and finish. The organizer's hotel partner lists eight local properties and a direct-booking discount; confirm secure bike storage before booking.",
+      "transport": "Trondheim is reachable by air, Dovre Line day or overnight train from Oslo, and coastal ship. The start and finish are at Torvet in the city centre.",
+      "food": "The long course has three on-course food stations plus finish support. Practice steady carbohydrate intake before race week because the rolling course and repeated jersey efforts make underfueling easy to hide until the final hour.",
+      "official_site": "https://trondheim.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "L'Étape Trondheim debuted in 2026 as Norway's official Tour de France-branded amateur cycling event. The organizer opened registration for a second edition on June 12, 2027 and carried forward the central-Trondheim format with 130 km and 75 km race options.",
+      "notable_moments": [
+        "2026: Inaugural L'Étape Trondheim uses 128 km and 75 km routes from Torvet",
+        "2027: Second edition scheduled for June 12 with registration open and current route specifications published"
+      ],
+      "reputation": "A young but professionally presented Nordic L'Étape event with closed or regulated roads, official timing, jersey competitions, and a central-city festival. Its field depth and year-to-year course stability remain to be proven."
+    },
+    "biased_opinion": {
+      "verdict": "The Nordic Repeatability Test",
+      "summary": "Trondheim is not an Alpine demolition derby. Its difficulty comes from speed, wind, variable weather, and three timed climbing efforts spread across 128 km. The Tour de France presentation is real, the city logistics are unusually simple, and the route gives riders several ways to race rather than one giant survival climb.",
+      "strengths": [
+        "Exact 2027 date, registration, route distance, elevation, and support details are already published",
+        "Closed or regulated roads with Tour de France event operations",
+        "Overall, age-group, sprint, and KOM competitions create multiple race targets",
+        "Start and finish at Torvet simplify lodging and race-morning logistics",
+        "Three named categorized climbs reward repeatable power rather than pure altitude tolerance"
+      ],
+      "weaknesses": [
+        "Only the second edition, so field depth and operational consistency remain lightly proven",
+        "Moderate total climbing will not satisfy riders seeking an Alpine epic",
+        "Norway lodging, dining, and travel costs reduce value",
+        "Changeable fjord weather can make equipment and clothing choices awkward",
+        "The organizer has not yet published a 2027 cutoff or final participant guide"
+      ],
+      "bottom_line": "Choose Trondheim for a polished, accessible Nordic race that rewards fast group riding and repeatable climbing power. Train it as a long road race with three hard selections, not as a one-climb mountain fondo."
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "A 128 km, 1,570 m Trondheim race with three timed climbs, fjord exposure, and full Tour de France presentation.",
+      "should_you_race": "Yes if you want closed-road organization, central-city logistics, and a race where repeatable climbing power matters more than altitude. Skip if you want an established deep field, an Alpine-scale climbing total, or low-cost destination logistics.",
+      "alternatives": "L'Étape Denmark for a longer Scandinavian endurance test, L'Étape du Tour for maximum climbing and prestige, or Arctic Race Gran Fondo for a more remote Norwegian setting."
+    },
+    "citations": [
+      {
+        "url": "https://trondheim.letapeseries.com/",
+        "category": "official",
+        "label": "L'Étape Trondheim official 2027 date and route summary"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/route/26",
+        "category": "official",
+        "label": "Official 130 km route, climbs, food stations, and awards"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/route/28",
+        "category": "official",
+        "label": "Official 75 km route and course character"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/participant-information",
+        "category": "official",
+        "label": "Official timing, support, aid, start corrals, and participant services"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/presentation",
+        "category": "official",
+        "label": "Official classifications and closed-road format"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/registration",
+        "category": "official",
+        "label": "Official current registration and entry prices"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/faq",
+        "category": "official",
+        "label": "Official license, age, transfer, and start-corral requirements"
+      },
+      {
+        "url": "https://trondheim.letapeseries.com/transportation-and-accomodation",
+        "category": "official",
+        "label": "Official travel and accommodation guidance"
+      }
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-13",
+      "race_date": "2027-06-12",
+      "facts_scope": "Date, registration, long and short route specifications, competitive classifications, named climbs, course support, entry pricing, and central-Trondheim logistics verified against first-party organizer pages.",
+      "plan_status": "CLEARED FOR FULL-7 ROADIE LABS PLAN BUILD"
+    },
+    "training_plan_clearance": {
+      "status": "ready",
+      "reviewed_at": "2026-08-13",
+      "source": "https://trondheim.letapeseries.com/route/26",
+      "race_date": "2027-06-12",
+      "ladder": "FULL-7",
+      "variation": "All-Rounder",
+      "blockers": [],
+      "notes": "Build the Saturday-race FULL-7 road ladder around the exact 128 km / 1,570 m long course. Emphasize fast group riding, repeatable five-to-ten-minute climbing power for Grøset, Venn, and Ståggån, KOM/sprint changes of pace, cool-wet clothing decisions, and practiced fueling across three on-course stations."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-13",
+      "source": "https://trondheim.letapeseries.com/",
+      "notes": "Official organizer sources publish the June 12, 2027 date, open registration, a timed and classified 128 km long race, route elevation, three named categorized climbs, support, and awards. CLEARED FOR PLAN BUILD."
+    }
+  }
+}
