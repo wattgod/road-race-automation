@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T03:51:21",
+  "generated_at": "2026-08-13T10:17:37",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1221,16 +1221,14 @@
         "course_character": true,
         "future_date": true,
         "active_registerable": true,
-        "plan_clearance": false
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
+      "ready": true,
       "runway_weeks": 26,
       "race_date": "2027-02-12",
-      "blockers": [
-        "plan clearance: Organizer has not published 2027 stage details, and the current single-Race-Day pipeline cannot represent both competitive days."
-      ],
-      "plan_clearance_status": "source_blocked"
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "eroica-california": {
       "slug": "eroica-california",
@@ -2342,7 +2340,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 49,
+      "runway_weeks": 48,
       "race_date": "2027-07-19",
       "blockers": []
     },
@@ -4777,6 +4775,25 @@
         "eligibility unverified (unknown)"
       ]
     },
+    "letape-trondheim": {
+      "slug": "letape-trondheim",
+      "tier": 2,
+      "score": 60,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 43,
+      "race_date": "2027-06-12",
+      "blockers": [],
+      "plan_clearance_status": "ready"
+    },
     "letape-turkey": {
       "slug": "letape-turkey",
       "tier": 2,
@@ -5708,7 +5725,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 5,
+      "runway_weeks": 4,
       "race_date": "2026-09-16",
       "blockers": []
     },
@@ -5720,14 +5737,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 0,
+      "ready": false,
+      "runway_weeks": null,
       "race_date": "2026-08-10",
-      "blockers": []
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "race-around-ireland": {
       "slug": "race-around-ireland",
@@ -6047,7 +6066,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 6,
+      "runway_weeks": 5,
       "race_date": "2026-09-21",
       "blockers": []
     },
@@ -6238,21 +6257,19 @@
     "sierra-nevada-limite": {
       "slug": "sierra-nevada-limite",
       "tier": 2,
-      "score": 73,
+      "score": 64,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-23",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 39,
+      "race_date": "2027-05-15",
+      "blockers": []
     },
     "sovev-jerusalem": {
       "slug": "sovev-jerusalem",
@@ -6507,7 +6524,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 12,
+      "runway_weeks": 11,
       "race_date": "2026-11-02",
       "blockers": []
     },
@@ -6594,14 +6611,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": true,
+        "future_date": false,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 0,
+      "ready": false,
+      "runway_weeks": null,
       "race_date": "2026-08-12",
-      "blockers": []
+      "blockers": [
+        "no parsed future date"
+      ]
     },
     "tour-de-big-bear": {
       "slug": "tour-de-big-bear",
@@ -7431,21 +7450,19 @@
     "viana-granfondo": {
       "slug": "viana-granfondo",
       "tier": 3,
-      "score": 56,
+      "score": 53,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-15",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 30,
+      "race_date": "2027-03-14",
+      "blockers": []
     },
     "vuelta-cicloturista-ibiza": {
       "slug": "vuelta-cicloturista-ibiza",
@@ -7585,9 +7602,9 @@
     "le-loop",
     "gfny-cali",
     "uci-gran-fondo-world-championships",
-    "giro-delle-dolomiti",
     "mt-evans-hill-climb",
     "white-rose-classic",
+    "giro-delle-dolomiti",
     "amashova-national-classic",
     "lardechoise",
     "triple-bypass",
@@ -7624,8 +7641,10 @@
     "letape-czech-republic",
     "adac-velotour",
     "gfny-walnut-creek",
+    "letape-trondheim",
     "granfondo-moser",
     "amstel-gold-race-toerversie",
+    "sierra-nevada-limite",
     "alpe-gran-fondo",
     "cyprus-gran-fondo",
     "bordeaux-paris-ultra-cycling",
@@ -7652,6 +7671,7 @@
     "epic-gran-canaria",
     "surrey-rumble",
     "gfny-miami",
+    "viana-granfondo",
     "cadel-evans-great-ocean-road-ride",
     "gfny-jose-ignacio",
     "tour-of-nilgiris",
@@ -7661,13 +7681,13 @@
     "gran-fondo-eilat",
     "pedal-imua",
     "gran-fondo-medellin",
-    "taiwan-kom-challenge",
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
     "granfondo-colombia",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
+    "taiwan-kom-challenge",
     "suzuka-endurance-road",
     "letape-mexico-city",
     "granfondo-antalya",
@@ -7703,7 +7723,6 @@
     "letape-taiwan",
     "gran-fondo-argentina",
     "munsterland-giro",
-    "rift-valley-odyssey",
     "gfny-chile",
     "trans-pyrenees-race",
     "vuelta-cicloturista-ibiza",
@@ -7713,9 +7732,9 @@
     "prosecco-cycling",
     "sea-otter-ciclobrava",
     "letape-brazil",
+    "rift-valley-odyssey",
     "granfondo-alpi-del-mare",
     "alpen-challenge-lenzerheide",
-    "race-across-spain",
     "gfny-pittsburgh",
     "granfondo-alberto-contador",
     "letape-turkey",
@@ -7723,6 +7742,7 @@
     "granfondo-matildica",
     "lotoja-classic",
     "letape-costa-rica",
+    "race-across-spain",
     "5-mila-marche-gran-fondo",
     "crc-506-gran-fondo-costa-rica",
     "gfny-dominican-republic",
@@ -7799,7 +7819,6 @@
     "race-across-america",
     "race-through-poland",
     "raid-pyreneen",
-    "sierra-nevada-limite",
     "struggle-dales",
     "tortour",
     "tour-du-mont-blanc-cyclo",
@@ -7952,7 +7971,6 @@
     "sriwijaya-ranau-gran-fondo",
     "tour-de-cure",
     "tour-of-wessex",
-    "viana-granfondo",
     "cinturon-ciclista-mallorca",
     "etape-caledonia",
     "gfny-nyc",
@@ -7984,9 +8002,9 @@
     "la-marmotte",
     "le-loop",
     "uci-gran-fondo-world-championships",
-    "giro-delle-dolomiti",
     "mt-evans-hill-climb",
     "white-rose-classic",
+    "giro-delle-dolomiti",
     "amashova-national-classic",
     "lardechoise",
     "triple-bypass",
@@ -8019,8 +8037,10 @@
     "granfondo-felice-gimondi",
     "letape-czech-republic",
     "adac-velotour",
+    "letape-trondheim",
     "granfondo-moser",
     "amstel-gold-race-toerversie",
+    "sierra-nevada-limite",
     "cyprus-gran-fondo",
     "bordeaux-paris-ultra-cycling",
     "legendaria-gran-fondo-ontinyent",
@@ -8036,6 +8056,7 @@
     "gran-fondo-florida",
     "le-race",
     "cape-town-cycle-tour",
+    "epic-gran-canaria",
     "cadel-evans-great-ocean-road-ride",
     "tour-of-nilgiris",
     "gfny-san-luis-potosi",
@@ -8044,13 +8065,13 @@
     "gran-fondo-eilat",
     "pedal-imua",
     "gran-fondo-medellin",
-    "taiwan-kom-challenge",
     "deccan-cliffhanger",
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
     "granfondo-colombia",
     "atlas-gran-fondo",
     "granfondo-siete-lagos",
+    "taiwan-kom-challenge",
     "suzuka-endurance-road",
     "letape-mexico-city",
     "granfondo-antalya",
@@ -8076,15 +8097,15 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 411,
-    "ready": 165,
-    "content_present": 398,
-    "validator_clean": 411,
-    "pilot_candidates": 97,
+    "total": 412,
+    "ready": 167,
+    "content_present": 399,
+    "validator_clean": 412,
+    "pilot_candidates": 100,
     "by_tier_ready": {
       "1": 13,
-      "2": 132,
-      "3": 20,
+      "2": 133,
+      "3": 21,
       "4": 0
     }
   }
