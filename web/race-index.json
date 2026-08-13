@@ -16278,60 +16278,6 @@
     "route_options": []
   },
   {
-    "name": "Viana Granfondo",
-    "slug": "viana-granfondo",
-    "location": "Viana do Castelo, Alto Minho, Portugal",
-    "country": "Portugal",
-    "region": "Southern Europe",
-    "month": "March",
-    "distance_km": 130.0,
-    "distance_mi": 80.8,
-    "elevation_m": 1869,
-    "elevation_ft": 6132.0,
-    "tier": 3,
-    "overall_score": 56,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 2,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 1
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/viana-granfondo/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Granfondo",
-        "distance_km": 130.0,
-        "elevation_m": 1869
-      },
-      {
-        "name": "Mediofondo",
-        "distance_km": 99.0,
-        "elevation_m": 1105
-      },
-      {
-        "name": "Minifondo",
-        "distance_km": 53.0,
-        "elevation_m": 544
-      }
-    ]
-  },
-  {
     "name": "5 Mila Marche Gran Fondo",
     "slug": "5-mila-marche-gran-fondo",
     "location": "Porto Recanati (MC), Marche, Italy",
@@ -16838,6 +16784,58 @@
       "7 miles",
       "3-mile walk",
       "1-mile walk"
+    ]
+  },
+  {
+    "name": "Viana Granfondo",
+    "slug": "viana-granfondo",
+    "location": "Viana do Castelo, Alto Minho, Portugal",
+    "country": "Portugal",
+    "region": "Southern Europe",
+    "month": "March",
+    "distance_km": 130.0,
+    "distance_mi": 80.8,
+    "elevation_m": 0,
+    "elevation_ft": 0,
+    "tier": 3,
+    "overall_score": 53,
+    "scores": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 4,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/viana-granfondo/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      {
+        "name": "Granfondo",
+        "distance_km": 130.0,
+        "distance_note": "The regulation advertises 130 km; the organizer's 2027 route graphic labels the mapped course 127 km"
+      },
+      {
+        "name": "Mediofondo",
+        "distance_km": 80.0
+      },
+      {
+        "name": "Minifondo",
+        "distance_km": 60.0
+      }
     ]
   },
   {
