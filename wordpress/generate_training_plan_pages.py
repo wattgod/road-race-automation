@@ -39,6 +39,7 @@ from generate_neo_brutalist import (
     parse_event_dates,
     _safe_json_for_script,
     WORKOUT_SHOWCASE,
+    PLAN_SLUG_ALIASES,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -308,6 +309,8 @@ def load_sku_link(slug: str) -> dict:
     except (OSError, json.JSONDecodeError):
         race_links = {}
     exact = race_links.get(slug, [])
+    if not exact:
+        exact = race_links.get(PLAN_SLUG_ALIASES.get(slug, ""), [])
     if exact:
         return {"mode": "race", "links": exact}
 
