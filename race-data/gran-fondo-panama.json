@@ -9,14 +9,14 @@
       "distance_mi": 83.3,
       "elevation_m": 1869,
       "elevation_ft": 6132.0,
-      "location": "Panama City (Casco Viejo start, 2026) to Panamá Oeste pineapple country, crossing the Puente de las Américas over the Panama Canal",
+      "location": "Panamá Pacífico toward western Panama (2027 announced start and direction)",
       "location_badge": "Panama City, Panama",
       "country": "Panama",
-      "date": "2026: March 8 (held); next edition date unconfirmed",
-      "date_specific": "2026: March 8 (held); current organizer page shows an unyearred December 8 date",
+      "date": "2027: March 14",
+      "date_specific": "2027: March 14",
       "field_size": null,
       "start_format": null,
-      "registration": "https://www.gfcyclingchallenges.com/producto/gf-cycling-challenge-pty-2026/",
+      "registration": "https://www.gfcyclingchallenges.com/inscripciones/",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
@@ -199,9 +199,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-08-06",
+      "verified": "2026-08-14",
       "source": "https://www.gfcyclingchallenges.com/ciudad-de-panama/",
-      "notes": "The 2026 edition ran Sunday March 8, 2026 with published results (my.raceresult.com/375733/results). On 2026-07-24 the organizer page twice showed March 14, 2027, but by 2026-08-06 that same mutable page had been replaced with an unyearred 'Sunday December 8' date while its registration link still sold the 2026 product. Because December 8 is not a Sunday in 2026 or 2027 and the prior 2027 date is no longer present on the live organizer page, the next edition is source-blocked rather than treated as confirmed. The event remains active and distinct from Gran Fondo Panamá Océano a Océano."
+      "notes": "The organizer's live Ciudad de Panamá page now explicitly confirms that the 2027 event returns Sunday, March 14, starting from Panamá Pacífico and riding west. That exact date and direction were independently re-verified on 2026-08-14 after the page's earlier contradictory copy was removed. Exact 2027 distances, climbing, route, timing sectors, start time, support, and cutoff remain pending; the 2026 route options are planning references only and final 2027 organizer documents override them. The event remains distinct from Gran Fondo Panamá Océano a Océano."
     },
     "catalog_flags": {
       "status_note": "Identity-corrected in editorial wave 10 (2026-07-24): the prior course_description, rider_intel (Atlantic Bridge, 4 canal crossings, roll-walk-stop mass start), and 3 of 5 youtube_data videos ('An Epic Ride through the Rainforest,' 'Gran Fondo Océano a Océano Panamá 2019,' 'Travel Vlog for Epic Bike Ride Across Panama Rain Forest') described 'Gran Fondo Panamá Océano a Océano,' a separate race run on the Panamá-Colón corridor by a different organizer (gfpanama.com), held April 19 2026. This profile is 'Gran Fondo Cycling Challenge – Ciudad de Panamá' (gfcyclingchallenges.com), held March 8 2026. Also purged: a 2015 'Grand Fondo Panama' video (predates this event's 2021 founding by 6 years, likely an unrelated older event). COURSE CONFLICT LARGELY RESOLVED this pass (2026-07-24, delegated re-review, sol-adversarial-reviewed): wave 10 flagged the retained video's Amador Causeway/Puente de las Américas account as contradicting a Battistrada '2026 Panamá Pacífico/pineapple country' listing. Direct curl of battistrada.com's raw HTML shows a section explicitly labeled 'Organizer:' (verified in the raw markup, not just search-engine text) whose FULL copy — which wave 10 quoted only a fragment of — reads: 'Start your journey in the charming Casco Viejo, a World Heritage Site, and cycle towards the iconic Bridge of the Americas. As you go, you'll explore Panama's rich west, famous for its pineapple crops.' This is broadly consistent with the retained video (Casco Viejo/Amador-area start -> Puente de las Américas canal crossing -> west into Panamá Oeste), narrowing the prior 'two totally different courses' framing to a largely-reconciled single narrative — though it is Battistrada's listing (a calendar-aggregator page, albeit one explicitly labeling this text as organizer-sourced) describing 2026, not a direct organizer statement, so treat as strong-but-not-airtight. A third-party site (cycloworld.cc) appears in search results with matching text but could not be directly fetched (403) this pass — noted as unverified, not confirmed corroboration. RaceResult's 2026 event metadata (my.raceresult.com/375733/info) lists the location field as 'Panama Pacifico' — this is the address on file, not confirmed as a specific start/finish point (a prior draft of this note over-inferred 'finish/expo venue,' corrected on review). NEW finding this pass, independently re-verified live via two byte-identical curl fetches (2026-07-24): the organizer's current live page states a 2027 edition (March 14, 2027) departing directly FROM Panamá Pacífico — the start point may be moving west, possibly dropping the Casco Viejo/bridge-crossing segment, though this is inference from a mutable marketing page, not confirmed fact.",
