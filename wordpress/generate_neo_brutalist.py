@@ -281,6 +281,7 @@ PLAN_SLUG_ALIASES = {
     "sudety-tour": "dekom-system-sudety-tour",
     "spinneys-dubai-92": "spinneys-dubai-92-cycle-challenge",
     "letape-chile": "l-etape-chile-by-tour-de-france",
+    "nyc-century": "nyc-century-bike-tour",
     "sea-otter-ciclobrava": "sea-otter-ciclobrava",
 }
 
@@ -291,6 +292,7 @@ PLAN_TIER_ORDER = {
     'Time-Crunched': 1,
     'Compete': 2,
     'Masters': 3,
+    'Masters 50+': 3,
     'Save My Race': 4,
 }
 

@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
 
 from generate_training_plan_pages import (
     generate_page, load_pack, est_hours, fueling_numbers, build_faq,
+    load_sku_link,
 )
 
 RACE_DATA = Path(__file__).resolve().parent.parent / "race-data"
@@ -110,6 +111,11 @@ class TestSafety:
 
     def test_no_pack_returns_skip(self):
         assert load_pack("no-such-slug-xyz") == {}
+
+    def test_plan_slug_alias_uses_exact_race_suite(self):
+        sku = load_sku_link("nyc-century")
+        assert sku["mode"] == "race"
+        assert [plan["planId"] for plan in sku["links"]] == [666693]
 
 
 if __name__ == "__main__":
