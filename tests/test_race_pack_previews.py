@@ -146,3 +146,20 @@ def test_high_technical_overlay_stays_road_specific_and_avoids_fake_time_claims(
     assert "unstable surfaces" not in overlay["terrain"]
     assert "5 PSI" not in overlay["terrain"]
     assert "15+ minutes" not in overlay["terrain"]
+
+
+def test_multi_day_ultra_overlay_does_not_invent_a_single_calorie_total():
+    race = {
+        "display_name": "Race Around Poland",
+        "vitals": {"distance_mi": 2237, "elevation_ft": 108596},
+        "terrain": {"primary": "paved roads"},
+    }
+
+    overlay = generate_race_overlay(race, {"altitude": 2, "technical": 4})
+    nutrition = overlay["nutrition"]
+
+    assert "multi-day 2237-mile race" in nutrition
+    assert "substantial meals at planned stops" in nutrition
+    assert "category rules allow" in nutrition
+    assert "8,000–12,000" not in nutrition
+    assert "you cannot replace them all" not in nutrition

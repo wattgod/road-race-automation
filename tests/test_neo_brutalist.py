@@ -414,6 +414,14 @@ class TestJsonLD:
         addr = jsonld["location"]["address"]
         assert addr["addressCountry"] == "ES"
 
+    def test_sports_event_country_poland(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["location"] = "Warsaw, Poland"
+        rd = normalize_race_data(sample_race_data)
+        jsonld = build_sports_event_jsonld(rd)
+        addr = jsonld["location"]["address"]
+        assert addr["addressCountry"] == "PL"
+        assert "addressRegion" not in addr
+
     def test_sports_event_country_is_not_duplicated_as_region(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Hualien to Wuling Pass, Taiwan"
         rd = normalize_race_data(sample_race_data)
