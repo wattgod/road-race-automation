@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T03:46:17",
+  "generated_at": "2026-08-15T04:32:41",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -750,8 +750,52 @@
         "eligibility: defunct"
       ]
     },
-    "chasing-cancellara": {
-      "slug": "chasing-cancellara",
+    "chasing-cancellara-bern-zermatt": {
+      "slug": "chasing-cancellara-bern-zermatt",
+      "tier": 2,
+      "score": 73,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: No organizer-confirmed next-edition date, registration cycle, rules, or course is published; the current page does not state total elevation."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
+    "chasing-cancellara-granfondo-vaduz": {
+      "slug": "chasing-cancellara-granfondo-vaduz",
+      "tier": 3,
+      "score": 53,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: No organizer-confirmed next-edition date, registration cycle, rules, or course is published."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
+    "chasing-cancellara-zurich-andermatt": {
+      "slug": "chasing-cancellara-zurich-andermatt",
       "tier": 2,
       "score": 74,
       "checks": {
@@ -759,15 +803,18 @@
         "editorial": true,
         "course_character": true,
         "future_date": false,
-        "active_registerable": true
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
       "ready": false,
       "runway_weeks": null,
-      "race_date": "2026-06-27",
+      "race_date": null,
       "blockers": [
-        "no parsed future date"
-      ]
+        "no parsed future date",
+        "plan clearance: No organizer-confirmed next-edition date, registration cycle, rules, or course is published."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "cheaha-challenge-gran-fondo": {
       "slug": "cheaha-challenge-gran-fondo",
@@ -7862,7 +7909,7 @@
     "trek-across-maine",
     "algarve-gran-fondo",
     "bp-ms-150-texas",
-    "chasing-cancellara",
+    "chasing-cancellara-zurich-andermatt",
     "eroica-hispania",
     "flandrien-ride",
     "gfny-grand-ballon",
@@ -7875,6 +7922,7 @@
     "tour-de-suisse-challenge",
     "wicklow-200",
     "bergen-voss",
+    "chasing-cancellara-bern-zermatt",
     "cicloturista-cerdanya",
     "dartmoor-classic",
     "gfny-colombia",
@@ -8044,6 +8092,7 @@
     "nordic-chase-berlin-copenhagen-road",
     "ocbc-cycle-singapore",
     "uci-gran-fondo-ireland",
+    "chasing-cancellara-granfondo-vaduz",
     "gran-fondo-gdynia",
     "knysna-cycle-tour",
     "letape-thailand",
@@ -8166,10 +8215,10 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 415,
+    "total": 417,
     "ready": 172,
-    "content_present": 403,
-    "validator_clean": 415,
+    "content_present": 405,
+    "validator_clean": 417,
     "pilot_candidates": 103,
     "by_tier_ready": {
       "1": 14,
