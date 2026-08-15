@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T06:18:53",
+  "generated_at": "2026-08-15T11:15:52",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3970,16 +3970,16 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": true
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-05-22",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 41,
+      "race_date": "2027-05-29",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "istria-granfondo": {
       "slug": "istria-granfondo",
@@ -7919,6 +7919,7 @@
     "galibier-challenge",
     "tartu-rattaralli",
     "mallorca-312",
+    "iron-horse-bicycle-classic",
     "nordsjorittet",
     "highlands-gran-fondo",
     "fred-whitton-challenge",
@@ -8107,7 +8108,6 @@
     "flandrien-ride",
     "gfny-grand-ballon",
     "gran-fondo-suisse",
-    "iron-horse-bicycle-classic",
     "lariegeoise-cyclosportive",
     "letape-du-tour-femmes",
     "mt-fuji-hill-climb",
@@ -8333,6 +8333,7 @@
     "dolomitenradrundfahrt",
     "tartu-rattaralli",
     "mallorca-312",
+    "iron-horse-bicycle-classic",
     "nordsjorittet",
     "highlands-gran-fondo",
     "fred-whitton-challenge",
@@ -8413,13 +8414,13 @@
   ],
   "summary": {
     "total": 426,
-    "ready": 174,
+    "ready": 175,
     "content_present": 414,
     "validator_clean": 426,
-    "pilot_candidates": 103,
+    "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 135,
+      "2": 136,
       "3": 25,
       "4": 0
     }
