@@ -17161,6 +17161,47 @@
     "route_options": []
   },
   {
+    "name": "Gran Fondo Mendoza",
+    "slug": "gran-fondo-mendoza",
+    "location": "Mendoza, Argentina",
+    "country": "Argentina",
+    "region": "South America",
+    "month": "March",
+    "distance_km": 109.6,
+    "distance_mi": 68.1,
+    "elevation_m": 1185,
+    "elevation_ft": 3888,
+    "tier": 3,
+    "overall_score": 50,
+    "scores": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 1,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1
+    },
+    "tagline": "A fast 110-kilometer circuit climbs from central Mendoza toward Cacheuta, with 1,185 meters of gain under the Andes.",
+    "has_profile": true,
+    "profile_url": "/race/gran-fondo-mendoza/",
+    "discipline": "gran_fondo",
+    "lat": -32.889449,
+    "lng": -68.84584,
+    "route_options": [
+      "Gran Fondo: marketed as 110 km; organizer-linked route file is 109.6 km / 1,185 m climbing",
+      "Medio Fondo: marketed as 50 km; organizer-linked route file is 41.7 km / 401 m climbing"
+    ]
+  },
+  {
     "name": "Granfondo Charlevoix",
     "slug": "granfondo-charlevoix",
     "location": "Baie-Saint-Paul, Quebec, Canada",
