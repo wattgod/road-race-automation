@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T10:17:37",
+  "generated_at": "2026-08-14T18:59:02",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -182,7 +182,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 42,
+      "runway_weeks": 41,
       "race_date": "2027-06-03",
       "blockers": []
     },
@@ -595,16 +595,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-08-02",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 51,
+      "race_date": "2027-08-08",
+      "blockers": []
     },
     "bordeaux-paris-ultra-cycling": {
       "slug": "bordeaux-paris-ultra-cycling",
@@ -2899,16 +2897,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-08",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 30,
+      "race_date": "2027-03-14",
+      "blockers": []
     },
     "gran-fondo-pirineus": {
       "slug": "gran-fondo-pirineus",
@@ -4082,7 +4078,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 11,
+      "runway_weeks": 10,
       "race_date": "2026-10-29",
       "blockers": []
     },
@@ -5670,7 +5666,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 47,
+      "runway_weeks": 46,
       "race_date": "2027-07-08",
       "blockers": []
     },
@@ -6195,7 +6191,7 @@
       },
       "eligibility_status": "active",
       "ready": true,
-      "runway_weeks": 35,
+      "runway_weeks": 34,
       "race_date": "2027-04-15",
       "blockers": []
     },
@@ -6568,21 +6564,21 @@
     "the-millars-gran-fondo": {
       "slug": "the-millars-gran-fondo",
       "tier": 2,
-      "score": 77,
+      "score": 73,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": true
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-03-22",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 30,
+      "race_date": "2027-03-14",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "tjejvattern": {
       "slug": "tjejvattern",
@@ -6932,18 +6928,15 @@
       "checks": {
         "validator_clean": true,
         "editorial": true,
-        "course_character": false,
-        "future_date": false,
+        "course_character": true,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-04",
-      "blockers": [
-        "no course_character (course_description.character)",
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 33,
+      "race_date": "2027-04-03",
+      "blockers": []
     },
     "tour-of-georgia-gran-fondo": {
       "slug": "tour-of-georgia-gran-fondo",
@@ -7603,6 +7596,7 @@
     "gfny-cali",
     "uci-gran-fondo-world-championships",
     "mt-evans-hill-climb",
+    "boone-gran-fondo",
     "white-rose-classic",
     "giro-delle-dolomiti",
     "amashova-national-classic",
@@ -7614,8 +7608,8 @@
     "granfondo-livigno-ale",
     "granfondo-serra-da-estrela",
     "haervejslobet",
-    "race-across-germany",
     "rad-am-ring",
+    "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
     "galibier-challenge",
@@ -7628,12 +7622,13 @@
     "seattle-to-portland",
     "tour-of-the-peak",
     "nove-colli",
+    "tour-of-flanders-sportive",
     "letape-serra-negra",
-    "alpe-dhuzes",
     "london-to-brighton",
     "paris-roubaix-challenge",
     "letape-denmark",
     "gran-fondo-badlands",
+    "alpe-dhuzes",
     "jedermann-rennen-koln",
     "dartmoor-legend-ultra",
     "gfny-villavicencio",
@@ -7653,10 +7648,11 @@
     "legendaria-gran-fondo-ontinyent",
     "strade-bianche-gran-fondo",
     "gran-fondo-san-diego",
+    "the-millars-gran-fondo",
     "etape-loch-ness",
-    "sea-otter-classic-gran-fondo",
     "letape-cunha",
     "tour-de-brisbane",
+    "sea-otter-classic-gran-fondo",
     "gfny-punta-del-este",
     "white-horse-challenge",
     "granguanche-audax-road",
@@ -7670,6 +7666,7 @@
     "letape-greece",
     "epic-gran-canaria",
     "surrey-rumble",
+    "gran-fondo-panama",
     "gfny-miami",
     "viana-granfondo",
     "cadel-evans-great-ocean-road-ride",
@@ -7695,9 +7692,9 @@
     "granfondo-ecuador",
     "eroica-japan",
     "granfondo-pomerode",
-    "la-ruta-de-los-conquistadores",
     "el-tour-de-tucson",
     "tour-de-okinawa",
+    "la-ruta-de-los-conquistadores",
     "gran-fondo-loutraki",
     "k2-road-ride",
     "cycling-shimanami",
@@ -7780,7 +7777,6 @@
     "liege-bastogne-liege-challenge",
     "midnight-sun-randonnee",
     "oregon-gran-fondo",
-    "the-millars-gran-fondo",
     "tour-de-matra",
     "aitana-tour",
     "dreilander-giro",
@@ -7837,7 +7833,6 @@
     "trek-100",
     "bealach-mor",
     "bike-abu-dhabi-gran-fondo",
-    "boone-gran-fondo",
     "douro-gran-fondo",
     "giro-ride-like-a-pro-usa",
     "gran-fondo-collado-del-condor",
@@ -7974,7 +7969,6 @@
     "cinturon-ciclista-mallorca",
     "etape-caledonia",
     "gfny-nyc",
-    "gran-fondo-panama",
     "ocbc-cycle-singapore",
     "uci-gran-fondo-ireland",
     "gran-fondo-gdynia",
@@ -8003,6 +7997,7 @@
     "le-loop",
     "uci-gran-fondo-world-championships",
     "mt-evans-hill-climb",
+    "boone-gran-fondo",
     "white-rose-classic",
     "giro-delle-dolomiti",
     "amashova-national-classic",
@@ -8014,8 +8009,8 @@
     "granfondo-livigno-ale",
     "granfondo-serra-da-estrela",
     "haervejslobet",
-    "race-across-germany",
     "rad-am-ring",
+    "race-across-germany",
     "marmotte-granfondo-sestriere",
     "dolomitenradrundfahrt",
     "tartu-rattaralli",
@@ -8027,11 +8022,12 @@
     "seattle-to-portland",
     "tour-of-the-peak",
     "nove-colli",
+    "tour-of-flanders-sportive",
     "letape-serra-negra",
-    "alpe-dhuzes",
     "london-to-brighton",
     "paris-roubaix-challenge",
     "letape-denmark",
+    "alpe-dhuzes",
     "jedermann-rennen-koln",
     "dartmoor-legend-ultra",
     "granfondo-felice-gimondi",
@@ -8046,10 +8042,11 @@
     "legendaria-gran-fondo-ontinyent",
     "strade-bianche-gran-fondo",
     "gran-fondo-san-diego",
+    "the-millars-gran-fondo",
     "etape-loch-ness",
-    "sea-otter-classic-gran-fondo",
     "letape-cunha",
     "tour-de-brisbane",
+    "sea-otter-classic-gran-fondo",
     "gfny-punta-del-este",
     "granguanche-audax-road",
     "granfondo-via-del-sale",
@@ -8079,8 +8076,8 @@
     "granfondo-ecuador",
     "eroica-japan",
     "granfondo-pomerode",
-    "la-ruta-de-los-conquistadores",
     "tour-de-okinawa",
+    "la-ruta-de-los-conquistadores",
     "gran-fondo-loutraki",
     "cycling-shimanami",
     "letape-chile",
@@ -8098,14 +8095,14 @@
   ],
   "summary": {
     "total": 412,
-    "ready": 167,
-    "content_present": 399,
+    "ready": 171,
+    "content_present": 400,
     "validator_clean": 412,
-    "pilot_candidates": 100,
+    "pilot_candidates": 103,
     "by_tier_ready": {
-      "1": 13,
-      "2": 133,
-      "3": 21,
+      "1": 14,
+      "2": 135,
+      "3": 22,
       "4": 0
     }
   }

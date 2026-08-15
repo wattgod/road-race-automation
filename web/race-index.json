@@ -1295,46 +1295,6 @@
     ]
   },
   {
-    "name": "The Millars Gran Fondo",
-    "slug": "the-millars-gran-fondo",
-    "location": "Castellón de la Plana, Castellón Province, Spain",
-    "country": "Spain",
-    "region": "Southern Europe",
-    "month": "March",
-    "distance_km": 158.0,
-    "distance_mi": 98.2,
-    "elevation_m": 2208,
-    "elevation_ft": 7244.0,
-    "tier": 2,
-    "overall_score": 77,
-    "scores": {
-      "distance": 5,
-      "climbing": 4,
-      "descent_technicality": 3,
-      "road_surface": 3,
-      "climate_risk": 5,
-      "altitude": 2,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 3
-    },
-    "tagline": "Spain's only UCI Gran Fondo World Series qualifier through Sierra de Espadán Natural Park",
-    "has_profile": true,
-    "profile_url": "/race/the-millars-gran-fondo/",
-    "discipline": "gran_fondo",
-    "lat": 39.986,
-    "lng": -0.045,
-    "route_options": [
-      "Gran Fondo: 158 km and 2,208 m climbing (2026)"
-    ]
-  },
-  {
     "name": "Tour de Mátra",
     "slug": "tour-de-matra",
     "location": "Gyöngyös, Hungary",
@@ -4429,6 +4389,46 @@
     ]
   },
   {
+    "name": "The Millars Gran Fondo",
+    "slug": "the-millars-gran-fondo",
+    "location": "Castellón de la Plana, Castellón Province, Spain",
+    "country": "Spain",
+    "region": "Southern Europe",
+    "month": "March",
+    "distance_km": 156.6,
+    "distance_mi": 97.3,
+    "elevation_m": 2211,
+    "elevation_ft": 7254.0,
+    "tier": 2,
+    "overall_score": 73,
+    "scores": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 3,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "cultural_impact": 3
+    },
+    "tagline": "A UCI Gran Fondo World Series qualifier through Sierra de Espadán Natural Park",
+    "has_profile": true,
+    "profile_url": "/race/the-millars-gran-fondo/",
+    "discipline": "gran_fondo",
+    "lat": 39.986,
+    "lng": -0.045,
+    "route_options": [
+      "Provisional 2027 Gran Fondo: 156.6 km and approximately 2,211 m climbing"
+    ]
+  },
+  {
     "name": "TORTOUR Ultracycling",
     "slug": "tortour",
     "location": "Schaffhausen, Switzerland",
@@ -5698,10 +5698,10 @@
     "country": "USA",
     "region": "North America",
     "month": "August",
-    "distance_km": 151.3,
-    "distance_mi": 94.0,
-    "elevation_m": 2570,
-    "elevation_ft": 8432.0,
+    "distance_km": 127.6,
+    "distance_mi": 79.3,
+    "elevation_m": 2347,
+    "elevation_ft": 7700.0,
     "tier": 2,
     "overall_score": 70,
     "scores": {
@@ -5728,9 +5728,9 @@
     "lat": null,
     "lng": null,
     "route_options": [
-      "94 mi / 151.3 km Gran",
-      "56.7 mi / 91.2 km Medio",
-      "24 mi / 38.6 km Piccolo"
+      "approximately 80 mi / 128 km Gran",
+      "approximately 55 mi / 89 km Medio",
+      "approximately 25 mi / 40 km Piccolo"
     ]
   },
   {
@@ -16441,7 +16441,7 @@
   {
     "name": "Gran Fondo Cycling Challenge – Ciudad de Panamá",
     "slug": "gran-fondo-panama",
-    "location": "Panama City (Casco Viejo start, 2026) to Panamá Oeste pineapple country, crossing the Puente de las Américas over the Panama Canal",
+    "location": "Panamá Pacífico toward western Panama (2027 announced start and direction)",
     "country": "Panama",
     "region": "Other",
     "month": "March",
