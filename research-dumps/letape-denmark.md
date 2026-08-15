@@ -28,3 +28,27 @@ Sol agreed the "active" upgrade was well-supported, but caught one internal inco
 - `citations`: added VisitSønderjylland source
 - No text corrections needed to the flagged age claim — verified accurate as written
 - No fondo_rating changes (rubric-lock held)
+
+## 2027 plan-clearance pass — 2026-08-14
+
+- Organizer DGI now states on its official event page that DGI Hærvejsløbet
+  runs on June 26, 2027 and registration opens in October 2026.
+- The underlying event is therefore date-cleared. The 2027 L'Etape/ASO brand
+  continuation is still not confirmed; the dedicated L'Etape site remains on
+  the completed June 27, 2026 edition.
+- The most recent official road framework has five point-to-point routes that
+  finish in Viborg. The flagship is 300 km / 2,500 m from Flensburg with seven
+  depots. The previous profile incorrectly said eight depots; corrected to
+  seven from the organizer's participant-information page.
+- Intended training-plan scope remains the 300 km flagship with a Distance
+  FULL-7 ladder, but it is source-blocked. DGI or L'Etape must first publish
+  a 2027 timed competitive road format and course, or explicitly confirm that
+  the 2026 format and course are unchanged. No plan copy may project the 2026
+  route, timetable, cutoff, GPX, or branding into 2027 before that evidence.
+
+### First-party sources rechecked
+
+- https://sites.dgi.dk/haervejsloebet
+- https://denmark.letapeseries.com/stages
+- https://denmark.letapeseries.com/participant-information
+- https://denmark.letapeseries.com/rules

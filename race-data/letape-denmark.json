@@ -18,8 +18,8 @@
       "start_format": "Point-to-point with staggered starts by route (2026 verified): 300 km 06:30-07:30 from Flensburg (Schiffbruecke 17), 160 km 09:30-11:00 from Vejen Idraetscenter, 125 km 10:00-11:00 from Godthaab Hammervaerk (Svenstrup, Aalborg), 75 km 11:30 from Noerre Snede, 50 km 11:30 from Funder (Silkeborg). All routes finish in Viborg.",
       "registration": "Online via denmark.letapeseries.com (Sportstiming platform). 2026 edition sold out before race day. 2027 registration opens October 2026 per organizer DGI. Entry fee varies by route. Early-bird discounts of 25-30% available. Includes official TdF cycling jersey.",
       "entry_fee": "Varies by route (early-bird discounts 25-30%)",
-      "feed_zones": "300 km route has eight feed depots plus the finish; shorter routes have progressively fewer stops en route to Viborg. Staffed by local volunteers from 25+ clubs. Renowned for quality food and festive atmosphere.",
-      "cutoff_time": "Route-dependent",
+      "feed_zones": "The current 300 km route has seven feed depots; the 160 km route has four and shorter road routes have progressively fewer stops before the shared Viborg finish. Final 2027 depot locations and counts override the 2026 route framework.",
+      "cutoff_time": "The current 300 km route closes its Viborg finish at 20:00 after 06:30-07:30 staggered starts. Final 2027 start windows and cutoff override the 2026 timetable.",
       "lat": 56.4532,
       "lng": 9.4023,
       "route_options": [
@@ -163,7 +163,7 @@
       {
         "url": "https://sites.dgi.dk/haervejsloebet",
         "category": "official",
-        "label": "DGI Haervejsloebet (Danish) — 2027 date confirmation: 'DGI Haervejsloebet koeres 26. juni 2027', registration opens October 2026"
+        "label": "DGI Hærvejsløbet (Danish) — Official 2027 Date Confirmation and Registration Window"
       },
       {
         "url": "https://denmark.letapeseries.com/stages",
@@ -201,12 +201,28 @@
         "label": "VisitSønderjylland: Hærvejen — \"Denmark's oldest highway\" (age-claim verification)"
       }
     ],
+    "source_review": {
+      "reviewed_at": "2026-08-14",
+      "race_date": "2027-06-26",
+      "facts_scope": "Organizer DGI confirms DGI Hærvejsløbet for June 26, 2027, with registration opening in October 2026. The most recent official road framework offers five point-to-point routes finishing in Viborg, led by a 300 km / 2,500 m Flensburg-to-Viborg route with staggered starts and seven depots. The organizer has not yet published 2027 routes, timetable, cutoff, roadbook, GPX, or continued L'Etape/ASO branding.",
+      "plan_status": "SOURCE BLOCKED — 2027 COMPETITION FORMAT AND ROAD ROUTE CONFIRMATION REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": "2027-06-26",
+      "ladder": "FULL-7",
+      "variation": "Distance",
+      "blockers": [
+        "DGI confirms the June 26, 2027 underlying event but has not published the 2027 road routes, timed competition format, or continued L'Etape/ASO branding; the dedicated L'Etape site still describes only the completed 2026 edition."
+      ],
+      "guard": "Do not project the 2026 300 km / 2,500 m road route, timed jersey competition, start waves, depots, cutoff, roadbook, GPX, or L'Etape branding into a 2027 plan. An organizer-confirmed 2027 competitive road format and course, or an explicit unchanged-course statement, are required."
+    },
     "eligibility": {
       "status": "active",
-      "verified": "2026-08-03",
+      "verified": "2026-08-14",
       "source": "https://sites.dgi.dk/haervejsloebet",
-      "note": "Re-verified 2026-08-03 (plan-readiness enrichment pass): organizer DGI's Danish site states 'DGI Hærvejsløbet køres 26. juni 2027' with registration opening October 2026 ('Tilmeldingen åbner til oktober') — day-level future date confirmed directly by the organizer. The 2026 edition (June 27) ran under full L'Etape by Tour de France / ASO branding and sold out (denmark.letapeseries.com, archived/post-event). denmark.letapeseries.com has not yet published a 2027 page, so L'Etape/ASO branding continuation for 2027 is probable but not yet independently confirmed; the underlying event itself is confirmed active and annual.",
-      "notes": "Next edition: June 26, 2027 (organizer-confirmed, day-level). Registration opens October 2026. 2027 L'Etape/ASO branding continuation probable but not yet published."
+      "note": "Organizer DGI states 'DGI Hærvejsløbet køres 26. juni 2027' and says registration opens in October 2026. The June 27, 2026 road event ran under L'Etape by Tour de France / ASO branding, but neither the DGI page nor denmark.letapeseries.com yet confirms that branding for 2027.",
+      "notes": "The underlying DGI Hærvejsløbet is organizer-confirmed for June 26, 2027, but its 2027 road competition format and route are not. Keep plan generation source-blocked until DGI or L'Etape publishes an edition-specific competitive road course or explicitly confirms that the 2026 format and course are unchanged."
     }
   }
 }

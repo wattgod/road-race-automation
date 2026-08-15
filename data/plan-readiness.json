@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T21:06:23",
+  "generated_at": "2026-08-14T22:04:45",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4433,13 +4433,17 @@
         "editorial": true,
         "course_character": true,
         "future_date": true,
-        "active_registerable": true
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
-      "ready": true,
+      "ready": false,
       "runway_weeks": 45,
       "race_date": "2027-06-26",
-      "blockers": []
+      "blockers": [
+        "plan clearance: DGI confirms the June 26, 2027 underlying event but has not published the 2027 road routes, timed competition format, or continued L'Etape/ASO branding; the dedicated L'Etape site still describes only the completed 2026 edition."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "letape-du-tour": {
       "slug": "letape-du-tour",
@@ -8029,7 +8033,6 @@
     "race-around-poland",
     "london-to-brighton",
     "paris-roubaix-challenge",
-    "letape-denmark",
     "alpe-dhuzes",
     "jedermann-rennen-koln",
     "dartmoor-legend-ultra",
@@ -8098,13 +8101,13 @@
   ],
   "summary": {
     "total": 412,
-    "ready": 172,
+    "ready": 171,
     "content_present": 400,
     "validator_clean": 412,
-    "pilot_candidates": 104,
+    "pilot_candidates": 103,
     "by_tier_ready": {
       "1": 14,
-      "2": 136,
+      "2": 135,
       "3": 22,
       "4": 0
     }
