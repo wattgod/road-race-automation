@@ -1,40 +1,30 @@
 {
   "slug": "the-millars-gran-fondo",
   "race_name": "The Millars UCI Gran Fondo World Series",
-  "distance_mi": 98.8,
+  "distance_mi": 97.3,
   "demands": {
     "durability": 4,
     "climbing": 7,
     "vo2_power": 6,
     "threshold": 8,
     "technical": 6,
-    "heat_resilience": 10,
-    "altitude": 4,
+    "heat_resilience": 0,
+    "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 98, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "Road_Specific",
-      "score": 79,
+      "score": 100,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "The Millars UCI Gran Fondo World Series' mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 98 miles."
+      "workout_context": "Road-specific control matters at The Millars UCI Gran Fondo World Series. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 97 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 79,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -44,45 +34,26 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 76,
+      "score": 96,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "73ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "75ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
-      "score": 65,
+      "score": 82,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At The Millars UCI Gran Fondo World Series, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 64,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 98 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "VO2max",
-      "score": 62,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "7,260ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "At The Millars UCI Gran Fondo World Series, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 59,
+      "score": 75,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,49 +62,75 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of The Millars UCI Gran Fondo World Series. Train it until it feels boring."
     },
     {
+      "category": "Durability",
+      "score": 71,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 97, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
+      "category": "VO2max",
+      "score": 64,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "7,254ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
+    },
+    {
       "category": "Mixed_Climbing",
-      "score": 46,
+      "score": 58,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
-      "workout_context": "7,260ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+      "workout_context": "7,254ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Critical_Power",
-      "score": 46,
+      "score": 58,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At The Millars UCI Gran Fondo World Series, that number decides whether you bridge or get dropped."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 44,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 98 miles without cracking. No shortcuts."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at The Millars UCI Gran Fondo World Series. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 40,
+      "score": 50,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 44,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 97 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Blended",
+      "score": 42,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,254ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "heat": "March in Castell\u00f3n de la Plana, Castell\u00f3n Province, Spain \u2014 March average 18-20\u00b0C; ideal early-season conditions in Spain's second most mountainous province[1][2]. Begin heat acclimatization 10\u201314 days before The Millars UCI Gran Fondo World Series \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Target 60\u201380g carbs/hour for The Millars UCI Gran Fondo World Series\u2019s 98 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at The Millars UCI Gran Fondo World Series. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at The Millars UCI Gran Fondo World Series requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "nutrition": "Target 60\u201380g carbs/hour for The Millars UCI Gran Fondo World Series\u2019s 97 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "terrain": "The course profile at The Millars UCI Gran Fondo World Series rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Road Specific, and Race Simulation to prepare you for 98 miles of mixed terrain in Castell\u00f3n de la Plana, Castell\u00f3n Province, Spain.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Road Specific, Race Simulation, and TT Threshold to prepare you for 97 miles of mixed terrain in Castell\u00f3n de la Plana, Castell\u00f3n Province, Spain.",
+  "generated_at": "2026-08-14"
 }
