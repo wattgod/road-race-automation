@@ -745,6 +745,17 @@ class TestParseEventDates:
     def test_seasonal_tbd(self):
         assert parse_event_dates("2026: Spring/Fall TBD") == (None, None)
 
+    def test_narrative_years_do_not_become_calendar_days(self):
+        assert parse_event_dates(
+            "2026: DEFUNCT. HotChillee entered liquidation in August 2024."
+        ) == (None, None)
+        assert parse_event_dates(
+            "2026: CANCELLED (registration closed June 2026)."
+        ) == (None, None)
+
+    def test_impossible_calendar_dates_are_rejected(self):
+        assert parse_event_dates("2026: February 30") == (None, None)
+
 
 # ── Sections ──────────────────────────────────────────────────
 

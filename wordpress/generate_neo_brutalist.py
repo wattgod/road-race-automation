@@ -126,6 +126,13 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
         '', date_str)
     clean = re.sub(r'(\d+)(?:st|nd|rd|th)\b', r'\1', clean)
 
+    def iso_date(year: str, month: str, day: str) -> str | None:
+        """Return a real ISO date, never a regex-shaped impossible date."""
+        try:
+            return date(int(year), int(month), int(day)).isoformat()
+        except ValueError:
+            return None
+
     # Try cross-month first: "2026: June 30 - July 2"
     cross = re.search(
         r'(\d{4}).*?(\w+)\s+(\d+)\s*-\s*(\w+)\s+(\d+)', clean)
@@ -136,10 +143,10 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
         end_month = MONTH_NUMBERS.get(cross.group(4).lower())
         end_day = cross.group(5)
         if start_month and end_month:
-            return (
-                f"{year}-{start_month}-{int(start_day):02d}",
-                f"{year}-{end_month}-{int(end_day):02d}",
-            )
+            start = iso_date(year, start_month, start_day)
+            end = iso_date(year, end_month, end_day)
+            if start and end:
+                return start, end
 
     # Fall back to same-month: "2026: June 15" or "2026: August 19-23"
     same = re.search(r'(\d{4}).*?(\w+)\s+(\d+)(?:\s*-\s*(\d+))?', clean)
@@ -149,9 +156,10 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
         if month:
             start_day = same.group(3)
             end_day = same.group(4)
-            start = f"{year}-{month}-{int(start_day):02d}"
-            end = f"{year}-{month}-{int(end_day):02d}" if end_day else start
-            return start, end
+            start = iso_date(year, month, start_day)
+            end = iso_date(year, month, end_day) if end_day else start
+            if start and end:
+                return start, end
 
     # Common road-profile form: "July 5, 2026" (optionally with notes/time).
     month_first = re.search(r'\b([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\b', clean)
@@ -164,8 +172,9 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
             except ValueError:
                 month = None
         if month:
-            parsed = f"{year}-{month}-{int(day):02d}"
-            return parsed, parsed
+            parsed = iso_date(year, month, day)
+            if parsed:
+                return parsed, parsed
 
     # If the string contains a year but we still couldn't parse it, warn
     if re.search(r'\d{4}', date_str):

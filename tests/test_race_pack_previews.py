@@ -15,6 +15,14 @@ from generate_race_pack_previews import (  # noqa: E402
 )
 
 
+def test_every_race_profile_has_a_training_preview():
+    root = Path(__file__).resolve().parent.parent
+    profiles = {path.stem for path in (root / "race-data").glob("*.json")}
+    previews = {path.stem for path in (root / "web" / "race-packs").glob("*.json")}
+
+    assert profiles <= previews
+
+
 def test_technical_road_demands_never_emit_gravel_category():
     demands = {
         "technical": 10,
