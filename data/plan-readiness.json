@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T18:59:02",
+  "generated_at": "2026-08-14T21:06:23",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4017,16 +4017,18 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": true
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": false
       },
       "eligibility_status": "active",
       "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-04-25",
+      "runway_weeks": 36,
+      "race_date": "2027-04-24",
       "blockers": [
-        "no parsed future date"
-      ]
+        "plan clearance: The organizer has not published a 2027 course, distance, climbing total, rules, feed zones, or cutoff, and has not stated that the 2026 course is unchanged."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "la-leggendaria-charly-gaul": {
       "slug": "la-leggendaria-charly-gaul",
@@ -5784,21 +5786,21 @@
     "race-around-poland": {
       "slug": "race-around-poland",
       "tier": 2,
-      "score": 64,
+      "score": 63,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": true
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": "2026-06-27",
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 45,
+      "race_date": "2027-06-26",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "race-through-poland": {
       "slug": "race-through-poland",
@@ -7624,6 +7626,7 @@
     "nove-colli",
     "tour-of-flanders-sportive",
     "letape-serra-negra",
+    "race-around-poland",
     "london-to-brighton",
     "paris-roubaix-challenge",
     "letape-denmark",
@@ -7664,6 +7667,7 @@
     "granfondo-colnago",
     "cape-town-cycle-tour",
     "letape-greece",
+    "krk-gran-fondo",
     "epic-gran-canaria",
     "surrey-rumble",
     "gran-fondo-panama",
@@ -7903,7 +7907,6 @@
     "pelotonia",
     "race-across-italy-300",
     "race-around-austria",
-    "race-around-poland",
     "tour-of-pembrokeshire",
     "belgrade-gran-fondo",
     "gfny-salinas",
@@ -7977,7 +7980,6 @@
     "tour-de-palm-springs",
     "vuelta-puerto-rico",
     "clare-classic",
-    "krk-gran-fondo",
     "letape-dubai",
     "tallinn-gran-fondo",
     "gfny-paracas",
@@ -8024,6 +8026,7 @@
     "nove-colli",
     "tour-of-flanders-sportive",
     "letape-serra-negra",
+    "race-around-poland",
     "london-to-brighton",
     "paris-roubaix-challenge",
     "letape-denmark",
@@ -8095,13 +8098,13 @@
   ],
   "summary": {
     "total": 412,
-    "ready": 171,
+    "ready": 172,
     "content_present": 400,
     "validator_clean": 412,
-    "pilot_candidates": 103,
+    "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 135,
+      "2": 136,
       "3": 22,
       "4": 0
     }

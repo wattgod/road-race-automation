@@ -367,7 +367,16 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
         )
 
     # ── Nutrition ──
-    if distance >= 150:
+    if distance >= 500:
+        overlay['nutrition'] = (
+            f"For a multi-day {int(distance)}-mile race, no single calorie total or "
+            f"one-food strategy is credible. Rehearse continuous intake while riding "
+            f"plus substantial meals at planned stops; document carbohydrate, fluid, "
+            f"and sodium intake, resupply cadence, and gut response. Use checkpoints "
+            f"and publicly available services only as the category rules allow, carry "
+            f"backup calories, and complete a full night-riding systems rehearsal."
+        )
+    elif distance >= 150:
         overlay['nutrition'] = (
             f"Ultra-distance fueling for {int(distance)} miles: 80\u2013100g carbs/hour from mile 1 \u2014 "
             f"don\u2019t wait until you\u2019re hungry. "

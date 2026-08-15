@@ -204,6 +204,7 @@ COUNTRY_CODES = {
     'New Zealand': 'NZ', 'Mexico': 'MX', 'Costa Rica': 'CR', 'Uruguay': 'UY',
     'Colombia': 'CO', 'Chile': 'CL', 'Brazil': 'BR',
     'Argentina': 'AR', 'Sweden': 'SE', 'Austria': 'AT', 'Greece': 'GR',
+    'Poland': 'PL',
     'Poland': 'PL', 'Finland': 'FI', 'Netherlands': 'NL', 'Norway': 'NO',
     'Portugal': 'PT', 'Romania': 'RO', 'South Africa': 'ZA', 'Kenya': 'KE',
     'Thailand': 'TH', 'Japan': 'JP', 'British Columbia': 'CA', 'Ontario': 'CA',

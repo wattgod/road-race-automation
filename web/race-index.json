@@ -11296,49 +11296,6 @@
     ]
   },
   {
-    "name": "Race Around Poland",
-    "slug": "race-around-poland",
-    "location": "Poland (national circumnavigation, honorary start Warsaw Royal Wilanów)",
-    "country": "Poland",
-    "region": "Eastern Europe",
-    "month": "June",
-    "distance_km": 3600.0,
-    "distance_mi": 2237.0,
-    "elevation_m": 33100,
-    "elevation_ft": 108596.0,
-    "tier": 2,
-    "overall_score": 64,
-    "scores": {
-      "distance": 5,
-      "climbing": 4,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 4,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 2,
-      "cultural_impact": 3
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/race-around-poland/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      "RAP (full): 3,600 km / 33,100m — solo unsupported, solo supported, 2-/4-person team",
-      "1/2 RAP: 1,800 km, finishing near Grudza/Szklarska Poręba",
-      "1/4 RAP: 900 km, finishing at Czorsztyn",
-      "Challenge 300: 150 km out-and-back to Czemierniki (solo unsupported, solo semi-supported, 2-person team)"
-    ]
-  },
-  {
     "name": "Sierra Nevada Límite Gran Fondo",
     "slug": "sierra-nevada-limite",
     "location": "Cenes de la Vega, Granada, Spain",
@@ -12438,6 +12395,49 @@
     "route_options": [
       "54 miles (full route: Clapham Common to Brighton seafront)",
       "20.5 miles (new shorter route from 2026: Ardingly to Brighton)"
+    ]
+  },
+  {
+    "name": "Race Around Poland",
+    "slug": "race-around-poland",
+    "location": "Warsaw, Poland",
+    "country": "Poland",
+    "region": "Eastern Europe",
+    "month": "June",
+    "distance_km": 3600.0,
+    "distance_mi": 2237.0,
+    "elevation_m": 33100,
+    "elevation_ft": 108596.0,
+    "tier": 2,
+    "overall_score": 63,
+    "scores": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 4,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 2,
+      "cultural_impact": 3
+    },
+    "tagline": "",
+    "has_profile": true,
+    "profile_url": "/race/race-around-poland/",
+    "discipline": "gran_fondo",
+    "lat": null,
+    "lng": null,
+    "route_options": [
+      "2027 RAP (full): approximately 3,600 km / 33,100m — solo unsupported, solo supported, 2-/4-person team",
+      "2027 1/2 RAP: 1,800 km, finishing near Grudza/Szklarska Poręba",
+      "2027 1/4 RAP: 900 km, finishing at Czorsztyn",
+      "2027 Challenge 300: approximately 300 km (solo unsupported, solo semi-supported, 2-person team)"
     ]
   },
   {
