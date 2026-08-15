@@ -53,3 +53,23 @@ def test_millars_publishes_the_complete_full_7_ladder():
     ]
     assert [plan["price"] for plan in millars] == [99, 79, 99, 79, 99, 99, 69]
     assert all(plan["url"].endswith(f"tp-{plan['planId']}/p") for plan in millars)
+
+
+def test_race_around_poland_publishes_the_complete_full_7_ladder():
+    links = json.loads(
+        (Path(__file__).resolve().parent.parent / "data" / "tp-race-plan-links.json")
+        .read_text(encoding="utf-8")
+    )
+
+    plans = links["race-around-poland"]
+    assert [plan["planId"] for plan in plans] == [
+        669693,
+        669694,
+        669695,
+        669696,
+        669697,
+        669698,
+        669699,
+    ]
+    assert [plan["price"] for plan in plans] == [99, 79, 99, 79, 99, 99, 69]
+    assert all(plan["url"].endswith(f"tp-{plan['planId']}/p") for plan in plans)
