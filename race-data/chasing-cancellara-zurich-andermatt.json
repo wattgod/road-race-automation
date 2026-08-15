@@ -1,0 +1,161 @@
+{
+  "race": {
+    "name": "Chasing Cancellara Zürich to Andermatt",
+    "slug": "chasing-cancellara-zurich-andermatt",
+    "display_name": "Chasing Cancellara Zürich to Andermatt",
+    "tagline": "A 203.5-kilometer Alpine road ultra from Zürich over Klausen Pass to Andermatt.",
+    "vitals": {
+      "distance_km": 203.5,
+      "distance_mi": 126.4,
+      "elevation_m": 4335,
+      "elevation_ft": 14222,
+      "course_status": "source_blocked",
+      "course_status_label": "NEXT EDITION PENDING",
+      "course_status_reason": "The organizer publishes complete results, GPX, roadbook, and route facts for June 27, 2026 but no 2027 date, registration cycle, rules, or course.",
+      "location": "Zürich to Andermatt, Switzerland",
+      "location_badge": "ZÜRICH TO ANDERMATT",
+      "country": "Switzerland",
+      "date": "Next edition not announced",
+      "date_specific": "TBD — last held June 27, 2026",
+      "field_size": "Not published for the next edition",
+      "start_format": "wave_start",
+      "registration": "Next-edition registration not announced",
+      "entry_fee": "Next-edition fee not announced; 2026 single entry was CHF 200-320",
+      "prize_purse": "Published rankings; no cash purse published",
+      "feed_zones": "Five in 2026: Raten, Bilten, Bifang, Schattdorf, and Wassen",
+      "cutoff_time": "2026: 5:00 PM after a 2:00 AM start",
+      "lat": 47.3769,
+      "lng": 8.5417,
+      "route_options": ["Completed 2026 route: 203.5 km / 4,335 m; final next-edition roadbook overrides"]
+    },
+    "climate": {
+      "primary": "High-Alpine summer",
+      "description": "A pre-dawn start, exposed passes, and more than fifteen hours of possible weather create cold, rain, wind, and rapid temperature-change risk.",
+      "challenges": ["Cold dark start", "Mountain storms", "Hot valleys and cold passes", "Long exposure window"]
+    },
+    "terrain": {
+      "primary": "Point-to-point Alpine road ultra",
+      "surface": "Paved public roads from Zürich through Glarnerland, over Klausen Pass, and into Andermatt.",
+      "technical_rating": 4,
+      "features": ["Raten", "Sattelegg", "Klausen Pass", "Schattdorf", "Final climb to Andermatt"]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 4,
+      "road_surface": 2,
+      "climate_risk": 5,
+      "altitude": 3,
+      "logistics": 2,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 5,
+      "cultural_impact": 0,
+      "overall_score": 74,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Grade uses the organizer's completed 2026 roadbook: 203.5 km, 4,335 m, four named climbing sectors, 2:00 AM start, five aid stations, timing, moto and medical support, neutral service, luggage transfer, and 5:00 PM finish cutoff. Formula: 52/70 = 74. Re-grade when the next edition is announced. Sources: https://www.chasingcancellara.com/zurich-andermatt and the official 2026 roadbook."
+    },
+    "climb_profile": {
+      "total_climbs": 4,
+      "hc_climbs": 0,
+      "cat_1_climbs": 2,
+      "cat_2_climbs": 1,
+      "cat_3_climbs": 1,
+      "key_climbs": [
+        {"name": "Klausen Pass", "length_km": 22.1, "elevation_gain_m": 1271, "average_gradient": 6.3, "max_gradient": 9.1},
+        {"name": "Andermatt", "length_km": 20.7, "elevation_gain_m": 915, "average_gradient": 4.3, "max_gradient": 10.4},
+        {"name": "Raten", "length_km": 5.0, "elevation_gain_m": 328, "average_gradient": 6.1, "max_gradient": 10.5},
+        {"name": "Sattelegg", "length_km": 3.1, "elevation_gain_m": 245, "average_gradient": 7.9, "max_gradient": 10.2}
+      ],
+      "profile_type": "mountainous",
+      "king_of_mountain": "Klausen Pass",
+      "_needs_enrichment": false
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 5, "explanation": "The official 2026 roadbook measured 203.5 km, just beyond the 200 km ultra threshold.[2][3]"},
+      "climbing": {"score": 5, "explanation": "The roadbook publishes 4,335 m of ascent, beyond the 4,000 m mountain threshold.[3]"},
+      "descent_technicality": {"score": 4, "explanation": "Klausen Pass and the high-Alpine approach to Andermatt demand sustained switchback descending.[2][3]"},
+      "road_surface": {"score": 2, "explanation": "The event uses paved Swiss public roads without a cobbled showcase.[2][3]"},
+      "climate_risk": {"score": 5, "explanation": "A 2:00 AM start and multiple Alpine passes create real cold, storm, and temperature-swing exposure.[2][3]"},
+      "altitude": {"score": 3, "explanation": "Klausen Pass and the Andermatt finish sit in the 1,000-2,000 m rubric band.[3]"},
+      "logistics": {"score": 2, "explanation": "Zürich is a major transport hub, while the Andermatt finish requires point-to-point planning.[2]"},
+      "prestige": {"score": 3, "explanation": "Fabian Cancellara's name and the Alpine route attract international recognition without iconic mass-event scale.[1][2]"},
+      "organization": {"score": 4, "explanation": "Timing, moto escort, ambulance, neutral service, route signage, luggage transfer, and five aid stations support the grade.[2][3]"},
+      "scenic_experience": {"score": 5, "explanation": "Lake Zürich, Glarnerland, Klausen Pass, and an Andermatt finish form a genuine high-Alpine showcase.[2][3]"},
+      "community_culture": {"score": 3, "explanation": "Series identity, rankings, a finisher meal, and multiple team formats create a solid event culture.[1][2]"},
+      "field_depth": {"score": 3, "explanation": "Timed solo and team categories with official rankings create structured competition.[2][3]"},
+      "value": {"score": 3, "explanation": "The 2026 package was comprehensive, but Swiss pricing and no next-edition fee keep value neutral.[2]"},
+      "expenses": {"score": 5, "explanation": "Swiss lodging, a point-to-point trip, and premium entry make this a destination-level expense.[2]"}
+    },
+    "course_description": {
+      "character": "The 2026 course left Zürich at 2:00 AM, crossed rolling terrain by Lake Zürich, climbed through Glarnerland and Klausen Pass, then finished after the final ascent to Andermatt. Drafting was prohibited after kilometer 30.4 outside specified team categories.",
+      "signature_challenge": "Climbing Klausen Pass and then another 20.7-kilometer, 915-meter ascent toward Andermatt after more than 180 kilometers.",
+      "suffering_zones": ["Dark Zürich exit", "Raten and Sattelegg", "Klausen Pass", "Schattdorf cutoff", "Final ascent to Andermatt"]
+    },
+    "logistics": {
+      "airport": "Zürich Airport (ZRH)",
+      "lodging_strategy": "Sleep in Zürich before the 2:00 AM start and book post-race lodging in Andermatt.",
+      "transport": "Use organizer luggage transfer and Swiss rail for the point-to-point return.",
+      "food": "Five aid stations plus a finisher meal were included in 2026.",
+      "official_site": "https://www.chasingcancellara.com/zurich-andermatt"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "Chasing Cancellara evolved from Fabian Cancellara's original chase format into distinct Swiss road races, including this point-to-point Alpine ultra.",
+      "notable_moments": ["2026: 203.5 km / 4,335 m course over Klausen Pass to Andermatt"],
+      "reputation": "The series' complete high-Alpine endurance test: long enough to be an ultra and steep enough to punish ordinary fondo pacing."
+    },
+    "biased_opinion": {
+      "verdict": "The Best Complete Race in the Series",
+      "summary": "Zürich-Andermatt has the cleanest sporting argument of the three races: more than 200 kilometers, more than 4,000 meters, a 2:00 AM start, Klausen Pass, and a final climb after the legs are already empty.",
+      "strengths": ["True ultra distance", "Klausen Pass", "Strong organizer support", "Major-city start"],
+      "weaknesses": ["Expensive Swiss trip", "Point-to-point logistics", "Very early start", "No next edition announced"],
+      "bottom_line": "A serious Alpine road ultra with excellent support, but no dated TrainingPeaks product should open until the next organizer roadbook lands."
+    },
+    "final_verdict": {
+      "score": "74 / 100",
+      "one_liner": "Two hundred kilometers, 4,335 meters, Klausen Pass, and a final climb to Andermatt.",
+      "should_you_race": "Yes if a 2:00 AM Alpine ultra sounds like a goal rather than a warning. Wait for the next official edition before fixing your training calendar.",
+      "alternatives": "Bern-Zermatt is longer; Granfondo Vaduz keeps the timed climbing without the all-day ultra.",
+      "alternative_slugs": ["chasing-cancellara-bern-zermatt", "chasing-cancellara-granfondo-vaduz"]
+    },
+    "citations": [
+      {"url": "https://www.chasingcancellara.com/", "category": "official", "label": "Chasing Cancellara official series roster"},
+      {"url": "https://www.chasingcancellara.com/zurich-andermatt", "category": "official", "label": "Zürich-Andermatt official course, services, results, and completed edition"},
+      {"url": "https://www.chasingcancellara.com/_files/ugd/ded0b9_c2600b6169ab4b5fa69baae8f269b18e.pdf", "category": "official", "label": "Official 2026 Zürich-Andermatt roadbook"}
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": null,
+      "facts_scope": "Complete official 2026 route, rules, schedule, and service evidence; no next-edition date or roadbook.",
+      "plan_status": "SOURCE BLOCKED — NEXT EDITION REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": null,
+      "ladder": "FULL-7",
+      "variation": "Climbing",
+      "blockers": ["No organizer-confirmed next-edition date, registration cycle, rules, or course is published."],
+      "guard": "Use the completed 2026 203.5 km / 4,335 m roadbook only as a guarded historical reference. The next organizer roadbook overrides it."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://www.chasingcancellara.com/zurich-andermatt",
+      "notes": "A timed competitive road ultra with official rankings; source-blocked only because no next edition is announced."
+    },
+    "research_metadata": {
+      "data_confidence": "high for completed 2026 course; next edition unannounced",
+      "validation_status": "source_blocked_for_next_edition",
+      "research_date": "2026-08-15",
+      "sources": ["https://www.chasingcancellara.com/", "https://www.chasingcancellara.com/zurich-andermatt", "https://www.chasingcancellara.com/_files/ugd/ded0b9_c2600b6169ab4b5fa69baae8f269b18e.pdf"]
+    }
+  }
+}

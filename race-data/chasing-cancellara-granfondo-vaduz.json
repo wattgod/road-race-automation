@@ -1,0 +1,163 @@
+{
+  "race": {
+    "name": "Chasing Cancellara Granfondo Vaduz",
+    "slug": "chasing-cancellara-granfondo-vaduz",
+    "display_name": "Chasing Cancellara Granfondo Vaduz",
+    "tagline": "Five timed climbs inside a neutralized group ride linking Liechtenstein and eastern Switzerland.",
+    "vitals": {
+      "distance_km": 98,
+      "distance_mi": 60.9,
+      "elevation_m": 1290,
+      "elevation_ft": 4232,
+      "course_status": "source_blocked",
+      "course_status_label": "NEXT EDITION PENDING",
+      "course_status_reason": "The organizer publishes complete results, roadbook, and route facts for April 25, 2026 but no 2027 date, registration cycle, rules, or course.",
+      "location": "Vaduz, Liechtenstein",
+      "location_badge": "VADUZ, LIECHTENSTEIN",
+      "country": "Liechtenstein / Switzerland",
+      "date": "Next edition not announced",
+      "date_specific": "TBD — last held April 25, 2026",
+      "field_size": "Not published for the next edition",
+      "start_format": "mass_start",
+      "registration": "Next-edition registration not announced",
+      "entry_fee": "Next-edition fee not announced",
+      "prize_purse": "Rankings are based on five timed climbs; no cash purse published",
+      "feed_zones": "One on-course feed zone in the completed 2026 edition",
+      "cutoff_time": "Next-edition cutoff not announced",
+      "lat": 47.141,
+      "lng": 9.5215,
+      "route_options": [
+        "Completed 2026 big loop: 98 km / 1,290 m",
+        "Completed 2026 small loop: 57 km / 880 m"
+      ]
+    },
+    "climate": {
+      "primary": "Alpine spring",
+      "description": "Late April in the Rhine valley can be mild, but rain and cool air remain realistic on the exposed climbs.",
+      "challenges": ["Cool wet weather", "Wind in the Rhine valley", "Variable spring conditions"]
+    },
+    "terrain": {
+      "primary": "Rolling paved loops with five timed climbs",
+      "surface": "Paved public roads under neutralized group rules between timed climbing sectors.",
+      "technical_rating": 2,
+      "features": ["Two Schellenberg ascents", "Sankt Luzisteig", "Pfäfers", "Oberschan", "Vaduz start and finish"]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 0,
+      "overall_score": 53,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Grade uses the organizer's completed 2026 98 km / 1,290 m long loop, five timed climbs, neutralized transfers, roadbook, results, moto escort, medical support, neutral service, and feed-zone package. Formula: 37/70 = 53. Re-grade when the next edition is announced. Sources: https://www.chasingcancellara.com/granfondo-vaduz and its official 2026 roadbook."
+    },
+    "climb_profile": {
+      "total_climbs": 5,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        {"name": "Pfäfers", "length_km": 3.6, "elevation_gain_m": 302, "average_gradient": 8.4, "max_gradient": 11.1},
+        {"name": "Schellenberg from Mauren", "length_km": 1.6, "elevation_gain_m": 151, "average_gradient": 9.5, "max_gradient": 13.8},
+        {"name": "Sankt Luzisteig", "length_km": 3.2, "elevation_gain_m": 217, "average_gradient": 6.8, "max_gradient": 9.3}
+      ],
+      "profile_type": "rolling",
+      "king_of_mountain": "Pfäfers",
+      "_needs_enrichment": false
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 2, "explanation": "The 2026 long loop was 98 km, squarely inside the 80-120 km band.[2][3]"},
+      "climbing": {"score": 2, "explanation": "The organizer published 1,290 m for the long loop, inside the 500-1,500 m band.[2][3]"},
+      "descent_technicality": {"score": 2, "explanation": "Short, steep sectors require control but the event is not built around major alpine descents.[3]"},
+      "road_surface": {"score": 2, "explanation": "The roadbook describes public paved roads without cobbled or deteriorated showcase sectors.[3]"},
+      "climate_risk": {"score": 3, "explanation": "Late-April Alpine-foothill weather can bring cold rain and wind; this is a conservative editorial grade.[2]"},
+      "altitude": {"score": 2, "explanation": "The roadbook profile rises from Vaduz at 460 m to Pfäfers at roughly 820 m.[3]"},
+      "logistics": {"score": 3, "explanation": "Vaduz is orderly and compact but requires regional rail or road transfer from a major airport.[2]"},
+      "prestige": {"score": 2, "explanation": "Fabian Cancellara's brand gives the event recognition, but it remains a regional format.[1][2]"},
+      "organization": {"score": 4, "explanation": "Timing, moto escort, first aid, neutral service, guides, roadbook, and feed support meet the very-good band.[2][3]"},
+      "scenic_experience": {"score": 3, "explanation": "The Liechtenstein and eastern-Swiss loops are distinctive without a high-Alpine pass.[3]"},
+      "community_culture": {"score": 3, "explanation": "Group riding, a finisher meal, rankings, and series identity support a solid event community.[1][2]"},
+      "field_depth": {"score": 3, "explanation": "Five timed climbs and published rankings create structured competition.[2][3]"},
+      "value": {"score": 3, "explanation": "The package is substantial, but no next-edition fee exists for a stronger claim.[2]"},
+      "expenses": {"score": 3, "explanation": "Liechtenstein travel and lodging are not budget racing, though the loop format avoids point-to-point transfers.[2]"}
+    },
+    "course_description": {
+      "character": "Riders travel together between five timed climbing sectors, with rankings decided by accumulated climb times. The completed 2026 long loop crossed Liechtenstein and eastern Switzerland before returning to Vaduz.",
+      "signature_challenge": "Repeatedly switching from controlled group riding into five short, steep, fully timed climbing efforts.",
+      "suffering_zones": ["Schellenberg from Ruggell", "Schellenberg from Mauren", "Sankt Luzisteig", "Pfäfers", "Oberschan"]
+    },
+    "logistics": {
+      "airport": "Zurich Airport (ZRH), followed by regional rail or road transfer to Vaduz",
+      "lodging_strategy": "Stay in Vaduz, Schaan, or nearby Buchs and keep race morning local.",
+      "transport": "The loop starts and finishes in Vaduz; no finish-city transfer is required.",
+      "food": "Organizer feed support and a finisher meal were included in 2026.",
+      "official_site": "https://www.chasingcancellara.com/granfondo-vaduz"
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "Granfondo Vaduz is the short-format climbing race in Fabian Cancellara's three-event Swiss series.",
+      "notable_moments": ["2026: 98 km long loop with five timed climbs and neutralized transfers"],
+      "reputation": "A compact, tactical alternative to the series' two ultra-distance point-to-point races."
+    },
+    "biased_opinion": {
+      "verdict": "The Smart One in the Series",
+      "summary": "Vaduz keeps the competitive part honest—five timed climbs—but removes the 2:00 AM ultra-distance ordeal. It is the best Chasing Cancellara entry point for riders who want real rankings without spending all day crossing Switzerland.",
+      "strengths": ["Distinctive timed-climb format", "Compact loop logistics", "Strong support package", "Two route lengths"],
+      "weaknesses": ["Transfers are neutralized rather than raced", "Limited history", "No next edition announced", "Less spectacular than the high-Alpine routes"],
+      "bottom_line": "A well-produced climbing contest with manageable distance, but not ready for a dated training-plan product until the organizer announces the next edition."
+    },
+    "final_verdict": {
+      "score": "53 / 100",
+      "one_liner": "Five timed climbs, neutralized transfers, and a compact Vaduz loop.",
+      "should_you_race": "Yes if you want a competitive climbing format without an ultra-distance day. Wait for the next edition before committing a training calendar.",
+      "alternatives": "Chasing Cancellara Zürich-Andermatt and Bern-Zermatt trade compact logistics for true Alpine ultra distance.",
+      "alternative_slugs": ["chasing-cancellara-zurich-andermatt", "chasing-cancellara-bern-zermatt"]
+    },
+    "citations": [
+      {"url": "https://www.chasingcancellara.com/", "category": "official", "label": "Chasing Cancellara official series roster"},
+      {"url": "https://www.chasingcancellara.com/granfondo-vaduz", "category": "official", "label": "Granfondo Vaduz official course, format, services, and completed edition"},
+      {"url": "https://www.chasingcancellara.com/_files/ugd/ded0b9_2ddf2aa42e984e3c9ac4527807012e3e.pdf", "category": "official", "label": "Official 2026 Granfondo Vaduz roadbook"}
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": null,
+      "facts_scope": "The organizer publishes complete 2026 route and race-format evidence but no next-edition date or registration cycle.",
+      "plan_status": "SOURCE BLOCKED — NEXT EDITION REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": null,
+      "ladder": "FULL-7",
+      "variation": "Climbing",
+      "blockers": ["No organizer-confirmed next-edition date, registration cycle, rules, or course is published."],
+      "guard": "Use the 2026 five-climb format only as a historical planning reference. The next organizer roadbook overrides it."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://www.chasingcancellara.com/granfondo-vaduz",
+      "notes": "A competitive timed-climb gran fondo with published rankings; source-blocked only because no next edition is announced."
+    },
+    "research_metadata": {
+      "data_confidence": "high for completed 2026 course; next edition unannounced",
+      "validation_status": "source_blocked_for_next_edition",
+      "research_date": "2026-08-15",
+      "sources": ["https://www.chasingcancellara.com/", "https://www.chasingcancellara.com/granfondo-vaduz", "https://www.chasingcancellara.com/_files/ugd/ded0b9_2ddf2aa42e984e3c9ac4527807012e3e.pdf"]
+    }
+  }
+}

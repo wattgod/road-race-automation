@@ -1,0 +1,156 @@
+{
+  "race": {
+    "name": "Chasing Cancellara Bern to Zermatt",
+    "slug": "chasing-cancellara-bern-zermatt",
+    "display_name": "Chasing Cancellara Bern to Zermatt",
+    "tagline": "A 274-kilometer point-to-point road ultra finishing beneath the Matterhorn in Zermatt.",
+    "vitals": {
+      "distance_km": 274,
+      "distance_mi": 170.3,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "course_status": "source_blocked",
+      "course_status_label": "NEXT EDITION PENDING",
+      "course_status_reason": "The organizer confirms a 274-kilometer race for September 12, 2026 but has not published a 2027 date, registration cycle, rules, or course; the current page does not state total elevation.",
+      "location": "Ittigen near Bern to Zermatt, Switzerland",
+      "location_badge": "BERN TO ZERMATT",
+      "country": "Switzerland",
+      "date": "Next edition not announced",
+      "date_specific": "TBD — last confirmed September 12, 2026",
+      "field_size": "Not published for the next edition",
+      "start_format": "wave_start",
+      "registration": "Next-edition registration not announced",
+      "entry_fee": "Next-edition fee not announced; 2026 single entry was CHF 230-350",
+      "prize_purse": "Published rankings; no cash purse published",
+      "feed_zones": "Six in the confirmed 2026 edition",
+      "cutoff_time": "2026: 8:00 PM after a 2:00 AM start",
+      "lat": 46.977,
+      "lng": 7.478,
+      "route_options": ["Confirmed 2026 route: 274 km; total elevation is not stated on the current organizer page"]
+    },
+    "climate": {
+      "primary": "Late-summer Alpine",
+      "description": "A dark start, long valley exposure, and a high-mountain finish create cold, heat, wind, rain, and fast weather-change risk across one enormous day.",
+      "challenges": ["Cold 2:00 AM start", "Alpine weather", "Long exposure window", "Valley heat before mountain cold"]
+    },
+    "terrain": {
+      "primary": "Point-to-point Alpine road ultra",
+      "surface": "Paved public roads from Ittigen to Zermatt under open-road race rules.",
+      "technical_rating": 4,
+      "features": ["Bern-region start", "Six feed zones", "Multiple Alpine climbs", "Long Valais approach", "Zermatt finish"]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 4,
+      "road_surface": 2,
+      "climate_risk": 5,
+      "altitude": 3,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 5,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 2,
+      "expenses": 5,
+      "cultural_impact": 0,
+      "overall_score": 73,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Grade uses the organizer's confirmed 2026 274 km route, 2:00 AM start, six feed zones, 8:00 PM cutoff, solo/team categories, timing, moto and ambulance support, neutral service, luggage transfer, and Zermatt finish. The current organizer page does not publish total elevation, so climbing is conservatively held at 4 and the profile does not invent a gain figure. Formula: 51/70 = 73. Re-grade when the next edition is announced. Sources: https://www.chasingcancellara.com/bern-zermatt and its 2026 rules."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": "mountainous",
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 5, "explanation": "The organizer confirms 274 km, far beyond the 200 km ultra threshold.[2]"},
+      "climbing": {"score": 4, "explanation": "The organizer describes multiple epic climbs and a Zermatt finish but does not state total elevation; 4 is deliberately conservative.[2]"},
+      "descent_technicality": {"score": 4, "explanation": "A 274 km Alpine crossing necessarily includes sustained mountain descents; the exact next-edition route remains pending.[2][3]"},
+      "road_surface": {"score": 2, "explanation": "The current event uses paved Swiss public roads and publishes no cobbled showcase sector.[2][3]"},
+      "climate_risk": {"score": 5, "explanation": "The 2:00 AM start and 18-hour race window expose riders to darkness and full-day Alpine weather changes.[2][3]"},
+      "altitude": {"score": 3, "explanation": "The route finishes in Zermatt at roughly 1,600 m; this is inside the 1,000-2,000 m band.[2]"},
+      "logistics": {"score": 3, "explanation": "Bern-region access is good, while car-free Zermatt and point-to-point luggage planning add complexity.[2]"},
+      "prestige": {"score": 3, "explanation": "Fabian Cancellara's name and the Matterhorn finish create international recognition without mass-event scale.[1][2]"},
+      "organization": {"score": 4, "explanation": "Timing, six feed zones, moto escort, ambulance, neutral service, signage, and luggage transfer support the grade.[2][3]"},
+      "scenic_experience": {"score": 5, "explanation": "A cross-Switzerland Alpine route ending under the Matterhorn is a destination-level scenic experience.[2]"},
+      "community_culture": {"score": 3, "explanation": "Multiple team categories, rankings, and finisher services create a coherent event community.[1][2]"},
+      "field_depth": {"score": 3, "explanation": "Timed solo and team categories with official rankings create structured competition.[2][3]"},
+      "value": {"score": 2, "explanation": "The support package is good, but the 2026 solo fee reached CHF 350 and no next-edition fee is available.[2]"},
+      "expenses": {"score": 5, "explanation": "Swiss hotels, two-city transport, a Zermatt finish, and premium entry make this a destination-level expense.[2]"}
+    },
+    "course_description": {
+      "character": "The confirmed 2026 race starts near Bern at 2:00 AM and gives riders eighteen hours to cover 274 kilometers to Zermatt. Solo riders race independently; couples and three-rider teams remain together, while relays divide the route.",
+      "signature_challenge": "Managing darkness, repeated Alpine climbing, and the final approach to Zermatt after more than 250 kilometers.",
+      "suffering_zones": ["Dark Ittigen start", "Early Alpine passes", "Long Valais approach", "Final Zermatt climb"]
+    },
+    "logistics": {
+      "airport": "Zurich (ZRH), Geneva (GVA), or Bern regional access",
+      "lodging_strategy": "Stay near Ittigen before the 2:00 AM start and reserve post-race lodging in car-free Zermatt early.",
+      "transport": "Use organizer luggage transfer and Swiss rail between the Bern region and Zermatt.",
+      "food": "Six feed zones plus a finisher meal were included in the confirmed 2026 package.",
+      "official_site": "https://www.chasingcancellara.com/bern-zermatt"
+    },
+    "history": {
+      "founded": 2017,
+      "origin_story": "Chasing Cancellara evolved from Fabian Cancellara's chase concept into a Swiss series; Bern-Zermatt became its longest flagship route.",
+      "notable_moments": ["2026: 274 km edition from Ittigen to Zermatt with an 18-hour race window"],
+      "reputation": "The series' hardest single-day identity and the one most closely associated with the Matterhorn finish."
+    },
+    "biased_opinion": {
+      "verdict": "The Big One—With a Big Asterisk",
+      "summary": "Bern-Zermatt has the strongest story in the series: 274 kilometers, a 2:00 AM start, and a finish in Zermatt. The asterisk is source quality for the next edition: no 2027 date exists and the current event page does not publish total elevation.",
+      "strengths": ["274-kilometer ultra distance", "Matterhorn finish", "Strong in-race support", "Flexible solo and team categories"],
+      "weaknesses": ["Very expensive trip", "Complex point-to-point logistics", "Current total elevation not published", "No next edition announced"],
+      "bottom_line": "A legitimate flagship ultra, but the plan pipeline must wait for the next date and roadbook instead of recycling 2026 assumptions."
+    },
+    "final_verdict": {
+      "score": "73 / 100",
+      "one_liner": "A 274-kilometer pre-dawn Alpine crossing with a Zermatt finish.",
+      "should_you_race": "Yes if ultra-distance mountain racing and a Matterhorn finish justify the Swiss cost. Wait for the next organizer roadbook before committing your training calendar.",
+      "alternatives": "Zürich-Andermatt publishes a more complete 2026 climb profile; Granfondo Vaduz is the compact timed-climb option.",
+      "alternative_slugs": ["chasing-cancellara-zurich-andermatt", "chasing-cancellara-granfondo-vaduz"]
+    },
+    "citations": [
+      {"url": "https://www.chasingcancellara.com/", "category": "official", "label": "Chasing Cancellara official series roster"},
+      {"url": "https://www.chasingcancellara.com/bern-zermatt", "category": "official", "label": "Bern-Zermatt official course, services, registration, and completed edition"},
+      {"url": "https://www.chasingcancellara.com/_files/ugd/ded0b9_6f347e4bb4f14d518747985c94eaaea4.pdf", "category": "official", "label": "Official 2026 Bern-Zermatt rules"}
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": null,
+      "facts_scope": "Official 2026 date, distance, start, cutoff, categories, services, and rules; no next-edition date, total elevation, or roadbook.",
+      "plan_status": "SOURCE BLOCKED — NEXT EDITION REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": null,
+      "ladder": "FULL-7",
+      "variation": "Ultra",
+      "blockers": ["No organizer-confirmed next-edition date, registration cycle, rules, or course is published; the current page does not state total elevation."],
+      "guard": "Do not invent an elevation total or project the September 12, 2026 schedule into a future plan. The next organizer roadbook overrides every historical planning reference."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://www.chasingcancellara.com/bern-zermatt",
+      "notes": "A timed competitive road ultra with official rankings; source-blocked only because no next edition is announced."
+    },
+    "research_metadata": {
+      "data_confidence": "high for confirmed 2026 distance and format; total elevation absent; next edition unannounced",
+      "validation_status": "source_blocked_for_next_edition",
+      "research_date": "2026-08-15",
+      "sources": ["https://www.chasingcancellara.com/", "https://www.chasingcancellara.com/bern-zermatt", "https://www.chasingcancellara.com/_files/ugd/ded0b9_6f347e4bb4f14d518747985c94eaaea4.pdf"]
+    }
+  }
+}

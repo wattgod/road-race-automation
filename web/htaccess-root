@@ -16,6 +16,11 @@ RewriteRule ^(.*)$ https://roadielabs.com/$1 [R=301,L]
 # emails + council copy use). One canonical, one 301.
 RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 
+# Chasing Cancellara is an organizer series, not one race. The retired generic
+# profile mixed three different formats and now resolves to the flagship route.
+RewriteRule ^race/chasing-cancellara/?$ /race/chasing-cancellara-bern-zermatt/ [R=301,L]
+RewriteRule ^race/chasing-cancellara/(.*)$ /race/chasing-cancellara-bern-zermatt/$1 [R=301,L]
+
 # chiang-mai-gran-fondo: fabricated-as-named (2026-07-23 audit — GFNY never
 # ran Chiang Mai; every reference was circular self-sourcing). Profile
 # tombstoned on main AND the race-page spine branch. Subpaths covered.
