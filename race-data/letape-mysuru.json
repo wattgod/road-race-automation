@@ -1,0 +1,125 @@
+{
+  "race": {
+    "name": "L'Étape Mysuru by Tour de France",
+    "slug": "letape-mysuru",
+    "display_name": "L'Étape Mysuru by Tour de France",
+    "tagline": "A closed-road 100-kilometer race through the scenic outskirts of Mysuru and Chamundi Hills.",
+    "vitals": {
+      "distance_km": 100,
+      "distance_mi": 62.1,
+      "elevation_m": 763,
+      "elevation_ft": 2503,
+      "location": "Mysuru, Karnataka, India",
+      "location_badge": "MYSURU, KARNATAKA, INDIA",
+      "country": "India",
+      "date": "October 4, 2026",
+      "date_specific": "2026: October 4 (Sunday)",
+      "field_size": "Not published",
+      "start_format": "06:00 closed-road timed race",
+      "registration": "Open through the official event site",
+      "entry_fee": "₹10,000 for the 100 km race",
+      "feed_zones": "Included; exact locations remain in final rider information",
+      "cutoff_time": "4 hours 30 minutes",
+      "route_options": ["Race: 100 km / 763 m", "Ride: 50 km", "Family Ride: 20 km", "Kids event: 1 km"]
+    },
+    "climate": {
+      "primary": "Warm, sunny conditions",
+      "description": "The official tourism page describes a sunny 25°C day. Riders should still use the final forecast for heat, rain, and wind.",
+      "challenges": ["Warm early-race temperatures", "Sun exposure", "A strict 4:30 cutoff", "Repeated speed changes on hilly roads"]
+    },
+    "terrain": {
+      "primary": "Hilly closed roads around Mysuru",
+      "surface": "Paved roads closed to traffic for the event; the organizer does not publish a pavement-condition inventory.",
+      "technical_rating": 2,
+      "features": ["Chamundi Hills setting", "Open countryside", "Lakes and forested roads", "763 meters of gain", "Timed and supported course"]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 3,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 4,
+      "cultural_impact": 2,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Mysuru is a moderate-distance, moderately hilly race with a genuinely useful closed-road package and a strict 4:30 cutoff. The destination and Tour branding are strong, while first-edition status and an unpublished field keep prestige and community grades conservative."
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 2, "explanation": "The official race is 100 km, inside the 80-120 km band.[1][2]"},
+      "climbing": {"score": 2, "explanation": "The organizer publishes 763 m of gain, inside the 500-1,500 m band.[1]"},
+      "descent_technicality": {"score": 2, "explanation": "The hilly route requires control but no technical-descent inventory supports a higher score.[1][2]"},
+      "road_surface": {"score": 2, "explanation": "The event uses closed paved roads without a published surface-condition audit.[1][2]"},
+      "climate_risk": {"score": 3, "explanation": "The organizer projects sunny 25°C conditions, enough for meaningful heat and hydration demand without an extreme grade.[4]"},
+      "altitude": {"score": 2, "explanation": "The event is hilly but publishes no high-pass claim; the score remains conservative.[1][4]"},
+      "logistics": {"score": 3, "explanation": "Mysuru is a substantial city, while international bike travel and race-day access still require regional planning.[3][4]"},
+      "prestige": {"score": 2, "explanation": "Tour de France branding adds recognition, but the official page identifies 2026 as the first edition.[4]"},
+      "organization": {"score": 4, "explanation": "A privatised timed route, feed stations, mechanical support, a welcome bag, medal, rules, and cutoff support a very-good grade.[2][3]"},
+      "scenic_experience": {"score": 3, "explanation": "Official pages describe Chamundi Hills, open countryside, lakes, and forested roads.[1][4]"},
+      "community_culture": {"score": 2, "explanation": "Four formats broaden participation, but a first edition has no established crowd or festival history.[1][4]"},
+      "field_depth": {"score": 3, "explanation": "A timed 100 km race with road-bike-only rules and intermediate cutoffs creates structured competition.[2][3]"},
+      "value": {"score": 4, "explanation": "₹10,000 includes a privatised timed course, aid, mechanical support, welcome bag, and medal.[2]"},
+      "expenses": {"score": 4, "explanation": "International travel to southern India and bike logistics create a destination-level total cost.[1][4]"}
+    },
+    "course_description": {
+      "character": "Mysuru's inaugural L'Étape uses a 100-kilometer closed-road race with 763 meters of climbing and a 06:00 start. The organizer describes the outskirts of Mysuru, Chamundi Hills, open countryside, lakes, and forested roads. A 4:30 cutoff makes sustained speed and disciplined pacing more important than the moderate gain suggests.",
+      "signature_challenge": "Holding a strong all-round pace over 100 hilly kilometers while staying ahead of a 4:30 cutoff.",
+      "suffering_zones": ["The early 06:00 race pace", "Hilly roads around Chamundi Hills", "Open countryside and heat exposure", "The final push against the cutoff"]
+    },
+    "logistics": {
+      "airport": "Mysuru has regional air access; many international riders will connect through Bengaluru. Confirm current bike and ground-transfer rules before booking.",
+      "lodging_strategy": "Stay in Mysuru near official race services and confirm secure bike storage and breakfast before the 06:00 start.",
+      "transport": "Use the final event schedule for start access, parking, packet pickup, and closed-road arrival windows.",
+      "food": "Bring familiar race nutrition and use the final feed-station map for refill planning.",
+      "official_site": "https://mysuru.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "L'Étape Mysuru brings the Tour de France-branded amateur race format to India with a four-format event around Karnataka's cultural capital.",
+      "notable_moments": ["2026: Mysuru hosts the inaugural edition on October 4"],
+      "reputation": "A new closed-road Indian gran fondo with a serious cutoff and an accessible 100-kilometer headline distance."
+    },
+    "biased_opinion": {
+      "verdict": "The Cutoff Race",
+      "summary": "Mysuru's numbers look approachable until the 4:30 cutoff enters the equation. This is not a century-length survival event; it rewards riders who can stay efficient, handle rolling pace changes, and keep moving through a professionally supported closed-road course.",
+      "strengths": ["Closed and timed roads", "Mechanical and feed support", "Clear 100 km target", "Chamundi Hills setting", "Good package value"],
+      "weaknesses": ["First edition", "No published field size", "No detailed public route map", "Limited plan runway"],
+      "bottom_line": "A credible first-year race for all-round road riders, with a cutoff strict enough to demand real preparation."
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "A closed-road 100-kilometer race through the scenic outskirts of Mysuru and Chamundi Hills.",
+      "should_you_race": "Race it for a timed, supported Indian L'Étape on closed roads; skip it if you want a long history or a fully published technical route guide.",
+      "alternatives": "L'Étape Sun Moon Lake for a more established Asian mountain race or L'Étape Leshan for a comparable 100-kilometer format."
+    },
+    "citations": [
+      {"url": "https://mysuru.letapeseries.com/", "category": "official", "label": "Official date, distance, elevation, formats, and race overview"},
+      {"url": "https://mysuru.letapeseries.com/route/60", "category": "official", "label": "Official 100 km package and price"},
+      {"url": "https://mysuru.letapeseries.com/rules", "category": "official", "label": "Official eligibility, bike, safety, and cutoff rules"},
+      {"url": "https://mysuru.letapeseries.com/tourism", "category": "official", "label": "Official destination, first-edition, scenery, and climate context"}
+    ],
+    "eligibility": {"status": "active", "verified": "2026-08-15", "source": "https://mysuru.letapeseries.com/", "notes": "Registration is open for the October 4, 2026 competitive 100 km road race. Riders must be 18+, use an approved road/racing bicycle, and finish within 4:30."},
+    "source_review": {"reviewed_at": "2026-08-15", "race_date": "2026-10-04", "facts_scope": "Date, start time, distance, gain, closed-road timing, inclusions, fee, bike rules, age floor, cutoff, destination, and advertised climate verified. Exact roads, aid locations, field size, and pavement detail remain unpublished."},
+    "training_plan_clearance": {
+      "status": "ready",
+      "reviewed_at": "2026-08-15",
+      "source": "https://mysuru.letapeseries.com/rules",
+      "race_date": "2026-10-04",
+      "ladder": "SMR-1",
+      "variation": "All-Rounder",
+      "blockers": [],
+      "notes": "Build the Sunday-race six-week Save My Race plan around 100 km, 763 m, hilly closed roads, a 06:00 start, and the strict 4:30 cutoff. Emphasize sustainable group speed, rolling surges, heat-aware hydration, and uninterrupted pacing."
+    }
+  }
+}

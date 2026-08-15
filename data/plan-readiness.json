@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:32:41",
+  "generated_at": "2026-08-15T06:18:53",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4566,6 +4566,28 @@
         "no parsed future date"
       ]
     },
+    "letape-encarnacion": {
+      "slug": "letape-encarnacion",
+      "tier": 2,
+      "score": 60,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: The May 31, 2026 inaugural edition is complete and no organizer-confirmed next-edition date or course is published."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
     "letape-greece": {
       "slug": "letape-greece",
       "tier": 3,
@@ -4582,6 +4604,25 @@
       "ready": true,
       "runway_weeks": 33,
       "race_date": "2027-04-04",
+      "blockers": [],
+      "plan_clearance_status": "ready"
+    },
+    "letape-hermosillo": {
+      "slug": "letape-hermosillo",
+      "tier": 3,
+      "score": 56,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 9,
+      "race_date": "2026-10-18",
       "blockers": [],
       "plan_clearance_status": "ready"
     },
@@ -4643,6 +4684,71 @@
         "no parsed future date"
       ]
     },
+    "letape-la-paz": {
+      "slug": "letape-la-paz",
+      "tier": 2,
+      "score": 63,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: The March 1, 2026 edition is complete and no organizer-confirmed next-edition date or registration cycle is published."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
+    "letape-leshan": {
+      "slug": "letape-leshan",
+      "tier": 2,
+      "score": 63,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": 4,
+      "race_date": "2026-09-13",
+      "blockers": [
+        "plan clearance: The confirmed September 13, 2026 date is inside the six-week product floor, and the event site still exposes only 2025 route and regulation detail."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
+    "letape-marmaris": {
+      "slug": "letape-marmaris",
+      "tier": 2,
+      "score": 66,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": false,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": null,
+      "race_date": null,
+      "blockers": [
+        "no parsed future date",
+        "plan clearance: The organizer confirms a 2027 return but has not published the exact date, registration cycle, or edition-specific route."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
     "letape-mexico-city": {
       "slug": "letape-mexico-city",
       "tier": 2,
@@ -4659,6 +4765,25 @@
       "runway_weeks": 13,
       "race_date": "2026-11-15",
       "blockers": []
+    },
+    "letape-mysuru": {
+      "slug": "letape-mysuru",
+      "tier": 3,
+      "score": 57,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 7,
+      "race_date": "2026-10-04",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "letape-norway": {
       "slug": "letape-norway",
@@ -4755,6 +4880,27 @@
       "race_date": "2026-08-30",
       "blockers": []
     },
+    "letape-san-bernardino": {
+      "slug": "letape-san-bernardino",
+      "tier": 2,
+      "score": 60,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": 4,
+      "race_date": "2026-09-13",
+      "blockers": [
+        "plan clearance: The confirmed September 13, 2026 race is inside the six-week product floor; an organizer-confirmed later edition date is required."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
     "letape-serra-negra": {
       "slug": "letape-serra-negra",
       "tier": 2,
@@ -4806,6 +4952,27 @@
       "race_date": "2026-09-05",
       "blockers": []
     },
+    "letape-tabasco": {
+      "slug": "letape-tabasco",
+      "tier": 3,
+      "score": 57,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": 3,
+      "race_date": "2026-09-06",
+      "blockers": [
+        "plan clearance: The confirmed September 6, 2026 race is inside the six-week product floor; an organizer-confirmed later edition date is required."
+      ],
+      "plan_clearance_status": "source_blocked"
+    },
     "letape-taiwan": {
       "slug": "letape-taiwan",
       "tier": 2,
@@ -4842,6 +5009,27 @@
         "no parsed future date",
         "eligibility unverified (unknown)"
       ]
+    },
+    "letape-tlaxcala": {
+      "slug": "letape-tlaxcala",
+      "tier": 2,
+      "score": 67,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": false
+      },
+      "eligibility_status": "active",
+      "ready": false,
+      "runway_weeks": 0,
+      "race_date": "2026-08-16",
+      "blockers": [
+        "plan clearance: The confirmed 2026 race is tomorrow; an organizer-confirmed later edition date and current course are required."
+      ],
+      "plan_clearance_status": "source_blocked"
     },
     "letape-trondheim": {
       "slug": "letape-trondheim",
@@ -7835,6 +8023,7 @@
     "bike-ms-nyc",
     "hong-kong-cyclothon",
     "bowral-classic",
+    "letape-hermosillo",
     "letape-taiwan",
     "gran-fondo-argentina",
     "munsterland-giro",
@@ -7843,6 +8032,7 @@
     "gran-fondo-chile-uci",
     "gran-fondo-maryland",
     "gfny-maryland-cambridge",
+    "letape-mysuru",
     "prosecco-cycling",
     "sea-otter-ciclobrava",
     "letape-brazil",
@@ -7863,7 +8053,9 @@
     "crc-506-gran-fondo-costa-rica",
     "gfny-dominican-republic",
     "gfny-ottawa",
+    "letape-leshan",
     "rbc-granfondo-whistler",
+    "letape-san-bernardino",
     "amys-gran-fondo",
     "gran-fondo-montevideo",
     "alpenbrevet",
@@ -7871,6 +8063,7 @@
     "tour-o-the-borders",
     "gfny-colonia",
     "letape-slovenia",
+    "letape-tabasco",
     "otztaler-radmarathon",
     "birkebeinerrittet-road",
     "hottern-hell-hundred",
@@ -7994,6 +8187,7 @@
     "gran-fondo-pirineus",
     "granfondo-laigueglia",
     "gruyere-cycling-tour",
+    "letape-tlaxcala",
     "london-edinburgh-london",
     "nxt-classic",
     "pan-mass-challenge",
@@ -8005,6 +8199,7 @@
     "gfny-aguascalientes",
     "gfny-uppsala",
     "granfondo-alpe-adria",
+    "letape-marmaris",
     "majka-gran-fondo",
     "redlands-bicycle-classic",
     "utrecht-ultra-xl",
@@ -8032,6 +8227,7 @@
     "granfondo-pinarello",
     "granfondo-san-sebastian",
     "letape-italy-piemonte",
+    "letape-la-paz",
     "levis-granfondo",
     "raul-alcala-challenge-oaxaca",
     "sudety-tour",
@@ -8047,6 +8243,7 @@
     "cape-rouleur",
     "cykelvasan",
     "letape-australia",
+    "letape-encarnacion",
     "nordic-chase-copenhagen-oslo-road",
     "pekan-classics",
     "race-around-ireland",
@@ -8215,15 +8412,15 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 417,
-    "ready": 172,
-    "content_present": 405,
-    "validator_clean": 417,
+    "total": 426,
+    "ready": 174,
+    "content_present": 414,
+    "validator_clean": 426,
     "pilot_candidates": 103,
     "by_tier_ready": {
       "1": 14,
       "2": 135,
-      "3": 23,
+      "3": 25,
       "4": 0
     }
   }
