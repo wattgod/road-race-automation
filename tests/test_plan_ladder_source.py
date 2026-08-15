@@ -33,3 +33,23 @@ def test_boone_and_panama_publish_the_complete_full_7_ladders():
     assert all(plan["url"].endswith(f"tp-{plan['planId']}/p") for slug in (
         "boone-gran-fondo", "gran-fondo-panama"
     ) for plan in links[slug])
+
+
+def test_millars_publishes_the_complete_full_7_ladder():
+    links = json.loads(
+        (Path(__file__).resolve().parent.parent / "data" / "tp-race-plan-links.json")
+        .read_text(encoding="utf-8")
+    )
+
+    millars = links["the-millars-gran-fondo"]
+    assert [plan["planId"] for plan in millars] == [
+        669673,
+        669674,
+        669675,
+        669676,
+        669677,
+        669678,
+        669679,
+    ]
+    assert [plan["price"] for plan in millars] == [99, 79, 99, 79, 99, 99, 69]
+    assert all(plan["url"].endswith(f"tp-{plan['planId']}/p") for plan in millars)
