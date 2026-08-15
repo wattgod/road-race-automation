@@ -2,6 +2,19 @@
 
 Source: codex exec (gpt-5.6-sol, web search), 2026-07-24.
 
+## 2027 date verification — 2026-08-14
+
+The organizer's registration page embeds RaceResult event `395104`. That organizer-linked event
+confirms the fourth Krk Gran Fondo for **Saturday, April 24, 2027** in four independent fields:
+the page title, meta description, JSON-LD `startDate`/`endDate`, and visible event header.
+
+- Organizer registration page: https://krkgranfondo.com/index.php/en/register/
+- Embedded official event: https://my.raceresult.com/395104/
+
+The exact date is now confirmed, but the organizer homepage, route map, rules, feed-zone details,
+and propositions remain explicitly 2026-specific. Do not carry the 82 km / 1,320 m course into a
+2027 TrainingPeaks product until the organizer publishes a 2027 course or states that it is unchanged.
+
 ## Identity resolution
 
 This is specifically **Krk Granfondo Falkensteiner Punat** — an island circuit based in Punat.
