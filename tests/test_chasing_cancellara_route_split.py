@@ -165,12 +165,20 @@ def test_catalog_artifacts_replace_the_generic_series_identity() -> None:
 
 def test_generic_urls_redirect_to_the_flagship_route() -> None:
     redirects = (ROOT / "web" / "htaccess-root").read_text(encoding="utf-8")
+    deploy_source = (ROOT / "scripts" / "push_wordpress.py").read_text(
+        encoding="utf-8"
+    )
 
-    assert (
+    exact_rule = (
         "RewriteRule ^race/chasing-cancellara/?$ "
         "/race/chasing-cancellara-bern-zermatt/ [R=301,L]"
-    ) in redirects
-    assert (
+    )
+    subpath_rule = (
         "RewriteRule ^race/chasing-cancellara/(.*)$ "
         "/race/chasing-cancellara-bern-zermatt/$1 [R=301,L]"
-    ) in redirects
+    )
+
+    assert exact_rule in redirects
+    assert subpath_rule in redirects
+    assert exact_rule in deploy_source
+    assert subpath_rule in deploy_source

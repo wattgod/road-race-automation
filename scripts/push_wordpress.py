@@ -1391,6 +1391,12 @@ RewriteRule ^race/chiang-mai-gran-fondo/(.*)$ /road-races/ [R=301,L]
 RewriteRule ^race/gfny-bali/?$ /race/gfny-belitung/ [R=301,L]
 RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
 
+# Chasing Cancellara is an organizer series, not one race. The retired generic
+# profile mixed three different formats. Its physical page directory must stay
+# retired because SiteGround nginx serves existing files before this rule.
+RewriteRule ^race/chasing-cancellara/?$ /race/chasing-cancellara-bern-zermatt/ [R=301,L]
+RewriteRule ^race/chasing-cancellara/(.*)$ /race/chasing-cancellara-bern-zermatt/$1 [R=301,L]
+
 # gran-fondo-greece-loutraki -> gran-fondo-loutraki (duplicate profile of the
 # same event, adjudicated deleted 2026-07-20; canonical page carries the
 # published plan ladder). NOTE: the physical page dir must stay deleted on the
@@ -1531,7 +1537,7 @@ def sync_redirects():
             print(f"✗ Failed to write .htaccess: {proc.stderr.strip()}")
             return False
         print("✓ Redirect rules deployed to .htaccess")
-        print("  5 utility redirects + 27 duplicate content redirects (301)")
+        print("  Roadie Labs utility and duplicate-content redirects active (301)")
         return True
     except Exception as e:
         print(f"✗ Failed to upload .htaccess: {e}")
