@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T11:15:52",
+  "generated_at": "2026-08-15T13:42:50",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -4085,16 +4085,14 @@
         "course_character": true,
         "future_date": true,
         "active_registerable": true,
-        "plan_clearance": false
+        "plan_clearance": true
       },
       "eligibility_status": "active",
-      "ready": false,
+      "ready": true,
       "runway_weeks": 36,
       "race_date": "2027-04-24",
-      "blockers": [
-        "plan clearance: The organizer has not published a 2027 course, distance, climbing total, rules, feed zones, or cutoff, and has not stated that the 2026 course is unchanged."
-      ],
-      "plan_clearance_status": "source_blocked"
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "la-leggendaria-charly-gaul": {
       "slug": "la-leggendaria-charly-gaul",
@@ -8414,14 +8412,14 @@
   ],
   "summary": {
     "total": 426,
-    "ready": 175,
+    "ready": 176,
     "content_present": 414,
     "validator_clean": 426,
     "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
       "2": 136,
-      "3": 25,
+      "3": 26,
       "4": 0
     }
   }
