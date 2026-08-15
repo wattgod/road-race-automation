@@ -119,6 +119,9 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
     if not date_str:
         logger.debug("Empty date string — skipping")
         return None, None
+    if date_str.strip().upper().startswith("TBD"):
+        logger.debug("TBD date string — skipping: %s", date_str)
+        return None, None
 
     # Strip day-of-week and ordinal suffixes
     clean = re.sub(
@@ -481,6 +484,10 @@ def normalize_race_data(data: dict) -> dict:
         'name': race.get('display_name') or race.get('name', 'Unknown Race'),
         # R4 eligibility (2026-07-23): drives the not-running commerce gate
         'eligibility': race.get('eligibility') or {},
+        # Explicit TrainingPeaks clearance can keep an active event's guide
+        # public while blocking race-specific plan commerce until the next
+        # edition is sufficiently sourced.
+        'training_plan_clearance': race.get('training_plan_clearance') or {},
         'slug': race.get('slug', ''),
         'tagline': race.get('tagline', ''),
         'overall_score': rating.get('overall_score', 0),
@@ -4248,13 +4255,14 @@ def _load_plans_by_slug() -> dict:
 
 
 def build_status_notice(rd: dict) -> str:
-    """Honest not-running notice for defunct/cancelled races (2026-07-23).
+    """Honest event or plan-readiness notice shown before commercial copy.
 
     Trust-first: the profile stays up as a record, but a visitor planning a
     season must see the status before anything sells to them. Plan commerce
     (custom-plan offer, plan ladder) is suppressed on these pages; coaching
     stays (bikepacking-shelf precedent)."""
     status = (rd.get('eligibility') or {}).get('status')
+    clearance = rd.get('training_plan_clearance') or {}
     if status == 'defunct':
         msg = ("This event is no longer running. The profile stays up as a "
                "record&mdash;the ratings describe the race as it was.")
@@ -4263,6 +4271,17 @@ def build_status_notice(rd: dict) -> str:
         msg = ("The upcoming edition has been cancelled. Check the "
                "organizer&rsquo;s site before planning a season around this one.")
         label = "EDITION CANCELLED"
+    elif clearance.get('status') == 'source_blocked':
+        blockers = clearance.get('blockers') or []
+        detail = blockers[0] if blockers and isinstance(blockers[0], str) else (
+            "The organizer has not published enough next-edition detail for "
+            "a defensible race-specific plan."
+        )
+        msg = (
+            f"{esc(detail)} The race guide remains available, but plan sales "
+            "will open only after those first-party details are confirmed."
+        )
+        label = "PLAN DETAILS PENDING"
     else:
         return ''
     return f'''<div class="rl-status-notice" role="note">
@@ -6153,11 +6172,15 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     # commerce — selling a $15/wk build for a race that will not happen is a
     # trust breach. Coaching stays; an honest status notice renders instead.
     not_running = (rd.get('eligibility') or {}).get('status') in ('defunct', 'cancelled')
+    plan_source_blocked = (
+        (rd.get('training_plan_clearance') or {}).get('status') == 'source_blocked'
+    )
+    commerce_blocked = not_running or plan_source_blocked
     status_notice = build_status_notice(rd)
-    custom_plan = '' if not_running else build_custom_plan_offer(rd)
+    custom_plan = '' if commerce_blocked else build_custom_plan_offer(rd)
     coaching = build_coaching_footnote(rd)
     training = build_training_intelligence(rd)
-    plan_ladder = '' if not_running else build_plan_ladder(rd)
+    plan_ladder = '' if commerce_blocked else build_plan_ladder(rd)
     train_for_race = build_train_for_race(rd, include_commerce=False)
     logistics_sec = build_logistics_section(rd)
     tire_picks = build_tire_picks(rd)

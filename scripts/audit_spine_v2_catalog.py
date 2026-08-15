@@ -20,18 +20,19 @@ def audit_page(path: Path) -> list[str]:
     html = path.read_text(encoding="utf-8")
     issues: list[str] = []
 
-    # Defunct/cancelled races intentionally suppress the plan CTAs
-    # (generate_neo_brutalist: eligibility.status in ('defunct','cancelled')
-    # blanks custom_plan/plan_ladder, 2026-07-23). Mirror that: don't require
-    # commerce markers on not-running races. Detect via the profile, not the
-    # HTML, so a page that wrongly DROPS the notice still fails elsewhere.
+    # Defunct/cancelled and source-blocked races intentionally suppress plan
+    # CTAs. Mirror the generator's commerce gate here: a profile that cannot
+    # honestly anchor a plan must not fail merely because commerce is absent,
+    # but it must fail if that commerce leaks back into the page.
     profile = PROJECT_ROOT / "race-data" / f"{path.stem}.json"
     if profile.exists():
         with open(profile, "r", encoding="utf-8") as f:
             raw = json.load(f)
-        status = ((raw.get("race") or {}).get("eligibility") or {}).get("status")
-        if status in ("defunct", "cancelled"):
-            return _audit_not_running_page(html)
+        race = raw.get("race") or {}
+        status = (race.get("eligibility") or {}).get("status")
+        clearance = (race.get("training_plan_clearance") or {}).get("status")
+        if status in ("defunct", "cancelled") or clearance == "source_blocked":
+            return _audit_commerce_blocked_page(html)
     try:
         deep_start = html.index('id="deep-dive"')
         deep_end = html.index('<footer class="rl-mega-footer">', deep_start)
@@ -96,10 +97,8 @@ def audit_page(path: Path) -> list[str]:
     return issues
 
 
-def _audit_not_running_page(html: str) -> list[str]:
-    """Spine variant for defunct/cancelled races: plan commerce is
-    intentionally suppressed (custom_plan/plan_ladder blanked) and an honest
-    status notice renders instead. Everything else must still hold."""
+def _audit_commerce_blocked_page(html: str) -> list[str]:
+    """Spine variant for races where plan commerce is intentionally blocked."""
     issues: list[str] = []
     try:
         deep_start = html.index('id="deep-dive"')
@@ -128,9 +127,9 @@ def _audit_not_running_page(html: str) -> list[str]:
     if html.count(EXPECTED_FORMAT) != 1:
         issues.append("missing or duplicated approved page-format marker")
     if "rl-status-notice" not in html:
-        issues.append("not-running race is missing the status notice")
+        issues.append("commerce-blocked race is missing the status notice")
     if 'data-measure-section="custom-plan"' in html or "START MY CUSTOM PLAN" in html:
-        issues.append("plan commerce present on a not-running race (trust breach)")
+        issues.append("plan commerce present on a commerce-blocked race (trust breach)")
     if 'id="verdict"' in html:
         issues.append("standalone verdict is present")
 

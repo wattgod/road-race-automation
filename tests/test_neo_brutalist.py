@@ -725,6 +725,11 @@ class TestParseEventDates:
     def test_tbd(self):
         assert parse_event_dates("2026: TBD") == (None, None)
 
+    def test_tbd_prefix_does_not_turn_a_published_window_into_race_day(self):
+        assert parse_event_dates(
+            "TBD — 2027 event window: June 5-10; exact grand depart pending"
+        ) == (None, None)
+
     def test_empty(self):
         assert parse_event_dates("") == (None, None)
 
