@@ -5,24 +5,27 @@
     "display_name": "Iron Horse Bicycle Classic",
     "tagline": "Race the train. 47 miles. Two 10,000-foot passes. Durango to Silverton since 1972.",
     "vitals": {
-      "distance_km": 80.5,
-      "distance_mi": 50.0,
-      "elevation_m": 1829,
-      "elevation_ft": 6000.0,
+      "distance_km": 75.6,
+      "distance_mi": 47.0,
+      "elevation_m": 1737,
+      "elevation_ft": 5700.0,
       "location": "Durango, Colorado",
       "location_badge": "DURANGO, CO",
       "country": "Colorado",
       "date": "Memorial Day weekend annually",
-      "date_specific": "2026: May 22-24 festival, with the road race and citizens' tour on Saturday, May 23 (file's prior May 24 date was the festival closer, not race day). 2027 date not yet posted.",
+      "date_specific": "2027: May 29",
       "field_size": "2,000+ riders (all events)",
-      "start_format": null,
-      "registration": "Online. Road Race: $145. Citizen Tour: ~$100. Quarter Horse: ~$80. USA Cycling license required for road race.",
-      "entry_fee": null,
-      "feed_zones": "Multiple aid stations along Highway 550 course",
+      "start_format": "Category waves from Durango; the current organizer schedule starts the competitive road race at 7:15 AM, subject to the final 2027 rider guide",
+      "registration": "2027 registration and pricing are not yet posted. The competitive road race requires a USA Cycling license.",
+      "entry_fee": "2027 price pending; 2026 road-race pricing was $150 early, $175 regular, and $190 in person",
+      "feed_zones": "Four official support stations on the current Durango-to-Silverton course",
       "cutoff_time": "Coal Bank Pass by 12:40 PM, Molas Pass by 1:20 PM",
       "lat": 37.2753,
       "lng": -107.8801,
-      "route_options": []
+      "route_options": [
+        "Coca-Cola Road Race: 47 miles point to point from Durango to Silverton over Coal Bank and Molas passes",
+        "McDonald's Citizen Tour: 50-mile noncompetitive event on the same Durango-to-Silverton corridor"
+      ]
     },
     "climate": {
       "primary": "High-altitude mountain spring",
@@ -72,15 +75,18 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 79. adventure dimension dropped, road_surface added. Score recalculated: 74."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 2,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        "Coal Bank Pass — 10,640-foot summit and the first race-defining selection",
+        "Molas Pass — 10,910-foot summit before the descent and false-flat run into Silverton"
+      ],
+      "profile_type": "High-altitude point-to-point race over two major paved mountain passes",
+      "king_of_mountain": "Molas Pass is the course high point, but riders must preserve enough power after Coal Bank Pass to race it rather than merely survive it.",
+      "_needs_enrichment": false
     },
     "course_description": {
       "character": "A point-to-point mountain road race on closed US Highway 550 through the heart of the San Juan Mountains. Two passes above 10,000 feet, a net elevation gain of 2,806 feet, and the narrow gauge train running alongside for the first 10 miles. Simple concept, demanding execution.",
@@ -110,7 +116,7 @@
         "2022: 50th anniversary celebration with return to pre-pandemic participation numbers",
         "2024: Sabotage incident with thumbtacks causing 50+ flat tires near County Road 203",
         "2025: 53rd running with Sepp Kuss-era Durango cycling renaissance",
-        "2026: Will host Colorado Gravel State Championships alongside traditional road events"
+        "2026: Hosted Colorado Gravel State Championships alongside the traditional road events"
       ],
       "reputation": "Colorado's oldest and most iconic cycling event. The original man versus machine challenge that has become a Memorial Day weekend institution."
     },
@@ -135,7 +141,7 @@
     },
     "final_verdict": {
       "score": "74/100",
-      "one_liner": "Fifty-three years of man versus machine through the San Juan Mountains — Colorado's definitive cycling tradition.",
+      "one_liner": "More than half a century of man versus machine through the San Juan Mountains — Colorado's definitive cycling tradition.",
       "should_you_race": "If you love mountain road racing and want an event steeped in history with a genuinely unique concept, absolutely. If you need flat-course speed or a pure criterium experience, this is not your race. The altitude and climbing demand respect — prepare accordingly.",
       "alternatives": "For similar mountain road racing: Mount Washington Hillclimb (pure climbing). For Colorado cycling heritage: Ride the Rockies (touring). For similar altitude challenges: Leadville Trail 100 (different format, same thin air). For closed-road mountain experiences: Bob Cook Memorial Mount Evans Hill Climb."
     },
@@ -148,7 +154,7 @@
       {
         "url": "https://www.ironhorsebicycleclassic.com",
         "category": "official",
-        "label": "Iron Horse Bicycle Classic Official Site"
+        "label": "Official Homepage — Annual Memorial Weekend Rule and Saturday Road-Race Pattern"
       },
       {
         "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=about",
@@ -158,7 +164,7 @@
       {
         "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=coke",
         "category": "official",
-        "label": "Coca-Cola Road Race Details"
+        "label": "Official Coca-Cola Road Race — 47 Miles, Competitive Format, Passes, Support and Cutoffs"
       },
       {
         "url": "https://www.ironhorsebicycleclassic.com/index.php?nav=mcdonalds",
@@ -221,6 +227,22 @@
         "label": "Reddit: IHBC Ride Profile"
       }
     ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": "2027-05-29",
+      "date_basis": "The organizer states that the event runs every year on Memorial Weekend and publishes the competitive road race as the Saturday event. In 2027, the Saturday of Memorial Day weekend is May 29.",
+      "plan_status": "CLEARED FOR FULL-7 ROADIE LABS PLAN BUILD",
+      "course_basis": "The current official road-race page defines the stable race identity: 47 miles point to point from Durango to Silverton, two passes above 10,000 feet, category starts, four support stations, and Coal Bank/Molas cutoff gates.",
+      "guard": "Use Saturday May 29, 2027 to anchor Race Day from the organizer's annual rule. The final 2027 schedule, registration, pricing, start waves, rider guide, support plan, cutoff policy, road closure, route file, and weather decision override current operational detail."
+    },
+    "training_plan_clearance": {
+      "status": "ready",
+      "race_date": "2027-05-29",
+      "ladder": "FULL-7",
+      "variation": "Alpine-Fondo",
+      "blockers": [],
+      "guard": "Build for the stable 47-mile Durango-to-Silverton competition over Coal Bank and Molas passes. Treat all 2027 operational details beyond the Saturday Memorial Day date as pending until the organizer publishes the final rider guide."
+    },
     "youtube_data": {
       "researched_at": "2026-02-23",
       "search_query": "Iron Horse Bicycle Classic road race Durango Silverton",
@@ -400,8 +422,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.ironhorsebicycleclassic.com/index.php?nav=schedule"
+      "verified": "2026-08-15",
+      "source": "https://www.ironhorsebicycleclassic.com/",
+      "notes": "CLEARED FOR PLAN BUILD. The organizer's annual Memorial Weekend rule plus its Saturday competitive road-race pattern establishes May 29, 2027. The 47-mile Durango-to-Silverton course over Coal Bank and Molas passes is the stable training contract; final 2027 operational documents override current details."
     }
   }
 }
