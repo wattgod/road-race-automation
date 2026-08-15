@@ -1,0 +1,124 @@
+{
+  "race": {
+    "name": "L'Étape Tabasco by Tour de France",
+    "slug": "letape-tabasco",
+    "display_name": "L'Étape Tabasco by Tour de France",
+    "tagline": "A fast 135-kilometer tropical race from Villahermosa with just 389 meters of climbing.",
+    "vitals": {
+      "distance_km": 135,
+      "distance_mi": 83.9,
+      "elevation_m": 389,
+      "elevation_ft": 1276,
+      "location": "Villahermosa, Tabasco, Mexico",
+      "location_badge": "VILLAHERMOSA, TABASCO, MEXICO",
+      "country": "Mexico",
+      "date": "September 6, 2026",
+      "date_specific": "2026: September 6 (Sunday)",
+      "field_size": "Government announcement projected more than 4,700 riders",
+      "start_format": "Timed flat L'Étape long, short, and sprint routes from Villahermosa",
+      "registration": "Official page points to ASDeporte; confirm availability before travel",
+      "entry_fee": "See official registration",
+      "feed_zones": "Final participant information controls support locations",
+      "cutoff_time": "Not published",
+      "route_options": ["Long: 135 km / 389 m", "Short: 55 km / 144 m", "Sprint: 38 km / 87 m"]
+    },
+    "climate": {
+      "primary": "Hot, humid tropical lowland conditions",
+      "description": "The organizer presents a lowland route through tropical vegetation, rivers, mangroves, and Gulf-influenced roads. September heat and humidity are central demands; use the final forecast for storms and wind.",
+      "challenges": ["High heat and humidity", "Heavy sweat loss", "Possible tropical rain", "Long exposed flat sections"]
+    },
+    "terrain": {
+      "primary": "Flat tropical road course",
+      "surface": "Paved road race; the organizer publishes no current pavement-condition inventory.",
+      "technical_rating": 1,
+      "features": ["135 km with only 389 m climbing", "Villahermosa start and finish", "Tropical vegetation and rivers", "Long steady-speed sectors"]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 1,
+      "descent_technicality": 1,
+      "road_surface": 2,
+      "climate_risk": 5,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 2,
+      "overall_score": 57,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Tabasco's difficulty comes from 135 kilometers at sustained speed in tropical heat rather than climbing. A.S.O. structure, a government-backed first edition, and a distinctive river-and-mangrove setting create a credible national race, but the new event lacks results history and a detailed participant guide."
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 3, "explanation": "The official long route is 135 km, inside the 120-160 km band.[1][2]"},
+      "climbing": {"score": 1, "explanation": "The organizer publishes only 389 m of gain, below the 500 m flat threshold.[1][2]"},
+      "descent_technicality": {"score": 1, "explanation": "The official profile is flat and does not identify technical descents.[1][2]"},
+      "road_surface": {"score": 2, "explanation": "The course is paved road racing without a published pavement-condition audit.[1][3]"},
+      "climate_risk": {"score": 5, "explanation": "The organizer describes tropical jungle, mangrove, river, and Gulf conditions for a September lowland race, making heat and humidity the defining risk.[1][3]"},
+      "altitude": {"score": 1, "explanation": "The flat Villahermosa course publishes no high-altitude feature.[1][2]"},
+      "logistics": {"score": 2, "explanation": "Villahermosa is the start and finish hub, and the government cites its connectivity and infrastructure.[1][3]"},
+      "prestige": {"score": 2, "explanation": "Tour branding provides recognition, but 2026 is Tabasco's first edition.[1][3]"},
+      "organization": {"score": 4, "explanation": "A.S.O., the Mexico serial, and state-government coordination support a very-good organizational expectation.[1][3][4]"},
+      "scenic_experience": {"score": 4, "explanation": "Official sources emphasize tropical vegetation, rivers, mangroves, Gulf influence, and a multi-municipality route.[1][3]"},
+      "community_culture": {"score": 3, "explanation": "The state positions the race as a major tourism and community event, though no completed-edition evidence exists yet.[3]"},
+      "field_depth": {"score": 3, "explanation": "The government projects more than 4,700 riders and the Mexico serial ranks age categories; actual first-edition depth remains unproven.[3][4]"},
+      "value": {"score": 3, "explanation": "Three distances and L'Étape event structure support a neutral value grade while the public fee remains unclear.[1][4]"},
+      "expenses": {"score": 4, "explanation": "International travel to southeastern Mexico makes this a destination-level expense for a global audience.[1][3]"}
+    },
+    "course_description": {
+      "character": "The current official page describes a 135-kilometer flat race from Villahermosa through tropical southeastern Mexico. The state announcement routes the long course through Teapa, Tacotalpa, Jalapa, and Playas del Rosario before returning to Villahermosa. With only 389 meters of climbing, the decisive demands are speed, heat management, drafting judgment, and nutrition.",
+      "signature_challenge": "Holding aerodynamic race speed for 135 kilometers while replacing fluid and sodium in tropical heat.",
+      "suffering_zones": ["The fast opening from Villahermosa", "Long exposed lowland sectors", "The Teapa-Tacotalpa-Jalapa circuit", "The hot return toward Villahermosa"]
+    },
+    "logistics": {
+      "airport": "Villahermosa is the event hub. Confirm current airport-to-hotel and closure information before travel.",
+      "lodging_strategy": "Stay in Villahermosa near official race services and confirm secure bike storage and an early breakfast.",
+      "transport": "The event is advertised as a Villahermosa loop; final participant information controls exact start, parking, and closures.",
+      "food": "Heat changes the nutrition problem. Carry practiced fluids and sodium and use the final aid map for refill planning.",
+      "official_site": "https://tabasco.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Tabasco joined the L'Étape Mexico calendar in 2026 as a new Villahermosa-based event designed to showcase the state's tropical landscape and sports-tourism infrastructure.",
+      "notable_moments": ["2026: Tabasco government and L'Étape announce the inaugural September 6 edition"],
+      "reputation": "A new, unusually flat L'Étape race where climate and group speed replace mountain spectacle."
+    },
+    "biased_opinion": {
+      "verdict": "The Heat Trial",
+      "summary": "Tabasco is almost a flat-stage laboratory: 135 kilometers, 389 meters of gain, and tropical weather. Strong riders will want to race it like a fast group event, but anyone who treats hydration as an afterthought will make a much harder day than the elevation profile suggests.",
+      "strengths": ["Fast competitive profile", "Distinct tropical setting", "Three route options", "Government and A.S.O. backing"],
+      "weaknesses": ["Extreme heat and humidity risk", "Inaugural edition", "No published cutoff", "Inside the six-week plan floor"],
+      "bottom_line": "A real endurance and thermoregulation test disguised as a flat fondo."
+    },
+    "final_verdict": {
+      "score": "57/100",
+      "one_liner": "A fast 135-kilometer tropical race from Villahermosa with just 389 meters of climbing.",
+      "should_you_race": "Race it for speed, heat strategy, and a distinctive tropical L'Étape experience; skip it if high humidity or first-edition uncertainty is a poor fit.",
+      "alternatives": "L'Étape La Paz for a drier Mexican course or L'Étape Hermosillo for another fast route ending at the coast."
+    },
+    "citations": [
+      {"url": "https://tabasco.letapeseries.com/", "category": "official", "label": "Official date, distance, elevation, route options, and destination description"},
+      {"url": "https://tabasco.letapeseries.com/route/0", "category": "official", "label": "Official long-course page"},
+      {"url": "https://tabasco.gob.mx/comunicados/tabasco-sera-sede-por-primera-vez-en-su-historia-de-la-internacional-tour-de-france-con", "category": "official", "label": "Tabasco government announcement, field projection, and long-course municipalities"},
+      {"url": "https://www.asdeporte.com/evento/ranking-nacional-l-e-tape-me-xico-by-tour-de-france-2026-tgd/serial-letape-mexico-2026", "category": "official", "label": "Official Mexico serial and ranking structure"}
+    ],
+    "eligibility": {"status": "active", "verified": "2026-08-15", "source": "https://tabasco.letapeseries.com/", "notes": "Official sources confirm the inaugural competitive 135 km / 389 m race on September 6, 2026."},
+    "source_review": {"reviewed_at": "2026-08-15", "race_date": "2026-09-06", "facts_scope": "Date, long-course distance and gain, route options, profile, start time, host city, route municipalities, and projected field verified. Final cutoff, aid map, pavement audit, and fee remain unpublished."},
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "reviewed_at": "2026-08-15",
+      "race_date": "2026-09-06",
+      "ladder": "FULL-7 (next-ed)",
+      "variation": "All-Rounder",
+      "blockers": ["The confirmed September 6, 2026 race is inside the six-week product floor; an organizer-confirmed later edition date is required."],
+      "guard": "Do not sell a race-specific plan against the closing 2026 buy window or project a future date."
+    }
+  }
+}

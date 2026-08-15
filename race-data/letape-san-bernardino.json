@@ -1,0 +1,181 @@
+{
+  "race": {
+    "name": "L'Étape San Bernardino by Tour de France",
+    "slug": "letape-san-bernardino",
+    "display_name": "L'Étape San Bernardino by Tour de France",
+    "tagline": "A 123-kilometer Paraguayan circuit with more than 1,200 meters of climbing and a hard final sequence.",
+    "vitals": {
+      "distance_km": 123,
+      "distance_mi": 76.4,
+      "elevation_m": 1200,
+      "elevation_ft": 3937,
+      "location": "San Bernardino, Cordillera, Paraguay",
+      "location_badge": "SAN BERNARDINO, PARAGUAY",
+      "country": "Paraguay",
+      "date": "September 13, 2026",
+      "date_specific": "2026: September 13 (Sunday)",
+      "field_size": "Not published",
+      "start_format": "Timed competitive L'Étape circuit starting and finishing in San Bernardino",
+      "registration": "Open through the official event site",
+      "entry_fee": "See official registration",
+      "feed_zones": "Organizer-confirmed feed zones; exact locations remain in final rider information",
+      "cutoff_time": "Not published",
+      "route_options": [
+        "Long: 123 km / more than 1,200 m climbing",
+        "Medium: 68 km / 700 m climbing",
+        "Short: 28 km"
+      ]
+    },
+    "climate": {
+      "primary": "Sunny subtropical spring conditions",
+      "description": "The organizer labels the September event sunny. Riders should still use the final San Bernardino forecast for heat, wind, rain, and hydration decisions.",
+      "challenges": [
+        "Exposed sunny sections",
+        "Heat and hydration management",
+        "Changing wind around Lake Ypacaraí",
+        "Late-course fatigue on the final climbs"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling asphalt circuit with categorized climbs",
+      "surface": "The organizer specifies asphalt and a signed circuit. Final rider information controls exact pavement conditions.",
+      "technical_rating": 2,
+      "features": [
+        "Lake Ypacaraí opening kilometers",
+        "Multiple categorized climbs",
+        "Late climbing near the finish",
+        "Sprint and KOM challenges",
+        "Timed sections and feed zones"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 3,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 2,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "The long route clears the standard-distance band and combines moderate total climbing with repeated categorized efforts and a hard finish. Closed-road L'Étape structure, official timing, support, and the Lake Ypacaraí setting lift it to the Tier 2 threshold; it remains an inaugural event with no published field size or long history."
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 3, "explanation": "The official long route is 123 km, inside the 120-160 km standard band.[1][2]"},
+      "climbing": {"score": 2, "explanation": "The organizer publishes more than 1,200 m of climbing, inside the 500-1,500 m band.[1][2]"},
+      "descent_technicality": {"score": 2, "explanation": "The route has multiple climbs and rhythm changes, but the organizer does not claim alpine hairpins or expert descents.[2]"},
+      "road_surface": {"score": 2, "explanation": "The official route specifies asphalt but provides no pavement-condition audit, so the score stays conservative.[2]"},
+      "climate_risk": {"score": 3, "explanation": "The event is labeled sunny, making heat, exposure, and hydration meaningful without evidence for an extreme grade.[1]"},
+      "altitude": {"score": 1, "explanation": "The organizer publishes accumulated gain but no high-pass or summit-altitude claim.[1][2]"},
+      "logistics": {"score": 3, "explanation": "The loop starts and finishes in a regional resort town, avoiding a point-to-point transfer while still requiring destination planning.[2][3]"},
+      "prestige": {"score": 3, "explanation": "A.S.O. and Tour de France branding create national and international recognition, but this is a new Paraguayan stop.[1][3]"},
+      "organization": {"score": 4, "explanation": "Official timing, marked segments, feed zones, closed-road event positioning, and A.S.O. backing support a very-good grade.[1][2]"},
+      "scenic_experience": {"score": 4, "explanation": "The route circles Lake Ypacaraí and crosses several Cordillera towns in a setting the organizer explicitly presents as natural and scenic.[1][2]"},
+      "community_culture": {"score": 3, "explanation": "The event is built around a festive host-town format and Tour jersey competitions, though no completed-edition crowd evidence exists yet.[1][3]"},
+      "field_depth": {"score": 3, "explanation": "Official timing, sprint and KOM challenges, and competitive positioning create structured racing without proof of elite depth.[2]"},
+      "value": {"score": 3, "explanation": "Timing, support, and multiple race formats create a fair package, while the current fee is not summarized on the public page.[1][2]"},
+      "expenses": {"score": 4, "explanation": "International travel to Paraguay and a destination stay make this an expensive trip for Roadie Labs' global audience.[1][3]"}
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "Multiple organizer-categorized climbs",
+        "The demanding final climbing sequence"
+      ],
+      "profile_type": "Rolling and progressively selective",
+      "king_of_mountain": "The long route includes official KOM challenges; exact segment names and gradients are not yet published.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "The 123-kilometer circuit leaves San Bernardino beside Lake Ypacaraí, reaches Nueva Colombia, Altos, Atyrá, Caacupé, and Tobatí, then returns for a closing sequence the organizer describes as demanding. The climbing is distributed rather than concentrated in one summit, so pacing and repeatability matter.",
+      "signature_challenge": "Managing repeated categorized climbs and timed segments without overspending before the late hills near San Bernardino.",
+      "suffering_zones": [
+        "The deceptively fast opening beside Lake Ypacaraí",
+        "The rolling middle through Cordillera towns",
+        "Official sprint and KOM segments",
+        "The final demanding climbs near the finish"
+      ]
+    },
+    "logistics": {
+      "airport": "Most international riders will approach through Asunción. Confirm current ground-transfer and road-closure plans before booking.",
+      "lodging_strategy": "Stay in or near San Bernardino and book early. Confirm bike storage, breakfast, packet pickup, and race-morning access directly.",
+      "transport": "The long course starts and finishes in San Bernardino. Use final organizer information for parking and closure windows.",
+      "food": "Bring familiar race breakfast and on-bike nutrition; use the final feed-zone plan rather than assuming products or spacing.",
+      "official_site": "https://sanbernardino.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "San Bernardino became the second Paraguayan L'Étape host in 2026, following the inaugural Encarnación event earlier that year.",
+      "notable_moments": [
+        "2026: San Bernardino joins the L'Étape Series calendar as Paraguay's second host city"
+      ],
+      "reputation": "A new Tour de France-branded Paraguayan race with a strategically distributed climbing profile and a lake-country setting."
+    },
+    "biased_opinion": {
+      "verdict": "The Late Tester",
+      "summary": "San Bernardino is not a giant mountain fondo, but its 123 kilometers and distributed climbing create a more tactical problem than the raw elevation number suggests. The official page explicitly warns that the final climbs punish early over-pacing.",
+      "strengths": [
+        "Timed competitive format",
+        "Multiple categorized climbs",
+        "Lake Ypacaraí and Cordillera scenery",
+        "Official sprint and KOM segments",
+        "Loop logistics"
+      ],
+      "weaknesses": [
+        "Inaugural event",
+        "No published field size",
+        "No detailed cutoff or feed-zone map",
+        "Too close to sell a complete six-week plan for 2026"
+      ],
+      "bottom_line": "A credible rolling-road target whose final third matters more than the moderate climbing total suggests."
+    },
+    "final_verdict": {
+      "score": "60/100",
+      "one_liner": "A 123-kilometer Paraguayan circuit with more than 1,200 meters of climbing and a hard final sequence.",
+      "should_you_race": "Race it for timed rolling terrain, Tour-style classifications, and a destination loop around Lake Ypacaraí; wait for a later edition if you need a mature event history.",
+      "alternatives": "L'Étape Encarnación for Paraguay's waterfront edition or another established South American L'Étape race."
+    },
+    "citations": [
+      {"url": "https://sanbernardino.letapeseries.com/", "category": "official", "label": "Official event, date, route summary, and registration page"},
+      {"url": "https://sanbernardino.letapeseries.com/route/61", "category": "official", "label": "Official long-course detail"},
+      {"url": "https://www.letapeseries.com/the-series-en", "category": "official", "label": "Official L'Étape Series calendar"}
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://sanbernardino.letapeseries.com/",
+      "notes": "Official sources confirm a competitive 123 km asphalt event on September 13, 2026 with timing, sprint/KOM segments, feed zones, and more than 1,200 m of climbing."
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": "2026-09-13",
+      "facts_scope": "Date, distance, climbing, asphalt surface, loop towns, official timing, feed zones, and competitive segments verified. Exact segment gradients, feed locations, cutoff, fee, and field size remain unpublished."
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "reviewed_at": "2026-08-15",
+      "race_date": "2026-09-13",
+      "ladder": "FULL-7 (next-ed)",
+      "variation": "All-Rounder",
+      "blockers": [
+        "The confirmed September 13, 2026 race is inside the six-week product floor; an organizer-confirmed later edition date is required."
+      ],
+      "guard": "Do not sell a race-specific plan against the nearly completed 2026 buy window or project a 2027 date."
+    }
+  }
+}

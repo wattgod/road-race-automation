@@ -1,0 +1,164 @@
+{
+  "race": {
+    "name": "L'Étape Tlaxcala by Tour de France",
+    "slug": "letape-tlaxcala",
+    "display_name": "L'Étape Tlaxcala by Tour de France",
+    "tagline": "A 117-kilometer high-altitude race from Tlaxcala's historic center.",
+    "vitals": {
+      "distance_km": 117,
+      "distance_mi": 72.7,
+      "elevation_m": null,
+      "elevation_ft": null,
+      "location": "Tlaxcala de Xicohténcatl, Tlaxcala, Mexico",
+      "location_badge": "TLAXCALA, MEXICO",
+      "country": "Mexico",
+      "date": "August 16, 2026",
+      "date_specific": "2026: August 16 (Sunday)",
+      "field_size": "Not published",
+      "start_format": "Timed long and short races from Plaza de la Constitución",
+      "registration": "Current serial information says more details were forthcoming; the legacy event page remains on 2025",
+      "entry_fee": "Not published in the current serial summary",
+      "feed_zones": "Final participant information controls support locations",
+      "cutoff_time": "Not published",
+      "route_options": [
+        "Long: 117 km",
+        "Short: 80 km"
+      ]
+    },
+    "climate": {
+      "primary": "High-altitude summer conditions",
+      "description": "Tlaxcala sits around 2,230 meters above sea level and its state rainy season runs through August. Expect thinner air and use the final forecast for rain, temperature, and wind decisions.",
+      "challenges": [
+        "Start altitude near 2,230 meters",
+        "August rain risk",
+        "Cooler conditions after showers",
+        "Reduced oxygen availability"
+      ]
+    },
+    "terrain": {
+      "primary": "Mountainous highland road course",
+      "surface": "Paved road race; the current organizer pages do not publish a pavement-condition audit.",
+      "technical_rating": 3,
+      "features": [
+        "High-altitude start and finish",
+        "Mountainous course classification",
+        "Historic-center start",
+        "Long and short competitive distances"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 4,
+      "logistics": 2,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 3,
+      "overall_score": 67,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "The 117-kilometer distance is moderate, but the organizer classifies the course as mountainous and the capital starts around 2,230 meters above sea level. Tour branding, a historic-center host, and structured competition lift the experience; missing current elevation, cutoff, and detailed route data cap the grade."
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 2, "explanation": "The current serial lists 117 km, inside the 80-120 km band.[2]"},
+      "climbing": {"score": 3, "explanation": "The organizer classifies the route as mountainous, but no current total gain supports a higher grade.[1][3]"},
+      "descent_technicality": {"score": 3, "explanation": "A mountainous highland course warrants moderate control demands; absent a current technical guide, the score stops below alpine bands.[1][3]"},
+      "road_surface": {"score": 2, "explanation": "This is a road race with no published cobbled or rough-surface showcase and no current pavement audit.[1][2]"},
+      "climate_risk": {"score": 3, "explanation": "Official state material places the rainy season in summer, including the August race window.[4]"},
+      "altitude": {"score": 4, "explanation": "Tlaxcala city sits around 2,230 m, squarely inside the 2,000-2,500 m high-altitude band.[4]"},
+      "logistics": {"score": 2, "explanation": "The official event page places Tlaxcala about 120 km east of Mexico City, with a city-center start simplifying race morning.[2][3]"},
+      "prestige": {"score": 3, "explanation": "Tour de France branding and a national Mexico serial support national-level recognition without iconic global history.[1][2]"},
+      "organization": {"score": 4, "explanation": "The L'Étape series and official Mexico serial provide structured timing and category competition, though current rider detail remains incomplete.[1][2]"},
+      "scenic_experience": {"score": 4, "explanation": "A mountainous highland course anchored in a colonial historic center supports a strong destination grade.[3][4]"},
+      "community_culture": {"score": 4, "explanation": "The official tourism page emphasizes Tlaxcala's pre-Hispanic, Spanish, festival, and colonial identity around the host city.[3]"},
+      "field_depth": {"score": 3, "explanation": "The Mexico serial ranks riders by age category across multiple events, creating structured competition.[2]"},
+      "value": {"score": 3, "explanation": "The timed two-distance format supports a neutral value grade while the current public fee is unavailable.[1][2]"},
+      "expenses": {"score": 4, "explanation": "International travel to central Mexico and altitude acclimation add destination cost for a global rider.[3][4]"}
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": ["Current organizer detail does not name individual climbs"],
+      "profile_type": "High-altitude mountainous course",
+      "king_of_mountain": "L'Étape series rules support a polka-dot competition, but the current Tlaxcala pages do not identify its segment.",
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The current Mexico serial lists a 117-kilometer long race and an 80-kilometer short race from Plaza de la Constitución in Tlaxcala's historic center. The legacy event site labels the course mountainous but remains dated 2025, so no current elevation total or named climb should be projected.",
+      "signature_challenge": "Racing at roughly 2,230 meters from the start while managing an officially mountainous course without overreaching early.",
+      "suffering_zones": [
+        "The high-altitude start from the historic center",
+        "The unquantified mountainous middle",
+        "The return to Tlaxcala under late-race fatigue"
+      ]
+    },
+    "logistics": {
+      "airport": "Mexico City is the principal international gateway; the official tourism page places Tlaxcala about 120 km east.",
+      "lodging_strategy": "Stay near Tlaxcala's historic center and confirm bike storage and race-morning access directly.",
+      "transport": "The current serial places start and finish at Plaza de la Constitución. Final traffic and parking instructions control.",
+      "food": "Bring familiar race nutrition and do not infer feed-zone products from prior editions.",
+      "official_site": "https://tlaxcala.letapeseries.com/"
+    },
+    "history": {
+      "founded": 2025,
+      "origin_story": "Tlaxcala joined the L'Étape Mexico serial as a highland event connecting Tour de France race structure with one of Mexico's oldest colonial centers.",
+      "notable_moments": [
+        "2025: The official site records a sold-out June 29 edition",
+        "2026: The Mexico serial schedules the event for August 16"
+      ],
+      "reputation": "A young, high-altitude Mexican L'Étape race with an unusually strong cultural setting."
+    },
+    "biased_opinion": {
+      "verdict": "The Thin-Air One",
+      "summary": "The 117 kilometers are not huge, but a start around 2,230 meters changes the physiology. Tlaxcala's strongest current differentiators are altitude, mountainous classification, and a historic-center host—not a detailed climb sheet that the organizer has yet to publish.",
+      "strengths": ["High-altitude challenge", "Historic-center host", "Structured Mexico serial", "Tour de France event identity"],
+      "weaknesses": ["Current event site is stale", "No current elevation total", "No detailed cutoff or route guide", "2026 edition is already in race week"],
+      "bottom_line": "A distinctive highland race whose next edition deserves a plan once the organizer publishes a usable date and course."
+    },
+    "final_verdict": {
+      "score": "67/100",
+      "one_liner": "A 117-kilometer high-altitude race from Tlaxcala's historic center.",
+      "should_you_race": "Race it for altitude, culture, and a structured Mexican L'Étape field; wait for complete current route detail if climb specificity matters.",
+      "alternatives": "L'Étape La Paz for a lower-altitude coastal course or L'Étape Ciudad de México for another current serial stop."
+    },
+    "citations": [
+      {"url": "https://tlaxcala.letapeseries.com/", "category": "official", "label": "Official legacy event page and mountainous classification"},
+      {"url": "https://www.asdeporte.com/evento/ranking-nacional-l-e-tape-me-xico-by-tour-de-france-2026-tgd/serial-letape-mexico-2026", "category": "official", "label": "Official Mexico serial date, venue, distance, and ranking information"},
+      {"url": "https://tlaxcala.letapeseries.com/tourism", "category": "official", "label": "Official host destination and cultural context"},
+      {"url": "https://evaluacion.tlaxcala.gob.mx/images/stories/documentos/planea/estadistica/monografias/m2018/tlaxcala.html", "category": "official", "label": "Tlaxcala government altitude and climate information"}
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://www.asdeporte.com/evento/ranking-nacional-l-e-tape-me-xico-by-tour-de-france-2026-tgd/serial-letape-mexico-2026",
+      "notes": "The official Mexico serial confirms a competitive 117 km / 80 km event on August 16, 2026 from Tlaxcala's Plaza de la Constitución."
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": "2026-08-16",
+      "facts_scope": "Current serial date, venue, distances, category ranking, legacy mountainous classification, host altitude, and cultural context verified. Current elevation total, route map, cutoff, fee, and participant guide remain unpublished."
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "reviewed_at": "2026-08-15",
+      "race_date": "2026-08-16",
+      "ladder": "FULL-7 (next-ed)",
+      "variation": "Climber",
+      "blockers": ["The confirmed 2026 race is tomorrow; an organizer-confirmed later edition date and current course are required."],
+      "guard": "Do not sell a plan against race week or project the legacy 2025 course into a future edition."
+    }
+  }
+}
