@@ -1,0 +1,184 @@
+{
+  "race": {
+    "name": "Gran Fondo Mendoza",
+    "slug": "gran-fondo-mendoza",
+    "display_name": "Gran Fondo Mendoza",
+    "tagline": "A fast 110-kilometer circuit climbs from central Mendoza toward Cacheuta, with 1,185 meters of gain under the Andes.",
+    "vitals": {
+      "distance_km": 109.6,
+      "distance_mi": 68.1,
+      "elevation_m": 1185,
+      "elevation_ft": 3888,
+      "location": "Mendoza, Argentina",
+      "location_badge": "MENDOZA, ARGENTINA",
+      "country": "Argentina",
+      "date": "March 14, 2027",
+      "date_specific": "2027: March 14",
+      "field_size": "Second edition; no verified field count published",
+      "start_format": "Chip-timed category start groups; staging 06:30-07:00 and scheduled start 07:15",
+      "registration": "2027 registration is open through the official event site",
+      "entry_fee": "Launch pricing: ARS 160,000 Gran Fondo / ARS 120,000 Medio Fondo; organizer says prices may change",
+      "feed_zones": "Three hydration stations, or more at organizer discretion, with water, fruit, and snacks",
+      "cutoff_time": "A closing vehicle removes riders it catches from event support; final time and location details may change in organizer updates",
+      "lat": -32.889449,
+      "lng": -68.84584,
+      "route_options": [
+        "Gran Fondo: marketed as 110 km; organizer-linked route file is 109.6 km / 1,185 m climbing",
+        "Medio Fondo: marketed as 50 km; organizer-linked route file is 41.7 km / 401 m climbing"
+      ]
+    },
+    "climate": {
+      "primary": "Sunny, dry late-summer foothills",
+      "description": "March in Mendoza can still be warm and exposed. The long circuit moves from the city toward the Andes foothills, where sun, dry air, and wind can amplify hydration mistakes.",
+      "challenges": [
+        "Exposed sun",
+        "Warm late-summer temperatures",
+        "Dry air",
+        "Potential foothill wind"
+      ]
+    },
+    "terrain": {
+      "primary": "Paved rolling circuit with one sustained foothill sector",
+      "surface": "Organizer-linked route data identifies a fully paved road course through Mendoza, Lujan de Cuyo, and Cacheuta.",
+      "technical_rating": 2,
+      "features": [
+        "Fast urban rollout",
+        "Vineyard roads through Lujan de Cuyo",
+        "Cacheuta foothill climbing",
+        "Descending return toward Mendoza"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 2,
+      "road_surface": 1,
+      "climate_risk": 3,
+      "altitude": 2,
+      "logistics": 1,
+      "prestige": 2,
+      "organization": 3,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 1,
+      "overall_score": 50,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "The organizer supplies a competitive 2027 rulebook, chip timing, classifications, route files, aid, medical support, and a city-center start. The Andes setting is strong, but the event is only entering its second edition and its 110-kilometer course is moderate rather than monumental, producing a cautious Tier 3 grade."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [
+        "The outbound rise from Lujan de Cuyo toward Cacheuta"
+      ],
+      "profile_type": "Rolling out-and-back foothill circuit",
+      "king_of_mountain": "The gradual Cacheuta approach is the course's main energy-management problem rather than a single categorized summit.",
+      "_needs_enrichment": true
+    },
+    "course_description": {
+      "character": "The 2027 Gran Fondo targets the organizer-linked 109.6-kilometer paved circuit from Mendoza toward Lujan de Cuyo and Cacheuta. The first half rewards efficient group riding; the cumulative 1,185 meters and foothill exposure make restraint important before the descending return. It is a road-racing durability problem with a meaningful climbing middle, not an Alpine summit event.",
+      "signature_challenge": "Holding efficient pressure toward Cacheuta without spending the legs needed for the fast return to Mendoza.",
+      "suffering_zones": [
+        "Mendoza rollout",
+        "Lujan de Cuyo vineyard roads",
+        "Cacheuta approach",
+        "Exposed return to the city"
+      ]
+    },
+    "logistics": {
+      "airport": "Governor Francisco Gabrielli International Airport (MDZ) is roughly 10 kilometers from central Mendoza.",
+      "lodging_strategy": "Stay in central Mendoza near the organizer's final accreditation and start instructions; the current homepage and rulebook name different central staging points, so final rider communications override both.",
+      "transport": "Accreditation and expo are scheduled for Saturday, March 13. The organizer requires in-person number pickup and does not issue numbers on race morning.",
+      "food": "Registration includes on-course water, fruit, and snacks plus food and drink at the finish; riders must carry their own bottles.",
+      "official_site": "https://granfondomendoza.com.ar/"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Gran Fondo Mendoza launched as a competitive road event connecting Argentina's major wine city with the Andes foothills and Cacheuta.",
+      "notable_moments": [
+        "2026: Inaugural edition established the Mendoza-Cacheuta circuit",
+        "2027: Second edition scheduled for March 14 with Gran and Medio distances"
+      ],
+      "reputation": "A new regional gran fondo with unusually complete first-party 2027 documentation, but too little operating history to claim established-event prestige."
+    },
+    "biased_opinion": {
+      "verdict": "The Andes Backdrop Is Better Than the Palmares—For Now",
+      "summary": "Mendoza has the ingredients for a worthwhile early-season target: a real timed race, a legible 110-kilometer course, enough climbing to punish sloppy pacing, and a distinctive wine-country-to-foothills setting. The restraint is history: this is a second edition, not yet a proven international fondo.",
+      "strengths": [
+        "Organizer-confirmed 2027 date and registration",
+        "Published route files and rulebook",
+        "Central-city logistics",
+        "Scenic Cacheuta circuit"
+      ],
+      "weaknesses": [
+        "Only one completed edition",
+        "No verified field-size figure",
+        "Homepage and rulebook conflict on the precise start point",
+        "Final cutoff details remain changeable"
+      ],
+      "bottom_line": "Race it for a compact, competitive Argentine objective with a strong setting; do not mistake the scenery for the history of a mature bucket-list fondo."
+    },
+    "final_verdict": {
+      "score": "50/100",
+      "one_liner": "A fast 110-kilometer circuit climbs from central Mendoza toward Cacheuta, with 1,185 meters of gain under the Andes.",
+      "should_you_race": "Yes if you want a documented, chip-timed South American race with moderate climbing and simple city logistics; wait if proven execution and a deep international field are essential.",
+      "alternatives": "GFNY Villavicencio for a more climbing-focused Colombian race, or Gran Fondo Argentina for a more established domestic event."
+    },
+    "citations": [
+      {
+        "url": "https://granfondomendoza.com.ar/",
+        "category": "official",
+        "label": "Organizer 2027 date, schedule, route options, and event overview"
+      },
+      {
+        "url": "https://granfondomendoza.com.ar/inscripcion/",
+        "category": "official",
+        "label": "Organizer 2027 registration, inclusions, timing, aid, and pricing"
+      },
+      {
+        "url": "https://granfondomendoza.com.ar/wp-content/uploads/2026/05/REGLAMENTO-GFM-2027-2.pdf",
+        "category": "official",
+        "label": "Organizer 2027 regulations, competitive classifications, support, and safety rules"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/53154155",
+        "category": "official",
+        "label": "Organizer-linked Gran Fondo route distance, gain, and paved-surface data"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/53154091",
+        "category": "official",
+        "label": "Organizer-linked Medio Fondo route distance, gain, and paved-surface data"
+      }
+    ],
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-14",
+      "source": "https://granfondomendoza.com.ar/inscripcion/",
+      "notes": "CLEARED FOR PLAN BUILD: 2027 registration, competitive format, route demand, and Sunday race date are first-party confirmed."
+    },
+    "source_review": {
+      "reviewed_at": "2026-08-14",
+      "race_date": "2027-03-14",
+      "plan_status": "CLEARED FOR FULL-7",
+      "facts_scope": "Second-edition date, Sunday start, 110/50-kilometer marketed routes, organizer-linked route-file distance and gain, chip timing, classifications, aid, and event rules verified against first-party sources."
+    },
+    "training_plan_clearance": {
+      "status": "ready",
+      "race_date": "2027-03-14",
+      "ladder": "FULL-7",
+      "variation": "All-Rounder",
+      "blockers": [],
+      "guard": "Target the organizer-linked 109.6-kilometer, 1,185-meter paved Gran Fondo demand and Sunday March 14, 2027. The final organizer route, start point, start waves, aid locations, cutoff, weather notice, and rider communications override the current profile and plan."
+    }
+  }
+}
