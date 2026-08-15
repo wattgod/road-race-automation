@@ -1,0 +1,197 @@
+{
+  "race": {
+    "name": "Nordic Chase Copenhagen to Oslo Road",
+    "slug": "nordic-chase-copenhagen-oslo-road",
+    "display_name": "Nordic Chase Copenhagen to Oslo Road",
+    "tagline": "A continuous self-supported road ultra from Copenhagen to Oslo, with the exact 2027 grand depart still pending.",
+    "vitals": {
+      "distance_km": 726,
+      "distance_mi": 451.1,
+      "elevation_m": 5200,
+      "elevation_ft": 17060,
+      "course_status": "source_blocked",
+      "course_status_label": "2027 GRAND DEPART PENDING",
+      "course_status_reason": "The organizer confirms the 2027 Copenhagen-to-Oslo road event window, but its route page still reports the completed 2026 course. The exact 2027 grand depart, final GPX, and rider manual are not published.",
+      "location": "Copenhagen, Denmark to Oslo, Norway",
+      "location_badge": "COPENHAGEN TO OSLO",
+      "country": "Denmark / Sweden / Norway",
+      "date": "Exact 2027 grand depart pending",
+      "date_specific": "TBD — 2027 event window: June 18-24; exact grand depart pending",
+      "field_size": "100 participants in the completed 2026 edition; 2027 capacity not yet published",
+      "start_format": "mass_start",
+      "registration": "2027 registration opens September 8, 2026 at 19:00 CET; priority access opens 48 hours earlier",
+      "entry_fee": "Not yet published for 2027",
+      "prize_purse": "No cash purse published; first rider to the finish wins",
+      "feed_zones": "None; riders resupply from public services under the self-supported rules",
+      "cutoff_time": "100-hour series format announced for 2027; route-specific final cutoff pending",
+      "lat": 55.6761,
+      "lng": 12.5683,
+      "route_options": [
+        "Latest detailed reference: completed 2026 road course, 726 km with 5,200 m of climbing",
+        "The final 2027 GPX and manual override every historical course figure"
+      ]
+    },
+    "climate": {
+      "primary": "Early-summer Nordic with coastal exposure",
+      "description": "The June corridor offers very long daylight, but rain, wind, cool overnight temperatures, and changing conditions across three countries remain central risks.",
+      "challenges": [
+        "Coastal and open-country wind",
+        "Rain across a multi-day weather window",
+        "Cold overnight riding after a mild day"
+      ]
+    },
+    "terrain": {
+      "primary": "Rolling three-country point-to-point road ultra",
+      "surface": "Paved public roads on the road edition. The organizer has not published a 2027 surface-condition inventory.",
+      "technical_rating": 3,
+      "features": [
+        "Copenhagen start",
+        "Denmark-to-Sweden ferry logistics",
+        "Long Swedish road sectors",
+        "Increasingly hilly approach to Norway",
+        "Oslo city finish"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 2,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 5,
+      "cultural_impact": 0,
+      "overall_score": 60,
+      "tier": 2,
+      "tier_label": "TIER 2",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Editorial grade based on the organizer's named route, self-supported rules, 2027 calendar, and completed 2026 726 km / 5,200 m course. Formula: 42/70 = 60. Surface, climate, value, and expense bands are conservative editorial judgments because the final 2027 manual, fee, and GPX are unpublished; re-grade when those first-party documents land. Sources: https://nordicchase.com/ and https://nordicchase.com/cph-osl-road."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": "hilly",
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 5, "explanation": "The completed organizer course is 726 km, well beyond the 200 km ultra threshold.[2]"},
+      "climbing": {"score": 5, "explanation": "The completed 2026 route carried 5,200 m, above the rubric's 4,000 m mountain threshold; the 2027 GPX can supersede it.[2]"},
+      "descent_technicality": {"score": 3, "explanation": "Five thousand metres of climbing imply meaningful descending, but no official 2027 technical-sector inventory supports a higher band.[2]"},
+      "road_surface": {"score": 2, "explanation": "The organizer identifies a road edition but provides no 2027 pavement-condition inventory, so the grade stays conservative.[2]"},
+      "climate_risk": {"score": 3, "explanation": "June brings long daylight, while a multi-night three-country route still carries wind, rain, and overnight-cold risk.[1]"},
+      "altitude": {"score": 1, "explanation": "The event publishes substantial accumulated climbing but no high-pass altitude claim.[2]"},
+      "logistics": {"score": 2, "explanation": "Copenhagen and Oslo are major hubs, offset by ferry, point-to-point bike transport, and three-country planning.[1]"},
+      "prestige": {"score": 2, "explanation": "The route is international and distinctive but the race is still too young for a major-prestige grade.[1]"},
+      "organization": {"score": 2, "explanation": "GPS tracking and formal rules add structure, while the race deliberately remains open-road and self-supported.[1][3]"},
+      "scenic_experience": {"score": 4, "explanation": "A Copenhagen-to-Oslo crossing through Denmark, Sweden, and Norway supports a strong destination grade without claiming alpine spectacle.[1][2]"},
+      "community_culture": {"score": 3, "explanation": "The organizer uses a capped field, shared briefing, tracking, and finish gathering rather than mass crowds.[1][3]"},
+      "field_depth": {"score": 2, "explanation": "The completed event has real results but too little history for a national-depth claim.[2]"},
+      "value": {"score": 3, "explanation": "Tracking and event structure are useful, while the unpublished 2027 fee prevents a stronger value claim.[1]"},
+      "expenses": {"score": 5, "explanation": "Nordic prices, three-country resupply, two-city travel, and self-funded sleep make a premium total trip plausible even before the 2027 fee.[1][3]"}
+    },
+    "course_description": {
+      "character": "A continuous, open-road ultra from Copenhagen through Denmark and Sweden to Oslo. The completed 2026 edition covered 726 kilometres with 5,200 metres of climbing; that is retained only as the latest planning reference. Riders carry their own gear, use public services, follow the official GPX, and manage sleep and mechanicals without a private support crew.",
+      "signature_challenge": "Combining a 700-kilometre road-ultra position and fueling strategy with more than 5,000 metres of accumulated climbing after sleep debt has already arrived.",
+      "suffering_zones": [
+        "Copenhagen departure — early speed and ferry logistics",
+        "Swedish road sectors — long self-supported hours",
+        "Second night — sleep debt meets accumulated climbing",
+        "Approach to Oslo — the hardest terrain arrives on tired legs"
+      ]
+    },
+    "logistics": {
+      "airport": "Copenhagen Airport (CPH) for arrival; Oslo Airport (OSL) after the finish",
+      "lodging_strategy": "Book pre-race lodging in Copenhagen and post-race lodging in Oslo. On-course sleep and accommodation are the rider's responsibility.",
+      "transport": "This is point-to-point across three countries. Arrive without a car or make an explicit vehicle-retrieval plan; depart from Oslo or use an organizer return option if offered for 2027.",
+      "food": "Self-supported resupply from businesses open to every rider",
+      "official_site": "https://nordicchase.com/cph-osl-road"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Nordic Chase expanded its 2025 Copenhagen-loop debut into separate road and gravel point-to-point races linking Berlin, Copenhagen, and Oslo.",
+      "notable_moments": [
+        "2026: Copenhagen-to-Oslo road edition completed on a 726 km / 5,200 m course",
+        "2027: organizer retained the route identity in its four-race calendar"
+      ],
+      "reputation": "A young, small-field Nordic road ultra whose difficulty comes from distance, climbing, and complete self-supported execution."
+    },
+    "biased_opinion": {
+      "verdict": "The Road Series' Complete Test",
+      "summary": "Copenhagen to Oslo is the stronger race identity of Nordic Chase's two road routes. It keeps the clean point-to-point format but adds enough climbing to punish riders who treat it like a flatland time trial. The tradeoff is cost and complexity: three countries, a ferry, two endpoint cities, and no support crew leave nowhere to outsource bad planning.",
+      "strengths": [
+        "A genuine three-country road crossing",
+        "Ultra distance plus meaningful accumulated climbing",
+        "Major-city start and finish",
+        "Self-supported format rewards complete riders"
+      ],
+      "weaknesses": [
+        "No organizer feed zones or private support",
+        "Premium Nordic travel and resupply costs",
+        "A young event with limited field-depth evidence",
+        "Exact 2027 grand depart, fee, and GPX remain unpublished"
+      ],
+      "bottom_line": "The better Nordic Chase road race for an experienced ultra rider, but not ready for a dated TrainingPeaks product until the organizer publishes the 2027 grand depart and final GPX."
+    },
+    "final_verdict": {
+      "score": "60 / 100",
+      "one_liner": "Four hundred fifty-one road miles and 17,000 feet from Copenhagen to Oslo, all without a support crew.",
+      "should_you_race": "Yes if multi-night road ultras are already familiar and you want a route where climbing still matters. Wait for the 2027 manual before committing a training calendar or travel booking.",
+      "alternatives": "Nordic Chase Berlin to Copenhagen Road is shorter, flatter, and the cleaner first step into the series.",
+      "alternative_slugs": ["nordic-chase-berlin-copenhagen-road"]
+    },
+    "citations": [
+      {"url": "https://nordicchase.com/", "category": "official", "label": "Nordic Chase official 2027 calendar and registration announcement"},
+      {"url": "https://nordicchase.com/cph-osl-road", "category": "official", "label": "Copenhagen to Oslo Road official completed-edition course and results"},
+      {"url": "https://nordicchase.com/terms-and-conditions", "category": "official", "label": "Nordic Chase official self-supported rules"}
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": null,
+      "facts_scope": "The organizer confirms the June 18-24, 2027 event window and route identity. The latest detailed page covers the completed 2026 726 km / 5,200 m course; exact 2027 race day, final GPX, fee, and manual remain unpublished.",
+      "plan_status": "SOURCE BLOCKED — EXACT 2027 GRAND DEPART AND FINAL ROUTE REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": null,
+      "ladder": "FULL-7",
+      "variation": "Distance",
+      "blockers": [
+        "The organizer publishes only a 2027 event window; the exact grand-depart date, final GPX, and 2027 rider manual are not available."
+      ],
+      "guard": "Do not project the completed 2026 726 km / 5,200 m course or its schedule into a dated 2027 plan. The final organizer manual overrides every historical planning reference."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://nordicchase.com/",
+      "notes": "The organizer's 2027 four-race calendar names Copenhagen to Oslo Road and publishes a June 18-24 event window. It remains source-blocked for plan generation until an exact grand depart and final route package are published."
+    },
+    "research_metadata": {
+      "data_confidence": "official 2027 event window; completed 2026 course retained only as a guarded reference",
+      "validation_status": "source_blocked_for_2027_plan",
+      "research_date": "2026-08-15",
+      "sources": [
+        "https://nordicchase.com/",
+        "https://nordicchase.com/cph-osl-road",
+        "https://nordicchase.com/terms-and-conditions"
+      ]
+    },
+    "catalog_flags": {
+      "status_note": "The available Roadie Labs discipline taxonomy has no road-ultra category. This profile remains gran_fondo for compatibility, but it is a continuous self-supported road ultra, not a closed-road mass-participation fondo.",
+      "ruled": "2026-08-15 Nordic Chase identity audit"
+    }
+  }
+}

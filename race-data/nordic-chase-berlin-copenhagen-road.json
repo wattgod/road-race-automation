@@ -1,0 +1,197 @@
+{
+  "race": {
+    "name": "Nordic Chase Berlin to Copenhagen Road",
+    "slug": "nordic-chase-berlin-copenhagen-road",
+    "display_name": "Nordic Chase Berlin to Copenhagen Road",
+    "tagline": "A continuous self-supported road ultra from Berlin to Copenhagen, with the exact 2027 grand depart still pending.",
+    "vitals": {
+      "distance_km": 710,
+      "distance_mi": 441.2,
+      "elevation_m": 2670,
+      "elevation_ft": 8760,
+      "course_status": "source_blocked",
+      "course_status_label": "2027 GRAND DEPART PENDING",
+      "course_status_reason": "The organizer confirms the 2027 Berlin-to-Copenhagen road event window, but its route page still reports the completed 2026 course. The exact 2027 grand depart, final GPX, and rider manual are not published.",
+      "location": "Berlin, Germany to Copenhagen, Denmark",
+      "location_badge": "BERLIN TO COPENHAGEN",
+      "country": "Germany / Denmark",
+      "date": "Exact 2027 grand depart pending",
+      "date_specific": "TBD — 2027 event window: June 5-10; exact grand depart pending",
+      "field_size": "Not yet published for 2027",
+      "start_format": "mass_start",
+      "registration": "2027 registration opens September 8, 2026 at 19:00 CET; priority access opens 48 hours earlier",
+      "entry_fee": "Not yet published for 2027",
+      "prize_purse": "No cash purse published; first rider to the finish wins",
+      "feed_zones": "None; riders resupply from public services under the self-supported rules",
+      "cutoff_time": "100-hour series format announced for 2027; route-specific final cutoff pending",
+      "lat": 52.52,
+      "lng": 13.405,
+      "route_options": [
+        "Latest detailed reference: completed 2026 road course, 710 km with 2,670 m of climbing",
+        "The final 2027 GPX and manual override every historical course figure"
+      ]
+    },
+    "climate": {
+      "primary": "Early-summer northern European",
+      "description": "The June corridor offers long daylight and generally moderate temperatures, but exposed wind, rain, and cool overnight riding can dominate a continuous ultra.",
+      "challenges": [
+        "Crosswinds and headwinds on exposed roads",
+        "Rain across a multi-day weather window",
+        "Cold overnight riding after a mild day"
+      ]
+    },
+    "terrain": {
+      "primary": "Lowland point-to-point road ultra",
+      "surface": "Paved public roads on the road edition. The organizer has not published a 2027 surface-condition inventory.",
+      "technical_rating": 2,
+      "features": [
+        "Berlin start",
+        "Northern German countryside",
+        "Baltic coast and ferry logistics",
+        "Danish road finish into Copenhagen",
+        "Open-road self-supported navigation"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 0,
+      "overall_score": 54,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Editorial grade based on the organizer's named route, self-supported rules, 2027 calendar, and completed 2026 710 km / 2,670 m course. Formula: 38/70 = 54. Surface, climate, value, and expense bands are conservative editorial judgments because the final 2027 manual, fee, and GPX are unpublished; re-grade when those first-party documents land. Sources: https://nordicchase.com/ and https://nordicchase.com/ber-cph-road."
+    },
+    "climb_profile": {
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
+      "key_climbs": [],
+      "profile_type": "rolling",
+      "king_of_mountain": null,
+      "_needs_enrichment": true
+    },
+    "biased_opinion_ratings": {
+      "distance": {"score": 5, "explanation": "The latest detailed organizer course is 710 km, well beyond the 200 km ultra threshold.[2]"},
+      "climbing": {"score": 4, "explanation": "The completed 2026 route carried 2,670 m, inside the 2,500-4,000 m rubric band; the 2027 GPX can supersede it.[2]"},
+      "descent_technicality": {"score": 2, "explanation": "The lowland corridor is not marketed around alpine descents; this is a conservative editorial grade pending the final GPX.[2]"},
+      "road_surface": {"score": 2, "explanation": "The organizer identifies a road edition but provides no 2027 pavement-condition inventory, so the grade stays conservative.[2]"},
+      "climate_risk": {"score": 3, "explanation": "June reduces temperature extremes, while an exposed multi-night northern route still carries wind, rain, and overnight-cold risk.[1]"},
+      "altitude": {"score": 1, "explanation": "The published route is a northern-European lowland crossing, not a high-pass event.[2]"},
+      "logistics": {"score": 2, "explanation": "Both endpoints are major transport cities, offset by point-to-point bike and luggage planning.[1]"},
+      "prestige": {"score": 2, "explanation": "It is an international route with a real results history, but still a young small-field event rather than a major institution.[1]"},
+      "organization": {"score": 2, "explanation": "GPS tracking and a race manual add structure, while the event deliberately remains open-road and self-supported.[1][3]"},
+      "scenic_experience": {"score": 3, "explanation": "The Berlin-to-Baltic-to-Copenhagen arc is varied, though the road page does not claim an iconic mountain or coastal showcase.[2]"},
+      "community_culture": {"score": 3, "explanation": "The organizer builds around shared briefings, tracking, and a small-field finish rather than mass-participation crowds.[1][3]"},
+      "field_depth": {"score": 2, "explanation": "The event publishes results but has too little history to support a national-depth claim.[2]"},
+      "value": {"score": 3, "explanation": "Tracking and event structure are useful, while the unpublished 2027 fee prevents a stronger value claim.[1]"},
+      "expenses": {"score": 4, "explanation": "Two-city travel, self-funded resupply, and overnight logistics make this an expensive European trip even before the 2027 fee is known.[1][3]"}
+    },
+    "course_description": {
+      "character": "A continuous, open-road ultra linking Berlin and Copenhagen. The completed 2026 edition covered 710 kilometres with 2,670 metres of climbing; that is retained only as the latest planning reference. Riders carry their own gear, solve food and mechanical problems with public services, follow the organizer GPX, and manage the ferry and overnight hours without a private support crew.",
+      "signature_challenge": "Sustaining an efficient road position, reliable fueling, and sound decisions for more than 700 kilometres while wind and sleep loss accumulate faster than elevation.",
+      "suffering_zones": [
+        "Berlin exit — navigation and early speed",
+        "Northern Germany — long exposed hours without a defining climb",
+        "Baltic transition — wind and ferry timing",
+        "Final Danish roads — sleep debt on faster terrain"
+      ]
+    },
+    "logistics": {
+      "airport": "Berlin Brandenburg Airport (BER) for arrival; Copenhagen Airport (CPH) after the finish",
+      "lodging_strategy": "Book pre-race lodging in Berlin and post-race lodging in Copenhagen. On-course sleep and accommodation are the rider's responsibility.",
+      "transport": "This is point-to-point. Do not build the trip around leaving a vehicle at the start; use rail or air into Berlin and depart from Copenhagen.",
+      "food": "Self-supported resupply from businesses open to every rider",
+      "official_site": "https://nordicchase.com/ber-cph-road"
+    },
+    "history": {
+      "founded": 2026,
+      "origin_story": "Nordic Chase expanded its 2025 Copenhagen-loop debut into separate road and gravel point-to-point races linking Berlin, Copenhagen, and Oslo.",
+      "notable_moments": [
+        "2026: Berlin-to-Copenhagen road edition completed on a 710 km / 2,670 m course",
+        "2027: organizer retained the route identity in its four-race calendar"
+      ],
+      "reputation": "A young, small-field European road ultra built around self-support and a clear city-to-city narrative."
+    },
+    "biased_opinion": {
+      "verdict": "A Distance Race, Not a Mountain Race",
+      "summary": "Berlin to Copenhagen earns its difficulty through 710 kilometres, wind, and sleep management rather than alpine spectacle. That makes it an unusually clean test of road durability: there is nowhere to hide weak fueling or an uncomfortable position, but there is also no single famous climb doing the marketing for it.",
+      "strengths": [
+        "Clear international point-to-point identity",
+        "Major-city endpoints simplify arrival and departure",
+        "Self-supported format rewards complete execution",
+        "Lower climbing density than the Oslo road edition"
+      ],
+      "weaknesses": [
+        "No organizer feed zones or private support",
+        "A young event with limited field-depth evidence",
+        "Wind and sleep loss can make flat speed deceptive",
+        "Exact 2027 grand depart, fee, and GPX remain unpublished"
+      ],
+      "bottom_line": "A credible first long Nordic road ultra for riders with proven overnight systems, but not ready for a dated TrainingPeaks product until the organizer publishes the 2027 grand depart and final GPX."
+    },
+    "final_verdict": {
+      "score": "54 / 100",
+      "one_liner": "Four hundred forty-one road miles from Berlin to Copenhagen, where wind and sleep matter more than summit altitude.",
+      "should_you_race": "Yes if you want a self-supported road ultra with simple geography and hard execution. Wait for the 2027 manual before committing a training calendar or travel booking.",
+      "alternatives": "Nordic Chase Copenhagen to Oslo Road adds more climbing and a bigger destination-race feel.",
+      "alternative_slugs": ["nordic-chase-copenhagen-oslo-road"]
+    },
+    "citations": [
+      {"url": "https://nordicchase.com/", "category": "official", "label": "Nordic Chase official 2027 calendar and registration announcement"},
+      {"url": "https://nordicchase.com/ber-cph-road", "category": "official", "label": "Berlin to Copenhagen Road official completed-edition course and results"},
+      {"url": "https://nordicchase.com/terms-and-conditions", "category": "official", "label": "Nordic Chase official self-supported rules"}
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": null,
+      "facts_scope": "The organizer confirms the June 5-10, 2027 event window and route identity. The latest detailed page covers the completed 2026 710 km / 2,670 m course; exact 2027 race day, final GPX, fee, and manual remain unpublished.",
+      "plan_status": "SOURCE BLOCKED — EXACT 2027 GRAND DEPART AND FINAL ROUTE REQUIRED"
+    },
+    "training_plan_clearance": {
+      "status": "source_blocked",
+      "race_date": null,
+      "ladder": "FULL-7",
+      "variation": "Distance",
+      "blockers": [
+        "The organizer publishes only a 2027 event window; the exact grand-depart date, final GPX, and 2027 rider manual are not available."
+      ],
+      "guard": "Do not project the completed 2026 710 km / 2,670 m course or its schedule into a dated 2027 plan. The final organizer manual overrides every historical planning reference."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://nordicchase.com/",
+      "notes": "The organizer's 2027 four-race calendar names Berlin to Copenhagen Road and publishes a June 5-10 event window. It remains source-blocked for plan generation until an exact grand depart and final route package are published."
+    },
+    "research_metadata": {
+      "data_confidence": "official 2027 event window; completed 2026 course retained only as a guarded reference",
+      "validation_status": "source_blocked_for_2027_plan",
+      "research_date": "2026-08-15",
+      "sources": [
+        "https://nordicchase.com/",
+        "https://nordicchase.com/ber-cph-road",
+        "https://nordicchase.com/terms-and-conditions"
+      ]
+    },
+    "catalog_flags": {
+      "status_note": "The available Roadie Labs discipline taxonomy has no road-ultra category. This profile remains gran_fondo for compatibility, but it is a continuous self-supported road ultra, not a closed-road mass-participation fondo.",
+      "ruled": "2026-08-15 Nordic Chase identity audit"
+    }
+  }
+}

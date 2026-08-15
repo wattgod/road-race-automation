@@ -14017,6 +14017,47 @@
     ]
   },
   {
+    "name": "Nordic Chase Copenhagen to Oslo Road",
+    "slug": "nordic-chase-copenhagen-oslo-road",
+    "location": "Copenhagen, Denmark to Oslo, Norway",
+    "country": "Denmark / Sweden / Norway",
+    "region": "Northern Europe",
+    "month": "",
+    "distance_km": 726,
+    "distance_mi": 451.1,
+    "elevation_m": 5200,
+    "elevation_ft": 17060,
+    "tier": 2,
+    "overall_score": 60,
+    "scores": {
+      "distance": 5,
+      "climbing": 5,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 2,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 5,
+      "cultural_impact": 0
+    },
+    "tagline": "A continuous self-supported road ultra from Copenhagen to Oslo, with the exact 2027 grand depart still pending.",
+    "has_profile": true,
+    "profile_url": "/race/nordic-chase-copenhagen-oslo-road/",
+    "discipline": "gran_fondo",
+    "lat": 55.6761,
+    "lng": 12.5683,
+    "route_options": [
+      "Latest detailed reference: completed 2026 road course, 726 km with 5,200 m of climbing",
+      "The final 2027 GPX and manual override every historical course figure"
+    ]
+  },
+  {
     "name": "Gran Fondo Pekan / Pekan Classic",
     "slug": "pekan-classics",
     "location": "Royal Town of Pekan, Pahang, Malaysia",
@@ -16478,6 +16519,47 @@
       "134 km Gran Fondo (marketed as 125 km)",
       "86 km Medio Fondo",
       "57 km Piccolo"
+    ]
+  },
+  {
+    "name": "Nordic Chase Berlin to Copenhagen Road",
+    "slug": "nordic-chase-berlin-copenhagen-road",
+    "location": "Berlin, Germany to Copenhagen, Denmark",
+    "country": "Germany / Denmark",
+    "region": "Western Europe",
+    "month": "",
+    "distance_km": 710,
+    "distance_mi": 441.2,
+    "elevation_m": 2670,
+    "elevation_ft": 8760,
+    "tier": 3,
+    "overall_score": 54,
+    "scores": {
+      "distance": 5,
+      "climbing": 4,
+      "descent_technicality": 2,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 2,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 3,
+      "field_depth": 2,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 0
+    },
+    "tagline": "A continuous self-supported road ultra from Berlin to Copenhagen, with the exact 2027 grand depart still pending.",
+    "has_profile": true,
+    "profile_url": "/race/nordic-chase-berlin-copenhagen-road/",
+    "discipline": "gran_fondo",
+    "lat": 52.52,
+    "lng": 13.405,
+    "route_options": [
+      "Latest detailed reference: completed 2026 road course, 710 km with 2,670 m of climbing",
+      "The final 2027 GPX and manual override every historical course figure"
     ]
   },
   {
