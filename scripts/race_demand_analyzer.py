@@ -164,12 +164,29 @@ def _score_technical(rating: dict) -> int:
 def _score_heat_resilience(race: dict) -> int:
     """Score heat adaptation needed.
 
-    Base from climate score: if climate >= 4, start at climate * 2; else 0.
+    ``climate_risk`` covers every kind of severe weather, so it only provides
+    a heat base when the profile also contains explicit heat evidence.
     Scan rider intel search_text for heat keywords: +2 if found (cap 10).
-    Scan climate.challenges for heat keywords: +1 if found (cap 10).
+    Scan the climate block for heat keywords: +1 if found (cap 10).
     """
     rating = race.get("fondo_rating") or {}
     climate_score = _safe_get(rating, "climate_risk", 0)
+
+    youtube_data = race.get("youtube_data") or {}
+    rider_intel = youtube_data.get("rider_intel") or {}
+    search_text = _safe_get(rider_intel, "search_text", "")
+    climate_block = race.get("climate") or {}
+    challenges = climate_block.get("challenges") or []
+    climate_text = " ".join([
+        str(climate_block.get("primary", "")),
+        str(climate_block.get("description", "")),
+        " ".join(str(challenge) for challenge in challenges),
+    ]).lower()
+    rider_heat = any(keyword in str(search_text).lower() for keyword in HEAT_KEYWORDS)
+    climate_heat = any(keyword in climate_text for keyword in HEAT_KEYWORDS)
+
+    if not rider_heat and not climate_heat:
+        return 0
 
     if climate_score >= 5:
         score = 10
@@ -178,25 +195,10 @@ def _score_heat_resilience(race: dict) -> int:
     else:
         score = 0
 
-    # Rider intel boost
-    youtube_data = race.get("youtube_data") or {}
-    rider_intel = youtube_data.get("rider_intel") or {}
-    search_text = _safe_get(rider_intel, "search_text", "")
-    if search_text:
-        search_lower = search_text.lower()
-        for keyword in HEAT_KEYWORDS:
-            if keyword in search_lower:
-                score += 2
-                break
-
-    # Climate challenges boost
-    climate_block = race.get("climate") or {}
-    challenges = climate_block.get("challenges") or []
-    challenges_text = " ".join(challenges).lower()
-    for keyword in HEAT_KEYWORDS:
-        if keyword in challenges_text:
-            score += 1
-            break
+    if rider_heat:
+        score += 2
+    if climate_heat:
+        score += 1
 
     return _clamp(score)
 

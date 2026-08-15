@@ -171,3 +171,54 @@ def test_multi_day_ultra_overlay_does_not_invent_a_single_calorie_total():
     assert "category rules allow" in nutrition
     assert "8,000–12,000" not in nutrition
     assert "you cannot replace them all" not in nutrition
+
+
+def test_climate_risk_without_heat_evidence_emits_weather_preparation():
+    race = {
+        "display_name": "Wet Alpine Fondo",
+        "vitals": {
+            "distance_mi": 68.4,
+            "date": "May 23, 2027",
+            "location": "Imst, Tyrol, Austria",
+        },
+        "climate": {
+            "primary": "Changeable late-spring Alpine weather",
+            "description": "Cool starts, rain, and fast temperature changes are possible.",
+            "challenges": ["Rain and reduced grip", "Wind exposure"],
+        },
+    }
+
+    race["fondo_rating"] = {"climate_risk": 4}
+    overlay = generate_race_overlay(
+        race, {"heat_resilience": 0, "altitude": 2, "technical": 2}
+    )
+
+    assert "heat" not in overlay
+    assert "weather" in overlay
+    assert "adaptable layers" in overlay["weather"]
+    assert "wet-road braking" in overlay["weather"]
+    assert "crosswinds" in overlay["weather"]
+
+
+def test_explicit_hot_climate_keeps_heat_preparation():
+    race = {
+        "display_name": "Hot Summer Fondo",
+        "vitals": {
+            "distance_mi": 100,
+            "date": "July 11, 2027",
+            "location": "Tucson, Arizona",
+        },
+        "climate": {
+            "primary": "Hot desert summer",
+            "description": "High heat and sun exposure shape the race.",
+            "challenges": ["Extreme heat", "Direct sun exposure"],
+        },
+    }
+
+    overlay = generate_race_overlay(
+        race, {"heat_resilience": 8, "altitude": 0, "technical": 2}
+    )
+
+    assert "heat" in overlay
+    assert "heat acclimatization" in overlay["heat"]
+    assert "weather" not in overlay

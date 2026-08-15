@@ -4492,6 +4492,11 @@ def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
                 f'<div class="rl-pack-wo-overlay-item">'
                 f'<span class="rl-pack-wo-overlay-tag">HEAT PREP</span> '
                 f'{esc(race_overlay["heat"])}</div>')
+        if race_overlay.get('weather'):
+            overlay_items.append(
+                f'<div class="rl-pack-wo-overlay-item">'
+                f'<span class="rl-pack-wo-overlay-tag">WEATHER PREP</span> '
+                f'{esc(race_overlay["weather"])}</div>')
         if race_overlay.get('nutrition'):
             overlay_items.append(
                 f'<div class="rl-pack-wo-overlay-item">'

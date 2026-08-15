@@ -1,0 +1,138 @@
+{
+  "slug": "imster-radmarathon",
+  "race_name": "Imster Radmarathon",
+  "distance_mi": 68.4,
+  "demands": {
+    "durability": 2,
+    "climbing": 6,
+    "vo2_power": 5,
+    "threshold": 6,
+    "technical": 6,
+    "heat_resilience": 0,
+    "altitude": 6,
+    "race_specificity": 6
+  },
+  "top_categories": [
+    {
+      "category": "VO2max",
+      "score": 100,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "7,546ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
+    },
+    {
+      "category": "Road_Specific",
+      "score": 100,
+      "workouts": [
+        "Surge and Settle",
+        "Terrain Microbursts"
+      ],
+      "workout_context": "Road-specific control matters at Imster Radmarathon. Practice on tyrolean valley roads with one severe sustained: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 68 miles."
+    },
+    {
+      "category": "TT_Threshold",
+      "score": 90,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "110ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 90,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic Imster Radmarathon's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
+    },
+    {
+      "category": "Over_Under",
+      "score": 80,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Imster Radmarathon, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "G_Spot",
+      "score": 70,
+      "workouts": [
+        "G-Spot Standard",
+        "G-Spot Extended",
+        "Criss-Cross"
+      ],
+      "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Imster Radmarathon. Train it until it feels boring."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 65,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Imster Radmarathon. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 60,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "7,546ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 53,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Steeper ramps, positioning, or pace changes on tyrolean valley roads with one severe sustained can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "Durability",
+      "score": 50,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "68 miles on tyrolean valley roads with one severe sustained burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
+      "category": "Endurance",
+      "score": 43,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Imster Radmarathon. Without this, the hard workouts break you down instead of building you up."
+    },
+    {
+      "category": "SFR_Muscle_Force",
+      "score": 40,
+      "workouts": [
+        "SFR Low Cadence",
+        "Force Repeats"
+      ],
+      "workout_context": "Low-cadence force work supports 7,546ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
+    }
+  ],
+  "race_overlay": {
+    "weather": "May in Imst, Tyrol, Austria \u2014 Late May in Tyrol can move quickly between cool valley starts, sun, rain, and colder exposed climbing or descending conditions. The 07:00 start and the route's movement between the Inn, \u00d6tztal, and Pitztal corridors make adaptable layers and wet-road judgment part of the preparation. Rehearse adaptable layers and race-day kit changes in the final 2 weeks, including rain protection and wet-road braking, and practice stable positioning in crosswinds before Imster Radmarathon. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan for Imster Radmarathon's 68 miles. Start early, use products you tolerate, and carry enough between the organizer\u2019s confirmed resupply points.",
+    "altitude": "Altitude may change sustainable power and recovery at Imster Radmarathon. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Imster Radmarathon rewards specific practice. Include regular rides on tyrolean valley roads with one severe sustained climb and repeated late rollers to build confidence."
+  },
+  "pack_summary": "This 10-workout pack focuses on VO2max, Road Specific, and TT Threshold to prepare you for 68 miles of tyrolean valley roads with one severe sustained climb and repeated late rollers in Imst, Tyrol, Austria.",
+  "generated_at": "2026-08-15"
+}
