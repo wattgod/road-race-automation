@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T13:42:50",
+  "generated_at": "2026-08-15T17:42:43",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -3942,6 +3942,25 @@
       "runway_weeks": 2,
       "race_date": "2026-08-29",
       "blockers": []
+    },
+    "imster-radmarathon": {
+      "slug": "imster-radmarathon",
+      "tier": 3,
+      "score": 59,
+      "checks": {
+        "validator_clean": true,
+        "editorial": true,
+        "course_character": true,
+        "future_date": true,
+        "active_registerable": true,
+        "plan_clearance": true
+      },
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 40,
+      "race_date": "2027-05-23",
+      "blockers": [],
+      "plan_clearance_status": "ready"
     },
     "inthanon-challenge": {
       "slug": "inthanon-challenge",
@@ -7945,6 +7964,7 @@
     "amstel-gold-race-toerversie",
     "sierra-nevada-limite",
     "alpe-gran-fondo",
+    "imster-radmarathon",
     "gfny-ventura",
     "bordeaux-paris-ultra-cycling",
     "cyprus-gran-fondo",
@@ -8411,15 +8431,15 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 426,
-    "ready": 176,
-    "content_present": 414,
-    "validator_clean": 426,
+    "total": 427,
+    "ready": 177,
+    "content_present": 415,
+    "validator_clean": 427,
     "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
       "2": 136,
-      "3": 26,
+      "3": 27,
       "4": 0
     }
   }

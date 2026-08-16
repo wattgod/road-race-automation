@@ -1,0 +1,203 @@
+{
+  "race": {
+    "name": "Imster Radmarathon",
+    "slug": "imster-radmarathon",
+    "display_name": "Imster Radmarathon",
+    "tagline": "A timed 110 km Tyrolean road race with 2,300 m of climbing and a 1,000 m ascent packed into the Haimingerberg",
+    "vitals": {
+      "distance_km": 110.0,
+      "distance_mi": 68.4,
+      "elevation_m": 2300,
+      "elevation_ft": 7546.0,
+      "location": "Imst, Tyrol, Austria",
+      "location_badge": "IMST, TYROL, AUSTRIA",
+      "country": "Austria",
+      "date": "May 23, 2027",
+      "date_specific": "May 23, 2027 (Sunday, 07:00 start)",
+      "field_size": "Not published for 2027",
+      "start_format": "Mass-participation road-race start at Agrarzentrum West; final 2027 start blocks are not yet published",
+      "registration": "Open through the official organizer site, with online registration scheduled through May 21, 2027 at noon and race-office late entry subject to availability",
+      "entry_fee": "Routes A and B: €56 through December 31, 2026; €66 through March 31, 2027; €76 through May 23; €80 on race day",
+      "feed_zones": "Route A has aid at Haimingerberg/Sattele, Roppen, Jerzens/Gischlewies, and the finish",
+      "cutoff_time": "Organizer control times: Telfs 09:20, Haimingerberg/Sattele 11:30, and Jerzens 14:30; final operational instructions govern",
+      "lat": 47.239,
+      "lng": 10.739,
+      "route_options": [
+        "Route A: 110 km, 2,300 m climbing — Haimingerberg/Sattele, Oetz, and the Pitztal/Jerzens finish approach",
+        "Route B: 90 km, 1,300 m climbing — Mieminger Plateau, Inntal, and Pitztal/Jerzens",
+        "Panorama Route: 70 km, 700 m climbing — Mieminger Plateau, Telfs, Roppen, and the Imst Gorge return"
+      ]
+    },
+    "climate": {
+      "primary": "Changeable late-spring Alpine weather",
+      "description": "Late May in Tyrol can move quickly between cool valley starts, sun, rain, and colder exposed climbing or descending conditions. The 07:00 start and the route's movement between the Inn, Ötztal, and Pitztal corridors make adaptable layers and wet-road judgment part of the preparation.",
+      "challenges": [
+        "Cool 07:00 race start",
+        "Fast temperature changes between valleys and exposed climbs",
+        "Rain and reduced grip on long descents",
+        "Wind exposure across the Mieminger Plateau and Inntal"
+      ]
+    },
+    "terrain": {
+      "primary": "Tyrolean valley roads with one severe sustained climb and repeated late rollers",
+      "surface": "Paved public roads; the organizer states that the course remains open to normal traffic and Austrian road rules apply",
+      "technical_rating": 3,
+      "features": [
+        "Mieminger Plateau opening through Nassereith, Obsteig, and Mieming",
+        "Haimingerberg/Sattele: approximately 1,000 m of climbing in 10 km",
+        "Ochsengarten and Oetz transition after the main ascent",
+        "Pitztal return through Leins, Jerzens, Wenns, and Arzl",
+        "Timed control points at Telfs, Sattele, and Jerzens"
+      ]
+    },
+    "fondo_rating": {
+      "distance": 2,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 4,
+      "organization": 2,
+      "scenic_experience": 4,
+      "community_culture": 3,
+      "altitude": 3,
+      "logistics": 2,
+      "prestige": 2,
+      "field_depth": 3,
+      "value": 4,
+      "expenses": 3,
+      "road_surface": 2,
+      "cultural_impact": 1,
+      "overall_score": 59,
+      "tier": 3,
+      "tier_label": "TIER 3",
+      "discipline": "gran_fondo",
+      "prestige_override": null,
+      "scoring_notes": "Roadie Labs 14-dimension rubric. The confirmed 110 km distance scores as moderate, while 2,300 m of climbing and the concentrated Haimingerberg ascent create a genuine Alpine-Fondo demand. Transponder timing, age categories, four Route A aid points, useful inclusions, and strong Tyrolean scenery score well. Open public roads, regional rather than international prestige, an unannounced field size, and normal destination costs keep the race in Tier 3. Score verified from the dimension sum on 2026-08-15."
+    },
+    "climb_profile": {
+      "total_climbs": 3,
+      "hc_climbs": 0,
+      "cat_1_climbs": 0,
+      "cat_2_climbs": 0,
+      "cat_3_climbs": 0,
+      "key_climbs": [
+        "Holzleitensattel and Mieminger Plateau — the opening climbing sequence before Telfs",
+        "Haimingerberg/Sattele — approximately 1,000 m of climbing in 10 km",
+        "Pitztal to Jerzens — the late climbing sequence before Wenns, Arzl, and Imst"
+      ],
+      "profile_type": "Compact Alpine gran fondo with a severe central climb and late valley-wall fatigue",
+      "king_of_mountain": "Haimingerberg/Sattele is the signature selection: the organizer describes roughly 1,000 vertical metres in 10 kilometres before the course turns through Ochsengarten and Oetz.",
+      "_needs_enrichment": false
+    },
+    "course_description": {
+      "character": "Route A starts at Agrarzentrum West and crosses the Mieminger Plateau through Nassereith, Obsteig, Mieming, and Telfs. After the Inntal section, the course commits to Haimingerberg/Sattele, where the organizer publishes approximately 1,000 vertical metres in only 10 kilometres. Riders then descend toward Oetz, cross the Ötztal corridor, and finish through the Pitztal towns of Leins, Jerzens, Wenns, and Arzl before returning to Imst.",
+      "signature_challenge": "The race asks for Alpine climbing density rather than extreme distance. Riders must reach the Haimingerberg with enough threshold control to absorb a roughly 10-kilometre, 1,000-metre ascent, then descend safely, resume fueling, and still climb through the Pitztal late in a 110-kilometre day.",
+      "suffering_zones": [
+        "Early positioning across the Mieminger Plateau",
+        "Haimingerberg/Sattele after the Inntal approach",
+        "Cold or wet descent toward Oetz",
+        "Late Pitztal rise through Leins and Jerzens",
+        "Final return from Wenns and Arzl to Imst"
+      ]
+    },
+    "logistics": {
+      "airport": "Innsbruck is the closest major airport; Imst is a regional Tyrolean town with rail and road access from the Inn Valley.",
+      "lodging_strategy": "Book in Imst or nearby Brennbichl and confirm secure bicycle storage. Imst Tourism publishes certified bike accommodations with storage, washing, repair support, and local cycling information.",
+      "transport": "Race packet pickup, start, finish, and post-race activity are based at Agrarzentrum West, Brennbichl 53. The organizer lists free participant and spectator parking nearby; the course itself remains open to traffic.",
+      "food": "Route A publishes three on-course aid points plus finish support. The starter package includes a pasta voucher, and the pasta party begins at noon.",
+      "official_site": "https://www.imster-radmarathon.at/"
+    },
+    "history": {
+      "founded": null,
+      "origin_story": "The Imster Radmarathon grew into a recurring Tyrolean road-racing fixture organized by RC Radsportevents Tirol with Imst Tourism. The official site labels the May 23, 2027 edition as the 11th race and carries it within the Tiroler Rennradcup framework.",
+      "notable_moments": [
+        "2026: Route A results include a tightly contested men's podium and published women's classification despite isolated timing issues",
+        "2027: The 11th edition is scheduled for May 23 with three routes, open registration, and current course details"
+      ],
+      "reputation": "A demanding regional Alpine race with real timing, category classifications, and a hard course, but without the international field depth, closed roads, or global profile of Austria's Ötztaler Radmarathon."
+    },
+    "biased_opinion": {
+      "verdict": "The Haimingerberg Compression Test",
+      "summary": "Imst compresses an Alpine race into 110 kilometres. The main course is not long enough to hide behind steady endurance: the Haimingerberg demands sustained climbing power, the descent demands judgment, and the Pitztal return exposes every pacing and fueling mistake.",
+      "strengths": [
+        "Exact 2027 date, registration window, Route A distance, climbing, start time, controls, and aid points are published",
+        "A genuine 2,300 m climbing load in only 110 km",
+        "Transponder timing, age classifications, and podium ceremonies",
+        "Three route lengths make the event accessible to mixed-ability groups",
+        "Entry includes a shirt, finisher medal, pasta voucher, and sponsor voucher"
+      ],
+      "weaknesses": [
+        "The course is open to traffic rather than fully closed",
+        "The organizer has not published a 2027 field-size target or final start blocks",
+        "The regional event lacks the deep international field and prestige of Austria's marquee fondos",
+        "Late-May mountain weather can complicate clothing and descending decisions",
+        "The hardest climbing arrives well before the finish, leaving a long sequence of smaller chances to unravel"
+      ],
+      "bottom_line": "Choose Imst if you want a compact, hard Alpine race where climbing execution matters more than marquee status. Train the Haimingerberg as a sustained threshold problem and the Pitztal return as a fueling-and-durability problem."
+    },
+    "final_verdict": {
+      "score": "59/100",
+      "one_liner": "A timed 110 km Tyrolean race with 2,300 m of climbing, open roads, and one brutally concentrated Haimingerberg ascent.",
+      "should_you_race": "Yes if you want serious Alpine climbing without a 200-kilometre day and are comfortable racing on roads that remain open to traffic. Skip if full closures, international prestige, or a large published field are essential to the experience.",
+      "alternatives": "Ötztaler Radmarathon for Austria's iconic ultra-distance test, Engadin Radmarathon for a multi-day high-pass format, or Maratona dles Dolomites for deeper international prestige and fully developed event spectacle."
+    },
+    "citations": [
+      {
+        "url": "https://www.imster-radmarathon.at/",
+        "category": "official",
+        "label": "Official 2027 date, registration, classifications, pricing, and organizer information"
+      },
+      {
+        "url": "https://www.imster-radmarathon.at/streckenverlauf/details/strecke-a/",
+        "category": "official",
+        "label": "Official Route A distance, climbing, course, controls, aid, start time, and 2027 date"
+      },
+      {
+        "url": "https://www.imster-radmarathon.at/streckenverlauf/details/strecke-b/",
+        "category": "official",
+        "label": "Official Route B distance, climbing, course, controls, aid, and 2027 date"
+      },
+      {
+        "url": "https://www.imster-radmarathon.at/streckenverlauf/details/panoramarunde/",
+        "category": "official",
+        "label": "Official Panorama Route distance, climbing, course, aid, and 2027 date"
+      },
+      {
+        "url": "https://www.imster-radmarathon.at/fragen-antworten/",
+        "category": "official",
+        "label": "Official transponder timing, traffic rules, registration, packet pickup, and aid details"
+      },
+      {
+        "url": "https://www.radsportevents.com/",
+        "category": "official",
+        "label": "RC Radsportevents Tirol calendar and event-series context"
+      },
+      {
+        "url": "https://www.imst.at/en/bike-accommodations.html",
+        "category": "official",
+        "label": "Imst Tourism certified cycling accommodation and bike-service guidance"
+      }
+    ],
+    "source_review": {
+      "reviewed_at": "2026-08-15",
+      "race_date": "2027-05-23",
+      "facts_scope": "Date, long and alternative routes, distance, climbing, start time, registration prices, transponder timing, category structure, control times, aid, traffic status, and race-base logistics verified against first-party organizer and tourism pages.",
+      "plan_status": "CLEARED FOR FULL-7 ROADIE LABS PLAN BUILD"
+    },
+    "training_plan_clearance": {
+      "status": "ready",
+      "reviewed_at": "2026-08-15",
+      "source": "https://www.imster-radmarathon.at/streckenverlauf/details/strecke-a/",
+      "race_date": "2027-05-23",
+      "ladder": "FULL-7",
+      "variation": "Alpine-Fondo",
+      "blockers": [],
+      "notes": "Build the Sunday-race FULL-7 road ladder for the exact 110 km / 2,300 m Route A. Emphasize sustained climbing power for the approximately 1,000 m-in-10 km Haimingerberg/Sattele, technical and weather-aware descending, early fueling, the late Pitztal/Jerzens climbing sequence, and open-road attention."
+    },
+    "eligibility": {
+      "status": "active",
+      "verified": "2026-08-15",
+      "source": "https://www.imster-radmarathon.at/",
+      "notes": "The organizer publishes the May 23, 2027 date, open registration, transponder timing, age classifications, and exact Route A distance and climbing. CLEARED FOR PLAN BUILD."
+    }
+  }
+}

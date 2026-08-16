@@ -295,7 +295,8 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     Uses actual race climate, terrain, and vitals data to produce genuinely
     race-specific text (not generic templates with name swapped in).
 
-    Returns dict with keys: heat, nutrition, altitude, terrain (each str or absent).
+    Returns dict with keys: heat or weather, nutrition, altitude, and terrain
+    (each str or absent).
     """
     vitals = race.get('vitals') or {}
     distance = _safe_numeric(vitals, 'distance_mi', 0)
@@ -331,9 +332,25 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
 
     overlay = {}
 
-    # ── Heat ──
+    # ── Climate ──
+    # ``climate_risk`` is an all-weather severity score. It must not be
+    # translated into heat acclimation unless the source profile actually
+    # describes heat. Cold, rain, wind, and large temperature swings get a
+    # separate weather-preparation overlay instead.
     heat_score = demands.get('heat_resilience', 0)
-    if heat_score >= 8:
+    climate_risk_score = _safe_numeric(race.get('fondo_rating') or {}, 'climate_risk', 0)
+    rider_intel = ((race.get('youtube_data') or {}).get('rider_intel') or {})
+    climate_evidence = ' '.join([
+        str(climate.get('primary', '')) if isinstance(climate, dict) else '',
+        str(climate_desc),
+        ' '.join(str(challenge) for challenge in challenges),
+        str(rider_intel.get('search_text', '')),
+    ]).lower()
+    explicit_heat = any(term in climate_evidence for term in [
+        'heat', 'hot', 'humid', 'humidity', 'sun exposure', 'overheating',
+    ])
+
+    if heat_score >= 8 and explicit_heat:
         # Use actual climate data
         climate_line = ''
         if month and location != 'the course':
@@ -356,7 +373,7 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
             f"Pre-load sodium 48 hours out. "
             f"Target 500\u2013750ml/hr with electrolytes on race day.{challenge_line}"
         )
-    elif heat_score >= 5:
+    elif heat_score >= 5 and explicit_heat:
         climate_line = ''
         if month and location != 'the course':
             climate_line = f"{month} in {location} can bring heat. "
@@ -364,6 +381,34 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
             f"{climate_line}"
             f"Complete 3\u20134 heat exposure sessions in the final 2 weeks before {race_name}. "
             f"Increase sodium intake 48 hours before race day."
+        )
+    elif climate_risk_score >= 4:
+        weather_details = ' '.join([
+            str(climate.get('primary', '')) if isinstance(climate, dict) else '',
+            str(climate_desc),
+            ' '.join(str(challenge) for challenge in challenges),
+        ]).lower()
+        climate_line = ''
+        if month and location != 'the course':
+            climate_line = f"{month} in {location}"
+            if climate_desc:
+                climate_line += f" — {climate_desc.rstrip('.')}"
+            climate_line += '. '
+        elif climate_desc:
+            climate_line = f"{climate_desc.rstrip('.')}. "
+
+        preparation = (
+            "Rehearse adaptable layers and race-day kit changes in the final "
+            "2 weeks"
+        )
+        if any(term in weather_details for term in ['rain', 'wet', 'snow', 'cold', 'cool']):
+            preparation += ", including rain protection and wet-road braking"
+        if 'wind' in weather_details:
+            preparation += ", and practice stable positioning in crosswinds"
+
+        overlay['weather'] = (
+            f"{climate_line}{preparation} before {race_name}. "
+            "Use the organizer's current forecast and safety instructions for final choices."
         )
 
     # ── Nutrition ──
