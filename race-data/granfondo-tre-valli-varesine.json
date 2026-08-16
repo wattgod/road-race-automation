@@ -3,7 +3,7 @@
     "name": "Granfondo Tre Valli Varesine",
     "slug": "granfondo-tre-valli-varesine",
     "display_name": "Granfondo Tre Valli Varesine",
-    "tagline": "A 126 km UCI World Series qualifier with 1,993m of climbing through the Italian pre-Alps",
+    "tagline": "A 126 km UCI qualifier and 2026 European Championship course with 1,993m of climbing through the Italian pre-Alps",
     "vitals": {
       "distance_km": 126.0,
       "distance_mi": 78.3,
@@ -12,19 +12,19 @@
       "location": "Varese, Lombardy, Italy",
       "location_badge": "VARESE, IT",
       "country": "Italy",
-      "date": "Early October annually",
-      "date_specific": "2026: October 4",
-      "field_size": "Limited to 2,000 participants across all distance options",
-      "start_format": null,
-      "registration": "Includes super race pack, optional gluten-free refreshment bag, pasta party, traffic-closed roads, timing chip, and shower facilities",
-      "entry_fee": "Not specified in available sources",
-      "feed_zones": "Multiple aid stations on course (specific locations not detailed)",
-      "cutoff_time": "Not specified in available sources",
+      "date": "Sunday, October 4, 2026",
+      "date_specific": "October 4, 2026 (Sunday)",
+      "field_size": "No participant cap is stated in the current official regulations",
+      "start_format": "Age-category waves start every five minutes from 9:00am; the published start window is 9:00-9:40am from Via Luigi Sacco 5",
+      "registration": "Online registration includes the race pack, timing chip, on-course support, refreshments, pasta party, showers, and bike storage; a one-day FCI license is required for riders without an accepted racing license. The first 25% of finishers in each UCI age category qualify for the 2027 UCI Gran Fondo World Championships",
+      "entry_fee": "€60 online from August 3 through October 1; €80 on site, plus €10 for the FCI one-day license when required",
+      "feed_zones": "Gran Fondo refreshments at approximately km 37.2 (Cugliate Fabiasco), km 64.6 (Brezzo di Bedero), km 88.5 (Castello Cabiaglio), and km 125.0 in Varese; the final stop includes a gluten-free option",
+      "cutoff_time": "Reach the Gran Fondo/Medio Fondo split at Bosco, Montegrino Valtravaglia by 12:00pm or continue on the shorter Medio Fondo route; riders passed by the end-of-race vehicle continue under normal traffic rules",
       "lat": 45.8168,
       "lng": 8.8554,
       "route_options": [
-        "100 km (Medio Fondo): 1,447m elevation, qualifier for men 60+ and women 50+",
-        "126 km (Gran Fondo): 1,993m elevation, qualifier for men 19-59 and women 19-49"
+        "100 km (Medio Fondo): 1,447m elevation in the regulations; qualifier for men 60+ and women 50+",
+        "126 km (Gran Fondo): 1,993m elevation in the regulations; qualifier for men 19-59 and women 19-49"
       ]
     },
     "climate": {
@@ -39,17 +39,16 @@
     },
     "terrain": {
       "primary": "Hilly pre-alpine terrain with significant climbing on fully paved roads",
-      "surface": "Fully paved roads throughout, featuring technical descents and sustained climbs through pre-alpine villages. The course alternates between steep ascents and technical descents with minimal gravel or unpaved sections. Road quality is excellent on closed, well-maintained surfaces typical of northern Italian cycling routes.",
+      "surface": "A fully paved road course with sustained climbs, narrow passages, tunnels, and several descents the official time schedule marks as demanding. Traffic is temporarily controlled around the race convoy, but the regulations do not promise closure for the entire event; riders passed by the end-of-race vehicle must follow normal road rules.",
       "technical_rating": 4,
       "features": [
-        "Alpe Tedesco climb (hardest and highest point)",
-        "Madonna di Ardena climb",
-        "Roggiano-Valtravaglia climb",
-        "technical descents",
-        "pre-alpine village passages",
-        "lake-border sections",
-        "Alpe Tedesco: 4.5 km at approximately 7%",
-        "uphill finish in Varese city center"
+        "Alpe Tedesco via SP29 early in the race",
+        "Ardena to the Santuario della Madonna di Ardena",
+        "Gran Fondo-only Lake Maggiore loop through Luino, Germignaga, Brezzo di Bedero, Porto Valtravaglia, and Castelveccana",
+        "Roggiano return via SP43",
+        "technical descents and narrow bridge sections identified in the official time schedule",
+        "rolling return through Brinzio, Castello Cabiaglio, Orino, and the Lake Varese shoreline",
+        "final rise from Schiranna to Via Sacco in central Varese"
       ]
     },
     "fondo_rating": {
@@ -76,100 +75,100 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 76. adventure dimension dropped, road_surface added. Score recalculated: 74."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 4,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
+      "key_climbs": [
+        "Alpe Tedesco",
+        "Madonna di Ardena",
+        "Brezzo di Bedero and Roggiano",
+        "Schiranna to Varese"
+      ],
+      "profile_type": "Repeated pre-alpine climbs with technical descents and a rising finish",
       "king_of_mountain": null,
-      "_needs_enrichment": true
+      "_needs_enrichment": false
     },
     "course_description": {
-      "character": "The 126 km Gran Fondo starts and finishes on Via Sacco in central Varese and carries 1,993 m of climbing through the pre-alpine lake country. The current route takes in the Alpe Tedesco, Madonna di Ardena, the Lake Maggiore shoreline, the irregular paved rise through Roggiano, and a final climb back into Varese. Repeated climbs alternate with technical descents rather than concentrating the gain in one summit.",
-      "signature_challenge": "The climbing is cumulative: Alpe Tedesco opens the selection, Ardena follows after the descent toward Lake Lugano, and the Gran Fondo extension reaches Lake Maggiore before returning through Roggiano and the hills back to Varese.",
+      "character": "The regulation distance is 126 km with 1,993 m of climbing, although the August race-guide summary rounds that to 127 km and 1,990 m. The Gran Fondo starts and finishes on Via Sacco in central Varese, crosses Alpe Tedesco and Ardena, takes the long Lake Maggiore loop, then returns through the Valcuvia hills and along Lake Varese before the final rise into town.",
+      "signature_challenge": "The climbing is cumulative and the protection clock matters: Alpe Tedesco and Ardena arrive early, the Gran Fondo extension adds the Lake Maggiore and Roggiano terrain, and riders must reach the Montegrino Valtravaglia split by noon to stay on the long course.",
       "suffering_zones": [
         "Alpe Tedesco Ascent",
         "Madonna di Ardena",
-        "Lake Maggiore Extension",
-        "Roggiano and Varese Return"
+        "Lake Maggiore Extension and Brezzo di Bedero",
+        "Valcuvia Hills and the Varese Return"
       ]
     },
     "logistics": {
-      "airport": "Milan's Malpensa Airport (50 km) and Linate Airport (80 km) are primary gateways. Malpensa offers better rail connections to Varese via regional trains (90 minutes). Consider rental car for flexibility exploring the lake region, though public transit connects major towns. Swiss airports (Zurich, 80 km) are viable alternatives for European travelers.",
-      "lodging_strategy": "Varese city center offers convenience for race logistics but premium pricing. Consider lake towns (Lugano, Como, Maggiore shores) for scenic stays with reasonable accommodation—30-45 minute drives to start. Book early for October, as fall tourism peaks. Airbnb rentals near the lakes often provide better value than hotels.",
-      "transport": "",
-      "food": "Northern Italian cuisine dominates—expect excellent pasta, risotto, and lake fish. Varese and surrounding towns have strong cycling culture with rider-friendly restaurants. The pasta party post-race is included; plan pre-race meals at hotel or local cafes. Grocery stores in Varese stock energy foods; plan nutrition strategy around aid stations (details sparse in sources).",
+      "airport": "The official guide identifies Milano Malpensa and Milano Linate as the nearest airports, with train or rental-car connections onward to Varese.",
+      "lodging_strategy": "Base in Varese if you want the simplest race morning: bib pickup, the Race Village, start, finish, bike storage, and pasta party are centered on the Giardini Estensi and Via Sacco 5.",
+      "transport": "Varese is served by rail and by the A8/A9 motorway network. The organizer says the station is close enough to reach the event area by bike or taxi and lists parking near the event area.",
+      "food": "The pasta party begins at noon at the Giardini Estensi. Four Gran Fondo refreshment points are shown in the official time schedule, with green waste zones at each and a gluten-free option at the final stop.",
       "official_site": "https://trevallivaresine.info/"
     },
     "history": {
-      "founded": 2017,
-      "origin_story": "Granfondo Tre Valli Varesine was created in 2017 as a companion event to the legendary pro Tre Valli Varesine, allowing cyclotourists to experience the same course and region. SC Alfredo Binda, a historic cycling institution, added the granfondo to the Sunday before the Tuesday pro race, creating a weekend cycling festival. The event gained prestige when Varese hosted the 2018 UCI Gran Fondo World Championships, establishing the course as a legitimate UCI-sanctioned route. By 2025, the grandfondo joined the UCI Gran Fondo World Series as an official World Championships qualifier, cementing its status as a serious international event. The 9th edition in 2025 marked the event's return after a cancellation due to heavy rain, demonstrating organizational resilience and participant loyalty.",
+      "founded": 2016,
+      "origin_story": "SC Alfredo Binda launched the amateur Granfondo Tre Valli Varesine in 2016 alongside the region's long-running professional race. Varese hosted the UCI Gran Fondo World Championships on this terrain in 2018, and the current organizer describes the 2026 event as the tenth edition on the Worlds route. The October 4 Gran Fondo is both a UCI Gran Fondo World Series qualifier for the 2027 Worlds and the road race for the 2026 UEC Granfondo European Championships.",
       "notable_moments": [
-        "Founded 2017 as companion to historic pro Tre Valli Varesine (held since 1919)",
+        "Founded in 2016 as an amateur companion to the historic professional Tre Valli Varesine",
         "Hosted 2018 UCI Gran Fondo World Championships in Varese",
-        "Joined UCI Gran Fondo World Series as official World Championships qualifier",
-        "Included in Specialized Granfondo Series and CicloTurismo Prestigio 2025",
-        "Successfully returned in 2025 after weather-forced cancellation, demonstrating community commitment"
+        "Serves as a UCI Gran Fondo World Series qualifier for the 2027 World Championships",
+        "Hosts the UEC Granfondo European Championships on October 3-4, 2026",
+        "The organizer calls 2026 the tenth edition"
       ],
-      "reputation": "Granfondo Tre Valli Varesine carries significant prestige through UCI World Series status and World Championships pedigree. The event is respected within European cycling circles for legitimate athletic challenge and authentic Italian cycling culture. SC Alfredo Binda's historic organizing role adds credibility, connecting amateurs to professional cycling heritage dating to 1919."
+      "reputation": "Granfondo Tre Valli Varesine carries unusual amateur-racing weight through its UCI qualifier status, 2018 Worlds history, and 2026 UEC championship role. SC Alfredo Binda links the mass-participation race to Varese's professional cycling tradition."
     },
     "biased_opinion": {
       "verdict": "Prestige-driven UCI qualifier with legitimate teeth",
-      "summary": "Granfondo Tre Valli Varesine trades on genuine cycling heritage and UCI World Series credentials. The 126 km course with 1,993 m of climbing delivers real athletic challenge through pre-alpine terrain. Organization by SC Alfredo Binda and the 2018 World Championships pedigree elevate this beyond typical gran fondos. This is a race for cyclists seeking UCI legitimacy and Italian cycling culture, not casual recreational riders.",
+      "summary": "Granfondo Tre Valli Varesine trades on genuine cycling heritage and UCI credentials. The 126 km course with 1,993 m of climbing delivers a real pre-alpine test, and its 2026 UEC championship status raises the competitive stakes. The key practical detail is the noon split at Montegrino Valtravaglia: miss it and the organizer directs you onto the Medio Fondo.",
       "strengths": [
         "UCI World Series qualifier with World Championships pedigree",
         "Legitimate 126 km course with 1,993m climbing on technical terrain",
         "Historic SC Alfredo Binda organization (founded 1929)",
-        "Closed roads through scenic pre-alpine and lake regions",
+        "Race-convoy road protection through scenic pre-alpine and lake regions",
         "Gran Fondo and Medio Fondo options at 126 km and 100 km"
       ],
       "weaknesses": [
-        "Registration costs not specified—likely premium pricing",
-        "Modest field size (2,000 total across all distances)",
+        "Road closure ends when the end-of-race vehicle passes",
+        "The noon route-split gate can force slower riders onto the Medio Fondo",
         "Variable October weather adds unpredictability",
-        "Limited information on logistics and amenities",
-        "Pre-alpine location increases travel and lodging costs"
+        "Age-category start waves spread across a 40-minute window",
+        "European Championship eligibility and UCI qualification rules require careful category checking"
       ],
-      "bottom_line": "This is a legitimate UCI-sanctioned event with genuine prestige and athletic challenge, ideal for cyclists targeting World Championships qualifiers or seeking authentic Italian gran fondo experience. The cost-to-value proposition remains unclear due to missing pricing data, and the modest field size won't appeal to riders seeking massive international gatherings. Skip if you're budget-conscious or prefer guaranteed warm weather; race if UCI credentials and cycling heritage matter to you."
+      "bottom_line": "This is a legitimate championship-level gran fondo with clear 2026 pricing and logistics. Race it for the UCI qualification opportunity, the UEC championship atmosphere, and the Varese setting; arrive trained to clear the noon split and handle technical descents after repeated climbs."
     },
     "final_verdict": {
       "score": "74/100",
-      "one_liner": "A prestigious UCI World Series qualifier with legitimate climbing and Italian cycling heritage, but premium costs and modest field depth limit universal appeal.",
-      "should_you_race": "Race this if you're targeting UCI World Championships qualifiers, value cycling heritage and European authenticity, or want to ride the 2018 Worlds route. Skip if you're budget-conscious (Northern Italy is expensive), prefer larger international fields, or want guaranteed warm-weather conditions—October in Lombardy is unpredictable.",
-      "alternatives": "For similar UCI prestige without Italian costs, consider Nove Colli (Italy, larger field, better value). For comparable climbing challenge with different scenery, try Granfondo Giro di Lombardia (Italy, same region, more prestigious). For World Championships qualifiers with lower costs, explore Eastern European gran fondos or Spanish alternatives."
+      "one_liner": "A 126 km UCI qualifier and 2026 European Championship race where repeated climbs, technical descents, and a noon long-course gate reward disciplined preparation.",
+      "should_you_race": "Race this if you're targeting the 2027 UCI Gran Fondo World Championships, eligible for the 2026 UEC titles, or want a competitive Italian gran fondo on the Varese Worlds terrain. Skip if you want a relaxed open-road tour: the event is timed, category-started, and the long route has a firm noon split.",
+      "alternatives": "For another Italian UCI qualifier, compare Granfondo Matildica. For a longer mass-participation Italian classic, compare Nove Colli; for a late-season Lombardy climbing event, compare Gran Fondo Il Lombardia."
     },
     "citations": [
       {
-        "url": "https://www.biklo.com/calendar/9-granfondo-tre-valli-varesine-uci-gran-fondo-world-series-2025-23",
+        "url": "https://trevallivaresine.info/wp-content/uploads/2025/12/Regolamento_GF_2026_eng-1.pdf",
         "category": "official",
-        "label": "UCI GRAN FONDO WORLD SERIES 2025 - Biklo Calendar"
+        "label": "Official 2026 English regulations"
       },
       {
-        "url": "https://en.wikipedia.org/wiki/2025_Tre_Valli_Varesine",
-        "category": "reference",
-        "label": "2025 Tre Valli Varesine - Wikipedia"
-      },
-      {
-        "url": "https://www.domestiquecycling.com/en/cycling-races/tre-valli-varesine/2025/",
+        "url": "https://trevallivaresine.info/en/races/gran-fondo-tre-valli-varesine-uci-world-series/registration/",
         "category": "official",
-        "label": "Tre Valli Varesine 2025 | Route, results & full coverage - Domestique Cycling"
+        "label": "Official 2026 registration and pricing"
       },
       {
-        "url": "https://www.cycloworld.cc/en/gran-fondo/italy/gran-fondo-tre-valli-varesine/41291",
-        "category": "reference",
-        "label": "Gran Fondo Tre Valli Varesine - CycloWorld"
+        "url": "https://trevallivaresine.info/wp-content/uploads/2026/08/Raceguide_3_valli_2026-3.pdf",
+        "category": "official",
+        "label": "Official August 2026 race guide"
       },
       {
-        "url": "https://www.endu.net/events/granfondo_tre_valli_varesine/tracks/5af20199-eb0b-4b9a-84df-a9dca7b48423",
-        "category": "reference",
-        "label": "Track detail - Granfondo Tre Valli Varesine - ENDU"
+        "url": "https://trevallivaresine.info/gran-fondo-tre-valli-varesine-uci-world-series/",
+        "category": "official",
+        "label": "Official 2026 event page"
       },
       {
-        "url": "https://www.lakesnorthernitalybiketours.com/blog/road-cycling-races-swiss-northern-italian-lakes-blog-LNIBT.php",
+        "url": "https://ucigranfondoworldseries.com/en/uec-granfondo-european-championships-awarded-to-varese-on-3-4-october/",
         "category": "reference",
-        "label": "2025 Road cycling races Italian Swiss Lake District"
+        "label": "UCI Gran Fondo World Series announcement of the 2026 UEC championships"
       }
     ],
     "youtube_data": {
@@ -295,8 +294,8 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-17",
-      "source": "https://trevallivaresine.info/gran-fondo-tre-valli-varesine-uci-world-series/"
+      "verified": "2026-08-15",
+      "source": "https://trevallivaresine.info/wp-content/uploads/2026/08/Raceguide_3_valli_2026-3.pdf"
     }
   }
 }
