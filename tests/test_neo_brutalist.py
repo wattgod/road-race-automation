@@ -743,6 +743,11 @@ class TestParseEventDates:
         assert parse_event_dates("July 5, 2026") == ("2026-07-05", "2026-07-05")
         assert parse_event_dates("Sep 12, 2026 (17th edition)") == ("2026-09-12", "2026-09-12")
 
+    def test_month_first_current_date_wins_over_reschedule_history(self):
+        assert parse_event_dates(
+            "September 13, 2026 (Sunday; rescheduled from June 7 due to severe-weather risk)"
+        ) == ("2026-09-13", "2026-09-13")
+
     def test_year_only(self):
         """Year with no month/day is unparseable."""
         assert parse_event_dates("2026") == (None, None)
