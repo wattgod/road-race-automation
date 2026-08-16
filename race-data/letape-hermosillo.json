@@ -15,8 +15,8 @@
       "date": "October 18, 2026",
       "date_specific": "2026: October 18 (Sunday)",
       "field_size": "More than 1,000 riders expected",
-      "start_format": "Point-to-point competitive road race from Parque Madero to the Bahía de Kino pier",
-      "registration": "Opening soon on the official L'Étape page; the official Mexico serial lists event registration",
+      "start_format": "Point-to-point competitive road race from Parque Madero to the Bahía de Kino pier. The Mexico serial incorrectly prints León, Guanajuato as the host while giving both Sonora addresses; obtain a corrected rider document.",
+      "registration": "The global L'Étape series labels Hermosillo registration Open, but the event site's registration button still points to a generic L'Étape Draft template. Confirm a Hermosillo-specific entry before paying.",
       "entry_fee": "Not yet published",
       "feed_zones": "Not yet published",
       "cutoff_time": "Not yet published",
@@ -73,7 +73,7 @@
       "expenses": {"score": 4, "explanation": "Destination travel plus one-way finish transport make the total trip expensive for a global rider.[2][3]"}
     },
     "course_description": {
-      "character": "The verified route concept starts at Parque Madero in central Hermosillo and finishes at the Bahía de Kino pier. The official Mexico serial lists 120 and 60 kilometer options, while municipal and local reporting describe the long course as mostly flat and fast. The event website is still a draft shell, so no claimed 170-kilometer Alpine profile belongs here.",
+      "character": "The verified route concept starts at Parque Madero in central Hermosillo and finishes at the Bahía de Kino pier. The official Mexico serial lists 120 and 60 kilometer options, while municipal and local reporting describe the long course as mostly flat and fast. The same serial incorrectly prints León, Guanajuato as the host while giving Sonora addresses, and the event site's Open registration button points to a generic L'Étape Draft template. Obtain a corrected rider document and Hermosillo-specific registration confirmation; no claimed 170-kilometer Alpine profile belongs here.",
       "signature_challenge": "Maintaining group speed and hydration across an exposed desert-to-coast point-to-point course, especially if wind rises toward Bahía de Kino.",
       "suffering_zones": ["The city rollout from Parque Madero", "Long exposed Sonoran straightaways", "Potential wind on the approach to the coast", "The final kilometers to the Bahía de Kino pier"]
     },
@@ -110,8 +110,8 @@
       {"url": "https://www.expreso.com.mx/noticias/hermosillo/hermosillo-sede-letape-tour-de-france-2026/247162", "category": "media", "label": "Local launch report, field projection, flat profile, and pier finish"},
       {"url": "https://hermosillo.letapeseries.com/", "category": "official", "label": "Current official event shell and registration state"}
     ],
-    "eligibility": {"status": "active", "verified": "2026-08-15", "source": "https://www.letapeseries.com/the-series-en", "notes": "Official series, serial, and municipal sources confirm an October 18, 2026 competitive event from Hermosillo to Bahía de Kino with 120 km and 60 km distances."},
-    "source_review": {"reviewed_at": "2026-08-15", "race_date": "2026-10-18", "facts_scope": "Date, host, long and short distances, start, finish, point-to-point identity, mainly flat character, expected field, and Kino Fest context verified. Exact gain, route file, cutoff, aid plan, price, and transport remain unpublished; the official event site is still a draft shell."},
+    "eligibility": {"status": "active", "verified": "2026-08-15", "source": "https://www.letapeseries.com/the-series-en", "notes": "Official series, serial, and municipal sources confirm an October 18, 2026 competitive event from Hermosillo to Bahía de Kino with 120 km and 60 km distances. The official Mexico serial contradicts itself by printing León, Guanajuato as the host while supplying Parque Madero and Bahía de Kino addresses in Sonora. The global series marks registration Open, but the event site's registration button still points to a generic L'Étape Draft template. Entrants must confirm a Hermosillo-specific registration and corrected rider document before paying or traveling."},
+    "source_review": {"reviewed_at": "2026-08-15", "race_date": "2026-10-18", "facts_scope": "Date, long and short distances, start, finish, point-to-point identity, mainly flat character, expected field, and Kino Fest context verified. The official serial's León host line conflicts with its Hermosillo and Bahía de Kino addresses, and the event site's Open registration button points to a generic Draft template. Exact gain, route file, start time, cutoff, aid plan, price, equipment rules, and transport remain unpublished."},
     "training_plan_clearance": {
       "status": "ready",
       "reviewed_at": "2026-08-15",
@@ -120,7 +120,7 @@
       "ladder": "SHORT-3",
       "variation": "All-Rounder",
       "blockers": [],
-      "notes": "Build the Sunday-race SHORT-3 ladder around the verified 120 km point-to-point course, mainly flat and fast desert exposure, and Bahía de Kino finish. Use VARIES for gain, avoid any claim sourced from the broken draft route page, and emphasize sustained group speed, wind, heat, hydration, and one-way race logistics."
+      "notes": "Build the Sunday-race SHORT-3 ladder around the verified 120 km point-to-point course, mainly flat and fast desert exposure, and Bahía de Kino finish. Use VARIES for gain, avoid any claim sourced from the broken draft route page, disclose the León-versus-Sonora venue contradiction, and emphasize sustained group speed, wind, heat, hydration, and one-way race logistics."
     }
   }
 }
