@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T23:17:22",
+  "generated_at": "2026-08-15T23:59:25",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -59,21 +59,19 @@
     "947-ride-joburg": {
       "slug": "947-ride-joburg",
       "tier": 2,
-      "score": 69,
+      "score": 64,
       "checks": {
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
+        "future_date": true,
         "active_registerable": true
       },
       "eligibility_status": "active",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date"
-      ]
+      "ready": true,
+      "runway_weeks": 14,
+      "race_date": "2026-11-22",
+      "blockers": []
     },
     "adac-velotour": {
       "slug": "adac-velotour",
@@ -8008,6 +8006,7 @@
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
     "granfondo-colombia",
+    "947-ride-joburg",
     "atlas-gran-fondo",
     "taiwan-kom-challenge",
     "suzuka-endurance-road",
@@ -8176,7 +8175,6 @@
     "maraton-franja",
     "niseko-classic",
     "styrkeproven",
-    "947-ride-joburg",
     "arlberg-giro",
     "axel-merckx-gran-fondo",
     "ford-ridelondon",
@@ -8403,6 +8401,7 @@
     "old-mutual-wealth-double-century",
     "lake-taupo-cycle-challenge",
     "granfondo-colombia",
+    "947-ride-joburg",
     "atlas-gran-fondo",
     "taiwan-kom-challenge",
     "suzuka-endurance-road",
@@ -8432,13 +8431,13 @@
   ],
   "summary": {
     "total": 427,
-    "ready": 177,
+    "ready": 178,
     "content_present": 415,
     "validator_clean": 427,
-    "pilot_candidates": 104,
+    "pilot_candidates": 105,
     "by_tier_ready": {
       "1": 14,
-      "2": 135,
+      "2": 136,
       "3": 28,
       "4": 0
     }

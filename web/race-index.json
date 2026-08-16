@@ -6645,44 +6645,6 @@
     ]
   },
   {
-    "name": "947 Ride Joburg",
-    "slug": "947-ride-joburg",
-    "location": "Johannesburg, South Africa",
-    "country": "South Africa",
-    "region": "Africa",
-    "month": "November",
-    "distance_km": 97.0,
-    "distance_mi": 60.0,
-    "elevation_m": 1398.0,
-    "elevation_ft": 4587.0,
-    "tier": 2,
-    "overall_score": 69,
-    "scores": {
-      "distance": 2,
-      "climbing": 2,
-      "descent_technicality": 1,
-      "road_surface": 1,
-      "climate_risk": 3,
-      "altitude": 3,
-      "logistics": 4,
-      "prestige": 4,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 5,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 4
-    },
-    "tagline": "Own the streets of Joburg. 97km from Kyalami through Africa's City of Gold on fully closed roads.",
-    "has_profile": true,
-    "profile_url": "/race/947-ride-joburg/",
-    "discipline": "gran_fondo",
-    "lat": -26.2348,
-    "lng": 27.9827,
-    "route_options": []
-  },
-  {
     "name": "Amashova National Classic",
     "slug": "amashova-national-classic",
     "location": "Pietermaritzburg to Durban, KwaZulu-Natal, South Africa",
@@ -10235,6 +10197,46 @@
     "lng": null,
     "route_options": [
       "100 km Gran Fondo only"
+    ]
+  },
+  {
+    "name": "947 Ride Joburg",
+    "slug": "947-ride-joburg",
+    "location": "Johannesburg, South Africa",
+    "country": "South Africa",
+    "region": "Africa",
+    "month": "November",
+    "distance_km": 97.0,
+    "distance_mi": 60.3,
+    "elevation_m": 1398.0,
+    "elevation_ft": 4587.0,
+    "tier": 2,
+    "overall_score": 64,
+    "scores": {
+      "distance": 2,
+      "climbing": 2,
+      "descent_technicality": 1,
+      "road_surface": 2,
+      "climate_risk": 3,
+      "altitude": 3,
+      "logistics": 2,
+      "prestige": 4,
+      "organization": 4,
+      "scenic_experience": 3,
+      "community_culture": 4,
+      "field_depth": 4,
+      "value": 3,
+      "expenses": 4,
+      "cultural_impact": 4
+    },
+    "tagline": "A 97km Johannesburg road race from the M1 and Nelson Mandela Bridge to a first-time Kyalami finish.",
+    "has_profile": true,
+    "profile_url": "/race/947-ride-joburg/",
+    "discipline": "gran_fondo",
+    "lat": -26.2348,
+    "lng": 27.9827,
+    "route_options": [
+      "97km Road Race"
     ]
   },
   {
