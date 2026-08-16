@@ -9,45 +9,45 @@
       "distance_mi": 76,
       "elevation_m": 2300,
       "elevation_ft": 7500,
-      "location": "Stanley Park, Vancouver → Whistler Village",
+      "location": "Vancouver to Whistler, BC",
       "location_badge": "British Columbia, Canada",
       "country": "Canada",
-      "date": "First Saturday after Labour Day in September",
-      "date_specific": "September 12, 2026 (17th edition)",
-      "field_size": "~5,000-5,245 registered riders (14,000+ combined riders and spectators in 2024)",
-      "start_format": "wave_start",
-      "registration": "Open registration, tiered pricing. Forte limited to 550 riders and frequently sells out.",
-      "entry_fee": "CAD $280-330 (~$200-240 USD) tiered pricing. Youth U23: CAD $50.",
-      "feed_zones": "5 full-support rest stops (Gran Fondo/Forte) with nutrition, medical, and mechanical support.",
-      "cutoff_time": "Cutoff times exist but specific times not published. Broom wagon sweeps riders who fall behind pace.",
+      "date": "Saturday, September 12, 2026",
+      "date_specific": "September 12, 2026 (Saturday)",
+      "field_size": "Approximately 5,000 riders; the organizer describes the Gran Fondo field as 5,000, while 5,245 riders registered across the 2024 event.",
+      "start_format": "Gran Fondo starts at 6:20am from Stanley Park; St. Regis Cup starts 6:00am, Forte 6:05am, Alta Classe 6:10am, and Medio 9:00am from Whistler under the current rules page.",
+      "registration": "2026 registration is open through Race Roster. The Forte is limited to 600 riders and was listed sold out when verified August 15, 2026.",
+      "entry_fee": "Current 2026 late-window price: Gran Fondo CA$499 plus local taxes and Race Roster fees; Forte CA$550 plus taxes and fees but listed sold out. Earlier tiers have closed.",
+      "feed_zones": "4 supported rest stops on the 122km Gran Fondo; 5 on the Forte, including the Callaghan stop.",
+      "cutoff_time": "Gran Fondo: Alice Lake at 72.5km, Salt Shed at 88km by 12:45pm, and Brandywine at 105km by 2:15pm; finish closes at 4:00pm. The organizer page currently prints the Alice Lake time as 11:50pm, which conflicts with the later cutoffs and finish closure, so riders must confirm that first cutoff in the September 7 rider guide rather than assume am/pm.",
       "lat": 49.2827,
       "lng": -123.1207,
       "route_options": [
-        "Forte: 152km / 3,100m — adds Cypress Mountain climb (limited to 550 riders)",
-        "Gran Fondo: 122km / 2,300m — Sea-to-Sky Vancouver to Whistler",
-        "Medio: 55km / 835m — Whistler loop via Callaghan Valley (e-bikes permitted)"
+        "Forte: 146km / 2,712m — adds the Mt. Callaghan challenge (limited to 600 riders)",
+        "Gran Fondo: 122km / 2,300m — Stanley Park to Whistler on the Sea-to-Sky corridor",
+        "Medio: 55km / 835m — Whistler loop via Callaghan Valley with a neutralized rollout (e-bikes permitted)"
       ]
     },
     "climate": {
       "primary": "Pacific coastal-mountain",
       "description": "September is one of Vancouver's driest months. Pre-dawn start 10-14°C, daytime highs 15-21°C. Whistler finish 5-8°C cooler than Vancouver. Variable conditions along the Sea-to-Sky corridor.",
       "challenges": [
-        "Pre-dawn departure in darkness (6:00-7:00am start) at 10-14°C",
+        "Pre-dawn staging and a 6:20am Gran Fondo start at 10-14°C",
         "Coastal-to-mountain microclimate transitions along Howe Sound",
-        "42% chance of rain on any given September day in Vancouver",
+        "Rain, cool mountain air, or wildfire smoke can alter race-day conditions",
         "Wind factor along exposed Howe Sound coastal section"
       ]
     },
     "terrain": {
       "primary": "Coastal highway with sustained gradual climbing",
-      "surface": "Excellent quality tarmac — Highway 99 significantly upgraded for 2010 Winter Olympics.",
+      "surface": "Paved Highway 99 and connecting roads; the organizer provides a dedicated event lane on the Sea-to-Sky corridor.",
       "technical_rating": 2,
       "features": [
         "Point-to-point from sea level to 650m — gradual sustained climbing, not steep alpine passes",
         "Lions Gate Bridge car-free crossing at dawn",
         "Sea-to-Sky Highway along Howe Sound — one of the world's most scenic coastal mountain highways",
-        "Cypress Mountain (Forte only) — Cat 1 climb to 2010 Olympic venue",
-        "Dedicated protected lane on highway — not full road closure"
+        "Mt. Callaghan extension (Forte only) — the additional late-race mountain challenge before rejoining the Gran Fondo route",
+        "Dedicated event lane with regular traffic excluded; emergency vehicles retain priority and the road reopens behind the sweep"
       ]
     },
     "fondo_rating": {
@@ -71,55 +71,35 @@
       "cultural_impact": 2,
       "discipline": "gran_fondo",
       "prestige_override": "Prestige 5 caps at T2 (score 61 < 75)",
-      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). The course is scenic but not mountainous: 122km with 2,300m climbing, mostly gradual Sea-to-Sky gradient averaging 1.5-3%. Logistics 2 — Vancouver is a major international city, YVR airport with direct SkyTrain downtown. Climate risk 2 — September is one of BC's driest months. Road surface 1 — Olympic-upgraded Highway 99. Value 3 — CAD $280-330 is mid-range, with dedicated lane (not full road closure). Cultural impact 2 — 2010 Olympic legacy event, awarded 2020 UCI Worlds (cancelled COVID), but lacks deep cycling heritage."
+      "scoring_notes": "Prestige 5 confirmed (prestige_5_events list). The standard course is a sustained 122km / 2,300m Sea-to-Sky effort rather than a steep alpine-pass event. Logistics 2 — Vancouver is a major international city, YVR connects to downtown by SkyTrain, and the organizer sells return transport for the point-to-point format. Climate risk 2 — September conditions can shift from cool coastal air to mountain weather. Road surface 1 — the event uses the paved Highway 99 corridor. Value 3 — the current CA$499 late-window fee is expensive, but includes a traffic-free event lane, four supported stops, timing, finish food, and a large finish festival. Cultural impact 2 — a Vancouver 2010 legacy event awarded the cancelled 2020 UCI Gran Fondo World Championships, but without the deep heritage of older European fondos."
     },
     "climb_profile": {
-      "total_climbs": 2,
-      "hc_climbs": 0,
-      "cat_1_climbs": 1,
-      "cat_2_climbs": 0,
-      "cat_3_climbs": 0,
+      "total_climbs": null,
+      "hc_climbs": null,
+      "cat_1_climbs": null,
+      "cat_2_climbs": null,
+      "cat_3_climbs": null,
       "key_climbs": [
-        {
-          "name": "Cypress Bowl Road (Forte only)",
-          "km_from_start": 5,
-          "distance_km": 10.5,
-          "elevation_gain_m": 668,
-          "average_gradient_pct": 6.4,
-          "max_gradient_pct": 8.0,
-          "category": "Cat 1",
-          "summit_altitude_m": 930,
-          "tactical_notes": "Forte riders only. Pre-dawn climb to 2010 Olympic freestyle skiing/snowboard venue. Sunrise descent is a highlight. Adds 876m of climbing to the Gran Fondo route."
-        },
-        {
-          "name": "Squamish to Whistler (Sea-to-Sky gradient)",
-          "km_from_start": 67,
-          "distance_km": 55.0,
-          "elevation_gain_m": 650,
-          "average_gradient_pct": 1.5,
-          "max_gradient_pct": 3.0,
-          "category": "Uncategorized",
-          "summit_altitude_m": 650,
-          "tactical_notes": "Not a traditional climb — sustained gradual ascent averaging 1.5-3% over 55km. The real climbing begins after Squamish. Tantalus Range and Garibaldi Provincial Park provide dramatic mountain scenery."
-        }
+        "The accumulated rollers and sustained rise from Squamish toward Whistler shape the second half of the 122km Gran Fondo.",
+        "Forte riders add the Mt. Callaghan extension late in the route before descending and reconnecting with Gran Fondo riders."
       ],
       "profile_type": "rolling",
-      "king_of_mountain": "Cypress Bowl Road"
+      "king_of_mountain": null
     },
     "course_description": {
-      "character": "A 122km point-to-point ride from downtown Vancouver to Whistler along the iconic Sea-to-Sky Highway. The course begins at sea level in Stanley Park, crosses the Lions Gate Bridge car-free, follows the stunning Howe Sound coastline, then climbs gradually through the Coast Mountains to Whistler Village. The challenge is sustained distance rather than steep grades — most of the 2,300m of climbing occurs as a long, gradual drag in the second half after Squamish.",
-      "signature_challenge": "The sustained gradient from Squamish to Whistler — 55km of gradually rising road that grinds riders down through sheer distance rather than steep pitches. The Forte adds the pre-dawn Cypress Mountain Cat 1 climb for those seeking a true mountainous challenge.",
+      "character": "A 122km point-to-point ride from Stanley Park in Vancouver to Whistler along the Sea-to-Sky corridor. Riders cross the Lions Gate Bridge, follow Howe Sound, and accumulate 2,300m of climbing before Whistler Village. The organizer provides a dedicated lane with regular traffic excluded, but riders must obey course marshals, yield to emergency vehicles, and understand that the road reopens behind the sweep.",
+      "signature_challenge": "Managing 2,300m of accumulated elevation across a long point-to-point course, then holding pace through the late approach to Whistler before the published support cutoffs.",
       "suffering_zones": [
-        "Squamish to Whistler (km 67-122): 55km of sustained 1.5-3% gradient that accumulates enormous fatigue",
+        "Squamish to Whistler: accumulated climbing and distance make the second half progressively harder",
         "Howe Sound coastal section in headwind: exposed to crosswinds that can significantly slow progress",
-        "Cypress Bowl Road (Forte only): 10.5km at 6.4% average in pre-dawn darkness"
+        "Brandywine to Whistler: the final 17km comes after the 105km support cutoff and rewards conservative early pacing"
       ]
     },
     "logistics": {
-      "airport": "Vancouver International (YVR) — 30-minute direct SkyTrain to downtown. Voted best airport in North America. Excellent international connections.",
+      "airport": "Vancouver International (YVR), with Canada Line rail service to downtown Vancouver.",
       "lodging_strategy": "Vancouver (start): wide range of hotels, downtown near Stanley Park ideal. Whistler (finish): world-class resort accommodation. Event partners offer discounted rates. Point-to-point format means planning for two locations or using event shuttle.",
       "transport": "Event shuttle buses (purchasable) return riders + bikes from Whistler to Vancouver. Free Concord Pacific Park & Ride in Vancouver. Bag drop to finish line available.",
-      "food": "5 full-support rest stops with nutrition. Post-race meal and drink included at Celebration Plaza, Whistler Olympic Plaza.",
+      "food": "4 supported rest stops on the Gran Fondo and 5 on the Forte. Finish food and a drink are included at Celebration Plaza in Whistler.",
       "official_site": "https://www.rbcgranfondo.com/event/whistler"
     },
     "history": {
@@ -138,19 +118,19 @@
     },
     "biased_opinion": {
       "verdict": "The gold standard for North American gran fondos — scenic, well-organized, and genuinely accessible.",
-      "summary": "RBC GranFondo Whistler is North America's answer to the European gran fondo tradition. The Sea-to-Sky Highway is genuinely spectacular, the organization is polished, and the Whistler finish creates a perfect post-ride celebration atmosphere. But the course itself is more scenic cruise than mountain challenge — the climbing is gradual and sustained rather than steep and decisive. The Forte adds real teeth with Cypress Mountain, but the standard Gran Fondo is fundamentally a long, beautiful highway ride.",
+      "summary": "RBC GranFondo Whistler is North America's large-scale answer to the European gran fondo tradition. The Sea-to-Sky corridor is genuinely spectacular, the organization is polished, and the Whistler finish creates a strong post-ride celebration. The standard Gran Fondo is not built around one famous pass, but 122km and 2,300m make it a serious endurance event. The Forte adds the Mt. Callaghan extension for riders wanting a harder late-race mountain test.",
       "strengths": [
         "Sea-to-Sky Highway is one of the world's most scenic coastal mountain roads",
         "5,000+ riders — largest gran fondo in North America",
         "Vancouver/Whistler infrastructure is world-class",
         "Lions Gate Bridge car-free crossing at dawn",
-        "Forte option (152km) adds genuine climbing challenge",
+        "Forte option (146km) adds the Mt. Callaghan challenge",
         "2010 Olympic legacy — purpose-built road infrastructure"
       ],
       "weaknesses": [
-        "Roads not fully closed — dedicated lane, not full closure",
-        "Course is gradual, not mountainous — won't satisfy climbers",
-        "CAD $280-330 is expensive for a highway ride without full closure",
+        "A dedicated traffic-free lane is not the same as a whole-highway closure, and the road reopens behind the sweep",
+        "The Gran Fondo's challenge is accumulated climbing rather than one marquee alpine pass",
+        "The current CA$499 late-window fee plus taxes and platform fees is expensive",
         "Point-to-point logistics require shuttle or overnight in Whistler"
       ],
       "bottom_line": "RBC GranFondo Whistler earns T2 through brand prestige, scale, and setting rather than course difficulty. If you want the best North American gran fondo experience on one of the world's most scenic highways, this is it. Just don't expect European mountain passes."
@@ -158,7 +138,7 @@
     "final_verdict": {
       "score": "61/100",
       "one_liner": "Sea-to-Sky Highway from Vancouver to Whistler — North America's largest and most celebrated gran fondo, where the scenery outshines the climbing.",
-      "should_you_race": "Yes, if you value the full gran fondo experience over pure climbing challenge. The Sea-to-Sky is genuinely beautiful, the organization is top-tier, and the Whistler finish is a celebration. The Forte (152km) is the choice for those wanting real climbing. Best for riders who appreciate scenic production over alpine suffering.",
+      "should_you_race": "Yes, if you value a fully produced gran fondo experience and can handle a costly, point-to-point weekend. The Sea-to-Sky setting, dedicated event lane, support, and Whistler finish are the draw. The 146km Forte adds Mt. Callaghan for riders wanting the harder option, but its 600 places were sold out when checked.",
       "alternatives": "GFNY NYC (East Coast gran fondo, similar production scale), L'Etape du Tour (if you want closed-road mountain challenge), Gran Fondo Stelvio (if you want real alpine climbing)."
     },
     "citations": [
@@ -173,9 +153,19 @@
         "label": "Route distances and details"
       },
       {
-        "url": "https://www.rbcgranfondo.com/whistler/the-ride/forte",
+        "url": "https://www.rbcgranfondo.com/event-resources/whistler/rules-guidelines",
         "category": "official",
-        "label": "Forte 152km route details"
+        "label": "Current rules, wave starts, course cutoffs, and finish closure"
+      },
+      {
+        "url": "https://www.rbcgranfondo.com/event-resources/whistler/agenda",
+        "category": "official",
+        "label": "2026 ride-day agenda"
+      },
+      {
+        "url": "https://raceroster.com/events/2026/109976/rbc-granfondo-whistler-2026",
+        "category": "official",
+        "label": "2026 registration status and current pricing"
       },
       {
         "url": "https://www.endurancesportswire.com/rbc-granfondo-whistler-celebrates-a-record-breaking-15th-anniversary-event/",
@@ -193,21 +183,16 @@
         "label": "Gran Fondo Guide listing — best in North America"
       },
       {
-        "url": "https://www.strava.com/segments/32947611",
-        "category": "data",
-        "label": "Strava segment: 121.4km, 1,973m gain"
-      },
-      {
-        "url": "https://mycols.app/en/climb/cypress-mountain",
-        "category": "data",
-        "label": "Cypress Mountain climb data"
+        "url": "https://www.rbcgranfondo.com/event-resources/whistler/travel-info",
+        "category": "official",
+        "label": "Current travel and transport information"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
+      "verified": "2026-08-15",
       "source": "https://www.rbcgranfondo.com/event/whistler",
-      "note": "Database appears to carry a duplicate entry for this same physical event under slug 'whistler-granfondo' -- flagged for Matti to consider consolidating."
+      "note": "Active September 12, 2026 event. The organizer says the 2026 rider guide will be released September 7; recheck the Alice Lake cutoff then because the current rules page prints a logically inconsistent 11:50pm. The retired 'whistler-granfondo' source alias is deduplicated to this canonical race and must not produce a second page or plan fleet."
     }
   }
 }
