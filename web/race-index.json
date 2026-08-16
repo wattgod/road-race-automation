@@ -7069,47 +7069,6 @@
     ]
   },
   {
-    "name": "GFNY Pittsburgh",
-    "slug": "gfny-pittsburgh",
-    "location": "Monroeville, Pennsylvania, USA",
-    "country": "USA",
-    "region": "North America",
-    "month": "September",
-    "distance_km": 128.6,
-    "distance_mi": 79.9,
-    "elevation_m": 2652,
-    "elevation_ft": 8701.0,
-    "tier": 2,
-    "overall_score": 69,
-    "scores": {
-      "distance": 4,
-      "climbing": 5,
-      "descent_technicality": 2,
-      "road_surface": 3,
-      "climate_risk": 3,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "The hardest GFNY in America: 79.9 miles and 8,701 feet of climbing through Pennsylvania's relentless hills",
-    "has_profile": true,
-    "profile_url": "/race/gfny-pittsburgh/",
-    "discipline": "gran_fondo",
-    "lat": 40.4237,
-    "lng": -79.7849,
-    "route_options": [
-      "Long Course: 79.9 miles, 8,701 feet elevation — the competitive route featuring all 10 signature climbs (actual course as raced; pre-race billing was 70mi/7,756ft)",
-      "Medium Course: 41 miles, shared climbs — recreational option tackling the same 10 climbs with full support"
-    ]
-  },
-  {
     "name": "GFNY Punta del Este",
     "slug": "gfny-punta-del-este",
     "location": "Punta del Este, Maldonado Department, Uruguay",
@@ -17597,6 +17556,47 @@
     "route_options": [
       "Long: 144.6 km / 89.9 mi, 647 m / 2,123 ft — timed competitive course with category rankings and awards",
       "Medium: 95.9 km / 59.6 mi — timed, but results are alphabetical and riders are not ranked; elevation is not published"
+    ]
+  },
+  {
+    "name": "GFNY Pittsburgh",
+    "slug": "gfny-pittsburgh",
+    "location": "Monroeville, Pennsylvania, USA",
+    "country": "USA",
+    "region": "North America",
+    "month": "September",
+    "distance_km": 120.4,
+    "distance_mi": 74.8,
+    "elevation_m": 2507,
+    "elevation_ft": 8226.0,
+    "tier": 3,
+    "overall_score": 51,
+    "scores": {
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "road_surface": 2,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 2,
+      "prestige": 3,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 2,
+      "field_depth": 3,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 0
+    },
+    "tagline": "74.8 miles and 8,226 feet over two steep loops",
+    "has_profile": true,
+    "profile_url": "/race/gfny-pittsburgh/",
+    "discipline": "gran_fondo",
+    "lat": 40.4237,
+    "lng": -79.7849,
+    "route_options": [
+      "Long Course: organizer prose rounds to 80 miles; its current embedded Ride with GPS route measures 120.39 km / 74.8 miles and 2,507 m / 8,226 feet, with a second pass through the 29-mile climbing loop; competitive and category-ranked",
+      "Medium Course: organizer prose rounds to 47 miles; its current embedded Ride with GPS route measures 71.56 km / 44.5 miles and 1,523 m / 4,995 feet; timed but noncompetitive"
     ]
   },
   {
