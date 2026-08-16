@@ -21,6 +21,10 @@ RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 RewriteRule ^race/chasing-cancellara/?$ /race/chasing-cancellara-bern-zermatt/ [R=301,L]
 RewriteRule ^race/chasing-cancellara/(.*)$ /race/chasing-cancellara-bern-zermatt/$1 [R=301,L]
 
+# letape-norway is the retired duplicate identity for L'Étape Trondheim.
+RewriteRule ^race/letape-norway/?$ /race/letape-trondheim/ [R=301,L]
+RewriteRule ^race/letape-norway/(.*)$ /race/letape-trondheim/$1 [R=301,L]
+
 # chiang-mai-gran-fondo: fabricated-as-named (2026-07-23 audit — GFNY never
 # ran Chiang Mai; every reference was circular self-sourcing). Profile
 # tombstoned on main AND the race-page spine branch. Subpaths covered.

@@ -1397,6 +1397,13 @@ RewriteRule ^race/gfny-bali/(.*)$ /race/gfny-belitung/$1 [R=301,L]
 RewriteRule ^race/chasing-cancellara/?$ /race/chasing-cancellara-bern-zermatt/ [R=301,L]
 RewriteRule ^race/chasing-cancellara/(.*)$ /race/chasing-cancellara-bern-zermatt/$1 [R=301,L]
 
+# letape-norway -> letape-trondheim (duplicate profile and plan fleet for the
+# same Trondheim event; the newer slug has the current source dossier and the
+# fully receipt-verified TrainingPeaks ladder). The physical legacy page must
+# stay retired because SiteGround nginx serves existing files first.
+RewriteRule ^race/letape-norway/?$ /race/letape-trondheim/ [R=301,L]
+RewriteRule ^race/letape-norway/(.*)$ /race/letape-trondheim/$1 [R=301,L]
+
 # gran-fondo-greece-loutraki -> gran-fondo-loutraki (duplicate profile of the
 # same event, adjudicated deleted 2026-07-20; canonical page carries the
 # published plan ladder). NOTE: the physical page dir must stay deleted on the

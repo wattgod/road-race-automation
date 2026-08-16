@@ -117,3 +117,37 @@ def test_trondheim_generated_pipeline_artifacts_are_current() -> None:
         and row["location"] == "Trondheim, Trøndelag, Norway"
         for row in index
     )
+
+
+def test_legacy_norway_identity_is_retired_in_favor_of_trondheim() -> None:
+    readiness = json.loads((ROOT / "data" / "plan-readiness.json").read_text())
+    sku_map = json.loads((ROOT / "data" / "tp-sku-map.json").read_text())
+    race_dates = json.loads((ROOT / "web" / "race-dates.json").read_text())
+    index = json.loads((ROOT / "web" / "race-index.json").read_text())
+    redirects = (ROOT / "scripts" / "push_wordpress.py").read_text()
+    deployed_redirects = (ROOT / "web" / "htaccess-root").read_text()
+
+    assert not (ROOT / "race-data" / "letape-norway.json").exists()
+    assert not (ROOT / "web" / "race-packs" / "letape-norway.json").exists()
+    assert "letape-norway" not in readiness["races"]
+    assert "letape-norway" not in sku_map
+    assert "letape-norway" not in race_dates
+    assert all(row["slug"] != "letape-norway" for row in index)
+    assert (
+        "RewriteRule ^race/letape-norway/?$ /race/letape-trondheim/ [R=301,L]"
+        in redirects
+    )
+    assert (
+        "RewriteRule ^race/letape-norway/(.*)$ "
+        "/race/letape-trondheim/$1 [R=301,L]"
+        in redirects
+    )
+    assert (
+        "RewriteRule ^race/letape-norway/?$ /race/letape-trondheim/ [R=301,L]"
+        in deployed_redirects
+    )
+    assert (
+        "RewriteRule ^race/letape-norway/(.*)$ "
+        "/race/letape-trondheim/$1 [R=301,L]"
+        in deployed_redirects
+    )
