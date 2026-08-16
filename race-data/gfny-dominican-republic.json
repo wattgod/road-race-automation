@@ -3,67 +3,71 @@
     "name": "GFNY República Dominicana",
     "slug": "gfny-dominican-republic",
     "display_name": "GFNY Dominican Republic",
-    "tagline": "Be a Pro For A Day in Paradise",
+    "tagline": "A fast 144.6-kilometer Caribbean gran fondo built around coastal wind, rolling roads, and bunch positioning.",
     "vitals": {
-      "distance_km": 99.8,
-      "distance_mi": 62.0,
-      "elevation_m": 1067,
-      "elevation_ft": 3500.0,
+      "distance_km": 144.6,
+      "distance_mi": 89.9,
+      "elevation_m": 647,
+      "elevation_ft": 2123,
       "location": "Punta Cana, Dominican Republic",
-      "location_badge": "Punta Cana, Dominican Republic",
+      "location_badge": "PUNTA CANA, DOMINICAN REPUBLIC",
       "country": "Dominican Republic",
-      "date": "March",
+      "date": "September",
       "date_specific": "2026: September 13 (Sunday)",
-      "field_size": "Not specified",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": "Not specified",
-      "feed_zones": null,
-      "cutoff_time": null,
+      "field_size": "The organizer has not published a 2026 field cap.",
+      "start_format": "Caribbean Lake Park opens to riders from 4:30-6:00am; corrals close at 6:15am and the race starts at 6:30am. The rules order VIP and competitive corrals first, then general long-course riders by age group, medium-course riders, and para-athletes.",
+      "registration": "Riders must be 18 or older. In-person packet pickup is Saturday, September 12 from 11:00am-6:00pm at Caribbean Lake Park; the organizer says riders cannot race without their packet. The current-year GFNY jersey is mandatory on race day.",
+      "entry_fee": "$185 standard entry plus an $18.50 service fee as displayed August 15, 2026; GFNY uses changing sales periods, so recheck the live registration widget.",
+      "feed_zones": "The rules refer to organizer aid stations and eco zones, but the organizer has not published the 2026 station locations or contents.",
+      "cutoff_time": "No rider cutoff is published. The official schedule estimates all cyclists arriving by 1:00pm; that estimate is not a stated cutoff.",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [
+        "Long: 144.6 km / 89.9 mi, 647 m / 2,123 ft — timed competitive course with category rankings and awards",
+        "Medium: 95.9 km / 59.6 mi — timed, but results are alphabetical and riders are not ranked; elevation is not published"
+      ]
     },
     "climate": {
-      "primary": "Tropical",
-      "description": "Warm weather racing in March with tropical conditions. Punta Cana features consistent warm temperatures and Caribbean trade winds that significantly impact the course.",
+      "primary": "Tropical coastal",
+      "description": "A September race in Punta Cana with coastal wind explicitly identified by the organizer as a course feature. Heat and humidity preparation is prudent, but race-day weather must be checked close to the event rather than inferred from climatology.",
       "challenges": [
-        "Precipitation: Not specified"
+        "Exposed coastal wind on a speed-oriented course",
+        "Potential tropical heat and humidity; the organizer has not published a race-day forecast"
       ]
     },
     "terrain": {
       "primary": "Rolling hills",
-      "surface": "Rolling hills with distinct character changes. First 47km relatively flat with rolling hills and favorable wind. Middle section features rural hinterland with rolling hills (4-6 degree grades). Final sections return to main roads with headwind challenges.",
+      "surface": "Paved road course. The organizer describes a wide, multi-lane opening before the route turns north through rural roads, short punchy rollers, Uvero Alto, Las Lagunas de Nisibón, and El Cedro. It does not publish a full road-surface audit.",
       "technical_rating": 1,
       "features": [
-        "Rolling hills with distinct character changes",
-        "First 47km relatively flat with rolling hills and favorable wind",
-        "Middle section features rural hinterland with rolling hills (4-6 degree grades)",
-        "Final sections return to main roads with headwind challenges"
+        "Wide multi-lane opening where the peloton can organize",
+        "Short, punchy rollers rather than sustained climbs",
+        "Rural roads through Uvero Alto, Las Lagunas de Nisibón, and El Cedro",
+        "Coastal wind and exposed speed sections"
       ]
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 2,
+      "distance": 3,
+      "climbing": 2,
+      "descent_technicality": 1,
       "climate_risk": 4,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 2,
       "altitude": 1,
-      "logistics": 4,
+      "logistics": 1,
       "prestige": 3,
       "field_depth": 3,
       "value": 3,
-      "expenses": 2,
-      "road_surface": 1,
-      "cultural_impact": 3,
-      "overall_score": 64,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "expenses": 4,
+      "road_surface": 2,
+      "cultural_impact": 2,
+      "overall_score": 51,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 64."
+      "scoring_notes": "Regraded August 15, 2026 against the official 2026 relaunch, course, schedule, rules, registration, travel, and hotel pages. The old 99.8 km / 1,067 m profile was obsolete. Distance 4->3 follows the 120-160 km rubric for the official 144.6 km long course; climbing 3->2 follows the 500-1,500 m rubric for 647 m. Descent technicality 2->1 reflects the organizer's wide-road, short-roller description. Logistics 4->1 reflects PUJ 15 minutes from Punta Cana and abundant organizer-listed lodging. Road surface 1->2 avoids claiming fresh tarmac throughout when no full surface audit is published. Organization 4->2, community 4->2, and scenery 4->3 are conservative because the event is relaunching under renewed organization and the 2026 edition has not yet occurred; the rules also require obeying normal road controls unless police override them, so full closure is not claimed. Expenses 2->4 reflects destination travel, while cultural impact 3->2 reflects a returning international-brand event without evidence of deep local cycling heritage. Overall score recalculated 64->51; tier changes T2->T3. Regrade after the 2026 event with results, rider reports, and final operational evidence."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -77,68 +81,87 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "A wind-dependent Caribbean cycling challenge featuring a deceptively fast outbound leg with favorable tailwind through rural tropical terrain, followed by a punishing headwind return that tests mental toughness and pacing discipline. The course transitions from coastal roads to lush hinterland and back, with the Caribbean Sea and impressive hill backdrops providing scenic contrast.",
-      "signature_challenge": "The wind reversal from outbound to return leg. Riders must exercise extreme restraint during the fast, favorable outbound section (km 0-67) despite the pace feeling easy and the field moving quickly. The return journey's headwind separates those who paced conservatively from those who burned matches early.",
+      "character": "A long, fast Caribbean road race with only 647 meters of climbing across 144.6 kilometers. The wide opening favors a quick peloton, then short rollers, rural roads, and coastal wind create repeated positioning and pacing decisions rather than sustained mountain climbing.",
+      "signature_challenge": "Maintaining aerodynamic speed and bunch position for nearly 145 kilometers without overreacting to every short rise or wind-driven acceleration. The course rewards durable tempo, repeatable surges, fueling discipline, and competent group riding.",
       "suffering_zones": [
-        "Headwind section returning to Punta Cana. All favorable wind from outbound leg becomes direct opposition. Riders face 20km of headwind before wind shifts to left side.",
-        "Last 10km approaching finish. Wind from left side with opportunity to attack, but fatigue and wind resistance create final selection point.",
-        "For medium course riders, the 47km turnaround means immediate headwind for final 47km to finish. Wind challenge is proportionally harder for shorter distance."
+        "The fast multi-lane opening, where poor positioning can force repeated costly accelerations before the race settles.",
+        "The northern rolling sector toward El Cedro, where short punchy rises interrupt rhythm and expose riders who surge above threshold too often.",
+        "Late exposed kilometers back toward Punta Cana, where accumulated fatigue, coastal wind, and dwindling groups can turn a fast course into a long solo effort."
       ]
     },
     "logistics": {
-      "airport": "PUJ (Punta Cana International Airport)",
-      "lodging_strategy": "Extensive all-inclusive resort options in Bavaro and Punta Cana area (La Costa del Coco). Wide range of luxury accommodations available.",
-      "transport": "Punta Cana is the second most popular tourist destination in Latin America with extensive resort infrastructure. Race week activities centered at Blue Mall Punta Cana, which hosts the expo, pre-race group rides, start/finish line, and post-race activities.",
-      "food": "",
-      "official_site": "https://capcana.gfny.com"
+      "airport": "Punta Cana International Airport (PUJ). The organizer says PUJ is about 15 minutes from the Punta Cana area and serves direct flights from more than 28 countries and 96 cities; Santo Domingo (SDQ) is also included in the event's United travel window.",
+      "lodging_strategy": "The organizer lists several bike-friendly host hotels, including properties that allow bikes in rooms and guarantee a 4:00am race-day breakfast. Confirm the hotel's bike policy if booking elsewhere.",
+      "transport": "Race-week group rides, Saturday expo and packet pickup, Sunday start/finish, post-race meal, and awards are all scheduled at Caribbean Lake Park. The organizer lists 24-hour airport taxis and rental-car desks; it specifically warns that JetBlue does not transport bicycles to the Dominican Republic.",
+      "food": "The post-race meal is scheduled to begin at 10:00am at Caribbean Lake Park. Aid-station locations and contents are not yet published.",
+      "official_site": "https://puntacana.gfny.com/?lang=en"
     },
     "history": {
       "founded": null,
-      "origin_story": "GFNY República Dominicana is part of the GFNY Global Endurance Sports Series, which operates 30+ cycling events worldwide across five continents. The event brings the 'Pro For A Day' concept to the Caribbean.",
+      "origin_story": "GFNY first brought its mass-participation road format to Punta Cana in 2019. GFNY announced a 2026 return under renewed organization after an absence from the calendar.",
       "notable_moments": [
-        "Part of GFNY's expansion to multiple continents with international peloton from nearly 100 nations",
-        "Established as a competitive and non-competitive racing option with separate course structures"
+        "First staged in Punta Cana in 2019",
+        "Officially relaunched for September 13, 2026 with a new 144.6 km long course and 95.9 km medium course",
+        "The long course is competitive and ranked; the medium course is timed but explicitly non-competitive"
       ],
       "reputation": ""
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "GFNY Dominican Republic is a wind-defined race that rewards tactical patience and mental toughness. The outbound leg's false sense of ease—powered by favorable tailwind through beautiful rural terrain—sets up a humbling return journey. This is not a race to chase early moves; it's a race to conserve energy, read the wind, and unleash in the final 10km when others are suffering. The Caribbean setting elevates the experience beyond pure cycling metrics, and the professional race organization ensures riders feel like legitimate competitors. Best suited for cyclists who enjoy wind strategy and don't mind a challenging finish.",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "summary": "GFNY Dominican Republic is a speed-and-wind race, not a climbing fondo. The 144.6 km long course is substantial, but 647 m of climbing means the decisive demands are likely to be group position, repeated short surges, aerodynamic durability, fueling, and handling exposed wind. Punta Cana makes the trip easy by destination-race standards. The caution is equally important: this is a 2026 relaunch, the current course page conflicts with the press release and schedule on the exact start wording, and final aid-station and cutoff details are not published.",
+      "strengths": [
+        "Competitive long course with structured age-group rankings",
+        "Fast rolling course with coastal scenery and a genuinely distinct wind-racing demand",
+        "International airport and extensive bike-friendly lodging close to race week"
+      ],
+      "weaknesses": [
+        "2026 relaunch has no completed-edition evidence under the renewed organization",
+        "Current official pages conflict on Downtown Punta Cana versus Caribbean Lake Park start wording",
+        "Aid-station details and a rider cutoff are not yet published"
+      ],
+      "bottom_line": "Choose it for fast Caribbean road racing and destination convenience, not for mountain climbing; recheck the final race guide before travel and race week."
     },
     "final_verdict": {
-      "score": "64/100",
-      "one_liner": "A wind-dependent Caribbean challenge that tests tactical racing and mental resilience in a stunning tropical setting.",
-      "should_you_race": "GFNY Dominican Republic delivers a unique racing experience where wind becomes the primary opponent rather than terrain. The 149.7km long course offers genuine competitive racing with a well-organized international field, while the 93.8km medium course provides an accessible alternative. The race's greatest strength is its strategic depth—the favorable outbound leg tempts aggressive racing, but the brutal headwind return punishes poor pacing decisions. Punta Cana's resort infrastructure, direct international flights, and beautiful Caribbean scenery make this an attractive destination race. However, the relatively modest elevation gain and lack of technical terrain limit its appeal for climbers or technical specialists. The race shines for cyclists seeking a professional racing experience in an exotic location, particularly those who thrive in wind-based tactical racing. Not ideal for first-time gran fondo participants or those seeking a pure climbing challenge, but excellent for experienced riders wanting to test their racing acumen in paradise.",
+      "score": "51/100",
+      "one_liner": "A convenient Caribbean destination race whose real difficulty is sustaining speed and position across 144.6 wind-exposed kilometers.",
+      "should_you_race": "Race the long course if you want structured age-group competition on a fast, rolling Caribbean route and are comfortable in a peloton. Choose the 95.9 km medium course if you want a timed ride without competitive rankings. Do not buy it as a climbing objective: the official long route has 647 m of gain. Because the 2026 event is a relaunch and key operational details remain unpublished, treat the current schedule as provisional and recheck the final race guide, start location, aid stations, and any cutoff before departure.",
       "alternatives": ""
     },
     "citations": [
       {
-        "url": "https://gfny.com/gfny-republica-dominicana-course-guide/",
-        "category": "reference",
-        "label": "GFNY Republica Dominicana Course Guide"
+        "url": "https://gfny.com/gfny-relaunches-gfny-punta-cana-for-2026-season/",
+        "category": "official",
+        "label": "GFNY Punta Cana 2026 Relaunch"
       },
       {
-        "url": "https://capcana.gfny.com/?lang=en",
-        "category": "reference",
-        "label": "GFNY República Dominicana: Home"
+        "url": "https://puntacana.gfny.com/course/?lang=en",
+        "category": "official",
+        "label": "2026 Course - GFNY República Dominicana"
       },
       {
-        "url": "https://www.finishers.com/en/event/gfny-dominican-republic",
-        "category": "reference",
-        "label": "GFNY Dominican Republic 2026"
+        "url": "https://puntacana.gfny.com/schedule-of-events/?lang=en",
+        "category": "official",
+        "label": "2026 Schedule of Events - GFNY República Dominicana"
       },
       {
-        "url": "https://nyc.gfny.com",
-        "category": "reference",
-        "label": "Home - GFNY New York"
+        "url": "https://puntacana.gfny.com/rules/?lang=en",
+        "category": "official",
+        "label": "2026 Rules - GFNY República Dominicana"
       },
       {
-        "url": "https://gfny.com/race-finder/",
-        "category": "reference",
-        "label": "Race Finder - GFNY World"
+        "url": "https://gfny.cc/next/iframe?id=369&lang=en-US",
+        "category": "official",
+        "label": "Live Registration and Pricing - GFNY Punta Cana 2026"
+      },
+      {
+        "url": "https://puntacana.gfny.com/getting-here/?lang=en",
+        "category": "official",
+        "label": "Getting Here - GFNY República Dominicana"
+      },
+      {
+        "url": "https://puntacana.gfny.com/hotels/?lang=en",
+        "category": "official",
+        "label": "Official Host Hotels - GFNY República Dominicana"
       }
     ],
     "youtube_data": {
@@ -227,9 +250,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-22",
-      "source": "https://puntacana.gfny.com/",
-      "notes": "Individually confirmed Punta Cana/República Dominicana edition; date corrected from a stale March listing — official GFNY calendar confirms September 13, 2026."
+      "verified": "2026-08-15",
+      "source": "https://gfny.com/gfny-relaunches-gfny-punta-cana-for-2026-season/",
+      "notes": "GFNY officially relaunched the Punta Cana / República Dominicana edition for Sunday, September 13, 2026. The official press release publishes 144.6 km and 647 m for the competitive long course and 95.9 km for the recreational medium course. The current official pages contain a start-location conflict: the press release and race-week schedule place the start/finish at Caribbean Lake Park, while the course prose says the route begins in Downtown Punta Cana. Use Caribbean Lake Park for current logistics but recheck the final race guide before race week. The Race Guide link currently redirects to stale Cap Cana material and is not treated as 2026 evidence."
     }
   }
 }

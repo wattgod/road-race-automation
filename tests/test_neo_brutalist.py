@@ -414,6 +414,16 @@ class TestJsonLD:
         addr = jsonld["location"]["address"]
         assert addr["addressCountry"] == "ES"
 
+    def test_sports_event_country_uses_explicit_dominican_republic(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["location"] = "Punta Cana, Dominican Republic"
+        sample_race_data["race"]["vitals"]["country"] = "Dominican Republic"
+        rd = normalize_race_data(sample_race_data)
+        jsonld = build_sports_event_jsonld(rd)
+        addr = jsonld["location"]["address"]
+        assert addr["addressLocality"] == "Punta Cana"
+        assert addr["addressCountry"] == "DO"
+        assert "addressRegion" not in addr
+
     def test_sports_event_country_poland(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Warsaw, Poland"
         rd = normalize_race_data(sample_race_data)

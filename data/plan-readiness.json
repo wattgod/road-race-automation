@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T20:44:32",
+  "generated_at": "2026-08-15T22:25:43",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -1855,8 +1855,8 @@
     },
     "gfny-dominican-republic": {
       "slug": "gfny-dominican-republic",
-      "tier": 2,
-      "score": 64,
+      "tier": 3,
+      "score": 51,
       "checks": {
         "validator_clean": true,
         "editorial": true,
@@ -8070,7 +8070,6 @@
     "race-across-spain",
     "5-mila-marche-gran-fondo",
     "crc-506-gran-fondo-costa-rica",
-    "gfny-dominican-republic",
     "gfny-ottawa",
     "amys-gran-fondo",
     "letape-leshan",
@@ -8080,6 +8079,7 @@
     "alpenbrevet",
     "ride-across-britain",
     "tour-o-the-borders",
+    "gfny-dominican-republic",
     "gfny-colonia",
     "letape-slovenia",
     "letape-tabasco",
@@ -8438,8 +8438,8 @@
     "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 137,
-      "3": 26,
+      "2": 136,
+      "3": 27,
       "4": 0
     }
   }
