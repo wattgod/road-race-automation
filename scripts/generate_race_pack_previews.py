@@ -412,6 +412,31 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
         )
 
     # ── Nutrition ──
+    vitals = race.get('vitals') or {}
+    feed_zones = str(
+        vitals.get('feed_zones') or vitals.get('aid_stations') or ''
+    ).strip()
+    unpublished_markers = (
+        'not yet published',
+        'not published',
+        'not announced',
+        'not available',
+        'unknown',
+        'tbd',
+        'to be confirmed',
+        'to be determined',
+    )
+    resupply_confirmed = bool(feed_zones) and not any(
+        marker in feed_zones.lower() for marker in unpublished_markers
+    )
+    if resupply_confirmed:
+        resupply_line = "Use the organizer's current resupply plan for final carry decisions."
+    else:
+        resupply_line = (
+            "The organizer has not published a reliable resupply plan, so rehearse a "
+            "self-sufficient carry and revise it when the rider document is released."
+        )
+
     if distance >= 500:
         overlay['nutrition'] = (
             f"For a multi-day {int(distance)}-mile race, no single calorie total or "
@@ -438,13 +463,13 @@ def generate_race_overlay(race: dict, demands: dict) -> dict:
     elif distance >= 40:
         overlay['nutrition'] = (
             f"Use training to rehearse an eating and drinking plan for {_poss(race_name)} "
-            f"{int(distance)} miles. Start early, use products you tolerate, and carry enough "
-            f"between the organizer\u2019s confirmed resupply points."
+            f"{int(distance)} miles. Start early and use products you tolerate. "
+            f"{resupply_line}"
         )
     else:
         overlay['nutrition'] = (
             "Use training to rehearse an eating and drinking plan that matches the "
-            "ride duration, intensity, weather, and confirmed resupply points."
+            f"ride duration, intensity, and weather. {resupply_line}"
         )
 
     # ── Altitude ──

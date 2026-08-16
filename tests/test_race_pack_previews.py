@@ -222,3 +222,39 @@ def test_explicit_hot_climate_keeps_heat_preparation():
     assert "heat" in overlay
     assert "heat acclimatization" in overlay["heat"]
     assert "weather" not in overlay
+
+
+def test_nutrition_overlay_does_not_invent_confirmed_resupply_points():
+    race = {
+        "display_name": "Unpublished Aid Fondo",
+        "vitals": {
+            "distance_mi": 74.6,
+            "feed_zones": "Not yet published",
+        },
+        "terrain": {"primary": "paved roads"},
+    }
+
+    overlay = generate_race_overlay(
+        race, {"heat_resilience": 2, "altitude": 0, "technical": 2}
+    )
+
+    assert "confirmed resupply points" not in overlay["nutrition"]
+    assert "has not published a reliable resupply plan" in overlay["nutrition"]
+
+
+def test_nutrition_overlay_uses_confirmed_resupply_plan_when_present():
+    race = {
+        "display_name": "Supported Fondo",
+        "vitals": {
+            "distance_mi": 74.6,
+            "feed_zones": "Three aid stations at kilometers 35, 70, and 100",
+        },
+        "terrain": {"primary": "paved roads"},
+    }
+
+    overlay = generate_race_overlay(
+        race, {"heat_resilience": 2, "altitude": 0, "technical": 2}
+    )
+
+    assert "current resupply plan" in overlay["nutrition"]
+    assert "has not published" not in overlay["nutrition"]
