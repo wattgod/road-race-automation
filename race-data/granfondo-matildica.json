@@ -3,7 +3,7 @@
     "name": "Granfondo Matildica",
     "slug": "granfondo-matildica",
     "display_name": "Granfondo Matildica",
-    "tagline": "Italy's oldest gran fondo, UCI Gran Fondo World Series qualifier through the Emilia-Romagna Apennines",
+    "tagline": "A 153 km UCI Gran Fondo World Series qualifier over five named Apennine climbs, starting and finishing in central Reggio Emilia.",
     "vitals": {
       "distance_km": 153.0,
       "distance_mi": 95.1,
@@ -12,42 +12,54 @@
       "location": "Reggio Emilia, Emilia-Romagna, Italy",
       "location_badge": "Reggio Emilia, Italy",
       "country": "Italy",
-      "date": "Mid-September annually",
-      "date_specific": "2026: September 13",
-      "field_size": "Unknown",
-      "start_format": null,
-      "registration": null,
-      "entry_fee": "€55 until August 29, 2025",
-      "feed_zones": null,
-      "cutoff_time": null,
+      "date": "Sunday, September 13, 2026",
+      "date_specific": "September 13, 2026 (Sunday)",
+      "field_size": "2026 field cap not published",
+      "start_format": "Age-group grids open at 6:30am; competitive Granfondo and Mediofondo riders start together at 7:30am from Corso Garibaldi, followed immediately by noncompetitive riders",
+      "registration": "Online registration closes at noon on September 11; organizer rules also permit on-site entry September 12 and from 6:00-7:00am on race morning",
+      "entry_fee": "€60 online July 1-September 11 at noon; €65 on site September 12-13; non-licensed riders also need the €20 FCI day license",
+      "feed_zones": "Organizer promises refreshments across both routes and at the finish; exact 2026 feed locations are published with the route materials rather than enumerated in the rules",
+      "cutoff_time": "Finish on Corso Garibaldi within 6 hours 30 minutes of the official start; riders arriving after 2:00pm are not classified",
       "lat": null,
       "lng": null,
       "route_options": [
         {
           "name": "Gran fondo",
           "distance_km": 153,
-          "elevation_m": 2150
+          "distance_mi": 95.1,
+          "elevation_m": 2150,
+          "elevation_ft": 7054,
+          "categories": "UCI qualifier for women and men 19-49; Italian Granfondo Championship route for eligible FCI categories"
         },
         {
           "name": "Medio fondo",
           "distance_km": 126,
-          "elevation_m": 1450
+          "distance_mi": 78.3,
+          "elevation_m": 1450,
+          "elevation_ft": 4757,
+          "categories": "UCI qualifier for women and men 50+"
         }
       ]
     },
     "climate": {
       "primary": "Mediterranean",
-      "description": "Late August in Reggio Emilia features mild Mediterranean weather with daytime highs around 28-30°C (82-86°F) and possible afternoon showers.",
+      "description": "Mid-September in Reggio Emilia can still be warm, while the long route reaches higher Apennine roads where temperatures and rain exposure can change during the day.",
       "challenges": [
-        "Precipitation: Moderate"
+        "Warm lower roads around Reggio Emilia",
+        "Cooler or wetter conditions on the higher Apennine sectors",
+        "Six-and-a-half-hour maximum time leaves little room for prolonged stops"
       ]
     },
     "terrain": {
       "primary": "Rolling hills",
-      "surface": "Fully paved",
+      "surface": "Fully paved roads from Reggio Emilia into the Reggiano Apennines and back; roads are temporarily closed to traffic until the end-of-race vehicle passes",
       "technical_rating": 1,
       "features": [
-        "Hilly roads through Emilia-Romagna Apennines with rolling ups and downs"
+        "Vetto climb from km 45 to 47",
+        "Gottano climb from km 52 to 56",
+        "Ramiseto climb from km 61 to 64",
+        "Maillo climb from km 95 to 99",
+        "Stella climb from km 110 to 114"
       ]
     },
     "fondo_rating": {
@@ -85,12 +97,12 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Hilly Apennine roads with rolling terrain, shared bulk between distances; gran fondo adds loops including 4km climb at 5.5% (km53) and 11km at 3.5% (km60+).",
-      "signature_challenge": "Long false-flat climb after initial steeper ascent, building cumulative fatigue.",
+      "character": "A 153 km paved loop that leaves Reggio Emilia for the Reggiano Apennines and accumulates 2,150 m across five named climbing sectors. Vetto, Gottano, and Ramiseto arrive between km 45 and 64; Maillo and Stella add two more four-kilometre sectors after km 95. The 126 km Mediofondo shares the event but carries a separate 1,450 m total.",
+      "signature_challenge": "Absorbing the early Vetto-Gottano-Ramiseto cluster without spending the legs needed for Maillo, Stella, and the return to Reggio Emilia.",
       "suffering_zones": [
-        "4km climb @5.5% after 53km",
-        "11km climb @3.5% after 60km",
-        "Repeated up-downs through Apennines"
+        "Three climbing sectors between km 45 and 64: Vetto, Gottano, and Ramiseto",
+        "Maillo from km 95 to 99",
+        "Stella from km 110 to 114 before the return to Reggio Emilia"
       ]
     },
     "logistics": {
@@ -102,41 +114,59 @@
     },
     "history": {
       "founded": 1973,
-      "origin_story": "Founded 1973 (53rd edition 2025), Italy's oldest gran fondo. Consistent UCI Gran Fondo World Series qualifier; hosted UEC European Championships Granfondo in 2022.",
+      "origin_story": "First held in 1973, Granfondo Matildica reaches its 54th edition in 2026 and is one of the world's oldest gran fondos. It hosted the UEC Gran Fondo European Championships in 2022 and returns to the UCI Gran Fondo World Series as the first qualifier for the 2027 world championships.",
       "notable_moments": [
-        "53rd edition as UCI qualifier",
-        "UEC European Championships host 2022"
+        "UEC Gran Fondo European Championships host in 2022",
+        "54th edition combines UCI World Series qualification with the 2026 Italian Granfondo Championship"
       ],
       "reputation": ""
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "A storied classic with unbeatable value as a UCI qualifier, perfect for age-group racers seeking qualifiers without breaking the bank. Steady Apennine climbs deliver suffering in a well-supported package amid Italy's cycling heartland.",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "summary": "A long-running Italian gran fondo with real competitive stakes: 153 km, 2,150 m, five named Apennine climbing sectors, UCI age-group qualification, and the Italian Granfondo Championship on the same long route.",
+      "strengths": [
+        "Five named climbing sectors spread across a 153 km paved course",
+        "UCI qualification for 19-49 riders on the Granfondo and 50+ riders on the Mediofondo",
+        "Central Reggio Emilia start and finish with mechanical, medical, recovery, and post-race services"
+      ],
+      "weaknesses": [
+        "The 6.5-hour classification limit demands disciplined pacing and short aid stops",
+        "Temporary road closure ends behind the race vehicle, after which riders continue under normal road rules",
+        "International riders need the correct racing license or medical documentation"
+      ],
+      "bottom_line": "Choose Matildica for a historic, fully competitive Italian gran fondo where the decisive problem is managing five Apennine sectors across 153 km rather than surviving one headline summit."
     },
     "final_verdict": {
       "score": "74/100",
-      "one_liner": "Essential UCI qualifier for road enthusiasts: historic, hilly, and a steal at €55.",
-      "should_you_race": "Granfondo Matildica stands out as Italy's oldest gran fondo, offering legitimate UCI World Series qualification split smartly by age (gran fondo 19-49, medio 50+). The 153km/2150m route through Apennine terrain tests endurance with key climbs like a 4km at 5.5% and 11km at 3.5%, fully supported by aid, mechanics, medical, and recovery. Reggio Emilia's hospitality, bike parking, gifts, and post-race perks elevate the experience. Ideal for qualifiers prioritizing value and tradition over spectacle.",
-      "alternatives": ""
+      "one_liner": "A 153 km race of cumulative Apennine climbing, where three early sectors set up Maillo and Stella after km 95.",
+      "should_you_race": "Yes if you want a historic Italian age-group race with UCI qualification, full competitive timing, and 2,150 m of climbing distributed across the day. Skip it if the 6.5-hour classification limit or Italian license and medical-document rules do not fit your travel plan.",
+      "alternatives": "For a shorter qualifier at the same event, riders age 50+ use the official 126 km / 1,450 m Mediofondo."
     },
     "citations": [
       {
-        "url": "https://ucigranfondoworldseries.com/en/gran-fondo-mathildica-2025/",
-        "category": "reference",
-        "label": "Gran Fondo Mathildica 2025"
-      },
-      {
-        "url": "https://www.granfondomatildica.it/en/",
+        "url": "https://www.granfondomatildica.it/doc/2026/Regolamento-GF-2026-aggiornato.pdf",
         "category": "official",
-        "label": "Granfondo Matildica Official Site"
+        "label": "Granfondo Matildica — official 2026 regulations"
       },
       {
-        "url": "https://www.travelemiliaromagna.it/en/cycling-events-emilia-romagna/",
+        "url": "https://www.granfondomatildica.it/it/granfondo/",
+        "category": "official",
+        "label": "Granfondo Matildica — official 2026 long route"
+      },
+      {
+        "url": "https://www.granfondomatildica.it/it/salite/",
+        "category": "official",
+        "label": "Granfondo Matildica — official 2026 climb sectors"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/gran-fondo-matildica-2026/",
         "category": "reference",
-        "label": "Cycling events 2025 in Emilia-Romagna"
+        "label": "UCI Gran Fondo World Series — Granfondo Matildica 2026"
+      },
+      {
+        "url": "https://www.granfondomatildica.it/it/",
+        "category": "official",
+        "label": "Granfondo Matildica — official 54th edition page"
       }
     ],
     "youtube_data": {
@@ -215,8 +245,9 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.granfondomatildica.it/it/"
+      "verified": "2026-08-15",
+      "source": "https://www.granfondomatildica.it/doc/2026/Regolamento-GF-2026-aggiornato.pdf",
+      "notes": "The organizer's current regulations confirm Sunday September 13, 2026; the 7:30am Corso Garibaldi start; 153 km / 2,150 m Granfondo; 126 km / 1,450 m Mediofondo; 6.5-hour classification limit; current fees; temporary road closure; and top-25% UCI qualification. The organizer's climb page defines five current sectors at km 45-47, 52-56, 61-64, 95-99, and 110-114."
     }
   }
 }
