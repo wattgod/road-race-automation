@@ -3,74 +3,74 @@
     "name": "GFNY Pittsburgh",
     "slug": "gfny-pittsburgh",
     "display_name": "GFNY Pittsburgh",
-    "tagline": "The hardest GFNY in America: 79.9 miles and 8,701 feet of climbing through Pennsylvania's relentless hills",
+    "tagline": "74.8 miles and 8,226 feet over two steep loops",
     "vitals": {
-      "distance_km": 128.6,
-      "distance_mi": 79.9,
-      "elevation_m": 2652,
-      "elevation_ft": 8701.0,
+      "distance_km": 120.4,
+      "distance_mi": 74.8,
+      "elevation_m": 2507,
+      "elevation_ft": 8226.0,
       "location": "Monroeville, Pennsylvania, USA",
       "location_badge": "MONROEVILLE, PA",
       "country": "USA",
-      "date": "September annually",
+      "date": "September 20, 2026",
       "date_specific": "2026: September 20",
-      "field_size": "Hundreds of riders from across the US and internationally, ranging from pro cyclists to recreational amateurs",
-      "start_format": null,
-      "registration": "Early bird pricing available with significant discounts; includes official race jersey, chip timing, on-course support, and full police escort coverage",
-      "entry_fee": "Not specified; early bird discounts available through October 31",
-      "feed_zones": "Fully stocked aid stations throughout the course with on-course support",
-      "cutoff_time": "Not specified in available sources",
+      "field_size": "Not published for 2026; long-course riders receive category rankings while medium-course finishers are timed but listed alphabetically",
+      "start_format": "7:30am mass start from CCAC Boyce Campus; corrals close at 7:15am; long course competitive, medium course timed but noncompetitive",
+      "registration": "Standard and VIP registration remain listed through September 1, 2026; entry includes both medium and long distance access",
+      "entry_fee": "$199 standard plus $16.92 fee; $399 VIP plus $33.92 fee, observed August 16, 2026",
+      "feed_zones": "Aid stations are referenced by the organizer, but the parsed current page does not publish their exact locations or contents; confirm the final rider guide",
+      "cutoff_time": "11:10am cutoff to begin the second loop; course closes at 2:00pm",
       "lat": 40.4237,
       "lng": -79.7849,
       "route_options": [
-        "Long Course: 79.9 miles, 8,701 feet elevation — the competitive route featuring all 10 signature climbs (actual course as raced; pre-race billing was 70mi/7,756ft)",
-        "Medium Course: 41 miles, shared climbs — recreational option tackling the same 10 climbs with full support"
+        "Long Course: organizer prose rounds to 80 miles; its current embedded Ride with GPS route measures 120.39 km / 74.8 miles and 2,507 m / 8,226 feet, with a second pass through the 29-mile climbing loop; competitive and category-ranked",
+        "Medium Course: organizer prose rounds to 47 miles; its current embedded Ride with GPS route measures 71.56 km / 44.5 miles and 1,523 m / 4,995 feet; timed but noncompetitive"
       ]
     },
     "climate": {
-      "primary": "Temperate fall conditions",
-      "description": "September in Monroeville typically brings mild temperatures with possible rain. Riders should expect variable conditions characteristic of early autumn in Western Pennsylvania, with potential for cool mornings warming through the day. No extreme heat or cold, but layering is advisable.",
+      "primary": "Early-fall conditions",
+      "description": "The organizer does not publish a race-day climate forecast. September can support a cool start, warmer afternoon, or rain, so final clothing and hydration choices must follow the race-week forecast rather than a fixed heat or cold assumption.",
       "challenges": [
         "Variable fall weather",
         "Possible rain exposure",
         "Temperature swings",
-        "Wind exposure on exposed climbs"
+        "Forecast-dependent wind exposure"
       ]
     },
     "terrain": {
-      "primary": "Relentless rolling hills with sustained climbing",
-      "surface": "Fully paved roads throughout Allegheny and Westmoreland Counties. The course winds through scenic countryside with well-maintained asphalt, though the constant elevation changes define the experience more than surface quality. Police-moderated intersections ensure safety on public roads.",
-      "technical_rating": 2,
+      "primary": "Repeated short, steep paved climbs on a two-loop long course",
+      "surface": "Paved public roads through Allegheny and Westmoreland Counties. The organizer describes smaller, twistier roads on the 29-mile loop; riders must obey traffic controls unless police explicitly override them, so the course should not be treated as fully closed.",
+      "technical_rating": 3,
       "features": [
-        "10 signature climbs shared across all distances",
-        "No flat sections — rolling terrain throughout",
-        "Scenic Allegheny and Westmoreland County vistas",
-        "Paved road surface with consistent quality",
-        "Police escort at all intersections for safety"
+        "Seven described climbs on the shared course, generally 0.8-1.5 miles with 200-350 feet of gain",
+        "The competitive long course repeats the 29-mile climbing loop",
+        "Beaver Run Reservoir bridge followed by the longest 1.5-mile, 350-foot climb",
+        "Old Leechburg Road: 1.2 miles, 375 feet, 7% average with multiple sections above 10%",
+        "Short descent from CCAC Boyce Campus becomes the final climb to the finish"
       ]
     },
     "fondo_rating": {
-      "distance": 4,
-      "climbing": 5,
-      "descent_technicality": 2,
-      "climate_risk": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 4,
+      "distance": 3,
+      "climbing": 4,
+      "descent_technicality": 3,
+      "climate_risk": 2,
+      "organization": 2,
+      "scenic_experience": 3,
+      "community_culture": 2,
       "altitude": 1,
-      "logistics": 4,
+      "logistics": 2,
       "prestige": 3,
       "field_depth": 3,
       "value": 3,
       "expenses": 3,
-      "road_surface": 3,
-      "cultural_impact": 2,
-      "overall_score": 69,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "road_surface": 2,
+      "cultural_impact": 0,
+      "overall_score": 51,
+      "tier": 3,
+      "tier_label": "TIER 3",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 69. adventure dimension dropped, road_surface added. Score recalculated: 69."
+      "scoring_notes": "Regraded against config/dimensions.json on 2026-08-15. The current organizer-linked route is 120.39 km with 2,507 m of climbing: distance 3 and climbing 4. Smaller twisty roads support descent technicality 3; paved roads support surface 2. The official rules do not prove a fully closed course, so organization remains 2. Pittsburgh airport and the extensive nearby hotel list support logistics 2. The event began in 2025, so community 2 and cultural impact 0 avoid projecting mature-race status. Total: 36/70 = 51."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -84,56 +84,57 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "GFNY Pittsburgh is a relentless climbing test through the rolling hills of Allegheny and Westmoreland Counties. The 79.9-mile route features 10 signature climbs distributed throughout, meaning there are no flat recovery sections—just sustained elevation gain from start to finish. The course winds through scenic countryside with paved roads and police-moderated intersections, offering beautiful vistas of the region while delivering genuine suffering. This is not a technical challenge or an adventure ride; it's a pure climbing fitness test designed to separate strong climbers from the rest. The medium 41-mile option shares the same 10 climbs, making it a legitimate alternative for building fitness.",
-      "signature_challenge": "The 10 signature climbs distributed throughout the 79.9-mile course define GFNY Pittsburgh. With 8,701 feet of elevation gain over 79.9 miles (109 feet per mile), there is no mercy—every section climbs. The climbs are shared across both long and medium distance options, meaning the medium course tackles the same brutal climbing in fewer miles. This is climbing-focused racing at its most unforgiving, with no flat sections to recover and no technical descents to break the monotony.",
+      "character": "GFNY Pittsburgh starts with a short descent from CCAC Boyce Campus, then moves immediately into repeated short climbs through Allegheny and Westmoreland Counties. The current long course repeats a 29-mile loop of smaller, twistier roads before returning up the opening descent to finish. The organizer page rounds the routes to 80 and 47 miles; its embedded maps currently measure 74.8 and 44.5 miles. The long route's 8,226 feet of gain makes repeatable climbing, descending attention, fueling, and cutoff discipline more important than raw distance alone.",
+      "signature_challenge": "The second pass through the climbing loop is the commitment point. Riders must start it by 11:10am, then clear the course by 2:00pm. The loop contains repeated one-mile climbs and steep sections above 10%, including Old Leechburg Road at 1.2 miles, 375 feet, and 7% average. The final return to CCAC turns the opening descent into the last climb.",
       "suffering_zones": [
-        "Start at Monroeville",
-        "Mid-Course Climbing Gauntlet",
-        "Final Climb Push"
+        "Opening descent and immediate first climb",
+        "Beaver Run Reservoir to the longest 1.5-mile climb",
+        "Old Leechburg Road and the 11:10am second-loop decision",
+        "Final climb back to CCAC Boyce Campus"
       ]
     },
     "logistics": {
-      "airport": "Pittsburgh International Airport (PIT) is the primary gateway, roughly 30 miles from Monroeville. Direct flights from major US hubs are available, making access straightforward. Ground transportation via rental car or rideshare is necessary—public transit to Monroeville is limited.",
-      "lodging_strategy": "Monroeville has standard hotel chains within 5-10 minutes of the start/finish. Pittsburgh proper offers more variety 15 minutes away. Book early for September weekends, as fall tourism competes for rooms. Consider staying in Monroeville for convenience or Pittsburgh for dining and nightlife options.",
-      "transport": "",
-      "food": "Western Pennsylvania offers standard American fare and regional specialties. Monroeville has chain restaurants and casual dining. Pittsburgh has excellent food scenes. Pre-race carb-loading is straightforward; post-race recovery food is readily available. No specialized cycling nutrition partnerships mentioned.",
+      "airport": "The organizer lists Pittsburgh International Airport (PIT) as about 35 minutes from the start and host hotels and recommends rental-car access.",
+      "lodging_strategy": "The official 2026 hotel page lists multiple bike-friendly options from 1.2 miles to 11.6 miles from CCAC Boyce Campus. Confirm each hotel's actual race-morning breakfast time; the organizer warns that non-partner hotels may not allow bikes in rooms or offer a 4am breakfast.",
+      "transport": "Race headquarters, both expo days, group rides, start, finish, meal, awards, and festivities are based at CCAC Boyce Campus. If flying Saturday, land by 3:00pm; regular packet pickup closes at 7:00pm, with only limited Sunday-morning spots.",
+      "food": "The schedule includes a post-race meal from 10:00am. For race morning, verify hotel breakfast timing or stock the room yourself rather than assuming the listed breakfast is available before a 7:30am start.",
       "official_site": "https://pgh.gfny.com"
     },
     "history": {
       "founded": 2025,
-      "origin_story": "GFNY Pittsburgh launched as the inaugural edition on September 21, 2025, bringing the world's largest cycling marathon brand to Western Pennsylvania. GFNY, known for its 'BE A PRO FOR A DAY' mass-participation format, partnered with Visit Monroeville and local cycling communities to showcase the region's hilly terrain to domestic and international riders. The event was positioned as the hardest GFNY USA race, leveraging Pittsburgh's reputation for challenging cycling terrain. The inaugural event succeeded in attracting hundreds of riders and establishing Pittsburgh as a serious climbing destination within the GFNY global network.",
+      "origin_story": "GFNY Pittsburgh launched at CCAC Boyce Campus on September 21, 2025, bringing the GFNY mass-participation format to the short, steep hills east of Pittsburgh. The inaugural post-race report called the 2025 course the toughest GFNY race in the United States; the 2026 organizer page now publishes a different two-loop course and should be treated as the current race source.",
       "notable_moments": [
         "Inaugural race held September 21, 2025, billed as the hardest GFNY USA event",
         "Featured dominating solo wins by top riders, highlighting competitive intensity",
-        "Pre-race festivities at CCAC Boyce Campus included GFNY Expo, group rides, and social events",
-        "Early bird registration opened with significant discounts through October 31, 2025"
+        "The 2026 course was revised to a shared climbing route with a second 29-mile loop for long-course competitors",
+        "The September 20, 2026 schedule adds a specific 11:10am second-loop cutoff and 2:00pm course close"
       ],
-      "reputation": "GFNY Pittsburgh inherits the prestige of the global GFNY brand, which has hosted 30+ cycling events worldwide over three decades. The inaugural 2025 event established Pittsburgh as the hardest GFNY USA course, attracting serious climbers and establishing strong community partnerships. As a new event, long-term reputation is still building, but the professional organization and global GFNY network provide immediate credibility."
+      "reputation": "The GFNY name and age-group qualification model provide a recognizable race structure, but Pittsburgh has only one completed edition. Treat it as a young, demanding regional race rather than projecting the history, field depth, or community stature of GFNY's mature events."
     },
     "biased_opinion": {
-      "verdict": "Climb-focused excellence",
-      "summary": "GFNY Pittsburgh is a masterclass in organized climbing. The 79.9-mile route with 8,701 feet of elevation gain is genuinely the hardest GFNY USA event, and the organization reflects three decades of mass-participation racing expertise. This is not a technical challenge or an adventure ride—it's a pure climbing test on paved roads with professional support. If you're seeking to prove your climbing fitness against a quality field and global GFNY brand, Pittsburgh delivers. The inaugural 2025 event executed flawlessly, and the September timing avoids extreme weather. However, the road-only format and lack of technical terrain limit broader appeal. This is a specialist event for climbers, not a well-rounded cycling challenge.",
+      "verdict": "A short-distance race with mountain-day climbing density",
+      "summary": "GFNY Pittsburgh's current long route is only 74.8 miles on the embedded map, but 8,226 feet of climbing and a second pass through the 29-mile loop make it a serious durability test. The best feature is specificity: short climbs, steep ramps, twistier roads, a published loop cutoff, and a final climb back to CCAC. The caution is maturity. This is the second edition, the organizer's rounded mileage differs from its embedded maps, the roads are governed by normal traffic rules unless police intervene, and final aid details still need a rider-guide check.",
       "strengths": [
-        "Hardest climbing in GFNY USA calendar—8,701 feet over 79.9 miles is genuinely brutal",
-        "Professional GFNY organization with three decades of experience and full police escort",
-        "Global prestige and qualification pathways to GFNY World Championship",
-        "Scenic Allegheny and Westmoreland County countryside with 10 signature climbs",
-        "Solid logistics with early bird pricing, chip timing, and full on-course support"
+        "8,226 feet of gain across 74.8 miles creates unusually high climbing density",
+        "Published 11:10am second-loop cutoff and 2:00pm course close make pacing stakes clear",
+        "Long-course age-group rankings and GFNY qualifier places create real competition",
+        "Beaver Run Reservoir, farms, orchards, forests, and smaller county roads give the loop variety",
+        "CCAC-centered expo, start, finish, meal, and nearby bike-friendly hotels simplify race week"
       ],
       "weaknesses": [
-        "Road-only format with zero technical terrain—no gravel, no descending challenge, no bike-handling test",
-        "Inaugural event means limited historical data on field depth, weather patterns, and long-term reputation",
-        "Final entry fees not disclosed; value assessment impossible without pricing",
-        "September weather in Pennsylvania is unpredictable—rain and temperature swings are likely",
-        "No altitude exposure or training benefits—this is purely a climbing fitness test at sea level"
+        "The organizer rounds the long course to 80 miles while its current embedded map measures 74.8",
+        "Only one completed edition means field depth and operational consistency are still developing",
+        "$199 plus a $16.92 fee is substantial for a regional event",
+        "Normal road laws still apply unless police override them; this is not proven fully closed",
+        "Final aid-station locations and contents are not available in the parsed current page"
       ],
-      "bottom_line": "GFNY Pittsburgh is the event for climbers who want to test themselves against the hardest GFNY USA course with professional organization and global prestige. Skip it if you're seeking technical terrain, adventure riding, or a well-rounded cycling challenge. This is climbing-focused racing, period."
+      "bottom_line": "Race it for repeated steep-climb execution and a clear cutoff-driven competition, not for a century-distance badge or mature-event prestige. Recheck the final route and aid plan before race week because the organizer's rounded mileage and embedded map do not match."
     },
     "final_verdict": {
-      "score": "69/100",
-      "one_liner": "The hardest GFNY USA event delivers relentless climbing and professional organization, but only for climbers.",
-      "should_you_race": "Race GFNY Pittsburgh if you're a climber seeking to prove fitness against quality competition with GFNY's global prestige and three decades of organizational expertise. Skip it if you prefer technical terrain, adventure riding, or well-rounded cycling challenges—this is pure climbing, nothing more.",
-      "alternatives": "For climbing-focused road racing with more prestige, consider Gravel Worlds or Unbound Gravel if you want gravel terrain, or the GFNY World Championship NYC if you want the flagship GFNY event. For pure climbing without the road-race format, explore mountain pass events in Colorado or the Pacific Northwest."
+      "score": "51/100",
+      "one_liner": "A compact two-loop course packs 8,226 feet of climbing into 74.8 mapped miles, with the second-loop cutoff defining the day.",
+      "should_you_race": "Race GFNY Pittsburgh if repeated one-mile climbs, steep ramps, age-group competition, and a cutoff-driven second loop sound useful. Skip it if you want a full century, a proven fully closed course, or the history of a mature destination fondo.",
+      "alternatives": "For the flagship GFNY experience, choose GFNY World Championship NYC. For a single sustained climb rather than repeated rollers, choose a dedicated hill climb. For a longer Pennsylvania endurance target, choose an event whose current organizer route and road-control plan match that objective."
     },
     "citations": [
       {
@@ -159,14 +160,54 @@
       {
         "url": "https://gfny.com/dominating-solo-wins-at-michelob-ultra-gfny-pittsburgh-monroeville/",
         "category": "official",
-        "label": "GFNY — Post-Event Report (actual course: 79.9mi / 8,701ft, supersedes pre-race 70mi/7,756ft billing)"
+        "label": "GFNY — 2025 post-event report (historical course only)"
+      },
+      {
+        "url": "https://pgh.gfny.com/course/",
+        "category": "official",
+        "label": "GFNY Pittsburgh 2026 course and organizer-linked route maps"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/48724947",
+        "category": "official",
+        "label": "Organizer-linked 2026 long route: 120.39 km and 2,507 m"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/48590191",
+        "category": "official",
+        "label": "Organizer-linked 2026 medium route: 71.56 km and 1,523 m"
+      },
+      {
+        "url": "https://pgh.gfny.com/schedule-of-events/",
+        "category": "official",
+        "label": "GFNY Pittsburgh 2026 schedule, start, loop cutoff, and course close"
+      },
+      {
+        "url": "https://pgh.gfny.com/rules/",
+        "category": "official",
+        "label": "GFNY Pittsburgh equipment, competition, corral, and road rules"
+      },
+      {
+        "url": "https://gfny.cc/next/iframe?id=371&lang=en-US",
+        "category": "official",
+        "label": "GFNY Pittsburgh registration prices observed August 16, 2026"
+      },
+      {
+        "url": "https://pgh.gfny.com/hotels/",
+        "category": "official",
+        "label": "GFNY Pittsburgh 2026 host hotels and race-week lodging terms"
+      },
+      {
+        "url": "https://pgh.gfny.com/getting-here/",
+        "category": "official",
+        "label": "GFNY Pittsburgh airport and ground-transport guidance"
       }
     ],
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
+      "verified": "2026-08-15",
       "source": "https://pgh.gfny.com/",
-      "notes": "Corrected after adversarial re-check: pennsylvania.gfny.com (initially assumed to be the current canonical URL based on a client-side nav link) is actually the separate GFNY York, Pennsylvania event page, not Pittsburgh. GFNY's own race finder (gfny.com/race-finder/) links Pittsburgh-Monroeville to pgh.gfny.com, which independently confirms 'September 20, 2026 Pittsburgh-Monroeville' at CCAC Boyce Campus in Monroeville. Date unchanged. Re-verified this pass: [size claim] 'world's largest cycling marathon brand' TRUE per GFNY's own About page ('world's largest endurance sports marathon,' 30+ events/15+ countries) — no text change needed. Fixed stale vitals: long course was billed pre-race at 70mi/7,756ft but GFNY's own post-event report confirms actual raced course was 79.9mi/8,701ft — corrected vitals, route_options, and all matching prose mentions (tagline, course_description, biased_opinion) for consistency. Full research dump at research-dumps/gfny-pittsburgh.md."
+      "notes": "GFNY's official race finder and pgh.gfny.com confirm Sunday, September 20, 2026 at CCAC Boyce Campus. The live 2026 course page supersedes the 2025 course used by the prior profile. Its prose rounds the long and medium routes to 80 and 47 miles, while the organizer-linked Ride with GPS maps, updated August 10, 2026, measure 120.39 km / 74.8 mi with 2,507 m / 8,226 ft and 71.56 km / 44.5 mi with 1,523 m / 4,995 ft. The exact maps drive training values; the discrepancy is disclosed and requires a final rider-guide recheck. The current schedule publishes a 7:30am start, 11:10am second-loop cutoff, and 2:00pm course close."
     }
   }
 }

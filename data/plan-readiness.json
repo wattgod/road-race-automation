@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T22:25:43",
+  "generated_at": "2026-08-15T23:02:11",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -2129,8 +2129,8 @@
     },
     "gfny-pittsburgh": {
       "slug": "gfny-pittsburgh",
-      "tier": 2,
-      "score": 69,
+      "tier": 3,
+      "score": 51,
       "checks": {
         "validator_clean": true,
         "editorial": true,
@@ -8060,7 +8060,6 @@
     "trans-pyrenees-race",
     "granfondo-alpi-del-mare",
     "alpen-challenge-lenzerheide",
-    "gfny-pittsburgh",
     "granfondo-alberto-contador",
     "letape-turkey",
     "mount-baker-hill-climb",
@@ -8071,6 +8070,7 @@
     "5-mila-marche-gran-fondo",
     "crc-506-gran-fondo-costa-rica",
     "gfny-ottawa",
+    "gfny-pittsburgh",
     "amys-gran-fondo",
     "letape-leshan",
     "rbc-granfondo-whistler",
@@ -8438,8 +8438,8 @@
     "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 136,
-      "3": 27,
+      "2": 135,
+      "3": 28,
       "4": 0
     }
   }
