@@ -21,7 +21,6 @@ KNOWN_SLUG_MISMATCHES = {}
 
 KNOWN_DUPLICATE_NAMES = {
     "Mt. Washington Auto Road Bicycle Hillclimb",  # mount-washington-hillclimb + mt-washington-hillclimb
-    "RBC GranFondo Whistler",                       # rbc-granfondo-whistler + whistler-granfondo
 }
 
 
