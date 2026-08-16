@@ -3,23 +3,23 @@
     "name": "CRC 506 Gran Fondo Costa Rica",
     "slug": "crc-506-gran-fondo-costa-rica",
     "display_name": "CRC 506 Gran Fondo Costa Rica",
-    "tagline": "Costa Rica's UCI Gran Fondo qualifier on the stunning Pacific coast",
+    "tagline": "141.4 km and 841 m on Costa Rica's exposed Pacific coast — a UCI Gran Fondo World Series qualifier from Jacó to Quepos and back.",
     "vitals": {
-      "distance_km": 141.0,
+      "distance_km": 141.4,
       "distance_mi": 87.6,
       "elevation_m": 841,
       "elevation_ft": 2759.0,
       "location": "Jacó, Garabito, Puntarenas Province, Costa Rica",
       "location_badge": "Pacific Coast",
       "country": "Costa Rica",
-      "date": "June 7",
-      "date_specific": "2026: September 13 (rescheduled from original June 7 date due to storm risk)",
-      "field_size": 1000,
-      "start_format": null,
-      "registration": "Open via www.crc-506.com",
+      "date": "Sunday, September 13, 2026",
+      "date_specific": "September 13, 2026 (Sunday; rescheduled from June 7 due to severe-weather risk)",
+      "field_size": "2026 field cap not published",
+      "start_format": "Gran Fondo controlled start at 6:00am from the Centro Cívico por la Paz in Garabito, followed by the timed rolling start on Ruta 34",
+      "registration": "Reopened June 22 through the organizer's 2026 site after the September rescheduling",
       "entry_fee": "Not specified; register at official site",
-      "feed_zones": "Standard UCI support",
-      "cutoff_time": "Not specified",
+      "feed_zones": "Organizer technical guide stations at km 24.4, 53.3, 72, 88, and 117.3, with food and drink in signed feed zones.",
+      "cutoff_time": "Gran Fondo riders must reach the km 72 control at the Route 34 / Route 235 junction by 9:30am.",
       "lat": 9.54,
       "lng": -84.63,
       "route_options": [
@@ -33,8 +33,8 @@
         },
         {
           "name": "Medio Fondo",
-          "distance_km": 72.9,
-          "distance_mi": 45.3,
+          "distance_km": 69.8,
+          "distance_mi": 43.4,
           "elevation_m": 410,
           "elevation_ft": 1345,
           "categories": "Men 60+, Women 50+"
@@ -43,17 +43,22 @@
     },
     "climate": {
       "primary": "Tropical",
-      "description": "Warm tropical (77-90°F), humid Pacific coast, June rain risk",
+      "description": "Warm, humid tropical conditions on an exposed Pacific coast during Costa Rica's September rainy season.",
       "challenges": [
-        "Warm tropical (77-90°F), humid Pacific coast, June rain risk"
+        "Heat and high humidity from the early-morning start",
+        "September rain and storm risk on the Pacific coast",
+        "Exposed coastal wind on the return from Quepos"
       ]
     },
     "terrain": {
       "primary": "Flat",
-      "surface": "Flattish coastal road (Ruta 34) with ocean views, minimal climbs",
+      "surface": "Paved Ruta 34 out-and-back between Jacó and Quepos. The 141.4 km course gains 841 m, so sustained speed, wind exposure, heat management, and group position matter more than long climbing.",
       "technical_rating": 1,
       "features": [
-        "Flattish coastal road (Ruta 34) with ocean views, minimal climbs"
+        "4.6 km controlled rollout from Jacó before the timed start",
+        "Long exposed Ruta 34 coastal sectors through Esterillos and Parrita",
+        "Quepos circuit and turnaround near km 72",
+        "Five organizer feed points across the 141.4 km Gran Fondo"
       ]
     },
     "fondo_rating": {
@@ -91,46 +96,63 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "141.4km Gran Fondo: Neutral 2km start Jacó Civic Center, south on Ruta 34 coastal highway to Quepos loop/turnaround, return to Jacó (841m elevation, flattish). Medio Fondo (72.9km): Quepos start 8AM covering return leg to Jacó finish. **Suffering zones**: Heat/humidity, headwinds on exposed coast, potential rain[1][2]",
-      "signature_challenge": null,
-      "suffering_zones": []
+      "character": "The Gran Fondo starts at 6:00am with a 4.6 km controlled rollout from Jacó, then follows Ruta 34 through Esterillos and Parrita to a Quepos circuit before returning to Jacó. Its 141.4 km and 841 m profile is flattish, but the exposed coast, heat, rain risk, and repeated group accelerations keep it from being easy. The current technical guide lists a separate 69.8 km Medio Fondo starting near Quepos at 7:30am.",
+      "signature_challenge": "Holding the right group and a sustainable cooling and fueling plan through the Quepos turnaround, then racing the exposed return to Jacó.",
+      "suffering_zones": [
+        "Ruta 34 exposure after the controlled rollout",
+        "Quepos circuit and km 72 time control",
+        "Headwind and heat accumulation on the return through Parrita and Esterillos"
+      ]
     },
     "logistics": {
       "airport": "",
       "lodging_strategy": "",
-      "transport": "Nearest airport: Juan Santamaría (SJO, ~1.5hr drive). Quepos domestic (XQP). Start/Finish: Centro Cívico por la Paz, Jacó. Medio start: Parque de Quepos. Limited 1000 spots[1][2]",
+      "transport": "Nearest major airport: Juan Santamaría (SJO). Gran Fondo start and finish: Centro Cívico por la Paz, Garabito, Jacó. Medio Fondo start: Route 34 / Route 235 junction near Quepos; finish in Jacó.",
       "food": "",
-      "official_site": ""
+      "official_site": "https://2026.ucigranfondocostarica.com/"
     },
     "history": {
       "founded": 2023,
-      "origin_story": "Founded 2023 as Costa Rica's first UCI Gran Fondo by RPMTV/Fecoci. 2023: 700 riders San José-Puntarenas. 2025: Jacó-Quepos route announced but canceled (tropical wave). 2026: June 7 edition[1][2][9]",
+      "origin_story": "Founded in 2023 as a Costa Rican UCI Gran Fondo World Series qualifier. The first edition drew roughly 700 riders from San José to Puntarenas; the event later moved to the Jacó–Quepos–Jacó coast route. The June 7, 2026 edition was postponed for severe-weather risk and rescheduled to September 13, 2026.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
       "verdict": "",
-      "summary": "Tropical paradise UCI qualifier with stunning coastal views but flattish profile and wet season risks. Perfect for speed-focused qualifiers seeking Worlds qualification in beach setting.",
-      "strengths": [],
-      "weaknesses": [],
-      "bottom_line": ""
+      "summary": "This is a speed-oriented UCI age-group qualifier rather than a mountain gran fondo: 141.4 km, 841 m, a controlled rollout, and long paved coastal sectors where the useful skill is staying economical in the right group. The Pacific setting is real, but so are heat, humidity, exposed wind, and September storm risk.",
+      "strengths": [
+        "UCI Gran Fondo World Series qualification target for age-group racers",
+        "A fast 141.4 km coastal course with five organizer feed points and neutral mechanical support",
+        "Jacó start and finish simplify race-day logistics"
+      ],
+      "weaknesses": [
+        "September sits in the Pacific rainy season, and the original June date was already postponed for severe-weather risk",
+        "The flattish out-and-back can become tactically dependent on wind and group position",
+        "The organizer's rescheduled landing page and original technical guide must be read together because the PDF still carries the superseded June date"
+      ],
+      "bottom_line": "A legitimate UCI qualifier for riders who want to race 141.4 fast coastal kilometres and can manage heat, wind, and group dynamics better than the next age-group pack."
     },
     "final_verdict": {
       "score": "66/100",
-      "one_liner": "Strong regional UCI event with international appeal and qualification prestige.",
-      "should_you_race": "",
+      "one_liner": "141.4 km of fast Pacific-coast group racing, with heat and wind doing more selection than the 841 m of climbing.",
+      "should_you_race": "Yes if you want a UCI age-group qualification target on a fast tropical road course. Skip if mountain climbing is the reason you enter a gran fondo or if September storm risk makes travel uncertainty unacceptable.",
       "alternatives": ""
     },
     "citations": [
       {
-        "url": "https://ucigranfondocostarica.com/",
+        "url": "https://2026.ucigranfondocostarica.com/",
         "category": "official",
-        "label": "UCI Gran Fondo Costa Rica — Official Site"
+        "label": "CRC 506 Gran Fondo Costa Rica — official September 13, 2026 landing page"
       },
       {
-        "url": "https://ucigranfondoworldseries.com/",
+        "url": "https://ucigranfondocostarica.com/wp-content/uploads/2026/04/CRC-506-GRAN-FONDO-DE-COSTA-RICA-2026-GT180326-eng-v01.pdf",
+        "category": "official",
+        "label": "CRC 506 Gran Fondo Costa Rica — 2026 English technical guide"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/crc506-gran-fondo-of-costa-rica/",
         "category": "reference",
-        "label": "UCI Gran Fondo World Series — Calendar"
+        "label": "UCI Gran Fondo World Series — CRC 506 course profile"
       },
       {
         "url": "https://www.miprensacr.com/crc-506-gran-fondo-costa-rica-se-realizara-el-13-de-septiembre-y-reabre-sus-inscripciones/",
@@ -224,14 +246,14 @@
         "gear_mentions": [],
         "race_day_tips": [],
         "additional_quotes": [],
-        "search_text": "The available transcript for the CRC 506 Gran Fondo Costa Rica contains minimal intelligible content, with only brief mentions of heat and music. No specific course details, terrain descriptions, or racing insights are provided in the transcript. The race is an 87.6-mile gravel event in Jacó, Costa Rica with 2,759 feet of elevation gain, but rider experiences and course characteristics cannot be extracted from the current transcript material."
+        "search_text": "The available transcript for the CRC 506 Gran Fondo Costa Rica contains minimal intelligible content, with only brief mentions of heat and music. No specific course details, terrain descriptions, or racing insights are provided in the transcript. The race is an 87.6-mile paved road event in Jacó, Costa Rica with 2,759 feet of elevation gain, but rider experiences and course characteristics cannot be extracted from the current transcript material."
       }
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-24",
-      "source": "https://www.miprensacr.com/crc-506-gran-fondo-costa-rica-se-realizara-el-13-de-septiembre-y-reabre-sus-inscripciones/",
-      "notes": "Original June 7, 2026 date was postponed due to high thunderstorm risk; organizer rescheduled to September 13, 2026 and reopened registration. The UCI Gran Fondo World Series calendar still shows 'Postponed' and has not caught up with the rescheduled date. Reconfirmed 2026-07-24: official site ucigranfondocostarica.com currently returns HTTP 500 (database error) — used miprensacr.com (curl-verified live) and the UCI GFWS calendar (curl-verified live, 'CRC 506 Gran Fondo of Costa Rica,' Jaco, status 'Postponed') as primary sources instead. Tagline/one_liner UCI qualifier claims TRUE — event remains a live GFWS calendar entry (rescheduled, not cancelled/removed)."
+      "verified": "2026-08-15",
+      "source": "https://2026.ucigranfondocostarica.com/",
+      "notes": "The organizer's current 2026 landing page confirms Sunday September 13 after the June 7 postponement and says registration reopened June 22. The organizer's English technical guide still carries the superseded June date, so it is used only for the unchanged course and operations: 141.4 km Gran Fondo, 69.8 km Medio Fondo, 6:00am controlled Gran Fondo start, five feed points, and the km 72 / 9:30am control. The rescheduled race qualifies riders for the 2027 UCI Gran Fondo World Championships in France."
     }
   }
 }
