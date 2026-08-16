@@ -11586,6 +11586,49 @@
     "route_options": []
   },
   {
+    "name": "Amy's Gran Fondo",
+    "slug": "amys-gran-fondo",
+    "location": "Lorne, Great Ocean Road, Victoria, Australia",
+    "country": "Australia",
+    "region": "Oceania",
+    "month": "September",
+    "distance_km": 122.0,
+    "distance_mi": 76.0,
+    "elevation_m": 1865,
+    "elevation_ft": 6119.0,
+    "tier": 2,
+    "overall_score": 63,
+    "scores": {
+      "distance": 3,
+      "climbing": 3,
+      "descent_technicality": 1,
+      "road_surface": 3,
+      "climate_risk": 2,
+      "altitude": 1,
+      "logistics": 4,
+      "prestige": 3,
+      "organization": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "field_depth": 4,
+      "value": 3,
+      "expenses": 3,
+      "cultural_impact": 2
+    },
+    "tagline": "122 km and 1,865 m around Australia's Great Ocean Road and Otways — a fully closed-road UCI Gran Fondo World Series qualifier built on Amy Gillett's legacy.",
+    "has_profile": true,
+    "profile_url": "/race/amys-gran-fondo/",
+    "discipline": "gran_fondo",
+    "lat": -38.5428,
+    "lng": 143.9756,
+    "route_options": [
+      "122 km Age Category Race (UCI Gran Fondo World Series qualifier; 1,865 m climbing)",
+      "122 km timed recreational category",
+      "90 km Out and Back Medio Fondo",
+      "45 km Medio Fondo"
+    ]
+  },
+  {
     "name": "Around the Bay in a Day",
     "slug": "around-the-bay-in-a-day",
     "location": "Melbourne, Victoria, Australia",
@@ -16256,47 +16299,6 @@
         "name": "FamilyFondo",
         "distance_km": 18.42
       }
-    ]
-  },
-  {
-    "name": "Amy's Gran Fondo",
-    "slug": "amys-gran-fondo",
-    "location": "Lorne, Great Ocean Road, Victoria, Australia",
-    "country": "Australia",
-    "region": "Oceania",
-    "month": "September",
-    "distance_km": 122.0,
-    "distance_mi": 76.0,
-    "elevation_m": 1500,
-    "elevation_ft": 4921.0,
-    "tier": 3,
-    "overall_score": 56,
-    "scores": {
-      "distance": 2,
-      "climbing": 2,
-      "descent_technicality": 1,
-      "road_surface": 3,
-      "climate_risk": 2,
-      "altitude": 1,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 2,
-      "value": 3,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "103 km along Australia's Great Ocean Road. A ride built on memory — honoring Amy Gillett, the cyclist killed in 2005 whose legacy reshaped cycling safety in Australia.",
-    "has_profile": true,
-    "profile_url": "/race/amys-gran-fondo/",
-    "discipline": "gran_fondo",
-    "lat": -38.5428,
-    "lng": 143.9756,
-    "route_options": [
-      "103 km Gran Fondo (~64 mi, ~1,500m climbing)",
-      "60 km Medio Fondo"
     ]
   },
   {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T17:42:43",
+  "generated_at": "2026-08-15T20:22:41",
   "races": {
     "3rides-gran-fondo": {
       "slug": "3rides-gran-fondo",
@@ -292,8 +292,8 @@
     },
     "amys-gran-fondo": {
       "slug": "amys-gran-fondo",
-      "tier": 3,
-      "score": 56,
+      "tier": 2,
+      "score": 63,
       "checks": {
         "validator_clean": true,
         "editorial": true,
@@ -8072,10 +8072,10 @@
     "crc-506-gran-fondo-costa-rica",
     "gfny-dominican-republic",
     "gfny-ottawa",
+    "amys-gran-fondo",
     "letape-leshan",
     "rbc-granfondo-whistler",
     "letape-san-bernardino",
-    "amys-gran-fondo",
     "gran-fondo-montevideo",
     "alpenbrevet",
     "ride-across-britain",
@@ -8438,8 +8438,8 @@
     "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 136,
-      "3": 27,
+      "2": 137,
+      "3": 26,
       "4": 0
     }
   }
