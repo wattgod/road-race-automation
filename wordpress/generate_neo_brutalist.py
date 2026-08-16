@@ -228,6 +228,7 @@ COUNTRY_CODES = {
     'Czech Republic': 'CZ', 'Slovenia': 'SI', 'Croatia': 'HR',
     'Kenya': 'KE', 'Slovakia': 'SK', 'Denmark': 'DK',
     'UAE': 'AE', 'Dubai': 'AE', 'Israel': 'IL', 'Taiwan': 'TW',
+    'Dominican Republic': 'DO',
 }
 
 
@@ -1898,7 +1899,8 @@ def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
     location = rd['vitals'].get('location', '')
     if location and location != '--':
         parts = [p.strip() for p in location.split(',')]
-        country = detect_country(location)
+        explicit_country = str(rd['vitals'].get('country') or '').strip()
+        country = COUNTRY_CODES.get(explicit_country) or detect_country(location)
         place = {"@type": "Place", "name": location}
         if len(parts) >= 2:
             address = {

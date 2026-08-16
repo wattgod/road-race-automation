@@ -1,60 +1,51 @@
 {
   "slug": "gfny-dominican-republic",
   "race_name": "GFNY Dominican Republic",
-  "distance_mi": 62.0,
+  "distance_mi": 89.9,
   "demands": {
-    "durability": 2,
-    "climbing": 5,
+    "durability": 4,
+    "climbing": 3,
     "vo2_power": 6,
-    "threshold": 6,
-    "technical": 4,
-    "heat_resilience": 6,
+    "threshold": 7,
+    "technical": 2,
+    "heat_resilience": 7,
     "altitude": 2,
-    "race_specificity": 9
+    "race_specificity": 7
   },
   "top_categories": [
     {
-      "category": "Race_Simulation",
-      "score": 100,
-      "workouts": [
-        "Breakaway Simulation",
-        "Variable Pace Chaos",
-        "Sector Simulation"
-      ],
-      "workout_context": "Race-pace efforts that mimic GFNY Dominican Republic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before March."
-    },
-    {
       "category": "Durability",
-      "score": 95,
+      "score": 100,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
         "Progressive Fatigue"
       ],
-      "workout_context": "62 miles on rolling hills burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
-      "category": "Road_Specific",
-      "score": 91,
-      "workouts": [
-        "Surge and Settle",
-        "Terrain Microbursts"
-      ],
-      "workout_context": "GFNY Dominican Republic's rolling hills forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 62 miles."
+      "workout_context": "At mile 60 of 89, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "TT_Threshold",
-      "score": 77,
+      "score": 70,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "56ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "GFNY Dominican Republic's rolling hills rewards steady threshold power. Surging and recovering costs more watts than just holding."
+    },
+    {
+      "category": "Race_Simulation",
+      "score": 66,
+      "workouts": [
+        "Breakaway Simulation",
+        "Variable Pace Chaos",
+        "Sector Simulation"
+      ],
+      "workout_context": "Race-pace efforts that mimic GFNY Dominican Republic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before September."
     },
     {
       "category": "VO2max",
-      "score": 70,
+      "score": 63,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -63,17 +54,17 @@
       "workout_context": "When someone attacks on rolling hills, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Over_Under",
-      "score": 65,
+      "category": "Endurance",
+      "score": 59,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "At GFNY Dominican Republic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 89 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "G_Spot",
-      "score": 61,
+      "score": 56,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,40 +73,50 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY Dominican Republic. Train it until it feels boring."
     },
     {
-      "category": "Critical_Power",
-      "score": 52,
+      "category": "Road_Specific",
+      "score": 55,
       "workouts": [
-        "Above CP Repeats",
-        "W-Prime Depletion"
+        "Surge and Settle",
+        "Terrain Microbursts"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Dominican Republic, that number decides whether you bridge or get dropped."
+      "workout_context": "Road-specific control matters at GFNY Dominican Republic. Practice on rolling hills: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 89 miles."
     },
     {
-      "category": "Endurance",
-      "score": 48,
+      "category": "Over_Under",
+      "score": 49,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
       ],
-      "workout_context": "Base fitness for GFNY Dominican Republic. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "At GFNY Dominican Republic, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 47,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "The aerobic base that lets you ride rolling hills at tempo for 89 miles without cracking. No shortcuts."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 48,
+      "score": 38,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on rolling hills. If you haven't trained them, you'll crack."
+      "workout_context": "2-minute all-out efforts on rolling hills. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     },
     {
-      "category": "Mixed_Climbing",
-      "score": 45,
+      "category": "Norwegian_Double",
+      "score": 38,
       "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
       ],
-      "workout_context": "Varied gradients on rolling hills demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 89 miles, sustainable FTP gains matter more than peak power."
     },
     {
       "category": "Blended",
@@ -124,14 +125,13 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,500ft of climbing on rolling hills does to your power file on race day."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what GFNY Dominican Republic's rolling hills actually does to you."
     }
   ],
   "race_overlay": {
-    "heat": "March in Punta Cana, Dominican Republic can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GFNY Dominican Republic. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for GFNY Dominican Republic\u2019s 62 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "terrain": "Mixed terrain at GFNY Dominican Republic requires surface adaptability. Include weekly rides on rolling hills to build confidence."
+    "heat": "September in Punta Cana, Dominican Republic can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GFNY Dominican Republic. Increase sodium intake 48 hours before race day.",
+    "nutrition": "Target 60\u201380g carbs/hour for GFNY Dominican Republic\u2019s 89 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and Road Specific to prepare you for 62 miles of rolling hills in Punta Cana, Dominican Republic.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 89 miles of rolling hills in Punta Cana, Dominican Republic.",
+  "generated_at": "2026-08-15"
 }
