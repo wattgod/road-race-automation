@@ -136,6 +136,24 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
         except ValueError:
             return None
 
+    # Prefer a leading month-first date before the year-first forms below. This
+    # prevents a later historical date in a note such as
+    # "September 13, 2026 (rescheduled from June 7)" from winning just because
+    # the old date appears after the first four-digit year.
+    month_first = re.search(r'\b([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\b', clean)
+    if month_first:
+        month_name, day, year = month_first.groups()
+        month = MONTH_NUMBERS.get(month_name.lower())
+        if month is None:
+            try:
+                month = datetime.strptime(month_name[:3], '%b').strftime('%m')
+            except ValueError:
+                month = None
+        if month:
+            parsed = iso_date(year, month, day)
+            if parsed:
+                return parsed, parsed
+
     # Try cross-month first: "2026: June 30 - July 2"
     cross = re.search(
         r'(\d{4}).*?(\w+)\s+(\d+)\s*-\s*(\w+)\s+(\d+)', clean)
@@ -163,21 +181,6 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
             end = iso_date(year, month, end_day) if end_day else start
             if start and end:
                 return start, end
-
-    # Common road-profile form: "July 5, 2026" (optionally with notes/time).
-    month_first = re.search(r'\b([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\b', clean)
-    if month_first:
-        month_name, day, year = month_first.groups()
-        month = MONTH_NUMBERS.get(month_name.lower())
-        if month is None:
-            try:
-                month = datetime.strptime(month_name[:3], '%b').strftime('%m')
-            except ValueError:
-                month = None
-        if month:
-            parsed = iso_date(year, month, day)
-            if parsed:
-                return parsed, parsed
 
     # If the string contains a year but we still couldn't parse it, warn
     if re.search(r'\d{4}', date_str):
