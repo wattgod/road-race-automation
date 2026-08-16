@@ -3,28 +3,30 @@
     "name": "Amy's Gran Fondo",
     "slug": "amys-gran-fondo",
     "display_name": "Amy's Gran Fondo",
-    "tagline": "103 km along Australia's Great Ocean Road. A ride built on memory — honoring Amy Gillett, the cyclist killed in 2005 whose legacy reshaped cycling safety in Australia.",
+    "tagline": "122 km and 1,865 m around Australia's Great Ocean Road and Otways — a fully closed-road UCI Gran Fondo World Series qualifier built on Amy Gillett's legacy.",
     "vitals": {
       "distance_km": 122.0,
       "distance_mi": 76.0,
-      "elevation_m": 1500,
-      "elevation_ft": 4921.0,
+      "elevation_m": 1865,
+      "elevation_ft": 6119.0,
       "location": "Lorne, Great Ocean Road, Victoria, Australia",
       "location_badge": "GREAT OCEAN ROAD, VICTORIA, AUSTRALIA",
       "country": "Australia",
-      "date": "September annually (Australian spring)",
-      "date_specific": "2026: September 13",
-      "field_size": "3,000-4,000 riders",
-      "start_format": null,
-      "registration": "Online via amysgranfondo.org.au. AUD $100-150 (~$65-100 USD) depending on distance and registration period.",
-      "entry_fee": "AUD $100-150 (~$65-100 USD)",
-      "feed_zones": "Feed zones along the Great Ocean Road and through the Otway Ranges. Water, electrolytes, fruit, and energy food. Medical support at key points.",
-      "cutoff_time": "Generous cutoff. Full course support and SAG vehicles.",
+      "date": "Sunday, September 13, 2026",
+      "date_specific": "September 13, 2026 (Sunday)",
+      "field_size": "2026 field cap not published",
+      "start_format": "Age-category gun starts from 7:30am; every rider in an age group receives the same start time",
+      "registration": "Open online through the organizer; 2026 entries close at 4pm on September 11 unless sold out first.",
+      "entry_fee": "AUD $235-$310 for the 122 km age-category race, depending on registration date",
+      "feed_zones": "Four organizer-supported aid stations with food and drink, plus mobile mechanics, medical support, and SAG transport.",
+      "cutoff_time": "Riders must average 18 km/h to remain inside the permitted road-closure schedule; riders behind it may use the SAG wagon or continue under open-road rules.",
       "lat": -38.5428,
       "lng": 143.9756,
       "route_options": [
-        "103 km Gran Fondo (~64 mi, ~1,500m climbing)",
-        "60 km Medio Fondo"
+        "122 km Age Category Race (UCI Gran Fondo World Series qualifier; 1,865 m climbing)",
+        "122 km timed recreational category",
+        "90 km Out and Back Medio Fondo",
+        "45 km Medio Fondo"
       ]
     },
     "climate": {
@@ -39,37 +41,37 @@
     },
     "terrain": {
       "primary": "Great Ocean Road coastal and Otway Ranges climbing",
-      "surface": "Paved roads throughout — the Great Ocean Road is well-maintained. Coastal riding with ocean views, then inland climbs through the Otway Ranges temperate rainforest. Rolling with several sharp ascents. The Great Ocean Road hugs the coast with curves and elevation changes. Otway climbs are forested and atmospheric.",
+      "surface": "Paved roads throughout on a fully closed race course. The loop leaves Lorne for Deans Marsh and Forrest, crosses the Otways to Skenes Creek, then follows the Great Ocean Road back to Lorne. The inland half supplies the sustained climbing; the coastal return adds exposed wind, curves, and rolling terrain.",
       "technical_rating": 1,
       "features": [
-        "Great Ocean Road — one of the world's most scenic coastal roads",
-        "Otway Ranges climbs through temperate rainforest",
-        "Coastal curves and rolling terrain",
-        "Well-maintained paved roads throughout"
+        "Fully closed roads from Lorne through Deans Marsh, Forrest, and Skenes Creek",
+        "1,865 m of climbing across the 122 km loop",
+        "Otway climbs followed by a long coastal return on the Great Ocean Road",
+        "Age-category racing with a UCI World Championship qualification place for the top 25% of each age group"
       ]
     },
     "fondo_rating": {
-      "distance": 2,
-      "climbing": 2,
+      "distance": 3,
+      "climbing": 3,
       "descent_technicality": 1,
       "climate_risk": 2,
-      "organization": 3,
+      "organization": 4,
       "scenic_experience": 4,
       "community_culture": 4,
       "altitude": 1,
       "logistics": 4,
       "prestige": 3,
-      "field_depth": 2,
+      "field_depth": 4,
       "value": 3,
       "expenses": 3,
       "road_surface": 3,
       "cultural_impact": 2,
-      "overall_score": 56,
-      "tier": 3,
-      "tier_label": "TIER 3",
+      "overall_score": 63,
+      "tier": 2,
+      "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 56. adventure dimension dropped, road_surface added. Score recalculated: 56."
+      "scoring_notes": "Regraded 2026-08-15 against the repository rubric and the organizer's current 2026 race page: 122 km meets distance 3; 1,865 m meets climbing 3; full road closures, moto support, medical support, police support, and race timing meet organization 4; structured UCI age-group qualifying waves meet field depth 4. Score = round((42 base points + 2 cultural-impact bonus) / 70 * 100) = 63."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -83,13 +85,13 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Coastal beauty and forested climbing along one of the world's great roads. The route starts in Lorne and rides the Great Ocean Road — Southern Ocean on one side, Otway Ranges forest on the other. The coastal sections are rolling with curves that hug the cliffs. Inland diversions climb through temperate rainforest — tall eucalyptus, tree ferns, dappled light. The route finishes in Aireys Inlet. The terrain is moderate — challenging enough to feel earned, accessible enough that the ride's meaning reaches everyone.",
-      "signature_challenge": "The Great Ocean Road itself — not a single climb or feature, but 103 km of coastal beauty and Otway forest riding that serves as a stage for remembrance.",
+      "character": "A 122 km clockwise loop from Lorne through Deans Marsh, Forrest, and Skenes Creek before the Great Ocean Road return to Lorne. The 1,865 m profile front-loads the forested Otway climbing, then asks riders to descend cleanly, find a group, and manage wind and rolling coastal terrain on the run home.",
+      "signature_challenge": "The combination of 1,865 m of inland climbing and the exposed Great Ocean Road return: the race is still being decided after the major climbs are over.",
       "suffering_zones": [
-        "Lorne Start",
-        "The Otway Climbs",
-        "The Coastal Return",
-        "Aireys Inlet Finish"
+        "Age-group gun start in Lorne",
+        "Deans Marsh and Forrest climbing",
+        "Otway crossing to Skenes Creek",
+        "Great Ocean Road return to Lorne"
       ]
     },
     "logistics": {
@@ -106,37 +108,47 @@
         "2005: Amy Gillett killed by a motorist while training in Germany, catalyzing Australian cycling safety movement",
         "Amy Gillett Foundation established, driving 'a metre matters' minimum passing distance legislation",
         "~2011: First Amy's Gran Fondo on the Great Ocean Road",
-        "Event has grown to 3,000-4,000 riders, becoming Australia's premier charity cycling event"
+        "2026: Returned as a 122 km UCI Gran Fondo World Series age-category qualifier on fully closed roads"
       ],
       "reputation": "Australia's memorial ride. Where the Great Ocean Road meets a cause worth riding for."
     },
     "biased_opinion": {
       "verdict": "Amy's Road",
-      "summary": "Amy's Gran Fondo is not the hardest ride in Australia, the longest, or the most technically demanding. It's something rarer: a ride with genuine meaning. Amy Gillett was an Olympic rower turned cyclist, killed at 29 by a motorist while training in Germany. Her death shook Australian cycling and sparked a movement — the Amy Gillett Foundation has driven 'a metre matters' legislation and cycling safety awareness across the country. The gran fondo rides the Great Ocean Road in her memory, and 3,000-4,000 cyclists show up each year not just to ride, but to ride for something. The course is beautiful — Southern Ocean coastline, Otway rainforest, koalas in eucalyptus trees. But the beauty that matters most is the purpose.",
+      "summary": "Amy's Gran Fondo combines a real age-group race with a reason to care about the result. The 2026 event is a fully closed-road UCI Gran Fondo World Series qualifier: 122 km, 1,865 m of climbing, Otway forest roads, and a long Great Ocean Road return to Lorne. Amy Gillett's legacy gives the weekend more emotional weight than a standard qualifier, but the top-25% qualification target and age-group gun starts make the racing itself unambiguous.",
       "strengths": [
         "The cause: riding in memory of Amy Gillett and supporting cycling safety has genuine emotional weight",
         "Great Ocean Road: one of the world's great coastal roads, experienced from the saddle",
-        "Community: 3,000-4,000 riders united by a cause deeper than fitness goals",
-        "Accessibility: 103 km with moderate climbing welcomes riders of all abilities"
+        "A fully closed 122 km course with timing, age-group waves, four aid stations, moto support, and medical support",
+        "A meaningful top-25% age-group qualification target for the 2027 UCI Gran Fondo World Championships"
       ],
       "weaknesses": [
-        "Modest physical challenge: 103 km / 1,500m won't test strong cyclists",
+        "At 122 km, it is shorter than Australia's biggest mountain sportives even though 1,865 m of climbing still demands respect",
         "Weather lottery: Victorian spring on the coast can deliver anything from sunshine to sideways rain",
-        "Not a race: if you want competition, the charity-ride format won't deliver that edge"
+        "Late entry reaches AUD $310, so the closed-road experience carries a premium price"
       ],
-      "bottom_line": "A ride where the reason you're riding matters more than how fast you finish — and the Great Ocean Road makes sure you never forget where you are."
+      "bottom_line": "A legitimate UCI age-group qualifier on a closed Great Ocean Road loop, with a cause that makes the day matter beyond the result sheet."
     },
     "final_verdict": {
-      "score": "56/100",
-      "one_liner": "103 km along the Great Ocean Road in memory of Amy Gillett. Where cycling safety has a heartbeat.",
-      "should_you_race": "Yes if you want to ride the Great Ocean Road for a cause that matters to every cyclist who shares the road with cars. Yes if you want a beautiful, accessible ride with a passionate community. Skip if you need serious physical challenge or competitive racing.",
+      "score": "63/100",
+      "one_liner": "122 km, 1,865 m, closed roads, and a top-25% UCI qualification race around the Great Ocean Road and Otways.",
+      "should_you_race": "Yes if you want a serious age-group target on one of Australia's defining coastal roads, or if Amy Gillett's cycling-safety legacy gives the event extra meaning. Skip if the AUD $235-$310 entry or a weather-exposed spring race outweighs the appeal of full closures and UCI qualification.",
       "alternatives": "If you want an Australian gran fondo with more climbing: try the 3 Peaks Challenge. If you want Great Ocean Road cycling without the event: ride it yourself any day. If you want a charity cycling event in North America: try the Gran Fondo Whistler."
     },
     "citations": [
       {
-        "url": "https://www.amysgranfondo.org.au/",
+        "url": "https://www.amysgranfondo.org.au/amys-gran-fondo-ag/",
         "category": "official",
-        "label": "Amy's Gran Fondo — Official Site"
+        "label": "Amy's Gran Fondo — 2026 Age Category Race"
+      },
+      {
+        "url": "https://ridewithgps.com/routes/43710392",
+        "category": "official_route",
+        "label": "Amy's Gran Fondo — organizer-embedded 122 km route"
+      },
+      {
+        "url": "https://www.amysgranfondo.org.au/faq/",
+        "category": "official",
+        "label": "Amy's Gran Fondo — 2026 FAQ"
       },
       {
         "url": "https://en.wikipedia.org/wiki/Amy_Gillett",
@@ -341,8 +353,8 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
-      "source": "https://www.amysgranfondo.org.au/"
+      "verified": "2026-08-15",
+      "source": "https://www.amysgranfondo.org.au/amys-gran-fondo-ag/"
     }
   }
 }
