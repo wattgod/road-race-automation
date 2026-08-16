@@ -2799,7 +2799,7 @@
       "expenses": 4,
       "cultural_impact": 3
     },
-    "tagline": "Italy's oldest gran fondo, UCI Gran Fondo World Series qualifier through the Emilia-Romagna Apennines",
+    "tagline": "A 153 km UCI Gran Fondo World Series qualifier over five named Apennine climbs, starting and finishing in central Reggio Emilia.",
     "has_profile": true,
     "profile_url": "/race/granfondo-matildica/",
     "discipline": "gran_fondo",
@@ -2809,12 +2809,18 @@
       {
         "name": "Gran fondo",
         "distance_km": 153,
-        "elevation_m": 2150
+        "distance_mi": 95.1,
+        "elevation_m": 2150,
+        "elevation_ft": 7054,
+        "categories": "UCI qualifier for women and men 19-49; Italian Granfondo Championship route for eligible FCI categories"
       },
       {
         "name": "Medio fondo",
         "distance_km": 126,
-        "elevation_m": 1450
+        "distance_mi": 78.3,
+        "elevation_m": 1450,
+        "elevation_ft": 4757,
+        "categories": "UCI qualifier for women and men 50+"
       }
     ]
   },
