@@ -44,6 +44,7 @@ def test_mount_baker_uses_current_2026_race_facts() -> None:
     assert "Competitive 8:30am" in vitals["start_format"]
     assert "capped at 450" in vitals["field_size"]
     assert "sold out with a waitlist open" in vitals["field_size"]
+    assert race["tagline"].startswith("A timed 22-mile, 4,462-foot ascent")
     assert race["eligibility"]["verified"] == "2026-08-15"
 
 
