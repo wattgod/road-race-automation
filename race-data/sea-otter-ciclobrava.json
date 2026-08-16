@@ -1,76 +1,77 @@
 {
   "race": {
-    "name": "Sea Otter Ciclobrava",
+    "name": "La Ciclobrava by Lapierre",
     "slug": "sea-otter-ciclobrava",
-    "display_name": "Sea Otter Ciclobrava",
-    "tagline": "140km Costa Brava bliss: Girona's ultimate non-competitive road romp amid Sea Otter mania.",
+    "display_name": "La Ciclobrava by Lapierre",
+    "tagline": "150 km, 1,756 metres and four passes on open Costa Brava roads",
     "vitals": {
-      "distance_km": 140.0,
-      "distance_mi": 87.0,
-      "elevation_m": 2000,
-      "elevation_ft": 6562.0,
+      "distance_km": 150.0,
+      "distance_mi": 93.2,
+      "elevation_m": 1756,
+      "elevation_ft": 5761.0,
       "location": "Girona, Costa Brava, Spain",
       "location_badge": "GIRONA, ES",
       "country": "Spain",
-      "date": "Mid-September annually",
+      "date": "September 20, 2026",
       "date_specific": "2026: September 20",
-      "field_size": "Over 1,000 cyclists flooding Girona's paved paradise, part of Sea Otter's 6,000+ participant frenzy.",
-      "start_format": null,
-      "registration": "Limited spots open early spring; includes event T-shirt, timing chip, drink/nutrition stations, medical aid, plus full Sea Otter expo access and bike demos.",
-      "entry_fee": "$50-80",
-      "feed_zones": "Multiple drink and nutrition stations along routes, with medical support.",
-      "cutoff_time": "Flexible for non-competitive format; ample time to enjoy festival vibes.",
+      "field_size": "Registration is capped at 1,800 participants across the 150 km, 100 km, and 70 km routes",
+      "start_format": "Staggered starts from Passeig de la Devesa: 150 km at 8:00am, 100 km at 8:10am, and 70 km at 8:20am; the event is noncompetitive and all roads remain open to traffic",
+      "registration": "Registration closes September 17, 2026 or when the 1,800-rider cap is reached; entry includes a custom jersey, number plate, wristband, welcome pack, route refreshments, mechanical and medical support, and finish access",
+      "entry_fee": "€53 through August 17, 2026, then €60 until registration closes; add €10 for organizer day insurance if the rider lacks an accepted UCI or Catalan federation license",
+      "feed_zones": "Provisional long-route refreshments at km 49 Mirador Punta de Vallpresona, km 74 Romanyà, km 133 Bordils, and km 147 Girona",
+      "cutoff_time": "9:30am at km 33 Llagostera; the organizer page prints 11:45 PM at km 95.4 Monells, an apparent AM/PM error that must be confirmed; 2:00pm at km 137 Campdorà; finish control closes at 2:30pm",
       "lat": 41.9834,
       "lng": 2.8257,
       "route_options": [
-        "70km: 43mi, 2,625ft — accessible intro with Santa Pellaia, Madremanya, Montjuïc climbs.",
-        "100km: 62mi, 3,776ft — rolling challenge tackling Romanyà, La Ganga, Montjuïc, Madremanya.",
-        "140km: 87mi, 6,562ft — epic flagship assaulting Sant Grau d’Ardenya, Romanyà, La Ganga, Montjuïc."
+        "150 km / 93.2 mi and 1,756 m / 5,761 ft: four passes — Sant Grau d'Ardenya, Romanyà, La Ganga, and Montjuïc",
+        "100 km / 62.1 mi and 1,000 m / 3,281 ft: current 2026 festival summary value; four passes including Romanyà, La Ganga, Madremanya, and Montjuïc",
+        "70 km / 43.5 mi and 1,000 m / 3,281 ft: current 2026 festival summary value; the route page separately shows 800 m and therefore requires a final route-file recheck"
       ]
     },
     "climate": {
-      "primary": "Mediterranean bliss — mild and dry.",
-      "description": "September in Girona delivers perfect cycling weather: temps in the 70s°F, minimal rain, and sunny skies that make every pedal stroke feel like vacation. Low humidity keeps efforts crisp, while coastal breezes add a refreshing edge. Ideal for crushing climbs without summer scorch or autumn chill.",
+      "primary": "Forecast-dependent early-autumn Mediterranean conditions",
+      "description": "The organizer describes Girona as having cycling-friendly temperatures but does not publish a race-day forecast. The long route moves between inland roads and the Mediterranean coast, so clothing, hydration, and wind decisions must follow the final forecast rather than a guaranteed mild-and-dry assumption.",
       "challenges": [
-        "occasional coastal gusts",
-        "midday heat buildup",
-        "rare showers"
+        "Possible coastal wind",
+        "Possible midday heat",
+        "Rain exposure",
+        "Temperature change between an 8:00am start and the afternoon finish"
       ]
     },
     "terrain": {
-      "primary": "Paved road with Girona's iconic mid-mountain passes.",
-      "surface": "Silky smooth paved roads, low-traffic gems where pros train—narrow, quiet, and flowing from coastal flats to punchy climbs. No gravel grit here; pure tarmac poetry through Costa Brava hamlets. Character screams 'cycling mecca' with Volta a Catalunya-flavored ports.",
-      "technical_rating": 2,
+      "primary": "Four-pass paved sportive on narrow public roads between Girona and the Costa Brava",
+      "surface": "Paved secondary roads. The organizer describes quiet, narrow roads and a dramatic descent from Sant Grau d'Ardenya toward the Mediterranean, but the regulations state that every road remains open to traffic and riders must obey the highway code.",
+      "technical_rating": 3,
       "features": [
-        "Sant Grau d’Ardenya summit",
-        "Romanyà Vuelta pass",
-        "La Ganga beast",
-        "Montjuïc city approach",
-        "Costa Brava seascapes"
+        "Sant Grau d'Ardenya and its forest-to-Mediterranean descent",
+        "Romanyà, used in the 2019 Volta a Catalunya",
+        "La Ganga, used in the 2019 Volta a Catalunya",
+        "Narrow roads through Monells",
+        "Final Montjuïc climb, descent, Ter crossing, and finish at Passeig de la Devesa"
       ]
     },
     "fondo_rating": {
       "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 2,
-      "climate_risk": 5,
+      "climbing": 3,
+      "descent_technicality": 3,
+      "climate_risk": 2,
       "organization": 3,
-      "scenic_experience": 5,
-      "community_culture": 5,
-      "altitude": 2,
-      "logistics": 4,
+      "scenic_experience": 4,
+      "community_culture": 4,
+      "altitude": 1,
+      "logistics": 3,
       "prestige": 3,
-      "field_depth": 2,
+      "field_depth": 3,
       "value": 4,
-      "expenses": 4,
-      "road_surface": 3,
-      "cultural_impact": 3,
-      "overall_score": 76,
+      "expenses": 3,
+      "road_surface": 2,
+      "cultural_impact": 2,
+      "overall_score": 63,
       "tier": 2,
       "tier_label": "TIER 2",
       "discipline": "gran_fondo",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 77. adventure dimension dropped, road_surface added. Score recalculated: 76."
+      "scoring_notes": "Regraded against config/dimensions.json on 2026-08-15 using current official sources. The long route's 150 km and 1,756 m support distance 4 and climbing 3; the narrow roads and Sant Grau descent support descent technicality 3, while the organizer does not publish a pavement-condition audit, so road surface remains 2. Detailed rules, staggered starts, provisional aid points, medical/mechanical services, and an 1,800-rider cap support organization 3 and field depth 3. Girona access and the official hotel support logistics 3; the event remains a noncompetitive festival sportive, limiting prestige 3 and cultural impact 2. Total: 44/70 = 63."
     },
     "climb_profile": {
       "total_climbs": null,
@@ -84,84 +85,109 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "Paved poetry through Girona's Pyrenees-Mediterranean embrace: low-traffic roads wind from urban start to coastal climbs and charming villages. Non-competitive freedom lets you savor Vuelta passes like Romanyà and La Ganga at your pace. Festival finish at Devesa promenade caps the joyride amid cheering crowds.",
-      "signature_challenge": "The quadruple-pass onslaught of Sant Grau d’Ardenya, Romanyà, La Ganga, and Montjuïc on the 140km—Vuelta-flavored beasts strung like pearls through Costa Brava, blending climb-drama with sea-view salvation for unforgettable road romance.",
+      "character": "The 150 km route starts at Passeig de la Devesa and crosses four named passes on the way between Girona and the Costa Brava. Sant Grau d'Ardenya rises through forest before a descent toward the Mediterranean; Romanyà and La Ganga use roads seen in the 2019 Volta a Catalunya; narrow roads through Monells lead toward a final Montjuïc climb, descent, Ter crossing, and return to Devesa. It is a noncompetitive sportive, but the road remains open to traffic and the published diversion controls still shape the ride.",
+      "signature_challenge": "Long-route riders must combine four-pass pacing with open-road attention and three operational controls: Llagostera at km 33, Monells at km 95.4, and Campdorà at km 137. The organizer prints the Monells time as 11:45 PM even though the surrounding controls are morning and early afternoon, so that time must be confirmed before race day.",
       "suffering_zones": [
-        "Sant Grau d’Ardenya",
-        "Romanyà Vuelta Wall",
-        "La Ganga Grinder",
-        "Montjuïc Finale"
+        "Sant Grau d'Ardenya and the descent toward the Mediterranean",
+        "Romanyà and the provisional km 74 feed",
+        "Monells control at km 95.4 and the late route to Bordils",
+        "Campdorà control at km 137 and final Montjuïc climb"
       ]
     },
     "logistics": {
-      "airport": "Girona-Costa Brava (GRO) right on doorstep—quickest hop; Barcelona (BCN) 1.5hrs by train/road for more flights. Festival shuttles and parking streamline arrivals.",
-      "lodging_strategy": "Base in Girona expo zone for walkable festival access; book Airbnbs early amid Sea Otter surge. Shoulder-season rates still reasonable.",
-      "transport": "",
-      "food": "Girona's tapas paradise fuels pre/post-ride feasts; festival food trucks handle expo hunger. Coastal seafood and pro cafes abound.",
-      "official_site": "https://www.laciclobrava.com"
+      "airport": "Girona-Costa Brava Airport is about 15 km or 20 minutes from Girona by car or bus. From Barcelona-El Prat, the organizer estimates about 1 hour 30 minutes to Girona centre by local train plus high-speed rail, or about 1 hour 45 minutes by direct bus.",
+      "lodging_strategy": "Sea Otter Europe's official 2026 hotel is Hotel Carlemany Girona. The organizer recommends booking early because festival-date availability is limited; confirm bike-storage and pre-ride breakfast terms directly with the property.",
+      "transport": "Fontajau Municipal Pavilion is about 2 km from Girona's train and bus station and city centre. The organizer lists walking, bike lanes, L3/L4 city buses, designated free unsupervised parking, and a 30-minute parking shuttle. Bib pickup is at Fontajau; the race starts at Passeig de la Devesa.",
+      "food": "The official sources do not promise an early hotel breakfast. Stock the race breakfast and required fuel before Sunday, and use the provisional feed locations only after confirming the final rider information.",
+      "official_site": "https://www.laciclobrava.com/en/"
     },
     "history": {
-      "founded": 2018,
-      "origin_story": "Born in 2018 as Sea Otter Europe's chill Sunday counterpart to gravel grinders, Ciclobrava lets amateurs soak Girona's pro roads sans stopwatch stress. Organized by local heroes Club Esportiu Bike Catalunya, it exploded within the festival's massive growth. Now a staple delving Costa Brava passes, cementing Girona as cycling's global playground.",
+      "founded": null,
+      "origin_story": "La Ciclobrava is Club Esportiu Bike Catalunya's noncompetitive road sportive inside the Sea Otter Europe festival. The current official sources confirm that the 2026 festival is Sea Otter Europe's tenth edition, but they do not establish a founding year for the sportive itself, so this profile does not claim one.",
       "notable_moments": [
-        "Integrated into Sea Otter's 64,000-visitor juggernaut by edition 7.",
-        "Evolved to 70/100/140km options suiting all abilities.",
-        "Drew 1,000+ registrants chasing Costa Brava dreams.",
-        "Hit eighth festival edition by 2026, boosting Girona's hub status.",
-        "Limited reg opens April, selling out fast."
+        "The 2026 event runs on Sunday, September 20 during Sea Otter Europe's tenth edition",
+        "Current title sponsorship changes the event name to La Ciclobrava by Lapierre",
+        "The long route is now published as 150 km with 1,756 m of gain",
+        "Registration is capped at 1,800 riders across three route distances",
+        "The 2026 rules publish route-specific aid locations and diversion controls"
       ],
-      "reputation": "Beloved as Girona's fun-road gateway, blending accessibility with iconic terrain. Sea Otter tie-in amps prestige without competitive pressure. Riders rave about vibe over verdict."
+      "reputation": "The event's strongest distinction is access to Girona and Costa Brava roads inside a major cycling festival. It is explicitly noncompetitive, so its value is the route and event weekend rather than ranking depth or a closed-road race experience."
     },
     "biased_opinion": {
-      "verdict": "Festival road rapture.",
-      "summary": "Sea Otter Ciclobrava nails the non-competitive dream: 140km of Girona's smoothest paved passes amid Costa Brava splendor, all wrapped in Sea Otter's electric expo energy. Pros train these roads for a reason—low-traffic gems like Romanyà deliver Vuelta vibes without the pain train. It's cycling vacation disguised as a sportive, perfect for joyriders craving community over contention. Weak on gravel grit and elite depth, but crushes experience and value.",
+      "verdict": "A real four-pass day inside a festival, not a closed-road race",
+      "summary": "La Ciclobrava's 150 km route is substantial without being a mountain gran fondo: 1,756 m of gain, four named passes, a descent toward the Mediterranean, narrow roads through Monells, and a final Montjuïc climb. The €60 ceiling, included jersey, services, and Sea Otter Europe weekend make the value credible. The tradeoff is just as clear: it is noncompetitive, every road remains open to traffic, the published routes are provisional, and one cutoff is printed with an obvious AM/PM conflict.",
       "strengths": [
-        "Sea Otter festival immersion",
-        "Girona pro-training roads",
-        "Multiple forgiving distances",
-        "Mediterranean weather perfection",
-        "Global cycling community vibe"
+        "150 km long route with four named passes and a coastal section",
+        "Three distances with staggered starts and an 1,800-rider cap",
+        "€60 maximum base fee with jersey, aid, medical, and mechanical support",
+        "Integrated Sea Otter Europe expo and festival weekend",
+        "Detailed provisional aid points and late-route diversion controls"
       ],
       "weaknesses": [
-        "Non-competitive (no racing edge)",
-        "Uncertain exact elev/dates",
-        "Paved-only (gravel fans flee)",
-        "Limited field prestige",
-        "Expo crowds can overwhelm"
+        "All roads remain open to traffic and normal highway rules apply",
+        "The route and aid locations are still marked provisional",
+        "The Monells cutoff is published as 11:45 PM and must be corrected or confirmed",
+        "The route page and current festival announcement disagree on the 70 km route's climbing",
+        "Festival-week lodging should be booked early"
       ],
-      "bottom_line": "Prime pick for road lovers seeking fun over fight in cycling's Spanish epicenter. Pin it if festival vibes fuel you; pass if podiums are your poison."
+      "bottom_line": "Choose it for a well-supported Girona sportive and the surrounding festival. Do not choose it for a closed course, rankings, or a route that can be treated as final without a race-week download and cutoff check."
     },
     "final_verdict": {
-      "score": "76/100",
-      "one_liner": "Girona's paved party packs festival punch without the pro pain.",
-      "should_you_race": "Yes if you're a road enthusiast craving Sea Otter expo magic, Girona climbs, and zero-pressure pedaling. Skip if gravel's your gospel or you demand deep competitive fields.",
-      "alternatives": "Unleash on UCI Gravel World Series Girona for grit; grind La Tramun Sea Otter for MTB sufferfest; escape to Mediterranean Epic Gran Fondo for longer hauls."
+      "score": "63/100",
+      "one_liner": "A 150 km four-pass Girona sportive with strong value, festival scale, and open-road constraints.",
+      "should_you_race": "Ride La Ciclobrava if you want the long Costa Brava route and Sea Otter Europe weekend more than a result sheet. Skip it if open traffic, provisional route details, or a noncompetitive format defeat the point for you.",
+      "alternatives": "Choose the 226ERS UCI Gravel World Series race at the same festival for competition and gravel, La Tramun for mountain biking, or a closed-road gran fondo if traffic separation is essential."
     },
     "citations": [
       {
-        "url": "https://www.laciclobrava.com",
+        "url": "https://www.laciclobrava.com/en/",
         "category": "official",
-        "label": "Official La Ciclobrava Site"
+        "label": "La Ciclobrava 2026 official overview and date"
       },
       {
-        "url": "https://www.seaottereurope.com/the-continental-ciclobrava-returns-on-september-25-within-the-incomparable-framework-of-the-sea-otter-europe-costa-brava-girona/",
+        "url": "https://www.laciclobrava.com/en/routes/",
         "category": "official",
-        "label": "Sea Otter Europe Ciclobrava Announcement"
+        "label": "La Ciclobrava 2026 routes, named passes, provisional maps, and included services"
       },
       {
-        "url": "https://www.cycloworld.cc/jedermannrennen/spanien/la-ciclobrava-de-sea-otter-europe/41055/CF/",
-        "category": "directory",
-        "label": "Cycloworld Ciclobrava Profile"
+        "url": "https://es.wikiloc.com/wikiloc/embedv2.do?id=231791544&elevation=off&images=off&maptype=H",
+        "category": "official",
+        "label": "Organizer-linked provisional 150 km Wikiloc route"
       },
       {
-        "url": "https://worldsmarathons.com/marathon/ciclo-brava",
-        "category": "directory",
-        "label": "WorldsMarathons Ciclobrava by Orbea"
+        "url": "https://www.laciclobrava.com/en/schedule/",
+        "category": "official",
+        "label": "La Ciclobrava 2026 bib pickup and staggered start schedule"
       },
       {
-        "url": "https://www.granfondoguide.com/Contents/Index/8164/more-than-1000-cyclists-registered-for-ciclobrava-by-orbea",
-        "category": "news",
-        "label": "Gran Fondo Guide Registration News"
+        "url": "https://www.laciclobrava.com/en/regulation/",
+        "category": "official",
+        "label": "La Ciclobrava 2026 rules, fees, services, aid points, and cutoffs"
+      },
+      {
+        "url": "https://www.seaottereurope.com/girona-is-getting-ready-to-welcome-thousands-of-cyclists-with-a-sea-otter-europe-designed-for-everyone/",
+        "category": "official",
+        "label": "Sea Otter Europe 2026 Ciclobrava route summary and license terms"
+      },
+      {
+        "url": "https://www.seaottereurope.com/sports-event-schedule/",
+        "category": "official",
+        "label": "Sea Otter Europe 2026 sports schedule"
+      },
+      {
+        "url": "https://www.seaottereurope.com/general-festival-program/",
+        "category": "official",
+        "label": "Sea Otter Europe 2026 general festival program"
+      },
+      {
+        "url": "https://www.seaottereurope.com/how-to-get-there-and-park/",
+        "category": "official",
+        "label": "Sea Otter Europe 2026 transport, airport, rail, bus, and parking guidance"
+      },
+      {
+        "url": "https://www.seaottereurope.com/accommodation/",
+        "category": "official",
+        "label": "Sea Otter Europe official 2026 hotel and booking guidance"
       }
     ],
     "youtube_data": {
@@ -284,14 +310,14 @@
             "curated": true
           }
         ],
-        "search_text": "The available transcripts for Sea Otter Ciclobrava do not contain race-specific information about course conditions, terrain, or rider experiences during the actual gravel event. One transcript discusses virtual cycling platforms and connecting global cycling communities in Girona, while the other contains only music and brief phrases. No actionable intelligence about the 87-mile gravel race through Costa Brava's terrain, elevation challenges, or race day conditions can be extracted from these particular video transcripts."
+        "search_text": "The curated 2023 rider recap documents an older 105 km route and may support only durable rider-experience context such as secondary-road character and the Romanyà, La Ganga, Madremanya, and Montjuïc sequence. It does not establish the 2026 150 km course, services, or cutoffs; current organizer sources control those facts."
       }
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-20",
+      "verified": "2026-08-15",
       "source": "https://www.laciclobrava.com/en/",
-      "note": "Current organizer branding is 'La Ciclobrava by Lapierre' (title-sponsor update); remains part of the Sea Otter Europe festival. Name field left unchanged, flagged for review."
+      "notes": "The organizer confirms La Ciclobrava by Lapierre for Sunday, September 20, 2026 inside Sea Otter Europe. The current long route is 150 km with 1,756 m of gain and four named passes. The route page's introductory paragraph still says 2,000 m, but its 150 km heading and Sea Otter Europe's July 2026 announcement both say 1,756 m, so 1,756 m drives the profile and plan. The same sources disagree on whether the 70 km route has 800 m or 1,000 m. All route maps and feed points remain provisional. The regulations print the Monells km 95.4 control as 11:45 PM despite the 9:30am and 2:00pm surrounding controls; riders must obtain a corrected time before race day. The legacy sea-otter-ciclobrava slug remains the stable catalog alias while current display branding is used."
     }
   }
 }
