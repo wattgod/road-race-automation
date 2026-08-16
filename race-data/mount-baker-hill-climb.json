@@ -14,16 +14,16 @@
       "country": "USA",
       "date": "September",
       "date_specific": "2026: September 13",
-      "field_size": "Capped at 450, sells out yearly with global riders across Social, Recreational, Competitive categories.",
-      "start_format": "Staggered category starts: Social 7:00am, Recreational 8:00am, Competitive 8:30am; all non-e-bike riders are timed",
-      "registration": "Aid stations, mechanical support, shuttles, custom medals/jersey for top Competitive finishers; three categories for all levels.",
-      "entry_fee": "$80-120",
-      "feed_zones": "White Salmon, Chair 1, Artist Point with mechanical support.",
-      "cutoff_time": "No strict cutoff; shuttle down at 10:30am from Artist Point.",
+      "field_size": "Registration is capped at 450 riders; the 2026 event is sold out with a waitlist open.",
+      "start_format": "Snowater Road category starts: Social 7:00am, Recreational 8:00am, Competitive 8:30am; all riders except Social e-bikes are timed",
+      "registration": "Age 13+; Social, Recreational, and Competitive divisions. Only Competitive riders qualify for awards. The 2026 event is sold out with a waitlist open.",
+      "entry_fee": "$90 individual / $120 tandem after March 31 ($80 / $100 early pricing)",
+      "feed_zones": "Aid stations with snacks and beverages at White Salmon, Chair 1, and Artist Point; tech support at the start, on course, and at Artist Point.",
+      "cutoff_time": "The organizer does not publish a rider cutoff. SR 542 reopens to traffic at 12:00pm; return shuttles leave Artist Point at 10:30am and Heather Meadows Cafe at 12:30pm.",
       "lat": 48.8667,
       "lng": -121.6833,
       "route_options": [
-        "Main: 22mi, 4462ft — All-uphill from Glacier to Artist Point, categories differ by pace not distance"
+        "Main: 22mi, 4462ft — Timed ascent from Snowater Road east of Glacier to Artist Point; categories differ by pace, not distance"
       ]
     },
     "climate": {
@@ -72,15 +72,24 @@
       "scoring_notes": "Migrated from gravel-race-automation. Original score: 86. adventure dimension dropped, road_surface added. Score recalculated: 83."
     },
     "climb_profile": {
-      "total_climbs": null,
+      "total_climbs": 1,
       "hc_climbs": null,
       "cat_1_climbs": null,
       "cat_2_climbs": null,
       "cat_3_climbs": null,
-      "key_climbs": [],
-      "profile_type": null,
-      "king_of_mountain": null,
-      "_needs_enrichment": true
+      "key_climbs": [
+        {
+          "name": "Mt. Baker Highway from Snowater Road to Artist Point",
+          "length_km": 35.4,
+          "elevation_gain_m": 1360,
+          "summit_altitude_m": 1567,
+          "gradient_pct": 3.8,
+          "note": "The organizer states 22 miles, 4,462 feet of gain, and a 5,140-foot Artist Point finish; 3.8% is the derived whole-course average and masks the steeper upper switchbacks."
+        }
+      ],
+      "profile_type": "Single timed paved ascent from Snowater Road to Artist Point",
+      "king_of_mountain": "The full 22-mile climb is timed for all riders except Social e-bikes; only Competitive riders qualify for awards.",
+      "_needs_enrichment": false
     },
     "course_description": {
       "character": "All-uphill paved assault on SR 542 from Glacier's forests to Artist Point's alpine glory. The 22-mile course gains 4,462ft through switchbacks and steepens near the ski area, with the highway closed to motor traffic during the event. Panoramic payoffs make pain poetic.",
@@ -92,9 +101,9 @@
       ]
     },
     "logistics": {
-      "airport": "Bellingham International (BLI) 1-1.5hr drive—easy fly-in. Carpool mandatory; shuttles handle bags/bikes down.",
+      "airport": "Bellingham International (BLI), roughly 1-1.5 hours by road. Parking near Glacier is limited, so the organizer strongly encourages carpooling.",
       "lodging_strategy": "Glacier spots or Bellingham basecamp; book early near Chair 9. Event lists recs—proximity trumps luxury.",
-      "transport": "",
+      "transport": "Sunday timing-chip check-in opens at Chair 9 Pizza 30 minutes before each division. Bag shuttles leave Chair 9 at 7:45am and 8:40am. Return shuttles have 20 first-come seats and leave Artist Point at 10:30am and Heather Meadows Cafe at 12:30pm; bike transport is at the rider's risk. Artist Point parking requires a $5 NW Forest Pass. Cell service is limited.",
       "food": "Aid stations fuel the grind; Chair 9 Pizza for pre-race carbs. Pack summit layers—post-climb feasts in Bellingham.",
       "official_site": "https://bakerhillclimb.com"
     },
@@ -149,6 +158,21 @@
         "url": "https://bakerhillclimb.com/race-information/",
         "category": "official",
         "label": "Race Information - Mt. Baker Hill Climb"
+      },
+      {
+        "url": "https://bakerhillclimb.com/race-day-information/",
+        "category": "official",
+        "label": "2026 Race Day Information - Mt. Baker Hill Climb"
+      },
+      {
+        "url": "https://bakerhillclimb.com/about/",
+        "category": "official",
+        "label": "Course and Event FAQ - Mt. Baker Hill Climb"
+      },
+      {
+        "url": "https://bakerhillclimb.com/prizes-winners/",
+        "category": "official",
+        "label": "2026 Awards - Mt. Baker Hill Climb"
       }
     ],
     "youtube_data": {
@@ -381,7 +405,7 @@
     },
     "eligibility": {
       "status": "active",
-      "verified": "2026-07-17",
+      "verified": "2026-08-15",
       "source": "https://bakerhillclimb.com"
     }
   }
