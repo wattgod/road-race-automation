@@ -1,0 +1,342 @@
+"""Tests for the Roadie Labs post-checkout success page generator.
+
+New test file — ported from gravel-race-automation/tests/test_success_pages.py
+(the module was previously untested on Roadie Labs). Adapted for Roadie
+Labs: rl- class prefix, road URLs, GA4 property G-WQ7W8XN11N, road-labs-brand
+tokens.css, and the actual GA4 event shapes already shipped in
+generate_success_pages.py::build_success_js() (success_crosssell_click, not
+gravel's cta_click/source pattern).
+
+Focus is the Consulting success page (Sultanic copy v2 port, C5) — the
+Training Plan and Coaching sections are pre-existing RL content, asserted
+here only for structural coverage.
+"""
+from __future__ import annotations
+
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+# Add wordpress/ to path so we can import the generator
+sys.path.insert(0, str(Path(__file__).parent.parent / "wordpress"))
+
+from generate_success_pages import (
+    PAGES,
+    TRAININGPEAKS_ATTACH_URL,
+    build_success_css,
+    build_success_js,
+    build_training_plan_success,
+    build_coaching_success,
+    build_consulting_success,
+    generate_success_page,
+)
+
+
+# ── Fixtures ─────────────────────────────────────────────────
+
+
+@pytest.fixture(scope="module")
+def all_pages():
+    """Generate all 3 success pages."""
+    return {key: generate_success_page(key) for key in PAGES}
+
+
+@pytest.fixture(scope="module")
+def success_css():
+    return build_success_css()
+
+
+@pytest.fixture(scope="module")
+def success_js():
+    return build_success_js()
+
+
+# ── Page Generation ──────────────────────────────────────────
+
+
+class TestPageGeneration:
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_generates_valid_html(self, all_pages, key):
+        html = all_pages[key]
+        assert isinstance(html, str)
+        assert "<!DOCTYPE html>" in html
+        assert "</html>" in html
+
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_has_title(self, all_pages, key):
+        html = all_pages[key]
+        expected_title = PAGES[key]["title"]
+        assert expected_title in html
+
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_has_canonical(self, all_pages, key):
+        html = all_pages[key]
+        expected = PAGES[key]["canonical"]
+        assert 'rel="canonical"' in html
+        assert expected in html
+
+    def test_all_three_pages_generated(self, all_pages):
+        assert len(all_pages) == 3
+        assert "training-plans-success" in all_pages
+        assert "coaching-welcome" in all_pages
+        assert "consulting-confirmed" in all_pages
+
+
+# ── SEO & Indexing ───────────────────────────────────────────
+
+
+class TestSEO:
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_noindex(self, all_pages, key):
+        """All success pages must be noindexed."""
+        html = all_pages[key]
+        assert 'noindex' in html, f"{key} missing noindex"
+
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_meta_description(self, all_pages, key):
+        html = all_pages[key]
+        assert 'name="description"' in html
+
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_has_ga4(self, all_pages, key):
+        html = all_pages[key]
+        assert "G-WQ7W8XN11N" in html
+        assert "googletagmanager.com" in html
+
+
+# ── GA4 Tracking ─────────────────────────────────────────────
+
+
+class TestGA4Tracking:
+    def test_purchase_event(self, success_js):
+        assert "purchase" in success_js
+
+    def test_session_id_extraction(self, success_js):
+        assert "session_id" in success_js
+
+    def test_crosssell_click_tracking(self, success_js):
+        assert "'success_crosssell_click'" in success_js
+        assert "rl-success-cta" in success_js
+
+    def test_conversion_dedup(self, success_js):
+        assert "sessionStorage" in success_js
+
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_page_has_product_type_attr(self, all_pages, key):
+        html = all_pages[key]
+        assert "data-product-type" in html
+
+    def test_training_plan_product_type(self, all_pages):
+        assert 'data-product-type="training_plan"' in all_pages["training-plans-success"]
+
+    def test_coaching_product_type(self, all_pages):
+        assert 'data-product-type="coaching"' in all_pages["coaching-welcome"]
+
+    def test_consulting_product_type(self, all_pages):
+        assert 'data-product-type="consulting"' in all_pages["consulting-confirmed"]
+
+    def test_consulting_intake_ref_rewrite(self, success_js):
+        """session_id from Stripe is passed through to the intake page as a
+        #ref= fragment so the intake submission can be tied to the order."""
+        assert "consult-intake-link" in success_js
+        assert "/consulting/intake/#ref=" in success_js
+
+
+# ── Brand Compliance ─────────────────────────────────────────
+
+
+class TestBrandCompliance:
+    def test_no_hardcoded_hex_in_css(self, success_css):
+        """CSS should use var(--rl-color-*) only — no raw hex codes."""
+        css_match = re.search(r'<style>(.*?)</style>', success_css, re.DOTALL)
+        if not css_match:
+            pytest.skip("No CSS found")
+        css = css_match.group(1)
+        hex_colors = re.findall(r'#[0-9a-fA-F]{3,8}', css)
+        assert len(hex_colors) == 0, f"Found hardcoded hex in CSS: {hex_colors[:5]}"
+
+    def test_no_border_radius(self, success_css):
+        assert "border-radius" not in success_css
+
+    def test_no_box_shadow(self, success_css):
+        assert "box-shadow" not in success_css
+
+    def test_no_opacity_transition(self, success_css):
+        css_match = re.search(r'<style>(.*?)</style>', success_css, re.DOTALL)
+        if not css_match:
+            pytest.skip("No CSS found")
+        css = css_match.group(1)
+        transitions = re.findall(r'transition:\s*([^;]+);', css)
+        for t in transitions:
+            assert "opacity" not in t.lower(), f"Found opacity transition: {t}"
+
+    def test_uses_brand_tokens(self, success_css):
+        assert "var(--rl-color-" in success_css
+        assert "var(--rl-font-" in success_css
+
+    def test_no_entrance_animations(self, success_css):
+        assert "@keyframes" not in success_css
+
+    def test_correct_class_prefix(self, success_css):
+        """All custom classes use rl-success- prefix."""
+        classes = re.findall(r'\.(rl-[a-z][a-z0-9-]*)', success_css)
+        for cls in classes:
+            if cls.startswith(('rl-neo-brutalist', 'rl-site-header', 'rl-hero',
+                              'rl-section', 'rl-breadcrumb', 'rl-footer',
+                              'rl-mega-footer')):
+                continue
+            assert cls.startswith('rl-success-'), f"Non-prefixed class: .{cls}"
+
+    def test_no_slash_mo_billing_copy(self, success_css, all_pages):
+        """None of the three success pages describe recurring '/mo' billing."""
+        assert "/mo" not in success_css
+        for html in all_pages.values():
+            assert "/mo" not in html
+
+
+# ── CSS Token Validation ─────────────────────────────────────
+
+
+class TestCssTokenValidation:
+    def test_all_var_refs_defined(self, success_css):
+        """Every var(--rl-*) must be defined in brand tokens."""
+        tokens_path = Path(__file__).parent.parent.parent / "road-labs-brand" / "tokens" / "tokens.css"
+        if not tokens_path.exists():
+            pytest.skip("Brand tokens not found")
+        tokens_css = tokens_path.read_text()
+        var_refs = set(re.findall(r'var\((--rl-[a-z0-9-]+)\)', success_css))
+        for var_name in var_refs:
+            assert var_name in tokens_css, f"Undefined token: {var_name}"
+
+
+# ── JS Syntax ────────────────────────────────────────────────
+
+
+class TestJSSyntax:
+    def test_js_parses_via_node(self, success_js):
+        """Validate JS syntax via Node.js subprocess."""
+        js = success_js.replace("<script>", "").replace("</script>", "")
+        result = subprocess.run(
+            ["node", "-e", f"new Function({repr(js)})"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        assert result.returncode == 0, f"JS syntax error: {result.stderr}"
+
+
+# ── Content Sections ─────────────────────────────────────────
+
+
+class TestTrainingPlanSuccess:
+    def test_has_hero(self):
+        html = build_training_plan_success()
+        assert "rl-success-hero" in html
+        assert "Training Plan Is on the Way" in html
+
+    def test_has_next_steps(self):
+        html = build_training_plan_success()
+        assert "WHAT HAPPENS NEXT" in html
+        assert "Check Your Email" in html
+        assert "Import Your Workouts" in html
+        assert "Read the Training Guide" in html
+
+    def test_cross_sells_coaching(self):
+        html = build_training_plan_success()
+        assert "/coaching/" in html
+        assert "rl-success-cta" in html
+
+    def test_has_support_link(self):
+        html = build_training_plan_success()
+        assert "coach@roadielabs.com" in html
+
+    def test_no_time_promises(self):
+        """Never promise a specific delivery time — pipeline can fail or be slow."""
+        html = build_training_plan_success()
+        for bad in ["5 minutes", "within a few minutes", "within minutes",
+                     "arrive in", "ready in"]:
+            assert bad not in html.lower(), f"Dangerous time promise: '{bad}'"
+
+
+class TestCoachingSuccess:
+    def test_has_hero(self):
+        html = build_coaching_success()
+        assert "rl-success-hero" in html
+        assert "Welcome to Coaching" in html
+
+    def test_has_intake_link(self):
+        html = build_coaching_success()
+        assert "/coaching/apply/" in html
+
+    def test_cross_sells_races(self):
+        html = build_coaching_success()
+        assert "/road-races/" in html
+        assert "rl-success-cta" in html
+
+    def test_has_next_steps(self):
+        html = build_coaching_success()
+        assert "Fill Out the Intake Form" in html
+        assert "Expect an Email" in html
+        assert "We Train Together" in html
+
+
+class TestConsultingSuccess:
+    def test_has_hero(self):
+        html = build_consulting_success()
+        assert "rl-success-hero" in html
+        assert "Booked. Three things, then I get to work." in html
+
+    def test_has_next_steps(self):
+        html = build_consulting_success()
+        assert "Pick Your Time" in html
+        assert "Start the Intake" in html
+        assert "Connect Your TrainingPeaks" in html
+
+    def test_three_links(self):
+        """Pick a time, start the intake, connect TrainingPeaks — the three
+        things promised in the H1."""
+        html = build_consulting_success()
+        assert "calendar.app.google/E282ZtBJAFBXYdYJ6" in html
+        assert 'href="/consulting/intake/"' in html
+        assert TRAININGPEAKS_ATTACH_URL in html
+
+    def test_consulting_scheduling_cta(self):
+        html = build_consulting_success()
+        assert "Pick a Time" in html
+
+    def test_intake_link_has_id_for_js_ref_rewrite(self):
+        html = build_consulting_success()
+        assert 'id="consult-intake-link"' in html
+
+    def test_intake_missing_token_instruction(self):
+        """Success page can't know the intake auth token (welcome-email only) —
+        must tell the athlete to use the emailed link if this page can't open it."""
+        html = build_consulting_success()
+        assert "welcome email" in html.lower()
+
+    def test_addon_clause_only_if_not_bought(self):
+        html = build_consulting_success()
+        assert "$100" in html
+        assert "seven days after we speak" in html
+        assert "reply to your welcome email" in html.lower()
+
+    def test_quiet_coaching_clause(self):
+        html = build_consulting_success()
+        assert "every week" in html
+        assert '/coaching/' in html
+
+    def test_cross_sells_coaching(self):
+        html = build_consulting_success()
+        assert "/coaching/" in html
+
+
+# ── Shared Structure ─────────────────────────────────────────
+
+
+class TestSharedStructure:
+    @pytest.mark.parametrize("key", list(PAGES.keys()))
+    def test_has_site_header(self, all_pages, key):
+        assert "rl-site-header" in all_pages[key]
