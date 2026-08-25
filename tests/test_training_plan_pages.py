@@ -108,6 +108,13 @@ class TestCustomPlanPreview:
         assert html.count('class="tp-sim-day"') == 7
         assert "TRAININGPEAKS" in html
 
+    def test_plan_module_tray_is_brand_safe(self, html):
+        assert 'data-role="modules-toggle"' in html
+        assert 'data-plan-module="strength"' in html
+        assert 'data-plan-module="fueling"' in html
+        assert "gravel_grit" not in html
+        assert "plan_modules_open" in html
+
     def test_hands_preferences_to_questionnaire(self, html):
         assert 'data-cta="tpp_preview_build"' in html
         assert "url.searchParams.set('hours'" in html

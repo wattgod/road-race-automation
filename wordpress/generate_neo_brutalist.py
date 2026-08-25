@@ -1337,12 +1337,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
       if (T.indexOf('BUILD MY') !== -1) cta_type = 'build_plan';
       else if (T.indexOf('PREP KIT') !== -1) cta_type = 'prep_kit';
       else if (T.indexOf('COACHING') !== -1) cta_type = 'coaching';
-      var section = this.closest('.rl-section, 
-  /* not-running status notice (defunct/cancelled, 2026-07-23) */
-  .rl-status-notice { border: 2px solid var(--rl-color-ink, #1a1a1a); padding: 14px 18px; margin: 20px auto; max-width: var(--rl-max-width, 1080px); display: flex; align-items: baseline; gap: 14px; background: var(--rl-color-paper, #f5f5f0); }
-  .rl-status-notice-label { font-family: var(--rl-font-mono, 'Sometype Mono', monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; white-space: nowrap; border: 2px solid var(--rl-color-ink, #1a1a1a); padding: 2px 8px; }
-  .rl-status-notice p { margin: 0; font-size: 14px; }
-  .rl-sticky-cta');
+      var section = this.closest('.rl-section, .rl-sticky-cta');
       var section_id = section ? (section.id || section.className.split(' ')[0]) : 'unknown';
       gtag('event', 'cta_click', {
         cta_type: cta_type,
@@ -5703,6 +5698,11 @@ def get_page_css() -> str:
 .rl-sticky-cta-name {{ font-family: var(--rl-font-data); font-size: 13px; font-weight: 700; color: var(--rl-color-white); text-transform: uppercase; letter-spacing: 1px; }}
 .rl-sticky-cta .rl-btn {{ font-family: var(--rl-font-data); background: var(--rl-color-signal-red); color: var(--rl-color-white); border: var(--rl-border-width-subtle) solid var(--rl-color-signal-red); padding: var(--rl-spacing-xs) 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); text-decoration: none; cursor: pointer; }}
 .rl-sticky-cta .rl-btn:hover {{ background: #14695F; border-color: #14695F; }}
+
+/* Not-running status notice (defunct/cancelled races). */
+.rl-status-notice {{ border: 2px solid var(--rl-color-dark-navy); padding: 14px 18px; margin: 20px auto; max-width: 960px; display: flex; align-items: baseline; gap: 14px; background: var(--rl-color-cool-white); }}
+.rl-status-notice-label {{ font-family: var(--rl-font-data); font-size: 12px; font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-wide); white-space: nowrap; border: 2px solid var(--rl-color-dark-navy); padding: 2px 8px; }}
+.rl-status-notice p {{ margin: 0; font-size: 14px; }}
 .rl-sticky-dismiss {{ background: none; border: none; color: var(--rl-color-white); font-size: 22px; cursor: pointer; opacity: 0.6; padding: 0 4px; line-height: 1; }}
 .rl-sticky-dismiss:hover {{ opacity: 1; }}
 

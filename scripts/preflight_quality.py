@@ -868,7 +868,9 @@ def check_ab_config_sync():
     """Ensure AB system files exist, config is in sync, and JS parses."""
     print("\n── A/B Testing System ──")
 
-    # 1. File existence — all three AB files must exist
+    # 1. File existence — Roadie Labs is a static SiteGround site. Its A/B
+    # runtime is the generated JS + JSON config; a WordPress mu-plugin is not
+    # part of the deployed architecture (see deploy-and-siteground/SKILL.md).
     js_path = PROJECT_ROOT / "web" / "rl-ab-tests.js"
     config_path = PROJECT_ROOT / "web" / "ab" / "experiments.json"
     php_path = WORDPRESS_DIR / "mu-plugins" / "rl-ab.php"
@@ -877,8 +879,8 @@ def check_ab_config_sync():
           "Missing — file deleted?")
     check("AB config exists (experiments.json)", config_path.exists(),
           "Missing — run: python wordpress/ab_experiments.py")
-    check("AB mu-plugin exists (rl-ab.php)", php_path.exists(),
-          "Missing — file deleted?")
+    check("Static A/B system has no WordPress mu-plugin", not php_path.exists(),
+          "rl-ab.php is dead WordPress cargo on the static Roadie Labs host")
 
     if not config_path.exists() or not js_path.exists():
         return
@@ -1052,15 +1054,32 @@ def check_insights_js_syntax():
     print("\n── Insights Page JS Syntax ──")
     sys.path.insert(0, str(WORDPRESS_DIR))
     try:
-        from generate_insights import build_insights_js
-        js = build_insights_js().replace("<script>", "").replace("</script>", "")
-        result = subprocess.run(
-            ["node", "-e", f"try {{ new Function({json.dumps(js)}); console.log('OK'); }}"
-             f" catch(e) {{ console.error(e.message); process.exit(1); }}"],
-            capture_output=True, text=True, timeout=10
-        )
-        check("Insights page JS syntax", result.returncode == 0,
-              result.stderr.strip() if result.returncode != 0 else "")
+        # Insights deliberately composes the canonical race-page, header,
+        # consent and analytics runtimes instead of owning a second JS
+        # builder. Validate every inline executable script in the page it
+        # actually renders; ignore JSON-LD and external script tags.
+        from generate_insights import generate_insights_page
+        page = generate_insights_page()
+        scripts = [
+            body for attrs, body in re.findall(
+                r"<script([^>]*)>(.*?)</script>", page,
+                flags=re.IGNORECASE | re.DOTALL)
+            if "src=" not in attrs.lower()
+            and "application/ld+json" not in attrs.lower()
+            and body.strip()
+        ]
+        errors = []
+        for index, js in enumerate(scripts, 1):
+            result = subprocess.run(
+                ["node", "-e",
+                 f"try {{ new Function({json.dumps(js)}); }}"
+                 f" catch(e) {{ console.error(e.message); process.exit(1); }}"],
+                capture_output=True, text=True, timeout=10,
+            )
+            if result.returncode != 0:
+                errors.append(f"script {index}: {result.stderr.strip()}")
+        check("Insights page JS syntax", bool(scripts) and not errors,
+              "; ".join(errors) if errors else "No inline executable scripts found")
     except Exception as e:
         check("Insights page JS syntax", False, f"Error: {e}")
 
@@ -1068,6 +1087,11 @@ def check_insights_js_syntax():
 def check_whitepaper_js_syntax():
     """Validate white paper page JS via Node.js."""
     print("\n── White Paper Page JS Syntax ──")
+    source = WORDPRESS_DIR / "generate_whitepaper_fueling.py"
+    if not source.exists():
+        warn("White paper page JS syntax",
+             "white paper generator is not owned by the Roadie Labs repository — skipping")
+        return
     sys.path.insert(0, str(WORDPRESS_DIR))
     try:
         from generate_whitepaper_fueling import build_whitepaper_js
