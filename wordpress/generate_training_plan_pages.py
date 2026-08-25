@@ -35,6 +35,8 @@ from brand_tokens import (
 from shared_header import get_site_header_html, get_site_header_css
 from shared_footer import get_mega_footer_html
 from cookie_consent import get_consent_banner_html
+from plan_simulator import (get_plan_simulator_css, get_plan_simulator_js,
+                            render_plan_simulator)
 from generate_neo_brutalist import (
     parse_event_dates,
     _safe_json_for_script,
@@ -447,55 +449,17 @@ def build_cta(rd: dict) -> str:
 
 
 def build_custom_plan_preview(rd: dict, pack: dict) -> str:
-    """Render an illustrative week shaped by the visitor's constraints."""
-    demands = pack.get("demands", {})
-    top_key = max(
-        (key for key in DIM_LABELS if demands.get(key)),
-        key=lambda key: demands[key],
-        default="race_specificity",
+    """Render the contract-backed TrainingPeaks calendar simulator."""
+    return render_plan_simulator(
+        brand="roadie_labs",
+        race=rd,
+        demands=pack.get("demands") or {},
+        questionnaire_url=f"{QUESTIONNAIRE_URL}?race={esc(rd['slug'])}",
+        heading=f"See your {rd['name']} week before you buy.",
+        lede=("Choose the week you actually have. The current plan engine "
+              "uses those constraints and this race's demand profile to "
+              "build a real calendar preview beside them."),
     )
-    focus = DIM_LABELS.get(top_key, "Race Specificity")
-    focus_score = demands.get(top_key, "")
-    focus_line = f"{focus} {focus_score}/10" if focus_score else focus
-    slug = esc(rd["slug"])
-    day_controls = "".join(
-        f'''<label class="rl-tpp-preview-day"><input type="checkbox" value="{day}"'''
-        f'''{" checked" if day in ("Tue", "Thu", "Sat", "Sun") else ""}>'''
-        f'''<span>{day}</span></label>'''
-        for day in ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-    )
-    week = "".join(
-        f'''<li data-preview-day="{day}"><span class="rl-tpp-preview-day-name">{day}</span>'''
-        f'''<strong class="rl-tpp-preview-session">{session}</strong>'''
-        f'''<span class="rl-tpp-preview-duration">{duration}</span></li>'''
-        for day, session, duration in (
-            ("Mon", "Rest + mobility", "—"),
-            ("Tue", "Race-specific intervals", "1:15"),
-            ("Wed", "Rest", "—"),
-            ("Thu", "Aerobic endurance", "1:30"),
-            ("Fri", "Rest", "—"),
-            ("Sat", "Long race-prep ride", "3:30"),
-            ("Sun", "Recovery endurance", "1:45"),
-        )
-    )
-    return f'''<section class="rl-tpp-section rl-tpp-preview" id="custom-plan-preview" data-race-slug="{slug}" data-focus="{esc(focus)}">
-  <p class="rl-tpp-preview-kicker">YOUR WEEK, NOT A TEMPLATE</p>
-  <h2>See how your {esc(rd["name"])} plan could fit.</h2>
-  <p class="rl-tpp-preview-lede">Set the constraints that usually break a ready-made plan. The week below reshapes itself around them.</p>
-  <div class="rl-tpp-preview-layout">
-    <form class="rl-tpp-preview-controls" id="rl-tpp-preview-controls">
-      <label class="rl-tpp-preview-field" for="rl-tpp-preview-hours"><span>Available hours / week</span><span class="rl-tpp-preview-range"><input id="rl-tpp-preview-hours" type="range" min="4" max="18" step="1" value="8"><output id="rl-tpp-preview-hours-value" for="rl-tpp-preview-hours">8 hours</output></span></label>
-      <fieldset class="rl-tpp-preview-field rl-tpp-preview-days"><legend>Preferred training days</legend><div>{day_controls}</div></fieldset>
-      <label class="rl-tpp-preview-field" for="rl-tpp-preview-level"><span>Experience level</span><select id="rl-tpp-preview-level"><option value="beginner">New to structured training</option><option value="intermediate" selected>Experienced / intermediate</option><option value="advanced">Advanced racer</option></select></label>
-    </form>
-    <div class="rl-tpp-preview-result" aria-live="polite">
-      <div class="rl-tpp-preview-result-head"><span>REPRESENTATIVE BUILD WEEK</span><strong id="rl-tpp-preview-summary">8 hours across 4 preferred days</strong><small>Race focus: {esc(focus_line)}</small></div>
-      <ol class="rl-tpp-preview-week">{week}</ol>
-      <div class="rl-tpp-preview-lock"><strong>This is the shape. The full plan supplies the progression.</strong><span>Every week, recovery step, strength session, fueling rehearsal, and race-week adjustment is built from the complete intake.</span></div>
-      <a class="rl-btn rl-tpp-preview-cta" id="rl-tpp-preview-cta" data-cta="tpp_preview_build" href="{QUESTIONNAIRE_URL}?race={slug}">BUILD MY FULL PLAN &rarr;</a>
-    </div>
-  </div>
-</section>'''
 
 
 def build_json_ld(rd: dict, qa: list, canonical: str) -> str:
@@ -533,7 +497,7 @@ def build_json_ld(rd: dict, qa: list, canonical: str) -> str:
 
 def build_css() -> str:
     return '''
-.rl-tpp-page { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; font-family: var(--rl-font-editorial); color: var(--rl-color-primary-brown); }
+.rl-tpp-page { max-width: 1120px; margin: 0 auto; padding: 0 20px 60px; font-family: var(--rl-font-editorial); color: var(--rl-color-primary-navy); }
 .rl-tpp-kicker { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--rl-color-secondary-brown); margin: 28px 0 8px; }
 .rl-tpp-hero h1 { font-family: var(--rl-font-data); font-size: clamp(26px, 5vw, 40px); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.15; margin: 0 0 10px; color: #000; }
 .rl-tpp-facts { font-family: var(--rl-font-data); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0 0 16px; }
@@ -565,34 +529,6 @@ def build_css() -> str:
 .rl-tpp-tl-when { font-family: var(--rl-font-data); font-size: 12px; white-space: nowrap; }
 .rl-tpp-tl-phase { font-family: var(--rl-font-data); font-weight: 700; text-transform: uppercase; font-size: 12px; color: var(--rl-color-teal); }
 .rl-tpp-fueling li { margin-bottom: 8px; line-height: 1.6; }
-.rl-tpp-preview { background: var(--rl-color-warm-paper); border: 4px solid var(--rl-color-primary-brown); padding: 28px; }
-.rl-tpp-preview-kicker { font-family: var(--rl-font-data); font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--rl-color-teal); margin: 0 0 8px; }
-.rl-tpp-preview-lede { max-width: 640px; line-height: 1.6; margin: 0 0 22px; }
-.rl-tpp-preview-layout { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(340px, 1.2fr); gap: 24px; align-items: start; }
-.rl-tpp-preview-controls { display: grid; gap: 18px; }
-.rl-tpp-preview-field { display: grid; gap: 8px; margin: 0; padding: 0; border: 0; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-.rl-tpp-preview-range { display: flex; align-items: center; gap: 10px; }
-.rl-tpp-preview-range input { flex: 1; accent-color: var(--rl-color-teal); }
-.rl-tpp-preview-range output { min-width: 64px; text-align: right; }
-.rl-tpp-preview-days > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.rl-tpp-preview-day { position: relative; cursor: pointer; }
-.rl-tpp-preview-day input { position: absolute; opacity: 0; pointer-events: none; }
-.rl-tpp-preview-day span { display: grid; min-height: 44px; place-items: center; border: 2px solid var(--rl-color-tan); background: var(--rl-color-cream); }
-.rl-tpp-preview-day input:checked + span { border-color: var(--rl-color-primary-brown); background: var(--rl-color-primary-brown); color: var(--rl-color-warm-paper); }
-.rl-tpp-preview-day input:focus-visible + span { outline: 3px solid var(--rl-color-teal); outline-offset: 2px; }
-.rl-tpp-preview-field select { min-height: 44px; border: 2px solid var(--rl-color-primary-brown); background: var(--rl-color-cream); color: var(--rl-color-primary-brown); padding: 8px; font: inherit; }
-.rl-tpp-preview-result { border: 3px solid var(--rl-color-primary-brown); background: var(--rl-color-cream); }
-.rl-tpp-preview-result-head { display: grid; gap: 4px; padding: 14px 16px; border-bottom: 3px solid var(--rl-color-primary-brown); }
-.rl-tpp-preview-result-head span, .rl-tpp-preview-result-head small { font-family: var(--rl-font-data); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
-.rl-tpp-preview-result-head strong { font-family: var(--rl-font-data); font-size: 15px; text-transform: uppercase; }
-.rl-tpp-preview-week { list-style: none; margin: 0; padding: 0; }
-.rl-tpp-preview-week li { display: grid; grid-template-columns: 42px 1fr 50px; gap: 10px; align-items: baseline; padding: 9px 14px; border-bottom: 1px solid var(--rl-color-tan); }
-.rl-tpp-preview-day-name, .rl-tpp-preview-duration { font-family: var(--rl-font-data); font-size: 11px; text-transform: uppercase; }
-.rl-tpp-preview-duration { text-align: right; }
-.rl-tpp-preview-session { font-size: 13px; }
-.rl-tpp-preview-lock { display: grid; gap: 5px; padding: 14px 16px; border-top: 2px solid var(--rl-color-primary-brown); font-size: 13px; line-height: 1.45; }
-.rl-tpp-preview-lock strong { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: .5px; text-transform: uppercase; }
-.rl-tpp-preview-cta { display: block; margin: 0; text-align: center; border-width: 0; border-top: 3px solid var(--rl-color-primary-brown); }
 .rl-tpp-faq-item { border: 2px solid #000; margin-bottom: 10px; background: #fff; }
 .rl-tpp-faq-item summary { font-family: var(--rl-font-data); font-size: 14px; font-weight: 600; padding: 14px 16px; cursor: pointer; }
 .rl-tpp-faq-item p { padding: 0 16px 14px; margin: 0; line-height: 1.6; }
@@ -601,9 +537,16 @@ def build_css() -> str:
 .rl-tpp-plan-grid .rl-btn { flex: 1 1 220px; text-align: center; }
 .rl-tpp-guarantee { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0; }
 a { color: var(--rl-color-teal); }
-@media (max-width: 720px) { .rl-tpp-preview-layout { grid-template-columns: 1fr; } }
-@media (max-width: 640px) { .rl-tpp-preview { padding: 20px; } .rl-tpp-demand-grid { grid-template-columns: 1fr; } .rl-tpp-cta-row { flex-direction: column; } .rl-tpp-cta-row .rl-btn { text-align: center; } }
-'''
+@media (max-width: 640px) { .rl-tpp-demand-grid { grid-template-columns: 1fr; } .rl-tpp-cta-row { flex-direction: column; } .rl-tpp-cta-row .rl-btn { text-align: center; } }
+''' + get_plan_simulator_css(
+        ink="var(--rl-color-primary-navy)",
+        paper="var(--rl-color-cool-white)",
+        panel="var(--rl-color-white)",
+        line="var(--rl-color-silver)",
+        accent="var(--rl-color-signal-red)",
+        data_font="var(--rl-font-data)",
+        body_font="var(--rl-font-editorial)",
+    )
 
 
 def build_js() -> str:
@@ -629,79 +572,6 @@ def build_js() -> str:
   });
 })();
 (function() {
-  var form = document.getElementById('rl-tpp-preview-controls');
-  if (!form) return;
-  var hours = document.getElementById('rl-tpp-preview-hours');
-  var hoursValue = document.getElementById('rl-tpp-preview-hours-value');
-  var level = document.getElementById('rl-tpp-preview-level');
-  var summary = document.getElementById('rl-tpp-preview-summary');
-  var cta = document.getElementById('rl-tpp-preview-cta');
-  var rows = Array.prototype.slice.call(document.querySelectorAll('[data-preview-day]'));
-  var checkboxes = Array.prototype.slice.call(form.querySelectorAll('.rl-tpp-preview-day input'));
-  var sessions = {
-    beginner: ['Controlled tempo', 'Aerobic endurance', 'Long race-prep ride', 'Recovery endurance', 'Skills + easy endurance'],
-    intermediate: ['Race-specific intervals', 'Aerobic endurance', 'Long race-prep ride', 'Recovery endurance', 'Strength endurance'],
-    advanced: ['Race-specific over-unders', 'VO2 + race surges', 'Long race simulation', 'Recovery endurance', 'Aerobic endurance']
-  };
-  var touched = false;
-  function durationText(value) {
-    if (!value) return '—';
-    var whole = Math.floor(value);
-    var mins = Math.round((value - whole) * 60);
-    return whole + ':' + String(mins).padStart(2, '0');
-  }
-  function render() {
-    var selected = checkboxes.filter(function(box) { return box.checked; }).map(function(box) { return box.value; });
-    if (selected.length < 2) {
-      var fallback = checkboxes.find(function(box) { return !box.checked; });
-      if (fallback) { fallback.checked = true; selected.push(fallback.value); }
-    }
-    var total = Number(hours.value);
-    var names = sessions[level.value] || sessions.intermediate;
-    var allocations = [];
-    var longHours = Math.max(2, Math.round(total * .38 * 2) / 2);
-    var keyHours = level.value === 'beginner' ? 1 : (level.value === 'advanced' ? 1.5 : 1.25);
-    var remainder = Math.max(.75, total - longHours - keyHours);
-    for (var i = 0; i < selected.length; i += 1) {
-      if (i === 0) allocations.push(keyHours);
-      else if (i === selected.length - 1) allocations.push(longHours);
-      else allocations.push(Math.round((remainder / Math.max(1, selected.length - 2)) * 4) / 4);
-    }
-    rows.forEach(function(row) {
-      var day = row.getAttribute('data-preview-day');
-      var idx = selected.indexOf(day);
-      var session = row.querySelector('.rl-tpp-preview-session');
-      var duration = row.querySelector('.rl-tpp-preview-duration');
-      if (idx === -1) {
-        session.textContent = day === 'Mon' ? 'Rest + mobility' : 'Rest';
-        duration.textContent = '—';
-      } else {
-        session.textContent = names[Math.min(idx, names.length - 1)];
-        duration.textContent = durationText(allocations[idx]);
-      }
-    });
-    hoursValue.textContent = total + ' hours';
-    summary.textContent = total + ' hours across ' + selected.length + ' preferred days';
-    var url = new URL(cta.getAttribute('href'), window.location.origin);
-    url.searchParams.set('hours', String(total));
-    url.searchParams.set('days', selected.join(','));
-    url.searchParams.set('experience', level.value);
-    cta.href = url.toString();
-    if (touched && typeof gtag === 'function') {
-      gtag('event', 'plan_preview_update', {
-        source: 'training_plan_page',
-        race_slug: document.getElementById('custom-plan-preview').getAttribute('data-race-slug') || '',
-        hours_per_week: total,
-        preferred_days_count: selected.length,
-        experience_level: level.value
-      });
-    }
-  }
-  form.addEventListener('change', function() { touched = true; render(); });
-  hours.addEventListener('input', function() { touched = true; render(); });
-  render();
-})();
-(function() {
   if (typeof gtag !== 'function') return;
   document.querySelectorAll('a[data-cta]').forEach(function(link) {
     link.addEventListener('click', function() {
@@ -714,7 +584,7 @@ def build_js() -> str:
     });
   });
 })();
-'''
+''' + get_plan_simulator_js()
 
 
 def generate_page(rd: dict, pack: dict) -> str:
