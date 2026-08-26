@@ -35,6 +35,8 @@ from brand_tokens import (
 from shared_header import get_site_header_html, get_site_header_css
 from shared_footer import get_mega_footer_html
 from cookie_consent import get_consent_banner_html
+from plan_simulator import (get_plan_simulator_css, get_plan_simulator_js,
+                            render_plan_simulator)
 from generate_neo_brutalist import (
     parse_event_dates,
     _safe_json_for_script,
@@ -446,6 +448,20 @@ def build_cta(rd: dict) -> str:
 </section>'''
 
 
+def build_custom_plan_preview(rd: dict, pack: dict) -> str:
+    """Render the contract-backed TrainingPeaks calendar simulator."""
+    return render_plan_simulator(
+        brand="roadie_labs",
+        race=rd,
+        demands=pack.get("demands") or {},
+        questionnaire_url=f"{QUESTIONNAIRE_URL}?race={esc(rd['slug'])}",
+        heading=f"See your {rd['name']} week before you buy.",
+        lede=("Choose the week you actually have. The current plan engine "
+              "uses those constraints and this race's demand profile to "
+              "build a real calendar preview beside them."),
+    )
+
+
 def build_json_ld(rd: dict, qa: list, canonical: str) -> str:
     name = rd["name"]
     data = [
@@ -481,7 +497,7 @@ def build_json_ld(rd: dict, qa: list, canonical: str) -> str:
 
 def build_css() -> str:
     return '''
-.rl-tpp-page { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; font-family: var(--rl-font-editorial); color: var(--rl-color-primary-brown); }
+.rl-tpp-page { max-width: 1120px; margin: 0 auto; padding: 0 20px 60px; font-family: var(--rl-font-editorial); color: var(--rl-color-primary-navy); }
 .rl-tpp-kicker { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--rl-color-secondary-brown); margin: 28px 0 8px; }
 .rl-tpp-hero h1 { font-family: var(--rl-font-data); font-size: clamp(26px, 5vw, 40px); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.15; margin: 0 0 10px; color: #000; }
 .rl-tpp-facts { font-family: var(--rl-font-data); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0 0 16px; }
@@ -522,7 +538,15 @@ def build_css() -> str:
 .rl-tpp-guarantee { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0; }
 a { color: var(--rl-color-teal); }
 @media (max-width: 640px) { .rl-tpp-demand-grid { grid-template-columns: 1fr; } .rl-tpp-cta-row { flex-direction: column; } .rl-tpp-cta-row .rl-btn { text-align: center; } }
-'''
+''' + get_plan_simulator_css(
+        ink="var(--rl-color-primary-navy)",
+        paper="var(--rl-color-cool-white)",
+        panel="var(--rl-color-white)",
+        line="var(--rl-color-silver)",
+        accent="var(--rl-color-signal-red)",
+        data_font="var(--rl-font-data)",
+        body_font="var(--rl-font-editorial)",
+    )
 
 
 def build_js() -> str:
@@ -560,7 +584,7 @@ def build_js() -> str:
     });
   });
 })();
-'''
+''' + get_plan_simulator_js()
 
 
 def generate_page(rd: dict, pack: dict) -> str:
@@ -569,6 +593,7 @@ def generate_page(rd: dict, pack: dict) -> str:
     canonical = f"{SITE_BASE_URL}/race/{slug}/training-plan/"
 
     hero = build_hero(rd, pack)
+    preview = build_custom_plan_preview(rd, pack)
     demands = build_demands(rd, pack)
     workouts = build_workouts(rd, pack)
     timeline = build_timeline(rd)
@@ -612,6 +637,7 @@ def generate_page(rd: dict, pack: dict) -> str:
 {get_site_header_html()}
 <div class="rl-tpp-page">
 {hero}
+{preview}
 {demands}
 {workouts}
 {timeline}
