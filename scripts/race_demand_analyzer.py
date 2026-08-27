@@ -29,6 +29,21 @@ DIMENSIONS = [
     "race_specificity",
 ]
 
+ROAD_EVENT_FORMATS = {
+    "generic_road", "criterium", "hill_climb", "time_trial",
+    "stage_race", "fondo",
+}
+
+ROADIE_DISCIPLINE_TO_EVENT_FORMAT = {
+    "gran_fondo": "fondo",
+    "sportive": "fondo",
+    "century": "fondo",
+    "multi_stage": "stage_race",
+    "hillclimb": "hill_climb",
+    "criterium": "criterium",
+    "time_trial": "time_trial",
+}
+
 HEAT_KEYWORDS = [
     "heat",
     "hot",
@@ -249,6 +264,26 @@ def analyze_race_demands(race_data: dict) -> dict:
         "altitude": _score_altitude(rating),
         "race_specificity": _score_race_specificity(rating),
     }
+
+
+def classify_road_event_format(race_data: dict) -> str:
+    """Map verified Roadie taxonomy to Motoren's canonical road profile.
+
+    Explicit canonical data wins. Unknown editorial disciplines stay on the
+    conservative generic-road profile; the public site does not infer a
+    training prescription from prose or a race name.
+    """
+    race = race_data.get("race", race_data) or {}
+    if race.get("event_format") is not None:
+        explicit = str(race.get("event_format")).strip().lower()
+        if explicit not in ROAD_EVENT_FORMATS:
+            raise ValueError(
+                f"unsupported explicit road event format: {explicit}")
+        return explicit
+    rating = race.get("fondo_rating") or {}
+    discipline = str(rating.get("discipline") or "").strip().lower()
+    return ROADIE_DISCIPLINE_TO_EVENT_FORMAT.get(
+        discipline, "generic_road")
 
 
 def analyze_race_demands_from_file(path: str) -> dict:
