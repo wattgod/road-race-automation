@@ -22,6 +22,7 @@ from race_demand_analyzer import (
     _score_vo2_power,
     analyze_race_demands,
     analyze_race_demands_from_file,
+    classify_road_event_format,
 )
 
 # ── Helpers ───────────────────────────────────────────────────────────
@@ -75,6 +76,42 @@ def _make_race(
     if terrain is not None:
         race["terrain"] = terrain
     return {"race": race}
+
+
+@pytest.mark.parametrize("discipline,expected", [
+    ("gran_fondo", "fondo"),
+    ("sportive", "fondo"),
+    ("century", "fondo"),
+    ("multi_stage", "stage_race"),
+    ("hillclimb", "hill_climb"),
+    ("criterium", "criterium"),
+    ("time_trial", "time_trial"),
+    ("unknown", "generic_road"),
+])
+def test_roadie_discipline_maps_to_canonical_motoren_format(
+        discipline, expected):
+    race = _make_race(rating=_make_rating(discipline=discipline))
+    assert classify_road_event_format(race) == expected
+
+
+def test_explicit_canonical_motoren_format_wins_without_name_inference():
+    race = _make_race(rating=_make_rating(discipline="gran_fondo"))
+    race["race"]["name"] = "Downtown Crit"
+    race["race"]["event_format"] = "time_trial"
+    assert classify_road_event_format(race) == "time_trial"
+
+
+def test_unknown_taxonomy_does_not_infer_training_profile_from_race_name():
+    race = _make_race(rating=_make_rating(discipline="unknown"))
+    race["race"]["name"] = "Definitely A Downtown Criterium"
+    assert classify_road_event_format(race) == "generic_road"
+
+
+def test_invalid_explicit_motoren_format_fails_closed():
+    race = _make_race(rating=_make_rating(discipline="gran_fondo"))
+    race["race"]["event_format"] = "cobble_classic"
+    with pytest.raises(ValueError, match="unsupported explicit"):
+        classify_road_event_format(race)
 
 
 # ── TestScoreDurability ───────────────────────────────────────────────

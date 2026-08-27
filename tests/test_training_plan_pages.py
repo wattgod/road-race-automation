@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
 
 from generate_training_plan_pages import (
     generate_page, load_pack, est_hours, fueling_numbers, build_faq,
-    load_sku_link,
+    load_sku_link, load_race,
 )
 
 RACE_DATA = Path(__file__).resolve().parent.parent / "race-data"
@@ -130,8 +130,21 @@ class TestCustomPlanPreview:
         assert "sample_week_number" in html
         assert "/api/training-plan-preview" in html
         assert '"climbing":10' in html
+        assert '"event_format":"fondo"' in html
+        assert "response.race.event_format!==expected.race.event_format" in html
+        assert "eventFormatLabel(response.race.event_format)" in html
         assert "response.engine_version" in html
         assert "response.voice_version" in html
+
+    @pytest.mark.parametrize("slug,expected", [
+        ("mt-fuji-hill-climb", "hill_climb"),
+        ("tour-of-nilgiris", "stage_race"),
+    ])
+    def test_page_emits_verified_road_subtype(self, slug, expected):
+        race = load_race(RACE_DATA / f"{slug}.json")
+        race.setdefault("slug", slug)
+        page = generate_page(race, load_pack(slug))
+        assert f'"event_format":"{expected}"' in page
 
     def test_renders_native_workout_projection_without_innerhtml(self, html):
         assert "session.structure" in html

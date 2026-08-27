@@ -25,6 +25,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
 from brand_tokens import (
     get_tokens_css,
@@ -37,6 +38,7 @@ from shared_footer import get_mega_footer_html
 from cookie_consent import get_consent_banner_html
 from plan_simulator import (get_plan_simulator_css, get_plan_simulator_js,
                             render_plan_simulator)
+from race_demand_analyzer import classify_road_event_format
 from generate_neo_brutalist import (
     parse_event_dates,
     _safe_json_for_script,
@@ -454,6 +456,7 @@ def build_custom_plan_preview(rd: dict, pack: dict) -> str:
         brand="roadie_labs",
         race=rd,
         demands=pack.get("demands") or {},
+        event_format=classify_road_event_format(rd),
         questionnaire_url=f"{QUESTIONNAIRE_URL}?race={esc(rd['slug'])}",
         heading=f"See your {rd['name']} week before you buy.",
         lede=("Choose the week you actually have. The current plan engine "
