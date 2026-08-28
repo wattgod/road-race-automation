@@ -25,6 +25,8 @@ from generate_neo_brutalist import (
     RACER_RATING_THRESHOLD,
     US_STATES,
     _build_race_name_map,
+    _editorialize_rating_explanation,
+    _rating_bumper,
     _safe_json_for_script,
     build_accordion_html,
     build_course_overview,
@@ -835,6 +837,49 @@ class TestSections:
         html = build_ratings(normalized_data)
         assert html.count("rl-rating-tile") >= 14
         assert "No written explanation is available yet." not in html
+
+    def test_ratings_lead_with_group_verdicts(self, normalized_data):
+        html = build_ratings(normalized_data)
+        assert "Course verdict" in html
+        assert "Rolling Kansas gravel through the Flint Hills." in html
+        assert "Editorial verdict" in html
+        assert "A solid Kansas gravel event." in html
+        assert 'aria-expanded="true"' not in html
+
+    def test_rating_bumper_keeps_short_opening_with_followup(self):
+        assert _rating_bumper(
+            "Relentless. Not one killer climb, but 200 miles of attrition. Extra detail."
+        ) == "Relentless. Not one killer climb, but 200 miles of attrition."
+
+    def test_rating_copy_removes_inline_source_process(self):
+        copy = (
+            "The event page calls the course mountainous, but no official gain "
+            "supports a higher grade.[1][2]"
+        )
+        cleaned = _editorialize_rating_explanation(copy)
+        assert "event page calls" not in cleaned.lower()
+        assert "course is mountainous" in cleaned.lower()
+        assert "[1]" not in cleaned
+
+    def test_catalog_rating_copy_contract(self):
+        banned = re.compile(
+            r"according to|assessment rings true|"
+            r"\bAs\s+[^,:]{1,100}\s+(?:puts it|notes?|reports?|describes?|captures?)[,:]",
+            re.IGNORECASE,
+        )
+        violations = []
+        root = Path(__file__).resolve().parents[1] / "race-data"
+        for path in root.glob("*.json"):
+            rd = normalize_race_data(json.loads(path.read_text()))
+            for group, summary in rd["rating_summaries"].items():
+                if not summary or len(summary) > 220:
+                    violations.append(f"{path.stem}.{group} summary length={len(summary)}")
+                if banned.search(summary):
+                    violations.append(f"{path.stem}.{group} summary narrates source process")
+            for dim, entry in rd["explanations"].items():
+                if banned.search(entry["explanation"]):
+                    violations.append(f"{path.stem}.{dim} narrates source process")
+        assert not violations, "\n".join(violations[:30])
 
     def test_ratings_has_radar_charts(self, normalized_data):
         html = build_ratings(normalized_data)

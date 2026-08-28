@@ -411,6 +411,101 @@ def _merge_youtube_quotes(youtube_data: dict) -> list:
     return merged[:4]
 
 
+def _rating_bumper(text: str, *, min_chars: int = 48, max_chars: int = 220) -> str:
+    """Return a compact, complete-sentence verdict from existing profile copy."""
+    clean = re.sub(r'\s+', ' ', str(text or '')).strip()
+    if not clean:
+        return ''
+    if clean.startswith('['):
+        return ''
+    sentences = re.split(r'(?<=[.!?])\s+', clean)
+    chosen = []
+    for sentence in sentences:
+        candidate = ' '.join(chosen + [sentence]).strip()
+        if chosen and len(candidate) > max_chars:
+            break
+        chosen.append(sentence)
+        if len(candidate) >= min_chars:
+            break
+    bumper = ' '.join(chosen).strip()
+    if len(bumper) <= max_chars:
+        return bumper
+    candidate = bumper[:max_chars + 1]
+    clause_break = max(candidate.rfind(mark) for mark in ('; ', ' — ', ', '))
+    if clause_break >= min_chars:
+        return candidate[:clause_break].rstrip(' ,;:—-') + '.'
+    word_break = candidate.rfind(' ')
+    return candidate[:word_break].rstrip(' ,;:—-') + '…'
+
+
+def _editorialize_rating_explanation(text: str) -> str:
+    """Keep the evidence while removing inline citations and source narration."""
+    clean = re.sub(r'\s+', ' ', str(text or '')).strip()
+    if not clean:
+        return ''
+    clean = re.sub(r'(?<!\w)\[\d+\](?:\[\d+\])*', '', clean)
+    clean = re.sub(
+        r'\bthe\s+(?:event|official|race)\s+(?:page|site)\s+calls?\s+the\s+'
+        r'(course|route|event)\s+([^,.;]+)',
+        lambda match: f"The {match.group(1)} is {match.group(2)}",
+        clean,
+        flags=re.IGNORECASE,
+    )
+    clean = re.sub(
+        r'\bAs\s+[^,:]{1,100}\s+(?:puts it|notes?|reports?|describes?|captures?)[,:]\s*',
+        '',
+        clean,
+        flags=re.IGNORECASE,
+    )
+    clean = re.sub(
+        r"\b[A-Z][^.!?]{0,80}?[’']s\s+(?:assessment|description|account|take|verdict)\s+"
+        r'(?:rings true|is apt|is accurate):\s*',
+        '',
+        clean,
+    )
+    clean = re.sub(r'\baccording to\s+[^,.;:]{1,80}(?=[,.;:])', '', clean, flags=re.IGNORECASE)
+    source_subject = (
+        r'(?:[A-Z][\w@.\-’\']*(?:\s+(?:at|from|of|the|&|[A-Z][\w@.\-’\']*)){0,6}'
+        r'|[a-z][A-Za-z0-9_\-]{2,}'
+        r'|[Tt]he\s+(?:event|official|race|organizer|municipal|local)\s+(?:page|site|report|reporting)'
+        r'|[Tt]he\s+organizer(?:-linked)?\s+(?:route|page|site)'
+        r'|[Tt]he\s+organizers?)'
+    )
+    sentence_boundary = r'(^|(?<=[.!?])\s+|(?<=[.!?]["”\'])\s+)'
+    reporting_verb = (
+        r'(?i:notes?|noted|reports?|reported|says?|said|observes?|observed|recalls?|recalled|'
+        r'writes?|wrote|explains?|explained|emphasizes?|emphasized|acknowledges?|acknowledged|'
+        r'argues?|argued)'
+    )
+    clean = re.sub(
+        rf'{sentence_boundary}{source_subject}\s+{reporting_verb}\s+(?:that\s+|how\s+|it:?\s+)?',
+        r'\1',
+        clean,
+    )
+    clean = re.sub(
+        rf'{sentence_boundary}{source_subject}\s+(?i:describes?|described)\s+'
+        r'(?=(?:the|a|an)\b|["“\'])',
+        r'\1',
+        clean,
+    )
+    clean = re.sub(
+        rf'{sentence_boundary}{source_subject}\s+(?i:calls?|called|captures?|captured)\s+'
+        r'(?:it:?\s+|(?=["“\']))',
+        r'\1',
+        clean,
+    )
+    clean = re.sub(r'\s+([,.;:!?])', r'\1', clean)
+    clean = re.sub(r'\s{2,}', ' ', clean).strip(' ,;')
+    clean = re.sub(
+        r'(^|[.!?](?:["”\'])?\s+)([a-z])',
+        lambda match: match.group(1) + match.group(2).upper(),
+        clean,
+    )
+    if clean and clean[0].islower():
+        clean = clean[0].upper() + clean[1:]
+    return clean
+
+
 def normalize_race_data(data: dict) -> dict:
     """Normalize race data from new-format JSON into a consistent shape
     with all fields the generator expects. Computes derived fields if missing."""
@@ -443,14 +538,39 @@ def normalize_race_data(data: dict) -> dict:
     course_profile = sum(rating.get(d, 0) for d in COURSE_DIMS)
     opinion_total = sum(rating.get(d, 0) for d in OPINION_DIMS)
 
-    # Build explanations dict from biased_opinion_ratings
+    # Keep research provenance in the source profile; publish editorial copy.
     explanations = {}
     for dim in ALL_DIMS:
         entry = bor.get(dim, {})
         explanations[dim] = {
             'score': entry.get('score', rating.get(dim, 0)),
-            'explanation': entry.get('explanation', ''),
+            'explanation': _editorialize_rating_explanation(entry.get('explanation', '')),
         }
+
+    explicit_summaries = race.get('rating_summaries', {})
+    course_summary = next((
+        summary for source in (
+            explicit_summaries.get('course'),
+            course.get('character'),
+            course.get('summary'),
+            course.get('overview'),
+            race.get('tagline', ''),
+        ) if (summary := _rating_bumper(_editorialize_rating_explanation(source)))
+    ), '')
+    editorial_summary = next((
+        summary for source in (
+            explicit_summaries.get('editorial'),
+            final_verdict.get('one_liner'),
+            bo.get('bottom_line'),
+            bo.get('summary'),
+            race.get('tagline', ''),
+        ) if (summary := _rating_bumper(_editorialize_rating_explanation(source)))
+    ), '')
+    race_name = race.get('display_name') or race.get('name', 'This race')
+    if not course_summary:
+        course_summary = f"{race_name} scores {course_profile}/35 for course demands."
+    if not editorial_summary:
+        editorial_summary = f"{race_name} scores {opinion_total}/35 on the editorial card."
 
     # Extract date with year from date_specific like "2026: June 6" -> "June 6, 2026"
     date_specific = vitals.get('date_specific', '')
@@ -501,6 +621,10 @@ def normalize_race_data(data: dict) -> dict:
         'opinion_total': opinion_total,
         'rating': rating,
         'explanations': explanations,
+        'rating_summaries': {
+            'course': course_summary,
+            'editorial': editorial_summary,
+        },
         'vitals': {
             'distance': f"{vitals.get('distance_mi', '--')} mi" if vitals.get('distance_mi') else '--',
             'distance_mi': vitals.get('distance_mi', 0),
@@ -757,8 +881,14 @@ def _build_rating_tiles(dims: list, explanations: dict, group_id: str) -> str:
     </div>'''
 
 
-def build_radar_charts(explanations: dict, course_total: int, opinion_total: int) -> str:
+def build_radar_charts(
+    explanations: dict,
+    course_total: int,
+    opinion_total: int,
+    summaries: Optional[dict] = None,
+) -> str:
     """Build tabbed Course/Editorial radar charts with click-to-explain tiles."""
+    summaries = summaries or {}
     course_chart = _radar_svg(COURSE_DIMS, explanations,
                               COLORS['signal_red'], COLORS['signal_red'],
                               'Course Profile', course_total, 35, idx_offset=0)
@@ -771,10 +901,18 @@ def build_radar_charts(explanations: dict, course_total: int, opinion_total: int
         <button type="button" id="rl-rating-tab-editorial" role="tab" aria-selected="false" aria-controls="rl-rating-panel-editorial" tabindex="-1">Editorial <span>{esc(opinion_total)}/35</span></button>
       </div>
       <div id="rl-rating-panel-course" class="rl-rating-panel" role="tabpanel" aria-labelledby="rl-rating-tab-course" data-rating-group="course">
+        <div class="rl-rating-summary">
+          <span>Course verdict</span>
+          <p>{esc(summaries.get('course', ''))}</p>
+        </div>
         {course_chart}
         {_build_rating_tiles(COURSE_DIMS, explanations, 'course')}
       </div>
       <div id="rl-rating-panel-editorial" class="rl-rating-panel" role="tabpanel" aria-labelledby="rl-rating-tab-editorial" data-rating-group="editorial" hidden>
+        <div class="rl-rating-summary">
+          <span>Editorial verdict</span>
+          <p>{esc(summaries.get('editorial', ''))}</p>
+        </div>
         {editorial_chart}
         {_build_rating_tiles(OPINION_DIMS, explanations, 'editorial')}
       </div>
@@ -2699,7 +2837,12 @@ def build_from_the_field(rd: dict) -> str:
 
 def build_ratings(rd: dict) -> str:
     """Build the interactive, tabbed two-radar decision tool."""
-    radar = build_radar_charts(rd['explanations'], rd['course_profile'], rd['opinion_total'])
+    radar = build_radar_charts(
+        rd['explanations'],
+        rd['course_profile'],
+        rd['opinion_total'],
+        rd.get('rating_summaries'),
+    )
 
     return f'''<section id="ratings" class="rl-section rl-section--teal-accent rl-fade-section" data-measure-section="rating">
     <div class="rl-section-header rl-section-header--dark">
@@ -5285,6 +5428,9 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-rating-tablist button span {{ color: var(--rl-color-light-steel); }}
 .rl-neo-brutalist-page .rl-rating-panel {{ display: grid; grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 1.1fr); border: 2px solid var(--rl-color-dark-navy); border-top: 0; }}
 .rl-neo-brutalist-page .rl-rating-panel[hidden] {{ display: none; }}
+.rl-neo-brutalist-page .rl-rating-summary {{ grid-column: 1 / -1; padding: 18px 20px; border-bottom: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-silver); }}
+.rl-neo-brutalist-page .rl-rating-summary span {{ display: block; font-family: var(--rl-font-data); font-size: 10px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); text-transform: uppercase; color: var(--rl-color-near-black); }}
+.rl-neo-brutalist-page .rl-rating-summary p {{ max-width: 72ch; margin: 7px 0 0; font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-md); font-weight: 650; line-height: 1.45; color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-rating-panel .rl-radar-chart {{ border: 0; border-right: 2px solid var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-rating-breakdown {{ display: grid; grid-template-columns: 1fr 1fr; align-content: start; }}
 .rl-neo-brutalist-page .rl-rating-tile {{ min-height: 82px; padding: 12px; border: 0; border-right: 1px solid var(--rl-color-silver); border-bottom: 1px solid var(--rl-color-silver); background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); cursor: pointer; text-align: left; font-family: var(--rl-font-data); }}
