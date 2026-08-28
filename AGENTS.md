@@ -1,5 +1,11 @@
 # AGENTS.md — entry point for any coding agent
 
+## AI writing as Matti
+
+Before drafting, rewriting, or approving copy presented as Matti Rowe or one of
+his brands, read `docs/AI_WRITING_POLICY.md`. Its source-retrieval,
+provenance, privacy, and anti-slop requirements are binding.
+
 Binding instructions live in `CLAUDE.md` — read it first; it is written for
 all agents, not just Claude. Roadie Labs uses `fondo_rating`, never
 `gravel_god_rating` — the single most common cross-repo mistake.
