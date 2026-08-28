@@ -438,12 +438,18 @@ def _rating_bumper(text: str, *, min_chars: int = 48, max_chars: int = 220) -> s
     return candidate[:word_break].rstrip(' ,;:—-') + '…'
 
 
-def _editorialize_rating_explanation(text: str) -> str:
-    """Keep the evidence while removing inline citations and source narration."""
+def _editorialize_rating_explanation(text: str, citation_count: int | None = None) -> str:
+    """Keep evidence, quotes, and valid citation markers; remove source narration."""
     clean = re.sub(r'\s+', ' ', str(text or '')).strip()
     if not clean:
         return ''
-    clean = re.sub(r'(?<!\w)\[\d+\](?:\[\d+\])*', '', clean)
+    if citation_count is not None:
+        clean = re.sub(
+            r'(?<!\w)\[(\d+)\]',
+            lambda match: match.group(0)
+            if 1 <= int(match.group(1)) <= citation_count else '',
+            clean,
+        )
     clean = re.sub(
         r'\bthe\s+(?:event|official|race)\s+(?:page|site)\s+calls?\s+the\s+'
         r'(course|route|event)\s+([^,.;]+)',
@@ -511,6 +517,7 @@ def normalize_race_data(data: dict) -> dict:
     with all fields the generator expects. Computes derived fields if missing."""
     race = data.get('race', data)
     slug = race.get('slug', '(unknown)')
+    citation_count = len(race.get('citations', []))
 
     rating = race.get('fondo_rating', {})
     bor = race.get('biased_opinion_ratings', {})
@@ -544,7 +551,9 @@ def normalize_race_data(data: dict) -> dict:
         entry = bor.get(dim, {})
         explanations[dim] = {
             'score': entry.get('score', rating.get(dim, 0)),
-            'explanation': _editorialize_rating_explanation(entry.get('explanation', '')),
+            'explanation': _editorialize_rating_explanation(
+                entry.get('explanation', ''), citation_count
+            ),
         }
 
     explicit_summaries = race.get('rating_summaries', {})
@@ -555,7 +564,9 @@ def normalize_race_data(data: dict) -> dict:
             course.get('summary'),
             course.get('overview'),
             race.get('tagline', ''),
-        ) if (summary := _rating_bumper(_editorialize_rating_explanation(source)))
+        ) if (summary := _rating_bumper(
+            _editorialize_rating_explanation(source, citation_count)
+        ))
     ), '')
     editorial_summary = next((
         summary for source in (
@@ -564,7 +575,9 @@ def normalize_race_data(data: dict) -> dict:
             bo.get('bottom_line'),
             bo.get('summary'),
             race.get('tagline', ''),
-        ) if (summary := _rating_bumper(_editorialize_rating_explanation(source)))
+        ) if (summary := _rating_bumper(
+            _editorialize_rating_explanation(source, citation_count)
+        ))
     ), '')
     race_name = race.get('display_name') or race.get('name', 'This race')
     if not course_summary:
@@ -5222,46 +5235,37 @@ def build_citations_section(rd: dict) -> str:
     if not citations:
         return ''
 
-    # Group by category
-    categories = {}
-    for c in citations:
-        cat = c.get('category', 'other')
-        categories.setdefault(cat, []).append(c)
-
-    # Category display order and labels
-    cat_order = [
-        ('official', 'Official'),
-        ('route', 'Route Maps'),
-        ('media', 'Media & Press'),
-        ('community', 'Community'),
-        ('video', 'Video'),
-        ('registration', 'Registration'),
-        ('social', 'Social'),
-        ('tracking', 'Live Tracking'),
-        ('reference', 'Reference'),
-        ('activity', 'Activity'),
-        ('other', 'Other Sources'),
-    ]
+    category_labels = {
+        'official': 'Official',
+        'route': 'Route Maps',
+        'media': 'Media & Press',
+        'community': 'Community',
+        'video': 'Video',
+        'registration': 'Registration',
+        'social': 'Social',
+        'tracking': 'Live Tracking',
+        'reference': 'Reference',
+        'activity': 'Activity',
+        'other': 'Other Sources',
+    }
 
     items = []
-    for cat_key, cat_label in cat_order:
-        if cat_key not in categories:
-            continue
-        for c in categories[cat_key]:
-            url = c.get('url', '')
-            label = c.get('label', 'Source')
-            # Truncate long URLs for display
-            display_url = url.replace('https://', '').replace('http://', '')
-            if len(display_url) > 60:
-                display_url = display_url[:57] + '...'
-            items.append(
-                f'<li class="rl-citation-item">'
-                f'<span class="rl-citation-cat">{esc(cat_label)}</span> '
-                f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer" '
-                f'class="rl-citation-link">{esc(label)}</a>'
-                f'<span class="rl-citation-url">{esc(display_url)}</span>'
-                f'</li>'
-            )
+    for index, c in enumerate(citations, start=1):
+        cat_label = category_labels.get(c.get('category', 'other'), 'Other Sources')
+        url = c.get('url', '')
+        label = c.get('label', 'Source')
+        # Preserve source-array order so an inline [n] always resolves to item n.
+        display_url = url.replace('https://', '').replace('http://', '')
+        if len(display_url) > 60:
+            display_url = display_url[:57] + '...'
+        items.append(
+            f'<li class="rl-citation-item" id="rl-citation-{index}">'
+            f'<span class="rl-citation-cat">{esc(cat_label)}</span> '
+            f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer" '
+            f'class="rl-citation-link">{esc(label)}</a>'
+            f'<span class="rl-citation-url">{esc(display_url)}</span>'
+            f'</li>'
+        )
 
     if not items:
         return ''
