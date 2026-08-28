@@ -161,3 +161,82 @@ def test_rc1_without_parsable_dead_lines_flags_drift(monkeypatch):
 def test_clean_run_yields_nothing(monkeypatch):
     findings = parse(monkeypatch, "Checked 12 of 12 seed pages + 300 discovered URLs\nAll links alive.\n", 0)
     assert findings == []
+
+
+# ── Fingerprint stability for volatile findings ──────────────────────────────
+def test_live_check_challenged_fingerprint_is_stable():
+    """Regression test for the volatile-detail bug: live-check-challenged findings
+    with different URL lists must produce the same fingerprint so they don't
+    re-alert every run (26+ days of noise across three race DBs)."""
+    finding_a = immune_check.Finding(
+        code="live-check-challenged",
+        lane=immune_check.YELLOW,
+        severity="low",
+        title="Live Check Challenged by WAF",
+        detail="2 URLs unverifiable behind SiteGround's bot challenge: https://roadielabs.com/a/ https://roadielabs.com/b/",
+        remedy="Transport noise, re-run later",
+        source="check_links",
+    )
+    finding_b = immune_check.Finding(
+        code="live-check-challenged",
+        lane=immune_check.YELLOW,
+        severity="low",
+        title="Live Check Challenged by WAF",
+        detail="3 URLs unverifiable behind SiteGround's bot challenge: https://roadielabs.com/c/ https://roadielabs.com/d/ https://roadielabs.com/e/",
+        remedy="Transport noise, re-run later",
+        source="check_links",
+    )
+    # Different details → same fingerprint (code alone)
+    assert immune_check.fingerprint(finding_a) == immune_check.fingerprint(finding_b) == "live-check-challenged"
+
+
+def test_prep_kit_check_blocked_fingerprint_is_stable():
+    """prep-kit-check-blocked is also volatile (non-404 transport noise)."""
+    finding_a = immune_check.Finding(
+        code="prep-kit-check-blocked",
+        lane=immune_check.YELLOW,
+        severity="low",
+        title="Prep-Kit Coverage Partially Blocked",
+        detail="some kit URLs returned non-404 errors (WAF challenge / timeout) — coverage unverified for those",
+        remedy="Transport noise",
+        source="prep_kit_coverage",
+    )
+    finding_b = immune_check.Finding(
+        code="prep-kit-check-blocked",
+        lane=immune_check.YELLOW,
+        severity="low",
+        title="Prep-Kit Coverage Partially Blocked",
+        detail="different detail text that changes run to run",
+        remedy="Transport noise",
+        source="prep_kit_coverage",
+    )
+    assert immune_check.fingerprint(finding_a) == immune_check.fingerprint(finding_b) == "prep-kit-check-blocked"
+
+
+def test_non_volatile_findings_still_fingerprint_with_detail():
+    """Findings that aren't volatile (e.g. 404s) must still include detail in
+    their fingerprint so distinct errors don't collapse."""
+    finding_a = immune_check.Finding(
+        code="prep-kit-missing",
+        lane=immune_check.YELLOW,
+        severity="high",
+        title="Prep kit missing: unbound-gravel",
+        detail="https://roadielabs.com/race/unbound-gravel/prep-kit/",
+        remedy="Generate and deploy the kit page",
+        source="prep_kit_coverage",
+    )
+    finding_b = immune_check.Finding(
+        code="prep-kit-missing",
+        lane=immune_check.YELLOW,
+        severity="high",
+        title="Prep kit missing: dirty-kanza",
+        detail="https://roadielabs.com/race/dirty-kanza/prep-kit/",
+        remedy="Generate and deploy the kit page",
+        source="prep_kit_coverage",
+    )
+    # Different details → different fingerprints (include detail)
+    fp_a = immune_check.fingerprint(finding_a)
+    fp_b = immune_check.fingerprint(finding_b)
+    assert fp_a != fp_b
+    assert "https://roadielabs.com/race/unbound-gravel/prep-kit/" in fp_a
+    assert "https://roadielabs.com/race/dirty-kanza/prep-kit/" in fp_b
