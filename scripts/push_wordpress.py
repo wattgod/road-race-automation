@@ -1822,46 +1822,27 @@ def sync_ab():
 
 
 def purge_cache():
-    """Flush SiteGround cache after deploy.
-
-    roadielabs.com is a STATIC site — there is no WordPress, so `wp sg purge`
-    does NOT work (it errors with "No WordPress installation found"). SiteGround
-    offers no CLI flush for a static site's NGINX/dynamic cache. We still attempt
-    `wp sg purge` so this function is reusable on the WordPress siblings, but on
-    the static site we detect the "no WP" signal and print the manual step
-    instead of a misleading failure. Day-to-day freshness comes from versioned
-    asset URLs (?v=YYYYMMDD / content-hashed filenames); only changed HTML needs
-    the manual flush.
-    """
+    """Flush SiteGround's static-site cache after an HTML deploy."""
     ssh = get_ssh_credentials()
     if not ssh:
         return False
     host, user, port = ssh
 
-    wp_path = f"{REMOTE_BASE}"
     try:
         result = subprocess.run(
             [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
-                f"wp --path={wp_path} sg purge 2>&1",
+                "site-tools-client domain update id=1 flush_cache=1 2>&1",
             ],
             capture_output=True,
             text=True,
             timeout=30,
         )
         output = result.stdout.strip()
-        if result.returncode == 0:
-            print("✓ SiteGround cache purged (static, dynamic, memcached, opcache)")
+        if result.returncode == 0 and "msg=OK" in output:
+            print("✓ SiteGround static cache purged (site-tools-client)")
             return True
-
-        no_wp = ("No WordPress installation" in output
-                 or "not a registered wp command" in output)
-        if no_wp:
-            print("ℹ Static site — no WordPress, so `wp sg purge` does not apply.")
-            print("  Versioned/​hashed asset URLs self-bust; if you changed HTML,")
-            print("  flush manually: Site Tools → Speed → Caching → Dynamic Cache → Flush.")
-            return True  # not a real failure on a static host
         print(f"✗ Cache purge failed: {output}")
         return False
     except subprocess.TimeoutExpired:
