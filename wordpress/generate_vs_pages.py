@@ -1000,7 +1000,9 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   <footer class="rl-vs-footer">
     <a href="/">Roadie Labs</a> &middot;
     <a href="/road-races/">Search All Races</a> &middot;
-    <a href="/race/methodology/">Methodology</a>
+    <a href="/race/methodology/">Methodology</a> &middot;
+    <a href="/privacy/">Privacy</a> &middot;
+    <a href="/terms/">Terms</a>
   </footer>
 
 </div>

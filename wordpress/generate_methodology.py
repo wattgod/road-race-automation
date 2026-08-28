@@ -294,6 +294,7 @@ def build_faq() -> str:
 def build_footer() -> str:
     return '''<div class="rl-footer">
     <p class="rl-footer-disclaimer">This methodology page describes our scoring system. All ratings, opinions, and assessments represent our editorial views based on publicly available information and community research. We are not affiliated with, endorsed by, or officially connected to any race organizer, event, or governing body.</p>
+    <p class="rl-footer-disclaimer"><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
   </div>'''
 
 

@@ -189,7 +189,6 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
 
     # Static index pages
     for path, changefreq, priority in [
-        ("/methodology/", "monthly", "0.8"),
         ("/race/methodology/", "monthly", "0.8"),
         ("/prep-kit/", "monthly", "0.7"),
         ("/training-plans/", "monthly", "0.8"),
@@ -430,7 +429,7 @@ def main():
     course_url_count = (1 + len(course_slugs)) if course_slugs else 0
     plan_slugs = load_plan_page_slugs(project_root)
     courses_landing_count = 1
-    total_urls = (7 + courses_landing_count + len(series_slugs) + len(vs_slugs) + len(state_slugs)
+    total_urls = (6 + courses_landing_count + len(series_slugs) + len(vs_slugs) + len(state_slugs)
                   + len(special_slugs) + len(tire_slugs) + len(plan_slugs)
                   + len(tire_page_slugs) + len(tire_vs_slugs) + course_url_count + len(race_index))
     print(f"Generated sitemap: {output_path} ({total_urls} URLs)")
