@@ -10,7 +10,7 @@ athlete-coaching-system repo. Features:
   - W/kg calculator with gender-specific categories
   - Progress bar tracking
   - Save/resume via localStorage
-  - Google Form hybrid submission (fancy UI → hidden Google Form)
+  - Durable brand-aware onboarding submission through the shared intake edge
   - GA4 event tracking
 
 Uses brand tokens exclusively — zero hardcoded hex, no border-radius,
@@ -39,10 +39,7 @@ from cookie_consent import get_consent_banner_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
-# Formsubmit.co /ajax/ endpoint — the alias for coach@roadielabs.com, activated
-# and browser-E2E-delivery-verified Jul 18 2026. /ajax/ is FormSubmit's
-# documented fetch endpoint (returns JSON instead of redirecting).
-FORMSUBMIT_URL = "https://formsubmit.co/ajax/df9d64ff7bd404311c74f4a4240a1ebd"
+COACHING_INTAKE_WORKER_URL = "https://coaching-intake.gravelgodcoaching.workers.dev"
 
 
 def esc(text) -> str:
@@ -95,6 +92,47 @@ def build_section_1_basic_info() -> str:
         </div>
       </div>
 
+      <div class="rl-apply-inline">
+        <div class="rl-apply-group">
+          <label class="rl-apply-label" for="date_of_birth">Date of Birth</label>
+          <input type="date" id="date_of_birth" name="date_of_birth">
+          <div class="rl-apply-help">Optional. Used for age-group context and birthday reminders.</div>
+        </div>
+        <div class="rl-apply-group">
+          <label class="rl-apply-label" for="home_location">Home Location</label>
+          <input type="text" id="home_location" name="home_location" placeholder="City, state/province, country">
+          <div class="rl-apply-help">Used for climate, altitude, daylight, and travel context.</div>
+        </div>
+      </div>
+
+      <div class="rl-apply-inline">
+        <div class="rl-apply-group">
+          <label class="rl-apply-label" for="desired_start_date">When do you want coaching to start?</label>
+          <input type="date" id="desired_start_date" name="desired_start_date">
+        </div>
+        <div class="rl-apply-group">
+          <label class="rl-apply-label" for="preferred_contact_channel">Best place for time-sensitive coaching messages</label>
+          <select id="preferred_contact_channel" name="preferred_contact_channel">
+            <option value="">Select...</option>
+            <option value="email">Email</option>
+            <option value="trainingpeaks">TrainingPeaks</option>
+            <option value="text">Text / Messages</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="rl-apply-group">
+        <label class="rl-apply-label" for="trainingpeaks_connection_status">Are you already attached to my TrainingPeaks coaching account?</label>
+        <select id="trainingpeaks_connection_status" name="trainingpeaks_connection_status">
+          <option value="">Select...</option>
+          <option value="attached">Yes</option>
+          <option value="not_attached">No</option>
+          <option value="not_sure">Not sure</option>
+          <option value="no_account">I do not have a TrainingPeaks account yet</option>
+        </select>
+        <div class="rl-apply-help">This prevents duplicate setup instructions; I still verify the connection before releasing your plan.</div>
+      </div>
+
       <div class="rl-apply-inline-4">
         <div class="rl-apply-group">
           <label class="rl-apply-label" for="sex">Sex <span class="rl-apply-required">*</span></label>
@@ -106,7 +144,7 @@ def build_section_1_basic_info() -> str:
         </div>
         <div class="rl-apply-group">
           <label class="rl-apply-label" for="age">Age <span class="rl-apply-required">*</span></label>
-          <input type="number" id="age" name="age" required placeholder="35" min="16" max="90">
+          <input type="number" id="age" name="age" required placeholder="35" min="13" max="90">
         </div>
         <div class="rl-apply-group">
           <label class="rl-apply-label" for="weight">Weight <span class="rl-apply-required">*</span></label>
@@ -123,6 +161,31 @@ def build_section_1_basic_info() -> str:
             <input type="number" id="height_in" name="height_in" required placeholder="10" min="0" max="11" style="width:50px">
             <span class="rl-apply-unit">&#34;</span>
           </div>
+        </div>
+      </div>
+
+      <div id="guardian-details" class="rl-apply-conditional">
+        <div class="rl-apply-group">
+          <strong>For athletes under 18</strong>
+          <div class="rl-apply-help">A parent or legal guardian must complete the separate consent step before coaching can start.</div>
+        </div>
+        <div class="rl-apply-inline">
+          <div class="rl-apply-group">
+            <label class="rl-apply-label" for="guardian_name">Parent / Guardian Full Name</label>
+            <input type="text" id="guardian_name" name="guardian_name">
+          </div>
+          <div class="rl-apply-group">
+            <label class="rl-apply-label" for="guardian_email">Parent / Guardian Email</label>
+            <input type="email" id="guardian_email" name="guardian_email">
+          </div>
+        </div>
+        <div class="rl-apply-group">
+          <label class="rl-apply-label" for="guardian_relationship">Relationship to Athlete</label>
+          <select id="guardian_relationship" name="guardian_relationship">
+            <option value="">Select...</option>
+            <option value="parent">Parent</option>
+            <option value="legal_guardian">Legal guardian</option>
+          </select>
         </div>
       </div>'''
 
@@ -805,9 +868,22 @@ def build_submit_buttons() -> str:
       </div>'''
 
 
+def build_tier_selector() -> str:
+    return '''<div class="rl-apply-group rl-apply-tier-group">
+        <label class="rl-apply-label" for="coaching_tier">Coaching Tier <span class="rl-apply-required">*</span></label>
+        <select id="coaching_tier" name="tier" required>
+          <option value="">Select...</option>
+          <option value="min">Min</option>
+          <option value="mid">Mid</option>
+          <option value="max">Max</option>
+        </select>
+        <div class="rl-apply-help">TrainingPeaks Premium is included with coaching; it is not the name of a coaching tier.</div>
+      </div>'''
+
+
 def build_footer() -> str:
     return f'''<div class="rl-apply-confidential-wrap">
-    <p class="rl-apply-confidential">Your information is kept confidential and used only for coaching purposes. Questions? Email coach@roadielabs.com</p>
+    <p class="rl-apply-confidential">Your answers, including health information you choose to provide, are processed to review and deliver coaching as described in the <a href="/privacy/">Privacy Policy</a>. Analytics is separately controlled by your privacy choice. Questions? Email gravelgodcoaching@gmail.com</p>
   </div>
   ''' + get_mega_footer_html()
 
@@ -1295,7 +1371,7 @@ def build_apply_css() -> str:
 
 def build_apply_js() -> str:
     """Build all JS for the coaching apply form. Includes W/kg calculator,
-    blindspot inference, progress tracking, save/resume, Google Form hybrid
+    blindspot inference, progress tracking, save/resume, durable intake
     submission, and GA4 event tracking."""
     return '''<script>
 (function() {
@@ -1324,6 +1400,54 @@ def build_apply_js() -> str:
     if (typeof gtag === "function") {
       gtag("event", name, params || {});
     }
+  }
+
+  function analyticsConsentState() {
+    return /(^|; )rl_consent=accepted/.test(document.cookie)
+      ? "granted"
+      : "denied";
+  }
+
+  var applyStartedTracked = false;
+  function trackApplyStarted() {
+    if (applyStartedTracked) { return; }
+    applyStartedTracked = true;
+    ga4("coaching_apply_started", {
+      tier: document.getElementById("coaching_tier").value || "unknown"
+    });
+  }
+
+  /* ── Preserve the tier selected on the coaching page ─────── */
+  function initializeTier() {
+    var tier = new URLSearchParams(window.location.search).get("tier");
+    if (["min", "mid", "max"].indexOf(tier) !== -1) {
+      document.getElementById("coaching_tier").value = tier;
+    }
+  }
+
+  function initializeTimezone() {
+    var field = document.getElementById("home_timezone");
+    if (!field || field.value) { return; }
+    try {
+      field.value = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    } catch (e) {
+      field.value = "";
+    }
+  }
+
+  function getSubmissionId() {
+    var existing = localStorage.getItem("coaching_intake_submission_id");
+    if (existing) { return existing; }
+    var id;
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+      id = window.crypto.randomUUID();
+    } else {
+      id = "10000000-1000-4000-8000-100000000000".replace(/[018]/g, function(c) {
+        return (c ^ window.crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16);
+      });
+    }
+    localStorage.setItem("coaching_intake_submission_id", id);
+    return id;
   }
 
   /* ── Progress tracking ───────────────────────────── */
@@ -1448,6 +1572,14 @@ def build_apply_js() -> str:
     } else {
       intervalsGroup.classList.remove("show");
     }
+
+    var age = parseInt(document.getElementById("age").value, 10);
+    var guardian = document.getElementById("guardian-details");
+    var isMinor = age >= 13 && age < 18;
+    guardian.classList.toggle("show", isMinor);
+    guardian.querySelectorAll("input, select").forEach(function(field) {
+      field.required = isMinor;
+    });
   }
 
   /* ── Radio option selection styling ──────────────── */
@@ -1503,10 +1635,12 @@ def build_apply_js() -> str:
   document.getElementById("weight").addEventListener("input", calculateMetrics);
   document.getElementById("sex").addEventListener("change", calculateMetrics);
   document.getElementById("training_platform").addEventListener("change", handleConditionals);
+  document.getElementById("age").addEventListener("input", handleConditionals);
 
   document.querySelectorAll("input, select, textarea").forEach(function(el) {
     el.addEventListener("change", updateProgress);
     el.addEventListener("input", updateProgress);
+    el.addEventListener("input", trackApplyStarted);
   });
 
   /* ── Save progress to localStorage ───────────────── */
@@ -1659,7 +1793,7 @@ def build_apply_js() -> str:
     return lines.join("\\n");
   }
 
-  /* ── Form submission — Formsubmit.co ──────────────── */
+  /* ── Form submission — shared coaching intake Worker ─ */
   document.getElementById("intake-form").addEventListener("submit", function(e) {
     e.preventDefault();
     var submitBtn = document.getElementById("submit-btn");
@@ -1674,6 +1808,16 @@ def build_apply_js() -> str:
     data.long_ride_days = formData.getAll("long_ride_days");
     data.interval_days = formData.getAll("interval_days");
     data.off_days = formData.getAll("off_days");
+    data.submission_id = getSubmissionId();
+    data.analytics_consent = analyticsConsentState();
+
+    var submittedAge = parseInt(data.age, 10);
+    if (submittedAge < 18 && (!data.guardian_name || !data.guardian_email || !data.guardian_relationship)) {
+      showMessage("error", "Please add your parent or legal guardian details.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Questionnaire";
+      return;
+    }
 
     /* Honeypot check */
     if (data.website) {
@@ -1697,56 +1841,43 @@ def build_apply_js() -> str:
       return;
     }
 
-    var output = formatSubmission(data);
-
-    /* Submit via Formsubmit.co — sends email to coach@roadielabs.com */
-    var FORMSUBMIT_URL = "''' + FORMSUBMIT_URL + '''";
-    var payload = new FormData();
-    payload.append("_subject", "Roadie Labs Coaching Application: " + data.name);
-    payload.append("_replyto", data.email);
-    payload.append("_captcha", "false");
-    payload.append("_template", "box");
-    payload.append("_url", "''' + f"{SITE_BASE_URL}/coaching/apply/" + '''");
-    payload.append("name", data.name);
-    payload.append("email", data.email);
-    payload.append("message", output);
-    payload.append("_honey", "");
-
-    fetch(FORMSUBMIT_URL, {
+    var COACHING_INTAKE_URL = "''' + COACHING_INTAKE_WORKER_URL + '''";
+    fetch(COACHING_INTAKE_URL, {
       method: "POST",
-      body: payload,
-      headers: { "Accept": "application/json" }
+      body: JSON.stringify(data),
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      }
     }).then(function(response) {
-      return response.json().catch(function() { return null; }).then(function(json) {
-        if (response.ok && json && json.success === "true") {
-          localStorage.removeItem("athlete_questionnaire_progress");
-          ga4("apply_form_submitted", {
-            blindspot_count: (data.blindspots || "").split(",").filter(function(b) { return b; }).length,
-            has_ftp: data.ftp ? "yes" : "no",
-            primary_goal: data.primary_goal
-          });
-          showMessage("success", "Application submitted! I&#39;ll review your questionnaire and get back to you within 24 hours.");
-          submitBtn.textContent = "Submitted";
-        } else {
-          throw new Error("FormSubmit did not confirm delivery");
+      return response.json().catch(function() { return {}; }).then(function(result) {
+        if (!response.ok || !result.success) {
+          throw new Error(result.error || "Server returned " + response.status);
         }
+        return result;
       });
+    }).then(function() {
+      localStorage.removeItem("athlete_questionnaire_progress");
+      localStorage.removeItem("coaching_intake_submission_id");
+      ga4("apply_form_submitted", {
+        blindspot_count: (data.blindspots || "").split(",").filter(function(b) { return b; }).length,
+        has_ftp: data.ftp ? "yes" : "no",
+        primary_goal: data.primary_goal,
+        tier: data.tier
+      });
+      ga4("coaching_apply_submitted", {
+        tier: data.tier,
+        primary_goal: data.primary_goal,
+        transport_type: "beacon"
+      });
+      showMessage("success", "Application submitted. Check your email for confirmation; I&#39;ll review your intake and send the next steps from there.");
+      submitBtn.textContent = "Submitted";
     }).catch(function(err) {
-      /* Submission failed. Do NOT auto-redirect to a mailto: URL — a
-         12-section questionnaire body is unreliable in a URL and would leak
-         health details into it. Answers are already saved in this browser
-         (see restoreProgress above); show an error and a plain mailto link
-         (no body) built via the DOM, not innerHTML, since the subject line
-         carries the athlete's own name. */
-      showMessage("error", "Submission failed. Your answers are saved in this browser \\u2014 reload this page to pick up where you left off, or email me directly:");
-      var messageDiv = document.getElementById("message");
-      var mailtoLink = document.createElement("a");
-      mailtoLink.href = "mailto:coach@roadielabs.com?subject=" + encodeURIComponent("Roadie Labs Coaching Application: " + data.name);
-      mailtoLink.textContent = "coach@roadielabs.com";
-      messageDiv.appendChild(mailtoLink);
+      showMessage("error", "I couldn&#39;t submit that. Your answers are still saved in this browser—please try again.");
       submitBtn.disabled = false;
       submitBtn.textContent = "Submit Questionnaire";
-      ga4("apply_form_fallback", { method: "mailto" });
+      ga4("apply_form_error", { message: String(err.message || "unknown").slice(0, 80) });
+      ga4("coaching_apply_error", { stage: "submit" });
     });
   });
 
@@ -1775,7 +1906,9 @@ def build_apply_js() -> str:
   });
 
   /* ── Initialize ──────────────────────────────────── */
+  initializeTier();
   restoreProgress();
+  initializeTimezone();
   updateProgress();
   handleConditionals();
 })();
@@ -1832,6 +1965,8 @@ def generate_apply_page(external_assets=None):
       <input type="hidden" name="estimated_category" id="estimated_category" value="">
       <input type="hidden" name="blindspots" id="blindspots" value="">
       <input type="hidden" name="inferred_traits" id="inferred_traits" value="">
+      <input type="hidden" name="home_timezone" id="home_timezone" value="">
+      {build_tier_selector()}
       {build_section_1_basic_info()}
       {build_section_2_goals()}
       {build_section_3_fitness()}
