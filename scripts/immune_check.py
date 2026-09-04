@@ -45,10 +45,17 @@ Exit code: 0 if no RED and no YELLOW findings, else 1 (so CI can gate on it).
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import re
+import socket
+import ssl
 import subprocess
 import sys
+import time
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeout
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -272,22 +279,92 @@ def check_money_path_wiring() -> list[Finding]:
     return []
 
 
+# ── Distance-variant suppression for near-duplicate names ────────────────────
+# Two profiles whose names differ only by a distance/format token ("Utrecht
+# Ultra" vs "Utrecht Ultra XL", "Medio Fondo X" vs "Gran Fondo X", "Race 100"
+# vs "Race 200") or whose course distances are far apart are series variants —
+# legitimately separate entries, not one event under two slugs. A real
+# duplicate (gran-fondo-medellin vs granfondo-colombia: the same UCI event,
+# 120 km vs 138 km) has near-identical distance AND a name difference that is
+# not just a variant token, so it still fires. General rule, not a slug list.
+DISTANCE_VARIANT_TOKENS = frozenset({
+    "xs", "xl", "xxl", "half", "full", "sprint", "short", "long", "medio",
+    "mediofondo", "gran", "granfondo", "grande", "piccolo", "mini", "maxi",
+    "lite", "light", "km", "k", "mi", "mile", "miles",
+})
+# Bare distance numerals ("100", "200", "160k", "100km", "75mi"); a bare
+# 4-digit year is NOT a distance token (a name differing only by year is more
+# likely the same event twice than a variant).
+_DISTANCE_NUMERAL = re.compile(r"^\d{1,4}(k|km|mi|mile|miles|m)?$")
+DISTANCE_VARIANT_RATIO = 0.25  # distance_km >25% apart = a different course
+
+
+def _name_tokens(name: str) -> set[str]:
+    return set(re.findall(r"[a-z0-9]+", (name or "").lower()))
+
+
+def _is_distance_variant_token(token: str) -> bool:
+    if token in DISTANCE_VARIANT_TOKENS:
+        return True
+    if _DISTANCE_NUMERAL.match(token):
+        return not (token.isdigit() and 1900 <= int(token) <= 2100)
+    return False
+
+
+def _distance_km(race: dict) -> float | None:
+    value = (race.get("vitals") or {}).get("distance_km")
+    if value is None or value == "":
+        return None
+    try:
+        km = float(value)
+    except (TypeError, ValueError):
+        return None
+    return km if km > 0 else None
+
+
+def is_distance_variant(name_a: str, name_b: str,
+                        km_a: float | None, km_b: float | None) -> bool:
+    """True when a near-duplicate name pair is a distance/format variant of the
+    same series rather than one event under two slugs.
+
+    Suppresses when EITHER (a) the names differ only by distance-variant tokens
+    (see DISTANCE_VARIANT_TOKENS / bare distance numerals), OR (b) both
+    distances are known and differ by more than DISTANCE_VARIANT_RATIO of the
+    longer one. Identical names with unknown distances never suppress."""
+    differing = _name_tokens(name_a) ^ _name_tokens(name_b)
+    if differing and all(_is_distance_variant_token(t) for t in differing):
+        return True
+    if km_a and km_b:
+        if abs(km_a - km_b) / max(km_a, km_b) > DISTANCE_VARIANT_RATIO:
+            return True
+    return False
+
+
 def check_fuzzy_duplicates() -> list[Finding]:
     """Catch near-duplicate events hiding under different slugs (e.g. two profiles
     for the same climb under different names).
 
     Primary signal is a HIGH fuzzy-similarity between event names — precise enough
     to avoid flagging a whole race series that merely shares a citation domain.
-    Sharing a citation domain only raises confidence; it never flags on its own."""
+    Sharing a citation domain only raises confidence; it never flags on its own.
+    Pairs that differ in the same country only by a distance/format variant
+    (see is_distance_variant) are series entries, not duplicates, and are
+    skipped."""
     from difflib import SequenceMatcher
 
     findings: list[Finding] = []
     profiles: list[tuple[str, dict]] = []
     for f in sorted(RACE_DATA_DIR.glob("*.json")):
         try:
-            profiles.append((f.stem, json.loads(f.read_text(encoding="utf-8")).get("race", {})))
+            race = json.loads(f.read_text(encoding="utf-8")).get("race", {})
         except (OSError, json.JSONDecodeError):
             continue
+        # A profile already retired as a duplicate (catalog_flags.duplicate_of —
+        # the generator refuses to regen it, the index skips it) is the
+        # *resolution* of a duplicate, not a new one to keep flagging.
+        if ((race.get("catalog_flags") or {}).get("duplicate_of")):
+            continue
+        profiles.append((f.stem, race))
 
     def canon(s: str) -> str:
         return re.sub(r"[^a-z0-9]", "", (s or "").lower())
@@ -321,6 +398,10 @@ def check_fuzzy_duplicates() -> list[Finding]:
                 country_a = country_signal(race_a)
                 country_b = country_signal(race_b)
                 if country_a and country_b and country_a != country_b:
+                    continue
+                if is_distance_variant(race_a.get("name") or slug_a,
+                                       race_b.get("name") or slug_b,
+                                       _distance_km(race_a), _distance_km(race_b)):
                     continue
                 same_domain = (first_citation_domain(race_a)
                                and first_citation_domain(race_a) == first_citation_domain(race_b))
@@ -362,19 +443,54 @@ def run_fabricated_claims_check() -> list[Finding]:
     return findings
 
 
+# Transport-level failures a kit probe can hit mid-scan. Each one means "this
+# URL was NOT verified" — never "missing" (that is a real 404 only) and never
+# a crash: on 2026-09-01 an uncaught http.client.RemoteDisconnected inside the
+# thread pool killed the whole --live run before report.json was written.
+# (URLError, ConnectionError, TimeoutError, socket.timeout and ssl.SSLError are
+# all OSError subclasses; RemoteDisconnected is both ConnectionResetError and
+# http.client.HTTPException — listed explicitly so the contract is readable.)
+PREP_KIT_TRANSPORT_ERRORS = (
+    urllib.error.URLError, http.client.HTTPException, http.client.RemoteDisconnected,
+    ConnectionError, ConnectionResetError, TimeoutError, socket.timeout,
+    ssl.SSLError, OSError,
+)
+PREP_KIT_REQUEST_TIMEOUT = 12   # seconds per kit URL
+PREP_KIT_SCAN_DEADLINE = 300    # seconds for the whole sweep; URLs still
+                                # unresolved past it count as blocked, not missing
+                                # (2026-09-02: a slow proxy made the sweep hang
+                                # >10 min with no bound at all)
+
+
+def prep_kit_status(url: str) -> int | None:
+    """HTTP status of one kit URL, or None when it could not be verified.
+
+    None is the *inconclusive* answer (WAF, reset, timeout, TLS, DNS …) and is
+    reported as prep-kit-check-blocked by the caller. Only a real HTTP status
+    can ever say "missing". Never raises."""
+    req = urllib.request.Request(url, headers={"User-Agent": "GG-MissionControl/1.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=PREP_KIT_REQUEST_TIMEOUT) as resp:
+            return resp.status
+    except urllib.error.HTTPError as exc:
+        return exc.code
+    except PREP_KIT_TRANSPORT_ERRORS:
+        return None
+    except Exception:  # noqa: BLE001 — anything else is still "unverified", not a crash
+        return None
+
+
 def run_prep_kit_coverage() -> list[Finding]:
     """Every gated race page must have a live prep-kit page — day-0 kit
     delivery emails link straight to it, so a 404 is a broken link in an
     email from Matti. Mirrors gravel-race-automation's check, road-scoped.
 
     Fingerprint discipline: a 404 finding's detail is the URL alone; non-404
-    transport noise (WAF challenge / timeout) collapses into one count-free
-    finding so a flaky night can't mint fake "new" rows.
+    transport noise (WAF challenge / timeout / reset) collapses into one
+    finding whose fingerprint is its code alone so a flaky night can't mint
+    fake "new" rows. The sweep is deadline-bounded (PREP_KIT_SCAN_DEADLINE) and
+    cannot raise out of a worker thread (see prep_kit_status).
     """
-    import urllib.error
-    import urllib.request
-    from concurrent.futures import ThreadPoolExecutor
-
     index_file = PROJECT_ROOT / "web" / "race-index.json"
     try:
         races = json.loads(index_file.read_text())
@@ -387,21 +503,25 @@ def run_prep_kit_coverage() -> list[Finding]:
     targets = [(r["slug"], f"https://roadielabs.com/race/{r['slug']}/prep-kit/")
                for r in races if r.get("has_profile")]
 
-    def status_of(url: str) -> int | None:
-        req = urllib.request.Request(url, headers={"User-Agent": "GG-MissionControl/1.0"})
+    pool = ThreadPoolExecutor(max_workers=12)
+    futures = [pool.submit(prep_kit_status, url) for _, url in targets]
+    deadline = time.monotonic() + PREP_KIT_SCAN_DEADLINE
+    statuses: list[int | None] = []
+    deadline_hit = False
+    for fut in futures:
         try:
-            with urllib.request.urlopen(req, timeout=12) as resp:
-                return resp.status
-        except urllib.error.HTTPError as exc:
-            return exc.code
-        except urllib.error.URLError:
-            return None
-
-    with ThreadPoolExecutor(max_workers=12) as pool:
-        statuses = list(pool.map(lambda t: status_of(t[1]), targets))
+            statuses.append(fut.result(timeout=max(deadline - time.monotonic(), 0)))
+        except FutureTimeout:
+            deadline_hit = True
+            statuses.append(None)
+        except Exception:  # noqa: BLE001 — a worker can't crash the scan, ever
+            statuses.append(None)
+    # Don't wait for the tail: in-flight probes finish within their own socket
+    # timeout, queued ones are dropped (they already count as blocked above).
+    pool.shutdown(wait=False, cancel_futures=True)
 
     findings: list[Finding] = []
-    blocked = False
+    blocked = 0
     for (slug, url), status in zip(targets, statuses):
         if status == 200:
             continue
@@ -414,13 +534,15 @@ def run_prep_kit_coverage() -> list[Finding]:
                 "(push_wordpress.py --sync-prep-kits).", None,
                 "prep_kit_coverage"))
         else:
-            blocked = True
+            blocked += 1
     if blocked:
         findings.append(Finding(
             "prep-kit-check-blocked", YELLOW, "low",
             "Prep-Kit Coverage Partially Blocked",
-            "some kit URLs returned non-404 errors (WAF challenge / timeout) — "
-            "coverage unverified for those",
+            f"{blocked} of {len(targets)} kit URLs returned non-404 errors (WAF "
+            "challenge / timeout / connection reset"
+            + (f" / scan deadline of {PREP_KIT_SCAN_DEADLINE}s hit" if deadline_hit else "")
+            + ") — coverage unverified for those",
             "Transport noise, usually WAF variance. Re-run; investigate only "
             "if it persists across days.", None, "prep_kit_coverage"))
     return findings

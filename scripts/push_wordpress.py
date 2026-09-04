@@ -1316,12 +1316,54 @@ def sync_og(og_dir: str):
         return None
 
 
-def sync_pages(pages_dir: str):
+DEFAULT_PREP_KIT_DIR = PROJECT_ROOT / "wordpress" / "output" / "prep-kit"
+
+
+def prep_kit_gaps(pages: dict, kit_slugs) -> list:
+    """Pure gate decision for a race-page deploy.
+
+    `pages` maps slug -> generated race-page HTML; `kit_slugs` is the set of
+    slugs that have a generated prep kit on disk. A page is *gated* when it
+    links to /race/{slug}/prep-kit/ (generate_neo_brutalist.py's email-capture
+    CTA puts that link on every race page). Returns, sorted, every gated slug
+    with no kit — exactly the URLs that would 404 from Matti's day-0 kit email
+    if the deploy went ahead. Pages without the link are not gated and never
+    block. No I/O.
+    """
+    kits = set(kit_slugs)
+    return sorted(
+        slug for slug, html in pages.items()
+        if f"/race/{slug}/prep-kit/" in (html or "") and slug not in kits
+    )
+
+
+def find_prep_kit_gaps(html_files, prep_kit_dir) -> list:
+    """I/O wrapper around prep_kit_gaps: read staged pages, list generated kits."""
+    kit_dir = Path(prep_kit_dir)
+    pages = {}
+    for html_file in html_files:
+        html_file = Path(html_file)
+        pages[html_file.stem] = html_file.read_text(encoding="utf-8", errors="replace")
+    kit_slugs = (
+        {p.stem for p in kit_dir.glob("*.html") if p.name != "index.html"}
+        if kit_dir.is_dir() else set()
+    )
+    return prep_kit_gaps(pages, kit_slugs)
+
+
+def sync_pages(pages_dir: str, prep_kit_dir=None):
     """Upload race pages to /race/ on SiteGround via tar+ssh pipe.
 
     Converts flat {slug}.html files to {slug}/index.html directory structure.
     Also uploads shared assets/ directory. Ensures /race/ directory has 755
     permissions so Apache/Googlebot can access the pages.
+
+    Prep-kit gate (2026-09-04, issue #11): every race page links to
+    /race/{slug}/prep-kit/, but kits only ever shipped through the separate
+    opt-in --sync-prep-kits, so new races went live with a 404 kit page (15+
+    slugs before anyone noticed). This refuses BEFORE touching the server when
+    any staged page's kit is missing from `prep_kit_dir`, and otherwise ships
+    each page's kit in the same tar as the page, so the two can't drift.
     """
     ssh = get_ssh_credentials()
     if not ssh:
@@ -1334,6 +1376,16 @@ def sync_pages(pages_dir: str):
         return None
 
     html_files = sorted(pages_path.glob("*.html"))
+    kit_dir = Path(prep_kit_dir) if prep_kit_dir else DEFAULT_PREP_KIT_DIR
+    gaps = find_prep_kit_gaps(html_files, kit_dir)
+    if gaps:
+        print(f"✗ Prep-kit gate: {len(gaps)} race page(s) link to a prep kit that is "
+              f"not generated in {kit_dir} — nothing pushed:")
+        for slug in gaps:
+            print(f"    {slug}")
+        print("  Generate first (python3 wordpress/generate_prep_kit.py --all, or one "
+              "slug), then re-run.")
+        return None
     # Also check for pre-built subdirectories (vs pages, state hubs, etc.)
     SKIP_DIRS = {"assets", "og", "prep-kit", "blog", "race"}
     subdirs_with_pages = [
@@ -1368,12 +1420,20 @@ def sync_pages(pages_dir: str):
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
         page_count = 0
+        kit_count = 0
         for html_file in html_files:
             slug = html_file.stem
             slug_dir = tmpdir / slug
             slug_dir.mkdir()
             shutil.copy2(html_file, slug_dir / "index.html")
             page_count += 1
+            kit_file = kit_dir / f"{slug}.html"
+            if kit_file.is_file():
+                (slug_dir / "prep-kit").mkdir()
+                shutil.copy2(kit_file, slug_dir / "prep-kit" / "index.html")
+                kit_count += 1
+        if kit_count:
+            print(f"  Including {kit_count} prep kits (same deploy as their race pages)")
 
         # Also include pre-built subdirectories (e.g., tier-1/, vs pages, state hubs, calendar)
         SKIP_DIRS = {"assets", "og", "prep-kit", "blog", "race"}
@@ -3198,7 +3258,9 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--sync-pages", action="store_true",
-        help="Upload race pages to /race/ via tar+ssh (with correct permissions)"
+        help="Upload race pages to /race/ via tar+ssh (with correct permissions). "
+             "Refuses before pushing if any page's prep kit is missing from "
+             "--prep-kit-dir; otherwise ships each page's kit in the same deploy"
     )
     parser.add_argument(
         "--pages-dir", default="wordpress/output",
@@ -3230,7 +3292,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--prep-kit-dir", default="wordpress/output/prep-kit",
-        help="Path to prep kit directory (default: wordpress/output/prep-kit)"
+        help="Path to prep kit directory, used by --sync-prep-kits and by the "
+             "--sync-pages prep-kit gate (default: wordpress/output/prep-kit)"
     )
     parser.add_argument(
         "--plan-dir", default="wordpress/output/training-plan",
@@ -3424,7 +3487,7 @@ if __name__ == "__main__":
     if args.sync_success:
         sync_success(args.success_dir)
     if args.sync_pages:
-        sync_pages(args.pages_dir)
+        sync_pages(args.pages_dir, prep_kit_dir=args.prep_kit_dir)
     if args.sync_sitemap:
         sync_sitemap()
     if args.sync_redirects:

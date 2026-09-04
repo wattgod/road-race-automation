@@ -51,6 +51,10 @@ staged regen from main passes scripts/audit_spine_v2_catalog.py 396/396 and
 live pages carry spine-v2-approved). Deploy race pages from main via:
 stage to wordpress/output-spine-v2-stage → run the audit → 
 `push_wordpress.py --sync-pages --pages-dir wordpress/output-spine-v2-stage`.
+`--sync-pages` refuses before pushing if any staged race page's prep kit is
+missing from `--prep-kit-dir` (default `wordpress/output/prep-kit`) and ships
+each page's kit in the same deploy — regenerate kits first
+(`python3 wordpress/generate_prep_kit.py --all`).
 Verify after any race-page deploy:
 `curl -s https://roadielabs.com/race/paris-brest-paris/ | grep spine-v2-approved`.
 
