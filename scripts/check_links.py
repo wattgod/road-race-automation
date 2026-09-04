@@ -88,7 +88,13 @@ class LinkExtractor(HTMLParser):
 
 
 def fetch_once(url: str, timeout: int = 15) -> tuple[int, str, bool]:
-    """GET a URL following redirects; return (final_status, body, challenged)."""
+    """GET a URL following redirects; return (final_status, body, challenged).
+
+    `challenged` is the *inconclusive* flag. It is True for a WAF 202 and for
+    any connection-level failure (status 0: reset, timeout, DNS, TLS …) —
+    neither says anything about whether the page exists, so neither may
+    become a DEAD LINKS row. Only a real HTTP status can make a link dead
+    (a 404 stays dead even if it arrives with an sg-captcha header)."""
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -97,8 +103,13 @@ def fetch_once(url: str, timeout: int = 15) -> tuple[int, str, bool]:
             return resp.status, body, resp.status == 202
     except urllib.error.HTTPError as e:
         return e.code, "", e.code == 202
-    except Exception:
-        return 0, "", False
+    except Exception:  # noqa: BLE001
+        # URLError, http.client.RemoteDisconnected, ConnectionResetError,
+        # TimeoutError / socket.timeout, ssl.SSLError, OSError: transport
+        # noise, not a verdict on the page. Before 2026-09-04 this returned
+        # challenged=False, so every reset/timeout printed under DEAD LINKS as
+        # "ERR" — a false dead-link (or money-path-404) finding.
+        return 0, "", True
 
 
 def fetch(url: str, timeout: int = 15) -> tuple[int, str, bool]:
@@ -109,10 +120,12 @@ def fetch(url: str, timeout: int = 15) -> tuple[int, str, bool]:
         if not challenged:
             break
         if _challenge_budget < pause:
-            print(f"  WAF challenge on {url} — retry budget spent, recording as challenged")
+            what = "WAF challenge" if status == 202 else "connection failure"
+            print(f"  {what} on {url} — retry budget spent, recording as inconclusive")
             break
         _challenge_budget -= pause
-        print(f"  WAF challenge on {url} — retrying in {pause}s")
+        what = "WAF challenge" if status == 202 else "connection failure"
+        print(f"  {what} on {url} — retrying in {pause}s")
         time.sleep(pause)
         status, body, challenged = fetch_once(url, timeout)
     return status, body, challenged
@@ -169,8 +182,9 @@ def main() -> int:
     # "DEAD LINKS" header as dead links.
     if challenged_urls:
         rows = sorted(set(challenged_urls), key=lambda d: d[1])
-        print(f"\nWAF-CHALLENGED ({len(rows)}): still behind SiteGround's "
-              f"bot challenge after retries — scan inconclusive, NOT dead links")
+        print(f"\nWAF-CHALLENGED ({len(rows)}): still behind SiteGround's bot "
+              f"challenge (202) or unreachable at the transport level (ERR) after "
+              f"retries — scan inconclusive, NOT dead links")
         for status, url in rows:
             print(f"  {status or 'ERR':>4}  {url}")
     if dead:

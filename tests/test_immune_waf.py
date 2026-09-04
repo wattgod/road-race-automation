@@ -240,3 +240,81 @@ def test_non_volatile_findings_still_fingerprint_with_detail():
     assert fp_a != fp_b
     assert "https://roadielabs.com/race/unbound-gravel/prep-kit/" in fp_a
     assert "https://roadielabs.com/race/dirty-kanza/prep-kit/" in fp_b
+
+
+# ── Transport failures are inconclusive, never dead (issue #11, 2026-09-04) ──
+# Before this fix fetch_once() returned (0, "", False) for any non-HTTP
+# exception, so a connection reset / timeout printed under DEAD LINKS as
+# "ERR" and immune_check turned it into a dead-link — or a RED money-path-404
+# when the URL happened to be /questionnaire/ or /coaching/.
+import http.client
+import socket
+import ssl
+
+TRANSPORT_ERRORS = [
+    http.client.RemoteDisconnected("Remote end closed connection without response"),
+    ConnectionResetError(54, "Connection reset by peer"),
+    TimeoutError("timed out"),
+    socket.timeout("timed out"),
+    ssl.SSLError(1, "TLS handshake failed"),
+    OSError(101, "Network is unreachable"),
+    urllib.error.URLError("DNS lookup failed"),
+]
+
+
+@pytest.mark.parametrize("exc", TRANSPORT_ERRORS, ids=[type(e).__name__ for e in TRANSPORT_ERRORS])
+def test_transport_failure_is_inconclusive_not_dead(monkeypatch, exc):
+    def raise_it(req, timeout=15):
+        raise exc
+    monkeypatch.setattr(check_links.urllib.request, "urlopen", raise_it)
+    status, body, challenged = check_links.fetch_once("https://roadielabs.com/questionnaire/")
+    assert (status, body, challenged) == (0, "", True)
+
+
+def test_http_404_is_still_dead_after_transport_fix(monkeypatch):
+    err = urllib.error.HTTPError("https://roadielabs.com/x/", 404, "Not Found", {}, io.BytesIO(b""))
+    def raise_it(req, timeout=15):
+        raise err
+    monkeypatch.setattr(check_links.urllib.request, "urlopen", raise_it)
+    status, _, challenged = check_links.fetch_once("https://roadielabs.com/x/")
+    assert status == 404 and not challenged
+
+
+def test_transport_failure_lands_under_waf_challenged_not_dead_links(monkeypatch, capsys):
+    """End to end through main(): a reset URL prints as an ERR row under the
+    WAF-CHALLENGED header (which immune_check maps to live-check-challenged),
+    never under DEAD LINKS, and the exit code is 2 (inconclusive), not 1."""
+    monkeypatch.setattr(check_links, "SEED_PATHS", ["/"])
+    monkeypatch.setattr(check_links, "EXTRA_URLS", ["https://roadielabs.com/questionnaire/"])
+    monkeypatch.setattr(check_links.time, "sleep", lambda s: None)
+    monkeypatch.setattr(check_links, "_challenge_budget", 0)  # no retries: record immediately
+
+    def fake_fetch_once(url, timeout=15):
+        if url.endswith("/questionnaire/"):
+            return 0, "", True          # what fetch_once now returns on a reset
+        return 200, "<html><body>home</body></html>", False
+    monkeypatch.setattr(check_links, "fetch_once", fake_fetch_once)
+    monkeypatch.setattr(sys, "argv", ["check_links.py"])
+
+    rc = check_links.main()
+    out = capsys.readouterr().out
+
+    assert rc == 2
+    assert "WAF-CHALLENGED (1)" in out
+    assert "   ERR  https://roadielabs.com/questionnaire/" in out
+    assert "DEAD LINKS" not in out
+
+
+def test_immune_parses_err_row_under_waf_header_as_challenged_not_money_path(monkeypatch):
+    """The checker's ERR row for a money-path URL must classify as
+    live-check-challenged (YELLOW), never money-path-404 (RED)."""
+    stdout = (
+        "Checked 1 of 1 seed pages + 1 discovered URLs\n"
+        "\nWAF-CHALLENGED (1): still behind SiteGround's bot challenge (202) or "
+        "unreachable at the transport level (ERR) after retries — scan inconclusive, NOT dead links\n"
+        "   ERR  https://roadielabs.com/questionnaire/\n"
+        "No dead links found, but the scan is INCONCLUSIVE (WAF challenges).\n")
+    findings = parse(monkeypatch, stdout, 2)
+    assert [f.code for f in findings] == ["live-check-challenged"]
+    assert findings[0].lane == immune_check.YELLOW
+    assert "questionnaire" in findings[0].detail
