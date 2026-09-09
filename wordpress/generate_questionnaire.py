@@ -383,15 +383,28 @@ def build_questionnaire_css() -> str:
 
 .gg-race-fields {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   align-items: end;
+  width: 100%;
+  min-width: 0;
 }
 
-.gg-race-fields .gg-form-group { margin-bottom: 0; }
+.gg-race-fields .gg-form-group {
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+.gg-race-fields .gg-form-group:first-child {
+  grid-column: span 2;
+}
 
 .gg-race-fields input,
 .gg-race-fields select {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  max-inline-size: 100%;
   padding: 0.6rem 0.75rem;
   font-size: 0.85rem;
 }
@@ -535,6 +548,7 @@ def build_questionnaire_css() -> str:
   .gg-form-header h2 { font-size: 1.35rem; }
   .gg-radio-group { flex-direction: column; }
   .gg-race-fields { grid-template-columns: 1fr; }
+  .gg-race-fields .gg-form-group:first-child { grid-column: auto; }
   .tp-questionnaire-hero h1 { font-size: 1.5rem; }
 }
 </style>'''
