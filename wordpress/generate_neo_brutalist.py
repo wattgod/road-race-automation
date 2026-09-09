@@ -5632,7 +5632,7 @@ def get_page_css() -> str:
 
 /* Page wrapper */
 .rl-neo-brutalist-page {{
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   font-family: var(--rl-font-data);
@@ -5788,7 +5788,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-map-embed iframe {{ width: 100%; height: 500px; border: none; display: block; }}
 
 /* Prose — editorial font */
-.rl-neo-brutalist-page .rl-prose {{ font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-base); line-height: var(--rl-line-height-prose); color: var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-prose {{ max-width: 68ch; font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-base); line-height: var(--rl-line-height-prose); color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-prose p {{ margin-bottom: 14px; }}
 .rl-neo-brutalist-page .rl-prose p:last-child {{ margin-bottom: 0; }}
 
@@ -6084,13 +6084,13 @@ def get_page_css() -> str:
 /* Sticky CTA */
 .rl-sticky-cta {{ position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--rl-color-near-black); border-top: 3px solid var(--rl-color-signal-red); padding: 12px 24px; transform: translateY(100%); transition: transform 0.3s ease; }}
 .rl-sticky-cta.is-visible {{ transform: translateY(0); }}
-.rl-sticky-cta-inner {{ max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }}
+.rl-sticky-cta-inner {{ max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }}
 .rl-sticky-cta-name {{ font-family: var(--rl-font-data); font-size: 13px; font-weight: 700; color: var(--rl-color-white); text-transform: uppercase; letter-spacing: 1px; }}
 .rl-sticky-cta .rl-btn {{ font-family: var(--rl-font-data); background: var(--rl-color-signal-red); color: var(--rl-color-white); border: var(--rl-border-width-subtle) solid var(--rl-color-signal-red); padding: var(--rl-spacing-xs) 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); text-decoration: none; cursor: pointer; }}
 .rl-sticky-cta .rl-btn:hover {{ background: #14695F; border-color: #14695F; }}
 
 /* Not-running status notice (defunct/cancelled races). */
-.rl-status-notice {{ border: 2px solid var(--rl-color-dark-navy); padding: 14px 18px; margin: 20px auto; max-width: 960px; display: flex; align-items: baseline; gap: 14px; background: var(--rl-color-cool-white); }}
+.rl-status-notice {{ border: 2px solid var(--rl-color-dark-navy); padding: 14px 18px; margin: 20px auto; max-width: 1200px; display: flex; align-items: baseline; gap: 14px; background: var(--rl-color-cool-white); }}
 .rl-status-notice-label {{ font-family: var(--rl-font-data); font-size: 12px; font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-wide); white-space: nowrap; border: 2px solid var(--rl-color-dark-navy); padding: 2px 8px; }}
 .rl-status-notice p {{ margin: 0; font-size: 14px; }}
 .rl-sticky-dismiss {{ background: none; border: none; color: var(--rl-color-white); font-size: 22px; cursor: pointer; opacity: 0.6; padding: 0 4px; line-height: 1; }}

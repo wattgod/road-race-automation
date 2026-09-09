@@ -1,0 +1,79 @@
+/* Roadie Labs desktop shell normalization — source parity with codex/desktop-width-road.
+   Append only to eligible static HTML after preserving its existing content and assets. */
+
+/* Shared chrome */
+.rl-site-header-inner,
+.rl-mega-footer-grid,
+.rl-mega-footer-legal,
+.rl-mega-footer-disclaimer {
+  max-width: 1200px !important;
+}
+
+/* Homepage bands */
+.rl-hp-hero-inner,
+.rl-hp-ladder-inner,
+.rl-hp-stats-inner,
+.rl-hp-content-grid,
+.rl-hp-latest-takes,
+.rl-hp-how-it-works,
+.rl-hp-coming-up,
+.rl-hp-training-cta-full,
+.rl-hp-guide,
+.rl-hp-testimonials,
+.rl-hp-email {
+  max-width: 1200px !important;
+}
+
+/* Race-profile shell */
+.rl-neo-brutalist-page,
+.rl-sticky-cta-inner,
+.rl-status-notice {
+  max-width: 1200px !important;
+}
+.rl-neo-brutalist-page .rl-prose {
+  max-width: 68ch !important;
+}
+
+/* Training-plan shell; component widths remain defined by their own selectors. */
+.rl-breadcrumb,
+.rl-tp-section,
+.rl-tp-hero {
+  max-width: 1200px !important;
+}
+/* The generic section rule above must not box the source full-bleed variants. */
+.rl-tp-section.rl-tp-section-alt {
+  max-width: none !important;
+}
+/* Existing alternate sections have this finite direct-child contract. */
+.rl-tp-section-alt > .rl-tp-section-label,
+.rl-tp-section-alt > h2,
+.rl-tp-section-alt > .rl-tp-process,
+.rl-tp-section-alt > .rl-tp-steps,
+.rl-tp-section-alt > .rl-tp-audience-grid,
+.rl-tp-section-alt > .rl-tp-faq-list {
+  max-width: 1200px !important;
+}
+.rl-tp-deliverable-content p,
+.rl-tp-step p {
+  max-width: 68ch !important;
+}
+
+/* Other generated page shells using the shared header and footer. */
+.rl-hub-page,
+.rl-cal-page,
+.rl-pr-page,
+.rl-state-page,
+.rl-vs-page,
+.rl-pk-index-main,
+.rl-ins-breadcrumb,
+.rl-ins-hero,
+.rl-ins-section,
+.rl-ins-closing {
+  max-width: 1200px !important;
+}
+.rl-ins-section--alt {
+  /* Preserve the source generator's full-bleed alternate band. */
+  max-width: none !important;
+  padding-left: max(var(--rl-spacing-xl), calc((100% - 1200px) / 2 + var(--rl-spacing-xl))) !important;
+  padding-right: max(var(--rl-spacing-xl), calc((100% - 1200px) / 2 + var(--rl-spacing-xl))) !important;
+}
