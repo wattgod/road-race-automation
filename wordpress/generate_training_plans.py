@@ -60,13 +60,13 @@ def build_nav() -> str:
 def build_hero() -> str:
     return f'''<section class="rl-tp-hero" id="hero">
   <h1 class="rl-tp-hero-title">Your Race. Your Hours. Your Plan.</h1>
-  <p class="rl-tp-hero-sub">Most training plans assume you&rsquo;re average. A parent with 5 hours a week needs fundamentally different training than someone with 15. This isn&rsquo;t a template with your name on it. It&rsquo;s a plan built from your schedule, your fitness, your race, and the specific demands of the course you&rsquo;re lining up for.</p>
+  <p class="rl-tp-hero-sub">Your plan is built around your available hours, fitness, target race, and the specific demands of its course.</p>
   <div class="rl-tp-hero-cta">
     <a href="{QUESTIONNAIRE_URL}" class="rl-tp-btn" data-cta="hero_build">Build My Plan</a>
     <a href="#how-it-works" class="rl-tp-btn rl-tp-btn-secondary" data-cta="hero_how">See How It Works</a>
   </div>
   <div class="rl-tp-hero-bar">
-    <div class="rl-tp-hero-bar-item"><strong>Same Day</strong><span>Delivery</span></div>
+    <div class="rl-tp-hero-bar-item"><strong>Within 24 Hours</strong><span>Delivery</span></div>
     <div class="rl-tp-hero-bar-item"><strong>Matched</strong><span>Methodology</span></div>
     <div class="rl-tp-hero-bar-item"><strong>$2/day</strong><span>Less Than a Tube</span></div>
     <div class="rl-tp-hero-bar-item"><strong>5 min</strong><span>To Start</span></div>
@@ -170,7 +170,7 @@ SAMPLE_WEEK_BLOCKS = [
 REALITY_CHECKS = [
     "You downloaded a 12-week plan from the internet. It assumed you had 15 hours a week and zero injuries. How'd that go?",
     "Your buddy's training plan worked great. For your buddy. You're not your buddy.",
-    "A 50-year-old with 5 hours needs fundamentally different training than a 28-year-old with 15. Different hours demand different science.",
+    "Five available hours calls for different priorities than fifteen. Your plan uses the time you actually have.",
     "You know what a generic plan does at km 150 of L'Etape? Nothing. Because it doesn't know you're climbing the Tourmalet.",
     "Every training plan is a bet. Most plans are betting you're a 25-year-old with unlimited time and perfect recovery. Are you?",
     "The plan said 'tempo ride, 2 hours.' You had 45 minutes before school pickup. So you skipped it. Then you skipped Tuesday too.",
@@ -184,7 +184,7 @@ REALITY_CHECKS = [
     "You told your last plan about your bad knee. It gave you plyometrics in week 3.",
     "Heat kills more gran fondos than fitness. If your plan doesn't have an acclimatization protocol, it's not a plan. It's a wish.",
     "You tapered for 3 weeks because 'that's what the article said.' You lost fitness. Race day felt flat. Taper length is individual.",
-    "Your race starts at 7,000 feet. Your plan was written at sea level. That's a different sport and nobody told you.",
+    "Your race starts at 7,000 feet. Your preparation should account for the altitude.",
     "Training without power zones is like cooking without measurements. You can do it. It's just worse.",
     "You finished your last race. You also bonked at mile 60, walked two climbs, and questioned your life choices. 'Finished' is a low bar.",
     "Somewhere right now, someone is doing their third 'base phase' of the year because they keep restarting the same generic plan.",
@@ -246,7 +246,7 @@ def build_how_it_works() -> str:
         ("01", "Questionnaire", "5 min form"),
         ("02", "TrainingPeaks", "Connect account"),
         ("03", "Plan Built", "Matched to you"),
-        ("04", "You Train", "Same day delivery"),
+        ("04", "You Train", "Delivered within 24 hours"),
     ]
     cards_html = ""
     for num, title, desc in process_cards:
@@ -262,9 +262,9 @@ def build_how_it_works() -> str:
         ("02", "Connect on TrainingPeaks",
          "Attach to my TrainingPeaks Coach Account. This is how the plan gets to your calendar. Free TrainingPeaks account works fine."),
         ("03", "I Build Your Plan",
-         "Your intake hits the methodology engine. The training approach gets selected based on your profile. Polarized for the time-crunched. Pyramidal for the balanced. Block for the serious. Matched to your availability and ability."),
+         "I choose the training approach that fits your available time, experience, and race demands."),
         ("04", "Plan Drops Into Your Calendar",
-         "I push the plan directly into your TrainingPeaks calendar. Every workout. Every phase. Open your app &mdash; it&rsquo;s there. Syncs to Zwift, Wahoo, Garmin. You start training. Delivered same day."),
+         "I review your plan personally and deliver it in TrainingPeaks within 24 hours. Open your calendar and start training."),
     ]
     steps_html = ""
     for num, title, desc in steps:
@@ -386,7 +386,7 @@ def build_pricing() -> str:
         <li>Race-optimized fueling plan</li>
         <li>Custom strength program</li>
         <li>Heat &amp; altitude protocols</li>
-        <li>Same-day delivery</li>
+        <li>Personally reviewed and delivered in TrainingPeaks within 24 hours</li>
       </ul>
       <div class="rl-tp-pricing-cta">
         <a href="{QUESTIONNAIRE_URL}" class="rl-tp-btn" data-cta="pricing_build">Build My Plan</a>
