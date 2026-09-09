@@ -545,15 +545,15 @@ def build_form_html() -> str:
     return '''
   <div class="tp-questionnaire-hero">
     <h1>Build Your Plan</h1>
-    <p>Five minutes. Be thorough. The plan is only as good as the data.
-    Same-day delivery to your TrainingPeaks calendar.</p>
+    <p>Allow five minutes and be thorough. Your plan is personally reviewed
+    and delivered in TrainingPeaks within 24 hours.</p>
   </div>
 
   <div class="gg-form-container">
     <div class="gg-form-header">
       <span class="gg-form-badge">Custom Training Plan</span>
       <h2>Build Your Plan</h2>
-      <p>Fill out this form, pay securely via Stripe, and your plan will be delivered to your TrainingPeaks calendar same day.</p>
+      <p>Fill out this form and pay securely via Stripe. Your plan is personally reviewed and delivered in TrainingPeaks within 24 hours.</p>
     </div>
 
     <form id="gg-training-form">
@@ -958,7 +958,7 @@ def build_form_html() -> str:
         <div class="gg-trust-badges">
           <span class="gg-trust-badge">7-Day Full Refund</span>
           <span class="gg-trust-badge">Secure Checkout via Stripe</span>
-          <span class="gg-trust-badge">Same-Day Delivery</span>
+          <span class="gg-trust-badge">Delivery Within 24 Hours</span>
         </div>
       </div>
 
@@ -987,8 +987,8 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
         inline_js = build_inline_js()
 
     meta_desc = (
-        "Build your custom road cycling training plan. Five-minute questionnaire, "
-        "same-day delivery to TrainingPeaks. $15/week, capped at $249."
+        "Build your custom road cycling training plan. Personally reviewed and "
+        "delivered in TrainingPeaks within 24 hours. $15/week, capped at $249."
     )
 
     og_tags = f'''<meta property="og:title" content="Build Your Training Plan | Roadie Labs">
