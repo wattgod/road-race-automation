@@ -469,7 +469,7 @@ def build_training_css() -> str:
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
   color: var(--rl-color-secondary-brown);
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   letter-spacing: var(--rl-letter-spacing-wide);
 }}
@@ -484,7 +484,7 @@ def build_training_css() -> str:
 /* ── Layout ── */
 .rl-tp-section {{
   padding: var(--rl-spacing-2xl) var(--rl-spacing-xl);
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   border-bottom: var(--rl-border-standard);
 }}
@@ -495,7 +495,7 @@ def build_training_css() -> str:
   border-bottom-color: var(--rl-color-primary-brown);
 }}
 .rl-tp-section-alt > * {{
-  max-width: 900px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }}
@@ -557,7 +557,7 @@ def build_training_css() -> str:
 /* ── Hero ── */
 .rl-tp-hero {{
   padding: var(--rl-spacing-2xl) var(--rl-spacing-xl) var(--rl-spacing-xl);
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   border-bottom: var(--rl-border-standard);
 }}
@@ -658,6 +658,7 @@ def build_training_css() -> str:
   color: var(--rl-color-primary-brown);
   margin: 0;
   line-height: var(--rl-line-height-prose);
+  max-width: 68ch;
 }}
 .rl-tp-deliverable-row:nth-child(odd) .rl-tp-deliverable-content {{
   background: var(--rl-color-white);
@@ -881,6 +882,7 @@ def build_training_css() -> str:
   color: var(--rl-color-primary-brown);
   margin: 0;
   line-height: var(--rl-line-height-prose);
+  max-width: 68ch;
 }}
 
 /* ── Pullquote / Rotating Reality Check ── */

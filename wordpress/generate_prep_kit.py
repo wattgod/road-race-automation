@@ -2875,7 +2875,7 @@ def generate_prep_kit_index(json_files: list[Path], data_dirs: list[Path], outpu
 {get_site_header_css()}
 {get_mega_footer_css()}
 body {{ margin:0; background:var(--rl-color-cool-white); color:var(--rl-color-near-black); font-family:var(--rl-font-editorial); }}
-.rl-pk-index-main {{ max-width:960px; margin:0 auto; padding:48px 24px; }}
+.rl-pk-index-main {{ max-width:1200px; margin:0 auto; padding:48px 24px; }}
 .rl-pk-index-kicker {{ font-family:var(--rl-font-data); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--rl-color-signal-red); margin-bottom:12px; }}
 .rl-pk-index-main h1 {{ font-family:var(--rl-font-data); font-size:clamp(36px, 8vw, 72px); line-height:0.95; letter-spacing:0; text-transform:uppercase; margin:0 0 20px; }}
 .rl-pk-index-main p {{ max-width:680px; font-size:18px; line-height:1.65; margin:0 0 28px; color:var(--rl-color-dark-navy); }}

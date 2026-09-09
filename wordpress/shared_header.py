@@ -66,7 +66,7 @@ def get_site_header_css() -> str:
     return """
 /* ── Site Header ──────────────────────────────────────── */
 .rl-site-header { position: sticky; top: 0; z-index: 900; padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); background: var(--rl-color-cool-white); }
-.rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; }
+.rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
 .rl-site-header-logo { display: block; color: var(--rl-color-dark-navy); }
 .rl-site-header-logo svg { display: block; height: 58px; width: auto; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
