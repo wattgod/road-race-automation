@@ -64,6 +64,12 @@ def selected_sentences(data: dict[str, Any]) -> list[str]:
     biased = race.get("biased_opinion")
     if isinstance(biased, str):
         texts.append(biased)
+    elif isinstance(biased, dict):
+        for value in biased.values():
+            if isinstance(value, str):
+                texts.append(value)
+            elif isinstance(value, list):
+                texts.extend(item for item in value if isinstance(item, str))
     result: list[str] = []
     for text in texts:
         for sentence in split_sentences(text):
@@ -115,8 +121,11 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     if args.limit:
         profiles = profiles[: args.limit]
     for path in profiles:
-        dump_path = RESEARCH / f"{path.stem}-raw.md"
-        if not dump_path.exists():
+        dump_path = next(
+            (p for p in (RESEARCH / f"{path.stem}.md", RESEARCH / f"{path.stem}-raw.md") if p.exists()),
+            None,
+        )
+        if dump_path is None:
             no_dump += 1
             continue
         rows.extend(audit_profile(path.stem, json.loads(path.read_text(encoding="utf-8")), dump_path.read_text(encoding="utf-8")))
