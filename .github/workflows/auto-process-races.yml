@@ -1,9 +1,15 @@
 name: Auto-Process Races (Scheduled)
 
 on:
-  schedule:
-    # Run weekly on Wednesdays at 2 AM UTC (budget cap: 5 races/run)
-    - cron: '0 2 * * 3'
+  # PAUSED 2026-09-20: this workflow is an unported copy of the gravel pipeline
+  # and cannot succeed in this repo. It reads db/gravel_races_full_database.json
+  # (this repo has no db/ directory) and invokes scripts/research.py,
+  # synthesize.py, validate.py, generate_json.py and quality_gates.py (none of
+  # which exist here). Every scheduled run since 2026-03-11 failed -- 28 for 28.
+  # Left dispatchable so the history and inputs stay available; re-enable the
+  # schedule only once a real road processing path exists.
+  # schedule:
+  #   - cron: '0 2 * * 3'
   workflow_dispatch:
     inputs:
       tier:
