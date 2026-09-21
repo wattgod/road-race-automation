@@ -209,6 +209,10 @@ file). **CI is green.**
 
 ## 8. Key commands
 
+Optional Jev advisory audits use `TYPESAFE_API_KEY` when set; keep it in the
+environment and never commit its value. Audit output is flag-only and remains
+under human review.
+
 ```bash
 # tests
 python3 -m pytest tests/ -q
