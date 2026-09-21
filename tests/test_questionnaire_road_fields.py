@@ -36,3 +36,13 @@ def test_power_band_is_not_serialized_as_license_category():
     assert "data.powerBand =" in script
     assert "data.estimatedCategory" not in script
     assert "Cat 1-2" not in script
+
+
+def test_saved_form_survives_stripe_back_navigation():
+    """Backing out of Stripe Checkout must land on a restored form."""
+    script = (ROOT / "web" / "training-plans-form.js").read_text(encoding="utf-8")
+    start = script.index("if (result.checkout_url)")
+    end = script.index("window.location.href = result.checkout_url")
+    assert "clearSaved();" not in script[start:end]
+    assert "_savedAt" in script
+    assert "_raceSlug" in script
