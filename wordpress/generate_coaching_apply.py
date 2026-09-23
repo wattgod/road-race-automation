@@ -1811,7 +1811,7 @@ def generate_apply_page(external_assets=None):
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20fill%3D%27%231a1a1a%27%2F%3E%3Ctext%20x%3D%2716%27%20y%3D%2724%27%20text-anchor%3D%27middle%27%20font-family%3D%27serif%27%20font-size%3D%2724%27%20font-weight%3D%27700%27%20fill%3D%27%23f5f5f0%27%3ER%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
   {get_preload_hints()}
   {page_css}
   {get_ab_head_snippet()}

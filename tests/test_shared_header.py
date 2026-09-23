@@ -67,17 +67,13 @@ class TestHeaderHTML:
         assert 'class="rl-site-header-mark"' in html
         assert '<svg' in html
 
-    def test_logo_is_a_slick_with_recessed_grooves(self):
-        """Keep the road mark from regressing to raised gravel-style blocks."""
+    def test_logo_has_legible_wordmark_and_square_mark(self):
+        """The header must identify the brand even at navigation size."""
         html = get_site_header_html()
-        assert 'id="rl-slick-grooves"' in html
-        assert 'mask="url(#rl-slick-grooves)"' in html
-        assert 'stroke="black"' in html
-        assert 'viewBox="0 0 800 1600"' in html
-        assert 'M400 188V1412' in html  # continuous slick-tire center seam
-        assert 'stroke-width="20"' in html
-        assert 'M278 302 278 886' not in html  # no drawn letter-outline stem
-        assert 'rl-tread-sipes' not in html
+        assert 'viewBox="0 0 64 64"' in html
+        assert 'class="rl-site-header-wordmark"' in html
+        assert 'ROADIE <span>LABS</span>' in html
+        assert 'aria-label="Roadie Labs"' in html
 
     def test_courses_has_no_dropdown(self):
         html = get_site_header_html()
