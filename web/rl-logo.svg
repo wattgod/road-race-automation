@@ -1,16 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 420" role="img" aria-labelledby="title desc">
-<title id="title">Roadie Labs</title><desc id="desc">Tall road tire tread with an R cut into the left half and an L cut into the right half.</desc>
-<defs><mask id="tread" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="420"><rect width="240" height="420" fill="black"/><g transform="translate(18 1) scale(.85 1.16)"><path d="M120 8 C165 8 188 44 201 92 C217 150 217 210 201 268 C188 316 165 352 120 352 C75 352 52 316 39 268 C23 210 23 150 39 92 C52 44 75 8 120 8 Z" fill="white"/>
-<g fill="black">
-<path d="M37 83 69 92 66 108 32 101Z M29 137 67 145 66 161 27 154Z M26 195 67 199 68 215 29 211Z M34 253 68 249 70 266 39 273Z"/>
-<path d="M203 83 171 92 174 108 208 101Z M211 137 173 145 174 161 213 154Z M214 195 173 199 172 215 211 211Z M206 253 172 249 170 266 201 273Z"/>
-</g>
-<path d="M120 40V320" stroke="black" stroke-width="8"/>
-<g fill="none" stroke="black" stroke-width="12" stroke-linejoin="miter" stroke-linecap="square">
+    <title id="title">Roadie Labs roadie-slick-channels</title><desc id="desc">A narrow road tire with R and L cut into the tread and subtle road grooves.</desc>
+    <defs><mask id="roadie-slick-channels" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="420">
+    <rect width="240" height="420" fill="black"/>
+    <g transform="translate(18 1) scale(.85 1.16)">
+    <path d="M120 8 C165 8 188 44 201 92 C217 150 217 210 201 268 C188 316 165 352 120 352 C75 352 52 316 39 268 C23 210 23 150 39 92 C52 44 75 8 120 8 Z" fill="white"/><path d="M120 40V320" stroke="black" stroke-width="5"/>
+<g fill="none" stroke="black" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter">
 <path d="M67 260V98H85C99 98 106 110 106 128 C106 146 98 157 84 157H67 M83 157 105 260"/>
 <path d="M145 98V260H190"/>
-</g>
-<g stroke="black" stroke-width="5" stroke-linecap="square">
-<path d="M52 48 78 56 M162 56 188 48 M48 303 76 295 M164 295 192 303"/>
-</g></g></mask></defs>
-<rect width="240" height="420" fill="#1a1a1a" mask="url(#tread)"/></svg>
+</g><g fill="none" stroke="black" stroke-width="2.6" stroke-linecap="square">
+ <path d="M57 68 C48 110 46 143 46 178 S48 248 57 291"/>
+ <path d="M183 68 C192 110 194 143 194 178 S192 248 183 291"/>
+ <path d="M54 51 67 55 M186 51 173 55 M54 305 67 301 M186 305 173 301"/>
+ </g>
+    </g></mask></defs><rect width="240" height="420" fill="#1a1a1a" mask="url(#roadie-slick-channels)"/></svg>

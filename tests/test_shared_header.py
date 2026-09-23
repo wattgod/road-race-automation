@@ -65,12 +65,12 @@ class TestHeaderHTML:
         assert 'aria-label="Roadie Labs"' in html
         assert 'class="rl-site-header-logo"' in html
         assert 'class="rl-site-header-mark"' in html
-        assert '<svg' in html
+        assert '<img' in html
 
-    def test_logo_has_legible_wordmark_and_square_mark(self):
+    def test_logo_has_legible_wordmark_and_tire_mark(self):
         """The header must identify the brand even at navigation size."""
         html = get_site_header_html()
-        assert 'viewBox="0 0 64 64"' in html
+        assert 'src="/race/assets/rl-logo.svg"' in html
         assert 'class="rl-site-header-wordmark"' in html
         assert 'ROADIE <span>LABS</span>' in html
         assert 'aria-label="Roadie Labs"' in html

@@ -11,11 +11,7 @@ from __future__ import annotations
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
-LOGO_SVG = '''<svg class="rl-site-header-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-  <rect width="64" height="64" fill="currentColor"/>
-  <path d="M17 51V13h18c9 0 14 5 14 12s-5 12-14 12H17m18 0 14 14" fill="none" stroke="var(--rl-color-cool-white)" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
-  <path d="M17 24h11" fill="none" stroke="currentColor" stroke-width="3"/>
-</svg>'''
+LOGO_MARK_HTML = '<img class="rl-site-header-mark" src="/race/assets/rl-logo.svg" alt="" width="27" height="48">'
 
 
 def get_site_header_html(active: str | None = None) -> str:
@@ -33,7 +29,7 @@ def get_site_header_html(active: str | None = None) -> str:
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="{SITE_BASE_URL}/" class="rl-site-header-logo" aria-label="Roadie Labs">
-      {LOGO_SVG}
+      {LOGO_MARK_HTML}
       <span class="rl-site-header-wordmark" aria-hidden="true">ROADIE <span>LABS</span></span>
     </a>
     <button class="rl-site-header-toggle" type="button" aria-controls="rl-site-header-nav" aria-expanded="false" aria-label="Open navigation">
@@ -70,7 +66,7 @@ def get_site_header_css() -> str:
 .rl-site-header { position: sticky; top: 0; z-index: 900; padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); background: var(--rl-color-cool-white); }
 .rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
 .rl-site-header-logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--rl-color-dark-navy); text-decoration: none; }
-.rl-site-header-logo svg { display: block; height: 38px; width: 38px; flex: none; }
+.rl-site-header-mark { display: block; height: 48px; width: auto; flex: none; }
 .rl-site-header-wordmark { font-family: var(--rl-font-data); font-size: 17px; font-weight: 700; letter-spacing: .08em; white-space: nowrap; }
 .rl-site-header-wordmark span { font-weight: 400; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
@@ -96,7 +92,7 @@ def get_site_header_css() -> str:
 @media (max-width: 600px) {
   .rl-site-header { padding: 8px 16px; }
   .rl-site-header-inner { flex-wrap: wrap; justify-content: space-between; gap: 8px; }
-  .rl-site-header-logo svg { height: 34px; width: 34px; }
+  .rl-site-header-mark { height: 42px; }
   .rl-site-header-wordmark { font-size: 14px; }
   .rl-site-header-toggle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; }
   .rl-site-header-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; border-top: 2px solid var(--rl-color-dark-navy); padding-top: 8px; }

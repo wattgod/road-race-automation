@@ -6498,6 +6498,10 @@ def write_shared_assets(output_dir: Path) -> dict:
     if not logo_src.exists():
         raise FileNotFoundError(f"Roadie Labs logo asset missing: {logo_src}")
     shutil.copy2(logo_src, assets_dir / 'rl-logo.svg')
+    feed_logo_src = Path(__file__).resolve().parent.parent / 'web' / 'road-labs-logo.png'
+    if not feed_logo_src.exists():
+        raise FileNotFoundError(f"Roadie Labs feed logo asset missing: {feed_logo_src}")
+    shutil.copy2(feed_logo_src, assets_dir / 'road-labs-logo.png')
 
     css_hash = hashlib.md5(css_content.encode()).hexdigest()[:8]
     js_hash = hashlib.md5(js_content.encode()).hexdigest()[:8]

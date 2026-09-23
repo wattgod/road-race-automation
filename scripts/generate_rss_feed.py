@@ -127,7 +127,7 @@ def generate_rss():
     <lastBuildDate>{now}</lastBuildDate>
     <atom:link href="{SITE_URL}/feed/races.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>{SITE_URL}/assets/road-labs-logo.png</url>
+      <url>{SITE_URL}/race/assets/road-labs-logo.png</url>
       <title>Roadie Labs</title>
       <link>{SITE_URL}</link>
     </image>

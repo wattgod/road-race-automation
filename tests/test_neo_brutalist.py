@@ -1381,6 +1381,7 @@ class TestFullPage:
         assert (tmp_path / 'assets' / css_name).stat().st_size > 0
         assert (tmp_path / 'assets' / js_name).stat().st_size > 0
         assert (tmp_path / 'assets' / 'rl-logo.svg').stat().st_size > 0
+        assert (tmp_path / 'assets' / 'road-labs-logo.png').stat().st_size > 0
 
     def test_js_has_fetch_timeout(self, normalized_data):
         html = generate_page(normalized_data)

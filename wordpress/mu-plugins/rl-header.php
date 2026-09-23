@@ -80,7 +80,7 @@ header.site-header,
 .rl-site-header { padding: 16px 24px !important; border-bottom: 2px solid #333333 !important; background: #f5f5f0 !important; }
 .rl-site-header-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 960px !important; margin: 0 auto !important; }
 .rl-site-header-logo { display: inline-flex !important; align-items: center !important; gap: 10px !important; min-height: 44px !important; color: #1a1a1a !important; text-decoration: none !important; }
-.rl-site-header-logo svg { display: block !important; height: 38px !important; width: 38px !important; flex: none !important; }
+.rl-site-header-mark { display: block !important; height: 48px !important; width: auto !important; flex: none !important; }
 .rl-site-header-wordmark { font-family: 'Sometype Mono', monospace !important; font-size: 17px !important; font-weight: 700 !important; letter-spacing: .08em !important; white-space: nowrap !important; }
 .rl-site-header-wordmark span { font-weight: 400 !important; }
 .rl-site-header-nav { display: flex !important; gap: 24px !important; align-items: center !important; }
@@ -112,7 +112,7 @@ header.site-header,
 @media (max-width: 600px) {
   .rl-site-header { padding: 12px 16px !important; }
   .rl-site-header-inner { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; }
-  .rl-site-header-logo svg { height: 34px !important; width: 34px !important; }
+  .rl-site-header-mark { height: 42px !important; }
   .rl-site-header-wordmark { font-size: 14px !important; }
   .rl-site-header-nav { gap: 12px !important; flex-wrap: wrap !important; justify-content: center !important; }
   .rl-site-header-nav > a,
@@ -153,11 +153,7 @@ function rl_shared_header_html() {
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="<?php echo $base; ?>/" class="rl-site-header-logo" aria-label="Roadie Labs">
-      <svg class="rl-site-header-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-        <rect width="64" height="64" fill="currentColor"/>
-        <path d="M17 51V13h18c9 0 14 5 14 12s-5 12-14 12H17m18 0 14 14" fill="none" stroke="#f5f5f0" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
-        <path d="M17 24h11" fill="none" stroke="currentColor" stroke-width="3"/>
-      </svg>
+      <img class="rl-site-header-mark" src="/race/assets/rl-logo.svg" alt="" width="27" height="48">
       <span class="rl-site-header-wordmark" aria-hidden="true">ROADIE <span>LABS</span></span>
     </a>
     <nav class="rl-site-header-nav">

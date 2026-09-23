@@ -61,6 +61,16 @@ def test_dimensions_config_produces_fourteen_dims_split_seven_and_seven():
     }
 
 
+def test_approved_logo_raster_preserves_negative_space():
+    image = tp.rasterize_logo(target_h=88)
+    assert image.height == 88
+    assert image.width < image.height
+    center_alpha = image.getpixel((image.width // 2, image.height // 2))[3]
+    shoulder_alpha = image.getpixel((image.width // 2 - 5, image.height // 2))[3]
+    assert center_alpha < shoulder_alpha
+    assert image.getchannel("A").getextrema()[1] == 255
+
+
 def test_all_fourteen_nonzero_dimensions_render_in_both_radars():
     image, alt = tp.build_header_image(_rated_race(score=3))
 
