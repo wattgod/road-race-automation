@@ -50,15 +50,14 @@ BRAND_NAME = "Roadie Labs"
 def get_tokens_css() -> str:
     """Return the :root CSS custom properties block.
 
-    Roadie Labs palette: clinical, precise, technical.
-    Deep navy + steel blue + signal red. Cool white background.
+    Roadie Labs palette: newsprint and charcoal monochrome.
     Same neo-brutalist rules: no border-radius, no box-shadow, solid borders.
     """
     return """:root {
   /* color — Roadie Labs "Newsprint / Charcoal" palette */
   --rl-color-dark-navy: #1a1a1a;
   --rl-color-primary-navy: #1a1a1a;
-  --rl-color-secondary-blue: #666666;
+  --rl-color-secondary-blue: #777777;
   --rl-color-steel: #999999;
   --rl-color-light-steel: #b8b8b0;
   --rl-color-silver: #d0d0c8;
@@ -72,8 +71,8 @@ def get_tokens_css() -> str:
   --rl-color-error: #8b1a1a;
   --rl-color-tier-1: #1a1a1a;
   --rl-color-tier-2: #4a4a4a;
-  --rl-color-tier-3: #666666;
-  --rl-color-tier-4: #777777;
+  --rl-color-tier-3: #777777;
+  --rl-color-tier-4: #aaaaaa;
 
   /* font */
   --rl-font-data: 'Sometype Mono', monospace;
@@ -126,7 +125,7 @@ def get_tokens_css() -> str:
   --rl-border-width-heavy: 4px;
   --rl-border-color-default: #1a1a1a;
   --rl-border-color-brand: #1a1a1a;
-  --rl-border-color-secondary: #666666;
+  --rl-border-color-secondary: #777777;
   --rl-border-color-accent: #333333;
   --rl-border-radius: 0;
 
@@ -241,7 +240,7 @@ def get_preload_hints(font_path_prefix: str = "/race/assets/fonts") -> str:
 COLORS = {
     "dark_navy": "#1a1a1a",
     "primary_navy": "#1a1a1a",
-    "secondary_blue": "#666666",
+    "secondary_blue": "#777777",
     "steel": "#999999",
     "light_steel": "#b8b8b0",
     "silver": "#d0d0c8",
@@ -254,8 +253,8 @@ COLORS = {
     "white": "#ffffff",
     "tier_1": "#1a1a1a",
     "tier_2": "#4a4a4a",
-    "tier_3": "#666666",
-    "tier_4": "#777777",
+    "tier_3": "#777777",
+    "tier_4": "#aaaaaa",
     # Legacy aliases
     "dark_brown": "#1a1a1a",
     "primary_brown": "#1a1a1a",

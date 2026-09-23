@@ -295,9 +295,8 @@ def ellipsize_text(draw, text, font, max_width):
 _PATH_TOKEN_RE = re.compile(r"([MLCZmlczHhVvSsQqTtAa])|(-?\d*\.?\d+(?:[eE]-?\d+)?)")
 
 LOGO_SVG_CANDIDATES = [
-    REPO_ROOT.parent / "road-labs-brand" / "logo" / "rl-logo.min.svg",
-    REPO_ROOT.parent / "road-labs-brand" / "logo" / "roadie-labs.svg",
     REPO_ROOT / "web" / "rl-logo.svg",
+    REPO_ROOT.parent / "road-labs-brand" / "assets" / "roadie-labs-tread-mark.svg",
 ]
 
 
@@ -433,9 +432,7 @@ def _png_asset(name: str, target_h: int) -> "Image.Image | None":
     return img
 
 def rasterize_logo(color: tuple = DARK_BROWN, target_h: int = 88) -> "Image.Image":
-    """Rasterize the Roadie Labs logo SVG path to an RGBA silhouette of the
-    given color and pixel height, using even-odd (XOR) fill so letterform
-    counters render as holes rather than solid fill."""
+    """Use the approved transparent raster; legacy path fallback handles simple SVGs."""
     png = _png_asset("logo", target_h)
     if png is not None:
         return png
@@ -445,9 +442,7 @@ def rasterize_logo(color: tuple = DARK_BROWN, target_h: int = 88) -> "Image.Imag
 
     svg_path = _find_logo_svg()
     if svg_path is None:
-        # TODO: road-labs-brand currently has no rasterizable logo mark. Keep
-        # layout stable with a neutral bordered-square placeholder until the
-        # proper Roadie Labs mark is supplied; never borrow Gravel God's logo.
+        # Keep layout stable if a custom checkout omits both logo assets.
         result = Image.new("RGBA", (target_h, target_h), (0, 0, 0, 0))
         placeholder = ImageDraw.Draw(result)
         inset = max(2, target_h // 22)
@@ -460,6 +455,11 @@ def rasterize_logo(color: tuple = DARK_BROWN, target_h: int = 88) -> "Image.Imag
         return result
 
     content = svg_path.read_text()
+    if "<mask" in content:
+        raise TPListingError(
+            "masked Roadie Labs logo requires wordpress/assets/tp/logo.png; "
+            "the simple path fallback cannot preserve negative-space grooves"
+        )
 
     vb_match = re.search(r'viewBox="([\d.\s-]+)"', content)
     if not vb_match:

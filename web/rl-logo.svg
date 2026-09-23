@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1600" role="img" aria-labelledby="title desc">
-  <title id="title">Roadie Labs slick-tire mark</title>
-  <desc id="desc">A continuous slick road tire whose pattern of shallow sipes forms an R and an L.</desc>
-  <defs>
-    <mask id="rl-slick-grooves">
-      <rect width="800" height="1600" fill="white"/>
-      <path d="M400 188V1412" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/>
-      <g fill="none" stroke="black" stroke-width="20" stroke-linecap="round">
-        <path d="M270 380 300 390M310 380 340 390M350 380 380 390M270 470 300 480M350 470 380 480M270 560 300 570M350 560 380 570M270 650 300 660M310 650 340 660M350 650 380 660M270 740 300 750M310 740 340 750M270 830 300 840M350 830 380 840M270 920 300 930M350 920 380 930M270 1010 300 1020M350 1010 380 1020M270 1100 300 1110M350 1100 380 1110M270 1190 300 1200M350 1190 380 1200"/>
-        <path d="M420 390 450 380M420 480 450 470M420 570 450 560M420 660 450 650M420 750 450 740M420 840 450 830M420 930 450 920M420 1020 450 1010M420 1110 450 1100M420 1200 450 1190M460 1200 490 1190M500 1200 530 1190"/>
-      </g>
-    </mask>
-  </defs>
-  <path fill="#1a1a1a" mask="url(#rl-slick-grooves)"
-        d="M400 24C490 24 535 140 552 320 570 520 570 1080 552 1280 535 1460 490 1576 400 1576S265 1460 248 1280C230 1080 230 520 248 320 265 140 310 24 400 24Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 420" role="img" aria-labelledby="title desc">
+    <title id="title">Roadie Labs roadie-slick-channels</title><desc id="desc">A narrow road tire with R and L cut into the tread and subtle road grooves.</desc>
+    <defs><mask id="roadie-slick-channels" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="420">
+    <rect width="240" height="420" fill="black"/>
+    <g transform="translate(18 1) scale(.85 1.16)">
+    <path d="M120 8 C165 8 188 44 201 92 C217 150 217 210 201 268 C188 316 165 352 120 352 C75 352 52 316 39 268 C23 210 23 150 39 92 C52 44 75 8 120 8 Z" fill="white"/><path d="M120 40V320" stroke="black" stroke-width="5"/>
+<g fill="none" stroke="black" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter">
+<path d="M67 260V98H85C99 98 106 110 106 128 C106 146 98 157 84 157H67 M83 157 105 260"/>
+<path d="M145 98V260H190"/>
+</g><g fill="none" stroke="black" stroke-width="2.6" stroke-linecap="square">
+ <path d="M57 68 C48 110 46 143 46 178 S48 248 57 291"/>
+ <path d="M183 68 C192 110 194 143 194 178 S192 248 183 291"/>
+ <path d="M54 51 67 55 M186 51 173 55 M54 305 67 301 M186 305 173 301"/>
+ </g>
+    </g></mask></defs><rect width="240" height="420" fill="#1a1a1a" mask="url(#roadie-slick-channels)"/></svg>

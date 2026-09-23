@@ -49,7 +49,7 @@ EXTRA_URLS = [
     f"{SITE}/race-dates.json",
     f"{SITE}/llms.txt",
     f"{SITE}/feed/races.xml",
-    f"{SITE}/assets/road-labs-logo.png",
+    f"{SITE}/race/assets/road-labs-logo.png",
 ]
 
 UA = "RoadieLabs-LinkCheck/1.0 (+https://roadielabs.com; weekly self-audit)"
