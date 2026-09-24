@@ -11,7 +11,7 @@ from __future__ import annotations
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
-LOGO_MARK_HTML = '<img class="rl-site-header-mark" src="/race/assets/rl-logo.svg" alt="" width="27" height="48">'
+LOGO_MARK_HTML = '<img class="rl-site-header-mark" src="/race/assets/rl-logo.svg?v=rain-sipes-1" alt="" width="27" height="48">'
 
 
 def get_site_header_html(active: str | None = None) -> str:

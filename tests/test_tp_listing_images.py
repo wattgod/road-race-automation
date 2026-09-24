@@ -65,10 +65,14 @@ def test_approved_logo_raster_preserves_negative_space():
     image = tp.rasterize_logo(target_h=88)
     assert image.height == 88
     assert image.width < image.height
-    center_alpha = image.getpixel((image.width // 2, image.height // 2))[3]
-    shoulder_alpha = image.getpixel((image.width // 2 - 5, image.height // 2))[3]
-    assert center_alpha < shoulder_alpha
-    assert image.getchannel("A").getextrema()[1] == 255
+    assert image.getchannel("A").getextrema() == (0, 255)
+
+    # The center channel is narrower than one pixel at listing size. Check its
+    # transparency in the approved source raster before downsampling.
+    source = tp.Image.open(tp.ASSETS_TP_DIR / "logo.png").convert("RGBA")
+    mid_x, mid_y = source.width // 2, source.height // 2
+    assert source.getpixel((mid_x, mid_y))[3] == 0
+    assert source.getpixel((mid_x + 20, mid_y))[3] == 255
 
 
 def test_all_fourteen_nonzero_dimensions_render_in_both_radars():

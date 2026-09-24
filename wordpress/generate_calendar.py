@@ -194,7 +194,7 @@ def build_calendar_page(races: list) -> str:
   <meta name="description" content="{esc(description)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical)}">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">

@@ -1222,7 +1222,7 @@ class TestFullPage:
 
     def test_has_favicon(self, normalized_data):
         html = generate_page(normalized_data)
-        assert '<link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">' in html
+        assert '<link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">' in html
 
     def test_has_skip_link(self, normalized_data):
         html = generate_page(normalized_data)

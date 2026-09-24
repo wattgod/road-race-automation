@@ -70,7 +70,7 @@ class TestHeaderHTML:
     def test_logo_has_legible_wordmark_and_tire_mark(self):
         """The header must identify the brand even at navigation size."""
         html = get_site_header_html()
-        assert 'src="/race/assets/rl-logo.svg"' in html
+        assert 'src="/race/assets/rl-logo.svg?v=rain-sipes-1"' in html
         assert 'class="rl-site-header-wordmark"' in html
         assert 'ROADIE <span>LABS</span>' in html
         assert 'aria-label="Roadie Labs"' in html
