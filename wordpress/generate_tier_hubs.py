@@ -169,7 +169,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   <meta name="description" content="{esc(meta["description"])}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical)}">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">
   <meta property="og:title" content="{esc(meta["title"])}">
   <meta property="og:description" content="{esc(meta["description"])}">
   <meta property="og:type" content="website">

@@ -6676,7 +6676,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical_url)}">
   <link rel="alternate" type="text/markdown" href="https://roadielabs.com/race/{esc(rd['slug'])}.md">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://ridewithgps.com">
   <link rel="dns-prefetch" href="https://api.rss2json.com">

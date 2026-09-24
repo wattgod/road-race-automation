@@ -231,7 +231,7 @@ class TestSectionBuilders:
         nav = build_nav()
         assert 'aria-label="Roadie Labs"' in nav
         assert 'class="rl-site-header-mark"' in nav
-        assert 'src="/race/assets/rl-logo.svg"' in nav
+        assert 'src="/race/assets/rl-logo.svg?v=rain-sipes-1"' in nav
 
     def test_nav_has_links(self):
         nav = build_nav()

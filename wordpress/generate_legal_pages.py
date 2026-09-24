@@ -341,7 +341,7 @@ def generate_page(page_key: str, output_dir: Path) -> None:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_URL}/og/homepage.jpg">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">
   {preload}
   {page_css}
   {css}
