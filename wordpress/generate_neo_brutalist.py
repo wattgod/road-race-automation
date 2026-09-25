@@ -340,12 +340,22 @@ PLAN_TIER_ORDER = {
 }
 
 
-def build_seo_title(rd: dict) -> str:
+def build_seo_title(rd: dict, seo_overrides: dict = None) -> str:
     """Build an SEO-optimized <title> tag.
 
     Target format: "{Race Name} Review {Year} | {Location} | Roadie Labs"
     Falls back to shorter forms if title exceeds ~60 chars.
+    
+    Args:
+        rd: Race data dict
+        seo_overrides: Optional dict of slug -> {"title": ..., "meta_description": ...}
     """
+    # Check for override first
+    if seo_overrides and rd['slug'] in seo_overrides:
+        override_title = seo_overrides[rd['slug']].get('title')
+        if override_title:
+            return override_title
+    
     name = rd['name']
     location = rd['vitals'].get('location', '') or ''
     date_text = ' '.join(str(rd['vitals'].get(field, '') or '')
@@ -369,11 +379,21 @@ def build_seo_title(rd: dict) -> str:
     return f"{name} | Roadie Labs"
 
 
-def build_seo_description(rd: dict) -> str:
+def build_seo_description(rd: dict, seo_overrides: dict = None) -> str:
     """Build an SEO-optimized meta description (120-155 chars target).
 
     Combines tagline + score/tier + call-to-action suffix.
+    
+    Args:
+        rd: Race data dict
+        seo_overrides: Optional dict of slug -> {"title": ..., "meta_description": ...}
     """
+    # Check for override first
+    if seo_overrides and rd['slug'] in seo_overrides:
+        override_desc = seo_overrides[rd['slug']].get('meta_description')
+        if override_desc:
+            return override_desc
+    
     tagline = rd.get('tagline', '').rstrip('.')
     score = rd.get('overall_score', 0)
     tier = rd.get('tier', 4)
@@ -1727,9 +1747,21 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
       var T = text.toUpperCase();
       if (T.indexOf('BUILD MY') !== -1) cta_type = 'build_plan';
       else if (T.indexOf('PREP KIT') !== -1) cta_type = 'prep_kit';
-      else if (T.indexOf('COACHING') !== -1) cta_type = 'coaching';
+      else if (T.indexOf('COACHING') !== -1 || T.indexOf('APPLY FOR') !== -1) cta_type = 'coaching';
       var section = this.closest('.rl-section, .rl-sticky-cta');
       var section_id = section ? (section.id || section.className.split(' ')[0]) : 'unknown';
+      
+      // Fire specific coaching event for coaching CTAs
+      if (cta_type === 'coaching') {
+        gtag('event', 'coaching_cta_click', {
+          cta_text: text.substring(0, 50),
+          cta_section: section_id,
+          cta_href: href,
+          race_slug: raceSlug
+        });
+      }
+      
+      // Also fire generic cta_click for all CTAs
       gtag('event', 'cta_click', {
         cta_type: cta_type,
         cta_text: text.substring(0, 50),
@@ -6531,7 +6563,7 @@ def write_shared_assets(output_dir: Path) -> dict:
 
 # ── Page Assembly ──────────────────────────────────────────────
 
-def generate_page(rd: dict, race_index: list = None, external_assets: dict = None) -> str:
+def generate_page(rd: dict, race_index: list = None, external_assets: dict = None, seo_overrides: dict = None) -> str:
     """Generate complete HTML page from normalized race data.
 
     If external_assets is provided, references external CSS/JS files instead of inlining.
@@ -6646,8 +6678,8 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     toc = build_toc(active, section_numbers)
 
     # SEO-optimized title and description
-    seo_title = build_seo_title(rd)
-    seo_description = build_seo_description(rd)
+    seo_title = build_seo_title(rd, seo_overrides)
+    seo_description = build_seo_description(rd, seo_overrides)
 
     # Open Graph meta tags
     og_image_url = f"{SITE_BASE_URL}/og/{rd['slug']}.jpg"
@@ -6798,6 +6830,17 @@ def main():
             race_index = json.load(f)
         print(f"Loaded race index: {len(race_index)} races")
 
+    # Load SEO overrides if available
+    seo_overrides_path = project_root / 'data' / 'seo_overrides.json'
+    seo_overrides = {}
+    if seo_overrides_path.exists():
+        try:
+            with open(seo_overrides_path, 'r', encoding='utf-8') as f:
+                seo_overrides = json.load(f)
+            print(f"Loaded SEO overrides for {len(seo_overrides)} races")
+        except Exception as e:
+            print(f"Warning: Could not load SEO overrides: {e}", file=sys.stderr)
+
     if args.all:
         # Generate for all races in the primary data directory
         primary = None
@@ -6823,7 +6866,7 @@ def main():
             slug = f.stem.replace('-data', '')
             try:
                 rd = load_race_data(f)
-                page_html = generate_page(rd, race_index, external_assets=assets)
+                page_html = generate_page(rd, race_index, external_assets=assets, seo_overrides=seo_overrides)
                 out = output_dir / f"{slug}.html"
                 out.write_text(page_html, encoding='utf-8')
                 success += 1
@@ -6855,7 +6898,7 @@ def main():
 
         assets = write_shared_assets(output_dir)
         rd = load_race_data(filepath)
-        page_html = generate_page(rd, race_index, external_assets=assets)
+        page_html = generate_page(rd, race_index, external_assets=assets, seo_overrides=seo_overrides)
         out = output_dir / f"{args.slug}.html"
         out.write_text(page_html, encoding='utf-8')
         print(f"Generated: {out}")

@@ -1310,7 +1310,7 @@ class TestFullPage:
                 raise SystemExit("REFUSED: catalog-flagged")
             return {"slug": path.stem}
 
-        def fake_generate(rd, _race_index, external_assets=None):
+        def fake_generate(rd, _race_index, external_assets=None, seo_overrides=None):
             generated.append(rd["slug"])
             return "<html></html>"
 
