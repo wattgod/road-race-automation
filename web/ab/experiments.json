@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-07-24",
+  "generated": "2026-09-28",
   "experiments": [
     {
       "id": "training_price_frame",
@@ -91,37 +91,6 @@
       "conversion": {
         "type": "click",
         "selector": "[data-cta='custom_plan']"
-      }
-    },
-    {
-      "id": "coaching_scarcity",
-      "selector": "[data-ab='coaching_scarcity']",
-      "pages": [
-        "/",
-        "/index.html",
-        "/about/"
-      ],
-      "traffic": 1.0,
-      "variants": [
-        {
-          "id": "control",
-          "name": "Generic scarcity",
-          "content": "A human in your corner. Adapts week to week. Limited spots."
-        },
-        {
-          "id": "variant_a",
-          "name": "Concrete number",
-          "content": "A human in your corner. Adapts week to week. 20 athletes/month."
-        },
-        {
-          "id": "variant_b",
-          "name": "Opens quarterly",
-          "content": "A human in your corner. Adapts week to week. Opens quarterly."
-        }
-      ],
-      "conversion": {
-        "type": "click",
-        "selector": "[data-ga='coaching_click'], [data-cta='coaching_apply']"
       }
     }
   ]

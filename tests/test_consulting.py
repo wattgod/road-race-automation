@@ -332,7 +332,15 @@ class TestWho:
     def test_bio_has_credentials(self):
         bio = build_who()
         assert "TrainingPeaks" in bio
-        assert "100+" in bio
+
+    def test_bio_drops_unverified_counts(self):
+        """"100+ athletes coached, 1,000+ training plans sold" had no source
+        and came down 2026-09-28 (Receipts spec). Tenure stays."""
+        bio = build_who()
+        assert "100+" not in bio
+        assert "1,000+" not in bio
+        assert "coached" not in bio
+        assert "plans sold" not in bio
 
     def test_bio_has_database_reference(self):
         """Race count is read live from race-index.json — never hardcoded

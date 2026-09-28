@@ -13,10 +13,16 @@ Gravel was spot-checked and is largely clean (WordPress + SG defaults).
 | 3 | **Unbranded 404 dead-end** | SiteGround's "we searched the space" page, no nav, no recovery | Branded `web/404.html` + ErrorDocument (links: database, calendar, methodology) |
 | 4 | **Dead links in global nav+footer, every page** | 5 URLs 404/403'd sitewide: `/guide/`, `/articles/`, `/consulting/`, `/insights/`, `/fueling-methodology/` | Removed from header/footer; PRODUCTS dropdown now Plans+Courses; ARTICLES → live Substack |
 | 5 | **Homepage advertised nonexistent content** | "Road Racing Guide" section (8 chapter links → 404) + "Latest Takes" (10 gravel article slugs → 404) | Sections gated off (builders return "" while empty); restore when pages ship |
-| 6 | **Fabricated testimonials on homepage** | Invented athlete quotes w/ names+results (same violation as gravel's purged 53) | TESTIMONIALS emptied; populate only with real permissioned quotes |
+| 6 | **Fabricated testimonials on homepage** | Invented athlete quotes w/ names+results (same violation as gravel's purged 53; correction 2026-09-28: gravel's quotes were never purged or real, see note below) | TESTIMONIALS emptied; populate only with real permissioned quotes |
 | 7 | **Newsletter links → placeholder host** | `https://TODO_ROADLABS_NEWSLETTER` in 6 generators — footer SUBSCRIBE + nav ARTICLES went nowhere | Now `gravelgodcycling.substack.com` (swap when a road Substack exists) |
 | 8 | **Search page invisible/naked** (earlier tonight) | `/road-races/` had no title/meta/canonical/GA4/nav | `scripts/build_search_page.py` full-page shell |
 | 9 | **Race-page ratings showed zeros** (earlier tonight) | 8/14 radar dims = 0 on all 427 pages | Gravel→road key remap in `generate_neo_brutalist.py` |
+
+Correction (2026-09-28): row 6 called Gravel God's 53 testimonials
+"purged". They were not. They were placeholder text written by Claude
+sessions in Feb 2026, and this site still showed them on /about/ and
+/training-plans/ as "Gravel God athletes" until they were removed on
+2026-09-28.
 
 ## Round 2 — found by the new link checker (fixed same night)
 

@@ -126,14 +126,17 @@ FEATURED_ONSITE_ARTICLES = [
 ]
 
 
-# ── Athlete testimonials (from live site coaching section) ──────
+# ── Athlete testimonials ────────────────────────────────────────
 TESTIMONIALS = [
     # EMPTY on purpose (Jul 2026 whoops audit): the previous entries were
-    # FABRICATED athlete quotes (invented names + results) — the same
-    # violation that got 53 testimonials purged from Gravel God in the
-    # Phase 1 voice audit. Roadie Labs has no road coaching results yet.
-    # build_testimonials() returns '' while empty, hiding the section.
-    # Populate ONLY with real, permissioned athlete quotes.
+    # FABRICATED athlete quotes (invented names + results). Correction
+    # (2026-09-28): the Gravel God "53" this comment used to call purged
+    # were never purged and were never real. They were placeholder text
+    # written by Claude sessions in Feb 2026, and this repo's /about/ and
+    # /training-plans/ carried them as "Gravel God athletes" until
+    # 2026-09-28, when they were removed. Roadie Labs has no road coaching
+    # results yet. The homepage owner ruling (2026-07-18) is no testimonials
+    # at all; tests/test_no_unsourced_proof.py enforces it.
 ]
 
 
@@ -1053,7 +1056,7 @@ def build_testimonials() -> str:
     quiet coaching band so the homepage has a coaching presence."""
     return f'''<section class="rl-hp-testimonials" id="testimonials">
     <div class="rl-hp-test-cta">
-      <p data-ab="coaching_scarcity">You could be better than you think. A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+      <p>You could be better than you think. A human in your corner &mdash; not an AI, not a spreadsheet.</p>
       <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-btn rl-hp-btn--primary" data-ga="coaching_cta_testimonials">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''
