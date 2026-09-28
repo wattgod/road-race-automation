@@ -61,21 +61,32 @@ left over from the port.
 
 ## 3. Trust rules
 
-**Testimonials — real or none, provenance-labeled if cross-vertical.** The
-Sprint 41 fork swapped road race names into real Gravel God quotes, producing
-53 fabricated testimonials live on roadielabs.com (fixed by restoring the
-real originals with a provenance line, commit history June 2026). A second,
-separate violation was caught and fixed Jul 2 2026 (`47a4d0a`, "whoops audit"):
-invented athlete names and results with no real basis. Current verified state:
-`wordpress/generate_about.py` (`_testimonial_data()`, reused by
-`generate_coaching.py`) carries 50 real Gravel God athlete quotes labeled
-"Gravel God athletes — same coach, same plan engine, different surface" —
-this is the only acceptable pattern for cross-vertical social proof.
-`wordpress/generate_homepage.py`'s `TESTIMONIALS` list is intentionally empty
-with a comment explaining why — Roadie Labs has no road coaching results yet,
-and `build_testimonials()` hides the section while empty. Do not fill it with
-invented names. This is the precedent for future verticals (ski): never
-name-swap testimonials.
+**Testimonials: consented and sourced, or none.** No testimonial, athlete name,
+rating, customer count or scarcity line renders unless it traces to a real
+person, a source, and written approval of the exact text. Empty beats fake.
+
+Correction of the record (2026-09-28). This skill used to say the 50 quotes
+on `/about/` and the 3 on `/training-plans/` were "real Gravel God athlete
+quotes" and that labelling them "Gravel God athletes — same coach, same plan
+engine, different surface" was the acceptable cross-vertical pattern. That
+was wrong. Gravel God's quotes were placeholder text written by Claude
+sessions in February 2026, not real people. The Sprint 41 fork copied 53 of
+them here (Mar 2026, `7db7daa`), and the June "integrity fix" (`9aa8de5`)
+relabelled them as real originals instead of removing them. A separate set of
+invented homepage quotes was emptied Jul 2 2026 (`47a4d0a`). All of it came
+down 2026-09-28 (Receipts spec, phase 0 takedown), along with the unverified
+"100+ athletes coached / 1,000+ plans sold" counts and the `coaching_scarcity`
+A/B experiment ("Limited spots.", "20 athletes/month.", "Opens quarterly.").
+
+Current state: no testimonials anywhere on roadielabs.com. There is no
+acceptable "borrowed" pattern. Roadie does not show Gravel God quotes. When
+real proof exists it follows the Receipts spec (wattgod/gravel-race-automation
+`docs/specs/receipts-social-proof-2026.md`): a coach identity block, the TP
+ratings line, and a link to Gravel God's /athletes/ page only for athletes
+who consented to the roadie channel. `tests/test_no_unsourced_proof.py`
+enforces this on rendered pages. `wordpress/generate_homepage.py`'s
+`TESTIMONIALS` list stays empty (owner ruling 2026-07-18: no homepage
+testimonials). The same rule holds for future verticals (ski).
 
 **Never defensive messaging.** Matt's standing rule: phrases like "no
 sponsors," "no affiliates," "no pulled punches," "no algorithms, no pay-to-play"

@@ -333,40 +333,11 @@ def build_honest_check() -> str:
 </section>'''
 
 
-def build_testimonials() -> str:
-    # REAL quotes only. These are Gravel God athletes — the previous version
-    # of this section reused their quotes with road race names swapped in,
-    # which is a fabricated review. Never do that on a critic brand. Label
-    # the provenance; swap in road finishers as they report back.
-    testimonials = [
-        (
-            "I finished Mid-South 45 minutes faster than last year. The plan accounted for my 6-hour work weeks and bad left knee. Nothing else I tried did that.",
-            "Jason R.", "Mid-South 2025 (gravel)",
-        ),
-        (
-            "First gravel century. The fueling plan alone saved me. I watched people bonk at mile 60 while I was eating exactly what my plan said to eat.",
-            "Sarah M.", "Unbound 100 2025 (gravel)",
-        ),
-        (
-            "I have 5 hours a week and two kids. Every session in this plan mattered. No junk miles. Finished Big Sugar strong for the first time ever.",
-            "Mark D.", "Big Sugar 2025 (gravel)",
-        ),
-    ]
-    cards = ""
-    for quote, name, event in testimonials:
-        cards += f'''<div class="rl-tp-testimonial">
-        <p>&ldquo;{esc(quote)}&rdquo;</p>
-        <cite>&mdash; {esc(name)} &middot; {esc(event)}</cite>
-      </div>
-'''
-    return f'''<section class="rl-tp-section" id="testimonials">
-  <div class="rl-tp-section-label">Athletes</div>
-  <h2>Don&rsquo;t Take My Word For It.</h2>
-  <p class="rl-tp-testimonial-provenance">These are Gravel God athletes &mdash; same coach, same plan engine, different surface. Roadie Labs is new. Road finishers take this section over as the reports come in.</p>
-  <div class="rl-tp-testimonials">
-    {cards}
-  </div>
-</section>'''
+# No testimonials section. Until 2026-09-28 this page carried 3 quotes tagged
+# "(gravel)" and credited to Gravel God athletes. They were placeholder text
+# written by Claude sessions in Feb 2026, not real people, and were removed.
+# Proof returns only as consented, sourced receipts, enforced by
+# tests/test_no_unsourced_proof.py.
 
 
 def build_pricing() -> str:
@@ -957,38 +928,6 @@ def build_training_css() -> str:
 .rl-tp-for-list li::before {{ content: ">"; color: var(--rl-color-primary-brown); }}
 .rl-tp-not-list li::before {{ content: "x"; color: var(--rl-color-secondary-brown); }}
 
-/* ── Testimonials ── */
-.rl-tp-testimonials {{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--rl-spacing-md);
-  margin-top: var(--rl-spacing-lg);
-}}
-.rl-tp-testimonial-provenance {{ font-family: var(--rl-font-data); font-size: 12px; color: var(--rl-color-coral); max-width: 560px; margin: -8px 0 20px; line-height: 1.6; }}
-.rl-tp-testimonial {{
-  border: var(--rl-border-standard);
-  padding: var(--rl-spacing-lg);
-  background: var(--rl-color-white);
-}}
-.rl-tp-testimonial:nth-child(even) {{ background: var(--rl-color-sand); }}
-.rl-tp-testimonial p {{
-  font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-sm);
-  font-style: italic;
-  color: var(--rl-color-near-black);
-  line-height: var(--rl-line-height-prose);
-  margin: 0 0 var(--rl-spacing-sm) 0;
-}}
-.rl-tp-testimonial cite {{
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  font-style: normal;
-  font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
-  text-transform: uppercase;
-  letter-spacing: var(--rl-letter-spacing-wide);
-  display: block;
-}}
 
 /* ── Pricing ── */
 .rl-tp-pricing-wrap {{
@@ -1185,7 +1124,6 @@ def build_training_css() -> str:
   .rl-tp-section {{ padding: var(--rl-spacing-xl) var(--rl-spacing-md); }}
   .rl-tp-section h2 {{ font-size: clamp(20px, 5vw, 28px); }}
   .rl-tp-sample-grid {{ grid-template-columns: repeat(4, 1fr); }}
-  .rl-tp-testimonials {{ grid-template-columns: 1fr; }}
   .rl-tp-audience-grid {{ grid-template-columns: 1fr; }}
   .rl-tp-process {{ flex-direction: column; gap: var(--rl-spacing-sm); }}
   .rl-neo-brutalist-page {{ padding-bottom: var(--rl-spacing-2xl); }}
@@ -1400,7 +1338,6 @@ def generate_training_page(external_assets: dict = None) -> str:
     how = build_how_it_works()
     quote = build_rotating_quote()
     honest = build_honest_check()
-    testimonials = build_testimonials()
     pricing = build_pricing()
     faq = build_faq()
     sticky = build_mobile_sticky()
@@ -1468,8 +1405,6 @@ def generate_training_page(external_assets: dict = None) -> str:
   {quote}
 
   {honest}
-
-  {testimonials}
 
   {pricing}
 

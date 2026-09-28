@@ -248,7 +248,7 @@ def build_who() -> str:
     return f'''<section class="rl-consult-section" id="who">
   <h2 class="rl-consult-section-title">Who you&rsquo;ll talk to</h2>
   <div class="rl-consult-bio-text">
-    <p>I&rsquo;m Matti. Twelve years at TrainingPeaks, 100+ athletes coached, 1,000+ training plans sold. I&rsquo;ve raced at the national level and blown up at mile 80 enough times to know what bad pacing actually costs.</p>
+    <p>I&rsquo;m Matti. Twelve years at TrainingPeaks. I&rsquo;ve raced at the national level and blown up at mile 80 enough times to know what bad pacing actually costs.</p>
     <p>I built a database of {load_race_count()} road races &mdash; terrain, climbing, altitude, how they tend to be won and lost. When you ask &ldquo;which race should I do?&rdquo; or &ldquo;how do I fuel for this one?&rdquo;, the answer comes from that, not from vibes.</p>
   </div>
 </section>'''

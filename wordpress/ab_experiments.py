@@ -29,6 +29,13 @@ EXPERIMENTS = [
     # would have clobbered the new dynamic hero deck copy at runtime and was
     # already showing wrong counts to users. The data-ab="hero_tagline"
     # attribute was dropped from the homepage hero deck in generate_homepage.py.
+    #
+    # NOTE: "coaching_scarcity" retired 2026-09-28 (Receipts spec, phase 0
+    # takedown). Its variants ("Limited spots.", "20 athletes/month.",
+    # "Opens quarterly.") were unverified scarcity claims served to 100% of
+    # / and /about/ traffic. The data-ab="coaching_scarcity" attributes were
+    # dropped from generate_homepage.py and generate_about.py.
+    # tests/test_no_unsourced_proof.py fails if the strings return.
     {
         "id": "training_price_frame",
         "description": "Test price framing on training plans card",
@@ -121,36 +128,6 @@ EXPERIMENTS = [
         "conversion": {
             "type": "click",
             "selector": "[data-cta='custom_plan']",
-        },
-    },
-    {
-        "id": "coaching_scarcity",
-        "description": "Test scarcity framing on coaching card",
-        "selector": "[data-ab='coaching_scarcity']",
-        "pages": ["/", "/index.html", "/about/"],
-        "traffic": 1.0,
-        "start": "2026-02-16",
-        "end": None,
-        "variants": [
-            {
-                "id": "control",
-                "name": "Generic scarcity",
-                "content": "A human in your corner. Adapts week to week. Limited spots.",
-            },
-            {
-                "id": "variant_a",
-                "name": "Concrete number",
-                "content": "A human in your corner. Adapts week to week. 20 athletes/month.",
-            },
-            {
-                "id": "variant_b",
-                "name": "Opens quarterly",
-                "content": "A human in your corner. Adapts week to week. Opens quarterly.",
-            },
-        ],
-        "conversion": {
-            "type": "click",
-            "selector": "[data-ga='coaching_click'], [data-cta='coaching_apply']",
         },
     },
 ]

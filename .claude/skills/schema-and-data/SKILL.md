@@ -87,20 +87,23 @@ sites for a handover check — real third-party sites, real `ANTHROPIC_API_KEY` 
   `final_verdict`, `citations`. `history`/`biased_opinion` appear on real
   profiles but aren't schema-enforced — don't assume every profile has them.
 
-## 5. Cross-repo trust rule: never fabricate or vertical-swap social proof
+## 5. Cross-repo trust rule: never fabricate or borrow social proof
 
-roadielabs.com shipped fabricated testimonials **twice**, same root cause both
-times: reusing Gravel God athlete quotes without checking what they said.
-Commit `9aa8de5` (Jun 10) found the Sprint 41 fork had swapped road race names
-into real Gravel God testimonials — 3 on `/products/training-plans/` and all 50
-on `/about/`, same person/quote, different race, live on a site whose pitch is
-being an honest critic. Commit `47a4d0a` (Jul 2) found homepage testimonials
-re-fabricated the same way and purged them again. The fix both times: restore
-the real original quote with its real race labeled inline, add a provenance
-line explaining these are Gravel God results on the same coaching engine, and
-leave the section empty rather than fabricated until real road quotes exist.
-Treat a fabricated or vertical-swapped quote as security-bug severity. Real
-sourced quotes or nothing.
+roadielabs.com shipped placeholder testimonials from the Sprint 41 fork
+(`7db7daa`, Mar 2026) until 2026-09-28. The source was Gravel God's 55
+placeholder quotes, written by Claude sessions in February 2026. They were
+never real people. Commit `9aa8de5` (Jun 10) noticed the fork had swapped road
+race names into them, but restored the gravel originals and captioned them as
+real Gravel God athletes: 3 on `/training-plans/` and all 50 on `/about/`.
+Commit `47a4d0a` (Jul 2) emptied a second set of invented homepage quotes.
+Everything was removed 2026-09-28, with the unverified "100+ athletes /
+1,000+ plans" counts and the `coaching_scarcity` experiment.
+
+Rule: treat any unsourced quote, name, rating or count as security-bug
+severity. Real, consented, sourced receipts (per the Receipts spec) or
+nothing. Never assume another brand's proof is real because a comment or
+skill says so; check its provenance. `tests/test_no_unsourced_proof.py`
+guards the rendered pages.
 
 ## When NOT to use this
 
