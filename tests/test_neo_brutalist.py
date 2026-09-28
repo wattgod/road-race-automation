@@ -3,6 +3,8 @@
 import json
 import logging
 import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -47,6 +49,8 @@ from generate_neo_brutalist import (
     build_sports_event_jsonld,
     parse_event_dates,
     build_faq_jsonld,
+    GOAL_CARD_STATE_JS,
+    build_goal_card,
     build_sticky_cta,
     build_toc,
     build_training,
@@ -1670,3 +1674,237 @@ class TestJsonLdSafety:
             assert '</script>' not in block, (
                 f"JSON-LD block contains literal </script>: {block[:200]}"
             )
+
+
+class TestGoalCard:
+    """Year-round race-page goal card, road build of Gravel God's
+    build_goal_card (PR #397): a small interactive card under the ratings
+    spine linking into /goals/. Which of the 4 time-window states shows is
+    computed in the browser from the race's real date, not at build time."""
+
+    def test_links_to_goals_page_with_race_attribution(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert f"{neo.SITE_BASE_URL}/goals/?src=race&race=test-gravel-100" in html
+
+    def test_hidden_by_default(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert '<section class="rl-goal-card" id="goal-card" data-measure-section="goal-card" hidden>' in html
+
+    def test_state_is_computed_client_side_not_build_time(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert "rlGoalCardCompute(D.startISO, D.endISO, todayISO)" in html
+        assert "card.hidden = false" in html
+        assert '"2026-06-15"' not in html.split("<script>")[0]
+
+    def test_fires_goal_hero_click_on_button_tap(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert 'gtag("event", "goal_hero_click", { src: "race", race_slug: D.slug, goal_type: goalType })' in html
+
+    def test_fires_on_cta_click_too(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert 'posterCta.addEventListener("click", function() {' in html
+        assert "fireClick(lastGoalType)" in html
+
+    def test_never_fires_on_load_or_a_timer(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert "setInterval" not in html
+        assert "setTimeout" not in html
+        assert html.count("goal_hero_click") == 1
+
+    def test_today_uses_the_visitors_local_date_not_utc(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert 'now.getFullYear() + "-"' in html
+        assert 'now.getMonth() + 1' in html
+        assert 'now.getDate()' in html
+        assert "now.getUTCFullYear()" not in html
+        assert "now.getUTCMonth()" not in html
+        assert "now.getUTCDate()" not in html
+
+    def test_post_state_poster_label_makes_no_date_claim(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert neo.GOAL_CARD_COPY["poster_label_post"] in html
+        assert 'var labelTpl = isPost ? COPY.poster_label_post : COPY.poster_label;' in html
+
+    def test_static_data_is_embedded_with_the_script_safe_json_helper(self):
+        import inspect
+        from generate_neo_brutalist import build_goal_card as bgc
+        src = inspect.getsource(bgc)
+        assert "_safe_json_for_script(static_data)" in src
+        assert "_safe_json_for_script(GOAL_CARD_COPY)" in src
+        assert "json.dumps(" not in src
+
+    def test_no_innerhtml(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert "innerHTML" not in html
+
+    def test_buttons_are_real_buttons_not_divs(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        for goal in ("finish", "beat_time", "race_it", "same", "bigger"):
+            assert f'<button type="button" class="rl-goal-card-btn" data-goal="{goal}"' in html
+
+    def test_poster_has_aria_live(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert 'id="rl-goal-card-poster-wrap" hidden aria-live="polite"' in html
+
+    def test_poster_canvas_sizes_to_the_goal_line_not_a_fixed_box(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert "canvas.height = H;" in html
+        assert "lines.length * 40" in html
+        assert "var W = canvas.width, H = canvas.height, pad = 28;" not in html
+
+    def test_no_html_entity_arrow_that_would_double_escape(self, normalized_data):
+        """A literal "&rarr;" in GOAL_CARD_COPY double-escapes through esc()
+        into the visible text "&rarr;" instead of an arrow — caught by
+        screenshot review of the shipped card. The copy must use the real
+        unicode arrow character."""
+        html = build_goal_card(normalized_data)
+        assert "&rarr;" not in html
+        assert "→" in html
+
+    def test_card_sits_after_ratings_before_custom_plan(self, normalized_data):
+        html = generate_page(normalized_data)
+        ratings_pos = html.index('data-measure-section="rating"')
+        card_pos = html.index('data-measure-section="goal-card"')
+        plan_pos = html.index('data-measure-section="custom-plan"')
+        assert ratings_pos < card_pos < plan_pos
+
+    def test_suppressed_when_not_running(self, sample_race_data):
+        sample_race_data["race"]["eligibility"] = {"status": "defunct"}
+        rd = normalize_race_data(sample_race_data)
+        html = generate_page(rd, [])
+        assert 'data-measure-section="goal-card"' not in html
+
+    def test_suppressed_when_plan_source_blocked(self, sample_race_data):
+        sample_race_data["race"]["training_plan_clearance"] = {"status": "source_blocked"}
+        rd = normalize_race_data(sample_race_data)
+        html = generate_page(rd, [])
+        assert 'data-measure-section="goal-card"' not in html
+
+    def test_hidden_entirely_when_date_is_tbd(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["date_specific"] = "2026: TBD"
+        rd = normalize_race_data(sample_race_data)
+        assert build_goal_card(rd) == ""
+
+    def test_hidden_entirely_when_date_is_empty(self, sample_race_data):
+        sample_race_data["race"]["vitals"].pop("date_specific", None)
+        rd = normalize_race_data(sample_race_data)
+        assert build_goal_card(rd) == ""
+
+    def test_prep_kit_link_target(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert 'href="/race/test-gravel-100/prep-kit/"' in html
+
+    def test_copy_dict_is_the_single_source_for_all_strings(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        for state in ("far", "near", "week", "post"):
+            assert neo.GOAL_CARD_COPY[state]["headline"] in html
+        for goal_type, line in neo.GOAL_CARD_COPY["goal_lines"].items():
+            assert line in html
+
+    def test_freshness_line_shown_when_data_has_it(self, sample_race_data):
+        sample_race_data["race"]["research_metadata"] = {"last_verified": "2026-03-03"}
+        rd = normalize_race_data(sample_race_data)
+        html = build_goal_card(rd)
+        assert "Details last checked March 3, 2026" in html
+
+    def test_no_freshness_line_when_data_lacks_it(self, normalized_data):
+        html = build_goal_card(normalized_data)
+        assert "rl-goal-card-freshness" not in html
+
+    def test_hidden_attribute_css_overrides_are_not_lost(self):
+        """A real bug on the Gravel God side (caught by screenshotting the
+        far state): the buttons container and the prep-kit link each set an
+        explicit CSS `display` (flex / inline-block) for layout, which —
+        without a `[hidden]` override — beats the browser's default
+        `[hidden] { display: none }` rule and shows them even while their
+        `hidden` attribute is true. sol review, 2026-09-27: ported here."""
+        css = neo.get_page_css()
+        assert ".rl-goal-card-buttons[hidden]" in css
+        assert ".rl-goal-card-prep-link[hidden]" in css
+
+    def test_poster_colors_come_from_brand_tokens_not_hardcoded_hex(self, normalized_data):
+        # sol review, 2026-09-27: CLAUDE.md requires generators to source
+        # colors from brand_tokens.COLORS, never hand-typed hex. The token
+        # values happen to equal the same hex today, so this checks the
+        # SOURCE (no placeholder left, drawn from build_goal_card's own
+        # replace() call), not that the hex string is absent.
+        import inspect
+        from brand_tokens import COLORS
+        assert "__GOAL_CARD_INK__" not in GOAL_CARD_STATE_JS  # sanity: not left in the state fn
+        src = inspect.getsource(build_goal_card)
+        assert "COLORS['near_black']" in src
+        assert "COLORS['cool_white']" in src
+        assert "COLORS['signal_red']" in src
+        html = build_goal_card(normalized_data)
+        # These token values happen to equal the same hex the old hardcoded
+        # literal used, so a byte-identical render is expected and correct
+        # — the point is that the source now reads it from COLORS (checked
+        # above), so a future token change updates this automatically.
+        assert json.dumps(COLORS["near_black"]) in html
+        assert json.dumps(COLORS["cool_white"]) in html
+        assert json.dumps(COLORS["signal_red"]) in html
+
+
+class TestGoalCardStateMath:
+    """The state math (which of the 4 windows, the day count, the weekday,
+    the display date) is the literal JS the browser runs — run through
+    Node with a frozen "today" rather than re-implemented in Python, so a
+    passing test actually pins the deployed logic. Ported from Gravel God's
+    equivalent test (sol review, 2026-09-27)."""
+
+    NODE = shutil.which("node")
+
+    @staticmethod
+    def _compute(start_iso, end_iso, today_iso):
+        script = (
+            GOAL_CARD_STATE_JS
+            + '\nconsole.log(JSON.stringify(rlGoalCardCompute('
+            + f'{json.dumps(start_iso)}, {json.dumps(end_iso)}, {json.dumps(today_iso)})));'
+        )
+        result = subprocess.run(
+            ["node", "-e", script], capture_output=True, text=True, check=True
+        )
+        return json.loads(result.stdout.strip())
+
+    @pytest.mark.skipif(NODE is None, reason="node not installed")
+    @pytest.mark.parametrize(
+        ("start_iso", "end_iso", "today_iso", "expected_state"),
+        [
+            ("2026-12-24", "2026-12-24", "2026-09-24", "far"),    # 91 days out
+            ("2026-12-23", "2026-12-23", "2026-09-24", "near"),   # 90 days out (boundary)
+            ("2026-10-02", "2026-10-02", "2026-09-24", "near"),   # 8 days out (boundary)
+            ("2026-10-01", "2026-10-01", "2026-09-24", "week"),   # 7 days out (boundary)
+            ("2026-09-24", "2026-09-24", "2026-09-24", "week"),   # race day itself
+            ("2026-09-23", "2026-09-23", "2026-09-24", "post"),   # 1 day ago (boundary)
+            ("2026-07-26", "2026-07-26", "2026-09-24", "post"),   # 60 days ago (boundary)
+            ("2026-07-25", "2026-07-25", "2026-09-24", "hidden"),  # 61 days ago (boundary)
+            ("not-a-date", "not-a-date", "2026-09-24", "hidden"),  # unparseable
+            # Multi-day event: started before today, ends after today.
+            ("2026-09-21", "2026-09-25", "2026-09-24", "week"),
+            # Multi-day event ending exactly today: still running, not "post".
+            ("2026-09-20", "2026-09-24", "2026-09-24", "week"),
+            # Multi-day event that ended yesterday: post, counted from END
+            # date (1 day since it wrapped up), not from the start date.
+            ("2026-09-18", "2026-09-23", "2026-09-24", "post"),
+        ],
+    )
+    def test_state_boundaries(self, start_iso, end_iso, today_iso, expected_state):
+        assert self._compute(start_iso, end_iso, today_iso)["state"] == expected_state
+
+    @pytest.mark.skipif(NODE is None, reason="node not installed")
+    def test_multiday_post_days_counts_from_end_not_start(self):
+        result = self._compute("2026-09-18", "2026-09-23", "2026-09-24")
+        assert result["days"] == "1 day"  # 1 day since it ENDED, not 6 since it started
+
+    @pytest.mark.skipif(NODE is None, reason="node not installed")
+    def test_singular_day_is_not_pluralized(self):
+        assert self._compute("2026-09-23", "2026-09-23", "2026-09-24")["days"] == "1 day"
+
+    @pytest.mark.skipif(NODE is None, reason="node not installed")
+    def test_plural_days(self):
+        assert self._compute("2026-08-25", "2026-08-25", "2026-09-24")["days"] == "30 days"
+
+    @pytest.mark.skipif(NODE is None, reason="node not installed")
+    def test_weekday_is_the_races_weekday_not_todays(self):
+        # 2026-09-26 is a Saturday
+        assert self._compute("2026-09-26", "2026-09-26", "2026-09-24")["weekday"] == "Saturday"

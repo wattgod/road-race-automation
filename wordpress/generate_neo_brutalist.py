@@ -885,6 +885,10 @@ def normalize_race_data(data: dict) -> dict:
         # public while blocking race-specific plan commerce until the next
         # edition is sufficiently sourced.
         'training_plan_clearance': race.get('training_plan_clearance') or {},
+        # Rare in the data today (most profiles have no research_metadata) —
+        # the goal card's freshness line (build_goal_card) reads this and
+        # never invents a date when it's absent.
+        'last_verified': (race.get('research_metadata') or {}).get('last_verified', ''),
         'slug': race.get('slug', ''),
         'tagline': race.get('tagline', ''),
         'overall_score': rating.get('overall_score', 0),
@@ -3443,6 +3447,265 @@ def build_training(rd: dict) -> str:
       </div>
     </div>
   </section>'''
+
+
+GOAL_CARD_COPY = {
+    "far": {
+        "headline": "{race} {year} is {days} out.",
+        "sub": "What are you going there to do?",
+    },
+    "near": {
+        "headline": "{days} to {race}.",
+        "sub": "Still the goal?",
+    },
+    "week": {
+        "headline": "{race} is {weekday}.",
+        "sub": "",
+    },
+    "post": {
+        "headline": "{race} was {days} ago.",
+        "sub": "Same goal next year, or a bigger one?",
+    },
+    "buttons": {
+        "finish": "Finish",
+        "beat_time": "Beat a time",
+        "race_it": "Race it",
+        "same": "Same",
+        "bigger": "Bigger",
+    },
+    "goal_lines": {
+        "finish": "Finish {race}.",
+        "beat_time": "Finish {race} faster than last time.",
+        "race_it": "Race {race}, not just ride it.",
+        "same": "Ride {race} again, and ride it better.",
+        "bigger": "Take on something bigger than {race}.",
+    },
+    "poster_label": "BY {date}, I WILL",
+    # A past date in "BY {date}, I WILL" reads as nonsense once the race is
+    # over (sol review, carried over from the gravel build) — the post-race
+    # states (Same/Bigger) get their own label with no date claim, since
+    # there's no confirmed next edition yet.
+    "poster_label_post": "NEXT TIME, I WILL",
+    "poster_cta": "Finish the poster →",
+    "prep_kit_link": "Open the {race} prep kit →",
+    "freshness": "Details last checked {date}",
+}
+
+# The state math — which of the 4 time windows applies, the pluralized day
+# count, the weekday, the display date — run against the real "today" in
+# the browser (race pages aren't rebuilt daily, so a value baked in at
+# generation time would go stale the moment the calendar turns). Ported
+# verbatim from Gravel God's build_goal_card (wordpress/generate_neo_brutalist.py)
+# — same algorithm, same edge cases (a multi-day event must not fall into
+# the post-race state while it is still running; the post-race day count is
+# measured from the END date, not the start).
+GOAL_CARD_STATE_JS = r'''function rlGoalCardCompute(startISO, endISO, todayISO) {
+  var WD = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var MO = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var start = new Date(startISO + "T00:00:00Z");
+  var end = new Date((endISO || startISO) + "T00:00:00Z");
+  var today = new Date(todayISO + "T00:00:00Z");
+  if (isNaN(start.getTime()) || isNaN(end.getTime()) || isNaN(today.getTime())) { return { state: "hidden" }; }
+  var msDay = 86400000;
+  var diffToStart = Math.round((start.getTime() - today.getTime()) / msDay);
+  var diffFromEnd = Math.round((today.getTime() - end.getTime()) / msDay);
+  var state, days;
+  if (diffFromEnd > 0) {
+    if (diffFromEnd > 60) { state = "hidden"; }
+    else { state = "post"; days = diffFromEnd === 1 ? "1 day" : (diffFromEnd + " days"); }
+  } else if (diffToStart > 90) {
+    state = "far"; days = diffToStart === 1 ? "1 day" : (diffToStart + " days");
+  } else if (diffToStart >= 8) {
+    state = "near"; days = diffToStart === 1 ? "1 day" : (diffToStart + " days");
+  } else {
+    state = "week";
+  }
+  return {
+    state: state,
+    days: days,
+    weekday: WD[start.getUTCDay()],
+    year: String(start.getUTCFullYear()),
+    date: MO[start.getUTCMonth()] + " " + start.getUTCDate() + ", " + start.getUTCFullYear()
+  };
+}'''
+
+# Plain template (not an f-string — the JS below has real braces of its
+# own). __GOAL_CARD_STATIC__ / __GOAL_CARD_COPY__ / __GOAL_CARD_STATE_FN__
+# are replaced with real values in build_goal_card.
+GOAL_CARD_SCRIPT = r'''<script>
+(function() {
+  var D = __GOAL_CARD_STATIC__;
+  var COPY = __GOAL_CARD_COPY__;
+__GOAL_CARD_STATE_FN__
+  function fill(tpl, vars) {
+    return tpl.replace(/\{(\w+)\}/g, function(m, k) { return vars[k] != null ? vars[k] : ""; });
+  }
+  function drawPoster(canvas, header, goal) {
+    var ctx = canvas.getContext("2d");
+    if (!ctx) { return; }
+    var W = canvas.width, pad = 28;
+    var ink = __GOAL_CARD_INK__, paper = __GOAL_CARD_PAPER__, accent = __GOAL_CARD_ACCENT__;
+    var maxW = W - pad * 2;
+    var goalFont = "700 32px 'Source Serif 4', Georgia, serif";
+    ctx.font = goalFont;
+    var words = String(goal).split(/\s+/), lines = [], line = "";
+    words.forEach(function(w) {
+      var next = line ? line + " " + w : w;
+      if (ctx.measureText(next).width <= maxW || !line) { line = next; }
+      else { lines.push(line); line = w; }
+    });
+    if (line) { lines.push(line); }
+    lines = lines.slice(0, 4);
+    var goalTop = pad + 46;
+    var H = goalTop + lines.length * 40 + 8 + 5 + pad;
+    canvas.height = H; // resizing clears the canvas AND resets context state
+    ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
+    ctx.textBaseline = "top";
+    ctx.font = "700 15px 'Sometype Mono', monospace";
+    ctx.fillStyle = accent;
+    ctx.fillText(header, pad, pad);
+    ctx.font = goalFont;
+    ctx.fillStyle = ink;
+    var y = goalTop;
+    lines.forEach(function(l) { ctx.fillText(l, pad, y); y += 40; });
+    ctx.fillStyle = accent;
+    ctx.fillRect(pad, y + 8, 120, 5);
+  }
+  var card = document.getElementById("goal-card");
+  var headline = document.getElementById("rl-goal-card-headline");
+  var sub = document.getElementById("rl-goal-card-sub");
+  var buttons = document.getElementById("rl-goal-card-buttons");
+  var prepLink = document.getElementById("rl-goal-card-prep-link");
+  var posterWrap = document.getElementById("rl-goal-card-poster-wrap");
+  var posterCanvas = document.getElementById("rl-goal-card-poster-canvas");
+  var posterCta = document.getElementById("rl-goal-card-poster-cta");
+  if (!card || !headline || !posterCanvas) { return; }
+
+  // The visitor's own local calendar day, not UTC — using UTC getters here
+  // would flip the state a day early every evening for anyone west of
+  // Greenwich.
+  var now = new Date();
+  var todayISO = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+  var computed = rlGoalCardCompute(D.startISO, D.endISO, todayISO);
+  if (computed.state === "hidden") { return; }
+
+  var vars = { race: D.race, year: computed.year, days: computed.days, weekday: computed.weekday, date: computed.date };
+  headline.textContent = fill(COPY[computed.state].headline, vars);
+  var subText = COPY[computed.state].sub;
+  if (subText) { sub.textContent = subText; sub.hidden = false; } else { sub.hidden = true; }
+
+  var showButtons = computed.state === "far" || computed.state === "near" || computed.state === "post";
+  buttons.hidden = !showButtons;
+  var isPost = computed.state === "post";
+  var goalTypes = isPost ? ["same", "bigger"] : ["finish", "beat_time", "race_it"];
+  var allButtons = buttons.querySelectorAll("[data-goal]");
+  for (var i = 0; i < allButtons.length; i++) {
+    var goal = allButtons[i].getAttribute("data-goal");
+    allButtons[i].hidden = !(showButtons && goalTypes.indexOf(goal) !== -1);
+  }
+  prepLink.hidden = !(computed.state === "near" || computed.state === "week");
+
+  var lastGoalType = "";
+  function fireClick(goalType) {
+    if (typeof gtag === "function") {
+      gtag("event", "goal_hero_click", { src: "race", race_slug: D.slug, goal_type: goalType });
+    }
+  }
+  buttons.addEventListener("click", function(e) {
+    var btn = e.target.closest ? e.target.closest("[data-goal]") : null;
+    if (!btn || btn.hidden) { return; }
+    var goalType = btn.getAttribute("data-goal");
+    lastGoalType = goalType;
+    var goalLine = fill(COPY.goal_lines[goalType], vars);
+    var labelTpl = isPost ? COPY.poster_label_post : COPY.poster_label;
+    drawPoster(posterCanvas, fill(labelTpl, vars).toUpperCase(), goalLine);
+    posterWrap.hidden = false;
+    posterCta.setAttribute("href", D.goalsHref + "&goal_type=" + encodeURIComponent(goalType));
+    fireClick(goalType);
+  });
+  posterCta.addEventListener("click", function() {
+    if (lastGoalType) { fireClick(lastGoalType); }
+  });
+
+  card.hidden = false;
+})();
+</script>'''
+
+
+def build_goal_card(rd: dict) -> str:
+    """Year-round race-page goal card linking into /goals/ (road build of
+    Gravel God's build_goal_card, PR #397).
+
+    Which of the 4 time-window states applies (>90 days out / 8-90 days out
+    / race week / 1-60 days after) is computed client-side from the race's
+    real date — race pages are not rebuilt daily, so a build-time check
+    would go stale the moment the calendar turns. No confirmed date, or
+    more than 60 days past the race, hides the card entirely
+    (GOAL_CARD_STATE_JS's "hidden" branch). Hidden by default; unhidden by
+    the inline script only when a visible state is computed.
+    """
+    race_iso, end_iso = parse_event_dates(rd['vitals'].get('date_specific', ''))
+    if not race_iso:
+        # TBD / unparseable date — nothing to build a countdown from.
+        return ''
+
+    slug = rd['slug']
+    name = esc(rd['name'])
+    goals_href = f"{SITE_BASE_URL}/goals/?src=race&race={slug}"
+    prep_kit_href = f"/race/{slug}/prep-kit/"
+    prep_kit_text = esc(GOAL_CARD_COPY['prep_kit_link'].replace('{race}', rd['name']))
+
+    # Freshness line — only when the source data actually has a checked
+    # date (research_metadata.last_verified, normalize_race_data's
+    # 'last_verified'). Most profiles don't have one; never invent it.
+    last_checked_html = ''
+    last_verified = rd.get('last_verified', '')
+    date_parts = last_verified.split('-') if last_verified else []
+    if len(date_parts) == 3:
+        month_names = {v: k.capitalize() for k, v in MONTH_NUMBERS.items()}
+        display_month = month_names.get(date_parts[1], date_parts[1])
+        display_date = f"{display_month} {int(date_parts[2])}, {date_parts[0]}"
+        freshness_text = esc(GOAL_CARD_COPY['freshness'].replace('{date}', display_date))
+        last_checked_html = f'<p class="rl-goal-card-freshness">{freshness_text}</p>'
+
+    static_data = {
+        'slug': slug, 'race': rd['name'], 'goalsHref': goals_href,
+        'startISO': race_iso, 'endISO': end_iso or race_iso,
+    }
+
+    html_out = f'''<section class="rl-goal-card" id="goal-card" data-measure-section="goal-card" hidden>
+  <div class="rl-goal-card-body">
+    <p class="rl-goal-card-headline" id="rl-goal-card-headline"></p>
+    <p class="rl-goal-card-sub" id="rl-goal-card-sub" hidden></p>
+    <div class="rl-goal-card-buttons" id="rl-goal-card-buttons" hidden>
+      <button type="button" class="rl-goal-card-btn" data-goal="finish" hidden>{esc(GOAL_CARD_COPY['buttons']['finish'])}</button>
+      <button type="button" class="rl-goal-card-btn" data-goal="beat_time" hidden>{esc(GOAL_CARD_COPY['buttons']['beat_time'])}</button>
+      <button type="button" class="rl-goal-card-btn" data-goal="race_it" hidden>{esc(GOAL_CARD_COPY['buttons']['race_it'])}</button>
+      <button type="button" class="rl-goal-card-btn" data-goal="same" hidden>{esc(GOAL_CARD_COPY['buttons']['same'])}</button>
+      <button type="button" class="rl-goal-card-btn" data-goal="bigger" hidden>{esc(GOAL_CARD_COPY['buttons']['bigger'])}</button>
+    </div>
+    <a href="{esc(prep_kit_href)}" class="rl-goal-card-prep-link" id="rl-goal-card-prep-link" hidden>{prep_kit_text}</a>
+    <div class="rl-goal-card-poster-wrap" id="rl-goal-card-poster-wrap" hidden aria-live="polite">
+      <canvas class="rl-goal-card-poster-canvas" id="rl-goal-card-poster-canvas" width="640" height="300"></canvas>
+      <a class="rl-goal-card-poster-cta" id="rl-goal-card-poster-cta" href="{esc(goals_href)}">{esc(GOAL_CARD_COPY['poster_cta'])}</a>
+    </div>
+    {last_checked_html}
+  </div>
+</section>
+'''
+    script_out = (
+        GOAL_CARD_SCRIPT
+        .replace('__GOAL_CARD_STATIC__', _safe_json_for_script(static_data))
+        .replace('__GOAL_CARD_COPY__', _safe_json_for_script(GOAL_CARD_COPY))
+        .replace('__GOAL_CARD_STATE_FN__', GOAL_CARD_STATE_JS)
+        # Canvas colors sourced from brand_tokens.COLORS, not hardcoded hex
+        # (CLAUDE.md, sol review 2026-09-27) — same values tokens.css ships
+        # as --rl-color-near-black/cool-white/signal-red.
+        .replace('__GOAL_CARD_INK__', _safe_json_for_script(COLORS['near_black']))
+        .replace('__GOAL_CARD_PAPER__', _safe_json_for_script(COLORS['cool_white']))
+        .replace('__GOAL_CARD_ACCENT__', _safe_json_for_script(COLORS['signal_red']))
+    )
+    return html_out + script_out
 
 
 def build_custom_plan_offer(rd: dict) -> str:
@@ -6178,6 +6441,25 @@ def get_page_css() -> str:
   .rl-neo-brutalist-page .rl-plan-ladder-btn {{ min-height: 44px; }}
 }}
 
+/* Goal card (year-round, links into /goals/) */
+.rl-neo-brutalist-page .rl-goal-card {{ max-width: var(--rl-max-width, 1200px); margin: 0 auto var(--rl-spacing-xl); padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 44px); border: var(--rl-border-standard); border-top: 5px solid var(--rl-color-signal-red); background: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-goal-card-headline {{ margin: 0; font-family: var(--rl-font-editorial); font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.2; color: var(--rl-color-near-black); }}
+.rl-neo-brutalist-page .rl-goal-card-sub {{ margin: var(--rl-spacing-2xs) 0 0; font-family: var(--rl-font-editorial); font-style: italic; font-size: var(--rl-font-size-base); color: var(--rl-color-secondary-blue); }}
+.rl-neo-brutalist-page .rl-goal-card-buttons {{ display: flex; flex-wrap: wrap; gap: var(--rl-spacing-xs); margin-top: var(--rl-spacing-md); }}
+.rl-neo-brutalist-page .rl-goal-card-btn {{ font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 10px 16px; background: var(--rl-color-white); color: var(--rl-color-near-black); border: 2px solid var(--rl-color-near-black); cursor: pointer; }}
+.rl-neo-brutalist-page .rl-goal-card-btn:hover {{ background: var(--rl-color-signal-red); color: var(--rl-color-white); border-color: var(--rl-color-signal-red); }}
+.rl-neo-brutalist-page .rl-goal-card-prep-link {{ display: inline-block; margin-top: var(--rl-spacing-md); font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-signal-red); text-decoration: none; }}
+.rl-neo-brutalist-page .rl-goal-card-prep-link:hover {{ text-decoration: underline; }}
+.rl-neo-brutalist-page .rl-goal-card-poster-wrap {{ margin-top: var(--rl-spacing-md); max-width: 480px; }}
+.rl-neo-brutalist-page .rl-goal-card-poster-canvas {{ display: block; width: 100%; height: auto; border: var(--rl-border-standard); background: var(--rl-color-near-black); }}
+.rl-neo-brutalist-page .rl-goal-card-poster-cta {{ display: block; text-align: center; margin-top: var(--rl-spacing-xs); padding: var(--rl-spacing-sm); background: var(--rl-color-near-black); color: var(--rl-color-white); font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; border: var(--rl-border-standard); }}
+.rl-neo-brutalist-page .rl-goal-card-poster-cta:hover {{ background: var(--rl-color-white); color: var(--rl-color-near-black); }}
+.rl-neo-brutalist-page .rl-goal-card-freshness {{ margin: var(--rl-spacing-md) 0 0; font-family: var(--rl-font-data); font-size: 10px; color: var(--rl-color-steel); letter-spacing: 1px; }}
+/* display: flex/inline-block above would otherwise beat the UA [hidden]
+   rule (an author "display" declaration always wins over the default
+   stylesheet) — sol review, 2026-09-27. */
+.rl-neo-brutalist-page .rl-goal-card-buttons[hidden], .rl-neo-brutalist-page .rl-goal-card-prep-link[hidden] {{ display: none; }}
+
 /* Countdown */
 .rl-neo-brutalist-page .rl-countdown {{ border: 1px solid var(--rl-color-signal-red); background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); padding: var(--rl-spacing-md); text-align: center; font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-ultra-wide); margin-bottom: 20px; }}
 .rl-neo-brutalist-page .rl-countdown-num {{ font-size: 32px; color: var(--rl-color-signal-red); display: block; line-height: 1.2; }}
@@ -6614,6 +6896,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     commerce_blocked = not_running or plan_source_blocked
     status_notice = build_status_notice(rd)
     custom_plan = '' if commerce_blocked else build_custom_plan_offer(rd)
+    goal_card = '' if commerce_blocked else build_goal_card(rd)
     coaching = build_coaching_footnote(rd)
     training = build_training_intelligence(rd)
     plan_ladder = '' if commerce_blocked else build_plan_ladder(rd)
@@ -6657,7 +6940,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
 
     # Approved shared contract: ratings → custom plan → coaching footnote →
     # Full Breakdown. Brand and race-specific editorial live in the Deep Dive.
-    spine_sections = [ratings, custom_plan, coaching, breakdown]
+    spine_sections = [ratings, goal_card, custom_plan, coaching, breakdown]
     spine = '\n\n  '.join(section for section in spine_sections if section)
 
     deep_sections = []
