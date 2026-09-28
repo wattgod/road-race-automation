@@ -490,6 +490,35 @@ def sync_homepage(homepage_file: str):
         return None
 
 
+def sync_goals(goals_file: str):
+    """Upload the 2027 goals page to /goals/index.html (SSH mkdir + SCP)."""
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+    html_path = Path(goals_file)
+    if not html_path.exists():
+        print(f"✗ Goals page HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_goals_2027.py first")
+        return None
+    remote_base = f"{REMOTE_BASE}/goals"
+    try:
+        subprocess.run(["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+                        f"mkdir -p {remote_base}"],
+                       check=True, capture_output=True, text=True, timeout=30)
+        subprocess.run(["scp", "-i", str(SSH_KEY), "-P", port, str(html_path),
+                        f"{user}@{host}:{remote_base}/index.html"],
+                       check=True, capture_output=True, text=True, timeout=60)
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Goals page upload failed: {(e.stderr or '').strip()}")
+        return None
+    except Exception as e:
+        print(f"✗ Error uploading goals page: {e}")
+        return None
+    print("✓ Uploaded goals page: https://roadielabs.com/goals/")
+    return True
+
+
 def sync_about(about_file: str):
     """Upload about.html to /about/index.html on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
@@ -3165,6 +3194,14 @@ if __name__ == "__main__":
         help="Path to homepage HTML (default: wordpress/output/homepage.html)"
     )
     parser.add_argument(
+        "--sync-goals", action="store_true",
+        help="Upload the 2027 goals page to /goals/ via SCP"
+    )
+    parser.add_argument(
+        "--goals-file", default="wordpress/output/goals/index.html",
+        help="Path to goals page HTML (default: wordpress/output/goals/index.html)"
+    )
+    parser.add_argument(
         "--sync-about", action="store_true",
         help="Upload about page to /about/ via SCP"
     )
@@ -3438,7 +3475,7 @@ if __name__ == "__main__":
         args.purge_cache = True
 
     has_action = any([args.sync_index, args.sync_widget,
-                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_about,
+                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_about,
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_consult_intake,
@@ -3466,6 +3503,8 @@ if __name__ == "__main__":
         sync_og(args.og_dir)
     if args.sync_homepage:
         sync_homepage(args.homepage_file)
+    if args.sync_goals:
+        sync_goals(args.goals_file)
     if args.sync_about:
         sync_about(args.about_file)
     if args.sync_questionnaire:
