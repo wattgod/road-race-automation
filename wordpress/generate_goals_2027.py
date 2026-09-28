@@ -1262,7 +1262,7 @@ def generate_goals_page(external_assets: dict = None) -> str:
   </div>
   {footer}
   {get_consent_banner_html()}
-  {get_site_header_js()}
+  <script>{get_site_header_js()}</script>
   {build_goals_js()}
 </body>
 </html>'''

@@ -296,3 +296,14 @@ def test_worker_is_the_only_transport_no_formsubmit_backstop():
     # this lead source — no email backstop, no FormSubmit relay.
     js = build_goals_js()
     assert "formsubmit" not in js.lower()
+
+
+def test_header_js_is_inside_a_script_tag():
+    # shared_header.get_site_header_js() returns bare JS; unwrapped, it
+    # printed as visible text under the footer and the mobile nav toggle
+    # never ran (caught in review, Sep 27).
+    import re
+    from generate_goals_2027 import generate_goals_page
+    html = generate_goals_page()
+    visible = re.sub(r"<(script|style)\b.*?</\1>", "", html, flags=re.S)
+    assert "rl-site-header-toggle')" not in visible
