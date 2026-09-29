@@ -519,6 +519,41 @@ def sync_goals(goals_file: str):
     return True
 
 
+def sync_race_debrief(debrief_file: str):
+    """Upload the race debrief to /race-debrief/index.html (SSH mkdir + SCP).
+
+    Deploy order (gravel-race-automation's plan_debrief PR): Mission Control,
+    then the fueling-lead-intake worker, then this page. An older worker
+    rejects source=plan_debrief, and an older Mission Control routes it into
+    marketing.
+    """
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+    html_path = Path(debrief_file)
+    if not html_path.exists():
+        print(f"✗ Race debrief HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_race_debrief.py first")
+        return None
+    remote_base = f"{REMOTE_BASE}/race-debrief"
+    try:
+        subprocess.run(["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+                        f"mkdir -p {remote_base}"],
+                       check=True, capture_output=True, text=True, timeout=30)
+        subprocess.run(["scp", "-i", str(SSH_KEY), "-P", port, str(html_path),
+                        f"{user}@{host}:{remote_base}/index.html"],
+                       check=True, capture_output=True, text=True, timeout=60)
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Race debrief upload failed: {(e.stderr or '').strip()}")
+        return None
+    except Exception as e:
+        print(f"✗ Error uploading race debrief: {e}")
+        return None
+    print("✓ Uploaded race debrief: https://roadielabs.com/race-debrief/")
+    return True
+
+
 def sync_about(about_file: str):
     """Upload about.html to /about/index.html on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
@@ -3202,6 +3237,14 @@ if __name__ == "__main__":
         help="Path to goals page HTML (default: wordpress/output/goals/index.html)"
     )
     parser.add_argument(
+        "--sync-race-debrief", action="store_true",
+        help="Upload the race debrief to /race-debrief/ via SCP (after MC and the worker)"
+    )
+    parser.add_argument(
+        "--race-debrief-file", default="wordpress/output/race-debrief/index.html",
+        help="Path to race debrief HTML (default: wordpress/output/race-debrief/index.html)"
+    )
+    parser.add_argument(
         "--sync-about", action="store_true",
         help="Upload about page to /about/ via SCP"
     )
@@ -3475,7 +3518,7 @@ if __name__ == "__main__":
         args.purge_cache = True
 
     has_action = any([args.sync_index, args.sync_widget,
-                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_about,
+                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_race_debrief, args.sync_about,
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_consult_intake,
@@ -3505,6 +3548,8 @@ if __name__ == "__main__":
         sync_homepage(args.homepage_file)
     if args.sync_goals:
         sync_goals(args.goals_file)
+    if args.sync_race_debrief:
+        sync_race_debrief(args.race_debrief_file)
     if args.sync_about:
         sync_about(args.about_file)
     if args.sync_questionnaire:
