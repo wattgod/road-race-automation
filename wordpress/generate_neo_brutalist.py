@@ -285,7 +285,10 @@ CURRENT_YEAR = str(datetime.now().year)
 # race" plan ladder block, road-discipline variant.
 # Flip to False to disable the block globally without touching call sites
 # (build_plan_ladder / generate_page still run, they just short-circuit).
-PLAN_LADDER_ENABLED = True
+# Matti, Sep 28: Roadie Labs' plan offer is the custom plan built by the
+# plan pipeline (race-page 'Start my custom plan' CTA -> /questionnaire/),
+# not the TrainingPeaks catalog ladder. Off until he says otherwise.
+PLAN_LADDER_ENABLED = False
 
 # db/plans.json lives in the sibling gravel-god-training-plans repo, keyed
 # by race_slug. Resolved relative to this file so it works regardless of cwd.

@@ -1908,3 +1908,13 @@ class TestGoalCardStateMath:
     def test_weekday_is_the_races_weekday_not_todays(self):
         # 2026-09-26 is a Saturday
         assert self._compute("2026-09-26", "2026-09-26", "2026-09-24")["weekday"] == "Saturday"
+
+
+def test_road_plan_offer_is_the_custom_plan_not_the_tp_ladder():
+    # Matti, Sep 28: road race pages sell the pipeline-built custom plan
+    # (Start my custom plan -> /questionnaire/), not the TP catalog ladder.
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).parent.parent / "wordpress"))
+    import generate_neo_brutalist as g
+    assert g.PLAN_LADDER_ENABLED is False
