@@ -25,6 +25,17 @@ jobs:
           # here is how gravel-race-automation's CI silently ran red for
           # three months (missing deps killed pytest at collection)
           pip install -r requirements.txt
+
+      # tests/test_race_debrief_playwright.py drives the page in Chromium;
+      # without the browser it skips (as it does in Regression Tests).
+      - name: Cache Playwright browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Install Playwright browser
+        run: python -m playwright install chromium
       
       - name: Run tests
         run: |

@@ -6,7 +6,7 @@ intercepted, and checks the body the worker received, what GA4 was told,
 what the rider saw, and that nothing threw. The body is the one
 gravel-race-automation's chain test carries through the worker and Mission
 Control (its tests/fixtures/race_debrief_submission_roadie.json). Skipped
-without Playwright.
+without Playwright or its Chromium (Run Tests installs it).
 """
 from __future__ import annotations
 
@@ -32,7 +32,20 @@ try:
 except ImportError:  # pragma: no cover
     sync_playwright = None
 
-pytestmark = pytest.mark.skipif(sync_playwright is None, reason="playwright not installed")
+
+def _has_chromium() -> bool:
+    """The package alone is not enough: the browser is a separate install
+    (`python -m playwright install chromium`, which Run Tests does)."""
+    if sync_playwright is None:
+        return False
+    try:
+        with sync_playwright() as pw:
+            return Path(pw.chromium.executable_path).exists()
+    except Exception:  # noqa: BLE001
+        return False
+
+
+pytestmark = pytest.mark.skipif(not _has_chromium(), reason="playwright or its Chromium not installed")
 
 FIXTURE = json.loads((ROOT / "tests" / "fixtures" / "race_debrief_submission.json").read_text(encoding="utf-8"))
 PAGE_URL = "https://roadielabs.com/race-debrief/"
