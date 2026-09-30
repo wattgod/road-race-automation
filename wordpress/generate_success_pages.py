@@ -33,6 +33,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
+from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -490,7 +491,7 @@ def generate_success_page(page_key: str,
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    return f'''<!DOCTYPE html>
+    return apply_live_head_patches(f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -527,7 +528,7 @@ def generate_success_page(page_key: str,
 {success_js}
 {get_consent_banner_html()}
 </body>
-</html>'''
+</html>''')
 
 
 def main():

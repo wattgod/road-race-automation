@@ -36,6 +36,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
+from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -1601,7 +1602,14 @@ def build_apply_js() -> str:
   document.querySelectorAll(".rl-apply-checkbox-option").forEach(function(option) {
     option.addEventListener("click", function(e) {
       var input = this.querySelector("input");
-      if (e.target.tagName !== "INPUT") { input.checked = !input.checked; }
+      if (e.target !== input) {
+        /* A <label> forwards the click to its checkbox natively, and that
+           forwarded click lands back here with e.target === input. Toggling
+           here as well un-checked the box again, so tapping a day name or
+           the option box did nothing (only the tiny box itself worked). */
+        if (this.tagName === "LABEL") { return; }
+        input.checked = !input.checked;
+      }
 
       var name = input.name;
       var value = input.value;
@@ -1925,7 +1933,7 @@ def generate_apply_page(external_assets=None):
     else:
         page_css = get_page_css()
 
-    return f'''<!DOCTYPE html>
+    return apply_live_head_patches(f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1990,7 +1998,7 @@ def generate_apply_page(external_assets=None):
 </script>
 {get_consent_banner_html()}
 </body>
-</html>'''
+</html>''')
 
 
 def main():

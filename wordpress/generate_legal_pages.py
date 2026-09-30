@@ -25,6 +25,7 @@ from brand_tokens import get_ga4_head_snippet, get_preload_hints
 from shared_footer import get_mega_footer_html, get_mega_footer_css
 from shared_header import get_site_header_html, get_site_header_css
 from cookie_consent import get_consent_banner_html
+from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -32,6 +33,10 @@ SITE_NAME = "Roadie Labs"
 CONTACT_EMAIL = "gravelgodcoaching@gmail.com"
 SITE_URL = SITE_BASE_URL
 CURRENT_YEAR = date.today().year
+# The month the current policy text went live. It was derived from the
+# generation date, so every regen re-dated unchanged policies; bump this
+# only when the policy text itself changes.
+POLICY_LAST_UPDATED = "August 2026"
 
 
 def esc(text: str) -> str:
@@ -365,7 +370,7 @@ def generate_page(page_key: str, output_dir: Path) -> None:
   <section class="rl-legal-hero">
     <div class="rl-legal-hero-inner">
       <h1 class="rl-legal-hero-title">{esc(title)}</h1>
-      <p class="rl-legal-hero-date">Last updated: {date.today().strftime('%B')} {CURRENT_YEAR}</p>
+      <p class="rl-legal-hero-date">Last updated: {POLICY_LAST_UPDATED}</p>
     </div>
   </section>
 
@@ -379,6 +384,10 @@ def generate_page(page_key: str, output_dir: Path) -> None:
 </body>
 </html>"""
 
+    # Live /cookies/ carries only the logo patch; the other legal pages
+    # carry both (see live_head_patches.py).
+    html_content = apply_live_head_patches(
+        html_content, desktop_width=(page_key != "cookies"))
     out_path = output_dir / f"{slug}.html"
     out_path.write_text(html_content)
     print(f"Generated {out_path} ({len(html_content):,} bytes)")

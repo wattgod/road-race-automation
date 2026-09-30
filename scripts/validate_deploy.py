@@ -508,6 +508,14 @@ def check_coaching_apply(v):
         v.check("apply_page_view" in body, "Apply page has GA4 tracking", "Missing GA4 events")
         v.check("application/ld+json" in body, "Apply page has JSON-LD", "Missing JSON-LD")
         v.check("inferTraits" in body, "Apply page has blindspot inference", "Missing inference")
+        v.check("coaching-intake.gravelgodcoaching.workers.dev" in body
+                and "coaching_intake_submission_id" in body,
+                "Apply page posts to the coaching-intake Worker",
+                "Missing Worker transport — applications won't reach the pipeline")
+        v.check('name="tier"' in body, "Apply page has the tier the Worker requires",
+                "Missing tier field — the Worker rejects every application")
+        v.check("formsubmit.co" not in body.lower(), "Apply page has no FormSubmit call",
+                "formsubmit.co found — FormSubmit is dead (500s, no deliveries)")
         v.check("noindex" in body, "Apply page is noindexed", "Missing noindex")
 
 
