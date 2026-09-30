@@ -34,13 +34,15 @@ except ImportError:  # pragma: no cover
 
 
 def _has_chromium() -> bool:
-    """The package alone is not enough: the browser is a separate install
-    (`python -m playwright install chromium`, which Run Tests does)."""
+    """The package alone is not enough: the browser and its system libraries
+    are a separate install (`python -m playwright install --with-deps
+    chromium`, which Run Tests does). Launch it once; skip if it won't."""
     if sync_playwright is None:
         return False
     try:
         with sync_playwright() as pw:
-            return Path(pw.chromium.executable_path).exists()
+            pw.chromium.launch().close()
+        return True
     except Exception:  # noqa: BLE001
         return False
 

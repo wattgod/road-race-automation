@@ -115,8 +115,24 @@ class TestPlace:
 
 
 class TestTransport:
+    def test_posts_to_the_same_worker_as_the_goals_page(self):
+        # the goals page is live and posting; the debrief must use its host,
+        # not a hand-typed copy (a first draft had .gravelgodcycling., a host
+        # that does not exist, so every submission would have failed)
+        import generate_goals_2027
+        assert LEAD_WORKER_URL == generate_goals_2027.LEAD_WORKER_URL
+        assert LEAD_WORKER_URL == "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
+
+    def test_every_worker_url_in_the_generators_is_on_the_real_account(self):
+        """Network-free: every *.workers.dev host a page posts to sits on the
+        Cloudflare account subdomain the workers are deployed under."""
+        hosts = set()
+        for path in list((ROOT / "wordpress").glob("*.py")) + list((ROOT / "web").glob("*.js")):
+            hosts |= set(re.findall(r"https://([a-z0-9.-]+)\.workers\.dev", path.read_text(encoding="utf-8")))
+        assert hosts, "no worker URLs found"
+        assert {h.rsplit(".", 1)[-1] for h in hosts} == {"gravelgodcoaching"}, sorted(hosts)
+
     def test_shared_worker_with_the_roadie_brand_and_plan_debrief_source(self, js):
-        assert LEAD_WORKER_URL == "https://fueling-lead-intake.gravelgodcycling.workers.dev"
         assert (LEAD_SOURCE, LEAD_BRAND) == ("plan_debrief", "roadielabs")
         assert f'source: "{LEAD_SOURCE}", brand: "{LEAD_BRAND}"' in js
         assert f'fetch("{LEAD_WORKER_URL}"' in js

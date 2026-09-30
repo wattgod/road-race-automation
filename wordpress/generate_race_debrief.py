@@ -52,8 +52,10 @@ from generate_coaching_apply import build_apply_css, build_progress_bar  # noqa:
 OUTPUT_DIR = Path(__file__).parent / "output" / "race-debrief"
 
 # The shared multi-brand lead worker (deployed from gravel-race-automation,
-# workers/fueling-lead-intake), as the goals page uses it.
-LEAD_WORKER_URL = "https://fueling-lead-intake.gravelgodcycling.workers.dev"
+# workers/fueling-lead-intake), the same one the goals page posts to. The
+# account subdomain is gravelgodCOACHING, not the site's name:
+# fueling-lead-intake.gravelgodcycling.workers.dev does not exist.
+LEAD_WORKER_URL = "https://fueling-lead-intake.gravelgodcoaching.workers.dev"
 LEAD_SOURCE = "plan_debrief"
 LEAD_BRAND = "roadielabs"
 # The address every Roadie Labs page gives (goals, coaching, apply, legal).
