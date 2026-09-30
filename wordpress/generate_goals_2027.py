@@ -643,6 +643,46 @@ def build_goals_css() -> str:
 </style>'''
 
 
+# ── Personal links, kept out of analytics ────────────────────
+# A personalised link carries ?name=&email=, and GA4 sends the full address
+# as page_location, so a rider's email would land in Google Analytics. This
+# runs first in <head>, before the GA snippet: it keeps the values for the
+# prefill (window.rlPersonalLink) and removes ONLY these params from the
+# address bar. Every other param (src, race, goal_type, utm_*) stays byte for
+# byte, and so does the hash. The global GA snippet is not touched: stripping
+# params site-wide would break UTM attribution. Same script as Gravel God's
+# season review (gravel-race-automation generate_season_review.py
+# build_personal_link_js); athlete is stripped too, though this page does
+# not read it.
+
+PERSONAL_PARAMS = ("name", "email", "athlete")
+
+
+def build_personal_link_js() -> str:
+    keys = ", ".join(f'"{k}"' for k in PERSONAL_PARAMS)
+    return r'''<script>
+(function() {
+  var KEYS = [__KEYS__], found = {}, kept = [], removed = false;
+  try {
+    var params = new URLSearchParams(window.location.search);
+    window.location.search.replace(/^\?/, "").split("&").forEach(function(part) {
+      if (!part) { return; }
+      var raw = part.split("=")[0], key = raw;
+      try { key = decodeURIComponent(raw.replace(/\+/g, " ")); } catch (e) { /* keep raw */ }
+      if (KEYS.indexOf(key) === -1) { kept.push(part); return; }
+      removed = true;
+      if (!(key in found)) { found[key] = params.get(key) || ""; }
+    });
+    if (removed) {
+      history.replaceState(history.state, "",
+        window.location.pathname + (kept.length ? "?" + kept.join("&") : "") + window.location.hash);
+    }
+  } catch (e) { /* a browser this old keeps the link as it came */ }
+  window.rlPersonalLink = found;
+})();
+</script>'''.replace("__KEYS__", keys)
+
+
 # ── JavaScript ────────────────────────────────────────────────
 
 def build_goals_js() -> str:
@@ -900,12 +940,16 @@ def build_goals_js() -> str:
       showMessage("info", "Picked up where you left off.");
     }
     updateWhys();
-    /* personalised links: ?name=&email= */
-    var params = new URLSearchParams(window.location.search);
+    /* personalised links: ?name=&email=, read (and taken out of the
+       address bar) by the head script before analytics loaded */
+    var prefill = window.rlPersonalLink || {};
     ["name", "email"].forEach(function(k) {
       var el = document.getElementById(k);
-      if (el && params.get(k) && !el.value) { el.value = params.get(k); }
+      if (el && prefill[k] && !el.value) { el.value = prefill[k]; }
     });
+    /* the stripped address can't prefill a reload, and iOS Safari often
+       skips beforeunload, so put the link's values in the draft now */
+    if (prefill.name || prefill.email) { save(true); }
     /* Prefill from the race-page goal card's tap: ?goal_type= carries which
        goal the visitor already picked there. The line templates mirror
        GOAL_CARD_COPY.goal_lines in generate_neo_brutalist.py's
@@ -1228,6 +1272,7 @@ def generate_goals_page(external_assets: dict = None) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {build_personal_link_js()}
   <title>{title}</title>
   <meta name="description" content="{description}">
   <meta name="robots" content="index, follow">
