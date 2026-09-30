@@ -319,3 +319,103 @@ def test_push_wordpress_ships_the_goals_page():
     assert '"--sync-goals"' in src
     assert "def sync_goals(" in src
     assert src.count("args.sync_goals") >= 2
+
+
+# ── Personal links stay out of GA4 ────────────────────────────
+# A personalised link (/goals/?name=&email=) must not reach GA4 as
+# page_location. Ported from gravel-race-automation #418
+# (tests/test_exit_survey.py::TestPersonalLinkStaysOutOfAnalytics).
+
+_RUN_STRIP = r"""
+const vm = require('vm');
+const cases = JSON.parse(require('fs').readFileSync(0, 'utf8'));
+const out = cases.hrefs.map((href) => {
+  const u = new URL(href);
+  const calls = [];
+  const window = { location: { search: u.search, pathname: u.pathname, hash: u.hash } };
+  const history = { state: null, replaceState: (state, title, url) => { calls.push(url); } };
+  vm.runInNewContext(cases.js, { window, history, URLSearchParams });
+  return { replaced: calls, found: window.rlPersonalLink };
+});
+process.stdout.write(JSON.stringify(out));
+"""
+
+
+def _run_strip(*hrefs):
+    import json
+    import shutil
+    import subprocess
+
+    import pytest
+
+    if shutil.which("node") is None:
+        pytest.skip("node not installed")
+    js = goals.build_personal_link_js()
+    js = js[js.index("<script>") + len("<script>"):js.rindex("</script>")]
+    run = subprocess.run(["node", "-e", _RUN_STRIP], input=json.dumps({"js": js, "hrefs": list(hrefs)}),
+                         capture_output=True, text=True, timeout=60, check=True)
+    return json.loads(run.stdout)
+
+
+def test_personal_link_strip_runs_before_the_ga_snippet():
+    html = page()
+    strip = html.index("window.rlPersonalLink = found;")
+    assert strip < html.index("gtag('config'")
+    assert strip < html.index("googletagmanager.com/gtag/js")
+    # and before anything else in <head> can request a resource
+    assert strip < html.index("<link ")
+
+
+def test_personal_link_strip_removes_only_the_personal_params():
+    assert goals.PERSONAL_PARAMS == ("name", "email", "athlete")
+    js = goals.build_personal_link_js()
+    assert 'var KEYS = ["name", "email", "athlete"]' in js
+    # the rest of the query is kept as the raw text it arrived as, hash too
+    assert "kept.push(part)" in js and "window.location.hash" in js
+    assert "history.replaceState" in js
+
+
+def test_personal_link_strip_as_the_browser_runs_it():
+    base = "https://roadielabs.com/goals/"
+    link, bare, only_personal, encoded_key = _run_strip(
+        base + "?src=race&name=Test+Rider&race=test-race&email=test.rider%40example.com"
+               "&utm_source=news%20letter&goal_type=finish#results",
+        base + "?src=home&utm_campaign=a%2Bb",
+        base + "?email=test.rider%40example.com&athlete=test-rider-a",
+        base + "?%65mail=test.rider%40example.com&src=home",
+    )
+    # only name/email go; every other param keeps its raw encoding, in order, and the hash stays
+    assert link["replaced"] == [
+        "/goals/?src=race&race=test-race&utm_source=news%20letter&goal_type=finish#results"]
+    assert link["found"] == {"name": "Test Rider", "email": "test.rider@example.com"}
+    # nothing personal in the link: the address is left alone
+    assert bare["replaced"] == [] and bare["found"] == {}
+    # nothing left: no dangling "?"
+    assert only_personal["replaced"] == ["/goals/"]
+    assert only_personal["found"] == {"email": "test.rider@example.com", "athlete": "test-rider-a"}
+    # a percent-encoded key is still the email param
+    assert encoded_key["replaced"] == ["/goals/?src=home"]
+    assert encoded_key["found"] == {"email": "test.rider@example.com"}
+
+
+def test_prefill_reads_the_kept_values_not_the_address():
+    js = build_goals_js()
+    restore = js[js.index("function restore() {"):js.index("if (GOAL_TYPE) {", js.index("function restore() {"))]
+    assert "var prefill = window.rlPersonalLink || {};" in restore
+    assert "params.get(k)" not in restore
+    assert "location.search" not in restore
+
+
+def test_prefilled_values_are_saved_to_the_draft_at_once():
+    # The stripped address can't prefill a reload, and iOS Safari often
+    # skips beforeunload, so restore() saves the link's values itself.
+    js = build_goals_js()
+    restore = js[js.index("function restore() {"):js.index("if (GOAL_TYPE) {", js.index("function restore() {"))]
+    fill = restore.index("el.value = prefill[k]")
+    assert restore.index("{ save(true); }", fill) > fill
+
+
+def test_global_ga_snippet_is_untouched():
+    from brand_tokens import get_ga4_head_snippet
+    assert "rlPersonalLink" not in get_ga4_head_snippet()
+    assert "replaceState" not in get_ga4_head_snippet()
