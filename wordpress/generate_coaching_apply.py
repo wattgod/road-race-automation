@@ -1652,7 +1652,7 @@ def build_apply_js() -> str:
   });
 
   /* ── Save progress to localStorage ───────────────── */
-  document.getElementById("save-btn").addEventListener("click", function() {
+  function saveProgress() {
     var form = document.getElementById("intake-form");
     var formData = new FormData(form);
     var data = {};
@@ -1664,7 +1664,16 @@ def build_apply_js() -> str:
         data[key] = value;
       }
     });
-    localStorage.setItem("athlete_questionnaire_progress", JSON.stringify(data));
+    try {
+      localStorage.setItem("athlete_questionnaire_progress", JSON.stringify(data));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  document.getElementById("save-btn").addEventListener("click", function() {
+    saveProgress();
     showMessage("info", "Progress saved! You can close this page and return later.");
     ga4("apply_progress_saved", {});
   });
@@ -1881,11 +1890,27 @@ def build_apply_js() -> str:
       showMessage("success", "Application submitted. Check your email for confirmation; I&#39;ll review your intake and send the next steps from there.");
       submitBtn.textContent = "Submitted";
     }).catch(function(err) {
-      showMessage("error", "I couldn&#39;t submit that. Your answers are still saved in this browser—please try again.");
+      /* Save first, so "still saved in this browser" is true even if Save
+         Progress was never pressed (restoreProgress brings it back on
+         reload). The submission id stays in localStorage, so a retry is
+         recognised as the same application. Do NOT auto-redirect to a
+         mailto: URL — a 12-section questionnaire body is unreliable in a URL
+         and would leak health details into it. Offer a plain mailto link (no
+         body) built via the DOM, not innerHTML, since the subject line
+         carries the athlete's own name. */
+      saveProgress();
+      showMessage("error", "I couldn&#39;t submit that. Your answers are still saved in this browser—please try again, or email me directly: ");
+      var messageDiv = document.getElementById("message");
+      var mailtoLink = document.createElement("a");
+      mailtoLink.href = "mailto:coach@roadielabs.com?subject=" + encodeURIComponent("Roadie Labs Coaching Application: " + (data.name || ""));
+      mailtoLink.textContent = "coach@roadielabs.com";
+      messageDiv.appendChild(mailtoLink);
       submitBtn.disabled = false;
       submitBtn.textContent = "Submit Questionnaire";
       ga4("apply_form_error", { message: String(err.message || "unknown").slice(0, 80) });
       ga4("coaching_apply_error", { stage: "submit" });
+      /* Pre-snapshot GA4 series for the same outcome — keep it continuous. */
+      ga4("apply_form_fallback", { method: "mailto" });
     });
   });
 

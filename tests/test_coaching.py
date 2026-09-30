@@ -812,8 +812,14 @@ class TestApplyPage:
     def test_no_auto_mailto_redirect(self, apply_html):
         assert 'window.location.href = "mailto' not in apply_html
 
-    def test_no_mailto_fallback_link(self, apply_html):
-        assert 'mailto:coach@roadielabs.com?subject=' not in apply_html
+    def test_mailto_fallback_link_built_via_dom(self, apply_html):
+        """Failure offers a plain mailto link (no body); the subject carries
+        the athlete's name, so it is built with createElement, not innerHTML."""
+        failure = apply_html.split(".catch(function(err)", 1)[1]
+        assert '"mailto:coach@roadielabs.com?subject=" + encodeURIComponent(' in failure
+        assert "body=" not in failure.split("messageDiv.appendChild(mailtoLink);", 1)[0]
+        assert 'document.createElement("a")' in failure
+        assert "mailtoLink.textContent" in failure
 
     def test_honeypot_field_present(self, apply_html):
         assert 'name="website"' in apply_html
@@ -833,6 +839,14 @@ class TestApplyPage:
         failure = apply_html.split(".catch(function(err)", 1)[1]
         assert "still saved in this browser" in failure
         assert 'removeItem("athlete_questionnaire_progress")' not in failure
+        # The claim must be true without a prior "Save Progress" click.
+        assert failure.index("saveProgress();") < failure.index('showMessage("error"')
+
+    def test_failure_ga4_keeps_both_series(self, apply_html):
+        failure = apply_html.split(".catch(function(err)", 1)[1].split("/* ── Show message", 1)[0]
+        assert 'ga4("apply_form_error"' in failure
+        assert 'ga4("coaching_apply_error"' in failure
+        assert 'ga4("apply_form_fallback", { method: "mailto" });' in failure
 
 
 # ── Drift Guard ──────────────────────────────────────────────

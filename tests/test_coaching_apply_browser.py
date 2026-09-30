@@ -270,13 +270,24 @@ def test_worker_failure_is_reported_and_retry_reuses_the_id(harness, worker_mode
 
     msg = h.message()
     assert "error" in msg["cls"], msg
-    assert "couldn" in msg["text"]
+    assert "still saved in this browser" in msg["text"]
     assert not h.page.eval_on_selector("#submit-btn", "el => el.disabled")
+    mailto = h.page.eval_on_selector(
+        "#message", "el => (el.querySelector('a[href^=\"mailto:\"]') || {}).href || ''")
+    assert mailto == ("mailto:coach@roadielabs.com?subject="
+                      "Roadie%20Labs%20Coaching%20Application%3A%20Test%20Rider")
 
     events = h.ga4_events()
     assert "apply_form_error" in events
     assert "coaching_apply_error" in events
+    assert "apply_form_fallback" in events
     assert "apply_form_submitted" not in events
+
+    # "Your answers are still saved" is true without a Save Progress click.
+    draft = json.loads(h.storage("athlete_questionnaire_progress"))
+    assert draft["name"] == "Test Rider"
+    assert draft["tier"] == "mid"
+    assert draft["interval_days"] == ["tuesday", "thursday"]
 
     submission_id = h.storage("coaching_intake_submission_id")
     assert submission_id == json.loads(h.worker_requests[0]["body"])["submission_id"]
@@ -286,6 +297,29 @@ def test_worker_failure_is_reported_and_retry_reuses_the_id(harness, worker_mode
     assert len(h.worker_requests) == 2
     assert json.loads(h.worker_requests[1]["body"])["submission_id"] == submission_id
     assert h.formsubmit_requests == []
+    assert h.page_errors == []
+
+
+def test_failed_submit_draft_is_restored_after_reload(harness):
+    h = harness(worker="network_error")
+    h.fill_valid_application()
+    h.submit()
+    assert "error" in h.message()["cls"]
+
+    # Reload without ?tier= so the restored value can only come from the draft.
+    h.page.goto(PAGE_URL, wait_until="domcontentloaded")
+    h.page.wait_for_function(
+        "() => document.getElementById('name').value === 'Test Rider'", timeout=10000)
+    page = h.page
+    assert page.eval_on_selector("#email", "el => el.value") == "test.rider+apply@example.com"
+    assert page.eval_on_selector("#coaching_tier", "el => el.value") == "mid"
+    assert page.eval_on_selector("#race_list", "el => el.value").startswith("Example Gran Fondo")
+    assert page.eval_on_selector("#injuries", "el => el.value") == "Left knee, resolved"
+    assert h.checked("long_ride_days", "saturday")
+    assert h.checked("interval_days", "tuesday") and h.checked("interval_days", "thursday")
+    assert page.eval_on_selector(
+        'input[name="primary_goal"][value="specific_race"]', "el => el.checked")
+    assert "Previous progress restored" in h.message()["text"]
     assert h.page_errors == []
 
 
