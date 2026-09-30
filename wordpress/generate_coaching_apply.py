@@ -37,10 +37,10 @@ from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
 from live_head_patches import apply_live_head_patches
+# Shared with push_wordpress.py's upload guard and validate_deploy.py.
+from coaching_apply_contract import COACHING_INTAKE_WORKER_URL
 
 OUTPUT_DIR = Path(__file__).parent / "output"
-
-COACHING_INTAKE_WORKER_URL = "https://coaching-intake.gravelgodcoaching.workers.dev"
 
 
 def esc(text) -> str:
@@ -1436,9 +1436,13 @@ def build_apply_js() -> str:
     }
   }
 
+  /* In-memory fallback so a browser that blocks localStorage still gets one
+     stable id for this page view (retries on this page dedupe). */
+  var memorySubmissionId = "";
   function getSubmissionId() {
-    var existing = localStorage.getItem("coaching_intake_submission_id");
-    if (existing) { return existing; }
+    var existing = memorySubmissionId;
+    try { existing = localStorage.getItem("coaching_intake_submission_id") || existing; } catch (e) { /* storage blocked */ }
+    if (existing) { memorySubmissionId = existing; return existing; }
     var id;
     if (window.crypto && typeof window.crypto.randomUUID === "function") {
       id = window.crypto.randomUUID();
@@ -1447,7 +1451,8 @@ def build_apply_js() -> str:
         return (c ^ window.crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16);
       });
     }
-    localStorage.setItem("coaching_intake_submission_id", id);
+    memorySubmissionId = id;
+    try { localStorage.setItem("coaching_intake_submission_id", id); } catch (e) { /* storage blocked */ }
     return id;
   }
 
@@ -1673,14 +1678,18 @@ def build_apply_js() -> str:
   }
 
   document.getElementById("save-btn").addEventListener("click", function() {
-    saveProgress();
+    if (!saveProgress()) {
+      showMessage("error", "This browser won&#39;t let me save your progress. Keep this page open until you submit.");
+      return;
+    }
     showMessage("info", "Progress saved! You can close this page and return later.");
     ga4("apply_progress_saved", {});
   });
 
   /* ── Restore progress from localStorage ──────────── */
   function restoreProgress() {
-    var saved = localStorage.getItem("athlete_questionnaire_progress");
+    var saved = null;
+    try { saved = localStorage.getItem("athlete_questionnaire_progress"); } catch (e) { return; }
     if (!saved) { return; }
     try {
       var data = JSON.parse(saved);
@@ -1874,8 +1883,11 @@ def build_apply_js() -> str:
         return result;
       });
     }).then(function() {
-      localStorage.removeItem("athlete_questionnaire_progress");
-      localStorage.removeItem("coaching_intake_submission_id");
+      try {
+        localStorage.removeItem("athlete_questionnaire_progress");
+        localStorage.removeItem("coaching_intake_submission_id");
+      } catch (e) { /* storage blocked: nothing was saved to clear */ }
+      memorySubmissionId = "";
       ga4("apply_form_submitted", {
         blindspot_count: (data.blindspots || "").split(",").filter(function(b) { return b; }).length,
         has_ftp: data.ftp ? "yes" : "no",
@@ -1898,8 +1910,10 @@ def build_apply_js() -> str:
          and would leak health details into it. Offer a plain mailto link (no
          body) built via the DOM, not innerHTML, since the subject line
          carries the athlete's own name. */
-      saveProgress();
-      showMessage("error", "I couldn&#39;t submit that. Your answers are still saved in this browser—please try again, or email me directly: ");
+      var saved = saveProgress();
+      showMessage("error", saved
+        ? "I couldn&#39;t submit that. Your answers are still saved in this browser—please try again, or email me directly: "
+        : "I couldn&#39;t submit that, and this browser won&#39;t let me save your answers. Please try again without leaving this page, or email me directly: ");
       var messageDiv = document.getElementById("message");
       var mailtoLink = document.createElement("a");
       mailtoLink.href = "mailto:coach@roadielabs.com?subject=" + encodeURIComponent("Roadie Labs Coaching Application: " + (data.name || ""));

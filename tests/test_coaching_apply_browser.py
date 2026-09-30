@@ -79,12 +79,20 @@ def browser():
 class Harness:
     """One phone-sized page with the Worker intercepted."""
 
-    def __init__(self, browser, html, *, worker, query="?tier=mid"):
+    def __init__(self, browser, html, *, worker, query="?tier=mid", block_saves=False):
         self.worker_mode = worker
         self.worker_requests = []
         self.formsubmit_requests = []
         self.page_errors = []
         self.context = browser.new_context(viewport={"width": 390, "height": 844})
+        if block_saves:
+            # Browser that reads storage but refuses writes (quota exceeded /
+            # locked-down private mode): every setItem throws.
+            self.context.add_init_script("""
+              Storage.prototype.setItem = function() {
+                throw new DOMException("Storage is blocked", "QuotaExceededError");
+              };
+            """)
         self.page = self.context.new_page()
         self.page.on("pageerror", lambda exc: self.page_errors.append(str(exc)))
         self._html = html
@@ -320,6 +328,52 @@ def test_failed_submit_draft_is_restored_after_reload(harness):
     assert page.eval_on_selector(
         'input[name="primary_goal"][value="specific_race"]', "el => el.checked")
     assert "Previous progress restored" in h.message()["text"]
+    assert h.page_errors == []
+
+
+def test_failure_when_saving_is_blocked_does_not_claim_a_save(harness):
+    h = harness(worker="network_error", block_saves=True)
+    h.fill_valid_application()
+    h.submit()
+
+    msg = h.message()
+    assert "error" in msg["cls"], msg
+    assert "still saved" not in msg["text"]
+    assert "won't let me save your answers" in msg["text"]
+    mailto = h.page.eval_on_selector(
+        "#message", "el => (el.querySelector('a[href^=\"mailto:\"]') || {}).href || ''")
+    assert mailto.startswith("mailto:coach@roadielabs.com?subject=")
+    assert "apply_form_fallback" in h.ga4_events()
+    assert h.storage("athlete_questionnaire_progress") is None
+
+    # Retry on the same page reuses the in-memory submission id.
+    h.page.click("#submit-btn")
+    h.page.wait_for_function(
+        "() => !document.getElementById('submit-btn').disabled", timeout=10000)
+    ids = [json.loads(r["body"])["submission_id"] for r in h.worker_requests]
+    assert len(ids) == 2 and ids[0] == ids[1] and UUID_RE.match(ids[0])
+    assert h.page_errors == []
+
+
+def test_success_when_saving_is_blocked_is_still_success(harness):
+    h = harness(worker="success", block_saves=True)
+    h.fill_valid_application()
+    h.submit()
+    msg = h.message()
+    assert "success" in msg["cls"], msg
+    assert "apply_form_submitted" in h.ga4_events()
+    assert "apply_form_error" not in h.ga4_events()
+    assert h.page_errors == []
+
+
+def test_save_progress_button_is_honest_when_saving_is_blocked(harness):
+    h = harness(worker="success", block_saves=True)
+    h.page.fill("#name", "Test Rider")
+    h.page.click("#save-btn")
+    msg = h.message()
+    assert "error" in msg["cls"], msg
+    assert "won't let me save your progress" in msg["text"]
+    assert "Progress saved" not in msg["text"]
     assert h.page_errors == []
 
 
