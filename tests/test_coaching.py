@@ -42,9 +42,10 @@ from generate_coaching import (
     generate_coaching_page,
 )
 from generate_coaching_apply import (
-    FORMSUBMIT_URL,
+    COACHING_INTAKE_WORKER_URL,
     build_apply_css,
     build_apply_js,
+    build_tier_selector,
     generate_apply_page,
 )
 from generate_neo_brutalist import SITE_BASE_URL, write_shared_assets
@@ -289,11 +290,14 @@ class TestServiceTiers:
     def test_setup_fee(self):
         tiers = build_tiers()
         assert "$99 setup fee" in tiers
+        assert "TrainingPeaks Premium is included" in tiers
+        assert "NOSETUP" not in tiers
+        assert "privately, case by case" in tiers
 
     def test_disclaimer(self):
         tiers = build_tiers()
         assert "skipped workouts" in tiers
-        assert "24 hours" in tiers
+        assert "two business days" in tiers
 
     def test_feature_lists_verbatim(self):
         tiers = build_tiers()
@@ -384,7 +388,7 @@ class TestApplicationClose:
     def test_line_copy(self):
         c = build_application_close()
         assert "Ten minutes of honest answers. I read every one myself." in c
-        assert "You&#39;ll hear from me within 48 hours &mdash; including if I don&#39;t think coaching is what you need." in c
+        assert "usually hear from me within two business days" in c
 
     def test_cta_link(self):
         c = build_application_close()
@@ -756,16 +760,48 @@ class TestCrossBrandLeakage:
 
 
 class TestApplyPage:
-    def test_formsubmit_endpoint(self, apply_html):
-        assert "formsubmit.co/ajax/df9d64ff7bd404311c74f4a4240a1ebd" in apply_html
-        assert FORMSUBMIT_URL == "https://formsubmit.co/ajax/df9d64ff7bd404311c74f4a4240a1ebd"
+    def test_shared_intake_endpoint(self, apply_html):
+        assert COACHING_INTAKE_WORKER_URL in apply_html
+        assert "formsubmit.co" not in apply_html.lower()
+        assert '"Content-Type": "application/json"' in apply_html
 
-    def test_hidden_url_context_param(self, apply_html):
-        assert '"_url"' in apply_html
-        assert "coaching/apply" in apply_html
+    def test_tier_selector_uses_min_mid_max(self, apply_html):
+        selector = build_tier_selector()
+        assert 'name="tier"' in selector
+        assert 'option value="min"' in selector
+        assert 'option value="mid"' in selector
+        assert 'option value="max"' in selector
+        assert "TrainingPeaks Premium is included" in selector
+        assert "initializeTier" in apply_html
 
-    def test_subject_prefix(self, apply_html):
-        assert "Roadie Labs Coaching Application" in apply_html
+    def test_submission_id_is_stable_for_retry(self, apply_html):
+        assert "coaching_intake_submission_id" in apply_html
+        assert "crypto.randomUUID" in apply_html
+        assert "data.submission_id = getSubmissionId()" in apply_html
+
+    def test_apply_funnel_events_are_present(self, apply_html):
+        assert "coaching_apply_started" in apply_html
+        assert "coaching_apply_submitted" in apply_html
+        assert "coaching_apply_error" in apply_html
+
+    def test_submission_preserves_consent_mode_state(self, apply_html):
+        assert "analyticsConsentState" in apply_html
+        assert "rl_consent=accepted" in apply_html
+        assert '? "granted"' in apply_html
+        assert ': "denied"' in apply_html
+        assert "data.analytics_consent = analyticsConsentState()" in apply_html
+
+    def test_low_friction_onboarding_context_is_collected(self, apply_html):
+        for field in (
+                'date_of_birth', 'home_location', 'desired_start_date',
+                'preferred_contact_channel', 'trainingpeaks_connection_status',
+                'home_timezone', 'guardian_name', 'guardian_email',
+                'guardian_relationship'):
+            assert f'name="{field}"' in apply_html
+        assert 'Intl.DateTimeFormat().resolvedOptions().timeZone' in apply_html
+        assert 'id="home_timezone" required' not in apply_html
+        assert 'min="13"' in apply_html
+        assert 'separate consent step' in apply_html
 
     def test_header_js_present(self, apply_html):
         """Distinctive substring of get_site_header_js() — proves the
@@ -776,8 +812,8 @@ class TestApplyPage:
     def test_no_auto_mailto_redirect(self, apply_html):
         assert 'window.location.href = "mailto' not in apply_html
 
-    def test_mailto_fallback_link_present(self, apply_html):
-        assert 'mailto:coach@roadielabs.com?subject=' in apply_html
+    def test_no_mailto_fallback_link(self, apply_html):
+        assert 'mailto:coach@roadielabs.com?subject=' not in apply_html
 
     def test_honeypot_field_present(self, apply_html):
         assert 'name="website"' in apply_html
@@ -787,18 +823,16 @@ class TestApplyPage:
         assert "if (data.website)" in apply_html
 
     def test_confidentiality_footer_email_unchanged(self, apply_html):
-        assert "coach@roadielabs.com" in apply_html
+        assert "gravelgodcoaching@gmail.com" in apply_html
+        assert 'href="/privacy/"' in apply_html
 
     def test_success_requires_explicit_flag(self, apply_html):
-        """Bare 2xx is not treated as delivery — the response body must
-        be parsed and success === 'true' checked explicitly."""
-        assert 'json.success === "true"' in apply_html
+        assert "!response.ok || !result.success" in apply_html
 
-    def test_no_innerhtml_with_mailto_data(self, apply_html):
-        """The mailto fallback link (which carries the athlete's own name
-        in its subject) must be built via the DOM, not innerHTML."""
-        assert "mailtoLink" in apply_html
-        assert "createElement" in apply_html
+    def test_failure_keeps_saved_answers(self, apply_html):
+        failure = apply_html.split(".catch(function(err)", 1)[1]
+        assert "still saved in this browser" in failure
+        assert 'removeItem("athlete_questionnaire_progress")' not in failure
 
 
 # ── Drift Guard ──────────────────────────────────────────────
