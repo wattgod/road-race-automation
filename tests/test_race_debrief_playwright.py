@@ -261,3 +261,64 @@ def test_a_failed_store_shows_the_error_and_no_rating_line():
     assert "error" in seen["message_class"] and "coach@roadielabs.com" in seen["message"]
     assert seen["rating"]["hidden"] is True
     assert _named(seen["events"], "debrief_submit") == []
+
+
+def _resume_from(first_query: str, second_query: str) -> dict:
+    """Save a draft from one link, open a second link in the same browser
+    (the draft is in its localStorage), submit."""
+    doc = generate_race_debrief_page()
+    captured = {"worker": None}
+
+    def handle(route):
+        req = route.request
+        if req.url.startswith(PAGE_URL):
+            return route.fulfill(status=200, content_type="text/html; charset=utf-8", body=doc)
+        if req.url.startswith(LEAD_WORKER_URL):
+            if req.method == "OPTIONS":
+                return route.fulfill(status=204, headers=CORS)
+            captured["worker"] = json.loads(req.post_data)
+            return route.fulfill(status=200, headers={**CORS, "Content-Type": "application/json"},
+                                 body=json.dumps({"success": True}))
+        return route.abort()
+
+    hidden_js = "() => ({plan: document.getElementById('plan').value, ref: document.getElementById('ref').value})"
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        try:
+            page = browser.new_page(viewport={"width": 390, "height": 844})
+            errors = []
+            page.on("pageerror", lambda exc: errors.append(str(exc)))
+            page.route("**/*", handle)
+            page.goto(PAGE_URL + first_query)
+            page.fill("#name", FIXTURE["name"])
+            page.fill("#email", FIXTURE["email"])
+            page.click('label.rl-apply-radio-option:has(input[name="raced"][value="later"])')
+            page.click(".rl-debrief-save")
+            page.goto(PAGE_URL + second_query)
+            second = page.evaluate(hidden_js)
+            restored = page.input_value("#email")
+            page.click("#debrief-submit")
+            page.wait_for_function(
+                "() => { const m = document.getElementById('message');"
+                " return m.classList.contains('success') || m.classList.contains('error'); }", timeout=15000)
+            rating_hidden = page.evaluate("() => document.getElementById('tp-rating').hidden")
+        finally:
+            browser.close()
+    return {"second": second, "restored_email": restored, "worker": captured["worker"],
+            "rating_hidden": rating_hidden, "errors": errors}
+
+
+def test_a_new_plan_link_never_inherits_the_drafts_plan():
+    """Devin on gravel-race-automation#421, same page script here."""
+    seen = _resume_from("?plan=654321", "?ref=test-ref-0001")
+    assert seen["errors"] == []
+    assert seen["second"] == {"plan": "", "ref": "test-ref-0001"}
+    assert seen["restored_email"] == FIXTURE["email"]  # the draft itself still resumes
+    assert seen["worker"]["ref"] == "test-ref-0001" and "plan" not in seen["worker"]
+    assert seen["rating_hidden"] is True
+
+
+def test_a_bare_address_resumes_the_drafts_plan():
+    seen = _resume_from("?plan=654321", "")
+    assert seen["second"] == {"plan": "654321", "ref": ""}
+    assert seen["worker"]["plan"] == "654321"
