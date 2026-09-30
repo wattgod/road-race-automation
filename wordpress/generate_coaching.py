@@ -37,6 +37,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
 from cookie_consent import get_consent_banner_html
+from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -201,8 +202,8 @@ def build_tiers() -> str:
           <a href="{QUESTIONNAIRE_URL}?tier=max" class="rl-coach-tier-cta" data-cta="tier_max">GET STARTED</a>
         </div>
       </div>
-      <p class="rl-coach-tier-disclaimer">Coaching doesn&#39;t fix skipped workouts or feedback you don&#39;t act on. If this isn&#39;t a fit, I&#39;ll tell you within 24 hours.</p>
-      <p class="rl-coach-tier-setup-fee">All tiers include a one-time $99 setup fee: intake analysis, training-history review, and your first plan build.</p>
+      <p class="rl-coach-tier-disclaimer">Coaching doesn&#39;t fix skipped workouts or feedback you don&#39;t act on. I review applications and usually reply within two business days &mdash; including when I don&#39;t think coaching is the right fit.</p>
+      <p class="rl-coach-tier-setup-fee">TrainingPeaks Premium is included with every tier. Checkout includes a one-time $99 setup fee for intake analysis and your first plan build. Any waiver is offered privately, case by case.</p>
     </div>
   </section>'''
 
@@ -268,7 +269,7 @@ def build_faq() -> str:
         ),
         (
             "Can I cancel anytime?",
-            "Yes. No contracts, no cancellation fees. Your coaching access continues through the end of your current 4-week cycle.",
+            "Yes. There is no long-term commitment. Coaching renews every four weeks; cancel before the next renewal and your access continues through the paid cycle. There is no cancellation fee.",
         ),
     ]
 
@@ -300,7 +301,7 @@ def build_application_close() -> str:
     <div class="rl-coach-inner">
       <div class="rl-coach-final-cta">
         <p class="rl-coach-final-kicker">APPLICATION</p>
-        <p class="rl-coach-final-hook">Ten minutes of honest answers. I read every one myself. You&#39;ll hear from me within 48 hours &mdash; including if I don&#39;t think coaching is what you need.</p>
+        <p class="rl-coach-final-hook">Ten minutes of honest answers. I read every one myself. You&#39;ll usually hear from me within two business days &mdash; including if I don&#39;t think coaching is what you need.</p>
         <a href="{QUESTIONNAIRE_URL}" class="rl-coach-final-cta-link" data-cta="final_fill_intake">GET ME IN YOUR CORNER &rarr;</a>
         <p class="rl-coach-final-contact">Questions first? <a href="mailto:coach@roadielabs.com">coach@roadielabs.com</a> &mdash; I answer myself, usually within a day.</p>
       </div>
@@ -984,7 +985,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
     preload = get_preload_hints()
 
-    return f'''<!DOCTYPE html>
+    return apply_live_head_patches(f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1033,7 +1034,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
 {get_consent_banner_html()}
 </body>
-</html>'''
+</html>''')
 
 
 def main():

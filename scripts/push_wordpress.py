@@ -1247,18 +1247,42 @@ def sync_methodology(methodology_file: str):
     return f"{wp_url}/methodology/"
 
 
-def sync_coaching_apply(apply_file: str):
-    """Upload coaching-apply.html to /coaching/apply/index.html on SiteGround via SSH+SCP."""
-    ssh = get_ssh_credentials()
-    if not ssh:
-        return None
-    host, user, port = ssh
+def coaching_apply_problems(html: str) -> list:
+    """Shared contract check (wordpress/coaching_apply_contract.py)."""
+    sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+    try:
+        from coaching_apply_contract import apply_page_problems
+    finally:
+        sys.path.pop(0)
+    return apply_page_problems(html)
 
+
+def sync_coaching_apply(apply_file: str):
+    """Upload coaching-apply.html to /coaching/apply/index.html on SiteGround via SSH+SCP.
+
+    Refuses (returns None) before touching the server if the file would break
+    applications: FormSubmit present, coaching-intake Worker or tier missing.
+    This covers --sync-coaching-apply, --coaching-apply-file and --deploy-all.
+    """
     html_path = Path(apply_file)
     if not html_path.exists():
         print(f"✗ Coaching apply HTML not found: {html_path}")
         print("  Run: python3 wordpress/generate_coaching_apply.py first")
         return None
+
+    problems = coaching_apply_problems(
+        html_path.read_text(encoding="utf-8", errors="replace"))
+    if problems:
+        print(f"✗ Refusing to upload {html_path}: it would break coaching applications")
+        for problem in problems:
+            print(f"  - {problem}")
+        print("  Regenerate from main: python3 wordpress/generate_coaching_apply.py")
+        return None
+
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
 
     remote_base = f"{REMOTE_BASE}/coaching/apply"
 
@@ -3556,8 +3580,9 @@ if __name__ == "__main__":
         sync_questionnaire(args.questionnaire_dir)
     if args.sync_coaching:
         sync_coaching(args.coaching_file)
+    coaching_apply_failed = False
     if args.sync_coaching_apply:
-        sync_coaching_apply(args.coaching_apply_file)
+        coaching_apply_failed = sync_coaching_apply(args.coaching_apply_file) is None
     if args.sync_consulting:
         sync_consulting(args.consulting_file)
     if args.sync_consult_intake:
@@ -3620,3 +3645,7 @@ if __name__ == "__main__":
             print("⚠ --ping-indexnow had no synced URLs to ping (did --sync-markdown succeed?)")
     if args.purge_cache:
         purge_cache()
+    if coaching_apply_failed:
+        # Other syncs still ran; fail the run so a refused/failed apply upload
+        # can't pass unnoticed inside --deploy-all.
+        sys.exit(1)

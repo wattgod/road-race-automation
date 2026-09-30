@@ -33,6 +33,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
+from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -320,28 +321,26 @@ def build_coaching_success() -> str:
     <div class="rl-success-step">
       <div class="rl-success-step-num">1</div>
       <div class="rl-success-step-text">
-        <h3>Fill Out the Intake Form</h3>
-        <p>If you haven't already, complete the athlete intake so I have
-        everything I need to build your plan.
-        <a href="{SITE_BASE_URL}/coaching/apply/">Complete intake &rarr;</a></p>
+        <h3>Check Your Email</h3>
+        <p>Your private onboarding guide includes your kickoff-call booking
+        link, what your tier includes, and exactly how we communicate.</p>
       </div>
     </div>
     <div class="rl-success-step">
       <div class="rl-success-step-num">2</div>
       <div class="rl-success-step-text">
-        <h3>Expect an Email Within 24 Hours</h3>
-        <p>I'll review your intake and reach out with initial questions,
-        your training philosophy alignment, and a timeline for your
-        first structured week.</p>
+        <h3>Connect TrainingPeaks</h3>
+        <p>If you are not already attached, <a href="{TRAININGPEAKS_ATTACH_URL}" target="_blank" rel="noopener">connect your account &rarr;</a>
+        TrainingPeaks Premium is included; do not purchase it separately.</p>
       </div>
     </div>
     <div class="rl-success-step">
       <div class="rl-success-step-num">3</div>
       <div class="rl-success-step-text">
-        <h3>We Train Together</h3>
-        <p>Your plan lands in your calendar. I review every session,
-        adjust the plan when life happens, and keep you accountable
-        through race day.</p>
+        <h3>Run the First Block</h3>
+        <p>Your TrainingPeaks calendar is the source of truth. Comment after
+        each workout; if you miss one, do not stack it onto the next day.
+        Tell me what happened and I will adjust it.</p>
       </div>
     </div>
   </div>"""
@@ -492,7 +491,7 @@ def generate_success_page(page_key: str,
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    return f'''<!DOCTYPE html>
+    return apply_live_head_patches(f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -529,7 +528,7 @@ def generate_success_page(page_key: str,
 {success_js}
 {get_consent_banner_html()}
 </body>
-</html>'''
+</html>''')
 
 
 def main():

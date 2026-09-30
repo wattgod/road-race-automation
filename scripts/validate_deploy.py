@@ -508,6 +508,16 @@ def check_coaching_apply(v):
         v.check("apply_page_view" in body, "Apply page has GA4 tracking", "Missing GA4 events")
         v.check("application/ld+json" in body, "Apply page has JSON-LD", "Missing JSON-LD")
         v.check("inferTraits" in body, "Apply page has blindspot inference", "Missing inference")
+        # Same contract push_wordpress.py enforces before upload.
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
+        try:
+            from coaching_apply_contract import apply_page_problems
+        finally:
+            sys.path.pop(0)
+        problems = apply_page_problems(body)
+        v.check(not problems,
+                "Apply page meets the intake contract (Worker, tier, submission id, no FormSubmit)",
+                "; ".join(problems))
         v.check("noindex" in body, "Apply page is noindexed", "Missing noindex")
 
 
