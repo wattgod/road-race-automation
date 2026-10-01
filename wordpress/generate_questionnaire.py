@@ -1029,13 +1029,18 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
   try {
     var u = new URL(location.href);
     var t = u.searchParams.get('t') || new URLSearchParams(u.hash.slice(1)).get('t') || '';
+    var hasToken = u.searchParams.has('t') || new URLSearchParams(u.hash.slice(1)).has('t');
     sessionStorage.removeItem('rl_goal_prefill_token');
-    if (u.searchParams.get('src') === 'goals' && /^[A-Za-z0-9_-]{16,64}$/.test(t)) {
+    var valid = u.searchParams.get('src') === 'goals' && /^[A-Za-z0-9_-]{16,64}$/.test(t);
+    if (valid) {
       sessionStorage.setItem('rl_goal_prefill_token', t);
     }
-    u.searchParams.delete('t');
-    u.hash = '';
-    history.replaceState(null, '', u.pathname + u.search + u.hash);
+    if (hasToken) {
+      u.searchParams.delete('t');
+      if (new URLSearchParams(u.hash.slice(1)).has('t')) u.hash = '';
+      history.replaceState(valid ? { goalToken: t } : history.state,
+        '', u.pathname + u.search + u.hash);
+    }
   } catch (e) {}
 })();</script>'''
 
