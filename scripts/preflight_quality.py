@@ -1252,7 +1252,7 @@ def check_consent_snippet_centralized():
     indexof_files = []
     for f in sorted(WORDPRESS_DIR.glob("generate_*.py")):
         content = f.read_text()
-        if "indexOf" in content and "rl_consent" in content:
+        if re.search(r"document\.cookie\s*\.\s*indexOf\s*\(", content):
             indexof_files.append(f.name)
     check("No indexOf for consent check in generators", len(indexof_files) == 0,
           f"Found indexOf: {indexof_files}")

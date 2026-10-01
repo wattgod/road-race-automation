@@ -97,6 +97,14 @@ def homepage_html(race_index):
         return generate_homepage(race_index)
 
 
+def test_year_review_has_homepage_entry(homepage_html):
+    """The live review needs a discoverable homepage path and source attribution."""
+    assert 'href="https://roadielabs.com/goals/?src=home"' in homepage_html
+    assert 'data-ga="goal_hero_click"' in homepage_html
+    assert 'SAMPLE' in homepage_html
+    assert homepage_html.index('class="rl-hp-hero"') < homepage_html.index('class="rl-hp-goals"')
+
+
 # ── Data Loading ─────────────────────────────────────────────
 
 
