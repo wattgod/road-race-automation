@@ -1029,8 +1029,10 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
   try {
     var u = new URL(location.href);
     var t = u.searchParams.get('t') || new URLSearchParams(u.hash.slice(1)).get('t') || '';
-    if (!/^[A-Za-z0-9_-]{16,64}$/.test(t)) return;
-    sessionStorage.setItem('rl_goal_prefill_token', t);
+    sessionStorage.removeItem('rl_goal_prefill_token');
+    if (u.searchParams.get('src') === 'goals' && /^[A-Za-z0-9_-]{16,64}$/.test(t)) {
+      sessionStorage.setItem('rl_goal_prefill_token', t);
+    }
     u.searchParams.delete('t');
     u.hash = '';
     history.replaceState(null, '', u.pathname + u.search + u.hash);

@@ -34,7 +34,7 @@
   var params = new URLSearchParams(window.location.search);
   var GOALS_MODE = SHOW_ROAD_FIELDS && params.get('src') === 'goals';
   var goalToken = params.get('t') || '';
-  if (!goalToken) {
+  if (GOALS_MODE && !goalToken) {
     try {
       goalToken = sessionStorage.getItem('rl_goal_prefill_token') || '';
       sessionStorage.removeItem('rl_goal_prefill_token');
@@ -126,6 +126,7 @@
 
   // ---- localStorage persistence ----
   function saveForm() {
+    if (GOALS_MODE) return;
     try {
       var formData = new FormData(form);
       var data = {};
@@ -357,7 +358,8 @@
   (function prefillFromURL() {
     var params = new URLSearchParams(window.location.search);
     var raceSlug = params.get('race');
-    if (!raceSlug) return;
+    // The entry race is attribution, not necessarily the A race named in the review.
+    if (!raceSlug || GOALS_MODE) return;
     prefilledRaceSlug = raceSlug;
 
     // Humanize slug as fallback name: "unbound-200" → "Unbound 200"
@@ -599,7 +601,7 @@
   // ---- Restore saved form data ----
   // A review link belongs to one lead. Do not reuse another visitor's draft
   // from this browser before the token lookup identifies the lead.
-  if (!(GOALS_MODE && goalToken)) restoreForm();
+  if (!GOALS_MODE) restoreForm();
   if (GOALS_MODE) {
     var longIntro = document.querySelector('.tp-questionnaire-hero p');
     if (longIntro) longIntro.hidden = true;
@@ -685,13 +687,16 @@
       if (OFFER_VARIANT) workerData.offer_variant = OFFER_VARIANT;
       if (ENTRY_SRC) workerData.entry_src = ENTRY_SRC;
     }
-    if (GOALS_MODE && goalContext) {
+    var checkoutEmail = String(workerData.email || '').trim().toLowerCase();
+    var reviewEmail = goalContext && String(goalContext.email || '').trim().toLowerCase();
+    var sameReviewLead = GOALS_MODE && reviewEmail && checkoutEmail === reviewEmail;
+    if (sameReviewLead) {
       var context = [];
       if (goalContext.goal) context.push('2027 goal: ' + goalContext.goal);
       if (goalContext.habits) context.push('Habit: ' + goalContext.habits);
       if (context.length) workerData.notes = [workerData.notes, context.join('\n')].filter(Boolean).join('\n\n').slice(0, 2000);
     }
-    if (GOALS_MODE && goalToken && window.crypto && crypto.subtle) {
+    if (sameReviewLead && goalToken && window.crypto && crypto.subtle) {
       try {
         var hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(goalToken));
         workerData.goal_ref = Array.from(new Uint8Array(hash)).map(function(b) {
