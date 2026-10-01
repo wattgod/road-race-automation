@@ -1023,6 +1023,20 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
 }};</script>
 <script src="{FORM_JS_SRC}" defer></script>'''
 
+    # Run before GA4 config: the prefill token is a bearer credential and must
+    # not be present in GA4's automatic page_location event.
+    token_bootstrap = '''<script>(function(){
+  try {
+    var u = new URL(location.href);
+    var t = u.searchParams.get('t') || new URLSearchParams(u.hash.slice(1)).get('t') || '';
+    if (!/^[A-Za-z0-9_-]{16,64}$/.test(t)) return;
+    sessionStorage.setItem('rl_goal_prefill_token', t);
+    u.searchParams.delete('t');
+    u.hash = '';
+    history.replaceState(null, '', u.pathname + u.search + u.hash);
+  } catch (e) {}
+})();</script>'''
+
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1037,6 +1051,7 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
   {og_tags}
   {page_css}
   {form_css}
+  {token_bootstrap}
   {get_ga4_head_snippet()}
   {get_ab_head_snippet()}
 </head>
