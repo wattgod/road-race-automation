@@ -497,6 +497,26 @@ def build_hero(stats: dict, race_index: list = None) -> str:
       </div>
       {_build_hero_radar_viz(race_index)}
     </div>
+    </section>'''
+
+
+def build_goal_review_entry() -> str:
+    """Give homepage visitors a direct route into the existing review flow."""
+    return f'''<section class="rl-hp-goals" aria-labelledby="rl-hp-goals-title">
+    <div class="rl-hp-goals-inner">
+      <div class="rl-hp-goals-copy">
+        <p class="rl-hp-goals-kicker">2026 SEASON REVIEW / 2027 GOAL</p>
+        <h2 id="rl-hp-goals-title">A race date is a direction.</h2>
+        <p>Look at the season you had. Pick one measurable result for 2027 and the habit that gets you there.</p>
+        <a href="{SITE_BASE_URL}/goals/?src=home" class="rl-hp-goals-cta" data-ga="goal_hero_click" data-ga-label="home">Make my goal poster &rarr;</a>
+      </div>
+      <div class="rl-hp-goals-poster" aria-label="Sample Roadie Labs goal poster">
+        <span class="rl-hp-goals-sample">SAMPLE</span>
+        <span class="rl-hp-goals-poster-year">2027 / GOAL FILE</span>
+        <strong>Your race.<br>Your number.</strong>
+        <span class="rl-hp-goals-poster-foot">ROADIE LABS</span>
+      </div>
+    </div>
   </section>'''
 
 
@@ -1165,7 +1185,20 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 .rl-hp-hero-ladder-cta { display: inline-block; padding: 12px 28px; background: transparent; color: var(--rl-color-near-black); font-family: 'Sometype Mono', monospace; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--rl-color-near-black); text-decoration: none; transition: border-color .3s, color .3s; }
 .rl-hp-hero-ladder-cta:hover { border-color: var(--rl-color-steel); color: var(--rl-color-steel); }
 
-/* ── Ladder strip (new hp section, id=ladder, immediately after hero) ── */
+/* ── 2027 goals entry, linked to the existing questionnaire ── */
+.rl-hp-goals { background: var(--rl-color-near-black); color: var(--rl-color-cool-white); border-bottom: var(--rl-border-standard); }
+.rl-hp-goals-inner { max-width: 1200px; margin: 0 auto; padding: 36px 48px; display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 48px; align-items: center; }
+.rl-hp-goals-kicker, .rl-hp-goals-poster-year, .rl-hp-goals-poster-foot, .rl-hp-goals-sample { font-family: var(--rl-font-data); font-weight: 700; letter-spacing: .12em; font-size: 11px; }
+.rl-hp-goals-kicker { margin: 0 0 12px; }
+.rl-hp-goals h2 { font-family: var(--rl-font-editorial); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; margin: 0 0 10px; color: inherit; }
+.rl-hp-goals-copy > p:not(.rl-hp-goals-kicker) { max-width: 54ch; margin: 0 0 20px; line-height: 1.55; }
+.rl-hp-goals-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 9px 16px; border: 2px solid var(--rl-color-cool-white); color: var(--rl-color-cool-white); font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+.rl-hp-goals-cta:hover, .rl-hp-goals-cta:focus-visible { background: var(--rl-color-cool-white); color: var(--rl-color-near-black); }
+.rl-hp-goals-poster { position: relative; min-height: 235px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; background: var(--rl-color-cool-white); color: var(--rl-color-near-black); border: 3px solid var(--rl-color-cool-white); }
+.rl-hp-goals-poster strong { font-family: var(--rl-font-editorial); font-size: 28px; line-height: 1.05; }
+.rl-hp-goals-sample { align-self: flex-end; border: 1px solid currentColor; padding: 3px 5px; }
+
+/* ── Ladder strip (id=ladder) ── */
 .rl-hp-ladder { border-top: 1px solid var(--rl-color-near-black); border-bottom: 1px solid var(--rl-color-near-black); background: var(--rl-color-cool-white); }
 .rl-hp-ladder-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; }
 .rl-hp-ladder-cell { padding: 30px 32px 34px; border-right: 1px solid var(--rl-color-silver); }
@@ -1447,6 +1480,8 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
   .rl-hp-hero h1 { font-size: 28px; }
   .rl-hp-hero-actions { flex-direction: column; }
   .rl-hp-hero-actions a { width: 100%; text-align: center; }
+  .rl-hp-goals-inner { grid-template-columns: 1fr; padding: 32px 16px; gap: 24px; }
+  .rl-hp-goals-poster { max-width: 240px; }
 
   /* Hero radar viz */
   .rl-hp-hv-wrap svg { max-width: 320px; }
@@ -1871,6 +1906,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     top_bar = build_top_bar()
     nav = build_nav()
     hero = build_hero(stats, race_index)
+    goal_review_entry = build_goal_review_entry()
     ladder = build_ladder_strip(stats)
     stats_stripe = build_stats_bar(stats)
     ticker = build_ticker(one_liners, substack_posts, upcoming)
@@ -1929,6 +1965,8 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
   {nav}
 
   {hero}
+
+  {goal_review_entry}
 
   {ladder}
 
