@@ -33,8 +33,10 @@
   var MC_BASE = 'https://athlete-profiles-production.up.railway.app';
   var params = new URLSearchParams(window.location.search);
   var GOALS_MODE = SHOW_ROAD_FIELDS && params.get('src') === 'goals';
-  var goalToken = params.get('t') || '';
-  if (!goalToken) {
+  var goalToken = GOALS_MODE ? (params.get('t') ||
+    (window.history.state && window.history.state.goalToken) ||
+    new URLSearchParams(window.location.hash.slice(1)).get('t') || '') : '';
+  if (GOALS_MODE && !goalToken) {
     try {
       goalToken = sessionStorage.getItem('rl_goal_prefill_token') || '';
       sessionStorage.removeItem('rl_goal_prefill_token');
@@ -44,10 +46,11 @@
   var OFFER_VARIANT = /^[ABC]$/.test(params.get('offer_variant') || '') ? params.get('offer_variant') : '';
   var ENTRY_SRC = /^[a-z_]{1,24}$/.test(params.get('entry_src') || '') ? params.get('entry_src') : '';
   if (!/^[A-Za-z0-9_-]{16,64}$/.test(goalToken)) goalToken = '';
+  var GOALS_STORAGE_KEY = goalToken ? 'rl_goal_draft_' + goalToken : '';
   if (goalToken && window.history && window.history.replaceState) {
     var safeUrl = new URL(window.location.href);
     safeUrl.searchParams.delete('t');
-    window.history.replaceState(null, '', safeUrl.pathname + safeUrl.search);
+    window.history.replaceState({ goalToken: goalToken }, '', safeUrl.pathname + safeUrl.search);
   }
 
   // ---- Pricing constants (must match server) ----
@@ -126,6 +129,7 @@
 
   // ---- localStorage persistence ----
   function saveForm() {
+    if (GOALS_MODE && !GOALS_STORAGE_KEY) return;
     try {
       var formData = new FormData(form);
       var data = {};
@@ -140,20 +144,23 @@
       });
       data._savedAt = Date.now();
       if (prefilledRaceSlug) data._raceSlug = prefilledRaceSlug;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      (GOALS_MODE ? sessionStorage : localStorage).setItem(
+        GOALS_MODE ? GOALS_STORAGE_KEY : STORAGE_KEY, JSON.stringify(data));
     } catch(e) {}
   }
 
   function restoreForm() {
     try {
-      var saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      var storage = GOALS_MODE ? sessionStorage : localStorage;
+      var key = GOALS_MODE ? GOALS_STORAGE_KEY : STORAGE_KEY;
+      var saved = JSON.parse(storage.getItem(key));
       if (!saved) return;
       if (!saved._savedAt || Date.now() - saved._savedAt > 7*24*60*60*1000) {
-        localStorage.removeItem(STORAGE_KEY);
+        storage.removeItem(key);
         return;
       }
       var urlRace = new URLSearchParams(window.location.search).get('race');
-      var restoreRaces = !(urlRace && urlRace !== saved._raceSlug);
+      var restoreRaces = GOALS_MODE || !(urlRace && urlRace !== saved._raceSlug);
       if (restoreRaces) {
         var maxRaceIdx = -1;
         for (var rkey in saved) {
@@ -357,7 +364,8 @@
   (function prefillFromURL() {
     var params = new URLSearchParams(window.location.search);
     var raceSlug = params.get('race');
-    if (!raceSlug) return;
+    // The entry race is attribution, not necessarily the A race named in the review.
+    if (!raceSlug || GOALS_MODE) return;
     prefilledRaceSlug = raceSlug;
 
     // Humanize slug as fallback name: "unbound-200" → "Unbound 200"
@@ -599,7 +607,7 @@
   // ---- Restore saved form data ----
   // A review link belongs to one lead. Do not reuse another visitor's draft
   // from this browser before the token lookup identifies the lead.
-  if (!(GOALS_MODE && goalToken)) restoreForm();
+  if (!GOALS_MODE || GOALS_STORAGE_KEY) restoreForm();
   if (GOALS_MODE) {
     var longIntro = document.querySelector('.tp-questionnaire-hero p');
     if (longIntro) longIntro.hidden = true;
@@ -685,13 +693,16 @@
       if (OFFER_VARIANT) workerData.offer_variant = OFFER_VARIANT;
       if (ENTRY_SRC) workerData.entry_src = ENTRY_SRC;
     }
-    if (GOALS_MODE && goalContext) {
+    var checkoutEmail = String(workerData.email || '').trim().toLowerCase();
+    var reviewEmail = goalContext && String(goalContext.email || '').trim().toLowerCase();
+    var sameReviewLead = GOALS_MODE && reviewEmail && checkoutEmail === reviewEmail;
+    if (sameReviewLead) {
       var context = [];
       if (goalContext.goal) context.push('2027 goal: ' + goalContext.goal);
       if (goalContext.habits) context.push('Habit: ' + goalContext.habits);
       if (context.length) workerData.notes = [workerData.notes, context.join('\n')].filter(Boolean).join('\n\n').slice(0, 2000);
     }
-    if (GOALS_MODE && goalToken && window.crypto && crypto.subtle) {
+    if (sameReviewLead && goalToken && window.crypto && crypto.subtle) {
       try {
         var hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(goalToken));
         workerData.goal_ref = Array.from(new Uint8Array(hash)).map(function(b) {
