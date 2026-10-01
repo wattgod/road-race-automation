@@ -519,6 +519,36 @@ def sync_goals(goals_file: str):
     return True
 
 
+def sync_exit_interview(exit_file: str):
+    """Upload the athlete exit interview to /coaching/exit/index.html."""
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+    html_path = Path(exit_file)
+    if not html_path.exists():
+        print(f"✗ Exit interview not found: {html_path}")
+        print("  Run: python3 wordpress/generate_exit_interview.py first")
+        return None
+    remote_base = f"{REMOTE_BASE}/coaching/exit"
+    try:
+        subprocess.run(
+            ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+             f"mkdir -p {remote_base} && chmod 755 {REMOTE_BASE}/coaching {remote_base}"],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+        subprocess.run(
+            ["scp", "-i", str(SSH_KEY), "-P", port, str(html_path),
+             f"{user}@{host}:{remote_base}/index.html"],
+            check=True, capture_output=True, text=True, timeout=30,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Exit interview upload failed: {e.stderr.strip()}")
+        return None
+    print("✓ Uploaded exit interview: https://roadielabs.com/coaching/exit/")
+    return True
+
+
 def sync_race_debrief(debrief_file: str):
     """Upload the race debrief to /race-debrief/index.html (SSH mkdir + SCP).
 
@@ -3261,6 +3291,14 @@ if __name__ == "__main__":
         help="Path to goals page HTML (default: wordpress/output/goals/index.html)"
     )
     parser.add_argument(
+        "--sync-exit-interview", action="store_true",
+        help="Upload the athlete exit interview to /coaching/exit/ via SCP"
+    )
+    parser.add_argument(
+        "--exit-interview-file", default="wordpress/output/coaching-exit/index.html",
+        help="Path to exit interview HTML"
+    )
+    parser.add_argument(
         "--sync-race-debrief", action="store_true",
         help="Upload the race debrief to /race-debrief/ via SCP (after MC and the worker)"
     )
@@ -3542,7 +3580,7 @@ if __name__ == "__main__":
         args.purge_cache = True
 
     has_action = any([args.sync_index, args.sync_widget,
-                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_race_debrief, args.sync_about,
+                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_exit_interview, args.sync_race_debrief, args.sync_about,
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_consult_intake,
@@ -3572,6 +3610,8 @@ if __name__ == "__main__":
         sync_homepage(args.homepage_file)
     if args.sync_goals:
         sync_goals(args.goals_file)
+    if args.sync_exit_interview:
+        sync_exit_interview(args.exit_interview_file)
     if args.sync_race_debrief:
         sync_race_debrief(args.race_debrief_file)
     if args.sync_about:
