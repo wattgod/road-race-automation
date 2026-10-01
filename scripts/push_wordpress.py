@@ -3551,6 +3551,7 @@ if __name__ == "__main__":
         args.sync_widget = True
         args.sync_og = True
         args.sync_homepage = True
+        args.sync_exit_interview = True
         args.sync_about = True
         args.sync_coaching = True
         args.sync_coaching_apply = True

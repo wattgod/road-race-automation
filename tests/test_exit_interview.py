@@ -58,6 +58,8 @@ def test_brand_and_consent_copy_are_roadie_specific():
 def test_private_link_is_stripped_before_analytics_and_page_is_not_indexed():
     page = exit_page.generate_page()
     assert page.index("history.replaceState") < page.index("G-")
+    assert "window.location.hash" in page
+    assert "new URLSearchParams(window.location.search)" not in exit_page.build_exit_personal_link_js()
     assert '<meta name="robots" content="noindex, nofollow">' in page
     assert 'href="https://roadielabs.com/coaching/exit/"' in page
 
@@ -86,3 +88,4 @@ def test_release_script_exposes_a_scoped_exit_sync():
     assert "def sync_exit_interview(" in source
     assert '"--sync-exit-interview"' in source
     assert "/coaching/exit" in source
+    assert "args.sync_exit_interview = True" in source

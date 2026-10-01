@@ -11,7 +11,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 from brand_tokens import get_ga4_head_snippet, get_preload_hints
 from cookie_consent import get_consent_banner_html
 from generate_coaching_apply import build_apply_css
-from generate_goals_2027 import build_personal_link_js
 from generate_neo_brutalist import get_page_css
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
@@ -180,6 +179,25 @@ def build_css() -> str:
 </style>"""
 
 
+def build_exit_personal_link_js() -> str:
+    """Read private prefills from the URL fragment, which never reaches the server."""
+    return r"""<script>
+(function() {
+  var keys = ['name','email','athlete'], found = {};
+  try {
+    var params = new URLSearchParams(window.location.hash.replace(/^#\??/, ''));
+    keys.forEach(function(key) {
+      if (params.has(key)) found[key] = params.get(key) || '';
+    });
+    if (Object.keys(found).length) {
+      history.replaceState(history.state, '', window.location.pathname + window.location.search);
+    }
+  } catch (error) {}
+  window.rlPersonalLink = found;
+})();
+</script>"""
+
+
 def build_js() -> str:
     return f"""<script>
 (function() {{
@@ -189,6 +207,7 @@ def build_js() -> str:
   var message = document.getElementById('message');
   var submit = document.getElementById('exit-submit');
   var saveTimer = null;
+  var submitted = false;
 
   function show(kind, text) {{
     message.className = 'rl-apply-message ' + kind;
@@ -243,21 +262,23 @@ def build_js() -> str:
     }}
     ['name','email','athlete'].forEach(function(key) {{
       var el = document.getElementById(key);
-      if (el && personal[key] && !el.value) el.value = personal[key];
+      if (el && personal[key]) el.value = personal[key];
     }});
+    if (Object.keys(personal).length) save(true);
     paintChoices(); updateProgress();
   }}
   form.addEventListener('input', function() {{ clearTimeout(saveTimer); saveTimer = setTimeout(function() {{ save(true); }}, 700); paintChoices(); updateProgress(); }});
   form.addEventListener('change', function() {{ paintChoices(); updateProgress(); }});
   document.getElementById('exit-save').addEventListener('click', function() {{ save(false); }});
-  window.addEventListener('beforeunload', function() {{ save(true); }});
+  window.addEventListener('beforeunload', function() {{ if (!submitted && !form.hidden) save(true); }});
   form.addEventListener('submit', function(event) {{
     event.preventDefault();
     if (form.website.value) {{ show('error', 'Something filled a hidden field. Clear autofill and try again.'); return; }}
     var data = collect();
     var answers = {{}};
     Object.keys(data).forEach(function(key) {{ if (!['name','email','athlete'].includes(key)) answers[key] = data[key]; }});
-    submit.disabled = true; submit.textContent = 'Submitting…'; save(true);
+    submit.disabled = true; submit.textContent = 'Submitting…';
+    var draftSaved = save(true);
     var controller = typeof AbortController === 'function' ? new AbortController() : null;
     var timeout = setTimeout(function() {{ if (controller) controller.abort(); }}, 25000);
     fetch('{WORKER_URL}', {{
@@ -267,6 +288,7 @@ def build_js() -> str:
     }}).then(function(response) {{
       if (!response.ok) throw new Error('worker failed');
       clearTimeout(timeout); clearTimeout(saveTimer);
+      submitted = true;
       try {{ localStorage.removeItem(STORAGE_KEY); }} catch (error) {{}}
       form.hidden = true; message.classList.add('hidden');
       document.getElementById('exit-success').hidden = false;
@@ -274,7 +296,9 @@ def build_js() -> str:
       if (typeof gtag === 'function') gtag('event','athlete_exit_submitted',{{brand:'{BRAND}'}});
     }}).catch(function() {{
       clearTimeout(timeout); submit.disabled = false; submit.textContent = 'Send It to Matti';
-      show('error', 'That did not go through. Your answers are saved in this browser. Try again, or email {CONTACT_EMAIL}.');
+      show('error', draftSaved
+        ? 'That did not go through. Your answers are saved in this browser. Try again, or email {CONTACT_EMAIL}.'
+        : 'That did not go through, and this browser could not save a draft. Keep this page open and try again, or email {CONTACT_EMAIL}.');
     }});
   }});
   restore();
@@ -290,7 +314,7 @@ def generate_page() -> str:
 <meta name="description" content="A private exit interview for Roadie Labs coaching athletes.">
 <meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://roadielabs.com/coaching/exit/">
 <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
-{build_personal_link_js()}{get_preload_hints()}{get_page_css()}{get_ga4_head_snippet()}{build_apply_css()}{build_css()}
+{build_exit_personal_link_js()}{get_preload_hints()}{get_page_css()}{get_ga4_head_snippet()}{build_apply_css()}{build_css()}
 </head><body class="rl-neo-brutalist-page" style="background:var(--rl-color-cool-white);color:var(--rl-color-near-black);font-family:var(--rl-font-data);font-size:var(--rl-font-size-sm);line-height:1.7;min-height:100vh">
 {get_site_header_html()}
 <main class="rl-apply-container">
