@@ -34,7 +34,8 @@
   var params = new URLSearchParams(window.location.search);
   var GOALS_MODE = SHOW_ROAD_FIELDS && params.get('src') === 'goals';
   var goalToken = GOALS_MODE ? (params.get('t') ||
-    (window.history.state && window.history.state.goalToken) || '') : '';
+    (window.history.state && window.history.state.goalToken) ||
+    new URLSearchParams(window.location.hash.slice(1)).get('t') || '') : '';
   if (GOALS_MODE && !goalToken) {
     try {
       goalToken = sessionStorage.getItem('rl_goal_prefill_token') || '';
