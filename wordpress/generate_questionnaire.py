@@ -17,6 +17,7 @@ Deploy: python3 scripts/push_wordpress.py --sync-questionnaire wordpress/output/
 """
 
 import argparse
+import hashlib
 from pathlib import Path
 
 from generate_neo_brutalist import (
@@ -37,6 +38,8 @@ CANONICAL_URL = f"{SITE_BASE_URL}/questionnaire/"
 # Form JS is deployed alongside the page (same directory) so the static page
 # has no dependency on wp-content/uploads or mu-plugins.
 FORM_JS_SRC = "/questionnaire/training-plans-form.js"
+FORM_JS_PATH = Path(__file__).parent.parent / "web" / "training-plans-form.js"
+FORM_JS_VERSION = hashlib.sha256(FORM_JS_PATH.read_bytes()).hexdigest()[:12]
 
 
 def esc(text) -> str:
@@ -1021,7 +1024,7 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
   source: "roadielabs.com/questionnaire",
   showRoadFields: true
 }};</script>
-<script src="{FORM_JS_SRC}" defer></script>'''
+<script src="{FORM_JS_SRC}?v={FORM_JS_VERSION}" defer></script>'''
 
     # Run before GA4 config: the prefill token is a bearer credential and must
     # not be present in GA4's automatic page_location event.
@@ -1099,7 +1102,7 @@ def main():
     print(f"Generated {output_file} ({len(html_content):,} bytes)")
 
     # Form JS deploys alongside the page
-    form_js = Path(__file__).parent.parent / "web" / "training-plans-form.js"
+    form_js = FORM_JS_PATH
     if form_js.exists():
         (q_dir / "training-plans-form.js").write_text(
             form_js.read_text(encoding="utf-8"), encoding="utf-8")

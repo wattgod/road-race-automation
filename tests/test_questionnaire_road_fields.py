@@ -1,4 +1,5 @@
 from pathlib import Path
+import hashlib
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,3 +47,10 @@ def test_saved_form_survives_stripe_back_navigation():
     assert "clearSaved();" not in script[start:end]
     assert "_savedAt" in script
     assert "_raceSlug" in script
+
+
+def test_questionnaire_script_url_changes_with_content():
+    script = (ROOT / "web" / "training-plans-form.js").read_bytes()
+    version = hashlib.sha256(script).hexdigest()[:12]
+    html = generate_questionnaire_page()
+    assert f'/questionnaire/training-plans-form.js?v={version}' in html
