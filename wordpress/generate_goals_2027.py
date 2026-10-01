@@ -695,6 +695,7 @@ def build_goals_js() -> str:
   var SEASON = __SEASON__;
   var SUCCESS = "Got it. Your 2027 poster is on its way to your inbox.";
   var lastStored = false;
+  var POSTER_TOKEN = "";
 
   var form = document.getElementById("goals-form");
 
@@ -1017,7 +1018,10 @@ def build_goals_js() -> str:
       }),
       signal: ctrl ? ctrl.signal : undefined
     }).then(function(r) {
-      return r.json().then(function() { return r.ok; }).catch(function() { return r.ok; });
+      return r.json().then(function(body) {
+        if (r.ok && body && body.poster_token) { POSTER_TOKEN = body.poster_token; }
+        return r.ok;
+      }).catch(function() { return r.ok; });
     }).catch(function() { return false; })
       .then(function(ok) {
         clearTimeout(killer);
@@ -1168,7 +1172,8 @@ def build_goals_js() -> str:
           ctaUrl.searchParams.set("offer_variant", key);
           if (RACE_SLUG) { ctaUrl.searchParams.set("race", RACE_SLUG); }
           if (ENTRY_SRC) { ctaUrl.searchParams.set("entry_src", ENTRY_SRC); }
-          cta.href = ctaUrl.pathname + ctaUrl.search;
+          if (POSTER_TOKEN) { ctaUrl.hash = "t=" + encodeURIComponent(POSTER_TOKEN); }
+          cta.href = ctaUrl.pathname + ctaUrl.search + ctaUrl.hash;
         } catch (err) { /* keep the static href */ }
         ga4("goal_offer_view", { offer_variant: key, plan_type: planType });
         cta.addEventListener("click", function() {

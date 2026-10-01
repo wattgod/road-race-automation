@@ -30,6 +30,25 @@
   var intentBeaconSent = false;
   var sectionsSeen = {};
   var STORAGE_KEY = 'gg_training_form';
+  var MC_BASE = 'https://athlete-profiles-production.up.railway.app';
+  var params = new URLSearchParams(window.location.search);
+  var GOALS_MODE = SHOW_ROAD_FIELDS && params.get('src') === 'goals';
+  var goalToken = params.get('t') || '';
+  if (!goalToken) {
+    try {
+      goalToken = sessionStorage.getItem('rl_goal_prefill_token') || '';
+      sessionStorage.removeItem('rl_goal_prefill_token');
+    } catch (e) {}
+  }
+  var goalContext = null;
+  var OFFER_VARIANT = /^[ABC]$/.test(params.get('offer_variant') || '') ? params.get('offer_variant') : '';
+  var ENTRY_SRC = /^[a-z_]{1,24}$/.test(params.get('entry_src') || '') ? params.get('entry_src') : '';
+  if (!/^[A-Za-z0-9_-]{16,64}$/.test(goalToken)) goalToken = '';
+  if (goalToken && window.history && window.history.replaceState) {
+    var safeUrl = new URL(window.location.href);
+    safeUrl.searchParams.delete('t');
+    window.history.replaceState(null, '', safeUrl.pathname + safeUrl.search);
+  }
 
   // ---- Pricing constants (must match server) ----
   var PRICE_PER_WEEK = 15;
@@ -62,13 +81,45 @@
 
   // ---- GA4 Analytics Helper ----
   function track(event, params) {
+    params = params || {};
+    if (GOALS_MODE) {
+      if (OFFER_VARIANT) params.offer_variant = OFFER_VARIANT;
+      if (ENTRY_SRC) params.entry_src = ENTRY_SRC;
+    }
     if (typeof gtag === 'function') {
-      gtag('event', event, params || {});
+      gtag('event', event, params);
     } else if (window.dataLayer) {
       var obj = { event: event };
       if (params) { for (var k in params) obj[k] = params[k]; }
       window.dataLayer.push(obj);
     }
+  }
+
+  function ga4Attribution() {
+    if (!/(^|; )rl_consent=accepted/.test(document.cookie) || typeof gtag !== 'function') {
+      return Promise.resolve({ analytics_consent: 'denied' });
+    }
+    var gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+    var measurementId = '';
+    try { measurementId = new URL(gaScript.src).searchParams.get('id') || ''; } catch (e) {}
+    if (!/^G-[A-Z0-9]+$/i.test(measurementId)) return Promise.resolve({ analytics_consent: 'granted' });
+    function read(field) {
+      return new Promise(function(resolve) {
+        var done = false;
+        var timer = setTimeout(function() { if (!done) { done = true; resolve(''); } }, 400);
+        try {
+          gtag('get', measurementId, field, function(value) {
+            if (!done) { done = true; clearTimeout(timer); resolve(String(value || '')); }
+          });
+        } catch (e) { if (!done) { done = true; clearTimeout(timer); resolve(''); } }
+      });
+    }
+    return Promise.all([read('client_id'), read('session_id')]).then(function(values) {
+      var result = { analytics_consent: 'granted' };
+      if (/^\d+\.\d+$/.test(values[0])) result.ga4_client_id = values[0];
+      if (/^\d+$/.test(values[1])) result.ga4_session_id = values[1];
+      return result;
+    });
   }
 
   track('tp_page_view', { page: 'questionnaire' });
@@ -546,7 +597,38 @@
   });
 
   // ---- Restore saved form data ----
-  restoreForm();
+  // A review link belongs to one lead. Do not reuse another visitor's draft
+  // from this browser before the token lookup identifies the lead.
+  if (!(GOALS_MODE && goalToken)) restoreForm();
+  if (GOALS_MODE) {
+    var longIntro = document.querySelector('.tp-questionnaire-hero p');
+    if (longIntro) longIntro.hidden = true;
+    form.querySelectorAll('.gg-form-section').forEach(function(section) {
+      var number = section.querySelector('.gg-section-number');
+      if (number && /^(2|4|6)$/.test(number.textContent.trim())) {
+        section.hidden = true;
+        section.querySelectorAll('[required]').forEach(function(field) { field.required = false; });
+      }
+    });
+      track('goal_plan_view', {});
+  }
+  if (GOALS_MODE && goalToken) {
+    fetch(MC_BASE + '/api/season-plan/prefill/' + encodeURIComponent(goalToken), {
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) { return r.ok ? r.json() : null; }).then(function(data) {
+      if (!data) return;
+      goalContext = data;
+      [['name', 'name'], ['email', 'email'], ['race_0_name', 'a_race_name'],
+        ['race_0_date', 'a_race_date']].forEach(function(pair) {
+        var field = form.querySelector('[name="' + pair[0] + '"]');
+        if (field && !field.value && data[pair[1]]) field.value = data[pair[1]];
+      });
+      var priority = form.querySelector('[name="race_0_priority"]');
+      if (priority && !priority.value) priority.value = 'A';
+      updatePriceDisplay();
+      saveForm();
+    }).catch(function() {});
+  }
   updatePriceDisplay(); // Show price from restored race dates
 
   // ---- Form submission → Stripe Checkout ----
@@ -599,6 +681,28 @@
 
     // Map to worker format (camelCase → snake_case)
     var workerData = mapToWorkerFormat(data);
+    if (GOALS_MODE) {
+      if (OFFER_VARIANT) workerData.offer_variant = OFFER_VARIANT;
+      if (ENTRY_SRC) workerData.entry_src = ENTRY_SRC;
+    }
+    if (GOALS_MODE && goalContext) {
+      var context = [];
+      if (goalContext.goal) context.push('2027 goal: ' + goalContext.goal);
+      if (goalContext.habits) context.push('Habit: ' + goalContext.habits);
+      if (context.length) workerData.notes = [workerData.notes, context.join('\n')].filter(Boolean).join('\n\n').slice(0, 2000);
+    }
+    if (GOALS_MODE && goalToken && window.crypto && crypto.subtle) {
+      try {
+        var hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(goalToken));
+        workerData.goal_ref = Array.from(new Uint8Array(hash)).map(function(b) {
+          return b.toString(16).padStart(2, '0');
+        }).join('');
+      } catch (e) { /* attribution must never block checkout */ }
+    }
+    var attribution = await ga4Attribution();
+    workerData.analytics_consent = attribution.analytics_consent;
+    if (attribution.ga4_client_id) workerData.ga4_client_id = attribution.ga4_client_id;
+    if (attribution.ga4_session_id) workerData.ga4_session_id = attribution.ga4_session_id;
 
     try {
       var response = await fetch(API_URL, {

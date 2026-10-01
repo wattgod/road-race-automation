@@ -135,6 +135,19 @@ def test_three_offer_variants_to_test():
     assert "goal_offer_view" in js and "offer_variant" in js
 
 
+def test_review_token_reaches_plan_intake_after_successful_worker_response():
+    js = build_goals_js()
+    assert "body.poster_token" in js
+    assert 'ctaUrl.hash = "t=" + encodeURIComponent(POSTER_TOKEN)' in js
+    assert 'if (r.ok && body && body.poster_token)' in js
+
+
+def test_questionnaire_scrubs_private_token_before_analytics_initializes():
+    from generate_questionnaire import generate_questionnaire_page
+    html = generate_questionnaire_page()
+    assert html.index("sessionStorage.setItem('rl_goal_prefill_token'") < html.index("googletagmanager.com/gtag/js")
+
+
 def test_only_one_plan_product_race_plan_no_season_plan():
     # Roadie Labs has no Season Plan product today (that is a Gravel God
     # ruling, docs/specs/goals-2027-funnel-spec.md D2/D15) — linking one
