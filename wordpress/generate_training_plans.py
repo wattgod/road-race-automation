@@ -84,7 +84,7 @@ def build_plan_preview() -> str:
         event_format=races[0]["event_format"],
         race_options=races, questionnaire_url=QUESTIONNAIRE_URL + "?src=plan_preview",
         heading="See the plan before you buy.",
-        lede="Choose your race, available hours, and training experience. Open a week to see the sessions, recovery days, and workout targets.",
+        lede="Choose your race, available hours, and training experience. Open a week to see the workouts, recovery days, and workout targets.",
     )
 
 

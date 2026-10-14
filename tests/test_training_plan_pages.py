@@ -127,7 +127,7 @@ class TestCustomPlanPreview:
         assert "WEEKLY LOAD" in html
         assert "data-role=\"goal\"" in html
         assert "data-role=\"control\"" in html
-        assert "sample_week_number" in html
+        assert "body.sample_week_number" not in html
         assert "/api/training-plan-preview" in html
         assert '"climbing":10' in html
         assert '"event_format":"fondo"' in html
