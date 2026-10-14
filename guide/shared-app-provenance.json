@@ -1,0 +1,29 @@
+{
+  "canonical_repository": "https://github.com/wattgod/gravel-race-automation",
+  "source": "wordpress/generate_guide.py",
+  "source_sha256": "c3609f00418fb6a4363b27e851b38924f2673d3f97a071c400789db0e7e4ee63",
+  "block_functions": [
+    "_md_block",
+    "_md_inline",
+    "_render_kc_fill_blank",
+    "_render_kc_matching",
+    "_safe_json_for_script",
+    "esc",
+    "render_accordion",
+    "render_block",
+    "render_callout",
+    "render_data_table",
+    "render_flashcard",
+    "render_knowledge_check",
+    "render_process_list",
+    "render_prose",
+    "render_tabs",
+    "render_timeline",
+    "set_lesson_context"
+  ],
+  "block_snapshot_sha256": "ccaf93e399013ed0f931593084a1f0dab83d9914ee3eff2abaed9a65389dd695",
+  "css_sha256": "7ee55c90257751f6275fd33da06e8e2e4c64c7dac0a1a48f924a0bc23a699851",
+  "js_sha256": "2ba9a4ee1ae8a6e887664f82a3b4a46919fdc53410698e0d371ddc365054212f",
+  "scope": "Same block rendering and teaching interactions as Gravel God; Roadie shell, tokens, sources and race content remain native.",
+  "infographics_sha256": "a7a73a1cc5ca25d831ccfa3d6a11c88053835c9492c44cb9f83fd6ee6e67c4e5"
+}

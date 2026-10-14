@@ -857,6 +857,7 @@ def sync_success(output_dir: str):
 
     pages = [
         ("training-plans-success.html", "training-plans/success"),
+        ("season-plan-success.html", "season-plan/success"),
         ("coaching-welcome.html", "coaching/welcome"),
         ("consulting-confirmed.html", "consulting/confirmed"),
     ]
@@ -1285,6 +1286,53 @@ def coaching_apply_problems(html: str) -> list:
     finally:
         sys.path.pop(0)
     return apply_page_problems(html)
+
+
+def sync_season_plan():
+    """Upload the Season Plan intake to /season-plan/index.html on
+    SiteGround via SSH+SCP.
+
+    A sol review of D9's build found this page had no deploy path at all:
+    "season-plan" wasn't in ROOT_CANONICAL_SLUGS, so the generic sync_pages
+    /race/ sweep would have picked up wordpress/output/season-plan.html and
+    shipped it at /race/season-plan/ instead of /season-plan/. Mirrors
+    sync_season_review's single-page upload pattern.
+    """
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    html_path = Path("wordpress/output/season-plan.html")
+    if not html_path.exists():
+        print(f"✗ Season Plan HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_season_plan_form.py first")
+        return None
+
+    remote_base = f"{REMOTE_BASE}/season-plan"
+    try:
+        subprocess.run(
+            ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+             f"mkdir -p {remote_base}"],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+        subprocess.run(
+            ["scp", "-i", str(SSH_KEY), "-P", port, str(html_path),
+             f"{user}@{host}:{remote_base}/index.html"],
+            check=True, capture_output=True, text=True, timeout=30,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Upload failed for /season-plan/: {e.stderr.strip()}")
+        return None
+    except Exception as e:  # noqa: BLE001
+        print(f"✗ Error uploading /season-plan/: {e}")
+        return None
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    url = f"{wp_url}/season-plan/"
+    print(f"✓ Uploaded /season-plan/: {url}")
+    return url
+
 
 
 def sync_coaching_apply(apply_file: str):
@@ -3535,6 +3583,7 @@ if __name__ == "__main__":
         "--deploy-all", action="store_true",
         help="Shortcut: all --sync-* flags + --purge-cache"
     )
+    parser.add_argument("--sync-season-plan", action="store_true", help="Upload /season-plan/ intake")
     args = parser.parse_args()
 
     # Expand composite flags
@@ -3585,7 +3634,7 @@ if __name__ == "__main__":
                       args.sync_questionnaire,
                       args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
                       args.sync_consult_intake,
-                      args.sync_training_plans, args.sync_methodology, args.sync_success, args.sync_pages,
+                      args.sync_training_plans, args.sync_methodology, args.sync_success, args.sync_season_plan, args.sync_pages,
                       args.sync_sitemap, args.sync_redirects,
                       args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
                       args.sync_series, args.sync_blog,
@@ -3619,6 +3668,9 @@ if __name__ == "__main__":
         sync_about(args.about_file)
     if args.sync_questionnaire:
         sync_questionnaire(args.questionnaire_dir)
+    if args.sync_season_plan:
+        if not sync_season_plan():
+            raise SystemExit("Season Plan deployment failed")
     if args.sync_coaching:
         sync_coaching(args.coaching_file)
     coaching_apply_failed = False

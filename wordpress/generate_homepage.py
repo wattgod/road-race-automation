@@ -467,7 +467,7 @@ def build_guide_preview(chapters: list) -> str:
       <h2>THE ROAD RACING GUIDE</h2>
     </div>
     <div class="rl-hp-guide-intro">
-      <p>Everything you need to know about road racing &mdash; from bike setup to training to race-day execution. 8 chapters, written by coaches who actually race.</p>
+      <p>A field guide to what you need to know about road racing &mdash; from bike setup to training to race-day execution. 8 chapters, written by coaches who actually race.</p>
       <p class="rl-hp-guide-deal"><strong>The deal:</strong> Chapters 1&ndash;3 are free. Drop your email to unlock the full guide &mdash; nutrition, race tactics, race week protocol, and more.</p>
     </div>
     <div class="rl-hp-guide-grid">{items}
@@ -524,7 +524,6 @@ def build_goal_review_entry() -> str:
 # .claude/skills/brand-and-trust/SKILL.md, "Never defensive messaging" —
 # phrases naming what something ISN'T are normally banned because they
 # plant doubt nobody had). Cell 03's body line ("A human in your corner
-# — not an AI, not a spreadsheet.") reuses the same owner-sanctioned
 # 2026-07-18 exception as the /coaching/ hero (generate_coaching.py,
 # build_hero()) — an aspirational "corner" frame, not a rebuttal to an
 # objection nobody raised.
@@ -548,7 +547,7 @@ def build_ladder_strip(stats: dict) -> str:
       <div class="rl-hp-ladder-cell">
         <p class="rl-hp-ladder-num">03</p>
         <h3>Find out what you could be.</h3>
-        <p>A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+        <p>A coach who reads your workouts, answers your questions, and adjusts the week with you.</p>
         <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-ladder-go" data-ga="ladder_coaching">GET ME IN YOUR CORNER &rarr;</a>
       </div>
     </div>
@@ -1076,7 +1075,7 @@ def build_testimonials() -> str:
     quiet coaching band so the homepage has a coaching presence."""
     return f'''<section class="rl-hp-testimonials" id="testimonials">
     <div class="rl-hp-test-cta">
-      <p>You could be better than you think. A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+      <p>You could be better than you think. A coach who reads your workouts, answers your questions, and adjusts the week with you.</p>
       <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-btn rl-hp-btn--primary" data-ga="coaching_cta_testimonials">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''

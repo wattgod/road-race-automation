@@ -1,0 +1,357 @@
+(function() {
+  if (window.__ggSeasonPlanFormLoaded) return;
+  window.__ggSeasonPlanFormLoaded = true;
+
+  var API_BASE = 'https://athlete-custom-training-plan-pipeline-production.up.railway.app/api';
+  var API_URL = API_BASE + '/create-checkout';
+  // Mission Control's own public URL (docs/handoffs/2026-09-22-season-review-
+  // and-goals-funnel.md) — the read-only prefill route lives there, not on
+  // the checkout server.
+  var MC_BASE = 'https://athlete-profiles-production.up.railway.app';
+
+  var form = document.getElementById('rl-season-form');
+  if (!form) return;
+  var messageEl = document.getElementById('rl-season-message');
+  var submitBtn = form.querySelector('.rl-apply-submit-btn');
+  var racesContainer = document.getElementById('season-races-container');
+  var addRaceBtn = document.getElementById('season-add-race-btn');
+
+  var raceCount = 0;
+  var MAX_RACES = 20;
+  var formStarted = false;
+
+  /* ---- URL params (?t=<poster_token>, and the same attribution params
+     every other GG questionnaire reads) ---- */
+  var TOKEN = (function() {
+    var v = '';
+    try { v = new URLSearchParams(window.location.search).get('t') || ''; } catch (e) {}
+    // Plain $ is correct and sufficient here — unlike Python's re module,
+    // JS regex $ (no /m flag) has no "matches before a trailing newline"
+    // quirk, so it doesn't need Python's \Z workaround (which isn't even
+    // valid JS regex syntax — \Z matches a literal "Z", silently breaking
+    // every token match, caught by re-screenshotting after this fix).
+    return /^[A-Za-z0-9_-]{16,64}$/.test(v) ? v : '';
+  })();
+  var prefillEmail = '';
+  // sol review round 2: ?t= is a bearer credential (unlocks name/email/
+  // goal/race/habits for a valid token) that would otherwise sit in the
+  // visible URL for the rest of this visit — browser history, anything
+  // screenshotted or copy-pasted, and this page's own later GA4 events,
+  // which read window.location. Scrubbed from the URL bar (not from the
+  // one initial page load itself, which the browser has already sent to
+  // the server) the instant it's read, before the prefill fetch or
+  // anything else runs. Never throws if the History API is unavailable.
+  if (TOKEN && window.history && window.history.replaceState) {
+    try {
+      var scrubbedUrl = new URL(window.location.href);
+      scrubbedUrl.searchParams.delete('t');
+      window.history.replaceState(null, '', scrubbedUrl.pathname + scrubbedUrl.search);
+    } catch (e) {}
+  }
+  var OFFER_VARIANT = (function() {
+    var v = '';
+    try { v = new URLSearchParams(window.location.search).get('offer_variant') || ''; } catch (e) {}
+    return /^[ABC]$/.test(v) ? v : '';
+  })();
+  var ENTRY_SRC = (function() {
+    var v = '';
+    try { v = new URLSearchParams(window.location.search).get('entry_src') || ''; } catch (e) {}
+    return /^[a-z_]{1,24}$/.test(v) ? v : '';
+  })();
+  var RACE_SLUG = (function() {
+    var v = '';
+    try { v = new URLSearchParams(window.location.search).get('race') || ''; } catch (e) {}
+    return /^[a-z0-9-]{1,80}$/.test(v) ? v : '';
+  })();
+
+  /* ---- GA4 (user actions only — never on page load / auto-play) ---- */
+  function ga4(name, params) {
+    try {
+      if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+    } catch (e) {}
+  }
+  function captureAnalyticsAttribution() {
+    var accepted = /(^|; )(?:gg|rl|xl|gl)_consent=accepted(?:;|$)/.test(document.cookie);
+    var values = {analytics_consent: accepted ? 'granted' : 'denied'};
+    return new Promise(function(resolve) {
+      if (!accepted || typeof gtag !== 'function') { resolve(values); return; }
+      var script = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+      var id = script ? new URL(script.src).searchParams.get('id') : '';
+      if (!/^G-[A-Z0-9]+$/.test(id || '')) { resolve(values); return; }
+      var count = 0, settled = false;
+      var timer = setTimeout(finish, 500);
+      function finish() { if (settled) return; settled = true; clearTimeout(timer); resolve(values); }
+      function read(field, pattern) {
+        try { gtag('get', id, field, function(value) {
+          if (settled) return;
+          if (pattern.test(String(value || ''))) values['ga4_' + field] = String(value);
+          if (++count === 2) finish();
+        }); } catch (err) { if (++count === 2) finish(); }
+      }
+      read('client_id', /^\d+\.\d+$/);
+      read('session_id', /^\d+$/);
+    });
+  }
+
+  var startedTracked = false;
+  function trackStart() {
+    if (startedTracked) return;
+    startedTracked = true;
+    ga4('season_form_start', { offer_variant: OFFER_VARIANT, entry_src: ENTRY_SRC });
+  }
+  form.addEventListener('focusin', trackStart, { once: true });
+  form.addEventListener('click', trackStart, { once: true });
+
+  /* ---- Prefill from a returning /goals/ lead (D9) ----
+     Read-only display ("already on file") for name/email/goal/A-race;
+     the form works blank with no token. Never blocks the form on failure. */
+  function showPrefillField(id, labelText, value) {
+    var el = document.getElementById(id);
+    if (!el || !value) return;
+    el.hidden = false;
+    var val = el.querySelector('[data-prefill-value]');
+    if (val) { val.textContent = value; }
+  }
+
+  if (TOKEN) {
+    fetch(MC_BASE + '/api/season-plan/prefill/' + encodeURIComponent(TOKEN), {
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) { return r.ok ? r.json() : null; }).then(function(data) {
+      if (!data) return;
+      var nameInput = form.querySelector('[name="name"]');
+      var emailInput = form.querySelector('[name="email"]');
+      // sol review round 2 NIT: don't clobber anything the visitor already
+      // typed while this fetch was still in flight.
+      if (data.name && nameInput && !nameInput.value) { nameInput.value = data.name; }
+      if (data.email && emailInput && !emailInput.value) { emailInput.value = data.email; }
+      prefillEmail = String(data.email || '').trim().toLowerCase();
+      showPrefillField('rl-sp-goal-onfile', 'Goal', data.goal);
+      showPrefillField('rl-sp-habits-onfile', 'Habits', data.habits);
+      if (data.a_race_name) {
+        // Fill the already-present, still-empty first row (added at load
+        // before this fetch resolved) rather than adding a second one.
+        var firstEntry = racesContainer.querySelector('.rl-sp-race-entry');
+        var nameField = firstEntry && firstEntry.querySelector('[name$="_name"]');
+        var raceEntry = (nameField && !nameField.value) ? firstEntry : addRace();
+        raceEntry.querySelector('[name$="_name"]').value = data.a_race_name;
+        if (data.a_race_date) { raceEntry.querySelector('[name$="_date"]').value = data.a_race_date; }
+        raceEntry.querySelector('[name$="_priority"]').value = 'A';
+      }
+    }).catch(function() { /* prefill is a convenience, never a blocker */ });
+  }
+
+  /* ---- Races: add/remove rows, at least one A race required ---- */
+  function addRace() {
+    // Cap on rows actually on the page, not a monotonic counter — sol
+    // review: raceCount never decremented on remove, so adding and
+    // removing rows permanently ate into the 20-row limit.
+    if (racesContainer.children.length >= MAX_RACES) return null;
+    var index = raceCount++;
+    var entry = document.createElement('div');
+    entry.className = 'rl-sp-race-entry';
+    entry.dataset.raceIndex = index;
+
+    var header = document.createElement('div');
+    header.className = 'rl-sp-race-entry-header';
+    var label = document.createElement('span');
+    label.className = 'rl-sp-race-number';
+    label.textContent = 'Race ' + (index + 1);
+    header.appendChild(label);
+    var removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.className = 'rl-sp-remove-race';
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener('click', function() { entry.remove(); });
+    header.appendChild(removeBtn);
+    entry.appendChild(header);
+
+    var fields = document.createElement('div');
+    fields.className = 'rl-sp-race-fields';
+
+    var nameGroup = document.createElement('div');
+    nameGroup.className = 'rl-apply-group';
+    var nameLabel = document.createElement('label');
+    nameLabel.className = 'rl-apply-label';
+    nameLabel.textContent = 'Race name';
+    var nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.name = 'race_' + index + '_name';
+    nameInput.required = true;
+    nameInput.placeholder = 'e.g., Unbound 200';
+    nameGroup.appendChild(nameLabel);
+    nameGroup.appendChild(nameInput);
+    fields.appendChild(nameGroup);
+
+    var dateGroup = document.createElement('div');
+    dateGroup.className = 'rl-apply-group';
+    var dateLabel = document.createElement('label');
+    dateLabel.className = 'rl-apply-label';
+    dateLabel.textContent = 'Date';
+    var dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    dateInput.name = 'race_' + index + '_date';
+    dateInput.required = true;
+    dateGroup.appendChild(dateLabel);
+    dateGroup.appendChild(dateInput);
+    fields.appendChild(dateGroup);
+
+    var priorityGroup = document.createElement('div');
+    priorityGroup.className = 'rl-apply-group';
+    var priorityLabel = document.createElement('label');
+    priorityLabel.className = 'rl-apply-label';
+    priorityLabel.textContent = 'Priority';
+    var prioritySelect = document.createElement('select');
+    prioritySelect.name = 'race_' + index + '_priority';
+    prioritySelect.required = true;
+    ['A', 'B', 'C'].forEach(function(p) {
+      var opt = document.createElement('option');
+      opt.value = p;
+      opt.textContent = p;
+      prioritySelect.appendChild(opt);
+    });
+    priorityGroup.appendChild(priorityLabel);
+    priorityGroup.appendChild(prioritySelect);
+    fields.appendChild(priorityGroup);
+
+    entry.appendChild(fields);
+    racesContainer.appendChild(entry);
+    return entry;
+  }
+
+  function getRaces() {
+    var entries = racesContainer.querySelectorAll('.rl-sp-race-entry');
+    var races = [];
+    entries.forEach(function(entry) {
+      var name = entry.querySelector('[name$="_name"]').value.trim();
+      var date = entry.querySelector('[name$="_date"]').value;
+      var priority = entry.querySelector('[name$="_priority"]').value;
+      if (name && date) { races.push({ name: name, date: date, priority: priority }); }
+    });
+    return races;
+  }
+
+  if (addRaceBtn) {
+    addRaceBtn.addEventListener('click', function() { addRace(); });
+  }
+  if (racesContainer && racesContainer.children.length === 0) { addRace(); }
+  // Public race/schedule facts only. A token-prefilled athlete stays authoritative.
+  var preview = new URLSearchParams(window.location.search);
+  if (!TOKEN && preview.get('src') === 'plan_preview') {
+    [['race_name','race_date'],['second_race_name','second_race_date']].forEach(function(keys,index) {
+      var name = preview.get(keys[0]) || '', day = preview.get(keys[1]) || '';
+      var parsed = new Date(day + 'T12:00:00Z');
+      if (!name || name.length > 120 || !/^\d{4}-\d{2}-\d{2}$/.test(day) || isNaN(parsed.getTime()) || parsed.toISOString().slice(0,10) !== day) return;
+      var entry = index === 0 ? racesContainer.children[0] : addRace();
+      if (!entry) return;
+      entry.querySelector('[name$="_name"]').value = name;
+      entry.querySelector('[name$="_date"]').value = day;
+      entry.querySelector('[name$="_priority"]').value = 'A';
+    });
+    var hoursField = form.querySelector('[name="hours_per_week"]');
+    var hours = Number(preview.get('hours'));
+    if (hoursField && hours >= 4 && hours <= 18) hoursField.value = hours < 5 ? '<5 hrs' : hours < 7 ? '5-7 hrs' : hours < 10 ? '7-10 hrs' : hours < 13 ? '10-13 hrs' : hours < 16 ? '13-16 hrs' : '16+ hrs';
+    var days = (preview.get('days') || '').split(',');
+    if (days.length >= 3 && days.every(function(day){return ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(day) !== -1;})) {
+      form.querySelectorAll('[name="off_days"]').forEach(function(field){field.checked=days.indexOf(field.value.slice(0,3))===-1;});
+    }
+  }
+
+
+  /* ---- Checkbox helper (off days) ---- */
+  function getCheckboxValues(name) {
+    var boxes = form.querySelectorAll('input[name="' + name + '"]:checked');
+    var values = [];
+    boxes.forEach(function(b) { values.push(b.value); });
+    return values;
+  }
+
+  /* ---- Submit -> create-checkout, product: "season_plan" ---- */
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Honeypot: a filled hidden field means a bot. Fail silently, no error
+    // message a bot's script could branch on.
+    var honeypot = form.querySelector('[name="website"]');
+    if (honeypot && honeypot.value) { return; }
+
+    var races = getRaces();
+    if (races.length === 0) {
+      messageEl.className = 'rl-apply-message error';
+      messageEl.textContent = 'Add at least one race.';
+      messageEl.hidden = false;
+      return;
+    }
+    if (!races.some(function(r) { return r.priority === 'A'; })) {
+      messageEl.className = 'rl-apply-message error';
+      messageEl.textContent = 'Mark one race as your A — the one that matters most.';
+      messageEl.hidden = false;
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Preparing checkout...';
+    messageEl.hidden = true;
+
+    var formData = new FormData(form);
+    var payload = {
+      product: 'season_plan',
+      name: (formData.get('name') || '').toString().trim(),
+      email: (formData.get('email') || '').toString().trim(),
+      races: races,
+      hours_per_week: formData.get('hours_per_week') || '',
+      off_days: getCheckboxValues('off_days'),
+      has_power_meter: formData.get('has_power_meter') || '',
+      has_hr_monitor: formData.get('has_hr_monitor') || '',
+      has_trainer: formData.get('has_trainer') || '',
+      notes: (formData.get('notes') || '').toString().trim(),
+      strength_want: formData.get('strength_want') || '',
+      strength_equipment: (formData.get('strength_equipment') || '').toString().trim(),
+      tp_email: (formData.get('tp_email') || '').toString().trim(),
+      entry_surface: 'season_plan_page'
+    };
+    if (OFFER_VARIANT) { payload.offer_variant = OFFER_VARIANT; }
+    if (ENTRY_SRC) { payload.entry_src = ENTRY_SRC; }
+    if (RACE_SLUG) { payload.race_slug = RACE_SLUG; }
+    if (TOKEN && prefillEmail && payload.email.toLowerCase() === prefillEmail &&
+        window.crypto && crypto.subtle) {
+      try {
+        var hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(TOKEN));
+        payload.goal_ref = Array.from(new Uint8Array(hash)).map(function(b) {
+          return b.toString(16).padStart(2, '0');
+        }).join('');
+      } catch (err) { /* attribution must never block checkout */ }
+    }
+
+    ga4('begin_checkout', {
+      currency: 'USD',
+      value: __SEASON_PLAN_PRICE_CENTS_DOLLARS__,
+      items: [{ item_name: 'Season Plan', item_category: 'season_plan', price: __SEASON_PLAN_PRICE_CENTS_DOLLARS__ }]
+    });
+
+    captureAnalyticsAttribution().then(function(attribution) {
+      Object.assign(payload, attribution);
+      return fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+      });
+    }).then(function(response) { return response.json(); }).then(function(result) {
+      if (result.checkout_url) {
+        ga4('season_form_submit', { races_count: races.length });
+        window.location.href = result.checkout_url;
+        return;
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit & Pay — ' + __SEASON_PLAN_PRICE_DISPLAY__;
+      messageEl.className = 'rl-apply-message error';
+      messageEl.textContent = result.error || 'Something went wrong. Please try again.';
+      messageEl.hidden = false;
+    }).catch(function() {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit & Pay — ' + __SEASON_PLAN_PRICE_DISPLAY__;
+      messageEl.className = 'rl-apply-message error';
+      messageEl.textContent = 'Could not reach checkout. Please try again.';
+      messageEl.hidden = false;
+    });
+  });
+})();

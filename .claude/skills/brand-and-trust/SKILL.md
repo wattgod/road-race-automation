@@ -96,15 +96,7 @@ the homepage/methodology hero dropped that copy for positive framing ("scored
 by human editors who ride them"). Do not reintroduce defensive copy on hero
 sections, CTAs, taglines, or any marketing-facing text.
 
-**Sanctioned exception (2026-07-18).** Corner-frame coaching copy naming what
-coaching isn't (AI, dashboard, spreadsheet-coach) is allowed ONLY on
-`/coaching/`, never elsewhere. Precedent: the `/coaching/` hero sub-line "Not
-an AI, not a dashboard, not a coach who reads you like a spreadsheet"
-(`wordpress/generate_coaching.py`, `build_hero()`), owner-approved 2026-07-18
-as aspirational "corner" framing (what you're getting), not a defensive
-rebuttal to an objection nobody raised. Same frame already ships on race pages
-("A human in your corner. Adapts week to week." —
-`generate_neo_brutalist.py:2681`).
+**Owner correction (2026-10-14).** The earlier coaching exception is superseded. Remove AI, dashboard, and spreadsheet comparisons from marketing copy. Describe the coach’s work: reading workouts and comments, discussing what happened, and adjusting the week.
 
 **Honest-critic scores are the product.** Roadie Labs' `fondo_rating` (14
 dimensions + `cultural_impact` bonus / 70 denominator, see this repo's

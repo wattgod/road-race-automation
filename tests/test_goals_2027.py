@@ -5,8 +5,8 @@ Road build of Gravel God's goal_2027 season-review variant
 season_review_variants.py; docs/specs/goals-2027-funnel-spec.md D13). Mirrors
 that file's test coverage (tests/test_season_review.py::TestGoalsPage) where
 the behaviour is the same; drops what does not apply here — this page has
-only one variant (no matti/athlete/five to compare against) and Roadie Labs
-sells one plan product (no Season Plan, so no season-cta/token tests).
+only one variant (no matti/athlete/five to compare against) and the goals form stays a free review form; shared navigation also links
+the Season Plan.
 """
 from __future__ import annotations
 
@@ -293,9 +293,10 @@ def test_five_whys_field_kind_renders():
     assert 'id="why_2"' in html and 'id="why_5"' in html
 
 
-def test_no_season_plan_words_anywhere_on_the_page():
-    assert "Season Plan" not in page()
-    assert "/season-plan/" not in page()
+def test_goals_form_does_not_sell_a_season_plan():
+    assert "Season Plan" not in core_form()
+    assert 'href="https://roadielabs.com/season-plan/"' in page()
+    assert "/season-plan/" not in core_form()
 
 
 def test_consent_footer_names_roadielabs_contact():

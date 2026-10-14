@@ -79,7 +79,7 @@ class TestPageGeneration:
         assert expected in html
 
     def test_all_three_pages_generated(self, all_pages):
-        assert len(all_pages) == 3
+        assert len(all_pages) == 4
         assert "training-plans-success" in all_pages
         assert "coaching-welcome" in all_pages
         assert "consulting-confirmed" in all_pages
@@ -111,8 +111,9 @@ class TestSEO:
 
 
 class TestGA4Tracking:
-    def test_purchase_event(self, success_js):
-        assert "purchase" in success_js
+    def test_unverified_browser_does_not_report_purchase(self, success_js):
+        assert "purchase" not in success_js
+        assert "success_page_view" in success_js
 
     def test_session_id_extraction(self, success_js):
         assert "session_id" in success_js
@@ -121,8 +122,9 @@ class TestGA4Tracking:
         assert "'success_crosssell_click'" in success_js
         assert "rl-success-cta" in success_js
 
-    def test_conversion_dedup(self, success_js):
-        assert "sessionStorage" in success_js
+    def test_browser_does_not_mark_conversion_paid(self, success_js):
+        assert "sessionStorage" not in success_js
+        assert "converted" not in success_js
 
     @pytest.mark.parametrize("key", list(PAGES.keys()))
     def test_page_has_product_type_attr(self, all_pages, key):

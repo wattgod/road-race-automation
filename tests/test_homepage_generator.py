@@ -226,9 +226,9 @@ class TestGuideChapters:
         for ch in chapters[:3]:
             assert ch["gated"] is False
 
-    def test_last_five_gated(self, chapters):
-        for ch in chapters[3:]:
-            assert ch["gated"] is True
+    def test_public_guide_chapters_are_open(self, chapters):
+        for ch in chapters:
+            assert ch["gated"] is False
 
 
 # ── Section Builders ─────────────────────────────────────────
