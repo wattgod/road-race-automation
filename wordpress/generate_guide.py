@@ -13,6 +13,8 @@ from guide_reference import table,css,figure,bars,sequence
 from shared_guide_runtime import app_css,app_js,render as render_shared
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://roadielabs.com'
+def build_nav():
+ return get_site_header_html('products')
 def inline(value,sources):
  text=html.escape(str(value),quote=True)
  return re.sub(r'\[\^([\w.-]+)\]',lambda m:f'<sup><a href="#source-{m[1]}" aria-label="Source {sources[m[1]]}">[{sources[m[1]]}]</a></sup>',text)
@@ -23,7 +25,7 @@ def build_css():
 def page(title,description,path,body):
  canonical=BASE+path
  schema={'@context':'https://schema.org','@type':'Article','headline':title,'description':description,'url':canonical,'publisher':{'@type':'Organization','name':'Roadie Labs','url':BASE}}
- return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(title)+' | Roadie Labs</title><meta name="description" content="'+html.escape(description,quote=True)+'"><link rel="canonical" href="'+canonical+'"><style>'+build_css()+'</style>'+get_ga4_head_snippet()+'<script type="application/ld+json">'+json.dumps(schema).replace('<','\\u003c')+'</script></head><body>'+get_site_header_html('products')+'<main id="rl-guide-page">'+body+'</main>'+get_mega_footer_html()+get_consent_banner_html()+'<script>'+get_site_header_js()+app_js()+'</script></body></html>'
+ return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+html.escape(title)+' | Roadie Labs</title><meta name="description" content="'+html.escape(description,quote=True)+'"><link rel="canonical" href="'+canonical+'"><style>'+build_css()+'</style>'+get_ga4_head_snippet()+'<script type="application/ld+json">'+json.dumps(schema).replace('<','\\u003c')+'</script></head><body>'+build_nav()+'<main id="rl-guide-page">'+body+'</main>'+get_mega_footer_html()+get_consent_banner_html()+'<script>'+get_site_header_js()+app_js()+'</script></body></html>'
 def generate(output_dir):
  d=json.loads((ROOT/'guide/road-guide-content.json').read_text()); chapters=d['chapters']; output_dir.mkdir(parents=True,exist_ok=True)
  index='<p class="kicker">ROADIE LABS / FREE FIELD GUIDE</p><h1>'+html.escape(d['title'])+'</h1><p>'+html.escape(d['subtitle'])+'</p><ol class="chapters">'+''.join('<li><a href="/guide/'+c['id']+'/">'+str(c['number']).zfill(2)+' / '+html.escape(c['title'])+'</a><p>'+html.escape(c['subtitle'])+'</p></li>' for c in chapters)+'</ol><p><a href="/training-plans/#custom-plan-preview">Preview a plan for your race →</a></p>'

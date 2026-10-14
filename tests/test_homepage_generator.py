@@ -404,7 +404,7 @@ class TestSectionBuilders:
         # Dead URLs removed in the Jul 2026 whoops audit — restore only
         # after the target pages actually deploy.
         assert "/articles/" not in html
-        assert "/guide/" not in html
+        assert "/guide/" in html
 
     def test_footer_has_copyright(self):
         html = build_footer()
@@ -451,7 +451,8 @@ class TestLadderStrip:
         html = build_ladder_strip(stats)
         assert f'{stats["race_count"]} races, rated. Start with yours.' in html
         assert "Built for the race on your calendar, around the hours you actually have." in html
-        assert "A human in your corner &mdash; not an AI, not a spreadsheet." in html
+        assert "A coach who reads your workouts" in html
+        assert "not an AI" not in html
 
     def test_ladder_cta_labels(self, stats):
         html = build_ladder_strip(stats)
