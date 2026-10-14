@@ -242,10 +242,11 @@ def build_training_plan_success() -> str:
     """Content sections for training plan success page."""
     hero = f"""
   <div class="rl-success-hero" data-product-type="training_plan">
-    <div class="rl-success-check">&check;</div>
-    <h1>Your Training Plan Is on the Way</h1>
-    <p>Payment confirmed. Your custom plan is being generated and will be
-    delivered to your email shortly.</p>
+    <div class="rl-success-check" aria-hidden="true">?</div>
+    <h1>Check Your Training Plan Order</h1>
+    <p>Check your email for your Stripe payment receipt. Once checkout is complete,
+    your plan is personally reviewed and delivered in TrainingPeaks within 24 hours.
+    Opening this page does not confirm a payment.</p>
   </div>"""
 
     steps = """
@@ -255,9 +256,9 @@ def build_training_plan_success() -> str:
       <div class="rl-success-step-num">1</div>
       <div class="rl-success-step-text">
         <h3>Check Your Email</h3>
-        <p>Your plan is being built right now. You'll receive an email
-        once it's ready. Check spam if you don't see it within an hour,
-        and reply to that email if you have questions.</p>
+        <p>Your Stripe receipt confirms whether checkout completed. After payment,
+        watch for your reviewed plan within 24 hours. Reply to your receipt
+        if you need help with the order.</p>
       </div>
     </div>
     <div class="rl-success-step">
@@ -308,9 +309,9 @@ def build_season_plan_success() -> str:
     not the race plan's single-race pipeline output."""
     hero = f"""
   <div class="rl-success-hero" data-product-type="season_plan">
-    <div class="rl-success-check">&check;</div>
-    <h1>Your Season Plan Is Booked</h1>
-    <p>Payment confirmed. I build every Season Plan myself, from the races
+    <div class="rl-success-check" aria-hidden="true">?</div>
+    <h1>Check Your Season Plan Order</h1>
+    <p>Check your email for your Stripe receipt. After payment, I build your Season Plan from the races
     you gave me &mdash; it lands in your TrainingPeaks calendar within
     {SEASON_PLAN_DELIVERY_DAYS} days of payment, your complete questionnaire,
     and your TrainingPeaks connection all being in place. A whole season,
@@ -486,15 +487,15 @@ def build_consulting_success() -> str:
 
 PAGES = {
     'training-plans-success': {
-        'title': 'Plan Confirmed | Roadie Labs',
-        'description': 'Your custom training plan is being generated.',
+        'title': 'Training Plan Order | Roadie Labs',
+        'description': 'Check your payment receipt and the next steps for your training plan.',
         'canonical': '/training-plans/success/',
         'active_nav': 'products',
         'robots': 'noindex, follow',
         'builder': build_training_plan_success,
         'output_path': 'training-plans-success.html',
     },
-    'season-plan-success': {'title':'Season Plan Confirmed | Roadie Labs','description':'Your Season Plan order is confirmed.','canonical':'/season-plan/success/','active_nav':'products','robots':'noindex, follow','builder':build_season_plan_success,'output_path':'season-plan-success.html'},
+    'season-plan-success': {'title':'Season Training Plan Order | Roadie Labs','description':'Check your payment receipt and the next steps for your Season Plan.','canonical':'/season-plan/success/','active_nav':'products','robots':'noindex, follow','builder':build_season_plan_success,'output_path':'season-plan-success.html'},
     'coaching-welcome': {
         'title': 'Welcome to Coaching | Roadie Labs',
         'description': 'Your coaching subscription is active.',

@@ -237,7 +237,7 @@ class TestTrainingPlanSuccess:
     def test_has_hero(self):
         html = build_training_plan_success()
         assert "rl-success-hero" in html
-        assert "Training Plan Is on the Way" in html
+        assert "Check Your Training Plan Order" in html
 
     def test_has_next_steps(self):
         html = build_training_plan_success()
@@ -344,3 +344,10 @@ class TestSharedStructure:
     @pytest.mark.parametrize("key", list(PAGES.keys()))
     def test_has_site_header(self, all_pages, key):
         assert "rl-site-header" in all_pages[key]
+
+
+def test_order_page_never_confirms_an_unverified_payment():
+    page = generate_success_page('training-plans-success')
+    assert 'Opening this page does not confirm a payment.' in page
+    assert 'Payment confirmed.' not in page
+    assert "Your plan is being built right now" not in page

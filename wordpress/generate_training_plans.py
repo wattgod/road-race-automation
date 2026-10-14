@@ -331,7 +331,7 @@ def build_honest_check() -> str:
     return f'''<section class="rl-tp-section rl-tp-section-alt" id="honest-check">
   <div class="rl-tp-section-label">Coaching</div>
   <h2>Are You Actually Serious About Getting Fast?</h2>
-  <p class="rl-tp-coaching-copy">A training plan gives you the structure. If you want weekly review, direct feedback, and recurring adjustments as life and fitness change, you&rsquo;re going to need more than a training plan and a ChatGPT subscription.</p>
+  <p class="rl-tp-coaching-copy">A training plan gives you the structure. Coaching adds weekly review, direct feedback, and recurring adjustments as your life and fitness change.</p>
   <a href="{SITE_BASE_URL}/coaching/" class="rl-tp-btn rl-tp-coaching-cta" data-cta="honest_coaching">Get Coaching</a>
 </section>'''
 
