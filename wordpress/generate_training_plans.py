@@ -17,7 +17,12 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+from race_demand_analyzer import analyze_race_demands, classify_road_event_format
+from plan_simulator import render_plan_simulator, get_plan_simulator_css, get_plan_simulator_js
 
 from generate_neo_brutalist import (
     SITE_BASE_URL,
@@ -57,18 +62,44 @@ def build_nav() -> str:
     return get_site_header_html(active="products") + breadcrumb
 
 
+
+def build_plan_preview() -> str:
+    """Use the canonical demand analyzer and Motoren's public v2 provider."""
+    races = []
+    for path in sorted((Path(__file__).resolve().parent.parent / "race-data").glob("*.json")):
+        if path.name.startswith("_"):
+            continue
+        document = json.loads(path.read_text(encoding="utf-8"))
+        race = document.get("race", {})
+        if not race.get("slug") or (race.get("vitals") or {}).get("course_status") == "source_blocked":
+            continue
+        races.append({**race, "discipline": "road",
+                      "demands": analyze_race_demands(document),
+                      "event_format": classify_road_event_format(document)})
+    races.sort(key=lambda race: (race["slug"] != "mallorca-312", race.get("name", "")))
+    if not races:
+        return ""
+    return render_plan_simulator(
+        brand="roadie_labs", race=races[0], demands=races[0]["demands"],
+        event_format=races[0]["event_format"],
+        race_options=races, questionnaire_url=QUESTIONNAIRE_URL + "?src=plan_preview",
+        heading="See the plan before you buy.",
+        lede="Choose your race, available hours, and training experience. Open a week to see the sessions, recovery days, and workout targets.",
+    )
+
+
 def build_hero() -> str:
     return f'''<section class="rl-tp-hero" id="hero">
   <h1 class="rl-tp-hero-title">Your Race. Your Hours. Your Plan.</h1>
   <p class="rl-tp-hero-sub">Your plan is built around your available hours, fitness, target race, and the specific demands of its course.</p>
   <div class="rl-tp-hero-cta">
     <a href="{QUESTIONNAIRE_URL}" class="rl-tp-btn" data-cta="hero_build">Build My Plan</a>
-    <a href="#how-it-works" class="rl-tp-btn rl-tp-btn-secondary" data-cta="hero_how">See How It Works</a>
+    <a href="#custom-plan-preview" class="rl-tp-btn rl-tp-btn-secondary" data-cta="hero_how">Preview My Plan</a>
   </div>
   <div class="rl-tp-hero-bar">
     <div class="rl-tp-hero-bar-item"><strong>Within 24 Hours</strong><span>Delivery</span></div>
     <div class="rl-tp-hero-bar-item"><strong>Matched</strong><span>Methodology</span></div>
-    <div class="rl-tp-hero-bar-item"><strong>$2/day</strong><span>Less Than a Tube</span></div>
+    <div class="rl-tp-hero-bar-item"><strong>$15/week</strong><span>One Payment</span></div>
     <div class="rl-tp-hero-bar-item"><strong>5 min</strong><span>To Start</span></div>
   </div>
 </section>'''
@@ -230,7 +261,7 @@ def build_what_you_get() -> str:
         </div>
       </div>
 '''
-    sample_week = _build_sample_week()
+    sample_week = ""  # Generated sample weeks live in the Motoren preview above.
     return f'''<section class="rl-tp-section" id="what-you-get">
   <div class="rl-tp-section-label">What You Get</div>
   <h2>Five Things. All Custom. Zero Filler.</h2>
@@ -297,47 +328,12 @@ def build_rotating_quote() -> str:
 
 
 def build_honest_check() -> str:
-    buy_items = [
-        "You have a race on the calendar and you&rsquo;re done winging it",
-        "You have 3-15 hours a week and need every session to count",
-        "You want structure that respects your actual life",
-        "You can follow a plan without someone texting you every morning",
-        "You&rsquo;re tired of generic plans that assume you&rsquo;re 25 with 20 hours",
-    ]
-    dont_items = [
-        "You want ongoing coaching with weekly adjustments",
-        "You don&rsquo;t have a target event",
-        "Your race is in 3 weeks &mdash; not enough time to build anything real",
-        "You need daily accountability to do the work",
-        "You just want someone to tell you you&rsquo;re doing great",
-    ]
-    buy_li = "\n".join(f"          <li>{i}</li>" for i in buy_items)
-    dont_li = "\n".join(f"          <li>{i}</li>" for i in dont_items)
     return f'''<section class="rl-tp-section rl-tp-section-alt" id="honest-check">
-  <div class="rl-tp-section-label">Honest Check</div>
-  <h2>This Isn&rsquo;t For Everyone. Good.</h2>
-  <div class="rl-tp-audience-grid">
-    <div class="rl-tp-audience-col">
-      <h3>Buy This If:</h3>
-      <ul class="rl-tp-audience-list rl-tp-for-list">
-{buy_li}
-      </ul>
-    </div>
-    <div class="rl-tp-audience-col rl-tp-not-for">
-      <h3>Don&rsquo;t Buy This If:</h3>
-      <ul class="rl-tp-audience-list rl-tp-not-list">
-{dont_li}
-      </ul>
-    </div>
-  </div>
+  <div class="rl-tp-section-label">Coaching</div>
+  <h2>Are You Actually Serious About Getting Fast?</h2>
+  <p class="rl-tp-coaching-copy">A training plan gives you the structure. If you want weekly review, direct feedback, and recurring adjustments as life and fitness change, you&rsquo;re going to need more than a training plan and a ChatGPT subscription.</p>
+  <a href="{SITE_BASE_URL}/coaching/" class="rl-tp-btn rl-tp-coaching-cta" data-cta="honest_coaching">Get Coaching</a>
 </section>'''
-
-
-# No testimonials section. Until 2026-09-28 this page carried 3 quotes tagged
-# "(gravel)" and credited to Gravel God athletes. They were placeholder text
-# written by Claude sessions in Feb 2026, not real people, and were removed.
-# Proof returns only as consented, sourced receipts, enforced by
-# tests/test_no_unsourced_proof.py.
 
 
 def build_pricing() -> str:
@@ -359,10 +355,11 @@ def build_pricing() -> str:
         <li>Heat &amp; altitude protocols</li>
         <li>Personally reviewed and delivered in TrainingPeaks within 24 hours</li>
       </ul>
+      <p class="rl-tp-support-terms">Email support and two plan adjustments are included during the dates covered by your plan for changes to your schedule, available training hours, or equipment. Correcting a plan that does not match your order does not use an adjustment. The first rescale after the scheduled FTP test is included separately. Weekly review and recurring changes are part of Coaching.</p>
       <div class="rl-tp-pricing-cta">
         <a href="{QUESTIONNAIRE_URL}" class="rl-tp-btn" data-cta="pricing_build">Build My Plan</a>
       </div>
-      <p class="rl-tp-pricing-note">Your entry fee was $175. Your hotel is $200. Your plan is $2/day. Don&rsquo;t show up without one.</p>
+      <p class="rl-tp-pricing-note">Choose the weeks you need. Your total is shown before payment.</p>
     </div>
   </div>
   <div class="rl-tp-guarantee">
@@ -378,7 +375,7 @@ FAQ_ITEMS = [
     ),
     (
         "What if I don&rsquo;t know my FTP?",
-        "Mark it unknown. Week 1 includes an FTP test protocol. Once you have the number, every zone recalibrates.",
+        "Mark it unknown. Week 1 includes an FTP test protocol. Reply with the result and I&rsquo;ll rescale the remaining workouts. The first rescale after the scheduled FTP test is included separately and does not use one of your two adjustments.",
     ),
     (
         "How are workouts delivered?",
@@ -390,7 +387,7 @@ FAQ_ITEMS = [
     ),
     (
         "Is this coaching?",
-        "No. This is a plan, not a relationship. You get the full plan up front and execute it yourself. No weekly check-ins.",
+        "This is a plan to execute yourself. Email support and two plan adjustments are included during the dates covered by your plan. Weekly review and recurring changes are part of Coaching.",
     ),
     (
         "What if my race isn&rsquo;t in the database?",
@@ -418,7 +415,7 @@ def build_faq() -> str:
 
 def build_mobile_sticky() -> str:
     return f'''<div class="rl-tp-sticky-cta" id="rl-tp-sticky-cta">
-  <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_mobile">Build My Plan &mdash; $2/day</a>
+  <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_mobile">Build My Plan &mdash; $15/week</a>
 </div>'''
 
 
@@ -1334,16 +1331,22 @@ def generate_training_page(external_assets: dict = None) -> str:
 
     nav = build_nav()
     hero = build_hero()
+    preview = build_plan_preview()
     what = build_what_you_get()
     how = build_how_it_works()
-    quote = build_rotating_quote()
+    quote = ""
     honest = build_honest_check()
     pricing = build_pricing()
     faq = build_faq()
     sticky = build_mobile_sticky()
     footer = build_footer()
-    training_css = build_training_css()
-    training_js = build_training_js()
+    training_css = build_training_css() + "<style>" + get_plan_simulator_css(
+        ink="var(--rl-color-primary-brown)", paper="var(--rl-color-warm-paper)",
+        panel="var(--rl-color-white)", line="var(--rl-color-tan)",
+        accent="var(--rl-color-primary-brown)",
+        data_font="var(--rl-font-data)", body_font="var(--rl-font-editorial)",
+    ) + "</style>"
+    training_js = build_training_js() + "<script>" + get_plan_simulator_js() + "</script>"
     jsonld = build_jsonld()
 
     if external_assets:
@@ -1397,6 +1400,8 @@ def generate_training_page(external_assets: dict = None) -> str:
   {nav}
 
   {hero}
+
+  {preview}
 
   {what}
 
