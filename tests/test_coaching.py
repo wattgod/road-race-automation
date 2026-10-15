@@ -165,14 +165,14 @@ class TestHero:
 
     def test_headline(self):
         hero = build_hero()
-        assert "You could be better than you think." in hero
-        assert "That is not encouragement &mdash;" in hero
-        assert "it&#39;s an observation about people who train alone." in hero
+        assert "Train for your race. Make the week work." in hero
+        assert "not encouragement" not in hero
+        assert "train alone" not in hero
 
     def test_subhead(self):
         hero = build_hero()
-        assert "The fix is a human in your corner." in hero
-        assert "Not an AI, not a dashboard, not a coach who reads you like a spreadsheet." in hero
+        assert "I read your workouts and comments" in hero
+        assert "Not an AI" not in hero
         assert "The terms are below." in hero
 
 
@@ -205,9 +205,9 @@ class TestTerms:
 
     def test_clause_bodies(self):
         t = build_terms()
-        assert "I notice the interval you bailed on and ask why." in t
+        assert "I read the workout file and your comments." in t
         assert "Knowledge isn&#39;t the limiter &mdash; application is." in t
-        assert "the week adjusts that week" in t
+        assert "We adjust the workouts around the week you actually have." in t
         assert "&ldquo;You&#39;re sandbagging&rdquo; and &ldquo;take the rest week&rdquo;" in t
         assert "Same coach, same standards." in t
 
@@ -719,8 +719,7 @@ class TestRequiredContent:
         assert "$99 setup fee" in coaching_html
 
     def test_hero_h1(self, coaching_html):
-        assert "You could be better than you think." in coaching_html
-        assert "it&#39;s an observation about people who train alone." in coaching_html
+        assert "Train for your race. Make the week work." in coaching_html
 
     def test_final_contact_line(self, coaching_html):
         assert "coach@roadielabs.com" in coaching_html

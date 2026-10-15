@@ -1,0 +1,95 @@
+{
+  "shared_source": "gravel-race-automation/guide/gravel-guide-content.json",
+  "sections": [
+    {
+      "road_chapter": "building-the-engine",
+      "gravel_section": "ch3-adaptation",
+      "source_sha256": "1c63250e9a6800a1382725a9a17a91566a676b1ec8a05a12a441039cde3e2ed1",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "building-the-engine",
+      "gravel_section": "ch3-zones",
+      "source_sha256": "e754ec3f26f3153be0cd177990be7fd822a3450637d65ffdef891839c3bc70b9",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "building-the-engine",
+      "gravel_section": "ch3-load",
+      "source_sha256": "527c71400f7e5210503798bea7afa45ab8adf4f0992dd3cecf8ee5554deed7cb",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "workout-execution",
+      "gravel_section": "ch4-rules",
+      "source_sha256": "405cdc70cd77a5e818f20593b6dca8e6a8616517093504bb973f27b01ce98f3e",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "workout-execution",
+      "gravel_section": "ch4-zones",
+      "source_sha256": "8987e1830a1345031c8b3ce61e9d474d33b75396f32590a1a641e1dc5fb99c8d",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "workout-execution",
+      "gravel_section": "ch4-problems",
+      "source_sha256": "5c1c4cca06cb839de6eb16eb1f6d0d181c195caa72ceff97986fd7159befa58f",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "workout-execution",
+      "gravel_section": "ch4-autoregulation",
+      "source_sha256": "dfd87b0727a48292ecafcdfdeb50c44cb45e9e9d45b057ba7a29d6804be09874",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "fueling-for-the-distance",
+      "gravel_section": "ch5-gut-training",
+      "source_sha256": "3796f506a5d16318ae40b4b28a1ee6332423e334981aa183b3f483ce82f2db6f",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "fueling-for-the-distance",
+      "gravel_section": "ch5-common-mistakes",
+      "source_sha256": "8ea510ea2442c2e1e240879934c2e245ca79c62f7410e737b573abb838f1e2fc",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "race-week",
+      "gravel_section": "ch7-equipment",
+      "source_sha256": "d41d1327eb5d18a7b91334f998d7662798d73087be4699879d745f11ab1903e6",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "race-week",
+      "gravel_section": "ch7-dont",
+      "source_sha256": "5c390869cf70a6b11d5016b6ee2cffff0a7572362659393d58b97051f18ad0ee",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "after-the-finish",
+      "gravel_section": "ch8-analysis",
+      "source_sha256": "e421ab6b6165fc3fdfc5ac5abdba23b3dd8d7dda7916f846fc4682a26ed5e7b5",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    },
+    {
+      "road_chapter": "after-the-finish",
+      "gravel_section": "ch8-goals",
+      "source_sha256": "d8d0205b7d775d5bda7fc6d9bdfac1d464a217363aa7064cb36b7e652f64015e",
+      "adaptation": "Road terminology and links; shared training principles and knowledge checks retained."
+    }
+  ],
+  "road_source_material": [
+    {
+      "title": "2024 Rio Grande Elite Cycling Team Camp Guide Rev 3",
+      "drive_id": "1tV336lkf6V9wWZgqHq-xGe4WHGc7E8Ed6aFXTRpUoyQ",
+      "use": "Staggered group practice, planned leadouts, and regrouping; private names, logistics, and contact details excluded."
+    },
+    {
+      "title": "Dirt Craft",
+      "source": "gravel-race-automation/data/courses/dirt-craft",
+      "use": "Controlled-practice framing; loose-surface-specific drills are not transferred to pavement."
+    }
+  ]
+}

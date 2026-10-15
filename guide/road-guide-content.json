@@ -1,7 +1,7 @@
 {
   "title": "The Road Racing Guide",
-  "subtitle": "Everything you need to train for and race gran fondos, sportives, and centuries.",
-  "meta_description": "A complete road racing training guide — from building your aerobic engine to pack tactics, fueling, and race-week execution. Written by coaches who race.",
+  "subtitle": "A field guide to choosing, preparing for, and riding your road event.",
+  "meta_description": "Eight free chapters on road event selection, training, workout execution, fueling, group riding, race week, and recovery.",
   "chapters": [
     {
       "number": 1,
@@ -18,17 +18,73 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "Road racing, for most of us, means the mass-participation events that have exploded over the last two decades: gran fondos, sportives, centuries, the big timed climbs. You're not racing a 90-rider pro peloton. You're chasing a number on a finish-line clock, a personal best, or the wheel of the rider who dropped you last year."
+              "content": "A gran fondo, sportive, or century gives you a route and a day to prepare for. Your goal might be finishing, improving your time, or staying with a particular group. Name that goal before you start comparing plans."
             },
             {
               "type": "prose",
-              "content": "What makes the road different from gravel or the trail is the pack. Drafting is the whole game — sit in the right wheel and you save 25-30% of your energy; get caught in the wind alone and the day falls apart. The surface is predictable; the tactics are not. Positioning, timing, and knowing when to spend your matches matter more than raw watts."
+              "content": "The group changes the ride. Practise predictable riding, communication, and looking ahead before you rely on drafting in an event. Follow the organiser’s rules and leave room to react. [^group]"
             },
             {
               "type": "prose",
-              "content": "This guide is built around that reality: an aerobic engine big enough to finish strong, the threshold to hold a hard group, and the handling to stay safe and efficient in a bunch. Everything here is written by coaches who actually pin numbers on."
+              "content": "Use these chapters as a reference. Your training history, available time, and course demands determine the workouts you need."
+            },
+            {
+              "type": "reference_table",
+              "title": "Name the goal",
+              "headers": [
+                "Goal",
+                "What to prepare"
+              ],
+              "rows": [
+                [
+                  "Finish the distance",
+                  "Repeatable riding, pacing, food and refill practice"
+                ],
+                [
+                  "Improve your time",
+                  "Identify where you lost time before adding intensity"
+                ],
+                [
+                  "Stay with a group",
+                  "Group riding practice and the ability to pace climbs"
+                ]
+              ]
             }
           ]
+        },
+        {
+          "id": "road-specific-1",
+          "title": "The format changes the demands",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Gran fondo or sportive",
+                  "detail": "A long route, feed stations, and groups moving at different speeds. Your pacing and group choices need to last for the whole day."
+                },
+                {
+                  "label": "Century",
+                  "detail": "Completing the distance is the goal. Prepare your contact points, food, refill plan, and time on the bike."
+                },
+                {
+                  "label": "Criterium or circuit race",
+                  "detail": "Repeated corners, accelerations, and positioning. Practise the skills in a controlled setting before entering a fast bunch."
+                },
+                {
+                  "label": "Time trial",
+                  "detail": "You ride against the clock. Rehearse pacing, the course, and a position you can sustain."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "group",
+          "title": "British Cycling — Guide to riding in a group",
+          "url": "https://www.britishcycling.org.uk/sportives/article/sp20120110-cyclo-sportive-Guide-to-riding-in-a-group-0"
         }
       ]
     },
@@ -47,19 +103,73 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "The race you pick determines the plan you need. A flat 100-mile fondo rewards sustained tempo and pack craft; a mountainous sportive with 10,000 ft of climbing rewards a high power-to-weight and the discipline to ride your own pace up the cols. Pick the demands first, then build toward them."
+              "content": "Read the route before you pick the race. Distance tells part of the story. Long climbs, technical descents, exposed roads, and feed-zone spacing change how you prepare."
             },
             {
               "type": "prose",
-              "content": "Give yourself runway. A first century or fondo wants 14-18 weeks from a real base; if you're starting from the couch, more. Slot one A-event per season and build everything around it — B-events become hard training days, not goals that fragment your focus."
+              "content": "Put your goal events on the same calendar as work and travel. Two A races need recovery and rebuilding between them. A second race is a planning decision, more than another taper pasted onto the first."
             },
             {
               "type": "prose",
-              "content": "Be honest about the climbing. The single biggest predictor of how your day goes on a hilly course is your weight-adjusted threshold. If the route climbs, the plan climbs."
+              "content": "Check the organiser’s current route, start arrangements, cutoffs, and mandatory equipment. If a detail is unconfirmed, keep it marked unconfirmed."
+            },
+            {
+              "type": "reference_table",
+              "title": "Read the course",
+              "headers": [
+                "Route detail",
+                "Training or preparation question"
+              ],
+              "rows": [
+                [
+                  "Distance",
+                  "How long do you expect to be riding?"
+                ],
+                [
+                  "Climbing",
+                  "Are climbs sustained or repeated?"
+                ],
+                [
+                  "Descents",
+                  "Can you ride them safely within your ability?"
+                ],
+                [
+                  "Feed zones",
+                  "What must you carry between refills?"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "road-specific-2",
+          "title": "Choose the course, then the race",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Sustained climbs",
+                  "detail": "Read the climb lengths and gradients. Choose gearing before you discover its limits on race day."
+                },
+                {
+                  "label": "Repeated short climbs",
+                  "detail": "Expect repeated changes in effort; practise pacing the transition back onto the flat."
+                },
+                {
+                  "label": "Technical descents",
+                  "detail": "Course familiarity and controlled cornering matter. A climbing result does not establish descending skill."
+                },
+                {
+                  "label": "Exposed roads",
+                  "detail": "Wind can change group selection. Keep your route and road position within the organiser’s rules."
+                }
+              ]
             }
           ]
         }
-      ]
+      ],
+      "sources": []
     },
     {
       "number": 3,
@@ -76,17 +186,320 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "Endurance is the foundation, and there's no shortcut around it. The long ride is the single most important session in your week: it builds the fat-burning, capillary-dense aerobic engine that lets you hold power deep into a long event. Most of your hours should be genuinely easy — conversational, controlled, boring on purpose."
+              "content": "Build a week you can repeat. Easy riding should leave room for the harder workouts and the rest of your life. A long ride matters, but it does not excuse missing every other workout."
             },
             {
               "type": "prose",
-              "content": "Boredom is the skill nobody advertises. The riders who improve are the ones who can sit in zone 2 for three hours without turning it into a smash-fest. Volume you can repeat beats heroic days you need a week to recover from."
+              "content": "Use the plan’s purpose to choose your effort. Research on trained endurance athletes describes substantial low-intensity training alongside smaller amounts of harder work; it does not give every rider the same percentage split. [^intensity]"
             },
             {
               "type": "prose",
-              "content": "Build progressively. Add no more than ~10% volume per week, take a recovery week every third or fourth, and let the long ride grow toward (but not absurdly past) your event duration. The engine is built in months, not weekends."
+              "content": "When fatigue accumulates, look at the whole week before adding more. Review sleep, workout completion, and how your legs respond. Progression needs to fit the work you can absorb."
+            },
+            {
+              "type": "reference_table",
+              "title": "Read the week",
+              "headers": [
+                "Workout purpose",
+                "What to record"
+              ],
+              "rows": [
+                [
+                  "Easy endurance",
+                  "Could you keep the effort controlled?"
+                ],
+                [
+                  "Quality workout",
+                  "Did you complete the prescribed work?"
+                ],
+                [
+                  "Long ride",
+                  "Did your pacing and fueling hold up?"
+                ],
+                [
+                  "Rest",
+                  "Did fatigue improve before the next workout?"
+                ]
+              ]
             }
           ]
+        },
+        {
+          "id": "shared-ch3-adaptation",
+          "title": "The Foundational Model: How Adaptation Works",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "All training follows the same basic cycle. Understanding this cycle is the difference between training intelligently and just accumulating fatigue."
+            },
+            {
+              "type": "timeline",
+              "title": "The Adaptation Cycle",
+              "steps": [
+                {
+                  "label": "Stress",
+                  "content": "You apply training stress—a hard workout that exceeds your current capacity. This creates disruption: muscle fibers develop microtears, glycogen stores deplete, metabolic waste accumulates, cellular damage occurs. Your body registers this as a problem that needs solving."
+                },
+                {
+                  "label": "Fatigue",
+                  "content": "Immediately after training, you're weaker than before you started. Your muscles are damaged. Your fuel tanks are empty. Your nervous system is taxed. If you tested your {{FTP}} right after a hard interval workout, it would be lower than your rested FTP. This is normal. Fatigue is the signal that triggers adaptation."
+                },
+                {
+                  "label": "Recovery",
+                  "content": "Given adequate rest, nutrition, and time, your body initiates repair: muscle fibers rebuild, mitochondria multiply, capillary density increases, glycogen storage expands, neurological efficiency improves. Timeline: 24-48 hours for muscle repair, 3-7 days for mitochondrial adaptation, 2-4 weeks for new baseline fitness."
+                },
+                {
+                  "label": "Supercompensation",
+                  "content": "If recovery is complete, your body doesn't just return to baseline—it overshoots. Your body builds slightly more capacity than it had before to handle similar stress more easily next time. You're now stronger than you were before the workout."
+                },
+                {
+                  "label": "Apply New Stress",
+                  "content": "Once you've adapted, you apply a slightly larger stress. The cycle repeats. Over weeks and months, these small adaptations compound into meaningful fitness gains."
+                }
+              ]
+            },
+            {
+              "type": "knowledge_check",
+              "question": "What happens if you apply new training stress before recovery is complete?",
+              "options": [
+                {
+                  "text": "You get faster because you're training harder",
+                  "correct": false
+                },
+                {
+                  "text": "You accumulate fatigue without adaptation — digging a hole, not building fitness",
+                  "correct": true
+                },
+                {
+                  "text": "Your body skips to supercompensation faster",
+                  "correct": false
+                }
+              ],
+              "explanation": "Insufficient recovery is the most common training mistake. Without complete recovery, you never reach the supercompensation phase. You're just piling fatigue on top of fatigue."
+            },
+            {
+              "type": "prose",
+              "content": "**The Practical Rules:**\n\n1. **Training stress must be adequate but not excessive** — Hard enough to trigger adaptation. Not so hard you can't recover.\n2. **Recovery must be prioritized as much as training** — Sleep, nutrition, stress management—these aren't optional. They're where adaptation happens.\n3. **Consistency compounds** — Ten weeks of steady training beats four weeks of heroics followed by injury or burnout.\n4. **Fitness is cumulative** — Every completed workout adds to the total. Missed workouts don't just subtract—they prevent compounding.\n5. **Patience is required** — Meaningful adaptation takes weeks and months, not days. Trust the process."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-supercompensation",
+              "alt": "Supercompensation curve showing stress, fatigue, recovery, and adaptation overshoot",
+              "caption": "The foundational model — train, recover, adapt, repeat."
+            },
+            {
+              "type": "prose",
+              "content": "This is the mechanism behind every training gain you will ever make. You stress the system, you let it recover, and it rebuilds slightly stronger than before. Skip the stress and nothing changes. Skip the recovery and you just accumulate damage. The athletes who get this wrong usually err on the recovery side — they train hard enough but never rest enough to let adaptation happen. Respect the curve."
+            },
+            {
+              "type": "prose",
+              "content": "What does 12 weeks of consistent training actually look like? Drag the divider to compare untrained versus trained physiology."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-before-after",
+              "alt": "Establish a baseline, train, and retest",
+              "caption": "Read the reference and its qualifications below.",
+              "layout": "inline"
+            },
+            {
+              "type": "prose",
+              "content": "These gains are real and replicable. But they require patience and consistency. Skip weeks, train sporadically, and the before and after look identical."
+            }
+          ]
+        },
+        {
+          "id": "shared-ch3-zones",
+          "title": "Training Zones: What They Mean and How to Use Them",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Every workout prescription includes a zone target. Here's what they mean and how to use them.\n\nZones exist to quantify intensity and give you a common language for prescribing workouts.\n\nBut here's the paradox: the end goal of measuring intensity is to help you develop a *feeling* for intensity. You use power meters, heart rate monitors, and zone charts to develop an intuitive sense of effort. Because despite our best efforts, the human body remains too complex to neatly summarize with device-generated data. Your subjective feeling is infinitely more valuable than numbered outputs based on incomplete data collection, reductive models, and population-level assumptions.\n\nYou're a special snowflake. Learn your snowflake."
+            },
+            {
+              "type": "data_table",
+              "caption": "Master Zone Chart",
+              "headers": [
+                "Zone",
+                "Name",
+                "% FTP",
+                "% HRmax",
+                "RPE",
+                "Feel / Description"
+              ],
+              "rows": [
+                [
+                  "Z1",
+                  "Active Recovery",
+                  "<55%",
+                  "55-72%",
+                  "1-2",
+                  "Very easy, relaxed pace. Gentle spinning—feels like nothing. Full conversation possible."
+                ],
+                [
+                  "Z2",
+                  "Endurance",
+                  "56-75%",
+                  "72-82%",
+                  "3-4",
+                  "All-day pace—sustainable and steady. Can chat freely. This is where you should spend MOST of your training time."
+                ],
+                [
+                  "Z3",
+                  "Tempo",
+                  "76-87%",
+                  "82-87%",
+                  "5-6",
+                  "Comfortably hard. Breathing deeper but rhythmic. Talking in short sentences. Sustainable for 1-2 hours."
+                ],
+                [
+                  "G Spot",
+                  "Gravel Race Pace",
+                  "88-92%",
+                  "87-92%",
+                  "6-7",
+                  "Uncomfortably sustainable. Hard enough to hurt, easy enough to repeat. Where you'll spend most of a road event."
+                ],
+                [
+                  "Z4",
+                  "Lactate Threshold",
+                  "93-105%",
+                  "87-92%",
+                  "7-8",
+                  "Hard, controlled effort. Only a few words at a time. 10-30 minute blocks."
+                ],
+                [
+                  "Z5",
+                  "VO2max",
+                  "106-120%",
+                  "92-100%",
+                  "9",
+                  "Very hard, heavy breathing. Near maximum. 2-8 minute efforts."
+                ],
+                [
+                  "Z6",
+                  "Anaerobic Capacity",
+                  "121-150%",
+                  "N/A*",
+                  "10",
+                  "Sharp, explosive efforts—30 seconds to 3 minutes max. All-out."
+                ],
+                [
+                  "Z7",
+                  "Neuromuscular Power",
+                  ">150%",
+                  "N/A*",
+                  "10",
+                  "All-out sprints. Pure explosive power. Lasts only seconds."
+                ]
+              ]
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-zone-spectrum",
+              "alt": "Training zone spectrum showing 7 zones from Z1 Active Recovery to Z7 Neuromuscular with power and heart rate ranges",
+              "caption": "The zone spectrum — from recovery spin to redline effort.",
+              "layout": "inline"
+            },
+            {
+              "type": "prose",
+              "content": "Here is the uncomfortable truth: most of your training should be in Zone 2. Boring, conversational, feels-like-nothing Zone 2. The riders who train too hard too often never build the aerobic base that carries them through the final third of a race. Train easy enough that it feels embarrassing. That is the right intensity."
+            },
+            {
+              "type": "prose",
+              "content": "Your power-duration curve defines what you can sustain at different time intervals—from a 5-second sprint to a 6-hour road event. The zones are derived from this curve."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-power-duration",
+              "alt": "Power-duration curve showing sustainable watts from 5 seconds to 6 hours with training zone bands overlaid",
+              "caption": "The power-duration curve — your physiological fingerprint as a rider.",
+              "layout": "full-width"
+            },
+            {
+              "type": "prose",
+              "content": "Training at the right intensity means respecting these boundaries. The curve bends sharply—even a small increase above threshold drops sustainable duration dramatically."
+            },
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "label": "Why G Spot?",
+                  "title": "Why G Spot, Not Sweet Spot?",
+                  "content": "We call it G Spot instead, and it's not just branding:\n\n**1. It's more intensity-specific to road racing** — Sweet Spot (88-93% {{FTP}}) is too high for most road events. Actual race data shows most road eventrs spend the majority of their time at 87-90% FTP. G Spot (88-92%) better matches reality.\n\n**2. It's better for training execution** — Sweet Spot intervals at 90-93% FTP have a nasty habit of turning into threshold intervals. G Spot's lower ceiling (92% max) keeps you honest.\n\n**3. It's equally as scientific** — Frank Overton pointed at a unitless graph showing two theoretical curves and called it science. Two can play that game. G Spot is calibrated to actual road event power data.\n\n**4. It's better named, objectively** — \"Sweet Spot\" sounds like something your grandmother would say about a parking space."
+                },
+                {
+                  "label": "Three Systems",
+                  "title": "Three Measurement Systems",
+                  "content": "You'll see three metrics in your workouts:\n\n**Power (% of FTP)** — The most precise. Measures actual work output in watts.\n\n**Heart Rate (% of HRmax)** — Secondary system. Lags power by 1-3 minutes, affected by heat, hydration, fatigue, stress, caffeine. Useful for pacing long efforts.\n\n**{{RPE}} (Rate of Perceived Exertion, 1-10 scale)** — Your subjective experience. The ultimate arbiter. If the numbers say one thing but your body says another, trust your body.\n\n**How to set your zones:**\n\n- **FTP:** 20-minute all-out test, multiply average power by 0.95\n- **HRmax:** 211 - (0.64 × age). Example: age 38 = 186 bpm\n- **RPE:** Practice correlating numbers with feeling"
+                },
+                {
+                  "label": "Critical Notes",
+                  "title": "Critical Notes on Zone Use",
+                  "content": "**1. Zones are descriptive, not prescriptive** — They describe what you did, not rigid targets.\n\n**2. Easy means easy** — Most people train too hard on easy days. Zone 2 should feel conversational.\n\n**3. RPE is the ultimate arbiter** — Power meters can lie. Heart rate can be misleading. Your body doesn't lie.\n\n**4. FTP changes slowly** — Don't retest every week. Test at Week 1, optionally Week 6-7, and before your race.\n\n**5. Heart rate lags power** — Use power for short, hard efforts. Use heart rate for pacing long endurance rides.\n\n**6. Anaerobically gifted athletes are different** — The percentages assume average physiology. If you're exceptional, your coach will adjust zones."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch3-load",
+          "title": "Training Load Variables & Metrics",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "When you manipulate training, you're adjusting three variables: **frequency** (how often), **duration** (how long), and **intensity** (how hard). These create *training load*—the total stress applied to your system.\n\nThanks to really smart people we can quantify training stress precisely:"
+            },
+            {
+              "type": "data_table",
+              "caption": "Key Training Load Metrics",
+              "headers": [
+                "Metric",
+                "What It Is",
+                "Why It Matters"
+              ],
+              "rows": [
+                [
+                  "TSS",
+                  "Training Stress Score — quantifies total stress of a workout",
+                  "Lets you compare workouts. 90-min tempo and 60-min VO2max can both = ~80 TSS"
+                ],
+                [
+                  "CTL",
+                  "Chronic Training Load (42-day average TSS) — your fitness",
+                  "Higher CTL = more fitness. Builds slowly (up to +5-8 pts/week inside a loading block, netting about +10/month once recovery weeks are counted)"
+                ],
+                [
+                  "ATL",
+                  "Acute Training Load (7-day average TSS) — your fatigue",
+                  "High ATL = fresh fatigue. Responds quickly to training changes"
+                ],
+                [
+                  "TSB",
+                  "CTL minus ATL — your freshness",
+                  "Negative = building fitness. Race day target: +15 to +25"
+                ]
+              ]
+            },
+            {
+              "type": "image",
+              "asset_id": "ch3-pmc-chart",
+              "alt": "12-week Performance Management Chart showing CTL fitness, ATL fatigue, and TSB form",
+              "caption": "CTL builds slowly. ATL spikes fast. TSB tells you when to race.",
+              "layout": "full-width"
+            },
+            {
+              "type": "prose",
+              "content": "The PMC is not a toy — it is the most powerful planning tool in endurance sport. When CTL is climbing steadily and TSB turns positive 10-14 days before race day, you are ready. When CTL flatlines or TSB is deep negative on race week, something went wrong. Check your chart weekly."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "intensity",
+          "title": "Seiler and Kjerland (2006) — Quantifying training intensity distribution",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16430681/"
         }
       ]
     },
@@ -95,7 +508,7 @@
       "id": "workout-execution",
       "title": "Workout Execution",
       "subtitle": "Zones, intervals, and hitting the targets that matter",
-      "gated": true,
+      "gated": false,
       "cta_after": null,
       "hero_image": "ch4-hero",
       "sections": [
@@ -105,26 +518,201 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "Once the base is in, intensity sharpens it. Train by zones, not feelings: zone 2 builds the engine, threshold (around your one-hour power) raises the ceiling you can sustain, and VO2max work — short, brutal 3-5 minute efforts — lifts the top end. The trap is the gray zone: zone 3 is too hard to recover from and too easy to drive real adaptation. Ride it only when prescribed."
+              "content": "Read the workout before you ride. Know the target, the recovery between efforts, and the point at which you should stop repeating work you can no longer execute."
             },
             {
               "type": "prose",
-              "content": "Power is the primary target; heart rate is the cross-check. If you're HR-based, your zones are a percentage of threshold HR — not max HR. On a hot or fatigued day, trust HR over the number on the screen."
+              "content": "Power, heart rate, and perceived effort answer different questions. Use the measurement the workout prescribes and record what happened. If the target becomes unmanageable, write that in the workout comments."
             },
             {
               "type": "prose",
-              "content": "Two to three quality days a week is plenty for most road athletes. Keep hard days hard and easy days genuinely easy. The plan controls how much time you spend in each zone; your only job is to hit the prescribed zone when the workout calls for it."
+              "content": "An easy ride and a hard workout should have different purposes. Avoid turning the warm-up, recoveries, and ride home into extra intervals."
+            },
+            {
+              "type": "reference_table",
+              "title": "Execute the workout",
+              "headers": [
+                "Stage",
+                "Action"
+              ],
+              "rows": [
+                [
+                  "Before",
+                  "Read targets and recoveries; prepare your route"
+                ],
+                [
+                  "Warm-up",
+                  "Prepare for the work without adding hard efforts"
+                ],
+                [
+                  "Work",
+                  "Follow the prescribed target and recovery"
+                ],
+                [
+                  "After",
+                  "Record completion, effort, and any problems"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch4-rules",
+          "title": "Universal Execution Rules",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Warm Up Properly",
+                  "detail": "For endurance: 10-15 min Z1→Z2. For intensity: 15-20 min Z1→Z2→Z3 with 3×1 min openers. Cold muscles don't produce power efficiently."
+                },
+                {
+                  "label": "Do the Actual Workout (Not More, Not Less)",
+                  "detail": "Execute what's prescribed. Not more. Not less. Trust the plan. Adding volume or intensity might feel productive, but it accumulates fatigue, compromises recovery, and ruins tomorrow's workout."
+                },
+                {
+                  "label": "Chase Time-in-Zone, Not Hero Intervals",
+                  "detail": "Goal: highest average power across the entire set. Start conservatively. Finish strong. Complete the set. Bad: 320W/290W/270W/Failed. Good: 300W/300W/295W/295W."
+                },
+                {
+                  "label": "Stop If Power Drops >10%",
+                  "detail": "Quality beats quantity. Four quality intervals at 300W beats six degraded intervals averaging 270W."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch4-zones",
+          "title": "Zone-Specific Execution",
+          "blocks": [
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "label": "Z2 Endurance",
+                  "title": "Z2 (Endurance) — The Foundation",
+                  "content": "**Target:** 56-75% {{FTP}}, {{RPE}} 3-4, conversational\n\nRide steady, no surges. Should feel easy enough to go for hours. Full sentences possible. Nose breathing (if you can't, you're too hard).\n\n**Common mistakes:** Drifting into Z3 because you're bored. Turning every endurance ride into a tempo ride. Riding with faster friends and getting pulled up.\n\n**The fix:** Discipline. Easy means easy. This is 70-80% of your training volume. Protect it."
+                },
+                {
+                  "label": "G Spot",
+                  "title": "G Spot (88-92% FTP) — Gravel Race Pace",
+                  "content": "**Target:** 88-92% {{FTP}}, {{RPE}} 6-7, \"uncomfortably sustainable\"\n\nStay seated, control breathing. Hard enough to hurt, easy enough to repeat. Could talk in short phrases but wouldn't want to. Fuel properly: 60-80g carbs/hour.\n\n**Common mistakes:** Pushing into threshold (93%+). Not fueling adequately.\n\n**Success looks like:** All intervals completed, power stable ±5%, RPE 6-7, feeling like you could do one more if forced."
+                },
+                {
+                  "label": "Threshold",
+                  "title": "Threshold (93-105% FTP) — FTP Development",
+                  "content": "**Target:** 95-100% {{FTP}}, {{RPE}} 7-8\n\nGoal: 30-60 min total time-in-zone. Even intervals (2×20, 3×15, 4×12) beat one heroic 40-minute effort. Start at 95%, build into rhythm. Recovery: 5-10 min Z1 between intervals.\n\n**Success looks like:** All intervals completed at target, power consistent (±3%), RPE 7-8, interval 3 felt hardest but you finished strong."
+                },
+                {
+                  "label": "VO2max",
+                  "title": "VO2max (110-120% FTP) — Raising the Ceiling",
+                  "content": "**Target:** 110-120% FTP, {{RPE}} 9, gasping, burning legs, maximal but repeatable\n\nWarm-up is critical: 20-25 min progressive with 3×1 min openers. Hit the target from the start. Full recovery between: 4-5 min Z1, HR must drop below 60% max. Stop if power drops >10%.\n\n**Success looks like:** 4-5 quality intervals at target power, RPE 9 throughout, completed the set without falling apart."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch4-problems",
+          "title": "When Workouts Go Wrong",
+          "blocks": [
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Scenario 1: You Feel Like Shit",
+                  "content": "**Symptoms:** Sleep was bad, work was stressful, legs feel dead before you start\n\n**What to do:** Reduce intensity by 5-10%. Shorten intervals if needed. Prioritize completion over heroics. Swap intensity for endurance if you're really cooked.\n\n**What not to do:** Push through and accumulate junk volume that compromises recovery."
+                },
+                {
+                  "title": "Scenario 2: You Can't Hit Power Targets",
+                  "content": "**Symptoms:** Interval 1 feels way harder than it should, power is 10W+ below target\n\n**Possible causes:** Stale {{FTP}}, inadequate recovery, illness brewing, equipment issues\n\n**What to do:** Check equipment first. Drop power 5% and see if effort matches RPE. If still struggling, abort and take a rest day. Retest FTP if this happens multiple workouts in a row."
+                },
+                {
+                  "title": "Scenario 3: Life Happens (Missed Workouts)",
+                  "content": "**What to do:** Don't double up to \"make up\" missed workouts. Don't panic and add volume. Execute the next workout as scheduled. One missed workout doesn't ruin your plan.\n\n**What not to do:** Try to cram two days into one. That just digs a deeper hole."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch4-autoregulation",
+          "title": "Autoregulation: Listening to Your Body",
+          "blocks": [
+            {
+              "type": "callout",
+              "style": "traffic_light",
+              "content": "**Green light (execute as written):** Good sleep, resting HR normal, feeling motivated, body feels fresh.\n\n**Yellow light (reduce intensity 5-10%):** Sleep was okay but not great, slight fatigue, moderate motivation.\n\n**Red light (swap intensity for easy ride or rest):** Multiple nights of poor sleep, elevated resting HR, body feels broken, high life stress.\n\n**The rule:** Recovery is not weakness. Training when you're buried just makes you more buried."
+            },
+            {
+              "type": "image",
+              "asset_id": "ch4-traffic-light",
+              "alt": "Green/Yellow/Red autoregulation system for daily training decisions",
+              "caption": "Check before every workout. Green = go. Yellow = modify. Red = rest."
+            },
+            {
+              "type": "prose",
+              "content": "This framework works because it removes ego from the decision. You are not deciding whether you are tough enough — you are checking objective signals. Resting HR elevated? Sleep wrecked? Those are red signals, not character tests. The athletes who last decades in this sport respect red lights."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "During a threshold interval set, your power on interval 3 drops to 88% of target despite maximum effort. What should you do?",
+              "options": [
+                {
+                  "text": "Push harder and finish the set — mental toughness matters",
+                  "correct": false
+                },
+                {
+                  "text": "Stop the set — power dropped >10%, quality beats quantity",
+                  "correct": true
+                },
+                {
+                  "text": "Add an extra interval at the end to make up for the weak one",
+                  "correct": false
+                }
+              ],
+              "explanation": "When power drops more than 10% from target, you're accumulating junk volume, not building fitness. Four quality intervals at target power beats six degraded intervals. Stop, cool down, and recover for the next workout. This is discipline, not quitting."
+            }
+          ]
+        },
+        {
+          "id": "road-specific-4",
+          "title": "Rehearse the road problem",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Choose the terrain",
+                  "detail": "Use a steady climb for sustained work and safe open space for group drills. Choose a repeatable route that fits the workout."
+                },
+                {
+                  "label": "Keep the work clear",
+                  "detail": "Do not count junctions, braking, and coasting as equivalent to completing the prescribed effort."
+                },
+                {
+                  "label": "Write the useful comment",
+                  "detail": "Record what changed the effort. Traffic, gradient, heat, group movement, and fatigue are useful details."
+                },
+                {
+                  "label": "Review before repeating",
+                  "detail": "Change the route or workout execution when the environment prevented the intended work."
+                }
+              ]
             }
           ]
         }
-      ]
+      ],
+      "sources": []
     },
     {
       "number": 5,
       "id": "fueling-for-the-distance",
       "title": "Fueling for the Distance",
       "subtitle": "Carbs per hour, hydration, and a gut that can take it",
-      "gated": true,
+      "gated": false,
       "cta_after": null,
       "hero_image": "ch5-hero",
       "sections": [
@@ -134,17 +722,117 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "Road events are won and lost at the food table as much as on the climbs. For anything over ~90 minutes you need carbohydrate — 60-90+ grams per hour for a hard, long day, far more than most riders eat. Bonking isn't a willpower failure; it's an empty tank you could have kept full."
+              "content": "Choose a fueling target for the duration and effort of the ride, then practise it. The Australian Institute of Sport’s guidance allows higher carbohydrate intake for longer endurance events, including up to 90 grams an hour for events beyond roughly 2.5–3 hours. Tolerance and the carbohydrate mix matter. [^fuel]"
             },
             {
               "type": "prose",
-              "content": "Your gut is trainable. Practice race-day fueling on your long rides — the exact gels, drink mix, and real food you'll use — so race day is a rehearsal, not an experiment. A stomach that's never seen 80g/hr will reject it when you need it most."
+              "content": "Use the products you intend to carry. Record what you ate, drank, and tolerated on your long ride. Change the plan during training while you have time to learn from it."
             },
             {
               "type": "prose",
-              "content": "Hydrate to thirst plus a plan: know your sweat rate, carry enough, and don't forget sodium on hot days. Start fueling early, before you feel empty — by the time you're hungry, you're already behind."
+              "content": "Check where you can refill. Put food and bottles within reach, and decide what you will do if a feed station is crowded or a bottle is lost."
+            },
+            {
+              "type": "reference_table",
+              "title": "Pack the fuel",
+              "headers": [
+                "Check",
+                "Decision"
+              ],
+              "rows": [
+                [
+                  "Duration",
+                  "Set an intake target you have practised"
+                ],
+                [
+                  "Products",
+                  "Carry familiar food and drink"
+                ],
+                [
+                  "Refills",
+                  "Know the distance between feed stations"
+                ],
+                [
+                  "Backup",
+                  "Plan for a missed refill or lost bottle"
+                ]
+              ]
             }
           ]
+        },
+        {
+          "id": "shared-ch5-gut-training",
+          "title": "Training Your Gut",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Your gut is trainable just like your muscles. If you never eat during training rides, your gut won't tolerate eating during races."
+            },
+            {
+              "type": "timeline",
+              "title": "Gut Training Protocol",
+              "steps": [
+                {
+                  "label": "Weeks 1-4 (Base Phase)",
+                  "content": "Practice eating real food on easy rides. Start with 40-50g carbs per hour, mostly solid. Build tolerance gradually. SGLT1 transporters can double in 2 weeks of consistent gut training (GSSI)."
+                },
+                {
+                  "label": "Weeks 5-8 (Build Phase)",
+                  "content": "Increase toward your race-day target rate. Mix of liquids and solids. Practice eating at tempo pace. Your gut adapts to what you train it for."
+                },
+                {
+                  "label": "Weeks 9-10 (Peak Training)",
+                  "content": "Hit your race-day target rate (see duration-scaled targets in your prep kit). Race nutrition only (gels, drink, bars you'll use on race day). Practice at race pace. For ultra events (12+ hours), include savory and mixed-macro foods alongside gels."
+                },
+                {
+                  "label": "Race Week",
+                  "content": "Stick with what worked in training. No new products. Trust your gut (literally)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch5-common-mistakes",
+          "title": "The Four Race Nutrition Failures",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "Most race nutrition failures fall into four predictable categories. Recognizing them before race day is the difference between finishing strong and crawling to the line."
+            },
+            {
+              "type": "prose",
+              "content": "Look at those numbers again: 600 grams of carbohydrates for an 8-hour race. That is 24 gels. When you see it visualized like that, the scale of race fueling stops being abstract. This is why you practice nutrition in training."
+            },
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "The Optimist",
+                  "content": "\"Aid stations will have what I need.\" They won't, or they'll run out. The first 500 riders cleaned out the bananas and Coke at aid station 3. You're rider 1,200. Assume aid stations have nothing you need. Carry enough fuel between stations even if they have everything."
+                },
+                {
+                  "title": "The Minimalist",
+                  "content": "\"I'll just eat when I'm hungry.\" By the time you're hungry, you're already glycogen-depleted. Hunger is a late-stage bonk signal. Fuel by the clock, not by feel. Set a timer for every 20 minutes. Eat something every time it goes off. No negotiation."
+                },
+                {
+                  "title": "The Experimenter",
+                  "content": "\"Let me try this new gel flavor on race day.\" Your gut under race stress is not the time to experiment. That mystery gel from the aid station? Your stomach will rebel at mile 60. Race with exactly what you've trained with. Nothing new on race day. Ever."
+                },
+                {
+                  "title": "The Denier",
+                  "content": "\"I don't want to carry that much food.\" Math check: a 100-mile race takes 6-8 hours. At 75g carbs/hour, that's 450-600g total—roughly 18-24 gels or equivalent. Yes, that much. Most people bring half that and wonder why they bonk at mile 80."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "fuel",
+          "title": "Australian Institute of Sport — Sports drinks: how and when",
+          "url": "https://www.ausport.gov.au/ais/nutrition/supplements/group_a/sports-foods2/sports-drink/how-and-when-do-i-use-it"
         }
       ]
     },
@@ -153,7 +841,7 @@
       "id": "pack-skills-and-tactics",
       "title": "Pack Skills & Race Tactics",
       "subtitle": "Drafting, echelons, positioning, and when to spend",
-      "gated": true,
+      "gated": false,
       "cta_after": null,
       "hero_image": "ch6-hero",
       "sections": [
@@ -163,17 +851,77 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "The pack is the road racer's superpower and biggest risk. Sit 30-60cm off the wheel ahead — close enough to draft, far enough to react — look through the riders in front, not at the wheel, and match speed with feathered brakes, never grabs. Surging and braking is how gaps and crashes start."
+              "content": "Practise group riding with an experienced group. Ride predictably, communicate hazards, avoid overlapping wheels, and look ahead. The safe gap changes with speed, surface, visibility, and the riders around you. [^group]"
             },
             {
               "type": "prose",
-              "content": "In a crosswind the shelter sits diagonally behind and to the leeward side — that's an echelon, and when the road tilts into the wind, the front splits into groups. Know which way the wind comes from, fight for the front before the exposed section, and never get caught in the gutter."
+              "content": "Keep every move within the space available to you. Wind and corners change the group’s shape; they do not give you permission to cross the centre line or squeeze through a gap."
             },
             {
               "type": "prose",
-              "content": "Spend your matches deliberately. Move up before climbs and corners, not during them; cover the moves that matter and let the rest go. The strongest rider doesn't always win — the one who wastes the least energy getting to the finish does."
+              "content": "Choose your position before an exposed section or climb when you can do so safely. If you lose the group, return to your pacing and fueling plan instead of chasing every surge."
+            },
+            {
+              "type": "reference_table",
+              "title": "Ride predictably",
+              "headers": [
+                "Situation",
+                "Action"
+              ],
+              "rows": [
+                [
+                  "Hazard ahead",
+                  "Communicate early and leave room"
+                ],
+                [
+                  "Changing speed",
+                  "Make changes gradually"
+                ],
+                [
+                  "Following a wheel",
+                  "Avoid overlap and keep space to react"
+                ],
+                [
+                  "Moving through the group",
+                  "Check space and signal your intention"
+                ]
+              ]
             }
           ]
+        },
+        {
+          "id": "road-specific-6",
+          "title": "A team-camp approach to group practice",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Agree before riding",
+                  "detail": "Choose the route, purpose, roles, signals, and regroup point while everyone can hear."
+                },
+                {
+                  "label": "Separate the starts",
+                  "detail": "For a controlled group exercise, stagger starts so groups are not competing for the same road space."
+                },
+                {
+                  "label": "Rehearse the leadout",
+                  "detail": "Agree who does what and where the effort ends. The exercise is coordinated riding, not surprise manoeuvres."
+                },
+                {
+                  "label": "Regroup and review",
+                  "detail": "Discuss timing and communication after the exercise. Repeat only where the route and supervision allow it."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "group",
+          "title": "British Cycling — Guide to riding in a group",
+          "url": "https://www.britishcycling.org.uk/sportives/article/sp20120110-cyclo-sportive-Guide-to-riding-in-a-group-0"
         }
       ]
     },
@@ -182,7 +930,7 @@
       "id": "race-week",
       "title": "Race Week",
       "subtitle": "Taper, prep, and arriving sharp instead of stale",
-      "gated": true,
+      "gated": false,
       "cta_after": null,
       "hero_image": "ch7-hero",
       "sections": [
@@ -192,17 +940,133 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "The work is done; race week is about arriving fresh, not fit. Cut volume by 40-60% while keeping a few short, sharp openers so the legs stay snappy. You can't add fitness in the final week — you can only blunt it by training through fatigue, or sharpen it by resting smart."
+              "content": "A taper reduces accumulated fatigue while retaining some familiar intensity. Research supports reducing training volume before competition, but the length and reduction depend on the athlete and event. Follow your plan rather than copying a universal final-week percentage. [^taper]"
             },
             {
               "type": "prose",
-              "content": "Dial the logistics: know the route profile, the feed zones, the weather, and your pacing plan before you pin a number. Lay out kit and nutrition the night before. The calmer the morning, the better the day."
+              "content": "Confirm the route, feed stations, weather, travel, and start time. Pack the equipment and food you have already used in training."
             },
             {
               "type": "prose",
-              "content": "Trust the taper even when you feel sluggish — that heavy-legged feeling mid-week is normal as fatigue clears. Race-morning openers and adrenaline bring the legs back."
+              "content": "Do not explain away unusual fatigue, pain, or illness as normal taper nerves. Tell your coach what changed so the race-day decision uses the information you have."
+            },
+            {
+              "type": "reference_table",
+              "title": "Race-week checklist",
+              "headers": [
+                "When",
+                "Check"
+              ],
+              "rows": [
+                [
+                  "Early in the week",
+                  "Travel, start time, route and weather"
+                ],
+                [
+                  "Before packing",
+                  "Bike condition, familiar kit and food"
+                ],
+                [
+                  "Evening before",
+                  "Number, bottles, breakfast and alarm"
+                ],
+                [
+                  "At the start",
+                  "Equipment check and pacing reminder"
+                ]
+              ]
             }
           ]
+        },
+        {
+          "id": "shared-ch7-equipment",
+          "title": "Equipment Prep",
+          "blocks": [
+            {
+              "type": "accordion",
+              "items": [
+                {
+                  "title": "Final Bike Check (Thursday or Friday)",
+                  "content": "**Drivetrain:** Chain clean and lubed. Shifting smooth across all gears. No chain slip under power.\n\n**Tires:** Tubeless sealant fresh. Tire pressure set for race conditions. Check for cuts, sidewall damage.\n\n**Cockpit:** Computer charged and mounted. Bottles/cages secure. Bento box organized.\n\n**Wheels:** Thru-axles tight. No spoke issues. Hubs spin smoothly.\n\n**Don't:** Install new chain race week. Change tire pressure drastically. Add new untested equipment."
+                },
+                {
+                  "title": "Race Day Bag (Pack Friday or Saturday)",
+                  "content": "**Essentials:** Spare tube (even if tubeless), tire plugs, CO2 cartridges (2-3) or mini pump, multi-tool with chain breaker, quick link, tire levers.\n\n**Nutrition:** Gels, bars, chews—whatever you practiced with. Bottle with sports drink pre-mixed. Extra water bottle.\n\n**Other:** Sunscreen, chamois cream, arm warmers/vest, rain jacket (if forecast), extra base layer.\n\n**Race essentials:** Bib number and pins, race chip, ID and emergency contact info."
+                }
+              ]
+            },
+            {
+              "type": "prose",
+              "content": "Weather changes your gear strategy completely. A 55°F start with 15 mph wind feels very different from a 75°F calm morning—and your clothing choices should reflect that."
+            },
+            {
+              "type": "prose",
+              "content": "Scout the forecast Thursday morning. Lock in your plan by Friday. Do not second-guess Saturday morning—the stress of indecision costs more energy than being slightly overdressed."
+            }
+          ]
+        },
+        {
+          "id": "shared-ch7-dont",
+          "title": "What Not to Do Race Week",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "This is where most people sabotage themselves.\n\n**Don't:** Get a massage Friday or Saturday. Try new equipment. Test your fitness. Experiment with nutrition (see [Chapter 5](#nutrition-fueling) for what works). Drink alcohol. Stay up late packing or stressing. Cut weight.\n\n**Do:** Sleep 8-9 hours every night. Follow your taper plan exactly. Eat familiar foods. Finalize logistics early. Trust your training. Stay off social media if it makes you anxious. Review your race plan. Arrive at the start line fresh, fueled, and ready."
+            },
+            {
+              "type": "knowledge_check",
+              "question": "It's Thursday before your Saturday race. You feel sluggish and your legs feel heavy during an easy spin. What does this mean?",
+              "options": [
+                {
+                  "text": "You've lost fitness during the taper — do a hard workout to test yourself",
+                  "correct": false
+                },
+                {
+                  "text": "This is completely normal during taper week — trust the process and keep resting",
+                  "correct": true
+                },
+                {
+                  "text": "You should increase carb intake dramatically to combat the fatigue",
+                  "correct": false
+                }
+              ],
+              "explanation": "Taper-week sluggishness is universal. Your body is adapting to the reduced training load. Glycogen stores are filling up, muscle repair is happening. The heavy-leg feeling is not lost fitness—it's stored fitness waiting to be expressed. Athletes who panic and do a hard workout Thursday destroy their race. Trust the taper."
+            }
+          ]
+        },
+        {
+          "id": "road-specific-7",
+          "title": "Road-event equipment rehearsal",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Gearing",
+                  "detail": "Use the gearing you need for the course in training before race week."
+                },
+                {
+                  "label": "Braking and tyres",
+                  "detail": "Check condition, compatibility, and pressure using the tyre and wheel makers’ guidance."
+                },
+                {
+                  "label": "Food and bottles",
+                  "detail": "Rehearse reaching, drinking, and carrying the food you will use."
+                },
+                {
+                  "label": "Weather layers",
+                  "detail": "Plan what you carry on long descents and what you can remove safely."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "taper",
+          "title": "Bosquet et al. (2007) — Effects of tapering on performance",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17762369/"
         }
       ]
     },
@@ -211,7 +1075,7 @@
       "id": "after-the-finish",
       "title": "After the Finish",
       "subtitle": "Recovery, reflection, and building the next season",
-      "gated": true,
+      "gated": false,
       "cta_after": null,
       "hero_image": "ch8-hero",
       "sections": [
@@ -221,19 +1085,147 @@
           "blocks": [
             {
               "type": "prose",
-              "content": "The finish line is a checkpoint, not the end. The first 48 hours are about real recovery: eat, sleep, easy spinning only. The fitness you built doesn't vanish — protect it with rest now and you carry it into the next block instead of digging a hole."
+              "content": "Recover before you schedule the next hard workout. The race duration, soreness, sleep, and any pain matter more than an arbitrary return date."
             },
             {
               "type": "prose",
-              "content": "Review honestly. Where did the day come apart — fueling, pacing, positioning, the legs? The race is the most unfakeable feedback you'll get all year; mine it for the one or two things to fix, not a list of twenty."
+              "content": "Write down what happened while you remember it. Separate the course conditions from your decisions: pacing, fueling, equipment, and positioning."
             },
             {
               "type": "prose",
-              "content": "Then build forward. A short, deliberate off-season, a fresh base, and a new A-event give the next plan a target. Compounding small, repeatable work is how riders get genuinely fast — season over season, not week over week."
+              "content": "Choose one or two changes for the next training block. Keep the workouts and habits that worked, and give the next goal enough room on the calendar."
+            },
+            {
+              "type": "reference_table",
+              "title": "Debrief the race",
+              "headers": [
+                "Question",
+                "Useful record"
+              ],
+              "rows": [
+                [
+                  "Pacing",
+                  "Where did effort stop matching the plan?"
+                ],
+                [
+                  "Fueling",
+                  "What did you consume and tolerate?"
+                ],
+                [
+                  "Equipment",
+                  "What worked or failed?"
+                ],
+                [
+                  "Next block",
+                  "Which one or two changes matter?"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch8-analysis",
+          "title": "Performance Analysis",
+          "blocks": [
+            {
+              "type": "tabs",
+              "tabs": [
+                {
+                  "label": "Data Review",
+                  "title": "The Data Review",
+                  "content": "Pull up your race file. Look at:\n\n**Pacing:** Did you go out too hard? Did you fade in the second half? Did you finish strong?\n\n**Power distribution:** What was your normalized power as % of {{FTP}}? Did it match your race plan?\n\n**Heart rate:** Average HR as % of max? Did you redline early?\n\n**Fueling execution:** Did you hit your target carb rate for the race duration? Any bonking or GI issues?\n\n**Mechanicals:** Any flats, chain drops, failures? Could they have been prevented?"
+                },
+                {
+                  "label": "Honest Assessment",
+                  "title": "The Honest Assessment",
+                  "content": "Ask yourself:\n\n**What went well?** Pacing discipline? Fueling execution? Mental toughness? Equipment choices?\n\n**What went poorly?** Blew up early? Under-fueled? Gave up mentally? Mechanical issues?\n\n**What was in your control?** Training preparation, pacing decisions, fueling execution, equipment prep.\n\n**What was outside your control?** Weather, course conditions, other riders' tactics.\n\nOwn what you could control. Learn from what went wrong. Don't make excuses for bad decisions."
+                },
+                {
+                  "label": "Next Steps",
+                  "title": "Setting Your Next Goal",
+                  "content": "**If you crushed it:** Move up a category. Target a harder race. Try longer distance.\n\n**If you struggled:** Same category, better execution. More volume or consistency. Focus on the limiter.\n\n**If you finished but didn't perform:** Analyze what went wrong. Adjust training approach.\n\nOne race is one data point. Don't overreact. But do learn."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shared-ch8-goals",
+          "title": "Setting Your Next Goal",
+          "blocks": [
+            {
+              "type": "prose",
+              "content": "After you finish a race, there's often a void. You trained for months. It's over. Now what?\n\nYou need a new goal. Soon. Waiting too long leads to loss of motivation, inconsistent training, and fitness decay."
+            },
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Pick a goal race",
+                  "detail": "Date, distance, location, difficulty level. Use the [Roadie Labs Race Database](/gravel-races/) to find your next target."
+                },
+                {
+                  "label": "Define success",
+                  "detail": "Finish time, placement, or completion. Be realistic based on current fitness and what you learned from this race."
+                },
+                {
+                  "label": "Work backward",
+                  "detail": "Race date minus 12 weeks = training start. Training start minus 4-8 weeks = off-season / recovery period."
+                },
+                {
+                  "label": "Commit",
+                  "detail": "Register for the race. Tell people. Make it real. The goal isn't just aspirational—it's a commitment."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "road-specific-8",
+          "title": "Separate fitness from race decisions",
+          "blocks": [
+            {
+              "type": "process_list",
+              "items": [
+                {
+                  "label": "Before the group split",
+                  "detail": "Were you positioned safely, and did you recognise the course change?"
+                },
+                {
+                  "label": "During the climb",
+                  "detail": "Did the effort match your plan or the wheel in front?"
+                },
+                {
+                  "label": "After the descent",
+                  "detail": "Did your line and braking leave you in control?"
+                },
+                {
+                  "label": "For the next block",
+                  "detail": "Choose the training or skill that addresses the recorded problem."
+                }
+              ]
             }
           ]
         }
-      ]
+      ],
+      "sources": []
     }
-  ]
+  ],
+  "glossary": {
+    "FTP": "Functional Threshold Power — the max watts you can sustain for ~1 hour",
+    "CTL": "Chronic Training Load — your fitness trend over 42 days",
+    "ATL": "Acute Training Load — your fatigue trend over 7 days",
+    "TSB": "Training Stress Balance — CTL minus ATL. Positive = fresh, negative = fatigued",
+    "TSS": "Training Stress Score — how hard a single workout was relative to your FTP",
+    "IF": "Intensity Factor — ratio of workout power to FTP",
+    "NP": "Normalized Power — weighted average power accounting for variability",
+    "RPE": "Rate of Perceived Exertion — subjective effort on a 1-10 scale",
+    "Z2": "Zone 2 — easy aerobic pace, 55-75% of FTP. The foundation of endurance",
+    "VO2max": "Maximum oxygen uptake — your aerobic ceiling, trainable by ~15%",
+    "PMC": "Performance Management Chart — plots CTL, ATL, and TSB over time",
+    "DOMS": "Delayed Onset Muscle Soreness — peaks 24-72 hours after hard efforts",
+    "W/kg": "Watts per kilogram — power-to-weight ratio, the key metric for climbing",
+    "DNF": "Did Not Finish — dropping out of a race",
+    "bonk": "Hitting the wall — when glycogen stores deplete and performance collapses"
+  }
 }

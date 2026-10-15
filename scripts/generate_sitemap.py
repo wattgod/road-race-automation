@@ -192,6 +192,8 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         ("/race/methodology/", "monthly", "0.8"),
         ("/prep-kit/", "monthly", "0.7"),
         ("/training-plans/", "monthly", "0.8"),
+        ("/guide/", "monthly", "0.8"),
+        ("/season-plan/", "monthly", "0.8"),
         ("/insights/", "weekly", "0.8"),
     ]:
         url = SubElement(urlset, 'url')
@@ -199,6 +201,14 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'lastmod').text = today
         SubElement(url, 'changefreq').text = changefreq
         SubElement(url, 'priority').text = priority
+
+    guide_path = Path(__file__).resolve().parents[1] / 'guide' / 'road-guide-content.json'
+    for chapter in json.loads(guide_path.read_text())['chapters']:
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}/guide/{chapter['id']}/"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = 'monthly'
+        SubElement(url, 'priority').text = '0.7'
 
     # Tier hub pages
     for t in [1, 2, 3, 4]:
