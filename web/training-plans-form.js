@@ -60,9 +60,9 @@
 
   function computePrice(raceDateStr) {
     if (!raceDateStr) return null;
-    var raceDate = new Date(raceDateStr + 'T00:00:00');
+    var raceDate = new Date(raceDateStr + 'T00:00:00Z');
     var today = new Date();
-    today.setHours(0, 0, 0, 0);
+    today.setUTCHours(0, 0, 0, 0);
     var days = Math.round((raceDate - today) / (1000 * 60 * 60 * 24));
     var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
     var price = Math.min(weeks * PRICE_PER_WEEK, PRICE_CAP);
@@ -72,7 +72,7 @@
   // Calendar capacity is separate from rounded-up pricing weeks.
   function computeCoverage(raceDateStr, quotedDate) {
     var clock = quotedDate || new Date();
-    var today = Date.UTC(clock.getFullYear(), clock.getMonth(), clock.getDate());
+    var today = Date.UTC(clock.getUTCFullYear(), clock.getUTCMonth(), clock.getUTCDate());
     var parts = raceDateStr.split('-').map(Number);
     var race = Date.UTC(parts[0], parts[1] - 1, parts[2]);
     var day = 86400000;
