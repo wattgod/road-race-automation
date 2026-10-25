@@ -343,15 +343,16 @@ def build_honest_check() -> str:
 def build_pricing() -> str:
     return f'''<section class="rl-tp-section" id="pricing">
   <div class="rl-tp-section-label">Pricing</div>
-  <h2>{PRICE_PER_WEEK} Per Week. One Payment. No Subscription.</h2>
+  <h2>{PRICE_PER_WEEK} Per Week Until Your Race. One Payment. No Subscription.</h2>
   <div class="rl-tp-pricing-wrap">
     <div class="rl-tp-pricing-card">
       <div class="rl-tp-pricing-header">Custom Training Plan</div>
-      <div class="rl-tp-price">{PRICE_PER_WEEK}<span> / week of training</span></div>
+      <div class="rl-tp-price">{PRICE_PER_WEEK}<span> / week until your race</span></div>
       <ul class="rl-tp-pricing-list">
-        <li>Computed from your race date &mdash; pay for exactly what you need</li>
-        <li>6-week plan = $90. 12-week plan = $180. 16-week plan = $240</li>
-        <li>Capped at {PRICE_CAP} no matter how long the plan</li>
+        <li>Training weeks start on Mondays. Early partial days are separate; final training dates are confirmed during review.</li>
+        <li>Time until your race, rounded up to whole weeks</li>
+        <li>6 weeks until your race = $90. 12 weeks = $180. 16 weeks until your race = $240</li>
+        <li>Four-week minimum, capped at {PRICE_CAP}</li>
         <li>Structured .zwo workouts for Zwift/TrainingPeaks/Wahoo</li>
         <li>30+ page custom training guide</li>
         <li>Race-optimized fueling plan</li>
@@ -386,7 +387,7 @@ FAQ_ITEMS = [
     ),
     (
         "How is the price calculated?",
-        f"{PRICE_PER_WEEK} per week of training, computed from your race date. A 6-week plan is $90. A 12-week plan is $180. Anything over 16 weeks caps at {PRICE_CAP}. You pay for exactly what you need &mdash; no more.",
+        f"{PRICE_PER_WEEK} per week until your race, rounded up to whole weeks. Four-week minimum, capped at {PRICE_CAP}. Training weeks start on Mondays; early partial days are separate, so the number of scheduled training weeks can be lower than the weeks used for pricing. Final training dates are confirmed during review.",
     ),
     (
         "Is this coaching?",
