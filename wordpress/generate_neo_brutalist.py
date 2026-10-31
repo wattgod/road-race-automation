@@ -411,7 +411,9 @@ def build_seo_description(rd: dict, seo_overrides: dict = None) -> str:
         suffix = f" Rated {score}/100 ({tier_label}). Course maps, ratings & full breakdown."
 
     if not tagline:
-        return suffix.lstrip()
+        # Without a tagline the suffix alone repeats across races with the
+        # same score and tier, so lead with the race name to keep it unique.
+        tagline = f"{rd['name']} race review"
     desc = f"{tagline}.{suffix}"
     if len(desc) <= 160:
         return desc
@@ -908,7 +910,9 @@ def normalize_race_data(data: dict) -> dict:
         'vitals': {
             'distance': f"{vitals.get('distance_mi', '--')} mi" if vitals.get('distance_mi') else '--',
             'distance_mi': vitals.get('distance_mi', 0),
-            'elevation': f"{vitals.get('elevation_ft', '--'):,} ft" if isinstance(vitals.get('elevation_ft'), (int, float)) else str(vitals.get('elevation_ft', '--')),
+            # A null elevation_ft used to render as the literal text "None".
+            'elevation': (f"{vitals['elevation_ft']:,} ft" if isinstance(vitals.get('elevation_ft'), (int, float))
+                          else ('--' if vitals.get('elevation_ft') in (None, '') else str(vitals['elevation_ft']))),
             'location': vitals.get('location', '--'),
             'location_badge': vitals.get('location_badge', vitals.get('location', '--')),
             'date': short_date or vitals.get('date', '--'),
@@ -3097,6 +3101,11 @@ def build_from_the_field(rd: dict) -> str:
             else:
                 thumb_url = f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg'
                 thumb_w, thumb_h = 480, 360
+            # YouTube serves every thumbnail as WebP too: same image, smaller
+            # file. Self-hosted thumbs are left alone.
+            yt_jpg = re.match(r'https://i\.ytimg\.com/vi/([\w-]+)/(\w+)\.jpg$', thumb_url)
+            if yt_jpg:
+                thumb_url = f'https://i.ytimg.com/vi_webp/{yt_jpg.group(1)}/{yt_jpg.group(2)}.webp'
 
             video_cards.append(
                 f'<div class="rl-field-video">'
@@ -5687,6 +5696,61 @@ def build_visible_faq(rd: dict) -> str:
   </section>'''
 
 
+_EXPLORE_LINK_CACHE: dict = {}
+
+
+def _explore_link_maps(race_index: list) -> tuple:
+    """Map race slug -> state hub slug and race slug -> vs page slugs.
+
+    Uses the same grouping and pairing as generate_state_hubs.py and
+    generate_vs_pages.py, so every link points at a page those generators
+    emit. Without these links the hubs and vs pages had no inbound links
+    (orphans) and were found only through the sitemap.
+    """
+    key = id(race_index)
+    if key not in _EXPLORE_LINK_CACHE:
+        from generate_state_hubs import _slugify, group_races_by_state
+        from generate_vs_pages import select_pairs
+        hub_by_slug = {}
+        hub_names = {}
+        for state, races in group_races_by_state(race_index).items():
+            hub = f"best-road-races-{_slugify(state)}"
+            hub_names[hub] = state
+            for r in races:
+                hub_by_slug[r["slug"]] = hub
+        names = {r["slug"]: r.get("name", r["slug"]) for r in race_index}
+        vs_by_slug: dict = {}
+        for a, b in select_pairs(race_index):
+            if a in names and b in names:
+                vs_by_slug.setdefault(a, []).append((f"{a}-vs-{b}", b))
+                vs_by_slug.setdefault(b, []).append((f"{a}-vs-{b}", a))
+        _EXPLORE_LINK_CACHE.clear()
+        _EXPLORE_LINK_CACHE[key] = (hub_by_slug, hub_names, vs_by_slug, names)
+    return _EXPLORE_LINK_CACHE[key]
+
+
+def build_explore_links(rd: dict, race_index: list) -> str:
+    """Plain links to this race's state hub and head-to-head pages.
+
+    No training-plan link here: the approved spine keeps /training-plan/ out
+    of the Deep Dive (scripts/audit_spine_v2_catalog.py). Prep kits link it.
+    """
+    if not race_index:
+        return ''
+    hub_by_slug, hub_names, vs_by_slug, names = _explore_link_maps(race_index)
+    slug = rd['slug']
+    links = []
+    hub = hub_by_slug.get(slug)
+    if hub:
+        links.append(f'<a href="/race/{esc(hub)}/">Best road races in {esc(hub_names[hub])}</a>')
+    for vs_slug, other in vs_by_slug.get(slug, []):
+        links.append(f'<a href="/race/{esc(vs_slug)}/">{esc(rd["name"])} vs {esc(names[other])}</a>')
+    if not links:
+        return ''
+    return ('\n      <p class="rl-similar-explore">'
+            + ' &middot; '.join(links) + '</p>')
+
+
 def build_similar_races(rd: dict, race_index: list) -> str:
     """Build Similar Races section from the race index.
     Finds 4 races in same region or adjacent tier, excluding self."""
@@ -5762,7 +5826,7 @@ def build_similar_races(rd: dict, race_index: list) -> str:
     <div class="rl-section-body">
       <div class="rl-similar-grid">
         {''.join(cards)}
-      </div>
+      </div>{build_explore_links(rd, race_index)}
     </div>
   </section>'''
 
@@ -6480,6 +6544,7 @@ def get_page_css() -> str:
 
 /* Similar races */
 .rl-neo-brutalist-page .rl-similar-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }}
+.rl-neo-brutalist-page .rl-similar-explore {{ margin: 16px 0 0; font-size: 14px; line-height: 1.7; }}
 .rl-neo-brutalist-page .rl-similar-card {{ display: block; border: var(--rl-border-subtle); padding: 16px; background: var(--rl-color-cool-white); text-decoration: none; color: var(--rl-color-dark-navy); transition: border-color 0.15s, background 0.15s; }}
 .rl-neo-brutalist-page .rl-similar-card:hover {{ border-color: var(--rl-color-orange); background: var(--rl-color-silver); }}
 .rl-neo-brutalist-page .rl-similar-tier {{ font-family: var(--rl-font-data); display: inline-block; background: var(--rl-color-orange); color: var(--rl-color-dark-navy); padding: 2px 8px; font-size: 9px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); margin-bottom: 6px; }}

@@ -293,9 +293,12 @@ def test_five_whys_field_kind_renders():
     assert 'id="why_2"' in html and 'id="why_5"' in html
 
 
-def test_no_season_plan_words_anywhere_on_the_page():
-    assert "Season Plan" not in page()
-    assert "/season-plan/" not in page()
+def test_goals_form_does_not_sell_a_season_plan():
+    # Shared navigation links /season-plan/ (live since Oct 14); the free
+    # goals form itself must still not sell it.
+    assert "Season Plan" not in core_form()
+    assert 'href="https://roadielabs.com/season-plan/"' in page()
+    assert "/season-plan/" not in core_form()
 
 
 def test_consent_footer_names_roadielabs_contact():

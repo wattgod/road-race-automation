@@ -29,9 +29,19 @@ from shared_header import get_site_header_css, get_site_header_html  # noqa: E40
 SITE_BASE_URL = "https://roadielabs.com"
 CANONICAL = f"{SITE_BASE_URL}/road-races/"
 
-TITLE = "Road Race Search — 427 Rated Races | Roadie Labs"
+def _race_count() -> int:
+    """Live race count from web/race-index.json (the hard-coded 427 went stale)."""
+    import json
+    try:
+        return len(json.loads((PROJECT_ROOT / "web" / "race-index.json").read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        return 0
+
+
+_COUNT = _race_count() or 400
+TITLE = f"Road Race Search — {_COUNT} Rated Races | Roadie Labs"
 META_DESCRIPTION = (
-    "Search 427 road races — gran fondos, sportives, hillclimbs — each scored "
+    f"Search {_COUNT} road races — gran fondos, sportives, hillclimbs — each scored "
     "on 14 base dimensions plus cultural impact. Filter by distance, climbing, region, month, and tier."
 )
 

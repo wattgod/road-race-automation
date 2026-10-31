@@ -100,6 +100,34 @@ def load_race(path: Path) -> dict:
     return data.get("race", data)
 
 
+def plan_page_excluded(rd: dict) -> bool:
+    """True when a race gets no /race/{slug}/training-plan/ page.
+
+    Catalog-excluded profiles (same rule as generate_index.py) have no race
+    page. Defunct, cancelled and source-blocked races have their plan commerce
+    switched off on the race page (generate_neo_brutalist.py), and this page
+    sells a plan, so it is skipped for them too.
+    """
+    flags = rd.get("catalog_flags") or {}
+    if flags.get("duplicate_of") or flags.get("discipline_mismatch"):
+        return True
+    if (rd.get("eligibility") or {}).get("status") in ("defunct", "cancelled"):
+        return True
+    return (rd.get("training_plan_clearance") or {}).get("status") == "source_blocked"
+
+
+def has_plan_page(slug: str) -> bool:
+    """True when main() emits a training-plan page for this slug."""
+    path = RACE_DATA_DIR / f"{slug}.json"
+    if not path.exists():
+        return False
+    try:
+        rd = load_race(path)
+    except (OSError, ValueError):
+        return False
+    return not plan_page_excluded(rd) and bool(load_pack(slug).get("demands"))
+
+
 def load_pack(slug: str) -> dict:
     p = RACE_PACKS_DIR / f"{slug}.json"
     if not p.exists():
@@ -669,10 +697,13 @@ def main():
     files = ([RACE_DATA_DIR / f"{args.slug}.json"] if args.slug
              else sorted(RACE_DATA_DIR.glob("*.json")))
 
-    done = skipped = 0
+    done = skipped = excluded = 0
     for f in files:
         rd = load_race(f)
         rd.setdefault("slug", f.stem)
+        if plan_page_excluded(rd):
+            excluded += 1
+            continue
         pack = load_pack(f.stem)
         if not pack.get("demands"):
             skipped += 1
@@ -681,7 +712,8 @@ def main():
         (OUTPUT_DIR / f"{f.stem}.html").write_text(html, encoding="utf-8")
         done += 1
 
-    print(f"Generated {done} training-plan pages ({skipped} skipped — no race pack)")
+    print(f"Generated {done} training-plan pages ({skipped} skipped — no race pack; "
+          f"{excluded} excluded — catalog-flagged, not running or source-blocked)")
 
 
 if __name__ == "__main__":

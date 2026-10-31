@@ -162,9 +162,37 @@ def load_race_photos(data_dir: Path) -> dict:
     return photos_by_slug
 
 
+# Live pages that are built outside this repo's generators (the guide cluster
+# and the season-plan offer) or by single-purpose generators that the sitemap
+# never knew about. Each was checked live (200, self-canonical) on 2026-10-31.
+EXTRA_STATIC_PAGES = [
+    ("/about/", "monthly", "0.6"),
+    ("/coaching/", "monthly", "0.7"),
+    ("/consulting/", "monthly", "0.6"),
+    ("/goals/", "monthly", "0.6"),
+    ("/season-plan/", "monthly", "0.7"),
+    ("/guide/", "monthly", "0.7"),
+]
+
+
+def load_guide_chapter_slugs(project_root: Path) -> list:
+    """Guide chapter slugs (/guide/{id}/) from guide/road-guide-content.json."""
+    path = project_root / "guide" / "road-guide-content.json"
+    try:
+        chapters = json.loads(path.read_text(encoding="utf-8")).get("chapters", [])
+    except (OSError, json.JSONDecodeError):
+        return []
+    return [c["id"] for c in chapters if c.get("id")]
+
+
 def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
-                     series_slugs: list = None) -> Path:
+                     series_slugs: list = None, project_root: Path = None) -> Path:
     today = date.today().isoformat()
+    # The vs/state/plan/tire loaders read wordpress/output under the project
+    # root. Deriving the root from output_path (as this used to) silently
+    # dropped all of those pages whenever --output-dir pointed elsewhere.
+    root = Path(project_root) if project_root else output_path.parent.parent
+    race_slugs = {r.get('slug') for r in race_index if r.get('slug')}
 
     urlset = Element('urlset')
     urlset.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
@@ -193,6 +221,8 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         ("/prep-kit/", "monthly", "0.7"),
         ("/training-plans/", "monthly", "0.8"),
         ("/insights/", "weekly", "0.8"),
+    ] + EXTRA_STATIC_PAGES + [
+        (f"/guide/{slug}/", "monthly", "0.6") for slug in load_guide_chapter_slugs(root)
     ]:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}{path}"
@@ -217,7 +247,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.8'
 
     # VS comparison pages
-    vs_slugs = load_vs_slugs(output_path.parent.parent)
+    vs_slugs = load_vs_slugs(root)
     for slug in vs_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/"
@@ -226,7 +256,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.6'
 
     # State/region hub pages
-    state_slugs = load_state_slugs(output_path.parent.parent)
+    state_slugs = load_state_slugs(root)
     for slug in state_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/"
@@ -235,7 +265,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.7'
 
     # Special pages (calendar, power rankings)
-    special_slugs = load_special_pages(output_path.parent.parent)
+    special_slugs = load_special_pages(root)
     for slug in special_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/"
@@ -244,7 +274,9 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.8'
 
     # Training-plan pages (northstar P2 — commercial-intent SEO)
-    plan_slugs = load_plan_page_slugs(output_path.parent.parent)
+    # Only races that have a race page (catalog-flagged profiles are excluded
+    # from the index and their race URL is a redirect stub).
+    plan_slugs = [s for s in load_plan_page_slugs(root) if not race_slugs or s in race_slugs]
     for slug in plan_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/training-plan/"
@@ -253,7 +285,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.8'
 
     # Tire guide pages
-    tire_slugs = load_tire_slugs(output_path.parent.parent)
+    tire_slugs = load_tire_slugs(root)
     for slug in tire_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/tires/"
@@ -262,7 +294,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.6'
 
     # Per-tire review pages
-    tire_page_slugs = load_tire_page_slugs(output_path.parent.parent)
+    tire_page_slugs = load_tire_page_slugs(root)
     for slug in tire_page_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/tire/{slug}/"
@@ -271,7 +303,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.6'
 
     # Tire-vs-tire comparison pages
-    tire_vs_slugs = load_tire_vs_slugs(output_path.parent.parent)
+    tire_vs_slugs = load_tire_vs_slugs(root)
     for slug in tire_vs_slugs:
         url = SubElement(urlset, 'url')
         SubElement(url, 'loc').text = f"{SITE_BASE_URL}/tire/{slug}/"
@@ -280,7 +312,7 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'priority').text = '0.5'
 
     # Course pages
-    course_slugs = load_course_slugs(output_path.parent.parent)
+    course_slugs = load_course_slugs(root)
     if course_slugs:
         # Course index page
         url = SubElement(urlset, 'url')
@@ -338,6 +370,18 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
                 SubElement(img_el, 'image:caption').text = alt
             race_name = race.get("name", slug.replace("-", " ").title())
             SubElement(img_el, 'image:title').text = f"{race_name} race photo"
+
+    # Prep kits: --sync-pages refuses to ship a race page without its kit, so
+    # every race page has a live /race/{slug}/prep-kit/ page.
+    for race in race_index:
+        slug = race.get('slug', '')
+        if not slug:
+            continue
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/prep-kit/"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = 'monthly'
+        SubElement(url, 'priority').text = '0.5'
 
     raw_xml = tostring(urlset, encoding='unicode')
     pretty = parseString(raw_xml).toprettyxml(indent='  ', encoding='UTF-8')
@@ -418,7 +462,8 @@ def main():
         data_dir = data_dir.resolve()
 
     series_slugs = load_series_slugs(project_root)
-    generate_sitemap(race_index, output_path, data_dir, series_slugs=series_slugs)
+    generate_sitemap(race_index, output_path, data_dir, series_slugs=series_slugs,
+                     project_root=project_root)
     vs_slugs = load_vs_slugs(project_root)
     state_slugs = load_state_slugs(project_root)
     special_slugs = load_special_pages(project_root)
@@ -429,9 +474,7 @@ def main():
     course_url_count = (1 + len(course_slugs)) if course_slugs else 0
     plan_slugs = load_plan_page_slugs(project_root)
     courses_landing_count = 1
-    total_urls = (6 + courses_landing_count + len(series_slugs) + len(vs_slugs) + len(state_slugs)
-                  + len(special_slugs) + len(tire_slugs) + len(plan_slugs)
-                  + len(tire_page_slugs) + len(tire_vs_slugs) + course_url_count + len(race_index))
+    total_urls = output_path.read_text(encoding='utf-8').count('<url>')
     print(f"Generated sitemap: {output_path} ({total_urls} URLs)")
     if series_slugs:
         print(f"  Including {len(series_slugs)} series hub pages")

@@ -125,11 +125,15 @@ def select_pairs(races: list) -> list:
 
     # Sort by combined score (highest-value pairs first) and cap
     race_map = {r["slug"]: r for r in races}
+    # Ties on combined score are broken by slug: `pairs` is a set, and without
+    # the tie-break the cap picked a different 150 on every run, so race
+    # pages could link vs pages that a separate run never generated.
     pair_list = sorted(
         pairs,
-        key=lambda p: -(
-            race_map.get(p[0], {}).get("overall_score", 0)
-            + race_map.get(p[1], {}).get("overall_score", 0)
+        key=lambda p: (
+            -(race_map.get(p[0], {}).get("overall_score", 0)
+              + race_map.get(p[1], {}).get("overall_score", 0)),
+            p,
         ),
     )
     return pair_list[:MAX_PAIRS]

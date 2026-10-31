@@ -404,7 +404,7 @@ class TestSectionBuilders:
         # Dead URLs removed in the Jul 2026 whoops audit — restore only
         # after the target pages actually deploy.
         assert "/articles/" not in html
-        assert "/guide/" not in html
+        assert "/guide/" in html
 
     def test_footer_has_copyright(self):
         html = build_footer()

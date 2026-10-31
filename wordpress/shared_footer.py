@@ -28,19 +28,26 @@ def get_mega_footer_html() -> str:
         <a href="{SITE_BASE_URL}/road-races/">All Road Races</a>
         <a href="{SITE_BASE_URL}/race/methodology/">How We Rate</a>
         <a href="{SITE_BASE_URL}/race/calendar/2026/">2026 Calendar</a>
+        <a href="{SITE_BASE_URL}/race/power-rankings-2026/">Power Rankings</a>
+        <a href="{SITE_BASE_URL}/race/quiz/">Race Finder Quiz</a>
+        <a href="{SITE_BASE_URL}/insights/">State of Road Racing</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">
       <h4 class="rl-mega-footer-heading">PRODUCTS</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/training-plans/">Custom Training Plans</a>
+        <a href="{SITE_BASE_URL}/season-plan/">Season Plan</a>
+        <a href="{SITE_BASE_URL}/guide/">Free Road Guide</a>
         <a href="{SITE_BASE_URL}/courses/">Courses</a>
+        <a href="{SITE_BASE_URL}/prep-kit/">Free Prep Kits</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">
       <h4 class="rl-mega-footer-heading">SERVICES</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/coaching/">Coaching</a>
+        <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">

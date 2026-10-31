@@ -53,11 +53,11 @@ class TestHeaderHTML:
             assert label in html, f"missing dropdown link {label}"
 
 
-    def test_four_sub_links(self):
+    def test_six_sub_links(self):
         html = get_site_header_html()
         dropdowns = re.findall(
             r'class="rl-site-header-dropdown">(.*?)</div>', html, re.DOTALL)
-        assert sum(d.count("<a ") for d in dropdowns) == 4
+        assert sum(d.count("<a ") for d in dropdowns) == 6
 
 
     def test_logo_present(self):
@@ -119,7 +119,7 @@ class TestHeaderHTML:
         assert "/training-plans/" in html
         assert "/coaching/" in html
         # Dead URLs must NOT be in the nav (whoops audit, Jul 2026)
-        for dead in ("/guide/", "/consulting/", "/articles/",
+        for dead in ("/consulting/", "/articles/",
                      "/insights/", "/fueling-methodology/"):
             assert dead not in html, f"nav links dead URL {dead}"
         assert "/about/" in html
