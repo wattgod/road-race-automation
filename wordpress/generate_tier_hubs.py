@@ -28,10 +28,10 @@ TIER_META = {
     1: {
         "name": "Elite",
         "slug": "tier-1",
-        "title": "The 25 Best Road Races in the World | Roadie Labs",
+        "title": "The {count} Best Road Races in the World | Roadie Labs",
         "h1": "Tier 1 — Elite",
-        "description": "The definitive road events &mdash; the deepest fields and the "
-                       "courses that anchor the calendar. These 25 races define the sport.",
+        "description": "The definitive road events — the deepest fields and the "
+                       "courses that anchor the calendar. These {count} races define the sport.",
         "intro": (
             "These are the races that define road cycling. Every Tier 1 event has earned "
             "its place through a combination of deep competition, demanding terrain, "
@@ -42,7 +42,7 @@ TIER_META = {
     2: {
         "name": "Contender",
         "slug": "tier-2",
-        "title": "73 Must-Do Road Races | Contender Tier | Roadie Labs",
+        "title": "{count} Must-Do Road Races | Contender Tier | Roadie Labs",
         "h1": "Tier 2 — The Contenders",
         "description": "Established road races with strong reputations and competitive fields. "
                        "The next tier of must-do events for serious road riders.",
@@ -90,7 +90,10 @@ def esc(text) -> str:
 
 def build_hub_page(tier: int, races: list, all_races: list) -> str:
     """Generate a full tier hub page."""
-    meta = TIER_META[tier]
+    # Titles and descriptions carry a {count} placeholder so the race count
+    # can't go stale (the hard-coded "25" and "73" had drifted from the index).
+    meta = {k: (v.replace("{count}", str(len(races))) if isinstance(v, str) else v)
+            for k, v in TIER_META[tier].items()}
     tier_color = COLORS.get(f"tier_{tier}", COLORS["primary_brown"])
 
     # Sort races by score descending

@@ -1826,6 +1826,20 @@ def build_sitemap_index(today: str, has_blog_sitemap: bool) -> str:
 """
 
 
+def sitemap_missing_race_pages(sitemap_xml: str, race_index: list) -> list:
+    """Race slugs from the index whose /race/{slug}/ URL the sitemap lacks.
+
+    The live race-sitemap.xml deployed 2026-10-14 listed training-plan pages
+    but not one race page. This check stops a sitemap like that from shipping.
+    """
+    import re as _re
+    locs = set(_re.findall(r"<loc>([^<]+)</loc>", sitemap_xml))
+    return [
+        r["slug"] for r in race_index
+        if r.get("slug") and f"https://roadielabs.com/race/{r['slug']}/" not in locs
+    ]
+
+
 def sync_sitemap():
     """Deploy race-sitemap.xml and a sitemap index to the server.
 
@@ -1844,6 +1858,16 @@ def sync_sitemap():
     if not race_sitemap.exists():
         print(f"✗ Race sitemap not found: {race_sitemap}")
         print("  Run: python scripts/generate_sitemap.py")
+        return False
+    try:
+        race_index = json.loads((project_root / "web" / "race-index.json").read_text())
+    except (OSError, ValueError):
+        race_index = []
+    missing = sitemap_missing_race_pages(race_sitemap.read_text(), race_index)
+    if missing:
+        print(f"✗ Sitemap gate: {len(missing)} race page(s) missing from {race_sitemap} "
+              f"(e.g. {', '.join(missing[:5])}) — nothing pushed.")
+        print("  Regenerate: python scripts/generate_sitemap.py --data-dir race-data")
         return False
 
     remote_root = f"{REMOTE_BASE}"
@@ -3541,6 +3565,9 @@ if __name__ == "__main__":
     if args.deploy_content:
         args.sync_pages = True
         args.sync_index = True
+        # Content deploys add and change pages, so the sitemap ships with them
+        # (it had sat stale because only --deploy-all pushed it).
+        args.sync_sitemap = True
         args.sync_widget = True
         args.sync_llms_txt = True
         args.sync_markdown = True

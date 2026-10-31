@@ -50,9 +50,9 @@ class TestMegaFooterHTML:
 
     def test_no_dead_link_targets(self):
         # These URLs 404/403 on the live static site (Jul 2026 whoops audit).
-        # Restore a link ONLY after its page actually deploys.
-        for dead in ("/guide/", "/consulting/", "/articles/",
-                     "/insights/", "/fueling-methodology/"):
+        # Restore a link ONLY after its page actually deploys. /consulting/
+        # and /insights/ were checked live (200) on 2026-10-31 and are linked.
+        for dead in ("/guide/", "/articles/", "/fueling-methodology/"):
             assert dead not in self.html, f"footer links dead URL {dead}"
 
     def test_calendar_link_present(self):

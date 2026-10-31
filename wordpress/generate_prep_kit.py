@@ -2050,6 +2050,10 @@ def build_pk_footer_cta(rd: dict) -> str:
     """Build footer CTA linking to training plans and newsletter."""
     name = esc(rd["name"])
     slug = esc(rd["slug"])
+    # The training-plan page had no inbound link anywhere on the site.
+    from generate_training_plan_pages import has_plan_page
+    guide_link = (f' &middot; <a href="/race/{slug}/training-plan/">{name} training guide</a>'
+                  if has_plan_page(rd["slug"]) else '')
     return f'''<footer class="rl-pk-footer">
     <div class="rl-pk-footer-inner">
       <h3>Ready to Race {name}?</h3>
@@ -2061,7 +2065,7 @@ def build_pk_footer_cta(rd: dict) -> str:
         <a href="{esc(COACHING_URL)}" class="rl-pk-btn rl-pk-btn--secondary">1:1 COACHING</a>
       </div>
       <p class="rl-pk-footer-back">
-        <a href="/race/{slug}/">Back to {name} Race Profile</a>
+        <a href="/race/{slug}/">Back to {name} Race Profile</a>{guide_link}
       </p>
     </div>
   </footer>'''
@@ -2977,6 +2981,12 @@ def main():
                     full_count += 1
                 else:
                     generic_count += 1
+            except SystemExit as e:
+                # load_race_data() refuses catalog-flagged profiles with
+                # SystemExit; skip them instead of aborting the whole run
+                # (it used to stop at rift-valley-odyssey, so kits for every
+                # slug after it alphabetically were never regenerated).
+                print(f"  SKIP  {slug}: {e}")
             except Exception as e:
                 print(f"  FAIL  {slug}: {e}")
                 fail_count += 1
