@@ -89,23 +89,11 @@ def build_nav() -> str:
   </div>'''
 
 
-# SANCTIONED EXCEPTION to the anti-defensive-messaging rule (see
-# .claude/skills/brand-and-trust/SKILL.md, "Never defensive messaging" —
-# phrases naming what something ISN'T are normally banned because they
-# plant doubt nobody had). The sub-line below ("Not an AI, not a
-# dashboard, not a coach who reads you like a spreadsheet") is an
-# explicit, owner-approved exception. Matti sanctioned this specific line
-# 2026-07-18 as an aspirational "corner" frame — it names what you're
-# getting, not a defensive rebuttal to an objection nobody raised — the
-# same precedent class this skill file already reserves for that
-# distinction. This is the /coaching/ hero and is itself the
-# precedent-setting instance (no prior race-page coaching-footnote
-# precedent for this pattern was found in this repo).
 def build_hero() -> str:
     return f'''<section class="rl-coach-band rl-coach-hero" id="hero">
     <div class="rl-coach-inner">
       <h1>You could be better than you think. That is not encouragement &mdash; it&#39;s an observation about people who train alone.</h1>
-      <p class="rl-coach-tagline">The fix is a human in your corner. Not an AI, not a dashboard, not a coach who reads you like a spreadsheet. The terms are below.</p>
+      <p class="rl-coach-tagline">The fix is a human in your corner. The terms are below.</p>
       <a href="{QUESTIONNAIRE_URL}" class="rl-coach-hero-cta" data-cta="hero_apply">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''
