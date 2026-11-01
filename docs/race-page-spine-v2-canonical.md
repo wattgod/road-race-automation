@@ -37,7 +37,7 @@ The top custom-plan CTA is exactly:
 The coaching footnote is exactly:
 
 - `Really want to see what you can do?`
-- `Hire a coach. You’ll never become what you could be alone. (And no, AI isn’t a person.)`
+- `Hire a coach. You’ll never become what you could be alone.`
 - `GET ME IN YOUR CORNER →`
 
 The Deep Dive retains its original accordion/mobile behavior and useful road-specific
