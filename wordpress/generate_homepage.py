@@ -1014,7 +1014,7 @@ def build_sidebar(stats: dict, race_index: list, upcoming: list) -> str:
     cta_html = f'''<div class="rl-hp-sidebar-cta">
       <h3>A plan for the race on your calendar</h3>
       <p>Your target race has specific terrain, elevation, and weather. Your plan should too.</p>
-      <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-sidebar-cta-btn" data-ga="sidebar_cta_click">Get Your Plan &rarr;</a>
+      <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-sidebar-cta-btn" data-ga="sidebar_cta_click">Preview Your Plan &rarr;</a>
     </div>'''
 
     return f'''{stats_html}
@@ -1041,7 +1041,7 @@ def build_how_it_works(stats: dict = None) -> str:
     steps = [
         ("01", "PICK YOUR RACE", f"{race_count} races, scored. Filter by what actually matters to you."),
         ("02", "READ THE REAL TAKE", "Every rating comes with an editorial opinion. We tell you if it&rsquo;s worth the flight, the entry fee, and the suffering."),
-        ("03", "SHOW UP READY", "You&rsquo;ve already paid for the entry fee. Don&rsquo;t waste it. Race-specific plans so you don&rsquo;t blow up at mile 60 like we did."),
+        ("03", "SHOW UP READY", "Prepare for the climbs, pace changes, and distance of the race you picked. Build a plan around your available training hours."),
     ]
     cells = ""
     for num, title, desc in steps:
@@ -1059,10 +1059,10 @@ def build_training_cta() -> str:
     return f'''<section class="rl-hp-training-cta-full" id="training" aria-label="Training call to action">
     <div class="rl-hp-cta-card">
       <div class="rl-hp-cta-left">
-        <h2>Train for the course, not just the distance</h2>
-        <p>Every generic plan treats your target event like a flat century. This isn&rsquo;t that. Training plans matched to your race&rsquo;s exact terrain, elevation profile, and typical conditions. Built around your schedule, your fitness, and your goal.</p>
+        <h2>A plan for the race on your calendar</h2>
+        <p>Prepare for your event&rsquo;s terrain, climbing, and conditions with training built around your schedule, fitness, and goal.</p>
         <p class="rl-hp-cta-price" data-ab="training_price">Custom-built for your target event &mdash; $15 a week.</p>
-        <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-cta-btn" data-ga="training_plan_click" data-ab="training_cta_btn">Get Your Plan &rarr;</a>
+        <a href="{esc(TRAINING_PLANS_URL)}#custom-plan-preview" class="rl-hp-cta-btn" data-ga="training_plan_click" data-ab="training_cta_btn">Preview Your Plan &rarr;</a>
       </div>
       <div class="rl-hp-cta-right" role="img" aria-label="Training plan preview"></div>
     </div>

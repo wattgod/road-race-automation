@@ -368,8 +368,8 @@ class TestSectionBuilders:
 
     def test_training_cta_has_content(self):
         html = build_training_cta()
-        assert "Train for the course" in html
-        assert "Get Your Plan" in html
+        assert "A plan for the race on your calendar" in html
+        assert "Preview Your Plan" in html
         assert "rl-hp-cta-card" in html
 
     def test_training_cta_links(self):
@@ -1322,10 +1322,11 @@ class TestEdgeCases:
         assert "on the calendar" in sidebar  # Section intro always present
 
     def test_training_cta_solution_state(self):
-        """Training CTA should contain Solution-State comparison language."""
+        """Training CTA names course preparation and a useful next action."""
         cta = build_training_cta()
-        assert "generic plan" in cta.lower(), \
-            "Training CTA should contrast against generic plans"
+        assert "terrain, climbing, and conditions" in cta
+        assert "#custom-plan-preview" in cta
+        assert "generic plan" not in cta.lower()
 
 
 class TestSultanicCopyGuard:
