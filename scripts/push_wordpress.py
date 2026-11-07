@@ -1679,6 +1679,42 @@ RewriteRule ^race/dreilaendergiro/(.*)$ /race/dreilander-giro/$1 [R=301,L]
 RewriteRule ^race/mount-washington-hillclimb/?$ /race/mt-washington-hillclimb/ [R=301,L]
 RewriteRule ^race/mount-washington-hillclimb/(.*)$ /race/mt-washington-hillclimb/$1 [R=301,L]
 
+# 2026-11-07 race-profile audit (wattgod/gravel-race-automation#547). Delete
+# each slug's physical /race/{slug}/ dir and /race/{slug}.md mirror on the
+# server first: SiteGround nginx serves existing files before these rules.
+#
+# gran-fondo-coimbra -> granfondo-leiria: the UCI moved the event to Leiria and
+# renamed it for 2026 (one event, one page). Subpaths preserved.
+RewriteRule ^race/gran-fondo-coimbra/?$ /race/granfondo-leiria/ [R=301,L]
+RewriteRule ^race/gran-fondo-coimbra/(.*)$ /race/granfondo-leiria/$1 [R=301,L]
+RewriteRule ^race/gran-fondo-coimbra\\.md$ /race/granfondo-leiria.md [R=301,L]
+
+# gfny-philippines: no edition since Iloilo, Sept 22 2019 (philippines.gfny.com
+# results list only 2019; absent from GFNY's race finder) -> Asia race list.
+RewriteRule ^race/gfny-philippines/?$ /road-races/?region=Asia [R=301,L]
+RewriteRule ^race/gfny-philippines/(.*)$ /road-races/?region=Asia [R=301,L]
+RewriteRule ^race/gfny-philippines\\.md$ /road-races/?region=Asia [R=301,L]
+
+# granfondo-alpe-adria: no event under this name; it was the Alpe-Adria Giro
+# (Villach), 2014-2016, and its festival site no longer resolves -> Western
+# Europe race list.
+RewriteRule ^race/granfondo-alpe-adria/?$ /road-races/?region=Western+Europe [R=301,L]
+RewriteRule ^race/granfondo-alpe-adria/(.*)$ /road-races/?region=Western+Europe [R=301,L]
+RewriteRule ^race/granfondo-alpe-adria\\.md$ /road-races/?region=Western+Europe [R=301,L]
+
+# the-majestics: the UCI gravel race The Majestics Gravel (Aigle to
+# Villars-sur-Ollon), not a road race. Gravel God covers it. Deploy only after
+# gravelgodcycling.com/race/the-majestics-gravel/ is live.
+RewriteRule ^race/the-majestics/?$ https://gravelgodcycling.com/race/the-majestics-gravel/ [R=301,L]
+RewriteRule ^race/the-majestics/(.*)$ https://gravelgodcycling.com/race/the-majestics-gravel/ [R=301,L]
+RewriteRule ^race/the-majestics\\.md$ https://gravelgodcycling.com/race/the-majestics-gravel.md [R=301,L]
+
+# nordsjorittet: ridden on CX/gravel, MTB, hybrid and e-bikes per the organizer
+# (nordsjorittet.no), not a road race. Gravel God covers it.
+RewriteRule ^race/nordsjorittet/?$ https://gravelgodcycling.com/race/nordsjorittet/ [R=301,L]
+RewriteRule ^race/nordsjorittet/(.*)$ https://gravelgodcycling.com/race/nordsjorittet/ [R=301,L]
+RewriteRule ^race/nordsjorittet\\.md$ https://gravelgodcycling.com/race/nordsjorittet.md [R=301,L]
+
 # WP race guide pages → static race pages (duplicate content fix)
 RewriteRule ^barry-roubaix-race-guide/?$ /race/barry-roubaix/ [R=301,L]
 RewriteRule ^belgian-waffle-ride-race-guide/?$ /race/bwr-california/ [R=301,L]
