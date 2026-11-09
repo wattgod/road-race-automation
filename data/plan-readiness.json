@@ -2105,26 +2105,6 @@
       "race_date": "2026-10-11",
       "blockers": []
     },
-    "gfny-philippines": {
-      "slug": "gfny-philippines",
-      "tier": 2,
-      "score": 67,
-      "checks": {
-        "validator_clean": true,
-        "editorial": true,
-        "course_character": true,
-        "future_date": false,
-        "active_registerable": false
-      },
-      "eligibility_status": "defunct",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date",
-        "eligibility: defunct"
-      ]
-    },
     "gfny-pittsburgh": {
       "slug": "gfny-pittsburgh",
       "tier": 3,
@@ -2529,26 +2509,6 @@
       "runway_weeks": 7,
       "race_date": "2026-10-04",
       "blockers": []
-    },
-    "gran-fondo-coimbra": {
-      "slug": "gran-fondo-coimbra",
-      "tier": 2,
-      "score": 67,
-      "checks": {
-        "validator_clean": true,
-        "editorial": true,
-        "course_character": true,
-        "future_date": false,
-        "active_registerable": false
-      },
-      "eligibility_status": "defunct",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date",
-        "eligibility: defunct"
-      ]
     },
     "gran-fondo-collado-del-condor": {
       "slug": "gran-fondo-collado-del-condor",
@@ -3097,26 +3057,6 @@
       "race_date": "2026-09-19",
       "blockers": []
     },
-    "granfondo-alpe-adria": {
-      "slug": "granfondo-alpe-adria",
-      "tier": 2,
-      "score": 66,
-      "checks": {
-        "validator_clean": true,
-        "editorial": true,
-        "course_character": true,
-        "future_date": false,
-        "active_registerable": false
-      },
-      "eligibility_status": "defunct",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date",
-        "eligibility: defunct"
-      ]
-    },
     "granfondo-alpi-del-mare": {
       "slug": "granfondo-alpi-del-mare",
       "tier": 2,
@@ -3437,17 +3377,14 @@
         "validator_clean": true,
         "editorial": true,
         "course_character": true,
-        "future_date": false,
-        "active_registerable": false
+        "future_date": true,
+        "active_registerable": true
       },
-      "eligibility_status": "cancelled",
-      "ready": false,
-      "runway_weeks": null,
-      "race_date": null,
-      "blockers": [
-        "no parsed future date",
-        "eligibility: cancelled"
-      ]
+      "eligibility_status": "active",
+      "ready": true,
+      "runway_weeks": 27,
+      "race_date": "2027-02-27",
+      "blockers": []
     },
     "granfondo-livigno-ale": {
       "slug": "granfondo-livigno-ale",
@@ -5534,23 +5471,6 @@
         "plan clearance: The organizer publishes only a 2027 event window; the exact grand-depart date, final GPX, and 2027 rider manual are not available."
       ],
       "plan_clearance_status": "source_blocked"
-    },
-    "nordsjorittet": {
-      "slug": "nordsjorittet",
-      "tier": 2,
-      "score": 70,
-      "checks": {
-        "validator_clean": true,
-        "editorial": true,
-        "course_character": true,
-        "future_date": true,
-        "active_registerable": true
-      },
-      "eligibility_status": "active",
-      "ready": true,
-      "runway_weeks": 42,
-      "race_date": "2027-06-12",
-      "blockers": []
     },
     "nove-colli": {
       "slug": "nove-colli",
@@ -7917,7 +7837,6 @@
     "tartu-rattaralli",
     "mallorca-312",
     "iron-horse-bicycle-classic",
-    "nordsjorittet",
     "highlands-gran-fondo",
     "fred-whitton-challenge",
     "engadin-radmarathon",
@@ -7973,6 +7892,7 @@
     "epic-gran-canaria",
     "gran-fondo-panama",
     "gfny-miami",
+    "granfondo-leiria",
     "viana-granfondo",
     "gran-fondo-mendoza",
     "cadel-evans-great-ocean-road-ride",
@@ -8175,9 +8095,7 @@
     "cingles-du-mont-ventoux",
     "death-ride",
     "gfny-belitung",
-    "gfny-philippines",
     "gfny-villard-de-lans",
-    "gran-fondo-coimbra",
     "gran-fondo-marco-pantani",
     "gran-fondo-pirineus",
     "granfondo-laigueglia",
@@ -8193,7 +8111,6 @@
     "copper-triangle",
     "gfny-aguascalientes",
     "gfny-uppsala",
-    "granfondo-alpe-adria",
     "letape-marmaris",
     "majka-gran-fondo",
     "redlands-bicycle-classic",
@@ -8253,7 +8170,6 @@
     "eroica-cuba",
     "fyn-rundt",
     "granfondo-campagnolo-roma",
-    "granfondo-leiria",
     "muju-gran-fondo",
     "neusiedlersee-radmarathon",
     "stellenbosch-cycle-tour",
@@ -8331,7 +8247,6 @@
     "tartu-rattaralli",
     "mallorca-312",
     "iron-horse-bicycle-classic",
-    "nordsjorittet",
     "highlands-gran-fondo",
     "fred-whitton-challenge",
     "engadin-radmarathon",
@@ -8411,15 +8326,15 @@
     "gran-fondo-argentina"
   ],
   "summary": {
-    "total": 426,
+    "total": 422,
     "ready": 178,
-    "content_present": 414,
-    "validator_clean": 426,
-    "pilot_candidates": 105,
+    "content_present": 410,
+    "validator_clean": 422,
+    "pilot_candidates": 104,
     "by_tier_ready": {
       "1": 14,
-      "2": 136,
-      "3": 28,
+      "2": 135,
+      "3": 29,
       "4": 0
     }
   }

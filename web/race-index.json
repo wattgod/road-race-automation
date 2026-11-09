@@ -6424,61 +6424,6 @@
     "route_options": []
   },
   {
-    "name": "Nordsjørittet",
-    "slug": "nordsjorittet",
-    "location": "Egersund to Sandnes, Norway",
-    "country": "Norway",
-    "region": "Northern Europe",
-    "month": "June",
-    "distance_km": 88.0,
-    "distance_mi": 54.7,
-    "elevation_m": null,
-    "elevation_ft": null,
-    "tier": 2,
-    "overall_score": 70,
-    "scores": {
-      "distance": 3,
-      "climbing": 3,
-      "descent_technicality": 3,
-      "road_surface": 3,
-      "climate_risk": 3,
-      "altitude": 2,
-      "logistics": 4,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 4,
-      "field_depth": 3,
-      "value": 5,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/nordsjorittet/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Full (timed, flat-bar)",
-        "distance_km": 88.0
-      },
-      {
-        "name": "Full (timed CX/gravel, drop-bar)",
-        "distance_km": 88.0
-      },
-      {
-        "name": "Full (untimed, any bike incl. e-bike)",
-        "distance_km": 88.0
-      },
-      {
-        "name": "Half",
-        "distance_km": 43.0
-      }
-    ]
-  },
-  {
     "name": "Race Across Germany North–South",
     "slug": "race-across-germany",
     "location": "Flensburg to Garmisch-Partenkirchen, Germany",
@@ -8290,55 +8235,6 @@
     ]
   },
   {
-    "name": "GFNY Philippines",
-    "slug": "gfny-philippines",
-    "location": "Iloilo City, Philippines (last held; earlier 2019 edition was in Bohol)",
-    "country": "Philippines",
-    "region": "Other",
-    "month": "September",
-    "distance_km": 133.0,
-    "distance_mi": 82.6,
-    "elevation_m": 650,
-    "elevation_ft": 2133.0,
-    "tier": 2,
-    "overall_score": 67,
-    "scores": {
-      "distance": 4,
-      "climbing": 3,
-      "descent_technicality": 3,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/gfny-philippines/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": [
-      {
-        "name": "Long course (competitive, 2019 Iloilo)",
-        "distance_km": 133,
-        "elevation_m": 650
-      },
-      {
-        "name": "Medium course (timed, non-competitive, 2019 Iloilo)",
-        "distance_km": 64,
-        "elevation_m": 220
-      }
-    ]
-  },
-  {
     "name": "GFNY Villard de Lans",
     "slug": "gfny-villard-de-lans",
     "location": "Villard-de-Lans, Isere, France",
@@ -8378,44 +8274,6 @@
       "163.4 km / 3,973m (long, competitive)",
       "69.3 km / 1,782m (medium, noncompetitive)"
     ]
-  },
-  {
-    "name": "Gran Fondo Coimbra Region",
-    "slug": "gran-fondo-coimbra",
-    "location": "Coimbra, Portugal",
-    "country": "Portugal",
-    "region": "Southern Europe",
-    "month": "March",
-    "distance_km": 148.0,
-    "distance_mi": 92.0,
-    "elevation_m": 1548,
-    "elevation_ft": 5079.0,
-    "tier": 2,
-    "overall_score": 67,
-    "scores": {
-      "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 2,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 4,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 4,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/gran-fondo-coimbra/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
   },
   {
     "name": "Gran Fondo Hincapie",
@@ -9620,44 +9478,6 @@
         "elevation_ft": 5394
       }
     ]
-  },
-  {
-    "name": "Alpe-Adria Giro",
-    "slug": "granfondo-alpe-adria",
-    "location": "Villach, Carinthia, Austria (route through Italy and Slovenia)",
-    "country": "Austria",
-    "region": "Western Europe",
-    "month": "June",
-    "distance_km": 165.0,
-    "distance_mi": 102.5,
-    "elevation_m": 2280,
-    "elevation_ft": 7480.0,
-    "tier": 2,
-    "overall_score": 66,
-    "scores": {
-      "distance": 4,
-      "climbing": 4,
-      "descent_technicality": 2,
-      "road_surface": 1,
-      "climate_risk": 4,
-      "altitude": 3,
-      "logistics": 3,
-      "prestige": 3,
-      "organization": 3,
-      "scenic_experience": 4,
-      "community_culture": 3,
-      "field_depth": 3,
-      "value": 4,
-      "expenses": 3,
-      "cultural_impact": 2
-    },
-    "tagline": "",
-    "has_profile": true,
-    "profile_url": "/race/granfondo-alpe-adria/",
-    "discipline": "gran_fondo",
-    "lat": null,
-    "lng": null,
-    "route_options": []
   },
   {
     "name": "L'Étape Marmaris by Tour de France",
@@ -15050,7 +14870,7 @@
     "location": "Pombal, Portugal",
     "country": "Portugal",
     "region": "Southern Europe",
-    "month": "",
+    "month": "February",
     "distance_km": 146.0,
     "distance_mi": 90.7,
     "elevation_m": 1478,
@@ -15081,9 +14901,9 @@
     "lat": null,
     "lng": null,
     "route_options": [
-      "146 km granfondo (cancelled-2026 plan, unconfirmed for 2027)",
-      "93 km mediofondo (cancelled-2026 plan, unconfirmed for 2027)",
-      "20.5 km time trial, Praia do Pedrogao (cancelled-2026 plan, unconfirmed for 2027)"
+      "146 km granfondo, 1,478 m (Sunday, Pombal)",
+      "93 km mediofondo, 1,000 m (Sunday, Pombal)",
+      "20.5 km individual time trial, 98 m (Saturday, Praia do Pedrógão)"
     ]
   },
   {

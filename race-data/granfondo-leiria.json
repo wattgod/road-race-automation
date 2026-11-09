@@ -12,8 +12,8 @@
       "location": "Pombal, Portugal",
       "location_badge": "Pombal, Portugal",
       "country": "Portugal",
-      "date": "2027: Spring TBD (2026 debut cancelled/postponed)",
-      "date_specific": "2027: Spring TBD (2026 debut cancelled/postponed)",
+      "date": "2027: February 27-28",
+      "date_specific": "2027: February 27-28",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -22,11 +22,15 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": ["146 km granfondo (cancelled-2026 plan, unconfirmed for 2027)", "93 km mediofondo (cancelled-2026 plan, unconfirmed for 2027)", "20.5 km time trial, Praia do Pedrogao (cancelled-2026 plan, unconfirmed for 2027)"]
+      "route_options": [
+        "146 km granfondo, 1,478 m (Sunday, Pombal)",
+        "93 km mediofondo, 1,000 m (Sunday, Pombal)",
+        "20.5 km individual time trial, 98 m (Saturday, Praia do Pedrógão)"
+      ]
     },
     "climate": {
       "primary": "Temperate",
-      "description": "Central Portugal's coastal-influenced Leiria region; specific seasonal conditions depend on the eventual 2027 date, not yet announced.",
+      "description": "Central Portugal's coastal-influenced Leiria region; the 2027 edition runs at the end of February.",
       "challenges": []
     },
     "terrain": {
@@ -70,45 +74,43 @@
       "_needs_enrichment": true
     },
     "course_description": {
-      "character": "IMPORTANT — no edition of this event has actually taken place. Granfondo Leiria Region – Sicó Lands is the UCI Gran Fondo World Series' new name and host territory for the event previously run as Granfondo Coimbra Region; the announced 2026 debut (a two-day format: a flat 20.5 km time trial at Praia do Pedrógão on the Saturday, then a 146 km/1,478 m granfondo and a shorter 93 km/1,000 m mediofondo starting and finishing in Pombal on the Sunday, heading into the Serra de Sicó limestone hills) was cancelled outright and postponed to spring 2027 after Storm Kristin caused widespread regional damage. The figures above are the organizer's officially announced 2026 course plan, retained on their cancellation notice — they have not been reconfirmed for the eventual 2027 edition, and route/distance specifics could change.",
-      "signature_challenge": "Planned but unrun as of this writing: the cancelled 2026 course plan routed the granfondo into the Serra de Sicó limestone hills toward the region's published 1,478 m elevation total — no confirmed source details exact climb geography or how gain was distributed along the route.",
+      "character": "The first edition under the Leiria name is set for February 27-28, 2027. Granfondo Leiria Region – Sicó Lands is the UCI Gran Fondo World Series' new name and host territory for the event run as Granfondo Coimbra Region from October 2021 to March 2025. The organizer's format: a flat 20.5 km/98 m individual time trial at Praia do Pedrógão on Saturday, February 27, then on Sunday a 146 km/1,478 m granfondo and a 93 km/1,000 m mediofondo starting and finishing in Pombal, heading into the Serra de Sicó limestone hills. The same course was planned for March 2026 and cancelled after Storm Kristin, so no race has been run on it yet.",
+      "signature_challenge": "The granfondo heads into the Serra de Sicó hills for its 1,478 m of climbing; no published source details the climb geography or where the gain falls along the route.",
       "suffering_zones": []
     },
     "logistics": {
       "airport": "",
-      "lodging_strategy": "Pombal and Leiria both have lodging options; confirm against the eventual 2027 date before booking, since no 2026 edition ran.",
-      "transport": "Planned (but cancelled) 2026 format was a two-day UCI qualifier: time trial at Praia do Pedrógão, granfondo/mediofondo in Pombal. Whether this format carries over to the 2027 edition is unconfirmed.",
+      "lodging_strategy": "Pombal and Leiria both have lodging. The time trial (Praia do Pedrógão) and the granfondo (Pombal) start in different places, so pick a base that works for both days.",
+      "transport": "Two-day UCI qualifier: individual time trial at Praia do Pedrógão on Saturday, February 27, granfondo and mediofondo from Pombal on Sunday, February 28.",
       "food": "",
-      "official_site": "https://ucigranfondoworldseries.com/en/granfondo-leiria-region/"
+      "official_site": "https://cabreirasolutions.com/evento/granfondo-leiria-region/"
     },
     "history": {
-      "founded": 2026,
-      "origin_story": "This is a new host-region brand (Pombal/Leiria), not a new event: the UCI officially relocated and rebranded Granfondo Coimbra Region (running since 2021) to Leiria for 2026, calling it 'the new name for the successful Granfondo Coimbra Region.' No Leiria-branded edition has actually been held yet — the planned 2026 debut was cancelled and postponed to spring 2027 due to storm damage. If founded is meant to track the underlying event lineage rather than the current brand, the real founding year is 2021 (see gran-fondo-coimbra.json).",
+      "founded": 2021,
+      "origin_story": "The UCI called the October 2021 race the 'very first UCI Granfondo Coimbra Region'; it ran in Coimbra through March 2025 as a Portuguese qualifier on the UCI Gran Fondo World Series calendar. In January 2026 the UCI announced the move to the Leiria region under a new name, 'the new name for the successful Granfondo Coimbra Region', with the same organizer, Cabreira Solutions. The planned March 28-29, 2026 debut was cancelled after Storm Kristin damaged the region, and the organizer has set the first Leiria edition for February 27-28, 2027.",
       "notable_moments": [],
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "Real UCI Lineage, Zero Editions Actually Held",
-      "summary": "Granfondo Leiria Region – Sicó Lands is announced as a UCI Gran Fondo World Series qualifier, successor to Granfondo Coimbra Region — but no edition of it has ever actually run. The UCI relocated and rebranded Coimbra (which ran five editions, 2021-2025) to Leiria/Pombal for 2026, with the same organizer, Cabreira Solutions, carrying it forward. Before it could debut, Storm Kristin caused widespread damage across the Leiria region — power outages, housing damage, closed hospitality businesses — and the organizing committee cancelled the planned March 28-29, 2026 event outright, postponing it to spring 2027 (reported by the UCI series site). As of this writing there is no confirmed 2027 date; a third-party calendar's March 2027 listing is explicitly marked unconfirmed. Treat this as an unproven successor to a real predecessor, not as an active race you can currently register for.",
+      "verdict": "Real UCI Lineage, Leiria Debut Still to Come",
+      "summary": "Granfondo Leiria Region – Sicó Lands is the UCI Gran Fondo World Series qualifier that ran as Granfondo Coimbra Region from 2021 to 2025. The UCI moved and renamed it for 2026, with the same organizer, Cabreira Solutions, carrying it forward. Before it could debut, Storm Kristin caused widespread damage across the Leiria region and the organizing committee cancelled the planned March 28-29, 2026 event, postponing it to 2027. The organizer now lists February 27-28, 2027, with registration open. The lineage is real; the Leiria course has never been raced.",
       "strengths": [
-        "Real UCI Gran Fondo World Series qualifier status, inherited directly from the Granfondo Coimbra Region lineage (five editions, 2021-2025)",
+        "Real UCI Gran Fondo World Series qualifier status, inherited directly from the Granfondo Coimbra Region lineage (October 2021 to March 2025)",
         "Same organizer (Cabreira Solutions) carrying continuity forward rather than starting from nothing",
         "Multi-event format planned: a flat time trial plus granfondo/mediofondo road races into the Serra de Sicó limestone hills"
       ],
       "weaknesses": [
-        "Zero editions actually held under the Leiria name — the entire course and format picture above is a cancelled organizer plan, not race-day fact; field_size is null because no field has ever assembled",
+        "No edition has been held under the Leiria name yet. The course and format are the organizer's published plan, not race-day fact, and field_size is null because no field has assembled",
         "The planned 2026 debut was cancelled outright due to Storm Kristin damage, not merely rescheduled within the year",
-        "No confirmed 2027 date as of this writing — only an unconfirmed third-party calendar listing exists",
-        "Course figures (146 km/1,478 m) could change before an actual 2027 edition runs; treat them as provisional",
-        "Re-scored 2026-07-24: the planned course is gentler than this profile previously rated it — 1,478m of climbing bands as 'Gentle,' not 'Hilly,' and the Serra de Sicó tops out at 559m, well short of true summit-pass territory. Combined with zero course-geometry evidence for descent technicality, the corrected score moved this profile from TIER 2 to TIER 3."
+        "Course figures (146 km/1,478 m) come from the organizer's plan and haven't been tested by a race"
       ],
       "bottom_line": "A legitimate UCI-series successor to a real predecessor race, but don't book travel around it yet — nothing has actually run under this name, and the next date isn't confirmed."
     },
     "final_verdict": {
       "score": "59/100",
-      "one_liner": "UCI qualifier with real lineage, but the 2026 debut was cancelled after storm damage and no confirmed date exists yet.",
-      "should_you_race": "Not yet — no edition has run. Watch for an official 2027 date from the UCI Gran Fondo World Series or Cabreira Solutions before planning around it.",
-      "alternatives": "For the same UCI-series lineage's real, held editions, see gran-fondo-coimbra.json (2021-2025, now discontinued). For an active Portuguese road gran fondo, see douro-gran-fondo.json (Peso da Régua, Douro Valley)."
+      "one_liner": "UCI qualifier with a Coimbra lineage back to 2021; the first Leiria edition is set for February 27-28, 2027 after storm damage cancelled 2026.",
+      "should_you_race": "If you want an early-season UCI Gran Fondo World Series qualifier, yes: registration for February 27-28, 2027 is open on the organizer's site. Go in knowing the Leiria course has never been raced, so the published 146 km/1,478 m plan is all there is to judge it on.",
+      "alternatives": "For another Portuguese road gran fondo, see the Love Tiles Douro Granfondo (Peso da Régua, Douro Valley)."
     },
     "citations": [
       {
@@ -122,6 +124,16 @@
         "label": "UCI — Official Relocation Announcement, Jan 15 2026"
       },
       {
+        "url": "https://ucigranfondoworldseries.com/en/granfondo-coimbra-region-a-very-successful-newcomer-in-the-series/",
+        "category": "official",
+        "label": "UCI — Inaugural October 2021 Coimbra Edition Report"
+      },
+      {
+        "url": "https://ucigranfondoworldseries.com/en/loureiro-and-lenehan-to-win-granfondo-coimbra-region-time-trials-for-pinheiro-and-ostergaard/",
+        "category": "official",
+        "label": "UCI — Final Coimbra Edition Results, March 2025"
+      },
+      {
         "url": "https://ucigranfondoworldseries.com/en/uci-granfondo-leiria-sica-lands-cancelled-due-to-exceptional-circumstances/",
         "category": "official",
         "label": "UCI — Official Cancellation Notice, Feb 20 2026, Storm Kristin"
@@ -129,7 +141,7 @@
       {
         "url": "https://cabreirasolutions.com/evento/granfondo-leiria-region/",
         "category": "official",
-        "label": "Cabreira Solutions (Organizer) — Live Page, 'Evento Adiado para 2027'"
+        "label": "Cabreira Solutions (Organizer) — 2027 Edition Page, February 27-28, 2027"
       },
       {
         "url": "https://www.granfondoguide.com/Contents/IndexFull/9025/2026-uci-granfondo-leiria-region-cancelled-after-storm-kristin-wreaks-havoc-in-portugal",
@@ -139,12 +151,7 @@
       {
         "url": "https://www.jornaldeleiria.pt/noticia/ciclismo-granfondo-de-leiria-adiado-para-2027",
         "category": "media",
-        "label": "Jornal de Leiria — Local Coverage, Postponement to Spring 2027"
-      },
-      {
-        "url": "https://www.granfondoguide.com/Events/Index/13623/granfondo-leiria-region-sico-lands",
-        "category": "reference",
-        "label": "Gran Fondo Guide — Unconfirmed March 2027 Listing (treat as speculative, not official)"
+        "label": "Jornal de Leiria — Local Coverage, Postponement to 2027"
       },
       {
         "url": "https://pt.wikipedia.org/wiki/Serra_de_Sic%C3%B3",
@@ -153,10 +160,10 @@
       }
     ],
     "eligibility": {
-      "status": "cancelled",
-      "verified": "2026-07-24",
-      "source": "https://ucigranfondoworldseries.com/en/uci-granfondo-leiria-sica-lands-cancelled-due-to-exceptional-circumstances/",
-      "notes": "CONFIRMED and refined this wave (curl-verified 200, 2026-07-24). The planned March 28-29, 2026 debut (in Pombal, successor to gran-fondo-coimbra.json) was officially cancelled by the UCI on Feb 20 2026 due to Storm Kristin damage across the Leiria region, and postponed to spring 2027 — corroborated independently by the organizer's own live page ('Evento Adiado para 2027'), Gran Fondo Guide, and Jornal de Leiria local press. No confirmed 2027 date exists yet; a third-party (Gran Fondo Guide) listing shows March 27-28 2027 but is explicitly labeled 'Unconfirmed' with stale distance data — do not treat it as official. Corrected this wave: distance_km 148.1->146.0, elevation_m 1981->1478 (the organizer's own officially-announced, still-cancelled 2026 course plan, not the invented 6,500ft figure previously on file); date changed from '2026: March 29' (a date the event was never actually held on) to '2027: Spring TBD'. Course_description's prior claims about a Pombal fortress finish and a Leiria-to-Praia-do-Pedrogao time trial were revised/softened — the time trial is confirmed to start/finish at Praia do Pedrogao itself, and no source supports a dramatic fortress-finish sprint. Via codex gpt-5.6-sol foreground research, editorial wave 5, cross-checked against UCI official announcements, organizer page, and two independent Portuguese press sources."
+      "status": "active",
+      "verified": "2026-11-07",
+      "source": "https://cabreirasolutions.com/evento/granfondo-leiria-region/",
+      "notes": "2026-11-07: the organizer (Cabreira Solutions) lists the first Leiria edition for February 27-28, 2027, with registration open: individual time trial Saturday Feb 27 at Praia do Pedrógão (20.5 km/98 m), granfondo 146 km/1,478 m and mediofondo 93 km/1,000 m from Pombal on Sunday Feb 28. This replaces the 'spring 2027, date TBD' state from the UCI's Feb 2026 cancellation notice; Gran Fondo Guide's 'March 27-28 2027, Unconfirmed' listing is stale and its citation was dropped. gran-fondo-coimbra was merged into this profile with a 301 the same day: the UCI's Jan 15 2026 announcement moved and renamed that event to Leiria, so they are one event. history.founded is now the lineage year (2021). PRIOR NOTES (2026-07-24): CONFIRMED and refined this wave (curl-verified 200, 2026-07-24). The planned March 28-29, 2026 debut (in Pombal, successor to gran-fondo-coimbra.json) was officially cancelled by the UCI on Feb 20 2026 due to Storm Kristin damage across the Leiria region, and postponed to spring 2027 — corroborated independently by the organizer's own live page ('Evento Adiado para 2027'), Gran Fondo Guide, and Jornal de Leiria local press. No confirmed 2027 date exists yet; a third-party (Gran Fondo Guide) listing shows March 27-28 2027 but is explicitly labeled 'Unconfirmed' with stale distance data — do not treat it as official. Corrected this wave: distance_km 148.1->146.0, elevation_m 1981->1478 (the organizer's own officially-announced, still-cancelled 2026 course plan, not the invented 6,500ft figure previously on file); date changed from '2026: March 29' (a date the event was never actually held on) to '2027: Spring TBD'. Course_description's prior claims about a Pombal fortress finish and a Leiria-to-Praia-do-Pedrogao time trial were revised/softened — the time trial is confirmed to start/finish at Praia do Pedrogao itself, and no source supports a dramatic fortress-finish sprint. Via codex gpt-5.6-sol foreground research, editorial wave 5, cross-checked against UCI official announcements, organizer page, and two independent Portuguese press sources."
     }
   }
 }
