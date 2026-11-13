@@ -28,7 +28,8 @@ The offer beneath the results is Race Plan only — Roadie Labs has no Season
 Plan product (that's a Gravel God-only ruling, D2/D15). No dead links: the
 Race Plan CTA goes to the real, working /questionnaire/ checkout
 (web/training-plans-form.js posts to the shared Motoren pipeline's
-/api/create-checkout, same $15/week $249-cap pricing as gravel).
+/api/create-checkout with product race_plan_4weekly; price and terms come
+from wordpress/plan_offer.py).
 
 Usage:
     python wordpress/generate_goals_2027.py
@@ -47,6 +48,7 @@ from brand_tokens import COLORS, get_ga4_head_snippet, get_preload_hints  # noqa
 from shared_footer import get_mega_footer_html  # noqa: E402
 from shared_header import get_site_header_html, get_site_header_js  # noqa: E402
 from cookie_consent import get_consent_banner_html  # noqa: E402
+from plan_offer import PRICE_LINE as PLAN_PRICE_LINE  # noqa: E402
 from generate_coaching_apply import build_apply_css, build_progress_bar  # noqa: E402
 
 OUTPUT_DIR = Path(__file__).parent / "output" / "goals"
@@ -237,7 +239,7 @@ OFFER = {
     # for Roadie Labs would be a dead product, not a dead link, which is the
     # same failure this task's spec forbids.
     "plans": [
-        {"key": "race", "price": "Race Plan: priced by the week from your race date",
+        {"key": "race", "price": f"Race Plan: {PLAN_PRICE_LINE}, one 4-week block at a time, until race week",
          "cta": f"Build my {NEXT} plan", "cta_href": "/questionnaire/?src=goals"},
     ],
     "decline": "Just the poster, thanks",

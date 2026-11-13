@@ -29,6 +29,10 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_css
 from cookie_consent import get_consent_banner_html
+from plan_offer import (
+    BLOCK_PRICE, BLOCK_PRICE_CENTS, PRICE_LINE, REFUND_WINDOW_DAYS, WEEK_PRICE,
+    plan_summary,
+)
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -36,8 +40,8 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 
 QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/questionnaire/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/training-plans/"
-PRICE_PER_WEEK = "$15"
-PRICE_CAP = "$249"
+# Price and terms: wordpress/plan_offer.py (the plan billed every 4 weeks,
+# which replaced the one-off $15-a-week plan on 2026-11-13).
 
 
 def esc(text) -> str:
@@ -66,9 +70,9 @@ def build_hero() -> str:
     <a href="#how-it-works" class="rl-tp-btn rl-tp-btn-secondary" data-cta="hero_how">See How It Works</a>
   </div>
   <div class="rl-tp-hero-bar">
-    <div class="rl-tp-hero-bar-item"><strong>Within 24 Hours</strong><span>Delivery</span></div>
+    <div class="rl-tp-hero-bar-item"><strong>Within 24 Hours</strong><span>First Block</span></div>
     <div class="rl-tp-hero-bar-item"><strong>Matched</strong><span>Methodology</span></div>
-    <div class="rl-tp-hero-bar-item"><strong>$2/day</strong><span>Less Than a Tube</span></div>
+    <div class="rl-tp-hero-bar-item"><strong>{BLOCK_PRICE}</strong><span>Every 4 Weeks</span></div>
     <div class="rl-tp-hero-bar-item"><strong>5 min</strong><span>To Start</span></div>
   </div>
 </section>'''
@@ -77,22 +81,23 @@ def build_hero() -> str:
 DELIVERABLES = [
     (
         "01",
-        "Structured Workouts on Your Device",
-        "Every workout drops directly into TrainingPeaks, Zwift, Wahoo, "
-        "or any platform that reads .zwo files. Power targets, cadence "
+        "Structured Workouts on Your Calendar",
+        "Every workout lands on your TrainingPeaks calendar, one 4-week block "
+        "at a time. Power targets, cadence "
         "prescriptions (high RPM for efficiency, low RPM for climbing), "
         "riding position cues (drops, hoods, standing), and durability efforts "
         "that simulate late-race fatigue. These dimensions change the stimulus "
         "even at identical power zones &mdash; because racing isn&rsquo;t just about "
-        "watts. Open your app. The workout is there. Start pedaling.",
+        "watts.",
     ),
     (
         "02",
-        "30+ Page Custom Training Guide",
-        "Your power zones. Your fueling protocol. Your race-week countdown. "
-        "Phase-by-phase breakdown of what you&rsquo;re building and why. If your race "
-        "is in the database: suffering zones, terrain breakdown, altitude warnings, "
-        "and the harsh reality of what the course demands. Not marketing. Data.",
+        "A Training Guide, Plus a Guide to Each Block",
+        "The training guide covers the whole plan: your power zones, how to read "
+        "the workouts, your fueling protocol, race day. If your race is in the "
+        "database: suffering zones, terrain breakdown, altitude warnings, and "
+        "the harsh reality of what the course demands. Each block comes with its "
+        "own guide that lists every workout in those weeks, day by day.",
     ),
     (
         "03",
@@ -246,7 +251,7 @@ def build_how_it_works() -> str:
         ("01", "Questionnaire", "5 min form"),
         ("02", "TrainingPeaks", "Connect account"),
         ("03", "Plan Built", "Matched to you"),
-        ("04", "You Train", "Delivered within 24 hours"),
+        ("04", "You Train", "Block 1 within 24 hours"),
     ]
     cards_html = ""
     for num, title, desc in process_cards:
@@ -263,8 +268,8 @@ def build_how_it_works() -> str:
          "Attach to my TrainingPeaks Coach Account. This is how the plan gets to your calendar. Free TrainingPeaks account works fine."),
         ("03", "I Build Your Plan",
          "I choose the training approach that fits your available time, experience, and race demands."),
-        ("04", "Plan Drops Into Your Calendar",
-         "I review your plan personally and deliver it in TrainingPeaks within 24 hours. Open your calendar and start training."),
+        ("04", "Blocks Land on Your Calendar",
+         "I look over every block before it goes on your calendar. Block 1 goes on within 24 hours of your payment or of you connecting TrainingPeaks, whichever is later. A few days before each payment I email to ask what changed, so the next block fits the weeks you have now."),
     ]
     steps_html = ""
     for num, title, desc in steps:
@@ -278,7 +283,7 @@ def build_how_it_works() -> str:
 '''
     return f'''<section class="rl-tp-section rl-tp-section-alt" id="how-it-works">
   <div class="rl-tp-section-label">How It Works</div>
-  <h2>Four Steps. You Start Training Today.</h2>
+  <h2>Four Steps to Your First Block.</h2>
   <div class="rl-tp-process">
     {cards_html}
   </div>
@@ -341,32 +346,35 @@ def build_honest_check() -> str:
 
 
 def build_pricing() -> str:
+    examples = "; ".join(
+        f"{weeks} weeks out: {plan_summary(weeks)}" for weeks in (4, 8, 12)
+    )
     return f'''<section class="rl-tp-section" id="pricing">
   <div class="rl-tp-section-label">Pricing</div>
-  <h2>{PRICE_PER_WEEK} Per Week. One Payment. No Subscription.</h2>
+  <h2>{PRICE_LINE}. Ends After Race Week.</h2>
   <div class="rl-tp-pricing-wrap">
     <div class="rl-tp-pricing-card">
       <div class="rl-tp-pricing-header">Custom Training Plan</div>
-      <div class="rl-tp-price">{PRICE_PER_WEEK}<span> / week of training</span></div>
+      <div class="rl-tp-price">{BLOCK_PRICE}<span> every 4 weeks</span></div>
       <ul class="rl-tp-pricing-list">
-        <li>Computed from your race date &mdash; pay for exactly what you need</li>
-        <li>6-week plan = $90. 12-week plan = $180. 16-week plan = $240</li>
-        <li>Capped at {PRICE_CAP} no matter how long the plan</li>
-        <li>Structured .zwo workouts for Zwift/TrainingPeaks/Wahoo</li>
-        <li>30+ page custom training guide</li>
+        <li>One 4-week block at a time, from now until race week</li>
+        <li>If your race isn&rsquo;t a whole number of 4-week blocks away, the last, shorter block costs {WEEK_PRICE} a week</li>
+        <li>{examples}. Checkout shows the number of payments and the total for your race before you pay</li>
+        <li>Ends after race week. Nothing is charged after that</li>
+        <li>Training guide for your race, plus a guide to each block</li>
         <li>Race-optimized fueling plan</li>
         <li>Custom strength program</li>
         <li>Heat &amp; altitude protocols</li>
-        <li>Personally reviewed and delivered in TrainingPeaks within 24 hours</li>
+        <li>I look over every block before it goes on your TrainingPeaks calendar</li>
+        <li>A check-in email before each payment, and one round of changes per block</li>
       </ul>
       <div class="rl-tp-pricing-cta">
         <a href="{QUESTIONNAIRE_URL}" class="rl-tp-btn" data-cta="pricing_build">Build My Plan</a>
       </div>
-      <p class="rl-tp-pricing-note">Your entry fee was $175. Your hotel is $200. Your plan is $2/day. Don&rsquo;t show up without one.</p>
     </div>
   </div>
   <div class="rl-tp-guarantee">
-    <p><strong>7-Day Money-Back Guarantee.</strong> If the plan doesn&rsquo;t meet your expectations, email me within 7 days for a full refund. No questions. No hoops.</p>
+    <p><strong>{REFUND_WINDOW_DAYS}-Day Refund.</strong> Within {REFUND_WINDOW_DAYS} days of your first payment, cancel from your plan page and get that payment back in full. After that, cancel any time from the same page; you keep any block you&rsquo;ve paid for. Later payments aren&rsquo;t refunded, except where the law says otherwise.</p>
   </div>
 </section>'''
 
@@ -382,15 +390,19 @@ FAQ_ITEMS = [
     ),
     (
         "How are workouts delivered?",
-        ".zwo files. Load directly into Zwift, TrainingPeaks, or anything that reads the format. Each file has power targets, cadence cues, and coaching text built in. Your guide is a web page &mdash; bookmark it.",
+        "On your TrainingPeaks calendar, one 4-week block at a time. After you pay, connect your TrainingPeaks account (a free one works). Block 1 goes on within 24 hours of your payment or of you connecting, whichever is later. Each later block goes on after its payment clears and I&rsquo;ve looked it over.",
     ),
     (
         "How is the price calculated?",
-        f"{PRICE_PER_WEEK} per week of training, computed from your race date. A 6-week plan is $90. A 12-week plan is $180. Anything over 16 weeks caps at {PRICE_CAP}. You pay for exactly what you need &mdash; no more.",
+        f"{PRICE_LINE}, one payment per 4-week block, from the day you sign up until race week. If your race isn&rsquo;t a whole number of blocks away, the last, shorter block costs {WEEK_PRICE} a week. A race 6 weeks out is {plan_summary(6)}. A race 30 weeks out is {plan_summary(30)}. Checkout shows your number before you pay.",
     ),
     (
         "Is this coaching?",
-        "No. This is a plan, not a relationship. You get the full plan up front and execute it yourself. No weekly check-ins.",
+        "No. It&rsquo;s a plan. I check in by email before each payment and make one round of changes per block, and I answer questions by email within 2 business days. No calls and no week-to-week adjustments. If you want your plan adjusted week to week, that&rsquo;s coaching.",
+    ),
+    (
+        "How do I cancel?",
+        f"From your plan page; the link is in every email about your plan. Cancel any time and you keep any block you&rsquo;ve paid for. Within {REFUND_WINDOW_DAYS} days of your first payment, cancelling there refunds that payment in full.",
     ),
     (
         "What if my race isn&rsquo;t in the database?",
@@ -418,7 +430,7 @@ def build_faq() -> str:
 
 def build_mobile_sticky() -> str:
     return f'''<div class="rl-tp-sticky-cta" id="rl-tp-sticky-cta">
-  <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_mobile">Build My Plan &mdash; $2/day</a>
+  <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_mobile">Build My Plan &mdash; {PRICE_LINE}</a>
 </div>'''
 
 
@@ -1307,18 +1319,22 @@ def build_jsonld() -> str:
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Custom Road Racing Training Plan",
-  "description": "Race-specific training plan built from your schedule, fitness, and target event. Includes structured workouts, training guide, nutrition plan, strength program, and heat/altitude protocols.",
+  "description": "Race-specific training plan built from your schedule, fitness, and target event, delivered one 4-week block at a time until race week. Includes structured workouts, training guide, nutrition plan, strength program, and heat/altitude protocols.",
   "brand": {{
     "@type": "Organization",
     "name": "Roadie Labs",
     "url": "{SITE_BASE_URL}"
   }},
   "offers": {{
-    "@type": "AggregateOffer",
-    "lowPrice": "60",
-    "highPrice": "{PRICE_CAP.replace('$', '')}",
+    "@type": "Offer",
+    "price": "{BLOCK_PRICE_CENTS / 100:.2f}",
     "priceCurrency": "USD",
-    "offerCount": "14",
+    "priceSpecification": {{
+      "@type": "UnitPriceSpecification",
+      "price": "{BLOCK_PRICE_CENTS / 100:.2f}",
+      "priceCurrency": "USD",
+      "billingDuration": "P4W"
+    }},
     "availability": "https://schema.org/InStock"
   }},
   "url": "{TRAINING_PLANS_URL}"
@@ -1354,12 +1370,12 @@ def generate_training_page(external_assets: dict = None) -> str:
         inline_js = build_inline_js()
 
     meta_desc = (
-        "Road racing training plans built for your goal race. 16-week periodized "
-        "programs with race-specific prep. Data-driven. From $15/week."
+        "Road racing training plans built for your goal race, with race-specific "
+        f"prep. {PRICE_LINE}, one 4-week block at a time, until race week."
     )
 
     og_tags = f'''<meta property="og:title" content="Custom Training Plans | Roadie Labs">
-  <meta property="og:description" content="Race-specific training plans. $15/week, capped at $249. Structured workouts, nutrition, strength, and race protocols.">
+  <meta property="og:description" content="Race-specific training plans. {PRICE_LINE}, until race week. Structured workouts, nutrition, strength, and race protocols.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -1368,7 +1384,7 @@ def generate_training_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Custom Training Plans | Roadie Labs">
-  <meta name="twitter:description" content="Race-specific training plans. $15/week, capped at $249.">
+  <meta name="twitter:description" content="Race-specific training plans. {PRICE_LINE}, until race week.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()

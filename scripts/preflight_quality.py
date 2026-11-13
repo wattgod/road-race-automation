@@ -230,62 +230,39 @@ try {{
 
 
 def check_pricing_parity():
-    """Verify Python and JS price computations produce identical results.
+    """Verify the questionnaire's JS quote matches the server's price math.
 
-    The user sees a JS-computed price on the submit button, then the server
-    charges a Python-computed price via Stripe. If these diverge, we have
-    a trust/legal problem. This check catches that before deploy.
+    The user sees a JS-computed first payment, payment count and total on the
+    form, then the server charges its own computation via Stripe. If these
+    diverge, we have a trust/legal problem. The custom plan is billed every
+    4 weeks (race_plan_4weekly); wordpress/plan_offer.py mirrors the server
+    and generates the JS block embedded in web/training-plans-form.js.
     """
     print("\n── Pricing Parity (Python/JS) ──")
     from datetime import date, timedelta
-    import math
+    sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+    import plan_offer
 
-    # Python computation (mirrors app.py compute_plan_price)
-    PRICE_PER_WEEK_CENTS = 1500
-    PRICE_CAP_CENTS = 24900
-    MIN_WEEKS = 4
+    form_js = (PROJECT_ROOT / "web" / "training-plans-form.js").read_text()
+    try:
+        start = form_js.index(plan_offer.JS_BEGIN_MARKER) + len(plan_offer.JS_BEGIN_MARKER)
+        end = form_js.index(plan_offer.JS_END_MARKER)
+    except ValueError:
+        check("Form JS carries the generated rlPlanQuote block", False,
+              "markers missing from web/training-plans-form.js")
+        return
+    js_block = form_js[start:end]
 
     anchor_today = date(2030, 1, 15)
-
-    def py_price(race_date_str):
-        try:
-            from datetime import datetime
-            race_date = datetime.strptime(race_date_str, '%Y-%m-%d').date()
-        except (ValueError, TypeError):
-            return MIN_WEEKS, MIN_WEEKS * PRICE_PER_WEEK_CENTS
-        days_until = (race_date - anchor_today).days
-        weeks = max(MIN_WEEKS, math.ceil(days_until / 7))
-        price_cents = min(weeks * PRICE_PER_WEEK_CENTS, PRICE_CAP_CENTS)
-        return weeks, price_cents
-
-    # Test dates: 5wk, 10wk, 16wk, 30wk, past, 3 days out
     test_dates = [
-        (anchor_today + timedelta(weeks=5)).isoformat(),
-        (anchor_today + timedelta(weeks=10)).isoformat(),
-        (anchor_today + timedelta(weeks=16)).isoformat(),
-        (anchor_today + timedelta(weeks=30)).isoformat(),
-        (anchor_today - timedelta(weeks=2)).isoformat(),
-        (anchor_today + timedelta(days=3)).isoformat(),
+        (anchor_today + timedelta(days=d)).isoformat()
+        for d in (3, 28, 29, 42, 56, 112, 210, 364)
     ]
-
-    js_code = """
-    var PRICE_PER_WEEK = 15;
-    var PRICE_CAP = 249;
-    var MIN_WEEKS = 4;
-
-    function computePrice(raceDateStr) {
-      var raceDate = new Date(raceDateStr + 'T00:00:00');
-      var today = new Date(%TODAY% + 'T00:00:00');
-      var days = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
-      var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
-      var price = Math.min(weeks * PRICE_PER_WEEK, PRICE_CAP);
-      return {weeks: weeks, price_cents: price * 100};
-    }
-
-    var dates = %DATES%;
-    var results = dates.map(function(d) { return computePrice(d); });
-    console.log(JSON.stringify(results));
-    """.replace('%TODAY%', json.dumps(anchor_today.isoformat())).replace('%DATES%', json.dumps(test_dates))
+    js_code = js_block + (
+        "\nconsole.log(JSON.stringify(%DATES%.map(function(d){"
+        "return rlPlanQuote(d, %TODAY%);})));"
+    ).replace('%TODAY%', json.dumps(anchor_today.isoformat())).replace(
+        '%DATES%', json.dumps(test_dates))
 
     result = subprocess.run(
         ["node", "-e", js_code],
@@ -297,12 +274,14 @@ def check_pricing_parity():
 
     js_results = json.loads(result.stdout.strip())
     all_match = True
-    for i, (d, js_r) in enumerate(zip(test_dates, js_results)):
-        py_weeks, py_cents = py_price(d)
-        if py_cents != js_r['price_cents'] or py_weeks != js_r['weeks']:
-            check(f"Price parity for {d}",
-                  False,
-                  f"Python={py_cents}c/{py_weeks}wk, JS={js_r['price_cents']}c/{js_r['weeks']}wk")
+    for d, js_r in zip(test_dates, js_results):
+        weeks = plan_offer.weeks_until(date.fromisoformat(d), anchor_today)
+        plan = plan_offer.payment_plan(weeks)
+        if (js_r is None or js_r['totalCents'] != plan['total_cents']
+                or js_r['payments'] != plan['payment_count']
+                or js_r['firstCents'] != plan['first_payment_cents']):
+            check(f"Price parity for {d}", False,
+                  f"Python={plan['payment_count']}x/{plan['total_cents']}c, JS={js_r}")
             all_match = False
 
     if all_match:
@@ -316,7 +295,7 @@ def check_stripe_pricing_parity():
     """Verify all pricing mentions in generators match data/stripe-products.json.
 
     This catches: wrong cap prices, wrong coaching tiers, wrong consulting
-    hourly rate, stale JSON-LD prices, and 'Cancel anytime' on one-time
+    hourly rate and stale JSON-LD prices on one-time
     products. Stripe products file is the single source of truth.
     """
     print("\n── Stripe Pricing Parity ──")
@@ -385,9 +364,9 @@ def check_stripe_pricing_parity():
             if val in (199, 175) and "capped" in text[max(0, m.start()-40):m.start()+40].lower():
                 wrong_prices.append(f"{fname}: Found ${val} cap (should be ${training_cap})")
 
-        # Check "Cancel anytime" on training plans (they're one-time payments)
-        if "Cancel anytime" in text and ("training" in fname or "vs" in fname or "state" in fname):
-            wrong_prices.append(f"{fname}: 'Cancel anytime' on one-time training plan product")
+        # (The old "Cancel anytime on a one-time plan" check is gone: since
+        # 2026-11-13 the custom plan is billed every 4 weeks and can be
+        # cancelled any time. tests/test_plan_offer.py guards the copy.)
 
         # Check consulting price in JSON-LD
         if "consulting" in fname:

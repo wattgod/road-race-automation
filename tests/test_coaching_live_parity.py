@@ -110,4 +110,4 @@ def test_legal_last_updated_is_pinned_not_generation_date(tmp_path):
          "--output-dir", str(tmp_path)],
         check=True, capture_output=True, text=True, cwd=REPO_ROOT, timeout=120)
     html = (tmp_path / "privacy.html").read_text(encoding="utf-8")
-    assert "Last updated: August 2026" in html
+    assert "Last updated: November 2026" in html

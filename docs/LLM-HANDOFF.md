@@ -75,8 +75,10 @@ but its supported sync paths now target the static host layout below.
 
 - **Webhook:** `athlete-custom-training-plan-pipeline-production.up.railway.app`
   (Railway, auto-deploys on push to `main` of the pipeline repo).
-- **Flow:** race page CTA "BUILD MY PLAN — $15/WK" → `/questionnaire/?race=<slug>`
-  → form POSTs to `/api/create-checkout` → returns a Stripe `checkout_url` →
+- **Flow:** race page CTA "START MY CUSTOM PLAN" ($49.99 every 4 weeks) →
+  `/questionnaire/?race=<slug>` → form POSTs to `/api/create-checkout` with
+  `product: "race_plan_4weekly"` (since 2026-11-13; price math and copy in
+  `wordpress/plan_offer.py`) → returns a Stripe `checkout_url` →
   redirect → payment → Stripe webhook → `run_pipeline()` builds the plan.
 - **Brand routing:** the webhook derives brand from the `Origin` header
   (`roadielabs.com` → `roadielabs`). No brand field needed in the payload. The

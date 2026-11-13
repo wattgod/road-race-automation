@@ -36,6 +36,8 @@ from brand_tokens import (
 from shared_header import get_site_header_html, get_site_header_css
 from shared_footer import get_mega_footer_html
 from cookie_consent import get_consent_banner_html
+from plan_offer import (CTA_LABEL as PLAN_CTA_LABEL, PRICE_LINE as PLAN_PRICE_LINE,
+                        REFUND_WINDOW_DAYS, plan_quote_js)
 from plan_simulator import (get_plan_simulator_css, get_plan_simulator_js,
                             render_plan_simulator)
 from race_demand_analyzer import classify_road_event_format
@@ -182,7 +184,7 @@ def build_hero(rd: dict, pack: dict) -> str:
   this page, free. If you want it built around your hours, your schedule,
   and your fitness, that&rsquo;s what the custom plan is for.</p>
   <div class="rl-tpp-hero-cta">
-    <a href="{QUESTIONNAIRE_URL}?race={esc(slug)}" class="rl-btn" data-cta="tpp_hero_build" id="rl-tpp-hero-cta">BUILD MY PLAN &mdash; $15/WK</a>
+    <a href="{QUESTIONNAIRE_URL}?race={esc(slug)}" class="rl-btn" data-cta="tpp_hero_build" id="rl-tpp-hero-cta">{PLAN_CTA_LABEL}</a>
     <span class="rl-tpp-countdown" id="rl-tpp-countdown"></span>
   </div>
 </section>'''
@@ -440,13 +442,17 @@ def build_cta(rd: dict) -> str:
   <p>The free version of preparing for {name} is this page plus the
   <a href="/race/{slug}/prep-kit/" data-cta="tpp_cta_kit">prep kit</a>.
   The custom version is a plan built from your hours, your schedule, your
-  fitness markers, and this exact course &mdash; personally reviewed and
-  delivered in TrainingPeaks within 24 hours.</p>
+  fitness markers, and this exact course, on your TrainingPeaks calendar one
+  4-week block at a time. I look over every block before it goes on your
+  calendar.</p>
   <div class="rl-tpp-cta-row">
-    <a href="{QUESTIONNAIRE_URL}?race={slug}" class="rl-btn" data-cta="tpp_footer_build" id="rl-tpp-footer-cta">BUILD MY PLAN &mdash; $15/WK</a>
+    <a href="{QUESTIONNAIRE_URL}?race={slug}" class="rl-btn" data-cta="tpp_footer_build" id="rl-tpp-footer-cta">{PLAN_CTA_LABEL}</a>
     <a href="/race/{slug}/" class="rl-btn rl-btn--outline" data-cta="tpp_race_page">READ THE {name.upper()} REVIEW</a>
   </div>
-  <p class="rl-tpp-guarantee">7-day full refund. Delivery within 24 hours. $249 cap.</p>
+  <p class="rl-tpp-guarantee">{PLAN_PRICE_LINE}, ending after race week.
+  <span id="rl-tpp-plan-quote"></span> Cancel any time from your
+  plan page; within {REFUND_WINDOW_DAYS} days of your first payment that comes
+  with a full refund.</p>
 </section>'''
 
 
@@ -553,8 +559,8 @@ a { color: var(--rl-color-teal); }
 
 
 def build_js() -> str:
-    """Countdown + dynamic price (mirrors prep strip / server pricing)."""
-    return '''
+    """Countdown + payments to race week (rlPlanQuote mirrors the server)."""
+    return plan_quote_js() + '''
 (function() {
   var hero = document.getElementById('tpp-hero');
   if (!hero) return;
@@ -565,14 +571,16 @@ def build_js() -> str:
   var today = new Date(); today.setHours(0, 0, 0, 0);
   var days = Math.ceil((race - today) / 86400000);
   if (days <= 7) return;
-  var weeks = Math.max(4, Math.ceil(days / 7));
-  var price = Math.min(weeks * 15, 249);
+  var quote = rlPlanQuote(dateStr);
+  if (!quote) return;
   var cd = document.getElementById('rl-tpp-countdown');
-  if (cd) cd.textContent = weeks + ' WEEKS UNTIL RACE DAY';
+  if (cd) cd.textContent = quote.weeks + ' WEEKS UNTIL RACE DAY';
   ['rl-tpp-hero-cta', 'rl-tpp-footer-cta'].forEach(function(id) {
     var el = document.getElementById(id);
-    if (el) el.textContent = 'BUILD MY ' + weeks + '-WEEK PLAN — $' + price;
+    if (el) el.textContent = 'BUILD MY ' + quote.weeks + '-WEEK PLAN';
   });
+  var line = document.getElementById('rl-tpp-plan-quote');
+  if (line) line.textContent = 'For this date: ' + quote.summary + '.';
 })();
 (function() {
   if (typeof gtag !== 'function') return;
@@ -609,7 +617,7 @@ def generate_page(rd: dict, pack: dict) -> str:
     title = f"{name} Training Plan: How to Train for {name} | Roadie Labs"
     meta = (f"How to train for {name}: demand profile, key workouts, "
             f"12-16 week timeline, and fueling math — from the race data "
-            f"behind our rating. Custom plans from $15/week.")
+            f"behind our rating. Custom plans: {PLAN_PRICE_LINE} until race week.")
 
     return f'''<!DOCTYPE html>
 <html lang="en">

@@ -30,6 +30,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
+from plan_offer import PRICE_LINE, REFUND_WINDOW_DAYS, WEEK_PRICE
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -511,6 +512,13 @@ def build_questionnaire_css() -> str:
   letter-spacing: 0.5px;
 }
 
+.gg-plan-quote {
+  text-align: center;
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: var(--rl-color-near-black);
+}
+
 .gg-trust-strip {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
@@ -562,15 +570,15 @@ def build_form_html() -> str:
     return '''
   <div class="tp-questionnaire-hero">
     <h1>Build Your Plan</h1>
-    <p>Allow five minutes and be thorough. Your plan is personally reviewed
-    and delivered in TrainingPeaks within 24 hours.</p>
+    <p>Allow five minutes and be thorough. I look over every block of your
+    plan before it goes on your TrainingPeaks calendar.</p>
   </div>
 
   <div class="gg-form-container">
     <div class="gg-form-header">
       <span class="gg-form-badge">Custom Training Plan</span>
       <h2>Build Your Plan</h2>
-      <p>Fill out this form and pay securely via Stripe. Your plan is personally reviewed and delivered in TrainingPeaks within 24 hours.</p>
+      <p>Fill out this form and pay securely via Stripe: ''' + PRICE_LINE + ''', one 4-week block at a time, until race week. Block 1 goes on your TrainingPeaks calendar within 24 hours of your payment or of you connecting TrainingPeaks, whichever is later.</p>
     </div>
 
     <form id="gg-training-form">
@@ -973,19 +981,20 @@ def build_form_html() -> str:
       <!-- Trust signals before checkout -->
       <div class="gg-trust-strip">
         <div class="gg-trust-badges">
-          <span class="gg-trust-badge">7-Day Full Refund</span>
+          <span class="gg-trust-badge">''' + str(REFUND_WINDOW_DAYS) + '''-Day Refund on Your First Payment</span>
           <span class="gg-trust-badge">Secure Checkout via Stripe</span>
-          <span class="gg-trust-badge">Delivery Within 24 Hours</span>
+          <span class="gg-trust-badge">Ends After Race Week</span>
         </div>
       </div>
 
       <button type="submit" class="gg-submit-btn">Submit &amp; Pay</button>
+      <p id="gg-plan-quote" class="gg-plan-quote" aria-live="polite">''' + PRICE_LINE + ''' until race week. Add your race date to see the number of payments and the total.</p>
     </form>
 
     <div id="gg-form-message" class="gg-form-message" style="display: none;"></div>
 
     <div class="gg-form-footer">
-      Not satisfied? Full refund within 7 days, no questions asked.
+      ''' + PRICE_LINE + '''. If your race isn&rsquo;t a whole number of 4-week blocks away, the last, shorter block costs ''' + WEEK_PRICE + ''' a week. Cancel any time from your plan page; you keep any block you&rsquo;ve paid for. Within ''' + str(REFUND_WINDOW_DAYS) + ''' days of your first payment, cancelling there refunds it in full.
     </div>
   </div>'''
 
@@ -1004,8 +1013,8 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
         inline_js = build_inline_js()
 
     meta_desc = (
-        "Build your custom road cycling training plan. Personally reviewed and "
-        "delivered in TrainingPeaks within 24 hours. $15/week, capped at $249."
+        "Build your custom road cycling training plan. Every block looked over "
+        f"before it goes on your TrainingPeaks calendar. {PRICE_LINE}, until race week."
     )
 
     og_tags = f'''<meta property="og:title" content="Build Your Training Plan | Roadie Labs">
