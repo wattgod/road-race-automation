@@ -156,8 +156,11 @@ def test_only_one_plan_product_race_plan_no_season_plan():
     plans = goals.OFFER["plans"]
     keys = [p["key"] for p in plans]
     assert keys == ["race"]
-    assert "priced by the week from your race date" in plans[0]["price"]
-    assert "$" not in plans[0]["price"]
+    # The one price line, from the single source (wordpress/plan_offer.py),
+    # never a hand-typed figure.
+    from plan_offer import PRICE_LINE
+    assert PRICE_LINE in plans[0]["price"]
+    assert "until race week" in plans[0]["price"]
     assert plans[0]["cta_href"] == "/questionnaire/?src=goals"
     assert "season" not in [p["key"] for p in plans]
 

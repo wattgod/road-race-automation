@@ -72,11 +72,14 @@ class TestJsContract:
         assert "getElementById('rl-prep-cta')" in js
 
     def test_js_pricing_matches_server(self):
-        """$15/wk, min 4 weeks, $249 cap — must mirror webhook pricing."""
+        """Payments come from rlPlanQuote, the server's 4-weekly math
+        (wordpress/plan_offer.py; parity pinned in tests/test_plan_offer.py)."""
+        from plan_offer import plan_quote_js
         js = build_inline_js()
-        assert "weeks * 15" in js
-        assert "Math.max(4," in js
-        assert "249" in js
+        assert plan_quote_js() in js
+        assert "rlPlanQuote(dateStr)" in js
+        assert "weeks * 15" not in js
+        assert "249" not in js
 
     def test_css_present(self):
         css = get_page_css()
@@ -98,7 +101,7 @@ class TestDateDegradation:
     def test_generic_price_copy_without_js(self, packed_slug):
         """Server-rendered CTA must be safe even if JS never runs."""
         html = build_prep_strip(_rd(slug=packed_slug))
-        assert "$15/WK" in html
+        assert "$49.99 EVERY 4 WEEKS" in html
 
     def test_past_date_guard_in_js(self):
         """JS must bail (keep generic copy) for past/imminent dates —

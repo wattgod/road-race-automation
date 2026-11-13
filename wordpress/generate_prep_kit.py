@@ -38,6 +38,7 @@ from generate_neo_brutalist import (
     find_data_file,
     load_race_data,
 )
+from plan_offer import CTA_LABEL as PLAN_CTA_LABEL
 from generate_neo_brutalist import esc  # HTML escape helper
 
 from brand_tokens import (
@@ -2057,7 +2058,7 @@ def build_pk_footer_cta(rd: dict) -> str:
          specifically for {name} — structured workouts, nutrition protocols, and race-day
          strategy — get a custom training plan.</p>
       <div class="rl-pk-footer-buttons">
-        <a href="{esc(TRAINING_PLANS_URL)}" class="rl-pk-btn rl-pk-btn--primary">BUILD MY PLAN &mdash; $15/WK</a>
+        <a href="{esc(TRAINING_PLANS_URL)}" class="rl-pk-btn rl-pk-btn--primary">{PLAN_CTA_LABEL}</a>
         <a href="{esc(COACHING_URL)}" class="rl-pk-btn rl-pk-btn--secondary">1:1 COACHING</a>
       </div>
       <p class="rl-pk-footer-back">
