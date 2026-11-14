@@ -1226,7 +1226,7 @@ class TestFullPage:
 
     def test_has_favicon(self, normalized_data):
         html = generate_page(normalized_data)
-        assert '<link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">' in html
+        assert '<link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">' in html
 
     def test_has_skip_link(self, normalized_data):
         html = generate_page(normalized_data)
@@ -1385,6 +1385,7 @@ class TestFullPage:
         assert (tmp_path / 'assets' / css_name).stat().st_size > 0
         assert (tmp_path / 'assets' / js_name).stat().st_size > 0
         assert (tmp_path / 'assets' / 'rl-logo.svg').stat().st_size > 0
+        assert (tmp_path / 'assets' / 'rl-icon.svg').stat().st_size > 0
         assert (tmp_path / 'assets' / 'road-labs-logo.png').stat().st_size > 0
 
     def test_js_has_fetch_timeout(self, normalized_data):

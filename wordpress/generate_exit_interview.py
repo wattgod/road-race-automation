@@ -313,7 +313,7 @@ def generate_page() -> str:
 <title>Before You Go | Roadie Labs</title>
 <meta name="description" content="A private exit interview for Roadie Labs coaching athletes.">
 <meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://roadielabs.com/coaching/exit/">
-<link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+<link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
 {build_exit_personal_link_js()}{get_preload_hints()}{get_page_css()}{get_ga4_head_snippet()}{build_apply_css()}{build_css()}
 </head><body class="rl-neo-brutalist-page" style="background:var(--rl-color-cool-white);color:var(--rl-color-near-black);font-family:var(--rl-font-data);font-size:var(--rl-font-size-sm);line-height:1.7;min-height:100vh">
 {get_site_header_html()}

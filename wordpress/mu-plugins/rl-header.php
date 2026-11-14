@@ -153,7 +153,7 @@ function rl_shared_header_html() {
 <header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="<?php echo $base; ?>/" class="rl-site-header-logo" aria-label="Roadie Labs">
-      <img class="rl-site-header-mark" src="/race/assets/rl-logo.svg" alt="" width="27" height="48">
+      <img class="rl-site-header-mark" src="/race/assets/rl-logo.svg?v=siped-1" alt="" width="14" height="48">
       <span class="rl-site-header-wordmark" aria-hidden="true">ROADIE <span>LABS</span></span>
     </a>
     <nav class="rl-site-header-nav">
