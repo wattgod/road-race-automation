@@ -1077,14 +1077,14 @@ def build_goals_js() -> str:
     ctx.fillRect(0, 0, W, H);
     ctx.textBaseline = "top";
 
-    ctx.font = "700 26px 'Sometype Mono', monospace";
+    ctx.font = "700 26px 'JetBrains Mono', monospace";
     ctx.fillStyle = POSTER.accent;
     ctx.fillText((SEASON + 1) + " · GOAL FILE", pad, pad);
     ctx.fillStyle = POSTER.ink;
     ctx.textAlign = "right";
     ctx.fillText("ROADIE LABS", W - pad, pad);
     ctx.textAlign = "left";
-    ctx.font = "22px 'Sometype Mono', monospace";
+    ctx.font = "22px 'JetBrains Mono', monospace";
     ctx.fillStyle = POSTER.grey;
     ctx.fillText("ROADIELABS.COM", pad, H - pad - 20);
 
@@ -1095,17 +1095,17 @@ def build_goals_js() -> str:
                 ["WATCH FOR", posterClean(d.inner_obstacle, 150)]]
       .filter(function(r) { return r[1]; })
       .map(function(r) {
-        ctx.font = "30px 'Sometype Mono', monospace";
+        ctx.font = "30px 'JetBrains Mono', monospace";
         return [r[0], wrapText(ctx, r[1], inner).slice(0, 2)];
       });
     var framed = rows.reduce(function(h, r) { return h + 56 + r[1].length * 38; }, 0);
     var frameTop = H - pad - 60 - framed;
     var y = frameTop;
     rows.forEach(function(row) {
-      ctx.font = "700 24px 'Sometype Mono', monospace";
+      ctx.font = "700 24px 'JetBrains Mono', monospace";
       ctx.fillStyle = POSTER.accent;
       ctx.fillText(row[0], pad, y);
-      ctx.font = "30px 'Sometype Mono', monospace";
+      ctx.font = "30px 'JetBrains Mono', monospace";
       ctx.fillStyle = POSTER.ink;
       row[1].forEach(function(line, i) { ctx.fillText(line, pad, y + 34 + i * 38); });
       y += 56 + row[1].length * 38;
@@ -1129,7 +1129,7 @@ def build_goals_js() -> str:
       goalLines = wrapText(ctx, goal, inner);
     });
 
-    ctx.font = "26px 'Sometype Mono', monospace";
+    ctx.font = "26px 'JetBrains Mono', monospace";
     ctx.fillStyle = POSTER.grey;
     ctx.fillText("BY THE END OF " + (SEASON + 1) + ", " + (posterClean(d.name, 40) || "I").toUpperCase() + " WILL", pad, labelY);
 

@@ -526,25 +526,33 @@ class TestCSS:
         css = build_homepage_css()
         assert "var(--rl-color-coral)" in css
         assert "var(--rl-color-signal-red)" in css
-        assert "#333333" in css  # signal red token definition
+        assert "#202322" in css  # signal red token definition
 
     def test_css_sometype_mono(self):
         css = build_homepage_css()
-        assert "Sometype Mono" in css
+        assert "JetBrains Mono" in css
 
     def test_css_brand_guide_compliance(self):
-        """Brand guide: no border-radius, no box-shadow, no gradients, Source Serif 4."""
+        """Brand guide (Timing Slip): depth only through tokens, Source Serif 4.
+
+        border-radius, box-shadow and gradients may appear only as token
+        definitions (:root) or as values that read a --rl-* token, so every
+        rounded or raised surface traces back to brand_tokens.py.
+        """
         css = build_homepage_css()
         assert "box-sizing: border-box" in css
-        # Token definition (--rl-border-radius: 0) is OK; actual property usage is not
-        css_no_tokens = re.sub(r'--rl-border-radius:\s*0', '', css)
-        assert "border-radius" not in css_no_tokens
-        assert "box-shadow" not in css
-        assert "linear-gradient" not in css
-        assert "radial-gradient" not in css
+        body = re.sub(r':root\s*\{[^}]*\}', '', css)
+        for prop in ("border-radius", "box-shadow", "background"):
+            for value in re.findall(prop + r':\s*([^;}]+)', body):
+                if prop == "background" and "gradient" not in value:
+                    continue
+                if prop == "border-radius" and value.strip() in ("0", "50%"):
+                    continue
+                assert "var(--rl-" in value, f"{prop}: {value} must come from a token"
+        assert "radial-gradient" not in body
         assert "Source Serif 4" in css
-        assert "#f5f5f0" in css  # sand background
-        assert "#1a1a1a" in css  # dark brown text color
+        assert "#fafaf8" in css  # paper background
+        assert "#202322" in css  # ink text color
 
     def test_css_has_ladder_styles(self):
         css = build_homepage_css()
@@ -667,7 +675,7 @@ class TestFullPage:
 
     def test_has_self_hosted_fonts(self, homepage_html):
         assert "@font-face" in homepage_html
-        assert "Sometype Mono" in homepage_html
+        assert "JetBrains Mono" in homepage_html
         assert "Source Serif 4" in homepage_html
         assert "fonts.googleapis.com" not in homepage_html
 
@@ -1847,7 +1855,7 @@ class TestBentoQuote:
         assert quote_rule is not None, "rl-hp-bento-quote CSS rule not found"
         rule = quote_rule.group(0)
         assert "border-left" in rule, "Quote must have left border"
-        assert "#333333" in rule, "Quote border must be gold"
+        assert "#202322" in rule, "Quote border must be ink"
 
     def test_no_bento_excerpt_html(self, race_index):
         """rl-hp-bento-excerpt must be removed from bento cards."""
@@ -1961,14 +1969,14 @@ class TestVisualDividers:
         css = build_homepage_css()
         takes_rule = re.search(r'\.rl-hp-latest-takes\s*\{[^}]+\}', css)
         assert takes_rule is not None
-        assert "border-top: 2px solid #333333" in takes_rule.group(0)
+        assert "border-top: 2px solid #202322" in takes_rule.group(0)
 
     def test_testimonials_gold_border(self):
         """Testimonials must have gold top border matching existing section border color."""
         css = build_homepage_css()
         test_rule = re.search(r'\.rl-hp-testimonials\s*\{[^}]+\}', css)
         assert test_rule is not None
-        assert "border-top: 2px solid #333333" in test_rule.group(0)
+        assert "border-top: 2px solid #202322" in test_rule.group(0)
 
     def test_divider_gold_matches_how_it_works(self):
         """All gold section dividers must use the same hex as how-it-works."""
@@ -2263,10 +2271,10 @@ class TestHeroRadarViz:
         css = build_homepage_css()
         # Extract just the hero radar viz CSS section
         known_colors = {
-            "#555555", "#333333",
-            "#c9a92c", "#c4b5ab", "#d0d0c8", "#f5f5f0", "#1a1a1a",
-            "#1a1a1a", "#333333",
-            "#f5f5f0", "#fff",
+            "#555555", "#202322",
+            "#c9a92c", "#c4b5ab", "#d0d0c8", "#fafaf8", "#202322",
+            "#202322", "#202322",
+            "#fafaf8", "#fff",
         }
         # Find hex colors specifically in the hv- rules
         hv_rules = re.findall(r'\.rl-hp-hv-[^{]*\{[^}]+\}', css)

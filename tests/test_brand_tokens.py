@@ -59,7 +59,7 @@ class TestTokensCSS:
         css = get_tokens_css()
         assert "--rl-font-data:" in css
         assert "--rl-font-editorial:" in css
-        assert "Sometype Mono" in css
+        assert "JetBrains Mono" in css
         assert "Source Serif 4" in css
 
     def test_contains_spacing_tokens(self):
@@ -92,7 +92,7 @@ class TestFontFaceCSS:
     def test_strips_trailing_slash(self):
         css = get_font_face_css("/fonts/")
         assert "/fonts//" not in css
-        assert "/fonts/SometypeMono" in css
+        assert "/fonts/JetBrainsMono" in css
 
     def test_font_face_count(self):
         css = get_font_face_css()
@@ -111,7 +111,7 @@ class TestFontFaceCSS:
 class TestPreloadHints:
     def test_preloads_latin_subsets(self):
         html = get_preload_hints()
-        assert "SometypeMono-normal-latin.woff2" in html
+        assert "JetBrainsMono-normal-latin.woff2" in html
         assert "SourceSerif4-normal-latin.woff2" in html
 
     def test_does_not_preload_extended(self):

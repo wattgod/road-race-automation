@@ -12,6 +12,13 @@ SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
 LOGO_MARK_HTML = '<img class="rl-site-header-mark" src="/race/assets/rl-logo.svg?v=siped-1" alt="" width="14" height="48">'
+# Timing Slip glyph tile (Nov 2026): the mark on a raised paper tile, turned
+# -4deg, with the red dot ringed in the page colour. Logo only, never a score.
+LOGO_TILE_HTML = (
+    '<span class="rl-site-header-tile" aria-hidden="true">'
+    + LOGO_MARK_HTML
+    + '<span class="rl-site-header-dot"></span></span>'
+)
 
 
 def get_site_header_html(active: str | None = None) -> str:
@@ -29,7 +36,7 @@ def get_site_header_html(active: str | None = None) -> str:
     return f'''<header class="rl-site-header">
   <div class="rl-site-header-inner">
     <a href="{SITE_BASE_URL}/" class="rl-site-header-logo" aria-label="Roadie Labs">
-      {LOGO_MARK_HTML}
+      {LOGO_TILE_HTML}
       <span class="rl-site-header-wordmark" aria-hidden="true">ROADIE <span>LABS</span></span>
     </a>
     <button class="rl-site-header-toggle" type="button" aria-controls="rl-site-header-nav" aria-expanded="false" aria-label="Open navigation">
@@ -63,10 +70,12 @@ def get_site_header_css() -> str:
     """Return the site header CSS using var(--rl-*) design tokens."""
     return """
 /* ── Site Header ──────────────────────────────────────── */
-.rl-site-header { position: sticky; top: 0; z-index: 900; padding: 16px 24px; border-bottom: 2px solid var(--rl-color-orange); background: var(--rl-color-cool-white); }
+.rl-site-header { position: sticky; top: 0; z-index: 900; padding: 14px 24px; border-bottom: 1px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); }
 .rl-site-header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
-.rl-site-header-logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--rl-color-dark-navy); text-decoration: none; }
-.rl-site-header-mark { display: block; height: 48px; width: auto; flex: none; }
+.rl-site-header-logo { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; color: var(--rl-color-dark-navy); text-decoration: none; }
+.rl-site-header-tile { position: relative; display: inline-flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--rl-radius-md); transform: rotate(-4deg); background: var(--rl-gradient-raised); box-shadow: var(--rl-shadow-raised-sm); }
+.rl-site-header-mark { display: block; height: 34px; width: auto; flex: none; }
+.rl-site-header-dot { position: absolute; right: -3px; bottom: -3px; width: 10px; height: 10px; border-radius: 50%; background: var(--rl-color-score); box-shadow: 0 0 0 2.5px var(--rl-color-cool-white); }
 .rl-site-header-wordmark { font-family: var(--rl-font-data); font-size: 17px; font-weight: 700; letter-spacing: .08em; white-space: nowrap; }
 .rl-site-header-wordmark span { font-weight: 400; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }

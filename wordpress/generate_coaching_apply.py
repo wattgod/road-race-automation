@@ -1265,7 +1265,7 @@ def build_apply_css() -> str:
   flex: 1;
   display: block;
   background: var(--rl-color-signal-red);
-  color: var(--rl-color-near-black);
+  color: var(--rl-color-cool-white);
   padding: var(--rl-spacing-md) var(--rl-spacing-xl);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-base);
@@ -1278,7 +1278,7 @@ def build_apply_css() -> str:
 }
 .rl-apply-submit-btn:hover {
   background-color: var(--rl-color-near-black);
-  color: var(--rl-color-signal-red);
+  color: var(--rl-color-cool-white);
 }
 .rl-apply-submit-btn:disabled {
   cursor: not-allowed;

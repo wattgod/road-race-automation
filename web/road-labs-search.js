@@ -320,7 +320,7 @@
       var marker = L.circleMarker([race.lat, race.lng], {
         radius: race.tier === 1 ? 8 : race.tier === 2 ? 7 : 6,
         fillColor: tierColor,
-        color: '#1a1a1a',
+        color: '#202322',
         weight: 2,
         opacity: 1,
         fillOpacity: 0.85
@@ -711,12 +711,16 @@
   }
 
   // ── Score / rendering helpers ──
+  // Timing Slip: the score is always Maillot Red (the score's one colour);
+  // its size and the number carry the value, not a hue ramp.
   function scoreColor(score) {
-    if (score >= 85) return '#0d1117';
-    if (score >= 75) return '#1a1a2e';
-    if (score >= 65) return '#3d5a80';
-    return '#6c757d';
+    return '#b3302a';
   }
+
+  var COURSE_SCORE_KEYS = {
+    distance: 1, climbing: 1, descent_technicality: 1, road_surface: 1,
+    climate_risk: 1, altitude: 1, logistics: 1
+  };
 
   var SCORE_LABELS = {
     distance: 'Distance', climbing: 'Climbing', descent_technicality: 'Descent Tech',
@@ -739,7 +743,8 @@
       var dots = Array.from({length: 5}, function(_, i) {
         return '<span class="rl-score-dot' + (i < val ? ' filled' : '') + '"></span>';
       }).join('');
-      return '<div class="rl-score-row"><span class="rl-score-row-label">' + label + '</span><span class="rl-score-row-dots">' + dots + '</span></div>';
+      var group = COURSE_SCORE_KEYS[key] ? 'rl-score-row--course' : 'rl-score-row--opinion';
+      return '<div class="rl-score-row ' + group + '"><span class="rl-score-row-label">' + label + '</span><span class="rl-score-row-dots">' + dots + '</span></div>';
     }).join('');
     return '<div class="rl-score-breakdown"><div class="rl-score-grid">' + rows + '</div></div>';
   }
@@ -776,7 +781,7 @@
   // Elite seal SVG — "Certified Fresh" equivalent for Tier 1 races
   var ELITE_SEAL = '<svg class="rl-elite-seal" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">' +
     '<polygon points="14,1 17.5,9.5 27,10 20,16.5 22,26 14,21 6,26 8,16.5 1,10 10.5,9.5" fill="#e63946" stroke="#1a1a2e" stroke-width="1"/>' +
-    '<text x="14" y="17" text-anchor="middle" font-family="Sometype Mono,monospace" font-size="7" font-weight="700" fill="#fff">RL</text>' +
+    '<text x="14" y="17" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" font-weight="700" fill="#fff">RL</text>' +
   '</svg>';
 
   // Terrain tag based on dominant race characteristic
@@ -809,7 +814,7 @@
     var scoreHero = '';
     if (race.overall_score) {
       scoreHero = '<div class="rl-card-score-hero">' +
-        '<span class="rl-card-score-big" style="color:' + scoreColor(race.overall_score) + '">' + race.overall_score + '</span>' +
+        '<span class="rl-card-score-big">' + race.overall_score + '</span>' +
         '<span class="rl-card-score-label">RL</span>' +
       '</div>';
     }
@@ -1259,7 +1264,7 @@
       var angle = (Math.PI * 2 * i / n) - Math.PI / 2;
       var lx = rCx + (rR + 14) * Math.cos(angle);
       var ly = rCy + (rR + 14) * Math.sin(angle);
-      svgContent += '<text x="' + lx + '" y="' + ly + '" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="Sometype Mono,monospace" fill="#3d5a80">' + radarLabels[i] + '</text>';
+      svgContent += '<text x="' + lx + '" y="' + ly + '" text-anchor="middle" dominant-baseline="central" font-size="8" font-family="JetBrains Mono,monospace" fill="#3d5a80">' + radarLabels[i] + '</text>';
     });
     // One polygon per race
     races.forEach(function(r, idx) {

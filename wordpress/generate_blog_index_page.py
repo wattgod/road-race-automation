@@ -125,15 +125,15 @@ def generate_blog_index_page(output_dir=None):
   <script type="application/ld+json">{jsonld}</script>
   <style>
     :root {{
-      --rl-dark-brown: #1a1a1a;
+      --rl-dark-brown: #202322;
       --rl-primary-brown: #555555;
       --rl-secondary-brown: var(--rl-color-tier-2);
       --rl-teal: var(--rl-color-signal-red);
       --rl-light-teal: #4ECDC4;
-      --rl-warm-paper: #f5f5f0;
-      --rl-sand: #f5f5f0;
+      --rl-warm-paper: #fafaf8;
+      --rl-sand: #fafaf8;
       --rl-white: #ffffff;
-      --rl-gold: #333333;
+      --rl-gold: #202322;
     }}
     * {{ margin: 0; padding: 0; box-sizing: border-box; border-radius: 0; }}
     body {{
@@ -160,7 +160,7 @@ def generate_blog_index_page(output_dir=None):
       margin-bottom: 8px;
     }}
     .rl-bi-hero-sub {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
       opacity: 0.7;
     }}
@@ -183,7 +183,7 @@ def generate_blog_index_page(output_dir=None):
       align-items: center;
     }}
     .rl-bi-filter-label {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -191,7 +191,7 @@ def generate_blog_index_page(output_dir=None):
       margin-right: 4px;
     }}
     .rl-bi-chip {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       font-weight: 700;
       padding: 4px 12px;
@@ -209,7 +209,7 @@ def generate_blog_index_page(output_dir=None):
     }}
     .rl-bi-sort {{
       margin-left: auto;
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       border: 2px solid var(--rl-dark-brown);
       padding: 4px 8px;
@@ -218,7 +218,7 @@ def generate_blog_index_page(output_dir=None):
 
     /* Results count */
     .rl-bi-count {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--rl-secondary-brown);
       text-transform: uppercase;
@@ -247,7 +247,7 @@ def generate_blog_index_page(output_dir=None):
       margin-bottom: 8px;
     }}
     .rl-bi-cat {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
       font-weight: 700;
       text-transform: uppercase;
@@ -259,7 +259,7 @@ def generate_blog_index_page(output_dir=None):
     .rl-bi-cat-roundup {{ border-color: var(--rl-teal); color: var(--rl-teal); }}
     .rl-bi-cat-recap {{ border-color: var(--rl-gold); color: var(--rl-gold); }}
     .rl-bi-tier {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       font-weight: 700;
       padding: 2px 6px;
@@ -277,7 +277,7 @@ def generate_blog_index_page(output_dir=None):
     }}
     .rl-bi-card h3 a:hover {{ text-decoration: underline; }}
     .rl-bi-date {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       color: var(--rl-secondary-brown);
       margin-bottom: 8px;
@@ -295,7 +295,7 @@ def generate_blog_index_page(output_dir=None):
       padding: 48px;
       border: 2px solid var(--rl-dark-brown);
       background: var(--rl-white);
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
       color: var(--rl-secondary-brown);
     }}
@@ -303,7 +303,7 @@ def generate_blog_index_page(output_dir=None):
     /* Footer */
     .rl-bi-footer {{
       text-align: center;
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--rl-secondary-brown);
       padding: 24px;

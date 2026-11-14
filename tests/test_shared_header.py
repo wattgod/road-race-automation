@@ -136,13 +136,29 @@ class TestHeaderCSS:
         hex_matches = re.findall(r'#[0-9a-fA-F]{3,8}\b', css_no_comments)
         assert hex_matches == [], f"Raw hex found in CSS: {hex_matches}"
 
-    def test_no_border_radius(self):
-        css = get_site_header_css()
-        assert "border-radius" not in css
+    @staticmethod
+    def _rules_using(css, prop):
+        return [
+            (sel.strip(), body)
+            for sel, body in re.findall(r'([^{}]+)\{([^}]*)\}', css)
+            if prop in body
+        ]
 
-    def test_no_box_shadow(self):
+    def test_border_radius_only_on_glyph_tile(self):
+        """Timing Slip: depth lives on the logo tile and its dot, nowhere else."""
         css = get_site_header_css()
-        assert "box-shadow" not in css
+        rules = self._rules_using(css, "border-radius")
+        assert {sel for sel, _ in rules} == {".rl-site-header-tile", ".rl-site-header-dot"}
+        for _, body in rules:
+            value = re.search(r'border-radius:\s*([^;]+)', body).group(1)
+            assert value.startswith("var(--rl-radius-") or value == "50%"
+
+    def test_box_shadow_only_on_glyph_tile(self):
+        css = get_site_header_css()
+        rules = self._rules_using(css, "box-shadow")
+        assert {sel for sel, _ in rules} == {".rl-site-header-tile", ".rl-site-header-dot"}
+        for _, body in rules:
+            assert "var(--rl-" in re.search(r'box-shadow:\s*([^;]+)', body).group(1)
 
     def test_dropdown_position_absolute(self):
         css = get_site_header_css()
