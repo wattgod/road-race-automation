@@ -204,7 +204,7 @@ def build_dot_map_svg(races: list) -> str:
                 ly -= 14
         placed_labels.append((x, ly))
         parts.append(f'  <text x="{x:.1f}" y="{ly:.1f}" text-anchor="middle" '
-                     f'font-family="Sometype Mono,monospace" font-size="8" '
+                     f'font-family="JetBrains Mono,monospace" font-size="8" '
                      f'fill="{COLORS["dark_brown"]}">{esc(label)}</text>')
 
     parts.append("</svg>")

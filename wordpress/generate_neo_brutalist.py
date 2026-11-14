@@ -1109,21 +1109,21 @@ def _radar_svg(dims: list, explanations: dict, color_fill: str, color_stroke: st
         labels.append(
             f'<text x="{lx:.1f}" y="{ly - 5:.1f}" text-anchor="{anchor}" '
             f'dominant-baseline="central" font-size="10" font-weight="700" '
-            f'fill="{COLORS["dark_brown"]}" font-family="Sometype Mono, monospace" letter-spacing="0.5">'
+            f'fill="{COLORS["dark_brown"]}" font-family="JetBrains Mono, monospace" letter-spacing="0.5">'
             f'{esc(dim_label.upper())}</text>'
             f'<text x="{lx:.1f}" y="{ly + 7:.1f}" text-anchor="{anchor}" '
             f'dominant-baseline="central" font-size="10" font-weight="700" '
-            f'fill="{color_stroke}" font-family="Sometype Mono, monospace">'
+            f'fill="{color_stroke}" font-family="JetBrains Mono, monospace">'
             f'{s}/5</text>'
         )
 
     # Total in center
     center_label = (
         f'<text x="{cx}" y="{cy - 6}" text-anchor="middle" dominant-baseline="central" '
-        f'font-size="22" font-weight="700" fill="{color_stroke}" font-family="Sometype Mono, monospace">'
+        f'font-size="22" font-weight="700" fill="{color_stroke}" font-family="JetBrains Mono, monospace">'
         f'{total}</text>'
         f'<text x="{cx}" y="{cy + 10}" text-anchor="middle" dominant-baseline="central" '
-        f'font-size="9" fill="{COLORS["secondary_blue"]}" font-family="Sometype Mono, monospace" letter-spacing="1">'
+        f'font-size="9" fill="{COLORS["secondary_blue"]}" font-family="JetBrains Mono, monospace" letter-spacing="1">'
         f'/{max_total}</text>'
     )
 
@@ -1136,10 +1136,22 @@ def _radar_svg(dims: list, explanations: dict, color_fill: str, color_stroke: st
       {''.join(labels)}
       {center_label}
       <rect class="rl-radar-tooltip-bg" x="0" y="0" width="0" height="0" fill="{COLORS['near_black']}" rx="0" opacity="0"/>
-      <text class="rl-radar-tooltip-text" x="0" y="0" fill="#fff" font-size="10" font-weight="700" font-family="Sometype Mono, monospace" opacity="0"></text>
+      <text class="rl-radar-tooltip-text" x="0" y="0" fill="#fff" font-size="10" font-weight="700" font-family="JetBrains Mono, monospace" opacity="0"></text>
     </svg>
     <div class="rl-radar-label">{esc(label)}</div>
   </div>'''
+
+
+def _rating_pips(score) -> str:
+    """Five square Timing Slip pips; the number beside them stays the readable value."""
+    try:
+        filled = max(0, min(5, int(score)))
+    except (TypeError, ValueError):
+        filled = 0
+    pips = ''.join(
+        f'<i class="rl-pip{" is-on" if i < filled else ""}"></i>' for i in range(5)
+    )
+    return f'<span class="rl-pips" aria-hidden="true">{pips}</span>'
 
 
 def _build_rating_tiles(dims: list, explanations: dict, group_id: str) -> str:
@@ -1154,6 +1166,7 @@ def _build_rating_tiles(dims: list, explanations: dict, group_id: str) -> str:
             explanation = 'No written explanation is available yet.'
         items.append(f'''<button type="button" class="rl-rating-tile" data-rating-dim="{esc(dim)}" aria-expanded="false">
           <span class="rl-rating-tile-label">{esc(label)}</span><strong>{esc(score)}/5</strong>
+          {_rating_pips(score)}
           <span class="rl-rating-tile-copy">{esc(explanation)}</span>
         </button>''')
     return f'''<div class="rl-rating-breakdown" aria-label="{esc(group_id.title())} score breakdown">
@@ -1170,10 +1183,10 @@ def build_radar_charts(
     """Build tabbed Course/Editorial radar charts with click-to-explain tiles."""
     summaries = summaries or {}
     course_chart = _radar_svg(COURSE_DIMS, explanations,
-                              COLORS['signal_red'], COLORS['signal_red'],
+                              COLORS['score'], COLORS['score'],
                               'Course Profile', course_total, 35, idx_offset=0)
     editorial_chart = _radar_svg(OPINION_DIMS, explanations,
-                                 COLORS['orange'], COLORS['orange'],
+                                 COLORS['opinion'], COLORS['opinion'],
                                  'Editorial', opinion_total, 35, idx_offset=7)
     return f'''<div class="rl-rating-tabs">
       <div class="rl-rating-tablist" role="tablist" aria-label="Rating categories">
@@ -2513,14 +2526,17 @@ def build_hero(rd: dict) -> str:
 
     return f'''<section class="rl-hero">
   <div class="rl-hero-content">
-    <span class="rl-hero-tier">{esc(rd['tier_label'])}</span>{series_badge}
+    <span class="rl-hero-tier rl-tier-pill rl-tier-pill--t{esc(rd.get('tier', 4))}">{esc(rd['tier_label'])}</span>{series_badge}
     <h1>{esc(rd['name'])}</h1>
     <div class="rl-hero-vitals">{vitals_line}</div>
   </div>
   <div class="rl-hero-scores">
-  <div class="rl-hero-score">
-    <div class="rl-hero-score-number">{score}</div>
-    <div class="rl-hero-score-label">LAB SCORE</div>
+  <div class="rl-hero-score rl-score-well">
+    <span class="rl-score-edge" aria-hidden="true">SCORE</span>
+    <div class="rl-score-body">
+      <div class="rl-hero-score-number">{score}</div>
+      <div class="rl-hero-score-label">LAB SCORE &middot; OF 100</div>
+    </div>
   </div>
   <div class="rl-hero-score rl-hero-score--rider">
     {rider_cell}
@@ -3564,7 +3580,7 @@ __GOAL_CARD_STATE_FN__
     canvas.height = H; // resizing clears the canvas AND resets context state
     ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
     ctx.textBaseline = "top";
-    ctx.font = "700 15px 'Sometype Mono', monospace";
+    ctx.font = "700 15px 'JetBrains Mono', monospace";
     ctx.fillStyle = accent;
     ctx.fillText(header, pad, pad);
     ctx.font = goalFont;
@@ -5749,9 +5765,10 @@ def build_similar_races(rd: dict, race_index: list) -> str:
         dist = r.get('distance_mi', '')
         dist_str = f" &middot; {dist} mi" if dist else ''
         cards.append(f'''<a href="/race/{esc(r['slug'])}/" class="rl-similar-card" data-related-race="{esc(r['slug'])}">
-        <span class="rl-similar-tier">T{tier_num}</span>
+        <span class="rl-similar-tier rl-tier-pill rl-tier-pill--t{tier_num}">T{tier_num}</span>
         <span class="rl-similar-name">{esc(r['name'])}</span>
-        <span class="rl-similar-meta">{esc(r.get('location', ''))}{dist_str} &middot; {r.get('overall_score', 0)}/100</span>
+        <span class="rl-similar-meta">{esc(r.get('location', ''))}{dist_str}</span>
+        <span class="rl-similar-score">{esc(r.get('overall_score', 0))}<small> /100</small></span>
       </a>''')
 
     return f'''<section class="rl-section rl-fade-section" id="similar-races">
@@ -5918,7 +5935,7 @@ def get_page_css() -> str:
 {tokens}
 
 /* Skip link */
-.rl-skip-link {{ position: absolute; top: -100px; left: 16px; background: var(--rl-color-orange); color: var(--rl-color-dark-navy); padding: 8px 16px; font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; text-decoration: none; z-index: 999; border: var(--rl-border-standard); }}
+.rl-skip-link {{ position: absolute; top: -100px; left: 16px; background: var(--rl-color-orange); color: #fafaf8; padding: 8px 16px; font-family: var(--rl-font-data); font-size: 12px; font-weight: 700; text-decoration: none; z-index: 999; border: var(--rl-border-standard); }}
 .rl-skip-link:focus {{ top: 8px; outline: 3px solid var(--rl-color-near-black); outline-offset: 2px; }}
 
 /* Focus indicators */
@@ -5938,9 +5955,11 @@ def get_page_css() -> str:
   line-height: 1.6;
   background: var(--rl-color-cool-white);
 }}
-.rl-neo-brutalist-page *, .rl-neo-brutalist-page *::before, .rl-neo-brutalist-page *::after {{
-  border-radius: 0 !important;
-  box-shadow: none !important;
+/* Flat by default; Timing Slip components opt into depth (radius/shadow
+   tokens) with ordinary class rules, so the reset carries zero specificity. */
+:where(.rl-neo-brutalist-page) *, :where(.rl-neo-brutalist-page) *::before, :where(.rl-neo-brutalist-page) *::after {{
+  border-radius: 0;
+  box-shadow: none;
   box-sizing: border-box;
 }}
 
@@ -6061,7 +6080,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-cal-btn--google {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
 .rl-neo-brutalist-page .rl-cal-btn--google:hover {{ background: var(--rl-color-signal-red); color: var(--rl-color-white); }}
 .rl-neo-brutalist-page .rl-cal-btn--ics {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
-.rl-neo-brutalist-page .rl-cal-btn--ics:hover {{ background: var(--rl-color-orange); color: var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-cal-btn--ics:hover {{ background: var(--rl-color-orange); color: #fafaf8; }}
 
 /* Difficulty gauge */
 .rl-neo-brutalist-page .rl-difficulty-gauge {{ margin-top: 20px; border: var(--rl-border-standard); padding: 16px; background: var(--rl-color-cool-white); }}
@@ -6216,7 +6235,7 @@ def get_page_css() -> str:
 
 /* Buttons */
 .rl-neo-brutalist-page .rl-btn {{ display: inline-block; padding: 10px 24px; font-family: var(--rl-font-data); font-size: var(--rl-font-size-xs); font-weight: 700; text-transform: uppercase; letter-spacing: var(--rl-letter-spacing-wider); text-decoration: none; cursor: pointer; border: var(--rl-border-standard); transition: background 0.15s, color 0.15s; }}
-.rl-neo-brutalist-page .rl-btn--primary {{ background: var(--rl-color-orange); color: var(--rl-color-dark-navy); }}
+.rl-neo-brutalist-page .rl-btn--primary {{ background: var(--rl-color-orange); color: #fafaf8; }}
 .rl-neo-brutalist-page .rl-btn--primary:hover {{ background: var(--rl-color-light-orange); }}
 .rl-neo-brutalist-page .rl-btn--secondary {{ background: var(--rl-color-signal-red); color: var(--rl-color-white); }}
 .rl-neo-brutalist-page .rl-btn--secondary:hover {{ background: var(--rl-color-coral); }}
@@ -6229,7 +6248,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-training-bullets {{ list-style: none; padding: 0; margin-bottom: 24px; }}
 .rl-neo-brutalist-page .rl-training-bullets li {{ font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-xs); line-height: var(--rl-line-height-relaxed); color: var(--rl-color-primary-navy); padding: 6px 0; padding-left: 20px; position: relative; }}
 .rl-neo-brutalist-page .rl-training-bullets li::before {{ content: '\\2014'; position: absolute; left: 0; color: var(--rl-color-orange); }}
-.rl-neo-brutalist-page .rl-training-primary .rl-btn {{ background: var(--rl-color-orange); color: var(--rl-color-dark-navy); border-color: var(--rl-color-orange); }}
+.rl-neo-brutalist-page .rl-training-primary .rl-btn {{ background: var(--rl-color-orange); color: #fafaf8; border-color: var(--rl-color-orange); }}
 .rl-neo-brutalist-page .rl-training-primary .rl-btn:hover {{ background: var(--rl-color-light-orange); }}
 .rl-neo-brutalist-page .rl-training-divider {{ display: flex; align-items: center; gap: 16px; margin: 20px 0; }}
 .rl-neo-brutalist-page .rl-training-divider-line {{ flex: 1; height: 1px; background: var(--rl-color-silver); }}
@@ -6301,7 +6320,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-pack-viz-z3 {{ background: var(--rl-color-silver); color: var(--rl-color-near-black); }}
 .rl-neo-brutalist-page .rl-pack-viz-z4 {{ background: var(--rl-color-primary-navy); color: var(--rl-color-silver); }}
 .rl-neo-brutalist-page .rl-pack-viz-z5 {{ background: var(--rl-color-near-black); color: var(--rl-color-silver); }}
-.rl-neo-brutalist-page .rl-pack-viz-z6 {{ background: var(--rl-color-near-black); color: var(--rl-color-coral); }}
+.rl-neo-brutalist-page .rl-pack-viz-z6 {{ background: var(--rl-color-near-black); color: #fafaf8; }}
 .rl-neo-brutalist-page .rl-pack-workout-detail {{ padding: 0 16px 16px; border-top: 1px solid var(--rl-color-silver); margin: 0 16px; }}
 .rl-neo-brutalist-page .rl-pack-wo-field {{ display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--rl-color-silver) 50%, transparent); }}
 .rl-neo-brutalist-page .rl-pack-wo-field:last-child {{ border-bottom: none; }}
@@ -6482,7 +6501,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-similar-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }}
 .rl-neo-brutalist-page .rl-similar-card {{ display: block; border: var(--rl-border-subtle); padding: 16px; background: var(--rl-color-cool-white); text-decoration: none; color: var(--rl-color-dark-navy); transition: border-color 0.15s, background 0.15s; }}
 .rl-neo-brutalist-page .rl-similar-card:hover {{ border-color: var(--rl-color-orange); background: var(--rl-color-silver); }}
-.rl-neo-brutalist-page .rl-similar-tier {{ font-family: var(--rl-font-data); display: inline-block; background: var(--rl-color-orange); color: var(--rl-color-dark-navy); padding: 2px 8px; font-size: 9px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); margin-bottom: 6px; }}
+.rl-neo-brutalist-page .rl-similar-tier {{ font-family: var(--rl-font-data); display: inline-block; background: var(--rl-color-orange); color: #fafaf8; padding: 2px 8px; font-size: 9px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); margin-bottom: 6px; }}
 .rl-neo-brutalist-page .rl-similar-name {{ font-family: var(--rl-font-editorial); display: block; font-size: var(--rl-font-size-base); font-weight: var(--rl-font-weight-semibold); letter-spacing: 0; margin-bottom: 4px; }}
 .rl-neo-brutalist-page .rl-similar-meta {{ display: block; font-size: var(--rl-font-size-2xs); color: var(--rl-color-secondary-blue); letter-spacing: 0.5px; }}
 
@@ -6767,12 +6786,77 @@ APPROVED_TOP_CSS = '''<style>
 </style>'''
 
 
+# Timing Slip (Nov 2026). Loaded last so it wins over the legacy rules at
+# equal specificity. Each role colour means one thing: red = the Lab Score and
+# course ratings, blue = editorial/rider opinion, green = the training offer,
+# gold = the Tier 1 fill (ink text on it). Depth only on the score well, the
+# rating pips, tier pills and the offer.
+TIMING_SLIP_CSS = '''<style>
+.rl-neo-brutalist-page h1, .rl-neo-brutalist-page .rl-hero h1 { font-weight: 900; letter-spacing: -0.01em; }
+.rl-neo-brutalist-page .rl-hero { border-bottom: 1px solid var(--rl-color-ink); align-items: center; }
+.rl-tier-pill { display: inline-block; padding: 4px 8px; border-radius: var(--rl-radius-sm); font-family: var(--rl-font-data); font-weight: 800; letter-spacing: 0.12em; color: var(--rl-color-ink); background: transparent; line-height: 1.3; }
+.rl-tier-pill--t1 { background: var(--rl-color-tier-gold); color: var(--rl-color-ink); }
+.rl-tier-pill--t2 { box-shadow: inset 0 0 0 1.5px var(--rl-color-ink); }
+.rl-tier-pill--t3 { box-shadow: inset 0 0 0 1px var(--rl-color-steel); color: var(--rl-color-graphite); }
+.rl-tier-pill--t4 { padding-left: 0; padding-right: 0; color: var(--rl-color-graphite); }
+.rl-neo-brutalist-page .rl-hero-tier.rl-tier-pill { color: var(--rl-color-ink); }
+.rl-neo-brutalist-page .rl-hero-tier.rl-tier-pill--t3, .rl-neo-brutalist-page .rl-hero-tier.rl-tier-pill--t4 { color: var(--rl-color-graphite); }
+.rl-neo-brutalist-page .rl-similar-tier.rl-tier-pill { padding: 3px 7px; font-size: 9px; margin-bottom: 8px; background: transparent; color: var(--rl-color-ink); }
+.rl-neo-brutalist-page .rl-similar-tier.rl-tier-pill--t1 { background: var(--rl-color-tier-gold); }
+.rl-neo-brutalist-page .rl-similar-tier.rl-tier-pill--t3, .rl-neo-brutalist-page .rl-similar-tier.rl-tier-pill--t4 { color: var(--rl-color-graphite); }
+.rl-neo-brutalist-page .rl-similar-tier.rl-tier-pill--t4 { padding-left: 0; }
+.rl-neo-brutalist-page .rl-score-well { display: flex; align-items: stretch; text-align: left; border-radius: var(--rl-radius-md); overflow: hidden; background: var(--rl-color-well); box-shadow: var(--rl-shadow-well); }
+.rl-neo-brutalist-page .rl-score-edge { flex: none; width: 24px; background: var(--rl-color-score); color: #fff; writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: center; font-family: var(--rl-font-data); font-size: 9px; font-weight: 800; letter-spacing: 0.2em; }
+.rl-neo-brutalist-page .rl-score-body { padding: 14px 20px 12px 16px; }
+.rl-neo-brutalist-page .rl-score-well .rl-hero-score-number { font-family: var(--rl-font-data); font-weight: 800; font-size: 64px; letter-spacing: -0.02em; color: var(--rl-color-ink); }
+.rl-neo-brutalist-page .rl-score-well .rl-hero-score-label { color: var(--rl-color-graphite); letter-spacing: 0.16em; font-weight: 400; }
+.rl-neo-brutalist-page .rl-hero-score--rider { border-left-color: var(--rl-color-silver); }
+.rl-neo-brutalist-page .rl-hero-score--rider .rl-hero-score-number { font-family: var(--rl-font-data); font-weight: 800; font-size: 48px; color: var(--rl-color-opinion); }
+.rl-neo-brutalist-page .rl-hero-score--rider .rl-hero-rider-empty { color: var(--rl-color-light-steel); }
+.rl-neo-brutalist-page .rl-rating-tablist, .rl-neo-brutalist-page .rl-rating-panel { border-width: 1px; }
+.rl-neo-brutalist-page .rl-rating-tablist button { border-right-width: 1px; }
+.rl-neo-brutalist-page #rl-rating-tab-course[aria-selected="true"] { background: var(--rl-color-ink); box-shadow: inset 0 -4px 0 var(--rl-color-score); }
+.rl-neo-brutalist-page #rl-rating-tab-editorial[aria-selected="true"] { background: var(--rl-color-ink); box-shadow: inset 0 -4px 0 var(--rl-color-opinion); }
+.rl-neo-brutalist-page .rl-rating-summary { background: var(--rl-color-well); border-bottom-width: 1px; }
+.rl-neo-brutalist-page [data-rating-group="course"] .rl-rating-summary span { color: var(--rl-color-score); }
+.rl-neo-brutalist-page [data-rating-group="editorial"] .rl-rating-summary span { color: var(--rl-color-opinion); }
+.rl-neo-brutalist-page .rl-rating-panel .rl-radar-chart { border-right-width: 1px; }
+.rl-neo-brutalist-page .rl-rating-tile:nth-child(4n+3), .rl-neo-brutalist-page .rl-rating-tile:nth-child(4n+4) { background: var(--rl-color-zebra); }
+.rl-neo-brutalist-page .rl-rating-tile strong { font-family: var(--rl-font-data); font-weight: 800; font-size: 14px; }
+.rl-pips { display: flex; gap: 3px; margin-top: 10px; clear: both; }
+.rl-pip { display: block; width: 18px; height: 18px; border-radius: 3px; background: var(--rl-color-well); box-shadow: inset 0 1px 2px rgba(0,0,0,0.14); }
+[data-rating-group="course"] .rl-pip.is-on { background: var(--rl-color-score); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+[data-rating-group="editorial"] .rl-pip.is-on { background: var(--rl-color-opinion); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+.rl-neo-brutalist-page .rl-similar-card { border: 0; border-top: 1px solid var(--rl-color-ink); }
+.rl-neo-brutalist-page .rl-similar-meta { color: var(--rl-color-graphite); }
+.rl-neo-brutalist-page .rl-similar-score { display: inline-block; margin-top: 8px; padding-left: 8px; border-left: 4px solid var(--rl-color-score); font-family: var(--rl-font-data); font-weight: 800; font-size: 20px; line-height: 1; color: var(--rl-color-ink); }
+.rl-neo-brutalist-page .rl-similar-score small { font-weight: 400; font-size: 11px; color: var(--rl-color-graphite); }
+.rl-approved-section.rl-offer { border: 0; border-radius: var(--rl-radius-lg); background: var(--rl-gradient-raised); box-shadow: var(--rl-shadow-raised); overflow: hidden; }
+.rl-offer .rl-approved-kicker { color: var(--rl-color-offer); font-weight: 800; }
+.rl-offer p { color: var(--rl-color-graphite); }
+.rl-plan-cta, .rl-neo-brutalist-page #rl-sticky-cta-link, .rl-sticky-cta #rl-sticky-cta-link, .rl-neo-brutalist-page a.rl-btn[data-cta="custom_plan"], .rl-neo-brutalist-page #rl-prep-cta, .rl-neo-brutalist-page #rl-pack-cta-link, .rl-neo-brutalist-page .rl-plan-ladder-cta, .rl-neo-brutalist-page .rl-cfg-cta-btn {
+  border: 0; border-radius: var(--rl-radius-md); background: var(--rl-gradient-offer); color: #fff; box-shadow: var(--rl-shadow-offer); font-weight: 800; letter-spacing: 0.1em;
+}
+.rl-plan-cta:hover, .rl-neo-brutalist-page #rl-sticky-cta-link:hover, .rl-sticky-cta #rl-sticky-cta-link:hover, .rl-neo-brutalist-page a.rl-btn[data-cta="custom_plan"]:hover, .rl-neo-brutalist-page #rl-prep-cta:hover, .rl-neo-brutalist-page #rl-pack-cta-link:hover, .rl-neo-brutalist-page .rl-plan-ladder-cta:hover, .rl-neo-brutalist-page .rl-cfg-cta-btn:hover { background: var(--rl-color-offer-dark); color: #fff; }
+.rl-coaching-note { border-width: 1px; }
+.rl-coaching-link { border: 0; border-radius: var(--rl-radius-md); background: var(--rl-color-ink); color: var(--rl-color-paper); }
+@media (max-width: 700px) {
+  .rl-neo-brutalist-page .rl-hero { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .rl-neo-brutalist-page .rl-hero-scores { order: -1; width: 100%; }
+  .rl-neo-brutalist-page .rl-hero-score--rider { flex: 1 1 0; min-width: 0; max-width: none; }
+  .rl-neo-brutalist-page .rl-hero-score--rider .rl-hero-score-label { letter-spacing: 0.1em; }
+  .rl-neo-brutalist-page .rl-score-well .rl-hero-score-number { font-size: 44px; }
+  .rl-neo-brutalist-page .rl-hero-score--rider .rl-hero-score-number { font-size: 36px; }
+}
+</style>'''
+
+
 # ── Shared Assets ─────────────────────────────────────────────
 
 
 def _extract_css_content() -> str:
     """Extract raw CSS from get_page_css() (strip <style> tags)."""
-    raw = get_page_css() + APPROVED_TOP_CSS
+    raw = get_page_css() + APPROVED_TOP_CSS + TIMING_SLIP_CSS
     return raw.replace('<style>', '').replace('</style>', '').strip()
 
 
@@ -6794,19 +6878,26 @@ def write_shared_assets(output_dir: Path) -> dict:
     for old in fonts_dir.glob("*.woff2"):
         if old.name not in wanted:
             old.unlink()
-    local_fonts_dir = Path(__file__).resolve().parent.parent / 'web' / 'fonts'
-    copied_fonts = 0
+    # The brand repo is the source; assets/fonts/ vendors the same files so a
+    # checkout without a sibling road-labs-brand still ships real fonts.
+    local_fonts_dir = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
+    missing = []
     for font_file in FONT_FILES:
         brand_src = BRAND_FONTS_DIR / font_file
         local_src = local_fonts_dir / font_file
         src = brand_src if brand_src.exists() else local_src
-        dst = fonts_dir / font_file
         if src.exists():
-            shutil.copy2(src, dst)
-            copied_fonts += 1
+            shutil.copy2(src, fonts_dir / font_file)
         else:
-            print(f"  WARNING: Font file not found in brand or local bundle: {font_file}")
-    print(f"  Copied {copied_fonts}/{len(FONT_FILES)} font files to {fonts_dir}/")
+            missing.append(font_file)
+    if missing:
+        # Every page's @font-face points at these files; shipping without
+        # them would silently render the browser's default monospace.
+        raise FileNotFoundError(
+            "Font files missing from road-labs-brand/assets/fonts and "
+            f"assets/fonts: {', '.join(missing)}"
+        )
+    print(f"  Copied {len(FONT_FILES)}/{len(FONT_FILES)} font files to {fonts_dir}/")
 
     css_content = _extract_css_content()
     js_content = _extract_js_content()
@@ -6942,7 +7033,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
         css = critical_css + '\n  ' + external_assets['css_tag']
         inline_js = external_assets['js_tag']
     else:
-        css = get_page_css() + APPROVED_TOP_CSS
+        css = get_page_css() + APPROVED_TOP_CSS + TIMING_SLIP_CSS
         inline_js = build_inline_js()
 
     # Approved shared contract: ratings → custom plan → coaching footnote →

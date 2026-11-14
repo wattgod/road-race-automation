@@ -379,12 +379,12 @@ def generate_preview_html(slug):
   <link rel="canonical" href="{SITE_URL}/blog/{slug}/">
   <style>
     :root {{
-      --rl-dark-brown: #1a1a1a;
+      --rl-dark-brown: #202322;
       --rl-primary-brown: #555555;
       --rl-secondary-brown: var(--rl-color-tier-2);
       --rl-teal: var(--rl-color-signal-red);
-      --rl-warm-paper: #f5f5f0;
-      --rl-sand: #f5f5f0;
+      --rl-warm-paper: #fafaf8;
+      --rl-sand: #fafaf8;
       --rl-white: #ffffff;
     }}
     * {{ margin: 0; padding: 0; box-sizing: border-box; border-radius: 0; }}
@@ -403,7 +403,7 @@ def generate_preview_html(slug):
       margin-bottom: 32px;
     }}
     .rl-blog-hero-meta {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -417,7 +417,7 @@ def generate_preview_html(slug):
       margin-bottom: 8px;
     }}
     .rl-blog-hero-sub {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
       opacity: 0.7;
     }}
@@ -428,7 +428,7 @@ def generate_preview_html(slug):
       background: var(--rl-white);
     }}
     .rl-blog-section h2 {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
@@ -458,13 +458,13 @@ def generate_preview_html(slug):
       background: var(--rl-warm-paper);
     }}
     .rl-blog-stat-val {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 20px;
       font-weight: 700;
       display: block;
     }}
     .rl-blog-stat-label {{
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -482,7 +482,7 @@ def generate_preview_html(slug):
       padding: 12px 32px;
       background: var(--rl-teal);
       color: var(--rl-white);
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
@@ -494,7 +494,7 @@ def generate_preview_html(slug):
     .rl-blog-cta a:hover {{ background: var(--rl-primary-brown); border-color: var(--rl-primary-brown); }}
     .rl-blog-footer {{
       text-align: center;
-      font-family: 'Sometype Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--rl-secondary-brown);
       padding: 24px;

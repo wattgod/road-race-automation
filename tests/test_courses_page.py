@@ -128,7 +128,7 @@ class TestBrandCompliance:
 
     def test_fonts_present(self, page_html):
         # Standalone build embeds full page CSS with @font-face declarations
-        assert "Sometype Mono" in page_html
+        assert "JetBrains Mono" in page_html
         assert "Source Serif 4" in page_html
 
     def test_header_present(self, page_html):

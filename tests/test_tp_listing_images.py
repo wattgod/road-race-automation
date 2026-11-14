@@ -104,8 +104,8 @@ def test_normal_render_palette_never_uses_oxblood():
     }
 
     assert oxblood not in happy_path_colors
-    assert tp.PAPER == (245, 245, 240)
-    assert tp.DARK_BROWN == (26, 26, 26)
+    assert tp.PAPER == (250, 250, 248)
+    assert tp.DARK_BROWN == (32, 35, 34)
     assert tp.RADAR_COURSE == (74, 74, 74)
 
 

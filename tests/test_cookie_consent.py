@@ -124,7 +124,7 @@ class TestHexParity:
     EXPECTED_MAPPING = {
         "#555555": "rl-color-coral",
         "#d0d0c8": "rl-color-silver",
-        "#333333": "rl-color-signal-red",
+        "#202322": "rl-color-signal-red",
         "#ffffff": "rl-color-white",
     }
 
@@ -139,7 +139,7 @@ class TestHexParity:
         assert "#555555" in css
 
     def test_signal_red_present(self, css):
-        assert "#333333" in css
+        assert "#202322" in css
 
     def test_silver_present(self, css):
         assert "#d0d0c8" in css
@@ -236,7 +236,7 @@ class TestCssBrandCompliance:
     """CSS follows brand rules."""
 
     def test_sometype_mono_font(self, css):
-        assert "'Sometype Mono'" in css
+        assert "'JetBrains Mono'" in css
 
     def test_no_opacity_transition(self, css):
         """Brand rule: no opacity transitions."""

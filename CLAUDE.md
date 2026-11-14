@@ -64,8 +64,8 @@ Roadie Labs is a scored event database for road cycling (gran fondos, sportives,
 - **Brand**: Roadie Labs
 - **Domain**: roadielabs.com (not yet live)
 - **CSS variable prefix**: `--rl-` (not `--gg-`)
-- **Palette**: Newsprint/Charcoal monochrome — rich black `#1a1a1a` on newsprint `#f5f5f0`, oxblood `#8b1a1a` as the only non-mono color (error only). The `signal-red` token holds charcoal `#333333`; trust values, not token names. Neo-brutalist rules: no border-radius, no box-shadow, solid borders. See `.claude/skills/brand-and-trust/SKILL.md`.
-- **Fonts**: Sometype Mono (data), Source Serif 4 (editorial). Unbounded was removed Jul 2026 (never deployed, preloads 404'd) — don't reintroduce.
+- **Palette**: Timing Slip (Nov 2026) — ink `#202322` on paper `#fafaf8`, graphite `#555555` for secondary text. Four role colours, each meaning one thing only: Maillot Red `#b3302a` = the Lab Score and course ratings, Col Blue `#2d5f8b` = editorial/rider opinion, Sprint Green `#2e7a4f` = the training offer, Jersey Gold `#d99a1e` = Tier 1 fill (ink text on it). Oxblood `#8b1a1a` = errors only. Legacy token names (`signal-red`, `orange`, `dark-navy`) resolve to ink/graphite; trust values, not token names. Flat by default; depth (radius, raised, well) only via the `--rl-radius-*` / `--rl-shadow-*` / `--rl-gradient-*` tokens on the score well, rating pips, tier pills, the logo tile and the offer. See `.claude/skills/brand-and-trust/SKILL.md`.
+- **Fonts**: JetBrains Mono (data; numbers 800, units 400, tracked-caps labels), Source Serif 4 (editorial). Sometype Mono was replaced Nov 2026; the OG and TrainingPeaks listing image scripts still render with it. Unbounded was removed Jul 2026 (never deployed, preloads 404'd) — don't reintroduce.
 - **Brand tokens**: `wordpress/brand_tokens.py` reads from `road-labs-brand` repo
 
 ## Architecture

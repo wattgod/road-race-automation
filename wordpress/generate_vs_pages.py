@@ -167,7 +167,7 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
         elif lx > cx + 10:
             anchor = "start"
         parts.append(f'  <text x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" '
-                     f'font-family="Sometype Mono,monospace" font-size="9" '
+                     f'font-family="JetBrains Mono,monospace" font-size="9" '
                      f'fill="{COLORS["secondary_blue"]}" dominant-baseline="middle">{RADAR_LABELS[i]}</text>')
 
     # Race polygons
@@ -190,7 +190,7 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
         lx = 60 + idx * 220
         c = COMPARE_COLORS[idx]
         parts.append(f'  <rect x="{lx}" y="{ly}" width="14" height="14" fill="{c["stroke"]}"/>')
-        parts.append(f'  <text x="{lx + 20}" y="{ly + 11}" font-family="Sometype Mono,monospace" '
+        parts.append(f'  <text x="{lx + 20}" y="{ly + 11}" font-family="JetBrains Mono,monospace" '
                      f'font-size="11" fill="{COLORS["dark_brown"]}">{esc(race["name"][:30])}</text>')
 
     parts.append("</svg>")

@@ -53,6 +53,6 @@ derivable from the code. Read the one matching your task before starting.
 ## Non-negotiables (full text in CLAUDE.md)
 
 - `fondo_rating` is the rating key. `gravel_god_rating` is the wrong repo.
-- Roadie Labs is Newsprint/Charcoal, not the Gravel God desert palette.
+- Roadie Labs is Timing Slip (ink on paper, one meaning per role colour), not the Gravel God desert palette.
 - Never fabricate testimonials, quotes, or review counts. Ever.
 - If the site is unreachable, check the SSL cert before touching code.

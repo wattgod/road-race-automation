@@ -31,28 +31,35 @@ hardcoding; it does not protect `brand_tokens.py` itself from drifting off
 Generators must pull colors from `brand_tokens.py` (`COLORS` dict or the CSS
 custom properties, `--rl-*`) — never inline a new hex value in a generator.
 
-## 2. Palette identity — Newsprint / Charcoal, not Gravel God desert
+## 2. Palette identity — Timing Slip, not Gravel God desert
 
-Roadie Labs is monochrome, not the Gravel God warm brown/tan/gold palette.
+Roadie Labs uses Timing Slip (adopted Nov 2026): a results sheet on paper.
 CSS prefix is `--rl-*`, never `--gg-*`. Verified current values (`tokens.css`
 / `brand_tokens.py`, matching):
-- Rich black `#1a1a1a` (text, borders, primary, T1 tier)
-- Charcoal `#333333` (accent/CTA — token name is `signal-red` but the actual
-  color is charcoal, not red; don't trust token names over values)
-- Medium gray `#555555`, muted gray `#777777` (T3 tier), light gray `#999999`
-  / `#b8b8b0`
-- Warm silver `#d0d0c8` (borders/dividers), newsprint `#f5f5f0` (background,
-  not sterile white), white `#ffffff`
-- Error/oxblood `#8b1a1a` — the only non-monochrome color in the system
-- Tiers: T1 `#1a1a1a`, T2 `#4a4a4a`, T3 `#777777`, T4 `#aaaaaa`
+- Ink `#202322` (text, borders, primary), paper `#fafaf8` (background),
+  graphite `#555555` (secondary text, 7.1:1 on paper), white `#ffffff`
+- Well `#efefea` (sunken score and vitals), zebra `#f2f2ed` (alternate rows),
+  silver `#d0d0c8` (dividers), steel `#999999` / `#b8b8b0`
+- Role colours, each meaning one thing and appearing nowhere else:
+  - Maillot Red `#b3302a` — the Lab Score and course ratings
+  - Col Blue `#2d5f8b` — editorial and rider-opinion ratings
+  - Sprint Green `#2e7a4f` — the training offer (plan CTAs)
+  - Jersey Gold `#d99a1e` — Tier 1 fill only, always ink text on it
+- Error/oxblood `#8b1a1a` — errors only, always with an icon and words
+- Legacy token names (`signal-red`, `orange`, `dark-navy`, `secondary-blue`)
+  resolve to ink or graphite, never to a role colour. Trust values, not names.
+- Tiers: T1 gold fill, T2 1.5px ink outline, T3 thin steel outline,
+  T4 plain graphite text.
 
-Fonts: Source Serif 4 (editorial) + Sometype Mono (data). `road-labs-brand/CLAUDE.md`
-still lists Unbounded as a display font, but this repo's `CLAUDE.md` and
-`brand_tokens.py` note Unbounded was removed Jul 2026 (never deployed, every
-page 404'd its preload) — don't reintroduce without updating both sides.
-Neo-brutalist rules: no border-radius, no box-shadow, 2-3px solid borders
-(4px double on structural breaks), hover transitions limited to
-border-color/background-color/color at 300ms.
+Fonts: Source Serif 4 (editorial) + JetBrains Mono (data: numbers at 800,
+units at 400, labels in tracked caps). Sometype Mono was replaced Nov 2026;
+only the OG and TrainingPeaks listing image scripts still use its files.
+Unbounded was removed Jul 2026 — don't reintroduce.
+Depth rules: flat by default (rule lines, zebra rows). Radius, raised and
+well depth come only from the `--rl-radius-*`, `--rl-shadow-*` and
+`--rl-gradient-*` tokens, on the score well, rating pips, tier pills, the
+logo tile and the offer card/button. Hover transitions stay limited to
+border-color/background-color/color.
 
 When porting a generator or component from `gravel-race-automation`, the
 Gravel God `--gg-*` palette (warm brown/tan/gold) must not leak through —

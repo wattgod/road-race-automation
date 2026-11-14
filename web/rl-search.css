@@ -1,28 +1,41 @@
 /* rl-search self-contained tokens */
 :root{
-  --rl-color-cool-white: #f5f5f0;
+  --rl-color-cool-white: #fafaf8;
   --rl-color-light-steel: #b8b8b0;
-  --rl-color-near-black: #1a1a1a;
-  --rl-color-primary-navy: #1a1a1a;
+  --rl-color-near-black: #202322;
+  --rl-color-primary-navy: #202322;
   --rl-color-secondary-blue: #666666;
   --rl-color-silver: #d0d0c8;
-  --rl-color-tier-1: #1a1a1a;
+  --rl-color-tier-1: #202322;
   --rl-color-tier-2: #4a4a4a;
   --rl-color-tier-3: #666666;
-  --rl-color-tier-4: #777777;
+  --rl-color-tier-4: #555555;
   --rl-color-white: #ffffff;
-  --rl-font-data: 'Sometype Mono', monospace;
+  --rl-font-data: 'JetBrains Mono', monospace;
   --rl-font-editorial: 'Source Serif 4', Georgia, serif;
+  /* Timing Slip role colours + depth (mirror wordpress/brand_tokens.py) */
+  --rl-color-ink: #202322;
+  --rl-color-graphite: #555555;
+  --rl-color-steel: #999999;
+  --rl-color-score: #b3302a;
+  --rl-color-opinion: #2d5f8b;
+  --rl-color-tier-gold: #d99a1e;
+  --rl-color-well: #efefea;
+  --rl-radius-sm: 5px;
+  --rl-radius-md: 10px;
+  --rl-shadow-raised-sm: 0 0 0 1px rgba(0,0,0,0.12), inset 0 1px 0 #fff, 0 1px 2px rgba(0,0,0,0.08);
+  --rl-gradient-raised: linear-gradient(180deg, #ffffff 0%, #f1f1ec 100%);
+  --rl-shadow-well: inset 0 1px 3px rgba(0,0,0,0.14), 0 1px 0 #fff;
 }
 
     /* Self-hosted fonts — loaded from race page assets */
     @font-face {
-      font-family: 'Sometype Mono';
+      font-family: 'JetBrains Mono';
       font-style: normal;
-      font-weight: 400 700;
+      font-weight: 100 800;
       font-display: swap;
-      src: url('/race/assets/fonts/SometypeMono-normal-latin.woff2') format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      src: url('/race/assets/fonts/JetBrainsMono-normal-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
     @font-face {
       font-family: 'Source Serif 4';
@@ -35,21 +48,21 @@
 
     /* Brand tokens */
     #rl-race-search {
-      --rl-color-near-black: #1a1a1a;
-      --rl-color-primary-navy: #1a1a1a;
+      --rl-color-near-black: #202322;
+      --rl-color-primary-navy: #202322;
       --rl-color-secondary-blue: #4a4a4a;
       --rl-color-silver: #d0d0c8;
-      --rl-color-light-steel: #f5f5f0;
-      --rl-color-cool-white: #f5f5f0;
-      --rl-color-secondary-blue: #333333;
-      --rl-color-primary-navy: #333333;
-      --rl-color-near-black: #1a1a1a;
+      --rl-color-light-steel: #fafaf8;
+      --rl-color-cool-white: #fafaf8;
+      --rl-color-secondary-blue: #202322;
+      --rl-color-primary-navy: #202322;
+      --rl-color-near-black: #202322;
       --rl-color-white: #ffffff;
-      --rl-color-tier-1: #1a1a1a;
+      --rl-color-tier-1: #202322;
       --rl-color-tier-2: #4a4a4a;
       --rl-color-tier-3: #666666;
-      --rl-color-tier-4: #777777;
-      --rl-font-data: 'Sometype Mono', monospace;
+      --rl-color-tier-4: #555555;
+      --rl-font-data: 'JetBrains Mono', monospace;
       --rl-font-editorial: 'Source Serif 4', Georgia, serif;
     }
 
@@ -232,7 +245,7 @@
       margin-bottom: 12px;
     }
     #rl-race-search .rl-nearme-btn {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 1px !important;
@@ -253,7 +266,7 @@
       border-color: var(--rl-color-primary-navy) !important;
     }
     #rl-race-search .rl-nearme-radius {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       padding: 6px 8px !important;
       border: 2px solid var(--rl-color-primary-navy) !important;
@@ -552,7 +565,7 @@
     #rl-race-search .rl-card-transcript-snippet mark {
       background: #d1f0ee;
       background: color-mix(in srgb, var(--rl-color-primary-navy) 20%, transparent);
-      color: #1a1a1a;
+      color: #202322;
       color: var(--rl-color-near-black);
     }
 
@@ -651,7 +664,7 @@
       margin-bottom: 12px;
     }
     #rl-race-search .rl-saved-btn {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 1px !important;
@@ -678,7 +691,7 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       padding: 4px 10px !important;
       border: 2px solid var(--rl-color-secondary-blue) !important;
@@ -802,7 +815,7 @@
       margin-bottom: 12px;
     }
     #rl-race-search .rl-view-btn {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 1.5px !important;
@@ -830,7 +843,7 @@
     }
     #rl-race-search #rl-map-container.visible { display: block; }
     /* Leaflet popup overrides */
-    #rl-race-search .rl-map-popup { font-family: 'Sometype Mono', monospace; }
+    #rl-race-search .rl-map-popup { font-family: 'JetBrains Mono', monospace; }
     #rl-race-search .rl-map-popup .rl-popup-name {
       font-family: 'Source Serif 4', Georgia, serif;
       font-size: 14px; font-weight: 700; margin: 0 0 4px;
@@ -1047,7 +1060,7 @@
     #rl-race-search .rl-fav-btn:hover { color: var(--rl-color-primary-navy) !important; }
     #rl-race-search .rl-fav-btn.rl-fav-active { color: var(--rl-color-primary-navy) !important; }
     #rl-race-search .rl-fav-toggle-btn {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 1px !important;
@@ -1413,7 +1426,7 @@
       margin-bottom: 12px;
     }
     #rl-race-search .rl-display-btn {
-      font-family: 'Sometype Mono', monospace !important;
+      font-family: 'JetBrains Mono', monospace !important;
       font-size: 11px !important;
       font-weight: 700 !important;
       letter-spacing: 1.5px !important;
@@ -1586,3 +1599,18 @@
       text-decoration: underline !important;
       color: var(--rl-color-primary-navy) !important;
     }
+
+    /* ── Timing Slip (Nov 2026) ─────────────────────────────
+       Loaded last. Red = the score and course ratings, blue = opinion
+       ratings, gold = the Tier 1 fill (ink text). Depth only via tokens. */
+    #rl-race-search .rl-tier-badge { border-radius: var(--rl-radius-sm) !important; font-weight: 800; letter-spacing: 0.12em; }
+    #rl-race-search .rl-tier-1 { background: var(--rl-color-tier-gold) !important; color: var(--rl-color-ink) !important; border-color: var(--rl-color-tier-gold) !important; }
+    #rl-race-search .rl-tier-2 { background: transparent !important; color: var(--rl-color-ink) !important; border: 1.5px solid var(--rl-color-ink) !important; }
+    #rl-race-search .rl-tier-3 { background: transparent !important; color: var(--rl-color-graphite) !important; border: 1px solid var(--rl-color-steel) !important; }
+    #rl-race-search .rl-tier-4 { background: transparent !important; color: var(--rl-color-graphite) !important; border-color: transparent !important; padding-left: 0 !important; }
+    #rl-race-search .rl-card-score-big { font-family: var(--rl-font-data) !important; font-weight: 800; color: var(--rl-color-ink) !important; padding-left: 8px; border-left: 4px solid var(--rl-color-score); }
+    #rl-race-search .rl-card-score-label { color: var(--rl-color-graphite) !important; }
+    #rl-race-search .rl-score-track { border-radius: 4px !important; background: var(--rl-color-well) !important; box-shadow: var(--rl-shadow-well) !important; overflow: hidden; }
+    #rl-race-search .rl-score-dot { width: 12px; height: 12px; border: 0; border-radius: 3px !important; background: var(--rl-color-well) !important; box-shadow: inset 0 1px 2px rgba(0,0,0,0.14) !important; }
+    #rl-race-search .rl-score-row--course .rl-score-dot.filled { background: var(--rl-color-score) !important; box-shadow: none !important; }
+    #rl-race-search .rl-score-row--opinion .rl-score-dot.filled { background: var(--rl-color-opinion) !important; box-shadow: none !important; }
