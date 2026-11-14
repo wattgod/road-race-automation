@@ -36,36 +36,15 @@ EXPERIMENTS = [
     # / and /about/ traffic. The data-ab="coaching_scarcity" attributes were
     # dropped from generate_homepage.py and generate_about.py.
     # tests/test_no_unsourced_proof.py fails if the strings return.
-    {
-        "id": "training_price_frame",
-        "description": "Test price framing on training plans card",
-        "selector": "[data-ab='training_price']",
-        "pages": ["/", "/index.html", "/about/"],
-        "traffic": 1.0,
-        "start": "2026-02-16",
-        "end": None,
-        "variants": [
-            {
-                "id": "control",
-                "name": "Hotel anchor",
-                "content": "Race-specific. Built for your target event. Less than your race hotel \u2014 $2/day.",
-            },
-            {
-                "id": "variant_a",
-                "name": "Gel anchor",
-                "content": "Race-specific. Built for your target event. $15/week. Less than one gel per ride.",
-            },
-            {
-                "id": "variant_b",
-                "name": "Entry fee anchor",
-                "content": "Race-specific. Built for your target event. Your entry fee was $175. Your plan is $2/day.",
-            },
-        ],
-        "conversion": {
-            "type": "click",
-            "selector": "[data-ab='training_cta_btn']",
-        },
-    },
+    #
+    # NOTE: "training_price_frame" and "race_offer_price_frame" retired
+    # 2026-11-13 when the plan billed every 4 weeks (race_plan_4weekly)
+    # replaced the one-off plan (SUBSCRIPTION_DESIGN.md §8.7). Every variant
+    # quoted the retired one-off ("$15/week", "$2/day", "Capped at $249") and
+    # would have overwritten the new price line at runtime. The
+    # data-ab="training_price" / "race_offer_price" attributes were dropped
+    # from generate_homepage.py, generate_about.py and generate_neo_brutalist.py.
+    # tests/test_plan_offer.py fails if an experiment quotes one-off terms.
     {
         "id": "cta_button_text",
         "description": "Test CTA button text on training plans",
@@ -98,36 +77,6 @@ EXPERIMENTS = [
         "conversion": {
             "type": "click",
             "selector": "[data-ab='training_cta_btn']",
-        },
-    },
-    {
-        "id": "race_offer_price_frame",
-        "description": "Test price framing on road race-page custom plans",
-        "selector": "[data-ab='race_offer_price']",
-        "pages": ["/race/*"],
-        "traffic": 1.0,
-        "start": "2026-07-15",
-        "end": None,
-        "variants": [
-            {
-                "id": "control",
-                "name": "Gel anchor",
-                "content": "$15/week. Less than one gel per ride. Capped at $249.",
-            },
-            {
-                "id": "variant_a",
-                "name": "Daily price",
-                "content": "About $2/day. Built for your target road race. Capped at $249.",
-            },
-            {
-                "id": "variant_b",
-                "name": "Direct weekly",
-                "content": "$15/week for a race-specific custom plan. Capped at $249.",
-            },
-        ],
-        "conversion": {
-            "type": "click",
-            "selector": "[data-cta='custom_plan']",
         },
     },
 ]

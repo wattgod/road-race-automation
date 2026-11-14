@@ -31,6 +31,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from brand_tokens import COLORS, get_font_face_css, get_ga4_head_snippet, get_tokens_css, RACER_RATING_THRESHOLD, SITE_BASE_URL
 from shared_header import get_site_header_css, get_site_header_html
+from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
 from cookie_consent import get_consent_banner_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -822,7 +823,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
     <h2>Racing in {esc(state)}?</h2>
     <p>Get a personalized training plan for any {esc(state)} road race — tailored to your fitness, schedule, and goals.</p>
     <a href="/questionnaire/" class="rl-state-cta-btn">Build My Plan</a>
-    <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">$15/week, capped at $249. One-time payment.</p>
+    <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">{PLAN_PRICE_LINE}, one 4-week block at a time. Ends after race week.</p>
   </section>
 
   <footer class="rl-state-footer">

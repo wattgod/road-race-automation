@@ -43,6 +43,13 @@ from brand_tokens import (
     get_ab_head_snippet,
 )
 from cookie_consent import get_consent_banner_html
+from plan_offer import (
+    CTA_LABEL as PLAN_CTA_LABEL,
+    PRICE_LINE as PLAN_PRICE_LINE,
+    PRICE_LINE_UPPER as PLAN_PRICE_LINE_UPPER,
+    offer_quote_script,
+    plan_quote_js,
+)
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
@@ -1253,7 +1260,7 @@ def build_sticky_cta(race_name: str, slug: str = "") -> str:
   <div class="rl-sticky-cta-inner">
     <span class="rl-sticky-cta-name">{esc(race_name)}</span>
     <div style="display:flex;align-items:center;gap:12px">
-      <a href="{plan_href}" class="rl-btn" id="rl-sticky-cta-link"><span id="rl-sticky-cta-text">BUILD MY PLAN &mdash; $15/WK</span></a>
+      <a href="{plan_href}" class="rl-btn" id="rl-sticky-cta-link"><span id="rl-sticky-cta-text">{PLAN_CTA_LABEL}</span></a>
       <button type="button" class="rl-sticky-dismiss" aria-label="Dismiss">&times;</button>
     </div>
   </div>
@@ -1262,7 +1269,7 @@ def build_sticky_cta(race_name: str, slug: str = "") -> str:
 
 def build_inline_js() -> str:
     """Build the inline JavaScript for all interactive features."""
-    return '<script>\n' + get_site_header_js() + r'''
+    return '<script>\n' + get_site_header_js() + plan_quote_js() + offer_quote_script() + r'''
 // Accordion toggle (independent mode — multiple can be open)
 document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
   if (trigger.dataset.noContent) return;
@@ -1731,10 +1738,10 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   });
 });
 
-// Preparation strip — weeks-to-race countdown + live plan price.
+// Preparation strip — weeks-to-race countdown + live plan payments.
 // Server renders generic copy; only a valid FUTURE date upgrades it, so
-// stale-date profiles degrade gracefully instead of showing a wrong price.
-// Pricing mirrors the server: $15/wk, min 4wk, cap $249.
+// stale-date profiles degrade gracefully instead of showing a wrong total.
+// Price math: rlPlanQuote (wordpress/plan_offer.py, mirrors the server).
 (function() {
   var strip = document.getElementById('prep-strip');
   if (!strip) return;
@@ -1745,12 +1752,12 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   var today = new Date(); today.setHours(0, 0, 0, 0);
   var days = Math.ceil((race - today) / 86400000);
   if (days <= 7) return;
-  var weeks = Math.max(4, Math.ceil(days / 7));
-  var price = Math.min(weeks * 15, 249);
+  var quote = rlPlanQuote(dateStr);
+  if (!quote) return;
   var cd = document.getElementById('rl-prep-countdown');
-  if (cd) cd.textContent = weeks + ' WEEKS OUT';
+  if (cd) cd.textContent = quote.weeks + ' WEEKS OUT';
   var cta = document.getElementById('rl-prep-cta');
-  if (cta) cta.textContent = 'BUILD MY ' + weeks + '-WEEK PLAN — $' + price;
+  if (cta) cta.textContent = 'BUILD MY ' + quote.weeks + '-WEEK PLAN — ' + quote.summary.toUpperCase();
 })();
 
 // CTA click tracking — GA4
@@ -2129,8 +2136,9 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     var peak = remaining - base - build;
     if (peak < 1) { peak = 1; base = Math.max(1, base - 1); }
 
-    // Price
-    var price = Math.min(249, Math.max(60, weeks * 15));
+    // Payments to race week (rlPlanQuote mirrors the server's math; null
+    // for a past date, in which case no total is shown).
+    var quote = rlPlanQuote(raceDateStr);
 
     // Session structure
     var hCfg = HOURS[hours] || HOURS['8-12'];
@@ -2216,7 +2224,8 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
       defaultCta.setAttribute('aria-hidden', 'true');
     }
     if (cfgCta && cfgCtaLink && cfgCtaDetail) {
-      var ctaText = 'GET YOUR ' + weeks + '-WEEK ' + rd.race_name.toUpperCase() + ' PLAN \u2014 $' + price;
+      var ctaText = 'GET YOUR ' + weeks + '-WEEK ' + rd.race_name.toUpperCase() + ' PLAN' +
+        (quote ? ' \u2014 ' + quote.summary.toUpperCase() : '');
       cfgCtaLink.textContent = ctaText;
       cfgCtaLink.removeAttribute('tabindex');
       // Pass configurator selections to questionnaire for pre-population
@@ -2224,7 +2233,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
         '&level=' + encodeURIComponent(level) +
         '&hours=' + encodeURIComponent(hours) +
         '&weeks=' + weeks;
-      cfgCtaDetail.textContent = totalWorkouts + ' workouts \u00b7 ZWO files \u00b7 Phase-periodized for ' + rd.race_name;
+      cfgCtaDetail.textContent = totalWorkouts + ' workouts \u00b7 ''' + PLAN_PRICE_LINE + r''', one 4-week block at a time \u00b7 Ends after race week';
       cfgCta.style.display = 'block';
       cfgCta.removeAttribute('aria-hidden');
     }
@@ -2233,7 +2242,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     var stickyText = document.getElementById('rl-sticky-cta-text');
     var stickyLink = document.getElementById('rl-sticky-cta-link');
     if (stickyText) {
-      stickyText.textContent = weeks + '-WEEK PLAN \u2014 $' + price;
+      stickyText.textContent = weeks + '-WEEK PLAN' + (quote ? ' \u2014 ' + quote.summary.toUpperCase() : '');
     }
     if (stickyLink) {
       stickyLink.href = '/questionnaire/?race=' + encodeURIComponent(rd.slug) +
@@ -2252,7 +2261,8 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
         level: level,
         hours: hours,
         weeks: weeks,
-        price: price
+        payments: quote ? quote.payments : 0,
+        total: quote ? quote.totalCents / 100 : 0
       });
     }
   });
@@ -2273,7 +2283,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
           if (defCta) { defCta.style.display = ''; defCta.removeAttribute('aria-hidden'); }
           if (cfgC) { cfgC.style.display = 'none'; cfgC.setAttribute('aria-hidden', 'true'); }
           var stickyT = document.getElementById('rl-sticky-cta-text');
-          if (stickyT) stickyT.textContent = 'BUILD MY PLAN \u2014 $15/WK';
+          if (stickyT) stickyT.textContent = 'BUILD MY PLAN \u2014 ''' + PLAN_PRICE_LINE_UPPER + r'''';
           previewActive = false;
           btn.textContent = 'UPDATE PREVIEW';
         }
@@ -3446,7 +3456,7 @@ def build_training(rd: dict) -> str:
       {countdown_html}
       <div class="rl-training-primary">
         <h3>Built for {esc(race_name)}</h3>
-        <p class="rl-training-subtitle" data-ab="race_offer_price">$15/week. Less than one gel per ride. Capped at $249.</p>
+        <p class="rl-training-subtitle">{PLAN_PRICE_LINE}, one 4-week block at a time. Ends after race week.</p>
         <p class="rl-training-built-for">Your race date, available hours, and the road demands above determine the build. Start with a short questionnaire; the plan follows from your answers.</p>
         <ul class="rl-training-bullets">
           <li>Structured workouts pushed to your device</li>
@@ -3454,7 +3464,7 @@ def build_training(rd: dict) -> str:
           <li>Climbing, descending, heat, and altitude work matched to the course</li>
           <li>Race fueling and pacing guidance</li>
         </ul>
-        <a href="{esc(TRAINING_PLANS_URL)}?race={esc(rd['slug'])}" class="rl-btn" data-cta="custom_plan" data-ab="training_cta_btn">BUILD MY PLAN &mdash; $15/WK</a>
+        <a href="{esc(TRAINING_PLANS_URL)}?race={esc(rd['slug'])}" class="rl-btn" data-cta="custom_plan" data-ab="training_cta_btn">{PLAN_CTA_LABEL}</a>
       </div>
       <div class="rl-training-secondary">
         <div class="rl-training-secondary-text">
@@ -3735,6 +3745,11 @@ def build_custom_plan_offer(rd: dict) -> str:
         "road demands, and the hours you have."
     )
     href = f"{TRAINING_PLANS_URL}?race={rd['slug']}"
+    # Payments and total fill in client-side from the race date
+    # (offer_quote_script); a missing or past date keeps the generic line,
+    # so the page never guesses a total (SUBSCRIPTION_DESIGN.md §8.9).
+    cd_start, _cd_end = parse_event_dates(rd['vitals'].get('date_specific', ''))
+    date_attr = f' data-race-date="{esc(cd_start)}"' if cd_start else ''
     return f'''<section class="rl-approved-section rl-offer" data-measure-section="custom-plan">
   <div class="rl-approved-inner">
     <span class="rl-approved-kicker">Custom plan</span>
@@ -3743,7 +3758,8 @@ def build_custom_plan_offer(rd: dict) -> str:
   </div>
   <div class="rl-approved-inner rl-offer-action">
     <a class="rl-plan-cta" href="{esc(href)}" data-cta="approved_custom_plan">START MY CUSTOM PLAN &rarr;</a>
-    <span class="rl-offer-price">$15 / WEEK</span>
+    <span class="rl-offer-price">{PLAN_PRICE_LINE_UPPER}</span>
+    <span class="rl-offer-terms" data-plan-quote{date_attr}>One 4-week block at a time. Ends after race week.</span>
   </div>
 </section>'''
 
@@ -4917,7 +4933,7 @@ def build_prep_strip(rd: dict) -> str:
     </div>
     <div class="rl-prep-actions">
       <a href="#train-for-race" class="rl-btn rl-btn--outline" data-cta="prep_profile_full">FULL PREP PROFILE &darr;</a>
-      <a href="{plan_url}" class="rl-btn" data-cta="prep_strip_build" id="rl-prep-cta">BUILD MY PLAN &mdash; $15/WK</a>
+      <a href="{plan_url}" class="rl-btn" data-cta="prep_strip_build" id="rl-prep-cta">{PLAN_CTA_LABEL}</a>
       <a href="#prep-kit-capture" class="rl-prep-kit-link" data-cta="prep_strip_kit">Free {esc(race_name)} prep kit &rarr;</a>
     </div>
   </section>'''
@@ -5341,8 +5357,8 @@ def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
         <div class="rl-cfg-details" id="rl-cfg-details"></div>
       </div>'''
         plan_cta_html = f'''<div class="rl-pack-cta" id="rl-pack-cta-default">
-        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
-        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">{PLAN_CTA_LABEL}</a>
+        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. {PLAN_PRICE_LINE}, one 4-week block at a time, ending after race week.</p>
         <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
       </div>
       <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">
@@ -6740,6 +6756,13 @@ APPROVED_TOP_CSS = '''<style>
   letter-spacing: var(--rl-letter-spacing-wider);
   margin-top: var(--rl-spacing-md);
 }
+.rl-offer-terms {
+  color: var(--rl-color-secondary-blue);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-xs);
+  line-height: var(--rl-line-height-relaxed);
+  margin-top: var(--rl-spacing-xs);
+}
 .rl-coaching-note {
   align-items: center;
   display: grid;
@@ -6985,7 +7008,7 @@ def generate_page(rd: dict, race_index: list = None, external_assets: dict = Non
     visible_faq = build_visible_faq(rd)
     news = build_news_section(rd)
     # Defunct/cancelled races (race-data eligibility, R4 audit): no plan
-    # commerce — selling a $15/wk build for a race that will not happen is a
+    # commerce — selling a plan for a race that will not happen is a
     # trust breach. Coaching stays; an honest status notice renders instead.
     not_running = (rd.get('eligibility') or {}).get('status') in ('defunct', 'cancelled')
     plan_source_blocked = (

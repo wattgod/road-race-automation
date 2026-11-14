@@ -235,14 +235,17 @@ class TestTrainingPlanSuccess:
     def test_has_hero(self):
         html = build_training_plan_success()
         assert "rl-success-hero" in html
-        assert "Training Plan Is on the Way" in html
+        assert "Payment Received" in html
+        assert "one 4-week" in html
 
     def test_has_next_steps(self):
         html = build_training_plan_success()
         assert "WHAT HAPPENS NEXT" in html
         assert "Check Your Email" in html
-        assert "Import Your Workouts" in html
-        assert "Read the Training Guide" in html
+        assert "Connect TrainingPeaks" in html
+        assert "Read the Guides" in html
+        # The plan is billed every 4 weeks; no .zwo download package any more.
+        assert ".zwo" not in html
 
     def test_cross_sells_coaching(self):
         html = build_training_plan_success()

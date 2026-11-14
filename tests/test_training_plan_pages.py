@@ -182,7 +182,7 @@ class TestSafety:
         r["vitals"]["date_specific"] = ""
         h = generate_page(r, pack)
         assert 'data-race-date="' not in h  # attribute absent (JS source still mentions the name)
-        assert "$15/WK" in h  # generic price copy survives
+        assert "$49.99 EVERY 4 WEEKS" in h  # generic price copy survives
 
     def test_no_pack_returns_skip(self):
         assert load_pack("no-such-slug-xyz") == {}

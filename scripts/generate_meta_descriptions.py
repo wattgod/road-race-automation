@@ -280,7 +280,7 @@ MANUAL_ENTRIES = [
      "The definitive road cycling guide: bike setup, training, nutrition, race strategy, and everything between the start and finish line.",
      None, "road cycling guide"),
     (5016, "page", "training-plans",
-     "Road cycling training plans built for your goal race. 16-week periodized programs with race-specific prep. Data-driven. From $15/week.",
+     "Road cycling training plans built for your goal race, with race-specific prep. $49.99 every 4 weeks, one 4-week block at a time, until race week.",
      "Road cycling training plans built for your goal race. 16-week periodized programs with race-specific prep.",
      "road cycling training plans"),
     (5017, "page", "questionnaire",
