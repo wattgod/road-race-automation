@@ -1941,7 +1941,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg?v=rain-sipes-1">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">

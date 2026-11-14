@@ -740,7 +740,7 @@ def generate_race_debrief_page(external_assets: dict = None) -> str:
   <meta property="og:type" content="website">
   <meta property="og:url" content="{CANONICAL_URL}">
   <meta property="og:site_name" content="Roadie Labs">
-  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
   {get_preload_hints()}
   {page_css}
   <!-- GA4 -->
