@@ -6,6 +6,7 @@ import re
 import shutil
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -14,6 +15,10 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
 
 import generate_neo_brutalist as neo
+
+# Build date before the fixture's 2026-06-15 edition, so SportsEvent tests
+# exercise an upcoming edition (RL-14 drops past ones).
+BEFORE_EDITION = date(2026, 1, 1)
 
 from generate_neo_brutalist import (
     ALL_DIMS,
@@ -340,27 +345,27 @@ class TestRaceSeoAndCalendar:
 
 class TestJsonLD:
     def test_sports_event_type(self, normalized_data):
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         assert jsonld["@type"] == "SportsEvent"
 
     def test_sports_event_country_us(self, sample_race_data):
         sample_race_data["race"]["vitals"]["country"] = "USA"
         rd = normalize_race_data(sample_race_data)
-        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        addr = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]["address"]
         assert addr["addressCountry"] == "US"
 
     def test_sports_event_country_international(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Girona, Spain"
         sample_race_data["race"]["vitals"]["country"] = "Spain"
         rd = normalize_race_data(sample_race_data)
-        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        addr = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]["address"]
         assert addr["addressCountry"] == "ES"
 
     def test_sports_event_country_uses_explicit_dominican_republic(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Punta Cana, Dominican Republic"
         sample_race_data["race"]["vitals"]["country"] = "Dominican Republic"
         rd = normalize_race_data(sample_race_data)
-        place = build_sports_event_jsonld(rd)["location"]
+        place = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]
         assert place["name"] == "Punta Cana, Dominican Republic"
         assert place["address"] == {"@type": "PostalAddress", "addressCountry": "DO"}
 
@@ -371,7 +376,7 @@ class TestJsonLD:
         v["location"] = "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA"
         v["country"] = "USA"
         rd = normalize_race_data(sample_race_data)
-        place = build_sports_event_jsonld(rd)["location"]
+        place = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]
         assert place["name"] == "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA"
         addr = place["address"]
         assert addr == {"@type": "PostalAddress", "addressCountry": "US"}
@@ -385,7 +390,7 @@ class TestJsonLD:
         v["locality"] = "Payson"
         v["region"] = "UT"
         rd = normalize_race_data(sample_race_data)
-        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        addr = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]["address"]
         assert addr["addressLocality"] == "Payson"
         assert addr["addressRegion"] == "UT"
         assert addr["addressCountry"] == "US"
@@ -396,14 +401,14 @@ class TestJsonLD:
         v["city"] = "Feltre"
         v["state"] = "Veneto"
         rd = normalize_race_data(sample_race_data)
-        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        addr = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]["address"]
         assert addr == {"@type": "PostalAddress", "addressLocality": "Feltre",
                         "addressRegion": "Veneto", "addressCountry": "IT"}
 
     def test_two_part_location_not_split(self, sample_race_data):
         # "Emporia, Kansas" used to become locality=Emporia, region=Kansas.
         rd = normalize_race_data(sample_race_data)
-        place = build_sports_event_jsonld(rd)["location"]
+        place = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]
         assert place["name"] == "Emporia, Kansas"
         assert "address" not in place
 
@@ -413,13 +418,13 @@ class TestJsonLD:
         for bad in ("Colorado", "Spain/France", "Provence)", "NC 28801"):
             sample_race_data["race"]["vitals"]["country"] = bad
             rd = normalize_race_data(sample_race_data)
-            place = build_sports_event_jsonld(rd)["location"]
+            place = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]
             assert "address" not in place, bad
 
     def test_no_country_no_default_us(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Unknown Place, Nowhere"
         rd = normalize_race_data(sample_race_data)
-        place = build_sports_event_jsonld(rd)["location"]
+        place = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]
         assert place["name"] == "Unknown Place, Nowhere"
         assert "address" not in place
 
@@ -427,7 +432,7 @@ class TestJsonLD:
         sample_race_data["race"]["vitals"]["location"] = "Hualien to Wuling Pass, Taiwan"
         sample_race_data["race"]["vitals"]["country"] = "Taiwan"
         rd = normalize_race_data(sample_race_data)
-        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        addr = build_sports_event_jsonld(rd, today=BEFORE_EDITION)["location"]["address"]
         assert addr["addressCountry"] == "TW"
         assert "addressRegion" not in addr
         assert "addressLocality" not in addr
@@ -436,18 +441,18 @@ class TestJsonLD:
         sample_race_data["race"]["vitals"]["location"] = "Warsaw, Poland"
         sample_race_data["race"]["vitals"]["country"] = "Poland"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         addr = jsonld["location"]["address"]
         assert addr["addressCountry"] == "PL"
         assert "addressRegion" not in addr
 
     def test_sports_event_start_date(self, normalized_data):
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         assert jsonld["startDate"] == "2026-06-15"
 
     def test_sports_event_no_self_review(self, normalized_data):
         """Self-authored reviews trigger GSC Product snippet errors."""
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         assert "review" not in jsonld
 
     def test_faq_jsonld_has_questions(self, normalized_data):
@@ -457,13 +462,13 @@ class TestJsonLD:
         assert len(faq["mainEntity"]) >= 1
 
     def test_organizer_real_founder(self, normalized_data):
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         assert jsonld["organizer"]["name"] == "Jim Smith"
 
     def test_organizer_suppressed_generic(self, sample_race_data):
         sample_race_data["race"]["history"]["founder"] = "Kansas organizers"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert "organizer" not in jsonld
 
@@ -475,48 +480,48 @@ class TestJsonLD:
     def test_sports_event_strips_day_of_week(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Friday, June 12th at 8AM"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-06-12"
 
     def test_sports_event_strips_ordinal_suffix(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Sunday, June 7th"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-06-07"
 
     def test_sports_event_parenthetical_day(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: August 16 (Saturday)"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-08-16"
 
     def test_sports_event_skipped_for_tbd(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: TBD"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_check_website(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "Check official website"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_various(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Various dates"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_paused(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "Paused for 2026"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_date_range(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: August 19-23"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-08-19"
         assert jsonld["endDate"] == "2026-08-23"
@@ -525,19 +530,19 @@ class TestJsonLD:
         """Empty date_specific must return None, not crash."""
         sample_race_data["race"]["vitals"]["date_specific"] = ""
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_missing_key(self, sample_race_data):
         """Missing date_specific key entirely must return None."""
         sample_race_data["race"]["vitals"].pop("date_specific", None)
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_ordinal_range(self, sample_race_data):
         """'Friday, May 29th-30th' — ordinal stripping must work with ranges."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Friday, May 29th-30th"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-05-29"
         assert jsonld["endDate"] == "2026-05-30"
@@ -545,24 +550,24 @@ class TestJsonLD:
     def test_sports_event_skipped_for_uncertain(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2025: Status uncertain - check official website"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_seasonal_tbd(self, sample_race_data):
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Spring/Fall TBD"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_skipped_for_seasonal_approx(self, sample_race_data):
         """'Early September (weather dependent)' — no specific day, must skip."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: Early September (weather dependent)"
         rd = normalize_race_data(sample_race_data)
-        assert build_sports_event_jsonld(rd) is None
+        assert build_sports_event_jsonld(rd, today=BEFORE_EDITION) is None
 
     def test_sports_event_single_day_has_equal_start_end(self, sample_race_data):
         """Single-day event: endDate must equal startDate."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: June 15"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == jsonld["endDate"]
 
@@ -570,7 +575,7 @@ class TestJsonLD:
         """If build_sports_event_jsonld returns a dict, startDate MUST be present."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: October 3"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert "startDate" in jsonld, "SportsEvent dict must always contain startDate"
         assert "endDate" in jsonld, "SportsEvent dict must always contain endDate"
@@ -589,13 +594,47 @@ class TestJsonLD:
         # WebPage should still be present
         assert "WebPage" in types
 
-    def test_generate_page_includes_sports_event_for_valid_date(self, normalized_data):
-        """generate_page() must include SportsEvent when date is parseable."""
-        html = generate_page(normalized_data)
+    def test_generate_page_includes_sports_event_for_valid_date(self, sample_race_data):
+        """generate_page() must include SportsEvent for an upcoming edition."""
+        sample_race_data["race"]["vitals"]["date_specific"] = "2099: June 15"
+        html = generate_page(normalize_race_data(sample_race_data))
         ld_blocks = re.findall(
             r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL)
         types = [json.loads(b).get("@type") for b in ld_blocks]
         assert "SportsEvent" in types
+
+    # RL-14: a past edition is not a scheduled event.
+
+    def test_generate_page_omits_sports_event_for_past_edition(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["date_specific"] = "2020: June 15"
+        html = generate_page(normalize_race_data(sample_race_data))
+        assert '"SportsEvent"' not in html
+
+    def test_past_edition_returns_none(self, normalized_data):
+        # Fixture edition is 2026-06-15; built on 2026-11-15 it is over.
+        assert build_sports_event_jsonld(normalized_data, today=date(2026, 11, 15)) is None
+
+    def test_edition_in_progress_still_scheduled(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["date_specific"] = "2026: August 19-23"
+        rd = normalize_race_data(sample_race_data)
+        jsonld = build_sports_event_jsonld(rd, today=date(2026, 8, 21))
+        assert jsonld["startDate"] == "2026-08-19"
+        assert jsonld["eventStatus"] == "https://schema.org/EventScheduled"
+        assert build_sports_event_jsonld(rd, today=date(2026, 8, 24)) is None
+
+    def test_gran_fondo_utah_past_edition_no_event(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["date_specific"] = (
+            "2026: June 13 (completed, second edition, Payson, part of the Gran "
+            "Fondo National Series). 2027 date not yet published.")
+        rd = normalize_race_data(sample_race_data)
+        assert build_sports_event_jsonld(rd, today=date(2026, 11, 15)) is None
+
+    def test_future_edition_emitted_with_its_own_date(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["date_specific"] = (
+            "2027: June 27 (38th edition; 37th edition ran June 28, 2026)")
+        rd = normalize_race_data(sample_race_data)
+        jsonld = build_sports_event_jsonld(rd, today=date(2026, 11, 15))
+        assert jsonld["startDate"] == "2027-06-27"
 
     def test_all_328_races_sports_event_coverage(self):
         """Regression guard: count valid vs skipped SportsEvent across all races.
@@ -616,7 +655,8 @@ class TestJsonLD:
             with open(f, 'r', encoding='utf-8') as fh:
                 data = json.load(fh)
             rd = normalize_race_data(data)
-            result = build_sports_event_jsonld(rd)
+            # Parse coverage only: a build date before every edition on file.
+            result = build_sports_event_jsonld(rd, today=date(2000, 1, 1))
             if result is not None:
                 # Every non-None result MUST have startDate
                 assert "startDate" in result, \
@@ -640,13 +680,13 @@ class TestJsonLD:
 
     def test_sports_event_no_valid_from(self, normalized_data):
         """validFrom was removed — must never appear in offers."""
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         if "offers" in jsonld:
             assert "validFrom" not in jsonld["offers"]
 
     def test_sports_event_no_performer(self, normalized_data):
         """performer was removed — must never appear in SportsEvent."""
-        jsonld = build_sports_event_jsonld(normalized_data)
+        jsonld = build_sports_event_jsonld(normalized_data, today=BEFORE_EDITION)
         assert "performer" not in jsonld
 
     def test_aggregate_rating_omits_zero_review_count(self, sample_race_data):
@@ -657,7 +697,7 @@ class TestJsonLD:
             "total_reviews": 0,
         }
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         agg = jsonld.get("aggregateRating", {})
         assert "reviewCount" not in agg, \
@@ -671,7 +711,7 @@ class TestJsonLD:
             "total_reviews": 8,
         }
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         agg = jsonld.get("aggregateRating", {})
         assert agg.get("reviewCount") == "8"
@@ -680,7 +720,7 @@ class TestJsonLD:
         """Cross-month: 'June 30 - July 2' must use correct months."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: June 30 - July 2"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-06-30"
         assert jsonld["endDate"] == "2026-07-02"
@@ -689,7 +729,7 @@ class TestJsonLD:
         """Cross-month with ordinals: 'October 3rd - November 1st'."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: October 3rd - November 1st"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-10-03"
         assert jsonld["endDate"] == "2026-11-01"
@@ -698,7 +738,7 @@ class TestJsonLD:
         """Long cross-month: Raid Pyreneen 'June 1 - September 30'."""
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: June 1 - September 30"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert jsonld is not None
         assert jsonld["startDate"] == "2026-06-01"
         assert jsonld["endDate"] == "2026-09-30"
@@ -708,7 +748,7 @@ class TestJsonLD:
         sample_race_data["race"]["vitals"]["date_specific"] = "2026: TBD"
         rd = normalize_race_data(sample_race_data)
         with caplog.at_level(logging.DEBUG, logger="generate_neo_brutalist"):
-            result = build_sports_event_jsonld(rd)
+            result = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert result is None
         assert any("nparseable" in r.message or "TBD" in r.message
                     for r in caplog.records), \
@@ -776,6 +816,41 @@ class TestParseEventDates:
 
     def test_impossible_calendar_dates_are_rejected(self):
         assert parse_event_dates("2026: February 30") == (None, None)
+
+    # RL-14: only the date the string leads with is the edition date.
+
+    def test_later_unconfirmed_date_is_not_the_edition(self):
+        assert parse_event_dates(
+            "2026: June 21 (completed). 2027 date not yet confirmed on the official "
+            "site; aggregator listings showing June 20, 2027 are unconfirmed."
+        ) == ("2026-06-21", "2026-06-21")
+
+    def test_rolled_forward_placeholder_is_not_read(self):
+        assert parse_event_dates(
+            "2025: Jan 30 - Feb 1 (last confirmed UCI calendar listing). 2026/2027 "
+            "dates not officially announced — the on-file Jan 30-Feb 1, 2026 date "
+            "appears to be the 2025 dates rolled forward."
+        ) == ("2025-01-30", "2025-02-01")
+
+    def test_leading_edition_wins_over_history(self):
+        assert parse_event_dates(
+            "2027: June 27 (38th edition; 37th edition ran June 28, 2026)"
+        ) == ("2027-06-27", "2027-06-27")
+
+    def test_narrative_lead_is_not_parsed(self):
+        assert parse_event_dates(
+            "Sportive Ride: 10 May 2026, 5:00 a.m. start; overall event ran 9-10 May 2026."
+        ) == (None, None)
+        assert parse_event_dates("Last held: May 26, 2024. 2025 edition cancelled.") == (None, None)
+
+    def test_abbreviated_month_and_time_of_day(self):
+        assert parse_event_dates("2026: Sep 27") == ("2026-09-27", "2026-09-27")
+        assert parse_event_dates(
+            "2027: Friday evening, June 18 through Saturday, June 19"
+        ) == ("2027-06-18", "2027-06-18")
+
+    def test_month_first_range(self):
+        assert parse_event_dates("June 12-14, 2026") == ("2026-06-12", "2026-06-14")
 
 
 # ── Sections ──────────────────────────────────────────────────
@@ -1516,7 +1591,7 @@ class TestRacerRating:
 
     def test_jsonld_aggregate_rating_with_data(self, race_with_ratings):
         rd = normalize_race_data(race_with_ratings)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert "aggregateRating" in jsonld
         agg = jsonld["aggregateRating"]
         assert agg["@type"] == "AggregateRating"
@@ -1528,7 +1603,7 @@ class TestRacerRating:
 
     def test_jsonld_no_aggregate_without_data(self, sample_race_data):
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
+        jsonld = build_sports_event_jsonld(rd, today=BEFORE_EDITION)
         assert "aggregateRating" not in jsonld
 
     def test_normalize_includes_racer_rating(self, race_with_ratings):

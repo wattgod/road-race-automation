@@ -56,6 +56,7 @@ from generate_homepage import (
     HERO_VIZ_ARCHETYPES,
 )
 from brand_tokens import GA_MEASUREMENT_ID
+from season import season_year
 
 
 # ── Fixtures ─────────────────────────────────────────────────
@@ -421,7 +422,7 @@ class TestSectionBuilders:
     def test_footer_has_nav_headings(self):
         html = build_footer()
         assert "/training-plans/" in html
-        assert "/race/calendar/2026/" in html
+        assert f"/race/calendar/{season_year()}/" in html
 
 
 # ── Ladder strip ─────────────────────────────────────────────

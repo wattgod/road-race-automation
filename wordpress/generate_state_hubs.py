@@ -25,7 +25,6 @@ import math
 import re
 import sys
 from collections import defaultdict
-from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -35,7 +34,8 @@ from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
 from cookie_consent import get_consent_banner_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CURRENT_YEAR = date.today().year
+from season import season_year  # noqa: E402
+SEASON_YEAR = season_year()  # rider-facing season; rolls over in September
 MIN_RACES = 3
 
 from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
@@ -399,7 +399,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
     t2_count = sum(1 for r in races if r.get("tier") == 2)
 
     disc_label = _discipline_label(races)
-    title = f"Best {disc_label} Races in {state} ({CURRENT_YEAR}) | Roadie Labs"
+    title = f"Best {disc_label} Races in {state} ({SEASON_YEAR}) | Roadie Labs"
     # Keep meta description under 160 chars
     tier_note = ""
     if t1_count:

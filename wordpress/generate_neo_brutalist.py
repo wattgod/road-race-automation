@@ -138,6 +138,32 @@ MONTH_NUMBERS = {
 logger = logging.getLogger(__name__)
 
 
+# Capitalised month names only: free-text notes use lower-case "may" as a verb.
+_EDITION_MONTH_RE = (
+    r"(January|February|March|April|May|June|July|August|September|October|"
+    r"November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)\.?"
+)
+_EDITION_MONTHS = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+# Optional end of a range: "-23", " - July 2", "–30".
+_EDITION_RANGE_END = (
+    r"(?:\s*[-\u2013]\s*(?:" + _EDITION_MONTH_RE + r"\s+)?(\d{1,2})(?!\d))?"
+)
+# "2026: June 15", "2027: Friday evening, June 18", "2026: June 30 - July 2".
+# Anchored at the start: the edition date is the one the string leads with.
+_EDITION_YEAR_FIRST = re.compile(
+    r"^\s*(20\d{2})\s*:\s*(?:(?:morning|evening|night),?\s*)?"
+    + _EDITION_MONTH_RE + r"\s+(\d{1,2})(?!\d)" + _EDITION_RANGE_END
+)
+# "July 5, 2026", "Sep 12, 2026 (17th edition)", "June 12-14, 2026".
+_EDITION_MONTH_FIRST = re.compile(
+    r"^\s*" + _EDITION_MONTH_RE + r"\s+(\d{1,2})(?!\d)"
+    + _EDITION_RANGE_END + r",\s*(20\d{2})\b"
+)
+
+
 def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
     """Parse a race date string into (startDate, endDate) ISO strings.
 
@@ -145,8 +171,13 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
       - Single day: "2026: June 15" → ("2026-06-15", "2026-06-15")
       - Same-month range: "2026: August 19-23" → ("2026-08-19", "2026-08-23")
       - Cross-month range: "2026: June 30 - July 2" → ("2026-06-30", "2026-07-02")
+      - Month-first: "July 5, 2026" / "June 12-14, 2026"
       - Day-of-week prefixes: "Friday, June 12th" → stripped
       - Ordinal suffixes: "7th", "1st", "22nd" → stripped
+
+    Only the date the string leads with counts (RL-14). A date later in the
+    note — an unconfirmed aggregator listing, a ticket-sale date, a co-located
+    event, a "rolled forward" placeholder — is never read as the edition date.
 
     Returns (None, None) for TBD, empty, or unparseable strings.
     """
@@ -163,58 +194,40 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
         '', date_str)
     clean = re.sub(r'(\d+)(?:st|nd|rd|th)\b', r'\1', clean)
 
-    def iso_date(year: str, month: str, day: str) -> str | None:
+    def iso_date(year: str, month_name: str, day: str) -> str | None:
         """Return a real ISO date, never a regex-shaped impossible date."""
+        month = _EDITION_MONTHS.get(month_name[:3].lower())
+        if month is None:
+            return None
         try:
-            return date(int(year), int(month), int(day)).isoformat()
+            return date(int(year), month, int(day)).isoformat()
         except ValueError:
             return None
 
-    # Prefer a leading month-first date before the year-first forms below. This
-    # prevents a later historical date in a note such as
-    # "September 13, 2026 (rescheduled from June 7)" from winning just because
-    # the old date appears after the first four-digit year.
-    month_first = re.search(r'\b([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})\b', clean)
+    def dates(year, start_month, start_day, end_month, end_day):
+        start = iso_date(year, start_month, start_day)
+        if not start:
+            return None, None
+        if not end_day:
+            return start, start
+        end = iso_date(year, end_month or start_month, end_day)
+        if not end or end < start:
+            return None, None
+        return start, end
+
+    year_first = _EDITION_YEAR_FIRST.match(clean)
+    if year_first:
+        year, start_month, start_day, end_month, end_day = year_first.groups()
+        start, end = dates(year, start_month, start_day, end_month, end_day)
+        if start:
+            return start, end
+
+    month_first = _EDITION_MONTH_FIRST.match(clean)
     if month_first:
-        month_name, day, year = month_first.groups()
-        month = MONTH_NUMBERS.get(month_name.lower())
-        if month is None:
-            try:
-                month = datetime.strptime(month_name[:3], '%b').strftime('%m')
-            except ValueError:
-                month = None
-        if month:
-            parsed = iso_date(year, month, day)
-            if parsed:
-                return parsed, parsed
-
-    # Try cross-month first: "2026: June 30 - July 2"
-    cross = re.search(
-        r'(\d{4}).*?(\w+)\s+(\d+)\s*-\s*(\w+)\s+(\d+)', clean)
-    if cross:
-        year = cross.group(1)
-        start_month = MONTH_NUMBERS.get(cross.group(2).lower())
-        start_day = cross.group(3)
-        end_month = MONTH_NUMBERS.get(cross.group(4).lower())
-        end_day = cross.group(5)
-        if start_month and end_month:
-            start = iso_date(year, start_month, start_day)
-            end = iso_date(year, end_month, end_day)
-            if start and end:
-                return start, end
-
-    # Fall back to same-month: "2026: June 15" or "2026: August 19-23"
-    same = re.search(r'(\d{4}).*?(\w+)\s+(\d+)(?:\s*-\s*(\d+))?', clean)
-    if same:
-        year = same.group(1)
-        month = MONTH_NUMBERS.get(same.group(2).lower())
-        if month:
-            start_day = same.group(3)
-            end_day = same.group(4)
-            start = iso_date(year, month, start_day)
-            end = iso_date(year, month, end_day) if end_day else start
-            if start and end:
-                return start, end
+        start_month, start_day, end_month, end_day, year = month_first.groups()
+        start, end = dates(year, start_month, start_day, end_month, end_day)
+        if start:
+            return start, end
 
     # If the string contains a year but we still couldn't parse it, warn
     if re.search(r'\d{4}', date_str):
@@ -2333,12 +2346,16 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
 
 # ── Phase 3D: JSON-LD Schema ──────────────────────────────────
 
-def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
+def build_sports_event_jsonld(rd: dict, today: Optional[date] = None) -> Optional[dict]:
     """Build SportsEvent JSON-LD from normalized race data.
 
     Returns None when startDate cannot be parsed (TBD, check website, etc.)
     — omitting SportsEvent entirely is better than emitting it without a date,
     which triggers GSC "missing startDate" errors with no rich-result upside.
+
+    Also returns None when the edition on file has already finished relative
+    to ``today`` (the build date by default, RL-14): a past edition is not an
+    EventScheduled event, and the next edition's date is never invented.
     """
     # Parse ISO date via shared helper
     date_specific = rd['vitals'].get('date_specific', '')
@@ -2346,6 +2363,11 @@ def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
 
     # No parseable date → skip SportsEvent entirely
     if not start_date:
+        return None
+
+    # Edition already over → no SportsEvent until a new date is on file
+    today = today or date.today()
+    if date.fromisoformat(end_date or start_date) < today:
         return None
 
     jsonld = {

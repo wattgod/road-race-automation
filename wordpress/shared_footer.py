@@ -8,10 +8,12 @@ from __future__ import annotations
 
 from datetime import date
 from endure_offer import get_endure_offer_html
+from season import season_year
 
 SITE_BASE_URL = "https://roadielabs.com"
 SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
-CURRENT_YEAR = date.today().year
+CURRENT_YEAR = date.today().year  # copyright line only
+SEASON_YEAR = season_year()  # calendar link: the coming season
 
 
 def get_mega_footer_html() -> str:
@@ -27,7 +29,7 @@ def get_mega_footer_html() -> str:
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/road-races/">All Road Races</a>
         <a href="{SITE_BASE_URL}/race/methodology/">How We Rate</a>
-        <a href="{SITE_BASE_URL}/race/calendar/2026/">2026 Calendar</a>
+        <a href="{SITE_BASE_URL}/race/calendar/{SEASON_YEAR}/">{SEASON_YEAR} Calendar</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">

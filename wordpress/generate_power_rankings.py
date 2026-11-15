@@ -14,7 +14,6 @@ import argparse
 import html as html_mod
 import json
 import sys
-from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -23,7 +22,8 @@ from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CURRENT_YEAR = date.today().year
+from season import season_year  # noqa: E402
+SEASON_YEAR = season_year()  # rider-facing season; rolls over in September
 
 from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
 TIER_COLORS = {
@@ -46,10 +46,10 @@ def build_power_rankings_page(races: list) -> str:
     font_face = get_font_face_css()
     tokens = get_tokens_css()
 
-    canonical = f"{SITE_BASE_URL}/race/power-rankings-{CURRENT_YEAR}/"
-    title = f"Road Race Power Rankings {CURRENT_YEAR} — All {len(races)} Races Ranked | Roadie Labs"
+    canonical = f"{SITE_BASE_URL}/race/power-rankings-{SEASON_YEAR}/"
+    title = f"Road Race Power Rankings {SEASON_YEAR} — All {len(races)} Races Ranked | Roadie Labs"
     description = (
-        f"The definitive {CURRENT_YEAR} road race power rankings. "
+        f"The definitive {SEASON_YEAR} road race power rankings. "
         f"All {len(races)} races ranked by our 15-dimension Roadie Labs Rating. "
         f"From the iconic Elite tier to grassroots gems."
     )
@@ -140,12 +140,12 @@ def build_power_rankings_page(races: list) -> str:
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
                     {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
-                    {"@type": "ListItem", "position": 3, "name": f"Power Rankings {CURRENT_YEAR}", "item": canonical},
+                    {"@type": "ListItem", "position": 3, "name": f"Power Rankings {SEASON_YEAR}", "item": canonical},
                 ],
             },
             {
                 "@type": "ItemList",
-                "name": f"Road Race Power Rankings {CURRENT_YEAR}",
+                "name": f"Road Race Power Rankings {SEASON_YEAR}",
                 "description": description,
                 "url": canonical,
                 "numberOfItems": len(races),
@@ -367,11 +367,11 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-pr-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Power Rankings {CURRENT_YEAR}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Power Rankings {SEASON_YEAR}
   </div>
 
   <section class="rl-pr-hero">
-    <h1>{CURRENT_YEAR} Power Rankings</h1>
+    <h1>{SEASON_YEAR} Power Rankings</h1>
     <div class="rl-pr-hero-sub">Every road race, ranked. Updated annually.</div>
   </section>
 
@@ -416,7 +416,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
     <a href="/">Roadie Labs</a> &middot;
     <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a> &middot;
-    <a href="/race/calendar/{CURRENT_YEAR}/">Calendar</a>
+    <a href="/race/calendar/{SEASON_YEAR}/">Calendar</a>
   </footer>
 
 </div>
@@ -489,13 +489,13 @@ def main():
         all_races = json.load(f)
     print(f"Loaded {len(all_races)} races")
 
-    page_dir = output_dir / f"power-rankings-{CURRENT_YEAR}"
+    page_dir = output_dir / f"power-rankings-{SEASON_YEAR}"
     page_dir.mkdir(parents=True, exist_ok=True)
 
     page_html = build_power_rankings_page(all_races)
     out_path = page_dir / "index.html"
     out_path.write_text(page_html, encoding="utf-8")
-    print(f"Generated power-rankings-{CURRENT_YEAR}/index.html ({len(all_races)} races)")
+    print(f"Generated power-rankings-{SEASON_YEAR}/index.html ({len(all_races)} races)")
 
 
 if __name__ == "__main__":
