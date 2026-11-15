@@ -49,6 +49,7 @@ RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "road-guide-content.json"
 SUBSTACK_RSS_URL = "https://gravelgodcycling.substack.com/feed"  # TODO: Roadie Labs newsletter
+ORG_LOGO_URL = f"{SITE_BASE_URL}/race/assets/road-labs-logo.png"
 
 from season import season_year  # noqa: E402
 # Rider-facing season (rolls over in September) — what "Rated for" means.
@@ -1891,6 +1892,20 @@ def build_jsonld(stats: dict) -> str:
         "name": "Roadie Labs",
         "url": SITE_BASE_URL,
         "description": "The definitive road race database. Ratings across 14 base dimensions plus cultural impact.",
+        # Shipped by every race-page deploy (generate_neo_brutalist copies
+        # web/road-labs-logo.png into /race/assets/); 144x144, live 200.
+        "logo": {
+            "@type": "ImageObject",
+            "url": ORG_LOGO_URL,
+            "width": 144,
+            "height": 144,
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "Gravel God Cycling LLC",
+            "url": "https://gravelgodcycling.com",
+        },
+        # No sameAs: no Roadie Labs social profile URL exists in this repo.
     }
     website = {
         "@context": "https://schema.org",

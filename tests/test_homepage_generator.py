@@ -629,6 +629,32 @@ class TestJSONLD:
         jsonld = build_jsonld(stats)
         assert '"Organization"' in jsonld
 
+    def _org(self, stats):
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                            build_jsonld(stats), re.DOTALL)
+        return next(json.loads(b) for b in blocks if '"Organization"' in b)
+
+    def test_organization_logo_is_the_shipped_feed_logo(self, stats):
+        org = self._org(stats)
+        logo = org["logo"]
+        assert logo["url"] == "https://roadielabs.com/race/assets/road-labs-logo.png"
+        # generate_neo_brutalist copies this file into /race/assets/ on every
+        # race-page deploy; its real size must match the declared one.
+        from PIL import Image
+        src = Path(__file__).resolve().parent.parent / "web" / "road-labs-logo.png"
+        with Image.open(src) as im:
+            assert (logo["width"], logo["height"]) == im.size
+        neo = (Path(__file__).resolve().parent.parent / "wordpress" / "generate_neo_brutalist.py").read_text()
+        assert "assets_dir / 'road-labs-logo.png'" in neo
+
+    def test_organization_parent_is_gravel_god_cycling_llc(self, stats):
+        parent = self._org(stats)["parentOrganization"]
+        assert parent == {"@type": "Organization", "name": "Gravel God Cycling LLC",
+                          "url": "https://gravelgodcycling.com"}
+
+    def test_organization_has_no_invented_sameas(self, stats):
+        assert "sameAs" not in self._org(stats)
+
     def test_jsonld_has_website(self, stats):
         jsonld = build_jsonld(stats)
         assert '"WebSite"' in jsonld
