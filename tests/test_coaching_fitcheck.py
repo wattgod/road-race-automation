@@ -284,7 +284,7 @@ class TestFitCheck:
         "Answer the first two. The race date only changes what I tell you.",
         "YOU PROBABLY WANT",
         "You execute on your own and want the thinking done right. A weekly look is enough.",
-        "You want the week to move when life does, not after. That's the whole gap between Min and Mid, and it's where most athletes land.",
+        "You want the week to move when life does, not after. That's the whole gap between Min and Mid.",
         "You want every file read the day it lands. Worth it for one race that matters more than the rest.",
         "Under 8 weeks is tight. I'll tell you straight if it's too late to change much.",
         "APPLY FOR MIN →",
