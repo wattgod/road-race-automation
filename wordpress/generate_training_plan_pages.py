@@ -566,10 +566,11 @@ def build_js() -> str:
   if (!hero) return;
   var dateStr = hero.getAttribute('data-race-date');
   if (!dateStr) return;
-  var race = new Date(dateStr + 'T00:00:00');
+  var race = new Date(dateStr + 'T00:00:00Z');
   if (isNaN(race.getTime())) return;
-  var today = new Date(); today.setHours(0, 0, 0, 0);
-  var days = Math.ceil((race - today) / 86400000);
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var days = Math.round((race.getTime() - today) / 86400000);
   if (days <= 7) return;
   var quote = rlPlanQuote(dateStr);
   if (!quote) return;
