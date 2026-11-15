@@ -615,18 +615,13 @@ def _race_page(slug: str) -> str:
 
 @pytest.fixture(scope="module")
 def rendered_pages():
-    original_fetch = generate_homepage.fetch_substack_posts
-    generate_homepage.fetch_substack_posts = lambda: []
-    try:
-        pages = {
-            "homepage": generate_homepage.generate_homepage(
-                _race_index(),
-                race_data_dir=PROJECT_ROOT / "race-data",
-                guide_path=PROJECT_ROOT / "guide" / "road-guide-content.json",
-            ),
-        }
-    finally:
-        generate_homepage.fetch_substack_posts = original_fetch
+    pages = {
+        "homepage": generate_homepage.generate_homepage(
+            _race_index(),
+            race_data_dir=PROJECT_ROOT / "race-data",
+            guide_path=PROJECT_ROOT / "guide" / "road-guide-content.json",
+        ),
+    }
 
     race = json.loads((PROJECT_ROOT / "race-data" / f"{SAMPLE_RACE}.json").read_text())
     race = race.get("race", race)

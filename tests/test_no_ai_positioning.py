@@ -80,8 +80,7 @@ def _pages() -> dict[str, str]:
         "methodology": generate_methodology_page(),
         "training-plans": generate_training_page(),
     }
-    with patch("generate_homepage.fetch_substack_posts", return_value=[]):
-        pages["homepage"] = generate_homepage(load_race_index())
+    pages["homepage"] = generate_homepage(load_race_index())
     for key in PAGES:
         pages[f"success:{key}"] = generate_success_page(key)
     pages.update(_race_pages())

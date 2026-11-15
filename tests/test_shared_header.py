@@ -14,16 +14,17 @@ from shared_header import get_site_header_css, get_site_header_html, get_site_he
 class TestHeaderHTML:
     """Tests for get_site_header_html()."""
 
-    def test_six_nav_items(self):
+    def test_five_nav_items(self):
         html = get_site_header_html()
         for label in ["RACES", "PRODUCTS", "COURSES", "SERVICES", "ABOUT"]:
             assert f">{label}</a>" in html
-        assert '>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>' in html
+        # RL-16: ARTICLES linked Gravel God's Substack; removed, no substitute.
+        assert "ARTICLES" not in html
 
     def test_three_dropdown_containers(self):
         # RACES, PRODUCTS and SERVICES have dropdowns. SERVICES lost its
         # dropdown in the Jul 2026 whoops audit (its targets 404'd) and got
-        # it back for RL-10 once /consulting/ was live. ARTICLES stays plain.
+        # it back for RL-10 once /consulting/ was live.
         html = get_site_header_html()
         assert html.count('class="rl-site-header-item"') == 3
 
@@ -98,7 +99,7 @@ class TestHeaderHTML:
         assert last_close > last_item or last_item == -1
 
     def test_aria_current_when_active(self):
-        for key in ["races", "products", "courses", "services", "articles", "about"]:
+        for key in ["races", "products", "courses", "services", "about"]:
             html = get_site_header_html(active=key)
             assert 'aria-current="page"' in html
 
@@ -113,16 +114,14 @@ class TestHeaderHTML:
         # Not on others
         assert 'aria-current="page">RACES</a>' not in html
 
-    def test_external_links_have_target_blank(self):
+    def test_no_external_links(self):
         html = get_site_header_html()
-        # Substack link should have target and rel
-        assert 'target="_blank"' in html
-        assert 'rel="noopener"' in html
-        assert 'class="rl-external-indicator"' in html
+        assert 'target="_blank"' not in html
+        assert 'class="rl-external-indicator"' not in html
 
-    def test_substack_url(self):
+    def test_no_substack(self):
         html = get_site_header_html()
-        assert "gravelgodcycling.substack.com" in html  # TODO: update when newsletter URL exists
+        assert "substack" not in html.lower()
 
     def test_correct_urls(self):
         html = get_site_header_html()

@@ -299,8 +299,6 @@ def build_event_postal_address(vitals: dict) -> Optional[dict]:
 SITE_BASE_URL = "https://roadielabs.com"
 COACHING_URL = f"{SITE_BASE_URL}/coaching/apply/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/questionnaire/"
-SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
-SUBSTACK_EMBED = "https://gravelgodcycling.substack.com/embed"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = str(datetime.now().year)
 
 # Ported from gravel-race-automation SITE-SYNC S2 — race-page "Train for this
@@ -5671,7 +5669,7 @@ def linkify_alternatives(alt_text: str, race_index: list) -> str:
 
 
 def build_email_capture(rd: dict) -> str:
-    """Build email capture section — prep kit CTA + Substack subscribe."""
+    """Build email capture section — prep kit CTA."""
     slug = esc(rd["slug"])
     name = esc(rd["name"])
     return f'''<div class="rl-email-capture rl-fade-section" id="prep-kit-capture">

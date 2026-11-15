@@ -34,7 +34,7 @@ from brand_tokens import (
     get_ga4_head_snippet,
 )
 from shared_header import get_site_header_html, get_site_header_css
-from shared_footer import get_mega_footer_html
+from shared_footer import get_mega_footer_css, get_mega_footer_html
 from cookie_consent import get_consent_banner_html
 from plan_offer import (CTA_LABEL as PLAN_CTA_LABEL, PRICE_LINE as PLAN_PRICE_LINE,
                         REFUND_WINDOW_DAYS, plan_quote_js)
@@ -641,6 +641,7 @@ def generate_page(rd: dict, pack: dict) -> str:
 {get_font_face_css("/race/assets/fonts")}
 {get_tokens_css()}
 {get_site_header_css()}
+{get_mega_footer_css()}
 {build_css()}
   </style>
   {get_ga4_head_snippet()}

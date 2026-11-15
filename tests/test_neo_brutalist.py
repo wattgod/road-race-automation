@@ -1154,9 +1154,11 @@ class TestFooter:
         html = build_footer()
         assert "/race/methodology/" in html
 
-    def test_footer_has_newsletter_link(self):
+    def test_footer_has_roadie_newsletter_form(self):
         html = build_footer()
-        assert "gravelgodcycling.substack.com" in html
+        assert "substack" not in html.lower()
+        assert 'data-placement="mega_footer"' in html
+        assert "brand:'roadielabs'" in html
 
     def test_footer_has_disclaimer(self):
         html = build_footer()
@@ -1184,13 +1186,12 @@ class TestNav:
         assert '>RACES</a>' in html
         assert '>PRODUCTS</a>' in html
         assert '>SERVICES</a>' in html
-        assert '>ARTICLES<span class="rl-external-indicator"' in html
+        assert 'ARTICLES' not in html
         assert '>ABOUT</a>' in html
         assert '/road-races/' in html
         assert '/training-plans/' in html
         assert '/coaching/' in html
-        # ARTICLES points at the live Substack until road /articles/ exists
-        assert 'substack.com' in html
+        assert 'substack' not in html.lower()
         assert '/about/' in html
 
     def test_dropdown_containers(self, normalized_data):

@@ -62,7 +62,7 @@ def get_privacy_content() -> str:
 <li><strong>Analytics data</strong> &mdash; via Google Analytics 4 (GA4), we collect anonymized usage data including pages visited, session duration, and general location (country/region). For visitors whose browser timezone is in the EEA, United Kingdom, or Switzerland, analytics remains disabled until they accept the cookie banner. Elsewhere, analytics is enabled by default and can be disabled at any time through the <strong>Privacy choices</strong> link in the footer. If timezone detection fails, analytics remains disabled until accepted. We do not intentionally send personally identifiable information to GA4. GA4 uses IP anonymization by default.</li>
 <li><strong>Coaching and form data</strong> &mdash; identity and contact details; goals, events, availability, training history, workouts, device metrics, comments, wellness, nutrition, equipment, and schedule constraints; and health or injury information you voluntarily provide for coaching safety and individualization.</li>
 <li><strong>Payment information</strong> &mdash; processed securely by <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a>. We never see or store your full card number.</li>
-<li><strong>Email address</strong> &mdash; if you subscribe to our newsletter via Substack, your email is managed by <a href="https://substack.com/privacy" target="_blank" rel="noopener">Substack</a>.</li>
+<li><strong>Email address</strong> &mdash; if you subscribe to our newsletter, your email goes on our own list, stored with <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, and newsletter emails are sent through <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a>. Every newsletter email has an unsubscribe link.</li>
 </ul>
 
 <h2>How We Use Your Data</h2>
@@ -89,13 +89,13 @@ def get_privacy_content() -> str:
 <ul>
 <li><strong>Google Analytics 4</strong> &mdash; anonymized site analytics, opt-in in the EEA, United Kingdom, and Switzerland and opt-out elsewhere</li>
 <li><strong>Stripe</strong> &mdash; payment processing</li>
-<li><strong>Substack</strong> &mdash; newsletter delivery</li>
 <li><strong>Cloudflare</strong> &mdash; web delivery, intake edge, security, and logs</li>
 <li><strong>Railway</strong> &mdash; private onboarding backend and persistent case storage</li>
 <li><strong>SignWell</strong> &mdash; electronic signatures, signer authentication, audit trail, and signed records</li>
 <li><strong>TrainingPeaks</strong> &mdash; training history, workouts, calendar delivery, comments, and Premium account linkage</li>
 <li><strong>Google</strong> &mdash; Analytics, email, booking, and related workspace operations where used</li>
-<li><strong>Resend</strong> &mdash; transactional email delivery</li>
+<li><strong>Resend</strong> &mdash; transactional and newsletter email delivery</li>
+<li><strong>Supabase</strong> &mdash; newsletter list storage</li>
 <li><strong>AI service providers</strong> &mdash; assisted summarization, drafting, classification, and plan or review preparation with human approval</li>
 <li><strong>SiteGround</strong> &mdash; web hosting</li>
 </ul>

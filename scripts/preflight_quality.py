@@ -531,8 +531,7 @@ def check_css_js_class_sync():
                      "rl-pk-calc-shopping-note",
                      "rl-pk-calc-result", "rl-pk-calc-result-row",
                      "rl-pk-calc-result-label", "rl-pk-calc-result-value",
-                     "rl-pk-calc-result-highlight", "rl-pk-calc-result-note",
-                     "rl-pk-calc-substack"):
+                     "rl-pk-calc-result-highlight", "rl-pk-calc-result-note"):
             check(f".{cls} in CSS", cls in css_classes, f"JS references .{cls} but not in CSS")
 
 

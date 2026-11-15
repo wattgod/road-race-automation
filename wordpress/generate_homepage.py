@@ -4,7 +4,7 @@ Generate the Roadie Labs homepage in Desert Editorial style.
 
 Leads with the race database as the primary value prop, includes stats bar,
 featured T1 races, race calendar, training guide preview, how-it-works funnel,
-training CTA, newsletter with article carousel, and footer.
+training CTA, newsletter sign-up, and footer.
 
 Usage:
     python generate_homepage.py
@@ -17,16 +17,12 @@ import json
 import math
 import random
 import re
-import urllib.request
-import xml.etree.ElementTree as ET
 from datetime import date, datetime
 from pathlib import Path
 
 # Import shared constants from the race page generator
 from generate_neo_brutalist import (
     SITE_BASE_URL,
-    SUBSTACK_URL,
-    SUBSTACK_EMBED,
     COACHING_URL,
     TRAINING_PLANS_URL,
 )
@@ -42,6 +38,7 @@ from brand_tokens import (
 from cookie_consent import get_consent_banner_html
 from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
 from generate_consulting import CONSULTING_PRICE
+from newsletter_signup import NEWSLETTER_TEXT, NEWSLETTER_TITLE, newsletter_form_html
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
@@ -49,7 +46,6 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 RACE_INDEX_PATH = Path(__file__).parent.parent / "web" / "race-index.json"
 RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "road-guide-content.json"
-SUBSTACK_RSS_URL = "https://gravelgodcycling.substack.com/feed"  # TODO: Roadie Labs newsletter
 ORG_LOGO_URL = f"{SITE_BASE_URL}/race/assets/road-labs-logo.png"
 
 from season import season_year  # noqa: E402
@@ -265,31 +261,6 @@ def load_upcoming_races(race_data_dir: Path = None, today: date = None) -> list:
     return races
 
 
-def fetch_substack_posts(limit: int = 6) -> list:
-    """Fetch latest posts from Substack RSS with titles, URLs, and snippets."""
-    try:
-        req = urllib.request.Request(SUBSTACK_RSS_URL, headers={"User-Agent": "RoadLabs/1.0"})
-        resp = urllib.request.urlopen(req, timeout=10)
-        root = ET.fromstring(resp.read())
-        posts = []
-        for item in root.findall(".//item")[:limit]:
-            title_el = item.find("title")
-            link_el = item.find("link")
-            desc_el = item.find("description")
-            if title_el is not None and title_el.text:
-                snippet = ""
-                if desc_el is not None and desc_el.text:
-                    snippet = re.sub(r"<[^>]+>", "", desc_el.text)[:120].strip()
-                posts.append({
-                    "title": title_el.text.strip(),
-                    "url": link_el.text.strip() if link_el is not None and link_el.text else "",
-                    "snippet": snippet,
-                })
-        return posts
-    except Exception:
-        return []
-
-
 def load_guide_chapters(guide_path: Path = None) -> list:
     """Load chapter titles from the guide content JSON."""
     path = guide_path or GUIDE_CONTENT_PATH
@@ -319,8 +290,8 @@ def build_top_bar() -> str:
     return '<div class="rl-hp-top-bar" aria-hidden="true"></div>'
 
 
-def build_ticker(one_liners: list, substack_posts: list, upcoming: list) -> str:
-    """Build the scrolling ticker with editorial one-liners, Substack posts, and race alerts."""
+def build_ticker(one_liners: list, upcoming: list) -> str:
+    """Build the scrolling ticker with editorial one-liners and race alerts."""
     items = []
 
     # Races happening this week (next 7 days) or just happened (last 3 days)
@@ -335,11 +306,6 @@ def build_ticker(one_liners: list, substack_posts: list, upcoming: list) -> str:
         elif -3 <= d < 0:
             items.append(f'<span class="rl-ticker-tag rl-ticker-tag--gold">JUST RACED</span> '
                          f'<a href="{SITE_BASE_URL}/race/{esc(race["slug"])}/">{esc(race["name"])}</a>')
-
-    # Substack posts
-    for post in substack_posts:
-        items.append(f'<span class="rl-ticker-tag rl-ticker-tag--brown">NEWSLETTER</span> '
-                     f'<a href="{esc(post["url"])}">{esc(post["title"])}</a>')
 
     # Editorial one-liners (random sample, rotates daily)
     sample_size = min(8, len(one_liners))
@@ -1085,34 +1051,16 @@ def build_testimonials() -> str:
     </div>
   </section>'''
 
-def build_email_capture(posts: list = None) -> str:
-    articles = posts or []
-
-    cards = ""
-    for post in articles[:6]:
-        title = esc(post.get("title", ""))
-        url = esc(post.get("url", ""))
-        snippet = esc(post.get("snippet", ""))
-        cards += f'''
-        <a href="{url}" class="rl-hp-article-card" target="_blank" rel="noopener" data-ga="article_click" data-ga-label="{title}">
-          <h3 class="rl-hp-article-title">{title}</h3>
-          <p class="rl-hp-article-snippet">{snippet}</p>
-        </a>'''
-
-    carousel = ""
-    if cards:
-        carousel = f'''
-    <div class="rl-hp-article-carousel">{cards}
-    </div>'''
-
+def build_email_capture() -> str:
+    """Roadie's own newsletter sign-up (RL-16): posts to the lead-intake Worker."""
     return f'''<section class="rl-hp-email" id="newsletter">
     <div class="rl-hp-email-inner">
       <span class="rl-hp-email-label">NEWSLETTER</span>
-      <h2 class="rl-hp-email-title">Slow, Mid, 38s</h2>
-      <p class="rl-hp-email-text">Essays on training, meaning, and not majoring in the minors.</p>
-    </div>{carousel}
+      <h2 class="rl-hp-email-title">{esc(NEWSLETTER_TITLE)}</h2>
+      <p class="rl-hp-email-text">{esc(NEWSLETTER_TEXT)}</p>
+    </div>
     <div class="rl-hp-email-form">
-      <iframe src="{esc(SUBSTACK_EMBED)}" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no" loading="lazy"></iframe>
+      {newsletter_form_html("homepage")}
     </div>
   </section>'''
 
@@ -1191,7 +1139,6 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 .rl-ticker-tag { display: inline-block; padding: 1px 6px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-right: 6px; }
 .rl-ticker-tag--teal { background: var(--rl-color-signal-red); color: #fff; }
 .rl-ticker-tag--gold { background: #202322; color: #fff; }
-.rl-ticker-tag--brown { background: #555555; color: #fff; }
 .rl-ticker-tag--red { background: #c0392b; color: #fff; }
 .rl-hp-ticker-mobile { display: none; }
 
@@ -1470,18 +1417,9 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 .rl-hp-email-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; font-weight: 700; color: #202322; margin-bottom: 12px; }
 .rl-hp-email-text { font-family: 'Source Serif 4', Georgia, serif; font-size: 14px; color: var(--rl-color-tier-2); margin-bottom: 0; line-height: 1.75; }
 
-/* ── Article carousel (email section) ───────────────────── */
-.rl-hp-article-carousel { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 24px 48px; -webkit-overflow-scrolling: touch; }
-.rl-hp-article-carousel::-webkit-scrollbar { height: 4px; }
-.rl-hp-article-carousel::-webkit-scrollbar-track { background: #d0d0c8; }
-.rl-hp-article-carousel::-webkit-scrollbar-thumb { background: #202322; }
-.rl-hp-article-card { flex: 0 0 280px; scroll-snap-align: start; padding: 20px; background: #fafaf8; border: 2px solid transparent; text-decoration: none; color: #202322; transition: border-color var(--rl-ease); }
-.rl-hp-article-card:hover { border-color: #202322; }
-.rl-hp-article-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 8px; }
-.rl-hp-article-snippet { font-family: 'Source Serif 4', Georgia, serif; font-size: 12px; color: var(--rl-color-tier-2); line-height: 1.6; margin: 0; }
 
 /* ── Email form ─────────────────────────────────────────── */
-.rl-hp-email-form { background: #fafaf8; padding: 20px 32px; max-width: 480px; margin: 24px auto 0; min-height: 150px; }
+.rl-hp-email-form { background: #fafaf8; padding: 20px 32px; max-width: 480px; margin: 24px auto 0; }
 
 /* ── Skip link ───────────────────────────────────────────── */
 .rl-hp-skip { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; padding: 12px 24px; background: #202322; color: #fafaf8; z-index: 100; }
@@ -1570,9 +1508,6 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
   .rl-hp-email { padding: 32px 0; }
   .rl-hp-email-inner { padding: 0 16px; }
   .rl-hp-email-title { font-size: 22px; }
-  .rl-hp-article-carousel { flex-direction: column; overflow-x: visible; scroll-snap-type: none; padding: 16px; gap: 12px; }
-  .rl-hp-article-card { flex: none; width: 100%; padding: 16px; }
-  .rl-hp-article-card:nth-child(n+4) { display: none; }
   .rl-hp-email-form { margin: 20px 16px 0; padding: 16px; }
 
   /* Section headers */
@@ -1951,7 +1886,6 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
 
     one_liners = load_editorial_one_liners(race_data_dir)
     upcoming = load_upcoming_races(race_data_dir)
-    substack_posts = fetch_substack_posts()
     chapters = load_guide_chapters(guide_path)
 
     top_bar = build_top_bar()
@@ -1960,14 +1894,14 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     goal_review_entry = build_goal_review_entry()
     ladder = build_ladder_strip(stats)
     stats_stripe = build_stats_bar(stats)
-    ticker = build_ticker(one_liners, substack_posts, upcoming)
+    ticker = build_ticker(one_liners, upcoming)
     content_grid = build_content_grid(race_index, stats, upcoming)
     latest_takes = build_latest_takes()
     how_it_works = build_how_it_works(stats)
     training_cta = build_training_cta()
     guide_preview = build_guide_preview(chapters)
     testimonials = build_testimonials()
-    email = build_email_capture(substack_posts)
+    email = build_email_capture()
     footer = build_footer()
     css = build_homepage_css()
     js = build_homepage_js()
@@ -2065,7 +1999,7 @@ def main():
     output_file = output_dir / "homepage.html"
     output_file.write_text(html_content, encoding="utf-8")
 
-    # Summary stats (reuse cheap computations, avoid re-fetching Substack RSS)
+    # Summary stats (reuse cheap computations)
     stats = compute_stats(race_index)
     upcoming = load_upcoming_races()
     one_liners = load_editorial_one_liners()

@@ -1,7 +1,7 @@
 """Shared site header used by all generated pages.
 
 Provides get_site_header_html() and get_site_header_css() for a consistent
-6-item dropdown nav (RACES, PRODUCTS, COURSES, SERVICES, ARTICLES, ABOUT) across
+5-item dropdown nav (RACES, PRODUCTS, COURSES, SERVICES, ABOUT) across
 homepage, race profiles, coaching, about, prep kits, series hubs, guide,
 methodology, state hubs, vs pages, power rankings, calendar, tier hubs,
 and coaching apply pages.
@@ -9,7 +9,6 @@ and coaching apply pages.
 from __future__ import annotations
 
 SITE_BASE_URL = "https://roadielabs.com"
-SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 
 LOGO_MARK_HTML = '<img class="rl-site-header-mark" src="/race/assets/rl-logo.svg?v=siped-1" alt="" width="14" height="48">'
 # Timing Slip glyph tile (Nov 2026): the mark on a raised paper tile, turned
@@ -26,7 +25,7 @@ def get_site_header_html(active: str | None = None) -> str:
 
     Args:
         active: Which top-level nav item is current. One of:
-                "races", "products", "courses", "services", "articles", "about".
+                "races", "products", "courses", "services", "about".
                 Adds aria-current="page" to the matching top-level link.
     """
 
@@ -65,7 +64,6 @@ def get_site_header_html(active: str | None = None) -> str:
           <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
         </div>
       </div>
-      <a href="{SUBSTACK_URL}" target="_blank" rel="noopener" aria-label="ARTICLES (opens in a new tab)"{_aria("articles")}>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
       <a href="{SITE_BASE_URL}/about/"{_aria("about")}>ABOUT</a>
     </nav>
   </div>

@@ -30,8 +30,6 @@ from typing import Any, Optional
 sys.path.insert(0, str(Path(__file__).parent))
 from generate_neo_brutalist import (
     SITE_BASE_URL,
-    SUBSTACK_URL,
-    SUBSTACK_EMBED,
     COACHING_URL,
     TRAINING_PLANS_URL,
     normalize_race_data,
@@ -742,7 +740,7 @@ def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
     """Build the interactive fueling calculator form HTML for Section 6.
 
     Generates email-gated form with hydration/sodium fields, hidden results
-    panel (3 panels: numbers, hourly plan, shopping list), and Substack iframe.
+    panel (3 panels: numbers, hourly plan, shopping list).
     All computation is client-side JS — the form posts to a Cloudflare Worker
     in the background for lead capture only.
     """
@@ -856,10 +854,6 @@ def build_fueling_calculator_html(rd: dict, raw: Optional[dict] = None) -> str:
       <p class="rl-pk-calc-upsell-title">Your numbers are the easy part.</p>
       <p class="rl-pk-calc-upsell-text">Hitting them at race intensity is a trained skill &mdash; gut training over 4-6 weeks, bottle logistics, heat adjustments when the plan meets the weather. The custom training plan builds your fueling protocol into the actual training weeks, so race day is a rehearsal, not an experiment.</p>
       <a href="{QUESTIONNAIRE_URL}?race={slug}" class="rl-pk-calc-upsell-btn" data-cta="fueling_upsell_plan">BUILD MY PLAN &mdash; FUELING INCLUDED</a>
-    </div>
-    <div class="rl-pk-calc-substack" id="rl-pk-calc-substack" style="display:none">
-      <p class="rl-pk-calc-substack-label">Get race-day tips in your inbox</p>
-      <iframe src="{esc(SUBSTACK_EMBED)}" title="Newsletter signup" width="100%" height="150" style="border:none;background:transparent" frameborder="0" scrolling="no" loading="lazy"></iframe>
     </div>
   </div>'''
 
@@ -2187,8 +2181,6 @@ def build_prep_kit_css() -> str:
 .rl-pk-calc-upsell-text{font-size:13px;line-height:1.6;margin:0 0 12px;color:var(--rl-color-near-black)}
 .rl-pk-calc-upsell-btn{display:inline-block;font-family:var(--rl-font-data);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:11px 20px;background:var(--rl-color-near-black);color:var(--rl-color-cool-white);border:2px solid #000}
 .rl-pk-calc-upsell-btn:hover{background:var(--rl-color-white);color:var(--rl-color-near-black)}
-.rl-pk-calc-substack{margin:20px 0 0;padding:16px;border:2px solid var(--rl-color-silver);background:var(--rl-color-white)}
-.rl-pk-calc-substack-label{font-family:var(--rl-font-data);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--rl-color-primary-navy);margin:0 0 8px}
 
 /* ── Climate Badge ── */
 .rl-pk-calc-field--climate{grid-column:1/-1}
@@ -2295,8 +2287,7 @@ def build_prep_kit_css() -> str:
   .rl-guide-timeline-marker,.rl-guide-process-num,.rl-pk-nn-badge,.rl-pk-milestone-badge,.rl-pk-workout-mod{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   a[href]:after{content:none !important}
   .rl-pk-calc-form{display:none}
-  .rl-pk-calc-substack{display:none}
-  .rl-pk-calc-intro{display:none}
+    .rl-pk-calc-intro{display:none}
   .rl-pk-calc-result[style*="block"]{display:block !important}
   .rl-pk-calc-hourly-scroll{overflow:visible}
   .rl-pk-calc-hourly-table{min-width:0}
@@ -2601,9 +2592,6 @@ document.querySelectorAll('.rl-guide-accordion-trigger').forEach(function(btn){
     var sodiumMgHr=sodium?sodium.sodiumMgHr:1000;
     var plan=computeHourlyPlan(hours,result.rate,fluidMlHr,sodiumMgHr,fuelFormat,aidHours);
     renderResults(result,hydration,sodium,plan,hours);
-    /* Show Substack iframe */
-    var ss=document.getElementById('rl-pk-calc-substack');
-    if(ss) ss.style.display='block';
     var up=document.getElementById('rl-pk-calc-upsell');
     if(up) up.style.display='block';
     /* Cache email in localStorage */

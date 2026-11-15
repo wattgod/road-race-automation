@@ -27,8 +27,9 @@ class TestMegaFooterHTML:
     def test_has_services_heading(self):
         assert ">SERVICES</h4>" in self.html
 
-    def test_has_articles_heading(self):
-        assert ">ARTICLES</h4>" in self.html
+    def test_no_articles_heading(self):
+        # RL-16: the ARTICLES column linked Gravel God's Substack.
+        assert ">ARTICLES</h4>" not in self.html
 
     def test_has_newsletter_heading(self):
         assert ">NEWSLETTER</h4>" in self.html
@@ -51,8 +52,15 @@ class TestMegaFooterHTML:
         assert 'href="https://roadielabs.com/coaching/">Coaching</a>' in col
         assert 'href="https://roadielabs.com/consulting/">Consulting</a>' in col
 
-    def test_articles_links(self):
-        assert "gravelgodcycling.substack.com" in self.html
+    def test_no_substack(self):
+        assert "substack" not in self.html.lower()
+        assert "Slow Mid 38s" not in self.html
+
+    def test_newsletter_is_roadie_form(self):
+        assert 'class="rl-newsletter-form" data-placement="mega_footer"' in self.html
+        assert "brand:'roadielabs'" in self.html
+        assert "source:'newsletter_subscribe'" in self.html
+        assert "https://fueling-lead-intake.gravelgodcoaching.workers.dev" in self.html
 
     def test_no_dead_link_targets(self):
         # These URLs 404/403 on the live static site (Jul 2026 whoops audit).
@@ -128,7 +136,6 @@ class TestMegaFooterHTML:
     def test_external_links_noopener(self):
         """All target=_blank links must have rel=noopener."""
         targets = re.findall(r'<a [^>]*target="_blank"[^>]*>', self.html)
-        assert len(targets) >= 2, "Expected at least 2 external links"
         for tag in targets:
             assert 'rel="noopener"' in tag, f"Missing rel=noopener: {tag}"
 
@@ -138,9 +145,10 @@ class TestMegaFooterHTML:
         assert '<footer class="rl-mega-footer">' in self.html
         assert "</footer>" in self.html
 
-    def test_six_columns(self):
+    def test_five_columns(self):
+        # RL-16 dropped the ARTICLES column (it linked Gravel God's Substack).
         cols = self.html.count("rl-mega-footer-col")
-        assert cols == 6, f"Expected 6 columns, got {cols}"
+        assert cols == 5, f"Expected 5 columns, got {cols}"
 
 
 class TestMegaFooterCSS:
@@ -176,10 +184,10 @@ class TestMegaFooterCSS:
     def test_responsive_mobile(self):
         assert "max-width: 600px" in self.css
 
-    def test_six_column_grid(self):
+    def test_five_column_grid(self):
         assert "grid-template-columns:" in self.css
-        # Desktop should have 6 columns
-        assert "1.5fr 1fr 1fr 1fr 1fr 1fr" in self.css
+        # Desktop: brand, three link columns, and a wider newsletter column
+        assert "1.5fr 1fr 1fr 1fr 2fr" in self.css
 
     def test_tablet_three_columns(self):
         assert "1fr 1fr 1fr" in self.css
@@ -190,10 +198,11 @@ class TestMegaFooterCSS:
         assert mobile_match, "Mobile should collapse to 1 column"
 
     def test_css_prefix(self):
-        """All classes must use rl-mega-footer- prefix."""
+        """Classes use the rl-mega-footer- prefix, plus the shared
+        newsletter form (rl-newsletter-, RL-16) the footer embeds."""
         classes = re.findall(r'\.(rl-[a-z][a-z0-9-]*)', self.css)
         for cls in classes:
-            assert cls.startswith("rl-mega-footer"), f"Wrong prefix: .{cls}"
+            assert cls.startswith(("rl-mega-footer", "rl-newsletter")), f"Wrong prefix: .{cls}"
 
     def test_max_width_1200(self):
         assert "max-width: 1200px" in self.css
