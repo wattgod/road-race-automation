@@ -3280,9 +3280,49 @@ def sync_llms_txt():
     except subprocess.CalledProcessError:
         pass
 
+    sync_security_txt(host, user, port)
+
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {uploaded} text files to {wp_url}/")
     return f"{wp_url}/llms.txt"
+
+
+def sync_security_txt(host: str, user: str, port: str):
+    """Regenerate web/.well-known/security.txt (Expires one year out) and
+    upload it to /.well-known/security.txt. Part of --sync-llms-txt.
+
+    If regeneration fails nothing is uploaded: a stale Expires date must not
+    replace the live file."""
+    sys.path.insert(0, str(SCRIPTS_DIR))
+    try:
+        import generate_security_txt
+        local_path = generate_security_txt.write_security_txt()
+    except Exception as e:
+        print(f"✗ security.txt regeneration failed, not uploaded: {e}")
+        return None
+
+    remote_dir = f"{REMOTE_BASE}/.well-known"
+    try:
+        subprocess.run(
+            ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+             f"mkdir -p {remote_dir} && chmod 755 {remote_dir}"],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+        subprocess.run(
+            ["scp", "-i", str(SSH_KEY), "-P", port, str(local_path),
+             f"{user}@{host}:{remote_dir}/security.txt"],
+            check=True, capture_output=True, text=True, timeout=30,
+        )
+        subprocess.run(
+            ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+             f"chmod 644 {remote_dir}/security.txt"],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ security.txt upload failed: {(e.stderr or '').strip()}")
+        return None
+    print("  Uploaded /.well-known/security.txt")
+    return f"{remote_dir}/security.txt"
 
 
 def sync_markdown(markdown_dir: str):
@@ -3621,7 +3661,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--sync-llms-txt", action="store_true",
-        help="Upload llms.txt + llms-full.txt to site root"
+        help="Upload llms.txt + llms-full.txt to site root and /.well-known/security.txt"
     )
     parser.add_argument(
         "--sync-markdown", action="store_true",
