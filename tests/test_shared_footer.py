@@ -46,13 +46,19 @@ class TestMegaFooterHTML:
     def test_services_links(self):
         assert "/coaching/" in self.html
 
+    def test_services_column_links_consulting(self):
+        col = self.html.split(">SERVICES</h4>", 1)[1].split("</nav>", 1)[0]
+        assert 'href="https://roadielabs.com/coaching/">Coaching</a>' in col
+        assert 'href="https://roadielabs.com/consulting/">Consulting</a>' in col
+
     def test_articles_links(self):
         assert "gravelgodcycling.substack.com" in self.html
 
     def test_no_dead_link_targets(self):
         # These URLs 404/403 on the live static site (Jul 2026 whoops audit).
-        # Restore a link ONLY after its page actually deploys.
-        for dead in ("/guide/", "/consulting/", "/articles/",
+        # Restore a link ONLY after its page actually deploys. /consulting/
+        # was restored for RL-10 (live, HTTP 200, 2026-11-15).
+        for dead in ("/guide/", "/articles/",
                      "/insights/", "/fueling-methodology/"):
             assert dead not in self.html, f"footer links dead URL {dead}"
 

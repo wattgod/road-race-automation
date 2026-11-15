@@ -41,6 +41,7 @@ from brand_tokens import (
 )
 from cookie_consent import get_consent_banner_html
 from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
+from generate_consulting import CONSULTING_PRICE
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
@@ -543,6 +544,12 @@ def build_ladder_strip(stats: dict) -> str:
       </div>
       <div class="rl-hp-ladder-cell">
         <p class="rl-hp-ladder-num">03</p>
+        <h3>Book a consult</h3>
+        <p>One hour on your training. I go through your files before we talk, and you leave with a written plan of action.</p>
+        <a href="{esc(SITE_BASE_URL)}/consulting/" class="rl-hp-ladder-go" data-ga="ladder_consulting">BOOK A CONSULT &mdash; {CONSULTING_PRICE} &rarr;</a>
+      </div>
+      <div class="rl-hp-ladder-cell">
+        <p class="rl-hp-ladder-num">04</p>
         <h3>Find out what you could be.</h3>
         <p>A human in your corner.</p>
         <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-ladder-go" data-ga="ladder_coaching">GET ME IN YOUR CORNER &rarr;</a>
@@ -1224,7 +1231,7 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 
 /* ── Ladder strip (id=ladder) ── */
 .rl-hp-ladder { border-top: 1px solid var(--rl-color-near-black); border-bottom: 1px solid var(--rl-color-near-black); background: var(--rl-color-cool-white); }
-.rl-hp-ladder-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.rl-hp-ladder-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
 .rl-hp-ladder-cell { padding: 30px 32px 34px; border-right: 1px solid var(--rl-color-silver); }
 .rl-hp-ladder-cell:last-child { border-right: 0; }
 .rl-hp-ladder-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--rl-color-steel); margin-bottom: 14px; }
@@ -1592,7 +1599,12 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 /* ── Reduced motion ────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) { .rl-hp-scroll-progress { display: none; } .rl-hp-announce-dot { animation: none; } }
 
-/* ── Ladder strip: mobile stack (<720px, cells stack with horizontal hairlines) ── */
+/* ── Ladder strip: mobile stack (2x2 at 721-1000px; one column under 720px with horizontal hairlines) ── */
+@media (max-width: 1000px) and (min-width: 721px) {
+  .rl-hp-ladder-inner { grid-template-columns: 1fr 1fr; }
+  .rl-hp-ladder-cell:nth-child(2n) { border-right: 0; }
+  .rl-hp-ladder-cell:nth-child(-n+2) { border-bottom: 1px solid var(--rl-color-silver); }
+}
 @media (max-width: 720px) {
   .rl-hp-ladder-inner { grid-template-columns: 1fr; }
   .rl-hp-ladder-cell { border-right: 0; border-bottom: 1px solid var(--rl-color-silver); }
