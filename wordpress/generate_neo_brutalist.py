@@ -6161,7 +6161,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-tire-badges {{ display: flex; gap: 8px; margin-bottom: 16px; }}
 .rl-neo-brutalist-page .rl-tire-badge {{ font-family: var(--rl-font-data); font-size: 10px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); text-transform: uppercase; color: var(--rl-color-signal-red); border: 2px solid var(--rl-color-signal-red); padding: 2px 10px; }}
 .rl-neo-brutalist-page .rl-tire-list {{ display: flex; flex-direction: column; gap: 0; }}
-.rl-neo-brutalist-page .rl-tire-pick {{ display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rl-color-muted-tan); }}
+.rl-neo-brutalist-page .rl-tire-pick {{ display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rl-color-silver); }}
 .rl-neo-brutalist-page .rl-tire-pick:last-child {{ border-bottom: none; }}
 .rl-neo-brutalist-page .rl-tire-rank {{ font-family: var(--rl-font-data); font-size: var(--rl-font-size-xl); font-weight: 700; color: var(--rl-color-orange); min-width: 28px; text-align: center; line-height: 1; padding-top: 2px; }}
 .rl-neo-brutalist-page .rl-tire-info {{ flex: 1; }}
@@ -6493,7 +6493,7 @@ def get_page_css() -> str:
 }}
 
 /* Goal card (year-round, links into /goals/) */
-.rl-neo-brutalist-page .rl-goal-card {{ max-width: var(--rl-max-width, 1200px); margin: 0 auto var(--rl-spacing-xl); padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 44px); border: var(--rl-border-standard); border-top: 5px solid var(--rl-color-signal-red); background: var(--rl-color-cool-white); }}
+.rl-neo-brutalist-page .rl-goal-card {{ max-width: 1200px; margin: 0 auto var(--rl-spacing-xl); padding: clamp(20px, 3vw, 32px) clamp(20px, 3vw, 44px); border: var(--rl-border-standard); border-top: 5px solid var(--rl-color-signal-red); background: var(--rl-color-cool-white); }}
 .rl-neo-brutalist-page .rl-goal-card-headline {{ margin: 0; font-family: var(--rl-font-editorial); font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.2; color: var(--rl-color-near-black); }}
 .rl-neo-brutalist-page .rl-goal-card-sub {{ margin: var(--rl-spacing-2xs) 0 0; font-family: var(--rl-font-editorial); font-style: italic; font-size: var(--rl-font-size-base); color: var(--rl-color-secondary-blue); }}
 .rl-neo-brutalist-page .rl-goal-card-buttons {{ display: flex; flex-wrap: wrap; gap: var(--rl-spacing-xs); margin-top: var(--rl-spacing-md); }}
@@ -6544,7 +6544,7 @@ def get_page_css() -> str:
 /* Citations */
 .rl-neo-brutalist-page .rl-citations-intro {{ font-size: var(--rl-font-size-xs); color: var(--rl-color-secondary-blue); margin-bottom: var(--rl-spacing-md); line-height: var(--rl-line-height-relaxed); }}
 .rl-neo-brutalist-page .rl-citations-list {{ list-style: decimal; padding-left: 24px; margin: 0; }}
-.rl-neo-brutalist-page .rl-citation-item {{ font-size: var(--rl-font-size-2xs); line-height: 1.8; border-bottom: 1px solid var(--rl-color-cream); padding: 4px 0; }}
+.rl-neo-brutalist-page .rl-citation-item {{ font-size: var(--rl-font-size-2xs); line-height: 1.8; border-bottom: 1px solid var(--rl-color-silver); padding: 4px 0; }}
 .rl-neo-brutalist-page .rl-citation-item:last-child {{ border-bottom: none; }}
 .rl-neo-brutalist-page .rl-citation-cat {{ display: inline-block; background: var(--rl-color-dark-navy); color: var(--rl-color-cool-white); font-size: 9px; font-weight: 700; letter-spacing: var(--rl-letter-spacing-wider); text-transform: uppercase; padding: 1px 6px; margin-right: 6px; }}
 .rl-neo-brutalist-page .rl-citation-link {{ color: var(--rl-color-signal-red); text-decoration: none; font-weight: 600; }}

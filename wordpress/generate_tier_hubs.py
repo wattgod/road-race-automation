@@ -257,8 +257,8 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   margin: 0 auto;
   padding: 0 24px;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
-  background: var(--rl-color-warm-paper);
+  color: var(--rl-color-ink);
+  background: var(--rl-color-paper);
   min-height: 100vh;
 }}
 .rl-hub-page *, .rl-hub-page *::before, .rl-hub-page *::after {{
@@ -271,36 +271,36 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 /* Breadcrumb */
 .rl-hub-breadcrumb {{
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   padding: 12px 0;
   letter-spacing: 0.5px;
 }}
 .rl-hub-breadcrumb a {{
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-decoration: none;
 }}
 .rl-hub-breadcrumb a:hover {{
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 
 /* Hero */
 .rl-hub-hero {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-ink);
+  color: var(--rl-color-paper);
   padding: 48px 32px;
   margin: 0 -24px;
-  border-bottom: 4px double var(--rl-color-dark-brown);
+  border-bottom: 4px double var(--rl-color-ink);
 }}
 .rl-hub-hero-tier {{
   display: inline-block;
   background: {tier_color};
-  color: var(--rl-color-warm-paper);
+  color: var(--rl-color-paper);
   padding: 4px 12px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border: 2px solid var(--rl-color-warm-paper);
+  border: 2px solid var(--rl-color-paper);
   margin-bottom: 16px;
 }}
 .rl-hub-hero h1 {{
@@ -312,7 +312,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 }}
 .rl-hub-hero-count {{
   font-size: 13px;
-  color: var(--rl-color-tan);
+  color: var(--rl-color-light-steel);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
@@ -320,17 +320,17 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   font-family: var(--rl-font-editorial);
   font-size: 16px;
   line-height: 1.7;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
   max-width: 720px;
   padding: 24px 0;
-  border-bottom: 2px solid var(--rl-color-sand);
+  border-bottom: 2px solid var(--rl-color-silver);
 }}
 
 /* Tier nav */
 .rl-hub-tier-nav {{
   display: flex;
   gap: 0;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-ink);
 }}
 .rl-hub-tier-nav a {{
   flex: 1;
@@ -341,18 +341,18 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--rl-color-secondary-brown);
-  border-right: 2px solid var(--rl-color-dark-brown);
+  color: var(--rl-color-graphite);
+  border-right: 2px solid var(--rl-color-ink);
 }}
 .rl-hub-tier-nav a:last-child {{
   border-right: none;
 }}
 .rl-hub-tier-nav a.active {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-ink);
+  color: var(--rl-color-paper);
 }}
 .rl-hub-tier-nav a:hover:not(.active) {{
-  background: var(--rl-color-sand);
+  background: var(--rl-color-zebra);
 }}
 
 /* Cards grid */
@@ -365,16 +365,16 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 .rl-hub-card {{
   display: flex;
   align-items: stretch;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-ink);
   text-decoration: none;
   color: inherit;
   transition: background 0.15s;
 }}
 .rl-hub-card:first-child {{
-  border-top: 2px solid var(--rl-color-dark-brown);
+  border-top: 2px solid var(--rl-color-ink);
 }}
 .rl-hub-card:hover {{
-  background: var(--rl-color-sand);
+  background: var(--rl-color-zebra);
 }}
 .rl-hub-card-score {{
   display: flex;
@@ -385,7 +385,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   font-size: 24px;
   font-weight: 700;
   color: {tier_color};
-  border-right: 2px solid var(--rl-color-dark-brown);
+  border-right: 2px solid var(--rl-color-ink);
   padding: 12px 8px;
 }}
 .rl-hub-card-body {{
@@ -396,12 +396,12 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   font-family: var(--rl-font-editorial);
   font-size: 16px;
   font-weight: 700;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
   margin-bottom: 2px;
 }}
 .rl-hub-card-location {{
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
@@ -409,12 +409,12 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 .rl-hub-card-tagline {{
   font-family: var(--rl-font-editorial);
   font-size: 13px;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
   line-height: 1.4;
 }}
 .rl-hub-card-stats {{
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   margin-top: 4px;
   letter-spacing: 0.5px;
 }}
@@ -423,19 +423,19 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
 .rl-hub-footer {{
   padding: 24px 0;
   margin-top: 32px;
-  border-top: 4px double var(--rl-color-dark-brown);
+  border-top: 4px double var(--rl-color-ink);
   text-align: center;
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
 .rl-hub-footer a {{
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-decoration: none;
 }}
 .rl-hub-footer a:hover {{
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 
 /* Mobile */
@@ -455,7 +455,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   </style>
   {get_ga4_head_snippet()}
 </head>
-<body style="margin:0;background:var(--rl-color-warm-paper)">
+<body style="margin:0;background:var(--rl-color-paper)">
 
 <div class="rl-hub-page">
 

@@ -509,7 +509,7 @@ def build_state_page(state: str, races: list, total_races: int) -> str:
 {font_face}
 {tokens}
 
-body {{ margin: 0; background: var(--rl-color-warm-paper); }}
+body {{ margin: 0; background: var(--rl-color-paper); }}
 *, *::before, *::after {{ border-radius: 0 !important; box-shadow: none !important; }}
 
 .rl-state-page {{
@@ -517,23 +517,23 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   margin: 0 auto;
   padding: 0 24px;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 
 {get_site_header_css()}
 
 /* Breadcrumb */
-.rl-state-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-brown); padding: 12px 0; letter-spacing: 0.5px; }}
-.rl-state-breadcrumb a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
-.rl-state-breadcrumb a:hover {{ color: var(--rl-color-dark-brown); }}
+.rl-state-breadcrumb {{ font-size: 11px; color: var(--rl-color-graphite); padding: 12px 0; letter-spacing: 0.5px; }}
+.rl-state-breadcrumb a {{ color: var(--rl-color-graphite); text-decoration: none; }}
+.rl-state-breadcrumb a:hover {{ color: var(--rl-color-ink); }}
 
 /* Hero */
 .rl-state-hero {{
-  background: var(--rl-color-warm-paper);
-  color: var(--rl-color-dark-brown);
+  background: var(--rl-color-paper);
+  color: var(--rl-color-ink);
   padding: 48px 32px;
   margin: 0 -24px;
-  border-bottom: 2px solid var(--rl-color-gold);
+  border-bottom: 2px solid var(--rl-color-ink);
 }}
 .rl-state-hero h1 {{
   font-family: var(--rl-font-editorial);
@@ -541,11 +541,11 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 .rl-state-hero-count {{
   font-size: 13px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
@@ -555,7 +555,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   line-height: 1.7;
   max-width: 720px;
   padding: 24px 0;
-  border-bottom: 2px solid var(--rl-color-sand);
+  border-bottom: 2px solid var(--rl-color-silver);
 }}
 
 /* Section headings */
@@ -565,7 +565,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   margin: 40px 0 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--rl-color-gold);
+  border-bottom: 1px solid var(--rl-color-silver);
 }}
 
 /* Map */
@@ -577,17 +577,17 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 .rl-state-card {{
   display: flex;
   align-items: stretch;
-  border-bottom: 1px solid var(--rl-color-tan);
+  border-bottom: 1px solid var(--rl-color-silver);
   text-decoration: none;
   color: inherit;
   transition: background 0.15s, border-color 0.15s;
 }}
-.rl-state-card:first-child {{ border-top: 1px solid var(--rl-color-tan); }}
-.rl-state-card:hover {{ background: var(--rl-color-sand); border-color: var(--rl-color-gold); }}
+.rl-state-card:first-child {{ border-top: 1px solid var(--rl-color-silver); }}
+.rl-state-card:hover {{ background: var(--rl-color-zebra); border-color: var(--rl-color-ink); }}
 .rl-state-card-scores {{
   display: flex;
   align-items: stretch;
-  border-right: 1px solid var(--rl-color-tan);
+  border-right: 1px solid var(--rl-color-silver);
 }}
 .rl-state-card-gg, .rl-state-card-racer {{
   display: flex;
@@ -598,7 +598,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   padding: 12px 8px;
 }}
 .rl-state-card-racer {{
-  border-left: 1px solid var(--rl-color-tan);
+  border-left: 1px solid var(--rl-color-silver);
 }}
 .rl-state-card-racer--empty {{ opacity: 0.45; }}
 .rl-state-card:hover .rl-state-card-racer--empty {{ opacity: 0.7; }}
@@ -613,7 +613,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--rl-color-warm-brown);
+  color: var(--rl-color-graphite);
   margin-top: 3px;
 }}
 .rl-state-card-racer-num {{
@@ -627,7 +627,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-size: 7px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--rl-color-warm-brown);
+  color: var(--rl-color-graphite);
   margin-top: 3px;
   text-transform: uppercase;
 }}
@@ -653,18 +653,18 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 2px;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 .rl-state-card-location {{
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0;
 }}
 .rl-state-card-stats {{
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   margin-top: 6px;
   letter-spacing: 0.5px;
 }}
@@ -682,64 +682,64 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   text-transform: uppercase;
   text-align: left;
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-gold);
-  color: var(--rl-color-secondary-brown);
+  border-bottom: 1px solid var(--rl-color-silver);
+  color: var(--rl-color-graphite);
 }}
 .rl-state-month {{
   font-weight: 700;
   font-size: 12px;
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   width: 90px;
 }}
 .rl-state-month-count {{
   font-size: 12px;
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   width: 30px;
   text-align: center;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-state-month-races {{
   font-size: 12px;
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
 }}
 .rl-state-month-races a {{
-  color: var(--rl-color-teal);
+  color: var(--rl-color-ink);
   text-decoration: none;
 }}
 .rl-state-month-races a:hover {{ text-decoration: underline; }}
 
 /* FAQ */
 .rl-state-faq {{ margin: 32px 0; }}
-.rl-state-faq-item {{ border-bottom: 1px solid var(--rl-color-sand); padding: 12px 0; }}
+.rl-state-faq-item {{ border-bottom: 1px solid var(--rl-color-silver); padding: 12px 0; }}
 .rl-state-faq-item summary {{
   font-family: var(--rl-font-editorial);
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
 }}
-.rl-state-faq-item summary:hover {{ color: var(--rl-color-teal); }}
+.rl-state-faq-item summary:hover {{ color: var(--rl-color-ink); }}
 .rl-state-faq-item p {{
   font-size: 14px;
   line-height: 1.7;
   margin: 8px 0 0;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
 }}
 
 /* CTA */
 .rl-state-cta {{
-  background: var(--rl-color-warm-paper);
-  color: var(--rl-color-dark-brown);
+  background: var(--rl-color-paper);
+  color: var(--rl-color-ink);
   padding: 32px;
   margin: 32px -24px;
   text-align: center;
-  border-top: 2px solid var(--rl-color-gold);
-  border-bottom: 2px solid var(--rl-color-gold);
+  border-top: 2px solid var(--rl-color-ink);
+  border-bottom: 2px solid var(--rl-color-ink);
 }}
-.rl-state-cta h2 {{ color: var(--rl-color-dark-brown); border-bottom-color: var(--rl-color-gold); margin-top: 0; }}
-.rl-state-cta p {{ font-size: 14px; line-height: 1.6; color: var(--rl-color-secondary-brown); }}
+.rl-state-cta h2 {{ color: var(--rl-color-ink); border-bottom-color: var(--rl-color-ink); margin-top: 0; }}
+.rl-state-cta p {{ font-size: 14px; line-height: 1.6; color: var(--rl-color-graphite); }}
 .rl-state-cta-btn {{
   display: inline-block;
   padding: 12px 28px;
@@ -748,27 +748,27 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid var(--rl-color-gold);
-  color: var(--rl-color-dark-brown);
-  background: var(--rl-color-gold);
+  border: 2px solid var(--rl-color-offer);
+  color: var(--rl-color-white);
+  background: var(--rl-color-offer);
   margin-top: 12px;
   transition: all 0.2s;
 }}
-.rl-state-cta-btn:hover {{ background: var(--rl-color-light-gold); border-color: var(--rl-color-light-gold); }}
+.rl-state-cta-btn:hover {{ background: var(--rl-color-offer-dark); border-color: var(--rl-color-offer-dark); }}
 
 /* Footer */
 .rl-state-footer {{
   padding: 24px 0;
   margin-top: 32px;
-  border-top: 2px solid var(--rl-color-gold);
+  border-top: 2px solid var(--rl-color-ink);
   text-align: center;
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
-.rl-state-footer a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
-.rl-state-footer a:hover {{ color: var(--rl-color-dark-brown); }}
+.rl-state-footer a {{ color: var(--rl-color-graphite); text-decoration: none; }}
+.rl-state-footer a:hover {{ color: var(--rl-color-ink); }}
 
 /* Mobile */
 @media (max-width: 768px) {{
@@ -823,7 +823,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
     <h2>Racing in {esc(state)}?</h2>
     <p>Get a personalized training plan for any {esc(state)} road race — tailored to your fitness, schedule, and goals.</p>
     <a href="/questionnaire/" class="rl-state-cta-btn">Build My Plan</a>
-    <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">{PLAN_PRICE_LINE}, one 4-week block at a time. Ends after race week.</p>
+    <p style="font-size:11px;color:var(--rl-color-graphite);margin-top:8px">{PLAN_PRICE_LINE}, one 4-week block at a time. Ends after race week.</p>
   </section>
 
   <footer class="rl-state-footer">
