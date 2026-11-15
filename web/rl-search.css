@@ -326,6 +326,15 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+    /* Methodology link + sort buttons. Wraps so the four buttons never push
+       the page wider than a 375px phone (RL-18: scrollWidth was 393). */
+    #rl-race-search .rl-sort-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 16px;
+      max-width: 100%;
+    }
     #rl-race-search button.rl-sort-btn {
       background: var(--rl-color-white) !important;
       color: var(--rl-color-near-black) !important;
