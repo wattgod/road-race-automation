@@ -58,7 +58,13 @@ def get_site_header_html(active: str | None = None) -> str:
         </div>
       </div>
       <a href="{SITE_BASE_URL}/courses/"{_aria("courses")}>COURSES</a>
-      <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
+      <div class="rl-site-header-item">
+        <a href="{SITE_BASE_URL}/coaching/"{_aria("services")}>SERVICES</a>
+        <div class="rl-site-header-dropdown">
+          <a href="{SITE_BASE_URL}/coaching/">Coaching</a>
+          <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
+        </div>
+      </div>
       <a href="{SUBSTACK_URL}" target="_blank" rel="noopener" aria-label="ARTICLES (opens in a new tab)"{_aria("articles")}>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
       <a href="{SITE_BASE_URL}/about/"{_aria("about")}>ABOUT</a>
     </nav>

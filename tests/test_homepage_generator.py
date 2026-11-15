@@ -434,13 +434,21 @@ class TestLadderStrip:
     def test_ladder_present_exactly_once(self, stats):
         html = build_ladder_strip(stats)
         assert html.count('id="ladder"') == 1
-        assert html.count("rl-hp-ladder-cell") == 3
+        assert html.count("rl-hp-ladder-cell") == 4
 
-    def test_ladder_has_three_cells_with_numbers(self, stats):
+    def test_ladder_has_four_cells_with_numbers(self, stats):
         html = build_ladder_strip(stats)
-        assert "01" in html
-        assert "02" in html
-        assert "03" in html
+        nums = re.findall(r'<p class="rl-hp-ladder-num">(\d+)</p>', html)
+        assert nums == ["01", "02", "03", "04"]
+
+    def test_ladder_links_consulting_with_its_page_price(self, stats):
+        from generate_consulting import CONSULTING_PRICE
+        html = build_ladder_strip(stats)
+        assert 'href="https://roadielabs.com/consulting/"' in html
+        assert 'data-ga="ladder_consulting"' in html
+        assert f"BOOK A CONSULT &mdash; {CONSULTING_PRICE} &rarr;" in html
+        # Consult sits between the plan and coaching.
+        assert html.index("/consulting/") < html.index("/coaching/")
 
     def test_ladder_cell_headlines(self, stats):
         html = build_ladder_strip(stats)

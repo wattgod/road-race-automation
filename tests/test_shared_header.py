@@ -20,15 +20,25 @@ class TestHeaderHTML:
             assert f">{label}</a>" in html
         assert '>ARTICLES<span class="rl-external-indicator" aria-hidden="true">↗</span></a>' in html
 
-    def test_two_dropdown_containers(self):
-        # RACES + PRODUCTS keep dropdowns; SERVICES/ARTICLES became plain
-        # links in the Jul 2026 whoops audit (their dropdown targets 404'd).
+    def test_three_dropdown_containers(self):
+        # RACES, PRODUCTS and SERVICES have dropdowns. SERVICES lost its
+        # dropdown in the Jul 2026 whoops audit (its targets 404'd) and got
+        # it back for RL-10 once /consulting/ was live. ARTICLES stays plain.
         html = get_site_header_html()
-        assert html.count('class="rl-site-header-item"') == 2
+        assert html.count('class="rl-site-header-item"') == 3
 
-    def test_two_dropdowns(self):
+    def test_three_dropdowns(self):
         html = get_site_header_html()
-        assert html.count('class="rl-site-header-dropdown"') == 2
+        assert html.count('class="rl-site-header-dropdown"') == 3
+
+    def test_services_dropdown_links_coaching_and_consulting(self):
+        html = get_site_header_html()
+        m = re.search(
+            r'>SERVICES</a>\s*<div class="rl-site-header-dropdown">(.*?)</div>',
+            html, re.DOTALL)
+        assert m, "SERVICES has no dropdown"
+        assert 'href="https://roadielabs.com/coaching/">Coaching</a>' in m.group(1)
+        assert 'href="https://roadielabs.com/consulting/">Consulting</a>' in m.group(1)
 
     def test_about_has_no_dropdown(self):
         html = get_site_header_html()
@@ -48,16 +58,18 @@ class TestHeaderHTML:
             "How We Rate",
             "Custom Training Plans",
             "Courses",
+            "Coaching",
+            "Consulting",
         ]
         for label in expected:
             assert label in html, f"missing dropdown link {label}"
 
 
-    def test_four_sub_links(self):
+    def test_six_sub_links(self):
         html = get_site_header_html()
         dropdowns = re.findall(
             r'class="rl-site-header-dropdown">(.*?)</div>', html, re.DOTALL)
-        assert sum(d.count("<a ") for d in dropdowns) == 4
+        assert sum(d.count("<a ") for d in dropdowns) == 6
 
 
     def test_logo_present(self):
@@ -118,8 +130,9 @@ class TestHeaderHTML:
         assert "/race/methodology/" in html
         assert "/training-plans/" in html
         assert "/coaching/" in html
-        # Dead URLs must NOT be in the nav (whoops audit, Jul 2026)
-        for dead in ("/guide/", "/consulting/", "/articles/",
+        # Dead URLs must NOT be in the nav (whoops audit, Jul 2026).
+        # /consulting/ went live and came back for RL-10 (2026-11-15).
+        for dead in ("/guide/", "/articles/",
                      "/insights/", "/fueling-methodology/"):
             assert dead not in html, f"nav links dead URL {dead}"
         assert "/about/" in html

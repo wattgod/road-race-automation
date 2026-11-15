@@ -43,6 +43,7 @@ def get_mega_footer_html() -> str:
       <h4 class="rl-mega-footer-heading">SERVICES</h4>
       <nav class="rl-mega-footer-links">
         <a href="{SITE_BASE_URL}/coaching/">Coaching</a>
+        <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
       </nav>
     </div>
     <div class="rl-mega-footer-col">
