@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 2,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 10
   },
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "79ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "79ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Road_Specific",
@@ -40,11 +40,11 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Tour de Yorkshire Sportive's paved \u2014 English country roads forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 87 miles."
+      "workout_context": "Road-specific control matters at Tour de Yorkshire Sportive. Practice on paved \u2014 English country roads: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 87 miles."
     },
     {
       "category": "Durability",
-      "score": 86,
+      "score": 75,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -59,7 +59,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Tour de Yorkshire Sportive, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Tour de Yorkshire Sportive, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -79,7 +79,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,890ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,890ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Mixed_Climbing",
@@ -97,7 +97,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Tour de Yorkshire Sportive, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Tour de Yorkshire Sportive. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Blended",
@@ -115,7 +115,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved \u2014 English country roads. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved \u2014 English country roads can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Norwegian_Double",

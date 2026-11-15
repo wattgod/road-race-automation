@@ -8,7 +8,7 @@
     "vo2_power": 5,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 1,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 6
   },
@@ -50,11 +50,11 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GFNY Miami's flat, fully closed Krome Avenue circuit forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 52 miles."
+      "workout_context": "Road-specific control matters at GFNY Miami. Practice on flat, fully closed Krome Avenue circuit: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 52 miles."
     },
     {
       "category": "Durability",
-      "score": 81,
+      "score": 71,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -79,7 +79,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At GFNY Miami, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At GFNY Miami, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -97,7 +97,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Miami, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GFNY Miami. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Norwegian_Double",
@@ -119,7 +119,7 @@
     },
     {
       "category": "Endurance",
-      "score": 40,
+      "score": 33,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"

@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 1,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 10
   },
@@ -31,7 +31,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,000ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Road_Specific",
@@ -40,11 +40,11 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Superior Morgul Road Race's paved circuit road race on rolling Front Range forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 56 miles."
+      "workout_context": "Road-specific control matters at Superior Morgul Road Race. Practice on paved circuit road race on rolling Front Range: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 56 miles."
     },
     {
       "category": "Durability",
-      "score": 70,
+      "score": 64,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -60,7 +60,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "107ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "107ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
@@ -69,7 +69,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Superior Morgul Road Race, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Superior Morgul Road Race, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -88,7 +88,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved circuit road race on rolling Front Range. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved circuit road race on rolling Front Range can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Blended",
@@ -106,7 +106,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Superior Morgul Road Race, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Superior Morgul Road Race. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Mixed_Climbing",
@@ -119,7 +119,7 @@
     },
     {
       "category": "Endurance",
-      "score": 35,
+      "score": 30,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"

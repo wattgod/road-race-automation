@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 8,
     "technical": 6,
-    "heat_resilience": 1,
+    "heat_resilience": 0,
     "altitude": 8,
     "race_specificity": 9
   },
@@ -30,7 +30,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GFNY San Luis Potos\u00ed's high-altitude two-lap climbing course rewards road-specific control. Practice smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 95 miles."
+      "workout_context": "Road-specific control matters at GFNY San Luis Potos\u00ed. Practice on high-altitude two-lap climbing course: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 95 miles."
     },
     {
       "category": "Race_Simulation",
@@ -62,16 +62,6 @@
       "workout_context": "At GFNY San Luis Potos\u00ed, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
-      "category": "Durability",
-      "score": 72,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 95, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "G_Spot",
       "score": 71,
       "workouts": [
@@ -82,13 +72,14 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GFNY San Luis Potos\u00ed. Train it until it feels boring."
     },
     {
-      "category": "Endurance",
-      "score": 57,
+      "category": "Durability",
+      "score": 67,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 95 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At mile 60 of 95, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Mixed_Climbing",
@@ -107,6 +98,15 @@
         "W-Prime Depletion"
       ],
       "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GFNY San Luis Potos\u00ed. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Endurance",
+      "score": 53,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 95 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Anaerobic_Capacity",

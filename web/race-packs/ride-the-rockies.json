@@ -8,7 +8,7 @@
     "vo2_power": 5,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 7,
+    "heat_resilience": 0,
     "altitude": 10,
     "race_specificity": 10
   },
@@ -24,8 +24,18 @@
       "workout_context": "390 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
+      "category": "VO2max",
+      "score": 89,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "27,000ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
+    },
+    {
       "category": "Endurance",
-      "score": 77,
+      "score": 78,
       "workouts": [
         "Pre-Race Openers",
         "Terrain Simulation Z2"
@@ -33,18 +43,8 @@
       "workout_context": "Every hard session works better with a bigger aerobic base. At 390 miles, base fitness is the difference between racing and surviving."
     },
     {
-      "category": "VO2max",
-      "score": 68,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "27,000ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 56,
+      "score": 73,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,26 +54,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 55,
+      "score": 72,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Ride the Rockies, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 54,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "390 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "At Ride the Rockies, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 51,
+      "score": 67,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -82,26 +72,36 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 51,
+      "score": 67,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "69ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "69ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Road_Specific",
-      "score": 44,
+      "score": 58,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Ride the Rockies' paved mountain highways and county roads forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 390 miles."
+      "workout_context": "Road-specific control matters at Ride the Rockies. Practice on paved mountain highways and county roads: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 390 miles."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 56,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "390 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Blended",
-      "score": 42,
+      "score": 56,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -110,7 +110,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 38,
+      "score": 50,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -120,12 +120,12 @@
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 34,
+      "score": 44,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 27,000ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 27,000ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     }
   ],
   "race_overlay": {
@@ -133,6 +133,6 @@
     "nutrition": "Ultra-distance fueling for 390 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 390 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
     "altitude": "Ride the Rockies with 27,000ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Afternoon thunderstorms above treeline \u2014 lightning is a real hazard at 10,000+ feet; Intense UV radiation at altitude \u2014 sunburn happens fast above 9,000 feet."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and VO2max to prepare you for 390 miles of paved mountain highways and county roads in Colorado Rocky Mountains (route changed annually).",
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Endurance to prepare you for 390 miles of paved mountain highways and county roads in Colorado Rocky Mountains (route changed annually).",
   "generated_at": "2026-08-05"
 }

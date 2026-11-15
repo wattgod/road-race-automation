@@ -8,7 +8,7 @@
     "vo2_power": 5,
     "threshold": 7,
     "technical": 2,
-    "heat_resilience": 3,
+    "heat_resilience": 1,
     "altitude": 2,
     "race_specificity": 7
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 70,
+      "score": 79,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 70,
+      "score": 79,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +45,7 @@
     },
     {
       "category": "VO2max",
-      "score": 58,
+      "score": 66,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -55,31 +55,31 @@
     },
     {
       "category": "Road_Specific",
-      "score": 58,
+      "score": 66,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "El Tour de Tucson's flat to gently rolling Sonoran Desert forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 102 miles."
-    },
-    {
-      "category": "Endurance",
-      "score": 57,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 102 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Road-specific control matters at El Tour de Tucson. Practice on flat to gently rolling Sonoran Desert: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 102 miles."
     },
     {
       "category": "G_Spot",
-      "score": 57,
+      "score": 64,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
         "Criss-Cross"
       ],
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of El Tour de Tucson. Train it until it feels boring."
+    },
+    {
+      "category": "Endurance",
+      "score": 54,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 102 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "HVLI_Extended",
@@ -93,25 +93,25 @@
     },
     {
       "category": "Blended",
-      "score": 46,
+      "score": 52,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,007ft of climbing on flat to gently rolling Sonoran Desert does to your power file on race day."
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what El Tour de Tucson's flat to gently rolling Sonoran Desert actually does to you."
     },
     {
       "category": "Over_Under",
-      "score": 45,
+      "score": 51,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At El Tour de Tucson, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At El Tour de Tucson, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Norwegian_Double",
-      "score": 41,
+      "score": 46,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -120,7 +120,7 @@
     },
     {
       "category": "Tempo",
-      "score": 38,
+      "score": 43,
       "workouts": [
         "Tempo Blocks",
         "Extended Tempo"
