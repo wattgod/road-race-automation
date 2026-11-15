@@ -1236,11 +1236,48 @@ def check_consent_snippet_centralized():
     check("No indexOf for consent check in generators", len(indexof_files) == 0,
           f"Found indexOf: {indexof_files}")
 
-    # Check brand_tokens.py snippet uses regex
-    bt = (WORDPRESS_DIR / "brand_tokens.py").read_text()
+    # Check the composed head snippet (brand_tokens + cookie_consent):
+    # region-aware default, cookie overrides, same block as gtag('config').
+    sys.path.insert(0, str(WORDPRESS_DIR))
+    from brand_tokens import get_ga4_head_snippet
+    from cookie_consent import EEA_UK_CH_TIMEZONES
+
+    snippet = get_ga4_head_snippet()
     check("brand_tokens consent uses regex",
-          "/(^|; )rl_consent=accepted/.test" in bt,
+          "/(^|; )rl_consent=accepted/.test" in snippet
+          and "indexOf" not in snippet,
           "Must use regex, not indexOf")
+    check("Composed consent uses declined-cookie regex",
+          "/(^|; )rl_consent=declined/.test" in snippet,
+          "Declined cookie override is missing or not prefix-safe")
+    check("Composed consent uses synchronous timezone detection",
+          "Intl.DateTimeFormat().resolvedOptions().timeZone" in snippet,
+          "Missing client-side timezone classifier")
+    check("Composed consent fails closed on missing timezone",
+          "rlConsentRequiresOptIn=!rlConsentTimezoneKnown||" in snippet,
+          "Unknown or missing timezone must use strict consent")
+    check("Composed consent has both geo defaults",
+          "rlConsentRequiresOptIn?'denied':'granted'" in snippet,
+          "Missing EEA denied / non-EEA granted branch")
+    check("Consent timezone list includes EEA, UK, CH, and Atlantic samples",
+          all(zone in EEA_UK_CH_TIMEZONES and zone in snippet
+              for zone in ("Europe/Paris", "Europe/London",
+                           "Europe/Zurich", "Atlantic/Canary")),
+          f"Missing required timezone sample; list has {len(EEA_UK_CH_TIMEZONES)} entries")
+    check("Consent timezone list excludes named non-EEA zones",
+          all(zone not in EEA_UK_CH_TIMEZONES and zone not in snippet
+              for zone in ("Europe/Istanbul", "Europe/Moscow", "Europe/Minsk",
+                           "Europe/Belgrade", "Europe/Kyiv")),
+          "A named non-EEA European timezone is incorrectly geo-gated")
+    script_blocks = re.findall(
+        r"<script(?: [^>]*)?>(.*?)</script>", snippet, re.DOTALL)
+    config_blocks = [block for block in script_blocks if "gtag('config'" in block]
+    check("Consent default precedes GA config in the same script block",
+          len(config_blocks) == 1
+          and "gtag('consent','default'" in config_blocks[0]
+          and config_blocks[0].find("gtag('consent','default'")
+          < config_blocks[0].find("gtag('config'"),
+          "Geo default and gtag config must run synchronously in one block")
 
     # Check PHP mu-plugin parity
     php_path = WORDPRESS_DIR / "mu-plugins" / "rl-cookie-consent.php"
@@ -1249,6 +1286,17 @@ def check_consent_snippet_centralized():
         check("PHP consent uses regex",
               "/(^|; )rl_consent=accepted/.test" in php,
               "Must use regex in PHP mu-plugin")
+        check("PHP consent honors declined cookie",
+              "/(^|; )rl_consent=declined/.test" in php,
+              "Missing declined-cookie override in PHP mu-plugin")
+        check("PHP consent has geo-gated defaults",
+              "rlConsentRequiresOptIn?'denied':'granted'" in php
+              and "Intl.DateTimeFormat().resolvedOptions().timeZone" in php
+              and "rlConsentRequiresOptIn=!rlConsentTimezoneKnown||" in php,
+              "Missing synchronous timezone branch in PHP mu-plugin")
+        check("PHP consent has Privacy choices link",
+              'id="rl-privacy-choices"' in php,
+              "Missing footer opt-out control in PHP mu-plugin")
         check("PHP consent has no indexOf",
               "indexOf" not in php or "rl_consent" not in php,
               "PHP still has indexOf for consent")

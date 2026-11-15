@@ -1404,9 +1404,9 @@ def build_apply_js() -> str:
   }
 
   function analyticsConsentState() {
-    return /(^|; )rl_consent=accepted/.test(document.cookie)
-      ? "granted"
-      : "denied";
+    if (/(^|; )rl_consent=declined/.test(document.cookie)) { return "denied"; }
+    if (/(^|; )rl_consent=accepted/.test(document.cookie)) { return "granted"; }
+    return window.rlConsentRequiresOptIn === false ? "granted" : "denied";
   }
 
   var applyStartedTracked = false;

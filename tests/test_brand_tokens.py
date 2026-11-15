@@ -1,8 +1,12 @@
 """Tests for wordpress/brand_tokens.py — CSS generation and color consistency."""
 
+import json
 import re
+import subprocess
 import sys
 from pathlib import Path
+
+import pytest
 
 # Ensure wordpress/ is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
@@ -195,7 +199,25 @@ class TestGa4HeadSnippet:
     def test_analytics_conditional_on_cookie(self):
         snippet = get_ga4_head_snippet()
         assert "rl_consent=accepted" in snippet
-        assert "?'granted':'denied'" in snippet
+        assert "rl_consent=declined" in snippet
+        assert "rlConsentAccepted?'granted':rlConsentDeclined?'denied'" in snippet
+
+    def test_geo_default_has_granted_and_denied_branches(self):
+        snippet = get_ga4_head_snippet()
+        assert "rlConsentRequiresOptIn?'denied':'granted'" in snippet
+        assert "Intl.DateTimeFormat().resolvedOptions().timeZone" in snippet
+        assert "rlConsentRequiresOptIn=!rlConsentTimezoneKnown||" in snippet
+        assert "Europe/London" in snippet
+        assert "Europe/Zurich" in snippet
+        assert "Atlantic/Canary" in snippet
+        for excluded in (
+            "Europe/Istanbul",
+            "Europe/Moscow",
+            "Europe/Minsk",
+            "Europe/Belgrade",
+            "Europe/Kyiv",
+        ):
+            assert excluded not in snippet
 
     def test_uses_regex_not_indexof(self):
         snippet = get_ga4_head_snippet()
@@ -218,10 +240,118 @@ class TestGa4HeadSnippet:
         snippet = get_ga4_head_snippet()
         assert f"gtag('config','{GA_MEASUREMENT_ID}')" in snippet
 
-    def test_three_script_tags(self):
+    def test_consent_default_and_config_share_script_block(self):
         snippet = get_ga4_head_snippet()
-        assert snippet.count("<script") == 3
-        assert snippet.count("</script>") == 3
+        scripts = re.findall(r"<script(?: [^>]*)?>(.*?)</script>", snippet, re.DOTALL)
+        config_block = next(block for block in scripts if "gtag('config'" in block)
+        assert "gtag('consent','default'" in config_block
+        assert config_block.index("gtag('consent','default'") < config_block.index("gtag('config'")
+
+    def test_head_script_javascript_syntax(self):
+        snippet = get_ga4_head_snippet()
+        scripts = re.findall(r"<script(?: [^>]*)?>(.*?)</script>", snippet, re.DOTALL)
+        config_block = next(block for block in scripts if "gtag('config'" in block)
+        result = subprocess.run(
+            ["node", "-e", f"new Function({json.dumps(config_block)})"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        assert result.returncode == 0, result.stderr
+
+    @pytest.mark.parametrize(
+        ("timezone", "cookie", "expected_strict", "expected_analytics"),
+        [
+            ("Europe/Paris", "", True, "denied"),
+            ("Europe/London", "", True, "denied"),
+            ("Europe/Zurich", "", True, "denied"),
+            ("America/Chicago", "", False, "granted"),
+            ("Australia/Sydney", "", False, "granted"),
+            ("Europe/Istanbul", "", False, "granted"),
+            ("Unknown/Timezone", "", True, "denied"),
+            ("", "", True, "denied"),
+            ("Europe/Paris", "rl_consent=accepted", True, "granted"),
+            ("America/Chicago", "rl_consent=declined", False, "denied"),
+            ("America/Chicago", "xrl_consent=declined", False, "granted"),
+        ],
+    )
+    def test_head_script_runtime_branches(
+        self, timezone, cookie, expected_strict, expected_analytics
+    ):
+        snippet = get_ga4_head_snippet()
+        scripts = re.findall(r"<script(?: [^>]*)?>(.*?)</script>", snippet, re.DOTALL)
+        config_block = next(block for block in scripts if "gtag('config'" in block)
+        node_script = f"""
+global.window=global;
+global.document={{cookie:{json.dumps(cookie)}}};
+global.Intl={{DateTimeFormat:function(locale,options){{
+  if(options&&options.timeZone&&options.timeZone.startsWith('Unknown/')){{
+    throw new RangeError('unknown timezone');
+  }}
+  return {{resolvedOptions:function(){{return {{timeZone:{json.dumps(timezone)}}};}}}};
+}}}};
+{config_block}
+var dl=window.dataLayer;
+process.stdout.write(JSON.stringify({{
+  strict:window.rlConsentRequiresOptIn,
+  firstCommand:dl[0][0]+':'+dl[0][1],
+  analytics:dl[0][2].analytics_storage,
+  ads:[dl[0][2].ad_storage,dl[0][2].ad_user_data,dl[0][2].ad_personalization],
+  wait:dl[0][2].wait_for_update,
+  configIndex:dl.findIndex(function(c){{return c[0]==='config'}})
+}}));
+"""
+        result = subprocess.run(
+            ["node", "-e", node_script],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        assert result.returncode == 0, result.stderr
+        actual = json.loads(result.stdout)
+        assert actual == {
+            "strict": expected_strict,
+            "firstCommand": "consent:default",
+            "analytics": expected_analytics,
+            "ads": ["denied", "denied", "denied"],
+            "wait": 500,
+            "configIndex": 2,
+        }
+
+    def test_two_script_tags(self):
+        snippet = get_ga4_head_snippet()
+        assert snippet.count("<script") == 2
+        assert snippet.count("</script>") == 2
+
+    def test_all_ga4_pages_include_privacy_choices(self):
+        """Every tracked generated surface must expose the global opt-out UI."""
+        root = Path(__file__).parent.parent
+        files = sorted((root / "wordpress").glob("generate_*.py")) + [
+            root / "scripts" / "build_search_page.py",
+        ]
+        missing = [
+            f.name for f in files
+            if "get_ga4_head_snippet()" in f.read_text()
+            and "get_consent_banner_html()" not in f.read_text()
+        ]
+        assert not missing, f"GA4 pages missing Privacy choices: {missing}"
+
+    def test_no_page_inlines_its_own_consent_default(self):
+        """Only cookie_consent.py (and its PHP twin) may set the Consent Mode
+        default; every generator must use the shared head snippet."""
+        root = Path(__file__).parent.parent
+        # The shared module and its composer, plus the checkers that look for it.
+        allowed = {"cookie_consent.py", "brand_tokens.py",
+                   "preflight_quality.py", "validate_deploy.py"}
+        offenders = []
+        for f in sorted(list((root / "wordpress").glob("*.py"))
+                        + list((root / "scripts").glob("*.py"))
+                        + list((root / "web").glob("*.js"))):
+            if f.name in allowed:
+                continue
+            if re.search(r"consent['\"]\s*,\s*['\"]default", f.read_text()):
+                offenders.append(str(f.relative_to(root)))
+        assert not offenders, f"Inline Consent Mode defaults: {offenders}"
 
     def test_no_generators_have_inline_ga4_block(self):
         """Ensure no generator has a copy-pasted GA4 block — all must use get_ga4_head_snippet()."""

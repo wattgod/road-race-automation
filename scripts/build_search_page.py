@@ -23,6 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
 
 from brand_tokens import get_ga4_head_snippet  # noqa: E402
+from cookie_consent import get_consent_banner_html  # noqa: E402
 from shared_footer import get_mega_footer_css, get_mega_footer_html  # noqa: E402
 from shared_header import get_site_header_css, get_site_header_html  # noqa: E402
 
@@ -55,6 +56,7 @@ def build_page(fragment: str) -> str:
 {get_site_header_html(active="races")}
 {fragment}
 {get_mega_footer_html()}
+{get_consent_banner_html()}
 </body>
 </html>
 """

@@ -113,8 +113,17 @@
     }
   }
 
+  // Effective analytics consent, same rule as the head script's Consent Mode
+  // default: a stored choice wins; otherwise opt-in regions (EEA/UK/CH and
+  // unknown timezones) are denied and everywhere else is granted.
+  function analyticsConsentGranted() {
+    if (/(^|; )rl_consent=declined/.test(document.cookie)) return false;
+    if (/(^|; )rl_consent=accepted/.test(document.cookie)) return true;
+    return window.rlConsentRequiresOptIn === false;
+  }
+
   function ga4Attribution() {
-    if (!/(^|; )rl_consent=accepted/.test(document.cookie) || typeof gtag !== 'function') {
+    if (!analyticsConsentGranted() || typeof gtag !== 'function') {
       return Promise.resolve({ analytics_consent: 'denied' });
     }
     var gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
@@ -731,7 +740,7 @@
       } catch (e) { /* attribution must never block checkout */ }
     }
     var attribution = await ga4Attribution();
-    workerData.analytics_consent = attribution.analytics_consent;
+    workerData.analytics_consent = attribution.analytics_consent || 'denied';
     if (attribution.ga4_client_id) workerData.ga4_client_id = attribution.ga4_client_id;
     if (attribution.ga4_session_id) workerData.ga4_session_id = attribution.ga4_session_id;
 
