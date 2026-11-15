@@ -18,7 +18,9 @@ sys.path.insert(0, str(ROOT / "wordpress"))
 
 import newsletter_signup as ns  # noqa: E402
 from generate_about import generate_about_page  # noqa: E402
-from generate_calendar import build_calendar_page  # noqa: E402
+from generate_calendar import (  # noqa: E402
+    SEASON_YEAR, build_calendar_page, load_edition_dates, races_for_year,
+)
 from generate_homepage import generate_homepage, load_race_index  # noqa: E402
 from generate_legal_pages import get_privacy_content  # noqa: E402
 from generate_power_rankings import build_power_rankings_page  # noqa: E402
@@ -39,7 +41,8 @@ def pages():
     return {
         "homepage": generate_homepage(index),
         "about": generate_about_page(),
-        "calendar": build_calendar_page(races),
+        "calendar": build_calendar_page(
+            races_for_year(index, load_edition_dates(), SEASON_YEAR), SEASON_YEAR),
         "power_rankings": build_power_rankings_page(races),
         "header": get_site_header_html(),
         "footer": get_mega_footer_html(),
