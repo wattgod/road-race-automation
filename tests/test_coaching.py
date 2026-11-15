@@ -667,10 +667,12 @@ class TestJSONLD:
         count = load_race_count()
         assert "Fitness is common" not in ld
         assert count > 300
-        assert f"{count} courses on file" in ld
-        assert f"built on {count} analyzed courses" in page
-        assert f"behind {count} course profiles" in page
-        assert "427 courses" not in ld or count == 427
+        # Matti, 2026-11-15: never position against AI ("a human coach")
+        # and never name the coach in the third person, even in meta tags.
+        for bad in ("human", "the coach behind", "one coach,"):
+            assert bad not in ld.lower() and bad not in page.lower(), bad
+        assert "One-on-one road coaching from Matti Rowe." in ld
+        assert "One-on-one coaching for road racers" in page
 
     def test_uses_safe_json_for_script(self):
         """JSON-LD must go through _safe_json_for_script — a '</script>'

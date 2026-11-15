@@ -931,7 +931,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Coaching | Roadie Labs",
-        "description": f"Road cycling coaching from one coach, {load_race_count()} courses on file. A human who reads your training data, adjusts the plan when your life changes, and tells you the truth.",
+        "description": "One-on-one road coaching from Matti Rowe. I read your training data, adjust the plan when your life changes, and tell you the truth.",
         "url": f"{SITE_BASE_URL}/coaching/",
         "isPartOf": {
             "@type": "WebSite",
@@ -985,10 +985,10 @@ def generate_coaching_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = f"Road cycling coaching built on {load_race_count()} analyzed courses. A human coach, a plan that adjusts weekly, and honest feedback. From $199 every 4 weeks."
+    meta_desc = "One-on-one coaching for road racers, from Tuesday-night crits to the long road race. I read your files and adjust the plan every week. From $199 every 4 weeks."
 
     og_tags = f'''<meta property="og:title" content="Coaching | Roadie Labs">
-  <meta property="og:description" content="Coaching built around your race, your hours, and your life. From the coach behind {load_race_count()} course profiles.">
+  <meta property="og:description" content="One-on-one coaching for road racers, built around your race, your hours and your life. From $199 every 4 weeks.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -997,7 +997,7 @@ def generate_coaching_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Coaching | Roadie Labs">
-  <meta name="twitter:description" content="Coaching built around your race, your hours, and your life. From the coach behind {load_race_count()} course profiles.">
+  <meta name="twitter:description" content="One-on-one coaching for road racers, built around your race, your hours and your life. From $199 every 4 weeks.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()
