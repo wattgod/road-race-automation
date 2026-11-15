@@ -240,9 +240,9 @@ def check_pricing_parity():
     from datetime import date, timedelta
     import math
 
-    # Python computation (mirrors app.py compute_plan_price)
+    # Python computation (mirrors app.py compute_plan_price): $15/week,
+    # 4-week minimum, no cap (Matti, 2026-10-23).
     PRICE_PER_WEEK_CENTS = 1500
-    PRICE_CAP_CENTS = 24900
     MIN_WEEKS = 4
 
     anchor_today = date(2030, 1, 15)
@@ -255,30 +255,30 @@ def check_pricing_parity():
             return MIN_WEEKS, MIN_WEEKS * PRICE_PER_WEEK_CENTS
         days_until = (race_date - anchor_today).days
         weeks = max(MIN_WEEKS, math.ceil(days_until / 7))
-        price_cents = min(weeks * PRICE_PER_WEEK_CENTS, PRICE_CAP_CENTS)
+        price_cents = weeks * PRICE_PER_WEEK_CENTS
         return weeks, price_cents
 
-    # Test dates: 5wk, 10wk, 16wk, 30wk, past, 3 days out
+    # Test dates: 5wk, 10wk, 16wk, 30wk, 40wk, past, 3 days out
     test_dates = [
         (anchor_today + timedelta(weeks=5)).isoformat(),
         (anchor_today + timedelta(weeks=10)).isoformat(),
         (anchor_today + timedelta(weeks=16)).isoformat(),
         (anchor_today + timedelta(weeks=30)).isoformat(),
+        (anchor_today + timedelta(weeks=40)).isoformat(),
         (anchor_today - timedelta(weeks=2)).isoformat(),
         (anchor_today + timedelta(days=3)).isoformat(),
     ]
 
     js_code = """
     var PRICE_PER_WEEK = 15;
-    var PRICE_CAP = 249;
     var MIN_WEEKS = 4;
 
     function computePrice(raceDateStr) {
-      var raceDate = new Date(raceDateStr + 'T00:00:00');
-      var today = new Date(%TODAY% + 'T00:00:00');
-      var days = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
+      var raceDate = new Date(raceDateStr + 'T00:00:00Z');
+      var today = new Date(%TODAY% + 'T00:00:00Z');
+      var days = Math.round((raceDate - today) / (1000 * 60 * 60 * 24));
       var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
-      var price = Math.min(weeks * PRICE_PER_WEEK, PRICE_CAP);
+      var price = weeks * PRICE_PER_WEEK;
       return {weeks: weeks, price_cents: price * 100};
     }
 
@@ -315,7 +315,7 @@ def check_pricing_parity():
 def check_stripe_pricing_parity():
     """Verify all pricing mentions in generators match data/stripe-products.json.
 
-    This catches: wrong cap prices, wrong coaching tiers, wrong consulting
+    This catches: wrong coaching tiers, wrong consulting
     hourly rate, stale JSON-LD prices, and 'Cancel anytime' on one-time
     products. Stripe products file is the single source of truth.
     """
@@ -336,7 +336,6 @@ def check_stripe_pricing_parity():
     product_names = {p["id"]: p["name"] for p in stripe.get("products", [])}
 
     # Find key prices
-    training_cap = None
     training_weekly = None
     coaching_min = None
     coaching_mid = None
@@ -346,8 +345,6 @@ def check_stripe_pricing_parity():
     for p in stripe.get("prices", []):
         nick = p.get("nickname", "")
         amount = p["amount"]
-        if "cap" in nick.lower():
-            training_cap = amount // 100  # $249
         if "4-week" in nick:
             training_weekly = amount // 100 // 4  # $15
         if "Coaching Min" in nick:
@@ -360,14 +357,14 @@ def check_stripe_pricing_parity():
             consulting_rate = amount // 100  # $150
 
     check("Stripe prices loaded",
-          all(v is not None for v in [training_cap, training_weekly,
+          all(v is not None for v in [training_weekly,
                                        coaching_min, coaching_mid,
                                        coaching_max, consulting_rate]),
-          f"Missing prices: cap={training_cap}, weekly={training_weekly}, "
+          f"Missing prices: weekly={training_weekly}, "
           f"coach_min={coaching_min}, coach_mid={coaching_mid}, "
           f"coach_max={coaching_max}, consult={consulting_rate}")
 
-    if training_cap is None:
+    if training_weekly is None:
         return
 
     # Scan generator files for pricing mentions
@@ -377,13 +374,6 @@ def check_stripe_pricing_parity():
     for gen_file in generators:
         text = gen_file.read_text()
         fname = gen_file.name
-
-        # Check training plan cap — look for $NNN cap mentions
-        for m in re.finditer(r'\$(\d+)(?:\s|\.|\b)', text):
-            val = int(m.group(1))
-            # Common wrong caps we've seen
-            if val in (199, 175) and "capped" in text[max(0, m.start()-40):m.start()+40].lower():
-                wrong_prices.append(f"{fname}: Found ${val} cap (should be ${training_cap})")
 
         # Check "Cancel anytime" on training plans (they're one-time payments)
         if "Cancel anytime" in text and ("training" in fname or "vs" in fname or "state" in fname):
@@ -410,6 +400,46 @@ def check_stripe_pricing_parity():
 
     if not wrong_prices:
         check(f"Stripe pricing parity across {len(generators)} generators", True)
+
+
+# ── Check 5c: no training-plan price cap ──
+
+# The plan is $15 for every week until the race, 4-week minimum, NO cap
+# (Matti, 2026-10-23; webhook/app.py compute_plan_price). A cap in copy or in a
+# calculator shows a long-plan buyer less than Stripe charges them.
+PLAN_CAP_PATTERNS = (
+    re.compile(r'\$249'),
+    re.compile(r'capped at \$\d', re.IGNORECASE),
+    re.compile(r'\$\d+ cap\b', re.IGNORECASE),
+    re.compile(r'Math\.min\([^)]*\b249\b'),
+    re.compile(r'\bPRICE_CAP\b'),
+)
+
+
+def find_plan_cap_mentions():
+    """Return 'file:line: text' for every training-plan price-cap mention in
+    the generators and the shipped training-plan JS/A-B copy."""
+    files = sorted(WORDPRESS_DIR.glob("*.py")) + [
+        PROJECT_ROOT / "web" / "training-plans-form.js",
+        PROJECT_ROOT / "web" / "ab" / "experiments.json",
+    ]
+    hits = []
+    for path in files:
+        if not path.exists():
+            continue
+        for lineno, line in enumerate(path.read_text().splitlines(), 1):
+            if any(p.search(line) for p in PLAN_CAP_PATTERNS):
+                hits.append(f"{path.relative_to(PROJECT_ROOT)}:{lineno}: {line.strip()[:120]}")
+    return hits
+
+
+def check_no_plan_price_cap():
+    print("\n── Training Plan Has No Price Cap ──")
+    hits = find_plan_cap_mentions()
+    for hit in hits:
+        check(f"Retired $249 cap: {hit}", False, "Plan price has no cap since 2026-10-23")
+    if not hits:
+        check("No training-plan price cap in copy or calculators", True)
 
 
 # ── Check 6: Dead CSS detection for training-plans.html ──
@@ -1431,6 +1461,7 @@ def main():
         check_js_python_constant_parity()
         check_css_js_class_sync()
         check_pricing_parity()
+        check_no_plan_price_cap()
         check_stripe_pricing_parity()
     else:
         check_no_inline_imports()
@@ -1443,6 +1474,7 @@ def main():
         check_css_js_class_sync()
         check_worker_hydration_fields()
         check_pricing_parity()
+        check_no_plan_price_cap()
         check_stripe_pricing_parity()
         check_no_dead_css()
         guide_checks_available = all((

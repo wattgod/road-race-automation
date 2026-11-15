@@ -42,6 +42,7 @@ TRAINING_PLAN_PRODUCT = {
     "metadata": {"category": "training_plan"},
 }
 
+# HISTORICAL: the $249 cap was retired 2026-10-23; checkout now charges $15 x weeks (4-week minimum, no cap) via price_data. Do not re-create these prices.
 # $15/week, min 4 weeks ($60), cap $249
 # 4 weeks = $60, 5 = $75, ..., 16 = $240, 17+ = $249
 TRAINING_PLAN_PRICES = []

@@ -1734,19 +1734,20 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
 // Preparation strip — weeks-to-race countdown + live plan price.
 // Server renders generic copy; only a valid FUTURE date upgrades it, so
 // stale-date profiles degrade gracefully instead of showing a wrong price.
-// Pricing mirrors the server: $15/wk, min 4wk, cap $249.
+// Pricing mirrors the server: $15/wk, min 4wk, no cap.
 (function() {
   var strip = document.getElementById('prep-strip');
   if (!strip) return;
   var dateStr = strip.getAttribute('data-race-date');
   if (!dateStr) return;
-  var race = new Date(dateStr + 'T00:00:00');
+  var race = new Date(dateStr + 'T00:00:00Z');
   if (isNaN(race.getTime())) return;
-  var today = new Date(); today.setHours(0, 0, 0, 0);
-  var days = Math.ceil((race - today) / 86400000);
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var days = Math.round((race.getTime() - today) / 86400000);
   if (days <= 7) return;
   var weeks = Math.max(4, Math.ceil(days / 7));
-  var price = Math.min(weeks * 15, 249);
+  var price = weeks * 15;
   var cd = document.getElementById('rl-prep-countdown');
   if (cd) cd.textContent = weeks + ' WEEKS OUT';
   var cta = document.getElementById('rl-prep-cta');
@@ -2114,11 +2115,11 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
       return;
     }
 
-    var raceDate = new Date(raceDateStr + 'T00:00:00');
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    var diffMs = raceDate.getTime() - today.getTime();
-    var weeksRaw = Math.ceil(diffMs / (7 * 24 * 60 * 60 * 1000));
+    var raceDate = new Date(raceDateStr + 'T00:00:00Z');
+    var now = new Date();
+    var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.round((raceDate.getTime() - today) / 86400000);
+    var weeksRaw = Math.ceil(days / 7);
     var weeks = Math.max(4, weeksRaw);
 
     // Phase split
@@ -2130,7 +2131,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     if (peak < 1) { peak = 1; base = Math.max(1, base - 1); }
 
     // Price
-    var price = Math.min(249, Math.max(60, weeks * 15));
+    var price = Math.max(60, weeks * 15);
 
     // Session structure
     var hCfg = HOURS[hours] || HOURS['8-12'];
@@ -3446,7 +3447,7 @@ def build_training(rd: dict) -> str:
       {countdown_html}
       <div class="rl-training-primary">
         <h3>Built for {esc(race_name)}</h3>
-        <p class="rl-training-subtitle" data-ab="race_offer_price">$15/week. Less than one gel per ride. Capped at $249.</p>
+        <p class="rl-training-subtitle" data-ab="race_offer_price">$15/week. Less than one gel per ride. Paid once.</p>
         <p class="rl-training-built-for">Your race date, available hours, and the road demands above determine the build. Start with a short questionnaire; the plan follows from your answers.</p>
         <ul class="rl-training-bullets">
           <li>Structured workouts pushed to your device</li>
@@ -5342,7 +5343,7 @@ def build_train_for_race(rd: dict, include_commerce: bool = True) -> str:
       </div>'''
         plan_cta_html = f'''<div class="rl-pack-cta" id="rl-pack-cta-default">
         <a href="{plan_url}" class="rl-btn" id="rl-pack-cta-link">BUILD MY PLAN &mdash; $15/WK</a>
-        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, capped at $249.</p>
+        <p class="rl-pack-cta-detail">Race-specific. Built for {esc(race_name)}. $15/week, paid once.</p>
         <p class="rl-pack-cta-detail"><a href="/race/{esc(slug)}/training-plan/" data-cta="pack_plan_guide">Read the full {esc(race_name)} training guide &rarr;</a></p>
       </div>
       <div class="rl-pack-cta rl-cfg-cta" id="rl-cfg-cta" style="display:none;" aria-hidden="true">

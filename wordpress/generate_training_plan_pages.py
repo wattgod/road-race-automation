@@ -446,7 +446,7 @@ def build_cta(rd: dict) -> str:
     <a href="{QUESTIONNAIRE_URL}?race={slug}" class="rl-btn" data-cta="tpp_footer_build" id="rl-tpp-footer-cta">BUILD MY PLAN &mdash; $15/WK</a>
     <a href="/race/{slug}/" class="rl-btn rl-btn--outline" data-cta="tpp_race_page">READ THE {name.upper()} REVIEW</a>
   </div>
-  <p class="rl-tpp-guarantee">7-day full refund. Delivery within 24 hours. $249 cap.</p>
+  <p class="rl-tpp-guarantee">7-day full refund. Delivery within 24 hours. Paid once.</p>
 </section>'''
 
 
@@ -560,13 +560,14 @@ def build_js() -> str:
   if (!hero) return;
   var dateStr = hero.getAttribute('data-race-date');
   if (!dateStr) return;
-  var race = new Date(dateStr + 'T00:00:00');
+  var race = new Date(dateStr + 'T00:00:00Z');
   if (isNaN(race.getTime())) return;
-  var today = new Date(); today.setHours(0, 0, 0, 0);
-  var days = Math.ceil((race - today) / 86400000);
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var days = Math.round((race.getTime() - today) / 86400000);
   if (days <= 7) return;
   var weeks = Math.max(4, Math.ceil(days / 7));
-  var price = Math.min(weeks * 15, 249);
+  var price = weeks * 15;
   var cd = document.getElementById('rl-tpp-countdown');
   if (cd) cd.textContent = weeks + ' WEEKS UNTIL RACE DAY';
   ['rl-tpp-hero-cta', 'rl-tpp-footer-cta'].forEach(function(id) {

@@ -112,17 +112,17 @@ EXPERIMENTS = [
             {
                 "id": "control",
                 "name": "Gel anchor",
-                "content": "$15/week. Less than one gel per ride. Capped at $249.",
+                "content": "$15/week. Less than one gel per ride. Paid once.",
             },
             {
                 "id": "variant_a",
                 "name": "Daily price",
-                "content": "About $2/day. Built for your target road race. Capped at $249.",
+                "content": "About $2/day. Built for your target road race. Paid once.",
             },
             {
                 "id": "variant_b",
                 "name": "Direct weekly",
-                "content": "$15/week for a race-specific custom plan. Capped at $249.",
+                "content": "$15/week for a race-specific custom plan. Paid once.",
             },
         ],
         "conversion": {

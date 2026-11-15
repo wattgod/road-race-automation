@@ -1005,7 +1005,7 @@ def generate_questionnaire_page(external_assets: dict = None) -> str:
 
     meta_desc = (
         "Build your custom road cycling training plan. Personally reviewed and "
-        "delivered in TrainingPeaks within 24 hours. $15/week, capped at $249."
+        "delivered in TrainingPeaks within 24 hours. $15 a week until your race, 4-week minimum."
     )
 
     og_tags = f'''<meta property="og:title" content="Build Your Training Plan | Roadie Labs">

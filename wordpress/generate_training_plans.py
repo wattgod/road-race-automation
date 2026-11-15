@@ -37,7 +37,6 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/questionnaire/"
 TRAINING_PLANS_URL = f"{SITE_BASE_URL}/training-plans/"
 PRICE_PER_WEEK = "$15"
-PRICE_CAP = "$249"
 
 
 def esc(text) -> str:
@@ -347,11 +346,12 @@ def build_pricing() -> str:
   <div class="rl-tp-pricing-wrap">
     <div class="rl-tp-pricing-card">
       <div class="rl-tp-pricing-header">Custom Training Plan</div>
-      <div class="rl-tp-price">{PRICE_PER_WEEK}<span> / week of training</span></div>
+      <div class="rl-tp-price">{PRICE_PER_WEEK}<span> / week until your race</span></div>
       <ul class="rl-tp-pricing-list">
         <li>Computed from your race date &mdash; pay for exactly what you need</li>
         <li>6-week plan = $90. 12-week plan = $180. 16-week plan = $240</li>
-        <li>Capped at {PRICE_CAP} no matter how long the plan</li>
+        <li>Weeks until your race, rounded up. Four-week minimum</li>
+        <li>Paid once. No subscription, no renewal</li>
         <li>Structured .zwo workouts for Zwift/TrainingPeaks/Wahoo</li>
         <li>30+ page custom training guide</li>
         <li>Race-optimized fueling plan</li>
@@ -386,7 +386,7 @@ FAQ_ITEMS = [
     ),
     (
         "How is the price calculated?",
-        f"{PRICE_PER_WEEK} per week of training, computed from your race date. A 6-week plan is $90. A 12-week plan is $180. Anything over 16 weeks caps at {PRICE_CAP}. You pay for exactly what you need &mdash; no more.",
+        f"{PRICE_PER_WEEK} for every week until your race, rounded up to whole weeks, with a four-week minimum. A race 6 weeks away is $90. 12 weeks away is $180. 20 weeks away is $300.",
     ),
     (
         "Is this coaching?",
@@ -1316,9 +1316,7 @@ def build_jsonld() -> str:
   "offers": {{
     "@type": "AggregateOffer",
     "lowPrice": "60",
-    "highPrice": "{PRICE_CAP.replace('$', '')}",
     "priceCurrency": "USD",
-    "offerCount": "14",
     "availability": "https://schema.org/InStock"
   }},
   "url": "{TRAINING_PLANS_URL}"
@@ -1359,7 +1357,7 @@ def generate_training_page(external_assets: dict = None) -> str:
     )
 
     og_tags = f'''<meta property="og:title" content="Custom Training Plans | Roadie Labs">
-  <meta property="og:description" content="Race-specific training plans. $15/week, capped at $249. Structured workouts, nutrition, strength, and race protocols.">
+  <meta property="og:description" content="Race-specific training plans. $15/week, paid once. Structured workouts, nutrition, strength, and race protocols.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical_url)}">
   <meta property="og:image" content="{SITE_BASE_URL}/og/homepage.jpg">
@@ -1368,7 +1366,7 @@ def generate_training_page(external_assets: dict = None) -> str:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Custom Training Plans | Roadie Labs">
-  <meta name="twitter:description" content="Race-specific training plans. $15/week, capped at $249.">
+  <meta name="twitter:description" content="Race-specific training plans. $15/week, paid once.">
   <meta name="twitter:image" content="{SITE_BASE_URL}/og/homepage.jpg">'''
 
     preload = get_preload_hints()

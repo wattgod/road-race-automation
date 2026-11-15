@@ -72,11 +72,12 @@ class TestJsContract:
         assert "getElementById('rl-prep-cta')" in js
 
     def test_js_pricing_matches_server(self):
-        """$15/wk, min 4 weeks, $249 cap — must mirror webhook pricing."""
+        """$15/wk, min 4 weeks, no cap (2026-10-23) — must mirror webhook pricing."""
         js = build_inline_js()
         assert "weeks * 15" in js
         assert "Math.max(4," in js
-        assert "249" in js
+        assert "249" not in js
+        assert "Math.min(" not in js.split("Preparation strip", 1)[-1].split("CTA click tracking", 1)[0]
 
     def test_css_present(self):
         css = get_page_css()
