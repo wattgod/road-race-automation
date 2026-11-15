@@ -822,7 +822,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
     <h2>Racing in {esc(state)}?</h2>
     <p>Get a personalized training plan for any {esc(state)} road race — tailored to your fitness, schedule, and goals.</p>
     <a href="/questionnaire/" class="rl-state-cta-btn">Build My Plan</a>
-    <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">$15/week, capped at $249. One-time payment.</p>
+    <p style="font-size:11px;color:var(--rl-color-tan);margin-top:8px">$15/week until your race. One-time payment.</p>
   </section>
 
   <footer class="rl-state-footer">

@@ -28,7 +28,7 @@ The offer beneath the results is Race Plan only — Roadie Labs has no Season
 Plan product (that's a Gravel God-only ruling, D2/D15). No dead links: the
 Race Plan CTA goes to the real, working /questionnaire/ checkout
 (web/training-plans-form.js posts to the shared Motoren pipeline's
-/api/create-checkout, same $15/week $249-cap pricing as gravel).
+/api/create-checkout, same $15/week, 4-week minimum, no-cap pricing as gravel).
 
 Usage:
     python wordpress/generate_goals_2027.py

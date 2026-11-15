@@ -537,7 +537,7 @@ def build_training_cta(race_a: dict, race_b: dict) -> str:
       Train for {esc(race_b["name"][:25])}
     </a>
   </div>
-  <p class="rl-vs-cta-sub">$15/week, capped at $249. One-time payment.</p>
+  <p class="rl-vs-cta-sub">$15/week until your race. One-time payment.</p>
 </section>'''
 
 

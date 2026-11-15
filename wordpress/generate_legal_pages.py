@@ -124,7 +124,7 @@ def get_terms_content() -> str:
 
 <h2>Training Plans &amp; Coaching</h2>
 <ul>
-<li><strong>Training plans</strong> are one-time purchases delivered to your TrainingPeaks calendar. Pricing is calculated at checkout based on weeks until your target race, capped at $249.</li>
+<li><strong>Training plans</strong> are one-time purchases delivered to your TrainingPeaks calendar. Pricing is calculated at checkout based on weeks until your target race ($15 per week, four-week minimum).</li>
 <li><strong>Coaching</strong> is billed every 4 weeks (13 billing cycles per year), not monthly. A one-time $99 setup fee applies. You may cancel at the end of any 4-week cycle with no penalty.</li>
 <li><strong>Consulting</strong> is a one-time $150 payment for a 60-minute video call plus a written action plan.</li>
 </ul>

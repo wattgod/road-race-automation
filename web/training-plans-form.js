@@ -55,7 +55,6 @@
 
   // ---- Pricing constants (must match server) ----
   var PRICE_PER_WEEK = 15;
-  var PRICE_CAP = 249;
   var MIN_WEEKS = 4;
 
   function computePrice(raceDateStr) {
@@ -65,7 +64,7 @@
     today.setHours(0, 0, 0, 0);
     var days = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
     var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
-    var price = Math.min(weeks * PRICE_PER_WEEK, PRICE_CAP);
+    var price = weeks * PRICE_PER_WEEK;  // no cap (2026-10-23)
     return { weeks: weeks, price: price };
   }
 
