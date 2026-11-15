@@ -221,3 +221,49 @@ class TestHeaderCSS:
     def test_cool_white_background(self):
         css = get_site_header_css()
         assert "var(--rl-color-cool-white)" in css
+
+
+class TestMenuIcon:
+    """The phone menu button must draw three visible lines (Nov 2026: it
+    rendered as an empty box because flex-shrink squeezed the lines to 0px)."""
+
+    @staticmethod
+    def _rule(css: str, selector: str) -> str:
+        m = re.search(re.escape(selector) + r"\s*\{([^}]*)\}", css)
+        assert m, f"missing rule {selector}"
+        return m.group(1)
+
+    @staticmethod
+    def _px(rule: str, prop: str) -> int:
+        m = re.search(r"(?:^|;)\s*" + prop + r":\s*(\d+)px", rule)
+        assert m, f"missing {prop}"
+        return int(m.group(1))
+
+    def test_toggle_has_three_line_spans(self):
+        html = get_site_header_html()
+        m = re.search(r'<button class="rl-site-header-toggle"[^>]*>(.*?)</button>', html, re.S)
+        assert m
+        assert m.group(1).count("<span></span>") == 3
+
+    def test_lines_are_drawn_and_never_shrink(self):
+        line = self._rule(get_site_header_css(), ".rl-site-header-toggle span")
+        assert "flex: none" in line
+        assert self._px(line, "height") >= 2
+        assert self._px(line, "width") > 0
+        assert "background: var(--rl-color-dark-navy)" in line
+
+    def test_lines_fit_inside_the_button(self):
+        css = get_site_header_css()
+        base = self._rule(css, ".rl-site-header-toggle")
+        line = self._rule(css, ".rl-site-header-toggle span")
+        phone = css.split("@media (max-width: 600px)", 1)[1]
+        phone_toggle = self._rule(phone, ".rl-site-header-toggle")
+        content = self._px(base, "height") - 2 * self._px(base, "padding") - 2 * 2  # 2px border
+        stack = 3 * self._px(line, "height") + 2 * self._px(phone_toggle, "gap")
+        assert stack <= content
+        assert "display: inline-flex" in phone_toggle
+
+    def test_tap_opens_the_nav(self):
+        js = get_site_header_js()
+        assert "classList.toggle('is-open'" in js
+        assert "aria-expanded" in js

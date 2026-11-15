@@ -84,7 +84,9 @@ def get_site_header_css() -> str:
 .rl-site-header-wordmark span { font-weight: 400; }
 .rl-site-header-nav { display: flex; gap: 24px; align-items: center; }
 .rl-site-header-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 2px solid var(--rl-color-dark-navy); background: var(--rl-color-cool-white); cursor: pointer; }
-.rl-site-header-toggle span { display: block; width: 100%; height: 2px; background: var(--rl-color-dark-navy); margin: 5px 0; transition: background-color 0.2s; }
+/* Lines never shrink: in the phone flex column, 5px margins overflowed the
+   20px content box and flex-shrink squeezed every line to 0px (empty box). */
+.rl-site-header-toggle span { display: block; flex: none; width: 20px; height: 2px; margin: 0; background: var(--rl-color-dark-navy); transition: background-color 0.2s; }
 .rl-site-header-toggle:hover { background: var(--rl-color-silver); }
 .rl-site-header-nav > a,
 .rl-site-header-item > a { color: var(--rl-color-dark-navy); text-decoration: none; font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
@@ -107,7 +109,7 @@ def get_site_header_css() -> str:
   .rl-site-header-inner { flex-wrap: wrap; justify-content: space-between; gap: 8px; }
   .rl-site-header-mark { height: 42px; }
   .rl-site-header-wordmark { font-size: 14px; }
-  .rl-site-header-toggle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; }
+  .rl-site-header-toggle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
   .rl-site-header-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; border-top: 2px solid var(--rl-color-dark-navy); padding-top: 8px; }
   .rl-site-header-nav.is-open { display: flex; }
   .rl-site-header-item { width: 100%; }
