@@ -4,7 +4,8 @@ Generate the Roadie Labs /courses/ page in neo-brutalist style.
 
 Cross-sells two self-paced courses sold on Gravel God Cycling, Roadie Labs'
 sister brand (same coach): Gravel Hydration Mastery ($19) and Dirt Craft:
-Technical Gravel Mastery ($49), plus the two-course bundle ($39). Reuses
+Technical Gravel Mastery ($49). Each is sold on its own at its own price;
+there is no bundle discount (Matti, 2026-11-15). Reuses
 CSS/style patterns from generate_neo_brutalist.py and the about page
 component library (hero, section headers, cards, FAQ).
 
@@ -35,7 +36,6 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 GRAVEL_GOD_BASE_URL = "https://gravelgodcycling.com"
 HYDRATION_URL = f"{GRAVEL_GOD_BASE_URL}/course/gravel-hydration-mastery/"
 DIRT_CRAFT_URL = f"{GRAVEL_GOD_BASE_URL}/course/dirt-craft/"
-BUNDLE_URL = f"{GRAVEL_GOD_BASE_URL}/course/"
 
 HYDRATION_PRICE = 19
 # Dirt Craft facts mirror gravel-race-automation data/courses/dirt-craft/
@@ -43,7 +43,6 @@ HYDRATION_PRICE = 19
 DIRT_CRAFT_PRICE = 49
 DIRT_CRAFT_LESSONS = 21
 DIRT_CRAFT_MODULES = 7
-BUNDLE_PRICE = 39
 
 
 def esc(text) -> str:
@@ -136,22 +135,6 @@ def build_course_cards() -> str:
   </div>'''
 
 
-def build_bundle_strip() -> str:
-    savings = HYDRATION_PRICE + DIRT_CRAFT_PRICE - BUNDLE_PRICE
-    return f'''<div class="rl-section" id="bundle">
-    <div class="rl-section-body">
-      <div class="rl-courses-bundle">
-        <div class="rl-courses-bundle-text">
-          <div class="rl-courses-bundle-kicker">Bundle</div>
-          <h3 class="rl-courses-bundle-title">Both Courses &mdash; ${BUNDLE_PRICE}</h3>
-          <p>Hydration Mastery (${HYDRATION_PRICE}) + Dirt Craft (${DIRT_CRAFT_PRICE}) together for ${BUNDLE_PRICE}. Saves ${savings}.</p>
-        </div>
-        <a href="{BUNDLE_URL}" class="rl-course-card-btn rl-courses-bundle-btn" data-course-cta="bundle" target="_blank" rel="noopener">GET THE BUNDLE &mdash; ${BUNDLE_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-  </div>'''
-
-
 def build_faq() -> str:
     return '''<div class="rl-section" id="faq">
     <div class="rl-section-header">
@@ -165,7 +148,7 @@ def build_faq() -> str:
       </details>
       <details class="rl-courses-faq-item" data-faq="refunds">
         <summary>What&#39;s the refund policy?</summary>
-        <p>30-day money-back guarantee on both courses and the bundle. If it isn&#39;t useful, you get your money back.</p>
+        <p>30-day money-back guarantee on both courses. If it isn&#39;t useful, you get your money back.</p>
       </details>
       <details class="rl-courses-faq-item" data-faq="gravel-bike">
         <summary>Do I need a gravel bike?</summary>
@@ -332,44 +315,6 @@ def build_courses_css() -> str:
   color: var(--rl-color-dark-navy);
 }
 
-/* ── Bundle strip ────────────────────────────────── */
-.rl-neo-brutalist-page .rl-courses-bundle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--rl-spacing-lg);
-  border: var(--rl-border-standard);
-  border-top: 3px double var(--rl-color-dark-navy);
-  border-bottom: 3px double var(--rl-color-dark-navy);
-  background: var(--rl-color-silver);
-  padding: var(--rl-spacing-lg);
-}
-.rl-neo-brutalist-page .rl-courses-bundle-kicker {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  font-weight: var(--rl-font-weight-bold);
-  letter-spacing: var(--rl-letter-spacing-extreme);
-  text-transform: uppercase;
-  color: var(--rl-color-orange);
-  margin-bottom: var(--rl-spacing-2xs);
-}
-.rl-neo-brutalist-page .rl-courses-bundle-title {
-  font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-lg);
-  font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-navy);
-  margin: 0 0 var(--rl-spacing-2xs) 0;
-}
-.rl-neo-brutalist-page .rl-courses-bundle-text p {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-dark-navy);
-  margin: 0;
-}
-.rl-neo-brutalist-page .rl-courses-bundle-btn {
-  flex-shrink: 0;
-}
-
 /* ── FAQ ─────────────────────────────────────────── */
 .rl-neo-brutalist-page .rl-courses-faq-item {
   border: var(--rl-border-standard);
@@ -418,10 +363,6 @@ def build_courses_css() -> str:
 @media (max-width: 768px) {
   .rl-neo-brutalist-page .rl-courses-grid {
     grid-template-columns: 1fr;
-  }
-  .rl-neo-brutalist-page .rl-courses-bundle {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 </style>'''
@@ -477,7 +418,7 @@ def build_jsonld() -> str:
                 "name": "What's the refund policy?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "30-day money-back guarantee on both courses and the bundle.",
+                    "text": "30-day money-back guarantee on both courses.",
                 },
             },
             {
@@ -505,7 +446,6 @@ def generate_courses_page(external_assets: dict = None) -> str:
     hero = build_hero()
     frame = build_frame()
     cards = build_course_cards()
-    bundle = build_bundle_strip()
     faq = build_faq()
     footer = build_footer()
     courses_css = build_courses_css()
@@ -564,7 +504,6 @@ def generate_courses_page(external_assets: dict = None) -> str:
 
   {cards}
 
-  {bundle}
 
   {faq}
 

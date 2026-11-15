@@ -10,13 +10,10 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
 
 from generate_courses_page import (
-    BUNDLE_PRICE,
-    BUNDLE_URL,
     DIRT_CRAFT_PRICE,
     DIRT_CRAFT_URL,
     HYDRATION_PRICE,
     HYDRATION_URL,
-    build_bundle_strip,
     build_course_cards,
     build_courses_css,
     build_courses_js,
@@ -81,7 +78,7 @@ class TestAnalytics:
         assert "course_crosssell_click" in js
 
     def test_cta_data_attributes(self, page_html):
-        for course_id in ["hydration_mastery", "dirt_craft", "bundle"]:
+        for course_id in ["hydration_mastery", "dirt_craft"]:
             assert f'data-course-cta="{course_id}"' in page_html
 
     def test_gtag_guarded(self):
@@ -157,15 +154,17 @@ class TestCrossSellContent:
         assert DIRT_CRAFT_URL == "https://gravelgodcycling.com/course/dirt-craft/"
         assert DIRT_CRAFT_URL in page_html
 
-    def test_bundle_cta_url(self, page_html):
-        assert BUNDLE_URL == "https://gravelgodcycling.com/course/"
-        assert BUNDLE_URL in page_html
+    def test_no_bundle_offer(self, page_html):
+        # Each course sells at its own price; no cheaper bundle (Matti, 2026-11-15).
+        lowered = page_html.lower()
+        assert "bundle" not in lowered
+        assert "$39" not in page_html
+        assert "saves $" not in lowered
 
     def test_offsite_ctas_open_safely_and_show_external_indicator(self, page_html):
         for url, course_id in [
             (HYDRATION_URL, "hydration_mastery"),
             (DIRT_CRAFT_URL, "dirt_craft"),
-            (BUNDLE_URL, "bundle"),
         ]:
             cta = re.search(
                 rf'<a href="{re.escape(url)}"[^>]*data-course-cta="{course_id}"[^>]*>(.*?)</a>',
@@ -181,12 +180,10 @@ class TestCrossSellContent:
     def test_prices(self, page_html):
         assert HYDRATION_PRICE == 19
         # Dirt Craft is $49 (gravel-race-automation data/courses/dirt-craft/
-        # course.json price_usd; Matti ruling 2026-11-14). Bundle unchanged.
+        # course.json price_usd; Matti ruling 2026-11-14). No bundle discount (2026-11-15).
         assert DIRT_CRAFT_PRICE == 49
-        assert BUNDLE_PRICE == 39
         assert "$19" in page_html
         assert "$49" in page_html
-        assert "$39" in page_html
         for stale in ("DIRT CRAFT &mdash; $29", "Dirt Craft ($29)", "($29,"):
             assert stale not in page_html
         assert "GET DIRT CRAFT &mdash; $49" in page_html
@@ -210,7 +207,7 @@ class TestCrossSellContent:
 
     def test_no_exclamation_marks_in_copy(self):
         # Brand voice: dry, editorial, no hype. Check copy-bearing builders.
-        for builder in [build_hero, build_frame, build_course_cards, build_bundle_strip, build_faq]:
+        for builder in [build_hero, build_frame, build_course_cards, build_faq]:
             assert "!" not in builder(), f"Exclamation mark in {builder.__name__}"
 
     def test_faq_three_items(self, page_html):
@@ -237,9 +234,6 @@ class TestStructure:
 
     def test_two_course_cards(self, page_html):
         assert page_html.count('class="rl-course-card"') == 2
-
-    def test_bundle_strip(self, page_html):
-        assert 'class="rl-courses-bundle"' in page_html
 
     def test_jsonld_valid_json(self):
         import json as _json
