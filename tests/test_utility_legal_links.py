@@ -28,9 +28,11 @@ def test_tier_hub_footer_links_to_both_legal_pages() -> None:
 
 
 def test_comparison_footer_links_to_both_legal_pages() -> None:
-    race_a = {"slug": "race-a", "name": "Race A", "score": 80, "tier": 1,
-              "location": "Colorado", "month": "June", "tagline": "Race A."}
-    race_b = {"slug": "race-b", "name": "Race B", "score": 70, "tier": 2,
-              "location": "Utah", "month": "July", "tagline": "Race B."}
+    from generate_vs_pages import ALL_DIMS
+    scores = {key: 3 for key, _ in ALL_DIMS}
+    race_a = {"slug": "race-a", "name": "Race A", "overall_score": 80, "tier": 1,
+              "scores": scores, "location": "Colorado", "month": "June", "tagline": "Race A."}
+    race_b = {"slug": "race-b", "name": "Race B", "overall_score": 70, "tier": 2,
+              "scores": scores, "location": "Utah", "month": "July", "tagline": "Race B."}
     full = {"race": {"course": {}, "experience": {}, "logistics": {}}}
     _assert_legal_links(build_vs_page(race_a, race_b, full, full))
