@@ -86,9 +86,12 @@ class TestHomepageSEO:
         )
 
     def test_title_contains_year(self, homepage_html):
-        """Title must contain current year for freshness signal."""
-        from datetime import date
-        year = str(date.today().year)
+        """Title must contain the rider-facing season (rolls over in September,
+        RL-14) for freshness signal."""
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
+        from season import season_year
+        year = str(season_year())
         match = re.search(r"<title>([^<]+)</title>", homepage_html)
         assert year in match.group(1), (
             f"Title must contain {year} for freshness signal"
@@ -424,3 +427,13 @@ class TestRegionMergeMap:
                     f"'{sub}' appears in race data ({raw_regions[sub]} races) "
                     f"but is not in REGION_MERGES — will create separate page"
                 )
+
+
+def test_jsonld_generators_escape_script_end_tags():
+    """Data-derived JSON-LD (race names, org markup) goes through
+    _safe_json_for_script, never a bare json.dumps inside <script>."""
+    root = Path(__file__).resolve().parent.parent / "wordpress"
+    for name, marker in (("generate_homepage.py", 'application/ld+json">{json.dumps('),
+                         ("generate_power_rankings.py", "schema_graph = json.dumps("),
+                         ("generate_calendar.py", "breadcrumb_jsonld = json.dumps(")):
+        assert marker not in (root / name).read_text(encoding="utf-8"), name
