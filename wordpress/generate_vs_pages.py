@@ -7,7 +7,7 @@ pairs. Targets queries like "Unbound vs SBT GRVL", "BWR vs Grinduro",
 "Tour Divide vs Colorado Trail Race".
 
 Each page includes:
-  - Overlaid radar chart (7 course dimensions)
+  - Overlaid radar chart (course dimensions from config/dimensions.json)
   - Side-by-side vitals comparison
   - Dimension-by-dimension breakdown with dot meters
   - Verdict section with "Choose A if..." / "Choose B if..." picks
@@ -38,19 +38,124 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CURRENT_YEAR = date.today().year
 
 # ── Constants ────────────────────────────────────────────────────
-RADAR_VARS = ["length", "technicality", "elevation", "climate", "altitude", "logistics", "adventure"]
-RADAR_LABELS = ["LEN", "TECH", "ELEV", "CLIM", "ALT", "LOG", "ADV"]
-RADAR_FULL_LABELS = ["Length", "Technicality", "Elevation", "Climate", "Altitude", "Logistics", "Adventure"]
+DIMENSIONS_CONFIG = PROJECT_ROOT / "config" / "dimensions.json"
 
-EDITORIAL_VARS = ["prestige", "race_quality", "experience", "community", "field_depth", "value", "expenses"]
-EDITORIAL_LABELS = ["Prestige", "Race Quality", "Experience", "Community", "Field Depth", "Value", "Expenses"]
 
-ALL_DIMS = RADAR_VARS + EDITORIAL_VARS
-ALL_DIM_LABELS = RADAR_FULL_LABELS + EDITORIAL_LABELS
+class MissingScoreError(ValueError):
+    """A race lacks a usable score on a rubric dimension. Never zero-filled."""
+
+
+# "Choose X if..." copy for a race that rates higher on the dimension.
+# Keyed by config/dimensions.json key; every config dimension must have one
+# (checked at load), so a rubric change can't silently drop or genericise copy.
+CHOOSE_IF = {
+    "distance": "You want the longer day in the saddle",
+    "climbing": "You want more climbing",
+    "descent_technicality": "You want more technical descending",
+    "road_surface": "You want rougher roads and more broken surface",
+    "climate_risk": "You can handle harsher, less predictable weather",
+    "altitude": "You want higher passes and summit finishes",
+    "logistics": "You don't mind a more remote start and a harder trip in",
+    "prestige": "Prestige and bucket-list status matter to you",
+    "organization": "Road closures, timing and on-course support are priorities",
+    "scenic_experience": "Scenery is what you're riding for",
+    "community_culture": "You want bigger crowds and deeper cycling culture",
+    "field_depth": "You want to ride against a deeper competitive field",
+    "value": "You want more included for your entry fee",
+    "expenses": "You're happy to pay more for a premium destination trip",
+}
+
+# Course dimensions that make a day harder (logistics is about the trip, not the ride).
+DIFFICULTY_DIMS = ["distance", "climbing", "descent_technicality", "road_surface", "climate_risk", "altitude"]
+# Lower is friendlier for a first big road event on each of these.
+ACCESS_DIMS = ["distance", "descent_technicality", "logistics"]
+
+
+def load_dimensions(path: Path = DIMENSIONS_CONFIG) -> tuple:
+    """Return (course, editorial) lists of (key, label) from the road rubric."""
+    with open(path, "r", encoding="utf-8") as f:
+        config = json.load(f)
+    course, editorial = [], []
+    for dim in config["dimensions"]:
+        pair = (dim["key"], dim["label"])
+        if dim["category"] == "course":
+            course.append(pair)
+        elif dim["category"] == "editorial":
+            editorial.append(pair)
+        else:
+            raise ValueError(f"{path}: unknown category {dim['category']!r} on {dim['key']}")
+    keys = {k for k, _ in course + editorial}
+    missing_copy = sorted(keys - CHOOSE_IF.keys())
+    if missing_copy:
+        raise ValueError(f"generate_vs_pages: no 'Choose if' copy for dimensions {missing_copy}")
+    for name, dims in (("DIFFICULTY_DIMS", DIFFICULTY_DIMS), ("ACCESS_DIMS", ACCESS_DIMS)):
+        unknown = sorted(set(dims) - keys)
+        if unknown:
+            raise ValueError(f"generate_vs_pages: {name} names dimensions not in {path}: {unknown}")
+    return course, editorial
+
+
+COURSE_DIMS, EDITORIAL_DIMS = load_dimensions()
+ALL_DIMS = COURSE_DIMS + EDITORIAL_DIMS
+DIM_LABEL = dict(ALL_DIMS)
+
+
+def _parse_score(raw, *, race: str, dim: str) -> int:
+    """Normalise one rubric score to an int 1-5.
+
+    Same coercion as the homepage's _parse_score ("3.5" and 3.0 parse), but a
+    missing or unusable score raises MissingScoreError instead of becoming 0.
+    """
+    if raw is None or raw == "" or isinstance(raw, bool):
+        raise MissingScoreError(f"{race}: no score for '{dim}'")
+    try:
+        score = int(float(raw))
+    except (ValueError, TypeError):
+        raise MissingScoreError(f"{race}: unparseable score for '{dim}': {raw!r}") from None
+    if not 1 <= score <= 5:
+        raise MissingScoreError(f"{race}: score for '{dim}' out of 1-5 range: {raw!r}")
+    return score
+
+
+def race_scores(race: dict) -> dict:
+    """All 14 rubric scores for a race, or MissingScoreError naming the gap."""
+    name = race.get("slug") or race.get("name") or "<unnamed race>"
+    raw = race.get("scores")
+    if not isinstance(raw, dict):
+        raise MissingScoreError(f"{name}: no scores")
+    return {key: _parse_score(raw.get(key), race=name, dim=key) for key, _ in ALL_DIMS}
+
+
+def overall_score(race: dict) -> int:
+    """The race's 0-100 overall score, or MissingScoreError. Never defaults to 0."""
+    name = race.get("slug") or race.get("name") or "<unnamed race>"
+    raw = race.get("overall_score")
+    if raw is None or raw == "" or isinstance(raw, bool):
+        raise MissingScoreError(f"{name}: no overall_score")
+    try:
+        return int(round(float(raw)))
+    except (ValueError, TypeError):
+        raise MissingScoreError(f"{name}: unparseable overall_score {raw!r}") from None
+
+
+def _label_list(keys: list) -> str:
+    """'distance, climbing and altitude' from config labels."""
+    labels = [DIM_LABEL[k].lower() for k in keys]
+    return labels[0] if len(labels) == 1 else ", ".join(labels[:-1]) + " and " + labels[-1]
+
+
+def _hex_rgba(hex_color: str, alpha: float) -> str:
+    h = hex_color.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return f"rgba({r},{g},{b},{alpha})"
+
+
+RACE_A_COLOR = COLORS["ink"]
+RACE_B_COLOR = COLORS["graphite"]
 
 COMPARE_COLORS = [
-    {"stroke": COLORS["primary_brown"], "fill": "rgba(89,71,60,0.18)"},
-    {"stroke": COLORS["signal_red"], "fill": "rgba(230,57,70,0.18)"},
+    {"stroke": RACE_A_COLOR, "fill": _hex_rgba(RACE_A_COLOR, 0.14), "dash": ""},
+    {"stroke": RACE_B_COLOR, "fill": _hex_rgba(RACE_B_COLOR, 0.14), "dash": ' stroke-dasharray="6 4"'},
 ]
 
 # Max pairs to generate — focus on highest-value comparisons
@@ -139,10 +244,11 @@ def select_pairs(races: list) -> list:
 # ── SVG builders ─────────────────────────────────────────────────
 
 def build_radar_svg(race_a: dict, race_b: dict) -> str:
-    """Overlaid 7-point radar chart for two races."""
-    vw, vh = 440, 340
-    cx, cy, r = 220, 160, 120
-    n = len(RADAR_VARS)
+    """Overlaid radar of the course dimensions in config/dimensions.json."""
+    scored = [(race_a, race_scores(race_a)), (race_b, race_scores(race_b))]
+    vw, vh = 560, 350
+    cx, cy, r = 280, 160, 120
+    n = len(COURSE_DIMS)
 
     parts = [f'<svg viewBox="0 0 {vw} {vh}" class="rl-vs-radar-svg" role="img" '
              f'aria-label="Radar comparison of {esc(race_a["name"])} vs {esc(race_b["name"])}">']
@@ -169,26 +275,25 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
             anchor = "start"
         parts.append(f'  <text x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" '
                      f'font-family="JetBrains Mono,monospace" font-size="9" '
-                     f'fill="{COLORS["secondary_blue"]}" dominant-baseline="middle">{RADAR_LABELS[i]}</text>')
+                     f'fill="{COLORS["secondary_blue"]}" dominant-baseline="middle">{esc(COURSE_DIMS[i][1])}</text>')
 
     # Race polygons
-    for idx, race in enumerate([race_a, race_b]):
-        scores = race.get("scores", {})
+    for idx, (race, scores) in enumerate(scored):
         pts = []
-        for i, var in enumerate(RADAR_VARS):
-            val = scores.get(var, 1) / 5
+        for i, (var, _label) in enumerate(COURSE_DIMS):
+            val = scores[var] / 5
             angle = (2 * math.pi * i / n) - math.pi / 2
             pts.append(f"{cx + r * val * math.cos(angle):.1f},{cy + r * val * math.sin(angle):.1f}")
         c = COMPARE_COLORS[idx]
-        score_text = " / ".join(f"{RADAR_LABELS[i]}:{scores.get(v,0)}" for i, v in enumerate(RADAR_VARS))
+        score_text = " / ".join(f"{label} {scores[v]}/5" for v, label in COURSE_DIMS)
         parts.append(f'  <polygon points="{" ".join(pts)}" fill="{c["fill"]}" '
-                     f'stroke="{c["stroke"]}" stroke-width="2.5">'
-                     f'<title>{esc(race["name"])}: {score_text}</title></polygon>')
+                     f'stroke="{c["stroke"]}" stroke-width="2.5"{c["dash"]}>'
+                     f'<title>{esc(race["name"])}: {esc(score_text)}</title></polygon>')
 
     # Legend
     ly = vh - 30
     for idx, race in enumerate([race_a, race_b]):
-        lx = 60 + idx * 220
+        lx = 90 + idx * 220
         c = COMPARE_COLORS[idx]
         parts.append(f'  <rect x="{lx}" y="{ly}" width="14" height="14" fill="{c["stroke"]}"/>')
         parts.append(f'  <text x="{lx + 20}" y="{ly + 11}" font-family="JetBrains Mono,monospace" '
@@ -198,13 +303,14 @@ def build_radar_svg(race_a: dict, race_b: dict) -> str:
     return "\n".join(parts)
 
 
-def build_dot_meter(score: int, color: str = COLORS["signal_red"]) -> str:
+def build_dot_meter(score: int, color: str = RACE_B_COLOR) -> str:
     """Inline SVG dot meter (1-5 scale)."""
     dots = []
     for i in range(5):
         fill = color if i < score else COLORS["silver"]
         dots.append(f'<circle cx="{7 + i * 14}" cy="6" r="5" fill="{fill}"/>')
-    return f'<svg viewBox="0 0 75 12" class="rl-vs-dots">{"".join(dots)}</svg>'
+    return (f'<svg viewBox="0 0 75 12" class="rl-vs-dots" role="img" '
+            f'aria-label="{score} out of 5">{"".join(dots)}</svg>')
 
 
 def build_bars_comparison(race_a: dict, race_b: dict) -> str:
@@ -234,11 +340,11 @@ def build_bars_comparison(race_a: dict, race_b: dict) -> str:
   <div class="rl-vs-bar-label">{label}</div>
   <div class="rl-vs-bar-pair">
     <div class="rl-vs-bar-cell">
-      <div class="rl-vs-bar{winner_a}" style="width:{pct_a:.0f}%;background:{COLORS['primary_brown']}"></div>
+      <div class="rl-vs-bar{winner_a}" style="width:{pct_a:.0f}%;background:{RACE_A_COLOR}"></div>
       <span class="rl-vs-bar-val">{fmt_a} {unit}</span>
     </div>
     <div class="rl-vs-bar-cell">
-      <div class="rl-vs-bar{winner_b}" style="width:{pct_b:.0f}%;background:{COLORS['signal_red']}"></div>
+      <div class="rl-vs-bar{winner_b}" style="width:{pct_b:.0f}%;background:{RACE_B_COLOR}"></div>
       <span class="rl-vs-bar-val">{fmt_b} {unit}</span>
     </div>
   </div>
@@ -250,40 +356,25 @@ def build_bars_comparison(race_a: dict, race_b: dict) -> str:
 # ── Dimension breakdown table ────────────────────────────────────
 
 def build_dimension_table(race_a: dict, race_b: dict) -> str:
-    """15-dimension comparison table with dot meters."""
-    scores_a = race_a.get("scores", {})
-    scores_b = race_b.get("scores", {})
+    """14-dimension comparison table with dot meters (road rubric)."""
+    scores_a = race_scores(race_a)
+    scores_b = race_scores(race_b)
 
     rows = []
-    # Course dimensions
-    rows.append('<tr class="rl-vs-dim-header"><td colspan="3">COURSE PROFILE</td></tr>')
-    for dim, label in zip(RADAR_VARS, RADAR_FULL_LABELS):
-        sa = scores_a.get(dim, 0)
-        sb = scores_b.get(dim, 0)
-        hi_a = " rl-vs-dim-win" if sa > sb else ""
-        hi_b = " rl-vs-dim-win" if sb > sa else ""
-        rows.append(
-            f'<tr>'
-            f'<td class="rl-vs-dim-name">{label}</td>'
-            f'<td class="rl-vs-dim-score{hi_a}">{build_dot_meter(sa, COLORS["primary_brown"])}</td>'
-            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["signal_red"])}</td>'
-            f'</tr>'
-        )
-
-    # Editorial dimensions
-    rows.append('<tr class="rl-vs-dim-header"><td colspan="3">EDITORIAL ASSESSMENT</td></tr>')
-    for dim, label in zip(EDITORIAL_VARS, EDITORIAL_LABELS):
-        sa = scores_a.get(dim, 0)
-        sb = scores_b.get(dim, 0)
-        hi_a = " rl-vs-dim-win" if sa > sb else ""
-        hi_b = " rl-vs-dim-win" if sb > sa else ""
-        rows.append(
-            f'<tr>'
-            f'<td class="rl-vs-dim-name">{label}</td>'
-            f'<td class="rl-vs-dim-score{hi_a}">{build_dot_meter(sa, COLORS["primary_brown"])}</td>'
-            f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, COLORS["signal_red"])}</td>'
-            f'</tr>'
-        )
+    for heading, dims in (("COURSE PROFILE", COURSE_DIMS), ("EDITORIAL ASSESSMENT", EDITORIAL_DIMS)):
+        rows.append(f'<tr class="rl-vs-dim-header"><td colspan="3">{heading}</td></tr>')
+        for dim, label in dims:
+            sa = scores_a[dim]
+            sb = scores_b[dim]
+            hi_a = " rl-vs-dim-win" if sa > sb else ""
+            hi_b = " rl-vs-dim-win" if sb > sa else ""
+            rows.append(
+                f'<tr data-dim="{esc(dim)}">'
+                f'<td class="rl-vs-dim-name">{esc(label)}</td>'
+                f'<td class="rl-vs-dim-score{hi_a}">{build_dot_meter(sa, RACE_A_COLOR)}</td>'
+                f'<td class="rl-vs-dim-score{hi_b}">{build_dot_meter(sb, RACE_B_COLOR)}</td>'
+                f'</tr>'
+            )
 
     return f'''<table class="rl-vs-dim-table">
   <thead>
@@ -303,66 +394,25 @@ def build_dimension_table(race_a: dict, race_b: dict) -> str:
 
 def build_verdict(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str:
     """Build the 'Choose A if...' / 'Choose B if...' verdict section."""
-    scores_a = race_a.get("scores", {})
-    scores_b = race_b.get("scores", {})
+    scores_a = race_scores(race_a)
+    scores_b = race_scores(race_b)
 
-    # Calculate composite differences
-    course_dims = RADAR_VARS
-    editorial_dims = EDITORIAL_VARS
-
-    # Determine strengths for each race
+    # Each race's biggest rubric margins (stable order on ties: rubric order).
     a_wins = []
     b_wins = []
-    for dim, label in zip(ALL_DIMS, ALL_DIM_LABELS):
-        sa = scores_a.get(dim, 0)
-        sb = scores_b.get(dim, 0)
+    for dim, _label in ALL_DIMS:
+        sa = scores_a[dim]
+        sb = scores_b[dim]
         if sa > sb:
-            a_wins.append((label, sa - sb))
+            a_wins.append((dim, sa - sb))
         elif sb > sa:
-            b_wins.append((label, sb - sa))
+            b_wins.append((dim, sb - sa))
 
     a_wins.sort(key=lambda x: -x[1])
     b_wins.sort(key=lambda x: -x[1])
 
-    # Build "Choose X if..." bullets from dimension wins
-    def _choose_bullets(wins, race):
-        bullets = []
-        for label, diff in wins[:5]:
-            dim_lower = label.lower().replace(" ", "_")
-            if dim_lower == "length":
-                bullets.append(f"You want a {'longer' if race == 'a' else 'longer'} race (higher distance rating)")
-            elif dim_lower == "technicality":
-                bullets.append(f"You prefer more technical terrain")
-            elif dim_lower == "elevation":
-                bullets.append(f"You want more climbing")
-            elif dim_lower == "climate":
-                bullets.append(f"You want more extreme weather conditions")
-            elif dim_lower == "altitude":
-                bullets.append(f"You thrive at high altitude")
-            elif dim_lower == "logistics":
-                bullets.append(f"You prefer a more remote, logistically challenging event")
-            elif dim_lower == "adventure":
-                bullets.append(f"You're chasing a bigger adventure factor")
-            elif dim_lower == "prestige":
-                bullets.append(f"Prestige and bucket-list status matter to you")
-            elif dim_lower == "race_quality":
-                bullets.append(f"Top-tier organization and race production are priorities")
-            elif dim_lower == "experience":
-                bullets.append(f"The overall rider experience is your top priority")
-            elif dim_lower == "community":
-                bullets.append(f"Community and post-race culture matter most")
-            elif dim_lower == "field_depth":
-                bullets.append(f"You want to race against a deep competitive field")
-            elif dim_lower == "value":
-                bullets.append(f"You want the best value for your entry fee")
-            elif dim_lower == "expenses":
-                bullets.append(f"You're on a tighter travel budget")
-            else:
-                bullets.append(f"Stronger {label.lower()}")
-        return bullets
-
-    a_bullets = _choose_bullets(a_wins, "a")
-    b_bullets = _choose_bullets(b_wins, "b")
+    a_bullets = [CHOOSE_IF[dim] for dim, _diff in a_wins[:5]]
+    b_bullets = [CHOOSE_IF[dim] for dim, _diff in b_wins[:5]]
 
     # Add verdict one-liners from full race data
     verdict_a = ""
@@ -374,11 +424,17 @@ def build_verdict(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
         fv = full_b.get("final_verdict", {})
         verdict_b = fv.get("one_liner", "")
 
-    a_lis = "\n      ".join(f"<li>{esc(b)}</li>" for b in a_bullets)
-    b_lis = "\n      ".join(f"<li>{esc(b)}</li>" for b in b_bullets)
+    def _ul(bullets):
+        if not bullets:
+            return ""
+        lis = "\n      ".join(f"<li>{esc(b)}</li>" for b in bullets)
+        return f"<ul>{lis}</ul>"
 
-    score_a = race_a.get("overall_score", 0)
-    score_b = race_b.get("overall_score", 0)
+    a_ul = _ul(a_bullets)
+    b_ul = _ul(b_bullets)
+
+    score_a = overall_score(race_a)
+    score_b = overall_score(race_b)
 
     winner_line = ""
     if score_a > score_b:
@@ -400,12 +456,12 @@ def build_verdict(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
     <div class="rl-vs-verdict-card rl-vs-verdict-a">
       <h3>Choose {esc(race_a["name"][:22])} if...</h3>
       {verdict_a_html}
-      <ul>{a_lis}</ul>
+      {a_ul}
     </div>
     <div class="rl-vs-verdict-card rl-vs-verdict-b">
       <h3>Choose {esc(race_b["name"][:22])} if...</h3>
       {verdict_b_html}
-      <ul>{b_lis}</ul>
+      {b_ul}
     </div>
   </div>
 </section>'''
@@ -417,25 +473,30 @@ def build_faq(race_a: dict, race_b: dict) -> tuple:
     """Build FAQ HTML and JSON-LD for the vs page. Returns (html, jsonld)."""
     name_a = race_a["name"]
     name_b = race_b["name"]
-    score_a = race_a.get("overall_score", 0)
-    score_b = race_b.get("overall_score", 0)
-    scores_a = race_a.get("scores", {})
-    scores_b = race_b.get("scores", {})
+    score_a = overall_score(race_a)
+    score_b = overall_score(race_b)
+    scores_a = race_scores(race_a)
+    scores_b = race_scores(race_b)
 
     pairs = []
 
-    # Q1: Which is harder?
-    difficulty_a = sum(scores_a.get(d, 0) for d in ["length", "technicality", "elevation", "climate", "altitude"]) / 5
-    difficulty_b = sum(scores_b.get(d, 0) for d in ["length", "technicality", "elevation", "climate", "altitude"]) / 5
-    harder = name_a if difficulty_a >= difficulty_b else name_b
-    easier = name_b if difficulty_a >= difficulty_b else name_a
-    pairs.append((
-        f"Which is harder, {name_a} or {name_b}?",
-        f"{harder} rates as the more demanding race based on our composite difficulty score "
-        f"(averaging length, technicality, elevation, climate, and altitude ratings). "
-        f"If you're looking for the bigger challenge, go with {harder}. "
-        f"If you want a more accessible race, {easier} is the better pick."
-    ))
+    # Q1: Which is harder? Mean of the course dimensions that make the day harder.
+    diff_labels = _label_list(DIFFICULTY_DIMS)
+    difficulty_a = sum(scores_a[d] for d in DIFFICULTY_DIMS) / len(DIFFICULTY_DIMS)
+    difficulty_b = sum(scores_b[d] for d in DIFFICULTY_DIMS) / len(DIFFICULTY_DIMS)
+    if difficulty_a == difficulty_b:
+        q1_answer = (
+            f"They rate the same on difficulty: both average {difficulty_a:.1f}/5 across "
+            f"{diff_labels}. Compare the climbing and descent ratings above to see where each day hurts."
+        )
+    else:
+        harder, easier = (name_a, name_b) if difficulty_a > difficulty_b else (name_b, name_a)
+        hi, lo = max(difficulty_a, difficulty_b), min(difficulty_a, difficulty_b)
+        q1_answer = (
+            f"{harder} is the harder day. It averages {hi:.1f}/5 across {diff_labels}, "
+            f"against {lo:.1f}/5 for {easier}."
+        )
+    pairs.append((f"Which is harder, {name_a} or {name_b}?", q1_answer))
 
     # Q2: Which has the better score?
     if score_a != score_b:
@@ -445,7 +506,7 @@ def build_faq(race_a: dict, race_b: dict) -> tuple:
         pairs.append((
             f"Is {name_a} or {name_b} rated higher?",
             f"{higher} scores {h_score}/100 compared to {l_score}/100 in our 15-dimension Roadie Labs Rating. "
-            f"The overall score reflects course profile, prestige, race quality, community, and value."
+            f"The overall score covers the course, prestige, organization, scenery, culture, field depth and cost."
         ))
     else:
         pairs.append((
@@ -455,15 +516,25 @@ def build_faq(race_a: dict, race_b: dict) -> tuple:
         ))
 
     # Q3: Which is better for beginners?
-    access_a = scores_a.get("logistics", 3) + (6 - scores_a.get("technicality", 3)) + (6 - scores_a.get("length", 3))
-    access_b = scores_b.get("logistics", 3) + (6 - scores_b.get("technicality", 3)) + (6 - scores_b.get("length", 3))
-    beginner = name_a if access_a >= access_b else name_b
-    pairs.append((
-        f"Which is better for beginners, {name_a} or {name_b}?",
-        f"{beginner} is generally more accessible for first-time road racers, "
-        f"factoring in distance, technicality, and logistical ease. "
-        f"Check each race's full profile for distance options and beginner-specific advice."
-    ))
+    # Lower distance, descent and logistics ratings make a friendlier first event.
+    access_labels = _label_list(ACCESS_DIMS)
+    load_a = sum(scores_a[d] for d in ACCESS_DIMS)
+    load_b = sum(scores_b[d] for d in ACCESS_DIMS)
+    max_load = 5 * len(ACCESS_DIMS)
+    if load_a == load_b:
+        q3_answer = (
+            f"Neither has the edge: both rate {load_a}/{max_load} on {access_labels} combined. "
+            f"Check each race's full profile for shorter route options."
+        )
+    else:
+        beginner, other = (name_a, name_b) if load_a < load_b else (name_b, name_a)
+        lo, hi = min(load_a, load_b), max(load_a, load_b)
+        q3_answer = (
+            f"{beginner} is the easier first big road event. It rates {lo}/{max_load} on "
+            f"{access_labels} combined, against {hi}/{max_load} for {other}. "
+            f"Check each race's full profile for shorter route options."
+        )
+    pairs.append((f"Which is better for beginners, {name_a} or {name_b}?", q3_answer))
 
     # Q4: When are they held?
     month_a = race_a.get("month", "TBD")
@@ -550,8 +621,8 @@ def build_vs_page(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
     name_b = race_b["name"]
     slug_a = race_a["slug"]
     slug_b = race_b["slug"]
-    score_a = race_a.get("overall_score", 0)
-    score_b = race_b.get("overall_score", 0)
+    score_a = overall_score(race_a)
+    score_b = overall_score(race_b)
     tier_a = race_a.get("tier", 3)
     tier_b = race_b.get("tier", 3)
 
@@ -560,7 +631,7 @@ def build_vs_page(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
     title = f"{name_a} vs {name_b} — Head-to-Head Comparison | Roadie Labs"
     description = (
         f"Detailed comparison of {name_a} ({score_a}/100) and {name_b} ({score_b}/100). "
-        f"Side-by-side radar chart, 15-dimension breakdown, and verdict to help you choose."
+        f"Side-by-side radar chart, 14-dimension breakdown, and verdict to help you choose."
     )
 
     # Build sections
@@ -768,8 +839,8 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   border-bottom: 2px solid var(--rl-color-dark-brown);
   color: var(--rl-color-secondary-brown);
 }}
-.rl-vs-dim-th-a {{ color: {COLORS["primary_brown"]}; }}
-.rl-vs-dim-th-b {{ color: {COLORS["signal_red"]}; }}
+.rl-vs-dim-th-a {{ color: {RACE_A_COLOR}; }}
+.rl-vs-dim-th-b {{ color: {RACE_B_COLOR}; }}
 .rl-vs-dim-header td {{
   font-size: 10px;
   font-weight: 700;
@@ -805,8 +876,8 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   padding: 20px;
   border: 2px solid var(--rl-color-dark-brown);
 }}
-.rl-vs-verdict-a {{ border-left: 6px solid {COLORS["primary_brown"]}; }}
-.rl-vs-verdict-b {{ border-left: 6px solid {COLORS["signal_red"]}; }}
+.rl-vs-verdict-a {{ border-left: 6px solid {RACE_A_COLOR}; }}
+.rl-vs-verdict-b {{ border-left: 6px solid {RACE_B_COLOR}; }}
 .rl-vs-verdict-card h3 {{
   font-family: var(--rl-font-editorial);
   font-size: 16px;
@@ -886,7 +957,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 }}
 .rl-vs-cta-btn:hover {{ background: var(--rl-color-warm-paper); color: var(--rl-color-dark-brown); }}
 .rl-vs-cta-btn-a {{ border-color: {COLORS["steel"]}; }}
-.rl-vs-cta-btn-b {{ border-color: {COLORS["signal_red"]}; }}
+.rl-vs-cta-btn-b {{ border-color: {RACE_B_COLOR}; }}
 .rl-vs-cta-sub {{ font-size: 11px; color: var(--rl-color-tan); margin-top: 8px; }}
 
 /* Links to profiles */
@@ -1049,6 +1120,7 @@ def main():
     print(f"Selected {len(pairs)} vs pairs")
 
     generated = 0
+    skipped = []
     for slug_a, slug_b in pairs:
         race_a = race_map.get(slug_a)
         race_b = race_map.get(slug_b)
@@ -1059,15 +1131,24 @@ def main():
         full_b = full_race_data.get(slug_b, {})
 
         page_slug = f"{slug_a}-vs-{slug_b}"
+        try:
+            page_html = build_vs_page(race_a, race_b, full_a, full_b)
+        except MissingScoreError as exc:
+            # Refuse the pair rather than draw a zero the race never earned.
+            print(f"SKIP {page_slug}: {exc}", file=sys.stderr)
+            skipped.append(page_slug)
+            continue
         page_dir = output_dir / page_slug
         page_dir.mkdir(parents=True, exist_ok=True)
-
-        page_html = build_vs_page(race_a, race_b, full_a, full_b)
         out_path = page_dir / "index.html"
         out_path.write_text(page_html, encoding="utf-8")
         generated += 1
 
     print(f"\nDone. {generated} vs pages generated in {output_dir}/")
+    if skipped:
+        print(f"ERROR: {len(skipped)} vs pairs refused for missing scores: {', '.join(skipped)}",
+              file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
