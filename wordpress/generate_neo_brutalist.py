@@ -1740,10 +1740,11 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   if (!strip) return;
   var dateStr = strip.getAttribute('data-race-date');
   if (!dateStr) return;
-  var race = new Date(dateStr + 'T00:00:00');
+  var race = new Date(dateStr + 'T00:00:00Z');
   if (isNaN(race.getTime())) return;
-  var today = new Date(); today.setHours(0, 0, 0, 0);
-  var days = Math.ceil((race - today) / 86400000);
+  var now = new Date();
+  var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var days = Math.round((race.getTime() - today) / 86400000);
   if (days <= 7) return;
   var weeks = Math.max(4, Math.ceil(days / 7));
   var price = weeks * 15;
@@ -2114,11 +2115,11 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
       return;
     }
 
-    var raceDate = new Date(raceDateStr + 'T00:00:00');
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    var diffMs = raceDate.getTime() - today.getTime();
-    var weeksRaw = Math.ceil(diffMs / (7 * 24 * 60 * 60 * 1000));
+    var raceDate = new Date(raceDateStr + 'T00:00:00Z');
+    var now = new Date();
+    var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.round((raceDate.getTime() - today) / 86400000);
+    var weeksRaw = Math.ceil(days / 7);
     var weeks = Math.max(4, weeksRaw);
 
     // Phase split

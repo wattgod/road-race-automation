@@ -274,9 +274,9 @@ def check_pricing_parity():
     var MIN_WEEKS = 4;
 
     function computePrice(raceDateStr) {
-      var raceDate = new Date(raceDateStr + 'T00:00:00');
-      var today = new Date(%TODAY% + 'T00:00:00');
-      var days = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
+      var raceDate = new Date(raceDateStr + 'T00:00:00Z');
+      var today = new Date(%TODAY% + 'T00:00:00Z');
+      var days = Math.round((raceDate - today) / (1000 * 60 * 60 * 24));
       var weeks = Math.max(MIN_WEEKS, Math.ceil(days / 7));
       var price = weeks * PRICE_PER_WEEK;
       return {weeks: weeks, price_cents: price * 100};
