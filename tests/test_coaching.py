@@ -378,6 +378,10 @@ class TestFAQ:
         f = build_faq()
         assert "I race crits and road races. Can you plan both?" in f
 
+    def test_missed_workout_answer_matches_tiers(self):
+        """Weekly plan adjustments are Mid and Max only; the FAQ must say so."""
+        assert "At Mid and Max I move things that week, and at Min we sort it out in the weekly review." in build_faq()
+
     def test_has_aria(self):
         f = build_faq()
         assert 'aria-expanded' in f

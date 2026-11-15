@@ -245,7 +245,7 @@ def build_faq() -> str:
         ),
         (
             "What if I miss workouts?",
-            "Tell me and I&#39;ll move things. Don&#39;t make up a missed interval session by skipping recovery.",
+            "Tell me. At Mid and Max I move things that week, and at Min we sort it out in the weekly review. Don&#39;t make up a missed interval session by skipping recovery.",
         ),
         (
             "How will I know it&#39;s working?",
