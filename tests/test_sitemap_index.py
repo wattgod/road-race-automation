@@ -43,3 +43,26 @@ def test_generated_sitemap_uses_only_the_canonical_methodology_url(tmp_path: Pat
     locations = _locations(output.read_text(encoding="utf-8"))
     assert "https://roadielabs.com/race/methodology/" in locations
     assert "https://roadielabs.com/methodology/" not in locations
+
+
+def test_generated_sitemap_lists_public_site_pages(tmp_path: Path) -> None:
+    output = tmp_path / "web" / "sitemap.xml"
+    generate_sitemap([], output)
+    locations = _locations(output.read_text(encoding="utf-8"))
+    for path in ("/coaching/", "/consulting/", "/about/", "/privacy/", "/terms/",
+                 "/race/tier-1/", "/race/tier-4/"):
+        assert f"https://roadielabs.com{path}" in locations
+
+
+def test_prep_kits_listed_only_for_generated_kits_of_indexed_races(tmp_path: Path) -> None:
+    kits = tmp_path / "wordpress" / "output" / "prep-kit"
+    kits.mkdir(parents=True)
+    for name in ("index", "alpha", "orphan"):
+        (kits / f"{name}.html").write_text("<html></html>", encoding="utf-8")
+    output = tmp_path / "web" / "sitemap.xml"
+    generate_sitemap([{"slug": "alpha", "tier": 2}, {"slug": "beta", "tier": 2}], output)
+    locations = _locations(output.read_text(encoding="utf-8"))
+    assert "https://roadielabs.com/race/alpha/prep-kit/" in locations
+    assert "https://roadielabs.com/race/beta/prep-kit/" not in locations
+    assert "https://roadielabs.com/race/orphan/prep-kit/" not in locations
+    assert "https://roadielabs.com/race/index/prep-kit/" not in locations

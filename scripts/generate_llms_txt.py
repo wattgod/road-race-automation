@@ -23,6 +23,10 @@ INDEX_FILE = PROJECT_ROOT / "web" / "race-index.json"
 RACE_DATA_DIR = PROJECT_ROOT / "race-data"
 OUTPUT_DIR = PROJECT_ROOT / "web"
 SITE_URL = "https://roadielabs.com"
+CONTACT_EMAIL = "gravelgodcoaching@gmail.com"
+# A real Roadie Labs race whose Markdown mirror is published. The example line
+# is only written when this slug is in the race index being rendered.
+EXAMPLE_SLUG = "gran-fondo-utah"
 
 TIER_LABELS = {1: "Tier 1 (Elite)", 2: "Tier 2 (Contender)", 3: "Tier 3 (Rising)", 4: "Tier 4 (Local)"}
 
@@ -60,6 +64,11 @@ def _fmt_dist(val) -> str:
     return f"{n:.1f} mi"
 
 
+def _plural(n: int, word: str, plural: str | None = None) -> str:
+    """'1 race', '2 races'."""
+    return f"{n} {word if n == 1 else (plural or word + 's')}"
+
+
 def _md_escape(val) -> str:
     """Escape a value for use inside a markdown table cell."""
     s = str(val) if val is not None else "—"
@@ -79,20 +88,25 @@ def generate_llms_txt(index: list[dict]) -> str:
 
     regions = sorted(set(r.get("region", "Unknown") for r in index if r.get("region")))
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    n_races = _plural(len(index), "race")
+    tiers = {t: _plural(tier_counts.get(t, 0), "race") for t in (1, 2, 3, 4)}
+    example = ""
+    if any(r.get("slug") == EXAMPLE_SLUG for r in index):
+        example = f"\n\ne.g. {SITE_URL}/race/{EXAMPLE_SLUG}.md"
 
     return f"""# Roadie Labs Race Database
 
-> The definitive road race database. {len(index)} races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
+> The definitive road race database. {n_races} rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
 > Last generated: {now}
 
 ## Overview
 
-Roadie Labs is a road cycling event database covering {len(index)} races across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
+Roadie Labs is a road cycling event database covering {n_races} across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
 
-- **Tier 1 (Elite)**: {tier_counts.get(1, 0)} races — score >= 80 or prestige override
-- **Tier 2 (Contender)**: {tier_counts.get(2, 0)} races — score >= 60
-- **Tier 3 (Rising)**: {tier_counts.get(3, 0)} races — score >= 45
-- **Tier 4 (Local)**: {tier_counts.get(4, 0)} races — score < 45
+- **Tier 1 (Elite)**: {tiers[1]} — score >= 80 or prestige override
+- **Tier 2 (Contender)**: {tiers[2]} — score >= 60
+- **Tier 3 (Rising)**: {tiers[3]} — score >= 45
+- **Tier 4 (Local)**: {tiers[4]} — score < 45
 
 Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: {', '.join(regions)}.
@@ -100,7 +114,7 @@ Regions: {', '.join(regions)}.
 ## Machine-Readable Resources
 
 - [Full LLM context (this database as text)]({SITE_URL}/llms-full.txt)
-- [Race index JSON ({len(index)} entries)]({SITE_URL}/search/race-index.json)
+- [Race index JSON ({_plural(len(index), "entry", "entries")})]({SITE_URL}/search/race-index.json)
 - [RSS feed]({SITE_URL}/feed/races.xml)
 - [Source code & data (GitHub)](https://github.com/wattgod/road-race-automation)
 - [Individual race profiles]({SITE_URL}/race/{{slug}}/)
@@ -113,14 +127,12 @@ Regions: {', '.join(regions)}.
 Every race profile is also published as clean Markdown with YAML
 frontmatter, one file per race, at:
 
-`{SITE_URL}/race/{{slug}}.md`
-
-e.g. {SITE_URL}/race/unbound-200.md
+`{SITE_URL}/race/{{slug}}.md`{example}
 
 ## Contact
 
 - Website: {SITE_URL}
-- Email: matt@roadielabs.com
+- Email: {CONTACT_EMAIL}
 """
 
 
@@ -191,7 +203,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines = []
     lines.append("# Roadie Labs Race Database — Full Context")
     lines.append("")
-    lines.append(f"> {len(index)} road cycling events rated on 14 base dimensions plus cultural impact.")
+    lines.append(f"> {_plural(len(index), 'road cycling event')} rated on 14 base dimensions plus cultural impact.")
     lines.append(f"> Produced by Roadie Labs (roadielabs.com). Generated: {now}")
     lines.append("")
 
@@ -219,7 +231,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     t3_t4 = [r for r in sorted_index if r.get("tier", 4) >= 3]
 
     # T1/T2 races with summaries
-    lines.append(f"## Tier 1 & Tier 2 Races ({len(t1_t2)} races)")
+    lines.append(f"## Tier 1 & Tier 2 Races ({_plural(len(t1_t2), 'race')})")
     lines.append("")
 
     for r in t1_t2:
@@ -246,7 +258,7 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
         lines.append("")
 
     # T3/T4 races as table (now includes discipline + slug)
-    lines.append(f"## Tier 3 & Tier 4 Races ({len(t3_t4)} races)")
+    lines.append(f"## Tier 3 & Tier 4 Races ({_plural(len(t3_t4), 'race')})")
     lines.append("")
     lines.append(f"Each race's Markdown mirror is at {SITE_URL}/race/{{slug}}.md — the Slug column below gives {{slug}}.")
     lines.append("")

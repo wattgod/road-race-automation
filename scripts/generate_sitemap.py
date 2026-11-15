@@ -23,6 +23,16 @@ SITE_BASE_URL = "https://roadielabs.com"
 # Only these blog categories are indexable — unknown categories excluded by default (safe)
 INDEXABLE_BLOG_CATEGORIES = frozenset({"roundup", "recap"})
 
+# Public site pages outside /race/. Each returned 200 on roadielabs.com
+# (curl, 2026-11-14). /race/methodology/ and the tier hubs are listed below.
+PUBLIC_PAGES = (
+    ("/coaching/", "monthly", "0.7"),
+    ("/consulting/", "monthly", "0.6"),
+    ("/about/", "monthly", "0.5"),
+    ("/privacy/", "yearly", "0.2"),
+    ("/terms/", "yearly", "0.2"),
+)
+
 
 def load_series_slugs(project_root: Path) -> list:
     """Load series slugs from series-data/ directory."""
@@ -72,6 +82,22 @@ def load_plan_page_slugs(project_root: Path) -> list:
     if not d.exists():
         return []
     return [path.stem for path in sorted(d.glob("*.html"))]
+
+
+def load_prep_kit_slugs(project_root: Path, race_index: list) -> list:
+    """Prep-kit slugs generated in wordpress/output/prep-kit/ for indexed races.
+
+    push_wordpress.sync_pages ships each race page's kit in the same tar as
+    the page and refuses to push when a kit is missing, so a generated kit for
+    a race in the index is a page that goes live at /race/{slug}/prep-kit/.
+    index.html is the /prep-kit/ hub, listed separately.
+    """
+    d = project_root / "wordpress" / "output" / "prep-kit"
+    if not d.exists():
+        return []
+    indexed = {r.get("slug") for r in race_index if r.get("slug")}
+    return [path.stem for path in sorted(d.glob("*.html"))
+            if path.stem != "index" and path.stem in indexed]
 
 
 def load_tire_slugs(project_root: Path) -> list:
@@ -200,6 +226,14 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'changefreq').text = changefreq
         SubElement(url, 'priority').text = priority
 
+    # Public site pages (coaching, consulting, about, legal)
+    for path, changefreq, priority in PUBLIC_PAGES:
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}{path}"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = changefreq
+        SubElement(url, 'priority').text = priority
+
     # Tier hub pages
     for t in [1, 2, 3, 4]:
         url = SubElement(urlset, 'url')
@@ -251,6 +285,15 @@ def generate_sitemap(race_index: list, output_path: Path, data_dir: Path = None,
         SubElement(url, 'lastmod').text = today
         SubElement(url, 'changefreq').text = 'monthly'
         SubElement(url, 'priority').text = '0.8'
+
+    # Per-race prep-kit pages
+    prep_kit_slugs = load_prep_kit_slugs(output_path.parent.parent, race_index)
+    for slug in prep_kit_slugs:
+        url = SubElement(urlset, 'url')
+        SubElement(url, 'loc').text = f"{SITE_BASE_URL}/race/{slug}/prep-kit/"
+        SubElement(url, 'lastmod').text = today
+        SubElement(url, 'changefreq').text = 'monthly'
+        SubElement(url, 'priority').text = '0.6'
 
     # Tire guide pages
     tire_slugs = load_tire_slugs(output_path.parent.parent)
@@ -428,8 +471,9 @@ def main():
     course_slugs = load_course_slugs(project_root)
     course_url_count = (1 + len(course_slugs)) if course_slugs else 0
     plan_slugs = load_plan_page_slugs(project_root)
+    prep_kit_slugs = load_prep_kit_slugs(project_root, race_index)
     courses_landing_count = 1
-    total_urls = (6 + courses_landing_count + len(series_slugs) + len(vs_slugs) + len(state_slugs)
+    total_urls = (10 + len(PUBLIC_PAGES) + courses_landing_count + len(prep_kit_slugs) + len(series_slugs) + len(vs_slugs) + len(state_slugs)
                   + len(special_slugs) + len(tire_slugs) + len(plan_slugs)
                   + len(tire_page_slugs) + len(tire_vs_slugs) + course_url_count + len(race_index))
     print(f"Generated sitemap: {output_path} ({total_urls} URLs)")
@@ -441,6 +485,11 @@ def main():
         print(f"  Including {len(state_slugs)} state hub pages")
     if special_slugs:
         print(f"  Including {len(special_slugs)} special pages (calendar, rankings)")
+    print(f"  Including {len(plan_slugs)} training-plan pages, "
+          f"{len(prep_kit_slugs)} prep-kit pages")
+    if not plan_slugs or not prep_kit_slugs:
+        print("  WARN: no generated training-plan or prep-kit pages found in "
+              "wordpress/output/ — generate them before the sitemap or they are left out")
     if tire_slugs:
         print(f"  Including {len(tire_slugs)} tire guide pages")
     if tire_page_slugs:
