@@ -155,7 +155,7 @@ FORBIDDEN = [
     (re.compile(r"/\s*mo\b", re.I), "/mo"),
     (re.compile(r"\bmonthly\b", re.I), "monthly"),
     # The old plan's refund window. Not every "7 days": the site footer's
-    # Endure trial ("Try Endure for 7 days") and course advice ("arrive 5-7
+    # Endure trial ("Try Endure for 14 days") and course advice ("arrive 5-7
     # days early") are not plan terms.
     (re.compile(r"\b7[- ]day (full )?(refund|money|guarantee)", re.I), "7-day refund"),
     (re.compile(r"within 7 days", re.I), "within 7 days"),
