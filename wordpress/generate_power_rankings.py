@@ -225,6 +225,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 /* Discipline filter */
 .rl-pr-filters {{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   padding: 14px 0;
