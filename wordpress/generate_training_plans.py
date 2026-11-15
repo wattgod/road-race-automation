@@ -451,17 +451,17 @@ def build_training_css() -> str:
   padding: var(--rl-spacing-sm) var(--rl-spacing-xl);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   max-width: 1200px;
   margin: 0 auto;
   letter-spacing: var(--rl-letter-spacing-wide);
 }}
 .rl-breadcrumb a {{
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-decoration: none;
   transition: color var(--rl-transition-hover);
 }}
-.rl-breadcrumb a:hover {{ color: var(--rl-color-gold); }}
+.rl-breadcrumb a:hover {{ color: var(--rl-color-ink); }}
 .rl-breadcrumb-sep {{ margin: 0 var(--rl-spacing-xs); }}
 
 /* ── Layout ── */
@@ -473,9 +473,9 @@ def build_training_css() -> str:
 }}
 .rl-tp-section:last-of-type {{ border-bottom: none; }}
 .rl-tp-section-alt {{
-  background: var(--rl-color-sand);
+  background: var(--rl-color-zebra);
   max-width: none;
-  border-bottom-color: var(--rl-color-primary-brown);
+  border-bottom-color: var(--rl-color-graphite);
 }}
 .rl-tp-section-alt > * {{
   max-width: 1200px;
@@ -488,10 +488,10 @@ def build_training_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-ultra-wide);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   margin-bottom: var(--rl-spacing-sm);
   border-bottom: var(--rl-border-subtle);
-  border-bottom-color: var(--rl-color-primary-brown);
+  border-bottom-color: var(--rl-color-graphite);
   display: inline-block;
   padding-bottom: var(--rl-spacing-2xs);
 }}
@@ -524,8 +524,8 @@ def build_training_css() -> str:
   transition: background-color var(--rl-transition-hover), border-color var(--rl-transition-hover);
 }}
 .rl-tp-btn:hover {{
-  background-color: var(--rl-color-primary-brown);
-  border-color: var(--rl-color-primary-brown);
+  background-color: var(--rl-color-graphite);
+  border-color: var(--rl-color-graphite);
   color: var(--rl-color-white);
 }}
 .rl-tp-btn-secondary {{
@@ -533,7 +533,7 @@ def build_training_css() -> str:
   color: var(--rl-color-near-black);
 }}
 .rl-tp-btn-secondary:hover {{
-  background-color: var(--rl-color-sand);
+  background-color: var(--rl-color-zebra);
   color: var(--rl-color-near-black);
 }}
 
@@ -558,7 +558,7 @@ def build_training_css() -> str:
 .rl-tp-hero-sub {{
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-md);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   max-width: 600px;
   line-height: var(--rl-line-height-prose);
   margin: 0 0 var(--rl-spacing-xl) 0;
@@ -594,7 +594,7 @@ def build_training_css() -> str:
   font-size: var(--rl-font-size-2xs);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wider);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   font-weight: var(--rl-font-weight-semibold);
 }}
 
@@ -614,7 +614,7 @@ def build_training_css() -> str:
 .rl-tp-deliverable-row:last-child {{ border-bottom: none; }}
 .rl-tp-deliverable-num {{
   background: var(--rl-color-near-black);
-  color: var(--rl-color-sand);
+  color: var(--rl-color-paper);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -638,7 +638,7 @@ def build_training_css() -> str:
 .rl-tp-deliverable-content p {{
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   margin: 0;
   line-height: var(--rl-line-height-prose);
   max-width: 68ch;
@@ -647,14 +647,14 @@ def build_training_css() -> str:
   background: var(--rl-color-white);
 }}
 .rl-tp-deliverable-row:nth-child(even) .rl-tp-deliverable-content {{
-  background: var(--rl-color-sand);
+  background: var(--rl-color-zebra);
 }}
 
 /* ── Sample Week ── */
 .rl-tp-sample-week {{
   margin-top: var(--rl-spacing-xl);
   border: var(--rl-border-standard);
-  background: var(--rl-color-sand);
+  background: var(--rl-color-zebra);
   padding: var(--rl-spacing-lg);
 }}
 .rl-tp-sample-week-label {{
@@ -663,11 +663,11 @@ def build_training_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-ultra-wide);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   margin-bottom: var(--rl-spacing-sm);
 }}
 .rl-tp-sample-hint {{
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   font-weight: var(--rl-font-weight-regular);
 }}
 .rl-tp-sample-grid {{
@@ -683,7 +683,7 @@ def build_training_css() -> str:
   letter-spacing: var(--rl-letter-spacing-wider);
   font-weight: var(--rl-font-weight-bold);
   padding: var(--rl-spacing-xs) var(--rl-spacing-2xs);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-tp-sample-block {{
   text-align: center;
@@ -701,8 +701,8 @@ def build_training_css() -> str:
 }}
 .rl-tp-sample-block.rest {{
   background: var(--rl-color-white);
-  color: var(--rl-color-secondary-brown);
-  border-color: var(--rl-color-tan);
+  color: var(--rl-color-graphite);
+  border-color: var(--rl-color-silver);
 }}
 .rl-tp-sample-block.endurance {{
   background: var(--rl-color-white);
@@ -710,24 +710,24 @@ def build_training_css() -> str:
 }}
 .rl-tp-sample-block.intervals {{
   background: var(--rl-color-near-black);
-  color: var(--rl-color-sand);
+  color: var(--rl-color-paper);
 }}
 .rl-tp-sample-block.strength {{
-  background: var(--rl-color-primary-brown);
-  color: var(--rl-color-sand);
+  background: var(--rl-color-graphite);
+  color: var(--rl-color-paper);
 }}
 .rl-tp-sample-block.long-ride {{
   background: var(--rl-color-near-black);
-  color: var(--rl-color-teal);
+  color: var(--rl-color-white);
 }}
 .rl-tp-sample-block[data-detail] {{
   transition: border-color var(--rl-transition-hover);
 }}
 .rl-tp-sample-block[data-detail]:hover {{
-  border-color: var(--rl-color-primary-brown);
+  border-color: var(--rl-color-graphite);
 }}
 .rl-tp-sample-block[data-detail].active {{
-  border-color: var(--rl-color-gold);
+  border-color: var(--rl-color-ink);
   border-width: var(--rl-border-width-standard);
 }}
 .rl-tp-sample-detail {{
@@ -760,11 +760,11 @@ def build_training_css() -> str:
   overflow: hidden;
 }}
 .rl-tp-viz-z1 {{ background: color-mix(in srgb, var(--rl-color-near-black) 8%, var(--rl-color-white)); color: var(--rl-color-near-black); }}
-.rl-tp-viz-z2 {{ background: var(--rl-color-sand); border-color: var(--rl-color-primary-brown); color: var(--rl-color-near-black); }}
-.rl-tp-viz-z3 {{ background: var(--rl-color-tan); color: var(--rl-color-near-black); }}
-.rl-tp-viz-z4 {{ background: var(--rl-color-primary-brown); color: var(--rl-color-sand); }}
-.rl-tp-viz-z5 {{ background: var(--rl-color-near-black); color: var(--rl-color-sand); }}
-.rl-tp-viz-z6 {{ background: var(--rl-color-near-black); color: var(--rl-color-sand); }}
+.rl-tp-viz-z2 {{ background: var(--rl-color-silver); border-color: var(--rl-color-ink); color: var(--rl-color-near-black); }}
+.rl-tp-viz-z3 {{ background: var(--rl-color-light-steel); color: var(--rl-color-near-black); }}
+.rl-tp-viz-z4 {{ background: var(--rl-color-graphite); color: var(--rl-color-paper); }}
+.rl-tp-viz-z5 {{ background: var(--rl-color-near-black); color: var(--rl-color-paper); }}
+.rl-tp-viz-z6 {{ background: var(--rl-color-near-black); color: var(--rl-color-paper); }}
 .rl-tp-viz-label {{
   padding: 2px;
   text-align: center;
@@ -775,7 +775,7 @@ def build_training_css() -> str:
   gap: var(--rl-spacing-md);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wide);
   margin-top: var(--rl-spacing-xs);
@@ -796,20 +796,20 @@ def build_training_css() -> str:
   transition: border-color var(--rl-transition-hover);
 }}
 .rl-tp-process-step:hover {{
-  border-color: var(--rl-color-gold);
+  border-color: var(--rl-color-graphite);
 }}
 .rl-tp-process-step:nth-child(even) {{
   background: var(--rl-color-near-black);
-  color: var(--rl-color-sand);
+  color: var(--rl-color-paper);
 }}
-.rl-tp-process-step:nth-child(even) h4 {{ color: var(--rl-color-sand); }}
-.rl-tp-process-step:nth-child(even) p {{ color: var(--rl-color-warm-brown); }}
-.rl-tp-process-step:nth-child(even) .rl-tp-process-num {{ color: var(--rl-color-sand); }}
+.rl-tp-process-step:nth-child(even) h4 {{ color: var(--rl-color-paper); }}
+.rl-tp-process-step:nth-child(even) p {{ color: var(--rl-color-light-steel); }}
+.rl-tp-process-step:nth-child(even) .rl-tp-process-num {{ color: var(--rl-color-paper); }}
 .rl-tp-process-num {{
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-xl);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   margin-bottom: var(--rl-spacing-xs);
 }}
 .rl-tp-process-step h4 {{
@@ -824,7 +824,7 @@ def build_training_css() -> str:
 .rl-tp-process-step p {{
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   line-height: 1.4;
   margin: 0;
 }}
@@ -838,7 +838,7 @@ def build_training_css() -> str:
   grid-template-columns: 40px 1fr;
   gap: var(--rl-spacing-md);
   padding: var(--rl-spacing-md) 0;
-  border-bottom: 1px solid var(--rl-color-tan);
+  border-bottom: 1px solid var(--rl-color-silver);
   align-items: start;
 }}
 .rl-tp-step:last-child {{ border-bottom: none; }}
@@ -846,7 +846,7 @@ def build_training_css() -> str:
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-xl);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   text-align: right;
   padding-top: 2px;
 }}
@@ -862,7 +862,7 @@ def build_training_css() -> str:
 .rl-tp-step p {{
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   margin: 0;
   line-height: var(--rl-line-height-prose);
   max-width: 68ch;
@@ -874,15 +874,15 @@ def build_training_css() -> str:
   background: var(--rl-color-near-black);
   min-height: 5rem;
   border-top: var(--rl-border-standard);
-  border-top-color: var(--rl-color-primary-brown);
+  border-top-color: var(--rl-color-graphite);
   border-bottom: var(--rl-border-standard);
-  border-bottom-color: var(--rl-color-primary-brown);
+  border-bottom-color: var(--rl-color-graphite);
 }}
 .rl-tp-pullquote p {{
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-md);
   font-weight: var(--rl-font-weight-semibold);
-  color: var(--rl-color-sand);
+  color: var(--rl-color-paper);
   margin: 0;
   line-height: var(--rl-line-height-prose);
   max-width: 750px;
@@ -893,7 +893,7 @@ def build_training_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-ultra-wide);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-light-steel);
   margin-bottom: var(--rl-spacing-sm);
   display: block;
 }}
@@ -912,9 +912,9 @@ def build_training_css() -> str:
   text-transform: uppercase;
   letter-spacing: var(--rl-letter-spacing-wide);
   margin-bottom: var(--rl-spacing-sm);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
 }}
-.rl-tp-not-for h3 {{ color: var(--rl-color-secondary-brown); }}
+.rl-tp-not-for h3 {{ color: var(--rl-color-graphite); }}
 .rl-tp-audience-list {{
   list-style: none;
   padding: 0;
@@ -927,7 +927,7 @@ def build_training_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   color: var(--rl-color-near-black);
-  border-bottom: 1px solid var(--rl-color-tan);
+  border-bottom: 1px solid var(--rl-color-silver);
   line-height: var(--rl-line-height-normal);
 }}
 .rl-tp-audience-list li:last-child {{ border-bottom: none; }}
@@ -937,8 +937,8 @@ def build_training_css() -> str:
   font-family: var(--rl-font-data);
   font-weight: var(--rl-font-weight-bold);
 }}
-.rl-tp-for-list li::before {{ content: ">"; color: var(--rl-color-primary-brown); }}
-.rl-tp-not-list li::before {{ content: "x"; color: var(--rl-color-secondary-brown); }}
+.rl-tp-for-list li::before {{ content: ">"; color: var(--rl-color-graphite); }}
+.rl-tp-not-list li::before {{ content: "x"; color: var(--rl-color-graphite); }}
 
 
 /* ── Pricing ── */
@@ -952,7 +952,7 @@ def build_training_css() -> str:
 }}
 .rl-tp-pricing-header {{
   background: var(--rl-color-near-black);
-  color: var(--rl-color-sand);
+  color: var(--rl-color-paper);
   padding: var(--rl-spacing-md) var(--rl-spacing-lg);
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-sm);
@@ -970,7 +970,7 @@ def build_training_css() -> str:
 .rl-tp-price span {{
   font-size: var(--rl-font-size-sm);
   font-weight: var(--rl-font-weight-regular);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-tp-pricing-list {{
   list-style: none;
@@ -984,7 +984,7 @@ def build_training_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   color: var(--rl-color-near-black);
-  border-top: 1px solid var(--rl-color-tan);
+  border-top: 1px solid var(--rl-color-silver);
   line-height: var(--rl-line-height-normal);
 }}
 .rl-tp-pricing-list li::before {{
@@ -993,7 +993,7 @@ def build_training_css() -> str:
   left: var(--rl-spacing-lg);
   font-family: var(--rl-font-data);
   font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-tp-pricing-cta {{
   padding: var(--rl-spacing-md) var(--rl-spacing-lg);
@@ -1005,7 +1005,7 @@ def build_training_css() -> str:
 .rl-tp-pricing-note {{
   font-family: var(--rl-font-data);
   font-size: var(--rl-font-size-2xs);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
   text-align: center;
   padding: 0 var(--rl-spacing-lg) var(--rl-spacing-md);
   text-transform: uppercase;
@@ -1018,8 +1018,8 @@ def build_training_css() -> str:
   margin-top: var(--rl-spacing-lg);
   padding: var(--rl-spacing-lg);
   border: var(--rl-border-standard);
-  border-color: var(--rl-color-primary-brown);
-  background: var(--rl-color-sand);
+  border-color: var(--rl-color-graphite);
+  background: var(--rl-color-zebra);
   text-align: center;
 }}
 .rl-tp-guarantee p {{
@@ -1040,7 +1040,7 @@ def build_training_css() -> str:
 }}
 .rl-tp-faq-item {{
   border: var(--rl-border-subtle);
-  background: var(--rl-color-warm-paper);
+  background: var(--rl-color-paper);
   margin-bottom: var(--rl-spacing-xs);
 }}
 .rl-tp-faq-q {{
@@ -1060,7 +1060,7 @@ def build_training_css() -> str:
   border: none;
   text-align: left;
 }}
-.rl-tp-faq-q:hover {{ color: var(--rl-color-primary-brown); }}
+.rl-tp-faq-q:hover {{ color: var(--rl-color-graphite); }}
 .rl-tp-faq-toggle {{
   font-size: var(--rl-font-size-md);
   font-weight: var(--rl-font-weight-bold);
@@ -1077,7 +1077,7 @@ def build_training_css() -> str:
   font-family: var(--rl-font-editorial);
   font-size: var(--rl-font-size-sm);
   line-height: var(--rl-line-height-prose);
-  color: var(--rl-color-primary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-tp-faq-item.open .rl-tp-faq-a {{
   max-height: 500px;
@@ -1102,7 +1102,7 @@ def build_training_css() -> str:
     padding: var(--rl-spacing-sm) var(--rl-spacing-md);
     text-align: center;
     border-top: var(--rl-border-standard);
-    border-top-color: var(--rl-color-primary-brown);
+    border-top-color: var(--rl-color-graphite);
     visibility: hidden;
     pointer-events: none;
   }}
@@ -1112,7 +1112,7 @@ def build_training_css() -> str:
   }}
   .rl-tp-sticky-cta a {{
     display: block;
-    color: var(--rl-color-sand);
+    color: var(--rl-color-paper);
     font-family: var(--rl-font-data);
     font-size: var(--rl-font-size-sm);
     font-weight: var(--rl-font-weight-bold);

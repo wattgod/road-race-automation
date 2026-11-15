@@ -74,7 +74,7 @@ def get_mega_footer_css() -> str:
     """Return the mega-footer CSS using var(--rl-*) design tokens."""
     return """
 /* ── Mega Footer ───────────────────────────────────────── */
-.rl-mega-footer { background: var(--rl-color-dark-navy); border-top: var(--rl-border-gold); margin-top: var(--rl-spacing-xl); }
+.rl-mega-footer { background: var(--rl-color-dark-navy); border-top: var(--rl-border-standard); margin-top: var(--rl-spacing-xl); }
 .rl-mega-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr; gap: var(--rl-spacing-lg); padding: var(--rl-spacing-2xl) var(--rl-spacing-xl); max-width: 1200px; margin: 0 auto; }
 .rl-mega-footer-brand-title { font-family: var(--rl-font-data); font-size: var(--rl-font-size-sm); font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-ultra-wide); color: var(--rl-color-white); margin: 0 0 var(--rl-spacing-sm) 0; }
 .rl-mega-footer-brand-tagline { font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-xs); line-height: var(--rl-line-height-prose); color: var(--rl-color-silver); margin: 0; }

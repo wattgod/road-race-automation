@@ -507,45 +507,45 @@ def build_json_ld(rd: dict, qa: list, canonical: str) -> str:
 def build_css() -> str:
     return '''
 .rl-tpp-page { max-width: 1120px; margin: 0 auto; padding: 0 20px 60px; font-family: var(--rl-font-editorial); color: var(--rl-color-primary-navy); }
-.rl-tpp-kicker { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--rl-color-secondary-brown); margin: 28px 0 8px; }
+.rl-tpp-kicker { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--rl-color-graphite); margin: 28px 0 8px; }
 .rl-tpp-hero h1 { font-family: var(--rl-font-data); font-size: clamp(26px, 5vw, 40px); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.15; margin: 0 0 10px; color: #000; }
-.rl-tpp-facts { font-family: var(--rl-font-data); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0 0 16px; }
+.rl-tpp-facts { font-family: var(--rl-font-data); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-graphite); margin: 0 0 16px; }
 .rl-tpp-lede { font-size: 16px; line-height: 1.65; max-width: 640px; margin: 0 0 18px; }
 .rl-tpp-hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
-.rl-tpp-countdown { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--rl-color-teal); }
-.rl-btn { display: inline-block; font-family: var(--rl-font-data); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 13px 26px; background: var(--rl-color-primary-brown); color: var(--rl-color-warm-paper); border: 3px solid #000; }
-.rl-btn:hover { background: var(--rl-color-teal); }
-.rl-btn--outline { background: transparent; color: var(--rl-color-teal); border-color: var(--rl-color-teal); }
-.rl-btn--outline:hover { background: var(--rl-color-teal); color: #fff; }
+.rl-tpp-countdown { font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--rl-color-graphite); }
+.rl-btn { display: inline-block; font-family: var(--rl-font-data); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 13px 26px; background: var(--rl-color-offer); color: var(--rl-color-white); border: 3px solid #000; }
+.rl-btn:hover { background: var(--rl-color-offer-dark); }
+.rl-btn--outline { background: transparent; color: var(--rl-color-ink); border-color: var(--rl-color-ink); }
+.rl-btn--outline:hover { background: var(--rl-color-ink); color: #fff; }
 .rl-tpp-section { margin: 44px 0; padding-top: 28px; border-top: 3px solid #000; }
 .rl-tpp-section h2 { font-family: var(--rl-font-data); font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 14px; color: #000; }
 .rl-tpp-section h3 { font-family: var(--rl-font-data); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 22px 0 10px; }
 .rl-tpp-demand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
 .rl-tpp-demand { display: flex; align-items: center; gap: 8px; }
 .rl-tpp-demand-label { font-family: var(--rl-font-data); font-size: 11px; width: 110px; min-width: 90px; text-transform: uppercase; letter-spacing: 1px; }
-.rl-tpp-demand-track { flex: 1; height: 7px; background: var(--rl-color-cream); border: 1px solid var(--rl-color-tan); }
-.rl-tpp-demand-fill { height: 100%; background: var(--rl-color-teal); }
+.rl-tpp-demand-track { flex: 1; height: 7px; background: var(--rl-color-well); border: 1px solid var(--rl-color-silver); }
+.rl-tpp-demand-fill { height: 100%; background: var(--rl-color-ink); }
 .rl-tpp-demand-score { font-family: var(--rl-font-data); font-size: 11px; width: 18px; text-align: right; }
 .rl-tpp-emphasis li { margin-bottom: 10px; line-height: 1.6; }
 .rl-tpp-workout-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-.rl-tpp-workout { border: 3px solid #000; background: var(--rl-color-warm-paper); padding: 16px; }
+.rl-tpp-workout { border: 3px solid #000; background: var(--rl-color-paper); padding: 16px; }
 .rl-tpp-workout h4 { font-family: var(--rl-font-data); font-size: 15px; margin: 0 0 4px; text-transform: uppercase; }
-.rl-tpp-workout-cat { font-family: var(--rl-font-data); font-size: 10px; letter-spacing: 2px; color: var(--rl-color-teal); margin: 0 0 10px; }
+.rl-tpp-workout-cat { font-family: var(--rl-font-data); font-size: 10px; letter-spacing: 2px; color: var(--rl-color-graphite); margin: 0 0 10px; }
 .rl-tpp-workout p { font-size: 13px; line-height: 1.55; margin: 0; }
 .rl-tpp-timeline { width: 100%; border-collapse: collapse; font-size: 14px; }
 .rl-tpp-timeline th { font-family: var(--rl-font-data); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; text-align: left; border-bottom: 3px solid #000; padding: 8px 10px 8px 0; }
-.rl-tpp-timeline td { border-bottom: 1px solid var(--rl-color-tan); padding: 12px 10px 12px 0; vertical-align: top; line-height: 1.55; }
+.rl-tpp-timeline td { border-bottom: 1px solid var(--rl-color-silver); padding: 12px 10px 12px 0; vertical-align: top; line-height: 1.55; }
 .rl-tpp-tl-when { font-family: var(--rl-font-data); font-size: 12px; white-space: nowrap; }
-.rl-tpp-tl-phase { font-family: var(--rl-font-data); font-weight: 700; text-transform: uppercase; font-size: 12px; color: var(--rl-color-teal); }
+.rl-tpp-tl-phase { font-family: var(--rl-font-data); font-weight: 700; text-transform: uppercase; font-size: 12px; color: var(--rl-color-ink); }
 .rl-tpp-fueling li { margin-bottom: 8px; line-height: 1.6; }
 .rl-tpp-faq-item { border: 2px solid #000; margin-bottom: 10px; background: #fff; }
 .rl-tpp-faq-item summary { font-family: var(--rl-font-data); font-size: 14px; font-weight: 600; padding: 14px 16px; cursor: pointer; }
 .rl-tpp-faq-item p { padding: 0 16px 14px; margin: 0; line-height: 1.6; }
-.rl-tpp-cta-section { background: var(--rl-color-warm-paper); border: 4px solid #000; padding: 28px; }
+.rl-tpp-cta-section { background: var(--rl-color-paper); border: 4px solid #000; padding: 28px; }
 .rl-tpp-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 10px; }
 .rl-tpp-plan-grid .rl-btn { flex: 1 1 220px; text-align: center; }
-.rl-tpp-guarantee { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-secondary-brown); margin: 0; }
-a { color: var(--rl-color-teal); }
+.rl-tpp-guarantee { font-family: var(--rl-font-data); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--rl-color-graphite); margin: 0; }
+a { color: var(--rl-color-ink); }
 @media (max-width: 640px) { .rl-tpp-demand-grid { grid-template-columns: 1fr; } .rl-tpp-cta-row { flex-direction: column; } .rl-tpp-cta-row .rl-btn { text-align: center; } }
 ''' + get_plan_simulator_css(
         ink="var(--rl-color-primary-navy)",

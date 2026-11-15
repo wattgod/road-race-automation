@@ -258,7 +258,7 @@ def build_page_css() -> str:
   font-weight: var(--rl-font-weight-bold);
   color: var(--rl-color-dark-navy);
   margin: var(--rl-spacing-xl) 0 var(--rl-spacing-sm) 0;
-  letter-spacing: var(--rl-letter-spacing-standard);
+  letter-spacing: var(--rl-letter-spacing-wide);
   text-transform: uppercase;
 }}
 .rl-legal-body h3 {{
@@ -295,7 +295,7 @@ def build_page_css() -> str:
   font-size: var(--rl-font-size-2xs);
   background: var(--rl-color-cool-white);
   padding: 2px 6px;
-  border: 1px solid var(--rl-color-cream);
+  border: 1px solid var(--rl-color-silver);
 }}
 .rl-legal-table {{
   width: 100%;
@@ -307,7 +307,7 @@ def build_page_css() -> str:
 .rl-legal-table th, .rl-legal-table td {{
   text-align: left;
   padding: var(--rl-spacing-xs) var(--rl-spacing-sm);
-  border-bottom: 1px solid var(--rl-color-cream);
+  border-bottom: 1px solid var(--rl-color-silver);
   color: var(--rl-color-primary-navy);
 }}
 .rl-legal-table th {{

@@ -691,7 +691,7 @@ def build_vs_page(race_a: dict, race_b: dict, full_a: dict, full_b: dict) -> str
 {tokens}
 
 /* ── VS Page Layout ── */
-body {{ margin: 0; background: var(--rl-color-warm-paper); }}
+body {{ margin: 0; background: var(--rl-color-paper); }}
 *, *::before, *::after {{ border-radius: 0 !important; box-shadow: none !important; }}
 
 .rl-vs-page {{
@@ -699,20 +699,20 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   margin: 0 auto;
   padding: 0 24px;
   font-family: var(--rl-font-data);
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 
 {get_site_header_css()}
 
 /* Breadcrumb */
-.rl-vs-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-brown); padding: 12px 0; letter-spacing: 0.5px; }}
-.rl-vs-breadcrumb a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
-.rl-vs-breadcrumb a:hover {{ color: var(--rl-color-dark-brown); }}
+.rl-vs-breadcrumb {{ font-size: 11px; color: var(--rl-color-graphite); padding: 12px 0; letter-spacing: 0.5px; }}
+.rl-vs-breadcrumb a {{ color: var(--rl-color-graphite); text-decoration: none; }}
+.rl-vs-breadcrumb a:hover {{ color: var(--rl-color-ink); }}
 
 /* Hero */
 .rl-vs-hero {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-ink);
+  color: var(--rl-color-paper);
   padding: 48px 32px;
   margin: 0 -24px;
   text-align: center;
@@ -752,12 +752,12 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 }}
 .rl-vs-hero-meta {{
   font-size: 11px;
-  color: var(--rl-color-tan);
+  color: var(--rl-color-light-steel);
   margin-top: 4px;
 }}
 .rl-vs-hero-tier {{
   display: inline-block;
-  border: 1px solid var(--rl-color-tan);
+  border: 1px solid var(--rl-color-silver);
   padding: 2px 8px;
   font-size: 10px;
   letter-spacing: 1.5px;
@@ -768,12 +768,12 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-family: var(--rl-font-editorial);
   font-size: 24px;
   font-weight: 700;
-  color: var(--rl-color-gold);
+  color: var(--rl-color-white);
 }}
 .rl-vs-hero-tagline {{
   font-family: var(--rl-font-editorial);
   font-size: 13px;
-  color: var(--rl-color-tan);
+  color: var(--rl-color-light-steel);
   line-height: 1.5;
   margin-top: 8px;
   max-width: 280px;
@@ -788,7 +788,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   margin: 40px 0 16px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
+  border-bottom: 2px solid var(--rl-color-ink);
 }}
 
 /* Radar */
@@ -804,10 +804,10 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 6px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
 }}
 .rl-vs-bar-pair {{ display: flex; gap: 12px; }}
-.rl-vs-bar-cell {{ flex: 1; position: relative; height: 28px; background: var(--rl-color-sand); }}
+.rl-vs-bar-cell {{ flex: 1; position: relative; height: 28px; background: var(--rl-color-well); }}
 .rl-vs-bar {{
   height: 100%;
   transition: width 0.8s ease;
@@ -820,7 +820,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   transform: translateY(-50%);
   font-size: 11px;
   font-weight: 700;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 
 /* Dimension table */
@@ -836,8 +836,8 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   text-transform: uppercase;
   text-align: left;
   padding: 8px 6px;
-  border-bottom: 2px solid var(--rl-color-dark-brown);
-  color: var(--rl-color-secondary-brown);
+  border-bottom: 2px solid var(--rl-color-ink);
+  color: var(--rl-color-graphite);
 }}
 .rl-vs-dim-th-a {{ color: {RACE_A_COLOR}; }}
 .rl-vs-dim-th-b {{ color: {RACE_B_COLOR}; }}
@@ -846,20 +846,20 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   letter-spacing: 2px;
   padding: 16px 6px 6px;
-  color: var(--rl-color-secondary-brown);
-  border-bottom: 1px solid var(--rl-color-tan);
+  color: var(--rl-color-graphite);
+  border-bottom: 1px solid var(--rl-color-silver);
 }}
 .rl-vs-dim-name {{
   font-size: 12px;
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   width: 120px;
 }}
 .rl-vs-dim-score {{
   padding: 8px 6px;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
 }}
-.rl-vs-dim-win {{ background: var(--rl-color-sand); }}
+.rl-vs-dim-win {{ background: var(--rl-color-zebra); }}
 .rl-vs-dots {{ width: 75px; height: 12px; display: inline-block; vertical-align: middle; }}
 
 /* Verdict */
@@ -868,13 +868,13 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-family: var(--rl-font-editorial);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
 .rl-vs-verdict-grid {{ display: flex; gap: 16px; margin-top: 16px; }}
 .rl-vs-verdict-card {{
   flex: 1;
   padding: 20px;
-  border: 2px solid var(--rl-color-dark-brown);
+  border: 2px solid var(--rl-color-ink);
 }}
 .rl-vs-verdict-a {{ border-left: 6px solid {RACE_A_COLOR}; }}
 .rl-vs-verdict-b {{ border-left: 6px solid {RACE_B_COLOR}; }}
@@ -887,7 +887,7 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-family: var(--rl-font-editorial);
   font-style: italic;
   font-size: 13px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   margin-bottom: 12px;
 }}
 .rl-vs-verdict-card ul {{
@@ -898,19 +898,19 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
 .rl-vs-verdict-card li {{
   font-size: 13px;
   padding: 4px 0;
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
 }}
 .rl-vs-verdict-card li:last-child {{ border-bottom: none; }}
 .rl-vs-verdict-card li::before {{
   content: "\\2713 ";
-  color: var(--rl-color-teal);
+  color: var(--rl-color-ink);
   font-weight: 700;
 }}
 
 /* FAQ */
 .rl-vs-faq {{ margin: 32px 0; }}
 .rl-vs-faq-item {{
-  border-bottom: 1px solid var(--rl-color-sand);
+  border-bottom: 1px solid var(--rl-color-silver);
   padding: 12px 0;
 }}
 .rl-vs-faq-item summary {{
@@ -918,27 +918,27 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  color: var(--rl-color-dark-brown);
+  color: var(--rl-color-ink);
 }}
-.rl-vs-faq-item summary:hover {{ color: var(--rl-color-teal); }}
+.rl-vs-faq-item summary:hover {{ color: var(--rl-color-ink); }}
 .rl-vs-faq-item p {{
   font-size: 14px;
   line-height: 1.7;
   margin: 8px 0 0;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
 }}
 
 /* CTA */
 .rl-vs-cta {{
-  background: var(--rl-color-dark-brown);
-  color: var(--rl-color-warm-paper);
+  background: var(--rl-color-ink);
+  color: var(--rl-color-paper);
   padding: 32px;
   margin: 32px -24px;
   text-align: center;
 }}
 .rl-vs-cta h2 {{
-  color: var(--rl-color-warm-paper);
-  border-bottom-color: var(--rl-color-gold);
+  color: var(--rl-color-paper);
+  border-bottom-color: var(--rl-color-light-steel);
   margin-top: 0;
 }}
 .rl-vs-cta p {{ font-size: 14px; line-height: 1.6; }}
@@ -951,14 +951,14 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid var(--rl-color-warm-paper);
-  color: var(--rl-color-warm-paper);
+  border: 2px solid var(--rl-color-paper);
+  color: var(--rl-color-paper);
   transition: all 0.2s;
 }}
-.rl-vs-cta-btn:hover {{ background: var(--rl-color-warm-paper); color: var(--rl-color-dark-brown); }}
+.rl-vs-cta-btn:hover {{ background: var(--rl-color-paper); color: var(--rl-color-ink); }}
 .rl-vs-cta-btn-a {{ border-color: {COLORS["steel"]}; }}
 .rl-vs-cta-btn-b {{ border-color: {RACE_B_COLOR}; }}
-.rl-vs-cta-sub {{ font-size: 11px; color: var(--rl-color-tan); margin-top: 8px; }}
+.rl-vs-cta-sub {{ font-size: 11px; color: var(--rl-color-light-steel); margin-top: 8px; }}
 
 /* Links to profiles */
 .rl-vs-profile-links {{
@@ -972,26 +972,26 @@ body {{ margin: 0; background: var(--rl-color-warm-paper); }}
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--rl-color-teal);
+  color: var(--rl-color-ink);
   text-decoration: none;
   padding: 6px 12px;
-  border: 2px solid var(--rl-color-teal);
+  border: 2px solid var(--rl-color-ink);
 }}
-.rl-vs-profile-link:hover {{ background: var(--rl-color-teal); color: var(--rl-color-warm-paper); }}
+.rl-vs-profile-link:hover {{ background: var(--rl-color-ink); color: var(--rl-color-paper); }}
 
 /* Footer */
 .rl-vs-footer {{
   padding: 24px 0;
   margin-top: 32px;
-  border-top: 4px double var(--rl-color-dark-brown);
+  border-top: 4px double var(--rl-color-ink);
   text-align: center;
   font-size: 11px;
-  color: var(--rl-color-secondary-brown);
+  color: var(--rl-color-graphite);
   letter-spacing: 1px;
   text-transform: uppercase;
 }}
-.rl-vs-footer a {{ color: var(--rl-color-secondary-brown); text-decoration: none; }}
-.rl-vs-footer a:hover {{ color: var(--rl-color-dark-brown); }}
+.rl-vs-footer a {{ color: var(--rl-color-graphite); text-decoration: none; }}
+.rl-vs-footer a:hover {{ color: var(--rl-color-ink); }}
 
 /* Mobile */
 @media (max-width: 768px) {{
