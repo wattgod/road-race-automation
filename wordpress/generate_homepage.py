@@ -50,7 +50,9 @@ RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
 GUIDE_CONTENT_PATH = Path(__file__).parent.parent / "guide" / "road-guide-content.json"
 SUBSTACK_RSS_URL = "https://gravelgodcycling.substack.com/feed"  # TODO: Roadie Labs newsletter
 
-CURRENT_YEAR = date.today().year
+from season import season_year  # noqa: E402
+# Rider-facing season (rolls over in September) — what "Rated for" means.
+SEASON_YEAR = season_year()
 
 # ── Featured race slugs (curated for homepage diversity) ─────
 
@@ -486,8 +488,8 @@ def build_hero(stats: dict, race_index: list = None) -> str:
     return f'''<section class="rl-hp-hero" id="main">
     <div class="rl-hp-hero-inner">
       <div class="rl-hp-hero-content">
-        <div class="rl-hp-announce-pill" aria-hidden="true"><span class="rl-hp-announce-dot"></span> {race_count} Races Scored for {CURRENT_YEAR}</div>
-        <p class="rl-hp-hero-kicker">THE {CURRENT_YEAR} RACE DATABASE</p>
+        <div class="rl-hp-announce-pill" aria-hidden="true"><span class="rl-hp-announce-dot"></span> {race_count} Races Scored for {SEASON_YEAR}</div>
+        <p class="rl-hp-hero-kicker">THE {SEASON_YEAR} RACE DATABASE</p>
         <h1 id="hero-title">Every road race, rated.</h1>
         <div class="rl-hp-accent-line" aria-hidden="true"></div>
         <p class="rl-hp-hero-deck">{race_count} races scored on 14 dimensions &mdash; and the training to show up ready for the one you pick.</p>
@@ -1917,7 +1919,7 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
     canonical_url = f"{SITE_BASE_URL}/"
     # Round down to nearest 50 for title stability (757 → "750+", 800 → "800+")
     stable_count = (stats['race_count'] // 50) * 50
-    title = f"{stable_count}+ Road Races Rated for {CURRENT_YEAR} | Roadie Labs"
+    title = f"{stable_count}+ Road Races Rated for {SEASON_YEAR} | Roadie Labs"
     meta_desc = f"Find your next road race. {stats['race_count']} gran fondos and sportives worldwide, scored on 14 base dimensions plus cultural impact. Training plans and race intel."
 
     one_liners = load_editorial_one_liners(race_data_dir)

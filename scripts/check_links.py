@@ -36,6 +36,7 @@ SEED_PATHS = [
     "/race/letape-du-tour/prep-kit/",
     "/race/tier-1/",
     "/race/calendar/2026/",
+    "/race/calendar/2027/",
     "/courses/",
     "/coaching/",
     "/about/",

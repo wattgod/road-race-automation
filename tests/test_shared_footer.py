@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "wordpress"))
+from season import season_year
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 
 
@@ -56,7 +57,7 @@ class TestMegaFooterHTML:
             assert dead not in self.html, f"footer links dead URL {dead}"
 
     def test_calendar_link_present(self):
-        assert "/race/calendar/2026/" in self.html
+        assert f"/race/calendar/{season_year()}/" in self.html
 
     # ── Brand ────────────────────────────────────────────────
 

@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """
-Generate a standalone race calendar page for SEO.
+Generate the season race calendar pages for SEO.
 
-Creates /race/calendar/{year}/index.html showing all races organized by month.
-Targets queries like "road race calendar 2026", "road racing schedule",
-"road events this month".
+Creates /race/calendar/{year}/index.html for every season from
+FIRST_CALENDAR_YEAR to the rider-facing season (season.season_year()).
+
+A year's page lists only races whose profile has a published date in that
+year (vitals.date_specific, read with parse_event_dates — the date the string
+leads with). Races without one are not listed for that year: no date is
+copied from another edition, shifted forward or estimated (RL-14).
 
 Features:
-  - Month-by-month sections with race cards
+  - Month-by-month sections with race cards and the edition date
   - Filter by tier and region (JavaScript client-side)
   - Monthly race count summary
-  - JSON-LD (CollectionPage + BreadcrumbList + Event schema per race)
+  - JSON-LD BreadcrumbList
   - Substack CTA for calendar updates
 
 Usage:
@@ -30,8 +34,14 @@ from brand_tokens import COLORS, get_font_face_css, get_ga4_head_snippet, get_to
 from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
+from generate_neo_brutalist import parse_event_dates  # noqa: E402
+from season import season_year  # noqa: E402
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CURRENT_YEAR = date.today().year
+RACE_DATA_DIR = PROJECT_ROOT / "race-data"
+SEASON_YEAR = season_year()  # rider-facing season; rolls over in September
+# First season with a calendar page (/race/calendar/2026/ is indexed).
+FIRST_CALENDAR_YEAR = 2026
 
 from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
 TIER_COLORS = {
@@ -53,17 +63,61 @@ def esc(text) -> str:
     return html_mod.escape(str(text)) if text else ""
 
 
-def build_calendar_page(races: list) -> str:
-    """Generate the full calendar page."""
-    # Group by month
+def load_edition_dates(race_data_dir: Path = RACE_DATA_DIR) -> dict:
+    """slug -> (start ISO, end ISO) for every profile with a parseable date.
+
+    Profiles whose date_specific has no concrete leading date (TBD, status
+    notes, cancelled) are absent from the result.
+    """
+    dates = {}
+    for f in sorted(Path(race_data_dir).glob("*.json")):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        race = data.get("race", data)
+        start, end = parse_event_dates((race.get("vitals") or {}).get("date_specific") or "")
+        if start:
+            dates[race.get("slug") or f.stem] = (start, end or start)
+    return dates
+
+
+def races_for_year(index: list, edition_dates: dict, year: int) -> list:
+    """Index entries whose published edition starts in ``year``, with its date."""
+    races = []
+    for entry in index:
+        dates = edition_dates.get(entry.get("slug"))
+        if not dates or not dates[0].startswith(f"{year}-"):
+            continue
+        race = dict(entry)
+        race["start_date"], race["end_date"] = dates
+        races.append(race)
+    return races
+
+
+def _date_label(start_iso: str, end_iso: str) -> str:
+    """"Jun 27", "Jun 27–29" or "Jun 26 – Jul 18" from ISO dates."""
+    start = date.fromisoformat(start_iso)
+    end = date.fromisoformat(end_iso or start_iso)
+    label = f"{MONTHS[start.month - 1][:3]} {start.day}"
+    if end == start:
+        return label
+    if end.month == start.month:
+        return f"{label}–{end.day}"
+    return f"{label} – {MONTHS[end.month - 1][:3]} {end.day}"
+
+
+def build_calendar_page(races: list, year: int = None) -> str:
+    """Generate one season's calendar page from races dated in that season."""
+    year = SEASON_YEAR if year is None else year
+    # Group by the month of the published edition date
     by_month = defaultdict(list)
     for r in races:
-        month = r.get("month", "TBD")
-        by_month[month].append(r)
+        by_month[MONTHS[int(r["start_date"][5:7]) - 1]].append(r)
 
-    # Sort each month's races by score
+    # Sort each month's races by date, then score
     for month in by_month:
-        by_month[month].sort(key=lambda x: -x.get("overall_score", 0))
+        by_month[month].sort(key=lambda x: (x["start_date"], -x.get("overall_score", 0)))
 
     # Extract unique regions for filter
     regions = sorted(set(r.get("region", "") for r in races if r.get("region")))
@@ -85,7 +139,7 @@ def build_calendar_page(races: list) -> str:
             month_sections.append(
                 f'<section id="month-{m.lower()}" class="rl-cal-month" data-month="{m}">'
                 f'<h2>{m} <span class="rl-cal-month-count">0 races</span></h2>'
-                f'<p class="rl-cal-empty">No races scheduled in {m}.</p></section>'
+                f'<p class="rl-cal-empty">No rated races with a published {m} {year} date.</p></section>'
             )
             continue
 
@@ -115,6 +169,8 @@ def build_calendar_page(races: list) -> str:
                 f'<div class="rl-cal-card-body">'
                 f'<div class="rl-cal-card-tier" style="border-color:{tier_color}">T{tier}</div>'
                 f'<div class="rl-cal-card-name">{esc(r["name"])}</div>'
+                f'<div class="rl-cal-card-date">'
+                f'<time datetime="{esc(r["start_date"])}">{esc(_date_label(r["start_date"], r["end_date"]))}</time></div>'
                 f'<div class="rl-cal-card-location">{esc(r.get("location",""))}</div>'
                 f'<div class="rl-cal-card-stats">{esc(stats)}</div>'
                 f'</div></a>'
@@ -130,34 +186,23 @@ def build_calendar_page(races: list) -> str:
 
     months_html = "\n\n  ".join(month_sections)
 
-    # TBD races
-    tbd_races = by_month.get("TBD", [])
-    tbd_section = ""
-    if tbd_races:
-        tbd_cards = []
-        for r in tbd_races:
-            score = r.get("overall_score", 0)
-            tier = r.get("tier", 3)
-            tier_color = TIER_COLORS.get(tier, COLORS["steel"])
-            tbd_cards.append(
-                f'<a href="/race/{esc(r["slug"])}/" class="rl-cal-card" data-tier="{tier}">'
-                f'<div class="rl-cal-card-score" style="color:{tier_color}">{score}</div>'
-                f'<div class="rl-cal-card-body">'
-                f'<div class="rl-cal-card-name">{esc(r["name"])}</div>'
-                f'<div class="rl-cal-card-location">{esc(r.get("location",""))}</div>'
-                f'</div></a>'
-            )
-        tbd_section = (
-            f'<section class="rl-cal-month"><h2>Date TBD '
-            f'<span class="rl-cal-month-count">{len(tbd_races)} races</span></h2>'
-            f'<div class="rl-cal-grid">{"".join(tbd_cards)}</div></section>'
-        )
+    # Other seasons' calendars
+    other_years = " &middot; ".join(
+        f'<a href="/race/calendar/{y}/">{y} calendar</a>'
+        for y in range(FIRST_CALENDAR_YEAR, SEASON_YEAR + 1) if y != year
+    )
+    undated_note = (
+        f'<p class="rl-cal-note">Races without a published {year} date '
+        f'aren&rsquo;t listed. <a href="/road-races/">Search every rated race</a>'
+        + (f' &middot; {other_years}' if other_years else '') + '.</p>'
+    )
 
-    canonical = f"{SITE_BASE_URL}/race/calendar/{CURRENT_YEAR}/"
-    title = f"Road Race Calendar {CURRENT_YEAR} — All {len(races)} Events | Roadie Labs"
+    canonical = f"{SITE_BASE_URL}/race/calendar/{year}/"
+    count_label = f"{len(races)} {'Event' if len(races) == 1 else 'Events'}"
+    title = f"Road Race Calendar {year} — {count_label} | Roadie Labs"
     description = (
-        f"Complete {CURRENT_YEAR} road race calendar with {len(races)} events worldwide. "
-        f"Filter by tier and region. Find your next race."
+        f"{year} road race calendar: {len(races)} rated events with a published "
+        f"{year} date. Filter by tier and region."
     )
 
     font_face = get_font_face_css()
@@ -181,7 +226,7 @@ def build_calendar_page(races: list) -> str:
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_BASE_URL}/"},
             {"@type": "ListItem", "position": 2, "name": "Road Races", "item": f"{SITE_BASE_URL}/road-races/"},
-            {"@type": "ListItem", "position": 3, "name": f"Calendar {CURRENT_YEAR}", "item": canonical},
+            {"@type": "ListItem", "position": 3, "name": f"Calendar {year}", "item": canonical},
         ],
     }, ensure_ascii=False, indent=2)
 
@@ -329,6 +374,9 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   margin-right: 6px;
 }}
 .rl-cal-card-name {{ font-family: var(--rl-font-editorial); font-size: 14px; font-weight: 700; display: inline; }}
+.rl-cal-card-date {{ font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-top: 2px; }}
+.rl-cal-note {{ font-size: 13px; color: var(--rl-color-secondary-blue); margin: 16px 0; }}
+.rl-cal-note a {{ color: inherit; }}
 .rl-cal-card-location {{ font-size: 10px; color: var(--rl-color-secondary-blue); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }}
 .rl-cal-card-stats {{ font-size: 10px; color: var(--rl-color-secondary-blue); }}
 .rl-cal-card[data-hidden="true"] {{ display: none; }}
@@ -389,12 +437,12 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   {get_site_header_html(active="races")}
 
   <div class="rl-cal-breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Calendar {CURRENT_YEAR}
+    <a href="/">Home</a> &rsaquo; <a href="/road-races/">Road Races</a> &rsaquo; Calendar {year}
   </div>
 
   <section class="rl-cal-hero">
-    <h1>{CURRENT_YEAR} Road Race Calendar</h1>
-    <div class="rl-cal-hero-sub">{len(races)} events worldwide &middot; Updated live</div>
+    <h1>{year} Road Race Calendar</h1>
+    <div class="rl-cal-hero-sub">{len(races)} rated {"event" if len(races) == 1 else "events"} with a published {year} date</div>
   </section>
 
   <div class="rl-cal-summary">
@@ -410,9 +458,9 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
     </select>
   </div>
 
-  {months_html}
+  {undated_note}
 
-  {tbd_section}
+  {months_html}
 
   <section class="rl-cal-cta">
     <h2>Get Race Reminders</h2>
@@ -474,7 +522,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate race calendar page")
+    parser = argparse.ArgumentParser(description="Generate season race calendar pages")
     parser.add_argument("--output-dir", default=None)
     args = parser.parse_args()
 
@@ -488,14 +536,15 @@ def main():
     with open(index_path, "r", encoding="utf-8") as f:
         all_races = json.load(f)
     print(f"Loaded {len(all_races)} races")
+    edition_dates = load_edition_dates()
 
-    page_dir = output_dir / "calendar" / str(CURRENT_YEAR)
-    page_dir.mkdir(parents=True, exist_ok=True)
-
-    page_html = build_calendar_page(all_races)
-    out_path = page_dir / "index.html"
-    out_path.write_text(page_html, encoding="utf-8")
-    print(f"Generated calendar/{CURRENT_YEAR}/index.html ({len(all_races)} races)")
+    for year in range(FIRST_CALENDAR_YEAR, SEASON_YEAR + 1):
+        races = races_for_year(all_races, edition_dates, year)
+        page_dir = output_dir / "calendar" / str(year)
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "index.html").write_text(build_calendar_page(races, year), encoding="utf-8")
+        print(f"Generated calendar/{year}/index.html "
+              f"({len(races)} of {len(all_races)} races have a published {year} date)")
 
 
 if __name__ == "__main__":
