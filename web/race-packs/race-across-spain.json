@@ -8,7 +8,7 @@
     "vo2_power": 4,
     "threshold": 5,
     "technical": 6,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 8,
     "race_specificity": 8
   },
@@ -24,26 +24,17 @@
       "workout_context": "621 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "Endurance",
-      "score": 76,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 621 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Road_Specific",
-      "score": 63,
+      "score": 81,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Race Across Spain's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 621 miles."
+      "workout_context": "Road-specific control matters at Race Across Spain. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 621 miles."
     },
     {
       "category": "Race_Simulation",
-      "score": 61,
+      "score": 79,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -53,36 +44,35 @@
     },
     {
       "category": "Over_Under",
-      "score": 60,
+      "score": 77,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Race Across Spain, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Race Across Spain, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "Endurance",
+      "score": 76,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 621 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "VO2max",
-      "score": 59,
+      "score": 76,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "45,932ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 57,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "621 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "45,932ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 56,
+      "score": 71,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -91,17 +81,27 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 56,
+      "score": 71,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "74ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "74ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 60,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "621 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "Blended",
-      "score": 43,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -110,7 +110,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 42,
+      "score": 54,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -120,20 +120,20 @@
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 37,
+      "score": 48,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 45,932ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 45,932ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     }
   ],
   "race_overlay": {
-    "heat": "September in \u00c1guilas to Santander, Spain can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Race Across Spain. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Ultra-distance fueling for 621 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 621 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Race Across Spain with 45,932ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%.",
-    "terrain": "Mixed terrain at Race Across Spain requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "weather": "September in \u00c1guilas to Santander, Spain \u2014 The 2026 route runs south to north: \u00c1guilas (Murcia, Mediterranean) to Santander (Cantabria, Atlantic) \u2014 the opposite direction to the 2025 route. Organizer copy describes generically mild September conditions; no route-specific temperature/precipitation breakdown has been published. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Race Across Spain. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "For a multi-day 621-mile race, no single calorie total or one-food strategy is credible. Rehearse continuous intake while riding plus substantial meals at planned stops; document carbohydrate, fluid, and sodium intake, resupply cadence, and gut response. Use checkpoints and publicly available services only as the category rules allow, carry backup calories, and complete a full night-riding systems rehearsal.",
+    "altitude": "Race Across Spain includes meaningful altitude exposure. Reduced oxygen availability can affect sustainable power, pacing, and recovery. Use a conservative upper-mountain pacing plan, test any travel or acclimatization strategy before the event, and plan layers for changing conditions. Do not begin iron or other supplements without clinician-guided testing.",
+    "terrain": "The course profile at Race Across Spain rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and Road Specific to prepare you for 621 miles of mixed terrain in \u00c1guilas to Santander, Spain.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, Road Specific, and Race Simulation to prepare you for 621 miles of mixed terrain in \u00c1guilas to Santander, Spain.",
+  "generated_at": "2026-11-15"
 }

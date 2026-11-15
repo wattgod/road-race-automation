@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 8,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 72,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +35,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 69,
+      "score": 95,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +45,7 @@
     },
     {
       "category": "VO2max",
-      "score": 64,
+      "score": 89,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -54,17 +54,8 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "Endurance",
-      "score": 62,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 109 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "G_Spot",
-      "score": 57,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -74,21 +65,48 @@
     },
     {
       "category": "Over_Under",
-      "score": 56,
+      "score": 78,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Cyclotour du L\u00e9man, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Cyclotour du L\u00e9man, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
-      "score": 55,
+      "score": 76,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Cyclotour du L\u00e9man's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 109 miles."
+      "workout_context": "Road-specific control matters at Cyclotour du L\u00e9man. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 109 miles."
+    },
+    {
+      "category": "Endurance",
+      "score": 57,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 109 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Blended",
+      "score": 57,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Cyclotour du L\u00e9man's mixed terrain actually does to you."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 51,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 109 miles, sustainable FTP gains matter more than peak power."
     },
     {
       "category": "HVLI_Extended",
@@ -101,26 +119,8 @@
       "workout_context": "109 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Blended",
-      "score": 41,
-      "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
-      ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what Cyclotour du L\u00e9man's mixed terrain actually does to you."
-    },
-    {
-      "category": "Norwegian_Double",
-      "score": 37,
-      "workouts": [
-        "Norwegian 4x8 Classic",
-        "Double Threshold"
-      ],
-      "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 109 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
       "category": "Mixed_Climbing",
-      "score": 34,
+      "score": 48,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -129,10 +129,10 @@
     }
   ],
   "race_overlay": {
-    "heat": "October in Lausanne, Switzerland can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Cyclotour du L\u00e9man. Increase sodium intake 48 hours before race day.",
+    "weather": "October in Lausanne, Switzerland. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Cyclotour du L\u00e9man. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Cyclotour du L\u00e9man\u2019s 109 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Cyclotour du L\u00e9man. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Altitude may change sustainable power and recovery at Cyclotour du L\u00e9man. Use conservative pacing and test any travel strategy before the event."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 109 miles of mixed terrain in Lausanne, Switzerland.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

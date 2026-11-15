@@ -8,21 +8,11 @@
     "vo2_power": 7,
     "threshold": 6,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 10
   },
   "top_categories": [
-    {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "60 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
-    },
     {
       "category": "Race_Simulation",
       "score": 100,
@@ -51,7 +41,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "82ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "82ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
@@ -60,7 +50,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At ADAC Velotour (Eschborn-Frankfurt), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At ADAC Velotour (Eschborn-Frankfurt), changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
@@ -69,7 +59,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "ADAC Velotour (Eschborn-Frankfurt)'s mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 60 miles."
+      "workout_context": "Road-specific control matters at ADAC Velotour (Eschborn-Frankfurt). Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 60 miles."
     },
     {
       "category": "G_Spot",
@@ -82,6 +72,16 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of ADAC Velotour (Eschborn-Frankfurt). Train it until it feels boring."
     },
     {
+      "category": "Durability",
+      "score": 64,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "60 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
       "category": "Mixed_Climbing",
       "score": 64,
       "workouts": [
@@ -91,22 +91,13 @@
       "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
-      "category": "Endurance",
-      "score": 58,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for ADAC Velotour (Eschborn-Frankfurt). Without this, the hard workouts break you down instead of building you up."
-    },
-    {
       "category": "Anaerobic_Capacity",
       "score": 48,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Critical_Power",
@@ -115,7 +106,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At ADAC Velotour (Eschborn-Frankfurt), that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at ADAC Velotour (Eschborn-Frankfurt). Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -124,14 +115,23 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 4,921ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 4,921ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
+    },
+    {
+      "category": "Blended",
+      "score": 39,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,921ft of climbing on mixed terrain does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "heat": "May in Eschborn/Frankfurt, Germany can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before ADAC Velotour (Eschborn-Frankfurt). Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for ADAC Velotour (Eschborn-Frankfurt)\u2019s 60 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at ADAC Velotour (Eschborn-Frankfurt). Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "weather": "May in Eschborn/Frankfurt, Germany. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before ADAC Velotour (Eschborn-Frankfurt). Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan for ADAC Velotour (Eschborn-Frankfurt)'s 60 miles. Start early and use products you tolerate. Use the organizer's current resupply plan for final carry decisions.",
+    "altitude": "Altitude may change sustainable power and recovery at ADAC Velotour (Eschborn-Frankfurt). Use conservative pacing and test any travel strategy before the event."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 60 miles of mixed terrain in Eschborn/Frankfurt, Germany.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and TT Threshold to prepare you for 60 miles of mixed terrain in Eschborn/Frankfurt, Germany.",
+  "generated_at": "2026-11-15"
 }

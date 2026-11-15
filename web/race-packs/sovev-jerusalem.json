@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 4,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
@@ -22,16 +22,6 @@
         "Sector Simulation"
       ],
       "workout_context": "Race-pace efforts that mimic Sovev Jerusalem's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
-    },
-    {
-      "category": "Durability",
-      "score": 95,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "31 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "VO2max",
@@ -50,7 +40,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Sovev Jerusalem's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 31 miles."
+      "workout_context": "Road-specific control matters at Sovev Jerusalem. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 31 miles."
     },
     {
       "category": "Over_Under",
@@ -59,7 +49,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Sovev Jerusalem, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Sovev Jerusalem, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "TT_Threshold",
@@ -81,13 +71,14 @@
       "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
-      "category": "Endurance",
-      "score": 57,
+      "category": "Durability",
+      "score": 55,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Base fitness for Sovev Jerusalem. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "31 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "G_Spot",
@@ -115,7 +106,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Sovev Jerusalem, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Sovev Jerusalem. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -125,13 +116,22 @@
         "Force Repeats"
       ],
       "workout_context": "Torque for headwinds and mixed terrain. When cadence drops below 70rpm, muscular strength keeps the watts up."
+    },
+    {
+      "category": "Blended",
+      "score": 35,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Long rides with hard efforts mixed in. Simulates what Sovev Jerusalem's mixed terrain actually does to you."
     }
   ],
   "race_overlay": {
-    "heat": "May in Jerusalem, Israel can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Sovev Jerusalem. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
-    "altitude": "Moderate altitude at Sovev Jerusalem. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "weather": "May in Jerusalem, Israel. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Sovev Jerusalem. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan that matches the ride duration, intensity, and weather. The organizer has not published a reliable resupply plan, so rehearse a self-sufficient carry and revise it when the rider document is released.",
+    "altitude": "Altitude may change sustainable power and recovery at Sovev Jerusalem. Use conservative pacing and test any travel strategy before the event."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and VO2max to prepare you for 31 miles of mixed terrain in Jerusalem, Israel.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Road Specific to prepare you for 31 miles of mixed terrain in Jerusalem, Israel.",
+  "generated_at": "2026-11-15"
 }

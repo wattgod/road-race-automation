@@ -8,24 +8,14 @@
     "vo2_power": 5,
     "threshold": 7,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 7
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 80, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 78,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 70,
+      "score": 89,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -44,8 +34,18 @@
       "workout_context": "Race-pace efforts that mimic GranFondo Riviera Nayarit's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before April."
     },
     {
+      "category": "Durability",
+      "score": 83,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 80, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "G_Spot",
-      "score": 62,
+      "score": 80,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -55,25 +55,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 59,
+      "score": 76,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At GranFondo Riviera Nayarit, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 58,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 80 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At GranFondo Riviera Nayarit, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "VO2max",
-      "score": 58,
+      "score": 74,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -83,26 +74,16 @@
     },
     {
       "category": "Road_Specific",
-      "score": 58,
+      "score": 74,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GranFondo Riviera Nayarit's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 80 miles."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 46,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 80 miles without cracking. No shortcuts."
+      "workout_context": "Road-specific control matters at GranFondo Riviera Nayarit. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 80 miles."
     },
     {
       "category": "Norwegian_Double",
-      "score": 41,
+      "score": 52,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -111,7 +92,7 @@
     },
     {
       "category": "Blended",
-      "score": 38,
+      "score": 48,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -120,18 +101,36 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 35,
+      "score": 44,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
       ],
       "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 44,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 43,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GranFondo Riviera Nayarit. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
-    "heat": "April in Nuevo Vallarta, Riviera Nayarit, Mexico can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GranFondo Riviera Nayarit. Increase sodium intake 48 hours before race day.",
+    "weather": "April in Nuevo Vallarta, Riviera Nayarit, Mexico. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before GranFondo Riviera Nayarit. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for GranFondo Riviera Nayarit\u2019s 80 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 80 miles of mixed terrain in Nuevo Vallarta, Riviera Nayarit, Mexico.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Durability to prepare you for 80 miles of mixed terrain in Nuevo Vallarta, Riviera Nayarit, Mexico.",
+  "generated_at": "2026-11-15"
 }

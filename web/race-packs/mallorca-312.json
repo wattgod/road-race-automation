@@ -31,7 +31,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "16,568ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "16,568ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
@@ -50,7 +50,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Mallorca 312 OK Mobility's paved mountain and coastal roads forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 194 miles."
+      "workout_context": "Road-specific control matters at Mallorca 312 OK Mobility. Practice on paved mountain and coastal roads: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 194 miles."
     },
     {
       "category": "Over_Under",
@@ -59,7 +59,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Mallorca 312 OK Mobility, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Mallorca 312 OK Mobility, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "TT_Threshold",
@@ -69,7 +69,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "85ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "85ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Mixed_Climbing",
@@ -105,7 +105,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved mountain and coastal roads. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved mountain and coastal roads can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "G_Spot",
@@ -124,14 +124,14 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Mallorca 312 OK Mobility, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Mallorca 312 OK Mobility. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
     "nutrition": "Ultra-distance fueling for 194 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 194 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Moderate altitude at Mallorca 312 OK Mobility. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Mallorca 312 OK Mobility requires surface adaptability. Include weekly rides on paved mountain and coastal roads to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Mallorca 312 OK Mobility. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Mallorca 312 OK Mobility rewards specific practice. Include regular rides on paved mountain and coastal roads to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 194 miles of paved mountain and coastal roads in Playa de Muro, Mallorca, Spain.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

@@ -8,24 +8,14 @@
     "vo2_power": 6,
     "threshold": 8,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 88,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 80,
+      "score": 91,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,7 +35,7 @@
     },
     {
       "category": "VO2max",
-      "score": 75,
+      "score": 85,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -55,16 +45,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 72,
+      "score": 82,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Love Tiles Douro Granfondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Love Tiles Douro Granfondo, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 69,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,26 +63,27 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Love Tiles Douro Granfondo. Train it until it feels boring."
     },
     {
+      "category": "Durability",
+      "score": 77,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 87, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "Road_Specific",
-      "score": 64,
+      "score": 73,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Love Tiles Douro Granfondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 87 miles."
-    },
-    {
-      "category": "Endurance",
-      "score": 61,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Road-specific control matters at Love Tiles Douro Granfondo. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 87 miles."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 48,
+      "score": 55,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -100,18 +91,8 @@
       "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 43,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 87 miles without cracking. No shortcuts."
-    },
-    {
       "category": "Norwegian_Double",
-      "score": 43,
+      "score": 48,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -120,19 +101,37 @@
     },
     {
       "category": "Blended",
-      "score": 40,
+      "score": 45,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
       "workout_context": "Long rides with hard efforts mixed in. Simulates what Love Tiles Douro Granfondo's mixed terrain actually does to you."
+    },
+    {
+      "category": "Endurance",
+      "score": 42,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 87 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 42,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mixed terrain. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     }
   ],
   "race_overlay": {
-    "heat": "April in Peso da R\u00e9gua, Douro Valley, Portugal can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Love Tiles Douro Granfondo. Increase sodium intake 48 hours before race day.",
+    "weather": "April in Peso da R\u00e9gua, Douro Valley, Portugal. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Love Tiles Douro Granfondo. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Love Tiles Douro Granfondo\u2019s 87 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Love Tiles Douro Granfondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Altitude may change sustainable power and recovery at Love Tiles Douro Granfondo. Use conservative pacing and test any travel strategy before the event."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 87 miles of mixed terrain in Peso da R\u00e9gua, Douro Valley, Portugal.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and VO2max to prepare you for 87 miles of mixed terrain in Peso da R\u00e9gua, Douro Valley, Portugal.",
+  "generated_at": "2026-11-15"
 }

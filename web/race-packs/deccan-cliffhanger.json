@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 9
   },
@@ -25,35 +25,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 59,
+      "score": 75,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Deccan Cliffhanger, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 58,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 399 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 56,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "399 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "At Deccan Cliffhanger, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 54,
+      "score": 69,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -62,7 +43,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 54,
+      "score": 69,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -72,7 +53,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 54,
+      "score": 69,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -81,8 +62,18 @@
       "workout_context": "Race-pace efforts that mimic Deccan Cliffhanger's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before November."
     },
     {
+      "category": "HVLI_Extended",
+      "score": 57,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "399 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
       "category": "Blended",
-      "score": 43,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -91,16 +82,35 @@
     },
     {
       "category": "Road_Specific",
-      "score": 43,
+      "score": 55,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Deccan Cliffhanger's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 399 miles."
+      "workout_context": "Road-specific control matters at Deccan Cliffhanger. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 399 miles."
+    },
+    {
+      "category": "Endurance",
+      "score": 53,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 399 miles, base fitness is the difference between racing and surviving."
+    },
+    {
+      "category": "VO2max",
+      "score": 53,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "19,381ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "G_Spot",
-      "score": 41,
+      "score": 52,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -109,29 +119,19 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Deccan Cliffhanger. Train it until it feels boring."
     },
     {
-      "category": "VO2max",
-      "score": 41,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "19,381ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
       "category": "SFR_Muscle_Force",
-      "score": 36,
+      "score": 46,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 19,381ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 19,381ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     }
   ],
   "race_overlay": {
-    "heat": "November in Pune to Bogmallo Beach, Goa, India can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Deccan Cliffhanger. Increase sodium intake 48 hours before race day.",
+    "weather": "November in Pune to Bogmallo Beach, Goa, India. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Deccan Cliffhanger. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Ultra-distance fueling for 399 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 399 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Over Under, and Endurance to prepare you for 399 miles of mixed terrain in Pune to Bogmallo Beach, Goa, India.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, Over Under, and Mixed Climbing to prepare you for 399 miles of mixed terrain in Pune to Bogmallo Beach, Goa, India.",
+  "generated_at": "2026-11-15"
 }

@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "170ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "170ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
@@ -30,7 +30,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Les Cingl\u00e9s du Mont Ventoux, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Les Cingl\u00e9s du Mont Ventoux, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Race_Simulation",
@@ -69,7 +69,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "14,436ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "14,436ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Durability",
@@ -88,7 +88,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Les Cingl\u00e9s du Mont Ventoux's paved \u2014 three distinct ascents of Mont Ventoux forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 85 miles."
+      "workout_context": "Road-specific control matters at Les Cingl\u00e9s du Mont Ventoux. Practice on paved \u2014 three distinct ascents of Mont Ventoux: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 85 miles."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -97,7 +97,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 14,436ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 14,436ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Endurance",
@@ -129,8 +129,8 @@
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Les Cingl\u00e9s du Mont Ventoux\u2019s 85 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Les Cingl\u00e9s du Mont Ventoux. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "altitude": "Altitude may change sustainable power and recovery at Les Cingl\u00e9s du Mont Ventoux. Use conservative pacing and test any travel strategy before the event."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and Race Simulation to prepare you for 85 miles of paved \u2014 three distinct ascents of mont ventoux in B\u00e9doin, Vaucluse, Provence, France.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

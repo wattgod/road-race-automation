@@ -8,24 +8,14 @@
     "vo2_power": 5,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 7
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "71 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 84,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -35,7 +25,7 @@
     },
     {
       "category": "VO2max",
-      "score": 70,
+      "score": 83,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -45,16 +35,16 @@
     },
     {
       "category": "Road_Specific",
-      "score": 70,
+      "score": 83,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Eroica Cuba's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 71 miles."
+      "workout_context": "Road-specific control matters at Eroica Cuba. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 71 miles."
     },
     {
       "category": "TT_Threshold",
-      "score": 68,
+      "score": 81,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -63,17 +53,18 @@
       "workout_context": "Eroica Cuba's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Endurance",
-      "score": 56,
+      "category": "Durability",
+      "score": 69,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Base fitness for Eroica Cuba. Without this, the hard workouts break you down instead of building you up."
+      "workout_context": "71 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "G_Spot",
-      "score": 54,
+      "score": 65,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -83,16 +74,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 53,
+      "score": 62,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Eroica Cuba, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Eroica Cuba, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 42,
+      "score": 50,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -101,37 +92,45 @@
     },
     {
       "category": "Critical_Power",
-      "score": 40,
+      "score": 48,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Eroica Cuba, that number decides whether you bridge or get dropped."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 39,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 71 miles without cracking. No shortcuts."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Eroica Cuba. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Blended",
-      "score": 35,
+      "score": 42,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
       "workout_context": "Long rides with hard efforts mixed in. Simulates what Eroica Cuba's mixed terrain actually does to you."
+    },
+    {
+      "category": "Norwegian_Double",
+      "score": 42,
+      "workouts": [
+        "Norwegian 4x8 Classic",
+        "Double Threshold"
+      ],
+      "workout_context": "Double-threshold training builds sustained power with less fatigue. More FTP per hour of training."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 38,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
     }
   ],
   "race_overlay": {
-    "heat": "November in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Eroica Cuba. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for Eroica Cuba\u2019s 71 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "weather": "November in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Eroica Cuba. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan for Eroica Cuba's 71 miles. Start early and use products you tolerate. Use the organizer's current resupply plan for final carry decisions."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and VO2max to prepare you for 71 miles of mixed terrain in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, VO2max, and Road Specific to prepare you for 71 miles of mixed terrain in Vi\u00f1ales, Pinar del R\u00edo Province, Cuba.",
+  "generated_at": "2026-11-15"
 }

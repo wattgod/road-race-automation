@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,500ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,500ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "82ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "82ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Race_Simulation",
@@ -60,7 +60,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -88,7 +88,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop's paved mountain highways and dedicated bike paths forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 79 miles."
+      "workout_context": "Road-specific control matters at Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop. Practice on paved mountain highways and dedicated bike paths: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 79 miles."
     },
     {
       "category": "Mixed_Climbing",
@@ -128,9 +128,9 @@
     }
   ],
   "race_overlay": {
-    "nutrition": "Target 40\u201360g carbs/hour for Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop\u2019s 79 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop with 6,500ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Entire route above 9,000 ft \u2014 relentless altitude with no low-elevation recovery; Temperature swings from cool dawn to warm valleys to cold pass summits."
+    "nutrition": "Use training to rehearse an eating and drinking plan for Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop's 79 miles. Start early and use products you tolerate. Use the organizer's current resupply plan for final carry decisions.",
+    "altitude": "Copper Triangle \u2014 Colorado's Three-Pass Alpine Loop includes meaningful altitude exposure. Reduced oxygen availability can affect sustainable power, pacing, and recovery. Use a conservative upper-mountain pacing plan, test any travel or acclimatization strategy before the event, and plan layers for changing conditions. Do not begin iron or other supplements without clinician-guided testing. Entire route above 9,000 ft \u2014 relentless altitude with no low-elevation recovery; Temperature swings from cool dawn to warm valleys to cold pass summits."
   },
   "pack_summary": "This 10-workout pack focuses on VO2max, TT Threshold, and Race Simulation to prepare you for 79 miles of paved mountain highways and dedicated bike paths in Copper Mountain Resort, Colorado.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

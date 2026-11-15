@@ -8,7 +8,7 @@
     "vo2_power": 4,
     "threshold": 5,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 6
   },
@@ -24,17 +24,8 @@
       "workout_context": "278 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "Endurance",
-      "score": 63,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 278 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "HVLI_Extended",
-      "score": 61,
+      "score": 64,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -43,8 +34,17 @@
       "workout_context": "278 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
+      "category": "Endurance",
+      "score": 59,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 278 miles, base fitness is the difference between racing and surviving."
+    },
+    {
       "category": "Blended",
-      "score": 41,
+      "score": 54,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -53,7 +53,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 41,
+      "score": 54,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -63,7 +63,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 41,
+      "score": 54,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -73,25 +73,25 @@
     },
     {
       "category": "Road_Specific",
-      "score": 35,
+      "score": 46,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Cintur\u00f3n Ciclista a Mallorca's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 278 miles."
+      "workout_context": "Road-specific control matters at Cintur\u00f3n Ciclista a Mallorca. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 278 miles."
     },
     {
       "category": "Over_Under",
-      "score": 34,
+      "score": 45,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Cintur\u00f3n Ciclista a Mallorca, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Cintur\u00f3n Ciclista a Mallorca, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "VO2max",
-      "score": 33,
+      "score": 44,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -101,7 +101,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 32,
+      "score": 42,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -111,7 +111,7 @@
     },
     {
       "category": "Tempo",
-      "score": 29,
+      "score": 38,
       "workouts": [
         "Tempo Blocks",
         "Extended Tempo"
@@ -120,7 +120,7 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 24,
+      "score": 31,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -129,9 +129,9 @@
     }
   ],
   "race_overlay": {
-    "heat": "April in Mallorca, Spain can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Cintur\u00f3n Ciclista a Mallorca. Increase sodium intake 48 hours before race day.",
+    "weather": "April in Mallorca, Spain. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Cintur\u00f3n Ciclista a Mallorca. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Ultra-distance fueling for 278 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 278 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and HVLI Extended to prepare you for 278 miles of mixed terrain in Mallorca, Spain.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, HVLI Extended, and Endurance to prepare you for 278 miles of mixed terrain in Mallorca, Spain.",
+  "generated_at": "2026-11-15"
 }

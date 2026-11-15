@@ -8,24 +8,14 @@
     "vo2_power": 4,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 8
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 149, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 82,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -34,8 +24,18 @@
       "workout_context": "Wadi Dayqah Challenge's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
+      "category": "Durability",
+      "score": 87,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 149, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "Race_Simulation",
-      "score": 71,
+      "score": 87,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,34 +45,25 @@
     },
     {
       "category": "Over_Under",
-      "score": 70,
+      "score": 86,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Wadi Dayqah Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Wadi Dayqah Challenge, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
-      "score": 67,
+      "score": 81,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Wadi Dayqah Challenge's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 149 miles."
-    },
-    {
-      "category": "Endurance",
-      "score": 64,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 149 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Road-specific control matters at Wadi Dayqah Challenge. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 149 miles."
     },
     {
       "category": "G_Spot",
-      "score": 64,
+      "score": 78,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,27 +73,17 @@
     },
     {
       "category": "VO2max",
-      "score": 52,
+      "score": 64,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "7,014ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 50,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "149 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "7,014ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 50,
+      "score": 61,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -110,8 +91,17 @@
       "workout_context": "7,014ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
+      "category": "Endurance",
+      "score": 52,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 149 miles, base fitness is the difference between racing and surviving."
+    },
+    {
       "category": "Blended",
-      "score": 40,
+      "score": 49,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -120,20 +110,30 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 38,
+      "score": 46,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 149 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 43,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "149 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     }
   ],
   "race_overlay": {
-    "heat": "January in Qurum Park, Muscat to Wadi Dayqah Dam and back, Oman can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Wadi Dayqah Challenge. Increase sodium intake 48 hours before race day.",
+    "weather": "January in Qurum Park, Muscat to Wadi Dayqah Dam and back, Oman. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Wadi Dayqah Challenge. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Wadi Dayqah Challenge\u2019s 149 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Wadi Dayqah Challenge. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Wadi Dayqah Challenge requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Wadi Dayqah Challenge. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Wadi Dayqah Challenge rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 149 miles of mixed terrain in Qurum Park, Muscat to Wadi Dayqah Dam and back, Oman.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Durability, and Race Simulation to prepare you for 149 miles of mixed terrain in Qurum Park, Muscat to Wadi Dayqah Dam and back, Oman.",
+  "generated_at": "2026-11-15"
 }

@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "13,615ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "13,615ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "TT_Threshold",
@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "120ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "120ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
@@ -40,7 +40,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At L'Ari\u00e9geoise Cyclosportive, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At L'Ari\u00e9geoise Cyclosportive, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Durability",
@@ -97,7 +97,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Ari\u00e9geoise Cyclosportive's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 113 miles."
+      "workout_context": "Road-specific control matters at L'Ari\u00e9geoise Cyclosportive. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 113 miles."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -106,7 +106,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 13,615ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 13,615ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Blended",
@@ -124,13 +124,13 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for L'Ari\u00e9geoise Cyclosportive\u2019s 113 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "L'Ari\u00e9geoise Cyclosportive with 13,615ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%."
+    "altitude": "L'Ari\u00e9geoise Cyclosportive includes meaningful altitude exposure. Reduced oxygen availability can affect sustainable power, pacing, and recovery. Use a conservative upper-mountain pacing plan, test any travel or acclimatization strategy before the event, and plan layers for changing conditions. Do not begin iron or other supplements without clinician-guided testing."
   },
   "pack_summary": "This 10-workout pack focuses on VO2max, TT Threshold, and Over Under to prepare you for 113 miles of mixed terrain in Tarascon-sur-Ari\u00e8ge, France.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

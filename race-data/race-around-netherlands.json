@@ -14,7 +14,7 @@
       "country": "Netherlands",
       "date": "2028: May 6",
       "date_specific": "2028: May 6 (classic full-loop edition)",
-      "field_size": "50+ entrants (2026 results list well over 50; the '20-50' previously listed understated the field)",
+      "field_size": "50+ entrants (2026 results list well over 50)",
       "start_format": "Solo or teams of up to 4, fully self-supported/unsupported — no outside material assistance or drafting, though ordinary public services (shops, hotels) are permitted",
       "registration": "Registration opens August 1, 2027 and closes March 1, 2028 at https://www.adventurebikeracing.com/ratn/ (first come, first served)",
       "entry_fee": "EUR275 solo / EUR255 per team rider through December 31, 2027; EUR315 solo / EUR295 per team rider from January 1, 2028",
@@ -104,18 +104,17 @@
       "reputation": ""
     },
     "biased_opinion": {
-      "verdict": "A Self-Supported Ultra, Mislabeled as a Gran Fondo",
-      "summary": "Race Around The Netherlands is an active self-supported ultra-distance race — roughly 1,950 km and 7,000 m of climbing on a fixed anticlockwise loop from Amerongen, with results on record since at least 2018, organized by Germany-based Adventure Bike Racing. The 2026 edition ran May 2-10 as scheduled, with a first full-loop solo finisher (Tiemen Van Tuinen) recorded in provisional/unofficial results. This listing's prior data undersold and misdescribed it: no elevation figure was on file at all, the field size was capped at '20-50' when 2026 results list well over 50 entrants, and the attached video/rider-intel content was entirely unrelated to this event (Dutch national championship road-race footage, a Cape Town wind-cancellation clip, generic Dutch touring videos) — none of it describes this unsupported ultra-distance loop. The more fundamental issue is taxonomy: this is a self-supported, multi-day ultra-cycling race, not a one-day gran fondo, and doesn't fit cleanly into a database scored on single-day-fondo dimensions like field_depth or organization support.",
+      "verdict": "A Self-Supported Ultra, Not a Gran Fondo",
+      "summary": "Race Around The Netherlands is an active self-supported ultra-distance race — roughly 1,950 km and 7,000 m of climbing on a fixed anticlockwise loop from Amerongen, with results on record since at least 2018, organized by Germany-based Adventure Bike Racing. The 2026 edition ran May 2-10 as scheduled, with a first full-loop solo finisher (Tiemen Van Tuinen) recorded in provisional/unofficial results. The 2026 results list well over 50 entrants. The more fundamental issue is taxonomy: this is a self-supported, multi-day ultra-cycling race, not a one-day gran fondo, and doesn't fit cleanly into a database scored on single-day-fondo dimensions like field_depth or organization support.",
       "strengths": [
-        "A continuous, multi-year track record (results on file since at least 2018) with a completed, verifiable 2026 edition",
+        "A continuous, multi-year track record (published results since at least 2018) with a completed, verifiable 2026 edition",
         "A real distance/climbing total for a famously flat country — ~1,950 km / ~7,000 m on the full loop, plus a shorter ~1,315 km North Loop option, though the climbing-per-km is modest",
         "Clear, documented rules (self-supported, no drafting, ordinary public services permitted) rather than vague marketing language"
       ],
       "weaknesses": [
         "Self-supported ultra format is a poor fit for a database built around scored, one-day gran fondos — dimensions like field_depth, organization, and value don't map cleanly onto an unsupported multi-day race",
         "Currently on a roughly biennial cadence for the classic full loop (next in 2028) — long gaps between opportunities to enter",
-        "No outside material assistance or drafting allowed — a significant logistical step up from a supported gran fondo, requiring real self-sufficiency planning",
-        "The previous version of this profile carried mismatched video/rider-intel content from unrelated Dutch road races and an unrelated wind-cancellation clip, none of which described this event"
+        "No outside material assistance or drafting allowed — a significant logistical step up from a supported gran fondo, requiring real self-sufficiency planning"
       ],
       "bottom_line": "If you want an active self-supported ultra-distance test through the Netherlands, this is real — just understand it's an unsupported multi-day race, not a one-day fondo, and the next classic-loop edition isn't until 2028."
     },

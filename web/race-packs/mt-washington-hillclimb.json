@@ -8,24 +8,14 @@
     "vo2_power": 7,
     "threshold": 4,
     "technical": 2,
-    "heat_resilience": 10,
+    "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 10
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "7 miles on paved mountain auto road \u2014 extreme sustained burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "VO2max",
-      "score": 95,
+      "score": 100,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -35,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 87,
+      "score": 92,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -44,35 +34,26 @@
       "workout_context": "Race-pace efforts that mimic Mt. Washington Auto Road Bicycle Hillclimb (MWARBH)'s demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
     },
     {
-      "category": "Endurance",
-      "score": 68,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Without this, the hard workouts break you down instead of building you up."
-    },
-    {
       "category": "Over_Under",
-      "score": 68,
+      "score": 72,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Mt. Washington Auto Road Bicycle Hillclimb (MWARBH), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Mt. Washington Auto Road Bicycle Hillclimb (MWARBH), changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
-      "score": 68,
+      "score": 72,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Mt. Washington Auto Road Bicycle Hillclimb (MWARBH)'s paved mountain auto road \u2014 extreme sustained forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 7 miles."
+      "workout_context": "Road-specific control matters at Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Practice on paved mountain auto road \u2014 extreme sustained: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 7 miles."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 63,
+      "score": 67,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -81,17 +62,27 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 63,
+      "score": 67,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "608ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "608ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
+      "category": "Durability",
+      "score": 50,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "7 miles on paved mountain auto road \u2014 extreme sustained burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "G_Spot",
-      "score": 47,
+      "score": 50,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -101,37 +92,46 @@
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 42,
+      "score": 44,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 4,618ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 4,618ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 42,
+      "score": 44,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved mountain auto road \u2014 extreme sustained. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved mountain auto road \u2014 extreme sustained can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Critical_Power",
-      "score": 38,
+      "score": 40,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Mt. Washington Auto Road Bicycle Hillclimb (MWARBH), that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Blended",
+      "score": 32,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,618ft of climbing on paved mountain auto road \u2014 extreme sustained does to your power file on race day."
     }
   ],
   "race_overlay": {
-    "heat": "August in Gorham, New Hampshire \u2014 Mid-August at the Auto Road base starts mild (60-75F) but conditions deteriorate rapidly with altitude. Mt. Washington holds the record for the highest wind gust directly measured at the Earth's surface: 231 mph. The summit's yearly average temperature is 33.9F \u2014 no temperature above 72F has ever been recorded there. Even on a calm August race day, summit conditions can include fog, rain, high winds, and temperatures 20-30 degrees colder than the base. The weather observatory on the summit exists specifically because this mountain produces some of the most extreme weather on Earth. Begin heat acclimatization 10\u201314 days before Mt. Washington Auto Road Bicycle Hillclimb (MWARBH) \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
-    "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
-    "altitude": "Moderate altitude at Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "weather": "August in Gorham, New Hampshire \u2014 Mid-August at the Auto Road base starts mild (60-75F) but conditions deteriorate rapidly with altitude. Mt. Washington holds the record for the highest wind gust directly measured at the Earth's surface: 231 mph. The summit's yearly average temperature is 33.9F \u2014 no temperature above 72F has ever been recorded there. Even on a calm August race day, summit conditions can include fog, rain, high winds, and temperatures 20-30 degrees colder than the base. The weather observatory on the summit exists specifically because this mountain produces some of the most extreme weather on Earth. Rehearse adaptable layers and race-day kit changes in the final 2 weeks, including rain protection and wet-road braking, and practice stable positioning in crosswinds before Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan that matches the ride duration, intensity, and weather. Use the organizer's current resupply plan for final carry decisions.",
+    "altitude": "Altitude may change sustainable power and recovery at Mt. Washington Auto Road Bicycle Hillclimb (MWARBH). Use conservative pacing and test any travel strategy before the event."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 7 miles of paved mountain auto road \u2014 extreme sustained gradient in Gorham, New Hampshire.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Over Under to prepare you for 7 miles of paved mountain auto road \u2014 extreme sustained gradient in Gorham, New Hampshire.",
+  "generated_at": "2026-11-15"
 }

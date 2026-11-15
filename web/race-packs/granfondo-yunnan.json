@@ -8,7 +8,7 @@
     "vo2_power": 5,
     "threshold": 5,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 8
   },
@@ -24,27 +24,8 @@
       "workout_context": "404 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
     },
     {
-      "category": "Endurance",
-      "score": 70,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 404 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 57,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "404 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
       "category": "VO2max",
-      "score": 56,
+      "score": 71,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -54,7 +35,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 56,
+      "score": 71,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -63,17 +44,36 @@
       "workout_context": "Race-pace efforts that mimic Granfondo Yunnan's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before November."
     },
     {
+      "category": "Endurance",
+      "score": 69,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 404 miles, base fitness is the difference between racing and surviving."
+    },
+    {
       "category": "Road_Specific",
-      "score": 52,
+      "score": 67,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Granfondo Yunnan's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 404 miles."
+      "workout_context": "Road-specific control matters at Granfondo Yunnan. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 404 miles."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 60,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "404 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
       "category": "TT_Threshold",
-      "score": 44,
+      "score": 57,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -83,7 +83,7 @@
     },
     {
       "category": "Blended",
-      "score": 43,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -92,16 +92,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 42,
+      "score": 54,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Granfondo Yunnan, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Granfondo Yunnan, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 34,
+      "score": 44,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -111,7 +111,7 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 33,
+      "score": 43,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -120,20 +120,20 @@
     },
     {
       "category": "Critical_Power",
-      "score": 29,
+      "score": 37,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Granfondo Yunnan, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Granfondo Yunnan. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
-    "heat": "November in Mangshi to Jinghong, Yunnan, China (multi-city stage race) can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Granfondo Yunnan. Increase sodium intake 48 hours before race day.",
+    "weather": "November in Mangshi to Jinghong, Yunnan, China (multi-city stage race). Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Granfondo Yunnan. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Ultra-distance fueling for 404 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 404 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Moderate altitude at Granfondo Yunnan. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Granfondo Yunnan requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Granfondo Yunnan. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Granfondo Yunnan rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and HVLI Extended to prepare you for 404 miles of mixed terrain in Mangshi to Jinghong, Yunnan, China (multi-city stage race).",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, VO2max, and Race Simulation to prepare you for 404 miles of mixed terrain in Mangshi to Jinghong, Yunnan, China (multi-city stage race).",
+  "generated_at": "2026-11-15"
 }

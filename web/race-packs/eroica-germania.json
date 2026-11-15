@@ -8,34 +8,24 @@
     "vo2_power": 5,
     "threshold": 8,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "75 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 92,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "93ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "93ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Race_Simulation",
-      "score": 80,
+      "score": 87,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -45,16 +35,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 79,
+      "score": 86,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Eroica Germania, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Eroica Germania, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 72,
+      "score": 78,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -63,17 +53,27 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Eroica Germania. Train it until it feels boring."
     },
     {
+      "category": "Durability",
+      "score": 74,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "75 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
+    },
+    {
       "category": "Road_Specific",
-      "score": 64,
+      "score": 70,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Eroica Germania's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 75 miles."
+      "workout_context": "Road-specific control matters at Eroica Germania. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 75 miles."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 56,
+      "score": 61,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -81,37 +81,18 @@
       "workout_context": "7,053ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
-      "category": "Endurance",
-      "score": 53,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Eroica Germania. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
       "category": "VO2max",
-      "score": 53,
+      "score": 58,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "7,053ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 43,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 75 miles without cracking. No shortcuts."
+      "workout_context": "7,053ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Norwegian_Double",
-      "score": 43,
+      "score": 46,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -120,18 +101,36 @@
     },
     {
       "category": "Blended",
-      "score": 40,
+      "score": 43,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 7,053ft of climbing on mixed terrain does to your power file on race day."
+    },
+    {
+      "category": "SFR_Muscle_Force",
+      "score": 41,
+      "workouts": [
+        "SFR Low Cadence",
+        "Force Repeats"
+      ],
+      "workout_context": "Low-cadence force work supports 7,053ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
+    },
+    {
+      "category": "Tempo",
+      "score": 35,
+      "workouts": [
+        "Tempo Blocks",
+        "Extended Tempo"
+      ],
+      "workout_context": "76\u201385% FTP for extended efforts. At Eroica Germania, tempo is the floor you'll live on. Make it feel easy."
     }
   ],
   "race_overlay": {
-    "heat": "August in Eltville-Erbach, Rheingau, Hesse, Germany can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Eroica Germania. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for Eroica Germania\u2019s 75 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat."
+    "weather": "August in Eltville-Erbach, Rheingau, Hesse, Germany. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Eroica Germania. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan for Eroica Germania's 75 miles. Start early and use products you tolerate. Use the organizer's current resupply plan for final carry decisions."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 75 miles of mixed terrain in Eltville-Erbach, Rheingau, Hesse, Germany.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Over Under to prepare you for 75 miles of mixed terrain in Eltville-Erbach, Rheingau, Hesse, Germany.",
+  "generated_at": "2026-11-15"
 }
