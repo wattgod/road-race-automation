@@ -8,7 +8,7 @@
     "vo2_power": 7,
     "threshold": 7,
     "technical": 2,
-    "heat_resilience": 2,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 10
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 89,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -35,7 +35,7 @@
     },
     {
       "category": "VO2max",
-      "score": 70,
+      "score": 79,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -45,16 +45,16 @@
     },
     {
       "category": "Road_Specific",
-      "score": 70,
+      "score": 79,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Ford RideLondon's flat to gently rolling closed paved roads forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 100 miles."
+      "workout_context": "Road-specific control matters at Ford RideLondon. Practice on flat to gently rolling closed paved roads: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 100 miles."
     },
     {
       "category": "TT_Threshold",
-      "score": 65,
+      "score": 73,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -64,7 +64,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 53,
+      "score": 59,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -74,7 +74,7 @@
     },
     {
       "category": "Blended",
-      "score": 51,
+      "score": 58,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -82,17 +82,26 @@
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 3,900ft of climbing on flat to gently rolling closed paved roads does to your power file on race day."
     },
     {
-      "category": "Endurance",
-      "score": 49,
+      "category": "Anaerobic_Capacity",
+      "score": 48,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "2min Killers",
+        "90sec Repeats"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "Steeper ramps, positioning, or pace changes on flat to gently rolling closed paved roads can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "Over_Under",
+      "score": 47,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At Ford RideLondon, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "HVLI_Extended",
-      "score": 46,
+      "score": 45,
       "workouts": [
         "HVLI Extended Z2",
         "Multi-Hour Z2",
@@ -101,31 +110,22 @@
       "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
     },
     {
-      "category": "Anaerobic_Capacity",
-      "score": 43,
+      "category": "Endurance",
+      "score": 45,
       "workouts": [
-        "2min Killers",
-        "90sec Repeats"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on flat to gently rolling closed paved roads. If you haven't trained them, you'll crack."
-    },
-    {
-      "category": "Over_Under",
-      "score": 42,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At Ford RideLondon, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Critical_Power",
-      "score": 39,
+      "score": 44,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Ford RideLondon, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Ford RideLondon. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {

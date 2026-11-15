@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 6,
     "technical": 4,
-    "heat_resilience": 1,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
@@ -62,16 +62,6 @@
       "workout_context": "At L'\u00c9tape Cunha by Tour de France, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
-      "category": "Durability",
-      "score": 65,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "69 miles on mountain road course around Cunha burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "G_Spot",
       "score": 64,
       "workouts": [
@@ -80,6 +70,16 @@
         "Criss-Cross"
       ],
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of L'\u00c9tape Cunha by Tour de France. Train it until it feels boring."
+    },
+    {
+      "category": "Durability",
+      "score": 59,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "69 miles on mountain road course around Cunha burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "Mixed_Climbing",

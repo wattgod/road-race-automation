@@ -8,7 +8,7 @@
     "vo2_power": 3,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 2,
+    "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 6
   },
@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "60ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "60ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Over_Under",
@@ -30,7 +30,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At GranFondo Banff, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At GranFondo Banff, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -43,16 +43,6 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of GranFondo Banff. Train it until it feels boring."
     },
     {
-      "category": "Durability",
-      "score": 76,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 88, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "VO2max",
       "score": 73,
       "workouts": [
@@ -60,7 +50,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "5,249ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "5,249ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Road_Specific",
@@ -69,7 +59,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GranFondo Banff's paved mountain highway through Banff National Park forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 88 miles."
+      "workout_context": "Road-specific control matters at GranFondo Banff. Practice on paved mountain highway through Banff National Park: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 88 miles."
     },
     {
       "category": "Race_Simulation",
@@ -82,13 +72,14 @@
       "workout_context": "Race-pace efforts that mimic GranFondo Banff's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before August."
     },
     {
-      "category": "Endurance",
-      "score": 61,
+      "category": "Durability",
+      "score": 64,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 88 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "At mile 60 of 88, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Mixed_Climbing",
@@ -98,6 +89,15 @@
         "Variable Grade Simulation"
       ],
       "workout_context": "5,249ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
+    },
+    {
+      "category": "Endurance",
+      "score": 52,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 88 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Norwegian_Double",
@@ -115,17 +115,16 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At GranFondo Banff, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GranFondo Banff. Train them without letting those efforts derail the longer pacing plan."
     },
     {
-      "category": "HVLI_Extended",
+      "category": "Blended",
       "score": 36,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
       ],
-      "workout_context": "The aerobic base that lets you ride paved mountain highway through Banff National Park at tempo for 88 miles without cracking. No shortcuts."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 5,249ft of climbing on paved mountain highway through Banff National Park does to your power file on race day."
     }
   ],
   "race_overlay": {

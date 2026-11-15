@@ -16,6 +16,7 @@ Dimensions:
 import argparse
 import json
 import os
+import re
 import sys
 
 DIMENSIONS = [
@@ -44,15 +45,23 @@ ROADIE_DISCIPLINE_TO_EVENT_FORMAT = {
     "time_trial": "time_trial",
 }
 
+# Whole words only: substring matching let "hot" fire inside "photo" and
+# "shot". "hydration" is gone because every long event needs fluids, so it is
+# not evidence of heat.
 HEAT_KEYWORDS = [
     "heat",
     "hot",
-    "hydration",
     "sun exposure",
     "humidity",
     "heat adaptation",
     "overheating",
 ]
+_HEAT_RE = re.compile(r"\b(?:" + "|".join(re.escape(k) for k in HEAT_KEYWORDS) + r")\b")
+
+
+def _mentions_heat(text: str) -> bool:
+    """True when ``text`` contains a heat keyword as a whole word."""
+    return bool(_HEAT_RE.search(str(text).lower()))
 
 
 def _clamp(value: int) -> int:
@@ -182,7 +191,8 @@ def _score_heat_resilience(race: dict) -> int:
     ``climate_risk`` covers every kind of severe weather, so it only provides
     a heat base when the profile also contains explicit heat evidence.
     Scan rider intel search_text for heat keywords: +2 if found (cap 10).
-    Scan the climate block for heat keywords: +1 if found (cap 10).
+    Heat anywhere in the climate block opens the heat base; heat in the
+    climate challenges adds +1 (cap 10). Keywords match whole words only.
     """
     rating = race.get("fondo_rating") or {}
     climate_score = _safe_get(rating, "climate_risk", 0)
@@ -197,8 +207,9 @@ def _score_heat_resilience(race: dict) -> int:
         str(climate_block.get("description", "")),
         " ".join(str(challenge) for challenge in challenges),
     ]).lower()
-    rider_heat = any(keyword in str(search_text).lower() for keyword in HEAT_KEYWORDS)
-    climate_heat = any(keyword in climate_text for keyword in HEAT_KEYWORDS)
+    challenges_text = " ".join(str(challenge) for challenge in challenges)
+    rider_heat = _mentions_heat(search_text)
+    climate_heat = _mentions_heat(climate_text)
 
     if not rider_heat and not climate_heat:
         return 0
@@ -212,7 +223,9 @@ def _score_heat_resilience(race: dict) -> int:
 
     if rider_heat:
         score += 2
-    if climate_heat:
+    # Same as the gravel source: the +1 needs heat in the listed challenges,
+    # not just in the climate summary.
+    if _mentions_heat(challenges_text):
         score += 1
 
     return _clamp(score)
