@@ -587,6 +587,16 @@ class TestCSS:
             f"Hardcoded hex found in new ladder CSS: {ladder_css}"
         assert "var(--rl-color-" in ladder_css
 
+    def test_homepage_css_no_hardcoded_colours(self):
+        """All homepage CSS outside the token and @font-face blocks uses
+        var(--rl-*) tokens: no literal hex and no rgb()/rgba()."""
+        from brand_tokens import get_font_face_css, get_tokens_css
+        css = build_homepage_css()
+        for generated in (get_tokens_css(), get_font_face_css()):
+            css = css.replace(generated, "")
+        hits = re.findall(r'#[0-9a-fA-F]{3,8}\b|rgba?\(', css)
+        assert hits == [], f"Hardcoded colours in homepage CSS: {sorted(set(hits))}"
+
 
 # ── JavaScript ───────────────────────────────────────────────
 
@@ -1879,7 +1889,7 @@ class TestBentoQuote:
         assert quote_rule is not None, "rl-hp-bento-quote CSS rule not found"
         rule = quote_rule.group(0)
         assert "border-left" in rule, "Quote must have left border"
-        assert "#202322" in rule, "Quote border must be ink"
+        assert "var(--rl-color-ink)" in rule, "Quote border must be ink"
 
     def test_no_bento_excerpt_html(self, race_index):
         """rl-hp-bento-excerpt must be removed from bento cards."""
@@ -1993,29 +2003,29 @@ class TestVisualDividers:
         css = build_homepage_css()
         takes_rule = re.search(r'\.rl-hp-latest-takes\s*\{[^}]+\}', css)
         assert takes_rule is not None
-        assert "border-top: 2px solid #202322" in takes_rule.group(0)
+        assert "border-top: 2px solid var(--rl-color-ink)" in takes_rule.group(0)
 
     def test_testimonials_gold_border(self):
         """Testimonials must have gold top border matching existing section border color."""
         css = build_homepage_css()
         test_rule = re.search(r'\.rl-hp-testimonials\s*\{[^}]+\}', css)
         assert test_rule is not None
-        assert "border-top: 2px solid #202322" in test_rule.group(0)
+        assert "border-top: 2px solid var(--rl-color-ink)" in test_rule.group(0)
 
     def test_divider_gold_matches_how_it_works(self):
         """All gold section dividers must use the same hex as how-it-works."""
         css = build_homepage_css()
         hiw_rule = re.search(r'\.rl-hp-how-it-works\s*\{[^}]+\}', css)
         assert hiw_rule is not None
-        hiw_gold = re.search(r'border-top:\s*2px\s+solid\s+(#[0-9a-fA-F]+)', hiw_rule.group(0))
+        hiw_gold = re.search(r'border-top:\s*2px\s+solid\s+(var\(--rl-color-[a-z-]+\)|#[0-9a-fA-F]+)', hiw_rule.group(0))
         assert hiw_gold is not None
 
         takes_rule = re.search(r'\.rl-hp-latest-takes\s*\{[^}]+\}', css)
-        takes_gold = re.search(r'border-top:\s*2px\s+solid\s+(#[0-9a-fA-F]+)', takes_rule.group(0))
+        takes_gold = re.search(r'border-top:\s*2px\s+solid\s+(var\(--rl-color-[a-z-]+\)|#[0-9a-fA-F]+)', takes_rule.group(0))
         assert takes_gold is not None
 
         test_rule = re.search(r'\.rl-hp-testimonials\s*\{[^}]+\}', css)
-        test_gold = re.search(r'border-top:\s*2px\s+solid\s+(#[0-9a-fA-F]+)', test_rule.group(0))
+        test_gold = re.search(r'border-top:\s*2px\s+solid\s+(var\(--rl-color-[a-z-]+\)|#[0-9a-fA-F]+)', test_rule.group(0))
         assert test_gold is not None
 
         assert hiw_gold.group(1).lower() == takes_gold.group(1).lower() == test_gold.group(1).lower(), \
