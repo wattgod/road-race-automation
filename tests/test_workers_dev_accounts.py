@@ -81,3 +81,30 @@ def test_every_workers_dev_url_is_on_the_gravelgodcoaching_account():
         "workers.dev URL(s) outside the gravelgodcoaching account:\n"
         + "\n".join(offenders)
     )
+
+
+def test_no_duplicate_worker_sources_in_this_repo():
+    """Shared Workers deploy only from gravel-race-automation (sweep ALL-05).
+
+    A second copy here with the same wrangler ``name`` once overwrote the live
+    review-intake Worker and refused every Gravel God review with a 403.
+    """
+    tracked = subprocess.run(
+        ["git", "ls-files", "workers"], cwd=REPO_ROOT, check=True,
+        capture_output=True, text=True, timeout=60,
+    ).stdout.split()
+    assert tracked == [], f"Worker sources belong in gravel-race-automation: {tracked}"
+
+
+def test_review_form_waits_for_the_worker_before_thanking_the_rider():
+    """Sweep ALL-03: success shows only after review-intake answers 2xx."""
+    src = (REPO_ROOT / "wordpress" / "generate_neo_brutalist.py").read_text()
+    start = src.index("review-intake.gravelgodcoaching.workers.dev")
+    block = src[start:start + 6000]
+    assert ".catch(function(){});" not in block
+    assert "if(!r.ok) throw" in block
+    fetch_at = block.index("fetch(WORKER_URL")
+    success_at = block.index("'rl-review-success').style.display='block'")
+    then_at = block.index(".then(function(r){", fetch_at)
+    assert fetch_at < then_at < success_at
+    assert 'id="rl-review-error"' in src

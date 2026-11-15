@@ -1953,13 +1953,23 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
       worst:form.worst.value,
       website:form.website.value
     };
-    fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
-    if(typeof gtag==='function') gtag('event','review_submit',{race_slug:form.race_slug.value,stars:stars});
-
-    /* Show success, clear char counts */
-    document.querySelectorAll('.rl-review-charcount').forEach(function(el){el.textContent='0/500';});
-    document.getElementById('rl-review-form-wrap').querySelector('.rl-review-form').style.display='none';
-    document.getElementById('rl-review-success').style.display='block';
+    var btn=form.querySelector('button[type="submit"]');
+    var err=document.getElementById('rl-review-error');
+    if(err){err.style.display='none';err.textContent='';}
+    if(btn){btn.disabled=true;}
+    /* Show success only after the Worker confirms the review was saved. */
+    fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:(typeof AbortSignal!=='undefined'&&AbortSignal.timeout)?AbortSignal.timeout(10000):undefined})
+      .then(function(r){
+        if(!r.ok) throw new Error('bad status');
+        if(typeof gtag==='function') gtag('event','review_submit',{race_slug:form.race_slug.value,stars:stars});
+        document.querySelectorAll('.rl-review-charcount').forEach(function(el){el.textContent='0/500';});
+        document.getElementById('rl-review-form-wrap').querySelector('.rl-review-form').style.display='none';
+        document.getElementById('rl-review-success').style.display='block';
+      })
+      .catch(function(){
+        if(btn){btn.disabled=false;}
+        if(err){err.textContent='Your review didn\'t send. Please try again in a minute.';err.style.display='block';}
+      });
   });
 })();
 
@@ -3339,6 +3349,7 @@ def _build_inline_review_form(slug: str, name: str) -> str:
           <textarea id="rl-review-worst" name="worst" maxlength="500" rows="2" class="rl-review-textarea" placeholder="What could improve?"></textarea>
           <span class="rl-review-charcount" data-for="rl-review-worst">0/500</span>
         </div>
+        <p class="rl-review-error" id="rl-review-error" role="alert" style="display:none"></p>
         <button type="submit" class="rl-btn rl-btn--rate">SUBMIT REVIEW</button>
       </form>
       <div class="rl-review-success" id="rl-review-success" style="display:none">
@@ -6574,6 +6585,7 @@ def get_page_css() -> str:
 .rl-neo-brutalist-page .rl-review-star-btn {{ background: none; border: none; font-size: 28px; color: var(--rl-color-silver); cursor: pointer; padding: 0 2px; transition: color 0.15s; }}
 .rl-neo-brutalist-page .rl-review-star-btn:hover, .rl-neo-brutalist-page .rl-review-star-btn.is-active {{ color: var(--rl-color-orange); }}
 .rl-neo-brutalist-page .rl-review-field-label {{ font-family: var(--rl-font-data); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--rl-color-dark-navy); margin-bottom: 4px; }}
+.rl-neo-brutalist-page .rl-review-error {{ font-family: var(--rl-font-data); font-size: 13px; color: var(--rl-color-signal-red); margin: 0 0 var(--rl-spacing-xs); }}
 .rl-neo-brutalist-page .rl-review-success {{ text-align: center; padding: var(--rl-spacing-lg); }}
 .rl-neo-brutalist-page .rl-review-success-icon {{ font-size: 36px; color: var(--rl-color-signal-red); margin-bottom: var(--rl-spacing-xs); }}
 .rl-neo-brutalist-page .rl-review-success-text {{ font-family: var(--rl-font-data); font-size: 13px; color: var(--rl-color-primary-navy); }}
