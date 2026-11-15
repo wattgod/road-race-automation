@@ -109,7 +109,10 @@ class TestPlace:
     def test_deploy_flag_is_wired_in_all_three_places(self):
         src = (ROOT / "scripts" / "push_wordpress.py").read_text(encoding="utf-8")
         assert '"--sync-race-debrief", action="store_true"' in src
-        assert "args.sync_race_debrief," in src
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import push_wordpress
+        args = push_wordpress.build_parser().parse_args(["--sync-race-debrief"])
+        assert push_wordpress.has_sync_action(args)
         assert "sync_race_debrief(args.race_debrief_file)" in src
         assert 'remote_base = f"{REMOTE_BASE}/race-debrief"' in src
 
