@@ -74,5 +74,5 @@ def test_sync_favicons_uploads_to_site_root(monkeypatch):
 def test_sync_favicons_flag_is_wired():
     src = (ROOT / "scripts" / "push_wordpress.py").read_text(encoding="utf-8")
     assert '"--sync-favicons", action="store_true"' in src
-    assert "args.sync_favicons," in src
+    assert "args.sync_favicons = True" in src  # --deploy-all
     assert "if args.sync_favicons:\n        sync_favicons()" in src
