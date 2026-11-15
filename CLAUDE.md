@@ -82,7 +82,7 @@ road-race-automation/
 ├── docs/                ← Scoring system docs, deploy runbook
 ├── prompts/             ← Claude prompt templates for research/scoring
 ├── seo/                 ← SEO tooling
-├── workers/             ← Cloudflare Workers (review-intake, training-plan-intake)
+├── (Workers live in gravel-race-automation/workers; they are shared across brands)
 └── reports/             ← Generated reports
 ```
 
