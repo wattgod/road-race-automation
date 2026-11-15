@@ -28,6 +28,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
+from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -203,7 +204,7 @@ def build_ctas() -> str:
       <div class="rl-about-ctas">
         <div class="rl-about-cta">
           <h3>Training Plans</h3>
-          <p data-ab="training_price">Race-specific. Built for your target event. Less than your race hotel &mdash; $2/day.</p>
+          <p>Race-specific. Built for your target event. {PLAN_PRICE_LINE}, one 4-week block at a time, until race week.</p>
           <a href="{SITE_BASE_URL}/questionnaire/" class="rl-about-cta-btn rl-about-cta-btn--gold" data-cta="training_plans" data-ab="training_cta_btn">BUILD MY PLAN</a>
         </div>
         <div class="rl-about-cta">

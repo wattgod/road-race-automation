@@ -39,6 +39,7 @@ from brand_tokens import (
     get_ga4_head_snippet,
 )
 from cookie_consent import get_consent_banner_html
+from plan_offer import PRICE_LINE as PLAN_PRICE_LINE
 from shared_footer import get_mega_footer_css, get_mega_footer_html
 from shared_header import get_site_header_css, get_site_header_html, get_site_header_js
 
@@ -1061,7 +1062,7 @@ def build_training_cta() -> str:
       <div class="rl-hp-cta-left">
         <h2>Train for the course, not just the distance</h2>
         <p>Every generic plan treats your target event like a flat century. This isn&rsquo;t that. Training plans matched to your race&rsquo;s exact terrain, elevation profile, and typical conditions. Built around your schedule, your fitness, and your goal.</p>
-        <p class="rl-hp-cta-price" data-ab="training_price">Custom-built for your target event &mdash; $15 a week.</p>
+        <p class="rl-hp-cta-price">Custom-built for your target event &mdash; {PLAN_PRICE_LINE}, one 4-week block at a time, until race week.</p>
         <a href="{esc(TRAINING_PLANS_URL)}" class="rl-hp-cta-btn" data-ga="training_plan_click" data-ab="training_cta_btn">Get Your Plan &rarr;</a>
       </div>
       <div class="rl-hp-cta-right" role="img" aria-label="Training plan preview"></div>

@@ -33,6 +33,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
+from plan_offer import PRICE_LINE, REFUND_WINDOW_DAYS
 from live_head_patches import apply_live_head_patches
 
 OUTPUT_DIR = Path(__file__).parent / "output"
@@ -126,6 +127,13 @@ def build_success_css() -> str:
   font-size: var(--rl-font-size-sm);
   color: var(--rl-color-secondary-blue);
   margin: 0;
+  line-height: 1.6;
+}
+.rl-success-terms {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-sm);
+  color: var(--rl-color-secondary-blue);
+  margin: 24px 0 0;
   line-height: 1.6;
 }
 .rl-success-crosssell {
@@ -250,39 +258,43 @@ def build_training_plan_success() -> str:
     hero = f"""
   <div class="rl-success-hero" data-product-type="training_plan">
     <div class="rl-success-check">&check;</div>
-    <h1>Your Training Plan Is on the Way</h1>
-    <p>Payment confirmed. Your custom plan is being generated and will be
-    delivered to your email shortly.</p>
+    <h1>Payment Received</h1>
+    <p>Your training plan goes onto your TrainingPeaks calendar one 4-week
+    block at a time. A confirmation email is on its way.</p>
   </div>"""
 
-    steps = """
+    steps = f"""
   <div class="rl-success-steps">
     <h2>WHAT HAPPENS NEXT</h2>
     <div class="rl-success-step">
       <div class="rl-success-step-num">1</div>
       <div class="rl-success-step-text">
         <h3>Check Your Email</h3>
-        <p>Your plan is being built right now. You'll receive an email
-        once it's ready. Check spam if you don't see it within an hour,
-        and reply to that email if you have questions.</p>
+        <p>The confirmation lists your payments and the total through race
+        week, and has the link to your plan page. Check spam if you don't
+        see it within an hour.</p>
       </div>
     </div>
     <div class="rl-success-step">
       <div class="rl-success-step-num">2</div>
       <div class="rl-success-step-text">
-        <h3>Import Your Workouts</h3>
-        <p>The package includes .zwo files for TrainingPeaks, Zwift,
-        and Wahoo. Import them into your platform of choice.</p>
+        <h3>Connect TrainingPeaks</h3>
+        <p>Use the link in that email. Block 1 goes on your calendar after
+        you connect, and I look over every block before it goes on.</p>
       </div>
     </div>
     <div class="rl-success-step">
       <div class="rl-success-step-num">3</div>
       <div class="rl-success-step-text">
-        <h3>Read the Training Guide</h3>
-        <p>Start with the phase overview. Week 1 is calibration &mdash;
-        workouts may feel easy. That's intentional.</p>
+        <h3>Read the Guides</h3>
+        <p>Block 1 comes with two guides: the training guide for the whole
+        plan and a block guide that lists every workout in those weeks.
+        Each later block brings its own block guide.</p>
       </div>
     </div>
+    <p class="rl-success-terms">{PRICE_LINE} until race week. Cancel any time
+    from your plan page; within {REFUND_WINDOW_DAYS} days of this payment,
+    cancelling there refunds it in full.</p>
   </div>"""
 
     crosssell = f"""
@@ -436,7 +448,7 @@ def build_consulting_success() -> str:
 PAGES = {
     'training-plans-success': {
         'title': 'Plan Confirmed | Roadie Labs',
-        'description': 'Your custom training plan is being generated.',
+        'description': 'Payment received for your custom training plan.',
         'canonical': '/training-plans/success/',
         'active_nav': 'products',
         'robots': 'noindex, follow',
