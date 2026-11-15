@@ -190,9 +190,13 @@ def generate_preview_html(slug):
     logistics = rd.get("logistics", {})
     non_negotiables = rd.get("non_negotiables", [])
 
-    tier = fondo_rating_data.get("tier", 4)
-    score = fondo_rating_data.get("overall_score", 0)
-    tier_name = TIER_NAMES.get(tier, f"Tier {tier}")
+    # No guessed tier or score: a preview states both as fact.
+    tier = fondo_rating_data.get("tier")
+    score = fondo_rating_data.get("overall_score")
+    if tier not in TIER_NAMES or score is None:
+        raise ValueError(f"{slug}: fondo_rating needs a tier in {sorted(TIER_NAMES)} "
+                         f"and an overall_score (got tier={tier!r}, score={score!r})")
+    tier_name = TIER_NAMES[tier]
     location = vitals.get("location", "") or vitals.get("location_badge", "")
     date_str = vitals.get("date_specific", "") or vitals.get("date", "")
     distance = vitals.get("distance_mi", "")

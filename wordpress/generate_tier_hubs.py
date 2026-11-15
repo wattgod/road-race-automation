@@ -46,7 +46,7 @@ TIER_META = {
         "name": TIER_NAMES[2],
         "slug": "tier-2",
         "title": "{count} Must-Do Road {Races} | " + TIER_NAMES[2] + " Tier | Roadie Labs",
-        "h1": "Tier 2 — The Contenders",
+        "h1": f"Tier 2 — {TIER_NAMES[2]}",
         "description": "Established road races with strong reputations and competitive fields. "
                        "The next tier of must-do events for serious road riders.",
         "intro": (
@@ -60,7 +60,7 @@ TIER_META = {
         "name": TIER_NAMES[3],
         "slug": "tier-3",
         "title": "Regional Road Favorites | " + TIER_NAMES[3] + " Tier | Roadie Labs",
-        "h1": "Tier 3 — Regional Favorites",
+        "h1": f"Tier 3 — {TIER_NAMES[3]}",
         "description": "Strong local scenes, genuine road character. Regional favorites "
                        "and emerging races worth the entry fee.",
         "intro": (
@@ -74,7 +74,7 @@ TIER_META = {
         "name": TIER_NAMES[4],
         "slug": "tier-4",
         "title": "Grassroots Road Events | " + TIER_NAMES[4] + " Tier | Roadie Labs",
-        "h1": "Tier 4 — Grassroots Road Racing",
+        "h1": f"Tier 4 — {TIER_NAMES[4]}",
         "description": "Up-and-coming races and local grinders. Small fields, raw vibes, "
                        "and the future of the sport.",
         "intro": (

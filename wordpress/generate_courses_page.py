@@ -42,6 +42,8 @@ HYDRATION_PRICE = 19
 # course.json (price_usd 49; 7 modules, 21 lessons incl. 4 Stack Check quizzes).
 DIRT_CRAFT_PRICE = 49
 DIRT_CRAFT_LESSONS = 21
+HYDRATION_LESSONS = 8
+TOTAL_LESSONS = HYDRATION_LESSONS + DIRT_CRAFT_LESSONS
 DIRT_CRAFT_MODULES = 7
 
 
@@ -63,9 +65,9 @@ def build_nav() -> str:
 
 
 def build_hero() -> str:
-    return '''<div class="rl-hero rl-courses-hero">
+    return f'''<div class="rl-hero rl-courses-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-orange)">COURSES</div>
-    <h1 data-text="Two Courses. 20 Lessons. Same Coach.">Two Courses. 20 Lessons. Same Coach.</h1>
+    <h1 data-text="Two Courses. {TOTAL_LESSONS} Lessons. Same Coach.">Two Courses. {TOTAL_LESSONS} Lessons. Same Coach.</h1>
     <p class="rl-hero-tagline">Both courses are built and sold by Gravel God Cycling, Roadie Labs&#39; sister brand &mdash; same coach behind both sites, Matti Rowe. They&#39;re listed here because the material keeps coming up with road athletes.</p>
   </div>'''
 
@@ -99,7 +101,7 @@ def build_course_cards() -> str:
           <h3 class="rl-course-card-title">Gravel Hydration Mastery</h3>
           <div class="rl-course-card-meta">
             <span class="rl-course-card-price">${HYDRATION_PRICE}</span>
-            <span class="rl-course-card-lessons">8 interactive lessons</span>
+            <span class="rl-course-card-lessons">{HYDRATION_LESSONS} interactive lessons</span>
           </div>
           <p class="rl-course-card-pitch">The word gravel is in the title. The physiology isn&#39;t surface-specific. A long road race in July asks the same questions a gravel 200 does &mdash; this course answers them with your numbers instead of generic advice.</p>
           <ul class="rl-course-card-bullets">

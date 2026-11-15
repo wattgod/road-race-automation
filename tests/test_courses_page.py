@@ -245,3 +245,8 @@ class TestStructure:
         assert len(blocks) == 2
         for block in blocks:
             _json.loads(block)
+
+
+def test_headline_total_is_the_sum_of_both_courses(page_html):
+    assert "Two Courses. 29 Lessons. Same Coach." in page_html
+    assert "20 Lessons" not in page_html

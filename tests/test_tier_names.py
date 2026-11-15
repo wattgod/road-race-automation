@@ -130,3 +130,19 @@ def test_hub_names_follow_the_mapping():
     import generate_tier_hubs as th
     for tier, name in EXPECTED.items():
         assert th.TIER_META[tier]["name"] == name
+
+
+def test_tier_hub_headings_use_the_mapping():
+    from generate_tier_hubs import TIER_META
+    for tier, cfg in TIER_META.items():
+        assert cfg["h1"] == f"Tier {tier} — {TIER_NAMES[tier]}"
+
+
+@pytest.mark.parametrize("rating", [{}, {"tier": None, "overall_score": 70},
+                                    {"tier": 5, "overall_score": 70}, {"tier": 2}])
+def test_blog_preview_refuses_a_missing_tier_or_score(monkeypatch, rating):
+    import generate_blog_preview as gbp
+    monkeypatch.setattr(gbp, "load_race", lambda slug: {"name": "Test Fondo", "vitals": {},
+                                                        "fondo_rating": rating})
+    with pytest.raises(ValueError):
+        gbp.generate_preview_html("test-fondo")
