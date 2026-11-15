@@ -3325,6 +3325,49 @@ def sync_security_txt(host: str, user: str, port: str):
     return f"{remote_dir}/security.txt"
 
 
+FAVICON_FILES = ("favicon.ico", "favicon-32x32.png", "apple-touch-icon.png")
+
+
+def sync_favicons(web_dir: str = "web"):
+    """Upload favicon.ico, favicon-32x32.png and apple-touch-icon.png to the
+    site root. Refuses unless all three exist (built by
+    scripts/generate_favicons.py from web/rl-icon.svg)."""
+    local = [Path(web_dir) / name for name in FAVICON_FILES]
+    missing = [str(p) for p in local if not p.is_file()]
+    if missing:
+        print(f"✗ Favicon files missing: {', '.join(missing)}")
+        print("  Run: python3 scripts/generate_favicons.py first")
+        return None
+
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    try:
+        subprocess.run(
+            ["scp", "-i", str(SSH_KEY), "-P", port]
+            + [str(p) for p in local]
+            + [f"{user}@{host}:{REMOTE_BASE}/"],
+            check=True, capture_output=True, text=True, timeout=60,
+        )
+        subprocess.run(
+            [
+                "ssh", "-i", str(SSH_KEY), "-p", port,
+                f"{user}@{host}",
+                "chmod 644 " + " ".join(f"{REMOTE_BASE}/{n}" for n in FAVICON_FILES),
+            ],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Favicon upload failed: {e.stderr.strip()}")
+        return None
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    print(f"✓ Uploaded {len(local)} favicon files to {wp_url}/")
+    return [f"{wp_url}/{n}" for n in FAVICON_FILES]
+
+
 def sync_markdown(markdown_dir: str):
     """Upload markdown race profiles to /race/{slug}.md on SiteGround via tar+ssh.
 
@@ -3664,6 +3707,10 @@ def build_parser() -> argparse.ArgumentParser:
         help="Upload llms.txt + llms-full.txt to site root and /.well-known/security.txt"
     )
     parser.add_argument(
+        "--sync-favicons", action="store_true",
+        help="Upload favicon.ico, favicon-32x32.png, apple-touch-icon.png to site root"
+    )
+    parser.add_argument(
         "--sync-markdown", action="store_true",
         help="Upload markdown race profiles to /race/{slug}.md via tar+ssh"
     )
@@ -3763,6 +3810,7 @@ if __name__ == "__main__":
         args.sync_markdown = True
         args.sync_guide_cluster = True
         args.sync_legal = True
+        args.sync_favicons = True
         args.purge_cache = True
 
     has_action = has_sync_action(args)
@@ -3846,6 +3894,8 @@ if __name__ == "__main__":
         sync_rss()
     if args.sync_llms_txt:
         sync_llms_txt()
+    if args.sync_favicons:
+        sync_favicons()
     synced_markdown_urls = None
     if args.sync_markdown:
         synced_markdown_urls = sync_markdown(args.markdown_dir)

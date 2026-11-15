@@ -190,7 +190,10 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   <meta name="description" content="{esc(meta["description"])}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{esc(canonical)}">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:title" content="{esc(meta["title"])}">
   <meta property="og:description" content="{esc(meta["description"])}">
   <meta property="og:type" content="website">

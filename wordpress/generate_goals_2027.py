@@ -1290,7 +1290,10 @@ def generate_goals_page(external_assets: dict = None) -> str:
   <meta property="og:url" content="{CANONICAL_URL}">
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   {get_preload_hints()}
   {page_css}
   <!-- GA4 -->

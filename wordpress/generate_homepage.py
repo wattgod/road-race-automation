@@ -1992,7 +1992,10 @@ def generate_homepage(race_index: list, race_data_dir: Path = None,
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(meta_desc)}">
   <meta name="robots" content="index, follow">
