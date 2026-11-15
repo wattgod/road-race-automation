@@ -178,14 +178,6 @@ def main():
         return 1
 
     ok = pf.run_step(
-        "generate_sitemap.py --blog",
-        [sys.executable, str(SCRIPTS_DIR / "generate_sitemap.py"), "--blog"],
-    )
-    if not ok:
-        pf.summary()
-        return 1
-
-    ok = pf.run_step(
         "generate_neo_brutalist.py --all",
         [sys.executable, str(WORDPRESS_DIR / "generate_neo_brutalist.py"), "--all"],
     )
@@ -220,6 +212,24 @@ def main():
     ok = pf.run_step(
         "generate_tier_hubs.py",
         [sys.executable, str(WORDPRESS_DIR / "generate_tier_hubs.py")],
+    )
+    if not ok:
+        pf.summary()
+        return 1
+
+    ok = pf.run_step(
+        "generate_training_plan_pages.py --all",
+        [sys.executable, str(WORDPRESS_DIR / "generate_training_plan_pages.py"), "--all"],
+    )
+    if not ok:
+        pf.summary()
+        return 1
+
+    # The sitemap lists generated prep-kit and training-plan pages, so it runs
+    # after them; it exits non-zero if any indexed race is missing its kit.
+    ok = pf.run_step(
+        "generate_sitemap.py --blog",
+        [sys.executable, str(SCRIPTS_DIR / "generate_sitemap.py"), "--blog"],
     )
     if not ok:
         pf.summary()
