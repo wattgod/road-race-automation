@@ -2847,7 +2847,12 @@ def generate_prep_kit_index(json_files: list[Path], data_dirs: list[Path], outpu
         filepath = find_data_file(jf.stem, data_dirs)
         if not filepath:
             continue
-        rd = normalize_race_data(load_race_data(filepath))
+        try:
+            rd = normalize_race_data(load_race_data(filepath))
+        except SystemExit:
+            # Catalog-flagged race (duplicate / discipline mismatch): its live
+            # page is a redirect stub, so the index must not link a kit for it.
+            continue
         slug = rd.get("slug") or jf.stem
         name = rd.get("name") or slug.replace("-", " ").title()
         location = rd.get("location", "")
@@ -2959,6 +2964,7 @@ def main():
         fail_count = 0
         full_count = 0
         generic_count = 0
+        skipped = []
 
         for jf in json_files:
             slug = jf.stem
@@ -2977,12 +2983,23 @@ def main():
                     full_count += 1
                 else:
                     generic_count += 1
+            except SystemExit as e:
+                # load_race_data refuses catalog-flagged races with SystemExit.
+                # Skip that one race (as generate_neo_brutalist --all does);
+                # letting it escape used to end the whole batch silently and
+                # leave every later slug without a kit.
+                skipped.append((slug, str(e)))
+                print(f"  SKIP  {slug}: {e}")
             except Exception as e:
                 print(f"  FAIL  {slug}: {e}")
                 fail_count += 1
 
         generate_prep_kit_index(json_files, data_dirs, output_dir)
         print(f"\nGenerated {ok_count} prep kits ({full_count} full, {generic_count} generic)")
+        if skipped:
+            print(f"{len(skipped)} catalog-flagged races skipped:")
+            for slug, reason in skipped:
+                print(f"  {slug}: {reason}")
         if fail_count:
             print(f"Failed: {fail_count}")
         return 1 if fail_count else 0
