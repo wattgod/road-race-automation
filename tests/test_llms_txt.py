@@ -39,6 +39,6 @@ def test_counts_are_pluralised():
     assert "1 races" not in text
     assert "1 entries" not in text
     assert "1 race rated" in text
-    assert "**Tier 4 (Local)**: 1 race " in text
+    assert "**Tier 4 (Roster)**: 1 race " in text
     full = g.generate_llms_full_txt([{"slug": "a", "tier": 4}], PROJECT_ROOT / "race-data")
     assert "1 races" not in full and "1 road cycling events" not in full

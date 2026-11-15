@@ -18,20 +18,23 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from brand_tokens import COLORS, get_font_face_css, get_ga4_head_snippet, get_tokens_css
+from brand_tokens import COLORS, TIER_NAMES, get_font_face_css, get_ga4_head_snippet, get_tokens_css
 from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+# Counts in titles/descriptions are filled from the race index at build time
+# ({count}, {Races}, {n_races}); a tier with no races fails the build rather
+# than print a number. Tier names come from brand_tokens.TIER_NAMES.
 TIER_META = {
     1: {
-        "name": "Elite",
+        "name": TIER_NAMES[1],
         "slug": "tier-1",
-        "title": "The 25 Best Road Races in the World | Roadie Labs",
-        "h1": "Tier 1 — Elite",
-        "description": "The definitive road events &mdash; the deepest fields and the "
-                       "courses that anchor the calendar. These 25 races define the sport.",
+        "title": "The {count} Best Road {Races} in the World | Roadie Labs",
+        "h1": f"Tier 1 — {TIER_NAMES[1]}",
+        "description": "The definitive road events — the deepest fields and the "
+                       "courses that anchor the calendar. Tier 1 holds {n_races}.",
         "intro": (
             "These are the races that define road cycling. Every Tier 1 event has earned "
             "its place through a combination of deep competition, demanding terrain, "
@@ -40,10 +43,10 @@ TIER_META = {
         ),
     },
     2: {
-        "name": "Contender",
+        "name": TIER_NAMES[2],
         "slug": "tier-2",
-        "title": "73 Must-Do Road Races | Contender Tier | Roadie Labs",
-        "h1": "Tier 2 — The Contenders",
+        "title": "{count} Must-Do Road {Races} | " + TIER_NAMES[2] + " Tier | Roadie Labs",
+        "h1": f"Tier 2 — {TIER_NAMES[2]}",
         "description": "Established road races with strong reputations and competitive fields. "
                        "The next tier of must-do events for serious road riders.",
         "intro": (
@@ -54,24 +57,24 @@ TIER_META = {
         ),
     },
     3: {
-        "name": "Solid",
+        "name": TIER_NAMES[3],
         "slug": "tier-3",
-        "title": "Regional Road Favorites | Solid Tier | Roadie Labs",
-        "h1": "Tier 3 — Regional Favorites",
+        "title": "Regional Road Favorites | " + TIER_NAMES[3] + " Tier | Roadie Labs",
+        "h1": f"Tier 3 — {TIER_NAMES[3]}",
         "description": "Strong local scenes, genuine road character. Regional favorites "
                        "and emerging races worth the entry fee.",
         "intro": (
-            "The Solid tier is where road gets personal. These are the races your local "
+            f"The {TIER_NAMES[3]} tier is where road gets personal. These are the races your local "
             "riding crew talks about all winter — the events that define a region's road "
             "identity. Smaller fields, raw courses, and the kind of post-race camaraderie "
             "that only happens when everyone shares the same mud-caked suffering."
         ),
     },
     4: {
-        "name": "Roster",
+        "name": TIER_NAMES[4],
         "slug": "tier-4",
-        "title": "Grassroots Road Events | Roster Tier | Roadie Labs",
-        "h1": "Tier 4 — Grassroots Road Racing",
+        "title": "Grassroots Road Events | " + TIER_NAMES[4] + " Tier | Roadie Labs",
+        "h1": f"Tier 4 — {TIER_NAMES[4]}",
         "description": "Up-and-coming races and local grinders. Small fields, raw vibes, "
                        "and the future of the sport.",
         "intro": (
@@ -88,9 +91,27 @@ def esc(text) -> str:
     return html_mod.escape(str(text)) if text else ""
 
 
+def n_races(count: int) -> str:
+    """'1 race' / '25 races'."""
+    return f"{count} race" if count == 1 else f"{count} races"
+
+
+def tier_meta(tier: int, count: int) -> dict:
+    """TIER_META[tier] with its counts filled from the race index.
+
+    Refuses (ValueError) when the tier has no races: no page, and no
+    made-up number, for a tier the index can't support."""
+    if not isinstance(count, int) or count < 1:
+        raise ValueError(f"tier {tier} has no races in the index; refusing to build its hub")
+    fields = {"count": count, "Races": "Race" if count == 1 else "Races",
+              "n_races": n_races(count)}
+    return {k: (v.format(**fields) if k in ("title", "description") else v)
+            for k, v in TIER_META[tier].items()}
+
+
 def build_hub_page(tier: int, races: list, all_races: list) -> str:
     """Generate a full tier hub page."""
-    meta = TIER_META[tier]
+    meta = tier_meta(tier, len(races))
     tier_color = COLORS.get(f"tier_{tier}", COLORS["primary_brown"])
 
     # Sort races by score descending
@@ -151,7 +172,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
         active = ' class="active"' if t == tier else ""
         count_t = sum(1 for r in all_races if r.get("tier") == t)
         tier_nav_items.append(
-            f'<a href="/race/{tm["slug"]}/"{active}>T{t} {tm["name"]} ({count_t})</a>'
+            f'<a href="/race/{tm["slug"]}/"{active}>T{t} {esc(tm["name"])} ({count_t})</a>'
         )
     tier_nav = "\n      ".join(tier_nav_items)
 
@@ -451,7 +472,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   <section class="rl-hub-hero">
     <div class="rl-hub-hero-tier">Tier {tier}</div>
     <h1>{esc(meta["h1"])}</h1>
-    <div class="rl-hub-hero-count">{len(races)} races &middot; Scored &amp; ranked by Roadie Labs</div>
+    <div class="rl-hub-hero-count">{n_races(len(races))} &middot; Scored &amp; ranked by Roadie Labs</div>
   </section>
 
   <p class="rl-hub-intro">{esc(meta["intro"])}</p>
@@ -461,7 +482,7 @@ def build_hub_page(tier: int, races: list, all_races: list) -> str:
   </div>
 
   <footer class="rl-hub-footer">
-    <a href="/">Roadie Labs</a> &middot; {len(all_races)} races rated &middot;
+    <a href="/">Roadie Labs</a> &middot; {n_races(len(all_races))} rated &middot;
     <a href="/road-races/">Search All</a> &middot;
     <a href="/race/methodology/">Methodology</a> &middot;
     <a href="/privacy/">Privacy</a> &middot;
@@ -493,6 +514,17 @@ def main():
     with open(index_path, "r", encoding="utf-8") as f:
         all_races = json.load(f)
     print(f"Loaded {len(all_races)} races from index")
+
+    bad = [r.get("slug", "?") for r in all_races if r.get("tier") not in TIER_META]
+    if bad:
+        print(f"ERROR: {len(bad)} index entries have no valid tier (e.g. {bad[:5]}); "
+              "hub counts can't be derived. Fix the index first.", file=sys.stderr)
+        sys.exit(1)
+    empty = [t for t in TIER_META if not any(r.get("tier") == t for r in all_races)]
+    if empty:
+        print(f"ERROR: tier(s) {empty} have no races in the index; refusing to "
+              "build hubs with counts that can't be derived.", file=sys.stderr)
+        sys.exit(1)
 
     for tier in [1, 2, 3, 4]:
         meta = TIER_META[tier]

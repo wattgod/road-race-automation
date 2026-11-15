@@ -172,7 +172,7 @@ class TestHero:
     def test_subhead(self):
         hero = build_hero()
         assert "The fix is a human in your corner." in hero
-        assert "Not an AI, not a dashboard, not a coach who reads you like a spreadsheet." in hero
+        assert "Not an AI" not in hero
         assert "The terms are below." in hero
 
 
@@ -195,7 +195,7 @@ class TestTerms:
     def test_clause_titles(self):
         t = build_terms()
         for title in (
-            "Every file, read by a person",
+            "I read every file",
             "The patterns you can&#39;t see",
             "The plan moves when your life does",
             "The truth, on schedule",
@@ -207,7 +207,8 @@ class TestTerms:
         t = build_terms()
         assert "I notice the interval you bailed on and ask why." in t
         assert "Knowledge isn&#39;t the limiter &mdash; application is." in t
-        assert "the week adjusts that week" in t
+        assert "I change the week that week." in t
+        assert "algorithm" not in t and "Software" not in t
         assert "&ldquo;You&#39;re sandbagging&rdquo; and &ldquo;take the rest week&rdquo;" in t
         assert "Same coach, same standards." in t
 

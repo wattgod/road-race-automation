@@ -120,16 +120,17 @@ def sync_widget(widget_file: str):
         PROJECT_ROOT / "wordpress" / "output" / "road-races" / "index.html",
         PROJECT_ROOT / "wordpress" / "output" / "search" / "index.html",
     ]
-    if not all(path.exists() for path in wrapper_paths):
-        print("  Search wrappers missing; building them first")
-        build = subprocess.run(
-            [sys.executable, str(SCRIPTS_DIR / "build_search_page.py")],
-            capture_output=False,
-            timeout=60,
-        )
-        if build.returncode != 0 or not all(path.exists() for path in wrapper_paths):
-            print("✗ Could not build static search wrappers")
-            return None
+    # Always rebuild: a wrapper left from an older build would ship stale
+    # headings beside the new search JS.
+    print("  Building static search wrappers")
+    build = subprocess.run(
+        [sys.executable, str(SCRIPTS_DIR / "build_search_page.py")],
+        capture_output=False,
+        timeout=60,
+    )
+    if build.returncode != 0 or not all(path.exists() for path in wrapper_paths):
+        print("✗ Could not build static search wrappers")
+        return None
 
     uploads = [
         (widget_path.parent / "road-labs-search.js", f"{REMOTE_BASE}/search/road-labs-search.js"),

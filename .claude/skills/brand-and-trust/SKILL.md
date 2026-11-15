@@ -103,15 +103,14 @@ the homepage/methodology hero dropped that copy for positive framing ("scored
 by human editors who ride them"). Do not reintroduce defensive copy on hero
 sections, CTAs, taglines, or any marketing-facing text.
 
-**Sanctioned exception (2026-07-18).** Corner-frame coaching copy naming what
-coaching isn't (AI, dashboard, spreadsheet-coach) is allowed ONLY on
-`/coaching/`, never elsewhere. Precedent: the `/coaching/` hero sub-line "Not
-an AI, not a dashboard, not a coach who reads you like a spreadsheet"
-(`wordpress/generate_coaching.py`, `build_hero()`), owner-approved 2026-07-18
-as aspirational "corner" framing (what you're getting), not a defensive
-rebuttal to an objection nobody raised. Same frame already ships on race pages
-("A human in your corner. Adapts week to week." —
-`generate_neo_brutalist.py:2681`).
+**Never position against AI (Matti, 2026-11-14).** "We never position
+ourselves against AI, never say we don't use it, we just don't bring it up."
+This retires the 2026-07-18 "Not an AI, not a dashboard..." exception on
+`/coaching/`. No "not an AI", "AI isn't a person", "software flags...",
+"teach an algorithm" contrasts anywhere athlete-facing: write what Matti does,
+in first person, with no comparison. `tests/test_no_ai_positioning.py`
+enforces it on generated pages. The privacy policy's processor disclosure
+("AI service providers") is a legal statement and stays.
 
 **Honest-critic scores are the product.** Roadie Labs' `fondo_rating` (14
 dimensions + `cultural_impact` bonus / 70 denominator, see this repo's

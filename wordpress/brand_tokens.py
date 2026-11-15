@@ -347,9 +347,11 @@ RACER_RATING_THRESHOLD = 3
 
 
 # ── Tier Names ──────────────────────────────────────────────
-# Canonical road tier names — must match the homepage (generate_homepage.py
-# tier_labels). Were gravel leftovers ("The Icons"/"Grassroots").
-TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Rising", 4: "Local"}
+# Canonical race tier names: the ONE mapping every Roadie page, script and
+# (via tests/test_tier_names.py) web/road-labs-search.js uses. Same names as
+# Gravel God (gravel-race-automation scripts/generate_llms_txt.py
+# TIER_LABELS), owner ruling 2026-11-14. Import it; never redefine it.
+TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
 
 TIER_DESCS = {
     1: "The definitive road events — the deepest fields and the courses that anchor the calendar.",

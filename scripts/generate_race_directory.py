@@ -27,8 +27,9 @@ ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = ROOT / "web" / "race-index.json"
 SEARCH_PATH = ROOT / "web" / "road-labs-search.html"
 
-# Customer-facing tier labels — must match wordpress/generate_homepage.py.
-TIER_LABELS = {1: "Elite", 2: "Contender", 3: "Rising", 4: "Local"}
+# Customer-facing tier labels: the one mapping in wordpress/brand_tokens.py.
+sys.path.insert(0, str(ROOT / "wordpress"))
+from brand_tokens import TIER_NAMES as TIER_LABELS  # noqa: E402
 
 START_RE = re.compile(
     r"  <!-- Static Race Directory[^\n]*-->\n.*?  <!-- End Race Directory -->",

@@ -25,7 +25,7 @@ from cookie_consent import get_consent_banner_html
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CURRENT_YEAR = date.today().year
 
-TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
+from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
 TIER_COLORS = {
     1: COLORS["primary_brown"],
     2: COLORS["secondary_blue"],

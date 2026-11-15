@@ -4,7 +4,8 @@ Generate the Roadie Labs /courses/ page in neo-brutalist style.
 
 Cross-sells two self-paced courses sold on Gravel God Cycling, Roadie Labs'
 sister brand (same coach): Gravel Hydration Mastery ($19) and Dirt Craft:
-Technical Gravel Mastery ($29), plus the two-course bundle ($39). Reuses
+Technical Gravel Mastery ($49). Each is sold on its own at its own price;
+there is no bundle discount (Matti, 2026-11-15). Reuses
 CSS/style patterns from generate_neo_brutalist.py and the about page
 component library (hero, section headers, cards, FAQ).
 
@@ -35,11 +36,15 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 GRAVEL_GOD_BASE_URL = "https://gravelgodcycling.com"
 HYDRATION_URL = f"{GRAVEL_GOD_BASE_URL}/course/gravel-hydration-mastery/"
 DIRT_CRAFT_URL = f"{GRAVEL_GOD_BASE_URL}/course/dirt-craft/"
-BUNDLE_URL = f"{GRAVEL_GOD_BASE_URL}/course/"
 
 HYDRATION_PRICE = 19
-DIRT_CRAFT_PRICE = 29
-BUNDLE_PRICE = 39
+# Dirt Craft facts mirror gravel-race-automation data/courses/dirt-craft/
+# course.json (price_usd 49; 7 modules, 21 lessons incl. 4 Stack Check quizzes).
+DIRT_CRAFT_PRICE = 49
+DIRT_CRAFT_LESSONS = 21
+HYDRATION_LESSONS = 8
+TOTAL_LESSONS = HYDRATION_LESSONS + DIRT_CRAFT_LESSONS
+DIRT_CRAFT_MODULES = 7
 
 
 def esc(text) -> str:
@@ -60,9 +65,9 @@ def build_nav() -> str:
 
 
 def build_hero() -> str:
-    return '''<div class="rl-hero rl-courses-hero">
+    return f'''<div class="rl-hero rl-courses-hero">
     <div class="rl-hero-tier" style="background:var(--rl-color-orange)">COURSES</div>
-    <h1 data-text="Two Courses. 20 Lessons. Same Coach.">Two Courses. 20 Lessons. Same Coach.</h1>
+    <h1 data-text="Two Courses. {TOTAL_LESSONS} Lessons. Same Coach.">Two Courses. {TOTAL_LESSONS} Lessons. Same Coach.</h1>
     <p class="rl-hero-tagline">Both courses are built and sold by Gravel God Cycling, Roadie Labs&#39; sister brand &mdash; same coach behind both sites, Matti Rowe. They&#39;re listed here because the material keeps coming up with road athletes.</p>
   </div>'''
 
@@ -96,7 +101,7 @@ def build_course_cards() -> str:
           <h3 class="rl-course-card-title">Gravel Hydration Mastery</h3>
           <div class="rl-course-card-meta">
             <span class="rl-course-card-price">${HYDRATION_PRICE}</span>
-            <span class="rl-course-card-lessons">8 interactive lessons</span>
+            <span class="rl-course-card-lessons">{HYDRATION_LESSONS} interactive lessons</span>
           </div>
           <p class="rl-course-card-pitch">The word gravel is in the title. The physiology isn&#39;t surface-specific. A long road race in July asks the same questions a gravel 200 does &mdash; this course answers them with your numbers instead of generic advice.</p>
           <ul class="rl-course-card-bullets">
@@ -114,7 +119,7 @@ def build_course_cards() -> str:
           <h3 class="rl-course-card-title">Dirt Craft: Technical Gravel Mastery</h3>
           <div class="rl-course-card-meta">
             <span class="rl-course-card-price">${DIRT_CRAFT_PRICE}</span>
-            <span class="rl-course-card-lessons">12 lessons + 4 module quizzes</span>
+            <span class="rl-course-card-lessons">{DIRT_CRAFT_LESSONS} lessons across {DIRT_CRAFT_MODULES} modules</span>
           </div>
           <p class="rl-course-card-pitch">For road riders heading to their first (or fifth) gravel event. Road instincts &mdash; weight forward, brake late, hold your line &mdash; are the ones that put you on the ground when the surface goes loose.</p>
           <ul class="rl-course-card-bullets">
@@ -127,22 +132,6 @@ def build_course_cards() -> str:
           <a href="{DIRT_CRAFT_URL}" class="rl-course-card-btn" data-course-cta="dirt_craft" target="_blank" rel="noopener">GET DIRT CRAFT &mdash; ${DIRT_CRAFT_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
         </article>
 
-      </div>
-    </div>
-  </div>'''
-
-
-def build_bundle_strip() -> str:
-    savings = HYDRATION_PRICE + DIRT_CRAFT_PRICE - BUNDLE_PRICE
-    return f'''<div class="rl-section" id="bundle">
-    <div class="rl-section-body">
-      <div class="rl-courses-bundle">
-        <div class="rl-courses-bundle-text">
-          <div class="rl-courses-bundle-kicker">Bundle</div>
-          <h3 class="rl-courses-bundle-title">Both Courses &mdash; ${BUNDLE_PRICE}</h3>
-          <p>Hydration Mastery (${HYDRATION_PRICE}) + Dirt Craft (${DIRT_CRAFT_PRICE}) together for ${BUNDLE_PRICE}. Saves ${savings}.</p>
-        </div>
-        <a href="{BUNDLE_URL}" class="rl-course-card-btn rl-courses-bundle-btn" data-course-cta="bundle" target="_blank" rel="noopener">GET THE BUNDLE &mdash; ${BUNDLE_PRICE}<span class="rl-external-indicator" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>'''
@@ -161,7 +150,7 @@ def build_faq() -> str:
       </details>
       <details class="rl-courses-faq-item" data-faq="refunds">
         <summary>What&#39;s the refund policy?</summary>
-        <p>30-day money-back guarantee on both courses and the bundle. If it isn&#39;t useful, you get your money back.</p>
+        <p>30-day money-back guarantee on both courses. If it isn&#39;t useful, you get your money back.</p>
       </details>
       <details class="rl-courses-faq-item" data-faq="gravel-bike">
         <summary>Do I need a gravel bike?</summary>
@@ -328,44 +317,6 @@ def build_courses_css() -> str:
   color: var(--rl-color-dark-navy);
 }
 
-/* ── Bundle strip ────────────────────────────────── */
-.rl-neo-brutalist-page .rl-courses-bundle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--rl-spacing-lg);
-  border: var(--rl-border-standard);
-  border-top: 3px double var(--rl-color-dark-navy);
-  border-bottom: 3px double var(--rl-color-dark-navy);
-  background: var(--rl-color-silver);
-  padding: var(--rl-spacing-lg);
-}
-.rl-neo-brutalist-page .rl-courses-bundle-kicker {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-2xs);
-  font-weight: var(--rl-font-weight-bold);
-  letter-spacing: var(--rl-letter-spacing-extreme);
-  text-transform: uppercase;
-  color: var(--rl-color-orange);
-  margin-bottom: var(--rl-spacing-2xs);
-}
-.rl-neo-brutalist-page .rl-courses-bundle-title {
-  font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-lg);
-  font-weight: var(--rl-font-weight-bold);
-  color: var(--rl-color-dark-navy);
-  margin: 0 0 var(--rl-spacing-2xs) 0;
-}
-.rl-neo-brutalist-page .rl-courses-bundle-text p {
-  font-family: var(--rl-font-data);
-  font-size: var(--rl-font-size-xs);
-  color: var(--rl-color-dark-navy);
-  margin: 0;
-}
-.rl-neo-brutalist-page .rl-courses-bundle-btn {
-  flex-shrink: 0;
-}
-
 /* ── FAQ ─────────────────────────────────────────── */
 .rl-neo-brutalist-page .rl-courses-faq-item {
   border: var(--rl-border-standard);
@@ -415,10 +366,6 @@ def build_courses_css() -> str:
   .rl-neo-brutalist-page .rl-courses-grid {
     grid-template-columns: 1fr;
   }
-  .rl-neo-brutalist-page .rl-courses-bundle {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 </style>'''
 
@@ -448,7 +395,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Courses — Hydration & Gravel Technique for Road Cyclists",
-        "description": "Two self-paced courses from Gravel God Cycling, Roadie Labs' sister brand: Gravel Hydration Mastery ($19, 8 lessons) and Dirt Craft: Technical Gravel Mastery ($29, 12 lessons).",
+        "description": "Two self-paced courses from Gravel God Cycling, Roadie Labs' sister brand: Gravel Hydration Mastery ($19, 8 lessons) and Dirt Craft: Technical Gravel Mastery ($49, 21 lessons across 7 modules).",
         "url": f"{SITE_BASE_URL}/courses/",
         "isPartOf": {
             "@type": "WebSite",
@@ -473,7 +420,7 @@ def build_jsonld() -> str:
                 "name": "What's the refund policy?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "30-day money-back guarantee on both courses and the bundle.",
+                    "text": "30-day money-back guarantee on both courses.",
                 },
             },
             {
@@ -501,7 +448,6 @@ def generate_courses_page(external_assets: dict = None) -> str:
     hero = build_hero()
     frame = build_frame()
     cards = build_course_cards()
-    bundle = build_bundle_strip()
     faq = build_faq()
     footer = build_footer()
     courses_css = build_courses_css()
@@ -515,7 +461,7 @@ def generate_courses_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = "Two self-paced courses for road cyclists from Gravel God Cycling, Roadie Labs&#39; sister brand: Gravel Hydration Mastery ($19, 8 interactive lessons) and Dirt Craft: Technical Gravel Mastery ($29, 12 lessons + 4 quizzes)."
+    meta_desc = "Two self-paced courses for road cyclists from Gravel God Cycling, Roadie Labs&#39; sister brand: Gravel Hydration Mastery ($19, 8 interactive lessons) and Dirt Craft: Technical Gravel Mastery ($49, 21 lessons across 7 modules)."
 
     og_tags = f'''<meta property="og:title" content="Courses — Hydration &amp; Gravel Technique for Road Cyclists">
   <meta property="og:description" content="{meta_desc}">
@@ -560,7 +506,6 @@ def generate_courses_page(external_assets: dict = None) -> str:
 
   {cards}
 
-  {bundle}
 
   {faq}
 
