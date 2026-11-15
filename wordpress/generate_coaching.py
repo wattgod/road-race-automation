@@ -58,6 +58,45 @@ def load_race_count() -> int:
 
 QUESTIONNAIRE_URL = f"{SITE_BASE_URL}/coaching/apply/"
 
+# Tier identity — the single source for name and price. The tier columns
+# and the fit-check result both render from this, so a price can't drift
+# between the two.
+TIERS = (
+    ("min", "Min", "$199"),
+    ("mid", "Mid", "$299"),
+    ("max", "Max", "$1,200"),
+)
+TIER_INTERVAL = "/ 4 WEEKS"
+
+# Fit check copy (drafted, pending Matti's rewrite). Each option's answer value is its
+# index (0, 1, 2); the scoring lives in build_coaching_js().
+FIT_CHECK_INTRO = "Not sure which tier? Three questions."
+FIT_CHECK_QUESTIONS = (
+    ("When a week goes sideways, you want&hellip;", (
+        "I&#39;ll adjust it myself. Check my work weekly.",
+        "The plan moved that same week.",
+        "Someone on it the same day.",
+    )),
+    ("Your ride files should be&hellip;", (
+        "Skimmed. I know what I did.",
+        "Read between sessions.",
+        "Read every one, every day.",
+    )),
+    ("Your A race is&hellip;", (
+        "16+ weeks out",
+        "8&ndash;16 weeks out",
+        "Under 8 weeks",
+    )),
+)
+FIT_CHECK_EMPTY = "Answer the first two. The race date only changes what I tell you."
+FIT_CHECK_REASONS = {
+    "min": "You execute on your own and want the thinking done right. A weekly look is enough.",
+    "mid": "You want the week to move when life does, not after. That&#39;s the whole gap between Min and Mid.",
+    "max": "You want every file read the day it lands. Worth it for one race that matters more than the rest.",
+}
+FIT_CHECK_TIGHT = "Under 8 weeks is tight. I&#39;ll tell you straight if it&#39;s too late to change much."
+
+
 # Curated for the coaching page: concrete result, concrete constraint,
 # concrete rider. The full set stays on /about/. These are Gravel God
 # athletes (Roadie Labs has no finishers yet) — the provenance line below
@@ -146,13 +185,83 @@ def build_terms() -> str:
   </section>'''
 
 
+def _tier_head(key: str) -> str:
+    """Name + price lines for a tier column, from TIERS. The name carries a
+    pre-rendered, hidden "YOUR FIT" label the fit check reveals."""
+    name, price = {k: (n, p) for k, n, p in TIERS}[key]
+    return (
+        f'<div class="rl-coach-tier-name">{name} '
+        f'<span class="rl-coach-tier-fit-label" hidden>YOUR FIT</span></div>\n'
+        f'          <div class="rl-coach-tier-price">{price}'
+        f'<span class="rl-coach-tier-interval">{TIER_INTERVAL}</span></div>'
+    )
+
+
+def build_fit_check() -> str:
+    """Three-question tier recommender, above the tier columns.
+
+    Rendered with `hidden`; build_coaching_js() removes it, so without JS
+    the page is unchanged. Every result state is pre-rendered here and JS
+    only toggles `hidden`, so all copy, prices and CTA hrefs come from the
+    Python constants and every CTA exists at load for the cta_click
+    listener."""
+    questions = []
+    for qi, (text, options) in enumerate(FIT_CHECK_QUESTIONS, start=1):
+        q_id = f"rl-coach-fitcheck-q{qi}"
+        buttons = "\n            ".join(
+            f'<button type="button" class="rl-coach-fitcheck-opt" data-q="{qi}" '
+            f'data-a="{ai}" aria-pressed="false">{label}</button>'
+            for ai, label in enumerate(options)
+        )
+        questions.append(
+            f'''<div class="rl-coach-fitcheck-q">
+          <p class="rl-coach-fitcheck-q-text" id="{q_id}">{text}</p>
+          <div class="rl-coach-fitcheck-opts" role="group" aria-labelledby="{q_id}">
+            {buttons}
+          </div>
+        </div>'''
+        )
+    recs = "\n            ".join(
+        f'<div class="rl-coach-fitcheck-rec" data-fit="{key}" hidden>'
+        f'<p class="rl-coach-fitcheck-tier">{name} '
+        f'<span class="rl-coach-fitcheck-price">{price} {TIER_INTERVAL}</span></p>'
+        f'<p class="rl-coach-fitcheck-reason">{FIT_CHECK_REASONS[key]}</p>'
+        f'</div>'
+        for key, name, price in TIERS
+    )
+    ctas = "\n            ".join(
+        f'<a href="{QUESTIONNAIRE_URL}?tier={key}&amp;src=fitcheck" '
+        f'class="rl-coach-fitcheck-cta" data-cta="fitcheck_apply_{key}" '
+        f'data-fit="{key}" hidden>APPLY FOR {name.upper()} &rarr;</a>'
+        for key, name, _price in TIERS
+    )
+    q_html = "\n          ".join(questions)
+    return f'''<div class="rl-coach-fitcheck" id="rl-coach-fitcheck" hidden>
+      <p class="rl-coach-fitcheck-intro">{FIT_CHECK_INTRO}</p>
+      <div class="rl-coach-fitcheck-grid">
+        <div class="rl-coach-fitcheck-questions">
+          {q_html}
+        </div>
+        <div class="rl-coach-fitcheck-result" aria-live="polite">
+          <p class="rl-coach-fitcheck-empty">{FIT_CHECK_EMPTY}</p>
+          <div class="rl-coach-fitcheck-answer" hidden>
+            <p class="rl-coach-fitcheck-label">YOU PROBABLY WANT</p>
+            {recs}
+            <p class="rl-coach-fitcheck-tight" hidden>{FIT_CHECK_TIGHT}</p>
+            {ctas}
+          </div>
+        </div>
+      </div>
+    </div>'''
+
+
 def build_tiers() -> str:
     return f'''<section class="rl-coach-band rl-coach-tiers-section" id="tiers">
     <div class="rl-coach-inner">
+      {build_fit_check()}
       <div class="rl-coach-tiers">
-        <div class="rl-coach-tier-col">
-          <div class="rl-coach-tier-name">Min</div>
-          <div class="rl-coach-tier-price">$199<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
+        <div class="rl-coach-tier-col" data-tier="min">
+          {_tier_head("min")}
           <p class="rl-coach-tier-desc">You race, you train on your own, and you want a racer checking the work every week.</p>
           <ul class="rl-coach-tier-list">
             <li>Weekly training review</li>
@@ -164,9 +273,8 @@ def build_tiers() -> str:
           </ul>
           <a href="{QUESTIONNAIRE_URL}?tier=min" class="rl-coach-tier-cta" data-cta="tier_min">GET STARTED</a>
         </div>
-        <div class="rl-coach-tier-col">
-          <div class="rl-coach-tier-name">Mid</div>
-          <div class="rl-coach-tier-price">$299<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
+        <div class="rl-coach-tier-col" data-tier="mid">
+          {_tier_head("mid")}
           <p class="rl-coach-tier-desc">Between races and sessions I&#39;m in your files, and the plan follows what I see.</p>
           <ul class="rl-coach-tier-list">
             <li>Everything in Min</li>
@@ -178,9 +286,8 @@ def build_tiers() -> str:
           </ul>
           <a href="{QUESTIONNAIRE_URL}?tier=mid" class="rl-coach-tier-cta" data-cta="tier_mid">GET STARTED</a>
         </div>
-        <div class="rl-coach-tier-col">
-          <div class="rl-coach-tier-name">Max</div>
-          <div class="rl-coach-tier-price">$1,200<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
+        <div class="rl-coach-tier-col" data-tier="max">
+          {_tier_head("max")}
           <p class="rl-coach-tier-desc">Same-day file review, on-demand calls and race-week strategy for the race you&#39;ve built the year around.</p>
           <ul class="rl-coach-tier-list">
             <li>Everything in Mid</li>
@@ -719,6 +826,165 @@ def build_coaching_css() -> str:
   color: var(--rl-color-cool-white);
 }
 
+/* ── Fit check — three questions above the tiers ─────
+   Continues the terms list (tan hairline on top), then hands off to the
+   tiers' dark rule. Options are plain hairline boxes; the chosen one
+   takes the solid inverted fill. The block ships `hidden` and JS reveals
+   it, so every toggled element needs [hidden] to beat its own display
+   rule (hence the (0,2,0) selector below). */
+.rl-coach-tiers-section [hidden] {
+  display: none;
+}
+.rl-coach-fitcheck {
+  border-top: 1px solid var(--rl-color-silver);
+  padding: var(--rl-spacing-xl) 0;
+}
+.rl-coach-fitcheck-intro {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-md);
+  line-height: var(--rl-line-height-relaxed);
+  color: var(--rl-color-dark-navy);
+  max-width: 60ch;
+  margin: 0 0 var(--rl-spacing-lg) 0;
+}
+.rl-coach-fitcheck-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--rl-spacing-xl);
+  align-items: start;
+}
+.rl-coach-fitcheck-q + .rl-coach-fitcheck-q {
+  margin-top: var(--rl-spacing-lg);
+}
+.rl-coach-fitcheck-q-text {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-base);
+  font-weight: var(--rl-font-weight-semibold);
+  color: var(--rl-color-dark-navy);
+  line-height: var(--rl-line-height-tight);
+  margin: 0 0 var(--rl-spacing-sm) 0;
+}
+.rl-coach-fitcheck-opts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--rl-spacing-xs);
+}
+.rl-coach-fitcheck-opt {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: var(--rl-spacing-sm) var(--rl-spacing-md);
+  background: transparent;
+  border: 1px solid var(--rl-color-silver);
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-normal);
+  color: var(--rl-color-dark-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--rl-transition-hover),
+              color var(--rl-transition-hover),
+              border-color var(--rl-transition-hover);
+}
+.rl-coach-fitcheck-opt:hover {
+  border-color: var(--rl-color-dark-navy);
+}
+.rl-coach-fitcheck-opt[aria-pressed="true"] {
+  background: var(--rl-color-dark-navy);
+  border-color: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
+}
+.rl-coach-fitcheck-result {
+  border-left: 1px solid var(--rl-color-silver);
+  padding-left: var(--rl-spacing-lg);
+}
+.rl-coach-fitcheck-empty {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-relaxed);
+  color: var(--rl-color-graphite);
+  margin: 0;
+}
+.rl-coach-fitcheck-label {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--rl-color-graphite);
+  margin: 0;
+}
+.rl-coach-fitcheck-tier {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-2xl);
+  font-weight: var(--rl-font-weight-semibold);
+  color: var(--rl-color-dark-navy);
+  line-height: var(--rl-line-height-tight);
+  margin: var(--rl-spacing-xs) 0 0 0;
+}
+.rl-coach-fitcheck-price {
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-regular);
+  letter-spacing: var(--rl-letter-spacing-normal);
+  color: var(--rl-color-graphite);
+  margin-left: var(--rl-spacing-xs);
+}
+.rl-coach-fitcheck-reason,
+.rl-coach-fitcheck-tight {
+  font-family: var(--rl-font-editorial);
+  font-size: var(--rl-font-size-sm);
+  line-height: var(--rl-line-height-relaxed);
+  color: var(--rl-color-dark-navy);
+  margin: var(--rl-spacing-sm) 0 0 0;
+}
+.rl-coach-fitcheck-tight {
+  color: var(--rl-color-graphite);
+}
+.rl-coach-fitcheck-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: var(--rl-spacing-md);
+  padding: 0 var(--rl-spacing-lg);
+  border: 1px solid var(--rl-color-dark-navy);
+  font-family: var(--rl-font-data);
+  font-size: var(--rl-font-size-2xs);
+  font-weight: var(--rl-font-weight-bold);
+  letter-spacing: var(--rl-letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--rl-color-dark-navy);
+  text-decoration: none;
+  transition: background-color var(--rl-transition-hover),
+              color var(--rl-transition-hover);
+}
+.rl-coach-fitcheck-cta:hover {
+  background-color: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
+}
+/* The recommended column: a heavier rule over it and an inverted label.
+   Every column reserves the 3px so marking one never shifts the row. */
+.rl-coach-tier-col {
+  border-top: 3px solid transparent;
+}
+.rl-coach-tier-col.rl-coach-is-fit {
+  border-top-color: var(--rl-color-dark-navy);
+}
+/* inline, not inline-block: its padding paints but doesn't grow the
+   line box, so the marked column's price stays level with the others. */
+.rl-coach-tier-fit-label {
+  display: inline;
+  margin-left: var(--rl-spacing-xs);
+  padding: 2px var(--rl-spacing-2xs);
+  background: var(--rl-color-dark-navy);
+  color: var(--rl-color-cool-white);
+}
+.rl-coach-is-fit .rl-coach-tier-name {
+  color: var(--rl-color-dark-navy);
+}
+
 /* ── Mobile sticky CTA ───────────────────────────── */
 .rl-coach-sticky-cta {
   display: none;
@@ -757,7 +1023,9 @@ def build_coaching_css() -> str:
 
 /* ── Reduced motion ─────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .rl-coach-faq-a {
+  .rl-coach-faq-a,
+  .rl-coach-fitcheck-opt,
+  .rl-coach-fitcheck-cta {
     transition: none;
   }
 }
@@ -783,6 +1051,22 @@ def build_coaching_css() -> str:
   }
   .rl-coach-term-num {
     padding-top: 0;
+  }
+  .rl-coach-fitcheck-grid,
+  .rl-coach-fitcheck-opts {
+    grid-template-columns: 1fr;
+  }
+  .rl-coach-fitcheck-grid {
+    gap: var(--rl-spacing-lg);
+  }
+  .rl-coach-fitcheck-result {
+    border-left: none;
+    border-top: 1px solid var(--rl-color-silver);
+    padding-left: 0;
+    padding-top: var(--rl-spacing-lg);
+    /* clears the fixed sticky CTA (56px at 390 wide) when JS scrolls
+       the first result into view */
+    scroll-margin-bottom: 72px;
   }
   .rl-coach-tiers {
     grid-template-columns: 1fr;
@@ -839,6 +1123,63 @@ def build_coaching_js() -> str:
     q.addEventListener('click', toggle);
     q.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
   });
+})();
+
+/* Fit check — three questions, one tier. No persistence. Every result
+   state is pre-rendered; this only scores and toggles `hidden`. */
+(function() {
+  var box = document.getElementById('rl-coach-fitcheck');
+  if (!box) return;
+  var answers = [null, null, null];
+  var current = null;
+  var empty = box.querySelector('.rl-coach-fitcheck-empty');
+  var answer = box.querySelector('.rl-coach-fitcheck-answer');
+  var tight = box.querySelector('.rl-coach-fitcheck-tight');
+  var result = box.querySelector('.rl-coach-fitcheck-result');
+  var cols = document.querySelectorAll('.rl-coach-tier-col[data-tier]');
+  function render() {
+    var ready = answers[0] !== null && answers[1] !== null;
+    var tier = null;
+    if (ready) {
+      var score = answers[0] + answers[1] + (answers[2] === 2 ? 1 : 0);
+      tier = score <= 1 ? 'min' : score <= 3 ? 'mid' : 'max';
+    }
+    empty.hidden = ready;
+    answer.hidden = !ready;
+    tight.hidden = answers[2] !== 2;
+    box.querySelectorAll('[data-fit]').forEach(function(el) { el.hidden = el.getAttribute('data-fit') !== tier; });
+    cols.forEach(function(col) {
+      var on = col.getAttribute('data-tier') === tier;
+      col.classList.toggle('rl-coach-is-fit', on);
+      var label = col.querySelector('.rl-coach-tier-fit-label');
+      if (label) label.hidden = !on;
+    });
+    var firstResult = tier !== null && current === null;
+    if (tier && tier !== current && typeof gtag === 'function') gtag('event', 'coaching_fitcheck_result', { tier: tier });
+    current = tier;
+    /* First reveal only, and only where the layout stacks and the sticky
+       CTA exists (same 768px breakpoint as the CSS): there the result
+       lands under the sticky bar. Side-by-side on desktop the page never
+       moves. 'nearest' is a no-op when it is already in view; 'instant'
+       overrides the site-wide html { scroll-behavior: smooth }. Older
+       Safari rejects 'instant' and throws; it just skips the nudge. */
+    if (firstResult && window.matchMedia('(max-width: 768px)').matches) {
+      try { result.scrollIntoView({ block: 'nearest', behavior: 'instant' }); } catch (e) {}
+    }
+  }
+  box.querySelectorAll('.rl-coach-fitcheck-opt').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var q = Number(btn.getAttribute('data-q'));
+      var a = Number(btn.getAttribute('data-a'));
+      answers[q - 1] = a;
+      btn.parentNode.querySelectorAll('.rl-coach-fitcheck-opt').forEach(function(b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      if (typeof gtag === 'function') gtag('event', 'coaching_fitcheck_answer', { question: q, answer: a });
+      render();
+    });
+  });
+  box.hidden = false;
 })();
 
 /* Scroll depth tracking */
