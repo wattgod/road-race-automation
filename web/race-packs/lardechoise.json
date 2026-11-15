@@ -1,31 +1,50 @@
 {
   "slug": "lardechoise",
   "race_name": "L'Ard\u00e9choise Cyclosportive",
-  "distance_mi": 172.0,
+  "distance_mi": 137.3,
   "demands": {
-    "durability": 8,
+    "durability": 6,
     "climbing": 10,
     "vo2_power": 7,
-    "threshold": 5,
-    "technical": 2,
+    "threshold": 8,
+    "technical": 4,
     "heat_resilience": 1,
-    "altitude": 4,
+    "altitude": 6,
     "race_specificity": 10
   },
   "top_categories": [
     {
-      "category": "Durability",
+      "category": "TT_Threshold",
       "score": 100,
       "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
       ],
-      "workout_context": "172 miles. Your legs will beg to quit after 120. This trains the power output you need from mile 130 onward."
+      "workout_context": "105ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
+      "category": "Over_Under",
+      "score": 95,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At L'Ard\u00e9choise Cyclosportive, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "VO2max",
+      "score": 92,
+      "workouts": [
+        "5x3 VO2 Classic",
+        "Descending VO2 Pyramid",
+        "Norwegian 4x8"
+      ],
+      "workout_context": "14,485ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
-      "score": 80,
+      "score": 92,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,64 +53,36 @@
       "workout_context": "Race-pace efforts that mimic L'Ard\u00e9choise Cyclosportive's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
-      "category": "Over_Under",
-      "score": 79,
+      "category": "Durability",
+      "score": 90,
       "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
       ],
-      "workout_context": "At L'Ard\u00e9choise Cyclosportive, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "VO2max",
-      "score": 76,
-      "workouts": [
-        "5x3 VO2 Classic",
-        "Descending VO2 Pyramid",
-        "Norwegian 4x8"
-      ],
-      "workout_context": "17,618ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
-    },
-    {
-      "category": "Mixed_Climbing",
-      "score": 73,
-      "workouts": [
-        "Seated/Standing Climbs",
-        "Variable Grade Simulation"
-      ],
-      "workout_context": "17,618ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 73,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "102ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "At mile 60 of 137, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Road_Specific",
-      "score": 63,
+      "score": 82,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "L'Ard\u00e9choise Cyclosportive's paved mountain roads through the Massif Central forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 172 miles."
+      "workout_context": "Road-specific control matters at L'Ard\u00e9choise Cyclosportive. Practice on paved mountain roads through the Massif Central: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 137 miles."
     },
     {
-      "category": "Endurance",
-      "score": 57,
+      "category": "Mixed_Climbing",
+      "score": 77,
       "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
       ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 172 miles, base fitness is the difference between racing and surviving."
+      "workout_context": "14,485ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "G_Spot",
-      "score": 55,
+      "score": 77,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -100,38 +91,47 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of L'Ard\u00e9choise Cyclosportive. Train it until it feels boring."
     },
     {
-      "category": "Blended",
-      "score": 54,
+      "category": "Endurance",
+      "score": 58,
       "workouts": [
-        "Z2 + VO2 Combo",
-        "Endurance with Spikes"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "Endurance with intensity spikes baked in. Exactly what 17,618ft of climbing on paved mountain roads through the Massif Central does to your power file on race day."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 51,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "172 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 137 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "SFR_Muscle_Force",
-      "score": 49,
+      "score": 51,
       "workouts": [
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 17,618ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 14,485ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
+    },
+    {
+      "category": "Blended",
+      "score": 49,
+      "workouts": [
+        "Z2 + VO2 Combo",
+        "Endurance with Spikes"
+      ],
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 14,485ft of climbing on paved mountain roads through the Massif Central does to your power file on race day."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 47,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at L'Ard\u00e9choise Cyclosportive. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
-    "nutrition": "Ultra-distance fueling for 172 miles: 80\u2013100g carbs/hour from mile 1 \u2014 don\u2019t wait until you\u2019re hungry. Practice your exact race-day nutrition in every long training ride. Carry backup calories. 172 miles burns 8,000\u201312,000+ calories \u2014 you cannot replace them all, but you must try.",
-    "altitude": "Moderate altitude at L'Ard\u00e9choise Cyclosportive. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively."
+    "nutrition": "Target 60\u201380g carbs/hour for L'Ard\u00e9choise Cyclosportive\u2019s 137 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
+    "altitude": "Altitude may change sustainable power and recovery at L'Ard\u00e9choise Cyclosportive. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at L'Ard\u00e9choise Cyclosportive rewards specific practice. Include regular rides on paved mountain roads through the massif central to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Over Under to prepare you for 172 miles of paved mountain roads through the massif central in Saint-F\u00e9licien, Ard\u00e8che, France.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Over Under, and VO2max to prepare you for 137 miles of paved mountain roads through the massif central in Saint-F\u00e9licien, Ard\u00e8che, France.",
+  "generated_at": "2026-11-15"
 }

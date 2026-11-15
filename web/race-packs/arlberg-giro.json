@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "88ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "88ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "VO2max",
@@ -31,7 +31,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "8,200ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "8,200ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
@@ -50,7 +50,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Arlberg Giro, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Arlberg Giro, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
@@ -59,7 +59,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Arlberg Giro's paved alpine mountain roads through the Austrian forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 93 miles."
+      "workout_context": "Road-specific control matters at Arlberg Giro. Practice on paved alpine mountain roads through the Austrian: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 93 miles."
     },
     {
       "category": "G_Spot",
@@ -106,7 +106,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Arlberg Giro, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Arlberg Giro. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "SFR_Muscle_Force",
@@ -115,7 +115,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 8,200ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 8,200ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -124,14 +124,14 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on paved alpine mountain roads through the Austrian. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved alpine mountain roads through the Austrian can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Arlberg Giro\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Arlberg Giro. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Arlberg Giro requires surface adaptability. Include weekly rides on paved alpine mountain roads through the austrian alps to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Arlberg Giro. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Arlberg Giro rewards specific practice. Include regular rides on paved alpine mountain roads through the austrian alps to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, VO2max, and Race Simulation to prepare you for 93 miles of paved alpine mountain roads through the austrian alps in St. Anton am Arlberg, Tyrol, Austria.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

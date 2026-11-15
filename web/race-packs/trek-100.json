@@ -8,24 +8,14 @@
     "vo2_power": 5,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 76,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,8 +24,18 @@
       "workout_context": "Race-pace efforts that mimic Trek 100's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
+      "category": "Durability",
+      "score": 95,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "TT_Threshold",
-      "score": 72,
+      "score": 95,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -45,16 +45,16 @@
     },
     {
       "category": "Road_Specific",
-      "score": 69,
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Trek 100's rolling hills forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 100 miles."
+      "workout_context": "Road-specific control matters at Trek 100. Practice on rolling hills: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 100 miles."
     },
     {
       "category": "G_Spot",
-      "score": 57,
+      "score": 76,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,35 +64,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 56,
+      "score": 74,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Trek 100, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 55,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 48,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "At Trek 100, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "VO2max",
-      "score": 46,
+      "score": 61,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -102,7 +83,7 @@
     },
     {
       "category": "Blended",
-      "score": 41,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -111,7 +92,7 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 37,
+      "score": 48,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -120,19 +101,38 @@
     },
     {
       "category": "Critical_Power",
-      "score": 36,
+      "score": 47,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Trek 100, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Trek 100. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 45,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Endurance",
+      "score": 45,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
-    "heat": "June in Trek HQ, 801 West Madison Street, Waterloo, Wisconsin 53594 can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Trek 100. Increase sodium intake 48 hours before race day.",
+    "weather": "June in Trek HQ, 801 West Madison Street, Waterloo, Wisconsin 53594 \u2014 Typical June weather in southern Wisconsin features mild temperatures and variable conditions suitable for cycling through farmland. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Trek 100. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Trek 100\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "terrain": "Mixed terrain at Trek 100 requires surface adaptability. Include weekly rides on rolling hills to build confidence."
+    "terrain": "The course profile at Trek 100 rewards specific practice. Include regular rides on rolling hills to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 100 miles of rolling hills in Trek HQ, 801 West Madison Street, Waterloo, Wisconsin 53594.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and TT Threshold to prepare you for 100 miles of rolling hills in Trek HQ, 801 West Madison Street, Waterloo, Wisconsin 53594.",
+  "generated_at": "2026-11-15"
 }

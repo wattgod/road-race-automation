@@ -8,7 +8,7 @@
     "vo2_power": 6,
     "threshold": 7,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 7
   },
@@ -25,7 +25,7 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 63,
+      "score": 89,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -34,17 +34,8 @@
       "workout_context": "Fyn Rundt (Tour of Funen)'s mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Endurance",
-      "score": 59,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 110 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 59,
+      "score": 84,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -54,7 +45,7 @@
     },
     {
       "category": "VO2max",
-      "score": 57,
+      "score": 81,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -63,18 +54,8 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 52,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "110 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
       "category": "G_Spot",
-      "score": 51,
+      "score": 72,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -84,25 +65,25 @@
     },
     {
       "category": "Road_Specific",
-      "score": 49,
+      "score": 70,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Fyn Rundt (Tour of Funen)'s mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 110 miles."
+      "workout_context": "Road-specific control matters at Fyn Rundt (Tour of Funen). Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 110 miles."
     },
     {
       "category": "Over_Under",
-      "score": 44,
+      "score": 63,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Fyn Rundt (Tour of Funen), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Fyn Rundt (Tour of Funen), changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Blended",
-      "score": 40,
+      "score": 56,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -110,8 +91,27 @@
       "workout_context": "Long rides with hard efforts mixed in. Simulates what Fyn Rundt (Tour of Funen)'s mixed terrain actually does to you."
     },
     {
+      "category": "HVLI_Extended",
+      "score": 53,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "110 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Endurance",
+      "score": 53,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 110 miles, base fitness is the difference between racing and surviving."
+    },
+    {
       "category": "Anaerobic_Capacity",
-      "score": 35,
+      "score": 49,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
@@ -120,7 +120,7 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 35,
+      "score": 49,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -129,9 +129,9 @@
     }
   ],
   "race_overlay": {
-    "heat": "May in Funen Island, Denmark (2026: start/finish in Middelfart) can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Fyn Rundt (Tour of Funen). Increase sodium intake 48 hours before race day.",
+    "weather": "May in Funen Island, Denmark (2026: start/finish in Middelfart). Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Fyn Rundt (Tour of Funen). Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Fyn Rundt (Tour of Funen)\u2019s 110 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Endurance to prepare you for 110 miles of mixed terrain in Funen Island, Denmark (2026: start/finish in Middelfart).",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 110 miles of mixed terrain in Funen Island, Denmark (2026: start/finish in Middelfart).",
+  "generated_at": "2026-11-15"
 }

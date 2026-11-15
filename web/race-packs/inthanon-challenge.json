@@ -21,7 +21,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "8,465ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "8,465ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
@@ -40,7 +40,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Inthanon Challenge, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Inthanon Challenge, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Mixed_Climbing",
@@ -59,7 +59,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "284ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "284ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Road_Specific",
@@ -68,7 +68,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Inthanon Challenge's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 29 miles."
+      "workout_context": "Road-specific control matters at Inthanon Challenge. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 29 miles."
     },
     {
       "category": "G_Spot",
@@ -87,7 +87,7 @@
         "SFR Low Cadence",
         "Force Repeats"
       ],
-      "workout_context": "Low-cadence force work for 8,465ft of climbing. The slow, grinding ascents where you can't spin\u2014you push."
+      "workout_context": "Low-cadence force work supports 8,465ft of climbing when the grade lowers cadence. Practice controlled torque while preserving good form."
     },
     {
       "category": "Durability",
@@ -115,7 +115,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Critical_Power",
@@ -124,13 +124,13 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Inthanon Challenge, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Inthanon Challenge. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
-    "nutrition": "Standard hydration and fueling. One bottle per hour minimum. Gel or bar every 45 minutes at race intensity.",
-    "altitude": "Inthanon Challenge with 8,465ft of climbing, much of it above 8,000ft demands altitude preparation. Arrive 5\u20137 days early for acclimatization. Expect 5\u201315% power reduction at altitude. Increase iron intake 4 weeks out. Hydrate aggressively \u2014 altitude increases fluid loss by 20\u201340%. Forecast valley-to-summit contrast \u2014 Chiang Mai 18-34\u00b0C vs. 5-14\u00b0C on northern mountaintops per race-day forecasts; Damp, narrow, quiet road surface near the summit."
+    "nutrition": "Use training to rehearse an eating and drinking plan that matches the ride duration, intensity, and weather. The organizer has not published a reliable resupply plan, so rehearse a self-sufficient carry and revise it when the rider document is released.",
+    "altitude": "Inthanon Challenge includes meaningful altitude exposure. Reduced oxygen availability can affect sustainable power, pacing, and recovery. Use a conservative upper-mountain pacing plan, test any travel or acclimatization strategy before the event, and plan layers for changing conditions. Do not begin iron or other supplements without clinician-guided testing. Forecast valley-to-summit contrast \u2014 Chiang Mai 18-34\u00b0C vs. 5-14\u00b0C on northern mountaintops per race-day forecasts; Damp, narrow, quiet road surface near the summit."
   },
   "pack_summary": "This 10-workout pack focuses on VO2max, Race Simulation, and Over Under to prepare you for 29 miles of mixed terrain in Chom Thong, Chiang Mai, Thailand.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

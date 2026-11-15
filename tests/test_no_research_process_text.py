@@ -1,0 +1,121 @@
+"""Public race-page text must state finished judgments, not the research process.
+
+CLAUDE.md: "Write the finished judgment, never the research process." Race
+pages render these fields straight from race-data/*.json, so phrases that
+narrate how this database built or corrected a profile ("this profile
+previously described...", "as of research", "previously on file") leak onto
+roadielabs.com. This guard walks the publicly rendered sections and fails on
+those phrases.
+
+Skipped: youtube_data (real rider words and transcripts), the citations
+section except each label (labels render in the source list), and any key
+starting with "_" (internal).
+"""
+
+import json
+import re
+from pathlib import Path
+
+import pytest
+
+RACE_DATA_DIR = Path(__file__).parent.parent / "race-data"
+
+PUBLIC_SECTIONS = (
+    "biased_opinion",
+    "course_description",
+    "final_verdict",
+    "history",
+    "vitals",
+    "climate",
+)
+
+SKIP_KEYS = {"youtube_data", "citations"}
+
+PROCESS_PATTERNS = [
+    r"this profile",
+    r"on file\b",
+    r"as of (this )?(research|review|wave)",
+    r"research dump",
+    r"audit pass",
+    r"batch brief",
+    r"editorial pass",
+    r"this database",
+    r"this listing's prior",
+    r"previously (described|said|carried|conflated|listed)",
+    r"do not promote",
+    r"do not assert",
+    # Same leak, other wording: references to the profile's own earlier state,
+    # internal field names, and the database's own record.
+    r"\b(our|the) prior (profile|file|entry|version|course description)",
+    r"prior file\b",
+    r"prior profile's",
+    r"\b(our|the database's)( own)? prior",
+    r"prior listing",
+    r"previously logged",
+    r"catalog_flags",
+    r"eligibility\.notes",
+    r"youtube_data",
+    r"this entry exists",
+    r"the research (found|does not|did not)",
+    r"we could verify",
+    # Correction narratives that slipped past the first pass.
+    r"\bwe(\'ve| have)? (corrected|updated|revised|fixed|moved|renamed)",
+    r"\bour (old|earlier|previous|original) (data|vitals|profile|listing|figures)",
+    r"on-file\b",
+    r"as of this write-up",
+    r"correcting a [\w-]+ (discrepancy|on-file|figure|distance|date)",
+]
+PROCESS_RE = re.compile("|".join(f"(?:{p})" for p in PROCESS_PATTERNS), re.IGNORECASE)
+
+
+def _walk(node, path):
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key in SKIP_KEYS or str(key).startswith("_"):
+                continue
+            yield from _walk(value, f"{path}.{key}")
+    elif isinstance(node, list):
+        for i, value in enumerate(node):
+            yield from _walk(value, f"{path}[{i}]")
+    elif isinstance(node, str):
+        yield path, node
+
+
+def _violations():
+    found = []
+    for f in sorted(RACE_DATA_DIR.glob("*.json")):
+        with open(f, encoding="utf-8") as fh:
+            race = json.load(fh).get("race", {})
+        for section in PUBLIC_SECTIONS:
+            if section not in race:
+                continue
+            for path, text in _walk(race[section], f".race.{section}"):
+                for m in PROCESS_RE.finditer(text):
+                    start = max(0, m.start() - 60)
+                    snippet = text[start : m.end() + 60].replace("\n", " ")
+                    found.append(f"{f.stem} | {path} | {m.group(0)!r} | ...{snippet}...")
+        # Citation labels render in the page's source list, so they are public
+        # too; they may quote a source ("Listing Marked Unconfirmed"), which none
+        # of these patterns match.
+        for i, cite in enumerate(race.get("citations") or []):
+            label = cite.get("label", "") if isinstance(cite, dict) else ""
+            for m in PROCESS_RE.finditer(label):
+                found.append(f"{f.stem} | .race.citations[{i}].label | {m.group(0)!r} | ...{label[:160]}...")
+    return found
+
+
+def test_patterns_compile_and_match_examples():
+    assert PROCESS_RE.search("not the sportive this profile previously described")
+    assert PROCESS_RE.search("As of research, no GPX")
+    assert PROCESS_RE.search("a figure previously on file")
+    assert not PROCESS_RE.search("Unconfirmed for 2026")
+    assert not PROCESS_RE.search("2026 field unconfirmed")
+
+
+def test_no_research_process_text_in_public_fields():
+    violations = _violations()
+    if violations:
+        pytest.fail(
+            f"{len(violations)} public string(s) narrate the research process "
+            "instead of stating the finished judgment:\n" + "\n".join(violations)
+        )

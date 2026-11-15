@@ -8,14 +8,24 @@
     "vo2_power": 5,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 6,
     "race_specificity": 8
   },
   "top_categories": [
     {
-      "category": "Durability",
+      "category": "TT_Threshold",
       "score": 100,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "66ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
+      "category": "Durability",
+      "score": 87,
       "workouts": [
         "Tired VO2max",
         "Double Day Simulation",
@@ -24,37 +34,18 @@
       "workout_context": "At mile 60 of 100, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
-      "category": "TT_Threshold",
-      "score": 82,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "66ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
-    },
-    {
-      "category": "Endurance",
-      "score": 71,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "VO2max",
-      "score": 71,
+      "score": 87,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,600ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,600ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
-      "score": 71,
+      "score": 87,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -64,25 +55,25 @@
     },
     {
       "category": "Over_Under",
-      "score": 70,
+      "score": 86,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Gran Fondo San Diego, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Gran Fondo San Diego, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Road_Specific",
-      "score": 67,
+      "score": 81,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo San Diego's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 100 miles."
+      "workout_context": "Road-specific control matters at Gran Fondo San Diego. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 100 miles."
     },
     {
       "category": "G_Spot",
-      "score": 64,
+      "score": 78,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,18 +82,17 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo San Diego. Train it until it feels boring."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 50,
+      "category": "Endurance",
+      "score": 61,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "100 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 100 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Mixed_Climbing",
-      "score": 50,
+      "score": 61,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -111,7 +101,7 @@
     },
     {
       "category": "Blended",
-      "score": 40,
+      "score": 49,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -120,20 +110,29 @@
     },
     {
       "category": "Norwegian_Double",
-      "score": 38,
+      "score": 46,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
       ],
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 100 miles, sustainable FTP gains matter more than peak power."
+    },
+    {
+      "category": "Critical_Power",
+      "score": 45,
+      "workouts": [
+        "Above CP Repeats",
+        "W-Prime Depletion"
+      ],
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Gran Fondo San Diego. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
-    "heat": "April in San Diego, California, USA can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo San Diego. Increase sodium intake 48 hours before race day.",
+    "weather": "April in San Diego, California, USA \u2014 San Diego in April offers ideal cycling conditions with mild temperatures, low precipitation, and generally favorable wind patterns. The coastal location moderates temperature extremes while providing scenic ocean views. Rehearse adaptable layers and race-day kit changes in the final 2 weeks, and practice stable positioning in crosswinds before Gran Fondo San Diego. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo San Diego\u2019s 100 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Gran Fondo San Diego. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Gran Fondo San Diego requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Gran Fondo San Diego. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Gran Fondo San Diego rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Endurance to prepare you for 100 miles of mixed terrain in San Diego, California, USA.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Durability, and VO2max to prepare you for 100 miles of mixed terrain in San Diego, California, USA.",
+  "generated_at": "2026-11-15"
 }

@@ -4,7 +4,7 @@
   "distance_mi": 92.0,
   "demands": {
     "durability": 4,
-    "climbing": 4,
+    "climbing": 6,
     "vo2_power": 7,
     "threshold": 8,
     "technical": 4,
@@ -24,13 +24,23 @@
       "workout_context": "Race-pace efforts that mimic BGY Airport Granfondo (Granfondo Felice Gimondi)'s demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before May."
     },
     {
+      "category": "TT_Threshold",
+      "score": 92,
+      "workouts": [
+        "Single Sustained Threshold",
+        "Threshold Ramps",
+        "Descending Threshold"
+      ],
+      "workout_context": "100ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
+    },
+    {
       "category": "Road_Specific",
       "score": 89,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "BGY Airport Granfondo (Granfondo Felice Gimondi)'s paved Lombardy roads through pre-Alpine valleys forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 92 miles."
+      "workout_context": "Road-specific control matters at BGY Airport Granfondo (Granfondo Felice Gimondi). Practice on paved Lombardy roads through pre-Alpine valleys: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 92 miles."
     },
     {
       "category": "VO2max",
@@ -40,17 +50,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "When someone attacks on paved Lombardy roads through pre-Alpine valleys, you have 10 seconds to respond or you're off the back. This builds that response."
-    },
-    {
-      "category": "TT_Threshold",
-      "score": 83,
-      "workouts": [
-        "Single Sustained Threshold",
-        "Threshold Ramps",
-        "Descending Threshold"
-      ],
-      "workout_context": "BGY Airport Granfondo (Granfondo Felice Gimondi)'s paved Lombardy roads through pre-Alpine valleys rewards steady threshold power. Surging and recovering costs more watts than just holding."
+      "workout_context": "9,186ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Durability",
@@ -63,8 +63,17 @@
       "workout_context": "At mile 60 of 92, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
+      "category": "Over_Under",
+      "score": 75,
+      "workouts": [
+        "Classic Over-Unders",
+        "Ladder Over-Unders"
+      ],
+      "workout_context": "At BGY Airport Granfondo (Granfondo Felice Gimondi), changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
       "category": "G_Spot",
-      "score": 67,
+      "score": 72,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -73,22 +82,22 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of BGY Airport Granfondo (Granfondo Felice Gimondi). Train it until it feels boring."
     },
     {
-      "category": "Over_Under",
-      "score": 61,
-      "workouts": [
-        "Classic Over-Unders",
-        "Ladder Over-Unders"
-      ],
-      "workout_context": "At BGY Airport Granfondo (Granfondo Felice Gimondi), surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
       "category": "Critical_Power",
       "score": 51,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At BGY Airport Granfondo (Granfondo Felice Gimondi), that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at BGY Airport Granfondo (Granfondo Felice Gimondi). Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 50,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "9,186ft of climbing on grades that change every minute. You need to switch from seated to standing without losing rhythm."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -97,7 +106,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "2-minute all-out efforts on paved Lombardy roads through pre-Alpine valleys. Closing gaps, responding to attacks, sprinting for position. Train the burn."
+      "workout_context": "Steeper ramps, positioning, or pace changes on paved Lombardy roads through pre-Alpine valleys can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Blended",
@@ -106,7 +115,7 @@
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
-      "workout_context": "Long rides with hard efforts mixed in. Simulates what BGY Airport Granfondo (Granfondo Felice Gimondi)'s paved Lombardy roads through pre-Alpine valleys actually does to you."
+      "workout_context": "Endurance with intensity spikes baked in. Exactly what 9,186ft of climbing on paved Lombardy roads through pre-Alpine valleys does to your power file on race day."
     },
     {
       "category": "Norwegian_Double",
@@ -116,22 +125,13 @@
         "Double Threshold"
       ],
       "workout_context": "Two threshold sessions per week without the recovery cost of VO2max work. For 92 miles, sustainable FTP gains matter more than peak power."
-    },
-    {
-      "category": "Endurance",
-      "score": 39,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 92 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for BGY Airport Granfondo (Granfondo Felice Gimondi)\u2019s 92 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at BGY Airport Granfondo (Granfondo Felice Gimondi). Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at BGY Airport Granfondo (Granfondo Felice Gimondi) requires surface adaptability. Include weekly rides on paved lombardy roads through pre-alpine valleys and foothills to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at BGY Airport Granfondo (Granfondo Felice Gimondi). Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at BGY Airport Granfondo (Granfondo Felice Gimondi) rewards specific practice. Include regular rides on paved lombardy roads through pre-alpine valleys and foothills to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Race Simulation, Road Specific, and VO2max to prepare you for 92 miles of paved lombardy roads through pre-alpine valleys and foothills in Bergamo, Lombardy, Italy.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, TT Threshold, and Road Specific to prepare you for 92 miles of paved lombardy roads through pre-alpine valleys and foothills in Bergamo, Lombardy, Italy.",
+  "generated_at": "2026-11-15"
 }

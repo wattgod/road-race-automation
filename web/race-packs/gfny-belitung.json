@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "86ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "86ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Race_Simulation",
@@ -50,7 +50,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GFNY Belitung's paved volcanic mountain roads with sustained forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 85 miles."
+      "workout_context": "Road-specific control matters at GFNY Belitung. Practice on paved volcanic mountain roads with sustained: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 85 miles."
     },
     {
       "category": "Over_Under",
@@ -59,7 +59,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At GFNY Belitung, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At GFNY Belitung, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -79,7 +79,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "7,316ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "7,316ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Endurance",
@@ -125,15 +125,15 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Belitung, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GFNY Belitung. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
     "heat": "February in Tanjung Pandan, Belitung, Indonesia can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GFNY Belitung. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for GFNY Belitung\u2019s 85 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at GFNY Belitung. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at GFNY Belitung requires surface adaptability. Include weekly rides on paved volcanic mountain roads with sustained climbing to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at GFNY Belitung. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at GFNY Belitung rewards specific practice. Include regular rides on paved volcanic mountain roads with sustained climbing to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and Race Simulation to prepare you for 85 miles of paved volcanic mountain roads with sustained climbing in Tanjung Pandan, Belitung, Indonesia.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

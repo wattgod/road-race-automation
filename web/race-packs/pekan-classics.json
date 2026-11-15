@@ -8,24 +8,14 @@
     "vo2_power": 6,
     "threshold": 7,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 101, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 76,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -34,17 +24,27 @@
       "workout_context": "Race-pace efforts that mimic Gran Fondo Pekan / Pekan Classic's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before June."
     },
     {
+      "category": "Durability",
+      "score": 95,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 101, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "Road_Specific",
-      "score": 69,
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Gran Fondo Pekan / Pekan Classic's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 101 miles."
+      "workout_context": "Road-specific control matters at Gran Fondo Pekan / Pekan Classic. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 101 miles."
     },
     {
       "category": "TT_Threshold",
-      "score": 62,
+      "score": 82,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -53,17 +53,8 @@
       "workout_context": "Gran Fondo Pekan / Pekan Classic's mixed terrain rewards steady threshold power. Surging and recovering costs more watts than just holding."
     },
     {
-      "category": "Endurance",
-      "score": 55,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 101 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "VO2max",
-      "score": 53,
+      "score": 70,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -73,7 +64,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 49,
+      "score": 65,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -82,27 +73,17 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Gran Fondo Pekan / Pekan Classic. Train it until it feels boring."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 48,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "101 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
-    },
-    {
       "category": "Over_Under",
-      "score": 47,
+      "score": 62,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Gran Fondo Pekan / Pekan Classic, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Gran Fondo Pekan / Pekan Classic, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Blended",
-      "score": 41,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -111,28 +92,47 @@
     },
     {
       "category": "Critical_Power",
-      "score": 39,
+      "score": 52,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Gran Fondo Pekan / Pekan Classic, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Gran Fondo Pekan / Pekan Classic. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Anaerobic_Capacity",
-      "score": 37,
+      "score": 48,
       "workouts": [
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mixed terrain. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mixed terrain can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
+    },
+    {
+      "category": "HVLI_Extended",
+      "score": 45,
+      "workouts": [
+        "HVLI Extended Z2",
+        "Multi-Hour Z2",
+        "Back-to-Back Long"
+      ],
+      "workout_context": "101 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+    },
+    {
+      "category": "Endurance",
+      "score": 45,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 101 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
-    "heat": "June in Royal Town of Pekan, Pahang, Malaysia can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Gran Fondo Pekan / Pekan Classic. Increase sodium intake 48 hours before race day.",
+    "weather": "June in Royal Town of Pekan, Pahang, Malaysia \u2014 Tropical monsoon climate with warm, humid conditions ideal for road cycling. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Gran Fondo Pekan / Pekan Classic. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Gran Fondo Pekan / Pekan Classic\u2019s 101 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "terrain": "Mixed terrain at Gran Fondo Pekan / Pekan Classic requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "terrain": "The course profile at Gran Fondo Pekan / Pekan Classic rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and Road Specific to prepare you for 101 miles of mixed terrain in Royal Town of Pekan, Pahang, Malaysia.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, Durability, and Road Specific to prepare you for 101 miles of mixed terrain in Royal Town of Pekan, Pahang, Malaysia.",
+  "generated_at": "2026-11-15"
 }

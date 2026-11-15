@@ -8,33 +8,14 @@
     "vo2_power": 6,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 10,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 116, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
-      "category": "Endurance",
-      "score": 64,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 116 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 64,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -44,7 +25,7 @@
     },
     {
       "category": "Race_Simulation",
-      "score": 64,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -53,17 +34,27 @@
       "workout_context": "Race-pace efforts that mimic Epic Gran Canaria's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before February."
     },
     {
+      "category": "Durability",
+      "score": 95,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 116, glycogen is gone. This workout teaches your body to produce watts on fumes."
+    },
+    {
       "category": "Road_Specific",
-      "score": 58,
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Epic Gran Canaria's mountainous paved road forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 116 miles."
+      "workout_context": "Road-specific control matters at Epic Gran Canaria. Practice on mountainous paved road: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 116 miles."
     },
     {
       "category": "VO2max",
-      "score": 54,
+      "score": 85,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -73,16 +64,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 52,
+      "score": 82,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Epic Gran Canaria, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Epic Gran Canaria, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
-      "score": 50,
+      "score": 79,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -91,18 +82,17 @@
       "workout_context": "88\u201392% FTP is where you'll spend the hardest sustained miles of Epic Gran Canaria. Train it until it feels boring."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 49,
+      "category": "Endurance",
+      "score": 55,
       "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
       ],
-      "workout_context": "116 miles rewards fat oxidation. This volume work shifts your fuel mix so you're still burning fat at hour 5, not bonking at hour 3."
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 116 miles, base fitness is the difference between racing and surviving."
     },
     {
       "category": "Blended",
-      "score": 35,
+      "score": 55,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -111,7 +101,7 @@
     },
     {
       "category": "Mixed_Climbing",
-      "score": 35,
+      "score": 55,
       "workouts": [
         "Seated/Standing Climbs",
         "Variable Grade Simulation"
@@ -120,20 +110,29 @@
     },
     {
       "category": "Critical_Power",
-      "score": 33,
+      "score": 52,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Epic Gran Canaria, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Epic Gran Canaria. Train them without letting those efforts derail the longer pacing plan."
+    },
+    {
+      "category": "Anaerobic_Capacity",
+      "score": 48,
+      "workouts": [
+        "2min Killers",
+        "90sec Repeats"
+      ],
+      "workout_context": "2-minute all-out efforts on mountainous paved road. Closing gaps, responding to attacks, sprinting for position. Train the burn."
     }
   ],
   "race_overlay": {
-    "heat": "February in Maspalomas, Gran Canaria, Spain. Begin heat acclimatization 10\u201314 days before Epic Gran Canaria \u2014 20\u201330min sauna sessions or midday rides in full kit. Pre-load sodium 48 hours out. Target 500\u2013750ml/hr with electrolytes on race day.",
+    "weather": "February in Maspalomas, Gran Canaria, Spain. Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Epic Gran Canaria. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for Epic Gran Canaria\u2019s 116 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Epic Gran Canaria. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Epic Gran Canaria requires surface adaptability. Include weekly rides on mountainous paved road to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Epic Gran Canaria. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Epic Gran Canaria rewards specific practice. Include regular rides on mountainous paved road to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Endurance, and TT Threshold to prepare you for 116 miles of mountainous paved road in Maspalomas, Gran Canaria, Spain.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, Race Simulation, and Durability to prepare you for 116 miles of mountainous paved road in Maspalomas, Gran Canaria, Spain.",
+  "generated_at": "2026-11-15"
 }

@@ -31,7 +31,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "54ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "54ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "VO2max",
@@ -41,7 +41,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "5,423ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "5,423ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Race_Simulation",
@@ -60,7 +60,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "GFNY Cali's fast valley roads with long rolling and climbing forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 99 miles."
+      "workout_context": "Road-specific control matters at GFNY Cali. Practice on fast valley roads with long rolling and climbing: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 99 miles."
     },
     {
       "category": "Endurance",
@@ -78,7 +78,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At GFNY Cali, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At GFNY Cali, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "G_Spot",
@@ -125,15 +125,15 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At GFNY Cali, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at GFNY Cali. Train them without letting those efforts derail the longer pacing plan."
     }
   ],
   "race_overlay": {
     "heat": "July in Cali, Valle del Cauca, Colombia can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before GFNY Cali. Increase sodium intake 48 hours before race day.",
     "nutrition": "Target 60\u201380g carbs/hour for GFNY Cali\u2019s 99 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at GFNY Cali. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at GFNY Cali requires surface adaptability. Include weekly rides on fast valley roads with long rolling and climbing sectors to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at GFNY Cali. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at GFNY Cali rewards specific practice. Include regular rides on fast valley roads with long rolling and climbing sectors to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and VO2max to prepare you for 99 miles of fast valley roads with long rolling and climbing sectors in Cali, Valle del Cauca, Colombia.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

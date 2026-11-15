@@ -8,24 +8,14 @@
     "vo2_power": 4,
     "threshold": 8,
     "technical": 2,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 2,
     "race_specificity": 6
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
-    },
-    {
       "category": "TT_Threshold",
-      "score": 91,
+      "score": 100,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
@@ -35,7 +25,7 @@
     },
     {
       "category": "G_Spot",
-      "score": 73,
+      "score": 80,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -45,16 +35,26 @@
     },
     {
       "category": "Over_Under",
-      "score": 67,
+      "score": 73,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At G\u00f6teborgsgirot, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At G\u00f6teborgsgirot, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
+    },
+    {
+      "category": "Durability",
+      "score": 70,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "At mile 60 of 93, glycogen is gone. This workout teaches your body to produce watts on fumes."
     },
     {
       "category": "Race_Simulation",
-      "score": 64,
+      "score": 70,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -63,26 +63,17 @@
       "workout_context": "Race-pace efforts that mimic G\u00f6teborgsgirot's demands. Pacing, fueling, and tactical decisions under fatigue. Practice the race before race day."
     },
     {
-      "category": "Endurance",
-      "score": 61,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
-    },
-    {
       "category": "Road_Specific",
-      "score": 55,
+      "score": 60,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "G\u00f6teborgsgirot's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 93 miles."
+      "workout_context": "Road-specific control matters at G\u00f6teborgsgirot. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 93 miles."
     },
     {
       "category": "VO2max",
-      "score": 52,
+      "score": 57,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -91,18 +82,8 @@
       "workout_context": "When someone attacks on mixed terrain, you have 10 seconds to respond or you're off the back. This builds that response."
     },
     {
-      "category": "HVLI_Extended",
-      "score": 48,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 93 miles without cracking. No shortcuts."
-    },
-    {
       "category": "Norwegian_Double",
-      "score": 48,
+      "score": 53,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -111,7 +92,7 @@
     },
     {
       "category": "Blended",
-      "score": 36,
+      "score": 40,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
@@ -120,18 +101,36 @@
     },
     {
       "category": "Tempo",
-      "score": 36,
+      "score": 40,
       "workouts": [
         "Tempo Blocks",
         "Extended Tempo"
       ],
       "workout_context": "Tempo is G\u00f6teborgsgirot's race pace. The wattage you'll hold for 93 miles on mixed terrain. Train it until it's automatic."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 40,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
+      "category": "Endurance",
+      "score": 37,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Every hard session works better with a bigger aerobic base. At 93 miles, base fitness is the difference between racing and surviving."
     }
   ],
   "race_overlay": {
-    "heat": "Complete 3\u20134 heat exposure sessions in the final 2 weeks before G\u00f6teborgsgirot. Increase sodium intake 48 hours before race day.",
+    "weather": "Rehearse adaptable layers and race-day kit changes in the final 2 weeks before G\u00f6teborgsgirot. Use the organizer's current forecast and safety instructions for final choices.",
     "nutrition": "Target 60\u201380g carbs/hour for G\u00f6teborgsgirot\u2019s 93 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, TT Threshold, and G Spot to prepare you for 93 miles of mixed terrain in Gothenburg, Sweden.",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on TT Threshold, G Spot, and Over Under to prepare you for 93 miles of mixed terrain in Gothenburg, Sweden.",
+  "generated_at": "2026-11-15"
 }

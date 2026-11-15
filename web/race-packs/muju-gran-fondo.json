@@ -21,7 +21,7 @@
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "81ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "81ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "VO2max",
@@ -31,7 +31,7 @@
         "Descending VO2 Pyramid",
         "Norwegian 4x8"
       ],
-      "workout_context": "6,562ft of climbing means repeated surges above threshold. VO2max work is how you survive the fifth climb, not just the first."
+      "workout_context": "6,562ft of climbing makes aerobic ceiling relevant when the grade or pace changes. VO2max work supports those hard moments; sustained climbing and conservative pacing remain the spine."
     },
     {
       "category": "Over_Under",
@@ -40,7 +40,7 @@
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Muju Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
+      "workout_context": "At Muju Gran Fondo, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Race_Simulation",
@@ -69,7 +69,7 @@
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Muju Gran Fondo's mountain passes forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 80 miles."
+      "workout_context": "Road-specific control matters at Muju Gran Fondo. Practice on mountain passes: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 80 miles."
     },
     {
       "category": "Durability",
@@ -97,7 +97,7 @@
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Muju Gran Fondo, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Muju Gran Fondo. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Anaerobic_Capacity",
@@ -106,7 +106,7 @@
         "2min Killers",
         "90sec Repeats"
       ],
-      "workout_context": "Short, max efforts are unavoidable. Punchy climbs, gap closures, attacks on mountain passes. If you haven't trained them, you'll crack."
+      "workout_context": "Steeper ramps, positioning, or pace changes on mountain passes can demand short hard efforts. Practice them without compromising the sustained work that defines the course."
     },
     {
       "category": "Norwegian_Double",
@@ -129,9 +129,9 @@
   ],
   "race_overlay": {
     "nutrition": "Target 60\u201380g carbs/hour for Muju Gran Fondo\u2019s 80 miles. Start fueling within the first 30 minutes \u2014 early fueling prevents late-race collapse. Bonking at mile 60 is a nutrition failure, not a fitness failure.",
-    "altitude": "Moderate altitude at Muju Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Muju Gran Fondo requires surface adaptability. Include weekly rides on mountain passes to build confidence."
+    "altitude": "Altitude may change sustainable power and recovery at Muju Gran Fondo. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Muju Gran Fondo rewards specific practice. Include regular rides on mountain passes to build confidence."
   },
   "pack_summary": "This 10-workout pack focuses on TT Threshold, VO2max, and Over Under to prepare you for 80 miles of mountain passes in Muju County, North Jeolla Province, South Korea.",
-  "generated_at": "2026-08-05"
+  "generated_at": "2026-11-15"
 }

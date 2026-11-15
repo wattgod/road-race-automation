@@ -8,24 +8,14 @@
     "vo2_power": 5,
     "threshold": 8,
     "technical": 4,
-    "heat_resilience": 6,
+    "heat_resilience": 0,
     "altitude": 4,
     "race_specificity": 9
   },
   "top_categories": [
     {
-      "category": "Durability",
-      "score": 100,
-      "workouts": [
-        "Tired VO2max",
-        "Double Day Simulation",
-        "Progressive Fatigue"
-      ],
-      "workout_context": "78 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
-    },
-    {
       "category": "Race_Simulation",
-      "score": 88,
+      "score": 100,
       "workouts": [
         "Breakaway Simulation",
         "Variable Pace Chaos",
@@ -35,26 +25,36 @@
     },
     {
       "category": "TT_Threshold",
-      "score": 84,
+      "score": 95,
       "workouts": [
         "Single Sustained Threshold",
         "Threshold Ramps",
         "Descending Threshold"
       ],
-      "workout_context": "63ft/mi means long efforts at or near FTP on every climb. If your threshold cracks at minute 15, you'll walk the rest."
+      "workout_context": "63ft/mi signals a climbing-heavy course. Sustained sub-threshold and threshold work builds the steady power needed without turning the opening climb into the day\u2019s hardest effort."
     },
     {
       "category": "Road_Specific",
-      "score": 80,
+      "score": 91,
       "workouts": [
         "Surge and Settle",
         "Terrain Microbursts"
       ],
-      "workout_context": "Belgrade Gran Fondo's mixed terrain forces constant power changes. Accelerate over rises and out of corners, settle on the open road, and repeat for 78 miles."
+      "workout_context": "Road-specific control matters at Belgrade Gran Fondo. Practice on mixed terrain: use smooth gear and cadence changes, accelerate deliberately out of corners, and settle quickly back into sustainable power for 78 miles."
+    },
+    {
+      "category": "Durability",
+      "score": 77,
+      "workouts": [
+        "Tired VO2max",
+        "Double Day Simulation",
+        "Progressive Fatigue"
+      ],
+      "workout_context": "78 miles on mixed terrain burns energy faster than the distance suggests. Train the fade resistance now."
     },
     {
       "category": "G_Spot",
-      "score": 67,
+      "score": 76,
       "workouts": [
         "G-Spot Standard",
         "G-Spot Extended",
@@ -64,7 +64,7 @@
     },
     {
       "category": "VO2max",
-      "score": 67,
+      "score": 76,
       "workouts": [
         "5x3 VO2 Classic",
         "Descending VO2 Pyramid",
@@ -74,35 +74,16 @@
     },
     {
       "category": "Over_Under",
-      "score": 65,
+      "score": 74,
       "workouts": [
         "Classic Over-Unders",
         "Ladder Over-Unders"
       ],
-      "workout_context": "At Belgrade Gran Fondo, surges push you above threshold and you have to recover while still riding. Over-unders train exactly that."
-    },
-    {
-      "category": "Endurance",
-      "score": 61,
-      "workouts": [
-        "Pre-Race Openers",
-        "Terrain Simulation Z2"
-      ],
-      "workout_context": "Base fitness for Belgrade Gran Fondo. Without this, the hard workouts break you down instead of building you up."
-    },
-    {
-      "category": "HVLI_Extended",
-      "score": 43,
-      "workouts": [
-        "HVLI Extended Z2",
-        "Multi-Hour Z2",
-        "Back-to-Back Long"
-      ],
-      "workout_context": "The aerobic base that lets you ride mixed terrain at tempo for 78 miles without cracking. No shortcuts."
+      "workout_context": "At Belgrade Gran Fondo, changes in grade or pace can lift effort above threshold before it settles again. Over-unders train that transition while you keep riding."
     },
     {
       "category": "Norwegian_Double",
-      "score": 43,
+      "score": 48,
       "workouts": [
         "Norwegian 4x8 Classic",
         "Double Threshold"
@@ -111,29 +92,47 @@
     },
     {
       "category": "Critical_Power",
-      "score": 41,
+      "score": 47,
       "workouts": [
         "Above CP Repeats",
         "W-Prime Depletion"
       ],
-      "workout_context": "How long can you hold 105% FTP before you blow? At Belgrade Gran Fondo, that number decides whether you bridge or get dropped."
+      "workout_context": "Brief efforts above sustainable power can come from grade changes, positioning, or closing a gap at Belgrade Gran Fondo. Train them without letting those efforts derail the longer pacing plan."
     },
     {
       "category": "Blended",
-      "score": 40,
+      "score": 45,
       "workouts": [
         "Z2 + VO2 Combo",
         "Endurance with Spikes"
       ],
       "workout_context": "Endurance with intensity spikes baked in. Exactly what 4,921ft of climbing on mixed terrain does to your power file on race day."
+    },
+    {
+      "category": "Mixed_Climbing",
+      "score": 45,
+      "workouts": [
+        "Seated/Standing Climbs",
+        "Variable Grade Simulation"
+      ],
+      "workout_context": "Varied gradients on mixed terrain demand climbing versatility. Sit the shallow stuff, stand the steep stuff, switch without thinking."
+    },
+    {
+      "category": "Endurance",
+      "score": 42,
+      "workouts": [
+        "Pre-Race Openers",
+        "Terrain Simulation Z2"
+      ],
+      "workout_context": "Base fitness for Belgrade Gran Fondo. Without this, the hard workouts break you down instead of building you up."
     }
   ],
   "race_overlay": {
-    "heat": "October in Belgrade, Serbia (one-off 2017 event; no current edition \u2014 see eligibility) can bring heat. Complete 3\u20134 heat exposure sessions in the final 2 weeks before Belgrade Gran Fondo. Increase sodium intake 48 hours before race day.",
-    "nutrition": "Target 40\u201360g carbs/hour for Belgrade Gran Fondo\u2019s 78 miles. Front-load calories in the first half. One bottle per hour minimum, more in heat.",
-    "altitude": "Moderate altitude at Belgrade Gran Fondo. Arrive 2\u20133 days early. Reduce intensity expectations by 5\u201310%. Hydrate aggressively.",
-    "terrain": "Mixed terrain at Belgrade Gran Fondo requires surface adaptability. Include weekly rides on mixed terrain to build confidence."
+    "weather": "October in Belgrade, Serbia (one-off 2017 event; no current edition \u2014 see eligibility). Rehearse adaptable layers and race-day kit changes in the final 2 weeks before Belgrade Gran Fondo. Use the organizer's current forecast and safety instructions for final choices.",
+    "nutrition": "Use training to rehearse an eating and drinking plan for Belgrade Gran Fondo's 78 miles. Start early and use products you tolerate. The organizer has not published a reliable resupply plan, so rehearse a self-sufficient carry and revise it when the rider document is released.",
+    "altitude": "Altitude may change sustainable power and recovery at Belgrade Gran Fondo. Use conservative pacing and test any travel strategy before the event.",
+    "terrain": "The course profile at Belgrade Gran Fondo rewards specific practice. Include regular rides on mixed terrain to build confidence."
   },
-  "pack_summary": "This 10-workout pack focuses on Durability, Race Simulation, and TT Threshold to prepare you for 78 miles of mixed terrain in Belgrade, Serbia (one-off 2017 event; no current edition \u2014 see eligibility).",
-  "generated_at": "2026-08-05"
+  "pack_summary": "This 10-workout pack focuses on Race Simulation, TT Threshold, and Road Specific to prepare you for 78 miles of mixed terrain in Belgrade, Serbia (one-off 2017 event; no current edition \u2014 see eligibility).",
+  "generated_at": "2026-11-15"
 }
