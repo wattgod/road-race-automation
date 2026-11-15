@@ -15,7 +15,7 @@ Features:
   - Filter by tier and region (JavaScript client-side)
   - Monthly race count summary
   - JSON-LD BreadcrumbList
-  - Substack CTA for calendar updates
+  - Newsletter sign-up (Roadie's own list, RL-16)
 
 Usage:
     python wordpress/generate_calendar.py
@@ -31,6 +31,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from brand_tokens import COLORS, get_font_face_css, get_ga4_head_snippet, get_tokens_css, SITE_BASE_URL
+from newsletter_signup import NEWSLETTER_TEXT, NEWSLETTER_TITLE, newsletter_css, newsletter_form_html
 from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
@@ -266,6 +267,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 }}
 
 {get_site_header_css()}
+{newsletter_css()}
 
 .rl-cal-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-blue); padding: 12px 0; letter-spacing: 0.5px; }}
 .rl-cal-breadcrumb a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
@@ -393,20 +395,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   text-align: center;
 }}
 .rl-cal-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-cool-white); margin: 0 0 12px; border: none; }}
-.rl-cal-cta p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
-.rl-cal-cta-btn {{
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 2px solid var(--rl-color-cool-white);
-  color: var(--rl-color-cool-white);
-  transition: all 0.2s;
-}}
-.rl-cal-cta-btn:hover {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
+.rl-cal-cta > p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
 
 .rl-cal-footer {{
   padding: 24px 0;
@@ -466,9 +455,9 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   {months_html}
 
   <section class="rl-cal-cta">
-    <h2>Get Race Reminders</h2>
-    <p>Subscribe to the Roadie Labs newsletter for registration alerts, training tips, and race previews delivered to your inbox.</p>
-    <a href="https://gravelgodcycling.substack.com" class="rl-cal-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
+    <h2>{esc(NEWSLETTER_TITLE)}</h2>
+    <p>{esc(NEWSLETTER_TEXT)}</p>
+    {newsletter_form_html("calendar", dark=True)}
   </section>
 
   <footer class="rl-cal-footer">

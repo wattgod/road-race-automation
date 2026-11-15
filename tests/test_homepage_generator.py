@@ -16,7 +16,6 @@ from generate_homepage import (
     get_featured_races,
     load_editorial_one_liners,
     load_upcoming_races,
-    fetch_substack_posts,
     load_guide_chapters,
     generate_homepage,
     build_nav,
@@ -92,10 +91,7 @@ def chapters():
 
 @pytest.fixture(scope="module")
 def homepage_html(race_index):
-    from unittest.mock import patch
-    fake_posts = [{"title": "Test Post", "url": "https://example.com", "snippet": "Test snippet"}]
-    with patch("generate_homepage.fetch_substack_posts", return_value=fake_posts):
-        return generate_homepage(race_index)
+    return generate_homepage(race_index)
 
 
 def test_year_review_has_homepage_entry(homepage_html):
@@ -247,11 +243,11 @@ class TestSectionBuilders:
         assert "/road-races/" in nav
         assert "/coaching/" in nav
         assert "/about/" in nav
-        assert "substack" in nav.lower()  # ARTICLES points at the live Substack
+        assert "substack" not in nav.lower()  # RL-16: no Gravel God Substack in the nav
         assert ">RACES</a>" in nav
         assert ">PRODUCTS</a>" in nav
         assert ">SERVICES</a>" in nav
-        assert '>ARTICLES<span class="rl-external-indicator"' in nav
+        assert "ARTICLES" not in nav
         assert ">ABOUT</a>" in nav
 
     def test_nav_has_dropdowns(self):
@@ -264,17 +260,16 @@ class TestSectionBuilders:
         assert "breadcrumb" not in nav.lower()
 
     def test_ticker_has_content(self, one_liners, upcoming):
-        substack = fetch_substack_posts()
-        ticker = build_ticker(one_liners, substack, upcoming)
+        ticker = build_ticker(one_liners, upcoming)
         assert "rl-hp-ticker" in ticker
         assert "rl-ticker-scroll" in build_homepage_css()
 
     def test_ticker_has_editorial_quotes(self, one_liners, upcoming):
-        ticker = build_ticker(one_liners, [], upcoming)
+        ticker = build_ticker(one_liners, upcoming)
         assert "&ldquo;" in ticker  # Has quoted one-liners
 
     def test_ticker_empty_input(self):
-        ticker = build_ticker([], [], [])
+        ticker = build_ticker([], [])
         assert ticker == ""
 
     def test_coming_up_section(self, upcoming):
@@ -377,31 +372,24 @@ class TestSectionBuilders:
         html = build_training_cta()
         assert "/questionnaire/" in html
 
-    def test_email_capture_has_content(self):
+    def test_email_capture_is_roadie_form(self):
         html = build_email_capture()
-        assert "Slow, Mid, 38s" in html
-        assert "gravelgodcycling.substack.com/embed" in html
         assert "rl-hp-email" in html
+        assert 'id="newsletter"' in html
+        assert 'class="rl-newsletter-form" data-placement="homepage"' in html
+        assert "substack" not in html.lower()
+        assert "<iframe" not in html
+        assert "Slow, Mid, 38s" not in html
 
-    def test_email_capture_with_articles(self):
-        posts = [
-            {"title": "Test Article", "url": "https://example.com/test", "snippet": "A test snippet."},
-            {"title": "Another Post", "url": "https://example.com/another", "snippet": "More content."},
-        ]
-        html = build_email_capture(posts)
-        assert "rl-hp-article-carousel" in html
-        assert "Test Article" in html
-        assert 'data-ga="article_click"' in html
-
-    def test_email_capture_no_articles(self):
-        html = build_email_capture([])
-        assert "rl-hp-article-carousel" not in html
+    def test_email_capture_has_no_article_carousel(self):
+        assert "rl-hp-article-carousel" not in build_email_capture()
+        assert "rl-hp-article-card" not in build_homepage_css()
 
     def test_footer_has_links(self):
         html = build_footer()
         assert "/road-races/" in html
         assert "/coaching/" in html
-        assert "gravelgodcycling.substack.com" in html
+        assert "substack" not in html.lower()
         # Dead URLs removed in the Jul 2026 whoops audit — restore only
         # after the target pages actually deploy.
         assert "/articles/" not in html
@@ -781,7 +769,7 @@ class TestRegressions:
         one_liners = [
             {"name": "Test Race", "slug": "test", "score": 90, "tier": 1, "text": "A great race."},
         ]
-        ticker = build_ticker(one_liners, [], [])
+        ticker = build_ticker(one_liners, [])
         assert "rl-hp-ticker-item" in ticker
         assert "rl-hp-ticker-sep" in ticker
         # Must NOT have unprefixed classes
@@ -854,12 +842,13 @@ class TestRegressions:
         css = build_homepage_css()
         assert "transition: opacity" not in css
 
-    def test_substack_included_in_ticker(self, homepage_html):
-        """Substack articles should appear in the ticker to surface editorial voice."""
+    def test_no_substack_in_ticker(self, homepage_html):
+        """RL-16: the ticker no longer carries Gravel God Substack posts."""
         import re
         ticker_match = re.search(r'class="rl-hp-ticker".*?</div>\s*</div>', homepage_html, re.DOTALL)
         if ticker_match:
-            assert "NEWSLETTER" in ticker_match.group(0), "Substack posts should appear in ticker"
+            assert "NEWSLETTER" not in ticker_match.group(0)
+            assert "substack" not in ticker_match.group(0).lower()
 
     def test_latest_takes_section(self, homepage_html):
         """Latest Takes is HIDDEN while FEATURED_ONSITE_ARTICLES is empty
@@ -916,11 +905,10 @@ class TestRegressions:
         css = build_homepage_css()
         assert ".rl-hp-ticker { display: none; }" in css
 
-    def test_articles_stack_on_mobile(self):
-        """Article cards should stack vertically on mobile."""
+    def test_newsletter_form_stacks_on_mobile(self):
+        """The sign-up row stacks vertically on mobile."""
         css = build_homepage_css()
-        assert "flex-direction: column" in css
-        assert ".rl-hp-article-card:nth-child(n+4) { display: none; }" in css
+        assert ".rl-newsletter-row { flex-direction: column; }" in css
 
 
 # ── New Section Builders ─────────────────────────────────────

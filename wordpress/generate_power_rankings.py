@@ -3,7 +3,7 @@
 Generate annual power rankings page for SEO.
 
 Creates /race/power-rankings-{year}/index.html showing all races ranked by
-overall score with tier badges, score breakdowns, and Substack CTA.
+overall score with tier badges, score breakdowns, and a newsletter sign-up.
 Targets "best road races 2026", "road race rankings", "top road events".
 
 Usage:
@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from brand_tokens import COLORS, get_font_face_css, get_ga4_head_snippet, get_tokens_css, SITE_BASE_URL
+from newsletter_signup import NEWSLETTER_TEXT, NEWSLETTER_TITLE, newsletter_css, newsletter_form_html
 from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
@@ -191,6 +192,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 }}
 
 {get_site_header_css()}
+{newsletter_css()}
 
 .rl-pr-breadcrumb {{ font-size: 11px; color: var(--rl-color-secondary-blue); padding: 12px 0; letter-spacing: 0.5px; }}
 .rl-pr-breadcrumb a {{ color: var(--rl-color-secondary-blue); text-decoration: none; }}
@@ -320,20 +322,7 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   text-align: center;
 }}
 .rl-pr-cta h2 {{ font-family: var(--rl-font-editorial); font-size: 22px; color: var(--rl-color-cool-white); margin: 0 0 12px; }}
-.rl-pr-cta p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
-.rl-pr-cta-btn {{
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 2px solid var(--rl-color-cool-white);
-  color: var(--rl-color-cool-white);
-  transition: all 0.2s;
-}}
-.rl-pr-cta-btn:hover {{ background: var(--rl-color-cool-white); color: var(--rl-color-dark-navy); }}
+.rl-pr-cta > p {{ font-size: 14px; line-height: 1.6; margin: 0 0 16px; }}
 
 .rl-pr-footer {{
   padding: 24px 0;
@@ -410,9 +399,9 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
   </div>
 
   <section class="rl-pr-cta">
-    <h2>Get Notified When Rankings Update</h2>
-    <p>Subscribe to the Roadie Labs newsletter for ranking changes, new entries, and exclusive race analysis.</p>
-    <a href="https://gravelgodcycling.substack.com" class="rl-pr-cta-btn" target="_blank" rel="noopener">Subscribe Free</a>
+    <h2>{esc(NEWSLETTER_TITLE)}</h2>
+    <p>{esc(NEWSLETTER_TEXT)}</p>
+    {newsletter_form_html("power_rankings", dark=True)}
   </section>
 
   <footer class="rl-pr-footer">

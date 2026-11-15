@@ -1,17 +1,17 @@
 """Shared mega-footer used by all generated pages.
 
 Provides get_mega_footer_html() and get_mega_footer_css() for a consistent
-6-column footer across homepage, race profiles, coaching, about, prep kits,
+5-column footer across homepage, race profiles, coaching, about, prep kits,
 series hubs, and coaching apply pages.
 """
 from __future__ import annotations
 
 from datetime import date
 from endure_offer import get_endure_offer_html
+from newsletter_signup import NEWSLETTER_TEXT, newsletter_css, newsletter_form_html
 from season import season_year
 
 SITE_BASE_URL = "https://roadielabs.com"
-SUBSTACK_URL = "https://gravelgodcycling.substack.com"  # TODO: Roadie Labs newsletter
 CURRENT_YEAR = date.today().year  # copyright line only
 SEASON_YEAR = season_year()  # calendar link: the coming season
 
@@ -46,16 +46,10 @@ def get_mega_footer_html() -> str:
         <a href="{SITE_BASE_URL}/consulting/">Consulting</a>
       </nav>
     </div>
-    <div class="rl-mega-footer-col">
-      <h4 class="rl-mega-footer-heading">ARTICLES</h4>
-      <nav class="rl-mega-footer-links">
-        <a href="{SUBSTACK_URL}" target="_blank" rel="noopener">Slow Mid 38s</a>
-      </nav>
-    </div>
     <div class="rl-mega-footer-col rl-mega-footer-newsletter">
       <h4 class="rl-mega-footer-heading">NEWSLETTER</h4>
-      <p class="rl-mega-footer-newsletter-desc">Essays on training, meaning, and not majoring in the minors.</p>
-      <a href="{SUBSTACK_URL}" class="rl-mega-footer-subscribe" target="_blank" rel="noopener" data-ga="subscribe_click" data-ga-label="mega_footer">SUBSCRIBE</a>
+      <p class="rl-mega-footer-newsletter-desc">{NEWSLETTER_TEXT}</p>
+      {newsletter_form_html("mega_footer", fine_print=False, dark=True)}
     </div>
   </div>
   <div class="rl-mega-footer-legal">
@@ -75,10 +69,10 @@ def get_mega_footer_html() -> str:
 
 def get_mega_footer_css() -> str:
     """Return the mega-footer CSS using var(--rl-*) design tokens."""
-    return """
+    return newsletter_css() + """
 /* ── Mega Footer ───────────────────────────────────────── */
 .rl-mega-footer { background: var(--rl-color-dark-navy); border-top: var(--rl-border-standard); margin-top: var(--rl-spacing-xl); }
-.rl-mega-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr; gap: var(--rl-spacing-lg); padding: var(--rl-spacing-2xl) var(--rl-spacing-xl); max-width: 1200px; margin: 0 auto; }
+.rl-mega-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr; gap: var(--rl-spacing-lg); padding: var(--rl-spacing-2xl) var(--rl-spacing-xl); max-width: 1200px; margin: 0 auto; }
 .rl-mega-footer-brand-title { font-family: var(--rl-font-data); font-size: var(--rl-font-size-sm); font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-ultra-wide); color: var(--rl-color-white); margin: 0 0 var(--rl-spacing-sm) 0; }
 .rl-mega-footer-brand-tagline { font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-xs); line-height: var(--rl-line-height-prose); color: var(--rl-color-silver); margin: 0; }
 .rl-mega-footer-heading { font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-ultra-wide); text-transform: uppercase; color: var(--rl-color-orange); margin: 0 0 var(--rl-spacing-md) 0; }
@@ -86,8 +80,6 @@ def get_mega_footer_css() -> str:
 .rl-mega-footer-links a { color: var(--rl-color-silver); font-family: var(--rl-font-data); font-size: 12px; text-decoration: none; transition: color var(--rl-transition-hover); }
 .rl-mega-footer-links a:hover { color: var(--rl-color-white); }
 .rl-mega-footer-newsletter-desc { font-family: var(--rl-font-editorial); font-size: var(--rl-font-size-xs); color: var(--rl-color-silver); line-height: var(--rl-line-height-prose); margin: 0 0 var(--rl-spacing-md) 0; }
-.rl-mega-footer-subscribe { display: inline-block; padding: var(--rl-spacing-xs) var(--rl-spacing-lg); font-family: var(--rl-font-data); font-size: 11px; font-weight: var(--rl-font-weight-bold); letter-spacing: var(--rl-letter-spacing-wider); background: var(--rl-color-signal-red); color: var(--rl-color-white); text-decoration: none; border: var(--rl-border-width-standard) solid var(--rl-color-signal-red); transition: background-color var(--rl-transition-hover), border-color var(--rl-transition-hover); }
-.rl-mega-footer-subscribe:hover { background: transparent; border-color: var(--rl-color-signal-red); }
 .rl-mega-footer-legal { padding: var(--rl-spacing-md) var(--rl-spacing-xl); border-top: 1px solid var(--rl-color-primary-navy); text-align: center; font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); color: var(--rl-color-secondary-blue); letter-spacing: var(--rl-letter-spacing-wide); max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: var(--rl-spacing-md); flex-wrap: wrap; }
 .rl-mega-footer-legal-links { display: flex; gap: var(--rl-spacing-md); }
 .rl-mega-footer-legal-links a { color: var(--rl-color-secondary-blue); text-decoration: none; transition: color var(--rl-transition-hover); }

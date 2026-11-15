@@ -35,7 +35,6 @@ def _assert_restrained(name: str, html: str) -> None:
 
 
 def test_generated_homepage_about_methodology_avoid_defensive_trust_copy(monkeypatch):
-    monkeypatch.setattr(generate_homepage, "fetch_substack_posts", lambda: [])
     race_index = json.loads((PROJECT_ROOT / "web" / "race-index.json").read_text())
 
     pages = {

@@ -19,12 +19,12 @@ from pathlib import Path
 
 from generate_neo_brutalist import (
     SITE_BASE_URL,
-    SUBSTACK_URL,
     get_page_css,
     build_inline_js,
     write_shared_assets,
 )
 from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
+from newsletter_signup import NEWSLETTER_TEXT, newsletter_form_html
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
@@ -214,8 +214,8 @@ def build_ctas() -> str:
         </div>
         <div class="rl-about-cta">
           <h3>Newsletter</h3>
-          <p>Slow, Mid, 38s &mdash; essays on training, meaning, and not majoring in the minors.</p>
-          <a href="{SUBSTACK_URL}" target="_blank" rel="noopener" class="rl-about-cta-btn" data-cta="newsletter">SUBSCRIBE</a>
+          <p>{html.escape(NEWSLETTER_TEXT)}</p>
+          {newsletter_form_html("about")}
         </div>
       </div>
     </div>

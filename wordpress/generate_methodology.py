@@ -19,7 +19,6 @@ from pathlib import Path
 # Import shared constants from the race page generator
 from generate_neo_brutalist import (
     SITE_BASE_URL,
-    SUBSTACK_URL,
     get_page_css,
     build_inline_js,
     write_shared_assets,
