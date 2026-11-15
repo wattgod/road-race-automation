@@ -4,7 +4,11 @@
  * Description: Geo-gated cookie consent banner with Google Consent Mode v2.
  * Version: 1.2
  *
- * Deployed via: python3 scripts/push_wordpress.py --sync-consent
+ * NOT DEPLOYED. roadielabs.com is static HTML on SiteGround with no WordPress
+ * and no wp-content/, and push_wordpress.py has no flag that uploads this file.
+ * Visitors get consent only from the head script baked into regenerated
+ * pages (wordpress/cookie_consent.py). This file is kept in parity with that
+ * script (tests/test_cookie_consent_mu_plugin.py) for a future WordPress host.
  *
  * Injects a consent banner + Consent Mode defaults before GA4 fires.
  * Same model as gravelgodcycling.com (Matti's ruling, 2026-11-14):

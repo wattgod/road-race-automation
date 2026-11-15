@@ -30,7 +30,7 @@ from generate_neo_brutalist import (
 from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
-from cookie_consent import get_consent_banner_html
+from cookie_consent import ANALYTICS_CONSENT_STATE_JS, get_consent_banner_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -808,6 +808,8 @@ def build_consulting_js() -> str:
   var checkoutBtn=checkoutForm?checkoutForm.querySelector('.rl-consult-form-submit'):null;
   var checkoutSubmitting=false;
 
+  {ANALYTICS_CONSENT_STATE_JS}
+
   function showCheckoutError(msg){{
     checkoutMsg.className='rl-consult-form-message error';
     checkoutMsg.textContent=msg;
@@ -846,7 +848,7 @@ def build_consulting_js() -> str:
       fetch(CHECKOUT_API,{{
         method:'POST',
         headers:{{'Content-Type':'application/json'}},
-        body:JSON.stringify({{name:nameVal,email:emailVal,hours:1,plan_addon:planAddon}})
+        body:JSON.stringify({{name:nameVal,email:emailVal,hours:1,plan_addon:planAddon,analytics_consent:analyticsConsentState()}})
       }})
       .then(function(r){{
         if(!r.ok)throw new Error('Server error ('+r.status+'). Please try again.');

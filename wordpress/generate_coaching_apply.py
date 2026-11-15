@@ -35,7 +35,7 @@ from generate_neo_brutalist import (
 from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_js
-from cookie_consent import get_consent_banner_html
+from cookie_consent import ANALYTICS_CONSENT_STATE_JS, get_consent_banner_html
 from live_head_patches import apply_live_head_patches
 # Shared with push_wordpress.py's upload guard and validate_deploy.py.
 from coaching_apply_contract import COACHING_INTAKE_WORKER_URL
@@ -1403,11 +1403,7 @@ def build_apply_js() -> str:
     }
   }
 
-  function analyticsConsentState() {
-    if (/(^|; )rl_consent=declined/.test(document.cookie)) { return "denied"; }
-    if (/(^|; )rl_consent=accepted/.test(document.cookie)) { return "granted"; }
-    return window.rlConsentRequiresOptIn === false ? "granted" : "denied";
-  }
+  ''' + ANALYTICS_CONSENT_STATE_JS + '''
 
   var applyStartedTracked = false;
   function trackApplyStarted() {

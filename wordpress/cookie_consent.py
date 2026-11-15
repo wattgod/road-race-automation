@@ -109,6 +109,25 @@ def requires_explicit_consent(timezone: str | None) -> bool:
     return timezone in EEA_UK_CH_TIMEZONES
 
 
+# The one effective-consent rule every checkout/intake POST reports to the
+# fulfilment pipeline as ``analytics_consent``. Same rule as the head script's
+# Consent Mode default: a stored choice wins (declined before accepted);
+# otherwise only a visitor the head script placed outside the opt-in regions
+# (``window.rlConsentRequiresOptIn === false``) is granted. A missing head
+# script leaves the flag undefined and reads as denied. The pipeline sends a
+# server-side GA4 purchase for anything but an explicit 'denied', so a page
+# that omits this field records purchases for visitors who declined.
+# web/training-plans-form.js is a static file and carries its own copy
+# (analyticsConsentGranted); tests/test_region_aware_consent.py pins the two
+# to the same answers.
+ANALYTICS_CONSENT_STATE_JS = (
+    "function analyticsConsentState(){"
+    "if(/(^|; )rl_consent=declined/.test(document.cookie)){return 'denied'}"
+    "if(/(^|; )rl_consent=accepted/.test(document.cookie)){return 'granted'}"
+    "return window.rlConsentRequiresOptIn===false?'granted':'denied'}"
+)
+
+
 def get_consent_head_script(ga_measurement_id: str) -> str:
     """Return the synchronous geo default and GA4 config in one script block.
 

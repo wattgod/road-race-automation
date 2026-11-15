@@ -15,12 +15,11 @@ says so explicitly: `wp sg purge` fails with "No WordPress installation
 found" here, and the function detects that and prints a manual-flush
 instruction instead of treating it as an error.
 
-**Trap already in the script**: several `--sync-*` flags (`--sync-consent`,
-`--sync-ga4`, `--sync-header`, `--sync-noindex`, `--sync-meta-descriptions`,
-`--sync-ab`'s mu-plugin leg) upload PHP from `wordpress/mu-plugins/` to
-`{REMOTE_BASE}/wp-content/mu-plugins/` — a path that does not exist on the
-live server. They're dead weight inherited from the WordPress flow; don't
-reach for them here. GA4/consent/CTA tracking are instead baked into the
+**Removed trap**: the inherited mu-plugin flags (`--sync-consent`,
+`--sync-ga4`, `--sync-header`, `--sync-noindex`, `--sync-meta-descriptions`)
+uploaded PHP to `{REMOTE_BASE}/wp-content/mu-plugins/`, a path that does not
+exist on the live server. Commit `5806106` removed them; they no longer
+parse. The PHP files in `wordpress/mu-plugins/` never reach visitors. GA4/consent/CTA tracking are instead baked into the
 static HTML at generation time — `GA_MEASUREMENT_ID = "G-WQ7W8XN11N"` lives
 in `wordpress/brand_tokens.py` and is inlined as `gtag(...)` by
 `wordpress/generate_neo_brutalist.py` and friends. If analytics look broken,

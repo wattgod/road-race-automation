@@ -2771,6 +2771,65 @@ def sync_mission_control(mc_file: str):
     return f"{wp_url}/mission-control/"
 
 
+def sync_courses_page(courses_page_file: str):
+    """Upload courses/index.html to /courses/index.html on SiteGround via SSH+SCP.
+
+    The /courses/ catalog page (generate_courses_page.py) had no deploy path:
+    --sync-courses ships /course/ (the course pages themselves) and
+    --sync-pages would only copy it to /race/courses/. Its shared CSS/JS live
+    in /race/assets/ like every other page, so a missing or failed asset
+    fails the sync rather than leaving a page whose hashed assets 404.
+    """
+    ssh = get_ssh_credentials()
+    if not ssh:
+        return None
+    host, user, port = ssh
+
+    html_path = Path(courses_page_file)
+    if not html_path.exists():
+        print(f"✗ Courses page HTML not found: {html_path}")
+        print("  Run: python3 wordpress/generate_courses_page.py first")
+        return None
+    assets_dir = html_path.parent.parent / "assets"
+    assets = [
+        asset
+        for pattern in ("rl-styles.*.css", "rl-scripts.*.js")
+        for asset in assets_dir.glob(pattern)
+    ]
+    if len(assets) < 2:
+        print(f"✗ Courses page shared assets missing in: {assets_dir}")
+        return None
+
+    remote_base = f"{REMOTE_BASE}/courses"
+    remote_assets = f"{REMOTE_BASE}/race/assets"
+    steps = [
+        ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+         f"mkdir -p {remote_base} {remote_assets}"],
+        ["scp", "-i", str(SSH_KEY), "-P", port, str(html_path),
+         f"{user}@{host}:{remote_base}/index.html"],
+    ] + [
+        ["scp", "-i", str(SSH_KEY), "-P", port, str(asset),
+         f"{user}@{host}:{remote_assets}/{asset.name}"]
+        for asset in assets
+    ] + [
+        ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}",
+         f"chmod 755 {remote_base} && chmod 644 {remote_base}/index.html"],
+    ]
+    for cmd in steps:
+        try:
+            subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=30)
+        except subprocess.CalledProcessError as e:
+            print(f"✗ Courses page deploy incomplete at `{cmd[0]}`: {e.stderr.strip()}")
+            return None
+        except Exception as e:
+            print(f"✗ Courses page deploy incomplete at `{cmd[0]}`: {e}")
+            return None
+
+    wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
+    print(f"✓ Uploaded courses page: {wp_url}/courses/")
+    return f"{wp_url}/courses/"
+
+
 def sync_insights(insights_file: str):
     """Upload insights.html to /insights/index.html on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
@@ -3396,6 +3455,14 @@ if __name__ == "__main__":
         help="Upload legal pages (privacy, terms, cookies) via SCP"
     )
     parser.add_argument(
+        "--sync-courses-page", action="store_true",
+        help="Upload the courses catalog page to /courses/ via SCP"
+    )
+    parser.add_argument(
+        "--courses-page-file", default="wordpress/output/courses/index.html",
+        help="Path to courses catalog HTML (default: wordpress/output/courses/index.html)"
+    )
+    parser.add_argument(
         "--sync-insights", action="store_true",
         help="Upload insights page to /insights/ via SCP"
     )
@@ -3607,6 +3674,7 @@ if __name__ == "__main__":
         args.sync_photos = True
         args.sync_ab = True
         args.sync_courses = True
+        args.sync_courses_page = True
         args.sync_insights = True
         args.sync_whitepaper = True
         args.sync_embed = True
@@ -3628,7 +3696,7 @@ if __name__ == "__main__":
                       args.sync_series, args.sync_blog,
                       args.sync_blog_index, args.sync_photos, args.sync_ab, args.sync_courses,
                       args.sync_mission_control,
-                      args.sync_insights, args.sync_whitepaper, args.sync_embed, args.sync_rss,
+                      args.sync_courses_page, args.sync_insights, args.sync_whitepaper, args.sync_embed, args.sync_rss,
                       args.sync_llms_txt, args.sync_markdown,
                       args.purge_cache])
     if not has_action:
@@ -3699,6 +3767,8 @@ if __name__ == "__main__":
         sync_courses(args.course_dir)
     if args.sync_mission_control:
         sync_mission_control(args.mission_control_file)
+    if args.sync_courses_page:
+        sync_courses_page(args.courses_page_file)
     if args.sync_insights:
         sync_insights(args.insights_file)
     if args.sync_whitepaper:
