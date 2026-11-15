@@ -17,7 +17,6 @@ import generate_neo_brutalist as neo
 
 from generate_neo_brutalist import (
     ALL_DIMS,
-    COUNTRY_CODES,
     COURSE_DIMS,
     DIM_LABELS,
     FAQ_PRIORITY,
@@ -25,7 +24,6 @@ from generate_neo_brutalist import (
     MONTH_NUMBERS,
     OPINION_DIMS,
     RACER_RATING_THRESHOLD,
-    US_STATES,
     _build_race_name_map,
     _editorialize_rating_explanation,
     _rating_bumper,
@@ -57,7 +55,6 @@ from generate_neo_brutalist import (
     build_verdict,
     build_visible_faq,
     build_webpage_jsonld,
-    detect_country,
     esc,
     generate_page,
     linkify_alternatives,
@@ -254,69 +251,6 @@ class TestConstants:
         assert MONTH_NUMBERS["december"] == "12"
 
 
-# ── Country Detection ─────────────────────────────────────────
-
-class TestCountryDetection:
-    def test_us_state_full_name(self):
-        assert detect_country("Emporia, Kansas") == "US"
-
-    def test_us_state_abbreviation(self):
-        assert detect_country("Denver, CO") == "US"
-
-    def test_sweden(self):
-        assert detect_country("Halmstad, Sweden") == "SE"
-
-    def test_uk(self):
-        assert detect_country("London, UK") == "GB"
-
-    def test_england(self):
-        assert detect_country("Bristol, England") == "GB"
-
-    def test_iceland(self):
-        assert detect_country("Reykjavik, Southern Iceland") == "IS"
-
-    def test_australia_state(self):
-        assert detect_country("Melbourne, Victoria") == "AU"
-
-    def test_canada(self):
-        assert detect_country("Calgary, Canada") == "CA"
-
-    def test_british_columbia(self):
-        assert detect_country("Vancouver, British Columbia") == "CA"
-
-    def test_italy(self):
-        assert detect_country("Siena, Italy") == "IT"
-
-    def test_spain(self):
-        assert detect_country("Girona, Spain") == "ES"
-
-    def test_taiwan(self):
-        assert detect_country("Hualien to Wuling Pass, Taiwan") == "TW"
-
-    @pytest.mark.parametrize(
-        ("location", "country"),
-        [
-            ("San Luis Potosí, Mexico", "MX"),
-            ("Pérez Zeledón, Costa Rica", "CR"),
-            ("Colonia del Sacramento, Uruguay", "UY"),
-        ],
-    )
-    def test_latin_american_countries(self, location, country):
-        assert detect_country(location) == country
-
-    def test_parenthetical_state(self):
-        assert detect_country("Pisgah, North Carolina (Pisgah National Forest)") == "US"
-
-    def test_empty_location(self):
-        assert detect_country("") == "US"
-
-    def test_dash_location(self):
-        assert detect_country("--") == "US"
-
-    def test_default_unknown(self):
-        assert detect_country("Unknown Place, Nowhere") == "US"
-
-
 # ── normalize_race_data ───────────────────────────────────────
 
 class TestNormalize:
@@ -409,42 +343,102 @@ class TestJsonLD:
         jsonld = build_sports_event_jsonld(normalized_data)
         assert jsonld["@type"] == "SportsEvent"
 
-    def test_sports_event_country_us(self, normalized_data):
-        jsonld = build_sports_event_jsonld(normalized_data)
-        addr = jsonld["location"]["address"]
+    def test_sports_event_country_us(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["country"] = "USA"
+        rd = normalize_race_data(sample_race_data)
+        addr = build_sports_event_jsonld(rd)["location"]["address"]
         assert addr["addressCountry"] == "US"
 
     def test_sports_event_country_international(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Girona, Spain"
+        sample_race_data["race"]["vitals"]["country"] = "Spain"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
-        addr = jsonld["location"]["address"]
+        addr = build_sports_event_jsonld(rd)["location"]["address"]
         assert addr["addressCountry"] == "ES"
 
     def test_sports_event_country_uses_explicit_dominican_republic(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Punta Cana, Dominican Republic"
         sample_race_data["race"]["vitals"]["country"] = "Dominican Republic"
         rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
-        addr = jsonld["location"]["address"]
-        assert addr["addressLocality"] == "Punta Cana"
-        assert addr["addressCountry"] == "DO"
+        place = build_sports_event_jsonld(rd)["location"]
+        assert place["name"] == "Punta Cana, Dominican Republic"
+        assert place["address"] == {"@type": "PostalAddress", "addressCountry": "DO"}
+
+    # RL-15: address fields come from structured profile fields only.
+
+    def test_gran_fondo_utah_venue_not_split_by_commas(self, sample_race_data):
+        v = sample_race_data["race"]["vitals"]
+        v["location"] = "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA"
+        v["country"] = "USA"
+        rd = normalize_race_data(sample_race_data)
+        place = build_sports_event_jsonld(rd)["location"]
+        assert place["name"] == "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA"
+        addr = place["address"]
+        assert addr == {"@type": "PostalAddress", "addressCountry": "US"}
+        assert "addressLocality" not in addr
         assert "addressRegion" not in addr
+
+    def test_structured_locality_and_region_used(self, sample_race_data):
+        v = sample_race_data["race"]["vitals"]
+        v["location"] = "Payson Memorial Park, 300 S Main St, Payson, UT 84651, USA"
+        v["country"] = "USA"
+        v["locality"] = "Payson"
+        v["region"] = "UT"
+        rd = normalize_race_data(sample_race_data)
+        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        assert addr["addressLocality"] == "Payson"
+        assert addr["addressRegion"] == "UT"
+        assert addr["addressCountry"] == "US"
+
+    def test_city_and_state_aliases_used(self, sample_race_data):
+        v = sample_race_data["race"]["vitals"]
+        v["country"] = "Italy"
+        v["city"] = "Feltre"
+        v["state"] = "Veneto"
+        rd = normalize_race_data(sample_race_data)
+        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        assert addr == {"@type": "PostalAddress", "addressLocality": "Feltre",
+                        "addressRegion": "Veneto", "addressCountry": "IT"}
+
+    def test_two_part_location_not_split(self, sample_race_data):
+        # "Emporia, Kansas" used to become locality=Emporia, region=Kansas.
+        rd = normalize_race_data(sample_race_data)
+        place = build_sports_event_jsonld(rd)["location"]
+        assert place["name"] == "Emporia, Kansas"
+        assert "address" not in place
+
+    def test_non_country_value_omits_country(self, sample_race_data):
+        # vitals.country holding a region or multi-country value is not a
+        # country; emit no addressCountry rather than a guessed one.
+        for bad in ("Colorado", "Spain/France", "Provence)", "NC 28801"):
+            sample_race_data["race"]["vitals"]["country"] = bad
+            rd = normalize_race_data(sample_race_data)
+            place = build_sports_event_jsonld(rd)["location"]
+            assert "address" not in place, bad
+
+    def test_no_country_no_default_us(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["location"] = "Unknown Place, Nowhere"
+        rd = normalize_race_data(sample_race_data)
+        place = build_sports_event_jsonld(rd)["location"]
+        assert place["name"] == "Unknown Place, Nowhere"
+        assert "address" not in place
+
+    def test_country_taiwan_multi_part(self, sample_race_data):
+        sample_race_data["race"]["vitals"]["location"] = "Hualien to Wuling Pass, Taiwan"
+        sample_race_data["race"]["vitals"]["country"] = "Taiwan"
+        rd = normalize_race_data(sample_race_data)
+        addr = build_sports_event_jsonld(rd)["location"]["address"]
+        assert addr["addressCountry"] == "TW"
+        assert "addressRegion" not in addr
+        assert "addressLocality" not in addr
 
     def test_sports_event_country_poland(self, sample_race_data):
         sample_race_data["race"]["vitals"]["location"] = "Warsaw, Poland"
+        sample_race_data["race"]["vitals"]["country"] = "Poland"
         rd = normalize_race_data(sample_race_data)
         jsonld = build_sports_event_jsonld(rd)
         addr = jsonld["location"]["address"]
         assert addr["addressCountry"] == "PL"
-        assert "addressRegion" not in addr
-
-    def test_sports_event_country_is_not_duplicated_as_region(self, sample_race_data):
-        sample_race_data["race"]["vitals"]["location"] = "Hualien to Wuling Pass, Taiwan"
-        rd = normalize_race_data(sample_race_data)
-        jsonld = build_sports_event_jsonld(rd)
-        addr = jsonld["location"]["address"]
-        assert addr["addressCountry"] == "TW"
         assert "addressRegion" not in addr
 
     def test_sports_event_start_date(self, normalized_data):

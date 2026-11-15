@@ -224,62 +224,63 @@ def parse_event_dates(date_str: str) -> tuple[str | None, str | None]:
     return None, None
 
 
-# US state names and abbreviations for country detection in JSON-LD
-US_STATES = {
-    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
-    'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho',
-    'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-    'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada',
-    'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-    'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon',
-    'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
-    'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
-    'West Virginia', 'Wisconsin', 'Wyoming',
-    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
-    'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
-    'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
-    'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
-    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY',
-}
-
-# Country name → ISO 3166-1 alpha-2 code
-COUNTRY_CODES = {
-    'Canada': 'CA', 'UK': 'GB', 'England': 'GB', 'Scotland': 'GB', 'Wales': 'GB',
-    'Australia': 'AU', 'Queensland': 'AU', 'Victoria': 'AU',
-    'South Australia': 'AU', 'New South Wales': 'AU', 'Western Australia': 'AU',
-    'Italy': 'IT', 'Germany': 'DE', 'France': 'FR', 'Belgium': 'BE',
-    'Belgian Ardennes': 'BE', 'Spain': 'ES', 'Switzerland': 'CH',
-    'New Zealand': 'NZ', 'Mexico': 'MX', 'Costa Rica': 'CR', 'Uruguay': 'UY',
-    'Colombia': 'CO', 'Chile': 'CL', 'Brazil': 'BR',
-    'Argentina': 'AR', 'Sweden': 'SE', 'Austria': 'AT', 'Greece': 'GR',
-    'Poland': 'PL',
-    'Poland': 'PL', 'Finland': 'FI', 'Netherlands': 'NL', 'Norway': 'NO',
-    'Portugal': 'PT', 'Romania': 'RO', 'South Africa': 'ZA', 'Kenya': 'KE',
-    'Thailand': 'TH', 'Japan': 'JP', 'British Columbia': 'CA', 'Ontario': 'CA',
-    'Southern Iceland': 'IS', 'Iceland': 'IS',
-    'Morocco': 'MA', 'Monaco': 'MC', 'Luxembourg': 'LU',
-    'Czech Republic': 'CZ', 'Slovenia': 'SI', 'Croatia': 'HR',
-    'Kenya': 'KE', 'Slovakia': 'SK', 'Denmark': 'DK',
-    'UAE': 'AE', 'Dubai': 'AE', 'Israel': 'IL', 'Taiwan': 'TW',
-    'Dominican Republic': 'DO',
+# Profile `vitals.country` value → ISO 3166-1 alpha-2, for JSON-LD
+# addressCountry. Only whole values that name exactly one country are listed;
+# a region ("Colorado", "Provence)"), multi-country ("Spain/France") or
+# free-text value has no entry, so addressCountry is omitted for it (RL-15).
+EVENT_COUNTRY_ISO = {
+    'USA': 'US', 'United States': 'US', 'Puerto Rico': 'PR',
+    'UK': 'GB', 'United Kingdom': 'GB', 'England': 'GB', 'Scotland': 'GB',
+    'Wales': 'GB', 'Ireland': 'IE',
+    'Canada': 'CA', 'Mexico': 'MX', 'Costa Rica': 'CR', 'Panama': 'PA',
+    'Cuba': 'CU', 'Dominican Republic': 'DO', 'The Bahamas': 'BS',
+    'Guadeloupe': 'GP',
+    'Colombia': 'CO', 'Ecuador': 'EC', 'Peru': 'PE', 'Chile': 'CL',
+    'Argentina': 'AR', 'Uruguay': 'UY', 'Paraguay': 'PY', 'Brazil': 'BR',
+    'Venezuela': 'VE',
+    'Italy': 'IT', 'France': 'FR', 'Spain': 'ES', 'Portugal': 'PT',
+    'Germany': 'DE', 'Switzerland': 'CH', 'Austria': 'AT', 'Belgium': 'BE',
+    'Netherlands': 'NL', 'Luxembourg': 'LU', 'Denmark': 'DK',
+    'Sweden': 'SE', 'Norway': 'NO', 'Finland': 'FI', 'Estonia': 'EE',
+    'Poland': 'PL', 'Czechia': 'CZ', 'Czech Republic': 'CZ',
+    'Slovakia': 'SK', 'Slovenia': 'SI', 'Croatia': 'HR', 'Hungary': 'HU',
+    'Romania': 'RO', 'Bulgaria': 'BG', 'Serbia': 'RS', 'Greece': 'GR',
+    'Cyprus': 'CY', 'Turkey': 'TR', 'Türkiye': 'TR',
+    'Israel': 'IL', 'Jordan': 'JO', 'UAE': 'AE',
+    'United Arab Emirates': 'AE', 'Oman': 'OM', 'Kazakhstan': 'KZ',
+    'Morocco': 'MA', 'Kenya': 'KE', 'South Africa': 'ZA',
+    'India': 'IN', 'China': 'CN', 'Taiwan': 'TW', 'Japan': 'JP',
+    'South Korea': 'KR', 'Thailand': 'TH', 'Vietnam': 'VN',
+    'Malaysia': 'MY', 'Singapore': 'SG', 'Indonesia': 'ID',
+    'Australia': 'AU', 'New Zealand': 'NZ',
 }
 
 
-def detect_country(location: str) -> str:
-    """Detect ISO country code from location string. Returns 'US' as default."""
-    if not location or location == '--':
-        return 'US'
-    parts = [p.strip() for p in location.split(',')]
-    # Check last part first (most specific), then second-to-last
-    for part in reversed(parts):
-        # Strip parentheticals: "Georgia (North Georgia mountains)" → "Georgia"
-        clean = re.sub(r'\s*\(.*\)', '', part).strip()
-        if clean in COUNTRY_CODES:
-            return COUNTRY_CODES[clean]
-        if clean in US_STATES:
-            return 'US'
-    return 'US'
+def build_event_postal_address(vitals: dict) -> Optional[dict]:
+    """PostalAddress for SportsEvent JSON-LD from structured fields only.
+
+    Reads `locality` (or `city`), `region` (or `state`) and `country`. Each
+    field is emitted only when the profile carries it; nothing is derived
+    from the free-text `location`. Returns None when no field is known.
+    """
+    def _field(*keys: str) -> str:
+        for key in keys:
+            val = vitals.get(key)
+            if val is not None and str(val).strip():
+                return str(val).strip()
+        return ''
+
+    address = {"@type": "PostalAddress"}
+    locality = _field('locality', 'city')
+    region = _field('region', 'state')
+    country = EVENT_COUNTRY_ISO.get(_field('country'))
+    if locality:
+        address["addressLocality"] = locality
+    if region:
+        address["addressRegion"] = region
+    if country:
+        address["addressCountry"] = country
+    return address if len(address) > 1 else None
 
 
 SITE_BASE_URL = "https://roadielabs.com"
@@ -919,6 +920,10 @@ def normalize_race_data(data: dict) -> dict:
             'elevation': f"{vitals.get('elevation_ft', '--'):,} ft" if isinstance(vitals.get('elevation_ft'), (int, float)) else str(vitals.get('elevation_ft', '--')),
             'location': vitals.get('location', '--'),
             'location_badge': vitals.get('location_badge', vitals.get('location', '--')),
+            # Structured address fields for JSON-LD (RL-15); absent → omitted.
+            'country': vitals.get('country'),
+            'locality': vitals.get('locality') or vitals.get('city'),
+            'region': vitals.get('region') or vitals.get('state'),
             'date': short_date or vitals.get('date', '--'),
             'date_specific': date_specific,
             'field_size': field_size_short,
@@ -2355,30 +2360,17 @@ def build_sports_event_jsonld(rd: dict) -> Optional[dict]:
         "endDate": end_date,
     }
 
-    # Location with PostalAddress — detect country from location string
-    location = rd['vitals'].get('location', '')
+    # Location: the full venue string is the Place name. PostalAddress fields
+    # come only from structured profile fields (RL-15) — never from comma
+    # positions in the free-text location, which put "Payson Memorial Park" in
+    # addressLocality and "300 S Main St" in addressRegion. Missing fields are
+    # omitted, not guessed.
+    location = str(rd['vitals'].get('location') or '').strip()
     if location and location != '--':
-        parts = [p.strip() for p in location.split(',')]
-        explicit_country = str(rd['vitals'].get('country') or '').strip()
-        country = COUNTRY_CODES.get(explicit_country) or detect_country(location)
         place = {"@type": "Place", "name": location}
-        if len(parts) >= 2:
-            address = {
-                "@type": "PostalAddress",
-                "addressLocality": parts[0],
-                "addressCountry": country,
-            }
-            region = parts[1] if len(parts) > 2 else parts[-1]
-            if COUNTRY_CODES.get(region) != country:
-                address["addressRegion"] = region
+        address = build_event_postal_address(rd['vitals'])
+        if address:
             place["address"] = address
-        else:
-            # Single-part location — still emit address to satisfy GSC
-            place["address"] = {
-                "@type": "PostalAddress",
-                "addressLocality": parts[0],
-                "addressCountry": country,
-            }
         jsonld["location"] = place
 
     # Image array: OG image first, then race photos (not GIFs)
