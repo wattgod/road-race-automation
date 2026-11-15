@@ -21,6 +21,40 @@ REMOTE_BASE = os.environ.get("REMOTE_BASE", "/home/customer/www/roadielabs.com/p
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 
+# Power rankings live at /race/power-rankings-{season}/. The first season page
+# shipped was 2026; every earlier-than-current season 301s to the current one.
+FIRST_POWER_RANKINGS_SEASON = 2026
+POWER_RANKINGS_DIR_RE = re.compile(r"^power-rankings-(\d{4})$")
+
+
+def current_season() -> int:
+    """The rider-facing season, from the same rule the generators use."""
+    sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+    try:
+        from season import season_year
+    finally:
+        sys.path.pop(0)
+    return season_year()
+
+
+def stale_power_rankings_dirs(names, season: int) -> list:
+    """Names of power-rankings-{year} dirs for any season other than `season`."""
+    stale = []
+    for name in names:
+        m = POWER_RANKINGS_DIR_RE.match(name)
+        if m and int(m.group(1)) != season:
+            stale.append(name)
+    return sorted(stale)
+
+
+def season_redirect_rules(season: int) -> str:
+    """301 rules sending every past season's power rankings to `season`'s page."""
+    return "".join(
+        f"RewriteRule ^race/power-rankings-{year}/?$ "
+        f"/race/power-rankings-{season}/ [R=301,L]\n"
+        for year in range(FIRST_POWER_RANKINGS_SEASON, season)
+    )
+
 
 def get_ssh_credentials():
     """Return (host, user, port) or None with warning."""
@@ -1565,6 +1599,21 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
         print("  Generate first (python3 wordpress/generate_prep_kit.py --all, or one "
               "slug), then re-run.")
         return None
+    # Season gate (issue #164): wordpress/output keeps last season's
+    # power-rankings dir after the rollover, and copying it into a stage dir
+    # re-uploaded /race/power-rankings-2026/ after it had been replaced.
+    season = current_season()
+    stale_staged = stale_power_rankings_dirs(
+        [d.name for d in pages_path.iterdir() if d.is_dir()], season
+    )
+    if stale_staged:
+        print(f"✗ Season gate: {pages_path} holds power rankings for a season other "
+              f"than {season} — nothing pushed:")
+        for name in stale_staged:
+            print(f"    {name}")
+        print("  Delete those dirs (python3 wordpress/generate_power_rankings.py prunes "
+              "them from its output), then re-run.")
+        return None
     # Also check for pre-built subdirectories (vs pages, state hubs, etc.)
     SKIP_DIRS = {"assets", "og", "prep-kit", "blog", "race"}
     subdirs_with_pages = [
@@ -1678,9 +1727,42 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
     except subprocess.CalledProcessError:
         print("⚠️  Warning: could not fix /race/ permissions — verify manually")
 
+    if not retire_stale_power_rankings(host, user, port, remote_base, season):
+        print("⚠️  Warning: could not retire past-season power rankings — verify manually")
+
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} race pages to {wp_url}/race/")
     return f"{wp_url}/race/"
+
+
+def retire_stale_power_rankings(host, user, port, remote_base, season) -> bool:
+    """Delete past-season power-rankings dirs under /race/ on the server.
+
+    SiteGround's nginx serves an existing file before .htaccess is consulted,
+    so the season 301 (see season_redirect_rules) only works once the old dir
+    is gone. Names are matched against POWER_RANKINGS_DIR_RE before rm.
+    """
+    ssh_base = ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}"]
+    try:
+        listing = subprocess.run(
+            ssh_base + [f"ls -1 {remote_base}"],
+            check=True, capture_output=True, text=True, timeout=30,
+        ).stdout.split()
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        return False
+    stale = stale_power_rankings_dirs(listing, season)
+    if not stale:
+        return True
+    targets = " ".join(f"{remote_base}/{name}" for name in stale)
+    try:
+        subprocess.run(
+            ssh_base + [f"rm -rf {targets}"],
+            check=True, capture_output=True, text=True, timeout=30,
+        )
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        return False
+    print(f"  Retired past-season pages: {', '.join(stale)}")
+    return True
 
 
 REDIRECT_BLOCK = """\
@@ -1825,6 +1907,10 @@ RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=3
 # /products/training-plans/ was a duplicate of /training-plans/
 RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 
+# Past-season power rankings -> current season (issue #164). Rules are
+# appended by build_redirect_block() from the season rule, so a rollover
+# needs no edit here.
+{season_rules}
 # Broken URL from GSC → parent page (404 fix)
 # TODO: Update email reference for Roadie Labs
 RewriteRule ^training-plans-faq/coach@roadielabs.com$ /training-plans-faq/ [R=301,L]
@@ -1833,6 +1919,12 @@ RewriteRule ^training-plans-faq/coach@roadielabs.com$ /training-plans-faq/ [R=30
 """
 
 REDIRECT_MARKER = "# BEGIN Roadie Labs Redirects"
+
+
+def build_redirect_block(season=None) -> str:
+    """REDIRECT_BLOCK with the season-dependent power-rankings rules filled in."""
+    season = current_season() if season is None else season
+    return REDIRECT_BLOCK.replace("{season_rules}", season_redirect_rules(season).rstrip("\n"))
 
 
 def sync_redirects():
@@ -1872,11 +1964,11 @@ def sync_redirects():
         import re
         pattern = r"# BEGIN Roadie Labs Redirects.*?# END Roadie Labs Redirects\n?"
         updated = re.sub(pattern, "", current, flags=re.DOTALL)
-        updated = REDIRECT_BLOCK + "\n" + updated
+        updated = build_redirect_block() + "\n" + updated
         print("  Updating existing redirect block...")
     else:
         # Prepend our block before WordPress rules
-        updated = REDIRECT_BLOCK + "\n" + current
+        updated = build_redirect_block() + "\n" + current
         print("  Adding new redirect block...")
 
     # Upload via stdin to avoid temp file issues

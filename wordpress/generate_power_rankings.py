@@ -13,6 +13,8 @@ Usage:
 import argparse
 import html as html_mod
 import json
+import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -467,6 +469,17 @@ body {{ margin: 0; background: var(--rl-color-cool-white); }}
 </html>'''
 
 
+def prune_past_seasons(output_dir: Path, season: int) -> list:
+    """Delete power-rankings-{year}/ dirs in output_dir for any other season."""
+    removed = []
+    for d in sorted(output_dir.glob("power-rankings-*")):
+        m = re.fullmatch(r"power-rankings-(\d{4})", d.name)
+        if d.is_dir() and m and int(m.group(1)) != season:
+            shutil.rmtree(d)
+            removed.append(d)
+    return removed
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate power rankings page")
     parser.add_argument("--output-dir", default=None)
@@ -485,6 +498,11 @@ def main():
 
     page_dir = output_dir / f"power-rankings-{SEASON_YEAR}"
     page_dir.mkdir(parents=True, exist_ok=True)
+
+    # A past season's page must not linger in the output dir: deploys ship
+    # every subdir, which re-uploaded power-rankings-2026 after the rollover.
+    for stale in prune_past_seasons(output_dir, SEASON_YEAR):
+        print(f"Removed past-season {stale.name}/")
 
     page_html = build_power_rankings_page(all_races)
     out_path = page_dir / "index.html"
