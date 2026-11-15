@@ -1,7 +1,7 @@
 # Roadie Labs Race Database
 
 > The definitive road race database. 421 races rated on 14 base dimensions plus cultural impact, scored 0-100, and tiered 1-4.
-> Last generated: 2026-11-07
+> Last generated: 2026-11-15
 
 ## Overview
 
@@ -10,7 +10,7 @@ Roadie Labs is a road cycling event database covering 421 races across North Ame
 - **Tier 1 (Elite)**: 19 races — score >= 80 or prestige override
 - **Tier 2 (Contender)**: 322 races — score >= 60
 - **Tier 3 (Rising)**: 79 races — score >= 45
-- **Tier 4 (Local)**: 1 races — score < 45
+- **Tier 4 (Local)**: 1 race — score < 45
 
 Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: Africa, Asia, Eastern Europe, North America, Northern Europe, Oceania, Other, South America, Southern Europe, UK & Ireland, Western Europe.
@@ -33,9 +33,9 @@ frontmatter, one file per race, at:
 
 `https://roadielabs.com/race/{slug}.md`
 
-e.g. https://roadielabs.com/race/unbound-200.md
+e.g. https://roadielabs.com/race/gran-fondo-utah.md
 
 ## Contact
 
 - Website: https://roadielabs.com
-- Email: matt@roadielabs.com
+- Email: gravelgodcoaching@gmail.com

@@ -39,7 +39,53 @@ def test_sitemap_index_never_advertises_phantom_plugin_sitemaps() -> None:
 
 def test_generated_sitemap_uses_only_the_canonical_methodology_url(tmp_path: Path) -> None:
     output = tmp_path / "web" / "sitemap.xml"
-    generate_sitemap([], output)
+    generate_sitemap([], output, project_root=tmp_path)
     locations = _locations(output.read_text(encoding="utf-8"))
     assert "https://roadielabs.com/race/methodology/" in locations
     assert "https://roadielabs.com/methodology/" not in locations
+
+
+def test_generated_sitemap_lists_public_site_pages(tmp_path: Path) -> None:
+    output = tmp_path / "web" / "sitemap.xml"
+    generate_sitemap([], output, project_root=tmp_path)
+    locations = _locations(output.read_text(encoding="utf-8"))
+    for path in ("/coaching/", "/consulting/", "/about/", "/race/tier-1/", "/race/tier-4/"):
+        assert f"https://roadielabs.com{path}" in locations
+    # Legal pages are served noindex, so the sitemap must not submit them.
+    for path in ("/privacy/", "/terms/"):
+        assert f"https://roadielabs.com{path}" not in locations
+
+
+def test_prep_kits_listed_only_for_generated_kits_of_indexed_races(tmp_path: Path) -> None:
+    kits = tmp_path / "wordpress" / "output" / "prep-kit"
+    kits.mkdir(parents=True)
+    for name in ("index", "alpha", "orphan"):
+        (kits / f"{name}.html").write_text("<html></html>", encoding="utf-8")
+    output = tmp_path / "web" / "sitemap.xml"
+    generate_sitemap([{"slug": "alpha", "tier": 2}, {"slug": "beta", "tier": 2}], output,
+                     project_root=tmp_path)
+    locations = _locations(output.read_text(encoding="utf-8"))
+    assert "https://roadielabs.com/race/alpha/prep-kit/" in locations
+    assert "https://roadielabs.com/race/beta/prep-kit/" not in locations
+    assert "https://roadielabs.com/race/orphan/prep-kit/" not in locations
+    assert "https://roadielabs.com/race/index/prep-kit/" not in locations
+
+
+def test_kit_discovery_ignores_where_the_sitemap_is_written(tmp_path: Path) -> None:
+    root = tmp_path / "repo"
+    kits = root / "wordpress" / "output" / "prep-kit"
+    kits.mkdir(parents=True)
+    (kits / "alpha.html").write_text("<html></html>", encoding="utf-8")
+    output = tmp_path / "elsewhere" / "out" / "sitemap.xml"
+    output.parent.mkdir(parents=True)
+    generate_sitemap([{"slug": "alpha", "tier": 2}], output, project_root=root)
+    assert "https://roadielabs.com/race/alpha/prep-kit/" in _locations(
+        output.read_text(encoding="utf-8"))
+
+
+def test_preflight_generates_pages_before_the_sitemap() -> None:
+    source = (Path(__file__).resolve().parent.parent / "scripts" / "preflight.py").read_text(
+        encoding="utf-8")
+    sitemap = source.index('"generate_sitemap.py --blog"')
+    assert source.index('"generate_prep_kit.py --all"') < sitemap
+    assert source.index('"generate_training_plan_pages.py --all"') < sitemap
