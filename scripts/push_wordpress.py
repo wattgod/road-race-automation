@@ -766,6 +766,21 @@ def sync_questionnaire(questionnaire_dir: str):
     return f"{wp_url}/questionnaire/"
 
 
+def coaching_page_images(html_path: Path):
+    """The staged files for every /coaching/img/<name> the page references,
+    or None (with the reason printed) if any is missing or there are none."""
+    names = sorted(set(re.findall(r'/coaching/img/([\w.-]+)', html_path.read_text(encoding="utf-8"))))
+    img_dir = html_path.parent / "coaching-img"
+    if not names:
+        print(f"✗ {html_path.name} references no /coaching/img/ pictures; refusing to deploy it")
+        return None
+    missing = [n for n in names if not (img_dir / n).is_file()]
+    if missing:
+        print(f"✗ Coaching images missing from {img_dir}: {', '.join(missing)}. Run: python3 wordpress/generate_coaching.py")
+        return None
+    return [img_dir / n for n in names]
+
+
 def sync_coaching(coaching_file: str):
     """Upload coaching.html to /coaching/index.html on SiteGround via SSH+SCP."""
     ssh = get_ssh_credentials()
@@ -777,6 +792,12 @@ def sync_coaching(coaching_file: str):
     if not html_path.exists():
         print(f"✗ Coaching page HTML not found: {html_path}")
         print("  Run: python3 wordpress/generate_coaching.py first")
+        return None
+
+    # Every picture the page points at must be staged next to it, or nothing
+    # goes up: the live page never references an image that isn't there.
+    images = coaching_page_images(html_path)
+    if images is None:
         return None
 
     remote_base = f"{REMOTE_BASE}/coaching"
@@ -796,6 +817,23 @@ def sync_coaching(coaching_file: str):
         )
     except subprocess.CalledProcessError as e:
         print(f"✗ Failed to create remote directory: {e.stderr.strip()}")
+        return None
+
+    # Upload the page's images (photo, v6.7 cartoon) to /coaching/img/
+    # BEFORE the page, so the live page never points at a picture that
+    # isn't there. Any failure stops the deploy.
+    try:
+        subprocess.run(
+            ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}", f"mkdir -p {remote_base}/img"],
+            check=True, capture_output=True, text=True, timeout=15,
+        )
+        subprocess.run(
+            ["scp", "-i", str(SSH_KEY), "-P", port, *[str(i) for i in images],
+             f"{user}@{host}:{remote_base}/img/"],
+            check=True, capture_output=True, text=True, timeout=60,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Failed to upload coaching images: {e.stderr.strip()}")
         return None
 
     # Upload coaching.html as index.html

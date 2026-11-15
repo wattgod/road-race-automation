@@ -1,16 +1,10 @@
 """Tests for the Roadie Labs coaching page + coaching apply page generators.
 
-Coaching page rewritten 2026-07-18 into "The Dossier" structure: hero →
-terms → tiers → fit → results → faq → final-cta (replacing the old band
-sequence hero → problem → deliverables → how-it-works → tiers →
-testimonials → honest-check → faq → final-cta). This suite describes the
-page as it now ships, not the old one — no skipped/xfailed placeholders
-for deleted sections.
-
-Modeled on gravel-race-automation/tests/test_coaching.py (the approved
-rebuild's test suite), adapted for Roadie Labs: rl- class prefix, road
-URLs, GA4 property G-WQ7W8XN11N, and no wordpress/slop_rules module on
-road (assertions are written directly instead of via slop_rules.check_text).
+Coaching page rebuilt 2026-11-15 as "Field Notes", matching the Gravel God
+sibling page Matti picked: hero + ID card (real photo crossfading to the
+v6.7 character in the Roadie kit) -> fit -> terms (what you get) -> week ->
+how-it-works -> tiers (ledger + 3-question picker) -> faq -> final-cta.
+This suite describes the page as it ships now.
 """
 from __future__ import annotations
 
@@ -26,11 +20,23 @@ WORDPRESS_DIR = Path(__file__).parent.parent / "wordpress"
 sys.path.insert(0, str(WORDPRESS_DIR))
 
 from generate_coaching import (
+    ID_ROWS,
+    IMAGES,
+    IMG_OUTPUT_SUBDIR,
+    IMG_SRC_DIR,
+    LEDGER_GROUPS,
+    PICKER_QUESTIONS,
     QUESTIONNAIRE_URL,
+    TIER_BLURBS,
+    TIERS,
     build_nav,
     build_hero,
+    build_id_card,
     build_terms,
+    build_week,
+    build_how_it_works,
     build_tiers,
+    build_fit_check,
     build_honest_check,
     build_faq,
     build_application_close,
@@ -40,6 +46,7 @@ from generate_coaching import (
     build_coaching_js,
     build_jsonld,
     generate_coaching_page,
+    write_coaching_images,
 )
 from generate_coaching_apply import (
     COACHING_INTAKE_WORKER_URL,
@@ -51,7 +58,10 @@ from generate_coaching_apply import (
 from generate_neo_brutalist import SITE_BASE_URL, write_shared_assets
 
 OUTPUT_DIR = WORDPRESS_DIR / "output"
+SECTION_IDS = ("hero", "fit", "terms", "week", "how-it-works", "tiers", "faq", "final-cta")
 
+
+# ── Fixtures ─────────────────────────────────────────────────
 
 # ── Fixtures ─────────────────────────────────────────────────
 
@@ -143,82 +153,7 @@ class TestNav:
 # ── Hero — "The Dossier" hero with corner CTA ───────────────
 
 
-class TestHero:
-    def test_hero_id(self):
-        assert 'id="hero"' in build_hero()
-
-    def test_hero_has_corner_cta(self):
-        """Owner revision 2026-07-18: an obvious CTA on arrival, no scroll
-        required. One link, the corner imperative."""
-        hero = build_hero()
-        assert 'class="rl-coach-hero-cta"' in hero
-        assert 'data-cta="hero_apply"' in hero
-        assert "START YOUR APPLICATION" in hero
-
-    def test_no_file_strip(self):
-        """Owner revision 2026-07-18: file strip removed, not replaced."""
-        hero = build_hero()
-        assert "rl-coach-file-strip" not in hero
-        assert "TERMS OF WORK" not in hero
-        assert "COURSES ON FILE" not in hero
-
-
-    def test_headline(self):
-        """Approved by Matti 2026-11-15: one plain line saying what is sold."""
-        hero = build_hero()
-        assert "<h1>One-on-one coaching for road racers, from Tuesday-night crits to the long road race.</h1>" in hero
-        assert "better than you think" not in hero
-
-    def test_subhead(self):
-        hero = build_hero()
-        assert "I raced Cat 1 and on the NRC." in hero
-        assert "$199, $299 or $1,200 every 4 weeks" in hero
-        assert "Not an AI" not in hero
-
-
-# ── Terms — five numbered clauses ───────────────────────────
-
-
-class TestTerms:
-    def test_terms_id(self):
-        assert 'id="terms"' in build_terms()
-
-    def test_five_clauses(self):
-        t = build_terms()
-        assert t.count('class="rl-coach-term"') == 5
-
-    def test_clause_numbers(self):
-        t = build_terms()
-        for n in ("01", "02", "03", "04", "05"):
-            assert f'<div class="rl-coach-term-num">{n}</div>' in t
-
-    def test_clause_titles(self):
-        t = build_terms()
-        for title in (
-            "Your race files, read",
-            "Training for how road races are decided",
-            "A season around your A race",
-            "Plans that bend",
-            "Honest reads",
-        ):
-            assert title in t
-
-    def test_clause_bodies(self):
-        t = build_terms()
-        assert "from the surge you closed to the gap you let go on the last lap." in t
-        assert "a sprint after two hours in the bunch." in t
-        assert "B races and crits fit around it" in t
-        assert "At Mid and Max, a missed day" in t
-        assert "When you&#39;re racing yourself out of form, I&#39;ll tell you." in t
-        assert "algorithm" not in t and "Software" not in t
-
-    def test_last_clause_no_bottom_border(self, coaching_css):
-        """Clause 05 has no border-bottom — tiers render immediately after
-        with no visual gap, so the terms list must not double-close."""
-        assert ".rl-coach-term:last-child" in coaching_css
-
-
-# ── Full-Bleed Layout ────────────────────────────────────────
+# ── Layout ───────────────────────────────────────────────────
 
 
 class TestFullBleedLayout:
@@ -229,199 +164,326 @@ class TestFullBleedLayout:
         assert "rl-coach-inner" in coaching_css
         assert "max-width: 1200px" in coaching_css
 
-    def test_bands_present(self, coaching_html):
-        assert 'class="rl-coach-band' in coaching_html
-        assert "rl-coach-band--dark" in coaching_html
-
-    def test_no_sand_band_anywhere(self, coaching_html, coaching_css):
-        """rl-coach-band--sand is fully removed — tiers no longer sit on a
-        sand background, they sit on the same paper as terms."""
-        assert "rl-coach-band--sand" not in coaching_html
-        assert "rl-coach-band--sand" not in coaching_css
-
     def test_all_sections_use_inner_wrapper(self, coaching_html):
         bands = coaching_html.count('<section class="rl-coach-band')
-        inners = coaching_html.count('class="rl-coach-inner"')
-        assert bands == inners == 6
-
-    def test_terms_tiers_seamless(self, coaching_css):
-        """Terms section has zero bottom padding, tiers section has zero
-        top padding — the two must read as one continuous document, not
-        two visually separated bands."""
-        assert ".rl-coach-terms {\n  padding-bottom: 0;\n}" in coaching_css
-        assert ".rl-coach-tiers-section {\n  padding-top: 0;\n}" in coaching_css
+        inners = len(re.findall(r'class="rl-coach-inner[ "]', coaching_html))
+        assert bands == inners == len(SECTION_IDS)
 
     def test_consent_banner_rendered(self, coaching_html):
-        """Regression: an unescaped template tail would leave the literal
-        placeholder string in the shipped HTML instead of the banner."""
         assert "{get_consent_banner_html()}" not in coaching_html
 
 
-# ── Service Tiers ────────────────────────────────────────────
+# ── Hero + ID card + sections ────────────────────────────────
+
+
+class TestHero:
+    def test_hero_id_and_cta(self):
+        hero = build_hero()
+        assert 'id="hero"' in hero
+        assert f'href="{QUESTIONNAIRE_URL}"' in hero
+        assert 'data-cta="hero_apply"' in hero
+        assert "START YOUR APPLICATION &rarr;" in hero
+
+    def test_headline_visible_text(self, coaching_html):
+        h1 = re.search(r"<h1>(.*?)</h1>", coaching_html, re.DOTALL).group(1)
+        text = re.sub(r"<[^>]+>", "", h1)
+        assert text == "One-on-one coaching for road racers, from Tuesday-night crits to the long road race."
+        assert coaching_html.count("<h1>") == 1
+
+    def test_highlights(self):
+        hero = build_hero()
+        assert "<mark>Tuesday-night crits</mark>" in hero
+        assert "<mark>the long road race.</mark>" in hero
+
+    def test_subhead(self):
+        hero = build_hero()
+        assert "I raced Cat 1 and on the NRC." in hero
+        assert "<strong>$199, $299 or $1,200</strong> every 4 weeks." in hero
+
+
+class TestIdCard:
+    def test_bio_line_verbatim(self):
+        """Matti, 2026-11-15: the bio line, word for word."""
+        card = build_id_card()
+        assert "I&#39;m Matti Rowe. Peddler of bikes and hot takes, and really fast clients." in card
+
+    def test_resume_rows(self):
+        card = build_id_card()
+        for label, value in ID_ROWS:
+            assert f"<span>{label}</span>{value}" in card
+
+    def test_talent_line(self):
+        """Matti asked the resume to say very few have gotten farther on less talent."""
+        talent = dict(ID_ROWS)["Talent"]
+        assert "Very few people have gotten farther on less." in talent
+
+    def test_only_public_road_facts(self):
+        values = " ".join(v for _l, v in ID_ROWS)
+        for fact in ("Cat 1", "NRC", "Cat 5 handling skills", "Rio Grande Elite", "third kid",
+                     "TrainingPeaks", "Promoted twice"):
+            assert fact in values
+
+    def test_photo_and_cartoon(self):
+        card = build_id_card()
+        photo, pw, ph = IMAGES["photo"]
+        toon, tw, th = IMAGES["cartoon"]
+        assert f'src="/coaching/img/{photo}"' in card
+        assert f'width="{pw}" height="{ph}"' in card
+        assert f'src="/coaching/img/{toon}"' in card
+        assert "roadie" in toon
+        assert re.search(r'<img class="rl-coach-id-toon"[^>]*alt=""[^>]*aria-hidden="true"', card)
+        assert re.search(r'<img class="rl-coach-id-real"[^>]*alt="[^"]+"', card)
+
+    def test_swap_animation_and_reduced_motion(self, coaching_css):
+        assert "@keyframes rl-coach-idswap" in coaching_css
+        assert "animation: rl-coach-idswap" in coaching_css
+        rm = coaching_css.split("prefers-reduced-motion: reduce", 1)[1]
+        assert ".rl-coach-id-toon { animation: none; opacity: 0; }" in rm
+
+    def test_photo_preloaded(self, coaching_html):
+        assert f'<link rel="preload" as="image" href="/coaching/img/{IMAGES["photo"][0]}">' in coaching_html
+
+    def test_no_reading_applications_line(self, coaching_html):
+        """Matti, 2026-11-15: don't say I read every application myself. Of course I do."""
+        visible = _visible_text(coaching_html).lower()
+        for phrase in ("read every application", "read your application", "answer every one myself",
+                       "read it myself", "myself, every time"):
+            assert phrase not in visible, phrase
+
+
+class TestCoachingImages:
+    def test_every_image_is_in_the_repo(self):
+        from PIL import Image
+        for name, w, h in IMAGES.values():
+            path = IMG_SRC_DIR / name
+            assert path.is_file(), f"missing {path}"
+            with Image.open(path) as im:
+                assert im.size == (w, h), f"{name} is {im.size}, page says {(w, h)}"
+                # Opaque: a transparent cartoon would show the photo through it mid-swap.
+                assert im.mode == "RGB", f"{name} has transparency ({im.mode})"
+
+    def test_write_copies_all(self, tmp_path):
+        dest = write_coaching_images(tmp_path)
+        assert dest == tmp_path / IMG_OUTPUT_SUBDIR
+        assert sorted(p.name for p in dest.iterdir()) == sorted(n for n, _w, _h in IMAGES.values())
+
+    def test_missing_image_refuses(self, tmp_path, monkeypatch):
+        import generate_coaching
+        monkeypatch.setattr(generate_coaching, "IMG_SRC_DIR", tmp_path / "nowhere")
+        with pytest.raises(FileNotFoundError):
+            generate_coaching.write_coaching_images(tmp_path / "out")
+
+    def test_no_borrowed_close_art(self):
+        """No v6.7 Roadie-kit scene exists yet, so the close runs without
+        a picture rather than borrowing Gravel God art."""
+        assert "<img" not in build_application_close()
+        assert set(IMAGES) == {"photo", "cartoon"}
+
+
+class TestFit:
+    def test_fit_id_dark_band(self):
+        fit = build_honest_check()
+        assert 'id="fit"' in fit
+        assert "rl-coach-band--dark" in fit
+
+    def test_yes_no_lists(self):
+        fit = build_honest_check()
+        yes, no = fit.split('class="rl-coach-fit-no"')
+        assert yes.count("<li>") == 3
+        assert no.count("<li>") == 3
+        assert "Coaching fits if" in yes
+        assert "Probably not a fit if" in no
+        assert "That&#39;s a physio&#39;s job." in no
+
+
+class TestTerms:
+    def test_five_items(self):
+        terms = build_terms()
+        assert 'id="terms"' in terms
+        assert terms.count("<li>") == 5
+        for t in ("Your race files, read.", "Training for how road races are decided.",
+                  "A season around your A race.", "Plans that bend.", "Honest reads."):
+            assert f"<h3>{t}</h3>" in terms
+
+    def test_tier_claims_match_inclusions(self):
+        terms = build_terms()
+        assert "every quarter at Min and every 4 weeks at Mid and Max" in terms
+        assert "At Mid and Max, a missed day" in terms
+
+
+class TestWeek:
+    def test_off_text_is_readable(self, coaching_css):
+        """Steel on paper is about 2.7:1; graphite clears 4.5:1."""
+        assert ".rl-coach-cad-off { color: var(--rl-color-graphite); }" in coaching_css
+
+    def test_rows(self):
+        week = build_week()
+        assert 'id="week"' in week
+        rows = re.findall(r'<th scope="row">([^<]+)</th>', week)
+        assert rows == ["Each ride", "Each week", "Life happens", "Strategy calls", "Race week", "The season"]
+
+    def test_phone_labels_follow_tiers(self):
+        week = build_week()
+        for _k, name, _p in TIERS:
+            assert f'data-t="{name.upper()}"' in week
+
+
+class TestHowItWorks:
+    def test_five_steps(self):
+        how = build_how_it_works()
+        assert 'id="how-it-works"' in how
+        assert how.count("<li>") == 5
+
+    def test_real_flow(self):
+        how = build_how_it_works()
+        for bit in ("About 10 min", "2 business days", "your first 4 weeks and the $99 setup fee",
+                    "set up on TrainingPeaks"):
+            assert bit in how
 
 
 class TestServiceTiers:
     def test_tiers_id(self):
         assert 'id="tiers"' in build_tiers()
 
-    def test_three_tier_columns(self):
+    def test_prices_from_tiers(self):
         tiers = build_tiers()
-        assert tiers.count('class="rl-coach-tier-col"') == 3
-        assert "Min" in tiers
-        assert "Mid" in tiers
-        assert "Max" in tiers
+        for key, name, price in TIERS:
+            assert f'data-tier="{key}"' in tiers
+            assert f'<span class="rl-coach-tprice">{price}</span>' in tiers
+            assert TIER_BLURBS[key] in tiers
+        assert tiers.count('<span class="rl-coach-tper">every 4 weeks</span>') == 3
 
-    def test_prices(self):
+    def test_apply_links(self):
         tiers = build_tiers()
-        assert "$199" in tiers
-        assert "$299" in tiers
-        assert "$1,200" in tiers
-        assert "/ 4 WEEKS" in tiers
+        for key, name, _p in TIERS:
+            assert f'href="{QUESTIONNAIRE_URL}?tier={key}"' in tiers
+            assert f'data-cta="tier_{key}"' in tiers
+            assert f">START WITH {name.upper()}</a>" in tiers
 
-    def test_get_started_links(self):
+    def test_ledger_rows(self):
         tiers = build_tiers()
-        assert tiers.count("GET STARTED") == 3
-        assert 'data-cta="tier_min"' in tiers
-        assert 'data-cta="tier_mid"' in tiers
-        assert 'data-cta="tier_max"' in tiers
-        assert f"{QUESTIONNAIRE_URL}?tier=min" in tiers
-        assert f"{QUESTIONNAIRE_URL}?tier=mid" in tiers
-        assert f"{QUESTIONNAIRE_URL}?tier=max" in tiers
+        rows = re.findall(r'<th scope="row">([^<]+)</th>', tiers)
+        expected = [label for _g, group in LEDGER_GROUPS for label, *_v in group]
+        assert rows == expected
+        assert len(rows) == 15
 
-    def test_setup_fee(self):
+    def test_inclusions_are_cumulative(self):
+        for _g, group in LEDGER_GROUPS:
+            for label, mn, md, mx in group:
+                if mn is True:
+                    assert md is True and mx is True, label
+                if md is True:
+                    assert mx is True, label
+
+    def test_setup_fee_and_cancel_fine_print(self):
         tiers = build_tiers()
-        assert "$99 setup fee" in tiers
-        assert "TrainingPeaks Premium is included" in tiers
-        assert "NOSETUP" not in tiers
-        assert "privately, case by case" in tiers
+        assert "$99 one-time setup fee" in tiers
+        assert "Any waiver is offered privately, case by case." in tiers
+        assert "no cancellation fee." in tiers
 
-    def test_tier_blurbs(self):
+    def test_phone_tabs_default_mid(self):
         tiers = build_tiers()
-        assert "you want a racer checking the work every week." in tiers
-        assert "Between races and sessions I&#39;m in your files" in tiers
-        assert "for the race you&#39;ve built the year around." in tiers
-        assert "Someone reads" not in tiers
-        assert "Most athletes belong here" not in tiers
+        assert 'data-show="mid"' in tiers
+        assert 'data-tab="mid" aria-selected="true"' in tiers
+        assert tiers.count('role="tab"') == 3
 
-    def test_feature_lists_verbatim(self):
+    def test_no_js_shows_every_column(self, coaching_css, coaching_js):
+        """Tabs ship hidden and columns only collapse once the JS has
+        wired the tabs, so a phone without JS still sees all three levels."""
+        assert '<div class="rl-coach-tabs" role="tablist" aria-label="Levels" hidden>' in build_tiers()
+        assert ".rl-coach-tabs[hidden] { display: none !important; }" in coaching_css
+        hides = re.findall(r'\.rl-coach-ledger[^ {,]*\[data-show="\w+"\] \.rl-coach-t-\w+', coaching_css)
+        assert len(hides) == 6
+        assert all(h.startswith(".rl-coach-ledger.rl-coach-tabbed[") for h in hides)
+        assert "ledger.classList.add('rl-coach-tabbed');" in coaching_js
+        assert "tabs[0].parentNode.hidden = false;" in coaching_js
+        # Untabbed phone rows label each cell with its level.
+        assert ".rl-coach-ledger:not(.rl-coach-tabbed) tbody td::before { content: attr(data-t);" in coaching_css
         tiers = build_tiers()
-        for item in (
-            "Weekly training review", "File analysis", "Quarterly strategy calls",
-            "Structured workouts for your trainer or head unit",
-            "Race-day nutrition plan", "Custom training guide",
-            "Everything in Min", "Detailed power-file analysis",
-            "Every-4-week strategy calls", "Weekly plan adjustments",
-            "Direct message access", "Blindspot detection",
-            "Everything in Mid", "Daily file review", "On-demand calls",
-            "Race-week strategy", "Multi-race season planning", "Priority response",
-        ):
-            assert item in tiers, f"Missing tier feature: {item}"
-
-    def test_no_normie_jargon(self):
-        """No raw jargon in tier feature lists (WKO, TSB, TSS, CTL)."""
-        tiers = build_tiers()
-        for term in ("WKO", "TSB", "TSS", "CTL"):
-            assert term not in tiers, f"Raw jargon in tiers: {term}"
-
-    def test_no_animation_on_tiers(self):
-        """Owner revision 2026-07-18: the Dossier is a still document —
-        pricing must never depend on an observer firing."""
-        assert 'data-animate' not in build_tiers()
+        for key, name, _p in TIERS:
+            assert f'<td class="rl-coach-t-{key}" data-t="{name.upper()}">' in tiers
 
 
-# ── A fit, or not ─────────────────────────────────────────────
+class TestPicker:
+    @pytest.fixture(scope="class")
+    def picker(self):
+        return build_fit_check()
 
+    def test_hidden_without_js(self, picker):
+        assert '<form class="rl-coach-picker" id="rl-coach-picker" aria-label="Three questions to pick a level" hidden>' in picker
+        assert 'id="rl-coach-picker-out" aria-live="polite" hidden' in picker
 
-class TestFit:
-    def test_fit_id(self):
-        assert 'id="fit"' in build_honest_check()
+    def test_three_questions_nine_radios(self, picker):
+        assert picker.count("<fieldset>") == 3
+        assert picker.count('type="radio"') == 9
+        for text, options in PICKER_QUESTIONS:
+            assert f"<p>{text}</p>" in picker
+            for opt in options:
+                assert f"<span>{opt}</span>" in picker
 
-    def test_yes_no_columns(self):
-        h = build_honest_check()
-        assert "Coaching fits if:" in h
-        assert "Probably not a fit if:" in h
+    def test_js_shows_it(self, coaching_js):
+        assert "form.hidden = false;" in coaching_js
+        assert "out.hidden = false;" in coaching_js
 
-    def test_six_list_items(self):
-        h = build_honest_check()
-        assert h.count("<li>") == 6
+    def test_scoring_every_combination(self, coaching_js):
+        """Rounded mean of the three answers: 1 → min, 2 → mid, 3 → max."""
+        js = coaching_js.replace("<script>", "").replace("</script>", "")
+        m = re.search(r"var names = (\{[^}]*\});", js)
+        assert m
+        script = (
+            "var names=" + m.group(1) + ";var out=[];"
+            "for(var a=1;a<4;a++)for(var b=1;b<4;b++)for(var c=1;c<4;c++)"
+            "out.push(names[Math.round((a+b+c)/3)]);console.log(out.join(','));"
+        )
+        res = subprocess.run(["node", "-e", script], capture_output=True, text=True, timeout=30)
+        got = res.stdout.strip().split(",")
+        names = {1: "min", 2: "mid", 3: "max"}
+        # Three integers over 3 never land on .5, so Python's round agrees with Math.round.
+        want = [names[round((a + b + c) / 3)] for a in (1, 2, 3) for b in (1, 2, 3) for c in (1, 2, 3)]
+        assert got == want
 
-    def test_no_sand_bg(self):
-        assert "rl-coach-band--sand" not in build_honest_check()
+    def test_result_labels_from_tiers(self, coaching_js):
+        for _k, name, price in TIERS:
+            assert f"Marked: {name}, {price} every 4 weeks." in coaching_js
 
-
-
-# ── FAQ ──────────────────────────────────────────────────────
+    def test_analytics(self, coaching_js):
+        assert "coaching_fitcheck_answer" in coaching_js
+        assert "coaching_fitcheck_result" in coaching_js
 
 
 class TestFAQ:
-    def test_faq_id(self):
-        assert 'id="faq"' in build_faq()
+    def test_eight_details(self):
+        faq = build_faq()
+        assert 'id="faq"' in faq
+        assert faq.count('<details class="rl-coach-faq-item">') == 8
+        assert faq.count("<summary>") == 8
 
-    def test_eight_questions(self):
-        f = build_faq()
-        assert f.count('class="rl-coach-faq-item"') == 8
+    def test_setup_fee_and_cancel(self):
+        faq = build_faq()
+        assert "What&#39;s the $99 setup fee?" in faq
+        assert "Can I cancel anytime?" in faq
 
-    def test_accordion_toggle(self):
-        f = build_faq()
-        assert "rl-coach-faq-toggle" in f
-        assert "rl-coach-faq-q" in f
-
-    def test_setup_fee_faq(self):
-        f = build_faq()
-        assert "$99 setup fee" in f
-
-    def test_no_plan_vs_coaching_faq(self):
-        """Never position coaching against the training plan (Matti, 2026-11-15)."""
-        assert "difference between a plan and coaching" not in build_faq()
-
-    def test_road_specific_faq(self):
-        f = build_faq()
-        assert "I race crits and road races. Can you plan both?" in f
-
-    def test_missed_workout_answer_matches_tiers(self):
-        """Weekly plan adjustments are Mid and Max only; the FAQ must say so."""
-        assert "At Mid and Max I move things that week, and at Min we sort it out in the weekly review." in build_faq()
-
-    def test_has_aria(self):
-        f = build_faq()
-        assert 'aria-expanded' in f
-        assert 'role="button"' in f
-
-
-# ── Application close ────────────────────────────────────────
+    def test_missed_workout_answer_by_tier(self):
+        faq = build_faq()
+        assert "At Mid and Max I move things that week, and at Min we sort it out in the weekly review." in faq
 
 
 class TestApplicationClose:
-    def test_final_cta_id(self):
-        assert 'id="final-cta"' in build_application_close()
-
-    def test_dark_band(self):
-        assert "rl-coach-band--dark" in build_application_close()
-
-    def test_kicker(self):
-        assert "APPLICATION" in build_application_close()
-
-    def test_line_copy(self):
-        c = build_application_close()
-        assert "Ten minutes on your racing, your category, your calendar and your week." in c
-        assert "I answer every one myself." in c
-
-    def test_cta_link(self):
-        c = build_application_close()
-        assert "START YOUR APPLICATION &rarr;" in c
-        assert f'href="{QUESTIONNAIRE_URL}"' in c
-        assert 'data-cta="final_fill_intake"' in c
-
-    def test_cta_border_is_paper_toned(self, coaching_css):
-        assert "border: 1px solid var(--rl-color-cool-white);" in coaching_css
-
-    def test_contact_line(self):
-        c = build_application_close()
-        assert 'href="mailto:coach@roadielabs.com"' in c
-        assert "Questions first?" not in c
+    def test_close(self):
+        close = build_application_close()
+        assert 'id="final-cta"' in close
+        assert "Get on the start list." in close
+        assert 'data-cta="final_fill_intake"' in close
+        assert f'href="{QUESTIONNAIRE_URL}"' in close
+        assert 'href="mailto:coach@roadielabs.com"' in close
 
 
-# ── Mobile sticky CTA ────────────────────────────────────────
+class TestNothingUnbuiltShips:
+    def test_no_placeholders(self, coaching_html):
+        visible = _visible_text(coaching_html)
+        assert "NOT BUILT" not in visible
+        assert "placeholder" not in visible.lower()
+        assert coaching_html.count("<blockquote") == 0
 
 
 class TestMobileStickyCTA:
@@ -479,11 +541,8 @@ class TestBrandCompliance:
 class TestTokenValidation:
     @pytest.fixture(scope="class")
     def defined_tokens(self):
-        tokens_path = Path(__file__).parent.parent.parent / "road-labs-brand" / "tokens" / "tokens.css"
-        if not tokens_path.exists():
-            pytest.skip("tokens.css not found")
-        content = tokens_path.read_text()
-        return set(re.findall(r'(--rl-[\w-]+)\s*:', content))
+        from brand_tokens import get_tokens_css
+        return set(re.findall(r'(--rl-[\w-]+)\s*:', get_tokens_css()))
 
     def test_coaching_css_all_var_refs_defined(self, coaching_css, defined_tokens):
         used = set(re.findall(r'var\((--rl-[\w-]+)\)', coaching_css))
@@ -520,17 +579,15 @@ class TestGA4Events:
 
     def test_scroll_depth_section_ids_match_real_sections(self, coaching_js, coaching_html):
         """Every id referenced by the scroll-depth IIFE must exist in the
-        shipped HTML, and the set must be exactly the seven real content
-        sections — no dead ids, no missing sections."""
+        shipped HTML, and the set must be exactly the real content
+        sections: no dead ids, no missing sections."""
         section_ids = re.findall(r"id:\s*'([\w-]+)'", coaching_js)
-        assert set(section_ids) == {
-            "hero", "terms", "tiers", "fit", "faq", "final-cta",
-        }
+        assert set(section_ids) == set(SECTION_IDS)
         for sid in section_ids:
             assert f'id="{sid}"' in coaching_html, f"Dead section id in scroll-depth JS: {sid}"
 
     def test_old_section_labels_removed(self, coaching_js):
-        for old_id in ("'problem'", "'deliverables'", "'how-it-works'", "'honest-check'"):
+        for old_id in ("'problem'", "'deliverables'", "'honest-check'"):
             assert old_id not in coaching_js, f"Stale scroll-depth id still present: {old_id}"
 
 
@@ -635,23 +692,29 @@ class TestAccessibility:
     def test_reduced_motion_css(self, coaching_css):
         assert "prefers-reduced-motion: reduce" in coaching_css
 
-    def test_faq_aria_controls(self, coaching_html):
-        assert 'aria-controls="rl-coach-faq-ans-' in coaching_html
-        assert 'role="region"' in coaching_html
+    def test_faq_uses_native_disclosure(self, coaching_html):
+        assert "<details" in coaching_html and "<summary>" in coaching_html
+        assert 'role="button"' not in build_faq()
+
+    def test_ledger_marks_have_names(self):
+        tiers = build_tiers()
+        assert 'role="img" aria-label="Included"' in tiers
+        assert 'role="img" aria-label="Not included"' in tiers
 
 
 # ── Scroll Animations ────────────────────────────────────────
 
 
 class TestNoScrollAnimations:
-    """Owner revision 2026-07-18: the Dossier is a still document — no
-    entrance animations, no observer-gated content anywhere on the page."""
+    """No entrance animations and no observer-gated content. The only
+    motion is the ID-card photo/cartoon swap, which reduced motion stops."""
 
     def test_no_data_animate(self, coaching_html):
         assert "data-animate" not in coaching_html
 
-    def test_no_hidden_by_default_content(self, coaching_css):
-        assert "opacity: 0" not in coaching_css
+    def test_only_the_cartoon_starts_hidden(self, coaching_css):
+        rules = re.findall(r"([^{}]+)\{[^{}]*opacity: 0;", coaching_css)
+        assert [r.strip() for r in rules if not r.strip().endswith("%")] == [".rl-coach-id-toon", ".rl-coach-id-toon"]
 
 
 
@@ -734,7 +797,7 @@ class TestRequiredContent:
         assert "$99 setup fee" in coaching_html
 
     def test_hero_h1(self, coaching_html):
-        assert "One-on-one coaching for road racers, from Tuesday-night crits to the long road race." in coaching_html
+        assert "from <mark>Tuesday-night crits</mark> to <mark>the long road race.</mark></h1>" in coaching_html
 
     def test_banned_copy_absent(self, coaching_html):
         """Copy rules: no AI positioning, the retired headline, monthly
@@ -750,11 +813,13 @@ class TestRequiredContent:
         assert "coach@roadielabs.com" in coaching_html
         assert 'href="mailto:coach@roadielabs.com"' in coaching_html
 
-    def test_how_it_works_removed(self, coaching_html):
-        assert 'id="how-it-works"' not in coaching_html
+    def test_old_sections_removed(self, coaching_html):
         assert 'id="problem"' not in coaching_html
         assert 'id="deliverables"' not in coaching_html
-        assert "How it works" not in coaching_html
+
+    def test_all_section_ids_present(self, coaching_html):
+        for sid in SECTION_IDS:
+            assert f'id="{sid}"' in coaching_html
 
 
 # ── Cross-Brand Leakage ──────────────────────────────────────
