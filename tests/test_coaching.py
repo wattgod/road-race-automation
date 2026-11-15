@@ -312,6 +312,10 @@ class TestTerms:
 
 
 class TestWeek:
+    def test_off_text_is_readable(self, coaching_css):
+        """Steel on paper is about 2.7:1; graphite clears 4.5:1."""
+        assert ".rl-coach-cad-off { color: var(--rl-color-graphite); }" in coaching_css
+
     def test_rows(self):
         week = build_week()
         assert 'id="week"' in week
@@ -382,6 +386,22 @@ class TestServiceTiers:
         assert 'data-show="mid"' in tiers
         assert 'data-tab="mid" aria-selected="true"' in tiers
         assert tiers.count('role="tab"') == 3
+
+    def test_no_js_shows_every_column(self, coaching_css, coaching_js):
+        """Tabs ship hidden and columns only collapse once the JS has
+        wired the tabs, so a phone without JS still sees all three levels."""
+        assert '<div class="rl-coach-tabs" role="tablist" aria-label="Levels" hidden>' in build_tiers()
+        assert ".rl-coach-tabs[hidden] { display: none !important; }" in coaching_css
+        hides = re.findall(r'\.rl-coach-ledger[^ {,]*\[data-show="\w+"\] \.rl-coach-t-\w+', coaching_css)
+        assert len(hides) == 6
+        assert all(h.startswith(".rl-coach-ledger.rl-coach-tabbed[") for h in hides)
+        assert "ledger.classList.add('rl-coach-tabbed');" in coaching_js
+        assert "tabs[0].parentNode.hidden = false;" in coaching_js
+        # Untabbed phone rows label each cell with its level.
+        assert ".rl-coach-ledger:not(.rl-coach-tabbed) tbody td::before { content: attr(data-t);" in coaching_css
+        tiers = build_tiers()
+        for key, name, _p in TIERS:
+            assert f'<td class="rl-coach-t-{key}" data-t="{name.upper()}">' in tiers
 
 
 class TestPicker:

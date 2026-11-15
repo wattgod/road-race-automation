@@ -368,7 +368,8 @@ def _ledger_cell(key: str, value) -> str:
         inner = '<span class="rl-coach-n" role="img" aria-label="Not included"></span>'
     else:
         inner = value
-    return f'<td class="rl-coach-t-{key}">{inner}</td>'
+    name = dict((k, n) for k, n, _p in TIERS)[key]
+    return f'<td class="rl-coach-t-{key}" data-t="{name.upper()}">{inner}</td>'
 
 
 def build_tiers() -> str:
@@ -399,7 +400,7 @@ def build_tiers() -> str:
     <div class="rl-coach-inner">
       {_sec_head("05", "Levels &amp; prices", "Pick how close I sit on your wheel.", "Every level bills every 4 weeks and comes with TrainingPeaks Premium. " + PICKER_INTRO)}
       {build_fit_check()}
-      <div class="rl-coach-tabs" role="tablist" aria-label="Levels">
+      <div class="rl-coach-tabs" role="tablist" aria-label="Levels" hidden>
         {tabs}
       </div>
       <table class="rl-coach-ledger" id="rl-coach-ledger" data-show="mid">
@@ -631,7 +632,7 @@ def build_coaching_css() -> str:
 .rl-coach-cad thead th:first-child { color: var(--rl-color-paper); width: 16%; }
 .rl-coach-cad tbody th { font-family: var(--rl-font-data); font-size: var(--rl-font-size-xs); letter-spacing: var(--rl-letter-spacing-wide); text-transform: uppercase; color: var(--rl-color-near-black); border-right: var(--rl-border-width-subtle) solid var(--rl-color-dark-navy); }
 .rl-coach-cad td { font-size: var(--rl-font-size-base); }
-.rl-coach-cad-off { color: var(--rl-color-steel); }
+.rl-coach-cad-off { color: var(--rl-color-graphite); }
 .rl-coach-cad-on { font-weight: var(--rl-font-weight-semibold); }
 .rl-coach-cad-on::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--rl-color-offer); margin-right: var(--rl-spacing-xs); }
 .rl-coach-cad-note td { border-bottom: var(--rl-border-width-subtle) solid var(--rl-color-dark-navy); padding-top: 0; }
@@ -658,6 +659,7 @@ def build_coaching_css() -> str:
 .rl-coach-picker input:focus-visible { outline: var(--rl-border-width-subtle) solid var(--rl-color-tier-gold); outline-offset: 2px; }
 .rl-coach-picker-out { font-family: var(--rl-font-data); font-size: var(--rl-font-size-sm); letter-spacing: var(--rl-letter-spacing-wide); text-transform: uppercase; color: var(--rl-color-tier-gold); margin: 0 0 var(--rl-spacing-xl); min-height: 1.5em; }
 .rl-coach-tabs { display: none; }
+.rl-coach-tabs[hidden] { display: none !important; }
 .rl-coach-ledger { width: 100%; border-collapse: collapse; background: var(--rl-color-paper); color: var(--rl-color-dark-navy); border: var(--rl-border-width-heavy) solid var(--rl-color-graphite); table-layout: fixed; font-family: var(--rl-font-editorial); }
 .rl-coach-ledger th, .rl-coach-ledger td { padding: var(--rl-spacing-sm) var(--rl-spacing-md); border-bottom: 1px solid var(--rl-color-silver); text-align: left; vertical-align: top; }
 .rl-coach-ledger col.rl-coach-c0 { width: 31%; }
@@ -792,14 +794,18 @@ def build_coaching_css() -> str:
   .rl-coach-tabs button[aria-selected="true"] { background: var(--rl-color-near-black); color: var(--rl-color-tier-gold); }
   .rl-coach-ledger, .rl-coach-ledger tbody { display: block; border-top: 0; }
   .rl-coach-ledger colgroup { display: none; }
-  .rl-coach-ledger tbody tr { display: grid; grid-template-columns: 1fr 34%; }
+  .rl-coach-ledger tbody tr { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .rl-coach-ledger tbody tr > th { grid-column: 1 / -1; }
+  .rl-coach-ledger:not(.rl-coach-tabbed) tbody td::before { content: attr(data-t); display: block; font-family: var(--rl-font-data); font-size: var(--rl-font-size-2xs); letter-spacing: var(--rl-letter-spacing-wide); color: var(--rl-color-graphite); font-weight: var(--rl-font-weight-bold); padding-bottom: 4px; }
+  .rl-coach-ledger.rl-coach-tabbed tbody tr:not(.rl-coach-grp) { grid-template-columns: 1fr 34%; }
+  .rl-coach-ledger.rl-coach-tabbed tbody tr > th { grid-column: auto; }
   .rl-coach-ledger tbody tr.rl-coach-grp { grid-template-columns: 1fr; }
   .rl-coach-ledger tbody tr > * { display: block; }
   .rl-coach-ledger thead, .rl-coach-ledger thead tr, .rl-coach-ledger thead th, .rl-coach-ledger tfoot, .rl-coach-ledger tfoot tr, .rl-coach-ledger tfoot td { display: block; width: 100%; }
   .rl-coach-ledger tbody td { font-size: var(--rl-font-size-sm); }
-  .rl-coach-ledger[data-show="min"] .rl-coach-t-mid, .rl-coach-ledger[data-show="min"] .rl-coach-t-max,
-  .rl-coach-ledger[data-show="mid"] .rl-coach-t-min, .rl-coach-ledger[data-show="mid"] .rl-coach-t-max,
-  .rl-coach-ledger[data-show="max"] .rl-coach-t-min, .rl-coach-ledger[data-show="max"] .rl-coach-t-mid { display: none; }
+  .rl-coach-ledger.rl-coach-tabbed[data-show="min"] .rl-coach-t-mid, .rl-coach-ledger.rl-coach-tabbed[data-show="min"] .rl-coach-t-max,
+  .rl-coach-ledger.rl-coach-tabbed[data-show="mid"] .rl-coach-t-min, .rl-coach-ledger.rl-coach-tabbed[data-show="mid"] .rl-coach-t-max,
+  .rl-coach-ledger.rl-coach-tabbed[data-show="max"] .rl-coach-t-min, .rl-coach-ledger.rl-coach-tabbed[data-show="max"] .rl-coach-t-mid { display: none; }
   .rl-coach-ledger thead th:first-child { display: none; }
   .rl-coach-ledger thead th { border-left: 0; }
   .rl-coach-ledger tbody th { font-size: var(--rl-font-size-sm); }
@@ -832,6 +838,11 @@ def build_coaching_js() -> str:
     tabs.forEach(function(b) { b.setAttribute('aria-selected', b.getAttribute('data-tab') === tier ? 'true' : 'false'); });
   }
   tabs.forEach(function(b) { b.addEventListener('click', function() { show(b.getAttribute('data-tab')); }); });
+  /* Without JS the tabs stay hidden and every column shows. */
+  if (tabs.length) {
+    tabs[0].parentNode.hidden = false;
+    ledger.classList.add('rl-coach-tabbed');
+  }
 
   var form = document.getElementById('rl-coach-picker');
   var out = document.getElementById('rl-coach-picker-out');
