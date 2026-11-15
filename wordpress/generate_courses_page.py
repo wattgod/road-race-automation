@@ -4,7 +4,7 @@ Generate the Roadie Labs /courses/ page in neo-brutalist style.
 
 Cross-sells two self-paced courses sold on Gravel God Cycling, Roadie Labs'
 sister brand (same coach): Gravel Hydration Mastery ($19) and Dirt Craft:
-Technical Gravel Mastery ($29), plus the two-course bundle ($39). Reuses
+Technical Gravel Mastery ($49), plus the two-course bundle ($39). Reuses
 CSS/style patterns from generate_neo_brutalist.py and the about page
 component library (hero, section headers, cards, FAQ).
 
@@ -38,7 +38,11 @@ DIRT_CRAFT_URL = f"{GRAVEL_GOD_BASE_URL}/course/dirt-craft/"
 BUNDLE_URL = f"{GRAVEL_GOD_BASE_URL}/course/"
 
 HYDRATION_PRICE = 19
-DIRT_CRAFT_PRICE = 29
+# Dirt Craft facts mirror gravel-race-automation data/courses/dirt-craft/
+# course.json (price_usd 49; 7 modules, 21 lessons incl. 4 Stack Check quizzes).
+DIRT_CRAFT_PRICE = 49
+DIRT_CRAFT_LESSONS = 21
+DIRT_CRAFT_MODULES = 7
 BUNDLE_PRICE = 39
 
 
@@ -114,7 +118,7 @@ def build_course_cards() -> str:
           <h3 class="rl-course-card-title">Dirt Craft: Technical Gravel Mastery</h3>
           <div class="rl-course-card-meta">
             <span class="rl-course-card-price">${DIRT_CRAFT_PRICE}</span>
-            <span class="rl-course-card-lessons">12 lessons + 4 module quizzes</span>
+            <span class="rl-course-card-lessons">{DIRT_CRAFT_LESSONS} lessons across {DIRT_CRAFT_MODULES} modules</span>
           </div>
           <p class="rl-course-card-pitch">For road riders heading to their first (or fifth) gravel event. Road instincts &mdash; weight forward, brake late, hold your line &mdash; are the ones that put you on the ground when the surface goes loose.</p>
           <ul class="rl-course-card-bullets">
@@ -448,7 +452,7 @@ def build_jsonld() -> str:
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Courses — Hydration & Gravel Technique for Road Cyclists",
-        "description": "Two self-paced courses from Gravel God Cycling, Roadie Labs' sister brand: Gravel Hydration Mastery ($19, 8 lessons) and Dirt Craft: Technical Gravel Mastery ($29, 12 lessons).",
+        "description": "Two self-paced courses from Gravel God Cycling, Roadie Labs' sister brand: Gravel Hydration Mastery ($19, 8 lessons) and Dirt Craft: Technical Gravel Mastery ($49, 21 lessons across 7 modules).",
         "url": f"{SITE_BASE_URL}/courses/",
         "isPartOf": {
             "@type": "WebSite",
@@ -515,7 +519,7 @@ def generate_courses_page(external_assets: dict = None) -> str:
         page_css = get_page_css()
         inline_js = build_inline_js()
 
-    meta_desc = "Two self-paced courses for road cyclists from Gravel God Cycling, Roadie Labs&#39; sister brand: Gravel Hydration Mastery ($19, 8 interactive lessons) and Dirt Craft: Technical Gravel Mastery ($29, 12 lessons + 4 quizzes)."
+    meta_desc = "Two self-paced courses for road cyclists from Gravel God Cycling, Roadie Labs&#39; sister brand: Gravel Hydration Mastery ($19, 8 interactive lessons) and Dirt Craft: Technical Gravel Mastery ($49, 21 lessons across 7 modules)."
 
     og_tags = f'''<meta property="og:title" content="Courses — Hydration &amp; Gravel Technique for Road Cyclists">
   <meta property="og:description" content="{meta_desc}">

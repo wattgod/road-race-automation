@@ -56,7 +56,7 @@ COMPARE_COLORS = [
 # Max pairs to generate — focus on highest-value comparisons
 MAX_PAIRS = 150
 
-TIER_NAMES = {1: "Elite", 2: "Contender", 3: "Solid", 4: "Roster"}
+from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
 
 
 def esc(text) -> str:

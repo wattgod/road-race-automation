@@ -192,7 +192,7 @@ def generate_preview_html(slug):
 
     tier = fondo_rating_data.get("tier", 4)
     score = fondo_rating_data.get("overall_score", 0)
-    tier_name = TIER_NAMES.get(tier, "Grassroots")
+    tier_name = TIER_NAMES.get(tier, f"Tier {tier}")
     location = vitals.get("location", "") or vitals.get("location_badge", "")
     date_str = vitals.get("date_specific", "") or vitals.get("date", "")
     distance = vitals.get("distance_mi", "")

@@ -44,7 +44,7 @@
   let viewMode = 'list'; // 'list' or 'map'
   let leafletLoaded = false;
 
-  const TIER_NAMES = { 1: 'The Icons', 2: 'Elite', 3: 'Solid', 4: 'Grassroots' };
+  const TIER_NAMES = { 1: 'Elite', 2: 'Contender', 3: 'Solid', 4: 'Roster' };  // must equal wordpress/brand_tokens.py TIER_NAMES (tests/test_tier_names.py)
   const TIER_DESCS = {
     1: 'The definitive road events. World-class fields, iconic courses, bucket-list status.',
     2: 'Established races with strong reputations and competitive fields. The next tier of must-ride events.',

@@ -36,6 +36,7 @@ from brand_tokens import (
     COLORS,
     FONT_FILES,
     RACER_RATING_THRESHOLD,
+    TIER_NAMES,
     get_font_face_css,
     get_preload_hints,
     get_tokens_css,
@@ -407,7 +408,7 @@ def build_seo_description(rd: dict, seo_overrides: dict = None) -> str:
     tagline = rd.get('tagline', '').rstrip('.')
     score = rd.get('overall_score', 0)
     tier = rd.get('tier', 4)
-    tier_label = {1: 'Elite', 2: 'Contender', 3: 'Solid', 4: 'Roster'}.get(tier, f'Tier {tier}')
+    tier_label = TIER_NAMES.get(tier, f'Tier {tier}')
     location = rd.get('vitals', {}).get('location', '')
     if location == '--':
         location = ''
@@ -3771,7 +3772,7 @@ def build_coaching_footnote(rd: dict) -> str:
     return f'''<aside class="rl-coaching-note" data-measure-section="coaching">
   <div>
     <h2>Really want to see what you can do?</h2>
-    <p>Hire a coach. You&rsquo;ll never become what you could be alone. (And no, AI isn&rsquo;t a person.)</p>
+    <p>Hire a coach. You&rsquo;ll never become what you could be alone.</p>
   </div>
   <a class="rl-coaching-link" href="{esc(href)}" data-cta="approved_coaching">GET ME IN YOUR CORNER &rarr;</a>
 </aside>'''

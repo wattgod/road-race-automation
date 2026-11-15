@@ -28,7 +28,10 @@ CONTACT_EMAIL = "gravelgodcoaching@gmail.com"
 # is only written when this slug is in the race index being rendered.
 EXAMPLE_SLUG = "gran-fondo-utah"
 
-TIER_LABELS = {1: "Tier 1 (Elite)", 2: "Tier 2 (Contender)", 3: "Tier 3 (Rising)", 4: "Tier 4 (Local)"}
+sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+from brand_tokens import TIER_NAMES  # noqa: E402  (the one tier-name mapping)
+
+TIER_LABELS = {t: f"Tier {t} ({name})" for t, name in TIER_NAMES.items()}
 
 DIMENSIONS = [
     "logistics", "length", "technicality", "elevation", "climate",
@@ -101,12 +104,12 @@ def generate_llms_txt(index: list[dict]) -> str:
 
 ## Overview
 
-Roadie Labs is a road cycling event database covering {n_races} across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1=Elite, T2=Contender, T3=Rising, T4=Local).
+Roadie Labs is a road cycling event database covering {n_races} across North America and beyond. Every race is scored on 14 dimensions (distance, climbing, descent technicality, road surface, climate risk, altitude, logistics, prestige, organization, scenic experience, community culture, field depth, value, expenses) on a 1-5 scale, plus a cultural-impact bonus (the 15th criterion), producing an overall score out of 100 and a tier assignment (T1={TIER_NAMES[1]}, T2={TIER_NAMES[2]}, T3={TIER_NAMES[3]}, T4={TIER_NAMES[4]}).
 
-- **Tier 1 (Elite)**: {tiers[1]} — score >= 80 or prestige override
-- **Tier 2 (Contender)**: {tiers[2]} — score >= 60
-- **Tier 3 (Rising)**: {tiers[3]} — score >= 45
-- **Tier 4 (Local)**: {tiers[4]} — score < 45
+- **{TIER_LABELS[1]}**: {tiers[1]} — score >= 80 or prestige override
+- **{TIER_LABELS[2]}**: {tiers[2]} — score >= 60
+- **{TIER_LABELS[3]}**: {tiers[3]} — score >= 45
+- **{TIER_LABELS[4]}**: {tiers[4]} — score < 45
 
 Disciplines: gran fondo, sportive, century, multi-stage, hillclimb.
 Regions: {', '.join(regions)}.
@@ -217,10 +220,10 @@ def generate_llms_full_txt(index: list[dict], race_data_dir: Path) -> str:
     lines.append("Overall score = round((sum of the 14 dimension scores + cultural-impact) / 70 * 100).")
     lines.append("")
     lines.append("Tier assignment:")
-    lines.append("- Tier 1 (Elite): score >= 80, OR prestige=5 + score>=75")
-    lines.append("- Tier 2 (Contender): score >= 60, OR prestige=5 + score<75 (capped at T2)")
-    lines.append("- Tier 3 (Rising): score >= 45")
-    lines.append("- Tier 4 (Local): score < 45")
+    lines.append(f"- {TIER_LABELS[1]}: score >= 80, OR prestige=5 + score>=75")
+    lines.append(f"- {TIER_LABELS[2]}: score >= 60, OR prestige=5 + score<75 (capped at T2)")
+    lines.append(f"- {TIER_LABELS[3]}: score >= 45")
+    lines.append(f"- {TIER_LABELS[4]}: score < 45")
     lines.append("- Prestige 4 promotes one tier (but not into T1)")
     lines.append("")
 

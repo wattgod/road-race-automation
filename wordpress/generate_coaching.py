@@ -89,23 +89,14 @@ def build_nav() -> str:
   </div>'''
 
 
-# SANCTIONED EXCEPTION to the anti-defensive-messaging rule (see
-# .claude/skills/brand-and-trust/SKILL.md, "Never defensive messaging" —
-# phrases naming what something ISN'T are normally banned because they
-# plant doubt nobody had). The sub-line below ("Not an AI, not a
-# dashboard, not a coach who reads you like a spreadsheet") is an
-# explicit, owner-approved exception. Matti sanctioned this specific line
-# 2026-07-18 as an aspirational "corner" frame — it names what you're
-# getting, not a defensive rebuttal to an objection nobody raised — the
-# same precedent class this skill file already reserves for that
-# distinction. This is the /coaching/ hero and is itself the
-# precedent-setting instance (no prior race-page coaching-footnote
-# precedent for this pattern was found in this repo).
+# No AI contrasts anywhere (owner ruling 2026-11-14, which retires the
+# 2026-07-18 "Not an AI, not a dashboard..." exception): say what I do,
+# never what I'm not. tests/test_no_ai_positioning.py enforces it.
 def build_hero() -> str:
     return f'''<section class="rl-coach-band rl-coach-hero" id="hero">
     <div class="rl-coach-inner">
       <h1>You could be better than you think. That is not encouragement &mdash; it&#39;s an observation about people who train alone.</h1>
-      <p class="rl-coach-tagline">The fix is a human in your corner. Not an AI, not a dashboard, not a coach who reads you like a spreadsheet. The terms are below.</p>
+      <p class="rl-coach-tagline">The fix is a human in your corner. The terms are below.</p>
       <a href="{QUESTIONNAIRE_URL}" class="rl-coach-hero-cta" data-cta="hero_apply">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''
@@ -115,8 +106,8 @@ def build_terms() -> str:
     clauses = [
         (
             "01",
-            "Every file, read by a person",
-            "Software flags a number. I notice the interval you bailed on and ask why.",
+            "I read every file",
+            "I notice the interval you bailed on and ask why.",
         ),
         (
             "02",
@@ -126,7 +117,7 @@ def build_terms() -> str:
         (
             "03",
             "The plan moves when your life does",
-            "Sick kid, work trip, tender knee &mdash; the week adjusts that week, not after three missed targets teach an algorithm what a person would have seen on Tuesday.",
+            "When it&#39;s a sick kid, a work trip or a tender knee, I change the week that week.",
         ),
         (
             "04",

@@ -24,7 +24,7 @@ from generate_neo_brutalist import (
     build_inline_js,
     write_shared_assets,
 )
-from brand_tokens import get_ga4_head_snippet, get_preload_hints
+from brand_tokens import TIER_NAMES, get_ga4_head_snippet, get_preload_hints
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
 
@@ -74,28 +74,28 @@ def build_tier_system() -> str:
         <tbody>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#000;color:#fff;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 1</span></td>
-            <td style="font-weight:700">Elite</td>
+            <td style="font-weight:700">{TIER_NAMES[1]}</td>
             <td>&ge; 80</td>
             <td>The definitive road events &mdash; the deepest fields and the courses that anchor the calendar.</td>
             <td><a href="{SITE_BASE_URL}/race/letape-du-tour/" style="color:var(--rl-color-signal-red);font-weight:700">L'Etape du Tour</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:#000;font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #000">TIER 2</span></td>
-            <td style="font-weight:700">Contender</td>
+            <td style="font-weight:700">{TIER_NAMES[2]}</td>
             <td>&ge; 60</td>
             <td>Established races with strong reputations and competitive fields. The next tier of must-do events.</td>
             <td><a href="{SITE_BASE_URL}/race/cheaha-challenge-gran-fondo/" style="color:var(--rl-color-signal-red);font-weight:700">Cheaha Challenge Gran Fondo</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-secondary-blue);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid #666">TIER 3</span></td>
-            <td style="font-weight:700">Rising</td>
+            <td style="font-weight:700">{TIER_NAMES[3]}</td>
             <td>&ge; 45</td>
             <td>Regional favorites and emerging races. Strong local scenes, genuine road racing character.</td>
             <td><a href="{SITE_BASE_URL}/race/americas-most-beautiful-bike-ride/" style="color:var(--rl-color-signal-red);font-weight:700">America's Most Beautiful Bike Ride</a></td>
           </tr>
           <tr>
             <td><span style="display:inline-block;padding:2px 10px;background:#fff;color:var(--rl-color-tier-4);font-weight:700;font-size:11px;letter-spacing:1.5px;border:2px solid var(--rl-color-tier-4)">TIER 4</span></td>
-            <td style="font-weight:700">Local</td>
+            <td style="font-weight:700">{TIER_NAMES[4]}</td>
             <td>&lt; 45</td>
             <td>Up-and-coming races and local grinders. Small fields, raw vibes, grassroots road racing.</td>
             <td><a href="{SITE_BASE_URL}/race/letape-indonesia/" style="color:var(--rl-color-signal-red);font-weight:700">L'Étape Indonesia</a></td>

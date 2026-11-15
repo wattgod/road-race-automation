@@ -32,6 +32,7 @@ from generate_neo_brutalist import (
 )
 from brand_tokens import (
     RACER_RATING_THRESHOLD,
+    TIER_NAMES,
     get_ab_head_snippet,
     get_font_face_css,
     get_preload_hints,
@@ -521,14 +522,6 @@ def build_goal_review_entry() -> str:
   </section>'''
 
 
-# SANCTIONED EXCEPTION to the anti-defensive-messaging rule (see
-# .claude/skills/brand-and-trust/SKILL.md, "Never defensive messaging" —
-# phrases naming what something ISN'T are normally banned because they
-# plant doubt nobody had). Cell 03's body line ("A human in your corner
-# — not an AI, not a spreadsheet.") reuses the same owner-sanctioned
-# 2026-07-18 exception as the /coaching/ hero (generate_coaching.py,
-# build_hero()) — an aspirational "corner" frame, not a rebuttal to an
-# objection nobody raised.
 def build_ladder_strip(stats: dict) -> str:
     race_count = stats["race_count"]
 
@@ -549,7 +542,7 @@ def build_ladder_strip(stats: dict) -> str:
       <div class="rl-hp-ladder-cell">
         <p class="rl-hp-ladder-num">03</p>
         <h3>Find out what you could be.</h3>
-        <p>A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+        <p>A human in your corner.</p>
         <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-ladder-go" data-ga="ladder_coaching">GET ME IN YOUR CORNER &rarr;</a>
       </div>
     </div>
@@ -793,7 +786,7 @@ def build_bento_features(race_index: list) -> str:
     featured = get_featured_races(race_index)
     if not featured:
         return '<div class="rl-hp-bento"><p class="rl-hp-bento-empty">Featured races loading&hellip;</p></div>'
-    tier_labels = {1: "Elite", 2: "Contender", 3: "Rising", 4: "Local"}
+    tier_labels = TIER_NAMES
     cards = ""
     for i, race in enumerate(featured[:3]):
         tier = race.get("tier", 4)
@@ -877,7 +870,7 @@ def build_latest_takes() -> str:
 
 def build_tabbed_rankings(race_index: list) -> str:
     """Build ARIA-compliant tabbed rankings: All Tiers, Tier 1-4."""
-    tier_labels = {1: "Elite", 2: "Contender", 3: "Rising", 4: "Local"}
+    tier_labels = TIER_NAMES
 
     def _build_items(races):
         if not races:
@@ -1077,7 +1070,7 @@ def build_testimonials() -> str:
     quiet coaching band so the homepage has a coaching presence."""
     return f'''<section class="rl-hp-testimonials" id="testimonials">
     <div class="rl-hp-test-cta">
-      <p>You could be better than you think. A human in your corner &mdash; not an AI, not a spreadsheet.</p>
+      <p>You could be better than you think. A human in your corner.</p>
       <a href="{esc(SITE_BASE_URL)}/coaching/" class="rl-hp-btn rl-hp-btn--primary" data-ga="coaching_cta_testimonials">GET ME IN YOUR CORNER &rarr;</a>
     </div>
   </section>'''

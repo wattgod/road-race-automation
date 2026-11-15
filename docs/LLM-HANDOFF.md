@@ -33,7 +33,8 @@ Canonical plan: `gravel-god-cycling/NORTHSTAR.md`.
 Monochrome palette (newsprint/charcoal; `#1a1a1a`, `#f5f5f0`, error `#8b1a1a`).
 Rating key is `race.fondo_rating` (NOT `gravel_god_rating`). 14 scored dimensions
 + `cultural_impact` bonus = "15 criteria". Tiers T1≥80/T2≥60/T3≥45/T4<45, labels
-**Elite / Contender / Rising / Local** (canonical, in `brand_tokens.TIER_NAMES`).
+**Elite / Contender / Solid / Roster** (canonical, in `brand_tokens.TIER_NAMES`;
+same names as Gravel God, Matti ruling 2026-11-14; Rising/Local are retired).
 
 ---
 

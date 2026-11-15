@@ -180,15 +180,21 @@ class TestCrossSellContent:
 
     def test_prices(self, page_html):
         assert HYDRATION_PRICE == 19
-        assert DIRT_CRAFT_PRICE == 29
+        # Dirt Craft is $49 (gravel-race-automation data/courses/dirt-craft/
+        # course.json price_usd; Matti ruling 2026-11-14). Bundle unchanged.
+        assert DIRT_CRAFT_PRICE == 49
         assert BUNDLE_PRICE == 39
         assert "$19" in page_html
-        assert "$29" in page_html
+        assert "$49" in page_html
         assert "$39" in page_html
+        for stale in ("DIRT CRAFT &mdash; $29", "Dirt Craft ($29)", "($29,"):
+            assert stale not in page_html
+        assert "GET DIRT CRAFT &mdash; $49" in page_html
 
     def test_lesson_counts(self, page_html):
         assert "8 interactive lessons" in page_html
-        assert "12 lessons + 4 module quizzes" in page_html
+        assert "21 lessons across 7 modules" in page_html
+        assert "12 lessons" not in page_html
 
     def test_sister_brand_disclosure(self, page_html):
         # Honest cross-brand framing must be present
