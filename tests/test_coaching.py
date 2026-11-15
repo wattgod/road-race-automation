@@ -788,8 +788,9 @@ class TestApplyPage:
     def test_submission_preserves_consent_mode_state(self, apply_html):
         assert "analyticsConsentState" in apply_html
         assert "rl_consent=accepted" in apply_html
-        assert '? "granted"' in apply_html
-        assert ': "denied"' in apply_html
+        assert "rl_consent=declined" in apply_html
+        from cookie_consent import ANALYTICS_CONSENT_STATE_JS
+        assert ANALYTICS_CONSENT_STATE_JS in apply_html
         assert "data.analytics_consent = analyticsConsentState()" in apply_html
 
     def test_low_friction_onboarding_context_is_collected(self, apply_html):

@@ -111,8 +111,16 @@ class TestSEO:
 
 
 class TestGA4Tracking:
-    def test_purchase_event(self, success_js):
-        assert "purchase" in success_js
+    def test_no_browser_purchase_event(self, success_js):
+        """The verified Stripe webhook is the sole GA4 purchase source; a
+        success-page URL is not payment authority."""
+        assert "'purchase'" not in success_js
+        assert '"purchase"' not in success_js
+
+    def test_success_page_view_without_revenue(self, success_js):
+        assert "'success_page_view'" in success_js
+        for revenue_key in ("value:", "currency:", "transaction_id:", "items:"):
+            assert revenue_key not in success_js
 
     def test_session_id_extraction(self, success_js):
         assert "session_id" in success_js

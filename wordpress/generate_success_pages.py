@@ -202,7 +202,13 @@ def build_success_css() -> str:
 
 
 def build_success_js() -> str:
-    """JS for GA4 purchase event + session_id extraction."""
+    """JS for success-page analytics + session_id extraction.
+
+    A redirect URL is not payment authority: it can be refreshed, shared, or
+    opened with a fabricated ``session_id``. The verified Stripe webhook is the
+    sole source of GA4 ``purchase`` events, so this page only records a
+    revenue-free ``success_page_view``.
+    """
     return """<script>
 (function() {
   var params = new URLSearchParams(window.location.search);
@@ -211,10 +217,6 @@ def build_success_js() -> str:
   var ptype = productType ? productType.getAttribute('data-product-type') : 'unknown';
 
   if (typeof gtag === 'function') {
-    gtag('event', 'purchase', {
-      transaction_id: sessionId,
-      product_type: ptype,
-    });
     gtag('event', 'success_page_view', {
       product_type: ptype,
       session_id: sessionId,

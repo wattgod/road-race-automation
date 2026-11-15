@@ -32,16 +32,24 @@ GA_MEASUREMENT_ID = "G-WQ7W8XN11N"  # Roadie Labs - GA4 (properties/540984732, c
 
 
 def get_ga4_head_snippet() -> str:
-    """Return consent defaults + GA4 loading scripts for <head>."""
+    """Return consent defaults + GA4 loading scripts for <head>.
+
+    Must be placed before </head>. The region-aware Consent Mode default and
+    ``gtag('config')`` run synchronously in one block before gtag.js loads
+    (async), so no hit can fire ahead of the default. See
+    ``cookie_consent.get_consent_head_script``.
+
+    Parity with rl-cookie-consent.php enforced by test_cookie_consent_mu_plugin.py.
+    """
+    try:
+        from cookie_consent import get_consent_head_script
+    except ImportError:  # imported as ``wordpress.brand_tokens``
+        from wordpress.cookie_consent import get_consent_head_script
+
     return (
-        "<script>window.dataLayer=window.dataLayer||[];"
-        "function gtag(){dataLayer.push(arguments)}"
-        "gtag('consent','default',{"
-        "'analytics_storage':/(^|; )rl_consent=accepted/.test(document.cookie)?'granted':'denied',"
-        "'ad_storage':'denied','ad_user_data':'denied',"
-        "'ad_personalization':'denied','wait_for_update':500});</script>\n"
-        f'  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
-        f"  <script>gtag('js',new Date());gtag('config','{GA_MEASUREMENT_ID}');</script>"
+        get_consent_head_script(GA_MEASUREMENT_ID)
+        + "\n"
+        + f'  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>'
     )
 
 

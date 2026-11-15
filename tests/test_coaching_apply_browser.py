@@ -79,12 +79,16 @@ def browser():
 class Harness:
     """One phone-sized page with the Worker intercepted."""
 
-    def __init__(self, browser, html, *, worker, query="?tier=mid", block_saves=False):
+    def __init__(self, browser, html, *, worker, query="?tier=mid", block_saves=False,
+                 timezone_id="Europe/Paris"):
         self.worker_mode = worker
         self.worker_requests = []
         self.formsubmit_requests = []
         self.page_errors = []
-        self.context = browser.new_context(viewport={"width": 390, "height": 844})
+        # Pinned so the region-aware consent default is deterministic: an
+        # EEA timezone with no rl_consent cookie means analytics is denied.
+        self.context = browser.new_context(
+            viewport={"width": 390, "height": 844}, timezone_id=timezone_id)
         if block_saves:
             # Browser that reads storage but refuses writes (quota exceeded /
             # locked-down private mode): every setItem throws.
@@ -250,7 +254,7 @@ def test_worker_success_posts_a_valid_payload(harness):
     assert body["email"] == "test.rider+apply@example.com"
     assert body["website"] == ""
     assert UUID_RE.match(body["submission_id"]), body["submission_id"]
-    assert body["analytics_consent"] == "denied"
+    assert body["analytics_consent"] == "denied", "EEA timezone, no cookie: opt-in required"
     assert body["home_timezone"], "timezone is filled from the browser"
     # The questionnaire the Worker forwards is every other answer.
     assert body["primary_goal"] == "specific_race"
@@ -406,3 +410,15 @@ def test_tapping_a_checkbox_label_checks_it_once(harness):
     assert h.checked("interval_days", "flexible")
     assert not h.checked("interval_days", "tuesday")
     assert h.page_errors == []
+
+
+def test_outside_opt_in_regions_reports_granted_consent(harness):
+    """Same rule as gravelgodcycling.com: outside EEA/UK/CH, with no stored
+    choice, the effective analytics consent is granted."""
+    h = harness(worker="success", timezone_id="America/Chicago")
+    h.fill_valid_application()
+    h.submit()
+    h.message()
+    assert len(h.worker_requests) == 1
+    body = json.loads(h.worker_requests[0]["body"])
+    assert body["analytics_consent"] == "granted"

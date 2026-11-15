@@ -18,6 +18,7 @@ from datetime import date
 from pathlib import Path
 
 from brand_tokens import COLORS, get_ga4_head_snippet
+from cookie_consent import get_consent_banner_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = PROJECT_ROOT / "wordpress" / "output"
@@ -503,6 +504,7 @@ def generate_blog_index_page(output_dir=None):
     loadIndex();
   }})();
   </script>
+{get_consent_banner_html()}
 </body>
 </html>"""
 
