@@ -45,6 +45,10 @@ DIRT_CRAFT_LESSONS = 21
 HYDRATION_LESSONS = 8
 TOTAL_LESSONS = HYDRATION_LESSONS + DIRT_CRAFT_LESSONS
 DIRT_CRAFT_MODULES = 7
+# The refund promise this page makes for both courses. The Terms of Service
+# read this same constant (tests/test_legal_seller_and_refunds.py).
+COURSE_REFUND_DAYS = 30
+COURSE_REFUND_LINE = f"{COURSE_REFUND_DAYS}-day money-back guarantee on both courses."
 
 
 def esc(text) -> str:
@@ -150,7 +154,7 @@ def build_faq() -> str:
       </details>
       <details class="rl-courses-faq-item" data-faq="refunds">
         <summary>What&#39;s the refund policy?</summary>
-        <p>30-day money-back guarantee on both courses. If it isn&#39;t useful, you get your money back.</p>
+        <p>''' + COURSE_REFUND_LINE + ''' If it isn&#39;t useful, you get your money back.</p>
       </details>
       <details class="rl-courses-faq-item" data-faq="gravel-bike">
         <summary>Do I need a gravel bike?</summary>
@@ -420,7 +424,7 @@ def build_jsonld() -> str:
                 "name": "What's the refund policy?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "30-day money-back guarantee on both courses.",
+                    "text": COURSE_REFUND_LINE,
                 },
             },
             {
