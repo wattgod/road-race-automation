@@ -49,7 +49,7 @@ def test_sort_row_is_a_wrapping_class_not_an_inline_nowrap_row():
 @pytest.mark.skipif(not _has_chromium(), reason="playwright or Chromium not installed")
 @pytest.mark.parametrize("width", [375, 390])
 def test_road_races_page_has_no_horizontal_overflow(width):
-    page_html = build_page(FRAGMENT)
+    page_html = build_page(FRAGMENT, 421)
 
     def handle(route):
         url = route.request.url
