@@ -89,15 +89,15 @@ def build_nav() -> str:
   </div>'''
 
 
-# No AI contrasts anywhere (owner ruling 2026-11-14, which retires the
-# 2026-07-18 "Not an AI, not a dashboard..." exception): say what I do,
-# never what I'm not. tests/test_no_ai_positioning.py enforces it.
+# Hero copy approved by Matti 2026-11-15 (one plain line that says what the
+# product is). Say what I do, never what I'm not:
+# tests/test_no_ai_positioning.py enforces it.
 def build_hero() -> str:
     return f'''<section class="rl-coach-band rl-coach-hero" id="hero">
     <div class="rl-coach-inner">
-      <h1>You could be better than you think. That is not encouragement &mdash; it&#39;s an observation about people who train alone.</h1>
-      <p class="rl-coach-tagline">The fix is a human in your corner. The terms are below.</p>
-      <a href="{QUESTIONNAIRE_URL}" class="rl-coach-hero-cta" data-cta="hero_apply">GET ME IN YOUR CORNER &rarr;</a>
+      <h1>One-on-one coaching for road racers, from Tuesday-night crits to the long road race.</h1>
+      <p class="rl-coach-tagline">I raced Cat 1 and on the NRC. Now I plan your season around your races and read your files to see how they went. Coaching runs $199, $299 or $1,200 every 4 weeks.</p>
+      <a href="{QUESTIONNAIRE_URL}" class="rl-coach-hero-cta" data-cta="hero_apply">START YOUR APPLICATION &rarr;</a>
     </div>
   </section>'''
 
@@ -106,28 +106,28 @@ def build_terms() -> str:
     clauses = [
         (
             "01",
-            "I read every file",
-            "I notice the interval you bailed on and ask why.",
+            "Your race files, read",
+            "I look at where the race went hard and what you did there, from the surge you closed to the gap you let go on the last lap.",
         ),
         (
             "02",
-            "The patterns you can&#39;t see",
-            "You can know everything about training and still train wrong. Knowledge isn&#39;t the limiter &mdash; application is. Every athlete is their own worst blindspot: too fresh to rest, too stubborn to taper, too close to their own data to see the shape of it. Seeing it is the job.",
+            "Training for how road races are decided",
+            "Repeated surges, climbs at threshold, a sprint after two hours in the bunch. The workouts aim at what your races ask of you.",
         ),
         (
             "03",
-            "The plan moves when your life does",
-            "When it&#39;s a sick kid, a work trip or a tender knee, I change the week that week.",
+            "A season around your A race",
+            "B races and crits fit around it, and we talk strategy every quarter at Min and every 4 weeks at Mid and Max.",
         ),
         (
             "04",
-            "The truth, on schedule",
-            "&ldquo;You&#39;re sandbagging&rdquo; and &ldquo;take the rest week&rdquo; are both part of the service.",
+            "Plans that bend",
+            "At Mid and Max, a missed day or a hard week at work changes the next workout, so you don&#39;t chase the old plan.",
         ),
         (
             "05",
-            "Involvement is the only variable",
-            "Same coach, same standards. The difference is how often I&#39;m looking.",
+            "Honest reads",
+            "When you&#39;re racing yourself out of form, I&#39;ll tell you. When you can handle more, I&#39;ll tell you that too.",
         ),
     ]
     rows = "\n        ".join(
@@ -153,7 +153,7 @@ def build_tiers() -> str:
         <div class="rl-coach-tier-col">
           <div class="rl-coach-tier-name">Min</div>
           <div class="rl-coach-tier-price">$199<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
-          <p class="rl-coach-tier-desc">The plan, plus a weekly check of your training. For athletes who execute on their own and want the thinking done right.</p>
+          <p class="rl-coach-tier-desc">You race, you train on your own, and you want a racer checking the work every week.</p>
           <ul class="rl-coach-tier-list">
             <li>Weekly training review</li>
             <li>File analysis</li>
@@ -167,7 +167,7 @@ def build_tiers() -> str:
         <div class="rl-coach-tier-col">
           <div class="rl-coach-tier-name">Mid</div>
           <div class="rl-coach-tier-price">$299<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
-          <p class="rl-coach-tier-desc">The plan, watched. Someone reads the data between sessions and adjusts the same week life changes. Most athletes belong here.</p>
+          <p class="rl-coach-tier-desc">Between races and sessions I&#39;m in your files, and the plan follows what I see.</p>
           <ul class="rl-coach-tier-list">
             <li>Everything in Min</li>
             <li>Detailed power-file analysis</li>
@@ -181,7 +181,7 @@ def build_tiers() -> str:
         <div class="rl-coach-tier-col">
           <div class="rl-coach-tier-name">Max</div>
           <div class="rl-coach-tier-price">$1,200<span class="rl-coach-tier-interval">/ 4 WEEKS</span></div>
-          <p class="rl-coach-tier-desc">Everything, daily. For the race where you want nothing left to chance.</p>
+          <p class="rl-coach-tier-desc">Same-day file review, on-demand calls and race-week strategy for the race you&#39;ve built the year around.</p>
           <ul class="rl-coach-tier-list">
             <li>Everything in Mid</li>
             <li>Daily file review</li>
@@ -193,7 +193,6 @@ def build_tiers() -> str:
           <a href="{QUESTIONNAIRE_URL}?tier=max" class="rl-coach-tier-cta" data-cta="tier_max">GET STARTED</a>
         </div>
       </div>
-      <p class="rl-coach-tier-disclaimer">Coaching doesn&#39;t fix skipped workouts or feedback you don&#39;t act on. I review applications and usually reply within two business days &mdash; including when I don&#39;t think coaching is the right fit.</p>
       <p class="rl-coach-tier-setup-fee">TrainingPeaks Premium is included with every tier. Checkout includes a one-time $99 setup fee for intake analysis and your first plan build. Any waiver is offered privately, case by case.</p>
     </div>
   </section>'''
@@ -206,21 +205,19 @@ def build_honest_check() -> str:
       {_sec_head("06", "A fit, or not")}
       <div class="rl-coach-audience">
         <div class="rl-coach-audience-col">
-          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--yes">Coaching is for you if:</h3>
+          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--yes">Coaching fits if:</h3>
           <ul class="rl-coach-audience-list rl-coach-list--yes">
-            <li>You&#39;ll do the training when the thinking is done right</li>
-            <li>You have a race and a reason</li>
-            <li>You&#39;re ready to be honest about your habits</li>
-            <li>You want a plan smarter than the one you&#39;d build alone</li>
+            <li>You have races on the calendar and want to finish them closer to the front.</li>
+            <li>You&#39;ll upload every ride and race, and tell me what happened in the bunch.</li>
+            <li>You can hear &ldquo;you went too early&rdquo; without taking it personally.</li>
           </ul>
         </div>
         <div class="rl-coach-audience-col">
-          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--no">It isn&#39;t:</h3>
+          <h3 class="rl-coach-audience-heading rl-coach-audience-heading--no">Probably not a fit if:</h3>
           <ul class="rl-coach-audience-list rl-coach-list--no">
-            <li>Accountability texts when you skip a Tuesday</li>
-            <li>Validation dressed up as feedback</li>
-            <li>A rescue for a race that&#39;s next week</li>
-            <li>A substitute for doing the work</li>
+            <li>You want a fix for Saturday&#39;s race.</li>
+            <li>You&#39;re coming back from a crash and need rehab. That&#39;s a physio&#39;s job.</li>
+            <li>You&#39;d rather ride by feel and never look at a file.</li>
           </ul>
         </div>
       </div>
@@ -231,28 +228,28 @@ def build_honest_check() -> str:
 def build_faq() -> str:
     faqs = [
         (
-            "What&#39;s the difference between a plan and coaching?",
-            "A plan is a document. Coaching is the relationship that changes the document when your life changes.",
+            "What happens after I apply?",
+            "You&#39;ll hear back from me within two business days. If coaching isn&#39;t what you need, I&#39;ll say that too.",
         ),
         (
             "How often will I hear from you?",
-            "Weekly at minimum, more near your race. You can message me anytime.",
+            "Weekly, and more once racing starts. Mid and Max get direct messages.",
         ),
         (
             "Do I need a power meter?",
-            "Not required &mdash; every workout carries effort-based targets you can train by feel. A power meter removes the guesswork; heart rate sits in between.",
+            "It helps most in road racing, where surges are short and heart rate lags behind them. Without one, you train to effort and heart rate.",
+        ),
+        (
+            "I race crits and road races. Can you plan both?",
+            "Yes. We pick the A race and fit the rest around it.",
         ),
         (
             "What if I miss workouts?",
-            "Life happens. I adjust. The plan serves you, not the other way around.",
+            "Tell me. At Mid and Max I move things that week, and at Min we sort it out in the weekly review. Don&#39;t make up a missed interval session by skipping recovery.",
         ),
         (
-            "How do I know if coaching is working?",
-            "We set baselines at intake and measure against them. You&#39;ll know.",
-        ),
-        (
-            "What&#39;s the time commitment?",
-            "The training you&#39;re already doing, but smarter. I&#39;m not adding hours &mdash; I&#39;m making the ones you have count.",
+            "How will I know it&#39;s working?",
+            "We test at intake and retest through the season.",
         ),
         (
             "What&#39;s the $99 setup fee?",
@@ -292,9 +289,9 @@ def build_application_close() -> str:
     <div class="rl-coach-inner">
       <div class="rl-coach-final-cta">
         <p class="rl-coach-final-kicker">APPLICATION</p>
-        <p class="rl-coach-final-hook">Ten minutes of honest answers. I read every one myself. You&#39;ll usually hear from me within two business days &mdash; including if I don&#39;t think coaching is what you need.</p>
-        <a href="{QUESTIONNAIRE_URL}" class="rl-coach-final-cta-link" data-cta="final_fill_intake">GET ME IN YOUR CORNER &rarr;</a>
-        <p class="rl-coach-final-contact">Questions first? <a href="mailto:coach@roadielabs.com">coach@roadielabs.com</a> &mdash; I answer myself, usually within a day.</p>
+        <p class="rl-coach-final-hook">Ten minutes on your racing, your category, your calendar and your week. I answer every one myself.</p>
+        <a href="{QUESTIONNAIRE_URL}" class="rl-coach-final-cta-link" data-cta="final_fill_intake">START YOUR APPLICATION &rarr;</a>
+        <p class="rl-coach-final-contact">Email me at <a href="mailto:coach@roadielabs.com">coach@roadielabs.com</a> if you want to ask something before you apply.</p>
       </div>
     </div>
   </section>'''
@@ -306,7 +303,7 @@ def build_footer() -> str:
 
 def build_mobile_sticky_cta() -> str:
     return f'''<div class="rl-coach-sticky-cta">
-    <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_cta">GET ME IN YOUR CORNER &rarr;</a>
+    <a href="{QUESTIONNAIRE_URL}" data-cta="sticky_cta">START YOUR APPLICATION &rarr;</a>
   </div>'''
 
 

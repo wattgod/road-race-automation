@@ -153,7 +153,7 @@ class TestHero:
         hero = build_hero()
         assert 'class="rl-coach-hero-cta"' in hero
         assert 'data-cta="hero_apply"' in hero
-        assert "GET ME IN YOUR CORNER" in hero
+        assert "START YOUR APPLICATION" in hero
 
     def test_no_file_strip(self):
         """Owner revision 2026-07-18: file strip removed, not replaced."""
@@ -164,16 +164,16 @@ class TestHero:
 
 
     def test_headline(self):
+        """Approved by Matti 2026-11-15: one plain line saying what is sold."""
         hero = build_hero()
-        assert "You could be better than you think." in hero
-        assert "That is not encouragement &mdash;" in hero
-        assert "it&#39;s an observation about people who train alone." in hero
+        assert "<h1>One-on-one coaching for road racers, from Tuesday-night crits to the long road race.</h1>" in hero
+        assert "better than you think" not in hero
 
     def test_subhead(self):
         hero = build_hero()
-        assert "The fix is a human in your corner." in hero
+        assert "I raced Cat 1 and on the NRC." in hero
+        assert "$199, $299 or $1,200 every 4 weeks" in hero
         assert "Not an AI" not in hero
-        assert "The terms are below." in hero
 
 
 # ── Terms — five numbered clauses ───────────────────────────
@@ -195,22 +195,22 @@ class TestTerms:
     def test_clause_titles(self):
         t = build_terms()
         for title in (
-            "I read every file",
-            "The patterns you can&#39;t see",
-            "The plan moves when your life does",
-            "The truth, on schedule",
-            "Involvement is the only variable",
+            "Your race files, read",
+            "Training for how road races are decided",
+            "A season around your A race",
+            "Plans that bend",
+            "Honest reads",
         ):
             assert title in t
 
     def test_clause_bodies(self):
         t = build_terms()
-        assert "I notice the interval you bailed on and ask why." in t
-        assert "Knowledge isn&#39;t the limiter &mdash; application is." in t
-        assert "I change the week that week." in t
+        assert "from the surge you closed to the gap you let go on the last lap." in t
+        assert "a sprint after two hours in the bunch." in t
+        assert "B races and crits fit around it" in t
+        assert "At Mid and Max, a missed day" in t
+        assert "When you&#39;re racing yourself out of form, I&#39;ll tell you." in t
         assert "algorithm" not in t and "Software" not in t
-        assert "&ldquo;You&#39;re sandbagging&rdquo; and &ldquo;take the rest week&rdquo;" in t
-        assert "Same coach, same standards." in t
 
     def test_last_clause_no_bottom_border(self, coaching_css):
         """Clause 05 has no border-bottom — tiers render immediately after
@@ -295,10 +295,13 @@ class TestServiceTiers:
         assert "NOSETUP" not in tiers
         assert "privately, case by case" in tiers
 
-    def test_disclaimer(self):
+    def test_tier_blurbs(self):
         tiers = build_tiers()
-        assert "skipped workouts" in tiers
-        assert "two business days" in tiers
+        assert "you want a racer checking the work every week." in tiers
+        assert "Between races and sessions I&#39;m in your files" in tiers
+        assert "for the race you&#39;ve built the year around." in tiers
+        assert "Someone reads" not in tiers
+        assert "Most athletes belong here" not in tiers
 
     def test_feature_lists_verbatim(self):
         tiers = build_tiers()
@@ -335,12 +338,12 @@ class TestFit:
 
     def test_yes_no_columns(self):
         h = build_honest_check()
-        assert "Coaching is for you if:" in h
-        assert "It isn&#39;t:" in h
+        assert "Coaching fits if:" in h
+        assert "Probably not a fit if:" in h
 
-    def test_eight_list_items(self):
+    def test_six_list_items(self):
         h = build_honest_check()
-        assert h.count("<li>") == 8
+        assert h.count("<li>") == 6
 
     def test_no_sand_bg(self):
         assert "rl-coach-band--sand" not in build_honest_check()
@@ -367,6 +370,18 @@ class TestFAQ:
         f = build_faq()
         assert "$99 setup fee" in f
 
+    def test_no_plan_vs_coaching_faq(self):
+        """Never position coaching against the training plan (Matti, 2026-11-15)."""
+        assert "difference between a plan and coaching" not in build_faq()
+
+    def test_road_specific_faq(self):
+        f = build_faq()
+        assert "I race crits and road races. Can you plan both?" in f
+
+    def test_missed_workout_answer_matches_tiers(self):
+        """Weekly plan adjustments are Mid and Max only; the FAQ must say so."""
+        assert "At Mid and Max I move things that week, and at Min we sort it out in the weekly review." in build_faq()
+
     def test_has_aria(self):
         f = build_faq()
         assert 'aria-expanded' in f
@@ -388,12 +403,12 @@ class TestApplicationClose:
 
     def test_line_copy(self):
         c = build_application_close()
-        assert "Ten minutes of honest answers. I read every one myself." in c
-        assert "usually hear from me within two business days" in c
+        assert "Ten minutes on your racing, your category, your calendar and your week." in c
+        assert "I answer every one myself." in c
 
     def test_cta_link(self):
         c = build_application_close()
-        assert "GET ME IN YOUR CORNER &rarr;" in c
+        assert "START YOUR APPLICATION &rarr;" in c
         assert f'href="{QUESTIONNAIRE_URL}"' in c
         assert 'data-cta="final_fill_intake"' in c
 
@@ -403,7 +418,7 @@ class TestApplicationClose:
     def test_contact_line(self):
         c = build_application_close()
         assert 'href="mailto:coach@roadielabs.com"' in c
-        assert "I answer myself, usually within a day." in c
+        assert "Questions first?" not in c
 
 
 # ── Mobile sticky CTA ────────────────────────────────────────
@@ -412,7 +427,7 @@ class TestApplicationClose:
 class TestMobileStickyCTA:
     def test_label_updated(self):
         sticky = build_mobile_sticky_cta()
-        assert "GET ME IN YOUR CORNER &rarr;" in sticky
+        assert "START YOUR APPLICATION &rarr;" in sticky
         assert "Apply for coaching" not in sticky
 
     def test_data_cta_and_href(self):
@@ -715,18 +730,25 @@ class TestRequiredContent:
         assert QUESTIONNAIRE_URL in coaching_html
         assert QUESTIONNAIRE_URL == f"{SITE_BASE_URL}/coaching/apply/"
 
-    def test_disclaimer_and_setup_fee(self, coaching_html):
-        assert "skipped workouts" in coaching_html
+    def test_setup_fee(self, coaching_html):
         assert "$99 setup fee" in coaching_html
 
     def test_hero_h1(self, coaching_html):
-        assert "You could be better than you think." in coaching_html
-        assert "it&#39;s an observation about people who train alone." in coaching_html
+        assert "One-on-one coaching for road racers, from Tuesday-night crits to the long road race." in coaching_html
+
+    def test_banned_copy_absent(self, coaching_html):
+        """Copy rules: no AI positioning, the retired headline, monthly
+        billing words, the wrong coach name, or third-person coach."""
+        import re
+        text = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", coaching_html, flags=re.S)
+        for banned in ("Not an AI", "not an AI", "better than you think",
+                       "monthly", "Monthly", "/mo", "per month", "Matt ",
+                       "your coach", "Your coach", "GET ME IN YOUR CORNER"):
+            assert banned not in text, banned
 
     def test_final_contact_line(self, coaching_html):
         assert "coach@roadielabs.com" in coaching_html
         assert 'href="mailto:coach@roadielabs.com"' in coaching_html
-        assert "I answer myself, usually within a day." in coaching_html
 
     def test_how_it_works_removed(self, coaching_html):
         assert 'id="how-it-works"' not in coaching_html
