@@ -23,6 +23,7 @@ Usage:
 
 import argparse
 import html as html_mod
+import copy
 import json
 import sys
 from collections import defaultdict
@@ -35,7 +36,7 @@ from newsletter_signup import NEWSLETTER_TEXT, NEWSLETTER_TITLE, newsletter_css,
 from shared_header import get_site_header_css, get_site_header_html
 from cookie_consent import get_consent_banner_html
 
-from generate_neo_brutalist import parse_event_dates  # noqa: E402
+from generate_neo_brutalist import _safe_json_for_script, parse_event_dates  # noqa: E402
 from season import season_year  # noqa: E402
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -90,7 +91,7 @@ def races_for_year(index: list, edition_dates: dict, year: int) -> list:
         dates = edition_dates.get(entry.get("slug"))
         if not dates or not dates[0].startswith(f"{year}-"):
             continue
-        race = dict(entry)
+        race = copy.deepcopy(entry)
         race["start_date"], race["end_date"] = dates
         races.append(race)
     return races
@@ -221,7 +222,7 @@ def build_calendar_page(races: list, year: int = None) -> str:
         count = sum(1 for r in races if r.get("region") == reg)
         region_options += f'<option value="{esc(reg)}">{esc(reg)} ({count})</option>'
 
-    breadcrumb_jsonld = json.dumps({
+    breadcrumb_jsonld = _safe_json_for_script({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [

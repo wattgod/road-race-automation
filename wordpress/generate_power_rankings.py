@@ -27,6 +27,7 @@ from season import season_year  # noqa: E402
 SEASON_YEAR = season_year()  # rider-facing season; rolls over in September
 
 from brand_tokens import TIER_NAMES  # noqa: E402  (one mapping, see brand_tokens)
+from generate_neo_brutalist import _safe_json_for_script  # noqa: E402
 TIER_COLORS = {
     1: COLORS["primary_brown"],
     2: COLORS["secondary_blue"],
@@ -133,7 +134,7 @@ def build_power_rankings_page(races: list) -> str:
             "url": f"{SITE_BASE_URL}/race/{r['slug']}/",
         })
 
-    schema_graph = json.dumps({
+    schema_graph = _safe_json_for_script({
         "@context": "https://schema.org",
         "@graph": [
             {

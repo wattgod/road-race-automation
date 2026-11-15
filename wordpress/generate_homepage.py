@@ -25,6 +25,7 @@ from generate_neo_brutalist import (
     SITE_BASE_URL,
     COACHING_URL,
     TRAINING_PLANS_URL,
+    _safe_json_for_script,
 )
 from brand_tokens import (
     RACER_RATING_THRESHOLD,
@@ -1419,7 +1420,7 @@ a { text-decoration: none; color: var(--rl-color-signal-red); }
 
 
 /* ── Email form ─────────────────────────────────────────── */
-.rl-hp-email-form { background: #fafaf8; padding: 20px 32px; max-width: 480px; margin: 24px auto 0; }
+.rl-hp-email-form { background: var(--rl-color-paper); padding: 20px 32px; max-width: 480px; margin: 24px auto 0; }
 
 /* ── Skip link ───────────────────────────────────────────── */
 .rl-hp-skip { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; padding: 12px 24px; background: #202322; color: #fafaf8; z-index: 100; }
@@ -1866,8 +1867,8 @@ def build_jsonld(stats: dict) -> str:
         },
     }
     parts = [
-        f'<script type="application/ld+json">{json.dumps(org, separators=(",",":"))}</script>',
-        f'<script type="application/ld+json">{json.dumps(website, separators=(",",":"))}</script>',
+        f'<script type="application/ld+json">{_safe_json_for_script(org, separators=(",",":"))}</script>',
+        f'<script type="application/ld+json">{_safe_json_for_script(website, separators=(",",":"))}</script>',
     ]
     return "\n  ".join(parts)
 
