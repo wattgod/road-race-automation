@@ -1359,6 +1359,21 @@ def sync_coaching_apply(apply_file: str):
     return f"{wp_url}/coaching/apply/"
 
 
+def expected_og_filenames(data_dir=None) -> list:
+    """Every /og/*.jpg a page generator references: homepage.jpg (site card
+    used by home, plans, vs pages and other non-race pages) plus one per race
+    profile. Mirrors generate_og_images.expected_og_filenames without
+    importing Pillow."""
+    data_dir = Path(data_dir) if data_dir else PROJECT_ROOT / "race-data"
+    return ["homepage.jpg"] + [f"{f.stem}.jpg" for f in sorted(data_dir.glob("*.json"))]
+
+
+def missing_og_images(og_dir, data_dir=None) -> list:
+    """Referenced OG filenames absent from og_dir."""
+    og_dir = Path(og_dir)
+    return [name for name in expected_og_filenames(data_dir) if not (og_dir / name).is_file()]
+
+
 def sync_og(og_dir: str):
     """Upload OG images to /og/ on SiteGround via tar+ssh pipe.
 
@@ -1378,6 +1393,13 @@ def sync_og(og_dir: str):
     jpg_files = list(og_path.glob("*.jpg"))
     if not jpg_files:
         print(f"✗ No .jpg files found in {og_path}")
+        return None
+
+    missing = missing_og_images(og_path)
+    if missing:
+        print(f"✗ {len(missing)} referenced OG images missing from {og_path} "
+              f"(e.g. {', '.join(missing[:5])}). Run: "
+              f"python3 scripts/generate_og_images.py --all --output-dir {og_path}")
         return None
 
     remote_base = f"{REMOTE_BASE}/og"
@@ -3326,7 +3348,7 @@ def sync_markdown(markdown_dir: str):
     return [f"{wp_url}/race/{f.stem}.md" for f in md_files]
 
 
-if __name__ == "__main__":
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Deploy Roadie Labs static-site content to SiteGround"
     )
@@ -3639,6 +3661,24 @@ if __name__ == "__main__":
         "--deploy-all", action="store_true",
         help="Shortcut: all --sync-* flags + --purge-cache"
     )
+    return parser
+
+
+def has_sync_action(args) -> bool:
+    """True when any --sync-* flag or --purge-cache is set.
+
+    Derived from every `sync_*` attribute so a new --sync-* flag can never
+    be silently rejected by a hand-maintained list (--sync-legal was).
+    """
+    return args.purge_cache or any(
+        value is True
+        for name, value in vars(args).items()
+        if name.startswith("sync_")
+    )
+
+
+if __name__ == "__main__":
+    parser = build_parser()
     args = parser.parse_args()
 
     # Expand composite flags
@@ -3685,20 +3725,7 @@ if __name__ == "__main__":
         args.sync_legal = True
         args.purge_cache = True
 
-    has_action = any([args.sync_index, args.sync_widget,
-                      args.sync_guide, args.sync_guide_cluster, args.sync_og, args.sync_homepage, args.sync_goals, args.sync_exit_interview, args.sync_race_debrief, args.sync_about,
-                      args.sync_questionnaire,
-                      args.sync_coaching, args.sync_coaching_apply, args.sync_consulting,
-                      args.sync_consult_intake,
-                      args.sync_training_plans, args.sync_methodology, args.sync_success, args.sync_pages,
-                      args.sync_sitemap, args.sync_redirects,
-                      args.sync_prep_kits, args.sync_plan_pages, args.sync_tire_guides,
-                      args.sync_series, args.sync_blog,
-                      args.sync_blog_index, args.sync_photos, args.sync_ab, args.sync_courses,
-                      args.sync_mission_control,
-                      args.sync_courses_page, args.sync_insights, args.sync_whitepaper, args.sync_embed, args.sync_rss,
-                      args.sync_llms_txt, args.sync_markdown,
-                      args.purge_cache])
+    has_action = has_sync_action(args)
     if not has_action:
         parser.error("Provide a sync flag (--sync-pages, --sync-index, etc.), --deploy-content, or --deploy-all")
 

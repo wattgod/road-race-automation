@@ -326,15 +326,19 @@ def test_header_js_is_inside_a_script_tag():
 
 
 def test_push_wordpress_ships_the_goals_page():
-    # The flag must exist in all three places push_wordpress needs it
-    # (argument, dispatch, "did you pass a sync flag" tuple) or --sync-goals
-    # exits with a usage error.
+    # The flag must parse, dispatch, and count as a sync action on its own,
+    # or --sync-goals exits with a usage error.
     import sys
     from pathlib import Path
-    src = (Path(__file__).parent.parent / "scripts" / "push_wordpress.py").read_text()
+    scripts = Path(__file__).parent.parent / "scripts"
+    src = (scripts / "push_wordpress.py").read_text()
     assert '"--sync-goals"' in src
     assert "def sync_goals(" in src
-    assert src.count("args.sync_goals") >= 2
+    assert "if args.sync_goals:" in src
+    sys.path.insert(0, str(scripts))
+    import push_wordpress
+    args = push_wordpress.build_parser().parse_args(["--sync-goals"])
+    assert push_wordpress.has_sync_action(args)
 
 
 # ── Personal links stay out of GA4 ────────────────────────────

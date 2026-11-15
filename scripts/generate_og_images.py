@@ -13,9 +13,15 @@ Produces 1200x630 neo-brutalist styled JPEG images optimized for social sharing:
   - Optimized for thumbnail legibility (~200-400px wide in feeds)
 
 Usage:
-    python scripts/generate_og_images.py unbound-200
-    python scripts/generate_og_images.py --all
+    python scripts/generate_og_images.py paris-brest-paris
+    python scripts/generate_og_images.py --site       # /og/homepage.jpg only
+    python scripts/generate_og_images.py --all        # homepage.jpg + every race
     python scripts/generate_og_images.py --all --output-dir wordpress/output/og
+
+--all writes every /og/*.jpg a page generator references (see
+push_wordpress.expected_og_filenames). Then deploy with
+`scripts/push_wordpress.py --sync-og`, which refuses to upload a partial set.
+Brand fonts are required; a missing font is an error, never a substitute.
 """
 
 import argparse
@@ -24,6 +30,7 @@ import math
 import random
 import re
 import sys
+import zlib
 from pathlib import Path
 
 try:
@@ -49,45 +56,27 @@ def _rgb(color_key: str) -> tuple:
     return tuple(bytes.fromhex(COLORS[color_key].lstrip('#')))
 
 
-# Brand colors — from wordpress/brand_tokens.py --rl-* tokens.
-DARK_BROWN = _rgb("dark_navy")      # --rl-color-dark-navy (#1a1a1a)
-PRIMARY_BROWN = _rgb("primary_navy")  # --rl-color-primary-navy (#1a1a1a)
-SEC_BROWN = _rgb("secondary_blue")  # --rl-color-secondary-blue (#777777)
-WARM_BROWN = _rgb("steel")          # --rl-color-steel (#999999)
-TAN = _rgb("silver")                # --rl-color-silver (#d0d0c8)
-SAND = _rgb("cool_white")           # --rl-color-cool-white (#f5f5f0)
-WARM_PAPER = _rgb("cool_white")     # --rl-color-cool-white (#f5f5f0)
-GOLD = _rgb("signal_red")           # --rl-color-signal-red (#333333; legacy token name)
-LIGHT_GOLD = _rgb("coral")          # --rl-color-coral (#555555)
-TEAL = _rgb("tier_2")               # --rl-color-tier-2 (#4a4a4a)
-LIGHT_TEAL = _rgb("steel")          # --rl-color-steel (#999999)
-NEAR_BLACK = _rgb("near_black")     # --rl-color-near-black (#1a1a1a)
-WHITE = _rgb("white")               # --rl-color-white (#ffffff)
+# Timing Slip palette (Nov 2026) — all values from wordpress/brand_tokens.py.
+# A results sheet on paper: ink on paper, graphite secondary text, and role
+# colours that each mean one thing (red = the Lab Score, gold = Tier 1 fill).
+INK = _rgb("ink")                   # #202322
+PAPER = _rgb("paper")               # #fafaf8
+GRAPHITE = _rgb("graphite")         # #555555
+WELL = _rgb("well")                 # #efefea (sunken score area)
+ZEBRA = _rgb("zebra")               # #f2f2ed (topo texture)
+SILVER = _rgb("silver")             # #d0d0c8 (dividers)
+STEEL = _rgb("steel")               # #999999
+SCORE_RED = _rgb("score")           # #b3302a Maillot Red — the Lab Score only
+TIER_GOLD = _rgb("tier_gold")       # #d99a1e Jersey Gold — Tier 1 fill only
+WHITE = _rgb("white")
 
-# Dark background palette — near-black from tokens
-BG_DARK = NEAR_BLACK                 # --rl-color-near-black (#1a1a1a)
-BG_TEXTURE = _rgb("signal_red")     # --rl-color-signal-red (#333333; legacy token name)
-
-TIER_COLORS = {
-    1: _rgb("tier_1"),  # --rl-color-tier-1 (#1a1a1a)
-    2: _rgb("tier_2"),  # --rl-color-tier-2 (#4a4a4a)
-    3: _rgb("tier_3"),  # --rl-color-tier-3 (#777777)
-    4: _rgb("tier_4"),  # --rl-color-tier-4 (#aaaaaa)
-}
-
-TIER_BADGE_TEXT = {
-    1: WHITE,
-    2: WHITE,
-    3: NEAR_BLACK,
-    4: NEAR_BLACK,
-}
-
-# Score accent colors — the canonical monochrome tier ramp.
-TIER_ACCENT = {
-    1: _rgb("tier_1"),  # --rl-color-tier-1 (#1a1a1a)
-    2: _rgb("tier_2"),  # --rl-color-tier-2 (#4a4a4a)
-    3: _rgb("tier_3"),  # --rl-color-tier-3 (#777777)
-    4: _rgb("tier_4"),  # --rl-color-tier-4 (#aaaaaa)
+# Tier pill: T1 gold fill with ink text, T2 ink outline, T3 thin steel
+# outline, T4 plain graphite text (brand-and-trust skill).
+TIER_PILL = {
+    1: {"fill": TIER_GOLD, "outline": TIER_GOLD, "width": 0, "text": INK},
+    2: {"fill": None, "outline": INK, "width": 2, "text": INK},
+    3: {"fill": None, "outline": STEEL, "width": 1, "text": INK},
+    4: {"fill": None, "outline": None, "width": 0, "text": GRAPHITE},
 }
 
 DIMENSIONS_CONFIG = REPO_ROOT / "config" / "dimensions.json"
@@ -102,35 +91,52 @@ ALL_DIMS = load_dimension_keys()
 
 # Brand font paths — Sometype Mono (data) + Source Serif 4 (editorial)
 # TODO: temporary cross-repo dependency until road-labs-brand vendors its own
-# copies of the shared image-generator TTF files.
-FONT_DIR = REPO_ROOT.parent / "gravel-race-automation" / "guide" / "fonts"
-
-FONT_EDITORIAL = str(FONT_DIR / "SourceSerif4-Variable.ttf")
-FONT_EDITORIAL_ITALIC = str(FONT_DIR / "SourceSerif4-Italic-Variable.ttf")
-FONT_DATA = str(FONT_DIR / "SometypeMono-Regular.ttf")
-FONT_DATA_BOLD = str(FONT_DIR / "SometypeMono-Bold.ttf")
-
-# Fallback system fonts (if brand fonts missing)
-FONT_PATHS = [FONT_DATA, "/System/Library/Fonts/Helvetica.ttc"]
-FONT_BOLD_PATHS = [FONT_DATA_BOLD, "/System/Library/Fonts/Helvetica.ttc"]
-FONT_SERIF_PATHS = [FONT_EDITORIAL, "/System/Library/Fonts/Georgia.ttf"]
+# copies of the shared image-generator TTF files. Resolved from the main
+# checkout (REPO_ROOT.parent); pass --font-dir when running from a worktree.
+DEFAULT_FONT_DIR = REPO_ROOT.parent / "gravel-race-automation" / "guide" / "fonts"
+FONT_FILES = {
+    "editorial": "SourceSerif4-Variable.ttf",
+    "data": "SometypeMono-Regular.ttf",
+    "data_bold": "SometypeMono-Bold.ttf",
+}
+FONT_DIR = DEFAULT_FONT_DIR
 
 
-def load_font(paths: list, size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
-    for p in paths:
+class FontMissingError(RuntimeError):
+    """A brand font file is missing. OG images are never rendered with a
+    substitute font."""
+
+
+_FONT_CACHE = {}
+
+
+def set_font_dir(font_dir: Path) -> None:
+    """Point the generator at a font directory, failing if any brand font is
+    missing there."""
+    global FONT_DIR
+    font_dir = Path(font_dir)
+    missing = [name for name in FONT_FILES.values() if not (font_dir / name).is_file()]
+    if missing:
+        raise FontMissingError(
+            f"brand fonts missing in {font_dir}: {', '.join(missing)}. "
+            "Run from the main checkout (sibling gravel-race-automation repo) "
+            "or pass --font-dir."
+        )
+    FONT_DIR = font_dir
+    _FONT_CACHE.clear()
+
+
+def load_font(role: str, size: int) -> ImageFont.FreeTypeFont:
+    """Load a brand font by role. Raises FontMissingError instead of
+    substituting a system or default font."""
+    key = (str(FONT_DIR), role, size)
+    if key not in _FONT_CACHE:
+        path = FONT_DIR / FONT_FILES[role]
         try:
-            idx = 1 if bold and p.endswith('.ttc') else 0
-            return ImageFont.truetype(p, size, index=idx)
-        except (OSError, IOError):
-            continue
-    return ImageFont.load_default()
-
-
-def get_tier(score: int) -> int:
-    if score >= 80: return 1
-    elif score >= 60: return 2
-    elif score >= 45: return 3
-    return 4
+            _FONT_CACHE[key] = ImageFont.truetype(str(path), size)
+        except (OSError, IOError) as e:
+            raise FontMissingError(f"cannot load brand font {path}: {e}") from e
+    return _FONT_CACHE[key]
 
 
 def tw(draw, text, font):
@@ -180,25 +186,18 @@ def draw_topo_texture(draw, seed=42):
             y = y_base + rng.randint(-15, 15)
             points.append((x, y))
         if len(points) >= 2:
-            draw.line(points, fill=BG_TEXTURE, width=1)
+            draw.line(points, fill=ZEBRA, width=2)
 
 
 def draw_score_badge(draw, cx, cy, radius, score, tier, font_big, font_label):
     """Draw a neo-brutalist score badge: thick ring with arc progress."""
-    accent = TIER_ACCENT[tier]
+    accent = SCORE_RED
 
-    # Outer ring
+    # Sunken well with a silver track ring
     ring_w = 5
     draw.ellipse(
         [cx - radius, cy - radius, cx + radius, cy + radius],
-        outline=accent, width=ring_w
-    )
-
-    # Dark inner fill
-    inner_r = radius - ring_w - 2
-    draw.ellipse(
-        [cx - inner_r, cy - inner_r, cx + inner_r, cy + inner_r],
-        fill=BG_DARK
+        fill=WELL, outline=SILVER, width=ring_w
     )
 
     # Score arc — thicker, brighter
@@ -211,44 +210,54 @@ def draw_score_badge(draw, cx, cy, radius, score, tier, font_big, font_label):
     )
 
     # Score number — large, colored
-    score_text = str(score)
-    sw = tw(draw, score_text, font_big)
-    sh = th(draw, score_text, font_big)
-    draw.text((cx - sw // 2, cy - sh // 2 - 8), score_text, fill=accent, font=font_big)
+    # Anchored on the glyph box so "/ 100" sits below the number, not on it.
+    draw.text((cx, cy + 6), str(score), fill=accent, font=font_big, anchor="ms")
+    draw.text((cx, cy + 20), "/ 100", fill=GRAPHITE, font=font_label, anchor="mt")
 
-    # "/ 100" label
-    label = "/ 100"
-    lw = tw(draw, label, font_label)
-    draw.text((cx - lw // 2, cy + sh // 2 - 6), label, fill=WARM_BROWN, font=font_label)
+
+LEFT_MARGIN = 56
+TOP_BAR_H = 5
+BRAND_BAR_H = 66
+
+
+def draw_brand_bar(draw) -> int:
+    """Draw the ink ROADIE LABS bar along the bottom; return its top y."""
+    bottom_bar_y = H - BRAND_BAR_H
+    draw.rectangle([0, bottom_bar_y, W, H], fill=INK)
+    font_brand = load_font('data_bold', 28)
+    font_brand_sub = load_font('data', 16)
+    draw.text((LEFT_MARGIN, bottom_bar_y + 16), "ROADIE LABS", fill=PAPER, font=font_brand)
+    url_text = "roadielabs.com"
+    uw = tw(draw, url_text, font_brand_sub)
+    draw.text((W - LEFT_MARGIN - uw, bottom_bar_y + 24), url_text, fill=SILVER, font=font_brand_sub)
+    return bottom_bar_y
 
 
 def generate_og_image(race_data: dict, output_path: Path) -> Path:
     """Generate a single OG image for a race."""
 
-    name = race_data.get('display_name') or race_data.get('name', 'Unknown Race')
-    slug = race_data.get('slug', 'unknown')
+    name = race_data.get('display_name') or race_data.get('name')
+    slug = race_data.get('slug')
+    if not name or not slug:
+        raise ValueError("race profile has no name/slug")
     tagline = race_data.get('tagline', '')
     vitals = race_data.get('vitals', {})
-    rating = race_data.get('fondo_rating', race_data.get('rating', {}))
-    bor = race_data.get('biased_opinion_ratings', {})
+    rating = race_data.get('fondo_rating') or {}
 
-    # Compute overall score
+    # Score and tier come from the profile exactly as the race page shows
+    # them (tier includes the prestige override). Never recomputed here.
     overall_score = rating.get('overall_score')
-    if not overall_score:
-        total = sum(
-            bor.get(d, {}).get('score', bor.get(d, 0))
-            if isinstance(bor.get(d), dict) else bor.get(d, 0)
-            for d in ALL_DIMS
-        )
-        overall_score = round(total / 70 * 100) if total > 0 else 0
-    tier = get_tier(overall_score)
+    tier = rating.get('tier')
+    if overall_score is None or tier not in TIER_PILL:
+        raise ValueError(f"{slug}: fondo_rating.overall_score/tier missing")
+    overall_score = int(round(float(overall_score)))
 
     location = truncate(vitals.get('location', ''), 30)
     date_specific = vitals.get('date_specific', '')
     dist_mi = vitals.get('distance_mi')
     elev_ft = vitals.get('elevation_ft')
     distance = f"{dist_mi} mi" if dist_mi else ''
-    elevation = f"{elev_ft:,} ft" if isinstance(elev_ft, (int, float)) else ''
+    elevation = f"{elev_ft:,.0f} ft" if isinstance(elev_ft, (int, float)) else ''
 
     # Parse date — short format only
     short_date = ''
@@ -262,94 +271,67 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
             if m2:
                 short_date = m2.group(1)
 
-    # ── Create image with dark background ─────────────────────
+    # ── Create image on paper ─────────────────────────────────
 
-    img = Image.new('RGB', (W, H), BG_DARK)
+    img = Image.new('RGB', (W, H), PAPER)
     draw = ImageDraw.Draw(img)
 
-    # Subtle topo texture
-    # Use slug hash as seed so each race gets a unique but stable pattern
-    draw_topo_texture(draw, seed=hash(slug) % 10000)
+    # Subtle topo texture; crc32 keeps each race's pattern stable across runs
+    # (str hash() is salted per process).
+    draw_topo_texture(draw, seed=zlib.crc32(slug.encode()) % 10000)
 
     # Load fonts — editorial (Source Serif 4) for name/tagline, data (Sometype Mono) for labels
-    font_name = load_font(FONT_SERIF_PATHS, 64)          # Race name — editorial serif
-    font_tagline = load_font(FONT_SERIF_PATHS, 22)       # Tagline — editorial serif italic
-    font_tier = load_font(FONT_BOLD_PATHS, 20, bold=True) # Tier badge — data mono bold
-    font_score_big = load_font(FONT_SERIF_PATHS, 60)     # Score number — editorial serif
-    font_score_label = load_font(FONT_PATHS, 18)         # Score label — data mono
-    font_detail = load_font(FONT_PATHS, 22)              # Stats — data mono
-    font_detail_bold = load_font(FONT_BOLD_PATHS, 22, bold=True)  # Location — data mono bold
-    font_brand = load_font(FONT_BOLD_PATHS, 28, bold=True)  # Brand name — data mono bold
-    font_brand_sub = load_font(FONT_PATHS, 16)           # URL — data mono
+    font_name = load_font('editorial', 64)          # Race name — editorial serif
+    font_tagline = load_font('editorial', 22)       # Tagline — editorial serif
+    font_tier = load_font('data_bold', 20)          # Tier pill — data mono bold
+    font_score_big = load_font('editorial', 60)     # Score number — editorial serif
+    font_score_label = load_font('data', 18)        # Score label — data mono
+    font_detail = load_font('data', 22)             # Stats — data mono
+    font_detail_bold = load_font('data_bold', 22)   # Location — data mono bold
 
     # ── Layout ────────────────────────────────────────────────
 
-    left_margin = 56
-    brand_bar_h = 66
-    top_bar_h = 5
+    left_margin = LEFT_MARGIN
     score_badge_r = 76
     score_cx = W - left_margin - score_badge_r - 6
     score_cy = 260
 
-    # ── Top accent bar ────────────────────────────────────────
-
-    draw.rectangle([0, 0, W, top_bar_h], fill=TIER_ACCENT[tier])
-
-    # ── Brand bar (bottom) ────────────────────────────────────
-
-    bottom_bar_y = H - brand_bar_h
-    draw.rectangle([0, bottom_bar_y, W, H], fill=DARK_BROWN)
-
-    # Brand name
-    draw.text((left_margin, bottom_bar_y + 16), "ROADIE LABS", fill=WHITE, font=font_brand)
-
-    # Charcoal underline
-    brand_w = tw(draw, "ROADIE LABS", font_brand)
-    draw.rectangle(
-        [left_margin, bottom_bar_y + 50, left_margin + brand_w, bottom_bar_y + 53],
-        fill=GOLD
-    )
-
-    # URL right-aligned
-    url_text = "roadielabs.com"
-    uw = tw(draw, url_text, font_brand_sub)
-    draw.text((W - left_margin - uw, bottom_bar_y + 26), url_text, fill=WARM_BROWN, font=font_brand_sub)
+    draw.rectangle([0, 0, W, TOP_BAR_H], fill=INK)
+    bottom_bar_y = draw_brand_bar(draw)
 
     # ── Content area ──────────────────────────────────────────
 
-    content_top = top_bar_h + 28
+    content_top = TOP_BAR_H + 28
     content_bottom = bottom_bar_y - 16
     content_right = score_cx - score_badge_r - 36
 
-    # Tier badge
+    # Tier pill
+    pill = TIER_PILL[tier]
     badge_text = f"TIER {tier}"
     badge_bw = tw(draw, badge_text, font_tier) + 20
     badge_bh = th(draw, badge_text, font_tier) + 12
-    badge_color = TIER_COLORS[tier]
-    badge_txt = TIER_BADGE_TEXT[tier]
-
     draw.rectangle(
         [left_margin, content_top, left_margin + badge_bw, content_top + badge_bh],
-        fill=badge_color, outline=TIER_ACCENT[tier], width=2
+        fill=pill["fill"], outline=pill["outline"], width=pill["width"]
     )
-    draw.text((left_margin + 10, content_top + 4), badge_text, fill=badge_txt, font=font_tier)
+    draw.text((left_margin + 10, content_top + 4), badge_text, fill=pill["text"], font=font_tier)
 
-    # Race name — large bold, light text on dark bg. Max 2 lines.
+    # Race name — large, ink on paper. Max 2 lines.
     name_y = content_top + badge_bh + 14
     name_max_w = content_right - left_margin
     name_lines = wrap_text(draw, name.upper(), font_name, name_max_w)
     line_h = 72
     for i, line in enumerate(name_lines[:2]):
-        draw.text((left_margin, name_y + i * line_h), line, fill=WARM_PAPER, font=font_name)
+        draw.text((left_margin, name_y + i * line_h), line, fill=INK, font=font_name)
     name_bottom = name_y + min(len(name_lines), 2) * line_h
 
-    # Tagline — the scroll-stopping hook. Cream on dark = high contrast.
+    # Tagline — graphite secondary text.
     if tagline:
         tag_y = name_bottom + 6
         tag_max_w = content_right - left_margin
         tag_lines = wrap_text(draw, tagline, font_tagline, tag_max_w)
         for i, line in enumerate(tag_lines[:2]):
-            draw.text((left_margin, tag_y + i * 28), line, fill=TAN, font=font_tagline)
+            draw.text((left_margin, tag_y + i * 28), line, fill=GRAPHITE, font=font_tagline)
 
     # ── Stats strip ───────────────────────────────────────────
 
@@ -366,16 +348,16 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
 
     if stats:
         # Thin separator line
-        draw.rectangle([left_margin, strip_y - 10, W - left_margin, strip_y - 9], fill=SEC_BROWN)
+        draw.rectangle([left_margin, strip_y - 10, W - left_margin, strip_y - 9], fill=SILVER)
 
         stat_x = left_margin
         for j, stat in enumerate(stats):
             if j > 0:
                 sep = "  \u00b7  "
-                draw.text((stat_x, strip_y), sep, fill=SEC_BROWN, font=font_detail)
+                draw.text((stat_x, strip_y), sep, fill=STEEL, font=font_detail)
                 stat_x += tw(draw, sep, font_detail)
             f = font_detail_bold if j == 0 else font_detail
-            c = TAN if j == 0 else WARM_BROWN
+            c = INK if j == 0 else GRAPHITE
             draw.text((stat_x, strip_y), stat, fill=c, font=f)
             stat_x += tw(draw, stat, f)
 
@@ -384,11 +366,48 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
     draw_score_badge(draw, score_cx, score_cy, score_badge_r, overall_score, tier,
                      font_score_big, font_score_label)
 
-    # ── Left accent stripe ────────────────────────────────────
-
-    draw.rectangle([0, top_bar_h, 4, bottom_bar_y], fill=TIER_ACCENT[tier])
-
     # ── Save ──────────────────────────────────────────────────
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    jpeg_path = output_path.with_suffix('.jpg')
+    img.save(str(jpeg_path), 'JPEG', quality=88, optimize=True)
+    return jpeg_path
+
+
+# Site-wide card: referenced as /og/homepage.jpg by the homepage, plans,
+# vs pages, state hubs, legal, about, coaching and other non-race pages.
+SITE_OG_FILENAME = "homepage.jpg"
+# Copy lifted from the homepage meta description (generate_homepage.py),
+# minus the race count so the image never goes stale between regenerations.
+SITE_OG_HEADLINE = "Find your next road race."
+SITE_OG_SUBHEAD = ("Gran fondos and sportives worldwide, scored on 14 base "
+                   "dimensions plus cultural impact.")
+
+
+def generate_site_og_image(output_path: Path) -> Path:
+    """Generate the site-wide OG card (/og/homepage.jpg)."""
+    img = Image.new('RGB', (W, H), PAPER)
+    draw = ImageDraw.Draw(img)
+    draw_topo_texture(draw, seed=7)
+
+    draw.rectangle([0, 0, W, TOP_BAR_H], fill=INK)
+    bottom_bar_y = draw_brand_bar(draw)
+
+    max_w = W - 2 * LEFT_MARGIN
+    font_head = load_font('editorial', 76)
+    font_sub = load_font('editorial', 30)
+    head_lines = wrap_text(draw, SITE_OG_HEADLINE.upper(), font_head, max_w)
+    sub_lines = wrap_text(draw, SITE_OG_SUBHEAD, font_sub, max_w)
+    head_lh, sub_lh = 88, 40
+    block_h = len(head_lines) * head_lh + 24 + len(sub_lines) * sub_lh
+    y = TOP_BAR_H + (bottom_bar_y - TOP_BAR_H - block_h) // 2
+    for line in head_lines:
+        draw.text((LEFT_MARGIN, y), line, fill=INK, font=font_head)
+        y += head_lh
+    y += 24
+    for line in sub_lines:
+        draw.text((LEFT_MARGIN, y), line, fill=GRAPHITE, font=font_sub)
+        y += sub_lh
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     jpeg_path = output_path.with_suffix('.jpg')
@@ -399,13 +418,24 @@ def generate_og_image(race_data: dict, output_path: Path) -> Path:
 def main():
     parser = argparse.ArgumentParser(description='Generate OG images for Roadie Labs race profiles')
     parser.add_argument('slug', nargs='?', help='Race slug (e.g., maratona-dles-dolomites)')
-    parser.add_argument('--all', action='store_true', help='Generate for all races')
+    parser.add_argument('--all', action='store_true',
+                        help='Generate the site card (homepage.jpg) and every race image')
+    parser.add_argument('--site', action='store_true',
+                        help='Generate only the site card (homepage.jpg)')
     parser.add_argument('--data-dir', type=Path, help='Race data directory')
     parser.add_argument('--output-dir', type=Path, help='Output directory for images')
+    parser.add_argument('--font-dir', type=Path, default=DEFAULT_FONT_DIR,
+                        help=f'Brand TTF directory (default: {DEFAULT_FONT_DIR})')
     args = parser.parse_args()
 
-    if not args.slug and not args.all:
-        parser.error("Provide a race slug or --all")
+    if not args.slug and not args.all and not args.site:
+        parser.error("Provide a race slug, --site or --all")
+
+    try:
+        set_font_dir(args.font_dir)
+    except FontMissingError as e:
+        print(f"ERROR: {e}")
+        sys.exit(1)
 
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
@@ -416,9 +446,18 @@ def main():
 
     output_dir = args.output_dir or project_root / 'wordpress' / 'output' / 'og'
 
-    slugs = [f.stem for f in sorted(data_dir.glob('*.json'))] if args.all else [args.slug]
+    if args.all:
+        slugs = [f.stem for f in sorted(data_dir.glob('*.json'))]
+    elif args.slug:
+        slugs = [args.slug]
+    else:
+        slugs = []
     total = len(slugs)
     errors = 0
+
+    if args.all or args.site:
+        generate_site_og_image(output_dir / SITE_OG_FILENAME)
+        print(f"  Generated {SITE_OG_FILENAME}")
 
     for i, slug in enumerate(slugs, 1):
         data_file = data_dir / f"{slug}.json"
@@ -441,6 +480,7 @@ def main():
     print(f"\nDone. {total - errors}/{total} images generated in {output_dir}/")
     if errors:
         print(f"  {errors} errors")
+        sys.exit(1)
 
 
 if __name__ == '__main__':

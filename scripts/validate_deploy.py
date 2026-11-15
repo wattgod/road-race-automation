@@ -12,6 +12,7 @@ Usage:
 """
 
 import json
+import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
@@ -193,12 +194,58 @@ def check_redirects(v):
             v.check(False, f"{source} → {expected}", str(e))
 
 
+_OG_META_RE = re.compile(
+    r'<meta\s[^>]*(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]*>', re.I)
+_CONTENT_RE = re.compile(r'content=["\']([^"\']+)["\']', re.I)
+_LD_IMAGE_RE = re.compile(r'"image"\s*:\s*(\[[^\]]*\]|"[^"]*")')
+
+
+def extract_og_image_urls(html):
+    """Return the sorted, de-duplicated og:image / twitter:image / JSON-LD
+    image URLs that point at the site's /og/ directory."""
+    urls = set()
+    for tag in _OG_META_RE.findall(html):
+        m = _CONTENT_RE.search(tag)
+        if m:
+            urls.add(m.group(1))
+    for blob in _LD_IMAGE_RE.findall(html):
+        urls.update(re.findall(r'"([^"]+)"', blob))
+    return sorted(u for u in urls if u.startswith(f"{BASE_URL}/og/"))
+
+
+def og_sample_paths(race_index=None):
+    """Pages whose og:image references are checked: home, plans, a vs page
+    and one race page per tier."""
+    paths = ["/", "/training-plans/", "/race/aitana-tour-vs-leroica/"]
+    if race_index:
+        seen = set()
+        for r in race_index:
+            tier = r.get("tier")
+            if tier not in seen:
+                seen.add(tier)
+                paths.append(f"/race/{r['slug']}/")
+    return paths
+
+
 def check_og_images(v):
-    """Verify OG images for sample races."""
+    """Every og:image a sampled page references must return 200 image/jpeg."""
     print("\n[OG Images]")
-    for slug in ["unbound-200", "barry-roubaix", "mid-south"]:
-        code = curl_status(f"{BASE_URL}/og/{slug}.jpg")
-        v.check(code == "200", f"OG image: {slug}.jpg", f"HTTP {code}")
+    index_path = Path(__file__).resolve().parent.parent / "web" / "race-index.json"
+    race_index = json.loads(index_path.read_text()) if index_path.exists() else None
+    if race_index is None:
+        v.warn("race-index.json not found", "race pages left out of OG sample")
+    checked = set()
+    for path in og_sample_paths(race_index):
+        urls = extract_og_image_urls(curl_body(f"{BASE_URL}{path}"))
+        v.check(bool(urls), f"{path} references an /og/ image", "no og:image under /og/")
+        for url in urls:
+            if url in checked:
+                continue
+            checked.add(url)
+            headers = curl_headers(url).lower()
+            status = headers.split("\n", 1)[0]
+            ok = " 200" in status and "content-type: image/jpeg" in headers
+            v.check(ok, f"OG image {url}", status.strip() or "no response")
 
 
 def check_race_page_seo(v):
