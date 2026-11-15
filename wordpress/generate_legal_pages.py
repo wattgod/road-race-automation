@@ -376,7 +376,10 @@ def generate_page(page_key: str, output_dir: Path) -> None:
   <meta property="og:site_name" content="Roadie Labs">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{SITE_URL}/og/homepage.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="/race/assets/rl-icon.svg?v=siped-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   {preload}
   {page_css}
   {css}
