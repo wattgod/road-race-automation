@@ -69,3 +69,16 @@ def test_good_read_backs_up_then_writes(monkeypatch):
     backup = next(i for i, c in enumerate(calls) if c.startswith("cp "))
     write = next(i for i, c in enumerate(calls) if c.startswith("cat >"))
     assert backup < write
+
+
+
+def test_refused_sync_fails_the_run(tmp_path):
+    """No SSH credentials: sync_redirects refuses, so the script exits 1."""
+    import os
+    env = {k: v for k, v in os.environ.items() if "SSH" not in k}
+    env["HOME"] = str(tmp_path)  # no ~/.ssh/roadlabs_key either
+    run = subprocess.run([sys.executable, str(ROOT / "scripts" / "push_wordpress.py"),
+                          "--sync-redirects"], cwd=tmp_path, env=env,
+                         capture_output=True, text=True, timeout=60)
+    assert "SSH credentials not set" in run.stdout, run.stdout + run.stderr
+    assert run.returncode == 1, run.stdout + run.stderr

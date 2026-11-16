@@ -4203,8 +4203,9 @@ if __name__ == "__main__":
         sync_pages(args.pages_dir, prep_kit_dir=args.prep_kit_dir)
     if args.sync_sitemap:
         sync_sitemap()
+    redirects_failed = False
     if args.sync_redirects:
-        sync_redirects()
+        redirects_failed = not sync_redirects()
     if args.sync_photos:
         sync_photos(args.photos_dir)
     if args.sync_prep_kits:
@@ -4256,4 +4257,8 @@ if __name__ == "__main__":
     if coaching_apply_failed:
         # Other syncs still ran; fail the run so a refused/failed apply upload
         # can't pass unnoticed inside --deploy-all.
+        sys.exit(1)
+    if redirects_failed:
+        # A refused or failed .htaccess write must fail the run, or a deploy
+        # that wrote nothing reads back the old rules and passes.
         sys.exit(1)
