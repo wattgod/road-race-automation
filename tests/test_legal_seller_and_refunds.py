@@ -98,7 +98,7 @@ class TestCourseRefund:
     def test_sales_page_promise_is_the_terms_rule(self, terms):
         from generate_courses_page import COURSE_REFUND_LINE, build_faq
 
-        assert COURSE_REFUND_LINE == "30-day money-back guarantee on both courses."
+        assert COURSE_REFUND_LINE == "Full refund within 30 days of buying either course."
         assert COURSE_REFUND_LINE in build_faq()
         assert COURSE_REFUND_LINE in _refund_rule(terms, "courses")
 

@@ -373,8 +373,8 @@ def build_pricing() -> str:
       </div>
     </div>
   </div>
-  <div class="rl-tp-guarantee">
-    <p><strong>{REFUND_WINDOW_DAYS}-Day Refund.</strong> Within {REFUND_WINDOW_DAYS} days of your first payment, cancel from your plan page and get that payment back in full. After that, cancel any time from the same page; you keep any block you&rsquo;ve paid for. Later payments aren&rsquo;t refunded, except where the law says otherwise.</p>
+  <div class="rl-tp-fine">
+    <p>Within {REFUND_WINDOW_DAYS} days of your first payment, cancel from your plan page and get that payment back in full. After that, cancel any time from the same page; you keep any block you&rsquo;ve paid for. Later payments aren&rsquo;t refunded, except where the law says otherwise.</p>
   </div>
 </section>'''
 
@@ -1013,25 +1013,18 @@ def build_training_css() -> str:
   margin: 0;
 }}
 
-/* ── Guarantee ── */
-.rl-tp-guarantee {{
-  margin-top: var(--rl-spacing-lg);
-  padding: var(--rl-spacing-lg);
-  border: var(--rl-border-standard);
-  border-color: var(--rl-color-graphite);
-  background: var(--rl-color-zebra);
+/* ── Fine print (refund and cancel terms) ── */
+.rl-tp-fine {{
+  margin-top: var(--rl-spacing-md);
   text-align: center;
 }}
-.rl-tp-guarantee p {{
+.rl-tp-fine p {{
   font-family: var(--rl-font-editorial);
-  font-size: var(--rl-font-size-sm);
-  color: var(--rl-color-near-black);
-  margin: 0;
+  font-size: var(--rl-font-size-xs);
+  color: var(--rl-color-graphite);
+  margin: 0 auto;
+  max-width: 60ch;
   line-height: var(--rl-line-height-prose);
-}}
-.rl-tp-guarantee strong {{
-  text-transform: uppercase;
-  letter-spacing: var(--rl-letter-spacing-wide);
 }}
 
 /* ── FAQ ── */

@@ -215,7 +215,8 @@ class TestCrossSellContent:
 
     def test_faq_content(self, page_html):
         assert "lifetime access" in page_html
-        assert "30-day money-back" in page_html
+        assert "Full refund within 30 days" in page_html
+        assert "money-back" not in page_html and "money back" not in page_html
         assert "gravel bike" in page_html
 
 
