@@ -1363,6 +1363,21 @@ def build_apply_css() -> str:
   .rl-apply-header h1 {
     font-size: var(--rl-font-size-xl);
   }
+  /* Side by side, Submit ran 14px past a 375px screen: stack them full width. */
+  .rl-apply-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--rl-spacing-sm);
+  }
+  .rl-apply-save-btn {
+    margin-right: 0;
+  }
+  .rl-apply-submit-btn {
+    flex: none;
+    width: 100%;
+    padding-left: var(--rl-spacing-md);
+    padding-right: var(--rl-spacing-md);
+  }
 }
 </style>'''
 
