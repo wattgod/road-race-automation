@@ -76,3 +76,22 @@ def test_sync_pages_refuses_unplanned_vs_before_touching_server(tmp_path, monkey
     monkeypatch.setattr(push.subprocess, "run", no_ssh)
     monkeypatch.setattr(push.subprocess, "Popen", no_ssh)
     assert push.sync_pages(str(tmp_path)) is None
+
+
+def test_pair_cap_is_stable_across_hash_seeds():
+    """The 150-pair cap cut through score ties in set (hash) order."""
+    import os
+    import subprocess
+
+    code = (
+        "import sys; sys.path.insert(0, 'wordpress'); import generate_vs_pages as g; "
+        "print('|'.join(sorted(g.planned_vs_slugs(g.load_index()))))"
+    )
+    outs = {
+        subprocess.run(
+            [sys.executable, "-c", code], cwd=ROOT, capture_output=True, text=True,
+            env={**os.environ, "PYTHONHASHSEED": seed}, check=True,
+        ).stdout
+        for seed in ("1", "2", "3", "4")
+    }
+    assert len(outs) == 1

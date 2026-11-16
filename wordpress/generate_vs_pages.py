@@ -231,13 +231,19 @@ def select_pairs(races: list) -> list:
             for b in t2s[i + 1:]:
                 pairs.add(tuple(sorted([a["slug"], b["slug"]])))
 
-    # Sort by combined score (highest-value pairs first) and cap
+    # Sort by combined score (highest-value pairs first) and cap. Ties break
+    # on the slugs: `pairs` is a set, so without the tie-break the cap cut
+    # through equal scores in hash order and each run shipped a different
+    # set of pages (issue #165).
     race_map = {r["slug"]: r for r in races}
     pair_list = sorted(
         pairs,
-        key=lambda p: -(
-            race_map.get(p[0], {}).get("overall_score", 0)
-            + race_map.get(p[1], {}).get("overall_score", 0)
+        key=lambda p: (
+            -(
+                race_map.get(p[0], {}).get("overall_score", 0)
+                + race_map.get(p[1], {}).get("overall_score", 0)
+            ),
+            p,
         ),
     )
     return pair_list[:MAX_PAIRS]
