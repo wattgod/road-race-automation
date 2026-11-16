@@ -258,3 +258,36 @@ def test_nutrition_overlay_uses_confirmed_resupply_plan_when_present():
 
     assert "current resupply plan" in overlay["nutrition"]
     assert "has not published" not in overlay["nutrition"]
+
+
+def test_heat_overlay_quotes_only_whole_word_heat_challenges():
+    """Race-day realities must not quote lines that only contain heat
+    substrings ("Sunday", "photo", "Dehydration") or weather-variability
+    "sun" lines; the matcher is the demand analyzer's whole-word one."""
+    race = {
+        "display_name": "Hot Summer Fondo",
+        "vitals": {
+            "distance_mi": 100,
+            "date": "July 11, 2027",
+            "location": "Tucson, Arizona",
+        },
+        "climate": {
+            "primary": "Hot desert summer",
+            "description": "High heat shapes the race.",
+            "challenges": [
+                "Sunday start means closed roads",
+                "Photo spots on the summit",
+                "Dehydration risk at aid stations",
+                "Sun, rain, and hail in one day",
+                "Extreme heat after noon",
+                "Sun exposure on open climbs",
+            ],
+        },
+    }
+
+    overlay = generate_race_overlay(
+        race, {"heat_resilience": 8, "altitude": 0, "technical": 2}
+    )
+
+    realities = overlay["heat"].split("Race-day realities: ", 1)[1]
+    assert realities == "Extreme heat after noon; Sun exposure on open climbs."
