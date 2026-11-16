@@ -34,6 +34,10 @@ def test_folded_slug_301s_to_canonical(old, new):
     assert f"RewriteRule ^race/{old}/?$ /race/{new}/ [R=301,L]" in block
     assert f"RewriteRule ^race/{old}/(.*)$ /race/{new}/$1 [R=301,L]" in block
     assert f"RewriteRule ^race/{old}\\.md$ /race/{new}.md [R=301,L]" in block
+    deployed = (ROOT / "web" / "htaccess-root").read_text(encoding="utf-8")
+    assert f"RewriteRule ^race/{old}/?$ /race/{new}/ [R=301,L]" in deployed
+    assert f"RewriteRule ^race/{old}/(.*)$ /race/{new}/$1 [R=301,L]" in deployed
+    assert f"RewriteRule ^race/{old}\\.md$ /race/{new}.md [R=301,L]" in deployed
     assert not (ROOT / "race-data" / f"{old}.json").exists()
     assert (ROOT / "race-data" / f"{new}.json").exists()
 
