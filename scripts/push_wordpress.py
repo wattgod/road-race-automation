@@ -16,6 +16,13 @@ from pathlib import Path
 
 load_dotenv()
 
+# macOS tar writes an AppleDouble "._name" file beside every file that carries
+# extended attributes, and those shipped to the live site (3,919 on
+# 2026-11-15, issue #176). COPYFILE_DISABLE stops bsdtar creating them and the
+# exclude drops any already on disk. GNU tar accepts the exclude too.
+os.environ["COPYFILE_DISABLE"] = "1"
+TAR_NO_MAC_METADATA = ("--exclude=._*",)
+
 SSH_KEY = Path.home() / ".ssh" / "roadlabs_key"
 REMOTE_BASE = os.environ.get("REMOTE_BASE", "/home/customer/www/roadielabs.com/public_html")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -343,7 +350,7 @@ def sync_guide(guide_dir: str):
             file_list = [f.name for f in media_files]
             try:
                 tar_cmd = subprocess.Popen(
-                    ["tar", "-cf", "-", "-C", str(media_dir)] + file_list,
+                    ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(media_dir)] + file_list,
                     stdout=subprocess.PIPE,
                 )
                 ssh_cmd = subprocess.run(
@@ -431,7 +438,7 @@ def sync_guide_cluster(cluster_dir: str):
     # Build list of items to tar: index.html + each chapter dir
     items = ["index.html"] + [d.name for d in chapter_dirs]
     try:
-        tar_cmd = ["tar", "-cf", "-", "-C", str(cluster_path)] + items
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(cluster_path)] + items
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
@@ -1512,7 +1519,7 @@ def sync_og(og_dir: str):
     print(f"  Uploading {len(filenames)} OG images via tar+ssh...")
 
     try:
-        tar_cmd = ["tar", "-cf", "-", "-C", str(og_path)] + filenames
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(og_path)] + filenames
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
@@ -1714,7 +1721,7 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
         try:
             # List all items in tmpdir for tar
             items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(tmpdir)] + items
             ssh_cmd = [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
@@ -2429,7 +2436,7 @@ def sync_photos(photos_dir: str):
     print(f"  Uploading {total_photos} photos from {len(slug_dirs)} races via tar+ssh...")
 
     try:
-        tar_cmd = ["tar", "-cf", "-", "-C", str(photos_path)] + items
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(photos_path)] + items
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
@@ -2527,7 +2534,7 @@ def sync_prep_kits(prep_kit_dir: str):
 
         try:
             items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(tmpdir)] + items
             ssh_cmd = [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
@@ -2595,7 +2602,7 @@ def sync_plan_pages(plan_dir: str):
 
         try:
             items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(tmpdir)] + items
             ssh_cmd = [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
@@ -2662,7 +2669,7 @@ def sync_tire_guides(tire_guide_dir: str):
 
         try:
             items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(tmpdir)] + items
             ssh_cmd = [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
@@ -2741,7 +2748,7 @@ def sync_series(series_dir: str):
 
     try:
         items = [d.name for d in series_dirs]
-        tar_cmd = ["tar", "-cf", "-", "-C", str(series_path)] + items
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(series_path)] + items
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
@@ -2919,7 +2926,7 @@ def sync_blog(blog_dir: str):
 
         try:
             items = [p.name for p in sorted(tmpdir.iterdir())]
-            tar_cmd = ["tar", "-cf", "-", "-C", str(tmpdir)] + items
+            tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(tmpdir)] + items
             ssh_cmd = [
                 "ssh", "-i", str(SSH_KEY), "-p", port,
                 f"{user}@{host}",
@@ -2995,7 +3002,7 @@ def sync_courses(course_dir: str):
 
     try:
         items = [p.name for p in sorted(course_path.iterdir())]
-        tar_cmd = ["tar", "-cf", "-", "-C", str(course_path)] + items
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(course_path)] + items
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
@@ -3690,7 +3697,7 @@ def sync_markdown(markdown_dir: str):
 
     try:
         items = [f.name for f in md_files]
-        tar_cmd = ["tar", "-cf", "-", "-C", str(md_path)] + items
+        tar_cmd = ["tar", *TAR_NO_MAC_METADATA, "-cf", "-", "-C", str(md_path)] + items
         ssh_cmd = [
             "ssh", "-i", str(SSH_KEY), "-p", port,
             f"{user}@{host}",
