@@ -47,6 +47,19 @@ def stale_power_rankings_dirs(names, season: int) -> list:
     return sorted(stale)
 
 
+VS_DIR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*-vs-[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def planned_vs_dirs() -> set:
+    """Vs page dir names generate_vs_pages.py produces from web/race-index.json."""
+    sys.path.insert(0, str(PROJECT_ROOT / "wordpress"))
+    try:
+        from generate_vs_pages import load_index, planned_vs_slugs
+    finally:
+        sys.path.pop(0)
+    return planned_vs_slugs(load_index())
+
+
 def season_redirect_rules(season: int) -> str:
     """301 rules sending every past season's power rankings to `season`'s page."""
     return "".join(
@@ -1614,6 +1627,21 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
         print("  Delete those dirs (python3 wordpress/generate_power_rankings.py prunes "
               "them from its output), then re-run.")
         return None
+    # Vs gate (issue #165): a stage copied from wordpress/output carried vs
+    # pages the generator no longer plans, and they stayed live with old zeros.
+    planned_vs = planned_vs_dirs()
+    unplanned_staged = sorted(
+        d.name for d in pages_path.iterdir()
+        if d.is_dir() and VS_DIR_RE.match(d.name) and d.name not in planned_vs
+    )
+    if unplanned_staged:
+        print(f"✗ Vs gate: {len(unplanned_staged)} staged vs page(s) are not produced "
+              f"by generate_vs_pages.py — nothing pushed:")
+        for name in unplanned_staged:
+            print(f"    {name}")
+        print("  Re-run python3 wordpress/generate_vs_pages.py (it prunes them from its "
+              "output) and delete them from the stage, then re-run.")
+        return None
     # Also check for pre-built subdirectories (vs pages, state hubs, etc.)
     SKIP_DIRS = {"assets", "og", "prep-kit", "blog", "race"}
     subdirs_with_pages = [
@@ -1729,6 +1757,8 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
 
     if not retire_stale_power_rankings(host, user, port, remote_base, season):
         print("⚠️  Warning: could not retire past-season power rankings — verify manually")
+    if not retire_unplanned_vs(host, user, port, remote_base, planned_vs):
+        print("⚠️  Warning: could not retire unplanned vs pages — verify manually")
 
     wp_url = os.environ.get("WP_URL", "https://roadielabs.com")
     print(f"✓ Uploaded {page_count} race pages to {wp_url}/race/")
@@ -1790,6 +1820,19 @@ def _retire_dirs(host, user, port, remote_base, pick, label) -> bool:
         return False
     print(f"  Retired {len(safe)} {label} dir(s): {', '.join(safe)}")
     return True
+
+
+def retire_unplanned_vs(host, user, port, remote_base, planned) -> bool:
+    """Delete /race/{a}-vs-{b}/ dirs on the server that the generator doesn't plan.
+
+    Their .htaccess 301/410 rules only take effect once the dir is gone, and a
+    dir is only deleted once the live .htaccess covers it (see retirable_dirs).
+    """
+    return _retire_dirs(
+        host, user, port, remote_base,
+        lambda listing: [n for n in listing if VS_DIR_RE.match(n) and n not in planned],
+        "unplanned vs page",
+    )
 
 
 def retire_stale_power_rankings(host, user, port, remote_base, season) -> bool:
@@ -1958,6 +2001,70 @@ RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=3
 
 # /products/training-plans/ was a duplicate of /training-plans/
 RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
+
+# Retired vs pages (issue #165). The generator stopped producing these when
+# duplicate profiles were folded into their canonical race (gran-fondo-stelvio
+# -> la-stelvio-santini, granfondo-nove-colli -> nove-colli,
+# granfondo-strade-bianche -> strade-bianche-gran-fondo, oetztaler-radmarathon
+# -> otztaler-radmarathon) or the pair fell out of select_pairs(). A pair with
+# a current canonical comparison 301s to it; the rest are 410 Gone. sync_pages
+# deletes unplanned vs dirs from the server, since nginx serves files first.
+RewriteRule ^race/gran-fondo-stelvio-vs-haute-route-dolomites/?$ /race/haute-route-dolomites-vs-la-stelvio-santini/ [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-leroica/?$ /race/la-stelvio-santini-vs-leroica/ [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-mallorca-312/?$ /race/la-stelvio-santini-vs-mallorca-312/ [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-maratona-dles-dolomites/?$ /race/la-stelvio-santini-vs-maratona-dles-dolomites/ [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-quebrantahuesos/?$ /race/la-stelvio-santini-vs-quebrantahuesos/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche-vs-haute-route-dolomites/?$ /race/haute-route-dolomites-vs-strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche-vs-leroica/?$ /race/leroica-vs-strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche-vs-mallorca-312/?$ /race/mallorca-312-vs-strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche-vs-maratona-dles-dolomites/?$ /race/maratona-dles-dolomites-vs-strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche-vs-quebrantahuesos/?$ /race/quebrantahuesos-vs-strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/haute-route-alps-vs-oetztaler-radmarathon/?$ /race/haute-route-alps-vs-otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/la-marmotte-vs-oetztaler-radmarathon/?$ /race/la-marmotte-vs-otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/lardechoise-vs-oetztaler-radmarathon/?$ /race/lardechoise-vs-otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/le-loop-vs-oetztaler-radmarathon/?$ /race/le-loop-vs-otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/letape-du-tour-vs-oetztaler-radmarathon/?$ /race/letape-du-tour-vs-otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon-vs-paris-brest-paris/?$ /race/otztaler-radmarathon-vs-paris-brest-paris/ [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon-vs-paris-roubaix-challenge/?$ /race/otztaler-radmarathon-vs-paris-roubaix-challenge/ [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon-vs-tour-of-flanders-sportive/?$ /race/otztaler-radmarathon-vs-tour-of-flanders-sportive/ [R=301,L]
+RewriteRule ^race/aitana-tour-vs-gran-fondo-stelvio/?$ - [G,L]
+RewriteRule ^race/aitana-tour-vs-granfondo-nove-colli/?$ - [G,L]
+RewriteRule ^race/cheaha-challenge-gran-fondo-vs-white-rose-classic/?$ - [G,L]
+RewriteRule ^race/dreilander-giro-vs-oetztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/gfny-cannes-vs-oetztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/gfny-cannes-vs-schleck-gran-fondo/?$ - [G,L]
+RewriteRule ^race/gfny-lourdes-tourmalet-vs-gran-fondo-stelvio/?$ - [G,L]
+RewriteRule ^race/gfny-lourdes-tourmalet-vs-haute-route-ventoux/?$ - [G,L]
+RewriteRule ^race/gfny-lourdes-tourmalet-vs-oetztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/gfny-lourdes-tourmalet-vs-otztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/gran-fondo-la-fausto-coppi-vs-gran-fondo-stelvio/?$ - [G,L]
+RewriteRule ^race/gran-fondo-la-fausto-coppi-vs-granfondo-nove-colli/?$ - [G,L]
+RewriteRule ^race/gran-fondo-maryland-vs-white-rose-classic/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-granfondo-nove-colli/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-granfondo-strade-bianche/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-la-marmotte/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-la-stelvio-santini/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-le-loop/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-strade-bianche-gran-fondo/?$ - [G,L]
+RewriteRule ^race/gran-fondo-stelvio-vs-the-millars-gran-fondo/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-granfondo-strade-bianche/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-haute-route-dolomites/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-la-stelvio-santini/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-leroica/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-mallorca-312/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-maratona-dles-dolomites/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-quebrantahuesos/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-strade-bianche-gran-fondo/?$ - [G,L]
+RewriteRule ^race/granfondo-nove-colli-vs-the-millars-gran-fondo/?$ - [G,L]
+RewriteRule ^race/haute-route-pyrenees-vs-midnight-sun-randonnee/?$ - [G,L]
+RewriteRule ^race/haute-route-ventoux-vs-oetztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/liege-bastogne-liege-challenge-vs-oetztaler-radmarathon/?$ - [G,L]
+RewriteRule ^race/liege-bastogne-liege-challenge-vs-schleck-gran-fondo/?$ - [G,L]
+RewriteRule ^race/mallorca-312-vs-the-millars-gran-fondo/?$ - [G,L]
+RewriteRule ^race/maratona-dles-dolomites-vs-the-millars-gran-fondo/?$ - [G,L]
+RewriteRule ^race/mount-baker-hill-climb-vs-white-rose-classic/?$ - [G,L]
+RewriteRule ^race/oetztaler-radmarathon-vs-schleck-gran-fondo/?$ - [G,L]
+RewriteRule ^race/quebrantahuesos-vs-the-millars-gran-fondo/?$ - [G,L]
 
 # Past-season power rankings -> current season (issue #164). Rules are
 # appended by build_redirect_block() from the season rule, so a rollover

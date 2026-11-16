@@ -23,6 +23,8 @@ import argparse
 import html as html_mod
 import json
 import math
+import re
+import shutil
 import sys
 from collections import defaultdict
 from datetime import date
@@ -229,19 +231,75 @@ def select_pairs(races: list) -> list:
             for b in t2s[i + 1:]:
                 pairs.add(tuple(sorted([a["slug"], b["slug"]])))
 
-    # Sort by combined score (highest-value pairs first) and cap
+    # Sort by combined score (highest-value pairs first) and cap. Ties break
+    # on the slugs: `pairs` is a set, so without the tie-break the cap cut
+    # through equal scores in hash order and each run shipped a different
+    # set of pages (issue #165).
     race_map = {r["slug"]: r for r in races}
     pair_list = sorted(
         pairs,
-        key=lambda p: -(
-            race_map.get(p[0], {}).get("overall_score", 0)
-            + race_map.get(p[1], {}).get("overall_score", 0)
+        key=lambda p: (
+            -(
+                race_map.get(p[0], {}).get("overall_score", 0)
+                + race_map.get(p[1], {}).get("overall_score", 0)
+            ),
+            p,
         ),
     )
     return pair_list[:MAX_PAIRS]
 
 
 # ── SVG builders ─────────────────────────────────────────────────
+
+VS_DIR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*-vs-[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def _has_scores(race: dict) -> bool:
+    try:
+        race_scores(race)
+        overall_score(race)
+    except MissingScoreError:
+        return False
+    return True
+
+
+def planned_pairs(races: list) -> list:
+    """The (slug_a, slug_b) pairs this generator writes pages for.
+
+    select_pairs() minus any pair where a race lacks a usable score, which
+    main() would refuse rather than draw a zero.
+    """
+    race_map = {r["slug"]: r for r in races}
+    return [
+        (a, b) for a, b in select_pairs(races)
+        if a in race_map and b in race_map
+        and _has_scores(race_map[a]) and _has_scores(race_map[b])
+    ]
+
+
+def planned_vs_slugs(races: list) -> set:
+    """Page dir names ("{a}-vs-{b}") for planned_pairs(races)."""
+    return {f"{a}-vs-{b}" for a, b in planned_pairs(races)}
+
+
+def load_index(index_path: Path = PROJECT_ROOT / "web" / "race-index.json") -> list:
+    with open(index_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def prune_unplanned(output_dir: Path, planned: set) -> list:
+    """Delete {a}-vs-{b}/ dirs in output_dir that are not in `planned`.
+
+    Deploys ship every subdir of the stage, so a pair the generator dropped
+    would otherwise stay live with its old numbers (issue #165).
+    """
+    removed = []
+    for d in sorted(output_dir.iterdir()) if output_dir.exists() else []:
+        if d.is_dir() and VS_DIR_RE.match(d.name) and d.name not in planned:
+            shutil.rmtree(d)
+            removed.append(d)
+    return removed
+
 
 def build_radar_svg(race_a: dict, race_b: dict) -> str:
     """Overlaid radar of the course dimensions in config/dimensions.json."""
@@ -1118,9 +1176,11 @@ def main():
                 data = json.load(f)
                 full_race_data[slug] = data.get("race", {})
 
-    # Select pairs
-    pairs = select_pairs(all_races)
+    # Select pairs (only those with usable scores on both sides)
+    pairs = planned_pairs(all_races)
     print(f"Selected {len(pairs)} vs pairs")
+    for stale in prune_unplanned(output_dir, planned_vs_slugs(all_races)):
+        print(f"Removed unplanned {stale.name}/")
 
     generated = 0
     skipped = []
