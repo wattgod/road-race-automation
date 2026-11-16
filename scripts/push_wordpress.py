@@ -2002,6 +2002,23 @@ RewriteRule ^race/oregon-trail-gravel-grinder/?$ /race/oregon-trail-gravel/ [R=3
 # /products/training-plans/ was a duplicate of /training-plans/
 RewriteRule ^products/training-plans/?$ /training-plans/ [R=301,L]
 
+# Duplicate profiles folded into their canonical race in the 2026-07-24
+# catalog prune (7c16483). They were served as meta-refresh stubs until
+# issue #177; the stub dirs and .md mirrors must stay deleted on the server
+# because SiteGround nginx serves existing files before these rules.
+RewriteRule ^race/gran-fondo-stelvio/?$ /race/la-stelvio-santini/ [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio/(.*)$ /race/la-stelvio-santini/$1 [R=301,L]
+RewriteRule ^race/gran-fondo-stelvio\\.md$ /race/la-stelvio-santini.md [R=301,L]
+RewriteRule ^race/granfondo-nove-colli/?$ /race/nove-colli/ [R=301,L]
+RewriteRule ^race/granfondo-nove-colli/(.*)$ /race/nove-colli/$1 [R=301,L]
+RewriteRule ^race/granfondo-nove-colli\\.md$ /race/nove-colli.md [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche/?$ /race/strade-bianche-gran-fondo/ [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche/(.*)$ /race/strade-bianche-gran-fondo/$1 [R=301,L]
+RewriteRule ^race/granfondo-strade-bianche\\.md$ /race/strade-bianche-gran-fondo.md [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon/?$ /race/otztaler-radmarathon/ [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon/(.*)$ /race/otztaler-radmarathon/$1 [R=301,L]
+RewriteRule ^race/oetztaler-radmarathon\\.md$ /race/otztaler-radmarathon.md [R=301,L]
+
 # Retired vs pages (issue #165). The generator stopped producing these when
 # duplicate profiles were folded into their canonical race (gran-fondo-stelvio
 # -> la-stelvio-santini, granfondo-nove-colli -> nove-colli,
