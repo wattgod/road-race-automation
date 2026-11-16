@@ -42,3 +42,16 @@ def test_empty_index_refuses(tmp_path):
 def test_no_hardcoded_count_in_source():
     src = (ROOT / "scripts" / "build_search_page.py").read_text(encoding="utf-8")
     assert not re.search(r"\b\d{3} (Rated Races|road races)", src)
+
+
+def test_meta_description_generator_counts_the_index():
+    import generate_meta_descriptions as gmd
+
+    index = json.loads((ROOT / "web" / "race-index.json").read_text(encoding="utf-8"))
+    entries = gmd.generate_entries()
+    text = " ".join(f"{e.get('description') or ''} {e.get('og_description') or ''}" for e in entries)
+    assert "{race_count}" not in text
+    assert f"{len(index)} road races" in text
+    assert f"{len(index)} gran fondos" in text
+    src = (ROOT / "scripts" / "generate_meta_descriptions.py").read_text(encoding="utf-8")
+    assert not re.search(r"\b\d{3} (gran fondos|road races)", src)
