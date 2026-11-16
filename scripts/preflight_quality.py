@@ -950,7 +950,8 @@ def check_fabricated_claims():
                   f"{len(findings)} unsupported claim(s) in {len(slugs)} race(s): "
                   f"{', '.join(sorted(slugs))}")
         else:
-            check("No fabricated claims in race JSON (328 profiles)", True)
+            profiles = len(list((PROJECT_ROOT / "race-data").glob("*.json")))
+            check(f"No fabricated claims in race JSON ({profiles} profiles)", True)
     except Exception as e:
         check("Fabricated claims audit", False, f"Error: {e}")
 
