@@ -125,3 +125,12 @@ class TestProductsWhoseSalesPagePromisesNoRefund:
     def test_every_product_has_exactly_one_rule(self, terms):
         ids = re.findall(r'<li id="refund-([a-z-]+)">', terms)
         assert sorted(ids) == ["coaching", "consulting", "courses", "training-plans"]
+
+
+class TestContactIsRoadie:
+    """Roadie legal pages send questions to the Roadie inbox, not Gravel God's."""
+
+    def test_privacy_and_terms_use_roadie_address(self, privacy, terms):
+        for page in (privacy, terms):
+            assert 'href="mailto:coach@roadielabs.com"' in page
+            assert "gravelgodcoaching@gmail.com" not in page

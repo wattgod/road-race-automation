@@ -32,7 +32,7 @@ from live_head_patches import apply_live_head_patches
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 SITE_NAME = "Roadie Labs"
-CONTACT_EMAIL = "gravelgodcoaching@gmail.com"
+CONTACT_EMAIL = "coach@roadielabs.com"
 # The legal seller for every purchase and the controller of personal data.
 SELLER_NAME = "Gravel God Cycling LLC"
 SELLER_ADDRESS = "2183 Lombardy St, Longmont, CO 80503"
