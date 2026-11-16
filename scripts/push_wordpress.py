@@ -1735,24 +1735,76 @@ def sync_pages(pages_dir: str, prep_kit_dir=None):
     return f"{wp_url}/race/"
 
 
-def retire_stale_power_rankings(host, user, port, remote_base, season) -> bool:
-    """Delete past-season power-rankings dirs under /race/ on the server.
+def retirable_dirs(candidates, htaccess: str, listing) -> tuple:
+    """Split candidate /race/ dirs into (safe to delete, kept).
 
-    SiteGround's nginx serves an existing file before .htaccess is consulted,
-    so the season 301 (see season_redirect_rules) only works once the old dir
-    is gone. Names are matched against POWER_RANKINGS_DIR_RE before rm.
+    A dir is only safe to delete once the live .htaccess already answers its
+    URL: a 410 rule, or a 301 whose /race/{target}/ exists on the server.
+    Otherwise deleting it turns a working page into a 404 (PR #167 review).
     """
+    present = set(listing)
+    safe, kept = [], []
+    for name in sorted(candidates):
+        m = re.search(
+            rf"^RewriteRule \^race/{re.escape(name)}/\?\$ (\S+) \[", htaccess, re.M
+        )
+        target = m.group(1) if m else None
+        target_dir = (target or "").strip("/").removeprefix("race/")
+        if target == "-" or (target and target_dir in present and "/" not in target_dir):
+            safe.append(name)
+        else:
+            kept.append(name)
+    return safe, kept
+
+
+def _retire_dirs(host, user, port, remote_base, pick, label) -> bool:
+    """Delete the /race/ dirs `pick(listing)` names, if .htaccess covers them."""
     ssh_base = ["ssh", "-i", str(SSH_KEY), "-p", port, f"{user}@{host}"]
     try:
         listing = subprocess.run(
             ssh_base + [f"ls -1 {remote_base}"],
             check=True, capture_output=True, text=True, timeout=30,
         ).stdout.split()
+        htaccess = subprocess.run(
+            ssh_base + [f"cat {REMOTE_BASE}/.htaccess"],
+            check=True, capture_output=True, text=True, timeout=30,
+        ).stdout
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
         return False
-    stale = stale_power_rankings_dirs(listing, season)
-    if not stale:
+    safe, kept = retirable_dirs(pick(listing), htaccess, listing)
+    if kept:
+        print(f"⚠️  Kept {len(kept)} {label} dir(s) on the server: the live .htaccess has "
+              f"no rule for them or their 301 target is missing. Run --sync-redirects "
+              f"(and upload the target page), then deploy again:")
+        for name in kept:
+            print(f"    {name}")
+    if not safe:
         return True
+    targets = " ".join(f"{remote_base}/{name}" for name in safe)
+    try:
+        subprocess.run(
+            ssh_base + [f"rm -rf {targets}"],
+            check=True, capture_output=True, text=True, timeout=60,
+        )
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        return False
+    print(f"  Retired {len(safe)} {label} dir(s): {', '.join(safe)}")
+    return True
+
+
+def retire_stale_power_rankings(host, user, port, remote_base, season) -> bool:
+    """Delete past-season power-rankings dirs under /race/ on the server.
+
+    SiteGround's nginx serves an existing file before .htaccess is consulted,
+    so the season 301 (see season_redirect_rules) only works once the old dir
+    is gone. A dir is deleted only when the live .htaccess already 301s it to
+    a current-season page that exists on the server.
+    """
+    return _retire_dirs(
+        host, user, port, remote_base,
+        lambda listing: stale_power_rankings_dirs(listing, season),
+        "past-season power rankings",
+    )
     targets = " ".join(f"{remote_base}/{name}" for name in stale)
     try:
         subprocess.run(

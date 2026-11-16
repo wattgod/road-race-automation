@@ -70,3 +70,30 @@ def test_generator_prunes_past_seasons(tmp_path):
     removed = prune_past_seasons(tmp_path, 2027)
     assert [d.name for d in removed] == ["power-rankings-2026"]
     assert sorted(p.name for p in tmp_path.iterdir()) == ["calendar", "power-rankings-2027"]
+
+
+HTACCESS = (
+    "RewriteRule ^race/power-rankings-2026/?$ /race/power-rankings-2027/ [R=301,L]\n"
+    "RewriteRule ^race/a-vs-b/?$ - [G,L]\n"
+)
+
+
+def test_retire_needs_live_rule_and_existing_target():
+    push = _push()
+    listing = ["power-rankings-2026", "power-rankings-2027", "a-vs-b", "c-vs-d"]
+    safe, kept = push.retirable_dirs(["power-rankings-2026", "a-vs-b", "c-vs-d"], HTACCESS, listing)
+    assert safe == ["a-vs-b", "power-rankings-2026"]
+    assert kept == ["c-vs-d"]
+
+
+def test_retire_keeps_old_season_when_current_page_is_missing():
+    push = _push()
+    safe, kept = push.retirable_dirs(["power-rankings-2026"], HTACCESS, ["power-rankings-2026"])
+    assert safe == [] and kept == ["power-rankings-2026"]
+
+
+def test_retire_keeps_old_season_when_redirect_not_deployed():
+    push = _push()
+    listing = ["power-rankings-2026", "power-rankings-2027"]
+    safe, kept = push.retirable_dirs(["power-rankings-2026"], "", listing)
+    assert safe == [] and kept == ["power-rankings-2026"]
