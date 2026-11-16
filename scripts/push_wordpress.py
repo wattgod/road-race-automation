@@ -1872,6 +1872,14 @@ REDIRECT_BLOCK = """\
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# /plan/manage -> the custom plan manage page (cancel, refund, next race),
+# served by the training-plan pipeline on Railway. Stripe checkout terms and
+# plan emails link riders here. The page reads its #t= token from the URL
+# fragment, which browsers keep across a redirect, and posts to relative
+# /api/race-plan/* paths, so it can't be copied to this site. 302: the
+# Railway address may change and a 301 is cached.
+RewriteRule ^plan/manage/?$ https://athlete-custom-training-plan-pipeline-production.up.railway.app/plan/manage [R=302,L]
+
 # /page/N/ → / (homepage pagination is meaningless, prevents noindex gap)
 RewriteRule ^page/\\d+/?$ / [R=301,L]
 
@@ -2137,8 +2145,30 @@ def sync_redirects():
             timeout=15,
         )
         current = result.stdout
+        # A failed read must never be treated as an empty .htaccess: the write
+        # below would erase the hand-deployed rules (web/htaccess-root) under
+        # our block. Require a clean exit AND recognizable content.
+        if result.returncode != 0 or "RewriteEngine On" not in current:
+            print("✗ Refusing to write: remote .htaccess read failed or "
+                  f"content unrecognized (rc={result.returncode}, "
+                  f"{len(current)} bytes)")
+            return False
     except Exception as e:
         print(f"✗ Failed to read remote .htaccess: {e}")
+        return False
+
+    # Keep a dated remote backup so a bad block is one `cp` from reverted.
+    backup = subprocess.run(
+        [
+            "ssh", "-i", str(SSH_KEY), "-p", port,
+            f"{user}@{host}",
+            f"cp {remote_htaccess} {remote_htaccess}.bak-$(date +%Y%m%d-%H%M%S)",
+        ],
+        capture_output=True, text=True, timeout=15,
+    )
+    if backup.returncode != 0:
+        print(f"✗ Refusing to write: remote .htaccess backup failed: "
+              f"{backup.stderr.strip()}")
         return False
 
     # Check if our block already exists
@@ -4173,8 +4203,9 @@ if __name__ == "__main__":
         sync_pages(args.pages_dir, prep_kit_dir=args.prep_kit_dir)
     if args.sync_sitemap:
         sync_sitemap()
+    redirects_failed = False
     if args.sync_redirects:
-        sync_redirects()
+        redirects_failed = not sync_redirects()
     if args.sync_photos:
         sync_photos(args.photos_dir)
     if args.sync_prep_kits:
@@ -4226,4 +4257,8 @@ if __name__ == "__main__":
     if coaching_apply_failed:
         # Other syncs still ran; fail the run so a refused/failed apply upload
         # can't pass unnoticed inside --deploy-all.
+        sys.exit(1)
+    if redirects_failed:
+        # A refused or failed .htaccess write must fail the run, or a deploy
+        # that wrote nothing reads back the old rules and passes.
         sys.exit(1)
