@@ -61,3 +61,10 @@ def test_preflight_fabricated_claims_label_counts_profiles():
     src = (ROOT / "scripts" / "preflight_quality.py").read_text(encoding="utf-8")
     assert "(328 profiles)" not in src
     assert not re.search(r"race JSON \(\d+ profiles\)", src)
+
+
+def test_meta_descriptions_validate_clean():
+    import generate_meta_descriptions as gmd
+
+    errors, _warnings = gmd.validate_entries(gmd.generate_entries())
+    assert errors == []

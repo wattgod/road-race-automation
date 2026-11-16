@@ -270,7 +270,7 @@ TITLE_MAP = {
 MANUAL_ENTRIES = [
     # ── Core Pages ──
     (448, "page", "home",
-     "Road cycling data, coaching, and training plans. {race_count} gran fondos and sportives rated and ranked on 14 criteria. Built for cyclists who take road racing seriously.",
+     "Road cycling data, coaching, and training plans. {race_count} gran fondos and sportives rated on 14 criteria. Built for cyclists who take road racing seriously.",
      "Road cycling data, coaching, and training plans. {race_count} gran fondos and sportives rated and ranked on 14 criteria.",
      "road cycling"),
     (451, "page", "contact",
