@@ -270,8 +270,8 @@ TITLE_MAP = {
 MANUAL_ENTRIES = [
     # ── Core Pages ──
     (448, "page", "home",
-     "Road cycling data, coaching, and training plans. 427 gran fondos and sportives rated and ranked on 14 criteria. Built for cyclists who take road racing seriously.",
-     "Road cycling data, coaching, and training plans. 427 gran fondos and sportives rated and ranked on 14 criteria.",
+     "Road cycling data, coaching, and training plans. {race_count} gran fondos and sportives rated and ranked on 14 criteria. Built for cyclists who take road racing seriously.",
+     "Road cycling data, coaching, and training plans. {race_count} gran fondos and sportives rated and ranked on 14 criteria.",
      "road cycling"),
     (451, "page", "contact",
      "Contact Roadie Labs with questions about races, training plans, coaching, or the race database. We respond to everything.",
@@ -287,8 +287,8 @@ MANUAL_ENTRIES = [
      "Training plan questionnaire: tell us your cycling background, goals, and target race. Your answers build a plan tailored to your life.",
      None, "training plan questionnaire"),
     (5018, "page", "road-races",
-     "Search, filter, and compare 427 road races worldwide. Rated on 14 criteria including prestige, climbing, and logistics.",
-     "Search and compare 427 road races worldwide. Rated on 14 criteria including prestige, climbing, and logistics.",
+     "Search, filter, and compare {race_count} road races worldwide. Rated on 14 criteria including prestige, climbing, and logistics.",
+     "Search and compare {race_count} road races worldwide. Rated on 14 criteria including prestige, climbing, and logistics.",
      "road races"),
     (5042, "page", "resources",
      "Road cycling resources: race calendars, training tools, nutrition calculators, and recommended gear from real experience.",
@@ -623,8 +623,24 @@ MANUAL_ENTRIES = [
 ]
 
 
+RACE_INDEX = Path(__file__).resolve().parent.parent / "web" / "race-index.json"
+
+
+def race_count(index_path: Path = RACE_INDEX) -> int:
+    """Races in web/race-index.json; the {race_count} token in copy states it."""
+    races = json.loads(index_path.read_text(encoding="utf-8"))
+    if not isinstance(races, list) or not races:
+        raise ValueError(f"{index_path} holds no races; refusing to print a count")
+    return len(races)
+
+
+def _fill_count(text, count):
+    return text.replace("{race_count}", str(count)) if text else text
+
+
 def generate_entries():
     """Generate all meta description entries."""
+    count = race_count()
     entries = []
     used_ids = set()
 
@@ -646,6 +662,7 @@ def generate_entries():
 
     # 2. Add manual entries
     for wp_id, wp_type, slug, desc, og_desc, keyword in MANUAL_ENTRIES:
+        desc, og_desc = _fill_count(desc, count), _fill_count(og_desc, count)
         if wp_id in used_ids:
             print(f"  WARNING: Duplicate wp_id {wp_id} (manual entry for '{slug}' conflicts with race entry)")
             continue

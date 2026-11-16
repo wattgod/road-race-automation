@@ -16,6 +16,7 @@ Usage:
     python3 scripts/build_search_page.py
 """
 
+import json
 import sys
 from pathlib import Path
 
@@ -30,21 +31,36 @@ from shared_header import get_site_header_css, get_site_header_html  # noqa: E40
 SITE_BASE_URL = "https://roadielabs.com"
 CANONICAL = f"{SITE_BASE_URL}/road-races/"
 
-TITLE = "Road Race Search — 427 Rated Races | Roadie Labs"
-META_DESCRIPTION = (
-    "Search 427 road races — gran fondos, sportives, hillclimbs — each scored "
-    "on 14 base dimensions plus cultural impact. Filter by distance, climbing, region, month, and tier."
-)
+INDEX_PATH = PROJECT_ROOT / "web" / "race-index.json"
 
 
-def build_page(fragment: str) -> str:
+def race_count(index_path: Path = INDEX_PATH) -> int:
+    """Races in the search index the page loads. The title states this number."""
+    races = json.loads(index_path.read_text(encoding="utf-8"))
+    if not isinstance(races, list) or not races:
+        raise ValueError(f"{index_path} holds no races; refusing to print a count")
+    return len(races)
+
+
+def page_title(count: int) -> str:
+    return f"Road Race Search — {count} Rated Races | Roadie Labs"
+
+
+def meta_description(count: int) -> str:
+    return (
+        f"Search {count} road races — gran fondos, sportives, hillclimbs — each scored "
+        "on 14 base dimensions plus cultural impact. Filter by distance, climbing, region, month, and tier."
+    )
+
+
+def build_page(fragment: str, count: int) -> str:
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{TITLE}</title>
-<meta name="description" content="{META_DESCRIPTION}">
+<title>{page_title(count)}</title>
+<meta name="description" content="{meta_description(count)}">
 <link rel="canonical" href="{CANONICAL}">
 {get_ga4_head_snippet()}
 <style>
@@ -64,7 +80,7 @@ def build_page(fragment: str) -> str:
 
 def main() -> int:
     fragment = (PROJECT_ROOT / "web" / "road-labs-search.html").read_text(encoding="utf-8")
-    page = build_page(fragment)
+    page = build_page(fragment, race_count())
     for out_dir in ("road-races", "search"):
         target = PROJECT_ROOT / "wordpress" / "output" / out_dir
         target.mkdir(parents=True, exist_ok=True)
