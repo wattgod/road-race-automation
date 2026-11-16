@@ -970,3 +970,16 @@ class TestDriftGuard:
             "wordpress/output/coaching-apply.html is stale — run "
             "`python3 wordpress/generate_coaching_apply.py` to regenerate it."
         )
+
+
+class TestApplyButtonsFitAPhone:
+    """Submit sat beside Save Progress and ran 14px past a 375px screen
+    (live check, 2026-11-16). On phones the two stack full width."""
+
+    def test_buttons_stack_on_phone(self):
+        css = build_apply_css()
+        phone = css[css.index("@media (max-width: 600px)"):]
+        actions = phone[phone.index(".rl-apply-actions {"):]
+        assert "flex-direction: column;" in actions.split("}", 1)[0]
+        submit = phone[phone.index(".rl-apply-submit-btn {"):].split("}", 1)[0]
+        assert "width: 100%;" in submit and "flex: none;" in submit
