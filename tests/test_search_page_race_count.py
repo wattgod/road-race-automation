@@ -55,3 +55,9 @@ def test_meta_description_generator_counts_the_index():
     assert f"{len(index)} gran fondos" in text
     src = (ROOT / "scripts" / "generate_meta_descriptions.py").read_text(encoding="utf-8")
     assert not re.search(r"\b\d{3} (gran fondos|road races)", src)
+
+
+def test_preflight_fabricated_claims_label_counts_profiles():
+    src = (ROOT / "scripts" / "preflight_quality.py").read_text(encoding="utf-8")
+    assert "(328 profiles)" not in src
+    assert not re.search(r"race JSON \(\d+ profiles\)", src)
