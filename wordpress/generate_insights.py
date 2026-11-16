@@ -26,7 +26,7 @@ from generate_neo_brutalist import (
     write_shared_assets,
 )
 from shared_footer import get_mega_footer_html
-from shared_header import get_site_header_html, get_site_header_js
+from shared_header import get_site_header_html
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -386,7 +386,6 @@ def generate_insights_page(external_assets: dict | None = None) -> str:
   {get_mega_footer_html()}
 </div>
 {inline_js}
-<script>{get_site_header_js()}</script>
 {get_consent_banner_html()}
 </body>
 </html>'''

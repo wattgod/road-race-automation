@@ -128,6 +128,9 @@ def get_site_header_js() -> str:
   var toggle = document.querySelector('.rl-site-header-toggle');
   var nav = document.getElementById('rl-site-header-nav');
   if (!toggle || !nav) return;
+  // Bind once: a page that loads this twice would open and shut the menu on one tap.
+  if (toggle.getAttribute('data-rl-menu-bound') === '1') return;
+  toggle.setAttribute('data-rl-menu-bound', '1');
   toggle.addEventListener('click', function() {
     var expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');

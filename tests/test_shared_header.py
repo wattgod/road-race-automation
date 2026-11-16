@@ -267,3 +267,35 @@ class TestMenuIcon:
         js = get_site_header_js()
         assert "classList.toggle('is-open'" in js
         assert "aria-expanded" in js
+
+
+class TestMenuHandlerBoundOnce:
+    """One tap must open the phone menu. Two click handlers flip it open and
+    shut in the same tap (the live Coaching page did this, 2026-11-16)."""
+
+    HANDLER = "getElementById('rl-site-header-nav')"
+
+    def test_script_guards_against_double_binding(self):
+        js = get_site_header_js()
+        assert "data-rl-menu-bound" in js
+        guard = js.index("data-rl-menu-bound")
+        assert guard < js.index("addEventListener('click'")
+
+    @pytest.mark.parametrize("module", [
+        "generate_coaching", "generate_coaching_apply", "generate_insights",
+        "generate_exit_interview",
+    ])
+    def test_page_wires_the_menu_handler_once(self, module):
+        mod = __import__(module)
+        page = mod.generate_coaching_page() if module == "generate_coaching" else None
+        if page is None:
+            gen = next((getattr(mod, n) for n in dir(mod)
+                        if n.startswith("generate_") and n.endswith("_page")
+                        and callable(getattr(mod, n))), None)
+            if gen is None:
+                pytest.skip(f"{module} has no zero-arg page builder")
+            try:
+                page = gen()
+            except TypeError:
+                pytest.skip(f"{module} page builder needs arguments")
+        assert page.count(self.HANDLER) == 1

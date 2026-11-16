@@ -42,7 +42,7 @@ from generate_neo_brutalist import (
 )
 from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_hints
 from shared_footer import get_mega_footer_html
-from shared_header import get_site_header_html, get_site_header_js
+from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
 from live_head_patches import apply_live_head_patches
 
@@ -1031,8 +1031,6 @@ def generate_coaching_page(external_assets: dict = None) -> str:
 
 {inline_js}
 {coaching_js}
-
-''' + '<script>' + get_site_header_js() + '</script>' + f'''
 
 {get_consent_banner_html()}
 </body>
