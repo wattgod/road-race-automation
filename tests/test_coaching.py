@@ -919,8 +919,7 @@ class TestApplyPage:
     def test_honeypot_client_check_present(self, apply_html):
         assert "if (data.website)" in apply_html
 
-    def test_confidentiality_footer_email_unchanged(self, apply_html):
-        assert "gravelgodcoaching@gmail.com" in apply_html
+    def test_confidentiality_footer_links_privacy_policy(self, apply_html):
         assert 'href="/privacy/"' in apply_html
 
     def test_success_requires_explicit_flag(self, apply_html):
@@ -983,3 +982,11 @@ class TestApplyButtonsFitAPhone:
         assert "flex-direction: column;" in actions.split("}", 1)[0]
         submit = phone[phone.index(".rl-apply-submit-btn {"):].split("}", 1)[0]
         assert "width: 100%;" in submit and "flex: none;" in submit
+
+
+class TestApplyContactIsRoadie:
+    """Roadie riders write to coach@roadielabs.com, never the Gravel God inbox."""
+
+    def test_privacy_line_points_to_roadie_inbox(self, apply_html):
+        assert 'mailto:coach@roadielabs.com">coach@roadielabs.com</a>' in apply_html
+        assert "gravelgodcoaching@gmail.com" not in apply_html

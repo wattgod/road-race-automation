@@ -884,7 +884,7 @@ def build_tier_selector() -> str:
 
 def build_footer() -> str:
     return f'''<div class="rl-apply-confidential-wrap">
-    <p class="rl-apply-confidential">Your answers, including health information you choose to provide, are processed to review and deliver coaching as described in the <a href="/privacy/">Privacy Policy</a>. Analytics is separately controlled by your privacy choice. Questions? Email gravelgodcoaching@gmail.com</p>
+    <p class="rl-apply-confidential">Your answers, including health information you choose to provide, are processed to review and deliver coaching as described in the <a href="/privacy/">Privacy Policy</a>. Analytics is separately controlled by your privacy choice. Questions? Email <a href="mailto:coach@roadielabs.com">coach@roadielabs.com</a></p>
   </div>
   ''' + get_mega_footer_html()
 
