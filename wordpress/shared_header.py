@@ -23,6 +23,10 @@ LOGO_TILE_HTML = (
 def get_site_header_html(active: str | None = None) -> str:
     """Return the shared site header HTML block.
 
+    The menu toggle script ships with the markup, so every page that renders
+    the header can open the phone menu (618 pages had the button and no
+    script, Nov 2026). The script binds once however many copies a page has.
+
     Args:
         active: Which top-level nav item is current. One of:
                 "races", "products", "courses", "services", "about".
@@ -67,7 +71,8 @@ def get_site_header_html(active: str | None = None) -> str:
       <a href="{SITE_BASE_URL}/about/"{_aria("about")}>ABOUT</a>
     </nav>
   </div>
-</header>'''
+</header>
+<script>{get_site_header_js()}</script>'''
 
 
 def get_site_header_css() -> str:
@@ -128,6 +133,10 @@ def get_site_header_js() -> str:
   var toggle = document.querySelector('.rl-site-header-toggle');
   var nav = document.getElementById('rl-site-header-nav');
   if (!toggle || !nav) return;
+  // Bind once: pages also carry this script inline or in rl-scripts.<hash>.js,
+  // and a second listener closed the menu on the same tap (Nov 2026).
+  if (toggle.getAttribute('data-rl-nav-bound') === '1') return;
+  toggle.setAttribute('data-rl-nav-bound', '1');
   toggle.addEventListener('click', function() {
     var expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');

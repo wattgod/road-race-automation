@@ -267,3 +267,19 @@ class TestMenuIcon:
         js = get_site_header_js()
         assert "classList.toggle('is-open'" in js
         assert "aria-expanded" in js
+
+
+class TestMenuTapScript:
+    """Every page that renders the header must be able to open the phone menu
+    exactly once per tap (Nov 2026: 618 pages shipped no script, and pages
+    with an inline copy plus rl-scripts toggled twice, so the menu never opened)."""
+
+    def test_header_html_carries_the_toggle_script(self):
+        html = get_site_header_html()
+        assert "</header>\n<script>" in html
+        assert get_site_header_js() in html
+
+    def test_script_binds_once(self):
+        js = get_site_header_js()
+        assert "data-rl-nav-bound" in js
+        assert js.index("data-rl-nav-bound") < js.index("addEventListener('click'")
