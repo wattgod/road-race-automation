@@ -13,16 +13,20 @@
       "location_badge": "Porto Recanati, Italy",
       "country": "Italy",
       "date": "2026: September 20",
-      "date_specific": "2026: Sunday, September 20, 08:00 start. Medium route distance conflicts between official sources: course page says 87km/1,240m, regulations document still says 82km/1,220m — confirm final GPX before race day.",
+      "date_specific": "2026: Sunday, September 20, 08:00 start.",
       "field_size": "Gran Fondo entries capped at 1,500 (2026); ~1,600 riders started the two Gran Fondo routes in 2024",
-      "start_format": "Mass start; Long (115km) and Medium (82-87km, sources conflict) route options",
+      "start_format": "Mass start; Long (115km) and Medium (82-87km) route options",
       "registration": "https://www.5milamarche.com/iscrizioni/ (links to ENDU registration portal)",
       "entry_fee": null,
       "feed_zones": null,
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [],
+      "_notes": {
+        "date_specific": "2026: Sunday, September 20, 08:00 start. Medium route distance conflicts between official sources: course page says 87km/1,240m, regulations document still says 82km/1,220m — confirm final GPX before race day.",
+        "start_format": "Mass start; Long (115km) and Medium (82-87km, sources conflict) route options"
+      }
     },
     "climate": {
       "primary": "Temperate",

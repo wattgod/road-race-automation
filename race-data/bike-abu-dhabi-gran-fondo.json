@@ -13,7 +13,7 @@
       "location_badge": "Hazza bin Zayed Stadium, UAE",
       "country": "UAE",
       "date": "December",
-      "date_specific": "2025: December 21 (last confirmed edition). 2026 date not yet officially announced — prior editions have moved between November and December, so do not assume December 2026.",
+      "date_specific": "2025: December 21 (last edition held). 2026 date not yet announced; past editions have run in November or December.",
       "field_size": 1000,
       "start_format": null,
       "registration": null,
@@ -22,7 +22,10 @@
       "cutoff_time": null,
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [],
+      "_notes": {
+        "date_specific": "2025: December 21 (last confirmed edition). 2026 date not yet officially announced — prior editions have moved between November and December, so do not assume December 2026."
+      }
     },
     "climate": {
       "primary": "Arid desert",

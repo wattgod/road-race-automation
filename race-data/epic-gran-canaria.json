@@ -19,21 +19,29 @@
       "registration": "https://epicgrancanaria.com/en-gb/",
       "entry_fee": null,
       "feed_zones": null,
-      "cutoff_time": "45 min (sector 1), ~1:50-2:15 (sector 2, organizer sources conflict), 1:50 (sector 3)",
+      "cutoff_time": "45 min (sector 1), ~1:50-2:15 (sector 2), 1:50 (sector 3)",
       "lat": null,
       "lng": null,
       "route_options": [
         {
           "name": "Stage 1 (Saturday)",
           "distance_km": 112,
-          "timed_sectors": ["Ayagaures/Pedro Gonzalez climb (12.3km/423m)", "Pasito Blanco-Alto Salto del Perro (29km/997m)"]
+          "timed_sectors": [
+            "Ayagaures/Pedro Gonzalez climb (12.3km/423m)",
+            "Pasito Blanco-Alto Salto del Perro (29km/997m)"
+          ]
         },
         {
           "name": "Stage 2 (Sunday)",
           "distance_km": 75,
-          "timed_sectors": ["Tirajana/Tunte climb (22km/1,005m)"]
+          "timed_sectors": [
+            "Tirajana/Tunte climb (22km/1,005m)"
+          ]
         }
-      ]
+      ],
+      "_notes": {
+        "cutoff_time": "45 min (sector 1), ~1:50-2:15 (sector 2, organizer sources conflict), 1:50 (sector 3)"
+      }
     },
     "climate": {
       "primary": "Temperate",

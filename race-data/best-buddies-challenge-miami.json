@@ -18,7 +18,7 @@
       "start_format": "Rolling, police-escorted peloton (not a scored race); riders must maintain a minimum group pace of 18 mph",
       "registration": "https://www.bestbuddieschallenge.org/miami/register/",
       "entry_fee": "$250 registration fee + $10,000 fundraising commitment (Road Challenge tier)",
-      "feed_zones": "2 rest stops per the current official schedule (Mack Cycle, Sweet Bird North) — the organizer's own overview and national listing say 3; treat the exact count as an unresolved organizer inconsistency",
+      "feed_zones": "2-3 rest stops (Mack Cycle and Sweet Bird North on the current schedule)",
       "cutoff_time": null,
       "lat": null,
       "lng": null,
@@ -31,7 +31,10 @@
           "name": "75 miles",
           "distance_km": 120.7
         }
-      ]
+      ],
+      "_notes": {
+        "feed_zones": "2 rest stops per the current official schedule (Mack Cycle, Sweet Bird North) — the organizer's own overview and national listing say 3; treat the exact count as an unresolved organizer inconsistency"
+      }
     },
     "climate": {
       "primary": "Subtropical — South Florida",

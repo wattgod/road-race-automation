@@ -17,16 +17,24 @@
       "field_size": "Registration capped at 5,000 riders across the event in the May 2026 regulations",
       "start_format": "mass_start",
       "registration": "https://registroucigranfondocolombia.azurewebsites.net/",
-      "entry_fee": "USD $150 through July 10, $180 through September 10, then $200 through November 26, 2026, per the May regulations",
+      "entry_fee": "USD $150 through July 10, $180 through September 10, then $200 through November 26, 2026",
       "feed_zones": "Organizer-provided solid and liquid aid is included; final locations for the current 138 km route are not yet published",
       "cutoff_time": "The May regulations list 6.3 hours for a provisional 150 km Gran Fondo; the final cutoff for the current 138 km route is not yet updated",
       "lat": 6.24205,
       "lng": -75.57547,
       "route_options": [
-        "Gran Fondo: 138 km — the organizer's current route page and downloadable Medellín GPX; the organizer warns the route may change until race day",
-        "Medio Fondo: 91 km — the organizer's current route page",
-        "Official-source discrepancy: the UCI series overview currently says 120 km for all riders and just under 2,000 m of climbing, while the May regulations still say provisional 150 km / 80 km distances with a plus-or-minus 20 percent change allowance"
-      ]
+        "Gran Fondo: 138 km; the route may change until race day",
+        "Medio Fondo: 91 km",
+        "Distances are not final: the UCI series lists 120 km and just under 2,000 m of climbing for all riders, while the regulations give provisional 150 km / 80 km distances with a 20 percent change allowance"
+      ],
+      "_notes": {
+        "entry_fee": "USD $150 through July 10, $180 through September 10, then $200 through November 26, 2026, per the May regulations",
+        "route_options": [
+          "Gran Fondo: 138 km — the organizer's current route page and downloadable Medellín GPX; the organizer warns the route may change until race day",
+          "Medio Fondo: 91 km — the organizer's current route page",
+          "Official-source discrepancy: the UCI series overview currently says 120 km for all riders and just under 2,000 m of climbing, while the May regulations still say provisional 150 km / 80 km distances with a plus-or-minus 20 percent change allowance"
+        ]
+      }
     },
     "climate": {
       "primary": "Warm highland",

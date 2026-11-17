@@ -19,14 +19,29 @@
       "registration": "https://ridethestruggle.com/pages/struggle-nym-2026",
       "entry_fee": "GBP49 Short / GBP59 Classic / GBP69 Ultra, plus GBP1 British Cycling fee",
       "feed_zones": "N/A",
-      "cutoff_time": "Ultra route: 100km checkpoint by approximately 13:00 per the 2026 road book; no full cutoff schedule published for all three distances",
+      "cutoff_time": "Ultra route: 100km checkpoint by approximately 13:00; no full cutoff schedule published for all three distances",
       "lat": null,
       "lng": null,
       "route_options": [
-        {"name": "Short", "distance_km": 130.0, "elevation_m": 1957},
-        {"name": "Classic", "distance_km": 189.0, "elevation_m": 3144},
-        {"name": "Ultra", "distance_km": 250.0, "elevation_m": 3906}
-      ]
+        {
+          "name": "Short",
+          "distance_km": 130.0,
+          "elevation_m": 1957
+        },
+        {
+          "name": "Classic",
+          "distance_km": 189.0,
+          "elevation_m": 3144
+        },
+        {
+          "name": "Ultra",
+          "distance_km": 250.0,
+          "elevation_m": 3906
+        }
+      ],
+      "_notes": {
+        "cutoff_time": "Ultra route: 100km checkpoint by approximately 13:00 per the 2026 road book; no full cutoff schedule published for all three distances"
+      }
     },
     "climate": {
       "primary": "Temperate",
@@ -101,7 +116,7 @@
       ],
       "weaknesses": [
         "The 2026 rebrand to 'Struggle:NYM' means riders searching for 'Struggle Moors' may not immediately recognize this as the same event -- and the organizer's own site still displays stale distance labels in places (e.g. '165KM' and '120KM' headings next to correctly updated 189/130km body text), which is sloppy presentation for a paid entry",
-          "No verified 2027 date at time of review -- the product page floats a return 'in 2027' but that's marketing language, not a confirmed edition",
+        "No verified 2027 date at time of review -- the product page floats a return 'in 2027' but that's marketing language, not a confirmed edition",
         "An official results portal exists for 2026 (my.raceresult.com/408444), but finisher/starter totals weren't independently confirmed from indexed results at time of review -- the 1,000-rider figure is advertised capacity, not verified attendance",
         "The 2026 road book does specify at least one intermediate cutoff (Ultra route: 100km checkpoint by roughly 13:00), but no full published cutoff schedule for all three distances was found"
       ],

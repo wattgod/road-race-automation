@@ -13,7 +13,7 @@
       "location_badge": "Dartmoor National Park, England",
       "country": "England",
       "date": "2026: June 21",
-      "date_specific": "2026: June 21 (completed). 2027 date not yet confirmed on the official site; aggregator listings showing June 20, 2027 are unconfirmed.",
+      "date_specific": "2026: June 21 (completed). 2027 date not yet confirmed.",
       "field_size": 4000,
       "start_format": null,
       "registration": null,
@@ -50,7 +50,10 @@
           "min_age": 14,
           "entry_fee_gbp": 65
         }
-      ]
+      ],
+      "_notes": {
+        "date_specific": "2026: June 21 (completed). 2027 date not yet confirmed on the official site; aggregator listings showing June 20, 2027 are unconfirmed."
+      }
     },
     "climate": {
       "primary": "Temperate",

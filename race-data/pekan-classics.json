@@ -13,7 +13,7 @@
       "location_badge": "Royal Town of Pekan, Malaysia",
       "country": "Malaysia",
       "date": "No confirmed next edition — last confirmed edition June 20, 2025",
-      "date_specific": "Last confirmed edition: June 20, 2025. Pekan is absent from the current UCI Gran Fondo World Series calendar and the 2026-27 qualifying-season roster; no organizer-confirmed future date is published.",
+      "date_specific": "Last confirmed edition: June 20, 2025. Not on the current UCI Gran Fondo World Series calendar; no future date announced.",
       "field_size": null,
       "start_format": null,
       "registration": null,
@@ -23,9 +23,20 @@
       "lat": null,
       "lng": null,
       "route_options": [
-        {"name": "Gran Fondo", "distance_km": 162.7, "elevation_m": 1072},
-        {"name": "Medio Fondo", "distance_km": 93.5, "elevation_m": 470}
-      ]
+        {
+          "name": "Gran Fondo",
+          "distance_km": 162.7,
+          "elevation_m": 1072
+        },
+        {
+          "name": "Medio Fondo",
+          "distance_km": 93.5,
+          "elevation_m": 470
+        }
+      ],
+      "_notes": {
+        "date_specific": "Last confirmed edition: June 20, 2025. Pekan is absent from the current UCI Gran Fondo World Series calendar and the 2026-27 qualifying-season roster; no organizer-confirmed future date is published."
+      }
     },
     "climate": {
       "primary": "Tropical",
