@@ -55,10 +55,6 @@ REFUND_LINE = (
     f"Full refund of your first payment within {REFUND_WINDOW_DAYS} days, "
     "from your plan page."
 )
-SHORT_BLOCK_LINE = (
-    "If your race isn&rsquo;t a whole number of 4-week blocks away, the last, "
-    f"shorter block costs {WEEK_PRICE} a week."
-)
 
 
 def weeks_until(race_date: date, today: date) -> int:

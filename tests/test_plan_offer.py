@@ -255,6 +255,44 @@ class TestNoRetiredTermsNearOffer:
         assert_clean(js, "web/training-plans-form.js")
         assert ".summary" not in js and "totalCents" not in js
 
+    def test_offer_copy_has_no_second_rate(self):
+        # The $12.50 short-block week rate is a billing term for the legal
+        # page only; offer copy carries the one rate.
+        from generate_training_plans import generate_training_page
+        from generate_questionnaire import generate_questionnaire_page
+        for name, html in [("/training-plans/", generate_training_page()),
+                           ("/questionnaire/", generate_questionnaire_page())]:
+            assert plan_offer.WEEK_PRICE not in html, name
+
+    @pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+    def test_questionnaire_display_states_one_charge_or_the_rate(self, js):
+        fn = re.search(r"  function updatePriceDisplay\(\) \{.*?\n  \}", js, re.S)
+        assert fn, "updatePriceDisplay missing"
+        default = f"{plan_offer.PRICE_LINE} until race week. Nothing is charged after race week."
+        today = "2030-01-15"
+        races = ["2030-01-20", "2030-02-02", "2030-02-12", "2030-05-01", "", "2030-01-01", "2030-01-20"]
+        script = (
+            plan_quote_js()
+            + f"var submitBtn={{}},quoteEl={{}},QUOTE_DEFAULT={json.dumps(default)},race;"
+            + f"function aRaceQuote(){{return rlPlanQuote(race,{json.dumps(today)});}}\n"
+            + fn.group(0)
+            + f"\nconsole.log(JSON.stringify({json.dumps(races)}.map(function(r){{race=r;updatePriceDisplay();"
+            "return [submitBtn.textContent,quoteEl.textContent];})));"
+        )
+        out = json.loads(_run_node(script))
+        short = "Your race is under four weeks away: one charge of {} today, nothing after race week."
+        assert out == [
+            ["Submit & Pay $12.50 today", short.format("$12.50")],
+            ["Submit & Pay $37.50 today", short.format("$37.50")],
+            ["Submit & Pay $49.99 today", default],
+            ["Submit & Pay $49.99 today", default],
+            ["Submit & Pay", default],
+            ["Submit & Pay", default],
+            ["Submit & Pay $12.50 today", short.format("$12.50")],
+        ]
+        for button, line in out:
+            assert_clean(button + " " + line, "questionnaire display")
+
     def test_success_page(self):
         from generate_success_pages import build_training_plan_success
         assert_clean(build_training_plan_success(), "/training-plans/success/")
