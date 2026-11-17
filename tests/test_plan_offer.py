@@ -234,6 +234,7 @@ class TestNoRetiredTermsNearOffer:
         from generate_training_plans import generate_training_page
         html = generate_training_page()
         assert plan_offer.PRICE_LINE in html
+        assert "Every 4 Weeks" not in html  # one wording of the rate
         assert f"{REFUND_WINDOW_DAYS} days" in html
         assert_clean(html, "/training-plans/")
 
