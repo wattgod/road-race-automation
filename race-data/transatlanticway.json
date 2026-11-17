@@ -13,8 +13,8 @@
       "location_badge": "Cork to Derry, Ireland",
       "country": "Ireland",
       "date": "2026: June 18 (11th edition)",
-      "date_specific": "2026: June 18 start; no official multi-day finish deadline published (a secondary listing shows a June 18-July 2 event window)",
-      "field_size": "~100 riders across all four distances (2025 benchmark); exact 2026 aggregate not published on the official site",
+      "date_specific": "2026: June 18 start; no official finish deadline published.",
+      "field_size": "~100 riders across all four distances (2025); 2026 total not published",
       "start_format": "Self-supported, continuously timed — wave/group starts with no bunch-riding format and no drafting outside registered pairs",
       "registration": null,
       "entry_fee": null,
@@ -43,7 +43,11 @@
           "distance_km": 1000,
           "note": "Galway to Derry; nominal distance"
         }
-      ]
+      ],
+      "_notes": {
+        "date_specific": "2026: June 18 start; no official multi-day finish deadline published (a secondary listing shows a June 18-July 2 event window)",
+        "field_size": "~100 riders across all four distances (2025 benchmark); exact 2026 aggregate not published on the official site"
+      }
     },
     "climate": {
       "primary": "Temperate — Atlantic maritime, highly variable",

@@ -12,7 +12,7 @@
       "location": "Pistoia, Tuscany, Italy",
       "location_badge": "Pistoia, Italy",
       "country": "Italy",
-      "date": "2026: provisionally March 29 — official event page still lists as TBD, unconfirmed",
+      "date": "2026: provisionally March 29 (unconfirmed)",
       "date_specific": "Last confirmed edition: April 6, 2025",
       "field_size": "~700 riders expected (2025); actual field unconfirmed",
       "start_format": null,
@@ -22,7 +22,13 @@
       "cutoff_time": "N/A",
       "lat": null,
       "lng": null,
-      "route_options": ["127 km Gran Fondo", "52 km Medio Fondo (non-competitive)"]
+      "route_options": [
+        "127 km Gran Fondo",
+        "52 km Medio Fondo (non-competitive)"
+      ],
+      "_notes": {
+        "date": "2026: provisionally March 29 — official event page still lists as TBD, unconfirmed"
+      }
     },
     "climate": {
       "primary": "Temperate",

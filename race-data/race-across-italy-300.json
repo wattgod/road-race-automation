@@ -19,10 +19,13 @@
       "registration": "https://raceacrossitaly.com/ultracycling-rai300/?lang=en",
       "entry_fee": null,
       "feed_zones": "1 official time station (food/drink provided); public shops along the route otherwise permitted",
-      "cutoff_time": "18 hours supported, 20 hours self-supported (2026-facing organizer pages); the standing rules document and English event page still list 21 hours self-supported -- treat as an unresolved organizer inconsistency",
+      "cutoff_time": "18 hours supported, 20 hours self-supported (2026; some organizer documents still give 21 hours self-supported)",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [],
+      "_notes": {
+        "cutoff_time": "18 hours supported, 20 hours self-supported (2026-facing organizer pages); the standing rules document and English event page still list 21 hours self-supported -- treat as an unresolved organizer inconsistency"
+      }
     },
     "climate": {
       "primary": "Temperate",

@@ -18,7 +18,7 @@
       "start_format": null,
       "registration": "https://ocbccycle.com/rides-sportive-ride/",
       "entry_fee": "S$89 early bird / S$103 regular (10% OCBC-card discount available)",
-      "feed_zones": "Not independently verified in current sources",
+      "feed_zones": "Not published",
       "cutoff_time": "Not specified",
       "lat": null,
       "lng": null,
@@ -39,7 +39,10 @@
           "name": "Brompton World Championship (800m circuit, up to 5 laps)",
           "distance_km": null
         }
-      ]
+      ],
+      "_notes": {
+        "feed_zones": "Not independently verified in current sources"
+      }
     },
     "climate": {
       "primary": "Tropical",

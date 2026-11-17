@@ -14,7 +14,7 @@
       "country": "France",
       "date": "2027: May 21 (next announced edition)",
       "date_specific": "Friday, May 21, 2027, 09:00 start; extends into the weekend under a 50-hour main-route time limit",
-      "field_size": "Not documented in current sources — this is a small, self-selecting semi-autonomous ultra-distance field, not a mass-participation event",
+      "field_size": "Not published — a small, self-selecting semi-autonomous ultra-distance field, not a mass-participation event",
       "start_format": null,
       "registration": "https://bordeaux-paris.com/infos-pratiques/",
       "entry_fee": "EUR240 solo (650km); duo and relay categories also offered",
@@ -33,7 +33,10 @@
           "distance_km": 305.0,
           "elevation_m": 1450
         }
-      ]
+      ],
+      "_notes": {
+        "field_size": "Not documented in current sources — this is a small, self-selecting semi-autonomous ultra-distance field, not a mass-participation event"
+      }
     },
     "climate": {
       "primary": "Temperate",

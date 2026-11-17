@@ -67,6 +67,36 @@ PROCESS_PATTERNS = [
 ]
 PROCESS_RE = re.compile("|".join(f"(?:{p})" for p in PROCESS_PATTERNS), re.IGNORECASE)
 
+# Vitals render verbatim in the hero date/location line, the vitals table, RSS
+# items and the search index, so they also may not carry dated research
+# checks, source-by-source bookkeeping or instructions to the researcher. Keep
+# the finished status ("2027 date not yet announced") and move the working
+# note to vitals._notes, which no generator reads.
+VITALS_PROCESS_PATTERNS = [
+    r"\bas of 20\d\d",
+    r"as of (this|verification)",
+    r"do not assume",
+    r"should not be treated",
+    r"aggregator",
+    r"in (the )?(available|current|accessible|reviewed)( official)? sources",
+    r"not independently verified",
+    r"current research",
+    r"(verified|confirmed) via",
+    r"when verified",
+    r"sources (conflict|disagree)",
+    r"source figures",
+    r"see eligibility notes",
+    r"per the \w[\w ]* (page|rules|road book)",
+    r"corrects? stale",
+    r"was incorrect",
+    r"\(check [\w.-]+\.(com|org|net)",
+    r"registration (page )?header",
+    r"still (incorrectly )?(lists?|shows?)\b",
+]
+VITALS_PROCESS_RE = re.compile(
+    "|".join(f"(?:{p})" for p in VITALS_PROCESS_PATTERNS), re.IGNORECASE
+)
+
 
 def _walk(node, path):
     if isinstance(node, dict):
@@ -94,6 +124,11 @@ def _violations():
                     start = max(0, m.start() - 60)
                     snippet = text[start : m.end() + 60].replace("\n", " ")
                     found.append(f"{f.stem} | {path} | {m.group(0)!r} | ...{snippet}...")
+        for path, text in _walk(race.get("vitals") or {}, ".race.vitals"):
+            for m in VITALS_PROCESS_RE.finditer(text):
+                start = max(0, m.start() - 60)
+                snippet = text[start : m.end() + 60].replace("\n", " ")
+                found.append(f"{f.stem} | {path} | {m.group(0)!r} | ...{snippet}...")
         # Citation labels render in the page's source list, so they are public
         # too; they may quote a source ("Listing Marked Unconfirmed"), which none
         # of these patterns match.
@@ -110,6 +145,13 @@ def test_patterns_compile_and_match_examples():
     assert PROCESS_RE.search("a figure previously on file")
     assert not PROCESS_RE.search("Unconfirmed for 2026")
     assert not PROCESS_RE.search("2026 field unconfirmed")
+    assert VITALS_PROCESS_RE.search(
+        "2027 dates not yet announced by NEABA as of 2026-08-03: official site "
+        "and UCI GFWS calendar still list only May 16-17, 2026"
+    )
+    assert VITALS_PROCESS_RE.search("Not specified in available sources")
+    assert not VITALS_PROCESS_RE.search("2026: May 16-17 (completed). 2027 dates not yet announced.")
+    assert not VITALS_PROCESS_RE.search("intermediate cutoffs apply per the regulations")
 
 
 def test_no_research_process_text_in_public_fields():

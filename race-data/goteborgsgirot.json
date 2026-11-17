@@ -13,7 +13,7 @@
       "location_badge": "Gothenburg, Sweden",
       "country": "Sweden",
       "date": "2026: no date announced",
-      "date_specific": "Paused since 2024; 2025 edition formally cancelled; no 2026 edition, date, or registration announced as of this writing",
+      "date_specific": "Paused since 2024; 2025 edition formally cancelled; no 2026 edition, date, or registration announced",
       "field_size": "Unknown",
       "start_format": null,
       "registration": null,
@@ -22,7 +22,10 @@
       "cutoff_time": "Unknown",
       "lat": null,
       "lng": null,
-      "route_options": []
+      "route_options": [],
+      "_notes": {
+        "date_specific": "Paused since 2024; 2025 edition formally cancelled; no 2026 edition, date, or registration announced as of this writing"
+      }
     },
     "climate": {
       "primary": "Temperate",

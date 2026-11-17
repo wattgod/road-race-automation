@@ -23,9 +23,15 @@
       "lat": null,
       "lng": null,
       "route_options": [
-        "Gran Fondo: 114km, 1,554m — the qualifying distance for men 19-59/women 19-49 per the UCI Gran Fondo World Series page",
-        "Medio Fondo: 80km, 723m per the UCI Gran Fondo World Series page — the qualifying distance for men 60+/women 50+ (the 114km Gran Fondo qualifies men 19-59/women 19-49). A July 2026 Chilean Cycling Federation announcement instead cites roughly 120km/2,000m+ and 80km/900m+ for the same two courses, saying official routes would be finalized later — treat exact figures as unsettled until a final route file appears"
-      ]
+        "Gran Fondo: 114km, 1,554m — the qualifying distance for men 19-59/women 19-49",
+        "Medio Fondo: 80km, 723m — the qualifying distance for men 60+/women 50+ (the 114km Gran Fondo qualifies men 19-59/women 19-49). Final routes are not yet set: the Chilean Cycling Federation has also announced roughly 120km/2,000m+ and 80km/900m+ for the same two courses"
+      ],
+      "_notes": {
+        "route_options": [
+          "Gran Fondo: 114km, 1,554m — the qualifying distance for men 19-59/women 19-49 per the UCI Gran Fondo World Series page",
+          "Medio Fondo: 80km, 723m per the UCI Gran Fondo World Series page — the qualifying distance for men 60+/women 50+ (the 114km Gran Fondo qualifies men 19-59/women 19-49). A July 2026 Chilean Cycling Federation announcement instead cites roughly 120km/2,000m+ and 80km/900m+ for the same two courses, saying official routes would be finalized later — treat exact figures as unsettled until a final route file appears"
+        ]
+      }
     },
     "climate": {
       "primary": "Temperate",
