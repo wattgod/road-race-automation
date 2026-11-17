@@ -71,7 +71,7 @@ def build_hero() -> str:
   <div class="rl-tp-hero-bar">
     <div class="rl-tp-hero-bar-item"><strong>Within 24 Hours</strong><span>First Block</span></div>
     <div class="rl-tp-hero-bar-item"><strong>Matched</strong><span>Methodology</span></div>
-    <div class="rl-tp-hero-bar-item"><strong>{BLOCK_PRICE}</strong><span>Every 4 Weeks</span></div>
+    <div class="rl-tp-hero-bar-item"><strong>{BLOCK_PRICE}</strong><span>/ {PRICE_UNIT.title()}</span></div>
     <div class="rl-tp-hero-bar-item"><strong>5 min</strong><span>To Start</span></div>
   </div>
 </section>'''
