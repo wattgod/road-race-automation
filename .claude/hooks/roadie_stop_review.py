@@ -25,7 +25,8 @@ from datetime import datetime
 
 ROADIE_RE = re.compile(r"/road-race-automation(/|$)")
 EDIT_TOOLS = {"Edit", "Write", "MultiEdit", "NotebookEdit"}
-CD_RE = re.compile(r"^\s*cd\s+(\"[^\"]+\"|'[^']+'|\S+)")
+CD_RE = re.compile(r"(?:^|[;&|(\n])\s*cd\s+(\"[^\"]+\"|'[^']+'|[^\s;&|)]+)")
+PATH_RE = re.compile(r"(?:~|/)[^\s'\";&|)]*/road-race-automation(?:/[^\s'\";&|)]*)?")
 
 CHECKLIST = """Roadie review: this turn changed files in road-race-automation:
 {files}
@@ -100,12 +101,15 @@ def _tool_uses(entries):
                 yield entry, block.get("name"), block.get("input") or {}
 
 
-def _bash_dir(command, cwd):
-    match = CD_RE.match(command or "")
-    if not match:
-        return cwd
-    target = os.path.expanduser(shlex.split(match.group(1))[0])
-    return target if os.path.isabs(target) else os.path.join(cwd or "", target)
+def _bash_dirs(command, cwd):
+    """Folders a Bash command may write in: its cwd, every cd target, and any
+    road-race-automation path it names (git -C, redirects, script paths)."""
+    folders = [cwd]
+    for raw in CD_RE.findall(command or ""):
+        target = os.path.expanduser(shlex.split(raw)[0] if raw[0] in "\"'" else raw)
+        folders.append(target if os.path.isabs(target) else os.path.join(cwd or "", target))
+    folders.extend(os.path.expanduser(p) for p in PATH_RE.findall(command or ""))
+    return [f for f in folders if f]
 
 
 def _roadie(path):
@@ -117,15 +121,19 @@ def _git(root, *args):
 
 
 def _toplevel(path):
-    probe = path if os.path.isdir(path) else os.path.dirname(path)
-    if not os.path.isdir(probe):
-        return None
+    probe = path
+    while probe and not os.path.isdir(probe):
+        parent = os.path.dirname(probe)
+        if parent == probe:
+            return None
+        probe = parent
     out = _git(probe, "rev-parse", "--show-toplevel")
     return out.stdout.strip() if out.returncode == 0 else None
 
 
 def git_changes(root, since):
     """Files changed in a checkout since `since`, plus a note for new HEAD moves."""
+    since = int(since)  # reflog and mtimes compare at whole-second resolution
     changed = []
     reflog = _git(root, "reflog", "-n", "50", "--date=unix", "--format=%gd %gs")
     for line in reflog.stdout.splitlines():
@@ -141,7 +149,11 @@ def git_changes(root, since):
             if os.path.getmtime(path) >= since:
                 changed.append(path)
         except OSError:
-            if record[:2].strip() == "D":
+            # A deleted file has no mtime; its folder's mtime moves when it goes.
+            folder = os.path.dirname(path)
+            while not os.path.isdir(folder):
+                folder = os.path.dirname(folder)
+            if record[:2].strip() == "D" and os.path.getmtime(folder) >= since:
                 changed.append(path)
     return changed
 
@@ -156,9 +168,9 @@ def roadie_changes(entries, session_cwd, since):
             if _roadie(path):
                 files.append(path)
         elif name == "Bash":
-            folder = _bash_dir(args.get("command", ""), entry.get("cwd") or session_cwd)
-            if _roadie(folder):
-                roots.add(folder)
+            for folder in _bash_dirs(args.get("command", ""), entry.get("cwd") or session_cwd):
+                if _roadie(folder):
+                    roots.add(folder)
     if since is not None:
         tops = {t for t in (_toplevel(r) for r in roots) if t and _roadie(t)}
         for top in sorted(tops):
