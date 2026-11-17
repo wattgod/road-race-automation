@@ -48,7 +48,7 @@ DIRT_CRAFT_MODULES = 7
 # The refund promise this page makes for both courses. The Terms of Service
 # read this same constant (tests/test_legal_seller_and_refunds.py).
 COURSE_REFUND_DAYS = 30
-COURSE_REFUND_LINE = f"{COURSE_REFUND_DAYS}-day money-back guarantee on both courses."
+COURSE_REFUND_LINE = f"Full refund within {COURSE_REFUND_DAYS} days of buying either course."
 
 
 def esc(text) -> str:
@@ -154,7 +154,7 @@ def build_faq() -> str:
       </details>
       <details class="rl-courses-faq-item" data-faq="refunds">
         <summary>What&#39;s the refund policy?</summary>
-        <p>''' + COURSE_REFUND_LINE + ''' If it isn&#39;t useful, you get your money back.</p>
+        <p>''' + COURSE_REFUND_LINE + '''</p>
       </details>
       <details class="rl-courses-faq-item" data-faq="gravel-bike">
         <summary>Do I need a gravel bike?</summary>

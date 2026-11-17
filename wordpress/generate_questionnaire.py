@@ -981,7 +981,6 @@ def build_form_html() -> str:
       <!-- Trust signals before checkout -->
       <div class="gg-trust-strip">
         <div class="gg-trust-badges">
-          <span class="gg-trust-badge">''' + str(REFUND_WINDOW_DAYS) + '''-Day Refund on Your First Payment</span>
           <span class="gg-trust-badge">Secure Checkout via Stripe</span>
           <span class="gg-trust-badge">Ends After Race Week</span>
         </div>
