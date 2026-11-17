@@ -469,12 +469,26 @@
     }
     #rl-race-search .rl-card-header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 6px 8px;
       margin-bottom: 8px;
+    }
+    /* Badges wrap under the title instead of squeezing it against the pills */
+    #rl-race-search .rl-card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
     }
     #rl-race-search a.rl-card-name,
     #rl-race-search span.rl-card-name {
+      flex: 1 1 160px;
+      min-width: 0;
+      overflow-wrap: anywhere;
       font-family: var(--rl-font-editorial) !important;
       font-size: 16px;
       font-weight: 600;
@@ -484,6 +498,31 @@
       letter-spacing: 0;
     }
     #rl-race-search a.rl-card-name:hover { text-decoration: underline !important; color: var(--rl-color-near-black) !important; }
+    /* ── Whole-card link (stretched title anchor) ──
+       The title <a> stays the card's only link; its ::after covers the card.
+       Secondary controls sit above it so they keep their own clicks. */
+    #rl-race-search .rl-card { position: relative; }
+    #rl-race-search .rl-card-linked a.rl-card-name::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    #rl-race-search .rl-card-linked .rl-compare-check,
+    #rl-race-search .rl-card-linked .rl-fav-btn,
+    #rl-race-search .rl-card-linked .rl-series-badge,
+    #rl-race-search .rl-card-linked .rl-score-bar,
+    #rl-race-search .rl-card-linked .rl-score-breakdown {
+      position: relative;
+      z-index: 1;
+    }
+    #rl-race-search .rl-card-linked:hover a.rl-card-name { text-decoration: underline !important; }
+    #rl-race-search .rl-card-linked:hover { border-color: var(--rl-color-ink) !important; }
+    #rl-race-search .rl-card-linked a.rl-card-name:focus-visible { outline: none; text-decoration: underline !important; }
+    #rl-race-search .rl-card-linked:focus-within {
+      outline: 3px solid var(--rl-color-ink);
+      outline-offset: 2px;
+    }
     #rl-race-search span.rl-card-name.no-link { cursor: default; }
     #rl-race-search span.rl-card-name.no-link:hover { text-decoration: none !important; }
     #rl-race-search .rl-tier-badge {
@@ -595,8 +634,28 @@
       overflow: hidden;
     }
     #rl-race-search .rl-score-fill {
+      display: block;
       height: 100%;
       transition: width 0.3s;
+    }
+    /* Score bar as a toggle button: strip theme button styling, keep the
+       bar look, enlarge the hit area to 24px and show keyboard focus. */
+    #rl-race-search button.rl-score-bar {
+      width: 100%;
+      min-height: 24px;
+      margin: 2px 0 4px;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      color: inherit !important;
+      font: inherit;
+      text-align: left;
+      line-height: 1;
+    }
+    #rl-race-search .rl-score-bar--static { cursor: default; }
+    #rl-race-search button.rl-score-bar:focus-visible {
+      outline: 3px solid var(--rl-color-ink);
+      outline-offset: 2px;
     }
     #rl-race-search .rl-score-num {
       font-size: 13px;
@@ -1511,7 +1570,7 @@
       #rl-race-search .rl-tier-section-body { padding: 12px; }
       #rl-race-search .rl-card { padding: 12px; }
       #rl-race-search .rl-card-name { font-size: 13px; }
-      #rl-race-search .rl-card-header { flex-direction: column; gap: 6px; }
+      #rl-race-search .rl-card-badges { flex-basis: 100%; justify-content: flex-start; margin-left: 0; }
       #rl-race-search .rl-match-banner { flex-direction: column; gap: 8px; text-align: center; }
       #rl-race-search .rl-compare-banner { flex-direction: column; gap: 8px; text-align: center; }
       #rl-race-search .rl-compare-bar { flex-direction: column; gap: 8px; }
