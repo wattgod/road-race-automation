@@ -7,10 +7,16 @@ the Roadie Labs monochrome brand (no box-shadow, heavy borders, inverted
 fills for active states).
 
 IMPORTANT: the form element IDs, classes, and input names are the `gg-*`
-contract expected by web/training-plans-form.js (shared verbatim with the
-gravel site — brand differences are injected via window.__TP_FORM_CONFIG).
-Do NOT rename them to rl-*; the JS and the Railway webhook parser both
-depend on these names.
+contract expected by web/training-plans-form.js and the Railway webhook
+parser. Do NOT rename them to rl-*.
+
+web/training-plans-form.js is a fork of the gravel site's copy, not a
+verbatim share: brand differences go through window.__TP_FORM_CONFIG, and
+the price block deliberately differs. Ours is the generated rlPlanQuote
+block (wordpress/plan_offer.py), which returns only weeks and the one charge
+made today, so the offer stays rate-only (Matti, 2026-11-17; issue #191).
+Gravel keeps its own ggPlanQuote. Port form fixes between the two by hand,
+never by copying the whole file over.
 
 Output: wordpress/output/questionnaire/index.html
 Deploy: python3 scripts/push_wordpress.py --sync-questionnaire wordpress/output/questionnaire
