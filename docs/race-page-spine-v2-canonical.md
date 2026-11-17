@@ -32,8 +32,10 @@ Top-level order:
 The top custom-plan CTA is exactly:
 
 - `START MY CUSTOM PLAN →`
-- `$49.99 EVERY 4 WEEKS` (was `$15 / WEEK` until the plan billed every 4
-  weeks replaced the one-off on 2026-11-13; source `wordpress/plan_offer.py`)
+- `$49.99 / FOUR WEEKS` (was `$15 / WEEK` until the plan billed every 4
+  weeks replaced the one-off on 2026-11-13; source `wordpress/plan_offer.py`).
+  The rate only: never a total, payment count or per-race sum (Matti,
+  2026-11-17, every brand).
 
 The coaching footnote is exactly:
 

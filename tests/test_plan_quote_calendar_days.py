@@ -51,7 +51,7 @@ Date.UTC = __RealDate.UTC; Date.now = function() { return __frozen.getTime(); };
 
 def _expected(today: str, race: str) -> tuple:
     weeks = plan_offer.weeks_until(date.fromisoformat(race), date.fromisoformat(today))
-    return weeks, plan_offer.plan_summary(weeks)
+    return weeks, plan_offer.payment_plan(weeks)["first_payment_cents"]
 
 
 def _run_node(script: str, tz: str) -> str:
@@ -84,8 +84,8 @@ def test_questionnaire_quote_counts_calendar_days(today, race, tz):
         + f"\nconsole.log(JSON.stringify(rlPlanQuote('{race}')));"
     )
     result = json.loads(_run_node(script, tz))
-    weeks, summary = _expected(today, race)
-    assert (result["weeks"], result["summary"]) == (weeks, summary)
+    weeks, first_cents = _expected(today, race)
+    assert (result["weeks"], result["firstCents"]) == (weeks, first_cents)
 
 
 @needs_node
@@ -104,8 +104,8 @@ def test_race_page_prep_strip_counts_calendar_days(today, race, tz):
         + m.group(0)
         + "\nconsole.log(__els['rl-prep-cta'].textContent);"
     )
-    weeks, summary = _expected(today, race)
-    assert _run_node(script, tz) == f"BUILD MY {weeks}-WEEK PLAN — {summary.upper()}"
+    weeks, _first = _expected(today, race)
+    assert _run_node(script, tz) == f"BUILD MY {weeks}-WEEK PLAN — {plan_offer.PRICE_LINE_UPPER}"
 
 
 @needs_node
@@ -120,12 +120,12 @@ def test_training_plan_page_counts_calendar_days(today, race, tz):
         _FREEZE_DATE.replace("%TODAY%", json.dumps(today))
         + plan_offer.plan_quote_js()
         + _dom_stub("tpp-hero", race, ["rl-tpp-countdown", "rl-tpp-hero-cta",
-                                        "rl-tpp-footer-cta", "rl-tpp-plan-quote"])
+                                        "rl-tpp-footer-cta"])
         + m.group(0)
-        + "\nconsole.log(__els['rl-tpp-hero-cta'].textContent + '|' + __els['rl-tpp-plan-quote'].textContent);"
+        + "\nconsole.log(__els['rl-tpp-hero-cta'].textContent);"
     )
-    weeks, summary = _expected(today, race)
-    assert _run_node(script, tz) == f"BUILD MY {weeks}-WEEK PLAN|For this date: {summary}."
+    weeks, _first = _expected(today, race)
+    assert _run_node(script, tz) == f"BUILD MY {weeks}-WEEK PLAN"
 
 
 def test_plan_preview_does_not_diff_local_midnights():

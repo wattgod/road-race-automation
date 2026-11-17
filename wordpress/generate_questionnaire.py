@@ -987,7 +987,7 @@ def build_form_html() -> str:
       </div>
 
       <button type="submit" class="gg-submit-btn">Submit &amp; Pay</button>
-      <p id="gg-plan-quote" class="gg-plan-quote" aria-live="polite">''' + PRICE_LINE + ''' until race week. Add your race date to see the number of payments and the total.</p>
+      <p id="gg-plan-quote" class="gg-plan-quote" aria-live="polite">''' + PRICE_LINE + ''' until race week. Nothing is charged after race week.</p>
     </form>
 
     <div id="gg-form-message" class="gg-form-message" style="display: none;"></div>

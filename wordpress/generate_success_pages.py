@@ -272,9 +272,8 @@ def build_training_plan_success() -> str:
       <div class="rl-success-step-num">1</div>
       <div class="rl-success-step-text">
         <h3>Check Your Email</h3>
-        <p>The confirmation lists your payments and the total through race
-        week, and has the link to your plan page. Check spam if you don't
-        see it within an hour.</p>
+        <p>The confirmation has the link to your plan page. Check spam if
+        you don't see it within an hour.</p>
       </div>
     </div>
     <div class="rl-success-step">

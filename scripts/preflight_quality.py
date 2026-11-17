@@ -277,11 +277,10 @@ def check_pricing_parity():
     for d, js_r in zip(test_dates, js_results):
         weeks = plan_offer.weeks_until(date.fromisoformat(d), anchor_today)
         plan = plan_offer.payment_plan(weeks)
-        if (js_r is None or js_r['totalCents'] != plan['total_cents']
-                or js_r['payments'] != plan['payment_count']
+        if (js_r is None or js_r['weeks'] != weeks
                 or js_r['firstCents'] != plan['first_payment_cents']):
             check(f"Price parity for {d}", False,
-                  f"Python={plan['payment_count']}x/{plan['total_cents']}c, JS={js_r}")
+                  f"Python={weeks}w/{plan['first_payment_cents']}c, JS={js_r}")
             all_match = False
 
     if all_match:

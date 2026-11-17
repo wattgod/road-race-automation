@@ -48,7 +48,6 @@ from plan_offer import (
     CTA_LABEL as PLAN_CTA_LABEL,
     PRICE_LINE as PLAN_PRICE_LINE,
     PRICE_LINE_UPPER as PLAN_PRICE_LINE_UPPER,
-    offer_quote_script,
     plan_quote_js,
 )
 from shared_footer import get_mega_footer_css, get_mega_footer_html
@@ -1286,7 +1285,7 @@ def build_sticky_cta(race_name: str, slug: str = "") -> str:
 
 def build_inline_js() -> str:
     """Build the inline JavaScript for all interactive features."""
-    return '<script>\n' + get_site_header_js() + plan_quote_js() + offer_quote_script() + r'''
+    return '<script>\n' + get_site_header_js() + plan_quote_js() + r'''
 // Accordion toggle (independent mode — multiple can be open)
 document.querySelectorAll('.rl-accordion-trigger').forEach(function(trigger) {
   if (trigger.dataset.noContent) return;
@@ -1755,10 +1754,10 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   });
 });
 
-// Preparation strip — weeks-to-race countdown + live plan payments.
+// Preparation strip — weeks-to-race countdown. The price stays the rate
+// only, never a total or payment count (wordpress/plan_offer.py).
 // Server renders generic copy; only a valid FUTURE date upgrades it, so
-// stale-date profiles degrade gracefully instead of showing a wrong total.
-// Price math: rlPlanQuote (wordpress/plan_offer.py, mirrors the server).
+// stale-date profiles degrade gracefully instead of showing a wrong count.
 (function() {
   var strip = document.getElementById('prep-strip');
   if (!strip) return;
@@ -1775,7 +1774,7 @@ document.querySelectorAll('.rl-faq-question').forEach(function(q) {
   var cd = document.getElementById('rl-prep-countdown');
   if (cd) cd.textContent = quote.weeks + ' WEEKS OUT';
   var cta = document.getElementById('rl-prep-cta');
-  if (cta) cta.textContent = 'BUILD MY ' + quote.weeks + '-WEEK PLAN — ' + quote.summary.toUpperCase();
+  if (cta) cta.textContent = 'BUILD MY ' + quote.weeks + '-WEEK PLAN — ''' + PLAN_PRICE_LINE_UPPER + r'''';
 })();
 
 // CTA click tracking — GA4
@@ -2164,9 +2163,6 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     var peak = remaining - base - build;
     if (peak < 1) { peak = 1; base = Math.max(1, base - 1); }
 
-    // Payments to race week (rlPlanQuote mirrors the server's math; null
-    // for a past date, in which case no total is shown).
-    var quote = rlPlanQuote(raceDateStr);
 
     // Session structure
     var hCfg = HOURS[hours] || HOURS['8-12'];
@@ -2252,8 +2248,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
       defaultCta.setAttribute('aria-hidden', 'true');
     }
     if (cfgCta && cfgCtaLink && cfgCtaDetail) {
-      var ctaText = 'GET YOUR ' + weeks + '-WEEK ' + rd.race_name.toUpperCase() + ' PLAN' +
-        (quote ? ' \u2014 ' + quote.summary.toUpperCase() : '');
+      var ctaText = 'GET YOUR ' + weeks + '-WEEK ' + rd.race_name.toUpperCase() + ' PLAN';
       cfgCtaLink.textContent = ctaText;
       cfgCtaLink.removeAttribute('tabindex');
       // Pass configurator selections to questionnaire for pre-population
@@ -2270,7 +2265,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
     var stickyText = document.getElementById('rl-sticky-cta-text');
     var stickyLink = document.getElementById('rl-sticky-cta-link');
     if (stickyText) {
-      stickyText.textContent = weeks + '-WEEK PLAN' + (quote ? ' \u2014 ' + quote.summary.toUpperCase() : '');
+      stickyText.textContent = weeks + '-WEEK PLAN \u2014 ''' + PLAN_PRICE_LINE_UPPER + r'''';
     }
     if (stickyLink) {
       stickyLink.href = '/questionnaire/?race=' + encodeURIComponent(rd.slug) +
@@ -2288,9 +2283,7 @@ document.querySelectorAll('.rl-pack-workout').forEach(function(card) {
         race_slug: rd.slug,
         level: level,
         hours: hours,
-        weeks: weeks,
-        payments: quote ? quote.payments : 0,
-        total: quote ? quote.totalCents / 100 : 0
+        weeks: weeks
       });
     }
   });
@@ -3770,11 +3763,7 @@ def build_custom_plan_offer(rd: dict) -> str:
         "road demands, and the hours you have."
     )
     href = f"{TRAINING_PLANS_URL}?race={rd['slug']}"
-    # Payments and total fill in client-side from the race date
-    # (offer_quote_script); a missing or past date keeps the generic line,
-    # so the page never guesses a total (SUBSCRIPTION_DESIGN.md §8.9).
-    cd_start, _cd_end = parse_event_dates(rd['vitals'].get('date_specific', ''))
-    date_attr = f' data-race-date="{esc(cd_start)}"' if cd_start else ''
+    # Rate only: no total, payment count or per-race sum (Matti, 2026-11-17).
     return f'''<section class="rl-approved-section rl-offer" data-measure-section="custom-plan">
   <div class="rl-approved-inner">
     <span class="rl-approved-kicker">Custom plan</span>
@@ -3784,7 +3773,7 @@ def build_custom_plan_offer(rd: dict) -> str:
   <div class="rl-approved-inner rl-offer-action">
     <a class="rl-plan-cta" href="{esc(href)}" data-cta="approved_custom_plan">START MY CUSTOM PLAN &rarr;</a>
     <span class="rl-offer-price">{PLAN_PRICE_LINE_UPPER}</span>
-    <span class="rl-offer-terms" data-plan-quote{date_attr}>One 4-week block at a time. Ends after race week.</span>
+    <span class="rl-offer-terms">One 4-week block at a time. Ends after race week.</span>
   </div>
 </section>'''
 
