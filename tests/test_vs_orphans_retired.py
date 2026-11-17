@@ -33,11 +33,13 @@ def _vs_rules(block: str):
 PLANNED = vs.planned_vs_slugs(vs.load_index())
 
 
-def test_retired_vs_rules_cover_the_56_orphans():
+def test_retired_vs_rules_cover_the_orphans():
+    # 56 rules from issue #165 plus 9 pairs the issue #195 tier fix dropped.
+    # That fix also turned 3 of the 301s into 410s, since their targets dropped.
     rules = _vs_rules(_push().build_redirect_block())
-    assert len(rules) == 56
-    assert sum(1 for _, _, flags in rules if flags == "R=301,L") == 18
-    assert sum(1 for _, target, flags in rules if target == "-" and flags == "G,L") == 38
+    assert len(rules) == 65
+    assert sum(1 for _, _, flags in rules if flags == "R=301,L") == 15
+    assert sum(1 for _, target, flags in rules if target == "-" and flags == "G,L") == 50
 
 
 def test_retired_sources_are_not_planned_and_targets_are():

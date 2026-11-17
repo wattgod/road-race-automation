@@ -68,11 +68,13 @@
       "road_surface": 3,
       "cultural_impact": 3,
       "overall_score": 80,
-      "tier": 2,
-      "tier_label": "TIER 2",
+      "tier": 1,
+      "tier_label": "TIER 1",
       "discipline": "multi_stage",
       "prestige_override": null,
-      "scoring_notes": "Migrated from gravel-race-automation. Original score: 83. adventure dimension dropped, road_surface added. Score recalculated: 80."
+      "scoring_notes": "Migrated from gravel-race-automation. Original score: 83. adventure dimension dropped, road_surface added. Score recalculated: 80.",
+      "display_tier": 1,
+      "display_tier_label": "TIER 1"
     },
     "climb_profile": {
       "total_climbs": null,
