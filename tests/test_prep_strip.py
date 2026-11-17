@@ -101,7 +101,7 @@ class TestDateDegradation:
     def test_generic_price_copy_without_js(self, packed_slug):
         """Server-rendered CTA must be safe even if JS never runs."""
         html = build_prep_strip(_rd(slug=packed_slug))
-        assert "$49.99 EVERY 4 WEEKS" in html
+        assert "$49.99 / FOUR WEEKS" in html
 
     def test_past_date_guard_in_js(self):
         """JS must bail (keep generic copy) for past/imminent dates —

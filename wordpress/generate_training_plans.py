@@ -30,8 +30,7 @@ from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html, get_site_header_css
 from cookie_consent import get_consent_banner_html
 from plan_offer import (
-    BLOCK_PRICE, BLOCK_PRICE_CENTS, PRICE_LINE, REFUND_WINDOW_DAYS, WEEK_PRICE,
-    plan_summary,
+    BLOCK_PRICE, BLOCK_PRICE_CENTS, PRICE_LINE, PRICE_UNIT, REFUND_WINDOW_DAYS,
 )
 
 OUTPUT_DIR = Path(__file__).parent / "output"
@@ -346,20 +345,16 @@ def build_honest_check() -> str:
 
 
 def build_pricing() -> str:
-    examples = "; ".join(
-        f"{weeks} weeks out: {plan_summary(weeks)}" for weeks in (4, 8, 12)
-    )
     return f'''<section class="rl-tp-section" id="pricing">
   <div class="rl-tp-section-label">Pricing</div>
   <h2>{PRICE_LINE}. Ends After Race Week.</h2>
   <div class="rl-tp-pricing-wrap">
     <div class="rl-tp-pricing-card">
       <div class="rl-tp-pricing-header">Custom Training Plan</div>
-      <div class="rl-tp-price">{BLOCK_PRICE}<span> every 4 weeks</span></div>
+      <div class="rl-tp-price">{BLOCK_PRICE}<span> / {PRICE_UNIT}</span></div>
       <ul class="rl-tp-pricing-list">
         <li>One 4-week block at a time, from now until race week</li>
-        <li>If your race isn&rsquo;t a whole number of 4-week blocks away, the last, shorter block costs {WEEK_PRICE} a week</li>
-        <li>{examples}. Checkout shows the number of payments and the total for your race before you pay</li>
+        <li>If your race isn&rsquo;t a whole number of 4-week blocks away, the last block is shorter and costs less</li>
         <li>Ends after race week. Nothing is charged after that</li>
         <li>Training guide for your race, plus a guide to each block</li>
         <li>Race-optimized fueling plan</li>
@@ -394,7 +389,7 @@ FAQ_ITEMS = [
     ),
     (
         "How is the price calculated?",
-        f"{PRICE_LINE}, one payment per 4-week block, from the day you sign up until race week. If your race isn&rsquo;t a whole number of blocks away, the last, shorter block costs {WEEK_PRICE} a week. A race 6 weeks out is {plan_summary(6)}. A race 30 weeks out is {plan_summary(30)}. Checkout shows your number before you pay.",
+        f"{PRICE_LINE}, one payment per 4-week block, from the day you sign up until race week. If your race isn&rsquo;t a whole number of blocks away, the last block is shorter and costs less.",
     ),
     (
         "Is this coaching?",

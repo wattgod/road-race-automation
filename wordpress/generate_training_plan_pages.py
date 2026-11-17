@@ -450,7 +450,7 @@ def build_cta(rd: dict) -> str:
     <a href="/race/{slug}/" class="rl-btn rl-btn--outline" data-cta="tpp_race_page">READ THE {name.upper()} REVIEW</a>
   </div>
   <p class="rl-tpp-guarantee">{PLAN_PRICE_LINE}, ending after race week.
-  <span id="rl-tpp-plan-quote"></span> Cancel any time from your
+  Cancel any time from your
   plan page; within {REFUND_WINDOW_DAYS} days of your first payment that comes
   with a full refund.</p>
 </section>'''
@@ -559,7 +559,8 @@ a { color: var(--rl-color-ink); }
 
 
 def build_js() -> str:
-    """Countdown + payments to race week (rlPlanQuote mirrors the server)."""
+    """Weeks-to-race countdown. The price stays the rate only: never a
+    total or payment count (wordpress/plan_offer.py)."""
     return plan_quote_js() + '''
 (function() {
   var hero = document.getElementById('tpp-hero');
@@ -580,8 +581,6 @@ def build_js() -> str:
     var el = document.getElementById(id);
     if (el) el.textContent = 'BUILD MY ' + quote.weeks + '-WEEK PLAN';
   });
-  var line = document.getElementById('rl-tpp-plan-quote');
-  if (line) line.textContent = 'For this date: ' + quote.summary + '.';
 })();
 (function() {
   if (typeof gtag !== 'function') return;

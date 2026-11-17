@@ -1,15 +1,17 @@
 """The custom plan billed every 4 weeks (race_plan_4weekly) on roadielabs.com.
 
-Guards three things:
+Guards four things:
 
-1. Price math parity. The checkout server has no quote endpoint, so every
-   payment count and total the site shows must use the server's exact math
+1. Price math parity. The questionnaire's pay button states the one charge
+   made today, so the browser copy must match the server's exact math
    (athlete-custom-training-plan-pipeline webhook/race_plan_subscription.py).
    Fixed cases from the design (SUBSCRIPTION_DESIGN.md §8.3) are pinned here,
    and the browser copy is run in Node against the Python.
 2. The questionnaire checks out the new product, never the retired one-off.
 3. No retired one-off terms ("$249", "One-time payment", "/mo", "monthly",
    "7-day") survive near the custom plan offer on any generated page.
+4. Rate only (Matti, 2026-11-17, every brand): the offer is "$49.99 / four
+   weeks", never a total, a payment count or a per-race sum.
 """
 
 import json
@@ -28,7 +30,7 @@ sys.path.insert(0, str(ROOT / "wordpress"))
 import plan_offer  # noqa: E402
 from plan_offer import (  # noqa: E402
     BLOCK_PRICE_CENTS, WEEK_PRICE_CENTS, REFUND_WINDOW_DAYS, money,
-    payment_plan, plan_quote_js, plan_summary, weeks_until,
+    payment_plan, plan_quote_js, weeks_until,
 )
 
 FORM_JS = ROOT / "web" / "training-plans-form.js"
@@ -65,8 +67,6 @@ class TestServerParity:
         assert payment_plan(6)["payments_cents"] == [4999, 2500]
         assert payment_plan(8)["payments_cents"] == [4999, 4999]
         assert payment_plan(30)["payments_cents"] == [4999] * 7 + [2500]
-        assert plan_summary(30) == "8 payments, $374.93 in all"
-        assert plan_summary(4) == "1 payment, $49.99 in all"
 
     def test_weeks_until_counts_part_week_as_one(self):
         today = date(2030, 1, 15)
@@ -103,11 +103,10 @@ class TestBrowserParity:
             weeks = weeks_until(date.fromisoformat(d), today)
             plan = payment_plan(weeks)
             assert q["weeks"] == weeks, d
-            assert q["payments"] == plan["payment_count"], d
-            assert q["totalCents"] == plan["total_cents"], d
             assert q["firstCents"] == plan["first_payment_cents"], d
-            assert q["total"] == plan["total_display"], d
-            assert q["summary"] == plan_summary(weeks), d
+            assert q["first"] == money(plan["first_payment_cents"]), d
+            # No total or payment count leaves the quote, so no page can show one.
+            assert set(q) == {"weeks", "firstCents", "first"}, d
 
     def test_js_quote_refuses_past_and_bad_dates(self):
         script = plan_quote_js() + (
@@ -162,6 +161,12 @@ FORBIDDEN = [
     (re.compile(r"\$15\s*(/|a |per )\s*w", re.I), "$15 a week"),
     (re.compile(r"\$2/day", re.I), "$2/day"),
     (re.compile(r"capped at", re.I), "capped at"),
+    # Rate only (Matti, 2026-11-17): no total, payment count or per-race sum.
+    (re.compile(r"\bin all\b", re.I), "a total ('in all')"),
+    (re.compile(r"\b\d+ payments?\b", re.I), "a payment count"),
+    (re.compile(r"number of payments", re.I), "number of payments"),
+    (re.compile(r"\bthe total\b", re.I), "the total"),
+    (re.compile(r"data-plan-quote"), "data-plan-quote"),
 ]
 
 
@@ -193,16 +198,23 @@ class TestNoRetiredTermsNearOffer:
         assert_clean(_section(html, 'data-measure-section="custom-plan"', "</section>"),
                      "race page offer (rendered)")
 
-    def test_race_page_quote_uses_race_date(self, race):
+    def test_race_page_offer_is_rate_only(self, race):
         from generate_neo_brutalist import build_custom_plan_offer
         offer = build_custom_plan_offer(race)
-        assert "data-plan-quote" in offer
+        assert "$49.99 / FOUR WEEKS" in offer
+        assert "data-plan-quote" not in offer
         assert "Ends after race week" in offer
+
+    def test_price_line_is_the_rate(self):
+        assert plan_offer.PRICE_LINE == "$49.99 / four weeks"
+        assert not hasattr(plan_offer, "plan_summary")
+        assert not hasattr(plan_offer, "offer_quote_script")
 
     def test_race_page_inline_js(self):
         from generate_neo_brutalist import build_inline_js
         js = build_inline_js()
         assert "function rlPlanQuote" in js
+        assert ".summary" not in js and "totalCents" not in js
         assert_clean(js, "race page inline JS")
 
     def test_dormant_race_page_ctas(self, race):
@@ -239,6 +251,48 @@ class TestNoRetiredTermsNearOffer:
         assert 'id="gg-plan-quote"' in html
         assert_clean(html, "/questionnaire/")
 
+    def test_form_js_states_only_one_charge(self, js):
+        assert_clean(js, "web/training-plans-form.js")
+        assert ".summary" not in js and "totalCents" not in js
+
+    def test_offer_copy_has_no_second_rate(self):
+        # The $12.50 short-block week rate is a billing term for the legal
+        # page only; offer copy carries the one rate.
+        from generate_training_plans import generate_training_page
+        from generate_questionnaire import generate_questionnaire_page
+        for name, html in [("/training-plans/", generate_training_page()),
+                           ("/questionnaire/", generate_questionnaire_page())]:
+            assert plan_offer.WEEK_PRICE not in html, name
+
+    @pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+    def test_questionnaire_display_states_one_charge_or_the_rate(self, js):
+        fn = re.search(r"  function updatePriceDisplay\(\) \{.*?\n  \}", js, re.S)
+        assert fn, "updatePriceDisplay missing"
+        default = f"{plan_offer.PRICE_LINE} until race week. Nothing is charged after race week."
+        today = "2030-01-15"
+        races = ["2030-01-20", "2030-02-02", "2030-02-12", "2030-05-01", "", "2030-01-01", "2030-01-20"]
+        script = (
+            plan_quote_js()
+            + f"var submitBtn={{}},quoteEl={{}},QUOTE_DEFAULT={json.dumps(default)},race;"
+            + f"function aRaceQuote(){{return rlPlanQuote(race,{json.dumps(today)});}}\n"
+            + fn.group(0)
+            + f"\nconsole.log(JSON.stringify({json.dumps(races)}.map(function(r){{race=r;updatePriceDisplay();"
+            "return [submitBtn.textContent,quoteEl.textContent];})));"
+        )
+        out = json.loads(_run_node(script))
+        short = "Your race is under four weeks away: one charge of {} today, nothing after race week."
+        assert out == [
+            ["Submit & Pay $12.50 today", short.format("$12.50")],
+            ["Submit & Pay $37.50 today", short.format("$37.50")],
+            ["Submit & Pay $49.99 today", default],
+            ["Submit & Pay $49.99 today", default],
+            ["Submit & Pay", default],
+            ["Submit & Pay", default],
+            ["Submit & Pay $12.50 today", short.format("$12.50")],
+        ]
+        for button, line in out:
+            assert_clean(button + " " + line, "questionnaire display")
+
     def test_success_page(self):
         from generate_success_pages import build_training_plan_success
         assert_clean(build_training_plan_success(), "/training-plans/success/")
@@ -269,7 +323,7 @@ class TestNoRetiredTermsNearOffer:
         terms = get_terms_content()
         plan_terms = _section(terms, "<li><strong>Training plans</strong>", "</li>")
         assert_clean(plan_terms, "terms: training plans")
-        assert "$49.99 every 4 weeks" in plan_terms
+        assert "$49.99 every 4 weeks" in plan_terms  # billing mechanics, a rate
         assert "14 days" in plan_terms
         # The 7-day window left in Payments & Refunds is consulting's only.
         refunds = _section(terms, "<h2>Payments &amp; Refunds</h2>", "<h2>Intellectual")

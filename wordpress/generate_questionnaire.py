@@ -30,7 +30,7 @@ from brand_tokens import get_ab_head_snippet, get_ga4_head_snippet, get_preload_
 from shared_footer import get_mega_footer_html
 from shared_header import get_site_header_html
 from cookie_consent import get_consent_banner_html
-from plan_offer import PRICE_LINE, REFUND_WINDOW_DAYS, WEEK_PRICE
+from plan_offer import PRICE_LINE, REFUND_WINDOW_DAYS
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -987,13 +987,13 @@ def build_form_html() -> str:
       </div>
 
       <button type="submit" class="gg-submit-btn">Submit &amp; Pay</button>
-      <p id="gg-plan-quote" class="gg-plan-quote" aria-live="polite">''' + PRICE_LINE + ''' until race week. Add your race date to see the number of payments and the total.</p>
+      <p id="gg-plan-quote" class="gg-plan-quote" aria-live="polite">''' + PRICE_LINE + ''' until race week. Nothing is charged after race week.</p>
     </form>
 
     <div id="gg-form-message" class="gg-form-message" style="display: none;"></div>
 
     <div class="gg-form-footer">
-      ''' + PRICE_LINE + '''. If your race isn&rsquo;t a whole number of 4-week blocks away, the last, shorter block costs ''' + WEEK_PRICE + ''' a week. Cancel any time from your plan page; you keep any block you&rsquo;ve paid for. Within ''' + str(REFUND_WINDOW_DAYS) + ''' days of your first payment, cancelling there refunds it in full.
+      ''' + PRICE_LINE + '''. If your race isn&rsquo;t a whole number of 4-week blocks away, the last block is shorter and costs less. Cancel any time from your plan page; you keep any block you&rsquo;ve paid for. Within ''' + str(REFUND_WINDOW_DAYS) + ''' days of your first payment, cancelling there refunds it in full.
     </div>
   </div>'''
 
