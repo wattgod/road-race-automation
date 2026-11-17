@@ -275,10 +275,10 @@ def calculate_tier(score, prestige=None, prestige_override=None):
             tier = 1
         else:
             tier = min(tier, 2)  # cap at T2
-    elif prestige == 4:
-        tier = max(1, tier - 1)  # promote 1 tier
-        if prestige != 5:
-            tier = max(tier, 2)  # never into T1 via p4
+    elif prestige == 4 and tier > 2:
+        # Promote 1 tier, never into T1 via p4. A score of 80+ is T1 on its
+        # own; capping it at T2 left three races stale until issue #195.
+        tier -= 1
 
     return tier
 

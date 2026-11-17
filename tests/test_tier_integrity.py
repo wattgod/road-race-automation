@@ -266,6 +266,39 @@ class TestTierIntegrity:
             msg += "\nPrestige 5 allows max 2-tier promotion; prestige 4 allows max 1-tier.\n"
             pytest.fail(msg)
 
+    def test_stored_tier_matches_recalculate_tiers(self):
+        """
+        Every stored tier equals what scripts/recalculate_tiers.py computes.
+
+        The checks above only flag a tier above what the score earns. A race
+        stored below it (three prestige-4 races scored 80+ sat at T2 from the
+        Sprint 41 migration until issue #195) passed them silently.
+        """
+        import copy
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+        from recalculate_tiers import recalculate_race
+
+        race_data_dir = get_race_data_dir()
+        if not race_data_dir.exists():
+            pytest.skip("race-data directory not found")
+
+        stale = []
+        for json_file in sorted(race_data_dir.glob("*.json")):
+            try:
+                data = json.loads(json_file.read_text())
+            except (json.JSONDecodeError, IOError):
+                continue
+            change = recalculate_race(copy.deepcopy(data), json_file.stem)
+            if change["tier_changed"]:
+                stale.append(f"{json_file.stem}: stored T{change['old_tier']}, "
+                             f"rules give T{change['new_tier']} "
+                             f"(score={change['overall_score']}, p={change['prestige']})")
+
+        assert not stale, (
+            "Stored tiers out of date; run scripts/recalculate_tiers.py --dry-run:\n  "
+            + "\n  ".join(stale)
+        )
 
 class TestComponentScores:
     """Test that component scores are valid."""
