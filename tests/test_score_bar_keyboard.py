@@ -27,7 +27,7 @@ def test_score_bar_is_a_button_with_state():
     src = _render_card_src()
     assert ('<button type="button" class="rl-score-bar" aria-expanded="false" '
             'aria-controls="\' + breakdownId + \'"') in src
-    assert "aria-label=\"Score breakdown, ' + race.overall_score + ' out of 100\"" in src
+    assert "aria-label=\"Score breakdown, ' + score + ' out of 100\"" in src
 
 
 def test_no_inline_handlers_anywhere_on_cards():
@@ -43,7 +43,7 @@ def test_breakdown_has_matching_id():
 
 def test_button_only_when_breakdown_exists():
     src = _render_card_src()
-    assert "if (race.overall_score && breakdown)" in src
+    assert "if (score && breakdown)" in src
     assert "rl-score-bar rl-score-bar--static" in src
 
 
@@ -95,7 +95,7 @@ const btnMatch = html.match(/<button type="button" class="rl-score-bar"([^>]*)>/
 const panelId = (html.match(/<div class="rl-score-breakdown" id="([^"]+)"/) || [])[1];
 const panels = {};
 if (panelId) panels[panelId] = { classList: classList() };
-const out = { hasButton: !!btnMatch, panelId, static: html.includes('rl-score-bar--static'),
+const out = { onfocus: html.includes('onfocus'), hasButton: !!btnMatch, panelId, static: html.includes('rl-score-bar--static'),
               linked: html.includes('rl-card-linked'), clicks: listeners.click ? listeners.click.length : 0, states: [] };
 if (btnMatch) {
   const attrs = {};
@@ -136,6 +136,18 @@ def test_rendered_button_toggles_breakdown():
     assert out["controls"] == out["panelId"] == "rl-score-breakdown-etape-test"
     assert out["label"] == "Score breakdown, 71 out of 100"
     assert out["states"] == [["true", True], ["false", False]]
+
+
+def test_hostile_score_cannot_break_out_of_attributes():
+    """overall_score lands in aria-label and style; a non-numeric value from
+    the index must not inject markup (Astra review, PR #199)."""
+    out = _run({"slug": "x", "name": "X", "tier": 2, "overall_score": '71" onfocus="alert(1)//',
+                "has_profile": True, "profile_url": "/race/x/", "scores": SCORES})
+    assert not out["onfocus"]
+    assert not out["hasButton"] and not out["static"]  # NaN -> no bar
+    out = _run({"slug": "y", "name": "Y", "tier": 2, "overall_score": "71.6",
+                "has_profile": True, "profile_url": "/race/y/", "scores": SCORES})
+    assert out["label"] == "Score breakdown, 72 out of 100"
 
 
 def test_no_breakdown_renders_static_bar():

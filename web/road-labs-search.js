@@ -808,14 +808,18 @@
       ? '<a class="rl-card-name" href="' + escHtml(race.profile_url) + '">' + escHtml(race.name) + '</a>'
       : '<span class="rl-card-name no-link">' + escHtml(race.name) + '</span>';
 
+    // Score as a bounded integer: it lands in attributes (aria-label, width)
+    // and in markup, so never interpolate the raw index value.
+    var rawScore = Number(race.overall_score);
+    var score = isFinite(rawScore) ? Math.max(0, Math.min(100, Math.round(rawScore))) : 0;
     var breakdownId = 'rl-score-breakdown-' + escHtml(race.slug);
     var breakdown = renderScoreBreakdown(race.scores, breakdownId);
 
     // Score hero — prominent score number with bar below
     var scoreHero = '';
-    if (race.overall_score) {
+    if (score) {
       scoreHero = '<div class="rl-card-score-hero">' +
-        '<span class="rl-card-score-big">' + race.overall_score + '</span>' +
+        '<span class="rl-card-score-big">' + score + '</span>' +
         '<span class="rl-card-score-label">RL</span>' +
       '</div>';
     }
@@ -824,14 +828,14 @@
     // (keyboard + screen reader reachable; handled by the delegated click
     // listener below), a plain bar otherwise.
     var scoreTrack = '<span class="rl-score-track">' +
-        '<span class="rl-score-fill" style="width:' + race.overall_score + '%;background:' + scoreColor(race.overall_score) + '"></span>' +
+        '<span class="rl-score-fill" style="width:' + score + '%;background:' + scoreColor(score) + '"></span>' +
       '</span>';
     var scoreBar = '';
-    if (race.overall_score && breakdown) {
-      scoreBar = '<button type="button" class="rl-score-bar" aria-expanded="false" aria-controls="' + breakdownId + '" aria-label="Score breakdown, ' + race.overall_score + ' out of 100">' +
+    if (score && breakdown) {
+      scoreBar = '<button type="button" class="rl-score-bar" aria-expanded="false" aria-controls="' + breakdownId + '" aria-label="Score breakdown, ' + score + ' out of 100">' +
           scoreTrack +
         '</button>' + breakdown;
-    } else if (race.overall_score) {
+    } else if (score) {
       scoreBar = '<div class="rl-score-bar rl-score-bar--static">' + scoreTrack + '</div>';
     }
 
