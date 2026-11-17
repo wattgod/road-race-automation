@@ -76,6 +76,13 @@ class TestPrestigeOverride:
         tier, reason = apply_prestige_override(2, 4, 70)
         assert tier == 2  # Stays T2, not promoted to T1
 
+    def test_p4_never_caps_a_score_t1(self):
+        # Prestige 4 only limits promotion; a score of 80+ is T1 on its own.
+        # The Sprint 41 migration capped these at T2 (issue #195).
+        tier, reason = apply_prestige_override(1, 4, 80)
+        assert tier == 1
+        assert reason is None
+
     def test_p3_no_effect(self):
         tier, reason = apply_prestige_override(3, 3, 50)
         assert tier == 3
