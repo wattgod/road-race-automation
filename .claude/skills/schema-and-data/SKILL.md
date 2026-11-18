@@ -10,8 +10,8 @@ from Gravel God" list, read `CLAUDE.md` in this repo first — not repeated here
 
 ## 1. Data flow
 
-`race-data/*.json` (427 profiles, source of truth) → `scripts/generate_index.py`
-builds `web/race-index.json` (427 entries, flat list) → `wordpress/generate_neo_brutalist.py`
+`race-data/*.json` (422 profiles as of Nov 2026, source of truth) → `scripts/generate_index.py`
+builds `web/race-index.json` (421 entries, flat list; catalog-flagged profiles are left out) → `wordpress/generate_neo_brutalist.py`
 renders per-race HTML → deployed by direct SCP. **This is a static HTML site on
 SiteGround, not WordPress** — `push_wordpress.py`'s WP-specific sync paths are
 wrong for road; see `docs/whoops-audit-jul2026.md` for deploy gotchas.
