@@ -71,7 +71,7 @@ Roadie Labs is a scored event database for road cycling (gran fondos, sportives,
 ## Architecture
 ```
 road-race-automation/
-├── race-data/           ← 427 event JSON profiles (source of truth)
+├── race-data/           ← 422 event JSON profiles (source of truth; 421 public — catalog-flagged ones are redirect stubs)
 ├── research-dumps/      ← Raw research per event
 ├── scripts/             ← Generators, validators, scoring, batch tools
 ├── wordpress/           ← HTML generators, brand tokens, mu-plugins

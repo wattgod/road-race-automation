@@ -777,6 +777,28 @@ def _fallback_rating_explanation(race: dict, dimension: str, score: Any) -> str:
     return f"{_rating_score_judgment(label, score)}{context}"
 
 
+_PLAIN_DATE_RE = re.compile(
+    r'^(\d{4}):\s*((?:[A-Z][a-z]+,?\s+)?[A-Z][a-z]+\.?\s+\d{1,2}'
+    r'(?:\s*[-–]\s*(?:[A-Z][a-z]+\.?\s+)?\d{1,2})?)'
+    r'(\s+\([^()]*\))?\.?\s*$'
+)
+
+
+def _short_date(date_specific) -> str:
+    """'2026: June 6' -> 'June 6, 2026' and '2026: June 6 (Sunday)' ->
+    'June 6, 2026 (Sunday)'; anything longer is returned as written.
+
+    Moving the year to the end only reads right for a bare date. A status line
+    such as '2026: May 16-17 (completed). 2027 dates not yet announced.' would
+    otherwise end in '..., 2026'.
+    """
+    text = str(date_specific or '').strip()
+    m = _PLAIN_DATE_RE.match(text)
+    if m:
+        return f"{m.group(2)}, {m.group(1)}{m.group(3) or ''}"
+    return text
+
+
 def normalize_race_data(data: dict) -> dict:
     """Normalize race data from new-format JSON into a consistent shape
     with all fields the generator expects. Computes derived fields if missing."""
@@ -867,14 +889,8 @@ def normalize_race_data(data: dict) -> dict:
         _rating_citation_refs(race, 'editorial', editorial_summary),
     )
 
-    # Extract date with year from date_specific like "2026: June 6" -> "June 6, 2026"
     date_specific = vitals.get('date_specific', '')
-    short_date = date_specific
-    date_match = re.search(r'(\d{4}):\s*(.+)', date_specific)
-    if date_match:
-        year = date_match.group(1)
-        date_part = date_match.group(2).strip()
-        short_date = f"{date_part}, {year}"
+    short_date = _short_date(date_specific)
 
     # Parse entry cost from registration string, then fallback to rating explanations
     reg = vitals.get('registration') or vitals.get('entry_fee') or ''

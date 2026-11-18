@@ -97,6 +97,31 @@ VITALS_PROCESS_RE = re.compile(
     "|".join(f"(?:{p})" for p in VITALS_PROCESS_PATTERNS), re.IGNORECASE
 )
 
+# Every public section (prose included): research-check timestamps, source
+# bookkeeping and instructions to the researcher. A plain time anchor
+# ("six editions deep as of 2026") and a rider-facing warning about the
+# organizer ("the official page still lists TBD") are finished judgments and
+# stay allowed.
+SECTION_PROCESS_PATTERNS = [
+    r"as of (this|verification)",
+    r"as of \d{1,2} \w+ 20\d\d",
+    r"as of 20\d\d-\d\d",
+    r"in (the )?(available|reviewed|accessible)( official)? sources",
+    r"not independently (verified|confirmed)",
+    r"(verified|confirmed) via",
+    r"should not be treated",
+    r"do not assume",
+    r"aggregator",
+    r"source figures",
+    r"secondary sources",
+    r"not securely verified",
+    r"sources disagree on the exact",
+    r"per the official [\w ]*page",
+]
+SECTION_PROCESS_RE = re.compile(
+    "|".join(f"(?:{p})" for p in SECTION_PROCESS_PATTERNS), re.IGNORECASE
+)
+
 
 def _walk(node, path):
     if isinstance(node, dict):
@@ -120,7 +145,7 @@ def _violations():
             if section not in race:
                 continue
             for path, text in _walk(race[section], f".race.{section}"):
-                for m in PROCESS_RE.finditer(text):
+                for m in [*PROCESS_RE.finditer(text), *SECTION_PROCESS_RE.finditer(text)]:
                     start = max(0, m.start() - 60)
                     snippet = text[start : m.end() + 60].replace("\n", " ")
                     found.append(f"{f.stem} | {path} | {m.group(0)!r} | ...{snippet}...")
@@ -152,6 +177,11 @@ def test_patterns_compile_and_match_examples():
     assert VITALS_PROCESS_RE.search("Not specified in available sources")
     assert not VITALS_PROCESS_RE.search("2026: May 16-17 (completed). 2027 dates not yet announced.")
     assert not VITALS_PROCESS_RE.search("intermediate cutoffs apply per the regulations")
+    assert SECTION_PROCESS_RE.search("No 2027 date published yet as of this writing")
+    assert SECTION_PROCESS_RE.search("isn't specified in available sources")
+    assert SECTION_PROCESS_RE.search("A third-party aggregator lists a May 2026 date")
+    assert not SECTION_PROCESS_RE.search("Six editions deep as of 2026 (founded 2021)")
+    assert not SECTION_PROCESS_RE.search("the official page still lists the date as TBD")
 
 
 def test_no_research_process_text_in_public_fields():
