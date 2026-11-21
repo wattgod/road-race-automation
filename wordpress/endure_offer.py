@@ -2,6 +2,7 @@
 from urllib.parse import urlencode
 
 SIGNUP_URL = "https://endurelabs.app/sign-up?" + urlencode({
+    "source": "roadie_labs", "intent": "training",
     "utm_source": "roadie-labs", "utm_medium": "referral",
     "utm_campaign": "endure_trial", "utm_content": "site_footer",
 })
