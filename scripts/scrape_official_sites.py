@@ -11,12 +11,15 @@ Usage:
   python scripts/scrape_official_sites.py --slug unbound-200      # Single race
   python scripts/scrape_official_sites.py --stale-only            # Only stale-dated races
   python scripts/scrape_official_sites.py --no-claude             # Scrape only, skip extraction
+  python scripts/scrape_official_sites.py --extractor inkling     # Extract with the cheap model
+  python scripts/scrape_official_sites.py --limit 50              # Cap the number of races
   python scripts/scrape_official_sites.py --force                 # Ignore cache, re-scrape
   python scripts/scrape_official_sites.py --delay 5.0             # Rate limit (default: 3.0s)
 
 Output: data/scrape-extracts/{slug}.json per race.
 
-Requires: scrapling[fetchers], ANTHROPIC_API_KEY (unless --no-claude)
+Requires: scrapling[fetchers]; ANTHROPIC_API_KEY for --extractor claude,
+OPENROUTER_API_KEY for --extractor inkling (neither with --no-claude)
 """
 
 import argparse
@@ -32,7 +35,9 @@ from scrape_utils import (
     fetch_url,
     get_cached,
     set_cached,
-    extract_race_facts_via_claude,
+    extract_race_facts,
+    default_extractor,
+    EXTRACTORS,
     load_official_sites,
     save_extract,
     load_extract,
@@ -63,7 +68,7 @@ def _load_existing_vitals(slug: str) -> dict:
 
 def scrape_race(slug: str, url: str, name: str, *,
                 force: bool = False, no_claude: bool = False,
-                verbose: bool = False) -> dict:
+                verbose: bool = False, extractor: str = "claude") -> dict:
     """Scrape a single race's official site and optionally extract data.
 
     Returns dict with keys: slug, url, status, fetcher, extracted, error.
@@ -117,8 +122,8 @@ def scrape_race(slug: str, url: str, name: str, *,
     if not no_claude:
         existing = _load_existing_vitals(slug)
         if verbose:
-            print(f"  EXTRACTING via Claude...")
-        extracted = extract_race_facts_via_claude(html, name, existing)
+            print(f"  EXTRACTING via {extractor}...")
+        extracted = extract_race_facts(html, name, existing, extractor=extractor)
         result["extracted"] = extracted
 
         if extracted and "error" not in extracted:
@@ -144,6 +149,11 @@ def main():
                         help="Only process races with stale (pre-2026) dates")
     parser.add_argument("--no-claude", action="store_true",
                         help="Scrape HTML only, skip Claude extraction")
+    parser.add_argument("--extractor", choices=EXTRACTORS, default=default_extractor(),
+                        help="Model for extraction: claude (Sonnet) or inkling "
+                             "(cheap model via OpenRouter). Default: $SCRAPE_EXTRACTOR or claude")
+    parser.add_argument("--limit", type=int, default=None,
+                        help="Process at most this many races")
     parser.add_argument("--force", action="store_true",
                         help="Ignore cache, re-scrape all")
     parser.add_argument("--verbose", action="store_true",
@@ -162,6 +172,9 @@ def main():
     if not sites:
         print("No races found matching filters.")
         return 0
+
+    if args.limit is not None:
+        sites = dict(sorted(sites.items())[:max(0, args.limit)])
 
     stale_label = " (stale dates only)" if args.stale_only else ""
     tier_label = f" (tiers {sorted(tier_filters)})" if tier_filters else ""
@@ -187,7 +200,7 @@ def main():
         result = scrape_race(
             slug, info["url"], info["name"],
             force=args.force, no_claude=args.no_claude,
-            verbose=args.verbose,
+            verbose=args.verbose, extractor=args.extractor,
         )
 
         if result["error"]:

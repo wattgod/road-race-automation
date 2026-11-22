@@ -276,7 +276,7 @@ class TestBuildExtractionPrompt:
         """Prompt asks for JSON output."""
         prompt = _build_extraction_prompt("<html>test</html>", "Test Race", {})
         assert "JSON" in prompt
-        assert "date_2026" in prompt
+        assert "next_edition_date" in prompt
         assert "distance_mi" in prompt
 
 
@@ -304,3 +304,142 @@ class TestExtractSaveLoad:
         monkeypatch.setattr("scrape_utils.SCRAPE_EXTRACTS_DIR", extract_dir)
         save_extract("test", {"x": 1})
         assert extract_dir.exists()
+
+
+# ---------------------------------------------------------------------------
+# Date staleness follows today's date
+# ---------------------------------------------------------------------------
+
+from datetime import date as _date
+
+from scrape_utils import edition_date, extract_date, is_stale_date
+
+
+class TestEditionDate:
+    def test_profile_format(self):
+        assert edition_date("2027: March 7") == (2027, 3, 7)
+
+    def test_iso(self):
+        assert edition_date("2026-06-06") == (2026, 6, 6)
+
+    def test_range_uses_first_day(self):
+        assert edition_date("2026: June 26-27 (Saturday)") == (2026, 6, 26)
+
+    def test_no_year(self):
+        assert edition_date("Last Sunday in May") == (None, 5, None)
+
+    def test_year_after_the_date(self):
+        assert edition_date("November 21, 2026") == (2026, 11, 21)
+
+    def test_empty(self):
+        assert edition_date(None) == (None, None, None)
+
+
+class TestIsStaleDate:
+    TODAY = _date(2026, 11, 22)
+
+    def test_past_edition_this_year_is_stale(self):
+        assert is_stale_date("2026: June 21", self.TODAY)
+
+    def test_upcoming_edition_this_year_is_fresh(self):
+        assert not is_stale_date("2026: December 6", self.TODAY)
+
+    def test_today_is_fresh(self):
+        assert not is_stale_date("2026: November 22", self.TODAY)
+
+    def test_next_year_is_fresh(self):
+        assert not is_stale_date("2027: March 7", self.TODAY)
+
+    def test_earlier_year_is_stale(self):
+        assert is_stale_date("2025: July 10", self.TODAY)
+
+    def test_no_year_is_stale(self):
+        assert is_stale_date("TBD", self.TODAY)
+        assert is_stale_date("", self.TODAY)
+
+    def test_year_without_month_waits_for_year_end(self):
+        assert not is_stale_date("2026: date to be announced", self.TODAY)
+        assert is_stale_date("2026: date to be announced", _date(2027, 1, 1))
+
+    def test_month_without_day_is_stale_after_the_month(self):
+        assert not is_stale_date("2026: November", self.TODAY)
+        assert is_stale_date("2026: October", self.TODAY)
+
+
+class TestExtractDate:
+    def test_prefers_next_edition_date(self):
+        assert extract_date({"next_edition_date": "2027-06-27", "date_2026": "2026-06-27"}) == "2027-06-27"
+
+    def test_reads_older_extracts(self):
+        assert extract_date({"date_2026": "2026-06-27"}) == "2026-06-27"
+
+    def test_empty(self):
+        assert extract_date(None) is None and extract_date({}) is None
+
+
+class TestPromptDates:
+    def test_prompt_states_today_and_has_no_fixed_year_field(self):
+        prompt = _build_extraction_prompt("<html>test</html>", "Test Race", {}, today=_date(2027, 2, 1))
+        assert "Today is 2027-02-01." in prompt
+        assert "date_2026" not in prompt
+        assert "event_status" in prompt
+
+
+from scrape_utils import date_is_on_page, extract_race_facts_via_claude
+
+
+class TestDateIsOnPage:
+    def test_numeric_day_first(self):
+        assert date_is_on_page("<span>27/06/2027</span>", "2027-06-27")
+
+    def test_numeric_month_first(self):
+        assert date_is_on_page("SATURDAY 05/16/2026", "2026-05-16")
+
+    def test_iso(self):
+        assert date_is_on_page("starts 2027-03-07", "2027-03-07")
+
+    def test_month_name_then_day(self):
+        assert date_is_on_page("Dartmoor Classic on June 20, 2027. Choose", "2027-06-20")
+
+    def test_first_day_of_a_range(self):
+        assert date_is_on_page("<h2>Departure on June 5 and 6, 2027</h2>", "2027-06-05")
+
+    def test_second_day_of_a_range(self):
+        assert date_is_on_page("<h2>Departure on June 5 and 6, 2027</h2>", "2027-06-06")
+
+    def test_day_then_month_other_language(self):
+        assert date_is_on_page("Domenica 16 maggio 2027", "2027-05-16")
+        assert date_is_on_page("le 27 juin 2027", "2027-06-27")
+
+    def test_projected_date_is_rejected(self):
+        """The page shows 2026's date and mentions 2027 elsewhere; 2027-05-15 is invented."""
+        page = 'SATURDAY 05/16/2026 <a href="/percorsi2027.aspx">Routes 2027</a>'
+        assert not date_is_on_page(page, "2027-05-15")
+        assert date_is_on_page(page, "2026-05-16")
+
+    def test_right_day_wrong_year_is_rejected(self):
+        assert not date_is_on_page("June 20, 2026", "2027-06-20")
+
+    def test_day_must_be_whole_number(self):
+        assert not date_is_on_page("June 20, 2027", "2027-06-02")
+
+    def test_bad_input(self):
+        assert not date_is_on_page("June 20, 2027", "June 20")
+        assert not date_is_on_page("", "2027-06-20")
+        assert not date_is_on_page("June 20, 2027", None)
+
+
+class TestUnverifiedDateIsParked:
+    def test_invented_date_is_removed_from_the_extract(self):
+        from unittest.mock import patch
+        with patch("youtube_enrich.call_api", return_value='{"next_edition_date": "2027-05-15"}'):
+            facts = extract_race_facts_via_claude("SATURDAY 05/16/2026", "Bra Bra")
+        assert facts["next_edition_date"] is None
+        assert facts["unverified_date"] == "2027-05-15"
+
+    def test_date_on_page_is_kept(self):
+        from unittest.mock import patch
+        with patch("youtube_enrich.call_api", return_value='{"next_edition_date": "2027-06-20"}'):
+            facts = extract_race_facts_via_claude("Classic on June 20, 2027", "Dartmoor")
+        assert facts["next_edition_date"] == "2027-06-20"
+        assert "unverified_date" not in facts

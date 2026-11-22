@@ -353,3 +353,31 @@ class TestReport:
         html = generate_html_report([])
         assert "<table>" in html
         assert "Total: 0" in html
+
+
+class TestCompareDateAcrossYears:
+    """The comparison follows the years in the data, not a fixed season."""
+
+    def test_later_edition_on_site_is_stale(self):
+        cls, _ = compare_date("2026: June 27", "2027-06-27")
+        assert cls == "STALE_DATE"
+
+    def test_same_later_year_confirms(self):
+        cls, _ = compare_date("2027: March 7", "2027-03-07")
+        assert cls == "CONFIRM"
+
+    def test_same_later_year_month_shift_is_mismatch(self):
+        cls, _ = compare_date("2027: March 7", "2027-09-12")
+        assert cls == "MISMATCH"
+
+    def test_older_edition_on_site_says_nothing(self):
+        cls, _ = compare_date("2027: June 27", "2026-06-27")
+        assert cls is None
+
+    def test_scraped_date_without_year_says_nothing(self):
+        cls, _ = compare_date("2026: June 6", "June 7")
+        assert cls is None
+
+    def test_profile_without_year_is_stale_when_site_has_one(self):
+        cls, _ = compare_date("Last Sunday in May", "2027-05-30")
+        assert cls == "STALE_DATE"

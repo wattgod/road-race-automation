@@ -23,6 +23,7 @@ import json
 import os
 import re
 import time
+from datetime import date
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -152,10 +153,63 @@ def fetch_url(url: str, strategy: str = "auto", timeout: int = 30) -> tuple:
 # Load official sites from race data
 # ---------------------------------------------------------------------------
 
+_MONTH_NUMBERS = {name: i + 1 for i, name in enumerate([
+    "january", "february", "march", "april", "may", "june",
+    "july", "august", "september", "october", "november", "december",
+])}
+
+
+def edition_date(date_specific) -> tuple[int | None, int | None, int | None]:
+    """(year, month, day) of a profile date such as "2027: March 7" or "2026-06-06".
+
+    Any part that cannot be read is None. For a range ("June 26-27") the day is
+    the first day.
+    """
+    text = str(date_specific or "")
+    iso = re.search(r"(\d{4})-(\d{2})-(\d{2})", text)
+    if iso:
+        return int(iso.group(1)), int(iso.group(2)), int(iso.group(3))
+    year_match = re.match(r"\s*(\d{4})\b", text) or re.search(r"\b(20\d{2})\b", text)
+    year = int(year_match.group(1)) if year_match else None
+    month = day = None
+    month_match = re.search(r"\b(" + "|".join(_MONTH_NUMBERS) + r")\b\.?\s*(\d{1,2})?", text, re.IGNORECASE)
+    if month_match:
+        month = _MONTH_NUMBERS[month_match.group(1).lower()]
+        day = int(month_match.group(2)) if month_match.group(2) else None
+    return year, month, day
+
+
+def is_stale_date(date_specific, today: date | None = None) -> bool:
+    """True when the profile's dated edition has passed, or it names no year.
+
+    A date with a year but no readable month counts as passed only once its
+    year is over.
+    """
+    today = today or date.today()
+    year, month, day = edition_date(date_specific)
+    if year is None:
+        return True
+    if year != today.year:
+        return year < today.year
+    if month is None:
+        return False
+    return (month, day or 31) < (today.month, today.day)
+
+
+def extract_date(extract: dict | None):
+    """The next edition date in a scrape extract (older extracts used "date_2026")."""
+    if not extract:
+        return None
+    return extract.get("next_edition_date") or extract.get("date_2026")
+
+
 def load_official_sites(tier_filters: set | None = None,
                         slug_filter: str | None = None,
-                        stale_only: bool = False) -> dict:
+                        stale_only: bool = False,
+                        today: date | None = None) -> dict:
     """Load races with valid HTTP official_site URLs.
+
+    stale_only keeps races whose dated edition has passed or that name no year.
 
     Returns {slug: {"url": str, "name": str, "tier": int, "date_specific": str}}.
     """
@@ -182,10 +236,8 @@ def load_official_sites(tier_filters: set | None = None,
 
         date_specific = race.get("vitals", {}).get("date_specific", "")
 
-        if stale_only:
-            m = re.match(r"(\d{4})", str(date_specific))
-            if not m or int(m.group(1)) >= 2026:
-                continue
+        if stale_only and not is_stale_date(date_specific, today):
+            continue
 
         name = race.get("display_name", race.get("name", slug))
         result[slug] = {
@@ -226,12 +278,15 @@ def _truncate_html(html: str) -> str:
     return cleaned[:MAX_HTML_FOR_CLAUDE]
 
 
-def _build_extraction_prompt(html: str, race_name: str, existing_data: dict) -> str:
+def _build_extraction_prompt(html: str, race_name: str, existing_data: dict,
+                             today: date | None = None) -> str:
     """Build prompt for Claude to extract structured race facts from HTML."""
     existing_summary = json.dumps(existing_data, indent=2) if existing_data else "{}"
     truncated = _truncate_html(html)
+    today_iso = (today or date.today()).isoformat()
 
     return f"""Extract structured race data from this official website HTML for "{race_name}".
+Today is {today_iso}.
 
 EXISTING PROFILE DATA (for comparison — note what differs):
 {existing_summary}
@@ -241,7 +296,8 @@ OFFICIAL WEBSITE HTML:
 
 Return ONLY a JSON object with these fields (use null for anything not found):
 {{
-  "date_2026": "YYYY-MM-DD or Month DD format if found, null if not",
+  "next_edition_date": "YYYY-MM-DD of the next upcoming edition, null if not stated with its year",
+  "event_status": "scheduled|cancelled|postponed" or null,
   "distance_mi": number or null,
   "elevation_ft": number or null,
   "registration_status": "open|closed|sold_out|lottery|coming_soon" or null,
@@ -260,25 +316,128 @@ Rules:
 - Only include data you can directly see in the HTML. Do not guess.
 - Distances: convert km to miles if needed (1 km = 0.621371 mi). Round to nearest integer.
 - Elevation: convert meters to feet if needed (1 m = 3.28084 ft). Round to nearest 100.
-- For 2026 dates: look for "2026" explicitly. If only a general date pattern visible, set date_2026 to null.
+- next_edition_date: the edition on or after today. The year must appear on the page with that date; if only a past edition or a date without a year is visible, use null. For a multi-day event use the first day.
+- event_status: "cancelled" or "postponed" only when the page says so for the next edition.
+- elevation_ft is total climbing for the main route. A summit altitude, or climbing for a side event, is not elevation; use null.
 - Return valid JSON only, no explanation."""
+
+
+# Month names as organizer sites write them (en, fr, it, es, de, nl, pt).
+_MONTH_WORDS = {
+    1: ["january", "jan", "janvier", "gennaio", "enero", "januar", "januari", "janeiro"],
+    2: ["february", "feb", "février", "fevrier", "febbraio", "febrero", "februar", "februari", "fevereiro"],
+    3: ["march", "mar", "mars", "marzo", "märz", "maerz", "maart", "março", "marco"],
+    4: ["april", "apr", "avril", "aprile", "abril"],
+    5: ["may", "mai", "maggio", "mayo", "mei", "maio"],
+    6: ["june", "jun", "juin", "giugno", "junio", "juni", "junho"],
+    7: ["july", "jul", "juillet", "luglio", "julio", "juli", "julho"],
+    8: ["august", "aug", "août", "aout", "agosto", "augustus"],
+    9: ["september", "sep", "sept", "septembre", "settembre", "septiembre", "setembro"],
+    10: ["october", "oct", "octobre", "ottobre", "octubre", "oktober", "outubro"],
+    11: ["november", "nov", "novembre", "noviembre", "novembro"],
+    12: ["december", "dec", "décembre", "decembre", "dicembre", "diciembre", "dezember", "dezembro"],
+}
+
+
+def date_is_on_page(html: str, iso_date) -> bool:
+    """True when the page itself shows this day, month and year together.
+
+    A model can project last year's date forward and return a plausible date
+    the organizer never published. Only a date written on the page is kept.
+    """
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", str(iso_date or "").strip())
+    if not m or not html:
+        return False
+    year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    text = re.sub(r"<[^>]+>", " ", html).lower()
+    text = re.sub(r"\s+", " ", text)
+
+    sep = r"\s?[-/.]\s?"
+    d, mo = rf"0?{day}", rf"0?{month}"
+    numeric = [
+        rf"(?<!\d){year}{sep}{mo}{sep}{d}(?!\d)",
+        rf"(?<!\d){d}{sep}{mo}{sep}{year}(?!\d)",
+        rf"(?<!\d){mo}{sep}{d}{sep}{year}(?!\d)",
+    ]
+    if any(re.search(p, text) for p in numeric):
+        return True
+
+    words = "|".join(re.escape(w) for w in _MONTH_WORDS[month])
+    day_first = rf"(?<!\d){d}(?:st|nd|rd|th|er|\.|º)?(?:\s(?:and|et|e|y|und|en|[-–&])\s?\d{{1,2}})?\s(?:de\s|of\s)?(?:{words})\b"
+    month_first = rf"\b(?:{words})\.?\s(?:\d{{1,2}}(?:st|nd|rd|th)?\s?(?:and|[-–&,])\s?)?{d}(?!\d)"
+    for match in re.finditer(rf"{day_first}|{month_first}", text):
+        window = text[max(0, match.start() - 40): match.end() + 40]
+        if str(year) in window:
+            return True
+    return False
+
+
+EXTRACTORS = ("claude", "inkling")
+
+
+def default_extractor() -> str:
+    """The extractor named by SCRAPE_EXTRACTOR, or "claude" when unset or unknown."""
+    chosen = os.environ.get("SCRAPE_EXTRACTOR", "").strip().lower()
+    return chosen if chosen in EXTRACTORS else "claude"
+
+
+def extract_race_facts(html: str, race_name: str, existing_data: dict | None = None,
+                       extractor: str = "claude") -> dict:
+    """Extract structured race facts from official-site HTML.
+
+    extractor "claude" uses Claude Sonnet (ANTHROPIC_API_KEY); "inkling" uses
+    the cheap model in cheap_llm.py (OPENROUTER_API_KEY). The page is public,
+    so either provider may read it.
+
+    Returns the extracted fields plus "extraction_model" (and
+    "extraction_cost_usd" for the cheap model), or {"error": ...}.
+    """
+    if extractor not in EXTRACTORS:
+        return {"error": f"unknown extractor: {extractor}"}
+
+    from youtube_enrich import parse_json_response
+
+    prompt = _build_extraction_prompt(html, race_name, existing_data or {})
+    cost_usd = None
+    try:
+        if extractor == "inkling":
+            from cheap_llm import call_cheap_llm_with_usage
+            # Reasoning tokens share the output cap: at the 2,000 default, half of
+            # a 30-page sample was cut off before any JSON appeared.
+            response, usage = call_cheap_llm_with_usage(
+                prompt, script="scrape_official_sites",
+                max_tokens=8000, reasoning_effort="low")
+            model = usage.get("model")
+            cost_usd = usage.get("cost_usd")
+        else:
+            from youtube_enrich import call_api
+            response = call_api(prompt)
+            model = "claude-sonnet-4-20250514"
+        facts = parse_json_response(response)
+    except Exception as e:
+        return {"error": str(e)}
+
+    if not isinstance(facts, dict):
+        return {"error": "extraction did not return a JSON object"}
+    if not facts:
+        # An empty object would be saved as a successful extract and replace real facts.
+        return {"error": "extraction returned an empty JSON object"}
+
+    # Keep a date only when the page shows it; park anything else for a person.
+    claimed = facts.get("next_edition_date")
+    if claimed and not date_is_on_page(html, claimed):
+        facts["next_edition_date"] = None
+        facts["unverified_date"] = claimed
+    facts["extraction_model"] = model
+    if cost_usd is not None:
+        facts["extraction_cost_usd"] = cost_usd
+    return facts
 
 
 def extract_race_facts_via_claude(html: str, race_name: str,
                                   existing_data: dict | None = None) -> dict:
-    """Send scraped HTML to Claude for structured extraction.
-
-    Returns dict with extracted fields, or empty dict on failure.
-    Requires ANTHROPIC_API_KEY environment variable.
-    """
-    from youtube_enrich import call_api, parse_json_response
-
-    prompt = _build_extraction_prompt(html, race_name, existing_data or {})
-    try:
-        response = call_api(prompt)
-        return parse_json_response(response)
-    except Exception as e:
-        return {"error": str(e)}
+    """Extract race facts with Claude. Kept for existing callers."""
+    return extract_race_facts(html, race_name, existing_data, extractor="claude")
 
 
 # ---------------------------------------------------------------------------
