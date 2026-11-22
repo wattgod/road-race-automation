@@ -35,6 +35,24 @@ email, and product surface:
 - Citation correctness and voice quality are separate gates. A sourced sentence
   can still be bad copy, and clean copy can still be unsupported. Verify both.
 
+## Before starting work
+
+Write down what done means before building: lines that can be checked on the
+live site or in the generated output, not "tests pass". Then give every open
+question a route:
+
+- **Look it up**: the answer is in the code, `config/`, a handover skill,
+  `docs/`, or the live site. Answer it and note the source.
+- **Decide it**: nothing answers it and the choice is cheap to change later.
+  Pick, and record `Assumed: <choice>, because <reason>` in the pull request.
+- **Ask Matt**: only for a change that loses published data, changes what
+  anyone pays, or a product or editorial decision nobody has made. Ask once,
+  every question in one batch, each with options and a recommendation, and
+  keep building whatever does not depend on the answer.
+
+A question the repository answers never goes to Matt. A score, a quote or a
+fact is never a decide-it question: it needs a source.
+
 ## Northstar
 This repo serves the ecosystem master plan: **rated race databases (gravel/road/ski)
 earn trust as honest race critics → convert to a plan/course/coaching ladder →
