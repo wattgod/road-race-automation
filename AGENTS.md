@@ -56,3 +56,7 @@ derivable from the code. Read the one matching your task before starting.
 - Roadie Labs is Timing Slip (ink on paper, one meaning per role colour), not the Gravel God desert palette.
 - Never fabricate testimonials, quotes, or review counts. Ever.
 - If the site is unreachable, check the SSL cert before touching code.
+- Before building, write what done means and route every open question: look
+  it up, decide it and record the assumption, or ask Matt once in one batch.
+  Work of a day or more waits for his go on that list first
+  (`CLAUDE.md`, "Before starting work").
