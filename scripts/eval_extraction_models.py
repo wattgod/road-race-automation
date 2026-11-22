@@ -11,11 +11,15 @@ Usage:
   python scripts/eval_extraction_models.py --slug paris-brest-paris --verbose
   python scripts/eval_extraction_models.py --limit 30 --out reports/extraction-eval.json
 
-Requires: ANTHROPIC_API_KEY and OPENROUTER_API_KEY. Writes nothing to race-data/.
+  python scripts/eval_extraction_models.py --limit 30 --reference-model anthropic/claude-sonnet-5.5
+
+Requires: OPENROUTER_API_KEY, plus ANTHROPIC_API_KEY unless --reference-model
+routes the reference through OpenRouter. Writes nothing to race-data/.
 """
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -90,6 +94,7 @@ def summarize(cases: list[dict]) -> dict:
 
     all_verdicts = [v for c in scored for v in c["verdicts"].values()]
     costs = [c["candidate_cost_usd"] for c in cases if c.get("candidate_cost_usd") is not None]
+    ref_costs = [c["reference_cost_usd"] for c in cases if c.get("reference_cost_usd") is not None]
     return {
         "cases": len(cases),
         "scored": len(scored),
@@ -98,17 +103,39 @@ def summarize(cases: list[dict]) -> dict:
         "overall_agreement": round(all_verdicts.count("agree") / len(all_verdicts), 3) if all_verdicts else None,
         "per_field": per_field,
         "candidate_cost_usd": round(sum(costs), 6) if costs else None,
+        "reference_cost_usd": round(sum(ref_costs), 6) if ref_costs else None,
     }
 
 
-def run_case(slug: str, info: dict, verbose: bool = False) -> dict | None:
-    """Run both extractors on one cached page. Returns None when the page is not cached."""
+def _extract_with_model(html: str, name: str, model: str) -> dict:
+    """Run the OpenRouter extractor with one specific model, then restore the setting."""
+    previous = os.environ.get("CHEAP_LLM_MODEL")
+    os.environ["CHEAP_LLM_MODEL"] = model
+    try:
+        return extract_race_facts(html, name, {}, extractor="inkling")
+    finally:
+        if previous is None:
+            del os.environ["CHEAP_LLM_MODEL"]
+        else:
+            os.environ["CHEAP_LLM_MODEL"] = previous
+
+
+def run_case(slug: str, info: dict, verbose: bool = False,
+             reference_model: str | None = None) -> dict | None:
+    """Run both extractors on one cached page. Returns None when the page is not cached.
+
+    reference_model, when given, is an OpenRouter model id used as the reference
+    in place of the direct Anthropic call (for machines with no Anthropic key).
+    """
     cached = get_cached(info["url"])
     if not cached or not cached.get("html"):
         return None
     html = cached["html"]
 
-    reference = extract_race_facts(html, info["name"], {}, extractor="claude")
+    if reference_model:
+        reference = _extract_with_model(html, info["name"], reference_model)
+    else:
+        reference = extract_race_facts(html, info["name"], {}, extractor="claude")
     candidate = extract_race_facts(html, info["name"], {}, extractor="inkling")
 
     case = {"slug": slug, "url": info["url"]}
@@ -118,6 +145,9 @@ def run_case(slug: str, info: dict, verbose: bool = False) -> dict | None:
         case["candidate_error"] = candidate["error"]
     else:
         case["candidate_cost_usd"] = candidate.get("extraction_cost_usd")
+    if "error" not in reference:
+        case["reference_cost_usd"] = reference.get("extraction_cost_usd")
+        case["reference_model"] = reference.get("extraction_model")
     if "error" not in reference and "error" not in candidate:
         case["verdicts"] = compare_extracts(reference, candidate)
         case["reference"] = {f: reference.get(f) for f in COMPARED_FIELDS}
@@ -132,6 +162,9 @@ def main():
     parser = argparse.ArgumentParser(description="Compare the cheap extractor against Claude")
     parser.add_argument("--limit", type=int, default=30, help="Number of cached pages to compare (default: 30)")
     parser.add_argument("--slug", help="Compare a single race")
+    parser.add_argument("--reference-model",
+                        help="OpenRouter model id to use as the reference instead of the "
+                             "direct Anthropic call, e.g. anthropic/claude-sonnet-5.5")
     parser.add_argument("--out", help="Write the full JSON report here")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
@@ -141,7 +174,7 @@ def main():
     for slug, info in sorted(sites.items()):
         if len(cases) >= args.limit:
             break
-        case = run_case(slug, info, verbose=args.verbose)
+        case = run_case(slug, info, verbose=args.verbose, reference_model=args.reference_model)
         if case is None:
             continue
         cases.append(case)
@@ -155,7 +188,8 @@ def main():
     print()
     print(f"Cases: {summary['cases']}  scored: {summary['scored']}  "
           f"claude errors: {summary['reference_errors']}  cheap-model errors: {summary['candidate_errors']}")
-    print(f"Overall agreement with Claude: {summary['overall_agreement']}")
+    print(f"Overall agreement with the reference: {summary['overall_agreement']}")
+    print(f"Cost USD  reference: {summary['reference_cost_usd']}  cheap model: {summary['candidate_cost_usd']}")
     for field, row in summary["per_field"].items():
         print(f"  {field:22} agree={row['agree']:3} differ={row['differ']:3} "
               f"missing={row['candidate_missing']:3} extra={row['candidate_extra']:3}")

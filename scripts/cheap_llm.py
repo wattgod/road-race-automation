@@ -49,8 +49,13 @@ def is_configured() -> bool:
     return bool(os.environ.get("OPENROUTER_API_KEY", "").strip())
 
 
-def build_request_body(prompt: str, model: str, max_tokens: int, json_mode: bool) -> dict:
-    """The OpenRouter request body. Hosts that keep or train on prompts are excluded."""
+def build_request_body(prompt: str, model: str, max_tokens: int, json_mode: bool,
+                       reasoning_effort: str | None = None) -> dict:
+    """The OpenRouter request body. Hosts that keep or train on prompts are excluded.
+
+    Reasoning tokens count toward max_tokens and are billed as output, so a
+    structured-output job should pass reasoning_effort="low".
+    """
     provider = {"data_collection": "deny"}
     pinned = [p.strip() for p in os.environ.get("CHEAP_LLM_PROVIDERS", "").split(",") if p.strip()]
     if pinned:
@@ -66,6 +71,8 @@ def build_request_body(prompt: str, model: str, max_tokens: int, json_mode: bool
     }
     if json_mode:
         body["response_format"] = {"type": "json_object"}
+    if reasoning_effort:
+        body["reasoning"] = {"effort": reasoning_effort}
     return body
 
 
@@ -120,7 +127,8 @@ def _post(body: dict, api_key: str, timeout: int) -> dict:
 
 
 def call_cheap_llm_with_usage(prompt: str, *, script: str, max_tokens: int = 2000,
-                              json_mode: bool = True, max_retries: int = 3,
+                              json_mode: bool = True, reasoning_effort: str | None = None,
+                              max_retries: int = 3,
                               retry_delay: float = 10.0, timeout: int = 120) -> tuple[str, dict]:
     """Call the cheap model. Returns (text, usage); usage carries model and cost_usd.
 
@@ -132,7 +140,7 @@ def call_cheap_llm_with_usage(prompt: str, *, script: str, max_tokens: int = 200
         raise CheapLLMError("OPENROUTER_API_KEY environment variable not set")
 
     model = model_id()
-    body = build_request_body(prompt, model, max_tokens, json_mode)
+    body = build_request_body(prompt, model, max_tokens, json_mode, reasoning_effort)
 
     last_error = "no attempt made"
     for attempt in range(max_retries):

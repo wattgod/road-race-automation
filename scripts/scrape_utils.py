@@ -294,7 +294,11 @@ def extract_race_facts(html: str, race_name: str, existing_data: dict | None = N
     try:
         if extractor == "inkling":
             from cheap_llm import call_cheap_llm_with_usage
-            response, usage = call_cheap_llm_with_usage(prompt, script="scrape_official_sites")
+            # Reasoning tokens share the output cap: at the 2,000 default, half of
+            # a 30-page sample was cut off before any JSON appeared.
+            response, usage = call_cheap_llm_with_usage(
+                prompt, script="scrape_official_sites",
+                max_tokens=8000, reasoning_effort="low")
             model = usage.get("model")
             cost_usd = usage.get("cost_usd")
         else:

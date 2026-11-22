@@ -54,6 +54,10 @@ class TestRequestBody:
     def test_json_mode_off_omits_response_format(self):
         assert "response_format" not in build_request_body("hi", "m", 100, False)
 
+    def test_reasoning_effort_is_sent_only_when_asked(self):
+        assert "reasoning" not in build_request_body("hi", "m", 100, True)
+        assert build_request_body("hi", "m", 100, True, "low")["reasoning"] == {"effort": "low"}
+
     def test_model_env_override(self, monkeypatch):
         assert cheap_llm.model_id() == cheap_llm.DEFAULT_MODEL
         monkeypatch.setenv("CHEAP_LLM_MODEL", "other/model")
@@ -159,8 +163,11 @@ class TestExtractorSwitch:
         assert scrape_utils.default_extractor() == "claude"
 
     def test_inkling_path_records_model_and_cost(self):
-        with patch.object(cheap_llm, "_post", return_value=_reply('```json\n{"distance_mi": 62}\n```')):
+        with patch.object(cheap_llm, "_post", return_value=_reply('```json\n{"distance_mi": 62}\n```')) as post:
             facts = scrape_utils.extract_race_facts("<html>100 km</html>", "Test Fondo", {}, extractor="inkling")
+        # Reasoning shares the output cap; the low-effort, 8,000-token setting keeps the JSON from being cut off.
+        body = post.call_args[0][0]
+        assert body["max_tokens"] == 8000 and body["reasoning"] == {"effort": "low"}
         assert facts == {"distance_mi": 62, "extraction_model": "thinkingmachines/inkling-2-mini",
                          "extraction_cost_usd": pytest.approx(0.00105)}
 
@@ -223,6 +230,25 @@ class TestEvalComparison:
         assert summary["per_field"]["date_2026"]["agreement"] == 0.5
         assert summary["overall_agreement"] == round(13 / 14, 3)
         assert summary["candidate_cost_usd"] == 0.003
+
+    def test_reference_model_runs_through_openrouter_and_restores_env(self, monkeypatch):
+        import eval_extraction_models as ev
+        monkeypatch.setenv("CHEAP_LLM_MODEL", "keep/me")
+        monkeypatch.setattr(ev, "get_cached", lambda url: {"html": "<html>100 km</html>"})
+        seen = []
+
+        def fake_post(body, api_key, timeout):
+            seen.append(body["model"])
+            return _reply('{"distance_mi": 62}', model=body["model"])
+
+        with patch.object(cheap_llm, "_post", side_effect=fake_post), \
+             patch("youtube_enrich.call_api") as call_api:
+            case = ev.run_case("x", {"url": "https://x.example", "name": "X"}, reference_model="ref/model")
+        call_api.assert_not_called()
+        assert seen == ["ref/model", "keep/me"]
+        assert cheap_llm.model_id() == "keep/me"
+        assert case["reference_model"] == "ref/model"
+        assert case["verdicts"]["distance_mi"] == "agree"
 
     def test_summary_with_nothing_scored(self):
         summary = summarize([{"slug": "c", "candidate_error": "boom"}])
