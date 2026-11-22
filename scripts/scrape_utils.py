@@ -264,21 +264,59 @@ Rules:
 - Return valid JSON only, no explanation."""
 
 
-def extract_race_facts_via_claude(html: str, race_name: str,
-                                  existing_data: dict | None = None) -> dict:
-    """Send scraped HTML to Claude for structured extraction.
+EXTRACTORS = ("claude", "inkling")
 
-    Returns dict with extracted fields, or empty dict on failure.
-    Requires ANTHROPIC_API_KEY environment variable.
+
+def default_extractor() -> str:
+    """The extractor named by SCRAPE_EXTRACTOR, or "claude" when unset or unknown."""
+    chosen = os.environ.get("SCRAPE_EXTRACTOR", "").strip().lower()
+    return chosen if chosen in EXTRACTORS else "claude"
+
+
+def extract_race_facts(html: str, race_name: str, existing_data: dict | None = None,
+                       extractor: str = "claude") -> dict:
+    """Extract structured race facts from official-site HTML.
+
+    extractor "claude" uses Claude Sonnet (ANTHROPIC_API_KEY); "inkling" uses
+    the cheap model in cheap_llm.py (OPENROUTER_API_KEY). The page is public,
+    so either provider may read it.
+
+    Returns the extracted fields plus "extraction_model" (and
+    "extraction_cost_usd" for the cheap model), or {"error": ...}.
     """
-    from youtube_enrich import call_api, parse_json_response
+    if extractor not in EXTRACTORS:
+        return {"error": f"unknown extractor: {extractor}"}
+
+    from youtube_enrich import parse_json_response
 
     prompt = _build_extraction_prompt(html, race_name, existing_data or {})
+    cost_usd = None
     try:
-        response = call_api(prompt)
-        return parse_json_response(response)
+        if extractor == "inkling":
+            from cheap_llm import call_cheap_llm_with_usage
+            response, usage = call_cheap_llm_with_usage(prompt, script="scrape_official_sites")
+            model = usage.get("model")
+            cost_usd = usage.get("cost_usd")
+        else:
+            from youtube_enrich import call_api
+            response = call_api(prompt)
+            model = "claude-sonnet-4-20250514"
+        facts = parse_json_response(response)
     except Exception as e:
         return {"error": str(e)}
+
+    if not isinstance(facts, dict):
+        return {"error": "extraction did not return a JSON object"}
+    facts["extraction_model"] = model
+    if cost_usd is not None:
+        facts["extraction_cost_usd"] = cost_usd
+    return facts
+
+
+def extract_race_facts_via_claude(html: str, race_name: str,
+                                  existing_data: dict | None = None) -> dict:
+    """Extract race facts with Claude. Kept for existing callers."""
+    return extract_race_facts(html, race_name, existing_data, extractor="claude")
 
 
 # ---------------------------------------------------------------------------
