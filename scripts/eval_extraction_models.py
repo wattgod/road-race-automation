@@ -25,7 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from scrape_utils import extract_race_facts, get_cached, load_official_sites
+from scrape_utils import edition_date, extract_race_facts, get_cached, load_official_sites
 
 # Fields that feed fact_check_profiles.py and the race page.
 COMPARED_FIELDS = (
@@ -70,6 +70,11 @@ def compare_extracts(reference: dict, candidate: dict) -> dict:
     verdicts = {}
     for field in COMPARED_FIELDS:
         ref, cand = reference.get(field), candidate.get(field)
+        if field == "next_edition_date" and ref and cand:
+            # Compare the date itself, not how it is written.
+            ref_date, cand_date = edition_date(ref), edition_date(cand)
+            if None not in ref_date and None not in cand_date:
+                ref, cand = "-".join(map(str, ref_date)), "-".join(map(str, cand_date))
         if fields_agree(ref, cand):
             verdicts[field] = "agree"
         elif _normalize(cand) is None:
@@ -168,6 +173,14 @@ def main():
     parser.add_argument("--out", help="Write the full JSON report here")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
+
+    missing = [name for name, needed in (
+        ("OPENROUTER_API_KEY", True),
+        ("ANTHROPIC_API_KEY", not args.reference_model),
+    ) if needed and not os.environ.get(name, "").strip()]
+    if missing:
+        print(f"Missing {' and '.join(missing)}: both arms must run, so nothing was called.")
+        return 2
 
     sites = load_official_sites(slug_filter=args.slug)
     cases = []

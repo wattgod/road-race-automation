@@ -328,6 +328,9 @@ class TestEditionDate:
     def test_no_year(self):
         assert edition_date("Last Sunday in May") == (None, 5, None)
 
+    def test_year_after_the_date(self):
+        assert edition_date("November 21, 2026") == (2026, 11, 21)
+
     def test_empty(self):
         assert edition_date(None) == (None, None, None)
 

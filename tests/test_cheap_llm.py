@@ -189,6 +189,11 @@ class TestExtractorSwitch:
             facts = scrape_utils.extract_race_facts("<html></html>", "Test Fondo", {}, extractor="inkling")
         assert set(facts) == {"error"}
 
+    def test_empty_object_is_an_error_not_an_extract(self):
+        with patch.object(cheap_llm, "_post", return_value=_reply("{}")):
+            facts = scrape_utils.extract_race_facts("<html></html>", "Test Fondo", {}, extractor="inkling")
+        assert set(facts) == {"error"}
+
     def test_unknown_extractor(self):
         assert "error" in scrape_utils.extract_race_facts("<html></html>", "x", {}, extractor="gpt")
 
@@ -216,6 +221,21 @@ class TestEvalComparison:
         assert verdicts["elevation_ft"] == "candidate_extra"
         assert verdicts["location"] == "candidate_missing"
         assert set(verdicts) == set(COMPARED_FIELDS)
+
+    def test_same_date_in_two_formats_agrees(self):
+        verdicts = compare_extracts({"next_edition_date": "2026-11-21"}, {"next_edition_date": "November 21, 2026"})
+        assert verdicts["next_edition_date"] == "agree"
+        verdicts = compare_extracts({"next_edition_date": "2026-11-21"}, {"next_edition_date": "2026-11-22"})
+        assert verdicts["next_edition_date"] == "differ"
+
+    def test_missing_key_calls_nothing(self, monkeypatch, capsys):
+        import eval_extraction_models as ev
+        monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+        monkeypatch.setattr("sys.argv", ["eval_extraction_models.py", "--limit", "1"])
+        with patch.object(ev, "run_case") as run_case:
+            assert ev.main() == 2
+        run_case.assert_not_called()
+        assert "ANTHROPIC_API_KEY" in capsys.readouterr().out
 
     def test_summary_counts_errors_and_cost(self):
         agree = {f: "agree" for f in COMPARED_FIELDS}

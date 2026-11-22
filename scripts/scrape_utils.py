@@ -169,7 +169,7 @@ def edition_date(date_specific) -> tuple[int | None, int | None, int | None]:
     iso = re.search(r"(\d{4})-(\d{2})-(\d{2})", text)
     if iso:
         return int(iso.group(1)), int(iso.group(2)), int(iso.group(3))
-    year_match = re.match(r"\s*(\d{4})\b", text)
+    year_match = re.match(r"\s*(\d{4})\b", text) or re.search(r"\b(20\d{2})\b", text)
     year = int(year_match.group(1)) if year_match else None
     month = day = None
     month_match = re.search(r"\b(" + "|".join(_MONTH_NUMBERS) + r")\b\.?\s*(\d{1,2})?", text, re.IGNORECASE)
@@ -419,6 +419,9 @@ def extract_race_facts(html: str, race_name: str, existing_data: dict | None = N
 
     if not isinstance(facts, dict):
         return {"error": "extraction did not return a JSON object"}
+    if not facts:
+        # An empty object would be saved as a successful extract and replace real facts.
+        return {"error": "extraction returned an empty JSON object"}
 
     # Keep a date only when the page shows it; park anything else for a person.
     claimed = facts.get("next_edition_date")
