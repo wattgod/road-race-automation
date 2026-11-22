@@ -37,6 +37,7 @@ from scrape_utils import (
     set_cached,
     extract_race_facts,
     default_extractor,
+    weekly_batch,
     EXTRACTORS,
     load_official_sites,
     save_extract,
@@ -154,6 +155,9 @@ def main():
                              "(cheap model via OpenRouter). Default: $SCRAPE_EXTRACTOR or claude")
     parser.add_argument("--limit", type=int, default=None,
                         help="Process at most this many races")
+    parser.add_argument("--rotate-weekly", action="store_true",
+                        help="With --limit, take this week's window of the list instead of "
+                             "the first N, so a weekly run reaches every race in turn")
     parser.add_argument("--force", action="store_true",
                         help="Ignore cache, re-scrape all")
     parser.add_argument("--verbose", action="store_true",
@@ -174,7 +178,9 @@ def main():
         return 0
 
     if args.limit is not None:
-        sites = dict(sorted(sites.items())[:max(0, args.limit)])
+        ordered = sorted(sites.items())
+        picked = weekly_batch(ordered, args.limit) if args.rotate_weekly else ordered[:max(0, args.limit)]
+        sites = dict(picked)
 
     stale_label = " (stale dates only)" if args.stale_only else ""
     tier_label = f" (tiers {sorted(tier_filters)})" if tier_filters else ""
