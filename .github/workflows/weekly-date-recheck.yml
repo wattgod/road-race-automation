@@ -1,0 +1,114 @@
+name: "Weekly Date Re-check (report only)"
+
+# Re-reads official sites for races whose dated edition has passed (or that
+# name no year), extracts the next edition's date and status with the cheap
+# model, and opens an issue listing what differs from the profiles.
+#
+# Report only: this workflow never edits race-data/. A person or a gated
+# fixer applies the changes.
+#
+# Budget: about $0.002 per page with thinkingmachines/inkling-2-mini,
+# so a 60-page run costs roughly $0.12.
+
+on:
+  schedule:
+    # Wednesdays 13:17 UTC
+    - cron: '17 13 * * 3'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum races to check'
+        required: false
+        default: '60'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: weekly-date-recheck
+  cancel-in-progress: false
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      LIMIT: ${{ inputs.limit || '60' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install "scrapling[fetchers]"
+          # Browser for sites that block plain requests; plain fetches work without it.
+          scrapling install || echo "::warning::browser install failed; blocked sites will be skipped"
+
+      - name: Check the model key
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::OPENROUTER_API_KEY secret is not set"
+            exit 1
+          fi
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "scripts")
+          from cheap_llm import call_cheap_llm
+          print(call_cheap_llm('Return the JSON object {"ok": true}.', script="weekly_date_recheck",
+                               max_tokens=2000, reasoning_effort="low", max_retries=2))
+          PY
+
+      - name: Scrape and extract (stale dates only)
+        run: |
+          python scripts/scrape_official_sites.py --stale-only --limit "$LIMIT" \
+            --extractor inkling --delay 2.0
+
+      - name: Compare against profiles
+        run: python scripts/fact_check_profiles.py
+
+      - name: Build the report
+        id: report
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          rows = json.loads(pathlib.Path("data/fact-check-report.json").read_text())
+          extracts = pathlib.Path("data/scrape-extracts")
+          lines, unverified = [], []
+          for r in rows:
+              for field in ("date_specific", "course_status"):
+                  info = r["fields"].get(field)
+                  if info and info["classification"] in ("STALE_DATE", "MISMATCH"):
+                      lines.append(f"| {r['slug']} | {field} | {info['classification']} | "
+                                   f"{info['profile']} | {info['scraped']} |")
+          for path in sorted(extracts.glob("*.json")):
+              claimed = json.loads(path.read_text()).get("unverified_date")
+              if claimed:
+                  unverified.append(f"- {path.stem}: model said {claimed}, not found on the page")
+          body = ["Weekly re-check of official sites. Nothing was changed in `race-data/`.", ""]
+          if lines:
+              body += ["| Race | Field | Finding | Profile | Site |", "|---|---|---|---|---|", *lines, ""]
+              body += ["Apply a date with the repo's date tooling after checking the site.", ""]
+          if unverified:
+              body += ["Dates the model returned that the page does not show (ignored):", *unverified, ""]
+          pathlib.Path("recheck-report.md").write_text("\n".join(body))
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"findings={len(lines)}\n")
+          print("\n".join(body))
+          PY
+
+      - name: Open an issue when something differs
+        if: steps.report.outputs.findings != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Date re-check: ${{ steps.report.outputs.findings }} profile(s) differ from the official site" \
+            --body-file recheck-report.md

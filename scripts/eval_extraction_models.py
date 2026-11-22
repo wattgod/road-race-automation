@@ -29,7 +29,7 @@ from scrape_utils import extract_race_facts, get_cached, load_official_sites
 
 # Fields that feed fact_check_profiles.py and the race page.
 COMPARED_FIELDS = (
-    "date_2026",
+    "next_edition_date",
     "distance_mi",
     "elevation_ft",
     "registration_status",

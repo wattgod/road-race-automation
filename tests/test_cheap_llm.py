@@ -208,10 +208,10 @@ class TestEvalComparison:
         assert not fields_agree(None, 5)
 
     def test_verdict_kinds(self):
-        ref = {"date_2026": "2026-06-06", "distance_mi": 100, "elevation_ft": None, "location": "Girona"}
-        cand = {"date_2026": "2026-06-07", "distance_mi": 101, "elevation_ft": 5000, "location": None}
+        ref = {"next_edition_date": "2026-06-06", "distance_mi": 100, "elevation_ft": None, "location": "Girona"}
+        cand = {"next_edition_date": "2026-06-07", "distance_mi": 101, "elevation_ft": 5000, "location": None}
         verdicts = compare_extracts(ref, cand)
-        assert verdicts["date_2026"] == "differ"
+        assert verdicts["next_edition_date"] == "differ"
         assert verdicts["distance_mi"] == "agree"
         assert verdicts["elevation_ft"] == "candidate_extra"
         assert verdicts["location"] == "candidate_missing"
@@ -219,7 +219,7 @@ class TestEvalComparison:
 
     def test_summary_counts_errors_and_cost(self):
         agree = {f: "agree" for f in COMPARED_FIELDS}
-        half = {**agree, "date_2026": "differ"}
+        half = {**agree, "next_edition_date": "differ"}
         summary = summarize([
             {"slug": "a", "verdicts": agree, "candidate_cost_usd": 0.001},
             {"slug": "b", "verdicts": half, "candidate_cost_usd": 0.002},
@@ -227,7 +227,7 @@ class TestEvalComparison:
         ])
         assert summary["cases"] == 3 and summary["scored"] == 2
         assert summary["candidate_errors"] == 1 and summary["reference_errors"] == 0
-        assert summary["per_field"]["date_2026"]["agreement"] == 0.5
+        assert summary["per_field"]["next_edition_date"]["agreement"] == 0.5
         assert summary["overall_agreement"] == round(13 / 14, 3)
         assert summary["candidate_cost_usd"] == 0.003
 
@@ -253,4 +253,4 @@ class TestEvalComparison:
     def test_summary_with_nothing_scored(self):
         summary = summarize([{"slug": "c", "candidate_error": "boom"}])
         assert summary["overall_agreement"] is None
-        assert summary["per_field"]["date_2026"]["agreement"] is None
+        assert summary["per_field"]["next_edition_date"]["agreement"] is None

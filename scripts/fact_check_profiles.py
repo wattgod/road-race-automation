@@ -16,7 +16,7 @@ Classifications:
   CONFIRM    — scraped value matches profile within tolerance
   MISMATCH   — scraped value differs beyond tolerance (manual review)
   ENRICHABLE — profile field is empty, scraped value available
-  STALE_DATE — profile date is pre-2026, scraped date is 2026
+  STALE_DATE — the site shows a later edition than the profile
 
 Output: data/fact-check-report.json (and .html with --report)
 """
@@ -31,6 +31,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from scrape_utils import (
+    edition_date,
+    extract_date,
     load_extract,
     load_official_sites,
     RACE_DATA_DIR,
@@ -124,35 +126,37 @@ def _month_distance(m1: int | None, m2: int | None) -> int:
 
 
 def compare_date(profile_date_specific: str, scraped_date: str) -> tuple:
-    """Compare date values. Returns (classification, detail)."""
+    """Compare date values. Returns (classification, detail).
+
+    STALE_DATE means the site shows a later edition than the profile. A scraped
+    date with no year, or from an earlier year than the profile, says nothing.
+    """
     if not scraped_date:
         return None, None
 
     profile_ds = str(profile_date_specific) if profile_date_specific else ""
-
-    # Check if profile date is stale (pre-2026)
-    profile_year_match = re.match(r"(\d{4})", profile_ds)
-    profile_year = int(profile_year_match.group(1)) if profile_year_match else None
-
-    # Check if scraped date mentions 2026
-    has_2026 = "2026" in str(scraped_date)
-
-    if not profile_ds:
-        if has_2026:
-            return "ENRICHABLE", f"scraped={scraped_date}"
+    profile_year, p_month, p_day = edition_date(profile_ds)
+    scraped_year, s_month, s_day = edition_date(scraped_date)
+    if scraped_year is None:
+        any_year = re.search(r"\b(20\d{2})\b", str(scraped_date))
+        scraped_year = int(any_year.group(1)) if any_year else None
+        s_month = s_month or _extract_month_num(str(scraped_date))
+    if scraped_year is None:
         return None, None
 
-    if profile_year and profile_year < 2026 and has_2026:
+    if not profile_ds:
+        return "ENRICHABLE", f"scraped={scraped_date}"
+    if profile_year is None:
         return "STALE_DATE", f"profile={profile_ds}, scraped={scraped_date}"
 
-    if profile_year and profile_year >= 2026 and has_2026:
-        # Both have 2026 dates — check if they match
-        p_month = _extract_month_num(profile_ds)
-        s_month = _extract_month_num(scraped_date)
-        shift = _month_distance(p_month, s_month)
-        if shift <= 1:
-            return "CONFIRM", f"profile={profile_ds}, scraped={scraped_date}"
-        return "MISMATCH", f"profile={profile_ds}, scraped={scraped_date}, month_shift={shift}"
+    if scraped_year > profile_year:
+        return "STALE_DATE", f"profile={profile_ds}, scraped={scraped_date}"
+
+    if scraped_year == profile_year:
+        shift = _month_distance(p_month or _extract_month_num(profile_ds), s_month)
+        if shift > 1:
+            return "MISMATCH", f"profile={profile_ds}, scraped={scraped_date}, month_shift={shift}"
+        return "CONFIRM", f"profile={profile_ds}, scraped={scraped_date}"
 
     return None, None
 
@@ -191,11 +195,20 @@ def compare_race(slug: str) -> dict | None:
                                              "scraped": extract.get("elevation_ft")}
 
     # Date
-    cls, detail = compare_date(vitals.get("date_specific"), extract.get("date_2026"))
+    scraped_date = extract_date(extract)
+    cls, detail = compare_date(vitals.get("date_specific"), scraped_date)
     if cls:
         result["fields"]["date_specific"] = {"classification": cls, "detail": detail,
                                               "profile": vitals.get("date_specific"),
-                                              "scraped": extract.get("date_2026")}
+                                              "scraped": scraped_date}
+
+    # Cancelled or postponed editions always need a person (never auto-fixed).
+    status = str(extract.get("event_status") or "").lower()
+    if status in ("cancelled", "postponed") and status not in str(vitals.get("course_status") or "").lower():
+        result["fields"]["course_status"] = {"classification": "MISMATCH",
+                                             "detail": f"site says the next edition is {status}",
+                                             "profile": vitals.get("course_status"),
+                                             "scraped": status}
 
     # Enrichable fields (only if profile is empty and scraped has data)
     for field, extract_key in [
