@@ -69,7 +69,7 @@ jobs:
       - name: Scrape and extract (stale dates only)
         run: |
           python scripts/scrape_official_sites.py --stale-only --limit "$LIMIT" \
-            --extractor inkling --delay 2.0
+            --rotate-weekly --extractor inkling --delay 2.0
 
       - name: Compare against profiles
         run: python scripts/fact_check_profiles.py
@@ -78,7 +78,7 @@ jobs:
         id: report
         run: |
           python - <<'PY'
-          import json, os, pathlib
+          import json, os, pathlib, re
           rows = json.loads(pathlib.Path("data/fact-check-report.json").read_text())
           extracts = pathlib.Path("data/scrape-extracts")
           lines, unverified = [], []
@@ -86,10 +86,15 @@ jobs:
               for field in ("date_specific", "course_status"):
                   info = r["fields"].get(field)
                   if info and info["classification"] in ("STALE_DATE", "MISMATCH"):
+                      site = re.sub(r"[^\w\s:.,/-]", "", str(info["scraped"]))[:40]
+                      profile = str(info["profile"]).replace("|", "/").replace("\n", " ")[:120]
                       lines.append(f"| {r['slug']} | {field} | {info['classification']} | "
-                                   f"{info['profile']} | {info['scraped']} |")
+                                   f"{profile} | {site} |")
           for path in sorted(extracts.glob("*.json")):
               claimed = json.loads(path.read_text()).get("unverified_date")
+              # Model output built from a web page: show it only when it is a plain date.
+              if claimed and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(claimed)):
+                  claimed = "a value that is not a date"
               if claimed:
                   unverified.append(f"- {path.stem}: model said {claimed}, not found on the page")
           body = ["Weekly re-check of official sites. Nothing was changed in `race-data/`.", ""]

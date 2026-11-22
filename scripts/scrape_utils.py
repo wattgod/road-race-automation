@@ -196,6 +196,22 @@ def is_stale_date(date_specific, today: date | None = None) -> bool:
     return (month, day or 31) < (today.month, today.day)
 
 
+def weekly_batch(items: list, limit: int, today: date | None = None) -> list:
+    """This week's slice of a sorted list.
+
+    A fixed "first N" would re-check the same races every week and never reach
+    the rest, because a page with nothing new keeps its place. The window moves
+    by `limit` each ISO week and wraps, so every item is reached in turn.
+    """
+    if limit <= 0 or not items:
+        return []
+    if limit >= len(items):
+        return list(items)
+    year, week, _ = (today or date.today()).isocalendar()
+    start = ((year * 53 + week) * limit) % len(items)
+    return [items[(start + i) % len(items)] for i in range(limit)]
+
+
 def extract_date(extract: dict | None):
     """The next edition date in a scrape extract (older extracts used "date_2026")."""
     if not extract:
@@ -340,15 +356,21 @@ _MONTH_WORDS = {
 
 
 def date_is_on_page(html: str, iso_date) -> bool:
-    """True when the page itself shows this day, month and year together.
+    """True when the page itself shows this day, month and year as one date.
 
     A model can project last year's date forward and return a plausible date
     the organizer never published. Only a date written on the page is kept.
+    The year must belong to the date: "7 March 2026. See you in 2027!" does
+    not show 7 March 2027.
     """
     m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", str(iso_date or "").strip())
     if not m or not html:
         return False
     year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    try:
+        date(year, month, day)
+    except ValueError:
+        return False
     text = re.sub(r"<[^>]+>", " ", html).lower()
     text = re.sub(r"\s+", " ", text)
 
@@ -366,8 +388,14 @@ def date_is_on_page(html: str, iso_date) -> bool:
     day_first = rf"(?<!\d){d}(?:st|nd|rd|th|er|\.|º)?(?:\s(?:and|et|e|y|und|en|[-–&])\s?\d{{1,2}})?\s(?:de\s|of\s)?(?:{words})\b"
     month_first = rf"\b(?:{words})\.?\s(?:\d{{1,2}}(?:st|nd|rd|th)?\s?(?:and|[-–&,])\s?)?{d}(?!\d)"
     for match in re.finditer(rf"{day_first}|{month_first}", text):
-        window = text[max(0, match.start() - 40): match.end() + 40]
-        if str(year) in window:
+        # The first year written after the date (or the one right before it) is the date's year.
+        after = re.search(r"(?<!\d)(\d{4})(?!\d)", text[match.end(): match.end() + 16])
+        if after:
+            if int(after.group(1)) == year:
+                return True
+            continue
+        before = re.search(r"(?<!\d)(\d{4})\W{1,3}$", text[max(0, match.start() - 8): match.start()])
+        if before and int(before.group(1)) == year:
             return True
     return False
 

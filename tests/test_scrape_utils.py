@@ -423,6 +423,15 @@ class TestDateIsOnPage:
     def test_day_must_be_whole_number(self):
         assert not date_is_on_page("June 20, 2027", "2027-06-02")
 
+    def test_year_must_belong_to_the_date(self):
+        page = "Race day was 7 March 2026. See you in 2027!"
+        assert not date_is_on_page(page, "2027-03-07")
+        assert date_is_on_page(page, "2026-03-07")
+
+    def test_impossible_date_is_rejected_not_raised(self):
+        assert not date_is_on_page("13/13/2027", "2027-13-01")
+        assert not date_is_on_page("31 February 2027", "2027-02-31")
+
     def test_bad_input(self):
         assert not date_is_on_page("June 20, 2027", "June 20")
         assert not date_is_on_page("", "2027-06-20")
@@ -443,3 +452,24 @@ class TestUnverifiedDateIsParked:
             facts = extract_race_facts_via_claude("Classic on June 20, 2027", "Dartmoor")
         assert facts["next_edition_date"] == "2027-06-20"
         assert "unverified_date" not in facts
+
+
+from scrape_utils import weekly_batch
+
+
+class TestWeeklyBatch:
+    ITEMS = [f"race-{i}" for i in range(10)]
+
+    def test_every_item_is_reached_within_a_cycle(self):
+        from datetime import timedelta
+        seen = set()
+        for week in range(4):
+            batch = weekly_batch(self.ITEMS, 3, _date(2026, 11, 22) + timedelta(weeks=week))
+            assert len(batch) == 3
+            seen.update(batch)
+        assert seen == set(self.ITEMS)
+
+    def test_limit_covering_everything(self):
+        assert weekly_batch(self.ITEMS, 60) == self.ITEMS
+        assert weekly_batch(self.ITEMS, 0) == []
+        assert weekly_batch([], 5) == []
