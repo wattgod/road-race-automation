@@ -32,7 +32,7 @@ def test_amys_uses_the_current_2026_age_category_race() -> None:
     race = _race()
     vitals = race["vitals"]
 
-    assert vitals["date_specific"] == "September 13, 2026 (Sunday)"
+    assert vitals["date_specific"] == "September 12, 2027 (Sunday)"
     assert vitals["distance_km"] == 122.0
     assert vitals["elevation_m"] == 1865
     assert "Age-category gun starts" in vitals["start_format"]
