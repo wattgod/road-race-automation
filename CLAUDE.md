@@ -50,6 +50,11 @@ question a route:
   every question in one batch, each with options and a recommendation, and
   keep building whatever does not depend on the answer.
 
+For work of a day or more, or a change to the scoring system, the page
+template or every race page at once, post the done-means lines and the
+questions and wait for Matt's go before building. Smaller work and bug fixes
+start without it.
+
 A question the repository answers never goes to Matt. A score, a quote or a
 fact is never a decide-it question: it needs a source.
 
