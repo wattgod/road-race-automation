@@ -36,17 +36,24 @@ def refresh_history(directory_env: str) -> str | None:
 
 
 def load_snapshot(path: Path, history_commit: str | None) -> dict | None:
-    if path.exists():
-        return json.loads(path.read_text())
+    local = path.read_text(encoding="utf-8") if path.exists() else None
     if history_commit:
-        snapshot_object = f"{history_commit}:{path.relative_to(REPO_ROOT).as_posix()}"
-        completed = subprocess.run(
-            ["git", "-C", str(REPO_ROOT), "show", snapshot_object],
-            capture_output=True, text=True,
-        )
-        if completed.returncode == 0:
-            return json.loads(completed.stdout)
-    return None
+        snapshot_path = path.relative_to(REPO_ROOT).as_posix()
+        # A locally captured snapshot wins over Git history. An unchanged
+        # checkout copy can be replaced by a newer scheduled run of that date.
+        if local is None or local == _snapshot_text("HEAD", snapshot_path):
+            scheduled = _snapshot_text(history_commit, snapshot_path)
+            if scheduled is not None:
+                return json.loads(scheduled)
+    return json.loads(local) if local is not None else None
+
+
+def _snapshot_text(revision: str, path: str) -> str | None:
+    completed = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "show", f"{revision}:{path}"],
+        capture_output=True, encoding="utf-8",
+    )
+    return completed.stdout if completed.returncode == 0 else None
 
 
 def snapshot_names(directory: Path, history_commit: str | None) -> set[str]:
