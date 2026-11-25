@@ -6,11 +6,16 @@ on:
     - cron: '0 7 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: roadie-monitoring-snapshots
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   monitor:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -22,16 +27,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Prepare snapshot history
+        run: bash scripts/monitoring-snapshot-state.sh prepare
+
       - name: Run CWV monitor
         env:
           PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          CWV_SNAPSHOT_DIR: ${{ runner.temp }}/roadie-monitoring-state/data/cwv-snapshots
         run: |
           python scripts/cwv_monitor.py --snapshot --report --alert
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "chore: CWV monitoring snapshot"
-          git push
+      - name: Publish CWV snapshot
+        run: bash scripts/monitoring-snapshot-state.sh publish cwv
